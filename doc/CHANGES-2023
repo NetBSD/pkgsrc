@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1930 2023/03/29 09:39:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1931 2023/03/29 09:51:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/eigen3 to 3.4.0 [wiz 2023-03-29]
 	Updated wm/ctwm to 4.1.0 [rhialto 2023-03-29]
 	Updated shells/fish to 3.6.1 [wiz 2023-03-29]
+	Updated security/py-pip-audit to 2.5.4 [wiz 2023-03-29]
