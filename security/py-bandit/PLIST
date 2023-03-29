@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/01 18:20:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/29 10:47:50 adam Exp $
 bin/bandit-${PYVERSSUFFIX}
 bin/bandit-baseline-${PYVERSSUFFIX}
 bin/bandit-config-generator-${PYVERSSUFFIX}
@@ -172,15 +172,24 @@ ${PYSITELIB}/bandit/plugins/insecure_ssl_tls.pyo
 ${PYSITELIB}/bandit/plugins/jinja2_templates.py
 ${PYSITELIB}/bandit/plugins/jinja2_templates.pyc
 ${PYSITELIB}/bandit/plugins/jinja2_templates.pyo
+${PYSITELIB}/bandit/plugins/logging_config_insecure_listen.py
+${PYSITELIB}/bandit/plugins/logging_config_insecure_listen.pyc
+${PYSITELIB}/bandit/plugins/logging_config_insecure_listen.pyo
 ${PYSITELIB}/bandit/plugins/mako_templates.py
 ${PYSITELIB}/bandit/plugins/mako_templates.pyc
 ${PYSITELIB}/bandit/plugins/mako_templates.pyo
+${PYSITELIB}/bandit/plugins/request_without_timeout.py
+${PYSITELIB}/bandit/plugins/request_without_timeout.pyc
+${PYSITELIB}/bandit/plugins/request_without_timeout.pyo
 ${PYSITELIB}/bandit/plugins/snmp_security_check.py
 ${PYSITELIB}/bandit/plugins/snmp_security_check.pyc
 ${PYSITELIB}/bandit/plugins/snmp_security_check.pyo
 ${PYSITELIB}/bandit/plugins/ssh_no_host_key_verification.py
 ${PYSITELIB}/bandit/plugins/ssh_no_host_key_verification.pyc
 ${PYSITELIB}/bandit/plugins/ssh_no_host_key_verification.pyo
+${PYSITELIB}/bandit/plugins/tarfile_unsafe_members.py
+${PYSITELIB}/bandit/plugins/tarfile_unsafe_members.pyc
+${PYSITELIB}/bandit/plugins/tarfile_unsafe_members.pyo
 ${PYSITELIB}/bandit/plugins/try_except_continue.py
 ${PYSITELIB}/bandit/plugins/try_except_continue.pyc
 ${PYSITELIB}/bandit/plugins/try_except_continue.pyo
