@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/02/20 17:59:00 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/03/29 09:34:13 wiz Exp $
 
 DISTNAME=	black-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,10 +28,10 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} != 311
+.if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
-.if ${_PYTHON_VERSION} == 38 || ${_PYTHON_VERSION} == 39
+.if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.0:../../devel/py-typing-extensions
 .endif
 

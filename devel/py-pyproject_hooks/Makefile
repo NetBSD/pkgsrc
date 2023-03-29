@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/02/14 17:42:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/29 09:34:09 wiz Exp $
 
 DISTNAME=	pyproject_hooks-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,8 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} != 311
+
+.if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 

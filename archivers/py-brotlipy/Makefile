@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/03/29 09:34:04 wiz Exp $
 
 DISTNAME=	brotlipy-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 .include "../../lang/python/egg.mk"
 
-.if ${_PYTHON_VERSION} < 33
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-enum34>=1.0.4:../../devel/py-enum34
 .endif
 

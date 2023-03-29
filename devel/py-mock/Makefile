@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/03/29 09:34:08 wiz Exp $
 
 DISTNAME=	mock-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7:../../lang/py-six
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+
+.if ${PYTHON_VERSION} == 207
 DEPENDS+=	${PYPKGPREFIX}-funcsigs>=1:../../devel/py-funcsigs
 .endif
 

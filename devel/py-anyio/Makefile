@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/10/20 09:09:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/03/29 09:34:05 wiz Exp $
 
 DISTNAME=	anyio-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-uvloop
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 38
+
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif

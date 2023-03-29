@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/12/16 10:22:57 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/03/29 09:34:09 wiz Exp $
 
 DISTNAME=	protobuf-4.21.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,8 @@ MAKE_ENV+=	PROTOC=${PREFIX}/bin/protoc
 PLIST_VARS+=	cpp
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} != 311
+
+.if ${PYTHON_VERSION} < 311
 # As of 4.21.9, the sources do contain outdated code that only supports Python < 3.11
 # https://github.com/protocolbuffers/protobuf/issues/11031#issuecomment-1321390551
 # Do not use C++ implementation for Python 3.11.

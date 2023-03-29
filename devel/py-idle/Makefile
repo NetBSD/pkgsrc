@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/01/08 13:44:41 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2023/03/29 09:34:07 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
@@ -18,7 +18,7 @@ PY_PATCHPLIST=	yes
 #
 .include "../../lang/python/extension.mk"
 
-.if ${_PYTHON_VERSION} >= 31
+.if ${PYTHON_VERSION} != 207
 IDLE_NAME=	idle3
 .else
 IDLE_NAME=	idle
