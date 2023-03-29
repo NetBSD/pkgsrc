@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2023/01/08 08:13:31 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.27 2023/03/29 17:19:18 nros Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
@@ -67,7 +67,11 @@ PLIST.notdarwin=	yes
 # some libs also link to libs in lib so
 # this is needed by some ld:s to not
 # cause linking errors.
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/lib
+.else
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+.endif
 
 
 # avoid creating a .qt directory in the users home directory
