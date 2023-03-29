@@ -54,14 +54,14 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 
 	t.SetUpVartypes()
 
-	if typ := G.Pkgsrc.vartypes.Canon("PREFIX"); t.CheckNotNil(typ) {
+	if typ := G.Pkgsrc.Types().Canon("PREFIX"); t.CheckNotNil(typ) {
 		t.CheckEquals(typ.basicType.name, "Pathname")
 		t.CheckDeepEquals(typ.aclEntries, []ACLEntry{NewACLEntry("*", aclpUse)})
 		t.CheckEquals(typ.EffectivePermissions("Makefile"), aclpUse)
 		t.CheckEquals(typ.EffectivePermissions("buildlink3.mk"), aclpUse)
 	}
 
-	if typ := G.Pkgsrc.vartypes.Canon("EXTRACT_OPTS"); t.CheckNotNil(typ) {
+	if typ := G.Pkgsrc.Types().Canon("EXTRACT_OPTS"); t.CheckNotNil(typ) {
 		t.CheckEquals(typ.basicType.name, "ShellWord")
 		t.CheckEquals(typ.EffectivePermissions("Makefile"), aclpAllWrite|aclpUse)
 		t.CheckEquals(typ.EffectivePermissions("options.mk"), aclpAllWrite|aclpUse)

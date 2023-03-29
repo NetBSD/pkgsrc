@@ -241,8 +241,10 @@ func (ck *MkCondChecker) checkCompareWithNumPython(left *MkCondTerm, op string, 
 		op != "==" && op != "!=" &&
 		matches(num, `^\d+$`) {
 
-		ck.MkLine.Errorf("The Python version must not be compared numerically.")
-		ck.MkLine.Explain(
+		fixedNum := replaceAll(num, `^([0-9])([0-9])$`, `${1}0$2`)
+		fix := ck.MkLine.Autofix()
+		fix.Errorf("_PYTHON_VERSION must not be compared numerically.")
+		fix.Explain(
 			"The variable _PYTHON_VERSION must not be compared",
 			"against an integer number, as these comparisons are",
 			"not meaningful.",
@@ -252,6 +254,8 @@ func (ck *MkCondChecker) checkCompareWithNumPython(left *MkCondTerm, op string, 
 			"",
 			"In addition, _PYTHON_VERSION can be \"none\",",
 			"which is not a number.")
+		fix.Replace("${_PYTHON_VERSION} "+op+" "+num, "${PYTHON_VERSION} "+op+" "+fixedNum)
+		fix.Apply()
 	}
 }
 

@@ -36,6 +36,8 @@ func NewVarTypeRegistry() VarTypeRegistry {
 	return VarTypeRegistry{make(map[string]*Vartype), make(map[string][]ACLEntry)}
 }
 
+// Canon looks up the type of the variable, first by trying the exact
+// variable name, then by trying the canonicalized variable name.
 func (reg *VarTypeRegistry) Canon(varname string) *Vartype {
 	vartype := reg.types[varname]
 	if vartype == nil {
@@ -101,9 +103,8 @@ func (reg *VarTypeRegistry) DefineName(varname string, basicType *BasicType, opt
 //   - which packages need this custom permission set.
 //
 // TODO: When prefixed with "infra:", the entry should only
-//
-//	apply to files within the pkgsrc infrastructure. Without this prefix,
-//	the pattern should only apply to files outside the pkgsrc infrastructure.
+// apply to files within the pkgsrc infrastructure. Without this prefix,
+// the pattern should only apply to files outside the pkgsrc infrastructure.
 func (reg *VarTypeRegistry) acl(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...string) {
 	parsedEntries := reg.parseACLEntries(varname, aclEntries...)
 	reg.Define(varname, basicType, options, parsedEntries)
@@ -209,8 +210,7 @@ func (reg *VarTypeRegistry) pkglistbl3rat(varname string, basicType *BasicType) 
 // when these files are included.
 //
 // TODO: These timing issues should be handled separately from the permissions.
-//
-//	They can be made more precise.
+// They can be made more precise.
 func (reg *VarTypeRegistry) sys(varname string, basicType *BasicType, options ...vartypeOptions) {
 	reg.DefineName(varname, basicType, reg.options(SystemProvided, options), "sys")
 }

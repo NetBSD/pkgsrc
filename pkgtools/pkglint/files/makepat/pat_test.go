@@ -2,6 +2,7 @@ package makepat
 
 import (
 	"netbsd.org/pkglint/intqa"
+	"netbsd.org/pkglint/textproc"
 	"reflect"
 	"testing"
 )
@@ -54,11 +55,57 @@ func Test_compileCharClass(t *testing.T) {
 	}
 }
 
-func Test_Pattern_AddState(t *testing.T) {
+func Test_Pattern_addTransitions(t *testing.T) {
+	none := textproc.NewByteSet("")
+	numeric := textproc.NewByteSet("-+0-9.Ee")
+	all := none.Inverse()
+
+	tests := []struct {
+		name    string
+		bs      *textproc.ByteSet
+		example byte
+		want    bool
+	}{
+		{"none min", none, 0, false},
+		{"none max", none, 255, false},
+		{"all min", all, 0, true},
+		{"all max", all, 255, true},
+		{"numeric", numeric, '*', false},
+		{"numeric", numeric, '+', true},
+		{"numeric", numeric, ',', false},
+		{"numeric", numeric, '-', true},
+		{"numeric", numeric, '.', true},
+		{"numeric", numeric, '/', false},
+		{"numeric", numeric, '0', true},
+		{"numeric", numeric, '9', true},
+		{"numeric", numeric, ':', false},
+		{"numeric", numeric, 'D', false},
+		{"numeric", numeric, 'E', true},
+		{"numeric", numeric, 'F', false},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			var p Pattern
+			s0 := p.addState(false)
+			s1 := p.addState(true)
+			var chars [256]bool
+			for i := 0; i < 256; i++ {
+				chars[i] = tt.bs.Contains(byte(i))
+			}
+			p.addTransitions(s0, &chars, s1)
+			got := p.Match(string([]byte{tt.example}))
+			if got != tt.want {
+				t.Errorf("got %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_Pattern_addState(t *testing.T) {
 	var p Pattern
 
-	p.AddState(false)
-	p.AddState(true)
+	p.addState(false)
+	p.addState(true)
 
 	expected := Pattern{states: []state{{nil, false}, {nil, true}}}
 	if !reflect.DeepEqual(p, expected) {
@@ -66,13 +113,13 @@ func Test_Pattern_AddState(t *testing.T) {
 	}
 }
 
-func Test_Pattern_AddTransition(t *testing.T) {
+func Test_Pattern_addTransition(t *testing.T) {
 	var p Pattern
 
-	p.AddState(false)
-	p.AddState(true)
-	p.AddTransition(0, '0', '9', 1)
-	p.AddTransition(1, '0', '9', 0)
+	p.addState(false)
+	p.addState(true)
+	p.addTransition(0, '0', '9', 1)
+	p.addTransition(1, '0', '9', 0)
 
 	expected := Pattern{states: []state{
 		{[]transition{{'0', '9', 1}}, false},
@@ -166,38 +213,63 @@ func Test_Pattern_Match(t *testing.T) {
 }
 
 func Test_Intersect(t *testing.T) {
+	// The state machine of the compiled patterns is more powerful than
+	// the string representation of the patterns, therefore the
+	// intersected pattern is not visualized. Instead, it is tested using
+	// a single example string.
 	tests := []struct {
 		pattern1 string
 		pattern2 string
-		str      string
-		matches  bool
 		canMatch bool
+		example  string
+		matches  bool
 	}{
-		{"N-*", "N-*", "N-*", true, true},
-		{"N-9.99.*", "N-[1-9].*", "", false, true},
-		{"N-9.99.*", "N-[1-9][0-9].*", "", false, false},
-		{"*.c", "*.h", "", false, false},
-		{"a*", "*b", "ab", true, true},
-		{"a*bc", "ab*c", "abc", true, true},
+		{"N-*", "N-*", true, "N-*", true},
+		{"N-9.99.*", "N-[1-9].*", true, "", false},
+		{"N-9.99.*", "N-[1-9][0-9].*", false, "", false},
+		{"*.c", "*.h", false, "", false},
+		{"a*", "*b", true, "ab", true},
+		{"a*bc", "ab*c", true, "abc", true},
+		{"*1*", "*2*", true, "asdf", false},
+		{"*1*", "*2*", true, "a1a", false},
+		{"*1*", "*2*", true, "a2a", false},
+		{"*1*", "*2*", true, "a12a", true},
+		{"*1*", "*2*", true, "a21a", true},
+		{"*[^0-9-+eE.]*", "*.c", true, ".c", true},
+		{"*[^0-9-+eE.]*", "*.c", true, "0.c", true},
+		{"*[^0-9-+eE.]*", "*.e", true, "0.e", false},
+		{"*[^0-9-+eE.]*", "*.e", true, "a.e", true},
+		{"*[^0-9-+eE.]*", "*.0", true, "000a0.0", true},
+		{"*[^0-9-+eE.]*", "*.0", true, "0000.0", false},
+		{"[0-9]", "[a-f]", false, "0", false},
+		{"[0-9]", "[0a-f]", true, "0", true},
+		{"[0-9]", "[0a-f]", true, "1", false},
+		{"[0-9]", "[0a-f]", true, "00", false},
 	}
 	for _, tt := range tests {
-		t.Run(tt.str, func(t *testing.T) {
-			a1, err1 := Compile(tt.pattern1)
-			a2, err2 := Compile(tt.pattern2)
+		t.Run(tt.example, func(t *testing.T) {
+			p1, err1 := Compile(tt.pattern1)
+			p2, err2 := Compile(tt.pattern2)
 			if err1 != nil {
 				t.Fatal(err1)
 			}
 			if err2 != nil {
 				t.Fatal(err2)
 			}
-			a := Intersect(a1, a2)
-			matches := a.Match(tt.str)
+			both := Intersect(p1, p2)
+			canMatch := both.CanMatch()
+			if canMatch != tt.canMatch {
+				t.Errorf("CanMatch() = %v, want %v", canMatch, tt.canMatch)
+			}
+			matches := both.Match(tt.example)
 			if matches != tt.matches {
 				t.Errorf("Match() = %v, want %v", matches, tt.matches)
 			}
-			canMatch := a.CanMatch()
-			if canMatch != tt.canMatch {
-				t.Errorf("CanMatch() = %v, want %v", canMatch, tt.canMatch)
+			if matches && !p1.Match(tt.example) {
+				t.Errorf("example %q doesn't match pattern1 %q", tt.example, tt.pattern1)
+			}
+			if matches && !p2.Match(tt.example) {
+				t.Errorf("example %q doesn't match pattern2 %q", tt.example, tt.pattern2)
 			}
 		})
 	}
@@ -205,12 +277,12 @@ func Test_Intersect(t *testing.T) {
 
 func Test_Pattern_optimized(t *testing.T) {
 	var p Pattern
-	p.AddState(false)
-	p.AddState(false)
-	p.AddState(false)
-	p.AddState(true)
-	p.AddTransition(0, '1', '1', 1)
-	p.AddTransition(1, '2', '2', 3)
+	p.addState(false)
+	p.addState(false)
+	p.addState(false)
+	p.addState(true)
+	p.addTransition(0, '1', '1', 1)
+	p.addTransition(1, '2', '2', 3)
 
 	opt := p.optimized()
 
@@ -295,6 +367,49 @@ func Test_Pattern_CanMatch(t *testing.T) {
 		})
 	}
 
+}
+
+func Test_Number(t *testing.T) {
+	tests := []struct {
+		example string
+		want    bool
+	}{
+		{"", false},
+		{".", false},
+		{"0x", false},
+		{"0xa", true},
+		{"+0xa", true},
+		{"-0xa", true},
+		{"0xa.", false},
+		{"0xa.a", false},
+		{"0xa.aa", false},
+		{"0xa.p", false},
+		{"0xa.p-1", true},
+		{"0xa.p1", true},
+		{"0xa.p11", true},
+		{"0xaa.", false},
+		{"1", true},
+		{"+1", true},
+		{"-1", true},
+		{"1.", true},
+		{"1.1", true},
+		{"1.11", true},
+		{"1.1e", false},
+		{"1.1e+", false},
+		{"1.1e+1", true},
+		{"1.1e+11", true},
+		{"1.1e-1", true},
+		{"1.e+1", true},
+		{"11", true},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.example, func(t *testing.T) {
+			if got := Number().Match(tt.example); got != tt.want {
+				t.Errorf("got %v, want %v", got, tt.want)
+			}
+		})
+	}
 }
 
 func Test_bmin(t *testing.T) {
