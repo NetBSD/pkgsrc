@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.403 2023/03/29 15:33:09 joerg Exp $
+# $NetBSD: Makefile,v 1.404 2023/03/29 19:31:15 pin Exp $
 #
 
 COMMENT=	Fonts
@@ -121,6 +121,7 @@ SUBDIR+=	gentium-ttf
 SUBDIR+=	gentiumbasic-ttf
 SUBDIR+=	gentiumplus-ttf
 SUBDIR+=	geoslab703-ttf
+SUBDIR+=	gerb
 SUBDIR+=	ghostscript-cidfonts
 SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	ghostscript-cmaps
