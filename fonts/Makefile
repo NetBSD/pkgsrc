@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2023/03/28 13:49:44 joerg Exp $
+# $NetBSD: Makefile,v 1.403 2023/03/29 15:33:09 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -176,6 +176,7 @@ SUBDIR+=	lanna-io
 SUBDIR+=	lato-ttf
 SUBDIR+=	lcdftypetools
 SUBDIR+=	liberation-ttf
+SUBDIR+=	libertinus-ttf
 SUBDIR+=	libfontenc
 SUBDIR+=	linux-libertine-ttf
 SUBDIR+=	lohit-fonts
