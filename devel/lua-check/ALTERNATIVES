@@ -1,0 +1,1 @@
+bin/luacheck @PREFIX@/bin/luacheck-@LUADOTVER@
