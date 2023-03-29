@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/02/16 08:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/03/29 10:23:06 wiz Exp $
 
 # this must be set before compiler.mk
 # is included in Makefile.common
@@ -9,7 +9,6 @@ GCC_REQD+=	9 # required by Qt6 headers
 PKGNAME=	poppler-qt6-${POPPLER_VERS}
 COMMENT=	PDF rendering library (QT6 wrapper)
 MAINTAINER=	pkgsrc-users@NetBSD.org
-
 
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 CMAKE_ARGS+=	-DENABLE_GLIB=OFF
