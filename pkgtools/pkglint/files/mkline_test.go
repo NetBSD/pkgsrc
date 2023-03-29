@@ -643,8 +643,8 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 		"MASTER_SITES=\t${HOMEPAGE}")
 	mkline := mklines.mklines[1]
 
-	vuc := VarUseContext{G.Pkgsrc.vartypes.Canon("MASTER_SITES"), VucRunTime, VucQuotPlain, false}
-	nq := mkline.VariableNeedsQuoting(nil, NewMkVarUse("HOMEPAGE"), G.Pkgsrc.vartypes.Canon("HOMEPAGE"), &vuc)
+	vuc := VarUseContext{G.Pkgsrc.Types().Canon("MASTER_SITES"), VucRunTime, VucQuotPlain, false}
+	nq := mkline.VariableNeedsQuoting(nil, NewMkVarUse("HOMEPAGE"), G.Pkgsrc.Types().Canon("HOMEPAGE"), &vuc)
 
 	t.CheckEquals(nq, no)
 
@@ -1025,8 +1025,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__only_remove_known(c *check.C) 
 }
 
 // TODO: COMPILER_RPATH_FLAG and LINKER_RPATH_FLAG have different types
-//
-//	defined in vardefs.go; examine why.
+// defined in vardefs.go; examine why.
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 	t := s.Init(c)
 

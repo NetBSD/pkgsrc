@@ -847,7 +847,7 @@ func (cv *VartypeCheck) MachinePlatformPattern() {
 		// provided in a type registry where they could be looked up
 		// by a name. The following line therefore assumes that OPSYS
 		// is an operating system name, which sounds like a safe bet.
-		btOpsys := G.Pkgsrc.vartypes.types["OPSYS"].basicType
+		btOpsys := G.Pkgsrc.Types().types["OPSYS"].basicType
 
 		opsysCv := cv.WithVarnameValueMatch("the operating system part of "+cv.Varname, opsysPattern)
 		btOpsys.checker(opsysCv)

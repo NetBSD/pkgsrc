@@ -33,9 +33,9 @@ import (
 //   - http://sf.net/p/$project/
 //
 // TODO: implement complete homepage migration for SourceForge.
-// TODO: allow to suppress the automatic migration for SourceForge,
 //
-//	even if it is not about https vs. http.
+// TODO: allow to suppress the automatic migration for SourceForge,
+// even if it is not about https vs. http.
 type HomepageChecker struct {
 	Value      string
 	ValueNoVar string

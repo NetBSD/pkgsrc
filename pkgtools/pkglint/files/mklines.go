@@ -426,7 +426,9 @@ func (mklines *MkLines) checkAll() {
 		"pre-package": true, "do-package": true, "post-package": true,
 		"pre-clean": true, "do-clean": true, "post-clean": true}
 
-	mklines.lines.CheckCvsID(0, `#[\t ]+`, "# ")
+	if G.Pkgsrc != nil {
+		mklines.lines.CheckCvsID(0, `#[\t ]+`, "# ")
+	}
 
 	substContext := NewSubstContext(mklines.pkg)
 	var varalign VaralignBlock
