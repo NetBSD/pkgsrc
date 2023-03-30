@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/03/30 21:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/03/30 21:47:07 wiz Exp $
 
 DISTNAME=	libheif-1.15.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_PROJECT=	libheif
@@ -14,16 +15,11 @@ LICENSE=	gnu-lgpl-v3
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mgcc)
-CXXFLAGS.NetBSD+=	-Wno-error=maybe-uninitialized
-.endif
-
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
