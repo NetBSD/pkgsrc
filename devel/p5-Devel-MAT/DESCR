@@ -1,0 +1,6 @@
+The Devel::MAT ecosystem allows developers of perl programs to
+inspect and analyse memory-related problems such as memory leaks,
+unexpected memory consumption, or odd state. This is an "offline"
+analysis system, in the sense that the analysis tools all run in
+a different process, possibly at a later time, than the perl process
+that is being analysed.
