@@ -639,7 +639,6 @@ nextstep		Enable Cocoa or GNUstep support.
 nfdump-ftconv		Build the flow-tools to nfdump converter.
 nfdump-nfprofile	Build the netflow profiler.
 nfdump-sflow		Build sflow collector sfcpad.
-nghttp2-asio		Build the nghttp2 ASIO C++ library.
 nghttp2-tools		Build the supplied nghttp2 apps and tools.
 nginx			Enable support for Nginx web server.
 ninja-build		Enable build by ninja-build.
