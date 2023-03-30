@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 08:45:19 wiz Exp $
+
+BLAKE2s (xwayland-23.1.1.tar.xz) = 64b121e707c47b97e3f155d99cb2d48a9a2a8bda388462c5efbfb200ca5b6307
+SHA512 (xwayland-23.1.1.tar.xz) = 21c386847135c5cb4ac884926b0fbeb6ad21c9ee54752e0cdc8418e31a72872d81032159c1d91b8afb915aaaf65e80454342461d676996b2f3c535a37b0147f0
+Size (xwayland-23.1.1.tar.xz) = 1286460 bytes
+SHA1 (patch-hw_xwayland_xwayland-input.c) = 80518d68695c56aaf3ff1a042571c91cb0769c12
+SHA1 (patch-os_rpcauth.c) = f69a3322f0c067d685e76e47b1e4ec705cb3ed06
