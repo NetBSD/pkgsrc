@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/12/02 15:58:48 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/03/30 12:31:25 rillig Exp $
 
 BUILDLINK_TREE+=	nghttp2
 
@@ -11,13 +11,6 @@ BUILDLINK_PKGSRCDIR.nghttp2?=	../../www/nghttp2
 
 .include "../../textproc/libxml2/buildlink3.mk"
 
-pkgbase := nghttp2
-.include "../../mk/pkg-build-options.mk"
-
-.if ${PKG_BUILD_OPTIONS.nghttp2:Mnghttp2-asio}
-.  include "../../devel/boost-libs/buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
-.endif
 .endif # NGHTTP2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nghttp2
