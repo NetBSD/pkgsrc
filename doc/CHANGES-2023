@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1955 2023/03/30 08:25:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1956 2023/03/30 08:45:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2532,3 +2532,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-aenum to 3.1.12 [adam 2023-03-30]
 	Updated security/wolfssl to 5.6.0 [fox 2023-03-30]
 	Updated x11/modular-xorg-server to 21.1.8 [wiz 2023-03-30]
+	Updated x11/modular-xorg-xwayland to 23.1.1 [wiz 2023-03-30]
