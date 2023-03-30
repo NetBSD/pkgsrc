@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1373 2023/03/30 18:58:56 he Exp $
+# $NetBSD: Makefile,v 1.1374 2023/03/30 19:12:12 he Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1083,6 +1083,7 @@ SUBDIR+=	py-mkdocs-bootstrap
 SUBDIR+=	py-mkdocs-bootswatch
 SUBDIR+=	py-natsort
 SUBDIR+=	py-nltk
+SUBDIR+=	py-ntc_templates
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-odfpy
 SUBDIR+=	py-openapi-core
