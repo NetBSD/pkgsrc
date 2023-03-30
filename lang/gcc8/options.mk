@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/03/29 20:44:52 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2023/03/30 15:28:58 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS+=			always-libgcc
 ### Determine if multilib is avalible.
 ###
 MULTILIB_SUPPORTED?=	unknown
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.if ${MACHINE_PLATFORM:MLinux-*-x86_64}
 .  if exists(/usr/include/x86_64-linux-gnu/gnu)
 _GNU_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
 .  else
