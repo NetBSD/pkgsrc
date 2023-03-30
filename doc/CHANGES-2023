@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1960 2023/03/30 17:41:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1961 2023/03/30 17:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2537,3 +2537,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/qemu to 7.2.0nb3 [ryoon 2023-03-30]
 	Updated graphics/openexr to 3.1.6 [bsiegert 2023-03-30]
 	Added devel/p5-String-Tagged version 0.20 [wiz 2023-03-30]
+	Added converters/p5-Convert-Color-XTerm version 0.06 [wiz 2023-03-30]
