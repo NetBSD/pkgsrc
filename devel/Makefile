@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3942 2023/03/30 17:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3943 2023/03/30 17:47:35 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2012,6 +2012,7 @@ SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-String-PerlIdentifier
 SUBDIR+=	p5-String-Print
 SUBDIR+=	p5-String-Tagged
+SUBDIR+=	p5-String-Tagged-Terminal
 SUBDIR+=	p5-String-Util
 SUBDIR+=	p5-Struct-Dumb
 SUBDIR+=	p5-Sub-Exporter
