@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1971 2023/03/30 18:44:22 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.1972 2023/03/30 19:37:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2548,3 +2548,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/kubo to 0.19.0 [bsiegert 2023-03-30]
 	Updated devel/lua-language-server to 3.6.18 [nikita 2023-03-30]
 	Updated net/gh to 2.25.1 [bsiegert 2023-03-30]
+	Added textproc/py-yamlordereddictloader version 0.4.0 [he 2023-03-30]
+	Added devel/py-transitions version 0.9.0 [he 2023-03-30]
+	Added textproc/py-ntc_templates version 1.5.0 [he 2023-03-30]
+	Updated net/py-junos-eznc to 2.6.7 [he 2023-03-30]
