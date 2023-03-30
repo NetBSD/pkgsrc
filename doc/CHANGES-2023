@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1956 2023/03/30 08:45:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1957 2023/03/30 13:51:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2533,3 +2533,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/wolfssl to 5.6.0 [fox 2023-03-30]
 	Updated x11/modular-xorg-server to 21.1.8 [wiz 2023-03-30]
 	Updated x11/modular-xorg-xwayland to 23.1.1 [wiz 2023-03-30]
+	Updated sysutils/dtc to 1.7.0 [ryoon 2023-03-30]
