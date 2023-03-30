@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2023/03/29 08:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/30 16:04:21 wiz Exp $
 
 DISTNAME=	eigen-3.4.0
 PKGNAME=	${DISTNAME:S/eigen/eigen3/}
 CATEGORIES=	math
-MASTER_SITES=	https://gitlab.com/libeigen/eigen/-/archive/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=libeigen/eigen/-/archive/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://eigen.tuxfamily.org/
 COMMENT=	C++ template library for linear algebra
 LICENSE=	mpl-2.0
-
-WRKSRC=		${WRKDIR}/eigen-3147391d946bb4b6c68edd901f2add6ac1f31f8c
 
 USE_LANGUAGES=	c c++
 
