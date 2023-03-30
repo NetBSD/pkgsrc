@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3944 2023/03/30 17:55:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3945 2023/03/30 18:08:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1402,6 +1402,7 @@ SUBDIR+=	p5-Clone
 SUBDIR+=	p5-Clone-Choose
 SUBDIR+=	p5-Clone-Fast
 SUBDIR+=	p5-Clone-PP
+SUBDIR+=	p5-Commandable
 SUBDIR+=	p5-Compiler-Lexer
 SUBDIR+=	p5-Compress-PPMd
 SUBDIR+=	p5-Config-Any
@@ -1558,6 +1559,7 @@ SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-ExtUtils-XSpp
 SUBDIR+=	p5-FFI-CheckLib
+SUBDIR+=	p5-Feature-Compat-Try
 SUBDIR+=	p5-Fennec-Lite
 SUBDIR+=	p5-File-BOM
 SUBDIR+=	p5-File-BaseDir
@@ -2030,6 +2032,7 @@ SUBDIR+=	p5-Sub-Quote
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Symbol-Global-Name
 SUBDIR+=	p5-Syntax-Keyword-Junction
+SUBDIR+=	p5-Syntax-Keyword-Match
 SUBDIR+=	p5-Sys-Mmap
 SUBDIR+=	p5-Sys-Syscall
 SUBDIR+=	p5-System-Command
