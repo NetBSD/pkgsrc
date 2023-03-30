@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1953 2023/03/30 07:13:08 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1954 2023/03/30 07:34:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2530,3 +2530,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/lua-language-server version 3.6.9 [nikita 2023-03-29]
 	Updated databases/py-redis to 4.5.4 [adam 2023-03-30]
 	Updated devel/py-aenum to 3.1.12 [adam 2023-03-30]
+	Updated security/wolfssl to 5.6.0 [fox 2023-03-30]
