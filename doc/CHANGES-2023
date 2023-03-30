@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1964 2023/03/30 18:08:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1965 2023/03/30 18:08:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2541,3 +2541,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/p5-String-Tagged-Terminal version 0.06 [wiz 2023-03-30]
 	Added devel/p5-XS-Parse-Keyword version 0.33 [wiz 2023-03-30]
 	Added devel/p5-Syntax-Keyword-Match version 0.10 [wiz 2023-03-30]
+	Added devel/p5-Feature-Compat-Try version 0.05 [wiz 2023-03-30]
