@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 19:08:56 he Exp $
+
+BLAKE2s (transitions-0.9.0.tar.gz) = fdbff8063f08cdf13429637881790b76ed4b29804e9875f3932b95bb60fdb173
+SHA512 (transitions-0.9.0.tar.gz) = d324a57e1f2d20d9e8dc7d1f7854a6e81c3a09afda927de38dc23936c8c585b87303d5a47256487ba0cd03f63bb1a2ff69304c634896e488a7217591404f0a3c
+Size (transitions-0.9.0.tar.gz) = 1162948 bytes
