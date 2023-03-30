@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/03/29 08:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2023/03/30 05:34:10 mrg Exp $
 
 DISTNAME=		a2ps-4.15.2
 CATEGORIES=		print
@@ -42,7 +42,7 @@ pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.dvi
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/etc && ${MV} a2ps-site.cfg a2ps.cfg ${DESTDIR}${PREFIX}/share/examples/a2ps
+	cd ${DESTDIR}${PKG_SYSCONFBASE} && ${MV} a2ps-site.cfg a2ps.cfg ${DESTDIR}${PREFIX}/share/examples/a2ps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
