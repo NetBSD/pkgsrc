@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/03/29 09:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/03/30 15:25:39 wiz Exp $
 
 DISTNAME=	cmudict-1.0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYTHON_VERSION } < 310
+.if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
 .endif
