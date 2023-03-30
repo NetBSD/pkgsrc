@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2022/09/09 15:35:16 wiz Exp $
+$NetBSD: distinfo,v 1.14 2023/03/30 20:29:47 joerg Exp $
 
 BLAKE2s (libheif-1.13.0.tar.gz) = 799cad7e279ed63829a89a55a1685547c713bb96aca9dd70fed87d42f3f05811
 SHA512 (libheif-1.13.0.tar.gz) = 44cb12ec7191bdf8ef2193c075d5d7a064a7a90c00625e5346624de1ebbedd064601998d042c8336d6c5b2aaef4cd3b439b850d0ab5882daa2e22dcc8722c779
 Size (libheif-1.13.0.tar.gz) = 1703950 bytes
 SHA1 (patch-examples_heif__info.cc) = ecc286a3a93741c57c2c717b0eba5861027bbe39
+SHA1 (patch-libheif_heif__colorconversion.cc) = 76d4f82af042d2e8fc6a49faf81c5ac5361ed2d7
 SHA1 (patch-libheif_heif__hevc.cc) = 341b7c2a96ff6448b757bfe70b5d7e19acb04f1b
