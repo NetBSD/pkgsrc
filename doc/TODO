@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22732 2023/03/30 13:51:02 ryoon Exp $
+$NetBSD: TODO,v 1.22733 2023/03/30 17:41:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -495,6 +495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
+	o blender-3.5
 	o blender-lts-3.3
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -954,6 +955,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.253
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mapserver-7.6.2
@@ -1275,7 +1277,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qdirstat-1.8.1
 	o qgis-3.30.0
 	o qt6-6.4.3
-	o qtcreator-9
+	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
 	o racket-8.7
