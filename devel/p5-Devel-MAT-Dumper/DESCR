@@ -1,0 +1,11 @@
+This module provides the memory-dumping function that creates a
+heap dump file which can later be read by Devel::MAT::Dumpfile. It
+provides a single function which is not exported, which writes a
+file to the given path.
+
+The dump file will contain a representation of every SV in Perl's
+arena, providing information about pointers between them, as well
+as other information about the state of the process at the time it
+was created. It contains a snapshot of the process at that moment
+in time, which can later be loaded and analysed by various tools
+using Devel::MAT::Dumpfile.
