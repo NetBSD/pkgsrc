@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2023/03/30 05:37:07 mrg Exp $
+# $NetBSD: Makefile.common,v 1.15 2023/03/30 07:50:54 wiz Exp $
 #
 # used by net/transmission-common/Makefile
 # used by net/transmission-gtk/Makefile
@@ -11,6 +11,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transmission/}
 EXTRACT_SUFX=	.tar.xz
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_PROJECT=	transmission
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.transmissionbt.com/
