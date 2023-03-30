@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2023/03/29 08:55:00 wiz Exp $
+$NetBSD: distinfo,v 1.18 2023/03/30 16:04:21 wiz Exp $
 
-BLAKE2s (eigen-3.4.0.tar.bz2) = d311feafa05b0d306f9c9708fb6a1938e300ed9253796f7063189b26ab271735
-SHA512 (eigen-3.4.0.tar.bz2) = c4d454be422254dad7d43b22db4d3f375d75e05a2de876a1235d849ab7edf1627dfb31724c83c4286efd87ef1bfd0145da8700d34228b63bb6bec4578b484abb
-Size (eigen-3.4.0.tar.bz2) = 2152200 bytes
+BLAKE2s (eigen-3.4.0.tar.bz2) = d2a613a25633a3c1e5c96dd75b06bf22e9a4797e790d443254381d99d77d3991
+SHA512 (eigen-3.4.0.tar.bz2) = cc488eb111e0e248744d2bc4475b345b5fb82361dff226a5b73a33bd0388de8c219cff8cffcf8f476b672fc0e223f339e8c6a1cfb6293840a4a6abf232438a89
+Size (eigen-3.4.0.tar.bz2) = 2143091 bytes
 SHA1 (patch-Eigen_src_Core_IO.h) = 3547fac37c2cdf95a517eaf7d097e9ae6fc3aef1
