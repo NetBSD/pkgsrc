@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.54 2023/02/07 13:53:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.55 2023/03/30 08:25:06 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
-# used by x11/modular-xorg-xwayland/Makefile
 
-XORG_VERSION=	21.1.7
+XORG_VERSION=	21.1.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
@@ -35,7 +34,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
 .if ${USE_TOOLS:Mauto*}
-TOOLS_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
+TOOL_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
 .endif
 
 DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
@@ -46,14 +45,12 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-D_OPENBSD_SOURCE	# for reallocarray(3)
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
-CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
 # TLS is not supported by NetBSD<6
 .  if ${OPSYS_VERSION} < 060000
 CONFIGURE_ENV+=		ac_cv_tls=no
 CONFIGURE_ARGS+=	--disable-glx-tls
 .  endif
 .endif
-CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 
 CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
 
@@ -68,7 +65,6 @@ FONT_PATHS=		${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
 CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
 
 CONFIGURE_ARGS+=	--disable-config-hal
-CONFIGURE_ARGS+=	--disable-dmx
 CONFIGURE_ARGS+=	--disable-xwin
 CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-kdrive
