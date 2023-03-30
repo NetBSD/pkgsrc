@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1959 2023/03/30 16:38:28 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.1960 2023/03/30 17:41:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dtc to 1.7.0 [ryoon 2023-03-30]
 	Updated emulators/qemu to 7.2.0nb3 [ryoon 2023-03-30]
 	Updated graphics/openexr to 3.1.6 [bsiegert 2023-03-30]
+	Added devel/p5-String-Tagged version 0.20 [wiz 2023-03-30]
