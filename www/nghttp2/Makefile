@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/02/15 18:08:24 adam Exp $
+# $NetBSD: Makefile,v 1.79 2023/03/30 12:11:22 rillig Exp $
 
 .include "Makefile.common"
 
@@ -17,8 +17,6 @@ PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	script/fetch-ocsp-response
-
-.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
