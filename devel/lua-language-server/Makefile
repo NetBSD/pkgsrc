@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 20:27:09 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/30 18:41:00 nikita Exp $
 
-DISTNAME=		lua-language-server-3.6.9
+DISTNAME=		lua-language-server-3.6.18
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
@@ -24,12 +24,12 @@ INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
 
 # TODO: Maybe unbundle (some of) them? (lls does build with them included though)
-GITDEPS+=		luamake 3d8d1fde146da293240e86c1b99ff00a7d865ac0 https://github.com/actboy168/luamake luamake
-GITDEPS+=		bee.lua c4e989a2e2dbed6c063aa0460a451cd795925a88 https://github.com/actboy168/bee.lua bee.lua
-GITDEPS+=		bee.lua eff93259f6093645564aae1a530eb98e03e01677 https://github.com/actboy168/bee.lua luamake/3rd/bee.lua
-GITDEPS+=		json.lua b5f5e7b00091974ae2663c6db7ff9d4802bd1f3b https://github.com/actboy168/json.lua json.lua
-GITDEPS+=		EmmyLuaCodeStyle 66eeece38d6f53093347dbee8476820afe69f87f https://github.com/CppCXY/EmmyLuaCodeStyle EmmyLuaCodeStyle
-GITDEPS+=		lovr-docs 8900d79360c48b1a5fc957ec85f8333c4437cb45 https://github.com/bjornbytes/lovr-docs lovr-api
+GITDEPS+=		luamake 915baa5a3141e3f45708b59a7bbc76d7a701d7fe https://github.com/actboy168/luamake luamake
+GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua bee.lua
+GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua luamake/bee.lua
+GITDEPS+=		json.lua be1d71ff7afe84942eb3f33b76c8bf75306c4635 https://github.com/actboy168/json.lua json.lua
+GITDEPS+=		EmmyLuaCodeStyle fab3d066e14cea1bf1ebe7927d1ceba098e78d12 https://github.com/CppCXY/EmmyLuaCodeStyle EmmyLuaCodeStyle
+GITDEPS+=		lovr-docs f08de6bc658f385dfa1b6d1fcba52da5f88b7853 https://github.com/bjornbytes/lovr-docs lovr-api
 GITDEPS+=		love-api 495ecc72d994f5d52fc21592dda9d16f4fd75ba1 https://github.com/love2d-community/love-api/ love-api
 GITDEPS+=		lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d https://github.com/sqmedeiros/lpeglabel lpeglabel
 
@@ -48,9 +48,9 @@ post-extract:
 .for name rev url path in ${GITDEPS}
 	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/3rd/${path}
 .endfor
-	cd ${WRKSRC}/3rd/luamake/3rd && \
+	cd ${WRKSRC}/3rd/luamake && \
 		${RM} -rf bee.lua && \
-		${LN} -s ${WRKDIR}/bee.lua-eff93259f6093645564aae1a530eb98e03e01677 bee.lua
+		${LN} -s ${WRKDIR}/bee.lua-a8a503238ee998e5d2995323581bf8926bb49d3a bee.lua
 	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
 
 DATADIR=		${PREFIX}/share/lua-language-server
