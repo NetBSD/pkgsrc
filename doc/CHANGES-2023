@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1972 2023/03/30 19:37:38 he Exp $
+$NetBSD: CHANGES-2023,v 1.1973 2023/03/30 20:16:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2552,3 +2552,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-transitions version 0.9.0 [he 2023-03-30]
 	Added textproc/py-ntc_templates version 1.5.0 [he 2023-03-30]
 	Updated net/py-junos-eznc to 2.6.7 [he 2023-03-30]
+	Updated sysutils/erdtree to 1.7.0 [pin 2023-03-30]
