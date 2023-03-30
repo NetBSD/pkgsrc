@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2021/06/13 06:55:17 nia Exp $
+# $NetBSD: options.mk,v 1.24 2023/03/30 08:25:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace
@@ -12,7 +12,6 @@ PLIST_VARS+=		dri dtrace
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
 PLIST.dri=		yes
