@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:19:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/03/30 13:50:20 ryoon Exp $
 
-BLAKE2s (dtc-1.4.7.tar.xz) = 41632cc16b912697fc05c18f6ea16279ab7a11ea6bf9d967848ddf84a4b4c311
-SHA512 (dtc-1.4.7.tar.xz) = 01e0c88aee154d8ce8a5b84a299c98d12df9698e5eff572409e5e912236028532309fd21ca6a146dffef859c665d476bbbe13c371c621c1dee4abe546e5e6ebf
-Size (dtc-1.4.7.tar.xz) = 148940 bytes
-SHA1 (patch-Makefile) = b8f69c696c751148b8ca4552e104c47e9df98a53
+BLAKE2s (dtc-1.7.0.tar.xz) = 8da8174d935430a1de82a148a9c325f269ae2f7328c888488910f21fef5f6447
+SHA512 (dtc-1.7.0.tar.xz) = d3ba6902a9a2f2cdbaff55f12fca3cfe4a1ec5779074a38e3d8b88097c7abc981835957e8ce72971e10c131e05fde0b1b961768e888ff96d89e42c75edb53afb
+Size (dtc-1.7.0.tar.xz) = 165548 bytes
+SHA1 (patch-Makefile) = b8267b5894aff8943bc3411f90268eb17e5344b9
 SHA1 (patch-libfdt_Makefile.libfdt) = 10dec8b55b54641c26d4947cc9b7219b5a61efb7
