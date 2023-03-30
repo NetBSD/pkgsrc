@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 18:58:56 he Exp $
+
+SHA1 (yamlordereddictloader-0.4.0.tar.gz) = a9f9ba28bd5d84d7c7bdea2d8c5c48e21ef15c78
+RMD160 (yamlordereddictloader-0.4.0.tar.gz) = fa82ec2a9ea6bf621eaea6065f670da0fac74e8c
+SHA512 (yamlordereddictloader-0.4.0.tar.gz) = f3fbb9a7642fb40ce3588b393a451d994f80a8dbba6fcb58d0f2be9adb8e3231a1da7101c67844d57b59af6a0912178de1ec9ab571afb5b25704e44a69ef62d5
+Size (yamlordereddictloader-0.4.0.tar.gz) = 3322 bytes
