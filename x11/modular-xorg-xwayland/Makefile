@@ -1,30 +1,23 @@
-# $NetBSD: Makefile,v 1.16 2023/01/29 21:18:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/03/30 08:45:05 wiz Exp $
 
-DISTNAME=	xorg-server-${XORG_VERSION}
-PKGNAME=	modular-xorg-xwayland-${XORG_VERSION}
-PKGREVISION=	1
+DISTNAME=	xwayland-23.1.1
+PKGNAME=	modular-xorg-${DISTNAME}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	nia@NetBSD.org
+HOMEPAGE=	https://xorg.freedesktop.org/
+COMMENT=	Server for running X clients under Wayland from modular X.org
+LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
+
+USE_TOOLS+=	pkg-config
 
 .include "../../devel/wayland/platform.mk"
 
 .if empty(PLATFORM_SUPPORTS_WAYLAND:M[Yy][Ee][Ss])
 PKG_SKIP_REASON+=	"Platform does not support Wayland"
 .endif
-
-DISTINFO_FILE=		${.CURDIR}/../../x11/modular-xorg-server/distinfo
-PATCHDIR=		${.CURDIR}/../../x11/modular-xorg-server/patches
-
-MAINTAINER=	nia@NetBSD.org
-COMMENT=	Server for running X clients under Wayland from modular X.org
-
-BROKEN=		"needs updating to separate unshared distfile"
-.include "../../x11/modular-xorg-server/Makefile.common"
-
-CONFIGURE_ARGS+=	--disable-xorg
-CONFIGURE_ARGS+=	--disable-xephyr
-CONFIGURE_ARGS+=	--disable-xnest
-CONFIGURE_ARGS+=	--disable-xvfb
-CONFIGURE_ARGS+=	--disable-xwayland-eglstream
-CONFIGURE_ARGS+=	--enable-xwayland
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/lib/xorg/protocol.txt
@@ -33,7 +26,15 @@ post-install:
 		${RM} ${DESTDIR}${PREFIX}/share/doc/xorg-server/Xserver-DTrace.xml; \
 	fi
 
-.include "../../x11/modular-xorg-server/options.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
+.include "../../x11/xorgproto/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
+.include "../../x11/libXfont2/buildlink3.mk"
+.include "../../x11/libxcvt/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../x11/pixman/buildlink3.mk"
+.include "../../x11/xtrans/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
