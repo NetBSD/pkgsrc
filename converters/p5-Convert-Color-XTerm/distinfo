@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 17:46:00 wiz Exp $
+
+BLAKE2s (Convert-Color-XTerm-0.06.tar.gz) = 194f7648f4571ceadc7e175c9a97b0e3dbf2ac8ed91c4396c8fb12a2f97ec0ec
+SHA512 (Convert-Color-XTerm-0.06.tar.gz) = 27ac6790f6314dfc0e5f67304f97fdd5ef752721ad82ad493486f99119ea3227a55dc6e479e7086a8c23f1c85fb4c501a06ec1f0638034420c33aaad1facb67a
+Size (Convert-Color-XTerm-0.06.tar.gz) = 13289 bytes
