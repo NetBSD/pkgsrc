@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/31 17:24:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/30 21:41:50 wiz Exp $
 bin/heif-convert
 bin/heif-enc
 bin/heif-info
@@ -7,12 +7,15 @@ include/libheif/heif.h
 include/libheif/heif_cxx.h
 include/libheif/heif_plugin.h
 include/libheif/heif_version.h
-lib/libheif.la
+lib/cmake/libheif/libheif-config-noconfig.cmake
+lib/cmake/libheif/libheif-config-version.cmake
+lib/cmake/libheif/libheif-config.cmake
+lib/libheif.so
+lib/libheif.so.1
+lib/libheif.so.${PKGVERSION}
 lib/pkgconfig/libheif.pc
 man/man1/heif-convert.1
 man/man1/heif-enc.1
 man/man1/heif-info.1
 man/man1/heif-thumbnailer.1
-share/mime/packages/avif.xml
-share/mime/packages/heif.xml
 share/thumbnailers/heif.thumbnailer
