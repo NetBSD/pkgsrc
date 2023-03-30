@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/11/23 16:19:03 adam Exp $
+# $NetBSD: Makefile,v 1.123 2023/03/30 10:06:15 rillig Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -11,7 +11,6 @@ USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--without-python
-CONFIGURE_ARGS+=	--with-html-subdir=libxslt
 
 PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
