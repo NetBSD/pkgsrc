@@ -1,4 +1,6 @@
-$NetBSD: patch-hw_xfree86_os-support_bsd_i386__video.c,v 1.1 2015/04/25 11:47:03 tnn Exp $
+$NetBSD: patch-hw_xfree86_os-support_bsd_i386__video.c,v 1.2 2023/03/30 08:25:06 wiz Exp $
+
+Use correct symbol and amd64.
 
 --- hw/xfree86/os-support/bsd/i386_video.c.orig	2015-01-17 23:42:52.000000000 +0000
 +++ hw/xfree86/os-support/bsd/i386_video.c
