@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3947 2023/03/30 18:12:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3948 2023/03/30 19:08:56 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -2985,6 +2985,7 @@ SUBDIR+=	py-tox
 SUBDIR+=	py-traceback2
 SUBDIR+=	py-traitlets
 SUBDIR+=	py-traitlets4
+SUBDIR+=	py-transitions
 SUBDIR+=	py-treq
 SUBDIR+=	py-trio
 SUBDIR+=	py-tryton
