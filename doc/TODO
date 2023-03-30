@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22734 2023/03/30 18:17:28 bsiegert Exp $
+$NetBSD: TODO,v 1.22735 2023/03/30 19:33:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -655,6 +655,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freemint-binutils-2.30
 	o freemint-gcc-7.1.0
 	o freenet-0.7
+	o freeradius-3.2.2
 	o freerdp-2.4
 	o freesci-0.6.4
 	o freeswitch-1.2.3
@@ -1185,7 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ploticus-examples-230
 	o ply-3.11
 	o pocl-3.0
-	o poco-1.7.5
+	o poco-1.12.4
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o polkit-121
