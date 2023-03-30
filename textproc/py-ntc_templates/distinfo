@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 19:12:12 he Exp $
+
+BLAKE2s (ntc_templates-1.5.0.tar.gz) = e4c1e10137524cf53de822f9611d3ba712d6745ae343b12f8c9c3e9a50e1cc81
+SHA512 (ntc_templates-1.5.0.tar.gz) = 4573da60fdc5f29cdccae82e61c1e2e5bfadc143b9c1ff47a83e39f49f458e13496d5ed1506eb859cf6c26d04f0ea18d3aa8f42140c0deed7d2bbb97ce6094b1
+Size (ntc_templates-1.5.0.tar.gz) = 154266 bytes
