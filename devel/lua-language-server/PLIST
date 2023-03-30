@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/29 20:27:09 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/03/30 18:41:00 nikita Exp $
 bin/lua-language-server
 share/lua-language-server/bin/lua-language-server
 share/lua-language-server/bin/main.lua
@@ -577,6 +577,11 @@ share/lua-language-server/meta/3rd/OpenResty/library/tablepool.lua
 share/lua-language-server/meta/3rd/OpenResty/library/thread/exdata.lua
 share/lua-language-server/meta/3rd/OpenResty/library/thread/exdata2.lua
 share/lua-language-server/meta/3rd/OpenResty/library/toComment.lua
+share/lua-language-server/meta/3rd/bee/config.json
+share/lua-language-server/meta/3rd/bee/library/bee/filesystem.lua
+share/lua-language-server/meta/3rd/bee/library/bee/platform.lua
+share/lua-language-server/meta/3rd/bee/library/bee/subprocess.lua
+share/lua-language-server/meta/3rd/bee/library/bee/thread.lua
 share/lua-language-server/meta/3rd/busted/config.json
 share/lua-language-server/meta/3rd/busted/library/busted.lua
 share/lua-language-server/meta/3rd/example/config.json
@@ -839,6 +844,7 @@ share/lua-language-server/script/linked-table.lua
 share/lua-language-server/script/locale-loader.lua
 share/lua-language-server/script/log.lua
 share/lua-language-server/script/meta/bee/filesystem.lua
+share/lua-language-server/script/meta/bee/filewatch.lua
 share/lua-language-server/script/parser/compile.lua
 share/lua-language-server/script/parser/guide.lua
 share/lua-language-server/script/parser/init.lua
