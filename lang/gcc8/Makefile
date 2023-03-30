@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/01/29 10:47:33 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/03/30 15:28:58 wiz Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -91,7 +91,7 @@ post-extract:
 	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-*}
 # on NetBSD, use the native SSP code in libc
 CONFIGURE_ARGS+=	--disable-libssp
 # Match base libstdc++ major
@@ -131,15 +131,15 @@ MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || ${MACHINE_PLATFORM:MLinux-*-i386}
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || ${MACHINE_PLATFORM:MLinux-*-x86_64}
 CONFIGURE_ARGS+=	--with-arch=nocona --with-tune=nocona --with-fpmath=sse
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-*}
 CONFIGURE_ARGS+=	--with-dwarf2
 .endif
 
@@ -193,7 +193,7 @@ post-test:
 post-install:
 	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || \
 		( cd ${DESTDIR}${GCC_PREFIX}/bin ; ${LN} -f gcc cc )
-.if !empty(MACHINE_PLATFORM:MSunOS-*-*86*) && ${OS_VERSION} != "5.11"
+.if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32 || ${TRUE}
 	${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64 || ${TRUE}
 .endif
