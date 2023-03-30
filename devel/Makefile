@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3946 2023/03/30 18:11:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3947 2023/03/30 18:12:48 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1504,6 +1504,7 @@ SUBDIR+=	p5-Devel-Hide
 SUBDIR+=	p5-Devel-Leak
 SUBDIR+=	p5-Devel-Leak-Object
 SUBDIR+=	p5-Devel-LexAlias
+SUBDIR+=	p5-Devel-MAT
 SUBDIR+=	p5-Devel-MAT-Dumper
 SUBDIR+=	p5-Devel-NYTProf
 SUBDIR+=	p5-Devel-OverloadInfo
