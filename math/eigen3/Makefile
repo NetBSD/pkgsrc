@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/03/30 16:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/03/30 17:31:17 tnn Exp $
 
 DISTNAME=	eigen-3.4.0
 PKGNAME=	${DISTNAME:S/eigen/eigen3/}
@@ -20,6 +20,9 @@ CMAKE_ARGS+=	-DPKGCONFIG_INSTALL_DIR=${PREFIX}/lib/pkgconfig
 
 # header-only
 # PKGCONFIG_OVERRIDE+=	eigen3.pc.in
+
+pre-build:
+	rm -f ${WRKSRC}/Eigen/src/Core/IO.h.orig
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
