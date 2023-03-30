@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/30 17:59:21 wiz Exp $
+
+BLAKE2s (Feature-Compat-Try-0.05.tar.gz) = 89966420a8d5b2447afa057fa3cbd093c72dc513cb0305a20903f9e272072ff4
+SHA512 (Feature-Compat-Try-0.05.tar.gz) = bf2c87bc29509e902ea4e27a22162efc58e93452a06483a19e17b70ee6db3e2407494209708dc84f2ef9080a91c374870de100cc42038683a4ae7891b07ab683
+Size (Feature-Compat-Try-0.05.tar.gz) = 17364 bytes
