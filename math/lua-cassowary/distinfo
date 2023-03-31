@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/03/31 00:31:22 joerg Exp $
 
-BLAKE2s (cassowary-2.2.tar.gz) = aa532ded0d26d3514c22d85874f34910b9f66ad0ae99455e7d5670224a4c628b
-SHA512 (cassowary-2.2.tar.gz) = cfbc2475014a7959dbae98be1b94f61c9e859e9d09110d9405fa13e398472738900d0a80a50b80be9d2e2b23a63ad1af65071c36f8ef82a9f6bc6a8fa97ca94a
-Size (cassowary-2.2.tar.gz) = 15570 bytes
+BLAKE2s (cassowary-2.3.2.tar.gz) = 705eed64797e80c87a804e5eebd0e5c504ab64e04d633679bd23782b8416206f
+SHA512 (cassowary-2.3.2.tar.gz) = 8c13a17f4bc095c8807e8f3ce6bdb1fe262c5aed98d26b9f235343ab305879e03356dc46f2e3f60a832747e30de25425144a6f3d48e8b3c5f62078e159f06efd
+Size (cassowary-2.3.2.tar.gz) = 21929 bytes
