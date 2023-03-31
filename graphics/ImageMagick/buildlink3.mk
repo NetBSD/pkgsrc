@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.98 2023/01/29 21:14:36 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.99 2023/03/31 20:52:12 wiz Exp $
 
 BUILDLINK_TREE+=	ImageMagick
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ImageMagick
 IMAGEMAGICK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=5.5.7.11nb1
-BUILDLINK_ABI_DEPENDS.ImageMagick+=	ImageMagick>=7.1.0.57nb2
+BUILDLINK_ABI_DEPENDS.ImageMagick+=	ImageMagick>=7.1.1.4nb1
 BUILDLINK_PKGSRCDIR.ImageMagick?=	../../graphics/ImageMagick
 BUILDLINK_INCDIRS.ImageMagick+=		include/ImageMagick-7
 
