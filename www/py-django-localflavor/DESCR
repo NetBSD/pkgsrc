@@ -1,0 +1,11 @@
+django-localflavor is a collection of assorted pieces of code that are
+useful for particular countries or cultures. These are called the "local
+flavor" add-ons and live in the localflavor package.
+
+Inside that package, country- or culture-specific code is organized into
+subpackages, named using ISO 3166 country codes.
+
+Most of the localflavor add-ons are localized form components deriving
+from the forms framework - for example, a USStateField that knows how to
+validate U.S. state abbreviations, and a FISocialSecurityNumber that
+knows how to validate Finnish social security numbers.
