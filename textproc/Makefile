@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1375 2023/03/31 15:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1376 2023/03/31 22:41:09 he Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1154,6 +1154,7 @@ SUBDIR+=	py-sphobjinv
 SUBDIR+=	py-tablib
 SUBDIR+=	py-tabulate
 SUBDIR+=	py-text-unidecode
+SUBDIR+=	py-textfsm
 SUBDIR+=	py-textile
 SUBDIR+=	py-tinycss2
 SUBDIR+=	py-toml

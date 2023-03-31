@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/03/31 22:41:09 he Exp $
+
+BLAKE2s (textfsm-1.1.3.tar.gz) = 75265a1977d32b3f7716f09f044beed18553fb6eaf7011844549fc83a7f8ca06
+SHA512 (textfsm-1.1.3.tar.gz) = 08d4f44dcd9a1885d6378ace1c9ec2d497e287426a2401a19946438b41706e02ffac9ed640c25e9437025c6d7eabf73c03eded53675d6451db3bffc8f4d2b988
+Size (textfsm-1.1.3.tar.gz) = 51296 bytes
