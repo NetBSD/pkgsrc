@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/03/30 18:41:00 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2023/03/31 08:16:41 nikita Exp $
 
 DISTNAME=		lua-language-server-3.6.18
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -61,6 +61,13 @@ SUBST_MESSAGE.wrapper=	Patching paths in lua-language-server wrapper script
 SUBST_FILES.wrapper=	lua-language-server
 SUBST_VARS.wrapper+=	MKTEMP
 SUBST_VARS.wrapper+=	DATADIR
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing path to installed headers.
+SUBST_FILES.path=	3rd/luamake/compile/ninja/netbsd.ninja
+SUBST_FILES.path+=	3rd/bee.lua/compile/common.lua
+SUBST_SED.path=		-e 's,/usr/pkg,${PREFIX},'
 
 do-build:
 	ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/netbsd.ninja
