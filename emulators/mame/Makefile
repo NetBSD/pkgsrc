@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.165 2023/02/22 11:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2023/03/31 20:39:45 wiz Exp $
 
-DISTNAME=	mame-0.252
+DISTNAME=	mame-0.253
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -21,10 +21,9 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c99 c++
 GCC_REQD+=		7
-USE_TOOLS+=		bsdtar gmake pkg-config
+USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize virtualsize
 MAKE_FILE=		makefile
-EXTRACT_USING=		bsdtar
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,6 +47,9 @@ MAKE_ENV+=	NOWERROR=1
 # on Darwin, avoid SDL2.framework
 MAKE_ENV+=	USE_LIBSDL=1
 
+# for c++ to get LLONG_MAX for luaconf.h
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
 # use pkgsrc libraries
 # boost-header's asio.hpp is not compatible as of mame-0.251/boost 1.81.0
 #MAKE_ENV+=	USE_SYSTEM_LIB_ASIO=1
@@ -55,7 +57,6 @@ MAKE_ENV+=	USE_SYSTEM_LIB_EXPAT=1
 MAKE_ENV+=	USE_SYSTEM_LIB_ZLIB=1
 MAKE_ENV+=	USE_SYSTEM_LIB_JPEG=1
 MAKE_ENV+=	USE_SYSTEM_LIB_FLAC=1
-MAKE_ENV+=	USE_SYSTEM_LIB_LUA=1
 # use audio from SDL
 #MAKE_ENV+=	USE_SYSTEM_LIB_PORTAUDIO=1
 # no portmidi package exists yet
@@ -79,7 +80,6 @@ MAKE_ENV+=	TOOLS=1
 MAKE_ENV+=	BIGENDIAN=1
 .endif
 
-LUA_VERSIONS_ACCEPTED=		53
 PYTHON_FOR_BUILD_ONLY=		yes
 
 post-extract:
@@ -118,7 +118,6 @@ do-install:
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
