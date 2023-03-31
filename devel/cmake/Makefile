@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2022/11/22 19:14:02 adam Exp $
+# $NetBSD: Makefile,v 1.203 2023/03/31 08:06:46 adam Exp $
 
 .include "Makefile.common"
 
@@ -32,7 +32,7 @@ INSTALL_TARGET=		install/strip
 .endif
 
 # Enforce arm64 to support building inside x86_64 chroots.
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 CONFIGURE_ENV+=		CMAKE_OSX_ARCHITECTURES=arm64
 .endif
 
