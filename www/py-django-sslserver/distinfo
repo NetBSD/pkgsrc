@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/03/31 01:00:38 joerg Exp $
+
+BLAKE2s (django-sslserver-0.20-27c6f467524583fc522dc7b6792f166960c60210.tar.gz) = 58ac00cb0d2207d3a9152a5e677391646d80061b161de1d8b597a78c4e3ad881
+SHA512 (django-sslserver-0.20-27c6f467524583fc522dc7b6792f166960c60210.tar.gz) = 531cdbdf7c16c98c38dfe75e384a19e67d832be6c406f627ebfbee9a4c8cccf7e2b209c054d5f9ab395a94da922bbece790de1237beff54188741e359eebb952
+Size (django-sslserver-0.20-27c6f467524583fc522dc7b6792f166960c60210.tar.gz) = 12901 bytes
+SHA1 (patch-requests_____init____.py) = 9915c51b02dd62f5c961ab388422d6f18a1dbedc
+SHA1 (patch-setup.py) = 1b6ba462a0c3d6079f7d0fc738ba8000b6e892b4
