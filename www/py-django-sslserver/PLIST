@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/03/31 01:00:38 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sslserver/__init__.py
+${PYSITELIB}/sslserver/__init__.pyc
+${PYSITELIB}/sslserver/__init__.pyo
+${PYSITELIB}/sslserver/certs/development.crt
+${PYSITELIB}/sslserver/certs/development.key
+${PYSITELIB}/sslserver/management/__init__.py
+${PYSITELIB}/sslserver/management/__init__.pyc
+${PYSITELIB}/sslserver/management/__init__.pyo
+${PYSITELIB}/sslserver/management/commands/__init__.py
+${PYSITELIB}/sslserver/management/commands/__init__.pyc
+${PYSITELIB}/sslserver/management/commands/__init__.pyo
+${PYSITELIB}/sslserver/management/commands/runsslserver.py
+${PYSITELIB}/sslserver/management/commands/runsslserver.pyc
+${PYSITELIB}/sslserver/management/commands/runsslserver.pyo
