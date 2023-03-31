@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/08/06 23:36:51 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2023/03/31 00:31:22 joerg Exp $
 
-DISTNAME=	cassowary-2.2
+DISTNAME=	cassowary-2.3.2
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	math lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sile-typesetter/}
@@ -16,11 +16,11 @@ DEPENDS+=	${LUA_PKGPREFIX}-penlight-[0-9]*:../../devel/lua-penlight
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS+=	${LUA_LDIR}
+INSTALLATION_DIRS+=	${LUA_LDIR}/cassowary
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/cassowary.lua \
-		${DESTDIR}${PREFIX}/${LUA_LDIR}/
+	${INSTALL_DATA} ${WRKSRC}/cassowary/*.lua \
+		${DESTDIR}${PREFIX}/${LUA_LDIR}/cassowary
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
