@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1986 2023/03/31 15:19:39 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.1987 2023/03/31 20:39:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ngtcp2 to 0.14.1 [adam 2023-03-31]
 	Updated devel/cmake to 3.26.2 [adam 2023-03-31]
 	Updated devel/stylua to 0.17.1 [nikita 2023-03-31]
+	Updated emulators/mame to 0.253 [wiz 2023-03-31]
