@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/06 23:36:51 joerg Exp $
-${LUA_LDIR}/cassowary.lua
+@comment $NetBSD: PLIST,v 1.2 2023/03/31 00:31:22 joerg Exp $
+${LUA_LDIR}/cassowary/init.lua
