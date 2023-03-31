@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1983 2023/03/31 01:15:44 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.1984 2023/03/31 01:17:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -582,7 +582,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-core to 0.1.29 [taca 2023-01-19]
 	Updated security/ruby-rex-socket to 0.1.45 [taca 2023-01-19]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.20 [taca 2023-01-19]
-	Added net/nagios-plugin-x509 0.1 [manu 2023-01-19]
+	Added net/nagios-plugin-x509 version 0.1 [manu 2023-01-19]
 	Updated www/ramaze to 2023.01.06 [taca 2023-01-19]
 	Updated www/passenger to 5.3.7nb13 [taca 2023-01-19]
 	Updated lang/gleam to 0.26.0 [nikita 2023-01-19]
@@ -2466,7 +2466,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-docs to 3.41.2 [adam 2023-03-28]
 	Updated databases/sqlite3-tcl to 3.41.2 [adam 2023-03-28]
 	Updated devel/lemon to 1.0.3.41.2 [adam 2023-03-28]
-	Added fonts/amiri-ttf to 1.000 [joerg 2023-03-28]
+	Added fonts/amiri-ttf version 1.000 [joerg 2023-03-28]
 	Updated fonts/gentium-ttf to 1.03 [joerg 2023-03-28]
 	Added fonts/gentiumplus-ttf version 6.200 [joerg 2023-03-28]
 	Updated multimedia/mkvtoolnix to 75.0.0 [adam 2023-03-28]
