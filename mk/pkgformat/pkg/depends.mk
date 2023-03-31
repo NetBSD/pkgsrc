@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.17 2023/03/30 22:51:23 joerg Exp $
+# $NetBSD: depends.mk,v 1.18 2023/03/31 10:50:26 adam Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -133,7 +133,7 @@ _DEPENDS_INSTALL_CMD=							\
 		cd $$dir;						\
 		unset _PKGSRC_BARRIER;					\
 		unset MAKEFLAGS;					\
-		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG}	\
+		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV} PATH=${_PATH_ORIG:Q}\
 			_PKGSRC_DEPS="$$extradep${_PKGSRC_DEPS}"	\
 			PKGNAME_REQD="$$pattern"			\
 			USE_CROSS_COMPILE=$$cross			\
