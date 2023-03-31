@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1985 2023/03/31 08:07:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.1986 2023/03/31 15:19:39 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2565,3 +2565,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/py-django-sslserver version 0.20 [joerg 2023-03-31]
 	Updated net/ngtcp2 to 0.14.1 [adam 2023-03-31]
 	Updated devel/cmake to 3.26.2 [adam 2023-03-31]
+	Updated devel/stylua to 0.17.1 [nikita 2023-03-31]
