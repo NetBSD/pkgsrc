@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.47 2023/03/30 20:26:38 joerg Exp $
+$NetBSD: distinfo,v 1.48 2023/03/31 10:49:05 joerg Exp $
 
 BLAKE2s (openexr-3.1.6.tar.gz) = bfef564b6236cb2903edb852465c799510c9446a1843a7c4b2c41e653f3106dc
 SHA512 (openexr-3.1.6.tar.gz) = 310b6e0de0f7b6bc6b8b325a24dd948f8251e6abb2971005e9b44e206db0aa2ffbe85ee55a26c575fd57e274d160b9098b8f7da618a72e679547fe863f99865a
 Size (openexr-3.1.6.tar.gz) = 20494002 bytes
-SHA1 (patch-src_bin_exrcheck_main.cpp) = d2c1884293bed864e246321f11c2cd066adc1d5a
-SHA1 (patch-src_lib_OpenEXR_ImfDeepTiledInputFile.h) = 24ec7da184202d4d3dea76ade61165bf7fb2d90f
-SHA1 (patch-src_lib_OpenEXR_ImfDeepTiledInputPart.h) = 0800549b02f946258866a189d3c8c529347e6d42
 SHA1 (patch-src_lib_OpenEXR_ImfSystemSpecific.h) = 87c234bc497cd1fe34d38dfcdaa943486f8971e5
-SHA1 (patch-src_lib_OpenEXR_ImfTiledMisc.h) = b06c307819676dc54efc4a867fa37051d9119768
