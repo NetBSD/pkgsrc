@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1697 2023/03/31 01:13:07 joerg Exp $
+# $NetBSD: Makefile,v 1.1698 2023/03/31 01:18:05 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -708,6 +708,7 @@ SUBDIR+=	py-django-import-export
 SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-js-asset
 SUBDIR+=	py-django-kronos
+SUBDIR+=	py-django-localflavor
 SUBDIR+=	py-django-modelcluster
 SUBDIR+=	py-django-mptt
 SUBDIR+=	py-django-phonenumber-field
