@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:22:19 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/03/31 00:43:21 joerg Exp $
 
-BLAKE2s (luaexpat-1.3.0.tar.gz) = dd880c80cdd53ff42f6c148c10135084dc02cdb05567844c209a09bf4f2f1636
-SHA512 (luaexpat-1.3.0.tar.gz) = 91884653310e2dc89ade6d1653875ac8607640a21853d3ccb1fd0f833812e41981fad5c40101732ec249104d2c50c9a332208d1e44423b8428065a223c60b4ae
-Size (luaexpat-1.3.0.tar.gz) = 29567 bytes
-SHA1 (patch-Makefile) = 5110d3a8201bec9b857d4d9270431df922927da4
+BLAKE2s (luaexpat-1.5.1.tar.gz) = d2bb8d158896605dec7c794883b06f8411598296da06b18517384d36daaa355c
+SHA512 (luaexpat-1.5.1.tar.gz) = 45834b02d863a65c6de2ad3c5c671935ae512dd906233a647269438aeeb37c7bbd6e7166aefd8da72480b33e1aa79a86ed070ed8800a8e0f303ccc74918f3bb8
+Size (luaexpat-1.5.1.tar.gz) = 53912 bytes
+SHA1 (patch-Makefile) = 563f7a64fca9b08c4178e46e82faa58853985598
