@@ -1,0 +1,3 @@
+Django SSL Server is a SSL-enabled development server for the Django
+Framework. It is not intended for productive environments and should not
+be considered secure.
