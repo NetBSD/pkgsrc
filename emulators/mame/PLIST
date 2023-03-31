@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2023/02/22 11:15:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.75 2023/03/31 20:39:45 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -205,8 +205,7 @@ share/mame/hash/coleco.xml
 share/mame/hash/compclr2_flop.xml
 share/mame/hash/compis.xml
 share/mame/hash/comx35_flop.xml
-share/mame/hash/conchess_plymate.xml
-share/mame/hash/conchess_standard.xml
+share/mame/hash/conchess.xml
 share/mame/hash/copera.xml
 share/mame/hash/cpc_cass.xml
 share/mame/hash/cpc_flop.xml
@@ -446,6 +445,7 @@ share/mame/hash/msx2_cass.xml
 share/mame/hash/msx2_flop.xml
 share/mame/hash/msx2p_flop.xml
 share/mame/hash/msx_softcard.xml
+share/mame/hash/msx_yamaha_minicart.xml
 share/mame/hash/msxr_flop.xml
 share/mame/hash/mt65_cass.xml
 share/mame/hash/mt65_rom.xml
@@ -488,6 +488,7 @@ share/mame/hash/nuon.xml
 share/mame/hash/octopus.xml
 share/mame/hash/ondra.xml
 share/mame/hash/orao.xml
+share/mame/hash/oric1_cass.xml
 share/mame/hash/orion_cart.xml
 share/mame/hash/orion_cass.xml
 share/mame/hash/orion_flop.xml
@@ -525,6 +526,7 @@ share/mame/hash/pcfx.xml
 share/mame/hash/pcw.xml
 share/mame/hash/pcw16.xml
 share/mame/hash/pcx_flop.xml
+share/mame/hash/pda600.xml
 share/mame/hash/pdp1_ptp.xml
 share/mame/hash/pecom_cass.xml
 share/mame/hash/pegasus_cart.xml
@@ -563,6 +565,7 @@ share/mame/hash/prof80.xml
 share/mame/hash/psi98.xml
 share/mame/hash/psion1.xml
 share/mame/hash/psion2.xml
+share/mame/hash/psion_ssd.xml
 share/mame/hash/psx.xml
 share/mame/hash/pt68k2.xml
 share/mame/hash/pv1000.xml
