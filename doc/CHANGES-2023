@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1976 2023/03/30 21:47:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.1977 2023/03/31 00:22:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2556,3 +2556,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gpg-tui to 0.9.5 [pin 2023-03-30]
 	Updated graphics/libheif to 1.15.2 [wiz 2023-03-30]
 	Updated graphics/libheif to 1.15.2nb1 [wiz 2023-03-30]
+	Updated devel/lua-penlight to 1.13.1 [joerg 2023-03-31]
