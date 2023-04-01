@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:13:02 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/04/01 10:42:04 markd Exp $
 
-BLAKE2s (csquotes.r57844.tar.xz) = 72b086a6003ad1f7d19b0ccc6310a1af500506bcb76727542c502ac9725f3a18
-SHA512 (csquotes.r57844.tar.xz) = c783ac945ed324cfbefad1c614010a1b1bf6774d7961a085ecdfe1a870d80134a86ef6bec6b0114f9274a83f292b22ecd21d8568977d8f7c07dda084b5bfb348
-Size (csquotes.r57844.tar.xz) = 17924 bytes
+BLAKE2s (csquotes.r64389.tar.xz) = ae3c31aad4cc391bee28a42a850c6dcf08de98b9e6f1e6af7c347bea8303ebe0
+SHA512 (csquotes.r64389.tar.xz) = 68427cbe486f3b53bdb24869a3ad52cf6a006d7872ff9408560d9e4b0f1e8184fcb437d54e10f11d7a3585ff8ff7ad40ab4a95aa66091bb69a75a3e8e60aede8
+Size (csquotes.r64389.tar.xz) = 18088 bytes
