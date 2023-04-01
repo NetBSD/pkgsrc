@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2004 2023/04/01 13:50:40 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.2005 2023/04/01 14:30:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2669,3 +2669,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-ntgclass to 2.1f [markd 2023-04-01]
 	Updated print/tex-ntgclass-doc to 2.1f [markd 2023-04-01]
 	Updated textproc/py-xml2rfc to 3.17.0 [riastradh 2023-04-01]
+	Updated graphics/py-Pillow to 9.5.0 [adam 2023-04-01]
