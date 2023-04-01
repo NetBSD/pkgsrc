@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:02 markd Exp $
-share/texmf-dist/scripts/mfirstuc/mfirstuc.perl
+@comment $NetBSD: PLIST,v 1.2 2023/04/01 12:04:11 markd Exp $
+share/texmf-dist/scripts/mfirstuc/mfirstuc.l2h
+share/texmf-dist/tex/latex/mfirstuc/mfirstuc-2021-10-15.sty
 share/texmf-dist/tex/latex/mfirstuc/mfirstuc-english.sty
 share/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
