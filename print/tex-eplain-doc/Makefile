@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/02/14 03:00:49 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/01 10:55:08 markd Exp $
 
 DISTNAME=	eplain.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.11
-TEXLIVE_REV=	57186
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.13
+TEXLIVE_REV=	64721
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/eplain
