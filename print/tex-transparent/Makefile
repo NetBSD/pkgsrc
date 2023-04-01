@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 22:37:33 markd Exp $
 
 DISTNAME=	transparent
-PKGNAME=	tex-${DISTNAME}-1.4
-TEXLIVE_REV=	52981
+PKGNAME=	tex-${DISTNAME}-1.5
+TEXLIVE_REV=	64852
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/transparent
