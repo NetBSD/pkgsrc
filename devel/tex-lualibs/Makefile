@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/06/06 11:01:49 markd Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/01 11:53:53 markd Exp $
 
 DISTNAME=	lualibs
-PKGNAME=	tex-${DISTNAME}-2.74
-TEXLIVE_REV=	59298
+PKGNAME=	tex-${DISTNAME}-2.75
+TEXLIVE_REV=	64615
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lualibs
