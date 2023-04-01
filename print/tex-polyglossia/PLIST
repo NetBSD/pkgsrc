@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/15 04:23:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/04/01 22:09:34 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -7,6 +7,8 @@ share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/devanagaridigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/devanagaridigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/farsidigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/farsidigits.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/gurmukhidigits.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/gurmukhidigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/thaidigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/thaidigits.tec
 share/texmf-dist/tex/latex/polyglossia/arabicnumbers.sty
@@ -66,6 +68,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-ca.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-canadian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-canadien.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-catalan.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-chinese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Arab.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Latn.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb.ldf
@@ -212,12 +215,14 @@ share/texmf-dist/tex/latex/polyglossia/gloss-norwegian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-nswissgerman.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-nynorsk.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-occitan.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-pa.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-persian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-piedmontese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-polish.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-polutonikogreek.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-portuges.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-portuguese.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-punjabi.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-romanian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-romansh.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-russian.ldf
@@ -250,6 +255,9 @@ share/texmf-dist/tex/latex/polyglossia/gloss-usorbian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-uyghur.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-vietnamese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-welsh.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-zh-CN.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-zh-TW.ldf
+share/texmf-dist/tex/latex/polyglossia/gurmukhidigits.sty
 share/texmf-dist/tex/latex/polyglossia/hebrewcal.sty
 share/texmf-dist/tex/latex/polyglossia/hijrical.sty
 share/texmf-dist/tex/latex/polyglossia/nkonumbers.sty
