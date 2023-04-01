@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/10 06:26:51 markd Exp $
+$NetBSD: distinfo,v 1.13 2023/04/01 22:14:11 markd Exp $
 
-BLAKE2s (pst-plot.doc.r60620.tar.xz) = 5551eae4ff025d08b6b6fe413b54fee99cb935197a91a8b263352030e09d0447
-SHA512 (pst-plot.doc.r60620.tar.xz) = b8033d9879f06a995bac06a1849e3349dd1e9c675279520c7e1c563cced38e58612b2a826de285d8abc2ecf1312faf17c2424d38a9cbce22431219da79245828
-Size (pst-plot.doc.r60620.tar.xz) = 1375272 bytes
+BLAKE2s (pst-plot.doc.r65346.tar.xz) = c09c5fa29547023bdbb25bb58b1fe6dd50d72d8b8dfea58852fa22993afb06e3
+SHA512 (pst-plot.doc.r65346.tar.xz) = 870ef12eaebc4078ac0906cdfc225991714a55dd674cf7b757ab7b7925728ab771bc63612c61e26a997d900f8c03ec4d439d767b0a83fa54b8a65517399fbd7e
+Size (pst-plot.doc.r65346.tar.xz) = 1346672 bytes
