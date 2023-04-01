@@ -1,7 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.2 2023/04/01 14:43:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.3 2023/04/01 18:56:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
 Pullup ticket #6742 - requested by bsiegert
 graphics/openexr: security update
+
+Pullup ticket #6743 - requested by taca
+databases/ldb: dependent update
+
+Pullup ticket #6744 - requested by taca
+net/samba4: security fix
 
