@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/03/19 08:32:15 taca Exp $
+# $NetBSD: Makefile,v 1.20 2023/04/01 10:14:21 taca Exp $
 
 DISTNAME=	kramdown-rfc2629-1.6.27
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +20,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-unicode-name>=1.0<2:../../textproc/ruby-unicode-name
 DEPENDS+=	${RUBY_PKGPREFIX}-unicode-blocks>=1.0<2:../../textproc/ruby-unicode-blocks
 DEPENDS+=	${RUBY_PKGPREFIX}-unicode-scripts>=1.0<2:../../textproc/ruby-unicode-scripts
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=4.0<5:../../www/ruby-net-http-persistent
+
+OVERRIDE_GEMSPEC+=	json_pure: json>=2.0
 
 pre-configure:
 	${CHMOD} +x ${WRKSRC}/bin/*
