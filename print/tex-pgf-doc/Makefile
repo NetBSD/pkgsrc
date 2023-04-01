@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/06/05 05:24:41 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/01 21:58:32 markd Exp $
 
 DISTNAME=	pgf.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.1.9a
-TEXLIVE_REV=	59210
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.1.10
+TEXLIVE_REV=	65553
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pgf
