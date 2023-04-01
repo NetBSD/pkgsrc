@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/04/10 06:26:51 markd Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/01 22:14:11 markd Exp $
 
 DISTNAME=	pst-plot.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.93
-TEXLIVE_REV=	60620
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.94
+TEXLIVE_REV=	65346
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-plot
