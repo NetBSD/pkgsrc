@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/04/01 11:32:03 markd Exp $
 
-BLAKE2s (tex-ifoddpage-40726/ifoddpage.tar.xz) = 609715e7d630dae655018f41b681b0a4ee36498d5129c0cd99067ef41bd872f4
-SHA512 (tex-ifoddpage-40726/ifoddpage.tar.xz) = 10f4ac75d62056ddc518472308924638c7d24666621a2aca42849f1a12d2f8ea90d6fe1ed15e6a214cb478072aa0e3abcf1a6c0ce6371ee52bb4ebd7ead8669a
-Size (tex-ifoddpage-40726/ifoddpage.tar.xz) = 1408 bytes
+BLAKE2s (ifoddpage.r64967.tar.xz) = a1a3d8ac7cf80dd83e6f87b6edd48bce60784456cd8a19b2f034fc95f626126b
+SHA512 (ifoddpage.r64967.tar.xz) = 2a750da3db6bcc2c08f4240874d57c4aee1df4fa42e695156ad08ea5c1e187061c8071f621d3cae9365f28853c44e53a94d7702ccb4972656d096ed4d1272524
+Size (ifoddpage.r64967.tar.xz) = 1440 bytes
