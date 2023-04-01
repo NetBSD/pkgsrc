@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/08/21 17:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 22:49:59 markd Exp $
 
 DISTNAME=	xepersian.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-24.7
-TEXLIVE_REV=	63791
+PKGNAME=	tex-${DISTNAME:S/./-/}-24.8
+TEXLIVE_REV=	64872
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xepersian
