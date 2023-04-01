@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:23:51 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 11:09:27 markd Exp $
 
 DISTNAME=	gentombow
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	56665
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	64333
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/gentombow
