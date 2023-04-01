@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2000 2023/04/01 10:07:56 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.2001 2023/04/01 10:14:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-asn-lite to 2023.04 [fcambus 2023-04-01]
 	Updated net/dbip-city-lite to 2023.04 [fcambus 2023-04-01]
 	Updated net/dbip-country-lite to 2023.04 [fcambus 2023-04-01]
+	Added chat/ssh-chat version 1.10 [bsiegert 2023-04-01]
