@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1996 2023/04/01 09:51:08 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.1997 2023/04/01 09:54:37 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/ruby32 to 3.2.2 [taca 2023-04-01]
 	Updated converters/bdf2sfd to 1.1.8 [fcambus 2023-04-01]
 	Updated graphics/ansilove to 4.1.7 [fcambus 2023-04-01]
+	Updated www/logswan to 2.1.14 [fcambus 2023-04-01]
