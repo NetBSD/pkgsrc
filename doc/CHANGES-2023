@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.1991 2023/04/01 09:00:44 taca Exp $
+$NetBSD: CHANGES-2023,v 1.1992 2023/04/01 09:10:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2572,3 +2572,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.17.7 [taca 2023-04-01]
 	Updated lang/ruby27-base to 2.7.8 [taca 2023-04-01]
 	Updated lang/ruby27 to 2.7.8 [taca 2023-04-01]
+	Updated lang/ruby30-base to 3.0.6 [taca 2023-04-01]
+	Updated lang/ruby30 to 3.0.6 [taca 2023-04-01]
