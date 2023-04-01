@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 22:37:54 markd Exp $
-share/texmf-dist/doc/latex/collectbox/README
+@comment $NetBSD: PLIST,v 1.2 2023/04/01 10:34:31 markd Exp $
+share/texmf-dist/doc/latex/collectbox/DEPENDS.txt
+share/texmf-dist/doc/latex/collectbox/README.txt
 share/texmf-dist/doc/latex/collectbox/collectbox.pdf
