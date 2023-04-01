@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/23 23:13:34 markd Exp $
-share/texmf-dist/doc/latex/filehook/README
+@comment $NetBSD: PLIST,v 1.2 2023/04/01 11:01:47 markd Exp $
+share/texmf-dist/doc/latex/filehook/DEPENDS.txt
+share/texmf-dist/doc/latex/filehook/README.txt
 share/texmf-dist/doc/latex/filehook/filehook.pdf
