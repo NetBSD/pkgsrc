@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/04/01 09:24:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/01 13:46:16 riastradh Exp $
 
-DISTNAME=	xml2rfc-3.12.4
+DISTNAME=	xml2rfc-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
 
@@ -14,17 +13,18 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.4:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.2.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-country>=1.8:../../geography/py-country
-DEPENDS+=	${PYPKGPREFIX}-flakes>=0.8.1:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-google-i18n-address>=2.3.2:../../devel/py-google-i18n-address
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
-DEPENDS+=	${PYPKGPREFIX}-intervaltree>=2.1.0:../../devel/py-intervaltree
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-kitchen>=1.2.6:../../devel/py-kitchen
-DEPENDS+=	${PYPKGPREFIX}-lxml>=4.3.2:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-intervaltree>=3.1.0:../../devel/py-intervaltree
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-lxml>=4.9.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=24.2.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.2.5:../../devel/py-wcwidth
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
+
 TEST_DEPENDS+=	${PYPKGPREFIX}-PDF2>=0:../../print/py-PDF2
 TEST_DEPENDS+=	${PYPKGPREFIX}-cairo>=0:../../graphics/py-cairo
 TEST_DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/24 17:23:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/01 13:46:16 riastradh Exp $
 bin/xml2rfc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -24,8 +24,6 @@ ${PYSITELIB}/xml2rfc/data/SVG-1.2-RFC.rng
 ${PYSITELIB}/xml2rfc/data/Scripts.txt
 ${PYSITELIB}/xml2rfc/data/metadata.js
 ${PYSITELIB}/xml2rfc/data/metadata.min.js
-${PYSITELIB}/xml2rfc/data/mt.css
-${PYSITELIB}/xml2rfc/data/mt.js
 ${PYSITELIB}/xml2rfc/data/reference.rnc
 ${PYSITELIB}/xml2rfc/data/reference.rng
 ${PYSITELIB}/xml2rfc/data/referencegroup.rnc
