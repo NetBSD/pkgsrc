@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:47:18 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/04/01 22:30:08 markd Exp $
 
-BLAKE2s (tikzmark.doc.r57843.tar.xz) = 6369091ee8bb0c591807aa8c9655e58aa0708e34f26d1e84badb0d5381554a4d
-SHA512 (tikzmark.doc.r57843.tar.xz) = 35029b622cf040dab6b6238badcb7f91cdd7e513386d0c34c5bc03845bbb698656abf35c865eb24a32c024f281bacd6ba5eb47ff33a0650eb8986a5698e33d9a
-Size (tikzmark.doc.r57843.tar.xz) = 418444 bytes
+BLAKE2s (tikzmark.doc.r64819.tar.xz) = 11094e7369c17d58f382ba2bb7bdb6916aecef7de2904047d56a58eb40b9359c
+SHA512 (tikzmark.doc.r64819.tar.xz) = c8222246f56882479a84f834b47332fa9a66d0dbb21ee3fb4018835aa9fcb26fa2204d70ca17d7c4609352648d76b1bcb4dd5a32eb7cb504035711643c944141
+Size (tikzmark.doc.r64819.tar.xz) = 510816 bytes
