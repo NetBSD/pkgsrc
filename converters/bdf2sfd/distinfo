@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/11/21 07:11:31 fcambus Exp $
+$NetBSD: distinfo,v 1.11 2023/04/01 09:50:14 fcambus Exp $
 
-BLAKE2s (bdf2sfd-1.1.7.tar.gz) = ff17c785720f2f0d1b447a4bc040dbfb46d753c693e724881c1cf76a90cfaae9
-SHA512 (bdf2sfd-1.1.7.tar.gz) = 1d67880f8512cb12075b580243b9e4e4169f40e1b9ad06ae61f80e2ab197393cb3a45951c0b90a53dbcf9b97d38553c7a914a059c85b4dabe064c35c2f3a4862
-Size (bdf2sfd-1.1.7.tar.gz) = 20052 bytes
+BLAKE2s (bdf2sfd-1.1.8.tar.gz) = 5f7472afca07e624bf6f3821790d5de9bed241715f8d69bb2be134b514b4df0a
+SHA512 (bdf2sfd-1.1.8.tar.gz) = 7c9eff206f73a5e6cf9d81dcba93cf286c17bcf7e7eb139446deae61b45e73c545e72e9419965f616808a0f9ae86782a8a104280f2fed80286adbb542e321cd1
+Size (bdf2sfd-1.1.8.tar.gz) = 20127 bytes
