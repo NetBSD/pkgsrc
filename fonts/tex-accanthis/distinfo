@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/01 10:03:01 markd Exp $
 
-BLAKE2s (tex-accanthis-32089/accanthis.tar.xz) = 555f5c99d32649cf7176d59b36517f6a3a9b5ff0d3d74304bcc786360790f80b
-SHA512 (tex-accanthis-32089/accanthis.tar.xz) = 46c1d4934ad5ebdf85310bcc53a570221cb709ad9b089ac8d1433b7508d624534efa9aea34a9b178af5223252ad7bc46af3d85d1acb9044c2dedb6a236a3633a
-Size (tex-accanthis-32089/accanthis.tar.xz) = 368020 bytes
+BLAKE2s (accanthis.r64844.tar.xz) = c5adecd7a780156c87623e5db2c0b4b25bc1de38e98b89f059667fd947c4293c
+SHA512 (accanthis.r64844.tar.xz) = 5727125c85e06501f009267bab8c1eff674a76db618c6155fd9c6b41bb2407a3a201a008c7f5aa6d73ecf100a3fc917961d20f547c2f6040fe72760a4dcd9a44
+Size (accanthis.r64844.tar.xz) = 368064 bytes
