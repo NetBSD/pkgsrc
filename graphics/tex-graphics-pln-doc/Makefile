@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/09/01 04:04:42 markd Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/01 11:26:14 markd Exp $
 
 DISTNAME=	graphics-pln.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-TEXLIVE_REV=	63579
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022.65187
+TEXLIVE_REV=	65187
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/graphics-pln
