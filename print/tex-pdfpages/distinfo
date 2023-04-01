@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/09/01 04:55:57 markd Exp $
+$NetBSD: distinfo,v 1.19 2023/04/01 21:53:09 markd Exp $
 
-BLAKE2s (pdfpages.r63386.tar.xz) = 684001636eccde58c3ec776743e899a0e9781f8fc0a9b50e9d2fdc837fa155f4
-SHA512 (pdfpages.r63386.tar.xz) = b5fc67c43932c8cffa44024599daaa571438846cd8418ca1e2851322d95581e0b37ce9d728f5830c3e82a41c5a8a5e9dae27ca7370664dcbfd2da61602978fe5
-Size (pdfpages.r63386.tar.xz) = 14048 bytes
+BLAKE2s (pdfpages.r65319.tar.xz) = 1f482825f23f646339530bd93e5277c698020b3a38aa0cfda0ac5179761f1c9f
+SHA512 (pdfpages.r65319.tar.xz) = c29f811574dde6dcd717255d40df7234d0916d6e7e4fe4c25e62639123bcdf4464e3e285c335c11bf2a289e8ca6391278611a0073fbd3ac8a071790717b2778a
+Size (pdfpages.r65319.tar.xz) = 14080 bytes
