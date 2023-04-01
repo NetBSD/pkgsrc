@@ -1,0 +1,1 @@
+bin/xml2rfc @PREFIX@/bin/xml2rfc-@PYVERSSUFFIX@
