@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/02/18 19:53:42 markd Exp $
-share/texmf-dist/scripts/pgf/Makefile.pgf_release
-share/texmf-dist/scripts/pgf/pgfrevisionfile.sh
+@comment $NetBSD: PLIST,v 1.13 2023/04/01 21:58:32 markd Exp $
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgf.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbim.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbla.tex
@@ -434,7 +432,7 @@ share/texmf-dist/tex/generic/pgf/utilities/pgfexternal.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfexternalwithdepth.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex
 share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2021/06/05 05:24:41 markd Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/01 21:58:32 markd Exp $
 
 DISTNAME=	pgf
-PKGNAME=	tex-${DISTNAME}-3.1.9a
-TEXLIVE_REV=	59210
+PKGNAME=	tex-${DISTNAME}-3.1.10
+TEXLIVE_REV=	65553
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pgf
-COMMENT=	PostScript and PDF graphics systems for TeX
+COMMENT=	Create PostScript and PDF graphics in TeX
 LICENSE=	lppl-1.3c AND gnu-gpl-v2 AND gnu-fdl-v1.3
 
 DEPENDS+=	tex-atveryend-[0-9]*:../../print/tex-atveryend
