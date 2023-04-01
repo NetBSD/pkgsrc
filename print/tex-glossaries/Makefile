@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/04/01 11:20:18 markd Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-4.49
-PKGREVISION=	1
-TEXLIVE_REV=	60921
+PKGNAME=	tex-${DISTNAME}-4.52
+TEXLIVE_REV=	64919
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/glossaries
@@ -34,7 +33,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries \
 		${WRKSRC}/bin/
-	${RM} -rf ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries.bat
 	${RM} -rf ${WRKSRC}/texmf-dist/scripts/glossaries/makeglossaries-lite.lua
 
 .include "../../mk/bsd.pkg.mk"
