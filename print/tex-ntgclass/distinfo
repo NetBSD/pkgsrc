@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/04/01 12:20:01 markd Exp $
 
-BLAKE2s (ntgclass.r56959.tar.xz) = cee6a425142f5913fdde4574b86b5fe8a3b4c288c7367f088ece1ae3932fddfb
-SHA512 (ntgclass.r56959.tar.xz) = bb1cd3532f91bde7768a027d51216bd56c8401cbcec4996587760e3289d892d2f1d4efe834d55146026ecab413b04d1f4e8e132a53e3b6f925f4aaf0bc1124f9
-Size (ntgclass.r56959.tar.xz) = 16060 bytes
+BLAKE2s (ntgclass.r65522.tar.xz) = 4de457ce0915a320808c25c427337d722d6196b1d8a39e0b1f875895b760656a
+SHA512 (ntgclass.r65522.tar.xz) = f0bfad104459f2740712d186f7f9aab20e9860ccf75f8c552a4c80d8b14ece4d503d2aabbd7d3000e1bf05203f41ebd49f2c693b4d36478b631cd27ce71c9c0d
+Size (ntgclass.r65522.tar.xz) = 16076 bytes
