@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/04/01 10:34:31 markd Exp $
 
-BLAKE2s (tex-collectbox-26557/collectbox.tar.xz) = ae02f2a6c5eb3281b463e8e3034d3ec63ea2e6d050e0788eeed4259d85bbd0d8
-SHA512 (tex-collectbox-26557/collectbox.tar.xz) = fc81dce2730727f4c875da9fa01e3ced4c68229aaf68cbb2da8a12e8367e86f914605556e24ab3cd77f98edc733c384116a01ed2984e1ef5a553b3adcf3a9a8a
-Size (tex-collectbox-26557/collectbox.tar.xz) = 2828 bytes
+BLAKE2s (collectbox.r64967.tar.xz) = 8b70dd70a7ba0e006f34faccda78dd8641921a702b107da83e4b451c5756be9f
+SHA512 (collectbox.r64967.tar.xz) = 59316a336010c03bbe288ecaf20953666d084500165befe465ac87210795f2ef68693e5fe155b45a461a690d918d83aad247dcd52eb40cd0bf80f6c68fcd8071
+Size (collectbox.r64967.tar.xz) = 2872 bytes

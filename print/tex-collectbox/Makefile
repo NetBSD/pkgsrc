@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:48 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/01 10:34:31 markd Exp $
 
 DISTNAME=	collectbox
-PKGNAME=	tex-${DISTNAME}-0.4b
-PKGREVISION=	1
-TEXLIVE_REV=	26557
+PKGNAME=	tex-${DISTNAME}-0.4c
+TEXLIVE_REV=	64967
 
-HOMEPAGE=	https://www.ctan.org/pkg/collectbox
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/collectbox
 COMMENT=	Collect and process macro arguments as boxes
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
