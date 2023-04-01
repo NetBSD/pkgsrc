@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/09/01 05:43:31 markd Exp $
+# $NetBSD: Makefile,v 1.20 2023/04/01 22:32:46 markd Exp $
 
 DISTNAME=	tools.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-TEXLIVE_REV=	63514
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022.64892
+TEXLIVE_REV=	64892
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex-tools
