@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/08 15:28:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/01 09:26:57 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -406,7 +406,6 @@ ${RUBY_LIB}/bundler/templates/Executable
 ${RUBY_LIB}/bundler/templates/Executable.bundler
 ${RUBY_LIB}/bundler/templates/Executable.standalone
 ${RUBY_LIB}/bundler/templates/Gemfile
-${RUBY_LIB}/bundler/templates/gems.rb
 ${RUBY_LIB}/bundler/templates/newgem/CHANGELOG.md.tt
 ${RUBY_LIB}/bundler/templates/newgem/CODE_OF_CONDUCT.md.tt
 ${RUBY_LIB}/bundler/templates/newgem/Cargo.toml.tt
@@ -445,6 +444,7 @@ ${RUBY_LIB}/bundler/ui/rg_proxy.rb
 ${RUBY_LIB}/bundler/ui/shell.rb
 ${RUBY_LIB}/bundler/ui/silent.rb
 ${RUBY_LIB}/bundler/uri_credentials_filter.rb
+${RUBY_LIB}/bundler/uri_normalizer.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool/timed_stack.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool/version.rb
@@ -1022,6 +1022,7 @@ ${RUBY_LIB}/rubygems/commands/cleanup_command.rb
 ${RUBY_LIB}/rubygems/commands/contents_command.rb
 ${RUBY_LIB}/rubygems/commands/dependency_command.rb
 ${RUBY_LIB}/rubygems/commands/environment_command.rb
+${RUBY_LIB}/rubygems/commands/exec_command.rb
 ${RUBY_LIB}/rubygems/commands/fetch_command.rb
 ${RUBY_LIB}/rubygems/commands/generate_index_command.rb
 ${RUBY_LIB}/rubygems/commands/help_command.rb
