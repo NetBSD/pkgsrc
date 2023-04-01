@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2022/09/01 10:56:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/04/01 11:56:25 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-06-15.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-10-03.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -76,7 +76,6 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-plug.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-cff2.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-t2-writer.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-ttf.lua
-share/texmf-dist/tex/luatex/luaotfload/luaotfload-hashing.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-init.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-letterspace.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-loaders.lua
@@ -90,7 +89,6 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-suppress.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-szss.lua
-share/texmf-dist/tex/luatex/luaotfload/luaotfload-t3.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua
