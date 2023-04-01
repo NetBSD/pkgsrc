@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/19 02:50:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 10:19:46 markd Exp $
 
 DISTNAME=	apalike-german
-PKGNAME=	tex-${DISTNAME}-2022
-TEXLIVE_REV=	61719
+PKGNAME=	tex-${DISTNAME}-2022.65403
+TEXLIVE_REV=	65403
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/apalike-german
