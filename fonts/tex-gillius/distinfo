@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/01 11:11:57 markd Exp $
 
-BLAKE2s (tex-gillius-32068/gillius.tar.xz) = 1c4aa3683e324ca8f4e82da1179df47bd80458bfd63243c69e6db4a5aa4c1326
-SHA512 (tex-gillius-32068/gillius.tar.xz) = 59e25f78104bc6b74e3fe95f26ce5b37eaee7d54f6a5c00e4e3ed85351b91a8322353b5e42f0dcc3009fdd97be7db526c6f38b58e04b9a11f48148e13da5e431
-Size (tex-gillius-32068/gillius.tar.xz) = 941848 bytes
+BLAKE2s (gillius.r64865.tar.xz) = 4578768d256bf20055fec12851df893b744ecf2b5cacb3ee4f6c6dbc29c1e5a8
+SHA512 (gillius.r64865.tar.xz) = f2ce20c1650588af9f446ffc6d69835e4e970def915e3912ef36ed8d065d717ccbeb125a783768c360328ba6d44e15f954348957d774dec8eb3b84f4b8e00406
+Size (gillius.r64865.tar.xz) = 941900 bytes
