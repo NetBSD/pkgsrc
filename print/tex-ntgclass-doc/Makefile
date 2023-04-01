@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/02/13 11:20:57 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/01 12:20:02 markd Exp $
 
 DISTNAME=	ntgclass.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.1e
-TEXLIVE_REV=	56959
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1f
+TEXLIVE_REV=	65522
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ntgclass
