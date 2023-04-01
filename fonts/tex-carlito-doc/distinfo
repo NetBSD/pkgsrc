@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/01 10:30:27 markd Exp $
 
-BLAKE2s (tex-carlito-35002/carlito.doc.tar.xz) = f5734a25445d28fe8041803575c11cff5fb24502eeff1f273336e012b683210d
-SHA512 (tex-carlito-35002/carlito.doc.tar.xz) = bae51e2c623c082d4e240b979bc51767da14f8783e4de95d0405a4f33c7caf1e59a04f2fddeb219107b14318b5da94122847b05fb869f77b1f944ae2dcee737c
-Size (tex-carlito-35002/carlito.doc.tar.xz) = 354044 bytes
+BLAKE2s (carlito.doc.r64624.tar.xz) = 4fd3662b57da9817f37eeee3ea7b9c1ce2ae67b1e4f8a514212f97fc1c65cc76
+SHA512 (carlito.doc.r64624.tar.xz) = 6718aed70469e95dc4d077552b453f81c9fbbcad6201194eb264bba6aa9c9f9b1b1b09d1ed987b963d6b09e13afe5dfda1436333f0c44ee3c368caa90d790613
+Size (carlito.doc.r64624.tar.xz) = 624608 bytes
