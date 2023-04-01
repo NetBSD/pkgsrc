@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 11:36:29 markd Exp $
 
 DISTNAME=	kvsetkeys
-PKGNAME=	tex-${DISTNAME}-1.18
-TEXLIVE_REV=	53166
+PKGNAME=	tex-${DISTNAME}-1.19
+TEXLIVE_REV=	64632
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/kvsetkeys
