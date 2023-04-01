@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/01 22:39:52 markd Exp $
 
-BLAKE2s (tex-umtypewriter-18651/umtypewriter.tar.xz) = eaef4e7eac8b98a58dc28976fe9daca81ae82c582a28b4d0c428cd0c8689f584
-SHA512 (tex-umtypewriter-18651/umtypewriter.tar.xz) = 7bffac6f8b3a9b7058a9d94c0c1029e879fd3a42cbcf3467a8aa5a8a29eb4a3093a8b07bbce23f2eaa57056a043823f2858d6324a8a008e2bc9930341bbc6b62
-Size (tex-umtypewriter-18651/umtypewriter.tar.xz) = 338560 bytes
+BLAKE2s (umtypewriter.r64443.tar.xz) = 8f0df751d7d2199d227f90b20627faa2d81d3fc676c89ef83a6ef7ff5ba40558
+SHA512 (umtypewriter.r64443.tar.xz) = e62f573d1dd79b27a9ed563a9081c94eeb483fe9904cf080209a198793bbd845e4ed29eb5849165a3880338a07dade313762c02a0e37c8b518752edede622950
+Size (umtypewriter.r64443.tar.xz) = 340604 bytes
