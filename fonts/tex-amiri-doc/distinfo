@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/19 16:44:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/04/01 10:13:41 markd Exp $
 
-BLAKE2s (amiri.doc.r55403.tar.xz) = fe5daca9835b129b6a2874e476f5b3e6862e2095f261ce5c89595b260adb5de7
-SHA512 (amiri.doc.r55403.tar.xz) = 3328c73a7203ca3239036063c7a65faa9119ccb4c1f7fe4229abf49a0bd8216e4bef1a93a18c452a0200d781240dc643888c2d278eb97edfcd1c716ae14478e2
-Size (amiri.doc.r55403.tar.xz) = 99476 bytes
+BLAKE2s (amiri.doc.r65191.tar.xz) = 2aaa6b3db17bb94e116a522ae1f9e5e2a8fb15476a2d675abbcfb718ab182b19
+SHA512 (amiri.doc.r65191.tar.xz) = 8f50fd9ff492cec24fba7a321a4fdc25d5b427eac31609adbc9fba6a0bcaae8ed895aa6cc860a66106e22ae21dbe9984f9e37f4bc2451f77f5d89ea10d0f5e0a
+Size (amiri.doc.r65191.tar.xz) = 24708 bytes

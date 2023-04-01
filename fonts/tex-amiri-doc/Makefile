@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/08/19 16:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 10:13:41 markd Exp $
 
 DISTNAME=	amiri.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.113
-TEXLIVE_REV=	55403
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.000
+TEXLIVE_REV=	65191
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/amiri
