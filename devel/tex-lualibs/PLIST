@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/30 10:23:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/01 11:53:53 markd Exp $
 share/texmf-dist/tex/luatex/lualibs/lualibs-basic-merged.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-basic.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-boolean.lua
@@ -8,7 +8,6 @@ share/texmf-dist/tex/luatex/lualibs/lualibs-extended-merged.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-extended.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-file.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-function.lua
-share/texmf-dist/tex/luatex/lualibs/lualibs-gzip.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-io.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-lpeg.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-lua.lua
@@ -29,9 +28,11 @@ share/texmf-dist/tex/luatex/lualibs/lualibs-util-fil.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-jsn.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-lua.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-prs.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-util-sac.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-sta.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-sto.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-str.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-tab.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs-util-tpl.lua
+share/texmf-dist/tex/luatex/lualibs/lualibs-util-zip.lua
 share/texmf-dist/tex/luatex/lualibs/lualibs.lua
