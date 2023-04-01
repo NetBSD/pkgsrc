@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/14 02:59:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/01 12:12:45 markd Exp $
 share/texmf-dist/fonts/map/dvips/musixtex-fonts/musix.map
 share/texmf-dist/fonts/opentype/public/musixtex-fonts/MuseJazzText.otf
 share/texmf-dist/fonts/source/public/musixtex-fonts/musexgen.mf
@@ -98,6 +98,7 @@ share/texmf-dist/fonts/source/public/musixtex-fonts/xslz20.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xslz20d.mf
 share/texmf-dist/fonts/source/public/musixtex-fonts/xtie20.mf
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/MuseJazzText.tfm
+share/texmf-dist/fonts/tfm/public/musixtex-fonts/feta20.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/frenchtab.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/musix11.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/musix13.tfm
@@ -181,6 +182,7 @@ share/texmf-dist/fonts/tfm/public/musixtex-fonts/xslz20.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xslz20d.tfm
 share/texmf-dist/fonts/tfm/public/musixtex-fonts/xtie20.tfm
 share/texmf-dist/fonts/type1/public/musixtex-fonts/MuseJazzText.pfb
+share/texmf-dist/fonts/type1/public/musixtex-fonts/feta20.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/frenchtab.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/musix11.pfb
 share/texmf-dist/fonts/type1/public/musixtex-fonts/musix13.pfb
