@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2022/08/21 15:12:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 12:16:54 markd Exp $
 
 DISTNAME=	newverbs
-PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	58256
+PKGNAME=	tex-${DISTNAME}-1.6a
+TEXLIVE_REV=	64833
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/p/newverbs/
+HOMEPAGE=	https://ctan.org/pkg/newverbs
 COMMENT=	Define new versions of \verb, including short verb versions
 LICENSE=	lppl-1.3c
 
-# shortvrb
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 
 .include "../../print/texlive/package.mk"
