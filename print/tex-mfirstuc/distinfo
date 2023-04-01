@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/14 02:38:44 markd Exp $
+$NetBSD: distinfo,v 1.6 2023/04/01 12:04:11 markd Exp $
 
-BLAKE2s (mfirstuc.r60770.tar.xz) = 5a281900e562c53bc1108dd2488393e1c0d91460987dc010167f44785d274e4e
-SHA512 (mfirstuc.r60770.tar.xz) = 9bf4d7db5094b20b65302face634a10ad2bcaf521e948130f5fda6770e8433074bd8d35b89bf905ad22609340e27e85dba5c50715a776d2c1ac98a5ec3faf5d5
-Size (mfirstuc.r60770.tar.xz) = 4472 bytes
+BLAKE2s (mfirstuc.r64743.tar.xz) = c0dd41a43ecd04227e56f02e1021893f50a6940d4d0b60bf01f0803c27fa381c
+SHA512 (mfirstuc.r64743.tar.xz) = 2fde98490744da1823c5d90b8fabaa9c02d33f3f974fc7f0f6b8ddae4d8ec86f563a4fb491644d53a13b8632fbca2c7768970eea018c6112dc76d21307d89166
+Size (mfirstuc.r64743.tar.xz) = 5756 bytes
