@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:15:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/01 22:46:59 markd Exp $
 
-BLAKE2s (tex-was-21439/was.tar.xz) = eb7623d9c0da0b805f89548ab3092e53026592caf52eb72bba087e16b9a48b8d
-SHA512 (tex-was-21439/was.tar.xz) = c46f64fdc13388d4e30362c352a2b289a5bf083981d6458b794a554236c3fc98e9b54691c66b680a8d0a7c348f358a6734148b968d0bbb50a7af84ff76d73834
-Size (tex-was-21439/was.tar.xz) = 3084 bytes
+BLAKE2s (was.r64691.tar.xz) = 6c997edf334fbc8c2ea94598722f2a422ede3db725dca41dbda568a53eda8c1e
+SHA512 (was.r64691.tar.xz) = 1e434b13cf6cbaabb173b34334e046055366a9ec844207460a852a0066963fbdde6288e94979e873811b4e66140f07b6cf2e8526ec47a050efbfaf4836edfcb1
+Size (was.r64691.tar.xz) = 1856 bytes
