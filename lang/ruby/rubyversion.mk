@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.260 2023/02/08 15:28:22 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.261 2023/04/01 08:59:44 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -213,7 +213,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY27_VERSION=		2.7.7
+RUBY27_VERSION=		2.7.8
 RUBY30_VERSION=		3.0.5
 RUBY31_VERSION=		3.1.3
 RUBY32_VERSION=		3.2.1
@@ -320,7 +320,7 @@ RUBY_STRINGIO_VER=		0.1.0
 RUBY_STRSCAN_VER=		1.0.3
 RUBY_TIMEOUT_VER=		0.1.0
 RUBY_TRACER_VER=		0.1.0
-RUBY_URI_VER=			0.10.0
+RUBY_URI_VER=			0.10.0.2
 RUBY_WEBRICK_VER=		1.6.1
 RUBY_YAML_VER=			0.1.0
 RUBY_ZLIB_VER=			1.1.0
