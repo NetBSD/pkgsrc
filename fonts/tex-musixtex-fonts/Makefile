@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/04/14 02:59:40 markd Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/01 12:12:45 markd Exp $
 
 DISTNAME=	musixtex-fonts
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	60381
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	65517
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/musixtex-fonts
