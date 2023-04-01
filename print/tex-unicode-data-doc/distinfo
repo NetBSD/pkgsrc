@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/04/14 06:46:53 markd Exp $
+$NetBSD: distinfo,v 1.11 2023/04/01 22:43:56 markd Exp $
 
-BLAKE2s (unicode-data.doc.r60516.tar.xz) = f956c4e92b4d57b7a2051345e7f72a6069e675cc76fffe42c3da159805fe533c
-SHA512 (unicode-data.doc.r60516.tar.xz) = 42bd2a27eb76e2be45cc7384cd84de26513e2ee577bda14bc20bfa7a83e1c53a121310d75bd3e237cfcc9bb7e9da39190373db0bbde44d66894e7d7df7924fc6
-Size (unicode-data.doc.r60516.tar.xz) = 3832 bytes
+BLAKE2s (unicode-data.doc.r64423.tar.xz) = 1a0f8561c3d7998c32ab73ffa31a98d7855e32243c2a4fa9e751d968191bbb14
+SHA512 (unicode-data.doc.r64423.tar.xz) = 1219c454df7b3645b97a5fe6621c9666b3784297f26e0ff63696ddf7835f326b4a189a6a890b2416f12f29fd4b40de295c042a8d9b326cb7e22152b7b8f6ab79
+Size (unicode-data.doc.r64423.tar.xz) = 3844 bytes
