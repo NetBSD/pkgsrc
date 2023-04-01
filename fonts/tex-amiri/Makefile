@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/08/19 16:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 10:13:41 markd Exp $
 
 DISTNAME=	amiri
-PKGNAME=	tex-${DISTNAME}-0.113
-TEXLIVE_REV=	55403
+PKGNAME=	tex-${DISTNAME}-1.000
+TEXLIVE_REV=	65191
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://amirifont.org/
+HOMEPAGE=	https://ctan.org/pkg/amiri
 COMMENT=	Classical Arabic typeface, Naskh style
 LICENSE=	ofl-v1.1
 
