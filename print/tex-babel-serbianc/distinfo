@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/04/15 00:41:06 markd Exp $
+$NetBSD: distinfo,v 1.9 2023/04/01 10:24:09 markd Exp $
 
-BLAKE2s (babel-serbianc.r62110.tar.xz) = f8cdc99ebd4748e2bebea95ea20e74110d61580a8074291a8ab77939f216ea0d
-SHA512 (babel-serbianc.r62110.tar.xz) = 40c67be9ea1503472ba110a8085feec7b1192c2a99c26d457ab29d9f6265ede1d69ebb628d38d0bef20ebc2dd852acac7dc88edb5761a2597b60b1bb85b128f9
-Size (babel-serbianc.r62110.tar.xz) = 4332 bytes
+BLAKE2s (babel-serbianc.r64588.tar.xz) = bd60bf64334e688fe7bf9d604adeb2e59ea9c7201bf7d77ee1edf6f608ce6292
+SHA512 (babel-serbianc.r64588.tar.xz) = c4c4bf91fb22d0766bbab6a9980b0faa19f4031cabd044a309478f9ee700bc26247a10051f10d36c8cd88425820d2f800d3947d005fa9fb8b54429efdeb3c8c8
+Size (babel-serbianc.r64588.tar.xz) = 4336 bytes
