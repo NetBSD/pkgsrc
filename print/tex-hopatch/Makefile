@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/13 05:00:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 11:29:36 markd Exp $
 
 DISTNAME=	hopatch
-PKGNAME=	tex-${DISTNAME}-1.4
-TEXLIVE_REV=	56106
+PKGNAME=	tex-${DISTNAME}-1.5
+TEXLIVE_REV=	65491
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hopatch
