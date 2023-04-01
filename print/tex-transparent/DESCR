@@ -1,3 +1,5 @@
-Since version 1.40 pdfTeX supports several color stacks; the
-package uses a separate colour stack for control of
-transparency (which is not, of course, a colour).
+pdfTeX and LuaTeX support several color stacks. This package
+shows how a separate color stack can be used for transparency,
+a property besides color that works across page breaks. If the
+PDF management is used it can also be used with other engines,
+but without support for page breaks.

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/04/01 22:37:34 markd Exp $
 
-BLAKE2s (transparent.doc.r52981.tar.xz) = 380381288ad70904cb211f3c0a44d2a5dba491034a0d06e653744d399049e43b
-SHA512 (transparent.doc.r52981.tar.xz) = 7de04001cea582db36ed0fb0b5f8382a367603d8ce8327d29d773d05af116ae76adddd678b220d2df8abf7c6c619bee9f050f51c5aa255d7b0fb9b576638e049
-Size (transparent.doc.r52981.tar.xz) = 266624 bytes
+BLAKE2s (transparent.doc.r64852.tar.xz) = 86b0d6aaa49231a858b17247d8a23e71cee14520a260307f63733c088846edd5
+SHA512 (transparent.doc.r64852.tar.xz) = 73942fa07c9bcc6e8f08b91837f96a3c781f2f60443078b67232092b98e0bfaab07e57bd43e54345df7fbb9ea20bba8bbbc10c9dc58d5cf2d0b6f6bed469d894
+Size (transparent.doc.r64852.tar.xz) = 275336 bytes
