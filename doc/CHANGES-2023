@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2006 2023/04/01 15:55:06 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2007 2023/04/01 15:56:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2671,3 +2671,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xml2rfc to 3.17.0 [riastradh 2023-04-01]
 	Updated graphics/py-Pillow to 9.5.0 [adam 2023-04-01]
 	Updated sysutils/broot to 1.21.2 [pin 2023-04-01]
+	Updated devel/difftastic to 0.46.0 [pin 2023-04-01]
