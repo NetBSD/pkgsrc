@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/15 01:26:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/01 22:35:09 markd Exp $
 share/texmf-dist/doc/generic/tracklang/CHANGES
 share/texmf-dist/doc/generic/tracklang/README
 share/texmf-dist/doc/generic/tracklang/samples/animals/animals-en-GB.ldf
@@ -19,7 +19,6 @@ share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-de.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-de.tex
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-poly.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-poly.tex
-share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals-sr-poly.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals.pdf
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals.tex
 share/texmf-dist/doc/generic/tracklang/samples/animals/sample-animals2-de.pdf
@@ -73,4 +72,7 @@ share/texmf-dist/doc/generic/tracklang/samples/sample-tracklang5.pdf
 share/texmf-dist/doc/generic/tracklang/samples/sample-tracklang5.tex
 share/texmf-dist/doc/generic/tracklang/samples/sample-tracklang6.pdf
 share/texmf-dist/doc/generic/tracklang/samples/sample-tracklang6.tex
-share/texmf-dist/doc/generic/tracklang/tracklang.pdf
+share/texmf-dist/doc/generic/tracklang/tracklang-code.pdf
+share/texmf-dist/doc/generic/tracklang/tracklang-manual.html
+share/texmf-dist/doc/generic/tracklang/tracklang-manual.pdf
+share/texmf-dist/doc/generic/tracklang/tracklang-manual.tex
