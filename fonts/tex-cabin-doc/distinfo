@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/10/12 22:15:40 markd Exp $
+$NetBSD: distinfo,v 1.12 2023/04/01 10:27:07 markd Exp $
 
-BLAKE2s (cabin.doc.r64371.tar.xz) = 5cd26ae4043f35c51c79469d85bc3fba27c61cadb204f9143b399d264dde0594
-SHA512 (cabin.doc.r64371.tar.xz) = 74362f7d5c104130a779782efd7c19c6e8cb39f7e788eb9fb6b4c3d72bfefdf1700837c36dd218c61f9c1f3466d3b6a466d1cfeed7c16945c2126948840a8da5
-Size (cabin.doc.r64371.tar.xz) = 229840 bytes
+BLAKE2s (cabin.doc.r65358.tar.xz) = ae67e6d8894bd736542587703b11e06a1468f1c4d896268bcff7b3c853f9d952
+SHA512 (cabin.doc.r65358.tar.xz) = dfe85a134cffe5831a318f1b95e3f7d85ed296cafb834273e441af49488ba2c3dd974bd5668f695da1279efefce8c4858eda630f894de7cb0535d629bea74e29
+Size (cabin.doc.r65358.tar.xz) = 229836 bytes
