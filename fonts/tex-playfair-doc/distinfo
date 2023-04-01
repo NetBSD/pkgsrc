@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/04/01 22:04:25 markd Exp $
 
-BLAKE2s (playfair.doc.r56005.tar.xz) = afebdb200075016178102531db01115ba101212a28af805fa7dae16693c6b7d2
-SHA512 (playfair.doc.r56005.tar.xz) = 03dfa23f74a3f1f23b4bd4d28ff6580e248074e07f2fc515db3fd917bd10f998886e3ef987e934b8fee7be5467b9f8d9810e9ccb6844af9bf67b8726ddff9773
-Size (playfair.doc.r56005.tar.xz) = 251112 bytes
+BLAKE2s (playfair.doc.r64857.tar.xz) = befab1595ad1b1f0032fad9dfda695ea69c351c873e69b05fd5c8dd84e2bd546
+SHA512 (playfair.doc.r64857.tar.xz) = 006319162a3a7035955064d7ab99e704bf828cc7441a9c930cfccf4cb7e70ac52ff672de3ce8b415fbfb20f29a0b4c09703fe0e3715d15e38c1293973bd3a86a
+Size (playfair.doc.r64857.tar.xz) = 251116 bytes
