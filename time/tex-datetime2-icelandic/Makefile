@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/22 01:51:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 10:48:51 markd Exp $
 
 DISTNAME=	datetime2-icelandic
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	47501
+PKGNAME=	tex-${DISTNAME}-1.2
+TEXLIVE_REV=	65213
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/datetime2-icelandic
