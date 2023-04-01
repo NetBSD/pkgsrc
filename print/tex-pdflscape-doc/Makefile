@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/01 21:49:59 markd Exp $
 
 DISTNAME=	pdflscape.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.12
-TEXLIVE_REV=	53047
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.13
+TEXLIVE_REV=	64851
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdflscape

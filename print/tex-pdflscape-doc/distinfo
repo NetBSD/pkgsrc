@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/04/01 21:49:59 markd Exp $
 
-BLAKE2s (pdflscape.doc.r53047.tar.xz) = cf33746821f05ed75bd7d0acc4fac16a92e19b37cac7be2577680adfeabee338
-SHA512 (pdflscape.doc.r53047.tar.xz) = 5fccb7dc5607f1196d6df6a1a68d010c0b9eea10854cdf2e133f31dc4095f101efc05abcf9e980a3e05375ba29ce319dc13385790c2261778fde54d3b94d1251
-Size (pdflscape.doc.r53047.tar.xz) = 298264 bytes
+BLAKE2s (pdflscape.doc.r64851.tar.xz) = b4a1e0ef044a492ad00f4089bb55357613bd23b4b78fadd25e64946717479a07
+SHA512 (pdflscape.doc.r64851.tar.xz) = c59c598fa494e5a57d2ba058dd6d096edc96aa958bec7ea1240195022b670f0cfc45d15eea0d0b68b499975811505a6fe9a209c7630c74c861fc42ce3904284d
+Size (pdflscape.doc.r64851.tar.xz) = 314616 bytes
