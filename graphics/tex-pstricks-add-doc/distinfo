@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/10 12:30:12 markd Exp $
+$NetBSD: distinfo,v 1.13 2023/04/01 22:20:20 markd Exp $
 
-BLAKE2s (pstricks-add.doc.r61407.tar.xz) = ba3c07c34fbc0e6c40626b0be749eb8900f85327373e594e65d50147bdfa7d41
-SHA512 (pstricks-add.doc.r61407.tar.xz) = 62b7f8dc64a071e70c358f1547dc3bf07bc3b336e0a2085806cc9390e41c5a77710245db515dd71064c08df0755cd3553e69088e083abf14ac5693acc285f755
-Size (pstricks-add.doc.r61407.tar.xz) = 9152100 bytes
+BLAKE2s (pstricks-add.doc.r65067.tar.xz) = c01b5fd399f713831593f94be444bcad823b6e86cffbd429f2c10475d3e24eb2
+SHA512 (pstricks-add.doc.r65067.tar.xz) = 1021ece59cb0cc41c0ee9620c84a2de8aa5dffe7e8ff7f3adc286054f880dbadec70b888c7e23152c318e5013e581e0c34a68581ec1eff8508397730a5fc8886
+Size (pstricks-add.doc.r65067.tar.xz) = 10578276 bytes
