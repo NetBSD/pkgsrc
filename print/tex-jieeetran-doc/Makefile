@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/16 01:55:24 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/02 11:19:29 markd Exp $
 
 DISTNAME=	jieeetran.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.18
-TEXLIVE_REV=	62958
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.19
+TEXLIVE_REV=	65642
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jieeetran
