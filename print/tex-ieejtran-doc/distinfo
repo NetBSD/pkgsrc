@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/16 01:58:46 markd Exp $
+$NetBSD: distinfo,v 1.2 2023/04/02 11:17:25 markd Exp $
 
-BLAKE2s (ieejtran.doc.r62957.tar.xz) = 3f28c4133a31d9767d6642bcf5bfbd0fe5d46a61ee2f12deb85f86a1efbffe0c
-SHA512 (ieejtran.doc.r62957.tar.xz) = 612e27f0ecab3c6befb40b5e7ef9cb89a1471b6f8c9c6d4c4555b059b9ec4b6ccf0735cd5230a22a4b96628395f7e352ae2e7d7f45096fa7184ffc7758bcc00f
-Size (ieejtran.doc.r62957.tar.xz) = 149524 bytes
+BLAKE2s (ieejtran.doc.r65641.tar.xz) = dd7ce146a51c919a6bb874ba41c4ba2ae0ac08f1f0deb560d30120302e9fdafc
+SHA512 (ieejtran.doc.r65641.tar.xz) = 41ffd8978d9a591c4aa711c4b2f1dc73a4d18a39e67003494c4c9a86d5fd24acf40b6c79dcc139cb46a36dda96d1e0a26a7d5336683c3d7d11eb6e46765c03e9
+Size (ieejtran.doc.r65641.tar.xz) = 150936 bytes
