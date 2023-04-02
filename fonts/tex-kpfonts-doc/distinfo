@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/04/02 11:22:59 markd Exp $
 
-BLAKE2s (tex-kpfonts-48470/kpfonts.doc.tar.xz) = bcb9b224521ca8a1b8392a67d166ebf45831f24309fb58342549a1b11d36e739
-SHA512 (tex-kpfonts-48470/kpfonts.doc.tar.xz) = 65c2fc56d27f6bf3bccbbaaa31276f2f3918e0b0de4a4b7708847f5af26630f10e84236bc33a682dcd101c7ac62b68455f0ae521a0be0e14c794e38159a70eeb
-Size (tex-kpfonts-48470/kpfonts.doc.tar.xz) = 1759368 bytes
+BLAKE2s (kpfonts.doc.r65583.tar.xz) = 8ea7c501c4b297045b9a655b99ac6d56d604c1f687a3980797bc8e890bfa278f
+SHA512 (kpfonts.doc.r65583.tar.xz) = d030abf78988bc21f0e4afc06f0fda95339864036883877f5ceec11210640fcea8cd0ba54eb4d7b7dcc33b9eee8a0b2593739b4e2260b9db6e23cd480861e79d
+Size (kpfonts.doc.r65583.tar.xz) = 1622220 bytes
