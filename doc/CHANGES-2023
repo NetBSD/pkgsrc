@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2013 2023/04/01 22:53:45 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2014 2023/04/02 08:47:08 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-xepersian-doc to 24.8 [markd 2023-04-01]
 	Updated print/tex-xstring to 1.85 [markd 2023-04-01]
 	Updated print/tex-xstring-doc to 1.85 [markd 2023-04-01]
+	Updated chat/element-web to 1.11.28 [js 2023-04-02]
