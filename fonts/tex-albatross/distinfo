@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/07 04:54:43 markd Exp $
+$NetBSD: distinfo,v 1.5 2023/04/02 11:00:58 markd Exp $
 
-BLAKE2s (albatross.r61175.tar.xz) = 090ef4d2730bc0af1e3323460f6d56df06c457d6ccbbea13b5f1b003cef0a198
-SHA512 (albatross.r61175.tar.xz) = 8c3556c5c59c049a295790042f72b929484962b622a00c3a3dd39817978fe1cb2f56ddee9863f65429b507350c197740306fd0e28be322d26d6f30ff8d77c10f
-Size (albatross.r61175.tar.xz) = 2176876 bytes
+BLAKE2s (albatross.r65647.tar.xz) = 3d692705d4545119d05176000f1f7b4fb18a46b480196415c3d7e43718e4005a
+SHA512 (albatross.r65647.tar.xz) = 3ca4c3ff3fdbb1b865e62fa96e984f94761bbce1de24cf09d7e5bdee3b4361c6536cfbd2119aeb6aa5df842228004cb78a27e2aa9e5e957cff59ef82b9fb459e
+Size (albatross.r65647.tar.xz) = 5078704 bytes
