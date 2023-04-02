@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/01 03:36:03 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/04/02 11:07:32 markd Exp $
 
-BLAKE2s (circuitikz.r63788.tar.xz) = ae03fdc65a96bef48ae0b5f291302a3e213a886e3e7c712fd702472a54e8ed7d
-SHA512 (circuitikz.r63788.tar.xz) = 14ed8349af55effbd2ea04a90418d43c3593244060e6ff990ce6fc8d88a97596ec3c1aaa6e179828839dcd62da41182099874751666ab1f42b5c6ec8f8bed596
-Size (circuitikz.r63788.tar.xz) = 165420 bytes
+BLAKE2s (circuitikz.r65785.tar.xz) = 48523c7f9e903f7fc123930110fdabac743554850661f501d2076a18a3dc655b
+SHA512 (circuitikz.r65785.tar.xz) = c7fb0d07045efd8165ff3e15f1d92dccab8ffb91cf383a9617252386bd2fe49bf570ad74100c81115ac609403546865561f61a64761e728354179da0a19adf26
+Size (circuitikz.r65785.tar.xz) = 172548 bytes
