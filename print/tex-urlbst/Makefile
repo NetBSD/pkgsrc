@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/06/28 11:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/02 11:48:20 markd Exp $
 
 DISTNAME=	urlbst
-PKGNAME=	tex-${DISTNAME}-0.8
-PKGREVISION=	4
-TEXLIVE_REV=	51530
+PKGNAME=	tex-${DISTNAME}-0.9.1
+TEXLIVE_REV=	65694
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/urlbst
@@ -19,6 +18,5 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/urlbst/urlbst ${WRKSRC}/bin/urlbst
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
