@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/06/12 19:06:53 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2023/04/02 16:12:46 gutteridge Exp $
 
-BLAKE2s (thunar-archive-plugin-0.5.0.tar.bz2) = a8fda06928a5e25d9a04a9bf78b88f615b96ade387203440ae72596f8008d227
-SHA512 (thunar-archive-plugin-0.5.0.tar.bz2) = 5a606f5102689e5e0fa051b25cae6f66248491aeab2c6402fd158151f9cbfab54ff4b61c36eab89fdf323b65065d955bdedd6760f32a5493179e92492ee1df37
-Size (thunar-archive-plugin-0.5.0.tar.bz2) = 378749 bytes
+BLAKE2s (thunar-archive-plugin-0.5.1.tar.bz2) = 842251c0bcafba86ee3b3aebc3b03b1203133fd19ba2a0c3ce40d5a9efd16020
+SHA512 (thunar-archive-plugin-0.5.1.tar.bz2) = e79c60d42a3c40007b361fca918977a84c6f8737136f06b0ef073ce574731162fc2145d2563d751b3cf73222e38361aa1ef6435eec90fce7d86d43102e674051
+Size (thunar-archive-plugin-0.5.1.tar.bz2) = 369808 bytes
