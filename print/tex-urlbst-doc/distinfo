@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:15:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/02 11:48:20 markd Exp $
 
-BLAKE2s (tex-urlbst-51530/urlbst.doc.tar.xz) = 5f40541bc145083e6504b6331feb97e1e2a2f43f6ffd24cf3a88a3618583185c
-SHA512 (tex-urlbst-51530/urlbst.doc.tar.xz) = 0dd2c6cfda184d77866503bd94e79b7c99d20f4b9627e01946887aee80318adb26528f352fcb0db764e37d7b2292a78f0d80bcb51ca7cd95593a879063154315
-Size (tex-urlbst-51530/urlbst.doc.tar.xz) = 238148 bytes
+BLAKE2s (urlbst.doc.r65694.tar.xz) = 234825b4966d537b4e5a9cf72d26d9a8bb3e5a98c25b858cbaf9dbac7360b13a
+SHA512 (urlbst.doc.r65694.tar.xz) = 897c866ab03bdd5ab741537182788c5f484009681d6fb98f1149329068be707abae7ef012c0bd0170e2b4b673eaa63b46f5d0d55714015e8a451457f5a6c540c
+Size (urlbst.doc.r65694.tar.xz) = 252716 bytes
