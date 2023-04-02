@@ -1,15 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/14 02:08:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/02 11:12:48 markd Exp $
 bin/afm2afm
 bin/autoinst
 bin/ot2kpx
+share/texmf-dist/fonts/enc/dvips/fontools/fontools_cs.enc
+share/texmf-dist/fonts/enc/dvips/fontools/fontools_l7x.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_lgr.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_ly1.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_oml.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_ot1.enc
+share/texmf-dist/fonts/enc/dvips/fontools/fontools_qx.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_t1.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_t2a.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_t2b.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_t2c.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_t3.enc
+share/texmf-dist/fonts/enc/dvips/fontools/fontools_t4.enc
+share/texmf-dist/fonts/enc/dvips/fontools/fontools_t5.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_ts1.enc
 share/texmf-dist/fonts/enc/dvips/fontools/fontools_ts3.enc
