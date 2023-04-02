@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/09/01 05:31:15 markd Exp $
+$NetBSD: distinfo,v 1.7 2023/04/02 11:38:07 markd Exp $
 
-BLAKE2s (thmtools.doc.r63477.tar.xz) = c56ba17d04ef9496ef9a1c6606dc8dc9bce7b1d0704098130153e615bac62c31
-SHA512 (thmtools.doc.r63477.tar.xz) = d325c1d315e6267e5077a19764e99c43572c91814b669676260c56dbc86264be4a284ba1e9e04e91e6c80abe69a38391df745c3078c6fa42a7ee34f424783be7
-Size (thmtools.doc.r63477.tar.xz) = 263988 bytes
+BLAKE2s (thmtools.doc.r65863.tar.xz) = 1a82643774269d2532fcf8999ada57dea789cb9a3fc70433c54e270b34cfeade
+SHA512 (thmtools.doc.r65863.tar.xz) = 753143eda92a887d6217f2dd3b727e78ff7441b109e8fc99eb0a672674a4ce0e3d7a1efd10f3252c2a14ebc87a37687511589e0f91cd4bd79a8298edfc7ad299
+Size (thmtools.doc.r65863.tar.xz) = 265140 bytes
