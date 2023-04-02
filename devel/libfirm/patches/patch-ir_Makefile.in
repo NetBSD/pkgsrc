@@ -1,0 +1,15 @@
+$NetBSD: patch-ir_Makefile.in,v 1.1 2023/04/02 11:06:40 nros Exp $
+
+* Use gnu99 so that built-in alloca is used on NetBSD
+
+--- ir/Makefile.in.orig	2023-04-02 10:54:41.032619064 +0000
++++ ir/Makefile.in
+@@ -388,7 +388,7 @@ INCLUDES = -I$(top_srcdir)/include/libfi
+ 	-I$(top_srcdir)/ir/stat -I$(top_srcdir)/ir/tr \
+ 	-I$(top_srcdir)/ir/tv
+ libfirm_la_LDFLAGS = -no-undefined -version-info $(LT_VERSION) -lm
+-libfirm_la_CFLAGS = -std=c99
++libfirm_la_CFLAGS = -std=gnu99
+ libfirm_la_SOURCES = adt/array.c adt/bipartite.c adt/cpset.c \
+ 	adt/gaussjordan.c adt/gaussseidel.c adt/hungarian.c adt/pdeq.c \
+ 	adt/plist.c adt/pmap.c adt/pqueue.c adt/pset.c adt/pset_new.c \

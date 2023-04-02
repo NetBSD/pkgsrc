@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/04/02 11:06:40 nros Exp $
 
 BLAKE2s (libfirm-1.21.0.tar.bz2) = 89de94845158d50e02d8de04d677593ba67abf5a64b87af1c4b90789d200a7f1
 SHA512 (libfirm-1.21.0.tar.bz2) = 9608da3eb7960760791cfa3c000d38057c48603cc7c01aa5ea84ab5611e46d0fa59c21a1647efceab5a0276d2b5fc363a2cd9d87cd3bb5de2a84eea4ee34374b
 Size (libfirm-1.21.0.tar.bz2) = 1457097 bytes
+SHA1 (patch-ir_Makefile.in) = 25b4a56691c4de0103d784b6a23c9f3381993914
 SHA1 (patch-ir_adt_bitfiddle.h) = 069a96e05bacb7779d0f3efb1226a0508a5d7a99
