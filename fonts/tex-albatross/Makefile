@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/04/07 04:54:43 markd Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/02 11:00:58 markd Exp $
 
 DISTNAME=	albatross
-PKGNAME=	tex-${DISTNAME}-0.4.0
-TEXLIVE_REV=	61175
+PKGNAME=	tex-${DISTNAME}-0.5.0
+TEXLIVE_REV=	65647
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/albatross
