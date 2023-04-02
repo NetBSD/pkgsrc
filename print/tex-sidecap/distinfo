@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/02 11:34:42 markd Exp $
 
-BLAKE2s (tex-sidecap-15878/sidecap.tar.xz) = 7fe6b49f272e9aab44a802f5c07ddfa8f3eb7e0ecf6616771286d78aef8620fd
-SHA512 (tex-sidecap-15878/sidecap.tar.xz) = 271620eca8cc3934a84d3e16331311199a5e14c7384f4228536c462fac9ee55d7d9e341b6ea273ae0b1e195caa9ad282bebea15c76db7a1b68bb72e0aa05d8df
-Size (tex-sidecap-15878/sidecap.tar.xz) = 3432 bytes
+BLAKE2s (sidecap.r65618.tar.xz) = 84ae8556ef06e8b122279e871d5c80cec147c6039f3a692630c9b3611b83d0c0
+SHA512 (sidecap.r65618.tar.xz) = 3133ceaf7db89d57e7dbdabc016491795b2dd67ecd614fc4125f41dfd08ba0a03371c446d1fd7e22d1c491ac3ba6ced2856c6c3c9497304f4c041c21c0c7f558
+Size (sidecap.r65618.tar.xz) = 3424 bytes
