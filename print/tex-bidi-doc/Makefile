@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/08/19 20:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/02 11:03:08 markd Exp $
 
 DISTNAME=	bidi.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-39.3
-TEXLIVE_REV=	63930
+PKGNAME=	tex-${DISTNAME:S/./-/}-39.7
+TEXLIVE_REV=	65572
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bidi
