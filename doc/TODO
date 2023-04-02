@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22737 2023/03/31 20:39:58 wiz Exp $
+$NetBSD: TODO,v 1.22738 2023/04/02 08:03:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,6 +381,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.5
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -406,6 +407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SQLiteCpp-2.5.0
 	o TeXmacs-2.1.1
 	o TiffIO-140a
+	o a2ps-4.15.3
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abcl-1.8.0
@@ -765,6 +767,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gtexinfo-7.0.3
 	o gthumb-3.4.0
 	o gtklevel9-5.1
 	o gtklife-5.2
@@ -1275,7 +1278,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qca2-ossl-2.3.2
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qgis-3.30.0
+	o qgis-3.30.1
 	o qt6-6.4.3
 	o qtcreator-10.0
 	o quazip-1.1
@@ -1319,6 +1322,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sabayon-2.30.1
 	o sablecc-3.7
 	o samba-4.18
+	o samba4-4.18.1
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o saytime-20050127
@@ -1469,6 +1473,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.56.5
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
