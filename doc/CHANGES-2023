@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2017 2023/04/02 16:15:13 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.2018 2023/04/02 16:17:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2759,3 +2759,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-soupsieve to 2.4 [adam 2023-04-02]
 	Updated www/py-beautifulsoup4 to 4.12.0 [adam 2023-04-02]
 	Updated x11/qt6-qtserialport to 6.4.1 [hauke 2023-04-02]
+	Updated archivers/xfce4-thunar-archive to 0.5.1 [gutteridge 2023-04-02]
