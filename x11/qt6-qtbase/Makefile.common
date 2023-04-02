@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.27 2023/03/29 17:19:18 nros Exp $
+# $NetBSD: Makefile.common,v 1.28 2023/04/02 16:14:14 hauke Exp $
+# used by x11/qt6-qtserialport/Makefile
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
