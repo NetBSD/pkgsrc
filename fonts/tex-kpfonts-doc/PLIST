@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/26 01:52:33 markd Exp $
-share/texmf-dist/doc/fonts/kpfonts/Kpfonts-Doc-French.pdf
-share/texmf-dist/doc/fonts/kpfonts/Kpfonts-Doc-French.tex
+@comment $NetBSD: PLIST,v 1.3 2023/04/02 11:22:59 markd Exp $
+share/texmf-dist/doc/fonts/kpfonts/Changes
 share/texmf-dist/doc/fonts/kpfonts/README.txt
-share/texmf-dist/doc/fonts/kpfonts/christophe.cls
 share/texmf-dist/doc/fonts/kpfonts/kpfonts-abstract.pdf
 share/texmf-dist/doc/fonts/kpfonts/kpfonts-abstract.tex
 share/texmf-dist/doc/fonts/kpfonts/kpfonts-math-symbols-tables.pdf
