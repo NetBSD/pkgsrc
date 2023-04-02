@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/11/30 17:00:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/04/02 12:41:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/bs4/builder/_htmlparser.pyo
 ${PYSITELIB}/bs4/builder/_lxml.py
 ${PYSITELIB}/bs4/builder/_lxml.pyc
 ${PYSITELIB}/bs4/builder/_lxml.pyo
+${PYSITELIB}/bs4/css.py
+${PYSITELIB}/bs4/css.pyc
+${PYSITELIB}/bs4/css.pyo
 ${PYSITELIB}/bs4/dammit.py
 ${PYSITELIB}/bs4/dammit.pyc
 ${PYSITELIB}/bs4/dammit.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/bs4/tests/test_builder.pyo
 ${PYSITELIB}/bs4/tests/test_builder_registry.py
 ${PYSITELIB}/bs4/tests/test_builder_registry.pyc
 ${PYSITELIB}/bs4/tests/test_builder_registry.pyo
+${PYSITELIB}/bs4/tests/test_css.py
+${PYSITELIB}/bs4/tests/test_css.pyc
+${PYSITELIB}/bs4/tests/test_css.pyo
 ${PYSITELIB}/bs4/tests/test_dammit.py
 ${PYSITELIB}/bs4/tests/test_dammit.pyc
 ${PYSITELIB}/bs4/tests/test_dammit.pyo
