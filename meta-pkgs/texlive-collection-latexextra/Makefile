@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2022/12/26 22:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/04/03 11:46:26 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre7
+PKGNAME=	texlive-${DISTNAME}-2022pre8
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	64204
@@ -278,7 +278,7 @@ DEPENDS+=	tex-csquotes-[0-9]*:../../print/tex-csquotes
 DEPENDS+=	tex-csvsimple-[0-9]*:../../textproc/tex-csvsimple
 DEPENDS+=	tex-cuisine-[0-9]*:../../print/tex-cuisine
 # depend currency
-# depend currfile
+DEPENDS+=	tex-currfile-[0-9]*:../../print/tex-currfile
 DEPENDS+=	tex-currvita-[0-9]*:../../print/tex-currvita
 DEPENDS+=	tex-cutwin-[0-9]*:../../print/tex-cutwin
 # depend cv
@@ -501,7 +501,7 @@ DEPENDS+=	tex-filecontents-[0-9]*:../../print/tex-filecontents
 # depend filecontentsdef
 # depend filedate
 # depend fileinfo
-# depend filemod
+DEPENDS+=	tex-filemod-[0-9]*:../../print/tex-filemod
 # depend fink
 # depend finstrut
 # depend fithesis
@@ -1179,7 +1179,7 @@ DEPENDS+=	tex-shapepar-[0-9]*:../../print/tex-shapepar
 # depend show2e
 # depend showcharinbox
 DEPENDS+=	tex-showdim-[0-9]*:../../print/tex-showdim
-# depend showexpl
+DEPENDS+=	tex-showexpl-[0-9]*:../../print/tex-showexpl
 DEPENDS+=	tex-showlabels-[0-9]*:../../print/tex-showlabels
 DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 DEPENDS+=	tex-sidenotes-[0-9]*:../../print/tex-sidenotes
