@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2023/01/05 16:01:15 adam Exp $
+$NetBSD: distinfo,v 1.75 2023/04/03 20:16:46 nros Exp $
 
 BLAKE2s (qtbase-everywhere-opensource-src-5.15.8.tar.xz) = 64f754155b8646d8e8dc87f1c51eb4439236f7f40302c05ebffacdfb3d211cc4
 SHA512 (qtbase-everywhere-opensource-src-5.15.8.tar.xz) = 29e8877bafdbc908072209f1b27a5040b022e2b71f17f4ab4cecd570adeae21597f9af7f1d38758760f3cb30376eeb15c5f066bf02c6e9a9e3a4d07f967046ce
@@ -10,7 +10,6 @@ SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557
 SHA1 (patch-qmake_Makefile.unix) = 8a55d0eb30903266ce529bbfa562b492cdd359b3
 SHA1 (patch-qmake_generators_makefile.cpp) = 1bca636dc88f258876df54bd0c6c64114fa7411d
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf984fe3b6af04
-SHA1 (patch-src_3rdparty_double-conversion_include_double-conversion_utils.h) = 88cd4ab81fd480c5dd28cc0a4ac0560c9565a0bc
 SHA1 (patch-src_corelib_codecs_qiconvcodec.cpp) = e050b334cecc56259bd1755cd2de8c5bbf1409c0
 SHA1 (patch-src_corelib_configure.json) = 7a83a356330e602cbc65256dd345a107004a67cb
 SHA1 (patch-src_corelib_global_qrandom.cpp) = d910579df42d5b01583b88fa19f514b230596ca7
