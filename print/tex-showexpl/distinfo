@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/03 11:40:04 markd Exp $
+
+BLAKE2s (showexpl.r57414.tar.xz) = 4180ad3c771233cbbaa4cefa5c4693108d0f584e6e4a300c4675e69e35a58ac9
+SHA512 (showexpl.r57414.tar.xz) = d42f5d3570f252295a25c130c9ec9a94abaf9f28038fca163423a0aa44afee4f354aa2dced3ccd173e698a5da6ccfaa8284096742ba04b03f5aebf8fc502426c
+Size (showexpl.r57414.tar.xz) = 4184 bytes
