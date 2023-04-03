@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/04/03 11:51:21 markd Exp $
 
-BLAKE2s (tex-standalone-47136/standalone.doc.tar.xz) = fa2e6f176f95686ec79f48f5f3f92cab8ab92b63b6e702275a22850767b9329d
-SHA512 (tex-standalone-47136/standalone.doc.tar.xz) = d7b86ac37855a9f2471ded0bd3cd370d4e7e247b0bf8a5ff63aa44e6ff8648fc1a696e813e25871ca5e02cb364f4abeced6bfc40d2f1679e0d5a894ace0872b6
-Size (tex-standalone-47136/standalone.doc.tar.xz) = 270488 bytes
+BLAKE2s (standalone.doc.r64677.tar.xz) = 8d2d854b680e33bc10189cd1628693470666b3b3e9984d1502353f4b2301802f
+SHA512 (standalone.doc.r64677.tar.xz) = 358fb3b29f4c2d37d03b7d98ee02b35ff8571ffaf30b8d3fa1a9b0f74965ca4b0bcbf2a7172b8771dd3f1240c7dad1acccc7710dad302411dc43a301149597cd
+Size (standalone.doc.r64677.tar.xz) = 278396 bytes
