@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/03/29 09:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/04/03 12:06:01 adam Exp $
 
-DISTNAME=	Markdown-3.4.1
+DISTNAME=	Markdown-3.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://Python-Markdown.github.io/
 COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
@@ -28,5 +29,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} markdown_py markdown_py${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
