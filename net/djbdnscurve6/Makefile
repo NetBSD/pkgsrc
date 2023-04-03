@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/02/08 16:14:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/03 23:40:21 schmonz Exp $
 
-DISTNAME=		djbdnscurve6-44
+DISTNAME=		djbdnscurve6-44a
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/djbdnscurve6/
 EXTRACT_SUFX=		.tgz
@@ -45,7 +45,7 @@ do-install:
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; done	\
 	done
 
-BUILDLINK_API_DEPENDS.fehqlibs+=	fehqlibs>=22
+BUILDLINK_API_DEPENDS.fehqlibs+=	fehqlibs>=22a
 .include "../../net/fehqlibs/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../mk/djbware.mk"
