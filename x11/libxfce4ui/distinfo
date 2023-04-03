@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2023/02/09 23:16:19 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2023/04/03 00:29:32 gutteridge Exp $
 
-BLAKE2s (libxfce4ui-4.18.2.tar.bz2) = 1c7d6178495900d3fbaa191670eb80628dffe9059168d9321962205403b53bfd
-SHA512 (libxfce4ui-4.18.2.tar.bz2) = 758466e2e3096791b99e1a00c9f499d95327581ad336fc1ab0d51e3d150206d522f44c2e6053b0032499dd0cb337510cf6940dc77499cef3ecbb484de7787457
-Size (libxfce4ui-4.18.2.tar.bz2) = 901949 bytes
+BLAKE2s (libxfce4ui-4.18.3.tar.bz2) = 0c6b8ce8cea37794d8a4fd0a2433fafa594ac9b4e40f4dafcf90d9179ae1ac35
+SHA512 (libxfce4ui-4.18.3.tar.bz2) = 697d883352189426b36d6c06254404b1dd2ba5f9630691b7dfddb2496d7b0233e807485155ead02dfaa73dc543eee7d8e459dc72ec56f646ec020fc9142edd28
+Size (libxfce4ui-4.18.3.tar.bz2) = 905070 bytes
 SHA1 (patch-libxfce4kbd-private_Makefile.in) = 10443997b9699363ab19d0092b6ac7a898a512d8
