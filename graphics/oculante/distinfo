@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2023/04/01 15:59:39 pin Exp $
+$NetBSD: distinfo,v 1.39 2023/04/03 11:07:55 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.20.crate) = 16b5ffc2160dd3df3b74290715bb703fe29c1623e4c8ca824245f75ed046682e
 SHA512 (ab_glyph-0.2.20.crate) = 8a008cb3cf4298e5a262d1354d24394c439bb0c303a5061ca365539759ed3f3154155b127263cc2a9712859d26dc90a886055b1c4eebfb8be86f5a4920b1dbf4
@@ -909,9 +909,9 @@ Size (objc_exception-0.1.2.crate) = 2251 bytes
 BLAKE2s (objc_id-0.1.1.crate) = 1bc76100eb8a059b580ecd9b12111a7055936856bbb9059e7d8f28a3bfb362ef
 SHA512 (objc_id-0.1.1.crate) = ec36fae6f5cefda00f3e44618b3c9fe6ec8f528f70d1a95def6421704bfa128a6e5b4a32e9dd686bf6ff60c4f87fe8094aa5e1c8070bcde58b17fdc06f49f9f5
 Size (objc_id-0.1.1.crate) = 3258 bytes
-BLAKE2s (oculante-0.6.58.tar.gz) = b0802bd132e026b486443e0f53ad27b230f5172aee512e202b209b1768fd283f
-SHA512 (oculante-0.6.58.tar.gz) = d42bd902ffc9b62d25d8eef8c758f7f71f5bba9af112efd0e1734ffd2661d27f1a204c9e9659168f37616cde457da77d28f732f521d05e842ea45f209749be44
-Size (oculante-0.6.58.tar.gz) = 18106422 bytes
+BLAKE2s (oculante-0.6.60.tar.gz) = 3a43f374e08816b09758ee2e08a8de91f9871b54785c6d80e405b6db5e5c163a
+SHA512 (oculante-0.6.60.tar.gz) = a21d28ccc302fabedcd67082dbceaaaff8b552f1e3398c85267cb063eb28573d3117018bc8f665487fa501bed4d6541db9b949b71392bf13ebcb8e1456b807b3
+Size (oculante-0.6.60.tar.gz) = 18107016 bytes
 BLAKE2s (once_cell-1.17.1.crate) = 4e7e4583b148b41c5ee92bcdab4b1ba6891d8f21f80b3f9c5c84e23a90dc6c8b
 SHA512 (once_cell-1.17.1.crate) = 1302d51801e38bfee23e74c0046f1ecb1d3c27309b5fe11c2b6c99553b357db502ce1718695602f9d8b10429e8ff03f91c016d5d604957083728293824c05904
 Size (once_cell-1.17.1.crate) = 32856 bytes
