@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/03 11:38:13 markd Exp $
+share/texmf-dist/tex/generic/filemod/filemod-expmin.tex
+share/texmf-dist/tex/generic/filemod/filemod.tex
+share/texmf-dist/tex/latex/filemod/filemod-expmin.sty
+share/texmf-dist/tex/latex/filemod/filemod.sty
