@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/01/29 21:16:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2023/04/03 20:21:06 nros Exp $
 
 DISTNAME=	screengrab-2.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
