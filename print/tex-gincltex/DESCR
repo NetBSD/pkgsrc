@@ -1,0 +1,8 @@
+The package builds on the standard LaTeX packages graphics
+and/or graphicx and allows external LaTeX source files to be
+included, in the same way as graphic files, by
+\includegraphics. In effect, then package adds support for the
+.tex extension. Some of the lower level operations like
+clipping and trimming are implemented using the adjustbox
+package which includes native pdfLaTeX support and uses the pgf
+package for other output formats.
