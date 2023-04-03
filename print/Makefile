@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.895 2022/12/26 22:12:46 wiz Exp $
+# $NetBSD: Makefile,v 1.896 2023/04/03 11:43:33 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -590,6 +590,8 @@ SUBDIR+=	tex-ctib
 SUBDIR+=	tex-ctib-doc
 SUBDIR+=	tex-cuisine
 SUBDIR+=	tex-cuisine-doc
+SUBDIR+=	tex-currfile
+SUBDIR+=	tex-currfile-doc
 SUBDIR+=	tex-currvita
 SUBDIR+=	tex-currvita-doc
 SUBDIR+=	tex-curves
@@ -737,6 +739,8 @@ SUBDIR+=	tex-filecontents
 SUBDIR+=	tex-filecontents-doc
 SUBDIR+=	tex-filehook
 SUBDIR+=	tex-filehook-doc
+SUBDIR+=	tex-filemod
+SUBDIR+=	tex-filemod-doc
 SUBDIR+=	tex-first-latex-doc-doc
 SUBDIR+=	tex-firstaid
 SUBDIR+=	tex-firstaid-doc
@@ -818,6 +822,8 @@ SUBDIR+=	tex-gfnotation
 SUBDIR+=	tex-gfnotation-doc
 SUBDIR+=	tex-ghab
 SUBDIR+=	tex-ghab-doc
+SUBDIR+=	tex-gincltex
+SUBDIR+=	tex-gincltex-doc
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-glossaries-doc
 SUBDIR+=	tex-go
@@ -1477,6 +1483,8 @@ SUBDIR+=	tex-shapepar
 SUBDIR+=	tex-shapepar-doc
 SUBDIR+=	tex-showdim
 SUBDIR+=	tex-showdim-doc
+SUBDIR+=	tex-showexpl
+SUBDIR+=	tex-showexpl-doc
 SUBDIR+=	tex-showlabels
 SUBDIR+=	tex-showlabels-doc
 SUBDIR+=	tex-showtags
