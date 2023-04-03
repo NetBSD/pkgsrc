@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2021/07/08 13:22:07 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/03 11:09:15 pin Exp $
 
-DISTNAME=		tokei-12.1.2
-CATEGORIES=		devel textproc
-MASTER_SITES=		${MASTER_SITE_GITHUB:=XAMPPRocky/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=	v13.0.0-alpha.0
+PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+CATEGORIES=	devel textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
+GITHUB_PROJECT=	tokei
+GITHUB_TAG=	v13.0.0-alpha.0
 
-MAINTAINER=		pin@NetBSD.org
-HOMEPAGE=		https://github.com/XAMPPRocky/tokei/
-COMMENT=		Displays statistics about code
-LICENSE=		apache-2.0 AND mit
+MAINTAINER=	pin@NetBSD.org
+HOMEPAGE=	https://github.com/XAMPPRocky/tokei/
+COMMENT=	Displays statistics about code
+LICENSE=	apache-2.0 AND mit
 
 .include "cargo-depends.mk"
 
@@ -18,7 +20,8 @@ USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tokei ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tokei \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
