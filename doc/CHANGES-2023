@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2037 2023/04/03 17:34:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2038 2023/04/03 19:58:13 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2793,3 +2793,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-markdown to 3.4.3 [adam 2023-04-03]
 	Updated textproc/asciidoc to 10.2.0nb3 [adam 2023-04-03]
 	Updated devel/py-ipython to 8.12.0 [adam 2023-04-03]
+	Updated lang/gleam to 0.28.0 [nikita 2023-04-03]
