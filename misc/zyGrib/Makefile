@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2023/01/29 21:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2023/04/03 20:21:14 nros Exp $
 #
 
 DISTNAME=	zyGrib-8.0.1
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	misc
 MASTER_SITES=	https://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz

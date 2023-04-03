@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/01/29 21:17:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/03 20:21:22 nros Exp $
 
 DISTNAME=	lxqt-powermanagement-1.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
