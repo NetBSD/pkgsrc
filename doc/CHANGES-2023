@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2039 2023/04/03 23:36:51 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2040 2023/04/03 23:40:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.12.0 [adam 2023-04-03]
 	Updated lang/gleam to 0.28.0 [nikita 2023-04-03]
 	Updated net/fehqlibs to 22a [schmonz 2023-04-03]
+	Updated net/djbdnscurve6 to 44a [schmonz 2023-04-03]
