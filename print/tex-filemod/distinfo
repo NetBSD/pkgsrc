@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/03 11:38:13 markd Exp $
+
+BLAKE2s (filemod.r64967.tar.xz) = 6db0359af0f6bf6e7900e60642f665a1547ce34ba8d51dd951c7d0c08a499681
+SHA512 (filemod.r64967.tar.xz) = e346e795df32a3b0cec0232da9c2b190bede65d905035a758b949c9cf01219e0880ec2ce2e83201f8dd9dcc77a98b29df2b463edf8c44cb1c220a7efe7c9f24a
+Size (filemod.r64967.tar.xz) = 3564 bytes
