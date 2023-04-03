@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/03/02 22:55:15 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/03 11:05:16 pin Exp $
 
-DISTNAME=	davis-0.1.1
+DISTNAME=	davis-0.1.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SimonPersson/}
-GITHUB_PROJECT=	davis
-GITHUB_TAG=	f16a22288e6cac4b62ba8cc25cba06c6ae4a89ab
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/SimonPersson/davis/
