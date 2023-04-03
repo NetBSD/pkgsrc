@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/01/02 12:52:47 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2023/04/03 11:10:17 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
@@ -34,7 +34,6 @@ CARGO_CRATE_DEPENDS+=	core-foundation-0.9.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.2
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.1
 CARGO_CRATE_DEPENDS+=	crc32fast-1.2.1
-CARGO_CRATE_DEPENDS+=	difference-2.0.0
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	digest-0.9.0
 CARGO_CRATE_DEPENDS+=	digest_auth-0.3.0
@@ -47,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	encode_unicode-0.3.6
 CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.29
 CARGO_CRATE_DEPENDS+=	encoding_rs_io-0.1.7
 CARGO_CRATE_DEPENDS+=	flate2-1.0.22
-CARGO_CRATE_DEPENDS+=	float-cmp-0.8.0
+CARGO_CRATE_DEPENDS+=	float-cmp-0.9.0
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
@@ -121,8 +120,7 @@ CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.19
 CARGO_CRATE_DEPENDS+=	plist-1.2.1
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
-CARGO_CRATE_DEPENDS+=	predicates-1.0.8
-CARGO_CRATE_DEPENDS+=	predicates-2.0.2
+CARGO_CRATE_DEPENDS+=	predicates-2.1.1
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.2
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.3
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
