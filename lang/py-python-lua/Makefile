@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/10 23:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/03 11:44:16 adam Exp $
 
 DISTNAME=		python-lua
 PKGNAME=		${PYPKGPREFIX}-python-lua-20170109
@@ -17,10 +17,13 @@ LICENSE=		apache-2.0
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-yaml>=3.12:../../textproc/py-yaml
 
-USE_LANGUAGES=		#none
+USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:build
+EGG_NAME=		pythonlua-1.0
+PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 REPLACE_PYTHON=		pythonlua/*.py tests/*.py *.py
 
 AUTO_MKDIRS=		yes
@@ -31,5 +34,4 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
