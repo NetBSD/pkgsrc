@@ -1,26 +1,20 @@
-# $NetBSD: Makefile,v 1.71 2022/11/23 16:21:11 adam Exp $
+# $NetBSD: Makefile,v 1.72 2023/04/03 17:26:02 adam Exp $
 
 DISTNAME=	asciidoc-10.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=asciidoc/}
-GITHUB_PROJECT=	asciidoc-py3
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciidoc/}
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	http://www.asciidoc.org/
+HOMEPAGE=	https://asciidoc.org/
 COMMENT=	ASCII to formatted document converter
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-py-/}
-
-USE_TOOLS+=		pax
 
 USE_PKG_RESOURCES=	yes
+USE_TOOLS+=		pax
 
 REPLACE_PYTHON+=	asciidoc/a2x.py
 REPLACE_PYTHON+=	asciidoc/asciidoc.py
@@ -35,11 +29,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
-# as of 10.2.0
-# 138 passed, 24 warnings
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+SUBST_CLASSES+=		pyvers
+SUBST_STAGE.pyvers=	pre-configure
+SUBST_MESSAGE.pyvers=	Adding Python version suffix.
+SUBST_FILES.pyvers=	asciidoc/resources/filters/source/source-highlight-filter.conf
+SUBST_SED.pyvers=	-e 's,pygmentize ,pygmentize-${PYVERSSUFFIX} ,g'
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
