@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/03 11:37:17 markd Exp $
+
+BLAKE2s (currfile.r64673.tar.xz) = 4568c0e63416b38a1f1782e3be8ac0a148d5e19fe780590b5cabfd4ebddd1cee
+SHA512 (currfile.r64673.tar.xz) = 4c63d6d33c21a0ac9aed990fa79eb1457908d9301dfb81b3dc7167d5b8089ebd20abfbcf29380a7dd348c6ca8c131260e366aa55819a6affde146408a8e80014
+Size (currfile.r64673.tar.xz) = 3748 bytes
