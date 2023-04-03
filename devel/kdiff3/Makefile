@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2023/02/16 03:29:33 gutteridge Exp $
+# $NetBSD: Makefile,v 1.91 2023/04/03 20:20:49 nros Exp $
 
 DISTNAME=	kdiff3-1.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2023/01/29 21:17:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2023/04/03 20:21:11 nros Exp $
 
 DISTNAME=	kmag-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/utilities/kmag/
