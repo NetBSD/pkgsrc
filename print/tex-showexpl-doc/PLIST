@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/03 11:40:04 markd Exp $
+share/texmf-dist/doc/latex/showexpl/README.md
+share/texmf-dist/doc/latex/showexpl/result-picture.pdf
+share/texmf-dist/doc/latex/showexpl/showexpl-test.pdf
+share/texmf-dist/doc/latex/showexpl/showexpl-test.tex
+share/texmf-dist/doc/latex/showexpl/showexpl.pdf
