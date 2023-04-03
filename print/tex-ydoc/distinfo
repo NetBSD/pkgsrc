@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:15:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/04/03 11:55:12 markd Exp $
 
-BLAKE2s (tex-ydoc-26202/ydoc.tar.xz) = 1c79ec81df57171bded8d2af5e90d0fbc053c65daf3b212542a556b10d3013b8
-SHA512 (tex-ydoc-26202/ydoc.tar.xz) = 02bcc97e4932613e57c3472ce5571d8efbb812aebdfbee03aa5d36cdf5669a45af11a96c9ee32914e616f2a758648383093a25eca2ca0085747a01834d9b15d0
-Size (tex-ydoc-26202/ydoc.tar.xz) = 9112 bytes
+BLAKE2s (ydoc.r64887.tar.xz) = 2ebc7a7bea9b7140e8dec0ef8851cb1e1cf86849cb4d55b844ce89a42f90bb00
+SHA512 (ydoc.r64887.tar.xz) = 116d4be9a7ca06f90967c85a696e893a85555402acf400c0251a71f4d43a5ad244ee041518d4408b6627610ff87792f07ab51309303e442159bce46025d5a27c
+Size (ydoc.r64887.tar.xz) = 9452 bytes
