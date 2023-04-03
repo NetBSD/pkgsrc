@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/02 21:01:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/03 11:51:21 markd Exp $
+share/texmf-dist/doc/latex/standalone/DEPENDS.txt
 share/texmf-dist/doc/latex/standalone/README
 share/texmf-dist/doc/latex/standalone/standalone.pdf
