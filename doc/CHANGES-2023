@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2028 2023/04/03 07:52:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2029 2023/04/03 11:04:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2771,3 +2771,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb10 [gutteridge 2023-04-03]
 	Updated devel/py-cython to 0.29.34 [adam 2023-04-03]
 	Updated devel/py-immutabledict to 2.2.4 [adam 2023-04-03]
+	Updated sysutils/bkt to 0.6.0 [pin 2023-04-03]
