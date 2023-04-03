@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2029 2023/04/03 11:04:25 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2030 2023/04/03 11:05:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2772,3 +2772,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cython to 0.29.34 [adam 2023-04-03]
 	Updated devel/py-immutabledict to 2.2.4 [adam 2023-04-03]
 	Updated sysutils/bkt to 0.6.0 [pin 2023-04-03]
+	Updated audio/davis to 0.1.2 [pin 2023-04-03]
