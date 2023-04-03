@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2020 2023/04/02 19:01:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2021 2023/04/03 00:29:46 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/xfce4-thunar-archive to 0.5.1 [gutteridge 2023-04-02]
 	Updated textproc/py-tomlkit to 0.11.7 [adam 2023-04-02]
 	Updated devel/py-types-toml to 0.10.8.6 [adam 2023-04-02]
+	Updated x11/libxfce4ui to 4.18.3 [gutteridge 2023-04-03]
