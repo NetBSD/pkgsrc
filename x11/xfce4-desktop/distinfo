@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2022/12/30 17:32:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.40 2023/04/03 00:42:29 gutteridge Exp $
 
-BLAKE2s (xfdesktop-4.18.0.tar.bz2) = 053b218e4b4b7eefc82c3789ddc9fd81d464ffa6f886dbf5875123bd021fc1ee
-SHA512 (xfdesktop-4.18.0.tar.bz2) = 80ba639b5bbf3a7d14ec3e956f7ed70692de0bd0b0a4578fecde91dee825a11046b2972668f331185b4dca0c50721847f5e39f9592e5a24ecbc47733ce0b2a2c
-Size (xfdesktop-4.18.0.tar.bz2) = 2136039 bytes
+BLAKE2s (xfdesktop-4.18.1.tar.bz2) = 81a31cc836d4c9bf1b2a8d754d47f2b0a8593a883312894a13ba821de40547db
+SHA512 (xfdesktop-4.18.1.tar.bz2) = cafb1e274bbabf1704a6452532fc79657af26eaf92a58374f87a70f31c35fbf213319c6658b3d18bfca2d555b69e07e46949407d1f80e5a37f48e76bbde9dc3e
+Size (xfdesktop-4.18.1.tar.bz2) = 2133258 bytes
