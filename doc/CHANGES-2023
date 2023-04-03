@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2034 2023/04/03 11:10:38 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2035 2023/04/03 11:56:33 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2777,3 +2777,15 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.60 [pin 2023-04-03]
 	Updated devel/tokei to alpha.0 [pin 2023-04-03]
 	Updated www/xh to 0.18.0 [pin 2023-04-03]
+	Added print/tex-currfile version 0.8 [markd 2023-04-03]
+	Added print/tex-currfile-doc version 0.8 [markd 2023-04-03]
+	Added print/tex-filemod version 1.2 [markd 2023-04-03]
+	Added print/tex-filemod-doc version 1.2 [markd 2023-04-03]
+	Added print/tex-gincltex version 0.3 [markd 2023-04-03]
+	Added print/tex-gincltex-doc version 0.3 [markd 2023-04-03]
+	Added print/tex-showexpl version 0.3s [markd 2023-04-03]
+	Added print/tex-showexpl-doc version 0.3s [markd 2023-04-03]
+	Updated print/tex-standalone to 1.3b [markd 2023-04-03]
+	Updated print/tex-standalone-doc to 1.3b [markd 2023-04-03]
+	Updated print/tex-ydoc to 0.7alpha [markd 2023-04-03]
+	Updated print/tex-ydoc-doc to 0.7alpha [markd 2023-04-03]
