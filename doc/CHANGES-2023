@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2035 2023/04/03 11:56:33 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2036 2023/04/03 12:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2789,3 +2789,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-standalone-doc to 1.3b [markd 2023-04-03]
 	Updated print/tex-ydoc to 0.7alpha [markd 2023-04-03]
 	Updated print/tex-ydoc-doc to 0.7alpha [markd 2023-04-03]
+	Updated devel/py-confuse to 2.0.1 [adam 2023-04-03]
+	Updated textproc/py-markdown to 3.4.3 [adam 2023-04-03]
