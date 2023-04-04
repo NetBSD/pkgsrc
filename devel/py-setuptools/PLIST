@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2023/02/21 06:19:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.78 2023/04/04 15:03:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -360,6 +360,9 @@ ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_itertools.pyo
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_meta.py
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_meta.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_meta.pyo
+${PYSITELIB}/setuptools/_vendor/importlib_metadata/_py39compat.py
+${PYSITELIB}/setuptools/_vendor/importlib_metadata/_py39compat.pyc
+${PYSITELIB}/setuptools/_vendor/importlib_metadata/_py39compat.pyo
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_text.py
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_text.pyc
 ${PYSITELIB}/setuptools/_vendor/importlib_metadata/_text.pyo
