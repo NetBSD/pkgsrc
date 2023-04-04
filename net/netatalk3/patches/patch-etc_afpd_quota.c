@@ -1,11 +1,11 @@
-$NetBSD: patch-etc_afpd_quota.c,v 1.3 2018/12/21 09:59:21 hauke Exp $
+$NetBSD: patch-etc_afpd_quota.c,v 1.4 2023/04/04 18:16:06 bouyer Exp $
 
 SunOS derivatives need to explicitely include mntent.h for MNTTYPE_NFS
 
 NetBSD uses a different quota API.
 
---- etc/afpd/quota.c.orig	2018-12-13 21:33:47.000000000 +0000
-+++ etc/afpd/quota.c
+--- etc/afpd/quota.c.orig	2023-01-10 10:49:51.000000000 +0100
++++ etc/afpd/quota.c	2023-03-29 15:54:28.917646712 +0200
 @@ -21,6 +21,10 @@
  #include <unistd.h>
  #include <fcntl.h>
@@ -17,7 +17,12 @@ NetBSD uses a different quota API.
  #include <atalk/logger.h>
  #include <atalk/afp.h>
  #include <atalk/compat.h>
-@@ -36,10 +40,13 @@
+@@ -32,14 +36,17 @@
+ #include "unix.h"
+ 
+ #ifdef HAVE_LIBQUOTA
+-#include <quota/quota.h>
++#include <quota.h>
  
  static int
  getfreespace(const AFPObj *obj, struct vol *vol, VolSpace *bfree, VolSpace *btotal,
@@ -34,7 +39,7 @@ NetBSD uses a different quota API.
  	time_t now;
  
  	if (time(&now) == -1) {
-@@ -48,64 +55,102 @@ getfreespace(const AFPObj *obj, struct v
+@@ -48,33 +55,64 @@
  		return -1;
  	}
  
@@ -50,19 +55,6 @@ NetBSD uses a different quota API.
 -	if ((retq = getfsquota(obj, vol, ufsq, uid, classq)) < 0) {
 -		LOG(log_info, logtype_afpd, "getfsquota(%s, %s): %s",
 -		    vol->v_path, classq, strerror(errno));
--	}
--
--    unbecome_root();
--
--	if (retq < 1)
--		return retq;
--
--	switch(QL_STATUS(quota_check_limit(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_cur, 1,
--	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_softlimit,
--	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_hardlimit,
--	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_time, now))) {
--	case QL_S_DENY_HARD:
--	case QL_S_DENY_GRACE:
 +	/*
 +	 * In a tidier world we might keep the quotahandle open for longer...
 +	 */
@@ -95,15 +87,24 @@ NetBSD uses a different quota API.
 +		quota_close(qh);
 +		seteuid( prevuid );
 +		return -1;
-+	}
-+
+ 	}
+ 
+-    unbecome_root();
 +	quota_close(qh);
 +
 +	 seteuid( prevuid );
-+
+ 
+-	if (retq < 1)
+-		return retq;
 +	if (qv.qv_usage >= qv.qv_hardlimit ||
 +            (qv.qv_usage >= qv.qv_softlimit && now > qv.qv_expiretime)) {
-+
+ 
+-	switch(QL_STATUS(quota_check_limit(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_cur, 1,
+-	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_softlimit,
+-	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_hardlimit,
+-	    ufsq[QUOTA_LIMIT_BLOCK].ufsqe_time, now))) {
+-	case QL_S_DENY_HARD:
+-	case QL_S_DENY_GRACE:
  		*bfree = 0;
 -		*btotal = dbtob(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_cur);
 -		break;
@@ -113,64 +114,29 @@ NetBSD uses a different quota API.
 -		*btotal = dbtob(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_hardlimit);
 -		break;
 +		*btotal = dbtob(qv.qv_usage);
-+	}
+ 	}
 +	else {
 +		*bfree = dbtob(qv.qv_hardlimit - qv.qv_usage);
 +		*btotal = dbtob(qv.qv_hardlimit);
 +	}
 +
- 	}
  	return 1;
  }
  
- int uquota_getvolspace(const AFPObj *obj, struct vol *vol, VolSpace *bfree, VolSpace *btotal, const u_int32_t bsize)
- {
--	int uretq, gretq;
-+	int uret, gret;
- 	VolSpace ubfree, ubtotal;
+@@ -85,12 +123,12 @@
  	VolSpace gbfree, gbtotal;
-+	uret = getfreespace(vol, &ubfree, &ubtotal,
-+	    uuid, QUOTA_IDTYPE_USER);
-+	if (uret == 1) {
-+		LOG(log_info, logtype_afpd, "quota_get(%s, user): %d %d",
-+		    vol->v_path, (int)ubfree, (int)ubtotal);
-+	}
  
--	uretq = getfreespace(obj, vol, &ubfree, &ubtotal,
+ 	uretq = getfreespace(obj, vol, &ubfree, &ubtotal,
 -			     uuid, QUOTADICT_CLASS_USER);
 -	LOG(log_info, logtype_afpd, "getfsquota(%s): %d %d",
--	    vol->v_path, (int)ubfree, (int)ubtotal);
++			     obj->uid, QUOTA_IDTYPE_USER);
++	LOG(log_info, logtype_afpd, "getfreespace(%s): %d %d",
+ 	    vol->v_path, (int)ubfree, (int)ubtotal);
  	if (obj->ngroups >= 1) {
 -		gretq = getfreespace(vol, &ubfree, &ubtotal,
 -		    obj->groups[0], QUOTADICT_CLASS_GROUP);
-+		gret = getfreespace(vol, &gbfree, &gbtotal,
-+		    groups[0], QUOTA_IDTYPE_GROUP);
-+		if (gret == 1) {
-+			LOG(log_info, logtype_afpd, "quota_get(%s, group): %d %d",
-+			    vol->v_path, (int)gbfree, (int)gbtotal);
-+		}
++		gretq = getfreespace(obj, vol, &ubfree, &ubtotal,
++		    obj->groups[0], QUOTA_IDTYPE_GROUP);
  	} else
--		gretq = -1;
--	if (uretq < 1 && gretq < 1) { /* no quota for this fs */
-+		gret = 0;
-+	if (uret < 1 && gret < 1) { /* no quota for this fs */
- 		return AFPERR_PARAM;
- 	}
--	if (uretq < 1) {
--		/* use group quotas */
-+	if (uret < 1) {
-+		/* no user quotas, but group quotas; use them */
- 		*bfree = gbfree;
- 		*btotal = gbtotal;
--	} else if (gretq < 1) {
--		/* use user quotas */
-+	} else if (gret < 1) {
-+		/* no group quotas, but user quotas; use them */
- 		*bfree = ubfree;
- 		*btotal = ubtotal;
- 	} else {
--		/* return smallest remaining space of user and group */
-+		/* both; return smallest remaining space of user and group */
- 		if (ubfree < gbfree) {
- 			*bfree = ubfree;
- 			*btotal = ubtotal;
+ 		gretq = -1;
+ 	if (uretq < 1 && gretq < 1) { /* no quota for this fs */
