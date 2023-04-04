@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/03/08 08:51:16 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/04 18:33:25 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -404,6 +404,7 @@ go120/misc/cgo/testshared/testdata/issue44031/b/b.go
 go120/misc/cgo/testshared/testdata/issue44031/main/main.go
 go120/misc/cgo/testshared/testdata/issue47837/a/a.go
 go120/misc/cgo/testshared/testdata/issue47837/main/main.go
+go120/misc/cgo/testshared/testdata/issue58966/main.go
 go120/misc/cgo/testshared/testdata/trivial/trivial.go
 go120/misc/cgo/testso/noso_test.go
 go120/misc/cgo/testso/overlaydir_test.go
@@ -1939,6 +1940,7 @@ go120/src/cmd/go/testdata/script/cgo_path_space.txt
 go120/src/cmd/go/testdata/script/cgo_path_space_quote.txt
 go120/src/cmd/go/testdata/script/cgo_stale.txt
 go120/src/cmd/go/testdata/script/cgo_stale_precompiled.txt
+go120/src/cmd/go/testdata/script/cgo_suspect_flag_force_external.txt
 go120/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go120/src/cmd/go/testdata/script/cgo_undef.txt
 go120/src/cmd/go/testdata/script/chdir.txt
@@ -11010,6 +11012,7 @@ go120/test/fixedbugs/issue58563.go
 go120/test/fixedbugs/issue5910.dir/a.go
 go120/test/fixedbugs/issue5910.dir/main.go
 go120/test/fixedbugs/issue5910.go
+go120/test/fixedbugs/issue59293.go
 go120/test/fixedbugs/issue5957.dir/a.go
 go120/test/fixedbugs/issue5957.dir/b.go
 go120/test/fixedbugs/issue5957.dir/c.go
