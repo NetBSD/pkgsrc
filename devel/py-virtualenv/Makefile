@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2023/03/07 20:32:27 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/04/04 09:52:28 adam Exp $
 
-DISTNAME=	virtualenv-20.20.0
+DISTNAME=	virtualenv-20.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -33,12 +33,14 @@ USE_LANGUAGES=	c # for tests
 REPLACE_PYTHON=	virtualenv.py
 
 post-install:
+	# see patches
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/virtualenv/create/via_global_ref/api.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
 # needs 'make install' and USE_LANGUAGES=c
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
