@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2055 2023/04/04 18:33:47 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.2056 2023/04/04 18:47:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2817,3 +2817,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mlterm to 3.9.3 [tsutsui 2023-04-04]
 	Updated lang/go119 to 1.19.8 [bsiegert 2023-04-04]
 	Updated lang/go120 to 1.20.3 [bsiegert 2023-04-04]
+	Updated net/ucspi-ssl to 0.999.12.6 [schmonz 2023-04-04]
