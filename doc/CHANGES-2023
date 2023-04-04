@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2060 2023/04/04 20:17:06 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2061 2023/04/04 21:51:41 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/execline to 2.9.3.0nb1 [schmonz 2023-04-04]
 	Updated net/s6-networking to 2.5.1.3nb1 [schmonz 2023-04-04]
 	Updated misc/s6-portable-utils to 2.3.0.2nb1 [schmonz 2023-04-04]
+	Updated security/hitch to 1.7.3 [tpaul 2023-04-04]
