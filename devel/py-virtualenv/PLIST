@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2023/03/07 20:32:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2023/04/04 09:52:28 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -81,7 +81,6 @@ ${PYSITELIB}/virtualenv/create/via_global_ref/__init__.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/_virtualenv.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/_virtualenv.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/api.py
-${PYSITELIB}/virtualenv/create/via_global_ref/api.py.orig
 ${PYSITELIB}/virtualenv/create/via_global_ref/api.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/__init__.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/__init__.pyc
