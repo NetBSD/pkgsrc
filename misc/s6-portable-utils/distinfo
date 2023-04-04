@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2023/03/11 15:49:04 schmonz Exp $
+$NetBSD: distinfo,v 1.13 2023/04/04 00:22:26 schmonz Exp $
 
-BLAKE2s (s6-portable-utils-2.3.0.1.tar.gz) = ed0232b4f93031879ddbaaceb157edbad637c6dbed9c98dac75695a65d41161d
-SHA512 (s6-portable-utils-2.3.0.1.tar.gz) = 46f4a09d124e44b9b2ac3b8fa8f7b4492207f0a03a052e7b15309aeea175682f7366ff74fbd8a2732952c8f3bbb2fcc69b4bca89609b690e91d167bd25c16b90
-Size (s6-portable-utils-2.3.0.1.tar.gz) = 51746 bytes
-BLAKE2s (s6-portable-utils-man-pages-2.3.0.0.1.tar.gz) = 461a4ee06a81a0cf25f01b98c850bf8f46ed15a3b10b5558511590ebe1461fd4
-SHA512 (s6-portable-utils-man-pages-2.3.0.0.1.tar.gz) = e5e518154799990ae62acd8f5520f8e44921ea92a29aafe51915a76528dac658ff50275d68eb1b6ee1be4c44faa1b7d6255f92cb98df42a94332df9029a224f2
-Size (s6-portable-utils-man-pages-2.3.0.0.1.tar.gz) = 13807 bytes
+BLAKE2s (s6-portable-utils-2.3.0.2.tar.gz) = ed6d01e4b0adb144b426acd125b0197f979b612470fbe02a76847ad671bcc2a2
+SHA512 (s6-portable-utils-2.3.0.2.tar.gz) = f918244e8ed5957817d28fc43ae2cdcbbdce600dc208bc0422e262ce42f36d8e8b77002c2143e7741390eea52e9c4bae7a1358c23ebbba3c689c64c7115d4b72
+Size (s6-portable-utils-2.3.0.2.tar.gz) = 51106 bytes
+BLAKE2s (s6-portable-utils-man-pages-2.3.0.2.1.tar.gz) = e2175eb92191afe360d82e49dc5c95b9d3d56aae7d477f4ba75a01a299ab7142
+SHA512 (s6-portable-utils-man-pages-2.3.0.2.1.tar.gz) = 2ee1b54ab92ef3c3abe9a4034a0867d9ec0b34474b7da8bdb9a32647ff6cb3cc0114a59d30e1bfdbf1d7d9e8e421486de8194f50443d07ef5b8a8e15fbb10d2e
+Size (s6-portable-utils-man-pages-2.3.0.2.1.tar.gz) = 13814 bytes
