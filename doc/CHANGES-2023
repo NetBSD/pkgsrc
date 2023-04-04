@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2045 2023/04/04 09:34:00 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2046 2023/04/04 09:54:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2802,3 +2802,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/s6-portable-utils to 2.3.0.2 [schmonz 2023-04-04]
 	Updated misc/py-crashtest to 0.4.1 [adam 2023-04-04]
 	Updated textproc/py-jsonschema-spec to 0.1.4 [adam 2023-04-04]
+	Updated devel/py-virtualenv to 20.21.0 [adam 2023-04-04]
+	Updated textproc/py-regex to 2023.3.23 [adam 2023-04-04]
