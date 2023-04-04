@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2023/01/11 12:25:04 hauke Exp $
+# $NetBSD: Makefile,v 1.53 2023/04/04 18:16:06 bouyer Exp $
 
 DISTNAME=	netatalk-3.1.14
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C/-/3-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/netatalk-3-1-14/

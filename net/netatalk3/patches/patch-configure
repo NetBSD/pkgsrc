@@ -1,0 +1,96 @@
+$NetBSD: patch-configure,v 1.1 2023/04/04 18:16:06 bouyer Exp $
+apply changes from patch-macros_quota-check.m4 for NetBSD's quota
+
+--- configure.orig	2023-03-29 15:04:35.180307136 +0200
++++ configure	2023-03-29 15:04:40.662623659 +0200
+@@ -16762,65 +16762,63 @@
+   QUOTA_LIBS="-lrpcsvc"
+ fi
+ 
+-	       for ac_header in rpc/rpc.h rpc/pmap_prot.h rpcsvc/rquota.h
+-do :
+-  as_ac_Header=`printf "%s\n" "ac_cv_header_$ac_header" | $as_tr_sh`
+-ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+-if eval test \"x\$"$as_ac_Header"\" = x"yes"
++	ac_fn_c_check_header_compile "$LINENO" "rpc/rpc.h" "ac_cv_header_rpc_rpc_h" "$ac_includes_default"
++if test "x$ac_cv_header_rpc_rpc_h" = xyes
+ then :
+-  cat >>confdefs.h <<_ACEOF
+-#define `printf "%s\n" "HAVE_$ac_header" | $as_tr_cpp` 1
+-_ACEOF
+-
+-else $as_nop
++  printf "%s\n" "#define HAVE_RPC_RPC_H 1" >>confdefs.h
+ 
+-		QUOTA_LIBS=""
+-		netatalk_cv_quotasupport="no"
+-
+-printf "%s\n" "#define NO_QUOTA_SUPPORT 1" >>confdefs.h
++fi
++ac_fn_c_check_header_compile "$LINENO" "rpc/pmap_prot.h" "ac_cv_header_rpc_pmap_prot_h" "$ac_includes_default"
++if test "x$ac_cv_header_rpc_pmap_prot_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_RPC_PMAP_PROT_H 1" >>confdefs.h
+ 
++fi
++ac_fn_c_check_header_compile "$LINENO" "rpcsvc/rquota.h" "ac_cv_header_rpcsvc_rquota_h" "$ac_includes_default"
++if test "x$ac_cv_header_rpcsvc_rquota_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_RPCSVC_RQUOTA_H 1" >>confdefs.h
+ 
+ fi
+ 
+-done
+-	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
+-printf %s "checking for getfsquota in -lquota... " >&6; }
+-if test ${ac_cv_lib_quota_getfsquota+y}
++	{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for quota_open in -lquota" >&5
++printf %s "checking for quota_open in -lquota... " >&6; }
++if test ${ac_cv_lib_quota_quota_open+y}
+ then :
+   printf %s "(cached) " >&6
+ else $as_nop
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lquota -lprop -lrpcsvc $LIBS"
++LIBS="-lquota -lrpcsvc $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+ /* Override any GCC internal prototype to avoid an error.
+    Use char because int might match the return type of a GCC
+    builtin and then its argument prototype would still apply.  */
+-char getfsquota ();
++char quota_open ();
+ int
+ main (void)
+ {
+-return getfsquota ();
++return quota_open ();
+   ;
+   return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"
+ then :
+-  ac_cv_lib_quota_getfsquota=yes
++  ac_cv_lib_quota_quota_open=yes
+ else $as_nop
+-  ac_cv_lib_quota_getfsquota=no
++  ac_cv_lib_quota_quota_open=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.beam \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_quota_getfsquota" >&5
+-printf "%s\n" "$ac_cv_lib_quota_getfsquota" >&6; }
+-if test "x$ac_cv_lib_quota_getfsquota" = xyes
++{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_quota_quota_open" >&5
++printf "%s\n" "$ac_cv_lib_quota_quota_open" >&6; }
++if test "x$ac_cv_lib_quota_quota_open" = xyes
+ then :
+-  QUOTA_LIBS="-lquota -lprop -lrpcsvc"
++  QUOTA_LIBS="-lquota -lrpcsvc"
+ 
+ printf "%s\n" "#define HAVE_LIBQUOTA 1" >>confdefs.h
+ 
