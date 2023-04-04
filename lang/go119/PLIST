@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/02/16 13:55:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/04/04 18:22:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -2544,6 +2544,7 @@ go119/src/cmd/go/testdata/script/cgo_path_space.txt
 go119/src/cmd/go/testdata/script/cgo_path_space_quote.txt
 go119/src/cmd/go/testdata/script/cgo_stale.txt
 go119/src/cmd/go/testdata/script/cgo_stale_precompiled.txt
+go119/src/cmd/go/testdata/script/cgo_suspect_flag_force_external.txt
 go119/src/cmd/go/testdata/script/cgo_syso_issue29253.txt
 go119/src/cmd/go/testdata/script/cgo_undef.txt
 go119/src/cmd/go/testdata/script/clean_binary.txt
