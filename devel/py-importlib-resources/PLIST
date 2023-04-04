@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/10/26 10:56:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/04/04 12:24:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -45,6 +45,7 @@ ${PYSITELIB}/importlib_resources/tests/data02/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data02/one/__init__.py
 ${PYSITELIB}/importlib_resources/tests/data02/one/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data02/one/resource1.txt
+${PYSITELIB}/importlib_resources/tests/data02/subdirectory/subsubdir/resource.txt
 ${PYSITELIB}/importlib_resources/tests/data02/two/__init__.py
 ${PYSITELIB}/importlib_resources/tests/data02/two/__init__.pyc
 ${PYSITELIB}/importlib_resources/tests/data02/two/resource2.txt
@@ -55,6 +56,8 @@ ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.py
 ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.pyc
 ${PYSITELIB}/importlib_resources/tests/test_contents.py
 ${PYSITELIB}/importlib_resources/tests/test_contents.pyc
+${PYSITELIB}/importlib_resources/tests/test_custom.py
+${PYSITELIB}/importlib_resources/tests/test_custom.pyc
 ${PYSITELIB}/importlib_resources/tests/test_files.py
 ${PYSITELIB}/importlib_resources/tests/test_files.pyc
 ${PYSITELIB}/importlib_resources/tests/test_open.py
