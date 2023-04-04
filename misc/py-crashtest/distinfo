@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/01/11 19:14:09 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/04 09:29:03 adam Exp $
 
-BLAKE2s (crashtest-0.3.1.tar.gz) = e8c4aa70062a31dbb612765fbab677c49c1648b4e9a2f9fd5db0c00951aa8142
-SHA512 (crashtest-0.3.1.tar.gz) = e608e59d6bd772fd292b34ccc3a77d26f23f152aa0b72dbf2e60fbcaa0196f47bdfb8dfe28c30f2196132d32a86903f835bea6f6eb29b3cf179ea11bae237ea9
-Size (crashtest-0.3.1.tar.gz) = 4333 bytes
+BLAKE2s (crashtest-0.4.1.tar.gz) = 29d636d23a5fae7adde2ae11930e065c79ffafe3a23e6478645bc9932f4ee389
+SHA512 (crashtest-0.4.1.tar.gz) = 3f4d940450bcd40ff56059756ed81894556b75b4c17f99ac8d899088eab07a6c2cbbf206188b381801d143e590bdd05f609d48541f041e380383031c98f4d874
+Size (crashtest-0.4.1.tar.gz) = 4708 bytes

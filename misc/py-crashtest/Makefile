@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/01/11 19:14:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/04 09:29:03 adam Exp $
 
-DISTNAME=	crashtest-0.3.1
+DISTNAME=	crashtest-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crashtest/}
