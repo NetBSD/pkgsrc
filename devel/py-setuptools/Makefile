@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.230 2023/02/21 06:19:44 adam Exp $
+# $NetBSD: Makefile,v 1.231 2023/04/04 15:03:50 adam Exp $
 
-DISTNAME=	setuptools-67.3.3
+DISTNAME=	setuptools-67.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -12,10 +12,13 @@ LICENSE=	python-software-foundation OR zpl-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TEST_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
+TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-ini2toml>=0.9:../../textproc/py-ini2toml
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.envs>=2.2:../../devel/py-jaraco.envs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.path>=3.2.0:../../devel/py-jaraco.path
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=19.1:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip-run>=8.8:../../devel/py-pip-run
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
