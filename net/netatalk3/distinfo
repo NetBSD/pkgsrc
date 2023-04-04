@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2023/03/02 10:39:57 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2023/04/04 18:16:06 bouyer Exp $
 
 BLAKE2s (netatalk-3.1.14.tar.gz) = 39e9ae725f0b3d87f5747c9f6ddabab3c61eb2b51f1ed63a1af362224aa7f8e9
 SHA512 (netatalk-3.1.14.tar.gz) = 2d52ba2df50cc4bedb5c68fa452d9acec80f69e826ff8cb3d0aa85f7031c98f463e502ef35128076c0aa52a36ce9540509ce8c21b915f6a2232ca70c451b89eb
@@ -7,10 +7,11 @@ SHA1 (patch-bin_ad_ad__cp.c) = bd2191a7a2731e6032f97dc66688175fc84275cc
 SHA1 (patch-config.h.in) = bd9e735c6d1c8bb8a1534f6674fa6358b29922c1
 SHA1 (patch-config_Makefile.in) = 81fff584e5cb98537a4fa671fb551ad0258ba092
 SHA1 (patch-config_pam_Makefile.in) = 8f69225c333b327b4c57ef12994666cc521e5c70
+SHA1 (patch-configure) = 7d2ce8e0d06b8de5b2a1ac45f926ee08b6fd5c3b
 SHA1 (patch-distrib_initscripts_Makefile.in) = fbeffa06a051fb61819d09e0396695cbe564780e
 SHA1 (patch-distrib_initscripts_netatalk.xml.tmpl) = dd7591e12eca3c1e7d7bc768cd1e060979dc383e
 SHA1 (patch-etc_afpd_afp__dsi.c) = 024cc7a0935ece2ed43d1ab3142c8d6bb1b376be
-SHA1 (patch-etc_afpd_quota.c) = d7c87086c8eb1ff68e46c5972fcd0b2e18c592e5
+SHA1 (patch-etc_afpd_quota.c) = 2ec8711f5ec9b25497f716cf8f728e354f1eb1c6
 SHA1 (patch-etc_cnid__dbd_cnid__metad.c) = 6c28332ca3e11d11f3b5bb13fa01783dbb94c30f
 SHA1 (patch-etc_cnid__dbd_usockfd.c) = a3b6c498ed73dc449b84d092f2b9e13eeae3dfc5
 SHA1 (patch-etc_netatalk_netatalk.c) = 2bdbfc035e4bea9859cf970cd6b9a6503244185e
