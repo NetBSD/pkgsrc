@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/03/29 09:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/04/04 12:36:22 adam Exp $
 
-DISTNAME=	importlib_metadata-4.12.0
+DISTNAME=	importlib_metadata-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://importlib-metadata.readthedocs.io/
 COMMENT=	Read metadata from Python packages
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
@@ -22,25 +22,12 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.4:../../devel/py-typing-extensions
+.if ${PYTHON_VERSION} < 309
+TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 .endif
-
-pre-build:
-	${RUN} if ! ${GREP} '^version =' ${WRKSRC}/setup.cfg; then \
-		cd ${WRKSRC}; \
-		(${HEAD} -2 setup.cfg; \
-		${GREP} 'Version:' PKG-INFO | ${SED} -e 's,^V',v, -e 's,:, = ,'; \
-		${TAIL} -n +3 setup.cfg \
-		) > setup.cfg.new && ${MV} setup.cfg.new setup.cfg; \
-	fi
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-# IMPORTANT: as long as there is Python 3.7, do not use wheel.mk;
-# it requires devel/py-build which depends on this package.
-PYSETUP=	-c 'from setuptools import setup; setup()'
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
