@@ -1,0 +1,41 @@
+$NetBSD: patch-tool_mlconfig_Makefile.in,v 1.1 2023/04/04 16:53:34 tsutsui Exp $
+
+- make mlconfig.po installed properly
+  https://github.com/arakiken/mlterm/pull/66
+
+--- tool/mlconfig/Makefile.in.orig	2023-04-01 13:54:40.000000000 +0000
++++ tool/mlconfig/Makefile.in
+@@ -70,27 +70,27 @@ mlconfig: $(OBJ)
+ 	$(LIBTOOL_LINK) $(OBJ) $(CFLAGS) -o mlconfig $(LIBS)
+ 	# "cd po" must be enclosed by () because it may not return
+ 	# to the $(top_builddir)/tool/mlconfig at the next line.
+-	if test -d po/Makefile; then (cd po ; $(MAKE) update-gmo); fi
+-	# if test -d po/Makefile; then cd po ; $(MAKE) update-po; fi
++	if test -f po/Makefile; then (cd po ; $(MAKE) update-gmo); fi
++	# if test -f po/Makefile; then cd po ; $(MAKE) update-po; fi
+ 
+ .c.o:
+ 	$(CC) $(DEFS) $(CFLAGS) -c $<
+ 
+ install: $(LIBEXECDIR@WIN32TAG@)
+ 	$(LIBTOOL_INSTALL) -m 755 mlconfig $(LIBEXECDIR@WIN32TAG@)
+-	if test -d po/Makefile; then (cd po ; $(MAKE) install); fi
++	if test -f po/Makefile; then (cd po ; $(MAKE) install); fi
+ 
+ uninstall:
+ 	rm -f $(LIBEXECDIR@WIN32TAG@)/mlconfig
+-	if test -d po/Makefile; then (cd po ; $(MAKE) uninstall); fi
++	if test -f po/Makefile; then (cd po ; $(MAKE) uninstall); fi
+ 
+ $(LIBEXECDIR@WIN32TAG@):
+ 	mkdir -p $(LIBEXECDIR@WIN32TAG@)
+ 
+ clean:
+ 	rm -rf $(OBJ) mlconfig mlconfig.exe *.core .libs
+-	if test -d po/Makefile; then (cd po ; $(MAKE) clean); fi
++	if test -f po/Makefile; then (cd po ; $(MAKE) clean); fi
+ 
+ distclean: clean
+ 	rm -f Makefile
+-	if test -d po/Makefile; then (cd po ; $(MAKE) distclean); fi
++	if test -f po/Makefile; then (cd po ; $(MAKE) distclean); fi
