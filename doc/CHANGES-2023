@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2052 2023/04/04 15:37:28 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.2053 2023/04/04 16:53:51 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 67.6.1 [adam 2023-04-04]
 	Updated devel/py-types-setuptools to 67.6.0.6 [adam 2023-04-04]
 	Updated sysutils/nabud to 1.3 [thorpej 2023-04-04]
+	Updated x11/mlterm to 3.9.3 [tsutsui 2023-04-04]
