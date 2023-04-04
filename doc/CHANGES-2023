@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2058 2023/04/04 20:15:36 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2059 2023/04/04 20:15:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ucspi-ssl to 0.999.12.6 [schmonz 2023-04-04]
 	Updated sysutils/s6 to 2.11.3.2nb1 [schmonz 2023-04-04]
 	Updated lang/execline to 2.9.3.0nb1 [schmonz 2023-04-04]
+	Updated net/s6-networking to 2.5.1.3nb1 [schmonz 2023-04-04]
