@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/05 08:10:10 pin Exp $
+bin/wallust
