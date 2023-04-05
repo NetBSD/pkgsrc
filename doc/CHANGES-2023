@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2072 2023/04/05 12:01:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2073 2023/04/05 13:21:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pylint to 2.17.2 [adam 2023-04-05]
 	Updated devel/py-frozendict to 2.3.6 [adam 2023-04-05]
 	Updated textproc/ugrep to 3.11.1 [adam 2023-04-05]
+	Updated sysutils/ansible-lint to 6.14.4 [adam 2023-04-05]
