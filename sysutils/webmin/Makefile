@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/06/30 11:18:52 nia Exp $
+# $NetBSD: Makefile,v 1.62 2023/04/05 09:10:03 nikita Exp $
 
 PKGREVISION= 2
 .include "version.mk"
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.webmin.com/
+HOMEPAGE=	https://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
 LICENSE=	modified-bsd
 
