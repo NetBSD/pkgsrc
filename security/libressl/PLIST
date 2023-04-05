@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/04/05 10:58:40 nikita Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/04/05 15:46:59 wiz Exp $
 libressl/bin/ocspcheck
 libressl/bin/openssl
 libressl/include/openssl/aes.h
@@ -3555,5 +3555,3 @@ libressl/man/man8/ocspcheck.8
 libressl/share/examples/libressl/cert.pem
 libressl/share/examples/libressl/openssl.cnf
 libressl/share/examples/libressl/x509v3.cnf
-@pkgdir lib
-@pkgdir etc
