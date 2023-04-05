@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2068 2023/04/05 10:13:34 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2069 2023/04/05 10:16:44 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/opa to 0.51.0 [leot 2023-04-05]
 	Updated devel/conftest to 0.41.0 [leot 2023-04-05]
 	Updated devel/gitolite to 3.6.12 [nikita 2023-04-05]
+	Updated net/gnunet to 0.19.4 [nikita 2023-04-05]
