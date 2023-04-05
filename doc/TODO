@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22738 2023/04/02 08:03:05 wiz Exp $
+$NetBSD: TODO,v 1.22739 2023/04/05 09:19:48 nikita Exp $
 
 Suggested new packages
 ======================
@@ -1576,8 +1576,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o z-push-2.6.1
 	o z3-4.11.2
 	o z80-asm-2.4
-	o zabbix-4.4.4
-	o zabbix-frontend-4.4.4
+	o zabbix-6.4.1
+	o zabbix-frontend-6.4.1
+	o zabbix-proxy-6.4.1
+	o zabbix-server-6.4.1
+	o zabbix-agent-6.4.1
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zeroconf-ioslave-20.12.3
 	o zile-2.6.1
