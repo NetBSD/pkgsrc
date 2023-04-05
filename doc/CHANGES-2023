@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2066 2023/04/05 09:23:39 leot Exp $
+$NetBSD: CHANGES-2023,v 1.2067 2023/04/05 09:40:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/freeradius to 3.2.2 [adam 2023-04-05]
 	Updated misc/py-platformdirs to 3.2.0 [adam 2023-04-05]
 	Updated devel/opa to 0.51.0 [leot 2023-04-05]
+	Updated devel/conftest to 0.41.0 [leot 2023-04-05]
