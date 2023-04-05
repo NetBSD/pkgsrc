@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2074 2023/04/05 14:23:06 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.2075 2023/04/05 14:23:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 3.11.1 [adam 2023-04-05]
 	Updated sysutils/ansible-lint to 6.14.4 [adam 2023-04-05]
 	Updated www/firefox to 111.0.1 [ryoon 2023-04-05]
+	Updated www/firefox-l10n to 111.0.1 [ryoon 2023-04-05]
