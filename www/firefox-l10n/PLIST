@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2022/01/15 16:00:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.70 2023/04/05 14:23:30 ryoon Exp $
 lib/firefox/distribution/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-an@firefox.mozilla.org.xpi
@@ -33,6 +33,7 @@ lib/firefox/distribution/extensions/langpack-fa@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ff@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-fi@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-fr@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-fur@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-fy-NL@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ga-IE@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-gd@firefox.mozilla.org.xpi
@@ -75,6 +76,7 @@ lib/firefox/distribution/extensions/langpack-pt-PT@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-rm@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ro@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ru@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-sc@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-sco@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-si@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-sk@firefox.mozilla.org.xpi
