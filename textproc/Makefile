@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1376 2023/03/31 22:41:09 he Exp $
+# $NetBSD: Makefile,v 1.1377 2023/04/05 23:12:59 nikita Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1383,6 +1383,7 @@ SUBDIR+=	tree-sitter-typescript
 SUBDIR+=	tree-sitter-yaml
 SUBDIR+=	troffcvt
 SUBDIR+=	tuc
+SUBDIR+=	typst
 SUBDIR+=	uchardet
 SUBDIR+=	ugrep
 SUBDIR+=	unac
