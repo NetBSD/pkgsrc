@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/08/09 12:08:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/05 09:11:17 nikita Exp $
 
 DISTNAME=	weex-2.6.1.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weex/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://weex.sourceforge.net/
+HOMEPAGE=	https://weex.sourceforge.net/
 COMMENT=	Non-interactive ftp client
 
 GNU_CONFIGURE=		yes
