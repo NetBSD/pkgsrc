@@ -1,0 +1,6 @@
+wallust - Generate colors from an image
+
+Features
+ - use of templates and writing these out defined in the config file.
+ - different backends (currently only 2)
+ - cache values
