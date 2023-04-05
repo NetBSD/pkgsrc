@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2071 2023/04/05 11:21:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2072 2023/04/05 12:01:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2835,3 +2835,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/libressl to 3.6.2 [nikita 2023-04-05]
 	Updated devel/py-astroid to 2.15.2 [adam 2023-04-05]
 	Updated devel/py-pylint to 2.17.2 [adam 2023-04-05]
+	Updated devel/py-frozendict to 2.3.6 [adam 2023-04-05]
+	Updated textproc/ugrep to 3.11.1 [adam 2023-04-05]
