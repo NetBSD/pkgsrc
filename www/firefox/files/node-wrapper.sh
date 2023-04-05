@@ -1,6 +1,6 @@
 #! /bin/sh
 
-VERS=v14.18.1
+VERS=v19.7.0
 
 if [ "$1" = "-v" ] || [ "$1" = "--version" ]; then
 	printf "${VERS}\n"
