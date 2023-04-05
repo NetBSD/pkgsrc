@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2023/03/08 13:38:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/05 20:47:52 bsiegert Exp $
 #
 # Changelog:
 # https://github.com/danielgtaylor/restish/releases/
 
 DISTNAME=	restish-0.16.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danielgtaylor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
