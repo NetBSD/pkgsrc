@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:14:42 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/04/05 10:13:24 nikita Exp $
 
-BLAKE2s (gitolite-3.6.6.tar.gz) = a85edadd9059e0b92254cb10b71ccbd00a82946093c9863d6e1e2669bdc2fc01
-SHA512 (gitolite-3.6.6.tar.gz) = 1529330ed2afa315fcb650c55d515e5d4b61921f46b4d763a759537434492959f100d2219ab7673e568d46f397a25a45d4388fe3827ea988333fc8719820f8bc
-Size (gitolite-3.6.6.tar.gz) = 183469 bytes
+BLAKE2s (gitolite-3.6.12.tar.gz) = 21b930159b32accb9397c354981e4562f701f37701d665bfd82779741d66b021
+SHA512 (gitolite-3.6.12.tar.gz) = f6a7f4daf8a6f73db823a95cd677c1c436e04a05460a239b5844468cf0f3e6f8da1b1cd86d98c84bb8e80e5ca446c9afd0ca221cce622398c0d0a3ce18062c22
+Size (gitolite-3.6.12.tar.gz) = 203704 bytes
