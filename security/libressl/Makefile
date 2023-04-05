@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/07/25 11:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/05 10:58:40 nikita Exp $
 
-DISTNAME=	libressl-2.7.4
-PKGREVISION=	1
+DISTNAME=	libressl-3.6.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_OPENBSD:=LibreSSL/}
 
@@ -37,17 +36,11 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${LIBRESSL_PREFIX:Q}/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${LIBRESSL_PREFIX:Q}/lib
 
 TEST_TARGET=	check
-PLIST_VARS+=	man
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
-# bn_print(3) and BN_print(3) conflict on case-insensitive file system
-PLIST.man=	yes
-.endif
-
 post-install:
-	cd ${WRKSRC}/apps/openssl; ${INSTALL_DATA} ${CONFS} ${DESTDIR}${EGDIR}
+	cd ${DESTDIR}${PKG_SYSCONFDIR}; ${INSTALL_DATA} ${CONFS} ${DESTDIR}${EGDIR}
 	${RM} -r ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
