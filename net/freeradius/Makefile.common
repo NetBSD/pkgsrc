@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.11 2021/11/12 12:27:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2023/04/05 09:16:42 adam Exp $
 # used by net/freeradius/Makefile.module
 
-DISTNAME=	freeradius-server-3.0.25
+DISTNAME=	freeradius-server-3.2.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,5 +34,6 @@ PRINT_PLIST_AWK+=	{gsub(/\.${SOEXT}$$/, ".$${SOEXT}");}
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../net/unbound/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
