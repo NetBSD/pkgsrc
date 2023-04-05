@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2021/11/12 12:27:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2023/04/05 09:16:42 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -97,7 +97,6 @@ lib/rlm_cache.${SOEXT}
 lib/rlm_cache_rbtree.${SOEXT}
 lib/rlm_chap.${SOEXT}
 lib/rlm_counter.${SOEXT}
-lib/rlm_cram.${SOEXT}
 lib/rlm_date.${SOEXT}
 lib/rlm_detail.${SOEXT}
 lib/rlm_dhcp.${SOEXT}
@@ -121,7 +120,6 @@ lib/rlm_ippool.${SOEXT}
 lib/rlm_linelog.${SOEXT}
 lib/rlm_logintime.${SOEXT}
 lib/rlm_mschap.${SOEXT}
-lib/rlm_otp.${SOEXT}
 lib/rlm_pam.${SOEXT}
 lib/rlm_pap.${SOEXT}
 lib/rlm_passwd.${SOEXT}
@@ -139,6 +137,7 @@ lib/rlm_sqlippool.${SOEXT}
 lib/rlm_test.${SOEXT}
 lib/rlm_totp.${SOEXT}
 lib/rlm_unix.${SOEXT}
+lib/rlm_unbound.${SOEXT}
 lib/rlm_unpack.${SOEXT}
 lib/rlm_utf8.${SOEXT}
 lib/rlm_wimax.${SOEXT}
@@ -170,6 +169,7 @@ man/man5/rlm_pap.5
 man/man5/rlm_passwd.5
 man/man5/rlm_realm.5
 man/man5/rlm_sql.5
+man/man5/rlm_unbound.5
 man/man5/rlm_unix.5
 man/man5/unlang.5
 man/man5/users.5
@@ -291,6 +291,7 @@ share/doc/freeradius/deployment/OS2
 share/doc/freeradius/deployment/performance-testing
 share/doc/freeradius/deployment/supervise-radiusd.rst
 share/doc/freeradius/deployment/tuning_guide
+share/doc/freeradius/developer/autotools.md
 share/doc/freeradius/developer/coding-methods.rst
 share/doc/freeradius/developer/contributing.rst
 share/doc/freeradius/developer/module_interface.rst
@@ -430,7 +431,7 @@ share/examples/freeradius/mods-available/abfab_psk_sql
 share/examples/freeradius/mods-available/always
 share/examples/freeradius/mods-available/attr_filter
 share/examples/freeradius/mods-available/cache
-share/examples/freeradius/mods-available/cache_eap
+share/examples/freeradius/mods-available/cache_auth
 share/examples/freeradius/mods-available/chap
 share/examples/freeradius/mods-available/couchbase
 share/examples/freeradius/mods-available/counter
@@ -456,8 +457,10 @@ share/examples/freeradius/mods-available/files
 share/examples/freeradius/mods-available/idn
 share/examples/freeradius/mods-available/inner-eap
 share/examples/freeradius/mods-available/ippool
+share/examples/freeradius/mods-available/json
 share/examples/freeradius/mods-available/krb5
 share/examples/freeradius/mods-available/ldap
+share/examples/freeradius/mods-available/ldap_google
 share/examples/freeradius/mods-available/linelog
 share/examples/freeradius/mods-available/logintime
 share/examples/freeradius/mods-available/mac2ip
@@ -466,7 +469,6 @@ share/examples/freeradius/mods-available/moonshot-targeted-ids
 share/examples/freeradius/mods-available/mschap
 share/examples/freeradius/mods-available/ntlm_auth
 share/examples/freeradius/mods-available/opendirectory
-share/examples/freeradius/mods-available/otp
 share/examples/freeradius/mods-available/pam
 share/examples/freeradius/mods-available/pap
 share/examples/freeradius/mods-available/passwd
@@ -510,6 +512,7 @@ share/examples/freeradius/mods-config/files/pre-proxy
 share/examples/freeradius/mods-config/perl/example.pl
 share/examples/freeradius/mods-config/preprocess/hints
 share/examples/freeradius/mods-config/preprocess/huntgroups
+share/examples/freeradius/mods-config/realm/freeradius-naptr-to-home-server.sh
 share/examples/freeradius/mods-config/sql/counter/mysql/dailycounter.conf
 share/examples/freeradius/mods-config/sql/counter/mysql/expire_on_login.conf
 share/examples/freeradius/mods-config/sql/counter/mysql/monthlycounter.conf
@@ -596,7 +599,8 @@ share/examples/freeradius/mods-config/sql/main/postgresql/process-radacct.sql
 share/examples/freeradius/mods-config/sql/main/postgresql/queries.conf
 share/examples/freeradius/mods-config/sql/main/postgresql/schema.sql
 share/examples/freeradius/mods-config/sql/main/postgresql/setup.sql
-share/examples/freeradius/mods-config/sql/main/sqlite/process-radacct-refresh.sh
+share/examples/freeradius/mods-config/sql/main/sqlite/process-radacct-close-after-reload.pl
+share/examples/freeradius/mods-config/sql/main/sqlite/process-radacct-new-data-usage-period.sh
 share/examples/freeradius/mods-config/sql/main/sqlite/process-radacct-schema.sql
 share/examples/freeradius/mods-config/sql/main/sqlite/queries.conf
 share/examples/freeradius/mods-config/sql/main/sqlite/schema.sql
@@ -609,7 +613,6 @@ share/examples/freeradius/mods-config/sql/moonshot-targeted-ids/sqlite/schema.sq
 share/examples/freeradius/mods-config/unbound/default.conf
 share/examples/freeradius/mods-enabled/always
 share/examples/freeradius/mods-enabled/attr_filter
-share/examples/freeradius/mods-enabled/cache_eap
 share/examples/freeradius/mods-enabled/chap
 share/examples/freeradius/mods-enabled/date
 share/examples/freeradius/mods-enabled/detail
@@ -656,6 +659,7 @@ share/examples/freeradius/radiusd.conf
 share/examples/freeradius/sites-available/README
 share/examples/freeradius/sites-available/abfab-tls
 share/examples/freeradius/sites-available/abfab-tr-idp
+share/examples/freeradius/sites-available/aws-nlb
 share/examples/freeradius/sites-available/buffered-sql
 share/examples/freeradius/sites-available/challenge
 share/examples/freeradius/sites-available/channel_bindings
@@ -670,6 +674,7 @@ share/examples/freeradius/sites-available/dhcp
 share/examples/freeradius/sites-available/dhcp.relay
 share/examples/freeradius/sites-available/dynamic-clients
 share/examples/freeradius/sites-available/example
+share/examples/freeradius/sites-available/google-ldap-auth
 share/examples/freeradius/sites-available/inner-tunnel
 share/examples/freeradius/sites-available/originate-coa
 share/examples/freeradius/sites-available/proxy-inner-tunnel
@@ -678,6 +683,7 @@ share/examples/freeradius/sites-available/robust-proxy-accounting
 share/examples/freeradius/sites-available/soh
 share/examples/freeradius/sites-available/status
 share/examples/freeradius/sites-available/tls
+share/examples/freeradius/sites-available/tls-cache
 share/examples/freeradius/sites-available/totp
 share/examples/freeradius/sites-available/virtual.example.com
 share/examples/freeradius/sites-available/vmps
@@ -694,6 +700,7 @@ share/freeradius/dictionary.acc
 share/freeradius/dictionary.acme
 share/freeradius/dictionary.actelis
 share/freeradius/dictionary.adtran
+share/freeradius/dictionary.adva
 share/freeradius/dictionary.aerohive
 share/freeradius/dictionary.airespace
 share/freeradius/dictionary.alcatel
@@ -728,11 +735,13 @@ share/freeradius/dictionary.bskyb
 share/freeradius/dictionary.bt
 share/freeradius/dictionary.cablelabs
 share/freeradius/dictionary.cabletron
+share/freeradius/dictionary.calix
 share/freeradius/dictionary.cambium
 share/freeradius/dictionary.camiant
 share/freeradius/dictionary.centec
 share/freeradius/dictionary.checkpoint
 share/freeradius/dictionary.chillispot
+share/freeradius/dictionary.ciena
 share/freeradius/dictionary.cisco
 share/freeradius/dictionary.cisco.asa
 share/freeradius/dictionary.cisco.bbsm
@@ -746,6 +755,7 @@ share/freeradius/dictionary.columbia_university
 share/freeradius/dictionary.compat
 share/freeradius/dictionary.compatible
 share/freeradius/dictionary.cosine
+share/freeradius/dictionary.covaro
 share/freeradius/dictionary.dante
 share/freeradius/dictionary.dellemc
 share/freeradius/dictionary.dhcp
@@ -768,6 +778,7 @@ share/freeradius/dictionary.fortinet
 share/freeradius/dictionary.foundry
 share/freeradius/dictionary.freedhcp
 share/freeradius/dictionary.freeradius
+share/freeradius/dictionary.freeradius.evs5
 share/freeradius/dictionary.freeradius.internal
 share/freeradius/dictionary.freeswitch
 share/freeradius/dictionary.gandalf
@@ -795,6 +806,7 @@ share/freeradius/dictionary.localweb
 share/freeradius/dictionary.lucent
 share/freeradius/dictionary.manzara
 share/freeradius/dictionary.meinberg
+share/freeradius/dictionary.mellanox
 share/freeradius/dictionary.meraki
 share/freeradius/dictionary.merit
 share/freeradius/dictionary.meru
@@ -807,9 +819,11 @@ share/freeradius/dictionary.motorola.illegal
 share/freeradius/dictionary.motorola.wimax
 share/freeradius/dictionary.navini
 share/freeradius/dictionary.net
+share/freeradius/dictionary.netelastic
 share/freeradius/dictionary.netscreen
 share/freeradius/dictionary.networkphysics
 share/freeradius/dictionary.nexans
+share/freeradius/dictionary.nile
 share/freeradius/dictionary.nokia
 share/freeradius/dictionary.nokia.conflict
 share/freeradius/dictionary.nomadix
