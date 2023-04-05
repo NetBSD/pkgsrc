@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.72 2022/10/08 21:18:55 ryoon Exp $
+# $NetBSD: options.mk,v 1.73 2023/04/05 14:22:35 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -69,7 +69,7 @@ CONFIGURE_ARGS+=	--disable-necko-wifi
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
-LICENSE=		mozilla-trademark-license
+LICENSE+=		AND mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
