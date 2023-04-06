@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2078 2023/04/05 23:14:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2079 2023/04/06 00:26:19 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox-l10n to 111.0.1 [ryoon 2023-04-05]
 	Added textproc/typst version 0.1.0 [nikita 2023-04-05]
 	Updated converters/p5-Convert-Color to 0.16 [wiz 2023-04-05]
+	Updated lang/gleam to 0.28.1 [nikita 2023-04-06]
