@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/06 12:12:30 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/06 12:14:32 wiz Exp $
 
 DISTNAME=	fluent-0.2.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alerque/fluent-lua
-COMMENT=	Lua Unicode CLDR interface
+COMMENT=	Lua implementation of Project Fluent
 LICENSE=	mit
 
 DEPENDS+=	${LUA_PKGPREFIX}-epnf-[0-9]*:../../devel/lua-epnf
