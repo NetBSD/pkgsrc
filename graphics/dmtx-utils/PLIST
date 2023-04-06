@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/06 12:32:28 joerg Exp $
+bin/dmtxquery
+bin/dmtxread
+bin/dmtxwrite
+man/man1/dmtxquery.1
+man/man1/dmtxread.1
+man/man1/dmtxwrite.1
