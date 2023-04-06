@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2080 2023/04/06 11:02:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2081 2023/04/06 11:31:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2845,3 +2845,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/gleam to 0.28.1 [nikita 2023-04-06]
 	Updated devel/cmake to 3.26.3 [adam 2023-04-06]
 	Updated devel/SDL2 to 2.26.5 [adam 2023-04-06]
+	Updated lang/python310 to 3.10.11 [adam 2023-04-06]
+	Updated lang/py310-html-docs to 3.10.11 [adam 2023-04-06]
+	Updated lang/python311 to 3.11.3 [adam 2023-04-06]
+	Updated lang/py311-html-docs to 3.11.3 [adam 2023-04-06]
