@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2079 2023/04/06 00:26:19 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2080 2023/04/06 11:02:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2843,3 +2843,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/typst version 0.1.0 [nikita 2023-04-05]
 	Updated converters/p5-Convert-Color to 0.16 [wiz 2023-04-05]
 	Updated lang/gleam to 0.28.1 [nikita 2023-04-06]
+	Updated devel/cmake to 3.26.3 [adam 2023-04-06]
+	Updated devel/SDL2 to 2.26.5 [adam 2023-04-06]
