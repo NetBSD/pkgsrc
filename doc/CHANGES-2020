@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6873 2022/03/26 19:25:19 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.6874 2023/04/06 11:42:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6612,8 +6612,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libopenmpt to 0.5.1 [fcambus 2020-07-28]
 	Updated www/webkit-gtk to 2.28.4 [leot 2020-07-28]
 	Updated archivers/arqiver to 0.6.0 [pin 2020-07-28]
-	Removed sysutils/wbm-proc version 1.941 [mef 2020-07-28]
-	Removed sysutils/wbm-acl version 1.941 [mef 2020-07-28]
+	Removed sysutils/wbm-proc [mef 2020-07-28]
+	Removed sysutils/wbm-acl [mef 2020-07-28]
 	Updated fonts/ttf-tlwg to 0.7.2 [scole 2020-07-28]
 	Updated security/sqlmap to 1.4.7 [leot 2020-07-28]
 	Updated textproc/lowdown to 0.7.2 [fcambus 2020-07-28]
@@ -6748,8 +6748,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/jbigkit to 2.1nb1 [wiz 2020-08-03]
 	Updated devel/py-mercurial to 5.5 [joerg 2020-08-03]
 	Added time/py-l18n version 2018.5 [joerg 2020-08-03]
-	Added graphics/py-Willow to 1.4 [joerg 2020-08-03]
-	Added www/py-draftjs_exporter to 4.1.0 [joerg 2020-08-03]
+	Added graphics/py-Willow version 1.4 [joerg 2020-08-03]
+	Added www/py-draftjs_exporter version 4.1.0 [joerg 2020-08-03]
 	Added www/py-django-taggit version 1.3.0 [joerg 2020-08-04]
 	Added www/py-django-phonenumber-field version 4.0.0 [joerg 2020-08-04]
 	Added www/py-django-modelcluster version 5.0.2 [joerg 2020-08-04]
@@ -7005,7 +7005,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/split-thai to 0.4 [scole 2020-08-17]
 	Updated www/stagit to 0.9.4 [fcambus 2020-08-17]
 	Updated net/stagit-gopher to 0.9.4 [leot 2020-08-17]
-	Added security/py-yubikey-manager to 3.1.1 [riastradh 2020-08-17]
+	Added security/py-yubikey-manager version 3.1.1 [riastradh 2020-08-17]
 	Updated www/py-wagtail to 2.10 [joerg 2020-08-18]
 	Updated x11/modeline to 20060729 [tnn 2020-08-18]
 	Updated fonts/go-ttf to 2.008 [tnn 2020-08-18]
@@ -8503,7 +8503,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added wm/qvwm version 1.1.12 [nia 2020-10-10]
 	Added lang/python39 version 3.9.0 [adam 2020-10-10]
 	Added lang/py39-html-docs version 3.9.0 [adam 2020-10-10]
-	Updated devel/diffbreaker to version 0.3 [nat 2020-10-11]
+	Updated devel/diffbreaker to 0.3 [nat 2020-10-11]
 	Added wm/yeahwm version 0.3.5 [nia 2020-10-11]
 	Updated devel/cbindgen to 0.15.0 [ryoon 2020-10-11]
 	Added audio/librespot version 0.1.3 [pin 2020-10-11]
@@ -8863,7 +8863,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/dMagnetic to 0.26 [wiz 2020-10-31]
 	Updated devel/git to 2.29.2 [adam 2020-10-31]
 	Updated devel/py-gitpython to 3.1.11 [adam 2020-10-31]
-	Updated net/freerdp2 to 2.1.2 [markd 2020-11-1]
+	Updated net/freerdp2 to 2.1.2 [markd 2020-11-01]
 	Updated misc/tmux to 3.1c [khorben 2020-11-01]
 	Updated net/nanotodon to 0.2.0 [tsutsui 2020-11-01]
 	Updated audio/spotify-qt to 3.0 [pin 2020-11-01]
