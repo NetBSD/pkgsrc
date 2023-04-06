@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/04/06 12:05:32 joerg Exp $
+
+BLAKE2s (cldr-0.3.0.tar.gz) = 42b3cd9a0521c0a0e9a89b7a47876be96064e18cef0ddd6893034e87a8f8f150
+SHA512 (cldr-0.3.0.tar.gz) = 39769e8d7d5c796e69adb0225d1093f7844ef89e8f989d8b060bcc51ccafc04eaf914bc1437b1c9a984d41b70e38ab7b4eda505bf64ae505223c6038bf3fae9e
+Size (cldr-0.3.0.tar.gz) = 9849 bytes
+SHA1 (patch-spec_cldr__spec.lua) = da104aa53b2fc4f2e016270a367c25060b6b7a2a
