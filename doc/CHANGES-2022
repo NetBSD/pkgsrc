@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.6441 2023/03/11 08:38:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.6442 2023/04/06 11:42:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -5277,7 +5277,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/entr to 5.2 [leot 2022-07-23]
 	Updated devel/opa to 0.42.2 [leot 2022-07-23]
 	Updated misc/tmux to 3.3a [leot 2022-07-23]
-	Updated emulators/nono version 0.4.1 [jun 2022-07-24]
+	Updated emulators/nono to 0.4.1 [jun 2022-07-24]
 	Updated multimedia/ffmpeg5 to 5.1 [adam 2022-07-24]
 	Updated multimedia/ffplay5 to 5.1 [adam 2022-07-24]
 	Updated x11/mlterm to 3.9.2nb4 [rin 2022-07-24]
@@ -6621,7 +6621,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Crypt-PasswdMD5 to 1.42 [wen 2022-09-11]
 	Updated net/wireshark to 3.6.8 [wiz 2022-09-11]
 	Updated security/p5-CryptX to 0.077 [wen 2022-09-11]
-	Updated security/p5-Digest-SHA3 to 1.05 [wen 2022-09-11] 
+	Updated security/p5-Digest-SHA3 to 1.05 [wen 2022-09-11]
 	Updated textproc/p5-Text-Balanced to 2.06 [wen 2022-09-11]
 	Updated textproc/p5-Text-CSV to 2.02 [wen 2022-09-11]
 	Updated textproc/p5-Text-CSV_XS to 1.48 [wen 2022-09-11]
