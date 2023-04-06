@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/06 12:12:30 joerg Exp $
+${LUA_LDIR}/fluent/init.lua
+${LUA_LDIR}/fluent/messages.lua
+${LUA_LDIR}/fluent/parser.lua
+${LUA_LDIR}/fluent/resource.lua
+${LUA_LDIR}/fluent/syntax.lua
