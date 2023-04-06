@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/04/06 14:53:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/04/06 14:57:25 wiz Exp $
 
 GCC_PKGNAME=		gcc10
 .include		"version.mk"
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+PATCHDIR=	${.CURDIR}/../../lang/gcc10/patches
+DISTINFO_FILE=	${.CURDIR}/../../lang/gcc10/distinfo
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
