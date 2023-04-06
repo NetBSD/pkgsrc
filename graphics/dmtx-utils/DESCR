@@ -1,0 +1,2 @@
+dmtxread and dmtxwrite are a command line interface for libdmtx. They can
+be used to create Data Matrix barcode and extract the content.
