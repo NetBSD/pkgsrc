@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2022/09/18 09:49:50 pin Exp $
+# $NetBSD: options.mk,v 1.6 2023/04/06 13:22:01 pin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ncspot
 PKG_OPTIONS_OPTIONAL_GROUPS=	backend ui
@@ -47,7 +47,7 @@ CARGO_FEATURES+=	termion_backend
 CARGO_FEATURES+=	mpris
 CARGO_FEATURES+=	notify
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
-.  include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mxcb)
