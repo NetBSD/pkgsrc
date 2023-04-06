@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/06 12:12:30 joerg Exp $
+
+BLAKE2s (fluent-0.2.0.tar.gz) = 5b37764dacc8b722b24d033a2ee218ffede723f0843b99f3807a6fdb723ac136
+SHA512 (fluent-0.2.0.tar.gz) = ebafac8a52d3875f73500add1b0e993526abaf260545c71aceadcf47b91419f0f2e983104deb2ab5304f2c1fa4f0f1d6d3e2e7150558c00747d7251861d70b9e
+Size (fluent-0.2.0.tar.gz) = 41994 bytes
