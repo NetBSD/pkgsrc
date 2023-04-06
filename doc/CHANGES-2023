@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2082 2023/04/06 12:08:20 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.2083 2023/04/06 12:12:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2850,3 +2850,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/python311 to 3.11.3 [adam 2023-04-06]
 	Updated lang/py311-html-docs to 3.11.3 [adam 2023-04-06]
 	Added textproc/lua-cldr version 0.3.0 [joerg 2023-04-06]
+	Added textproc/lua-fluent version 0.2.0 [joerg 2023-04-06]
