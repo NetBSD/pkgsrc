@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2023/04/06 11:39:26 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2023/04/06 11:40:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -6,6 +6,8 @@ PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			always-libgcc
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
