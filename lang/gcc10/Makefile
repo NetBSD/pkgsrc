@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/04/06 14:53:13 wiz Exp $
-
-.include "Makefile.common"
+# $NetBSD: Makefile,v 1.21 2023/04/06 22:28:59 wiz Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -10,6 +8,8 @@ PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
 COMMENT=	The GNU Compiler Collection (GCC) - 10.0 Release Series
 
 LANGS=			c
+
+.include "Makefile.common"
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
