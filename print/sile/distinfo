@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/07/27 19:41:57 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/04/06 14:01:44 joerg Exp $
 
-BLAKE2s (sile-0.12.2.tar.xz) = cd23cd9d8a694d424cb3ef224dba91ba955bad4d044d25272eef42dd3e2b9c61
-SHA512 (sile-0.12.2.tar.xz) = d2e37e4a1d7f5bbb344ef2783d1b7b70591de33f1b0bd4919490b96acf5e44e9bef2c1024afcdefac0cf0806f86f6211d4a21c046b8f99de2fd11f4598c372fd
-Size (sile-0.12.2.tar.xz) = 2722568 bytes
-SHA1 (patch-Makefile.in) = 1240ef771e529e7e461f5fb53800130fdc516d44
+BLAKE2s (sile-0.14.8.tar.xz) = fdc9b3fc5316ffda6b4172d0259ef8ad271b4b199ac271b58fc2cc97d3c8dda6
+SHA512 (sile-0.14.8.tar.xz) = 68c93a402700abbb8a44439a8108a5c7b404186d33638fba3790f4e3218c5e5423167010748015c85e44e3efe9f84e83c2ff785011e8cc1d0e3ea584df303d91
+Size (sile-0.14.8.tar.xz) = 2771280 bytes
