@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2085 2023/04/06 13:22:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2086 2023/04/06 14:03:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/lua-fluent version 0.2.0 [joerg 2023-04-06]
 	Added graphics/dmtx-utils version 0.7.6 [joerg 2023-04-06]
 	Updated audio/ncspot to 0.13.1 [pin 2023-04-06]
+	Updated print/sile to 0.14.8 [joerg 2023-04-06]
