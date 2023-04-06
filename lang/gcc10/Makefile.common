@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2023/04/06 14:57:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/04/06 22:14:27 wiz Exp $
+# used by lang/gcc10-libjit/Makefile
 
 GCC_PKGNAME=		gcc10
 .include		"version.mk"
