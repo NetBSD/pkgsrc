@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2090 2023/04/07 06:49:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2091 2023/04/07 07:59:17 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2859,3 +2859,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-simplejson to 3.19.1 [adam 2023-04-07]
 	Updated devel/py-pyobjc to 9.0.1 [adam 2023-04-07]
 	Added lang/gcc12-libjit version 12.2.0 [wiz 2023-04-07]
+	Updated fonts/spleen to 1.9.3 [fcambus 2023-04-07]
