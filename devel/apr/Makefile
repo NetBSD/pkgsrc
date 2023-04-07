@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.87 2023/04/07 09:37:00 adam Exp $
+# $NetBSD: Makefile,v 1.88 2023/04/07 14:07:22 ryoon Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
 
 DISTNAME=	apr-1.7.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
