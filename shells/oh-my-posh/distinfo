@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/03/17 11:23:57 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2023/04/07 00:32:56 schmonz Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -813,3 +813,5 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
 BLAKE2s (oh-my-posh-14.14.3.tar.gz) = 202f71a2fb32fb478f8e755e75593cd711ba1732e9122eb8ffa364dfc7e209c8
 SHA512 (oh-my-posh-14.14.3.tar.gz) = e0cfecfa31dba8d071f6d3d07072f3d066e6eb81682c20127c0dfaedf355ee1cc1e8b337ef3efc6554eb4490a5e964bcbb7366ba0745ba40fdefb42a153a8610
 Size (oh-my-posh-14.14.3.tar.gz) = 4170973 bytes
+SHA1 (patch-font_install__unix.go) = cca30cb0c78d1b02cd6054a74049f862ed047cd0
+SHA1 (patch-platform_battery_battery__unix.go) = 5b34b0a3b488446a043ae02f330c6b0a2b6645bd
