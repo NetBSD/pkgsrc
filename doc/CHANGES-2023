@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2097 2023/04/07 13:16:50 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.2098 2023/04/07 14:08:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.6.3 [tsutsui 2023-04-07]
 	Updated ham/gnuradio-core to 3.10.6.0 [mef 2023-04-07]
 	Updated ham/hamlib to 4.5.5 [gdt 2023-04-07]
+	Updated devel/apr to 1.7.3nb1 [ryoon 2023-04-07]
