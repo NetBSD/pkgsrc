@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:51 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:10 adam Exp $
 
-BLAKE2s (pyobjc-framework-DVDPlayback-8.5.1.tar.gz) = 7abb23eaebbc1b9bfcce00b40e60de1d4c6d52ec64ef36ebfd54a467dbc67b09
-SHA512 (pyobjc-framework-DVDPlayback-8.5.1.tar.gz) = 7b5394856f8c5b28b16d0247873cfe3a20b17492cf5b22c272000dc499076a3dc8215dd775103810319852d7549123ace2de37d7e6c6fa15de52e17e9ad7f6c6
-Size (pyobjc-framework-DVDPlayback-8.5.1.tar.gz) = 51966 bytes
+BLAKE2s (pyobjc-framework-DVDPlayback-9.0.1.tar.gz) = b5b3f5566b29191aaef0593a57a9fdb645ac68d18082f444d31aa88d481d07c0
+SHA512 (pyobjc-framework-DVDPlayback-9.0.1.tar.gz) = b06fafe1014683b947548715dee3936fda8933094a86a12c324bcb5b2abbf8096b834454cc6237d568bf34e2d453db663dc35a20c9d6e7cf90377fd9532301e7
+Size (pyobjc-framework-DVDPlayback-9.0.1.tar.gz) = 51944 bytes
