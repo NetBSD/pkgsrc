@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/28 14:00:53 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:05 nros Exp $
 lib/pkgconfig/Qt6WebChannel.pc
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qmetaobjectpublisher_p.h
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qqmlwebchannelattached_p.h
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qwebchannel_p.h
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/signalhandler_p.h
-qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/variantargument_p.h
 qt6/include/QtWebChannel/QQmlWebChannel
 qt6/include/QtWebChannel/QWebChannel
 qt6/include/QtWebChannel/QWebChannelAbstractTransport
@@ -36,8 +35,8 @@ qt6/lib/libQt6WebChannel.prl
 qt6/lib/libQt6WebChannel.so
 qt6/lib/libQt6WebChannel.so.6
 qt6/lib/libQt6WebChannel.so.${PKGVERSION}
-qt6/lib/metatypes/qt6webchannel_release_metatypes.json
 qt6/lib/pkgconfig/Qt6WebChannel.pc
+qt6/metatypes/qt6webchannel_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_webchannel.pri
 qt6/mkspecs/modules/qt_lib_webchannel_private.pri
 qt6/modules/WebChannel.json

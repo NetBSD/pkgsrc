@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/12/01 22:01:58 nros Exp $
+# $NetBSD: Makefile,v 1.26 2023/04/07 18:28:04 nros Exp $
 
 DISTNAME=	qt6-${QTVERSION}
 
@@ -28,6 +28,7 @@ DEPENDS+=	qt6-qtquick3d-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtquick3d
 DEPENDS+=	qt6-qtquicktimeline-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtquicktimeline
 DEPENDS+=	qt6-qtremoteobjects-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtremoteobjects
 DEPENDS+=	qt6-qtscxml-${QTVERSION}{,nb[0-9]*}:../../lang/qt6-qtscxml
+DEPENDS+=	qt6-qtserialport-${QTVERSION}{,nb[0-9]*}:../../x11/qt6-qtserialport
 DEPENDS+=	qt6-qtshadertools-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtshadertools
 DEPENDS+=	qt6-qtspeech-${QTVERSION}{,nb[0-9]*}:../../audio/qt6-qtspeech
 DEPENDS+=	qt6-qtsvg-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtsvg

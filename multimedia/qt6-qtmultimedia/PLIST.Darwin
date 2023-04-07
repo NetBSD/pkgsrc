@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2023/04/07 18:28:04 nros Exp $
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcoreaudiosessionmanager_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcoreaudioutils_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevice_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosink_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosource_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinmediadevices_p.h

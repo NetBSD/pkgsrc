@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.QNX,v 1.1 2023/04/07 18:28:04 nros Exp $
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qqnxaudiodevice_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qqnxaudiosink_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qqnxaudiosource_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qqnxaudioutils_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qqnxmediadevices_p.h

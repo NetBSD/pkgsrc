@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2023/04/02 16:14:14 hauke Exp $
+# $NetBSD: Makefile.common,v 1.29 2023/04/07 18:28:05 nros Exp $
 # used by x11/qt6-qtserialport/Makefile
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -32,6 +32,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake gmake perl:build pkg-config
+#TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 
 # https://doc.qt.io/qt-6/supported-platforms.html
 GCC_REQD+=		9
@@ -79,7 +80,7 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .if "${PKGPATH}" != "x11/qt6-qtbase"
-CONFIGURE_ARGS+=	-cmake-use-default-generator
+#CONFIGURE_ARGS+=	-cmake-use-default-generator
 .  if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
 .  endif
@@ -87,6 +88,10 @@ QTCONFDIR?=		.
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTPREFIX}/bin/qt-configure-module ${QTCONFDIR} ${CONFIGURE_ARGS}
 .endif
+
+#do-build:
+#	cd ${WRKSRC}/${QTCONFDIR} && ${SETENV} ${MAKE_ENV} ninja
+
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
