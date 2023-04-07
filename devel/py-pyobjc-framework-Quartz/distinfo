@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/09/27 18:12:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/04/07 05:25:17 adam Exp $
 
-BLAKE2s (pyobjc-framework-Quartz-8.5.1.tar.gz) = 5f3c25c8fbd8ef89263d2d2a24254bf66e66609bd35d52f2bc9de8b565ff03a3
-SHA512 (pyobjc-framework-Quartz-8.5.1.tar.gz) = 0ac7a48437ff307080d12aab7e3db3db2d24711d33241be6a5002381b730d4ede5a68b14cec1049caf8e6fb225e6b92fc800c32f7c3dc9cf0e73bfd9d4a3bea1
-Size (pyobjc-framework-Quartz-8.5.1.tar.gz) = 3669308 bytes
+BLAKE2s (pyobjc-framework-Quartz-9.0.1.tar.gz) = 79d4b639979644c57677078ced559fe9296c4e679d336eeff6d2bb9fa51bd444
+SHA512 (pyobjc-framework-Quartz-9.0.1.tar.gz) = c501929072e91f0cbb3b2219a0fbe5686f6c18ce72a78383fe4643470d5d71a5fe82cea473909e5dc5111667b3e559adc5575708857f23f440c82bea62b396f1
+Size (pyobjc-framework-Quartz-9.0.1.tar.gz) = 3778733 bytes

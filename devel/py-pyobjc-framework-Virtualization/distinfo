@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:13:02 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:20 adam Exp $
 
-BLAKE2s (pyobjc-framework-Virtualization-8.5.1.tar.gz) = 4799ccedee0fef2ec5d3907e5237302e5d7d618d817969b09336b854613b99e8
-SHA512 (pyobjc-framework-Virtualization-8.5.1.tar.gz) = 6c12bfac114c85b5b0f58220e4631a8664f35d531d91ac78a3272f96866c1be5ee1bf899b2013e03f4167107a825206a9dec934bebd950931bb654936fb9ef3b
-Size (pyobjc-framework-Virtualization-8.5.1.tar.gz) = 41956 bytes
+BLAKE2s (pyobjc-framework-Virtualization-9.0.1.tar.gz) = 3c1d2701e5c82a19db9214cc2607fbf239e58db768789597542f21480bc3c7e4
+SHA512 (pyobjc-framework-Virtualization-9.0.1.tar.gz) = 30274f757d3167d03c62c729bc0e2208f6dfad13a688f24a57a7c1ed54d3a7c92bda20b48f0b4e4025ee6b31d28d338748fc8935d5804764133d88fd351008c1
+Size (pyobjc-framework-Virtualization-9.0.1.tar.gz) = 55097 bytes

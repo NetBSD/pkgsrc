@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/09/27 18:12:55 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/04/07 05:25:14 adam Exp $
 
-BLAKE2s (pyobjc-framework-LaunchServices-8.5.1.tar.gz) = 74f9d59caf8e5c9e4541c1b26e9050a8e05645f009f3a4901ba06531e9dd5e03
-SHA512 (pyobjc-framework-LaunchServices-8.5.1.tar.gz) = e6d43d88814aa2190ab77ab99e8311ff05bd81ff1e11f633bca4206e8fcd76de60df761141d325a7e77b5edd8c7e0a0b8ea02a7bbc74448a1b23b498326beae2
-Size (pyobjc-framework-LaunchServices-8.5.1.tar.gz) = 19377 bytes
+BLAKE2s (pyobjc-framework-LaunchServices-9.0.1.tar.gz) = be740505b786ddb80f87cde2cc45830ae76285f8e643df1790177c198c7e433d
+SHA512 (pyobjc-framework-LaunchServices-9.0.1.tar.gz) = 6926f452b3e4d95affdf49c56b2dea4a27a339c7bf033c27af6922882cc481625cacae78537c209bfb43b51ca295dfd720505e7848bd827ffaf7b99f3ffd7c21
+Size (pyobjc-framework-LaunchServices-9.0.1.tar.gz) = 19372 bytes
