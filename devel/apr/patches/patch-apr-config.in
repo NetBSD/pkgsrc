@@ -1,0 +1,13 @@
+$NetBSD: patch-apr-config.in,v 1.3 2023/04/07 14:07:22 ryoon Exp $
+
+--- apr-config.in.orig	2023-03-13 10:29:04.000000000 +0000
++++ apr-config.in
+@@ -64,7 +64,7 @@ if test "$cross_compiling" != "no"; then
+     # absolute path, but not installed path - we're cross compiling
+     case "$normalized_command" in
+       "${normalized_bindir}/"*) ;;
+-      "/"*)                     location=crosscompile;
++      "/"*)                     #location=crosscompile;
+                                 APR_TARGET_DIR=${normalized_command%${normalized_bindir}/apr-${APR_MAJOR_VERSION}-config};
+                                 ;;
+       *)                        ;;
