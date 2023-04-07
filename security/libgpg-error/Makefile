@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2022/10/09 07:50:29 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/04/07 09:14:48 adam Exp $
 
-DISTNAME=	libgpg-error-1.46
+DISTNAME=	libgpg-error-1.47
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/libgpg-error/
 MASTER_SITES+=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/
@@ -22,17 +22,17 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 .else
 CONFIGURE_ENV+=		CC_FOR_BUILD=${CC:Q}\ ${CFLAGS:M*:Q}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-8.*-powerpc)
+.if ${MACHINE_PLATFORM:MDarwin-8.*-powerpc}
 CFLAGS+=	-D__DARWIN_UNIX03
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
+.if ${MACHINE_PLATFORM:MSunOS-5.10-*}
 LIBS+=	-lrt
 .endif
 
