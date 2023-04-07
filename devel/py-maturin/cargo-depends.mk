@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/03/09 08:09:06 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2023/04/07 04:28:18 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aes-0.7.5
@@ -79,13 +79,6 @@ CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
 CARGO_CRATE_DEPENDS+=	dunce-1.0.3
 CARGO_CRATE_DEPENDS+=	either-1.8.1
 CARGO_CRATE_DEPENDS+=	encode_unicode-0.3.6
-CARGO_CRATE_DEPENDS+=	encoding-0.2.33
-CARGO_CRATE_DEPENDS+=	encoding-index-japanese-1.20141219.5
-CARGO_CRATE_DEPENDS+=	encoding-index-korean-1.20141219.5
-CARGO_CRATE_DEPENDS+=	encoding-index-simpchinese-1.20141219.5
-CARGO_CRATE_DEPENDS+=	encoding-index-singlebyte-1.20141219.5
-CARGO_CRATE_DEPENDS+=	encoding-index-tradchinese-1.20141219.5
-CARGO_CRATE_DEPENDS+=	encoding_index_tests-0.1.4
 CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.32
 CARGO_CRATE_DEPENDS+=	enumflags2-0.6.4
 CARGO_CRATE_DEPENDS+=	enumflags2_derive-0.6.4
@@ -152,7 +145,7 @@ CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
 CARGO_CRATE_DEPENDS+=	minijinja-0.30.5
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
-CARGO_CRATE_DEPENDS+=	msi-0.5.0
+CARGO_CRATE_DEPENDS+=	msi-0.5.1
 CARGO_CRATE_DEPENDS+=	multipart-0.18.0
 CARGO_CRATE_DEPENDS+=	native-tls-0.2.11
 CARGO_CRATE_DEPENDS+=	nb-connect-1.2.0
