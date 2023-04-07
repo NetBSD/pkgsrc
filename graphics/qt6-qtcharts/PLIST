@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/25 14:15:23 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
 lib/pkgconfig/Qt6Charts.pc
 lib/pkgconfig/Qt6ChartsQml.pc
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractbarchartitem_p.h
@@ -321,10 +321,10 @@ qt6/lib/libQt6ChartsQml.prl
 qt6/lib/libQt6ChartsQml.so
 qt6/lib/libQt6ChartsQml.so.6
 qt6/lib/libQt6ChartsQml.so.${PKGVERSION}
-qt6/lib/metatypes/qt6charts_release_metatypes.json
-qt6/lib/metatypes/qt6chartsqml_release_metatypes.json
 qt6/lib/pkgconfig/Qt6Charts.pc
 qt6/lib/pkgconfig/Qt6ChartsQml.pc
+qt6/metatypes/qt6charts_release_metatypes.json
+qt6/metatypes/qt6chartsqml_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_charts.pri
 qt6/mkspecs/modules/qt_lib_charts_private.pri
 qt6/mkspecs/modules/qt_lib_chartsqml.pri

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/01/29 21:14:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/07 18:28:03 nros Exp $
 
 DISTNAME=	qtquick3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtquick3d-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	3d engine for Qt6 quick
 CATEGORIES=	graphics
 LICENSE=	gnu-gpl-v3
@@ -14,6 +13,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DAssetImport.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DAssetUtils.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DEffects.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DHelpers.pc
+PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DHelpersImpl.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DIblBaker.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DParticleEffects.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DParticles.pc

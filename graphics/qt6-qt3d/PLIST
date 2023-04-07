@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/25 22:19:12 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -138,7 +138,6 @@ qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/calcboundingvolumejob_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/corelogging_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/coresettings_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/job_common_p.h
-qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_avx2_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_sse_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/nullservices_p.h
@@ -168,7 +167,6 @@ qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qcoreaspect_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qcoresettings_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdestructionidandtypecollector_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdownloadhelperservice_p.h
-qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdownloadhelperservice_p_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qdownloadnetworkworker_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qentity_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/qeventfilterservice_p.h
@@ -205,7 +203,6 @@ qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/vector3d_sse_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/vector4d_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/vector4d_sse_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/vector_helper_p.h
-qt6/include/Qt3DCore/FunctorType
 qt6/include/Qt3DCore/QAbstractAspect
 qt6/include/Qt3DCore/QAbstractFunctor
 qt6/include/Qt3DCore/QAbstractSkeleton
@@ -438,7 +435,6 @@ qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qaxis_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qaxisaccumulator_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qaxissetting_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qbuttonaxisinput_p.h
-qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qgamepadinput_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qgenericinputdevice_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qinputaspect_p.h
 qt6/include/Qt3DInput/${PKGVERSION}/Qt3DInput/private/qinputchord_p.h
@@ -852,7 +848,6 @@ qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/sendbuffercapturejob_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/setfence_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/shader_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/shaderbuilder_p.h
-qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/shadercache_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/shaderdata_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/shaderimage_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/skeleton_p.h
@@ -868,7 +863,6 @@ qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/technique_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/techniquefilternode_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/techniquemanager_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/texture_p.h
-qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/texturedatamanager_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/textureimage_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/transform_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/triangleboundingvolume_p.h
@@ -885,10 +879,7 @@ qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/updateworldtransformjob_
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/viewportnode_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/visitorutils_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/vsyncframeadvanceservice_p.h
-qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/vulkaninstance_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/waitfence_p.h
-qt6/include/Qt3DRender/PropertyReaderInterface
-qt6/include/Qt3DRender/PropertyReaderInterfacePtr
 qt6/include/Qt3DRender/QAbstractLight
 qt6/include/Qt3DRender/QAbstractRayCaster
 qt6/include/Qt3DRender/QAbstractTexture
@@ -898,7 +889,6 @@ qt6/include/Qt3DRender/QAlphaTest
 qt6/include/Qt3DRender/QBlendEquation
 qt6/include/Qt3DRender/QBlendEquationArguments
 qt6/include/Qt3DRender/QBlitFramebuffer
-qt6/include/Qt3DRender/QBufferCapture
 qt6/include/Qt3DRender/QCamera
 qt6/include/Qt3DRender/QCameraLens
 qt6/include/Qt3DRender/QCameraSelector
@@ -983,7 +973,6 @@ qt6/include/Qt3DRender/QStencilOperation
 qt6/include/Qt3DRender/QStencilOperationArguments
 qt6/include/Qt3DRender/QStencilTest
 qt6/include/Qt3DRender/QStencilTestArguments
-qt6/include/Qt3DRender/QSubtreeEnabler
 qt6/include/Qt3DRender/QTechnique
 qt6/include/Qt3DRender/QTechniqueFilter
 qt6/include/Qt3DRender/QTexture
@@ -1349,18 +1338,6 @@ qt6/lib/libQt63DRender.prl
 qt6/lib/libQt63DRender.so
 qt6/lib/libQt63DRender.so.6
 qt6/lib/libQt63DRender.so.${PKGVERSION}
-qt6/lib/metatypes/qt63danimation_release_metatypes.json
-qt6/lib/metatypes/qt63dcore_release_metatypes.json
-qt6/lib/metatypes/qt63dextras_release_metatypes.json
-qt6/lib/metatypes/qt63dinput_release_metatypes.json
-qt6/lib/metatypes/qt63dlogic_release_metatypes.json
-qt6/lib/metatypes/qt63dquick_release_metatypes.json
-qt6/lib/metatypes/qt63dquickanimation_release_metatypes.json
-qt6/lib/metatypes/qt63dquickextras_release_metatypes.json
-qt6/lib/metatypes/qt63dquickinput_release_metatypes.json
-qt6/lib/metatypes/qt63dquickrender_release_metatypes.json
-qt6/lib/metatypes/qt63dquickscene2d_release_metatypes.json
-qt6/lib/metatypes/qt63drender_release_metatypes.json
 qt6/lib/pkgconfig/Qt63DAnimation.pc
 qt6/lib/pkgconfig/Qt63DCore.pc
 qt6/lib/pkgconfig/Qt63DExtras.pc
@@ -1373,6 +1350,18 @@ qt6/lib/pkgconfig/Qt63DQuickInput.pc
 qt6/lib/pkgconfig/Qt63DQuickRender.pc
 qt6/lib/pkgconfig/Qt63DQuickScene2D.pc
 qt6/lib/pkgconfig/Qt63DRender.pc
+qt6/metatypes/qt63danimation_release_metatypes.json
+qt6/metatypes/qt63dcore_release_metatypes.json
+qt6/metatypes/qt63dextras_release_metatypes.json
+qt6/metatypes/qt63dinput_release_metatypes.json
+qt6/metatypes/qt63dlogic_release_metatypes.json
+qt6/metatypes/qt63dquick_release_metatypes.json
+qt6/metatypes/qt63dquickanimation_release_metatypes.json
+qt6/metatypes/qt63dquickextras_release_metatypes.json
+qt6/metatypes/qt63dquickinput_release_metatypes.json
+qt6/metatypes/qt63dquickrender_release_metatypes.json
+qt6/metatypes/qt63dquickscene2d_release_metatypes.json
+qt6/metatypes/qt63drender_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_3danimation.pri
 qt6/mkspecs/modules/qt_lib_3danimation_private.pri
 qt6/mkspecs/modules/qt_lib_3dcore.pri

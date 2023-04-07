@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/28 13:44:14 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:02 nros Exp $
 lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qtexttospeech_p.h
-qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qtexttospeech_qmltypes_p.h
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qttexttospeech-config_p.h
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qvoice_p.h
 qt6/include/QtTextToSpeech/QTextToSpeech
@@ -58,8 +57,8 @@ qt6/lib/libQt6TextToSpeech.prl
 qt6/lib/libQt6TextToSpeech.so
 qt6/lib/libQt6TextToSpeech.so.6
 qt6/lib/libQt6TextToSpeech.so.${PKGVERSION}
-qt6/lib/metatypes/qt6texttospeech_release_metatypes.json
 qt6/lib/pkgconfig/Qt6TextToSpeech.pc
+qt6/metatypes/qt6texttospeech_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_texttospeech.pri
 qt6/mkspecs/modules/qt_lib_texttospeech_private.pri
 qt6/modules/TextToSpeech.json
