@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/02/01 22:01:44 wiz Exp $
+$NetBSD: distinfo,v 1.4 2023/04/07 18:28:03 nros Exp $
 
-BLAKE2s (qtquick3d-everywhere-src-6.4.1.tar.xz) = 8a561e8d9d7f5fe12afa1747c236ad3ded027992e36694c8e1f04b6b841d1017
-SHA512 (qtquick3d-everywhere-src-6.4.1.tar.xz) = c62226eb1744c0213a901fcf4b56cb3cfa27c5b25881b8f068dbf8e0ed0846e7775e768fe97fe0dfe1ce3d3d4815700b2f3d75d6626d2ac3db1a6328995e454d
-Size (qtquick3d-everywhere-src-6.4.1.tar.xz) = 42793736 bytes
-SHA1 (patch-src_quick3dparticles_qquick3dparticleemitter.cpp) = d3400f38ef08505f41296ac87cf6cb07c30bc3a3
+BLAKE2s (qtquick3d-everywhere-src-6.5.0.tar.xz) = c7d64341a01f000571a669c6950beb7746ef9bfb873cb707c956e0045e4367e2
+SHA512 (qtquick3d-everywhere-src-6.5.0.tar.xz) = 84e5e7015596c035a74f94ec2c6ea254c820b7c4bdc730ec487642108eb6e948867aae1033314a7a4cf0fc37db673537008ec1a44079594acd76ecbaf475c467
+Size (qtquick3d-everywhere-src-6.5.0.tar.xz) = 59794136 bytes
