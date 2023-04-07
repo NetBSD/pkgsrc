@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2023/04/07 09:15:55 adam Exp $
+
+Detect presence of getrandom(2). https://dev.gnupg.org/T6442
+
+--- config.h.in.orig	2023-04-07 08:54:23.000000000 +0000
++++ config.h.in
+@@ -294,6 +294,9 @@
+ /* Define to 1 if you have the `getpid' function. */
+ #undef HAVE_GETPID
+ 
++/* Define to 1 if you have the `getrandom' function. */
++#undef HAVE_GETRANDOM
++
+ /* Define to 1 if you have the `getrusage' function. */
+ #undef HAVE_GETRUSAGE
+ 
