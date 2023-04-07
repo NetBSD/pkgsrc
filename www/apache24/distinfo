@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.55 2023/03/08 08:52:02 adam Exp $
+$NetBSD: distinfo,v 1.56 2023/04/07 09:38:52 adam Exp $
 
-BLAKE2s (httpd-2.4.56.tar.bz2) = 01467c03e62c69f119a46332f77b866a311ee51b5c11c476041b31e082515feb
-SHA512 (httpd-2.4.56.tar.bz2) = 5f12cd9878d822384b1bb163fea4d8edee5e7a0dd8b2389264387971268145cccc6a5a27ddf0436c5f1f631acc5fdc4874da2a47911483e421ca40bf783e0e12
-Size (httpd-2.4.56.tar.bz2) = 7456418 bytes
+BLAKE2s (httpd-2.4.57.tar.bz2) = 195ade9907cdaf79c799fbfef03f23c2344e924a1c07b93f0710c513161c5400
+SHA512 (httpd-2.4.57.tar.bz2) = 4d1e0a274ee90bdfb5f38d4a7d73a7367ed1c6388e26280e640014e49abc0df03683705b88dcfe2ec2da313dda4c7b4a3b86daffa1911f58e224eba89d82d155
+Size (httpd-2.4.57.tar.bz2) = 7457022 bytes
 SHA1 (patch-aa) = 9a66685f1d2e4710ab464beda98cbaad632aebf9
 SHA1 (patch-ab) = a3edcc20b7654e0446c7d442cda1510b23e5d324
 SHA1 (patch-ad) = 4ba4a9c812951f533fa316e5dbf17eaab5494157
