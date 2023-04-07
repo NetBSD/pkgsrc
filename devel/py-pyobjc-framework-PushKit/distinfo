@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:59 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:17 adam Exp $
 
-BLAKE2s (pyobjc-framework-PushKit-8.5.1.tar.gz) = 804b5739a9b8168a219e07ccf0be3d8b77a308166f190460623ad2bcd181bf27
-SHA512 (pyobjc-framework-PushKit-8.5.1.tar.gz) = 87197223c99a0d6d2616ad7db115b05a89c734eca373249db000ee4f4b0ce059599965d8be74d894a5e4dd0f3f3157ac30c9342a0898a2607cb6cf83ea8071f0
-Size (pyobjc-framework-PushKit-8.5.1.tar.gz) = 18814 bytes
+BLAKE2s (pyobjc-framework-PushKit-9.0.1.tar.gz) = 0263d7df870e12b5bffb2078bc92575bddd99cad78eba0963817a28a8c3434e0
+SHA512 (pyobjc-framework-PushKit-9.0.1.tar.gz) = 87cf5c9bb7a14927f573a56ba02ed8438d979a4531c26f8522464592b4070d5bc83d92ba581fb2565bca50097dcdc02d3e3b5a14229c1e03fbdb1f864069886c
+Size (pyobjc-framework-PushKit-9.0.1.tar.gz) = 18904 bytes

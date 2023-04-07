@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:06 adam Exp $
 
-BLAKE2s (pyobjc-framework-AdSupport-8.5.1.tar.gz) = 9c0ff80217b245c7df57b7b17b0b48394faec3f80677687c2560914e083bb000
-SHA512 (pyobjc-framework-AdSupport-8.5.1.tar.gz) = 53f9a126138e021d0bcaaab4da66ef6462956ddce12b6239ef6c53eae07c57adc3338f06d68ff2c58455d7e6856acc1baa8af13601763c13b5641b6b86fcd80f
-Size (pyobjc-framework-AdSupport-8.5.1.tar.gz) = 11291 bytes
+BLAKE2s (pyobjc-framework-AdSupport-9.0.1.tar.gz) = 52f73a4d0b0530a77513b56702205b5090baf8e9863b87e479d2bbf04e40760d
+SHA512 (pyobjc-framework-AdSupport-9.0.1.tar.gz) = ea304fdeeba3372bceca69492a585c0fefde2186c92787d9844c09e0034c34e886e39d7ce4441bba53926518fb690ab03442d4ab86c62feac8ae1fdd774f9d3b
+Size (pyobjc-framework-AdSupport-9.0.1.tar.gz) = 11285 bytes

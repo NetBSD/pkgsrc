@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:57 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:15 adam Exp $
 
-BLAKE2s (pyobjc-framework-MetricKit-8.5.1.tar.gz) = 9e00effc72bf0d9051bc56a97290dd674e92eb5eba185b3bd956e1fe36f897a0
-SHA512 (pyobjc-framework-MetricKit-8.5.1.tar.gz) = d8a4032fb5aef22ae5016e54fc2dcb3e8a8c3789cb27c250b6db3b3ec44c379de509f0a69950317e0737a0a5ccde025ff7d66ecad3d4aa955a297e233d3da064
-Size (pyobjc-framework-MetricKit-8.5.1.tar.gz) = 30159 bytes
+BLAKE2s (pyobjc-framework-MetricKit-9.0.1.tar.gz) = bee0eb988c40b706ac2cc9ede7f43b8253bbf8446eee9d307ca4b4d800d90506
+SHA512 (pyobjc-framework-MetricKit-9.0.1.tar.gz) = d96ad6508f8c18222c5b965cc346f0a0341c3a739cda561ffddaab62325239fa438e14a3f324b8ac4c2acf232a48e24077114ec2f3c926e1c6fbce48c888353d
+Size (pyobjc-framework-MetricKit-9.0.1.tar.gz) = 30232 bytes
