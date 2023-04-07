@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/01/23 19:26:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/04/07 12:58:01 mef Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -50,3 +50,8 @@ share/gnuradio/grc/blocks/uhd_rfnoc_siggen.block.yml
 share/gnuradio/grc/blocks/uhd_rfnoc_window.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_sink.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_source.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_ddc.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_duc.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_rx_radio.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_tx_radio.block.yml
+
