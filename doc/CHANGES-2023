@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2095 2023/04/07 10:43:39 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.2096 2023/04/07 12:58:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/apache24 to 2.4.57 [adam 2023-04-07]
 	Updated archivers/zstd to 1.5.5 [wiz 2023-04-07]
 	Updated net/sayaka to 3.6.3 [tsutsui 2023-04-07]
+	Updated ham/gnuradio-core to 3.10.6.0 [mef 2023-04-07]
