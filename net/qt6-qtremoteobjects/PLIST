@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/26 11:27:22 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:05 nros Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_local_backend_p.h
-qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_backend_p.h
-qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_global_p.h
-qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_qiodevices_p.h
-qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_qnx_server_p.h
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnection_tcpip_backend_p.h
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qconnectionfactories_p.h
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h
@@ -23,10 +19,7 @@ qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qremoteobjects
 qt6/include/QtRemoteObjects/${PKGVERSION}/QtRemoteObjects/private/qtremoteobjects-config_p.h
 qt6/include/QtRemoteObjects/QAbstractItemModelReplica
 qt6/include/QtRemoteObjects/QConnectionAbstractServer
-qt6/include/QtRemoteObjects/QIOQnxSource
 qt6/include/QtRemoteObjects/QIntHash
-qt6/include/QtRemoteObjects/QQnxNativeIo
-qt6/include/QtRemoteObjects/QQnxNativeServer
 qt6/include/QtRemoteObjects/QRemoteObjectAbstractPersistedStore
 qt6/include/QtRemoteObjects/QRemoteObjectDynamicReplica
 qt6/include/QtRemoteObjects/QRemoteObjectHost
@@ -50,8 +43,6 @@ qt6/include/QtRemoteObjects/QtROServerIoDevice
 qt6/include/QtRemoteObjects/QtRemoteObjects
 qt6/include/QtRemoteObjects/QtRemoteObjectsDepends
 qt6/include/QtRemoteObjects/QtRemoteObjectsVersion
-qt6/include/QtRemoteObjects/qconnection_qnx_qiodevices.h
-qt6/include/QtRemoteObjects/qconnection_qnx_server.h
 qt6/include/QtRemoteObjects/qconnectionfactories.h
 qt6/include/QtRemoteObjects/qremoteobjectabstractitemmodelreplica.h
 qt6/include/QtRemoteObjects/qremoteobjectdynamicreplica.h
@@ -70,12 +61,10 @@ qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQml
 qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQmlDepends
 qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQmlVersion
 qt6/include/QtRemoteObjectsQml/qtremoteobjectsqmlversion.h
-qt6/include/QtRepParser/QRegexParser
 qt6/include/QtRepParser/QtRepParser
 qt6/include/QtRepParser/QtRepParserDepends
 qt6/include/QtRepParser/QtRepParserVersion
 qt6/include/QtRepParser/parser.g
-qt6/include/QtRepParser/qregexparser.h
 qt6/include/QtRepParser/qtrepparserversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtRemoteObjectsTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsAdditionalTargetInfo.cmake
@@ -124,12 +113,12 @@ qt6/lib/libQt6RemoteObjectsQml.prl
 qt6/lib/libQt6RemoteObjectsQml.so
 qt6/lib/libQt6RemoteObjectsQml.so.6
 qt6/lib/libQt6RemoteObjectsQml.so.${PKGVERSION}
-qt6/lib/metatypes/qt6remoteobjects_release_metatypes.json
-qt6/lib/metatypes/qt6remoteobjectsqml_release_metatypes.json
 qt6/lib/pkgconfig/Qt6RemoteObjects.pc
 qt6/lib/pkgconfig/Qt6RemoteObjectsQml.pc
 qt6/lib/pkgconfig/Qt6RepParser.pc
 qt6/libexec/repc
+qt6/metatypes/qt6remoteobjects_release_metatypes.json
+qt6/metatypes/qt6remoteobjectsqml_release_metatypes.json
 qt6/mkspecs/features/remoteobjects_repc.prf
 qt6/mkspecs/features/repcclient.pri
 qt6/mkspecs/features/repccommon.pri

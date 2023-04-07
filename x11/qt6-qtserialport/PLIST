@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/02 16:14:14 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:05 nros Exp $
 lib/pkgconfig/Qt6SerialPort.pc
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtserialport-config_p.h
-qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtudev_p.h
-qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qwinoverlappedionotifier_p.h
 qt6/include/QtSerialPort/QSerialPort
 qt6/include/QtSerialPort/QSerialPortInfo
 qt6/include/QtSerialPort/QtSerialPort
@@ -29,8 +27,8 @@ qt6/lib/libQt6SerialPort.prl
 qt6/lib/libQt6SerialPort.so
 qt6/lib/libQt6SerialPort.so.6
 qt6/lib/libQt6SerialPort.so.${PKGVERSION}
-qt6/lib/metatypes/qt6serialport_release_metatypes.json
 qt6/lib/pkgconfig/Qt6SerialPort.pc
+qt6/metatypes/qt6serialport_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_serialport.pri
 qt6/mkspecs/modules/qt_lib_serialport_private.pri
 qt6/modules/SerialPort.json

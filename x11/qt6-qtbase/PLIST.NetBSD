@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2023/04/07 18:28:05 nros Exp $
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_kqueue_p.h
