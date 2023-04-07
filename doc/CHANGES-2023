@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2089 2023/04/07 05:25:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2090 2023/04/07 06:49:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2858,3 +2858,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-maturin to 0.14.17 [adam 2023-04-07]
 	Updated converters/py-simplejson to 3.19.1 [adam 2023-04-07]
 	Updated devel/py-pyobjc to 9.0.1 [adam 2023-04-07]
+	Added lang/gcc12-libjit version 12.2.0 [wiz 2023-04-07]
