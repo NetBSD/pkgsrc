@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/09/27 18:12:54 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/04/07 05:25:13 adam Exp $
 
-BLAKE2s (pyobjc-framework-InstallerPlugins-8.5.1.tar.gz) = 0c6bbd86bc270da633ec3085f3e26345d52e5dc06df0bd1870c4f6b615b8d7b1
-SHA512 (pyobjc-framework-InstallerPlugins-8.5.1.tar.gz) = d1db9abf4a23e2a84a2c74fc4fb18a6d41042dd5019c1da556d111a2c2bcc55a3daa72560cb4edb3c88c76f2c21c4e0187024957dcf31b39372f09ede63bfc01
-Size (pyobjc-framework-InstallerPlugins-8.5.1.tar.gz) = 25879 bytes
+BLAKE2s (pyobjc-framework-InstallerPlugins-9.0.1.tar.gz) = fb9f18d71e387ba6e232d29cdace6acd42b10ee12e0706712011a5c39b1da698
+SHA512 (pyobjc-framework-InstallerPlugins-9.0.1.tar.gz) = a14ac10b85dbcca337784e96be91ad7d2ee9855ac02297e59ef499a13710704d2b57b361d467c7c66ef7a88fefd484e5a3a17c53725acdf2cddeb8f1ab8a65cc
+Size (pyobjc-framework-InstallerPlugins-9.0.1.tar.gz) = 25847 bytes

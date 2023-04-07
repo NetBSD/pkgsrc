@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/09/27 18:12:50 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/04/07 05:25:09 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreML-8.5.1.tar.gz) = 57dddb2ae27940ffcd30eb1ef219c4f03e4eec7567ce47d27efcb7d0a984b25e
-SHA512 (pyobjc-framework-CoreML-8.5.1.tar.gz) = fc2b214359fce09aff56c33ed2ecc912438e593f2adf6c85b8572d2dc3ed63e06dd0b331d2d4ff41d6768c261cda11dd5356ec63ed7a1d25f3620d637e1f94eb
-Size (pyobjc-framework-CoreML-8.5.1.tar.gz) = 51567 bytes
+BLAKE2s (pyobjc-framework-CoreML-9.0.1.tar.gz) = fe12bac63b9f3a01d3ea378f183286c43f80474fa0f49af1c0a140db1fab96d3
+SHA512 (pyobjc-framework-CoreML-9.0.1.tar.gz) = d88a0eee4520337c67e233bfd8e72448f19cc95b36cff13608205b080e1330570e810c8f4336f3cd826fd303aaa075594ac727f322d0d111762113d3657756da
+Size (pyobjc-framework-CoreML-9.0.1.tar.gz) = 61470 bytes

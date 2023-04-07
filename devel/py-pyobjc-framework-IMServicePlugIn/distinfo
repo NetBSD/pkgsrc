@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:53 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:12 adam Exp $
 
-BLAKE2s (pyobjc-framework-IMServicePlugIn-8.5.1.tar.gz) = 3b105c84772edbb29986b09bab911ccd4bb6ebca5179a415a12d7834c9bfc066
-SHA512 (pyobjc-framework-IMServicePlugIn-8.5.1.tar.gz) = 099c34fc90df3c4c16ddbac3b4c8757ff63ed6fb8dc97a8ae98c7f1a87a097204bbd83d7f87a371adc1b1ec549329622220519e30deeae41335e71ef38725a61
-Size (pyobjc-framework-IMServicePlugIn-8.5.1.tar.gz) = 23018 bytes
+BLAKE2s (pyobjc-framework-IMServicePlugIn-9.0.1.tar.gz) = dd9f82970e6838b1cccdc226733062b1811dbb15775a8e1b42acff9c534fdfbb
+SHA512 (pyobjc-framework-IMServicePlugIn-9.0.1.tar.gz) = c1269d4542888e8e52252e83864c3aba6f6e0ee6bb02402fcd587ddf62ac443903a3476f4b4b386cd7963e6bab6253d0db7f08a5e9320ec44efc48349cabe006
+Size (pyobjc-framework-IMServicePlugIn-9.0.1.tar.gz) = 23196 bytes

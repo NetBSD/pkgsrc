@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2022/09/27 18:23:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.15 2023/04/07 05:25:05 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
 # used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-AVKit/Makefile
+# used by devel/py-pyobjc-framework-AVRouting/Makefile
 # used by devel/py-pyobjc-framework-Accessibility/Makefile
 # used by devel/py-pyobjc-framework-Accounts/Makefile
 # used by devel/py-pyobjc-framework-AddressBook/Makefile
@@ -137,7 +138,7 @@
 # used by devel/py-pyobjc-framework-iTunesLibrary/Makefile
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 
-PYOBJC_VERS=	8.5.1
+PYOBJC_VERS=	9.0.1
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
