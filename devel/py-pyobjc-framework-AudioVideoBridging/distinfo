@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/27 18:12:47 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/04/07 05:25:07 adam Exp $
 
-BLAKE2s (pyobjc-framework-AudioVideoBridging-8.5.1.tar.gz) = f8f7192ec46b5902aee85a94cf0fddffdce81de27c55d21874602b9bd6047a1d
-SHA512 (pyobjc-framework-AudioVideoBridging-8.5.1.tar.gz) = 10f8f198e3144d4c47fc609014572360e616a646e3f4455532b6c6523137ea955a2e8a2212837de2083efb6f426f8c59e02ee6cdd11129b9d92cc419c41802c6
-Size (pyobjc-framework-AudioVideoBridging-8.5.1.tar.gz) = 39993 bytes
+BLAKE2s (pyobjc-framework-AudioVideoBridging-9.0.1.tar.gz) = 843f54677717e405f5663d1a1c7ee62ec3cd3c0ecf4b9edd53778646eb5f90dc
+SHA512 (pyobjc-framework-AudioVideoBridging-9.0.1.tar.gz) = e12f90274385565d5638b2d7c8d0493c285dd7c6f6ccb9a0d6ddc603e1e046c6fabcd167cdad1efde2d2e900e861d4c988de716bddd9a89e9857f65fffcfdaa2
+Size (pyobjc-framework-AudioVideoBridging-9.0.1.tar.gz) = 51886 bytes
