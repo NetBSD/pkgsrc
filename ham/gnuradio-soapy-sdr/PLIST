@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/05/26 15:20:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/07 12:58:01 mef Exp $
 include/gnuradio/soapy/api.h
 include/gnuradio/soapy/block.h
 include/gnuradio/soapy/sink.h
@@ -21,6 +21,7 @@ share/gnuradio/examples/soapy/fm_radio_receiver_soapyremote.grc
 share/gnuradio/examples/soapy/soapy_receive.grc
 share/gnuradio/examples/soapy/soapy_receive2.grc
 share/gnuradio/examples/soapy/soapy_transmit.grc
+share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/soapy.tree.yml
 share/gnuradio/grc/blocks/soapy_airspyhf_source.block.yml
 share/gnuradio/grc/blocks/soapy_bladerf_sink.block.yml

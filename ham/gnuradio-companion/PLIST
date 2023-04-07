@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/10/09 07:56:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/04/07 12:58:01 mef Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -296,8 +296,6 @@ ${PYSITELIB}/gnuradio/grc/gui/icon.png
 ${PYSITELIB}/gnuradio/grc/main.py
 ${PYSITELIB}/gnuradio/grc/main.pyc
 ${PYSITELIB}/gnuradio/grc/main.pyo
-libexec/gnuradio/grc_setup_freedesktop
-share/applications/gnuradio-grc.desktop
 share/gnuradio/examples/00-grc-docs.conf
 share/gnuradio/examples/grc.conf
 share/gnuradio/grc/blocks/analog.tree.yml
@@ -532,21 +530,3 @@ share/gnuradio/grc/blocks/variable_struct.block.yml
 share/gnuradio/grc/blocks/xmlrpc_client.block.yml
 share/gnuradio/grc/blocks/xmlrpc_server.block.yml
 share/gnuradio/grc/blocks/yaml_config.block.yml
-share/gnuradio/grc/freedesktop/gnuradio-grc.desktop
-share/gnuradio/grc/freedesktop/gnuradio-grc.xml
-share/gnuradio/grc/freedesktop/grc-icon-128.png
-share/gnuradio/grc/freedesktop/grc-icon-16.png
-share/gnuradio/grc/freedesktop/grc-icon-24.png
-share/gnuradio/grc/freedesktop/grc-icon-256.png
-share/gnuradio/grc/freedesktop/grc-icon-32.png
-share/gnuradio/grc/freedesktop/grc-icon-48.png
-share/gnuradio/grc/freedesktop/grc-icon-64.png
-share/icons/hicolor/128x128/apps/gnuradio-grc.png
-share/icons/hicolor/16x16/apps/gnuradio-grc.png
-share/icons/hicolor/24x24/apps/gnuradio-grc.png
-share/icons/hicolor/256x256/apps/gnuradio-grc.png
-share/icons/hicolor/32x32/apps/gnuradio-grc.png
-share/icons/hicolor/48x48/apps/gnuradio-grc.png
-share/icons/hicolor/64x64/apps/gnuradio-grc.png
-share/metainfo/org.gnuradio.grc.metainfo.xml
-share/mime/packages/gnuradio-grc.xml
