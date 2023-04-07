@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22744 2023/04/06 14:03:52 joerg Exp $
+$NetBSD: TODO,v 1.22745 2023/04/07 10:02:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,6 +462,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
+	o arti-1.1.3
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -933,7 +934,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-16.0
+	o llvm-16.0.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1275,7 +1276,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qdirstat-1.8.1
 	o qgis-3.30.1
-	o qt6-6.4.3
+	o qt6-6.5
 	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
