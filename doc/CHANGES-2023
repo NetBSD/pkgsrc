@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2091 2023/04/07 07:59:17 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.2092 2023/04/07 09:20:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2860,3 +2860,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyobjc to 9.0.1 [adam 2023-04-07]
 	Added lang/gcc12-libjit version 12.2.0 [wiz 2023-04-07]
 	Updated fonts/spleen to 1.9.3 [fcambus 2023-04-07]
+	Updated security/libgpg-error to 1.47 [adam 2023-04-07]
+	Updated security/libgcrypt to 1.10.2 [adam 2023-04-07]
