@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.53 2023/04/07 09:37:00 adam Exp $
+$NetBSD: distinfo,v 1.54 2023/04/07 14:07:22 ryoon Exp $
 
 BLAKE2s (apr-1.7.3.tar.bz2) = b89fd12d249c849f59a1e51d4277e5f540dbdf424207a84b135af2a117198026
 SHA512 (apr-1.7.3.tar.bz2) = d8f62868d8e3ec92cede1f0d93b5d48e49441f575c98e165ff84343746a6abd265290ab16a57f741896ae7a6b3e534a334325a99a61c96c2485e085f7761c124
 Size (apr-1.7.3.tar.bz2) = 901048 bytes
+SHA1 (patch-apr-config.in) = f9b02ec1c8ab4e57fc78b29d45c0da6cf4868e25
 SHA1 (patch-atomic_unix_builtins.c) = e90d0232013650c3d227fa3a8be952c51b7148e8
 SHA1 (patch-atomic_unix_builtins64.c) = 67fd9841a55421466ef0850f910ddcea770be003
 SHA1 (patch-include_apr__general.h) = 08959c41f37b166c2d45fcefdf65acc47c593206
