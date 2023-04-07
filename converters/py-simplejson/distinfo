@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2023/03/15 13:00:39 adam Exp $
+$NetBSD: distinfo,v 1.40 2023/04/07 04:30:00 adam Exp $
 
-BLAKE2s (simplejson-3.18.4.tar.gz) = b097a5968e8e1c1a848dac0907030072c1df2d88e030bbee70a9c5e2789624e0
-SHA512 (simplejson-3.18.4.tar.gz) = 6335389eb620c96d5c537cd335e20d4f112b86c0c463ceed4d8fa36c27bab8b00386b7995e40070bda5eed1fe5883a462579c7d09bdbc828c39537282669d0e4
-Size (simplejson-3.18.4.tar.gz) = 83721 bytes
+BLAKE2s (simplejson-3.19.1.tar.gz) = 5986ec8bf76c5eccf6453ea2d5f6e05bd33e67c4bd66401a9d35d2a98da7f6b4
+SHA512 (simplejson-3.19.1.tar.gz) = a2239a932f43abe59da84fc3ba95eeaa6a720c929da79d8f4447603b8c770403c9cba0f008a66c20c5c8aa3255891b687336eef1db071171a2c8435563bbb1bd
+Size (simplejson-3.19.1.tar.gz) = 85207 bytes
