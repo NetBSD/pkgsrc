@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.86 2023/02/05 08:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2023/04/07 09:37:00 adam Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
 
-DISTNAME=	apr-1.7.2
+DISTNAME=	apr-1.7.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	--with-devrandom=/dev/urandom
 CONFIGURE_ARGS+=	--with-installbuilddir=${PREFIX}/libexec/apr
 CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
 LIBS.SunOS+=		-lnsl
-
 TEST_TARGET=		check
 
 post-install:
