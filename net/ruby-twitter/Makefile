@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/06/21 15:26:53 taca Exp $
+# $NetBSD: Makefile,v 1.17 2023/04/07 21:28:21 tsutsui Exp $
 
 DISTNAME=	twitter-7.0.0
+PKGREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -20,6 +21,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-http_parser.rb>=0.6.0:../../www/ruby-http_parser.rb
 DEPENDS+=	${RUBY_PKGPREFIX}-multipart-post>=2.0:../../www/ruby-multipart-post
 
 OVERRIDE_GEMSPEC+=	equalizer>=0.0.11
+OVERRIDE_GEMSPEC+=	http_parser.rb>=0.6.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
