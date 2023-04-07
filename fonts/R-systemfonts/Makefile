@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/02/19 02:22:09 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/07 23:33:30 mef Exp $
 
 R_PKGNAME=	systemfonts
 R_PKGVER=	1.0.4
@@ -16,6 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/R-cpp11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
