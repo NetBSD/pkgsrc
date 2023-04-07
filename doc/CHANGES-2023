@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2087 2023/04/06 22:10:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2088 2023/04/07 04:30:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2855,3 +2855,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/ncspot to 0.13.1 [pin 2023-04-06]
 	Updated print/sile to 0.14.8 [joerg 2023-04-06]
 	Added lang/gcc10-libjit version 10.4.0 [wiz 2023-04-06]
+	Updated devel/py-maturin to 0.14.17 [adam 2023-04-07]
+	Updated converters/py-simplejson to 3.19.1 [adam 2023-04-07]
