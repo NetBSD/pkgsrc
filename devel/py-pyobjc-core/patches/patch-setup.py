@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.3 2022/09/27 18:12:46 adam Exp $
+$NetBSD: patch-setup.py,v 1.4 2023/04/07 05:17:23 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2022-08-12 08:06:27.000000000 +0000
+--- setup.py.orig	2022-10-19 07:22:30.000000000 +0000
 +++ setup.py
 @@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
@@ -21,14 +21,9 @@ Avoid a hack.
 -    "-g",
 -    "-O3",
      "-flto=thin",
+     # XXX: Use object_path_lto (during linking?)
  ]
- 
-@@ -105,13 +102,10 @@ OBJC_LDFLAGS = [
-     "-framework",
-     "Foundation",
-     # "-fvisibility=protected",
--    "-g",
-     "-lffi",
+@@ -111,8 +108,6 @@ OBJC_LDFLAGS = [
      # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
      "-fvisibility=hidden",
      # "-O0",
@@ -37,7 +32,7 @@ Avoid a hack.
      "-flto=thin",
  ]
  
-@@ -249,8 +243,6 @@ class oc_test(test.test):
+@@ -250,8 +245,6 @@ class oc_test(test.test):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  

@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/25 10:40:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 05:17:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/include/pyobjc-api.h
 ${PYSITELIB}/${EGG_INFODIR}/include/pyobjc-compat.h
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.py
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.pyc
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.pyo
@@ -100,3 +98,9 @@ ${PYSITELIB}/objc/_pycoder.pyo
 ${PYSITELIB}/objc/_pythonify.py
 ${PYSITELIB}/objc/_pythonify.pyc
 ${PYSITELIB}/objc/_pythonify.pyo
+${PYSITELIB}/objc/_structtype.py
+${PYSITELIB}/objc/_structtype.pyc
+${PYSITELIB}/objc/_structtype.pyo
+${PYSITELIB}/objc/simd.py
+${PYSITELIB}/objc/simd.pyc
+${PYSITELIB}/objc/simd.pyo
