@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/06/16 15:43:55 adam Exp $
+# $NetBSD: options.mk,v 1.2 2023/04/07 06:48:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -6,6 +6,8 @@ PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			always-libgcc
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
@@ -27,7 +29,7 @@ PKG_SUGGESTED_OPTIONS+=			always-libgcc
 ### Determine if multilib is avalible.
 ###
 MULTILIB_SUPPORTED?=	unknown
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.if ${MACHINE_PLATFORM:MLinux-*-x86_64}
 .  if exists(/usr/include/x86_64-linux-gnu/gnu)
 _GNU_INCLUDE_DIR=	/usr/include/x86_64-linux-gnu/gnu
 .  else
@@ -54,7 +56,7 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 
 .  for _libdir_ in ${_OPSYS_LIB_DIRS}
 .    if exists(${_libdir_})
-BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so
+BASE_LIBGCC!=			find ${_libdir_} -name libgcc_s.so 2> /dev/null
 BASE_LIBGCC_MATCH_STRING!=	${ECHO} ${BASE_LIBGCC} ${GCC12_DIST_VERSION} | \
 				${AWK} -f ../../mk/scripts/larger_symbol_version.awk
 .      if ${BASE_LIBGCC_MATCH_STRING:Mnewer}
@@ -113,6 +115,7 @@ LIBS.SunOS+=		-lgmp
 .  include "../../math/mpcomplex/buildlink3.mk"
 .  include "../../math/mpfr/buildlink3.mk"
 .endif
+
 
 ###
 ### Graphite Support
