@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/24 16:29:15 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:04 nros Exp $
 lib/pkgconfig/Qt6ShaderTools.pc
 qt6/bin/qsb
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderbaker_p.h
-qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderbatchablerewriter_p.h
+qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderrewriter_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvcompiler_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshader_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshaderremap_p.h
@@ -36,8 +36,8 @@ qt6/lib/libQt6ShaderTools.prl
 qt6/lib/libQt6ShaderTools.so
 qt6/lib/libQt6ShaderTools.so.6
 qt6/lib/libQt6ShaderTools.so.${PKGVERSION}
-qt6/lib/metatypes/qt6shadertools_release_metatypes.json
 qt6/lib/pkgconfig/Qt6ShaderTools.pc
+qt6/metatypes/qt6shadertools_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_shadertools.pri
 qt6/mkspecs/modules/qt_lib_shadertools_private.pri
 qt6/modules/ShaderTools.json

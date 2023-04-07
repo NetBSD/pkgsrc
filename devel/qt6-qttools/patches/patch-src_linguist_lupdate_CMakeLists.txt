@@ -1,17 +1,15 @@
-$NetBSD: patch-src_linguist_lupdate_CMakeLists.txt,v 1.1 2022/11/30 20:57:35 nros Exp $
+$NetBSD: patch-src_linguist_lupdate_CMakeLists.txt,v 1.2 2023/04/07 18:28:03 nros Exp $
 
 Clang is compiled without rtti so when compiling with gcc turn of rtti
 this fixes problems with undefined reference to things such as
 "typeinfo for clang::ASTConsumer" 
 
---- src/linguist/lupdate/CMakeLists.txt.orig	2021-02-25 02:26:59.000000000 +0000
+--- src/linguist/lupdate/CMakeLists.txt.orig	2023-04-06 13:55:42.012557541 +0000
 +++ src/linguist/lupdate/CMakeLists.txt
-@@ -99,6 +99,8 @@ qt_internal_extend_target(${target_name} CONDITION QT_
- # special case begin
+@@ -106,4 +106,6 @@ qt_internal_extend_target(${target_name}
+ 
  if(QT_FEATURE_clangcpp)
      set_property(SOURCE clangtoolastreader.cpp PROPERTY SKIP_AUTOMOC ON)
 +    set_source_files_properties(cpp_clang.cpp lupdatepreprocessoraction.cpp
 +                                PROPERTIES COMPILE_OPTIONS "-fno-rtti")
  endif()
- # special case end
- 

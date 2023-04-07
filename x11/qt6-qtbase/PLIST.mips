@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.mips,v 1.1 2023/04/07 18:28:05 nros Exp $
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdrawhelper_mips_dsp_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qt_mips_asm_dsp_p.h

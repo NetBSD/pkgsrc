@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/25 20:26:46 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
 lib/pkgconfig/Qt6QuickTimeline.pc
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquickkeyframe_p.h
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquickkeyframedatautils_p.h
@@ -31,8 +31,8 @@ qt6/lib/libQt6QuickTimeline.prl
 qt6/lib/libQt6QuickTimeline.so
 qt6/lib/libQt6QuickTimeline.so.6
 qt6/lib/libQt6QuickTimeline.so.${PKGVERSION}
-qt6/lib/metatypes/qt6quicktimeline_release_metatypes.json
 qt6/lib/pkgconfig/Qt6QuickTimeline.pc
+qt6/metatypes/qt6quicktimeline_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_quicktimeline.pri
 qt6/mkspecs/modules/qt_lib_quicktimeline_private.pri
 qt6/modules/QuickTimeline.json
