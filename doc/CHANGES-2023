@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2093 2023/04/07 09:39:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2094 2023/04/07 10:02:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2864,3 +2864,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/libgcrypt to 1.10.2 [adam 2023-04-07]
 	Updated devel/apr to 1.7.3 [adam 2023-04-07]
 	Updated www/apache24 to 2.4.57 [adam 2023-04-07]
+	Updated archivers/zstd to 1.5.5 [wiz 2023-04-07]
