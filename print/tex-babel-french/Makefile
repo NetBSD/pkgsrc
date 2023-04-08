@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/04/25 10:24:04 markd Exp $
+# $NetBSD: Makefile,v 1.17 2023/04/08 06:00:07 markd Exp $
 
 DISTNAME=	babel-french
-PKGNAME=	tex-${DISTNAME}-3.5n
-TEXLIVE_REV=	63116
+PKGNAME=	tex-${DISTNAME}-3.5q
+TEXLIVE_REV=	66513
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-french
