@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2108 2023/04/08 13:23:15 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2109 2023/04/08 13:25:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/libreddit to 0.30.1 [vins 2023-04-08]
 	Updated databases/ruby-sequel to 5.67.0 [taca 2023-04-08]
 	Updated databases/ruby-sqlite3 to 1.6.2 [taca 2023-04-08]
+	Updated devel/ruby-async to 2.5.0 [taca 2023-04-08]
