@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2023/03/05 13:33:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.106 2023/04/08 13:13:28 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -91,6 +91,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.63.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.64.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.65.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.66.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.67.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
@@ -175,6 +176,7 @@ ${GEM_LIBDIR}/lib/sequel/database/transactions.rb
 ${GEM_LIBDIR}/lib/sequel/dataset.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/actions.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/dataset_module.rb
+${GEM_LIBDIR}/lib/sequel/dataset/deprecated_singleton_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/features.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/graph.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/misc.rb
@@ -260,6 +262,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/select_remove.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sequel_4_dataset_methods.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/server_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/server_logging.rb
+${GEM_LIBDIR}/lib/sequel/extensions/set_literalizer.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/split_array_nil.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_comments.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
