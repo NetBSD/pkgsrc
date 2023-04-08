@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:13:19 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/04/08 10:15:07 markd Exp $
 
-BLAKE2s (filecontents.r52142.tar.xz) = f430fafd3fd5c6e3e45a8725584f4fd869cf07f7ebbe6b4d208906faa0e400de
-SHA512 (filecontents.r52142.tar.xz) = b40bf2e4eea194783dded4f00dc24f1cea26a854e96b57995b69354a70c1e7ba9ef0e64542c2b524ad59d9b12fb1accf93ee28b4c7e735279c0bbeb915b6c991
-Size (filecontents.r52142.tar.xz) = 2056 bytes
+BLAKE2s (filecontents.r66740.tar.xz) = cf540db4d5de9b63fb9ee7bc6109d79161c51f692185e77d5c6f33c3d44977a0
+SHA512 (filecontents.r66740.tar.xz) = bc51c03ea84130753cf4c6a6e6efe39403bc48a47b4c40f177d3ae17808c63a346a2b361ef61b0e0421094b6b64e20a972c6bcad305228ce0991818a62344296
+Size (filecontents.r66740.tar.xz) = 2108 bytes
