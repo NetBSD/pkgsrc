@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2023/04/07 21:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/04/08 23:18:51 wiz Exp $
 
 DISTNAME=		a2ps-4.15.3
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 
@@ -10,6 +11,7 @@ COMMENT=		Formats an ascii file for printing on a postscript printer
 LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		psutils>=1.17:../../print/psutils
+DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -33,6 +35,12 @@ REPLACE_SH+=		contrib/[a-z]*.in
 
 INSTALLATION_DIRS=	share/examples/a2ps
 
+# use ${PREFIX}/bin/getopt rather than unadorned 'getopt'
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/a2ps-lpr-wrapper
+SUBST_SED.paths=	-e 's,\(getopt\),${PREFIX}/bin/\1,'
+
 # 3 test failures as of 4.15
 # https://savannah.gnu.org/bugs/index.php?63919
 TEST_TARGET=		check
@@ -42,7 +50,7 @@ pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.dvi
 
 post-install:
-	cd ${DESTDIR}${PKG_SYSCONFBASE} && ${MV} a2ps-site.cfg a2ps.cfg ${DESTDIR}${PREFIX}/share/examples/a2ps
+	cd ${DESTDIR}${PKG_SYSCONFDIR} && ${MV} a2ps-site.cfg a2ps.cfg ${DESTDIR}${PREFIX}/share/examples/a2ps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
