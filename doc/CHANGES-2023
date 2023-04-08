@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2111 2023/04/08 13:29:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2112 2023/04/08 18:19:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2944,3 +2944,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-async to 2.5.0 [taca 2023-04-08]
 	Updated devel/ruby-backports to 3.24.1 [taca 2023-04-08]
 	Updated devel/ruby-git to 1.18.0 [taca 2023-04-08]
+	Updated lang/rust to 1.68.2 [he 2023-04-08]
