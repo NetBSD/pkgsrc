@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2021/02/14 20:19:45 markd Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/08 06:02:43 markd Exp $
 
 DISTNAME=	babel-greek
-PKGNAME=	tex-${DISTNAME}-1.10
-TEXLIVE_REV=	56904
+PKGNAME=	tex-${DISTNAME}-1.13.1
+TEXLIVE_REV=	66610
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-greek
-COMMENT=	Babel support for documents written in Greek
+COMMENT=	Babel support for the Greek language and script
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
