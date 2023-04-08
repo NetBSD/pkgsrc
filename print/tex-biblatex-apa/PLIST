@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/01 03:31:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/08 06:14:06 markd Exp $
 share/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
 share/texmf-dist/tex/latex/biblatex-apa/apa.cbx
 share/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+share/texmf-dist/tex/latex/biblatex-apa/apa.lua
 share/texmf-dist/tex/latex/biblatex-apa/austrian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/brazilian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/british-apa.lbx
@@ -15,6 +16,7 @@ share/texmf-dist/tex/latex/biblatex-apa/french-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/galician-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/german-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/greek-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/hungarian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/italian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/naustrian-apa.lbx
 share/texmf-dist/tex/latex/biblatex-apa/ngerman-apa.lbx
