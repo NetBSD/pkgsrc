@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:03:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/08 11:03:16 markd Exp $
+share/texmf-dist/tex/latex/pmhanguljamo/frkjamofull.data.tex
+share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo-frkim.code.tex
+share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo-frkim.sty
 share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo-rrk.sty
 share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo.sty
