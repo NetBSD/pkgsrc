@@ -1,10 +1,14 @@
-Typeset programs (programming code) within LaTeX.  The source code is
-read directly by TeX.  Keywords, comments and strings can be typeset
-using different styles (default is bold for keywords, italic for
-comments and no special style for strings).  Includes support for
-hyperref.  To use, simply \usepackage{listings}, identify the language
-with \lstset{language=Python}, then employ the \begin{lstlisting} ...
-\end{lstlisting} environment or the \lstinputlisting{filename.py}
-command.  Short (in-line) listings are also available, using either
-\lstinline|...| or | ... | (after defining the | token with the
-\lstMakeShortInline command).
+The package enables the user to typeset programs (programming
+code) within LaTeX; the source code is read directly by TeX--no
+front-end processor is needed. Keywords, comments and strings
+can be typeset using different styles (default is bold for
+keywords, italic for comments and no special style for
+strings). Support for hyperref is provided. To use,
+\usepackage{listings}, identify the language of the object to
+typeset, using a construct like: \lstset{language=Python}, then
+use environment lstlisting for inline code. External files may
+be formatted using \lstinputlisting to process a given file in
+the form appropriate for the current language. Short (in-line)
+listings are also available, using either \lstinline|...| or
+|...| (after defining the | token with the \lstMakeShortInline
+command).
