@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/08 06:08:16 markd Exp $
 
-BLAKE2s (tex-belleek-18651/belleek.tar.xz) = 800dfd93ffd48e8c5a684ce81951a529f83ba69a90c4ade6340a2f7d40097cbe
-SHA512 (tex-belleek-18651/belleek.tar.xz) = c176cef5c70a600d55a173ca22bec603bb6166bad33298605e10d3ca054dcf09da470fdbe0cc6a80ee64660b87a53c755058c38c7e05618ee268f4033f826a90
-Size (tex-belleek-18651/belleek.tar.xz) = 83260 bytes
+BLAKE2s (belleek.r66115.tar.xz) = 9e00a5a527c5928b3e54b1c940a2563368f84ae9faa022604e98bd89f22dff84
+SHA512 (belleek.r66115.tar.xz) = 4ae91c01e67fcefd46da99d6bc8379b3829e4e0e88f512f36bfc9743d075090d0c26d0eef11dde5125b344e85ccc3c5a31569f3a1078d00d364ea80120bec30d
+Size (belleek.r66115.tar.xz) = 83256 bytes
