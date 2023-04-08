@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2114 2023/04/08 23:19:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2115 2023/04/08 23:25:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rust to 1.68.2 [he 2023-04-08]
 	Updated lang/rust-bin to 1.68.2 [he 2023-04-08]
 	Updated print/a2ps to 4.15.3nb1 [wiz 2023-04-08]
+	Updated cad/klayout to 0.28.6 [mef 2023-04-08]
