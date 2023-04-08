@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/03/05 07:36:20 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/08 12:13:50 vins Exp $
 
-DISTNAME=	libreddit-0.29.4
+DISTNAME=	libreddit-0.30.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libreddit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
