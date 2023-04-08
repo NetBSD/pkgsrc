@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/04/14 02:01:03 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/08 10:40:43 markd Exp $
 
 DISTNAME=	lastpage
-PKGNAME=	tex-${DISTNAME}-1.2n
-TEXLIVE_REV=	60414
+PKGNAME=	tex-${DISTNAME}-2.0a
+TEXLIVE_REV=	66461
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lastpage
