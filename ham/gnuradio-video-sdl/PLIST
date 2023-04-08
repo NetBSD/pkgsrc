@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/05/26 15:20:10 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/04/08 02:27:08 mef Exp $
 include/gnuradio/video_sdl/api.h
 include/gnuradio/video_sdl/sink_s.h
 include/gnuradio/video_sdl/sink_uc.h
@@ -13,5 +13,6 @@ ${PYSITELIB}/gnuradio/video_sdl/__init__.py
 ${PYSITELIB}/gnuradio/video_sdl/__init__.pyc
 ${PYSITELIB}/gnuradio/video_sdl/__init__.pyo
 ${PYSITELIB}/gnuradio/video_sdl/video_sdl_python.so
+share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/video.tree.yml
 share/gnuradio/grc/blocks/video_sdl_sink.block.yml
