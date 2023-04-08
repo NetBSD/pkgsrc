@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/09/01 04:53:00 markd Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/08 10:58:00 markd Exp $
 
 DISTNAME=	pdfmanagement-testphase.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.95r
-TEXLIVE_REV=	64186
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.95x
+TEXLIVE_REV=	66532
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdfmanagement-testphase
