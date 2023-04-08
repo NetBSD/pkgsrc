@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/08 10:20:08 markd Exp $
 
-BLAKE2s (tex-greek-inputenc-51612/greek-inputenc.doc.tar.xz) = dcca83aca55e251b4ee1f64b0c7bbef53bd8119ace1371903d225d83a2aeb15e
-SHA512 (tex-greek-inputenc-51612/greek-inputenc.doc.tar.xz) = 42cab0f26d944da70ec3397946bf217155534f0def949f2a0fdeaf8c0dc30a5046447c5daa1d8e2d4fa4235cbd29fef2d8e6fa0c4c440c1ea58d1f2c4c2ab81d
-Size (tex-greek-inputenc-51612/greek-inputenc.doc.tar.xz) = 826036 bytes
+BLAKE2s (greek-inputenc.doc.r66634.tar.xz) = d7fe43da648417aede816a8af756b35b1e9df9e25950c9c1cfc40351aa252bec
+SHA512 (greek-inputenc.doc.r66634.tar.xz) = 2f85fc72c0415b48fd74ebe9d19e5ce86440c57c08038e96a2d99673143f2848bc347e95f7beab7753d0921414fc635aa9b4f98eafc91fabf64155a55a407bee
+Size (greek-inputenc.doc.r66634.tar.xz) = 660116 bytes
