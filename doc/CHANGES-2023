@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2100 2023/04/07 21:25:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2101 2023/04/08 06:34:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2871,3 +2871,26 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/apr to 1.7.3nb1 [ryoon 2023-04-07]
 	Updated meta-pkgs/qt6 to 6.5.0 [nros 2023-04-07]
 	Updated print/a2ps to 4.15.3 [wiz 2023-04-07]
+	Updated print/tex-babel to 3.87 [markd 2023-04-08]
+	Updated print/tex-babel-doc to 3.87 [markd 2023-04-08]
+	Updated print/tex-babel-french to 3.5q [markd 2023-04-08]
+	Updated print/tex-babel-greek to 1.13.1 [markd 2023-04-08]
+	Updated print/tex-beamer to 3.69 [markd 2023-04-08]
+	Updated print/tex-beamer-doc to 3.69 [markd 2023-04-08]
+	Updated fonts/tex-belleek to 2022 [markd 2023-04-08]
+	Updated fonts/tex-belleek-doc to 2022 [markd 2023-04-08]
+	Updated print/tex-biblatex to 3.19 [markd 2023-04-08]
+	Updated print/tex-biblatex-doc to 3.19 [markd 2023-04-08]
+	Updated print/tex-biblatex-apa to 9.17 [markd 2023-04-08]
+	Updated print/tex-biblatex-apa-doc to 9.17 [markd 2023-04-08]
+	Updated print/p5-biblatex-biber to 2.19 [markd 2023-04-08]
+	Updated print/tex-bxbase to 1.2a [markd 2023-04-08]
+	Updated print/tex-bxbase-doc to 1.2a [markd 2023-04-08]
+	Updated print/tex-bxghost to 0.5.1 [markd 2023-04-08]
+	Updated print/tex-bxghost-doc to 0.5.1 [markd 2023-04-08]
+	Updated print/tex-bxjalipsum to 1.0 [markd 2023-04-08]
+	Updated print/tex-bxjalipsum-doc to 1.0 [markd 2023-04-08]
+	Updated print/tex-caption to 20230312 [markd 2023-04-08]
+	Updated print/tex-caption-doc to 20230312 [markd 2023-04-08]
+	Updated graphics/tex-chemfig to 1.6d [markd 2023-04-08]
+	Updated graphics/tex-chemfig-doc to 1.6d [markd 2023-04-08]
