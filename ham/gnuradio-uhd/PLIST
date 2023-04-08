@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/04/07 12:58:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/04/08 02:45:01 mef Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -43,6 +43,7 @@ share/gnuradio/examples/uhd/uhd_normalized_gain.grc
 share/gnuradio/examples/uhd/uhd_siggen_gui.grc
 share/gnuradio/examples/uhd/uhd_two_tone_loopback.grc
 share/gnuradio/examples/uhd/uhd_wbfm_receive.grc
+share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/uhd.tree.yml
 share/gnuradio/grc/blocks/uhd_amsg_source.block.yml
 share/gnuradio/grc/blocks/uhd_rfnoc_fir_filter.block.yml
