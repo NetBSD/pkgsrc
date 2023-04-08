@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/04/08 06:27:02 markd Exp $
 
-BLAKE2s (bxjalipsum.r43369.tar.xz) = 7731c23571dcf348ddc82c440b87acdc065c5679e9b21f39b4d7bba3bc615d12
-SHA512 (bxjalipsum.r43369.tar.xz) = fa8f096023f86fe53d09ef1e719d1930248981f4a9c4f762ceb00eb7e42ae87a876857f03b8210ded78798c4ea18bc44486a87876bd5f2509a9270f09d56a53f
-Size (bxjalipsum.r43369.tar.xz) = 26300 bytes
+BLAKE2s (bxjalipsum.r66013.tar.xz) = 4c4199648af2e46cdd7575c274b1fd191da14432c210a875526b7ed895ab4f51
+SHA512 (bxjalipsum.r66013.tar.xz) = 72e5614e0e2c3651cff7dabf4e31b938ad5df45aba5cf34feca67314196f32e424003c57f37e7040b668e861e5388a96e21109b4a8560d05d1f08bfcb73eeae1
+Size (bxjalipsum.r66013.tar.xz) = 26328 bytes
