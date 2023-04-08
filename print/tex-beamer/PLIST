@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/03 12:32:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/08 06:06:02 markd Exp $
 share/texmf-dist/tex/latex/beamer/beamer.cls
 share/texmf-dist/tex/latex/beamer/beamerarticle.sty
 share/texmf-dist/tex/latex/beamer/beamerbasearticle.sty
@@ -15,6 +15,7 @@ share/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
 share/texmf-dist/tex/latex/beamer/beamerbasemisc.sty
 share/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 share/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+share/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbols.tex
 share/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 share/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
 share/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
