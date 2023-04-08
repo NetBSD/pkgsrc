@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2102 2023/04/08 08:45:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2103 2023/04/08 11:09:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2895,3 +2895,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/tex-chemfig to 1.6d [markd 2023-04-08]
 	Updated graphics/tex-chemfig-doc to 1.6d [markd 2023-04-08]
 	Updated mail/neomutt to 20230407 [wiz 2023-04-08]
+	Updated devel/got-portable to 0.86 [vins 2023-04-08]
