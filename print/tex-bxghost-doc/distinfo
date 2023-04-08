@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/09/01 03:33:43 markd Exp $
+$NetBSD: distinfo,v 1.6 2023/04/08 06:23:37 markd Exp $
 
-BLAKE2s (bxghost.doc.r63354.tar.xz) = 7de6f5dd78bc7de410695eeb9c6ec14b8a0ab729ac528db7cd308eaf829f2f40
-SHA512 (bxghost.doc.r63354.tar.xz) = 0e4af87e981c02415a13bd6d1be74552c1ab039acfca35736e8cc51b4c4f442c9e0073070fbd002050749d59a69eac64ad1e264e16281f4dd399e9f0ceabafce
-Size (bxghost.doc.r63354.tar.xz) = 1980 bytes
+BLAKE2s (bxghost.doc.r66147.tar.xz) = b4b082aaf7102a92211cc7c289a88902d0d77731475b63f4e9823249039621aa
+SHA512 (bxghost.doc.r66147.tar.xz) = 999e7623526c6ef51b8c6da383e79d9f889d1e45efb52eb127463b94e7790edb124c2ddece303c932134df4daf4189db082c3492fe04e6a829e1dd6d943edc02
+Size (bxghost.doc.r66147.tar.xz) = 2012 bytes
