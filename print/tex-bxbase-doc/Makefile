@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 09:58:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/08 06:21:18 markd Exp $
 
 DISTNAME=	bxbase.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
-TEXLIVE_REV=	56528
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2a
+TEXLIVE_REV=	66115
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxbase
