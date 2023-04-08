@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/11 20:34:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/08 11:07:30 markd Exp $
 
 DISTNAME=	pst-hsb.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.02
-TEXLIVE_REV=	61322
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.03
+TEXLIVE_REV=	66739
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-hsb
