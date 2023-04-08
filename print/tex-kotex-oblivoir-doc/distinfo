@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/04/14 01:58:21 markd Exp $
+$NetBSD: distinfo,v 1.12 2023/04/08 10:38:29 markd Exp $
 
-BLAKE2s (kotex-oblivoir.doc.r63005.tar.xz) = 46082b2f0cf034303fdf18ab0781368daa3113681573895d1330be2a0b104149
-SHA512 (kotex-oblivoir.doc.r63005.tar.xz) = 092c248bb2c00006f2ab0ebf9b026c5b9b3621b3844c2bd24e946701f6dc2efbf059ad65d2da080c9b1b6a1062967c5c365085dd57dd775c13217973740fa9f0
-Size (kotex-oblivoir.doc.r63005.tar.xz) = 539232 bytes
+BLAKE2s (kotex-oblivoir.doc.r66513.tar.xz) = d1f0131244b9e5c75294642913410834d0e5211cd4b540d66f155d1718c27684
+SHA512 (kotex-oblivoir.doc.r66513.tar.xz) = 28d6c7c2ba61c06258020dce099ae1ba339ff1a6c0a1c9b350512914fda062d3cc612cdb4410cb3ccefdef0f0700c6f724a35e1f8c5a0fcfdfe16c090322b59d
+Size (kotex-oblivoir.doc.r66513.tar.xz) = 543668 bytes
