@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/09/01 03:20:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/04/08 05:57:40 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -11,6 +11,7 @@ share/texmf-dist/tex/generic/babel/babel-bidi-basic-r.lua
 share/texmf-dist/tex/generic/babel/babel-bidi-basic.lua
 share/texmf-dist/tex/generic/babel/babel-ca-buddhist.tex
 share/texmf-dist/tex/generic/babel/babel-ca-coptic.tex
+share/texmf-dist/tex/generic/babel/babel-ca-ethiopic.tex
 share/texmf-dist/tex/generic/babel/babel-ca-hebrew.tex
 share/texmf-dist/tex/generic/babel/babel-ca-islamic.tex
 share/texmf-dist/tex/generic/babel/babel-ca-persian.tex
@@ -347,6 +348,8 @@ share/texmf-dist/tex/generic/babel/locale/kde/babel-kde.ini
 share/texmf-dist/tex/generic/babel/locale/kde/babel-makonde.tex
 share/texmf-dist/tex/generic/babel/locale/kea/babel-kabuverdianu.tex
 share/texmf-dist/tex/generic/babel/locale/kea/babel-kea.ini
+share/texmf-dist/tex/generic/babel/locale/kgp/babel-kaingang.tex
+share/texmf-dist/tex/generic/babel/locale/kgp/babel-kgp.ini
 share/texmf-dist/tex/generic/babel/locale/khq/babel-khq.ini
 share/texmf-dist/tex/generic/babel/locale/khq/babel-koyrachiini.tex
 share/texmf-dist/tex/generic/babel/locale/ki/babel-ki.ini
@@ -505,6 +508,8 @@ share/texmf-dist/tex/generic/babel/locale/pms/babel-pms.ini
 share/texmf-dist/tex/generic/babel/locale/ps/babel-pashto.tex
 share/texmf-dist/tex/generic/babel/locale/ps/babel-ps.ini
 share/texmf-dist/tex/generic/babel/locale/pt/babel-brazilian.tex
+share/texmf-dist/tex/generic/babel/locale/pt/babel-brazilianportuguese.tex
+share/texmf-dist/tex/generic/babel/locale/pt/babel-europeanportuguese.tex
 share/texmf-dist/tex/generic/babel/locale/pt/babel-portuguese-br.tex
 share/texmf-dist/tex/generic/babel/locale/pt/babel-portuguese-brazil.tex
 share/texmf-dist/tex/generic/babel/locale/pt/babel-portuguese-portugal.tex
@@ -560,6 +565,8 @@ share/texmf-dist/tex/generic/babel/locale/saq/babel-samburu.tex
 share/texmf-dist/tex/generic/babel/locale/saq/babel-saq.ini
 share/texmf-dist/tex/generic/babel/locale/sbp/babel-sangu.tex
 share/texmf-dist/tex/generic/babel/locale/sbp/babel-sbp.ini
+share/texmf-dist/tex/generic/babel/locale/sc/babel-sardinian.tex
+share/texmf-dist/tex/generic/babel/locale/sc/babel-sc.ini
 share/texmf-dist/tex/generic/babel/locale/se/babel-northernsami.tex
 share/texmf-dist/tex/generic/babel/locale/se/babel-samin.tex
 share/texmf-dist/tex/generic/babel/locale/se/babel-se.ini
@@ -684,6 +691,8 @@ share/texmf-dist/tex/generic/babel/locale/yi/babel-yi.ini
 share/texmf-dist/tex/generic/babel/locale/yi/babel-yiddish.tex
 share/texmf-dist/tex/generic/babel/locale/yo/babel-yo.ini
 share/texmf-dist/tex/generic/babel/locale/yo/babel-yoruba.tex
+share/texmf-dist/tex/generic/babel/locale/yrl/babel-nheengatu.tex
+share/texmf-dist/tex/generic/babel/locale/yrl/babel-yrl.ini
 share/texmf-dist/tex/generic/babel/locale/yue/babel-cantonese.tex
 share/texmf-dist/tex/generic/babel/locale/yue/babel-yue.ini
 share/texmf-dist/tex/generic/babel/locale/zgh/babel-standardmoroccantamazight.tex
