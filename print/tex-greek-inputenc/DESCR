@@ -1,2 +1,3 @@
-The bundle provides UTF-8, Macintosh Greek encoding and ISO
-8859-7 definition files for use with inputenc.
+Input encoding definition files for UTF-8, Macintosh Greek, and
+ISO 8859-7 enabling the use of literal characters for Greek
+letters and symbols with 8-bit TeX engines (pdfLaTeX).
