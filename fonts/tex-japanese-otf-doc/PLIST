@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/14 01:33:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/08 10:29:04 markd Exp $
 share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
 share/texmf-dist/doc/fonts/japanese-otf/ChangeLog.md
 share/texmf-dist/doc/fonts/japanese-otf/README
@@ -40,3 +40,4 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/upkanatest1.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/upkanatest2.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-cjk.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-haranoaji.map
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/utfmacro-kozuka.map
