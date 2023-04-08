@@ -1,23 +1,22 @@
-$NetBSD: patch-src_bootstrap_install.rs,v 1.1 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-src_bootstrap_install.rs,v 1.2 2023/04/08 18:18:11 he Exp $
 
-Backport https://github.com/rust-lang/rust/commit/bcb75e61
+Apply fix from https://github.com/rust-lang/rust/pull/109256.
 
---- src/bootstrap/install.rs.orig	2022-12-12 16:02:12.000000000 +0000
+--- src/bootstrap/install.rs.orig	2023-03-21 21:31:48.458992230 +0000
 +++ src/bootstrap/install.rs
-@@ -200,10 +200,14 @@ install!((self, builder, _config),
-         install_sh(builder, "clippy", self.compiler.stage, Some(self.target), &tarball);
+@@ -210,10 +210,13 @@ install!((self, builder, _config),
+         }
      };
-     Miri, alias = "miri", Self::should_build(_config), only_hosts: true, {
+     LlvmTools, alias = "llvm-tools", Self::should_build(_config), only_hosts: true, {
 -        let tarball = builder
--            .ensure(dist::Miri { compiler: self.compiler, target: self.target })
--            .expect("missing miri");
--        install_sh(builder, "miri", self.compiler.stage, Some(self.target), &tarball);
-+        if let Some(tarball) = builder.ensure(dist::Miri { compiler: self.compiler, target: self.target }) {
-+            install_sh(builder, "miri", self.compiler.stage, Some(self.target), &tarball);
+-            .ensure(dist::LlvmTools { target: self.target })
+-            .expect("missing llvm-tools");
+-        install_sh(builder, "llvm-tools", self.compiler.stage, Some(self.target), &tarball);
++        if let Some(tarball) = builder.ensure(dist::LlvmTools { target: self.target }) {
++            install_sh(builder, "llvm-tools", self.compiler.stage, Some(self.target), &tarball);
 +        } else {
-+            // Miri is only available on nightly
 +            builder.info(
-+                &format!("skipping Install miri stage{} ({})", self.compiler.stage, self.target),
++                &format!("skipping llvm-tools stage{} ({}): external LLVM", self.compiler.stage, self.target),
 +            );
 +        }
      };
