@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_libc-0.2.126_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-vendor_libc-0.2.127_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2023/04/08 18:18:12 he Exp $
 
-Replicate patch from unversioned libc.
+Add mipsel-unknown-netbsd target.
 
---- vendor/libc-0.2.126/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2022-12-28 21:30:25.222843485 +0000
-+++ vendor/libc-0.2.126/src/unix/bsd/netbsdlike/netbsd/mips.rs
+--- vendor/libc-0.2.127/src/unix/bsd/netbsdlike/netbsd/mips.rs.orig	2023-01-27 18:20:27.262928858 +0000
++++ vendor/libc-0.2.127/src/unix/bsd/netbsdlike/netbsd/mips.rs
 @@ -0,0 +1,22 @@
 +use PT_FIRSTMACH;
 +
