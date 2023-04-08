@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/03/05 07:36:20 pin Exp $
+$NetBSD: distinfo,v 1.4 2023/04/08 12:13:50 vins Exp $
 
 BLAKE2s (adler32-1.2.0.crate) = 8bc63ca383f40390bb522c750ef33e14b5e49bc48eb0ec33a140f615c598a6df
 SHA512 (adler32-1.2.0.crate) = 8ed72612fb78e213fc92963fdae0508ef26988656c939e6c9cddccbe2658d4a956a8ae934d9658262a8b2687dc446b3f1ee7614128b440487c81e606526dfda3
@@ -225,9 +225,9 @@ Size (libflate-1.2.0.crate) = 40864 bytes
 BLAKE2s (libflate_lz77-1.1.0.crate) = 052b9f9f63232b4da9e20178ef7b7e1381fd005b4f29f4897ccc5623c2e0f4db
 SHA512 (libflate_lz77-1.1.0.crate) = ab0cba9d324d2f7bf2a741e8ef8b0ee7bfa85ab6ee63b9ccf6ff912461ca854d6b7467e527d74ee93a219d6dec5bcecc3e61eea83d4cf5b2452f9a0aa97cd95c
 Size (libflate_lz77-1.1.0.crate) = 5729 bytes
-BLAKE2s (libreddit-0.29.4.tar.gz) = 6bdeabbbd6e95e240ce378e759692623ae970dc5f865cb81738c622008dd6a2f
-SHA512 (libreddit-0.29.4.tar.gz) = 172b16d76c6521dfe3a862f855cfed37385caac15a6087ef9ce1e9359813cd70435f5769df3384c4768548565c3b56c6c5b7725ecba538c73a52ee59ace3a522
-Size (libreddit-0.29.4.tar.gz) = 531019 bytes
+BLAKE2s (libreddit-0.30.1.tar.gz) = d445bda76dc977fa9a83f537dc37fb2b46a9add52c82aa38920d2eb9d03c7948
+SHA512 (libreddit-0.30.1.tar.gz) = 224c2346e38eace6c620f07776846a255c7b8d052a7bcd68c0d22dfadd364420de1329b50c39103f2d5aa29ca91f7702f4f94d82e4063e6c778e213ee3d9a2c0
+Size (libreddit-0.30.1.tar.gz) = 531436 bytes
 BLAKE2s (linux-raw-sys-0.1.4.crate) = 74dfc732d1784d1e58452e43113cfbdab751b95ad3c77a97f9f23973f49c1925
 SHA512 (linux-raw-sys-0.1.4.crate) = ee6d5a7a08b183681ae00890784c9e6b72e4c987b2ce2d7de6e7308b7a10d4a2b532db3d5121523bf5d4a262407f3033af4f4c1fd9f09be091523366fa30d768
 Size (linux-raw-sys-0.1.4.crate) = 878981 bytes
