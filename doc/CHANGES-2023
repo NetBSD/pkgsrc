@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2105 2023/04/08 11:25:58 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2106 2023/04/08 12:16:19 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2938,3 +2938,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-schulmathematik-doc to 1.4 [markd 2023-04-08]
 	Updated print/tex-tcolorbox to 6.0.3 [markd 2023-04-08]
 	Updated print/tex-tcolorbox-doc to 6.0.3 [markd 2023-04-08]
+	Updated www/libreddit to 0.30.1 [vins 2023-04-08]
