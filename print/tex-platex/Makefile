@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/04/15 04:15:15 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/09 06:03:34 markd Exp $
 
 DISTNAME=	platex
-PKGNAME=	tex-${DISTNAME}-2021.62387
-TEXLIVE_REV=	62387
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	66186
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex
@@ -27,14 +27,16 @@ DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
+DEPENDS+=	tex-uptex-[0-9]*:../../print/tex-uptex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"platex eptex language.dat *platex.ini\\n"
+TEX_FORMATS+=	"platex eptex language.dat *platex.ini\\nplatex-dev euptex language.dat *platex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
 post-install:
 	${LN} -sf eptex ${DESTDIR}${PREFIX}/bin/platex
+	${LN} -sf euptex ${DESTDIR}${PREFIX}/bin/platex-dev
 
 .include "../../mk/bsd.pkg.mk"
