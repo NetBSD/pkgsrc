@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:14:19 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/04/09 05:58:51 markd Exp $
 
-BLAKE2s (pdftex.doc.r54227.tar.xz) = 7574c93bbf15c67b6bfa58fd885e71e2fd96814bdc5c9f882d538619a407ab40
-SHA512 (pdftex.doc.r54227.tar.xz) = 8526e7021037423c912dbe6e6430a30bc0a915dfc9f9a014885e71441696c0ebfad009a33dc21a4e83c28bb7a3a0aa78ac6579ebd21e518e5aba8a31867611c0
-Size (pdftex.doc.r54227.tar.xz) = 1611504 bytes
+BLAKE2s (pdftex.doc.r66243.tar.xz) = dde1f2c66b30eb4aa75f55c553a60e25a4edb3c2070d75d49fefa482ff84aa90
+SHA512 (pdftex.doc.r66243.tar.xz) = d059f01596573efacc4ca80333b07236f860375f49b82d0cd3ab6b3f441f379163a37c820e713a2d96a8f69b821b3dbd68f360c5b5f005dccac54575df4b5d4e
+Size (pdftex.doc.r66243.tar.xz) = 2094928 bytes
