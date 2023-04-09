@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/08/21 14:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/09 05:34:11 markd Exp $
 
 DISTNAME=	hyperxmp
-PKGNAME=	tex-${DISTNAME}-5.9
-PKGREVISION=	2
-TEXLIVE_REV=	57004
+PKGNAME=	tex-${DISTNAME}-5.11
+TEXLIVE_REV=	65980
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperxmp
@@ -13,12 +12,6 @@ LICENSE=	lppl-1.3c
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl
 
-# The texlive metadata claims this, but it doesn't exist and isn't
-# referred to by the source. XXX?
-#DEPENDS+=	tex-hyperxmp.ARCH-[0-9]*:../../print/tex-hyperxmp.ARCH
-
-# Conversely, the texlive metadata does not mention these but the
-# package code does use them.
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-ifmtarg-[0-9]*:../../print/tex-ifmtarg
@@ -32,6 +25,11 @@ DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
 DEPENDS+=	tex-totpages-[0-9]*:../../print/tex-totpages
+
+INSTALLATION_DIRS+=	bin
+
+post-install:
+	${LN} -sf ${PREFIX}/share/texmf-dist/scripts/hyperxmp/hyperxmp-add-bytecount.pl ${DESTDIR}${PREFIX}/bin/hyperxmp-add-bytecount
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
