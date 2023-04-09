@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/01/29 21:17:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2023/04/09 08:57:19 plunky Exp $
 
 DISTNAME=	HandBrake-1.5.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -17,6 +17,11 @@ LICENSE=	gnu-gpl-v2
 DIST_SUBDIR=	handbrake
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+
+# see contrib/libjpeg-turbo/module.defs for required version
+LIBJPEG_TURBO=		libjpeg-turbo-2.1.2.tar.gz
+DISTFILES+=		${LIBJPEG_TURBO}
+SITES.${LIBJPEG_TURBO}=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/
 
 RESTRICTED=		Unresolved patent issues
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -61,6 +66,11 @@ CFLAGS+=	-fheinous-gnu-extensions
 BROKEN_GETTEXT_DETECTION=	yes
 GHB_LOCALES=	af co cs da de es eu fr he hr it ja ko nl no pl pt pt_BR ro ru si sk sl_SI sv th tr uk_UA zh_CN zh_TW
 
+# the build phase will attempt to download libjpeg-turbo if not provided
+pre-build:
+	${MKDIR} ${WRKSRC}/download
+	${LN} -fs ${DISTDIR}/${DIST_SUBDIR}/${LIBJPEG_TURBO} ${WRKSRC}/download/${LIBJPEG_TURBO}
+
 post-build:
 	set -e; cd ${WRKSRC};							\
 	for po in ${GHB_LOCALES}; do						\
@@ -96,6 +106,4 @@ post-build:
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-JPEG_ACCEPTED=	libjpeg-turbo
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
