@@ -1,15 +1,14 @@
-$NetBSD: patch-make-include-main.defs,v 1.4 2023/04/09 08:57:19 plunky Exp $
+$NetBSD: patch-make-include-main.defs,v 1.5 2023/04/09 11:15:50 plunky Exp $
 
 Use comon pkgsrc libraries, except for libjpeg-turbo which is required but
 cannot coexist with libjpeg (required by gtk3)
 
---- make/include/main.defs.orig	2022-01-10 19:11:37.000000000 +0000
+--- make/include/main.defs.orig	2023-01-22 16:36:49.000000000 +0000
 +++ make/include/main.defs
-@@ -13,47 +13,11 @@ ifneq ($(HAS.bz2),1)
+@@ -13,49 +13,12 @@ ifneq ($(HAS.bz2),1)
  endif
  endif
  
-+MODULES += contrib/libjpeg-turbo
 -ifneq (,$(filter $(HOST.system),darwin cygwin mingw))
 -    MODULES += contrib/freetype
 -    MODULES += contrib/fribidi
@@ -29,10 +28,12 @@ cannot coexist with libjpeg (required by gtk3)
 -endif
 -
 -ifeq (1,$(FEATURE.flatpak))
+-    MODULES += contrib/libass
 -    MODULES += contrib/jansson
 -    MODULES += contrib/x264
 -endif
--
++MODULES += contrib/libjpeg-turbo
+ 
  ifeq (1,$(FEATURE.fdk_aac))
      MODULES += contrib/fdk-aac
  endif
@@ -45,6 +46,7 @@ cannot coexist with libjpeg (required by gtk3)
 -endif
 -
 -MODULES += contrib/libdav1d
+-MODULES += contrib/svt-av1
 -MODULES += contrib/zimg
 -MODULES += contrib/ffmpeg
 -MODULES += contrib/libdvdread
