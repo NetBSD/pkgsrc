@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/05/03 11:57:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/04/09 05:58:51 markd Exp $
 man/man1/pdfetex.1
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
@@ -13,7 +13,9 @@ share/texmf-dist/doc/pdftex/manual/pdftex-t.tex
 share/texmf-dist/doc/pdftex/manual/pdftex-w.tex
 share/texmf-dist/doc/pdftex/manual/syntaxform.awk
 share/texmf-dist/doc/pdftex/manual/syntaxform.pl
+share/texmf-dist/doc/pdftex/samplepdftex/README
 share/texmf-dist/doc/pdftex/samplepdftex/cmr10.103
+share/texmf-dist/doc/pdftex/samplepdftex/efcode.tex
 share/texmf-dist/doc/pdftex/samplepdftex/obj.dat
 share/texmf-dist/doc/pdftex/samplepdftex/pdfcolor.tex
 share/texmf-dist/doc/pdftex/samplepdftex/pic.eps
@@ -22,12 +24,13 @@ share/texmf-dist/doc/pdftex/samplepdftex/pic.mps
 share/texmf-dist/doc/pdftex/samplepdftex/pic.pdf
 share/texmf-dist/doc/pdftex/samplepdftex/pic.png
 share/texmf-dist/doc/pdftex/samplepdftex/pic16.png
+share/texmf-dist/doc/pdftex/samplepdftex/protcode.tex
 share/texmf-dist/doc/pdftex/samplepdftex/rgb.icc
 share/texmf-dist/doc/pdftex/samplepdftex/samplepdf.0
 share/texmf-dist/doc/pdftex/samplepdftex/samplepdf.1
+share/texmf-dist/doc/pdftex/samplepdftex/samplepdf.mp
+share/texmf-dist/doc/pdftex/samplepdftex/samplepdf.pdf
 share/texmf-dist/doc/pdftex/samplepdftex/samplepdf.tex
-share/texmf-dist/doc/pdftex/samplepdftex/supp-mis.tex
-share/texmf-dist/doc/pdftex/samplepdftex/supp-pdf.tex
 share/texmf-dist/doc/pdftex/samplepdftex/tmp.pdf
 share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/Makefile
 share/texmf-dist/doc/pdftex/tests/01-fake-interword-space/dummy-space.pfb
