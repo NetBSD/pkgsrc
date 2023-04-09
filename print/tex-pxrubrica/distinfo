@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/09 06:19:07 markd Exp $
 
-BLAKE2s (pxrubrica.r58168.tar.xz) = a416677291fdec955e48c9c6b7a58c695fe905fef11e74c4a97b3fce31f11f9c
-SHA512 (pxrubrica.r58168.tar.xz) = bde5699cc92196e844b052c9116bd081960a34b239bd9fe5271f0866be3c4edf0a8bf8932a99c440dc58db7624c58fc3af4e2d2c0f76230f1248da21ce4410a9
-Size (pxrubrica.r58168.tar.xz) = 13660 bytes
+BLAKE2s (pxrubrica.r66298.tar.xz) = 249282bb7bad2261dc91bc799f2183dc19090c793e20c1f0abb71a5eebb13b97
+SHA512 (pxrubrica.r66298.tar.xz) = 0ffdde0f17b1bcb90a858d6dd6ca204eea552b49e91cdc797e6364e8b59cca4808a293154426f9c3f52dd2bdc27e93c091bbddbe6c15862fec144b9e4cd6ea9e
+Size (pxrubrica.r66298.tar.xz) = 13672 bytes
