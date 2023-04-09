@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/04/15 04:15:15 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/04/09 06:03:34 markd Exp $
 
-BLAKE2s (platex.doc.r62387.tar.xz) = eb487bee708ecfaddcdc1e4bafe46791b6223c1bfe2c5ac598b815e15aa47922
-SHA512 (platex.doc.r62387.tar.xz) = a4736eba31f4f1a5b04478d4d7c7db7d96f6964778f64fb9ccf9598f6b5bc75da25e1420ce9c5a388b20ff806290078104cb0602044d399890bf1aa60eef6ab0
-Size (platex.doc.r62387.tar.xz) = 1500068 bytes
+BLAKE2s (platex.doc.r66186.tar.xz) = f2894a3c589d9655d88683684c9223bfe620b9c049500faf9b62a3f89d02bd79
+SHA512 (platex.doc.r66186.tar.xz) = 51992f6d3ed6749e9136db4930644b82c435efb6af85fcac1dc254c22e06c5fd017d9bc83f642060d814b86c56fdde6ff97056240b0ab857743203fe5ae2fd7d
+Size (platex.doc.r66186.tar.xz) = 1982668 bytes
