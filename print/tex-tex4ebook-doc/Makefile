@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/04/15 04:40:01 markd Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/09 12:57:30 markd Exp $
 
 DISTNAME=	tex4ebook.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.3h
-TEXLIVE_REV=	62076
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.3j
+TEXLIVE_REV=	66621
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tex4ebook
