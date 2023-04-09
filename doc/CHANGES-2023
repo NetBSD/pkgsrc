@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2131 2023/04/09 15:45:59 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.2132 2023/04/09 16:47:55 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/tex-tlshell to 2023 [markd 2023-04-09]
 	Updated devel/tex-tlshell-doc to 2023 [markd 2023-04-09]
 	Updated net/ipget to 0.9.2 [bsiegert 2023-04-09]
+	Updated www/gotosocial to 0.8.0 [nikita 2023-04-09]
