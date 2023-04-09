@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:12 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2023/04/09 21:44:13 wiz Exp $
 
 BUILTIN_PKG:=	libXt
 
@@ -31,10 +31,10 @@ USE_BUILTIN.libXt=	no
 .  else
 USE_BUILTIN.libXt=	${IS_BUILTIN.libXt}
 .    if defined(BUILTIN_PKG.libXt) && \
-        !empty(IS_BUILTIN.libXt:M[yY][eE][sS])
+        ${IS_BUILTIN.libXt:tl} == yes
 USE_BUILTIN.libXt=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXt}
-.        if !empty(USE_BUILTIN.libXt:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libXt:tl} == yes
 USE_BUILTIN.libXt!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXt:Q}; then \
 		${ECHO} yes;						\
