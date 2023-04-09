@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:30:49 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/09 16:35:54 gdt Exp $
 #
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
@@ -9,7 +9,8 @@ MASTER_SITES=		http://www.x9media.com/downloads/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.x9media.com/
+# HOMEPAGE broken.  Followon might be at https://www.asterisksounds.org/en
+#HOMEPAGE=		https://www.x9media.com/
 COMMENT=		German voice prompt files for asterisk
 
 USE_TOOLS+=		tar
