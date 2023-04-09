@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2023/04/09 21:48:00 wiz Exp $
 
-DISTNAME=		libXfixes-6.0.0
+DISTNAME=		libXfixes-6.0.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
