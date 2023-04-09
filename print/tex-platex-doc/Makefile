@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/04/15 04:15:15 markd Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/09 06:03:34 markd Exp $
 
 DISTNAME=	platex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2021.62387
-TEXLIVE_REV=	62387
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	66186
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex
