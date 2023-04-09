@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2128 2023/04/09 11:14:35 plunky Exp $
+$NetBSD: CHANGES-2023,v 1.2129 2023/04/09 11:16:12 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/elixir to 1.14.4 [wiz 2023-04-09]
 	Added net/qt6-qtgrpc version 6.5.0 [nros 2023-04-09]
 	Added multimedia/svt-av1 version 1.4.1 [plunky 2023-04-09]
+	Updated multimedia/handbrake to 1.6.1 [plunky 2023-04-09]
