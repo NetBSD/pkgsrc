@@ -1,8 +1,8 @@
-$NetBSD: patch-test_module.defs,v 1.1 2022/10/03 10:46:05 adam Exp $
+$NetBSD: patch-test_module.defs,v 1.2 2023/04/09 11:15:50 plunky Exp $
 
 Link against x265.
 
---- test/module.defs.orig	2022-10-03 09:45:30.000000000 +0000
+--- test/module.defs.orig	2023-01-22 16:36:49.000000000 +0000
 +++ test/module.defs
 @@ -16,7 +16,7 @@ TEST.libs = $(LIBHB.a)
  TEST.GCC.l = \
@@ -10,6 +10,6 @@ Link against x265.
          dvdread fribidi swscale vpx theoraenc theoradec vorbis vorbisenc ogg \
 -        x264 bluray freetype xml2 bz2 z jansson harfbuzz opus speex lzma dav1d \
 +        x264 x265 bluray freetype xml2 bz2 z jansson harfbuzz opus speex lzma dav1d \
-         turbojpeg zimg
+         turbojpeg zimg SvtAv1Enc
  
  ifeq (,$(filter $(HOST.system),darwin cygwin mingw))
