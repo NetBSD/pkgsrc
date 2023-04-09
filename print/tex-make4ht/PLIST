@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/15 04:12:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/04/09 12:46:30 markd Exp $
 bin/make4ht
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-aeneas.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-booktabs.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-collapsetoc.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-fixinlines.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-idcolons.lua
+share/texmf-dist/scripts/make4ht/domfilters/make4ht-inlinecss.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-itemparagraphs.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-joincharacters.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-joincolors.lua
@@ -20,6 +21,7 @@ share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_domfilters.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-common_filters.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-detect_engine.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-dvisvgm_hashes.lua
+share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-inlinecss.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-join_colors.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-latexmk_build.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-mathjaxnode.lua
