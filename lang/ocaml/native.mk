@@ -1,4 +1,4 @@
-# $NetBSD: native.mk,v 1.1 2022/05/24 18:25:38 jaapb Exp $
+# $NetBSD: native.mk,v 1.2 2023/04/09 07:28:27 wiz Exp $
 #
 # This Makefile fragment handles the native code compiler options for OCaml.
 # It is used by ocaml.mk and the lang/ocaml package.
@@ -25,7 +25,7 @@ _DEF_VARS.ocaml=	\
 
 # Default value of OCAML_USE_OPT_COMPILER
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
+     ${MACHINE_ARCH:M*arm*} || (${MACHINE_ARCH} == "aarch64") || \
      (${MACHINE_ARCH} == "aarch64eb") || (${MACHINE_ARCH} == "x86_64")
 OCAML_USE_OPT_COMPILER?=	yes
 .else
