@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/02/22 10:10:22 markd Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/09 06:08:45 markd Exp $
 
 DISTNAME=	ptex
-PKGNAME=	tex-${DISTNAME}-3.2pl55920
-TEXLIVE_REV=	55920
+PKGNAME=	tex-${DISTNAME}-3.2.66186
+TEXLIVE_REV=	66186
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ptex
@@ -21,7 +21,7 @@ DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
-TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\n"
+TEX_FORMATS+=		"ptex eptex - ptex.ini\\neptex eptex language.def *eptex.ini\\n"
 TEX_KANJIMAP_FILES+=	ptex-@jaEmbed@@jaVariant@.map
 
 PLIST_SRC=	# none
