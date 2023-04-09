@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2018/12/24 14:45:50 tsutsui Exp $
+# $NetBSD: hacks.mk,v 1.3 2023/04/09 07:11:50 wiz Exp $
 
 .if !defined(VALA_HACKS_MK)
 VALA_HACKS_MK=	defined
@@ -10,7 +10,7 @@ VALA_HACKS_MK=	defined
 ### segmentation faulting.
 ### Compiling with `-fno-optimize-sibling-calls' works around.
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && !empty(CC_VERSION:Mgcc-[56].*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-*arm*} && ${CC_VERSION:Mgcc-[56].*}
 PKG_HACKS+=	optimisation
 CFLAGS+=	-fno-optimize-sibling-calls
 .endif
