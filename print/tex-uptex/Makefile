@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/22 10:17:56 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/09 06:35:41 markd Exp $
 
 DISTNAME=	uptex
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	56291
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	66381
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/uptex
@@ -20,7 +20,7 @@ DEPENDS+=	tex-uptex-fonts-[0-9]*:../../fonts/tex-uptex-fonts
 DEPENDS+=	upmendex-[0-9]*:../../textproc/upmendex
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
-TEX_FORMATS+=	"uptex uptex - uptex.ini\\neuptex euptex language.def *euptex.ini\\n"
+TEX_FORMATS+=	"uptex euptex - uptex.ini\\neuptex euptex language.def *euptex.ini\\n"
 
 TEX_KANJIMAP_FILES+=	uptex-@jaEmbed@@jaVariant@.map
 TEX_KANJIMAP_FILES+=	uptex-ko-@koEmbed@.map
