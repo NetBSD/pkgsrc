@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2023/01/29 21:18:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2023/04/09 21:47:28 wiz Exp $
 
-DISTNAME=	xf86-video-savage-2.3.9
-PKGREVISION=	2
+DISTNAME=	xf86-video-savage-2.4.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
