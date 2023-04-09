@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.1 2022/05/24 18:25:38 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.2 2023/04/09 07:28:27 wiz Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 # It should be included by every package that uses OCaml.
@@ -109,11 +109,11 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}"
 CONFIGURE_ARGS+=	--prefix "${PREFIX}"
 # Force use of native code compiler according to setting
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
+.  if ${OCAML_USE_OPT_COMPILER} == "yes"
 CONFIGURE_ARGS+=	--override is_native true
-.else
+.  else
 CONFIGURE_ARGS+=	--override is_native false
-.endif
+.  endif
 .endif
 
 # Configure stuff for DUNE
@@ -169,14 +169,14 @@ OCAML_FINDLIB_REGISTER?=	yes
 .if ${OCAML_USE_OASIS} == "yes"
 # OASIS uses ocamlbuild
 .include "../../devel/ocamlbuild/buildlink3.mk"
-.if ${OCAML_USE_OASIS_DYNRUN} == "yes"
+.  if ${OCAML_USE_OASIS_DYNRUN} == "yes"
 pre-configure:
 	${RUN} cd ${WRKSRC} && ocamlfind ocamlc -linkpkg -package oasis.dynrun -o setup setup.ml && ${RM} setup.cmo setup.cmi
 
 OASIS_EXEC=	./setup
-.else
+.  else
 OASIS_EXEC=	ocaml setup.ml
-.endif
+.  endif
 
 # Redefine configure target
 do-configure:
@@ -233,17 +233,17 @@ do-install:
 .if ${OCAML_USE_DUNE} == "yes"
 
 do-build:
-.if !empty(DUNE_BUILD_PACKAGES)
+.  if !empty(DUNE_BUILD_PACKAGES)
 	${RUN} ${_ULIMIT_CMD} \
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		dune build -j ${MAKE_JOBS:U1} \
 		${DUNE_BUILD_FLAGS} -p ${DUNE_BUILD_PACKAGES:ts,} \
 		${DUNE_BUILD_TARGETS}
-.else
+.  else
 	${RUN} ${_ULIMIT_CMD} \
 		cd ${WRKSRC} && dune build --profile release -j ${MAKE_JOBS:U1} \
 		${DUNE_BUILD_FLAGS} ${DUNE_BUILD_TARGETS}
-.endif
+.  endif
 
 .endif # ${OCAML_USE_DUNE} == "yes"
 
