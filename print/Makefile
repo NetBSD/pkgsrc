@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.896 2023/04/03 11:43:33 markd Exp $
+# $NetBSD: Makefile,v 1.897 2023/04/09 06:25:17 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1510,8 +1510,6 @@ SUBDIR+=	tex-soul
 SUBDIR+=	tex-soul-doc
 SUBDIR+=	tex-soulpos
 SUBDIR+=	tex-soulpos-doc
-SUBDIR+=	tex-soulutf8
-SUBDIR+=	tex-soulutf8-doc
 SUBDIR+=	tex-sphack
 SUBDIR+=	tex-sphack-doc
 SUBDIR+=	tex-splitbib
