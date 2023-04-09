@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/04/15 04:05:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/04/09 12:43:41 markd Exp $
 bin/lwarpmk
 share/texmf-dist/tex/latex/lwarp/lwarp-2in1.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-2up.sty
@@ -492,6 +492,9 @@ share/texmf-dist/tex/latex/lwarp/lwarp-tablefootnote.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tabls.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tabularx.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tabulary.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-tagpdf-base.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-tagpdf-mc-code-generic.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-tagpdf-mc-code-lua.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tagpdf.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tascmac.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-tcolorbox.sty
