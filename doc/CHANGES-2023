@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2125 2023/04/09 07:37:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2126 2023/04/09 08:57:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3001,3 +3001,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/vala to 0.56.5 [wiz 2023-04-09]
 	Updated lang/ocaml to 4.14.1 [wiz 2023-04-09]
 	Updated filesystems/kubo to 0.19.1 [wiz 2023-04-09]
+	Updated lang/elixir to 1.14.4 [wiz 2023-04-09]
