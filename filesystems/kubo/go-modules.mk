@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2023/03/30 18:17:02 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/04/09 07:36:04 wiz Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200117225306-7b5117fecadc.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200117225306-7b5117fecadc.zip
@@ -452,8 +452,8 @@ GO_MODULE_FILES+=	github.com/ipfs/go-block-format/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.2.1.mod
 GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.3.0.mod
-GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.5.0.mod
-GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.5.0.zip
+GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.5.1.mod
+GO_MODULE_FILES+=	github.com/ipfs/go-blockservice/@v/v0.5.1.zip
 GO_MODULE_FILES+=	github.com/ipfs/go-cid/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/ipfs/go-cid/@v/v0.0.2.mod
 GO_MODULE_FILES+=	github.com/ipfs/go-cid/@v/v0.0.3.mod
@@ -810,8 +810,8 @@ GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-quic-transport/@v/v0.10.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-record/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-record/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-record/@v/v0.2.0.zip
-GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-routing-helpers/@v/v0.6.1.mod
-GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-routing-helpers/@v/v0.6.1.zip
+GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-routing-helpers/@v/v0.6.2.mod
+GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-routing-helpers/@v/v0.6.2.zip
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-secio/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-secio/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-secio/@v/v0.2.1.mod
@@ -851,8 +851,8 @@ GO_MODULE_FILES+=	github.com/libp2p/go-libp2p-yamux/@v/v0.5.4.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.14.3.mod
-GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.26.3.mod
-GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.26.3.zip
+GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.26.4.mod
+GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.26.4.zip
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.6.1.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/libp2p/go-libp2p/@v/v0.7.4.mod
