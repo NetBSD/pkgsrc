@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2023/04/09 08:57:19 plunky Exp $
+# $NetBSD: Makefile,v 1.92 2023/04/09 11:15:50 plunky Exp $
 
-DISTNAME=	HandBrake-1.5.1-source
+DISTNAME=	HandBrake-1.6.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
-PKGREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HandBrake/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 # see contrib/libjpeg-turbo/module.defs for required version
-LIBJPEG_TURBO=		libjpeg-turbo-2.1.2.tar.gz
+LIBJPEG_TURBO=		libjpeg-turbo-2.1.4.tar.gz
 DISTFILES+=		${LIBJPEG_TURBO}
 SITES.${LIBJPEG_TURBO}=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/
 
@@ -94,7 +93,7 @@ post-build:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/zimg/buildlink3.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libbluray/buildlink3.mk"
@@ -102,6 +101,7 @@ post-build:
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
+.include "../../multimedia/svt-av1/buildlink3.mk"
 .include "../../multimedia/x264/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
