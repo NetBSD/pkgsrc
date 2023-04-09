@@ -1,4 +1,19 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2022/11/24 11:11:38 nros Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2023/04/09 08:58:51 nros Exp $
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_kqueue_p.h
+qt6/include/QtDeviceDiscoverySupport/6.5.0/QtDeviceDiscoverySupport/private/qdevicediscovery_static_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/devicehandlerlist_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevkeyboardhandler_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevkeyboardmanager_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevmousehandler_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevmousemanager_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevtablethandler_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevtabletmanager_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevtouchfilter_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevtouchhandler_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevtouchmanager_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qevdevutil_p.h
+qt6/include/QtInputSupport/6.5.0/QtInputSupport/private/qoutputmapping_p.h
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfigVersion.cmake
