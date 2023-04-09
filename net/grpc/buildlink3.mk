@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/04/07 21:26:00 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/04/09 09:09:10 nros Exp $
 
 BUILDLINK_TREE+=	grpc
 
@@ -17,7 +17,10 @@ BUILDLINK_FILES.grpc+=	bin/grpc_php_plugin
 BUILDLINK_FILES.grpc+=	bin/grpc_python_plugin
 BUILDLINK_FILES.grpc+=	bin/grpc_ruby_plugin
 
+.include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/re2/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .endif	# GRPC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-grpc
