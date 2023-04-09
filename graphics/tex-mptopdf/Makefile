@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:31:56 markd Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/09 05:52:42 markd Exp $
 
 DISTNAME=	mptopdf
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	1
-TEXLIVE_REV=	54276
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	65952
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdf-mps-supp
