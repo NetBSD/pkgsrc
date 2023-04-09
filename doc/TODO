@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22754 2023/04/09 07:11:58 wiz Exp $
+$NetBSD: TODO,v 1.22755 2023/04/09 07:37:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -871,7 +871,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o krita-5.1.3
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
-	o kubo-0.19.1
 	o lastpass-cli-1.3.3
 	o latexmk-472b
 	o lbdb-49
