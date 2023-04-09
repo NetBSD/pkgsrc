@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.64 2022/05/24 18:25:38 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.65 2023/04/09 07:27:48 wiz Exp $
 
 # used by x11/labltk/Makefile
-DISTNAME=	ocaml-4.14.0
+DISTNAME=	ocaml-4.14.1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.14/
 #EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,11 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES+=		c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
+
 #CONFIGURE_ENV+=	BDB_LIBS=${BDB_LINK:Q}
 #CONFIGURE_ENV+=	BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
 #CONFIGURE_ENV+=	LDFLAGS=${LDFLAGS:Q}
