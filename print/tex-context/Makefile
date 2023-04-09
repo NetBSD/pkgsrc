@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2021/06/06 11:28:59 markd Exp $
+# $NetBSD: Makefile,v 1.26 2023/04/09 12:23:18 markd Exp $
 
 DISTNAME=	context
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58167
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	66802
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context
@@ -21,10 +21,7 @@ DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
 USE_TOOLS+=	sh:run
 
 CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
-REPLACE_SH=		bin/context bin/ctxtools bin/luatools
-REPLACE_TEXLUA=		bin/mtxrun \
-			texmf-dist/scripts/context/stubs/mswin/mtxrun.lua \
-			texmf-dist/scripts/context/stubs/unix/mtxrun
+REPLACE_TEXLUA=		bin/mtxrun
 
 TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.mkii\\ncont-en xetex cont-usr.tex -8bit *cont-en.mkii\\n"
 TEX_MAP_FILES+=		original-context-symbol.map
@@ -37,9 +34,5 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/context/lua/mtxrun.lua \
 		${WRKSRC}/bin/mtxrun
-.for f in context luatools texexec texmfstart
-	${CP} ${WRKSRC}/texmf-dist/scripts/context/stubs/unix/${f} \
-		${WRKSRC}/bin/
-.endfor
 
 .include "../../mk/bsd.pkg.mk"
