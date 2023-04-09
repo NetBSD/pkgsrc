@@ -1,15 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/09 05:55:33 markd Exp $
 share/texmf-dist/doc/ptex/pbibtex/LICENSE
 share/texmf-dist/doc/ptex/pbibtex/README.md
-share/texmf-dist/doc/ptex/pbibtex/README_original
 share/texmf-dist/doc/ptex/pbibtex/cpp.awk
 share/texmf-dist/doc/ptex/pbibtex/generate.sh
 share/texmf-dist/doc/ptex/pbibtex/jbibtex.bib
-share/texmf-dist/doc/ptex/pbibtex/jbibtex.pdf
-share/texmf-dist/doc/ptex/pbibtex/jbibtex.tex
 share/texmf-dist/doc/ptex/pbibtex/jbtxbst.doc
 share/texmf-dist/doc/ptex/pbibtex/jbtxdoc.bib
-share/texmf-dist/doc/ptex/pbibtex/jbtxdoc.pdf
-share/texmf-dist/doc/ptex/pbibtex/jbtxdoc.tex
-share/texmf-dist/doc/ptex/pbibtex/jbtxhak.pdf
-share/texmf-dist/doc/ptex/pbibtex/jbtxhak.tex
