@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2123 2023/04/09 07:11:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2124 2023/04/09 07:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2999,3 +2999,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/plasma-wayland-protocols to 1.10.0 [wiz 2023-04-09]
 	Updated graphics/ImageMagick to 7.1.1.6 [wiz 2023-04-09]
 	Updated lang/vala to 0.56.5 [wiz 2023-04-09]
+	Updated lang/ocaml to 4.14.1 [wiz 2023-04-09]
