@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:34:42 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/04/09 21:45:36 wiz Exp $
 
-BLAKE2s (xf86-video-neomagic-1.3.0.tar.bz2) = 7fb731a41c8198790e860ed37a7af2b373b903183a6b0e629781d0f2577ef56d
-SHA512 (xf86-video-neomagic-1.3.0.tar.bz2) = 25d019a2556e52aeb4e25942f444437a921e76d527c10ddd420f16aa7d85bf2b8a51612c382a2a7e3e407bb1e8d610d063101184eea0889c3e1a69bfb3b37735
-Size (xf86-video-neomagic-1.3.0.tar.bz2) = 362347 bytes
+BLAKE2s (xf86-video-neomagic-1.3.1.tar.xz) = 4d67199ec6c2a1576d09cb38a2f90df742585c0143457c206a72f5cd3dfc91f3
+SHA512 (xf86-video-neomagic-1.3.1.tar.xz) = b2425c4e9b8e6e816cbb6fa436da12bd242acf55c3c615352fc80ea072b1822abdb40838c2adcc3c450e429ec6e3b5112d194e739cf5d8ac22d430e273d5378b
+Size (xf86-video-neomagic-1.3.1.tar.xz) = 299216 bytes
