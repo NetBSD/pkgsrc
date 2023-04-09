@@ -1,19 +1,19 @@
-$NetBSD: patch-bin_epstopdf,v 1.3 2022/09/01 10:30:55 markd Exp $
+$NetBSD: patch-bin_epstopdf,v 1.4 2023/04/09 05:25:13 markd Exp $
 
 Fix paths to commands: gs and kpathsea.
 
---- bin/epstopdf.orig	2022-08-30 19:53:18.000000000 +0000
+--- bin/epstopdf.orig	2023-03-28 07:22:26.000000000 +0000
 +++ bin/epstopdf
-@@ -205,7 +205,7 @@ my $on_windows = $^O =~ /^(MSWin|msys$)/
+@@ -212,7 +212,7 @@ my $on_windows = $^O =~ /^(MSWin|msys$)/
  my $on_windows_or_cygwin = $on_windows || $^O eq "cygwin";
  
  ### ghostscript command name
 -my $GS = "gs";
 +my $GS = "@GHOSTSCRIPT@";
  if ($on_windows) {
+   $GS = "gswin32c";
    if ($ENV{"PROCESSOR_ARCHITECTURE"} eq "AMD64"
-       || $ENV{"PROCESSOR_ARCHITEW6432"} eq "AMD64") {
-@@ -482,7 +482,7 @@ sub warnerr    { $restricted ? error(@_)
+@@ -496,7 +496,7 @@ sub warnerr    { $restricted ? error(@_)
  debug "Restricted mode activated" if $restricted;
  
  ### safer external commands for Windows in restricted mode
