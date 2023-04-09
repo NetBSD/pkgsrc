@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2022/07/17 08:31:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2023/04/09 07:11:50 wiz Exp $
 bin/vala
 bin/vala-0.56
 bin/vala-gen-introspect
@@ -239,6 +239,7 @@ share/vala-0.56/vapi/hildon-fm-2.vapi
 share/vala-0.56/vapi/javascriptcoregtk-4.0.vapi
 share/vala-0.56/vapi/javascriptcoregtk-4.1.vapi
 share/vala-0.56/vapi/javascriptcoregtk-5.0.vapi
+share/vala-0.56/vapi/javascriptcoregtk-6.0.vapi
 share/vala-0.56/vapi/json-glib-1.0.deps
 share/vala-0.56/vapi/json-glib-1.0.vapi
 share/vala-0.56/vapi/libarchive.deps
@@ -361,6 +362,10 @@ share/vala-0.56/vapi/webkit2gtk-web-extension-4.1.deps
 share/vala-0.56/vapi/webkit2gtk-web-extension-4.1.vapi
 share/vala-0.56/vapi/webkit2gtk-web-extension-5.0.deps
 share/vala-0.56/vapi/webkit2gtk-web-extension-5.0.vapi
+share/vala-0.56/vapi/webkitgtk-6.0.deps
+share/vala-0.56/vapi/webkitgtk-6.0.vapi
+share/vala-0.56/vapi/webkitgtk-web-extension-6.0.deps
+share/vala-0.56/vapi/webkitgtk-web-extension-6.0.vapi
 share/vala-0.56/vapi/x11.vapi
 share/vala-0.56/vapi/xcb-icccm.deps
 share/vala-0.56/vapi/xcb-icccm.vapi
