@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/02/21 15:49:37 nikita Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/09 16:47:44 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -16,6 +16,7 @@ share/examples/gotosocial/web/assets/Fork-Awesome/fonts/forkawesome-webfont.svg
 share/examples/gotosocial/web/assets/Fork-Awesome/fonts/forkawesome-webfont.ttf
 share/examples/gotosocial/web/assets/Fork-Awesome/fonts/forkawesome-webfont.woff
 share/examples/gotosocial/web/assets/Fork-Awesome/fonts/forkawesome-webfont.woff2
+share/examples/gotosocial/web/assets/LICENSE
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon1.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon2.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon3.png
@@ -76,7 +77,7 @@ share/examples/gotosocial/web/source/settings/components/form/inputs.jsx
 share/examples/gotosocial/web/source/settings/components/form/mutation-button.jsx
 share/examples/gotosocial/web/source/settings/components/languages.jsx
 share/examples/gotosocial/web/source/settings/components/loading.jsx
-share/examples/gotosocial/web/source/settings/components/nav-button.jsx
+share/examples/gotosocial/web/source/settings/components/user-logout-card.jsx
 share/examples/gotosocial/web/source/settings/index.js
 share/examples/gotosocial/web/source/settings/lib/domain-block.js
 share/examples/gotosocial/web/source/settings/lib/form/bool.jsx
@@ -88,7 +89,9 @@ share/examples/gotosocial/web/source/settings/lib/form/index.js
 share/examples/gotosocial/web/source/settings/lib/form/radio.jsx
 share/examples/gotosocial/web/source/settings/lib/form/submit.js
 share/examples/gotosocial/web/source/settings/lib/form/text.jsx
-share/examples/gotosocial/web/source/settings/lib/get-views.js
+share/examples/gotosocial/web/source/settings/lib/navigation/components.jsx
+share/examples/gotosocial/web/source/settings/lib/navigation/index.js
+share/examples/gotosocial/web/source/settings/lib/navigation/util.js
 share/examples/gotosocial/web/source/settings/lib/query/admin/custom-emoji.js
 share/examples/gotosocial/web/source/settings/lib/query/admin/import-export.js
 share/examples/gotosocial/web/source/settings/lib/query/admin/index.js
@@ -109,10 +112,11 @@ share/examples/gotosocial/web/template/about.tmpl
 share/examples/gotosocial/web/template/authorize.tmpl
 share/examples/gotosocial/web/template/confirmed.tmpl
 share/examples/gotosocial/web/template/domain-blocklist.tmpl
-share/examples/gotosocial/web/template/email_confirm_html.tmpl
-share/examples/gotosocial/web/template/email_confirm_text.tmpl
-share/examples/gotosocial/web/template/email_reset_html.tmpl
-share/examples/gotosocial/web/template/email_reset_text.tmpl
+share/examples/gotosocial/web/template/email_confirm.tmpl
+share/examples/gotosocial/web/template/email_new_report.tmpl
+share/examples/gotosocial/web/template/email_report_closed.tmpl
+share/examples/gotosocial/web/template/email_reset.tmpl
+share/examples/gotosocial/web/template/email_test.tmpl
 share/examples/gotosocial/web/template/error.tmpl
 share/examples/gotosocial/web/template/finalize.tmpl
 share/examples/gotosocial/web/template/footer.tmpl
