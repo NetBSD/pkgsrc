@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.17 2022/10/03 10:46:05 adam Exp $
+$NetBSD: distinfo,v 1.18 2023/04/09 08:57:19 plunky Exp $
 
 BLAKE2s (handbrake/HandBrake-1.5.1-source.tar.bz2) = 47b0351cc3edf04e3cf946b052431f851a006779a5feb63bb5bf8faa41b1fd3b
 SHA512 (handbrake/HandBrake-1.5.1-source.tar.bz2) = 63c5933f77d417a89512abd278a1d844f2b7a36ec9f8ab664c1a1348fd228ee389fc8e349b2df6cbf5d617b912d4634457ebea86490ff5ed4930f39a90dc7568
 Size (handbrake/HandBrake-1.5.1-source.tar.bz2) = 16137974 bytes
+BLAKE2s (handbrake/libjpeg-turbo-2.1.2.tar.gz) = 41d420e6aac0098326644768b51b745160402384b811956bdada22837a1047ca
+SHA512 (handbrake/libjpeg-turbo-2.1.2.tar.gz) = 172c3d8bdad62c32c4560754422fb36f0e80c8316e44d08708f0cba8ee9fd0830f5295d380de34d0f90ec07df6ab4dbe2f0c8451bc60553371c022c9077447c2
+Size (handbrake/libjpeg-turbo-2.1.2.tar.gz) = 2257645 bytes
 SHA1 (patch-configure) = 5f0452587c82ac9a419ac5fc06f07d35d174bc24
-SHA1 (patch-make-include-main.defs) = b1bab1deecf7a34a40288f6cc3fca003afbbce35
+SHA1 (patch-make-include-main.defs) = 53ca462076392c2ee2901b05b12d81faf145d3ab
 SHA1 (patch-make-python_launcher) = db0e01e9a5063b0d083f56840079e74909c729c6
 SHA1 (patch-test_module.defs) = f88ffc65f8e8bddb87de1af0fcc91f2abc6f819a
