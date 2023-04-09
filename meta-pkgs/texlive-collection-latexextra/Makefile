@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2023/04/03 11:46:26 markd Exp $
+# $NetBSD: Makefile,v 1.76 2023/04/09 06:28:01 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre8
+PKGNAME=	texlive-${DISTNAME}-2022pre9
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	64204
@@ -1207,7 +1207,6 @@ DEPENDS+=	tex-snapshot-[0-9]*:../../print/tex-snapshot
 # depend snaptodo
 # depend snotez
 DEPENDS+=	tex-soulpos-[0-9]*:../../print/tex-soulpos
-DEPENDS+=	tex-soulutf8-[0-9]*:../../print/tex-soulutf8
 # depend spacingtricks
 # depend spark-otf
 # depend sparklines
