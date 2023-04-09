@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/17 11:06:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/09 05:27:30 markd Exp $
 
 DISTNAME=	hitex
-PKGNAME=	tex-${DISTNAME}-2022
-TEXLIVE_REV=	62529
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	65883
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hitex
