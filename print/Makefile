@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.897 2023/04/09 06:25:17 markd Exp $
+# $NetBSD: Makefile,v 1.898 2023/04/09 06:36:36 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1711,7 +1711,6 @@ SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-uptex
 SUBDIR+=	tex-uptex-base
 SUBDIR+=	tex-uptex-base-doc
-SUBDIR+=	tex-uptex-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
 SUBDIR+=	tex-urlbst
