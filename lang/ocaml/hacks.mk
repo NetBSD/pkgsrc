@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.9 2020/12/09 10:33:04 jaapb Exp $
+# $NetBSD: hacks.mk,v 1.10 2023/04/09 07:28:27 wiz Exp $
 
 .if !defined(OCAML_HACKS_MK)
 OCAML_HACKS_MK=	defined
@@ -14,7 +14,7 @@ OCAML_HACKS_MK=	defined
 ### into utils/config.ml and will later be used by the OCaml compiler
 ### itself.
 ###
-.if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*-*)
+.if ${MACHINE_PLATFORM:MDarwin-[0-9].*-*}
 PKG_HACKS+=				no_compact_unwind
 SUBST_CLASSES+=				no_compact_unwind
 SUBST_MESSAGE.no_compact_unwind=	Removing -no_compact_unwind from linker options
