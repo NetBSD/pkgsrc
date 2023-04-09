@@ -1,7 +1,8 @@
-Provides hyphenatable spacing out (letterspacing), underlining, striking
-out, etc., using the TeX hyphenation algorithm to find the proper
-hyphens automatically. The package also provides a mechanism that can be
-used to implement similar tasks, that have to treat text syllable by
-syllable. This is shown in two examples. The package itself does not
-support UTF-8 input in ordinary (PDF)LaTeX; some UTF-8 support is
-offered by package soulutf8.
+The package provides hyphenable spacing out (letterspacing),
+underlining, striking out, etc., using the TeX hyphenation
+algorithm to find the proper hyphens automatically. It also
+provides a mechanism that can be used to implement similar
+tasks, that have to treat text syllable by syllable. This is
+shown in two examples. This version is a merge of the original
+soul package from Melchior Franz and the soulutf8 package from
+Heiko Oberdiek and supports also UTF8.
