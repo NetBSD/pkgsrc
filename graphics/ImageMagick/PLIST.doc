@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.6 2022/04/25 09:26:14 wiz Exp $
+@comment $NetBSD: PLIST.doc,v 1.7 2023/04/09 07:07:44 wiz Exp $
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/MagickCore-config.1
@@ -306,6 +306,7 @@ share/doc/ImageMagick-7/www/mirror.html
 share/doc/ImageMagick-7/www/mogrify.html
 share/doc/ImageMagick-7/www/montage.html
 share/doc/ImageMagick-7/www/motion-picture.html
+share/doc/ImageMagick-7/www/multispectral-imagery.html
 share/doc/ImageMagick-7/www/news.html
 share/doc/ImageMagick-7/www/opencl.html
 share/doc/ImageMagick-7/www/openmp.html

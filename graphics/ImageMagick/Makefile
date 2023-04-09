@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.316 2023/03/31 20:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.317 2023/04/09 07:07:44 wiz Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick-${DISTVERSION}
@@ -34,7 +33,7 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64}
 GCC_REQD+=		3.0
 .endif
 
