@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2022/09/01 04:11:18 markd Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/09 05:30:16 markd Exp $
 
 DISTNAME=	hyperref
-PKGNAME=	tex-${DISTNAME}-7.00s
-TEXLIVE_REV=	63665
+PKGNAME=	tex-${DISTNAME}-7.00v
+TEXLIVE_REV=	65758
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperref
@@ -22,12 +22,11 @@ DEPENDS+=	tex-kvsetkeys-[0-9]*:../../print/tex-kvsetkeys
 DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
 DEPENDS+=	tex-letltxmacro-[0-9]*:../../print/tex-letltxmacro
 DEPENDS+=	tex-ltxcmds-[0-9]*:../../print/tex-ltxcmds
-DEPENDS+=	tex-oberdiek>=2009nb1:../../print/tex-oberdiek
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
 DEPENDS+=	tex-refcount-[0-9]*:../../print/tex-refcount
 DEPENDS+=	tex-rerunfilecheck-[0-9]*:../../print/tex-rerunfilecheck
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
-DEPENDS+=	tex-url>=3.2:../../print/tex-url
+DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
 .include "../../print/texlive/package.mk"
