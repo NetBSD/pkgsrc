@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2118 2023/04/09 06:41:38 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2119 2023/04/09 06:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed print/tex-uptex-doc [markd 2023-04-09]
 	Updated textproc/tex-xindy to 2.5.1.65958 [markd 2023-04-09]
 	Updated textproc/tex-xindy-doc to 2.5.1.65958 [markd 2023-04-09]
+	Updated multimedia/ffmpeg5 to 5.1.3 [wiz 2023-04-09]
