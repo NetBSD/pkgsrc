@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/01/29 21:14:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/04/09 06:55:44 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg5/}
-PKGREVISION=	4
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Decoding, encoding and streaming software (v5.x)
@@ -15,7 +14,7 @@ INSTALLATION_DIRS=	lib/ffmpeg5 share/doc/ffmpeg5 share/examples/ffmpeg5
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ARGS+=	--enable-cross-compile
 CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
