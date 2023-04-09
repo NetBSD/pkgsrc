@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/07 18:28:04 nros Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/09 06:13:52 wiz Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
@@ -29,11 +29,11 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediarecord
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformscreencapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiomediadevices_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosink_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosource_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulsehelpers_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiomediadevices_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosink_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosource_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulsehelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsamplecache_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
