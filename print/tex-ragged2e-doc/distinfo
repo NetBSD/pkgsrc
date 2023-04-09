@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/09 07:46:52 markd Exp $
+$NetBSD: distinfo,v 1.6 2023/04/09 12:49:28 markd Exp $
 
-BLAKE2s (ragged2e.doc.r61313.tar.xz) = b108025dd5af69a91c882df937cc3bd9b9dd404c0ecc14ca49305632163907eb
-SHA512 (ragged2e.doc.r61313.tar.xz) = 0b0c412d7ba7d55e7bf2d64c98c2d4da50faae7a6bbc4e2d53b144ca7ebd91e5cde7d21a948b427184b773ac7f9fd3b32f7c8b6700f353ab80130de46c1b0306
-Size (ragged2e.doc.r61313.tar.xz) = 676844 bytes
+BLAKE2s (ragged2e.doc.r66760.tar.xz) = 4dc66faf18337bdd5197e33bcb1a27175fe7d0ec2806d2c8de750608229cc81e
+SHA512 (ragged2e.doc.r66760.tar.xz) = 93925d55a32192332be4d1c78cf0ab71700038d39f1040434280f8337296e04b8c4219700a82f78b168e03787f1f0f40d9462913bae1669434cbce6f44e8485f
+Size (ragged2e.doc.r66760.tar.xz) = 689076 bytes
