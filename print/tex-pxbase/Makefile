@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/06/06 22:15:38 markd Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/09 06:11:04 markd Exp $
 
 DISTNAME=	pxbase
-PKGNAME=	tex-${DISTNAME}-1.3
-TEXLIVE_REV=	59473
+PKGNAME=	tex-${DISTNAME}-1.4
+TEXLIVE_REV=	66187
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxbase
