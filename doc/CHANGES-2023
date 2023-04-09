@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2129 2023/04/09 11:16:12 plunky Exp $
+$NetBSD: CHANGES-2023,v 1.2130 2023/04/09 13:04:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3005,3 +3005,29 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/qt6-qtgrpc version 6.5.0 [nros 2023-04-09]
 	Added multimedia/svt-av1 version 1.4.1 [plunky 2023-04-09]
 	Updated multimedia/handbrake to 1.6.1 [plunky 2023-04-09]
+	Updated print/tex-context to 2023 [markd 2023-04-09]
+	Updated print/tex-context-doc to 2023 [markd 2023-04-09]
+	Updated print/tex-cweb to 4.3.66770 [markd 2023-04-09]
+	Updated print/tex-cweb-doc to 4.3.66770 [markd 2023-04-09]
+	Updated print/tex-ifptex to 2.2c [markd 2023-04-09]
+	Updated print/tex-ifptex-doc to 2.2c [markd 2023-04-09]
+	Updated devel/tex-l3backend to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3backend-doc to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3experimental to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3kernel to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3kernel-doc to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3packages to 2023 [markd 2023-04-09]
+	Updated devel/tex-l3packages-doc to 2023 [markd 2023-04-09]
+	Updated textproc/tex-lwarp to 0.911 [markd 2023-04-09]
+	Updated textproc/tex-lwarp-doc to 0.911 [markd 2023-04-09]
+	Updated print/tex-make4ht to 0.3m [markd 2023-04-09]
+	Updated print/tex-make4ht-doc to 0.3m [markd 2023-04-09]
+	Updated print/tex-ragged2e to 3.5 [markd 2023-04-09]
+	Updated print/tex-siunitx to 3.2.4 [markd 2023-04-09]
+	Updated print/tex-siunitx-doc to 3.2.4 [markd 2023-04-09]
+	Updated print/tex-tex4ebook to 0.3j [markd 2023-04-09]
+	Updated print/tex-tex4ebook-doc to 0.3j [markd 2023-04-09]
+	Updated print/tex-tex4ht to 2023 [markd 2023-04-09]
+	Updated print/tex-tex4ht-doc to 2023 [markd 2023-04-09]
+	Updated devel/tex-tlshell to 2023 [markd 2023-04-09]
+	Updated devel/tex-tlshell-doc to 2023 [markd 2023-04-09]
