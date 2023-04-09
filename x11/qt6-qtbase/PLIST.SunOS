@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2023/04/09 08:58:51 nros Exp $
+qt6/include/QtDeviceDiscoverySupport/${PKGVERSION}/QtDeviceDiscoverySupport/private/qdevicediscovery_dummy_p.h
