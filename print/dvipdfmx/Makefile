@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2022/04/17 10:36:43 markd Exp $
+# $NetBSD: Makefile,v 1.56 2023/04/10 23:47:07 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	dvipdfmx-20211117
+PKGNAME=	dvipdfmx-20220710
 CATEGORIES=	print converters
 
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
