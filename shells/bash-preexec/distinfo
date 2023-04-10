@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/10 13:59:38 schmonz Exp $
+
+BLAKE2s (bash-preexec-0.5.0.tar.gz) = aa7a6636a50ffe187986953d0c70bd045feec4a71e6fdf19a9de903218d2eb99
+SHA512 (bash-preexec-0.5.0.tar.gz) = 15ef6990a04a2b58d8fa73d113f2377237e79085bc1eadef417cf505d63b5ba9bf6172ed3434024862bf16b22c9a1dbf1bc7d198e027502cb2c001e614473a6b
+Size (bash-preexec-0.5.0.tar.gz) = 10008 bytes
