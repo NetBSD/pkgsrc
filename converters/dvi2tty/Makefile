@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/04/17 10:28:07 markd Exp $
+# $NetBSD: Makefile,v 1.24 2023/04/10 23:40:34 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	dvi2tty-6.0.0
-PKGREVISION=	6
+PKGNAME=	dvi2tty-6.0.2
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
