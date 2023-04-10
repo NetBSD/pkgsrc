@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/10 13:59:38 schmonz Exp $
+share/bash-preexec/bash-preexec.sh
