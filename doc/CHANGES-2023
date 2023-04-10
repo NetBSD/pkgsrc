@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2144 2023/04/10 15:18:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2145 2023/04/10 15:19:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3045,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/jo to 1.9nb1 [schmonz 2023-04-10]
 	Added shells/bash-preexec version 0.5.0 [schmonz 2023-04-10]
 	Updated net/yaydl to 0.12.2 [pin 2023-04-10]
+	Updated audio/termusic to 0.7.10 [pin 2023-04-10]
