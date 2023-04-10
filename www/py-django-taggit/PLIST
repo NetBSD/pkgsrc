@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/25 04:55:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/10 20:03:15 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,8 +17,11 @@ ${PYSITELIB}/taggit/apps.pyo
 ${PYSITELIB}/taggit/forms.py
 ${PYSITELIB}/taggit/forms.pyc
 ${PYSITELIB}/taggit/forms.pyo
+${PYSITELIB}/taggit/locale/ar/LC_MESSAGES/django.mo
+${PYSITELIB}/taggit/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/cs/LC_MESSAGES/django.po
+${PYSITELIB}/taggit/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/de/LC_MESSAGES/django.po
@@ -30,6 +33,8 @@ ${PYSITELIB}/taggit/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/taggit/locale/fa/LC_MESSAGES/django.mo
+${PYSITELIB}/taggit/locale/fa/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/fi/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/fi/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/fr/LC_MESSAGES/django.mo
@@ -50,6 +55,8 @@ ${PYSITELIB}/taggit/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/tr/LC_MESSAGES/django.po
+${PYSITELIB}/taggit/locale/uk/LC_MESSAGES/django.mo
+${PYSITELIB}/taggit/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/managers.py
@@ -64,12 +71,21 @@ ${PYSITELIB}/taggit/migrations/0002_auto_20150616_2121.pyo
 ${PYSITELIB}/taggit/migrations/0003_taggeditem_add_unique_index.py
 ${PYSITELIB}/taggit/migrations/0003_taggeditem_add_unique_index.pyc
 ${PYSITELIB}/taggit/migrations/0003_taggeditem_add_unique_index.pyo
+${PYSITELIB}/taggit/migrations/0004_alter_taggeditem_content_type_alter_taggeditem_tag.py
+${PYSITELIB}/taggit/migrations/0004_alter_taggeditem_content_type_alter_taggeditem_tag.pyc
+${PYSITELIB}/taggit/migrations/0004_alter_taggeditem_content_type_alter_taggeditem_tag.pyo
+${PYSITELIB}/taggit/migrations/0005_auto_20220424_2025.py
+${PYSITELIB}/taggit/migrations/0005_auto_20220424_2025.pyc
+${PYSITELIB}/taggit/migrations/0005_auto_20220424_2025.pyo
 ${PYSITELIB}/taggit/migrations/__init__.py
 ${PYSITELIB}/taggit/migrations/__init__.pyc
 ${PYSITELIB}/taggit/migrations/__init__.pyo
 ${PYSITELIB}/taggit/models.py
 ${PYSITELIB}/taggit/models.pyc
 ${PYSITELIB}/taggit/models.pyo
+${PYSITELIB}/taggit/serializers.py
+${PYSITELIB}/taggit/serializers.pyc
+${PYSITELIB}/taggit/serializers.pyo
 ${PYSITELIB}/taggit/utils.py
 ${PYSITELIB}/taggit/utils.pyc
 ${PYSITELIB}/taggit/utils.pyo
