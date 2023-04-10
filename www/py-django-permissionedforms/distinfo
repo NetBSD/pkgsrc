@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/10 20:10:51 joerg Exp $
+
+BLAKE2s (django-permissionedforms-0.1.tar.gz) = 7cb3ddb385d2f3dbef8e915bae0f7c772d0e803c9a8b989f854ec86388309db0
+SHA512 (django-permissionedforms-0.1.tar.gz) = 0c62f82e8df227cba6e4481b1a42d38f30a130cd8154d3adadf48cecf1fcef460febf2d1ac0da05c35e6cca2f4fc27ad7bc644fbc9d96652e4da8a8d2e771c8d
+Size (django-permissionedforms-0.1.tar.gz) = 7346 bytes
