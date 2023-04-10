@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2023/03/20 06:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2023/04/10 09:35:10 nros Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -101,6 +101,7 @@ SUBDIR+=	py-proj
 SUBDIR+=	py-trytond-country
 SUBDIR+=	py-trytond-google-maps
 SUBDIR+=	qgis
+SUBDIR+=	qt6-qtpositioning
 SUBDIR+=	shapelib
 SUBDIR+=	spatialindex
 SUBDIR+=	tex-pst-geo
