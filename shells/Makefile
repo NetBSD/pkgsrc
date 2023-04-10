@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/03/15 16:47:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.74 2023/04/10 13:59:40 schmonz Exp $
 #
 
 COMMENT=	Shells
@@ -7,6 +7,7 @@ SUBDIR+=	ast-ksh
 SUBDIR+=	autojump
 SUBDIR+=	bash
 SUBDIR+=	bash-completion
+SUBDIR+=	bash-preexec
 SUBDIR+=	bash2
 SUBDIR+=	bash2-doc
 SUBDIR+=	bosh
