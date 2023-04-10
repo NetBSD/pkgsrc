@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2023/01/29 21:17:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.112 2023/04/10 23:49:19 markd Exp $
 
-PKGREVISION= 2
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	luatex-1.15.0
+PKGNAME=	luatex-1.16.0
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
@@ -11,6 +10,7 @@ COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/lua53
+EXTRACT_ELEMENTS+=	${DISTNAME}/libs/potrace
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/pplib
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
@@ -59,6 +59,7 @@ CONFIGURE_ARGS+=	--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 CONFIGURE_ARGS+=	--without-x
 
 CONFIGURE_DIRS=		libs/lua53
+CONFIGURE_DIRS+=	libs/potrace
 CONFIGURE_DIRS+=	libs/pplib
 CONFIGURE_DIRS+=	texk/web2c
 
