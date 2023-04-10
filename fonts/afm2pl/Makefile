@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2022/04/17 10:29:21 markd Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/10 23:41:30 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	afm2pl-0.7.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
