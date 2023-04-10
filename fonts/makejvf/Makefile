@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/04/17 10:31:18 markd Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/10 23:43:15 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	makejvf-20220121
+PKGNAME=	makejvf-20220723
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
