@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1698 2023/03/31 01:18:05 joerg Exp $
+# $NetBSD: Makefile,v 1.1699 2023/04/10 20:13:14 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -711,6 +711,7 @@ SUBDIR+=	py-django-kronos
 SUBDIR+=	py-django-localflavor
 SUBDIR+=	py-django-modelcluster
 SUBDIR+=	py-django-mptt
+SUBDIR+=	py-django-permissionedforms
 SUBDIR+=	py-django-phonenumber-field
 SUBDIR+=	py-django-photologue
 SUBDIR+=	py-django-polymorphic
