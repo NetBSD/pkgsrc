@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/02/25 09:11:44 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/10 15:20:35 pin Exp $
 
-DISTNAME=	diffr-0.1.4
+DISTNAME=	diffr-0.1.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mookid/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
