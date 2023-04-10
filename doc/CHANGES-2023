@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2140 2023/04/10 09:47:36 nros Exp $
+$NetBSD: CHANGES-2023,v 1.2141 2023/04/10 13:31:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXfixes to 6.0.1 [wiz 2023-04-09]
 	Added geography/qt6-qtpositioning version 6.5.0 [nros 2023-04-10]
 	Added geography/qt6-qtlocation version 6.5.0 [nros 2023-04-10]
+	Updated devel/ruby-msgpack to 1.7.0 [taca 2023-04-10]
