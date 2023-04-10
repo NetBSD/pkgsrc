@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/04/09 10:03:18 nros Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/10 09:50:00 nros Exp $
 
 DISTNAME=	qt6-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	"meta-package" for version 6 of the QT GUI C++ toolkit
 
@@ -23,9 +23,11 @@ DEPENDS+=	qt6-qtgrpc-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtgrpc
 DEPENDS+=	qt6-qthttpserver-${QTVERSION}{,nb[0-9]*}:../../www/qt6-qthttpserver
 DEPENDS+=	qt6-qtimageformats-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtimageformats
 DEPENDS+=	qt6-qtlanguageserver-${QTVERSION}{,nb[0-9]*}:../../lang/qt6-qtlanguageserver
+DEPENDS+=	qt6-qtlocation-${QTVERSION}{,nb[0-9]*}:../../geography/qt6-qtlocation
 DEPENDS+=	qt6-qtlottie-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtlottie
 DEPENDS+=	qt6-qtmultimedia-${QTVERSION}{,nb[0-9]*}:../../multimedia/qt6-qtmultimedia
 DEPENDS+=	qt6-qtnetworkauth-${QTVERSION}{,nb[0-9]*}:../../security/qt6-qtnetworkauth
+DEPENDS+=	qt6-qtpositioning-${QTVERSION}{,nb[0-9]*}:../../geography/qt6-qtpositioning
 DEPENDS+=	qt6-qtquick3d-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtquick3d
 DEPENDS+=	qt6-qtquicktimeline-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtquicktimeline
 DEPENDS+=	qt6-qtremoteobjects-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtremoteobjects
