@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/04/09 21:59:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/04/11 00:43:34 markd Exp $
 share/texmf-dist/doc/latex/oberdiek/README.md
 share/texmf-dist/doc/latex/oberdiek/aliascnt.pdf
 share/texmf-dist/doc/latex/oberdiek/bmpsize.pdf
@@ -25,9 +25,6 @@ share/texmf-dist/doc/latex/oberdiek/hyphsubst.pdf
 share/texmf-dist/doc/latex/oberdiek/ifdraft.pdf
 share/texmf-dist/doc/latex/oberdiek/iflang.pdf
 share/texmf-dist/doc/latex/oberdiek/oberdiek.pdf
-share/texmf-dist/doc/latex/oberdiek/pagegrid.pdf
-share/texmf-dist/doc/latex/oberdiek/pdfcol.pdf
-share/texmf-dist/doc/latex/oberdiek/pdfcolfoot.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcolparallel.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcolparcolumns.pdf
 share/texmf-dist/doc/latex/oberdiek/pdfcrypt.pdf
