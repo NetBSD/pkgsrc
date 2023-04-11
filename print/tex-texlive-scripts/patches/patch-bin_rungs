@@ -1,15 +1,15 @@
-$NetBSD: patch-bin_rungs,v 1.2 2020/05/10 03:56:44 markd Exp $
+$NetBSD: patch-bin_rungs,v 1.3 2023/04/11 00:09:23 markd Exp $
 
 use full path for commands
 
---- bin/rungs.orig	2013-04-25 17:29:00.000000000 +0000
+--- bin/rungs.orig	2022-09-11 19:08:51.000000000 +0000
 +++ bin/rungs
-@@ -23,7 +23,7 @@ end
- if os.type == 'windows' then
-    command={'gswin32c'}
+@@ -38,7 +38,7 @@ if os.type == 'windows' then
+       command = {'gswin32c'}
+    end
  else
--   command={'gs'}
-+   command={'@GS@'}
+-   command = {'gs'}
++   command = {'@GS@'}
  end
  
  for i=1, #arg do
