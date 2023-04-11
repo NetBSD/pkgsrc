@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 11:06:18 wen Exp $
+
+BLAKE2s (DateTime-HiRes-0.04.tar.gz) = 50999fe4b94b7c21ac1ef94e1e57cdd695ff1a01956baae16c0560f878c53dd0
+SHA512 (DateTime-HiRes-0.04.tar.gz) = 5e0a8c3e0efd4b50a6057e56200735c5457edbc99005cea4620f2b6c095c47b283b62b2d6f06a8ddc2886c9020cb0e32f9fb33c8fd711210c67bc8391fa57bc3
+Size (DateTime-HiRes-0.04.tar.gz) = 27696 bytes
