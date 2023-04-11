@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:22:27 nia Exp $
+$NetBSD: distinfo,v 1.22 2023/04/11 13:27:09 wen Exp $
 
-BLAKE2s (Filter-1.60.tar.gz) = 68f4df54ddc4028cb3117308b4131966156366cb3f80f9bf902bc5d290bf2ff3
-SHA512 (Filter-1.60.tar.gz) = be6ecb9d37c8384de34e842e1e46a24c43592cb1995178ef7a100ef8b028e506d26c044ae9fd1e4672344cbc2dae06b9136b27eced5470cfce683017129cf248
-Size (Filter-1.60.tar.gz) = 95351 bytes
+BLAKE2s (Filter-1.64.tar.gz) = 379936f804f6c38a660b29e54bb69fc9b3d0e4dc922d845a64bc02dfb5d65106
+SHA512 (Filter-1.64.tar.gz) = c4b8316f6ec1b7263f9df973ccbb2f939a3296cec9cd644f67a10b0c71679db19afcf1a52601cde028a309655e9241727e76cd96091f7c3ac0514f145790d4a0
+Size (Filter-1.64.tar.gz) = 96733 bytes
