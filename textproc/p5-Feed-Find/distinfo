@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/31 08:35:05 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2023/04/11 13:17:44 wen Exp $
 
-BLAKE2s (Feed-Find-0.12.tar.gz) = d365fedeb04c384fcfe9ef29ec1ab5b1908a75f64ada635209554c5be0ac9976
-SHA512 (Feed-Find-0.12.tar.gz) = 7449563b99b85e2db8ec6662fe1b558bb78c591a205f58d0df6a3f1e786ffbece84150afb96fc71105a7de60bc82b68cfa1402c4d73d677773d4e0a687b66e97
-Size (Feed-Find-0.12.tar.gz) = 47396 bytes
+BLAKE2s (Feed-Find-0.13.tar.gz) = f697b2f693ca85bd791b5f9f989ba119225f2bbda78eb631d142d0738d31cd5b
+SHA512 (Feed-Find-0.13.tar.gz) = 436438c361a7c228af8c5d31200f75b3eab8dded20040d9cd019384df28bd2348ca8c2f8f6cc3ae4b6dee90afba7c8ed911016fd4f8da46cfe8ffccf52eecd18
+Size (Feed-Find-0.13.tar.gz) = 47483 bytes
 SHA1 (patch-Makefile.PL) = 71d3938fd552c62ceed5a88855304b59069b5e85
