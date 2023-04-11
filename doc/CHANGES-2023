@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2151 2023/04/11 00:16:09 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2152 2023/04/11 03:35:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3088,3 +3088,25 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-hyphen-base to 2023 [markd 2023-04-11]
 	Updated print/tex-dehyph-exptl to 0.9 [markd 2023-04-11]
 	Updated print/tex-dehyph-exptl-doc to 0.9 [markd 2023-04-11]
+	Updated print/tex-texlive.infra to 2023 [markd 2023-04-11]
+	Updated print/tex-oberdiek to 2022 [markd 2023-04-11]
+	Updated print/tex-oberdiek-doc to 2022 [markd 2023-04-11]
+	Added print/tex-pdfcolfoot version 1.4 [markd 2023-04-11]
+	Added print/tex-pdfcolfoot-doc version 1.4 [markd 2023-04-11]
+	Added print/tex-context-texlive version 2023 [markd 2023-04-11]
+	Removed print/tex-context-inifile [markd 2023-04-11]
+	Removed print/tex-context-inifile-doc [markd 2023-04-11]
+	Added fonts/tex-evangelion-jfm version 1.0.0b [markd 2023-04-11]
+	Added fonts/tex-evangelion-jfm-doc version 1.0.0b [markd 2023-04-11]
+	Added graphics/tex-hershey-mp version 2022.1.0 [markd 2023-04-11]
+	Added graphics/tex-hershey-mp-doc version 2022.1.0 [markd 2023-04-11]
+	Added graphics/tex-mpchess version 0.4 [markd 2023-04-11]
+	Added graphics/tex-mpchess-doc version 0.4 [markd 2023-04-11]
+	Added print/tex-asternote version 1.1 [markd 2023-04-11]
+	Added print/tex-asternote-doc version 1.1 [markd 2023-04-11]
+	Added math/tex-jpneduenumerate version 1.2 [markd 2023-04-11]
+	Added math/tex-jpneduenumerate-doc version 1.2 [markd 2023-04-11]
+	Added math/tex-jpnedumathsymbols version 1.1 [markd 2023-04-11]
+	Added math/tex-jpnedumathsymbols-doc version 1.1 [markd 2023-04-11]
+	Added math/tex-japanese-mathformulas version 1.0.2 [markd 2023-04-11]
+	Added math/tex-japanese-mathformulas-doc version 1.0.2 [markd 2023-04-11]
