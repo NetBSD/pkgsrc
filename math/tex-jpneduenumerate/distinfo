@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 02:57:19 markd Exp $
+
+BLAKE2s (jpneduenumerate.r63893.tar.xz) = 756d393c8bbaf88296c98c13c7c98ece955aadf6010f5491d4fcc525e5e5ecb7
+SHA512 (jpneduenumerate.r63893.tar.xz) = 10bb936cbddc6e88979ceed208bdba424d4e4c9c388cadd3a9b84a767c59ea43362f11092907f98c16696f07134ed66765a8bc7b02ea0a8fbe9eb7b814760780
+Size (jpneduenumerate.r63893.tar.xz) = 2720 bytes
