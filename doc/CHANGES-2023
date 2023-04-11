@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2165 2023/04/11 12:27:03 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2166 2023/04/11 12:32:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3125,3 +3125,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/p5-Time-Warp to 0.55 [wen 2023-04-11]
 	Updated textproc/p5-ack to 3.7.0 [wen 2023-04-11]
 	Updated textproc/p5-Alien-Hunspell to 0.17 [wen 2023-04-11]
+	Added print/bibtex8 version 4.00 [markd 2023-04-11]
+	Removed print/tex-bibtex8 successor print/bibtex8 [markd 2023-04-11]
+	Added print/bibtexu version 4.00 [markd 2023-04-11]
