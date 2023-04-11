@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2156 2023/04/11 08:42:23 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2157 2023/04/11 09:56:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-Willow to 1.5 [adam 2023-04-11]
 	Updated geography/echomap to 0.7.3 [pin 2023-04-11]
 	Updated sysutils/navi to 2.22.1 [pin 2023-04-11]
+	Added time/p5-Test-MockTime-HiRes version 0.08 [wen 2023-04-11]
