@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2161 2023/04/11 11:48:19 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2162 2023/04/11 11:55:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3121,3 +3121,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/p5-Date-ICal to 2.680 [wen 2023-04-11]
 	Added time/p5-DateTime-HiRes version 0.04 [wen 2023-04-11]
 	Updated time/p5-DateTime-Format-Natural to 1.16 [wen 2023-04-11]
+	Updated time/p5-DateTimeX-Easy to 0.091 [wen 2023-04-11]
