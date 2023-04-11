@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2023/03/29 19:31:15 pin Exp $
+# $NetBSD: Makefile,v 1.405 2023/04/11 01:45:10 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -518,6 +518,8 @@ SUBDIR+=	tex-euro-ce-doc
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-eurosym-doc
 SUBDIR+=	tex-euxm
+SUBDIR+=	tex-evangelion-jfm
+SUBDIR+=	tex-evangelion-jfm-doc
 SUBDIR+=	tex-fandol
 SUBDIR+=	tex-fandol-doc
 SUBDIR+=	tex-fbb

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 01:45:10 markd Exp $
+share/texmf-dist/tex/luatex/evangelion-jfm/jfm-eva.lua
