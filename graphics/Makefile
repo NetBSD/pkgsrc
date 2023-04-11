@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1007 2023/04/06 12:33:17 joerg Exp $
+# $NetBSD: Makefile,v 1.1008 2023/04/11 02:29:58 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -675,6 +675,8 @@ SUBDIR+=	tex-graphics-pln
 SUBDIR+=	tex-graphics-pln-doc
 SUBDIR+=	tex-hatching
 SUBDIR+=	tex-hatching-doc
+SUBDIR+=	tex-hershey-mp
+SUBDIR+=	tex-hershey-mp-doc
 SUBDIR+=	tex-incgraph
 SUBDIR+=	tex-incgraph-doc
 SUBDIR+=	tex-latexmp
@@ -705,6 +707,8 @@ SUBDIR+=	tex-mparrows
 SUBDIR+=	tex-mparrows-doc
 SUBDIR+=	tex-mpattern
 SUBDIR+=	tex-mpattern-doc
+SUBDIR+=	tex-mpchess
+SUBDIR+=	tex-mpchess-doc
 SUBDIR+=	tex-mpcolornames
 SUBDIR+=	tex-mpcolornames-doc
 SUBDIR+=	tex-mpgraphics
