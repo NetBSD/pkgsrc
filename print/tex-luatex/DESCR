@@ -1,2 +1,7 @@
-This package manages the new and extended features and resources that
-LuaTeX provides.  Examples are attributes and catcode tables.
+LuaTeX is a greatly extended version of pdfTeX using Lua as an
+embedded scripting language. The LuaTeX project's main
+objective is to provide an open and configurable variant of TeX
+while at the same time offering substantive backward
+compatibility. LuaTeX uses Unicode (as UTF-8) as its default
+input encoding, and is able to use modern (OpenType and
+TrueType) fonts (for both text and mathematics).
