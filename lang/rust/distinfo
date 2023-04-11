@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.156 2023/04/08 18:18:11 he Exp $
+$NetBSD: distinfo,v 1.157 2023/04/11 19:56:11 jperkin Exp $
 
-BLAKE2s (rust-1.66.0-x86_64-unknown-illumos.tar.gz) = 813bd7c568442a2c761f7688db20399b9e112611ad8a7a2e4f1eb9e72d774f0f
-SHA512 (rust-1.66.0-x86_64-unknown-illumos.tar.gz) = 324b1e3c27e1e4dffb86e2591f87fe5f4fb1a293f30c304287c3472da1ebf432e99f05eb9f2160cf28d818a7dc4418f2a85927cd0b13eda8d4cd475319c653b7
-Size (rust-1.66.0-x86_64-unknown-illumos.tar.gz) = 217733468 bytes
 BLAKE2s (rust-1.67.1-aarch64-apple-darwin.tar.gz) = 7b491757a54e5066e81e2af89d3eb7ab417b9884b0e73278b82072804b0f1754
 SHA512 (rust-1.67.1-aarch64-apple-darwin.tar.gz) = 066f088965f4f7862f2e2167aeed90e118197b68c1945704ccb2ace509cfcaa9e21643875a598576602714ff6c0c6d2b0b135e4ad9e0ab925a49806d51b36c91
 Size (rust-1.67.1-aarch64-apple-darwin.tar.gz) = 242238575 bytes
@@ -57,6 +54,9 @@ Size (rust-1.67.1-x86_64-unknown-linux-gnu.tar.gz) = 323336080 bytes
 BLAKE2s (rust-1.67.1-x86_64-unknown-netbsd.tar.xz) = 71b5ea21404db76c60cbde929a91c756dc9ab3d62c0738c777e49b65c19c515d
 SHA512 (rust-1.67.1-x86_64-unknown-netbsd.tar.xz) = 729dd53d3fd20eac69a8402dd7667d94ac2cd503a74ac5bc425dda45e975c4f0a8c6987925436ead5ad213eb04ac872ef0977cb22275b89f1dafdce1521fc5d3
 Size (rust-1.67.1-x86_64-unknown-netbsd.tar.xz) = 185796324 bytes
+BLAKE2s (rust-1.68.2-x86_64-unknown-illumos.tar.gz) = e3c91704c4366e0db0fd073c3f7a1246fc856d2fee32a095041832f37fbd2bd2
+SHA512 (rust-1.68.2-x86_64-unknown-illumos.tar.gz) = c6326fce5d157cac6a57a28d3370dbc6fb393b9caf2dd628d30879673bba3b0bacf8de6dfe18577b3fa1fe1a0fd90ab48498c1f65fab3753cc7fd35e91cbb47b
+Size (rust-1.68.2-x86_64-unknown-illumos.tar.gz) = 224557906 bytes
 BLAKE2s (rust-std-1.67.1-aarch64-apple-darwin.tar.gz) = 523d3b7fccb68c3960b59bed19e5283fb3c4d0c40515ac9ce510be77177314e0
 SHA512 (rust-std-1.67.1-aarch64-apple-darwin.tar.gz) = 4dc57fcc19105fa9b480cc32eb02fc2332df12652790e937075313751071e8eabef1de786f288525c2f67e45f9230388dad303a08d04aeb53112e49e614a734c
 Size (rust-std-1.67.1-aarch64-apple-darwin.tar.gz) = 43513135 bytes
