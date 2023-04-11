@@ -1,10 +1,10 @@
-$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.7 2022/04/17 10:22:02 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_fmtutil.cnf,v 1.8 2023/04/11 00:01:01 markd Exp $
 
 start with nothing set. populated by TEX_FORMATS
 
---- texmf-dist/web2c/fmtutil.cnf.orig	2022-03-13 00:49:40.000000000 +0000
+--- texmf-dist/web2c/fmtutil.cnf.orig	2023-02-26 22:26:48.000000000 +0000
 +++ texmf-dist/web2c/fmtutil.cnf
-@@ -41,123 +41,3 @@
+@@ -41,115 +41,3 @@
  # 5) The entries in the main TeX Live fmtutil.cnf are created from the
  #    AddFormat directives in (ultimately) the *.tlpsrc files. Don't edit here.
  #
@@ -13,14 +13,6 @@ start with nothing set. populated by TEX_FORMATS
 -#
 -# from amstex:
 -amstex pdftex - -translate-file=cp227.tcx *amstex.ini
--#
--# from context:
--cont-en pdftex cont-usr.tex -8bit *cont-en.mkii
--cont-en xetex cont-usr.tex -8bit *cont-en.mkii
--#! cont-fr pdftex cont-usr.tex -8bit *cont-fr.mkii
--#! cont-it pdftex cont-usr.tex -8bit *cont-it.mkii
--#! cont-nl pdftex cont-usr.tex -8bit *cont-nl.mkii
--#! cont-ro pdftex cont-usr.tex -8bit *cont-ro.mkii
 -#
 -# from cslatex:
 -cslatex pdftex - -etex cslatex.ini
@@ -98,11 +90,11 @@ start with nothing set. populated by TEX_FORMATS
 -#
 -# from platex:
 -platex eptex language.dat *platex.ini
--platex-dev eptex language.dat *platex.ini
+-platex-dev euptex language.dat *platex.ini
 -#
 -# from ptex:
 -eptex eptex language.def *eptex.ini
--ptex ptex - ptex.ini
+-ptex eptex - ptex.ini
 -#
 -# from tex:
 -tex tex - tex.ini
@@ -116,7 +108,7 @@ start with nothing set. populated by TEX_FORMATS
 -#
 -# from uptex:
 -euptex euptex language.def *euptex.ini
--uptex uptex - uptex.ini
+-uptex euptex - uptex.ini
 -#
 -# from xelatex-dev:
 -xelatex-dev xetex language.dat -etex xelatex.ini
