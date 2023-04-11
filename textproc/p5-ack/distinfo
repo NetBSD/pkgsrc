@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:22:55 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/04/11 12:08:25 wen Exp $
 
-BLAKE2s (ack-v3.5.0.tar.gz) = 0c41cf9579c066d6a9846fe5528f04dd087ba3ddc0de7d638ee92bc49f30c05d
-SHA512 (ack-v3.5.0.tar.gz) = f5b9321fc62cf2ab86fa7dc933dd44245314ebd26bee2d8769f85c15fc8b4493d0757ca4430708f0ebea5692f9c73ad17cc00bc46d1f611b8489b30811df307d
-Size (ack-v3.5.0.tar.gz) = 249718 bytes
+BLAKE2s (ack-v3.7.0.tar.gz) = 07d182953d80570cc6fe0954f6f097f6e4359a35192daf01a9bef6e410ec579c
+SHA512 (ack-v3.7.0.tar.gz) = 3d97309956ce65f972a7636d195b13031f4441981d5bdddf0b67e577c32c88972f7ed02ffafbbf73c4db9a22f200f95cce9c8eb2a6f47fd60143d93469038f57
+Size (ack-v3.7.0.tar.gz) = 252426 bytes
