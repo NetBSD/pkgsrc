@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/05/30 21:27:09 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/11 08:39:19 pin Exp $
 
-DISTNAME=	echomap-0.7.2
+DISTNAME=	echomap-0.7.3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pjsier/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
