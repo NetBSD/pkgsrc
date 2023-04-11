@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.899 2023/04/11 00:48:25 markd Exp $
+# $NetBSD: Makefile,v 1.900 2023/04/11 01:26:10 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -536,8 +536,6 @@ SUBDIR+=	tex-context-gnuplot
 SUBDIR+=	tex-context-gnuplot-doc
 SUBDIR+=	tex-context-handlecsv
 SUBDIR+=	tex-context-handlecsv-doc
-SUBDIR+=	tex-context-inifile
-SUBDIR+=	tex-context-inifile-doc
 SUBDIR+=	tex-context-layout
 SUBDIR+=	tex-context-layout-doc
 SUBDIR+=	tex-context-letter
@@ -555,6 +553,7 @@ SUBDIR+=	tex-context-simplefonts
 SUBDIR+=	tex-context-simplefonts-doc
 SUBDIR+=	tex-context-simpleslides
 SUBDIR+=	tex-context-simpleslides-doc
+SUBDIR+=	tex-context-texlive
 SUBDIR+=	tex-context-title
 SUBDIR+=	tex-context-title-doc
 SUBDIR+=	tex-context-transliterator
