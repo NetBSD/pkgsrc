@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2022/04/16 01:04:50 markd Exp $
+# $NetBSD: Makefile,v 1.16 2023/04/11 02:32:11 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2022
+PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59531
+TEXLIVE_REV=	66670
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -30,6 +30,7 @@ DEPENDS+=	tex-fiziko-[0-9]*:../../graphics/tex-fiziko
 DEPENDS+=	tex-garrigues-[0-9]*:../../graphics/tex-garrigues
 DEPENDS+=	tex-gmp-[0-9]*:../../graphics/tex-gmp
 DEPENDS+=	tex-hatching-[0-9]*:../../graphics/tex-hatching
+DEPENDS+=	tex-hershey-mp-[0-9]*:../../graphics/tex-hershey-mp
 DEPENDS+=	tex-latexmp-[0-9]*:../../graphics/tex-latexmp
 DEPENDS+=	tex-mcf2graph-[0-9]*:../../graphics/tex-mcf2graph
 DEPENDS+=	tex-metago-[0-9]*:../../graphics/tex-metago
@@ -44,6 +45,7 @@ DEPENDS+=	tex-minim-hatching-[0-9]*:../../graphics/tex-minim-hatching
 DEPENDS+=	tex-mp3d-[0-9]*:../../graphics/tex-mp3d
 DEPENDS+=	tex-mparrows-[0-9]*:../../graphics/tex-mparrows
 DEPENDS+=	tex-mpattern-[0-9]*:../../graphics/tex-mpattern
+DEPENDS+=	tex-mpchess-[0-9]*:../../graphics/tex-mpchess
 DEPENDS+=	tex-mpcolornames-[0-9]*:../../graphics/tex-mpcolornames
 DEPENDS+=	tex-mpgraphics-[0-9]*:../../graphics/tex-mpgraphics
 DEPENDS+=	tex-mptrees-[0-9]*:../../graphics/tex-mptrees
