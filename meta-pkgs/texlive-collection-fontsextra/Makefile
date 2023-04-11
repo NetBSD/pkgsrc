@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2023/03/14 19:43:15 markd Exp $
+# $NetBSD: Makefile,v 1.31 2023/04/11 01:31:18 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	64952
+TEXLIVE_REV=	66805
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -171,6 +171,7 @@ DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
 # depend frimurer
 # depend garamond-libre
 # depend garamond-math
+# depend gelasio
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
 DEPENDS+=	tex-gfsartemisia-[0-9]*:../../fonts/tex-gfsartemisia
