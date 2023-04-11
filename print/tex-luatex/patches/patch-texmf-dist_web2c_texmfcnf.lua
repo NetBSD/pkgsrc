@@ -1,51 +1,30 @@
-$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.7 2022/04/17 10:22:58 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.8 2023/04/11 00:04:33 markd Exp $
 
 Set paths to texmf trees for pkgsrc.
 
---- texmf-dist/web2c/texmfcnf.lua.orig	2018-03-03 18:29:03.000000000 +0000
+--- texmf-dist/web2c/texmfcnf.lua.orig	2023-03-11 21:00:25.000000000 +0000
 +++ texmf-dist/web2c/texmfcnf.lua
-@@ -42,9 +42,11 @@ return {
-             --     "selfautoparent:",
-             -- }
+@@ -48,11 +48,13 @@ return {
+ 
+          -- TEXMFCACHE      = "$SELFAUTOPARENT/texmf-cache",
  
 +            TEXMFCNF        = "@PKG_SYSCONFDIR@",
 +
-             -- only used for FONTCONFIG_PATH & TEXMFCACHE in TeX Live
+             -- texlive
  
+             TEXMFVAR        = "home:" .. hiddentexlivepath .. "/texmf-var",
+             TEXMFCONFIG     = "home:" .. hiddentexlivepath .. "/texmf-config",
 -            TEXMFSYSVAR     = "selfautoparent:texmf-var",
 +            TEXMFSYSVAR     = "@VARBASE@/lib/texmf",
-             TEXMFVAR        = "home:.texlive2022/texmf-var",
+             TEXMFCACHE      = "$TEXMFSYSVAR;$TEXMFVAR",
  
-             -- We have only one cache path but there can be more. The first writable one
-@@ -62,10 +64,10 @@ return {
-             -- entry. This makes the tex root relocatable.
+             -- I don't like this texmf under home and texmf-home would make more sense. One never knows
+@@ -74,7 +76,7 @@ return {
+             -- texlive:
  
-             TEXMFOS         = "selfautodir:",
--            TEXMFDIST       = "selfautoparent:texmf-dist",
-+            TEXMFDIST       = "selfautodir:share/texmf-dist",
- 
--            TEXMFLOCAL      = texmflocal,
+             TEXMFDIST       = "selfautoparent:texmf-dist",
 -            TEXMFSYSCONFIG  = "selfautoparent:texmf-config",
-+            TEXMFLOCAL      = "selfautodir:share/texmf-local",
 +            TEXMFSYSCONFIG  = "@PKG_SYSCONFDIR@",
-             TEXMFFONTS      = "selfautoparent:texmf-fonts",
-             TEXMFPROJECT    = "selfautoparent:texmf-project",
  
-@@ -75,7 +77,7 @@ return {
-             -- We need texmfos for a few rare files but as I have a few more bin trees
-             -- a hack is needed. Maybe other users also have texmf-platform-new trees.
- 
--            TEXMF           = "{$TEXMFCONFIG,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFPROJECT,!!$TEXMFFONTS,!!$TEXMFLOCAL,!!$TEXMFDIST}",
-+            TEXMF           = "{$TEXMFCONFIG,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFLOCAL,!!$TEXMFDIST}",
- 
-             TEXFONTMAPS     = ".;$TEXMF/fonts/data//;$TEXMF/fonts/map/{pdftex,dvips}//",
-             ENCFONTS        = ".;$TEXMF/fonts/data//;$TEXMF/fonts/enc/{dvips,pdftex}//",
-@@ -101,7 +103,7 @@ return {
-             PYTHONINPUTS    = ".;$TEXMF/scripts/context/python",
-             RUBYINPUTS      = ".;$TEXMF/scripts/context/ruby",
-             LUAINPUTS       = ".;$TEXINPUTS;$TEXMF/scripts/context/lua//",
--            CLUAINPUTS      = ".;$SELFAUTOLOC/lib/{context,luatex,}/lua//",
-+            CLUAINPUTS      = ".;selfautodir:lib/{context,luatex,}/lua//",
- 
-             -- Not really used by MkIV so they might go away.
+             -- The texmf-local path is only used for (maybe) some additional configuration file.
  
