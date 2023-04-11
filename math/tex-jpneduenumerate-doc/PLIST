@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:57:20 markd Exp $
+share/texmf-dist/doc/latex/jpneduenumerate/README.md
+share/texmf-dist/doc/latex/jpneduenumerate/jpneduenumerate.pdf
+share/texmf-dist/doc/latex/jpneduenumerate/jpneduenumerate.tex
