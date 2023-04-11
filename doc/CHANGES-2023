@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2168 2023/04/11 13:20:56 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2169 2023/04/11 13:28:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/bibtexu version 4.00 [markd 2023-04-11]
 	Updated shells/starship to 1.14.1 [pin 2023-04-11]
 	Updated textproc/p5-Feed-Find to 0.13 [wen 2023-04-11]
+	Updated textproc/p5-Filter to 1.64 [wen 2023-04-11]
