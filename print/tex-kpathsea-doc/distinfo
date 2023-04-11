@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/04/11 00:01:01 markd Exp $
+$NetBSD: distinfo,v 1.25 2023/04/11 12:39:21 markd Exp $
 
-BLAKE2s (kpathsea.doc.r66209.tar.xz) = 791a21f53fe318cbc1a642f8b499fb33745e6394a9bd129fa3bc852222cc93fb
-SHA512 (kpathsea.doc.r66209.tar.xz) = b29518a446a11a962ebf795742b947179e5f99653f1be35dcf1cbabaf086d0f0550523cd26567232a475a618bf1cf815d05d0169df3c40d3438759e4a95a78c2
-Size (kpathsea.doc.r66209.tar.xz) = 1040296 bytes
+BLAKE2s (kpathsea.doc.r66822.tar.xz) = 6320a9c62a6974320e8ae5807070f235c437d9f82d499f605689892c0ad80bfb
+SHA512 (kpathsea.doc.r66822.tar.xz) = 132eb981e10b3a18586d4a4cf70afff2f40aca46a6210c85885341bb26ee316c3f952fef19fde5560e044f695cc910611fbf25858acd626259632403e82c044f
+Size (kpathsea.doc.r66822.tar.xz) = 1040300 bytes
