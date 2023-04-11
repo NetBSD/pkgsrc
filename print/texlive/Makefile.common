@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/04/10 23:39:27 markd Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/04/11 12:48:03 markd Exp $
 # used by converters/dvi2tty/Makefile
 # used by fonts/afm2pl/Makefile
 # used by fonts/gsftopkk/Makefile
@@ -7,6 +7,8 @@
 # used by fonts/ps2pkm/Makefile
 # used by fonts/ttf2pk/Makefile
 # used by fonts/ttfdump/Makefile
+# used by print/bibtex8/Makefile
+# used by print/bibtexu/Makefile
 # used by print/cjkutils/Makefile
 # used by print/dvidvi/Makefile
 # used by print/dviljk/Makefile
