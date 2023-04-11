@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/04/09 21:59:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/04/11 00:43:34 markd Exp $
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
 share/texmf-dist/tex/generic/oberdiek/engord.sty
@@ -6,7 +6,6 @@ share/texmf-dist/tex/generic/oberdiek/eolgrab.sty
 share/texmf-dist/tex/generic/oberdiek/fibnum.sty
 share/texmf-dist/tex/generic/oberdiek/hyphsubst.sty
 share/texmf-dist/tex/generic/oberdiek/iflang.sty
-share/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 share/texmf-dist/tex/generic/oberdiek/pdfcrypt.sty
 share/texmf-dist/tex/generic/oberdiek/pdfrender.sty
 share/texmf-dist/tex/generic/oberdiek/protecteddef.sty
@@ -33,8 +32,6 @@ share/texmf-dist/tex/latex/oberdiek/hypbmsec.sty
 share/texmf-dist/tex/latex/oberdiek/hypcap.sty
 share/texmf-dist/tex/latex/oberdiek/hypgotoe.sty
 share/texmf-dist/tex/latex/oberdiek/ifdraft.sty
-share/texmf-dist/tex/latex/oberdiek/pagegrid.sty
-share/texmf-dist/tex/latex/oberdiek/pdfcolfoot.sty
 share/texmf-dist/tex/latex/oberdiek/pdfcolparallel.sty
 share/texmf-dist/tex/latex/oberdiek/pdfcolparcolumns.sty
 share/texmf-dist/tex/latex/oberdiek/resizegather.sty
