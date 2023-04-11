@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/04/07 12:58:00 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/04/11 11:20:51 mef Exp $
 include/gnuradio/channels/api.h
 include/gnuradio/channels/channel_model.h
 include/gnuradio/channels/channel_model2.h
@@ -45,7 +45,6 @@ ${PYSITELIB}/gnuradio/channels/quantizer.py
 ${PYSITELIB}/gnuradio/channels/quantizer.pyc
 ${PYSITELIB}/gnuradio/channels/quantizer.pyo
 share/doc/gnuradio-${PKGVERSION}/README.channels
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/examples/channels/channel_tone_response.grc
 share/gnuradio/examples/channels/demo_gmsk.grc
 share/gnuradio/examples/channels/demo_ofdm.grc

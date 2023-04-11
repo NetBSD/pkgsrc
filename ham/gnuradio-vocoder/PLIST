@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/04/07 12:58:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/04/11 11:20:52 mef Exp $
 include/gnuradio/vocoder/alaw_decode_bs.h
 include/gnuradio/vocoder/alaw_encode_sb.h
 include/gnuradio/vocoder/api.h
@@ -46,7 +46,6 @@ share/gnuradio/examples/vocoder/gsm_audio_loopback.py
 share/gnuradio/examples/vocoder/loopback-codec2.grc
 share/gnuradio/examples/vocoder/loopback-gsmfr.grc
 share/gnuradio/examples/vocoder/ulaw_audio_loopback.py
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/vocoder.tree.yml
 share/gnuradio/grc/blocks/vocoder_alaw_decode_bs.block.yml
 share/gnuradio/grc/blocks/vocoder_alaw_encode_sb.block.yml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/04/07 12:58:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/04/11 11:20:51 mef Exp $
 bin/polar_channel_construction
 include/gnuradio/fec/alist.h
 include/gnuradio/fec/api.h
@@ -172,7 +172,6 @@ share/gnuradio/fec/ldpc/n_1100_k_0442_gap_24.alist
 share/gnuradio/fec/ldpc/n_1300_k_0522_gap_30.alist
 share/gnuradio/fec/ldpc/n_1800_k_0902_gap_28.alist
 share/gnuradio/fec/ldpc/simple_g_matrix.alist
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/fec.tree.yml
 share/gnuradio/grc/blocks/fec_async_decoder.block.yml
 share/gnuradio/grc/blocks/fec_async_encoder.block.yml
