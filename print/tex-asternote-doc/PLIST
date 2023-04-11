@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:53:43 markd Exp $
+share/texmf-dist/doc/latex/asternote/README.md
+share/texmf-dist/doc/latex/asternote/asternote.pdf
+share/texmf-dist/doc/latex/asternote/asternote.tex
