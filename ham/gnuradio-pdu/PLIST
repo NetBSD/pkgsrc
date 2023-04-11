@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/07 12:58:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/11 11:20:52 mef Exp $
 include/gnuradio/pdu/add_system_time.h
 include/gnuradio/pdu/api.h
 include/gnuradio/pdu/pdu_filter.h
@@ -32,7 +32,6 @@ share/gnuradio/examples/pdu/pdu_tools_demo.grc
 share/gnuradio/examples/pdu/simple_pdu_to_stream_example.grc
 share/gnuradio/examples/pdu/tags_to_pdu_example.grc
 share/gnuradio/examples/pdu/take_skip_to_pdu_example.grc
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/pdu.tree.yml
 share/gnuradio/grc/blocks/pdu_add_system_time.block.yml
 share/gnuradio/grc/blocks/pdu_pdu_filter.block.yml
