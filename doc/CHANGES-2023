@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2169 2023/04/11 13:28:07 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2170 2023/04/11 15:04:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3131,3 +3131,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/starship to 1.14.1 [pin 2023-04-11]
 	Updated textproc/p5-Feed-Find to 0.13 [wen 2023-04-11]
 	Updated textproc/p5-Filter to 1.64 [wen 2023-04-11]
+	Updated shells/oh-my-posh to 14.29.1 [schmonz 2023-04-11]
