@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.147 2023/01/29 21:14:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.148 2023/04/11 05:45:44 adam Exp $
 
-DISTNAME=	librsvg-2.54.5
-PKGREVISION=	2
+DISTNAME=	librsvg-2.56.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -43,9 +42,7 @@ TEST_TARGET=		check
 
 # librsvg broken on aarch64 by rustc>=1.54.0 including 1.57.0 due to:
 # libtool: error: object name conflicts in archive
-.if \
-  !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)	|| \
-  !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 RUSTFLAGS+=	-C target-feature=-lse
 PKG_LIBTOOL=	${WRKDIR}/libtool
 pre-configure:
