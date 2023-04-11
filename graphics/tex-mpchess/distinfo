@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 02:27:56 markd Exp $
+
+BLAKE2s (mpchess.r66795.tar.xz) = 8ec7b1b7843527e2797d4c06cd4edcb6ceae4f50b0e9589441528bf61f527b31
+SHA512 (mpchess.r66795.tar.xz) = f24a5294e40a0156eacf47679b2aa3014ce93af5f74022270a34fc068f6d84deb861f0cf2bad6219ec333ed700d55e73dfc86aeb71536a669dcad56b3e116bc0
+Size (mpchess.r66795.tar.xz) = 19908 bytes

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:27:56 markd Exp $
+share/texmf-dist/doc/metapost/mpchess/LICENSE
+share/texmf-dist/doc/metapost/mpchess/README.md
+share/texmf-dist/doc/metapost/mpchess/ctan.bib
+share/texmf-dist/doc/metapost/mpchess/fond.pdf
+share/texmf-dist/doc/metapost/mpchess/mpchess-doc-en.pdf
+share/texmf-dist/doc/metapost/mpchess/mpchess-doc-en.tex
+share/texmf-dist/doc/metapost/mpchess/mpchess-doc-fr.pdf
+share/texmf-dist/doc/metapost/mpchess/mpchess-doc-fr.tex
+share/texmf-dist/doc/metapost/mpchess/mpchess-preamble.tex
+share/texmf-dist/doc/metapost/mpchess/test.fen
+share/texmf-dist/doc/metapost/mpchess/test.pgn
