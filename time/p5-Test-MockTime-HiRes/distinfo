@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 09:53:07 wen Exp $
+
+BLAKE2s (Test-MockTime-HiRes-0.08.tar.gz) = 3bd2504c53c26be6a53a39aee6ac3f5b64687ad6797468279f9bf7283310a492
+SHA512 (Test-MockTime-HiRes-0.08.tar.gz) = 8a533d3650fe59ebc7852f5edb07d242d4c8833ed8ea918d4e0fb999e51b12ca6dc12567f55b47a6a37b65821b922e17e0208726ad3afe75a895fc84896fcf9f
+Size (Test-MockTime-HiRes-0.08.tar.gz) = 11191 bytes
