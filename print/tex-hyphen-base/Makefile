@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2021/05/30 08:04:41 markd Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/11 00:11:37 markd Exp $
 
 DISTNAME=	hyphen-base
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58630
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	66413
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX hyphenation patterns for English

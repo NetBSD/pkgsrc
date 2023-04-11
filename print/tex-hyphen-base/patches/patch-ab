@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.16 2021/05/30 08:04:42 markd Exp $
+$NetBSD: patch-ab,v 1.17 2023/04/11 00:11:37 markd Exp $
 
---- tex/generic/config/language.def.orig	2021-03-22 21:59:21.000000000 +0000
+--- tex/generic/config/language.def.orig	2023-03-07 00:49:10.000000000 +0000
 +++ tex/generic/config/language.def
 @@ -28,166 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
 -% from dehyph-exptl:
--\addlanguage{german-x-2021-02-26}{dehypht-x-2021-02-26.tex}{}{2}{2}
--\addlanguage{german-x-latest}{dehypht-x-2021-02-26.tex}{}{2}{2}
--\addlanguage{ngerman-x-2021-02-26}{dehyphn-x-2021-02-26.tex}{}{2}{2}
--\addlanguage{ngerman-x-latest}{dehyphn-x-2021-02-26.tex}{}{2}{2}
+-\addlanguage{german-x-2023-03-06}{dehypht-x-2023-03-06.tex}{}{2}{2}
+-\addlanguage{german-x-latest}{dehypht-x-2023-03-06.tex}{}{2}{2}
+-\addlanguage{ngerman-x-2023-03-06}{dehyphn-x-2023-03-06.tex}{}{2}{2}
+-\addlanguage{ngerman-x-latest}{dehyphn-x-2023-03-06.tex}{}{2}{2}
 -% from hyphen-afrikaans:
 -\addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
 -% from hyphen-ancientgreek:
