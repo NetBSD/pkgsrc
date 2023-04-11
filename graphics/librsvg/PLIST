@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/05/22 17:22:13 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/04/11 05:45:44 adam Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/rsvg-cairo.h
 include/librsvg-2.0/librsvg/rsvg-features.h
@@ -74,6 +74,7 @@ share/doc/Rsvg-2.0/fzy.js
 share/doc/Rsvg-2.0/go-up-symbolic.png
 share/doc/Rsvg-2.0/index.html
 share/doc/Rsvg-2.0/index.json
+share/doc/Rsvg-2.0/librsvg-r.svg
 share/doc/Rsvg-2.0/main.js
 share/doc/Rsvg-2.0/method.Handle.close.html
 share/doc/Rsvg-2.0/method.Handle.free.html
@@ -129,8 +130,6 @@ share/doc/Rsvg-2.0/struct.Rectangle.html
 share/doc/Rsvg-2.0/style.css
 share/doc/Rsvg-2.0/type_func.Error.quark.html
 share/doc/Rsvg-2.0/urlmap.js
-share/doc/librsvg/COMPILING.md
-share/doc/librsvg/CONTRIBUTING.md
 share/doc/librsvg/README.md
 share/doc/librsvg/code-of-conduct.md
 share/gir-1.0/Rsvg-2.0.gir
