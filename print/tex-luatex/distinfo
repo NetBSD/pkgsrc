@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2022/04/17 10:22:58 markd Exp $
+$NetBSD: distinfo,v 1.26 2023/04/11 00:04:32 markd Exp $
 
-BLAKE2s (luatex.r62387.tar.xz) = 03afbbd1df8e833bd07f59d125f70dd7798f3128ae43c4d6000700fc78ce0818
-SHA512 (luatex.r62387.tar.xz) = e42a39bd998a849481aafa7ad2a0f3137fe462e3ef3a1f1de773ccb9212f4e6133e153d586eccad742f1af3b88f6e11db8932c75ed68c894a0909b23659f56cc
-Size (luatex.r62387.tar.xz) = 12828 bytes
-SHA1 (patch-texmf-dist_web2c_texmfcnf.lua) = 946aa56b72ad31c4b0e19cc231e927066e42586c
+BLAKE2s (luatex.r66784.tar.xz) = 96774d2721d575ac2b8c6c66c0ce8ec9305be8862cf0c9be069e8a353efd91cf
+SHA512 (luatex.r66784.tar.xz) = dc139f609903a356eec52d8f13828dd903527e01fb61c850d2b788bb9ec53542c9a43987da53bb2530238c9bb74c9c6e6f79df82c8add2555d4e87b2d5531cae
+Size (luatex.r66784.tar.xz) = 13708 bytes
+SHA1 (patch-texmf-dist_web2c_texmfcnf.lua) = a0ff3e11cab765299c20ec4c2b00e2ef11292d13
