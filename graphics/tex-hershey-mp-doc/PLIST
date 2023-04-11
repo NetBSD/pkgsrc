@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:25:31 markd Exp $
+share/texmf-dist/doc/metapost/hershey-mp/LICENSE
+share/texmf-dist/doc/metapost/hershey-mp/README
+share/texmf-dist/doc/metapost/hershey-mp/hershey.pdf
+share/texmf-dist/doc/metapost/hershey-mp/hershey.tex
