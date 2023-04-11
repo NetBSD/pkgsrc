@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 12:23:13 markd Exp $
+bin/bibtex8
+man/man1/bibtex8.1
+share/texmf-dist/bibtex/csf/base/88591lat.csf
+share/texmf-dist/bibtex/csf/base/88591sca.csf
+share/texmf-dist/bibtex/csf/base/ascii.csf
+share/texmf-dist/bibtex/csf/base/cp437lat.csf
+share/texmf-dist/bibtex/csf/base/cp850lat.csf
+share/texmf-dist/bibtex/csf/base/cp850sca.csf
+share/texmf-dist/bibtex/csf/base/cp866rus.csf
+share/texmf-dist/bibtex/csf/base/csfile.txt
+share/texmf-dist/doc/bibtex8/00bibtex8-history.txt
+share/texmf-dist/doc/bibtex8/00bibtex8-readme.txt
+share/texmf-dist/doc/bibtex8/csfile.txt
+share/texmf-dist/doc/bibtex8/file_id.diz
