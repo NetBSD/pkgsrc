@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2166 2023/04/11 12:32:06 markd Exp $
+$NetBSD: CHANGES-2023,v 1.2167 2023/04/11 12:42:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/bibtex8 version 4.00 [markd 2023-04-11]
 	Removed print/tex-bibtex8 successor print/bibtex8 [markd 2023-04-11]
 	Added print/bibtexu version 4.00 [markd 2023-04-11]
+	Updated shells/starship to 1.14.1 [pin 2023-04-11]
