@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/04/07 12:58:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/04/11 11:20:52 mef Exp $
 include/gnuradio/qtgui/ConstellationDisplayPlot.h
 include/gnuradio/qtgui/DisplayPlot.h
 include/gnuradio/qtgui/EyeDisplayPlot.h
@@ -159,7 +159,6 @@ share/gnuradio/examples/qt-gui/test_qtgui_msg.grc
 share/gnuradio/examples/qt-gui/test_toggle.grc
 share/gnuradio/examples/qt-gui/test_toggleswitch.grc
 share/gnuradio/examples/qt-gui/test_toggleswitch2.grc
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/qtgui.tree.yml
 share/gnuradio/grc/blocks/qtgui_appbackground.block.yml
 share/gnuradio/grc/blocks/qtgui_autocorrelator_sink.block.yml

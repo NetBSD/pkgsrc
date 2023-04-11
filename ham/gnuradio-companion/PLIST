@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/04/08 06:02:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/04/11 11:20:51 mef Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -458,7 +458,6 @@ share/gnuradio/grc/blocks/blocks_tags_strobe.block.yml
 share/gnuradio/grc/blocks/blocks_test_tag_variable_rate_ff.block.yml
 share/gnuradio/grc/blocks/blocks_threshold_ff.block.yml
 share/gnuradio/grc/blocks/blocks_throttle.block.yml
-share/gnuradio/grc/blocks/blocks_throttle2.block.yml
 share/gnuradio/grc/blocks/blocks_transcendental.block.yml
 share/gnuradio/grc/blocks/blocks_uchar_to_float.block.yml
 share/gnuradio/grc/blocks/blocks_unpack_k_bits_bb.block.yml
