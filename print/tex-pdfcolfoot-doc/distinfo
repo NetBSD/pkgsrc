@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 00:47:22 markd Exp $
+
+BLAKE2s (pdfcolfoot.doc.r65512.tar.xz) = 89e1fa2fe4db1a8fc5ba461de20c927c71a36fedb9f14b91eb04504e5b8ee5af
+SHA512 (pdfcolfoot.doc.r65512.tar.xz) = afd7cfdef3e0290360251ff1de1fee17053229d89dc88e2275a3b94df8a9b5235ba462cb66eb741e541e8d59a9d0eece345c521c87f33fa5fa99e5d69d139ac5
+Size (pdfcolfoot.doc.r65512.tar.xz) = 310520 bytes
