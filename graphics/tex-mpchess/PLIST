@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:27:56 markd Exp $
+share/texmf-dist/metapost/mpchess/mpchess-cburnett.mp
+share/texmf-dist/metapost/mpchess/mpchess-chessboard.mp
+share/texmf-dist/metapost/mpchess/mpchess-fen.mp
+share/texmf-dist/metapost/mpchess/mpchess-pgn.mp
+share/texmf-dist/metapost/mpchess/mpchess-pieces.mp
+share/texmf-dist/metapost/mpchess/mpchess-skak.mp
+share/texmf-dist/metapost/mpchess/mpchess.mp
