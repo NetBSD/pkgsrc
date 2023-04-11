@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2022/04/18 04:37:13 markd Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/11 01:29:26 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2022
+PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	66802
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,7 +13,6 @@ COMMENT=	ConTeXt and packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
-DEPENDS+=	tex-jmn-[0-9]*:../../fonts/tex-jmn
 DEPENDS+=	tex-context-account-[0-9]*:../../print/tex-context-account
 DEPENDS+=	tex-context-algorithmic-[0-9]*:../../print/tex-context-algorithmic
 DEPENDS+=	tex-context-animation-[0-9]*:../../print/tex-context-animation
@@ -32,7 +31,6 @@ DEPENDS+=	tex-context-fullpage-[0-9]*:../../print/tex-context-fullpage
 DEPENDS+=	tex-context-gantt-[0-9]*:../../print/tex-context-gantt
 DEPENDS+=	tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
 DEPENDS+=	tex-context-handlecsv-[0-9]*:../../print/tex-context-handlecsv
-DEPENDS+=	tex-context-inifile-[0-9]*:../../print/tex-context-inifile
 DEPENDS+=	tex-context-layout-[0-9]*:../../print/tex-context-layout
 DEPENDS+=	tex-context-letter-[0-9]*:../../print/tex-context-letter
 DEPENDS+=	tex-context-lettrine-[0-9]*:../../print/tex-context-lettrine
@@ -42,13 +40,14 @@ DEPENDS+=	tex-context-rst-[0-9]*:../../print/tex-context-rst
 DEPENDS+=	tex-context-ruby-[0-9]*:../../print/tex-context-ruby
 DEPENDS+=	tex-context-simplefonts-[0-9]*:../../print/tex-context-simplefonts
 DEPENDS+=	tex-context-simpleslides-[0-9]*:../../print/tex-context-simpleslides
+DEPENDS+=	tex-context-texlive-[0-9]*:../../print/tex-context-texlive
 DEPENDS+=	tex-context-title-[0-9]*:../../print/tex-context-title
 DEPENDS+=	tex-context-transliterator-[0-9]*:../../print/tex-context-transliterator
 DEPENDS+=	tex-context-typearea-[0-9]*:../../print/tex-context-typearea
 DEPENDS+=	tex-context-typescripts-[0-9]*:../../print/tex-context-typescripts
 DEPENDS+=	tex-context-vim-[0-9]*:../../print/tex-context-vim
 DEPENDS+=	tex-context-visualcounter-[0-9]*:../../print/tex-context-visualcounter
-# npp-for-context is documentation only
+DEPENDS+=	tex-jmn-[0-9]*:../../fonts/tex-jmn
 
 META_PACKAGE=	yes
 
