@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/04/09 21:59:07 markd Exp $
+# $NetBSD: Makefile,v 1.33 2023/04/11 00:43:34 markd Exp $
 
 DISTNAME=	oberdiek
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	61066
+PKGNAME=	tex-${DISTNAME}-2022
+TEXLIVE_REV=	65521
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/oberdiek
