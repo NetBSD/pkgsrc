@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:24:31 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/04/11 12:00:57 wen Exp $
 
-BLAKE2s (Time-Warp-0.54.tar.gz) = 1d5229f0ea8715ae21adedf39c106db2a05734d837912ad72891f3ef429b1fdc
-SHA512 (Time-Warp-0.54.tar.gz) = 13d762ac4b5062c6d92f51978e8ac1a53a2ee69b5ff61d40ee694bd8d6a7d60323dd77afcbfea563e5df19cff6e93b98cc220d72a11c35c9dd2ed470bad025cf
-Size (Time-Warp-0.54.tar.gz) = 4580 bytes
+BLAKE2s (Time-Warp-0.55.tar.gz) = 416eb8405663fc8478bf95252534f2694ee64458f12bc032eeeb6fbd0a12929e
+SHA512 (Time-Warp-0.55.tar.gz) = 0e6664f7467e6745f2ae69bb3ded2602c16bffb3b0327e42acd3bf6d2c8f979b4112cfde770f6632c0cfd7aa46967a2c4661e4be3e6a1d09601b2d64f60c3987
+Size (Time-Warp-0.55.tar.gz) = 4895 bytes
