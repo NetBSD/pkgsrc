@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/01/12 10:46:59 markd Exp $
+# $NetBSD: Makefile,v 1.27 2023/04/11 00:09:23 markd Exp $
 
 DISTNAME=	texlive-scripts
-PKGNAME=	tex-${DISTNAME}-2022
-PKGREVISION=	2
-TEXLIVE_REV=	63029
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	66797
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX Live infrastructure programs
@@ -58,7 +57,7 @@ SUBST_SED.paths+=	-e 's,@FMTUTIL@,${PREFIX}/bin/fmtutil,g'
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
-	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/rungs.tlu \
+	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/rungs.lua \
 		${WRKSRC}/bin/rungs
 .for script in mktexmf mktexpk mktextfm
 	${MV} ${WRKSRC}/texmf-dist/scripts/texlive/${script} \
