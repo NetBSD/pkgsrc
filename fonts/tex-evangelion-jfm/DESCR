@@ -1,0 +1,6 @@
+This package provides a Japanese Font Metric supporting
+vertical and horizontal typesetting, 'linegap punctuations',
+'extended fonts', and more interesting and helpful features
+using traditional and simplified Chinese or Japanese fonts
+under LuaTeX-ja. It also makes full use of the 'priority'
+feature, meeting the standards, and allows easy customisation.
