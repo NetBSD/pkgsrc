@@ -1,0 +1,5 @@
+An enhanced, portable C version of BibTeX. Unicode is supported
+via the ICU library. Originally written by Yannis Haralambous
+and his students, and derived from bibtex8, with substantial
+updates from the Japanese TeX Development Community, it is now
+maintained as part of TeX Live.
