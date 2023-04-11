@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2023/03/31 20:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/04/11 06:11:00 adam Exp $
 
 DISTNAME=	oiio-2.2.20.0
 PKGNAME=	${DISTNAME:S/oiio/openimageio/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
 GITHUB_PROJECT=	oiio

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2021/09/28 10:28:36 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/04/11 06:10:54 adam Exp $
 
 BUILDLINK_TREE+=	libraw
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libraw
 LIBRAW_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libraw+=	libraw>=0.16.0
-BUILDLINK_ABI_DEPENDS.libraw+=	libraw>=0.20.2
+BUILDLINK_ABI_DEPENDS.libraw+=	libraw>=0.21.1nb1
 BUILDLINK_PKGSRCDIR.libraw?=	../../graphics/libraw
 
 pkgbase := libraw
