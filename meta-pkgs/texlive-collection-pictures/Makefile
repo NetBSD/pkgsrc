@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2023/04/03 11:47:47 markd Exp $
+# $NetBSD: Makefile,v 1.37 2023/04/11 01:55:58 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2022pre2
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	66377
+TEXLIVE_REV=	66684
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -55,6 +55,7 @@ DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
 # depend dynkin-diagrams
 # depend ecgdraw
 DEPENDS+=	tex-eepic-[0-9]*:../../graphics/tex-eepic
+# depend egpeirce
 DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend endofproofwd
 # depend epspdf
@@ -62,6 +63,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend esk
 # depend euflag
 # depend fast-diagram
+# depend fenetrecas
 # depend fig4latex
 # depend figchild
 # depend figput
@@ -192,6 +194,7 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-mirror-lens
 # depend tikz-nef
 # depend tikz-network
+# depend tikz-nfold
 # depend tikz-opm
 # depend tikz-optics
 # depend tikz-page
