@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2022/04/16 02:12:42 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/11 01:47:24 markd Exp $
 
 DISTNAME=	collection-langcjk
-PKGNAME=	texlive-${DISTNAME}-2022
+PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	61912
+TEXLIVE_REV=	65824
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -19,8 +19,9 @@ DEPENDS+=	tex-cjk-[0-9]*:../../print/tex-cjk
 DEPENDS+=	tex-cjkpunct-[0-9]*:../../print/tex-cjkpunct
 DEPENDS+=	tex-cjkutils-[0-9]*:../../print/tex-cjkutils
 DEPENDS+=	tex-dnp-[0-9]*:../../print/tex-dnp
-DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
+DEPENDS+=	tex-evangelion-jfm-[0-9]*:../../fonts/tex-evangelion-jfm
 DEPENDS+=	tex-fixjfm-[0-9]*:../../print/tex-fixjfm
+DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
 DEPENDS+=	tex-jfmutil-[0-9]*:../../print/tex-jfmutil
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
 DEPENDS+=	tex-pxtatescale-[0-9]*:../../print/tex-pxtatescale
