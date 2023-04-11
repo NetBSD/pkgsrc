@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2159 2023/04/11 10:10:32 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2160 2023/04/11 11:12:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added time/p5-Test-MockTime-HiRes version 0.08 [wen 2023-04-11]
 	Updated time/p5-Date-Extract to 0.07 [wen 2023-04-11]
 	Updated time/p5-Date-ICal to 2.680 [wen 2023-04-11]
+	Added time/p5-DateTime-HiRes version 0.04 [wen 2023-04-11]
