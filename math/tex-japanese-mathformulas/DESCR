@@ -1,0 +1,4 @@
+This is a style file for compiling basic maths formulas in
+Japanese using LuaLaTeX. \NewDocumentCommand allows you to
+specify whether the formula should be used within a sentence or
+on a new line.

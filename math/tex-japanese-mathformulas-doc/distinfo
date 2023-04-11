@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 03:03:03 markd Exp $
+
+BLAKE2s (japanese-mathformulas.doc.r64678.tar.xz) = 7c54f56dfc8d225a2b71763999b2666177778fb336b7e9357be8093326f867ad
+SHA512 (japanese-mathformulas.doc.r64678.tar.xz) = cfa07138896028186773970685309030f587fc39f95b2fb0d993e2827a124ae4172acc91f9276ae65b32fdc614cd9525d557505b2f1fc11750a982a5c9cebb42
+Size (japanese-mathformulas.doc.r64678.tar.xz) = 698872 bytes
