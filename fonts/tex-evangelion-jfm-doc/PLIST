@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 01:45:10 markd Exp $
+share/texmf-dist/doc/luatex/evangelion-jfm/Evangelion-doc.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/Evangelion-doc.tex
+share/texmf-dist/doc/luatex/evangelion-jfm/LICENSE
+share/texmf-dist/doc/luatex/evangelion-jfm/README.md
