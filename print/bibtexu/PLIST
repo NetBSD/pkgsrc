@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/11 12:25:13 markd Exp $
+bin/bibtexu
+man/man1/bibtexu.1
+share/texmf-dist/doc/bibtexu/README
+share/texmf-dist/doc/bibtexu/examples/test.bbl
+share/texmf-dist/doc/bibtexu/examples/test.bib
+share/texmf-dist/doc/bibtexu/examples/test.pdf
+share/texmf-dist/doc/bibtexu/examples/test.tex
