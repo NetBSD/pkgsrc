@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2163 2023/04/11 12:02:08 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2164 2023/04/11 12:09:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3123,3 +3123,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/p5-DateTime-Format-Natural to 1.16 [wen 2023-04-11]
 	Updated time/p5-DateTimeX-Easy to 0.091 [wen 2023-04-11]
 	Updated time/p5-Time-Warp to 0.55 [wen 2023-04-11]
+	Updated textproc/p5-ack to 3.7.0 [wen 2023-04-11]
