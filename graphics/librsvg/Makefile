@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2023/04/11 05:45:44 adam Exp $
+# $NetBSD: Makefile,v 1.149 2023/04/11 12:29:37 gutteridge Exp $
 
 DISTNAME=	librsvg-2.56.0
 CATEGORIES=	graphics gnome
@@ -66,7 +66,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-RUST_REQ=	1.56.0
+RUST_REQ=	1.64.0
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
