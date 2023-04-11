@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.3 2022/02/23 20:45:44 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2023/04/11 05:45:45 adam Exp $
 
 Make it possible to respect MAKE_JOBS.
 
---- Makefile.in.orig	2022-02-17 03:29:51.000000000 +0000
+--- Makefile.in.orig	2023-03-17 20:14:26.000000000 +0000
 +++ Makefile.in
-@@ -1566,7 +1566,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
+@@ -1553,7 +1553,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
  	PKG_CONFIG_ALLOW_CROSS=1						\
  	PKG_CONFIG='$(PKG_CONFIG)'						\
  	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
@@ -12,8 +12,8 @@ Make it possible to respect MAKE_JOBS.
 +	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) --lib \
  	&& cd $(LIBRSVG_BUILD_DIR) && $(LINK) $< && mv $(RUST_LIB) .libs/librsvg_c_api.a
  
- $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC)
-@@ -1574,7 +1574,7 @@ $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC)
+ $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC) | librsvg_c_api.la
+@@ -1561,7 +1561,7 @@ $(RSVG_CONVERT_BIN): $(RSVG_CONVERT_SRC)
  	PKG_CONFIG_ALLOW_CROSS=1						\
  	PKG_CONFIG='$(PKG_CONFIG)'						\
  	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
