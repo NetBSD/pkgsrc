@@ -1,0 +1,5 @@
+This package provides MetaPost support for reading jhf vector
+font files, used by (mostly? only?) the so-called Hershey Fonts
+of the late 1960s. The package does not include the actual font
+files, which you can probably find in the software repository
+of your operating system.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 02:25:31 markd Exp $
+
+BLAKE2s (hershey-mp.r64878.tar.xz) = cde562889ba39eec40f23649be115bee93d658609a150a5e7a3df7b8fd7a2916
+SHA512 (hershey-mp.r64878.tar.xz) = 8759bfc2237fc1954e3ea3a47355cd42c48479ce01d959cf0b072ffba4f26068e99f32737bf8669a509f53085b8d8e5c5b0b02f9a7fa6ba73a38bc996539d902
+Size (hershey-mp.r64878.tar.xz) = 1684 bytes
