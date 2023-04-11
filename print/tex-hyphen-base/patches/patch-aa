@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.16 2021/05/30 08:04:42 markd Exp $
+$NetBSD: patch-aa,v 1.17 2023/04/11 00:11:37 markd Exp $
 
---- tex/generic/config/language.dat.orig	2021-03-22 21:59:16.000000000 +0000
+--- tex/generic/config/language.dat.orig	2023-03-07 00:49:05.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -57,163 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -56,163 +56,3 @@ english hyphen.tex % do not change!
  % 
- dumylang	dumyhyph.tex    %for testing a new language.
- nohyphenation	zerohyph.tex    %a language with no patterns at all.
+ dumylang	dumyhyph.tex    % for testing a new language.
+ nohyphenation	zerohyph.tex    % a language with no patterns at all.
 -% from dehyph-exptl:
--german-x-2021-02-26 dehypht-x-2021-02-26.tex
+-german-x-2023-03-06 dehypht-x-2023-03-06.tex
 -=german-x-latest
--ngerman-x-2021-02-26 dehyphn-x-2021-02-26.tex
+-ngerman-x-2023-03-06 dehyphn-x-2023-03-06.tex
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
