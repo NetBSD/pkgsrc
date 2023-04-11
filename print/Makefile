@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.900 2023/04/11 01:26:10 markd Exp $
+# $NetBSD: Makefile,v 1.901 2023/04/11 02:54:41 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -258,6 +258,8 @@ SUBDIR+=	tex-arsclassica-doc
 SUBDIR+=	tex-ascii-chart-doc
 SUBDIR+=	tex-askinclude
 SUBDIR+=	tex-askinclude-doc
+SUBDIR+=	tex-asternote
+SUBDIR+=	tex-asternote-doc
 SUBDIR+=	tex-atbegshi
 SUBDIR+=	tex-atbegshi-doc
 SUBDIR+=	tex-atenddvi
