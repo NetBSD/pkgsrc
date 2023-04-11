@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/10 03:56:41 markd Exp $
-info/tds.info
+@comment $NetBSD: PLIST,v 1.5 2023/04/11 00:01:01 markd Exp $
+share/texmf-dist/doc/kpathsea/NEWS
 share/texmf-dist/doc/kpathsea/kpathsea.html
 share/texmf-dist/doc/kpathsea/kpathsea.pdf
+share/texmf-dist/doc/web2c/NEWS
 share/texmf-dist/doc/web2c/web2c.html
 share/texmf-dist/doc/web2c/web2c.pdf
