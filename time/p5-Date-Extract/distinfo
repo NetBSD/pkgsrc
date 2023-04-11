@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:24:24 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/04/11 10:02:43 wen Exp $
 
-BLAKE2s (Date-Extract-0.06.tar.gz) = b43c3c0e6ebd0b453f34284b38b3717b4cb96a2f5bba9243d28c971d357b1929
-SHA512 (Date-Extract-0.06.tar.gz) = f50bb1e968eab9a5ee5bd1383af1599aabc7af9f9c375e3d366857f1cbf6a6912e8eff99eece2096b09a475c9eb671eeaeb8e4b76c0d865cb452ce8b0a85c448
-Size (Date-Extract-0.06.tar.gz) = 32730 bytes
+BLAKE2s (Date-Extract-0.07.tar.gz) = 36f5eb81605de843d904ab0d30c90a73b62b5a1381d14985da90f12f7b448f2b
+SHA512 (Date-Extract-0.07.tar.gz) = ec687cf1513e02ae3fe65d7e9acf89ca5408a26fd9cea4b05d5b9578045248f571922dd6282a4f6e2346d062f7c03842547293c0e0b43c382c587c3bf3b38009
+Size (Date-Extract-0.07.tar.gz) = 31982 bytes
 SHA1 (patch-Makefile.PL) = d93ee31b229845b33547daf64857c48243ab5ff6
