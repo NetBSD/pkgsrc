@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2022/04/16 02:17:59 markd Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/11 03:09:00 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2022
+PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62958
+TEXLIVE_REV=	64603
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,6 +13,7 @@ COMMENT=	Japanese TeX packages
 DEPENDS+=	texlive-collection-langcjk-[0-9]*:../../meta-pkgs/texlive-collection-langcjk
 
 DEPENDS+=	tex-ascmac-[0-9]*:../../fonts/tex-ascmac
+DEPENDS+=	tex-asternote-[0-9]*:../../print/tex-asternote
 DEPENDS+=	tex-babel-japanese-[0-9]*:../../print/tex-babel-japanese
 DEPENDS+=	tex-bxbase-[0-9]*:../../print/tex-bxbase
 DEPENDS+=	tex-bxcjkjatype-[0-9]*:../../print/tex-bxcjkjatype
@@ -34,10 +35,13 @@ DEPENDS+=	tex-ieejtran-[0-9]*:../../print/tex-ieejtran
 DEPENDS+=	tex-ifptex-[0-9]*:../../print/tex-ifptex
 DEPENDS+=	tex-ifxptex-[0-9]*:../../print/tex-ifxptex
 DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
+DEPENDS+=	tex-japanese-mathformulas-[0-9]*:../../math/tex-japanese-mathformulas
 DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 DEPENDS+=	tex-jieeetran-[0-9]*:../../print/tex-jieeetran
 DEPENDS+=	tex-jlreq-[0-9]*:../../print/tex-jlreq
 DEPENDS+=	tex-jlreq-deluxe-[0-9]*:../../fonts/tex-jlreq-deluxe
+DEPENDS+=	tex-jpneduenumerate-[0-9]*:../../math/tex-jpneduenumerate
+DEPENDS+=	tex-jpnedumathsymbols-[0-9]*:../../math/tex-jpnedumathsymbols
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
 DEPENDS+=	tex-kanbun-[0-9]*:../../print/tex-kanbun
 # lshort-japanese is documentation only
