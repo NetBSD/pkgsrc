@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 02:59:58 markd Exp $
+
+BLAKE2s (jpnedumathsymbols.doc.r63864.tar.xz) = 88032a21b8582f2a121561d5aa82c2199ce86bc45cb268177acb0e66e9624aa1
+SHA512 (jpnedumathsymbols.doc.r63864.tar.xz) = 0589ea6fa4dee93900753dc170aea295e9bf1103687fa146633589897292dff8c472ee95607a2d0b682321a5a33e22220234e2a396cee4ec2abc54fa4276459c
+Size (jpnedumathsymbols.doc.r63864.tar.xz) = 327416 bytes
