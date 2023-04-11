@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.901 2023/04/11 02:54:41 markd Exp $
+# $NetBSD: Makefile,v 1.902 2023/04/11 12:28:35 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -19,6 +19,8 @@ SUBDIR+=	atril
 SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
 SUBDIR+=	bg5ps
+SUBDIR+=	bibtex8
+SUBDIR+=	bibtexu
 SUBDIR+=	bibtool
 SUBDIR+=	brlaser
 SUBDIR+=	bww2tex
@@ -364,7 +366,6 @@ SUBDIR+=	tex-bibleref-german
 SUBDIR+=	tex-bibleref-german-doc
 SUBDIR+=	tex-bibtex
 SUBDIR+=	tex-bibtex-doc
-SUBDIR+=	tex-bibtex8
 SUBDIR+=	tex-bibtopic
 SUBDIR+=	tex-bibtopic-doc
 SUBDIR+=	tex-bibunits
