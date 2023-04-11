@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/11 02:53:43 markd Exp $
+
+BLAKE2s (asternote.doc.r63838.tar.xz) = 2b2417e6e5dcfd4d182aa679d0f5fda87f741a462bc9d971552a212763b39108
+SHA512 (asternote.doc.r63838.tar.xz) = 31b443d1ad05880fa5c6878fed144a2b1cf20fe855188ca8d879c5d18b7285f16dceb76b2ab7dd6be2f401b898752a674f810af6d3b9ff906a6cd75a80cf51c0
+Size (asternote.doc.r63838.tar.xz) = 117844 bytes
