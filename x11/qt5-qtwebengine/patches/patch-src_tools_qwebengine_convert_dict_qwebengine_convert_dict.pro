@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_qwebengine_convert_dict_qwebengine_convert_dict.pro,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_tools_qwebengine_convert_dict_qwebengine_convert_dict.pro,v 1.3 2023/04/12 19:24:07 adam Exp $
 
 --- src/tools/qwebengine_convert_dict/qwebengine_convert_dict.pro.orig
 +++ src/tools/qwebengine_convert_dict/qwebengine_convert_dict.pro
@@ -7,7 +7,7 @@ $NetBSD: patch-src_tools_qwebengine_convert_dict_qwebengine_convert_dict.pro,v 1
  isEmpty(NINJA_LIBS): error("Missing library files from QtWebEngineCore linking pri")
  OBJECTS = $$eval($$list($$NINJA_OBJECTS))
 -linux {
-+unix {
++unix:!macos {
      LIBS_PRIVATE = -Wl,--start-group $$NINJA_ARCHIVES -Wl,--end-group
  } else {
      LIBS_PRIVATE = $$NINJA_ARCHIVES

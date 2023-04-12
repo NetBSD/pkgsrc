@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.2 2023/04/12 19:24:06 adam Exp $
 
 --- src/3rdparty/chromium/base/debug/debugger_posix.cc.orig	2020-06-25 09:31:18.000000000 +0000
 +++ src/3rdparty/chromium/base/debug/debugger_posix.cc
@@ -6,7 +6,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2021/08
  
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
-+#if defined(OS_FREEBSD) || defined(OS_OPENBSD)
++#if !defined(OS_NETBSD)
    int mib[] = {
      CTL_KERN,
      KERN_PROC,
@@ -14,7 +14,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_debugger__posix.cc,v 1.1 2021/08
      0
  #endif
    };
-+#elif defined(OS_NETBSD)
++#else defined(OS_NETBSD)
 +  int mib[] = {
 +    CTL_KERN,
 +    KERN_PROC2,
