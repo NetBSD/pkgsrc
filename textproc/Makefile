@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1379 2023/04/06 12:13:53 joerg Exp $
+# $NetBSD: Makefile,v 1.1380 2023/04/12 11:25:38 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -989,6 +989,7 @@ SUBDIR+=	py-X2
 SUBDIR+=	py-acora
 SUBDIR+=	py-alabaster
 SUBDIR+=	py-antlr4
+SUBDIR+=	py-anyascii
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-astropy-sphinx-theme
 SUBDIR+=	py-babelfish
