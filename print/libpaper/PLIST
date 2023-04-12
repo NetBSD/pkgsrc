@@ -1,10 +1,24 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/12 15:52:46 wiz Exp $
-bin/paper
-bin/paper.bin
+@comment $NetBSD: PLIST,v 1.4 2023/04/12 15:53:54 wiz Exp $
+bin/paperconf
 include/paper.h
 lib/libpaper.la
-man/man1/paper.1
-man/man5/paperspecs.5
-share/doc/libpaper/README
+man/man1/paperconf.1
+man/man3/defaultpapername.3
+man/man3/defaultpapersizefile.3
+man/man3/paperdone.3
+man/man3/paperfirst.3
+man/man3/paperinfo.3
+man/man3/paperinit.3
+man/man3/paperlast.3
+man/man3/papernext.3
+man/man3/paperprev.3
+man/man3/paperpsheight.3
+man/man3/paperpsname.3
+man/man3/paperpswidth.3
+man/man3/paperwithsize.3
+man/man3/systempapername.3
+man/man3/systempapersizefile.3
+man/man5/papersize.5
+man/man8/paperconfig.8
+sbin/paperconfig
 share/examples/libpaper/papersize
-share/examples/libpaper/paperspecs
