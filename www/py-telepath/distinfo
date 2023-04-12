@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/04/12 11:57:49 joerg Exp $
+
+BLAKE2s (telepath-0.3.tar.gz) = c17eeb27c5914084a75d74194e5417c171bd9737cffc7c0b15d94cd5359b5c09
+SHA512 (telepath-0.3.tar.gz) = bb25a1ba4c7e2762e9c98c01270ddc9e844a4c7d414bae09a0b89d3e8e618375f882b69d320eecf7d8582ae327d86cea5f13f2c7c40ed217c5dc446fb6ab2fde
+Size (telepath-0.3.tar.gz) = 11507 bytes
+SHA1 (patch-setup.py) = bc698d5fd8b3d163f48df70768323c9e7a96de3c
