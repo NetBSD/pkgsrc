@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2173 2023/04/11 15:36:27 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2174 2023/04/12 10:21:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.42 [schmonz 2023-04-11]
 	Updated devel/py-approval-utilities to 8.2.5 [schmonz 2023-04-11]
 	Updated devel/py-approvaltests to 8.2.5 [schmonz 2023-04-11]
+	Updated audio/gospt to 0.0.47 [pin 2023-04-12]
