@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/03/19 07:02:06 wiz Exp $
+$NetBSD: distinfo,v 1.22.2.1 2023/04/12 17:35:12 bsiegert Exp $
 
-BLAKE2s (a2ps-4.15.1.tar.gz) = d474b01a8529f494c97244fe8f39a18f498ca1d0956412d118780bba7d23d4e7
-SHA512 (a2ps-4.15.1.tar.gz) = ed58bd03b9390f44b03ae2458bb94655ef0597f11aa89a2d778b14f03fba4d0e0272795d2f968ae304be46d7b862a2f0ce1dc82328d71a02b0293b23ec8b6fa5
-Size (a2ps-4.15.1.tar.gz) = 3598826 bytes
+BLAKE2s (a2ps-4.15.3.tar.gz) = af7f4c49669fab371fc02849e4b5b2b36128d66e70bd36b0cca21863fce1d888
+SHA512 (a2ps-4.15.3.tar.gz) = 41f0590c5f794af767b57bfe2eeea105b73232ea9a9fcf87380d93cb4ccaaf652c69990bcb06d1da5f398f4c7d0ab6d23d9c3f5b6a85c37f36e72dc03e7ddc2a
+Size (a2ps-4.15.3.tar.gz) = 3601424 bytes
