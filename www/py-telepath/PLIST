@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/12 11:57:49 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/telepath/__init__.py
+${PYSITELIB}/telepath/__init__.pyc
+${PYSITELIB}/telepath/__init__.pyo
+${PYSITELIB}/telepath/static/telepath/js/telepath.js
+${PYSITELIB}/telepath/test_settings.py
+${PYSITELIB}/telepath/test_settings.pyc
+${PYSITELIB}/telepath/test_settings.pyo
+${PYSITELIB}/telepath/tests.py
+${PYSITELIB}/telepath/tests.pyc
+${PYSITELIB}/telepath/tests.pyo
