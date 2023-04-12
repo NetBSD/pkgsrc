@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2174 2023/04/12 10:21:24 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2175 2023/04/12 10:23:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-approval-utilities to 8.2.5 [schmonz 2023-04-11]
 	Updated devel/py-approvaltests to 8.2.5 [schmonz 2023-04-11]
 	Updated audio/gospt to 0.0.47 [pin 2023-04-12]
+	Updated textproc/hck to 0.9.2 [pin 2023-04-12]
