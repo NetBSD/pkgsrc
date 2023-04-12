@@ -1,36 +1,38 @@
-# $NetBSD: Makefile,v 1.13 2023/04/12 15:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/12 15:53:54 wiz Exp $
 
-DISTNAME=	libpaper-2.0.11
+DISTNAME=	libpaper_1.1.29
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/libp/libpaper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/rrthomas/libpaper
+HOMEPAGE=	https://packages.qa.debian.org/libp/libpaper.html
 COMMENT=	Paper size handling library
-LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
+LICENSE=	gnu-gpl-v2
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--enable-relocatable
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-
-TEST_TARGET=		check
+USE_TOOLS+=		autoconf automake gmake
 
 EGDIR=			${PREFIX}/share/examples/libpaper
-CONF_FILES+=		${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
-CONF_FILES+=		${EGDIR}/paperspecs ${PKG_SYSCONFDIR}/paperspecs
-INSTALLATION_DIRS=	${EGDIR}
+CONF_FILES=		${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 
 BUILD_DEFS=		PAPERSIZE
 
+.include "../../devel/libgetopt/buildlink3.mk"
+
+# missing generated files in 1.1.26 and newer tarballs
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
+
 post-build:
-	${ECHO} ${PAPERSIZE} > ${WRKDIR}/papersize
+	PAPERCONF=${WRKDIR}/papersize PATH=${WRKSRC}/src:$${PATH} ${SH} \
+	    ${WRKSRC}/src/paperconfig -p ${PAPERSIZE}
 
 post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/paperspecs ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/papersize ${DESTDIR}${EGDIR}/papersize
 
-.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
