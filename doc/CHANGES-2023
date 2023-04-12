@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2180 2023/04/12 14:38:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2181 2023/04/12 15:56:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3142,3 +3142,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/py-anyascii version 0.3.0 [joerg 2023-04-12]
 	Added www/py-telepath version 0.3 [joerg 2023-04-12]
 	Updated print/qpdf to 10.6.2nb2 [wiz 2023-04-12]
+	Updated finance/gnucash to 5.0nb1 [wiz 2023-04-12]
