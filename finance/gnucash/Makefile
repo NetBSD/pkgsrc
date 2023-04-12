@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.333 2023/03/29 12:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.334 2023/04/12 15:55:59 wiz Exp $
 
 DISTNAME=		gnucash-5.0
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -71,7 +72,7 @@ BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.67
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.googletest+=	googletest>=1.8.0
 .include "../../devel/googletest/buildlink3.mk"
-.include "../../devel/swig3/buildlink3.mk"
+.include "../../devel/swig4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../lang/guile30/buildlink3.mk"
