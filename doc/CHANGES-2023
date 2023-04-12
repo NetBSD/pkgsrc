@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2177 2023/04/12 11:20:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2178 2023/04/12 11:26:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3139,3 +3139,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hck to 0.9.2 [pin 2023-04-12]
 	Added wm/marswm version 0.4.0 [pin 2023-04-12]
 	Updated textproc/gsed to 4.9nb1 [wiz 2023-04-12]
+	Added textproc/py-anyascii version 0.3.0 [joerg 2023-04-12]
