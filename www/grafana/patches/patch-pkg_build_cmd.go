@@ -1,9 +1,8 @@
-$NetBSD: patch-pkg_build_cmd.go,v 1.3 2023/03/05 21:22:45 triaxx Exp $
+$NetBSD: patch-pkg_build_cmd.go,v 1.4 2023/04/12 19:26:27 adam Exp $
 
 Use the same go binary as the one used to build.
-from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
 
---- pkg/build/cmd.go.orig	2021-12-06 07:21:15.000000000 +0000
+--- pkg/build/cmd.go.orig	2023-03-16 23:56:52.000000000 +0000
 +++ pkg/build/cmd.go
 @@ -141,7 +141,7 @@ func setup(goos string) {
  		args = append(args, "-buildmode=exe")
@@ -14,7 +13,7 @@ from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
  }
  
  func doBuild(binaryName, pkg string, opts BuildOpts) error {
-@@ -188,7 +188,7 @@ func doBuild(binaryName, pkg string, opt
+@@ -193,13 +193,13 @@ func doBuild(binaryName, pkg string, opt
  	args = append(args, "-o", binary)
  	args = append(args, pkg)
  
@@ -23,10 +22,8 @@ from: patch-build.go,v 1.1 2021/03/23 04:16:08 triaxx Exp
  
  	if opts.isDev {
  		return nil
-@@ -197,7 +197,7 @@ func doBuild(binaryName, pkg string, opt
- 	if err := setBuildEnv(opts); err != nil {
- 		return err
  	}
+ 
 -	runPrint("go", "version")
 +	runPrint("@GO@", "version")
  	libcPart = ""
