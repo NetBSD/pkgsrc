@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2023/02/12 16:35:29 vins Exp $
+# $NetBSD: Makefile,v 1.174 2023/04/12 10:26:47 pin Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -58,6 +58,7 @@ SUBDIR+=	leftwm
 SUBDIR+=	libAppleWM
 SUBDIR+=	lwm
 SUBDIR+=	marco
+SUBDIR+=	marswm
 SUBDIR+=	matchbox-wm
 SUBDIR+=	mate-netbook
 SUBDIR+=	mcwm
