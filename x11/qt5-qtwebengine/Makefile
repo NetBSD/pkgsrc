@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/04/03 20:21:33 nros Exp $
+# $NetBSD: Makefile,v 1.36 2023/04/12 19:24:06 adam Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -68,6 +67,10 @@ post-install:
 .endfor
 .if ${OPSYS} == "NetBSD"
 	/usr/sbin/paxctl +m ${DESTDIR}${PREFIX}/qt5/libexec/QtWebEngineProcess
+.endif
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	OSX_SDK_PATH=${OSX_SDK_PATH:Q}
+MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 .endif
 
 .include "options.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/10/30 13:38:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/04/12 19:24:04 adam Exp $
 qt5/doc/qtcmake.qch
 qt5/doc/qtcmake/cmake-command-reference.html
 qt5/doc/qtcmake/cmake-get-started.html
@@ -567,6 +567,7 @@ qt5/doc/qtdoc/qtdoc-tutorials-alarms-alarmdelegate-qml.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-alarmdialog-qml.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-alarmmodel-qml.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-alarms-pro.html
+qt5/doc/qtdoc/qtdoc-tutorials-alarms-controls-conf-qrc.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-example.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-main-cpp.html
 qt5/doc/qtdoc/qtdoc-tutorials-alarms-main-qml.html
