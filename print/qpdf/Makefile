@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/04/12 14:38:23 wiz Exp $
 
 DISTNAME=	qpdf-10.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qpdf/}
 
@@ -17,7 +17,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libqpdf.pc.in
 
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
