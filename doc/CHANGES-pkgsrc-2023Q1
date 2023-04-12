@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.4 2023/04/02 06:17:55 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.5 2023/04/12 17:35:35 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
@@ -25,4 +25,10 @@ lang/ruby32-base: security update
 
 Pullup ticket #6749 - requested by taca
 textproc/ruby-kramdown-rfc2629: dependency fix
+
+Pullup ticket #6750 - requested by taca
+lang/ruby32-base: build fix
+
+Pullup ticket #6752 - requested by wiz
+print/a2ps: restore functionality
 
