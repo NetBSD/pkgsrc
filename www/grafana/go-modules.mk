@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.25 2023/03/05 21:22:45 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.26 2023/04/12 19:26:27 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	buf.build/gen/go/grpc-ecosystem/grpc-gateway/protocolbuffers/go/@v/v1.28.1-20221127060915-a1ecdc58eccd.4.mod
@@ -1359,8 +1359,8 @@ GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.4.2.mod
 GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/gorilla/websocket/@v/v1.5.0.zip
-GO_MODULE_FILES+=	github.com/grafana/alerting/@v/v0.0.0-20230125210216-facc6b27b9e0.mod
-GO_MODULE_FILES+=	github.com/grafana/alerting/@v/v0.0.0-20230125210216-facc6b27b9e0.zip
+GO_MODULE_FILES+=	github.com/grafana/alerting/@v/v0.0.0-20230209203114-508391225cd4.mod
+GO_MODULE_FILES+=	github.com/grafana/alerting/@v/v0.0.0-20230209203114-508391225cd4.zip
 GO_MODULE_FILES+=	github.com/grafana/codejen/@v/v0.0.3.mod
 GO_MODULE_FILES+=	github.com/grafana/codejen/@v/v0.0.3.zip
 GO_MODULE_FILES+=	github.com/grafana/cuetsy/@v/v0.1.5.mod
