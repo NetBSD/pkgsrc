@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/12 10:26:04 pin Exp $
+bin/mars-relay
+bin/marsbar
+bin/marswm

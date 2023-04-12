@@ -1,0 +1,23 @@
+marswm aims to be the rusty successor to moonwm. In addition to the window
+manager this repository also contains the library it is built on,
+an accompanying status bar and an ipc client to control the window manager
+from external scripts.
+
+marswm's goal is to have a simple tiling window manager with tiling and
+workspaces.
+
+Features:
+ - dwm-style layouts
+ - workspaces (like i3 - unlike dwm)
+ - IPC using X11 atoms (mars-relay)
+ - YAML for configuration and key bindings
+
+The window manager supports multi-monitor setups, although they are not as well
+tested as they probably should be for daily usage.
+Every (non-overlapping) monitor gets its own set of workspaces, which is also
+exposed as such to other applications like status bars. You can configure the
+number of the primary monitor and secondary monitors with the primary_workspaces
+and the secondary_workspaces option respectively.
+
+It is suggested to use a relatively low number of workspaces for secondary
+monitors as they might clutter your bar otherwise.
