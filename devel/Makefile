@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3948 2023/03/30 19:08:56 he Exp $
+# $NetBSD: Makefile,v 1.3949 2023/04/13 05:30:01 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2732,6 +2732,7 @@ SUBDIR+=	py-pyobjc
 SUBDIR+=	py-pyobjc-core
 SUBDIR+=	py-pyobjc-framework-AVFoundation
 SUBDIR+=	py-pyobjc-framework-AVKit
+SUBDIR+=	py-pyobjc-framework-AVRouting
 SUBDIR+=	py-pyobjc-framework-Accessibility
 SUBDIR+=	py-pyobjc-framework-Accounts
 SUBDIR+=	py-pyobjc-framework-AdServices
