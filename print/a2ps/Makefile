@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/04/13 18:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2023/04/13 18:34:08 wiz Exp $
 
 DISTNAME=		a2ps-4.15.4
 CATEGORIES=		print
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LPR=lpr
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=no
-CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
 
 INFO_FILES=		yes
