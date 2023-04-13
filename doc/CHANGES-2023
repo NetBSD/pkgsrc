@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2188 2023/04/13 12:13:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2189 2023/04/13 12:48:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -2720,6 +2720,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-xepersian-doc to 24.8 [markd 2023-04-01]
 	Updated print/tex-xstring to 1.85 [markd 2023-04-01]
 	Updated print/tex-xstring-doc to 1.85 [markd 2023-04-01]
+	Updated net/rabbitmq to 3.11.13 [adam 2023-04-01]
 	Updated chat/element-web to 1.11.28 [js 2023-04-02]
 	Updated fonts/tex-albatross to 0.5.0 [markd 2023-04-02]
 	Updated fonts/tex-albatross-doc to 0.5.0 [markd 2023-04-02]
