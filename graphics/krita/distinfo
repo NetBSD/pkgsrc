@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:46:23 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/04/13 20:53:40 mrg Exp $
 
 BLAKE2s (krita-4.4.8.tar.gz) = f99a2cbeb347c8ebccec4723e8ccf174ab7627a5b84f2de8c669a5cf33efecbf
 SHA512 (krita-4.4.8.tar.gz) = 53b9814fcf61fbaee06e81f456aa9de7ab09df99e04932251984c8ae190248e48fa20762bdb7be503ea267e1fb835095b105ce4bf2078fd510ab5a8ef6d82f81
@@ -11,5 +11,6 @@ SHA1 (patch-plugins_color_lcms2engine_CMakeLists.txt) = 5b9a84c2db4f7c5f5876b600
 SHA1 (patch-plugins_color_lcms2engine_tests_CMakeLists.txt) = aec29d538aef1247c9ac69c60d965677c1c16a96
 SHA1 (patch-plugins_impex_CMakeLists.txt) = 95e6fe736e2c2151a6ad4b5ef490c0777ca098fa
 SHA1 (patch-plugins_impex_exr_exr__converter.cc) = 1bfcbdea7f748900f48c5e070d7f5d5984a9b3bf
+SHA1 (patch-plugins_impex_raw_3rdparty_libkdcraw_src_kdcraw.cpp) = 10acf4968269c84c517b561ba73dad516cd65f86
 SHA1 (patch-plugins_impex_raw_CMakeLists.txt) = 3a94be6cb488fb8b8b2667dfb7a9b0dfa4496ef5
 SHA1 (patch-xcftools.h) = eeeed207e9b1995999a16efbbae91ed8f6255f48
