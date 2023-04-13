@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2022/11/23 16:19:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2023/04/13 12:13:08 wiz Exp $
 
 BUILDLINK_TREE+=	rasqal
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.rasqal?=	../../textproc/rasqal
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../textproc/raptor2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif # RASQAL_BUILDLINK3_MK
 
