@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2193 2023/04/13 14:22:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2194 2023/04/13 14:37:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3157,3 +3157,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed www/elinks successor www/felinks [wiz 2023-04-13]
 	Updated print/libpaper to 2.1.0 [wiz 2023-04-13]
 	Updated print/psutils to 2.10 [wiz 2023-04-13]
+	Updated net/wireshark to 4.0.5 [adam 2023-04-13]
+	Updated sysutils/ansible-lint to 6.14.6 [adam 2023-04-13]
+	Updated devel/py-packaging to 23.1 [adam 2023-04-13]
+	Updated comms/py-rich to 13.3.4 [adam 2023-04-13]
