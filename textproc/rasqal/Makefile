@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2022/11/23 16:19:04 adam Exp $
+# $NetBSD: Makefile,v 1.54 2023/04/13 12:13:08 wiz Exp $
 
 DISTNAME=	rasqal-0.9.33
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+CONFIGURE_ARGS+=	--with-regex-library=posix
 
 PKGCONFIG_OVERRIDE+=	rasqal.pc.in
 
@@ -26,6 +28,5 @@ CONFIGURE_ENV+=		ac_cv_path_GTKDOC_CHECK= \
 .include "../../math/mpfr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.raptor2+=	raptor2>=2.0.7
 .include "../../textproc/raptor2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
