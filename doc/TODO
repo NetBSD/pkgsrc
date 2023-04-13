@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22763 2023/04/13 13:44:13 wiz Exp $
+$NetBSD: TODO,v 1.22764 2023/04/13 14:22:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1210,7 +1210,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
-	o psutils-2.10 [https://github.com/rrthomas/psutils]
 	o ptex-2.3.2
 	o ptlib-2.16.2
 	o pvs-6.0
