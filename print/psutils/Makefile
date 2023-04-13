@@ -1,48 +1,21 @@
-# $NetBSD: Makefile,v 1.52 2022/06/28 11:35:31 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/04/13 14:22:35 wiz Exp $
 
-DISTNAME=	psutils-p17
-PKGNAME=	psutils-1.17
-PKGREVISION=	12
+DISTNAME=	psutils-2.10
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.knackered.org/pub/psutils/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://knackered.org/angus/psutils/
+HOMEPAGE=	https://github.com/rrthomas/psutils/
 COMMENT=	Utilities for manipulating PostScript documents
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/psutils
-USE_TOOLS+=	perl:run
+DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 
-.include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=	PAPERSIZE
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	perl:run bash:test
+TEST_TARGET=	check
+REPLACE_BASH+=	tests/run-test
 
-.if !defined(PAPERSIZE)
-PKG_FAIL_REASON+=	"PAPERSIZE must be defined by the pkgsrc user."
-.else
-.  if ${PAPERSIZE} != "A4" && ${PAPERSIZE} != "a4" && ${PAPERSIZE} != "Letter"
-PKG_FAIL_REASON+=	"Invalid PAPERSIZE (${PAPERSIZE}). Choose one of A4 or Letter."
-.  endif
-.endif
-
-MAKE_ENV+=	PERL5=${PERL5:Q}
-MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
-MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-MAKE_FILE=	Makefile.unix
-
-EGDIR=		${PREFIX}/share/examples/psutils
-CONF_FILES=	${EGDIR}/psutils.cfg ${PKG_SYSCONFDIR}/psutils.cfg
-
-SUBST_CLASSES+=		psu
-SUBST_STAGE.psu=	pre-configure
-SUBST_MESSAGE.psu=	Adjusting the installation prefix.
-SUBST_FILES.psu=	psutil.c
-SUBST_SED.psu=		-e "s|@prefix@|${PREFIX}|g"
-
-INSTALLATION_DIRS=	${EGDIR}
-INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
-
-post-install:
-	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`		\
-	&& ${ECHO} "PAPERSIZE=$$low" > ${DESTDIR}${EGDIR}/psutils.cfg
-
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
