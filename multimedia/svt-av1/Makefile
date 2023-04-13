@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/09 11:13:51 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/13 12:41:25 wiz Exp $
 
 DISTNAME=	svt-av1-1.4.1
 CATEGORIES=	multimedia
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/AOMediaCodec/SVT-AV1
 COMMENT=	Scalable Video Technology for AV1 (SVT-AV1 Encoder and Decoder)
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_TAG}
 
