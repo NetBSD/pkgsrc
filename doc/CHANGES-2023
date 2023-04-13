@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2189 2023/04/13 12:48:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2190 2023/04/13 13:43:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3152,3 +3152,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.0.0 [pin 2023-04-13]
 	Updated shells/starship to 1.14.2 [pin 2023-04-13]
 	Updated textproc/rasqal to 0.9.33nb28 [wiz 2023-04-13]
+	Removed security/py-solo successor security/py-solo1 [wiz 2023-04-13]
+	Added security/py-solo1 version 0.1.1 [wiz 2023-04-13]
