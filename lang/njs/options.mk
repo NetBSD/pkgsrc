@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2022/07/14 12:46:21 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2023/04/13 16:45:47 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.njs
-PKG_SUPPORTED_OPTIONS=	ssl
+PKG_SUPPORTED_OPTIONS=	ssl xml
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 PKG_OPTIONS_REQUIRED_GROUPS=	regex
@@ -33,4 +33,10 @@ SUBST_NOOP_OK.fix-pcre2=yes
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--no-openssl
+.endif
+
+.if !empty(PKG_OPTIONS:Mxml)
+.include "../../textproc/libxml2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--no-libxml2
 .endif
