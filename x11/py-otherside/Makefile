@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/03 20:21:29 nros Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/13 13:57:50 wiz Exp $
 
 DISTNAME=	pyotherside-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -17,7 +17,8 @@ USE_LANGUAGES=	c++
 
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
-PYTHON_SELF_CONFLICT=	yes
+PYTHON_SELF_CONFLICT=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake PYTHON_CONFIG=python${PYVERSSUFFIX}-config
