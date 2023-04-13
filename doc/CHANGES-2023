@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2186 2023/04/13 10:41:50 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2187 2023/04/13 10:42:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/grafana to 9.4.7 [adam 2023-04-12]
 	Updated net/wireshark to 4.0.4nb3 [wiz 2023-04-13]
 	Updated graphics/wallust to 2.0.0 [pin 2023-04-13]
+	Updated shells/starship to 1.14.2 [pin 2023-04-13]
