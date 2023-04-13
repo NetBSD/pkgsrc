@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/31 22:41:09 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/13 12:22:41 wiz Exp $
 bin/textfsm
 ${PYSITELIB}/testdata/clitable_templateA
 ${PYSITELIB}/testdata/clitable_templateB
@@ -10,12 +10,12 @@ ${PYSITELIB}/testdata/parseindex_index
 ${PYSITELIB}/testdata/parseindexfail1_index
 ${PYSITELIB}/testdata/parseindexfail2_index
 ${PYSITELIB}/testdata/parseindexfail3_index
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/textfsm-1.1.2-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/textfsm/__init__.py
 ${PYSITELIB}/textfsm/__init__.pyc
 ${PYSITELIB}/textfsm/__init__.pyo
