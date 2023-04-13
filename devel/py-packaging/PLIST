@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/02/14 16:09:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/13 14:35:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,9 @@ ${PYSITELIB}/packaging/_tokenizer.pyo
 ${PYSITELIB}/packaging/markers.py
 ${PYSITELIB}/packaging/markers.pyc
 ${PYSITELIB}/packaging/markers.pyo
+${PYSITELIB}/packaging/metadata.py
+${PYSITELIB}/packaging/metadata.pyc
+${PYSITELIB}/packaging/metadata.pyo
 ${PYSITELIB}/packaging/py.typed
 ${PYSITELIB}/packaging/requirements.py
 ${PYSITELIB}/packaging/requirements.pyc

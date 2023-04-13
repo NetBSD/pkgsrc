@@ -12,7 +12,7 @@ package_dir = \
 {'': 'src'}
 
 setup(name='packaging',
-      version='23.0',
+      version='23.1',
       description='Core utilities for Python packages',
       author=None,
       author_email='Donald Stufft <donald@stufft.io>',
