@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:05:35 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/04/13 12:38:53 wiz Exp $
 
 BLAKE2s (ettercap-0.8.3.1.tar.gz) = df662ced097a9072eed9221ecf5f53de9d702ab46531baa22492a38cf0398265
 SHA512 (ettercap-0.8.3.1.tar.gz) = 9bd71dcc1730293ee83934aca3587dfde662cb3890c12fafa557b6359f12226e5cb6f59a0db1aa11245a132b275e355e3bcc8952db921171d27b792827f148b5
 Size (ettercap-0.8.3.1.tar.gz) = 6678653 bytes
 SHA1 (patch-CMakeLists.txt) = f14a4c529631897bf5120be395a0111a639cda84
 SHA1 (patch-cmake_Modules_EttercapLibCheck.cmake) = 4d5d523735b64cf06d13fa4eb177d16553a9f8f3
+SHA1 (patch-plug-ins_sslstrip_sslstrip.c) = 6b59b92787387ad04c99a2c99df0869bbf641283
