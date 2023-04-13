@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2195 2023/04/13 16:35:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2196 2023/04/13 16:48:52 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3162,3 +3162,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-packaging to 23.1 [adam 2023-04-13]
 	Updated comms/py-rich to 13.3.4 [adam 2023-04-13]
 	Updated devel/fq to 0.5.0 [wiz 2023-04-13]
+	Updated www/nginx-devel to 1.23.4nb1 [osa 2023-04-13]
+	Updated www/nginx to 1.22.1nb7 [osa 2023-04-13]
+	Updated lang/njs to 0.7.12 [osa 2023-04-13]
