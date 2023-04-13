@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2191 2023/04/13 13:55:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2192 2023/04/13 14:12:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3155,3 +3155,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed security/py-solo successor security/py-solo1 [wiz 2023-04-13]
 	Added security/py-solo1 version 0.1.1 [wiz 2023-04-13]
 	Removed www/elinks successor www/felinks [wiz 2023-04-13]
+	Updated print/libpaper to 2.1.0 [wiz 2023-04-13]
