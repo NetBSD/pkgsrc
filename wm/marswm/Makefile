@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/12 10:26:04 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/13 08:06:07 wiz Exp $
 
 DISTNAME=	marswm-0.4.0
 CATEGORIES=	wm
@@ -35,4 +35,5 @@ DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
