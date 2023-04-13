@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/04/13 13:42:59 wiz Exp $
+
+BLAKE2s (solo1-0.1.1.tar.gz) = 41401bb0dd283eeb41b2038734d8c8f2ca26d145316705c305c4d7e88969872c
+SHA512 (solo1-0.1.1.tar.gz) = 7e345059205f8753d7d89a22091316f5a529e5afedd82f7a03acbe494035479ef28731cc2b91e8d46058ce638a0e420db8c5f57fcedfcc39b6d07de5eda86f93
+Size (solo1-0.1.1.tar.gz) = 39300 bytes
+SHA1 (patch-solo_devices_base.py) = b41aae82a2adc0d8e78c9b8891db3c87a67c120e
+SHA1 (patch-solo_devices_solo__v1.py) = 66a642eea53468e5baf430a414e39b5c8d97e24a
+SHA1 (patch-solo_solotool.py) = 8f6b102dcf903c6fb179b7fd1ec27360895fda2a
