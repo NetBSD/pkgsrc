@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/31 08:16:41 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/13 12:28:11 wiz Exp $
 
 DISTNAME=		lua-language-server-3.6.18
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -19,6 +19,8 @@ MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
 USE_TOOLS+=		pax mktemp
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
