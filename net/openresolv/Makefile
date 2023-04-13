@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2020/12/03 14:10:12 zafer Exp $
+# $NetBSD: Makefile,v 1.33 2023/04/13 10:34:53 roy Exp $
 
-DISTNAME=		openresolv-3.11.0
+DISTNAME=		openresolv-3.13.0
 CATEGORIES=		net
-MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
-MASTER_SITES+=		https://www.aydogan.net/distfiles/roy/openresolv/
-EXTRACT_SUFX=		.tar.xz
+MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
+GITHUB_PROJECT=		openresolv
+GITHUB_TAG=		${DISTNAME}
 
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://roy.marples.name/projects/openresolv/
