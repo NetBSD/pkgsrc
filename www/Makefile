@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1701 2023/04/13 13:55:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1702 2023/04/14 21:35:06 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -105,13 +105,13 @@ SUBDIR+=	drraw
 SUBDIR+=	drupal7
 SUBDIR+=	drupal9
 SUBDIR+=	e2guardian
+SUBDIR+=	elinks
 SUBDIR+=	eliom
 SUBDIR+=	emacs-w3m
 SUBDIR+=	emacs-w3m-snapshot
 SUBDIR+=	epiphany
 SUBDIR+=	fcgi
 SUBDIR+=	fcgiwrap
-SUBDIR+=	felinks
 SUBDIR+=	fengoffice
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox

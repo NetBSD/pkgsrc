@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/12/05 09:32:34 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/04/14 21:35:06 nia Exp $
 
 DISTNAME=	elinks-0.15.1
-PKGNAME=	${DISTNAME:S/elinks/felinks/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -11,8 +9,11 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rkd77/elinks
-COMMENT=	Fork of elinks, the text web browser
+COMMENT=	Feature-rich text mode web browser
 LICENSE=	gnu-gpl-v2
+
+CONFLICTS+=	felinks-[0-9]*
+SUPERSEDES+=	felinks-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
