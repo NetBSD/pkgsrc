@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2023/02/14 15:55:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.68 2023/04/14 03:16:43 ryoon Exp $
 bin/hb-info
 bin/hb-ot-shape-closure
 bin/hb-shape
@@ -128,11 +128,11 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-5-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-5-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-6-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-0-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/building.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/ch07s05.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/clusters.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/core-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/customizing-unicode-functions.html
@@ -143,6 +143,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-variable.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/getting-started.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/graphite-shaping.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/glyphs-and-rendering.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-aat-layout.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-blob.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-buffer.html
