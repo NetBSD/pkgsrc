@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/03/11 15:47:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/14 17:38:54 schmonz Exp $
 bin/background
 bin/backtick
 bin/case
@@ -114,3 +114,4 @@ man/man7/execline-grammar.7
 man/man7/execline-pushenv.7
 man/man7/execline-substitute.7
 man/man7/execline-transform.7
+man/man7/execline-why.7
