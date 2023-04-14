@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2203 2023/04/14 08:53:50 nia Exp $
+$NetBSD: CHANGES-2023,v 1.2204 2023/04/14 16:00:00 kim Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3174,3 +3174,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/four-bar-rs version 4.0.0 [pin 2023-04-14]
 	Updated www/firefox102-l10n to 102.10.0 [nia 2023-04-14]
 	Updated www/firefox102 to 102.10.0 [nia 2023-04-14]
+	Updated shells/tcsh to 6.24.10 [kim 2023-04-14]
