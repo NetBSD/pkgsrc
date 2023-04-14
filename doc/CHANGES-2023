@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2198 2023/04/13 18:30:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2199 2023/04/14 03:18:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3167,3 +3167,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/njs to 0.7.12 [osa 2023-04-13]
 	Updated sysutils/bkt to 0.6.1 [pin 2023-04-13]
 	Updated print/a2ps to 4.15.4 [wiz 2023-04-13]
+	Updated fonts/harfbuzz to 7.1.0 [ryoon 2023-04-14]
+	Updated fonts/harfbuzz-icu to 7.1.0 [ryoon 2023-04-14]
