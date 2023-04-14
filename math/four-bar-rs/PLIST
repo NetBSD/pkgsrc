@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/14 08:19:15 pin Exp $
+bin/four-bar
