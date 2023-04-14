@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2202 2023/04/14 08:21:23 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2203 2023/04/14 08:53:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3172,3 +3172,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/grep to 3.10 [ryoon 2023-04-14]
 	Updated graphics/wallust to 2.0.1 [pin 2023-04-14]
 	Added math/four-bar-rs version 4.0.0 [pin 2023-04-14]
+	Updated www/firefox102-l10n to 102.10.0 [nia 2023-04-14]
+	Updated www/firefox102 to 102.10.0 [nia 2023-04-14]
