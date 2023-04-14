@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/16 21:48:20 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/14 17:37:02 schmonz Exp $
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
 bin/s6-applyuidgid
@@ -96,6 +96,7 @@ man/man7/s6-service-directory.7
 man/man7/s6-socket-activation.7
 man/man7/s6-svscan-as-process-1.7
 man/man7/s6-svscan-not-as-process-1.7
+man/man7/s6-why.7
 man/man8/s6-accessrules-cdb-from-fs.8
 man/man8/s6-accessrules-fs-from-cdb.8
 man/man8/s6-applyuidgid.8
