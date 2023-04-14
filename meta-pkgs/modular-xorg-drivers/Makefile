@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/11/09 13:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2023/04/14 19:24:42 maya Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
@@ -77,8 +77,8 @@ DEPENDS+=	xf86-video-siliconmotion-[0-9]*:../../x11/xf86-video-siliconmotion
 DEPENDS+=	xf86-video-sis-[0-9]*:../../x11/xf86-video-sis
 DEPENDS+=	xf86-video-tdfx-[0-9]*:../../x11/xf86-video-tdfx
 .  if ${OPSYS} != "SunOS"
-DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
-DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
+#DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
+#DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
 DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
 .  endif
 DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
@@ -97,13 +97,13 @@ DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
 DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
-DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
+#DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
 DEPENDS+=	xf86-video-s3virge-[0-9]*:../../x11/xf86-video-s3virge
 DEPENDS+=	xf86-video-savage-[0-9]*:../../x11/xf86-video-savage
 DEPENDS+=	xf86-video-siliconmotion-[0-9]*:../../x11/xf86-video-siliconmotion
 DEPENDS+=	xf86-video-sis-[0-9]*:../../x11/xf86-video-sis
 DEPENDS+=	xf86-video-tdfx-[0-9]*:../../x11/xf86-video-tdfx
-DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
+#DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
 DEPENDS+=	xf86-video-trident-[0-9]*:../../x11/xf86-video-trident
 DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 .elif ${MACHINE_ARCH} == "hppa"
@@ -115,7 +115,7 @@ DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-siliconmotion-[0-9]*:../../x11/xf86-video-siliconmotion
 DEPENDS+=	xf86-video-sis-[0-9]*:../../x11/xf86-video-sis
-DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
+#DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
 .elif ${MACHINE_ARCH} == "powerpc"
 DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 DEPENDS+=	xf86-video-chips-[0-9]*:../../x11/xf86-video-chips
