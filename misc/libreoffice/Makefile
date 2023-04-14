@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.303 2023/04/14 15:33:03 wiz Exp $
+# $NetBSD: Makefile,v 1.304 2023/04/14 15:42:46 wiz Exp $
 
 VERREL=		7.5.1
 VERRC=		2
@@ -270,8 +270,8 @@ REPLACE_PERL+=	sd/res/webview/webcast.pl
 LO_PROGRAMS=		libreoffice lobase localc lodraw loffice
 LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter
 # Base depends on java, we don't install the icon
-LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
-			startcenter.desktop writer.desktop
+#LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
+#			startcenter.desktop writer.desktop
 
 #OBJDIR=		pkgsrcbuild
 #CONFIGURE_DIRS=	${OBJDIR}
@@ -329,9 +329,6 @@ do-install:
 		${MKDIR} ${d}
 .endfor
 
-UNO_PATH=	${PREFIX}/${PKGNAME}/lib/libreoffice/program
-
-BUILD_DEFS+=	UNO_PATH
 BUILD_DEFS+=	PYTHONBIN
 
 post-install:
