@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2023/04/14 21:35:06 nia Exp $
+# $NetBSD: Makefile,v 1.77 2023/04/14 21:41:06 nia Exp $
 
-DISTNAME=	elinks-0.15.1
+DISTNAME=	elinks-0.16.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkd77/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-DIST_SUBDIR=	felinks
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

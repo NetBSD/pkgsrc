@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2023/04/14 21:35:06 nia Exp $
+$NetBSD: distinfo,v 1.35 2023/04/14 21:41:06 nia Exp $
 
-BLAKE2s (felinks/elinks-0.15.1.tar.xz) = 7a4362b39107b155aa342156b92afbad4c1fb731ecb3db67a62e39d8c3fef08a
-SHA512 (felinks/elinks-0.15.1.tar.xz) = 677eeeeab3fc24dcfe4e7248a9c1a8e07083ebd13bd9923d89702a04dbe1c3e4d4038029c095881183d7f11ae2c5317ff7e5458320644fde0c176378b89068d8
-Size (felinks/elinks-0.15.1.tar.xz) = 1997208 bytes
+BLAKE2s (elinks-0.16.0.tar.xz) = 8968a52ad06965d2ab20176628cc6eefd3a09b008c79d654462624e23092e6b8
+SHA512 (elinks-0.16.0.tar.xz) = b1d6040b691610d596e0d1eae26bfe52d702272c71a2e5100ab7d6b05b24a0b88524d4fc7be3f6371e0bada1e6f0992da7505a72419ca642dec778424629a522
+Size (elinks-0.16.0.tar.xz) = 2029708 bytes
 SHA1 (patch-src_util_memory.c) = dc390442f65d7cee70d28d6a6cba5ee0981eb83a
