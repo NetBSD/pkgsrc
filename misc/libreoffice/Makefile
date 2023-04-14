@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2023/04/13 12:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.303 2023/04/14 15:33:03 wiz Exp $
 
 VERREL=		7.5.1
 VERRC=		2
@@ -299,7 +299,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 INSTALLATION_DIRS=	bin share/applications
 
-CHECK_WRKREF_SKIP+=	${PKGNAME}/lib/libreoffice/program/libsofficeapp.so
+CHECK_WRKREF_SKIP+=	${PKGNAME_NOREV}/lib/libreoffice/program/libsofficeapp.so
 
 .PHONY: debugrun
 # For debugging
