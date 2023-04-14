@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2207 2023/04/14 21:15:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2208 2023/04/14 21:37:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/s6 to 2.11.3.2nb2 [schmonz 2023-04-14]
 	Updated lang/execline to 2.9.3.0nb2 [schmonz 2023-04-14]
 	Updated shells/oh-my-posh to 14.29.3 [pin 2023-04-14]
+	Moved www/felinks to www/elinks [nia 2023-04-14]
