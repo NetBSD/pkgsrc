@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2205 2023/04/14 17:37:07 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2206 2023/04/14 17:38:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3176,3 +3176,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox102 to 102.10.0 [nia 2023-04-14]
 	Updated shells/tcsh to 6.24.10 [kim 2023-04-14]
 	Updated sysutils/s6 to 2.11.3.2nb2 [schmonz 2023-04-14]
+	Updated lang/execline to 2.9.3.0nb2 [schmonz 2023-04-14]
