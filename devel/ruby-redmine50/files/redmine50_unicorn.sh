@@ -1,20 +1,20 @@
 #!/bin/sh
 #
-# $NetBSD: redmine50_unicorn.sh,v 1.1 2022/09/03 13:53:59 taca Exp $
+# $NetBSD: redmine50_unicorn.sh,v 1.2 2023/04/14 06:57:31 triaxx Exp $
 #
 
-# PROVIDE: redmine42_unicorn@RUBY_SUFFIX@
+# PROVIDE: redmine50_unicorn@RUBY_SUFFIX@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
 . /etc/rc.subr
 
-name="redmine42_unicorn@RUBY_SUFFIX@"
+name="redmine50_unicorn@RUBY_SUFFIX@"
 rcvar=$name
-start_cmd="redmine42_unicorn_start"
-stop_cmd="redmine42_unicorn_stop"
+start_cmd="redmine50_unicorn_start"
+stop_cmd="redmine50_unicorn_stop"
 
-redmine42_unicorn_start()
+redmine50_unicorn_start()
 {
 	cd @PREFIX@/@RM_DIR@
 	@PREFIX@/bin/unicorn@RUBY_SUFFIX@ \
@@ -22,7 +22,7 @@ redmine42_unicorn_start()
 		-E production -D
 }
 
-redmine42_unicorn_stop()
+redmine50_unicorn_stop()
 {
 	/bin/kill -QUIT `/bin/cat @PREFIX@/@RM_DIR@/unicorn.pid`
 }
