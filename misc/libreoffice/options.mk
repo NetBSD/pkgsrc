@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2022/05/24 09:46:56 nia Exp $
+# $NetBSD: options.mk,v 1.22 2023/04/14 15:33:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -11,8 +11,8 @@ PKG_SUGGESTED_OPTIONS=	cups ldap dbus gtk3
 #
 # Only enable Java on platforms where OpenJDK>=9 is the default,
 # see mk/java-vm.mk
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
 PKG_SUGGESTED_OPTIONS+=	java
 .endif
 
