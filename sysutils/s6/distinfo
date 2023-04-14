@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2023/04/04 20:10:55 schmonz Exp $
+$NetBSD: distinfo,v 1.17 2023/04/14 17:37:02 schmonz Exp $
 
 BLAKE2s (s6-2.11.3.2.tar.gz) = 4880e5f6525b6183750dccf124d604648c322062f71969563478080760a15311
 SHA512 (s6-2.11.3.2.tar.gz) = fe87c7984905b3eb35d7c91a3f0b6ece5cb0eb2c6d16ea7725655f118c464cf017e10b6ed82b3b12b6deb331538fc5d20afea7f34ff98b85d4c437b09e07371a
 Size (s6-2.11.3.2.tar.gz) = 247882 bytes
-BLAKE2s (s6-man-pages-2.11.3.2.2.tar.gz) = 648662b31c6f62e9204bd672b5fd5161e59df597a3b030762024fa658d7c179f
-SHA512 (s6-man-pages-2.11.3.2.2.tar.gz) = af3ce8e02911ded52e26a42763e997752c3ab9259e4c31aa065c6330657da219eb6c63d0ebb291b5a028927c62c4aaa7168d90304b0cce6bac497fc5a8ed920d
-Size (s6-man-pages-2.11.3.2.2.tar.gz) = 109084 bytes
+BLAKE2s (s6-man-pages-2.11.3.2.3.tar.gz) = 4bff966129c5fba8c50a5e5d0b8985dc01caddfd25319d586a779aa4f5a9c7f0
+SHA512 (s6-man-pages-2.11.3.2.3.tar.gz) = fcd374768487ec5d4e49dbea2f2d0cc010ba1ebdf24d32e81938f92e747952ad72f97dd329fa63e0e7963d897ac068f4b3d1174971f2ce7d45ed5b118eebd64b
+Size (s6-man-pages-2.11.3.2.3.tar.gz) = 112680 bytes
