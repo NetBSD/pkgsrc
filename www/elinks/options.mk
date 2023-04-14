@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/06/20 15:13:56 nia Exp $
+# $NetBSD: options.mk,v 1.19 2023/04/14 21:35:06 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.felinks
 PKG_OPTIONS_REQUIRED_GROUPS=	tls

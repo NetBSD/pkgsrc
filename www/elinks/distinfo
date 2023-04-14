@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/09/25 10:13:59 tnn Exp $
+$NetBSD: distinfo,v 1.34 2023/04/14 21:35:06 nia Exp $
 
 BLAKE2s (felinks/elinks-0.15.1.tar.xz) = 7a4362b39107b155aa342156b92afbad4c1fb731ecb3db67a62e39d8c3fef08a
 SHA512 (felinks/elinks-0.15.1.tar.xz) = 677eeeeab3fc24dcfe4e7248a9c1a8e07083ebd13bd9923d89702a04dbe1c3e4d4038029c095881183d7f11ae2c5317ff7e5458320644fde0c176378b89068d8

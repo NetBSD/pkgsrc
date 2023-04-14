@@ -1,4 +1,4 @@
-$NetBSD: patch-src_util_memory.c,v 1.1 2020/06/20 15:13:56 nia Exp $
+$NetBSD: patch-src_util_memory.c,v 1.1 2023/04/14 21:35:06 nia Exp $
 
 Use macro to make mremap compatible to NetBSD
 
