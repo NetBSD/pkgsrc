@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2019/11/04 21:28:40 rillig Exp $
+# $NetBSD: Makefile.common,v 1.46 2023/04/14 22:58:24 nia Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -61,6 +61,14 @@ SUBST_SED.bool=		-e '/undef bool/d'
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
+
+# I am not quite sure what is causing the test for -msse4.2 to fail
+# (perhaps cwrappers?). It is basically grepping the output of
+# "cc -v --help" which does in fact contain the correct value.
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ENV+=		SSE42_CFLAGS=-msse4.2
+.endif
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
 CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
