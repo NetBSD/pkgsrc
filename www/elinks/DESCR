@@ -3,4 +3,4 @@ ELinks is an advanced and well-established feature-rich text mode web
 customizable and can be extended via scripts. It is very portable and runs
 on a variety of platforms.
 
-felinks is a fork of elinks.
+This package was previously known as felinks, a fork of elinks.
