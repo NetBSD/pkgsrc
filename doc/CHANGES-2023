@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2212 2023/04/15 05:01:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2213 2023/04/15 13:06:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3183,3 +3183,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php82 to 8.2.5 [taca 2023-04-15]
 	Updated lang/php81 to 8.1.18 [taca 2023-04-15]
 	Updated print/a2ps to 4.15.4nb1 [wiz 2023-04-15]
+	Updated textproc/libxml2 to 2.10.4 [gutteridge 2023-04-15]
