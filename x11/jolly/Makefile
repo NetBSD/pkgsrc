@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/02/07 17:24:32 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/15 14:17:57 pin Exp $
 
 DISTNAME=	jolly-0.2.0
 CATEGORIES=	x11
@@ -20,6 +20,7 @@ INSTALLATION_DIRS=	bin share/examples/jolly share/icons/hicolor/scalable/apps
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jolly \
