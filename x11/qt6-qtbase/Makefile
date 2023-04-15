@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/07 18:28:05 nros Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/15 11:00:42 nros Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -101,6 +101,11 @@ LDFLAGS+=			-ldl
 LDFLAGS+=			-lexecinfo
 .  endif
 LDFLAGS.FreeBSD+=		-lutil
+.elif ${OPSYS} == "SunOS"
+PLIST_VARS+=	inotify
+.  if exists(/usr/include/sys/inotify.h)
+PLIST.inotify=	yes
+.  endif 
 .endif
 
 REPLACE_PERL+=		libexec/syncqt.pl
