@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:58:26 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/15 09:17:29 wiz Exp $
 
 VERSION=		1.6.1
 DICTNAME=		hu_HU
@@ -7,7 +7,7 @@ DISTNAME=		${DICTNAME}-${VERSION}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=magyarispell/}
 
-MAINTAINER=		ahoka@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://magyarispell.sourceforge.net/
 COMMENT=		Hungarian dictionary for hunspell
 
