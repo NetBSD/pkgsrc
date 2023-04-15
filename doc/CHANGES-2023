@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2211 2023/04/15 02:19:44 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2212 2023/04/15 05:01:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/elinks to 0.16.0 [nia 2023-04-14]
 	Updated lang/php82 to 8.2.5 [taca 2023-04-15]
 	Updated lang/php81 to 8.1.18 [taca 2023-04-15]
+	Updated print/a2ps to 4.15.4nb1 [wiz 2023-04-15]
