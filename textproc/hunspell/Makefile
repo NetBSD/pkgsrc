@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/02/05 12:20:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/04/15 09:17:29 wiz Exp $
 
 DISTNAME=	hunspell-1.7.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hunspell.github.io/
 COMMENT=	Improved spellchecker
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2.1 OR gnu-gpl-v2
