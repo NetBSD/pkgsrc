@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2023/04/13 18:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/04/15 05:01:48 wiz Exp $
 
 DISTNAME=		a2ps-4.15.4
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 
