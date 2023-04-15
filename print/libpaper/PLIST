@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/13 14:12:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/15 19:16:33 triaxx Exp $
 bin/paper
-bin/paper.bin
+${PLIST.relo}bin/paper.bin
 bin/paperconf
-bin/paperconf.bin
+${PLIST.relo}bin/paperconf.bin
 include/paper.h
 lib/libpaper.la
 man/man1/paper.1
