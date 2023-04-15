@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.304 2023/04/14 15:42:46 wiz Exp $
+# $NetBSD: Makefile,v 1.305 2023/04/15 07:28:42 wiz Exp $
 
 VERREL=		7.5.1
 VERRC=		2
@@ -163,12 +163,6 @@ WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
-
-# dmake scripts use relative path with -rpath-link ld arguments, which
-# is a no-go with normal pkgsrc wrappers.
-# dmake is slowly beeing removed from the LibreOffice build process
-# and this option will hopefully become unneeded in the future
-WRAPPER_SKIP_TRANSFORM=	yes
 
 LDFLAGS+=		-lboost_system
 
