@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/11 14:12:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/15 02:17:13 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -72,6 +72,7 @@ include/php/Zend/zend_list.h
 include/php/Zend/zend_llist.h
 include/php/Zend/zend_long.h
 include/php/Zend/zend_map_ptr.h
+include/php/Zend/zend_max_execution_timer.h
 include/php/Zend/zend_mmap.h
 include/php/Zend/zend_modules.h
 include/php/Zend/zend_multibyte.h
