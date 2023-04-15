@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2023/01/29 21:17:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.185 2023/04/15 09:17:29 wiz Exp $
 
 DISTNAME=	sylpheed-3.7.0
 PKGREVISION=	11
@@ -6,7 +6,7 @@ CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v3.7/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sylpheed.sraoss.jp/en/
 COMMENT=	Gtk based e-mail and netnews client
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:34:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.25 2023/04/15 09:17:29 wiz Exp $
 
 DISTNAME=	see-3.0.1376
 PKGREVISION=	16
 CATEGORIES=	lang
 MASTER_SITES=	http://users.tpg.com.au/dle0nard/software/
 
-MAINTAINER=	ahoka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.adaptive-enterprises.com.au/~d/software/see/
 COMMENT=	JavaScript interpreter and runtime library in C
 LICENSE=	modified-bsd
