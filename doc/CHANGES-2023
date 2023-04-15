@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2209 2023/04/14 21:41:19 nia Exp $
+$NetBSD: CHANGES-2023,v 1.2210 2023/04/15 02:17:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3180,3 +3180,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 14.29.3 [pin 2023-04-14]
 	Moved www/felinks to www/elinks [nia 2023-04-14]
 	Updated www/elinks to 0.16.0 [nia 2023-04-14]
+	Updated lang/php82 to 8.2.5 [taca 2023-04-15]
