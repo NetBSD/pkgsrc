@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/11 14:16:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/15 15:12:50 taca Exp $
 include/php/ext/mbstring/libmbfl/filters/cp932_table.h
 include/php/ext/mbstring/libmbfl/filters/emoji2uni.h
 include/php/ext/mbstring/libmbfl/filters/html_entities.h
@@ -77,6 +77,7 @@ include/php/ext/mbstring/libmbfl/filters/unicode_table_cp1252.h
 ${PLIST.sbf}include/php/ext/mbstring/libmbfl/filters/unicode_table_cp1254.h
 ${PLIST.sbf}include/php/ext/mbstring/libmbfl/filters/unicode_table_cp850.h
 ${PLIST.sbf}include/php/ext/mbstring/libmbfl/filters/unicode_table_cp866.h
+${PLIST.php81}include/php/ext/mbstring/libmbfl/filters/utf7_helper.h
 include/php/ext/mbstring/libmbfl/filters/unicode_table_cp932_ext.h
 include/php/ext/mbstring/libmbfl/filters/unicode_table_cp936.h
 include/php/ext/mbstring/libmbfl/filters/unicode_table_gb18030.h
