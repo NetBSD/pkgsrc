@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/24 18:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2023/04/15 11:59:34 hgutch Exp $
 
 DISTNAME=	fluidsynth-2.3.1
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ COMMENT=	Software synthesizer based on SoundFont2
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 
 CHECK_PORTABILITY_SKIP+=	test-android/convert-tests.sh
 
