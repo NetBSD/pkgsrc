@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2215 2023/04/15 13:23:45 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2216 2023/04/15 19:16:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3186,3 +3186,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libxml2 to 2.10.4 [gutteridge 2023-04-15]
 	Updated textproc/py-libxml2 to 2.10.4 [gutteridge 2023-04-15]
 	Updated audio/gospt to 0.0.48 [pin 2023-04-15]
+	Updated print/libpaper to 2.1.0nb1 [triaxx 2023-04-15]
