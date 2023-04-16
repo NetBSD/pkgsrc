@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22766 2023/04/16 08:24:44 wiz Exp $
+$NetBSD: TODO,v 1.22767 2023/04/16 14:40:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -668,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ftplibpp-2.0.2
 	o fuse-unionfs-2.1
 	o fvwm2-themes-0.7.0
+	o gajim-1.7.3
 	o gallery3-3.0.9
 	o gammu-1.42.0
 	o ganglia-3.7.5
