@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2225 2023/04/16 20:17:28 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2226 2023/04/16 20:18:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3195,5 +3195,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/go-tools to 0.8.0 [bsiegert 2023-04-16]
 	Updated sysutils/erdtree to 1.8.1 [pin 2023-04-16]
 	Updated misc/katbin-cli to 1.3.14 [pin 2023-04-16]
-	Added sysutils/attr version 2.4.47nb1 [gutteridge 2023-04-16]
 	Added sysutils/acl version 2.3.1 [gutteridge 2023-04-16]
