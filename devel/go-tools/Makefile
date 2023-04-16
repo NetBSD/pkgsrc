@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/04/05 20:48:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.78 2023/04/16 18:23:00 bsiegert Exp $
 
-DISTNAME=		tools-0.1.0
+DISTNAME=		tools-0.8.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		24
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools
@@ -21,7 +20,10 @@ CHECK_RELRO_SKIP+=	bin/callgraph
 CHECK_RELRO_SKIP+=	bin/cover
 CHECK_RELRO_SKIP+=	bin/digraph
 CHECK_RELRO_SKIP+=	bin/eg
+CHECK_RELRO_SKIP+=	bin/file2fuzz
 CHECK_RELRO_SKIP+=	bin/fiximports
+CHECK_RELRO_SKIP+=	bin/fuzz-driver
+CHECK_RELRO_SKIP+=	bin/fuzz-runner
 CHECK_RELRO_SKIP+=	bin/godex
 CHECK_RELRO_SKIP+=	bin/godoc
 CHECK_RELRO_SKIP+=	bin/goimports
