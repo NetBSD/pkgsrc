@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2222 2023/04/16 18:30:20 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2223 2023/04/16 18:31:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-frozendict to 2.3.7 [wiz 2023-04-16]
 	Updated devel/go-tools to 0.8.0 [bsiegert 2023-04-16]
 	Updated sysutils/erdtree to 1.8.1 [pin 2023-04-16]
+	Updated misc/katbin-cli to 1.3.14 [pin 2023-04-16]
