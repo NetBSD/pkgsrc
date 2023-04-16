@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1039 2023/03/15 10:07:27 pin Exp $
+# $NetBSD: Makefile,v 1.1040 2023/04/16 20:15:56 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -17,6 +17,7 @@ SUBDIR+=	R-unix
 SUBDIR+=	R-xopen
 SUBDIR+=	WCMCommander
 SUBDIR+=	accountsservice
+SUBDIR+=	acl
 SUBDIR+=	acpica-utils
 SUBDIR+=	acpidump
 SUBDIR+=	adtool
