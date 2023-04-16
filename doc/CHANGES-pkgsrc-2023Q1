@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.5 2023/04/12 17:35:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.6 2023/04/16 14:52:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
@@ -31,4 +31,8 @@ lang/ruby32-base: build fix
 
 Pullup ticket #6752 - requested by wiz
 print/a2ps: restore functionality
+
+Pullup ticket #6753 - requested by gutteridge
+textproc/libxml2: security fix
+textproc/py-libxml2: security fix
 
