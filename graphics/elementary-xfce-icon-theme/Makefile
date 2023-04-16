@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/10/18 07:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/16 19:42:40 gutteridge Exp $
 
 DISTNAME=	elementary-xfce-icon-theme-0.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
 GITHUB_PROJECT=	elementary-xfce
@@ -27,7 +27,8 @@ PRINT_PLIST_AWK+=	/^share\/icons\/elemantary-xfce-darker\/icon-theme.cache$$/ { 
 INSTALLATION_DIRS+=	share/icons
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pm e* ${DESTDIR}${PREFIX}/share/icons/
+	cd ${WRKSRC} && ${PAX} -rw -pm e* AUTHORS CONTRIBUTORS LICENSE README.md \
+	${DESTDIR}${PREFIX}/share/icons/
 
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
