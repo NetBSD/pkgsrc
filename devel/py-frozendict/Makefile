@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2023/04/05 11:40:16 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/04/16 14:40:46 wiz Exp $
 
-DISTNAME=	frozendict-2.3.6
+DISTNAME=	frozendict-2.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozendict/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/slezica/python-frozendict
+HOMEPAGE=	https://github.com/Marco-Sulla/python-frozendict
 COMMENT=	Immutable wrapper around dictionaries
 LICENSE=	mit
 
@@ -16,11 +16,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# as of 2.3.5, C extension is optional
-# and does not build for 2.3.6: 'frozendictobject.h' file not found
-PYSETUPARGS=	py
-
-DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
 
