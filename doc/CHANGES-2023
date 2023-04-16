@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2220 2023/04/16 14:40:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2221 2023/04/16 18:23:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3192,3 +3192,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 3.11.2 [adam 2023-04-16]
 	Updated sysutils/py-ansible-compat to 3.0.2 [adam 2023-04-16]
 	Updated devel/py-frozendict to 2.3.7 [wiz 2023-04-16]
+	Updated devel/go-tools to 0.8.0 [bsiegert 2023-04-16]
