@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/18 00:41:41 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/16 19:42:40 gutteridge Exp $
+share/icons/AUTHORS
+share/icons/CONTRIBUTORS
+share/icons/LICENSE
+share/icons/README.md
 share/icons/elementary-xfce-dark/AUTHORS
 share/icons/elementary-xfce-dark/CONTRIBUTORS
 share/icons/elementary-xfce-dark/LICENSE
