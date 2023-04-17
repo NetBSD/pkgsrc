@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2239 2023/04/17 17:33:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2240 2023/04/17 18:18:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/gleam to 0.28.3 [nikita 2023-04-17]
 	Updated textproc/py-rebulk to 3.2.0 [adam 2023-04-17]
 	Updated textproc/py-guessit to 3.7.1 [adam 2023-04-17]
+	Updated lang/vala to 0.56.6 [bsiegert 2023-04-17]
