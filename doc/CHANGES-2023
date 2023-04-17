@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2242 2023/04/17 20:12:00 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2243 2023/04/17 20:32:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3242,3 +3242,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-yaml to 6.0 [adam 2023-04-17]
 	Removed devel/py-cheetah successor devel/py-cheetah3 [adam 2023-04-17]
 	Removed textproc/py-markdown3 successor textproc/py-markdown [adam 2023-04-17]
+	Updated textproc/py-deepdiff to 6.3.0 [adam 2023-04-17]
+	Updated devel/py-googleapis-common-protos to 1.59.0 [adam 2023-04-17]
