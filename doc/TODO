@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22768 2023/04/17 17:33:40 adam Exp $
+$NetBSD: TODO,v 1.22769 2023/04/17 18:18:00 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1472,7 +1472,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
-	o vala-0.56.6
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
