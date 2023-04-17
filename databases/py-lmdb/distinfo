@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/02/21 17:27:17 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/04/17 09:32:48 adam Exp $
 
-BLAKE2s (lmdb-1.4.0.tar.gz) = fd008bef36243b29da9bf6e186ea74ce2d140f7457ee46787bd3c4dc2325de6b
-SHA512 (lmdb-1.4.0.tar.gz) = d6121a2dbadf9dcef5b65e9f5661d5934cae2e43bc2d830723cfe3982a2e937ad9260f1ea74ddaee83927ac8da4dbcfdf2ea8f801b5bfdaab096c4d326d9ede1
-Size (lmdb-1.4.0.tar.gz) = 881541 bytes
+BLAKE2s (lmdb-1.4.1.tar.gz) = 0308daae193a400ce8173a83523a19b3bfb4470fcba48a7e852401ba9db0dca0
+SHA512 (lmdb-1.4.1.tar.gz) = 96b39a45c6e7c0fcc0b6f913337d07adb5c8883d0b6a95102b0227b6b92ac3fcdcaf09c132e44f2d3779b5066692b407bb1afd19ae8d87feda56047652a07354
+Size (lmdb-1.4.1.tar.gz) = 881549 bytes
