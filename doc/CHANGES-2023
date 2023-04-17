@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2232 2023/04/17 09:23:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2233 2023/04/17 09:38:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3221,3 +3221,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-dns-route53 to 2.5.0 [adam 2023-04-17]
 	Updated security/py-certbot-dns-sakuracloud to 2.5.0 [adam 2023-04-17]
 	Updated security/py-certbot-nginx to 2.5.0 [adam 2023-04-17]
+	Updated databases/py-lmdb to 1.4.1 [adam 2023-04-17]
+	Updated textproc/py-ini2toml to 0.12 [adam 2023-04-17]
