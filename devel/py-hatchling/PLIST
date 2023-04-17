@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/18 18:40:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/17 12:50:49 adam Exp $
 bin/hatchling-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -74,8 +74,6 @@ ${PYSITELIB}/hatchling/licenses/supported.py
 ${PYSITELIB}/hatchling/licenses/supported.pyc
 ${PYSITELIB}/hatchling/metadata/__init__.py
 ${PYSITELIB}/hatchling/metadata/__init__.pyc
-${PYSITELIB}/hatchling/metadata/classifiers.py
-${PYSITELIB}/hatchling/metadata/classifiers.pyc
 ${PYSITELIB}/hatchling/metadata/core.py
 ${PYSITELIB}/hatchling/metadata/core.pyc
 ${PYSITELIB}/hatchling/metadata/custom.py
