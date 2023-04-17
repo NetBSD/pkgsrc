@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.584 2023/04/17 10:36:49 adam Exp $
+# $NetBSD: Makefile,v 1.585 2023/04/17 10:49:10 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -268,6 +268,7 @@ SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
 SUBDIR+=	py-stdnum
 SUBDIR+=	py-tqdm
+SUBDIR+=	py-trove-classifiers
 SUBDIR+=	py-trytond-carrier
 SUBDIR+=	py-trytond-carrier-percentage
 SUBDIR+=	py-trytond-carrier-weight
