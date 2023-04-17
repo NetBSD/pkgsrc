@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2022/11/16 11:56:15 wiz Exp $
+# $NetBSD: builtin.mk,v 1.6 2023/04/17 21:08:22 wiz Exp $
 
 BUILTIN_PKG:=	libXft
 
@@ -25,7 +25,7 @@ MAKEVARS+=		IS_BUILTIN.libXft
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.libXft) && \
-    ${IS_BUILTIN.libXft:M[yY][eE][sS]} && \
+    ${IS_BUILTIN.libXft:tl} == yes && \
     empty(H_XFT2:M__nonexistent__)
 #
 # Extract the version number from the header file, but if it's not
@@ -53,10 +53,10 @@ USE_BUILTIN.libXft=	no
 .  else
 USE_BUILTIN.libXft=	${IS_BUILTIN.libXft}
 .    if defined(BUILTIN_PKG.libXft) && \
-        ${IS_BUILTIN.libXft:M[yY][eE][sS]}
+        ${IS_BUILTIN.libXft:tl} == yes
 USE_BUILTIN.libXft=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libXft}
-.        if ${USE_BUILTIN.libXft:M[yY][eE][sS]}
+.        if ${USE_BUILTIN.libXft:tl} == yes
 USE_BUILTIN.libXft!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXft:Q}; then	\
 		${ECHO} yes;						\
@@ -78,9 +78,9 @@ MAKEVARS+=		USE_BUILTIN.libXft
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.libXft?=	no
-.if ${CHECK_BUILTIN.libXft:M[nN][oO]}
+.if ${CHECK_BUILTIN.libXft:tl} == no
 
-.  if ${USE_BUILTIN.libXft:M[nN][oO]}
+.  if ${USE_BUILTIN.libXft:tl} == no
 BUILDLINK_API_DEPENDS.libXft+=	libXft>=2.1.10
 .  endif
 
