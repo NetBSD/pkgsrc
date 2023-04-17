@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2233 2023/04/17 09:38:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2234 2023/04/17 10:00:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3223,3 +3223,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-nginx to 2.5.0 [adam 2023-04-17]
 	Updated databases/py-lmdb to 1.4.1 [adam 2023-04-17]
 	Updated textproc/py-ini2toml to 0.12 [adam 2023-04-17]
+	Updated devel/py-filelock to 3.11.0 [adam 2023-04-17]
+	Updated www/py-httpcore to 0.17.0 [adam 2023-04-17]
+	Updated www/py-httpx to 0.24.0 [adam 2023-04-17]
+	Updated www/py-test-httpx to 0.22.0 [adam 2023-04-17]
