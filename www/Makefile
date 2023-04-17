@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1702 2023/04/14 21:35:06 nia Exp $
+# $NetBSD: Makefile,v 1.1703 2023/04/17 20:45:04 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -799,6 +799,7 @@ SUBDIR+=	py-httpbin
 SUBDIR+=	py-httpcore
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
+SUBDIR+=	py-httpretty
 SUBDIR+=	py-httptools
 SUBDIR+=	py-httpx
 SUBDIR+=	py-httpx-socks
