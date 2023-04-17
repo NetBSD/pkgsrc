@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2022/06/11 12:03:32 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/04/17 17:43:48 adam Exp $
 
-BLAKE2s (lv2-1.18.4.tar.bz2) = edf20666d86f7cf55bdb774369e3f3780fbbc70053e3fd8c7a37511869d09f04
-SHA512 (lv2-1.18.4.tar.bz2) = 8095a1f3dcf70cf8cefff18c40b52c1dffeab0fe1f6bfb083c9f0e48a9617d3c8647b3f4db567ac1f5f33564399ffe1023774ad9bacb1bb0133f182422f22d6a
-Size (lv2-1.18.4.tar.bz2) = 540611 bytes
+BLAKE2s (lv2-1.18.10.tar.xz) = f7ee1affae41b8448d3fea4216b491838a9d6433697d8ca773ee9af735c52d20
+SHA512 (lv2-1.18.10.tar.xz) = ab4bcf593f633b1ed16c0eb6aa4525458a00655ef9c87619bf85eaa966f8fd094a8e871b825f679e0d97923f8bbbf11841ff467022390ca2f1a5b5f66ccd5d1b
+Size (lv2-1.18.10.tar.xz) = 237380 bytes
+SHA1 (patch-meson.build) = 7e332263e885576605d9dd4d8851737b1d1972ef

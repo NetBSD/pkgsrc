@@ -1,0 +1,30 @@
+$NetBSD: patch-meson.build,v 1.1 2023/04/17 17:43:48 adam Exp $
+
+Do not look for python3 executable.
+
+--- meson.build.orig	2023-04-03 14:33:58.000000000 +0000
++++ meson.build
+@@ -295,21 +295,8 @@ build_docs = false
+ build_lv2specgen = false
+ doc_deps = []
+ if not get_option('docs').disabled()
+-  doc_python_modules = ['lxml', 'markdown', 'pygments', 'rdflib']
+-
+-  python = pymod.find_installation(
+-    'python3',
+-    modules: doc_python_modules,
+-    required: get_option('docs'),
+-  )
+-
+-  if python.found() and python.language_version().version_compare('<3.7')
+-    warning('Python 3.7 is required for documentation')
+-    build_docs = false
+-  endif
+-
+-  build_docs = doxygen.found() and python.found()
+-  build_lv2specgen = python.found()
++  build_docs = doxygen.found()
++  build_lv2specgen = true
+ endif
+ 
+ # Run Doxygen first to generate tags

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2023/01/29 21:14:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2023/04/17 17:43:48 adam Exp $
 
-DISTNAME=	lv2-1.18.4
-PKGREVISION=	4
+DISTNAME=	lv2-1.18.10
 CATEGORIES=	audio
 MASTER_SITES=	https://lv2plug.in/spec/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lv2plug.in/
@@ -19,15 +18,18 @@ PKGCONFIG_OVERRIDE+=	lv2/lv2plug.in/ns/lv2core/lv2core.pc.in
 PKGCONFIG_OVERRIDE+=	lv2.pc.in
 
 REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
+REPLACE_PYTHON+=	scripts/lv2_build_index.py
 
-PYTHON_VERSIONED_DEPENDENCIES=	markdown pygments
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "options.mk"
 
-WAF_ARGS+=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} ${BUILD_VALGRIND}
-WAF_ARGS+=	--copy-headers
-
-.include "../../devel/waf/waf.mk"
+.include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.10
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2++=	gtk2+>=2.18.0
@@ -35,5 +37,4 @@ BUILDLINK_API_DEPENDS.gtk2++=	gtk2+>=2.18.0
 BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.0.0
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
