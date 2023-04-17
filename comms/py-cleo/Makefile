@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/17 20:37:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/17 20:51:23 adam Exp $
 
 DISTNAME=	cleo-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cleo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sdispater/cleo
+HOMEPAGE=	https://github.com/python-poetry/cleo
 COMMENT=	Create beautiful and testable command-line interfaces
 LICENSE=	mit
 
