@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2226 2023/04/16 20:18:23 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2227 2023/04/17 05:31:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3196,3 +3196,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/erdtree to 1.8.1 [pin 2023-04-16]
 	Updated misc/katbin-cli to 1.3.14 [pin 2023-04-16]
 	Added sysutils/acl version 2.3.1 [gutteridge 2023-04-16]
+	Updated devel/py-astroid to 2.15.3 [adam 2023-04-17]
+	Updated www/py-soupsieve to 2.4.1 [adam 2023-04-17]
