@@ -1,0 +1,4 @@
+This is the Linux io_uring library, liburing. liburing provides helpers to
+set up and tear down io_uring instances, and also a simplified interface
+for applications that don't need (or want) to deal with the full kernel-
+side implementation.
