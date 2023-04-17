@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2247 2023/04/17 21:33:34 fox Exp $
+$NetBSD: CHANGES-2023,v 1.2248 2023/04/17 21:35:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXft to 2.3.8 [wiz 2023-04-17]
 	Updated x11/libXpm to 3.5.16 [wiz 2023-04-17]
 	Updated audio/fasttracker2 to 1.66 [fox 2023-04-17]
+	Added devel/liburing version 2.3 [gutteridge 2023-04-17]
