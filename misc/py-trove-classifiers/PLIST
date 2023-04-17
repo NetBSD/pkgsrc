@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/17 10:49:10 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/trove_classifiers/__init__.py
+${PYSITELIB}/trove_classifiers/__init__.pyc
+${PYSITELIB}/trove_classifiers/__init__.pyo
+${PYSITELIB}/trove_classifiers/__main__.py
+${PYSITELIB}/trove_classifiers/__main__.pyc
+${PYSITELIB}/trove_classifiers/__main__.pyo
+${PYSITELIB}/trove_classifiers/py.typed
