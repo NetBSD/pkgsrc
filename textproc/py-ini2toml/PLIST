@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/05 07:15:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/17 09:38:10 adam Exp $
 bin/ini2toml-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -70,6 +70,9 @@ ${PYSITELIB}/ini2toml/plugins/pytest.pyo
 ${PYSITELIB}/ini2toml/plugins/setuptools_pep621.py
 ${PYSITELIB}/ini2toml/plugins/setuptools_pep621.pyc
 ${PYSITELIB}/ini2toml/plugins/setuptools_pep621.pyo
+${PYSITELIB}/ini2toml/plugins/toml_incompatibilities.py
+${PYSITELIB}/ini2toml/plugins/toml_incompatibilities.pyc
+${PYSITELIB}/ini2toml/plugins/toml_incompatibilities.pyo
 ${PYSITELIB}/ini2toml/profile.py
 ${PYSITELIB}/ini2toml/profile.pyc
 ${PYSITELIB}/ini2toml/profile.pyo
