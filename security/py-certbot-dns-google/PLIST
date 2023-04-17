@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/10 21:23:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/17 09:22:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,4 +14,11 @@ ${PYSITELIB}/certbot_dns_google/_internal/__init__.pyo
 ${PYSITELIB}/certbot_dns_google/_internal/dns_google.py
 ${PYSITELIB}/certbot_dns_google/_internal/dns_google.pyc
 ${PYSITELIB}/certbot_dns_google/_internal/dns_google.pyo
+${PYSITELIB}/certbot_dns_google/_internal/tests/__init__.py
+${PYSITELIB}/certbot_dns_google/_internal/tests/__init__.pyc
+${PYSITELIB}/certbot_dns_google/_internal/tests/__init__.pyo
+${PYSITELIB}/certbot_dns_google/_internal/tests/dns_google_test.py
+${PYSITELIB}/certbot_dns_google/_internal/tests/dns_google_test.pyc
+${PYSITELIB}/certbot_dns_google/_internal/tests/dns_google_test.pyo
+${PYSITELIB}/certbot_dns_google/_internal/tests/testdata/discovery.json
 ${PYSITELIB}/certbot_dns_google/py.typed
