@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/04/09 17:55:13 js Exp $
+# $NetBSD: Makefile,v 1.76 2023/04/17 13:31:11 adam Exp $
 
 DISTNAME=	matrix-synapse-1.80.0
 CATEGORIES=	chat
@@ -67,6 +67,8 @@ HUMAN_PKGNAME=		matrix-synapse
 PKG_SYSCONFSUBDIR=	${HUMAN_PKGNAME}
 DOCDIR=			${PREFIX}/share/doc/${HUMAN_PKGNAME}
 
+.include "../../mk/bsd.prefs.mk"
+
 SYNAPSE_USER?=	synapse
 SYNAPSE_GROUP?=	${SYNAPSE_USER}
 SYNAPSE_DATA?=	${VARBASE}/db/${HUMAN_PKGNAME}
@@ -106,6 +108,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} files/README.pkgsrc.txt ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} files/README.pkgsrc.NetBSD.txt ${DESTDIR}${DOCDIR}
+
+.if ${OPSYS} == "Darwin"
+post-install: fix-rpath
+.PHONY: fix-rpath
+fix-rpath:
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/synapse/synapse_rust.abi3.so \
+	${DESTDIR}${PREFIX}/${PYSITELIB}/synapse/synapse_rust.abi3.so
+.endif
 
 # \todo Grok upstream's new test scheme and port to it.
 # test status as of 1.51.0
