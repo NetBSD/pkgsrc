@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2227 2023/04/17 05:31:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2228 2023/04/17 07:00:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3198,3 +3198,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/acl version 2.3.1 [gutteridge 2023-04-16]
 	Updated devel/py-astroid to 2.15.3 [adam 2023-04-17]
 	Updated www/py-soupsieve to 2.4.1 [adam 2023-04-17]
+	Updated www/py-beautifulsoup4 to 4.12.2 [adam 2023-04-17]
+	Updated textproc/py-pygments to 2.15.0 [adam 2023-04-17]
