@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/11/18 18:53:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/04/17 09:58:49 adam Exp $
 bin/httpx-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -50,6 +50,8 @@ ${PYSITELIB}/httpx/_transports/wsgi.py
 ${PYSITELIB}/httpx/_transports/wsgi.pyc
 ${PYSITELIB}/httpx/_types.py
 ${PYSITELIB}/httpx/_types.pyc
+${PYSITELIB}/httpx/_urlparse.py
+${PYSITELIB}/httpx/_urlparse.pyc
 ${PYSITELIB}/httpx/_urls.py
 ${PYSITELIB}/httpx/_urls.pyc
 ${PYSITELIB}/httpx/_utils.py
