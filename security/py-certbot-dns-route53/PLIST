@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/10 21:23:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/17 09:22:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,12 @@ ${PYSITELIB}/certbot_dns_route53/_internal/__init__.pyo
 ${PYSITELIB}/certbot_dns_route53/_internal/dns_route53.py
 ${PYSITELIB}/certbot_dns_route53/_internal/dns_route53.pyc
 ${PYSITELIB}/certbot_dns_route53/_internal/dns_route53.pyo
+${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.py
+${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.pyc
+${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.pyo
+${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.py
+${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyc
+${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyo
 ${PYSITELIB}/certbot_dns_route53/authenticator.py
 ${PYSITELIB}/certbot_dns_route53/authenticator.pyc
 ${PYSITELIB}/certbot_dns_route53/authenticator.pyo
