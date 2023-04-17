@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/17 21:07:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/17 17:33:21 adam Exp $
 bin/guessit-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -19,10 +19,14 @@ ${PYSITELIB}/guessit/__version__.pyo
 ${PYSITELIB}/guessit/api.py
 ${PYSITELIB}/guessit/api.pyc
 ${PYSITELIB}/guessit/api.pyo
-${PYSITELIB}/guessit/backports.py
-${PYSITELIB}/guessit/backports.pyc
-${PYSITELIB}/guessit/backports.pyo
+${PYSITELIB}/guessit/config/__init__.py
+${PYSITELIB}/guessit/config/__init__.pyc
+${PYSITELIB}/guessit/config/__init__.pyo
 ${PYSITELIB}/guessit/config/options.json
+${PYSITELIB}/guessit/data/__init__.py
+${PYSITELIB}/guessit/data/__init__.pyc
+${PYSITELIB}/guessit/data/__init__.pyo
+${PYSITELIB}/guessit/data/tlds-alpha-by-domain.txt
 ${PYSITELIB}/guessit/jsonutils.py
 ${PYSITELIB}/guessit/jsonutils.pyc
 ${PYSITELIB}/guessit/jsonutils.pyo
@@ -95,9 +99,9 @@ ${PYSITELIB}/guessit/rules/properties/bit_rate.pyo
 ${PYSITELIB}/guessit/rules/properties/bonus.py
 ${PYSITELIB}/guessit/rules/properties/bonus.pyc
 ${PYSITELIB}/guessit/rules/properties/bonus.pyo
-${PYSITELIB}/guessit/rules/properties/cds.py
-${PYSITELIB}/guessit/rules/properties/cds.pyc
-${PYSITELIB}/guessit/rules/properties/cds.pyo
+${PYSITELIB}/guessit/rules/properties/cd.py
+${PYSITELIB}/guessit/rules/properties/cd.pyc
+${PYSITELIB}/guessit/rules/properties/cd.pyo
 ${PYSITELIB}/guessit/rules/properties/container.py
 ${PYSITELIB}/guessit/rules/properties/container.pyc
 ${PYSITELIB}/guessit/rules/properties/container.pyo
@@ -176,7 +180,7 @@ ${PYSITELIB}/guessit/test/rules/__init__.pyc
 ${PYSITELIB}/guessit/test/rules/__init__.pyo
 ${PYSITELIB}/guessit/test/rules/audio_codec.yml
 ${PYSITELIB}/guessit/test/rules/bonus.yml
-${PYSITELIB}/guessit/test/rules/cds.yml
+${PYSITELIB}/guessit/test/rules/cd.yml
 ${PYSITELIB}/guessit/test/rules/common_words.yml
 ${PYSITELIB}/guessit/test/rules/country.yml
 ${PYSITELIB}/guessit/test/rules/date.yml
@@ -219,7 +223,6 @@ ${PYSITELIB}/guessit/test/test_yml.py
 ${PYSITELIB}/guessit/test/test_yml.pyc
 ${PYSITELIB}/guessit/test/test_yml.pyo
 ${PYSITELIB}/guessit/test/various.yml
-${PYSITELIB}/guessit/tlds-alpha-by-domain.txt
 ${PYSITELIB}/guessit/yamlutils.py
 ${PYSITELIB}/guessit/yamlutils.pyc
 ${PYSITELIB}/guessit/yamlutils.pyo

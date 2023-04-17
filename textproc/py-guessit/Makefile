@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/04/17 17:33:21 adam Exp $
 
-DISTNAME=	guessit-3.1.1
+DISTNAME=	guessit-3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
 
@@ -11,21 +10,32 @@ HOMEPAGE=	https://guessit.readthedocs.io/
 COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.5.5:../../textproc/py-babelfish
+DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.6.0:../../textproc/py-babelfish
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-rebulk>=2.0.0:../../textproc/py-rebulk
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+DEPENDS+=	${PYPKGPREFIX}-rebulk>=3.2.0:../../textproc/py-rebulk
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*: not yet packaged
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 309
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
+.endif
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} guessit guessit-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
