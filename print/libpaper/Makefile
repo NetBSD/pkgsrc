@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/04/15 19:16:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.17 2023/04/17 08:35:54 jperkin Exp $
 
 DISTNAME=	libpaper-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -24,15 +24,6 @@ CONF_FILES+=		${EGDIR}/paperspecs ${PKG_SYSCONFDIR}/paperspecs
 INSTALLATION_DIRS=	${EGDIR}
 
 BUILD_DEFS=		PAPERSIZE
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS=	relo
-
-.if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--enable-relocatable
-PLIST.relo=		yes
-.endif
 
 post-build:
 	${ECHO} ${PAPERSIZE} > ${WRKDIR}/papersize
