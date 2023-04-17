@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2230 2023/04/17 08:32:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2231 2023/04/17 08:36:06 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3204,3 +3204,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-sugar to 0.9.7 [adam 2023-04-17]
 	Updated textproc/py-xlsxwriter to 3.1.0 [adam 2023-04-17]
 	Updated x11/py-sip6 to 6.7.8 [adam 2023-04-17]
+	Updated print/libpaper to 2.1.0nb2 [jperkin 2023-04-17]
