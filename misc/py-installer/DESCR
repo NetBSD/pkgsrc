@@ -1,0 +1,3 @@
+This is a low-level library for installing a Python package from a wheel
+distribution. It provides basic functionality and abstractions for handling
+wheels and installing packages from wheels.
