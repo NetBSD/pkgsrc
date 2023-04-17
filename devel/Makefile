@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3949 2023/04/13 05:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3950 2023/04/17 19:55:45 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2421,7 +2421,6 @@ SUBDIR+=	py-cbor2
 SUBDIR+=	py-cffi
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
-SUBDIR+=	py-cheetah
 SUBDIR+=	py-cheetah3
 SUBDIR+=	py-cle
 SUBDIR+=	py-click
