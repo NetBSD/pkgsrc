@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/05 09:07:05 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2023/04/17 19:41:38 adam Exp $
 
 DISTNAME=	unknown-horizons-2019.1
 PKGREVISION=	3
@@ -12,15 +12,15 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	intltool msgfmt
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	fifengine-[0-9]*:../../devel/fifengine
 
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
-
 EGG_NAME=	UnknownHorizons-${PKGVERSION_NOREV}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-yaml
 
 REPLACE_PYTHON+=	run_server.py
 REPLACE_PYTHON+=	run_uh.py
@@ -37,5 +37,4 @@ post-build:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
