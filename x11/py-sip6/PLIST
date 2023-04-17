@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/02 15:22:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/17 08:32:09 adam Exp $
 bin/sip-build
 bin/sip-distinfo
 bin/sip-install
@@ -238,6 +238,9 @@ ${PYSITELIB}/sipbuild/pyproject.pyo
 ${PYSITELIB}/sipbuild/setuptools_builder.py
 ${PYSITELIB}/sipbuild/setuptools_builder.pyc
 ${PYSITELIB}/sipbuild/setuptools_builder.pyo
+${PYSITELIB}/sipbuild/toml.py
+${PYSITELIB}/sipbuild/toml.pyc
+${PYSITELIB}/sipbuild/toml.pyo
 ${PYSITELIB}/sipbuild/tools/__init__.py
 ${PYSITELIB}/sipbuild/tools/__init__.pyc
 ${PYSITELIB}/sipbuild/tools/__init__.pyo
