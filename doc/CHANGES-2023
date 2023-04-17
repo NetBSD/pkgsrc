@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2234 2023/04/17 10:00:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2235 2023/04/17 10:49:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3227,3 +3227,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpcore to 0.17.0 [adam 2023-04-17]
 	Updated www/py-httpx to 0.24.0 [adam 2023-04-17]
 	Updated www/py-test-httpx to 0.22.0 [adam 2023-04-17]
+	Added misc/py-installer version 0.7.0 [adam 2023-04-17]
+	Added misc/py-trove-classifiers version 2023.3.9 [adam 2023-04-17]
