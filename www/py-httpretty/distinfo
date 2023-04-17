@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/17 20:45:04 adam Exp $
+
+BLAKE2s (httpretty-1.1.4.tar.gz) = 6fa62ec75a02f65a495b5eafa927278522c08f83b33f62903307d0d684577ce0
+SHA512 (httpretty-1.1.4.tar.gz) = 4daceea4f30ce181e871167d304bd7af9d504364f55d42f8025770f2efe7e833d018aed681c8733d653d4de90db3433e999c56bccd4675f81e66d1cc4023e418
+Size (httpretty-1.1.4.tar.gz) = 442389 bytes

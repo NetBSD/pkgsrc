@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/17 20:45:04 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/httpretty/__init__.py
+${PYSITELIB}/httpretty/__init__.pyc
+${PYSITELIB}/httpretty/__init__.pyo
+${PYSITELIB}/httpretty/compat.py
+${PYSITELIB}/httpretty/compat.pyc
+${PYSITELIB}/httpretty/compat.pyo
+${PYSITELIB}/httpretty/core.py
+${PYSITELIB}/httpretty/core.pyc
+${PYSITELIB}/httpretty/core.pyo
+${PYSITELIB}/httpretty/errors.py
+${PYSITELIB}/httpretty/errors.pyc
+${PYSITELIB}/httpretty/errors.pyo
+${PYSITELIB}/httpretty/http.py
+${PYSITELIB}/httpretty/http.pyc
+${PYSITELIB}/httpretty/http.pyo
+${PYSITELIB}/httpretty/utils.py
+${PYSITELIB}/httpretty/utils.pyc
+${PYSITELIB}/httpretty/utils.pyo
+${PYSITELIB}/httpretty/version.py
+${PYSITELIB}/httpretty/version.pyc
+${PYSITELIB}/httpretty/version.pyo
