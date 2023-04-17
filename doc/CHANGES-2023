@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2241 2023/04/17 19:27:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2242 2023/04/17 20:12:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3239,3 +3239,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/vala to 0.56.6 [bsiegert 2023-04-17]
 	Updated audio/lv2 to 1.18.10 [adam 2023-04-17]
 	Updated textproc/py-black to 23.3.0 [adam 2023-04-17]
+	Updated textproc/py-yaml to 6.0 [adam 2023-04-17]
+	Removed devel/py-cheetah successor devel/py-cheetah3 [adam 2023-04-17]
+	Removed textproc/py-markdown3 successor textproc/py-markdown [adam 2023-04-17]
