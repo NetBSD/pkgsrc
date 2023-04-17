@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/08/24 08:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/17 12:34:40 adam Exp $
 
-DISTNAME=	python-multipart-0.0.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	python_multipart-0.0.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-multipart/}
 
@@ -11,17 +10,17 @@ HOMEPAGE=	https://github.com/andrew-d/python-multipart
 COMMENT=	Streaming multipart parser for Python
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test test-cov:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
