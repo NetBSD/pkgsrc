@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/04/13 10:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/17 09:38:10 adam Exp $
 
-DISTNAME=	ini2toml-0.10
+DISTNAME=	ini2toml-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ini2toml/}
@@ -10,11 +10,12 @@ HOMEPAGE=	https://github.com/abravalheri/ini2toml
 COMMENT=	Automatically conversion of .ini/.cfg files to TOML equivalents
 LICENSE=	mpl-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-configupdater>=3.0.1:../../devel/py-configupdater
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.0:../../textproc/py-tomlkit
 TEST_DEPENDS+=	${PYPKGPREFIX}-validate-pyproject>=0.6:../../textproc/py-validate-pyproject
 
 USE_LANGUAGES=	# none
