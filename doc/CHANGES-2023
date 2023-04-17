@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2228 2023/04/17 07:00:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2229 2023/04/17 08:23:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3200,3 +3200,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-soupsieve to 2.4.1 [adam 2023-04-17]
 	Updated www/py-beautifulsoup4 to 4.12.2 [adam 2023-04-17]
 	Updated textproc/py-pygments to 2.15.0 [adam 2023-04-17]
+	Updated devel/py-test to 7.3.1 [adam 2023-04-17]
+	Updated devel/py-test-sugar to 0.9.7 [adam 2023-04-17]
