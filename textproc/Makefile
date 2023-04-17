@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1381 2023/04/17 20:10:47 adam Exp $
+# $NetBSD: Makefile,v 1.1382 2023/04/17 20:35:02 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1120,6 +1120,7 @@ SUBDIR+=	py-pysrt
 SUBDIR+=	py-pytoml
 SUBDIR+=	py-pyyaml_env_tag
 SUBDIR+=	py-ramlfications
+SUBDIR+=	py-rapidfuzz
 SUBDIR+=	py-rapidjson
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-readme_renderer
