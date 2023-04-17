@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/07/09 19:07:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/17 20:28:15 adam Exp $
 bin/deep-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -40,6 +40,9 @@ ${PYSITELIB}/deepdiff/lfucache.pyo
 ${PYSITELIB}/deepdiff/model.py
 ${PYSITELIB}/deepdiff/model.pyc
 ${PYSITELIB}/deepdiff/model.pyo
+${PYSITELIB}/deepdiff/operator.py
+${PYSITELIB}/deepdiff/operator.pyc
+${PYSITELIB}/deepdiff/operator.pyo
 ${PYSITELIB}/deepdiff/path.py
 ${PYSITELIB}/deepdiff/path.pyc
 ${PYSITELIB}/deepdiff/path.pyo
