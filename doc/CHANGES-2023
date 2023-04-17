@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2237 2023/04/17 12:51:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2238 2023/04/17 15:59:51 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-python-multipart to 0.0.6 [adam 2023-04-17]
 	Updated textproc/py-phonenumbers to 8.13.9 [adam 2023-04-17]
 	Updated devel/py-hatchling to 1.14.0 [adam 2023-04-17]
+	Updated lang/gleam to 0.28.3 [nikita 2023-04-17]
