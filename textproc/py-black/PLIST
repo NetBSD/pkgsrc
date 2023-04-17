@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/11 13:15:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/17 19:27:28 adam Exp $
 bin/black-${PYVERSSUFFIX}
 bin/blackd-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -16,6 +16,8 @@ ${PYSITELIB}/black/__init__.py
 ${PYSITELIB}/black/__init__.pyc
 ${PYSITELIB}/black/__main__.py
 ${PYSITELIB}/black/__main__.pyc
+${PYSITELIB}/black/_width_table.py
+${PYSITELIB}/black/_width_table.pyc
 ${PYSITELIB}/black/brackets.py
 ${PYSITELIB}/black/brackets.pyc
 ${PYSITELIB}/black/cache.py
