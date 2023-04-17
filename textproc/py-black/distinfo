@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/02/20 17:59:00 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/04/17 19:27:28 adam Exp $
 
-BLAKE2s (black-23.1.0.tar.gz) = bc59511a5a2caa2c85b63a4e740a1d0cafb7f4544fcc1265ec68856a63f85f92
-SHA512 (black-23.1.0.tar.gz) = 8a8cc6c083108fa5ced41e24569c05bea781ae970ef0384a6c5f69d465a75ff9afb5ee6249faa16e6adb4b50f821da70f8cd7d3c265b453ca1dd54a31dea1ee9
-Size (black-23.1.0.tar.gz) = 568619 bytes
+BLAKE2s (black-23.3.0.tar.gz) = 04a13ab16fe9fddbde345a8feedca64ca8ea58fb65955499a238a059aae13e2f
+SHA512 (black-23.3.0.tar.gz) = 1ea8749ee25aae34a40c5d1b779c6076971488dea1a85ebfcbe4c2a8bb5abb5e3918a735a4e3f9b4ae2690eda0f48fac014ade055721b54d879fdd2d3450b72b
+Size (black-23.3.0.tar.gz) = 582156 bytes
