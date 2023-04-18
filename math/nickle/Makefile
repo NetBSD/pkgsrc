@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:38 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2023/04/18 09:06:25 wiz Exp $
 
-DISTNAME=	nickle-2.84
+DISTNAME=	nickle-2.90
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 
@@ -16,7 +16,5 @@ CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
 TEST_TARGET=	check
 
-# rl_reset_after_signal, rl_echo_signal_char are missing in libedit as of 2018/12/02
-#.include "../../mk/readline.buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
