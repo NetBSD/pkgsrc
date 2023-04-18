@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/04/24 15:29:28 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/18 11:38:24 pin Exp $
 bin/lxqt-config-notificationd
 bin/lxqt-notificationd
 share/applications/lxqt-config-notificationd.desktop
@@ -60,11 +60,13 @@ share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_hu.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_id.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_it.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ja.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_kk.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ko.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lt.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lv.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_nb_NO.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_nl.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_oc.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pl.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt_BR.qm
