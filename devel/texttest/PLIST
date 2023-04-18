@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/28 18:10:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/04/18 16:39:08 schmonz Exp $
 bin/interpretcore
 bin/texttest
 ${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
@@ -27,15 +27,15 @@ ${PYSITELIB}/texttestlib/default/batch/__init__.pyo
 ${PYSITELIB}/texttestlib/default/batch/batchutils.py
 ${PYSITELIB}/texttestlib/default/batch/batchutils.pyc
 ${PYSITELIB}/texttestlib/default/batch/batchutils.pyo
+${PYSITELIB}/texttestlib/default/batch/externalreport.py
+${PYSITELIB}/texttestlib/default/batch/externalreport.pyc
+${PYSITELIB}/texttestlib/default/batch/externalreport.pyo
 ${PYSITELIB}/texttestlib/default/batch/imgsize.py
 ${PYSITELIB}/texttestlib/default/batch/imgsize.pyc
 ${PYSITELIB}/texttestlib/default/batch/imgsize.pyo
 ${PYSITELIB}/texttestlib/default/batch/jenkinschanges.py
 ${PYSITELIB}/texttestlib/default/batch/jenkinschanges.pyc
 ${PYSITELIB}/texttestlib/default/batch/jenkinschanges.pyo
-${PYSITELIB}/texttestlib/default/batch/junitreport.py
-${PYSITELIB}/texttestlib/default/batch/junitreport.pyc
-${PYSITELIB}/texttestlib/default/batch/junitreport.pyo
 ${PYSITELIB}/texttestlib/default/batch/resultgraphs.py
 ${PYSITELIB}/texttestlib/default/batch/resultgraphs.pyc
 ${PYSITELIB}/texttestlib/default/batch/resultgraphs.pyo
