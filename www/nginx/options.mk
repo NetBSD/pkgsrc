@@ -1,4 +1,6 @@
-# $NetBSD: options.mk,v 1.90 2023/04/13 16:45:47 osa Exp $
+# $NetBSD: options.mk,v 1.91 2023/04/18 18:41:59 osa Exp $
+
+CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -9,13 +11,10 @@ PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub upload uwsgi
 
-PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache pcre realip
+PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache realip
 PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
 
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
-
-PKG_OPTIONS_OPTIONAL_GROUPS=	pcre
-PKG_OPTIONS_GROUP.pcre=		pcre pcre2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		headmore imagefilter lua mail naxsi nchan ndk njs
@@ -34,10 +33,12 @@ _addextmod=		add-module
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
-NAXSI_VERSION=			1.3
-NAXSI_DISTNAME=			naxsi-${NAXSI_VERSION}
-NAXSI_DISTFILE=			${NAXSI_DISTNAME}.tar.gz
-SITES.${NAXSI_DISTFILE}=	-${MASTER_SITE_GITHUB:=nbs-system/naxsi/archive/}${NAXSI_VERSION}.tar.gz
+NAXSI_GH_ACCOUNT=		nbs-system
+NAXSI_GH_PROJECT=		naxsi
+NAXSI_VERSION=			d714f16
+NAXSI_DISTNAME=			${NAXSI_GH_PROJECT}-${NAXSI_VERSION}
+NAXSI_DISTFILE=			${NAXSI_GH_ACCOUNT}-${NAXSI_DISTNAME}_GH.tar.gz
+SITES.${NAXSI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${NAXSI_GH_ACCOUNT}/${NAXSI_GH_PROJECT}/tar.gz/${NAXSI_VERSION}?dummy=${NAXSI_DISTFILE}}
 DISTFILES+=			${NAXSI_DISTFILE}
 PLIST.naxsi=			yes
 DSO_EXTMODS+=			naxsi
@@ -57,32 +58,6 @@ SUBST_STAGE.fix-ssl=	pre-configure
 SUBST_FILES.fix-ssl=	auto/lib/openssl/conf
 SUBST_SED.fix-ssl=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.openssl},g'
 SUBST_NOOP_OK.fix-ssl=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mpcre)
-.include "../../devel/pcre/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pcre
-CONFIGURE_ARGS+=	--without-pcre2
-SUBST_CLASSES+=		fix-pcre
-SUBST_STAGE.fix-pcre=	pre-configure
-SUBST_FILES.fix-pcre=	auto/lib/pcre/conf
-SUBST_SED.fix-pcre=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre},g'
-SUBST_NOOP_OK.fix-pcre=	yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mpcre2)
-.include "../../devel/pcre2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pcre
-SUBST_CLASSES+=		fix-pcre2
-SUBST_STAGE.fix-pcre2=	pre-configure
-SUBST_FILES.fix-pcre2=	auto/lib/pcre/conf
-SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
-SUBST_NOOP_OK.fix-pcre2=yes
-.endif
-
-.if empty(PKG_OPTIONS:Mpcre) && empty(PKG_OPTIONS:Mpcre2)
-CONFIGURE_ARGS+=	--without-pcre
-CONFIGURE_ARGS+=	--without-http_rewrite_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi) || make(distclean)
@@ -160,11 +135,12 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.22
+LUA_VERSION=		0.10.24
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 DEPENDS+=		lua-resty-core>=0.1.26:../../www/lua-resty-core
 DEPENDS+=		lua-resty-lrucache>=0.13:../../www/lua-resty-lrucache
@@ -175,7 +151,7 @@ PLIST.lua=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi) || make(distclean)
-ECHOMOD_VERSION=		0.62
+ECHOMOD_VERSION=		0.63
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
 SITES.${ECHOMOD_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/echo-nginx-module/archive/}v${ECHOMOD_VERSION}.tar.gz
@@ -206,7 +182,7 @@ PLIST.geoip2=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Marray-var) || make(makesum) || make(mdi) || make(distclean)
-ARRAYVAR_VERSION=		0.05
+ARRAYVAR_VERSION=		0.06
 ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
 ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
 SITES.${ARRAYVAR_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/array-var-nginx-module/archive/}v${ARRAYVAR_VERSION}.tar.gz
@@ -236,7 +212,7 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.33
+HEADMORE_VERSION=		0.34
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
@@ -333,7 +309,7 @@ PLIST.rtmp=		yes
 NJS_VERSION=		0.7.12
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
-NJS_CONFIGURE_ARGS=	--no-libxml2 --no-pcre2 
+NJS_CONFIGURE_ARGS=	--no-libxml2
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
 DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
