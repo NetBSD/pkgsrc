@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.196 2023/03/03 09:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.197 2023/04/18 14:31:59 ryoon Exp $
 
-DISTNAME=	blender-3.4.1
-PKGREVISION=	1
+DISTNAME=	blender-3.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -14,10 +13,13 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c gnu++17
 
-# C++17; configure checks for gcc>=9.3.1
-GCC_REQD+=	9
+# Do not use alloca() in libc.
+BUILDLINK_TRANSFORM+=	rm:-std=c++17
 
-CXXFLAGS+=	-fpermissive # return value tyoe fo __builtin_popcount()
+# GCC 11.0.0 or later is required.
+GCC_REQD+=	12
+
+CXXFLAGS+=	-fpermissive # return value type for __builtin_popcount()
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
