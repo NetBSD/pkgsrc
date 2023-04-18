@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.106 2023/04/18 18:41:59 osa Exp $
+$NetBSD: distinfo,v 1.107 2023/04/18 20:50:06 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -21,9 +21,9 @@ Size (lua-nginx-module-0.10.24.tar.gz) = 724961 bytes
 BLAKE2s (nbs-system-naxsi-d714f16_GH.tar.gz) = ca56821b8bfac03429fc8adaf30302ac70c31b48b865918139ecdacb24eb4156
 SHA512 (nbs-system-naxsi-d714f16_GH.tar.gz) = 84abd90f3971450b9413546809332e263c4332b625a0b51f8b342adb407e1e5bc81a2b0b75e2d50e87d63d20d0c3f271391c9d4821f0d01069a133b066bfb05b
 Size (nbs-system-naxsi-d714f16_GH.tar.gz) = 236940 bytes
-BLAKE2s (nchan-1.3.0.tar.gz) = fd45ccebd86c9808522dabefb8c202747f428ed04b46225282f344fbfd52f0b2
-SHA512 (nchan-1.3.0.tar.gz) = c8cd3eb0b06fc0f17b5a9013d32f5a6d5a8252015b3ac27fbf74a7a1b97bc7ae78c5c8cdd7372e36f5f9d137b59635f007d836746282c85c4a972b6984ba2bef
-Size (nchan-1.3.0.tar.gz) = 745161 bytes
+BLAKE2s (nchan-1.3.6.tar.gz) = 1409be69d5589d3643a7cb1f3dd1e4bc8d58c4be801234d52738090c04469255
+SHA512 (nchan-1.3.6.tar.gz) = 0f1c25d460dcf4e3407a1ef4bfcefe17eba7b0ff250f267e5bde0eb4298e9596c1e6992fc58fe35d8420888065353bf3883a1f1bbc5e607a00128992eb1ee6d2
+Size (nchan-1.3.6.tar.gz) = 761436 bytes
 BLAKE2s (nginx-1.24.0.tar.gz) = 05ecd7f1710da91508b7bc0db8632b1347f6f1b87aecf7633e76e8f65f95569a
 SHA512 (nginx-1.24.0.tar.gz) = 1114e37de5664a8109c99cfb2faa1f42ff8ac63c932bcf3780d645e5ed32c0b2ac446f80305b4465994c8f9430604968e176ae464fd80f632d1cb2c8f6007ff3
 Size (nginx-1.24.0.tar.gz) = 1112471 bytes
@@ -51,6 +51,9 @@ Size (njs-0.7.12.tar.gz) = 662554 bytes
 BLAKE2s (set-misc-nginx-module-0.33.tar.gz) = 306eb7a96ce5650c7e97a91e9cdba48d154d10cf6445d31193ffab889054d893
 SHA512 (set-misc-nginx-module-0.33.tar.gz) = 1ff4c947538a5bd5f9d6adcd87b37f2702f5cc90e3342bc08359cbe8f290b705a3a2daa3dedfb1df3ce4bc19478c8fcac07081c4a53a804fc2862d50078278dc
 Size (set-misc-nginx-module-0.33.tar.gz) = 30084 bytes
+BLAKE2s (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = 3be4fa1c0c5af43255a0b8e267d9cf9f35b1d7ba4ee0343c5189e38b5af4975e
+SHA512 (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = c15d3a772032a1a490860bd5cdb97779d2004683c754ec02ec21cb19a1d514afe518e12ea1078a22d973c54161211750b07c5e7d4ee103e9be92420b773395d7
+Size (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = 24680 bytes
 SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
 SHA1 (patch-conf_nginx.conf) = c87c76604a5aae64f8c039f90f9291e3134f64e0
