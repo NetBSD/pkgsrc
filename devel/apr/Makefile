@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/04/07 14:07:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2023/04/18 08:47:36 wiz Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
@@ -24,11 +24,17 @@ CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
 LIBS.SunOS+=		-lnsl
 TEST_TARGET=		check
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		bash:run
+REPLACE_BASH+=		apr-config.in
+.endif
+
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/libexec/apr/libtool
 	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${DESTDIR}${PREFIX}/libexec/apr/libtool
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif
