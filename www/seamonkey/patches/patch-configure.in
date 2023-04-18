@@ -1,0 +1,10 @@
+$NetBSD: patch-configure.in,v 1.1 2023/04/18 14:15:28 ryoon Exp $
+
+--- configure.in.orig	2023-02-25 21:24:07.000000000 +0000
++++ configure.in
+@@ -22,4 +22,4 @@ SRCDIR=$(dirname $0)
+ TOPSRCDIR="$SRCDIR"
+ export OLD_CONFIGURE="$SRCDIR"/old-configure
+ 
+-exec python3 "$TOPSRCDIR/configure.py" "$@"
++exec ${PYTHON3} "$TOPSRCDIR/configure.py" "$@"
