@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2299 2023/04/18 18:43:35 osa Exp $
+$NetBSD: CHANGES-2023,v 1.2300 2023/04/18 18:49:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3318,3 +3318,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.39.3 [adam 2023-04-18]
 	Updated www/nginx-devel to 1.24.0 [osa 2023-04-18]
 	Updated www/nginx to 1.24.0 [osa 2023-04-18]
+	Updated editors/featherpad to 1.4.0 [pin 2023-04-18]
