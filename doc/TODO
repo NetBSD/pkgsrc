@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22772 2023/04/18 07:46:42 wiz Exp $
+$NetBSD: TODO,v 1.22773 2023/04/18 09:06:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1020,7 +1020,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nginx-1.24
-	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o nodejs-19.8.1
 	o npm-9.2.0
