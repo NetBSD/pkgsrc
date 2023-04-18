@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/11/12 04:54:43 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/18 09:38:08 pin Exp $
 bin/lxqt-backlight_backend
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
@@ -74,11 +74,13 @@ share/lxqt/translations/liblxqt/liblxqt_ia.qm
 share/lxqt/translations/liblxqt/liblxqt_id.qm
 share/lxqt/translations/liblxqt/liblxqt_it.qm
 share/lxqt/translations/liblxqt/liblxqt_ja.qm
+share/lxqt/translations/liblxqt/liblxqt_kk.qm
 share/lxqt/translations/liblxqt/liblxqt_ko.qm
 share/lxqt/translations/liblxqt/liblxqt_lt.qm
 share/lxqt/translations/liblxqt/liblxqt_lv.qm
 share/lxqt/translations/liblxqt/liblxqt_nb_NO.qm
 share/lxqt/translations/liblxqt/liblxqt_nl.qm
+share/lxqt/translations/liblxqt/liblxqt_oc.qm
 share/lxqt/translations/liblxqt/liblxqt_pl.qm
 share/lxqt/translations/liblxqt/liblxqt_pt.qm
 share/lxqt/translations/liblxqt/liblxqt_pt_BR.qm
