@@ -1,15 +1,17 @@
-$NetBSD: patch-media_CMakeLists.txt,v 1.1 2015/02/08 19:42:09 wiz Exp $
+$NetBSD: patch-media_CMakeLists.txt,v 1.2 2023/04/18 18:48:15 abs Exp $
 
-Don't find "convert" if it happens to be installed.
+Don't find "convert" or "png2icns" if they happen to be installed.
 
---- media/CMakeLists.txt.orig	2013-02-19 09:02:25.000000000 +0000
+--- media/CMakeLists.txt.orig	2023-02-28 15:11:20.000000000 +0000
 +++ media/CMakeLists.txt
-@@ -5,7 +5,7 @@ set(ICON_FILES
-   ${CMAKE_CURRENT_SOURCE_DIR}/icons/tigervnc_32.png
-   ${CMAKE_CURRENT_SOURCE_DIR}/icons/tigervnc_48.png)
+@@ -2,8 +2,8 @@ set(LINUX_ICON_SIZES 16 22 24 32 48 64 1
+ set(WINDOWS_ICON_SIZES 16 24 32 48 256)
+ set(MACOS_ICON_SIZES 16 32 128 256 512)
  
 -find_program(CONVERT_EXECUTABLE convert)
+-find_program(PNG2ICNS_EXECUTABLE png2icns)
 +# find_program(CONVERT_EXECUTABLE convert)
++# find_program(PNG2ICNS_EXECUTABLE png2icns)
  
  if(CONVERT_EXECUTABLE)
-   add_custom_target(icons DEPENDS ${ICON_FILES})
+   set(ICON_FILES icons/tigervnc.ico)
