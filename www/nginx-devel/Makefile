@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2023/04/18 18:42:00 osa Exp $
+# $NetBSD: Makefile,v 1.101 2023/04/18 20:50:06 osa Exp $
 
 DISTNAME=	nginx-1.24.0
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -101,6 +102,11 @@ SOEXT=		bundle
 SOEXT=		so
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
+
+post-patch:
+.if !empty(PKG_OPTIONS:Mgssapi)
+	${SED} -i.bak '4d;5d;6d' ${WRKDIR}/${GSSAPI_DISTNAME}/config
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
