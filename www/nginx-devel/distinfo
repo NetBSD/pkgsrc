@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2023/04/18 20:50:06 osa Exp $
+$NetBSD: distinfo,v 1.93 2023/04/18 21:10:38 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -54,6 +54,12 @@ Size (set-misc-nginx-module-0.33.tar.gz) = 30084 bytes
 BLAKE2s (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = 3be4fa1c0c5af43255a0b8e267d9cf9f35b1d7ba4ee0343c5189e38b5af4975e
 SHA512 (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = c15d3a772032a1a490860bd5cdb97779d2004683c754ec02ec21cb19a1d514afe518e12ea1078a22d973c54161211750b07c5e7d4ee103e9be92420b773395d7
 Size (stnoonan-spnego-http-auth-nginx-module-3575542_GH.tar.gz) = 24680 bytes
+BLAKE2s (vozlt-nginx-module-sts-3c10d42_GH.tar.gz) = f04e586b926c030c8b8461823d3a0a38257c1b88f42012a0386826b6e1d0d6be
+SHA512 (vozlt-nginx-module-sts-3c10d42_GH.tar.gz) = f9253c5f71f28ac5e99a47e07ccb4136ea160399469cd3bfe026a9ff56e9a1ed94f612b3e66db369ada5d98fd1e9372bfdee9b6d76d9727d0c06189be7d9257d
+Size (vozlt-nginx-module-sts-3c10d42_GH.tar.gz) = 352431 bytes
+BLAKE2s (vozlt-nginx-module-vts-bf64dbf_GH.tar.gz) = 5373b024b607ce5e94a066d3ae1bf28637f9b527baecc76cebfc5e4481a8267b
+SHA512 (vozlt-nginx-module-vts-bf64dbf_GH.tar.gz) = 60dc620aced9f7fa73673648974dd29c4a530087e64da3421da9c6fe10a9fc48d585c04af816d220ccc99ea9e39f29d3519064a2ae437c6d1c61430d9be465bb
+Size (vozlt-nginx-module-vts-bf64dbf_GH.tar.gz) = 180394 bytes
 SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
 SHA1 (patch-conf_nginx.conf) = c87c76604a5aae64f8c039f90f9291e3134f64e0
