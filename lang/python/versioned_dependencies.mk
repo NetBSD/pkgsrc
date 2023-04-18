@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.91 2022/11/30 10:43:00 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.92 2023/04/18 17:44:32 adam Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 markdown mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov
+#       Possible values: Pillow X cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov
 #       Default: (nothing)
 #
 
@@ -65,9 +65,6 @@ _PY_VERS_PKG.27.importlib-metadata=		devel/py-importlib-metadata2
 
 _PY_VERS_PKG.default.jinja2=	textproc/py-jinja2
 _PY_VERS_PKG.27.jinja2=		textproc/py27-jinja2
-
-_PY_VERS_PKG.default.markdown=	textproc/py-markdown
-_PY_VERS_PKG.27.markdown=	textproc/py-markdown3
 
 _PY_VERS_PKG.default.mccabe=	devel/py-mccabe
 _PY_VERS_PKG.27.mccabe=		devel/py-mccabe06
