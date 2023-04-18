@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2294 2023/04/18 16:32:00 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2295 2023/04/18 16:39:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/coreutils to 9.2 [ryoon 2023-04-18]
 	Updated graphics/gmic to 3.2.3 [wiz 2023-04-18]
 	Updated www/p5-Playwright to 1.323 [schmonz 2023-04-18]
+	Updated devel/texttest to 4.3.0 [schmonz 2023-04-18]
