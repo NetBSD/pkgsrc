@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3952 2023/04/17 21:34:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3953 2023/04/18 17:09:39 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2414,6 +2414,7 @@ SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-cachetools
 SUBDIR+=	py-cachy
+SUBDIR+=	py-calver
 SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-canvasapi
 SUBDIR+=	py-capstone
