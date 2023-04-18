@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/23 10:44:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/18 16:00:08 wiz Exp $
 bin/gmic
-bin/zart
+bin/gmic_qt
 include/gmic.h
 include/gmic_libc.h
-lib/gimp/2.0/plug-ins/gmic_cluts.gmz
-lib/gimp/2.0/plug-ins/gmic_gimp_qt
 lib/libgmic.so
-lib/libgmic.so.2
-lib/libgmic.so.290
+lib/libgmic.so.3
+lib/libgmic.so.323
 man/fr/man1/gmic.1
 man/man1/gmic.1
+share/applications/gmic_qt.desktop
+share/bash-completion/completions/gmic
+share/icons/hicolor/48x48/apps/gmic_qt.png
+share/icons/hicolor/scalable/apps/gmic_qt.svg
