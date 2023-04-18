@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22778 2023/04/18 14:42:09 ryoon Exp $
+$NetBSD: TODO,v 1.22779 2023/04/18 16:00:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -712,7 +712,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o global-6.6.5
 	o glom-1.14.2
 	o gloox-1.0.24
-	o gmic-3.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-44.0
@@ -1436,6 +1435,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tkinfo-2.11
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
+	o tnftp-20230409
 	o tob-0.26
 	o tomboy-1.10.2
 	o top-3.8beta1
