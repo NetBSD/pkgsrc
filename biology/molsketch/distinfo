@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.6 2022/10/18 18:26:01 pin Exp $
+$NetBSD: distinfo,v 1.7 2023/04/18 08:49:21 pin Exp $
 
-BLAKE2s (Molsketch-0.7.3-src.tar.gz) = a98e419f9855b5acd2f88faf6c01241518b67fad7a88d8f33539961dec8578be
-SHA512 (Molsketch-0.7.3-src.tar.gz) = 6910374864e1bcc19ededd7a2ee13f7c58595097504b8f0da8ee05f435ba95d6f335fbc7b26a344fc0f3782a58771213833cbaa53530e0fa62041945c1e3ab33
-Size (Molsketch-0.7.3-src.tar.gz) = 1907771 bytes
+BLAKE2s (Molsketch-0.8.0-src.tar.gz) = 506c2e637e9f90222cc04e122138efc3cf678365429fbf3039dff1e42ba5afdb
+SHA512 (Molsketch-0.8.0-src.tar.gz) = 0b1adca5beb1d33c52ed1c0f5f26d7af3ce80d441b69961e8941e4954d775c59b1fd9100d0b60b021016d4b7df9ed72036ee210be337f9a5510fa9c7b6c99b22
+Size (Molsketch-0.8.0-src.tar.gz) = 1852026 bytes
+SHA1 (patch-libmolsketch_CMakeLists.txt) = 44dab7ed708a102a3e607114683b57c813b6fd5f
+SHA1 (patch-molsketch_CMakeLists.txt) = 97938942238df038b74587a77568feb5c6b336e2
+SHA1 (patch-obabeliface_CMakeLists.txt) = 7933a188cf56fbdea943d364050f432ee29413bb
