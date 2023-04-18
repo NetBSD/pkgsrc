@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_openssl-src-111.25.1+1.1.1t_src_lib.rs,v 1.1 2023/03/07 21:24:10 pin Exp $
+$NetBSD: patch-vendor_openssl-src-111.25.1+1.1.1t_src_lib.rs,v 1.2 2023/04/18 18:51:48 pin Exp $
 
 Allow building on NetBSD and provide defaults for the various targets.
 
---- ../vendor/openssl-src-111.25.1+1.1.1t/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
-+++ ../vendor/openssl-src-111.25.1+1.1.1t/src/lib.rs
+--- ../vendor/openssl-src-111.25.2+1.1.1t/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/openssl-src-111.25.2+1.1.1t/src/lib.rs
 @@ -239,6 +239,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
@@ -13,13 +13,15 @@ Allow building on NetBSD and provide defaults for the various targets.
              "aarch64-pc-windows-msvc" => "VC-WIN64-ARM",
              "arm-linux-androideabi" => "linux-armv4",
              "armv7-linux-androideabi" => "linux-armv4",
-@@ -252,11 +254,13 @@ impl Build {
-             "armv7-unknown-freebsd" => "BSD-generic32",
-             "armv7-unknown-linux-gnueabi" => "linux-armv4",
-             "armv7-unknown-linux-musleabi" => "linux-armv4",
+@@ -246,6 +248,7 @@ impl Build {
+             "arm-unknown-linux-gnueabihf" => "linux-armv4",
+             "arm-unknown-linux-musleabi" => "linux-armv4",
+             "arm-unknown-linux-musleabihf" => "linux-armv4",
 +            "armv7-unknown-netbsd-eabihf" => "BSD-generic32",
-             "armv7-unknown-linux-gnueabihf" => "linux-armv4",
-             "armv7-unknown-linux-musleabihf" => "linux-armv4",
+             "armv5te-unknown-linux-gnueabi" => "linux-armv4",
+             "armv5te-unknown-linux-musleabi" => "linux-armv4",
+             "armv6-unknown-freebsd" => "BSD-generic32",
+@@ -257,6 +260,7 @@ impl Build {
              "asmjs-unknown-emscripten" => "gcc",
              "i586-unknown-linux-gnu" => "linux-elf",
              "i586-unknown-linux-musl" => "linux-elf",
@@ -35,14 +37,15 @@ Allow building on NetBSD and provide defaults for the various targets.
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
              "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
-@@ -278,12 +283,14 @@ impl Build {
+@@ -275,6 +280,7 @@ impl Build {
+             "powerpc-unknown-freebsd" => "BSD-generic32",
+             "powerpc-unknown-linux-gnu" => "linux-ppc",
+             "powerpc-unknown-linux-gnuspe" => "linux-ppc",
++            "powerpc-unknown-netbsd" => "BSD-generic32",
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-+            "powerpc-unknown-netbsd" => "BSD-generic32",
-             "powerpc64le-unknown-freebsd" => "BSD-generic64",
-             "powerpc64le-unknown-linux-gnu" => "linux-ppc64le",
-             "powerpc64le-unknown-linux-musl" => "linux-ppc64le",
+@@ -284,6 +290,7 @@ impl Build {
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",
              "s390x-unknown-linux-gnu" => "linux64-s390x",
              "s390x-unknown-linux-musl" => "linux64-s390x",
