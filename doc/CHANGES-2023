@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2287 2023/04/18 14:00:58 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.2288 2023/04/18 14:01:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-subtests to 0.10.0 [adam 2023-04-18]
 	Updated devel/py-pip-run to 10.0.7 [adam 2023-04-18]
 	Updated www/firefox to 112.0.1 [ryoon 2023-04-18]
+	Updated www/firefox-l10n to 112.0.1 [ryoon 2023-04-18]
