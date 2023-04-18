@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2023/04/15 13:23:24 pin Exp $
+# $NetBSD: go-modules.mk,v 1.6 2023/04/18 18:50:09 pin Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -291,6 +291,7 @@ GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190911185100-cd5d95a43a6e.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20200317015054-43a5402ce75a.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20200625203802-6e8e738ad208.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20201020160332-67f06af15bc9.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20201020160332-67f06af15bc9.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20180830151530-49385e6e1522.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190312061237-fead79001313.mod
