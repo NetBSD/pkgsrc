@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2023/02/09 12:15:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2023/04/18 18:48:14 abs Exp $
 
-DISTNAME=		tigervnc-1.12.0
+DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
-PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=		v1.12.0
+GITHUB_TAG=		v1.13.1
 XORG_SERVER_FILE=	xorg-server-1.20.13
 SITES.${XORG_SERVER_FILE}.tar.xz=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
@@ -143,7 +142,11 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
+# To workaround Xfont2/libXfont2 detection issue with NetBSD
+# Someone with builtin.mk fu wanted for better solution
+.if ! (${OPSYS} == "NetBSD" && ${X11_TYPE} != "modular")
 .include "../../x11/libXfont2/buildlink3.mk"
+.endif
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
