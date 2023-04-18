@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2305 2023/04/18 20:51:58 osa Exp $
+$NetBSD: CHANGES-2023,v 1.2306 2023/04/18 21:11:39 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3330,3 +3330,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-ruby to 1.29.1 [osa 2023-04-18]
 	Updated www/nginx-devel to 1.24.0nb1 [osa 2023-04-18]
 	Updated www/nginx to 1.24.0nb1 [osa 2023-04-18]
+	Updated www/nginx-devel to 1.24.0nb2 [osa 2023-04-18]
+	Updated www/nginx to 1.24.0nb2 [osa 2023-04-18]
