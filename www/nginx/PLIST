@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/03/29 08:35:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/04/18 20:50:06 osa Exp $
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/nginx/nginx.${SOEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/nginx.pm
 ${PLIST.dso}${PLIST.ndk}libexec/nginx/ndk_http_module.so
@@ -23,6 +23,7 @@ ${PLIST.dso}${PLIST.rtmp}libexec/nginx/ngx_rtmp_module.so
 ${PLIST.dso}${PLIST.geoip2}libexec/nginx/ngx_stream_geoip2_module.so
 ${PLIST.dso}${PLIST.njs}libexec/nginx/ngx_stream_js_module.so
 ${PLIST.dso}${PLIST.stream}libexec/nginx/ngx_stream_module.so
+${PLIST.dso}${PLIST.gssapi}libexec/nginx/ngx_http_auth_spnego_module.so
 man/man8/nginx.8
 sbin/nginx
 share/examples/nginx/conf/fastcgi.conf
