@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/18 17:09:39 adam Exp $
+
+BLAKE2s (calver-2022.6.26.tar.gz) = 04dcfff848e0d6f665218c3837079b27c439f9383d9e5cdba3e22042ebd8c9cf
+SHA512 (calver-2022.6.26.tar.gz) = fda5d13db9bcb3954276fc6b773d79f4ef40b3e6cb60894a1eda919e3d1c11c87857213fcb99b30d51645a71ced240cd5dde81975aba27f350f6115f798c11ff
+Size (calver-2022.6.26.tar.gz) = 6670 bytes
