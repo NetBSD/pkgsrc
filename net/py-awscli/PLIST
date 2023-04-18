@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2023/03/19 09:07:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2023/04/18 07:27:41 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -794,11 +794,15 @@ ${PYSITELIB}/awscli/examples/apigatewayv2/update-vpc-link.rst
 ${PYSITELIB}/awscli/examples/appconfig/create-application.rst
 ${PYSITELIB}/awscli/examples/appconfig/create-configuration-profile.rst
 ${PYSITELIB}/awscli/examples/appconfig/create-environment.rst
+${PYSITELIB}/awscli/examples/appconfig/create-extension-association.rst
+${PYSITELIB}/awscli/examples/appconfig/create-extension.rst
 ${PYSITELIB}/awscli/examples/appconfig/create-hosted-configuration-version.rst
 ${PYSITELIB}/awscli/examples/appconfig/delete-application.rst
 ${PYSITELIB}/awscli/examples/appconfig/delete-configuration-profile.rst
 ${PYSITELIB}/awscli/examples/appconfig/delete-deployment-strategy.rst
 ${PYSITELIB}/awscli/examples/appconfig/delete-environment.rst
+${PYSITELIB}/awscli/examples/appconfig/delete-extension-association.rst
+${PYSITELIB}/awscli/examples/appconfig/delete-extension.rst
 ${PYSITELIB}/awscli/examples/appconfig/delete-hosted-configuration-version.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-application.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-configuration-profile.rst
@@ -806,12 +810,16 @@ ${PYSITELIB}/awscli/examples/appconfig/get-configuration.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-deployment-strategy.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-deployment.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-environment.rst
+${PYSITELIB}/awscli/examples/appconfig/get-extension-association.rst
+${PYSITELIB}/awscli/examples/appconfig/get-extension.rst
 ${PYSITELIB}/awscli/examples/appconfig/get-hosted-configuration-version.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-applications.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-configuration-profiles.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-deployment-strategies.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-deployments.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-environments.rst
+${PYSITELIB}/awscli/examples/appconfig/list-extension-associations.rst
+${PYSITELIB}/awscli/examples/appconfig/list-extensions.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-hosted-configuration-versions.rst
 ${PYSITELIB}/awscli/examples/appconfig/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/appconfig/start-deployment.rst
@@ -822,6 +830,8 @@ ${PYSITELIB}/awscli/examples/appconfig/update-application.rst
 ${PYSITELIB}/awscli/examples/appconfig/update-configuration-profile.rst
 ${PYSITELIB}/awscli/examples/appconfig/update-deployment-strategy.rst
 ${PYSITELIB}/awscli/examples/appconfig/update-environment.rst
+${PYSITELIB}/awscli/examples/appconfig/update-extension-association.rst
+${PYSITELIB}/awscli/examples/appconfig/update-extension.rst
 ${PYSITELIB}/awscli/examples/appconfig/validate-configuration.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/delete-scaling-policy.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/delete-scheduled-action.rst
@@ -830,9 +840,12 @@ ${PYSITELIB}/awscli/examples/application-autoscaling/describe-scalable-targets.r
 ${PYSITELIB}/awscli/examples/application-autoscaling/describe-scaling-activities.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/describe-scaling-policies.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/describe-scheduled-actions.rst
+${PYSITELIB}/awscli/examples/application-autoscaling/list-tags-for-resource.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/put-scaling-policy.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/put-scheduled-action.rst
 ${PYSITELIB}/awscli/examples/application-autoscaling/register-scalable-target.rst
+${PYSITELIB}/awscli/examples/application-autoscaling/tag-resource.rst
+${PYSITELIB}/awscli/examples/application-autoscaling/untag-resource.rst
 ${PYSITELIB}/awscli/examples/appmesh/create-mesh.rst
 ${PYSITELIB}/awscli/examples/appmesh/create-route.rst
 ${PYSITELIB}/awscli/examples/appmesh/create-virtual-gateway.rst
@@ -969,6 +982,7 @@ ${PYSITELIB}/awscli/examples/autoscaling/put-scheduled-update-group-action.rst
 ${PYSITELIB}/awscli/examples/autoscaling/put-warm-pool.rst
 ${PYSITELIB}/awscli/examples/autoscaling/record-lifecycle-action-heartbeat.rst
 ${PYSITELIB}/awscli/examples/autoscaling/resume-processes.rst
+${PYSITELIB}/awscli/examples/autoscaling/rollback-instance-refresh.rst
 ${PYSITELIB}/awscli/examples/autoscaling/set-desired-capacity.rst
 ${PYSITELIB}/awscli/examples/autoscaling/set-instance-health.rst
 ${PYSITELIB}/awscli/examples/autoscaling/set-instance-protection.rst
@@ -1943,6 +1957,7 @@ ${PYSITELIB}/awscli/examples/dynamodbstreams/get-records.rst
 ${PYSITELIB}/awscli/examples/dynamodbstreams/get-shard-iterator.rst
 ${PYSITELIB}/awscli/examples/dynamodbstreams/list-streams.rst
 ${PYSITELIB}/awscli/examples/ec2-instance-connect/send-ssh-public-key.rst
+${PYSITELIB}/awscli/examples/ec2/accept-address-transfer.rst
 ${PYSITELIB}/awscli/examples/ec2/accept-reserved-instances-exchange-quote.rst
 ${PYSITELIB}/awscli/examples/ec2/accept-transit-gateway-peering-attachment.rst
 ${PYSITELIB}/awscli/examples/ec2/accept-transit-gateway-vpc-attachment.rst
@@ -2121,6 +2136,7 @@ ${PYSITELIB}/awscli/examples/ec2/deregister-instance-event-notification-attribut
 ${PYSITELIB}/awscli/examples/ec2/deregister-transit-gateway-multicast-group-members.rst
 ${PYSITELIB}/awscli/examples/ec2/deregister-transit-gateway-multicast-group-source.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-account-attributes.rst
+${PYSITELIB}/awscli/examples/ec2/describe-address-transfers.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-addresses-attribute.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-addresses.rst
 ${PYSITELIB}/awscli/examples/ec2/describe-aggregate-id-format.rst
@@ -2257,6 +2273,7 @@ ${PYSITELIB}/awscli/examples/ec2/detach-internet-gateway.rst
 ${PYSITELIB}/awscli/examples/ec2/detach-network-interface.rst
 ${PYSITELIB}/awscli/examples/ec2/detach-volume.rst
 ${PYSITELIB}/awscli/examples/ec2/detach-vpn-gateway.rst
+${PYSITELIB}/awscli/examples/ec2/disable-address-transfer.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-ebs-encryption-by-default.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-fast-launch.rst
 ${PYSITELIB}/awscli/examples/ec2/disable-fast-snapshot-restores.rst
@@ -2275,6 +2292,7 @@ ${PYSITELIB}/awscli/examples/ec2/disassociate-subnet-cidr-block.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-transit-gateway-multicast-domain.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-transit-gateway-route-table.rst
 ${PYSITELIB}/awscli/examples/ec2/disassociate-vpc-cidr-block.rst
+${PYSITELIB}/awscli/examples/ec2/enable-address-transfer.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-ebs-encryption-by-default.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-fast-launch.rst
 ${PYSITELIB}/awscli/examples/ec2/enable-fast-snapshot-restores.rst
@@ -2399,6 +2417,7 @@ ${PYSITELIB}/awscli/examples/ec2/register-transit-gateway-multicase-group-source
 ${PYSITELIB}/awscli/examples/ec2/register-transit-gateway-multicast-group-members.rst
 ${PYSITELIB}/awscli/examples/ec2/register-transit-gateway-multicast-group-sources.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-transit-gateway-peering-attachment.rst
+${PYSITELIB}/awscli/examples/ec2/reject-transit-gateway-vpc-attachment.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-transit-gateway-vpc-attachments.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-vpc-endpoint-connections.rst
 ${PYSITELIB}/awscli/examples/ec2/reject-vpc-peering-connection.rst
@@ -2522,6 +2541,7 @@ ${PYSITELIB}/awscli/examples/ecs/delete-attributes.rst
 ${PYSITELIB}/awscli/examples/ecs/delete-capacity-provider.rst
 ${PYSITELIB}/awscli/examples/ecs/delete-cluster.rst
 ${PYSITELIB}/awscli/examples/ecs/delete-service.rst
+${PYSITELIB}/awscli/examples/ecs/delete-task-definitions.rst
 ${PYSITELIB}/awscli/examples/ecs/delete-task-set.rst
 ${PYSITELIB}/awscli/examples/ecs/deregister-container-instance.rst
 ${PYSITELIB}/awscli/examples/ecs/deregister-task-definition.rst
@@ -3807,6 +3827,13 @@ ${PYSITELIB}/awscli/examples/iotwireless/update-destination.rst
 ${PYSITELIB}/awscli/examples/iotwireless/update-partner-account.rst
 ${PYSITELIB}/awscli/examples/iotwireless/update-wireless-device.rst
 ${PYSITELIB}/awscli/examples/iotwireless/update-wireless-gateway.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/create-participant-token.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/create-stage.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/delete-stage.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/disconnect-participant.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/get-stage.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/list-stages.rst
+${PYSITELIB}/awscli/examples/ivs-realtime/update-stage.rst
 ${PYSITELIB}/awscli/examples/ivs/batch-get-channel.rst
 ${PYSITELIB}/awscli/examples/ivs/batch-get-stream-key.rst
 ${PYSITELIB}/awscli/examples/ivs/create-channel.rst
@@ -4130,6 +4157,7 @@ ${PYSITELIB}/awscli/examples/logs/describe-log-streams.rst
 ${PYSITELIB}/awscli/examples/logs/get-log-events.rst
 ${PYSITELIB}/awscli/examples/logs/put-log-events.rst
 ${PYSITELIB}/awscli/examples/logs/put-retention-policy.rst
+${PYSITELIB}/awscli/examples/macie2/describe-buckets.rst
 ${PYSITELIB}/awscli/examples/mediaconnect/add-flow-outputs.rst
 ${PYSITELIB}/awscli/examples/mediaconnect/create-flow.rst
 ${PYSITELIB}/awscli/examples/mediaconnect/delete-flow.rst
@@ -5198,6 +5226,19 @@ ${PYSITELIB}/awscli/examples/service-quotas/list-requested-service-quota-change-
 ${PYSITELIB}/awscli/examples/service-quotas/list-service-quotas.rst
 ${PYSITELIB}/awscli/examples/service-quotas/list-services.rst
 ${PYSITELIB}/awscli/examples/service-quotas/request-service-quota-increase.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/associate-attribute-group.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/create-application.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/create-attribute-group.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/delete-application.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/delete-attribute-group.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/get-application.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/get-attribute-group.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/list-applications.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/list-associated-attribute-groups.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/list-attribute-groups-for-application.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/list-attribute-groups.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/update-application.rst
+${PYSITELIB}/awscli/examples/servicecatalog-appregistry/update-attribute-group.rst
 ${PYSITELIB}/awscli/examples/servicecatalog/accept-portfolio-share.rst
 ${PYSITELIB}/awscli/examples/servicecatalog/associate-principal-with-portfolio.rst
 ${PYSITELIB}/awscli/examples/servicecatalog/associate-product-with-portfolio.rst
