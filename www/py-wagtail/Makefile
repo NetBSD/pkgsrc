@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/12 06:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/18 19:50:34 joerg Exp $
 
 DISTNAME=	wagtail-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,28 +12,24 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-filter>=2.2.0:../../www/py-django-filter
-# TODO: pkgsrc has 5.1
-#DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=6.0<7.0:../../www/py-django-modelcluster
+DEPENDS+=	${PYPKGPREFIX}-django-modelcluster>=6.0<7.0:../../www/py-django-modelcluster
 DEPENDS+=	${PYPKGPREFIX}-django-taggit>=2.0<4.0:../../www/py-django-taggit
 DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.5.1<5.0:../../www/py-django-treebeard
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.11.1<4.0:../../www/py-djangorestframework
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0<10.0.0:../../graphics/py-Pillow
-# TODO: pkgsrc has 1.5
-#DEPENDS+=	${PYPKGPREFIX}-Willow>=1.4<1.5:../../graphics/py-Willow
+DEPENDS+=	${PYPKGPREFIX}-Willow>=1.4<1.5:../../graphics/py-Willow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8<5.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999<2:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.14<2.0:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-draftjs_exporter>=2.1.5<4.2:../../www/py-draftjs_exporter
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.1<3.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-l18n>=2018.5:../../time/py-l18n
-# TODO: package missing
-#DEPENDS+=	${PYPKGPREFIX}-anyascii>=0.1.5:../../textproc/py-anyascii
+DEPENDS+=	${PYPKGPREFIX}-anyascii>=0.1.5:../../textproc/py-anyascii
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=3.0.10<4.0:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-tablib>=1.4:../../textproc/py-tablib
 DEPENDS+=	${PYPKGPREFIX}-xlsxwriter>=1.2.8:../../textproc/py-xlsxwriter
 DEPENDS+=	${PYPKGPREFIX}-django-permissionedforms-[0-9]*:../../www/py-django-permissionedforms
-# TODO: package missing
-#DEPENDS+=	${PYPKGPREFIX}-telepath>=0.1.1<1:../../www/py-telepath
+DEPENDS+=	${PYPKGPREFIX}-telepath>=0.1.1<1:../../www/py-telepath
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-factory_boy-[0-9]*:../../devel/py-factory_boy
 TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.16:../../net/py-boto3
