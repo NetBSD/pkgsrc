@@ -1,0 +1,10 @@
+$NetBSD: patch-toolkit_library_rust_moz.build,v 1.1 2023/04/18 14:15:28 ryoon Exp $
+
+--- toolkit/library/rust/moz.build.orig	2022-08-24 19:55:14.000000000 +0000
++++ toolkit/library/rust/moz.build
+@@ -13,4 +13,4 @@ RustLibrary('gkrust', gkrust_features, '
+ # +RUST_TESTS = [
+ # +    'stylo_tests',
+ # +]
+-RUST_TEST_FEATURES = gkrust_features
++#RUST_TEST_FEATURES = gkrust_features

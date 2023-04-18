@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.15 2022/11/08 00:36:56 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.16 2023/04/18 14:15:28 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,12 +20,15 @@ PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # Include pyversion.mk after setting PYTHON_* but before testing the default.
 .include "../../lang/python/pyversion.mk"
+# lang/python311 is not acceptable.
 .if !empty(PYTHON_VERSION_DEFAULT:M3[89]) || !empty(PYTHON_VERSION_DEFAULT:M310)
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
+TOOL_DEPENDS+=			py${PYTHON_VERSION_DEFAULT:S/3/3./}-expat-[0-9]*:../../textproc/py-expat
 .else
 TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
+TOOL_DEPENDS+=			py38-expat-[0-9]*:../../textproc/py-expat
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
@@ -63,10 +66,9 @@ USE_TOOLS+=		bsdtar
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
-# At least for NetBSD/i386 9.2, encoding_rs failed to build with simd_funcs
-# and packed_simd crates.
-CONFIGURE_ARGS+=	--disable-rust-simd
 .endif
+# As of 2.53.16, packed_simd_2 is for Rust nightly only.
+CONFIGURE_ARGS+=	--disable-rust-simd
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
@@ -105,12 +107,6 @@ CONFIGURE_ARGS+=	--disable-gconf
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
-
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
-SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
