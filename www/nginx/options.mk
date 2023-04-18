@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.91 2023/04/18 18:41:59 osa Exp $
+# $NetBSD: options.mk,v 1.92 2023/04/18 20:50:06 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
-PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gtools gzip headers-more http2
+PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
 PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
@@ -17,7 +17,7 @@ PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
-PLIST_VARS+=		headmore imagefilter lua mail naxsi nchan ndk njs
+PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
 PLIST_VARS+=		perl rtmp setmisc stream upload uwsgi
 
 .include "../../mk/bsd.options.mk"
@@ -230,7 +230,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.3.0
+PUSH_VERSION=		1.3.6
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
@@ -325,6 +325,18 @@ SITES.${UPLOAD_DISTFILE}=	-${MASTER_SITE_GITHUB:=vkholodkov/nginx-upload-module/
 DISTFILES+=		${UPLOAD_DISTFILE}
 DSO_EXTMODS+=		upload
 PLIST.upload=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mgssapi) || make(makesum) || make(mdi) || make(distclean)
+GSSAPI_GH_ACCOUNT=	stnoonan
+GSSAPI_GH_PROJECT=	spnego-http-auth-nginx-module
+GSSAPI_VERSION=		3575542
+GSSAPI_DISTNAME=		${GSSAPI_GH_PROJECT}-${GSSAPI_VERSION}
+GSSAPI_DISTFILE=		${GSSAPI_GH_ACCOUNT}-${GSSAPI_DISTNAME}_GH.tar.gz
+SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI_GH_PROJECT}/tar.gz/${GSSAPI_VERSION}?dummy=${GSSAPI_DISTFILE}}
+DISTFILES+=		${GSSAPI_DISTFILE}
+DSO_EXTMODS+=		gssapi
+PLIST.gssapi=		yes
 .endif
 
 .for mod in ${DSO_BASEMODS}
