@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/01/11 10:17:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/04/18 17:16:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -115,6 +115,20 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/dsa-p256.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-dsa.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-broken-signature-key-type.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-duplicate-crit-opts.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-duplicate-extension.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-empty-principals.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-invalid-cert-type.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-non-lexical-crit-opts.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-non-lexical-extensions.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p384.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p521.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-rsa-sha1.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-rsa-sha256.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-rsa-sha512.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key-cert.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/dsa-nopsw.key.pub
@@ -2201,6 +2215,7 @@ ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.old_header.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.precert.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.with_garbage.pem
+${PYSITELIB}/cryptography_vectors/x509/cryptography.io.with_headers.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ca_issuers.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp_ca_issuers.pem
@@ -2243,6 +2258,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_only_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_reasons_only.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relative_user_all_reasons.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_idp_relativename_only.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/crl_inner_outer_mismatch.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_inval_cert_issuer_entry_ext.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_invalid_time.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_md2_unknown_crit_entry_ext.pem
@@ -2263,6 +2279,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_signature_crl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_utf8_common_name.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_version.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/long-form-name-attribute.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/mismatch_inner_outer_sig_algorithm.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_excluded.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip4_netmask.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip_netmask.pem
