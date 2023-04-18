@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2259 2023/04/18 09:35:50 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2260 2023/04/18 09:37:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3271,3 +3271,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/nickle to 2.90 [wiz 2023-04-18]
 	Updated devel/lxqt-build-tools to 0.13.0 [pin 2023-04-18]
 	Updated x11/libqtxdg to 3.11.0 [pin 2023-04-18]
+	Updated x11/qtxdg-tools to 3.11.0 [pin 2023-04-18]
