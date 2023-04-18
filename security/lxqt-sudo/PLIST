@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/19 10:05:02 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/18 11:43:32 pin Exp $
+bin/lxdoas
 bin/lxqt-sudo
 bin/lxsu
 bin/lxsudo
+man/man1/lxdoas.1
 man/man1/lxqt-sudo.1
 man/man1/lxsu.1
 man/man1/lxsudo.1
@@ -30,6 +32,7 @@ share/lxqt/translations/lxqt-sudo/lxqt-sudo_ko.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_lt.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_nb_NO.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_nl.qm
+share/lxqt/translations/lxqt-sudo/lxqt-sudo_oc.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_pl.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_pt.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_pt_BR.qm
