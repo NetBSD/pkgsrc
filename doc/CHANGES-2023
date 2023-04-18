@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2297 2023/04/18 17:23:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2298 2023/04/18 17:40:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3314,3 +3314,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography_vectors to 40.0.2 [adam 2023-04-18]
 	Updated security/py-OpenSSL to 23.1.1 [adam 2023-04-18]
 	Updated devel/py-resolvelib to 1.0.1 [adam 2023-04-18]
+	Updated audio/fluidsynth to 2.3.2 [adam 2023-04-18]
+	Updated fonts/py-fonttools to 4.39.3 [adam 2023-04-18]
