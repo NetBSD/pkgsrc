@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/24 15:28:13 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/04/18 11:39:47 pin Exp $
 bin/lxqt-config-globalkeyshortcuts
 bin/lxqt-globalkeysd
 include/lxqt-globalkeys-ui/LXQtGlobalKeysUi/ShortcutSelector
@@ -60,6 +60,7 @@ share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshor
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_lv.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_nb_NO.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_nl.qm
+share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_oc.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_pl.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_pt.qm
 share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_pt_BR.qm
