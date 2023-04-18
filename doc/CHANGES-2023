@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2248 2023/04/17 21:35:47 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2249 2023/04/18 07:38:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3255,3 +3255,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXpm to 3.5.16 [wiz 2023-04-17]
 	Updated audio/fasttracker2 to 1.66 [fox 2023-04-17]
 	Added devel/liburing version 2.3 [gutteridge 2023-04-17]
+	Updated net/py-botocore to 1.29.115 [adam 2023-04-18]
+	Updated net/py-boto3 to 1.26.115 [adam 2023-04-18]
+	Updated net/py-awscli to 1.27.115 [adam 2023-04-18]
+	Updated sysutils/py-psutil to 5.9.5 [adam 2023-04-18]
