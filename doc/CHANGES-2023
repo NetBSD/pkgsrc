@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2257 2023/04/18 09:06:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2258 2023/04/18 09:34:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3269,3 +3269,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/molsketch to 0.8.0 [pin 2023-04-18]
 	Updated devel/py-tortoisehg to 6.4 [wiz 2023-04-18]
 	Updated math/nickle to 2.90 [wiz 2023-04-18]
+	Updated devel/lxqt-build-tools to 0.13.0 [pin 2023-04-18]
