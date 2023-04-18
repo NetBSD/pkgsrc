@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/04/18 12:13:17 pin Exp $
+# $NetBSD: Makefile,v 1.19 2023/04/18 18:17:31 jperkin Exp $
 
 PKGNAME=	lxqt-1.3.0
 CATEGORIES=	meta-pkgs
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
 DEPENDS+=	libqtxdg>=3.11.0:../../x11/libqtxdg
 DEPENDS+=	qtxdg-tools>=3.11.0:../../x11/qtxdg-tools
 DEPENDS+=	liblxqt>=1.3.0:../../x11/liblxqt
-DEPENDS+=	libfm-qt>=1.3.1:../../x11/libfm-qt
+DEPENDS+=	libfm-qt>=1.3.0:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=1.3.0:../../graphics/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=1.3.0:../../audio/pavucontrol-qt
 DEPENDS+=	qtermwidget>=1.3.0:../../x11/qtermwidget
