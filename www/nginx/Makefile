@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2023/04/13 16:45:47 osa Exp $
+# $NetBSD: Makefile,v 1.133 2023/04/18 18:41:59 osa Exp $
 
-DISTNAME=	nginx-1.22.1
-PKGREVISION=	7
+DISTNAME=	nginx-1.24.0
 CATEGORIES=	www
-MASTER_SITES=	http://nginx.org/download/
+MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
 
 MAINTAINER=	osa@NetBSD.org
@@ -48,6 +47,13 @@ CONFIGURE_ARGS+=	--http-client-body-temp-path=${NGINX_DATADIR}/client_body_temp
 CONFIGURE_ARGS+=	--http-proxy-temp-path=${NGINX_DATADIR}/proxy_temp
 CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 CONFIGURE_ARGS+=	--http-scgi-temp-path=${NGINX_DATADIR}/scgi_temp
+CONFIGURE_ARGS+=	--with-pcre
+
+SUBST_CLASSES+=		fix-pcre2
+SUBST_STAGE.fix-pcre2=	pre-configure
+SUBST_FILES.fix-pcre2=	auto/lib/pcre/conf
+SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
+SUBST_NOOP_OK.fix-pcre2=yes
 
 PKG_SYSCONFSUBDIR=	nginx
 
@@ -119,5 +125,6 @@ do-install:
 		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
 .endif
 
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
