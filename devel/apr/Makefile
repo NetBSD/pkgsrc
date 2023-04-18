@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/04/18 08:47:53 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2023/04/18 08:58:20 wiz Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
@@ -27,8 +27,7 @@ TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-USE_TOOLS+=		bash:run
-REPLACE_BASH+=		apr-config.in
+REPLACE_SH+=		apr-config.in
 .endif
 
 post-install:
