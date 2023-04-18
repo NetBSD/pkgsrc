@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/04/03 20:21:22 nros Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/18 11:37:08 pin Exp $
 
-DISTNAME=	pcmanfm-qt-1.2.1
-PKGREVISION=	2
+DISTNAME=	pcmanfm-qt-1.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -33,7 +32,7 @@ CONF_FILES+=		${SETTINGS_CONF}/settings.conf \
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.12.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
