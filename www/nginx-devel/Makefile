@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2023/04/13 16:45:47 osa Exp $
+# $NetBSD: Makefile,v 1.100 2023/04/18 18:42:00 osa Exp $
 
-DISTNAME=	nginx-1.23.4
-PKGREVISION=	1
+DISTNAME=	nginx-1.24.0
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
@@ -49,6 +48,13 @@ CONFIGURE_ARGS+=	--http-client-body-temp-path=${NGINX_DATADIR}/client_body_temp
 CONFIGURE_ARGS+=	--http-proxy-temp-path=${NGINX_DATADIR}/proxy_temp
 CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 CONFIGURE_ARGS+=	--http-scgi-temp-path=${NGINX_DATADIR}/scgi_temp
+CONFIGURE_ARGS+=	--with-pcre
+
+SUBST_CLASSES+=		fix-pcre2
+SUBST_STAGE.fix-pcre2=	pre-configure
+SUBST_FILES.fix-pcre2=	auto/lib/pcre/conf
+SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
+SUBST_NOOP_OK.fix-pcre2=yes
 
 PKG_SYSCONFSUBDIR=	nginx
 
@@ -96,11 +102,6 @@ SOEXT=		so
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
-post-patch:
-.if !empty(PKG_OPTIONS:Mnaxsi)
-	(cd ${WRKSRC}/ && patch <${PATCHDIR}/extra-patch-naxsi_runtime.c)
-.endif
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
 .for file in ${EGFILES}
@@ -125,5 +126,6 @@ do-install:
 		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
 .endif
 
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
