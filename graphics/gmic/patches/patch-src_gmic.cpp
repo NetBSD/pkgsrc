@@ -1,6 +1,7 @@
-$NetBSD: patch-src_gmic.cpp,v 1.2 2023/04/18 16:00:08 wiz Exp $
+$NetBSD: patch-src_gmic.cpp,v 1.3 2023/04/18 16:04:02 wiz Exp $
 
 * Support NetBSD.
+https://github.com/GreycLab/gmic/pull/449
 
 --- src/gmic.cpp.orig	2023-04-04 16:20:28.000000000 +0000
 +++ src/gmic.cpp
