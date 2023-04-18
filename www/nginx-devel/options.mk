@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2023/04/18 20:50:06 osa Exp $
+# $NetBSD: options.mk,v 1.20 2023/04/18 21:10:38 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
 PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
-PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub upload uwsgi
+PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sts sub upload uwsgi vts
 
 PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache realip
 PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
@@ -18,7 +18,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
-PLIST_VARS+=		perl rtmp setmisc stream upload uwsgi
+PLIST_VARS+=		perl rtmp setmisc stream sts upload uwsgi vts
 
 .include "../../mk/bsd.options.mk"
 
@@ -337,6 +337,30 @@ SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI
 DISTFILES+=		${GSSAPI_DISTFILE}
 DSO_EXTMODS+=		gssapi
 PLIST.gssapi=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Msts) || make(makesum) || make(mdi) || make(distclean)
+STS_GH_ACCOUNT=		vozlt
+STS_GH_PROJECT=		nginx-module-sts
+STS_VERSION=		3c10d42
+STS_DISTNAME=		${STS_GH_PROJECT}-${STS_VERSION}
+STS_DISTFILE=		${STS_GH_ACCOUNT}-${STS_DISTNAME}_GH.tar.gz
+SITES.${STS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${STS_GH_ACCOUNT}/${STS_GH_PROJECT}/tar.gz/${STS_VERSION}?dummy=${STS_DISTFILE}}
+DISTFILES+=		${STS_DISTFILE}
+DSO_EXTMODS+=		sts
+PLIST.sts=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mvts) || make(makesum) || make(mdi) || make(distclean)
+VTS_GH_ACCOUNT=		vozlt
+VTS_GH_PROJECT=		nginx-module-vts
+VTS_VERSION=		bf64dbf
+VTS_DISTNAME=		${VTS_GH_PROJECT}-${VTS_VERSION}
+VTS_DISTFILE=		${VTS_GH_ACCOUNT}-${VTS_DISTNAME}_GH.tar.gz
+SITES.${VTS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${VTS_GH_ACCOUNT}/${VTS_GH_PROJECT}/tar.gz/${VTS_VERSION}?dummy=${VTS_DISTFILE}}
+DISTFILES+=		${VTS_DISTFILE}
+DSO_EXTMODS+=		vts
+PLIST.vts=		yes
 .endif
 
 .for mod in ${DSO_BASEMODS}
