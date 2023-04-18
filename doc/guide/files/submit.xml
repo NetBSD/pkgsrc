@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.39 2023/03/15 16:01:38 schmonz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.40 2023/04/18 00:45:12 gutteridge Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -263,7 +263,7 @@ probably has no value unless <varname>SUPERSEDES</varname> is not
 set, i.e.  <varname>PKGBASE</varname> stays the same.  </para>
 </listitem>
 
-<listitem><para><command>cvs import</command> the modified package in the new
+<listitem><para><command>cvs add</command> the modified package in the new
 place.</para></listitem>
 
 <listitem><para>Check if any package depends on it:
