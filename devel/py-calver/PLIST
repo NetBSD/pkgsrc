@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/18 17:09:39 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/calver/__init__.py
+${PYSITELIB}/calver/__init__.pyc
+${PYSITELIB}/calver/__init__.pyo
+${PYSITELIB}/calver/integration.py
+${PYSITELIB}/calver/integration.pyc
+${PYSITELIB}/calver/integration.pyo
