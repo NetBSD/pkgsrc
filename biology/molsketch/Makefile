@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/04/03 20:20:46 nros Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/18 08:49:21 pin Exp $
 
-DISTNAME=	Molsketch-0.7.3-src
+DISTNAME=	Molsketch-0.8.0-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
-PKGREVISION=	3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=molsketch/}
 
@@ -16,7 +15,7 @@ USE_TOOLS=	pkg-config
 USE_CMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++17
 
 CMAKE_ARGS+=	-DMSK_PREFIX=${PREFIX:Q}
 CMAKE_ARGS+=	-DMSK_INSTALL_PREFIX=${PREFIX:Q}
