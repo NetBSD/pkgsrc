@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/12/06 08:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/18 19:24:53 osa Exp $
 
 PKGNAME=	unit-${LANG}${PYVERSSUFFIX}-${UNIT_VERSION}
-PKGREVISION=	1
 COMMENT=	Python module for NGINX Unit
 
 LANG=		python
