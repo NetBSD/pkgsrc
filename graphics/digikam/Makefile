@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.198 2023/04/11 06:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.199 2023/04/18 11:52:56 wiz Exp $
 
-DISTNAME=	digiKam-7.10.0
+DISTNAME=	digiKam-8.0.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
@@ -11,12 +10,15 @@ HOMEPAGE=	https://www.digikam.org/
 COMMENT=	Advanced digital photo management application
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
+DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
+
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
 .include "../../meta-pkgs/kde/applications.mk"
 
 REPLACE_PERL=	core/data/scripts/digitaglinktree/digitaglinktree
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_KF5AkonadiContact:BOOL=TRUE
 
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
@@ -49,7 +51,6 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 # qt5-qtwebengine pulls in ffmpeg4
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
-# TODO: detection for this fails, find out why
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
@@ -57,5 +58,8 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../time/kcalendarcore/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
-# unpackaged: qtav
+.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
+# unpackaged: qtav - libXv is required by qtav
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../multimedia/libass/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
