@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/11/10 01:41:25 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2023/04/18 10:07:25 pin Exp $
 
-BLAKE2s (screengrab-2.5.0.tar.xz) = 3d7c06634bdb3044bf8cec772e62902226a46050a6a92bbfd491c5191f2556d3
-SHA512 (screengrab-2.5.0.tar.xz) = 681adc0e9e26ad591aceb8002095e9117534ba20cc1086e7e2be5c6707d2b308c7bb9e4201563692891678b40b45f4a2e7db20008676af9ca513c34c00c0fc02
-Size (screengrab-2.5.0.tar.xz) = 336852 bytes
+BLAKE2s (screengrab-2.6.0.tar.xz) = e063390757ef29726e100a38b09ed01dd1b783a01602f0d712f531af3ff2afdf
+SHA512 (screengrab-2.6.0.tar.xz) = 622bd9fa4548dbbd2b965f2a38446d6b6002786ff2154f9efe86a4970ac464174d1d7e34b8fdc61761f935c97bf4ac8bb2e8ffd166b859cddd3183bd76380b88
+Size (screengrab-2.6.0.tar.xz) = 337392 bytes
