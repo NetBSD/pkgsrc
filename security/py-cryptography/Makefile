@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/04/18 17:16:21 adam Exp $
+# $NetBSD: Makefile,v 1.97 2023/04/18 22:20:25 wiz Exp $
 
 DISTNAME=	cryptography-40.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 CARGO_WRKSRC=	${WRKSRC}/src/rust
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
