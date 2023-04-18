@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.116 2023/02/04 08:38:28 wiz Exp $
+# $NetBSD: license.mk,v 1.117 2023/04/18 15:47:10 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -134,6 +134,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	cddl-1.0 \
 	cecill-2.1 \
 	cecill-b-v1 \
+	cecill-c-v1 \
 	cpl-1.0 \
 	epl-v1.0 \
 	eupl-v1.1 \
