@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2323 2023/04/19 17:18:17 otis Exp $
+$NetBSD: CHANGES-2023,v 1.2324 2023/04/19 17:18:32 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3352,3 +3352,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-proxy to 6.0.16 [otis 2023-04-19]
 	Updated sysutils/zabbix60-java to 6.0.16 [otis 2023-04-19]
 	Updated sysutils/zabbix60-agent to 6.0.16 [otis 2023-04-19]
+	Updated sysutils/zabbix60-frontend to 6.0.16 [otis 2023-04-19]
