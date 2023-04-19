@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2318 2023/04/19 15:08:48 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.2319 2023/04/19 16:33:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3347,3 +3347,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libxlsxwriter to 1.1.5 [sjmulder 2023-04-19]
 	Updated sysutils/nnn to 4.8 [sjmulder 2023-04-19]
 	Updated editors/poke to 3.1 [fcambus 2023-04-19]
+	Updated devel/cvise to 2.7.0 [adam 2023-04-19]
