@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/04/14 08:16:40 pin Exp $
+$NetBSD: distinfo,v 1.4 2023/04/19 20:44:20 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -120,6 +120,9 @@ Size (getrandom-0.2.9.crate) = 34457 bytes
 BLAKE2s (gif-0.12.0.crate) = dc28753a1305dac8e1319e8af2b4e1f7214dc59b6a1c756d2d134ebb2d15d1b2
 SHA512 (gif-0.12.0.crate) = 9cee5c4f68b02252f6214fccabda29087c89cadd8408df4fb6b9479da7958a9759dfc4b13ad2bc7e1447be9050cea6d3757d891b774a7e6fe8c6fd25bca3b74a
 Size (gif-0.12.0.crate) = 634734 bytes
+BLAKE2s (glob-0.3.1.crate) = cf1632af0a03d2505ae99d4e4ed0ee695c8383a0cddf1191f7f59e197e9fb17f
+SHA512 (glob-0.3.1.crate) = 29368160138bcb7ea5660f9f30c5711cfca8bc8ba836bbade3fbe8c424e7b4118daf27cffa677962e37e36f025fd2bb5a9c2aea865b0ff155cace455dfbb658b
+Size (glob-0.3.1.crate) = 18880 bytes
 BLAKE2s (half-2.2.1.crate) = 4e94773d1ac26fed7239dde020d059f0e89a7a0672a98d7d3f2c082c4590f193
 SHA512 (half-2.2.1.crate) = 6a2aa43a2a2f5c981305cbac46fe9dbfd3644912f6a8ae17e0ccd09aad5bbcceaf095b91d51d12c55963c88c208510f9bd94b472446d23752e3c0d3b41531a48
 Size (half-2.2.1.crate) = 47021 bytes
@@ -306,9 +309,9 @@ Size (unicode-ident-1.0.8.crate) = 41962 bytes
 BLAKE2s (utf8parse-0.2.1.crate) = ec63d4e1704c8be3fa23931b95f5ce67284b3dec987a7442e459406be3d24fcf
 SHA512 (utf8parse-0.2.1.crate) = 51fba8f1e7eb74b7020fd831e30a67fc8353ac2ee07335c8c3374a5570ac8117f165f6905d4b7f0360095b7b5ed3e739001d02a8cc3c89195baf2cd679136050
 Size (utf8parse-0.2.1.crate) = 13435 bytes
-BLAKE2s (wallust-2.0.1.crate) = 59d9ebcd78ff52c42632ee9f989afbaec538359dd74c94917f82ae63649f8959
-SHA512 (wallust-2.0.1.crate) = 07ea9fe1e0262a66d1bf6a7fb6e5ea134f46829fe8e6ea69e0f4e399b98ea2412384d641c3c0f366a5d049e6d47de1fd2c4a680e67389d43b64eb37f143fb866
-Size (wallust-2.0.1.crate) = 20394 bytes
+BLAKE2s (wallust-2.1.0.crate) = e3ec07e6e30882d4b8b12a2c4b4fc40f1b4b56f3251fc35a94d7318559872c54
+SHA512 (wallust-2.1.0.crate) = 1c603bea76673ea501e6ed5af4a5dc9153f0ac6f770856ca7d93310859c9e78ab79169faeb7b6ba6d7be00e4b9fc6d6f127df97e775c5c8226f5d7d464a488c3
+Size (wallust-2.1.0.crate) = 21617 bytes
 BLAKE2s (wasi-0.11.0+wasi-snapshot-preview1.crate) = f023780bb2e4a8571dcb1012e76cfbfc3804df53b89abd5cd8ede9d7c5847d4c
 SHA512 (wasi-0.11.0+wasi-snapshot-preview1.crate) = 043500ab28cd9cb779475255da5d109ebab7fccca72b64873dc28d77bc5a157ba8d96b9e8f05223b5b36c7089bb7b4ba87657fc69bac16b78972f897294a865f
 Size (wasi-0.11.0+wasi-snapshot-preview1.crate) = 28131 bytes
