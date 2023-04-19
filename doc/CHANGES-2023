@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2329 2023/04/19 22:35:38 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2330 2023/04/19 23:53:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3364,3 +3364,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.1.0 [pin 2023-04-19]
 	Updated textproc/zet to 1.0.0 [pin 2023-04-19]
 	Updated lang/nim to 1.6.12 [nikita 2023-04-19]
+	Updated sysutils/xfce4-genmon-plugin to 4.2.0 [gutteridge 2023-04-19]
