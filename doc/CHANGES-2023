@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2313 2023/04/19 13:32:29 joerg Exp $
+$NetBSD: CHANGES-2023,v 1.2314 2023/04/19 13:39:09 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/exult to 1.6nb8 [wiz 2023-04-19]
 	Updated devel/mustach to 1.2.5 [sjmulder 2023-04-19]
 	Added databases/pg_top version 4.0.0 [joerg 2023-04-19]
+	Updated math/sc-im to 0.8.3 [sjmulder 2023-04-19]
