@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/03/29 19:30:20 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/04/19 10:58:31 wiz Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -150,6 +150,9 @@ Size (gdk-sys-0.15.1.crate) = 73599 bytes
 BLAKE2s (generational-arena-0.2.8.crate) = af04025282ec1279a0529759690578a55df23b3d6ffbd9f3826dac90e51711f5
 SHA512 (generational-arena-0.2.8.crate) = a5e073a8d26aa32b617fb4130d2b9401c3a3d9ff51a2910f2de4de019ddfd2e5077f2489acb40330e640c573139c1c911ce59a36011bd439c011a3af922bdc1d
 Size (generational-arena-0.2.8.crate) = 20899 bytes
+BLAKE2s (gerb-0.0.1alpha20230328.tar.gz) = f2de1e33e70a27c66486d5ad9c7242432a51737331bfd37d45f3cd6d5f7e9a29
+SHA512 (gerb-0.0.1alpha20230328.tar.gz) = 9c616ee7e44d0b25c443f6f225484f8f5041f975a7af0dd7d19c069f81a54aad87835a022fd6847a54cc3c693b2a4c00683ad76bcb56b69457c7ed19c966a555
+Size (gerb-0.0.1alpha20230328.tar.gz) = 1485980 bytes
 BLAKE2s (getrandom-0.2.8.crate) = 3384f83c641aae81e11d7974210ee38cc05eb376d6cbf156b219236ab21f9159
 SHA512 (getrandom-0.2.8.crate) = cd7aea29f79a33a0de2a52a0a82f2b57ea8f27908ccfe00a5f42248766df88b225023603ec56d6fc634ef9c1eb67ad0135c90d4c695f6f659db0767e7fda44c5
 Size (getrandom-0.2.8.crate) = 30553 bytes
@@ -462,9 +465,6 @@ Size (uuid-1.3.0.crate) = 53736 bytes
 BLAKE2s (uuid-macro-internal-1.3.0.crate) = 38fdb5991f08e28326572df3426984e755b962a375326e6be9359f5fb00aae0b
 SHA512 (uuid-macro-internal-1.3.0.crate) = 8a6bfcc4701a3156604e51019bb13670872a6c8f0a13697c0b30af4fb6b18257623c269c50d5cbce766992a0e4d17dd5356f6613cf15e3f764657ae35fdfbf44
 Size (uuid-macro-internal-1.3.0.crate) = 9134 bytes
-BLAKE2s (v0.0.1-alpha+2023-03-28.tar.gz) = f2de1e33e70a27c66486d5ad9c7242432a51737331bfd37d45f3cd6d5f7e9a29
-SHA512 (v0.0.1-alpha+2023-03-28.tar.gz) = 9c616ee7e44d0b25c443f6f225484f8f5041f975a7af0dd7d19c069f81a54aad87835a022fd6847a54cc3c693b2a4c00683ad76bcb56b69457c7ed19c966a555
-Size (v0.0.1-alpha+2023-03-28.tar.gz) = 1485980 bytes
 BLAKE2s (vcpkg-0.2.15.crate) = 0ec9e97d0e23d59f0a4095773e1136e15f2054fb86bcceb309774638768ea8c4
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
 Size (vcpkg-0.2.15.crate) = 228735 bytes
