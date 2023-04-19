@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2309 2023/04/19 05:27:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2310 2023/04/19 08:29:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pygments to 2.15.1 [adam 2023-04-19]
 	Updated devel/py-rstr to 3.2.1 [adam 2023-04-19]
 	Updated devel/py-filelock to 3.12.0 [adam 2023-04-19]
+	Updated textproc/icu to 73.1 [adam 2023-04-19]
