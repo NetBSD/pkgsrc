@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/11/25 16:10:06 sjmulder Exp $
+# $NetBSD: Makefile,v 1.32 2023/04/19 14:40:35 sjmulder Exp $
 
-DISTNAME=	nnn-4.7
+DISTNAME=	nnn-4.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -43,8 +43,8 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 # nnn uses -std=c11 for `restrict` but c99 has it too, so use that on
 # old GCC versions that don't support c11.
 # https://github.com/jarun/nnn/issues/605
-.if !empty(CC_VERSION:Mgcc-[123].*) || \
-    !empty(CC_VERSION:Mgcc-4.[0123456].*)
+.if ${CC_VERSION:Mgcc-[123].*} || \
+    ${CC_VERSION:Mgcc-4.[0123456].*}
 SUBST_CLASSES+=		c11
 SUBST_MESSAGE.c11=	Use c99 on old GCC instead of c11
 SUBST_STAGE.c11=	pre-configure
