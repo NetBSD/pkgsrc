@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/11/30 15:03:49 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2023/04/19 23:53:15 gutteridge Exp $
 
-BLAKE2s (xfce4-genmon-plugin-4.1.1.tar.bz2) = 0e3d73ed47713c78300a5f73382507f867f2749f4b3c6d70622afa85a21a4b3b
-SHA512 (xfce4-genmon-plugin-4.1.1.tar.bz2) = 663dabcdfb9d85325be5bc000f44e6cd61f78143e6d49bc7c481d14eccc3601408e2a7bed1276de5fcb24e75af66d8765fd0dc373dc8b82c1118fb5da2673c03
-Size (xfce4-genmon-plugin-4.1.1.tar.bz2) = 400772 bytes
-SHA1 (patch-panel-plugin_cmdspawn.c) = bbec3bfd8cbad3ac50c763456d46c32e33a1239d
+BLAKE2s (xfce4-genmon-plugin-4.2.0.tar.bz2) = 5730fc15cc90efe947147f255e8f14efb24663b872c2292f2123e8cf14dee8ae
+SHA512 (xfce4-genmon-plugin-4.2.0.tar.bz2) = e0166e879244d039097f46526782f2232bea6a94eb260f2558a6daf62e82a5aaa68a44749eb95d3d7c212155e36887fca8b41fb558427a1812c614569b4c11b3
+Size (xfce4-genmon-plugin-4.2.0.tar.bz2) = 421113 bytes
+SHA1 (patch-panel-plugin_cmdspawn.c) = a469940a17ef5340e289df807742a704cdd7e8a3
