@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2022/10/26 10:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2023/04/19 08:10:15 adam Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.scc.u-tokai.ac.jp/pub/gmt/4/
 MASTER_SITES+=	ftp://ftp.iris.washington.edu/pub/gmt/4/

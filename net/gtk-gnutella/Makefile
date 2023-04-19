@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2023/01/29 21:17:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.122 2023/04/19 08:11:06 adam Exp $
 
 DISTNAME=	gtk-gnutella-1.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.xz

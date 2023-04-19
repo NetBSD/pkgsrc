@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2022/10/26 10:31:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/04/19 08:08:32 adam Exp $
 
 BUILDLINK_TREE+=	wandio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wandio
 WANDIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wandio+=	wandio>=4.2.2
-BUILDLINK_ABI_DEPENDS.wandio?=	wandio>=4.2.2nb9
+BUILDLINK_ABI_DEPENDS.wandio?=	wandio>=4.2.2nb10
 BUILDLINK_PKGSRCDIR.wandio?=	../../misc/wandio
 
 .include "../../archivers/bzip2/buildlink3.mk"

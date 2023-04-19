@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/01/29 21:17:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2023/04/19 08:11:04 adam Exp $
 
 DISTNAME=	freerdp-2.9.0
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 

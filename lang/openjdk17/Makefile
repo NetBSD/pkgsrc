@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/02/28 14:50:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/19 08:10:35 adam Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk17u
