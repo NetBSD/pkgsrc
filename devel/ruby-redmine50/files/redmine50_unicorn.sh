@@ -1,13 +1,15 @@
 #!/bin/sh
 #
-# $NetBSD: redmine50_unicorn.sh,v 1.2 2023/04/14 06:57:31 triaxx Exp $
+# $NetBSD: redmine50_unicorn.sh,v 1.3 2023/04/19 15:43:17 triaxx Exp $
 #
 
 # PROVIDE: redmine50_unicorn@RUBY_SUFFIX@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
+fi
 
 name="redmine50_unicorn@RUBY_SUFFIX@"
 rcvar=$name
