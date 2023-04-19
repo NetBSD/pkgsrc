@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/01/29 21:16:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2023/04/19 09:09:01 wiz Exp $
 
 DISTNAME=	exult-1.6
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-all-versions/}
 
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--disable-alsa
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
