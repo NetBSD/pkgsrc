@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/19 13:31:58 joerg Exp $
+bin/pg_top
+share/man/man1/pg_top.1
