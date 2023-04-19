@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2023/03/30 12:11:22 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2023/04/19 08:08:50 adam Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Implementation of HTTP/2 in C

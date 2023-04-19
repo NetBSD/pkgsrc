@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2023/03/03 08:00:22 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/04/19 08:10:37 adam Exp $
 
 DISTNAME=	GNUMail-1.4.0
+PKGREVISION=	1
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/gnustep-nonfsf/
 

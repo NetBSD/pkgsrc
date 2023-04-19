@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2023/02/14 15:49:38 he Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/19 08:08:44 adam Exp $
 
 GITHUB_PROJECT=	riemann-c-client
 GITHUB_TAG=	${DISTNAME}
 DISTNAME=	riemann-c-client-1.10.4
 PKGNAME=	${DISTNAME:S/c-//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=algernon/}
 

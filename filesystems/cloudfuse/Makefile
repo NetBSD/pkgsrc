@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2022/11/23 16:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/04/19 08:09:55 adam Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	cloudfuse-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redbo/}
 DIST_SUBDIR=	cloudfuse

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/04/18 11:43:32 pin Exp $
+# $NetBSD: Makefile,v 1.23 2023/04/19 08:11:23 adam Exp $
 
 DISTNAME=	lxqt-sudo-1.3.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

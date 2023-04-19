@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2023/01/29 21:15:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2023/04/19 08:09:24 adam Exp $
 
 DISTNAME=		gourmet-0.8.5.14
-PKGREVISION=		54
+PKGREVISION=		55
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grecipe-manager/}
 

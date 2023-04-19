@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/01/14 07:35:23 charlotte Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/19 08:09:58 adam Exp $
 
 DISTNAME=	7kaa-2.15.4p1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=the3dfxdude/}
 EXTRACT_SUFX=	.tar.xz

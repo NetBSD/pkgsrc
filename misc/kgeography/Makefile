@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2023/04/03 20:21:11 nros Exp $
+# $NetBSD: Makefile,v 1.72 2023/04/19 08:10:50 adam Exp $
 
 DISTNAME=	kgeography-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kgeography/

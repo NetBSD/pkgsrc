@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2022/12/15 11:31:44 nia Exp $
+# $NetBSD: Makefile,v 1.40 2023/04/19 08:09:53 adam Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Emulator for running Game Boy Advance games (CLI version)

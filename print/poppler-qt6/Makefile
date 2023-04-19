@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2023/04/07 18:48:43 nros Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/19 08:08:40 adam Exp $
 
 # this must be set before compiler.mk
 # is included in Makefile.common
 GCC_REQD+=	9 # required by Qt6 headers
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-qt6-${POPPLER_VERS}

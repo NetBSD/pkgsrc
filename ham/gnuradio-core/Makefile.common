@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2022/12/26 16:50:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.45 2023/04/19 08:10:28 adam Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -143,7 +143,7 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 do-install:
-	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} install
+	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} ${INSTALL_TARGET}
 
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"

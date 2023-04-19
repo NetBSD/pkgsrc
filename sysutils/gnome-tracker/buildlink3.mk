@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/01/02 00:11:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/04/19 08:08:43 adam Exp $
 
 BUILDLINK_TREE+=	gnome-tracker
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-tracker
 GNOME_TRACKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-tracker+=	gnome-tracker>=1.8.0
-BUILDLINK_ABI_DEPENDS.gnome-tracker?=	gnome-tracker>=3.0.1nb11
+BUILDLINK_ABI_DEPENDS.gnome-tracker?=	gnome-tracker>=3.0.1nb13
 BUILDLINK_PKGSRCDIR.gnome-tracker?=	../../sysutils/gnome-tracker
 
 .include "../../databases/sqlite3/buildlink3.mk"

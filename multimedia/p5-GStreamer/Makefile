@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2022/11/23 16:20:47 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/04/19 08:10:59 adam Exp $
 
 DISTNAME=	GStreamer-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GStreamer/}
 

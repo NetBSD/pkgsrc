@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/02/21 13:29:15 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/19 08:10:41 adam Exp $
 
 DISTNAME=	alpha-0.7.2
 PKGNAME=	meli-0.7.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	https://git.meli.delivery/meli/meli/archive/
 

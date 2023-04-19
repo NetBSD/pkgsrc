@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/04/11 12:25:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/19 08:11:17 adam Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	bibtexu-4.00

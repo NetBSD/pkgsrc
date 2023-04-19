@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/03/30 05:37:07 mrg Exp $
+# $NetBSD: Makefile,v 1.37 2023/04/19 08:11:13 adam Exp $
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common
 
@@ -8,6 +8,7 @@ RCD_SCRIPTS=		transmission
 
 BUILD_DEFS+=		VARBASE
 
+PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 TRANSMISSION_USER?=	transmission
