@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/01/14 07:31:21 charlotte Exp $
+# $NetBSD: Makefile,v 1.31 2023/04/19 22:35:27 nikita Exp $
 
-DISTNAME=	nim-1.6.8
-PKGREVISION=	1
+DISTNAME=	nim-1.6.12
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
