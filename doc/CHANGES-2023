@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2328 2023/04/19 20:46:05 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2329 2023/04/19 22:35:38 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/termscp to 0.11.3 [pin 2023-04-19]
 	Updated graphics/wallust to 2.1.0 [pin 2023-04-19]
 	Updated textproc/zet to 1.0.0 [pin 2023-04-19]
+	Updated lang/nim to 1.6.12 [nikita 2023-04-19]
