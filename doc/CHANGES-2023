@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2317 2023/04/19 14:40:42 sjmulder Exp $
+$NetBSD: CHANGES-2023,v 1.2318 2023/04/19 15:08:48 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3346,3 +3346,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hugo to 0.111.3 [nikita 2023-04-19]
 	Updated textproc/libxlsxwriter to 1.1.5 [sjmulder 2023-04-19]
 	Updated sysutils/nnn to 4.8 [sjmulder 2023-04-19]
+	Updated editors/poke to 3.1 [fcambus 2023-04-19]
