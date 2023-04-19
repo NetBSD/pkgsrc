@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/03 11:34:14 sjmulder Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/19 14:40:35 sjmulder Exp $
 bin/nnn
 man/man1/nnn.1
 share/bash-completion/completions/nnn
