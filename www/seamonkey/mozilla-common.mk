@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.16 2023/04/18 14:15:28 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.17 2023/04/19 00:16:02 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -24,7 +24,7 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .if !empty(PYTHON_VERSION_DEFAULT:M3[89]) || !empty(PYTHON_VERSION_DEFAULT:M310)
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
-TOOL_DEPENDS+=			py${PYTHON_VERSION_DEFAULT:S/3/3./}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=			py${PYTHON_VERSION_DEFAULT}-expat-[0-9]*:../../textproc/py-expat
 .else
 TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
