@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2022/12/03 17:07:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.49 2023/04/19 17:38:35 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs14/Makefile
 # used by lang/nodejs16/Makefile
@@ -22,11 +22,12 @@ GCC_REQD+=		4.9.4
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-# Needs ares_nameser.h which is not installed by libcares
-#CONFIGURE_ARGS+=	--shared-cares
+CONFIGURE_ARGS+=	--shared-brotli
+CONFIGURE_ARGS+=	--shared-cares
 CONFIGURE_ARGS+=	--shared-libuv
+CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--shared-zlib
-CONFIGURE_ARGS+=	--without-npm
+CONFIGURE_ARGS+=	--with-intl=system-icu
 PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
@@ -40,6 +41,8 @@ CONFIGURE_ARGS+=	--dest-cpu=ppc
 CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 .endif
 
+REPLACE_NODEJS+=	deps/corepack/dist/*.js
+REPLACE_NODEJS+=	deps/npm/bin/*.js
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
 REPLACE_PYTHON+=	tools/gyp/pylib/gyp/flock_tool.py
@@ -50,6 +53,8 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 TEST_TARGET=		check
+
+CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .if defined(TOOLS_PLATFORM.paxctl)
 SUBST_CLASSES+=		mktools
@@ -83,10 +88,16 @@ paxctl:
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../archivers/brotli/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.41
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/nodejs/application.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-#.include "../../net/libcares/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+# Requires nghttp2_option_set_max_settings
+BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
+.include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
