@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2023/04/13 14:13:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/04/19 08:11:18 adam Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/}
 GITHUB_PROJECT=	ghostpdl-downloads

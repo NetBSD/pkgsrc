@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/02/07 01:40:39 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/19 08:08:11 adam Exp $
 
 DISTNAME=	hls-explicit-record-fields-plugin-1.0.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

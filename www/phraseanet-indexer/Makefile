@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/11/23 16:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/04/19 08:11:50 adam Exp $
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=        phraseanet-indexer-${VERS}
-PKGREVISION=	10
+PKGREVISION=	11
 
 EXTRACT_ELEMENTS=	${DISTNAME}/bin/src/phraseanet_indexer
 WRKSRC=			${WRKDIR}/${DISTNAME}/bin/src/phraseanet_indexer
