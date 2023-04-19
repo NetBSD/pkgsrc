@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/10/13 01:17:14 charlotte Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/04/19 22:35:27 nikita Exp $
 bin/nim
 bin/nim-gdb
 bin/nim-gdb.bash
@@ -9,7 +9,6 @@ bin/nimpretty
 bin/nimsuggest
 bin/testament
 nim/bin/nim
-nim/compiler.nimble
 nim/compiler/aliases.nim
 nim/compiler/ast.nim
 nim/compiler/astalgo.nim
@@ -182,6 +181,7 @@ nim/doc/basicopt.txt
 nim/doc/nimdoc.css
 nim/lib/arch/x86/amd64.S
 nim/lib/arch/x86/i386.S
+nim/lib/compilation.nim
 nim/lib/core/hotcodereloading.nim
 nim/lib/core/locks.nim
 nim/lib/core/macrocache.nim
@@ -506,6 +506,7 @@ nim/lib/wrappers/pcre.nim
 nim/lib/wrappers/postgres.nim
 nim/lib/wrappers/sqlite3.nim
 nim/lib/wrappers/tinyc.nim
+nim/nim.nimble
 nim/nimsuggest/config.nims
 nim/nimsuggest/crashtester.nim
 nim/nimsuggest/nimsuggest.nim
@@ -559,7 +560,10 @@ nim/nimsuggest/tests/tuse.nim
 nim/nimsuggest/tests/tuse_structure.nim
 nim/nimsuggest/tests/tv3.nim
 nim/nimsuggest/tests/tv3_definition.nim
+nim/nimsuggest/tests/tv3_forward_definition.nim
+nim/nimsuggest/tests/tv3_globalSymbols.nim
 nim/nimsuggest/tests/tv3_import.nim
+nim/nimsuggest/tests/tv3_outline.nim
 nim/nimsuggest/tests/tv3_typeDefinition.nim
 nim/nimsuggest/tests/twithin_macro.nim
 nim/nimsuggest/tests/twithin_macro_prefix.nim
