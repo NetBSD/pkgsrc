@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2023/02/12 21:03:07 otis Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/19 17:17:08 otis Exp $
 
-PKGREVISION= 1
 .include "../../sysutils/zabbix60-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-java-/}
