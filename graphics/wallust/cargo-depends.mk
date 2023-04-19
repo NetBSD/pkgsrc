@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/04/13 10:41:24 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2023/04/19 20:44:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	anstream-0.2.6
@@ -40,6 +40,7 @@ CARGO_CRATE_DEPENDS+=	futures-core-0.3.28
 CARGO_CRATE_DEPENDS+=	futures-sink-0.3.28
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.9
 CARGO_CRATE_DEPENDS+=	gif-0.12.0
+CARGO_CRATE_DEPENDS+=	glob-0.3.1
 CARGO_CRATE_DEPENDS+=	half-2.2.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
