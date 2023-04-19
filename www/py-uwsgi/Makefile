@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2023/02/26 00:52:49 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2023/04/19 08:11:50 adam Exp $
 
 DISTNAME=	uwsgi-2.0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgi/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2022/11/23 16:18:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2023/04/19 08:08:28 adam Exp $
 
 BUILDLINK_TREE+=	parrot
 
@@ -8,7 +8,7 @@ PARROT_BUILDLINK3_MK:=
 .include "../../lang/parrot/version.mk"
 
 BUILDLINK_API_DEPENDS.parrot+=		parrot>=0.4.0
-BUILDLINK_ABI_DEPENDS.parrot+=		parrot>=5.7.0nb30
+BUILDLINK_ABI_DEPENDS.parrot+=		parrot>=5.7.0nb31
 BUILDLINK_PKGSRCDIR.parrot?=		../../lang/parrot
 
 .include "../../textproc/icu/buildlink3.mk"

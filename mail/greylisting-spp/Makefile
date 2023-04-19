@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/11/23 16:20:33 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/19 08:10:41 adam Exp $
 
 DISTNAME=		greylisting-spp-1.1
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 

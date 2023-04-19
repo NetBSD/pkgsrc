@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/01/03 00:31:08 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/19 08:08:37 adam Exp $
 
 DISTNAME=	libsoup-3.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/soup/soup3/}
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}

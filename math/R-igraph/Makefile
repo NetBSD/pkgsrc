@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/03/11 11:15:33 mef Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/19 08:10:44 adam Exp $
 
 R_PKGNAME=	igraph
 R_PKGVER=	1.4.1
+PKGREVISION=	1
 CATEGORIES=	math graphics
 
 MAINTAINER=	minskim@NetBSD.org

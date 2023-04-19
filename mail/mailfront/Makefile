@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2022/10/26 10:31:38 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/04/19 08:10:41 adam Exp $
 #
 
 DISTNAME=		mailfront-2.22
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 

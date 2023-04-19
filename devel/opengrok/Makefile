@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2022/11/23 16:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/04/19 08:09:45 adam Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGrok/}
 

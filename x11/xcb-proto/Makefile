@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/11/23 16:21:29 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/04/19 08:12:00 adam Exp $
 #
 # When updating this package, also update x11/py-xcbgen
 
 DISTNAME=	xcb-proto-1.15.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2021/09/29 19:00:11 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/04/19 08:08:38 adam Exp $
 
 BUILDLINK_TREE+=	unbound
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	unbound
 UNBOUND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.unbound+=	unbound>=1.6.0
-BUILDLINK_ABI_DEPENDS.unbound+=	unbound>=1.13.2nb1
+BUILDLINK_ABI_DEPENDS.unbound+=	unbound>=1.17.1nb1
 BUILDLINK_PKGSRCDIR.unbound?=	../../net/unbound
 
 .include "../../devel/libevent/buildlink3.mk"

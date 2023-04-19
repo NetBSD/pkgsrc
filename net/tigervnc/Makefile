@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2023/04/18 18:48:14 abs Exp $
+# $NetBSD: Makefile,v 1.61 2023/04/19 08:11:13 adam Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.13.1

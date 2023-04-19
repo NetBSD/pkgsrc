@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2023/03/29 09:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/04/19 08:09:33 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-${PY_DISTVERSION}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	databases python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

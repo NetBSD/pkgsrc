@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2023/01/29 21:14:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2023/04/19 08:08:08 adam Exp $
 
-PKGREVISION= 19
+PKGREVISION= 20
 .include "../../devel/GConf/Makefile.common"
 
 PKGNAME=	GConf-ui-${GCONF_VERSION}

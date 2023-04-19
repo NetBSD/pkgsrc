@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2022/11/23 16:18:35 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/04/19 08:08:07 adam Exp $
 
 BUILDLINK_TREE+=	mongo-c-driver
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mongo-c-driver
 MONGO_C_DRIVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mongo-c-driver+=	mongo-c-driver>=1.14.0
-BUILDLINK_ABI_DEPENDS.mongo-c-driver+=	mongo-c-driver>=1.17.7nb3
+BUILDLINK_ABI_DEPENDS.mongo-c-driver+=	mongo-c-driver>=1.17.7nb4
 BUILDLINK_PKGSRCDIR.mongo-c-driver?=	../../databases/mongo-c-driver
 
 pkgbase := mongo-c-driver

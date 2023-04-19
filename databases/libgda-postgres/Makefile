@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2022/11/23 16:19:35 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/04/19 08:09:24 adam Exp $
 
 LIBGDA_PROVIDER=	postgres
 
-PKGREVISION= 8
+PKGREVISION= 9
 .include "../../databases/libgda/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-postgres=${PGSQL_PREFIX:Q}

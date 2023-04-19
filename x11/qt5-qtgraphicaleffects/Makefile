@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2023/04/12 19:24:04 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/04/19 08:11:58 adam Exp $
 
 DISTNAME=	qtgraphicaleffects-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtgraphicaleffects-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for Graphics effects
 
 BUILD_TARGET=		sub-src
