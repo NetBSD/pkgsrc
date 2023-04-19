@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/02/03 21:34:28 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/19 20:45:40 pin Exp $
 
-DISTNAME=	zet-0.2.6
+DISTNAME=	zet-1.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yarrow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
