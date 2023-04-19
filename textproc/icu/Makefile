@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.145 2022/11/23 17:31:43 adam Exp $
+# $NetBSD: Makefile,v 1.146 2023/04/19 08:06:31 adam Exp $
 
-DISTNAME=	icu4c-72_1-src
+DISTNAME=	icu4c-73_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 EXTRACT_SUFX=	.tgz
 GITHUB_PROJECT=	icu
-GITHUB_RELEASE=	release-72-1
+GITHUB_RELEASE=	release-73-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icu.unicode.org/
@@ -44,17 +44,17 @@ PLIST_SUBST+=		MH_NAME=mh-solaris-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-solaris
 .  endif
-.  if !empty(CC_VERSION:Mgcc-4.[6-9].*)
+.  if ${CC_VERSION:Mgcc-4.[6-9].*}
 BUILDLINK_TRANSFORM+=	rm:-D__STDC__=0
 .  endif
 BUILDLINK_TRANSFORM+=	rm:-ansi
-.elif !empty(MACHINE_PLATFORM:MLinux-*-alpha)
+.elif ${MACHINE_PLATFORM:MLinux-*-alpha}
 .  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-alpha-linux-gcc
 .  else
 PLIST_SUBST+=		MH_NAME=mh-alpha-linux-cc
 .  endif
-.elif !empty(MACHINE_PLATFORM:MLinux-*-powerpc*)
+.elif ${MACHINE_PLATFORM:MLinux-*-powerpc*}
 .  if ${CC_VERSION:Mgcc*}
 PLIST_SUBST+=		MH_NAME=mh-linux
 .  else
@@ -107,8 +107,8 @@ post-configure:
 
 # expect builtin gcc atomic functions for gcc>=4.1
 # (source/common/putilimp.h)
-.if !empty(CC_VERSION:Mgcc-*) &&	\
-	(empty(CC_VERSION:Mgcc-4.0*) && empty(CC_VERSION:Mgcc-[0-3].*))
+.if ${CC_VERSION:Mgcc-*} &&	\
+	(!${CC_VERSION:Mgcc-4.0*} && !${CC_VERSION:Mgcc-[0-3].*})
 .  if ${MACHINE_ARCH} == "i386"
 CFLAGS+=	-march=i486
 .  endif
