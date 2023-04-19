@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 19:30:20 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/19 10:58:31 wiz Exp $
 
-DISTNAME=	v0.0.1-alpha+2023-03-28
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+DISTNAME=	gerb-0.0.1alpha20230328
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epilys/}
 GITHUB_PROJECT=	gerb
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/gerb-0.0.1-alpha-2023-03-28
+WRKSRC=		${WRKDIR}/gerb-${GITHUB_TAG:S/v//:S/+/-/}
 
 USE_TOOLS+=	pkg-config
 
@@ -27,6 +26,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
