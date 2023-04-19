@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.30 2022/10/10 17:14:02 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2023/04/19 17:36:12 adam Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
-DISTNAME=	ffmpeg-4.4.3
+DISTNAME=	ffmpeg-4.4.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
