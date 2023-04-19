@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2324 2023/04/19 17:18:32 otis Exp $
+$NetBSD: CHANGES-2023,v 1.2325 2023/04/19 17:45:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3353,3 +3353,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-java to 6.0.16 [otis 2023-04-19]
 	Updated sysutils/zabbix60-agent to 6.0.16 [otis 2023-04-19]
 	Updated sysutils/zabbix60-frontend to 6.0.16 [otis 2023-04-19]
+	Updated multimedia/ffmpeg4 to 4.4.4 [adam 2023-04-19]
+	Updated multimedia/ffplay4 to 4.4.4 [adam 2023-04-19]
+	Updated lang/nodejs to 19.9.0 [adam 2023-04-19]
+	Updated lang/nodejs18 to 18.16.0 [adam 2023-04-19]
+	Updated lang/nodejs16 to 16.20.0 [adam 2023-04-19]
+	Updated lang/nodejs14 to 14.21.3nb1 [adam 2023-04-19]
+	Removed lang/npm [adam 2023-04-19]
