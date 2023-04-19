@@ -1,0 +1,4 @@
+Go+ is a statically-typed language designed for data
+science. It is fully compatible with the Go language, but
+has a more script-like style, being more readable code
+for data science than Go.
