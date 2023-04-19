@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/14 07:11:54 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/19 15:08:36 fcambus Exp $
 bin/pk-bin2poke
 bin/pk-elfextractor
 bin/pk-strings
@@ -10,6 +10,7 @@ lib/libpoke.la
 lib/pkgconfig/poke.pc
 man/man1/poke.1
 man/man1/poked.1
+share/aclocal/poke.m4
 share/emacs/site-lisp/poke-map-mode.el
 share/emacs/site-lisp/poke-ras-mode.el
 share/poke/maps/dwarf.map
@@ -74,6 +75,7 @@ share/poke/pickles/sframe.pk
 share/poke/pickles/time.pk
 share/poke/pickles/ustar.pk
 share/poke/pickles/uuid.pk
+share/poke/pkl-config.pk
 share/poke/pkl-rt.pk
 share/poke/poke/nodelist
 share/poke/poke/pk-cmd.pk
