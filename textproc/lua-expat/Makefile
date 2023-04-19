@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/03/31 00:43:21 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.26 2023/04/19 08:22:24 wiz Exp $
 
 DISTNAME=	luaexpat-1.5.1
 PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
@@ -26,6 +25,7 @@ BUILD_TARGET=	lib
 
 INSTALLATION_DIRS=	${LUA_CDIR} ${LUA_LDIR}/lxp
 
+BUILDLINK_API_DEPENDS.expat+=	expat>=2.4
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
