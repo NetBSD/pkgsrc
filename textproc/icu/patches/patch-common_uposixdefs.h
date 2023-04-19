@@ -1,9 +1,9 @@
-$NetBSD: patch-common_uposixdefs.h,v 1.6 2018/07/26 22:37:48 abs Exp $
+$NetBSD: patch-common_uposixdefs.h,v 1.7 2023/04/19 08:06:31 adam Exp $
 
 C99 and related define overrides.
 Do not play _XOPEN_SOURCE games on NetBSD, as it breaks at least gcc 6.4 on NetBSD-8.0
 
---- common/uposixdefs.h.orig	2018-06-21 09:39:23.000000000 +0000
+--- common/uposixdefs.h.orig	2023-04-13 21:41:15.000000000 +0000
 +++ common/uposixdefs.h
 @@ -44,8 +44,10 @@
       * and define _XOPEN_SOURCE to different values depending on __STDC_VERSION__.
@@ -15,7 +15,7 @@ Do not play _XOPEN_SOURCE games on NetBSD, as it breaks at least gcc 6.4 on NetB
 +#endif
  
  /*
-  * Make sure things like readlink and such functions work.
+  * Make sure things like realpath and such functions work.
 @@ -54,9 +56,11 @@
   *
   * z/OS needs this definition for timeval and to get usleep.
