@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2023/04/11 06:11:02 adam Exp $
+# $NetBSD: Makefile,v 1.61 2023/04/19 08:10:52 adam Exp $
 
 DISTNAME=	parley-${_KDE_VERSION}
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	misc
 COMMENT=	KDE vocabulary trainer
 

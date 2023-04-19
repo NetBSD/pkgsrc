@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/11/23 16:20:45 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/19 08:10:57 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	xvid
 GST_PLUGINS0.10_DIRS=	ext/xvid
-PKGREVISION=		9
+PKGREVISION=		10
 
 .include "../../multimedia/gst-plugins0.10-bad/Makefile.common"
 

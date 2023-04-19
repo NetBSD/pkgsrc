@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/04/07 18:28:05 nros Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/19 08:09:00 adam Exp $
 
 DISTNAME=	qtserialport-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtserialport-${QTVERSION}
+PKGREVISION=	1
 CATEGORIES=	x11 comms
 COMMENT=	Qt6 module for Serial Port
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

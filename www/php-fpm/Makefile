@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/11/23 16:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/04/19 08:11:50 adam Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 
 HOMEPAGE=	https://php-fpm.org/
 MAINTAINER=	pkgsrc-users@NetBSD.org

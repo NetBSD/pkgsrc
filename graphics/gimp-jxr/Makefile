@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/01/29 21:16:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2023/04/19 08:10:18 adam Exp $
 
 DISTNAME=	gimp-jxr-2.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chausner/}
 GITHUB_TAG=	version-${PKGVERSION_NOREV}

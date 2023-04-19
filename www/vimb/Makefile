@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2023/01/29 21:18:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2023/04/19 08:11:52 adam Exp $
 
 DISTNAME=	vimb-3.6.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
