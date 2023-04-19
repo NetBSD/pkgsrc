@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2023/02/17 12:01:51 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/19 17:42:12 adam Exp $
 
 DISTNAME=	node-v14.21.3
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
 
+PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 # XXX: figure out a way to add rpaths to torque
 MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 
-CONFIGURE_ARGS+=	--shared-brotli
-CONFIGURE_ARGS+=	--shared-nghttp2
-CONFIGURE_ARGS+=	--with-intl=system-icu
 CONFIGURE_ARGS+=	--without-dtrace
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-REPLACE_NODEJS+=		deps/corepack/dist/*.js
-.include "../../lang/nodejs/application.mk"
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/corepack/shims/*.ps1
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 
@@ -37,10 +33,5 @@ CXXFLAGS+=	-mstackrealign
 .endif
 
 .include "../../lang/nodejs/Makefile.common"
-.include "../../archivers/brotli/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-# Requires nghttp2_option_set_max_settings
-BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
-.include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
