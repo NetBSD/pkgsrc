@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2316 2023/04/19 14:36:25 sjmulder Exp $
+$NetBSD: CHANGES-2023,v 1.2317 2023/04/19 14:40:42 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3345,3 +3345,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/sc-im to 0.8.3 [sjmulder 2023-04-19]
 	Updated www/hugo to 0.111.3 [nikita 2023-04-19]
 	Updated textproc/libxlsxwriter to 1.1.5 [sjmulder 2023-04-19]
+	Updated sysutils/nnn to 4.8 [sjmulder 2023-04-19]
