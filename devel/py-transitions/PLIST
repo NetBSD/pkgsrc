@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/13 12:32:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/19 08:18:42 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,7 +18,7 @@ ${PYSITELIB}/transitions/extensions/__init__.pyo
 ${PYSITELIB}/transitions/extensions/asyncio.py
 ${PLIST.py3x}${PYSITELIB}/transitions/extensions/asyncio.pyc
 ${PYSITELIB}/transitions/extensions/asyncio.pyi
-${PYSITELIB}${PLIST.py3x}/transitions/extensions/asyncio.pyo
+${PLIST.py3x}${PYSITELIB}/transitions/extensions/asyncio.pyo
 ${PYSITELIB}/transitions/extensions/diagrams.py
 ${PYSITELIB}/transitions/extensions/diagrams.pyc
 ${PYSITELIB}/transitions/extensions/diagrams.pyi
