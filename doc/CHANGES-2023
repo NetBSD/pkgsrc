@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2330 2023/04/19 23:53:34 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2331 2023/04/20 04:15:28 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3365,3 +3365,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/zet to 1.0.0 [pin 2023-04-19]
 	Updated lang/nim to 1.6.12 [nikita 2023-04-19]
 	Updated sysutils/xfce4-genmon-plugin to 4.2.0 [gutteridge 2023-04-19]
+	Updated net/syncthing to 1.23.4 [triaxx 2023-04-20]
