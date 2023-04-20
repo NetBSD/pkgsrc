@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2336 2023/04/20 12:55:45 nros Exp $
+$NetBSD: CHANGES-2023,v 1.2337 2023/04/20 13:00:04 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3372,3 +3372,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/qore to 1.14.2 [nros 2023-04-20]
 	Updated textproc/qore-json-module to 1.8.2 [nros 2023-04-20]
 	Updated databases/qore-openldap-module to 1.2.3 [nros 2023-04-20]
+	Updated textproc/qore-xml-module to 1.8.0 [nros 2023-04-20]
