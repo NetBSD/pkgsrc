@@ -1,4 +1,4 @@
- $NetBSD: Makefile,v 1.22 2023/04/20 10:10:09 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2023/04/20 10:13:41 tnn Exp $
 
 DISTNAME=	nickle-2.91
 CATEGORIES=	math lang
