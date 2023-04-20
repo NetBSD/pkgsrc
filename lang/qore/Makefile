@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/10/20 11:35:08 nros Exp $
+# $NetBSD: Makefile,v 1.23 2023/04/20 12:48:28 nros Exp $
 
-DISTNAME=	qore-1.12.0
+DISTNAME=	qore-1.14.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
