@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/20 05:49:00 adam Exp $
 
-DISTNAME=	rdflib-5.0.0
+DISTNAME=	rdflib-6.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
@@ -11,19 +10,20 @@ HOMEPAGE=	https://github.com/RDFLib/rdflib
 COMMENT=	Python library for working with RDF
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
-DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.4.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-isodate>=0.6.0:../../time/py-isodate
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.3:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
-REPLACE_PYTHON+=	rdflib/extras/describer.py rdflib/extras/infixowl.py
+REPLACE_PYTHON+=	rdflib/extras/describer.py
+REPLACE_PYTHON+=	rdflib/extras/infixowl.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/notation3.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/ntriples.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/pyRdfa/extras/httpheader.py
@@ -31,13 +31,14 @@ REPLACE_PYTHON+=	rdflib/plugins/parsers/structureddata.py
 REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
 
 post-install:
+.for bin in csv2rdf rdf2dot rdfgraphisomorphism rdfpipe rdfs2dot
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} csv2rdf csv2rdf-${PYVERSSUFFIX} && \
-	${MV} rdf2dot rdf2dot-${PYVERSSUFFIX} && \
-	${MV} rdfgraphisomorphism rdfgraphisomorphism-${PYVERSSUFFIX} && \
-	${MV} rdfpipe rdfpipe-${PYVERSSUFFIX} && \
-	${MV} rdfs2dot rdfs2dot-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
