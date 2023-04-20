@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2341 2023/04/20 18:13:11 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2342 2023/04/20 18:40:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/icu to 73.1nb1 [wiz 2023-04-20]
 	Updated shells/oh-my-posh to 14.31.2 [schmonz 2023-04-20]
 	Updated www/p5-Playwright to 1.324 [schmonz 2023-04-20]
+	Added misc/chatgpt-shell-cli version 0.0.20230420 [schmonz 2023-04-20]
