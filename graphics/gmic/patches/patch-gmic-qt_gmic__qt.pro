@@ -1,6 +1,7 @@
-$NetBSD: patch-gmic-qt_gmic__qt.pro,v 1.3 2023/04/18 16:00:08 wiz Exp $
+$NetBSD: patch-gmic-qt_gmic__qt.pro,v 1.4 2023/04/20 23:01:21 wiz Exp $
 
 Link against libX11 on everything except macOS which might not use X11.
+https://github.com/c-koi/gmic-qt/pull/180
 
 --- gmic-qt/gmic_qt.pro.orig	2023-04-04 16:20:27.000000000 +0000
 +++ gmic-qt/gmic_qt.pro
@@ -9,7 +10,7 @@ Link against libX11 on everything except macOS which might not use X11.
  }
  
 -linux {
-+!macx {
++unix:!macx {
    DEFINES += _IS_LINUX_
    PKGCONFIG += x11
    message( Linux platform )
