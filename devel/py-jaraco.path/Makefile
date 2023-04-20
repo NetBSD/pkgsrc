@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/03/05 07:23:55 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/20 05:52:12 adam Exp $
 
-DISTNAME=	jaraco.path-3.4.1
+DISTNAME=	jaraco.path-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.path/}
@@ -23,7 +23,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
