@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/01/27 18:08:22 nros Exp $
+$NetBSD: distinfo,v 1.6 2023/04/20 12:56:47 nros Exp $
 
-BLAKE2s (qore-uuid-module-1.4.tar.bz2) = 4f1409872bab1fc68edf6d0941eeee761a55046a524adf3c8cc58d5894e2bcf5
-SHA512 (qore-uuid-module-1.4.tar.bz2) = 50677b7b05209271853c3d95a582c14eb48c4fe3e9072f7e0f4c786537bc2c870feb604c22c9e2d883bcf8aa182e8766e50ff59faa87a14744675c4e1d56de2a
-Size (qore-uuid-module-1.4.tar.bz2) = 444247 bytes
+BLAKE2s (qore-uuid-module-1.4.1.tar.bz2) = 3a029f8cae5d847b7c21c699e67eef14fd0802286ce367bc33aa8541957e37cb
+SHA512 (qore-uuid-module-1.4.1.tar.bz2) = c2f0baf28b0b98ac74757da2348e8507e8b45cf3197add6154db68826fb394a8eca18501439d66d6ead045f3c0ee645426249e7207ff6a33b6f43f962f1fe39f
+Size (qore-uuid-module-1.4.1.tar.bz2) = 65508 bytes
