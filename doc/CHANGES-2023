@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2333 2023/04/20 05:53:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2334 2023/04/20 12:48:55 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3369,3 +3369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/syncthing to 1.23.4 [triaxx 2023-04-20]
 	Updated textproc/py-rdflib to 6.3.2 [adam 2023-04-20]
 	Updated devel/py-jaraco.path to 3.5.0 [adam 2023-04-20]
+	Updated lang/qore to 1.14.2 [nros 2023-04-20]
