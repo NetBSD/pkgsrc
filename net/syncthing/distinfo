@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2023/03/18 22:30:03 triaxx Exp $
+$NetBSD: distinfo,v 1.102 2023/04/20 04:14:51 triaxx Exp $
 
 BLAKE2s (github.com__audrius_butkevicius_pfilter_@v_v0.0.11.mod) = 34f7451a905446bc3bb87f61f1318d9f3da7f7efbc8eeb488df1704a6befdec5
 SHA512 (github.com__audrius_butkevicius_pfilter_@v_v0.0.11.mod) = fec2d8dc470de95307d750054301050f435855a251ded010fb5ce109964c5eba1628342f93f87f637bc0887d0ab9c8e519ee8d99e657c3bf38d216f81f4e4f62
@@ -876,6 +876,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (syncthing-source-v1.23.2.tar.gz) = d71c01efe8d9b1651f9086924d214864921113f904d7b99c20c734277fcb1e3d
-SHA512 (syncthing-source-v1.23.2.tar.gz) = aadb6b56791bb2c1d42d2e33a8ccf4ac917893c696aa37bee923c2a190e28cc704cfaaa0cf043469e93cf0502ed48b04386e87db941e885ed4a7ff97170faacd
-Size (syncthing-source-v1.23.2.tar.gz) = 14413300 bytes
+BLAKE2s (syncthing-source-v1.23.4.tar.gz) = 6175b3ba2d593f4bf2b483361ddfc7ff6eb50b690679619dd9bbf2c61c1f97d8
+SHA512 (syncthing-source-v1.23.4.tar.gz) = cf86b61af000e2b9555f1dee0dfc6c340254859b753d3af2d88ea7de8f49137e7dea2bc98a6d8e526b35707918761f010a93ff8ee243f49945364f2e7f928ae3
+Size (syncthing-source-v1.23.4.tar.gz) = 14141457 bytes
