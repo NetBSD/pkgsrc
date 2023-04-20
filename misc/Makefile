@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.585 2023/04/17 10:49:10 adam Exp $
+# $NetBSD: Makefile,v 1.586 2023/04/20 18:40:31 schmonz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -35,6 +35,7 @@ SUBDIR+=	cabal-install
 SUBDIR+=	calibre
 SUBDIR+=	catpoint
 SUBDIR+=	celestia
+SUBDIR+=	chatgpt-shell-cli
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
 SUBDIR+=	chordii
