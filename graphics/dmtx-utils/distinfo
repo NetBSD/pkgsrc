@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/06 12:32:28 joerg Exp $
+$NetBSD: distinfo,v 1.2 2023/04/20 05:37:51 wiz Exp $
 
-SHA1 (dmtx-utils-0.7.6.tar.gz) = 0df6904a924c4a8172392e23dce53594f421667d
-RMD160 (dmtx-utils-0.7.6.tar.gz) = 2a20a4531b76789592cb207983ea3afef04757d9
+BLAKE2s (dmtx-utils-0.7.6.tar.gz) = cd4e7f9eba02c5b95868ad0c902ab46d0874812e03baf0cd1ab7b8ab95ae406d
 SHA512 (dmtx-utils-0.7.6.tar.gz) = 201f8f5bbe5a1edd23104883d03e09842252ad7d07dd416b67c11740275ebe32c26b7fde904fad8bf2b18f1b3f574dedde1cc85f0e987f93d293d030e4f8a79e
 Size (dmtx-utils-0.7.6.tar.gz) = 54888 bytes
