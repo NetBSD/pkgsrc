@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2331 2023/04/20 04:15:28 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.2332 2023/04/20 05:37:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3167,6 +3167,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/njs to 0.7.12 [osa 2023-04-13]
 	Updated sysutils/bkt to 0.6.1 [pin 2023-04-13]
 	Updated print/a2ps to 4.15.4 [wiz 2023-04-13]
+	Updated net/parpd to 2.0 [roy 2023-04-13]
 	Updated fonts/harfbuzz to 7.1.0 [ryoon 2023-04-14]
 	Updated fonts/harfbuzz-icu to 7.1.0 [ryoon 2023-04-14]
 	Updated textproc/grep to 3.10 [ryoon 2023-04-14]
