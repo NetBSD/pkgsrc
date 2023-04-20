@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2335 2023/04/20 12:53:53 nros Exp $
+$NetBSD: CHANGES-2023,v 1.2336 2023/04/20 12:55:45 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.path to 3.5.0 [adam 2023-04-20]
 	Updated lang/qore to 1.14.2 [nros 2023-04-20]
 	Updated textproc/qore-json-module to 1.8.2 [nros 2023-04-20]
+	Updated databases/qore-openldap-module to 1.2.3 [nros 2023-04-20]
