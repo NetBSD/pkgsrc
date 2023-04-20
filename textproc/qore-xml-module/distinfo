@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/10/20 11:43:03 nros Exp $
+$NetBSD: distinfo,v 1.9 2023/04/20 12:59:46 nros Exp $
 
-BLAKE2s (qore-xml-module-1.6.1.tar.bz2) = ae6e25b834c9b78c5d8e9349219c40b52e111f1ae485491382a299f41d18a77c
-SHA512 (qore-xml-module-1.6.1.tar.bz2) = d8c3552f069b79875e975f7213dd4bd7c2f73438fabe55a67e3edd6886fd6de1219e0146aedfa79c6e9f000f3f7ed3e90ac199792885a86752d21ac2e5fb4743
-Size (qore-xml-module-1.6.1.tar.bz2) = 2135923 bytes
+BLAKE2s (qore-xml-module-1.8.0.tar.bz2) = 7f6f59cddf4fc9f465cf5d12cd0e4d23a6458836340d146c9b424bcaf8045959
+SHA512 (qore-xml-module-1.8.0.tar.bz2) = 257329f9f25078cf6d4d835242e6bf5d29da46646d6fa2ae492dd4520842010b8d3dceb499e2d842451b8de49fa1aad4eb7be58b4490623afd92e839c147fb76
+Size (qore-xml-module-1.8.0.tar.bz2) = 280525 bytes
