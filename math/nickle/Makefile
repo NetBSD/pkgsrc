@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/20 11:10:26 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/20 11:12:15 tnn Exp $
 
 DISTNAME=	nickle-2.91
 CATEGORIES=	math lang
@@ -16,4 +16,5 @@ CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
 TEST_TARGET=	check
 
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
