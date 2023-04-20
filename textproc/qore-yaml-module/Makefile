@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/10/20 12:11:52 nros Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/20 13:03:14 nros Exp $
 
-DISTNAME=	qore-yaml-module-0.7
-PKGREVISION=	1
+DISTNAME=	qore-yaml-module-0.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,31 +12,24 @@ COMMENT=	Yaml module for Qore
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++11
-USE_TOOLS+=	gmake pax
+USE_TOOLS+=	gmake
 
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=	--with-libsuffix=""
+CMAKE_USE_GNU_INSTALL_DIRS=	no
 
 #This is needed in order to comply the with MIT license and binary distribution
-#Install docs.
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING.LGPL \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	cd ${WRKSRC}/docs && ${PAX} -wr * \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/qore/module.mk"
-.include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/qore/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
