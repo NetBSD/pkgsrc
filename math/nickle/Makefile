@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/04/20 10:13:41 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2023/04/20 11:10:26 tnn Exp $
 
 DISTNAME=	nickle-2.91
 CATEGORIES=	math lang
@@ -16,11 +16,4 @@ CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
 TEST_TARGET=	check
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-.include "../../devel/readline/buildlink3.mk"
-.else
-.include "../../mk/readline.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
