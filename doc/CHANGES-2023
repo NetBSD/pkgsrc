@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2332 2023/04/20 05:37:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2333 2023/04/20 05:53:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3367,3 +3367,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nim to 1.6.12 [nikita 2023-04-19]
 	Updated sysutils/xfce4-genmon-plugin to 4.2.0 [gutteridge 2023-04-19]
 	Updated net/syncthing to 1.23.4 [triaxx 2023-04-20]
+	Updated textproc/py-rdflib to 6.3.2 [adam 2023-04-20]
+	Updated devel/py-jaraco.path to 3.5.0 [adam 2023-04-20]
