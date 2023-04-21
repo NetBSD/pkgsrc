@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2344 2023/04/21 00:49:56 manu Exp $
+$NetBSD: CHANGES-2023,v 1.2345 2023/04/21 00:59:41 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3380,3 +3380,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added misc/chatgpt-shell-cli version 0.0.20230420 [schmonz 2023-04-20]
 	Added databases/openldap-autogroup 2.6.4 [manu 2023-04-21]
 	Added mail/openarc 20180921 [manu 2023-04-21]
+	Added net/nagios-plugin-mqueue [manu 2023-04-21]
