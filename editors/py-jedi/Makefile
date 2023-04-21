@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/11/22 13:14:28 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/21 10:34:25 joerg Exp $
 
 DISTNAME=	jedi-0.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/davidhalter/jedi
 COMMENT=	Autocompletion tool for Python that can be used for text editors
 LICENSE=	mit
+
+EXTRACT_USING=	bsdtar
 
 DEPENDS+=	${PYPKGPREFIX}-parso>=0.8.0:../../lang/py-parso
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
