@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/21 00:59:41 manu Exp $
+libexec/nagios/check_mqueue
