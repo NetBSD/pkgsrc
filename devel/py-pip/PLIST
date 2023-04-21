@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/02/21 06:31:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2023/04/21 09:21:43 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -285,9 +285,6 @@ ${PYSITELIB}/pip/_internal/operations/install/__init__.pyo
 ${PYSITELIB}/pip/_internal/operations/install/editable_legacy.py
 ${PYSITELIB}/pip/_internal/operations/install/editable_legacy.pyc
 ${PYSITELIB}/pip/_internal/operations/install/editable_legacy.pyo
-${PYSITELIB}/pip/_internal/operations/install/legacy.py
-${PYSITELIB}/pip/_internal/operations/install/legacy.pyc
-${PYSITELIB}/pip/_internal/operations/install/legacy.pyo
 ${PYSITELIB}/pip/_internal/operations/install/wheel.py
 ${PYSITELIB}/pip/_internal/operations/install/wheel.pyc
 ${PYSITELIB}/pip/_internal/operations/install/wheel.pyo
@@ -360,6 +357,9 @@ ${PYSITELIB}/pip/_internal/self_outdated_check.pyo
 ${PYSITELIB}/pip/_internal/utils/__init__.py
 ${PYSITELIB}/pip/_internal/utils/__init__.pyc
 ${PYSITELIB}/pip/_internal/utils/__init__.pyo
+${PYSITELIB}/pip/_internal/utils/_jaraco_text.py
+${PYSITELIB}/pip/_internal/utils/_jaraco_text.pyc
+${PYSITELIB}/pip/_internal/utils/_jaraco_text.pyo
 ${PYSITELIB}/pip/_internal/utils/_log.py
 ${PYSITELIB}/pip/_internal/utils/_log.pyc
 ${PYSITELIB}/pip/_internal/utils/_log.pyo
@@ -381,9 +381,6 @@ ${PYSITELIB}/pip/_internal/utils/deprecation.pyo
 ${PYSITELIB}/pip/_internal/utils/direct_url_helpers.py
 ${PYSITELIB}/pip/_internal/utils/direct_url_helpers.pyc
 ${PYSITELIB}/pip/_internal/utils/direct_url_helpers.pyo
-${PYSITELIB}/pip/_internal/utils/distutils_args.py
-${PYSITELIB}/pip/_internal/utils/distutils_args.pyc
-${PYSITELIB}/pip/_internal/utils/distutils_args.pyo
 ${PYSITELIB}/pip/_internal/utils/egg_link.py
 ${PYSITELIB}/pip/_internal/utils/egg_link.pyc
 ${PYSITELIB}/pip/_internal/utils/egg_link.pyo
@@ -823,9 +820,6 @@ ${PYSITELIB}/pip/_vendor/packaging/version.pyo
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.py
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.pyo
-${PYSITELIB}/pip/_vendor/pkg_resources/py31compat.py
-${PYSITELIB}/pip/_vendor/pkg_resources/py31compat.pyc
-${PYSITELIB}/pip/_vendor/pkg_resources/py31compat.pyo
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.py
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.pyo
@@ -1099,6 +1093,9 @@ ${PYSITELIB}/pip/_vendor/rich/_export_format.pyo
 ${PYSITELIB}/pip/_vendor/rich/_extension.py
 ${PYSITELIB}/pip/_vendor/rich/_extension.pyc
 ${PYSITELIB}/pip/_vendor/rich/_extension.pyo
+${PYSITELIB}/pip/_vendor/rich/_fileno.py
+${PYSITELIB}/pip/_vendor/rich/_fileno.pyc
+${PYSITELIB}/pip/_vendor/rich/_fileno.pyo
 ${PYSITELIB}/pip/_vendor/rich/_inspect.py
 ${PYSITELIB}/pip/_vendor/rich/_inspect.pyc
 ${PYSITELIB}/pip/_vendor/rich/_inspect.pyo
