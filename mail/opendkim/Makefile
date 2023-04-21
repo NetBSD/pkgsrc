@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/04/21 00:51:52 manu Exp $
 
 DISTNAME=	opendkim-2.10.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendkim/}
 
