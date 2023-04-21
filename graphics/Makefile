@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1008 2023/04/11 02:29:58 markd Exp $
+# $NetBSD: Makefile,v 1.1009 2023/04/21 09:09:45 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -217,6 +217,7 @@ SUBDIR+=	glu
 SUBDIR+=	glw
 SUBDIR+=	glx-utils
 SUBDIR+=	gmic
+SUBDIR+=	gmic-qt-digikam
 SUBDIR+=	gmngview
 SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-icon-theme
