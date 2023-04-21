@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:19:19 nia Exp $
+$NetBSD: distinfo,v 1.25.12.1 2023/04/21 18:40:51 bsiegert Exp $
 
 BLAKE2s (amanda-3.3.9.tar.gz) = 2177c4b698edf1c9a7c8328a3423a7f75321e922107b54cac4d6823e91d855bc
 SHA512 (amanda-3.3.9.tar.gz) = 345670a20cff335453e8dcbf457d1fcdb9f266e4a03d729c2b1ba762f4fac323de4a87713d0fd54c11ca244a08dc97fb8c641625f7fa81cb241b3c17748b1b7e
 Size (amanda-3.3.9.tar.gz) = 4673301 bytes
 SHA1 (patch-Makefile.am) = 172dc9b2419c0acb989034e382e4137e69b051e2
-SHA1 (patch-Makefile.in) = 391b7bb8cd0e8d0b90f36b6a76877118dd468a01
 SHA1 (patch-amandad-src_Makefile.am) = bdff2c06da0ee6c88237c56568fe20c5cefedd7a
 SHA1 (patch-application-src_Makefile.am) = 8b448d2c7dbda4d731d6985374e2a6786b0ac8d1
-SHA1 (patch-autogen) = a5a7addd91ddb62e3270c149fa3af1ca6c56a1bd
 SHA1 (patch-client-src_Makefile.am) = 641ef76fd1ea413b416704e1e52e25a93a596442
 SHA1 (patch-client-src_getfsent.c) = 903a921b8679ddcff1fdd838ffdce16a6d8da46f
 SHA1 (patch-client-src_sendbackup-dump.c) = aea1aca0bbcdab0c393b012a592cbc5ca458acec
@@ -20,6 +18,7 @@ SHA1 (patch-common-src_security-util.h) = c628cc19a624da2cfabdb7d488bc2cd2d4b955
 SHA1 (patch-config_amanda_config_flags.m4) = cf79825e49b52b0c0440185291c8cf91ff32f9b2
 SHA1 (patch-config_amanda_dumpers.m4) = ebd2f9932cb5e9e883cedb626a4ca774af87365d
 SHA1 (patch-config_amanda_krb5-security.m4) = c82af0e106e49b59994b40f12ed5b1c165a8497f
+SHA1 (patch-config_amanda_libs.m4) = 133751743a80913f11f1f9aec7c32feb04afdb28
 SHA1 (patch-config_macro-archive_xsltproc.m4) = 20324db1ce3db016fa89fe39df5a8133c7766693
 SHA1 (patch-device-src_Makefile.am) = 29fd554033ff0ff7b1d98a08306f157ced7324c5
 SHA1 (patch-example_Makefile.am) = 8d2dac1abdc473fbf94489bcb620a42a665fd27a
