@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2023/03/09 13:34:09 fcambus Exp $
+# $NetBSD: Makefile,v 1.69 2023/04/21 14:57:31 fcambus Exp $
 
-DISTNAME=	libopenmpt-0.6.9+release.autotools
+DISTNAME=	libopenmpt-0.6.10+release.autotools
 PKGNAME=	${DISTNAME:C/\+.*//}
 CATEGORIES=	audio
 MASTER_SITES=	https://lib.openmpt.org/files/libopenmpt/src/
