@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2348 2023/04/21 09:09:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2349 2023/04/21 09:26:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3384,3 +3384,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/xfce4-calculator-plugin to 0.7.2 [gutteridge 2023-04-21]
 	Updated www/ap2-auth-mellon to 0.18.1 [manu 2023-04-21]
 	Added graphics/gmic-qt-digikam version 3.2.2.20230417 [wiz 2023-04-21]
+	Updated devel/py-pip to 23.1 [adam 2023-04-21]
+	Updated devel/py-yapf to 0.33.0 [adam 2023-04-21]
