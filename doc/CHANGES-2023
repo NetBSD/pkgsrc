@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2349 2023/04/21 09:26:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2350 2023/04/21 12:58:59 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3386,3 +3386,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/gmic-qt-digikam version 3.2.2.20230417 [wiz 2023-04-21]
 	Updated devel/py-pip to 23.1 [adam 2023-04-21]
 	Updated devel/py-yapf to 0.33.0 [adam 2023-04-21]
+	Updated devel/smake to 1.7nb2 [micha 2023-04-21]
