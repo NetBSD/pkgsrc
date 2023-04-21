@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2354 2023/04/21 15:18:48 roy Exp $
+$NetBSD: CHANGES-2023,v 1.2355 2023/04/21 21:10:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3391,3 +3391,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/sformat to 3.7 [micha 2023-04-21]
 	Updated audio/libopenmpt to 0.6.10 [fcambus 2023-04-21]
 	Updated net/dhcpcd to 10.0.1 [roy 2023-04-21]
+	Updated wm/marswm to 0.4.1 [pin 2023-04-21]
