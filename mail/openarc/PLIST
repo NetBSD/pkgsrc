@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/21 00:49:56 manu Exp $
+include/openarc/arc.h
+lib/libopenarc.la
+lib/pkgconfig/openarc.pc
+man/man5/openarc.conf.5
+man/man8/openarc.8
+sbin/openarc
+share/doc/openarc/LICENSE
+share/doc/openarc/LICENSE.Sendmail
+share/doc/openarc/RELEASE_NOTES
+share/doc/openarc/draft-andersen-arc-05.txt
+share/doc/openarc/index.html
+share/doc/openarc/openarc
+share/doc/openarc/openarc.conf.sample
+share/doc/openarc/openarc.conf.simple
+share/doc/openarc/openarc.service
+share/doc/openarc/openarc.spec.in
+share/doc/openarc/openarc.xml
+share/examples/openarc/openarc.conf.sample

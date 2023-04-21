@@ -1,0 +1,8 @@
+ARC is a technology proposal, put forward by a consortium of organizations,
+intended to allow a chain of message handlers (typically email operators)
+to confirm handling by trusted upstream handlers in an attempt to confirm
+the valid use of certain identifiers in the message.
+
+ARC is still experimental, and its specification may change.  This package
+is intended for use by operators willing to take part in the experiment and
+provide their feedback to the development team.
