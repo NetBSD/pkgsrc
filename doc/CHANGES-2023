@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2351 2023/04/21 13:15:59 micha Exp $
+$NetBSD: CHANGES-2023,v 1.2352 2023/04/21 14:03:11 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3388,3 +3388,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-yapf to 0.33.0 [adam 2023-04-21]
 	Updated devel/smake to 1.7nb2 [micha 2023-04-21]
 	Updated archivers/star to 1.7.0nb2 [micha 2023-04-21]
+	Updated sysutils/sformat to 3.7 [micha 2023-04-21]
