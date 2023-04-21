@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2023/04/21 00:34:01 manu Exp $
+$NetBSD: distinfo,v 1.58 2023/04/21 13:52:33 manu Exp $
 
 BLAKE2s (httpd-2.4.57.tar.bz2) = 195ade9907cdaf79c799fbfef03f23c2344e924a1c07b93f0710c513161c5400
 SHA512 (httpd-2.4.57.tar.bz2) = 4d1e0a274ee90bdfb5f38d4a7d73a7367ed1c6388e26280e640014e49abc0df03683705b88dcfe2ec2da313dda4c7b4a3b86daffa1911f58e224eba89d82d155
@@ -15,4 +15,15 @@ SHA1 (patch-aw) = 43cd64df886853ef7b75b91ed20183f329fcc9df
 SHA1 (patch-configure) = 050119b817b53d72909be1906181434bf18fe3d7
 SHA1 (patch-include_ap__config.h) = 1d056e2d4db80ec97aaf755b6dd6aff69ed2cd96
 SHA1 (patch-modules_filters_mod_substitute.c) = 730af0342b78de04fe51b7dcc3ed057b2b0c3a54
-SHA1 (patch-rfc4331quotas) = df42bbac18552248d7451f57de48bf850993c9ec
+SHA1 (patch-rfc4331quotas-CMakeLists.txt) = 5caaefd11c49daa4e7bd4fd25b79b8a4521dc9c1
+SHA1 (patch-rfc4331quotas-configure) = 40fbeb8ec3392be72ea79e67a899d2921432a332
+SHA1 (patch-rfc4331quotas-modules_dav_fs_NWGNUmakefile) = 7fbf0fbf6c4cf2df3e8d67ecddc5d0e7c09bfb11
+SHA1 (patch-rfc4331quotas-modules_dav_fs_config6.m4) = b6e57ec9d2eac410a15e844b78c661495ff5a3da
+SHA1 (patch-rfc4331quotas-modules_dav_fs_mod_dav_fs.c) = e7bea71ad10358bf739650c06227b0bbf5e4356f
+SHA1 (patch-rfc4331quotas-modules_dav_fs_mod_dav_fs.dep) = 139c34fb161a2b27242ea7ae1253f0bec500ea1f
+SHA1 (patch-rfc4331quotas-modules_dav_fs_mod_dav_fs.dsp) = 07935d3285003532057ac024294b5007934710b5
+SHA1 (patch-rfc4331quotas-modules_dav_fs_mod_dav_fs.mak) = 66200a94bcb42a5533efc1f1536df039a453f17c
+SHA1 (patch-rfc4331quotas-modules_dav_fs_quota.c) = fcd0934555e8a1b46da58b8d1e664c1f3994a249
+SHA1 (patch-rfc4331quotas-modules_dav_fs_repos.c) = 4ff7cc10b8f636345ae54d88bdadfbd30ef09d99
+SHA1 (patch-rfc4331quotas-modules_dav_fs_repos.h) = 0a6d9032116c5b82b2d192551f991b1b94b5d045
+SHA1 (patch-rfc4331quotas-modules_dav_main_mod_dav.h) = 9cdc955fa150a4b05560d942611bae08d193e6e2
