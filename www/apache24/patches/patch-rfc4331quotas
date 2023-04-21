@@ -1,0 +1,954 @@
+$NetBSD: patch-rfc4331quotas,v 1.1 2023/04/21 00:34:01 manu Exp $
+
+RFC4331 quotas from upstream trunk
+http://svn.apache.org/viewvc?view=revision&revision=1907974
+http://svn.apache.org/viewvc?view=revision&revision=1907984
+http://svn.apache.org/viewvc?view=revision&revision=1907989
+http://svn.apache.org/viewvc?view=revision&revision=1908143
+http://svn.apache.org/viewvc?view=revision&revision=1908144
+
+Index: CMakeLists.txt
+===================================================================
+--- CMakeLists.txt	(revision 1907973)
++++ CMakeLists.txt	(revision 1907974)
+@@ -455,7 +455,7 @@
+ SET(mod_dav_install_lib 1)
+ SET(mod_dav_fs_extra_sources
+   modules/dav/fs/dbm.c               modules/dav/fs/lock.c
+-  modules/dav/fs/repos.c
++  modules/dav/fs/quota.c             modules/dav/fs/repos.c
+ )
+ SET(mod_dav_fs_extra_libs            mod_dav)
+ SET(mod_dav_lock_extra_sources       modules/dav/lock/locks.c)
+Index: modules/dav/fs/config6.m4
+===================================================================
+--- modules/dav/fs/config6.m4	(revision 1907973)
++++ modules/dav/fs/config6.m4	(revision 1907974)
+@@ -2,7 +2,7 @@
+ 
+ APACHE_MODPATH_INIT(dav/fs)
+ 
+-dav_fs_objects="mod_dav_fs.lo dbm.lo lock.lo repos.lo"
++dav_fs_objects="mod_dav_fs.lo dbm.lo lock.lo quota.lo repos.lo"
+ 
+ if test "x$enable_dav" != "x"; then
+   dav_fs_enable=$enable_dav
+Index: modules/dav/fs/mod_dav_fs.c
+===================================================================
+--- modules/dav/fs/mod_dav_fs.c	(revision 1907973)
++++ modules/dav/fs/mod_dav_fs.c	(revision 1907974)
+@@ -15,13 +15,20 @@
+  */
+ 
+ #include "httpd.h"
+ #include "http_config.h"
++#include "http_request.h"
+ #include "apr_strings.h"
+ 
+ #include "mod_dav.h"
+ #include "repos.h"
+ 
++/* per-dir configuration */
++typedef struct {
++    const char *dir;
++    apr_off_t quota;
++} dav_fs_dir_conf;
++
+ /* per-server configuration */
+ typedef struct {
+     const char *lockdb_path;
+ 
+@@ -36,8 +43,62 @@
+     conf = ap_get_module_config(r->server->module_config, &dav_fs_module);
+     return conf->lockdb_path;
+ }
+ 
++static const command_rec dav_fs_cmds[];
++
++dav_error *dav_fs_get_quota(const request_rec *r, const char *path,
++                            apr_off_t *quota_bytes)
++{
++    dav_fs_dir_conf *conf = NULL;
++    dav_error *err = NULL;
++    const char *request_path;
++    request_rec *rr;
++    int status;
++
++    request_path = ap_make_dirstr_parent(r->pool, r->filename);
++
++    /* 
++     * Uses's request's per directry configuration if possible, for
++     * efficiency sake.
++     */
++    if (!strcmp(path, request_path)) {
++        conf = ap_get_module_config(r->per_dir_config, &dav_fs_module);
++        *quota_bytes = conf->quota;
++        goto out;
++    }
++
++    /* 
++     * We need for a per directory configuration from a random path
++     * not tied to current request, for e.g. COPY or MOVE destination.
++     * This is done through a subrequest, with just rr->filename
++     * changed to target path.
++     */
++    rr = ap_sub_req_method_uri(r->method, r->uri, r, r->output_filters);
++    if (!rr || rr->status != HTTP_OK) {
++        err = dav_new_error(r->pool,
++                            rr ? rr->status : HTTP_INTERNAL_SERVER_ERROR,
++                            0, 0,
++                            "quota configuration subrequest failed");
++        *quota_bytes = DAV_FS_BYTES_ERROR;
++        goto out;
++    }
++
++    rr->filename = apr_pstrdup(r->pool, path);
++    if ((status = ap_directory_walk(rr)) != OK)  {
++        err = dav_new_error(r->pool, status, 0, 0,
++                            "quota configuration tree walk failed");
++        *quota_bytes = DAV_FS_BYTES_ERROR;
++        goto out;
++    }
++
++    conf = ap_get_module_config(rr->per_dir_config, &dav_fs_module);
++    *quota_bytes = conf->quota;
++
++out:
++    return err;
++}
++
+ static void *dav_fs_create_server_config(apr_pool_t *p, server_rec *s)
+ {
+     return apr_pcalloc(p, sizeof(dav_fs_server_conf));
+ }
+@@ -56,8 +117,38 @@
+ 
+     return newconf;
+ }
+ 
++static void *dav_fs_create_dir_config(apr_pool_t *p, char *dir)
++{
++    /* NOTE: dir==NULL creates the default per-dir config */
++
++    dav_fs_dir_conf *conf;
++
++    conf = (dav_fs_dir_conf *)apr_pcalloc(p, sizeof(*conf));
++    conf->dir = apr_pstrdup(p, dir);
++    conf->quota = DAV_FS_QUOTA_UNSET;
++
++    return conf;
++}
++
++static void *dav_fs_merge_dir_config(apr_pool_t *p, void *base, void *overrides)
++{
++    dav_fs_dir_conf *parent = base;
++    dav_fs_dir_conf *child = overrides;
++    dav_fs_dir_conf *newconf =
++        (dav_fs_dir_conf *)apr_pcalloc(p, sizeof(*newconf));
++
++    newconf->dir = child->dir;
++
++    if (child->quota != DAV_FS_QUOTA_UNSET)
++        newconf->quota = child->quota;
++    else
++        newconf->quota = parent->quota;
++
++    return newconf;
++}
++
+ /*
+  * Command handler for the DAVLockDB directive, which is TAKE1
+  */
+ static const char *dav_fs_cmd_davlockdb(cmd_parms *cmd, void *config,
+@@ -75,14 +166,37 @@
+ 
+     return NULL;
+ }
+ 
++/*
++ * Command handler for the DAVquota directive, which is TAKE1
++ */
++static const char *dav_fs_cmd_quota(cmd_parms *cmd, void *config,
++                                    const char *bytes)
++{
++    dav_fs_dir_conf *conf = (dav_fs_dir_conf *)config;
++
++    if (!strcasecmp(bytes, "Off"))
++        conf->quota = DAV_FS_QUOTA_OFF;
++    else if (!strcasecmp(bytes, "None"))
++        conf->quota = DAV_FS_QUOTA_NONE;
++    else
++        conf->quota = atol(bytes);
++
++    return NULL;
++}
++
++
+ static const command_rec dav_fs_cmds[] =
+ {
+     /* per server */
+     AP_INIT_TAKE1("DAVLockDB", dav_fs_cmd_davlockdb, NULL, RSRC_CONF,
+                   "specify a lock database"),
+ 
++    /* per directory */
++    AP_INIT_TAKE1("DAVquota", dav_fs_cmd_quota, NULL, ACCESS_CONF|RSRC_CONF,
++                  "specify a directory quota"),
++
+     { NULL }
+ };
+ 
+ static void register_hooks(apr_pool_t *p)
+@@ -91,17 +205,19 @@
+                              APR_HOOK_MIDDLE);
+     dav_hook_find_liveprop(dav_fs_find_liveprop, NULL, NULL, APR_HOOK_MIDDLE);
+     dav_hook_insert_all_liveprops(dav_fs_insert_all_liveprops, NULL, NULL,
+                                   APR_HOOK_MIDDLE);
++    dav_hook_method_precondition(dav_fs_method_precondition, NULL, NULL,
++                                  APR_HOOK_MIDDLE);
+ 
+     dav_fs_register(p);
+ }
+ 
+ AP_DECLARE_MODULE(dav_fs) =
+ {
+     STANDARD20_MODULE_STUFF,
+-    NULL,                        /* dir config creater */
+-    NULL,                        /* dir merger --- default is to override */
++    dav_fs_create_dir_config,    /* dir config */
++    dav_fs_merge_dir_config,     /* merger dir config */
+     dav_fs_create_server_config, /* server config */
+     dav_fs_merge_server_config,  /* merge server config */
+     dav_fs_cmds,                 /* command table */
+     register_hooks,              /* register hooks */
+Index: modules/dav/fs/mod_dav_fs.dsp
+===================================================================
+--- modules/dav/fs/mod_dav_fs.dsp	(revision 1907973)
++++ modules/dav/fs/mod_dav_fs.dsp	(revision 1907974)
+@@ -116,6 +116,10 @@
+ # End Source File
+ # Begin Source File
+ 
++SOURCE=.\quota.c
++# End Source File
++# Begin Source File
++
+ SOURCE=.\repos.c
+ # End Source File
+ # End Group
+Index: modules/dav/fs/repos.c
+===================================================================
+--- modules/dav/fs/repos.c	(revision 1907973)
++++ modules/dav/fs/repos.c	(revision 1907974)
+@@ -140,11 +140,6 @@
+ */
+ #define DAV_PROPID_FS_executable        1
+ 
+-/*
+- * prefix for temporary files
+- */
+-#define DAV_FS_TMP_PREFIX ".davfs.tmp"
+-
+ static const dav_liveprop_spec dav_fs_props[] =
+ {
+     /* standard DAV properties */
+@@ -173,6 +168,20 @@
+         0
+     },
+ 
++    /* RFC 4331 quotas */
++    {
++        DAV_FS_URI_DAV,
++        "quota-available-bytes",
++        DAV_PROPID_quota_available_bytes,
++        0,
++    },
++    {
++        DAV_FS_URI_DAV,
++        "quota-used-bytes",
++        DAV_PROPID_quota_used_bytes,
++        0,
++    },
++
+     /* our custom properties */
+     {
+         DAV_FS_URI_MYPROPS,
+@@ -234,6 +243,24 @@
+     return resource->info->pathname;
+ }
+ 
++const char *dav_fs_fname(const dav_resource *resource)
++{
++    return resource->info->finfo.fname;
++}
++
++apr_off_t dav_fs_size(const dav_resource *resource)
++{
++    apr_off_t size;
++
++    if ((resource->info->finfo.valid & APR_FINFO_SIZE))
++        size = resource->info->finfo.size;
++    else
++        size = DAV_FS_BYTES_ERROR;
++
++    return size;
++}
++
++
+ dav_error * dav_fs_dir_file_name(
+     const dav_resource *resource,
+     const char **dirpath_p,
+@@ -1927,6 +1954,7 @@
+     apr_pool_t *p = resource->info->pool;
+     const dav_liveprop_spec *info;
+     long global_ns;
++    apr_off_t bytes;
+ 
+     /* an HTTP-date can be 29 chars plus a null term */
+     /* a 64-bit size can be 20 chars plus a null term */
+@@ -1992,6 +2020,26 @@
+             value = "F";
+         break;
+ 
++    case DAV_PROPID_quota_available_bytes:
++        bytes = dav_fs_get_available_bytes(dav_fs_get_request_rec(resource),
++                                           dav_fs_fname(resource), NULL);
++        if (bytes == DAV_FS_BYTES_ERROR)
++            return DAV_PROP_INSERT_NOTDEF;
++
++        apr_snprintf(buf, sizeof(buf), "%" APR_OFF_T_FMT, bytes);
++        value = buf;
++        break;
++
++    case DAV_PROPID_quota_used_bytes:
++        bytes = dav_fs_get_used_bytes(dav_fs_get_request_rec(resource),
++                                           dav_fs_fname(resource));
++        if (bytes == DAV_FS_BYTES_ERROR)
++            return DAV_PROP_INSERT_NOTDEF;
++
++        apr_snprintf(buf, sizeof(buf), "%" APR_OFF_T_FMT, bytes);
++        value = buf;
++        break;
++
+     default:
+         /* ### what the heck was this property? */
+         return DAV_PROP_INSERT_NOTDEF;
+@@ -2256,9 +2304,36 @@
+                               what, phdr);
+ #endif
+ 
++    /*
++     * RFC 4331 section 2 says quota live properties should not
++     * be returned by <DAV:allprop> PROPFIND, hence we skip
++     " DAV_PROPID_quota_available_bytes and DAV_PROPID_quota_used_bytes.
++     */
++
+     /* ### we know the others aren't defined as liveprops */
+ }
+ 
++int dav_fs_method_precondition(request_rec *r,
++                               dav_resource *src, const dav_resource *dst,
++                               const apr_xml_doc *doc, dav_error **err)
++{
++    int ret = DECLINED;
++
++    switch (r->method_number) {
++    case M_COPY: /* FALLTHROUGH */
++    case M_MOVE: /* FALLTHROUGH */
++    case M_MKCOL: /* FALLTHROUGH */
++    case M_PROPPATCH: /* FALLTHROUGH */
++    case M_PUT:
++        ret = dav_fs_quota_precondition(r, src, dst, doc, err);
++        break;
++    default:
++        break;
++    }
++
++    return ret;
++}
++
+ void dav_fs_register(apr_pool_t *p)
+ {
+     /* register the namespace URIs */
+Index: modules/dav/fs/repos.h
+===================================================================
+--- modules/dav/fs/repos.h	(revision 1907973)
++++ modules/dav/fs/repos.h	(revision 1907974)
+@@ -29,8 +29,14 @@
+ #define DAV_FS_STATE_DIR                ".DAV"
+ #define DAV_FS_STATE_FILE_FOR_DIR       ".state_for_dir"
+ #define DAV_FS_LOCK_NULL_FILE           ".locknull"
++#define DAV_FS_TMP_PREFIX               ".davfs.tmp" /* prefix for tmp files */
+ 
++#define DAV_FS_QUOTA_UNSET       0
++#define DAV_FS_QUOTA_OFF        -1
++#define DAV_FS_QUOTA_NONE       -2
+ 
++#define DAV_FS_BYTES_ERROR      -1
++
+ /* ensure that our state subdirectory is present */
+ void dav_fs_ensure_state_dir(apr_pool_t *p, const char *dirname);
+ 
+@@ -40,6 +46,13 @@
+ /* return the full pathname for a resource */
+ const char *dav_fs_pathname(const dav_resource *resource);
+ 
++/* same as dav_fs_pathname() with directories' trailing slash */
++const char *dav_fs_fname(const dav_resource *resource);
++
++/* return the size for a resource, -1 if unknown */
++apr_off_t dav_fs_size(const dav_resource *resource);
++
++
+ /* return the directory and filename for a resource */
+ dav_error * dav_fs_dir_file_name(const dav_resource *resource,
+                                  const char **dirpath,
+@@ -67,6 +80,12 @@
+ /* where is the lock database located? */
+ const char *dav_get_lockdb_path(const request_rec *r);
+ 
++dav_error *dav_fs_get_quota(const request_rec *r, const char *path,
++                            apr_off_t *quota_bytes);
++apr_off_t dav_fs_get_used_bytes(request_rec *r, const char *path);
++apr_off_t dav_fs_get_available_bytes(request_rec *r,
++                                     const char *path, int *fs_low);
++
+ const dav_hooks_locks *dav_fs_get_lock_hooks(request_rec *r);
+ const dav_hooks_propdb *dav_fs_get_propdb_hooks(request_rec *r);
+ 
+@@ -76,6 +95,12 @@
+                          const dav_hooks_liveprop **hooks);
+ void dav_fs_insert_all_liveprops(request_rec *r, const dav_resource *resource,
+                                  dav_prop_insert what, apr_text_header *phdr);
++int dav_fs_quota_precondition(request_rec *r,
++                              dav_resource *src, const dav_resource *dst,
++                              const apr_xml_doc *doc, dav_error **err);
++int dav_fs_method_precondition(request_rec *r,
++                               dav_resource *src, const dav_resource *dst,
++                               const apr_xml_doc *doc, dav_error **err);
+ 
+ void dav_fs_register(apr_pool_t *p);
+ 
+Index: modules/dav/main/mod_dav.h
+===================================================================
+--- modules/dav/main/mod_dav.h	(revision 1907973)
++++ modules/dav/main/mod_dav.h	(revision 1907974)
+@@ -1172,6 +1172,10 @@
+     DAV_PROPID_workspace,
+     DAV_PROPID_workspace_checkout_set,
+ 
++    /* RFC 4331 quotas */
++    DAV_PROPID_quota_available_bytes,
++    DAV_PROPID_quota_used_bytes,
++
+     DAV_PROPID_END
+ };
+ 
+Index: modules/dav/fs/quota.c
+===================================================================
+--- modules/dav/fs/quota.c	(nonexistent)
++++ modules/dav/fs/quota.c	(revision 1908144)
+@@ -0,0 +1,358 @@
++/* Licensed to the Apache Software Foundation (ASF) under one or more
++ * contributor license agreements.  See the NOTICE file distributed with
++ * this work for additional information regarding copyright ownership.
++ * The ASF licenses this file to You under the Apache License, Version 2.0
++ * (the "License"); you may not use this file except in compliance with
++ * the License.  You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++/*
++** DAV filesystem-based quota routines
++*/
++
++#include "apr.h"
++#include "apr_strings.h"
++
++#include "httpd.h"
++#include "http_log.h"
++#include "http_main.h"
++
++#include "mod_dav.h"
++#include "repos.h"
++
++/*
++ * Just use a configure test? fields have been standardized for
++ * while: https://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstatvfs.h.html
++ */
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(OpenBSD) || \
++    defined(linux)
++#include <sys/statvfs.h>
++#define HAVE_STATVFS
++#endif
++
++#define DAV_TRUE                1
++#define DAV_FALSE               0
++
++/* Forwared declaration, since it calls itself */
++static apr_status_t get_dir_used_bytes_walk(request_rec *r,
++                                            const char *path,
++                                            apr_off_t *used);
++
++static apr_status_t get_dir_used_bytes_walk(request_rec *r,
++                                            const char *path,
++                                            apr_off_t *used)
++{
++    apr_dir_t *dir = NULL;
++    apr_finfo_t finfo;
++    apr_status_t rv;
++
++    if ((rv = apr_dir_open(&dir, path, r->pool)) != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r,
++                      "failed to open \"%s\"", path);
++        goto out;
++    }
++
++    do {
++        apr_int32_t wanted;
++        char *newpath;
++
++        wanted = APR_FINFO_DIRENT|APR_FINFO_TYPE|APR_FINFO_SIZE|APR_FINFO_NAME;
++        rv = apr_dir_read(&finfo, wanted, dir);
++        if (rv != APR_SUCCESS && rv != APR_INCOMPLETE)
++            break;
++
++        if ((finfo.valid & APR_FINFO_NAME) == 0) {
++            ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
++                          "Cannot get entry name in \"%s\"", path);
++            goto out;
++        }
++
++        if (!strcmp(finfo.name, ".") ||
++            !strcmp(finfo.name, "..") ||
++            !strcmp(finfo.name, DAV_FS_STATE_DIR) ||
++            !strncmp(finfo.name, DAV_FS_TMP_PREFIX, strlen(DAV_FS_TMP_PREFIX)))
++            continue;
++
++        if ((finfo.valid & APR_FINFO_TYPE) == 0) {
++            ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
++                          "Cannot get entry type in \"%s\"", path);
++            goto out;
++        }
++
++        switch (finfo.filetype) {
++        case APR_REG:
++            if ((finfo.valid & APR_FINFO_SIZE) == 0) {
++                ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
++                              "Cannot get entry size in \"%s\"", path);
++                goto out;
++            }
++            *used += finfo.size;
++            break;
++
++        case APR_DIR:
++            rv = apr_filepath_merge(&newpath, path, finfo.name, 0, r->pool);
++            if (rv != APR_SUCCESS) {
++                ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r,
++                              "apr_filepath_merge \"%s\" \"%s\" failed",
++                              path, finfo.name);
++                goto out;
++            }
++
++            rv = get_dir_used_bytes_walk(r, newpath, used);
++            if (rv != APR_SUCCESS)
++                goto out;
++            break;
++
++        default:
++            /* skip other types */
++            break;
++        }
++    } while (1 /* CONSTCOND */);
++
++    if (rv == APR_ENOENT)
++        rv = APR_SUCCESS;
++    else
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r,
++                      "apr_dir_read failed on \"%s\"", path);
++out:
++    if (dir)
++        (void)apr_dir_close(dir);
++
++    return rv;
++}
++
++static apr_off_t get_dir_used_bytes(request_rec *r, const char *path)
++{
++    apr_off_t used_bytes = 0;
++    apr_status_t rv;
++
++    rv = get_dir_used_bytes_walk(r, path, &used_bytes);
++
++    return (rv == APR_SUCCESS) ? used_bytes : DAV_FS_BYTES_ERROR;
++}
++
++static apr_off_t get_fs_used_bytes(const char *path)
++{
++    apr_off_t used_bytes = DAV_FS_BYTES_ERROR;
++#ifdef HAVE_STATVFS
++    struct statvfs f;
++
++    if (statvfs(path, &f) != 0)
++        goto out;
++
++#ifdef __NetBSD__
++    used_bytes = (f.f_blocks - f.f_bfree) * f.f_frsize;
++#else
++    used_bytes = (f.f_blocks - f.f_bfree) * f.f_bsize;
++#endif
++
++out:
++#endif
++    return used_bytes;
++}
++
++static apr_off_t get_fs_available_bytes(const char *path)
++{
++    apr_off_t available_bytes = DAV_FS_BYTES_ERROR;
++#ifdef HAVE_STATVFS
++    struct statvfs f;
++
++    if (statvfs(path, &f) != 0)
++        goto out;
++
++#ifdef __NetBSD__
++    available_bytes = f.f_bavail * f.f_frsize;
++#else
++    available_bytes = f.f_bavail * f.f_bsize;
++#endif
++out:
++#endif
++    return available_bytes;
++}
++
++apr_off_t dav_fs_get_used_bytes(request_rec *r, const char *path)
++{
++    apr_off_t quota;
++    apr_off_t used_bytes = DAV_FS_BYTES_ERROR;
++
++    if (dav_fs_get_quota(r, path, &quota) != NULL)
++        goto out;
++
++    switch (quota) {
++    case DAV_FS_QUOTA_UNSET: /* FALLTHOTUGH */
++    case DAV_FS_QUOTA_OFF:
++        break;
++
++    case DAV_FS_QUOTA_NONE:;
++        used_bytes = get_fs_used_bytes(path);
++        break;
++
++    default:
++        used_bytes = get_dir_used_bytes(r, path);
++        break;
++    }
++
++out:
++    return used_bytes;
++}
++
++apr_off_t dav_fs_get_available_bytes(request_rec *r,
++                                     const char *path, int *fs_low)
++{
++    apr_off_t quota;
++    apr_off_t used_bytes;
++    apr_off_t fs_available_bytes;
++    apr_off_t available_bytes = DAV_FS_BYTES_ERROR;
++    int _fs_low = DAV_FALSE;
++
++    if (dav_fs_get_quota(r, path, &quota) != NULL)
++        goto out;
++
++    switch (quota) {
++    case DAV_FS_QUOTA_UNSET: /* FALLTHROUGH */
++    case DAV_FS_QUOTA_OFF:
++        break;
++
++    case DAV_FS_QUOTA_NONE:
++        available_bytes = get_fs_available_bytes(path);
++        if (available_bytes != DAV_FS_BYTES_ERROR)
++            _fs_low = DAV_TRUE;
++        break;
++
++    default:
++        used_bytes = get_dir_used_bytes(r, path);
++        if (used_bytes != DAV_FS_BYTES_ERROR) {
++            if (used_bytes > quota)
++                available_bytes = 0;
++            else
++                available_bytes = quota - used_bytes;
++
++            /*
++             * Use available space from filesystem rather than quota
++             * if it is smaller
++             */
++            fs_available_bytes = get_fs_available_bytes(path);
++            if (fs_available_bytes != DAV_FS_BYTES_ERROR) {
++                if (fs_available_bytes < available_bytes) {
++                    available_bytes = fs_available_bytes;
++                    _fs_low = DAV_TRUE;
++                }
++            }
++        }
++        break;
++    }
++
++out:
++    if (available_bytes != DAV_FS_BYTES_ERROR && fs_low)
++        *fs_low = _fs_low;
++
++    return available_bytes;
++}
++
++
++int dav_fs_quota_precondition(request_rec *r,
++                              dav_resource *src, const dav_resource *dst,
++                              const apr_xml_doc *doc, dav_error **err)
++{
++    apr_off_t quota;
++    apr_off_t available_bytes;
++    apr_off_t size;
++    const char *path;
++    const char *lenhdr;
++    const char *tag;
++    const char *msg;
++    int status = DECLINED;
++    int fs_low;
++
++    if (r->method_number == M_COPY || r->method_number == M_MOVE) {
++        /*
++         * dav_method_copymove() calls dav_run_method_precondition()
++         * twice, with dst NULL on first call and set on the second call.
++         */
++        if (dst == NULL)
++             goto out;
++        path = dav_fs_fname(dst);
++    } else {
++        path = dav_fs_fname(src);
++    }
++
++    path = ap_make_dirstr_parent(r->pool, path);
++    if ((*err = dav_fs_get_quota(r, path, &quota)) != NULL)
++        goto out;
++
++    if (quota == DAV_FS_QUOTA_OFF || quota == DAV_FS_QUOTA_UNSET)
++        goto out;
++
++    available_bytes = dav_fs_get_available_bytes(r, path, &fs_low);
++    if (available_bytes == DAV_FS_BYTES_ERROR) {
++        if (quota != DAV_FS_QUOTA_NONE) {
++            status = HTTP_INTERNAL_SERVER_ERROR;
++            *err = dav_new_error(r->pool, status, 0, 0,
++                                 "Quota enabled, but failed to compute "
++                                 "available space.");
++        }
++        goto out;
++    }
++
++    tag = fs_low ? "sufficient-disk-space" : "quota-not-exceeded";
++    msg = fs_low ? "Insufficient disk space" : "Quota exceeded";
++
++    /*
++     * For all operations, report overquota before the operation.
++     */
++    if (available_bytes == 0) {
++        status = HTTP_INSUFFICIENT_STORAGE;
++        *err = dav_new_error_tag(r->pool, status, 0, 0,
++                                 msg, NULL, tag);
++        goto out;
++    }
++
++    switch (r->method_number) {
++    case M_PUT:
++        /*
++         * If PUT has Content-Length, we can forecast overquota
++         */
++        if (lenhdr = apr_table_get(r->headers_in, "Content-Length")) {
++            if (!ap_parse_strict_length(&size, lenhdr)) {
++                status = HTTP_BAD_REQUEST;
++                *err = dav_new_error(r->pool, status, 0, 0,
++                                     "client sent invalid Content-Length");
++                goto out;
++            }
++
++            if (size > available_bytes) {
++                status = HTTP_INSUFFICIENT_STORAGE;
++                *err = dav_new_error_tag(r->pool, status, 0, 0,
++                                         msg, NULL, tag);
++                goto out;
++            }
++        }
++        break;
++    case M_COPY: /* FALLTHROUGH */
++    case M_MOVE:
++        /*
++         * If source size is known, we can forecast ovequota
++         */
++        if ((size = dav_fs_size(src) != DAV_FS_BYTES_ERROR) &&
++            (size > available_bytes)) {
++            status = HTTP_INSUFFICIENT_STORAGE;
++            *err = dav_new_error_tag(r->pool, status, 0, 0,
++                                     msg, "DAV:", tag);
++            goto out;
++        }
++        break;
++    default:
++        break;
++    }
++
++out:
++    return status;
++}
+--- modules/dav/fs/mod_dav_fs.mak.orig
++++ modules/dav/fs/mod_dav_fs.mak
+@@ -54,8 +54,9 @@
+ 	-@erase "$(INTDIR)\mod_dav_fs.obj"
+ 	-@erase "$(INTDIR)\mod_dav_fs.res"
+ 	-@erase "$(INTDIR)\mod_dav_fs_src.idb"
+ 	-@erase "$(INTDIR)\mod_dav_fs_src.pdb"
++	-@erase "$(INTDIR)\quota.obj"
+ 	-@erase "$(INTDIR)\repos.obj"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.exp"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.lib"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.pdb"
+@@ -110,8 +111,9 @@
+ LINK32_OBJS= \
+ 	"$(INTDIR)\dbm.obj" \
+ 	"$(INTDIR)\lock.obj" \
+ 	"$(INTDIR)\mod_dav_fs.obj" \
++	"$(INTDIR)\quota.obj" \
+ 	"$(INTDIR)\repos.obj" \
+ 	"$(INTDIR)\mod_dav_fs.res" \
+ 	"..\..\..\srclib\apr\Release\libapr-1.lib" \
+ 	"..\..\..\srclib\apr-util\Release\libaprutil-1.lib" \
+@@ -165,8 +167,9 @@
+ 	-@erase "$(INTDIR)\mod_dav_fs.obj"
+ 	-@erase "$(INTDIR)\mod_dav_fs.res"
+ 	-@erase "$(INTDIR)\mod_dav_fs_src.idb"
+ 	-@erase "$(INTDIR)\mod_dav_fs_src.pdb"
++	-@erase "$(INTDIR)\quota.obj"
+ 	-@erase "$(INTDIR)\repos.obj"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.exp"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.lib"
+ 	-@erase "$(OUTDIR)\mod_dav_fs.pdb"
+@@ -221,8 +224,9 @@
+ LINK32_OBJS= \
+ 	"$(INTDIR)\dbm.obj" \
+ 	"$(INTDIR)\lock.obj" \
+ 	"$(INTDIR)\mod_dav_fs.obj" \
++	"$(INTDIR)\quota.obj" \
+ 	"$(INTDIR)\repos.obj" \
+ 	"$(INTDIR)\mod_dav_fs.res" \
+ 	"..\..\..\srclib\apr\Debug\libapr-1.lib" \
+ 	"..\..\..\srclib\apr-util\Debug\libaprutil-1.lib" \
+@@ -274,8 +278,13 @@
+ 
+ "$(INTDIR)\mod_dav_fs.obj" : $(SOURCE) "$(INTDIR)"
+ 
+ 
++SOURCE=.\quota.c
++
++"$(INTDIR)\quota.obj" : $(SOURCE) "$(INTDIR)"
++
++
+ SOURCE=.\repos.c
+ 
+ "$(INTDIR)\repos.obj" : $(SOURCE) "$(INTDIR)"
+ 
+--- modules/dav/fs/mod_dav_fs.dep.orig
++++ modules/dav/fs/mod_dav_fs.dep
+@@ -141,8 +141,62 @@
+ 	"..\..\..\srclib\apr\include\apr_user.h"\
+ 	"..\..\..\srclib\apr\include\apr_want.h"\
+ 	".\repos.h"\
+ 	
++.\quota.c : \
++	"..\..\..\include\ap_config.h"\
++	"..\..\..\include\ap_config_layout.h"\
++	"..\..\..\include\ap_hooks.h"\
++	"..\..\..\include\ap_mmn.h"\
++	"..\..\..\include\ap_regex.h"\
++	"..\..\..\include\ap_release.h"\
++	"..\..\..\include\apache_noprobes.h"\
++	"..\..\..\include\http_config.h"\
++	"..\..\..\include\http_log.h"\
++	"..\..\..\include\http_protocol.h"\
++	"..\..\..\include\http_request.h"\
++	"..\..\..\include\httpd.h"\
++	"..\..\..\include\mod_dav.h"\
++	"..\..\..\include\os.h"\
++	"..\..\..\include\util_cfgtree.h"\
++	"..\..\..\include\util_filter.h"\
++	"..\..\..\include\util_xml.h"\
++	"..\..\..\srclib\apr-util\include\apr_buckets.h"\
++	"..\..\..\srclib\apr-util\include\apr_dbm.h"\
++	"..\..\..\srclib\apr-util\include\apr_hooks.h"\
++	"..\..\..\srclib\apr-util\include\apr_optional.h"\
++	"..\..\..\srclib\apr-util\include\apr_optional_hooks.h"\
++	"..\..\..\srclib\apr-util\include\apr_uri.h"\
++	"..\..\..\srclib\apr-util\include\apr_xlate.h"\
++	"..\..\..\srclib\apr-util\include\apr_xml.h"\
++	"..\..\..\srclib\apr-util\include\apu.h"\
++	"..\..\..\srclib\apr\include\apr.h"\
++	"..\..\..\srclib\apr\include\apr_allocator.h"\
++	"..\..\..\srclib\apr\include\apr_dso.h"\
++	"..\..\..\srclib\apr\include\apr_errno.h"\
++	"..\..\..\srclib\apr\include\apr_file_info.h"\
++	"..\..\..\srclib\apr\include\apr_file_io.h"\
++	"..\..\..\srclib\apr\include\apr_general.h"\
++	"..\..\..\srclib\apr\include\apr_global_mutex.h"\
++	"..\..\..\srclib\apr\include\apr_hash.h"\
++	"..\..\..\srclib\apr\include\apr_inherit.h"\
++	"..\..\..\srclib\apr\include\apr_mmap.h"\
++	"..\..\..\srclib\apr\include\apr_network_io.h"\
++	"..\..\..\srclib\apr\include\apr_poll.h"\
++	"..\..\..\srclib\apr\include\apr_pools.h"\
++	"..\..\..\srclib\apr\include\apr_portable.h"\
++	"..\..\..\srclib\apr\include\apr_proc_mutex.h"\
++	"..\..\..\srclib\apr\include\apr_ring.h"\
++	"..\..\..\srclib\apr\include\apr_shm.h"\
++	"..\..\..\srclib\apr\include\apr_strings.h"\
++	"..\..\..\srclib\apr\include\apr_tables.h"\
++	"..\..\..\srclib\apr\include\apr_thread_mutex.h"\
++	"..\..\..\srclib\apr\include\apr_thread_proc.h"\
++	"..\..\..\srclib\apr\include\apr_time.h"\
++	"..\..\..\srclib\apr\include\apr_user.h"\
++	"..\..\..\srclib\apr\include\apr_want.h"\
++	".\repos.h"\
++	
+ 
+ .\repos.c : \
+ 	"..\..\..\include\ap_config.h"\
+ 	"..\..\..\include\ap_config_layout.h"\
+--- modules/dav/fs/NWGNUmakefile.orig
++++ modules/dav/fs/NWGNUmakefile
+@@ -170,8 +170,9 @@
+ FILES_nlm_objs = \
+ 	$(OBJDIR)/mod_dav_fs.o \
+ 	$(OBJDIR)/dbm.o \
+ 	$(OBJDIR)/lock.o \
++	$(OBJDIR)/quota.o \
+ 	$(OBJDIR)/repos.o \
+ 	$(OBJDIR)/libprews.o \
+ 	$(EOLIST)
+ 
+--- configure.orig
++++ configure
+@@ -39337,9 +39337,9 @@
+   test -d dav/fs || $srcdir/build/mkdir.sh $modpath_current
+   > $modpath_current/modules.mk
+ 
+ 
+-dav_fs_objects="mod_dav_fs.lo dbm.lo lock.lo repos.lo"
++dav_fs_objects="mod_dav_fs.lo dbm.lo lock.lo quota.lo repos.lo"
+ 
+ if test "x$enable_dav" != "x"; then
+   dav_fs_enable=$enable_dav
+ else
