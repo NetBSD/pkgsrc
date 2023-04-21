@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:17:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/04/21 01:49:50 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.7.1
+VERSION=	0.7.2
 DISTNAME=	xfce4-calculator-plugin-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-calculator-plugin/${VERSION:R}/
