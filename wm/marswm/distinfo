@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/04/12 10:26:04 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/04/21 21:10:20 pin Exp $
 
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -48,9 +48,9 @@ Size (itoa-1.0.5.crate) = 10622 bytes
 BLAKE2s (libc-0.2.139.crate) = 853f2cdf8ed8de1e87cebc90a4aaa0b85007ee732a1c4bc499a40d7bc975afc5
 SHA512 (libc-0.2.139.crate) = ff5fae517c49c382dee9b1d7479b65b0a818780453e5c00c416847d02f42186e2fcf19a8a8dc5e9cc2611300690c6ad324f9c0f0e8172e913a1b781fb7c0b5b4
 Size (libc-0.2.139.crate) = 638983 bytes
-BLAKE2s (marswm-0.4.0.tar.gz) = 7436f50c0b1a8b95de5e9798748e43ec62d49231b312f1889baf58a79e441116
-SHA512 (marswm-0.4.0.tar.gz) = e19c72f15f49b9004b86cc6c84152c3e8b8d66aae88b3c7c7614027f67547b3b4ee05f32b49369f66beb7328e15778883dc5981e4a45977cdd6dd3a76dbbe93d
-Size (marswm-0.4.0.tar.gz) = 63530 bytes
+BLAKE2s (marswm-0.4.1.tar.gz) = 3a610350af54af145a2bcea09ec5d345cb3c67b64dde5f74d179da008cf0c6b1
+SHA512 (marswm-0.4.1.tar.gz) = 69199a2bd9473a7806aa0356eabace3ef3986e4d6106a3b0939fd2e792fa4eff3518ab91426d8915e5fdd0fbeb07ee5d74ff302c6b73a4bf4a06578a0d9b8452
+Size (marswm-0.4.1.tar.gz) = 64456 bytes
 BLAKE2s (once_cell-1.17.0.crate) = f0cc4bdb32165b57720e83c2cedf519303aff7e73d6b4103843824948510e63d
 SHA512 (once_cell-1.17.0.crate) = 291d87380c0ea17fb3ffc9fdff8620d2ff55601c06ef65b2f0c54254fecd5b488645c6e94c6026b82071893f4d420491ff712399a782e14efa1e323e5c299c46
 Size (once_cell-1.17.0.crate) = 32736 bytes
