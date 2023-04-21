@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/04/21 09:09:31 wiz Exp $
+
+BLAKE2s (gmic-qt-digikam-3.2.2.20230417-925ba362081e875a2ece1bcfffbe0f408a908017.tar.gz) = aa168e2b89c3d484d48c621477014a19f7fb4549c20e7969c0bdfbe45c8305c0
+SHA512 (gmic-qt-digikam-3.2.2.20230417-925ba362081e875a2ece1bcfffbe0f408a908017.tar.gz) = 245eb359b9c16495b1e4b992dcaf869738a9c72e498f4c5e603d9e34b8595f60058e54778d21d9f504ea7a9a94a1deba6d6e63a60c1243385fbab1c40df065af
+Size (gmic-qt-digikam-3.2.2.20230417-925ba362081e875a2ece1bcfffbe0f408a908017.tar.gz) = 111666931 bytes
+SHA1 (patch-gmic__qt.pro) = 4482955d13b6bbdcd6e6f9d7dd3a696d734f05ee
+SHA1 (patch-gmic_src_gmic.cpp) = 6aae87ac24d3c26fcc87c1ad0602f2b929137e51
