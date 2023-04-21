@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/20 05:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/21 01:16:49 gutteridge Exp $
 
 DISTNAME=	dmtx-utils-0.7.6
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dmtx/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.ork
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dmtx/dmtx-utils
 COMMENT=	Command line programs for reading and writing Data Matrix 2D barcodes
 LICENSE=	gnu-lgpl-v2.1
