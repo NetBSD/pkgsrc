@@ -1,0 +1,21 @@
+$NetBSD: patch-rfc4331quotas-modules_dav_fs_NWGNUmakefile,v 1.1 2023/04/21 13:52:33 manu Exp $
+
+RFC4331 quotas from upstream trunk
+http://svn.apache.org/viewvc?view=revision&revision=1907974
+http://svn.apache.org/viewvc?view=revision&revision=1907984
+http://svn.apache.org/viewvc?view=revision&revision=1907989
+http://svn.apache.org/viewvc?view=revision&revision=1908143
+http://svn.apache.org/viewvc?view=revision&revision=1908144
+
+--- modules/dav/fs/NWGNUmakefile.orig
++++ modules/dav/fs/NWGNUmakefile
+@@ -170,8 +170,9 @@
+ FILES_nlm_objs = \
+ 	$(OBJDIR)/mod_dav_fs.o \
+ 	$(OBJDIR)/dbm.o \
+ 	$(OBJDIR)/lock.o \
++	$(OBJDIR)/quota.o \
+ 	$(OBJDIR)/repos.o \
+ 	$(OBJDIR)/libprews.o \
+ 	$(EOLIST)
+ 
