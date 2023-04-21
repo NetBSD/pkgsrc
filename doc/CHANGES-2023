@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2343 2023/04/21 00:44:18 manu Exp $
+$NetBSD: CHANGES-2023,v 1.2344 2023/04/21 00:49:56 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3379,3 +3379,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Playwright to 1.324 [schmonz 2023-04-20]
 	Added misc/chatgpt-shell-cli version 0.0.20230420 [schmonz 2023-04-20]
 	Added databases/openldap-autogroup 2.6.4 [manu 2023-04-21]
+	Added mail/openarc 20180921 [manu 2023-04-21]
