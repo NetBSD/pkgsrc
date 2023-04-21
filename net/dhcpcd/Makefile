@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.115 2023/04/13 10:35:53 roy Exp $
+# $NetBSD: Makefile,v 1.116 2023/04/21 15:03:39 roy Exp $
 
-DISTNAME=		dhcpcd-9.5.0
+DISTNAME=		dhcpcd-10.0.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
 GITHUB_PROJECT=		dhcpcd
-GITHUB_TAG=		${DISTNAME}
+#GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://roy.marples.name/projects/dhcpcd/
