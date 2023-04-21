@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2023/01/25 16:04:26 micha Exp $
+# $NetBSD: Makefile.common,v 1.12 2023/04/21 12:57:19 micha Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
@@ -26,46 +26,6 @@ MAKE_FLAGS+=	CCOM=cc
 .endif
 
 MAKE_FLAGS+=	LINKMODE=static
-
-# OS rules
-# Some rules were copied from old packages (that are now part of schilytools
-# too) to not break what people have done in the past.
-pre-configure:
-	printf "Create OS rules...\n"
-	cd ${WRKSRC}/RULES && . ${WRKSRC}/RULES/MKLINKS
-	printf "Create pkgsrc OS rules...\n"
-	cd ${WRKSRC}/RULES && unset r ;					\
-	for i in arm mipsel mips64eb x86_64 sparc64 powerpc ;		\
-	do								\
-		r="$$r i386-netbsd-gcc.rul@$$i-netbsd-gcc.rul" ;	\
-		r="$$r i386-netbsd-cc.rul@$$i-netbsd-cc.rul" ;		\
-	done ;								\
-	r="$$r i386-freebsd-gcc.rul@x86_64-freebsd-gcc.rul" ;		\
-	r="$$r i386-freebsd-cc.rul@x86_64-freebsd-cc.rul" ;		\
-	for i in netbsd-clang.rul netbsd-cc.rul netbsd-gcc.rul ;	\
-	do								\
-		r="$$r i386-$$i@${MACHINE}-$$i" ;			\
-	done ;								\
-									\
-	for i in $$r ;							\
-	do								\
-		existing=`printf "%s\\n" $$i | ${SED} -e 's/@.*//'` ;	\
-		target=`printf "%s\\n" $$i | ${SED} -e 's/.*@//'` ;	\
-		printf "%s " "$$target";				\
-		if ${TEST} -e "$$existing" ; then : ;			\
-		else							\
-			printf "(Link target %s not present)\n"		\
-				"$$existing";				\
-			continue ;					\
-		fi;							\
-		if ${TEST} -e "$$target" ;				\
-		then							\
-			printf "(already present)\n" ;			\
-		else							\
-			${LN} -s "$$existing" "$$target" ;		\
-			printf "(created)\n" ;				\
-		fi;							\
-	done
 
 # Man pages with documentation of file formats should go to section 4 on
 # SysV based systems. All supported systems that are treated by schilytools
