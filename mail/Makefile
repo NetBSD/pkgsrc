@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.595 2023/03/08 23:45:10 nikita Exp $
+# $NetBSD: Makefile,v 1.596 2023/04/21 00:49:56 manu Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -189,6 +189,7 @@ SUBDIR+=	notmuch-emacs
 SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
+SUBDIR+=	openarc
 SUBDIR+=	opendkim
 SUBDIR+=	opendmarc
 SUBDIR+=	p5-App-Siesh
