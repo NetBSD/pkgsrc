@@ -1,0 +1,10 @@
+The autogroup overlay allows automated updates of group memberships which
+meet the requirements of any filter contained in the group definition.
+The filters are built from LDAP URI-valued attributes. Any time an object
+is added/deleted/updated, it is tested for compliance with the filters,
+and its membership is accordingly updated. For searches and compares
+it behaves like a static group.
+If the attribute part of the URI is filled, the group entry is populated
+by the values of this attribute in the entries resulting from the search.
+
+
