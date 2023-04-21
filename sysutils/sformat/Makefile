@@ -1,46 +1,53 @@
-# $NetBSD: Makefile,v 1.18 2017/08/19 00:25:19 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.19 2023/04/21 14:01:41 micha Exp $
 
-DISTNAME=	sformat-3.5
-PKGREVISION=	1
+DISTNAME=	2023-04-19
+PKGNAME=	sformat-3.7
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.berlios.de/pub/sformat/
+MASTER_SITES=	https://codeberg.org/schilytools/schilytools/archive/
+DIST_SUBDIR=	schilytools
 
-MAINTAINER=	Andreas.Hallmann@tiscali.de
-HOMEPAGE=	http://freshmeat.net/projects/sformat
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://codeberg.org/schilytools/schilytools/
 COMMENT=	SCSI disk maintainance, formating, and ultimative repair tool
+LICENSE=	cddl-1.0
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gmake
-TBL?=			tbl
+TOOL_DEPENDS+=	smake>=1.7:../../devel/smake
+SMAKE=		MAKEFLAGS= smake
+MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
+# Honor CPPFLAGS, CFLAGS and LDFLAGS
+MAKE_FLAGS+=	CPPOPTX=${CPPFLAGS:Q} COPTX=${CFLAGS:Q} LDOPTX=${LDFLAGS:Q}
 
-# avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=	ARCH=""
-MAKE_ENV+=	MAKEPROG="gmake"
-MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
-MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
+SFORMAT_DB=	${PKG_SYSCONFDIR}/sformat.dat
+CONF_FILES=	${PREFIX}/share/examples/sformat/sformat.dat ${SFORMAT_DB}
+SPECIAL_PERMS+=	${PREFIX}/share/examples/sformat/sformat.dat ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
+AUTO_MKDIRS=	yes
 
-# Override settings in Makefiles by passing additional settings
-# on the command-line.
-#
-MAKE_FLAGS+=	INS_BASE=${DESTDIR}${LOCALBASE:Q}
-MAKE_FLAGS+=	MANDIR=${PKGMANDIR:Q}
+# Configure config file location
+SUBST_CLASSES+=		fix
+SUBST_STAGE.fix=	pre-configure
+SUBST_FILES.fix+=	sformat/datio.c
+SUBST_FILES.fix+=	sformat/sformat.1
+SUBST_SED.fix=		-e "s,@PKGSRC_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
+SUBST_MESSAGE.fix=	Replace database file path.
 
-# if we're using a gcc which is named gcc, we need to set CCOM=gcc
-# in MAKE_ENV so the make infrastructure picks the right options.
-.if !empty(CC:M*gcc*)
-MAKE_ENV+=	CCOM="gcc"
-.endif
+# Shared platform specific code for schilytools (provided by smake package)
+.include "../../devel/smake/Makefile.common"
 
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+do-configure:
+	cd ${WRKSRC}/inc && ${SMAKE} ${MAKE_FLAGS}
 
-post-extract:
-	${CP} ${WRKSRC}/RULES/os-freebsd.id ${WRKSRC}/RULES/os-dragonfly.id
-	${CP} ${WRKSRC}/RULES/os-freebsd.def ${WRKSRC}/RULES/os-dragonfly.def
-.for x in amd64 macppc
-	ln -s i386-netbsd-cc.rul ${WRKSRC}/RULES/${x}-netbsd-cc.rul
-	ln -s i386-netbsd-cc.rul ${WRKSRC}/RULES/${x}-netbsd-gcc.rul
-.endfor
+do-build:
+	cd ${WRKSRC} && for library in libschily libscg;		\
+	do								\
+		cd ${WRKSRC}/$${library} && ${SMAKE} ${MAKE_FLAGS};	\
+	done
+	cd ${WRKSRC}/sformat && ${SMAKE} ${MAKE_FLAGS}
+
+do-install:
+	cd ${WRKSRC}/sformat && ${SMAKE} ${MAKE_FLAGS} install
+	${INSTALL_DATA} ${WRKSRC}/sformat/sformat.dat			\
+		${DESTDIR}${PREFIX}/share/examples/sformat/sformat.dat
 
 .include "../../mk/bsd.pkg.mk"
