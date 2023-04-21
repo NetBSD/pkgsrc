@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/21 00:44:19 manu Exp $
+lib/openldap/autogroup.la
+man/man5/slapo-autogroup.5
