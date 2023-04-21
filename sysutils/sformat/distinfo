@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:20:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/04/21 14:01:41 micha Exp $
 
-BLAKE2s (sformat-3.5.tar.gz) = 4c61c2bd5aa4e66b7199fe2669e255a35fb96bc66ca53b2b131f932873928c56
-SHA512 (sformat-3.5.tar.gz) = 6dc90e16d396165625816cb5e7252772ed92e9a06aeac49e10c642886491dd9a7eb3f60b60d584e952d23704a175333a8c8fb2b93fa8d3b447f60d555b048fa3
-Size (sformat-3.5.tar.gz) = 526375 bytes
-SHA1 (patch-RULES_rules1_dir) = 25b5f88d65b4d8265417bc97cee63f6346e3b008
-SHA1 (patch-aa) = e398bc734a7bc48668a0b61d3535c0d87b1a4ccf
-SHA1 (patch-include_schily_h) = 56eb9cf6f87623bcca5d4d83ab27deeee237bc07
-SHA1 (patch-lib_stdio_fgetline_c) = 0d9aacf5cebc70522b085d71ef90f9665d8c5d6a
-SHA1 (patch-libscg_scsitransp_c) = 889ec76b497782ffd42ef13214f0e1ab3187ceaf
-SHA1 (patch-sformat_defect_c) = 20ba1dfd1f671e216fd04e8dfbf02e6ca605ebf3
-SHA1 (patch-sformat_diskfmt_c) = bd86beb7d9590c32c75c158c9fb13cff8d60a3e3
-SHA1 (patch-sformat_io_c) = a0a27221e7151feac100c7fc3eb567f4555a6e1b
-SHA1 (patch-sformat_makelabel_c) = 84bbf9666fdabbcd65476a2e0389169723252327
+BLAKE2s (schilytools/2023-04-19.tar.gz) = 61bd4ce5c989eacd5ffffc8e6dd5435ba3594573c310405f2ff78bd52194b1e6
+SHA512 (schilytools/2023-04-19.tar.gz) = 79e5d59ad84fefd32b689dc60db42cb522bfb2c544e7f5b8c2b85c3597c758519071ec043532d3e9e8b745bf4ff1ad32b4e1103eaac391282435e42a2ef94de5
+Size (schilytools/2023-04-19.tar.gz) = 5896292 bytes
+SHA1 (patch-sformat_datio.c) = d1e1a8fa8906f69ae183fcee07a0d2d695c0e015
+SHA1 (patch-sformat_sformat.1) = bd125a26de0412af23198eb26419ac8333ab6a2f

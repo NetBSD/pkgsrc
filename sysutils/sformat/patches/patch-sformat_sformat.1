@@ -1,0 +1,24 @@
+$NetBSD: patch-sformat_sformat.1,v 1.1 2023/04/21 14:01:42 micha Exp $
+
+Search database only in current directory and PKG_SYSCONFDIR
+
+--- sformat/sformat.1.orig	2023-01-30 14:39:40.055988371 +0000
++++ sformat/sformat.1
+@@ -157,7 +157,7 @@ If no file of the appropriate name was f
+ .B sformat
+ looks in the following path:
+ .br
+-.I /opt schily/etc,  /etc,  /usr/etc.
++.I @PKGSRC_SYSCONFDIR@.
+ .br
+ .ne 3
+ .TP
+@@ -1370,7 +1370,7 @@ the end of this partition and the end of
+ .SH FILES
+ .PP
+ .TP 20
+-.B /opt/schily/etc/sformat.dat
++.B @PKGSRC_SYSCONFDIR@/sformat.dat
+ A database with mode pages and disk partitions for disks.
+ .\" .SH "SEE ALSO"
+ .\" .SH DIAGNOSTICS
