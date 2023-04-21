@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2345 2023/04/21 00:59:41 manu Exp $
+$NetBSD: CHANGES-2023,v 1.2346 2023/04/21 01:50:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3381,3 +3381,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/openldap-autogroup 2.6.4 [manu 2023-04-21]
 	Added mail/openarc 20180921 [manu 2023-04-21]
 	Added net/nagios-plugin-mqueue [manu 2023-04-21]
+	Updated misc/xfce4-calculator-plugin to 0.7.2 [gutteridge 2023-04-21]
