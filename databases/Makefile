@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2023/04/19 13:32:16 joerg Exp $
+# $NetBSD: Makefile,v 1.676 2023/04/21 00:44:19 manu Exp $
 
 COMMENT=	Databases
 
@@ -130,6 +130,7 @@ SUBDIR+=	ocaml-sqlite3
 SUBDIR+=	ocsipersist
 SUBDIR+=	odbc-postgresql
 SUBDIR+=	openldap
+SUBDIR+=	openldap-autogroup
 SUBDIR+=	openldap-client
 SUBDIR+=	openldap-cloak
 SUBDIR+=	openldap-doc
