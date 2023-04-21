@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2346 2023/04/21 01:50:01 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2347 2023/04/21 04:27:39 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/openarc 20180921 [manu 2023-04-21]
 	Added net/nagios-plugin-mqueue [manu 2023-04-21]
 	Updated misc/xfce4-calculator-plugin to 0.7.2 [gutteridge 2023-04-21]
+	Updated www/ap2-auth-mellon to 0.18.1 [manu 2023-04-21]
