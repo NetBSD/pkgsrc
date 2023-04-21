@@ -1,0 +1,28 @@
+$NetBSD: patch-opendkim_opendkim.conf.5,v 1.1 2023/04/21 13:03:09 manu Exp $
+
+Add OmitHeadersDB directive to specify file containing per-recipient 
+list of headers to not use in signature. The file format is:
+
+user@doamin.tld	header1,header2,header3
+domain.tld	header4,header5
+
+From upstream https://github.com/trusteddomainproject/OpenDKIM/pull/173
+
+--- opendkim/opendkim.conf.5.in.orig
++++ opendkim/opendkim.conf.5.in
+@@ -619,6 +619,15 @@ default; for example, "*,+foobar" will use the entire default list plus
+ the name "foobar", while "*,-Bcc" would use the entire default list except
+ for the "Bcc" entry.
+ 
++.TP
++.I OmitHeadersDB (string)
++Specify a file containing a per-recipient list of headers to omit 
++when generating signatures. Return-Path, Received, Comments, and
++Keywoard are implicitely added to the list. The file should have
++two columns : a recipient as user@domain.tld or domain.tld, and 
++a comma-separated lis of headers to omit. For example 
++"list@example.net Subject,Bcc"
++
+ .TP
+ .I On-BadSignature (string)
+ Selects the action to be taken when a signature fails to validate.
