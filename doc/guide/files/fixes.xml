@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.183 2022/12/06 01:37:11 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.184 2023/04/22 13:09:28 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -480,15 +480,15 @@ BUILDLINK_API_DEPENDS.jpeg+=    jpeg>=9.0
     install the same shared library, thus you set in
     <filename>pkgsrc/x11/libXaw3d/Makefile</filename>:</para>
 
-    <programlisting>
+<programlisting>
 CONFLICTS=      Xaw-Xpm-[0-9]*
-    </programlisting>
+</programlisting>
 
     <para>and in <filename>pkgsrc/x11/Xaw-Xpm/Makefile</filename>:</para>
 
-    <programlisting>
+<programlisting>
 CONFLICTS=      libXaw3d-[0-9]*
-    </programlisting>
+</programlisting>
 
     <para>&man.pkg.add.1 is able to detect attempts to install packages
     that conflict with existing packages and abort. However, in many
@@ -1431,11 +1431,11 @@ MESON_ARGS+=	-Dx11=false
     <para>To declare which language's compiler a package needs, set
     the <varname>USE_LANGUAGES</varname> variable. Allowed values
     currently are:
-    <programlisting>
-	c99, c++, c++03, gnu++03, c++0x, gnu++0x, c++11, gnu++11,
-	c++14, gnu++14, c++17, gnu++17, c++20, gnu++20, fortran,
-	fortran77, java, objc, obj-c++, and ada.
-    </programlisting>
+<programlisting>
+c99, c++, c++03, gnu++03, c++0x, gnu++0x, c++11, gnu++11,
+c++14, gnu++14, c++17, gnu++17, c++20, gnu++20, fortran,
+fortran77, java, objc, obj-c++, and ada.
+</programlisting>
     (and any combination).  The default is
     <quote>c</quote>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
@@ -1446,9 +1446,9 @@ MESON_ARGS+=	-Dx11=false
     For example, GCC 7 includes support for C++17, so if the package uses
     C++17 it should specify:
 
-    <programlisting>
-	GCC_REQD+=	7
-    </programlisting></para>
+<programlisting>
+GCC_REQD+=	7
+</programlisting></para>
 
     <para>Language variants like <literal>c++11</literal> for
     <varname>USE_LANGUAGES</varname> should only be specified
