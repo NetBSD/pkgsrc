@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.6 2023/04/16 14:52:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.7 2023/04/22 15:06:42 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
@@ -35,4 +35,11 @@ print/a2ps: restore functionality
 Pullup ticket #6753 - requested by gutteridge
 textproc/libxml2: security fix
 textproc/py-libxml2: security fix
+
+Pullup ticket #6755 - requested by nia
+sysutils/amanda-common
+
+Pullup ticket #6754 - requested by nia
+www/firefox102: security fix
+www/firefox102-l10n: dependent update
 
