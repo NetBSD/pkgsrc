@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2023/04/22 15:49:13 nikita Exp $
-
-BLAKE2s (qiniu-x-1.11.9.tar.gz) = 51a734a7dce257cf0a20c68b761d7b66e3b103834134a27175d6a28da5265708
-SHA512 (qiniu-x-1.11.9.tar.gz) = eb6cda3500f51f937e736c0ad86819ea8885a07d295a6a0b2262be9dd33df4991eae9733d36f151f7849eec3a26923815a3e90f5483e3e5ebddad31d17d93013
-Size (qiniu-x-1.11.9.tar.gz) = 36550 bytes
