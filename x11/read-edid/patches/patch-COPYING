@@ -1,0 +1,8 @@
+$NetBSD: patch-COPYING,v 1.1 2023/04/22 00:58:05 manu Exp $
+
+cmake wants a COPYING file, give it one
+
+--- COPYING.orig	2022-04-13 17:05:12.791212716 +0200
++++ COPYING	2022-04-13 17:05:02.802756303 +0200
+@@ -0,0 +1 @@
++Placeholder to please cmake

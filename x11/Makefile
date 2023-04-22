@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.981 2023/04/13 05:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.982 2023/04/22 00:58:05 manu Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -408,6 +408,7 @@ SUBDIR+=	qwt6-qt4
 SUBDIR+=	qwt6-qt5
 SUBDIR+=	qwtplot3d-qt4
 SUBDIR+=	ratmen
+SUBDIR+=	read-edid
 SUBDIR+=	redshift
 SUBDIR+=	rendercheck
 SUBDIR+=	rep-gtk2

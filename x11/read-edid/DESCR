@@ -1,0 +1,10 @@
+$NetBSD: DESCR,v 1.1 2023/04/22 00:58:05 manu Exp $
+
+This package will try to read the monitor details directly from the
+monitor. The program get-edid asks a VBE BIOS for the EDID data. The
+program parse-edid parses the data and prints out a human readable
+summary.
+
+Please see
+	http://www.polypux.org/projects/read-edid/
+for more detailed information
