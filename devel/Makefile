@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3955 2023/04/22 15:49:13 nikita Exp $
+# $NetBSD: Makefile,v 1.3956 2023/04/22 17:08:38 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -446,7 +446,6 @@ SUBDIR+=	go-impl
 SUBDIR+=	go-logrus
 SUBDIR+=	go-nbreader
 SUBDIR+=	go-pty
-SUBDIR+=	go-qiniu-x
 SUBDIR+=	go-review
 SUBDIR+=	go-siphash
 SUBDIR+=	go-staticcheck
