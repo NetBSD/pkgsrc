@@ -1,10 +1,11 @@
-pkglint checks whether a pkgsrc package conforms to the various
-conventions established over the years. It produces warnings, errors and
-notes and, upon request, explains them.
+pkglint checks for typical mistakes and inconsistencies in the source
+files of a pkgsrc package.  It produces warnings, errors and notes and,
+upon request, explains them.
 
 Before importing a new package or making changes to an existing package,
 pkglint should be run in the package's directory to check for common
-errors.
+mistakes.
 
-This is the current version of pkglint.  Because it is written in go,
-it does not run on all pkgsrc platforms; see also pkglint4.
+This is the actively maintained version of pkglint.  Because it is
+written in Go, it does not run on all pkgsrc platforms; see also
+pkglint4.
