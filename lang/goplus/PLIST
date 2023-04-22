@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/19 12:52:17 nikita Exp $
-bin/gop
-bin/gopdecl
-bin/gopfmt
-bin/goptestgo
