@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/04/22 00:58:05 manu Exp $
+
+BLAKE2s (read-edid-3.0.2.tar.gz) = fa3a2f21ffc61f5010e89b4c5fca18b5ce70eb2617bc4ea0e1406d630c5b1639
+SHA512 (read-edid-3.0.2.tar.gz) = 779ebe7f1ffb6e7952762b5f886e07974f2c0fe5fa9be0722b928559466b56aae450f741817bb91bb2e33ca66ab27af39cea3c7af220c99b85dae81734138aac
+Size (read-edid-3.0.2.tar.gz) = 17508 bytes
+SHA1 (patch-CMakeLists.txt) = 555d9632a8d141f11fefc631b19214d727cafa93
+SHA1 (patch-COPYING) = 78b60159b3adf52e00648eb4fce2ee75e58b7657
+SHA1 (patch-get-edid_i2c-dev.h) = f68bd35668dfe39ea03e63ab8f84cec367e20e58

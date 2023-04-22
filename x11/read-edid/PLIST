@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/22 00:58:05 manu Exp $
+bin/get-edid
+bin/parse-edid
+man/man1/get-edid.1
+share/doc/read-edid/AUTHORS
+share/doc/read-edid/COPYING
+share/doc/read-edid/ChangeLog
+share/doc/read-edid/README
