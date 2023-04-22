@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.46 2023/01/22 18:58:45 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.47 2023/04/22 13:21:58 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1276,7 +1276,7 @@ def main(argv: List[str], g: Globals):
 
         if dir == '':
             sys.exit(f'url2pkg: cannot determine package directory '
-                     f'from distname \'{vars.distname}\'')
+                     f'from distname \'{vars.distname}\'; it must contain a version number')
         if Path(dir).exists():
             sys.exit(f'url2pkg: package directory \'{dir}\' already exists')
         os.mkdir(dir)
