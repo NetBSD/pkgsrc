@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2384 2023/04/23 17:58:02 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2385 2023/04/23 20:06:04 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/logrotate to 3.21.0 [nils 2023-04-23]
 	Updated security/dehydrated to 0.7.1 [nils 2023-04-23]
 	Updated textproc/xfce4-dict to 0.8.5 [gutteridge 2023-04-23]
+	Updated devel/patchelf to 0.18.0 [fcambus 2023-04-23]
