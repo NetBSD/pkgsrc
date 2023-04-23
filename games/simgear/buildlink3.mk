@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.78 2023/04/19 08:08:21 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.79 2023/04/23 14:26:08 adam Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	simgear
 SIMGEAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.simgear+=	simgear>=2018.2.2nb7
-BUILDLINK_ABI_DEPENDS.simgear?=	simgear>=2020.3.11nb18
+BUILDLINK_ABI_DEPENDS.simgear?=	simgear>=2020.3.11nb19
 BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
 
 .include "../../audio/openal-soft/buildlink3.mk"

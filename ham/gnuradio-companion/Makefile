@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2023/04/19 08:10:28 adam Exp $
+# $NetBSD: Makefile,v 1.67 2023/04/23 14:26:22 adam Exp $
 
 PKGNAME=	gnuradio-companion-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	User interface entry of GNU Radio
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
