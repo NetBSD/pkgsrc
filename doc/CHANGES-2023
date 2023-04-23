@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2374 2023/04/23 10:03:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2375 2023/04/23 10:14:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3414,3 +3414,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-trove-classifiers to 2023.4.22 [adam 2023-04-23]
 	Updated graphics/py-seaborn to 0.12.2 [adam 2023-04-23]
 	Updated devel/py-pip to 23.1.1 [adam 2023-04-23]
+	Updated textproc/py-yamllint to 1.31.0 [adam 2023-04-23]
+	Updated sysutils/ansible-lint to 6.15.0 [adam 2023-04-23]
