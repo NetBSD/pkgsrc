@@ -1,0 +1,3 @@
+tabularray is a reimplementation of tables in LaTeX using the LaTeX3
+core. It allows a separation of content and style and includes the
+flexiblity of the tabu package.
