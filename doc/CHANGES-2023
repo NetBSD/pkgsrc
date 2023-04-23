@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2378 2023/04/23 11:00:39 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2379 2023/04/23 14:05:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3421,3 +3421,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-peewee to 3.16.2 [adam 2023-04-23]
 	Updated devel/py-dogpile-cache to 1.1.8 [adam 2023-04-23]
 	Updated www/py-webcolors to 1.13 [adam 2023-04-23]
+	Updated devel/boost-build to 1.82.0 [adam 2023-04-23]
+	Updated devel/boost-docs to 1.82.0 [adam 2023-04-23]
+	Updated devel/boost-headers to 1.82.0 [adam 2023-04-23]
+	Updated devel/boost-jam to 1.82.0 [adam 2023-04-23]
+	Updated devel/boost-libs to 1.82.0 [adam 2023-04-23]
+	Updated devel/boost-mpi to 1.82.0 [adam 2023-04-23]
+	Updated devel/py-boost to 1.82.0 [adam 2023-04-23]
+	Updated meta-pkgs/boost to 1.82.0 [adam 2023-04-23]
