@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/04/05 23:12:59 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/23 20:14:35 wiz Exp $
 
-DISTNAME=	typst-0.1.0
+DISTNAME=	typst-0.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=typst/}
 GITHUB_PROJECT=	typst
