@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2021/01/08 08:58:30 he Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/23 17:18:39 nils Exp $
 
 GITHUB_RELEASE=		${PKGVERSION_NOREV}
-DISTNAME=		logrotate-3.18.0
+DISTNAME=		logrotate-3.21.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/}
 
