@@ -1,6 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/04/19 20:44:20 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/04/23 08:27:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
 CARGO_CRATE_DEPENDS+=	anstream-0.2.6
 CARGO_CRATE_DEPENDS+=	anstyle-0.3.5
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.1.1
@@ -54,6 +55,7 @@ CARGO_CRATE_DEPENDS+=	itoa-1.0.6
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.3.0
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.61
 CARGO_CRATE_DEPENDS+=	lab-0.11.0
+CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lebe-0.5.2
 CARGO_CRATE_DEPENDS+=	libc-0.2.141
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.3.1
@@ -64,6 +66,7 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.8.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
 CARGO_CRATE_DEPENDS+=	nanorand-0.7.0
+CARGO_CRATE_DEPENDS+=	new_string_template-1.4.0
 CARGO_CRATE_DEPENDS+=	num-integer-0.1.45
 CARGO_CRATE_DEPENDS+=	num-rational-0.4.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.15
@@ -80,6 +83,8 @@ CARGO_CRATE_DEPENDS+=	rayon-1.7.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.11.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
+CARGO_CRATE_DEPENDS+=	regex-1.7.3
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
 CARGO_CRATE_DEPENDS+=	rustix-0.37.11
 CARGO_CRATE_DEPENDS+=	ryu-1.0.13
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
@@ -97,7 +102,6 @@ CARGO_CRATE_DEPENDS+=	syn-2.0.14
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.40
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.40
 CARGO_CRATE_DEPENDS+=	tiff-0.8.1
-CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	toml-0.7.3
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.1
 CARGO_CRATE_DEPENDS+=	toml_edit-0.19.8
