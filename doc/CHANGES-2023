@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2366 2023/04/23 08:28:28 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2367 2023/04/23 08:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3403,3 +3403,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.63 [pin 2023-04-23]
 	Updated graphics/wallust to 2.1.1 [pin 2023-04-23]
 	Updated shells/oh-my-posh to 14.32.2 [pin 2023-04-23]
+	Updated devel/py-mercurial to 6.4.2 [wiz 2023-04-23]
