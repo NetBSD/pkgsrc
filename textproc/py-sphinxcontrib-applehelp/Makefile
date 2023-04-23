@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/01/11 10:39:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/23 10:31:21 adam Exp $
 
-DISTNAME=	sphinxcontrib.applehelp-1.0.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/}
+DISTNAME=	sphinxcontrib-applehelp-1.0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-applehelp/}
 
@@ -15,8 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	${DISTNAME:S/./-/:C/-([^0-9])/_\1/g}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-sphinx
 
