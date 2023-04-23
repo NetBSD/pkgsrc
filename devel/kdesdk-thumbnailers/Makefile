@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/04/19 08:09:42 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/04/23 14:26:15 adam Exp $
 
 DISTNAME=	kdesdk-thumbnailers-${_KDE_VERSION}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	devel
 COMMENT=	Plugins for the KDE thumbnailing system
 
