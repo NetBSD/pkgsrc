@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2376 2023/04/23 10:22:03 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2377 2023/04/23 10:50:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3417,3 +3417,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-yamllint to 1.31.0 [adam 2023-04-23]
 	Updated sysutils/ansible-lint to 6.15.0 [adam 2023-04-23]
 	Updated www/zola to 0.17.2 [nikita 2023-04-23]
+	Updated textproc/py-sphinxcontrib-applehelp to 1.0.4 [adam 2023-04-23]
+	Updated databases/py-peewee to 3.16.2 [adam 2023-04-23]
