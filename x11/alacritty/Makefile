@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/03/28 20:27:11 pin Exp $
+# $NetBSD: Makefile,v 1.21 2023/04/23 08:24:54 pin Exp $
 
 DISTNAME=	alacritty-0.12.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -45,7 +46,8 @@ SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS=	bin share/examples/alacritty ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin share/applications share/examples/alacritty \
+			${PKGMANDIR}/man1 share/icons/hicolor/scalable/apps
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/alacritty \
@@ -56,6 +58,10 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty.1
 	${INSTALL_MAN} ${WRKSRC}/extra/alacritty-msg.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/alacritty-msg.1
+	${INSTALL_DATA} ${WRKSRC}/extra/linux/Alacritty.desktop \
+                 ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
@@ -66,4 +72,5 @@ do-install:
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
