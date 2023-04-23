@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:09:16 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/04/23 14:26:12 adam Exp $
 
-PKGREVISION= 33
+PKGREVISION= 34
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-auth-handler-${KTP_VERSION}
 CATEGORIES=	chat kde

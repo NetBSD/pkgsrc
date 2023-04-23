@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2023/04/19 08:08:32 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/04/23 14:26:09 adam Exp $
 #
 
 DISTNAME=	sword-1.9.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 MASTER_SITES=	http://www.crosswire.org/ftpmirror/pub/sword/source/v${PKGVERSION_NOREV:R}/
 
