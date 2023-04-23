@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.42 2023/01/16 10:41:37 adam Exp $
+$NetBSD: distinfo,v 1.43 2023/04/23 09:19:13 wiz Exp $
 
-BLAKE2s (ghostscript-10.0.0.tar.xz) = 898f28136378244d0a2f50fece503010f2c81b7b16f8c52a69eb855fe6a597fe
-SHA512 (ghostscript-10.0.0.tar.xz) = 660252841e9b24c411bc92d0eb104de464686131e70051f60108db1a6ecfe2ada2ccacbeed8f2ac84bf69338ad75c850e814c9ac4e0351943f9989d66b3b082d
-Size (ghostscript-10.0.0.tar.xz) = 62749144 bytes
+BLAKE2s (ghostscript-10.01.0.tar.xz) = a625a99209bb9ef75313de4b421c6c056eb7d946bde657d6912d7fd1a97ca4b5
+SHA512 (ghostscript-10.01.0.tar.xz) = b679b35bcdcf211d6aa41a571225a50449e7e36def75cf37fee8f06889df3a5a9726a7aef2fd5ae819c2071cb6fcf8712741cd2c131c9341b60936e684bd8d98
+Size (ghostscript-10.01.0.tar.xz) = 67564800 bytes
 SHA1 (patch-base_gserrors_h) = 36c8fcf27fcb0bfdcc075ad96efe3e44fb727d9a
 SHA1 (patch-base_lib.mak) = 723926f167b49568376ef0c0da6aa4ec01fe1516
 SHA1 (patch-base_mkromfs.c) = 9d9afbd0fbb8c70c8f4f7de3cadc5b54541f0db0
 SHA1 (patch-base_ttobjs.h) = 378ad7d316a4a9dc53b9c8e612582a7c8e9b3688
 SHA1 (patch-base_unix-dll.mak) = 8076ce689807872bf94b552daaf9547b646ca249
-SHA1 (patch-configure) = 0d018180a4d0796d6050bf65f0111a343739f010
+SHA1 (patch-configure) = c448faa2f588dd8d7f58a9c1498b3dc5e903a5e2
 SHA1 (patch-devices_devs.mak) = e9937d401a278cc6d0a6d4cff78c526375bc18ca
