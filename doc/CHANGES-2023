@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2387 2023/04/23 20:19:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2388 2023/04/23 22:10:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3440,3 +3440,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/patchelf to 0.18.0 [fcambus 2023-04-23]
 	Updated textproc/typst to 0.2.0 [wiz 2023-04-23]
 	Updated lang/vala to 0.56.7 [wiz 2023-04-23]
+	Added print/tex-ninecolors version 2022D [joerg 2023-04-23]
