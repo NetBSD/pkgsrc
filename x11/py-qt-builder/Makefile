@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/03/17 13:51:48 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/04/23 14:31:41 adam Exp $
 
-DISTNAME=	PyQt-builder-1.14.1
+DISTNAME=	PyQt-builder-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt/qt/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
