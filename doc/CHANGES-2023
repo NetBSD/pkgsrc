@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2380 2023/04/23 14:24:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2381 2023/04/23 14:35:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3431,3 +3431,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/boost to 1.82.0 [adam 2023-04-23]
 	Updated textproc/py-html5-parser to 0.4.11 [adam 2023-04-23]
 	Updated www/py-httpx-socks to 0.7.6 [adam 2023-04-23]
+	Updated x11/py-sip6 to 6.7.9 [adam 2023-04-23]
+	Updated x11/py-qt-builder to 1.15.0 [adam 2023-04-23]
+	Updated x11/py-sip-qt5 to 12.12.1 [adam 2023-04-23]
