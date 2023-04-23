@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.98 2023/04/19 08:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.99 2023/04/23 14:03:08 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
@@ -18,13 +17,13 @@ PLIST_VARS+=		backtrace context fiber log longdbl
 # pch enabled build is generally fragile and breaks with RELRO
 BJAM_ARGS+=		pch=off
 
-.if !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || !empty(MACHINE_ARCH:Msparc64)
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == m68k || ${MACHINE_ARCH} == sparc64
 BJAM_ARGS+=		--without-context
 BJAM_ARGS+=		--without-coroutine
 BJAM_ARGS+=		--without-fiber
 .else
 PLIST.context=		yes
-.  if empty(MACHINE_PLATFORM:MDarwin-1[0-4].*-*)
+.  if !${MACHINE_PLATFORM:MDarwin-1[0-4].*-*}
 PLIST.fiber=		yes
 .  endif
 .endif
@@ -44,10 +43,10 @@ PLIST.longdbl=		yes
 
 # Add backtrace libs when they got built because of libbacktrace
 # being available in the toolchain (not easy to detect beforehand).
-GENERATE_PLIST+=	cd ${DESTDIR:Q}/${PREFIX:Q}; \
-  for f in lib/libboost_stacktrace_backtrace.*; do \
-   if [ -f "$$f" ]; then echo "$$f"; fi; \
-  done;
+GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX}; \
+			for f in lib/libboost_stacktrace_backtrace.*; do \
+			if [ -f "$$f" ]; then echo "$$f"; fi; \
+			done;
 
 UNLIMIT_RESOURCES+=	stacksize
 
