@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/01/22 16:28:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/23 14:26:16 adam Exp $
 
 DISTNAME=	libcutl-1.10.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://www.codesynthesis.com/download/libcutl/1.10/
 EXTRACT_SUFX=	.tar.bz2

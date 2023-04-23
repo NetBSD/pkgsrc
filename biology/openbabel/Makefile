@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2023/04/19 08:08:05 adam Exp $
+# $NetBSD: Makefile,v 1.58 2023/04/23 14:26:12 adam Exp $
 #
 
 GITHUB_PROJECT=	openbabel
 DISTNAME=	openbabel-${RELVERSION:S/-/./g}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbabel/}
 GITHUB_TAG=	${PKGBASE}-${RELVERSION}

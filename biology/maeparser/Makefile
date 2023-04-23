@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/01/22 16:28:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/23 14:26:06 adam Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	maeparser-1.2.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schrodinger/}
 
