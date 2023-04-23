@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2373 2023/04/23 09:19:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2374 2023/04/23 10:03:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3410,3 +3410,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.1.8 [wiz 2023-04-23]
 	Updated audio/openal-soft to 1.23.1 [wiz 2023-04-23]
 	Updated print/ghostscript-agpl to 10.01.0 [wiz 2023-04-23]
+	Updated textproc/yq to 3.2.2 [adam 2023-04-23]
+	Updated misc/py-trove-classifiers to 2023.4.22 [adam 2023-04-23]
+	Updated graphics/py-seaborn to 0.12.2 [adam 2023-04-23]
+	Updated devel/py-pip to 23.1.1 [adam 2023-04-23]
