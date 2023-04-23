@@ -1,0 +1,5 @@
+This package carefully selects and defines 9 colors for 13 hues each. All
+colors with the same suffix number have equal luminance level. Also the
+color black is of level 0, and the color white is of level 10. Choosing
+any two colors that differ by at least 5 levels as foreground and
+background color will give a proper WCAG Color Contrast.
