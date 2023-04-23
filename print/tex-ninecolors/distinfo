@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/23 22:09:53 joerg Exp $
+
+BLAKE2s (ninecolors.r62006.tar.xz) = 186dff332da80ec733f47e3e3e17b998f746ee82b9053e8fc76fe0fea052d2b3
+SHA512 (ninecolors.r62006.tar.xz) = f755768830e02aa434432ab4e879646ad43d092f50b7e38e39009c98327c5ddcd23d0b5a7ee8d8afad30e69b6219bb871a14dc7b274ae11a60aec33df2c94ae6
+Size (ninecolors.r62006.tar.xz) = 2648 bytes
