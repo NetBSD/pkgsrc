@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/05/22 05:47:52 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/23 17:45:42 nils Exp $
 
-DISTNAME=	dehydrated-0.6.5
+DISTNAME=	dehydrated-0.7.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lukas2511/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dehydrated-io/}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	https://github.com/lukas2511/dehydrated
+HOMEPAGE=	https://dehydrated.io/
 COMMENT=	Letsencrypt/acme client implemented as a shell-script
 LICENSE=	mit
 
