@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.902 2023/04/11 12:28:35 markd Exp $
+# $NetBSD: Makefile,v 1.903 2023/04/23 22:11:46 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1229,6 +1229,7 @@ SUBDIR+=	tex-newverbs-doc
 SUBDIR+=	tex-nextpage
 SUBDIR+=	tex-nfssext-cfr
 SUBDIR+=	tex-nfssext-cfr-doc
+SUBDIR+=	tex-ninecolors
 SUBDIR+=	tex-nolbreaks
 SUBDIR+=	tex-nolbreaks-doc
 SUBDIR+=	tex-nomencl
