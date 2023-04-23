@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2383 2023/04/23 17:46:57 nils Exp $
+$NetBSD: CHANGES-2023,v 1.2384 2023/04/23 17:58:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-sip-qt5 to 12.12.1 [adam 2023-04-23]
 	Updated sysutils/logrotate to 3.21.0 [nils 2023-04-23]
 	Updated security/dehydrated to 0.7.1 [nils 2023-04-23]
+	Updated textproc/xfce4-dict to 0.8.5 [gutteridge 2023-04-23]
