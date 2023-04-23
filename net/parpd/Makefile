@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2023/04/13 17:57:19 roy Exp $
+# $NetBSD: Makefile,v 1.17 2023/04/23 07:52:21 roy Exp $
 
-DISTNAME=		parpd-2.0
+DISTNAME=		parpd-2.1.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
 GITHUB_PROJECT=		parpd
-GITHUB_TAG=		${DISTNAME}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://roy.marples.name/projects/parpd/
