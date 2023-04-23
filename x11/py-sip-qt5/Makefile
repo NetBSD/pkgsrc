@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/03/17 13:52:55 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/23 14:34:02 adam Exp $
 
-DISTNAME=	PyQt5_sip-12.11.1
+DISTNAME=	PyQt5_sip-12.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_sip/sip-qt5/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5_sip/}
