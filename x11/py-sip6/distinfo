@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/04/17 08:32:09 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/04/23 14:30:21 adam Exp $
 
-BLAKE2s (sip-6.7.8.tar.gz) = fb27da250e3997f1ad96895e272797734355fdb9baf4f2e8762e25b72ceca2e3
-SHA512 (sip-6.7.8.tar.gz) = 5d8965542c3fe821c95b2d2331d7f7df2ac9587a535f0b91f31223f4ee29f893ee73af42dc575abdff44a22a5b2ad98c6738211757595ae5a11f5a54fcea960d
-Size (sip-6.7.8.tar.gz) = 1162921 bytes
+BLAKE2s (sip-6.7.9.tar.gz) = 7f930536948a79e1b82db312ca36de504c9bae60a070316928cfbddc1bdfbf34
+SHA512 (sip-6.7.9.tar.gz) = bb9d0d0d92002b6fd33f7e8ebe8cd62456dacc16b5734b73760b1ba14fb9b1f2b9b6640b40196c6cf5f345e1afde48bdef39675c4d3480041771325d4cf3c233
+Size (sip-6.7.9.tar.gz) = 1163252 bytes
