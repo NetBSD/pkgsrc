@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/29 20:36:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/23 10:00:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -14,6 +14,8 @@ ${PYSITELIB}/seaborn/_core/__init__.py
 ${PYSITELIB}/seaborn/_core/__init__.pyc
 ${PYSITELIB}/seaborn/_core/data.py
 ${PYSITELIB}/seaborn/_core/data.pyc
+${PYSITELIB}/seaborn/_core/exceptions.py
+${PYSITELIB}/seaborn/_core/exceptions.pyc
 ${PYSITELIB}/seaborn/_core/groupby.py
 ${PYSITELIB}/seaborn/_core/groupby.pyc
 ${PYSITELIB}/seaborn/_core/moves.py
@@ -60,6 +62,8 @@ ${PYSITELIB}/seaborn/_stats/base.py
 ${PYSITELIB}/seaborn/_stats/base.pyc
 ${PYSITELIB}/seaborn/_stats/counting.py
 ${PYSITELIB}/seaborn/_stats/counting.pyc
+${PYSITELIB}/seaborn/_stats/density.py
+${PYSITELIB}/seaborn/_stats/density.pyc
 ${PYSITELIB}/seaborn/_stats/order.py
 ${PYSITELIB}/seaborn/_stats/order.pyc
 ${PYSITELIB}/seaborn/_stats/regression.py
