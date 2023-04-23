@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:19:48 nia Exp $
+$NetBSD: distinfo,v 1.23 2023/04/23 17:18:39 nils Exp $
 
-BLAKE2s (logrotate-3.18.0.tar.gz) = 64859760b8b7887a4daca71f70fb55ecce9e8a9fed23c26f6bc95be6daf86819
-SHA512 (logrotate-3.18.0.tar.gz) = d1bca267fbec4acbb83ffba4d3ac4c864f4269d8513e5614e7dbe6f3b1f176685218bffdb5d62f559ee73f84cf9a8a257c9f63e30af058d12d0034240f247586
-Size (logrotate-3.18.0.tar.gz) = 224873 bytes
+BLAKE2s (logrotate-3.21.0.tar.gz) = da80976c96e257efc985851cb3d240868171a839ee87326a390154247651ed7e
+SHA512 (logrotate-3.21.0.tar.gz) = f7a58204cd9741de325de18d654ca084ee803d65ee514e34cff7e01ada55adbbdd5863d8d4ad706cf385709a3cdebc4505428f8ba60e195ebf9847de66f2d229
+Size (logrotate-3.21.0.tar.gz) = 231500 bytes
 SHA1 (patch-config.c) = 5f967ff8479c78628e62e23e200c6373aebd0786
-SHA1 (patch-examples_logrotate.conf) = 4d0aad215e66850e8ae1a005764f8bd109fb76c9
+SHA1 (patch-examples_logrotate.conf) = f91f2c22f2b3326f965385952b04996ce1886e6d
 SHA1 (patch-examples_logrotate.cron) = 31a19e1b697e945299bbbe6701674d886379a49c
