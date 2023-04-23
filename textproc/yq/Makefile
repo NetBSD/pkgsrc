@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/02/23 19:33:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/23 09:53:24 adam Exp $
 
-DISTNAME=	yq-3.1.1
+DISTNAME=	yq-3.2.2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yq/}
 
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	jq-[0-9]*:../../devel/jq
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.8.1:../../devel/py-argcomplete
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.0:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.6:../../textproc/py-tomlkit
 DEPENDS+=	${PYPKGPREFIX}-xmltodict>=0.11.0:../../textproc/py-xmltodict
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 # noted in setup.py, but not actually needed
