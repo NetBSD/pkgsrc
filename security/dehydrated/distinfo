@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/23 17:45:42 nils Exp $
 
-BLAKE2s (dehydrated-0.6.5.tar.gz) = 038507230c5f05984ef495082328807ce63febb2cca7f879e741ac0b79af4d71
-SHA512 (dehydrated-0.6.5.tar.gz) = da8ff3ecb7ddeb25356469fa272aef4e7c3705049caf88d09656dbc4baf29e0efa135e6f154c78cec82da17a27a78f2145ee3b7bd71521a080e10550d09b8a53
-Size (dehydrated-0.6.5.tar.gz) = 82274 bytes
+BLAKE2s (dehydrated-0.7.1.tar.gz) = 1ca1089411d9f07690dc52d1ea1d7806eed9acc58f3c535ac7f4c5421795e897
+SHA512 (dehydrated-0.7.1.tar.gz) = 1d584c3876cdc1ef213b2feb02e15d2b47ef2b6504e8a837ad45d9d14929a82de28bee7395a75659721ae18bd8f26f4f2759ad8eaef66c671c7085c9859f6555
+Size (dehydrated-0.7.1.tar.gz) = 120575 bytes
