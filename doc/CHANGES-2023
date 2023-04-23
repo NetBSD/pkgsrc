@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2379 2023/04/23 14:05:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2380 2023/04/23 14:24:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3429,3 +3429,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/boost-mpi to 1.82.0 [adam 2023-04-23]
 	Updated devel/py-boost to 1.82.0 [adam 2023-04-23]
 	Updated meta-pkgs/boost to 1.82.0 [adam 2023-04-23]
+	Updated textproc/py-html5-parser to 0.4.11 [adam 2023-04-23]
+	Updated www/py-httpx-socks to 0.7.6 [adam 2023-04-23]
