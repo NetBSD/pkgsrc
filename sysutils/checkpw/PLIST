@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/24 17:38:00 schmonz Exp $
+bin/checkapoppw
+bin/checkpw
+bin/loginlog
+bin/selectcheckpw
