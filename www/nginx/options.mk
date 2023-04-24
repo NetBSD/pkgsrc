@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.93 2023/04/18 21:10:38 osa Exp $
+# $NetBSD: options.mk,v 1.94 2023/04/24 16:34:38 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
 PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
-PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
+PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip redis rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sts sub upload uwsgi vts
 
@@ -18,7 +18,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
-PLIST_VARS+=		perl rtmp setmisc stream sts upload uwsgi vts
+PLIST_VARS+=		perl redis rtmp setmisc stream sts upload uwsgi vts
 
 .include "../../mk/bsd.options.mk"
 
@@ -116,6 +116,18 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 
 .if !empty(PKG_OPTIONS:Mrealip)
 CONFIGURE_ARGS+=	--with-http_realip_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mredis)
+REDIS_GH_ACCOUNT=	osokin
+REDIS_GH_PROJECT=	ngx_http_redis
+REDIS_VERSION=		59eb1c3
+REDIS_DISTNAME=		${REDIS_GH_PROJECT}-${REDIS_VERSION}
+REDIS_DISTFILE=		${REDIS_GH_ACCOUNT}-${REDIS_DISTNAME}_GH.tar.gz
+SITES.${REDIS_DISTFILE}=-${CODELOAD_SITE_GITHUB:=${REDIS_GH_ACCOUNT}/${REDIS_GH_PROJECT}/tar.gz/${REDIS_VERSION}?dummy=${REDIS_DISTFILE}}
+DISTFILES+=		${REDIS_DISTFILE}
+DSO_EXTMODS+=		redis
+PLIST.redis=		yes
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
