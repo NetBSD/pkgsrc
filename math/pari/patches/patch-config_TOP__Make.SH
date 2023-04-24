@@ -1,4 +1,4 @@
-$NetBSD: patch-config_TOP__Make.SH,v 1.2 2022/10/30 10:00:15 nros Exp $
+$NetBSD: patch-config_TOP__Make.SH,v 1.3 2023/04/24 08:51:13 riastradh Exp $
 
 * don't generate docs implicitly
 
@@ -10,5 +10,5 @@ $NetBSD: patch-config_TOP__Make.SH,v 1.2 2022/10/30 10:00:15 nros Exp $
  	@\$(MAKE) gp
 -	@-cd doc && \$(MAKE) doc
  
- gp bench test-kernel test-all install cleanall cleanobj cleantest nsis link-data install-bin install-doc install-docpdf install-nodata install-data install-lib-sta install-bin-sta dobench dyntest-all statest-all tune $top_test_extra $top_dotest_extra::
+ gp bench test-kernel test-all install cleanall cleanobj cleantest nsis link-data install-bin install-doc install-doctex install-docdvi install-docpdf install-nodata install-data install-lib-sta install-bin-sta dobench dyntest-all statest-all tune $top_test_extra $top_dotest_extra::
  	@dir=\`config/objdir\`; echo "Making \$@ in \$\$dir";\\
