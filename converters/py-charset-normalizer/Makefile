@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/11/18 18:50:29 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/24 10:30:04 adam Exp $
 
-DISTNAME=	charset-normalizer-3.0.1
+DISTNAME=	charset-normalizer-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/charset-normalizer/}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
