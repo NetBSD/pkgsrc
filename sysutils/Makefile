@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1041 2023/04/24 07:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.1042 2023/04/24 17:38:02 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -97,6 +97,7 @@ SUBDIR+=	cfm
 SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
 SUBDIR+=	checkperms
+SUBDIR+=	checkpw
 SUBDIR+=	clex
 SUBDIR+=	collectd
 SUBDIR+=	collectd-CGP
