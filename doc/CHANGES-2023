@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2411 2023/04/24 13:48:29 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2412 2023/04/24 14:17:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3469,3 +3469,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/php-xdebug to 3.2.1 [taca 2023-04-24]
 	Updated net/bind916 to 9.16.40 [taca 2023-04-24]
 	Updated net/bind918 to 9.18.14 [taca 2023-04-24]
+	Updated time/ruby-tzinfo-data to 1.2023.3 [taca 2023-04-24]
