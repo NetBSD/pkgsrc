@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/04/24 17:38:00 schmonz Exp $
+
+BLAKE2s (checkpw-1.03.tar.gz) = 0ab9f123d1aa8d75671d37ce47c84fee974e38950b7eb2ff5841a1f57355e6b0
+SHA512 (checkpw-1.03.tar.gz) = 0b8232030a3ef33963a32d3908beadcbfb778382b555096a8aeea66fb733a9e65ba0b8bd9dba6db54ebbbeff6f8e21761081f45804372d5450129cca195d3342
+Size (checkpw-1.03.tar.gz) = 30309 bytes
+SHA1 (patch-Makefile) = c6051bee48133ecacf192dc302f39f095ee7164a
