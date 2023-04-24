@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:54:24 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/04/24 00:13:12 schmonz Exp $
 
 BLAKE2s (netqmail-1.06-acceptutils-20201214.patch) = 913e7ab13b08b32a3f986e4f854727745e30dca59f1debb8afd13837efdf4f4b
 SHA512 (netqmail-1.06-acceptutils-20201214.patch) = 5fddb54e6a3d20a96d01a2a65f59a2a4d484d611ede902c3bc9685c4b37084acb99d868e18dada42bc5f36cec24b2ed9d5f07d63a2a435f24636945d7378a5b0
