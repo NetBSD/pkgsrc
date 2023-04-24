@@ -1,10 +1,9 @@
-To SMTP-authenticate users without patching ofmipd(8) or qmail-smtpd(8),
-compose the following programs into your configuration:
+Already using one of the popular AUTH patches? acceptutils is different.
+Compare and contrast, noting that:
 
-- reup runs a program repeatedly until it succeeds.
-- authup offers SMTP or POP3 authentication and calls checkpassword.
-- checknotroot refuses to run as UID 0.
-- fixsmtpio filters SMTP I/O and exit status to suit authup.
-
-authup and fixsmtpio can also offer STARTTLS for message submission and
-incoming SMTP, respectively.
+- TLS is included
+- Message submission has been redesigned to cohere
+- Submission and incoming SMTP are distinct services
+- Neither of them runs weird privileged child processes
+- POP3 has been improved, too
+- These improvements come from new programs, not patches
