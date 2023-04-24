@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/03/08 08:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/24 08:46:36 he Exp $
 
 DISTNAME=	rubberband-3.1.2
 CATEGORIES=	audio
@@ -24,6 +24,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/rubberband.pc
 
+.include "../../mk/atomic64.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
