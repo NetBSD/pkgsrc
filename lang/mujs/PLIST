@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/30 12:47:02 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/24 07:50:40 wiz Exp $
 bin/mujs
+bin/mujs-pp
 include/mujs.h
-lib/libmujs.la
+lib/libmujs.a
 lib/pkgconfig/mujs.pc
