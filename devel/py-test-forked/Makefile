@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/09/29 10:08:39 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/24 07:18:17 adam Exp $
 
-DISTNAME=	pytest-forked-1.4.0
+DISTNAME=	pytest-forked-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-forked/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-forked
 COMMENT=	Run tests in isolated forked subprocesses
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-test>=3.10:../../devel/py-test
 
