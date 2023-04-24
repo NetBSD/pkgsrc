@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/24 13:04:48 riastradh Exp $
+
+BLAKE2s (pari-seadata-small-0.0a20090618/seadata-small.tgz) = bf63d34da31bffaad6fc9ba8d020248c276dd3eaaf61a2b1e37e7c0da8777bf2
+SHA512 (pari-seadata-small-0.0a20090618/seadata-small.tgz) = dd9036d8173a1ac66ca48c8c7f794a01afd2a090d8ef623182a6156f08ae75fd5c6b0401882b20762664ce16fcb69dd58faa1acba6a220aee8ce55c261e0e2a9
+Size (pari-seadata-small-0.0a20090618/seadata-small.tgz) = 670664 bytes
