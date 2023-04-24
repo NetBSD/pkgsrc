@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/01/29 21:17:49 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.58 2023/04/24 08:40:32 wiz Exp $
 
 DISTNAME=	notification-daemon-0.7.6
 PKGREVISION=	22
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/notification-daemon/0.7/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.galago-project.org/
+#HOMEPAGE=	http://www.galago-project.org/
 COMMENT=	Shows notification messages on the desktop
 LICENSE=	gnu-gpl-v2
 
