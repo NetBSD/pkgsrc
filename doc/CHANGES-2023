@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2417 2023/04/24 17:23:05 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2418 2023/04/24 17:38:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx-devel to 1.24.0nb5 [osa 2023-04-24]
 	Updated www/nginx to 1.24.0nb5 [osa 2023-04-24]
 	Updated mail/qmail to 1.03nb52 [schmonz 2023-04-24]
+	Added sysutils/checkpw version 1.03 [schmonz 2023-04-24]
