@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2409 2023/04/24 13:43:12 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2410 2023/04/24 13:45:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/nuclei to 2.9.2 [leot 2023-04-24]
 	Updated security/tlsx to 1.0.7 [leot 2023-04-24]
 	Updated devel/php-xdebug to 3.2.1 [taca 2023-04-24]
+	Updated net/bind916 to 9.16.40 [taca 2023-04-24]
