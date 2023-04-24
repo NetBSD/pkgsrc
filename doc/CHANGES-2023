@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2406 2023/04/24 13:06:34 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.2407 2023/04/24 13:33:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3464,3 +3464,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xmlschema to 2.2.3 [adam 2023-04-24]
 	Added math/pari-seadata version 0.0a20090618 [riastradh 2023-04-24]
 	Added math/pari-seadata-small version 0.0a20090618 [riastradh 2023-04-24]
+	Updated security/nuclei to 2.9.2 [leot 2023-04-24]
