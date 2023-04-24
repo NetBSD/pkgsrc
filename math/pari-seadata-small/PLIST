@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/24 13:04:48 riastradh Exp $
+share/pari/seadata/README
+share/pari/seadata/sea0
+share/pari/seadata/sea2
