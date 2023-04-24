@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2413 2023/04/24 15:26:27 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2414 2023/04/24 15:28:16 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3472,3 +3472,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/ruby-tzinfo-data to 1.2023.3 [taca 2023-04-24]
 	Updated games/wesnoth to 1.16.9 [adam 2023-04-24]
 	Updated finance/py-braintree to 4.19.0 [adam 2023-04-24]
+	Updated www/nginx-devel to 1.24.0nb4 [osa 2023-04-24]
+	Updated www/nginx to 1.24.0nb4 [osa 2023-04-24]
