@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2401 2023/04/24 08:29:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2402 2023/04/24 08:51:52 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3457,3 +3457,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/qpdf to 11.3.0 [wiz 2023-04-24]
 	Updated lang/mujs to 1.3.3 [wiz 2023-04-24]
 	Updated x11/dunst to 1.9.2 [wiz 2023-04-24]
+	Updated math/pari to 2.15.3 [riastradh 2023-04-24]

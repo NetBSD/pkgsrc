@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22795 2023/04/24 07:50:49 wiz Exp $
+$NetBSD: TODO,v 1.22796 2023/04/24 08:51:52 riastradh Exp $
 
 Suggested new packages
 ======================
@@ -749,7 +749,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gossip-0.31
 	o got-0.74
 	o gourmet-0.13.3
-	o pari-2.15.3
 	o gperiodic-3.0.3
 	o gpick-0.3
 	o gprolog-1.5.0 [adds arm64 support]
