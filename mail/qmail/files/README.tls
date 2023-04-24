@@ -4,12 +4,12 @@
 notqmail does not yet ship with native support for TLS encryption. This
 notqmail package enables outbound TLS via a patch:
 
-<URL:https://schmonz.com/qmail/tlsonlyremote/>
+<URL:https://schmonz.com/software/tlsonlyremote/>
 
 To enable TLS for incoming mail, message submission, and POP3, install
 the qmail-run package. It includes these add-on programs:
 
-<URL:https://schmonz.com/qmail/acceptutils/>
+<URL:https://schmonz.com/software/acceptutils/>
 
 With qmail-run installed, follow these steps:
 
