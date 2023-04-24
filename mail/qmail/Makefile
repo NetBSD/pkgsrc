@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.125 2022/10/26 10:31:39 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2023/04/24 17:22:59 schmonz Exp $
 #
 
 DISTNAME=		notqmail-1.08
 PKGNAME=		qmail-1.03
-PKGREVISION=		51
+PKGREVISION=		52
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=notqmail/}
 GITHUB_PROJECT=		notqmail
@@ -11,7 +11,7 @@ GITHUB_RELEASE=		${DISTNAME}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://notqmail.org/
-COMMENT=		Secure, reliable, efficient, simple, and fast MTA
+COMMENT=		Community-driven open-source successor to qmail
 LICENSE=		public-domain
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
@@ -138,7 +138,7 @@ QMAILPATCHES=			notqmail:${DEFAULT_DISTFILES}
 QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
 TLSREMOTE_PATCH=		notqmail-1.07-tls-20200107-onlyremote-20200202.patch
 PATCHFILES+=			${TLSREMOTE_PATCH}
-SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
+SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/software/tlsonlyremote/
 
 QMAILPATCHES+=			bigdns:${BIGDNS_PATCH}
 BIGDNS_PATCH=			qmail-103.patch

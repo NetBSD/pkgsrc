@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.70 2021/01/14 15:25:22 schmonz Exp $
+# $NetBSD: options.mk,v 1.71 2023/04/24 17:22:59 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=		eai inet6 pam syncdir tai-system-clock tls
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS+=		qmail-customerror qmail-srs
 QMAILPATCHES+=			eai:${EAI_PATCH}
 EAI_PATCH=			netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch
 PATCHFILES+=			${EAI_PATCH}
-SITES.${EAI_PATCH}=		https://schmonz.com/qmail/eai/
+SITES.${EAI_PATCH}=		https://schmonz.com/software/eai/
 CPPFLAGS+=			-DEHLO=1
 .endif
 
@@ -39,7 +39,7 @@ PLIST.srs=			yes
 QMAILPATCHES+=			srs:${SRS_PATCH}
 SRS_PATCH=			notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch
 PATCHFILES+=			${SRS_PATCH}
-SITES.${SRS_PATCH}=		https://schmonz.com/qmail/srs/
+SITES.${SRS_PATCH}=		https://schmonz.com/software/srs/
 PATCH_DIST_CAT.${SRS_PATCH}=	${SED} -e 's|compile forward.c sig.h readwrite.h exit.h env.h qmail.h substdio.h|compile forward.c sig.h readwrite.h env.h qmail.h substdio.h|g' < ${SRS_PATCH}
 SUBST_CLASSES+=			srsinclude
 SUBST_STAGE.srsinclude=		do-configure
