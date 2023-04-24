@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/03/06 19:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/04/24 08:29:25 wiz Exp $
 
-DISTNAME=	dunst-1.9.0
-PKGREVISION=	2
+DISTNAME=	dunst-1.9.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +12,10 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	bash:test gmake pod2man pkg-config
 
+# PASS test_notification_referencing:  (0 ticks, 0.000 sec)
+# bash: line 2: 14069 Segmentation fault      (core dumped) ./test/test -v
+#      11348 Done                    | ./test/greenest.awk
+# gmake: *** [Makefile:76: test] Error 139
 TEST_TARGET=	test
 
 MAKE_FLAGS+=	SYSTEMD=0
@@ -29,12 +32,6 @@ SUBST_FILES.fix-paths=		dunstrc docs/dunst.1.pod
 SUBST_FILES.fix-paths+=		docs/dunst.5.pod
 SUBST_SED.fix-paths+=		-e 's,/usr/bin,${PREFIX}/bin,g'
 SUBST_SED.fix-paths+=		-e 's,/usr/share,${PREFIX}/share,g'
-
-SUBST_CLASSES+=		malloc
-SUBST_STAGE.malloc=	pre-configure
-SUBST_MESSAGE.malloc=	Replacing malloc.h.
-SUBST_FILES.malloc=	src/icon-lookup.c
-SUBST_SED.malloc=	-e 's|<malloc.h>|<stdlib.h>|g'
 
 INSTALL_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 INSTALL_ENV+=	SYSCONFDIR=${PREFIX}/share
