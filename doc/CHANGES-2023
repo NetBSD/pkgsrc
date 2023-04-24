@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2408 2023/04/24 13:39:10 leot Exp $
+$NetBSD: CHANGES-2023,v 1.2409 2023/04/24 13:43:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/pari-seadata-small version 0.0a20090618 [riastradh 2023-04-24]
 	Updated security/nuclei to 2.9.2 [leot 2023-04-24]
 	Updated security/tlsx to 1.0.7 [leot 2023-04-24]
+	Updated devel/php-xdebug to 3.2.1 [taca 2023-04-24]
