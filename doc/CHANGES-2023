@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2392 2023/04/24 00:08:51 roy Exp $
+$NetBSD: CHANGES-2023,v 1.2393 2023/04/24 00:13:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dhcpcd-icons to 0.7.9 [roy 2023-04-24]
 	Updated net/dhcpcd-gtk to 0.7.9 [roy 2023-04-24]
 	Updated net/dhcpcd-qt to 0.7.9 [roy 2023-04-24]
+	Updated mail/qmail-acceptutils to 20201214nb1 [schmonz 2023-04-24]
