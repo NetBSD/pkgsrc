@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2023/03/07 20:20:58 adam Exp $
+# $NetBSD: Makefile,v 1.44 2023/04/24 10:52:04 adam Exp $
 
-DISTNAME=	xmlschema-2.2.2
+DISTNAME=	xmlschema-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
@@ -10,14 +10,14 @@ HOMEPAGE=	https://github.com/brunato/xmlschema
 COMMENT=	XML Schema validator and decoder
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-elementpath>=2.5.0:../../textproc/py-elementpath
+DEPENDS+=	${PYPKGPREFIX}-elementpath>=4.0.0:../../textproc/py-elementpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-elementpath
-
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-elementpath
 
 post-install:
 .for bin in xmlschema-json2xml xmlschema-validate xmlschema-xml2json
