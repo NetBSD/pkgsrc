@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2023/01/29 21:17:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2023/04/24 01:25:02 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-fsguard-plugin-1.1.2
+DISTNAME=	xfce4-fsguard-plugin-1.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.1/
 
