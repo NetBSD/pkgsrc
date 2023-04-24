@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2398 2023/04/24 07:24:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2399 2023/04/24 07:38:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-forked to 1.6.0 [adam 2023-04-24]
 	Updated www/py-httplib2 to 0.22.0 [adam 2023-04-24]
 	Updated print/poppler to 23.04.0 [wiz 2023-04-24]
+	Updated print/qpdf to 11.3.0 [wiz 2023-04-24]
