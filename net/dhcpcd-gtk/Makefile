@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2023/01/29 21:17:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2023/04/24 00:07:47 roy Exp $
 #
 
 PKGNAME=		dhcpcd-gtk-${DHCPCD_UI_VERSION}
-PKGREVISION=		2
 CATEGORIES=		net
 
 COMMENT=		GTK+ system tray monitor for dhcpcd
