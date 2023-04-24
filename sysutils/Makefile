@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1040 2023/04/16 20:15:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1041 2023/04/24 07:01:42 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -565,6 +565,7 @@ SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-eliot
 SUBDIR+=	py-filetype
+SUBDIR+=	py-fsspec
 SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-invoke
 SUBDIR+=	py-jeepney

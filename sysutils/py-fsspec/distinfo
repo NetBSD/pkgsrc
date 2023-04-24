@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/24 07:01:43 adam Exp $
+
+BLAKE2s (fsspec-2023.4.0.tar.gz) = 2412025974a77053780651b7fec8607401f5b3571ead53fc755f6a1c8b901489
+SHA512 (fsspec-2023.4.0.tar.gz) = 23792988ec7c1f38cf288d5db853ff14c9a38c18b02cf0bdcadc994c9ca6300129ce1fec972b641536a7bee3b9c0d52bec5cfeb0039676bd43d5b6fcf2064fd6
+Size (fsspec-2023.4.0.tar.gz) = 145945 bytes
