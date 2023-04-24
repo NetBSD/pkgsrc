@@ -1,0 +1,14 @@
+checkpw is a simple and flexible checkpassword interface package.
+
+checkpw checks password which is stored in a file in the Maildir
+directory. The file has read and write permissions to the user only.
+checkpw checks real user's password.
+
+- checkpw allows POP authentication.
+- checkapoppw allows APOP authentication.
+- Multiple maildirs per POP3 user are supported.
+- Multiple password per maildir are supported.
+
+Before invoking following program, checkpw and checkapoppw set up $USER,
+$EXT, $HOME, $SHELL, its supplementary groups, its gid, its uid, and its
+working directory.
