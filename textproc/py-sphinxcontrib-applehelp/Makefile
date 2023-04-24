@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/04/23 10:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/24 20:56:13 wiz Exp $
 
 DISTNAME=	sphinxcontrib-applehelp-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	http://sphinx-doc.org/
 COMMENT=	Sphinx API for Apple help books
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
