@@ -1,0 +1,9 @@
+Data package for math/pari.
+
+Needed by ellap and ellcard for large primes.
+
+These polynomials were extracted from the ECHIDNA databases and
+computed by David R. Kohel.  This covers finite fields of cardinality q
+up to 350 bits.  PARI/GP 2.9 contains fallback code to go on when all
+modular polynomials in the database have been exhausted and can handle
+larger fields (with an important slowdown).
