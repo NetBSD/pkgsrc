@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2394 2023/04/24 00:38:05 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2395 2023/04/24 01:25:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3447,3 +3447,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dhcpcd-qt to 0.7.9 [roy 2023-04-24]
 	Updated mail/qmail-acceptutils to 20201214nb1 [schmonz 2023-04-24]
 	Updated mail/qmail-rejectutils to 20201215nb1 [schmonz 2023-04-24]
+	Updated sysutils/xfce4-fsguard-plugin to 1.1.3 [gutteridge 2023-04-24]
