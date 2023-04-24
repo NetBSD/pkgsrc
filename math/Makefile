@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.560 2023/04/14 08:20:50 pin Exp $
+# $NetBSD: Makefile,v 1.561 2023/04/24 13:04:48 riastradh Exp $
 
 COMMENT=	Mathematics
 
@@ -359,6 +359,8 @@ SUBDIR+=	p5-Statistics-TTest
 SUBDIR+=	p5-Test-Number-Delta
 SUBDIR+=	pari
 SUBDIR+=	pari-galdata
+SUBDIR+=	pari-seadata
+SUBDIR+=	pari-seadata-small
 SUBDIR+=	pari23
 SUBDIR+=	pcg
 SUBDIR+=	pear-Math_BigInteger
