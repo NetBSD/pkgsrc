@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/04/11 02:11:57 markd Exp $
+# $NetBSD: Makefile,v 1.78 2023/04/24 04:57:01 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	66744
@@ -946,7 +946,7 @@ DEPENDS+=	tex-nfssext-cfr-[0-9]*:../../print/tex-nfssext-cfr
 # depend niceframe
 # depend nicetext
 # depend nidanfloat
-# depend ninecolors
+DEPENDS+=	tex-ninecolors-[0-9]*:../../print/tex-ninecolors
 # depend nlctdoc
 # depend noconflict
 # depend noindentafter
@@ -1295,7 +1295,7 @@ DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 # depend tabularborder
 # depend tabularcalc
 # depend tabularew
-# depend tabularray
+DEPENDS+=	tex-tabularray-[0-9]*:../../print/tex-tabularray
 DEPENDS+=	tex-tabulary-[0-9]*:../../print/tex-tabulary
 # depend tagging
 # depend tagpair
