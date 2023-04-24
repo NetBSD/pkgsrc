@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/06/13 18:43:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/24 07:03:08 adam Exp $
 bin/lsm2bin-${PYVERSSUFFIX}
 bin/tiff2fsspec-${PYVERSSUFFIX}
 bin/tiffcomment-${PYVERSSUFFIX}
@@ -15,6 +15,12 @@ ${PYSITELIB}/tifffile/__init__.pyo
 ${PYSITELIB}/tifffile/__main__.py
 ${PYSITELIB}/tifffile/__main__.pyc
 ${PYSITELIB}/tifffile/__main__.pyo
+${PYSITELIB}/tifffile/_imagecodecs.py
+${PYSITELIB}/tifffile/_imagecodecs.pyc
+${PYSITELIB}/tifffile/_imagecodecs.pyo
+${PYSITELIB}/tifffile/geodb.py
+${PYSITELIB}/tifffile/geodb.pyc
+${PYSITELIB}/tifffile/geodb.pyo
 ${PYSITELIB}/tifffile/lsm2bin.py
 ${PYSITELIB}/tifffile/lsm2bin.pyc
 ${PYSITELIB}/tifffile/lsm2bin.pyo
@@ -30,6 +36,3 @@ ${PYSITELIB}/tifffile/tiffcomment.pyo
 ${PYSITELIB}/tifffile/tifffile.py
 ${PYSITELIB}/tifffile/tifffile.pyc
 ${PYSITELIB}/tifffile/tifffile.pyo
-${PYSITELIB}/tifffile/tifffile_geodb.py
-${PYSITELIB}/tifffile/tifffile_geodb.pyc
-${PYSITELIB}/tifffile/tifffile_geodb.pyo
