@@ -1,11 +1,11 @@
-# $NetBSD: config-fast-pkgsrc-defaults.sh,v 1.1 2019/08/20 02:38:04 schmonz Exp $
+# $NetBSD: config-fast-pkgsrc-defaults.sh,v 1.2 2023/04/24 17:22:59 schmonz Exp $
 
-SORT=@SORT@
-MV=@MV@
-CP=@CP@
+SORT="@SORT@"
+MV="@MV@"
+CP="@CP@"
 
-PKG_SYSCONFDIR=@PKG_SYSCONFDIR@
-QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
+PKG_SYSCONFDIR="@PKG_SYSCONFDIR@"
+QMAIL_QUEUE_EXTRA="@QMAIL_QUEUE_EXTRA@"
 
 cd ${PKG_SYSCONFDIR}/.pkgsrc-defaults-do-not-edit
 for i in locals rcpthosts; do
