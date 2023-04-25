@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/01/28 19:47:54 he Exp $
+# $NetBSD: Makefile,v 1.44 2023/04/25 13:51:49 jperkin Exp $
 
 DISTNAME=	pandas-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.31:../../devel/py-test-xdist
 
 USE_LANGUAGES=	c c++11
 
-GCC_REQD=	8
+GCC_REQD+=	8
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
