@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2419 2023/04/25 03:32:20 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.2420 2023/04/25 07:08:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3481,3 +3481,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/qmail to 1.03nb52 [schmonz 2023-04-24]
 	Added sysutils/checkpw version 1.03 [schmonz 2023-04-24]
 	Added devel/galasm version 2.1 [thorpej 2023-04-24]
+	Updated net/openvpn to 2.6.3 [adam 2023-04-25]
+	Updated www/py-yarl to 1.9.1 [adam 2023-04-25]
