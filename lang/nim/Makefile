@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/04/19 22:35:27 nikita Exp $
+# $NetBSD: Makefile,v 1.32 2023/04/25 15:34:38 nikita Exp $
 
 DISTNAME=	nim-1.6.12
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +20,11 @@ INSTALLATION_DIRS=	bin
 
 post-patch:
 	cd ${WRKSRC}/bin && ${LN} -sf nim-gdb nim-gdb.bash
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	config/nim.cfg
+SUBST_SED.paths=	-e 's,/usr/pkg,${PREFIX},g'
 
 # nim doesn't honor the environment variable LDFLAGS. In order to
 # support PKGSRC_USE_RELRO, we need to translate the flags to compiler
