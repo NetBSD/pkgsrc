@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2439 2023/04/25 21:40:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2440 2023/04/25 21:53:13 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/meson to 1.1.0 [nikita 2023-04-25]
 	Updated lang/jimtcl to 0.82nb1 [triaxx 2023-04-25]
 	Updated security/mbedtls3 to 3.4.0 [wiz 2023-04-25]
+	Updated editors/mg to 20230406 [nikita 2023-04-25]
