@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2023/04/19 08:08:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2023/04/25 13:40:42 wiz Exp $
 
 BUILDLINK_TREE+=	freetds
 
@@ -14,11 +14,11 @@ BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
 pkgbase := freetds
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.freetds:Mgnutls)
+.if ${PKG_BUILD_OPTIONS.freetds:Mgnutls}
 .  include "../../security/gnutls/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.freetds:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.freetds:Mopenssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 .endif # FREETDS_BUILDLINK3_MK
