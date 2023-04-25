@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2435 2023/04/25 16:24:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2436 2023/04/25 19:48:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3506,3 +3506,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-path.py to 12.5.0 [wiz 2023-04-25]
 	Updated pkgtools/pkglint to 23.1.8 [rillig 2023-04-25]
 	Updated x11/wired-notify to 0.10.2nb2 [wiz 2023-04-25]
+	Updated x11/xf86-video-ati to 22.0.0 [wiz 2023-04-25]
