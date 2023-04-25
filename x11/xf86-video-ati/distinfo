@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.42 2022/07/19 11:59:05 hauke Exp $
+$NetBSD: distinfo,v 1.43 2023/04/25 19:47:59 wiz Exp $
 
-BLAKE2s (xf86-video-ati-19.1.0.tar.bz2) = 07180b71f7a5bb49dfb06a3c763120607799603ae82a79d90fd7733c45e3d8f3
-SHA512 (xf86-video-ati-19.1.0.tar.bz2) = 73a81f6c492daf2e89067fb52b3033dc0fe6841f109627ddca1aee54a45a738c8c134443753a2a2aaa2c131e1d560057ebc76351ff2304c16407df3ff568fcd6
-Size (xf86-video-ati-19.1.0.tar.bz2) = 904558 bytes
-SHA1 (patch-configure) = bdd1014b215af69c2bb837d36829e12e86eb5764
-SHA1 (patch-src_drmmode__display.c) = 70f9271286f9190f79815dd0643ad6bac78b4d66
-SHA1 (patch-src_radeon.h) = d3921c60f64e3e74633b8e7b6623eece6b0c64c5
-SHA1 (patch-src_radeon__kms.c) = 8179d6adf5fcce312c9b930a81b4b69d2931fe8f
+BLAKE2s (xf86-video-ati-22.0.0.tar.xz) = 48e5e694707c14d4d068dd4a818e79f3ef8e4a15f6438c2e497e10094785dce7
+SHA512 (xf86-video-ati-22.0.0.tar.xz) = fba9ffc7b0eeb0c369eb1a6f8ef0bb3061cfeca26bc269baf6e3d16dcd943fbf4092f1e37adfb1bc71051cee0b7a0e6fb253f0b8bcd210732ccaf99e8f2356fe
+Size (xf86-video-ati-22.0.0.tar.xz) = 755812 bytes
+SHA1 (patch-configure) = 2d4a016411764a03e5d01d574de8e72ef5b3c363
