@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2420 2023/04/25 07:08:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2421 2023/04/25 07:11:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3483,3 +3483,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/galasm version 2.1 [thorpej 2023-04-24]
 	Updated net/openvpn to 2.6.3 [adam 2023-04-25]
 	Updated www/py-yarl to 1.9.1 [adam 2023-04-25]
+	Updated sysutils/felix to 2.2.6 [pin 2023-04-25]
