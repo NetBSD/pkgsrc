@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2023/04/04 09:52:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2023/04/25 09:46:57 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -90,8 +90,6 @@ ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/__init__.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/__init__.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/common.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/common.pyc
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/cpython2.py
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/cpython2.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/cpython3.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/cpython3.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py
@@ -100,16 +98,8 @@ ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/__init__.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/__init__.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/common.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/common.pyc
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/pypy2.py
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/pypy2.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/pypy3.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/pypy3.pyc
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/__init__.py
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/__init__.pyc
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/python2.py
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/python2.pyc
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/site.py
-${PYSITELIB}/virtualenv/create/via_global_ref/builtin/python2/site.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/ref.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/ref.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/via_global_self_do.py
@@ -184,15 +174,9 @@ ${PYSITELIB}/virtualenv/seed/wheels/bundle.py
 ${PYSITELIB}/virtualenv/seed/wheels/bundle.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-20.3.4-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-21.3.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-23.0.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-44.1.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-50.3.2-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-59.6.0-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-67.4.0-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.37.1-py2.py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.38.4-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-23.1-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-67.6.1-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.40.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/util.py
