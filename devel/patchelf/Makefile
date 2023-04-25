@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/23 20:05:52 fcambus Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/25 13:51:49 jperkin Exp $
 
 DISTNAME=	patchelf-0.18.0
 CATEGORIES=	devel
@@ -14,6 +14,6 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++17
 # std::optional
-GCC_REQD=	7
+GCC_REQD+=	7
 
 .include "../../mk/bsd.pkg.mk"
