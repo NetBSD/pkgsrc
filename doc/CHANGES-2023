@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2426 2023/04/25 11:29:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2427 2023/04/25 11:40:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3494,3 +3494,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_client to 8.2.0 [adam 2023-04-25]
 	Updated devel/py-debugpy to 1.6.7 [adam 2023-04-25]
 	Updated devel/py-ipykernel to 6.22.0 [adam 2023-04-25]
+	Updated devel/py-jupyter-console to 6.6.3 [adam 2023-04-25]
+	Updated www/py-nbformat to 5.8.0 [adam 2023-04-25]
