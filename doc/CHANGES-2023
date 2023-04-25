@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2423 2023/04/25 07:48:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2424 2023/04/25 09:47:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3488,3 +3488,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hatchling to 1.14.1 [adam 2023-04-25]
 	Updated textproc/py-ICU to 2.11 [adam 2023-04-25]
 	Updated archivers/py-zstandard to 0.21.0 [adam 2023-04-25]
+	Updated converters/py-arabic-reshaper to 3.0.0 [adam 2023-04-25]
+	Updated devel/py-virtualenv to 20.22.0 [adam 2023-04-25]
