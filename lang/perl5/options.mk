@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2021/11/29 16:26:36 jperkin Exp $
+# $NetBSD: options.mk,v 1.18 2023/04/25 07:29:47 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -10,7 +10,7 @@ CHECK_BUILTIN.pthread:=	yes
 CHECK_BUILTIN.pthread:=	no
 
 # By default, build with threads only if the threads are native.
-.if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+.if ${USE_BUILTIN.pthread:tl} == yes
 PERL5_BUILD_THREADS_SUPPORT=	yes
 .else
 PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
@@ -19,7 +19,7 @@ PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
 ### from KNOWN PROBLEMS in README.haiku
 ### Perl cannot be compiled with threading support ATM.
 ###
-.if !empty(MACHINE_PLATFORM:MHaiku-*-*)
+.if ${MACHINE_PLATFORM:MHaiku-*-*}
 PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
