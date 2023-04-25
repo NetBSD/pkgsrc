@@ -1,0 +1,4 @@
+GALasm is a portable GAL assembler that takes a set of equations, and
+generates a JEDEC file suitable for feeding to a GAL programmer.  The
+assembler core is from GALer, a GAL development environment for the Amiga
+platform.

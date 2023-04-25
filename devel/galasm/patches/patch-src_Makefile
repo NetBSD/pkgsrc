@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile,v 1.1 2023/04/25 03:28:38 thorpej Exp $
+
+Consistently use the the compiler specified by the make(1) environment.
+
+--- src/Makefile.orig	2022-03-30 02:23:47.000000000 +0000
++++ src/Makefile	2023-04-24 23:06:03.125669633 +0000
+@@ -2,7 +2,7 @@
+ 
+ TARGET		= galasm
+ OBJS		= galasm.o support.o jedec.o localize.o
+-CC          = gcc
++#CC          = gcc
+ 
+ CFLAGS		= -Wall -O2
+ LDFLAGS		=
+@@ -11,7 +11,7 @@ LDFLAGS		=
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJS)
+-	gcc $(LDFLAGS) -o $@ $(OBJS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJS)
+ 
+ clean:
+ 	-rm $(OBJS)
