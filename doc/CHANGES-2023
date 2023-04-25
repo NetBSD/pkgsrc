@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2437 2023/04/25 19:54:51 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2438 2023/04/25 20:33:51 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3508,3 +3508,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/wired-notify to 0.10.2nb2 [wiz 2023-04-25]
 	Updated x11/xf86-video-ati to 22.0.0 [wiz 2023-04-25]
 	Updated devel/meson to 1.1.0 [nikita 2023-04-25]
+	Updated lang/jimtcl to 0.82nb1 [triaxx 2023-04-25]
