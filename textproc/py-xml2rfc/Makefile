@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/04/01 13:46:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/25 13:10:46 adam Exp $
 
-DISTNAME=	xml2rfc-3.17.0
+DISTNAME=	xml2rfc-3.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
@@ -24,7 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=24.2.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.2.5:../../devel/py-wcwidth
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
-
 TEST_DEPENDS+=	${PYPKGPREFIX}-PDF2>=0:../../print/py-PDF2
 TEST_DEPENDS+=	${PYPKGPREFIX}-cairo>=0:../../graphics/py-cairo
 TEST_DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
