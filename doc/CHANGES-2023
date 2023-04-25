@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2432 2023/04/25 14:34:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2433 2023/04/25 14:37:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3503,3 +3503,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-termcolor to 2.3.0 [wiz 2023-04-25]
 	Added devel/py-test-checkdocs version 2.9.0 [wiz 2023-04-25]
 	Updated devel/py-test-flake8 to 1.0.7nb2 [wiz 2023-04-25]
+	Updated devel/py-path.py to 12.5.0 [wiz 2023-04-25]
