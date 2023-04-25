@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2418 2023/04/24 17:38:08 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2419 2023/04/25 03:32:20 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3366,6 +3366,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/zet to 1.0.0 [pin 2023-04-19]
 	Updated lang/nim to 1.6.12 [nikita 2023-04-19]
 	Updated sysutils/xfce4-genmon-plugin to 4.2.0 [gutteridge 2023-04-19]
+	Added devel/galette version 0.3.0 [thorpej 2023-04-19]
 	Updated net/syncthing to 1.23.4 [triaxx 2023-04-20]
 	Updated textproc/py-rdflib to 6.3.2 [adam 2023-04-20]
 	Updated devel/py-jaraco.path to 3.5.0 [adam 2023-04-20]
@@ -3479,3 +3480,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx to 1.24.0nb5 [osa 2023-04-24]
 	Updated mail/qmail to 1.03nb52 [schmonz 2023-04-24]
 	Added sysutils/checkpw version 1.03 [schmonz 2023-04-24]
+	Added devel/galasm version 2.1 [thorpej 2023-04-24]
