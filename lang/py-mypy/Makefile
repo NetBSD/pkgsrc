@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2023/03/29 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/04/25 12:49:43 adam Exp $
 
-DISTNAME=	mypy-1.1.1
+DISTNAME=	mypy-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mypy-lang.org/
+HOMEPAGE=	https://www.mypy-lang.org/
 COMMENT=	Optional static typing for Python
 LICENSE=	mit
 
