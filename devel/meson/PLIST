@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/11/13 09:57:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/04/25 19:54:40 nikita Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -45,6 +45,9 @@ ${PYSITELIB}/mesonbuild/backend/backends.pyo
 ${PYSITELIB}/mesonbuild/backend/ninjabackend.py
 ${PYSITELIB}/mesonbuild/backend/ninjabackend.pyc
 ${PYSITELIB}/mesonbuild/backend/ninjabackend.pyo
+${PYSITELIB}/mesonbuild/backend/nonebackend.py
+${PYSITELIB}/mesonbuild/backend/nonebackend.pyc
+${PYSITELIB}/mesonbuild/backend/nonebackend.pyo
 ${PYSITELIB}/mesonbuild/backend/vs2010backend.py
 ${PYSITELIB}/mesonbuild/backend/vs2010backend.pyc
 ${PYSITELIB}/mesonbuild/backend/vs2010backend.pyo
@@ -262,6 +265,9 @@ ${PYSITELIB}/mesonbuild/dependencies/pkgconfig.pyo
 ${PYSITELIB}/mesonbuild/dependencies/platform.py
 ${PYSITELIB}/mesonbuild/dependencies/platform.pyc
 ${PYSITELIB}/mesonbuild/dependencies/platform.pyo
+${PYSITELIB}/mesonbuild/dependencies/python.py
+${PYSITELIB}/mesonbuild/dependencies/python.pyc
+${PYSITELIB}/mesonbuild/dependencies/python.pyo
 ${PYSITELIB}/mesonbuild/dependencies/qt.py
 ${PYSITELIB}/mesonbuild/dependencies/qt.pyc
 ${PYSITELIB}/mesonbuild/dependencies/qt.pyo
@@ -551,6 +557,9 @@ ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyo
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.py
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyc
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyo
+${PYSITELIB}/mesonbuild/scripts/python_info.py
+${PYSITELIB}/mesonbuild/scripts/python_info.pyc
+${PYSITELIB}/mesonbuild/scripts/python_info.pyo
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.py
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyc
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyo
