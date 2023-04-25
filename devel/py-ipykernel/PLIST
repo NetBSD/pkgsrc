@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2022/09/14 10:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/04/25 11:29:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/ipykernel/__init__.py
 ${PYSITELIB}/ipykernel/__init__.pyc
 ${PYSITELIB}/ipykernel/__main__.py
@@ -104,6 +104,8 @@ ${PYSITELIB}/ipykernel/tests/conftest.py
 ${PYSITELIB}/ipykernel/tests/conftest.pyc
 ${PYSITELIB}/ipykernel/tests/test_async.py
 ${PYSITELIB}/ipykernel/tests/test_async.pyc
+${PYSITELIB}/ipykernel/tests/test_comm.py
+${PYSITELIB}/ipykernel/tests/test_comm.pyc
 ${PYSITELIB}/ipykernel/tests/test_connect.py
 ${PYSITELIB}/ipykernel/tests/test_connect.pyc
 ${PYSITELIB}/ipykernel/tests/test_debugger.py
@@ -116,14 +118,22 @@ ${PYSITELIB}/ipykernel/tests/test_heartbeat.py
 ${PYSITELIB}/ipykernel/tests/test_heartbeat.pyc
 ${PYSITELIB}/ipykernel/tests/test_io.py
 ${PYSITELIB}/ipykernel/tests/test_io.pyc
+${PYSITELIB}/ipykernel/tests/test_ipkernel_direct.py
+${PYSITELIB}/ipykernel/tests/test_ipkernel_direct.pyc
 ${PYSITELIB}/ipykernel/tests/test_jsonutil.py
 ${PYSITELIB}/ipykernel/tests/test_jsonutil.pyc
 ${PYSITELIB}/ipykernel/tests/test_kernel.py
 ${PYSITELIB}/ipykernel/tests/test_kernel.pyc
+${PYSITELIB}/ipykernel/tests/test_kernel_direct.py
+${PYSITELIB}/ipykernel/tests/test_kernel_direct.pyc
+${PYSITELIB}/ipykernel/tests/test_kernelapp.py
+${PYSITELIB}/ipykernel/tests/test_kernelapp.pyc
 ${PYSITELIB}/ipykernel/tests/test_kernelspec.py
 ${PYSITELIB}/ipykernel/tests/test_kernelspec.pyc
 ${PYSITELIB}/ipykernel/tests/test_message_spec.py
 ${PYSITELIB}/ipykernel/tests/test_message_spec.pyc
+${PYSITELIB}/ipykernel/tests/test_parentpoller.py
+${PYSITELIB}/ipykernel/tests/test_parentpoller.pyc
 ${PYSITELIB}/ipykernel/tests/test_pickleutil.py
 ${PYSITELIB}/ipykernel/tests/test_pickleutil.pyc
 ${PYSITELIB}/ipykernel/tests/test_start_kernel.py
