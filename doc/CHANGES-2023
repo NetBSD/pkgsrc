@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2430 2023/04/25 14:02:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2431 2023/04/25 14:14:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3501,3 +3501,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/py-country to 22.3.5 [adam 2023-04-25]
 	Updated textproc/py-xml2rfc to 3.17.1 [adam 2023-04-25]
 	Updated devel/py-termcolor to 2.3.0 [wiz 2023-04-25]
+	Added devel/py-test-checkdocs version 2.9.0 [wiz 2023-04-25]
