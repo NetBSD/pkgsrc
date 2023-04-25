@@ -1,18 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:21:33 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/04/25 21:53:01 nikita Exp $
 
-BLAKE2s (mg-20110905.tar.gz) = 823eb67e303ab6e9d183dd03dfd49afa2ce97298b5406076fafa6eaf357d8e15
-SHA512 (mg-20110905.tar.gz) = b490a5a3526d35839353e138f33ac924c5afbbf7e5c9faa20ceccb82e1dc1e6a3f0726b32bac7d43dcf8a410b1b8525067da5557cf669c52a9e32d1d2f45a8a4
-Size (mg-20110905.tar.gz) = 138805 bytes
-SHA1 (patch-ab) = 2deb4c7e78d580434cfedfe9ea23add3b19cc300
-SHA1 (patch-ad) = 12515e4f5ce063f2984e5a144e467ba9b1693a7e
-SHA1 (patch-af) = b3c845deb4d7d70d006b8e00eeb5cf89a4b1027b
-SHA1 (patch-ag) = 41211898a86c3a8e88952b58d1026f03733e069a
-SHA1 (patch-ah) = 4c30216b73e895c0905c1245918c1bf04363ab16
-SHA1 (patch-ai) = bc9950469e4792867532dcaddba331f07131215c
-SHA1 (patch-basic.c) = bf528fd1b41d669427b00eb39c3c244cca725b5a
-SHA1 (patch-echo.c) = 4efb1e8205a399e5486ee81728e02b0358d7cf86
-SHA1 (patch-fgetln.c) = b2df2ccb26dea1c03cb159b2dea81a99583a933d
-SHA1 (patch-line.c) = 789afe647e1cb8d34280399f2ee5fbf31cce4926
-SHA1 (patch-main.c) = 32d374128558aae6db10e2326af8084d75eefe26
+BLAKE2s (mg-20230406-20230406.tar.gz) = d93c2f38b6f82e189c02f131b8c09073aee2f20f67cc6f106d0d61a8ea3a01a1
+SHA512 (mg-20230406-20230406.tar.gz) = 0d1ad46899c7afc4ce6634f0274286400d8a6bd8a7e28df970e1b6470d10520e1a74acb6059f3774a9ab9f6fd8e9ed7ddacf1cb70134538348e10f58a354ea4f
+Size (mg-20230406-20230406.tar.gz) = 157992 bytes
+SHA1 (patch-GNUmakefile) = b79834c2f125db8338c16697cde1719d3e039b13
+SHA1 (patch-af) = 678983bc292b41a2d67f969182bc377a47b89d2b
 SHA1 (patch-paragraph.c) = d68754b802c99fecb63a6cfa634f0360945f034f
-SHA1 (patch-ttyio.c) = 29009af12c5f6a95e083128baef5fef602b16f28
+SHA1 (patch-ttyio.c) = 125cbdf461aec3f629340affc3c9f600bb9d7102
