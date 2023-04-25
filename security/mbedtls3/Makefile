@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/25 21:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/25 21:41:50 wiz Exp $
 
 DISTNAME=	mbedtls-3.4.0
 PKGNAME=	${DISTNAME:S/mbedtls/mbedtls3/}
@@ -48,7 +48,6 @@ do-test:
 	LD_LIBRARY_PATH=${WRKSRC}/library \
 	    ${WRKSRC}/programs/test/selftest
 
-.include "options.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/pthread.buildlink3.mk"
