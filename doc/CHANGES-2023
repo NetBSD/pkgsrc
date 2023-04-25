@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2428 2023/04/25 12:50:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2429 2023/04/25 13:11:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3498,3 +3498,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbformat to 5.8.0 [adam 2023-04-25]
 	Updated textproc/py-validate-pyproject to 0.12.2 [adam 2023-04-25]
 	Updated lang/py-mypy to 1.2.0 [adam 2023-04-25]
+	Updated geography/py-country to 22.3.5 [adam 2023-04-25]
+	Updated textproc/py-xml2rfc to 3.17.1 [adam 2023-04-25]
