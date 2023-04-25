@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/02/14 08:48:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/04/25 11:39:57 adam Exp $
 bin/jupyter-trust-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,7 +7,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/nbformat/__init__.py
 ${PYSITELIB}/nbformat/__init__.pyc
 ${PYSITELIB}/nbformat/_imports.py
