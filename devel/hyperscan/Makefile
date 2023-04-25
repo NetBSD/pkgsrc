@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/04/19 08:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/25 13:51:49 jperkin Exp $
 
 DISTNAME=	hyperscan-5.0.0
 PKGREVISION=	6
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 BUILD_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
-GCC_REQD=		4.8.1
+GCC_REQD+=		4.8.1
 PYTHON_FOR_BUILD_ONLY=	yes
 USE_CMAKE=		yes
 USE_LANGUAGES=		c99 c++11
