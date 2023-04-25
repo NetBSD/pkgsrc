@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/02/14 19:09:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/04/25 12:49:43 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -233,6 +233,9 @@ ${PYSITELIB}/mypy/pyinfo.pyo
 ${PYSITELIB}/mypy/reachability.py
 ${PYSITELIB}/mypy/reachability.pyc
 ${PYSITELIB}/mypy/reachability.pyo
+${PYSITELIB}/mypy/refinfo.py
+${PYSITELIB}/mypy/refinfo.pyc
+${PYSITELIB}/mypy/refinfo.pyo
 ${PYSITELIB}/mypy/renaming.py
 ${PYSITELIB}/mypy/renaming.pyc
 ${PYSITELIB}/mypy/renaming.pyo
@@ -749,7 +752,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/importlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/machinery.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/_meta.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/inspect.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/io.pyi
@@ -1250,6 +1254,7 @@ ${PYSITELIB}/mypyc/lib-rt/CPy.h
 ${PYSITELIB}/mypyc/lib-rt/bytes_ops.c
 ${PYSITELIB}/mypyc/lib-rt/dict_ops.c
 ${PYSITELIB}/mypyc/lib-rt/exc_ops.c
+${PYSITELIB}/mypyc/lib-rt/float_ops.c
 ${PYSITELIB}/mypyc/lib-rt/generic_ops.c
 ${PYSITELIB}/mypyc/lib-rt/getargs.c
 ${PYSITELIB}/mypyc/lib-rt/getargsfast.c
@@ -1345,6 +1350,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-classes.test
 ${PYSITELIB}/mypyc/test-data/irbuild-constant-fold.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dict.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dunders.test
+${PYSITELIB}/mypyc/test-data/irbuild-float.test
 ${PYSITELIB}/mypyc/test-data/irbuild-generics.test
 ${PYSITELIB}/mypyc/test-data/irbuild-glue-methods.test
 ${PYSITELIB}/mypyc/test-data/irbuild-i32.test
@@ -1384,6 +1390,7 @@ ${PYSITELIB}/mypyc/test-data/run-integers.test
 ${PYSITELIB}/mypyc/test-data/run-lists.test
 ${PYSITELIB}/mypyc/test-data/run-loops.test
 ${PYSITELIB}/mypyc/test-data/run-match.test
+${PYSITELIB}/mypyc/test-data/run-math.test
 ${PYSITELIB}/mypyc/test-data/run-misc.test
 ${PYSITELIB}/mypyc/test-data/run-multimodule.test
 ${PYSITELIB}/mypyc/test-data/run-mypy-sim.test
