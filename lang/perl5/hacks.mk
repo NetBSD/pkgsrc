@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.26 2020/08/31 18:00:37 wiz Exp $
+# $NetBSD: hacks.mk,v 1.27 2023/04/25 07:29:47 adam Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -26,8 +26,8 @@ BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-Os
 ### [Fri Oct 28 11:53:57 EDT 2016 : dholland - extended to gcc5]
 ### gcc-[45].*.* in NetBSD/alpha causes unaligned access exception in perl.
 ### -O works around, and there is a report that -O2 -fno-tree-ter is enough.
-.if (!empty(MACHINE_PLATFORM:MNetBSD-*-alpha) || !empty(MACHINE_PLATFORM:MOpenBSD-*-alpha)) \
-	&& !empty(CC_VERSION:Mgcc-[45].*.*)
+.if (${MACHINE_PLATFORM:MNetBSD-*-alpha} || ${MACHINE_PLATFORM:MOpenBSD-*-alpha}) \
+	&& ${CC_VERSION:Mgcc-[45].*.*}
 # XXX: is there any good way to replace the default -O2 with multiple args?
 PKG_HACKS+=		alpha-optimisation
 #BUILDLINK_TRANSFORM+=	opt:-O[2-9]*:-O2 -fno-tree-ter
@@ -47,7 +47,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
 ### On NetBSD/{mips,vax,sparc64}, the -freorder-blocks option in -O2
 ### causes opmini.c to be miscompiled, and perl build fails.
 ###
-.if !empty(CC_VERSION:Mgcc-4.5.*) && ${OPSYS} == "NetBSD"
+.if ${CC_VERSION:Mgcc-4.5.*} && ${OPSYS} == "NetBSD"
 .  if (${MACHINE_ARCH} == "vax" ||	\
        ${MACHINE_CPU} == "mips" ||	\
        ${MACHINE_ARCH} == "sparc" ||	\
