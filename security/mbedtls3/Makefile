@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/01/24 18:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/25 21:39:51 wiz Exp $
 
-DISTNAME=	mbedtls-3.2.1
+DISTNAME=	mbedtls-3.4.0
 PKGNAME=	${DISTNAME:S/mbedtls/mbedtls3/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ARMmbed/}
