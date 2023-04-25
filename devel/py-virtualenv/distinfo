@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.53 2023/04/04 09:52:28 adam Exp $
+$NetBSD: distinfo,v 1.54 2023/04/25 09:46:57 adam Exp $
 
-BLAKE2s (virtualenv-20.21.0.tar.gz) = 2f3ecc460cb8421e0e5126f608632e1eaac6d66d2ad603313494bcab21c5c34e
-SHA512 (virtualenv-20.21.0.tar.gz) = 77aae5ebc5007093953c30da1eed996e851a65c7dd1f7a3a85961a1bb251b3d7970936eea1efe8babb216d2024072bdbf1c1a97ba8760a04a0abf6e7c3a27d09
-Size (virtualenv-20.21.0.tar.gz) = 12070063 bytes
+BLAKE2s (virtualenv-20.22.0.tar.gz) = 4fc3f3e381c4e1dca6c7228afdeda5c01922419293f03e9aeb4625d50bdf7c28
+SHA512 (virtualenv-20.22.0.tar.gz) = 83d15b03abebd856b1636d0f00443f77882de9fdeb9dff67b72dc839d55f4e7e0668914ef3ac79cdf1d8cf147e29ba97feb720a5ebfcf24dc6cd27ec2e04384d
+Size (virtualenv-20.22.0.tar.gz) = 6612036 bytes
 SHA1 (patch-src_virtualenv_create_via__global__ref_api.py) = 46f53fba8ca4229692240b088e1a6705042b84df
 SHA1 (patch-tests_unit_create_test__creator.py) = 4d0de65da957040c3f6e7e0682b6e6bdfdcf3abc
 SHA1 (patch-tests_unit_seed_embed_test__bootstrap__link__via__app__data.py) = de17dc8e578af57c9c43f38343a0c0af0d04227d

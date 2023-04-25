@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2023/04/04 09:52:28 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/04/25 09:46:57 adam Exp $
 
-DISTNAME=	virtualenv-20.21.0
+DISTNAME=	virtualenv-20.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -11,19 +11,19 @@ COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.12.2:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.14:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.1:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.4:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.11:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.2:../../misc/py-platformdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.1:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-env>=0.6.2:../../devel/py-test-env
+TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.3.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-env>=0.8.1:../../devel/py-test-env
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun>=0.4.2:../../devel/py-test-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.10.3:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.10:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.12:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1:../../devel/py-test-timeout
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
