@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2012/12/12 12:47:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/25 21:53:01 nikita Exp $
 bin/mg
 man/man1/mg.1
-share/doc/mg/tutorial

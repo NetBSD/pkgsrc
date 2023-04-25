@@ -1,0 +1,27 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2023/04/25 21:53:01 nikita Exp $
+
+
+--- GNUmakefile.orig	2023-04-06 05:06:27.000000000 +0200
++++ GNUmakefile	2023-04-25 23:05:43.954953743 +0200
+@@ -13,14 +13,18 @@
+ includedir=	$(prefix)/include
+ mandir=		$(prefix)/man
+ 
+-PKG_CONFIG=	/usr/bin/pkg-config --silence-errors
+-INSTALL=	/usr/bin/install
+-STRIP=		/usr/bin/strip
++PKG_CONFIG?=	/usr/bin/pkg-config --silence-errors
++INSTALL?=	/usr/bin/install
++STRIP?=		/usr/bin/strip
+ 
+ UNAME:=		$(shell uname)
+ ifeq ($(UNAME),FreeBSD)
+   BSD_CPPFLAGS:= -DHAVE_UTIL_H
+   BSD_LIBS:=	 -lutil
++endif
++ifeq ($(UNAME),NetBSD)
++  BSD_CPPFLAGS:= -DHAVE_UTIL_H
++  BSD_LIBS:=	 -lutil
+ else
+   BSD_CPPFLAGS:= $(shell $(PKG_CONFIG) --cflags libbsd-overlay) -DHAVE_PTY_H
+   BSD_LIBS:=	 $(shell $(PKG_CONFIG) --libs libbsd-overlay) -lutil
