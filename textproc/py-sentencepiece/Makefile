@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2023/03/13 14:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/25 14:55:28 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../textproc/sentencepiece/Makefile.common"
 .include "../../textproc/sentencepiece/buildlink3.mk"
