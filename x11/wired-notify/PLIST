@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/19 21:37:05 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/25 16:24:15 wiz Exp $
 bin/wired
+share/examples/wired-notify/wired.ron
+share/examples/wired-notify/wired_multilayout.ron

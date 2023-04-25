@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/01/29 21:18:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/25 16:24:15 wiz Exp $
 
 DISTNAME=	wired-notify-0.10.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Toqozz/}
 
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/wired-notify
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
@@ -23,7 +23,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wired \
 		${DESTDIR}${PREFIX}/bin
-
+	${INSTALL_DATA} ${WRKSRC}/wired.ron \
+		${DESTDIR}${PREFIX}/share/examples/wired-notify
+	${INSTALL_DATA} ${WRKSRC}/wired_multilayout.ron \
+		${DESTDIR}${PREFIX}/share/examples/wired-notify
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
