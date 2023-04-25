@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2434 2023/04/25 16:03:01 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.2435 2023/04/25 16:24:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-flake8 to 1.0.7nb2 [wiz 2023-04-25]
 	Updated devel/py-path.py to 12.5.0 [wiz 2023-04-25]
 	Updated pkgtools/pkglint to 23.1.8 [rillig 2023-04-25]
+	Updated x11/wired-notify to 0.10.2nb2 [wiz 2023-04-25]
