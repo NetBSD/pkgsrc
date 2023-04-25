@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tds_tls.c,v 1.1 2023/03/29 21:01:38 joerg Exp $
+$NetBSD: patch-src_tds_tls.c,v 1.2 2023/04/25 13:41:16 wiz Exp $
 
 Allow building with LibreSSL 3.7.0
 
@@ -13,13 +13,3 @@ Allow building with LibreSSL 3.7.0
  static BIO_METHOD tds_method_login[1] = {
  {
  	BIO_TYPE_MEM,
-@@ -949,6 +949,9 @@ tds_ssl_init(TDSSOCKET *tds)
- 	/* Perform the TLS handshake */
- 	tls_msg = "handshake";
- 	SSL_set_connect_state(con);
-+#ifndef TLS_STOK
-+#define TLS_ST_OK SSL_ST_OK
-+#endif
- 	ret = SSL_connect(con) != 1 || SSL_get_state(con) != TLS_ST_OK;
- 	if (ret != 0)
- 		goto cleanup;
