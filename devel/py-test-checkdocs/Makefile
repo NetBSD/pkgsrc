@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/25 14:14:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/25 14:20:17 wiz Exp $
 
 DISTNAME=	pytest-checkdocs-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -10,10 +10,18 @@ HOMEPAGE=	https://github.com/jaraco/pytest-checkdocs
 COMMENT=	Check the README when running tests
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.15:../../textproc/py-docutils
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 USE_LANGUAGES=	# none
 
