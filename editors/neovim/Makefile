@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/02/08 10:18:50 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/25 23:36:19 nikita Exp $
 
-DISTNAME=	neovim-0.8.3
+DISTNAME=	neovim-0.9.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.so
+CMAKE_ARGS+=	-DLIBVTERM_INCLUDE_DIR=${BUILDLINK_PREFIX.libvterm03}/include/libvterm03
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
