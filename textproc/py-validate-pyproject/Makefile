@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/03/29 09:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/25 12:43:30 adam Exp $
 
-DISTNAME=	validate-pyproject-0.9
+DISTNAME=	validate-pyproject-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-pyproject/}
@@ -10,14 +10,16 @@ HOMEPAGE=	https://github.com/abravalheri/validate-pyproject
 COMMENT=	Validation library and CLI tool for checking on pyproject.toml files
 LICENSE=	mpl-2.0 AND mit AND modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.1.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.1:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.16.2:../../textproc/py-fastjsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -34,5 +36,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
