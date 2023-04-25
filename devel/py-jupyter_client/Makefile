@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/12/12 08:36:59 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/04/25 10:56:38 adam Exp $
 
-DISTNAME=	jupyter_client-7.4.8
+DISTNAME=	jupyter_client-8.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
@@ -10,13 +10,11 @@ HOMEPAGE=	https://jupyter-client.readthedocs.io/
 COMMENT=	Jupyter protocol implementation and client libraries
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.9.2:../../devel/py-jupyter_core
-DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5.4:../../devel/py-nest-asyncio
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=23.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.5:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
@@ -29,6 +27,11 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.3:../../devel/py-importlib-metadata
+.endif
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} jupyter-kernel jupyter-kernel-${PYVERSSUFFIX} && \
@@ -36,7 +39,7 @@ post-install:
 	${MV} jupyter-run jupyter-run-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
