@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2424 2023/04/25 09:47:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2425 2023/04/25 10:56:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3490,3 +3490,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/py-zstandard to 0.21.0 [adam 2023-04-25]
 	Updated converters/py-arabic-reshaper to 3.0.0 [adam 2023-04-25]
 	Updated devel/py-virtualenv to 20.22.0 [adam 2023-04-25]
+	Updated www/py-tornado to 6.3.1 [adam 2023-04-25]
+	Updated devel/py-jupyter_client to 8.2.0 [adam 2023-04-25]
