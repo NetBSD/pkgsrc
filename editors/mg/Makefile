@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/25 21:53:01 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2023/04/25 22:06:37 nikita Exp $
 
 DISTNAME=	mg-20230406
 CATEGORIES=	editors
@@ -17,7 +17,7 @@ MAKE_FILE=	GNUmakefile
 
 CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
 CONFLICTS+=	mg2a-[0-9]*
 
@@ -29,6 +29,9 @@ SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	GNUmakefile mg.1
 SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
+
+pre-install:
+	${INSTALL_DATA} ${WRKSRC}/tutorial ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/tutorial
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MLinux-*-*)
