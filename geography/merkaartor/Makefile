@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2023/04/19 08:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.117 2023/04/25 13:51:50 jperkin Exp $
 
 DISTNAME=	merkaartor-0.19.0
 PKGREVISION=	8
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
 # gcc 5 complains about -Wno-register.  Require new enough rather than patching.
-GCC_REQD=		6
+GCC_REQD+=		6
 USE_LIBTOOL=		yes
 QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_ARGS=		PREFIX=${PREFIX} NODEBUG=1 RELEASE=1

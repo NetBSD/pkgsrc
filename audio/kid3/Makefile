@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2023/04/19 08:09:08 adam Exp $
+# $NetBSD: Makefile,v 1.132 2023/04/25 13:51:49 jperkin Exp $
 
 DISTNAME=	kid3-3.9.3
 PKGREVISION=	3
@@ -26,7 +26,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
 
 # std::filesystem
-GCC_REQD=	8
+GCC_REQD+=	8
 
 SUBST_CLASSES+=		apple
 SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
