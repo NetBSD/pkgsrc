@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/11/22 10:21:37 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/04/25 11:29:23 adam Exp $
 
-DISTNAME=	ipykernel-6.17.1
+DISTNAME=	ipykernel-6.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -10,17 +10,19 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython Kernel for Jupyter
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.0.0:../../devel/py-debugpy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.1:../../net/py-comm
+DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.6.5:../../devel/py-debugpy
 DEPENDS+=	${PYPKGPREFIX}-ipython>=7.23.1:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.12:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1.0:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio-[0-9]*:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1.0:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-zmq>=17:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-zmq>=20:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.0:../../devel/py-test
