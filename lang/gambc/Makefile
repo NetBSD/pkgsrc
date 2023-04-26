@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2020/05/13 04:17:26 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2023/04/26 19:39:11 nikita Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
 PKGNAME=	gambc-${GAMBC_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.iro.umontreal.ca/~gambit/
+HOMEPAGE=	http://gambitscheme.org/
 COMMENT=	GambitC Scheme System
 
 # bin/scheme-r5rs
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-single-host
 CONFIGURE_ARGS+=	--enable-cplusplus
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-absolute-shared-libs # DESTDIR bug?
+CONFIGURE_ARGS+=	--enable-default-runtime-options=f8,-8,t8
 ###
 ### XXX On NetBSD/amd64 4.99.61, gcc had a resident memory size of over 384MB
 ###	while building this and ultimately exhausted all 1GB of swap I had.
@@ -64,8 +66,8 @@ SUBST_STAGE.build=	pre-configure
 SUBST_VARS.build+=	PACKAGE_SUBDIR PACKAGE_VERSION PACKAGE_STRING
 
 PACKAGE_SUBDIR=		# empty
-PACKAGE_VERSION=	${PKGVERSION}
-PACKAGE_STRING=		${${PKGBASE} ${PKGVERSION}:L}
+PACKAGE_VERSION=	${PKGVERSION_NOREV}
+PACKAGE_STRING=		${${PKGBASE} ${PKGVERSION_NOREV}:L}
 
 .include "version.mk"
 
