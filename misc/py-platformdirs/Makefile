@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/04/05 09:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/26 13:43:45 adam Exp $
 
-DISTNAME=	platformdirs-3.2.0
+DISTNAME=	platformdirs-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/platformdirs/platformdirs
 COMMENT=	Python module for determining appropriate platform-specific dirs
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.12.2:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.14:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
 TEST_DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.4:../../devel/py-appdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.1:../../devel/py-test
