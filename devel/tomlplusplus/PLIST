@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/09 15:04:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/26 19:57:06 wiz Exp $
 include/toml++/impl/array.h
 include/toml++/impl/array.inl
 include/toml++/impl/at_path.h
@@ -51,4 +51,7 @@ include/toml++/impl/yaml_formatter.inl
 include/toml++/toml.h
 lib/cmake/tomlplusplus/tomlplusplusConfig.cmake
 lib/cmake/tomlplusplus/tomlplusplusConfigVersion.cmake
+lib/libtomlplusplus.so
+lib/libtomlplusplus.so.3
+lib/libtomlplusplus.so.${PKGVERSION}
 lib/pkgconfig/tomlplusplus.pc
