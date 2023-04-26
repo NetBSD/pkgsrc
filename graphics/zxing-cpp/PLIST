@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/24 12:45:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/26 19:06:36 wiz Exp $
 include/ZXing/BarcodeFormat.h
 include/ZXing/BitArray.h
 include/ZXing/BitHacks.h
@@ -6,10 +6,8 @@ include/ZXing/BitMatrix.h
 include/ZXing/BitMatrixIO.h
 include/ZXing/ByteArray.h
 include/ZXing/CharacterSet.h
-include/ZXing/CharacterSetECI.h
 include/ZXing/Content.h
 include/ZXing/DecodeHints.h
-include/ZXing/DecodeStatus.h
 include/ZXing/Error.h
 include/ZXing/Flags.h
 include/ZXing/GTIN.h
@@ -18,6 +16,7 @@ include/ZXing/Matrix.h
 include/ZXing/MultiFormatWriter.h
 include/ZXing/Point.h
 include/ZXing/Quadrilateral.h
+include/ZXing/Range.h
 include/ZXing/ReadBarcode.h
 include/ZXing/Result.h
 include/ZXing/StructuredAppend.h
@@ -30,6 +29,6 @@ lib/cmake/ZXing/ZXingConfigVersion.cmake
 lib/cmake/ZXing/ZXingTargets-release.cmake
 lib/cmake/ZXing/ZXingTargets.cmake
 lib/libZXing.so
-lib/libZXing.so.1
 lib/libZXing.so.${PKGVERSION}
+lib/libZXing.so.3
 lib/pkgconfig/zxing.pc
