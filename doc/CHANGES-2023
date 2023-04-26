@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2477 2023/04/26 20:00:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2478 2023/04/26 20:55:02 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3556,3 +3556,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/rspamd to 3.5 [wiz 2023-04-26]
 	Updated devel/tomlplusplus to 3.3.0 [wiz 2023-04-26]
 	Updated graphics/libepoxy to 1.5.10 [wiz 2023-04-26]
+	Updated lang/gambc to 4.9.4 [nikita 2023-04-26]
