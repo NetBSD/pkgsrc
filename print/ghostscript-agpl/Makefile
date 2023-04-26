@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/04/23 09:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2023/04/26 20:58:23 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -34,6 +34,9 @@ CONFIGURE_ARGS+=	--with-system-libtiff
 CONFIGURE_ARGS+=	--without-tesseract
 CONFIGURE_ENV+=		LPLIBDIR=${PREFIX}/lib
 CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
+
+# bin/gsc
+CONFLICTS+=		gambc-[0-9]*
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
