@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/11/28 09:14:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/04/26 16:04:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -49,27 +49,18 @@ ${PYSITELIB}/pyasn1/codec/native/decoder.pyo
 ${PYSITELIB}/pyasn1/codec/native/encoder.py
 ${PYSITELIB}/pyasn1/codec/native/encoder.pyc
 ${PYSITELIB}/pyasn1/codec/native/encoder.pyo
+${PYSITELIB}/pyasn1/codec/streaming.py
+${PYSITELIB}/pyasn1/codec/streaming.pyc
+${PYSITELIB}/pyasn1/codec/streaming.pyo
 ${PYSITELIB}/pyasn1/compat/__init__.py
 ${PYSITELIB}/pyasn1/compat/__init__.pyc
 ${PYSITELIB}/pyasn1/compat/__init__.pyo
-${PYSITELIB}/pyasn1/compat/binary.py
-${PYSITELIB}/pyasn1/compat/binary.pyc
-${PYSITELIB}/pyasn1/compat/binary.pyo
-${PYSITELIB}/pyasn1/compat/calling.py
-${PYSITELIB}/pyasn1/compat/calling.pyc
-${PYSITELIB}/pyasn1/compat/calling.pyo
-${PYSITELIB}/pyasn1/compat/dateandtime.py
-${PYSITELIB}/pyasn1/compat/dateandtime.pyc
-${PYSITELIB}/pyasn1/compat/dateandtime.pyo
 ${PYSITELIB}/pyasn1/compat/integer.py
 ${PYSITELIB}/pyasn1/compat/integer.pyc
 ${PYSITELIB}/pyasn1/compat/integer.pyo
 ${PYSITELIB}/pyasn1/compat/octets.py
 ${PYSITELIB}/pyasn1/compat/octets.pyc
 ${PYSITELIB}/pyasn1/compat/octets.pyo
-${PYSITELIB}/pyasn1/compat/string.py
-${PYSITELIB}/pyasn1/compat/string.pyc
-${PYSITELIB}/pyasn1/compat/string.pyo
 ${PYSITELIB}/pyasn1/debug.py
 ${PYSITELIB}/pyasn1/debug.pyc
 ${PYSITELIB}/pyasn1/debug.pyo
