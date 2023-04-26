@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22812 2023/04/26 16:12:58 wiz Exp $
+$NetBSD: TODO,v 1.22813 2023/04/26 16:15:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-28.1.2
 	o ocaml-5.0.0
 	o ocaml-cppo-1.6.9
-	o ocaml-csexp-1.5.2
+	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
 	o ocaml-dune-3.7.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
@@ -1036,7 +1036,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-resource-pooling-1.2
 	o ocaml-safepass-3.1
 	o ocaml-zip-110
-	o ocamlbuild-0.14.2
 	o ocrad-0.25
 	o octave-8.1
 	o odbc-postgresql-9.06.0500
