@@ -8,5 +8,5 @@ The Gambit-C system conforms to the R4RS, R5RS and IEEE Scheme standards.
 The full numeric tower is implemented, including: infinite precision
 integers (bignums), rationals, inexact reals (floating point numbers),
 and complex numbers.  Gambit-C supports a number of extensions to the
-standards.  Please see the <http://gambit.uri.umontreal.ca/~gambit/wiki>
+standards.  Please see the <https://gambitscheme.org/wiki/index.php/Main_Page>
 for more information:  there is simply not enough room here to elaborate!

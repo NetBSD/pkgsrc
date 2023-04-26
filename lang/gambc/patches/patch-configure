@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2023/04/26 20:53:23 nikita Exp $
+
+Fix portability.
+
+--- configure.orig	2023-04-26 22:07:06.196412552 +0200
++++ configure	2023-04-26 22:14:22.126422238 +0200
+@@ -16809,7 +16809,7 @@
+ fi
+ 
+ 
+-if test "$ENABLE_MARCH" == "no_enable_march"; then
++if test "$ENABLE_MARCH" = "no_enable_march"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}:
+ **************************************************************************
+ ***                                                                    ***

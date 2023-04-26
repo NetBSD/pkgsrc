@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:51:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/04/26 20:53:23 nikita Exp $
 
-BLAKE2s (gambc-v4_6_5.tgz) = 534f801444d30780767ae5c7b77bf3117befe6bda18f99d3c420f6eb2492e76b
-SHA512 (gambc-v4_6_5.tgz) = c665eb90065f5effed88426fb280d2adcf249eeea5a89ffcd49941f0daf9db74d0ebd36206151b1d43cc161ae93b7b4da04ccc036de86c3eac7a91505e8b263e
-Size (gambc-v4_6_5.tgz) = 10699787 bytes
-SHA1 (patch-aa) = c7a5033115590fc6aa9906ff70419641fc1a80e1
-SHA1 (patch-ab) = 8a7a5fe2b51688ea7c5088bcf53a53631f80bfa9
-SHA1 (patch-examples_iOS_build-gambit-iOS) = 47e60052caf49458f78328ecc1ea90e27f52ad4f
-SHA1 (patch-examples_iOS_make-keys) = bb30f96ba117e8cb00921b24309f0927e4b3dd12
-SHA1 (patch-gsc_makefile.in) = 60419432e32f0fa7e4bc33965dc159e4969eabe1
-SHA1 (patch-lib_makefile.in) = 87a9ff2a0d5ce5b4f5929d228de07d6afaa69979
+BLAKE2s (gambit-v4_9_4.tgz) = 24c9ab525103e55cb74d6c30791d79a122e57f939a053a8a6cff237efcc6f503
+SHA512 (gambit-v4_9_4.tgz) = 3471062618949fe4e1eba19ca3170b8334065797d0c2f440050520ebca2af8bb6d57d9434b1756e5d67d4d4ec108c8e6a0c2900f01d8a35b71c979d776995ab1
+Size (gambit-v4_9_4.tgz) = 15452771 bytes
+SHA1 (patch-aa) = 627aa9d41238f117133413de64dd2a2c36e51166
+SHA1 (patch-configure) = 7586e75b7eea6566a3bddfb1337d6d1a00204e4c
+SHA1 (patch-contrib_GambitREPL_make-keys) = 54b8e023feae823381f85ccc0c3465516134b7b8
+SHA1 (patch-misc_build-gambit-android) = 754690aca858a43f2ac2b9244ed510a8179f45b4
+SHA1 (patch-misc_build-gambit-iOS) = 7f97fed3ce566a657cd21b3c552b56921b9de117
+SHA1 (patch-misc_change-gvm-regs) = 0c54697236caa1738fcf4833004bc8a051f2299e
