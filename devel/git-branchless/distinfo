@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/03/17 21:20:59 pin Exp $
+$NetBSD: distinfo,v 1.3 2023/04/26 11:36:25 wiz Exp $
 
 BLAKE2s (addr2line-0.19.0.crate) = c0485ba9fdf036b53d78b606222e7ce9d647d27f582d7df92948b8dbd686a8bb
 SHA512 (addr2line-0.19.0.crate) = 18da72e412bb89028e2ccb838192330535e45300f6fd8edc7d1d64397792a3db12418aa24a3312730c5414e2a1b1d65e6b9d5691ba234c9142b5d885523a5e94
@@ -387,9 +387,9 @@ Size (git-version-0.3.5.crate) = 3203 bytes
 BLAKE2s (git-version-macro-0.3.5.crate) = a961c4d39eec4f6955f29dd9bcea4b8eb2568df8a105301e661292da35c5cd43
 SHA512 (git-version-macro-0.3.5.crate) = 319729646469ab6508e16e6f3b88f588580fe7089479f70522edd6ac7eadb3c4576f0a57863bd3927d1ada693c3fe3706dc6a75e6cd75723db7f23199dc69ae0
 Size (git-version-macro-0.3.5.crate) = 4302 bytes
-BLAKE2s (git2-0.16.1.crate) = cba8a9f8747a111dbb441eb60af0ef23816a53be5960aa81274f523e97fe3af8
-SHA512 (git2-0.16.1.crate) = 4963798b6d9fc087a4394515b0f6da0a9e01fcbc220dc3d1880a277ea0487083ac05c0bc3a52a537885eb065a9b2209658a199835457b38c94e45395ad8d6252
-Size (git2-0.16.1.crate) = 199956 bytes
+BLAKE2s (git2-0.17.1.crate) = 7d0b5ba3a31e2e2130ae238502e6f957f8b8489466b19a11da7df83d69eeba6d
+SHA512 (git2-0.17.1.crate) = bb4146e8a98f4a29eeb3999b2e3cd317bc761fc7c566a91a590fa0a8fca61b072015ff6119e1e1eec2d9ca3309c312040127855228f6a3e260c2809bc8844c64
+Size (git2-0.17.1.crate) = 207302 bytes
 BLAKE2s (glob-0.3.1.crate) = cf1632af0a03d2505ae99d4e4ed0ee695c8383a0cddf1191f7f59e197e9fb17f
 SHA512 (glob-0.3.1.crate) = 29368160138bcb7ea5660f9f30c5711cfca8bc8ba836bbade3fbe8c424e7b4118daf27cffa677962e37e36f025fd2bb5a9c2aea865b0ff155cace455dfbb658b
 Size (glob-0.3.1.crate) = 18880 bytes
@@ -480,9 +480,9 @@ Size (lazy_static-1.4.0.crate) = 10443 bytes
 BLAKE2s (libc-0.2.139.crate) = 853f2cdf8ed8de1e87cebc90a4aaa0b85007ee732a1c4bc499a40d7bc975afc5
 SHA512 (libc-0.2.139.crate) = ff5fae517c49c382dee9b1d7479b65b0a818780453e5c00c416847d02f42186e2fcf19a8a8dc5e9cc2611300690c6ad324f9c0f0e8172e913a1b781fb7c0b5b4
 Size (libc-0.2.139.crate) = 638983 bytes
-BLAKE2s (libgit2-sys-0.14.2+1.5.1.crate) = b3cc12afd369db4d7f5bdb64a94b0bb27b4506239a2774c83d3dd221325c8b8c
-SHA512 (libgit2-sys-0.14.2+1.5.1.crate) = eb9602706036ea62ecbc08250f297119a1c51ea09ea86ae8630dc6d0521b74db96d8eccc4106343572eb70d9a156415c017c6a91fb5529100fbed091ff8e7921
-Size (libgit2-sys-0.14.2+1.5.1.crate) = 1742257 bytes
+BLAKE2s (libgit2-sys-0.15.1+1.6.4.crate) = 13c0493ccc8f95a571b9a72d9ba53f5264c8998e6bc4d5ef6a430b0298b60349
+SHA512 (libgit2-sys-0.15.1+1.6.4.crate) = a6e9992749ba4d09809e030b9d27d0fa5e3e8629800f0b4f387ee68bab9dba1b7f8d75405538a40f7781bcb287e7497ab2bffe3173ca83215627ec1374117ddb
+Size (libgit2-sys-0.15.1+1.6.4.crate) = 1755296 bytes
 BLAKE2s (libm-0.2.6.crate) = 9feb5c18d6d19d10b0a440c752cd86266efdff4915942f652fd968005cace1a6
 SHA512 (libm-0.2.6.crate) = 6ba263c95f1c555e66fbc5a5f7d0f2aca4e20f6aaeca27c3baa4d17aa00b88830334736fc58d268d98e50bcab65220507b0d8e7973fcdbf14600ab3f20c34a56
 Size (libm-0.2.6.crate) = 113690 bytes
@@ -1071,3 +1071,7 @@ Size (xi-unicode-0.3.0.crate) = 87001 bytes
 BLAKE2s (yaml-rust-0.4.5.crate) = 65c7c0fe708cb682959e36fbb03b09a35b09d529e5c87364107f5985940a1404
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
+SHA1 (patch-Cargo.lock) = d3fcfe7da4cfbd8d35dd93e888b8bfbb390b162c
+SHA1 (patch-git-branchless-invoke_Cargo.toml) = 745e60562e000e70005789cc6d1c58efa0de46f2
+SHA1 (patch-git-branchless-lib_Cargo.toml) = d74fd5df14c591638a943411ebe4243c293f7731
+SHA1 (patch-git-branchless-lib_src_git_status.rs) = 26a1ae29a47a16e7a7b67594d36f900134a2cc20
