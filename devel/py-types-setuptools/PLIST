@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/04/04 15:05:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/04/26 13:38:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,7 +7,6 @@ ${PYSITELIB}/pkg_resources-stubs/METADATA.toml
 ${PYSITELIB}/pkg_resources-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
-${PYSITELIB}/setuptools-stubs/_deprecation_warning.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cmd.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_clib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_ext.pyi
@@ -63,5 +62,6 @@ ${PYSITELIB}/setuptools-stubs/package_index.pyi
 ${PYSITELIB}/setuptools-stubs/sandbox.pyi
 ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
 ${PYSITELIB}/setuptools-stubs/version.pyi
+${PYSITELIB}/setuptools-stubs/warnings.pyi
 ${PYSITELIB}/setuptools-stubs/wheel.pyi
 ${PYSITELIB}/setuptools-stubs/windows_support.pyi
