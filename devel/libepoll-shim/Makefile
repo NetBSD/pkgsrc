@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/01/24 18:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/26 16:12:48 wiz Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-0.0.20210418
+DISTNAME=	${GITHUB_PROJECT}-0.0.20230411
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
 GITHUB_PROJECT=	epoll-shim
@@ -18,6 +17,9 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PKGCONFIGDIR=${PREFIX}/lib/pkgconfig
 
+# re-defines read(2) itself
+FORTIFY_SUPPORTED=	no
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(OPSYS_HAS_KQUEUE)
@@ -32,6 +34,7 @@ PLIST.eventfd=	YES
 PLIST.timerfd=	YES
 .endif
 
+PKGCONFIG_OVERRIDE+=	epoll-shim-interpose.pc.cmakein
 PKGCONFIG_OVERRIDE+=	epoll-shim.pc.cmakein
 
 .include "../../devel/cmake/build.mk"
