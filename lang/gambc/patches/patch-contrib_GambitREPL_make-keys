@@ -1,0 +1,15 @@
+$NetBSD: patch-contrib_GambitREPL_make-keys,v 1.1 2023/04/26 20:53:23 nikita Exp $
+
+Fix portability.
+
+--- contrib/GambitREPL/make-keys.orig	2023-04-26 22:15:47.332909563 +0200
++++ contrib/GambitREPL/make-keys	2023-04-26 22:16:36.834296594 +0200
+@@ -33,7 +33,7 @@
+ 
+   FONT_SIZE=`expr \( ${KEY_HEIGHT} \* 1000 \) / 1625`
+ 
+-  if [ "${IMAGE}" == "" ]; then
++  if [ "${IMAGE}" = "" ]; then
+ 
+     DRAW_IMAGE=""
+ 

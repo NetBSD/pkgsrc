@@ -1,0 +1,24 @@
+$NetBSD: patch-misc_change-gvm-regs,v 1.1 2023/04/26 20:53:23 nikita Exp $
+
+Fix portability.
+
+--- misc/change-gvm-regs.orig	2023-04-26 22:19:15.917800254 +0200
++++ misc/change-gvm-regs	2023-04-26 22:22:39.244105743 +0200
+@@ -11,7 +11,7 @@
+ NB_ARG_REGS=$2
+ CONFIGURE_OPTIONS=$3
+ 
+-if [ "$NB_GVM_REGS" == "" ]
++if [ "$NB_GVM_REGS" = "" ]
+ then
+   NB_GVM_REGS=5
+ fi
+@@ -23,7 +23,7 @@
+    exit 1
+ fi
+ 
+-if [ "$NB_ARG_REGS" == "" ]
++if [ "$NB_ARG_REGS" = "" ]
+ then
+   NB_ARG_REGS=`eval expr $NB_GVM_REGS - 2`
+ fi

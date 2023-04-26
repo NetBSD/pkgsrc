@@ -1,0 +1,32 @@
+$NetBSD: patch-misc_build-gambit-iOS,v 1.1 2023/04/26 20:53:23 nikita Exp $
+
+Fix portability.
+
+--- misc/build-gambit-iOS.orig	2023-04-26 22:19:02.324334524 +0200
++++ misc/build-gambit-iOS	2023-04-26 22:21:44.927756847 +0200
+@@ -101,7 +101,7 @@
+   rootfromhere="`grep \"^rootfromhere = *\" makefile 2> /dev/null | sed -e \"s/rootfromhere = //\"`"
+   gambit_dist="`grep \"^PACKAGE_TARNAME = *\" makefile 2> /dev/null | sed -e \"s/PACKAGE_TARNAME = *//\"`"
+ 
+-  if [ "$gambit_dist" == "" ]; then
++  if [ "$gambit_dist" = "" ]; then
+ 
+     download_gambit_dist_tgz
+ 
+@@ -141,14 +141,14 @@
+   what="$2"
+   cd "$dir"
+ 
+-  if [ "$update_with_latest_changes" == "yes" ]; then
++  if [ "$update_with_latest_changes" = "yes" ]; then
+      echo "Updating to latest from master"
+      make update
+   fi
+ 
+   make clean
+ 
+-  if [ "$what" == "skip-gsi-gsc" ]; then
++  if [ "$what" = "skip-gsi-gsc" ]; then
+ 
+     # we only care about the Gambit runtime library so avoid building gsi and gsc
+ 
