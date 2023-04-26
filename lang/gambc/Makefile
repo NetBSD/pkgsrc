@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2023/04/26 19:39:11 nikita Exp $
+# $NetBSD: Makefile,v 1.20 2023/04/26 20:53:23 nikita Exp $
 #
 
-DISTNAME=	gambc-${GAMBC_DIST_VERSION}
+DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
 PKGNAME=	gambc-${GAMBC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/
+MASTER_SITES=	http://gambitscheme.org/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -38,10 +37,10 @@ MAKE_FILE=		makefile
 BUILD_TARGET+=		bootstrap
 TEST_TARGET=		check
 
+WRKSRC=			${WRKDIR}/gambit-${PKGVERSION_NOREV}
+
 CHECK_PORTABILITY_SKIP=		prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=	no
-
-TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
