@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/03/29 08:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/04/26 11:25:56 wiz Exp $
 
 DISTNAME=	bat-0.23.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/sharkdp/bat/
 COMMENT=	Clone of cat with syntax highlighting
 LICENSE=	apache-2.0
 
-RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 .include "cargo-depends.mk"
 
