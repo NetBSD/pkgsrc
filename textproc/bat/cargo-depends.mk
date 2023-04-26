@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2023/03/29 08:32:40 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2023/04/26 11:25:56 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.19
@@ -49,7 +49,7 @@ CARGO_CRATE_DEPENDS+=	form_urlencoded-1.1.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.7
 CARGO_CRATE_DEPENDS+=	git-version-0.3.5
 CARGO_CRATE_DEPENDS+=	git-version-macro-0.3.5
-CARGO_CRATE_DEPENDS+=	git2-0.16.1
+CARGO_CRATE_DEPENDS+=	git2-0.17.1
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
 CARGO_CRATE_DEPENDS+=	globset-0.4.10
 CARGO_CRATE_DEPENDS+=	grep-cli-0.1.7
@@ -66,7 +66,7 @@ CARGO_CRATE_DEPENDS+=	itoa-1.0.3
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.25
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.137
-CARGO_CRATE_DEPENDS+=	libgit2-sys-0.14.2+1.5.1
+CARGO_CRATE_DEPENDS+=	libgit2-sys-0.15.1+1.6.4
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.8
 CARGO_CRATE_DEPENDS+=	line-wrap-0.1.1
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
