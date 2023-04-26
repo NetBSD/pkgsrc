@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2473 2023/04/26 19:47:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2474 2023/04/26 19:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3552,3 +3552,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/lgogdownloader to 3.11 [wiz 2023-04-26]
 	Updated net/ngtcp2 to 0.15.0 [wiz 2023-04-26]
 	Updated devel/xdelta3 to 3.1.0 [wiz 2023-04-26]
+	Updated print/ghostscript-agpl to 10.01.1 [wiz 2023-04-26]
