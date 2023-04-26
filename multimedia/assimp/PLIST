@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/04/14 13:20:42 nros Exp $
-bin/assimp
+@comment $NetBSD: PLIST,v 1.4 2023/04/26 19:32:56 wiz Exp $
 include/assimp/Base64.hpp
 include/assimp/BaseImporter.h
 include/assimp/Bitmap.h
@@ -94,5 +93,5 @@ lib/cmake/assimp-5.2/assimpTargets-noconfig.cmake
 lib/cmake/assimp-5.2/assimpTargets.cmake
 lib/libassimp.so
 lib/libassimp.so.5
-lib/libassimp.so.5.2.0
+lib/libassimp.so.5.2.4
 lib/pkgconfig/assimp.pc
