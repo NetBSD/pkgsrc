@@ -1,4 +1,4 @@
-# $NetBSD: info-files,v 1.4 2007/07/12 19:41:46 jlam Exp $
+# $NetBSD: info-files,v 1.5 2023/04/26 10:24:50 wiz Exp $
 #
 # Generate an +INFO_FILES script that handles info file registration for
 # the package.
@@ -29,7 +29,6 @@ UNPACK,|UNPACK,+INFO_FILES)
 # relative to ${PKG_PREFIX}.
 #
 
-ECHO="@ECHO@"
 GREP="@GREP@"
 INSTALL_INFO="@INSTALL_INFO@"
 MKDIR="@MKDIR@"
@@ -47,15 +46,6 @@ CURDIR=`${PWD_CMD}`
 PKG_METADATA_DIR="${2-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_PREFIX=@PREFIX@}
-
-case "${INFO_FILES_VERBOSE:-@INFO_FILES_VERBOSE@}" in
-[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-	echo="${ECHO}"
-	;;
-[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
-	echo=":"
-	;;
-esac
 
 exitcode=0
 case $ACTION in
@@ -79,7 +69,6 @@ ADD)
 			case "$nentries" in
 			[0-9]*)	${TEST} $nentries -gt 0 || ${RM} $infoindex ;;
 			esac
-			$echo "${PKGNAME}: registering info file $file"
 			${MKDIR} -p "$infodir"
 			${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
 			${INSTALL_INFO} --info-dir="$infodir" $file >/dev/null 2>&1
@@ -103,7 +92,6 @@ REMOVE)
 			[!/]*)	infodir="${PKG_PREFIX}/$infodir" ;;
 			esac
 			infoindex="$infodir/dir"
-			$echo "${PKGNAME}: unregistering info file $file"
 			${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
 			nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
 			case "$nentries" in
