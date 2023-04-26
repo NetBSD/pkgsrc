@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2023/04/19 08:09:57 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/04/26 19:51:29 wiz Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 DISTFILES=	# empty
-PKGREVISION=	4
 CATEGORIES=	fonts
 
 MAINTAINER=	makoto@ki.nu
@@ -69,7 +68,7 @@ NO_CONFIGURE=	yes
 .include "../../print/ghostscript/buildlink3.mk"
 
 # Following logic is flaky, for looking at PKG_OPTIONS.gs_type now NOT at build time
-.if   !empty(PKG_BUILD_OPTIONS.ghostscript:Mghostscript-agpl)
+.if   ${PKG_BUILD_OPTIONS.ghostscript:Mghostscript-agpl}
 .  include	"../../print/ghostscript-agpl/Makefile.common"
 .  if empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mdisable-compile-inits)
 PKG_FAIL_REASON+=	"(agpl) You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time."
