@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2023/04/19 08:11:32 adam Exp $
+# $NetBSD: Makefile,v 1.117 2023/04/26 21:52:52 snj Exp $
 
 OVTVER=		12.1.5
 DISTNAME=	open-vm-tools-${OVTVER}-20735119
@@ -27,8 +27,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-docs # Requires doxygen
-CONFIGURE_ARGS+=	--disable-grabbitmqproxy
-CONFIGURE_ARGS+=	--disable-unity
 CONFIGURE_ARGS+=	--disable-vgauth
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
