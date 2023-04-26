@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/26 16:07:13 adam Exp $
 
-DISTNAME=	pyasn1-modules-0.2.8
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+DISTNAME=	pyasn1_modules-0.3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	security python
-#MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyasn1-modules/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=etingof/}
-GITHUB_PROJECT=	pyasn1-modules
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyasn1-modules/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/etingof/pyasn1-modules
+HOMEPAGE=	https://github.com/pyasn1/pyasn1-modules
 COMMENT=	Modules for ITU Abstract Syntax Notification for Python
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-asn1>=0.4.1:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-asn1>=0.5.0:../../security/py-asn1
 
 USE_LANGUAGES=	# none
 
