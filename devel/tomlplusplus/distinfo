@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/09/09 15:04:37 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/04/26 19:57:06 wiz Exp $
 
-BLAKE2s (tomlplusplus-3.2.0.tar.gz) = 723cdacea685e8ad2ae3fa5fe25adcd1b31d16ed3719881efdfd4126fb298389
-SHA512 (tomlplusplus-3.2.0.tar.gz) = 091c26a024b3a2ae6251038a99758acca8623f18a0137e662df43f865e7e77e255cb79d22acd5962bcb0feb8e9abf21ea4968bd61e8dd61f8ca3413a920d2ba9
-Size (tomlplusplus-3.2.0.tar.gz) = 1294294 bytes
+BLAKE2s (tomlplusplus-3.3.0.tar.gz) = 7cb54739e4bc5e926a2cba947d36dde556d824416f587876a56dd84d24401762
+SHA512 (tomlplusplus-3.3.0.tar.gz) = 6ab2de83b7fc44de40e58a47c28a9507bf7c50fa9b08925b5a6d48958868a86e6790aff684d29ceb50ad18905e3832840719e1b7bfec3b8a0c00b15bb0f70f38
+Size (tomlplusplus-3.3.0.tar.gz) = 1288964 bytes
