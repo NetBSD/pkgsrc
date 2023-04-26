@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/07/24 14:59:35 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/04/26 15:58:30 wiz Exp $
 
-BLAKE2s (appstream-glib-0.8.0.tar.gz) = 11e581a6faddcaa5ad4ce7a3fa4d8d8e223958755b4d294c305c6884c7d9531a
-SHA512 (appstream-glib-0.8.0.tar.gz) = 80ebe3ea4c27c91135d9cba64249407a92fe51ec3150505e9285c5c9217beab32232e263c953696b33e0f92220f1bda4e6737f1dbc73dfa4e81f55e2da03429b
-Size (appstream-glib-0.8.0.tar.gz) = 2588779 bytes
+BLAKE2s (appstream-glib-0.8.2.tar.gz) = 6457afd619e068965c89beb7fd5659faa3b8b079411038277982082f9dfdaefb
+SHA512 (appstream-glib-0.8.2.tar.gz) = f5c301d9183ccd4773979fd99de694e4b8a6e5d27b5192399e540ee37e9a1f34496055965df09f5445630622a7fc3f23a61f6ab91f8467c73164ba9eb65ef959
+Size (appstream-glib-0.8.2.tar.gz) = 2596867 bytes
