@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.77 2022/11/23 11:32:47 jperkin Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.78 2023/04/26 10:24:50 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -11,14 +11,9 @@
 #	noting the actions taken if PKG_UPDATE_FONTS_DB is YES.  It is either
 #	YES or NO and defaults to YES for PKG_DEVELOPERs, otherwise NO.
 #
-# INFO_FILES_VERBOSE indicates whether the +INFO_FILES scriptlet will output
-#	a message noting the actions taken.  It is either YES or NO and
-#	defaults to  YES for PKG_DEVELOPERs, otherwise NO.
-#
 _VARGROUPS+=		pkginstall
 _USER_VARS.pkginstall= \
 	FONTS_VERBOSE \
-	INFO_FILES_VERBOSE \
 	OCAML_FINDLIB_REGISTER_VERBOSE \
 	PKG_CREATE_USERGROUP \
 	PKG_CONFIG PKG_CONFIG_PERMS \
@@ -1038,11 +1033,9 @@ ${_INSTALL_ICON_THEMES_FILE}: ../../mk/pkginstall/icon-themes
 #
 .if ${PKG_DEVELOPER:Uno} != "no"
 FONTS_VERBOSE?=		YES
-INFO_FILES_VERBOSE?=	YES
 OCAML_FINDLIB_REGISTER_VERBOSE?=	YES
 .else
 FONTS_VERBOSE?=		NO
-INFO_FILES_VERBOSE?=	NO
 OCAML_FINDLIB_REGISTER_VERBOSE?=	NO
 .endif
 PKG_CREATE_USERGROUP?=	YES
@@ -1058,7 +1051,6 @@ FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}
 FILES_SUBST+=		FONTS_VERBOSE=${FONTS_VERBOSE:Q}
-FILES_SUBST+=		INFO_FILES_VERBOSE=${INFO_FILES_VERBOSE:Q}
 FILES_SUBST+=		OCAML_FINDLIB_REGISTER_VERBOSE=${OCAML_FINDLIB_REGISTER_VERBOSE:Q}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
