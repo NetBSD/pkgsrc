@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/30 14:37:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/26 16:03:30 wiz Exp $
 include/sys/inotify.h
 lib/libinotify.la
 lib/pkgconfig/libinotify.pc
@@ -7,5 +7,5 @@ man/man3/inotify_event.3
 man/man3/inotify_init.3
 man/man3/inotify_init1.3
 man/man3/inotify_rm_watch.3
-man/man3/inotify_set_param.3
 man/man3/libinotify.3
+man/man3/libinotify_set_param.3
