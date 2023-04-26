@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2466 2023/04/26 19:06:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2467 2023/04/26 19:18:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3545,3 +3545,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/chicken5-boot version 5.3.0 [nikita 2023-04-26]
 	Updated graphics/exiv2 to 0.27.6 [wiz 2023-04-26]
 	Updated graphics/zxing-cpp to 2.0.0 [wiz 2023-04-26]
+	Updated devel/re2c to 3.0 [wiz 2023-04-26]
