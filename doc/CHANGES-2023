@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2459 2023/04/26 16:03:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2460 2023/04/26 16:08:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3537,3 +3537,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/appstream-glib to 0.8.2 [wiz 2023-04-26]
 	Updated converters/fribidi to 1.0.12 [wiz 2023-04-26]
 	Updated devel/libinotify to 0.0.20211018 [wiz 2023-04-26]
+	Updated security/py-asn1 to 0.5.0 [adam 2023-04-26]
+	Updated security/py-asn1-modules to 0.3.0 [adam 2023-04-26]
