@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/04/26 20:54:46 nikita Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/26 20:59:56 nikita Exp $
 #
 
 DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
@@ -13,6 +13,8 @@ COMMENT=	GambitC Scheme System
 
 # bin/scheme-r5rs
 CONFLICTS+=	scheme48>=1.2
+# TODO: adjust the binary name.
+# bin/gsc
 CONFLICTS+=	ghostscript-agpl>=10.0.0
 
 GNU_CONFIGURE=		yes
