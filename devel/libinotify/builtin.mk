@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 10:39:17 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2023/04/26 16:03:30 wiz Exp $
 
 BUILTIN_PKG:=	libinotify
 
@@ -29,10 +29,10 @@ USE_BUILTIN.libinotify=	no
 .  else
 USE_BUILTIN.libinotify=	${IS_BUILTIN.libinotify}
 .    if defined(BUILTIN_PKG.libinotify) && \
-        !empty(IS_BUILTIN.libinotify:M[yY][eE][sS])
+        ${IS_BUILTIN.libinotify:tl} == yes
 USE_BUILTIN.libinotify=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libinotify}
-.        if !empty(USE_BUILTIN.libinotify:M[yY][eE][sS])
+.        if ${USE_BUILTIN.libinotify:tl} == yes
 USE_BUILTIN.libinotify!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libinotify:Q}; then \
 		${ECHO} yes;						\
