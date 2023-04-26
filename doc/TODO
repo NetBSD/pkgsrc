@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22823 2023/04/26 19:42:31 wiz Exp $
+$NetBSD: TODO,v 1.22824 2023/04/26 19:47:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1528,7 +1528,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xaric-0.13.9
 	o xcoral-3.14
 	o xcursor-capitaine-4
-	o xdelta3-3.1.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-dummy-0.4.0
