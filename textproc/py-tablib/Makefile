@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/01/18 11:33:46 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/04/26 10:08:11 adam Exp $
 
-DISTNAME=	tablib-3.3.0
+DISTNAME=	tablib-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://tablib.readthedocs.io/
 COMMENT=	Format agnostic tabular data library (XLS, JSON, YAML, CSV)
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # all without pandas
 DEPENDS+=	${PYPKGPREFIX}-markuppy-[0-9]*:../../textproc/py-markuppy
 DEPENDS+=	${PYPKGPREFIX}-odfpy-[0-9]*:../../textproc/py-odfpy
@@ -30,5 +31,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
