@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22820 2023/04/26 19:33:11 wiz Exp $
+$NetBSD: TODO,v 1.22821 2023/04/26 19:37:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1351,7 +1351,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sendmail-cidrexpand-8.16.0.16
 	o sendmail-qtool-8.16.0.16
 	o ser-0.9.6
-	o sfsexp-1.4.1
 	o sgb-20090810
 	o sge-8.1.8
 	o shairport-sync-4.1.1
