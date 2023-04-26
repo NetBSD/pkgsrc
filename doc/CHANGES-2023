@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2461 2023/04/26 16:12:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2462 2023/04/26 16:15:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-asn1 to 0.5.0 [adam 2023-04-26]
 	Updated security/py-asn1-modules to 0.3.0 [adam 2023-04-26]
 	Updated devel/libepoll-shim to 0.0.20230411 [wiz 2023-04-26]
+	Updated devel/ocamlbuild to 0.14.2 [wiz 2023-04-26]
