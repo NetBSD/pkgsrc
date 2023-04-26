@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2453 2023/04/26 13:46:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2454 2023/04/26 15:11:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-types-ujson to 5.7.0.4 [adam 2023-04-26]
 	Updated misc/py-platformdirs to 3.3.0 [adam 2023-04-26]
 	Updated www/py-yarl to 1.9.2 [adam 2023-04-26]
+	Updated archivers/lz4json to 0.0.20191229 [wiz 2023-04-26]
