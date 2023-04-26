@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2458 2023/04/26 15:59:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2459 2023/04/26 16:03:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libdeflate to 1.18 [wiz 2023-04-26]
 	Updated devel/appstream-glib to 0.8.2 [wiz 2023-04-26]
 	Updated converters/fribidi to 1.0.12 [wiz 2023-04-26]
+	Updated devel/libinotify to 0.0.20211018 [wiz 2023-04-26]
