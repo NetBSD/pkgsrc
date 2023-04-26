@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2023/04/21 00:49:56 manu Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/26 15:01:22 wiz Exp $
 
-GITHUB_PROJECT=	OpenARC
-GITHUB_TAG=	355ee2a1ca85acccce494478991983b54f794f4e
 DISTNAME=	openarc-20180921
 PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_PROJECT=	OpenARC
+GITHUB_TAG=	355ee2a1ca85acccce494478991983b54f794f4e
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/trusteddomainproject/OpenARC
 COMMENT=	Open source ARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
+
+# for m4 file
+BUILD_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
 
 RCD_SCRIPTS=	openarc
 
@@ -27,15 +29,13 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS=	${EGDIR}
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	libtoolize; aclocal; autoheader; automake -a --foreign -i; autoconf
+	cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/openarc/openarc.conf.sample \
 		${DESTDIR}${EGDIR}/
 
 .include "../../security/openssl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
