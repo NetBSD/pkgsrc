@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2020/11/19 10:41:26 nia Exp $
+# $NetBSD: Makefile,v 1.59 2023/04/26 15:45:03 wiz Exp $
 
-DISTNAME=	faad2-2.10.0
+DISTNAME=	faad2-2.10.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=knik0/}
-GITHUB_TAG=	${PKGVERSION_NOREV:S/./_/g}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/knik0/faad2
