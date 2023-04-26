@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2462 2023/04/26 16:15:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2463 2023/04/26 18:12:01 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3541,3 +3541,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-asn1-modules to 0.3.0 [adam 2023-04-26]
 	Updated devel/libepoll-shim to 0.0.20230411 [wiz 2023-04-26]
 	Updated devel/ocamlbuild to 0.14.2 [wiz 2023-04-26]
+	Updated lang/chicken5 to 5.3.0 [nikita 2023-04-26]
