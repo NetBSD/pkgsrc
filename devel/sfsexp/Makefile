@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/11/01 14:15:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/26 19:36:49 wiz Exp $
 
-GITHUB_PROJECT=	sfsexp
-DISTNAME=	sexpr-1.3.1pre20211025
-PKGNAME=	${DISTNAME:S/sexpr-/sfsexp-/}
+DISTNAME=	sfsexp-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjsottile/}
-GITHUB_TAG=	30739f9544cfa43212769bb3b4eabfaba44b8ff6
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/mjsottile/sfsexp/
@@ -15,13 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	automake
 
 PKGCONFIG_OVERRIDE=	sfsexp.pc.in
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	${MKDIR} m4; \
-	aclocal; libtoolize; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../mk/bsd.pkg.mk"
