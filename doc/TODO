@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22811 2023/04/26 16:03:39 wiz Exp $
+$NetBSD: TODO,v 1.22812 2023/04/26 16:12:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdevq-0.0.4
 	o libdmapsharing3-3.9.9
 	o libdsk-1.5.15
-	o libepoll-shim-0.0.20230411
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
