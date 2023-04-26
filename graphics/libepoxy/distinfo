@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2022/04/20 20:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.24 2023/04/26 20:00:39 wiz Exp $
 
-BLAKE2s (libepoxy-1.5.9.tar.xz) = 674aaeb0e5dca673675d36a4dc532366cc4e13de8ff2e8e579c9f4db6066fdc7
-SHA512 (libepoxy-1.5.9.tar.xz) = eebaae4b8ff5014a8c90bf63fd9626424f472f99a7dbb81273a45b06c854e57f7d1b2d0fb44847221173c4f92d659fcec8a848a3b32f07225cd0ba35a2fad135
-Size (libepoxy-1.5.9.tar.xz) = 221924 bytes
+BLAKE2s (libepoxy-1.5.10.tar.gz) = aa6d955dd53bd80f7b7548499a52b6dd802a33abec22e1287f45bb255f063fc8
+SHA512 (libepoxy-1.5.10.tar.gz) = 6786f31c6e2865e68a90eb912900a86bf56fd3df4d78a477356886ac3b6ef52ac887b9c7a77aa027525f868ae9e88b12e5927ba56069c2e115acd631fca3abee
+Size (libepoxy-1.5.10.tar.gz) = 332078 bytes
 SHA1 (patch-registry_egl.xml) = 37923cc2be65ab2dead9af8ff062702ab5d63392
 SHA1 (patch-src_dispatch__common.c) = bfc147f2b0d7eebb567ab08517382246a30ee799

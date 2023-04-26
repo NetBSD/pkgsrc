@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/07/10 01:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/04/26 20:00:39 wiz Exp $
 
-DISTNAME=	libepoxy-1.5.9
+DISTNAME=	libepoxy-1.5.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anholt/libepoxy
