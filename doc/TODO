@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22808 2023/04/26 15:56:42 wiz Exp $
+$NetBSD: TODO,v 1.22809 2023/04/26 15:58:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o apache-tomcat85-8.5.65
 	o apache-tomcat9-9.0.45
 	o apollo-1.7
-	o appstream-glib-0.8.2
 	o ardour-7.0
 	o argtable-2.9
 	o argus-20121202
