@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/03/31 08:05:32 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/04/26 19:42:11 wiz Exp $
 
-BLAKE2s (ngtcp2-0.14.1.tar.xz) = a61dfc8a32ad3a9ad8090f684f27ab5d8761db257a37666408fc762828b97e55
-SHA512 (ngtcp2-0.14.1.tar.xz) = 52c55bc322d979d020ab3124a7cc0033d0f3e5649e3c8ee5f00aa64dbad83c4f199d50685704cc9372821e7fc81c59eea79f33894260b5dca171712d5b3899a0
-Size (ngtcp2-0.14.1.tar.xz) = 585788 bytes
+BLAKE2s (ngtcp2-0.15.0.tar.xz) = c3a7b75a87cb44c6c475e0a4ee45e542770c97811244de36302bd184d283ca2a
+SHA512 (ngtcp2-0.15.0.tar.xz) = f57b0e8c88d2710fdee422c387b555d188197e54e97d99fae8b0beaa8eca2c6797e6a55efca34fb99ac65a86be1a224adfd17a0bcf314a27b5fcc24bb304f4bb
+Size (ngtcp2-0.15.0.tar.xz) = 589584 bytes
