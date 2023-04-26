@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:17:41 nia Exp $
+$NetBSD: distinfo,v 1.24 2023/04/26 16:04:51 adam Exp $
 
-BLAKE2s (pyasn1-0.4.8.tar.gz) = 767bcd1aa8a43dc25036a2915ad5cc26be45c72531b9c77372a22020aff763a7
-SHA512 (pyasn1-0.4.8.tar.gz) = e64e70b325c8067f87ace7c0673149e82fe564aa4b0fa146d29b43cb588ecd6e81b1b82803b8cfa7a17d3d0489b6d88b4af5afb3aa0052bf92e8a1769fe8f7b0
-Size (pyasn1-0.4.8.tar.gz) = 146820 bytes
+BLAKE2s (pyasn1-0.5.0.tar.gz) = 6c35df1ec1b3317879e75ccc83d347845a6523b2dcbdd93031b1bd0ec0c5ccb7
+SHA512 (pyasn1-0.5.0.tar.gz) = 763690184ce891555564d76902042791865815e59e1325100fca692140110e5e182ef3da84ffdf96b1876edeb2757bbb09c06d26e752a8110760dafbf9e3ca00
+Size (pyasn1-0.5.0.tar.gz) = 145117 bytes
