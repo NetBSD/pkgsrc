@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2443 2023/04/25 23:36:29 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2444 2023/04/26 08:47:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3514,3 +3514,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/mbedtls to 2.28.3 [wiz 2023-04-25]
 	Updated textproc/tree-sitter to 0.20.8 [nikita 2023-04-25]
 	Updated editors/neovim to 0.9.0 [nikita 2023-04-25]
+	Updated devel/git to 2.40.1 [adam 2023-04-26]
+	Updated sysutils/ansible-core to 2.14.5 [adam 2023-04-26]
