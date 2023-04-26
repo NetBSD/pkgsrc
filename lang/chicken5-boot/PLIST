@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/26 18:09:54 nikita Exp $
+libexec/chicken-bootstrap
