@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22806 2023/04/26 15:45:12 wiz Exp $
+$NetBSD: TODO,v 1.22807 2023/04/26 15:51:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -893,14 +893,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdbusmenu-gtk3-16.04.0
 	o libdbusmenu-jsonloader-16.04.0
 	o libdbusmenu-tools-16.04.0
+	o libdeflate-1.18
 	o libdevq-0.0.4
 	o libdmapsharing3-3.9.9
 	o libdsk-1.5.15
+	o libepoll-shim-0.0.20230411
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libinotify-0.0.20211018
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -939,6 +942,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lsh-2.1
 	o lua-cov-0.15.0
 	o lua-keybinder-0.3.2
+	o lua-language-server-3.6.19
 	o lua-sql-mysql-2.4.0
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
@@ -1027,6 +1031,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-28.1.2
 	o ocaml-5.0.0
 	o ocaml-cppo-1.6.9
+	o ocaml-csexp-1.5.2
+	o ocaml-dune-3.7.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1035,6 +1041,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-resource-pooling-1.2
 	o ocaml-safepass-3.1
 	o ocaml-zip-110
+	o ocamlbuild-0.14.2
 	o ocrad-0.25
 	o octave-8.1
 	o odbc-postgresql-9.06.0500
