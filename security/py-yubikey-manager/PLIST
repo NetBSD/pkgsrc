@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2023/03/12 14:05:21 wiz Exp $
-bin/ykman-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2023/04/27 06:02:54 wiz Exp $
+bin/ykman-3.11
 ${PYSITELIB}/ykman/__init__.py
 ${PYSITELIB}/ykman/__init__.pyc
 ${PYSITELIB}/ykman/_cli/__init__.py
@@ -28,8 +28,6 @@ ${PYSITELIB}/ykman/_cli/script.py
 ${PYSITELIB}/ykman/_cli/script.pyc
 ${PYSITELIB}/ykman/_cli/util.py
 ${PYSITELIB}/ykman/_cli/util.pyc
-${PYSITELIB}/ykman/_openpgp.py
-${PYSITELIB}/ykman/_openpgp.pyc
 ${PYSITELIB}/ykman/base.py
 ${PYSITELIB}/ykman/base.pyc
 ${PYSITELIB}/ykman/device.py
@@ -56,6 +54,8 @@ ${PYSITELIB}/ykman/logging_setup.py
 ${PYSITELIB}/ykman/logging_setup.pyc
 ${PYSITELIB}/ykman/oath.py
 ${PYSITELIB}/ykman/oath.pyc
+${PYSITELIB}/ykman/openpgp.py
+${PYSITELIB}/ykman/openpgp.pyc
 ${PYSITELIB}/ykman/otp.py
 ${PYSITELIB}/ykman/otp.pyc
 ${PYSITELIB}/ykman/pcsc/__init__.py
@@ -111,6 +111,8 @@ ${PYSITELIB}/yubikit/management.py
 ${PYSITELIB}/yubikit/management.pyc
 ${PYSITELIB}/yubikit/oath.py
 ${PYSITELIB}/yubikit/oath.pyc
+${PYSITELIB}/yubikit/openpgp.py
+${PYSITELIB}/yubikit/openpgp.pyc
 ${PYSITELIB}/yubikit/piv.py
 ${PYSITELIB}/yubikit/piv.pyc
 ${PYSITELIB}/yubikit/py.typed
