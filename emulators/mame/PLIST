@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2023/03/31 20:39:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.76 2023/04/27 08:05:42 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -74,11 +74,14 @@ share/mame/hash/a800.xml
 share/mame/hash/a800_cass.xml
 share/mame/hash/a800_flop.xml
 share/mame/hash/abc1600_flop.xml
-share/mame/hash/abc800.xml
 share/mame/hash/abc800_hdd.xml
-share/mame/hash/abc806.xml
+share/mame/hash/abc806_flop.xml
 share/mame/hash/abc80_cass.xml
 share/mame/hash/abc80_flop.xml
+share/mame/hash/abc80_rom.xml
+share/mame/hash/abc830_flop.xml
+share/mame/hash/abc832_flop.xml
+share/mame/hash/abc838_flop.xml
 share/mame/hash/acrnsys_flop.xml
 share/mame/hash/acrnsys_rom.xml
 share/mame/hash/adam_cart.xml
@@ -160,6 +163,7 @@ share/mame/hash/bbcm_flop.xml
 share/mame/hash/bbcmc_flop.xml
 share/mame/hash/bdesignm_design_cart.xml
 share/mame/hash/bdesignm_game_cart.xml
+share/mame/hash/bingobear.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bkrankp_cart.xml
 share/mame/hash/bml3_flop.xml
