@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2533 2023/04/27 15:08:56 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.2534 2023/04/27 15:09:28 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3615,3 +3615,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ruby-braintree to 4.11.0 [taca 2023-04-27]
 	Updated net/lagrange to 1.15.8 [yhardy 2023-04-27]
 	Updated net/netatalk22 to 2.2.9 [hauke 2023-04-27]
+	Updated textproc/miller to 6.7.0 [yhardy 2023-04-27]
