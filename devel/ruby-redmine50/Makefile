@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/03/15 13:47:57 taca Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/27 13:56:06 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -31,13 +32,13 @@ DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails${RUBY_RAILS}>=3.0.0<3.1:../../mail/ruby
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.13.4:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.10.0<1.11:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.10.0:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.21.0<1.22:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-zip>=2.3.0<2.4:../../archivers/ruby-zip
 DEPENDS+=	${RUBY_PKGPREFIX}-rotp>=6.2.0:../../security/ruby-rotp
 DEPENDS+=	${RUBY_PKGPREFIX}-rqrcode>=1.2.0:../../textproc/ruby-rqrcode
-DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0<0.18:../../net/ruby-net-ldap
+DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0:../../net/ruby-net-ldap
 DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=4.11.0:../../graphics/ruby-mini-magick
 DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.5.1<3.6:../../textproc/ruby-redcarpet
 DEPENDS+=	${RUBY_PKGPREFIX}-deckar01-task_list>=2.3.2:../../textproc/ruby-deckar01-task_list
