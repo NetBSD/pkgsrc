@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/09/09 08:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/27 12:29:50 wiz Exp $
 
-DISTNAME=	libspiro-dist-20200505
-PKGNAME=	libspiro-1.1.0.20200505
+DISTNAME=	libspiro-dist-20221101
+PKGNAME=	libspiro-1.3.0.20221101
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
 GITHUB_PROJECT=	libspiro
-GITHUB_RELEASE=	20200505
+GITHUB_RELEASE=	20221101
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://fontforge.github.io/
