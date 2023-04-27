@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/07/25 08:54:29 rin Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/04/27 13:26:19 wiz Exp $
 bin/w3m
 bin/w3mman
 libexec/w3m/cgi-bin/dirlist.cgi
@@ -46,12 +46,15 @@ share/doc/w3m/doc/FAQ.html
 share/doc/w3m/doc/HISTORY
 share/doc/w3m/doc/MANUAL.html
 share/doc/w3m/doc/README
+share/doc/w3m/doc/README.SSL
 share/doc/w3m/doc/README.cookie
 share/doc/w3m/doc/README.cygwin
 share/doc/w3m/doc/README.dict
 share/doc/w3m/doc/README.func
 share/doc/w3m/doc/README.img
+share/doc/w3m/doc/README.keymap
 share/doc/w3m/doc/README.m17n
+share/doc/w3m/doc/README.menu
 share/doc/w3m/doc/README.mouse
 share/doc/w3m/doc/README.passwd
 share/doc/w3m/doc/README.pre_form
