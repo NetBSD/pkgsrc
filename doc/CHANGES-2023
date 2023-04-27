@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2501 2023/04/27 09:34:23 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2502 2023/04/27 10:17:53 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3583,3 +3583,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-itemadapter to 0.8.0 [adam 2023-04-27]
 	Updated textproc/py-itemloaders to 1.1.0 [adam 2023-04-27]
 	Updated www/py-scrapy to 2.8.0 [adam 2023-04-27]
+	Updated security/google-authenticator to 1.09 [jperkin 2023-04-27]
