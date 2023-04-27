@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/18 16:33:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/04/27 12:17:33 wiz Exp $
 
-BLAKE2s (tree-sitter-typescript-0.20.1.tar.gz) = 442f446276f4034ce9660c8b7144c299541ad65bcb6a6c412732a282c5d108c5
-SHA512 (tree-sitter-typescript-0.20.1.tar.gz) = 4d57308e84964bbf136868285141c4cd28ae0bbddef7973849679f8b8b85f00cd1bb5a4db7fd7b5cbd6a090b56193c8120bfd134358d33597a60a9145c694de0
-Size (tree-sitter-typescript-0.20.1.tar.gz) = 767713 bytes
+BLAKE2s (tree-sitter-typescript-0.20.2.tar.gz) = 4d1256e4f3bf6183ee5177d83df710e3f7d06fed35b213e8ddc3f8561845e38f
+SHA512 (tree-sitter-typescript-0.20.2.tar.gz) = 0ed78e515ffa3756800e1c3864540b761d734c34efeab4c5ab46ea96ae026bc09f7c6ef51eaa7275cc06ebdccc870961580da1930717d038265c0293fcf1784e
+Size (tree-sitter-typescript-0.20.2.tar.gz) = 826705 bytes
