@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2521 2023/04/27 13:56:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2522 2023/04/27 14:00:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/marathon-trilogy to 20230119 [yhardy 2023-04-27]
 	Updated devel/ruby-hocon to 1.4.0 [taca 2023-04-27]
 	Updated devel/ruby-redmine50 to 5.0.5nb1 [taca 2023-04-27]
+	Updated devel/ruby-i18n to 1.13.0 [taca 2023-04-27]
