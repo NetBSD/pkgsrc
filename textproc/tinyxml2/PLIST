@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/22 17:16:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/27 08:19:09 wiz Exp $
 include/tinyxml2.h
+lib/cmake/tinyxml2/tinyxml2-config-version.cmake
+lib/cmake/tinyxml2/tinyxml2-config.cmake
+lib/cmake/tinyxml2/tinyxml2-static-targets-noconfig.cmake
+lib/cmake/tinyxml2/tinyxml2-static-targets.cmake
 lib/libtinyxml2.a
-lib/libtinyxml2.so
-lib/libtinyxml2.so.2
-lib/libtinyxml2.so.${PKGVERSION}
 lib/pkgconfig/tinyxml2.pc
