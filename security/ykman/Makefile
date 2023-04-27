@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.3 2023/03/12 14:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/27 06:02:54 wiz Exp $
 
 .include "../../security/ykman/version.mk"
 
