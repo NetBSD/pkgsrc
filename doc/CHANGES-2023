@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2535 2023/04/27 17:54:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2536 2023/04/27 18:17:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/py-rich to 13.3.5 [adam 2023-04-27]
 	Updated devel/py-astroid to 2.15.4 [adam 2023-04-27]
 	Updated devel/py-pylint to 2.17.3 [adam 2023-04-27]
+	Updated sysutils/onefetch to 2.17.0nb1 [pin 2023-04-27]
