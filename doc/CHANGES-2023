@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2493 2023/04/27 07:17:51 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2494 2023/04/27 08:05:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hackernews-tui to 0.13.1 [pin 2023-04-27]
 	Updated shells/nushell to 0.79.0 [pin 2023-04-27]
 	Updated shells/oh-my-posh to 15.3.0 [pin 2023-04-27]
+	Updated emulators/mame to 0.254 [wiz 2023-04-27]
