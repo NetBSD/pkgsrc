@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/01/29 21:16:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/27 18:50:59 yhardy Exp $
 
-DISTNAME=	gemrb-0.9.0
-PKGREVISION=	7
+DISTNAME=	gemrb-0.9.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gemrb/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,9 +30,7 @@ CONFIGURE_DIRS=	build
 
 REPLACE_PYTHON=	admin/extend2da.py
 
-# https://github.com/gemrb/gemrb/issues/101 (closed)
-# https://github.com/gemrb/gemrb/issues/1289
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
