@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2023/04/19 10:58:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/27 21:01:58 pin Exp $
 
-DISTNAME=	gerb-0.0.1alpha20230328
+DISTNAME=	gerb-0.0.1alpha20230427
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epilys/}
 GITHUB_PROJECT=	gerb
-GITHUB_TAG=	v0.0.1-alpha+2023-03-28
+GITHUB_TAG=	v0.0.1-alpha+2023-04-27
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/epilys/gerb/
