@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/07/25 19:07:23 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/04/27 13:04:10 yhardy Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -105,6 +105,9 @@ ${PYSITELIB}/streamlink/plugins/ard_mediathek.pyo
 ${PYSITELIB}/streamlink/plugins/artetv.py
 ${PYSITELIB}/streamlink/plugins/artetv.pyc
 ${PYSITELIB}/streamlink/plugins/artetv.pyo
+${PYSITELIB}/streamlink/plugins/atpchallenger.py
+${PYSITELIB}/streamlink/plugins/atpchallenger.pyc
+${PYSITELIB}/streamlink/plugins/atpchallenger.pyo
 ${PYSITELIB}/streamlink/plugins/atresplayer.py
 ${PYSITELIB}/streamlink/plugins/atresplayer.pyc
 ${PYSITELIB}/streamlink/plugins/atresplayer.pyo
@@ -156,9 +159,6 @@ ${PYSITELIB}/streamlink/plugins/cmmedia.pyo
 ${PYSITELIB}/streamlink/plugins/cnews.py
 ${PYSITELIB}/streamlink/plugins/cnews.pyc
 ${PYSITELIB}/streamlink/plugins/cnews.pyo
-${PYSITELIB}/streamlink/plugins/common_jwplayer.py
-${PYSITELIB}/streamlink/plugins/common_jwplayer.pyc
-${PYSITELIB}/streamlink/plugins/common_jwplayer.pyo
 ${PYSITELIB}/streamlink/plugins/crunchyroll.py
 ${PYSITELIB}/streamlink/plugins/crunchyroll.pyc
 ${PYSITELIB}/streamlink/plugins/crunchyroll.pyo
@@ -189,9 +189,6 @@ ${PYSITELIB}/streamlink/plugins/drdk.pyo
 ${PYSITELIB}/streamlink/plugins/earthcam.py
 ${PYSITELIB}/streamlink/plugins/earthcam.pyc
 ${PYSITELIB}/streamlink/plugins/earthcam.pyo
-${PYSITELIB}/streamlink/plugins/egame.py
-${PYSITELIB}/streamlink/plugins/egame.pyc
-${PYSITELIB}/streamlink/plugins/egame.pyo
 ${PYSITELIB}/streamlink/plugins/euronews.py
 ${PYSITELIB}/streamlink/plugins/euronews.pyc
 ${PYSITELIB}/streamlink/plugins/euronews.pyo
@@ -204,9 +201,6 @@ ${PYSITELIB}/streamlink/plugins/filmon.pyo
 ${PYSITELIB}/streamlink/plugins/foxtr.py
 ${PYSITELIB}/streamlink/plugins/foxtr.pyc
 ${PYSITELIB}/streamlink/plugins/foxtr.pyo
-${PYSITELIB}/streamlink/plugins/funimationnow.py
-${PYSITELIB}/streamlink/plugins/funimationnow.pyc
-${PYSITELIB}/streamlink/plugins/funimationnow.pyo
 ${PYSITELIB}/streamlink/plugins/galatasaraytv.py
 ${PYSITELIB}/streamlink/plugins/galatasaraytv.pyc
 ${PYSITELIB}/streamlink/plugins/galatasaraytv.pyo
@@ -243,6 +237,9 @@ ${PYSITELIB}/streamlink/plugins/huya.pyo
 ${PYSITELIB}/streamlink/plugins/idf1.py
 ${PYSITELIB}/streamlink/plugins/idf1.pyc
 ${PYSITELIB}/streamlink/plugins/idf1.pyo
+${PYSITELIB}/streamlink/plugins/indihometv.py
+${PYSITELIB}/streamlink/plugins/indihometv.pyc
+${PYSITELIB}/streamlink/plugins/indihometv.pyo
 ${PYSITELIB}/streamlink/plugins/invintus.py
 ${PYSITELIB}/streamlink/plugins/invintus.pyc
 ${PYSITELIB}/streamlink/plugins/invintus.pyo
@@ -279,6 +276,9 @@ ${PYSITELIB}/streamlink/plugins/mildom.pyo
 ${PYSITELIB}/streamlink/plugins/mitele.py
 ${PYSITELIB}/streamlink/plugins/mitele.pyc
 ${PYSITELIB}/streamlink/plugins/mitele.pyo
+${PYSITELIB}/streamlink/plugins/mixcloud.py
+${PYSITELIB}/streamlink/plugins/mixcloud.pyc
+${PYSITELIB}/streamlink/plugins/mixcloud.pyo
 ${PYSITELIB}/streamlink/plugins/mjunoon.py
 ${PYSITELIB}/streamlink/plugins/mjunoon.pyc
 ${PYSITELIB}/streamlink/plugins/mjunoon.pyo
@@ -288,15 +288,6 @@ ${PYSITELIB}/streamlink/plugins/mrtmk.pyo
 ${PYSITELIB}/streamlink/plugins/n13tv.py
 ${PYSITELIB}/streamlink/plugins/n13tv.pyc
 ${PYSITELIB}/streamlink/plugins/n13tv.pyo
-${PYSITELIB}/streamlink/plugins/nbc.py
-${PYSITELIB}/streamlink/plugins/nbc.pyc
-${PYSITELIB}/streamlink/plugins/nbc.pyo
-${PYSITELIB}/streamlink/plugins/nbcnews.py
-${PYSITELIB}/streamlink/plugins/nbcnews.pyc
-${PYSITELIB}/streamlink/plugins/nbcnews.pyo
-${PYSITELIB}/streamlink/plugins/nbcsports.py
-${PYSITELIB}/streamlink/plugins/nbcsports.pyc
-${PYSITELIB}/streamlink/plugins/nbcsports.pyo
 ${PYSITELIB}/streamlink/plugins/nhkworld.py
 ${PYSITELIB}/streamlink/plugins/nhkworld.pyc
 ${PYSITELIB}/streamlink/plugins/nhkworld.pyo
@@ -333,9 +324,6 @@ ${PYSITELIB}/streamlink/plugins/onetv.pyo
 ${PYSITELIB}/streamlink/plugins/openrectv.py
 ${PYSITELIB}/streamlink/plugins/openrectv.pyc
 ${PYSITELIB}/streamlink/plugins/openrectv.pyo
-${PYSITELIB}/streamlink/plugins/orf_tvthek.py
-${PYSITELIB}/streamlink/plugins/orf_tvthek.pyc
-${PYSITELIB}/streamlink/plugins/orf_tvthek.pyo
 ${PYSITELIB}/streamlink/plugins/pandalive.py
 ${PYSITELIB}/streamlink/plugins/pandalive.pyc
 ${PYSITELIB}/streamlink/plugins/pandalive.pyo
@@ -390,17 +378,12 @@ ${PYSITELIB}/streamlink/plugins/ruv.pyo
 ${PYSITELIB}/streamlink/plugins/sbscokr.py
 ${PYSITELIB}/streamlink/plugins/sbscokr.pyc
 ${PYSITELIB}/streamlink/plugins/sbscokr.pyo
-${PYSITELIB}/streamlink/plugins/schoolism.py
-${PYSITELIB}/streamlink/plugins/schoolism.pyc
-${PYSITELIB}/streamlink/plugins/schoolism.pyo
 ${PYSITELIB}/streamlink/plugins/showroom.py
 ${PYSITELIB}/streamlink/plugins/showroom.pyc
 ${PYSITELIB}/streamlink/plugins/showroom.pyo
 ${PYSITELIB}/streamlink/plugins/sportal.py
 ${PYSITELIB}/streamlink/plugins/sportal.pyc
 ${PYSITELIB}/streamlink/plugins/sportal.pyo
-${PYSITELIB}/streamlink/plugins/sportal.pyc
-${PYSITELIB}/streamlink/plugins/sportschau.pyo
 ${PYSITELIB}/streamlink/plugins/sportschau.py
 ${PYSITELIB}/streamlink/plugins/sportschau.pyc
 ${PYSITELIB}/streamlink/plugins/sportschau.pyo
@@ -419,9 +402,6 @@ ${PYSITELIB}/streamlink/plugins/streamable.pyo
 ${PYSITELIB}/streamlink/plugins/streann.py
 ${PYSITELIB}/streamlink/plugins/streann.pyc
 ${PYSITELIB}/streamlink/plugins/streann.pyo
-${PYSITELIB}/streamlink/plugins/streann.pyc
-${PYSITELIB}/streamlink/plugins/streann.pyo
-${PYSITELIB}/streamlink/plugins/stv.py
 ${PYSITELIB}/streamlink/plugins/stv.py
 ${PYSITELIB}/streamlink/plugins/stv.pyc
 ${PYSITELIB}/streamlink/plugins/stv.pyo
@@ -434,12 +414,12 @@ ${PYSITELIB}/streamlink/plugins/swisstxt.pyo
 ${PYSITELIB}/streamlink/plugins/telefe.py
 ${PYSITELIB}/streamlink/plugins/telefe.pyc
 ${PYSITELIB}/streamlink/plugins/telefe.pyo
+${PYSITELIB}/streamlink/plugins/telemadrid.py
+${PYSITELIB}/streamlink/plugins/telemadrid.pyc
+${PYSITELIB}/streamlink/plugins/telemadrid.pyo
 ${PYSITELIB}/streamlink/plugins/tf1.py
 ${PYSITELIB}/streamlink/plugins/tf1.pyc
 ${PYSITELIB}/streamlink/plugins/tf1.pyo
-${PYSITELIB}/streamlink/plugins/theplatform.py
-${PYSITELIB}/streamlink/plugins/theplatform.pyc
-${PYSITELIB}/streamlink/plugins/theplatform.pyo
 ${PYSITELIB}/streamlink/plugins/trovo.py
 ${PYSITELIB}/streamlink/plugins/trovo.pyc
 ${PYSITELIB}/streamlink/plugins/trovo.pyo
@@ -449,8 +429,6 @@ ${PYSITELIB}/streamlink/plugins/turkuvaz.pyo
 ${PYSITELIB}/streamlink/plugins/tv360.py
 ${PYSITELIB}/streamlink/plugins/tv360.pyc
 ${PYSITELIB}/streamlink/plugins/tv360.pyo
-${PYSITELIB}/streamlink/plugins/turkuvaz.pyo
-${PYSITELIB}/streamlink/plugins/tv360.py
 ${PYSITELIB}/streamlink/plugins/tv3cat.py
 ${PYSITELIB}/streamlink/plugins/tv3cat.pyc
 ${PYSITELIB}/streamlink/plugins/tv3cat.pyo
@@ -490,9 +468,6 @@ ${PYSITELIB}/streamlink/plugins/twitcasting.pyo
 ${PYSITELIB}/streamlink/plugins/twitch.py
 ${PYSITELIB}/streamlink/plugins/twitch.pyc
 ${PYSITELIB}/streamlink/plugins/twitch.pyo
-${PYSITELIB}/streamlink/plugins/useetv.py
-${PYSITELIB}/streamlink/plugins/useetv.pyc
-${PYSITELIB}/streamlink/plugins/useetv.pyo
 ${PYSITELIB}/streamlink/plugins/ustreamtv.py
 ${PYSITELIB}/streamlink/plugins/ustreamtv.pyc
 ${PYSITELIB}/streamlink/plugins/ustreamtv.pyo
@@ -511,6 +486,9 @@ ${PYSITELIB}/streamlink/plugins/vinhlongtv.pyo
 ${PYSITELIB}/streamlink/plugins/vk.py
 ${PYSITELIB}/streamlink/plugins/vk.pyc
 ${PYSITELIB}/streamlink/plugins/vk.pyo
+${PYSITELIB}/streamlink/plugins/vkplay.py
+${PYSITELIB}/streamlink/plugins/vkplay.pyc
+${PYSITELIB}/streamlink/plugins/vkplay.pyo
 ${PYSITELIB}/streamlink/plugins/vlive.py
 ${PYSITELIB}/streamlink/plugins/vlive.pyc
 ${PYSITELIB}/streamlink/plugins/vlive.pyo
@@ -550,6 +528,7 @@ ${PYSITELIB}/streamlink/plugins/zengatv.pyo
 ${PYSITELIB}/streamlink/plugins/zhanqi.py
 ${PYSITELIB}/streamlink/plugins/zhanqi.pyc
 ${PYSITELIB}/streamlink/plugins/zhanqi.pyo
+${PYSITELIB}/streamlink/py.typed
 ${PYSITELIB}/streamlink/session.py
 ${PYSITELIB}/streamlink/session.pyc
 ${PYSITELIB}/streamlink/session.pyo
@@ -568,6 +547,9 @@ ${PYSITELIB}/streamlink/stream/ffmpegmux.pyo
 ${PYSITELIB}/streamlink/stream/file.py
 ${PYSITELIB}/streamlink/stream/file.pyc
 ${PYSITELIB}/streamlink/stream/file.pyo
+${PYSITELIB}/streamlink/stream/filtered.py
+${PYSITELIB}/streamlink/stream/filtered.pyc
+${PYSITELIB}/streamlink/stream/filtered.pyo
 ${PYSITELIB}/streamlink/stream/hls.py
 ${PYSITELIB}/streamlink/stream/hls.pyc
 ${PYSITELIB}/streamlink/stream/hls.pyo
@@ -586,6 +568,9 @@ ${PYSITELIB}/streamlink/stream/stream.pyo
 ${PYSITELIB}/streamlink/stream/wrappers.py
 ${PYSITELIB}/streamlink/stream/wrappers.pyc
 ${PYSITELIB}/streamlink/stream/wrappers.pyo
+${PYSITELIB}/streamlink/user_input.py
+${PYSITELIB}/streamlink/user_input.pyc
+${PYSITELIB}/streamlink/user_input.pyo
 ${PYSITELIB}/streamlink/utils/__init__.py
 ${PYSITELIB}/streamlink/utils/__init__.pyc
 ${PYSITELIB}/streamlink/utils/__init__.pyo
@@ -616,6 +601,9 @@ ${PYSITELIB}/streamlink/utils/named_pipe.pyo
 ${PYSITELIB}/streamlink/utils/parse.py
 ${PYSITELIB}/streamlink/utils/parse.pyc
 ${PYSITELIB}/streamlink/utils/parse.pyo
+${PYSITELIB}/streamlink/utils/processoutput.py
+${PYSITELIB}/streamlink/utils/processoutput.pyc
+${PYSITELIB}/streamlink/utils/processoutput.pyo
 ${PYSITELIB}/streamlink/utils/times.py
 ${PYSITELIB}/streamlink/utils/times.pyc
 ${PYSITELIB}/streamlink/utils/times.pyo
@@ -646,6 +634,9 @@ ${PYSITELIB}/streamlink_cli/main.pyo
 ${PYSITELIB}/streamlink_cli/output.py
 ${PYSITELIB}/streamlink_cli/output.pyc
 ${PYSITELIB}/streamlink_cli/output.pyo
+${PYSITELIB}/streamlink_cli/streamrunner.py
+${PYSITELIB}/streamlink_cli/streamrunner.pyc
+${PYSITELIB}/streamlink_cli/streamrunner.pyo
 ${PYSITELIB}/streamlink_cli/utils/__init__.py
 ${PYSITELIB}/streamlink_cli/utils/__init__.pyc
 ${PYSITELIB}/streamlink_cli/utils/__init__.pyo
@@ -664,3 +655,6 @@ ${PYSITELIB}/streamlink_cli/utils/player.pyo
 ${PYSITELIB}/streamlink_cli/utils/progress.py
 ${PYSITELIB}/streamlink_cli/utils/progress.pyc
 ${PYSITELIB}/streamlink_cli/utils/progress.pyo
+${PYSITELIB}/streamlink_cli/utils/versioncheck.py
+${PYSITELIB}/streamlink_cli/utils/versioncheck.pyc
+${PYSITELIB}/streamlink_cli/utils/versioncheck.pyo
