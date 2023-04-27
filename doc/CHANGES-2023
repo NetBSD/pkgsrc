@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2503 2023/04/27 11:58:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2504 2023/04/27 12:00:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3585,3 +3585,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-scrapy to 2.8.0 [adam 2023-04-27]
 	Updated security/google-authenticator to 1.09 [jperkin 2023-04-27]
 	Updated security/cargo-audit to 0.17.5 [wiz 2023-04-27]
+	Updated time/libical to 3.0.16 [wiz 2023-04-27]
