@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2536 2023/04/27 18:17:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2537 2023/04/27 18:51:17 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3621,3 +3621,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-astroid to 2.15.4 [adam 2023-04-27]
 	Updated devel/py-pylint to 2.17.3 [adam 2023-04-27]
 	Updated sysutils/onefetch to 2.17.0nb1 [pin 2023-04-27]
+	Updated games/gemrb to 0.9.1 [yhardy 2023-04-27]
