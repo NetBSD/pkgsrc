@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2488 2023/04/27 06:32:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2489 2023/04/27 06:33:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/texlab to 5.5.0 [wiz 2023-04-27]
 	Updated net/grpc to 1.54.0 [wiz 2023-04-27]
 	Updated net/py-grpcio to 1.54.0 [wiz 2023-04-27]
+	Updated net/py-grpcio-testing to 1.54.0 [wiz 2023-04-27]
