@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/22 08:56:56 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/04/27 09:33:44 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -98,6 +98,9 @@ ${PYSITELIB}/scrapy/core/downloader/handlers/http10.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/http11.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/http11.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/http11.pyo
+${PYSITELIB}/scrapy/core/downloader/handlers/http2.py
+${PYSITELIB}/scrapy/core/downloader/handlers/http2.pyc
+${PYSITELIB}/scrapy/core/downloader/handlers/http2.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/s3.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/s3.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/s3.pyo
@@ -113,6 +116,18 @@ ${PYSITELIB}/scrapy/core/downloader/webclient.pyo
 ${PYSITELIB}/scrapy/core/engine.py
 ${PYSITELIB}/scrapy/core/engine.pyc
 ${PYSITELIB}/scrapy/core/engine.pyo
+${PYSITELIB}/scrapy/core/http2/__init__.py
+${PYSITELIB}/scrapy/core/http2/__init__.pyc
+${PYSITELIB}/scrapy/core/http2/__init__.pyo
+${PYSITELIB}/scrapy/core/http2/agent.py
+${PYSITELIB}/scrapy/core/http2/agent.pyc
+${PYSITELIB}/scrapy/core/http2/agent.pyo
+${PYSITELIB}/scrapy/core/http2/protocol.py
+${PYSITELIB}/scrapy/core/http2/protocol.pyc
+${PYSITELIB}/scrapy/core/http2/protocol.pyo
+${PYSITELIB}/scrapy/core/http2/stream.py
+${PYSITELIB}/scrapy/core/http2/stream.pyc
+${PYSITELIB}/scrapy/core/http2/stream.pyo
 ${PYSITELIB}/scrapy/core/scheduler.py
 ${PYSITELIB}/scrapy/core/scheduler.pyc
 ${PYSITELIB}/scrapy/core/scheduler.pyo
@@ -209,6 +224,9 @@ ${PYSITELIB}/scrapy/extensions/memdebug.pyo
 ${PYSITELIB}/scrapy/extensions/memusage.py
 ${PYSITELIB}/scrapy/extensions/memusage.pyc
 ${PYSITELIB}/scrapy/extensions/memusage.pyo
+${PYSITELIB}/scrapy/extensions/postprocessing.py
+${PYSITELIB}/scrapy/extensions/postprocessing.pyc
+${PYSITELIB}/scrapy/extensions/postprocessing.pyo
 ${PYSITELIB}/scrapy/extensions/spiderstate.py
 ${PYSITELIB}/scrapy/extensions/spiderstate.pyc
 ${PYSITELIB}/scrapy/extensions/spiderstate.pyo
@@ -396,6 +414,9 @@ ${PYSITELIB}/scrapy/templates/spiders/xmlfeed.tmpl
 ${PYSITELIB}/scrapy/utils/__init__.py
 ${PYSITELIB}/scrapy/utils/__init__.pyc
 ${PYSITELIB}/scrapy/utils/__init__.pyo
+${PYSITELIB}/scrapy/utils/asyncgen.py
+${PYSITELIB}/scrapy/utils/asyncgen.pyc
+${PYSITELIB}/scrapy/utils/asyncgen.pyo
 ${PYSITELIB}/scrapy/utils/benchserver.py
 ${PYSITELIB}/scrapy/utils/benchserver.pyc
 ${PYSITELIB}/scrapy/utils/benchserver.pyo
@@ -435,9 +456,6 @@ ${PYSITELIB}/scrapy/utils/ftp.pyo
 ${PYSITELIB}/scrapy/utils/gz.py
 ${PYSITELIB}/scrapy/utils/gz.pyc
 ${PYSITELIB}/scrapy/utils/gz.pyo
-${PYSITELIB}/scrapy/utils/http.py
-${PYSITELIB}/scrapy/utils/http.pyc
-${PYSITELIB}/scrapy/utils/http.pyo
 ${PYSITELIB}/scrapy/utils/httpobj.py
 ${PYSITELIB}/scrapy/utils/httpobj.pyc
 ${PYSITELIB}/scrapy/utils/httpobj.pyo
@@ -450,24 +468,15 @@ ${PYSITELIB}/scrapy/utils/job.pyo
 ${PYSITELIB}/scrapy/utils/log.py
 ${PYSITELIB}/scrapy/utils/log.pyc
 ${PYSITELIB}/scrapy/utils/log.pyo
-${PYSITELIB}/scrapy/utils/markup.py
-${PYSITELIB}/scrapy/utils/markup.pyc
-${PYSITELIB}/scrapy/utils/markup.pyo
 ${PYSITELIB}/scrapy/utils/misc.py
 ${PYSITELIB}/scrapy/utils/misc.pyc
 ${PYSITELIB}/scrapy/utils/misc.pyo
-${PYSITELIB}/scrapy/utils/multipart.py
-${PYSITELIB}/scrapy/utils/multipart.pyc
-${PYSITELIB}/scrapy/utils/multipart.pyo
 ${PYSITELIB}/scrapy/utils/ossignal.py
 ${PYSITELIB}/scrapy/utils/ossignal.pyc
 ${PYSITELIB}/scrapy/utils/ossignal.pyo
 ${PYSITELIB}/scrapy/utils/project.py
 ${PYSITELIB}/scrapy/utils/project.pyc
 ${PYSITELIB}/scrapy/utils/project.pyo
-${PYSITELIB}/scrapy/utils/py36.py
-${PYSITELIB}/scrapy/utils/py36.pyc
-${PYSITELIB}/scrapy/utils/py36.pyo
 ${PYSITELIB}/scrapy/utils/python.py
 ${PYSITELIB}/scrapy/utils/python.pyc
 ${PYSITELIB}/scrapy/utils/python.pyo
