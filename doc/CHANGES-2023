@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2484 2023/04/27 06:06:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2485 2023/04/27 06:06:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-yubikey-manager to 5.1.0 [wiz 2023-04-27]
 	Updated security/ykman to 5.1.0 [wiz 2023-04-27]
 	Updated graphics/openexr to 3.1.7 [wiz 2023-04-27]
+	Updated graphics/libimagequant to 2.18.0 [wiz 2023-04-27]
