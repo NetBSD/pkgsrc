@@ -1,4 +1,4 @@
-$NetBSD: patch-Gemfile,v 1.6 2023/03/15 13:47:58 taca Exp $
+$NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
@@ -13,20 +13,29 @@ $NetBSD: patch-Gemfile,v 1.6 2023/03/15 13:47:58 taca Exp $
 +gem 'rails', '~> 6.1.7'
  gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 -gem 'rouge', '~> 3.28.0'
-+gem 'rouge', '~> 3.28'
++gem 'rouge', '>= 3.28'
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
-@@ -13,7 +13,7 @@ gem 'roadie-rails', (Gem.ruby_version < 
+@@ -13,9 +13,9 @@ gem 'roadie-rails', (Gem.ruby_version < 
  gem 'marcel'
  gem "mail", "~> 2.7.1"
  gem 'csv', '~> 3.2.0'
 -gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13.10')
 +gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13')
  gem "rexml", require: false if Gem.ruby_version >= Gem::Version.new('3.0')
- gem 'i18n', '~> 1.10.0'
+-gem 'i18n', '~> 1.10.0'
++gem 'i18n', '>= 1.10.0'
  gem 'rbpdf', '~> 1.21.0'
-@@ -39,7 +39,7 @@ end
+ gem 'addressable'
+ gem 'rubyzip', '~> 2.3.0'
+@@ -34,12 +34,12 @@ gem 'rqrcode'
+ 
+ # Optional gem for LDAP authentication
+ group :ldap do
+-  gem 'net-ldap', '~> 0.17.0'
++  gem 'net-ldap', '>= 0.17.0'
+ end
  
  # Optional gem for exporting the gantt to a PNG file
  group :minimagick do
