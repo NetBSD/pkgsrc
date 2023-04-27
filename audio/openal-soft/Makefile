@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/04/23 09:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/04/27 13:58:52 jperkin Exp $
 
 DISTNAME=	openal-soft-1.23.1
 CATEGORIES=	audio
@@ -29,7 +29,8 @@ CFLAGS+=	-DSYS_CONF_DIR="\"${PKG_SYSCONFDIR}\""
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
-BUILDLINK_TRANSFORM+=	rm:-Wall
+BUILDLINK_TRANSFORM+=		rm:-Wall
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/libopenal.version
 
 CONF_FILES+=	${PREFIX}/share/openal/alsoftrc.sample ${PKG_SYSCONFDIR}/alsoft.conf
 
