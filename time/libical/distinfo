@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2022/02/13 00:20:57 gutteridge Exp $
+$NetBSD: distinfo,v 1.23 2023/04/27 12:00:40 wiz Exp $
 
-BLAKE2s (libical-3.0.14.tar.gz) = a3a2423d8d4e7a1f21b26abcb84c1b89ed91e7e5b3cfbc3cad16f9f415952c03
-SHA512 (libical-3.0.14.tar.gz) = 36da5516672976c71b049a12af36164d91f9b655f81f1884766558149f25e80c30e64d15da848842f8a629295d708f39ce6fa63a3b0da39b5cbeb91911a4e6d8
-Size (libical-3.0.14.tar.gz) = 887795 bytes
+BLAKE2s (libical-3.0.16.tar.gz) = f5422290a91837b95cee0dcd08baa848222f1f50070add3271c08ff160c6fdca
+SHA512 (libical-3.0.16.tar.gz) = 72659c98f6c98b3e0fa15849df7f80993403100fb5c237e452df714a7be2d1d27f4547c81b399fe7bc6b1fb10c8c7cf9a23f5b969d588d7b05d7fe2e29c86bd4
+Size (libical-3.0.16.tar.gz) = 921245 bytes
 SHA1 (patch-src_libical_icaltz-util.c) = 3dd41fa9d3ea99d4821219e425a65b5249c1b060
