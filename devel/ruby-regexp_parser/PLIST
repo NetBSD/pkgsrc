@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/10/09 07:29:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/04/27 14:13:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -30,6 +30,8 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/human_name.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/options.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/parts.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/printing.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/strfregexp.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/tests.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/traverse.rb
@@ -42,6 +44,10 @@ ${GEM_LIBDIR}/lib/regexp_parser/lexer.rb
 ${GEM_LIBDIR}/lib/regexp_parser/parser.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/char_type.rl
+${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/premature_end_error.rb
+${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/scanner_error.rb
+${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/validation_error.rb
+${GEM_LIBDIR}/lib/regexp_parser/scanner/mapping.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/long.csv
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/short.csv
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/property.rl
@@ -63,6 +69,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/syntax/token/meta.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/token/posix_class.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/token/quantifier.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/token/unicode_property.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/virtual.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/version_lookup.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/1.8.6.rb
