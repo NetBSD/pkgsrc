@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:27 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/27 14:01:01 yhardy Exp $
 
-DISTNAME=	xdotool-3.20160805.1
+DISTNAME=	xdotool-3.20211022.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jordansissel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
