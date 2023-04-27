@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2482 2023/04/27 06:04:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2483 2023/04/27 06:05:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3561,3 +3561,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-fido2 to 1.1.1 [wiz 2023-04-27]
 	Updated sysutils/binwalk to 2.3.4 [wiz 2023-04-27]
 	Updated security/py-yubikey-manager to 5.1.0 [wiz 2023-04-27]
+	Updated security/ykman to 5.1.0 [wiz 2023-04-27]
