@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/03/02 08:15:25 hauke Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/27 15:08:44 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/add_netatalk_printer
 bin/adv1tov2
@@ -152,6 +152,7 @@ man/man5/afpd.conf.5
 man/man5/atalkd.conf.5
 man/man5/netatalk.conf.5
 man/man5/papd.conf.5
+man/man8/a2boot.8
 man/man8/afpd.8
 man/man8/atalkd.8
 man/man8/cnid_dbd.8
