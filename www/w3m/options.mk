@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2020/03/17 14:18:06 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2023/04/27 13:26:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
 PKG_SUPPORTED_OPTIONS=	inet6 migemo w3m-lynx-key
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--enable-keymap=w3m
 .endif
 
 PLIST_VARS+=		image
-.if !empty(PKG_OPTIONS:Mw3m-image-*)
+.if ${PKG_OPTIONS:Mw3m-image-*}
 .  for _imagelib in ${PKG_OPTIONS_GROUP.imagelib}
 .    if !empty(PKG_OPTIONS:M${_imagelib})
 _W3M_IMAGELIB=		${_imagelib:C|^w3m-image-||}
