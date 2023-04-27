@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/04/27 14:43:51 taca Exp $
 
-BLAKE2s (semantic_puppet-1.0.4.gem) = e3f77d29a51e143d18e6c3c2075b26ac45e50760e8c3bd9d5aa7dda8f81cd233
-SHA512 (semantic_puppet-1.0.4.gem) = 8b830626e973bc74fb4f4147e83ca8048d412751ff48dbe96ec6e790645eae7a51c665b75a09d0f0fdec3b29d3798158c38b613e2f83d115d1ba2a4c8d24362a
-Size (semantic_puppet-1.0.4.gem) = 32256 bytes
+BLAKE2s (semantic_puppet-1.1.0.gem) = 0d257ec56f2270d6e9840f7e59c83c229754cd4df848c4ec8bff8ea1967bb807
+SHA512 (semantic_puppet-1.1.0.gem) = 22d5596f445faa7c7a779c11e4a9b52e1ca3f77fcc63270798e4b0fc7dddd59c66bab1644214f1526a0fa5732e349522e8664ea6285f0ca107f35009e8a1d151
+Size (semantic_puppet-1.1.0.gem) = 32768 bytes
