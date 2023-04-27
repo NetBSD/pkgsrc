@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/08/29 11:12:36 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/27 10:17:44 jperkin Exp $
 
-DISTNAME=	google-authenticator-libpam-1.05
+DISTNAME=	google-authenticator-libpam-1.09
 PKGNAME=	${DISTNAME:S/libpam-//}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -19,5 +19,6 @@ GNU_CONFIGURE=	yes
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
+.include "../../converters/qrencode/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
