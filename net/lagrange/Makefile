@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/01/29 21:17:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/27 15:04:46 yhardy Exp $
 
-DISTNAME=	lagrange-1.6.5
-PKGREVISION=	6
+DISTNAME=	lagrange-1.15.8
 CATEGORIES=	net
 MASTER_SITES=	https://git.skyjake.fi/gemini/lagrange/releases/download/v${PKGVERSION_NOREV}/
 
@@ -12,6 +11,8 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+DEPENDS+=	zip-[0-9]*:../../archivers/zip/
 
 .include "options.mk"
 .include "../../converters/fribidi/buildlink3.mk"
