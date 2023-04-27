@@ -1,206 +1,409 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/03 11:19:12 wiz Exp $
-share/AlephOne/Scenarios/1/Fonts.fntA
-share/AlephOne/Scenarios/1/M1A1 Images.imgA
-share/AlephOne/Scenarios/1/M1A1 Map.sceA
-share/AlephOne/Scenarios/1/M1A1 Music.ogg
-share/AlephOne/Scenarios/1/M1A1 Shapes.shpA
-share/AlephOne/Scenarios/1/M1A1 Sounds.sndA
-share/AlephOne/Scenarios/1/Read Me M1A1.html
-share/AlephOne/Scenarios/1/Scripts/M1A1.mml
-share/AlephOne/Scenarios/1/Scripts/havoc.mml
-share/AlephOne/Scenarios/1/Scripts/monsters.mml
-share/AlephOne/Scenarios/1/Scripts/scenery.mml
-share/AlephOne/Scenarios/1/Scripts/settings.mml
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/1/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/1/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/1/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/1/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/1/Themes/Default/Makefile
-share/AlephOne/Scenarios/1/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/1/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/1/Themes/Default/README
-share/AlephOne/Scenarios/1/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/1/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/1/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/1/Themes/Default/resources
-share/AlephOne/Scenarios/1/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/1/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/theme.mml
-share/AlephOne/Scenarios/1/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/1/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_r.bmp
-share/AlephOne/Scenarios/1/Tracks/aliensagain.mp3
-share/AlephOne/Scenarios/1/Tracks/chomber.mp3
-share/AlephOne/Scenarios/1/Tracks/fatman.mp3
-share/AlephOne/Scenarios/1/Tracks/flippant.mp3
-share/AlephOne/Scenarios/1/Tracks/flowersinheaven.mp3
-share/AlephOne/Scenarios/1/Tracks/freedom.mp3
-share/AlephOne/Scenarios/1/Tracks/guardians.mp3
-share/AlephOne/Scenarios/1/Tracks/landing.mp3
-share/AlephOne/Scenarios/1/Tracks/leela.mp3
-share/AlephOne/Scenarios/1/Tracks/newpacific.mp3
-share/AlephOne/Scenarios/1/Tracks/newpacific_reprise.mp3
-share/AlephOne/Scenarios/1/Tracks/rapture.mp3
-share/AlephOne/Scenarios/1/Tracks/rushing.mp3
-share/AlephOne/Scenarios/1/Tracks/splash_marathon.mp3
-share/AlephOne/Scenarios/1/Tracks/swirls.mp3
-share/AlephOne/Scenarios/1/Tracks/whataboutbob.mp3
-share/AlephOne/Scenarios/2/Fonts.fntA
+@comment $NetBSD: PLIST,v 1.2 2023/04/27 13:47:47 yhardy Exp $
+share/AlephOne/Scenarios/1/Map.scen
+share/AlephOne/Scenarios/1/Marathon.appl
+share/AlephOne/Scenarios/1/Music/00.ogg
+share/AlephOne/Scenarios/1/Music/01.ogg
+share/AlephOne/Scenarios/1/Music/02.ogg
+share/AlephOne/Scenarios/1/Music/03.ogg
+share/AlephOne/Scenarios/1/Music/04.ogg
+share/AlephOne/Scenarios/1/Music/05.ogg
+share/AlephOne/Scenarios/1/Music/06.ogg
+share/AlephOne/Scenarios/1/Music/07.ogg
+share/AlephOne/Scenarios/1/Music/08.ogg
+share/AlephOne/Scenarios/1/Music/09.ogg
+share/AlephOne/Scenarios/1/Music/10.ogg
+share/AlephOne/Scenarios/1/Music/11.ogg
+share/AlephOne/Scenarios/1/Music/12.ogg
+share/AlephOne/Scenarios/1/Music/13.ogg
+share/AlephOne/Scenarios/1/Music/14.ogg
+share/AlephOne/Scenarios/1/Music/15.ogg
+share/AlephOne/Scenarios/1/Physics.phys
+share/AlephOne/Scenarios/1/Plugins/Default HUD/COPYING
+share/AlephOne/Scenarios/1/Plugins/Default HUD/Default_HUD_M1.lua
+share/AlephOne/Scenarios/1/Plugins/Default HUD/FOV.mml
+share/AlephOne/Scenarios/1/Plugins/Default HUD/Plugin.xml
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/alien.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/alienwep.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/arramo.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/arramoused.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/chip.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/enemy.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/fill.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/fillshell.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/friendly.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/grenadeamo.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/grenadeamoused.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_bar_lvl1.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_bar_lvl2.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_bar_lvl3.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_noradar_off.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_noradar_on.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_radar_off.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/health_radar_on.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/objective-indicator-full.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/oxygen_bar.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/pistolamo.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/pistolamoused.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/pistolx2.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/pistolx2_idle.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/radar_screen.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_alien.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_flame.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_machinegun.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_pistol.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_plasma.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/ret_rocket.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel-icon.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_blue.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_green.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_orange.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_red.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_slate.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_violet.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_white.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/score-panel_yellow.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/skull.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/spnkramo.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/spnkramoused.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_ar.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_fusion.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_pistol.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_rocket.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_smg.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/w_tozt.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/720p/weapons.png
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/COPYING
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/FOV.mml
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/Plugin.lua
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/Plugin.xml
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/Readme.txt
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular SC.ttf
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular.ttf
+share/AlephOne/Scenarios/1/Plugins/Enhanced HUD/squarishsans/SquarishSansCT.README
+share/AlephOne/Scenarios/1/Plugins/Marathon Stats/COPYING
+share/AlephOne/Scenarios/1/Plugins/Marathon Stats/Plugin.xml
+share/AlephOne/Scenarios/1/Plugins/Marathon Stats/stats.lua
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/Plugin.xml
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/Readme.txt
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/Marapfhont.README
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/Marapfhont.ttf
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/URWGothicL-Demi.ttf
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/URWGothicL-DemiObli.ttf
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/URWGothicL.README
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_b.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_bl.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_br.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_l.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_r.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_t.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_tl.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/frame_tr.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_b.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_bl.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_br.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_l.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_r.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_t.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_tl.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/list_tr.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/slider.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/slider_c.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/slider_l.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/slider_r.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/theme2.mml
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/thumb_b.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/thumb_bc.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/thumb_c.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/thumb_t.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/thumb_tc.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/tiny_button_c.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/tiny_button_l.bmp
+share/AlephOne/Scenarios/1/Plugins/Marathon Theme/resources/tiny_button_r.bmp
+share/AlephOne/Scenarios/1/Readme.md
+share/AlephOne/Scenarios/1/Scripts/Default Preferences.xml
+share/AlephOne/Scenarios/1/Scripts/Marathon.mml
+share/AlephOne/Scenarios/1/Shapes.shps
+share/AlephOne/Scenarios/1/Sounds.sndz
 share/AlephOne/Scenarios/2/Images.imgA
 share/AlephOne/Scenarios/2/Map.sceA
 share/AlephOne/Scenarios/2/Music.ogg
 share/AlephOne/Scenarios/2/Physics Models/Standard.phyA
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/alien.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/alienwep.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/arr.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/arramo.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/arramoused.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/background.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/chip.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/enemy.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/fill.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/fillshell.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/flechette_off.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/flechette_on.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/friendly.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/fusion.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/grenadeamo.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/grenadeamoused.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/health_noradar.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/health_radar.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/hill.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/left.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/left_oxygen.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/left_shield1x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/left_shield2x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/left_shield3x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/mid.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/mid_oxygen.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/mid_shield1x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/mid_shield2x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/mid_shield3x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/objective-indicator-full.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/pistol.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/pistolamo.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/pistolamoused.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/pistolx2.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/pistolx2_idle.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_alien.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_flame.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_machinegun.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_pistol.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_plasma.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_rocket.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_shotgun.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/ret_smg.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/right.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/right_oxygen.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/right_shield1x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/right_shield2x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/right_shield3x.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel-icon.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_blue.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_green.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_orange.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_red.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_slate.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_violet.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_white.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/score-panel_yellow.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/shotgun.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/shotgunamo.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/shotgunamoused.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/shotgunx2.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/shotgunx2_idle.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/skull.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/spnkr.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/spnkramo.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/spnkramoused.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/target-panel-foe.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/target-panel-friend.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/tozt.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/w_smg.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/720p/weapons.png
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/COPYING
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/FOV.mml
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/Plugin.xml
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/Readme.txt
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/XBLA.lua
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular SC.ttf
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular.ttf
+share/AlephOne/Scenarios/2/Plugins/Enhanced HUD/squarishsans/SquarishSansCT.README
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Stats/COPYING
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Stats/Plugin.xml
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Stats/stats.lua
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/Plugin.xml
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/Readme.txt
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/DejaVuLGCSansCondensed-Bold.ttf
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/DejaVuLGCSansCondensed-BoldBold.ttf
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/DejaVuLGCSansCondensed-BoldOblique.ttf
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/LICENSE-DejaVu
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/SquarishSansCT.README
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/Squarish_Sans_CT_Medium.ttf
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_c.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_c_p.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_l.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_l_p.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_r.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/button_r_p.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_b.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_bl.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_br.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_l.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_r.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_t.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_tl.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/frame_tr.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_b.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_bl.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_br.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_l.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_r.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_t.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_tl.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/list_tr.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/slider.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/slider_c.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/slider_l.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/slider_r.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/theme2.mml
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/thumb_b.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/thumb_bc.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/thumb_c.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/thumb_t.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/thumb_tc.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/tiny_button_c.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/tiny_button_l.bmp
+share/AlephOne/Scenarios/2/Plugins/Marathon 2 Theme/resources/tiny_button_r.bmp
+share/AlephOne/Scenarios/2/Plugins/Transparent Liquids/Plugin.xml
+share/AlephOne/Scenarios/2/Plugins/Transparent Liquids/Transparent_Liquids.mml
+share/AlephOne/Scenarios/2/Readme.md
+share/AlephOne/Scenarios/2/Scripts/Default Preferences.xml
 share/AlephOne/Scenarios/2/Scripts/Filenames.mml
 share/AlephOne/Scenarios/2/Scripts/Marathon 2.mml
-share/AlephOne/Scenarios/2/Scripts/Transparent_Liquids.mml
-share/AlephOne/Scenarios/2/Scripts/Transparent_Sprites.mml
 share/AlephOne/Scenarios/2/Shapes.shpA
 share/AlephOne/Scenarios/2/Sounds.sndA
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/2/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/2/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/2/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/2/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/2/Themes/Default/Makefile
-share/AlephOne/Scenarios/2/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/2/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/2/Themes/Default/README
-share/AlephOne/Scenarios/2/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/2/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/2/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/2/Themes/Default/resources
-share/AlephOne/Scenarios/2/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/2/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/theme.mml
-share/AlephOne/Scenarios/2/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/2/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_r.bmp
-share/AlephOne/Scenarios/Infinity/Fonts.fntA
 share/AlephOne/Scenarios/Infinity/Images.imgA
 share/AlephOne/Scenarios/Infinity/Map.sceA
 share/AlephOne/Scenarios/Infinity/Music.ogg
 share/AlephOne/Scenarios/Infinity/Physics Models/Standard.phyA
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/alien.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/alienwep.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/arr.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/arramo.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/arramoused.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/background.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/chip.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/enemy.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/fill.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/fillshell.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/flechette_off.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/flechette_on.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/friendly.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/fusion.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/grenadeamo.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/grenadeamoused.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/health_noradar.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/health_radar.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/hill.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/left.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/left_oxygen.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/left_shield1x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/left_shield2x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/left_shield3x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/mid.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/mid_oxygen.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/mid_shield1x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/mid_shield2x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/mid_shield3x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/objective-indicator-full.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/pistol.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/pistolamo.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/pistolamoused.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/pistolx2.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/pistolx2_idle.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_alien.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_flame.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_machinegun.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_pistol.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_plasma.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_rocket.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_shotgun.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/ret_smg.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/right.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/right_oxygen.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/right_shield1x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/right_shield2x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/right_shield3x.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel-icon.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_blue.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_green.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_orange.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_red.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_slate.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_violet.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_white.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/score-panel_yellow.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/shotgun.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/shotgunamo.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/shotgunamoused.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/shotgunx2.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/shotgunx2_idle.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/skull.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/spnkr.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/spnkramo.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/spnkramoused.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/target-panel-foe.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/target-panel-friend.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/tozt.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/w_smg.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/720p/weapons.png
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/COPYING
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/FOV.mml
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/Plugin.xml
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/Readme.txt
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/XBLA.lua
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular SC.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/squarishsans/Squarish Sans CT Regular.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Enhanced HUD/squarishsans/SquarishSansCT.README
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Stats/COPYING
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Stats/Plugin.xml
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Stats/stats.lua
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/Plugin.xml
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/Readme.txt
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/DejaVuLGCSansCondensed-Bold.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/DejaVuLGCSansCondensed-BoldBold.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/DejaVuLGCSansCondensed-BoldOblique.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/LICENSE-DejaVu
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/SquarishSansCT.README
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/Squarish_Sans_CT_Medium.ttf
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_c.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_c_p.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_l.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_l_p.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_r.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/button_r_p.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_b.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_bl.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_br.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_l.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_r.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_t.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_tl.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/frame_tr.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_b.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_bl.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_br.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_l.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_r.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_t.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_tl.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/list_tr.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/slider.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/slider_c.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/slider_l.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/slider_r.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/theme2.mml
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/thumb_b.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/thumb_bc.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/thumb_c.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/thumb_t.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/thumb_tc.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/tiny_button_c.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/tiny_button_l.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Marathon Infinity Theme/resources/tiny_button_r.bmp
+share/AlephOne/Scenarios/Infinity/Plugins/Transparent Liquids/Plugin.xml
+share/AlephOne/Scenarios/Infinity/Plugins/Transparent Liquids/Transparent_Liquids.mml
+share/AlephOne/Scenarios/Infinity/Readme.md
+share/AlephOne/Scenarios/Infinity/Scripts/Default Preferences.xml
 share/AlephOne/Scenarios/Infinity/Scripts/Filenames.mml
 share/AlephOne/Scenarios/Infinity/Scripts/Marathon Infinity.mml
-share/AlephOne/Scenarios/Infinity/Scripts/Transparent_Liquids.mml
-share/AlephOne/Scenarios/Infinity/Scripts/Transparent_Sprites.mml
 share/AlephOne/Scenarios/Infinity/Shapes.shpA
 share/AlephOne/Scenarios/Infinity/Sounds.sndA
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/Infinity/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/Infinity/Themes/Default/README
-share/AlephOne/Scenarios/Infinity/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/resources
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/theme.mml
-share/AlephOne/Scenarios/Infinity/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_r.bmp
 @pkgdir share/AlephOne/Scenarios/Infinity/Tracks
+@pkgdir share/AlephOne/Scenarios/Infinity/Themes
 @pkgdir share/AlephOne/Scenarios/2/Tracks
+@pkgdir share/AlephOne/Scenarios/2/Themes
+@pkgdir share/AlephOne/Scenarios/1/Tracks
+@pkgdir share/AlephOne/Scenarios/1/Themes
