@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2528 2023/04/27 14:17:57 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2529 2023/04/27 14:19:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3610,3 +3610,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-regexp_parser to 2.8.0 [taca 2023-04-27]
 	Updated devel/ruby-rspec-core to 3.12.2 [taca 2023-04-27]
 	Updated devel/ruby-rspec-expectations to 3.12.3 [taca 2023-04-27]
+	Updated devel/ruby-rspec-mocks to 3.12.5 [taca 2023-04-27]
