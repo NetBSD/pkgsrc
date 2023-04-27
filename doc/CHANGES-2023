@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2537 2023/04/27 18:51:17 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.2538 2023/04/27 19:18:39 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3622,3 +3622,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pylint to 2.17.3 [adam 2023-04-27]
 	Updated sysutils/onefetch to 2.17.0nb1 [pin 2023-04-27]
 	Updated games/gemrb to 0.9.1 [yhardy 2023-04-27]
+	Updated security/gopass to 1.15.5 [nikita 2023-04-27]
