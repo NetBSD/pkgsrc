@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2022/12/31 19:09:50 fcambus Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/27 15:09:09 yhardy Exp $
 
-DISTNAME=	miller-5.10.4
+DISTNAME=	miller-6.7.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,21 @@ HOMEPAGE=	https://github.com/johnkerl/miller/
 COMMENT=	Command-line CSV processor
 LICENSE=	2-clause-bsd
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	flex
-TEST_TARGET=	check
+USE_TOOLS+=	flex sed
 
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+pre-configure:
+	${MKDIR} ${DESTDIR}${PREFIX}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/mlr ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/man/mlr.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	
+GO_BUILD_PATTERN+=	github.com/johnkerl/miller/cmd/mlr
+
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
