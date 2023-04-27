@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2508 2023/04/27 12:17:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2509 2023/04/27 12:26:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/restish to 0.17.0 [wiz 2023-04-27]
 	Updated www/nghttp3 to 0.11.0 [wiz 2023-04-27]
 	Updated textproc/tree-sitter-typescript to 0.20.2 [wiz 2023-04-27]
+	Updated textproc/typst to 0.3.0 [wiz 2023-04-27]
