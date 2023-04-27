@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2490 2023/04/27 06:33:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2491 2023/04/27 07:15:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-grpcio to 1.54.0 [wiz 2023-04-27]
 	Updated net/py-grpcio-testing to 1.54.0 [wiz 2023-04-27]
 	Updated net/py-grpcio-tools to 1.54.0 [wiz 2023-04-27]
+	Updated www/hackernews-tui to 0.13.1 [pin 2023-04-27]
