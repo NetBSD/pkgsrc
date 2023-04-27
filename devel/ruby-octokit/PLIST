@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/01/09 08:22:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/04/27 14:03:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -26,6 +26,7 @@ ${GEM_LIBDIR}/lib/octokit/client/contents.rb
 ${GEM_LIBDIR}/lib/octokit/client/deployments.rb
 ${GEM_LIBDIR}/lib/octokit/client/downloads.rb
 ${GEM_LIBDIR}/lib/octokit/client/emojis.rb
+${GEM_LIBDIR}/lib/octokit/client/environments.rb
 ${GEM_LIBDIR}/lib/octokit/client/events.rb
 ${GEM_LIBDIR}/lib/octokit/client/feeds.rb
 ${GEM_LIBDIR}/lib/octokit/client/gists.rb
