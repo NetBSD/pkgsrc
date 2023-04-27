@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2516 2023/04/27 13:26:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2517 2023/04/27 13:34:05 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/streamlink to 5.4.0 [yhardy 2023-04-27]
 	Updated lang/erlang to 25.3.1 [wiz 2023-04-27]
 	Updated www/w3m to 0.5.3.0.20230121 [wiz 2023-04-27]
+	Updated games/alephone to 20230119 [yhardy 2023-04-27]
