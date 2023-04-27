@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2486 2023/04/27 06:12:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2487 2023/04/27 06:32:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3565,3 +3565,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/openexr to 3.1.7 [wiz 2023-04-27]
 	Updated graphics/libimagequant to 2.18.0 [wiz 2023-04-27]
 	Updated print/texlab to 5.5.0 [wiz 2023-04-27]
+	Updated net/grpc to 1.54.0 [wiz 2023-04-27]
