@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2534 2023/04/27 15:09:28 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.2535 2023/04/27 17:54:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3616,3 +3616,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/lagrange to 1.15.8 [yhardy 2023-04-27]
 	Updated net/netatalk22 to 2.2.9 [hauke 2023-04-27]
 	Updated textproc/miller to 6.7.0 [yhardy 2023-04-27]
+	Updated textproc/py-tomlkit to 0.11.8 [adam 2023-04-27]
+	Updated comms/py-rich to 13.3.5 [adam 2023-04-27]
+	Updated devel/py-astroid to 2.15.4 [adam 2023-04-27]
+	Updated devel/py-pylint to 2.17.3 [adam 2023-04-27]
