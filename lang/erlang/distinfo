@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.101 2023/02/22 09:20:31 wiz Exp $
+$NetBSD: distinfo,v 1.102 2023/04/27 13:15:55 wiz Exp $
 
-BLAKE2s (erlang-25.2.tar.gz) = 11b83e8dcde59029e919dc3d5a036e116c91edc1decb048b4d4b7da90fa18882
-SHA512 (erlang-25.2.tar.gz) = bad37d287bd79f42ea19183c959e2865a0ecc19409dfffe96483e29d8cd199ea0b85e3263c9a2297137f640fb9a53ff2cd79ddad1b8d83bb2a95a987a9fdfa28
-Size (erlang-25.2.tar.gz) = 60018819 bytes
+BLAKE2s (erlang-25.3.1.tar.gz) = 05e5a1d1c07639c8791be826bb2e1e6fff9f71ecea41525badc7364b52589121
+SHA512 (erlang-25.3.1.tar.gz) = f9f56a2fed2a8110472ed424592d750fc2073232a6ccbacd7928d3cea38340e2c1b2c8e14330e4013b89a507efe6ef003c165eddecffe1461ca4bdaf5083ee87
+Size (erlang-25.3.1.tar.gz) = 60072441 bytes
 SHA1 (patch-ab) = 9d1e33ab3660b5cf0faa2b74129158b71aae408f
 SHA1 (patch-ay) = 21dc0a123ae0d6f8e86f3fb9ffaf66e26361172b
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = dbe72306aac6be0cec09f45869ff077f1bab1e68
