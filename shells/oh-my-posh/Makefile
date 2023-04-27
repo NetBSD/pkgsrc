@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.12 2023/04/27 07:17:18 pin Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/27 21:00:45 pin Exp $
 
-DISTNAME=		oh-my-posh-15.3.0
-CATEGORIES=		shells
-MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+DISTNAME=	oh-my-posh-15.4.0
+CATEGORIES=	shells
+MASTER_SITES=	${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://ohmyposh.dev/
-COMMENT=		Prompt theme engine for any shell
-LICENSE=		mit
+MAINTAINER=	schmonz@NetBSD.org
+HOMEPAGE=	https://ohmyposh.dev/
+COMMENT=	Prompt theme engine for any shell
+LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=	c
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	do-configure
