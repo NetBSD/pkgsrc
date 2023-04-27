@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2523 2023/04/27 14:01:17 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.2524 2023/04/27 14:03:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3605,3 +3605,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine50 to 5.0.5nb1 [taca 2023-04-27]
 	Updated devel/ruby-i18n to 1.13.0 [taca 2023-04-27]
 	Updated x11/xdotool to 3.20211022.1 [yhardy 2023-04-27]
+	Updated devel/ruby-octokit to 6.1.1 [taca 2023-04-27]
