@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/01 14:10:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/27 13:16:35 yhardy Exp $
 bin/ledger
 include/ledger/account.h
 include/ledger/amount.h
@@ -20,6 +20,7 @@ include/ledger/flags.h
 include/ledger/format.h
 include/ledger/generate.h
 include/ledger/global.h
+include/ledger/gpgme.h
 include/ledger/history.h
 include/ledger/item.h
 include/ledger/iterators.h
@@ -37,7 +38,6 @@ include/ledger/predicate.h
 include/ledger/print.h
 include/ledger/pstream.h
 include/ledger/ptree.h
-include/ledger/pyfstream.h
 include/ledger/pyinterp.h
 include/ledger/pyutils.h
 include/ledger/query.h
