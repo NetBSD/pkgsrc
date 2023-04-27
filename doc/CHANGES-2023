@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2480 2023/04/27 05:57:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2481 2023/04/27 05:59:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/gambc to 4.9.4 [nikita 2023-04-26]
 	Updated net/transmission to 4.0.3 [wiz 2023-04-27]
 	Updated security/py-fido2 to 1.1.1 [wiz 2023-04-27]
+	Updated sysutils/binwalk to 2.3.4 [wiz 2023-04-27]
