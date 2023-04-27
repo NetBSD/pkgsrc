@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:43:45 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/04/27 13:33:47 yhardy Exp $
 
-BLAKE2s (AlephOne-20120514.tar.bz2) = 35f15f1edc9de96612108621502a1af882ade17788c77c696d1ead318b2db547
-SHA512 (AlephOne-20120514.tar.bz2) = 71e54341221485765b63c7c723f95e04d41c8e2cecf6bc3f885efc178f4c75fd88cdffe703c4bf41a5e7101fd8cef33797d00cd249e211b7de1b22fc639b4278
-Size (AlephOne-20120514.tar.bz2) = 4716348 bytes
-SHA1 (patch-Source__Files_Lua_lua__templates.h) = ee38b9aed311958750845e52ce2cb14969f2ee4e
+BLAKE2s (AlephOne-20230119.tar.bz2) = c21e491f9bd0192f2601dc203eebb8345d727cc036cd44879044219a9106038f
+SHA512 (AlephOne-20230119.tar.bz2) = bb9a47d09e7732051088e255314b489cf8a0185d2d1da094be66b902dbe269f6dabd211f8278e5981ec0b93ab364ac2d2d2a85002d8cb346392398f9c40670c5
+Size (AlephOne-20230119.tar.bz2) = 6109704 bytes
+SHA1 (patch-Source__Files_RenderMain_OGL__Headers.h) = 814a90cc8b4998385eba04fb07d5c5a5bf98f158
+SHA1 (patch-Source__Files_RenderMain_OGL__Render.cpp) = 79249e5a1756a71d214b0c54501868155dfa6d80
+SHA1 (patch-Source__Files_RenderMain_OGL__Setup.cpp) = e6feda9aa47ce52b9d46a31a1a96364f8a0ad540
+SHA1 (patch-Source__Files_RenderOther_screen.cpp) = 356bc6a8a52e96cd44cadc038f6dee5ef28afe59
+SHA1 (patch-configure) = e667f16efe23256717d8136d08410f3d89fa51b5
