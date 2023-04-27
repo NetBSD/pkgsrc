@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22837 2023/04/27 08:01:24 wiz Exp $
+$NetBSD: TODO,v 1.22838 2023/04/27 08:07:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -605,7 +605,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
-	o enchant2-2.3.4
 	o enlightenment-0.25
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
