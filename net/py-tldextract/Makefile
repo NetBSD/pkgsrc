@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/10/05 07:59:22 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/27 08:21:07 adam Exp $
 
-DISTNAME=	tldextract-3.4.0
+DISTNAME=	tldextract-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
