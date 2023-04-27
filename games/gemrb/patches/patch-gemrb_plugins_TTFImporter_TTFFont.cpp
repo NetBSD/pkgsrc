@@ -1,13 +1,13 @@
-$NetBSD: patch-gemrb_plugins_TTFImporter_TTFFont.cpp,v 1.1 2020/08/31 12:46:21 nia Exp $
+$NetBSD: patch-gemrb_plugins_TTFImporter_TTFFont.cpp,v 1.2 2023/04/27 18:50:59 yhardy Exp $
 
 Deal with old NetBSD/SunOS style iconv.
 
---- gemrb/plugins/TTFImporter/TTFFont.cpp.orig	2020-08-23 18:32:26.000000000 +0000
+--- gemrb/plugins/TTFImporter/TTFFont.cpp.orig	2022-08-29 19:10:39.000000000 +0000
 +++ gemrb/plugins/TTFImporter/TTFFont.cpp
-@@ -28,6 +28,14 @@
- #if HAVE_ICONV
+@@ -28,6 +28,15 @@
  #include <iconv.h>
- #include <errno.h>
+ #include <cerrno>
+ 
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
 +#if __NetBSD_Prereq__(9,99,17)
@@ -16,10 +16,11 @@ Deal with old NetBSD/SunOS style iconv.
 +#define NETBSD_POSIX_ICONV 0
 +#endif /* __NetBSD_Prereq__(9,99,17) */
 +#endif /* defined(__NetBSD__) */
- #endif
- 
++
  namespace GemRB {
-@@ -50,7 +58,11 @@ const Glyph& TTFFont::GetGlyph(ieWord ch
+ 
+ const Glyph& TTFFont::AliasBlank(ieWord chr) const
+@@ -48,7 +57,11 @@ const Glyph& TTFFont::GetGlyph(ieWord ch
  		// TODO: make this work on BE systems
  		// TODO: maybe we want to work with non-unicode fonts?
  		iconv_t cd = iconv_open("UTF-16LE", core->TLKEncoding.encoding.c_str());
@@ -30,4 +31,4 @@ Deal with old NetBSD/SunOS style iconv.
 +#endif
  
  		if (ret != GEM_OK) {
- 			Log(ERROR, "FONT", "iconv error: %d", errno);
+ 			Log(ERROR, "FONT", "iconv error: {}", errno);
