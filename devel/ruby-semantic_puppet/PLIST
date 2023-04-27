@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/13 14:29:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/04/27 14:43:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/mend.yaml
+${GEM_LIBDIR}/.github/workflows/rspec_tests.yaml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODEOWNERS
@@ -10,7 +11,6 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/lib/semantic_puppet.rb
 ${GEM_LIBDIR}/lib/semantic_puppet/dependency.rb
 ${GEM_LIBDIR}/lib/semantic_puppet/dependency/graph.rb
