@@ -1,30 +1,32 @@
-$NetBSD: patch-GNUmakefile,v 1.3 2022/04/25 23:22:58 tnn Exp $
+$NetBSD: patch-GNUmakefile,v 1.4 2023/04/27 08:12:44 wiz Exp $
 
 * Build dynamic library, from archlinux.
 
---- GNUmakefile.orig	2021-01-21 04:50:09.000000000 +0000
+--- GNUmakefile.orig	2021-11-10 02:42:18.000000000 +0000
 +++ GNUmakefile
-@@ -162,10 +162,10 @@ C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.
+@@ -170,12 +170,12 @@ C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.
  JAVA_CLASSES = $(JAVA_SOURCES:.java=.class)
  JAVA_RUNTIME_CLASSES=$(JAVARUNTIME_SOURCES:.java=.class)
  
 -CFLAGS=-O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations
--CPPFLAGS=-Iinclude
-+CFLAGS+=-fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations
-+CPPFLAGS+=-Iinclude
+-CPPFLAGS=
++CFLAGS+=-O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations
++CPPFLAGS+=
  
--all: snowball libstemmer.o stemwords $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
-+all: snowball libstemmer.o libstemmer.so stemwords $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
+ INCLUDES=-Iinclude
  
- clean:
- 	rm -f $(COMPILER_OBJECTS) $(RUNTIME_OBJECTS) \
-@@ -212,6 +212,9 @@ libstemmer/libstemmer.o: libstemmer/modu
- libstemmer.o: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
- 	$(AR) -cru $@ $^
+-all: snowball$(EXEEXT) libstemmer.a stemwords$(EXEEXT) $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
++all: snowball$(EXEEXT) libstemmer.so stemwords$(EXEEXT) $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
+ 
+ algorithms.mk: libstemmer/mkalgorithms.pl libstemmer/modules.txt
+ 	libstemmer/mkalgorithms.pl algorithms.mk libstemmer/modules.txt
+@@ -214,6 +214,9 @@ libstemmer/libstemmer.c: libstemmer/libs
+ libstemmer/libstemmer_utf8.c: libstemmer/libstemmer_c.in
+ 	sed 's/@MODULES_H@/modules_utf8.h/' $^ >$@
  
 +libstemmer.so: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
 +	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname,libstemmer.so.0 -Wl,--version-script=libstemmer/symbol.map -o $@.0.0.0 $^
 +
- stemwords: $(STEMWORDS_OBJECTS) libstemmer.o
- 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+ libstemmer/modules.h libstemmer/mkinc.mak: libstemmer/mkmodules.pl libstemmer/modules.txt
+ 	libstemmer/mkmodules.pl $@ $(c_src_dir) libstemmer/modules.txt libstemmer/mkinc.mak
  
