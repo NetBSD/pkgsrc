@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2517 2023/04/27 13:34:05 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.2518 2023/04/27 13:46:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3599,3 +3599,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang to 25.3.1 [wiz 2023-04-27]
 	Updated www/w3m to 0.5.3.0.20230121 [wiz 2023-04-27]
 	Updated games/alephone to 20230119 [yhardy 2023-04-27]
+	Updated databases/ruby-pg to 1.5.2 [taca 2023-04-27]
