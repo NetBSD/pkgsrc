@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2540 2023/04/27 21:02:43 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2541 2023/04/27 21:03:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3625,3 +3625,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gopass to 1.15.5 [nikita 2023-04-27]
 	Updated shells/oh-my-posh to 15.4.0 [pin 2023-04-27]
 	Updated fonts/gerb to 0.0.1alpha20230427 [pin 2023-04-27]
+	Updated graphics/wallust to 2.2.0 [pin 2023-04-27]
