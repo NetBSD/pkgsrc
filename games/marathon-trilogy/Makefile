@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2018/01/14 17:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/27 13:47:47 yhardy Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
-DISTNAME=	marathon-trilogy-1.0
+DISTNAME=	marathon-trilogy-20230119
 CATEGORIES=	games
-# The original Bungie trilogy series
-DISTFILES=	M1A1.zip Marathon2.zip MarathonInfinity.zip
-MASTER_SITES=	http://trilogyrelease.bungie.org/files/
+DISTFILES=	Marathon-20230119-Data.zip Marathon2-20230119-Data.zip MarathonInfinity-20230119-Data.zip
+MASTER_SITES+=	${MASTER_SITE_GITHUB:=Aleph-One-Marathon/}
 EXTRACT_SUFX=	.zip
+GITHUB_PROJECT=	alephone
+GITHUB_RELEASE=	release-20230119
+
+.for i in ${DISTFILES}
+SITES.${i}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+.endfor
 
 MAINTAINER=	christtrekker@users.sourceforge.net
-HOMEPAGE=	http://trilogyrelease.bungie.org/
+HOMEPAGE=	https://alephone.lhowon.org/
 COMMENT=	Bungie game data files, playable with the Aleph One engine
 LICENSE=	generic-nonlicense
 
@@ -28,14 +33,14 @@ NO_BUILD=	yes
 
 post-extract:
 	${FIND} ${WRKDIR} -name CVS -print | ${XARGS} -I repl ${RM} -rf "repl"
-	${FIND} ${WRKDIR}/M1A1 -type f -exec ${CHMOD} 0644 {} \;
+	${FIND} ${WRKDIR}/Marathon -type f -exec ${CHMOD} 0644 {} \;
 	${FIND} ${WRKDIR}/Marathon\ 2 -type f -exec ${CHMOD} 0644 {} \;
 	${FIND} ${WRKDIR}/Marathon\ Infinity -type f -exec ${CHMOD} 0644 {} \;
 
 do-install:
 	#install the files into the Scenarios dir
 	#there is no ${INSTALL_...} command with recursive abilities...
-	${CP} -r ${WRKDIR}/M1A1/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/1
+	${CP} -r ${WRKDIR}/Marathon/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/1
 	${CP} -r ${WRKDIR}/Marathon\ 2/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/2
 	${CP} -r ${WRKDIR}/Marathon\ Infinity/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Infinity
 
