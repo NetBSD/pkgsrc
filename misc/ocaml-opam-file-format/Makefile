@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2022/05/24 18:59:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2023/04/27 12:02:51 wiz Exp $
 
-VERSION=	2.1.4
+VERSION=	2.1.6
 GITHUB_PROJECT=	opam-file-format
 GITHUB_TAG=	${VERSION:S/_/-/}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
-MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://opam.ocaml.org/
