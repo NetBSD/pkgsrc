@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/02/26 14:30:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/04/27 13:46:29 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -68,15 +68,24 @@ ${GEM_LIBDIR}/lib/pg/basic_type_map_based_on_result.rb
 ${GEM_LIBDIR}/lib/pg/basic_type_map_for_queries.rb
 ${GEM_LIBDIR}/lib/pg/basic_type_map_for_results.rb
 ${GEM_LIBDIR}/lib/pg/basic_type_registry.rb
-${GEM_LIBDIR}/lib/pg/binary_decoder.rb
+${GEM_LIBDIR}/lib/pg/binary_decoder/date.rb
+${GEM_LIBDIR}/lib/pg/binary_decoder/timestamp.rb
+${GEM_LIBDIR}/lib/pg/binary_encoder/timestamp.rb
 ${GEM_LIBDIR}/lib/pg/coder.rb
 ${GEM_LIBDIR}/lib/pg/connection.rb
-${GEM_LIBDIR}/lib/pg/constants.rb
 ${GEM_LIBDIR}/lib/pg/exceptions.rb
 ${GEM_LIBDIR}/lib/pg/postgresql_lib_path.rb
 ${GEM_LIBDIR}/lib/pg/result.rb
-${GEM_LIBDIR}/lib/pg/text_decoder.rb
-${GEM_LIBDIR}/lib/pg/text_encoder.rb
+${GEM_LIBDIR}/lib/pg/text_decoder/date.rb
+${GEM_LIBDIR}/lib/pg/text_decoder/inet.rb
+${GEM_LIBDIR}/lib/pg/text_decoder/json.rb
+${GEM_LIBDIR}/lib/pg/text_decoder/numeric.rb
+${GEM_LIBDIR}/lib/pg/text_decoder/timestamp.rb
+${GEM_LIBDIR}/lib/pg/text_encoder/date.rb
+${GEM_LIBDIR}/lib/pg/text_encoder/inet.rb
+${GEM_LIBDIR}/lib/pg/text_encoder/json.rb
+${GEM_LIBDIR}/lib/pg/text_encoder/numeric.rb
+${GEM_LIBDIR}/lib/pg/text_encoder/timestamp.rb
 ${GEM_LIBDIR}/lib/pg/tuple.rb
 ${GEM_LIBDIR}/lib/pg/type_map_by_column.rb
 ${GEM_LIBDIR}/lib/pg/version.rb
@@ -117,5 +126,4 @@ ${GEM_LIBDIR}/translation/.po4a-version
 ${GEM_LIBDIR}/translation/po/all.pot
 ${GEM_LIBDIR}/translation/po/ja.po
 ${GEM_LIBDIR}/translation/po4a.cfg
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
