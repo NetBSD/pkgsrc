@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/12/03 16:01:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/04/27 12:15:11 wiz Exp $
 
 BUILDLINK_TREE+=	nghttp3
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	nghttp3
 NGHTTP3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nghttp3+=	nghttp3>=0.7.1
+BUILDLINK_ABI_DEPENDS.nghttp3+=	nghttp3>=0.11.0
 BUILDLINK_PKGSRCDIR.nghttp3?=	../../www/nghttp3
 .endif	# NGHTTP3_BUILDLINK3_MK
 
