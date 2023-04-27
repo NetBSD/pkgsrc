@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/01/15 15:36:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/04/27 14:46:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -232,6 +232,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/client_token_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/configuration_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credentials_parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/customer_spec.rb
@@ -277,6 +278,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/transaction/deposit_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/installment_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/paypal_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/unknown_payment_method_spec.rb
