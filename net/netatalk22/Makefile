@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2023/04/19 08:11:10 adam Exp $
+# $NetBSD: Makefile,v 1.56 2023/04/27 15:08:44 hauke Exp $
 
-DISTNAME=	netatalk-2.2.8
+DISTNAME=	netatalk-2.2.9
 PKGNAME=	${DISTNAME:C/-/22-/}
-PKGREVISION=	2
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/${DISTNAME:C/\./-/g}/
 #PATCHFILES=	patch-adv1tov2.c
