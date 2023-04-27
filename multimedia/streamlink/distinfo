@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/07/18 22:11:03 yhardy Exp $
+$NetBSD: distinfo,v 1.23 2023/04/27 13:04:10 yhardy Exp $
 
-BLAKE2s (streamlink-4.2.0.tar.gz) = 9f0adb4a35712afcf2ce5630de02b23dccba99b7f53862f93db584c21767b27a
-SHA512 (streamlink-4.2.0.tar.gz) = 9782371f630265519cefc0bc3b5c009b195f203d8c030579a60bf4697bac80c7d5824803640c438185287262276fd9739ac92c17e4f5b79a960940376fbda9b8
-Size (streamlink-4.2.0.tar.gz) = 423722 bytes
+BLAKE2s (streamlink-5.4.0.tar.gz) = 03f92c8e8856a8fd1add4508168d97a418af64a8a91eb0fe2b5cfd7a4e356327
+SHA512 (streamlink-5.4.0.tar.gz) = 8b961f2b33be1ad7df5b61166e5b5ee282a00f4e5eb54f4f705d4428aa29786d6933b29e8097d70602f34843d3206ac6f99b1a11558fa02c15156477daaa70bd
+Size (streamlink-5.4.0.tar.gz) = 490759 bytes
