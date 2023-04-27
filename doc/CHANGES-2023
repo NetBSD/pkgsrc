@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2530 2023/04/27 14:44:33 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2531 2023/04/27 14:47:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rspec-expectations to 3.12.3 [taca 2023-04-27]
 	Updated devel/ruby-rspec-mocks to 3.12.5 [taca 2023-04-27]
 	Updated devel/ruby-semantic_puppet to 1.1.0 [taca 2023-04-27]
+	Updated finance/ruby-braintree to 4.11.0 [taca 2023-04-27]
