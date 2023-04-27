@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/02/23 14:55:01 taca Exp $
+$NetBSD: distinfo,v 1.2 2023/04/27 14:05:26 taca Exp $
 
-BLAKE2s (pairing_heap-3.0.0.gem) = 166b98f0057ed742ea15d825e6e8e9b30a3cf4c37bdf71da5f399efefcb79e49
-SHA512 (pairing_heap-3.0.0.gem) = f889857fcebbfceab85446cb5295db51723c4bf210f3a3f37a18c92675d4744df42d430ccb13891f6cdd29f9cc93c5f62c0d279d73895ea638c177196bf0c2ab
-Size (pairing_heap-3.0.0.gem) = 14336 bytes
+BLAKE2s (pairing_heap-3.0.1.gem) = 2fde3be552e9343073a1434cf1caaff5796a1ce7a7d5858c61393da10b4e788b
+SHA512 (pairing_heap-3.0.1.gem) = 73952b7697261e90aca1d1e6b04b7d33aa8df024a57ef473e59be30f7c7952fd21e46ccf2539995ab64db711d8b7670d1378d56e82e9ead1ab1ce18811bab105
+Size (pairing_heap-3.0.1.gem) = 14336 bytes
