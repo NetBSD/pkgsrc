@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2525 2023/04/27 14:05:51 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2526 2023/04/27 14:13:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3607,3 +3607,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xdotool to 3.20211022.1 [yhardy 2023-04-27]
 	Updated devel/ruby-octokit to 6.1.1 [taca 2023-04-27]
 	Updated devel/ruby-pairing_heap to 3.0.1 [taca 2023-04-27]
+	Updated devel/ruby-regexp_parser to 2.8.0 [taca 2023-04-27]
