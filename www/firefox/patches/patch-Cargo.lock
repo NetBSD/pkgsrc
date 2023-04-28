@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.lock,v 1.1 2023/04/28 18:56:22 maya Exp $
+
+Enable patching authenticator-rs
+
+--- Cargo.lock.orig	2023-04-14 16:27:56.000000000 +0000
++++ Cargo.lock
+@@ -380,8 +380,6 @@ dependencies = [
+ [[package]]
+ name = "authenticator"
+ version = "0.4.0-alpha.10"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "2238116278e3a069a5148ce1efaa73d750a0d7341e011235a0ddb3e7079cb1be"
+ dependencies = [
+  "base64",
+  "bitflags",
