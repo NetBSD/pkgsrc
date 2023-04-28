@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/04/28 07:28:46 wiz Exp $
 
-BLAKE2s (xinput-1.6.3.tar.gz) = 5b823b10099a020ef4bcf70fc4e8bf0788da155030a653266a6167c4fd769f69
-SHA512 (xinput-1.6.3.tar.gz) = f2d61288b87505add5909aace7d51d99f5c7b1a8fad5475316da371f74d5b616ae261660c81851bec595c5d716fead3e40d8fc0cc7d2234c2b04db2b24e25da8
-Size (xinput-1.6.3.tar.gz) = 203936 bytes
+BLAKE2s (xinput-1.6.4.tar.xz) = 1dafb7c0ce6636edea7afaaf4b3c4b78ea970931ed0e1b252689929d8c04256c
+SHA512 (xinput-1.6.4.tar.xz) = 6734860852715e5cb9d26259a173e42413fc037546ed7fa4173ffa802c2619ee0322bed228a28cd1911be759d860070867d9b89b115f37323cca1c9ef75354b9
+Size (xinput-1.6.4.tar.xz) = 153160 bytes
