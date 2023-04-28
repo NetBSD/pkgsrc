@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2547 2023/04/28 08:24:06 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2548 2023/04/28 08:54:11 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3633,3 +3633,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/postgresql-timescaledb to 2.10.3 [adam 2023-04-28]
 	Updated devel/py-virtualenv to 20.23.0 [adam 2023-04-28]
 	Updated misc/wthrr to 1.0.2 [pin 2023-04-28]
+	Added devel/cppcodec version 0.2 [nikita 2023-04-28]
