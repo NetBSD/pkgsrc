@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/28 18:13:52 nikita Exp $
 
-DISTNAME=	jansson-2.13.1
+DISTNAME=	jansson-2.14
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.digip.org/jansson/releases/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=akheron/}
+GITHUB_PROJECT=	jansson
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.digip.org/jansson/
