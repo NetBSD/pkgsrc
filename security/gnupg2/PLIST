@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/04/03 23:16:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/04/28 16:33:41 nikita Exp $
 ${PLIST.gnutls}bin/dirmngr
 ${PLIST.gnutls}bin/dirmngr-client
 bin/g13
@@ -58,24 +58,13 @@ share/doc/gnupg/KEYSERVER
 share/doc/gnupg/OpenPGP
 share/doc/gnupg/README
 share/doc/gnupg/TRANSLATE
-share/doc/gnupg/examples/Automatic.prf
 share/doc/gnupg/examples/README
-share/doc/gnupg/examples/VS-NfD.prf
 share/doc/gnupg/examples/common.conf
-share/doc/gnupg/examples/debug.prf
 share/doc/gnupg/examples/gpgconf.conf
 share/doc/gnupg/examples/gpgconf.rnames
 share/doc/gnupg/examples/pwpattern.list
 share/doc/gnupg/examples/qualified.txt
 share/doc/gnupg/examples/scd-event
-share/doc/gnupg/examples/systemd-user/README
-share/doc/gnupg/examples/systemd-user/dirmngr.service
-share/doc/gnupg/examples/systemd-user/dirmngr.socket
-share/doc/gnupg/examples/systemd-user/gpg-agent-browser.socket
-share/doc/gnupg/examples/systemd-user/gpg-agent-extra.socket
-share/doc/gnupg/examples/systemd-user/gpg-agent-ssh.socket
-share/doc/gnupg/examples/systemd-user/gpg-agent.service
-share/doc/gnupg/examples/systemd-user/gpg-agent.socket
 share/doc/gnupg/examples/trustlist.txt
 share/gnupg/distsigkey.gpg
 share/gnupg/help.be.txt
