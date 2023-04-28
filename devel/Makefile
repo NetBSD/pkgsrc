@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3958 2023/04/25 14:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3959 2023/04/28 08:53:46 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -255,6 +255,7 @@ SUBDIR+=	conftest
 SUBDIR+=	confuse
 SUBDIR+=	cook
 SUBDIR+=	cppcheck
+SUBDIR+=	cppcodec
 SUBDIR+=	cppunit
 SUBDIR+=	cpputest
 SUBDIR+=	cproto
