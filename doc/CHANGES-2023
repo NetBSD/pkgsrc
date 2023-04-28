@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2555 2023/04/28 16:33:50 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2556 2023/04/28 16:58:53 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang-doc to 25.3 [gutteridge 2023-04-28]
 	Updated devel/lua-language-server to 3.6.19 [nikita 2023-04-28]
 	Updated security/gnupg2 to 2.4.1 [nikita 2023-04-28]
+	Updated net/arti to 1 [nikita 2023-04-28]
