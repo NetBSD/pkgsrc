@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/04/13 12:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/28 16:10:41 nikita Exp $
 
-DISTNAME=		lua-language-server-3.6.18
+DISTNAME=		lua-language-server-3.6.19
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
@@ -26,38 +26,21 @@ INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
 
 # TODO: Maybe unbundle (some of) them? (lls does build with them included though)
-GITDEPS+=		luamake 915baa5a3141e3f45708b59a7bbc76d7a701d7fe https://github.com/actboy168/luamake luamake
-GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua bee.lua
-GITDEPS+=		bee.lua a8a503238ee998e5d2995323581bf8926bb49d3a https://github.com/actboy168/bee.lua luamake/bee.lua
-GITDEPS+=		json.lua be1d71ff7afe84942eb3f33b76c8bf75306c4635 https://github.com/actboy168/json.lua json.lua
-GITDEPS+=		EmmyLuaCodeStyle fab3d066e14cea1bf1ebe7927d1ceba098e78d12 https://github.com/CppCXY/EmmyLuaCodeStyle EmmyLuaCodeStyle
-GITDEPS+=		lovr-docs f08de6bc658f385dfa1b6d1fcba52da5f88b7853 https://github.com/bjornbytes/lovr-docs lovr-api
-GITDEPS+=		love-api 495ecc72d994f5d52fc21592dda9d16f4fd75ba1 https://github.com/love2d-community/love-api/ love-api
-GITDEPS+=		lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d https://github.com/sqmedeiros/lpeglabel lpeglabel
-
-DISTFILES?=			${DEFAULT_DISTFILES}
-.for name rev url path in ${GITDEPS}
-GITDEPS_DISTFILE:=		${name}-${rev}.tar.gz
-GITDEPS_DISTFILES:=		${GITDEPS_DISTFILES} ${GITDEPS_DISTFILE}
-SITES.${GITDEPS_DISTFILE}=	-${url}/archive/${rev}.tar.gz
-.endfor
-DISTFILES:=			${DISTFILES} ${GITDEPS_DISTFILES}
+GITHUB_SUBMODULES=	actboy168 luamake 22f861ac8444d1b85ceb29561b2a599fcbff4e3f 3rd/luamake
+GITHUB_SUBMODULES+=	actboy168 bee.lua ca581b9191d98a0644da1dc3332bb59274c9f101 3rd/bee.lua
+GITHUB_SUBMODULES+=	actboy168 bee.lua 8ff095021f73f5883d4b67ba6eb233eae44f3bb9 3rd/luamake/bee.lua
+GITHUB_SUBMODULES+=	actboy168 json.lua be1d71ff7afe84942eb3f33b76c8bf75306c4635 3rd/json.lua
+GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 081b623d03627b281d5744ab53c420667573b955 3rd/EmmyLuaCodeStyle
+GITHUB_SUBMODULES+=	bjornbytes lovr-docs cd208aeb7dabf47d4edecdb9162c1d7d10e73a10 3rd/lovr-api
+GITHUB_SUBMODULES+=	love2d-community love-api ab6dc6756683686b5506107116f994253aef5a20 3rd/love-api
+GITHUB_SUBMODULES+=	sqmedeiros lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d 3rd/lpeglabel
 
 post-extract:
-.for dir in EmmyLuaCodeStyle bee.lua json.lua love-api lovr-api lpeglabel luamake
-	${RMDIR} ${WRKSRC}/3rd/${dir}
-.endfor
-.for name rev url path in ${GITDEPS}
-	${LN} -s ${WRKDIR}/${name}-${rev} ${WRKSRC}/3rd/${path}
-.endfor
-	cd ${WRKSRC}/3rd/luamake && \
-		${RM} -rf bee.lua && \
-		${LN} -s ${WRKDIR}/bee.lua-a8a503238ee998e5d2995323581bf8926bb49d3a bee.lua
 	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
 
 DATADIR=		${PREFIX}/share/lua-language-server
 
-SUBST_CLASSES+=		wrapper
+SUBST_CLASSES+=	wrapper
 SUBST_STAGE.wrapper=	pre-build
 SUBST_MESSAGE.wrapper=	Patching paths in lua-language-server wrapper script
 SUBST_FILES.wrapper=	lua-language-server
