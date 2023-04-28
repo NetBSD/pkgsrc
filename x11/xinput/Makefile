@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:36:09 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2023/04/28 07:28:46 wiz Exp $
 
-DISTNAME=	xinput-1.6.3
+DISTNAME=	xinput-1.6.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
