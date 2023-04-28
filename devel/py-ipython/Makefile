@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2023/04/03 17:33:39 adam Exp $
+# $NetBSD: Makefile,v 1.88 2023/04/28 14:37:45 adam Exp $
 
-DISTNAME=	ipython-8.12.0
+DISTNAME=	ipython-8.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -13,12 +13,11 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-backcall-[0-9]*:../../devel/py-backcall
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>0:../../graphics/py-matplotlib-inline
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline-[0-9]*:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.4:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
-DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.11:../../devel/py-prompt_toolkit
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.38:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.0:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-stack-data-[0-9]*:../../sysutils/py-stack-data
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5:../../devel/py-traitlets
@@ -29,9 +28,14 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 
 USE_LANGUAGES=	# none
 
+USE_PKG_RESOURCES=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
-USE_PKG_RESOURCES=	yes
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
