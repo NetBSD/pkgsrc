@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: redmine50_unicorn.sh,v 1.3 2023/04/19 15:43:17 triaxx Exp $
+# $NetBSD: redmine50_unicorn.sh,v 1.4 2023/04/28 08:25:43 triaxx Exp $
 #
 
 # PROVIDE: redmine50_unicorn@RUBY_SUFFIX@
@@ -19,7 +19,7 @@ stop_cmd="redmine50_unicorn_stop"
 redmine50_unicorn_start()
 {
 	cd @PREFIX@/@RM_DIR@
-	@PREFIX@/bin/unicorn@RUBY_SUFFIX@ \
+	@PREFIX@/bin/bundle@RUBY_SUFFIX@ exec @PREFIX@/bin/unicorn@RUBY_SUFFIX@ \
 		-c @PREFIX@/@RM_DIR@/config/unicorn.rb \
 		-E production -D
 }
