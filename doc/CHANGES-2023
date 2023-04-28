@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2542 2023/04/27 22:02:56 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2543 2023/04/28 07:26:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3627,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/gerb to 0.0.1alpha20230427 [pin 2023-04-27]
 	Updated graphics/wallust to 2.2.0 [pin 2023-04-27]
 	Added security/libnitrokey version 3.8 [nikita 2023-04-27]
+	Updated x11/xrestop to 0.6 [wiz 2023-04-28]
