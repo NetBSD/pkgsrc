@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2544 2023/04/28 07:27:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2545 2023/04/28 07:29:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/libnitrokey version 3.8 [nikita 2023-04-27]
 	Updated x11/xrestop to 0.6 [wiz 2023-04-28]
 	Updated x11/xdpyinfo to 1.3.4 [wiz 2023-04-28]
+	Updated x11/xinput to 1.6.4 [wiz 2023-04-28]
