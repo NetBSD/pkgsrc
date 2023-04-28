@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2549 2023/04/28 11:39:50 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.2550 2023/04/28 13:42:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/wthrr to 1.0.2 [pin 2023-04-28]
 	Added devel/cppcodec version 0.2 [nikita 2023-04-28]
 	Updated net/unison to 2.53.3 [gdt 2023-04-28]
+	Updated news/sfeed to 1.8 [leot 2023-04-28]
