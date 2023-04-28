@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/12/18 14:14:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/28 13:42:00 leot Exp $
 bin/sfeed
 bin/sfeed_atom
 bin/sfeed_content
@@ -6,6 +6,7 @@ bin/sfeed_curses
 bin/sfeed_frames
 bin/sfeed_gopher
 bin/sfeed_html
+bin/sfeed_json
 bin/sfeed_markread
 bin/sfeed_mbox
 bin/sfeed_opml_export
@@ -22,6 +23,7 @@ man/man1/sfeed_curses.1
 man/man1/sfeed_frames.1
 man/man1/sfeed_gopher.1
 man/man1/sfeed_html.1
+man/man1/sfeed_json.1
 man/man1/sfeed_markread.1
 man/man1/sfeed_mbox.1
 man/man1/sfeed_opml_export.1
