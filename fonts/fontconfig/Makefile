@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.127 2023/01/31 15:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2023/04/28 21:52:18 joerg Exp $
 
 DISTNAME=	fontconfig-2.14.2
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.xz
@@ -9,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
+
+PYTHON_FOR_BUILD_ONLY=	yes
 
 # https://bugs.freedesktop.org/show_bug.cgi?id=101280
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
