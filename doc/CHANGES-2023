@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2552 2023/04/28 16:02:02 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2553 2023/04/28 16:03:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3639,3 +3639,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numpy to 1.24.3 [adam 2023-04-28]
 	Updated devel/py-ipython to 8.13.0 [adam 2023-04-28]
 	Updated lang/erlang-man to 25.3 [gutteridge 2023-04-28]
+	Updated lang/erlang-doc to 25.3 [gutteridge 2023-04-28]
