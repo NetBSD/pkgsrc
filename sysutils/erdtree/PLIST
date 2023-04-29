@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/15 10:06:33 pin Exp $
-bin/et
+@comment $NetBSD: PLIST,v 1.2 2023/04/29 15:59:58 pin Exp $
+bin/erd
