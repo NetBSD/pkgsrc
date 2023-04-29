@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2599 2023/04/29 23:19:53 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2600 2023/04/29 23:34:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3685,3 +3685,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Twiggy to 0.1026 [wen 2023-04-29]
 	Updated www/p5-WWW-Mechanize to 2.17 [wen 2023-04-29]
 	Updated www/p5-WWW-Mechanize-Cached to 1.56 [wen 2023-04-29]
+	Updated www/p5-Test-WWW-Mechanize to 1.60 [wen 2023-04-29]
