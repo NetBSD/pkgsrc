@@ -1,0 +1,8 @@
+Inspired by Virtual Identity for the Thunderbird email client,
+mutt-vid is a similar utility for mutt. It is useful for managing
+multiple sender accounts, allowing users to automatically associate
+an arbitrary sender account with a recipient. It scans sent emails
+for the most recent "From" details associated with each recipient,
+saving them in a file for mutt to source. The next time you email
+this recipient, mutt will automatically invoke a `send-hook` with
+the same email address and real name that you used previously.
