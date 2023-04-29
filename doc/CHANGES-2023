@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2595 2023/04/29 22:56:18 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2596 2023/04/29 23:00:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3681,3 +3681,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Perl-Critic to 1.150 [wen 2023-04-29]
 	Updated devel/p5-Perl-PrereqScanner to 1.100 [wen 2023-04-29]
 	Updated devel/p5-Perl-Tidy to 20230309 [wen 2023-03-09]
+	Updated www/p5-URI to 5.18 [wen 2023-04-29]
