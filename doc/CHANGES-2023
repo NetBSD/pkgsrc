@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2587 2023/04/29 15:56:51 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2588 2023/04/29 15:57:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3673,3 +3673,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine42 to 4.2.10nb1 [taca 2023-04-29]
 	Updated graphics/wallust to 2.2.1 [pin 2023-04-29]
 	Updated graphics/stitchy to 0.1.5 [pin 2023-04-29]
+	Updated textproc/p5-ODF-lpOD to 1.127 [wen 2023-04-29]
