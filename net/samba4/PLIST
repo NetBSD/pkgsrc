@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2023/01/10 02:12:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.51 2023/04/29 08:01:06 wiz Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -34,8 +34,6 @@ bin/smbtorture
 bin/smbtree
 bin/testparm
 bin/wbinfo
-@pkgdir bind-dns
-@pkgdir etc/samba
 include/charset.h
 include/core/doserr.h
 include/core/error.h
@@ -51,6 +49,7 @@ include/dcesrv_core.h
 include/domain_credentials.h
 include/gen_ndr/atsvc.h
 include/gen_ndr/auth.h
+include/gen_ndr/claims.h
 include/gen_ndr/dcerpc.h
 include/gen_ndr/drsblobs.h
 include/gen_ndr/drsuapi.h
@@ -184,7 +183,7 @@ lib/libtevent-util.so.0
 lib/libtevent-util.so.0.0.1
 lib/libwbclient.so
 lib/libwbclient.so.0
-lib/libwbclient.so.0.15
+lib/libwbclient.so.0.16
 lib/pkgconfig/dcerpc.pc
 lib/pkgconfig/dcerpc_samr.pc
 ${PLIST.ads}lib/pkgconfig/dcerpc_server.pc
@@ -207,6 +206,7 @@ ${PYSITELIB}/samba/auth.so
 ${PYSITELIB}/samba/auth_util.py
 ${PYSITELIB}/samba/colour.py
 ${PYSITELIB}/samba/common.py
+${PYSITELIB}/samba/compression.so
 ${PYSITELIB}/samba/credentials.so
 ${PYSITELIB}/samba/crypto.so
 ${PYSITELIB}/samba/dbchecker.py
@@ -214,6 +214,7 @@ ${PYSITELIB}/samba/dcerpc/__init__.py
 ${PYSITELIB}/samba/dcerpc/atsvc.so
 ${PYSITELIB}/samba/dcerpc/auth.so
 ${PYSITELIB}/samba/dcerpc/base.so
+${PYSITELIB}/samba/dcerpc/claims.so
 ${PYSITELIB}/samba/dcerpc/dcerpc.so
 ${PYSITELIB}/samba/dcerpc/dfs.so
 ${PYSITELIB}/samba/dcerpc/dns.so
@@ -359,6 +360,8 @@ ${PYSITELIB}/samba/provision/kerberos_implementation.py
 ${PYSITELIB}/samba/provision/sambadns.py
 ${PYSITELIB}/samba/registry.so
 ${PYSITELIB}/samba/remove_dc.py
+${PYSITELIB}/samba/reparse_symlink.so
+${PYSITELIB}/samba/safe_tarfile.py
 ${PYSITELIB}/samba/samba3/__init__.py
 ${PYSITELIB}/samba/samba3/libsmb_samba_cwrapper.so
 ${PYSITELIB}/samba/samba3/libsmb_samba_internal.py
@@ -410,6 +413,7 @@ ${PYSITELIB}/samba/tests/blackbox/traffic_replay.py
 ${PYSITELIB}/samba/tests/blackbox/traffic_summary.py
 ${PYSITELIB}/samba/tests/common.py
 ${PYSITELIB}/samba/tests/complex_expressions.py
+${PYSITELIB}/samba/tests/compression.py
 ${PYSITELIB}/samba/tests/core.py
 ${PYSITELIB}/samba/tests/cred_opt.py
 ${PYSITELIB}/samba/tests/credentials.py
@@ -475,9 +479,11 @@ ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
 ${PYSITELIB}/samba/tests/krb5/alias_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
 ${PYSITELIB}/samba/tests/krb5/as_req_tests.py
+${PYSITELIB}/samba/tests/krb5/claims_tests.py
 ${PYSITELIB}/samba/tests/krb5/compatability_tests.py
 ${PYSITELIB}/samba/tests/krb5/etype_tests.py
 ${PYSITELIB}/samba/tests/krb5/fast_tests.py
+${PYSITELIB}/samba/tests/krb5/group_tests.py
 ${PYSITELIB}/samba/tests/krb5/kcrypto.py
 ${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
 ${PYSITELIB}/samba/tests/krb5/kdc_tests.py
@@ -508,6 +514,7 @@ ${PYSITELIB}/samba/tests/ldap_raw.py
 ${PYSITELIB}/samba/tests/ldap_referrals.py
 ${PYSITELIB}/samba/tests/ldap_spn.py
 ${PYSITELIB}/samba/tests/ldap_upn_sam_account.py
+${PYSITELIB}/samba/tests/libsmb-basic.py
 ${PYSITELIB}/samba/tests/libsmb.py
 ${PYSITELIB}/samba/tests/loadparm.py
 ${PYSITELIB}/samba/tests/logfiles.py
@@ -545,12 +552,14 @@ ${PYSITELIB}/samba/tests/provision.py
 ${PYSITELIB}/samba/tests/pso.py
 ${PYSITELIB}/samba/tests/py_credentials.py
 ${PYSITELIB}/samba/tests/registry.py
+${PYSITELIB}/samba/tests/reparsepoints.py
 ${PYSITELIB}/samba/tests/s3_net_join.py
 ${PYSITELIB}/samba/tests/s3idmapdb.py
 ${PYSITELIB}/samba/tests/s3param.py
 ${PYSITELIB}/samba/tests/s3passdb.py
 ${PYSITELIB}/samba/tests/s3registry.py
 ${PYSITELIB}/samba/tests/s3windb.py
+${PYSITELIB}/samba/tests/safe_tarfile.py
 ${PYSITELIB}/samba/tests/samba3sam.py
 ${PYSITELIB}/samba/tests/samba_tool/__init__.py
 ${PYSITELIB}/samba/tests/samba_tool/base.py
@@ -599,6 +608,9 @@ ${PYSITELIB}/samba/tests/segfault.py
 ${PYSITELIB}/samba/tests/sid_strings.py
 ${PYSITELIB}/samba/tests/smb-notify.py
 ${PYSITELIB}/samba/tests/smb.py
+${PYSITELIB}/samba/tests/smb1posix.py
+${PYSITELIB}/samba/tests/smb2symlink.py
+${PYSITELIB}/samba/tests/smb3unix.py
 ${PYSITELIB}/samba/tests/smbconf.py
 ${PYSITELIB}/samba/tests/smbd_base.py
 ${PYSITELIB}/samba/tests/smbd_fuzztest.py
@@ -791,6 +803,7 @@ lib/samba/private/libsmbd-shim-samba4.so
 ${PLIST.ldap}lib/samba/private/libsmbldaphelper-samba4.so
 lib/samba/private/libsmbpasswdparser-samba4.so
 lib/samba/private/libsocket-blocking-samba4.so
+lib/samba/private/libstable-sort-samba4.so
 lib/samba/private/libsys-rw-samba4.so
 lib/samba/private/libtalloc-report-printf-samba4.so
 lib/samba/private/libtalloc-report-samba4.so
@@ -999,7 +1012,10 @@ share/examples/samba/deluser.sh
 @pkgdir share/examples/samba/pam_smbpass
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
+${PLIST.ads}share/samba/samba/admx/GNOME_Settings.admx
+${PLIST.ads}share/samba/samba/admx/en-US/GNOME_Settings.adml
 ${PLIST.ads}share/samba/samba/admx/en-US/samba.adml
+${PLIST.ads}share/samba/samba/admx/ru-RU/GNOME_Settings.adml
 ${PLIST.ads}share/samba/samba/admx/samba.admx
 ${PLIST.ads}share/samba/setup/ad-schema/AD_DS_Attributes__Windows_Server_2012_R2.ldf
 ${PLIST.ads}share/samba/setup/ad-schema/AD_DS_Attributes__Windows_Server_2016.ldf
