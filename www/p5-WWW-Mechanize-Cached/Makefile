@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/04/29 23:18:55 wen Exp $
 
-DISTNAME=	WWW-Mechanize-Cached-1.55
+DISTNAME=	WWW-Mechanize-Cached-1.56
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
@@ -14,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Cache-Cache-[0-9]*:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
+DEPENDS+=	p5-libwww>=6.66:../../www/p5-libwww
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
