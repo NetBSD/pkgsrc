@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2566 2023/04/29 08:21:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2567 2023/04/29 09:06:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3652,3 +3652,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.18.2 [wiz 2023-04-29]
 	Updated www/p5-Dancer2 to 0.400001 [wen 2023-04-29]
 	Updated print/mupdf to 1.22.0 [wiz 2023-04-29]
+	Updated www/p5-HTML-Form to 6.11 [wen 2023-04-29]
