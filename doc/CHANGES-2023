@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2560 2023/04/28 18:56:41 maya Exp $
+$NetBSD: CHANGES-2023,v 1.2561 2023/04/29 07:12:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/jansson to 2.14 [nikita 2023-04-28]
 	Updated security/password-store to 1.7.4 [nikita 2023-04-28]
 	Updated www/firefox to 112.0.1nb2 [maya 2023-04-28]
+	Updated multimedia/gstreamer1 to 1.22.2 [wiz 2023-04-29]
