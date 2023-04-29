@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2568 2023/04/29 09:10:07 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2569 2023/04/29 09:17:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3654,3 +3654,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/mupdf to 1.22.0 [wiz 2023-04-29]
 	Updated www/p5-HTML-Form to 6.11 [wen 2023-04-29]
 	Updated www/p5-HTML-Mason to 1.60 [wen 2023-04-29]
+	Updated www/p5-HTML-Parser to 3.81 [wen 2023-04-29]
