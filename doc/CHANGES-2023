@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2590 2023/04/29 16:00:21 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2591 2023/04/29 21:08:10 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3676,3 +3676,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-ODF-lpOD to 1.127 [wen 2023-04-29]
 	Updated sysutils/onefetch to 2.17.1 [pin 2023-04-29]
 	Updated sysutils/erdtree to 2.0.0 [pin 2023-04-29]
+	Updated chat/element-web to 1.11.30 [js 2023-04-29]
