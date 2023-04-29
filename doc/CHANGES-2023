@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2580 2023/04/29 13:54:46 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2581 2023/04/29 14:31:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-zeitwerk to 2.6.8 [taca 2023-04-29]
 	Updated net/ruby-connection_pool to 2.4.0 [taca 2023-04-29]
 	Updated net/ruby-dnsruby to 1.70.0 [taca 2023-04-29]
+	Updated textproc/po4a to 0.69nb2 [schmonz 2023-04-29]
