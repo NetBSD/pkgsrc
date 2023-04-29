@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2576 2023/04/29 13:36:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2577 2023/04/29 13:40:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3662,3 +3662,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added archivers/zlib-ng version 2.0.7 [wiz 2023-04-29]
 	Updated databases/ruby-pg to 1.5.3 [taca 2023-04-29]
 	Added mail/mutt-vid version 1.1 [wiz 2023-04-29]
+	Updated devel/ruby-rugged to 1.6.3 [taca 2023-04-29]
