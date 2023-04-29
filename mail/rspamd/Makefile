@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/04/26 19:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2023/04/29 14:23:35 wiz Exp $
 
 DISTNAME=	rspamd-3.5
 CATEGORIES=	mail
@@ -12,7 +12,8 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
-GCC_REQD+=	8
+# std::string ends_with()
+GCC_REQD+=	9
 
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99 c++
