@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/08/23 23:33:03 wen Exp $
+$NetBSD: distinfo,v 1.10 2023/04/29 09:05:40 wen Exp $
 
-BLAKE2s (HTML-Form-6.10.tar.gz) = fe3d12a8392c7e95a16c926496041b5cdcecd087c7e1dc0900597fd95c3f11e5
-SHA512 (HTML-Form-6.10.tar.gz) = e0d8a25dc295b3d64ebb3ae0c28e460e61a59e880ecc200aec78f32fe561fc6009de4aa8845824cc2ea9476442f54c9a1f1a4c8f66239087977e3a5779c24fc9
-Size (HTML-Form-6.10.tar.gz) = 42908 bytes
+BLAKE2s (HTML-Form-6.11.tar.gz) = 63420d2b6b214016b98ab8abba157d3541c28ea58fd629a8d887da0509355296
+SHA512 (HTML-Form-6.11.tar.gz) = 9ac4eba3d723fccbd9a686959288e1c9479f80c4fd8fd8d85739d7c11b402af813a883cd341ebac8593efe3b6d0ea9f6dbd7fec6b1966c15bccc1b9a2ce0dfeb
+Size (HTML-Form-6.11.tar.gz) = 44901 bytes
