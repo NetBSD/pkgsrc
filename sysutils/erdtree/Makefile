@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/04/16 18:29:58 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/29 15:59:58 pin Exp $
 
-DISTNAME=	erdtree-1.8.1
+DISTNAME=	erdtree-2.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=solidiquis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/et \
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/erd \
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
