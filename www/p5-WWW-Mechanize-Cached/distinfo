@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:30:20 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/04/29 23:18:55 wen Exp $
 
-BLAKE2s (WWW-Mechanize-Cached-1.55.tar.gz) = 8cd8bc122b44ac1e1283c9f4eecb285ef7554d038322f6e21998ae837d726646
-SHA512 (WWW-Mechanize-Cached-1.55.tar.gz) = cb4e4b8578a21028484b06c8fe4cea8f78a92b0e790cda7e56c72762fab254e1b3d2865a8889c5fccfdc5678e4e0473211bccbbf703655aece32bb655710fbf0
-Size (WWW-Mechanize-Cached-1.55.tar.gz) = 34945 bytes
+BLAKE2s (WWW-Mechanize-Cached-1.56.tar.gz) = a5e98ec0ef9ea4ff076de1b2f46dfdf2ddb7a9342f6306c3eaac63dfe71bd46f
+SHA512 (WWW-Mechanize-Cached-1.56.tar.gz) = 946d3c22d7181a4571ea5201389bbc80e01d86372b1f8796c1fa3494972374fdf4597781d8db3acf98ed2e6e477b14446bbdfdd9487541fa7a173bcae3112b80
+Size (WWW-Mechanize-Cached-1.56.tar.gz) = 35030 bytes
