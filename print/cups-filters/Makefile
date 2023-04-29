@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2023/04/19 08:08:39 adam Exp $
+# $NetBSD: Makefile,v 1.173 2023/04/29 14:25:05 wiz Exp $
 
 DISTNAME=	cups-filters-1.28.16
 PKGREVISION=	1
@@ -15,7 +15,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 
-USE_LANGUAGES=		c c++11
+# qpdf's include/qpdf/QPDF.hh uses std::string_view
+USE_LANGUAGES=		c c++17
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash:run pkg-config gmake gdbus-codegen
 GNU_CONFIGURE=		yes
