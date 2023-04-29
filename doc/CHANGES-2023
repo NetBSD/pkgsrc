@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2581 2023/04/29 14:31:36 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2582 2023/04/29 14:48:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-connection_pool to 2.4.0 [taca 2023-04-29]
 	Updated net/ruby-dnsruby to 1.70.0 [taca 2023-04-29]
 	Updated textproc/po4a to 0.69nb2 [schmonz 2023-04-29]
+	Updated www/p5-Mojolicious-Plugin-OAuth2-Server to 0.51 [wen 2023-04-29]
