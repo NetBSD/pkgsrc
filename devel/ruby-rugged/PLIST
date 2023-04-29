@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/09/03 15:05:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/04/29 13:39:53 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -69,6 +69,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/AddCFlagIfSupported.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/AddClarTest.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/DefaultCFlags.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/EnableWarnings.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/ExperimentalFeatures.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindCoreFoundation.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindGSSAPI.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindGSSFramework.cmake
@@ -205,6 +206,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/describe.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/diff.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/email.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/errors.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/experimental.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/filter.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/global.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/graph.h
@@ -298,7 +300,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/cli/unix/sighandler.c
 ${GEM_LIBDIR}/vendor/libgit2/src/cli/win32/precompiled.c
 ${GEM_LIBDIR}/vendor/libgit2/src/cli/win32/precompiled.h
 ${GEM_LIBDIR}/vendor/libgit2/src/cli/win32/sighandler.c
-${GEM_LIBDIR}/vendor/libgit2/src/features.h.in
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/annotated_commit.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/annotated_commit.h
@@ -370,6 +371,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/email.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/email.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/errors.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/errors.h
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/experimental.h.in
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/fetch.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/fetch.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/fetchhead.c
@@ -473,6 +475,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/stash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/status.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/status.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/strarray.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/strarray.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/mbedtls.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/mbedtls.h
@@ -569,6 +572,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/util/fs_path.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/fs_path.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/futils.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/futils.h
+${GEM_LIBDIR}/vendor/libgit2/src/util/git2_features.h.in
 ${GEM_LIBDIR}/vendor/libgit2/src/util/git2_util.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/hash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/hash.h
@@ -636,8 +640,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/dir.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/dir.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/error.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/error.h
-${GEM_LIBDIR}/vendor/libgit2/src/util/win32/findfile.c
-${GEM_LIBDIR}/vendor/libgit2/src/util/win32/findfile.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/map.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/mingw-compat.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/win32/msvc-compat.h
