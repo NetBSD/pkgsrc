@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/01/21 14:36:08 taca Exp $
+# $NetBSD: Makefile,v 1.46 2023/04/29 13:47:07 wiz Exp $
 
 DISTNAME=	jekyll-4.3.2
 CATEGORIES=	www
@@ -29,6 +29,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.12<1:../../www/ruby-jekyll-feed
 USE_LANGUAGES=	# empty
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	32
 
 .include "../../lang/ruby/rubyversion.mk"
 
