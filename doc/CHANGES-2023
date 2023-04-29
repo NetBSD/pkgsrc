@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2601 2023/04/29 23:38:23 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2602 2023/04/29 23:41:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-WWW-Mechanize-Cached to 1.56 [wen 2023-04-29]
 	Updated www/p5-Test-WWW-Mechanize to 1.60 [wen 2023-04-29]
 	Updated devel/p5-Data-Compare to 1.29 [wen 2023-04-29]
+	Updated devel/p5-Data-Dump-Streamer to 2.42 [wen 2023-04-29]
