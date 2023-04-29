@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/29 21:45:19 wiz Exp $
+libexec/git-core/git-cinnabar
+libexec/git-core/git-remote-hg
+share/doc/git-cinnabar/README.md
