@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2022/08/23 23:39:17 wen Exp $
+# $NetBSD: Makefile,v 1.66 2023/04/29 23:12:11 wen Exp $
 
-DISTNAME=	WWW-Mechanize-2.15
+DISTNAME=	WWW-Mechanize-2.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
@@ -30,7 +30,6 @@ TEST_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 TEST_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
 TEST_DEPENDS+=	p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
-TEST_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 TEST_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
