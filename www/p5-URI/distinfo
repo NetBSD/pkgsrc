@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2021/10/31 08:27:09 schmonz Exp $
+$NetBSD: distinfo,v 1.41 2023/04/29 22:59:14 wen Exp $
 
-BLAKE2s (URI-5.10.tar.gz) = 9256e9b05fa1c31db35f2c983124280999e125f54bd5a2ea0e8260e02ff6f0f5
-SHA512 (URI-5.10.tar.gz) = 6ce53b258c2f1115e58ca858beec0c055452993b83abf3ebf23784e00fcbe636f3b7a460a2016923f9fab0e0bbd112475048eb9671d6d1e1c3b4db33a503efb5
-Size (URI-5.10.tar.gz) = 109471 bytes
+BLAKE2s (URI-5.18.tar.gz) = 2bb614d16cc46be7849a9d7bdcbf1f20bd8a481d8c86d4686ddff15ef71108cb
+SHA512 (URI-5.18.tar.gz) = 86fd8fdf0a654c57a3599632976dee8bc59b34fbdf8c55c099fc0da24d332db6ddf3ef087b6e7d1521ed3a657629db77e770b6f379010b2441d9d61b21d3d377
+Size (URI-5.18.tar.gz) = 115938 bytes
