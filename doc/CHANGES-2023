@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2561 2023/04/29 07:12:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2562 2023/04/29 07:57:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3647,3 +3647,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/password-store to 1.7.4 [nikita 2023-04-28]
 	Updated www/firefox to 112.0.1nb2 [maya 2023-04-28]
 	Updated multimedia/gstreamer1 to 1.22.2 [wiz 2023-04-29]
+	Updated devel/p5-File-Slurper to 0.014 [wen 2023-04-29]
