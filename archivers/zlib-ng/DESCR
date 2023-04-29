@@ -1,0 +1,10 @@
+zlib data compression library for the next generation systems
+
+Features:
+* Zlib compatible API with support for dual-linking
+* Modernized native API based on zlib API for ease of porting
+* Modern C11 syntax and a clean code layout
+* Deflate medium and quick algorithms based on Intel's zlib fork
+* Support for CPU intrinsics when available
+* Unaligned memory read/writes and large bit buffer improvements
+* Includes improvements from Cloudflare and Intel forks
