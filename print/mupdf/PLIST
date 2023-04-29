@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/01/03 15:48:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/04/29 08:17:53 wiz Exp $
 bin/mupdf
 ${PLIST.curl}bin/mupdf-curl
 ${PLIST.opengl}bin/mupdf-gl
@@ -74,10 +74,8 @@ include/mupdf/pdf/parse.h
 include/mupdf/pdf/resource.h
 include/mupdf/pdf/xref.h
 include/mupdf/ucdn.h
-lib/libmupdf-pkcs7.la
-lib/libmupdf-third.la
-lib/libmupdf-threads.la
-lib/libmupdf.la
+lib/libmupdf-third.a
+lib/libmupdf.a
 lib/pkgconfig/mupdf.pc
 man/man1/mupdf.1
 man/man1/mutool.1
