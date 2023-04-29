@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2023/01/08 00:22:27 wen Exp $
+# $NetBSD: Makefile,v 1.49 2023/04/29 22:39:05 wen Exp $
 #
 
-DISTNAME=	Perl-Critic-1.148
+DISTNAME=	Perl-Critic-1.150
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Module-Pluggable>=3.1:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-PPI>=1.265:../../devel/p5-PPI
 DEPENDS+=	p5-PPIx-QuoteLike>=0:../../textproc/p5-PPIx-QuoteLike
 DEPENDS+=	p5-PPIx-Regexp>=0.022:../../devel/p5-PPIx-Regexp
-DEPENDS+=	p5-PPIx-Utilities>=1.001:../../devel/p5-PPIx-Utilities
+DEPENDS+=	p5-PPIx-Utils>=0:../../textproc/p5-PPIx-Utils
 DEPENDS+=	p5-Perl-Tidy-[0-9]*:../../devel/p5-Perl-Tidy
 DEPENDS+=	p5-Pod-Spell>=1:../../textproc/p5-Pod-Spell
 DEPENDS+=	p5-Readonly>=2.0:../../devel/p5-Readonly
