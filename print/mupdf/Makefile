@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2023/04/24 07:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/04/29 08:17:53 wiz Exp $
 
 DISTNAME=	mupdf-1.21.1-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -12,7 +12,6 @@ COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
 USE_LANGUAGES=	c99 c++
-USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
@@ -52,6 +51,7 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mupdf.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${MV} ${DESTDIR}${PREFIX}/bin/mupdf-x11 ${DESTDIR}${PREFIX}/bin/mupdf
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../devel/zlib/buildlink3.mk"
