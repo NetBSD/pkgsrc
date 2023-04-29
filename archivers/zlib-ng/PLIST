@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/29 12:39:30 wiz Exp $
+include/zconf-ng.h
+include/zlib-ng.h
+lib/libz-ng.a
+lib/libz-ng.so
+lib/libz-ng.so.2
+lib/libz-ng.so.${PKGVERSION}
+lib/pkgconfig/zlib-ng.pc
