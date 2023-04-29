@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2023/02/10 22:10:37 fcambus Exp $
+# $NetBSD: Makefile,v 1.197 2023/04/29 12:40:16 wiz Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -157,6 +157,7 @@ SUBDIR+=	xmill
 SUBDIR+=	xpk
 SUBDIR+=	xz
 SUBDIR+=	zip
+SUBDIR+=	zlib-ng
 SUBDIR+=	zoo
 SUBDIR+=	zopfli
 SUBDIR+=	zstd
