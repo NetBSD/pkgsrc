@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2023/04/19 08:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/04/29 14:31:29 schmonz Exp $
 
 DISTNAME=	po4a-0.69
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -22,10 +22,8 @@ DEPENDS+=	p5-Text-WrapI18N-[0-9]*:../../textproc/p5-Text-WrapI18N
 DEPENDS+=	p5-PerlIO-utf8_strict-[0-9]*:../../devel/p5-PerlIO-utf8_strict
 DEPENDS+=	p5-Unicode-LineBreak-[0-9]*:../../textproc/p5-Unicode-LineBreak
 DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
-# kpsewhich
-DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
-# article.cls
-DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+
+.include "options.mk"
 
 USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run
 
