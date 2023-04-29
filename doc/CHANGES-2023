@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2578 2023/04/29 13:42:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2579 2023/04/29 13:52:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3664,3 +3664,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/mutt-vid version 1.1 [wiz 2023-04-29]
 	Updated devel/ruby-rugged to 1.6.3 [taca 2023-04-29]
 	Updated devel/ruby-zeitwerk to 2.6.8 [taca 2023-04-29]
+	Updated net/ruby-connection_pool to 2.4.0 [taca 2023-04-29]
