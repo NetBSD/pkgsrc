@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.91 2023/04/01 08:49:05 taca Exp $
+$NetBSD: distinfo,v 1.92 2023/04/29 08:01:06 wiz Exp $
 
-BLAKE2s (samba-4.17.7.tar.gz) = 80304d23cf0add5af1790379c533f0226a88fa81615528bc658289790fb493ec
-SHA512 (samba-4.17.7.tar.gz) = ab6c4fedb1769447f028e4fa1ae91b2a80ad9cb809e6a78562350c90d7ef493793e876d19057854b2f87553655a8b766306deeda6e78a062e9d5daea49994fe4
-Size (samba-4.17.7.tar.gz) = 30862665 bytes
+BLAKE2s (samba-4.18.2.tar.gz) = 2c6e47de5b9f6e52f65c4d60e273cd56309904e3ea1ebecff23aca54bc63cd0e
+SHA512 (samba-4.18.2.tar.gz) = e13f1313ae23c65580f3d9eec8ba556f77327d4876f09387a1701dc62df5c7c18955ed42a50250c0ebd53d90afcfdea2743dc6776b63c900c47239afacfa4aba
+Size (samba-4.18.2.tar.gz) = 41285033 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
@@ -12,7 +12,7 @@ SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_pthreadpool_pthreadpool.c) = 4b0c3d49d578b5ab12f5bad1ebeb50efb43e756c
 SHA1 (patch-lib_replace_system_passwd.h) = 652be067b2560310ce3a4bbf37c24cb2fa8eb82d
-SHA1 (patch-lib_replace_wscript) = 4250bdfd8ee82fcdb43315f24a124b7ae8d7e36f
+SHA1 (patch-lib_replace_wscript) = f75dff520034ed976c15134c950eebf78598a60b
 SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = 109e7a516dc291372e982b9f21c6ce8c0e5d3ca4
 SHA1 (patch-lib_tevent_tevent__threads.c) = e5e82db82cff4d550451cd9290b3a351b25d4de4
