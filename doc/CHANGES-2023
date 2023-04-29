@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2584 2023/04/29 15:27:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2585 2023/04/29 15:38:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3670,3 +3670,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Mojolicious-Plugin-OAuth2-Server to 0.51 [wen 2023-04-29]
 	Updated www/p5-Mojo-JWT to 0.09 [wen 2023-04-29]
 	Updated www/p5-Net-HTTP to 6.22 [wen 2023-04-29]
+	Updated devel/ruby-redmine42 to 4.2.10nb1 [taca 2023-04-29]
