@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/29 13:36:05 wiz Exp $
+
+BLAKE2s (mutt-vid-v1.1.tar.bz2) = 6b2d0faf8dab22ecef738a3675e92cd32ff21962993ecabe031fe49ad99f5a67
+SHA512 (mutt-vid-v1.1.tar.bz2) = e171cc6bfc50b6f3aebac6be124e0af10f4933258b2a8cbbe29038c536fb39b690eab55c37a322b9768a5e4ad274b53e03a4026fd09131ad18a71b5490a4a44a
+Size (mutt-vid-v1.1.tar.bz2) = 14258 bytes
