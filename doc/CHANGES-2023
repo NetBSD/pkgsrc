@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2573 2023/04/29 09:33:45 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2574 2023/04/29 12:40:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-HTTP-Daemon to 6.16 [wen 2023-04-29]
 	Updated www/p5-HTTP-OAI to 4.12 [wen 2023-04-29]
 	Updated www/p5-Mojolicious to 9.31 [wen 2023-04-29]
+	Added archivers/zlib-ng version 2.0.7 [wiz 2023-04-29]
