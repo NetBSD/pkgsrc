@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2023/01/08 00:01:26 wen Exp $
+# $NetBSD: Makefile,v 1.77 2023/04/29 09:15:36 wen Exp $
 
-DISTNAME=		HTML-Parser-3.80
+DISTNAME=		HTML-Parser-3.81
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
