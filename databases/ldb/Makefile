@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/04/01 08:47:37 taca Exp $
+# $NetBSD: Makefile,v 1.35 2023/04/29 08:00:37 wiz Exp $
 
-DISTNAME=	ldb-2.6.2
+DISTNAME=	ldb-2.7.2
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/ldb/
 
