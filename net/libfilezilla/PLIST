@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/02/01 08:59:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/04/30 04:43:39 wiz Exp $
 include/libfilezilla/aio/aio.hpp
 include/libfilezilla/aio/reader.hpp
 include/libfilezilla/aio/writer.hpp
@@ -19,6 +19,11 @@ include/libfilezilla/glue/wx.hpp
 include/libfilezilla/glue/wxinvoker.hpp
 include/libfilezilla/hash.hpp
 include/libfilezilla/hostname_lookup.hpp
+include/libfilezilla/http/client.hpp
+include/libfilezilla/http/client_request.hpp
+include/libfilezilla/http/client_response.hpp
+include/libfilezilla/http/digest.hpp
+include/libfilezilla/http/headers.hpp
 include/libfilezilla/impersonation.hpp
 include/libfilezilla/invoker.hpp
 include/libfilezilla/iputils.hpp
