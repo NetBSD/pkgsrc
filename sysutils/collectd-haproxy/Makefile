@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:50 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/30 15:46:37 wiz Exp $
 
 DISTNAME=	collectd-haproxy-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,11 +15,11 @@ COMMENT=	Plugin for collectd to gather HAProxy metrics
 LICENSE=	mit
 
 DEPENDS+=	haproxy>=1.4:../../net/haproxy
-DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-collectd-[0-9]*:../../sysutils/py-collectd
+DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
-PYTHON_VERSIONED_DEPENDENCIES+=	flake8
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
