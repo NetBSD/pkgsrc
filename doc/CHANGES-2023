@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2664 2023/04/30 15:25:13 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2665 2023/04/30 15:30:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3757,3 +3757,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-sinatra-contrib to 3.0.6 [taca 2023-04-30]
 	Updated www/ruby-rack-protection to 3.0.6 [taca 2023-04-30]
 	Updated lang/scala to 2.13.10 [nikita 2023-04-30]
+	Updated sysutils/ruby-chef to 18.2.7 [taca 2023-04-30]
+	Updated sysutils/ruby-chef-config to 18.2.7 [taca 2023-04-30]
+	Updated sysutils/ruby-chef-utils to 18.2.7 [taca 2023-04-30]
