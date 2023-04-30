@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2014/03/14 18:45:15 taca Exp $
-bin/heel
+@comment $NetBSD: PLIST,v 1.8 2023/04/30 14:48:10 taca Exp $
+bin/heel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/HISTORY.md
@@ -8,27 +8,19 @@ ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/heel
-${GEM_LIBDIR}/data/css/coderay-alpha.css
-${GEM_LIBDIR}/data/css/coderay-cycnus.css
-${GEM_LIBDIR}/data/css/coderay-murphy.css
 ${GEM_LIBDIR}/data/css/error.css
-${GEM_LIBDIR}/data/css/index.css
+${GEM_LIBDIR}/data/css/pico.min.css
+${GEM_LIBDIR}/data/css/syntax-highlighting.css
 ${GEM_LIBDIR}/data/error.rhtml
-${GEM_LIBDIR}/data/famfamfam/icons/application.png
-${GEM_LIBDIR}/data/famfamfam/icons/compress.png
-${GEM_LIBDIR}/data/famfamfam/icons/error.png
-${GEM_LIBDIR}/data/famfamfam/icons/folder.png
-${GEM_LIBDIR}/data/famfamfam/icons/html.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_excel.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_white.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_white_acrobat.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_white_code.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_white_powerpoint.png
-${GEM_LIBDIR}/data/famfamfam/icons/page_white_text.png
-${GEM_LIBDIR}/data/famfamfam/icons/picture.png
-${GEM_LIBDIR}/data/famfamfam/icons/xhtml.png
-${GEM_LIBDIR}/data/famfamfam/readme.html
-${GEM_LIBDIR}/data/famfamfam/readme.txt
+${GEM_LIBDIR}/data/lineicons/code-browser.svg
+${GEM_LIBDIR}/data/lineicons/file.svg
+${GEM_LIBDIR}/data/lineicons/folder-alt.svg
+${GEM_LIBDIR}/data/lineicons/html5.svg
+${GEM_LIBDIR}/data/lineicons/image.svg
+${GEM_LIBDIR}/data/lineicons/pdf.svg
+${GEM_LIBDIR}/data/lineicons/presentation.svg
+${GEM_LIBDIR}/data/lineicons/word.svg
+${GEM_LIBDIR}/data/lineicons/zip.svg
 ${GEM_LIBDIR}/data/listing.rhtml
 ${GEM_LIBDIR}/lib/heel.rb
 ${GEM_LIBDIR}/lib/heel/configuration.rb

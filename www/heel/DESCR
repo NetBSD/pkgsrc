@@ -1,14 +1,14 @@
-Heel is a small static web server for use when you need a quick web server for a
-directory. Once the server is running, heel will use launchy
-(http://copiousfreetime.rubyforge.org/launchy/) to open your browser at the URL
-of your document root.  Heel is built using Rack(http://rack.rubyforge.org) and
-Thin (http://code.macournoyer.com/thin/)
+Heel is a small static web server for use when you need a quick web server
+for a directory. Once the server is running, heel will use launchy
+(http://copiousfreetime.rubyforge.org/launchy/) to open your browser at the
+URL of your document root.  Heel is built using
+Rack(http://rack.rubyforge.org) and Thin (http://code.macournoyer.com/thin/)
 
 % heel
 >> Thin web server (v1.0.0 codename That's What She Said)
 >> Threaded mode OFF
 >> Maximum connections set to 1024
->> Listening on 0.0.0.0:4331, CTRL+C to stop 
+>> Listening on 0.0.0.0:4331, CTRL+C to stop
 
 Launching your browser...
 
