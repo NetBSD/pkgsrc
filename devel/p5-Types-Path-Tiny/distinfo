@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/30 00:55:21 wen Exp $
+
+BLAKE2s (Types-Path-Tiny-0.006.tar.gz) = 5c4031b61a815918507fb339265bec758a8435bae09c6cf1846f3a46e0cdc06e
+SHA512 (Types-Path-Tiny-0.006.tar.gz) = 9820b5e23bd916895d64573273dd0ffcf8fdc1f0cf6af2db02400bcbbc3611628f03e2ca83f9297dae3b28784279689ba40256f94f0e7ef841bd08e026941b0a
+Size (Types-Path-Tiny-0.006.tar.gz) = 15614 bytes
