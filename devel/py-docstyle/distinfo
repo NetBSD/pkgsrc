@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/06/18 22:06:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/04/30 15:23:08 wiz Exp $
 
-BLAKE2s (pydocstyle-6.1.1.tar.gz) = 348d9c8a944e1d5e9b08df803d89fa5ddae1c10ef56e6cfc044249aa8273403f
-SHA512 (pydocstyle-6.1.1.tar.gz) = 3aaf89803af3af950fc12eedac88e8683d7934b1fb74e33c1eddf146a1de9423f0e1158cbfb36d3ab7fa2a505727283103e0a8c47b09fc78b76a39ad14a06cfe
-Size (pydocstyle-6.1.1.tar.gz) = 35663 bytes
+BLAKE2s (pydocstyle-6.3.0.tar.gz) = d5a5d6f14dc353d7502cdf3bd5e5b2422ce0bc2d544541ed8e1e942a05b53980
+SHA512 (pydocstyle-6.3.0.tar.gz) = 8360f398e7d61d0493f7d9b74152182855a998fe4af6d09fcb86c597b75db8018906dacf1441f4892b31479946e8b8a873f9c5fd52a0a228e3a545935fe90f11
+Size (pydocstyle-6.3.0.tar.gz) = 36796 bytes

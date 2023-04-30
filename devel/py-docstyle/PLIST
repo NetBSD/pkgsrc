@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/06/18 22:06:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/04/30 15:23:08 wiz Exp $
 bin/pydocstyle-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/pydocstyle/__init__.pyo
 ${PYSITELIB}/pydocstyle/__main__.py
 ${PYSITELIB}/pydocstyle/__main__.pyc
 ${PYSITELIB}/pydocstyle/__main__.pyo
+${PYSITELIB}/pydocstyle/_version.py
+${PYSITELIB}/pydocstyle/_version.pyc
+${PYSITELIB}/pydocstyle/_version.pyo
 ${PYSITELIB}/pydocstyle/checker.py
 ${PYSITELIB}/pydocstyle/checker.pyc
 ${PYSITELIB}/pydocstyle/checker.pyo
