@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/04/30 15:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/30 18:42:53 wiz Exp $
 
 DISTNAME=	Jinja2-2.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.8:../../devel/py27-babel
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0.23:../../textproc/py27-markupsafe
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
