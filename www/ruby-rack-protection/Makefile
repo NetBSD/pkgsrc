@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/01/04 15:27:59 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/04/30 15:23:02 taca Exp $
 
-DISTNAME=	rack-protection-3.0.5
+DISTNAME=	rack-protection-3.0.6
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
