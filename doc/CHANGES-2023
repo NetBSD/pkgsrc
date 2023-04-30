@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2624 2023/04/30 13:23:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2625 2023/04/30 13:29:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3713,3 +3713,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/ruby-proxifier2 version 1.1.0 [taca 2023-04-30]
 	Updated print/ruby-rbpdf to 1.21.1 [taca 2023-04-30]
 	Updated security/ruby-rex-socket to 0.1.49 [taca 2023-04-30]
+	Updated sysutils/ruby-facter to 4.4.0 [taca 2023-04-30]
