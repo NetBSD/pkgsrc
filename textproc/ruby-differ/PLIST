@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/30 13:36:20 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION.yml
+${GEM_LIBDIR}/differ.gemspec
+${GEM_LIBDIR}/lib/differ.rb
+${GEM_LIBDIR}/lib/differ/change.rb
+${GEM_LIBDIR}/lib/differ/diff.rb
+${GEM_LIBDIR}/lib/differ/format/ascii.rb
+${GEM_LIBDIR}/lib/differ/format/color.rb
+${GEM_LIBDIR}/lib/differ/format/html.rb
+${GEM_LIBDIR}/lib/differ/string.rb
+${GEM_LIBDIR}/spec/differ/change_spec.rb
+${GEM_LIBDIR}/spec/differ/diff_spec.rb
+${GEM_LIBDIR}/spec/differ/format/ascii_spec.rb
+${GEM_LIBDIR}/spec/differ/format/color_spec.rb
+${GEM_LIBDIR}/spec/differ/format/html_spec.rb
+${GEM_LIBDIR}/spec/differ/string_spec.rb
+${GEM_LIBDIR}/spec/differ_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.1.0/plugins
+@pkgdir lib/ruby/gems/3.1.0/extensions
