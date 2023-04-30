@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:57:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/04/30 14:37:48 nikita Exp $
 
-BLAKE2s (lzma465.tar.bz2) = 61b0a4e10d099ab855b54d0ce79fd0b25fc47e01b5032994f82c00da29ce278e
-SHA512 (lzma465.tar.bz2) = 690f005cfa9d3a65db03baddad57cf8dd79f861ac72d2e1bc18a151f3673d5f8043e3331f5dc3fba713dfd7b01ebf0817a2c0b6a1b22e1f7d8255a42b85ea4ac
-Size (lzma465.tar.bz2) = 288122 bytes
+BLAKE2s (lzma918.tar.bz2) = 5d400c589279d558fd65a778a951d96174d45d77c428fb72952b61f7839124d2
+SHA512 (lzma918.tar.bz2) = fa32920d5c45e80c6d029fa1244154e7ae2a2db676e9b115359e955bec829f4cffa6cd8297cae388aca540fc2974dfced4ce284fb351992d7b4a337292da3803
+Size (lzma918.tar.bz2) = 533322 bytes
