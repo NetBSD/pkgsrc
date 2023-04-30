@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2609 2023/04/30 02:41:45 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2610 2023/04/30 04:43:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3695,3 +3695,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/p5-Spreadsheet-Read to 0.87 [wen 2023-04-30]
 	Updated textproc/p5-XML-Twig to 3.52nb7 [wen 2023-04-30]
 	Updated textproc/p5-Text-BibTeX to 0.89 [wen 2023-04-30]
+	Updated net/libfilezilla to 0.42.2 [wiz 2023-04-30]
