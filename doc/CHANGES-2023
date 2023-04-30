@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2612 2023/04/30 05:11:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2613 2023/04/30 06:55:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3701,3 +3701,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.13.1 [adam 2023-04-30]
 	Updated devel/py-gast to 0.5.4 [adam 2023-04-30]
 	Updated net/filezilla to 3.64.0 [wiz 2023-04-30]
+	Updated net/ruby-net-ldap to 0.18.0 [taca 2023-04-30]
