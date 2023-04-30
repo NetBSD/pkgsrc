@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2653 2023/04/30 14:56:15 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2654 2023/04/30 15:01:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3743,3 +3743,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/klayout to 0.28.7 [mef 2023-04-30]
 	Updated www/ruby-rouge to 4.1.0 [taca 2023-04-30]
 	Updated www/thin to 1.8.2 [taca 2023-04-30]
+	Updated cad/py-gdstk to 0.9.40 [mef 2023-04-30]
