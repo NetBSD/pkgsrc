@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/30 18:34:07 wiz Exp $
 
 DISTNAME=	django-sql-explorer-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-unicodecsv>=0.14.1:../../databases/py-unicodecsv
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # remove cache files from the distribution
 post-extract:
