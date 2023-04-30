@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2646 2023/04/30 14:37:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2647 2023/04/30 14:37:59 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3735,3 +3735,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-pygments.rb to 2.4.0 [taca 2023-04-30]
 	Updated devel/py-codestyle to 2.10.0 [wiz 2023-04-30]
 	Added www/ruby-rackup version 2.1.0 [taca 2023-04-30]
+	Updated archivers/lzma to 9.18 [nikita 2023-04-30]
