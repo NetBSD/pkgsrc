@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/06/18 22:06:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/30 15:23:08 wiz Exp $
 
-DISTNAME=	pydocstyle-6.1.1
+DISTNAME=	pydocstyle-6.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydocstyle/}
@@ -15,6 +15,16 @@ DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemme
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+.endif
+
+.if ${PYTHON_VERSION} < 308
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 post-extract:
 	${CHMOD} go-w ${WRKSRC}/src/pydocstyle/data/*.txt
