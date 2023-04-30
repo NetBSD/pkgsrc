@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:55:56 nia Exp $
+$NetBSD: distinfo,v 1.22 2023/04/30 01:08:07 wen Exp $
 
-BLAKE2s (Spreadsheet-Read-0.81.tgz) = d3eb54e95e1212a72f4f7dc6d31359e2e3bb89ad873119c0a5e3ddad8197cdb4
-SHA512 (Spreadsheet-Read-0.81.tgz) = b289e1bef3ef92298c639853ee8804ee732fdc3b144f8ed8da67221ebb96e2d113fe64b3db8fb6cc9b1aa8a426748cbc9e517fd78c099c5feb20bede14105bfd
-Size (Spreadsheet-Read-0.81.tgz) = 194447 bytes
+BLAKE2s (Spreadsheet-Read-0.87.tgz) = 4996022fa2f988bf3de193a88d6b38c07ec9970c53fd8e8418b3febd212d2dee
+SHA512 (Spreadsheet-Read-0.87.tgz) = a8232cf14f08b34c34ff23edea5db5898a905b6f01b4ec1af29d2829345eb8418f84897546f85fbe1495dc7460d7ed08356538909423c995e976316484caf753
+Size (Spreadsheet-Read-0.87.tgz) = 271514 bytes
