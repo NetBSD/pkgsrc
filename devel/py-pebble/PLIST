@@ -1,12 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/21 12:39:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/30 17:37:50 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pebble/__init__.py
 ${PYSITELIB}/pebble/__init__.pyc
 ${PYSITELIB}/pebble/__init__.pyo
+${PYSITELIB}/pebble/asynchronous/__init__.py
+${PYSITELIB}/pebble/asynchronous/__init__.pyc
+${PYSITELIB}/pebble/asynchronous/__init__.pyo
+${PYSITELIB}/pebble/asynchronous/process.py
+${PYSITELIB}/pebble/asynchronous/process.pyc
+${PYSITELIB}/pebble/asynchronous/process.pyo
+${PYSITELIB}/pebble/asynchronous/thread.py
+${PYSITELIB}/pebble/asynchronous/thread.pyc
+${PYSITELIB}/pebble/asynchronous/thread.pyo
 ${PYSITELIB}/pebble/common.py
 ${PYSITELIB}/pebble/common.pyc
 ${PYSITELIB}/pebble/common.pyo
