@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/13 13:59:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/30 08:47:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nio4r_ext.${RUBY_DLEXT}
@@ -44,6 +44,7 @@ ${GEM_LIBDIR}/lib/nio/monitor.rb
 ${GEM_LIBDIR}/lib/nio/selector.rb
 ${GEM_LIBDIR}/lib/nio/version.rb
 ${GEM_LIBDIR}/lib/nio4r_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/license.md
 ${GEM_LIBDIR}/logo.png
 ${GEM_LIBDIR}/nio4r.gemspec
 ${GEM_LIBDIR}/rakelib/extension.rake
