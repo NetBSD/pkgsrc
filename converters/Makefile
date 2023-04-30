@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2023/03/30 17:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2023/04/30 14:07:04 nikita Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -49,6 +49,7 @@ SUBDIR+=	hs-pandoc-server
 SUBDIR+=	hs-string-conversions
 SUBDIR+=	hs-text-conversions
 SUBDIR+=	hztty
+SUBDIR+=	info2man
 SUBDIR+=	ish
 SUBDIR+=	ja-dvi2tty
 SUBDIR+=	jcode-perl
