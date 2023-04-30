@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2687 2023/04/30 19:56:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2688 2023/04/30 21:56:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-cliff to 1.2.0 [pin 2023-04-30]
 	Updated wm/shod to 2.6.2 [pin 2023-04-30]
 	Updated net/sniffnet to 1.1.4 [pin 2023-04-30]
+	Updated cad/gtkwave to 3.3.115 [mef 2023-04-30]
