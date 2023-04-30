@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2626 2023/04/30 13:31:58 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2627 2023/04/30 13:37:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3715,3 +3715,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-socket to 0.1.49 [taca 2023-04-30]
 	Updated sysutils/ruby-facter to 4.4.0 [taca 2023-04-30]
 	Updated textproc/ruby-commonmarker to 0.23.9 [taca 2023-04-30]
+	Added textproc/ruby-differ version 0.1.2 [taca 2023-04-30]
