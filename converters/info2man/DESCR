@@ -1,0 +1,3 @@
+info2pod converts GNU info data to POD format for easy transcription to
+various formats like HTML. info2man is a wrapper for info2pod to convert
+info files into nroff -man format.
