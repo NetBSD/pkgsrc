@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2604 2023/04/30 00:38:45 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2605 2023/04/30 00:58:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3690,3 +3690,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-Dump-Streamer to 2.42 [wen 2023-04-29]
 	Updated sysutils/xfce4-thunar to 4.18.5 [gutteridge 2023-04-30]
 	Updated geography/p5-Class-Measure to 0.09 [wen 2023-04-30]
+	Added devel/p5-Types-Path-Tiny version 0.006 [wen 2023-04-30]
