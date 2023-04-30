@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2683 2023/04/30 18:50:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2684 2023/04/30 19:50:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3778,3 +3778,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-scard to 2.0.7 [wiz 2023-04-30]
 	Updated devel/py-setuptools-rust to 1.6.0 [wiz 2023-04-30]
 	Removed www/loggerhead [wiz 2023-04-30]
+	Updated devel/py-test-runner to 6.0.0 [wiz 2023-04-30]
