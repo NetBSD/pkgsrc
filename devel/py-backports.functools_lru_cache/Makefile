@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/08/24 08:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/30 15:38:26 wiz Exp $
 
 DISTNAME=	backports.functools_lru_cache-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,15 +12,15 @@ COMMENT=	Backport of functools.lru_cache from Python 3.3
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
 # XXX: also needs py-test-black
-do-test:
-	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
+#do-test:
+#	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/__init__.*
