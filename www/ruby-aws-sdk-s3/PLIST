@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/12/04 15:44:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/04/30 14:00:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -21,10 +21,12 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/client_api.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/bucket.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/errors.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/multipart_upload.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/object.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/object_summary.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/types/list_object_versions_output.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/customizations/types/permanent_redirect.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/encryption/decrypt_handler.rb
