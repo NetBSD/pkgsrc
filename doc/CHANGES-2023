@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2618 2023/04/30 12:27:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2619 2023/04/30 12:50:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-aiosqlite to 0.19.0 [wiz 2023-04-30]
 	Updated devel/py-zope.deferredimport to 4.4nb1 [wiz 2023-04-30]
 	Updated devel/py-ZopeInterface to 6.0 [wiz 2023-04-30]
+	Updated devel/py-argcomplete to 3.0.8 [wiz 2023-04-30]
