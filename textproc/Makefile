@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1382 2023/04/17 20:35:02 adam Exp $
+# $NetBSD: Makefile,v 1.1383 2023/04/30 13:37:01 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1227,6 +1227,7 @@ SUBDIR+=	ruby-commonmarker
 SUBDIR+=	ruby-csv
 SUBDIR+=	ruby-deckar01-task_list
 SUBDIR+=	ruby-diff-lcs
+SUBDIR+=	ruby-differ
 SUBDIR+=	ruby-erubi
 SUBDIR+=	ruby-escape
 SUBDIR+=	ruby-fast-stemmer
