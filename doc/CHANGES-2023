@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2606 2023/04/30 01:03:27 wen Exp $
+$NetBSD: CHANGES-2023,v 1.2607 2023/04/30 01:10:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/p5-Class-Measure to 0.09 [wen 2023-04-30]
 	Added devel/p5-Types-Path-Tiny version 0.006 [wen 2023-04-30]
 	Updated archivers/p5-Archive-Peek to 0.37 [wen 2023-04-30]
+	Updated math/p5-Spreadsheet-Read to 0.87 [wen 2023-04-30]
