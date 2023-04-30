@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/30 20:14:39 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2023/04/30 20:16:54 gdt Exp $
 
 DISTNAME=	acl-2.3.1
 CATEGORIES=	sysutils
@@ -9,7 +9,10 @@ HOMEPAGE=	https://savannah.nongnu.org/projects/acl
 COMMENT=	Provides missing POSIX ACL interfaces for Linux
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-# uses linux/version.h and only tested under Linux
+# The point of this package is to provide POSIX facilities that are
+# missing on Linux.  In addition to not being portable to other
+# systems, it is not useful on other systems because systems that have
+# ACLs provide the interfaces already.
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
