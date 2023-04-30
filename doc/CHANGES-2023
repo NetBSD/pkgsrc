@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2611 2023/04/30 04:54:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2612 2023/04/30 05:11:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3700,3 +3700,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-frozendict to 2.3.8 [adam 2023-04-30]
 	Updated devel/py-ipython to 8.13.1 [adam 2023-04-30]
 	Updated devel/py-gast to 0.5.4 [adam 2023-04-30]
+	Updated net/filezilla to 3.64.0 [wiz 2023-04-30]
