@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/04/30 14:07:04 nikita Exp $
+
+BLAKE2s (info2man/info2man_1.1.orig.tar.gz) = 5eecb118bb082206cba961ab4d9ed46fc9737c4e669bc223f501546f2f2b627b
+SHA512 (info2man/info2man_1.1.orig.tar.gz) = a4774e1c9d8b320c9ab92348e1e7bd3e62a4457683dc4712c1df975bc4de1e17c11e42923fb28651b5441f04ebf9d677f693aa8c4883a8382e6b6af47470cce5
+Size (info2man/info2man_1.1.orig.tar.gz) = 68573 bytes
+SHA1 (patch-cs_Misc.pm) = 0c4b7a79532f53180a5eacff1543d1c49157807e
+SHA1 (patch-cs_Sink.pm) = 07190c33785095bf54abc09a58d7e8b5010817cf
