@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2688 2023/04/30 21:56:09 mef Exp $
+$NetBSD: CHANGES-2023,v 1.2689 2023/04/30 22:09:58 martin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/shod to 2.6.2 [pin 2023-04-30]
 	Updated net/sniffnet to 1.1.4 [pin 2023-04-30]
 	Updated cad/gtkwave to 3.3.115 [mef 2023-04-30]
+	Updated sysutils/xfce4-systemload-plugin to 1.3.2nb3 [martin 2023-04-30]
