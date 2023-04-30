@@ -1,15 +1,17 @@
-$NetBSD: patch-al,v 1.2 2014/08/03 17:33:34 spz Exp $
+$NetBSD: patch-al,v 1.3 2023/04/30 14:58:58 spz Exp $
 
---- lib/fdlimit.c.orig	2014-05-17 08:24:49.000000000 +0000
-+++ lib/fdlimit.c
-@@ -59,6 +59,10 @@ setfdlimit(unsigned int limit)
+don't complain if the file descriptors limit is higher than what we asked for
+
+--- lib/fdlimit.c.orig	2022-07-10 15:00:35.000000000 +0200
++++ lib/fdlimit.c	2022-09-25 13:21:04.073161149 +0200
+@@ -56,6 +56,10 @@
+     if (getrlimit(RLIMIT_NOFILE, &rl) < 0) {
+         rl.rlim_cur = 0;
+         rl.rlim_max = 0;
++    } else {
++        /* will we mind if the limit is higher? I think not. */
++        if (rl.rlim_cur >= limit)
++            return 0;
      }
- #endif
+ #    endif
  
-+    /* will we mind if the limit is higher? I think not. */
-+    if (rl.rlim_cur >= limit)
-+	return 0;
-+
-     rl.rlim_cur = limit;
-     if (limit > rl.rlim_max)
-         rl.rlim_max = limit;
