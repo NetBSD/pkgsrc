@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/30 14:35:54 taca Exp $
+
+BLAKE2s (rackup-2.1.0.gem) = 8625dcb6c11ed1f662dbf2eecf801497578c5931d8178f3f81a711fd0bfb333a
+SHA512 (rackup-2.1.0.gem) = f2b66902b04ddce5ca9389822118244c591b5c83766a55aee88550717c8e736b1eff967927b2c6c611205dde25bf5a862edfc587fda9cb88f31cc902171f85b1
+Size (rackup-2.1.0.gem) = 15872 bytes

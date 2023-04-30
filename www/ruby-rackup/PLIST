@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/04/30 14:35:54 taca Exp $
+bin/rackup${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/bin/rackup
+${GEM_LIBDIR}/lib/rack/handler.rb
+${GEM_LIBDIR}/lib/rack/server.rb
+${GEM_LIBDIR}/lib/rackup.rb
+${GEM_LIBDIR}/lib/rackup/handler.rb
+${GEM_LIBDIR}/lib/rackup/handler/cgi.rb
+${GEM_LIBDIR}/lib/rackup/handler/webrick.rb
+${GEM_LIBDIR}/lib/rackup/lobster.rb
+${GEM_LIBDIR}/lib/rackup/server.rb
+${GEM_LIBDIR}/lib/rackup/stream.rb
+${GEM_LIBDIR}/lib/rackup/version.rb
+${GEM_LIBDIR}/license.md
+${GEM_LIBDIR}/readme.md
+${GEM_LIBDIR}/security.md
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/3.1.0/plugins
+@pkgdir lib/ruby/gems/3.1.0/extensions
