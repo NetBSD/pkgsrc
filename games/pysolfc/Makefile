@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/06/30 11:18:25 nia Exp $
+# $NetBSD: Makefile,v 1.40 2023/04/30 12:53:12 wiz Exp $
 
 DISTNAME=	PySolFC-2.14.1
 PKGNAME=	${DISTNAME:tl}
@@ -25,6 +25,8 @@ DEPENDS+=	${PYPKGPREFIX}-kivy-[0-9]*:../../devel/py-kivy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pycotap-[0-9]*:../../devel/py-pycotap
 # not listed in setup.py, but needed
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	pax
 
