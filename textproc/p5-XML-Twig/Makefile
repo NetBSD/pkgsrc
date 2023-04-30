@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/04/30 01:36:13 wen Exp $
 
 DISTNAME=	XML-Twig-3.52
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -12,6 +12,7 @@ COMMENT=	Efficient XML document interface
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
+DEPENDS+=	p5-XML-XPath>=0:../../textproc/p5-XML-XPath
 
 # The modules listed below are required for testing purposes only
 # they are not required for building the package
