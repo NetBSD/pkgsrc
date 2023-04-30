@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22871 2023/04/30 15:25:13 nikita Exp $
+$NetBSD: TODO,v 1.22872 2023/04/30 15:32:58 nikita Exp $
 
 Suggested new packages
 ======================
@@ -42,6 +42,10 @@ Suggested new packages
 	Sphinx-4
 	http://cmusphinx.sourceforge.net/sphinx4/
 	Speaker-independent, continuous speech recognition system.
+
+	Scala3
+	https://github.com/lampepfl/dotty
+	Version 3 of the Scala compiler
 
 	xftlsfonts
 	FreeType font list displayer.
