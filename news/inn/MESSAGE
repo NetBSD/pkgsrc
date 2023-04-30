@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2017/05/20 06:56:29 spz Exp $
+$NetBSD: MESSAGE,v 1.9 2023/04/30 14:58:58 spz Exp $
 
 The following program has been installed suid root on your machine:
 
 	${PREFIX}/${INN_PATHBIN}/innbind
 
 ---------------------------------------------------------------------------
-If you are upgrading from 2.5.5 or earlier: this is a major version bump.
+If you are upgrading from 2.6.5 or earlier: this is a major version bump.
 Config files have changed. Read ${PREFIX}/share/doc/inn/NEWS for details.
 
 If this is a first install: ${PREFIX}/share/doc/inn/INSTALL will help you
