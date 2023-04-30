@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2649 2023/04/30 14:41:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2650 2023/04/30 14:43:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3738,3 +3738,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/lzma to 9.18 [nikita 2023-04-30]
 	Updated www/ruby-selenium-webdriver to 4.9.0 [taca 2023-04-30]
 	Updated devel/py-autopep8 to 2.0.2 [wiz 2023-04-30]
+	Updated misc/ruby-commander to 4.6.0nb1 [taca 2023-04-30]
