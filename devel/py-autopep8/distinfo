@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 17:09:49 adam Exp $
+$NetBSD: distinfo,v 1.21 2023/04/30 14:41:14 wiz Exp $
 
-BLAKE2s (autopep8-1.6.0.tar.gz) = 035dc27ad9292da3e2db01bdf8bb1f37ba971d8c30d91bb2e476b46b2c9cbd7d
-SHA512 (autopep8-1.6.0.tar.gz) = f4ffd564ceb48ff1f37d0a051aa8fefc60595a68709045c13561d8ab73de48dce99cc12acf40559e587ba4f6fddd4727dd2b40691ce43c991d60dda2c8b0d617
-Size (autopep8-1.6.0.tar.gz) = 122165 bytes
+BLAKE2s (autopep8-2.0.2.tar.gz) = 1af0b81651be6905adac6167496c38b8616ace972930f9a8607b404da20dfbdb
+SHA512 (autopep8-2.0.2.tar.gz) = 09471827d18ca0c691bc524e0639a416d1a4418ddda1cb88f50e5c5302e75e7014751e659e26439c22317db21588fbd956c94299cef44e2c47771df38de94be3
+Size (autopep8-2.0.2.tar.gz) = 116154 bytes
