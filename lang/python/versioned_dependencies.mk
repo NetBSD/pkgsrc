@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.92 2023/04/18 17:44:32 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.93 2023/04/30 15:02:46 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pillow X cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov
+#       Possible values: Pillow X babel cairo chardet click coverage cryptography dns flake8 hypothesis importlib-metadata jinja2 mccabe more-itertools pip packaging pygments pyphen rsa setuptools setuptools_scm test test-cov
 #       Default: (nothing)
 #
 
@@ -34,6 +34,9 @@ _PY_VERS_PKG.27.Pillow=		graphics/py-Pillow6
 
 _PY_VERS_PKG.default.X=		textproc/py-X
 _PY_VERS_PKG.27.X=		textproc/py-X2
+
+_PY_VERS_PKG.default.babel=	devel/py-babel
+_PY_VERS_PKG.27.babel=		devel/py27-babel
 
 _PY_VERS_PKG.default.cairo=	graphics/py-cairo
 _PY_VERS_PKG.27.cairo=		graphics/py-cairo118
