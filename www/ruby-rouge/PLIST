@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/09/10 16:08:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/04/30 14:53:04 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -27,6 +27,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/bsl
 ${GEM_LIBDIR}/lib/rouge/demos/c
 ${GEM_LIBDIR}/lib/rouge/demos/ceylon
 ${GEM_LIBDIR}/lib/rouge/demos/cfscript
+${GEM_LIBDIR}/lib/rouge/demos/cisco_ios
 ${GEM_LIBDIR}/lib/rouge/demos/clean
 ${GEM_LIBDIR}/lib/rouge/demos/clojure
 ${GEM_LIBDIR}/lib/rouge/demos/cmake
@@ -168,6 +169,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/racket
 ${GEM_LIBDIR}/lib/rouge/demos/reasonml
 ${GEM_LIBDIR}/lib/rouge/demos/rego
 ${GEM_LIBDIR}/lib/rouge/demos/rescript
+${GEM_LIBDIR}/lib/rouge/demos/rml
 ${GEM_LIBDIR}/lib/rouge/demos/robot_framework
 ${GEM_LIBDIR}/lib/rouge/demos/ruby
 ${GEM_LIBDIR}/lib/rouge/demos/rust
@@ -184,7 +186,6 @@ ${GEM_LIBDIR}/lib/rouge/demos/slim
 ${GEM_LIBDIR}/lib/rouge/demos/smalltalk
 ${GEM_LIBDIR}/lib/rouge/demos/smarty
 ${GEM_LIBDIR}/lib/rouge/demos/sml
-${GEM_LIBDIR}/lib/rouge/demos/solidity
 ${GEM_LIBDIR}/lib/rouge/demos/sparql
 ${GEM_LIBDIR}/lib/rouge/demos/sqf
 ${GEM_LIBDIR}/lib/rouge/demos/sql
@@ -267,6 +268,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/bsl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/c.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ceylon.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cfscript.rb
+${GEM_LIBDIR}/lib/rouge/lexers/cisco_ios.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/clean.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/clojure.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cmake.rb
@@ -418,6 +420,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/racket.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/reasonml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/rego.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/rescript.rb
+${GEM_LIBDIR}/lib/rouge/lexers/rml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/robot_framework.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ruby.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/rust.rb
@@ -435,7 +438,6 @@ ${GEM_LIBDIR}/lib/rouge/lexers/slim.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/smalltalk.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/smarty.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sml.rb
-${GEM_LIBDIR}/lib/rouge/lexers/solidity.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sparql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sqf.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sqf/keywords.rb
