@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2022/01/05 15:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/30 17:03:57 wiz Exp $
 
-DISTNAME=	pyflakes-2.4.0
+DISTNAME=	pyflakes-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyflakes/}
 
@@ -10,6 +9,8 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/PyCQA/pyflakes
 COMMENT=	Passive checker of Python programs
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
