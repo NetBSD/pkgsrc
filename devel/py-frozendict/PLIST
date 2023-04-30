@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/05 11:40:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/30 04:50:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/frozendict/__init__.py
 ${PYSITELIB}/frozendict/__init__.pyc
+${PYSITELIB}/frozendict/__init__.pyi
 ${PYSITELIB}/frozendict/__init__.pyo
 ${PYSITELIB}/frozendict/core.py
 ${PYSITELIB}/frozendict/core.pyc
 ${PYSITELIB}/frozendict/core.pyo
-${PYSITELIB}/frozendict/frozendict.pyi
 ${PYSITELIB}/frozendict/monkeypatch.py
 ${PYSITELIB}/frozendict/monkeypatch.pyc
 ${PYSITELIB}/frozendict/monkeypatch.pyo
