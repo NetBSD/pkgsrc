@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/08/24 08:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/04/30 18:55:30 wiz Exp $
 
 DISTNAME=	textile-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,11 +13,12 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test-cov:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
@@ -25,6 +26,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pytextile pytextile-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
