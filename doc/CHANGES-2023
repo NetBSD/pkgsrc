@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2643 2023/04/30 14:31:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2644 2023/04/30 14:33:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-mechanize to 2.9.1 [taca 2023-04-30]
 	Updated www/ruby-net-http-persistent to 4.0.2 [taca 2023-04-30]
 	Updated www/ruby-puma to 6.2.2 [taca 2023-04-30]
+	Updated www/ruby-pygments.rb to 2.4.0 [taca 2023-04-30]
