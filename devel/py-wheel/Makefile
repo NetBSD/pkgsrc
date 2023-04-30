@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/08/24 08:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/04/30 19:40:20 wiz Exp $
 
 DISTNAME=	wheel-0.37.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,11 +11,7 @@ HOMEPAGE=	https://github.com/pypa/wheel
 COMMENT=	Built-package format for Python
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test-cov:test
 
 PYSETUPTESTTARGET=	pytest
 
@@ -25,6 +21,12 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} wheel wheel-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 300
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+.endif
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
