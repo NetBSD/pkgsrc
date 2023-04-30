@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:57:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/04/30 01:01:52 wen Exp $
 
-BLAKE2s (Archive-Peek-0.35.tar.gz) = 34d0e39fd3fb356cd3c782678aac0ce6f4b951866f1ec94e7f2e6e8e9198ff49
-SHA512 (Archive-Peek-0.35.tar.gz) = f70dbc8a75d856a13d01b2bb14d4f044233e910575447d08e4f406413d19fb4357cfdafefd423e9530e72d7f993e653a49e8ce92737fbe8ae16fdf5eb0d8338b
-Size (Archive-Peek-0.35.tar.gz) = 4232 bytes
+BLAKE2s (Archive-Peek-0.37.tar.gz) = 8b9af42a0682819661c7069dcb50efba82cd85660e4e93aee9e10b1d15b04cf4
+SHA512 (Archive-Peek-0.37.tar.gz) = 57cba43b1ee2533018b974c91f800616d0bb10d8f837ceca31597a773f5465198b93d51e719880c89b420fd0399fb7a51f4501e6cc94c12baca5c4e91f3a444a
+Size (Archive-Peek-0.37.tar.gz) = 5185 bytes
