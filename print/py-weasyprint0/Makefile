@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/11/30 09:24:13 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/30 18:42:53 wiz Exp $
 
 DISTNAME=	WeasyPrint-0.42.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -20,8 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-pdfrw>=0.4:../../textproc/py-pdfrw
 DEPENDS+=	${PYPKGPREFIX}-pyphen>=0.8:../../textproc/py27-pyphen
 DEPENDS+=	${PYPKGPREFIX}-tinycss2>=0.5:../../textproc/py27-tinycss2
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py27-test-cov
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
