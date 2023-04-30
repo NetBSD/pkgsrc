@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3960 2023/04/29 21:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3961 2023/04/30 00:56:47 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -2205,6 +2205,7 @@ SUBDIR+=	p5-Try-Tiny
 SUBDIR+=	p5-TryCatch
 SUBDIR+=	p5-Type-Tiny
 SUBDIR+=	p5-Type-Tiny-XS
+SUBDIR+=	p5-Types-Path-Tiny
 SUBDIR+=	p5-Types-Serialiser
 SUBDIR+=	p5-UNIVERSAL-can
 SUBDIR+=	p5-UNIVERSAL-isa
