@@ -1,3 +1,5 @@
-The acl package contains the getfacl and setfacl utilities and the libacl
-loadable library as well as additional files required for developing
-access control list programs.
+This package provides POSIX ACL interfaces on Linux; these interfaces
+are typically missing on Linux systems.  Specifically, it contains the
+getfacl and setfacl utilities and a library "libacl", as well
+as headers and man pages.  When this package is installed on Linux,
+one can build programs that expect POSIX ACLs.
