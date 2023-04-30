@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/30 12:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/30 13:01:04 wiz Exp $
 
 DISTNAME=	pytest-4.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
-DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py27-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-funcsigs>=1.0:../../devel/py-funcsigs
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata2
