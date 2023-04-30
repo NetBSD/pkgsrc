@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/21 12:29:52 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/04/30 17:20:36 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/iniconfig/__init__.py
 ${PYSITELIB}/iniconfig/__init__.pyc
-${PYSITELIB}/iniconfig/__init__.pyi
-${PYSITELIB}/iniconfig/__init__.pyo
+${PYSITELIB}/iniconfig/_parse.py
+${PYSITELIB}/iniconfig/_parse.pyc
+${PYSITELIB}/iniconfig/_version.py
+${PYSITELIB}/iniconfig/_version.pyc
+${PYSITELIB}/iniconfig/exceptions.py
+${PYSITELIB}/iniconfig/exceptions.pyc
 ${PYSITELIB}/iniconfig/py.typed
