@@ -1,0 +1,6 @@
+Differ
+
+Differ is a flexible, pure-Ruby diff library, suitable for use in both
+command line scripts and web applications.  The flexibility comes from the
+fact that diffs can be built at completely arbitrary levels of granularity
+(some common ones are built-in), and can be output in a variety of formats.
