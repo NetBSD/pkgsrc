@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/09/19 08:44:59 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/30 12:25:59 wiz Exp $
 
 DISTNAME=	zope.testrunner-5.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.t/ZopeT/}
@@ -15,10 +15,10 @@ DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
