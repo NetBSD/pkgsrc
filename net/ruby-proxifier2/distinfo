@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/04/30 13:16:44 taca Exp $
+
+BLAKE2s (proxifier2-1.1.0.gem) = 3b718f6a905d42d9ecdd2e3617655dfaebc8d809bd3e1d15621a7c0f1158888e
+SHA512 (proxifier2-1.1.0.gem) = c6b59d2f88b74a7919c7a807bc6e7d27f798c70a7ec2e24f438bbffbfd5307815d5001c143bd7a4e6b2b3811867176edba540ba698e81c22bd5368b923ee6834
+Size (proxifier2-1.1.0.gem) = 9728 bytes
