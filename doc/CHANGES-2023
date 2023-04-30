@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2663 2023/04/30 15:24:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2664 2023/04/30 15:25:13 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3756,3 +3756,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-sinatra to 3.0.6 [taca 2023-04-30]
 	Updated www/ruby-sinatra-contrib to 3.0.6 [taca 2023-04-30]
 	Updated www/ruby-rack-protection to 3.0.6 [taca 2023-04-30]
+	Updated lang/scala to 2.13.10 [nikita 2023-04-30]
