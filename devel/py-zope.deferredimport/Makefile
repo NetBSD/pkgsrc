@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/02/11 11:24:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/30 12:16:20 wiz Exp $
 
 DISTNAME=	zope.deferredimport-4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deferredimport/}
 
@@ -12,10 +13,9 @@ LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-zope.proxy-[0-9]*:../../www/py-zope.proxy
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	#
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
