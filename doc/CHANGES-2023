@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2628 2023/04/30 13:42:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2629 2023/04/30 13:46:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-commonmarker to 0.23.9 [taca 2023-04-30]
 	Added textproc/ruby-differ version 0.1.2 [taca 2023-04-30]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.32 [taca 2023-04-30]
+	Updated textproc/ruby-stringex to 2.8.6 [taca 2023-04-30]
