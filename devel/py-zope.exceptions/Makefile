@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/17 10:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/30 12:26:00 wiz Exp $
 
 DISTNAME=	zope.exceptions-4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 #TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

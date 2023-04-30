@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/09/19 08:40:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/04/30 12:25:59 wiz Exp $
 
 DISTNAME=	zope.schema-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.s/ZopeS/}
@@ -16,8 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeI18NMessageid-[0-9]*:../../devel/py-ZopeI18NMe
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

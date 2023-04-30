@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/11/17 10:43:24 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/04/30 12:26:00 wiz Exp $
 
 DISTNAME=	zope.proxy-4.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,7 @@ LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
