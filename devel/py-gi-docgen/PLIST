@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/06 06:02:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/04/30 17:12:18 wiz Exp $
 bin/gi-docgen
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/gidocgen/gdindex.pyo
 ${PYSITELIB}/gidocgen/gdsearch.py
 ${PYSITELIB}/gidocgen/gdsearch.pyc
 ${PYSITELIB}/gidocgen/gdsearch.pyo
+${PYSITELIB}/gidocgen/gdserver.py
+${PYSITELIB}/gidocgen/gdserver.pyc
+${PYSITELIB}/gidocgen/gdserver.pyo
 ${PYSITELIB}/gidocgen/gidocmain.py
 ${PYSITELIB}/gidocgen/gidocmain.pyc
 ${PYSITELIB}/gidocgen/gidocmain.pyo
@@ -51,9 +54,7 @@ ${PYSITELIB}/gidocgen/log.pyo
 ${PYSITELIB}/gidocgen/mdext.py
 ${PYSITELIB}/gidocgen/mdext.pyc
 ${PYSITELIB}/gidocgen/mdext.pyo
-${PYSITELIB}/gidocgen/porter.py
-${PYSITELIB}/gidocgen/porter.pyc
-${PYSITELIB}/gidocgen/porter.pyo
+${PYSITELIB}/gidocgen/py.typed
 ${PYSITELIB}/gidocgen/templates/basic/RedHatDisplay-Black.woff
 ${PYSITELIB}/gidocgen/templates/basic/RedHatDisplay-Black.woff2
 ${PYSITELIB}/gidocgen/templates/basic/RedHatDisplay-BlackItalic.woff
