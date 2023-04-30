@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:23:28 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/04/30 13:46:18 taca Exp $
 
-BLAKE2s (stringex-2.8.5.gem) = 9b3ccf9b7a3ed3f7d52d68073fa45d3c7dafe524a553059c73c9f63351cc6f57
-SHA512 (stringex-2.8.5.gem) = 53f9908f176f465d2e884e92dffb26abcdf75593c94ee8250253da0eb29eddf489cf5b3f539135659ad4c0e2dd738d2affff6a946c50abd5f36517148d8338ce
-Size (stringex-2.8.5.gem) = 130048 bytes
+BLAKE2s (stringex-2.8.6.gem) = 6ac70102295d2b61d7c519c883971582ddaa1e2416a821fa071663ed4bbf4e3d
+SHA512 (stringex-2.8.6.gem) = aea0b7b203bb6d57a72869bfd0a3b832893ba355426bd5a4e99b535a0c0a6d2a1c2aa8839f57da73de9235ccde78d900c30f86b858e55c695d921838270e25fd
+Size (stringex-2.8.6.gem) = 130048 bytes
