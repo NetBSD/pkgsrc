@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/02/21 19:08:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/30 18:57:14 wiz Exp $
 
 DISTNAME=	stone-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
