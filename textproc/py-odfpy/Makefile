@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/04/30 18:56:28 wiz Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,13 +16,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 PYSETUPTESTTARGET=	pytest
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	setup.py
 SUBST_VARS.man=		PKGMANDIR
-
 
 post-install:
 .for bin in csv2ods mailodf odf2mht odf2xhtml odf2xml odfimgimport \
