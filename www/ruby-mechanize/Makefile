@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2022/08/31 15:43:48 taca Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/30 14:24:55 taca Exp $
 
-DISTNAME=	mechanize-2.8.5
+DISTNAME=	mechanize-2.9.1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.4.1:../../www/ruby-net-http-
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5.2:../../www/ruby-net-http-persistent
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.2:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-rubyntlm>=0.6.3:../../security/ruby-rubyntlm
-#DEPENDS+=	${RUBY_PKGPREFIX}-webrick>=1.7<2:../../www/ruby-webrick
+DEPENDS+=	${RUBY_PKGPREFIX}-webrick>=1.7<2:../../www/ruby-webrick
 DEPENDS+=	${RUBY_PKGPREFIX}-webrobots>=0.1.2<0.2:../../www/ruby-webrobots
 
 USE_LANGUAGES=	# empty

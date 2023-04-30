@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/09/19 17:54:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/04/30 14:24:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.github/dependabot.yml
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/flickr_upload.rb
+${GEM_LIBDIR}/examples/latest_user_agents.rb
 ${GEM_LIBDIR}/examples/mech-dump.rb
 ${GEM_LIBDIR}/examples/proxy_req.rb
 ${GEM_LIBDIR}/examples/rubygems.rb
