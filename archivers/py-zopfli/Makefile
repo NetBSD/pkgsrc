@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/04/27 10:33:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/04/30 10:44:17 wiz Exp $
 
-DISTNAME=	zopfli-0.2.1
+DISTNAME=	zopfli-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
@@ -17,6 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
