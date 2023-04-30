@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/16 20:14:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/30 20:14:39 gdt Exp $
 
 DISTNAME=	acl-2.3.1
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	http://download.savannah.nongnu.org/releases/acl/
 
 MAINTAINER=	als@thangorodrim.ch
 HOMEPAGE=	https://savannah.nongnu.org/projects/acl
-COMMENT=	Commands for Manipulating POSIX Access Control Lists
+COMMENT=	Provides missing POSIX ACL interfaces for Linux
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 # uses linux/version.h and only tested under Linux
