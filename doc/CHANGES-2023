@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2674 2023/04/30 17:17:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2675 2023/04/30 17:20:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3769,3 +3769,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hypothesis to 6.74.1 [wiz 2023-04-30]
 	Updated devel/py-importlib-metadata to 6.6.0 [wiz 2023-04-30]
 	Updated devel/py-incremental to 22.10.0 [wiz 2023-04-30]
+	Updated devel/py-iniconfig to 2.0.0 [wiz 2023-04-30]
