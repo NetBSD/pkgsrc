@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/03/19 13:24:59 taca Exp $
+# $NetBSD: Makefile,v 1.13 2023/04/30 14:20:45 taca Exp $
 
-DISTNAME=	html-proofer-5.0.6
+DISTNAME=	html-proofer-5.0.7
 CATEGORIES=	www
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -11,6 +11,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3<3:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-async>=2.1<3:../../devel/ruby-async
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.13<2:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-pdf-reader>=2.11<3:../../print/ruby-pdf-reader
 DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=3.0<4:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-typhoeus>=1.3.1<2:../../www/ruby-typhoeus
 DEPENDS+=	${RUBY_PKGPREFIX}-yell>=2.0<3:../../devel/ruby-yell
