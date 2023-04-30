@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/25 18:17:59 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/04/30 14:21:57 wiz Exp $
 
-BLAKE2s (Automat-20.2.0.tar.gz) = ba12a8332237348ffcfde9b56b9babfea92a0a7c8c830d11030e883cf6420779
-SHA512 (Automat-20.2.0.tar.gz) = 715cb5dc087288492e6465a29e7d8502a84fadf451bc3d29da86335ea1c20f8efd9549f0c1eaac8800559dd8001dd73736c3bfacdc6321c83a35d2288d69632c
-Size (Automat-20.2.0.tar.gz) = 61679 bytes
+BLAKE2s (Automat-22.10.0.tar.gz) = a928a25b892f0ef00016246b7b68790b91b2570d7ac7a0f1a4a591d44f566857
+SHA512 (Automat-22.10.0.tar.gz) = 5819cfe0687bf391949891562f3657f449cf9a8e8ea90c1537e89509dc618da1160856f92ab52dc450e0a7d51d0e4644bfe2db3d4108126a42ee1bea2f06bb7a
+Size (Automat-22.10.0.tar.gz) = 59099 bytes
