@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2660 2023/04/30 15:17:17 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2661 2023/04/30 15:19:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-blinker to 1.6.2 [wiz 2023-04-30]
 	Updated devel/py-cachetools to 5.3.0 [wiz 2023-04-30]
 	Updated devel/ruby-highline to 2.1.0 [taca 2023-04-30]
+	Updated games/ruby-squib to 0.19.0 [taca 2023-04-30]
