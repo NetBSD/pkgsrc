@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:30:40 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/04/30 14:37:48 nikita Exp $
 #
 
-DISTNAME=		lzma465
-PKGNAME=		lzma-4.65
+DISTNAME=		lzma918
+PKGNAME=		lzma-9.18
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sevenzip/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +15,7 @@ LICENSE=		public-domain
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
-WRKSRC=			${WRKDIR}/CPP/7zip/Compress/LZMA_Alone
+WRKSRC=			${WRKDIR}/CPP/7zip/Bundles/LzmaCon
 MAKE_FILE=		makefile.gcc
 
 CONFLICTS+=		lzma-utils-[0-9]* xz-utils-[0-9]*
