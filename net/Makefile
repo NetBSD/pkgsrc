@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1510 2023/04/21 00:59:41 manu Exp $
+# $NetBSD: Makefile,v 1.1511 2023/04/30 13:17:24 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -862,6 +862,7 @@ SUBDIR+=	ruby-nio4r
 SUBDIR+=	ruby-pcaprub
 SUBDIR+=	ruby-pluggaloid
 SUBDIR+=	ruby-proxifier
+SUBDIR+=	ruby-proxifier2
 SUBDIR+=	ruby-public_suffix
 SUBDIR+=	ruby-recog
 SUBDIR+=	ruby-ruby_smb
