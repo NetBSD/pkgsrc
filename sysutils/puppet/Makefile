@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/02/11 13:31:56 taca Exp $
+# $NetBSD: Makefile,v 1.64 2023/04/30 15:37:57 taca Exp $
 
-DISTNAME=		puppet-7.23.0
+DISTNAME=		puppet-7.24.0
 CATEGORIES=		sysutils
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -8,16 +8,16 @@ HOMEPAGE=		https://puppet.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-facter>=4.2.0:../../sysutils/ruby-facter
-DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=3.2.1:../../databases/ruby-hiera
-DEPENDS+=	${RUBY_PKGPREFIX}-semantic_puppet>=1.0<2:../../devel/ruby-semantic_puppet
-DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1:../../devel/ruby-fast_gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<1.2.0:../../devel/ruby-concurrent-ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
+DEPENDS+=	${RUBY_PKGPREFIX}-facter>=2.0.1<5:../../sysutils/ruby-facter
+DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1<3:../../devel/ruby-fast_gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=3.2.1<4:../../databases/ruby-hiera
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.1<3:../../devel/ruby-locale
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppet-resource_api
-DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<1.2.0:../../devel/ruby-concurrent-ruby
-DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-scanf>=1.0.0<2:../../devel/ruby-scanf
+DEPENDS+=	${RUBY_PKGPREFIX}-semantic_puppet>=1.0<2:../../devel/ruby-semantic_puppet
 
 RUBYGEM_OPTIONS+=	--format-executable
 RUBYGEM_MANPAGES=	yes
