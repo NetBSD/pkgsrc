@@ -1,23 +1,27 @@
-# $NetBSD: Makefile,v 1.3 2022/05/26 11:09:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/30 17:12:18 wiz Exp $
 
-DISTNAME=	gi-docgen-2022.1
+DISTNAME=	gi-docgen-2023.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi-docgen/}
 
-OWNER=		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/GNOME/gi-docgen
 COMMENT=	Documentation tool for GObject-based libraries
 LICENSE=	gnu-gpl-v3 AND apache-2.0 AND cc0-1.0-universal
 
-DEPENDS+=	${PYPKGPREFIX}-markdown>=3:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-markdown>=3.2:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=1:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
+.endif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
