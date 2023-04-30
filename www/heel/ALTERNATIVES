@@ -1,0 +1,1 @@
+bin/heel @PREFIX@/bin/heel@RUBY_SUFFIX@
