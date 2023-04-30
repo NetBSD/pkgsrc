@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/02/23 15:32:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/04/30 13:42:12 taca Exp $
 bin/de-gfm${RUBY_SUFFIX}
 bin/doilit${RUBY_SUFFIX}
 bin/echars${RUBY_SUFFIX}
@@ -6,7 +6,9 @@ bin/kdrfc${RUBY_SUFFIX}
 bin/kramdown-rfc-autolink-iref-cleanup${RUBY_SUFFIX}
 bin/kramdown-rfc-cache-i-d-bibxml${RUBY_SUFFIX}
 bin/kramdown-rfc-cache-subseries-bibxml${RUBY_SUFFIX}
+bin/kramdown-rfc-clean-svg-ids${RUBY_SUFFIX}
 bin/kramdown-rfc-extract-markdown${RUBY_SUFFIX}
+bin/kramdown-rfc-extract-sourcecode${RUBY_SUFFIX}
 bin/kramdown-rfc2629${RUBY_SUFFIX}
 bin/kramdown-rfc${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -20,7 +22,9 @@ ${GEM_LIBDIR}/bin/kramdown-rfc
 ${GEM_LIBDIR}/bin/kramdown-rfc-autolink-iref-cleanup
 ${GEM_LIBDIR}/bin/kramdown-rfc-cache-i-d-bibxml
 ${GEM_LIBDIR}/bin/kramdown-rfc-cache-subseries-bibxml
+${GEM_LIBDIR}/bin/kramdown-rfc-clean-svg-ids
 ${GEM_LIBDIR}/bin/kramdown-rfc-extract-markdown
+${GEM_LIBDIR}/bin/kramdown-rfc-extract-sourcecode
 ${GEM_LIBDIR}/bin/kramdown-rfc2629
 ${GEM_LIBDIR}/data/encoding-fallbacks.txt
 ${GEM_LIBDIR}/data/kramdown-rfc2629.erb
@@ -35,5 +39,6 @@ ${GEM_LIBDIR}/lib/kramdown-rfc/kdrfc-processor.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/parameterset.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/refxml.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/rfc8792.rb
+${GEM_LIBDIR}/lib/kramdown-rfc/svg-id-cleanup.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc2629.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
