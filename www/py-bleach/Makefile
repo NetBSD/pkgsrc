@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/04 20:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/04/30 18:45:35 wiz Exp $
 
 DISTNAME=	bleach-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,10 +12,11 @@ COMMENT=	Easy whitelist-based HTML-sanitizing tool
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-webencodings-[0-9]*:../../textproc/py-webencodings
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=2.0:../../devel/py-test-runner
 
-PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -23,6 +24,5 @@ REPLACE_SH+=	bleach/_vendor/pip_install_vendor.sh
 
 PYSETUPTESTTARGET=	pytest
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
