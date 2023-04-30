@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/12/04 17:01:57 taca Exp $
+$NetBSD: distinfo,v 1.17 2023/04/30 14:33:25 taca Exp $
 
-BLAKE2s (pygments.rb-2.3.1.gem) = 30efb4cf1107847d126849cad112e1ac931cc1b7ac24a32b496d573a44803925
-SHA512 (pygments.rb-2.3.1.gem) = 3300ee9b2958f34fa4cacb40db0afb175744f2677e17fc9011b3db7b3a217cd5c6cd59ae4ceb9bca81eb6c0b46d976ae96ec2a8ce8e701b51633bfba5dff41d1
-Size (pygments.rb-2.3.1.gem) = 909824 bytes
+BLAKE2s (pygments.rb-2.4.0.gem) = 4e63d02e78a2d7ca47ab0c20d0515ad1193947a5ac6a125abe7cf0097e28be8a
+SHA512 (pygments.rb-2.4.0.gem) = aa3862d0aa6534f2d69bbbfa45474636b50d31685d044d616696a1003c97622e4ae53130c3c5753be27b92f384770a63a2e62b757364b784ac59722317fb1bdd
+Size (pygments.rb-2.4.0.gem) = 1021440 bytes
