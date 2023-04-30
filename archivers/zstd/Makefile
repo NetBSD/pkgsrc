@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/04/07 10:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/04/30 01:37:27 dholland Exp $
 
 DISTNAME=	zstd-1.5.5
 CATEGORIES=	archivers
@@ -31,7 +31,7 @@ CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
 # execute HASH in order to see if it exists but the result
 # is unused when BUILD_DIR is set.
 MAKE_ENV+=		BUILD_DIR=obj
-MAKE_ENV+=		HASH=${FALSE}
+MAKE_ENV+=		HASH=${FALSE:Q}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		ggrep gmake pkg-config
