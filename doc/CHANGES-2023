@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2640 2023/04/30 14:23:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2641 2023/04/30 14:25:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-html-proofer to 5.0.7 [taca 2023-04-30]
 	Updated devel/py-automat to 22.10.0 [wiz 2023-04-30]
 	Updated www/ruby-loofah to 2.20.0 [taca 2023-04-30]
+	Updated www/ruby-mechanize to 2.9.1 [taca 2023-04-30]
