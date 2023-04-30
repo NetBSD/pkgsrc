@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2666 2023/04/30 15:38:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2667 2023/04/30 15:52:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3761,3 +3761,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-chef-config to 18.2.7 [taca 2023-04-30]
 	Updated sysutils/ruby-chef-utils to 18.2.7 [taca 2023-04-30]
 	Updated sysutils/puppet to 7.24.0 [taca 2023-04-30]
+	Removed devel/py-flake8-3 [wiz 2023-04-30]

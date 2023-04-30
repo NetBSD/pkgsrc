@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3963 2023/04/30 15:01:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3964 2023/04/30 15:52:06 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2518,7 +2518,6 @@ SUBDIR+=	py-filechunkio
 SUBDIR+=	py-filelock
 SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
-SUBDIR+=	py-flake8-3
 SUBDIR+=	py-flake8-docstrings
 SUBDIR+=	py-flake8-import-order
 SUBDIR+=	py-flake8-polyfill
