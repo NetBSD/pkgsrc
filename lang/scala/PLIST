@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/07/04 13:41:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/04/30 15:25:03 nikita Exp $
 bin/fsc
 bin/scala
 bin/scalac
@@ -12,12 +12,11 @@ man/man1/scalap.1
 share/${PKGNAME}/doc/LICENSE.md
 share/${PKGNAME}/doc/License.rtf
 share/${PKGNAME}/doc/README
-share/${PKGNAME}/doc/licenses/apache_jansi.txt
+share/${PKGNAME}/doc/internal/tastyreader.md
+share/${PKGNAME}/doc/licenses/apache_jna.txt
 share/${PKGNAME}/doc/licenses/bsd_asm.txt
 share/${PKGNAME}/doc/licenses/bsd_jline.txt
-share/${PKGNAME}/doc/licenses/bsd_scalacheck.txt
 share/${PKGNAME}/doc/licenses/mit_jquery.txt
-share/${PKGNAME}/doc/licenses/mit_tools.tooltip.txt
 share/${PKGNAME}/doc/tools/css/style.css
 share/${PKGNAME}/doc/tools/fsc.html
 share/${PKGNAME}/doc/tools/images/external.gif
@@ -27,7 +26,9 @@ share/${PKGNAME}/doc/tools/scala.html
 share/${PKGNAME}/doc/tools/scalac.html
 share/${PKGNAME}/doc/tools/scaladoc.html
 share/${PKGNAME}/doc/tools/scalap.html
-share/${PKGNAME}/lib/jline-2.14.6.jar
+share/${PKGNAME}/lib/java-diff-utils-4.12.jar
+share/${PKGNAME}/lib/jline-3.21.0.jar
+share/${PKGNAME}/lib/jna-5.9.0.jar
 share/${PKGNAME}/lib/scala-compiler.jar
 share/${PKGNAME}/lib/scala-library.jar
 share/${PKGNAME}/lib/scala-reflect.jar
