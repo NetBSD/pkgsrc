@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/03/19 13:50:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/04/30 15:29:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -340,7 +340,6 @@ ${GEM_LIBDIR}/lib/chef/policy_builder.rb
 ${GEM_LIBDIR}/lib/chef/policy_builder/dynamic.rb
 ${GEM_LIBDIR}/lib/chef/policy_builder/expand_node_object.rb
 ${GEM_LIBDIR}/lib/chef/policy_builder/policyfile.rb
-${GEM_LIBDIR}/lib/chef/powershell.rb
 ${GEM_LIBDIR}/lib/chef/property.rb
 ${GEM_LIBDIR}/lib/chef/provider.rb
 ${GEM_LIBDIR}/lib/chef/provider/batch.rb
@@ -615,10 +614,12 @@ ${GEM_LIBDIR}/lib/chef/resource/selinux/selinux_default.erb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_boolean.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_fcontext.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_install.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_login.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_module.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_permissive.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_port.rb
 ${GEM_LIBDIR}/lib/chef/resource/selinux_state.rb
+${GEM_LIBDIR}/lib/chef/resource/selinux_user.rb
 ${GEM_LIBDIR}/lib/chef/resource/service.rb
 ${GEM_LIBDIR}/lib/chef/resource/smartos_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/snap_package.rb
@@ -1777,10 +1778,12 @@ ${GEM_LIBDIR}/spec/unit/resource/script_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_boolean_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_fcontext_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_install_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_login_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_module_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_permissive_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_port_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/selinux_state_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/selinux_user_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/service_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/smartos_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/snap_package_spec.rb
