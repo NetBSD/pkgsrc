@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/03 12:10:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/30 18:42:52 wiz Exp $
 
 DISTNAME=	chardet-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://pypi.python.org/pypi/chardet
 COMMENT=	Character encoding auto-detection in Python
 LICENSE=	gnu-lgpl-v2.1
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis4
-TEST_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis4
+#TEST_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 
 PYTHON_VERSIONS_ACCEPTED=	27
 

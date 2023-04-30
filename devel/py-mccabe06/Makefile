@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/31 11:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/30 18:42:52 wiz Exp $
 
 DISTNAME=	mccabe-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/mccabe/
 COMMENT=	Mccabe plugin for the Python program checker flake8
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
