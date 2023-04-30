@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/04 13:43:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/04/30 17:03:57 wiz Exp $
 bin/pyflakes-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -41,9 +41,6 @@ ${PYSITELIB}/pyflakes/test/test_api.pyo
 ${PYSITELIB}/pyflakes/test/test_builtin.py
 ${PYSITELIB}/pyflakes/test/test_builtin.pyc
 ${PYSITELIB}/pyflakes/test/test_builtin.pyo
-${PYSITELIB}/pyflakes/test/test_checker.py
-${PYSITELIB}/pyflakes/test/test_checker.pyc
-${PYSITELIB}/pyflakes/test/test_checker.pyo
 ${PYSITELIB}/pyflakes/test/test_code_segment.py
 ${PYSITELIB}/pyflakes/test/test_code_segment.pyc
 ${PYSITELIB}/pyflakes/test/test_code_segment.pyo
@@ -65,9 +62,6 @@ ${PYSITELIB}/pyflakes/test/test_match.pyo
 ${PYSITELIB}/pyflakes/test/test_other.py
 ${PYSITELIB}/pyflakes/test/test_other.pyc
 ${PYSITELIB}/pyflakes/test/test_other.pyo
-${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.py
-${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyc
-${PYSITELIB}/pyflakes/test/test_return_with_arguments_inside_generator.pyo
 ${PYSITELIB}/pyflakes/test/test_type_annotations.py
 ${PYSITELIB}/pyflakes/test/test_type_annotations.pyc
 ${PYSITELIB}/pyflakes/test/test_type_annotations.pyo
