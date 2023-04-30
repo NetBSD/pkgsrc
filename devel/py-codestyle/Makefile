@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/30 14:36:13 wiz Exp $
 
-DISTNAME=	pycodestyle-2.8.0
+DISTNAME=	pycodestyle-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
 
@@ -14,6 +13,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
