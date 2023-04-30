@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2022/06/28 11:35:22 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2023/04/30 14:58:58 spz Exp $
 
-DISTNAME=		inn-2.6.5
-PKGREVISION=		1
+DISTNAME=		inn-2.7.1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -58,11 +57,13 @@ CONFIGURE_ENV+=		_PATH_SORT=${TOOLS_SORT}
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
+USE_LIBTOOL=		yes
+
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=		p5-GD-[0-9]*:../../graphics/p5-GD
-DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 USERGROUP_PHASE=	pre-install
 PKG_USERS_VARS+=	INN_USER
@@ -126,10 +127,14 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			news2mail.cf newsfeeds nnrpd.track \
 			nntpsend.ctl nocem.ctl ovdb.conf passwd.nntp \
 			inn-radius.conf readers.conf send-uucp.cf \
-			storage.conf subscriptions
+			storage.conf subscriptions ovsqlite.conf
 .for file in ${CFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 			${INN_USER} ${INN_GROUP} 0664
+.endfor
+.for file in inn-secrets.conf
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
+			${INN_USER} ${INN_GROUP} 0600
 .endfor
 
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
@@ -158,14 +163,13 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/filter/${file} ${INN_PATHBIN}/filter/${file} \
 
 SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/innbind ${REAL_ROOT_USER} ${INN_GROUP} 4555
 SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/inews ${INN_USER} ${INN_GROUP} 2555
-SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/rnews ${INN_USER} ${UUCP_GROUP} 2555
 
 NEWSONLYBINS+=		buffindexed_d cnfsheadconf ctlinnd expire expireover
 NEWSONLYBINS+=		expirerm imapfeed inncheck innd innfeed innstat
 NEWSONLYBINS+=		innupgrade innwatch makedbz makehistory mod-active
 NEWSONLYBINS+=		news.daily ovdb_init ovdb_monitor ovdb_server ovdb_stat
 NEWSONLYBINS+=		overchan procbatch prunehistory rc.news scanlogs
-NEWSONLYBINS+=		tally.control tdx-util writelog 
+NEWSONLYBINS+=		tally.control tdx-util writelog
 .for file in ${NEWSONLYBINS}
 SPECIAL_PERMS+=		${PREFIX}/${INN_PATHBIN}/${file} ${INN_USER} ${INN_GROUP} 0550
 .endfor
@@ -181,6 +185,23 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
 
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099967
+SUBST_CLASSES+=		blcklist
+SUBST_FILES.blcklist=	HACKING INSTALL MANIFEST NEWS \
+			Makefile.global.in configure configure.ac \
+			include/config.h.in \
+			ci/test support/mksnapshot \
+			nnrpd/perm.c nnrpd/nnrpd.c m4/blocklist.m4 \
+			doc/pod/hacking.pod doc/pod/install.pod \
+			doc/pod/news.pod doc/pod/nnrpd.pod doc/man/nnrpd.8
+SUBST_SED.blcklist=	-e 's,blacklist,blocklist,g'
+SUBST_STAGE.blcklist=	pre-configure
+
+post-extract:
+	${MV} ${WRKSRC}/m4/blacklist.m4 ${WRKSRC}/m4/blocklist.m4
+
+.endif
+
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
 .endif
@@ -190,7 +211,7 @@ GCC_REQD+=		2.95.3
 TEST_TARGET=	tests
 
 pre-install:
-.for file in ${CFILES} active.minimal newsgroups.minimal
+.for file in ${CFILES} active.minimal newsgroups.minimal inn-secrets.conf
 	${INSTALL_DATA} ${WRKSRC}/site/${file} ${DESTDIR}${EXAMPLEDIR}
 .endfor
 .for file in ${DBFILES} ${HTTPFILES}
@@ -213,9 +234,10 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/rnews
 	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews	\
 			${DESTDIR}${PREFIX}/bin
-.for file in libinn.a libstorage.a libinnhist.a
+.for file in libinn.a libinnstorage.a libinnhist.a
 	${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/${file}
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

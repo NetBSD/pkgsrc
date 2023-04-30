@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.13 2014/08/03 17:33:34 spz Exp $
+$NetBSD: patch-ag,v 1.14 2023/04/30 14:58:58 spz Exp $
+
+don't set the pgp path here, always use $INN::Config::pgp
 
 --- control/pgpverify.in.orig	2014-05-17 08:24:49.000000000 +0000
 +++ control/pgpverify.in

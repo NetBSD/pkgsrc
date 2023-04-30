@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.40 2022/04/16 11:44:53 spz Exp $
+$NetBSD: distinfo,v 1.41 2023/04/30 14:58:58 spz Exp $
 
-BLAKE2s (inn-2.6.5.tar.gz) = 227dfa235a50b6dc673c20e087e5441f4633afd991bdff7df11a7c46015cf71a
-SHA512 (inn-2.6.5.tar.gz) = 7200880e179ac10dcb04ed534d2f3119ad4045e912016342e2552e3fc129a2b2d4360615bc03bc9f4e17c440cf07c8017c55f4c17400af140a8bf7b96dc52a2f
-Size (inn-2.6.5.tar.gz) = 2646269 bytes
-SHA1 (patch-aa) = 1801206391e5f37e75edad0955cfc426d4701e45
-SHA1 (patch-ab) = 28b341559ba7d132e8a6dbb0989e964b1d5849fd
-SHA1 (patch-ac) = e60a9f39aed6aed2004dc625d08afb7403ac18a1
-SHA1 (patch-ad) = 96a38291dcd9a836dcaaa9f48ec6a8d2133dc7c6
-SHA1 (patch-ag) = 31bee657a4e35475e902cd179716328aa39ee4b1
-SHA1 (patch-ah) = 231ccb7c0402441760692c32fa0dafcf5c6a72aa
-SHA1 (patch-ak) = cdc37267d5f5151300b4c595b9274dc984c66651
-SHA1 (patch-al) = 3751913f2e7f1e530db9b2f6e762bdda314fd4fd
+BLAKE2s (inn-2.7.1.tar.gz) = 5d45999a8d0b5b44352dfbec34c95ad67f7555f9a6e16bf0409c5fa3130d1774
+SHA512 (inn-2.7.1.tar.gz) = 7d2430e5517bf13dd2acf792e376c18af8054ea4a177e5da0bbcaffbb4b89a80ed6528ed5b11a65559e5bf43f8fe40e5f7672582e9713d7b1312c607ea7e2235
+Size (inn-2.7.1.tar.gz) = 2753330 bytes
+SHA1 (patch-aa) = bf3de8a6aebae1fc8957fad31e46b1c536aa5224
+SHA1 (patch-ab) = 894d7c93485bb86ebf68899968829ce6aa60b7e6
+SHA1 (patch-ac) = 43e2db25f619a2c85d5e715e2044c5b4be31b62c
+SHA1 (patch-ad) = b19fa5553d18cebb4b52e24f2d4085fc40db244c
+SHA1 (patch-ag) = 0d1e4883ffefd0e2e7afeba2865e707ff6041a28
+SHA1 (patch-ah) = 22ff361d7a098d1cf09ecb0fc5d3336927238106
+SHA1 (patch-ak) = a2cd9d85881fc704f29de4f319380e89af67ef24
+SHA1 (patch-al) = c28c81e0c88c695cd06738dc7360c95a045afa1d
