@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2669 2023/04/30 17:04:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2670 2023/04/30 17:08:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3764,3 +3764,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-flake8-3 [wiz 2023-04-30]
 	Updated devel/got-portable to 0.87 [nikita 2023-04-30]
 	Updated devel/py-flakes to 3.0.1 [wiz 2023-04-30]
+	Updated devel/py-flake8 to 6.0.0 [wiz 2023-04-30]
