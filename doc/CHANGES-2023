@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2662 2023/04/30 15:23:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2663 2023/04/30 15:24:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3753,3 +3753,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-click-log to 0.4.0 [wiz 2023-04-30]
 	Updated games/ruby-squib to 0.19.0 [taca 2023-04-30]
 	Updated devel/py-docstyle to 6.3.0 [wiz 2023-04-30]
+	Updated www/ruby-sinatra to 3.0.6 [taca 2023-04-30]
+	Updated www/ruby-sinatra-contrib to 3.0.6 [taca 2023-04-30]
+	Updated www/ruby-rack-protection to 3.0.6 [taca 2023-04-30]
