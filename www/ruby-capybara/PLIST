@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/12/04 16:12:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/04/30 14:08:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/capybara/node/element.rb
 ${GEM_LIBDIR}/lib/capybara/node/finders.rb
 ${GEM_LIBDIR}/lib/capybara/node/matchers.rb
 ${GEM_LIBDIR}/lib/capybara/node/simple.rb
+${GEM_LIBDIR}/lib/capybara/node/whitespace_normalizer.rb
 ${GEM_LIBDIR}/lib/capybara/queries/active_element_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/ancestor_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/base_query.rb
@@ -315,5 +316,6 @@ ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/shared_selenium_node.rb
 ${GEM_LIBDIR}/spec/shared_selenium_session.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/whitespace_normalizer_spec.rb
 ${GEM_LIBDIR}/spec/xpath_builder_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/12/04 16:12:39 taca Exp $
+$NetBSD: distinfo,v 1.27 2023/04/30 14:08:45 taca Exp $
 
-BLAKE2s (capybara-3.38.0.gem) = 08a17a8a9638e58284b03aa9b0a052362cb15acee58daca202f91f1262d3c320
-SHA512 (capybara-3.38.0.gem) = 530db1102e8bc1bfa1ac55d28a725a26a7c6c98baf89655bb15436217e99c7131edb204638f51831c416e4898b9e7c653b83c74abf8aa644eb4da0ad8cddd44c
-Size (capybara-3.38.0.gem) = 379392 bytes
+BLAKE2s (capybara-3.39.0.gem) = c666eb32a54775427d7e5b9160e1cd0e63ee8874beb69619f9da624697cb5206
+SHA512 (capybara-3.39.0.gem) = 0910ecef11a007d10e753887d9016bab4de74e2ddf2fa2c8b8fc32bfe7d71d64a8c0b72a0a606aa7b558922ab02b4368d1c42a0df78ecf3f68a5efc34edc8707
+Size (capybara-3.39.0.gem) = 381952 bytes
