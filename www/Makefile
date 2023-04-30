@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1704 2023/04/30 14:36:37 taca Exp $
+# $NetBSD: Makefile,v 1.1705 2023/04/30 18:50:01 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -221,7 +221,6 @@ SUBDIR+=	links-gui
 SUBDIR+=	litehtml
 SUBDIR+=	litmus
 SUBDIR+=	llgal
-SUBDIR+=	loggerhead
 SUBDIR+=	logswan
 SUBDIR+=	longboard
 SUBDIR+=	lua-curl
