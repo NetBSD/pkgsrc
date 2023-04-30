@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2621 2023/04/30 13:14:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2622 2023/04/30 13:17:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3710,3 +3710,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-argcomplete to 3.0.8 [wiz 2023-04-30]
 	Added devel/py27-attrs version 21.4.0 [wiz 2023-04-30]
 	Updated devel/py-attrs to 23.1.0 [wiz 2023-04-30]
+	Added net/ruby-proxifier2 version 1.1.0 [taca 2023-04-30]
