@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/10/25 18:54:44 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/04/30 18:26:26 wiz Exp $
 
-DISTNAME=	pyscard-2.0.5
+DISTNAME=	pyscard-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyscard/}
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	swig3>=0:../../devel/swig3
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
