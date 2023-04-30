@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2023/04/19 08:11:08 adam Exp $
+# $NetBSD: Makefile,v 1.50 2023/04/30 04:43:39 wiz Exp $
 
-DISTNAME=	libfilezilla-0.41.1
-PKGREVISION=	1
+DISTNAME=	libfilezilla-0.42.2
 CATEGORIES=	net
 # some kind of direct-download disabling
 #MASTER_SITES=	https://dl3.cdn.filezilla-project.org/libfilezilla/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lib.filezilla-project.org/
