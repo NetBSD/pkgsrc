@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2637 2023/04/30 14:19:32 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2638 2023/04/30 14:21:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3726,3 +3726,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added converters/info2man version 1.1 [nikita 2023-04-30]
 	Updated www/ruby-capybara to 3.39.0 [taca 2023-04-30]
 	Updated www/ruby-faye-websocket to 0.11.2 [taca 2023-04-30]
+	Updated www/ruby-html-proofer to 5.0.7 [taca 2023-04-30]
