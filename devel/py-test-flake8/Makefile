@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/04/25 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/04/30 15:45:09 wiz Exp $
 
 DISTNAME=	pytest-flake8-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,11 +11,12 @@ HOMEPAGE=	https://github.com/tholo/pytest-flake8
 COMMENT=	Plugin plugin to check FLAKE8 requirements
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 # not declared, but py.io is used as of 1.0.7
 DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
+DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES+=	test
-PYTHON_VERSIONED_DEPENDENCIES+=	flake8
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -23,5 +24,4 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
