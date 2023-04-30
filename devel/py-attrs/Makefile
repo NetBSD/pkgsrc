@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/04/30 12:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/04/30 13:14:49 wiz Exp $
 
-DISTNAME=	attrs-21.4.0
+DISTNAME=	attrs-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/attrs/}
@@ -10,23 +10,34 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Attributes without boilerplate
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-Pympler-[0-9]*:../../devel/py-Pympler
-# not required and does not support python 2.x
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+# tests are doomed because py-test and py-hypothesis depend on py-attrs
+#TEST_DEPENDS+=	${PYPKGPREFIX}-Pympler-[0-9]*:../../devel/py-Pympler
+#TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../wip/py-cloudpickle
+#TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.3.0:../../devel/py-test
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.1.1:../../lang/py-mypy
 #TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
-TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+#TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3:../../devel/py-coverage
 
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
-PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-# 13 failed, 1155 passed, 11 skipped, 1 xfailed, 6 warnings
-# with py-ZopeInterface
-# 13 failed, 1158 passed, 8 skipped, 1 xfailed, 6 warnings
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+#do-test:
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 311
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-plugins-[0-9]*:../../devel/py-test-mypy-plugins
+.endif
+
+.if ${PYTHON_VERSION} < 308
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
