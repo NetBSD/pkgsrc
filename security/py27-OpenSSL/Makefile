@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/19 14:11:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/04/30 18:42:53 wiz Exp $
 
 DISTNAME=	pyOpenSSL-21.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,9 +11,9 @@ COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
+#TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 # https://github.com/pyca/pyopenssl/issues/656
 PYSETUPTESTTARGET=	pytest
