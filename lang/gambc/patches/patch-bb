@@ -1,0 +1,56 @@
+$NetBSD: patch-bb,v 1.1 2023/04/30 19:32:30 nikita Exp $
+
+https://salsa.debian.org/abdelq/gambc/-/blob/ca233c8bd3c8279e755e34287417aafe3c649629/debian/patches/reproducibility.patch
+
+Workaround for reproducibility issues
+
+--- doc/makefile.in
++++ doc/makefile.in
+@@ -70,7 +70,7 @@
+ 
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+-TEXI2HTML = ./texi2html
++TEXI2HTML = PERL_HASH_SEED=0 ./texi2html
+ PDF2PS = pdf2ps
+ 
+ .SUFFIXES:
+
+--- doc/texi2html
++++ doc/texi2html
+@@ -2520,7 +2520,7 @@
+     print $fh <<EOT;
+ $DOCTYPE
+ <html>
+-$Texi2HTML::THISDOC{'copying_comment'}<!-- Created on $Texi2HTML::THISDOC{today} by $Texi2HTML::THISDOC{program}
++$Texi2HTML::THISDOC{'copying_comment'}<!-- Created by $Texi2HTML::THISDOC{program}
+ $Texi2HTML::THISDOC{program_authors}-->
+ <head>
+ <title>$longtitle</title>
+@@ -2543,7 +2543,7 @@
+ sub T2H_DEFAULT_program_string()
+ {
+     my $user = $Texi2HTML::THISDOC{'user'};
+-    my $date = $Texi2HTML::THISDOC{'today'};
++    #my $date = $Texi2HTML::THISDOC{'today'};
+     $user = '' if (!defined($user));
+     $date = '' if (!defined($date));
+     if (($user ne '') and ($date ne ''))
+@@ -3137,7 +3137,7 @@
+     print $fh <<EOT;
+ $DOCTYPE
+ <html>
+-<!-- Created on $Texi2HTML::THISDOC{'today'} by $Texi2HTML::THISDOC{'program'} -->
++<!-- Created by $Texi2HTML::THISDOC{'program'} -->
+ <!--
+ $Texi2HTML::THISDOC{'program_authors'}
+ -->
+@@ -7403,7 +7403,7 @@
+ sub t2h_default_address($$)
+ {
+     my $user = shift;
+-    my $date = shift;
++    #my $date = shift;
+     $user = '' if (!defined($user));
+     $date = '' if (!defined($date));
+     if (($user ne '') and ($date ne ''))
