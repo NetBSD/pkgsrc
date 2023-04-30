@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/30 14:33:51 wiz Exp $
 
 DISTNAME=	pep8-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py test
