@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2022/12/31 16:21:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.38 2023/04/30 15:37:57 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -1115,6 +1115,9 @@ ${GEM_LIBDIR}/spec/fixtures/integration/application/agent/cached_deferred_catalo
 ${GEM_LIBDIR}/spec/fixtures/integration/application/agent/lib/facter/agent_spec_role.rb
 ${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/provider/applytest/applytest.rb
 ${GEM_LIBDIR}/spec/fixtures/integration/application/apply/environments/spec/modules/amod/lib/puppet/type/applytest.rb
+${GEM_LIBDIR}/spec/fixtures/integration/application/module/environments/direnv/modules/nginx/README
+${GEM_LIBDIR}/spec/fixtures/integration/application/module/environments/direnv/modules/nginx/manifests/init.pp
+${GEM_LIBDIR}/spec/fixtures/integration/application/module/environments/direnv/modules/nginx/metadata.json
 ${GEM_LIBDIR}/spec/fixtures/integration/l10n/envs/prod/modules/demo/Gemfile
 ${GEM_LIBDIR}/spec/fixtures/integration/l10n/envs/prod/modules/demo/Rakefile
 ${GEM_LIBDIR}/spec/fixtures/integration/l10n/envs/prod/modules/demo/lib/puppet/functions/l10n.rb
