@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2610 2023/04/30 04:43:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2611 2023/04/30 04:54:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3696,3 +3696,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-XML-Twig to 3.52nb7 [wen 2023-04-30]
 	Updated textproc/p5-Text-BibTeX to 0.89 [wen 2023-04-30]
 	Updated net/libfilezilla to 0.42.2 [wiz 2023-04-30]
+	Updated net/haproxy to 2.7.7 [adam 2023-04-30]
+	Updated devel/py-frozendict to 2.3.8 [adam 2023-04-30]
+	Updated devel/py-ipython to 8.13.1 [adam 2023-04-30]
+	Updated devel/py-gast to 0.5.4 [adam 2023-04-30]
