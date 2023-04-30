@@ -1,0 +1,4 @@
+Rackup
+
+rackup provides a command line interface for running a Rack-compatible
+application.
