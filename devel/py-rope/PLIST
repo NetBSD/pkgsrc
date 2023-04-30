@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/30 18:19:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/04/30 18:24:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -175,9 +175,24 @@ ${PYSITELIB}/rope/base/worder.pyo
 ${PYSITELIB}/rope/contrib/__init__.py
 ${PYSITELIB}/rope/contrib/__init__.pyc
 ${PYSITELIB}/rope/contrib/__init__.pyo
-${PYSITELIB}/rope/contrib/autoimport.py
-${PYSITELIB}/rope/contrib/autoimport.pyc
-${PYSITELIB}/rope/contrib/autoimport.pyo
+${PYSITELIB}/rope/contrib/autoimport/__init__.py
+${PYSITELIB}/rope/contrib/autoimport/__init__.pyc
+${PYSITELIB}/rope/contrib/autoimport/__init__.pyo
+${PYSITELIB}/rope/contrib/autoimport/defs.py
+${PYSITELIB}/rope/contrib/autoimport/defs.pyc
+${PYSITELIB}/rope/contrib/autoimport/defs.pyo
+${PYSITELIB}/rope/contrib/autoimport/parse.py
+${PYSITELIB}/rope/contrib/autoimport/parse.pyc
+${PYSITELIB}/rope/contrib/autoimport/parse.pyo
+${PYSITELIB}/rope/contrib/autoimport/pickle.py
+${PYSITELIB}/rope/contrib/autoimport/pickle.pyc
+${PYSITELIB}/rope/contrib/autoimport/pickle.pyo
+${PYSITELIB}/rope/contrib/autoimport/sqlite.py
+${PYSITELIB}/rope/contrib/autoimport/sqlite.pyc
+${PYSITELIB}/rope/contrib/autoimport/sqlite.pyo
+${PYSITELIB}/rope/contrib/autoimport/utils.py
+${PYSITELIB}/rope/contrib/autoimport/utils.pyc
+${PYSITELIB}/rope/contrib/autoimport/utils.pyo
 ${PYSITELIB}/rope/contrib/changestack.py
 ${PYSITELIB}/rope/contrib/changestack.pyc
 ${PYSITELIB}/rope/contrib/changestack.pyo
