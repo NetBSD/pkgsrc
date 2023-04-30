@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/09/10 16:08:33 taca Exp $
+# $NetBSD: Makefile,v 1.24 2023/04/30 14:53:04 taca Exp $
 
-DISTNAME=	rouge-3.30.0
+DISTNAME=	rouge-4.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
