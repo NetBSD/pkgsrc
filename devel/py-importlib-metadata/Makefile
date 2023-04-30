@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/04/04 12:36:22 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/04/30 17:16:03 wiz Exp $
 
-DISTNAME=	importlib_metadata-6.1.0
+DISTNAME=	importlib_metadata-6.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -22,6 +22,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 309
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 .endif
