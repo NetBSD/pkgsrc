@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/10/11 11:52:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/04/30 12:31:07 wiz Exp $
 
 DISTNAME=	pytest-4.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -23,11 +23,11 @@ DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py27-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
-TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis4
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # does not support python 2.7
+#TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 #TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
