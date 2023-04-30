@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2647 2023/04/30 14:37:59 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2648 2023/04/30 14:40:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3736,3 +3736,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-codestyle to 2.10.0 [wiz 2023-04-30]
 	Added www/ruby-rackup version 2.1.0 [taca 2023-04-30]
 	Updated archivers/lzma to 9.18 [nikita 2023-04-30]
+	Updated www/ruby-selenium-webdriver to 4.9.0 [taca 2023-04-30]
