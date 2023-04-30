@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/15 13:44:04 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/04/30 15:03:22 nikita Exp $
 
-DISTNAME=	toxcore-0.2.10
+DISTNAME=	toxcore-0.2.18
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TokTok/}
 GITHUB_PROJECT=	c-toxcore
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+GITHUB_SUBMODULES=	camgunz cmp v20 third_party/cmp
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tox.chat/
