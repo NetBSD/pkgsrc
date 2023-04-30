@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/03/29 09:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/04/30 17:37:50 wiz Exp $
 
-DISTNAME=	Pebble-4.5.3
+DISTNAME=	Pebble-5.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pebble/}
 
@@ -11,16 +10,13 @@ HOMEPAGE=	https://github.com/noxdafox/pebble
 COMMENT=	Threading and multiprocessing eye-candy
 LICENSE=	gnu-lgpl-v3
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
-	cd ${WRKSRC}/test && ${PYTHONBIN} -m unittest discover -v
+	cd ${WRKSRC}/test && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
