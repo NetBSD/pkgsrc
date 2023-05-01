@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/01/03 09:30:11 adam Exp $
+$NetBSD: distinfo,v 1.23 2023/05/01 09:35:27 wiz Exp $
 
-BLAKE2s (wheel-0.37.1.tar.gz) = 53a308ac8e5da797471b8f5b84c7c3864d92bcc4c581ef13f11a447c67a893a5
-SHA512 (wheel-0.37.1.tar.gz) = c977a740c17abd1fa4b4c2382a33f3ff887baa4231c36990d988cb8531496074e39744786ef6ac0da9c9af4977bce5b2da145377a3ac15eea918f8125bff66ec
-Size (wheel-0.37.1.tar.gz) = 66376 bytes
+BLAKE2s (wheel-0.40.0.tar.gz) = acd06436e16928424a6c81802a6f5075da41e0d44910d2f55ca903acc6e9f736
+SHA512 (wheel-0.40.0.tar.gz) = 211e68d927c93b9b2748bf081097d1172cf8d4863d540be72f1d6023b64042410805d4208a2c94de89a1eeb0fb32044e78f41ab58ac94498ac0c489a1eea0d23
+Size (wheel-0.40.0.tar.gz) = 96226 bytes
