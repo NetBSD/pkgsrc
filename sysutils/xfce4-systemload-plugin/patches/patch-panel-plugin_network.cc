@@ -1,6 +1,8 @@
-$NetBSD: patch-panel-plugin_network.cc,v 1.1 2023/04/30 22:09:38 martin Exp $
+$NetBSD: patch-panel-plugin_network.cc,v 1.2 2023/05/01 12:05:24 martin Exp $
 
-Fix type error.
+Fix type error, upstream bug report
+https://gitlab.xfce.org/panel-plugins/xfce4-systemload-plugin/-/issues/25
+(fixed slightly different but equivalent there)
 
 --- ./panel-plugin/network.cc.orig	2022-02-16 19:57:05.000000000 +0100
 +++ ./panel-plugin/network.cc	2023-05-01 00:01:34.366940861 +0200
