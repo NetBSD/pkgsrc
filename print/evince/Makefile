@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2023/04/19 08:11:17 adam Exp $
+# $NetBSD: Makefile,v 1.161 2023/05/01 05:40:30 wiz Exp $
 
 DISTNAME=	evince-43.0
 PKGREVISION=	4
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		itstool msgfmt pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
