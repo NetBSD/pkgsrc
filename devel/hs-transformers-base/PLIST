@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 12:23:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/01 21:05:56 nikita Exp $
 lib/transformers-base-${PKGVERSION}/${HS_VERSION}/package-description
 lib/transformers-base-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Base.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Base.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Base.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Base.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Base.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/Control-Monad-Base.html
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/transformers-base.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/Control-Monad-Base.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/transformers-base.haddock
