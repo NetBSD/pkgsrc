@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 10:15:02 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/01 21:01:31 nikita Exp $
 lib/unix-time-${PKGVERSION}/${HS_VERSION}/package-description
 lib/unix-time-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,7 +19,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/UnixTime/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/UnixTime/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-time-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/unix-time-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-time-${PKGVERSION}/html/Data-UnixTime.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-time-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-time-${PKGVERSION}/html/haddock-bundle.min.js
