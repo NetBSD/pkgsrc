@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:08:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/01 05:40:30 wiz Exp $
 
 DISTNAME=	libsoup-3.2.2
 PKGREVISION=	2
@@ -28,7 +28,8 @@ MESON_ARGS+=		-Dvapi=disabled
 # disable sysprof, not shipped in subprojects and gets git cloned otherwise
 MESON_ARGS+=            -Dsysprof=disabled
 
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "options.mk"
 
