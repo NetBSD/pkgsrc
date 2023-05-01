@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/04/30 17:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/01 05:41:05 wiz Exp $
 
 DISTNAME=	gi-docgen-2023.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,13 +17,14 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
 
 SUBST_CLASSES+=		prefix
