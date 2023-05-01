@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2694 2023/05/01 09:47:40 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2695 2023/05/01 09:49:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-tox to 4.5.1 [wiz 2023-05-01]
 	Updated devel/py-txaio to 23.1.1 [wiz 2023-05-01]
 	Updated devel/py-typeguard to 3.0.2 [wiz 2023-05-01]
+	Updated graphics/py-pillow_heif to 0.10.1 [wiz 2023-05-01]
