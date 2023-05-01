@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2699 2023/05/01 14:45:39 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2700 2023/05/01 15:11:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3794,3 +3794,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-io-event to 1.2.0 [taca 2023-05-01]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.33 [taca 2023-05-01]
 	Updated textproc/ruby-libxml to 4.1.0 [taca 2023-05-01]
+	Updated graphics/gifski to 1.11.0 [pin 2023-05-01]
