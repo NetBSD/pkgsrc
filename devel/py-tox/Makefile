@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/03/29 09:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/05/01 09:38:55 wiz Exp $
 
-DISTNAME=	tox-3.24.5
+DISTNAME=	tox-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -10,43 +10,55 @@ HOMEPAGE=	https://tox.readthedocs.io/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-packaging>=14:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12.0:../../devel/py-pluggy
-DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
-DEPENDS+=	${PYPKGPREFIX}-six>=1.14.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=16.0.0:../../devel/py-virtualenv
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.4.0:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.3.11:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2>=2.3.3:../../devel/py-pathlib2
-TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.1:../../sysutils/py-psutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.0.0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.5.1:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.0:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=1.0.0:../../devel/py-test-randomly
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.22.2:../../devel/py-test-xdist
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
+DEPENDS+=	${PYPKGPREFIX}-cachetools>=5.3:../../devel/py-cachetools
+DEPENDS+=	${PYPKGPREFIX}-chardet>=5.1:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.11:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.2:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-pluggy>=1:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-project-api>=1.5.1:../../devel/py-project-api
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.21:../../devel/py-virtualenv
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-filelock
+# more unpackaged TEST_DEPENDS from pyproject.toml
+# "build[virtualenv]>=0.10",
+# "covdefaults>=2.3",
+# "devpi-process>=0.3",
+# "diff-cover>=7.5",
+# "re-assert>=1.1",
+# 'time-machine>=2.9; implementation_name != "pypy"',
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.4:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.3.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.10:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.2.1:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.4.1:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
+.endif
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
 .endif
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} tox tox-${PYVERSSUFFIX} && \
-	${MV} tox-quickstart tox-quickstart-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} tox tox-${PYVERSSUFFIX}
 
+# needs to be installed first
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
