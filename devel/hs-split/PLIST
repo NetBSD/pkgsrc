@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 13:36:37 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/01 21:09:06 nikita Exp $
 lib/split-${PKGVERSION}/${HS_VERSION}/package-description
 lib/split-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,7 +10,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Split/Internals.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Split/Internals.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/split-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/Data-List-Split-Internals.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/Data-List-Split.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/doc-index.html
