@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/01 09:15:39 wiz Exp $
+
+BLAKE2s (pyproject_api-1.5.1.tar.gz) = 38dc83f710c976a757d505b67435986d44d64c7aa2229b8cdf184c31a86c1d08
+SHA512 (pyproject_api-1.5.1.tar.gz) = 31936d242861027ea892e86219f430371aae18631c92893cefc8fb8fc02315906857ee57e5412eed62bf584e0bd24cca7ba82471c0ac6a72c71e8e93b8285a3e
+Size (pyproject_api-1.5.1.tar.gz) = 22081 bytes
