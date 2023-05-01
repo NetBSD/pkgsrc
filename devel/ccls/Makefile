@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/19 08:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/01 17:22:23 nikita Exp $
 
 DISTNAME=	ccls-0.20220729
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MaskRay/}
@@ -25,7 +25,7 @@ PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
 
-DEPENDS+=	llvm-[0-9]*:../../lang/llvm
+DEPENDS+=	llvm-15.[0-9]*:../../lang/llvm
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
