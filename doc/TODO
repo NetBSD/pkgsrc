@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22877 2023/05/01 09:58:22 wiz Exp $
+$NetBSD: TODO,v 1.22878 2023/05/01 21:20:41 nikita Exp $
 
 Suggested new packages
 ======================
@@ -1627,6 +1627,9 @@ Suggested pkgsrc enhancements
 	  flag, preserve the value of the automatic tag.  We do not
 	  have consensus on the right behavior.
 
+	  o Haskell packages should print a PLIST with the PLIST
+	    variables already filled in.
+
 Suggested other platform enhancements
 =====================================
 
@@ -1684,3 +1687,5 @@ Suggested cleanups in pkgsrc
 
 	o Remove introspection option from packages still using it.
 	  https://mail-index.netbsd.org/pkgsrc-users/2022/06/06/msg035658.html
+
+	o Fix all haskell packages to use the correct PLIST variables.
