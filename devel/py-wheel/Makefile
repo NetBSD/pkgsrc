@@ -1,32 +1,29 @@
-# $NetBSD: Makefile,v 1.29 2023/04/30 19:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/01 09:35:27 wiz Exp $
 
-DISTNAME=	wheel-0.37.1
+DISTNAME=	wheel-0.40.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pypa/wheel
 COMMENT=	Built-package format for Python
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=0:../../devel/py-flit_core
 
-PYSETUPTESTTARGET=	pytest
+USE_LANGUAGES=	c # for tests only
 
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+# needs to be installed first
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} wheel wheel-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} > 300
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-.endif
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
