@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.23 2022/01/03 16:58:40 wiz Exp $
+# $NetBSD: options.mk,v 1.24 2023/05/02 00:43:54 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
-PKG_SUPPORTED_OPTIONS+=		cvs git svn	# not mutually exclusive
+PKG_SUPPORTED_OPTIONS+=		cvs git mercurial svn	# not mutually exclusive
 PKG_SUPPORTED_OPTIONS+=		ikiwiki-amazon-s3 ikiwiki-highlight ikiwiki-search
 PKG_SUPPORTED_OPTIONS+=		ikiwiki-sudo
 PKG_OPTIONS_REQUIRED_GROUPS=	markdown
@@ -74,6 +74,10 @@ DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .else
 PYTHON_FOR_BUILD_ONLY=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mmercurial)
+DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 .endif
 
 .if !empty(PKG_OPTIONS:Msvn)
