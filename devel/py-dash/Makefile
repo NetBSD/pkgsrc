@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/08/24 08:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/02 17:15:11 wiz Exp $
 
 DISTNAME=	pydash-4.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -12,14 +12,15 @@ COMMENT=	Python utility libraries for doing stuff in a functional way
 LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-
-PYTHON_VERSIONED_DEPENDENCIES+=	test:test test-cov:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
