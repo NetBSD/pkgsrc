@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2017/12/09 19:31:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/02 00:13:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.rubocop_todo.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Changelog.md
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/lib/rainbow.rb
 ${GEM_LIBDIR}/lib/rainbow/color.rb
 ${GEM_LIBDIR}/lib/rainbow/ext/string.rb
@@ -22,17 +14,4 @@ ${GEM_LIBDIR}/lib/rainbow/string_utils.rb
 ${GEM_LIBDIR}/lib/rainbow/version.rb
 ${GEM_LIBDIR}/lib/rainbow/wrapper.rb
 ${GEM_LIBDIR}/lib/rainbow/x11_color_names.rb
-${GEM_LIBDIR}/rainbow.gemspec
-${GEM_LIBDIR}/spec/integration/instance_spec.rb
-${GEM_LIBDIR}/spec/integration/rainbow_spec.rb
-${GEM_LIBDIR}/spec/integration/refinement_spec.rb
-${GEM_LIBDIR}/spec/integration/string_spec.rb
-${GEM_LIBDIR}/spec/integration/uncolor_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/support/presenter_shared_examples.rb
-${GEM_LIBDIR}/spec/unit/color_spec.rb
-${GEM_LIBDIR}/spec/unit/null_presenter_spec.rb
-${GEM_LIBDIR}/spec/unit/presenter_spec.rb
-${GEM_LIBDIR}/spec/unit/string_utils_spec.rb
-${GEM_LIBDIR}/spec/unit/wrapper_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
