@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2717 2023/05/02 17:26:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2718 2023/05/02 17:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3812,3 +3812,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed converters/py-chardet4 [wiz 2023-05-02]
 	Removed textproc/py-pygments25 [wiz 2023-05-02]
 	Removed security/py-rsa40 [wiz 2023-05-02]
+	Removed devel/py27-test-cov [wiz 2023-05-02]

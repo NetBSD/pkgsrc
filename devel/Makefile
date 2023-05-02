@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3967 2023/05/02 17:04:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3968 2023/05/02 17:26:41 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3046,7 +3046,6 @@ SUBDIR+=	py27-attrs
 SUBDIR+=	py27-babel
 SUBDIR+=	py27-coverage
 SUBDIR+=	py27-pluggy
-SUBDIR+=	py27-test-cov
 SUBDIR+=	pycharm-bin
 SUBDIR+=	pynvim
 SUBDIR+=	pythontidy
