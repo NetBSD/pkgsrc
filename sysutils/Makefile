@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1042 2023/04/24 17:38:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.1043 2023/05/02 22:01:52 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -237,6 +237,7 @@ SUBDIR+=	fixelfprot
 SUBDIR+=	flashrom
 SUBDIR+=	fluent-bit
 SUBDIR+=	foremost
+SUBDIR+=	fp-checkpassword
 SUBDIR+=	free
 SUBDIR+=	fs-kit
 SUBDIR+=	fscd
