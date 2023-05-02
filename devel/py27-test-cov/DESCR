@@ -1,5 +1,0 @@
-This plugin produces coverage reports. It supports centralised
-testing and distributed testing in both load and each modes. It
-also supports coverage of subprocesses.
-
-This package contains a version supporting python 2.7.
