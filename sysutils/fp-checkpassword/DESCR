@@ -1,0 +1,3 @@
+fp-checkpassword is a DJB-style checkpassword program for Dovecot's
+passdb. It relies on Dovecot's authentication socket and follows the
+usual checkpassword command-line interface.
