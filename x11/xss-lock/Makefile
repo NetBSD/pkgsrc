@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/06 14:41:40 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/02 16:23:30 wiz Exp $
 
 DISTNAME=	1e158fb20108
 PKGNAME=	xss-lock-0.3.0
@@ -12,11 +12,13 @@ HOMEPAGE=	https://bitbucket.org/raymonad/xss-lock
 COMMENT=	Use external locker as X screen saver
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
-
-PYTHON_FOR_BUILD_ONLY=	tool
 # Requires rst2man to generate man page
 TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+
+USE_TOOLS+=	pkg-config
+
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		doc
 SUBST_MESSAGE.doc=	Fixing rst2man name due to python versioning.
