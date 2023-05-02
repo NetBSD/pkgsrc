@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2022/07/11 13:34:53 adam Exp $
+# $NetBSD: options.mk,v 1.8 2023/05/02 16:15:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
@@ -9,7 +9,6 @@ PKG_SUGGESTED_OPTIONS+=	# blank
 
 .if !empty(PKG_OPTIONS:Marrow)
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 .endif
 
 .if !empty(PKG_OPTIONS:Mbabel)
@@ -45,8 +44,6 @@ DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-PYTHON_VERSIONED_DEPENDENCIES=	pygments test
-.include "../../lang/python/versioned_dependencies.mk"
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-flexmock>=0.9.7:../../devel/py-flexmock
@@ -63,6 +60,8 @@ DEPENDS+=	${PYPKGPREFIX}-anyjson>=0.3.3:../../textproc/py-anyjson
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 .endif
 
 .if !empty(PKG_OPTIONS:Mtimezone)
