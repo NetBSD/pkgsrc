@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/02 20:44:26 wiz Exp $
+
+BLAKE2s (nltk_data-omw14-1.4/omw-1.4.zip) = 6b1c1fa48300ed82f27bfd0e0952549db0134ccb5e53bd59dc70fe677196fa8c
+SHA512 (nltk_data-omw14-1.4/omw-1.4.zip) = d25c591c894fedeaf8649ef26653c51b74282e8af43bd0a8867eb16f79a89c4b567328a7c83f7651ec9e41dc746cba87b0c8bdbbe736db7f18c62a56820a92e6
+Size (nltk_data-omw14-1.4/omw-1.4.zip) = 26634772 bytes
