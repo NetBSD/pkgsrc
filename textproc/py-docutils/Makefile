@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/01/04 20:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/05/02 16:35:15 wiz Exp $
 
 DISTNAME=	docutils-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,9 @@ LICENSE=	public-domain AND 2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
+DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
 
-PYTHON_VERSIONED_DEPENDENCIES=	pygments
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -37,6 +38,5 @@ do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
