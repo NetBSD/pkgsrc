@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/05/01 15:49:01 nikita Exp $
+# $NetBSD: Makefile,v 1.28 2023/05/02 06:44:21 nikita Exp $
 
 DISTNAME=	zig-0.10.1
 PKGREVISION=	2
@@ -15,9 +15,9 @@ USE_CMAKE=	yes
 USE_TOOLS+=	bash:run
 USE_LANGUAGES=	c c++14
 
-DEPENDS+=	llvm-15.[0-9]*:../../lang/llvm
-DEPENDS+=	lld-15.[0-9]*:../../devel/lld
-DEPENDS+=	clang-15.[0-9]*:../../lang/clang
+DEPENDS+=	llvm>=15<16:../../lang/llvm
+DEPENDS+=	lld>=15<16:../../devel/lld
+DEPENDS+=	clang>=15<16:../../lang/clang
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
