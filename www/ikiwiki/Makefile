@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2022/06/30 11:18:58 nia Exp $
+# $NetBSD: Makefile,v 1.179 2023/05/02 16:22:14 wiz Exp $
 
 DISTNAME=		ikiwiki_3.20200202.3.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
@@ -34,6 +34,8 @@ DEPENDS+=		p5-LWPx-ParanoidAgent-[0-9]*:../../www/p5-LWPx-ParanoidAgent
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 PERL5_PACKLIST=		auto/IkiWiki/.packlist
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	plugins/proxy.py plugins/pythondemo plugins/rst
 REPLACE_PERL+=		pm_filter ikiwiki.in ikiwiki-comment.in
