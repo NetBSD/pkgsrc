@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/04/25 22:06:37 nikita Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/02 07:26:15 nikita Exp $
 
-DISTNAME=	mg-20230406
+DISTNAME=	mg-20230501
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hboetes/}
 GITHUB_PROJECT=	mg
