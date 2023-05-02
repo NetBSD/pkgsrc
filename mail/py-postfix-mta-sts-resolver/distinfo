@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/19 13:59:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/05/02 16:49:21 wiz Exp $
 
-BLAKE2s (postfix_mta_sts_resolver-1.1.3.tar.gz) = e91fa93b3eb5dfbd3e61ee16f640301412d2c90d7f53d3e298da59a5a0e3af7a
-SHA512 (postfix_mta_sts_resolver-1.1.3.tar.gz) = 154f363fae12be08d927446c86c13c61d500d704c9f4cdb314a550717fb59da7e8857a16d0d5aa070acfe80a49044c6550f59da662ad350a1d05a5a7b8572c21
-Size (postfix_mta_sts_resolver-1.1.3.tar.gz) = 25975 bytes
+BLAKE2s (postfix_mta_sts_resolver-1.3.0.tar.gz) = b029cf766d89462232b74e8f20b3c5da49d7f8e787d8e44984e1d50a85d1eb33
+SHA512 (postfix_mta_sts_resolver-1.3.0.tar.gz) = 77cc2639be676a4e570199952761eae8f1aa072a693666d2f6d803aa9bc40ec6fbf7a2ad95949c68e1684d4bf4243ffaa38bdedb6ade6b496855dc4a47d5580f
+Size (postfix_mta_sts_resolver-1.3.0.tar.gz) = 37440 bytes
