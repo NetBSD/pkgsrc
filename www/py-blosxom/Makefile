@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/02 16:34:17 wiz Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
@@ -9,8 +9,7 @@ MASTER_SITES=	http://pyblosxom.github.com/download/
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://pyblosxom.github.com/
-COMMENT=	PyBlosxom is a lightweight file-based weblog system
-
+COMMENT=	Lightweight file-based weblog system
 LICENSE=	mit
 
 DIST_SUBDIR=	${DISTNAME}	# upstream reissued tarball with no changes
@@ -21,8 +20,8 @@ DOC_SUBDIR=	share/doc/pyblosxom
 DOCDIR=		${PREFIX}/${DOC_SUBDIR}
 DOCFILES=	AUTHORS INSTALL LICENSE README.rst UPGRADE WHATSNEW
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pygments<2.6:../../textproc/py-pygments25
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-pygments<2.6:../../textproc/py-pygments25
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 
 INSTALLATION_DIRS=		${DOC_SUBDIR}
 
