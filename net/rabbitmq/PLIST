@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2023/04/13 12:48:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2023/05/02 07:40:53 wiz Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -181,7 +181,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cuttlefish-3.1.0/ebin/cuttl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cuttlefish-3.1.0/ebin/cuttlefish_vmargs.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cuttlefish-3.1.0/priv/erlang_vm.schema
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/dialyzex-1.3.0.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/earmark_parser-1.4.31.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/earmark_parser-1.4.32.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/eetcd-0.3.6/ebin/auth_pb.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/eetcd-0.3.6/ebin/eetcd.app
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/eetcd-0.3.6/ebin/eetcd.beam
@@ -365,7 +365,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/logger-1.14.4.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/makeup-1.1.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/makeup_elixir-0.16.1.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/makeup_erlang-0.1.1.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/nimble_parsec-1.3.0.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/nimble_parsec-1.3.1.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/observer_cli-1.7.3/ebin/observer_cli.app
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/observer_cli-1.7.3/ebin/observer_cli.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/observer_cli-1.7.3/ebin/observer_cli_application.beam
