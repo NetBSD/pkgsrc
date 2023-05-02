@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2711 2023/05/02 16:37:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2712 2023/05/02 16:49:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/python37 to 3.7.16 [nikita 2023-05-02]
 	Removed devel/bzr successor devel/breezy [wiz 2023-05-02]
 	Updated math/py-roman to 4.0 [wiz 2023-05-02]
+	Updated mail/py-postfix-mta-sts-resolver to 1.3.0 [wiz 2023-05-02]
