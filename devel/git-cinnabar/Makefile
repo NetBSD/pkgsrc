@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/04/29 21:45:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/02 10:25:31 wiz Exp $
 
 DISTNAME=	git-cinnabar-0.6.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
+# does not contain the git submodules, please update GITHUB_SUBMODULES below
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
