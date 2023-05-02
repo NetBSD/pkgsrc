@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/08/24 08:08:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/02 16:51:16 wiz Exp $
 bin/khard
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -32,15 +32,18 @@ ${PYSITELIB}/khard/data/template.yaml
 ${PYSITELIB}/khard/formatter.py
 ${PYSITELIB}/khard/formatter.pyc
 ${PYSITELIB}/khard/formatter.pyo
-${PYSITELIB}/khard/helpers.py
-${PYSITELIB}/khard/helpers.pyc
-${PYSITELIB}/khard/helpers.pyo
+${PYSITELIB}/khard/helpers/__init__.py
+${PYSITELIB}/khard/helpers/__init__.pyc
+${PYSITELIB}/khard/helpers/__init__.pyo
+${PYSITELIB}/khard/helpers/interactive.py
+${PYSITELIB}/khard/helpers/interactive.pyc
+${PYSITELIB}/khard/helpers/interactive.pyo
+${PYSITELIB}/khard/helpers/typing.py
+${PYSITELIB}/khard/helpers/typing.pyc
+${PYSITELIB}/khard/helpers/typing.pyo
 ${PYSITELIB}/khard/khard.py
 ${PYSITELIB}/khard/khard.pyc
 ${PYSITELIB}/khard/khard.pyo
-${PYSITELIB}/khard/object_type.py
-${PYSITELIB}/khard/object_type.pyc
-${PYSITELIB}/khard/object_type.pyo
 ${PYSITELIB}/khard/query.py
 ${PYSITELIB}/khard/query.pyc
 ${PYSITELIB}/khard/query.pyo
