@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/02 22:01:50 schmonz Exp $
+bin/fp-checkpassword
+share/doc/fp-checkpassword/README.md
