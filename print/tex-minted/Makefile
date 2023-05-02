@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/01 12:07:38 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/02 17:18:47 wiz Exp $
 
 DISTNAME=	minted
 PKGNAME=	tex-${DISTNAME}-2.7
@@ -24,10 +24,10 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-upquote-[0-9]*:../../print/tex-upquote
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
-PYTHON_VERSIONED_DEPENDENCIES=	pygments
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
