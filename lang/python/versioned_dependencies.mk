@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.95 2023/05/02 17:06:12 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.96 2023/05/02 17:26:53 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: OpenSSL Pillow X babel cairo chardet click coverage cryptography dns hypothesis jinja2 packaging pip pygments rsa setuptools setuptools_scm test test-cov
+#       Possible values: OpenSSL Pillow X babel cairo click coverage cryptography dns hypothesis packaging pip setuptools setuptools_scm test
 #       Default: (nothing)
 #
 
@@ -41,9 +41,6 @@ _PY_VERS_PKG.27.babel=		devel/py27-babel
 _PY_VERS_PKG.default.cairo=	graphics/py-cairo
 _PY_VERS_PKG.27.cairo=		graphics/py-cairo118
 
-_PY_VERS_PKG.default.chardet=	converters/py-chardet
-_PY_VERS_PKG.27.chardet=	converters/py-chardet4
-
 _PY_VERS_PKG.default.click=	devel/py-click
 _PY_VERS_PKG.27.click=		devel/py-click7
 
@@ -60,20 +57,11 @@ _PY_VERS_PKG.27.dns=		net/py-dns1
 _PY_VERS_PKG.default.hypothesis=	devel/py-hypothesis
 _PY_VERS_PKG.27.hypothesis=		devel/py-hypothesis4
 
-_PY_VERS_PKG.default.jinja2=	textproc/py-jinja2
-_PY_VERS_PKG.27.jinja2=		textproc/py27-jinja2
-
 _PY_VERS_PKG.default.packaging=		devel/py-packaging
 _PY_VERS_PKG.27.packaging=		devel/py-packaging2
 
 _PY_VERS_PKG.default.pip=	devel/py-pip
 _PY_VERS_PKG.27.pip=		devel/py-pip20
-
-_PY_VERS_PKG.default.pygments=	textproc/py-pygments
-_PY_VERS_PKG.27.pygments=	textproc/py-pygments25
-
-_PY_VERS_PKG.default.rsa=	security/py-rsa
-_PY_VERS_PKG.27.rsa=		security/py-rsa40
 
 _PY_VERS_PKG.default.setuptools=	devel/py-setuptools
 _PY_VERS_PKG.27.setuptools=		devel/py-setuptools44
@@ -83,10 +71,6 @@ _PY_VERS_PKG.27.setuptools_scm=		devel/py-setuptools_scm5
 
 _PY_VERS_PKG.default.test=	devel/py-test
 _PY_VERS_PKG.27.test=		devel/py-test4
-
-_PY_VERS_PKG.default.test-cov=	devel/py-test-cov
-_PY_VERS_PKG.27.test-cov=	devel/py27-test-cov
-
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 pkg:=	${pattern:C/:.*//}
