@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/08/24 22:26:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/02 16:18:04 wiz Exp $
 
 DISTNAME=	sshfs-3.7.3
 PKGNAME=	fuse-${DISTNAME}
@@ -16,7 +16,8 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c
 USE_TOOLS=	pkg-config
 
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
