@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2023/04/19 08:10:59 adam Exp $
+# $NetBSD: Makefile,v 1.150 2023/05/02 16:18:47 wiz Exp $
 
 DISTNAME=	mpv-0.35.1
 PKGREVISION=	2
@@ -24,7 +24,8 @@ WAF_CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
 WAF_CONFIGURE_ARGS+=	--enable-libmpv-shared
 
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	perl pkg-config
 
