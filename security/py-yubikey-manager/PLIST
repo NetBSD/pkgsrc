@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/27 06:02:54 wiz Exp $
-bin/ykman-3.11
+@comment $NetBSD: PLIST,v 1.4 2023/05/02 07:37:10 wiz Exp $
+bin/ykman-${PYVERSSUFFIX}
 ${PYSITELIB}/ykman/__init__.py
 ${PYSITELIB}/ykman/__init__.pyc
 ${PYSITELIB}/ykman/_cli/__init__.py
