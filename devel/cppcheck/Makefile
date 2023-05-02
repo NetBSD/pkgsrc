@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/04/19 08:09:39 adam Exp $
+# $NetBSD: Makefile,v 1.92 2023/05/02 17:10:49 wiz Exp $
 
 DISTNAME=	cppcheck-2.8
 PKGREVISION=	5
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=		c c++0x
 USE_TOOLS+=		gmake
@@ -29,9 +30,11 @@ MAKE_FLAGS+=		USE_Z3=yes
 #CMAKE_ARGS+=		-DHAVE_RULES=ON
 #CMAKE_ARGS+=		-DUSE_Z3=ON
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-4.[0-5]*) || !empty(CC_VERSION:Mgcc-3.*)
+.if ${CC_VERSION:Mgcc-4.[0-5]*} || ${CC_VERSION:Mgcc-3.*}
 CXXFLAGS+=		-include lib/cxx11emu.h
 .endif
 
@@ -40,8 +43,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 REPLACE_PYTHON+=	htmlreport/cppcheck-htmlreport
 
 TEST_TARGET=		test
-
-PYTHON_VERSIONED_DEPENDENCIES=	pygments
 
 .include "options.mk"
 
