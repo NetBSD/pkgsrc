@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.22 2023/04/19 08:08:27 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2023/05/02 18:06:26 nikita Exp $
 
 BUILDLINK_TREE+=	clang
 
 .if !defined(CLANG_BUILDLINK3_MK)
 CLANG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.clang+=	clang>=14.0
-BUILDLINK_ABI_DEPENDS.clang?=	clang>=15.0.7nb1
+BUILDLINK_API_DEPENDS.clang+=	clang>=14.0<16
+BUILDLINK_ABI_DEPENDS.clang?=	clang>=15.0.7nb1<16
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 BUILDLINK_FILES.clang+=		bin/analyze-build
