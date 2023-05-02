@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/12/15 23:15:24 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/05/02 20:45:05 wiz Exp $
 
-DISTNAME=	nltk-3.8
+DISTNAME=	nltk-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
@@ -34,7 +34,7 @@ TEST_DEPENDS+=	nltk_data-indian-[0-9]*:../../textproc/nltk_data-indian
 TEST_DEPENDS+=	nltk_data-large_grammars-[0-9]*:../../textproc/nltk_data-large_grammars
 TEST_DEPENDS+=	nltk_data-nombank.1.0-[0-9]*:../../textproc/nltk_data-nombank.1.0
 TEST_DEPENDS+=	nltk_data-porter_test-[0-9]*:../../textproc/nltk_data-porter_test
-TEST_DEPENDS+=	nltk_data-omw-[0-9]*:../../textproc/nltk_data-omw
+TEST_DEPENDS+=	nltk_data-omw14-[0-9]*:../../textproc/nltk_data-omw14
 TEST_DEPENDS+=	nltk_data-ptb-[0-9]*:../../textproc/nltk_data-ptb
 TEST_DEPENDS+=	nltk_data-pl196x-[0-9]*:../../textproc/nltk_data-pl196x
 TEST_DEPENDS+=	nltk_data-punkt-[0-9]*:../../textproc/nltk_data-punkt
