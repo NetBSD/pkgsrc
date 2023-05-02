@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2702 2023/05/02 00:13:53 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2703 2023/05/02 06:05:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3797,3 +3797,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gifski to 1.11.0 [pin 2023-05-01]
 	Updated textproc/csvlens to 0.1.13 [pin 2023-05-01]
 	Updated misc/ruby-rainbow to 3.1.1 [taca 2023-05-02]
+	Updated math/py-pythran to 0.13.0 [wiz 2023-05-02]
