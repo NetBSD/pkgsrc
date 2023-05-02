@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2712 2023/05/02 16:49:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2713 2023/05/02 16:51:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/bzr successor devel/breezy [wiz 2023-05-02]
 	Updated math/py-roman to 4.0 [wiz 2023-05-02]
 	Updated mail/py-postfix-mta-sts-resolver to 1.3.0 [wiz 2023-05-02]
+	Updated misc/khard to 0.18.0 [wiz 2023-05-02]
