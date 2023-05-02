@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1383 2023/04/30 13:37:01 taca Exp $
+# $NetBSD: Makefile,v 1.1384 2023/05/02 17:25:32 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1112,7 +1112,6 @@ SUBDIR+=	py-pybtex
 SUBDIR+=	py-pybtex-docutils
 SUBDIR+=	py-pygccxml
 SUBDIR+=	py-pygments
-SUBDIR+=	py-pygments25
 SUBDIR+=	py-pylev
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery

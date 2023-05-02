@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2715 2023/05/02 17:24:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2716 2023/05/02 17:25:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/khard to 0.18.0 [wiz 2023-05-02]
 	Removed devel/py-mccabe06 [wiz 2023-05-02]
 	Removed converters/py-chardet4 [wiz 2023-05-02]
+	Removed textproc/py-pygments25 [wiz 2023-05-02]
