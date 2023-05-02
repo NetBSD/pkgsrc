@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/24 09:18:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/02 06:05:27 wiz Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
+${PYSITELIB}/omp/__init__.py
+${PYSITELIB}/omp/__init__.pyc
+${PYSITELIB}/omp/__init__.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/omp/__init__.py
-${PYSITELIB}/omp/__init__.pyc
-${PYSITELIB}/omp/__init__.pyo
 ${PYSITELIB}/pythran/__init__.py
 ${PYSITELIB}/pythran/__init__.pyc
 ${PYSITELIB}/pythran/__init__.pyo
@@ -2295,6 +2295,9 @@ ${PYSITELIB}/pythran/optimizations/comprehension_patterns.pyo
 ${PYSITELIB}/pythran/optimizations/constant_folding.py
 ${PYSITELIB}/pythran/optimizations/constant_folding.pyc
 ${PYSITELIB}/pythran/optimizations/constant_folding.pyo
+${PYSITELIB}/pythran/optimizations/copyto.py
+${PYSITELIB}/pythran/optimizations/copyto.pyc
+${PYSITELIB}/pythran/optimizations/copyto.pyo
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.py
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.pyc
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.pyo
