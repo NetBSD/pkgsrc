@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/11/22 13:19:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/02 16:55:31 wiz Exp $
 
 DISTNAME=	readme_renderer-37.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,5 +23,4 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
