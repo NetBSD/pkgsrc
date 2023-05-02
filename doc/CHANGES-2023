@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2708 2023/05/02 10:19:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2709 2023/05/02 16:07:09 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3803,3 +3803,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/eigen3 to 3.4.0nb1 [wiz 2023-05-02]
 	Updated finance/gnucash to 5.1 [wiz 2023-05-02]
 	Updated finance/gnucash-docs to 5.1 [wiz 2023-05-02]
+	Updated lang/python37 to 3.7.16 [nikita 2023-05-02]
