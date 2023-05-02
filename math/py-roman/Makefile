@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/02 16:37:49 wiz Exp $
 
-DISTNAME=	roman-3.3
+DISTNAME=	roman-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roman/}
 
@@ -14,6 +13,8 @@ LICENSE=	python-software-foundation
 CONFLICTS+=	${PYPKGPREFIX}-docutils<=0.7
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
