@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2701 2023/05/01 15:48:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2702 2023/05/02 00:13:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3796,3 +3796,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-libxml to 4.1.0 [taca 2023-05-01]
 	Updated graphics/gifski to 1.11.0 [pin 2023-05-01]
 	Updated textproc/csvlens to 0.1.13 [pin 2023-05-01]
+	Updated misc/ruby-rainbow to 3.1.1 [taca 2023-05-02]
