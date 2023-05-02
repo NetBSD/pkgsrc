@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3966 2023/05/02 16:31:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3967 2023/05/02 17:04:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2645,7 +2645,6 @@ SUBDIR+=	py-mando
 SUBDIR+=	py-manticore
 SUBDIR+=	py-maturin
 SUBDIR+=	py-mccabe
-SUBDIR+=	py-mccabe06
 SUBDIR+=	py-memcached
 SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
