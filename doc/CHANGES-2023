@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2705 2023/05/02 07:26:37 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2706 2023/05/02 09:33:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3800,3 +3800,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pythran to 0.13.0 [wiz 2023-05-02]
 	Updated www/p5-libwww to 6.68 [wiz 2023-05-02]
 	Updated editors/mg to 20230501 [nikita 2023-05-02]
+	Updated math/eigen3 to 3.4.0nb1 [wiz 2023-05-02]
