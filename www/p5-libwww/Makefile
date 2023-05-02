@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2022/06/28 11:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2023/05/02 06:17:58 wiz Exp $
 
-DISTNAME=	libwww-perl-6.61
+DISTNAME=	libwww-perl-6.68
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OA/OALDERS/}
 
@@ -36,7 +35,7 @@ TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInterne
 
 USE_LANGUAGES=		# empty
 
-PERL5_PACKLIST=		auto/libwww/perl/.packlist
+PERL5_PACKLIST=		auto/LWP/.packlist
 MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 
 .include "options.mk"
