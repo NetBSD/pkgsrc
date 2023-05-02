@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2022/08/07 16:01:17 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.49 2023/05/02 16:21:02 wiz Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -35,7 +35,9 @@ GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config
-PYTHON_FOR_BUILD_ONLY=	yes
+
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGDIR=			${PREFIX}/share/examples/rsyslog
 
