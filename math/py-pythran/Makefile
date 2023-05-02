@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/02/27 13:07:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/02 06:05:27 wiz Exp $
 
-DISTNAME=	pythran-0.12.1
-PKGREVISION=	1
+DISTNAME=	pythran-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythran/}
@@ -21,9 +20,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
-
-pre-configure:
-	${RM} ${WRKSRC}/third_party/xsimd/arch/xsimd_scalar.hpp.orig
 
 post-install:
 .for bin in pythran pythran-config
