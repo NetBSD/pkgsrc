@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.898 2023/04/27 22:02:33 nikita Exp $
+# $NetBSD: Makefile,v 1.899 2023/05/02 17:26:02 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -497,7 +497,6 @@ SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-ntlm
 SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
-SUBDIR+=	py-rsa40
 SUBDIR+=	py-secretstorage
 SUBDIR+=	py-service_identity
 SUBDIR+=	py-signedjson
