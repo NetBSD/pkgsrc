@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1384 2023/05/02 17:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1385 2023/05/02 20:44:36 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -604,6 +604,7 @@ SUBDIR+=	nltk_data-nombank.1.0
 SUBDIR+=	nltk_data-nonbreaking_prefixes
 SUBDIR+=	nltk_data-nps_chat
 SUBDIR+=	nltk_data-omw
+SUBDIR+=	nltk_data-omw14
 SUBDIR+=	nltk_data-opinion_lexicon
 SUBDIR+=	nltk_data-panlex_swadesh
 SUBDIR+=	nltk_data-paradigms
