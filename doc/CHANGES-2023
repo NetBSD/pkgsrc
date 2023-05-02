@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2718 2023/05/02 17:26:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2719 2023/05/02 20:41:42 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed textproc/py-pygments25 [wiz 2023-05-02]
 	Removed security/py-rsa40 [wiz 2023-05-02]
 	Removed devel/py27-test-cov [wiz 2023-05-02]
+	Updated net/dbip-asn-lite to 2023.05 [fcambus 2023-05-02]
