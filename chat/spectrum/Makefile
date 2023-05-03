@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/04/19 08:09:19 adam Exp $
+# $NetBSD: Makefile,v 1.114 2023/05/03 12:16:18 gdt Exp $
 
 DISTNAME=		spectrum-1.4.8
 PKGREVISION=		83
@@ -20,7 +20,7 @@ USE_LANGUAGES=		c++ c
 
 REPLACE_PYTHON+=		spectrumctl/spectrumctl.py
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_ACCEPTED=	27 # py-xmpppy
+PYTHON_VERSIONS_ACCEPTED=	27 # python code in build system does not work with 3
 
 BUILD_DEFS+=		JABBER_USER JABBER_GROUP
 BUILD_DEFS+=		SPECTRUM_RUN SPECTRUM_DB SPECTRUM_LOG
