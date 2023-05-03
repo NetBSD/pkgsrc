@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2768 2023/05/03 19:08:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2769 2023/05/03 19:25:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-shellingham to 1.5.0.1 [wiz 2023-05-03]
 	Updated misc/py-platformdirs to 3.5.0 [wiz 2023-05-03]
 	Updated textproc/py-docutils to 0.19 [wiz 2023-05-03]
+	Updated lang/go119 to 1.19.9 [bsiegert 2023-05-03]
