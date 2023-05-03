@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2736 2023/05/03 09:29:26 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.2737 2023/05/03 09:34:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3831,3 +3831,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/bzr-gtk [jperkin 2023-05-03]
 	Removed devel/bzrtools [jperkin 2023-05-03]
 	Updated security/cfssl to 1.6.4 [iquiw 2023-05-03]
+	Updated textproc/nltk_data-inaugural to 20230502 [wiz 2023-05-03]
