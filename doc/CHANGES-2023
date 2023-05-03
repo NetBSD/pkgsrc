@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2750 2023/05/03 12:49:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2751 2023/05/03 12:49:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/nltk_data-omw-1.4 version 20230502 [wiz 2023-05-03]
 	Removed x11/xf86-input-hyperpen [wiz 2023-05-03]
 	Removed x11/xf86-input-mutouch [wiz 2023-05-03]
+	Removed x11/xf86-input-penmount [wiz 2023-05-03]
