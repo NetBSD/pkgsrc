@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/05/03 07:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/05/03 12:52:01 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -16,24 +16,21 @@ META_PACKAGE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+DEPENDS+=	xf86-input-elographics-[0-9]*:../../x11/xf86-input-elographics
+.if ${OPSYS} != "SunOS"
+DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
+.endif
 .if ${OPSYS} != "Linux"
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
 .endif
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
-DEPENDS+=	xf86-input-penmount-[0-9]*:../../x11/xf86-input-penmount
+DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
 .endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=	xf86-input-ws-[0-9]*:../../x11/xf86-input-ws
 .endif
-DEPENDS+=	xf86-input-elographics-[0-9]*:../../x11/xf86-input-elographics
-DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
-.if ${OPSYS} != "SunOS"
-DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
-.endif
-DEPENDS+=	xf86-input-mutouch-[0-9]*:../../x11/xf86-input-mutouch
-DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 
 DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
 
