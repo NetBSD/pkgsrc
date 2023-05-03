@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2020/12/02 00:46:31 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/03 23:41:58 gutteridge Exp $
 lib/xfce4/panel/plugins/libweather.la
-share/icons/hicolor/48x48/apps/xfce4-weather.png
+share/icons/hicolor/128x128/apps/org.xfce.panel.weather.png
+share/icons/hicolor/16x16/apps/org.xfce.panel.weather.png
+share/icons/hicolor/32x32/apps/org.xfce.panel.weather.png
+share/icons/hicolor/48x48/apps/org.xfce.panel.weather.png
+share/icons/hicolor/scalable/apps/org.xfce.panel.weather.svg
 share/locale/ar/LC_MESSAGES/xfce4-weather-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-weather-plugin.mo
 share/locale/be/LC_MESSAGES/xfce4-weather-plugin.mo
