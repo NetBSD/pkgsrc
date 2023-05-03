@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2778 2023/05/03 23:24:02 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2779 2023/05/03 23:25:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfce4-thunar to 4.18.6 [gutteridge 2023-05-03]
 	Updated lang/rust to 1.69.0 [he 2023-05-03]
 	Updated devel/xfce4-conf to 4.18.1 [gutteridge 2023-05-03]
+	Updated x11/xfce4-tumbler to 4.18.1 [gutteridge 2023-05-03]
