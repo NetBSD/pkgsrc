@@ -1,0 +1,15 @@
+$NetBSD: patch-extras_CMakeLists.txt,v 1.1 2023/05/03 16:56:31 nikita Exp $
+
+remove check for catch.
+
+--- extras/CMakeLists.txt.orig	2019-10-27 17:30:50 UTC
++++ extras/CMakeLists.txt
+@@ -4,7 +4,7 @@ option(RC_INSTALL_ALL_EXTRAS "Add all possible integra
+ 
+ option(RC_ENABLE_CATCH "Build Catch.hpp support" OFF)
+ if (RC_ENABLE_CATCH OR RC_ENABLE_TESTS OR RC_INSTALL_ALL_EXTRAS)
+-  add_subdirectory(catch)
++  #add_subdirectory(catch)
+ endif()
+ 
+ option(RC_ENABLE_GMOCK "Build Google Mock integration" OFF)
