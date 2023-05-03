@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2770 2023/05/03 19:51:49 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2771 2023/05/03 20:00:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3862,3 +3862,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-docutils to 0.19 [wiz 2023-05-03]
 	Updated lang/go119 to 1.19.9 [bsiegert 2023-05-03]
 	Updated chat/gloox to 1.0.27 [nikita 2023-05-03]
+	Updated net/haproxy to 2.7.8 [adam 2023-05-03]
+	Updated devel/py-flake8-docstrings to 1.7.0 [adam 2023-05-03]
