@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2751 2023/05/03 12:49:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2752 2023/05/03 14:03:24 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/xf86-input-hyperpen [wiz 2023-05-03]
 	Removed x11/xf86-input-mutouch [wiz 2023-05-03]
 	Removed x11/xf86-input-penmount [wiz 2023-05-03]
+	Updated lang/nodejs to 20.0.0 [nikita 2023-05-03]
