@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2735 2023/05/03 09:15:42 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.2736 2023/05/03 09:29:26 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3830,5 +3830,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/yaydl to 0.13.0 [pin 2023-05-03]
 	Removed devel/bzr-gtk [jperkin 2023-05-03]
 	Removed devel/bzrtools [jperkin 2023-05-03]
-	Updated security/cfssl to 1.6.4 [iquiw 2023-05-03]
 	Updated security/cfssl to 1.6.4 [iquiw 2023-05-03]
