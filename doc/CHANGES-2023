@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2744 2023/05/03 09:46:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2745 2023/05/03 09:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/nltk_data-wordnet31 to 20230502 [wiz 2023-05-03]
 	Added textproc/nltk_data-bcp47 version 20230502 [wiz 2023-05-03]
 	Added textproc/nltk_data-extended_omw version 20230502 [wiz 2023-05-03]
+	Added textproc/nltk_data-wordnet2021 version 20230502 [wiz 2023-05-03]
