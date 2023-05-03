@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.982 2023/04/22 00:58:05 manu Exp $
+# $NetBSD: Makefile,v 1.983 2023/05/03 07:20:29 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -513,7 +513,6 @@ SUBDIR+=	xcursor-vanilla-dmz
 SUBDIR+=	xcursorgen
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
-SUBDIR+=	xdbedizzy
 SUBDIR+=	xdesktopwaves
 SUBDIR+=	xdg-user-dirs
 SUBDIR+=	xdialog
