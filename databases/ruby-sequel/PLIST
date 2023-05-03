@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.106 2023/04/08 13:13:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.107 2023/05/03 14:19:36 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.64.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.65.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.66.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.67.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.68.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
@@ -381,6 +382,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/validate_associated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_contexts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
+${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers_generic_type_messages.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/whitelist_security.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/xml_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/sql.rb
