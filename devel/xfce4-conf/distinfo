@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/12/30 17:16:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.16 2023/05/03 23:23:24 gutteridge Exp $
 
-BLAKE2s (xfconf-4.18.0.tar.bz2) = e0b19a5887d717b2c44556444b5ba645dd74765e12e85109c68e4c7c759448d5
-SHA512 (xfconf-4.18.0.tar.bz2) = 49ac3070e44e0c699c157e6c029bf14d932bc1e60b01bc3b4f7451acf403d451ac52e2dfb14fc97298cc774c7a0895616788cdbfc189976805669fcdb7aa47b6
-Size (xfconf-4.18.0.tar.bz2) = 625755 bytes
+BLAKE2s (xfconf-4.18.1.tar.bz2) = be93cef8cee49cb34a4950ab7cb48c5904d80b0e5f95762db1fd4df0c6c8731e
+SHA512 (xfconf-4.18.1.tar.bz2) = cb4cc29497865755df4c9b8db7cbb84f9f2b5ce5eb7216bd5a3e7202424c565a36f4e4592c5ee0035a01fe4df043a87de43a536b0e63e1e200a077631e1c807a
+Size (xfconf-4.18.1.tar.bz2) = 629881 bytes
