@@ -24,10 +24,10 @@ for child in root[0]:
     subdir = child.attrib["subdir"]
     url = child.attrib["url"]
     with open(path + "/Makefile", "w") as f:
-        print(f"""# $NetBSD: split.py,v 1.1 2021/11/24 15:56:18 wiz Exp $
+        print(f"""# $NetBSD: split.py,v 1.2 2023/05/03 09:37:31 wiz Exp $
 
 DISTNAME=	{id}
-PKGNAME=	nltk_data-{id}-20211124
+PKGNAME=	nltk_data-{id}-20230502
 CATEGORIES=	textproc
 DIST_SUBDIR=	${{PKGNAME_NOREV}}
 
@@ -45,5 +45,5 @@ TYPE=		{subdir}
 
 This package contains data from/for {name}.""", file=f)
     with open(path + "/PLIST", "w") as f:
-        print(f"""@comment $NetBSD: split.py,v 1.1 2021/11/24 15:56:18 wiz Exp $
-share/nltk/{subdir}/{id}.zip""", file=f)
+        print(f"""@comment $NetBSD: split.py,v 1.2 2023/05/03 09:37:31 wiz Exp $
+share/nltk_data/{subdir}/{id}.zip""", file=f)
