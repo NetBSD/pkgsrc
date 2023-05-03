@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2776 2023/05/03 22:19:03 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2777 2023/05/03 23:22:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/gcc13-libs version 13.1.0nb1 [wiz 2023-05-03]
 	Updated net/miniupnpc to 2.2.4 [nikita 2023-05-03]
 	Updated sysutils/xfce4-thunar to 4.18.6 [gutteridge 2023-05-03]
+	Updated lang/rust to 1.69.0 [he 2023-05-03]
