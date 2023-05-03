@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/05/03 07:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/05/03 07:25:10 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
@@ -28,7 +28,6 @@ DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
 DEPENDS+=	xf86-input-ws-[0-9]*:../../x11/xf86-input-ws
 .endif
 DEPENDS+=	xf86-input-elographics-[0-9]*:../../x11/xf86-input-elographics
-DEPENDS+=	xf86-input-fpit-[0-9]*:../../x11/xf86-input-fpit
 DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
 .if ${OPSYS} != "SunOS"
 DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
