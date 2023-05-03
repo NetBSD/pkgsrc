@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.27 2021/10/29 16:13:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/05/03 19:07:52 wiz Exp $
+bin/docutils
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
 bin/rst2html5-${PYVERSSUFFIX}
@@ -16,11 +17,15 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.html
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.html
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.html
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
+${PYSITELIB}/docutils/__main__.py
+${PYSITELIB}/docutils/__main__.pyc
+${PYSITELIB}/docutils/__main__.pyo
 ${PYSITELIB}/docutils/core.py
 ${PYSITELIB}/docutils/core.pyc
 ${PYSITELIB}/docutils/core.pyo
@@ -123,6 +128,9 @@ ${PYSITELIB}/docutils/nodes.pyo
 ${PYSITELIB}/docutils/parsers/__init__.py
 ${PYSITELIB}/docutils/parsers/__init__.pyc
 ${PYSITELIB}/docutils/parsers/__init__.pyo
+${PYSITELIB}/docutils/parsers/commonmark_wrapper.py
+${PYSITELIB}/docutils/parsers/commonmark_wrapper.pyc
+${PYSITELIB}/docutils/parsers/commonmark_wrapper.pyo
 ${PYSITELIB}/docutils/parsers/null.py
 ${PYSITELIB}/docutils/parsers/null.pyc
 ${PYSITELIB}/docutils/parsers/null.pyo
@@ -428,9 +436,7 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/pretty.css
-${PYSITELIB}/docutils/writers/s5_html/themes/default/blank.gif
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/framing.css
-${PYSITELIB}/docutils/writers/s5_html/themes/default/iepngfix.htc
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/opera.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/outline.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/pretty.css
