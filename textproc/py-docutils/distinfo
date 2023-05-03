@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/29 16:13:22 adam Exp $
+$NetBSD: distinfo,v 1.28 2023/05/03 19:07:52 wiz Exp $
 
-BLAKE2s (docutils-0.17.1.tar.gz) = aefdc9702ad5a588a6bccebfba72c6205e3bf5600e67c3addfe75dcd3d291582
-SHA512 (docutils-0.17.1.tar.gz) = 5ec2087116bd5356fdffc54f07f6b0355aac5fa9d6caeefa77e8d201fd4706c0d419193c4d9a3964ae493da3091fe2c7dc36b74f81a1e1b9282173658b06e71b
-Size (docutils-0.17.1.tar.gz) = 2016138 bytes
+BLAKE2s (docutils-0.19.tar.gz) = f32fed116e9478568694df508f2e78b2717eb75ab2b3f1b75f82194842b06b43
+SHA512 (docutils-0.19.tar.gz) = fb904a899f2b6f3c07c5079577bd7c52a3182cb85f6a4149391e523498df15bfa317f0c04095b890beeb3f89c2b444875a2a609d880ac4d7fbc3125e46b37ea5
+Size (docutils-0.19.tar.gz) = 2056383 bytes
