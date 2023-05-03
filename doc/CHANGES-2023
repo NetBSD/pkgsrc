@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2753 2023/05/03 14:20:00 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2754 2023/05/03 14:23:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3846,3 +3846,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/xf86-input-penmount [wiz 2023-05-03]
 	Updated lang/nodejs to 20.0.0 [nikita 2023-05-03]
 	Updated databases/ruby-sequel to 5.68.0 [taca 2023-05-03]
+	Removed net/ruby-proxifier [taca 2023-05-03]
