@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2769 2023/05/03 19:25:18 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.2770 2023/05/03 19:51:49 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-platformdirs to 3.5.0 [wiz 2023-05-03]
 	Updated textproc/py-docutils to 0.19 [wiz 2023-05-03]
 	Updated lang/go119 to 1.19.9 [bsiegert 2023-05-03]
+	Updated chat/gloox to 1.0.27 [nikita 2023-05-03]
