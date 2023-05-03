@@ -1,0 +1,5 @@
+The GNU Compiler Collection (GCC) includes front ends for C, C++,
+Objective-C, Fortran, and Go.
+
+This package contains libgccjit, an API for embedding GCC inside
+programs and libraries.
