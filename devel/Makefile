@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3968 2023/05/02 17:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3969 2023/05/03 08:29:17 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -198,7 +198,6 @@ SUBDIR+=	bugzilla
 SUBDIR+=	bugzilla3
 SUBDIR+=	bullet
 SUBDIR+=	byacc
-SUBDIR+=	bzr-gtk
 SUBDIR+=	bzrtools
 SUBDIR+=	c++gsl
 SUBDIR+=	cabal-fmt
