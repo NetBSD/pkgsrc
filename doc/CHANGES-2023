@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2733 2023/05/03 07:34:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2734 2023/05/03 08:31:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3828,3 +3828,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/rterm to 0.0.8 [pin 2023-05-03]
 	Updated chat/senpai to 0.2.0 [pin 2023-05-03]
 	Updated net/yaydl to 0.13.0 [pin 2023-05-03]
+	Removed devel/bzr-gtk [jperkin 2023-05-03]
+	Removed devel/bzrtools [jperkin 2023-05-03]
