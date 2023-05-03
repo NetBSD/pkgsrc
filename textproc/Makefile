@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1385 2023/05/02 20:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.1386 2023/05/03 09:54:04 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -557,6 +557,7 @@ SUBDIR+=	nltk_data-alpino
 SUBDIR+=	nltk_data-averaged_perceptron_tagger
 SUBDIR+=	nltk_data-averaged_perceptron_tagger_ru
 SUBDIR+=	nltk_data-basque_grammars
+SUBDIR+=	nltk_data-bcp47
 SUBDIR+=	nltk_data-biocreative_ppi
 SUBDIR+=	nltk_data-bllip_wsj_no_aux
 SUBDIR+=	nltk_data-book_grammars
@@ -576,6 +577,7 @@ SUBDIR+=	nltk_data-crubadan
 SUBDIR+=	nltk_data-dependency_treebank
 SUBDIR+=	nltk_data-dolch
 SUBDIR+=	nltk_data-europarl_raw
+SUBDIR+=	nltk_data-extended_omw
 SUBDIR+=	nltk_data-floresta
 SUBDIR+=	nltk_data-framenet_v15
 SUBDIR+=	nltk_data-framenet_v17
@@ -604,7 +606,7 @@ SUBDIR+=	nltk_data-nombank.1.0
 SUBDIR+=	nltk_data-nonbreaking_prefixes
 SUBDIR+=	nltk_data-nps_chat
 SUBDIR+=	nltk_data-omw
-SUBDIR+=	nltk_data-omw14
+SUBDIR+=	nltk_data-omw-1.4
 SUBDIR+=	nltk_data-opinion_lexicon
 SUBDIR+=	nltk_data-panlex_swadesh
 SUBDIR+=	nltk_data-paradigms
@@ -657,6 +659,8 @@ SUBDIR+=	nltk_data-webtext
 SUBDIR+=	nltk_data-wmt15_eval
 SUBDIR+=	nltk_data-word2vec_sample
 SUBDIR+=	nltk_data-wordnet
+SUBDIR+=	nltk_data-wordnet2021
+SUBDIR+=	nltk_data-wordnet2022
 SUBDIR+=	nltk_data-wordnet31
 SUBDIR+=	nltk_data-wordnet_ic
 SUBDIR+=	nltk_data-words
