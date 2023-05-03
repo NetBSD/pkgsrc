@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2021/05/02 17:47:30 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/03 18:16:47 wiz Exp $
 
 DISTNAME=	isl-0.24
 CATEGORIES=	math
-MASTER_SITES=	http://isl.gforge.inria.fr/
+MASTER_SITES=	https://libisl.sourceforge.io/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://isl.gforge.inria.fr/
+HOMEPAGE=	https://libisl.sourceforge.io/
 COMMENT=	Integer set library required by gcc graphite
 LICENSE=	mit
 
