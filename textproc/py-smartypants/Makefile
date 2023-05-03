@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2022/01/10 18:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/03 20:16:41 wiz Exp $
 
 DISTNAME=	smartypants-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	textproc python
+# source tarball missing on pypi
 #MASTER_SITES=	${MASTER_SITE_PYPI:=s/smartypants/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leohemsted/}
 GITHUB_PROJECT=	smartypants.py
