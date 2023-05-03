@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.17 2023/04/19 00:16:02 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.18 2023/05/03 16:38:27 nikita Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -30,6 +30,8 @@ TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
 TOOL_DEPENDS+=			py38-expat-[0-9]*:../../textproc/py-expat
 .endif
+
+TOOL_DEPENDS+=			cbindgen>=0.24.3:../../devel/cbindgen
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
