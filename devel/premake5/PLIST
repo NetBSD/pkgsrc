@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/03 17:43:00 nikita Exp $
+bin/premake5
