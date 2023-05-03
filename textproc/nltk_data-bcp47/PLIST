@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/03 09:45:21 wiz Exp $
+share/nltk_data/corpora/bcp47.zip
