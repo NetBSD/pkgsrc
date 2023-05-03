@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/03 09:38:28 wiz Exp $
 
 DISTNAME=	stopwords
-PKGNAME=	nltk_data-stopwords-20211124
+PKGNAME=	nltk_data-stopwords-20230502
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
