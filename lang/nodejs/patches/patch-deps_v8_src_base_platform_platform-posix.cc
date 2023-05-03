@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.11 2022/12/03 17:07:13 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.12 2023/05/03 14:03:09 nikita Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -7,8 +7,8 @@ Remove legacy madvise(2) prototypes, prefer posix_madvise(2) if available.
 Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 (PR port-arm/55533)
 
---- deps/v8/src/base/platform/platform-posix.cc.orig	2022-11-04 14:54:25.000000000 +0000
-+++ deps/v8/src/base/platform/platform-posix.cc
+--- deps/v8/src/base/platform/platform-posix.cc.orig	2023-04-17 23:15:54.000000000 +0200
++++ deps/v8/src/base/platform/platform-posix.cc	2023-05-03 14:19:05.405513040 +0200
 @@ -75,14 +75,6 @@
  #define MAP_ANONYMOUS MAP_ANON
  #endif
@@ -24,7 +24,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #ifndef MADV_FREE
  #define MADV_FREE MADV_DONTNEED
  #endif
-@@ -391,6 +383,10 @@ void* OS::GetRandomMmapAddr() {
+@@ -391,6 +383,10 @@
  #endif
  #endif
  #endif
@@ -35,7 +35,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
    return reinterpret_cast<void*>(raw_addr);
  }
  
-@@ -552,12 +548,10 @@ bool OS::DiscardSystemPages(void* addres
+@@ -553,14 +549,11 @@
      // MADV_FREE_REUSABLE sometimes fails, so fall back to MADV_DONTNEED.
      ret = madvise(address, size, MADV_DONTNEED);
    }
@@ -43,14 +43,16 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 -  int ret = madvise(reinterpret_cast<caddr_t>(address), size, MADV_FREE);
 +#elif defined(POSIX_MADV_DONTNEED)
 +  int ret = posix_madvise(address, size, POSIX_MADV_DONTNEED);
-   if (ret != 0 && errno == ENOSYS)
+   if (ret != 0 && errno == ENOSYS) {
      return true;  // madvise is not available on all systems.
--  if (ret != 0 && errno == EINVAL)
+   }
+-  if (ret != 0 && errno == EINVAL) {
 -    ret = madvise(reinterpret_cast<caddr_t>(address), size, MADV_DONTNEED);
+-  }
  #else
    int ret = madvise(address, size, MADV_DONTNEED);
  #endif
-@@ -772,6 +766,8 @@ int OS::GetCurrentThreadId() {
+@@ -802,6 +795,8 @@
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -59,7 +61,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
  #elif V8_OS_FUCHSIA
-@@ -1045,7 +1041,11 @@ Thread::Thread(const Options& options)
+@@ -1075,7 +1070,11 @@
      : data_(new PlatformData),
        stack_size_(options.stack_size()),
        start_semaphore_(nullptr) {
@@ -71,7 +73,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
    if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -1061,7 +1061,7 @@ static void SetThreadName(const char* na
+@@ -1091,7 +1090,7 @@
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    static_assert(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
