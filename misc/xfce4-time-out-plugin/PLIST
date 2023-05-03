@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/02 03:56:09 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/03 23:40:15 gutteridge Exp $
 lib/xfce4/panel/plugins/libtime-out.la
 share/icons/hicolor/48x48/apps/xfce4-time-out-plugin.png
 share/icons/hicolor/scalable/apps/xfce4-time-out-plugin.svg
@@ -13,6 +13,7 @@ share/locale/de/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/el/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/en_CA/LC_MESSAGES/xfce4-time-out-plugin.mo
+share/locale/en_GB/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/eo/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-time-out-plugin.mo
 share/locale/et/LC_MESSAGES/xfce4-time-out-plugin.mo
