@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/03 09:36:57 wiz Exp $
 
 DISTNAME=	sinica_treebank
-PKGNAME=	nltk_data-sinica_treebank-20211124
+PKGNAME=	nltk_data-sinica_treebank-20230502
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
