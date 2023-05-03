@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/05/17 21:54:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/05/03 15:20:41 triaxx Exp $
 include/GL/freeglut.h
 include/GL/freeglut_ext.h
 include/GL/freeglut_std.h
@@ -11,6 +11,6 @@ lib/cmake/FreeGLUT/FreeGLUTTargets.cmake
 lib/libglut.a
 lib/libglut.so
 lib/libglut.so.3
-lib/libglut.so.3.11.1
+lib/libglut.so.3.12.0
 lib/pkgconfig/freeglut.pc
 lib/pkgconfig/glut.pc
