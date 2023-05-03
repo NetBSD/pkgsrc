@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/08/24 10:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/05/03 18:45:05 wiz Exp $
 
-DISTNAME=	dnspython-2.2.1
+DISTNAME=	dnspython-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnspython/}
@@ -18,9 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 # trio = ['trio']
 # curio = ['curio', 'sniffio']
 # wmi = ['wmi']
-BUILD_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.35.0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.35.0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=4.0.1:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint>=2.7.4:../../devel/py-pylint
