@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/05/03 16:56:31 nikita Exp $
+
+BLAKE2s (rapidcheck-0.0.0.20220314-8fafda42e732164db58003e542196e94a28481f9.tar.gz) = 4ddbac3e47bf83abce17f50cecb9ebc6ab035516e1a7e284d69d5ecd200b9ff8
+SHA512 (rapidcheck-0.0.0.20220314-8fafda42e732164db58003e542196e94a28481f9.tar.gz) = 7a26e349ab6577b6be6c5114d81815f94d8ebd839c81132282173b69662ad458c23b2098f5762c03d85f771fdf4cf04559cb0536ccaba05e474cfb6203cb4d1a
+Size (rapidcheck-0.0.0.20220314-8fafda42e732164db58003e542196e94a28481f9.tar.gz) = 181796 bytes
+SHA1 (patch-ext_CMakeLists.txt) = abc6d4c8f4a126b15dad850930fe8572fda8b679
+SHA1 (patch-extras_CMakeLists.txt) = 66b17512a5888e26e5f8eb4e2e08a4561e1eae6e
+SHA1 (patch-test_CMakeLists.txt) = 72af5a297114a5d7755aff150b7db0ab41b4bfc0

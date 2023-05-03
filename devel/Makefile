@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3970 2023/05/03 08:29:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.3971 2023/05/03 16:56:31 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -3059,6 +3059,7 @@ SUBDIR+=	radare2
 SUBDIR+=	ragel
 SUBDIR+=	rainbow-delimiters-el
 SUBDIR+=	range-v3
+SUBDIR+=	rapidcheck
 SUBDIR+=	rapidsvn
 SUBDIR+=	ratfor
 SUBDIR+=	rcs
