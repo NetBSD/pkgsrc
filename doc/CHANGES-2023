@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2766 2023/05/03 18:50:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2767 2023/05/03 18:52:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3858,3 +3858,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-txtorcon to 23.0.0 [wiz 2023-05-03]
 	Updated misc/py-trove-classifiers to 2023.5.2 [wiz 2023-05-03]
 	Updated misc/py-shellingham to 1.5.0.1 [wiz 2023-05-03]
+	Updated misc/py-platformdirs to 3.5.0 [wiz 2023-05-03]
