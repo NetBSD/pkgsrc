@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2764 2023/05/03 18:47:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2765 2023/05/03 18:49:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3856,3 +3856,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/premake5 version 5.0.0.b2 [nikita 2023-05-03]
 	Updated net/py-dns to 2.3.0 [wiz 2023-05-03]
 	Updated net/py-txtorcon to 23.0.0 [wiz 2023-05-03]
+	Updated misc/py-trove-classifiers to 2023.5.2 [wiz 2023-05-03]
