@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2772 2023/05/03 20:04:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2773 2023/05/03 20:05:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3865,3 +3865,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.7.8 [adam 2023-05-03]
 	Updated devel/py-flake8-docstrings to 1.7.0 [adam 2023-05-03]
 	Added lang/gcc13 version 13.1.0 [wiz 2023-05-03]
+	Added lang/gcc13-libjit version 13.1.0 [wiz 2023-05-03]
