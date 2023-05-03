@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/03 09:48:08 wiz Exp $
+
+BLAKE2s (nltk_data-wordnet2022-20230502/wordnet2022.zip) = 87a990eef9bd750a9b5c1f31f6d9d84eddb870413e0d15695aa12ef4b1c2cf42
+SHA512 (nltk_data-wordnet2022-20230502/wordnet2022.zip) = 2c8758914ade40c3da82137b4e8b8a37995acc71e859af462fbb1f4b8cb020a05049026fd0751d3ad8afb1437f758c0d899c27dd3edd0e7b9fe28eab52e1e949
+Size (nltk_data-wordnet2022-20230502/wordnet2022.zip) = 11353460 bytes
