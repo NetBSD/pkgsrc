@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2023/05/03 12:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.986 2023/05/03 12:49:16 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -532,7 +532,6 @@ SUBDIR+=	xf86-input-elographics
 SUBDIR+=	xf86-input-joystick
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
-SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-penmount
 SUBDIR+=	xf86-input-vmmouse
 SUBDIR+=	xf86-input-void
