@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2729 2023/05/03 07:30:05 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2730 2023/05/03 07:31:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3824,3 +3824,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/xf86-input-fpit [wiz 2023-05-03]
 	Updated sysutils/broot to 1.21.3 [pin 2023-05-03]
 	Updated shells/oh-my-posh to 15.4.1 [pin 2023-05-03]
+	Updated security/polkit-qt5 to 0.114.0 [pin 2023-05-03]
