@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/02 20:44:26 wiz Exp $
-share/nltk_data/corpora/omw-${PKGVERSION}.zip
