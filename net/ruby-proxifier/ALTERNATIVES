@@ -1,2 +1,0 @@
-bin/pirb @PREFIX@/bin/pirb@RUBY_SUFFIX@
-bin/pruby @PREFIX@/bin/pruby@RUBY_SUFFIX@
