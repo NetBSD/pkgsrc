@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:05:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/05/03 19:51:38 nikita Exp $
 
-BLAKE2s (gloox-1.0.17.tar.bz2) = 527ab319220070755f4ba948dbca344449e402ebff7e321c064de0d2ad3a550a
-SHA512 (gloox-1.0.17.tar.bz2) = 8595586da391fa23f54eff7c8eb514e7000d3569eac3846edc28da02ec2da409f46013de93dd6d4b5185965675fc22ff2c96f031afa581e2d9243469b1b419f2
-Size (gloox-1.0.17.tar.bz2) = 698239 bytes
+BLAKE2s (gloox-1.0.27.tar.bz2) = 336ee7e0722d9a2514d9b240534b01bf5a42c489e168a7755ae51afafbe3028c
+SHA512 (gloox-1.0.27.tar.bz2) = 873f7a155894c6e48e02bb4f3731f5140db76c0d3e6a3e91389c47cee805be52c54cd2a103e4d868e62069301ffbf2fc48aea0a6128526804536444f28b87006
+Size (gloox-1.0.27.tar.bz2) = 728128 bytes
 SHA1 (patch-configure) = b14cc132665cbcb722589007c36767c0ddfab25f
 SHA1 (patch-src_connectiontcpserver.cpp) = 17ad7a3b1a9ba47153b72e8b924052e3faf3d09f
-SHA1 (patch-src_dns.cpp) = dfc538e9a059b06b6222c3dffe879105701d504c
-SHA1 (patch-src_examples_e2ee__client.cpp) = 3a28030733fca789769c9361fe21b586aebe1370
-SHA1 (patch-src_examples_e2ee__server.cpp) = eb8c22427def85387b9bf88b665feb1315df878f
-SHA1 (patch-src_examples_ft__recv.cpp) = 3a4431f24b9ad933e7829af23ea99bcd4a488abd
 SHA1 (patch-src_util.h) = 225609b219c76fdf1171a326cf40a9c26fde0a80
