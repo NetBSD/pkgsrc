@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3971 2023/05/03 16:56:31 nikita Exp $
+# $NetBSD: Makefile,v 1.3972 2023/05/03 17:43:00 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -2326,6 +2326,7 @@ SUBDIR+=	polly
 SUBDIR+=	popt
 SUBDIR+=	poxml
 SUBDIR+=	prcs
+SUBDIR+=	premake5
 SUBDIR+=	protobuf
 SUBDIR+=	protobuf-c
 SUBDIR+=	pstreams
