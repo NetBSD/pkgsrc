@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2022/08/11 05:08:40 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/05/03 15:20:41 triaxx Exp $
 
 BUILDLINK_TREE+=	freeglut
 
@@ -16,11 +16,11 @@ pkgbase:=	freeglut
 
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.freeglut:Mwayland)
+.if ${PKG_BUILD_OPTIONS.freeglut:Mwayland}
 .  include "../../devel/wayland/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.freeglut:Mx11)
+.if ${PKG_BUILD_OPTIONS.freeglut:Mx11}
 .  include "../../x11/libXi/buildlink3.mk"
 .  include "../../x11/libXrandr/buildlink3.mk"
 .  include "../../x11/libXxf86vm/buildlink3.mk"
