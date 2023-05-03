@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:11:58 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/05/03 12:22:11 markd Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -96,7 +96,6 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
 # does not support ffmpeg5 as of 5.15.4
