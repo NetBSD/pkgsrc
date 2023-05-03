@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2760 2023/05/03 16:56:53 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2761 2023/05/03 17:43:24 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-socket to 0.1.50 [taca 2023-05-03]
 	Updated textproc/ruby-libxml to 4.1.1 [taca 2023-05-03]
 	Added devel/rapidcheck version 0.0.0.20220314 [nikita 2023-05-03]
+	Updated devel/premake5 to 5.0.0.b2 [nikita 2023-05-03]
