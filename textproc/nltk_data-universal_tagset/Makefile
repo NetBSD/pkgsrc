@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/03 09:40:16 wiz Exp $
 
 DISTNAME=	universal_tagset
-PKGNAME=	nltk_data-universal_tagset-20211124
+PKGNAME=	nltk_data-universal_tagset-20230502
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-
+HOMEPAGE=	https://github.com/slavpetrov/universal-pos-tags
 COMMENT=	NLTK Data - Mappings to the Universal Part-of-Speech Tagset
-#LICENSE=	See the individual grammar files
+LICENSE=	cc-by-sa-v4.0
 
 TYPE=		taggers
 
