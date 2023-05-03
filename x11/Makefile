@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2023/05/03 07:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.985 2023/05/03 12:47:42 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -529,8 +529,6 @@ SUBDIR+=	xephem
 SUBDIR+=	xev
 SUBDIR+=	xeyes
 SUBDIR+=	xf86-input-elographics
-SUBDIR+=	xf86-input-fpit
-SUBDIR+=	xf86-input-hyperpen
 SUBDIR+=	xf86-input-joystick
 SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-input-mouse
