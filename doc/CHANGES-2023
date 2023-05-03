@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2754 2023/05/03 14:23:19 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2755 2023/05/03 14:25:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.0.0 [nikita 2023-05-03]
 	Updated databases/ruby-sequel to 5.68.0 [taca 2023-05-03]
 	Removed net/ruby-proxifier [taca 2023-05-03]
+	Updated devel/hoe to 4.0.3 [taca 2023-05-03]
