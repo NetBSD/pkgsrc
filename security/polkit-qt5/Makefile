@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2023/04/19 08:08:41 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/03 07:30:57 pin Exp $
 
-DISTNAME=	polkit-qt-1-0.112.0
+DISTNAME=	polkit-qt-1-0.114.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt5-/}
-PKGREVISION=	27
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE4.x/admin/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://invent.kde.org/libraries/polkit-qt-1/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://projects.kde.org/projects/kdesupport/polkit-qt-1
+HOMEPAGE=	https://invent.kde.org/libraries/polkit-qt-1
 COMMENT=	Qt5 Wrapper around PolicyKit
 LICENSE=	gnu-lgpl-v2.1
+
+WRKSRC=         ${WRKDIR}/polkit-qt-1-v0.114.0-ccab85232550419100207ed61fe1bbbb35c112ff
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
