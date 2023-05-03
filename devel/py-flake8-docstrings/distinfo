@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/05/03 20:00:36 adam Exp $
 
-BLAKE2s (flake8-docstrings-1.6.0.tar.gz) = 1e8281922522b69360f0fe4bcd668f69dc1a92d4119b9e3c63198e53393b24f9
-SHA512 (flake8-docstrings-1.6.0.tar.gz) = d831b8587452aa3ecb30455af630455ea19b495be53b2ad2f1097ff932543536b82c948857b5357df8a58023290023e76f0373deae490993a6f475f6c73a5088
-Size (flake8-docstrings-1.6.0.tar.gz) = 6170 bytes
+BLAKE2s (flake8_docstrings-1.7.0.tar.gz) = dc08516dc2f94c5b99d66627d9bfc6fc2f8f50ad04a2f0babe581ab5d068519d
+SHA512 (flake8_docstrings-1.7.0.tar.gz) = 43faf3b3024935cc204107e127d72fcb2e15e3d370fdd9a350533a7aab16556b5631ab15b1820a0b6263a7538c15e9937f0c89a13578787f7d0e35291de00980
+Size (flake8_docstrings-1.7.0.tar.gz) = 5995 bytes
