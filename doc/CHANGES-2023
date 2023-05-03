@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2725 2023/05/03 07:20:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2726 2023/05/03 07:23:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3820,3 +3820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-country-lite to 2023.05 [fcambus 2023-05-02]
 	Added sysutils/fp-checkpassword version 0.0.20171108 [schmonz 2023-05-02]
 	Removed x11/xdbedizzy [wiz 2023-05-03]
+	Removed x11/xf86-input-acecad [wiz 2023-05-03]
