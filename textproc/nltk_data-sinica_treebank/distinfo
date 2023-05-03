@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/05/03 09:36:57 wiz Exp $
 
-BLAKE2s (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 53f50e587356043333fff95460a3d7c667274ad180c59161055030585195dd8c
-SHA512 (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 724fb0905cbd0f903c3a75d70aee8a3e6f29e62971c1501efd8bfb3f4c6619e5fd8a285648e7792ea8e86bbda0a2afc6eecae45ad9f361983bf83b756ab52960
-Size (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 899237 bytes
+BLAKE2s (nltk_data-sinica_treebank-20230502/sinica_treebank.zip) = b4b2ee4783c2b87090b28fd91d7c3de73b83906989e6f0bc6a0ba30d1cc07edd
+SHA512 (nltk_data-sinica_treebank-20230502/sinica_treebank.zip) = 22d44e23e89691f775a0e54971fada692aecd7cfa5181d49e9a53d0a96dc3be1beaa1e1ec6840f9b2756c5c16c93f96b571f6b08c175701485afc0c32261cac8
+Size (nltk_data-sinica_treebank-20230502/sinica_treebank.zip) = 906706 bytes
