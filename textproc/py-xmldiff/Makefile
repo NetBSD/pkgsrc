@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 11:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 11:39:23 wiz Exp $
 
 DISTNAME=	xmldiff-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin; \
