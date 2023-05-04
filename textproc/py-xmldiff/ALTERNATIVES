@@ -1,0 +1,2 @@
+bin/xmldiff @PREFIX@/bin/xmldiff-@PYVERSSUFFIX@
+bin/xmlpatch @PREFIX@/bin/xmlpatch-@PYVERSSUFFIX@
