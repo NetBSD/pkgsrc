@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.687 2023/05/03 20:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.688 2023/05/04 07:22:08 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -232,6 +232,7 @@ SUBDIR+=	py-cmake-language-server
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-execjs
 SUBDIR+=	py-executing
+SUBDIR+=	py-findpython
 SUBDIR+=	py-hy
 SUBDIR+=	py-inflect
 SUBDIR+=	py-js2py
