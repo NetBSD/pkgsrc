@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/07/12 05:59:51 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/05/04 11:50:12 wiz Exp $
 
-DISTNAME=	icalendar-4.1.0
+DISTNAME=	icalendar-5.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icalendar/}
@@ -12,8 +12,11 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
