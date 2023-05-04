@@ -1,23 +1,10 @@
-$NetBSD: patch-etc_afpd_quota.c,v 1.4 2023/04/04 18:16:06 bouyer Exp $
-
-SunOS derivatives need to explicitely include mntent.h for MNTTYPE_NFS
+$NetBSD: patch-etc_afpd_quota.c,v 1.5 2023/05/04 16:53:07 hauke Exp $
 
 NetBSD uses a different quota API.
 
---- etc/afpd/quota.c.orig	2023-01-10 10:49:51.000000000 +0100
-+++ etc/afpd/quota.c	2023-03-29 15:54:28.917646712 +0200
-@@ -21,6 +21,10 @@
- #include <unistd.h>
- #include <fcntl.h>
- 
-+#if defined(HAVE_SYS_MNTTAB_H) || defined(__svr4__)
-+#include <sys/mntent.h>
-+#endif
-+
- #include <atalk/logger.h>
- #include <atalk/afp.h>
- #include <atalk/compat.h>
-@@ -32,14 +36,17 @@
+--- etc/afpd/quota.c.orig	2023-04-28 05:16:02.000000000 +0000
++++ etc/afpd/quota.c
+@@ -36,14 +36,17 @@
  #include "unix.h"
  
  #ifdef HAVE_LIBQUOTA
@@ -39,7 +26,7 @@ NetBSD uses a different quota API.
  	time_t now;
  
  	if (time(&now) == -1) {
-@@ -48,33 +55,64 @@
+@@ -52,33 +55,64 @@ getfreespace(const AFPObj *obj, struct v
  		return -1;
  	}
  
@@ -91,11 +78,11 @@ NetBSD uses a different quota API.
  
 -    unbecome_root();
 +	quota_close(qh);
-+
-+	 seteuid( prevuid );
  
 -	if (retq < 1)
 -		return retq;
++	 seteuid( prevuid );
++
 +	if (qv.qv_usage >= qv.qv_hardlimit ||
 +            (qv.qv_usage >= qv.qv_softlimit && now > qv.qv_expiretime)) {
  
@@ -114,16 +101,16 @@ NetBSD uses a different quota API.
 -		*btotal = dbtob(ufsq[QUOTA_LIMIT_BLOCK].ufsqe_hardlimit);
 -		break;
 +		*btotal = dbtob(qv.qv_usage);
- 	}
++	}
 +	else {
 +		*bfree = dbtob(qv.qv_hardlimit - qv.qv_usage);
 +		*btotal = dbtob(qv.qv_hardlimit);
-+	}
+ 	}
 +
  	return 1;
  }
  
-@@ -85,12 +123,12 @@
+@@ -89,12 +123,12 @@ int uquota_getvolspace(const AFPObj *obj
  	VolSpace gbfree, gbtotal;
  
  	uretq = getfreespace(obj, vol, &ubfree, &ubtotal,
