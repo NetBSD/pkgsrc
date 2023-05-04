@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2023/05/04 15:20:52 nikita Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/05/04 17:29:33 nikita Exp $
 # used by wip/0ad-data/Makefile
+# used by games/0ad-data/Makefile
 
 DISTVERSION=	0ad-0.0.26-alpha-unix
 CATEGORIES=	games
