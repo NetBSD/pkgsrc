@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 06:59:56 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 09:22:47 wiz Exp $
 
 DISTNAME=	unearth-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask>=2.1.2:../../www/py-flask
-#TEST_DEPENDS+=	${PYPKGPREFIX}-requests-wsgi-adapter>=0.4.1:../../www/py-flask
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-wsgi-adapter>=0.4.1:../../www/py-requests-wsgi-adapter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=1.0.4:../../devel/py-test-httpserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
@@ -27,6 +27,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} unearth unearth-${PYVERSSUFFIX} || ${TRUE}
 
+# needs 'make install'
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
