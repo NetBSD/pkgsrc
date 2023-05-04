@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/07/01 17:58:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/04 18:15:42 adam Exp $
 
-DISTNAME=	nbclient-0.6.6
+DISTNAME=	nbclient-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclient/}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	Client library for executing notebooks
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.5:../../devel/py-jupyter_client
-DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.0:../../www/py-nbformat
-DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>0:../../devel/py-nest-asyncio
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.2.2:../../devel/py-traitlets
-TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>0:../../devel/py-ipykernel
-TEST_DEPENDS+=	${PYPKGPREFIX}-ipython>0:../../devel/py-ipython
-TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets>0:../../www/py-ipywidgets
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.12:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.1:../../www/py-nbformat
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets-[0-9]*:../../www/py-ipywidgets
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
@@ -33,5 +34,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
