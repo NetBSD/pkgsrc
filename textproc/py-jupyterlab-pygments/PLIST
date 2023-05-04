@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/06 07:46:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/04 19:18:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jupyterlab_pygments/__init__.py
 ${PYSITELIB}/jupyterlab_pygments/__init__.pyc
@@ -11,6 +10,19 @@ ${PYSITELIB}/jupyterlab_pygments/__init__.pyo
 ${PYSITELIB}/jupyterlab_pygments/_version.py
 ${PYSITELIB}/jupyterlab_pygments/_version.pyc
 ${PYSITELIB}/jupyterlab_pygments/_version.pyo
+${PYSITELIB}/jupyterlab_pygments/labextension/package.json
+${PYSITELIB}/jupyterlab_pygments/labextension/static/568.1e2faa2ba0bbe59c4780.js
+${PYSITELIB}/jupyterlab_pygments/labextension/static/747.8eb3ddccc7ec4987bff9.js
+${PYSITELIB}/jupyterlab_pygments/labextension/static/remoteEntry.aa1060b2d1221f8e5688.js
+${PYSITELIB}/jupyterlab_pygments/labextension/static/style.js
+${PYSITELIB}/jupyterlab_pygments/labextension/static/third-party-licenses.json
 ${PYSITELIB}/jupyterlab_pygments/style.py
 ${PYSITELIB}/jupyterlab_pygments/style.pyc
 ${PYSITELIB}/jupyterlab_pygments/style.pyo
+share/jupyter/labextensions/jupyterlab_pygments/install.json
+share/jupyter/labextensions/jupyterlab_pygments/package.json
+share/jupyter/labextensions/jupyterlab_pygments/static/568.1e2faa2ba0bbe59c4780.js
+share/jupyter/labextensions/jupyterlab_pygments/static/747.8eb3ddccc7ec4987bff9.js
+share/jupyter/labextensions/jupyterlab_pygments/static/remoteEntry.aa1060b2d1221f8e5688.js
+share/jupyter/labextensions/jupyterlab_pygments/static/style.js
+share/jupyter/labextensions/jupyterlab_pygments/static/third-party-licenses.json
