@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/04/30 18:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/04 10:03:52 wiz Exp $
 
-DISTNAME=	rope-1.1.1
+DISTNAME=	rope-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rope/}
@@ -11,6 +11,8 @@ COMMENT=	Python refactoring library
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-toolconfig>=1.2.2:../../devel/py-toolconfig
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 

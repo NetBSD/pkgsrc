@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/04/30 18:24:21 wiz Exp $
+$NetBSD: distinfo,v 1.22 2023/05/04 10:03:52 wiz Exp $
 
-BLAKE2s (rope-1.1.1.tar.gz) = 7573a11feaf63b7c21d16ceb5f39dcd59e03f89fc8baeb3e1a19fbd8acab213d
-SHA512 (rope-1.1.1.tar.gz) = aaf664a63ef00e3c844d6999338fe6a3384ddecfe95ef9b7eb213e5c37c9f78f7d2ea59aa7e612487bac5eaaaf7fc8ba499c0d43c740f99a7b3be64c9d7f6e07
-Size (rope-1.1.1.tar.gz) = 274610 bytes
+BLAKE2s (rope-1.7.0.tar.gz) = b4db393c1cb8f5adaa2dbd6145f7d05b5e5cd535e73dd7450040271c8dbf09c3
+SHA512 (rope-1.7.0.tar.gz) = 13cc3a2041c58c142892d1c9e5105ecdaa672e012364a5d4ccf82dbf5110fe0b6f0362b3a0309e9e6b72ab1d267dfc58eae8f3af3a8756f0356a6aff06c09abd
+Size (rope-1.7.0.tar.gz) = 295362 bytes

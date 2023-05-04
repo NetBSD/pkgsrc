@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/30 18:24:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/05/04 10:03:52 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/rope/base/arguments.pyo
 ${PYSITELIB}/rope/base/ast.py
 ${PYSITELIB}/rope/base/ast.pyc
 ${PYSITELIB}/rope/base/ast.pyo
-${PYSITELIB}/rope/base/astutils.py
-${PYSITELIB}/rope/base/astutils.pyc
-${PYSITELIB}/rope/base/astutils.pyo
 ${PYSITELIB}/rope/base/builtins.py
 ${PYSITELIB}/rope/base/builtins.pyc
 ${PYSITELIB}/rope/base/builtins.pyo
@@ -28,9 +25,6 @@ ${PYSITELIB}/rope/base/change.pyo
 ${PYSITELIB}/rope/base/codeanalyze.py
 ${PYSITELIB}/rope/base/codeanalyze.pyc
 ${PYSITELIB}/rope/base/codeanalyze.pyo
-${PYSITELIB}/rope/base/default_config.py
-${PYSITELIB}/rope/base/default_config.pyc
-${PYSITELIB}/rope/base/default_config.pyo
 ${PYSITELIB}/rope/base/evaluate.py
 ${PYSITELIB}/rope/base/evaluate.pyc
 ${PYSITELIB}/rope/base/evaluate.pyo
@@ -46,6 +40,9 @@ ${PYSITELIB}/rope/base/history.pyo
 ${PYSITELIB}/rope/base/libutils.py
 ${PYSITELIB}/rope/base/libutils.pyc
 ${PYSITELIB}/rope/base/libutils.pyo
+${PYSITELIB}/rope/base/nameanalyze.py
+${PYSITELIB}/rope/base/nameanalyze.pyc
+${PYSITELIB}/rope/base/nameanalyze.pyo
 ${PYSITELIB}/rope/base/oi/__init__.py
 ${PYSITELIB}/rope/base/oi/__init__.pyc
 ${PYSITELIB}/rope/base/oi/__init__.pyo
@@ -151,6 +148,9 @@ ${PYSITELIB}/rope/base/resourceobserver.pyo
 ${PYSITELIB}/rope/base/resources.py
 ${PYSITELIB}/rope/base/resources.pyc
 ${PYSITELIB}/rope/base/resources.pyo
+${PYSITELIB}/rope/base/serializer.py
+${PYSITELIB}/rope/base/serializer.pyc
+${PYSITELIB}/rope/base/serializer.pyo
 ${PYSITELIB}/rope/base/simplify.py
 ${PYSITELIB}/rope/base/simplify.pyc
 ${PYSITELIB}/rope/base/simplify.pyo
@@ -166,9 +166,9 @@ ${PYSITELIB}/rope/base/utils/__init__.pyo
 ${PYSITELIB}/rope/base/utils/datastructures.py
 ${PYSITELIB}/rope/base/utils/datastructures.pyc
 ${PYSITELIB}/rope/base/utils/datastructures.pyo
-${PYSITELIB}/rope/base/utils/pycompat.py
-${PYSITELIB}/rope/base/utils/pycompat.pyc
-${PYSITELIB}/rope/base/utils/pycompat.pyo
+${PYSITELIB}/rope/base/versioning.py
+${PYSITELIB}/rope/base/versioning.pyc
+${PYSITELIB}/rope/base/versioning.pyo
 ${PYSITELIB}/rope/base/worder.py
 ${PYSITELIB}/rope/base/worder.pyc
 ${PYSITELIB}/rope/base/worder.pyo
@@ -181,6 +181,9 @@ ${PYSITELIB}/rope/contrib/autoimport/__init__.pyo
 ${PYSITELIB}/rope/contrib/autoimport/defs.py
 ${PYSITELIB}/rope/contrib/autoimport/defs.pyc
 ${PYSITELIB}/rope/contrib/autoimport/defs.pyo
+${PYSITELIB}/rope/contrib/autoimport/models.py
+${PYSITELIB}/rope/contrib/autoimport/models.pyc
+${PYSITELIB}/rope/contrib/autoimport/models.pyo
 ${PYSITELIB}/rope/contrib/autoimport/parse.py
 ${PYSITELIB}/rope/contrib/autoimport/parse.pyc
 ${PYSITELIB}/rope/contrib/autoimport/parse.pyo
