@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/31 19:52:07 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/04 06:09:36 iquiw Exp $
 bin/restic
 man/man1/restic-backup.1
 man/man1/restic-cache.1
 man/man1/restic-cat.1
 man/man1/restic-check.1
+man/man1/restic-copy.1
 man/man1/restic-diff.1
 man/man1/restic-dump.1
 man/man1/restic-find.1
@@ -19,6 +20,7 @@ man/man1/restic-prune.1
 man/man1/restic-rebuild-index.1
 man/man1/restic-recover.1
 man/man1/restic-restore.1
+man/man1/restic-rewrite.1
 man/man1/restic-self-update.1
 man/man1/restic-snapshots.1
 man/man1/restic-stats.1
