@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 10:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 11:40:42 wiz Exp $
 
 DISTNAME=	py-serializable-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1<0.8.0:../../textproc/py-defusedxml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
