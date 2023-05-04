@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2023/04/13 05:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.242 2023/05/04 11:47:34 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -23,7 +23,6 @@ SUBDIR+=	ddate
 SUBDIR+=	deforaos-todo
 SUBDIR+=	devtodo
 SUBDIR+=	emiclock
-SUBDIR+=	etm
 SUBDIR+=	fet
 SUBDIR+=	gcal
 SUBDIR+=	gchore
