@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/05/14 22:25:33 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/04 13:06:00 hauke Exp $
 #
 
 DISTNAME=	riece-9.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://download.savannah.gnu.org/releases/riece/
 LICENSE=	gnu-gpl-v3
@@ -34,7 +34,8 @@ CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
 do-install: plist
 	${INSTALL_DATA} ${WRKSRC}/doc/*.info ${DESTDIR}${EMACS_INFOPREFIX}
 	cd ${WRKSRC}/lisp;						\
-	grep -v '^@' ${PLIST} | grep '/site-lisp/riece/' |		\
+	grep -v '^@' ${PLIST} | 					\
+		grep "${EMACS_LISPPREFIX:C|^${PREFIX}/||}/riece" |	\
 	while read file; do						\
 		file=$$( basename $$file );				\
 		${INSTALL_DATA} $$file ${DESTDIR}${EMACS_LISPPREFIX}/riece; \
