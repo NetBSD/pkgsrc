@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/04 13:47:02 bouyer Exp $
+share/u-boot/udoo-neo-imx6sx/u-boot-with-spl.imx
