@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2813 2023/05/04 17:42:55 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2814 2023/05/04 18:09:08 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-regex to 2023.5.5 [adam 2023-05-04]
 	Updated math/py-pythran to 0.13.1 [adam 2023-05-04]
 	Updated devel/py-ipython to 8.13.2 [adam 2023-05-04]
+	Updated lang/rust-bin to 1.69.0 [he 2023-05-04]
