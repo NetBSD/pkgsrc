@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.528 2023/03/02 04:46:39 charlotte Exp $
+# $NetBSD: Makefile,v 1.529 2023/05/04 15:23:41 nikita Exp $
 #
 
 COMMENT=	Games
 
+SUBDIR+=	0ad
+SUBDIR+=	0ad-data
 SUBDIR+=	0verkill
 SUBDIR+=	2048-cli
 SUBDIR+=	3dpong
