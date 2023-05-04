@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/10/19 13:56:33 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/04 09:47:35 adam Exp $
 
-DISTNAME=	trustme-0.9.0
+DISTNAME=	trustme-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trustme/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/python-trio/trustme
 COMMENT=	Number on quality TLS certs while you wait
 LICENSE=	apache-2.0 OR mit
 
-DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
