@@ -186,6 +186,7 @@ eb			Enable EB dictionary library support.
 ecl			Use Embeddable Common Lisp.
 ecore			Enable ecore library support.
 editline		Enable use of the NetBSD Editline library.
+editor			Build the editor.
 eekboard		Use eekboard for virtual keyboard support.
 efence			Build with Electric Fence malloc() debugger support.
 efnet			Enable tweaks to support EFNet.
