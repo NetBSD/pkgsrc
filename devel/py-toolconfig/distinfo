@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 09:38:36 wiz Exp $
+
+BLAKE2s (pytoolconfig-1.2.5.tar.gz) = 2c479602ce62a5bc7afa12409827f0a27a73cb1bac44c767ecff6c24c6d5c196
+SHA512 (pytoolconfig-1.2.5.tar.gz) = 37753530a166d324ddef0c2e9f0c3d6b2f61252a18ff8037d530b339c8b817cde4087d14b6756690fe10002cbd3442776604ff064d7d16d34289ba859492c920
+Size (pytoolconfig-1.2.5.tar.gz) = 16322 bytes
+SHA1 (patch-pyproject.toml) = 69c5a4472c0dad6c61ebe3dd7bd676017c57d3fa
