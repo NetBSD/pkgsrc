@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2023/01/03 17:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/04 06:37:52 nikita Exp $
 
 DISTNAME=	nvidia-texture-tools-2.1.0
 PKGREVISION=	4
 CATEGORIES=	graphics
+# NOTE: abandoned upstream, archived.
 MASTER_SITES=	${MASTER_SITE_GITHUB:=castano/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
