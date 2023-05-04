@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2815 2023/05/04 18:18:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2816 2023/05/04 18:26:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3919,3 +3919,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-traitlets4 [adam 2023-05-04]
 	Updated parallel/py-ipyparallel to 8.6.1 [adam 2023-05-04]
 	Updated www/py-nbclient to 0.7.4 [adam 2023-05-04]
+	Updated devel/mob to 4.4.1 [schmonz 2023-05-04]
