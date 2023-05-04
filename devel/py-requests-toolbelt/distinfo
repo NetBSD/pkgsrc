@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/10/26 11:10:04 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/05/04 08:04:11 adam Exp $
 
-BLAKE2s (requests-toolbelt-0.10.1.tar.gz) = f72d98fa9dca8e26cb7ac1f6a8e1e6122b2193a276f06398cbaa05cfa33a4c00
-SHA512 (requests-toolbelt-0.10.1.tar.gz) = e4dfc58bd9d84f3590582853345602ba4e0dcb292733cc3c5d92057f5fd1d414bc1058d06d3c825d6f9eb802281592515f24473c6e8a59c91eb8836ad31e45d7
-Size (requests-toolbelt-0.10.1.tar.gz) = 208956 bytes
+BLAKE2s (requests-toolbelt-1.0.0.tar.gz) = 14097492224f38b47744a8ccc385d17c01d843f8a1735042730f0676c5a08283
+SHA512 (requests-toolbelt-1.0.0.tar.gz) = 3ae130789bbe02c6dddec75c6e144a7b0810e5aa6b372d39c8e3430da8ae2a5d9d61fd1f9092b5a565f7806ce8f3af796fdfbc62dab3ba10e015f7185096e299
+Size (requests-toolbelt-1.0.0.tar.gz) = 206888 bytes
