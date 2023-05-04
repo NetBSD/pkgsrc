@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 11:35:13 wiz Exp $
+
+BLAKE2s (xmldiff-2.6.1.tar.gz) = 38ccff08ab7c4683730b739f3b3b4e9d5dc48ca74d4c52d77dd9f6af97cd548b
+SHA512 (xmldiff-2.6.1.tar.gz) = f8a6eab5eec3d995fba2d67c45e99710e0b57ea1d05910e651896009bc89a14b3baebcc9fe1eba49ca52d7e16b47c4480248e42db42f65268afa527199904b0d
+Size (xmldiff-2.6.1.tar.gz) = 85618 bytes
