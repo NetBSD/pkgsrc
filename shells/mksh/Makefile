@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2022/12/19 13:42:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2023/05/04 10:15:53 jperkin Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		shells
 MASTER_SITES=		# maintained locally
 DISTFILES=		# empty
