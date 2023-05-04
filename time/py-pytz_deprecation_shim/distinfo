@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 12:40:09 wiz Exp $
+
+BLAKE2s (pytz_deprecation_shim-0.1.0.post0.tar.gz) = 5345965386960ee493dc5a6ea5eaf57ad7f0b4c027d9f6b09bf1c0eb6171b50b
+SHA512 (pytz_deprecation_shim-0.1.0.post0.tar.gz) = 201eea777f4da9def1b060911da5eaa89652f6716d5608278fdc94a2f67af5ea23a8b667cb181e03d5edd7f0a07f4954047621668f4c2e7bb325dd07f454d0b6
+Size (pytz_deprecation_shim-0.1.0.post0.tar.gz) = 60190 bytes
