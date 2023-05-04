@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/05/04 15:20:52 nikita Exp $
+# $NetBSD: options.mk,v 1.2 2023/05/04 17:29:33 nikita Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.0ad
 PKG_SUPPORTED_OPTIONS+=	tests editor
 
@@ -8,6 +8,8 @@ PLIST_VARS+=		editor tests
 
 .if ${PKG_OPTIONS:Mtests}
 CONFIGURE_TESTS?=
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 PLIST.tests=			yes
 .else
 CONFIGURE_TESTS?=		--without-tests
