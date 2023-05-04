@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2792 2023/05/04 09:44:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2793 2023/05/04 09:48:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3888,3 +3888,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 18.6.2 [adam 2023-05-04]
 	Added devel/py-toolconfig version 1.2.5 [wiz 2023-05-04]
 	Updated x11/libXi to 1.8.1 [wiz 2023-05-04]
+	Updated textproc/py-sphinx to 7.0.0 [adam 2023-05-04]
+	Updated security/py-trustme to 1.0.0 [adam 2023-05-04]
