@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2023/05/04 11:47:34 wiz Exp $
+# $NetBSD: Makefile,v 1.243 2023/05/04 12:40:33 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -168,6 +168,7 @@ SUBDIR+=	py-parsedatetime
 SUBDIR+=	py-pendulum
 SUBDIR+=	py-pytimeparse
 SUBDIR+=	py-pytz
+SUBDIR+=	py-pytz_deprecation_shim
 SUBDIR+=	py-relativetimebuilder
 SUBDIR+=	py-rfc3339
 SUBDIR+=	py-snaptime
