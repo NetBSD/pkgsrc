@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:51:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/05/04 12:30:07 wiz Exp $
 
-BLAKE2s (Js2Py-0.60.tar.gz) = f402bc7701035027c53141f90297e66b7f0114201d4c6eda89c43483a678fb2f
-SHA512 (Js2Py-0.60.tar.gz) = adca62e8313db18b5cfce15ae8d40d45d65a3e5ea02fbe77f91a5e1e0ab90aa664cb852859cad935e63781e48df63dbbbf0cd5f87633d5d01e286179b539b023
-Size (Js2Py-0.60.tar.gz) = 833612 bytes
+BLAKE2s (Js2Py-0.74.tar.gz) = a4f8f48b5447e917a48b0db9b73603d61602bf09c040ce12d601b42cbfb6b5be
+SHA512 (Js2Py-0.74.tar.gz) = cb2f42c2bec0c15dadc301ee0a7ac452cc8c4bba4669e95f1155863590d6d00781883b54d4dab755a0f66eb6e30990fedca732494b1f8b6c07dc29f5203a8c8c
+Size (Js2Py-0.74.tar.gz) = 2504984 bytes
