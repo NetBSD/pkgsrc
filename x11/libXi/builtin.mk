@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2019/11/03 09:14:11 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2023/05/04 09:43:56 wiz Exp $
 
 BUILTIN_PKG:=		libXi
 PKGCONFIG_FILE.libXi=	${X11BASE}/lib/pkgconfig/xi.pc
@@ -33,7 +33,7 @@ USE_BUILTIN.libXi=	no
 .  else
 USE_BUILTIN.libXi=	${IS_BUILTIN.libXi}
 .    if defined(BUILTIN_PKG.libXi) && \
-        !empty(IS_BUILTIN.libXi:M[yY][eE][sS])
+        ${IS_BUILTIN.libXi:tl} == yes
 USE_BUILTIN.libXi=	yes
 .    endif
 .  endif  # PREFER.libXi
