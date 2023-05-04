@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1043 2023/05/02 22:01:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.1044 2023/05/04 13:47:32 bouyer Exp $
 #
 
 COMMENT=	System utilities
@@ -802,6 +802,7 @@ SUBDIR+=	u-boot-rockpro64
 SUBDIR+=	u-boot-rpi3-32
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-tinker
+SUBDIR+=	u-boot-udoo-neo-imx6sx
 SUBDIR+=	u-boot-zynq-zturn
 SUBDIR+=	u-boot-zynq-zybo
 SUBDIR+=	u-boot-zynq-zybo-z7
