@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/04/30 18:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/04 21:06:06 wiz Exp $
 
 DISTNAME=	stone-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,13 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
+# yes, BUILD_DEPENDS as of 3.3.1
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+# doesn't work:
+# E   ModuleNotFoundError: No module named 'test.backend_test_util'
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
