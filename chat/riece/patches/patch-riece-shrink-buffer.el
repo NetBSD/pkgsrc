@@ -1,7 +1,9 @@
-$NetBSD: patch-riece-shrink-buffer.el,v 1.1 2014/11/23 06:13:37 mef Exp $
+$NetBSD: patch-riece-shrink-buffer.el,v 1.2 2023/05/04 14:58:16 hauke Exp $
 
 riece-shrink-buffer.el:70:29:Warning: Use `with-current-buffer' rather than
     save-excursion+set-buffer
+
+From upstream's <http://git.savannah.nongnu.org/cgit/riece.git/commit/lisp/riece-shrink-buffer.el?id=b4088b67b9007699a2d59a4fa6fd334a60a1c84d>
 
 --- lisp/riece-shrink-buffer.el~	2011-04-04 15:46:44.000000000 +0900
 +++ lisp/riece-shrink-buffer.el	2014-06-15 22:01:10.000000000 +0900
@@ -13,7 +15,7 @@ riece-shrink-buffer.el:70:29:Warning: Use `with-current-buffer' rather than
 -    (set-buffer buffer)
 +;  (save-excursion
 +;    (set-buffer buffer)
-+  (with-current-buffer
++  (with-current-buffer buffer
      (goto-char (point-min))
      (while (> (buffer-size) riece-max-buffer-size)
        (let* ((inhibit-read-only t)
