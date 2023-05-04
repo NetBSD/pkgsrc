@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 06:54:35 adam Exp $
+
+BLAKE2s (requests-wsgi-adapter-0.4.1.tar.gz) = fc3d42f279bc8302023e61cf0bbb9bf947cdceb7ec7210155fa82f989a1f154b
+SHA512 (requests-wsgi-adapter-0.4.1.tar.gz) = 8557743b668bdcbb414e4a4afb254573aebdd378a22b0d64392ad669ca2cef91c6f1fbc60cefa8bc0f23a072ffcaa0ffffec7cbbb1c6dfc430068af16192d7ee
+Size (requests-wsgi-adapter-0.4.1.tar.gz) = 3035 bytes
