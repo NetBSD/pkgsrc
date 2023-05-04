@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3973 2023/05/04 05:50:35 adam Exp $
+# $NetBSD: Makefile,v 1.3974 2023/05/04 09:38:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2685,6 +2685,7 @@ SUBDIR+=	py-pathlib2
 SUBDIR+=	py-pathspec
 SUBDIR+=	py-pathvalidate
 SUBDIR+=	py-pbr
+SUBDIR+=	py-pdm
 SUBDIR+=	py-pdm_backend
 SUBDIR+=	py-pebble
 SUBDIR+=	py-pep517
@@ -2986,6 +2987,7 @@ SUBDIR+=	py-testtools
 SUBDIR+=	py-thrift
 SUBDIR+=	py-timeout-decorator
 SUBDIR+=	py-tlsh
+SUBDIR+=	py-toolconfig
 SUBDIR+=	py-toolz
 SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-tox
