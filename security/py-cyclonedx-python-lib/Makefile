@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/03/29 09:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/05/04 11:38:14 wiz Exp $
 
-DISTNAME=	cyclonedx-python-lib-3.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	cyclonedx_python_lib-4.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
 
@@ -10,19 +10,26 @@ HOMEPAGE=	https://github.com/CycloneDX/cyclonedx-python-lib
 COMMENT=	Python library for generating CycloneDX SBOMs
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.9:../../devel/py-packageurl
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=47.0.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-serializable>=0.11.1:../../devel/py-serializable
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.4.0:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.0:../../textproc/py-toml
+TEST_DEPENDS+=	${PYPKGPREFIX}-ddt-[0-9]*:../../devel/py-ddt
+TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff-[0-9]*:../../textproc/py-xmldiff
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYTHON_VERSION} == 307
+.if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.4:../../devel/py-importlib-metadata
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
