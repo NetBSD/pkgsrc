@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2022/11/09 13:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2023/05/04 09:43:56 wiz Exp $
 
-DISTNAME=		libXi-1.8
+DISTNAME=		libXi-1.8.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/

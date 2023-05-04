@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2018/03/07 11:57:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/05/04 09:43:56 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -21,7 +21,7 @@ CHECK_BUILTIN.libXi:=	no
 BUILDLINK_API_DEPENDS.libXi+=	libXi>=1.0.0
 BUILDLINK_PKGSRCDIR.libXi?=	../../x11/libXi
 
-.  if !empty(USE_BUILTIN.libXi:M[Nn][Oo])
+.  if ${USE_BUILTIN.libXi:tl} == no
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.5
 BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1
 .  endif
