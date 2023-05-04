@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2790 2023/05/04 08:16:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2791 2023/05/04 09:39:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-pdm version 2.5.3 [adam 2023-05-04]
 	Updated devel/py-requests-toolbelt to 1.0.0 [adam 2023-05-04]
 	Updated devel/py-faker to 18.6.2 [adam 2023-05-04]
+	Added devel/py-toolconfig version 1.2.5 [wiz 2023-05-04]
