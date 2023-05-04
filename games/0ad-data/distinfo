@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 15:23:41 nikita Exp $
+
+BLAKE2s (0ad-0.0.26-alpha-unix-data.tar.xz) = ff2ad01dfdb3bfbd5f4f3f38301930e18a572e86aafe2239a083e5a9c3f29cac
+SHA512 (0ad-0.0.26-alpha-unix-data.tar.xz) = 8fe29fce68737d5b7001c8c2a7198766583b22556129cd2d927823da9b2c58f224fb1207f35bd03abea9380cf24d00ab6257b0dba86ce3ad1f357d7006f051d6
+Size (0ad-0.0.26-alpha-unix-data.tar.xz) = 1351511480 bytes
