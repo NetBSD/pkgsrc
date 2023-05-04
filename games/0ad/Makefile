@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 15:20:52 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 15:26:02 nikita Exp $
 
 .include "Makefile.common"
 
@@ -18,7 +18,7 @@ USE_TOOLS+=	cmake bash gmake pax perl pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DEPENDS+=		0ad-data-${PKGVERSION}:../../wip/0ad-data
+DEPENDS+=		0ad-data-${PKGVERSION}:../../games/0ad-data
 BUILD_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
 TOOL_DEPENDS+=		python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
