@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/04 12:45:58 wiz Exp $
 
-DISTNAME=	tzlocal-2.1
+DISTNAME=	tzlocal-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzlocal/}
 
@@ -11,9 +10,16 @@ HOMEPAGE=	https://github.com/regebro/tzlocal
 COMMENT=	Python tzinfo object for the local timezone
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-pytz_deprecation_shim-[0-9]*:../../time/py-pytz_deprecation_shim
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# needs 'make install'
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
