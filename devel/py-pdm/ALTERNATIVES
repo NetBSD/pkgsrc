@@ -1,0 +1,1 @@
+bin/pdm @PREFIX@/bin/pdm-@PYVERSSUFFIX@
