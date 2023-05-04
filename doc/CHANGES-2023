@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2817 2023/05/04 19:01:56 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2818 2023/05/04 19:18:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3921,3 +3921,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbclient to 0.7.4 [adam 2023-05-04]
 	Updated devel/mob to 4.4.1 [schmonz 2023-05-04]
 	Updated editors/tp-note to 1.21.1 [pin 2023-05-04]
+	Added devel/py-jupyter_packaging version 0.12.3 [adam 2023-05-04]
+	Updated textproc/py-jupyterlab-pygments to 0.2.2 [adam 2023-05-04]
