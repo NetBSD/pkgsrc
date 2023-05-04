@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2023/03/29 09:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2023/05/04 09:42:10 adam Exp $
 
-DISTNAME=	Sphinx-5.3.0
+DISTNAME=	Sphinx-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -10,16 +10,16 @@ HOMEPAGE=	https://www.sphinx-doc.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.9:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.14:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.18.1:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize>=1.3:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pygments>=2.12:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.13:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.0:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp-[0-9]*:../../textproc/py-sphinxcontrib-applehelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp-[0-9]*:../../textproc/py-sphinxcontrib-devhelp
@@ -27,6 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.0:../../textproc/py-sphinxc
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcontrib-jsmath
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.5:../../textproc/py-sphinxcontrib-serializinghtml
+TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
 
@@ -36,7 +37,7 @@ WHEEL_NAME?=	${DISTNAME:tl:C/-([^0-9])/_\1/g}
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/pyversion.mk"
 
