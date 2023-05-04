@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/25 11:36:41 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/04 17:51:09 adam Exp $
 
 DISTNAME=	jupyter_console-6.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
