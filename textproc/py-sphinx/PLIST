@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2022/10/25 18:36:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2023/05/04 09:42:10 adam Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -186,8 +186,6 @@ ${PYSITELIB}/sphinx/ext/napoleon/__init__.py
 ${PYSITELIB}/sphinx/ext/napoleon/__init__.pyc
 ${PYSITELIB}/sphinx/ext/napoleon/docstring.py
 ${PYSITELIB}/sphinx/ext/napoleon/docstring.pyc
-${PYSITELIB}/sphinx/ext/napoleon/iterators.py
-${PYSITELIB}/sphinx/ext/napoleon/iterators.pyc
 ${PYSITELIB}/sphinx/ext/todo.py
 ${PYSITELIB}/sphinx/ext/todo.pyc
 ${PYSITELIB}/sphinx/ext/viewcode.py
@@ -475,8 +473,6 @@ ${PYSITELIB}/sphinx/search/tr.py
 ${PYSITELIB}/sphinx/search/tr.pyc
 ${PYSITELIB}/sphinx/search/zh.py
 ${PYSITELIB}/sphinx/search/zh.pyc
-${PYSITELIB}/sphinx/setup_command.py
-${PYSITELIB}/sphinx/setup_command.pyc
 ${PYSITELIB}/sphinx/templates/apidoc/module.rst_t
 ${PYSITELIB}/sphinx/templates/apidoc/package.rst_t
 ${PYSITELIB}/sphinx/templates/apidoc/toc.rst_t
@@ -568,21 +564,17 @@ ${PYSITELIB}/sphinx/themes/basic/page.html
 ${PYSITELIB}/sphinx/themes/basic/relations.html
 ${PYSITELIB}/sphinx/themes/basic/search.html
 ${PYSITELIB}/sphinx/themes/basic/searchbox.html
+${PYSITELIB}/sphinx/themes/basic/searchfield.html
 ${PYSITELIB}/sphinx/themes/basic/sourcelink.html
-${PYSITELIB}/sphinx/themes/basic/static/_sphinx_javascript_frameworks_compat.js
 ${PYSITELIB}/sphinx/themes/basic/static/basic.css_t
 ${PYSITELIB}/sphinx/themes/basic/static/doctools.js
 ${PYSITELIB}/sphinx/themes/basic/static/documentation_options.js_t
 ${PYSITELIB}/sphinx/themes/basic/static/file.png
-${PYSITELIB}/sphinx/themes/basic/static/jquery-3.6.0.js
-${PYSITELIB}/sphinx/themes/basic/static/jquery.js
 ${PYSITELIB}/sphinx/themes/basic/static/language_data.js_t
 ${PYSITELIB}/sphinx/themes/basic/static/minus.png
 ${PYSITELIB}/sphinx/themes/basic/static/plus.png
 ${PYSITELIB}/sphinx/themes/basic/static/searchtools.js
 ${PYSITELIB}/sphinx/themes/basic/static/sphinx_highlight.js
-${PYSITELIB}/sphinx/themes/basic/static/underscore-1.13.1.js
-${PYSITELIB}/sphinx/themes/basic/static/underscore.js
 ${PYSITELIB}/sphinx/themes/basic/theme.conf
 ${PYSITELIB}/sphinx/themes/bizstyle/layout.html
 ${PYSITELIB}/sphinx/themes/bizstyle/static/background_b01.png
@@ -668,18 +660,22 @@ ${PYSITELIB}/sphinx/util/build_phase.py
 ${PYSITELIB}/sphinx/util/build_phase.pyc
 ${PYSITELIB}/sphinx/util/cfamily.py
 ${PYSITELIB}/sphinx/util/cfamily.pyc
-${PYSITELIB}/sphinx/util/compat.py
-${PYSITELIB}/sphinx/util/compat.pyc
 ${PYSITELIB}/sphinx/util/console.py
 ${PYSITELIB}/sphinx/util/console.pyc
+${PYSITELIB}/sphinx/util/display.py
+${PYSITELIB}/sphinx/util/display.pyc
 ${PYSITELIB}/sphinx/util/docfields.py
 ${PYSITELIB}/sphinx/util/docfields.pyc
 ${PYSITELIB}/sphinx/util/docstrings.py
 ${PYSITELIB}/sphinx/util/docstrings.pyc
 ${PYSITELIB}/sphinx/util/docutils.py
 ${PYSITELIB}/sphinx/util/docutils.pyc
+${PYSITELIB}/sphinx/util/exceptions.py
+${PYSITELIB}/sphinx/util/exceptions.pyc
 ${PYSITELIB}/sphinx/util/fileutil.py
 ${PYSITELIB}/sphinx/util/fileutil.pyc
+${PYSITELIB}/sphinx/util/http_date.py
+${PYSITELIB}/sphinx/util/http_date.pyc
 ${PYSITELIB}/sphinx/util/i18n.py
 ${PYSITELIB}/sphinx/util/i18n.pyc
 ${PYSITELIB}/sphinx/util/images.py
@@ -688,8 +684,6 @@ ${PYSITELIB}/sphinx/util/inspect.py
 ${PYSITELIB}/sphinx/util/inspect.pyc
 ${PYSITELIB}/sphinx/util/inventory.py
 ${PYSITELIB}/sphinx/util/inventory.pyc
-${PYSITELIB}/sphinx/util/jsdump.py
-${PYSITELIB}/sphinx/util/jsdump.pyc
 ${PYSITELIB}/sphinx/util/logging.py
 ${PYSITELIB}/sphinx/util/logging.pyc
 ${PYSITELIB}/sphinx/util/matching.py
@@ -704,16 +698,10 @@ ${PYSITELIB}/sphinx/util/parallel.py
 ${PYSITELIB}/sphinx/util/parallel.pyc
 ${PYSITELIB}/sphinx/util/png.py
 ${PYSITELIB}/sphinx/util/png.pyc
-${PYSITELIB}/sphinx/util/pycompat.py
-${PYSITELIB}/sphinx/util/pycompat.pyc
 ${PYSITELIB}/sphinx/util/requests.py
 ${PYSITELIB}/sphinx/util/requests.pyc
 ${PYSITELIB}/sphinx/util/rst.py
 ${PYSITELIB}/sphinx/util/rst.pyc
-${PYSITELIB}/sphinx/util/smartypants.py
-${PYSITELIB}/sphinx/util/smartypants.pyc
-${PYSITELIB}/sphinx/util/stemmer/__init__.py
-${PYSITELIB}/sphinx/util/stemmer/__init__.pyc
 ${PYSITELIB}/sphinx/util/tags.py
 ${PYSITELIB}/sphinx/util/tags.pyc
 ${PYSITELIB}/sphinx/util/template.py
