@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3974 2023/05/04 09:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3975 2023/05/04 11:41:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2916,6 +2916,7 @@ SUBDIR+=	py-scard
 SUBDIR+=	py-selectors2
 SUBDIR+=	py-semantic_version
 SUBDIR+=	py-sentry-sdk
+SUBDIR+=	py-serializable
 SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools-rust
