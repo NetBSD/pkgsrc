@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/09/06 19:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/04 18:11:57 adam Exp $
 
-DISTNAME=	ipyparallel-8.4.1
+DISTNAME=	ipyparallel-8.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipyparallel/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	Interactive Parallel Computing with IPython
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=3.0.0-[0-9]*:../../devel/py-jupyterlab
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=3.0.0:../../www/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
@@ -40,7 +39,7 @@ REPLACE_PYTHON+=	ipyparallel/controller/app.py
 REPLACE_PYTHON+=	ipyparallel/controller/heartmonitor.py
 REPLACE_PYTHON+=	ipyparallel/engine/app.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 .for bin in ipcluster ipcontroller ipengine
