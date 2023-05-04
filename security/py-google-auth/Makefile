@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2023/03/05 07:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.50 2023/05/04 11:43:33 wiz Exp $
 
-DISTNAME=	google-auth-2.16.2
+DISTNAME=	google-auth-2.17.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
