@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/30 18:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/04 21:07:52 wiz Exp $
 
 DISTNAME=	textile-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+# yes, BUILD_DEPENDS< as of 3.0.4
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
