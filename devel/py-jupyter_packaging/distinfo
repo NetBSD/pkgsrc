@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/04 19:16:24 adam Exp $
+
+BLAKE2s (jupyter_packaging-0.12.3.tar.gz) = 1d4cd7ac734c6ddec6515dcd508f95187360084c9a4f3a8c1ffaa2dd459ca3eb
+SHA512 (jupyter_packaging-0.12.3.tar.gz) = a81a4b41ba7b31b9d71aa338617ed8567100a64d999e6cd0a14586350bcd37bf9782cbaabad755c0303510bd342ec141af01157cbdc1e4373289700dfc40c3c9
+Size (jupyter_packaging-0.12.3.tar.gz) = 25350 bytes
