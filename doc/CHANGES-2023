@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2811 2023/05/04 17:17:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2812 2023/05/04 17:25:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3911,3 +3911,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/netatalk3 to 3.1.15 [hauke 2023-05-04]
 	Updated devel/abseil to 20230125.3 [adam 2023-05-04]
 	Updated net/grpc to 1.54.1 [adam 2023-05-04]
+	Updated devel/py-ruamel-yaml to 0.17.22 [adam 2023-05-04]
+	Updated textproc/py-regex to 2023.5.5 [adam 2023-05-04]
