@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/04/23 22:38:03 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 20:49:14 joerg Exp $
 
 DISTNAME=	tabularray
 PKGNAME=	tex-${DISTNAME}-2023A
-TEXLIVE_REV=	66281
+TEXLIVE_REV=	66276
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tabularray
