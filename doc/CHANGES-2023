@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2809 2023/05/04 16:45:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2810 2023/05/04 16:53:20 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3908,3 +3908,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/0ad-data version 0.0.26.alpha [nikita 2023-05-04]
 	Updated multimedia/mkvtoolnix to 76.0 [adam 2023-05-04]
 	Updated lang/nodejs to 20.1.0 [adam 2023-05-04]
+	Updated net/netatalk3 to 3.1.15 [hauke 2023-05-04]
