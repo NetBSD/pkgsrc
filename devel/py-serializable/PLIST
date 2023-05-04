@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/04 10:51:34 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/serializable/__init__.py
+${PYSITELIB}/serializable/__init__.pyc
+${PYSITELIB}/serializable/__init__.pyo
+${PYSITELIB}/serializable/formatters.py
+${PYSITELIB}/serializable/formatters.pyc
+${PYSITELIB}/serializable/formatters.pyo
+${PYSITELIB}/serializable/helpers.py
+${PYSITELIB}/serializable/helpers.pyc
+${PYSITELIB}/serializable/helpers.pyo
+${PYSITELIB}/serializable/py.typed
