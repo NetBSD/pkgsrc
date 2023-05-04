@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2786 2023/05/04 06:10:35 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.2787 2023/05/04 06:22:32 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3879,3 +3879,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/xfce4-timer-plugin to 1.7.2 [gutteridge 2023-05-03]
 	Added devel/py-pdm_backend version 2.0.6 [adam 2023-05-04]
 	Updated sysutils/restic to 0.15.2 [iquiw 2023-05-04]
+	Updated sysutils/fzf to 0.40.0 [iquiw 2023-05-04]
