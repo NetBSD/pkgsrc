@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2818 2023/05/04 19:18:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2819 2023/05/04 21:58:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3923,3 +3923,20 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.1 [pin 2023-05-04]
 	Added devel/py-jupyter_packaging version 0.12.3 [adam 2023-05-04]
 	Updated textproc/py-jupyterlab-pygments to 0.2.2 [adam 2023-05-04]
+	Updated devel/ruby-atk to 4.1.4 [tsutsui 2023-05-04]
+	Updated devel/ruby-gio2 to 4.1.4 [tsutsui 2023-05-04]
+	Updated devel/ruby-glib2 to 4.1.4 [tsutsui 2023-05-04]
+	Updated devel/ruby-gobject-introspection to 4.1.4 [tsutsui 2023-05-04]
+	Updated devel/ruby-pango to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-cairo-gobject to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-clutter to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-clutter-gdk to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-clutter-gtk to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-gdk3 to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.1.4 [tsutsui 2023-05-04]
+	Updated graphics/ruby-rsvg2 to 4.1.4 [tsutsui 2023-05-04]
+	Updated multimedia/ruby-clutter-gstreamer to 4.1.4 [tsutsui 2023-05-04]
+	Updated multimedia/ruby-gstreamer to 4.1.4 [tsutsui 2023-05-04]
+	Updated print/ruby-poppler to 4.1.4 [tsutsui 2023-05-04]
+	Updated x11/ruby-gtk3 to 4.1.4 [tsutsui 2023-05-04]
+	Updated x11/ruby-gtksourceview3 to 4.1.4 [tsutsui 2023-05-04]
