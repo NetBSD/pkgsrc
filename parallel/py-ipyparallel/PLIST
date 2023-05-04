@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/09/06 19:44:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/05/04 18:11:57 adam Exp $
 bin/ipcluster-${PYVERSSUFFIX}
 bin/ipcontroller-${PYVERSSUFFIX}
 bin/ipengine-${PYVERSSUFFIX}
@@ -112,9 +112,9 @@ ${PYSITELIB}/ipyparallel/joblib.pyc
 ${PYSITELIB}/ipyparallel/labextension/package.json
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/package.json.orig
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/plugin.json
-${PYSITELIB}/ipyparallel/labextension/static/114.66e59b086d0542d83a0b.js
-${PYSITELIB}/ipyparallel/labextension/static/592.2b7ed5c4c82a6ff40ff1.js
-${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.bcf4d9d80e97b7f03355.js
+${PYSITELIB}/ipyparallel/labextension/static/114.b63b1cb1deb6ab07694a.js
+${PYSITELIB}/ipyparallel/labextension/static/592.2265e4df71d8ba0dbbf6.js
+${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.f5bc00ef0248261af0b1.js
 ${PYSITELIB}/ipyparallel/labextension/static/style.js
 ${PYSITELIB}/ipyparallel/labextension/static/third-party-licenses.json
 ${PYSITELIB}/ipyparallel/logger.py
@@ -197,9 +197,9 @@ ${PYSITELIB}/ipyparallel/util.pyc
 share/jupyter/labextensions/ipyparallel-labextension/package.json
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/package.json.orig
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/plugin.json
-share/jupyter/labextensions/ipyparallel-labextension/static/114.66e59b086d0542d83a0b.js
-share/jupyter/labextensions/ipyparallel-labextension/static/592.2b7ed5c4c82a6ff40ff1.js
-share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.bcf4d9d80e97b7f03355.js
+share/jupyter/labextensions/ipyparallel-labextension/static/114.b63b1cb1deb6ab07694a.js
+share/jupyter/labextensions/ipyparallel-labextension/static/592.2265e4df71d8ba0dbbf6.js
+share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.f5bc00ef0248261af0b1.js
 share/jupyter/labextensions/ipyparallel-labextension/static/style.js
 share/jupyter/labextensions/ipyparallel-labextension/static/third-party-licenses.json
 share/jupyter/nbextensions/ipyparallel/clusterlist.css
