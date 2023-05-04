@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2806 2023/05/04 13:48:25 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.2807 2023/05/04 15:24:10 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3904,3 +3904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added time/py-pytz_deprecation_shim version 0.1.0.0 [wiz 2023-05-04]
 	Updated time/py-tzlocal to 4.3 [wiz 2023-05-04]
 	Added sysutils/u-boot-udoo-neo-imx6sx version 2021.01 [bouyer 2023-05-04]
+	Added games/0ad version 0.0.26.alpha [nikita 2023-05-04]
