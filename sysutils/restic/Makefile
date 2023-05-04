@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2023/04/05 20:47:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/04 06:09:36 iquiw Exp $
 
-PKGNAME=	restic-0.12.1
-PKGREVISION=	19
-DISTNAME=	restic-${GITHUB_TAG}
+DISTNAME=	restic-0.15.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
-GITHUB_PROJECT=	restic
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	iku.iwasa@gmail.com
+MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://restic.net/
 COMMENT=	Fast, secure, efficient backup program
 LICENSE=	mit
@@ -32,6 +29,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-cache.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-cat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-check.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-copy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-diff.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-dump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-find.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -47,6 +45,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-rebuild-index.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-recover.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-restore.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-rewrite.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-self-update.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-snapshots.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-stats.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
