@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/30 20:18:08 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/04 20:54:40 nikita Exp $
 
 .include "Makefile.common"
 
@@ -24,5 +24,7 @@ PLIST_SUBST+=		CHICKEN_BINARY_VERSION=${CHICKEN_BINARY_VERSION:Q}
 PRINT_PLIST_AWK+=	{ sub("/${CHICKEN_BINARY_VERSION}/", "/$${CHICKEN_BINARY_VERSION}/") }
 PRINT_PLIST_AWK+=	{ sub(".so.${CHICKEN_BINARY_VERSION}$$", ".so.$${CHICKEN_BINARY_VERSION}") }
 
+# on why chicken5-boot, see this upstream ticket:
+# http://bugs.call-cc.org/ticket/1776
 .include "../../lang/chicken5-boot/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
