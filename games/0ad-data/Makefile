@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 15:23:41 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/04 15:26:02 nikita Exp $
 
-.include "../../wip/0ad/Makefile.common"
+.include "../../games/0ad/Makefile.common"
 
 DISTNAME=	${DISTVERSION}-data
 PKGNAME=	${DISTNAME:S/-unix-data//:S/0ad-/0ad-data-/:S/-alpha/.alpha/}
