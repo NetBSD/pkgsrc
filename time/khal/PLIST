@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/08/24 08:07:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/05/04 09:58:19 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -26,6 +26,9 @@ ${PYSITELIB}/khal/configwizard.pyo
 ${PYSITELIB}/khal/controllers.py
 ${PYSITELIB}/khal/controllers.pyc
 ${PYSITELIB}/khal/controllers.pyo
+${PYSITELIB}/khal/custom_types.py
+${PYSITELIB}/khal/custom_types.pyc
+${PYSITELIB}/khal/custom_types.pyo
 ${PYSITELIB}/khal/exceptions.py
 ${PYSITELIB}/khal/exceptions.pyc
 ${PYSITELIB}/khal/exceptions.pyo
