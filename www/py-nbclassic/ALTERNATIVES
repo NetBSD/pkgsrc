@@ -1,0 +1,4 @@
+bin/jupyter-nbclassic @PREFIX@/bin/jupyter-nbclassic-@PYVERSSUFFIX@
+bin/jupyter-nbclassic-bundlerextension @PREFIX@/bin/jupyter-nbclassic-bundlerextension-@PYVERSSUFFIX@
+bin/jupyter-nbclassic-extension @PREFIX@/bin/jupyter-nbclassic-extension-@PYVERSSUFFIX@
+bin/jupyter-nbclassic-serverextension @PREFIX@/bin/jupyter-nbclassic-serverextension-@PYVERSSUFFIX@
