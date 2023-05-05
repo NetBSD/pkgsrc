@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/11 19:56:13 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.13 2023/05/05 08:54:00 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
 ${PYSITELIB}/humanize/__init__.py
 ${PYSITELIB}/humanize/__init__.pyc
-${PYSITELIB}/humanize/__init__.pyo
 ${PYSITELIB}/humanize/filesize.py
 ${PYSITELIB}/humanize/filesize.pyc
-${PYSITELIB}/humanize/filesize.pyo
 ${PYSITELIB}/humanize/i18n.py
 ${PYSITELIB}/humanize/i18n.pyc
-${PYSITELIB}/humanize/i18n.pyo
+${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/bn_BD/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/bn_BD/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/ca_ES/LC_MESSAGES/humanize.mo
@@ -22,8 +22,12 @@ ${PYSITELIB}/humanize/locale/da_DK/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/da_DK/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/de_DE/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/de_DE/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/el_GR/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/el_GR/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/es_ES/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/es_ES/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/eu/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/eu/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/fa_IR/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/fa_IR/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/fi_FI/LC_MESSAGES/humanize.mo
@@ -66,7 +70,6 @@ ${PYSITELIB}/humanize/locale/zh_HK/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/zh_HK/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/number.py
 ${PYSITELIB}/humanize/number.pyc
-${PYSITELIB}/humanize/number.pyo
+${PYSITELIB}/humanize/py.typed
 ${PYSITELIB}/humanize/time.py
 ${PYSITELIB}/humanize/time.pyc
-${PYSITELIB}/humanize/time.pyo
