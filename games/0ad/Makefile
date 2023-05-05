@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/04 17:29:33 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/05 00:08:13 nikita Exp $
 
 .include "Makefile.common"
 
@@ -59,14 +59,18 @@ INSTALLATION_DIRS+=	share/pixmaps
 CFLAGS+=	-msse
 .endif
 
+MAKE_FLAGS+=	config=release
+MAKE_FLAGS+=	verbose=1
+MAKE_FLAGS+=	-j ${_MAKE_JOBS_N:U1}
+MAKE_ENV+=	JOBS=${_MAKE_JOBS_N:U1}
+BUILD_DIRS=	build/workspaces/gcc
+
 .include "options.mk"
 
 # nvtt, notes from gentoo:
 # Build bundled NVTT
 # nvtt is abandoned upstream and 0ad has forked it and added fixes.
 # Use their copy. bug #768930
-# --with-system-nvtt
-
 do-configure:
 	${RUN} cd ${WRKSRC}/build/workspaces && ./clean-workspaces.sh
 	${RUN} cd ${WRKSRC}/build/workspaces && ./update-workspaces.sh \
@@ -77,11 +81,6 @@ do-configure:
 		--with-system-mozjs \
 		--without-pch \
 		${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
-
-do-build:
-	${RUN} cd ${WRKSRC} && \
-		${GMAKE} config=release verbose=1 -j ${_MAKE_JOBS_N:U1} \
-		-C build/workspaces/gcc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
@@ -106,7 +105,7 @@ do-install:
 		libsimulation2.a libtinygettext.a libCollada.so \
 		libnvcore.so libnvimage.so libnvmath.so libnvtt.so \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
-	# hack. figure out where to set the rpath in the cmake build of the bundled nvtt.
+	# TODO: second part of rpath is missing after build
 .for f in libnvcore libnvimage libnvmath libnvtt
 	${PREFIX}/bin/patchelf \
 		--force-rpath \

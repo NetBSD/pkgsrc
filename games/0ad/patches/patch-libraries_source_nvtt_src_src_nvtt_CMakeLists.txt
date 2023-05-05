@@ -1,0 +1,17 @@
+$NetBSD: patch-libraries_source_nvtt_src_src_nvtt_CMakeLists.txt,v 1.1 2023/05/05 00:08:13 nikita Exp $
+
+Revert patch by upstream.
+
+--- libraries/source/nvtt/src/src/nvtt/CMakeLists.txt.orig	2023-05-05 01:17:21.236120624 +0200
++++ libraries/source/nvtt/src/src/nvtt/CMakeLists.txt	2023-05-05 01:17:49.911281699 +0200
+@@ -42,10 +42,6 @@
+ ADD_DEFINITIONS(-DNVTT_EXPORTS)
+ 
+ IF(NVTT_SHARED)
+-    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+-        SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,origin")
+-    ENDIF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+-
+     ADD_DEFINITIONS(-DNVTT_SHARED=1)
+     ADD_LIBRARY(nvtt SHARED ${NVTT_SRCS})
+ ELSE(NVTT_SHARED)
