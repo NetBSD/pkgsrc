@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/11/23 22:21:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/05 09:38:48 wiz Exp $
 
-DISTNAME=	pygls-0.13.0
+DISTNAME=	pygls-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
@@ -13,9 +13,10 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.10.2:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-lsprotocol-[0-9]*:../../lang/py-lsprotocol
 DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10.0:../../devel/py-typeguard
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=4.0.3:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.18.3:../../devel/py-test-asyncio
 
