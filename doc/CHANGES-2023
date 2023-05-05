@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2819 2023/05/04 21:58:06 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.2820 2023/05/05 01:37:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/ruby-poppler to 4.1.4 [tsutsui 2023-05-04]
 	Updated x11/ruby-gtk3 to 4.1.4 [tsutsui 2023-05-04]
 	Updated x11/ruby-gtksourceview3 to 4.1.4 [tsutsui 2023-05-04]
+	Updated sysutils/xfce4-mount-plugin to 1.1.6 [gutteridge 2023-05-05]
