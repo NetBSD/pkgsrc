@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1706 2023/05/04 07:00:40 adam Exp $
+# $NetBSD: Makefile,v 1.1707 2023/05/05 10:16:16 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -897,6 +897,7 @@ SUBDIR+=	py-wtforms-sqlalchemy
 SUBDIR+=	py-wtforms-test
 SUBDIR+=	py-yarl
 SUBDIR+=	py-zope.proxy
+SUBDIR+=	py27-idna
 SUBDIR+=	qDecoder
 SUBDIR+=	qt6-qthttpserver
 SUBDIR+=	qt6-qtwebchannel
