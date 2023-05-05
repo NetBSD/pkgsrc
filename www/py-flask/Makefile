@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/03/29 09:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/05 11:47:38 wiz Exp $
 
-DISTNAME=	Flask-2.2.3
+DISTNAME=	Flask-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask/}
@@ -10,13 +10,16 @@ HOMEPAGE=	http://flask.pocoo.org/
 COMMENT=	Python web microframework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.0:../../security/py-itsdangerous
-DEPENDS+=	${PYPKGPREFIX}-click>=8.0:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.2:../../www/py-werkzeug
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-blinker>=1.6.2:../../devel/py-blinker
+DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.1.2:../../security/py-itsdangerous
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.3.0:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/pyversion.mk"
 
@@ -24,18 +27,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
 .endif
 
-USE_PKG_RESOURCES=	yes
-
 USE_LANGUAGES=	# none
-
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} flask flask-${PYVERSSUFFIX} || ${TRUE}
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
