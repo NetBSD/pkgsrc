@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/02/09 17:12:19 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/05 18:00:52 adam Exp $
 
-PKGNAME=	oracle-jdk17-17.0.6
+PKGNAME=	oracle-jdk17-17.0.7
 CATEGORIES=	lang java
 MASTER_SITES=	https://download.oracle.com/java/17/archive/
 
