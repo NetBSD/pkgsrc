@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2839 2023/05/05 09:15:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2840 2023/05/05 09:20:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3964,3 +3964,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-feedgenerator to 2.1.0 [wiz 2023-05-05]
 	Updated www/py-bleach to 6.0.0 [adam 2023-05-05]
 	Updated www/py-nbconvert to 7.3.1 [adam 2023-05-05]
+	Added lang/py-lsprotocol version 2023.0.0a1 [wiz 2023-05-05]
