@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2865 2023/05/05 15:43:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2866 2023/05/05 17:53:27 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4000,3 +4000,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-scipy to 1.10.1 [adam 2023-05-05]
 	Updated www/py-terminado to 0.17.1 [adam 2023-05-05]
 	Updated www/py-werkzeug to 2.3.3 [wiz 2023-05-05]
+	Updated multimedia/streamlink to 5.5.0 [yhardy 2023-05-05]
