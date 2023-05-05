@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1708 2023/05/05 10:39:44 adam Exp $
+# $NetBSD: Makefile,v 1.1709 2023/05/05 11:01:09 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -821,10 +821,12 @@ SUBDIR+=	py-mod_wsgi
 SUBDIR+=	py-model_mommy
 SUBDIR+=	py-moin
 SUBDIR+=	py-multipart
+SUBDIR+=	py-nbclassic
 SUBDIR+=	py-nbclient
 SUBDIR+=	py-nbconvert
 SUBDIR+=	py-nbformat
 SUBDIR+=	py-notebook
+SUBDIR+=	py-notebook_shim
 SUBDIR+=	py-parsel
 SUBDIR+=	py-paste
 SUBDIR+=	py-pelican
