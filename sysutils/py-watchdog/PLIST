@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/14 17:24:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/05 11:39:41 wiz Exp $
 bin/watchmedo-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -46,6 +46,7 @@ ${PYSITELIB}/watchdog/observers/read_directory_changes.pyo
 ${PYSITELIB}/watchdog/observers/winapi.py
 ${PYSITELIB}/watchdog/observers/winapi.pyc
 ${PYSITELIB}/watchdog/observers/winapi.pyo
+${PYSITELIB}/watchdog/py.typed
 ${PYSITELIB}/watchdog/tricks/__init__.py
 ${PYSITELIB}/watchdog/tricks/__init__.pyc
 ${PYSITELIB}/watchdog/tricks/__init__.pyo
@@ -64,6 +65,9 @@ ${PYSITELIB}/watchdog/utils/dirsnapshot.pyo
 ${PYSITELIB}/watchdog/utils/echo.py
 ${PYSITELIB}/watchdog/utils/echo.pyc
 ${PYSITELIB}/watchdog/utils/echo.pyo
+${PYSITELIB}/watchdog/utils/event_debouncer.py
+${PYSITELIB}/watchdog/utils/event_debouncer.pyc
+${PYSITELIB}/watchdog/utils/event_debouncer.pyo
 ${PYSITELIB}/watchdog/utils/patterns.py
 ${PYSITELIB}/watchdog/utils/patterns.pyc
 ${PYSITELIB}/watchdog/utils/patterns.pyo
