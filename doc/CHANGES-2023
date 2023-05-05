@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2855 2023/05/05 11:39:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2856 2023/05/05 11:43:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-notebook to 6.5.4 [adam 2023-05-05]
 	Updated www/py-widgetsnbextension to 4.0.7 [adam 2023-05-05]
 	Updated sysutils/py-watchdog to 3.0.0 [wiz 2023-05-05]
+	Updated www/py-werkzeug to 2.3.2 [wiz 2023-05-05]
