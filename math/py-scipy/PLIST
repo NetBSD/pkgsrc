@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/10/05 20:54:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/05/05 14:59:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -24,12 +24,6 @@ ${PYSITELIB}/scipy/_build_utils/_fortran.pyo
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.py
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.pyc
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.pyo
-${PYSITELIB}/scipy/_build_utils/copyfiles.py
-${PYSITELIB}/scipy/_build_utils/copyfiles.pyc
-${PYSITELIB}/scipy/_build_utils/copyfiles.pyo
-${PYSITELIB}/scipy/_build_utils/cythoner.py
-${PYSITELIB}/scipy/_build_utils/cythoner.pyc
-${PYSITELIB}/scipy/_build_utils/cythoner.pyo
 ${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.py
 ${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.pyc
 ${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.pyo
@@ -66,6 +60,9 @@ ${PYSITELIB}/scipy/_lib/_disjoint_set.pyo
 ${PYSITELIB}/scipy/_lib/_docscrape.py
 ${PYSITELIB}/scipy/_lib/_docscrape.pyc
 ${PYSITELIB}/scipy/_lib/_docscrape.pyo
+${PYSITELIB}/scipy/_lib/_finite_differences.py
+${PYSITELIB}/scipy/_lib/_finite_differences.pyc
+${PYSITELIB}/scipy/_lib/_finite_differences.pyo
 ${PYSITELIB}/scipy/_lib/_fpumode.so
 ${PYSITELIB}/scipy/_lib/_gcutils.py
 ${PYSITELIB}/scipy/_lib/_gcutils.pyc
@@ -180,6 +177,27 @@ ${PYSITELIB}/scipy/constants/tests/__init__.py
 ${PYSITELIB}/scipy/constants/tests/meson.build
 ${PYSITELIB}/scipy/constants/tests/test_codata.py
 ${PYSITELIB}/scipy/constants/tests/test_constants.py
+${PYSITELIB}/scipy/datasets/__init__.py
+${PYSITELIB}/scipy/datasets/__init__.pyc
+${PYSITELIB}/scipy/datasets/__init__.pyo
+${PYSITELIB}/scipy/datasets/_download_all.py
+${PYSITELIB}/scipy/datasets/_download_all.pyc
+${PYSITELIB}/scipy/datasets/_download_all.pyo
+${PYSITELIB}/scipy/datasets/_fetchers.py
+${PYSITELIB}/scipy/datasets/_fetchers.pyc
+${PYSITELIB}/scipy/datasets/_fetchers.pyo
+${PYSITELIB}/scipy/datasets/_registry.py
+${PYSITELIB}/scipy/datasets/_registry.pyc
+${PYSITELIB}/scipy/datasets/_registry.pyo
+${PYSITELIB}/scipy/datasets/_utils.py
+${PYSITELIB}/scipy/datasets/_utils.pyc
+${PYSITELIB}/scipy/datasets/_utils.pyo
+${PYSITELIB}/scipy/datasets/setup.py
+${PYSITELIB}/scipy/datasets/setup.pyc
+${PYSITELIB}/scipy/datasets/setup.pyo
+${PYSITELIB}/scipy/datasets/tests/__init__.py
+${PYSITELIB}/scipy/datasets/tests/meson.build
+${PYSITELIB}/scipy/datasets/tests/test_data.py
 ${PYSITELIB}/scipy/doc_requirements.txt
 ${PYSITELIB}/scipy/fft/__init__.py
 ${PYSITELIB}/scipy/fft/__init__.pyc
@@ -323,6 +341,7 @@ ${PYSITELIB}/scipy/integrate/_ivp/rk.pyo
 ${PYSITELIB}/scipy/integrate/_ivp/setup.py
 ${PYSITELIB}/scipy/integrate/_ivp/setup.pyc
 ${PYSITELIB}/scipy/integrate/_ivp/setup.pyo
+${PYSITELIB}/scipy/integrate/_ivp/tests/__init__.py
 ${PYSITELIB}/scipy/integrate/_ivp/tests/meson.build
 ${PYSITELIB}/scipy/integrate/_ivp/tests/test_ivp.py
 ${PYSITELIB}/scipy/integrate/_ivp/tests/test_rk.py
@@ -426,6 +445,7 @@ ${PYSITELIB}/scipy/interpolate/_rbfinterp_pythran.so
 ${PYSITELIB}/scipy/interpolate/_rgi.py
 ${PYSITELIB}/scipy/interpolate/_rgi.pyc
 ${PYSITELIB}/scipy/interpolate/_rgi.pyo
+${PYSITELIB}/scipy/interpolate/_rgi_cython.so
 ${PYSITELIB}/scipy/interpolate/dfitpack.so
 ${PYSITELIB}/scipy/interpolate/fitpack.py
 ${PYSITELIB}/scipy/interpolate/fitpack.pyc
@@ -452,6 +472,7 @@ ${PYSITELIB}/scipy/interpolate/setup.pyo
 ${PYSITELIB}/scipy/interpolate/tests/__init__.py
 ${PYSITELIB}/scipy/interpolate/tests/data/bug-1310.npz
 ${PYSITELIB}/scipy/interpolate/tests/data/estimate_gradients_hang.npy
+${PYSITELIB}/scipy/interpolate/tests/data/gcvspl.npz
 ${PYSITELIB}/scipy/interpolate/tests/meson.build
 ${PYSITELIB}/scipy/interpolate/tests/test_bsplines.py
 ${PYSITELIB}/scipy/interpolate/tests/test_fitpack.py
@@ -1014,6 +1035,7 @@ ${PYSITELIB}/scipy/misc/setup.pyo
 ${PYSITELIB}/scipy/misc/tests/__init__.py
 ${PYSITELIB}/scipy/misc/tests/meson.build
 ${PYSITELIB}/scipy/misc/tests/test_common.py
+${PYSITELIB}/scipy/misc/tests/test_config.py
 ${PYSITELIB}/scipy/misc/tests/test_doccer.py
 ${PYSITELIB}/scipy/mypy_requirements.txt
 ${PYSITELIB}/scipy/ndimage/__init__.py
@@ -1770,7 +1792,6 @@ ${PYSITELIB}/scipy/sparse/linalg/_isolve/setup.py
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/setup.pyc
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/setup.pyo
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/tests/__init__.py
-${PYSITELIB}/scipy/sparse/linalg/_isolve/tests/demo_lgmres.py
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/tests/meson.build
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/tests/test_gcrotmk.py
 ${PYSITELIB}/scipy/sparse/linalg/_isolve/tests/test_iterative.py
@@ -2048,8 +2069,8 @@ ${PYSITELIB}/scipy/special/_spfun_stats.pyo
 ${PYSITELIB}/scipy/special/_spherical_bessel.py
 ${PYSITELIB}/scipy/special/_spherical_bessel.pyc
 ${PYSITELIB}/scipy/special/_spherical_bessel.pyo
-${PYSITELIB}/scipy/special/_test_round.pyi
-${PYSITELIB}/scipy/special/_test_round.so
+${PYSITELIB}/scipy/special/_test_internal.pyi
+${PYSITELIB}/scipy/special/_test_internal.so
 ${PYSITELIB}/scipy/special/_testutils.py
 ${PYSITELIB}/scipy/special/_testutils.pyc
 ${PYSITELIB}/scipy/special/_testutils.pyo
@@ -2093,6 +2114,7 @@ ${PYSITELIB}/scipy/special/tests/test_cdft_asymptotic.py
 ${PYSITELIB}/scipy/special/tests/test_cosine_distr.py
 ${PYSITELIB}/scipy/special/tests/test_cython_special.py
 ${PYSITELIB}/scipy/special/tests/test_data.py
+${PYSITELIB}/scipy/special/tests/test_dd.py
 ${PYSITELIB}/scipy/special/tests/test_digamma.py
 ${PYSITELIB}/scipy/special/tests/test_ellip_harm.py
 ${PYSITELIB}/scipy/special/tests/test_erfinv.py
@@ -2117,6 +2139,7 @@ ${PYSITELIB}/scipy/special/tests/test_orthogonal_eval.py
 ${PYSITELIB}/scipy/special/tests/test_owens_t.py
 ${PYSITELIB}/scipy/special/tests/test_pcf.py
 ${PYSITELIB}/scipy/special/tests/test_pdtr.py
+${PYSITELIB}/scipy/special/tests/test_powm1.py
 ${PYSITELIB}/scipy/special/tests/test_precompute_expn_asy.py
 ${PYSITELIB}/scipy/special/tests/test_precompute_gammainc.py
 ${PYSITELIB}/scipy/special/tests/test_precompute_utils.py
@@ -2151,11 +2174,15 @@ ${PYSITELIB}/scipy/stats/_boost/__init__.pyo
 ${PYSITELIB}/scipy/stats/_boost/beta_ufunc.so
 ${PYSITELIB}/scipy/stats/_boost/binom_ufunc.so
 ${PYSITELIB}/scipy/stats/_boost/hypergeom_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/invgauss_ufunc.so
 ${PYSITELIB}/scipy/stats/_boost/nbinom_ufunc.so
 ${PYSITELIB}/scipy/stats/_boost/ncf_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/nct_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/ncx2_ufunc.so
 ${PYSITELIB}/scipy/stats/_boost/setup.py
 ${PYSITELIB}/scipy/stats/_boost/setup.pyc
 ${PYSITELIB}/scipy/stats/_boost/setup.pyo
+${PYSITELIB}/scipy/stats/_boost/skewnorm_ufunc.so
 ${PYSITELIB}/scipy/stats/_common.py
 ${PYSITELIB}/scipy/stats/_common.pyc
 ${PYSITELIB}/scipy/stats/_common.pyo
@@ -2165,6 +2192,9 @@ ${PYSITELIB}/scipy/stats/_constants.pyo
 ${PYSITELIB}/scipy/stats/_continuous_distns.py
 ${PYSITELIB}/scipy/stats/_continuous_distns.pyc
 ${PYSITELIB}/scipy/stats/_continuous_distns.pyo
+${PYSITELIB}/scipy/stats/_covariance.py
+${PYSITELIB}/scipy/stats/_covariance.pyc
+${PYSITELIB}/scipy/stats/_covariance.pyo
 ${PYSITELIB}/scipy/stats/_crosstab.py
 ${PYSITELIB}/scipy/stats/_crosstab.pyc
 ${PYSITELIB}/scipy/stats/_crosstab.pyo
@@ -2189,10 +2219,6 @@ ${PYSITELIB}/scipy/stats/_generate_pyx.pyo
 ${PYSITELIB}/scipy/stats/_hypotests.py
 ${PYSITELIB}/scipy/stats/_hypotests.pyc
 ${PYSITELIB}/scipy/stats/_hypotests.pyo
-${PYSITELIB}/scipy/stats/_hypotests_pythran.py
-${PYSITELIB}/scipy/stats/_hypotests_pythran.pyc
-${PYSITELIB}/scipy/stats/_hypotests_pythran.pyo
-${PYSITELIB}/scipy/stats/_hypotests_pythran.so
 ${PYSITELIB}/scipy/stats/_kde.py
 ${PYSITELIB}/scipy/stats/_kde.pyc
 ${PYSITELIB}/scipy/stats/_kde.pyo
@@ -2222,6 +2248,9 @@ ${PYSITELIB}/scipy/stats/_multivariate.py
 ${PYSITELIB}/scipy/stats/_multivariate.pyc
 ${PYSITELIB}/scipy/stats/_multivariate.pyo
 ${PYSITELIB}/scipy/stats/_mvn.so
+${PYSITELIB}/scipy/stats/_odds_ratio.py
+${PYSITELIB}/scipy/stats/_odds_ratio.pyc
+${PYSITELIB}/scipy/stats/_odds_ratio.pyo
 ${PYSITELIB}/scipy/stats/_page_trend_test.py
 ${PYSITELIB}/scipy/stats/_page_trend_test.pyc
 ${PYSITELIB}/scipy/stats/_page_trend_test.pyo
@@ -2230,6 +2259,13 @@ ${PYSITELIB}/scipy/stats/_qmc.pyc
 ${PYSITELIB}/scipy/stats/_qmc.pyo
 ${PYSITELIB}/scipy/stats/_qmc_cy.pyi
 ${PYSITELIB}/scipy/stats/_qmc_cy.so
+${PYSITELIB}/scipy/stats/_rcont/__init__.py
+${PYSITELIB}/scipy/stats/_rcont/__init__.pyc
+${PYSITELIB}/scipy/stats/_rcont/__init__.pyo
+${PYSITELIB}/scipy/stats/_rcont/rcont.so
+${PYSITELIB}/scipy/stats/_rcont/setup.py
+${PYSITELIB}/scipy/stats/_rcont/setup.pyc
+${PYSITELIB}/scipy/stats/_rcont/setup.pyo
 ${PYSITELIB}/scipy/stats/_relative_risk.py
 ${PYSITELIB}/scipy/stats/_relative_risk.pyc
 ${PYSITELIB}/scipy/stats/_relative_risk.pyo
@@ -2253,6 +2289,10 @@ ${PYSITELIB}/scipy/stats/_stats_mstats_common.pyo
 ${PYSITELIB}/scipy/stats/_stats_py.py
 ${PYSITELIB}/scipy/stats/_stats_py.pyc
 ${PYSITELIB}/scipy/stats/_stats_py.pyo
+${PYSITELIB}/scipy/stats/_stats_pythran.py
+${PYSITELIB}/scipy/stats/_stats_pythran.pyc
+${PYSITELIB}/scipy/stats/_stats_pythran.pyo
+${PYSITELIB}/scipy/stats/_stats_pythran.so
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.py
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.pyc
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.pyo
@@ -2315,6 +2355,7 @@ ${PYSITELIB}/scipy/stats/stats.pyc
 ${PYSITELIB}/scipy/stats/stats.pyo
 ${PYSITELIB}/scipy/stats/tests/__init__.py
 ${PYSITELIB}/scipy/stats/tests/common_tests.py
+${PYSITELIB}/scipy/stats/tests/data/fisher_exact_results_from_r.py
 ${PYSITELIB}/scipy/stats/tests/data/levy_stable/meson.build
 ${PYSITELIB}/scipy/stats/tests/data/levy_stable/stable-Z1-cdf-sample-data.npy
 ${PYSITELIB}/scipy/stats/tests/data/levy_stable/stable-Z1-pdf-sample-data.npy
@@ -2336,7 +2377,6 @@ ${PYSITELIB}/scipy/stats/tests/data/nist_linregress/Norris.dat
 ${PYSITELIB}/scipy/stats/tests/data/nist_linregress/meson.build
 ${PYSITELIB}/scipy/stats/tests/data/studentized_range_mpmath_ref.json
 ${PYSITELIB}/scipy/stats/tests/meson.build
-${PYSITELIB}/scipy/stats/tests/studentized_range_mpmath_ref.py
 ${PYSITELIB}/scipy/stats/tests/test_axis_nan_policy.py
 ${PYSITELIB}/scipy/stats/tests/test_binned_statistic.py
 ${PYSITELIB}/scipy/stats/tests/test_boost_ufuncs.py
@@ -2348,12 +2388,16 @@ ${PYSITELIB}/scipy/stats/tests/test_discrete_distns.py
 ${PYSITELIB}/scipy/stats/tests/test_distributions.py
 ${PYSITELIB}/scipy/stats/tests/test_entropy.py
 ${PYSITELIB}/scipy/stats/tests/test_fit.py
+${PYSITELIB}/scipy/stats/tests/test_generation/generate_fisher_exact_results_from_r.R
+${PYSITELIB}/scipy/stats/tests/test_generation/meson.build
+${PYSITELIB}/scipy/stats/tests/test_generation/studentized_range_mpmath_ref.py
 ${PYSITELIB}/scipy/stats/tests/test_hypotests.py
 ${PYSITELIB}/scipy/stats/tests/test_kdeoth.py
 ${PYSITELIB}/scipy/stats/tests/test_morestats.py
 ${PYSITELIB}/scipy/stats/tests/test_mstats_basic.py
 ${PYSITELIB}/scipy/stats/tests/test_mstats_extras.py
 ${PYSITELIB}/scipy/stats/tests/test_multivariate.py
+${PYSITELIB}/scipy/stats/tests/test_odds_ratio.py
 ${PYSITELIB}/scipy/stats/tests/test_qmc.py
 ${PYSITELIB}/scipy/stats/tests/test_rank.py
 ${PYSITELIB}/scipy/stats/tests/test_relative_risk.py
