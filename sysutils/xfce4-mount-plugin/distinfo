@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/12/20 02:39:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2023/05/05 01:37:33 gutteridge Exp $
 
-BLAKE2s (xfce4-mount-plugin-1.1.5.tar.bz2) = 30a782672f16b5a7c141636722f2850090761b2763753987ec0ef91b02132c2a
-SHA512 (xfce4-mount-plugin-1.1.5.tar.bz2) = bf4e89c57a1f61120919a272c6f343a9fb4072a977848031784cbdf96e4bf248d878c6e28a812930daf9a0515efcae20b421e0b2db176f05b8f29d75d90a28ca
-Size (xfce4-mount-plugin-1.1.5.tar.bz2) = 432564 bytes
+BLAKE2s (xfce4-mount-plugin-1.1.6.tar.bz2) = c3086888e4851df19acfd27fad54d3da5c3e904649ba017626c1b30a47a956f1
+SHA512 (xfce4-mount-plugin-1.1.6.tar.bz2) = 5f0d8c2ebf6528560c42b5dc1408a40bce8dfc4528f2a2ea1955774a8e5fab0cda9c81b052927c7dbd8675a5bbd104a208c657f473dc5258e049fa0b34af16a3
+Size (xfce4-mount-plugin-1.1.6.tar.bz2) = 452714 bytes
 SHA1 (patch-panel-plugin_devices.c) = 49c4be5740a2aa12177a8569e47c0c820b89b70c
