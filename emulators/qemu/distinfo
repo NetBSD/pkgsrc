@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.200 2023/03/27 12:42:07 tnn Exp $
+$NetBSD: distinfo,v 1.201 2023/05/05 07:49:29 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-7.2.0.tar.xz) = 725b12f40c29fb26f4af1820864b6e70dc5484dffd8f8c731fc694edb95c4d96
-SHA512 (qemu-7.2.0.tar.xz) = f3cfa00da739ba819a218d7e6e95c77fb79a8e0f487b024ddd281602e785249b81144595e3f8c746c32a4f5c4d1a88c6aebae3c162603edfbb50ae3722d7ed13
-Size (qemu-7.2.0.tar.xz) = 122408576 bytes
+BLAKE2s (qemu-7.2.1.tar.xz) = afeee97e296681df36b0929289ee2bdd89cf27d214a696dec9c5936c697f7d2b
+SHA512 (qemu-7.2.1.tar.xz) = e286dc66c923a5df77eb02d69235d048e80a7cced638fae52fbed385b4c3cd736cfea66bb3c9843bebf0a33e81ea141fc015e0bd82108df304f148ce59d9ae8a
+Size (qemu-7.2.1.tar.xz) = 122400592 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
 SHA1 (patch-backends_tpm_tpm__ioctl.h) = 5e18e0c9d0581386e0100a566694b3e631618585
 SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
