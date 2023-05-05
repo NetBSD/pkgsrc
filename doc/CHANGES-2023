@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2857 2023/05/05 11:44:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2858 2023/05/05 11:47:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-werkzeug to 2.3.2 [wiz 2023-05-05]
 	Updated devel/py-pdm to 2.5.4 [adam 2023-05-05]
 	Updated devel/py-dulwich to 0.21.5 [adam 2023-05-05]
+	Updated www/py-flask to 2.3.1 [wiz 2023-05-05]
