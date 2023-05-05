@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/04/30 18:02:03 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/05/05 18:25:02 adam Exp $
 
-DISTNAME=	requests-2.29.0
+DISTNAME=	requests-2.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}
@@ -30,7 +30,7 @@ USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	requests/certs.py
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
