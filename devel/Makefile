@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3983 2023/05/05 10:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3984 2023/05/05 19:29:44 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2918,6 +2918,7 @@ SUBDIR+=	py-ruamel-yaml-clib
 SUBDIR+=	py-sarge
 SUBDIR+=	py-scandir
 SUBDIR+=	py-scard
+SUBDIR+=	py-scikit-build
 SUBDIR+=	py-selectors2
 SUBDIR+=	py-semantic_version
 SUBDIR+=	py-sentry-sdk
