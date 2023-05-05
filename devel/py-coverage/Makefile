@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/05/05 10:34:25 wiz Exp $
 
-DISTNAME=	coverage-6.5.0
+DISTNAME=	coverage-7.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -32,7 +32,8 @@ DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage3
 
-# INTERNALERROR> AssertionError: assert None
+# AssertionError: assert None
+# 'fixed' by running as root, needs to find a writeable directory
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
