@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/03/29 09:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/05 10:09:25 wiz Exp $
 
 DISTNAME=	hyperlink-21.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,11 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
