@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2825 2023/05/05 02:12:16 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2826 2023/05/05 03:43:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3946,3 +3946,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/xfce4-mpc-plugin to 0.5.3 [gutteridge 2023-05-05]
 	Updated sysutils/xfce4-netload-plugin to 1.4.1 [gutteridge 2023-05-05]
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb11 [gutteridge 2023-05-05]
+	Updated textproc/py-sphinx-rtd-theme to 1.2.0 [ryoon 2023-05-05]
