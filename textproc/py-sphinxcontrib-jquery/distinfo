@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 03:44:10 ryoon Exp $
+
+BLAKE2s (sphinxcontrib-jquery-4.1.tar.gz) = 3b8cea48d299ddaef7403eaf699439ec668d124eaf5d6c2ffd3e9b3e67f70d28
+SHA512 (sphinxcontrib-jquery-4.1.tar.gz) = a686f59b973276e10bf6ece507d2c2f7ff26d46c3a4aef0884f359cb86a9b033bf0d5f1d1e22e0f7e4790dfb99be5ad7ffd8469193180b9ebe348c7ff3ed981c
+Size (sphinxcontrib-jquery-4.1.tar.gz) = 122331 bytes
