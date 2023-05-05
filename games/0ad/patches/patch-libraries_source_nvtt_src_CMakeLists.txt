@@ -1,19 +1,20 @@
-$NetBSD: patch-libraries_source_nvtt_src_CMakeLists.txt,v 1.1 2023/05/05 00:08:13 nikita Exp $
+$NetBSD: patch-libraries_source_nvtt_src_CMakeLists.txt,v 1.2 2023/05/05 14:55:18 nikita Exp $
 
-Revert patch by upstream.
 
---- libraries/source/nvtt/src/CMakeLists.txt.orig	2023-05-05 00:58:46.017561096 +0200
-+++ libraries/source/nvtt/src/CMakeLists.txt	2023-05-05 01:01:04.794683803 +0200
-@@ -42,12 +42,6 @@
+--- libraries/source/nvtt/src/CMakeLists.txt.orig	2022-09-23 22:36:55.000000000 +0200
++++ libraries/source/nvtt/src/CMakeLists.txt	2023-05-05 13:29:14.769485899 +0200
+@@ -42,11 +42,10 @@
  	SET(NVIMAGE_SHARED TRUE)
  ENDIF(NVTT_SHARED)
  
 -SET(CMAKE_SKIP_BUILD_RPATH TRUE)
 -SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 -SET(CMAKE_INSTALL_RPATH "$ORIGIN")
--SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
++SET(CMAKE_SKIP_BUILD_RPATH FALSE)
++SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
++SET(CMAKE_BUILD_RPATH "${CMAKE_INSTALL_PREFIX}/lib:${CMAKE_INSTALL_PREFIX}/lib/0ad")
+ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 -SET(CMAKE_INSTALL_NAME_DIR "@executable_path")
--
+ 
  ADD_SUBDIRECTORY(extern)
  
- ADD_SUBDIRECTORY(src)

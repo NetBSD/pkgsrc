@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/05/05 08:30:25 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/05 14:55:18 nikita Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
 # Requires C++17 and add "--std" option itself
 GCC_REQD+=	7
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 USE_TOOLS+=	cmake bash gmake pax perl pkg-config
 
@@ -26,6 +26,12 @@ SUBST_STAGE.sysincludedir=	pre-configure
 SUBST_FILES.sysincludedir=	build/premake/extern_libs5.lua
 SUBST_FILES.sysincludedir+=	build/premake/premake5.lua
 SUBST_SED.sysincludedir+=	-e "s,/usr/local/,${PREFIX}/,g"
+
+SUBST_CLASSES+=			rpath
+SUBST_MESSAGE.rpath=		Adjusting rpath
+SUBST_STAGE.rpath=		pre-configure
+SUBST_FILES.rpath+=		build/premake/premake5.lua
+SUBST_SED.rpath+=		-e "s,@@PREFIXLIB@@,${PREFIX}/lib,g"
 
 # thanks to Guix:
 # 0ad only builds fine with a specific version of mozjs
@@ -67,6 +73,14 @@ BUILD_DIRS=	build/workspaces/gcc
 
 .include "options.mk"
 
+# currently fails to build with precompiled headers on
+# NetBSD with gcc.
+# .if ${PKGSRC_COMPILER:M} == "distcc"
+CONFIGURE_PCH?=		--without-pch
+# .else
+# CONFIGURE_PCH?=
+# .endif
+
 # nvtt, notes from gentoo:
 # Build bundled NVTT
 # nvtt is abandoned upstream and 0ad has forked it and added fixes.
@@ -79,34 +93,31 @@ do-configure:
 		--libdir=${PREFIX}/lib/${PKGBASE} \
 		--with-system-premake5 \
 		--with-system-mozjs \
-		--without-pch \
-		${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
+		${CONFIGURE_PCH} ${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
 .if !empty(PKG_OPTIONS:Meditor)
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/ActorEditor ${DESTDIR}${PREFIX}/bin
-	# why? you have the rpath. don't produce nonsense?
-	${PREFIX}/bin/patchelf --force-rpath --set-rpath \
-		${PREFIX}/lib/${PKGBASE}:${PREFIX}/lib \
-		${DESTDIR}${PREFIX}/bin/ActorEditor
+	# TODO: prevent this in the build-system.
 	${PREFIX}/bin/patchelf --replace-needed \
 		"../../../binaries/system/libAtlasUI.so" libAtlasUI.so \
 		${DESTDIR}${PREFIX}/bin/ActorEditor
 	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} \
 		libAtlasUI.so libAtlasObject.a ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 .endif
-	# TODO: all of these should be .so.
-	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} libatlas.a \
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} \
+		libCollada.so libatlas.a \
 		libengine.a libgladwrapper.a libglooxwrapper.a libgraphics.a \
 		libgui.a liblobby.a liblowlevel.a libmocks_real.a libmocks_test.a \
 		libmongoose.a libnetwork.a librlinterface.a libscriptinterface.a \
-		libsimulation2.a libtinygettext.a libCollada.so \
-		libnvcore.so libnvimage.so libnvmath.so libnvtt.so \
+		libsimulation2.a libtinygettext.a \
 		${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	# TODO: second part of rpath is missing after build
 .for f in libnvcore libnvimage libnvmath libnvtt
+	cd ${WRKSRC}/binaries/system && ${INSTALL_LIB} \
+		${f}.so ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	${PREFIX}/bin/patchelf \
 		--force-rpath \
 		--set-rpath ${PREFIX}/lib/${PKGBASE}:${PREFIX}/lib \
