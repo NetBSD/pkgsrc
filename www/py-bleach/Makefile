@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/05/05 08:47:37 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/05/05 15:46:44 wiz Exp $
 
 DISTNAME=	bleach-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_SH+=	bleach/_vendor/pip_install_vendor.sh
+REPLACE_SH+=	bleach/_vendor/vendor_install.sh
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
