@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/20 18:40:28 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2023/05/05 14:04:18 schmonz Exp $
 
-BLAKE2s (chatGPT-shell-cli-42d82b9d651be9d43f7f2ae52dcfe6c56e12b171.tar.gz) = 92d0efc2d66677a0ee4e0bc90417a5c92960bd0b6d2734353d3a6bd30b52c797
-SHA512 (chatGPT-shell-cli-42d82b9d651be9d43f7f2ae52dcfe6c56e12b171.tar.gz) = 63a954da3d950ededf79c087abf2d0a1a0267121b81b01ba5f1255139f933a1ad46a74e87022fceda7d24fc7733185927874d29d092dafb62216d74f1fd66eae
-Size (chatGPT-shell-cli-42d82b9d651be9d43f7f2ae52dcfe6c56e12b171.tar.gz) = 9309 bytes
+BLAKE2s (chatGPT-shell-cli-2e25138caaad77b59edb9936798a92ae80a4e0cd.tar.gz) = d4e6f603d6991d47fd485431ad6547d94678685c1e3ac92875ee5e93676ca3bc
+SHA512 (chatGPT-shell-cli-2e25138caaad77b59edb9936798a92ae80a4e0cd.tar.gz) = b3d9441e0f0d6f6cbfae8a392826e7a9db77d5b5b1e7ed90d3f686f68c9d8ee2171db2fd71b6f39072bfaa2d4f45921699ac66ae6ba03ce9cf07d093a2cdb486
+Size (chatGPT-shell-cli-2e25138caaad77b59edb9936798a92ae80a4e0cd.tar.gz) = 9524 bytes

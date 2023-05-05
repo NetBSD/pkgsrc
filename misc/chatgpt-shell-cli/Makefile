@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2023/04/20 18:40:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/05 14:04:18 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}
-PKGNAME=		${GITHUB_PROJECT:tl}-0.0.20230420
+PKGNAME=		${GITHUB_PROJECT:tl}-0.0.20230505
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=0xacx/}
 GITHUB_PROJECT=		chatGPT-shell-cli
-GITHUB_TAG=		42d82b9d651be9d43f7f2ae52dcfe6c56e12b171
+GITHUB_TAG=		2e25138caaad77b59edb9936798a92ae80a4e0cd
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/0xacx/chatGPT-shell-cli/
 COMMENT=		Shell script to use OpenAI's ChatGPT and DALL-E
 LICENSE=		mit
 
-DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		curl-[0-9]*:../../www/curl
 DEPENDS+=		jq-[0-9]*:../../devel/jq
 
 USE_LANGUAGES=		# none
+USE_TOOLS+=		bash:run
 NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
