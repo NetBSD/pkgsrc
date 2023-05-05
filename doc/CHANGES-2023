@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2834 2023/05/05 08:33:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2835 2023/05/05 08:48:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3958,3 +3958,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-copybutton to 0.5.2 [adam 2023-05-05]
 	Added security/py-argon2-cffi-bindings version 21.2.0 [adam 2023-05-05]
 	Updated security/py-argon2-cffi to 21.3.0 [adam 2023-05-05]
+	Updated textproc/py-mistune to 2.0.5 [wiz 2023-05-05]
