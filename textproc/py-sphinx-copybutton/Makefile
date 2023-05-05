@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/11/24 13:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/05 08:02:19 adam Exp $
 
-DISTNAME=	sphinx-copybutton-0.5.1
+DISTNAME=	sphinx-copybutton-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-copybutton/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/executablebooks/sphinx-copybutton
 COMMENT=	Sphinx module to add a copy button to code cells
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
