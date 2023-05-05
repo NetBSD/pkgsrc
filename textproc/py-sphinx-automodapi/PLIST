@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/17 09:25:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/05 18:16:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,6 +117,7 @@ ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/README.md
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/input/index.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.functions.add.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.functions.multiply.rst
+${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.nonascii.NonAscii.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodapi
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodsumm
 ${PYSITELIB}/sphinx_automodapi/tests/cases/source_dir/README.md
@@ -131,6 +132,23 @@ ${PYSITELIB}/sphinx_automodapi/tests/cases/variables/output/api/sphinx_automodap
 ${PYSITELIB}/sphinx_automodapi/tests/cases/variables/output/api/sphinx_automodapi.tests.example_module.variables.PARROT_STATE.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/variables/output/index.rst.automodapi
 ${PYSITELIB}/sphinx_automodapi/tests/cases/variables/output/index.rst.automodsumm
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/__init__.py
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/__init__.pyc
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/__init__.pyo
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/docs/conf.py
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/docs/conf.pyc
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/docs/conf.pyo
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/docs/foo.rst
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/docs/index.rst
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/__init__.py
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/__init__.pyc
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/__init__.pyo
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/__init__.py
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/__init__.pyc
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/__init__.pyo
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/foo.py
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/foo.pyc
+${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/foo.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.pyo
@@ -152,6 +170,9 @@ ${PYSITELIB}/sphinx_automodapi/tests/example_module/mixed.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/noall.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/noall.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/noall.pyo
+${PYSITELIB}/sphinx_automodapi/tests/example_module/nonascii.py
+${PYSITELIB}/sphinx_automodapi/tests/example_module/nonascii.pyc
+${PYSITELIB}/sphinx_automodapi/tests/example_module/nonascii.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.pyo
