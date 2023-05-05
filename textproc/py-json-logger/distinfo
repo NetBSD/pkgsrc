@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 09:45:01 adam Exp $
+
+BLAKE2s (python-json-logger-2.0.7.tar.gz) = b162345575ed551605fa38749d31fd9e407f8636376f2ddd9b7b237bf2110aae
+SHA512 (python-json-logger-2.0.7.tar.gz) = a3056f6c07386410204e65d027504df49d890b5c4577a0460077bc698c9104ab8720d6db107153766611f4f22141c0b2b57dbdacba75a7078638945937922f5e
+Size (python-json-logger-2.0.7.tar.gz) = 10508 bytes
