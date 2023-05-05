@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2850 2023/05/05 10:40:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2851 2023/05/05 10:41:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-coverage to 7.2.5 [wiz 2023-05-05]
 	Added devel/py-hatch-jupyter-builder version 0.8.3 [adam 2023-05-05]
 	Added www/py-jupyter_server version 2.5.0 [adam 2023-05-05]
+	Added devel/py-click-default-group version 1.2.2 [wiz 2023-05-05]
