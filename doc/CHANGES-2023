@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2829 2023/05/05 07:51:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2830 2023/05/05 07:52:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3950,3 +3950,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/py-sphinxcontrib-jquery version 4.1 [ryoon 2023-05-05]
 	Updated sysutils/packer to 1.8.7 [iquiw 2023-05-05]
 	Updated audio/ncspot to 0.13.2 [pin 2023-05-05]
+	Updated emulators/qemu to 7.2.1 [adam 2023-05-05]
+	Updated x11/gtk3 to 3.24.37 [adam 2023-05-05]
