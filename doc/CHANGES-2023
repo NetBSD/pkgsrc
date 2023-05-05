@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2841 2023/05/05 09:34:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2842 2023/05/05 09:38:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbconvert to 7.3.1 [adam 2023-05-05]
 	Added lang/py-lsprotocol version 2023.0.0a1 [wiz 2023-05-05]
 	Added devel/py-cattrs version 22.2.0 [wiz 2023-05-05]
+	Updated lang/py-pygls to 1.0.1 [wiz 2023-05-05]
