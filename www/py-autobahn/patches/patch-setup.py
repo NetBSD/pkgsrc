@@ -1,15 +1,15 @@
-$NetBSD: patch-setup.py,v 1.2 2020/01/23 14:33:18 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2023/05/05 11:58:17 wiz Exp $
 
 Relax test requirements.
 
---- setup.py.orig	2020-01-14 15:21:43.000000000 +0000
+--- setup.py.orig	2023-02-08 01:57:37.000000000 +0000
 +++ setup.py
-@@ -155,7 +155,7 @@ extras_require_dev = [
+@@ -225,7 +225,7 @@ with open('requirements-dev.txt') as f:
  
-     # pytest 3.3.0 has dropped support for Python 3.3
-     # https://docs.pytest.org/en/latest/changelog.html#pytest-3-3-0-2017-11-23
+ # for testing by users with "python setup.py test" (not Tox, which we use)
+ test_requirements = [
 -    "pytest>=2.8.6,<3.3.0",             # MIT license
-+    "pytest>=2.8.6",                    # MIT license
++    "pytest",             # MIT license
+ ]
  
-     "twine>=1.6.5",                     # Apache 2.0
-     'sphinx>=1.2.3',                    # BSD
+ 
