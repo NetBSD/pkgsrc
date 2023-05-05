@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin-aarch64,v 1.1 2022/12/02 10:48:38 jperkin Exp $
+@comment $NetBSD: PLIST.Darwin-aarch64,v 1.2 2023/05/05 18:00:52 adam Exp $
 bin/oracle-jdk17-jar
 bin/oracle-jdk17-jarsigner
 bin/oracle-jdk17-java
@@ -79,7 +79,6 @@ java/oracle-jdk17/include/jdwpTransport.h
 java/oracle-jdk17/include/jni.h
 java/oracle-jdk17/include/jvmti.h
 java/oracle-jdk17/include/jvmticmlr.h
-java/oracle-jdk17/include/sizecalc.h
 java/oracle-jdk17/jmods/java.base.jmod
 java/oracle-jdk17/jmods/java.compiler.jmod
 java/oracle-jdk17/jmods/java.datatransfer.jmod
@@ -159,6 +158,7 @@ java/oracle-jdk17/legal/java.base/cldr.md
 java/oracle-jdk17/legal/java.base/icu.md
 java/oracle-jdk17/legal/java.base/public_suffix.md
 java/oracle-jdk17/legal/java.base/unicode.md
+java/oracle-jdk17/legal/java.base/zlib.md
 java/oracle-jdk17/legal/java.compiler/COPYRIGHT
 java/oracle-jdk17/legal/java.compiler/LICENSE
 java/oracle-jdk17/legal/java.datatransfer/COPYRIGHT

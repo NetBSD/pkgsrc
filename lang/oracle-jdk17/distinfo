@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2023/02/09 17:12:19 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/05/05 18:00:52 adam Exp $
 
-BLAKE2s (jdk-17.0.6_linux-aarch64_bin.tar.gz) = d143cf4dc1db268bb4bb2605e147f18e57fb6b790a71240612a3a78df4f5f000
-SHA512 (jdk-17.0.6_linux-aarch64_bin.tar.gz) = 15767d3e323c96039a445a34dc634d77a1e6b83d1d049aadfe6e0bfc38044ec1df015ccc332c63e1ec0380d207dfd2a5da48309fcbc66ce90d7229638074ab43
-Size (jdk-17.0.6_linux-aarch64_bin.tar.gz) = 180363418 bytes
-BLAKE2s (jdk-17.0.6_linux-x64_bin.tar.gz) = fa545ff5e528acb4f3581d1f5c5f6832c2d752ae914a4f7f8ec4731df6ea16eb
-SHA512 (jdk-17.0.6_linux-x64_bin.tar.gz) = cc83ea521d2a57cd4aa888c07e496f595c266b45b959b2e8b10d43c15a3536e29f702a5964bf0edd87fc66a22fdcde26eb0530149ae1d86c07c714d74e7bcf6e
-Size (jdk-17.0.6_linux-x64_bin.tar.gz) = 181577323 bytes
-BLAKE2s (jdk-17.0.6_macos-aarch64_bin.tar.gz) = f4f8d134cb5b8f9f95a9843319c8a17a7f2960d0884b50eaee10343227f7644f
-SHA512 (jdk-17.0.6_macos-aarch64_bin.tar.gz) = 39abd3394bfbce42c6790baa6068cb997be2b35ad9dc420e28a14aca537edf8673127da6e6ff032f22b562a4217d0fda522e18a5e7ba1a151baefc6d30863241
-Size (jdk-17.0.6_macos-aarch64_bin.tar.gz) = 175659085 bytes
-BLAKE2s (jdk-17.0.6_macos-x64_bin.tar.gz) = 6607b8c27b7d7a473040d8a439b28b5a5bb75de2576c66196ed3b247e8e27a61
-SHA512 (jdk-17.0.6_macos-x64_bin.tar.gz) = cc8fd2ca7b2f1cb2a29c5ee5b6d2cc491a7753f52a0c56be0a4b25fadc54bc35c8f1468a33d40b7366f372e03b999fde8f3392f7b9380b6934eb38081a8ec246
-Size (jdk-17.0.6_macos-x64_bin.tar.gz) = 178373401 bytes
+BLAKE2s (jdk-17.0.7_linux-aarch64_bin.tar.gz) = cb2fc77c3093f8be949edba0b131a9ae7a9d9e7742818cf656fee030201da3c6
+SHA512 (jdk-17.0.7_linux-aarch64_bin.tar.gz) = 6a0ed64c22b996582be9c79198c6c12b9a7a4a9a85e386f466c322fb88e4c6a8f74a63fec559980e55486d290e91aa9f5c439fbf33f7773af143ccf524d13c64
+Size (jdk-17.0.7_linux-aarch64_bin.tar.gz) = 180476714 bytes
+BLAKE2s (jdk-17.0.7_linux-x64_bin.tar.gz) = 78cd35aae1bd15405a3a39842627032a91d94c509944f60b75106462149c6dd1
+SHA512 (jdk-17.0.7_linux-x64_bin.tar.gz) = e1cf6df8a6f677a1b3b7edaba1b531240f96540a787dff8d049804180470b2a685d1f7260590462b4314d896252240b37d925d564d504df369b3fc822e234d6c
+Size (jdk-17.0.7_linux-x64_bin.tar.gz) = 181719178 bytes
+BLAKE2s (jdk-17.0.7_macos-aarch64_bin.tar.gz) = 5663f20bc29cd0bce338f8a2392848cb7f142a9d32aaa26af411e7c0e2dd0687
+SHA512 (jdk-17.0.7_macos-aarch64_bin.tar.gz) = 618c3ff5c629aa2093f7b51a9e1222067121c1ebc1b26c1173b4cfb91492b490862d92442eb7de17f42a41b5f830e4e1a55d4b7e81e46b38a0b7f8731be22850
+Size (jdk-17.0.7_macos-aarch64_bin.tar.gz) = 175929432 bytes
+BLAKE2s (jdk-17.0.7_macos-x64_bin.tar.gz) = 301a8a4343c4b50e69091f60a928e69357c804de2ed06a1d2bfba74f490c504c
+SHA512 (jdk-17.0.7_macos-x64_bin.tar.gz) = 4fc01b5514628449068ac2471ae121a481da1435a1389ab7d38a95cf8e177746674a6240da4e20c7002aa7280906e4a30dea356ea79d983fd76fe96c9aad17b9
+Size (jdk-17.0.7_macos-x64_bin.tar.gz) = 178475259 bytes
