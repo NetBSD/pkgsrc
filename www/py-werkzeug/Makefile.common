@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.31 2023/03/03 11:47:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2023/05/05 11:42:54 wiz Exp $
 #
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-2.2.3
+DISTNAME=	Werkzeug-2.3.2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
 
