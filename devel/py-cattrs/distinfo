@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 09:34:11 wiz Exp $
+
+BLAKE2s (cattrs-22.2.0.tar.gz) = bd0b4b76f9d41ab73731239c9158c995db3a9c8295e42de65d95f85345c9c767
+SHA512 (cattrs-22.2.0.tar.gz) = 688b227e568ca928b195e0c450a8d159e52dcd82315504f69d44606943340111269ec14fa7f78a1d30535b2821a9d3b4bbabea0a85e8cb0db9e956d3e07dac06
+Size (cattrs-22.2.0.tar.gz) = 30050 bytes
