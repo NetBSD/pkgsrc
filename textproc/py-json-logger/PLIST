@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/05 09:45:01 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pythonjsonlogger/__init__.py
+${PYSITELIB}/pythonjsonlogger/__init__.pyc
+${PYSITELIB}/pythonjsonlogger/__init__.pyo
+${PYSITELIB}/pythonjsonlogger/jsonlogger.py
+${PYSITELIB}/pythonjsonlogger/jsonlogger.pyc
+${PYSITELIB}/pythonjsonlogger/jsonlogger.pyo
+${PYSITELIB}/pythonjsonlogger/py.typed
