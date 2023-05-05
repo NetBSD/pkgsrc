@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/04/27 13:04:10 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/05/05 17:53:08 yhardy Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -631,9 +631,21 @@ ${PYSITELIB}/streamlink_cli/constants.pyo
 ${PYSITELIB}/streamlink_cli/main.py
 ${PYSITELIB}/streamlink_cli/main.pyc
 ${PYSITELIB}/streamlink_cli/main.pyo
-${PYSITELIB}/streamlink_cli/output.py
-${PYSITELIB}/streamlink_cli/output.pyc
-${PYSITELIB}/streamlink_cli/output.pyo
+${PYSITELIB}/streamlink_cli/output/__init__.py
+${PYSITELIB}/streamlink_cli/output/__init__.pyc
+${PYSITELIB}/streamlink_cli/output/__init__.pyo
+${PYSITELIB}/streamlink_cli/output/abc.py
+${PYSITELIB}/streamlink_cli/output/abc.pyc
+${PYSITELIB}/streamlink_cli/output/abc.pyo
+${PYSITELIB}/streamlink_cli/output/file.py
+${PYSITELIB}/streamlink_cli/output/file.pyc
+${PYSITELIB}/streamlink_cli/output/file.pyo
+${PYSITELIB}/streamlink_cli/output/http.py
+${PYSITELIB}/streamlink_cli/output/http.pyc
+${PYSITELIB}/streamlink_cli/output/http.pyo
+${PYSITELIB}/streamlink_cli/output/player.py
+${PYSITELIB}/streamlink_cli/output/player.pyc
+${PYSITELIB}/streamlink_cli/output/player.pyo
 ${PYSITELIB}/streamlink_cli/streamrunner.py
 ${PYSITELIB}/streamlink_cli/streamrunner.pyc
 ${PYSITELIB}/streamlink_cli/streamrunner.pyo
@@ -643,9 +655,6 @@ ${PYSITELIB}/streamlink_cli/utils/__init__.pyo
 ${PYSITELIB}/streamlink_cli/utils/formatter.py
 ${PYSITELIB}/streamlink_cli/utils/formatter.pyc
 ${PYSITELIB}/streamlink_cli/utils/formatter.pyo
-${PYSITELIB}/streamlink_cli/utils/http_server.py
-${PYSITELIB}/streamlink_cli/utils/http_server.pyc
-${PYSITELIB}/streamlink_cli/utils/http_server.pyo
 ${PYSITELIB}/streamlink_cli/utils/path.py
 ${PYSITELIB}/streamlink_cli/utils/path.pyc
 ${PYSITELIB}/streamlink_cli/utils/path.pyo
