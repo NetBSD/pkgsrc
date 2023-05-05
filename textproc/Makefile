@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1387 2023/05/04 11:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1388 2023/05/05 03:46:10 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1151,6 +1151,7 @@ SUBDIR+=	py-sphinxcontrib-applehelp
 SUBDIR+=	py-sphinxcontrib-bibtex
 SUBDIR+=	py-sphinxcontrib-devhelp
 SUBDIR+=	py-sphinxcontrib-htmlhelp
+SUBDIR+=	py-sphinxcontrib-jquery
 SUBDIR+=	py-sphinxcontrib-jsmath
 SUBDIR+=	py-sphinxcontrib-log-cabinet
 SUBDIR+=	py-sphinxcontrib-newsfeed
