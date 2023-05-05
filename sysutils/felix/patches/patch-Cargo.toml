@@ -1,8 +1,8 @@
-$NetBSD: patch-Cargo.toml,v 1.8 2023/02/01 20:39:42 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.9 2023/05/05 22:00:29 pin Exp $
 
 Don't pull from git, patch vendor crate instead.
 
---- Cargo.toml.orig	2023-01-31 20:04:04.000000000 +0000
+--- Cargo.toml.orig	2023-05-05 08:26:17.000000000 +0000
 +++ Cargo.toml
 @@ -27,7 +27,7 @@ log = "0.4.16"
  simplelog = "0.12.0"
@@ -11,5 +11,5 @@ Don't pull from git, patch vendor crate instead.
 -syntect = {version = "5.0.0", git = "https://github.com/kyoheiu/syntect"}
 +syntect = "5.0.0"
  serde_yaml = "0.9.14"
- zip = "0.6.3"
+ zip = "0.6.4"
  tar = "0.4.38"
