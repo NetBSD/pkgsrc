@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/05/04 17:29:33 nikita Exp $
+# $NetBSD: options.mk,v 1.3 2023/05/05 00:08:13 nikita Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.0ad
 PKG_SUPPORTED_OPTIONS+=	tests editor
 
@@ -18,7 +18,7 @@ CONFIGURE_TESTS?=		--without-tests
 # TODO: not entirely working binary (loads, complains about files not found),
 # something is missing.
 .if ${PKG_OPTIONS:Meditor}
-CONFIGURE_EDITOR?=
+CONFIGURE_EDITOR?=		--enable-atlas
 .include "../../x11/wxGTK32/buildlink3.mk"
 PLIST.editor=			yes
 .else
