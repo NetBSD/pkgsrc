@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2023/04/05 20:47:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.46 2023/05/05 19:37:44 bsiegert Exp $
 #
 
 DISTNAME=		gox-1.0.1
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		42
+PKGREVISION=		43
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mitchellh/}
 GITHUB_PROJECT=		gox
