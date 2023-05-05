@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/10/18 01:17:53 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2023/05/05 13:20:56 schmonz Exp $
 
-BLAKE2s (vpnc-script-20220917/vpnc-script) = 6db2a814767fb42e3e4cf9b0bc937e07fc979bfa3486426ea1fbe5181c979363
-SHA512 (vpnc-script-20220917/vpnc-script) = adff26539cc0db987a5caa2d8e60e633a4a3025eeb7566d3887d8d1373ec1754b1b6d75a83d835bd006561a39b10f57f01efd07657117c17779e1a1803895ce1
-Size (vpnc-script-20220917/vpnc-script) = 38674 bytes
+BLAKE2s (vpnc-script-20230103/vpnc-script) = 861aa398c32d42cb2facfd2166ac85478a113a9034a5c5965e4890109ddeb794
+SHA512 (vpnc-script-20230103/vpnc-script) = fe2a2130e7c663374611c64d4b24737c0d22c444ce533e1d0ec3410d68584c7eb06f4ea8b728ee81da83df4d2115f817b97339f9f3fce0365815a3c99aaaee1c
+Size (vpnc-script-20230103/vpnc-script) = 38538 bytes

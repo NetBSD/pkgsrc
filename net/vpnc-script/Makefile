@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/10/20 19:13:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/05 13:20:56 schmonz Exp $
 
-DISTNAME=	vpnc-script-20220917
+DISTNAME=	vpnc-script-20230103
 CATEGORIES=	net security
-MASTER_SITES=	${MASTER_SITE_GITLAB:=openconnect/vpnc-scripts/-/raw/fc87e112/}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=openconnect/vpnc-scripts/-/raw/22756827/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	vpnc-script
 
