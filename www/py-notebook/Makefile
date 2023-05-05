@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/05/05 09:19:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2023/05/05 11:08:50 adam Exp $
 
-DISTNAME=	notebook-6.4.11
+DISTNAME=	notebook-6.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -11,16 +11,17 @@ COMMENT=	Web-based notebook environment for interactive computing
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-Send2Trash>=1.8.0:../../sysutils/py-Send2Trash
-DEPENDS+=	${PYPKGPREFIX}-argon2-cffi>0:../../security/py-argon2-cffi
-DEPENDS+=	${PYPKGPREFIX}-ipykernel>0:../../devel/py-ipykernel
-DEPENDS+=	${PYPKGPREFIX}-ipython_genutils>0:../../devel/py-ipython_genutils
+DEPENDS+=	${PYPKGPREFIX}-argon2-cffi-[0-9]*:../../security/py-argon2-cffi
+DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
+DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=5.3.4:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.1:../../devel/py-jupyter_core
-DEPENDS+=	${PYPKGPREFIX}-jinja2>0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-nbclassic>=0.4.7:../../www/py-nbclassic
 DEPENDS+=	${PYPKGPREFIX}-nbconvert>=5:../../www/py-nbconvert
-DEPENDS+=	${PYPKGPREFIX}-nbformat>0:../../www/py-nbformat
+DEPENDS+=	${PYPKGPREFIX}-nbformat-[0-9]*:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5:../../devel/py-nest-asyncio
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client>0:../../net/py-prometheus_client
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
 DEPENDS+=	${PYPKGPREFIX}-terminado>=0.8.3:../../www/py-terminado
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2.1:../../devel/py-traitlets
@@ -39,5 +40,6 @@ post-install:
 	${MV} jupyter-${name} jupyter-${name}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
