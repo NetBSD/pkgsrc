@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/05 09:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/05 09:36:15 wiz Exp $
 
 DISTNAME=	lsprotocol-2023.0.0a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-hamcrest>=0:../../devel/py-hamcrest
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
