@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/05/05 19:32:18 adam Exp $
+
+INTERPROCEDURAL_OPTIMIZATION (LTO) is not portable.
+
+--- CMakeLists.txt.orig	2023-05-05 19:22:34.000000000 +0000
++++ CMakeLists.txt
+@@ -1,7 +1,6 @@
+ cmake_minimum_required(VERSION 3.12...3.24)
+ 
+ cmake_policy(SET CMP0054 NEW)
+-set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+ set(SKBUILD_LINK_LIBRARIES_KEYWORD PRIVATE)
+ set(Python_FIND_IMPLEMENTATIONS CPython PyPy)
+ 
