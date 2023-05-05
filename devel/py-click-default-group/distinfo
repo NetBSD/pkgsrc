@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 10:40:43 wiz Exp $
+
+BLAKE2s (click-default-group-1.2.2.tar.gz) = a40318b37faefcbd02712d8c630d96a6223ac29c74db43dbe83f8e4a1ab79362
+SHA512 (click-default-group-1.2.2.tar.gz) = 5fa6a6158657e50d3261c866ac9ab01864513cd2d7d61ac71151ee35f16d27c6b553f860936c203c3d7773d99417b22b6f0a14ceb0efaacd2cff298bc1a0d9a0
+Size (click-default-group-1.2.2.tar.gz) = 3300 bytes
