@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/04 18:33:25 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/05 18:33:15 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -1904,6 +1904,7 @@ go120/src/cmd/go/testdata/script/build_import_comment.txt
 go120/src/cmd/go/testdata/script/build_import_cycle.txt
 go120/src/cmd/go/testdata/script/build_internal.txt
 go120/src/cmd/go/testdata/script/build_issue48319.txt
+go120/src/cmd/go/testdata/script/build_issue59571.txt
 go120/src/cmd/go/testdata/script/build_issue6480.txt
 go120/src/cmd/go/testdata/script/build_link_x_import_path_escape.txt
 go120/src/cmd/go/testdata/script/build_multi_main.txt
@@ -6875,10 +6876,6 @@ go120/src/os/readfrom_stub.go
 go120/src/os/removeall_at.go
 go120/src/os/removeall_noat.go
 go120/src/os/removeall_test.go
-go120/src/os/rlimit.go
-go120/src/os/rlimit_darwin.go
-go120/src/os/rlimit_stub.go
-go120/src/os/rlimit_test.go
 go120/src/os/signal/doc.go
 go120/src/os/signal/example_test.go
 go120/src/os/signal/example_unix_test.go
@@ -8235,6 +8232,7 @@ go120/src/syscall/exec_windows.go
 go120/src/syscall/exec_windows_test.go
 go120/src/syscall/export_darwin_test.go
 go120/src/syscall/export_linux_test.go
+go120/src/syscall/export_rlimit_test.go
 go120/src/syscall/export_unix_test.go
 go120/src/syscall/export_windows_test.go
 go120/src/syscall/flock.go
@@ -8274,6 +8272,10 @@ go120/src/syscall/netlink_linux.go
 go120/src/syscall/ptrace_darwin.go
 go120/src/syscall/ptrace_ios.go
 go120/src/syscall/pwd_plan9.go
+go120/src/syscall/rlimit.go
+go120/src/syscall/rlimit_darwin.go
+go120/src/syscall/rlimit_stub.go
+go120/src/syscall/rlimit_test.go
 go120/src/syscall/route_bsd.go
 go120/src/syscall/route_darwin.go
 go120/src/syscall/route_dragonfly.go
@@ -11013,10 +11015,15 @@ go120/test/fixedbugs/issue5910.dir/a.go
 go120/test/fixedbugs/issue5910.dir/main.go
 go120/test/fixedbugs/issue5910.go
 go120/test/fixedbugs/issue59293.go
+go120/test/fixedbugs/issue59334.go
+go120/test/fixedbugs/issue59367.go
+go120/test/fixedbugs/issue59378.go
 go120/test/fixedbugs/issue5957.dir/a.go
 go120/test/fixedbugs/issue5957.dir/b.go
 go120/test/fixedbugs/issue5957.dir/c.go
 go120/test/fixedbugs/issue5957.go
+go120/test/fixedbugs/issue59572.go
+go120/test/fixedbugs/issue59572.out
 go120/test/fixedbugs/issue5963.go
 go120/test/fixedbugs/issue6004.go
 go120/test/fixedbugs/issue6036.go
