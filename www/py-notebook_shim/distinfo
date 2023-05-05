@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 11:01:09 adam Exp $
+
+BLAKE2s (notebook_shim-0.2.3.tar.gz) = 132cefc3cac5cade1c3b883e6bf123890a077becf2b66894d47aa5226389089d
+SHA512 (notebook_shim-0.2.3.tar.gz) = 87114ea915ab5160b11023dddcc622aafba315fe07de21cedbed1e374ec2406eba378575e903377dbb9cc69e7449eb184cb0420513b7dc05078af0e91bc5f884
+Size (notebook_shim-0.2.3.tar.gz) = 13082 bytes
