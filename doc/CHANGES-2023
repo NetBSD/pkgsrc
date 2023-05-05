@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2849 2023/05/05 10:34:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2850 2023/05/05 10:40:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3976,3 +3976,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-jupyter_events version 0.6.3 [adam 2023-05-05]
 	Added comms/py-jupyter_server_terminals version 0.4.4 [adam 2023-05-05]
 	Updated devel/py-coverage to 7.2.5 [wiz 2023-05-05]
+	Added devel/py-hatch-jupyter-builder version 0.8.3 [adam 2023-05-05]
+	Added www/py-jupyter_server version 2.5.0 [adam 2023-05-05]
