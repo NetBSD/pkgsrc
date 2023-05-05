@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2023/04/17 20:40:02 adam Exp $
+# $NetBSD: Makefile,v 1.135 2023/05/05 10:20:30 adam Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -70,6 +70,7 @@ SUBDIR+=	py-cleo
 SUBDIR+=	py-colorama
 SUBDIR+=	py-esptool
 SUBDIR+=	py-gammu
+SUBDIR+=	py-jupyter_server_terminals
 SUBDIR+=	py-nodemcu-uploader
 SUBDIR+=	py-pastel
 SUBDIR+=	py-rich
