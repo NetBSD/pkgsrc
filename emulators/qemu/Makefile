@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.312 2023/04/19 08:09:54 adam Exp $
+# $NetBSD: Makefile,v 1.313 2023/05/05 07:49:29 adam Exp $
 
-DISTNAME=	qemu-7.2.0
-PKGREVISION=	4
+DISTNAME=	qemu-7.2.1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -136,7 +135,7 @@ PLIST.bridge-helper=		yes
 PLIST.ga=			yes
 PLIST.nbd=			yes
 PLIST.pr-helper=		yes
-.elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
+.elif ${MACHINE_PLATFORM:MSunOS-5.11-*}
 PLIST.ga=			yes
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
