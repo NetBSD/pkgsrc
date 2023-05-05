@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/01/14 11:49:44 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/05/05 09:07:23 wiz Exp $
 
-BLAKE2s (feedgenerator-1.9.1.tar.gz) = 96b664dd7824d9b574d825f870c35baadafa02967a21e3e3be933d7c259dca16
-SHA512 (feedgenerator-1.9.1.tar.gz) = db3642acb8f0c9fd692f37a79cf5862e60687a1745afbc6593d37a0372adb994de603238a17a8eae95ffcc993195f63037f16122a3cf8771e6922dea492fb5d5
-Size (feedgenerator-1.9.1.tar.gz) = 25677 bytes
+BLAKE2s (feedgenerator-2.1.0.tar.gz) = a2310a591e852c0e1b0113285ef63ec26b80d5cc25287cd2ce00e23579e720a2
+SHA512 (feedgenerator-2.1.0.tar.gz) = b8b41f5b256130166c8dba34dd950782f9acb506e3e37a2fe13b5e1f9d33f7d39b7f862e446f4f6f2f480973617feb70303f78a4fb6741f110166e61b92f0075
+Size (feedgenerator-2.1.0.tar.gz) = 20682 bytes
