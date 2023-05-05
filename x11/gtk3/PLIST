@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2023/01/01 21:21:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/05/05 07:51:13 adam Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -441,7 +441,6 @@ lib/gtk-3.0/3.0.0/immodules/im-ti-er.so
 lib/gtk-3.0/3.0.0/immodules/im-ti-et.so
 lib/gtk-3.0/3.0.0/immodules/im-viqr.so
 ${PLIST.wayland}lib/gtk-3.0/3.0.0/immodules/im-wayland.so
-${PLIST.wayland}lib/gtk-3.0/3.0.0/immodules/im-waylandgtk.so
 ${PLIST.x11}lib/gtk-3.0/3.0.0/immodules/im-xim.so
 ${PLIST.cups}lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.so
@@ -454,10 +453,10 @@ lib/libgailutil-3.so.0
 lib/libgailutil-3.so.0.0.0
 lib/libgdk-3.so
 lib/libgdk-3.so.0
-lib/libgdk-3.so.0.2404.32
+lib/libgdk-3.so.0.2405.32
 lib/libgtk-3.so
 lib/libgtk-3.so.0
-lib/libgtk-3.so.0.2404.32
+lib/libgtk-3.so.0.2405.32
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
