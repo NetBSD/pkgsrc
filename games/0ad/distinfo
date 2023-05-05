@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.2 2023/05/05 00:08:13 nikita Exp $
+$NetBSD: distinfo,v 1.3 2023/05/05 14:55:18 nikita Exp $
 
 BLAKE2s (0ad-0.0.26-alpha-unix-build.tar.xz) = c731d26db0269bc9de34bf75705eb2031a105b676217a1da916c79c2d2237015
 SHA512 (0ad-0.0.26-alpha-unix-build.tar.xz) = aaf647d5d8454c244015d2a198beeaaebc571a5bc96446f3acff8dbd05f9843029c500bf4162651a5e1fcdb42bd5fb5b4f5c512c78372479fbd8565dd093f272
 Size (0ad-0.0.26-alpha-unix-build.tar.xz) = 75599800 bytes
-SHA1 (patch-build_premake_extern__libs5.lua) = e3d804571682c04cada5c39c11313874039ead72
+SHA1 (patch-build_premake_extern__libs5.lua) = 5f7d96cb825eaf1de991f584643a36485c20be82
+SHA1 (patch-build_premake_premake5.lua) = 1cc910e3a836377d8b9638916dea2bd9556f24f2
 SHA1 (patch-build_workspaces_clean-workspaces.sh) = 6c48565a0463d6f9e3ab914e2923811b121935cc
 SHA1 (patch-build_workspaces_update-workspaces.sh) = 4a6ec008da64a98230173f3a242cea2503321631
 SHA1 (patch-libraries_source_fcollada_include_FCDocument_FCDocument.h) = 96aef76c02ae4a3f47fdb7c31bf7d11490ba5d09
@@ -13,7 +14,7 @@ SHA1 (patch-libraries_source_fcollada_src_FCollada_FCDocument_FCDocument.h) = ae
 SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_FUCriticalSection.h) = fd181f746bba33ceb917a5de4794296c229213fc
 SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_FUStringBuilder.hpp) = f71f1f361601b2ce561c00a811d33bce6735a06d
 SHA1 (patch-libraries_source_fcollada_src_FCollada_FUtils_Platforms.h) = 6887cca8e6ff1765a6b666bd595f8bcb41c2a90f
-SHA1 (patch-libraries_source_nvtt_src_CMakeLists.txt) = 2d956e3ae9f6ec5fc2db8a33f99d3ffc066a2e40
+SHA1 (patch-libraries_source_nvtt_src_CMakeLists.txt) = 396a5b06b588d7bff6cc751de074d71063de834d
 SHA1 (patch-libraries_source_nvtt_src_src_nvtt_CMakeLists.txt) = f42c1f4c57a3ef23a793a216f858b909dcf01e98
 SHA1 (patch-libraries_source_spidermonkey_build.sh) = 34225c82659cc236bff076301dd52adca9888f92
 SHA1 (patch-source_lib_allocators_page__aligned.cpp) = c25054afd543a1a90530964a63b2b692b1687765
