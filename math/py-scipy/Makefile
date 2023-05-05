@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2023/01/25 09:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/05/05 14:59:25 adam Exp $
 
-DISTNAME=	scipy-1.9.3
+DISTNAME=	scipy-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -12,12 +12,17 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
 DEPENDS+=	${PYPKGPREFIX}-pythran>=0.9.11:../../math/py-pythran
+TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-pooch-[0-9]*:../../devel/py-pooch
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-USE_LANGUAGES+=	c c++ fortran
+USE_LANGUAGES+=	c99 c++11 fortran
 MAKE_ENV+=	ATLAS=None
-
+GCC_REQD+=	8
 EGG_NAME=	${DISTNAME:S/scipy/SciPy/}
 
 # XXX Avoid picking up other compilers when installed
