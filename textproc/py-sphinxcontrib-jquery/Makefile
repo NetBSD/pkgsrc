@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 03:44:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/05 06:02:00 adam Exp $
 
 DISTNAME=	sphinxcontrib-jquery-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,13 +6,12 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-jquery/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sphinx-doc.org/
-COMMENT=	Sphinx extension to include jQuery
+HOMEPAGE=	https://github.com/sphinx-contrib/jquery
+COMMENT=	Extension to include jQuery on newer Sphinx releases
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8.0:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.8:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
