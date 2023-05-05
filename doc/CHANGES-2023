@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2828 2023/05/05 06:49:11 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.2829 2023/05/05 07:51:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3949,3 +3949,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-rtd-theme to 1.2.0 [ryoon 2023-05-05]
 	Added textproc/py-sphinxcontrib-jquery version 4.1 [ryoon 2023-05-05]
 	Updated sysutils/packer to 1.8.7 [iquiw 2023-05-05]
+	Updated audio/ncspot to 0.13.2 [pin 2023-05-05]
