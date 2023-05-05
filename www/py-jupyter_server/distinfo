@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 10:39:44 adam Exp $
+
+BLAKE2s (jupyter_server-2.5.0.tar.gz) = 5016ce2ed5587449b9175b174eed90b6049add8e3af21a41a209f030866c15ad
+SHA512 (jupyter_server-2.5.0.tar.gz) = 7145f60a73bf3d9aceff37aaf56b3b3a54c94fd9f13f06659387909cb1727759a082d11e983df4e687cc508461d5afb6e552f3ac09e30bebb1eb5e863992ad14
+Size (jupyter_server-2.5.0.tar.gz) = 694029 bytes
