@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/07 10:19:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/05 11:14:52 adam Exp $
+etc/jupyter/nbconfig/notebook.d/widgetsnbextension.json
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/widgetsnbextension/__init__.py
 ${PYSITELIB}/widgetsnbextension/__init__.pyc
@@ -12,6 +12,8 @@ ${PYSITELIB}/widgetsnbextension/_version.py
 ${PYSITELIB}/widgetsnbextension/_version.pyc
 ${PYSITELIB}/widgetsnbextension/_version.pyo
 ${PYSITELIB}/widgetsnbextension/static/extension.js
+${PYSITELIB}/widgetsnbextension/static/extension.js.LICENSE.txt
 ${PYSITELIB}/widgetsnbextension/static/extension.js.map
 share/jupyter/nbextensions/jupyter-js-widgets/extension.js
+share/jupyter/nbextensions/jupyter-js-widgets/extension.js.LICENSE.txt
 share/jupyter/nbextensions/jupyter-js-widgets/extension.js.map
