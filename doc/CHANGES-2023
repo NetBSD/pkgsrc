@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2861 2023/05/05 13:21:02 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2862 2023/05/05 13:21:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3995,3 +3995,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.5.5 [adam 2023-05-05]
 	Updated www/py-flask to 2.3.2 [adam 2023-05-05]
 	Updated net/vpnc-script to 20230103 [schmonz 2023-05-05]
+	Updated net/openconnect to 9.10 [schmonz 2023-05-05]
