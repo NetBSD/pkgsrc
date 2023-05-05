@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2023/04/03 01:14:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.100 2023/05/05 02:11:54 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	10
+PKGREVISION=	11
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -18,28 +18,28 @@ DEPENDS+=	xfce4-diskperf-plugin>=2.7.0:../../sysutils/xfce4-diskperf-plugin
 DEPENDS+=	xfce4-systemload-plugin>=1.3.2:../../sysutils/xfce4-systemload-plugin
 DEPENDS+=	xfce4-cpugraph-plugin>=1.2.7:../../sysutils/xfce4-cpugraph-plugin
 DEPENDS+=	xfce4-wavelan-plugin>=0.6.3:../../net/xfce4-wavelan-plugin
-DEPENDS+=	xfce4-battery-plugin>=1.1.3:../../sysutils/xfce4-battery-plugin
+DEPENDS+=	xfce4-battery-plugin>=1.1.5:../../sysutils/xfce4-battery-plugin
 DEPENDS+=	xfce4-calculator-plugin>=0.7.0:../../misc/xfce4-calculator-plugin
 DEPENDS+=	xfce4-clipman-plugin>=1.6.3:../../x11/xfce4-clipman-plugin
-DEPENDS+=	xfce4-dict>=0.8.4:../../textproc/xfce4-dict
+DEPENDS+=	xfce4-dict>=0.8.5:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.6.0:../../x11/xfce4-eyes-plugin
-DEPENDS+=	xfce4-fsguard-plugin>=1.1.2:../../sysutils/xfce4-fsguard-plugin
+DEPENDS+=	xfce4-fsguard-plugin>=1.1.3:../../sysutils/xfce4-fsguard-plugin
 DEPENDS+=	xfce4-genmon-plugin>=4.1.1:../../sysutils/xfce4-genmon-plugin
 DEPENDS+=	xfce4-indicator-plugin>=2.4.1:../../x11/xfce4-indicator-plugin
-DEPENDS+=	xfce4-mailwatch-plugin>=1.2.0:../../mail/xfce4-mailwatch-plugin
-DEPENDS+=	xfce4-mount-plugin>=1.1.5:../../sysutils/xfce4-mount-plugin
-DEPENDS+=	xfce4-mpc-plugin>=0.5.2:../../multimedia/xfce4-mpc-plugin
-DEPENDS+=	xfce4-netload-plugin>=1.4.0:../../sysutils/xfce4-netload-plugin
+DEPENDS+=	xfce4-mailwatch-plugin>=1.3.1:../../mail/xfce4-mailwatch-plugin
+DEPENDS+=	xfce4-mount-plugin>=1.1.6:../../sysutils/xfce4-mount-plugin
+DEPENDS+=	xfce4-mpc-plugin>=0.5.3:../../multimedia/xfce4-mpc-plugin
+DEPENDS+=	xfce4-netload-plugin>=1.4.1:../../sysutils/xfce4-netload-plugin
 DEPENDS+=	xfce4-notes-plugin>=1.10.0:../../x11/xfce4-notes-plugin
 DEPENDS+=	xfce4-notifyd>=0.8.2:../../x11/xfce4-notifyd
 DEPENDS+=	xfce4-places-plugin>=1.8.3:../../x11/xfce4-places-plugin
 DEPENDS+=	xfce4-screenshooter>=1.10.3:../../x11/xfce4-screenshooter
 DEPENDS+=	xfce4-smartbookmark-plugin>=0.5.2:../../misc/xfce4-smartbookmark-plugin
-DEPENDS+=	xfce4-time-out-plugin>=1.0.3:../../misc/xfce4-time-out-plugin
-DEPENDS+=	xfce4-timer-plugin>=1.7.0:../../time/xfce4-timer-plugin
+DEPENDS+=	xfce4-time-out-plugin>=1.1.3:../../misc/xfce4-time-out-plugin
+DEPENDS+=	xfce4-timer-plugin>=1.7.2:../../time/xfce4-timer-plugin
 DEPENDS+=	xfce4-verve-plugin>=2.0.1:../../sysutils/xfce4-verve-plugin
-DEPENDS+=	xfce4-weather-plugin>=0.11.0:../../misc/xfce4-weather-plugin
-DEPENDS+=	xfce4-whiskermenu-plugin>=2.7.2:../../x11/xfce4-whiskermenu-plugin
+DEPENDS+=	xfce4-weather-plugin>=0.11.1:../../misc/xfce4-weather-plugin
+DEPENDS+=	xfce4-whiskermenu-plugin>=2.7.3:../../x11/xfce4-whiskermenu-plugin
 DEPENDS+=	xfce4-xkb-plugin>=0.8.3:../../sysutils/xfce4-xkb-plugin
 
 # File Manager Plugins
