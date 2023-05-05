@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/11/24 13:25:38 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/05/05 08:02:19 adam Exp $
 
-BLAKE2s (sphinx-copybutton-0.5.1.tar.gz) = b8dd04b8c5559b0821aceb1ad7b7d4bed07f88ea60379acb178a2910d55ee54f
-SHA512 (sphinx-copybutton-0.5.1.tar.gz) = becc49fb54b5e9839eea962366403c5fa9d47f177ea2ec25b1b3beb021def20249a13ffdf5a79481ae460280e638ef101508b58476ad5131090ebe94604baa48
-Size (sphinx-copybutton-0.5.1.tar.gz) = 22826 bytes
+BLAKE2s (sphinx-copybutton-0.5.2.tar.gz) = 67b2525ec66c468607b02620802e315bbe855970a04e722722c203f5a8aa0d60
+SHA512 (sphinx-copybutton-0.5.2.tar.gz) = 83f61526d8a20f70b0de63a5bad89ed4ae4f3cf5cd589f1a1e2e91f08f4d45a05acf780a4cf3703d4490ab93c9c9bb18c11d3170b8011c2254aab0334940ab2d
+Size (sphinx-copybutton-0.5.2.tar.gz) = 23039 bytes
