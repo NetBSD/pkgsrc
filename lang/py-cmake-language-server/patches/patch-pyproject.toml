@@ -1,6 +1,7 @@
-$NetBSD: patch-pyproject.toml,v 1.1 2023/05/05 09:52:24 wiz Exp $
+$NetBSD: patch-pyproject.toml,v 1.2 2023/05/05 09:56:30 wiz Exp $
 
 Switch to pdm-backend
+https://github.com/regen100/cmake-language-server/issues/76
 
 --- pyproject.toml.orig	2023-03-09 10:01:30.924441300 +0000
 +++ pyproject.toml
