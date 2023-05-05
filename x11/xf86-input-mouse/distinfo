@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/11/02 08:13:23 wiz Exp $
+$NetBSD: distinfo,v 1.26 2023/05/05 08:24:30 wiz Exp $
 
-BLAKE2s (xf86-input-mouse-1.9.4.tar.xz) = 2680e534b4b9e92d075e62ea1ff8d4a69a6bb0464b3612b2be6f389989fac469
-SHA512 (xf86-input-mouse-1.9.4.tar.xz) = 7dfde3b1e0c1291c4d78ee920942771808b007f743bfc6eed20de12579383745858673dd874a4b5cf4ab8d9d15f6f7ca2db81ee831547a488d64848a7fe5e16c
-Size (xf86-input-mouse-1.9.4.tar.xz) = 325112 bytes
-SHA1 (patch-src_sun__mouse.c) = ac2c0af528d77440bd3ea0a0a6ebd554f7022b78
+BLAKE2s (xf86-input-mouse-1.9.5.tar.xz) = ed07924eaedf918cf08bc2a1f4be85da0d9fcbbf0e618de7e7a27eb47cf871a0
+SHA512 (xf86-input-mouse-1.9.5.tar.xz) = ed9bd9cb9a05dac0ff1bfb4e4704cb2e94117afb400aa9e0b7ccdbb102bc6db1b0d3af7cb6f99d0892f8fc306f1643286291c0fa7114af8e65864412bd6c1afa
+Size (xf86-input-mouse-1.9.5.tar.xz) = 326896 bytes
