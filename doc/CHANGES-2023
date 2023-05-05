@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2872 2023/05/05 21:01:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2873 2023/05/05 21:57:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/xz to 5.4.3 [adam 2023-05-05]
 	Updated devel/py-dogpile-cache to 1.2.0 [adam 2023-05-05]
 	Updated devel/nss to 3.89.1 [wiz 2023-05-05]
+	Updated sysutils/dua-cli to 2.20.1 [pin 2023-05-05]
