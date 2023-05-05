@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.245 2023/04/19 08:09:45 adam Exp $
+# $NetBSD: Makefile,v 1.246 2023/05/05 21:01:20 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.89.0
-PKGREVISION=		1
+NSS_RELEASE=		3.89.1
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -135,7 +134,7 @@ MAKE_ENV+=	EXTRA_SHARED_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib
 MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
 MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.[0-7]*)
+.if ${CC_VERSION:Mgcc-4.[0-7]*}
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
