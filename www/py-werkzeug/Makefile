@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/05/05 11:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/05/05 15:42:57 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -32,8 +32,8 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${EGDIR}/*.py
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${EGDIR}/cupoftee/shared/*.png
 
-# as of 2.3.2
-# 17 failed, 853 passed, 1 skipped, 8 errors
+# as of 2.3.3
+# 17 failed, 854 passed, 1 skipped, 8 errors
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
