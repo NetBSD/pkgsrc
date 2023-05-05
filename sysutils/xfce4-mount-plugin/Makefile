@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/01/29 21:17:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2023/05/05 01:37:33 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-mount-plugin-1.1.5
+DISTNAME=	xfce4-mount-plugin-1.1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-mount-plugin/1.1/
 
