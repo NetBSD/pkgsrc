@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2852 2023/05/05 11:01:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2853 2023/05/05 11:05:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-click-default-group version 1.2.2 [wiz 2023-05-05]
 	Added www/py-nbclassic version 1.0.0 [adam 2023-05-05]
 	Added www/py-notebook_shim version 0.2.3 [adam 2023-05-05]
+	Updated www/py-urllib3 to 2.0.0 [wiz 2023-05-05]
