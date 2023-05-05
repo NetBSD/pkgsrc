@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2876 2023/05/05 22:02:44 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2877 2023/05/05 23:14:53 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/dust to 0.8.6 [pin 2023-05-05]
 	Updated sysutils/felix to 2.2.7 [pin 2023-05-05]
 	Updated editors/tp-note to 1.21.2 [pin 2023-05-05]
+	Updated print/atril to 1.26.1 [gutteridge 2023-05-05]
