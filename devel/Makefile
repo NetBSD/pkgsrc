@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3980 2023/05/05 10:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.3981 2023/05/05 10:10:53 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2611,6 +2611,7 @@ SUBDIR+=	py-joblib
 SUBDIR+=	py-jupyter-console
 SUBDIR+=	py-jupyter_client
 SUBDIR+=	py-jupyter_core
+SUBDIR+=	py-jupyter_events
 SUBDIR+=	py-jupyter_packaging
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
