@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/05 10:19:42 wiz Exp $
 
-DISTNAME=	idna-2.10
+DISTNAME=	idna-3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/idna/}
 
@@ -11,7 +10,15 @@ HOMEPAGE=	https://github.com/kjd/idna
 COMMENT=	Python module for Internationalized Domain Names in Applications (IDNA)
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
