@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2833 2023/05/05 08:24:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2834 2023/05/05 08:33:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3955,3 +3955,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 15.4.2 [pin 2023-05-05]
 	Updated x11/xcalc to 1.1.2 [wiz 2023-05-05]
 	Updated x11/xf86-input-mouse to 1.9.5 [wiz 2023-05-05]
+	Updated textproc/py-sphinx-copybutton to 0.5.2 [adam 2023-05-05]
+	Added security/py-argon2-cffi-bindings version 21.2.0 [adam 2023-05-05]
+	Updated security/py-argon2-cffi to 21.3.0 [adam 2023-05-05]
