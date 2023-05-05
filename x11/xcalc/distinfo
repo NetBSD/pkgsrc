@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/01/27 09:35:41 micha Exp $
+$NetBSD: distinfo,v 1.14 2023/05/05 08:21:22 wiz Exp $
 
-BLAKE2s (xcalc-1.1.1.tar.xz) = 72098e9f55cf482eb9ac983c5231da1ab0af5a3dd57bdf4d9a8e004bb7d9ab61
-SHA512 (xcalc-1.1.1.tar.xz) = a261e9798d62727f40b9aff07e68e63ba40aa7f4f9b1811d8efd8c3e73cd5912d6178c55ca3c059968191051bd20b889b06b5e92b3df70c7b5d09bd013b9ebdb
-Size (xcalc-1.1.1.tar.xz) = 140204 bytes
-SHA1 (patch-app-defaults_XCalc-color) = 1c41c0c474cf1ab1d8b654c6564b8a33ebbead6e
+BLAKE2s (xcalc-1.1.2.tar.xz) = 8bb0a793836c94ada131881e58504e78719cb4d050b534f67e28fc5a9c8575f2
+SHA512 (xcalc-1.1.2.tar.xz) = 51da677dc88bcd7299ed8d678cb26b048fdb82a1983e1496a06253ee2dceefca4ac87d1a74432b4a76dcc11921a61339bb3d292607be46228164140b430bbad2
+Size (xcalc-1.1.2.tar.xz) = 140692 bytes
