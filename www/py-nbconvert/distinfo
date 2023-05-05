@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/19 11:45:05 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/05/05 09:14:44 adam Exp $
 
-BLAKE2s (nbconvert-6.5.0.tar.gz) = b8e8c3af86b7157a7d300847ef6d101efec6dc1ea2dc42378843e7ac94d291cf
-SHA512 (nbconvert-6.5.0.tar.gz) = 4e0d26d581435525f819c05207890cc7cbeaff786a16c354f0356c9bc50111a724a92b7e15445a0cf0ebf1e1c2f0ff064a2c8722267f66dd8677ad82b5e61714
-Size (nbconvert-6.5.0.tar.gz) = 908377 bytes
+BLAKE2s (nbconvert-7.3.1.tar.gz) = dfc923e4605b91f3d0d085513f52429788d69e0363e334502f750d8eded3031d
+SHA512 (nbconvert-7.3.1.tar.gz) = 24d8d0ff35cf09d095d01122386439cf0c40eb9af7c88604f3108e5831a270509e1302370dc40eabc8bcb28fb86603d9d7a4a104346122deb8471aab7471e62d
+Size (nbconvert-7.3.1.tar.gz) = 880064 bytes
