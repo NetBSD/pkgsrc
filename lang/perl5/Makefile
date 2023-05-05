@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2023/04/25 07:29:47 adam Exp $
+# $NetBSD: Makefile,v 1.277 2023/05/05 23:01:32 jperkin Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dldflags=${LDFLAGS:Q}
 MAKE_ENV+=		LC_ALL="C"
 LDFLAGS.QNX+=		-lm
+
+CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 
 TEST_TARGET=		test
 
