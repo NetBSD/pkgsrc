@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/05 15:04:32 adam Exp $
 
-DISTNAME=	terminado-0.10.1
+DISTNAME=	terminado-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/terminado/}
 
@@ -11,9 +10,11 @@ HOMEPAGE=	https://github.com/takluyver/terminado
 COMMENT=	Terminals served to term.js using Tornado websockets
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
-DEPENDS+=	${PYPKGPREFIX}-tornado>=4:../../www/py-tornado
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1.0:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
@@ -22,5 +23,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
