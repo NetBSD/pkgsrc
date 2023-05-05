@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 08:30:53 adam Exp $
+
+BLAKE2s (argon2-cffi-bindings-21.2.0.tar.gz) = 2678ff761233083e536d05bcff04c78e1d95e5a073e05b1f0de0e946f8f73ba0
+SHA512 (argon2-cffi-bindings-21.2.0.tar.gz) = 71d023ae96073ed78599e4f4e42f8efcc985cc329adeea00b14b54eaac1e6a545e6ad9b7f4cfdc60a4e9c396f95053c0ccb6f6f67d92f70265f91315fff4a390
+Size (argon2-cffi-bindings-21.2.0.tar.gz) = 1779911 bytes
