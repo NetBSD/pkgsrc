@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.47 2023/04/30 18:02:03 wiz Exp $
+$NetBSD: distinfo,v 1.48 2023/05/05 18:25:02 adam Exp $
 
-BLAKE2s (requests-2.29.0.tar.gz) = d958002d6d132a52df94e8290d25cd3c861a3abc368df65d19c752649a35c766
-SHA512 (requests-2.29.0.tar.gz) = 22c7c9e6ae44abe60cf7cc2108d42d9a0952ae317936995f379155d24013c24a2c654469a781a61b2ae6488429e337d31b565a91f1266eb1c038a4c8a9069642
-Size (requests-2.29.0.tar.gz) = 108279 bytes
+BLAKE2s (requests-2.30.0.tar.gz) = 52d01eb3b24b67d4f98038fd5115d898860eaa2f77cf6ce21c10d607d75f0d37
+SHA512 (requests-2.30.0.tar.gz) = a950a156ac78e5e315b95619f8753f7ba837c63198e256ea69a53f9492f7be1cecb295fcacbf091f3d5ae077ea02c67056d753f99c2b95cc9d233c3ca77f2905
+Size (requests-2.30.0.tar.gz) = 108411 bytes
 SHA1 (patch-setup.py) = 9344db9f4ce311a59564f89f35538bab4aa2ad7e
