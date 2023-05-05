@@ -1,0 +1,1 @@
+bin/jupyter-events @PREFIX@/bin/jupyter-events-@PYVERSSUFFIX@
