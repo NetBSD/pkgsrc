@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2023/05/04 07:22:08 adam Exp $
+# $NetBSD: Makefile,v 1.689 2023/05/05 09:20:16 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -240,6 +240,7 @@ SUBDIR+=	py-jsparser
 SUBDIR+=	py-lark-parser
 SUBDIR+=	py-libcst
 SUBDIR+=	py-lsp-server
+SUBDIR+=	py-lsprotocol
 SUBDIR+=	py-mypy
 SUBDIR+=	py-mypy_extensions
 SUBDIR+=	py-parso
