@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/11/02 14:45:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/05 08:47:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,8 +14,10 @@ ${PYSITELIB}/bleach/_vendor/__init__.pyc
 ${PYSITELIB}/bleach/_vendor/__init__.pyo
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/AUTHORS.rst
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/INSTALLER
+${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/LICENSE
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/METADATA
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/RECORD
+${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/REQUESTED
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/WHEEL
 ${PYSITELIB}/bleach/_vendor/html5lib-1.1.dist-info/top_level.txt
 ${PYSITELIB}/bleach/_vendor/html5lib/__init__.py
@@ -117,20 +119,27 @@ ${PYSITELIB}/bleach/_vendor/html5lib/treewalkers/etree_lxml.pyo
 ${PYSITELIB}/bleach/_vendor/html5lib/treewalkers/genshi.py
 ${PYSITELIB}/bleach/_vendor/html5lib/treewalkers/genshi.pyc
 ${PYSITELIB}/bleach/_vendor/html5lib/treewalkers/genshi.pyo
-${PYSITELIB}/bleach/_vendor/pip_install_vendor.sh
+${PYSITELIB}/bleach/_vendor/parse.py
+${PYSITELIB}/bleach/_vendor/parse.py.SHA256SUM
+${PYSITELIB}/bleach/_vendor/parse.pyc
+${PYSITELIB}/bleach/_vendor/parse.pyo
 ${PYSITELIB}/bleach/_vendor/vendor.txt
+${PYSITELIB}/bleach/_vendor/vendor_install.sh
 ${PYSITELIB}/bleach/callbacks.py
 ${PYSITELIB}/bleach/callbacks.pyc
 ${PYSITELIB}/bleach/callbacks.pyo
+${PYSITELIB}/bleach/css_sanitizer.py
+${PYSITELIB}/bleach/css_sanitizer.pyc
+${PYSITELIB}/bleach/css_sanitizer.pyo
 ${PYSITELIB}/bleach/html5lib_shim.py
 ${PYSITELIB}/bleach/html5lib_shim.pyc
 ${PYSITELIB}/bleach/html5lib_shim.pyo
 ${PYSITELIB}/bleach/linkifier.py
 ${PYSITELIB}/bleach/linkifier.pyc
 ${PYSITELIB}/bleach/linkifier.pyo
+${PYSITELIB}/bleach/parse_shim.py
+${PYSITELIB}/bleach/parse_shim.pyc
+${PYSITELIB}/bleach/parse_shim.pyo
 ${PYSITELIB}/bleach/sanitizer.py
 ${PYSITELIB}/bleach/sanitizer.pyc
 ${PYSITELIB}/bleach/sanitizer.pyo
-${PYSITELIB}/bleach/utils.py
-${PYSITELIB}/bleach/utils.pyc
-${PYSITELIB}/bleach/utils.pyo
