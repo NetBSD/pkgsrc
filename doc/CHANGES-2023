@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2843 2023/05/05 09:46:43 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2844 2023/05/05 09:52:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3968,3 +3968,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-cattrs version 22.2.0 [wiz 2023-05-05]
 	Updated lang/py-pygls to 1.0.1 [wiz 2023-05-05]
 	Added devel/py-test-datadir version 1.4.1 [wiz 2023-05-05]
+	Updated lang/py-cmake-language-server to 0.1.7 [wiz 2023-05-05]
