@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/05/05 09:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/05 09:35:40 wiz Exp $
 
 DISTNAME=	lsprotocol-2023.0.0a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,13 @@ COMMENT=	Python implementation of the Language Server Protocol
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+# from https://github.com/microsoft/lsprotocol/blob/main/requirements.in
 DEPENDS+=	${PYPKGPREFIX}-attrs>=0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-cattrs>=0:../../devel/py-cattrs
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=0:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=0:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-hamcrest>=0:../../devel/py-hamcrest
 
 USE_LANGUAGES=	# none
 
