@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.22 2023/04/25 07:29:47 adam Exp $
+# $NetBSD: packlist.mk,v 1.23 2023/05/05 23:00:27 jperkin Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -28,7 +28,7 @@ _PERL5_PACKLIST_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 PERL5_USE_PACKLIST?=	yes
-.if ${PERL5_USE_PACKLIST:tl} == yes"
+.if ${PERL5_USE_PACKLIST:tl} == yes
 # XXX: still experimental, but many packages already work
 #PERL5_PACKLIST?=	auto/${DISTNAME:C/-[0-9].*$//:C,-,/,g}/.packlist
 .endif
