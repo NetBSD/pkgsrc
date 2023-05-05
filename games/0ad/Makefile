@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/05 00:08:13 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/05 08:30:25 nikita Exp $
 
 .include "Makefile.common"
 
@@ -125,6 +125,7 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -139,6 +140,7 @@ do-install:
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
