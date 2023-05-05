@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2837 2023/05/05 09:02:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2838 2023/05/05 09:07:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-mistune to 2.0.5 [wiz 2023-05-05]
 	Updated textproc/py-humanize to 4.6.0 [wiz 2023-05-05]
 	Updated security/py-service_identity to 21.1.0 [wiz 2023-05-05]
+	Updated www/py-feedgenerator to 2.1.0 [wiz 2023-05-05]
