@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/05 10:37:12 adam Exp $
+
+BLAKE2s (hatch_jupyter_builder-0.8.3.tar.gz) = add45671366b77559dbe68931da0bda91cdefd8323aa88581969603e229e7cb1
+SHA512 (hatch_jupyter_builder-0.8.3.tar.gz) = c4dc0605338bafeeba21cc7260005815654d3e4646296d91af6fb3199be8645a06b2226608e6b0558ee01c7eed682162eefcf686a7e20636031b95c3a11ae265
+Size (hatch_jupyter_builder-0.8.3.tar.gz) = 54754 bytes
