@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/04/19 12:14:10 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/05/05 09:19:07 jperkin Exp $
 
 DISTNAME=	notebook-6.4.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,7 @@ USE_LANGUAGES=	# none
 USE_PKG_RESOURCES=	yes
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 .for name in bundlerextension nbextension notebook serverextension
