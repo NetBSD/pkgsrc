@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/05 12:49:57 jperkin Exp $
 
 DISTNAME=	cattrs-22.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=20:../../devel/py-attrs
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
