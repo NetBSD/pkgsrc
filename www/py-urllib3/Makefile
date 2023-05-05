@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2023/03/14 10:41:42 adam Exp $
+# $NetBSD: Makefile,v 1.46 2023/05/05 11:05:27 wiz Exp $
 
-DISTNAME=	urllib3-1.26.15
+DISTNAME=	urllib3-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -10,22 +10,41 @@ HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+# optional dependencies:
+# "socks"; higher requirement from dev_requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
-TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography>=38.0.3:../../security/py-cryptography
-TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.4:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-freezegun>=0.4.2:../../devel/py-test-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.4.2:../../devel/py-test-timeout
-TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1.0:../../www/py-tornado
-TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.7.0:../../security/py-trustme
+# "brotli"
+#DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.9:../../archivers/py-brotli
+# but also needs unpackaged brotlicffi
+# "zstd"
+DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
+# "secure"
+#PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
+#DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
+#DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
+# but also needs unpackaged urrlib3-secure-extra
+
+TEST_DEPENDS+=			${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test # >= 39.0.1
+TEST_DEPENDS+=			${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
+TEST_DEPENDS+=			${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
+TEST_DEPENDS+=			${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
+#TEST_DEPENDS+=			${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
+TEST_DEPENDS+=			${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
+TEST_DEPENDS+=			${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
+#backports.zoneinfo=		=0.2.1;python_version<"3.9"
+#pytest-memray=			=1.4.0;python_version>="3.8" and python_version<"3.12" and sys_platform!="win32" and implementation_name=="cpython"
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+# as of 2.0.0 with the two missing dependencies above
+# 35 failed, 1477 passed, 769 skipped, 136 warnings
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/wheel.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
