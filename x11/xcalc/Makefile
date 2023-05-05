@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/01/27 09:35:41 micha Exp $
+# $NetBSD: Makefile,v 1.18 2023/05/05 08:21:22 wiz Exp $
 
-DISTNAME=		xcalc-1.1.1
-PKGREVISION=		1
+DISTNAME=		xcalc-1.1.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
