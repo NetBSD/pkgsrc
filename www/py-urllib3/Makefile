@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/05/05 11:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/05/05 13:05:35 adam Exp $
 
-DISTNAME=	urllib3-2.0.0
+DISTNAME=	urllib3-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 #PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
 #DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
 #DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
-# but also needs unpackaged urrlib3-secure-extra
+# but also needs unpackaged urlib3-secure-extra
 
 TEST_DEPENDS+=			${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test # >= 39.0.1
@@ -43,7 +43,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # as of 2.0.0 with the two missing dependencies above
 # 35 failed, 1477 passed, 769 skipped, 136 warnings
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/versioned_dependencies.mk"
