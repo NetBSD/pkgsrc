@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1389 2023/05/05 09:45:01 adam Exp $
+# $NetBSD: Makefile,v 1.1390 2023/05/06 09:45:31 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1021,6 +1021,7 @@ SUBDIR+=	py-demjson3
 SUBDIR+=	py-dicttoxml
 SUBDIR+=	py-diff-match-patch
 SUBDIR+=	py-dill
+SUBDIR+=	py-docstring-to-markdown
 SUBDIR+=	py-docutils
 SUBDIR+=	py-docx
 SUBDIR+=	py-dominate
