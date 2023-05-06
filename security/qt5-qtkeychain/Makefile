@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2023/04/19 08:11:25 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/05/06 19:09:47 ryoon Exp $
 
 QTKEYCHAINVER=	0.9.1
 DISTNAME=	qtkeychain-${QTKEYCHAINVER}
 PKGNAME=	qt5-${DISTNAME}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	security
 MASTER_SITES=	-https://github.com/frankosterfeld/qtkeychain/archive/v${QTKEYCHAINVER}.tar.gz
 

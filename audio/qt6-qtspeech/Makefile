@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/04/19 08:08:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/06 19:09:04 ryoon Exp $
 
 DISTNAME=	qtspeech-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtspeech-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 module for text to speech
 CATEGORIES=	audio
 LICENSE=	gnu-gpl-v3

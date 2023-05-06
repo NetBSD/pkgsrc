@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/01/29 21:14:53 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/05/06 19:08:52 ryoon Exp $
 
 BUILDLINK_TREE+=	sfml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sfml
 SFML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sfml+=	sfml>=1.6
-BUILDLINK_ABI_DEPENDS.sfml?=	sfml>=2.5.1nb4
+BUILDLINK_ABI_DEPENDS.sfml?=	sfml>=2.5.1nb5
 BUILDLINK_PKGSRCDIR.sfml?=	../../multimedia/sfml
 
 .include "../../graphics/glu/buildlink3.mk"

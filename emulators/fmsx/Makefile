@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2022/12/13 13:41:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2023/05/06 19:09:13 ryoon Exp $
 
 DISTNAME=	fMSX54
 PKGNAME=	fmsx-5.4
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	emulators x11
 MASTER_SITES=	https://fms.komkon.org/fMSX/
 EXTRACT_SUFX=	.zip

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/06 19:09:06 ryoon Exp $
 
 DISTNAME=	zam-plugins-3.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zamaudio/}
 
