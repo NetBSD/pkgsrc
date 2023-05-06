@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2023/01/28 18:19:59 triaxx Exp $
+# $NetBSD: Makefile,v 1.22 2023/05/06 19:09:00 ryoon Exp $
 
 DISTNAME=	ladspa_sdk_1.17
 PKGNAME=	${DISTNAME:S/_sdk_/-/}
 DIST_SUBDIR=	${DISTNAME}	# remove on next update
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	https://www.ladspa.org/download/
 EXTRACT_SUFX=	.tgz

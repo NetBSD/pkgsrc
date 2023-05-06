@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/04/19 08:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/06 19:09:44 ryoon Exp $
 
 DISTNAME=	lightspark-0.8.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lightspark/}
 
