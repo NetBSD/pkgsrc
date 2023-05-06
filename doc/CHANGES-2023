@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2895 2023/05/06 15:19:42 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2896 2023/05/06 16:22:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-google-api-python-client to 2.86.0 [wiz 2023-05-06]
 	Added textproc/py-docstring-to-markdown version 0.12 [wiz 2023-05-06]
 	Updated lang/pcc-current to 20230506 [nikita 2023-05-06]
+	Added devel/py-whatthepatch version 1.0.5 [wiz 2023-05-06]
