@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2023/04/24 13:04:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.562 2023/05/06 09:27:07 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -401,6 +401,7 @@ SUBDIR+=	py-munkres
 SUBDIR+=	py-netCDF4
 SUBDIR+=	py-networkx
 SUBDIR+=	py-noise
+SUBDIR+=	py-nptyping
 SUBDIR+=	py-numarray
 SUBDIR+=	py-numba
 SUBDIR+=	py-numexpr
