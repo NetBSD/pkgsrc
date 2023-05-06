@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/03/10 02:05:59 charlotte Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/06 19:09:27 ryoon Exp $
 
 DISTNAME=	ottomatic-4.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 

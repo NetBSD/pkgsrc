@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/04/30 15:03:22 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/05/06 19:08:48 ryoon Exp $
 
 BUILDLINK_TREE+=	toxcore
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	toxcore
 TOXCORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.toxcore+=	toxcore>=0.2.4
-BUILDLINK_ABI_DEPENDS.toxcore+=	toxcore>=0.2.10nb1
+BUILDLINK_ABI_DEPENDS.toxcore+=	toxcore>=0.2.18nb1
 BUILDLINK_PKGSRCDIR.toxcore?=	../../chat/toxcore
 
 .include "../../audio/libopus/buildlink3.mk"

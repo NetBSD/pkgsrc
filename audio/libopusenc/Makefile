@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/04/20 17:34:14 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/06 19:08:46 ryoon Exp $
 
 DISTNAME=	libopusenc-0.2.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/
 

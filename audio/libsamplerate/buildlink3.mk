@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2022/09/11 12:51:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/05/06 19:08:46 ryoon Exp $
 
 BUILDLINK_TREE+=	libsamplerate
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsamplerate
 LIBSAMPLERATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsamplerate+=	libsamplerate>=0.0.13nb1
-BUILDLINK_ABI_DEPENDS.libsamplerate+=	libsamplerate>=0.2.2nb2
+BUILDLINK_ABI_DEPENDS.libsamplerate+=	libsamplerate>=0.2.2nb4
 BUILDLINK_PKGSRCDIR.libsamplerate?=	../../audio/libsamplerate
 
 .include "../../audio/libsndfile/buildlink3.mk"
