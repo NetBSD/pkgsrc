@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/06 16:21:56 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/whatthepatch/__init__.py
+${PYSITELIB}/whatthepatch/__init__.pyc
+${PYSITELIB}/whatthepatch/apply.py
+${PYSITELIB}/whatthepatch/apply.pyc
+${PYSITELIB}/whatthepatch/exceptions.py
+${PYSITELIB}/whatthepatch/exceptions.pyc
+${PYSITELIB}/whatthepatch/patch.py
+${PYSITELIB}/whatthepatch/patch.pyc
+${PYSITELIB}/whatthepatch/snippets.py
+${PYSITELIB}/whatthepatch/snippets.pyc
