@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2877 2023/05/05 23:14:53 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2878 2023/05/06 02:24:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.2.7 [pin 2023-05-05]
 	Updated editors/tp-note to 1.21.2 [pin 2023-05-05]
 	Updated print/atril to 1.26.1 [gutteridge 2023-05-05]
+	Updated devel/ruby-rspec-rails to 6.0.2 [taca 2023-05-06]
