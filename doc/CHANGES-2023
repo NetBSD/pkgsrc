@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2894 2023/05/06 09:45:40 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2895 2023/05/06 15:19:42 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-autodoc-typehints to 1.23.0 [wiz 2023-05-06]
 	Updated www/py-google-api-python-client to 2.86.0 [wiz 2023-05-06]
 	Added textproc/py-docstring-to-markdown version 0.12 [wiz 2023-05-06]
+	Updated lang/pcc-current to 20230506 [nikita 2023-05-06]
