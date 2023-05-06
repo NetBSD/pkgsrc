@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2888 2023/05/06 08:59:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2889 2023/05/06 09:07:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4027,3 +4027,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.3.0 [pin 2023-05-06]
 	Added devel/py-stdio-mgr version 1.0.1 [wiz 2023-05-06]
 	Added devel/py-dictdiffer version 0.9.0 [wiz 2023-05-06]
+	Added devel/py-test-check version 2.1.4 [wiz 2023-05-06]
