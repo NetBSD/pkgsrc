@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2022/10/26 20:04:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/05/06 07:20:29 wiz Exp $
 bin/mpd
 man/man1/mpd.1
 man/man5/mpd.conf.5
@@ -15,14 +15,11 @@ share/doc/mpd/html/_sources/mpd.conf.5.rst.txt
 share/doc/mpd/html/_sources/plugins.rst.txt
 share/doc/mpd/html/_sources/protocol.rst.txt
 share/doc/mpd/html/_sources/user.rst.txt
-share/doc/mpd/html/_static/_sphinx_javascript_frameworks_compat.js
 share/doc/mpd/html/_static/basic.css
 share/doc/mpd/html/_static/classic.css
 share/doc/mpd/html/_static/doctools.js
 share/doc/mpd/html/_static/documentation_options.js
 share/doc/mpd/html/_static/file.png
-share/doc/mpd/html/_static/jquery-3.6.0.js
-share/doc/mpd/html/_static/jquery.js
 share/doc/mpd/html/_static/language_data.js
 share/doc/mpd/html/_static/minus.png
 share/doc/mpd/html/_static/plus.png
@@ -30,8 +27,6 @@ share/doc/mpd/html/_static/pygments.css
 share/doc/mpd/html/_static/searchtools.js
 share/doc/mpd/html/_static/sidebar.js
 share/doc/mpd/html/_static/sphinx_highlight.js
-share/doc/mpd/html/_static/underscore-1.13.1.js
-share/doc/mpd/html/_static/underscore.js
 share/doc/mpd/html/client.html
 share/doc/mpd/html/developer.html
 share/doc/mpd/html/genindex.html
