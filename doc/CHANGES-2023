@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2897 2023/05/06 17:05:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2898 2023/05/06 18:52:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/pcc-current to 20230506 [nikita 2023-05-06]
 	Added devel/py-whatthepatch version 1.0.5 [wiz 2023-05-06]
 	Updated lang/py-lsp-server to 1.7.2 [wiz 2023-05-06]
+	Updated audio/libopus to 1.4 [ryoon 2023-05-06]
