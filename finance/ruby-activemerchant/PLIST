@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/08/26 15:28:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/05/06 03:03:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/adyen.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/airwallex.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/alelo.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/allied_wallet.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net_arb.rb
@@ -59,6 +60,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/checkout.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/checkout_v2.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/citrus_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/clearhaus.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/commerce_hub.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/commercegate.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/conekta.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/creditcall.rb
@@ -66,6 +68,8 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/credorax.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ct_payment.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/culqi.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/cyber_source.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/cyber_source/cyber_source_common.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/cyber_source_rest.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/d_local.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/data_cash.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/decidir.rb
@@ -193,6 +197,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payu_latam.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway_dot_com.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pin.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/plexo.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/plugnpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/priority.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pro_pay.rb
@@ -207,6 +212,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay/quickpay_v10.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay/quickpay_v4to7.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/qvalent.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/rapyd.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/reach.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/realex.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/redsys.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/s5.rb
@@ -219,6 +225,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_au.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_tech.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/securion_pay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/shift4.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/simetrik.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/skip_jack.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/smart_ps.rb
