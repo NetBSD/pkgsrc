@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2883 2023/05/06 03:04:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.2884 2023/05/06 07:20:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-core to 3.171.1 [taca 2023-05-06]
 	Updated www/ruby-aws-sdk-kms to 1.64.0 [taca 2023-05-06]
 	Updated finance/ruby-activemerchant to 1.129.0 [taca 2023-05-06]
+	Updated audio/musicpd to 0.23.12nb6 [wiz 2023-05-06]
