@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.314 2023/05/06 19:09:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.315 2023/05/06 19:22:37 ryoon Exp $
 
-DISTNAME=	qemu-7.2.1
-PKGREVISION=	1
+DISTNAME=	qemu-8.0.0
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +25,7 @@ GCC_REQD+=		7
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
 CONFIGURE_ARGS+=	--sphinx-build=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 .include "options.mk"
@@ -115,6 +115,7 @@ UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
+PLIST.ga=			yes
 PLIST.nbd=			yes
 .  if !exists(/usr/include/machine/trap.h)	\
 	|| "1"=="1"	# XXX usermode emulation is broken
@@ -125,6 +126,7 @@ USER_EMUL=			i386 x86_64
 .  endif
 .elif ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 USER_EMUL=			i386 x86_64
+PLIST.ga=			yes
 PLIST.nbd=			yes
 .elif ${OPSYS} == "Darwin"
 USER_EMUL=
@@ -193,6 +195,7 @@ post-install:
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

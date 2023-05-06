@@ -1,9 +1,9 @@
-$NetBSD: patch-target_arm_translate-sve.c,v 1.1 2022/10/25 18:46:08 jperkin Exp $
+$NetBSD: patch-target_arm_translate-sve.c,v 1.2 2023/05/06 19:22:37 ryoon Exp $
 
 Avoid FSCALE define, notably on SunOS.
 
---- target/arm/translate-sve.c.orig	2022-08-30 16:41:57.000000000 +0000
-+++ target/arm/translate-sve.c
+--- target/arm/tcg/translate-sve.c.orig	2022-08-30 16:41:57.000000000 +0000
++++ target/arm/tcg/translate-sve.c
 @@ -3988,6 +3988,9 @@ TRANS_FEAT_NONSTREAMING(FTSMUL, aa64_sve
      };                                                          \
      TRANS_FEAT(NAME, FEAT, gen_gvec_fpst_arg_zpzz, name##_zpzz_fns[a->esz], a)
