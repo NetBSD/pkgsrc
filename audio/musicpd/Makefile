@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.289 2023/04/23 14:26:11 adam Exp $
+# $NetBSD: Makefile,v 1.290 2023/05/06 07:20:29 wiz Exp $
 
 DISTNAME=	mpd-0.23.12
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.musicpd.org/
 COMMENT=	Remote controllable audio player
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=5.3.0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.0.0:../../textproc/py-sphinx
 
 CONFLICTS=	mpd-[0-9]*
 
