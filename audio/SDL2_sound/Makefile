@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/10/04 07:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/06 19:08:45 ryoon Exp $
 
 DISTNAME=	SDL_sound-2.0.1
 PKGNAME=	${DISTNAME:S/SDL/SDL2/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
 GITHUB_PROJECT=	SDL_sound

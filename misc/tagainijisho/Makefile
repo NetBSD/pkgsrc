@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:10:53 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/06 19:09:41 ryoon Exp $
 
 DISTNAME=	tagainijisho-1.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Gnurou/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

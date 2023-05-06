@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2022/09/11 12:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/06 19:09:16 ryoon Exp $
 
 VERSION=		1.70
 DISTNAME=		xm8_${VERSION:S/.//}
 PKGNAME=		xm8-${VERSION}
-PKGREVISION=		8
+PKGREVISION=		9
 #PKGREVISION=		
 CATEGORIES=		emulators
 MASTER_SITES=		http://retropc.net/pi/
