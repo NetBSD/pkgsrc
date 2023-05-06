@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/06 08:52:25 wiz Exp $
+
+BLAKE2s (stdio-mgr-1.0.1.tar.gz) = 6b7d48af26422d3fb30f9b468d13b0d446e9ff443886d6f044c748e6dc72e0c5
+SHA512 (stdio-mgr-1.0.1.tar.gz) = 57ae872490852a288dbc1507a0c4f9df793417f823c2bd3d3f7667918cbb59b0c60019647345d50f9b3e4957579cc8e639ef40b5c018cc199068bc489c704623
+Size (stdio-mgr-1.0.1.tar.gz) = 7222 bytes
