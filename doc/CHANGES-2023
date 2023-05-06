@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2885 2023/05/06 08:39:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2886 2023/05/06 08:47:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4024,3 +4024,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ruby-activemerchant to 1.129.0 [taca 2023-05-06]
 	Updated audio/musicpd to 0.23.12nb6 [wiz 2023-05-06]
 	Updated textproc/py-sphinx-autoapi to 2.1.0 [wiz 2023-05-06]
+	Updated graphics/wallust to 2.3.0 [pin 2023-05-06]
