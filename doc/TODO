@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22896 2023/05/06 19:23:18 ryoon Exp $
+$NetBSD: TODO,v 1.22897 2023/05/06 19:35:31 nikita Exp $
 
 Suggested new packages
 ======================
@@ -1115,7 +1115,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o paprefs-1.1
 	o parley-20.12.3
 	o parrot-8.1.0
-	o pcc-1.1.0
+	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
