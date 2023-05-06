@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/05/02 17:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2023/05/06 18:22:24 wiz Exp $
 
 DISTNAME=	cppcheck-2.8
 PKGREVISION=	5
@@ -53,6 +53,5 @@ man-install:
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/z3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
