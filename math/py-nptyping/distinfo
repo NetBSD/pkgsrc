@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/06 09:26:48 wiz Exp $
+
+BLAKE2s (nptyping-2.5.0.tar.gz) = c493fb14b21f2c4897665492697c72dcd7d64c63caa4996f34c07a14a3cc3a86
+SHA512 (nptyping-2.5.0.tar.gz) = a3b3792a1383278697ca1a61081cd01f93a49afc6e2373f40fedbaabf6da596da052efde9c90c28fe7a08472871f04516f74606ef93f4315680ca045ca82ee86
+Size (nptyping-2.5.0.tar.gz) = 71623 bytes

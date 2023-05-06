@@ -1,0 +1,2 @@
+This Python module provides type hints for NumPy and pandas.DataFrame
+and extensive dynamic type checks for dtypes shapes and structures.
