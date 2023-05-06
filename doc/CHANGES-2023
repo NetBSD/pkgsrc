@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2892 2023/05/06 09:28:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2893 2023/05/06 09:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4031,3 +4031,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphobjinv to 2.3.1 [wiz 2023-05-06]
 	Added math/py-nptyping version 2.5.0 [wiz 2023-05-06]
 	Updated textproc/py-sphinx-autodoc-typehints to 1.23.0 [wiz 2023-05-06]
+	Updated www/py-google-api-python-client to 2.86.0 [wiz 2023-05-06]
