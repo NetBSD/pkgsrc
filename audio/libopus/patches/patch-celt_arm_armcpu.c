@@ -1,11 +1,11 @@
-$NetBSD: patch-celt_arm_armcpu.c,v 1.1 2017/05/13 07:51:08 maya Exp $
+$NetBSD: patch-celt_arm_armcpu.c,v 1.2 2023/05/06 18:51:15 ryoon Exp $
 
 Don't error on ARM if we're not on linux or MSVC.
 Currently the code attempts to open /proc/cpuinfo, and tests for
 failure - if that doesn't contain useful info or doesn't exist,
 it still behaves correctly.
 
---- celt/arm/armcpu.c.orig	2017-01-16 20:50:20.000000000 +0000
+--- celt/arm/armcpu.c.orig	2022-08-04 21:54:39.000000000 +0000
 +++ celt/arm/armcpu.c
 @@ -91,7 +91,7 @@ static OPUS_INLINE opus_uint32 opus_cpu_
    return flags;
@@ -14,9 +14,9 @@ it still behaves correctly.
 -#elif defined(__linux__)
 +#else
  /* Linux based */
- opus_uint32 opus_cpu_capabilities(void)
- {
-@@ -146,11 +146,12 @@ opus_uint32 opus_cpu_capabilities(void)
+ #include <stdio.h>
+ 
+@@ -148,11 +148,12 @@ opus_uint32 opus_cpu_capabilities(void)
    }
    return flags;
  }
