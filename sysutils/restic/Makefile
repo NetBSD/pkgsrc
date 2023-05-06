@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/05/05 19:37:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/06 06:05:29 iquiw Exp $
 
 DISTNAME=	restic-0.15.2
 PKGREVISION=	1
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	iquiw@NetBSD.org
 HOMEPAGE=	https://restic.net/
 COMMENT=	Fast, secure, efficient backup program
-LICENSE=	mit
+LICENSE=	2-clause-bsd
 
 EXTRACT_USING=	bsdtar
 
