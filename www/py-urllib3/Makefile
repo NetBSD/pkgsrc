@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/05/05 13:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.48 2023/05/06 18:25:16 wiz Exp $
 
 DISTNAME=	urllib3-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,8 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 # but also needs unpackaged urlib3-secure-extra
 
 TEST_DEPENDS+=			${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test # >= 39.0.1
+# needs py-cryptography>=39.0.1
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
 TEST_DEPENDS+=			${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
 TEST_DEPENDS+=			${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 TEST_DEPENDS+=			${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
