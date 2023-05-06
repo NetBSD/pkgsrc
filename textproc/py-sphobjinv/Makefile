@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/06 09:09:11 wiz Exp $
 
-DISTNAME=	sphobjinv-2.0.1
+DISTNAME=	sphobjinv-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphobjinv/}
 
@@ -13,8 +12,12 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-fuzzywuzzy>=0.3:../../devel/py-fuzzywuzzy
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.0:../../textproc/py-jsonschema
+TEST_DEPENDS+=	${PYPKGPREFIX}-dictdiffer>=0:../../devel/py-dictdiffer
+TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=0:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-stdio-mgr>=0:../../devel/py-stdio-mgr
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-check>=0:../../devel/py-test-check
 
 USE_LANGUAGES=		# none
 
@@ -25,6 +28,10 @@ USE_PKG_RESOURCES=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} sphobjinv sphobjinv-${PYVERSSUFFIX} || ${TRUE}
+
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
