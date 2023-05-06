@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.32 2020/08/16 22:44:44 tnn Exp $
+# $NetBSD: pear.mk,v 1.33 2023/05/06 14:04:41 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -88,6 +88,5 @@ do-install:
 .endif
 
 .include "../../lang/php/phpversion.mk"
-.include "${PHPPKGSRCDIR}/buildlink3.mk"
 
 .endif  # _PEAR_PACKAGE_MK
