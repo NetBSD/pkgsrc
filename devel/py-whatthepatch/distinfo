@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/06 16:21:56 wiz Exp $
+
+BLAKE2s (whatthepatch-1.0.5.tar.gz) = b541a65dba648dc7bc00a78195a049cf55af6efa888ed442d2d8ebb1b0de8827
+SHA512 (whatthepatch-1.0.5.tar.gz) = d87a36a608a15bcf6d28d26afee40161e26f17fa3b011056388f9850896577f913a91066de8b6071ea15b28fa05f8d00acb997b18483ea56218df4efb40109ab
+Size (whatthepatch-1.0.5.tar.gz) = 31850 bytes
