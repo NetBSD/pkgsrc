@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3985 2023/05/06 08:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3986 2023/05/06 08:59:17 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2481,6 +2481,7 @@ SUBDIR+=	py-deprecated
 SUBDIR+=	py-deprecation
 SUBDIR+=	py-dialog
 SUBDIR+=	py-dict2xml
+SUBDIR+=	py-dictdiffer
 SUBDIR+=	py-dictpath
 SUBDIR+=	py-distlib
 SUBDIR+=	py-distorm3
