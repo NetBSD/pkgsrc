@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.83 2023/04/19 08:08:24 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.84 2023/05/06 19:08:51 ryoon Exp $
 
 BUILDLINK_TREE+=	libkipi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkipi
 LIBKIPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=17.12.1
-BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=22.08.1nb5
+BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=22.08.1nb6
 BUILDLINK_PKGSRCDIR.libkipi?=	../../graphics/libkipi
 
 .include "../../x11/kxmlgui/buildlink3.mk"

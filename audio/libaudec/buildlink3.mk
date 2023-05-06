@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/09/11 12:51:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/05/06 19:08:46 ryoon Exp $
 
 BUILDLINK_TREE+=	libaudec
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libaudec
 LIBAUDEC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libaudec+=	libaudec>=0.3.4
-BUILDLINK_ABI_DEPENDS.libaudec?=		libaudec>=0.3.4nb2
+BUILDLINK_ABI_DEPENDS.libaudec?=		libaudec>=0.3.4nb3
 BUILDLINK_PKGSRCDIR.libaudec?=		../../audio/libaudec
 
 .include "../../audio/libsamplerate/buildlink3.mk"

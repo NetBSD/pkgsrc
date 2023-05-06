@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2023/01/29 21:14:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2023/05/06 19:08:46 ryoon Exp $
 
 BUILDLINK_TREE+=	liblastfm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	liblastfm
 LIBLASTFM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblastfm+=	liblastfm>=0.3.0
-BUILDLINK_ABI_DEPENDS.liblastfm+=	liblastfm>=0.3.3nb33
+BUILDLINK_ABI_DEPENDS.liblastfm+=	liblastfm>=0.3.3nb34
 BUILDLINK_PKGSRCDIR.liblastfm?=		../../audio/liblastfm
 
 .include "../../audio/libsamplerate/buildlink3.mk"

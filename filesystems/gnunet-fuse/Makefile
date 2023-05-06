@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/04/19 08:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/06 19:09:16 ryoon Exp $
 
 DISTNAME=		gnunet-fuse-0.19.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		filesystems
 MASTER_SITES=		${MASTER_SITE_GNU:=gnunet/}
 

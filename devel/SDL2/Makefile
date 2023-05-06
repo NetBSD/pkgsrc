@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/04/06 11:02:10 adam Exp $
+# $NetBSD: Makefile,v 1.78 2023/05/06 19:08:48 ryoon Exp $
 
 DISTNAME=	SDL2-2.26.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL
