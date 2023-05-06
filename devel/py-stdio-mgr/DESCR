@@ -1,0 +1,8 @@
+This modules helps in automating testing actual console input &
+output of user-facing components.
+
+While some functionality here is more or less duplicative of
+redirect_stdout and redirect_stderr in contextlib within the standard
+library, it provides (i) a much more concise way to mock both stdout
+and stderr at the same time, and (ii) a mechanism for mocking stdin,
+which is not available in contextlib.
