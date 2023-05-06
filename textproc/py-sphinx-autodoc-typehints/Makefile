@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/06 09:28:24 wiz Exp $
 
-DISTNAME=	sphinx-autodoc-typehints-1.12.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	sphinx_autodoc_typehints-1.23.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/agronholm/sphinx-autodoc-typehints
+HOMEPAGE=	https://github.com/tox-dev/sphinx-autodoc-typehints
 COMMENT=	Type hints support for the Sphinx autodoc extension
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.0:../../textproc/py-sphinx
-TEST_DEPENDS+=	${PYPKGPREFIX}-sphobjinv>=2.0:../../textproc/py-sphobjinv
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.1.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.5:../../devel/py-typing-extensions
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=5.3:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-sphobjinv>=2.3.1:../../textproc/py-sphobjinv
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.2:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nptyping-[0-9]*:../../math/py-nptyping
+#TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
@@ -24,5 +25,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${MAKE_ENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
