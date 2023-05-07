@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2923 2023/05/07 16:57:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2924 2023/05/07 18:24:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4060,3 +4060,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libheif to 1.16.1 [wiz 2023-05-07]
 	Updated multimedia/dav1d to 1.2.0 [wiz 2023-05-07]
 	Updated math/imath to 3.1.7 [wiz 2023-05-07]
+	Updated misc/wthrr to 1.1.0 [pin 2023-05-07]
