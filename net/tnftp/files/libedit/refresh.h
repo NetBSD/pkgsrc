@@ -1,5 +1,5 @@
-/*	$NetBSD: refresh.h,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
-/*	from	NetBSD: refresh.h,v 1.5 2003/08/07 16:44:33 agc Exp	*/
+/*	$NetBSD: refresh.h,v 1.5 2023/05/07 19:13:27 wiz Exp $	*/
+/*	from	NetBSD: refresh.h,v 1.11 2017/06/27 23:23:48 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -41,20 +41,20 @@
 #ifndef _h_el_refresh
 #define	_h_el_refresh
 
-#include "histedit.h"
-
 typedef struct {
 	coord_t	r_cursor;	/* Refresh cursor position	*/
 	int	r_oldcv;	/* Vertical locations		*/
 	int	r_newcv;
 } el_refresh_t;
 
-protected void	re_putc(EditLine *, int, int);
-protected void	re_clear_lines(EditLine *);
-protected void	re_clear_display(EditLine *);
-protected void	re_refresh(EditLine *);
-protected void	re_refresh_cursor(EditLine *);
-protected void	re_fastaddc(EditLine *);
-protected void	re_goto_bottom(EditLine *);
+libedit_private void	re_putc(EditLine *, wint_t, int);
+libedit_private void	re_putliteral(EditLine *, const wchar_t *,
+    const wchar_t *);
+libedit_private void	re_clear_lines(EditLine *);
+libedit_private void	re_clear_display(EditLine *);
+libedit_private void	re_refresh(EditLine *);
+libedit_private void	re_refresh_cursor(EditLine *);
+libedit_private void	re_fastaddc(EditLine *);
+libedit_private void	re_goto_bottom(EditLine *);
 
 #endif /* _h_el_refresh */

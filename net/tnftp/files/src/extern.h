@@ -1,8 +1,8 @@
-/*	$NetBSD: extern.h,v 1.8 2014/10/31 18:59:33 spz Exp $	*/
-/*	from	NetBSD: extern.h,v 1.80 2012/07/04 06:09:37 is Exp	*/
+/*	$NetBSD: extern.h,v 1.9 2023/05/07 19:13:28 wiz Exp $	*/
+/*	from	NetBSD: extern.h,v 1.83 2023/02/25 12:07:25 mlelstv Exp	*/
 
 /*-
- * Copyright (c) 1996-2009 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2023 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -174,6 +174,7 @@ void	pswitch(int);
 void	put(int, char **);
 void	pwd(int, char **);
 void	quit(int, char **);
+void	justquit(void) __dead;
 void	quote(int, char **);
 void	quote1(const char *, int, char **);
 void	recvrequest(const char *, const char *, const char *,
@@ -243,7 +244,15 @@ void	user(int, char **);
 int	ftp_connect(int, const struct sockaddr *, socklen_t, int);
 int	ftp_listen(int, int);
 int	ftp_poll(struct pollfd *, int, int);
+int	ftp_truthy(const char *, const char *, int);
+#ifndef SMALL
 void   *ftp_malloc(size_t);
 StringList *ftp_sl_init(void);
 void	ftp_sl_add(StringList *, char *);
 char   *ftp_strdup(const char *);
+#else
+#define	ftp_malloc(a)	malloc(a);
+#define ftp_sl_init()	sl_init()
+#define ftp_sl_add(a, b)	sl_add((a), (b))
+#define ftp_strdup(a)	strdup(a)
+#endif
