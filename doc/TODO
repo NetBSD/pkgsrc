@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22907 2023/05/07 11:57:49 wiz Exp $
+$NetBSD: TODO,v 1.22908 2023/05/07 12:08:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -611,6 +611,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epiphany-extensions-3.2.0
 	o epubcheck-4.0.2
 	o eric5-5.4.6
+	o erlang-25.3.2
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -897,7 +898,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
-	o libimagequant-4.1.1
+	o libimagequant-4.2.0
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -928,7 +929,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-16.0.2
+	o llvm-16.0.3
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
