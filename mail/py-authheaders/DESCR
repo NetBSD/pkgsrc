@@ -1,0 +1,5 @@
+Python module for generating email authentication headers: Authheaders can
+generate both authentication results header fields and DKIM/ ARC signatures.
+It can perform DKIM, SPF, and DMARC validation, and the results are packaged
+into a single Authentication-Results header. It can also DKIM and ARC sign
+messages and output the corresponding signature header fields.
