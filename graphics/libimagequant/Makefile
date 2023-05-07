@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/05/07 12:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/07 16:55:20 wiz Exp $
 
-DISTNAME=	libimagequant-4.2.0
+DISTNAME=	libimagequant-2.18.0
 CATEGORIES=	graphics
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ImageOptim/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,23 +10,28 @@ HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/imagequant-sys
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash gmake
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix="${PREFIX}"
+BUILD_TARGET=		shared
 
-.include "cargo-depends.mk"
+CONFIG_SHELL=		${BASH}
+INSTALLATION_DIRS=	include lib
+REPLACE_BASH=		configure
 
-INSTALLATION_DIRS=	include lib/pkg-config
+.include "../../mk/bsd.prefs.mk"
 
-post-build:
-	cd ${WRKSRC} && \
-        ${SED} 's|@PREFIX@|${PREFIX}|;s|@VERSION@|${VERSION}|' < imagequant.pc.in > imagequant.pc
+.if ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ARGS+=	--enable-sse
+.else
+CONFIGURE_ARGS+=	--disable-sse
+.endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libimagequant.h \
-		${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/imagequant.pc \
-		${DESTDIR}${PREFIX}/lib/pkg-config
-	${INSTALL_LIB} ${WRKSRC}/../target/release/libimagequant_sys.a \
-		${DESTDIR}${PREFIX}/lib/libimagequant.a
+		${DESTDIR}${PREFIX}/include/libimagequant.h
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/libimagequant.la ${DESTDIR}${PREFIX}/lib
 
-.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
