@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2022/09/24 19:11:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/07 10:53:22 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
+PKGREVISION=	1
 COMMENT=	Python bindings for Xapian search engine
 HOMEPAGE=	https://xapian.org/docs/bindings/python/
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=7:../../textproc/py-sphinx
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
