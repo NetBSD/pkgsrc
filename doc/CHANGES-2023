@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2929 2023/05/07 20:33:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2930 2023/05/07 21:16:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4067,3 +4067,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/tnftp to 20230507 [wiz 2023-05-07]
 	Updated net/libsoup3 to 3.4.2 [gutteridge 2023-05-07]
 	Updated x11/xf86-video-dummy to 0.4.1 [wiz 2023-05-07]
+	Added mail/py-dkim version 1.1.3 [markd 2023-05-07]
+	Added mail/py-authheaders version 0.15.2 [markd 2023-05-07]
+	Added print/tex-outlines version 1.1 [markd 2023-05-07]
+	Added print/tex-outlines-doc version 1.1 [markd 2023-05-07]
+	Updated mail/py-aiosmtpd to 1.4.4.post2 [markd 2023-05-07]
