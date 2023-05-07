@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2023/04/23 14:26:25 adam Exp $
+# $NetBSD: Makefile,v 1.116 2023/05/07 19:50:48 nikita Exp $
 
 DISTNAME=	akonadi-1.13.0
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	mail
 MASTER_SITES=	ftp://kde.mirror.anlx.net/stable/akonadi/src/
 EXTRACT_SUFX=	.tar.bz2
