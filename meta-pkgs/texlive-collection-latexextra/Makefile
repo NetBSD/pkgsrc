@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/04/24 04:57:01 markd Exp $
+# $NetBSD: Makefile,v 1.79 2023/05/07 21:00:04 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre2
+PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	66744
@@ -985,7 +985,7 @@ DEPENDS+=	tex-orcidlink-[0-9]*:../../print/tex-orcidlink
 # depend orientation
 DEPENDS+=	tex-outline-[0-9]*:../../print/tex-outline
 # depend outliner
-# depend outlines
+DEPENDS+=	tex-outlines-[0-9]*:../../print/tex-outlines
 # depend outlining
 # depend overlays
 DEPENDS+=	tex-overpic-[0-9]*:../../print/tex-overpic
