@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/01 23:56:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/05/07 19:41:22 gutteridge Exp $
 
-BLAKE2s (libsoup-3.2.2.tar.xz) = 0118d53d3d93ba9277288a09a124f27c9f0259e7a74afd4b9f40194018dca273
-SHA512 (libsoup-3.2.2.tar.xz) = 1f2b49244f8bac4d112b39ac9c6a942acbc1ae1cff33262ed02e7682af3994cf6ba6741b365b3c80c45c6427d391599fa6f31df6caa4ffefe7d078ac373bad1b
-Size (libsoup-3.2.2.tar.xz) = 1530460 bytes
+BLAKE2s (libsoup-3.4.2.tar.xz) = 4a737484f35495ba49db666d5644b50a3b3e176cfce6f4d8499f0d21971efd47
+SHA512 (libsoup-3.4.2.tar.xz) = 711007599f639625fe2efdb7adb81de2dea0035180737ce0ec8234afb034646a2b6bd9ae384a69d6591aa142e91d245d502d13e1d97cd7b51c8c87c2d925f6b3
+Size (libsoup-3.4.2.tar.xz) = 1535992 bytes
