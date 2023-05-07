@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/02/27 10:45:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/07 12:10:42 wiz Exp $
 
-DISTNAME=	dav1d-1.1.0
+DISTNAME=	dav1d-1.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://downloads.videolan.org/pub/videolan/dav1d/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
