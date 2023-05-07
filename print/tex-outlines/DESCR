@@ -1,0 +1,6 @@
+Defines an outline environment, which allows outline-style
+indented lists with freely mixed levels up to four levels deep.
+It replaces the nested begin/end pairs by different item tags
+\1 to \4 for each nesting level. This is very convenient in
+cases where nested lists are used a lot, such as for to-do
+lists or presentation slides.
