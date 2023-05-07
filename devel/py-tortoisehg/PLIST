@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2022/11/14 15:52:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/05/07 10:50:25 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -472,15 +472,12 @@ share/doc/tortoisehg/html/_sources/shelve.txt
 share/doc/tortoisehg/html/_sources/sync.txt
 share/doc/tortoisehg/html/_sources/whatsnew.txt
 share/doc/tortoisehg/html/_sources/workbench.txt
-share/doc/tortoisehg/html/_static/_sphinx_javascript_frameworks_compat.js
 share/doc/tortoisehg/html/_static/alabaster.css
 share/doc/tortoisehg/html/_static/basic.css
 share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
 share/doc/tortoisehg/html/_static/documentation_options.js
 share/doc/tortoisehg/html/_static/file.png
-share/doc/tortoisehg/html/_static/jquery-3.6.0.js
-share/doc/tortoisehg/html/_static/jquery.js
 share/doc/tortoisehg/html/_static/language_data.js
 share/doc/tortoisehg/html/_static/minus.png
 share/doc/tortoisehg/html/_static/plus.png
@@ -489,8 +486,6 @@ share/doc/tortoisehg/html/_static/searchtools.js
 share/doc/tortoisehg/html/_static/sphinx_highlight.js
 share/doc/tortoisehg/html/_static/thg_logo_92x50.png
 share/doc/tortoisehg/html/_static/tortoisehg.css
-share/doc/tortoisehg/html/_static/underscore-1.13.1.js
-share/doc/tortoisehg/html/_static/underscore.js
 share/doc/tortoisehg/html/archive.html
 share/doc/tortoisehg/html/clone.html
 share/doc/tortoisehg/html/commit.html
