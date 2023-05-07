@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/03/29 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/07 21:08:39 markd Exp $
 
-DISTNAME=	aiosmtpd-1.4.2
+DISTNAME=	aiosmtpd-1.4.4.post2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosmtpd/}
 
@@ -25,6 +24,9 @@ USE_PKG_RESOURCES=	yes
 .if ${PYTHON_VERSION} < 308
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
+
+pre-configure:
+	${CHMOD} -R go-w ${WRKSRC}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
