@@ -1,5 +1,5 @@
-/*	$NetBSD: sig.h,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
-/*	from	NetBSD: sig.h,v 1.5 2003/08/07 16:44:33 agc Exp	*/
+/*	$NetBSD: sig.h,v 1.5 2023/05/07 19:13:27 wiz Exp $	*/
+/*	from	NetBSD: sig.h,v 1.11 2016/05/09 21:46:56 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -41,9 +41,9 @@
 #ifndef _h_el_sig
 #define	_h_el_sig
 
+#if 0 /* tnftp */
 #include <signal.h>
-
-#include "histedit.h"
+#endif /* tnftp */
 
 /*
  * Define here all the signals we are going to handle
@@ -52,19 +52,22 @@
 #define	ALLSIGS		\
 	_DO(SIGINT)	\
 	_DO(SIGTSTP)	\
-	_DO(SIGSTOP)	\
 	_DO(SIGQUIT)	\
 	_DO(SIGHUP)	\
 	_DO(SIGTERM)	\
 	_DO(SIGCONT)	\
 	_DO(SIGWINCH)
+#define ALLSIGSNO	7
 
-typedef void (*el_signalhandler_t)(int);
-typedef el_signalhandler_t *el_signal_t;
+typedef struct {
+	struct sigaction sig_action[ALLSIGSNO];
+	sigset_t sig_set;
+	volatile sig_atomic_t sig_no;
+} *el_signal_t;
 
-protected void	sig_end(EditLine*);
-protected int	sig_init(EditLine*);
-protected void	sig_set(EditLine*);
-protected void	sig_clr(EditLine*);
+libedit_private void	sig_end(EditLine*);
+libedit_private int	sig_init(EditLine*);
+libedit_private void	sig_set(EditLine*);
+libedit_private void	sig_clr(EditLine*);
 
 #endif /* _h_el_sig */

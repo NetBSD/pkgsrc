@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/06/02 12:17:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2023/05/07 19:13:27 wiz Exp $
 
-DISTNAME=		tnftp-20151004
-PKGREVISION=		2
+DISTNAME=		tnftp-20230507
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,7 +12,7 @@ CONFLICTS+=		lukemftp-[0-9]*
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
-LICENSE=		original-bsd
+LICENSE=		2-clause-bsd
 
 BOOTSTRAP_PKG=		yes
 
@@ -27,8 +26,8 @@ MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 .include "options.mk"
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
-	@${RM} -f ${WRKSRC}/INSTALL
+	${CP} -R ${FILESDIR} ${WRKSRC}
+	${RM} -f ${WRKSRC}/INSTALL
 
 post-install:
 	${MV} -f ${DESTDIR}${PREFIX}/bin/tnftp ${DESTDIR}${PREFIX}/bin/ftp
