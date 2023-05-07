@@ -1,15 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/07/17 22:08:58 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/07 20:48:50 nikita Exp $
 
-Install config file to the examples directory.
+Do not introduce timestamps in PNG files (for icons).
+See <https://wiki.debian.org/ReproducibleBuilds/TimestampsInPNG>.
 
---- CMakeLists.txt.orig	2019-01-28 06:53:24.000000000 +0000
-+++ CMakeLists.txt
-@@ -371,7 +371,7 @@ install(TARGETS ${PROJECT_AWE_NAME} RUNT
- install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
- install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH}
-     PATTERN "*.in" EXCLUDE)
--install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${AWESOME_SYSCONFDIR}
-+install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/awesome
-         RENAME rc.lua)
- if(GENERATE_MANPAGES)
-     if(COMPRESS_MANPAGES)
+--- CMakeLists.txt.orig	2023-05-07 21:57:36.859234114 +0200
++++ CMakeLists.txt	2023-05-07 21:59:09.539145363 +0200
+@@ -336,7 +336,7 @@
+         set(ALL_ICONS ${ALL_ICONS} ${output})
+ 
+         add_custom_command(
+-            COMMAND ${CONVERT_EXECUTABLE} ${input} -strip ${ARGN} ${output}
++            COMMAND ${CONVERT_EXECUTABLE} +set date:create +set date:modify -define png:exclude-chunk=time ${input} -strip ${ARGN} ${output}
+             OUTPUT  ${output}
+             DEPENDS ${input}
+             VERBATIM)
