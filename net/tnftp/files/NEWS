@@ -1,8 +1,79 @@
-$NetBSD: NEWS,v 1.3 2015/10/04 14:44:06 tnn Exp $
+$NetBSD: NEWS,v 1.4 2023/05/07 19:13:27 wiz Exp $
 
-This is tnftp version 20151004.
+This is tnftp version 20230507.
 
-Changes in tnftp 20141104 to 20151004:
+Changes in tnftp from 20230409 to 20230507:
+
+	Add timeout for SSL connection setup, defaulting to 60 seconds.
+
+	Update to NetBSD-ftp 20230505.
+
+Changes in tnftp from 20210827 to 20230409:
+
+	Validate SSL certificates by default, disabled with
+	FTPSSLNOVERIFY=1 in the environment, or option sslnoverify.
+
+	Add netrc processing to fetch-mode (URL on command line)
+	to enable options and autologin via netrc.
+
+	Handle relative URLs in fetch.
+
+	Improve formatting of manual page.
+
+	Update to NetBSD-ftp 20230225.
+
+Changes in tnftp from 20200705 to 20210827:
+
+	Validate address in server's PASV and LPSV responses. Previously a
+	hostile server could cause ftp to open a data connection elsewhere.
+
+	Avoid intermittent crashes by fixing signal handler restoration.
+
+	Fix intermittent failures in -q QUITTIME by not using restartable
+	signals.
+
+	Set SO_KEEPALIVE on control connection to attempt to avoid timeouts.
+
+	Update to NetBSD-ftp 20210826.
+
+	Improve configure tests.
+
+	Improve manual page.
+
+	Display usage to stdout with -?.
+
+Changes in tnftp from 20151004 to 20200705:
+
+	Avoid crashes by exiting if lostpeer due to a signal
+	(e.g., remote server disconnection).
+
+	Issue PWD commands to the server only when we actually
+	need the results, not speculatively, just in case we might.
+	Works around broken servers, and is quicker too.
+
+	Use "anonymous" instead of the local username for anonymous
+	ftp. Avoids unnecesary information leak.
+
+	Use the first name we requested the http/https URL for,
+	not any name we ended up with after random redirects.
+
+	Support using CONNECT for https:// via proxy.
+
+	Improve SSL error reporting, and IPv6 endpoint reporting.
+
+	Use the system glob() if required extensions are supported.
+
+	Use the system libedit library by default, instead of
+	the local (embedded) libedit.
+
+	Update to NetBSD-ftp 20200608.
+
+	Update local (embedded) libedit to NetBSD as at 2020-07-04.
+	Fixes various crashes.
+
+	Portability improvements.
+
+Changes in tnftp from 20141104 to 20151004:
 
 	Implement '-x xferbufsize' to set xferbuf size.
 

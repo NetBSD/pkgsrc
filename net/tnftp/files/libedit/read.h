@@ -1,5 +1,5 @@
-/*	$NetBSD: read.h,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
-/*	from	NetBSD: read.h,v 1.4 2004/02/27 14:52:18 christos Exp	*/
+/*	$NetBSD: read.h,v 1.6 2023/05/07 19:13:27 wiz Exp $	*/
+/*	from	NetBSD: read.h,v 1.12 2016/05/22 19:44:26 christos Exp	*/
 
 /*-
  * Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -36,16 +36,11 @@
 #ifndef	_h_el_read
 #define	_h_el_read
 
-typedef int (*el_rfunc_t)(EditLine *, char *);
-
-typedef struct el_read_t {
-	el_rfunc_t	read_char;	/* Function to read a character */
-} el_read_t;
- 
-protected int		read_init(EditLine *);
-protected void		read_prepare(EditLine *);
-protected void		read_finish(EditLine *);
-protected int		el_read_setfn(EditLine *, el_rfunc_t);
-protected el_rfunc_t	el_read_getfn(EditLine *);
+libedit_private int		read_init(EditLine *);
+libedit_private void		read_end(struct el_read_t *);
+libedit_private void		read_prepare(EditLine *);
+libedit_private void		read_finish(EditLine *);
+libedit_private int		el_read_setfn(struct el_read_t *, el_rfunc_t);
+libedit_private el_rfunc_t	el_read_getfn(struct el_read_t *);
 
 #endif /* _h_el_read */

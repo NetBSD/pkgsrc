@@ -1,4 +1,7 @@
-/*	$NetBSD: tnftp.h,v 1.14 2014/11/04 22:38:26 agc Exp $	*/
+/*	$NetBSD: tnftp.h,v 1.15 2023/05/07 19:13:27 wiz Exp $	*/
+
+#ifndef TNFTP_H
+#define TNFTP_H 1
 
 #define	FTP_PRODUCT	PACKAGE_NAME
 #define	FTP_VERSION	PACKAGE_VERSION
@@ -442,6 +445,10 @@ char   *strsep(char **stringp, const char *delim);
 int utimes(const char *, const struct timeval *);
 #endif
 
+#if !defined(HAVE_VASPRINTF)
+int vasprintf(char **, const char *, va_list);
+#endif
+
 #if !defined(HAVE_MEMMOVE)
 # define memmove(a,b,c)	bcopy((b),(a),(c))
 	/* XXX: add others #defines for borken systems? */
@@ -514,4 +521,11 @@ int utimes(const char *, const struct timeval *);
 #ifdef __UNCONST
 #undef __UNCONST
 #endif
-#define __UNCONST(a)   ((void *)(unsigned long)(const void *)(a))
+#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
+
+#ifdef __UNVOLATILE
+#undef __UNVOLATILE
+#endif
+#define __UNVOLATILE(a)	((void *)(unsigned long)(volatile void *)(a))
+
+#endif /* TNFTP_H */

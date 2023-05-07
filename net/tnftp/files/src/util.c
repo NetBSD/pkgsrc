@@ -1,8 +1,8 @@
-/*	$NetBSD: util.c,v 1.10 2014/10/31 18:59:33 spz Exp $	*/
-/*	from	NetBSD: util.c,v 1.158 2013/02/19 23:29:15 dsl Exp	*/
+/*	$NetBSD: util.c,v 1.11 2023/05/07 19:13:28 wiz Exp $	*/
+/*	from	NetBSD: util.c,v 1.167 2023/05/05 15:46:06 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2009 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2023 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -69,7 +69,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID(" NetBSD: util.c,v 1.158 2013/02/19 23:29:15 dsl Exp  ");
+__RCSID(" NetBSD: util.c,v 1.167 2023/05/05 15:46:06 lukem Exp  ");
 #endif /* not lint */
 
 /*
@@ -178,7 +178,7 @@ parse_feat(const char *fline)
 			 * work-around broken ProFTPd servers that can't
 			 * even obey RFC 2389.
 			 */
-	while (*fline && isspace((int)*fline))
+	while (*fline && isspace((unsigned char)*fline))
 		fline++;
 
 	if (strcasecmp(fline, "MDTM") == 0)
@@ -216,7 +216,7 @@ getremoteinfo(void)
 			    os_len, reply_string + 4);
 		}
 		/*
-		 * Decide whether we should default to bninary.
+		 * Decide whether we should default to binary.
 		 * Traditionally checked for "215 UNIX Type: L8", but
 		 * some printers report "Linux" ! so be more forgiving.
 		 * In reality we probably almost never want text any more.
@@ -331,9 +331,10 @@ intr(int signo)
 /*
  * Signal handler for lost connections; cleanup various elements of
  * the connection state, and call cleanuppeer() to finish it off.
+ * This function is not signal safe, so exit if called by a signal.
  */
 void
-lostpeer(int dummy)
+lostpeer(int signo)
 {
 	int oerrno = errno;
 
@@ -363,6 +364,9 @@ lostpeer(int dummy)
 	proxflag = 0;
 	pswitch(0);
 	cleanuppeer();
+	if (signo) {
+		errx(1, "lostpeer due to signal %d", signo);
+	}
 	errno = oerrno;
 }
 
@@ -485,7 +489,8 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 		}
 	}
 	updatelocalcwd();
-	updateremotecwd();
+	remotecwd[0] = '\0';
+	remcwdvalid = 0;
 
  cleanup_ftp_login:
 	FREEPTR(fuser);
@@ -622,7 +627,7 @@ remglob(char *argv[], int doswitch, const char **errbuf)
  * return value. Can't control multiple values being expanded from the
  * expression, we return only the first.
  * Returns NULL on error, or a pointer to a buffer containing the filename
- * that's the caller's responsiblity to free(3) when finished with.
+ * that's the caller's responsibility to free(3) when finished with.
  */
 char *
 globulize(const char *pattern)
@@ -733,7 +738,7 @@ remotemodtime(const char *file, int noisy)
 			*frac++ = '\0';
 		if (strlen(timestr) == 15 && strncmp(timestr, "191", 3) == 0) {
 			/*
-			 * XXX:	Workaround for lame ftpd's that return
+			 * XXX:	Workaround for buggy ftp servers that return
 			 *	`19100' instead of `2000'
 			 */
 			fprintf(ttyout,
@@ -846,6 +851,7 @@ updateremotecwd(void)
 	size_t	 i;
 	char	*cp;
 
+	remcwdvalid = 1;	/* whether it works or not, we are done */
 	overbose = verbose;
 	ocode = code;
 	if (ftp_debug == 0)
@@ -1185,6 +1191,8 @@ formatbuf(char *buf, size_t len, const char *src)
 		case '/':
 		case '.':
 		case 'c':
+			if (connected && !remcwdvalid)
+				updateremotecwd();
 			p2 = connected ? remotecwd : "";
 			updirs = pdirs = 0;
 
@@ -1442,8 +1450,8 @@ ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen, int pe)
 			}
 			pfd[0].revents = 0;
 			rv = ftp_poll(pfd, 1, timeout);
-						/* loop until poll ! EINTR */
-		} while (rv == -1 && errno == EINTR);
+					/* loop until poll !EINTR && !EAGAIN */
+		} while (rv == -1 && (errno == EINTR || errno == EAGAIN));
 
 		if (rv == 0) {			/* poll (connect) timed out */
 			errno = ETIMEDOUT;
@@ -1557,6 +1565,27 @@ ftp_poll(struct pollfd *fds, int nfds, int timeout)
 }
 
 /*
+ * Evaluate a "boolean" string, accept only "1" as true and "0" as false
+ * Anything else returns the default value.
+ * Warn about an invalid value that isn't empty.
+ */
+int
+ftp_truthy(const char *name, const char *str, int defvalue)
+{
+
+	if (strcmp(str, "1") == 0)
+		return 1;
+	else if (strcmp(str, "0") == 0)
+		return 0;
+
+	if (*str)
+		warn("Option %s must be boolean (1 or 0)\n", name);
+
+	return defvalue;
+}
+
+#ifndef SMALL
+/*
  * malloc() with inbuilt error checking
  */
 void *
@@ -1610,3 +1639,4 @@ ftp_strdup(const char *str)
 		err(1, "Unable to allocate memory for string copy");
 	return (s);
 }
+#endif

@@ -1,4 +1,4 @@
-/*	$NetBSD: ftpvis.h,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: ftpvis.h,v 1.6 2023/05/07 19:13:28 wiz Exp $	*/
 /*	from	NetBSD: vis.h,v 1.15 2005/02/03 04:39:32 perry Exp	*/
 
 /*-
