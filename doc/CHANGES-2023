@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2903 2023/05/07 06:50:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2904 2023/05/07 08:10:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4041,3 +4041,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/split-thai to 2.25 [scole 2023-05-07]
 	Updated shells/oh-my-posh to 15.5.0 [pin 2023-05-07]
 	Added misc/rustentia version 0.2.1 [pin 2023-05-07]
+	Updated devel/py-maturin to 0.15.0 [adam 2023-05-07]
+	Updated devel/py-pylint to 2.17.4 [adam 2023-05-07]
