@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2022/03/04 08:10:10 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/05/07 12:39:58 wiz Exp $
 
 BLAKE2s (srain-1.3.2.tar.gz) = e898529b5e7e77817a0a6ee089f36abfcad8ba13bb33cdab1d3fc854dd926c3e
 SHA512 (srain-1.3.2.tar.gz) = eb5456f548b89b0c17133c74aee03e1ca02d2e798401be92e542e4b8bf8ccfaf38a15afa0b75cbcbebdbd8f7fa584b809686d41b776a8e32079566d93f8c741d
 Size (srain-1.3.2.tar.gz) = 1931640 bytes
 SHA1 (patch-data_meson.build) = d24ed2caa3cd36bde4d808014c7bfb309366b6bf
+SHA1 (patch-doc_conf.py) = 2a02caba90fa92acd01826615a1556d799a5022d
 SHA1 (patch-src_lib_path.c) = 5885c65984ebb23a75ae88bc7e52b2b262104588
