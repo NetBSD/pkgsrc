@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2908 2023/05/07 09:11:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2909 2023/05/07 09:27:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-rope to 1.8.0 [wiz 2023-05-07]
 	Updated devel/py-ruamel-yaml to 0.17.24 [wiz 2023-05-07]
 	Updated graphics/py-pillow_heif to 0.11.0 [wiz 2023-05-07]
+	Updated textproc/py-css-parser to 1.0.9 [wiz 2023-05-07]
