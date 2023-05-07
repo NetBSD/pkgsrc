@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.38 2022/11/04 18:34:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/05/07 08:35:49 wiz Exp $
 bin/hypothesis-${PYVERSSUFFIX}
+${PYSITELIB}/_hypothesis_ftz_detector.py
+${PYSITELIB}/_hypothesis_ftz_detector.pyc
+${PYSITELIB}/_hypothesis_ftz_detector.pyo
+${PYSITELIB}/_hypothesis_pytestplugin.py
+${PYSITELIB}/_hypothesis_pytestplugin.pyc
+${PYSITELIB}/_hypothesis_pytestplugin.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,12 +13,6 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_hypothesis_ftz_detector.py
-${PYSITELIB}/_hypothesis_ftz_detector.pyc
-${PYSITELIB}/_hypothesis_ftz_detector.pyo
-${PYSITELIB}/_hypothesis_pytestplugin.py
-${PYSITELIB}/_hypothesis_pytestplugin.pyc
-${PYSITELIB}/_hypothesis_pytestplugin.pyo
 ${PYSITELIB}/hypothesis/__init__.py
 ${PYSITELIB}/hypothesis/__init__.pyc
 ${PYSITELIB}/hypothesis/__init__.pyo
@@ -49,6 +49,9 @@ ${PYSITELIB}/hypothesis/extra/__init__.pyo
 ${PYSITELIB}/hypothesis/extra/_array_helpers.py
 ${PYSITELIB}/hypothesis/extra/_array_helpers.pyc
 ${PYSITELIB}/hypothesis/extra/_array_helpers.pyo
+${PYSITELIB}/hypothesis/extra/_patching.py
+${PYSITELIB}/hypothesis/extra/_patching.pyc
+${PYSITELIB}/hypothesis/extra/_patching.pyo
 ${PYSITELIB}/hypothesis/extra/array_api.py
 ${PYSITELIB}/hypothesis/extra/array_api.pyc
 ${PYSITELIB}/hypothesis/extra/array_api.pyo
