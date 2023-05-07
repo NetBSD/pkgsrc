@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2913 2023/05/07 10:06:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2914 2023/05/07 10:08:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated benchmarks/google-benchmark to 1.8.0 [wiz 2023-05-07]
 	Updated devel/cvise to 2.8.0 [wiz 2023-05-07]
 	Updated filesystems/kubo to 0.19.2 [wiz 2023-05-07]
+	Updated devel/libatomic to 13.1.0 [wiz 2023-05-07]
