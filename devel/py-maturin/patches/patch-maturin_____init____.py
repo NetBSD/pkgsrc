@@ -1,11 +1,11 @@
-$NetBSD: patch-maturin_____init____.py,v 1.1 2023/03/03 08:57:14 adam Exp $
+$NetBSD: patch-maturin_____init____.py,v 1.2 2023/05/07 08:08:22 adam Exp $
 
 Look for correct command with ${PYVERSSUFFIX} appended.
 
---- maturin/__init__.py.orig	2023-03-03 08:36:13.000000000 +0000
+--- maturin/__init__.py.orig	2023-05-07 07:48:01.000000000 +0000
 +++ maturin/__init__.py
-@@ -51,8 +51,9 @@ def _build_wheel(
- ):
+@@ -55,8 +55,9 @@ def _build_wheel(
+ ) -> str:
      # PEP 517 specifies that only `sys.executable` points to the correct
      # python interpreter
 +    py_vers = platform.python_version_tuple()
