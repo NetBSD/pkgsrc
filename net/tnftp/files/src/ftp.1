@@ -1,7 +1,7 @@
-.\" 	$NetBSD: ftp.1,v 1.6 2015/10/04 14:44:07 tnn Exp $
-.\" 	from	NetBSD: ftp.1,v 1.135 2015/04/23 23:31:23 lukem Exp
+.\" 	$NetBSD: ftp.1,v 1.7 2023/05/07 19:13:28 wiz Exp $
+.\" 	from	NetBSD: ftp.1,v 1.150 2023/02/25 17:37:09 uwe Exp
 .\"
-.\" Copyright (c) 1996-2015 The NetBSD Foundation, Inc.
+.\" Copyright (c) 1996-2023 The NetBSD Foundation, Inc.
 .\" All rights reserved.
 .\"
 .\" This code is derived from software contributed to The NetBSD Foundation
@@ -58,7 +58,7 @@
 .\"
 .\"	@(#)ftp.1	8.3 (Berkeley) 10/9/94
 .\"
-.Dd April 24, 2015
+.Dd February 25, 2023
 .Dt FTP 1
 .Os
 .Sh NAME
@@ -66,7 +66,7 @@
 .Nd Internet file transfer program
 .Sh SYNOPSIS
 .Nm
-.Op Fl 46AadefginpRtVv
+.Op Fl 46AadefginpRtVv?
 .Op Fl N Ar netrc
 .Op Fl o Ar output
 .Op Fl P Ar port
@@ -78,19 +78,18 @@
 .Oo
 .Fl T Xo
 .Sm off
-.Ar dir ,
+.Ar dir Cm \&,
 .Ar max
-.Op , Ar inc
+.Op Cm \&, Ar inc
 .Sm on
 .Xc
 .Oc
 .Ek
-.Op Fl x Ar xferbufsize
+.Op Fl x Ar xfersize
 .Bk -words
 .\" [[user@]host [port]]
 .Oo
-.Oo Ar user Ns Li \&@ Oc Ns Ar host
-.Op Ar port
+.Oo Ar user Ns Li \&@ Oc Ns Ar host Oo Ar port Oc
 .Oc
 .Ek
 .Bk -words
@@ -123,7 +122,7 @@
 .Ar host Oo Li \&: Ar port Oc
 .Li / Ar path
 .Op Li /
-.Op Li ;type= Ar X
+.Op Li ;type= Ar type
 .Oc
 .Sm on
 .Ek
@@ -140,12 +139,24 @@
 .Oc
 .Sm on
 .Ek
-.Op Ar \&.\&.\&.
+.Bk -words
+.\" [https://[user[:password]@]host[:port]/path]
+.Sm off
+.Oo
+.Li https://
+.Oo Ar user
+.Op Li \&: Ar password
+.Li \&@ Oc
+.Ar host Oo Li \&: Ar port Oc
+.Li / Ar path
+.Oc
+.Sm on
+.Ek
+.Ar \&...
 .Nm
 .Bk -words
-.Fl u Ar URL Ar file
+.Fl u Ar url Ar
 .Ek
-.Op Ar \&.\&.\&.
 .Sh DESCRIPTION
 .Nm
 is the user interface to the Internet standard File Transfer Protocol.
@@ -174,10 +185,13 @@ Forces
 .Nm
 to only use IPv6 addresses.
 .It Fl A
-Force active mode ftp.
+Force active mode
+.Tn FTP .
 By default,
 .Nm
-will try to use passive mode ftp and fall back to active mode
+will try to use passive mode
+.Tn FTP
+and fall back to active mode
 if passive is not supported by the server.
 This option causes
 .Nm
@@ -226,11 +240,14 @@ will check the
 an account on the remote machine.
 If no entry exists,
 .Nm
-will prompt for the remote machine login name (default is the user
-identity on the local machine), and, if necessary, prompt for a password
+will prompt for the remote machine login name
+.Pq default is the user identity on the local machine ,
+and, if necessary, prompt for a password
 and an account with which to login.
 To override the auto-login for auto-fetch transfers, specify the
-username (and optionally, password) as appropriate.
+username
+.Pq and optionally, password
+as appropriate.
 .It Fl o Ar output
 When auto-fetching files, save the contents in
 .Ar output .
@@ -241,9 +258,9 @@ below.
 If
 .Ar output
 is not
-.Sq -
+.Sq Fl
 or doesn't start with
-.Sq \&| ,
+.Sq Cm \&| ,
 then only the first file specified will be retrieved into
 .Ar output ;
 all other files will be retrieved into the basename of their
@@ -273,7 +290,7 @@ Uses
 as the local IP address for all connections.
 .It Fl t
 Enables packet tracing.
-.It Fl T Ar direction Ns , Ns Ar maximum Ns Oo , Ns Ar increment Oc
+.It Fl T Ar direction Ns Cm \&, Ns Ar maximum\| Ns Oo Cm \&, Ns Ar increment Oc
 Set the maximum transfer rate for
 .Ar direction
 to
@@ -285,13 +302,16 @@ bytes/second.
 Refer to
 .Ic rate
 for more information.
-.It Fl u Ar URL file Op \&.\&.\&.
+.It Fl u Ar url Ar
 Upload files on the command line to
-.Ar URL
+.Ar url
 where
-.Ar URL
-is one of the ftp URL types as supported by auto-fetch
-(with an optional target filename for single file uploads), and
+.Ar url
+is one of the
+.Ql ftp://
+URL types as supported by auto-fetch
+.Pq with an optional target filename for single file uploads ,
+and
 .Ar file
 is one or more local files to be uploaded.
 .It Fl V
@@ -305,20 +325,25 @@ Enable
 .Ic verbose
 and
 .Ic progress .
-This is the default if output is to a terminal (and in the case of
+This is the default if output is to a terminal
+.Po
+and in the case of
 .Ic progress ,
 .Nm
-is the foreground process).
+is the foreground process
+.Pc .
 Forces
 .Nm
 to show all responses from the remote server, as well
 as report on data transfer statistics.
-.It Fl x Ar xferbufsize
+.It Fl x Ar xfersize
 Set the size of the socket send and receive buffers to
-.Ar xferbufsize .
+.Ar xfersize .
 Refer to
 .Ic xferbuf
 for more information.
+.It Fl \&?
+Display help to stdout, and exit.
 .El
 .Pp
 The client host with which
@@ -335,11 +360,11 @@ from the user.
 When
 .Nm
 is awaiting commands from the user the prompt
-.Ql ftp\*[Gt]
+.Ql ftp>
 is provided to the user.
 The following commands are recognized
 by
-.Nm ftp :
+.Nm :
 .Bl -tag -width Ic
 .It Ic \&! Op Ar command Op Ar args
 Invoke an interactive shell on the local machine.
@@ -437,12 +462,22 @@ sequence to conform with the
 single linefeed record
 delimiter.
 Records on
-.Pf non\- Ns Ux
+.Pf non\- Ux
 remote systems may contain single linefeeds;
 when an ascii type transfer is made, these linefeeds may be
 distinguished from a record delimiter only when
 .Ic \&cr
 is off.
+.It Ic debug Op Ar debug-value
+Toggle debugging mode.
+If an optional
+.Ar debug-value
+is specified it is used to set the debugging level.
+When debugging is on,
+.Nm
+prints each command sent to the remote machine, preceded
+by the string
+.Ql \-\-> .
 .It Ic delete Ar remote-file
 Delete the file
 .Ar remote-file
@@ -478,18 +513,16 @@ Toggle command line editing, and context sensitive command and file
 completion.
 This is automatically enabled if input is from a terminal, and
 disabled otherwise.
-.It Ic epsv epsv4 epsv6
+.It Ic epsv , epsv4 , epsv6
 Toggle the use of the extended
 .Dv EPSV
 and
 .Dv EPRT
 commands on all IP, IPv4, and IPv6 connections respectively.
 First try
-.Dv EPSV /
-.Dv EPRT ,
+.Dv EPSV Ns \^/\^ Ns Dv EPRT ,
 and then
-.Dv PASV /
-.Dv PORT .
+.Dv PASV Ns \^/\^ Ns Dv PORT .
 This is enabled by default.
 If an extended command fails then this option will be temporarily
 disabled for the duration of the current connection, or until
@@ -502,9 +535,8 @@ is executed again.
 A synonym for
 .Ic bye .
 .It Ic features
-Display what features the remote server supports (using the
-.Dv FEAT
-command).
+Display what features the remote server supports
+.Pq using the Dv FEAT No command .
 .It Ic fget Ar localfile
 Retrieve the files listed in
 .Ar localfile ,
@@ -516,27 +548,21 @@ to
 .Ar format .
 The default (and only supported)
 format is
-.Dq non-print .
+.Ql non-print .
 .It Ic ftp Ar host Op Ar port
 A synonym for
 .Ic open .
-.It Ic ftp_debug Op Ar ftp_debug-value
-Toggle debugging mode.
-If an optional
-.Ar ftp_debug-value
-is specified it is used to set the debugging level.
-When debugging is on,
-.Nm
-prints each command sent to the remote machine, preceded
-by the string
-.Ql \-\-\*[Gt] .
 .It Ic gate Op Ar host Op Ar port
 Toggle gate-ftp mode, which used to connect through the
-TIS FWTK and Gauntlet ftp proxies.
+TIS FWTK and Gauntlet
+.Tn FTP
+proxies.
 This will not be permitted if the gate-ftp server hasn't been set
-(either explicitly by the user, or from the
+.Po
+either explicitly by the user, or from the
 .Ev FTPSERVER
-environment variable).
+environment variable
+.Pc .
 If
 .Ar host
 is given,
@@ -590,9 +616,11 @@ each remote file name is expanded
 separately on the remote machine and the lists are not merged.
 Expansion of a directory name is likely to be
 different from expansion of the name of an ordinary file:
-the exact result depends on the foreign operating system and ftp server,
+the exact result depends on the foreign operating system and
+.Tn FTP
+server,
 and can be previewed by doing
-.Ql mls remote-files \-
+.Sq Li mls remote-files \- .
 Note:
 .Ic mget ,
 .Ic mput
@@ -606,7 +634,7 @@ transferring a
 archive of the subtree (in binary mode).
 .It Ic hash Op Ar size
 Toggle hash-sign
-.Pq Sq #
+.Pq Ql #
 printing for each data block transferred.
 The size of a data block defaults to 1024 bytes.
 This can be changed by specifying
@@ -656,16 +684,24 @@ A synonym for
 Define a macro.
 Subsequent lines are stored as the macro
 .Ar macro-name  ;
-a null line (consecutive newline characters in a file or carriage
-returns from the terminal) terminates macro input mode.
+a null line
+.Po
+consecutive newline characters in a file or carriage
+returns from the terminal
+.Pc
+terminates macro input mode.
 There is a limit of 16 macros and 4096 total characters in all
 defined macros.
 Macro names can be a maximum of 8 characters.
 Macros are only applicable to the current session they are
-defined within (or if defined outside a session, to the session
+defined within
+.Po
+or if defined outside a session, to the session
 invoked with the next
 .Ic open
-command), and remain defined until a
+command
+.Pc ,
+and remain defined until a
 .Ic close
 command is executed.
 To invoke a macro, use the
@@ -673,32 +709,32 @@ To invoke a macro, use the
 command (see above).
 .Pp
 The macro processor interprets
-.Sq $
+.Ql $
 and
-.Sq \e
+.Ql \e
 as special characters.
 A
-.Sq $
+.Ql $
 followed by a number (or numbers) is replaced by the
 corresponding argument on the macro invocation command line.
 A
-.Sq $
+.Ql $
 followed by an
-.Sq i
+.Ql i
 signals the macro processor that the executing macro is to be
 looped.
 On the first pass
-.Dq $i
+.Ql $i
 is replaced by the first argument on the macro invocation command
 line, on the second pass it is replaced by the second argument,
 and so on.
 A
-.Sq \e
+.Ql \e
 followed by any character is replaced by that character.
 Use the
-.Sq \e
+.Ql \e
 to prevent special treatment of the
-.Sq $ .
+.Ql $ .
 .It Ic mdelete Op Ar remote-files
 Delete the
 .Ar remote-files
@@ -731,9 +767,9 @@ and
 settings.
 Files are transferred into the local working directory,
 which can be changed with
-.Ql lcd directory ;
+.Ic lcd Ar directory ;
 new local directories can be created with
-.Ql "\&! mkdir directory" .
+.Ic \&! mkdir Ar directory .
 .It Ic mkdir Ar directory-name
 Make a directory on the remote machine.
 .It Ic mls Ar remote-files local-file
@@ -752,27 +788,28 @@ output.
 .It Ic mlsd Op Ar remote-path
 Display the contents of
 .Ar remote-path
-(which should default to the current directory if not given)
+.Pq which should default to the current directory if not given
 in a machine-parsable form, using
 .Dv MLSD .
 The format of display can be changed with
-.Sq "remopts mlst ..." .
+.Sq Ic remopts mlst Ar \&... .
 .It Ic mlst Op Ar remote-path
 Display the details about
 .Ar remote-path
-(which should default to the current directory if not given)
+.Pq which should default to the current directory if not given
 in a machine-parsable form, using
 .Dv MLST .
 The format of display can be changed with
-.Sq "remopts mlst ..." .
+.Sq Ic remopts mlst Ar \&... .
 .It Ic mode Ar mode-name
 Set the file transfer
 .Ic mode
 to
 .Ar mode-name .
-The default (and only supported)
+The default
+.Pq and only supported
 mode is
-.Dq stream .
+.Ql stream .
 .It Ic modtime Ar remote-file
 Show the last modification time of the file on the remote machine, in
 .Li RFC 2822
@@ -810,7 +847,7 @@ If the file does not
 exist on the current system, the remote file is considered
 .Ic newer .
 Otherwise, this command is identical to
-.Ar get .
+.Ic get .
 .It Ic nlist Op Ar remote-path Op Ar local-file
 A synonym for
 .Ic ls .
@@ -835,25 +872,28 @@ The mapping follows the pattern set by
 .Ar inpattern
 and
 .Ar outpattern .
-.Op Ar Inpattern
-is a template for incoming filenames (which may have already been
-processed according to the
+.Pp
+.Ar inpattern
+is a template for incoming filenames
+.Po
+which may have already been processed according to the
 .Ic ntrans
 and
 .Ic case
-settings).
+settings
+.Pc .
 Variable templating is accomplished by including the
 sequences
-.Dq $1 ,
-.Dq $2 ,
-\&...
-.Dq $9
+.Ql $1 ,
+.Ql $2 ,
+\&...\|,
+.Ql $9
 in
 .Ar inpattern .
 Use
-.Sq \e
+.Ql \e
 to prevent this special treatment of the
-.Sq $
+.Ql $
 character.
 All other characters are treated literally, and are used to determine the
 .Ic nmap
@@ -861,53 +901,74 @@ All other characters are treated literally, and are used to determine the
 variable values.
 For example, given
 .Ar inpattern
-$1.$2 and the remote file name "mydata.data", $1 would have the value
-"mydata", and $2 would have the value "data".
+.Ql $1.$2
+and the remote file name
+.Ql mydata.data ,
+.Ql $1
+would have the value
+.Ql mydata ,
+and
+.Ql $2
+would have the value
+.Ql data .
+.Pp
 The
 .Ar outpattern
 determines the resulting mapped filename.
 The sequences
-.Dq $1 ,
-.Dq $2 ,
-\&...
-.Dq $9
+.Ql $1 ,
+.Ql $2 ,
+\&...\|,
+.Ql $9
 are replaced by any value resulting from the
 .Ar inpattern
 template.
 The sequence
-.Dq $0
+.Ql $0
 is replaced by the original filename.
 Additionally, the sequence
-.Dq Op Ar seq1 , Ar seq2
+.Sm off
+.Li \&[ Ar seq1 Li \&, Ar seq2 Li \&]
+.Sm on
 is replaced by
-.Op Ar seq1
+.Ar seq1
 if
 .Ar seq1
 is not a null string; otherwise it is replaced by
 .Ar seq2 .
 For example, the command
 .Pp
-.Bd -literal -offset indent -compact
-nmap $1.$2.$3 [$1,$2].[$2,file]
-.Ed
+.Dl nmap $1.$2.$3 [$1,$2].[$2,file]
 .Pp
 would yield
-the output filename "myfile.data" for input filenames "myfile.data" and
-"myfile.data.old", "myfile.file" for the input filename "myfile", and
-"myfile.myfile" for the input filename ".myfile".
+the output filename
+.Ql myfile.data
+for input filenames
+.Ql myfile.data
+and
+.Ql myfile.data.old ,
+.Ql myfile.file
+for the input filename
+.Ql myfile ,
+and
+.Ql myfile.myfile
+for the input filename
+.Ql \&.myfile .
 Spaces may be included in
 .Ar outpattern  ,
 as in the example:
-.Dl nmap $1 sed "s/  *$//" \*[Gt] $1
+.Pp
+.Dl nmap $1 sed "s/  *$//" > $1
+.Pp
 Use the
-.Sq \e
+.Ql \e
 character to prevent special treatment
 of the
-.Sq $ ,
-.Sq \&[ ,
-.Sq \&] ,
+.Ql $ ,
+.Ql \&[ ,
+.Ql \&] ,
 and
-.Sq \&,
+.Ql \&,
 characters.
 .It Ic ntrans Op Ar inchars Op Ar outchars
 Set or unset the filename character translation mechanism.
@@ -991,13 +1052,15 @@ Passive mode is useful when using
 .Nm
 through a gateway router or host that controls the directionality of
 traffic.
-(Note that though
+.Po
+Note that though
 .Tn FTP
 servers are required to support the
 .Dv PASV
 command by
 .Li RFC 1123 ,
-some do not.)
+some do not.
+.Pc
 .It Ic pdir Op Ar remote-path
 Perform
 .Ic dir
@@ -1028,7 +1091,7 @@ The progress bar will be disabled for a transfer that has
 as
 .Sq Fl
 or a command that starts with
-.Sq \&| .
+.Ql \&| .
 Refer to
 .Sx FILE NAMING CONVENTIONS
 for more information.
@@ -1065,9 +1128,11 @@ and do not transfer the file.
 Answer
 .Sq yes
 to the current file, and turn off prompt mode
-(as is
-.Dq prompt off
-had been given).
+.Po
+as if
+.Ic prompt off
+had been given
+.Pc .
 .It Cm q
 Terminate the current operation.
 .It Cm y
@@ -1082,7 +1147,9 @@ Any other response will answer
 .Sq yes
 to the current file.
 .It Ic proxy Ar ftp-command
-Execute an ftp command on a secondary control connection.
+Execute an
+.Tn FTP
+command on a secondary control connection.
 This command allows simultaneous connection to two remote
 .Tn FTP
 servers for transferring files between the two servers.
@@ -1091,11 +1158,13 @@ The first
 command should be an
 .Ic open  ,
 to establish the secondary control connection.
-Enter the command "proxy ?" to see other
+Enter the command
+.Sq Li "proxy ?"
+to see other
 .Tn FTP
 commands executable on the secondary connection.
 The following commands behave differently when prefaced by
-.Ic proxy  :
+.Ic proxy\^  :
 .Ic open
 will not define new macros during the auto-login process,
 .Ic close
@@ -1140,7 +1209,7 @@ machine.
 .It Ic quit
 A synonym for
 .Ic bye .
-.It Ic quote Ar arg1 arg2 ...
+.It Ic quote Op Ar arg ...
 The arguments specified are sent, verbatim, to the remote
 .Tn FTP
 server.
@@ -1154,7 +1223,7 @@ is 0, disable the throttle.
 .Pp
 .Ar direction
 may be one of:
-.Bl -tag -width "all" -offset indent -compact
+.Bl -tag -width ".Cm all" -offset indent -compact
 .It Cm all
 Both directions.
 .It Cm get
@@ -1167,7 +1236,7 @@ Outgoing transfers.
 can be modified on the fly by
 .Ar increment
 bytes (default: 1024) each time a given signal is received:
-.Bl -tag -width "SIGUSR1" -offset indent
+.Bl -tag -width ".Dv SIGUSR1" -offset indent
 .It Dv SIGUSR1
 Increment
 .Ar maximum
@@ -1221,15 +1290,17 @@ server for
 .Ar command
 to
 .Ar command-options
-(whose absence is handled on a command-specific basis).
+.Pq whose absence is handled on a command-specific basis .
 Remote
 .Tn FTP
 commands known to support options include:
-.Sq MLST
-(used for
+.Dv MLST
+.Po
+used for
 .Dv MLSD
 and
-.Dv MLST ) .
+.Dv MLST
+.Pc .
 .It Ic rename Op Ar from Op Ar to
 Rename the file
 .Ar from
@@ -1278,10 +1349,16 @@ local filename for a
 .Ic get
 or
 .Ic mget
-command, a ".1" is appended to the name.
+command, a
+.Ql \&.1
+is appended to the name.
 If the resulting name matches another existing file,
-a ".2" is appended to the original name.
-If this process continues up to ".99", an error
+a
+.Ql \&.2
+is appended to the original name.
+If this process continues up to
+.Ql .99 ,
+an error
 message is printed, and the transfer does not take place.
 The generated unique filename will be reported.
 Note that
@@ -1333,7 +1410,7 @@ and
 .Ar value
 are not given, display all of the options and their values.
 The currently supported options are:
-.Bl -tag -width "https_proxy" -offset indent
+.Bl -tag -width ".Cm sslnoverify" -offset indent
 .It Cm anonpass
 Defaults to
 .Ev $FTPANONPASS
@@ -1358,8 +1435,11 @@ Defaults to
 .It Cm rprompt
 Defaults to
 .Ev $FTPRPROMPT .
+.It Cm sslnoverify
+Defaults to
+.Ev $FTPSSLNOVERIFY .
 .El
-.It Ic site Ar arg1 arg2 ...
+.It Ic site Op Ar arg ...
 The arguments specified are sent, verbatim, to the remote
 .Tn FTP
 server as a
@@ -1382,7 +1462,7 @@ to
 .Ar struct-name .
 The default (and only supported)
 structure is
-.Dq file .
+.Ql file .
 .It Ic sunique
 Toggle storing of files on remote machine under unique file names.
 The remote
@@ -1480,7 +1560,7 @@ A synonym for
 .Pp
 Command arguments which have embedded spaces may be quoted with
 quote
-.Sq \&"
+.Ql \&\(dq
 marks.
 .Pp
 Commands which toggle settings can take an explicit
@@ -1490,11 +1570,13 @@ or
 argument to force the setting appropriately.
 .Pp
 Commands which take a byte count as an argument
-(e.g.,
+.Po
+e.g.,
 .Ic hash ,
 .Ic rate ,
 and
-.Ic xferbuf )
+.Ic xferbuf
+.Pc
 support an optional suffix on the argument which changes the
 interpretation of the argument.
 Supported suffixes are:
@@ -1514,10 +1596,12 @@ If
 .Nm
 receives a
 .Dv SIGINFO
-(see the
-.Dq status
+.Po
+see the
+.Cm status
 argument of
-.Xr stty 1 )
+.Xr stty 1
+.Pc
 or
 .Dv SIGQUIT
 signal whilst a transfer is in progress, the current transfer rate
@@ -1545,7 +1629,7 @@ contains a glob character and globbing is enabled,
 (see
 .Ic glob ) ,
 then the equivalent of
-.Ql mget path
+.Ic mget Ar path
 is performed.
 .Pp
 If the directory component of
@@ -1558,10 +1642,10 @@ of
 in the current directory.
 Otherwise, the full remote name is used as the local name,
 relative to the local root directory.
-.\" ftp://[user[:password]@]host[:port]/path[/][;type=X]
+.\" ftp://[user[:password]@]host[:port]/path[/][;type=type]
 .It Li ftp:// Ns Oo Ar user Ns Oo Ns Li \&: Ns Ar password Oc Ns Li \&@ Oc \
 Ns Ar host Ns Oo Li \&: Ns Ar port Oc Ns Li / Ns Ar path Ns Oo Li / Oc \
-Ns Oo Li ;type= Ns Ar X Oc
+Ns Oo Li ;type= Ns Ar type Oc
 An
 .Tn FTP
 URL, retrieved using the
@@ -1584,9 +1668,9 @@ In this case, use
 if supplied, otherwise prompt the user for one.
 .Pp
 If a suffix of
-.Sq ;type=A
+.Ql \&;type=A
 or
-.Sq ;type=I
+.Ql \&;type=I
 is supplied, then the transfer type will take place as
 ascii or binary (respectively).
 The default transfer type is binary.
@@ -1597,12 +1681,12 @@ In order to be compliant with
 interprets the
 .Ar path
 part of an
-.Dq ftp://
+.Ql ftp://
 auto-fetch URL as follows:
 .Bl -bullet
 .It
 The
-.Sq Li /
+.Ql /
 immediately after the
 .Ar host Ns Oo Li \&: Ns Ar port Oc
 is interpreted as a separator before the
@@ -1629,11 +1713,11 @@ command.
 .It
 Empty name components,
 which result from
-.Sq Li //
+.Ql //
 within the
 .Ar path ,
 or from an extra
-.Sq Li /
+.Ql /
 at the beginning of the
 .Ar path ,
 will cause the equivalent of a
@@ -1642,7 +1726,7 @@ command without a directory name.
 This is unlikely to be useful.
 .It
 Any
-.Sq Li \&% Ns Ar XX
+.Sq Cm \&% Ns Ar XX\^
 codes
 (per
 .Li RFC 3986 )
@@ -1658,13 +1742,15 @@ or
 .Ic get
 command.
 Some often-used codes are
-.Sq Li \&%2F
+.Ql \&%2F
 (which represents
-.Sq Li / )
+.Ql / )
 and
-.Sq Li \&%7E
-(which represents
-.Sq Li ~ ) .
+.Ql \&%7E
+.Po
+which represents
+.Ql ~
+.Pc .
 .El
 .Pp
 The above interpretation has the following consequences:
@@ -1677,20 +1763,21 @@ user.
 If the
 .Pa /
 directory is required, use a leading path of
-.Dq %2F .
-If a user's home directory is required (and the remote server supports
-the syntax), use a leading path of
-.Dq %7Euser/ .
+.Ql \&%2F .
+If a user's home directory is required
+.Pq and the remote server supports the syntax ,
+use a leading path of
+.Ql \&%7E Ns Ar user Ns Li / .
 For example, to retrieve
 .Pa /etc/motd
 from
-.Sq localhost
+.Ql localhost
 as the user
-.Sq myname
+.Ql myname
 with the password
-.Sq mypass ,
+.Ql mypass ,
 use
-.Dq ftp://myname:mypass@localhost/%2fetc/motd
+.Ql ftp://myname:mypass@localhost/%2fetc/motd
 .It
 The exact
 .Ic cd
@@ -1698,32 +1785,46 @@ and
 .Ic get
 commands can be controlled by careful choice of
 where to use
-.Sq /
+.Ql /
 and where to use
-.Sq %2F
+.Ql \&%2F
 (or
-.Sq %2f ) .
+.Ql %2f ) .
 For example, the following URLs correspond to the
 equivalents of the indicated commands:
 .Bl -tag -width "ftp://host/%2Fdir1%2Fdir2%2Ffile"
-.It ftp://host/dir1/dir2/file
-.Dq "cd dir1" ,
-.Dq "cd dir2" ,
-.Dq "get file" .
-.It ftp://host/%2Fdir1/dir2/file
-.Dq "cd /dir1" ,
-.Dq "cd dir2" ,
-.Dq "get file" .
-.It ftp://host/dir1%2Fdir2/file
-.Dq "cd dir1/dir2" ,
-.Dq "get file" .
-.It ftp://host/%2Fdir1%2Fdir2/file
-.Dq "cd /dir1/dir2" ,
-.Dq "get file" .
-.It ftp://host/dir1%2Fdir2%2Ffile
-.Dq "get dir1/dir2/file" .
-.It ftp://host/%2Fdir1%2Fdir2%2Ffile
-.Dq "get /dir1/dir2/file" .
+.It Xo \" ftp://host/dir1/dir2/file
+.Sm off
+.Ic ftp:// Ar host
+.Ic / Ar dir1
+.Ic / Ar dir2
+.Ic / Ar file
+.Sm on
+.Xc
+.Ic cd Ar dir1 ,
+.Ic cd Ar dir2 ,
+.Ic get Ar file .
+.It Xo \" ftp://host/%2Fdir1/dir2/file
+.Sm off
+.Ic ftp:// Ar host
+.Ic /%2F Ar dir1
+.Ic / Ar dir2
+.Ic / Ar file
+.Sm on
+.Xc
+.Ic cd / Ns Ar dir1 ,
+.Ic cd Ar dir2 ,
+.Ic get Ar file .
+.It Xo \" ftp://host/dir1%2Fdir2/file
+.Sm off
+.Ic ftp:// Ar host
+.Ic / Ar dir1
+.Ic %2F Ar dir2
+.Ic / Ar file
+.Sm on
+.Xc
+.Ic cd Ar dir1 Ns Ic / Ns Ar dir2 ,
+.Ic get Ar file .
 .El
 .It
 You must have appropriate access permission for each of the
@@ -1749,9 +1850,9 @@ If
 authorization is required to retrieve
 .Ar path ,
 and
-.Sq user
+.Ar user
 (and optionally
-.Sq password )
+.Ar password\^ )
 is in the URL, use them for the first attempt to authenticate.
 .\" https://[user[:password]@]host[:port]/path
 .It Li https:// Ns Oo Ar user Ns Oo Li \&: Ns Ar password Oc Ns Li \&@ Oc \
@@ -1771,9 +1872,9 @@ If
 authorization is required to retrieve
 .Ar path ,
 and
-.Sq user
+.Ar user
 (and optionally
-.Sq password )
+.Ar password\^ )
 is in the URL, use them for the first attempt to authenticate.
 There is currently no certificate validation and verification.
 .\" file:///path
@@ -1816,7 +1917,7 @@ is recommended, to avoid writing to unexpected file names.
 If a classic format or an
 .Tn FTP
 URL format has a trailing
-.Sq /
+.Ql /
 or an empty
 .Ar path
 component, then
@@ -1848,9 +1949,9 @@ proxies will be restarted.
 For
 .Tn FTP ,
 this is implemented by using
-.Nm reget
+.Ic reget
 instead of
-.Nm get .
+.Ic get .
 For
 .Tn HTTP ,
 this is implemented by using the
@@ -1864,7 +1965,7 @@ to enter a username and password to authenticate with.
 When specifying IPv6 numeric addresses in a URL, you need to
 surround the address in square brackets.
 E.g.:
-.Dq ftp://[::1]:21/ .
+.Ql ftp://[::1]:21/ .
 This is because colons are used in IPv6 numeric address as well as
 being the separator for the port number.
 .Sh ABORTING A FILE TRANSFER
@@ -1887,7 +1988,9 @@ sending the requested file.
 .Pp
 If the terminal interrupt key sequence is used whilst
 .Nm
-is awaiting a reply from the remote server for the ABOR processing,
+is awaiting a reply from the remote server for the
+.Dv ABOR
+processing,
 then the connection will be closed.
 This is different from the traditional behaviour (which ignores the
 terminal interrupt during this phase), but is considered more useful.
@@ -1900,13 +2003,13 @@ commands are processed according to the following rules.
 If the file name
 .Sq Fl
 is specified, the
-.Ar stdin
+.Va stdin
 (for reading) or
-.Ar stdout
+.Va stdout
 (for writing) is used.
 .It
 If the first character of the file name is
-.Sq \&| ,
+.Ql \&| ,
 the
 remainder of the argument is interpreted as a shell command.
 .Nm
@@ -1916,13 +2019,12 @@ with the argument supplied, and reads (writes) from the stdout
 (stdin).
 If the shell command includes spaces, the argument
 must be quoted; e.g.
-.Dq Qq Li \&| ls\ \-lt .
+.Ql \*q|\~ls\~\-lt\*q .
 A particularly
 useful example of this mechanism is:
-.Dq Li dir \&"\&" \&|more .
+.Ql dir\~\*q\*q\~|more .
 .It
-Failing the above checks, if
-.Dq globbing
+Failing the above checks, if globbing
 is enabled, local file names are expanded according to the rules
 used in the
 .Xr csh 1 ;
@@ -1933,7 +2035,7 @@ If the
 .Nm
 command expects a single local file (e.g.
 .Ic put  ) ,
-only the first filename generated by the "globbing" operation is used.
+only the first filename generated by the globbing operation is used.
 .It
 For
 .Ic mget
@@ -2134,7 +2236,7 @@ The
 .Xr editline 3
 library is configured with a
 .Pa .editrc
-file - refer to
+file \(em refer to
 .Xr editrc 5
 for more information.
 .Pp
@@ -2151,7 +2253,7 @@ By default, this is bound to the TAB key.
 By default,
 .Nm
 displays a command line prompt of
-.Dq "ftp\*[Gt] "
+.Sq Li ftp>\~
 to the user.
 This can be changed with the
 .Ic "set prompt"
@@ -2168,42 +2270,42 @@ information:
 .It Li \&%/
 The current remote working directory.
 .\" %c[[0]n], %.[[0]n]
-.It \&%c Ns Oo Oo Li 0 Oc Ns Ar n Oc , Ns Li \&%. Ns Oo Oo Li 0 Oc Ns Ar n Oc
+.It Li \&%c Ns Oo Oo Li 0 Oc Ns Ar n Oc , Li \&%. Ns Oo Oo Li 0 Oc Ns Ar n Oc
 The trailing component of the current remote working directory, or
-.Em n
+.Ar n
 trailing components if a digit
-.Em n
+.Ar n
 is given.
 If
-.Em n
+.Ar n
 begins with
-.Sq 0 ,
+.Ql 0 ,
 the number of skipped components precede the trailing component(s) in
 the format
 .\" ``/<number>trailing''
 .Do
 .Sm off
-.Li / Li \*[Lt] Va number Li \*[Gt]
-.Va trailing
+.Li / Li < Ar number Li >
+.Ar trailing
 .Sm on
 .Dc
 (for
-.Sq \&%c )
+.Ql \&%c )
 or
 .\" ``...trailing''
-.Dq Li \&... Ns Va trailing
+.Dq Li \&... Ns Ar trailing
 (for
-.Sq \&%. ) .
+.Ql \&%. ) .
 .It Li \&%M
 The remote host name.
 .It Li \&%m
-The remote host name, up to the first
-.Sq \&. .
+The remote host name, up to the first dot
+.Ql \&. .
 .It Li \&%n
 The remote user name.
 .It Li \&%%
-A single
-.Sq % .
+A single percent character
+.Ql % .
 .El
 .Sh ENVIRONMENT
 .Nm
@@ -2214,7 +2316,7 @@ Password to send in an anonymous
 .Tn FTP
 transfer.
 Defaults to
-.Dq Li `whoami`@ .
+.Dq Li \&\`whoami\`@ .
 .It Ev FTPMODE
 Overrides the default operation mode.
 Support values are:
@@ -2235,14 +2337,13 @@ only
 .It Ev FTPPROMPT
 Command-line prompt to use.
 Defaults to
-.Dq "ftp\*[Gt] " .
+.Sq Li ftp>\~ .
 Refer to
 .Sx COMMAND LINE PROMPT
 for more information.
 .It Ev FTPRPROMPT
 Command-line right side prompt to use.
-Defaults to
-.Dq "" .
+Defaults to empty string.
 Refer to
 .Sx COMMAND LINE PROMPT
 for more information.
@@ -2255,14 +2356,16 @@ Port to use when connecting to gate-ftp server when
 .Ic gate
 is enabled.
 Default is port returned by a
-.Fn getservbyname
+.Xr getservbyname 3
 lookup of
-.Dq ftpgate/tcp .
+.Dq Li ftpgate/tcp .
 .It Ev FTPUSERAGENT
 The value to send for the
 .Tn HTTP
 User-Agent
 header.
+.It Ev FTPSSLNOVERIFY
+Set to 1 to not verify SSL certificates.
 .It Ev HOME
 For default location of a
 .Pa .netrc
@@ -2305,12 +2408,12 @@ If
 .Dq unsafe
 URL characters are required in the username or password
 (for example
-.Sq @
+.Ql @
 or
-.Sq / ) ,
+.Ql / ) ,
 encode them with
 .Li RFC 3986
-.Sq Li \&% Ns Ar XX
+.Ql \&% Ns Ar XX\^
 encoding.
 .Pp
 Note that the use of a username and password in
@@ -2324,10 +2427,22 @@ may be incompatible with other programs that use it
 .Em NOTE :
 this is not used for interactive sessions, only for command-line
 fetches.
+.It Ev https_proxy
+URL of
+.Tn HTTPS
+proxy to use when making
+.Tn HTTPS
+URL requests.
+.Pp
+See
+.Ev http_proxy
+for further notes about proxy use.
 .It Ev no_proxy
 A space or comma separated list of hosts (or domains) for which
 proxying is not to be used.
-Each entry may have an optional trailing ":port", which restricts
+Each entry may have an optional trailing
+.Ql \&: Ns Ar port ,
+which restricts
 the matching to connections to that port.
 .El
 .Sh EXTENDED PASSIVE MODE AND FIREWALLS

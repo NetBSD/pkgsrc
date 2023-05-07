@@ -1,5 +1,5 @@
-/*	$NetBSD: key.h,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
-/*	from	NetBSD: key.h,v 1.8 2003/08/07 16:44:32 agc Exp	*/
+/*	$NetBSD: keymacro.h,v 1.1 2023/05/07 19:13:27 wiz Exp $	*/
+/*	from	NetBSD: keymacro.h,v 1.6 2016/05/09 21:46:56 christos Exp	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -36,45 +36,42 @@
  */
 
 /*
- * el.key.h: Key macro header
+ * el.keymacro.h: Key macro header
  */
-#ifndef _h_el_key
-#define	_h_el_key
+#ifndef _h_el_keymacro
+#define	_h_el_keymacro
 
-typedef union key_value_t {
+typedef union keymacro_value_t {
 	el_action_t	 cmd;	/* If it is a command the #	*/
-	char		*str;	/* If it is a string...		*/
-} key_value_t;
+	wchar_t		*str;	/* If it is a string...		*/
+} keymacro_value_t;
 
-typedef struct key_node_t key_node_t;
+typedef struct keymacro_node_t keymacro_node_t;
 
-typedef struct el_key_t {
-	char		*buf;	/* Key print buffer		*/
-	key_node_t	*map;	/* Key map			*/
-	key_value_t	 val;	/* Local conversion buffer	*/
-} el_key_t;
+typedef struct el_keymacro_t {
+	wchar_t		*buf;	/* Key print buffer		*/
+	keymacro_node_t	*map;	/* Key map			*/
+	keymacro_value_t val;	/* Local conversion buffer	*/
+} el_keymacro_t;
 
 #define	XK_CMD	0
 #define	XK_STR	1
 #define	XK_NOD	2
-#define	XK_EXE	3
 
-#undef key_end
-#undef key_clear
-#undef key_print
+libedit_private int keymacro_init(EditLine *);
+libedit_private void keymacro_end(EditLine *);
+libedit_private keymacro_value_t *keymacro_map_cmd(EditLine *, int);
+libedit_private keymacro_value_t *keymacro_map_str(EditLine *, wchar_t *);
+libedit_private void keymacro_reset(EditLine *);
+libedit_private int keymacro_get(EditLine *, wchar_t *, keymacro_value_t *);
+libedit_private void keymacro_add(EditLine *, const wchar_t *,
+    keymacro_value_t *, int);
+libedit_private void keymacro_clear(EditLine *, el_action_t *, const wchar_t *);
+libedit_private int keymacro_delete(EditLine *, const wchar_t *);
+libedit_private void keymacro_print(EditLine *, const wchar_t *);
+libedit_private void keymacro_kprint(EditLine *, const wchar_t *,
+    keymacro_value_t *, int);
+libedit_private size_t keymacro__decode_str(const wchar_t *, char *, size_t,
+    const char *);
 
-protected int		 key_init(EditLine *);
-protected void		 key_end(EditLine *);
-protected key_value_t	*key_map_cmd(EditLine *, int);
-protected key_value_t	*key_map_str(EditLine *, char *);
-protected void		 key_reset(EditLine *);
-protected int		 key_get(EditLine *, char *, key_value_t *);
-protected void		 key_add(EditLine *, const char *, key_value_t *, int);
-protected void		 key_clear(EditLine *, el_action_t *, const char *);
-protected int		 key_delete(EditLine *, const char *);
-protected void		 key_print(EditLine *, const char *);
-protected void	         key_kprint(EditLine *, const char *, key_value_t *,
-    int);
-protected char		*key__decode_str(const char *, char *, const char *);
-
-#endif /* _h_el_key */
+#endif /* _h_el_keymacro */
