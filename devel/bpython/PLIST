@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/15 17:55:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/05/07 12:46:39 wiz Exp $
 bin/bpdb
 bin/bpython
 bin/bpython-curses
@@ -224,8 +224,6 @@ ${PYSITELIB}/bpython/translations/nl_NL/LC_MESSAGES/bpython.mo
 ${PYSITELIB}/bpython/urwid.py
 ${PYSITELIB}/bpython/urwid.pyc
 ${PYSITELIB}/bpython/urwid.pyo
-man/man1/bpython.1
-man/man5/bpython-config.5
 share/applications/org.bpython-interpreter.bpython.desktop
 share/metainfo/org.bpython-interpreter.bpython.metainfo.xml
 share/pixmaps/bpython.png
