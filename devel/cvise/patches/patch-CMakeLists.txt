@@ -1,10 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/04/19 16:31:42 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/07 10:01:26 wiz Exp $
 
 PythonInterp is deprecated and does not work correctly.
-Clang does not support -Wno-error=maybe-uninitialized option.
 Do not set -O3 optimization flags.
 
---- CMakeLists.txt.orig	2022-12-23 10:31:49.000000000 +0000
+--- CMakeLists.txt.orig	2023-04-28 06:55:41.000000000 +0000
 +++ CMakeLists.txt
 @@ -41,7 +41,7 @@ message(STATUS "Using ClangConfig.cmake 
  
@@ -15,19 +14,8 @@ Do not set -O3 optimization flags.
  
  # Locate pytest
  execute_process(COMMAND ${PYTHON_EXECUTABLE} -m pytest --version
-@@ -151,8 +151,8 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
-     OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-   # XXX figure out how to get "-std=c++17 -fno-rtti" from LLVM.  That's how we
-   # get those options in the Automake path...
--  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror -Wno-error=maybe-uninitialized")
--  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fno-rtti -fno-strict-aliasing -Wall -Wextra -Wno-unused-parameter -Werror -Wno-error=maybe-uninitialized")
-+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wno-error=maybe-uninitialized")
-+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fno-rtti -fno-strict-aliasing -Wall -Wextra -Wno-unused-parameter")
-   if(SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG)
-     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility-inlines-hidden")
-   endif()
-@@ -160,8 +160,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
-     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=mismatched-new-delete")
+@@ -170,8 +170,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=maybe-uninitialized")
    endif()
  
 -  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
