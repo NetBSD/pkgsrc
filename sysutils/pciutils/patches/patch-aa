@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.29 2022/12/31 22:21:04 msaitoh Exp $
+$NetBSD: patch-aa,v 1.30 2023/05/07 10:20:44 wiz Exp $
 
 Adapt the Makefile to make it compliant with pkgsrc.
 
---- Makefile.orig	2022-11-20 20:58:03.000000000 +0900
-+++ Makefile	2022-12-31 20:13:26.593864823 +0900
+--- Makefile.orig	2023-05-01 12:59:54.000000000 +0000
++++ Makefile
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2022 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2023 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.9.0
- DATE=2022-11-20
+ VERSION=3.10.0
+ DATE=2023-05-01
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
@@ -23,44 +23,7 @@ Adapt the Makefile to make it compliant with pkgsrc.
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -32,25 +31,25 @@ HWDB=
- ABI_VERSION=3
- 
- # Installation directories
--PREFIX=/usr/local
-+#PREFIX=/usr/local
- BINDIR=$(PREFIX)/bin
- SBINDIR=$(PREFIX)/sbin
--SHAREDIR=$(PREFIX)/share
-+SHAREDIR=$(PREFIX)/share/pciutils
- IDSDIR=$(SHAREDIR)
--MANDIR:=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
- INCDIR=$(PREFIX)/include
-+MANDIR=$(PREFIX)/$(PKGMANDIR)
- LIBDIR=$(PREFIX)/lib
- PKGCFDIR=$(LIBDIR)/pkgconfig
- 
- # Commands
--INSTALL=install
--DIRINSTALL=install -d
--STRIP=-s
--ifdef CROSS_COMPILE
--CC=$(CROSS_COMPILE)gcc
--else
--CC=cc
--endif
-+#INSTALL=install
-+#DIRINSTALL=install -d
-+#STRIP=-s
-+#ifdef CROSS_COMPILE
-+#CC=$(CROSS_COMPILE)gcc
-+#else
-+#CC=cc
-+#endif
- AR=$(CROSS_COMPILE)ar
- RANLIB=$(CROSS_COMPILE)ranlib
- DLLTOOL=$(CROSS_COMPILE)dlltool
-@@ -147,18 +146,21 @@ distclean: clean
+@@ -148,18 +147,21 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
@@ -94,7 +57,7 @@ Adapt the Makefile to make it compliant with pkgsrc.
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
  	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).$(ABI_VERSION).$(LIBEXT)
-@@ -172,19 +174,14 @@ install: install-pcilib
+@@ -173,19 +175,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
