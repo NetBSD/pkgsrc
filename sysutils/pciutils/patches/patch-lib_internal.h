@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_internal.h,v 1.2 2022/05/14 16:47:48 jperkin Exp $
+$NetBSD: patch-lib_internal.h,v 1.3 2023/05/07 10:20:44 wiz Exp $
 
 no symbol versioning available on SunOS
 
---- lib/internal.h.orig	2020-05-26 16:11:35.000000000 +0000
+--- lib/internal.h.orig	2023-03-05 13:45:24.000000000 +0000
 +++ lib/internal.h
 @@ -18,6 +18,17 @@
- #define STATIC_ALIAS(_decl, _for) _decl PCI_ABI { return _for; }
+ #define STATIC_ALIAS(_decl, _for) _decl VERSIONED_ABI { return _for; }
  #define DEFINE_ALIAS(_decl, _for)
  #define SYMBOL_VERSION(_int, _ext)
 +#elif defined(__sun__)
@@ -21,4 +21,4 @@ no symbol versioning available on SunOS
 +#define pci_filter_match_v38 pci_filter_match
  #else
  #define STATIC_ALIAS(_decl, _for)
- #define DEFINE_ALIAS(_decl, _for) extern _decl __attribute__((alias(#_for)))
+ #define DEFINE_ALIAS(_decl, _for) extern _decl __attribute__((alias(#_for))) VERSIONED_ABI

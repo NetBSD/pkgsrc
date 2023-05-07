@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2022/12/31 22:21:04 msaitoh Exp $
+# $NetBSD: Makefile,v 1.53 2023/05/07 10:20:44 wiz Exp $
 
-DISTNAME=	pciutils-3.9.0
+DISTNAME=	pciutils-3.10.0
 CATEGORIES=	sysutils
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
 
@@ -14,6 +14,10 @@ ONLY_FOR_PLATFORM=	AIX-*-* Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-* OpenBSD-*-* SunOS-5.11-* Haiku-*-*
 
 CFLAGS+=		-fPIC
+MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=		SHAREDIR=${PREFIX:Q}/share/pciutils
+MAKE_FLAGS+=		MANDIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_FLAGS+=		CC=${CC:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		SHARED=yes
