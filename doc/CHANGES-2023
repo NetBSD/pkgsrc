@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2906 2023/05/07 08:39:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2907 2023/05/07 08:40:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pylint to 2.17.4 [adam 2023-05-07]
 	Updated devel/py-hypothesis to 6.75.2 [wiz 2023-05-07]
 	Updated devel/py-rope to 1.8.0 [wiz 2023-05-07]
+	Updated devel/py-ruamel-yaml to 0.17.24 [wiz 2023-05-07]
