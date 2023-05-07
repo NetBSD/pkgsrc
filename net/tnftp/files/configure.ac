@@ -1,15 +1,14 @@
-#       $NetBSD: configure.ac,v 1.7 2015/10/04 14:44:06 tnn Exp $
+#       $NetBSD: configure.ac,v 1.8 2023/05/07 19:13:27 wiz Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([tnftp], [20151004], [lukem@NetBSD.org])
+AC_INIT([tnftp], [20230507], [lukem@NetBSD.org])
 AC_PREREQ([2.69])
 
 AC_COPYRIGHT([
-Copyright (c) 1999-2015 The NetBSD Foundation, Inc.
+Copyright (c) 1999-2023 The NetBSD Foundation, Inc.
 All rights reserved.
 ])
-AC_REVISION([$Revision: 1.7 $])
 
 AS_SHELL_SANITIZE()
 
@@ -18,6 +17,8 @@ AC_CONFIG_AUX_DIR([buildaux])
 AC_CONFIG_MACRO_DIR([buildaux])
 AC_CONFIG_HEADERS([tnftp_config.h])
 AC_CONFIG_LIBOBJ_DIR([libnetbsd])
+
+AC_USE_SYSTEM_EXTENSIONS()
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign nostdinc silent-rules])
 AM_MAINTAINER_MODE()
@@ -28,6 +29,7 @@ AM_MAINTAINER_MODE()
 AC_ARG_ENABLE([editcomplete],
               [AS_HELP_STRING([--enable-editcomplete],
                               [turn on command line editing and completion
+                               (requires system or local libedit)
                                [default=enabled]])],
               [opt_editcomplete=$enableval],
               [opt_editcomplete=yes])
@@ -43,6 +45,13 @@ AC_ARG_ENABLE([ssl],
                                [default=auto]])],
               [with_ssl=$enableval],
               [with_ssl=auto])
+AC_ARG_WITH([local-libedit],
+            [AS_HELP_STRING([--with-local-libedit],
+                            [use local libedit instead of system library:
+                             yes; auto (try system, fallback to local); no
+                             [default=auto]])],
+            [],
+            [with_local_libedit=auto])
 AC_ARG_WITH([socks],
             [AS_HELP_STRING([--with-socks],
                             [enable support for (Dante) SOCKS5 proxy
@@ -61,6 +70,14 @@ AH_TEMPLATE([HAVE_PRINTF_QD],
 AH_TEMPLATE([HAVE_PRINTF_LONG_LONG],
             [Define if 'long long' is supported and
              *printf() supports %lld or %qd to print them.])
+AH_TEMPLATE([HAVE_VA_COPY],
+            [Define to 1 if the 'va_copy' function is supported.])
+AH_TEMPLATE([HAVE___BUILTIN_VA_COPY],
+            [Define to 1 if the '__builtin_va_copy' function is supported.])
+AH_TEMPLATE([NO_EDITCOMPLETE],
+            [Define if disabling command-line editing and completion.])
+AH_TEMPLATE([USE_GLOB_H],
+            [Define if using system <glob.h> instead of local glob.])
 AH_TEMPLATE([USE_INET6],
             [Define if using IPv6 support.])
 AH_TEMPLATE([USE_SOCKS],
@@ -73,6 +90,7 @@ AH_TEMPLATE([WITH_SSL],
 #
 AC_PROG_CC()
 AC_PROG_AWK()
+AM_PROG_AR()
 AC_PROG_LIBTOOL()
 
 #
@@ -95,14 +113,31 @@ AS_CASE([$target_os],
 #
 # Checks for libraries.
 #
+
+# Check if libedit is required, and which implementation.
+#
 AS_IF([test "$opt_editcomplete" = yes],
-      [AC_SEARCH_LIBS([tgetent],
+      [AC_MSG_NOTICE([--enable-editcomplete; checking for required features])
+       AC_SEARCH_LIBS([tgetent],
                       [termcap termlib curses ncurses tinfo],
                       [],
-                      [AC_MSG_ERROR(
-                           [no relevant library found containing tgetent])])
-       ])
+                      [AC_MSG_ERROR([no relevant library found containing tgetent])])
+       AS_IF([test "$with_local_libedit" != yes],
+             [AC_CHECK_LIB([edit],
+                           [el_init],
+                           [AC_MSG_NOTICE([using system libedit])
+                            with_local_libedit=no],
+                           [AS_IF([test "$with_local_libedit" = no],
+                                  [AC_MSG_ERROR([--without-local-libedit was given, but system libedit was not found])])
+                            AC_MSG_NOTICE([using local libedit])
+                            with_local_libedit=yes])],
+             [AC_MSG_NOTICE([using local libedit])])],
+      [AC_MSG_NOTICE([--disable-editcomplete; disabling --with-local-libedit])
+       AC_DEFINE([NO_EDITCOMPLETE], [1])
+       with_local_libedit=no])
 
+# Check for ns and socket libraries.
+#
 AC_SEARCH_LIBS([gethostbyname], [nsl])
 AC_SEARCH_LIBS([socket],
                [socket],
@@ -113,7 +148,6 @@ AC_SEARCH_LIBS([socket],
                              [],
                              [-lnsl])])
 
-#
 # Check for (Dante) SOCKS5.
 #
 AS_IF([test "$with_socks" != no],
@@ -127,13 +161,12 @@ AS_IF([test "$with_socks" != no],
                              [AC_MSG_WARN(
                 [IPv6 is incompatible with socks, disabling IPv6 support])
                               opt_ipv6=no])],
-                      [AS_IF([test "$with_socks" != "auto"],
-                             [AC_MSG_FAILURE(
+                      [AS_IF([test "$with_socks" != auto],
+                             [AC_MSG_ERROR(
                 [--with-socks was given, but SOCKSinit() was not found])])
                        AC_MSG_NOTICE([disabling --with-socks])
                        with_socks=no])])
 
-#
 # Check for OpenSSL.
 #
 AX_CHECK_OPENSSL([have_ssl=yes])
@@ -144,12 +177,10 @@ AS_IF([test "$with_ssl" != no],
              [AC_DEFINE([WITH_SSL], [1])
               AC_MSG_NOTICE([enabling SSL support])
               with_ssl=yes],
-             [AS_IF([test "$with_ssl" != "auto"],
-                    [AC_MSG_FAILURE([--with-ssl was given, but OpenSSL was not found])])
+             [AS_IF([test "$with_ssl" != auto],
+                    [AC_MSG_ERROR([--with-ssl was given, but OpenSSL was not found])])
               AC_MSG_NOTICE([disabling --with-ssl])
               with_ssl=no])])
-
-AM_CONDITIONAL([WITH_SSL], [test "$with_ssl" = yes])
 
 #
 # Checks for header files.
@@ -258,7 +289,6 @@ AC_TYPE_LONG_LONG_INT()
 AC_TYPE_UINT32_T()
 AC_TYPE_OFF_T()
 AC_TYPE_PID_T()
-AC_TYPE_SIGNAL()
 AC_TYPE_SIZE_T()
 AC_STRUCT_TM()
 AC_CHECK_MEMBERS([struct sockaddr.sa_len, struct sockaddr_in.sin_len,
@@ -289,8 +319,6 @@ AS_IF([test "$opt_ipv6" = yes],
 #
 # Checks for library functions.
 #
-#XXX    remove alloca use
-AC_FUNC_ALLOCA()
 AC_FUNC_CLOSEDIR_VOID()
 AC_FUNC_FORK()
 AC_FUNC_FSEEKO()
@@ -298,7 +326,7 @@ AC_FUNC_STRCOLL()
 AC_REPLACE_FUNCS([dirname err fgetln getaddrinfo getnameinfo \
                   inet_ntop inet_pton mkstemp setprogname sl_init snprintf \
                   strdup strerror strlcat strlcpy strptime strsep strunvis \
-                  strvis timegm usleep utimes])
+                  strvis timegm usleep utimes vasprintf])
 AC_CHECK_FUNCS([getcwd gethostbyaddr gethostbyname gethostbyname2 gethostname \
                 getpass getpassphrase getpgrp gettimeofday isascii \
                 memchr memmove memset realpath regcomp \
@@ -308,9 +336,22 @@ AC_CHECK_FUNCS([getcwd gethostbyaddr gethostbyname gethostbyname2 gethostname \
 AS_IF([test "$ac_cv_func_getpgrp" = yes], [AC_FUNC_GETPGRP])
 AS_IF([test "$ac_cv_func_strptime" = yes], [AC_CHECK_DECLS([strptime])])
 
-# Always replace glob(); the vendor's may not be secure.
+# Use system glob if GLOB_BRACE and GLOB_TILDE are available.
 #
-AC_LIBOBJ([glob])
+use_local_glob=yes
+AC_CHECK_HEADER([glob.h],
+                [AC_MSG_CHECKING([glob supports required flags])
+                 AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+#include <glob.h>]], [[
+int f = GLOB_BRACE|GLOB_NOCHECK|GLOB_TILDE;
+]])],
+                         [AC_MSG_RESULT([yes])
+			  use_local_glob=no],
+                         [AC_MSG_RESULT([no - using local version])],
+                         [AC_MSG_RESULT([unknown - cross-compiling])])])
+AS_IF([test "$use_local_glob" = yes],
+      [AC_LIBOBJ([glob])],
+      [AC_DEFINE([USE_GLOB_H], [1])])
 
 # We assume that if sprintf() supports %lld or %qd,
 # then all of *printf() does. If not, disable long long
@@ -363,6 +404,32 @@ AC_CHECK_FUNC([poll],
                              [AC_DEFINE([HAVE_POLL], [1])],
                              [$accheck_includes])])
 
+AC_MSG_CHECKING([for va_copy])
+AC_RUN_IFELSE([AC_LANG_PROGRAM([[
+$accheck_includes
+]], [[
+va_list ap, ap2;
+va_copy(ap2, ap);
+return 0;
+]])],
+              [AC_MSG_RESULT([yes])
+               AC_DEFINE([HAVE_VA_COPY], [1])],
+              [AC_MSG_RESULT([no])],
+              [AC_MSG_RESULT([unknown - cross-compiling])])
+
+AC_MSG_CHECKING([for __builtin_va_copy])
+AC_RUN_IFELSE([AC_LANG_PROGRAM([[
+$accheck_includes
+]], [[
+va_list ap, ap2;
+__builtin_va_copy(ap2, ap);
+return 0;
+]])],
+              [AC_MSG_RESULT([yes])
+               AC_DEFINE([HAVE___BUILTIN_VA_COPY], [1])],
+              [AC_MSG_RESULT([no])],
+              [AC_MSG_RESULT([unknown - cross-compiling])])
+
 AS_IF([test "$ac_cv_func_strptime" = yes],
       [AC_MSG_CHECKING([if strptime() needs separators between conversions])
        AC_RUN_IFELSE([AC_LANG_PROGRAM([[
@@ -378,12 +445,6 @@ exit(!res);
                      [AC_MSG_RESULT([yes - using local version])
                       AC_LIBOBJ([strptime])],
                      [AC_MSG_RESULT([unknown - cross-compiling])])])
-
-# Use local libedit if editcomplete is requested
-#
-AS_IF([test "$opt_editcomplete" = yes],
-      [AC_MSG_NOTICE([--enable-editcomplete; using internal libedit])],
-      [CFLAGS="-DNO_EDITCOMPLETE $CFLAGS"])
 
 # Replace sl_init() (et al) if it provides the older API.
 #
@@ -414,7 +475,9 @@ AS_IF([test "$ac_cv_header_vis_h" = yes],
 #include <vis.h>
 ])])
 
-AM_CONDITIONAL([USE_LIBEDIT], [test "$opt_editcomplete" = yes])
+AM_CONDITIONAL([WITH_SSL], [test "$with_ssl" = yes])
+AM_CONDITIONAL([OPT_EDITCOMPLETE], [test "$opt_editcomplete" = yes])
+AM_CONDITIONAL([WITH_LOCAL_LIBEDIT], [test "$with_local_libedit" = yes])
 
 #
 # Create the Makefiles.
@@ -422,7 +485,6 @@ AM_CONDITIONAL([USE_LIBEDIT], [test "$opt_editcomplete" = yes])
 AC_CONFIG_FILES([
         Makefile
         libedit/Makefile
-        libedit/makelist
         libnetbsd/Makefile
         src/Makefile
 ])
@@ -434,8 +496,9 @@ AC_OUTPUT()
 AC_MSG_NOTICE([ === Configuration results ===])
 AC_MSG_NOTICE([Package:               $PACKAGE_STRING])
 AC_MSG_NOTICE([Prefix:                $prefix])
-AC_MSG_NOTICE([Command-line editing:  $opt_editcomplete])
-AC_MSG_NOTICE([IPv6 support:          $opt_ipv6])
-AC_MSG_NOTICE([SOCKS5 proxy support:  $with_socks])
-AC_MSG_NOTICE([SSL:                   $with_ssl])
+AC_MSG_NOTICE([--enable-editcomplete  $opt_editcomplete])
+AC_MSG_NOTICE([--enable-ipv6          $opt_ipv6])
+AC_MSG_NOTICE([--enable-ssl           $with_ssl])
+AC_MSG_NOTICE([--with-local-libedit   $with_local_libedit])
+AC_MSG_NOTICE([--with-socks           $with_socks])
 AC_MSG_NOTICE([ =============================])

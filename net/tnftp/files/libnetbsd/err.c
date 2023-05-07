@@ -1,7 +1,7 @@
-/*	$NetBSD: err.c,v 1.4 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: err.c,v 1.5 2023/05/07 19:13:28 wiz Exp $	*/
 
 /*
- * Copyright 1997-2000 Luke Mewburn <lukem@NetBSD.org>.
+ * Copyright 1997-2000,2020 Luke Mewburn <lukem@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -12,8 +12,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. The name of the author may not be used to endorse or promote products
- *    derived from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
@@ -32,61 +30,61 @@
 void
 err(int eval, const char *fmt, ...)
 {
-	va_list	ap;
-        int	sverrno;
+	va_list ap;
+	int	sverrno;
 
 	sverrno = errno;
-        (void)fprintf(stderr, "%s: ", getprogname());
+	(void)fprintf(stderr, "%s: ", getprogname());
 	va_start(ap, fmt);
-        if (fmt != NULL) {
-                (void)vfprintf(stderr, fmt, ap);
-                (void)fprintf(stderr, ": ");
-        }
+	if (fmt != NULL) {
+		(void)vfprintf(stderr, fmt, ap);
+		(void)fprintf(stderr, ": ");
+	}
 	va_end(ap);
-        (void)fprintf(stderr, "%s\n", strerror(sverrno));
-        exit(eval);
+	(void)fprintf(stderr, "%s\n", strerror(sverrno));
+	exit(eval);
 }
 
 void
 errx(int eval, const char *fmt, ...)
 {
-	va_list	ap;
+	va_list ap;
 
-        (void)fprintf(stderr, "%s: ", getprogname());
+	(void)fprintf(stderr, "%s: ", getprogname());
 	va_start(ap, fmt);
-        if (fmt != NULL)
-                (void)vfprintf(stderr, fmt, ap);
+	if (fmt != NULL)
+		(void)vfprintf(stderr, fmt, ap);
 	va_end(ap);
-        (void)fprintf(stderr, "\n");
-        exit(eval);
+	(void)fprintf(stderr, "\n");
+	exit(eval);
 }
 
 void
 warn(const char *fmt, ...)
 {
-	va_list	ap;
-        int	sverrno;
+	va_list ap;
+	int	sverrno;
 
 	sverrno = errno;
-        (void)fprintf(stderr, "%s: ", getprogname());
+	(void)fprintf(stderr, "%s: ", getprogname());
 	va_start(ap, fmt);
-        if (fmt != NULL) {
-                (void)vfprintf(stderr, fmt, ap);
-                (void)fprintf(stderr, ": ");
-        }
+	if (fmt != NULL) {
+		(void)vfprintf(stderr, fmt, ap);
+		(void)fprintf(stderr, ": ");
+	}
 	va_end(ap);
-        (void)fprintf(stderr, "%s\n", strerror(sverrno));
+	(void)fprintf(stderr, "%s\n", strerror(sverrno));
 }
 
 void
 warnx(const char *fmt, ...)
 {
-	va_list	ap;
+	va_list ap;
 
-        (void)fprintf(stderr, "%s: ", getprogname());
+	(void)fprintf(stderr, "%s: ", getprogname());
 	va_start(ap, fmt);
-        if (fmt != NULL)
-                (void)vfprintf(stderr, fmt, ap);
+	if (fmt != NULL)
+		(void)vfprintf(stderr, fmt, ap);
 	va_end(ap);
-        (void)fprintf(stderr, "\n");
+	(void)fprintf(stderr, "\n");
 }

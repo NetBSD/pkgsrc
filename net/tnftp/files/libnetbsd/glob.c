@@ -1,4 +1,4 @@
-/*	$NetBSD: glob.c,v 1.6 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: glob.c,v 1.7 2023/05/07 19:13:28 wiz Exp $	*/
 /*	from: NetBSD: glob.c,v 1.34 2013/02/21 18:17:43 christos Exp	*/
 
 /*
@@ -33,6 +33,19 @@
  * SUCH DAMAGE.
  */
 
+#if 0
+
+#include <sys/cdefs.h>
+#if defined(LIBC_SCCS) && !defined(lint)
+#if 0
+static char sccsid[] = "@(#)glob.c	8.3 (Berkeley) 10/13/93";
+#else
+__RCSID(" NetBSD: glob.c,v 1.38 2017/05/08 14:42:16 christos Exp ");
+#endif
+#endif /* LIBC_SCCS and not lint */
+
+#endif
+
 /*
  * glob(3) -- a superset of the one defined in POSIX 1003.2.
  *
@@ -61,8 +74,17 @@
 
 #include "tnftp.h"
 
+#define NO_GETPW_R
+
+#undef	TILDE			/* XXX: AIX 4.1.5 has this in <sys/ioctl.h> */
+
+#ifndef __UNCONST
+#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
+#endif
+
 #if 0
 
+#include "namespace.h"
 #include <sys/param.h>
 #include <sys/stat.h>
 
@@ -70,6 +92,7 @@
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
+#include <glob.h>
 #include <pwd.h>
 #include <stdio.h>
 #include <stddef.h>
@@ -77,13 +100,15 @@
 #include <string.h>
 #include <unistd.h>
 
+#ifdef HAVE_NBTOOL_CONFIG_H
+#define NO_GETPW_R
 #endif
 
-#define NO_GETPW_R
+#endif
 
-#define	GLOB_LIMIT_STRING	65536	/* number of readdirs */
+#define	GLOB_LIMIT_STRING	524288	/* number of readdirs */
 #define	GLOB_LIMIT_STAT		128	/* number of stat system calls */
-#define	GLOB_LIMIT_READDIR	16384	/* total buffer size of path strings */
+#define	GLOB_LIMIT_READDIR	65536	/* total buffer size of path strings */
 #define	GLOB_LIMIT_PATH		1024	/* number of path elements */
 #define GLOB_LIMIT_BRACE	128	/* Number of brace calls */
 
@@ -93,8 +118,6 @@ struct glob_limit {
 	size_t l_readdir;	
 	size_t l_brace;
 };
-
-#undef	TILDE			/* XXX: AIX 4.1.5 has this in <sys/ioctl.h> */
 
 /*
  * XXX: For NetBSD 1.4.x compatibility. (kill me l8r)
@@ -176,8 +199,8 @@ static void	 qprintf(const char *, Char *);
 #endif
 
 int
-glob(const char * pattern, int flags, int (*errfunc)(const char *,
-    int), glob_t * pglob)
+glob(const char * __restrict pattern, int flags, int (*errfunc)(const char *,
+    int), glob_t * __restrict pglob)
 {
 	const unsigned char *patnext;
 	int c;
@@ -932,39 +955,45 @@ nospace:
 
 
 /*
- * pattern matching function for filenames.  Each occurrence of the *
- * pattern causes a recursion level.
+ * pattern matching function for filenames.
  */
 static int
 match(const Char *name, const Char *pat, const Char *patend)
 {
 	int ok, negate_range;
 	Char c, k;
+	const Char *patNext, *nameNext, *nameStart, *nameEnd;
 
 	_DIAGASSERT(name != NULL);
 	_DIAGASSERT(pat != NULL);
 	_DIAGASSERT(patend != NULL);
+	patNext = pat;
+	nameStart = nameNext = name;
+	nameEnd = NULL;
 
-	while (pat < patend) {
-		c = *pat++;
+	while (pat < patend || *name) {
+		c = *pat;
+		if (*name == EOS)
+			nameEnd = name;
 		switch (c & M_MASK) {
 		case M_ALL:
-			while (pat < patend && (*pat & M_MASK) == M_ALL)
-				pat++;	/* eat consecutive '*' */
-			if (pat == patend)
-				return 1;
-			for (; !match(name, pat, patend); name++)
-				if (*name == EOS)
-					return 0;
-			return 1;
+			while ((pat[1] & M_MASK) == M_ALL) pat++;
+			patNext = pat;
+			nameNext = name + 1;
+			pat++;
+			continue;
 		case M_ONE:
-			if (*name++ == EOS)
-				return 0;
-			break;
+			if (*name == EOS)
+				break;
+			pat++;
+			name++;
+			continue;
 		case M_SET:
 			ok = 0;
-			if ((k = *name++) == EOS)
-				return 0;
+			if ((k = *name) == EOS)
+				break;
+			pat++;
+			name++;
 			if ((negate_range = ((*pat & M_MASK) == M_NOT)) != EOS)
 				++pat;
 			while (((c = *pat++) & M_MASK) != M_END)
@@ -975,15 +1004,24 @@ match(const Char *name, const Char *pat, const Char *patend)
 				} else if (c == k)
 					ok = 1;
 			if (ok == negate_range)
-				return 0;
-			break;
+				break;
+			continue;
 		default:
-			if (*name++ != c)
-				return 0;
-			break;
+			if (*name != c)
+				break;
+			pat++;
+			name++;
+			continue;
 		}
+		if (nameNext != nameStart
+		    && (nameEnd == NULL || nameNext <= nameEnd)) {
+			pat = patNext;
+			name = nameNext;
+			continue;
+		}
+		return 0;
 	}
-	return *name == EOS;
+	return 1;
 }
 
 /* Free allocated data belonging to a glob_t structure. */

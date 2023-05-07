@@ -1,8 +1,8 @@
-/*	$NetBSD: main.c,v 1.11 2015/10/04 14:44:07 tnn Exp $	*/
-/*	from	NetBSD: main.c,v 1.123 2015/04/23 23:31:23 lukem Exp	*/
+/*	$NetBSD: main.c,v 1.12 2023/05/07 19:13:28 wiz Exp $	*/
+/*	from	NetBSD: main.c,v 1.129 2023/02/25 12:07:25 mlelstv Exp	*/
 
 /*-
- * Copyright (c) 1996-2015 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2023 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -103,7 +103,7 @@ __COPYRIGHT("@(#) Copyright (c) 1985, 1989, 1993, 1994\
 #if 0
 static char sccsid[] = "@(#)main.c	8.6 (Berkeley) 10/9/94";
 #else
-__RCSID(" NetBSD: main.c,v 1.123 2015/04/23 23:31:23 lukem Exp  ");
+__RCSID(" NetBSD: main.c,v 1.129 2023/02/25 12:07:25 mlelstv Exp  ");
 #endif
 #endif /* not lint */
 
@@ -137,7 +137,8 @@ __RCSID(" NetBSD: main.c,v 1.123 2015/04/23 23:31:23 lukem Exp  ");
 #define	NO_PROXY	"no_proxy"	/* env var with list of non-proxied
 					 * hosts, comma or space separated */
 
-__dead static void	usage(void);
+static int	usage(void);
+static int	usage_help(void);
 static void	setupoption(const char *, const char *, const char *);
 
 int
@@ -275,7 +276,7 @@ main(int volatile argc, char **volatile argv)
 		}
 	}
 
-	while ((ch = getopt(argc, argv, "46AadefginN:o:pP:q:r:Rs:tT:u:vVx:")) != -1) {
+	while ((ch = getopt(argc, argv, ":46AadefginN:o:pP:q:r:Rs:tT:u:vVx:")) != -1) {
 		switch (ch) {
 		case '4':
 			family = AF_INET;
@@ -333,7 +334,7 @@ main(int volatile argc, char **volatile argv)
 			break;
 
 		case 'o':
-			outfile = optarg;
+			outfile = ftp_strdup(optarg);
 			if (strcmp(outfile, "-") == 0)
 				ttyout = stderr;
 			break;
@@ -387,15 +388,15 @@ main(int volatile argc, char **volatile argv)
 				if (*cp == '\0') {
 					warnx("Bad throttle value `%s'",
 					    optarg);
-					usage();
-					/* NOTREACHED */
+					return usage();
 				}
 				targv[targc++] = cp;
 				if (targc >= 5)
 					break;
 			}
-			if (parserate(targc, targv, 1) == -1)
-				usage();
+			if (parserate(targc, targv, 1) == -1) {
+				return usage();
+			}
 			free(oac);
 			break;
 		}
@@ -424,8 +425,19 @@ main(int volatile argc, char **volatile argv)
 			rcvbuf_size = sndbuf_size;
 			break;
 
+		case '?':
+			if (optopt == '?') {
+				return usage_help();
+			}
+			warnx("-%c: unknown option", optopt);
+			return usage();
+
+		case ':':
+			warnx("-%c: missing argument", optopt);
+			return usage();
+
 		default:
-			usage();
+			errx(1, "unimplemented option -%c", ch);
 		}
 	}
 			/* set line buffering on ttyout */
@@ -473,7 +485,6 @@ main(int volatile argc, char **volatile argv)
 		if (localhome == NULL && !EMPTYSTRING(pw->pw_dir))
 			localhome = ftp_strdup(pw->pw_dir);
 		localname = ftp_strdup(pw->pw_name);
-		anonuser = localname;
 	}
 	if (netrc[0] == '\0' && localhome != NULL) {
 		if (strlcpy(netrc, localhome, sizeof(netrc)) >= sizeof(netrc) ||
@@ -510,6 +521,7 @@ main(int volatile argc, char **volatile argv)
 	setupoption("pager",		getenv("PAGER"),	DEFAULTPAGER);
 	setupoption("prompt",		getenv("FTPPROMPT"),	DEFAULTPROMPT);
 	setupoption("rprompt",		getenv("FTPRPROMPT"),	DEFAULTRPROMPT);
+	setupoption("sslnoverify",   	getenv("FTPSSLNOVERIFY"),	"");
 
 	free(anonpass);
 
@@ -582,8 +594,9 @@ main(int volatile argc, char **volatile argv)
 			retry_connect = 0; /* connected, stop hiding msgs */
 		}
 	}
-	if (isupload)
-		usage();
+	if (isupload) {
+		return usage();
+	}
 
 #ifndef NO_EDITCOMPLETE
 	controlediting();
@@ -670,7 +683,7 @@ cmdscanner(void)
 			case -2:	/* error */
 				if (fromatty)
 					putc('\n', ttyout);
-				quit(0, NULL);
+				justquit();
 				/* NOTREACHED */
 			case -3:	/* too long; try again */
 				fputs("Sorry, input line is too long.\n",
@@ -692,7 +705,7 @@ cmdscanner(void)
 			if (buf == NULL || num == 0) {
 				if (fromatty)
 					putc('\n', ttyout);
-				quit(0, NULL);
+				justquit();
 			}
 			if (num >= sizeof(line)) {
 				fputs("Sorry, input line is too long.\n",
@@ -846,7 +859,6 @@ slurpstring(void)
 				slrflag++;
 				INC_CHKCURSOR(stringbase);
 				return ((*sb == '!') ? bangstr : dollarstr);
-				/* NOTREACHED */
 			case 1:
 				slrflag++;
 				altarg = stringbase;
@@ -975,7 +987,7 @@ help(int argc, char *argv[])
 	cmd = argv[0];
 	isusage = (strcmp(cmd, "usage") == 0);
 	if (argc == 0 || (isusage && argc == 1)) {
-		UPRINTF("usage: %s [command [...]]\n", cmd);
+		UPRINTF("usage: %s [command ...]\n", cmd);
 		return;
 	}
 	if (argc == 1) {
@@ -1054,20 +1066,69 @@ setupoption(const char *name, const char *value, const char *defaultvalue)
 	set_option(name, value ? value : defaultvalue, 0);
 }
 
-void
+static void
+synopsis(FILE * stream)
+{
+	const char * progname = getprogname();
+
+	fprintf(stream,
+"usage: %s [-46AadefginpRtVv] [-N NETRC] [-o OUTPUT] [-P PORT] [-q QUITTIME]\n"
+"           [-r RETRY] [-s SRCADDR] [-T DIR,MAX[,INC]] [-x XFERSIZE]\n"
+"           [[USER@]HOST [PORT]]\n"
+"           [[USER@]HOST:[PATH][/]]\n"
+"           [file:///PATH]\n"
+"           [ftp://[USER[:PASSWORD]@]HOST[:PORT]/PATH[/][;type=TYPE]]\n"
+"           [http://[USER[:PASSWORD]@]HOST[:PORT]/PATH]\n"
+#ifdef WITH_SSL
+"           [https://[USER[:PASSWORD]@]HOST[:PORT]/PATH]\n"
+#endif
+"           ...\n"
+"       %s -u URL FILE ...\n"
+"       %s -?\n",
+		progname, progname, progname);
+}
+
+static int
+usage_help(void)
+{
+	synopsis(stdout);
+#ifndef NO_USAGE
+	printf(
+"  -4            Only use IPv4 addresses\n"
+"  -6            Only use IPv6 addresses\n"
+"  -A            Force active mode\n"
+"  -a            Use anonymous login\n"
+"  -d            Enable debugging\n"
+"  -e            Disable command-line editing\n"
+"  -f            Force cache reload for FTP or HTTP proxy transfers\n"
+"  -g            Disable file name globbing\n"
+"  -i            Disable interactive prompt during multiple file transfers\n"
+"  -N NETRC      Use NETRC instead of ~/.netrc\n"
+"  -n            Disable auto-login\n"
+"  -o OUTPUT     Save auto-fetched files to OUTPUT\n"
+"  -P PORT       Use port PORT\n"
+"  -p            Force passive mode\n"
+"  -q QUITTIME   Quit if connection stalls for QUITTIME seconds\n"
+"  -R            Restart non-proxy auto-fetch\n"
+"  -r RETRY      Retry failed connection attempts after RETRY seconds\n"
+"  -s SRCADDR    Use source address SRCADDR\n"
+"  -t            Enable packet tracing\n"
+"  -T DIR,MAX[,INC]\n"
+"                Set maximum transfer rate for direction DIR to MAX bytes/s,\n"
+"                with optional increment INC bytes/s\n"
+"  -u URL        URL to upload file arguments to\n"
+"  -V            Disable verbose and progress\n"
+"  -v            Enable verbose and progress\n"
+"  -x XFERSIZE   Set socket send and receive size to XFERSIZE\n"
+"  -?            Display this help and exit\n"
+		);
+#endif
+	return EXIT_SUCCESS;
+}
+
+static int
 usage(void)
 {
-	const char *progname = getprogname();
-
-	(void)fprintf(stderr,
-"usage: %s [-46AadefginpRtVv] [-N netrc] [-o outfile] [-P port] [-q quittime]\n"
-"           [-r retry] [-s srcaddr] [-T dir,max[,inc]] [-x xferbufsize]\n"
-"           [[user@]host [port]] [host:path[/]] [file:///file]\n"
-"           [ftp://[user[:pass]@]host[:port]/path[/]]\n"
-"           [http://[user[:pass]@]host[:port]/path] [...]\n"
-#ifdef WITH_SSL
-"           [https://[user[:pass]@]host[:port]/path] [...]\n"
-#endif
-"       %s -u URL file [...]\n", progname, progname);
-	exit(1);
+	synopsis(stderr);
+	return EXIT_FAILURE;
 }

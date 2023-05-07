@@ -1,7 +1,6 @@
 #!/bin/sh -
-# @configure_input@
-#
-#	$NetBSD: makelist.in,v 1.4 2014/10/31 18:59:32 spz Exp $
+#	$NetBSD: makelist,v 1.1 2023/05/07 19:13:27 wiz Exp $
+#	 NetBSD: makelist,v 1.29 2016/05/09 21:46:56 christos Exp  
 #
 # Copyright (c) 1992, 1993
 #	The Regents of the University of California.  All rights reserved.
@@ -17,11 +16,7 @@
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
 #    documentation and/or other materials provided with the distribution.
-# 3. All advertising materials mentioning features or use of this software
-#    must display the following acknowledgement:
-#	This product includes software developed by the University of
-#	California, Berkeley and its contributors.
-# 4. Neither the name of the University nor the names of its contributors
+# 3. Neither the name of the University nor the names of its contributors
 #    may be used to endorse or promote products derived from this software
 #    without specific prior written permission.
 #
@@ -41,11 +36,8 @@
 
 # makelist.sh: Automatically generate header files...
 
-AWK=@AWK@
-USAGE="Usage: $0 -h|-e|-fc|-fh|-bc|-bh|-m <filenames>"
-
-LC_ALL="C"
-export LC_ALL
+: ${AWK:=awk}
+USAGE="Usage: $0 -h|-fc|-fh|-bh <filenames>"
 
 if [ "x$1" = "x" ]
 then
@@ -60,8 +52,6 @@ FILES="$@"
 
 case $FLAG in
 
-#	generate foo.h file from foo.c
-#
 -h)
     set - `echo $FILES | sed -e 's/\\./_/g'`
     hdr="_h_`basename $1`"
@@ -78,7 +68,8 @@ case $FLAG in
 # XXX:	need a space between name and prototype so that -fc and -fh
 #	parsing is much easier
 #
-		printf("protected el_action_t\t%s (EditLine *, int);\n", name);
+		printf("libedit_private el_action_t\t%s (EditLine *, wint_t);\n",
+		    name);
 	    }
 	}
 	END {
@@ -86,14 +77,13 @@ case $FLAG in
 	}'
 	;;
 
-#	generate help.c from various .c files
+#	generate help.h from various .c files
 #
--bc)
+-bh)
     cat $FILES | $AWK '
 	BEGIN {
 	    printf("/* Automatically generated file, do not edit */\n");
-	    printf("#include \"sys.h\"\n#include \"el.h\"\n");
-	    printf("private const struct el_bindings_t el_func_help[] = {\n");
+	    printf("static const struct el_bindings_t el_func_help[] = {\n");
 	    low = "abcdefghijklmnopqrstuvwxyz_";
 	    high = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 	    for (i = 1; i <= length(low); i++)
@@ -113,13 +103,13 @@ case $FLAG in
 		    fname = fname s;
 		}
 
-		printf("    { %-30.30s %-30.30s\n","\"" fname "\",", uname ",");
+		printf("    { %-30.30s %-30.30s\n","L\"" fname "\",", uname ",");
 		ok = 1;
 	    }
 	}
 	/^ \*/ {
 	    if (ok) {
-		printf("      \"");
+		printf("      L\"");
 		for (i = 2; i < NF; i++)
 		    printf("%s ", $i);
 		printf("%s\" },\n", $i);
@@ -127,33 +117,17 @@ case $FLAG in
 	    }
 	}
 	END {
-	    printf("    { NULL, 0, NULL }\n");
 	    printf("};\n");
-	    printf("\nprotected const el_bindings_t* help__get()");
-	    printf("{ return el_func_help; }\n");
 	}'
-	;;
-
-#	generate help.h from various .c files
-#
--bh)
-    $AWK '
-	BEGIN {
-	    printf("/* Automatically generated file, do not edit */\n");
-	    printf("#ifndef _h_help_c\n#define _h_help_c\n");
-	    printf("protected const el_bindings_t *help__get(void);\n");
-	    printf("#endif /* _h_help_c */\n");
-	}' /dev/null
 	;;
 
 #	generate fcns.h from various .h files
 #
 -fh)
     cat $FILES | $AWK '/el_action_t/ { print $3 }' | \
-    sort | tr '[a-z]' '[A-Z]' | $AWK '
+    sort | tr '[:lower:]' '[:upper:]' | $AWK '
 	BEGIN {
 	    printf("/* Automatically generated file, do not edit */\n");
-	    printf("#ifndef _h_fcns_c\n#define _h_fcns_c\n");
 	    count = 0;
 	}
 	{
@@ -161,21 +135,16 @@ case $FLAG in
 	}
 	END {
 	    printf("#define\t%-30.30s\t%3d\n", "EL_NUM_FCNS", count);
-
-	    printf("typedef el_action_t (*el_func_t)(EditLine *, int);");
-	    printf("\nprotected const el_func_t* func__get(void);\n");
-	    printf("#endif /* _h_fcns_c */\n");
 	}'
 	;;
 
-#	generate fcns.c from various .h files
+#	generate func.h from various .h files
 #
 -fc)
     cat $FILES | $AWK '/el_action_t/ { print $3 }' | sort | $AWK '
 	BEGIN {
 	    printf("/* Automatically generated file, do not edit */\n");
-	    printf("#include \"sys.h\"\n#include \"el.h\"\n");
-	    printf("private const el_func_t el_func[] = {");
+	    printf("static const el_func_t el_func[] = {");
 	    maxlen = 80;
 	    needn = 1;
 	    len = 0;
@@ -195,59 +164,6 @@ case $FLAG in
 	}
 	END {
 	    printf("\n};\n");
-	    printf("\nprotected const el_func_t* func__get() { return el_func; }\n");
-	}'
-	;;
-
-#	generate editline.c from various .c files
-#
--e)
-	echo "$FILES" | tr ' ' '\012' | $AWK '
-	BEGIN {
-	    printf("/* Automatically generated file, do not edit */\n");
-	    printf("#define protected static\n");
-	    printf("#define SCCSID\n");
-	}
-	{
-	    printf("#include \"%s\"\n", $1);
-	}'
-	;;
-
-#	generate man page fragment from various .c files
-#
--m)
-    cat $FILES | $AWK '
-	BEGIN {
-	    printf(".\\\" Section automatically generated with makelist\n");
-	    printf(".Bl -tag -width 4n\n");
-	}
-	/\(\):/ {
-	    pr = substr($2, 1, 2);
-	    if (pr == "vi" || pr == "em" || pr == "ed") {
-		name = substr($2, 1, length($2) - 3);
-		fname = "";
-		for (i = 1; i <= length(name); i++) {
-		    s = substr(name, i, 1);
-		    if (s == "_")
-			s = "-";
-		    fname = fname s;
-		}
-
-		printf(".It Ic %s\n", fname);
-		ok = 1;
-	    }
-	}
-	/^ \*/ {
-	    if (ok) {
-		for (i = 2; i < NF; i++)
-		    printf("%s ", $i);
-		printf("%s.\n", $i);
-		ok = 0;
-	    }
-	}
-	END {
-	    printf(".El\n");
-	    printf(".\\\" End of section automatically generated with makelist\n");
 	}'
 	;;
 

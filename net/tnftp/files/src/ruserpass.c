@@ -1,4 +1,4 @@
-/*	$NetBSD: ruserpass.c,v 1.6 2014/10/31 18:59:33 spz Exp $	*/
+/*	$NetBSD: ruserpass.c,v 1.7 2023/05/07 19:13:28 wiz Exp $	*/
 /*	from	NetBSD: ruserpass.c,v 1.33 2007/04/17 05:52:04 lukem Exp	*/
 
 /*

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2021/11/22 16:09:33 nia Exp $
+# $NetBSD: options.mk,v 1.15 2023/05/07 19:13:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
 PKG_SUPPORTED_OPTIONS=	editline inet6 ssl socks
@@ -7,7 +7,7 @@ CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl:=	no
 
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if ${USE_BUILTIN.openssl:U:tl} == yes
 PKG_SUGGESTED_OPTIONS+=	ssl
 .endif
 

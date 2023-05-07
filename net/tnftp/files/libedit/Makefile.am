@@ -1,24 +1,31 @@
-## $NetBSD: Makefile.am,v 1.1.1.1 2014/10/31 18:47:21 spz Exp $
+## $NetBSD: Makefile.am,v 1.2 2023/05/07 19:13:27 wiz Exp $
 
 noinst_LTLIBRARIES = libedit.la
 
 libedit_la_SOURCES = \
 	chared.c \
+	chartype.c \
 	common.c \
 	el.c \
+	eln.c \
 	emacs.c \
+	filecomplete.c \
 	hist.c \
 	history.c \
-	key.c \
+	historyn.c \
+	keymacro.c \
+	literal.c \
 	map.c \
 	parse.c \
 	prompt.c \
 	read.c \
+	readline.c \
 	refresh.c \
 	search.c \
 	sig.c \
-	term.c \
+	terminal.c \
 	tokenizer.c \
+	tokenizern.c \
 	tty.c \
 	vi.c
 
@@ -35,9 +42,8 @@ libedit_la_LIBADD = \
 generated_files = \
 	common.h \
 	emacs.h \
-	fcns.c \
 	fcns.h \
-	help.c \
+	func.h \
 	help.h\
 	vi.h
 
@@ -50,55 +56,53 @@ BUILT_SOURCES = \
 CLEANFILES = \
 	$(generated_files)
 
+MAKELIST=AWK=$(AWK) $(SHELL) $(srcdir)/makelist
 
 
 vi.h: vi.c
-	@echo "Create $@"
-	$(SHELL) ./makelist -h $(srcdir)/vi.c > $@
+	$(AM_V_GEN)$(MAKELIST) -h $(srcdir)/vi.c > $@
 
 emacs.h: emacs.c
-	@echo "Create $@"
-	$(SHELL) ./makelist -h $(srcdir)/emacs.c > $@
+	$(AM_V_GEN)$(MAKELIST) -h $(srcdir)/emacs.c > $@
 
 common.h: common.c
-	@echo "Create $@"
-	$(SHELL) ./makelist -h $(srcdir)/common.c > $@
+	$(AM_V_GEN)$(MAKELIST) -h $(srcdir)/common.c > $@
 
 fcns.h: vi.h emacs.h common.h
-	@echo "Create $@"
-	$(SHELL) ./makelist -fh vi.h emacs.h common.h > $@
+	$(AM_V_GEN)$(MAKELIST) -fh vi.h emacs.h common.h > $@
 
-fcns.c: vi.h emacs.h common.h fcns.h
-	@echo "Create $@"
-	$(SHELL) ./makelist -fc vi.h emacs.h common.h > $@
-
-help.c: vi.c emacs.c common.c
-	@echo "Create $@"
-	$(SHELL) ./makelist -bc $(srcdir)/vi.c $(srcdir)/emacs.c $(srcdir)/common.c > $@
+func.h: vi.h emacs.h common.h
+	$(AM_V_GEN)$(MAKELIST) -fc vi.h emacs.h common.h > $@
 
 help.h: vi.c emacs.c common.c
-	@echo "Create $@"
-	$(SHELL) ./makelist -bh $(srcdir)/vi.c $(srcdir)/emacs.c $(srcdir)/common.c > $@
+	$(AM_V_GEN)$(MAKELIST) -bh $(srcdir)/vi.c $(srcdir)/emacs.c $(srcdir)/common.c > $@
 
 EXTRA_DIST = \
+	TEST/rl1.c \
+	TEST/tc1.c \
+	TEST/test_filecompletion.c \
+	TEST/wtc1.c \
 	chared.h \
+	chartype.h \
+	config.h \
 	editline.3 \
+	editline.7 \
 	editrc.5 \
 	el.h \
-	filecomplete.c \
 	filecomplete.h \
 	hist.h \
 	histedit.h \
-	key.h \
+	keymacro.h \
+	literal.h \
+	makelist \
 	map.h \
 	parse.h \
 	prompt.h \
 	read.h \
-	readline.c \
 	readline/readline.h \
 	refresh.h \
 	search.h \
 	sig.h \
 	sys.h \
-	term.h \
+	terminal.h \
 	tty.h

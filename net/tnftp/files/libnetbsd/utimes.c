@@ -1,4 +1,4 @@
-/*	$NetBSD: utimes.c,v 1.6 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: utimes.c,v 1.7 2023/05/07 19:13:28 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.

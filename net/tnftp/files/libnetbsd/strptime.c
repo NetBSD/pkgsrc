@@ -1,4 +1,4 @@
-/*	$NetBSD: strptime.c,v 1.5 2014/10/31 18:59:32 spz Exp $	*/
+/*	$NetBSD: strptime.c,v 1.6 2023/05/07 19:13:28 wiz Exp $	*/
 /*	from	NetBSD: strptime.c,v 1.18 1999/04/29 02:58:30 tv Exp	*/
 
 /*-
