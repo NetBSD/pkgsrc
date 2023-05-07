@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/07 20:58:20 markd Exp $
+
+BLAKE2s (outlines.doc.r25192.tar.xz) = 82f4bc66d9d2aec92a362741805eea39b9cbc082345a53494d5887cdbe9a6fa3
+SHA512 (outlines.doc.r25192.tar.xz) = bdc507a3f3cb966d03df37d9385145811c5750bce6341935231ae987b0a30dd65424a1bbb772920586721e25711caa429cd6d8b8149088f753f36b9dd69ddaac
+Size (outlines.doc.r25192.tar.xz) = 130384 bytes
