@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/07 20:37:52 markd Exp $
+
+BLAKE2s (dkimpy-1.1.3.tar.gz) = fb967d8664bd750921aaa00c6c398faf6b4eaf079f75dd45c839c11e9c8af426
+SHA512 (dkimpy-1.1.3.tar.gz) = 6c845e80183b9c0384163f9353b4cf065736684ec4b32f4d71ae9b92eff51105358d7c203f38d427921c00722656dbe1971247dd69e7a1442d6d0ed89874b2d5
+Size (dkimpy-1.1.3.tar.gz) = 66793 bytes
