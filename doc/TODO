@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22910 2023/05/07 12:24:26 wiz Exp $
+$NetBSD: TODO,v 1.22911 2023/05/07 16:57:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -897,6 +897,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libimagequant-4.2.0 [https://github.com/ImageOptim/libimagequant/issues/109]
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1248,6 +1249,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
+	o py-yubikey-manager-5.1.1
 	o py-z3-4.8.10
 	o py-z3solver-4.8.10.0
 	o pythontidy-1.23
@@ -1362,6 +1364,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o squeak-vm-4.10.2.2765
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
+	o ssh-audit-2.9.0
 	o stalin-0.11
 	o stan-math-2.26.1
 	o statist-1.3.0
@@ -1414,6 +1417,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-5.5.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
