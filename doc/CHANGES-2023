@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2915 2023/05/07 10:21:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2916 2023/05/07 10:22:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4054,3 +4054,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/kubo to 0.19.2 [wiz 2023-05-07]
 	Updated devel/libatomic to 13.1.0 [wiz 2023-05-07]
 	Updated sysutils/pciutils to 3.10.0 [wiz 2023-05-07]
+	Updated security/libssh to 0.105 [wiz 2023-05-07]
