@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/11/03 00:08:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/07 10:53:22 wiz Exp $
 ${PYSITELIB}/xapian/__init__.py
 ${PYSITELIB}/xapian/__init__.pyc
 ${PYSITELIB}/xapian/__init__.pyo
@@ -15,15 +15,12 @@ share/doc/xapian-bindings/python3/html/_sources/examples.rst.txt
 share/doc/xapian-bindings/python3/html/_sources/index.rst.txt
 share/doc/xapian-bindings/python3/html/_sources/introduction.rst.txt
 share/doc/xapian-bindings/python3/html/_sources/xapian.rst.txt
-share/doc/xapian-bindings/python3/html/_static/_sphinx_javascript_frameworks_compat.js
 share/doc/xapian-bindings/python3/html/_static/basic.css
 share/doc/xapian-bindings/python3/html/_static/classic.css
 share/doc/xapian-bindings/python3/html/_static/default.css
 share/doc/xapian-bindings/python3/html/_static/doctools.js
 share/doc/xapian-bindings/python3/html/_static/documentation_options.js
 share/doc/xapian-bindings/python3/html/_static/file.png
-share/doc/xapian-bindings/python3/html/_static/jquery-3.6.0.js
-share/doc/xapian-bindings/python3/html/_static/jquery.js
 share/doc/xapian-bindings/python3/html/_static/language_data.js
 share/doc/xapian-bindings/python3/html/_static/minus.png
 share/doc/xapian-bindings/python3/html/_static/plus.png
@@ -31,8 +28,6 @@ share/doc/xapian-bindings/python3/html/_static/pygments.css
 share/doc/xapian-bindings/python3/html/_static/searchtools.js
 share/doc/xapian-bindings/python3/html/_static/sidebar.js
 share/doc/xapian-bindings/python3/html/_static/sphinx_highlight.js
-share/doc/xapian-bindings/python3/html/_static/underscore-1.13.1.js
-share/doc/xapian-bindings/python3/html/_static/underscore.js
 share/doc/xapian-bindings/python3/html/examples.html
 share/doc/xapian-bindings/python3/html/genindex.html
 share/doc/xapian-bindings/python3/html/index.html
