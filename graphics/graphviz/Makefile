@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2023/04/19 08:10:20 adam Exp $
+# $NetBSD: Makefile,v 1.267 2023/05/07 17:19:47 wiz Exp $
 
 DISTNAME=	graphviz-7.1.0
 PKGREVISION=	2
@@ -72,7 +72,6 @@ PKGCONFIG_OVERRIDE+=	lib/edgepaint/liblab_gamut.pc.in
 PKGCONFIG_OVERRIDE+=	lib/expr/libexpr.pc.in
 PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc.pc.in
 PKGCONFIG_OVERRIDE+=	lib/gvpr/libgvpr.pc.in
-PKGCONFIG_OVERRIDE+=	lib/pack/libpack.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 PKGCONFIG_OVERRIDE+=	lib/sfdpgen/libsfdp.pc.in
 PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
