@@ -1,0 +1,53 @@
+$NetBSD: patch-configure,v 1.12 2023/05/07 16:55:21 wiz Exp $
+
+Remove unwanted compiler flags.
+Avoid leaving scratch files in /tmp.
+Do not look for Xcode.
+
+--- configure.orig	2020-11-22 13:18:54.000000000 +0000
++++ configure
+@@ -5,7 +5,7 @@ PREFIX="/usr/local"
+ LIBDIR="$PREFIX/lib"
+ INCLUDEDIR="$PREFIX/include"
+ PKGCONFIGDIR="$LIBDIR/pkgconfig"
+-VERSION=$(grep LIQ_VERSION_STRING libimagequant.h | grep -Eo "2\.[0-9.]+")
++VERSION=$(awk -F\" '/LIQ_VERSION_STRING/ {print $2}' libimagequant.h)
+ 
+ DEBUG=
+ QUIET=0
+@@ -157,7 +157,7 @@ cflags "-std=c99 -I."
+ 
+ # DEBUG
+ if [ -z "$DEBUG" ]; then
+-    cflags "-O3 -DNDEBUG"
++    cflags "-DNDEBUG"
+     status "Debug" "no"
+ else
+     cflags "-O1 -g -DDEBUG"
+@@ -195,15 +195,9 @@ if [ -n "$OPENMP" ]; then
+     else
+         OPENMPFLAGS="-fopenmp"
+     fi
+-    if [[ "$("$CC" -xc -E $OPENMPFLAGS <(echo "#ifdef _OPENMP
+-           #include <omp.h>
+-           #endif") 2>&1)" =~ "omp_get_thread_num" ]]; then
+         cflags "$OPENMPFLAGS"
+         lflags "$OPENMPFLAGS"
+         status "OpenMP" "yes"
+-    else
+-        error "OpenMP" "not supported by compiler (please install a compiler that supports OpenMP (e.g. gcc) and specify it with the CC= argument)"
+-    fi
+ else
+     # silence warnings about omp pragmas
+     cflags "-Wno-unknown-pragmas"
+@@ -223,10 +217,6 @@ if [[ "$OSTYPE" =~ "darwin" ]]; then
+     SOLIBSUFFIX=dylib
+ 
+     # Search Developer SDK paths, since Apple seems to have dropped the standard Unixy ones
+-    XCODE_CMD="xcode-select"
+-    XCODE_PATH=$($XCODE_CMD -p)
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib")
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib")
+ elif [[ "$OSTYPE" =~ "msys" ]]; then
+     SOLIBSUFFIX=dll
+ else
