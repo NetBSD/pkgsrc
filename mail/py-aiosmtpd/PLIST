@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/08 06:57:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/07 21:08:39 markd Exp $
 bin/aiosmtpd-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,6 +99,9 @@ ${PYSITELIB}/aiosmtpd/tests/test_lmtp.pyo
 ${PYSITELIB}/aiosmtpd/tests/test_main.py
 ${PYSITELIB}/aiosmtpd/tests/test_main.pyc
 ${PYSITELIB}/aiosmtpd/tests/test_main.pyo
+${PYSITELIB}/aiosmtpd/tests/test_misc.py
+${PYSITELIB}/aiosmtpd/tests/test_misc.pyc
+${PYSITELIB}/aiosmtpd/tests/test_misc.pyo
 ${PYSITELIB}/aiosmtpd/tests/test_proxyprotocol.py
 ${PYSITELIB}/aiosmtpd/tests/test_proxyprotocol.pyc
 ${PYSITELIB}/aiosmtpd/tests/test_proxyprotocol.pyo
