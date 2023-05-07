@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22903 2023/05/07 10:08:58 wiz Exp $
+$NetBSD: TODO,v 1.22904 2023/05/07 10:21:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1020,7 +1020,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-5.0.0
 	o ocaml-cppo-1.6.9
 	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
-	o ocaml-dune-3.7.1
+	o ocaml-dune-3.8.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1029,6 +1029,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-resource-pooling-1.2
 	o ocaml-safepass-3.1
 	o ocaml-zip-110
+	o ocamlbuild-4.02.3
 	o ocrad-0.25
 	o octave-8.1
 	o odbc-postgresql-9.06.0500
@@ -1118,7 +1119,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o parley-20.12.3
 	o parrot-8.1.0
 	o pcc-1.1.0 [can't be updated on x86_64 NetBSD! pcc-lib 1.1.0 as a requirement does not support x86_64 on NetBSD]
-	o pciutils-3.10.0
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
