@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2023/04/29 13:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.598 2023/05/07 20:37:52 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -305,6 +305,7 @@ SUBDIR+=	pulsar
 SUBDIR+=	py-aiosmtpd
 SUBDIR+=	py-authres
 SUBDIR+=	py-checkdmarc
+SUBDIR+=	py-dkim
 SUBDIR+=	py-email_validator
 SUBDIR+=	py-flufl.bounce
 SUBDIR+=	py-imapclient
