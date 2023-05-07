@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2925 2023/05/07 18:25:14 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2926 2023/05/07 18:39:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4062,3 +4062,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/imath to 3.1.7 [wiz 2023-05-07]
 	Updated misc/wthrr to 1.1.0 [pin 2023-05-07]
 	Updated sysutils/zoxide to 0.9.1 [pin 2023-05-07]
+	Updated devel/py-maturin to 0.15.1 [adam 2023-05-07]
+	Updated devel/py-pdm to 2.5.6 [adam 2023-05-07]
