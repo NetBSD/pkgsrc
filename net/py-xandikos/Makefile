@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/08 09:00:51 adam Exp $
 
-DISTNAME=	xandikos-0.2.6
+DISTNAME=	xandikos-0.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.jelmer.uk/code/xandikos/
+HOMEPAGE=	https://www.xandikos.org/
 COMMENT=	Lightweight CalDAV/CardDAV server
 LICENSE=	gnu-gpl-v3
 
@@ -17,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.19.1:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-multidict-[0-9]*:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
 
 USE_LANGUAGES=	# none
 

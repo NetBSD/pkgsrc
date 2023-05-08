@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/21 07:50:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/08 09:00:51 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -35,9 +35,6 @@ ${PYSITELIB}/xandikos/icalendar.pyo
 ${PYSITELIB}/xandikos/infit.py
 ${PYSITELIB}/xandikos/infit.pyc
 ${PYSITELIB}/xandikos/infit.pyo
-${PYSITELIB}/xandikos/metrics.py
-${PYSITELIB}/xandikos/metrics.pyc
-${PYSITELIB}/xandikos/metrics.pyo
 ${PYSITELIB}/xandikos/quota.py
 ${PYSITELIB}/xandikos/quota.pyc
 ${PYSITELIB}/xandikos/quota.pyo
@@ -113,4 +110,7 @@ ${PYSITELIB}/xandikos/wsgi.pyo
 ${PYSITELIB}/xandikos/wsgi_helpers.py
 ${PYSITELIB}/xandikos/wsgi_helpers.pyc
 ${PYSITELIB}/xandikos/wsgi_helpers.pyo
+${PYSITELIB}/xandikos/xmpp.py
+${PYSITELIB}/xandikos/xmpp.pyc
+${PYSITELIB}/xandikos/xmpp.pyo
 man/man8/xandikos-${PYVERSSUFFIX}.8
