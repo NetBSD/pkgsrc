@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2954 2023/05/08 17:30:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2955 2023/05/08 17:49:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4099,3 +4099,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/trac to 1.5.4 [gdt 2023-05-08]
 	Updated www/ruby-selenium-webdriver to 4.9.1 [taca 2023-05-08]
 	Updated shells/oh-my-posh to 16.0.0 [pin 2023-05-08]
+	Updated textproc/tree-sitter-python to 0.20.0nb2 [he 2023-05-08]
+	Updated textproc/tree-sitter-html to 0.19.0nb1 [he 2023-05-08]
