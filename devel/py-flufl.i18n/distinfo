@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/05/08 20:43:29 markd Exp $
 
-BLAKE2s (flufl.i18n-2.0.1.tar.gz) = c6a1db9b0479afe0dda558e2969d92008a37d35abae549cfa36a4e2c5295dd4e
-SHA512 (flufl.i18n-2.0.1.tar.gz) = 372a27c81c0c58994b7b4b9ddb177f6acd3106536391c82c61cf1ba1b8b2e920be559720d98046ee9aa977a9119f231f7bbe71535cfb538d8563fff1da737ee1
-Size (flufl.i18n-2.0.1.tar.gz) = 18572 bytes
+BLAKE2s (flufl.i18n-4.1.1.tar.gz) = 2db84b126d1673a1cb58d10c8c1538513b9d3b658a70e4580c64ec329fe98753
+SHA512 (flufl.i18n-4.1.1.tar.gz) = 3c35625c95321c7e29652a97cfd9ae93cdccbd1eedc804502353d36643f761f7922c5007f39199a7d28c0d3d97d788b767add783cd1309dd52e6d1a0c1f5589e
+Size (flufl.i18n-4.1.1.tar.gz) = 21239 bytes
+SHA1 (patch-pyproject.toml) = cf100151282751d7b00871e00e60c25f6af67bfe
