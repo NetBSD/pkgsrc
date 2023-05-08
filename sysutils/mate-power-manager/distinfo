@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2022/11/27 05:06:28 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2023/05/08 00:47:03 gutteridge Exp $
 
-BLAKE2s (mate-power-manager-1.26.0.tar.xz) = ebd884500d021d6daadf5caf8cbbd38fa0b948b0585cafcbb8a93ed880ffe164
-SHA512 (mate-power-manager-1.26.0.tar.xz) = 1ddede827f72738e87870d2abeed7f0767ef2e383b8325b24faa0fd1e811ed634446516e6634b19a6546ddd7185092fd757b2b2ff97f51b88a9d2c313407abd4
-Size (mate-power-manager-1.26.0.tar.xz) = 6247700 bytes
+BLAKE2s (mate-power-manager-1.26.1.tar.xz) = b51e6e2b9875d12525db0d0244adad4e7b1f314c4493b5ba3fdf4ddafcae3d52
+SHA512 (mate-power-manager-1.26.1.tar.xz) = 82bac7d32a94b3fa64c68973bd72b9a88b73d8368fc179ea0958e4b7d0021707394bc5dadaed23cc074e441ae4a753ba73ad5ba9030a276b87ac8b410a5fb37d
+Size (mate-power-manager-1.26.1.tar.xz) = 6266604 bytes
 SHA1 (patch-src_gpm-backlight-helper.c) = 01c6549805efa557ec6a219c99bf2b6fb77d6fb8
 SHA1 (patch-src_gpm-load.c) = 86b3189f77cf64f05631ddc72fd56acafadc1714
