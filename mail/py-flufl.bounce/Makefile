@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/08 20:35:35 markd Exp $
 
-DISTNAME=	flufl.bounce-3.0
+DISTNAME=	flufl.bounce-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.bounce/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://launchpad.net/flufl.bounce/
+HOMEPAGE=	https://fluflbounce.readthedocs.io/en/latest/
 COMMENT=	Email bounce detectors
 LICENSE=	apache-2.0
 
