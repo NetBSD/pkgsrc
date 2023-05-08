@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/05/07 20:48:50 nikita Exp $
+# $NetBSD: Makefile,v 1.82 2023/05/08 00:12:41 nikita Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	11
@@ -55,17 +55,6 @@ SUBST_SED.lua=		-e 's|COMMAND lua|COMMAND ${LUA_INTERPRETER}|g'
 
 pre-configure:
 	${RUN} mkdir -p ${WRKSRC}/build
-
-# rc.lua does not end up being installed where the PLIST states it does,
-# so install it manually, then remove the file which now ends up in the
-# default location of the build-system.
-pre-install:
-	${MKDIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/build/script_files/rc.lua ${DESTDIR}${EGDIR}
-
-post-install:
-	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/rc.lua
-	${RMDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
