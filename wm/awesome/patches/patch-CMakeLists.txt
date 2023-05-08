@@ -1,10 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/07 20:48:50 nikita Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2023/05/08 00:12:41 nikita Exp $
 
 Do not introduce timestamps in PNG files (for icons).
 See <https://wiki.debian.org/ReproducibleBuilds/TimestampsInPNG>.
 
---- CMakeLists.txt.orig	2023-05-07 21:57:36.859234114 +0200
-+++ CMakeLists.txt	2023-05-07 21:59:09.539145363 +0200
+Install config file to the examples directory.
+
+--- CMakeLists.txt.orig	2019-01-28 07:53:24.000000000 +0100
++++ CMakeLists.txt	2023-05-08 02:08:53.084892550 +0200
 @@ -336,7 +336,7 @@
          set(ALL_ICONS ${ALL_ICONS} ${output})
  
@@ -14,3 +16,12 @@ See <https://wiki.debian.org/ReproducibleBuilds/TimestampsInPNG>.
              OUTPUT  ${output}
              DEPENDS ${input}
              VERBATIM)
+@@ -371,7 +371,7 @@
+ install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH}
+     PATTERN "*.in" EXCLUDE)
+-install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${AWESOME_SYSCONFDIR}
++install(FILES ${BUILD_DIR}/awesomerc.lua DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/awesome
+         RENAME rc.lua)
+ if(GENERATE_MANPAGES)
+     if(COMPRESS_MANPAGES)
