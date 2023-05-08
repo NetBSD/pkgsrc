@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2023/04/19 08:11:56 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/05/08 00:44:43 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-panel-${VERSION:R}.2
+DISTNAME=	mate-panel-${VERSION:R}.3
 CATEGORIES=	x11
 
 COMMENT=	MATE panel application
