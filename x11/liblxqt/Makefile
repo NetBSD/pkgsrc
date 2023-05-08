@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/04/19 08:08:55 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/08 01:31:09 gutteridge Exp $
 
 DISTNAME=	liblxqt-1.3.0
 PKGREVISION=	1
@@ -26,7 +26,6 @@ TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 LDFLAGS.SunOS+=			-lsocket
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
