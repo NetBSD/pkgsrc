@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/05/05 19:37:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/08 15:24:21 nikita Exp $
 
 DISTNAME=	gotosocial-0.8.1-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	gotosocial
@@ -19,7 +19,6 @@ EXTRACT_DIR=	${WRKDIR}/${PKGNAME}
 WRKSRC=		${EXTRACT_DIR}
 
 MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
-#MAKE_ENV+=	COMMIT=""
 BUILD_DEFS+=	VARBASE
 
 .include "../../mk/bsd.prefs.mk"
@@ -48,11 +47,18 @@ CONF_FILES+=		${EGDIR}/config.yaml ${PKG_SYSCONFDIR}/config.yaml
 
 SUBST_CLASSES+=		cfg
 SUBST_MESSAGE.cfg=	Fixing default paths in config
-SUBST_STAGE.cfg=	pre-configure
+SUBST_STAGE.cfg=	post-configure
 SUBST_FILES.cfg=	example/config.yaml
-SUBST_SED.cfg=		-e 's,./web/template/,${GOTOSOCIAL_DATA}/template/,g'
-SUBST_SED.cfg+=		-e 's,./web/assets/,${GOTOSOCIAL_DATA}/assets/,g'
-SUBST_SED.cfg+=		-e 's,./gotosocial/storage,"${GOTOSOCIAL_DB}/storage,g'
+SUBST_SED.cfg=		-e "s,\./web/template/,${GOTOSOCIAL_DATA}/template/,g"
+SUBST_SED.cfg+=		-e "s,\./web/assets/,${GOTOSOCIAL_DATA}/assets/,g"
+SUBST_SED.cfg+=		-e "s,/gotosocial/storage,${GOTOSOCIAL_DB}/storage,g"
+
+SUBST_CLASSES+=			systemdpaths
+SUBST_MESSAGE.systemdpaths=	Fixing paths in systemd file
+SUBST_STAGE.systemdpaths=	post-configure
+SUBST_FILES.systemdpaths=	example/gotosocial.service
+SUBST_SED.systemdpaths=		-e 's,/gotosocial/gotosocial,${PREFIX}/bin/gotosocial,g'
+SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 
 # restricted to amd64:
 # https://gitlab.com/cznic/libc/-/issues/15
