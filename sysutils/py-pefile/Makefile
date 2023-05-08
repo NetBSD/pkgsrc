@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/11/28 18:26:03 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/08 09:13:13 adam Exp $
 
-DISTNAME=	pefile-2022.5.30
+DISTNAME=	pefile-2023.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pefile/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/erocarrera/pefile
 COMMENT=	Python module to read and work with PE files
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-future>=0:../../devel/py-future
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
