@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/05/01 07:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/08 20:30:55 markd Exp $
 
-DISTNAME=	falcon-2.0.0
+DISTNAME=	falcon-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/falcon/}
 
@@ -24,6 +23,7 @@ USE_PKG_RESOURCES=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} falcon-bench falcon-bench-${PYVERSSUFFIX} && \
+	${MV} falcon-inspect-app falcon-inspect-app-${PYVERSSUFFIX} && \
 	${MV} falcon-print-routes falcon-print-routes-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
