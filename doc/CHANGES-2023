@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2932 2023/05/08 00:32:45 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2933 2023/05/08 00:36:54 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4074,3 +4074,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/py-aiosmtpd to 1.4.4.post2 [markd 2023-05-07]
 	Updated fonts/harfbuzz to 7.2.0 [wiz 2023-05-07]
 	Updated wm/marco to 1.26.2 [gutteridge 2023-05-08]
+	Updated archivers/engrampa to 1.26.1 [gutteridge 2023-05-08]
