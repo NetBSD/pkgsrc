@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2022/11/27 04:58:38 gutteridge Exp $
+$NetBSD: distinfo,v 1.13 2023/05/08 00:42:38 gutteridge Exp $
 
-BLAKE2s (mate-menus-1.26.0.tar.xz) = 4b675fd6ed4056acbe2b0abb4b7bde1e8cf5ea314c840da52eb3dd27e220c5d0
-SHA512 (mate-menus-1.26.0.tar.xz) = 01d0b4f111c445df363baa8e24c87e63e12e6c84c1ccdac4b05bc12a3e3edba6be14651c6b2b34e05271fa35c57f237d79bdbee6dde1699273047519022a636c
-Size (mate-menus-1.26.0.tar.xz) = 410900 bytes
+BLAKE2s (mate-menus-1.26.1.tar.xz) = 66109a8456b6204406a6e7a27aedd4f842717b2be13349bb12acb210ff4e8b51
+SHA512 (mate-menus-1.26.1.tar.xz) = df57f653bc7a456719c24fa077b70a175d9bbaec7d55fb807e35ed66a9e0f2aaf7251bea0e7778ec98bf2b07b9f7bc25f4931a9c83ec0ae3621a1b8f257b1329
+Size (mate-menus-1.26.1.tar.xz) = 421032 bytes
 SHA1 (patch-util_test-menu-spec.c) = b0d67c8149c48cd521a1be3ce267beae3426de77
