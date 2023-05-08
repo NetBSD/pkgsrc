@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/05/08 20:53:30 markd Exp $
 
-BLAKE2s (flufl.lock-3.2.tar.gz) = 417e8169c79e90150d311557228667fa1ea2460855c9acd9c72b02a3f42d7e76
-SHA512 (flufl.lock-3.2.tar.gz) = 496195e1c52f628bc6c0e8fc3dcd5373ed01cfee35b6165cae37ab4b90d70265c6a0aea565f1e0663277c2b9e9bafde8af1420133a15e6254275fad2f28a56d0
-Size (flufl.lock-3.2.tar.gz) = 19250 bytes
+BLAKE2s (flufl.lock-7.1.1.tar.gz) = 78869e065ff09454c4a7c14044bcbf20ecd90894c740f4c172a264cbb35f1f48
+SHA512 (flufl.lock-7.1.1.tar.gz) = eb9d8a80013ca07cc3eaab30ced596c0362cfc59d5a1f7cf17aacbf4068d9989b443df7e2d5f5e09d6f60e0ebc784ab1897ca7379fde7eeb57246cb6b5dfef3f
+Size (flufl.lock-7.1.1.tar.gz) = 33017 bytes
+SHA1 (patch-pyproject.toml) = bc36001e88a6cc2c97bf690add244acf8b61fe09
