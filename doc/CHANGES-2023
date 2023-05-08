@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2947 2023/05/08 08:56:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2948 2023/05/08 09:13:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4091,3 +4091,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/wthrr to 1.1.1 [pin 2023-05-08]
 	Updated math/py-statsmodels to 0.14.0 [adam 2023-05-08]
 	Updated www/py-flask-session to 0.4.1 [adam 2023-05-08]
+	Updated net/py-xandikos to 0.2.8 [adam 2023-05-08]
+	Updated sysutils/py-pefile to 2023.2.7 [adam 2023-05-08]
