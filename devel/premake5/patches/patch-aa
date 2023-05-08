@@ -1,0 +1,104 @@
+$NetBSD: patch-aa,v 1.1 2023/05/08 22:37:31 nikita Exp $
+
+Remove the hardcoded -L/usr/lib and -L/usr/lib64
+This is not needed, and will cause issues:
+https://github.com/gentoo/gentoo/pull/25825#issuecomment-1179497476
+
+--- modules/d/tools/dmd.lua
++++ modules/d/tools/dmd.lua
+@@ -52,8 +52,8 @@
+ 
+ 	tdmd.gcc.libraryDirectories = {
+ 		architecture = {
+-			x86 = "-L-L/usr/lib",
+-			x86_64 = "-L-L/usr/lib64",
++			x86 = "",
++			x86_64 = "",
+ 		}
+ 	}
+ 
+--- modules/d/tools/gdc.lua
++++ modules/d/tools/gdc.lua
+@@ -228,8 +228,8 @@
+ 
+ 	gdc.libraryDirectories = {
+ 		architecture = {
+-			x86 = "-L/usr/lib",
+-			x86_64 = "-L/usr/lib64",
++			x86 = "",
++			x86_64 = "",
+ 		}
+ 	}
+ 
+--- modules/d/tools/ldc.lua
++++ modules/d/tools/ldc.lua
+@@ -323,8 +323,8 @@
+ 
+ 	ldc.libraryDirectories = {
+ 		architecture = {
+-			x86 = "-L=-L/usr/lib",
+-			x86_64 = "-L=-L/usr/lib64",
++			x86 = "",
++			x86_64 = "",
+ 		}
+ 	}
+ 
+--- modules/gmake/tests/cpp/test_ldflags.lua
++++ modules/gmake/tests/cpp/test_ldflags.lua
+@@ -55,7 +55,7 @@
+ 		system (p.LINUX)
+ 		prepare()
+ 		test.capture [[
+-  ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
++  ALL_LDFLAGS += $(LDFLAGS) -m64
+ 		]]
+ 	end
+ 
+@@ -64,7 +64,7 @@
+ 		system (p.LINUX)
+ 		prepare()
+ 		test.capture [[
+-  ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib32 -m32
++  ALL_LDFLAGS += $(LDFLAGS) -m32
+ 		]]
+ 	end
+ 
+--- modules/gmake2/tests/test_gmake2_ldflags.lua
++++ modules/gmake2/tests/test_gmake2_ldflags.lua
+@@ -56,7 +56,7 @@ ALL_LDFLAGS += $(LDFLAGS) -L../libs -Lli
+ 		system (p.LINUX)
+ 		prepare()
+ 		test.capture [[
+-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
++ALL_LDFLAGS += $(LDFLAGS) -m64
+ 		]]
+ 	end
+ 
+@@ -65,7 +65,7 @@ ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -
+ 		system (p.LINUX)
+ 		prepare()
+ 		test.capture [[
+-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib32 -m32
++ALL_LDFLAGS += $(LDFLAGS) -m32
+ 		]]
+ 	end
+ 
+--- src/tools/gcc.lua
++++ src/tools/gcc.lua
+@@ -477,16 +477,10 @@
+ 		architecture = {
+ 			x86 = function (cfg)
+ 				local r = {}
+-				if not table.contains(os.getSystemTags(cfg.system), "darwin") then
+-					table.insert (r, "-L/usr/lib32")
+-				end
+ 				return r
+ 			end,
+ 			x86_64 = function (cfg)
+ 				local r = {}
+-				if not table.contains(os.getSystemTags(cfg.system), "darwin") then
+-					table.insert (r, "-L/usr/lib64")
+-				end
+ 				return r
+ 			end,
+ 		},
