@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2959 2023/05/08 21:55:47 jun Exp $
+$NetBSD: CHANGES-2023,v 1.2960 2023/05/08 23:00:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4109,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-flufl.lock to 7.1.1 [markd 2023-05-08]
 	Updated databases/py-sqlalchemy to 1.4.48 [markd 2023-05-08]
 	Updated emulators/nono to 0.6.1 [jun 2023-05-09]
+	Updated security/ssh-audit to 2.9.0 [wiz 2023-05-08]
