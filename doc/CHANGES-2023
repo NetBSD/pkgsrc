@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2934 2023/05/08 00:40:36 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2935 2023/05/08 00:41:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4076,3 +4076,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/marco to 1.26.2 [gutteridge 2023-05-08]
 	Updated archivers/engrampa to 1.26.1 [gutteridge 2023-05-08]
 	Updated graphics/eom to 1.26.1 [gutteridge 2023-05-08]
+	Updated x11/mate-control-center to 1.26.1 [gutteridge 2023-05-08]
