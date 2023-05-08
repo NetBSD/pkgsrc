@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2957 2023/05/08 19:25:04 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.2958 2023/05/08 21:06:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4103,3 +4103,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/tree-sitter-html to 0.19.0nb1 [he 2023-05-08]
 	Updated devel/mob to 4.4.2 [schmonz 2023-05-08]
 	Updated multimedia/streamlink to 5.5.1 [yhardy 2023-05-08]
+	Updated devel/py-falcon to 3.1.1 [markd 2023-05-08]
+	Updated mail/py-flufl.bounce to 4.0 [markd 2023-05-08]
+	Updated devel/py-flufl.i18n to 4.1.1 [markd 2023-05-08]
+	Updated devel/py-flufl.lock to 7.1.1 [markd 2023-05-08]
+	Updated databases/py-sqlalchemy to 1.4.48 [markd 2023-05-08]
