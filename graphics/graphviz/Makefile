@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.267 2023/05/07 17:19:47 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2023/05/08 09:33:27 wiz Exp $
 
 DISTNAME=	graphviz-7.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz

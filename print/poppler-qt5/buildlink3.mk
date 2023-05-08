@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.46 2023/01/29 21:14:56 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2023/05/08 09:33:25 wiz Exp $
 
 BUILDLINK_TREE+=	poppler-qt5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poppler-qt5
 POPPLER_QT5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poppler-qt5+=	poppler-qt5>=0.26.0
-BUILDLINK_ABI_DEPENDS.poppler-qt5+=	poppler-qt5>=23.01.0nb1
+BUILDLINK_ABI_DEPENDS.poppler-qt5+=	poppler-qt5>=23.05.0
 BUILDLINK_PKGSRCDIR.poppler-qt5?=	../../print/poppler-qt5
 
 .include "../../print/poppler/buildlink3.mk"

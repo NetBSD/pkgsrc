@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2023/05/07 12:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/05/08 09:33:26 wiz Exp $
 
 DISTNAME=	openmw-openmw-0.47.0
 PKGNAME=	${DISTNAME:S/^openmw-//1}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITLAB:=OpenMW/}
 GITLAB_PROJECT=	openmw
