@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2023/05/07 10:20:44 wiz Exp $
+$NetBSD: distinfo,v 1.45 2023/05/08 02:06:37 dholland Exp $
 
 BLAKE2s (pciutils-3.10.0.tar.gz) = 9a6ce37e5d34f505da98a98bce794ba0c664ad2a6014edf38970baefea7fb191
 SHA512 (pciutils-3.10.0.tar.gz) = eba9963910854bf7bb2388ed9ea2ff574f3ff710d9cbd42e7763836bea9dfd84ee8839c6a0f1354b56319ba171787a2c55035750154428ae70cab51c0001736e
 Size (pciutils-3.10.0.tar.gz) = 916996 bytes
-SHA1 (patch-aa) = bd5098a2774c2c879f89eef1c574e7c57963e4c3
+SHA1 (patch-aa) = a799af372e1aaba879beb84581d7062f0c6e1bba
 SHA1 (patch-ab) = 55e799d9db8206868540e55feefc47cde1c0ddfc
 SHA1 (patch-ac) = 83fd2d79a7a4a05593ccd69b9d1f38e6ec4763c8
 SHA1 (patch-lib_i386-io-sunos.h) = 4917244d39b48d38b8173cf3031281ad1c7fec24
