@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/05/03 17:43:00 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/05/08 22:37:31 nikita Exp $
 
 BLAKE2s (premake-5.0.0-beta2-src.zip) = 906465840c8d8c2b6705a5745963d0f1fe6efbeb4a0f67e765fac827e3082adf
 SHA512 (premake-5.0.0-beta2-src.zip) = 6913293aa29c2bfd2ac07ed40210da2f6b0ed853f3a24dcf66715748647a12502defb96ba3591a5e0515a808c5ea7013c41e29c3d18bb715d336c72a9bd151e3
 Size (premake-5.0.0-beta2-src.zip) = 8867376 bytes
+SHA1 (patch-aa) = 5623b2f798570ae1de00be6a86b8ef92857e8722
