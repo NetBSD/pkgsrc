@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2944 2023/05/08 07:16:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2945 2023/05/08 07:27:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4087,3 +4087,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/postfix-sqlite to 3.8.0 [triaxx 2023-05-08]
 	Updated devel/py-utils to 3.5.2 [adam 2023-05-08]
 	Updated net/py-responses to 0.23.1 [adam 2023-05-08]
+	Updated x11/xf86-video-i128 to 1.4.1 [wiz 2023-05-08]
