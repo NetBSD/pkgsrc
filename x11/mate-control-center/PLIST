@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/08/06 01:14:48 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/08 00:41:23 gutteridge Exp $
 bin/mate-about-me
 bin/mate-appearance-properties
 bin/mate-at-properties
@@ -463,6 +463,21 @@ share/help/en_GB/mate-control-center/config-screensaver.xml
 share/help/en_GB/mate-control-center/config-themes.xml
 share/help/en_GB/mate-control-center/index.docbook
 share/help/en_GB/mate-control-center/legal.xml
+share/help/en_US/mate-control-center/config-accessibility-keyboard.xml
+share/help/en_US/mate-control-center/config-background.xml
+share/help/en_US/mate-control-center/config-behavior.xml
+share/help/en_US/mate-control-center/config-cds.xml
+share/help/en_US/mate-control-center/config-default-apps.xml
+share/help/en_US/mate-control-center/config-file-type.xml
+share/help/en_US/mate-control-center/config-hints.xml
+share/help/en_US/mate-control-center/config-html.xml
+share/help/en_US/mate-control-center/config-kbd.xml
+share/help/en_US/mate-control-center/config-keybindings.xml
+share/help/en_US/mate-control-center/config-mouse.xml
+share/help/en_US/mate-control-center/config-screensaver.xml
+share/help/en_US/mate-control-center/config-themes.xml
+share/help/en_US/mate-control-center/index.docbook
+share/help/en_US/mate-control-center/legal.xml
 share/help/eo/mate-control-center/config-accessibility-keyboard.xml
 share/help/eo/mate-control-center/config-background.xml
 share/help/eo/mate-control-center/config-behavior.xml
@@ -1817,6 +1832,7 @@ share/locale/el/LC_MESSAGES/mate-control-center.mo
 share/locale/en_AU/LC_MESSAGES/mate-control-center.mo
 share/locale/en_CA/LC_MESSAGES/mate-control-center.mo
 share/locale/en_GB/LC_MESSAGES/mate-control-center.mo
+share/locale/en_US/LC_MESSAGES/mate-control-center.mo
 share/locale/eo/LC_MESSAGES/mate-control-center.mo
 share/locale/es/LC_MESSAGES/mate-control-center.mo
 share/locale/es_AR/LC_MESSAGES/mate-control-center.mo
