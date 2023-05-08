@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp,v 1.2 2022/09/30 18:12:44 adam Exp $
+$NetBSD: patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp,v 1.3 2023/05/08 18:18:50 tnn Exp $
+
+work around namespace pollution in NetBSD-9's <net/if.h> before 1.282
 
 --- lib/usrp/mpmd/mpmd_link_if_ctrl_udp.cpp.orig	2022-09-14 14:19:33.000000000 +0000
 +++ lib/usrp/mpmd/mpmd_link_if_ctrl_udp.cpp
