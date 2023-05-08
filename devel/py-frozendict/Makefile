@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/04/30 04:50:27 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/05/08 07:02:43 adam Exp $
 
 DISTNAME=	frozendict-2.3.8
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozendict/}
@@ -13,6 +14,9 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+# XXX: do not build c-extension; remove when Python 3.11 gets supported
+MAKE_ENV+=	CIBUILDWHEEL=0
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
