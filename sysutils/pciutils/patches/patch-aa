@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.30 2023/05/07 10:20:44 wiz Exp $
+$NetBSD: patch-aa,v 1.31 2023/05/08 02:06:37 dholland Exp $
 
 Adapt the Makefile to make it compliant with pkgsrc.
 
@@ -23,6 +23,19 @@ Adapt the Makefile to make it compliant with pkgsrc.
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
+@@ -46,10 +45,10 @@ PKGCFDIR=$(LIBDIR)/pkgconfig
+ INSTALL=install
+ DIRINSTALL=install -d
+ ifdef CROSS_COMPILE
+-STRIP=--strip-program $(CROSS_COMPILE)-strip
++#STRIP=--strip-program $(CROSS_COMPILE)-strip
+ CC=$(CROSS_COMPILE)gcc
+ else
+-STRIP=-s
++#STRIP=-s
+ CC=cc
+ endif
+ AR=$(CROSS_COMPILE)ar
 @@ -148,18 +147,21 @@ distclean: clean
  
  install: all
