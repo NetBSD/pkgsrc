@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/11/23 23:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/08 08:51:03 adam Exp $
 
-DISTNAME=	statsmodels-0.13.5
+DISTNAME=	statsmodels-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
@@ -10,20 +10,23 @@ HOMEPAGE=	https://www.statsmodels.org/
 COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
-USE_LANGUAGES=			c
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.28:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.21:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5:../../math/py-patsy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5.2:../../math/py-patsy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.3:../../math/py-scipy
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-post-extract:
-	${CHMOD} -R o-w,g-w ${WRKSRC}
-	${FIND} ${WRKSRC} -type f -printx | ${XARGS} ${CHMOD} a-x
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+
+# FIXME: conflicts with installed tests
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} statsmodels
 
 .include "../../lang/python/egg.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.15
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.18
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
