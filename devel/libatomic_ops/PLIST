@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/04/17 05:30:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/05/08 09:34:40 wiz Exp $
 include/atomic_ops.h
 include/atomic_ops/ao_version.h
 include/atomic_ops/generalize-arithm.h
@@ -16,6 +16,7 @@ include/atomic_ops/sysdeps/gcc/alpha.h
 include/atomic_ops/sysdeps/gcc/arm.h
 include/atomic_ops/sysdeps/gcc/avr32.h
 include/atomic_ops/sysdeps/gcc/cris.h
+include/atomic_ops/sysdeps/gcc/e2k.h
 include/atomic_ops/sysdeps/gcc/generic-arithm.h
 include/atomic_ops/sysdeps/gcc/generic-small.h
 include/atomic_ops/sysdeps/gcc/generic.h
@@ -52,6 +53,7 @@ include/atomic_ops/sysdeps/loadstore/short_acquire_release_volatile.h
 include/atomic_ops/sysdeps/loadstore/short_atomic_load.h
 include/atomic_ops/sysdeps/loadstore/short_atomic_store.h
 include/atomic_ops/sysdeps/msftc/arm.h
+include/atomic_ops/sysdeps/msftc/arm64.h
 include/atomic_ops/sysdeps/msftc/common32_defs.h
 include/atomic_ops/sysdeps/msftc/x86.h
 include/atomic_ops/sysdeps/msftc/x86_64.h
@@ -68,8 +70,10 @@ include/atomic_ops_stack.h
 lib/libatomic_ops.la
 lib/libatomic_ops_gpl.la
 lib/pkgconfig/atomic_ops.pc
+share/doc/libatomic_ops/AUTHORS
 share/doc/libatomic_ops/COPYING
-share/doc/libatomic_ops/LICENSING.txt
+share/doc/libatomic_ops/ChangeLog
+share/doc/libatomic_ops/LICENSE
 share/doc/libatomic_ops/README.md
 share/doc/libatomic_ops/README_details.txt
 share/doc/libatomic_ops/README_malloc.txt
