@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/24 18:24:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/05/08 07:15:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,19 +7,32 @@ ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/responses/__init__.py
 ${PYSITELIB}/responses/__init__.pyc
-${PYSITELIB}/responses/__init__.pyi
 ${PYSITELIB}/responses/__init__.pyo
+${PYSITELIB}/responses/_recorder.py
+${PYSITELIB}/responses/_recorder.pyc
+${PYSITELIB}/responses/_recorder.pyo
 ${PYSITELIB}/responses/matchers.py
 ${PYSITELIB}/responses/matchers.pyc
-${PYSITELIB}/responses/matchers.pyi
 ${PYSITELIB}/responses/matchers.pyo
+${PYSITELIB}/responses/py.typed
 ${PYSITELIB}/responses/registries.py
 ${PYSITELIB}/responses/registries.pyc
-${PYSITELIB}/responses/registries.pyi
 ${PYSITELIB}/responses/registries.pyo
-${PYSITELIB}/responses/test_matchers.py
-${PYSITELIB}/responses/test_matchers.pyc
-${PYSITELIB}/responses/test_matchers.pyo
-${PYSITELIB}/responses/test_responses.py
-${PYSITELIB}/responses/test_responses.pyc
-${PYSITELIB}/responses/test_responses.pyo
+${PYSITELIB}/responses/tests/__init__.py
+${PYSITELIB}/responses/tests/__init__.pyc
+${PYSITELIB}/responses/tests/__init__.pyo
+${PYSITELIB}/responses/tests/test_matchers.py
+${PYSITELIB}/responses/tests/test_matchers.pyc
+${PYSITELIB}/responses/tests/test_matchers.pyo
+${PYSITELIB}/responses/tests/test_multithreading.py
+${PYSITELIB}/responses/tests/test_multithreading.pyc
+${PYSITELIB}/responses/tests/test_multithreading.pyo
+${PYSITELIB}/responses/tests/test_recorder.py
+${PYSITELIB}/responses/tests/test_recorder.pyc
+${PYSITELIB}/responses/tests/test_recorder.pyo
+${PYSITELIB}/responses/tests/test_registries.py
+${PYSITELIB}/responses/tests/test_registries.pyc
+${PYSITELIB}/responses/tests/test_registries.pyo
+${PYSITELIB}/responses/tests/test_responses.py
+${PYSITELIB}/responses/tests/test_responses.pyc
+${PYSITELIB}/responses/tests/test_responses.pyo
