@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/03 17:43:00 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/08 22:37:31 nikita Exp $
 
 PREMAKE5_VERSION=	5.0.0-beta2
 DISTNAME=		premake-${PREMAKE5_VERSION}-src
@@ -18,7 +18,14 @@ USE_TOOLS+=		gmake
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
+.include "../../mk/bsd.prefs.mk"
+# maybe fix the build on Darwin.
+# if this doesn't work, we need to patch what's in build/gmake2.unix
+.if ${OPSYS} == "Darwin"
+BUILD_DIRS+=		build/gmake2.macosx
+.else
 BUILD_DIRS+=		build/gmake2.unix
+.endif
 
 INSTALLATION_DIRS=	bin
 
