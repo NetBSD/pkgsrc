@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/09/01 17:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/08 08:56:02 adam Exp $
 
-DISTNAME=	Flask-Session-0.4.0
+DISTNAME=	Flask-Session-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask-session/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
