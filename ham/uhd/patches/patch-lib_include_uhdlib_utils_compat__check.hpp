@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_include_uhdlib_utils_compat__check.hpp,v 1.1 2023/05/08 18:18:50 tnn Exp $
+$NetBSD: patch-lib_include_uhdlib_utils_compat__check.hpp,v 1.2 2023/05/08 18:28:52 tnn Exp $
 
 Complains about missing uint8_t with GCC 13 on Fedora 38.
 
@@ -8,7 +8,7 @@ Complains about missing uint8_t with GCC 13 on Fedora 38.
  
  #include <cstddef>
  #include <string>
-+#include <cinttypes>
++#include <cstdint>
  
  namespace uhd {
  
