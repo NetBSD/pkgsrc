@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/01/29 21:15:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/08 00:36:38 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	engrampa-${VERSION}
+DISTNAME=	engrampa-${VERSION:R}.1
 CATEGORIES=	archivers
 
 COMMENT=	Archive manager utility for the MATE Environment
