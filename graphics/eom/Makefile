@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2023/04/19 08:10:17 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/05/08 00:40:18 gutteridge Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
 # from libpeas bl3, so we include it early to ensure a valid version is
 # chosen.  This is not ideal, please fix it properly at some point.
-PKGREVISION= 3
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	eom-${VERSION}
+DISTNAME=	eom-${VERSION:R}.1
 CATEGORIES=	graphics
 
 COMMENT=	Eye of MATE: an image viewing and cataloging program
