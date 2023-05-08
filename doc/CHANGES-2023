@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2951 2023/05/08 09:38:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2952 2023/05/08 14:22:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/poppler to 23.05.0 [wiz 2023-05-08]
 	Updated devel/libatomic_ops to 7.8.0 [wiz 2023-05-08]
 	Updated print/texlab to 5.5.1 [wiz 2023-05-08]
+	Updated www/trac to 1.5.4 [gdt 2023-05-08]
