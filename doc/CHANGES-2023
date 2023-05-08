@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2939 2023/05/08 00:47:18 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2940 2023/05/08 04:31:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4081,3 +4081,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mate-panel to 1.26.3 [gutteridge 2023-05-08]
 	Updated x11/mate-session-manager to 1.26.1 [gutteridge 2023-05-08]
 	Updated sysutils/mate-power-manager to 1.26.1 [gutteridge 2023-05-08]
+	Updated mail/postfix to 3.8.0 [triaxx 2023-05-08]
