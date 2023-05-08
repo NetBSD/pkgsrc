@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/04/19 08:08:55 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/05/08 01:31:09 gutteridge Exp $
 
 DISTNAME=	libqtxdg-3.11.0
 PKGREVISION=	1
@@ -34,8 +34,6 @@ CONF_FILES=	${QTXDG_CONF}/lxqt-qtxdg.conf \
 CONF_FILES+=	${QTXDG_CONF}/qtxdg.conf \
 		${PKG_SYSCONFDIR}/qtxdg.conf
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fuse-linker-plugin
 
 pre-configure:
