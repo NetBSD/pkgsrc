@@ -1,0 +1,15 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2023/05/08 20:43:29 markd Exp $
+
+Convert to pdm-pep517 replacement, pdm-backend.
+
+--- pyproject.toml.orig	2022-09-06 01:55:19.245843000 +0000
++++ pyproject.toml
+@@ -146,6 +146,6 @@ ignore_missing_imports = true
+ 
+ [build-system]
+ requires = [
+-    "pdm-pep517",
++    "pdm-backend",
+ ]
+-build-backend = "pdm.pep517.api"
++build-backend = "pdm.backend"
