@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2017/03/04 06:26:42 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/08 04:32:44 triaxx Exp $
 #
 
 COMMENT=		Postfix SMTP server LMDB backend module
 
 POSTFIX_LIB=		lmdb
-POSTFIX_LIBDIR=		src/global
+POSTFIX_LIBDIR=		src/util
 POSTFIX_LIB_DICT=	yes
 POSTFIX_LIB_MKMAP=	yes
 
