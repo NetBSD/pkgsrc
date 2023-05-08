@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:18:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/05/08 20:30:55 markd Exp $
 
-BLAKE2s (falcon-2.0.0.tar.gz) = 21145994f826432cb16cfe7fa24524b158f1f1f766b2b94bb58874f8dfdc6b49
-SHA512 (falcon-2.0.0.tar.gz) = 1b821d96452208dcfbaa978ecc9340b0b531878aeb362a5b27668fea5f354315275afc7c2ba3012b2cf86c8e32b52d10c932bcf2cc91789a1b4f5a458da5078b
-Size (falcon-2.0.0.tar.gz) = 397801 bytes
+BLAKE2s (falcon-3.1.1.tar.gz) = 74d1e0fb681aecd65b281fd515bbb45bc20b68d123d2b8ea1999fb611438717b
+SHA512 (falcon-3.1.1.tar.gz) = 2f91320f02247c4eb0aff9ded6b6b7f84fc1680b23b092ef0b88158aeea13c1c1639f9cc10742ad472f17af2ec19ae72de8e51a556c38fa47b2c3665651e6c4b
+Size (falcon-3.1.1.tar.gz) = 647079 bytes

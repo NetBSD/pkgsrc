@@ -1,2 +1,3 @@
 bin/falcon-bench @PREFIX@/bin/falcon-bench-@PYVERSSUFFIX@
+bin/falcon-inspect-app @PREFIX@/bin/falcon-inspect-app-@PYVERSSUFFIX@
 bin/falcon-print-routes @PREFIX@/bin/falcon-print-routes-@PYVERSSUFFIX@
