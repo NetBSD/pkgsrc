@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2937 2023/05/08 00:44:56 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2938 2023/05/08 00:46:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mate-control-center to 1.26.1 [gutteridge 2023-05-08]
 	Updated x11/mate-menus to 1.26.1 [gutteridge 2023-05-08]
 	Updated x11/mate-panel to 1.26.3 [gutteridge 2023-05-08]
+	Updated x11/mate-session-manager to 1.26.1 [gutteridge 2023-05-08]
