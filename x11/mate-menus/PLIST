@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/11/27 04:58:38 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/08 00:42:38 gutteridge Exp $
 include/mate-menus/matemenu-tree.h
 lib/girepository-1.0/MateMenu-2.0.typelib
 lib/libmate-menu.la
@@ -33,6 +33,7 @@ share/locale/el/LC_MESSAGES/mate-menus.mo
 share/locale/en_AU/LC_MESSAGES/mate-menus.mo
 share/locale/en_CA/LC_MESSAGES/mate-menus.mo
 share/locale/en_GB/LC_MESSAGES/mate-menus.mo
+share/locale/en_US/LC_MESSAGES/mate-menus.mo
 share/locale/eo/LC_MESSAGES/mate-menus.mo
 share/locale/es/LC_MESSAGES/mate-menus.mo
 share/locale/es_AR/LC_MESSAGES/mate-menus.mo
