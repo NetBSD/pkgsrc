@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2022/06/30 11:18:59 nia Exp $
+# $NetBSD: Makefile,v 1.96 2023/05/08 14:21:56 gdt Exp $
 
-DISTNAME=	Trac-1.4.2
+DISTNAME=	Trac-1.5.4
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
@@ -24,8 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py27-jinja2
 
 USE_TOOLS+=	pax
 
-# The Trac 1.4 series does not support python 3.
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 

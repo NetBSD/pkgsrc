@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.49 2021/10/26 11:31:11 nia Exp $
+$NetBSD: distinfo,v 1.50 2023/05/08 14:21:56 gdt Exp $
 
-BLAKE2s (Trac-1.4.2.tar.gz) = bcc9e0110eb90404e5e0013e15252d0fbe8351536087bd88a24ec907fb506573
-SHA512 (Trac-1.4.2.tar.gz) = 7e8074e660711e578da041c13e1d8ef2b83a2cb6ca1119cc4f296f73dadbe71a6f1c60b4326d607e5db2ac0e6a6d6a67678ca5ee33c18cf29dfa655c1c295be1
-Size (Trac-1.4.2.tar.gz) = 5645681 bytes
+BLAKE2s (Trac-1.5.4.tar.gz) = 5328724eb4ae0296411b9d722d27f918118d0d733de350b41d80d9a512fe3fc6
+SHA512 (Trac-1.5.4.tar.gz) = 0dc53dff0b31aa1668b104c06f693a8d7080260c87bb979724e270a645744fa984c4d6c5dd74ef8e8af5b589d1166fae56a992e31c65ec9d04b75c031cbbbfce
+Size (Trac-1.5.4.tar.gz) = 6161372 bytes
