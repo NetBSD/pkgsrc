@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:24:01 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/05/09 20:43:22 dholland Exp $
 
 BLAKE2s (spim-8.0.tar.gz) = 9a5373bce04ded172e0e063a9ebbcc870977fee6a6c3121de202777b72ff48c7
 SHA512 (spim-8.0.tar.gz) = c4eb66863a931b74d6c6ecd92860d16fd6369c85caecba1e71a1149e73e708502d1070f17a9beb6d0af1368db1ee5a85c040b596866a1236275cdd410a661adf
 Size (spim-8.0.tar.gz) = 355204 bytes
 SHA1 (patch-aa) = 8232ff358f1bf2ede3216187faf77aad85b1da87
 SHA1 (patch-ad) = 056ef015de5daff3003a834ff4867f97db70c79f
+SHA1 (patch-scanner.l) = 51e1c1b5e3c0db28d3fa0790729ddfa836631e2d
