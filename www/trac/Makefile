@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2023/05/08 14:21:56 gdt Exp $
+# $NetBSD: Makefile,v 1.97 2023/05/09 18:02:21 wiz Exp $
 
 DISTNAME=	Trac-1.5.4
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
@@ -18,8 +19,7 @@ LICENSE=	modified-bsd
 # not depend on svn or git to avoid installing them for trac installs
 # that use the other.
 
-DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py27-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
 
 USE_TOOLS+=	pax
 
