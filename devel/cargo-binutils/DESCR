@@ -1,0 +1,53 @@
+cargo-binutils contains cargo subcommands to invoke the LLVM tools shipped
+with the Rust toolchain.
+
+Features
+    All Rust symbols in the output of the LLVM tools are automatically
+    demangled.
+    No need to pass the path to the artifact as an argument if using the
+    tool in "build and inspect" mode.
+
+Usage
+
+$ rust-$tool ${args[@]}
+
+is basically sugar for:
+
+$ $(find $(rustc --print sysroot) -name llvm-$tool) ${args[@]}
+
+Apart from these rust-* tools, which are direct proxies for the llvm tools in
+the llvm-tools-preview component, the crate also provides some Cargo
+subcommands that will first build the project and then run the llvm tool on the
+output artifact.
+
+$ cargo size --example foo
+
+is sugar for:
+
+$ cargo build --example foo
+$ rust-size target/examples/foo
+
+These commands take similar options to cargo build and you can specify a
+specific binary with --bin NAME, an example with --example NAME or the default
+binary by not passing --bin or --example.
+
+In the case of cargo-objdump the architecture of the compilation target is
+passed as -arch-name=$target to llvm-objdump. -arch-name specifies to which
+architecture disassemble the object file to.
+
+You can get more information about the CLI of each tool by running
+rust-$tool -help.
+
+All the Cargo subcommands accept a --verbose / -v flag. In verbose mode the
+rust-$tool invocation will be printed to stderr.
+
+Build and inspect mode: Some subcommands accept the flags: --bin, --example,
+--lib, --target and --release. These can be used to make the subcommand first
+build the respective binary, example or library and have the path to the
+artifact be automatically passed to the LLVM tool. This mode only works when
+the subcommand is used from within a Cargo project.
+
+Disclaimer Note that cargo-binutils simply proxies the LLVM tools in the
+llvm-tools-preview component and the Rust project makes no guarantee about the
+availability and the CLI of these tools -- i.e. the availability and CLI of
+these tools may change as new Rust releases are made.
