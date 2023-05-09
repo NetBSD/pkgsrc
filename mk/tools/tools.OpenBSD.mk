@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.37 2018/11/12 13:34:39 jperkin Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.38 2023/05/09 14:50:33 schmonz Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -60,6 +60,7 @@ TOOLS_PLATFORM.mail?=		/usr/bin/mail
 .if exists(/usr/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .endif
+TOOLS_PLATFORM.mandoc?=		/usr/bin/mandoc
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
