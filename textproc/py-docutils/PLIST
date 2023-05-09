@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.28 2023/05/03 19:07:52 wiz Exp $
-bin/docutils
+@comment $NetBSD: PLIST,v 1.29 2023/05/09 10:14:27 adam Exp $
+bin/docutils-${PYVERSSUFFIX}
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
 bin/rst2html5-${PYVERSSUFFIX}
