@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2022/01/04 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/05/09 08:26:44 adam Exp $
 
-DISTNAME=	networkx-2.5.1
+DISTNAME=	networkx-3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/}
 
@@ -11,16 +10,15 @@ HOMEPAGE=	https://networkx.github.io/
 COMMENT=	Python package for creating and manipulating graphs and networks
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-decorator>=4.3.0:../../devel/py-decorator
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} \
-	pytest-${PYVERSSUFFIX} --pyargs networkx
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} networkx
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
