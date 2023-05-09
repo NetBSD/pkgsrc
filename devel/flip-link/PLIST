@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/09 21:58:30 nikita Exp $
+bin/flip-link
