@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/03/20 11:57:36 nia Exp $
+# $NetBSD: Makefile,v 1.47 2023/05/09 20:43:22 dholland Exp $
 
 DISTNAME=	spim-8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/
 
