@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2965 2023/05/09 10:27:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2966 2023/05/09 17:02:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4120,3 +4120,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added misc/py-lazy_loader version 0.2 [adam 2023-05-09]
 	Updated textproc/py-docutils to 0.19nb1 [adam 2023-05-09]
 	Updated devel/py-lama to 8.4.1 [adam 2023-05-09]
+	Updated pkgtools/bootstrap-mk-files to 20230509 [schmonz 2023-05-09]
