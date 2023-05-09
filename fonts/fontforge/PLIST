@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2022/03/14 14:12:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/05/09 05:49:59 wiz Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -14,7 +14,6 @@ man/man1/sfddiff.1
 share/applications/org.fontforge.FontForge.desktop
 share/fontforge/cidmap/Adobe-CNS1-6.cidmap
 share/fontforge/cidmap/Adobe-GB1-5.cidmap
-share/fontforge/cidmap/Adobe-Identity-0.cidmap
 share/fontforge/cidmap/Adobe-Japan1-5.cidmap
 share/fontforge/cidmap/Adobe-Japan1-6.cidmap
 share/fontforge/cidmap/Adobe-Japan1-7.cidmap
@@ -400,6 +399,7 @@ share/locale/fr/LC_MESSAGES/FontForge.mo
 share/locale/hr/LC_MESSAGES/FontForge.mo
 share/locale/it/LC_MESSAGES/FontForge.mo
 share/locale/ja/LC_MESSAGES/FontForge.mo
+share/locale/ka_GE/LC_MESSAGES/FontForge.mo
 share/locale/ko/LC_MESSAGES/FontForge.mo
 share/locale/ml/LC_MESSAGES/FontForge.mo
 share/locale/pl/LC_MESSAGES/FontForge.mo
