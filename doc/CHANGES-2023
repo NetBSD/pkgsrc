@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2964 2023/05/09 08:34:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2965 2023/05/09 10:27:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4118,3 +4118,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-scikit-learn to 1.2.2 [adam 2023-05-09]
 	Updated math/py-networkx to 3.1 [adam 2023-05-09]
 	Added misc/py-lazy_loader version 0.2 [adam 2023-05-09]
+	Updated textproc/py-docutils to 0.19nb1 [adam 2023-05-09]
+	Updated devel/py-lama to 8.4.1 [adam 2023-05-09]
