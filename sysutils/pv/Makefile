@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/10/24 02:40:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/09 21:26:18 dholland Exp $
 #
 
 DISTNAME=		pv-1.6.20
@@ -20,8 +20,15 @@ REPLACE_LOCALEDIR_PATTERNS+=	vars.mk
 DOCDIR=			${PREFIX}/share/doc/pv
 INSTALLATION_DIRS=	${DOCDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
 # configure test only checks for open64()
 CFLAGS.SunOS+=		-DENABLE_LARGEFILE=1
+
+# configure test produces uncompilable results
+.if ${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ENV+=		ac_cv_func_stat64=no
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
