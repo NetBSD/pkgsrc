@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.63 2022/01/06 10:19:11 schmonz Exp $
+# $NetBSD: defaults.mk,v 1.64 2023/05/09 12:16:01 thor Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -99,6 +99,7 @@ _TOOLS_VARNAME.lzcat=		LZCAT
 _TOOLS_VARNAME.m4=		M4
 _TOOLS_VARNAME.mail=		MAIL_CMD
 _TOOLS_VARNAME.makeinfo=	MAKEINFO
+_TOOLS_VARNAME.mandoc=		MANDOC
 _TOOLS_VARNAME.mkdir=		MKDIR
 _TOOLS_VARNAME.mktemp=		MKTEMP
 _TOOLS_VARNAME.mtree=		MTREE

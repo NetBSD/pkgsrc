@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.297 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: replace.mk,v 1.298 2023/05/09 12:16:01 thor Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1026,7 +1026,7 @@ TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 # groff counterparts.  As this package has fewer dependencies it should
 # be preferred over groff wherever possible.
 #
-_TOOLS.mandoc=	nroff
+_TOOLS.mandoc=	mandoc nroff
 
 .for _t_ in ${_TOOLS.mandoc}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
