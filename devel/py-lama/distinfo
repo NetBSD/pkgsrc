@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/06/18 22:35:24 wiz Exp $
+$NetBSD: distinfo,v 1.10 2023/05/09 10:27:18 adam Exp $
 
-BLAKE2s (pylama-8.3.8.tar.gz) = 9eb9f8f5a3d2e22a684b53416089980557307503e48945f8c4c7bc183c03dbc1
-SHA512 (pylama-8.3.8.tar.gz) = 09baec666bb129545cb076ffe84ec296f59561aff7ff359257e97d45e193983c17da7e8ea86351c13ae0938a62bc102eb16385555dd40dec32555a3f9d76cf4f
-Size (pylama-8.3.8.tar.gz) = 32437 bytes
+BLAKE2s (pylama-8.4.1.tar.gz) = a87eaa7ec81b4fb5d1f0cc017a773a0950ca20f67c254f778b8edf181cfeaf06
+SHA512 (pylama-8.4.1.tar.gz) = b1a968caa743ecbeff88676666419d3ad4d60dea0cc0c50744ff185548d6ef59ea68e196fecd50e1dc082bc759a1c812172566f85ac15cda785d9b338b78f2cf
+Size (pylama-8.4.1.tar.gz) = 33616 bytes
