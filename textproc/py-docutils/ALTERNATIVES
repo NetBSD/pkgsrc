@@ -1,3 +1,4 @@
+bin/docutils @PREFIX@/bin/docutils-@PYVERSSUFFIX@
 bin/rst2html.py @PREFIX@/bin/rst2html-@PYVERSSUFFIX@
 bin/rst2latex.py @PREFIX@/bin/rst2latex-@PYVERSSUFFIX@
 bin/rst2man.py @PREFIX@/bin/rst2man-@PYVERSSUFFIX@
