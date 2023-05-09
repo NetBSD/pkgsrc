@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.73 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.74 2023/05/09 12:16:01 thor Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -78,6 +78,7 @@ TOOLS_PLATFORM.mail?=		/usr/bin/mail
 .if exists(/usr/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .endif
+TOOLS_PLATFORM.mandoc?=		/usr/bin/mandoc
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
 .if exists(/usr/bin/msgconv)
