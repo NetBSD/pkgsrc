@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.76 2022/03/14 14:12:41 wiz Exp $
+$NetBSD: distinfo,v 1.77 2023/05/09 05:49:59 wiz Exp $
 
-BLAKE2s (fontforge-20220308.tar.xz) = 14f99565cba4ce7627fa2f9467405d57921da1446ba7c61fc65ee7cc7756fbde
-SHA512 (fontforge-20220308.tar.xz) = 9975cffec8aa47bcb8c22405bea544cd263dc939b253e8fba2fbaa3b90a60e05b98eaf58365db8ae854d1fff8e641866a7e2e027003ae03a77104d6650dafb6c
-Size (fontforge-20220308.tar.xz) = 13719032 bytes
+BLAKE2s (fontforge-20230101.tar.xz) = aca0cb8014deafb2620ca3a19c494817a6c67ab24deb8da9c4bcbb099ee64d6c
+SHA512 (fontforge-20230101.tar.xz) = 7684a2824d5199e230d2e0a654c2119cef422a57b64e6dd75afde6ba623abed6581f596fd5b7509e03f3b3ad3cf69629aafd4c85aeda64fa91a9e1ab88c9b418
+Size (fontforge-20230101.tar.xz) = 13761728 bytes
 SHA1 (patch-fontforge_splinefont.h) = be7739b6145b3c622913efa9f2d679860c35cccb
