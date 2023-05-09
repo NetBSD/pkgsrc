@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1391 2023/05/09 06:58:35 pin Exp $
+# $NetBSD: Makefile,v 1.1392 2023/05/09 18:07:03 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -421,7 +421,7 @@ SUBDIR+=	icu
 SUBDIR+=	igor
 SUBDIR+=	iksemel
 SUBDIR+=	inih
-SUDBIR+=	inlyne
+SUBDIR+=	inlyne
 SUBDIR+=	intltool
 SUBDIR+=	ipadic
 SUBDIR+=	isearch
@@ -1194,7 +1194,6 @@ SUBDIR+=	py-yaml
 SUBDIR+=	py-yamllint
 SUBDIR+=	py-yamlordereddictloader
 SUBDIR+=	py27-cssselect2
-SUBDIR+=	py27-jinja2
 SUBDIR+=	py27-markupsafe
 SUBDIR+=	py27-pyphen
 SUBDIR+=	py27-tinycss2
