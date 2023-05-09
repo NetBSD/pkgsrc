@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 10:03:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/09 16:58:40 wiz Exp $
 
 DISTNAME=	pytest-console-scripts-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/kvas-it/pytest-console-scripts
 COMMENT=	Pytest plugin for testing console scripts
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-test>=4.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
