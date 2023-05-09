@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.68 2022/07/05 20:35:45 markd Exp $
+# $NetBSD: tools.Linux.mk,v 1.69 2023/05/09 12:16:01 thor Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -161,6 +161,9 @@ TOOLS_PLATFORM.mail?=		${_path}/mail	# Debian, Slackware, SuSE
 .  endif
 .  if exists(${_path}/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	${_path}/makeinfo
+.  endif
+.  if exists(${_path}/mandoc)
+TOOLS_PLATFORM.mandoc?=		${_path}/mandoc
 .  endif
 .  if exists(${_path}/mkdir)
 TOOLS_PLATFORM.mkdir?=		${_path}/mkdir -p
