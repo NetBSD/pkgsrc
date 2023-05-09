@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/09 08:32:36 adam Exp $
+
+BLAKE2s (lazy_loader-0.2.tar.gz) = 01fe2bd8951ba50d0869b46322f069cb8358c7f26276baeda6b87f58035f5b39
+SHA512 (lazy_loader-0.2.tar.gz) = 66cfc7fcc1070452bb7bb02e529a2b5aa1f0effc3ca6ac8c71e217c734f5080446d376f210c0ed6a4cb9a962d5950d17ad954f3682495643209f57cb2954262d
+Size (lazy_loader-0.2.tar.gz) = 11460 bytes
