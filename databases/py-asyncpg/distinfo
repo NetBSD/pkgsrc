@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.21 2022/11/08 11:43:59 adam Exp $
+$NetBSD: distinfo,v 1.22 2023/05/09 08:27:10 tm Exp $
 
 BLAKE2s (asyncpg-0.27.0.tar.gz) = 21545025a3f6019b4e0cd8fc4056903f378374f15a9e25bbcf8ccff4ea8e9b93
 SHA512 (asyncpg-0.27.0.tar.gz) = 66d4e16cba8ebebfa0403c7d3b1d3ee1b9b8f55a9b70f57e809d28161873d74750152e6ed548b17ceb97ca84f7a669a5fa503c824a861b295db731f86bfb0137
 Size (asyncpg-0.27.0.tar.gz) = 808881 bytes
+SHA1 (patch-asyncpg_pgproto_hton.h) = c6a35e75dfd1f275ff2790dcb1c425d394787b2e
