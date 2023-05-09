@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2960 2023/05/08 23:00:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2961 2023/05/09 05:26:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4110,3 +4110,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-sqlalchemy to 1.4.48 [markd 2023-05-08]
 	Updated emulators/nono to 0.6.1 [jun 2023-05-09]
 	Updated security/ssh-audit to 2.9.0 [wiz 2023-05-08]
+	Updated www/py-werkzeug to 2.3.4 [adam 2023-05-09]
+	Updated databases/py-redis to 4.5.5 [adam 2023-05-09]
