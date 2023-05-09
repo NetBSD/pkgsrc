@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/06/18 22:35:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/09 10:27:18 adam Exp $
 bin/pylama-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/pylama/check_async.pyo
 ${PYSITELIB}/pylama/config.py
 ${PYSITELIB}/pylama/config.pyc
 ${PYSITELIB}/pylama/config.pyo
+${PYSITELIB}/pylama/config_toml.py
+${PYSITELIB}/pylama/config_toml.pyc
+${PYSITELIB}/pylama/config_toml.pyo
 ${PYSITELIB}/pylama/context.py
 ${PYSITELIB}/pylama/context.pyc
 ${PYSITELIB}/pylama/context.pyo
