@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.56 2022/11/22 13:18:59 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.57 2023/05/09 12:23:22 jperkin Exp $
 #
 # System-supplied tools for the Solaris and illumos operating systems.
 #
@@ -145,6 +145,9 @@ TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .elif exists(/usr/sfw/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/usr/sfw/bin/makeinfo
 .endif
+.if exists(/usr/bin/mandoc)
+TOOLS_PLATFORM.mandoc?=		/usr/bin/mandoc
+.endif
 TOOLS_PLATFORM.mkdir?=		/usr/bin/mkdir -p
 .if exists(/usr/bin/mktemp)
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
@@ -158,7 +161,7 @@ TOOLS_PLATFORM.nroff?=		/usr/bin/gnroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 .endif
 # Don't use GNU patch
-#TOOLS_PLATFORM.gpatch?=		/usr/bin/gpatch
+#TOOLS_PLATFORM.gpatch?=	/usr/bin/gpatch
 #TOOLS_PLATFORM.patch?=		/usr/bin/gpatch
 # Native pax doesn't support -O required by mk/extract/extract
 #TOOLS_PLATFORM.pax?=		/bin/pax
