@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2961 2023/05/09 05:26:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2962 2023/05/09 05:50:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ssh-audit to 2.9.0 [wiz 2023-05-08]
 	Updated www/py-werkzeug to 2.3.4 [adam 2023-05-09]
 	Updated databases/py-redis to 4.5.5 [adam 2023-05-09]
+	Updated fonts/fontforge to 20230101 [wiz 2023-05-09]
