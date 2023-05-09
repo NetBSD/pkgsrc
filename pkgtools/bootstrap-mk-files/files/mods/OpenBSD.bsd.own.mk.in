@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.6 2018/09/01 21:56:04 tnn Exp $
+#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.7 2023/05/09 17:02:32 schmonz Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -34,7 +34,7 @@ MANDIR?=	/usr/share/man
 MANGRP?=	wheel
 MANOWN?=	root
 MANMODE?=	${NONBINMODE}
-MANINSTALL?=	maninstall catinstall
+MANINSTALL?=	${_MANINSTALL}
 
 INFODIR?=	/usr/share/info
 INFOGRP?=	wheel
@@ -191,7 +191,7 @@ PRINTOBJDIR=	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
 # The NOxxx variables should only be used by Makefiles.
 #
 
-MKCATPAGES?=yes
+MKCATPAGES?=no
 
 .if defined(NODOC)
 MKDOC=no
@@ -199,6 +199,11 @@ MKDOC=no
 #MKDOC=yes
 .else
 MKDOC?=yes
+.endif
+
+_MANINSTALL=	maninstall
+.if ${MKCATPAGES} != "no"
+_MANINSTALL+=	catinstall
 .endif
 
 MKINFO?=yes
