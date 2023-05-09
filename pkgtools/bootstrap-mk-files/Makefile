@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/02/25 11:27:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2023/05/09 17:02:31 schmonz Exp $
 
-PKGNAME=	bootstrap-mk-files-20230225
+PKGNAME=	bootstrap-mk-files-20230509
 CATEGORIES=	pkgtools
 
 CONFLICTS+=	mk-files-[0-9]*
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	*.mk files for the bootstrap bmake utility
 LICENSE=	original-bsd
 
-NO_PKGTOOLS_REQD_CHECK=	# defined
+NO_PKGTOOLS_REQD_CHECK=	yes
 BOOTSTRAP_PKG=		yes
 
 NO_BUILD=	yes
@@ -20,7 +20,7 @@ USE_TOOLS+=	sed
 INSTALLATION_DIRS=	share/mk
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${RUN} ${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-configure:
 	cd ${WRKSRC}; for file in bsd.* sys.mk; do			\
