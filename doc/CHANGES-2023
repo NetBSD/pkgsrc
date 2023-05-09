@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2968 2023/05/09 18:07:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.2969 2023/05/09 19:57:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4123,3 +4123,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/bootstrap-mk-files to 20230509 [schmonz 2023-05-09]
 	Updated www/trac to 1.5.4nb1 [wiz 2023-05-09]
 	Removed textproc/py27-jinja2 [wiz 2023-05-09]
+	Removed textproc/py27-markupsafe [wiz 2023-05-09]
