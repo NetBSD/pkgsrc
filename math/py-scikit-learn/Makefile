@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/04/10 00:57:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2023/05/09 08:07:34 adam Exp $
 
-DISTNAME=	scikit-learn-0.22.1
+DISTNAME=	scikit-learn-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
 
@@ -11,16 +10,18 @@ HOMEPAGE=	https://scikit-learn.org/
 COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-joblib>=0.11:../../devel/py-joblib
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.17.0:../../math/py-scipy
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+DEPENDS+=	${PYPKGPREFIX}-joblib>=1.1.1:../../devel/py-joblib
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.3.2:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=2.0.0:../../parallel/py-threadpoolctl
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.1:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.11.0
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
