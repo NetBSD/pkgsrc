@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2963 2023/05/09 06:59:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2964 2023/05/09 08:34:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4114,3 +4114,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 4.5.5 [adam 2023-05-09]
 	Updated fonts/fontforge to 20230101 [wiz 2023-05-09]
 	Added textproc/inlyne version 0.3.0 [pin 2023-05-09]
+	Added parallel/py-threadpoolctl version 3.1.0 [adam 2023-05-09]
+	Updated math/py-scikit-learn to 1.2.2 [adam 2023-05-09]
+	Updated math/py-networkx to 3.1 [adam 2023-05-09]
+	Added misc/py-lazy_loader version 0.2 [adam 2023-05-09]
