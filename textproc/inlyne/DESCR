@@ -1,0 +1,11 @@
+Markdown files are a wonderful tool to get formatted, visually appealing,
+information to people in a minimal way. Except 9 times out of 10 you need
+an entire web browser to quickly open a file.
+
+Introducing Inlyne, a GPU powered yet browserless tool to help you quickly
+view markdown files in the blink of an eye.
+
+Use inlyne --help to see all the command line options. Some of which can be
+set permentantly by placing an inlyne.toml file into the default dirs
+configuration folder for your respective OS. Checkout inlyne.toml.sample
+for an example configuration.
