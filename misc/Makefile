@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2023/05/07 06:49:53 pin Exp $
+# $NetBSD: Makefile,v 1.588 2023/05/09 08:32:36 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -264,6 +264,7 @@ SUBDIR+=	py-crashtest
 SUBDIR+=	py-ghp-import
 SUBDIR+=	py-immutables
 SUBDIR+=	py-installer
+SUBDIR+=	py-lazy_loader
 SUBDIR+=	py-platformdirs
 SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
