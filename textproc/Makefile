@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1390 2023/05/06 09:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.1391 2023/05/09 06:58:35 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -421,6 +421,7 @@ SUBDIR+=	icu
 SUBDIR+=	igor
 SUBDIR+=	iksemel
 SUBDIR+=	inih
+SUDBIR+=	inlyne
 SUBDIR+=	intltool
 SUBDIR+=	ipadic
 SUBDIR+=	isearch
