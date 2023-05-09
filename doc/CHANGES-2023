@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2970 2023/05/09 20:43:40 dholland Exp $
+$NetBSD: CHANGES-2023,v 1.2971 2023/05/09 21:28:38 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4125,3 +4125,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed textproc/py27-jinja2 [wiz 2023-05-09]
 	Removed textproc/py27-markupsafe [wiz 2023-05-09]
 	Updated emulators/spim to 8.0nb2 [dholland 2023-05-09]
+	Added devel/cargo-binutils version 0.3.6 [nikita 2023-05-09]
