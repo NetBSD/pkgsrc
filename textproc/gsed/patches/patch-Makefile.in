@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.in,v 1.3 2023/05/10 20:40:47 schmonz Exp $
+
+Avoid circular dependency (perl5->gsed->perl5) for regular builds.
+
+--- Makefile.in.orig	2022-11-06 19:19:08.000000000 +0000
++++ Makefile.in
+@@ -7513,6 +7513,7 @@ sed/version.h: Makefile
+ 	$(AM_V_at)mv $@t $@
+ 
+ doc/sed.1: sed/sed$(EXEEXT) .version $(srcdir)/doc/sed.x
++.ifdef PKGSRC_MAINTAINER_MANPAGE
+ 	$(AM_V_GEN)$(MKDIR_P) doc
+ 	$(AM_V_at)rm -rf $@ $@-t
+ 	$(AM_V_at)$(run_help2man)					\
+@@ -7522,6 +7523,7 @@ doc/sed.1: sed/sed$(EXEEXT) .version $(srcdir)/doc/sed
+ 	    $(SEDBIN)							\
+ 	  && chmod a-w $@-t						\
+ 	  && mv $@-t $@
++.endif
+ 
+ # automake makes `check' depend on $(TESTS).  Declare
+ # dummy targets for $(TESTS) so that make does not complain.
