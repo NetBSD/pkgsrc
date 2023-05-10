@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/10 09:02:47 adam Exp $
 
-DISTNAME=	django-formtools-2.3
+DISTNAME=	django-formtools-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-formtools/}
 
