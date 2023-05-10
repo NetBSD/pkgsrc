@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/10 21:59:57 markd Exp $
+
+BLAKE2s (robot-detection-0.4.tar.gz) = 3426065d5e685b356e53f0134db577b1a983541706ee89e68abdc3bee3ed0c3b
+SHA512 (robot-detection-0.4.tar.gz) = c6b9979143a4dbe68a55c2ef47d3e029c66ec758d4ba17150199ae932201dda5b8e3c31aba092f8a7889fec38b3f647f161db813f6fca12b6c7404deb3726c08
+Size (robot-detection-0.4.tar.gz) = 6387 bytes
