@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/10 16:56:38 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/10 20:15:10 nikita Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.13.1
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3 OR modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-USE_LIBTOOL=	yes
+LDFLAGS+=		-lpthread
 
 PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
@@ -32,4 +32,8 @@ PLIST.libusb=	yes
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.include "../../sysutils/libudev/buildlink3.mk"
+.endif
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
