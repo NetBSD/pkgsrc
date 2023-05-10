@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/12/07 16:42:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/10 16:56:38 nikita Exp $
 
 GITHUB_PROJECT=	hidapi
-GITHUB_TAG=	${GITHUB_PROJECT}-0.11.0
+GITHUB_TAG=	${GITHUB_PROJECT}-0.13.1
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	comms devel
@@ -13,11 +13,8 @@ COMMENT=	Library for comunicating with bluetooth and usb hid devices
 LICENSE=	gnu-gpl-v3 OR modified-bsd
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoreconf autoconf automake
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
 
-HAS_CONFIGURE=	yes
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
@@ -32,9 +29,7 @@ PLIST_VARS+=	libusb
 PLIST.libusb=	yes
 .endif
 
-pre-configure:
-	cd ${WRKSRC} && ${SH} ./bootstrap
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
