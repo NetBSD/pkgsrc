@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/10 17:39:09 nikita Exp $
+
+BLAKE2s (libudev-243.tar.gz) = 20cba7485046b0197a05508b1aa3bf026bab00482b6342dd94ea55bb9f980187
+SHA512 (libudev-243.tar.gz) = 33ee9849875fc381fc1bd9eef9119b96ed4014719ccf96f88c957e2c53ae6c46152bc0623e5efc99579a4063ab25251ed63ffe69441bca3b0074398cffda7747
+Size (libudev-243.tar.gz) = 2014826 bytes
