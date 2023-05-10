@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/10 21:59:57 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/robot_detection.py
+${PYSITELIB}/robot_detection.pyc
+${PYSITELIB}/robot_detection.pyo
