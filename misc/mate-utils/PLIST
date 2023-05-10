@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/11/27 05:12:44 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/05/10 23:53:14 gutteridge Exp $
 bin/mate-dictionary
 bin/mate-disk-usage-analyzer
 bin/mate-panel-screenshot
@@ -3010,6 +3010,28 @@ share/help/yo/mate-search-tool/legal.xml
 share/help/yo/mate-system-log/figures/syslog_window.png
 share/help/yo/mate-system-log/index.docbook
 share/help/yo/mate-system-log/legal.xml
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-add-source.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-applet-window.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-applet.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-application.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-find.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-lookup.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-preferences-print.png
+share/help/zh-Hans/mate-dictionary/figures/mate-dictionary-preferences-source.png
+share/help/zh-Hans/mate-dictionary/index.docbook
+share/help/zh-Hans/mate-dictionary/legal.xml
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_fullscan.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_prefs.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_remote.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_ringschart1.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_ringschart2.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_treemaps.png
+share/help/zh-Hans/mate-disk-usage-analyzer/figures/baobab_window.png
+share/help/zh-Hans/mate-disk-usage-analyzer/index.docbook
+share/help/zh-Hans/mate-disk-usage-analyzer/legal.xml
+share/help/zh-Hans/mate-system-log/figures/syslog_window.png
+share/help/zh-Hans/mate-system-log/index.docbook
+share/help/zh-Hans/mate-system-log/legal.xml
 share/help/zh_CN/mate-dictionary/figures/mate-dictionary-add-source.png
 share/help/zh_CN/mate-dictionary/figures/mate-dictionary-applet-window.png
 share/help/zh_CN/mate-dictionary/figures/mate-dictionary-applet.png
@@ -3149,6 +3171,7 @@ share/locale/el/LC_MESSAGES/mate-utils.mo
 share/locale/en_AU/LC_MESSAGES/mate-utils.mo
 share/locale/en_CA/LC_MESSAGES/mate-utils.mo
 share/locale/en_GB/LC_MESSAGES/mate-utils.mo
+share/locale/en_US/LC_MESSAGES/mate-utils.mo
 share/locale/eo/LC_MESSAGES/mate-utils.mo
 share/locale/es/LC_MESSAGES/mate-utils.mo
 share/locale/es_AR/LC_MESSAGES/mate-utils.mo
