@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2975 2023/05/10 09:55:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2976 2023/05/10 10:25:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certifi to 2023.5.7 [adam 2023-05-10]
 	Updated devel/py-pygit2 to 1.12.1 [adam 2023-05-10]
 	Updated textproc/py-JWT to 2.7.0 [adam 2023-05-10]
+	Updated devel/diffsitter to 0.8.0 [pin 2023-05-10]
