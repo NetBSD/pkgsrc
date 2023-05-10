@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/04/16 13:56:23 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/05/10 12:13:34 adam Exp $
 
-DISTNAME=	ansible-compat-3.0.2
+DISTNAME=	ansible-compat-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
