@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2979 2023/05/10 12:16:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2980 2023/05/10 12:34:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4140,3 +4140,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.3 [pin 2023-05-10]
 	Updated sysutils/py-ansible-compat to 4.0.2 [adam 2023-05-10]
 	Updated sysutils/ansible-lint to 6.16.0 [adam 2023-05-10]
+	Updated www/nghttp2 to 1.53.0 [adam 2023-05-10]
+	Updated www/nghttp2-tools to 1.53.0 [adam 2023-05-10]
