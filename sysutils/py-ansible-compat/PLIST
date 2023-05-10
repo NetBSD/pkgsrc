@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/06/09 18:26:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/10 12:13:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -26,3 +26,5 @@ ${PYSITELIB}/ansible_compat/runtime.py
 ${PYSITELIB}/ansible_compat/runtime.pyc
 ${PYSITELIB}/ansible_compat/schema.py
 ${PYSITELIB}/ansible_compat/schema.pyc
+${PYSITELIB}/ansible_compat/types.py
+${PYSITELIB}/ansible_compat/types.pyc
