@@ -1,9 +1,19 @@
-# $NetBSD: INSTALL,v 1.7 2022/12/17 21:36:11 triaxx Exp $
+# $NetBSD: INSTALL,v 1.8 2023/05/10 19:22:33 schmonz Exp $
 
 RCDBOOT_STYLE=@RCDBOOT_STYLE@
 RCD_SCRIPTS_DIR=@RCD_SCRIPTS_DIR@
 UNPRIVILEGED=@UNPRIVILEGED@
 EGDIR=@EGDIR@
+
+warning_filevault() {
+	${CAT} <<EOF
+===========================================================================
+
+WARNING: With FileVault enabled, per-user supervision trees won't work.
+
+===========================================================================
+EOF
+}
 
 case "${STAGE}" in
 
@@ -16,6 +26,9 @@ POST-INSTALL)
 			launchctl load -w $HOME/Library/LaunchAgents/org.pkgsrc.rc.d-boot.plist
 		else
 			launchctl load -w /Library/LaunchDaemons/org.pkgsrc.rc.d-boot.plist
+		fi
+		if fdesetup status | awk '{print $3}' | grep -q '^On\.$'; then
+			warning_filevault
 		fi
 		;;
 	freebsd-native)
