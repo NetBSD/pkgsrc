@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1044 2023/05/04 13:47:32 bouyer Exp $
+# $NetBSD: Makefile,v 1.1045 2023/05/10 17:39:08 nikita Exp $
 #
 
 COMMENT=	System utilities
@@ -413,6 +413,7 @@ SUBDIR+=	liboobs
 SUBDIR+=	libpciaccess
 SUBDIR+=	libtpms
 SUBDIR+=	libtree
+SUBDIR+=	libudev
 SUBDIR+=	libvirt
 SUBDIR+=	lilo
 SUBDIR+=	lnav

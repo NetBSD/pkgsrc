@@ -1,0 +1,4 @@
+Device enumeration includes known properties which devices don't report.
+Evdev min, max, res, fuzz and flat by axis. Key mapping, hard-coded
+layouts, modifier LEDs. Accelerometer mount-matrix and location. Mouse
+DPI. Pointingstick sensitivity. Without the rest of systemd.

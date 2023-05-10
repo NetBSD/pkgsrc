@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2023/05/10 17:39:09 nikita Exp $
+
+DISTNAME=	libudev-243
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gentoo/}
+GITHUB_PROJECT=	eudev
+GITHUB_TAG=	v3.2.9 # udev version 243 according to configure.ac
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/libudev/distinfo
+
+MAINTAINER=	nykula@ukr.net
+HOMEPAGE=	https://wiki.gentoo.org/wiki/Project:Eudev
+LICENSE=	gnu-gpl-v2
+
+BUILD_DEFS+=		VARBASE
+
+ONLY_FOR_PLATFORM=	Linux-*-*
+USE_TOOLS+=		autoconf automake gmake pkg-config
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-rootrundir=${VARBASE}/run
