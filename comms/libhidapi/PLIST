@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/07 16:42:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/10 16:56:38 nikita Exp $
 include/hidapi/hidapi.h
 ${PLIST.libusb}include/hidapi/hidapi_libusb.h
-lib/libhidapi.la
-lib/pkgconfig/hidapi.pc
-share/doc/hidapi/AUTHORS.txt
-share/doc/hidapi/LICENSE-bsd.txt
-share/doc/hidapi/LICENSE-gpl3.txt
-share/doc/hidapi/LICENSE-orig.txt
-share/doc/hidapi/LICENSE.txt
-share/doc/hidapi/README.md
+lib/cmake/hidapi/hidapi-config-version.cmake
+lib/cmake/hidapi/hidapi-config.cmake
+lib/cmake/hidapi/libhidapi-release.cmake
+lib/cmake/hidapi/libhidapi.cmake
+lib/libhidapi-libusb.so
+lib/libhidapi-libusb.so.0
+lib/libhidapi-libusb.so.0.13.1
+lib/pkgconfig/hidapi-libusb.pc
