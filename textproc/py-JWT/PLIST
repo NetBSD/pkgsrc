@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/19 07:55:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/10 09:55:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/jwt/jwks_client.py
 ${PYSITELIB}/jwt/jwks_client.pyc
 ${PYSITELIB}/jwt/jwks_client.pyo
 ${PYSITELIB}/jwt/py.typed
+${PYSITELIB}/jwt/types.py
+${PYSITELIB}/jwt/types.pyc
+${PYSITELIB}/jwt/types.pyo
 ${PYSITELIB}/jwt/utils.py
 ${PYSITELIB}/jwt/utils.pyc
 ${PYSITELIB}/jwt/utils.pyo
