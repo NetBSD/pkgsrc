@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2976 2023/05/10 10:25:51 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2977 2023/05/10 10:26:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pygit2 to 1.12.1 [adam 2023-05-10]
 	Updated textproc/py-JWT to 2.7.0 [adam 2023-05-10]
 	Updated devel/diffsitter to 0.8.0 [pin 2023-05-10]
+	Updated textproc/inlyne to 0.3.1 [pin 2023-05-10]
