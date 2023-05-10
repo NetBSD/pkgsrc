@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2982 2023/05/10 13:32:54 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2983 2023/05/10 16:56:48 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4145,3 +4145,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-scrapy to 2.9.0 [adam 2023-05-10]
 	Updated www/py-flask-jwt-extended to 4.4.4 [adam 2023-05-10]
 	Updated www/lighttpd to 1.4.70 [schmonz 2023-05-10]
+	Updated comms/libhidapi to 0.13.1 [nikita 2023-05-10]
