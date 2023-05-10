@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2980 2023/05/10 12:34:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2981 2023/05/10 12:46:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4142,3 +4142,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.16.0 [adam 2023-05-10]
 	Updated www/nghttp2 to 1.53.0 [adam 2023-05-10]
 	Updated www/nghttp2-tools to 1.53.0 [adam 2023-05-10]
+	Updated www/py-scrapy to 2.9.0 [adam 2023-05-10]
+	Updated www/py-flask-jwt-extended to 4.4.4 [adam 2023-05-10]
