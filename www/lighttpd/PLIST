@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.27 2023/02/11 01:47:30 schmonz Exp $
-lib/lighttpd/mod_access.la
+@comment $NetBSD: PLIST,v 1.28 2023/05/10 13:32:48 schmonz Exp $
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_ajp13.la
-lib/lighttpd/mod_alias.la
 lib/lighttpd/mod_auth.la
 ${PLIST.libdbi}lib/lighttpd/mod_authn_dbi.la
 lib/lighttpd/mod_authn_file.la
@@ -11,27 +9,18 @@ ${PLIST.ldap}lib/lighttpd/mod_authn_ldap.la
 lib/lighttpd/mod_cgi.la
 lib/lighttpd/mod_deflate.la
 lib/lighttpd/mod_dirlisting.la
-lib/lighttpd/mod_evhost.la
-lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
-lib/lighttpd/mod_fastcgi.la
 ${PLIST.gnutls}lib/lighttpd/mod_gnutls.la
-lib/lighttpd/mod_indexfile.la
+lib/lighttpd/mod_h2.la
 ${PLIST.lua}lib/lighttpd/mod_magnet.la
 ${PLIST.geoip}lib/lighttpd/mod_maxminddb.la
 ${PLIST.mbedtls}lib/lighttpd/mod_mbedtls.la
 ${PLIST.nss}lib/lighttpd/mod_nss.la
 ${PLIST.openssl}lib/lighttpd/mod_openssl.la
 lib/lighttpd/mod_proxy.la
-lib/lighttpd/mod_redirect.la
-lib/lighttpd/mod_rewrite.la
 lib/lighttpd/mod_rrdtool.la
-lib/lighttpd/mod_scgi.la
-lib/lighttpd/mod_setenv.la
-lib/lighttpd/mod_simple_vhost.la
 lib/lighttpd/mod_sockproxy.la
 lib/lighttpd/mod_ssi.la
-lib/lighttpd/mod_staticfile.la
 lib/lighttpd/mod_status.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_vhostdb.la
