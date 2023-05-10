@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2985 2023/05/10 19:15:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2986 2023/05/10 19:22:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/libudev version 243 [nikita 2023-05-10]
 	Updated emulators/unicorn to 1.0.3 [adam 2023-05-10]
 	Updated emulators/py-unicorn to 1.0.3 [adam 2023-05-10]
+	Updated pkgtools/rc.d-boot to 20230510 [schmonz 2023-05-10]
