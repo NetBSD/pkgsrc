@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2974 2023/05/10 09:03:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2975 2023/05/10 09:55:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4132,3 +4132,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-elementpath to 4.1.2 [adam 2023-05-10]
 	Updated www/py-django3 to 3.2.19 [adam 2023-05-10]
 	Updated www/py-django-formtools to 2.4 [adam 2023-05-10]
+	Updated security/py-certifi to 2023.5.7 [adam 2023-05-10]
+	Updated devel/py-pygit2 to 1.12.1 [adam 2023-05-10]
+	Updated textproc/py-JWT to 2.7.0 [adam 2023-05-10]
