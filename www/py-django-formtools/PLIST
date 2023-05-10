@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/02/02 06:37:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/10 09:02:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -89,6 +89,8 @@ ${PYSITELIB}/formtools/locale/ka/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/ka/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/ko/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/ko/LC_MESSAGES/django.po
+${PYSITELIB}/formtools/locale/ky/LC_MESSAGES/django.mo
+${PYSITELIB}/formtools/locale/ky/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/lt/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/lt/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/lv/LC_MESSAGES/django.mo
@@ -99,6 +101,8 @@ ${PYSITELIB}/formtools/locale/ml/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/ml/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/mn/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/mn/LC_MESSAGES/django.po
+${PYSITELIB}/formtools/locale/ms/LC_MESSAGES/django.mo
+${PYSITELIB}/formtools/locale/ms/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/nb/LC_MESSAGES/django.mo
 ${PYSITELIB}/formtools/locale/nb/LC_MESSAGES/django.po
 ${PYSITELIB}/formtools/locale/ne/LC_MESSAGES/django.mo
