@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/12/18 17:00:19 gdt Exp $
+# $NetBSD: Makefile,v 1.34 2023/05/10 16:30:23 gdt Exp $
 
 DISTNAME=	unifi-6.5.55
 CATEGORIES=	net
@@ -38,7 +38,7 @@ EXTRACT_ONLY+=		${SNAPPY_JAVA}.tar.gz
 
 SNAPPY=			snappy-1.0.5
 SITES.${SNAPPY}.tar.gz=	http://download.openpkg.org/components/cache/snappy/ \
-			http://ftp.NetBSD.org/pub/pkgsrc/distfiles/snappy-java10/
+			https://ftp.NetBSD.org/pub/pkgsrc/distfiles/snappy-java/
 DISTFILES+=		${SNAPPY}.tar.gz
 EXTRACT_ONLY+=		${SNAPPY}.tar.gz
 
