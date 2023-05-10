@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/12/28 20:24:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/10 19:22:33 schmonz Exp $
 #
 
-PKGNAME=		rc.d-boot-20221225
+PKGNAME=		rc.d-boot-20230510
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
