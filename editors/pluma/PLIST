@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/11/27 05:13:43 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/05/10 23:05:16 gutteridge Exp $
 bin/pluma
 include/pluma/pluma-app-activatable.h
 include/pluma/pluma-app.h
@@ -550,6 +550,7 @@ share/locale/el/LC_MESSAGES/pluma.mo
 share/locale/en_AU/LC_MESSAGES/pluma.mo
 share/locale/en_CA/LC_MESSAGES/pluma.mo
 share/locale/en_GB/LC_MESSAGES/pluma.mo
+share/locale/en_US/LC_MESSAGES/pluma.mo
 share/locale/eo/LC_MESSAGES/pluma.mo
 share/locale/es/LC_MESSAGES/pluma.mo
 share/locale/es_AR/LC_MESSAGES/pluma.mo
