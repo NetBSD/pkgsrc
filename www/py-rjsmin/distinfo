@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/10 22:46:44 markd Exp $
+
+BLAKE2s (rjsmin-1.2.1.tar.gz) = 3ed8e9778db440812ac228053f9417a9e453f8211bcba831ab08249546a3069b
+SHA512 (rjsmin-1.2.1.tar.gz) = 14920b368c287f53b3d5b5f41c43f8cdcd4d5aff9ec824c33870a62fb0641a1850963a2c5fa0bab777ce094090c507f6dbe11ca3090cc6861c7c6f5d7e30fa96
+Size (rjsmin-1.2.1.tar.gz) = 420696 bytes
