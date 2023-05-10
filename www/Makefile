@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1709 2023/05/05 11:01:09 adam Exp $
+# $NetBSD: Makefile,v 1.1710 2023/05/10 21:59:57 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -846,6 +846,7 @@ SUBDIR+=	py-requests-wsgi-adapter
 SUBDIR+=	py-respx
 SUBDIR+=	py-rfc3986
 SUBDIR+=	py-robobrowser
+SUBDIR+=	py-robot-detection
 SUBDIR+=	py-rss2gen
 SUBDIR+=	py-sanic
 SUBDIR+=	py-sanic-routing
