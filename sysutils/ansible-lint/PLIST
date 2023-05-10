@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/04/13 14:28:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/05/10 12:16:37 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -43,6 +43,8 @@ ${PYSITELIB}/ansiblelint/_vendor/ansible_compat/runtime.py
 ${PYSITELIB}/ansiblelint/_vendor/ansible_compat/runtime.pyc
 ${PYSITELIB}/ansiblelint/_vendor/ansible_compat/schema.py
 ${PYSITELIB}/ansiblelint/_vendor/ansible_compat/schema.pyc
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/types.py
+${PYSITELIB}/ansiblelint/_vendor/ansible_compat/types.pyc
 ${PYSITELIB}/ansiblelint/_version.py
 ${PYSITELIB}/ansiblelint/_version.pyc
 ${PYSITELIB}/ansiblelint/app.py
