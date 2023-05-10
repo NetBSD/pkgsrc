@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2986 2023/05/10 19:22:39 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2987 2023/05/10 22:02:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4150,3 +4150,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/unicorn to 1.0.3 [adam 2023-05-10]
 	Updated emulators/py-unicorn to 1.0.3 [adam 2023-05-10]
 	Updated pkgtools/rc.d-boot to 20230510 [schmonz 2023-05-10]
+	Added www/py-robot-detection version 0.4 [markd 2023-05-10]
