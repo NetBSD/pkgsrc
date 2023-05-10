@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/04/12 20:31:36 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/05/10 20:40:47 schmonz Exp $
 
 DISTNAME=	sed-4.9
 PKGNAME=	g${DISTNAME}
@@ -8,9 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
 EXTRACT_SUFX=	.tar.xz
 
 # Building the proper man page needs perl, but perl needs sed to build
-# When updating, please build with the following line commented in
+# When updating, please build with _MAINTAINER_MANPAGE=yes
 # and upload the new man page (doc/sed.1).
-#USE_TOOLS+=	perl
 DISTFILES+=	${DEFAULT_DISTFILES} g${DISTNAME}.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,8 +32,21 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 .include "../../mk/bsd.prefs.mk"
 
+_MAINTAINER_MANPAGE?=	no
+.if !empty(_MAINTAINER_MANPAGE:M[Yy][Ee][Ss])
+MAKE_ENV+=		PKGSRC_MAINTAINER_MANPAGE=yes
+USE_TOOLS+=		perl
+.else
+pre-build: non-maintainer-manpage
+.PHONY: non-maintainer-manpage
+non-maintainer-manpage:
+	${RM} -f ${WRKSRC}/doc/sed.1
+	${MV} ${WRKDIR}/g${DISTNAME}.1 ${WRKSRC}/doc/sed.1
+	${TOUCH} ${WRKSRC}/doc/sed.1
+.endif
+
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/g${DISTNAME}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gsed.1
+	${INSTALL_MAN} ${WRKSRC}/doc/sed.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gsed.1
 .for g n in bin/gsed ${PKGGNUDIR}bin/sed ${PKGMANDIR}/man1/gsed.1 ${PKGGNUDIR}${PKGMANDIR}/man1/sed.1
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
