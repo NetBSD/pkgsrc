@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2973 2023/05/10 05:19:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2974 2023/05/10 09:03:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4129,3 +4129,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/flip-link version 0.1.5 [nikita 2023-05-09]
 	Updated devel/py-xbe to 1.0.1 [adam 2023-05-10]
 	Updated devel/py-ruamel-yaml to 0.17.26 [adam 2023-05-10]
+	Updated textproc/py-elementpath to 4.1.2 [adam 2023-05-10]
+	Updated www/py-django3 to 3.2.19 [adam 2023-05-10]
+	Updated www/py-django-formtools to 2.4 [adam 2023-05-10]
