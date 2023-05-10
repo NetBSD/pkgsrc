@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/09/01 01:23:10 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/10 23:12:15 gutteridge Exp $
 bin/mate-terminal
 bin/mate-terminal.wrapper
 man/man1/mate-terminal.1
@@ -465,6 +465,7 @@ share/locale/el/LC_MESSAGES/mate-terminal.mo
 share/locale/en_AU/LC_MESSAGES/mate-terminal.mo
 share/locale/en_CA/LC_MESSAGES/mate-terminal.mo
 share/locale/en_GB/LC_MESSAGES/mate-terminal.mo
+share/locale/en_US/LC_MESSAGES/mate-terminal.mo
 share/locale/eo/LC_MESSAGES/mate-terminal.mo
 share/locale/es/LC_MESSAGES/mate-terminal.mo
 share/locale/es_AR/LC_MESSAGES/mate-terminal.mo
