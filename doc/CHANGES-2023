@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2972 2023/05/09 21:58:52 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.2973 2023/05/10 05:19:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4127,3 +4127,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/spim to 8.0nb2 [dholland 2023-05-09]
 	Added devel/cargo-binutils version 0.3.6 [nikita 2023-05-09]
 	Added devel/flip-link version 0.1.5 [nikita 2023-05-09]
+	Updated devel/py-xbe to 1.0.1 [adam 2023-05-10]
+	Updated devel/py-ruamel-yaml to 0.17.26 [adam 2023-05-10]
