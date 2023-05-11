@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2998 2023/05/11 09:53:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2999 2023/05/11 09:58:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4174,3 +4174,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hexyl to 0.13.0 [pin 2023-05-11]
 	Updated math/py-sympy to 1.12 [adam 2023-05-11]
 	Updated devel/py-manticore to 0.3.7 [adam 2023-05-11]
+	Updated devel/deepstate to 0.1nb5 [adam 2023-05-11]
+	Removed math/py-z3solver successor math/py-z3 [adam 2023-05-11]
