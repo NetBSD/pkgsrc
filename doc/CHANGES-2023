@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2994 2023/05/11 06:47:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2995 2023/05/11 07:22:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4163,3 +4163,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-z3 to 4.12.1 [adam 2023-05-11]
 	Updated emulators/unicorn to 2.0.1.post1 [adam 2023-05-11]
 	Updated emulators/py-unicorn to 2.0.1.post1 [adam 2023-05-11]
+	Updated devel/py-pyvex to 9.2.50 [adam 2023-05-11]
+	Updated devel/py-ailment to 9.2.50 [adam 2023-05-11]
+	Updated devel/py-archinfo to 9.2.50 [adam 2023-05-11]
+	Updated devel/py-cle to 9.2.50 [adam 2023-05-11]
+	Updated math/py-claripy to 9.2.50 [adam 2023-05-11]
+	Updated devel/py-angr to 9.2.50 [adam 2023-05-11]
