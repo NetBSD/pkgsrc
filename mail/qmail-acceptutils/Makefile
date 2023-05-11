@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/04/24 00:13:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2023/05/11 17:49:29 schmonz Exp $
 
 DISTNAME=		netqmail-1.06
 PKGNAME=		qmail-acceptutils-${ACPATCHVERSION}
-PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://netqmail.org/
 
@@ -11,7 +10,7 @@ HOMEPAGE=		https://schmonz.com/software/acceptutils/
 COMMENT=		TLS and AUTH for qmail without patching
 LICENSE=		public-domain
 
-ACPATCHVERSION=		20201214
+ACPATCHVERSION=		20230511
 ACPATCH=		${DISTNAME}-acceptutils-${ACPATCHVERSION}.patch
 PATCHFILES+=		${ACPATCH}
 SITES.${ACPATCH}=	${HOMEPAGE}
