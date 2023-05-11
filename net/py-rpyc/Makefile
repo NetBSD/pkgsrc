@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/01 09:11:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/11 09:31:10 adam Exp $
 
 DISTNAME=	rpyc-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Remote Python Call (RPyC), a transparent and symmetric RPC library
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-plumbum>=1.6.1:../../devel/py-plumbum
+
+PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
