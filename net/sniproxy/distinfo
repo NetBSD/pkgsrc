@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:06:56 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/11 05:14:00 schmonz Exp $
 
-BLAKE2s (sniproxy-0.6.0.tar.gz) = 22d40f5b6c75d40672d937fdc9963b7b177a9fd7a5ebfd1a33a34c943434dd94
-SHA512 (sniproxy-0.6.0.tar.gz) = 8a99573673bdd57e528c5781cb166d39c80daed699382b24c3fa18a6011d074a1d9e470fee404d24b4450cf067c9995125910b2941b5216d88d189a1d79ebf73
-Size (sniproxy-0.6.0.tar.gz) = 78515 bytes
+BLAKE2s (sniproxy-0.6.1.tar.gz) = 8e1f6529c9d1d86a94f06cbcc9c40d9374f54e2fcb499198422997796c53c7af
+SHA512 (sniproxy-0.6.1.tar.gz) = 4a20830ee6dfeb33a363c480c4698c263a8deccfcac2071198248147ef40d951a1b551c373b0e1e29f6b6bfcdac350390f8f4c3653ed9d1f1940ed50c96af785
+Size (sniproxy-0.6.1.tar.gz) = 78939 bytes
 SHA1 (patch-man_sniproxy.8) = 6c23fd3a826cfdd37b656e235392263995f0bad0
 SHA1 (patch-man_sniproxy.conf.5) = d18a997fe2d3bf570c3c3e8530ec2c6487e35ba0
 SHA1 (patch-sniproxy.conf) = 7a7c596ec2947cc94271dbd7298dd3e9896260f7
