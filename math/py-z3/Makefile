@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.4 2020/05/31 20:47:23 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/11 06:43:43 adam Exp $
 
 .include "../../math/z3/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-GITHUB_PROJECT=	z3
+COMMENT=	Efficient SMT solver library
 
-COMMENT=	Python bindings for the Z3 theorem prover / SMT solver
+USE_TOOLS+=	cmake ninja
+PYSETUPSUBDIR=	src/api/python
+EGG_NAME=	${DISTNAME:S/z3/z3_solver/}.0
 
-CONFIGURE_ARGS+=	--python
-NO_BUILD=		yes
-PY_PATCHPLIST=		yes
+.include "../../mk/bsd.prefs.mk"
 
-PYZ3DIR=		${PREFIX}/${PYSITELIB}/z3
-INSTALLATION_DIRS+=	${PYZ3DIR}
-INSTALLATION_DIRS+=	${PYZ3DIR}/lib
+post-install:
+	# same binary as in math/z3
+	${RM} ${DESTDIR}${PREFIX}/bin/z3
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/z3/lib/libz3.${PKGVERSION_NOREV:R}.dylib \
+	${DESTDIR}${PREFIX}/${PYSITELIB}/z3/lib/libz3.${PKGVERSION_NOREV:R}.dylib
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/z3/lib/libz3.dylib \
+	${DESTDIR}${PREFIX}/${PYSITELIB}/z3/lib/libz3.dylib
+.endif
 
-do-install:
-	${LN} -s ${LIBDIR}/libz3.so ${DESTDIR}${PYZ3DIR}/lib/libz3.so
-	${INSTALL_DATA} ${WRKSRC}/build/python/z3/*.py ${DESTDIR}${PYZ3DIR}
-	${PY_COMPILE_ALL} ${DESTDIR}${PYZ3DIR}
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/z3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
