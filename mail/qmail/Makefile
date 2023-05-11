@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2023/04/24 17:22:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.127 2023/05/11 16:52:34 schmonz Exp $
 #
 
 DISTNAME=		notqmail-1.08
@@ -136,7 +136,7 @@ READMES=		README.pkgsrc
 QMAILPATCHES=			notqmail:${DEFAULT_DISTFILES}
 
 QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
-TLSREMOTE_PATCH=		notqmail-1.07-tls-20200107-onlyremote-20200202.patch
+TLSREMOTE_PATCH=		notqmail-1.07-tls-20200107-onlyremote-20230511.patch
 PATCHFILES+=			${TLSREMOTE_PATCH}
 SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/software/tlsonlyremote/
 
