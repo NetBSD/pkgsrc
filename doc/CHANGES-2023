@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2991 2023/05/10 23:53:47 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.2992 2023/05/11 05:14:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4156,3 +4156,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/pluma to 1.26.1 [gutteridge 2023-05-10]
 	Updated x11/mate-terminal to 1.26.1 [gutteridge 2023-05-10]
 	Updated misc/mate-utils to 1.26.1 [gutteridge 2023-05-10]
+	Updated net/sniproxy to 0.6.1 [schmonz 2023-05-11]
