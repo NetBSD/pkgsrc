@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2022/11/21 17:30:07 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/05/11 09:38:04 adam Exp $
 
-DISTNAME=	sympy-1.11.1
+DISTNAME=	sympy-1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
@@ -14,11 +14,11 @@ DEPENDS+=	${PYPKGPREFIX}-mpmath>=0.19:../../math/py-mpmath
 
 USE_LANGUAGES=	# none
 
+USE_PKG_RESOURCES=	yes
+
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
