@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/08 20:53:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/11 20:43:23 markd Exp $
 ${PYSITELIB}/flufl/lock/__init__.py
 ${PYSITELIB}/flufl/lock/__init__.pyc
 ${PYSITELIB}/flufl/lock/_lockfile.py
 ${PYSITELIB}/flufl/lock/_lockfile.pyc
 ${PYSITELIB}/flufl/lock/py.typed
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/INSTALLER
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/REQUESTED
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/direct_url.json
-${PYSITELIB}/flufl_lock-${PKGVERSION}.dist-info/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
