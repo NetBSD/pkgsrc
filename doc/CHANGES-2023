@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2997 2023/05/11 09:43:50 pin Exp $
+$NetBSD: CHANGES-2023,v 1.2998 2023/05/11 09:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4172,3 +4172,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/py-solc-select version 1.0.3 [adam 2023-05-11]
 	Updated finance/py-crytic-compile to 0.3.1 [adam 2023-05-11]
 	Updated sysutils/hexyl to 0.13.0 [pin 2023-05-11]
+	Updated math/py-sympy to 1.12 [adam 2023-05-11]
+	Updated devel/py-manticore to 0.3.7 [adam 2023-05-11]
