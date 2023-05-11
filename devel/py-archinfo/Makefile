@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/11 07:18:11 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	archinfo-${ANGR_VERSION}
@@ -13,11 +12,14 @@ HOMEPAGE=	https://github.com/angr/archinfo
 COMMENT=	Classes with architecture-specific information
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests/*.py
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
