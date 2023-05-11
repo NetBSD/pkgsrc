@@ -1,4 +1,4 @@
-# $NetBSD: vex.mk,v 1.4 2021/06/02 23:27:11 khorben Exp $
+# $NetBSD: vex.mk,v 1.5 2023/05/11 07:16:04 adam Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_TAG=	v${ANGR_VERSION}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://github.com/angr/vex/
+HOMEPAGE=	https://github.com/angr/vex
 COMMENT=	Patched version of VEX to work with PyVEX
 LICENSE=	2-clause-bsd
 

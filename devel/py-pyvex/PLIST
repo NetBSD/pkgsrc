@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/08/18 20:24:58 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/11 07:16:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,6 +36,7 @@ ${PYSITELIB}/pyvex/include/libvex_guest_mips64.h
 ${PYSITELIB}/pyvex/include/libvex_guest_offsets.h
 ${PYSITELIB}/pyvex/include/libvex_guest_ppc32.h
 ${PYSITELIB}/pyvex/include/libvex_guest_ppc64.h
+${PYSITELIB}/pyvex/include/libvex_guest_riscv64.h
 ${PYSITELIB}/pyvex/include/libvex_guest_s390x.h
 ${PYSITELIB}/pyvex/include/libvex_guest_tilegx.h
 ${PYSITELIB}/pyvex/include/libvex_guest_x86.h
@@ -57,9 +58,15 @@ ${PYSITELIB}/pyvex/lifting/gym/aarch64_spotter.pyo
 ${PYSITELIB}/pyvex/lifting/gym/arm_spotter.py
 ${PYSITELIB}/pyvex/lifting/gym/arm_spotter.pyc
 ${PYSITELIB}/pyvex/lifting/gym/arm_spotter.pyo
+${PYSITELIB}/pyvex/lifting/gym/x86_spotter.py
+${PYSITELIB}/pyvex/lifting/gym/x86_spotter.pyc
+${PYSITELIB}/pyvex/lifting/gym/x86_spotter.pyo
 ${PYSITELIB}/pyvex/lifting/libvex.py
 ${PYSITELIB}/pyvex/lifting/libvex.pyc
 ${PYSITELIB}/pyvex/lifting/libvex.pyo
+${PYSITELIB}/pyvex/lifting/lift_function.py
+${PYSITELIB}/pyvex/lifting/lift_function.pyc
+${PYSITELIB}/pyvex/lifting/lift_function.pyo
 ${PYSITELIB}/pyvex/lifting/lifter.py
 ${PYSITELIB}/pyvex/lifting/lifter.pyc
 ${PYSITELIB}/pyvex/lifting/lifter.pyo
@@ -87,10 +94,16 @@ ${PYSITELIB}/pyvex/lifting/util/vex_helper.pyo
 ${PYSITELIB}/pyvex/lifting/zerodivision.py
 ${PYSITELIB}/pyvex/lifting/zerodivision.pyc
 ${PYSITELIB}/pyvex/lifting/zerodivision.pyo
+${PYSITELIB}/pyvex/native.py
+${PYSITELIB}/pyvex/native.pyc
+${PYSITELIB}/pyvex/native.pyo
 ${PYSITELIB}/pyvex/py.typed
 ${PYSITELIB}/pyvex/stmt.py
 ${PYSITELIB}/pyvex/stmt.pyc
 ${PYSITELIB}/pyvex/stmt.pyo
+${PYSITELIB}/pyvex/utils.py
+${PYSITELIB}/pyvex/utils.pyc
+${PYSITELIB}/pyvex/utils.pyo
 ${PYSITELIB}/pyvex/vex_ffi.py
 ${PYSITELIB}/pyvex/vex_ffi.pyc
 ${PYSITELIB}/pyvex/vex_ffi.pyo
