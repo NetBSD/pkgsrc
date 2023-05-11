@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/05/13 10:41:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/11 06:43:43 adam Exp $
 bin/z3
 include/z3++.h
 include/z3.h
@@ -14,22 +14,11 @@ include/z3_rcf.h
 include/z3_spacer.h
 include/z3_v1.h
 include/z3_version.h
-${PLIST.java}lib/com.microsoft.z3.jar
+lib/cmake/z3/Z3Config.cmake
+lib/cmake/z3/Z3ConfigVersion.cmake
+lib/cmake/z3/Z3Targets-relwithdebinfo.cmake
+lib/cmake/z3/Z3Targets.cmake
 lib/libz3.so
-${PLIST.java}lib/libz3java.so
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/META
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/dllz3ml.so
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/libz3ml.a
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3.cmi
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3.cmx
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3.mli
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3enums.cmi
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3enums.cmx
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3enums.mli
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3ml.a
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3ml.cma
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3ml.cmxa
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3ml.cmxs
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.cmi
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.cmx
-${PLIST.ocaml}lib/ocaml/site-lib/Z3/z3native.mli
+lib/libz3.so.4.12
+lib/libz3.so.${PKGVERSION}.0
+lib/pkgconfig/z3.pc
