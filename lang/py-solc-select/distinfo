@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/11 08:38:18 adam Exp $
+
+BLAKE2s (solc-select-1.0.3.tar.gz) = ecc8d7d3b7eb731e256c26ecc305e83969f67555241ab3637d1c32840813e1a6
+SHA512 (solc-select-1.0.3.tar.gz) = ca03a2c8bda53d3505151949cf20624b91d69a853da06274d74538b25df0c04df7ea4623a11e308cdad1e7e8cde45ccbc7902a4192261da0ce819b6e7647ee16
+Size (solc-select-1.0.3.tar.gz) = 20045 bytes

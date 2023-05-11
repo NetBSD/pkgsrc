@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/11 08:38:18 adam Exp $
+bin/solc-${PYVERSSUFFIX}
+bin/solc-select-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/solc_select/__init__.py
+${PYSITELIB}/solc_select/__init__.pyc
+${PYSITELIB}/solc_select/__init__.pyo
+${PYSITELIB}/solc_select/__main__.py
+${PYSITELIB}/solc_select/__main__.pyc
+${PYSITELIB}/solc_select/__main__.pyo
+${PYSITELIB}/solc_select/constants.py
+${PYSITELIB}/solc_select/constants.pyc
+${PYSITELIB}/solc_select/constants.pyo
+${PYSITELIB}/solc_select/solc_select.py
+${PYSITELIB}/solc_select/solc_select.pyc
+${PYSITELIB}/solc_select/solc_select.pyo

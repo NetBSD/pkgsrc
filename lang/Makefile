@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2023/05/05 09:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.690 2023/05/11 08:38:18 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -253,6 +253,7 @@ SUBDIR+=	py-python-language-server
 SUBDIR+=	py-python-lua
 SUBDIR+=	py-pythonz
 SUBDIR+=	py-six
+SUBDIR+=	py-solc-select
 SUBDIR+=	py-spark-parser
 SUBDIR+=	py-uncompyle6
 SUBDIR+=	py27-html-docs
