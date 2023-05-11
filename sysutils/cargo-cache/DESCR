@@ -1,0 +1,2 @@
+Display information on the cargo cache (~/.cargo/ or $CARGO_HOME). Optional
+cache pruning.
