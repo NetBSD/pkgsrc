@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/11 05:23:30 adam Exp $
+bin/dumpsig-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/nampa/__init__.py
+${PYSITELIB}/nampa/__init__.pyc
+${PYSITELIB}/nampa/__init__.pyo
+${PYSITELIB}/nampa/binrw.py
+${PYSITELIB}/nampa/binrw.pyc
+${PYSITELIB}/nampa/binrw.pyo
+${PYSITELIB}/nampa/crc.py
+${PYSITELIB}/nampa/crc.pyc
+${PYSITELIB}/nampa/crc.pyo
+${PYSITELIB}/nampa/flirt.py
+${PYSITELIB}/nampa/flirt.pyc
+${PYSITELIB}/nampa/flirt.pyo
