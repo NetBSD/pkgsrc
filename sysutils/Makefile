@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1045 2023/05/10 17:39:08 nikita Exp $
+# $NetBSD: Makefile,v 1.1046 2023/05/11 05:27:50 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -84,6 +84,7 @@ SUBDIR+=	caja
 SUBDIR+=	caja-dropbox
 SUBDIR+=	caja-extensions
 SUBDIR+=	capistrano
+SUBDIR+=	cargo-cache
 SUBDIR+=	ccd2iso
 SUBDIR+=	cchmod
 SUBDIR+=	ccze
