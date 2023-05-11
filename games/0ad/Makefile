@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/07 12:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/11 22:51:48 nikita Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -97,6 +97,7 @@ do-configure:
 		${CONFIGURE_PCH} ${CONFIGURE_EDITOR} ${CONFIGURE_TESTS}
 
 do-install:
+	# TODO: currently ends up with ${PREFIX}/pkg/lib duplicate in the rpath
 	${INSTALL_PROGRAM} ${WRKSRC}/binaries/system/pyrogenesis ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/build/resources/0ad.sh ${DESTDIR}${PREFIX}/bin/0ad
 .if !empty(PKG_OPTIONS:Meditor)
@@ -134,15 +135,16 @@ do-install:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../chat/gloox/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/mozjs78/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mtests)
@@ -151,10 +153,10 @@ do-install:
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../net/miniupnpc/buildlink3.mk"
-.include "../../security/libsodium/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
