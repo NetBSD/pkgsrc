@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.307 2023/02/24 08:20:18 adam Exp $
+$NetBSD: distinfo,v 1.308 2023/05/11 04:43:36 schmonz Exp $
 
 BLAKE2s (glib-2.74.6.tar.xz) = 6f761eeff44efed50a0c0a763564c55f37cde6b37a42bbb464c21f5e620588ef
 SHA512 (glib-2.74.6.tar.xz) = 6b6d113012ec90f6cf77513ec0132668c49aa7224c806181ad662388701004667cdf6d263050d6f896b8688c085abf461aa3e659eb288e6ba93ba4970a2f181b
@@ -13,6 +13,7 @@ SHA1 (patch-gio_gunixmounts.c) = 48b6945fde5b1721ca246eb7e79f73b5b480e816
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 78544b4c32ef3b44e8721b1c07407f46a9e8c8a4
 SHA1 (patch-gio_meson.build) = c2900405ed83fa84d5590b83c7bcf6f994694388
 SHA1 (patch-gio_tests_gdbus-export.c) = 59d85ca079d02b52e33153c7d2ac1cc48c26707a
+SHA1 (patch-gio_tests_meson.build) = 88dad0c56d7d5a4915b20745a7d582039163d852
 SHA1 (patch-glib_gatomic.c) = deb2e74010523ad41ce141aa2f49b807ba2672e6
 SHA1 (patch-glib_gatomic.h) = d1c39c3594a5c89d196349e5eafb5512795f55f8
 SHA1 (patch-glib_genviron.c) = dd25be36536d56dfe933225d785eb65f753c4a97
