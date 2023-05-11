@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/05/11 07:17:24 adam Exp $
 
-BLAKE2s (ailment-9.0.7491.tar.gz) = 59ffa316abf80628da9b7ab0bf438ff1b00704cff8a1b5ef84e5913491089c1f
-SHA512 (ailment-9.0.7491.tar.gz) = 65cbaa2bb817134924842a50dc68165702ebb78e18a76f5bb4e6d7ecccb1b72a72c34b1e96581887d5ae734b5c2c03b8a3357582766899a08da4c5ac7538dadd
-Size (ailment-9.0.7491.tar.gz) = 13851 bytes
+BLAKE2s (ailment-9.2.50.tar.gz) = c139799db931b4501c8f16801b718dadf075d2961b69102509bfb1b5e05c3ee6
+SHA512 (ailment-9.2.50.tar.gz) = cab1a183d68042317cba89f0b2655ebbb2756955ed6d3b0c8af2d3da4171391f2ff1b8ad5d8302ed676378313ced5a710c3f7f6419b24b6536719e9654ababdc
+Size (ailment-9.2.50.tar.gz) = 24739 bytes
