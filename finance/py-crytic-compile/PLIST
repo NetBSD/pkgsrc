@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 00:29:41 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/11 08:41:07 adam Exp $
 bin/crytic-compile-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/crytic_compile/__init__.pyo
 ${PYSITELIB}/crytic_compile/__main__.py
 ${PYSITELIB}/crytic_compile/__main__.pyc
 ${PYSITELIB}/crytic_compile/__main__.pyo
+${PYSITELIB}/crytic_compile/compilation_unit.py
+${PYSITELIB}/crytic_compile/compilation_unit.pyc
+${PYSITELIB}/crytic_compile/compilation_unit.pyo
 ${PYSITELIB}/crytic_compile/compiler/__init__.py
 ${PYSITELIB}/crytic_compile/compiler/__init__.pyc
 ${PYSITELIB}/crytic_compile/compiler/__init__.pyo
@@ -66,6 +69,12 @@ ${PYSITELIB}/crytic_compile/platform/etherscan.pyo
 ${PYSITELIB}/crytic_compile/platform/exceptions.py
 ${PYSITELIB}/crytic_compile/platform/exceptions.pyc
 ${PYSITELIB}/crytic_compile/platform/exceptions.pyo
+${PYSITELIB}/crytic_compile/platform/foundry.py
+${PYSITELIB}/crytic_compile/platform/foundry.pyc
+${PYSITELIB}/crytic_compile/platform/foundry.pyo
+${PYSITELIB}/crytic_compile/platform/hardhat.py
+${PYSITELIB}/crytic_compile/platform/hardhat.pyc
+${PYSITELIB}/crytic_compile/platform/hardhat.pyo
 ${PYSITELIB}/crytic_compile/platform/solc.py
 ${PYSITELIB}/crytic_compile/platform/solc.pyc
 ${PYSITELIB}/crytic_compile/platform/solc.pyo
@@ -88,9 +97,15 @@ ${PYSITELIB}/crytic_compile/platform/waffle.py
 ${PYSITELIB}/crytic_compile/platform/waffle.pyc
 ${PYSITELIB}/crytic_compile/platform/waffle.pyo
 ${PYSITELIB}/crytic_compile/py.typed
+${PYSITELIB}/crytic_compile/source_unit.py
+${PYSITELIB}/crytic_compile/source_unit.pyc
+${PYSITELIB}/crytic_compile/source_unit.pyo
 ${PYSITELIB}/crytic_compile/utils/__init__.py
 ${PYSITELIB}/crytic_compile/utils/__init__.pyc
 ${PYSITELIB}/crytic_compile/utils/__init__.pyo
+${PYSITELIB}/crytic_compile/utils/name_collision.py
+${PYSITELIB}/crytic_compile/utils/name_collision.pyc
+${PYSITELIB}/crytic_compile/utils/name_collision.pyo
 ${PYSITELIB}/crytic_compile/utils/naming.py
 ${PYSITELIB}/crytic_compile/utils/naming.pyc
 ${PYSITELIB}/crytic_compile/utils/naming.pyo
@@ -100,6 +115,9 @@ ${PYSITELIB}/crytic_compile/utils/natspec.pyo
 ${PYSITELIB}/crytic_compile/utils/npm.py
 ${PYSITELIB}/crytic_compile/utils/npm.pyc
 ${PYSITELIB}/crytic_compile/utils/npm.pyo
+${PYSITELIB}/crytic_compile/utils/subprocess.py
+${PYSITELIB}/crytic_compile/utils/subprocess.pyc
+${PYSITELIB}/crytic_compile/utils/subprocess.pyo
 ${PYSITELIB}/crytic_compile/utils/unit_tests.py
 ${PYSITELIB}/crytic_compile/utils/unit_tests.pyc
 ${PYSITELIB}/crytic_compile/utils/unit_tests.pyo
