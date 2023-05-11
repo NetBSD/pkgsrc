@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.134 2023/04/19 08:08:19 adam Exp $
+# $NetBSD: Makefile,v 1.135 2023/05/11 22:23:19 wiz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Version control system, base programs and libraries
 
 # on at least solaris, configure fails to figure out
@@ -79,5 +79,4 @@ svn-build-outputs-hack:
 	${MV} -f ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk
 
 .include "../../devel/apr/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
