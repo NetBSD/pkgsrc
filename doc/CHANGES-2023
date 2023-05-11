@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2992 2023/05/11 05:14:05 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.2993 2023/05/11 05:28:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4157,3 +4157,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mate-terminal to 1.26.1 [gutteridge 2023-05-10]
 	Updated misc/mate-utils to 1.26.1 [gutteridge 2023-05-10]
 	Updated net/sniproxy to 0.6.1 [schmonz 2023-05-11]
+	Added devel/py-nampa version 0.1.1 [adam 2023-05-11]
+	Added sysutils/cargo-cache version 0.8.3 [adam 2023-05-11]
