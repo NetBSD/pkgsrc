@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.4 2023/01/09 06:39:38 khorben Exp $
+#	$NetBSD: Makefile,v 1.5 2023/05/11 09:18:47 adam Exp $
 
 VERSION=	0.9.5
 DISTNAME=	PySMT-${VERSION}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=0:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-z3>=0:../../math/py-z3
+
+PYTHON_SELF_CONFLICT=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
