@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/10 19:14:51 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/11 06:47:11 adam Exp $
 
 .include "../../emulators/unicorn/Makefile.common"
 
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 PYSETUPSUBDIR=	bindings/python
+MAKE_ENV+=	LIBUNICORN_PATH=${BUILDLINK_PREFIX.unicorn}/lib
 
 .include "../../emulators/unicorn/buildlink3.mk"
 .include "../../lang/python/egg.mk"
