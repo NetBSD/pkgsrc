@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2022/12/07 16:32:55 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/05/11 13:30:17 nikita Exp $
 
 BLAKE2s (qt-creator-opensource-src-5.0.3.zip) = 961dcaa2d6b6e2b739d774f4a7b0090730bad4b5cf5c93a80f28c39caafdd9a3
 SHA512 (qt-creator-opensource-src-5.0.3.zip) = 9ba7d7a1b506039460efedc9defe974c06905b5024f3e33de2328dcac335ba58d24c2c73ed2083f40305c4393507d6257ff755e2bfe3692cffd601f50bfce131
 Size (qt-creator-opensource-src-5.0.3.zip) = 72614121 bytes
 SHA1 (patch-share_share.pro) = e6f9448295a6eeb78b12979684b53ea29649da95
 SHA1 (patch-src_libs_3rdparty_sqlite_sqlite3.c) = fadde723c6e4fe758d9d66e00e95044755913b92
-SHA1 (patch-src_plugins_clangformat_clangformatutils.cpp) = a91cfd9b3a6bd84dfb82ee51dcf562799b974080
+SHA1 (patch-src_plugins_clangformat_clangformatbaseindenter.cpp) = bb8aed9d0bb7fdbf95a87591f67df4d53a28b7ca
+SHA1 (patch-src_plugins_clangformat_clangformatutils.cpp) = f3abb993478ea42c59319e111f655acc4687226c
