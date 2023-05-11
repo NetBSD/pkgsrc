@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/05/08 20:43:29 markd Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/11 20:42:04 markd Exp $
 
 DISTNAME=	flufl.i18n-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.i18n/}
 
@@ -14,6 +15,11 @@ DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# fixup wrong WHEEL_INFODIR
+post-install:
+	mv ${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME:S/./_/}.dist-info \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME}.dist-info
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
