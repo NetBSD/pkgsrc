@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/12/08 10:55:17 pin Exp $
+$NetBSD: distinfo,v 1.5 2023/05/11 09:43:25 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -66,9 +66,9 @@ Size (hermit-abi-0.1.19.crate) = 9979 bytes
 BLAKE2s (hermit-abi-0.2.6.crate) = 37cb3bae542888f7efb0a48c9fed34fa42d9de604cf6dc0543dcc37d6fb78f51
 SHA512 (hermit-abi-0.2.6.crate) = bad8442bb822a9c99f6536db16523c80f5139af6a139bcc359c03725c59ff935816e2ecc5c491dc362ac75ab2dff41ab1e9dd29431f5e9a109b60eb9b7a8dc28
 Size (hermit-abi-0.2.6.crate) = 13027 bytes
-BLAKE2s (hexyl-0.12.0.tar.gz) = 5f2a30f768521d05faaba8d8281f4dac9f437322374555d9a3a1b666db5e1040
-SHA512 (hexyl-0.12.0.tar.gz) = 0a6d212f15e6078f0f553b8598ed96ae8e34a7ad1e7aafee2ba435111a18fbf1f265464d6e3a30bed551cc8387dc5da4f87221f10073258dcdb93c985e14b21d
-Size (hexyl-0.12.0.tar.gz) = 37415 bytes
+BLAKE2s (hexyl-0.13.0.tar.gz) = b938eed965f71f9df068f6b1f23fd86d85bd1c73813c72e1c0883702b6ee4cba
+SHA512 (hexyl-0.13.0.tar.gz) = 734f28483baed4a3b0aa93f6c4f84fd656dad858d5302a2edec70998c60854f0f7ecde2c6a53a89291f4bb5bb69ff70fd45f4e04b794ba56d67f66a029837a6a
+Size (hexyl-0.13.0.tar.gz) = 38373 bytes
 BLAKE2s (io-lifetimes-1.0.3.crate) = bf6e14e1051022513c1803ff426f3068da7b4da97d0f370292e1e0caf8a6b5e9
 SHA512 (io-lifetimes-1.0.3.crate) = afb868979d54bc99d5c8a1c31062c91ea9e920470bb1f0bce95c2ebe0ef22fe8970ba86b2ad570d789f648485ea4d75fd83bba34e5a590a443698c713a321388
 Size (io-lifetimes-1.0.3.crate) = 35650 bytes
