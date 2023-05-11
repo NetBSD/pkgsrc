@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/11 05:23:30 adam Exp $
+
+BLAKE2s (nampa-0.1.1.tar.gz) = ffaa0ac1aad93c465dd1adb2794429275fa9ef9df422cc561622bc885182eb98
+SHA512 (nampa-0.1.1.tar.gz) = 1e079c9ef4df07c8b8b6cd9894bcd0577b4115a9ac4679620109c9b80173ae1811a273dfdaf8813a3eefea4ec44f3d4494dc3381f4a9e84049a2995878a925a2
+Size (nampa-0.1.1.tar.gz) = 7284 bytes
