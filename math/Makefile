@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2023/05/06 09:27:07 wiz Exp $
+# $NetBSD: Makefile,v 1.563 2023/05/11 09:57:54 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -432,7 +432,6 @@ SUBDIR+=	py-tensorboard
 SUBDIR+=	py-uncertainties
 SUBDIR+=	py-xarray
 SUBDIR+=	py-z3
-SUBDIR+=	py-z3solver
 SUBDIR+=	qalculate
 SUBDIR+=	qalculate-gtk
 SUBDIR+=	qhull
