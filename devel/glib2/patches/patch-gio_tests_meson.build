@@ -1,0 +1,62 @@
+$NetBSD: patch-gio_tests_meson.build,v 1.6 2023/05/11 04:43:36 schmonz Exp $
+
+Work around PR pkg/57399.
+
+--- gio/tests/meson.build.orig	2023-02-23 13:54:27.000000000 +0000
++++ gio/tests/meson.build
+@@ -662,6 +662,7 @@ if meson.can_run_host_binaries()
+     plugin_resources_c = custom_target('plugin-resources.c',
+       input : 'test4.gresource.xml',
+       output : 'plugin-resources.c',
++      env : {'LC_ALL': 'en_US.UTF-8'},
+       command : [glib_compile_resources,
+                  compiler_type,
+                  '--target=@OUTPUT@',
+@@ -690,6 +691,7 @@ if meson.can_run_host_binaries()
+   test_gresource = custom_target('test.gresource',
+     input : 'test.gresource.xml',
+     output : 'test.gresource',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -704,6 +706,7 @@ if meson.can_run_host_binaries()
+   test_resources2_c = custom_target('test_resources2.c',
+     input : 'test3.gresource.xml',
+     output : 'test_resources2.c',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -717,6 +720,7 @@ if meson.can_run_host_binaries()
+   test_resources2_h = custom_target('test_resources2.h',
+     input : 'test3.gresource.xml',
+     output : 'test_resources2.h',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -731,6 +735,7 @@ if meson.can_run_host_binaries()
+     input : 'test2.gresource.xml',
+     depends : big_test_resource,
+     output : 'test_resources.c',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -744,6 +749,7 @@ if meson.can_run_host_binaries()
+   digit_test_resources_c = custom_target('digit_test_resources.c',
+     input : '111_digit_test.gresource.xml',
+     output : 'digit_test_resources.c',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -757,6 +763,7 @@ if meson.can_run_host_binaries()
+   digit_test_resources_h = custom_target('digit_test_resources.h',
+     input : '111_digit_test.gresource.xml',
+     output : 'digit_test_resources.h',
++    env : {'LC_ALL': 'en_US.UTF-8'},
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
