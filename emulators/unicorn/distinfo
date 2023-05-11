@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.11 2023/05/10 19:14:50 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/05/11 06:47:11 adam Exp $
 
-BLAKE2s (unicorn-1.0.3.tar.gz) = 53a6a919c8e46d14add3be520531eb3d6b8d1686855a6980dfc57ebe8edbd852
-SHA512 (unicorn-1.0.3.tar.gz) = 10f1b5194358c65bc94723eaafd7b4167fee18f96a4810f46f8c78ed1ef5584546e66e8c910fa4eeadd791fcd73edea68f898e337081409fd188b4090b78a7ca
-Size (unicorn-1.0.3.tar.gz) = 3759365 bytes
-SHA1 (patch-Makefile) = a4cee3d8f880515e10dd053a6d2e93ea019f34d7
-SHA1 (patch-bindings_python_setup.py) = 035888ce0599abb8ef4670fffb051cb1510d9a29
+BLAKE2s (unicorn-2.0.1.post1.tar.gz) = d2a3e24b963448e11d1b46d7fa3edbd6d1dbef1d2f996b6c66aee2e6f7297c4b
+SHA512 (unicorn-2.0.1.post1.tar.gz) = 8694d6bc92e3424a8ad050316413d53e56e0f55e7cad7517fb3e98e670a0f1768b060ead8f195da13607cec89a964364f05a8b9d0dc074f4ac5e51026f8343ad
+Size (unicorn-2.0.1.post1.tar.gz) = 4071380 bytes
 SHA1 (patch-bindings_python_unicorn_unicorn.py) = d7653d205bc999b8c53941c161771b8f72fcfa6e
+SHA1 (patch-bundle__static.cmake) = f6ebe735b2b7e8ef151f15b95a7ee0bb9b9d9ef6
