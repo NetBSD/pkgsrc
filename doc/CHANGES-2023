@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.2993 2023/05/11 05:28:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.2994 2023/05/11 06:47:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4159,3 +4159,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sniproxy to 0.6.1 [schmonz 2023-05-11]
 	Added devel/py-nampa version 0.1.1 [adam 2023-05-11]
 	Added sysutils/cargo-cache version 0.8.3 [adam 2023-05-11]
+	Updated math/z3 to 4.12.1 [adam 2023-05-11]
+	Updated math/py-z3 to 4.12.1 [adam 2023-05-11]
+	Updated emulators/unicorn to 2.0.1.post1 [adam 2023-05-11]
+	Updated emulators/py-unicorn to 2.0.1.post1 [adam 2023-05-11]
