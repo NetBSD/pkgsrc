@@ -1,6 +1,10 @@
-$NetBSD: patch-gsearchtool_help_Makefile.in,v 1.3 2023/05/10 23:56:22 gutteridge Exp $
+$NetBSD: patch-gsearchtool_help_Makefile.in,v 1.4 2023/05/11 00:05:57 gutteridge Exp $
 
 Disable the pt translation, since it causes itstool to fail.
+itstool bug report: https://github.com/itstool/itstool/issues/36
+mate-utils bug report: https://github.com/mate-desktop/mate-utils/issues/210
+Possibly the same (now closed) issue as: https://gitlab.gnome.org/GNOME/libxml2/-/issues/64
+which we're carrying (a probably incomplete) patch for already in libxml2.
 
 --- gsearchtool/help/Makefile.in.orig	2023-05-09 13:40:34.000000000 +0000
 +++ gsearchtool/help/Makefile.in
