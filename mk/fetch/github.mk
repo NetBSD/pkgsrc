@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.15 2021/04/10 09:03:13 nia Exp $
+# $NetBSD: github.mk,v 1.16 2023/05/12 20:09:09 dholland Exp $
 #
 # github.com master site handling
 #
@@ -45,8 +45,8 @@ PKG_FAIL_REASON+=	"MASTER_SITES must match https://github.com/account/"	\
 GITHUB_PROJECT?=	${PKGBASE}
 GITHUB_TAG?=		${PKGVERSION_NOREV}
 
-.  if !empty(GITHUB_TAG:Mmaster)
-PKG_FAIL_REASON+=	"master is not a valid tag name, use an explicit commit hash"
+.  if !empty(GITHUB_TAG:Mmaster) || !empty(GITHUB_TAG:Mmain)
+PKG_FAIL_REASON+=	"main (or master) is not a valid tag name; use an explicit commit hash or a tag, not a branch"
 .  endif
 
 .  if !defined(GITHUB_TYPE)
