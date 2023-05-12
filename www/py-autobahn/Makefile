@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2023/05/05 11:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/05/12 11:37:39 wiz Exp $
 
 DISTNAME=	autobahn-23.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
@@ -18,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 TEST_ENV+=	USE_ASYNCIO=1
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

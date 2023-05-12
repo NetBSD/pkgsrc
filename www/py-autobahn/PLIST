@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.18 2023/05/05 11:58:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/05/12 11:37:39 wiz Exp $
 bin/wamp-${PYVERSSUFFIX}
 bin/xbrnetwork-${PYVERSSUFFIX}
 bin/xbrnetwork-ui-${PYVERSSUFFIX}
+${PYSITELIB}/_nvx_utf8validator.abi3.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
