@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/05/24 09:54:05 obache Exp $
+$NetBSD: patch-aa,v 1.4 2023/05/12 09:02:12 dholland Exp $
 
 --- Imakefile.orig	1994-02-16 10:35:06.000000000 +0000
 +++ Imakefile
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.3 2011/05/24 09:54:05 obache Exp $
  #if defined(HPArchitecture) || defined(ApolloArchitecture) || \
 - 	defined(UltrixArchitecture)
 + 	defined(UltrixArchitecture) || defined(NetBSDArchitecture) || \
-+	defined(DragonFlyArchitecture)
++	defined(DragonFlyArchitecture) || defined(DarwinArchitecture)
  #define sel -DUSE_SELECT
  #else
  #define sel 
