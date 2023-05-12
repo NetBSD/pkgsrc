@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2023/05/08 21:02:24 markd Exp $
+# $NetBSD: Makefile,v 1.71 2023/05/12 14:03:10 wiz Exp $
 
 DISTNAME=	SQLAlchemy-1.4.48
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
 
@@ -10,11 +11,18 @@ HOMEPAGE=	https://www.sqlalchemy.org/
 COMMENT=	Python SQL toolkit and Object Relational Mapper
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.18:../../devel/py-greenlet
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} < 308
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
