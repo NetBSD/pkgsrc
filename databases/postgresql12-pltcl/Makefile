@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/04/19 08:09:29 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/12 07:40:24 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/12-pltcl-/}
-PKGREVISION=	1
 COMMENT=	PL/Tcl procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql12-server>=${PKGVERSION_NOREV}:../../databases/postgresql12-server
