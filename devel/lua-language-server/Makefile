@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/04/28 16:10:41 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/12 21:37:32 nikita Exp $
 
 DISTNAME=		lua-language-server-3.6.19
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -19,6 +19,8 @@ MAKE_FLAGS+=		LUA_VERSION=${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
 USE_TOOLS+=		pax mktemp
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
+# 3rd/luamake, maybe needs path patching:
+DEPENDS+=		clang-[0-9]*:../../lang/clang
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
@@ -40,7 +42,7 @@ post-extract:
 
 DATADIR=		${PREFIX}/share/lua-language-server
 
-SUBST_CLASSES+=	wrapper
+SUBST_CLASSES+=		wrapper
 SUBST_STAGE.wrapper=	pre-build
 SUBST_MESSAGE.wrapper=	Patching paths in lua-language-server wrapper script
 SUBST_FILES.wrapper=	lua-language-server
@@ -54,8 +56,16 @@ SUBST_FILES.path=	3rd/luamake/compile/ninja/netbsd.ninja
 SUBST_FILES.path+=	3rd/bee.lua/compile/common.lua
 SUBST_SED.path=		-e 's,/usr/pkg,${PREFIX},'
 
+SUBST_CLASSES+=		tests
+SUBST_STAGE.tests=	pre-configure
+SUBST_MESSAGE.tests=	Do not run randomly failing filewatch tests.
+SUBST_FILES.tests+=	3rd/bee.lua/test/test.lua
+SUBST_FILES.tests+=	3rd/luamake/bee.lua/test/test.lua
+SUBST_SED.tests=	-e "s,require 'test_filewatch',,"
+
 do-build:
-	ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/netbsd.ninja
+	# probably needs much more fixes for systems noch supported by luamake.
+	${PREFIX}/bin/ninja -C ${WRKSRC}/3rd/luamake -f compile/ninja/${OPSYS:tl}.ninja
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./3rd/luamake/luamake -v
 
 do-install:
