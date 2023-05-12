@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3007 2023/05/12 11:37:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3008 2023/05/12 16:40:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4205,3 +4205,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/grpc to 1.54.2 [adam 2023-05-12]
 	Updated misc/py-platformdirs to 3.5.1 [adam 2023-05-12]
 	Updated www/py-autobahn to 23.1.2nb1 [wiz 2023-05-12]
+	Updated lang/erlang to 25.3.2 [adam 2023-05-12]
+	Updated net/rabbitmq to 3.11.15 [adam 2023-05-12]
