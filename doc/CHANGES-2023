@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3012 2023/05/13 13:07:27 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3013 2023/05/13 15:25:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-blessed to 1.20.0 [adam 2023-05-13]
 	Updated mail/isync to 1.4.4nb2 [ryoon 2023-05-13]
 	Updated chat/irssi to 1.4.4 [nikita 2023-05-13]
+	Updated audio/libopenmpt to 0.7.1 [fcambus 2023-05-13]
