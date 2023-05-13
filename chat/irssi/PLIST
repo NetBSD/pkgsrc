@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/06/26 07:46:00 otis Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/05/13 13:06:46 nikita Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -38,6 +38,7 @@ include/irssi/src/core/queries.h
 include/irssi/src/core/query-rec.h
 include/irssi/src/core/rawlog.h
 include/irssi/src/core/recode.h
+include/irssi/src/core/refstrings.h
 include/irssi/src/core/server-connect-rec.h
 include/irssi/src/core/server-rec.h
 include/irssi/src/core/server-setup-rec.h
@@ -92,6 +93,7 @@ include/irssi/src/fe-text/mainwindows.h
 include/irssi/src/fe-text/statusbar-item.h
 include/irssi/src/fe-text/statusbar.h
 include/irssi/src/fe-text/term.h
+include/irssi/src/fe-text/textbuffer-formats.h
 include/irssi/src/fe-text/textbuffer-view.h
 include/irssi/src/fe-text/textbuffer.h
 include/irssi/src/irc/core/bans.h
@@ -132,6 +134,7 @@ include/irssi/src/irc/notifylist/notifylist.h
 include/irssi/src/lib-config/iconfig.h
 include/irssi/src/lib-config/module.h
 lib/irssi/modules/libirc_proxy.la
+lib/pkgconfig/irssi-1.pc
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/Irc.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/TextUI.pm
@@ -273,7 +276,6 @@ share/irssi/help/who
 share/irssi/help/whois
 share/irssi/help/whowas
 share/irssi/help/window
-share/irssi/irssi-config
 share/irssi/scripts/autoop.pl
 share/irssi/scripts/autorejoin.pl
 share/irssi/scripts/buf.pl

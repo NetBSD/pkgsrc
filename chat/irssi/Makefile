@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2022/06/28 11:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2023/05/13 13:06:46 nikita Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		chat
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
 
@@ -33,9 +32,6 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 .include "options.mk"
 .include "../../devel/glib2/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/irssi-config ${DESTDIR}${IRSSI_CONFIG}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
