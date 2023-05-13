@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2022/11/08 12:47:01 nros Exp $
+$NetBSD: distinfo,v 1.42 2023/05/13 00:44:31 dholland Exp $
 
 BLAKE2s (clisp-2.49.tar.gz) = b9f656df562cbe46fc550bb9bd44399efb2c7a87b024b22d07637c4d75c51866
 SHA512 (clisp-2.49.tar.gz) = 7885956b373a4c1d04a0b43c229fe8c8694d89982cadce09da6ef03cb56a5705b92f94b564981075c36bb9773a9f16b0b95fef23e942f6245604aefa6600ef98
 Size (clisp-2.49.tar.gz) = 9823111 bytes
-SHA1 (patch-aa) = fd03e7e3d7904a2efc8227c4d58c4782a6f070a8
+SHA1 (patch-aa) = c3beebe75cdaccb862589bfe2db5613ca8ad6820
 SHA1 (patch-ab) = 93aef2c423ce9e5eabebc20cdc144c83845b19cb
 SHA1 (patch-ac) = c31fcd65d7d37aeaf69c0eee9499bff596b6619b
 SHA1 (patch-modules_readline_readline.lisp) = 1463cb15f6a21374dffc0e585670ac89bb758ff3
