@@ -1,10 +1,11 @@
-$NetBSD: patch-aa,v 1.21 2022/11/08 12:47:01 nros Exp $
+$NetBSD: patch-aa,v 1.22 2023/05/13 00:44:31 dholland Exp $
 
 Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
 Support staged installation of modules.
 Fix SunOS linking.
 Fix NetBSD module linking.
+Don't use -nt on nonexistent files because the behavior isn't portable.
 
 https://mail-index.netbsd.org/pkgsrc-users/2019/11/02/msg029846.html
 https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
@@ -99,6 +100,15 @@ https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
  test -n "$USE_GETTEXT" && echol "localedir = ${LOCALEDIR}"
  echol "elispdir = ${ELISPDIR}"
  echol "vimdir = ${VIMDIR}"
+@@ -3301,7 +3301,7 @@ echotab "m=\`cd ${MODULESDIR_}\$@; pwd\`
+ if [ "@TEST_NT@" = no ]; then # re-making a module requires rm -rf module
+   newer(){ echo 'test -f $$m/'$1' -a '"'!'"' -f $@/'$2; }
+ else # re-making a module just works
+-  newer(){ echo 'test -f $$m/'$1' -a $$m/'$1' -nt $@/'$2; }
++  newer(){ echo 'test -f $$m/'$1' -a \( ! -f $@/'$2' -o $$m/'$1' -nt $@/'$2' )'; }
+ fi
+ # srcdir has to be passed to ./configure because it must be able to find
+ # src/build-aux/install-sh _AND_ also its own sources, thus we must
 @@ -3315,7 +3315,7 @@ for var in ${PRECIOUS_VARS}; do
  done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
