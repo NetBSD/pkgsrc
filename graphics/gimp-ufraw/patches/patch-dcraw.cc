@@ -1,10 +1,28 @@
-$NetBSD: patch-dcraw.cc,v 1.2 2020/06/01 00:14:21 gdt Exp $
+$NetBSD: patch-dcraw.cc,v 1.3 2023/05/13 11:55:55 gdt Exp $
 
-\todo Explain this patch.
+The first hunk works around the combination of:
+  - NetBSD stdint.h/int_limit.sh not defining UINT_LEAST64_MAX in c++
+     mode before C++11
+  - ufraw including C headers in C++ mode
+  - ufraw being C++03
+by just asking for the limit macros to be defined.
 
---- dcraw.cc.orig	2020-04-19 19:55:05.713900482 +0000
+\todo Explain second hunk.  This seems to be about avoiding a SWAP macro
+and is likely not very interesting.
+
+--- dcraw.cc.orig	2015-06-16 03:58:38.000000000 +0000
 +++ dcraw.cc
-@@ -9240,11 +9240,15 @@ canon_a5:
+@@ -24,6 +24,9 @@ extern "C" {
+ 
+ #define DCRAW_VERSION "9.26"
+ 
++/* Obtain UINT32_LEAST_MAX even in C++ mode. */
++#define __STDC_LIMIT_MACROS
++
+ #ifndef _GNU_SOURCE
+ #define _GNU_SOURCE
+ #endif
+@@ -9240,11 +9243,15 @@ canon_a5:
        filters = 0x16161616;
      }
      if (make[0] == 'O') {
