@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/02/15 15:18:24 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/05/13 22:28:19 msaitoh Exp $
 libdata/firmware/cpu_x86_intel1/00000650-0
 libdata/firmware/cpu_x86_intel1/00000650-1
 libdata/firmware/cpu_x86_intel1/00000650-3
@@ -370,6 +370,7 @@ libdata/firmware/cpu_x86_intel1/00090675-0
 libdata/firmware/cpu_x86_intel1/00090675-1
 libdata/firmware/cpu_x86_intel1/00090675-2
 libdata/firmware/cpu_x86_intel1/000906a3-7
+libdata/firmware/cpu_x86_intel1/000906a4-6
 libdata/firmware/cpu_x86_intel1/000906a4-7
 libdata/firmware/cpu_x86_intel1/000906c0-0
 libdata/firmware/cpu_x86_intel1/000906e9-1
@@ -397,6 +398,7 @@ libdata/firmware/cpu_x86_intel1/000b06a2-6
 libdata/firmware/cpu_x86_intel1/000b06a2-7
 libdata/firmware/cpu_x86_intel1/000b06a3-6
 libdata/firmware/cpu_x86_intel1/000b06a3-7
+libdata/firmware/cpu_x86_intel1/000b06e0-0
 libdata/firmware/cpu_x86_intel1/000b06f2-0
 libdata/firmware/cpu_x86_intel1/000b06f2-1
 libdata/firmware/cpu_x86_intel1/000b06f2-2
