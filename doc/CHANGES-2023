@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3014 2023/05/13 15:36:18 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.3015 2023/05/13 18:01:53 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4230,3 +4230,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/irssi to 1.4.4 [nikita 2023-05-13]
 	Updated audio/libopenmpt to 0.7.1 [fcambus 2023-05-13]
 	Updated converters/bdf2psf to 1.220 [fcambus 2023-05-13]
+	Updated misc/ruby-mini_portile2 to 2.8.2 [tsutsui 2023-05-13]
