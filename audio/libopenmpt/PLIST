@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/28 19:51:33 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/05/13 15:25:14 fcambus Exp $
 bin/openmpt123
 include/libopenmpt/libopenmpt.h
 include/libopenmpt/libopenmpt.hpp
@@ -8,6 +8,10 @@ include/libopenmpt/libopenmpt_ext.hpp
 include/libopenmpt/libopenmpt_stream_callbacks_buffer.h
 include/libopenmpt/libopenmpt_stream_callbacks_fd.h
 include/libopenmpt/libopenmpt_stream_callbacks_file.h
+include/libopenmpt/libopenmpt_stream_callbacks_file_mingw.h
+include/libopenmpt/libopenmpt_stream_callbacks_file_msvcrt.h
+include/libopenmpt/libopenmpt_stream_callbacks_file_posix.h
+include/libopenmpt/libopenmpt_stream_callbacks_file_posix_lfs64.h
 include/libopenmpt/libopenmpt_version.h
 lib/libopenmpt.la
 lib/pkgconfig/libopenmpt.pc
