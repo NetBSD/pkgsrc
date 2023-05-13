@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/05/13 08:18:42 adam Exp $
 
-BLAKE2s (beancount-2.2.3.tar.gz) = fa5c8ccaa4bc0e13f74fbdefea45af9acc5166c4af95c1f7a9bfc30f0686d8bc
-SHA512 (beancount-2.2.3.tar.gz) = 850875fd7b28ca2b861111d1d2b90b2e2f01e1e6fcc729c7983fca9b3b60409cf9cd3d13e0b5fa0ba617659db5088607ad05dbc87ad3672476b2b5744d58c47b
-Size (beancount-2.2.3.tar.gz) = 604034 bytes
+BLAKE2s (beancount-2.3.5.tar.gz) = 614e5f54c3c8e59074898663e34ede2567bd4eadb53a0604aaf4a9cf262615c9
+SHA512 (beancount-2.3.5.tar.gz) = ddafcfad3b3b600b15dc6a6591a457c0dd10c46aed310502983ccd46931fcea9cb24227a302dcb798efdbc7167f6ca074e5b1cf0a02369f66fe20f386187427b
+Size (beancount-2.3.5.tar.gz) = 638463 bytes
