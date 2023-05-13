@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3016 2023/05/13 18:13:59 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.3017 2023/05/13 18:24:28 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/bdf2psf to 1.220 [fcambus 2023-05-13]
 	Updated misc/ruby-mini_portile2 to 2.8.2 [tsutsui 2023-05-13]
 	Updated textproc/ruby-nokogiri to 1.14.4 [tsutsui 2023-05-13]
+	Updated net/ruby-addressable to 2.8.4 [tsutsui 2023-05-13]
