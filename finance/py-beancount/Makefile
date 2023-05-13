@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/13 08:18:42 adam Exp $
 
-DISTNAME=	beancount-2.2.3
+DISTNAME=	beancount-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beancount/}
 
@@ -11,19 +10,20 @@ HOMEPAGE=	http://furius.ca/beancount/
 COMMENT=	Command-line double-entry bookkeeping
 LICENSE=	gnu-gpl-v2
 
-# Manually transcribed from requirements.txt.
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.6.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-bottle>=0.12:../../www/py-bottle
-DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
-DEPENDS+=	${PYPKGPREFIX}-lxml>=3.0:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=1.6.0:../../www/py-google-api-python-client
-DEPENDS+=	${PYPKGPREFIX}-oauth2client>=4.0:../../security/py-oauth2client
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.10:../../www/py-httplib2
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-magic>=0.4.12:../../sysutils/py-magic
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-google-api-python-client-[0-9]*:../../www/py-google-api-python-client
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
+DEPENDS+=	${PYPKGPREFIX}-ply-[0-9]*:../../devel/py-ply
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-google-api-python-client
+PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
