@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/05/04 21:55:46 tsutsui Exp $
+$NetBSD: distinfo,v 1.17 2023/05/13 02:44:05 tsutsui Exp $
 
-BLAKE2s (clutter-gtk-4.1.4.gem) = fb7c6c9559b6084030c876dc69309bad89cfa2074b23ac8107db3c2f35796ba7
-SHA512 (clutter-gtk-4.1.4.gem) = b024772bd9188f503ee90345b17c8ce8c4924578a1cc8e54750d659e6e13399d2f56ae5a67a5ff65751046558c40c0e20a0f73e7750bdb9dfc6f36fe09d3f2ac
-Size (clutter-gtk-4.1.4.gem) = 30720 bytes
+BLAKE2s (clutter-gtk-4.1.5.gem) = 0d98ccfd323c7ed0eef9136c201f0f97fa60d8a8a4479fd8912a40812d212aaa
+SHA512 (clutter-gtk-4.1.5.gem) = 1dd947ad038b2669513dbb6d658c8acf8000e37ff3d3785e06b602c5dcf6a67036fb683292a3090e7912bcf5922c42e669eaa3c64d5e40c26bf44b8982bfea1d
+Size (clutter-gtk-4.1.5.gem) = 30720 bytes
