@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/05/04 21:55:46 tsutsui Exp $
+$NetBSD: distinfo,v 1.17 2023/05/13 02:44:05 tsutsui Exp $
 
-BLAKE2s (gdk3-4.1.4.gem) = 8a4d436aebe060667c9afd32d43c67337045440bd4f23b71f04efbafc12797f8
-SHA512 (gdk3-4.1.4.gem) = 07db2dfb3bd2b1e88a147d66cb6e863080117c406631c26d743217dc1cc3ea11acd10f687db6a654e596642d21cbdff303dcc010fdc9aa6a995ce3b03662d02e
-Size (gdk3-4.1.4.gem) = 35840 bytes
+BLAKE2s (gdk3-4.1.5.gem) = 856dc8942f48c98f05e62e3b13775aa141558b2479eab937df20d8d9c21856d8
+SHA512 (gdk3-4.1.5.gem) = 039c7ae30152cabfc2c2e54f630c1b4ab84c420cbba73bd400dd08d32b6c1a6f2c584e0a253213963ce4c479f3260b182bdb9fa7a5f08cacd5effdd9a60d7c6b
+Size (gdk3-4.1.5.gem) = 35840 bytes
