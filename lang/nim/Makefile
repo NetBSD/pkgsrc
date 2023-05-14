@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/04/25 15:34:38 nikita Exp $
+# $NetBSD: Makefile,v 1.33 2023/05/14 21:13:53 nikita Exp $
 
 DISTNAME=	nim-1.6.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -54,6 +54,6 @@ do-install:
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
-	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch test --parallelBuild:${_MAKE_JOBS_N}
+	cd ${WRKSRC} && LD_LIBRARY_PATH=${PREFIX}/lib ./koch test all --parallelBuild:${_MAKE_JOBS_N}
 
 .include "../../mk/bsd.pkg.mk"
