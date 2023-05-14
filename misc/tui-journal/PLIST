@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/14 19:23:09 pin Exp $
+bin/tjournal
