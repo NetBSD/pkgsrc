@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3036 2023/05/14 15:13:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3037 2023/05/14 16:11:37 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4252,3 +4252,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php82 to 8.2.6 [taca 2023-05-14]
 	Updated lang/php81 to 8.1.19 [taca 2023-05-14]
 	Updated graphics/wallust to 2.4.1 [pin 2023-05-14]
+	Updated archivers/lhasa to 0.4.0 [tsutsui 2023-05-14]
