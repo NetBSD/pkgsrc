@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/07/10 19:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/05/14 18:07:55 nils Exp $
 
-DISTNAME=		pelican-4.5.0
+DISTNAME=		pelican-4.8.0
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=getpelican/}
 
@@ -13,16 +12,16 @@ COMMENT=		Static site generator that supports Markdown and reST syntax
 LICENSE=		gnu-agpl-v3
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=		${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-DEPENDS+=		${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
-DEPENDS+=		${PYPKGPREFIX}-pygments>=1.4:../../textproc/py-pygments
+DEPENDS+=		${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
+DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-feedgenerator>=1.9:../../www/py-feedgenerator
-DEPENDS+=		${PYPKGPREFIX}-pytz>=0a:../../time/py-pytz
-DEPENDS+=		${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
-DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
-DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
-DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=		${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
+DEPENDS+=		${PYPKGPREFIX}-pygments>=2.6:../../textproc/py-pygments
+DEPENDS+=		${PYPKGPREFIX}-dateutil>=2.8:../../time/py-dateutil
+DEPENDS+=		${PYPKGPREFIX}-pytz>=2020.1:../../time/py-pytz
+DEPENDS+=		${PYPKGPREFIX}-rich>=10.1:../../comms/py-rich
+DEPENDS+=		${PYPKGPREFIX}-Unidecode>=1.1:../../textproc/py-Unidecode
+DEPENDS+=		${PYPKGPREFIX}-markdown>=3.1:../../textproc/py-markdown
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/05 19:34:51 nils Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/14 18:07:55 nils Exp $
 bin/pelican
 bin/pelican-import
 bin/pelican-plugins
@@ -49,6 +49,9 @@ ${PYSITELIB}/pelican/server.pyo
 ${PYSITELIB}/pelican/settings.py
 ${PYSITELIB}/pelican/settings.pyc
 ${PYSITELIB}/pelican/settings.pyo
+${PYSITELIB}/pelican/signals.py
+${PYSITELIB}/pelican/signals.pyc
+${PYSITELIB}/pelican/signals.pyo
 ${PYSITELIB}/pelican/tests/TestPages/bad_page.rst
 ${PYSITELIB}/pelican/tests/TestPages/draft_page.rst
 ${PYSITELIB}/pelican/tests/TestPages/draft_page_markdown.md
@@ -70,6 +73,8 @@ ${PYSITELIB}/pelican/tests/content/2012-11-30_md_w_filename_meta#foo-bar.md
 ${PYSITELIB}/pelican/tests/content/TestCategory/article_with_category.rst
 ${PYSITELIB}/pelican/tests/content/TestCategory/article_without_category.rst
 ${PYSITELIB}/pelican/tests/content/article.rst
+${PYSITELIB}/pelican/tests/content/article_draft.md
+${PYSITELIB}/pelican/tests/content/article_hidden.md
 ${PYSITELIB}/pelican/tests/content/article_with_attributes_containing_double_quotes.html
 ${PYSITELIB}/pelican/tests/content/article_with_capitalized_metadata.rst
 ${PYSITELIB}/pelican/tests/content/article_with_code_block.rst
@@ -77,6 +82,7 @@ ${PYSITELIB}/pelican/tests/content/article_with_comments.html
 ${PYSITELIB}/pelican/tests/content/article_with_duplicate_tags_authors.md
 ${PYSITELIB}/pelican/tests/content/article_with_inline_svg.html
 ${PYSITELIB}/pelican/tests/content/article_with_keywords.html
+${PYSITELIB}/pelican/tests/content/article_with_markdown_and_empty_tags.md
 ${PYSITELIB}/pelican/tests/content/article_with_markdown_and_footnote.md
 ${PYSITELIB}/pelican/tests/content/article_with_markdown_and_nested_metadata.md
 ${PYSITELIB}/pelican/tests/content/article_with_markdown_and_nonascii_summary.md
@@ -125,6 +131,18 @@ ${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_plugin/__init__.py
 ${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_plugin/submodule.py
 ${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_plugin/submodule.pyc
 ${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_plugin/submodule.pyo
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/__init__.py
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/__init__.pyc
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/__init__.pyo
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/__init__.py
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/__init__.pyc
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/__init__.pyo
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/subpackage.py
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/subpackage.pyc
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subpackage/subpackage.pyo
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subplugin.py
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subplugin.pyc
+${PYSITELIB}/pelican/tests/dummy_plugins/normal_plugin/normal_submodule_plugin/subplugin.pyo
 ${PYSITELIB}/pelican/tests/mixed_content/short_page.md
 ${PYSITELIB}/pelican/tests/nested_content/maindir/maindir.md
 ${PYSITELIB}/pelican/tests/nested_content/maindir/subdir/subdir.md
@@ -359,6 +377,9 @@ ${PYSITELIB}/pelican/tests/support.pyo
 ${PYSITELIB}/pelican/tests/test_cache.py
 ${PYSITELIB}/pelican/tests/test_cache.pyc
 ${PYSITELIB}/pelican/tests/test_cache.pyo
+${PYSITELIB}/pelican/tests/test_cli.py
+${PYSITELIB}/pelican/tests/test_cli.pyc
+${PYSITELIB}/pelican/tests/test_cli.pyo
 ${PYSITELIB}/pelican/tests/test_contents.py
 ${PYSITELIB}/pelican/tests/test_contents.pyc
 ${PYSITELIB}/pelican/tests/test_contents.pyo
@@ -443,6 +464,7 @@ ${PYSITELIB}/pelican/themes/notmyidea/templates/article_infos.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/author.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/authors.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/base.html
+${PYSITELIB}/pelican/themes/notmyidea/templates/categories.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/category.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/comments.html
 ${PYSITELIB}/pelican/themes/notmyidea/templates/disqus_script.html
@@ -482,6 +504,10 @@ ${PYSITELIB}/pelican/tools/pelican_quickstart.pyo
 ${PYSITELIB}/pelican/tools/pelican_themes.py
 ${PYSITELIB}/pelican/tools/pelican_themes.pyc
 ${PYSITELIB}/pelican/tools/pelican_themes.pyo
+${PYSITELIB}/pelican/tools/templates/Makefile.jinja2
+${PYSITELIB}/pelican/tools/templates/pelicanconf.py.jinja2
+${PYSITELIB}/pelican/tools/templates/publishconf.py.jinja2
+${PYSITELIB}/pelican/tools/templates/tasks.py.jinja2
 ${PYSITELIB}/pelican/urlwrappers.py
 ${PYSITELIB}/pelican/urlwrappers.pyc
 ${PYSITELIB}/pelican/urlwrappers.pyo
