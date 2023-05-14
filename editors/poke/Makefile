@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/04/19 15:08:36 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/14 18:55:54 fcambus Exp $
 
-DISTNAME=	poke-3.1
+DISTNAME=	poke-3.2
 CATEGORIES=	editors
 MASTER_SITES=	https://ftp.gnu.org/gnu/poke/
 
