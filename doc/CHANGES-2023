@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3022 2023/05/14 13:51:52 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3023 2023/05/14 14:05:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4238,3 +4238,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-io-event to 1.2.2 [taca 2023-05-14]
 	Updated devel/ruby-test-unit to 3.5.8 [taca 2023-05-14]
 	Updated devel/ruby-thor to 1.2.2 [taca 2023-05-14]
+	Updated security/ruby-metasploit-payloads to 2.0.131 [taca 2023-05-14]
