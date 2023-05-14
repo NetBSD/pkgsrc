@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/30 13:42:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/14 14:09:23 taca Exp $
 bin/de-gfm${RUBY_SUFFIX}
 bin/doilit${RUBY_SUFFIX}
 bin/echars${RUBY_SUFFIX}
@@ -38,6 +38,7 @@ ${GEM_LIBDIR}/lib/kramdown-rfc/gzip-clone.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/kdrfc-processor.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/parameterset.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/refxml.rb
+${GEM_LIBDIR}/lib/kramdown-rfc/rexml-formatters-conservative.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/rfc8792.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/svg-id-cleanup.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc2629.rb
