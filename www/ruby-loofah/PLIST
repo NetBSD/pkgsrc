@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/18 16:02:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/05/14 14:24:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/loofah.rb
+${GEM_LIBDIR}/lib/loofah/concerns.rb
 ${GEM_LIBDIR}/lib/loofah/elements.rb
 ${GEM_LIBDIR}/lib/loofah/helpers.rb
-${GEM_LIBDIR}/lib/loofah/html/document.rb
-${GEM_LIBDIR}/lib/loofah/html/document_fragment.rb
+${GEM_LIBDIR}/lib/loofah/html4/document.rb
+${GEM_LIBDIR}/lib/loofah/html4/document_fragment.rb
+${GEM_LIBDIR}/lib/loofah/html5/document.rb
+${GEM_LIBDIR}/lib/loofah/html5/document_fragment.rb
 ${GEM_LIBDIR}/lib/loofah/html5/libxml2_workarounds.rb
 ${GEM_LIBDIR}/lib/loofah/html5/safelist.rb
 ${GEM_LIBDIR}/lib/loofah/html5/scrub.rb
-${GEM_LIBDIR}/lib/loofah/instance_methods.rb
 ${GEM_LIBDIR}/lib/loofah/metahelpers.rb
 ${GEM_LIBDIR}/lib/loofah/scrubber.rb
 ${GEM_LIBDIR}/lib/loofah/scrubbers.rb
