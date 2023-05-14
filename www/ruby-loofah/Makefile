@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/04/30 14:22:55 taca Exp $
+# $NetBSD: Makefile,v 1.20 2023/05/14 14:24:49 taca Exp $
 
-DISTNAME=	loofah-2.20.0
+DISTNAME=	loofah-2.21.2
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/flavorjones/loofah
 COMMENT=	HTML sanitizer for Rails applications
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.5.9:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.12.0:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-crass>=1.0.2<1.1:../../www/ruby-crass
 
 USE_LANGUAGES=	# none
