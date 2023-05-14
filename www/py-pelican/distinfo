@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/05/07 12:41:15 wiz Exp $
+$NetBSD: distinfo,v 1.10 2023/05/14 18:07:55 nils Exp $
 
-BLAKE2s (pelican-4.5.0.tar.gz) = 6887e8fefe0ea7b941a2e6daa966cb407c1a26681f87b7b389a12ef39aff183a
-SHA512 (pelican-4.5.0.tar.gz) = e8532e9ab5073fc5fc17ecdf31c0fe5617cd72778d8ca90d2833f660ea74ca81db3a83b1868588bc3287d90d23f64c5ef60ae99ae1a148fa27b47b5c59f51299
-Size (pelican-4.5.0.tar.gz) = 1394816 bytes
+BLAKE2s (pelican-4.8.0.tar.gz) = 4064501a469387eabde7b4e8b7c77f8ec7725e7a1ed3d292ce4178206b8e8b6a
+SHA512 (pelican-4.8.0.tar.gz) = 2e94eb88a836bcb430026463c0e7e906b7f065507e0d873b6e0fc980e271e6a8f2e62b22af4b61c963d90ef61d57787de20656fe7497b0ae14e93eff2d364f3b
+Size (pelican-4.8.0.tar.gz) = 1401791 bytes
 SHA1 (patch-docs_conf.py) = c4c0d554edd29c916e5149ee97e253f4527e8d50
