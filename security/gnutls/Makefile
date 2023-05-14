@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.239 2023/04/19 08:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.240 2023/05/14 08:11:51 he Exp $
 
 DISTNAME=	gnutls-3.8.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +15,9 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PLIST_SRC=	PLIST
 
-USE_LANGUAGES=			c c++
+USE_LANGUAGES=	c c++11
+GCC_REQD+=	6
+
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gmake gsed perl pkg-config bash
 USE_TOOLS+=			msgfmt msgmerge xgettext
