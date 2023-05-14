@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3039 2023/05/14 18:56:06 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.3040 2023/05/14 19:24:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4255,3 +4255,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/lhasa to 0.4.0 [tsutsui 2023-05-14]
 	Updated www/py-pelican to 4.8.0 [nils 2023-05-14]
 	Updated editors/poke to 3.2 [fcambus 2023-05-14]
+	Added misc/tui-journal version 0.1.0 [pin 2023-05-14]
