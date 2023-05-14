@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3029 2023/05/14 14:20:06 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3030 2023/05/14 14:25:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.122.0 [taca 2023-05-14]
 	Updated security/dnsx to 1.1.4 [leot 2023-05-14]
 	Updated www/ruby-capybara to 3.39.1 [taca 2023-05-14]
+	Updated www/ruby-loofah to 2.21.2 [taca 2023-05-14]
