@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/01/23 21:50:02 fcambus Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/14 16:11:22 tsutsui Exp $
 
-DISTNAME=	lhasa-0.3.1
-PKGREVISION=	1
+DISTNAME=	lhasa-0.4.0
 CATEGORIES=	archivers
 MASTER_SITES=	https://soulsphere.org/projects/lhasa/
 
