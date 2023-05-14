@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.588 2023/05/09 08:32:36 adam Exp $
+# $NetBSD: Makefile,v 1.589 2023/05/14 19:24:07 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -378,6 +378,7 @@ SUBDIR+=	todoman
 SUBDIR+=	toilet
 SUBDIR+=	topless
 SUBDIR+=	ttyrec
+SUBDIR+=	tui-journal
 SUBDIR+=	udfclient
 SUBDIR+=	ukpostcodes
 SUBDIR+=	uptimec
