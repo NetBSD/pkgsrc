@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/04/30 14:08:45 taca Exp $
+# $NetBSD: Makefile,v 1.34 2023/05/14 14:19:44 taca Exp $
 
-DISTNAME=	capybara-3.39.0
+DISTNAME=	capybara-3.39.1
 CATEGORIES=	www devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
