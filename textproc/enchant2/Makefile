@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/04/27 08:07:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/05/15 09:30:29 jperkin Exp $
 
 DISTNAME=		enchant-2.3.4
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -12,7 +12,7 @@ HOMEPAGE=		https://abiword.github.io/enchant/
 COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
-USE_TOOLS+=		pkg-config autoconf
+USE_TOOLS+=		autoconf groff pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
