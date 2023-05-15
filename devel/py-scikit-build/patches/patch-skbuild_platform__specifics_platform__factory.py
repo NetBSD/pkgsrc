@@ -1,4 +1,4 @@
-$NetBSD: patch-skbuild_platform__specifics_platform__factory.py,v 1.1 2023/05/05 19:29:45 adam Exp $
+$NetBSD: patch-skbuild_platform__specifics_platform__factory.py,v 1.2 2023/05/15 09:19:04 jperkin Exp $
 
 Add NetBSD support
 https://github.com/scikit-build/scikit-build/issues/971
@@ -10,7 +10,7 @@ https://github.com/scikit-build/scikit-build/issues/971
          return osx.OSXPlatform()
  
 -    if this_platform in {"freebsd", "os400", "openbsd"}:
-+    if this_platform in {"freebsd", "netbsd", "os400", "openbsd"}:
++    if this_platform in {"freebsd", "netbsd", "os400", "openbsd", "sunos"}:
          from . import bsd
  
          return bsd.BSDPlatform()
