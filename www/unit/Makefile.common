@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2021/08/22 04:03:07 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/05/15 22:24:38 osa Exp $
 #
 # used by devel/libunit/Makefile
 # used by www/unit/Makefile
@@ -42,11 +42,13 @@ CONFIGURE_ENV+=		PATH=${PATH}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--ld-opt="-L${PREFIX}/lib -R${PREFIX}/lib"
 CONFIGURE_ARGS+=	--log=${UNIT_LOGDIR}/unit.log
-CONFIGURE_ARGS+=	--modules=${UNIT_EXTENSION_DIR}
+CONFIGURE_ARGS+=	--logdir=${UNIT_LOGDIR}
+CONFIGURE_ARGS+=	--modulesdir=${PREFIX}/${UNIT_EXTENSION_DIR}
 CONFIGURE_ARGS+=	--pid=${UNIT_PIDDIR}/unit.pid
-CONFIGURE_ARGS+=	--state=${UNIT_DATADIR}
+CONFIGURE_ARGS+=	--runstatedir=${UNIT_RUNDIR}
+CONFIGURE_ARGS+=	--statedir=${UNIT_DATADIR}
 CONFIGURE_ARGS+=	--control=unix:${UNIT_RUNDIR}/control.unit.sock
-CONFIGURE_ARGS+=	--tmp=${UNIT_TMPDIR}
+CONFIGURE_ARGS+=	--tmpdir=${UNIT_TMPDIR}
 CONFIGURE_ARGS+=	--user=${UNIT_USER}
 CONFIGURE_ARGS+=	--group=${UNIT_GROUP}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
