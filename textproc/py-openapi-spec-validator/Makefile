@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/05/15 20:18:42 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/15 20:20:28 adam Exp $
 
 DISTNAME=	openapi_spec_validator-0.5.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-spec-validator/}
 
