@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/02/23 04:24:37 osa Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/15 22:24:38 osa Exp $
 
 PKGNAME=	libunit-${UNIT_VERSION}
 DISTNAME=	unit-${UNIT_VERSION}
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--ld-opt="-L${PREFIX}/lib -R${PREFIX}/lib"
 CONFIGURE_ARGS+=	--no-regex
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} build/libunit.a
+	cd ${WRKSRC} && ${MAKE} build/lib/libunit.a
 
 do-install:
 	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${DESTDIR}
