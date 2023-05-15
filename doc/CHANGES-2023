@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3049 2023/05/15 20:49:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3050 2023/05/15 21:04:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4274,3 +4274,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-unearth to 0.9.1 [adam 2023-05-15]
 	Updated devel/py-pdm to 2.6.1 [adam 2023-05-15]
 	Updated lang/py-mypy to 1.3.0 [adam 2023-05-15]
+	Updated lang/py-inflect to 6.0.4 [adam 2023-05-15]
+	Updated devel/py-scikit-build to 0.17.5 [adam 2023-05-15]
+	Updated devel/py-faker to 18.7.0 [adam 2023-05-15]
+	Updated textproc/py-sphinx to 7.0.1 [adam 2023-05-15]
+	Updated lang/py-findpython to 0.2.5 [adam 2023-05-15]
