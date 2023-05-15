@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.2 2021/02/14 13:43:39 otis Exp $
+# $NetBSD: ext.mk,v 1.3 2023/05/15 22:24:38 osa Exp $
 #
 # NGINX Unit extension package framework, for bundled extensions.
 #
@@ -45,7 +45,7 @@ do-build:
 	cd ${WRKSRC} && ${MAKE} ${MODNAME}
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/${PKGMODNAME}.${SHLIB_SUFFIX} \
+	${INSTALL_LIB} ${WRKSRC}/build/lib/unit/modules/${PKGMODNAME}.${SHLIB_SUFFIX} \
 		${DESTDIR}${PREFIX}/${UNIT_EXTENSION_DIR}
 
 .endif  # UNITEXT_MK
