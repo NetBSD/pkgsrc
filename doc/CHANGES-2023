@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3044 2023/05/15 09:19:13 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.3045 2023/05/15 09:56:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4262,3 +4262,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-flit to 3.9.0 [adam 2023-05-15]
 	Updated lang/lua54 to 5.4.6 [nikita 2023-05-15]
 	Updated devel/py-scikit-build to 0.17.3nb1 [jperkin 2023-05-15]
+	Updated devel/py-poetry-core to 1.6.0 [adam 2023-05-15]
+	Updated devel/py-scikit-build to 0.17.4 [adam 2023-05-15]
