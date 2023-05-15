@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2022/09/06 18:47:27 adam Exp $
+$NetBSD: distinfo,v 1.85 2023/05/15 09:43:16 jperkin Exp $
 
 BLAKE2s (nmap-7.93.tar.bz2) = 8c2e549318f6329d7252750ab903cbeec79c93cc001b542ed3166eaa1b2c7fbd
 SHA512 (nmap-7.93.tar.bz2) = 4ec9295e25bd7a215e718c3dbbf09bfe6339b60850f4a8d09b5ad0cbf41a0da8ece0168efc5ca91ba1ecbd83b1d31735d77dacd5f1ec1a9fd212454dd1f0f0fd
@@ -8,4 +8,5 @@ SHA1 (patch-libdnet-stripped_src_arp-bsd.c) = c56c4e70eca2fa04dd8aab38ed2c3f4cac
 SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
 SHA1 (patch-ncat_http__digest.c) = 93cf0960249848c142fad99c8421d855618d11df
 SHA1 (patch-nping_EchoServer.cc) = e5b0213e3cfff8a32b5ae291c1921a86b9b17dd3
+SHA1 (patch-nping_NpingOps.cc) = 074766040fbf6dc16315b6313d6dad4ff514a91a
 SHA1 (patch-nsock_tests_run__tests.sh) = 88a7447f93dd3377e7e24e317c55528a73a17401
