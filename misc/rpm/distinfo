@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:59:28 nia Exp $
+$NetBSD: distinfo,v 1.20 2023/05/15 13:52:37 jperkin Exp $
 
 BLAKE2s (rpm-4.13.0.1.tar.bz2) = 4552ba04d068db35a42cb58ceb84ceac90268e2d11d132c2191a1d60b7514fe8
 SHA512 (rpm-4.13.0.1.tar.bz2) = b7475dd0803e06a5dd6a95d0bf8add6ff0d8f0620dd389c4d87a85becb0eb4637aa4ff8c48e18d4844ff6feefa25d642d9f876cd210006cb2144006d34a91b91
@@ -7,9 +7,10 @@ SHA1 (patch-build_rpmfc.c) = 10e3196d7d2dcc17f7c2be0acbea01f00354eee3
 SHA1 (patch-configure.ac) = 40f497407fd0af7ac0a17152b8751a7a02817b88
 SHA1 (patch-installplatform) = f9aed911d6c4695a13cedb63378bcd262b92ba99
 SHA1 (patch-lib_backend_db3.c) = 61c202b330baadaf5f68a22806e08f02a184e01a
-SHA1 (patch-lib_header.c) = e882a7578a844081dce9d534e4d458e89bc0d2f7
+SHA1 (patch-lib_header.c) = a7722a5b6587be5f83a27162d1ad6e9ce3ff63d1
 SHA1 (patch-lib_rpmrc.c) = 6e8c26311a596aba2aff142d94823d5b1304750f
 SHA1 (patch-misc_fnmatch.c) = f05137fc4c65986edf7dbcc87c8567ff18bf14eb
 SHA1 (patch-misc_fts.c) = becd8e4cacb126930f7f2c6446855164db6b4537
+SHA1 (patch-plugins_ima.c) = aa7abe37bc52a5284a3ceb6366d54e9aa98923d4
 SHA1 (patch-rpmio_rpmfileutil.c) = fd1debee2c38e866b8098223bab304a66b76eb23
 SHA1 (patch-system.h) = 215e3cfaafc1573c527b7f430b3807093550c39e
