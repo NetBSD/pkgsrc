@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/03/12 02:49:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/15 22:05:11 wiz Exp $
 
 VERSION=	8.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -30,9 +30,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
 
-# This package now only supports >= 3.8. (Same with its scipy dependency.)
-# no 3.11 support in py-guppy3 as of 3.1.2
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 # NB lilypond must be installed in order to run the full test suite.
 do-test:
