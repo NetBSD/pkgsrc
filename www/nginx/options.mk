@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.94 2023/04/24 16:34:38 osa Exp $
+# $NetBSD: options.mk,v 1.95 2023/05/15 22:02:57 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -139,10 +139,10 @@ PLIST.ndk=		yes
 .  endif
 .endfor
 .if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean)
-NDK_VERSION=		0.3.1
+NDK_VERSION=		0.3.2
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
-SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=simpl/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
+SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=vision5/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
 DISTFILES+=		${NDK_DISTFILE}
 .endif
 
