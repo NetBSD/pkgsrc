@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.7 2023/04/22 15:06:42 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.8 2023/05/15 18:39:02 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
@@ -42,4 +42,17 @@ sysutils/amanda-common
 Pullup ticket #6754 - requested by nia
 www/firefox102: security fix
 www/firefox102-l10n: dependent update
+
+Pullup ticket #6756 - requested by taca
+devel/git-base: security update
+devel/git: version update
+
+Pullup ticket #6757 - requested by dholland
+archivers/zstd: build fix
+
+Pullup ticket #6758 - requested by taca
+www/drupal7: security update
+
+Pullup ticket #6759 - requested by he
+security/gnutls: build fix
 
