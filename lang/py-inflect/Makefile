@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/11/14 15:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/15 20:52:47 adam Exp $
 
-DISTNAME=	inflect-6.0.2
+DISTNAME=	inflect-6.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
