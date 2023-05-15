@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/05/15 09:19:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/15 09:55:46 adam Exp $
 
-DISTNAME=	scikit_build-0.17.3
+DISTNAME=	scikit_build-0.17.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build/}
 
