@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2023/01/28 01:28:42 khorben Exp $
+$NetBSD: distinfo,v 1.20 2023/05/15 19:05:33 he Exp $
 
 BLAKE2s (radare2-5.8.2.tar.gz) = 1320604100492648c98d18f445c972456c7cc7e4fe0c884077d377f2ccaaa605
 SHA512 (radare2-5.8.2.tar.gz) = a3b768cade2f0bba7b252331010cddda952882db32ade7e3e16fb6c766265b574672a0f093b070bca5ac48b67c263b87a66c08064601d6e1961c0ff4dd0abc22
@@ -9,6 +9,8 @@ Size (vector35-arch-arm64-55d73c6bbb94448a5c615933179e73ac618cf876.tar.gz) = 105
 BLAKE2s (vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz) = a9e85ccf1cfd0ed8bf014494f9dc7239369b29f4447beaf08f95392d7f5ccc8c
 SHA512 (vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz) = 40c048b29856f48300d4539bc7bda38e6ceae1e8d4d9d131c4a7546b6e26b2fb96309c483b67e2c2290b06cea5fc52a7beb30557d54e89296e7734cc1ab06d10
 Size (vector35-arch-armv7-f270a6cc99644cb8e76055b6fa632b25abd26024.tar.gz) = 255278 bytes
+SHA1 (patch-libr_debug_p_native_bsd_bsd__debug.c) = f70fbb92b17b03e5436973709c60155f7eb5d405
+SHA1 (patch-libr_debug_p_native_reg.c) = f719d576e3ff2e1b5d99374d5720a05855c1597b
 SHA1 (patch-libr_io_p_shm.mk) = e5778f859039228e5eaa42fe613f57f55d38fd57
 SHA1 (patch-shlr-sdb-src-Makefile) = 414260d6010873f04ca8e614438fd674af0543d2
 SHA1 (patch-shlr_qjs_src_cutils.h) = f36e586889dd18ee4354c1a1bcbad52c95951eda
