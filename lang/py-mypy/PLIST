@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/04/25 12:49:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2023/05/15 20:48:50 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -999,6 +999,9 @@ ${PYSITELIB}/mypy/typeshed/stdlib/zipimport.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/mypy-extensions/mypy_extensions.pyi
+${PYSITELIB}/mypy/typeshed/test_cases/stdlib/check_xml.py
+${PYSITELIB}/mypy/typeshed/test_cases/stdlib/check_xml.pyc
+${PYSITELIB}/mypy/typeshed/test_cases/stdlib/check_xml.pyo
 ${PYSITELIB}/mypy/typestate.py
 ${PYSITELIB}/mypy/typestate.pyc
 ${PYSITELIB}/mypy/typestate.pyo
