@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/04 07:28:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/15 20:46:12 adam Exp $
 bin/pdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -122,8 +122,6 @@ ${PYSITELIB}/pdm/environments/base.py
 ${PYSITELIB}/pdm/environments/base.pyc
 ${PYSITELIB}/pdm/environments/local.py
 ${PYSITELIB}/pdm/environments/local.pyc
-${PYSITELIB}/pdm/environments/prefix.py
-${PYSITELIB}/pdm/environments/prefix.pyc
 ${PYSITELIB}/pdm/environments/python.py
 ${PYSITELIB}/pdm/environments/python.pyc
 ${PYSITELIB}/pdm/exceptions.py
@@ -197,6 +195,8 @@ ${PYSITELIB}/pdm/models/setup.py
 ${PYSITELIB}/pdm/models/setup.pyc
 ${PYSITELIB}/pdm/models/specifiers.py
 ${PYSITELIB}/pdm/models/specifiers.pyc
+${PYSITELIB}/pdm/models/venv.py
+${PYSITELIB}/pdm/models/venv.pyc
 ${PYSITELIB}/pdm/models/versions.py
 ${PYSITELIB}/pdm/models/versions.pyc
 ${PYSITELIB}/pdm/models/working_set.py
