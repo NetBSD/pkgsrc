@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3051 2023/05/15 21:23:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3052 2023/05/15 22:04:16 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4285,3 +4285,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/py-m3u8 to 3.5.0 [adam 2023-05-15]
 	Updated net/py-python-socks to 2.3.0 [adam 2023-05-15]
 	Updated www/py-flask-session to 0.5.0 [adam 2023-05-15]
+	Updated www/nginx-devel to 1.24.0nb6 [osa 2023-05-15]
+	Updated www/nginx to 1.24.0nb6 [osa 2023-05-15]
