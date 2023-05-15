@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3045 2023/05/15 09:56:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3046 2023/05/15 18:47:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-scikit-build to 0.17.3nb1 [jperkin 2023-05-15]
 	Updated devel/py-poetry-core to 1.6.0 [adam 2023-05-15]
 	Updated devel/py-scikit-build to 0.17.4 [adam 2023-05-15]
+	Updated net/trippy to 0.8.0 [pin 2023-05-15]
