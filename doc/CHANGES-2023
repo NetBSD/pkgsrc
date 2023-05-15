@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3041 2023/05/14 19:50:39 nia Exp $
+$NetBSD: CHANGES-2023,v 1.3042 2023/05/15 07:19:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4258,3 +4258,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added misc/tui-journal version 0.1.0 [pin 2023-05-14]
 	Updated www/firefox102-l10n to 102.11.0 [nia 2023-05-14]
 	Updated www/firefox102 to 102.11.0 [nia 2023-05-14]
+	Updated devel/py-flit_core to 3.9.0 [adam 2023-05-15]
+	Updated devel/py-flit to 3.9.0 [adam 2023-05-15]
