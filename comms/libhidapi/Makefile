@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/05/10 20:15:10 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/15 16:31:38 nikita Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.13.1
@@ -15,7 +15,8 @@ LICENSE=	gnu-gpl-v3 OR modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-LDFLAGS+=		-lpthread
+PTHREAD_AUTO_VARS=	yes
+LDFLAGS+=		${PTHREAD_LFLAGS}
 
 PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
