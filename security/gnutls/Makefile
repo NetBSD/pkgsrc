@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2023/02/15 07:40:52 nikita Exp $
+# $NetBSD: Makefile,v 1.238.2.1 2023/05/15 18:37:26 spz Exp $
 
 DISTNAME=	gnutls-3.8.0
 PKGREVISION=	1
@@ -15,7 +15,9 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PLIST_SRC=	PLIST
 
-USE_LANGUAGES=			c c++
+USE_LANGUAGES=	c c++11
+GCC_REQD+=	6
+
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gmake gsed perl pkg-config bash
 USE_TOOLS+=			msgfmt msgmerge xgettext
