@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 05:50:35 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/15 20:41:35 adam Exp $
 
-DISTNAME=	pdm_backend-2.0.6
+DISTNAME=	pdm_backend-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
@@ -14,7 +14,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # for tests
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
