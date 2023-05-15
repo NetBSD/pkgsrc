@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.23 2023/05/12 07:13:57 dholland Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.24 2023/05/15 21:14:43 gutteridge Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -347,7 +347,7 @@ CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 <para>Note that this specifies where the package has to <emphasis>look
 for</emphasis> its configuration files, not where they will be installed.
 Fortunately, there is a different way to specify the latter, as seen
-in the next seection, although the combination is rather confusing at
+in the next section, although the combination is rather confusing at
 first glance.</para>
 
 </sect2>
