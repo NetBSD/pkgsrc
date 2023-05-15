@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3050 2023/05/15 21:04:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3051 2023/05/15 21:23:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4279,3 +4279,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 18.7.0 [adam 2023-05-15]
 	Updated textproc/py-sphinx to 7.0.1 [adam 2023-05-15]
 	Updated lang/py-findpython to 0.2.5 [adam 2023-05-15]
+	Updated net/py-grpcio to 1.54.2 [adam 2023-05-15]
+	Updated net/py-grpcio-testing to 1.54.2 [adam 2023-05-15]
+	Updated net/py-grpcio-tools to 1.54.2 [adam 2023-05-15]
+	Updated multimedia/py-m3u8 to 3.5.0 [adam 2023-05-15]
+	Updated net/py-python-socks to 2.3.0 [adam 2023-05-15]
+	Updated www/py-flask-session to 0.5.0 [adam 2023-05-15]
