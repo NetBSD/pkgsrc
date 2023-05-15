@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/03/06 07:46:10 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/15 08:17:11 nikita Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua54-${LUA_VERSION}
@@ -34,10 +34,10 @@ CFLAGS+=	-pthread
 LDFLAGS+=	-pthread
 .endif
 
-.if !empty(OPSYS:M*BSD*) || ${OPSYS} == "DragonFly"
+.if ${OPSYS:M*BSD*} || ${OPSYS} == "DragonFly"
 BUILD_TARGET=	bsd
 .elif ${OPSYS} == "Linux"
-BUILD_TARGET=	linux-noreadline
+BUILD_TARGET=	linux
 .elif ${OPSYS} == "Darwin"
 BUILD_TARGET=	macosx
 .elif ${OPSYS} == "SunOS"
