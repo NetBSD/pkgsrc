@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.6 2022/08/07 17:38:08 thorpej Exp $
+$NetBSD: distinfo,v 1.7 2023/05/16 06:01:45 thorpej Exp $
 
 BLAKE2s (x16-emulator-41.tar.gz) = 095b9dd13b544d878dab791bb2e4ffae82ba582e72bd7d8b618b2181eceb558c
 SHA512 (x16-emulator-41.tar.gz) = 88b75589149e3c308e66fa45c2c07b497c97cea11b9c3fc9635f3e27f8f11ea47fcb55cf9089ac720742b7c96288c2286d120b07ca77879d08153ffbc7870fa1
 Size (x16-emulator-41.tar.gz) = 182076 bytes
 SHA1 (patch-Makefile) = e5029a2956a79e808d8ca9197d5db330930fa7e3
+SHA1 (patch-src_debugger.c) = ab309e1ece277a3c0bb6c1a3fc230efbc95c325e
+SHA1 (patch-src_glue.h) = 377c592090c9853d604953896480ea4d6526bf47
 SHA1 (patch-src_main.c) = 2d037b3b897eb7767ead3968eeb92f3fff4ac563
 SHA1 (patch-src_rendertext.c) = 2474af4dff454ddd6d4ca2c9abc4eba963c3d51e
+SHA1 (patch-src_serial.c) = fc80458efe6fd3b9f78071e31d44bada1788219b
