@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/09/12 09:55:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/05/16 20:31:00 wiz Exp $
 bin/${PKGNAME}
 bin/gawk
 bin/gawkbug
@@ -6,6 +6,13 @@ gnu/bin/awk
 gnu/man/man1/awk.1
 include/gawkapi.h
 info/gawk.info
+info/gawk_api-figure1.png
+info/gawk_api-figure2.png
+info/gawk_api-figure3.png
+info/gawk_array-elements.png
+info/gawk_general-program.png
+info/gawk_process-flow.png
+info/gawk_statist.jpg
 info/gawkinet.info
 info/gawkworkflow.info
 info/pm-gawk.info

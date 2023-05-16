@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.8 2022/09/12 09:55:56 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.9 2023/05/16 20:31:00 wiz Exp $
 
 Correct locale location, use names gawk and pgawk unconditionally.
 Do not install extras.
 
---- Makefile.in.orig	2022-09-04 12:12:04.000000000 +0000
+--- Makefile.in.orig	2023-05-07 18:29:33.000000000 +0000
 +++ Makefile.in
 @@ -359,7 +359,7 @@ CPPFLAGS = @CPPFLAGS@
  CSCOPE = @CSCOPE@
@@ -23,10 +23,10 @@ Do not install extras.
  bin_SCRIPTS = gawkbug
  include_HEADERS = gawkapi.h
  BUILT_SOURCES = $(srcdir)/pc/Makefile.tst
-@@ -1301,9 +1301,7 @@ install-exec-hook:
- 	(cd $(DESTDIR)$(bindir); \
- 	name=`echo gawk | sed '$(transform)'` ; \
- 	$(LN) $${name}$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
+@@ -1306,9 +1306,7 @@ install-exec-hook:
+ 	if [ ! -f gawk-$(VERSION)$(EXEEXT) ]; \
+ 	then	$(LN) $${name}$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
+ 	fi; \
 -	if [ ! -f awk$(EXEEXT) ]; \
 -	then	$(LN_S) $${name}$(EXEEXT) awk$(EXEEXT); \
 -	fi; exit 0)
