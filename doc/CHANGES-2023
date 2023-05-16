@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3075 2023/05/16 22:40:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3076 2023/05/16 22:45:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4320,3 +4320,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/keepassxc to 2.7.5 [wiz 2023-05-16]
 	Updated textproc/py-docutils to 0.20 [wiz 2023-05-16]
 	Updated print/mupdf to 1.22.1 [wiz 2023-05-16]
+	Updated security/py-google-auth to 2.18.0 [wiz 2023-05-16]
