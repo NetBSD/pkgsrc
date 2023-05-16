@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3077 2023/05/16 22:46:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3078 2023/05/16 22:48:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4322,3 +4322,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/mupdf to 1.22.1 [wiz 2023-05-16]
 	Updated security/py-google-auth to 2.18.0 [wiz 2023-05-16]
 	Updated graphics/py-pillow_heif to 0.11.1 [wiz 2023-05-16]
+	Updated www/py-websockets to 11.0.3 [wiz 2023-05-16]
