@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.15 2014/05/14 14:45:26 abs Exp $
+# $NetBSD: create-report-html.awk,v 1.16 2023/05/16 12:12:19 riastradh Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -159,7 +159,8 @@ function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
 	print_failed_log_line(PKGNAME, "clean", has_clean)
 	print_failed_log_line(PKGNAME, "deinstall", has_deinstall)
 	print "</tr>" > html_report
-	if (status[PKGNAME] == "indirect-failed") {
+	if (status[PKGNAME] == "indirect-failed" ||
+	    status[PKGNAME] == "indirect-prefailed") {
 		print "<tr class=\"" status[PKGNAME] "\">" > html_report
 		printf "<td>&nbsp;</td>" > html_report
 		printf "<td colspan=\"13\"> Failed: " > html_report
@@ -183,9 +184,11 @@ function compute_direct_failure(CUR, dep, cur_dep, cur_depends, found, i) {
 	split(depends[CUR], cur_depends, "[ \t]+")
 	for (dep in cur_depends) {
 		cur_dep = cur_depends[dep]
-		if (status[cur_dep] == "failed") {
+		if (status[cur_dep] == "failed" ||
+		    status[cur_dep] == "prefailed") {
 			failed_pkgs[CUR] = failed_pkgs[CUR] " " cur_dep
-		} else if (status[cur_dep] == "indirect-failed") {
+		} else if (status[cur_dep] == "indirect-failed" ||
+		    status[cur_dep] == "indirect-prefailed") {
 			compute_direct_failure(cur_dep)
 			failed_pkgs[CUR] = failed_pkgs[cur_dep] " " failed_pkgs[CUR]
 		}
@@ -260,8 +263,10 @@ BEGIN {
 		else if (status[pkg] == "indirect-failed") {
 			compute_direct_failure(pkg)
 			++pkgs_indirect_failed
-		} else if (status[pkg] == "indirect-prefailed")
+		} else if (status[pkg] == "indirect-prefailed") {
+			compute_direct_failure(pkg)
 			++pkgs_indirect_prefailed
+		}
 	}
 
 	print "<html>" > html_report
