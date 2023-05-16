@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/05/15 22:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/05/16 16:46:06 gutteridge Exp $
 
-VERSION=	8.1.0
+VERSION=	8.3.0
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
 CATEGORIES=	audio python
