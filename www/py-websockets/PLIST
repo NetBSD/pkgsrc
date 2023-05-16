@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2021/11/23 21:02:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/05/16 22:48:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/websockets/__init__.py
 ${PYSITELIB}/websockets/__init__.pyc
@@ -52,6 +51,9 @@ ${PYSITELIB}/websockets/imports.pyo
 ${PYSITELIB}/websockets/legacy/__init__.py
 ${PYSITELIB}/websockets/legacy/__init__.pyc
 ${PYSITELIB}/websockets/legacy/__init__.pyo
+${PYSITELIB}/websockets/legacy/async_timeout.py
+${PYSITELIB}/websockets/legacy/async_timeout.pyc
+${PYSITELIB}/websockets/legacy/async_timeout.pyo
 ${PYSITELIB}/websockets/legacy/auth.py
 ${PYSITELIB}/websockets/legacy/auth.pyc
 ${PYSITELIB}/websockets/legacy/auth.pyo
@@ -76,6 +78,9 @@ ${PYSITELIB}/websockets/legacy/protocol.pyo
 ${PYSITELIB}/websockets/legacy/server.py
 ${PYSITELIB}/websockets/legacy/server.pyc
 ${PYSITELIB}/websockets/legacy/server.pyo
+${PYSITELIB}/websockets/protocol.py
+${PYSITELIB}/websockets/protocol.pyc
+${PYSITELIB}/websockets/protocol.pyo
 ${PYSITELIB}/websockets/py.typed
 ${PYSITELIB}/websockets/server.py
 ${PYSITELIB}/websockets/server.pyc
@@ -85,6 +90,27 @@ ${PYSITELIB}/websockets/speedups.so
 ${PYSITELIB}/websockets/streams.py
 ${PYSITELIB}/websockets/streams.pyc
 ${PYSITELIB}/websockets/streams.pyo
+${PYSITELIB}/websockets/sync/__init__.py
+${PYSITELIB}/websockets/sync/__init__.pyc
+${PYSITELIB}/websockets/sync/__init__.pyo
+${PYSITELIB}/websockets/sync/client.py
+${PYSITELIB}/websockets/sync/client.pyc
+${PYSITELIB}/websockets/sync/client.pyo
+${PYSITELIB}/websockets/sync/compatibility.py
+${PYSITELIB}/websockets/sync/compatibility.pyc
+${PYSITELIB}/websockets/sync/compatibility.pyo
+${PYSITELIB}/websockets/sync/connection.py
+${PYSITELIB}/websockets/sync/connection.pyc
+${PYSITELIB}/websockets/sync/connection.pyo
+${PYSITELIB}/websockets/sync/messages.py
+${PYSITELIB}/websockets/sync/messages.pyc
+${PYSITELIB}/websockets/sync/messages.pyo
+${PYSITELIB}/websockets/sync/server.py
+${PYSITELIB}/websockets/sync/server.pyc
+${PYSITELIB}/websockets/sync/server.pyo
+${PYSITELIB}/websockets/sync/utils.py
+${PYSITELIB}/websockets/sync/utils.pyc
+${PYSITELIB}/websockets/sync/utils.pyo
 ${PYSITELIB}/websockets/typing.py
 ${PYSITELIB}/websockets/typing.pyc
 ${PYSITELIB}/websockets/typing.pyo
