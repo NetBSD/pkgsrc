@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/05/01 09:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/16 10:37:27 adam Exp $
 
-DISTNAME=	typeguard-3.0.2
+DISTNAME=	typeguard-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/agronholm/typeguard
 COMMENT=	Python run-time type checking library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>0:../../lang/py-mypy
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
