@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/11 07:16:04 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/16 19:28:17 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.3:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-angr>=${ANGR_VERSION}:../../devel/py-angr
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
