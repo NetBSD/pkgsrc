@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/11/30 10:24:35 nros Exp $
+$NetBSD: distinfo,v 1.2 2023/05/16 20:41:13 wiz Exp $
 
-BLAKE2s (litehtml-0.6.tar.gz) = 058e1f3d949d5d6969a09148303557e5823c0ee7fbdfb6f7bcce22db49165d50
-SHA512 (litehtml-0.6.tar.gz) = b774ed96e53780865e789875f571f96ebce1cd2ff0c05a06ae68a67aec44375cc282c07f77fc87131d422aceddba32bbf3e8e498c870883d8e042adb30834c39
-Size (litehtml-0.6.tar.gz) = 347790 bytes
-SHA1 (patch-CMakeLists.txt) = a34e567186404f1d93d6ed9baffbc78eb270919f
+BLAKE2s (litehtml-0.7.tar.gz) = 61b410bbef7995807bceaae96c77ad41ef6a96c4533f17adc0647751c0e56a5f
+SHA512 (litehtml-0.7.tar.gz) = baae547f5675a596e6fe9cadf0c64226cfd6d261255f5f9ce6f9eee734d31b5f4f634c57bdf640c51858932af7a297544f24791b0bc02f3d5237b0160970466a
+Size (litehtml-0.7.tar.gz) = 538430 bytes
+SHA1 (patch-CMakeLists.txt) = dc09adaa920fb89d417385126ae31bab8f79fb31
 SHA1 (patch-cmake_litehtmlConfig.cmake) = 0b84f06f87a0c386eefe01d98c8829a122152d98
