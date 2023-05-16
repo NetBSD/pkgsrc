@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3062 2023/05/16 16:42:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3063 2023/05/16 16:46:28 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-libusb1 to 3.0.0 [nikita 2023-05-16]
 	Updated devel/fq to 0.6.0 [wiz 2023-05-16]
 	Updated audio/mpc to 0.34nb2 [wiz 2023-05-16]
+	Updated audio/py-music21 to 8.3.0 [gutteridge 2023-05-16]
