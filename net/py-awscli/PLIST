@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/04/18 07:27:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2023/05/16 10:47:54 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -5036,6 +5036,7 @@ ${PYSITELIB}/awscli/examples/s3api/create-multipart-upload.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-analytics-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-cors.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-encryption.rst
+${PYSITELIB}/awscli/examples/s3api/delete-bucket-intelligent-tiering-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-inventory-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-lifecycle.rst
 ${PYSITELIB}/awscli/examples/s3api/delete-bucket-metrics-configuration.rst
@@ -5053,6 +5054,7 @@ ${PYSITELIB}/awscli/examples/s3api/get-bucket-acl.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-analytics-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-cors.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-encryption.rst
+${PYSITELIB}/awscli/examples/s3api/get-bucket-intelligent-tiering-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-inventory-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-lifecycle-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/get-bucket-lifecycle.rst
@@ -5080,6 +5082,7 @@ ${PYSITELIB}/awscli/examples/s3api/get-public-access-block.rst
 ${PYSITELIB}/awscli/examples/s3api/head-bucket.rst
 ${PYSITELIB}/awscli/examples/s3api/head-object.rst
 ${PYSITELIB}/awscli/examples/s3api/list-bucket-analytics-configurations.rst
+${PYSITELIB}/awscli/examples/s3api/list-bucket-intelligent-tiering-configurations.rst
 ${PYSITELIB}/awscli/examples/s3api/list-bucket-inventory-configurations.rst
 ${PYSITELIB}/awscli/examples/s3api/list-bucket-metrics-configurations.rst
 ${PYSITELIB}/awscli/examples/s3api/list-buckets.rst
@@ -5093,6 +5096,7 @@ ${PYSITELIB}/awscli/examples/s3api/put-bucket-acl.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-analytics-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-cors.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-encryption.rst
+${PYSITELIB}/awscli/examples/s3api/put-bucket-intelligent-tiering-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-inventory-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-lifecycle-configuration.rst
 ${PYSITELIB}/awscli/examples/s3api/put-bucket-lifecycle.rst
