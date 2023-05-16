@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/10/07 03:54:06 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/16 16:46:06 gutteridge Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/INSTALLER
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
@@ -115,6 +115,8 @@ ${PYSITELIB}/music21/chord/__init__.py
 ${PYSITELIB}/music21/chord/__init__.pyc
 ${PYSITELIB}/music21/chord/tables.py
 ${PYSITELIB}/music21/chord/tables.pyc
+${PYSITELIB}/music21/chord/tools.py
+${PYSITELIB}/music21/chord/tools.pyc
 ${PYSITELIB}/music21/clef.py
 ${PYSITELIB}/music21/clef.pyc
 ${PYSITELIB}/music21/common/__init__.py
