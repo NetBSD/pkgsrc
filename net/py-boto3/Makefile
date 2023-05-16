@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2023/04/18 07:23:44 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/05/16 10:44:53 adam Exp $
 
-DISTNAME=	boto3-1.26.115
+DISTNAME=	boto3-1.26.134
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto3/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/boto/boto3
 COMMENT=	Amazon Web Services SDK for Python
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-botocore>=1.29.115:../../net/py-botocore
+DEPENDS+=	${PYPKGPREFIX}-botocore>=1.29.134:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.6.0:../../net/py-s3transfer
 
