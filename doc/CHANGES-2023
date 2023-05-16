@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3073 2023/05/16 22:35:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3074 2023/05/16 22:37:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/fmtlib to 10.0.0 [wiz 2023-05-16]
 	Updated fonts/harfbuzz to 7.3.0 [wiz 2023-05-16]
 	Updated security/keepassxc to 2.7.5 [wiz 2023-05-16]
+	Updated textproc/py-docutils to 0.20 [wiz 2023-05-16]
