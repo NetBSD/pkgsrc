@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3058 2023/05/16 10:48:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3059 2023/05/16 15:45:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4302,3 +4302,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-s3transfer to 0.6.1 [adam 2023-05-16]
 	Updated net/py-boto3 to 1.26.134 [adam 2023-05-16]
 	Updated net/py-awscli to 1.27.134 [adam 2023-05-16]
+	Updated devel/blosc to 1.21.4 [adam 2023-05-16]
+	Updated fonts/py-fonttools to 4.39.4 [adam 2023-05-16]
