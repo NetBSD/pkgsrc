@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3054 2023/05/15 22:27:07 osa Exp $
+$NetBSD: CHANGES-2023,v 1.3055 2023/05/16 00:30:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4294,3 +4294,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-php to 1.30.0 [osa 2023-05-15]
 	Updated www/unit-python to 1.30.0 [osa 2023-05-15]
 	Updated www/unit-ruby to 1.30.0 [osa 2023-05-15]
+	Updated x11/xfce4-screenshooter to 1.10.4 [gutteridge 2023-05-16]
