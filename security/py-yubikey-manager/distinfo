@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/27 06:02:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/05/16 22:51:02 wiz Exp $
 
-BLAKE2s (yubikey_manager-5.1.0.tar.gz) = 6ca4dc88277421d2b962163830784e1d124558e5ee8a7c377bb2860a0a0e7dc4
-SHA512 (yubikey_manager-5.1.0.tar.gz) = 2a3eb254c72789e680d25b9054666260d9543369bf363cd4f79bd6806ec11b337137befa672ba7987d9df8007bf76c7e31b60fca7ba6f90b4e188d02855c71f6
-Size (yubikey_manager-5.1.0.tar.gz) = 165606 bytes
+BLAKE2s (yubikey_manager-5.1.1.tar.gz) = bfbe1bd2322b014c8ddab34c6c2f0fab267e183779d31686fd04230b01832256
+SHA512 (yubikey_manager-5.1.1.tar.gz) = 9da9588bb311594d2b4d2d8b234b64f333dfc7dc57145e250965bd9d058cfda43a9c9a32991081ac069819812bebaf0c10a24afab4ac444891ab21d2cff81c06
+Size (yubikey_manager-5.1.1.tar.gz) = 167947 bytes
