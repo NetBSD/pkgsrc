@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3061 2023/05/16 16:41:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3062 2023/05/16 16:42:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.39.4 [adam 2023-05-16]
 	Updated devel/py-libusb1 to 3.0.0 [nikita 2023-05-16]
 	Updated devel/fq to 0.6.0 [wiz 2023-05-16]
+	Updated audio/mpc to 0.34nb2 [wiz 2023-05-16]
