@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/04/26 11:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/16 22:55:00 wiz Exp $
 
 DISTNAME=	bat-0.23.0
 PKGREVISION=	1
@@ -19,10 +19,9 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/bat ${DESTDIR}${PREFIX}/bin
+post-install:
 	cd ${WRKSRC}/target/release && \
 		${FIND} . -name bat.1 \
 			-type f \
