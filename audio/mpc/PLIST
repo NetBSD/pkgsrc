@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/10/30 08:28:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/05/16 16:42:13 wiz Exp $
 bin/mpc
 man/man1/mpc.1
 share/doc/mpc/AUTHORS
@@ -10,23 +10,18 @@ share/doc/mpc/contrib/mpd-m3u-handler.sh
 share/doc/mpc/contrib/mpd-pls-handler.sh
 share/doc/mpc/html/.buildinfo
 share/doc/mpc/html/_sources/index.rst.txt
-share/doc/mpc/html/_static/_sphinx_javascript_frameworks_compat.js
 share/doc/mpc/html/_static/alabaster.css
 share/doc/mpc/html/_static/basic.css
 share/doc/mpc/html/_static/custom.css
 share/doc/mpc/html/_static/doctools.js
 share/doc/mpc/html/_static/documentation_options.js
 share/doc/mpc/html/_static/file.png
-share/doc/mpc/html/_static/jquery-3.6.0.js
-share/doc/mpc/html/_static/jquery.js
 share/doc/mpc/html/_static/language_data.js
 share/doc/mpc/html/_static/minus.png
 share/doc/mpc/html/_static/plus.png
 share/doc/mpc/html/_static/pygments.css
 share/doc/mpc/html/_static/searchtools.js
 share/doc/mpc/html/_static/sphinx_highlight.js
-share/doc/mpc/html/_static/underscore-1.13.1.js
-share/doc/mpc/html/_static/underscore.js
 share/doc/mpc/html/genindex.html
 share/doc/mpc/html/index.html
 share/doc/mpc/html/objects.inv
