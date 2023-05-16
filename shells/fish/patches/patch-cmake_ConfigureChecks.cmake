@@ -1,6 +1,7 @@
-$NetBSD: patch-cmake_ConfigureChecks.cmake,v 1.3 2023/05/16 16:54:50 wiz Exp $
+$NetBSD: patch-cmake_ConfigureChecks.cmake,v 1.4 2023/05/16 17:04:56 wiz Exp $
 
 On some systems, libterminfo has a longer name.
+https://github.com/fish-shell/fish-shell/pull/9794
 
 --- cmake/ConfigureChecks.cmake.orig	2023-03-25 06:50:41.000000000 +0000
 +++ cmake/ConfigureChecks.cmake
