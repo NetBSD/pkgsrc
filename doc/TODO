@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22945 2023/05/16 22:49:37 wiz Exp $
+$NetBSD: TODO,v 1.22946 2023/05/16 22:51:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1248,7 +1248,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
-	o py-yubikey-manager-5.1.1
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
