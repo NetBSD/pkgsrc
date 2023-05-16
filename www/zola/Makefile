@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/04/23 10:21:53 nikita Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/16 15:41:00 nikita Exp $
 
 DISTNAME=	zola-0.17.2
 CATEGORIES=	www
@@ -22,9 +22,6 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsass}/lib
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zola ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
