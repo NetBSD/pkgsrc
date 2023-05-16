@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.34 2023/05/15 20:07:36 wiz Exp $
+# $NetBSD: cargo.mk,v 1.35 2023/05/16 06:10:52 wiz Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -87,7 +87,7 @@ do-build: do-cargo-build
 do-cargo-build:
 	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
 
-.if !target(do-install)
+.if !target(do-install) && ${GNU_CONFIGURE:Uno:tl} == no
 do-install: do-cargo-install
 .endif
 
