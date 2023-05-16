@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/05/07 12:33:47 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/05/16 20:28:49 wiz Exp $
 
 DISTNAME=	luminance-hdr-2.6.0
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtpfsgui/}
 EXTRACT_SUFX=	.tar.bz2
