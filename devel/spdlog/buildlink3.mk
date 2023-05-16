@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/11/28 14:38:53 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/05/16 21:20:49 wiz Exp $
 
 BUILDLINK_TREE+=	spdlog
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	spdlog
 SPDLOG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spdlog+=	spdlog>=1.8.5nb1
+BUILDLINK_ABI_DEPENDS.spdlog?=	spdlog>=1.11.0nb2
 BUILDLINK_PKGSRCDIR.spdlog?=	../../devel/spdlog
 
 # Support the use of SPDLOG_FMT_EXTERNAL.
