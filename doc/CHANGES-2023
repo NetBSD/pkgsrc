@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3057 2023/05/16 10:37:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3058 2023/05/16 10:48:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4298,3 +4298,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/x16-emulator to x16-emulator-41nb4 [thorpej 2023-05-16]
 	Updated www/py-tornado to 6.3.2 [adam 2023-05-16]
 	Updated devel/py-typeguard to 4.0.0 [adam 2023-05-16]
+	Updated net/py-botocore to 1.29.134 [adam 2023-05-16]
+	Updated net/py-s3transfer to 0.6.1 [adam 2023-05-16]
+	Updated net/py-boto3 to 1.26.134 [adam 2023-05-16]
+	Updated net/py-awscli to 1.27.134 [adam 2023-05-16]
