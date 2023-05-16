@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/04/27 11:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/16 19:40:53 wiz Exp $
 
-DISTNAME=	cargo-audit-0.17.5
+DISTNAME=	cargo-audit-0.17.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rustsec/}
 GITHUB_TAG=	cargo-audit/v${PKGVERSION_NOREV}
@@ -17,6 +17,7 @@ USE_LANGUAGES=		c
 INSTALLATION_DIRS=	bin
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
+# error: found a virtual manifest at `.../rustsec-cargo-audit-v0.17.6/Cargo.toml` instead of a package manifest
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cargo-audit ${DESTDIR}${PREFIX}/bin
 
