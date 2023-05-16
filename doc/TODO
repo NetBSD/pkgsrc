@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22928 2023/05/15 22:33:39 wiz Exp $
+$NetBSD: TODO,v 1.22929 2023/05/16 10:37:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -1249,8 +1249,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-terminator-2.1.1
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
-	o py-tornado-6.3.2
-	o py-typeguard-4.0.0
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-websockets-11.0.3
