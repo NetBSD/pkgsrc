@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/10/19 18:38:29 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/05/16 21:20:49 wiz Exp $
 
 BUILDLINK_TREE+=	gr-osmosdr
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gr-osmosdr
 GR_OSMOSDR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gr-osmosdr+=	gr-osmosdr>=0.2.2
-BUILDLINK_ABI_DEPENDS.gr-osmosdr+=	gr-osmosdr>=0.2.3.20210128nb4
+BUILDLINK_ABI_DEPENDS.gr-osmosdr+=	gr-osmosdr>=0.2.4nb3
 BUILDLINK_PKGSRCDIR.gr-osmosdr?=	../../ham/gr-osmosdr
 
 .include "../../devel/boost-headers/buildlink3.mk"
