@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/14 15:13:26 nikita Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/16 15:29:38 nikita Exp $
 guile/3.0/bin/haunt
 guile/3.0/info/haunt.info
 guile/3.0/lib/guile/3.0/site-ccache/haunt/artifact.go
@@ -9,6 +9,7 @@ guile/3.0/lib/guile/3.0/site-ccache/haunt/builder/blog.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/builder/rss.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/config.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/html.go
+${PLIST.inotify}guile/3.0/lib/guile/3.0/site-ccache/haunt/inotify.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/page.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/post.go
 guile/3.0/lib/guile/3.0/site-ccache/haunt/reader.go
@@ -29,6 +30,7 @@ guile/3.0/share/guile/site/3.0/haunt/builder/blog.scm
 guile/3.0/share/guile/site/3.0/haunt/builder/rss.scm
 guile/3.0/share/guile/site/3.0/haunt/config.scm
 guile/3.0/share/guile/site/3.0/haunt/html.scm
+${PLIST.inotify}guile/3.0/share/guile/site/3.0/haunt/inotify.scm
 guile/3.0/share/guile/site/3.0/haunt/page.scm
 guile/3.0/share/guile/site/3.0/haunt/post.scm
 guile/3.0/share/guile/site/3.0/haunt/reader.scm
