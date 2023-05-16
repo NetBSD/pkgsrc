@@ -1,6 +1,7 @@
-$NetBSD: patch-src_futils.cpp,v 1.1 2023/05/16 20:25:00 wiz Exp $
+$NetBSD: patch-src_futils.cpp,v 1.2 2023/05/16 20:38:21 wiz Exp $
 
 Fix build on NetBSD.
+https://github.com/Exiv2/exiv2/pull/2625
 
 --- src/futils.cpp.orig	2023-05-08 16:01:13.000000000 +0000
 +++ src/futils.cpp
