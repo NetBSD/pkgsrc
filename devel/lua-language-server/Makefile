@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/12 21:37:32 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/16 14:35:44 nikita Exp $
 
 DISTNAME=		lua-language-server-3.6.19
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -21,6 +21,8 @@ USE_TOOLS+=		pax mktemp
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 # 3rd/luamake, maybe needs path patching:
 DEPENDS+=		clang-[0-9]*:../../lang/clang
+
+USE_LANGUAGES+=		c c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
