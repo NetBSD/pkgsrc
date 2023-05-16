@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/29 09:45:50 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/05/16 16:57:42 wiz Exp $
 
-BLAKE2s (libXaw3d-1.6.4.tar.xz) = ab7517022067194caae8fde8693469bd5a22031bd574d68830c7b1e3522bb6aa
-SHA512 (libXaw3d-1.6.4.tar.xz) = 388e905871a823d0f87fbc29e9ea2de95ac13ccaf50e031a01602d8d388d61bcf1823b4ded8c1a06bdce382e8ddcbc1b0182ccef00cde8064b09176163283dba
-Size (libXaw3d-1.6.4.tar.xz) = 482168 bytes
+BLAKE2s (libXaw3d-1.6.5.tar.xz) = 589200dab708ec572fd79aaeafad7c2c86aaf6857fa495ee08bfcf789fab21b6
+SHA512 (libXaw3d-1.6.5.tar.xz) = b2fbceffcbaff7c332f37769fd6b496ac820de8a80fbf9777416f1895b74a07e4efc3f2bd64db3f584983b24d2b10e9b60cf4aae3ec4a30c06510ae7c213a663
+Size (libXaw3d-1.6.5.tar.xz) = 483496 bytes
