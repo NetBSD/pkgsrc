@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/04/18 07:27:41 adam Exp $
+# $NetBSD: Makefile,v 1.59 2023/05/16 10:47:54 adam Exp $
 
-DISTNAME=	awscli-1.27.115
+DISTNAME=	awscli-1.27.134
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/aws/aws-cli
 COMMENT=	Universal Command Line Interface for Amazon Web Services
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-botocore>=1.29.115:../../net/py-botocore
+DEPENDS+=	${PYPKGPREFIX}-botocore>=1.29.134:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.2:../../security/py-rsa
