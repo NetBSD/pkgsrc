@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2023/04/19 08:12:00 adam Exp $
+# $NetBSD: Makefile,v 1.59 2023/05/16 00:30:18 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.10.3
+VERSION=	1.10.4
 DISTNAME=	xfce4-screenshooter-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-screenshooter/${VERSION:R}/
