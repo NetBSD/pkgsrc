@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/11 06:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/16 18:51:11 wiz Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../emulators/unicorn/Makefile.common"
 
