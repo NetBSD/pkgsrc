@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2023/04/18 07:22:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2023/05/16 10:41:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -578,6 +578,7 @@ ${PYSITELIB}/botocore/data/ec2/2016-09-15/waiters-2.json
 ${PYSITELIB}/botocore/data/ec2/2016-11-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/ec2/2016-11-15/examples-1.json
 ${PYSITELIB}/botocore/data/ec2/2016-11-15/paginators-1.json
+${PYSITELIB}/botocore/data/ec2/2016-11-15/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/ec2/2016-11-15/service-2.json
 ${PYSITELIB}/botocore/data/ec2/2016-11-15/waiters-2.json
 ${PYSITELIB}/botocore/data/ecr-public/2020-10-30/endpoint-rule-set-1.json
@@ -1137,6 +1138,9 @@ ${PYSITELIB}/botocore/data/organizations/2016-11-28/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/organizations/2016-11-28/examples-1.json
 ${PYSITELIB}/botocore/data/organizations/2016-11-28/paginators-1.json
 ${PYSITELIB}/botocore/data/organizations/2016-11-28/service-2.json
+${PYSITELIB}/botocore/data/osis/2022-01-01/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/osis/2022-01-01/paginators-1.json
+${PYSITELIB}/botocore/data/osis/2022-01-01/service-2.json
 ${PYSITELIB}/botocore/data/outposts/2019-12-03/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/outposts/2019-12-03/examples-1.json
 ${PYSITELIB}/botocore/data/outposts/2019-12-03/paginators-1.json
@@ -1614,6 +1618,9 @@ ${PYSITELIB}/botocore/docs/shape.pyo
 ${PYSITELIB}/botocore/docs/sharedexample.py
 ${PYSITELIB}/botocore/docs/sharedexample.pyc
 ${PYSITELIB}/botocore/docs/sharedexample.pyo
+${PYSITELIB}/botocore/docs/translator.py
+${PYSITELIB}/botocore/docs/translator.pyc
+${PYSITELIB}/botocore/docs/translator.pyo
 ${PYSITELIB}/botocore/docs/utils.py
 ${PYSITELIB}/botocore/docs/utils.pyc
 ${PYSITELIB}/botocore/docs/utils.pyo
