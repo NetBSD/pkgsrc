@@ -1,6 +1,7 @@
-$NetBSD: patch-cmake_config.h.cmake,v 1.2 2023/05/16 20:25:00 wiz Exp $
+$NetBSD: patch-cmake_config.h.cmake,v 1.3 2023/05/16 20:38:21 wiz Exp $
 
 Support newer NetBSD versions.
+https://github.com/Exiv2/exiv2/pull/2626
 
 --- cmake/config.h.cmake.orig	2019-07-29 06:33:06.000000000 +0000
 +++ cmake/config.h.cmake
