@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/03/15 11:21:02 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/16 15:29:38 nikita Exp $
 
 DISTNAME=	haunt-0.2.6
 PKGNAME=	guile-${DISTNAME}
@@ -17,8 +17,16 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/3.0
 USE_TOOLS+=		pkg-config
 INFO_FILES=		yes
 
-# \todo: add guile-reader, for Skribe support
+# TODO: add guile-reader, for Skribe support
 DEPENDS+=	guile-commonmark-[0-9]*:../../textproc/guile-commonmark
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	inotify
+
+.if ${OPSYS} == "Linux"
+PLIST.inotify=	yes
+.endif
 
 # There is no check for guile scripts, the @GUILE@ ends up
 # in the package with the WRKSRC/BL3 location of guile.
