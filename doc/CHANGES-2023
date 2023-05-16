@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3064 2023/05/16 16:57:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3065 2023/05/16 16:58:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/mpc to 0.34nb2 [wiz 2023-05-16]
 	Updated audio/py-music21 to 8.3.0 [gutteridge 2023-05-16]
 	Updated x11/libXaw3d to 1.6.5 [wiz 2023-05-16]
+	Updated x11/setxkbmap to 1.3.4 [wiz 2023-05-16]
