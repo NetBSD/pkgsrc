@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/05/09 10:14:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/05/16 22:37:29 wiz Exp $
 bin/docutils-${PYVERSSUFFIX}
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
@@ -116,6 +116,9 @@ ${PYSITELIB}/docutils/languages/sk.pyo
 ${PYSITELIB}/docutils/languages/sv.py
 ${PYSITELIB}/docutils/languages/sv.pyc
 ${PYSITELIB}/docutils/languages/sv.pyo
+${PYSITELIB}/docutils/languages/uk.py
+${PYSITELIB}/docutils/languages/uk.pyc
+${PYSITELIB}/docutils/languages/uk.pyo
 ${PYSITELIB}/docutils/languages/zh_cn.py
 ${PYSITELIB}/docutils/languages/zh_cn.pyc
 ${PYSITELIB}/docutils/languages/zh_cn.pyo
@@ -279,6 +282,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/sk.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.py
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/uk.py
+${PYSITELIB}/docutils/parsers/rst/languages/uk.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/uk.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/zh_cn.py
 ${PYSITELIB}/docutils/parsers/rst/languages/zh_cn.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/zh_cn.pyo
