@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/11 06:43:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/16 19:23:05 wiz Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../math/z3/Makefile.common"
 
