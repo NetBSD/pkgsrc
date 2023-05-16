@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/05/07 12:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/16 20:28:46 wiz Exp $
 
 DISTNAME=	kio-extras-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/internet/
