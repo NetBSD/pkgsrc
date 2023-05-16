@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/11/30 10:24:35 nros Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/16 20:41:13 wiz Exp $
 
-DISTNAME=	litehtml-0.6
+DISTNAME=	litehtml-0.7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=litehtml/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
