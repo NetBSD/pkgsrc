@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3091 2023/05/17 03:51:58 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.3092 2023/05/17 07:17:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4336,3 +4336,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mate-screensaver to 1.26.2 [gutteridge 2023-05-17]
 	Updated x11/mate-settings-daemon to 1.26.1 [gutteridge 2023-05-17]
 	Updated games/warzone2100 to 4.3.5 [triaxx 2023-05-17]
+	Added textproc/py-types-yaml version 6.0.12.9 [adam 2023-05-17]
+	Updated net/py-responses to 0.23.1nb1 [adam 2023-05-17]
