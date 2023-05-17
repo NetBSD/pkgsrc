@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2023/04/11 01:45:10 markd Exp $
+# $NetBSD: Makefile,v 1.406 2023/05/17 15:43:35 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -137,6 +137,7 @@ SUBDIR+=	ibm-plex-otf
 SUBDIR+=	ibm-plex-ttf
 SUBDIR+=	inconsolata-g
 SUBDIR+=	inconsolata-ttf
+SUBDIR+=	intel-one-mono
 SUBDIR+=	intlfonts
 SUBDIR+=	ipaexfont
 SUBDIR+=	ipafont
