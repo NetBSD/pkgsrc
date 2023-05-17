@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3106 2023/05/17 13:24:47 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3107 2023/05/17 13:42:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4352,3 +4352,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lemon to 1.0.3.42.0 [adam 2023-05-17]
 	Updated shells/sheldon to 0.7.3 [schmonz 2023-05-17]
 	Updated mail/neomutt to 20230517 [nikita 2023-05-17]
+	Updated net/bind916 to 9.16.41 [taca 2023-05-17]
