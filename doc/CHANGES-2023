@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3116 2023/05/17 18:16:02 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3117 2023/05/17 18:35:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4371,3 +4371,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/rabbitmq to 3.11.16 [adam 2023-05-17]
 	Updated www/unit to 1.30.0nb1 [osa 2023-05-17]
 	Updated shells/oh-my-posh to 16.4.2 [schmonz 2023-05-17]
+	Updated devel/visualvm to 2.1.6 [abs 2023-05-17]
