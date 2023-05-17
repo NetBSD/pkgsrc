@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22950 2023/05/17 10:54:31 wiz Exp $
+$NetBSD: TODO,v 1.22951 2023/05/17 12:37:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -557,6 +557,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cross-h8300-hms-binutils-2.17
 	o csvkit-1.0.5
 	o ctemplate-2.4
+	o cups-filters-1.28.17
 	o cutter-1.2.7
 	o cvs-fast-export-1.56
 	o cxref-1.6e
