@@ -1,26 +1,30 @@
-# $NetBSD: Makefile,v 1.35 2023/05/17 11:22:57 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.36 2023/05/17 11:53:23 wiz Exp $
 
-DISTNAME=		recode-3.6
-PKGREVISION=		6
-CATEGORIES=		converters
-MASTER_SITES=		${MASTER_SITE_GNU:=recode/}
+DISTNAME=	recode-3.7.14
+CATEGORIES=	converters
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rrthomas/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.gnu.org/software/recode/recode.html
-COMMENT=		Convert files between character sets and usages
-LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/rrthomas/recode/
+COMMENT=	Convert files between character sets and usages
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-USE_PKGLOCALEDIR=		yes
-GNU_CONFIGURE=			yes
-USE_LIBTOOL=			yes
-BROKEN_GETTEXT_DETECTION=	yes
+# needed only for tests, but detected at configure time
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
+# to detect cython properly, configure is only looking for unversioned cython
+CONFIGURE_ENV+=	CYTHON=cython-${PYVERSSUFFIX}
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 INFO_FILES=	yes
 TEST_TARGET=	check
 
-post-extract:
-	${CP} ${WRKSRC}/lib/error.c ${WRKSRC}/src/error.c
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		yes
 
+.include "../../lang/python/tool.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
