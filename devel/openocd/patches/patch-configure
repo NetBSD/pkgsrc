@@ -1,26 +1,44 @@
-$NetBSD: patch-configure,v 1.1 2021/05/06 21:15:38 tnn Exp $
+$NetBSD: patch-configure,v 1.2 2023/05/17 15:29:13 nikita Exp $
 
 Fix build on Linux.
 CONFIG_SHELL should ensure that "echo -e" works but for some reason this part
 of the script gets executed with the wrong shell.
 
---- configure.orig	2021-03-07 11:02:04.000000000 +0000
-+++ configure
-@@ -14884,7 +14884,7 @@ if test "x$use_internal_jimtcl" = "xyes"
+--- configure.orig	2023-01-14 21:32:26.000000000 +0100
++++ configure	2023-05-17 17:19:52.560370134 +0200
+@@ -14787,7 +14787,7 @@
  subdirs="$subdirs jimtcl"
  
  
--echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --disable-install-jim "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
-+printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --disable-install-jim "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
+-echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" '"$jimtcl_config_options"' "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
++printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" '"$jimtcl_config_options"' "'\$'@"' > "$srcdir/jimtcl/configure.gnu"
  
  
  
-@@ -16703,7 +16703,7 @@ if test "x$enable_jlink" != "xno"; then 
+@@ -15045,7 +15045,7 @@
+ 
+ fi
+ 
+-if test "x$enable_capstone" == xno; then :
++if test "x$enable_capstone" = xno; then :
+ 
+ 
+ $as_echo "#define HAVE_CAPSTONE 0" >>confdefs.h
+@@ -16515,7 +16515,7 @@
  subdirs="$subdirs src/jtag/drivers/libjaylink"
  
  
--echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --enable-subproject-build "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
-+printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" --enable-subproject-build "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
+-echo -e '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" '"--enable-subproject-build"' "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
++printf '#!/bin/sh\nexec "`dirname "'\$'0"`/configure" '"--enable-subproject-build"' "'\$'@"' > "$srcdir/src/jtag/drivers/libjaylink/configure.gnu"
  
  
  
+@@ -17819,6 +17819,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
