@@ -1,11 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/10 16:56:38 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/17 13:26:35 nikita Exp $
 include/hidapi/hidapi.h
+${PLIST.darwin}include/hidapi/hidapi_darwin.h
 ${PLIST.libusb}include/hidapi/hidapi_libusb.h
 lib/cmake/hidapi/hidapi-config-version.cmake
 lib/cmake/hidapi/hidapi-config.cmake
 lib/cmake/hidapi/libhidapi-release.cmake
 lib/cmake/hidapi/libhidapi.cmake
+${PLIST.hidraw}lib/libhidapi-hidraw.so
+${PLIST.hidraw}lib/libhidapi-hidraw.so.0
+${PLIST.hidraw}lib/libhidapi-hidraw.so.0.13.1
 lib/libhidapi-libusb.so
 lib/libhidapi-libusb.so.0
 lib/libhidapi-libusb.so.0.13.1
-lib/pkgconfig/hidapi-libusb.pc
+${PLIST.darwin}lib/libhidapi.0.13.1dylib
+${PLIST.darwin}lib/libhidapi.0.dylib
+${PLIST.darwin}lib/libhidapi.dylib
+${PLIST.hidraw}lib/pkgconfig/hidapi-hidraw.pc
+${PLIST.libusb}lib/pkgconfig/hidapi-libusb.pc
+${PLIST.darwin}lib/pkgconfig/hidapi.pc
