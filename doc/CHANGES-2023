@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3121 2023/05/17 21:35:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3122 2023/05/17 21:55:45 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.4 [pin 2023-05-17]
 	Updated shells/nushell to 0.80.0 [pin 2023-05-17]
 	Updated shells/oh-my-posh to 16.4.4 [pin 2023-05-17]
+	Updated biology/hisat2 to 2.2.1nb3 [bacon 2023-05-17]
