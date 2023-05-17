@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/16 20:41:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/17 08:31:30 wiz Exp $
+include/litehtml/attributes.h
 include/litehtml/background.h
 include/litehtml/borders.h
+include/litehtml/box.h
 include/litehtml/codepoint.h
+include/litehtml/context.h
 include/litehtml/css_length.h
 include/litehtml/css_margins.h
 include/litehtml/css_offsets.h
 include/litehtml/css_position.h
-include/litehtml/css_properties.h
 include/litehtml/css_selector.h
 include/litehtml/document.h
-include/litehtml/document_container.h
 include/litehtml/el_anchor.h
 include/litehtml/el_base.h
 include/litehtml/el_before_after.h
@@ -34,14 +35,10 @@ include/litehtml/element.h
 include/litehtml/html.h
 include/litehtml/html_tag.h
 include/litehtml/iterators.h
-include/litehtml/line_box.h
 include/litehtml/litehtml.h
-include/litehtml/master_css.h
 include/litehtml/media_query.h
 include/litehtml/num_cvt.h
 include/litehtml/os_types.h
-include/litehtml/render_item.h
-include/litehtml/string_id.h
 include/litehtml/style.h
 include/litehtml/stylesheet.h
 include/litehtml/table.h
