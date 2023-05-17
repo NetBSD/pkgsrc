@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.96 2023/04/23 14:03:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.97 2023/05/17 14:12:15 he Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -35,13 +35,13 @@ DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
 USE_TOOLS+=		pax
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++14
 
 .include "../../mk/bsd.prefs.mk"
 
 # IMPORTANT: sync this with devel/boost-libs/buildlink3.mk
 # libstdc++5 is required to build "math" and "nowide".
-GCC_REQD+=		5
+GCC_REQD+=		6
 
 PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
 
