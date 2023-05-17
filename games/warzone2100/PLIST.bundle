@@ -1,0 +1,260 @@
+@comment $NetBSD: PLIST.bundle,v 1.1 2023/05/17 03:51:38 triaxx Exp $
+Warzone 2100.app/Contents/Info.plist
+Warzone 2100.app/Contents/MacOS/Warzone 2100
+Warzone 2100.app/Contents/Resources/AUTHORS
+Warzone 2100.app/Contents/Resources/COPYING
+Warzone 2100.app/Contents/Resources/COPYING.NONGPL
+Warzone 2100.app/Contents/Resources/COPYING.README
+Warzone 2100.app/Contents/Resources/ChangeLog
+Warzone 2100.app/Contents/Resources/README.md
+Warzone 2100.app/Contents/Resources/Warzone.icns
+Warzone 2100.app/Contents/Resources/data/base.wz
+Warzone 2100.app/Contents/Resources/data/fonts/DejaVu.LICENSE.txt
+Warzone 2100.app/Contents/Resources/data/fonts/DejaVuSans-Bold.ttf
+Warzone 2100.app/Contents/Resources/data/fonts/DejaVuSans.ttf
+Warzone 2100.app/Contents/Resources/data/fonts/Noto.LICENSE.txt
+Warzone 2100.app/Contents/Resources/data/fonts/NotoSansCJK-VF.otf.ttc
+Warzone 2100.app/Contents/Resources/data/mp.wz
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/album.json
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/albumcover.png
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/license.txt
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/menu_enhanced.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track17.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track18.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track19.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track20.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track21.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track22.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track23.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track24.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track25.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track26.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track27.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/aftermath_soundtrack/track3_enhanced.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/album.json
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/albumcover.png
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/license.txt
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track10.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track11.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track12.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track13.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track14.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track15.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track16.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track4.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track5.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track6.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track7.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track8.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/legacy_soundtrack/track9.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/album.json
+Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/albumcover.png
+Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track1.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track2.opus
+Warzone 2100.app/Contents/Resources/data/music/albums/original_soundtrack/track3.opus
+Warzone 2100.app/Contents/Resources/data/music/menu.opus
+Warzone 2100.app/Contents/Resources/docs/Scripting.md
+Warzone 2100.app/Contents/Resources/docs/ScriptingManual.htm
+Warzone 2100.app/Contents/Resources/docs/docbook-xsl.css
+Warzone 2100.app/Contents/Resources/docs/images/artillery-far-away.jpg
+Warzone 2100.app/Contents/Resources/docs/images/artillery-sensor.jpg
+Warzone 2100.app/Contents/Resources/docs/images/attackrange.jpg
+Warzone 2100.app/Contents/Resources/docs/images/awaymission.jpg
+Warzone 2100.app/Contents/Resources/docs/images/building-select.jpg
+Warzone 2100.app/Contents/Resources/docs/images/building.jpg
+Warzone 2100.app/Contents/Resources/docs/images/cb-sensor-vtol.png
+Warzone 2100.app/Contents/Resources/docs/images/cb-sensor.png
+Warzone 2100.app/Contents/Resources/docs/images/cheapweapon.png
+Warzone 2100.app/Contents/Resources/docs/images/commander-factory-assignment.jpg
+Warzone 2100.app/Contents/Resources/docs/images/commander-panel.jpg
+Warzone 2100.app/Contents/Resources/docs/images/commander.png
+Warzone 2100.app/Contents/Resources/docs/images/commandpanel.png
+Warzone 2100.app/Contents/Resources/docs/images/design-bars.jpg
+Warzone 2100.app/Contents/Resources/docs/images/design-more.png
+Warzone 2100.app/Contents/Resources/docs/images/design-screen.jpg
+Warzone 2100.app/Contents/Resources/docs/images/design-unit.jpg
+Warzone 2100.app/Contents/Resources/docs/images/design.jpg
+Warzone 2100.app/Contents/Resources/docs/images/expensiveweapon.png
+Warzone 2100.app/Contents/Resources/docs/images/firing.jpg
+Warzone 2100.app/Contents/Resources/docs/images/hq.png
+Warzone 2100.app/Contents/Resources/docs/images/indirect-fire-support.jpg
+Warzone 2100.app/Contents/Resources/docs/images/intelligencedisplay.jpg
+Warzone 2100.app/Contents/Resources/docs/images/interface.jpg
+Warzone 2100.app/Contents/Resources/docs/images/logo.png
+Warzone 2100.app/Contents/Resources/docs/images/manufacture-select.jpg
+Warzone 2100.app/Contents/Resources/docs/images/manufacture.jpg
+Warzone 2100.app/Contents/Resources/docs/images/minimap.jpg
+Warzone 2100.app/Contents/Resources/docs/images/movement.jpg
+Warzone 2100.app/Contents/Resources/docs/images/oilresource.jpg
+Warzone 2100.app/Contents/Resources/docs/images/powerbar.jpg
+Warzone 2100.app/Contents/Resources/docs/images/powerupgrade.png
+Warzone 2100.app/Contents/Resources/docs/images/rallypoints.jpg
+Warzone 2100.app/Contents/Resources/docs/images/recycling.jpg
+Warzone 2100.app/Contents/Resources/docs/images/research-select.jpg
+Warzone 2100.app/Contents/Resources/docs/images/research.jpg
+Warzone 2100.app/Contents/Resources/docs/images/retreatthreshold.jpg
+Warzone 2100.app/Contents/Resources/docs/images/return.jpg
+Warzone 2100.app/Contents/Resources/docs/images/satellite-uplink.png
+Warzone 2100.app/Contents/Resources/docs/images/sensor-tower.png
+Warzone 2100.app/Contents/Resources/docs/images/sensor.png
+Warzone 2100.app/Contents/Resources/docs/images/transport.jpg
+Warzone 2100.app/Contents/Resources/docs/images/unitordersmenu.jpg
+Warzone 2100.app/Contents/Resources/docs/images/wss.png
+Warzone 2100.app/Contents/Resources/docs/images/www.png
+Warzone 2100.app/Contents/Resources/docs/js-campaign.md
+Warzone 2100.app/Contents/Resources/docs/js-events.md
+Warzone 2100.app/Contents/Resources/docs/js-functions.md
+Warzone 2100.app/Contents/Resources/docs/js-globals.md
+Warzone 2100.app/Contents/Resources/docs/js-objects.md
+Warzone 2100.app/Contents/Resources/docs/quickstartguide.html
+Warzone 2100.app/Contents/Resources/docs/warzone2100.6.html
+man/man6/warzone2100.6
+share/doc/warzone2100/AUTHORS
+share/doc/warzone2100/COPYING
+share/doc/warzone2100/COPYING.NONGPL
+share/doc/warzone2100/COPYING.README
+share/doc/warzone2100/ChangeLog
+share/doc/warzone2100/README.md
+share/doc/warzone2100/Scripting.md
+share/doc/warzone2100/ScriptingManual.htm
+share/doc/warzone2100/copyright
+share/doc/warzone2100/docbook-xsl.css
+share/doc/warzone2100/images/artillery-far-away.jpg
+share/doc/warzone2100/images/artillery-sensor.jpg
+share/doc/warzone2100/images/attackrange.jpg
+share/doc/warzone2100/images/awaymission.jpg
+share/doc/warzone2100/images/building-select.jpg
+share/doc/warzone2100/images/building.jpg
+share/doc/warzone2100/images/cb-sensor-vtol.png
+share/doc/warzone2100/images/cb-sensor.png
+share/doc/warzone2100/images/cheapweapon.png
+share/doc/warzone2100/images/commander-factory-assignment.jpg
+share/doc/warzone2100/images/commander-panel.jpg
+share/doc/warzone2100/images/commander.png
+share/doc/warzone2100/images/commandpanel.png
+share/doc/warzone2100/images/design-bars.jpg
+share/doc/warzone2100/images/design-more.png
+share/doc/warzone2100/images/design-screen.jpg
+share/doc/warzone2100/images/design-unit.jpg
+share/doc/warzone2100/images/design.jpg
+share/doc/warzone2100/images/expensiveweapon.png
+share/doc/warzone2100/images/firing.jpg
+share/doc/warzone2100/images/hq.png
+share/doc/warzone2100/images/indirect-fire-support.jpg
+share/doc/warzone2100/images/intelligencedisplay.jpg
+share/doc/warzone2100/images/interface.jpg
+share/doc/warzone2100/images/logo.png
+share/doc/warzone2100/images/manufacture-select.jpg
+share/doc/warzone2100/images/manufacture.jpg
+share/doc/warzone2100/images/minimap.jpg
+share/doc/warzone2100/images/movement.jpg
+share/doc/warzone2100/images/oilresource.jpg
+share/doc/warzone2100/images/powerbar.jpg
+share/doc/warzone2100/images/powerupgrade.png
+share/doc/warzone2100/images/rallypoints.jpg
+share/doc/warzone2100/images/recycling.jpg
+share/doc/warzone2100/images/research-select.jpg
+share/doc/warzone2100/images/research.jpg
+share/doc/warzone2100/images/retreatthreshold.jpg
+share/doc/warzone2100/images/return.jpg
+share/doc/warzone2100/images/satellite-uplink.png
+share/doc/warzone2100/images/sensor-tower.png
+share/doc/warzone2100/images/sensor.png
+share/doc/warzone2100/images/transport.jpg
+share/doc/warzone2100/images/unitordersmenu.jpg
+share/doc/warzone2100/images/wss.png
+share/doc/warzone2100/images/www.png
+share/doc/warzone2100/js-campaign.md
+share/doc/warzone2100/js-events.md
+share/doc/warzone2100/js-functions.md
+share/doc/warzone2100/js-globals.md
+share/doc/warzone2100/js-objects.md
+share/doc/warzone2100/quickstartguide.html
+share/doc/warzone2100/warzone2100.6.html
+share/locale/af_ZA/LC_MESSAGES/warzone2100.mo
+share/locale/ar_SA/LC_MESSAGES/warzone2100.mo
+share/locale/bg_BG/LC_MESSAGES/warzone2100.mo
+share/locale/ca_ES/LC_MESSAGES/warzone2100.mo
+share/locale/cs/LC_MESSAGES/warzone2100.mo
+share/locale/da/LC_MESSAGES/warzone2100.mo
+share/locale/de/LC_MESSAGES/warzone2100.mo
+share/locale/el/LC_MESSAGES/warzone2100.mo
+share/locale/en_GB/LC_MESSAGES/warzone2100.mo
+share/locale/eo/LC_MESSAGES/warzone2100.mo
+share/locale/es/LC_MESSAGES/warzone2100.mo
+share/locale/et_EE/LC_MESSAGES/warzone2100.mo
+share/locale/fa_IR/LC_MESSAGES/warzone2100.mo
+share/locale/fi/LC_MESSAGES/warzone2100.mo
+share/locale/fr/LC_MESSAGES/warzone2100.mo
+share/locale/fy/LC_MESSAGES/warzone2100.mo
+share/locale/ga/LC_MESSAGES/warzone2100.mo
+share/locale/he_IL/LC_MESSAGES/warzone2100.mo
+share/locale/hr/LC_MESSAGES/warzone2100.mo
+share/locale/hu/LC_MESSAGES/warzone2100.mo
+share/locale/id/LC_MESSAGES/warzone2100.mo
+share/locale/id_ID/LC_MESSAGES/warzone2100.mo
+share/locale/it/LC_MESSAGES/warzone2100.mo
+share/locale/ja_JP/LC_MESSAGES/warzone2100.mo
+share/locale/ko/LC_MESSAGES/warzone2100.mo
+share/locale/la/LC_MESSAGES/warzone2100.mo
+share/locale/lt/LC_MESSAGES/warzone2100.mo
+share/locale/my_MM/LC_MESSAGES/warzone2100.mo
+share/locale/nb/LC_MESSAGES/warzone2100.mo
+share/locale/nl/LC_MESSAGES/warzone2100.mo
+share/locale/pl/LC_MESSAGES/warzone2100.mo
+share/locale/pt/LC_MESSAGES/warzone2100.mo
+share/locale/pt_BR/LC_MESSAGES/warzone2100.mo
+share/locale/ro/LC_MESSAGES/warzone2100.mo
+share/locale/ru/LC_MESSAGES/warzone2100.mo
+share/locale/sk/LC_MESSAGES/warzone2100.mo
+share/locale/sl/LC_MESSAGES/warzone2100.mo
+share/locale/tr/LC_MESSAGES/warzone2100.mo
+share/locale/tt_RU/LC_MESSAGES/warzone2100.mo
+share/locale/uk_UA/LC_MESSAGES/warzone2100.mo
+share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
+share/locale/zh_TW/LC_MESSAGES/warzone2100.mo
+share/warzone2100/base.wz
+share/warzone2100/fonts/DejaVu.LICENSE.txt
+share/warzone2100/fonts/DejaVuSans-Bold.ttf
+share/warzone2100/fonts/DejaVuSans.ttf
+share/warzone2100/fonts/Noto.LICENSE.txt
+share/warzone2100/fonts/NotoSansCJK-VF.otf.ttc
+share/warzone2100/mp.wz
+share/warzone2100/music/albums/aftermath_soundtrack/album.json
+share/warzone2100/music/albums/aftermath_soundtrack/albumcover.png
+share/warzone2100/music/albums/aftermath_soundtrack/license.txt
+share/warzone2100/music/albums/aftermath_soundtrack/menu_enhanced.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track17.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track18.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track19.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track20.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track21.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track22.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track23.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track24.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track25.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track26.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track27.opus
+share/warzone2100/music/albums/aftermath_soundtrack/track3_enhanced.opus
+share/warzone2100/music/albums/legacy_soundtrack/album.json
+share/warzone2100/music/albums/legacy_soundtrack/albumcover.png
+share/warzone2100/music/albums/legacy_soundtrack/license.txt
+share/warzone2100/music/albums/legacy_soundtrack/track10.opus
+share/warzone2100/music/albums/legacy_soundtrack/track11.opus
+share/warzone2100/music/albums/legacy_soundtrack/track12.opus
+share/warzone2100/music/albums/legacy_soundtrack/track13.opus
+share/warzone2100/music/albums/legacy_soundtrack/track14.opus
+share/warzone2100/music/albums/legacy_soundtrack/track15.opus
+share/warzone2100/music/albums/legacy_soundtrack/track16.opus
+share/warzone2100/music/albums/legacy_soundtrack/track4.opus
+share/warzone2100/music/albums/legacy_soundtrack/track5.opus
+share/warzone2100/music/albums/legacy_soundtrack/track6.opus
+share/warzone2100/music/albums/legacy_soundtrack/track7.opus
+share/warzone2100/music/albums/legacy_soundtrack/track8.opus
+share/warzone2100/music/albums/legacy_soundtrack/track9.opus
+share/warzone2100/music/albums/original_soundtrack/album.json
+share/warzone2100/music/albums/original_soundtrack/albumcover.png
+share/warzone2100/music/albums/original_soundtrack/track1.opus
+share/warzone2100/music/albums/original_soundtrack/track2.opus
+share/warzone2100/music/albums/original_soundtrack/track3.opus
+share/warzone2100/music/menu.opus
