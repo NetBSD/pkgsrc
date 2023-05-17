@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3097 2023/05/17 10:23:58 he Exp $
+$NetBSD: CHANGES-2023,v 1.3098 2023/05/17 10:50:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4311,7 +4311,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXaw3d to 1.6.5 [wiz 2023-05-16]
 	Updated x11/setxkbmap to 1.3.4 [wiz 2023-05-16]
 	Updated security/cargo-audit to 0.17.6 [wiz 2023-05-16]
-	Updated graphics/exiv2 to 0.28.0 [wiz 2023-05-16]
 	Updated lang/gawk to 5.2.2 [wiz 2023-05-16]
 	Updated net/wget to 1.21.4 [wiz 2023-05-16]
 	Updated textproc/fmtlib to 10.0.0 [wiz 2023-05-16]
