@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3099 2023/05/17 10:54:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3100 2023/05/17 11:53:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4342,3 +4342,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Net-Curl to 0.53 [wiz 2023-05-17]
 	Updated textproc/hunspell to 1.7.2nb2 [he 2023-05-17]
 	Updated graphics/gexiv2 to 0.14.1 [wiz 2023-05-17]
+	Updated converters/recode to 3.7.14 [wiz 2023-05-17]
