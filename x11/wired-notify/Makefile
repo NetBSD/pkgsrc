@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/25 16:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/17 20:34:56 wiz Exp $
 
 DISTNAME=	wired-notify-0.10.2
 PKGREVISION=	2
@@ -20,9 +20,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wired \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/wired.ron \
 		${DESTDIR}${PREFIX}/share/examples/wired-notify
 	${INSTALL_DATA} ${WRKSRC}/wired_multilayout.ron \
