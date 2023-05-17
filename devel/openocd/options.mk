@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2021/05/06 15:31:13 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2023/05/17 15:29:13 nikita Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openocd
 PKG_SUPPORTED_OPTIONS=	libhidapi libusb libusb1 libftdi1 capstone
@@ -9,12 +9,6 @@ PLIST_VARS+=		libusb1
 
 .if !empty(PKG_OPTIONS:Mlibhidapi)
 .include "../../comms/libhidapi/buildlink3.mk"
-HIDAPI_CFLAGS=		-I${BUILDLINK_PREFIX.libhidapi}/include/hidapi
-HIDAPI_LIBS=		-L${BUILDLINK_PREFIX.libhidapi}/lib \
-			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libhidapi}/lib \
-			-lhidapi
-CONFIGURE_ENV+=		HIDAPI_CFLAGS=${HIDAPI_CFLAGS:Q}
-CONFIGURE_ENV+=		HIDAPI_LIBS=${HIDAPI_LIBS:Q}
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb)
