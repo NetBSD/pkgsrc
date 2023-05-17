@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/09/10 06:34:36 wiz Exp $
+$NetBSD: distinfo,v 1.12 2023/05/17 10:54:21 wiz Exp $
 
-BLAKE2s (gexiv2-0.14.0.tar.xz) = 59f272b4cb5dee75f21d9da9169eb7d73550452c65c2c6e325b85719a549aeb1
-SHA512 (gexiv2-0.14.0.tar.xz) = d745ae2d8ddcf0c8a2a7980eaa489f9b520af54242c5e4ddded9c3ae4a579c824c8cb659bd7e985ffa09f9fe37bdf73d6d9181d456711e0953b73023eb0f9f50
-Size (gexiv2-0.14.0.tar.xz) = 387288 bytes
+BLAKE2s (gexiv2-0.14.1.tar.xz) = 22e5e884cb248e3a332fa204d2da6e2905f3cdb760a0dfbacf7b405f52d992d1
+SHA512 (gexiv2-0.14.1.tar.xz) = f510e49c0b2633bcc370ca21af0822032f04f5d5b57c7f76807797601b0a98b7749fdf68df37a405c9d90734adf75282a3dad59c24830874f64f7bd33152052d
+Size (gexiv2-0.14.1.tar.xz) = 387604 bytes
