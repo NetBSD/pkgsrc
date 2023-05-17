@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.1 2023/05/17 12:15:53 wiz Exp $
+
+Disable googletest detection.
+
+--- configure.orig	2022-12-07 18:32:53.000000000 +0000
++++ configure
+@@ -16131,11 +16131,6 @@ fi
+ if test "x$GTEST" = "x"; then
+   GTEST="/usr/src/googletest/googletest"
+ fi
+-if test -e "$GTEST/src/gtest-all.cc"; then :
+-
+-else
+-  as_fn_error $? "Could not find $GTEST/src/gtest-all.cc" "$LINENO" 5
+-fi
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for recode-library" >&5
+ $as_echo_n "checking for recode-library... " >&6; }
