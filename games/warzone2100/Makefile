@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2023/05/06 19:09:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/05/17 03:50:54 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-4.2.7
-PKGREVISION=	9
+PKGNAME=	warzone2100-4.3.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config zip
+USE_TOOLS+=	gmake pkg-config zip
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
@@ -38,14 +37,32 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
 CMAKE_ARGS+=		-DCMAKE_MAKE_PROGRAM=${MAKE_PROGRAM} -DWZ_DISTRIBUTOR=pkgsrc
+CMAKE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=1
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+CFLAGS.Darwin+=		-fobjc-arc
 LDFLAGS.DragonFly+=	-lX11 -lintl
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # Needs gnu standard variant to get alloca builtin.
 BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
+
+SUBST_CLASSES+=		rpath
+SUBST_MESSAGE.rpath=	Fixing linker arguments.
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath=	3rdparty/basis_universal/CMakeLists.txt
+SUBST_SED.rpath=	-e 's|-Wl,-rpath |${COMPILER_RPATH_FLAG},|'
+
+# TODO: Patch installation to comply with the common Unix directories and
+#       eventually add a variable INSTALL_MACOS_BUNDLE somewhere in mk/
+#       to let the possibility to install the bundle in
+#       ${LOCALBASE}/Applications/Warzone 2100.app.
+# XXX:  It installs out of the box but it does not comply with the pkgsrc
+#       directory hierarchy.
+.if ${OPSYS} == "Darwin"
+PLIST_SRC=	PLIST.bundle
+.endif
 
 pre-configure:
 	${RUN}${MKDIR} ${WRKSRC}/build
@@ -54,13 +71,11 @@ pre-configure:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gettext+=		gettext>=0.18
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.10.2
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../graphics/glew/buildlink3.mk"
@@ -72,6 +87,7 @@ BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../net/miniupnpc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsodium+=	libsodium>=1.0.13
 .include "../../security/libsodium/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
