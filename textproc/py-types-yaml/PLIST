@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/17 07:08:20 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/yaml-stubs/METADATA.toml
+${PYSITELIB}/yaml-stubs/__init__.pyi
+${PYSITELIB}/yaml-stubs/_yaml.pyi
+${PYSITELIB}/yaml-stubs/composer.pyi
+${PYSITELIB}/yaml-stubs/constructor.pyi
+${PYSITELIB}/yaml-stubs/cyaml.pyi
+${PYSITELIB}/yaml-stubs/dumper.pyi
+${PYSITELIB}/yaml-stubs/emitter.pyi
+${PYSITELIB}/yaml-stubs/error.pyi
+${PYSITELIB}/yaml-stubs/events.pyi
+${PYSITELIB}/yaml-stubs/loader.pyi
+${PYSITELIB}/yaml-stubs/nodes.pyi
+${PYSITELIB}/yaml-stubs/parser.pyi
+${PYSITELIB}/yaml-stubs/reader.pyi
+${PYSITELIB}/yaml-stubs/representer.pyi
+${PYSITELIB}/yaml-stubs/resolver.pyi
+${PYSITELIB}/yaml-stubs/scanner.pyi
+${PYSITELIB}/yaml-stubs/serializer.pyi
+${PYSITELIB}/yaml-stubs/tokens.pyi
