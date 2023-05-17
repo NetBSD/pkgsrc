@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/06 19:08:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2023/05/17 23:24:03 nikita Exp $
 
 DISTNAME=		gnunet-0.19.4
 PKGREVISION=		2
@@ -130,5 +130,6 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
