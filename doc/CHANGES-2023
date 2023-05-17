@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3118 2023/05/17 21:30:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3119 2023/05/17 21:32:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4373,3 +4373,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 16.4.2 [schmonz 2023-05-17]
 	Updated devel/visualvm to 2.1.6 [abs 2023-05-17]
 	Updated devel/difftastic to 0.47.0 [pin 2023-05-17]
+	Updated editors/tp-note to 1.21.4 [pin 2023-05-17]
