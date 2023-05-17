@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/11/30 00:45:38 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/05/17 03:22:29 gutteridge Exp $
 bin/mousepad
 lib/libmousepad.la
 ${PLIST.gspell}lib/mousepad/plugins/libmousepad-plugin-gspell.la
@@ -64,4 +64,3 @@ share/locale/uk/LC_MESSAGES/mousepad.mo
 share/locale/zh_CN/LC_MESSAGES/mousepad.mo
 share/locale/zh_TW/LC_MESSAGES/mousepad.mo
 share/metainfo/org.xfce.mousepad.appdata.xml
-share/polkit-1/actions/org.xfce.mousepad.policy
