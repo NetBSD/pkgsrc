@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3112 2023/05/17 16:02:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3113 2023/05/17 16:47:59 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4364,3 +4364,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/intel-one-mono version 1.0.0 [wiz 2023-05-17]
 	Updated lang/nodejs to 20.2.0 [adam 2023-05-17]
 	Updated sysutils/py-Send2Trash to 1.8.2 [adam 2023-05-17]
+	Added devel/libnjs version 0.7.12 [osa 2023-05-17]
