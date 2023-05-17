@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/11/27 04:57:41 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/05/17 03:27:08 gutteridge Exp $
 bin/mate-volume-control
 bin/mate-volume-control-status-icon
 libexec/mate-volume-control-applet
@@ -33,6 +33,7 @@ share/locale/el/LC_MESSAGES/mate-media.mo
 share/locale/en_AU/LC_MESSAGES/mate-media.mo
 share/locale/en_CA/LC_MESSAGES/mate-media.mo
 share/locale/en_GB/LC_MESSAGES/mate-media.mo
+share/locale/en_US/LC_MESSAGES/mate-media.mo
 share/locale/eo/LC_MESSAGES/mate-media.mo
 share/locale/es/LC_MESSAGES/mate-media.mo
 share/locale/es_AR/LC_MESSAGES/mate-media.mo
