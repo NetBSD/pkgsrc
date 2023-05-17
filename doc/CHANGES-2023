@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3114 2023/05/17 17:11:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3115 2023/05/17 17:47:24 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4369,3 +4369,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/openvpn to 2.6.4 [adam 2023-05-17]
 	Updated archivers/unrar to 6.2.7 [adam 2023-05-17]
 	Updated net/rabbitmq to 3.11.16 [adam 2023-05-17]
+	Updated www/unit to 1.30.0nb1 [osa 2023-05-17]
