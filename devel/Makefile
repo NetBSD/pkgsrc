@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3991 2023/05/11 05:23:30 adam Exp $
+# $NetBSD: Makefile,v 1.3992 2023/05/17 16:44:51 osa Exp $
 #
 
 COMMENT=	Development utilities
@@ -944,6 +944,7 @@ SUBDIR+=	libnet10
 SUBDIR+=	libnet11
 SUBDIR+=	libnfc
 SUBDIR+=	libnjb
+SUBDIR+=	libnjs
 SUBDIR+=	libntlm
 SUBDIR+=	liboil
 SUBDIR+=	liboop
