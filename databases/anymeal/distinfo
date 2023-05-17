@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/05/17 12:15:53 wiz Exp $
+
+BLAKE2s (anymeal-1.18.tar.xz) = e47bc7a77475c5681928138324fa9465b670d6adaf5c4aefd7464f890c4c67d3
+SHA512 (anymeal-1.18.tar.xz) = 3889ff1919f40ad040e6b882a19c4a732a452705358855b1ea0105f89d26a1a580991c848f57c5bccba67556e9b5b0b0e56c5bb46ac6ea41083ec86297df3804
+Size (anymeal-1.18.tar.xz) = 863052 bytes
+SHA1 (patch-Makefile.in) = 70b590e1849e97790eda3166ba27f3c7817b2920
+SHA1 (patch-configure) = 443084b369a7eeef7ed96488c731e39a5b6c97db

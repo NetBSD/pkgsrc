@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/17 12:15:53 wiz Exp $
+bin/anymeal
+man/man1/anymeal.1
+share/applications/de.wedesoft.anymeal.desktop
+share/doc/anymeal/README.md
+share/icons/hicolor/64x64/apps/anymeal.png
+share/locale/de/LC_MESSAGES/anymeal_qt.qm
+share/locale/fr/LC_MESSAGES/anymeal_qt.qm
+share/locale/it/LC_MESSAGES/anymeal_qt.qm
+share/locale/nl/LC_MESSAGES/anymeal_qt.qm
+share/metainfo/de.wedesoft.anymeal.appdata.xml
