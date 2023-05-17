@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3088 2023/05/17 03:28:24 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3089 2023/05/17 03:29:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4333,3 +4333,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/libmateweather to 1.26.1 [gutteridge 2023-05-17]
 	Updated multimedia/mate-media to 1.26.1 [gutteridge 2023-05-17]
 	Updated sysutils/mate-notification-daemon to 1.26.1 [gutteridge 2023-05-17]
+	Updated x11/mate-screensaver to 1.26.2 [gutteridge 2023-05-17]
