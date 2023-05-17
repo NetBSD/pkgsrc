@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/17 21:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/05/17 21:22:16 wiz Exp $
 
 DISTNAME=	dust-0.8.6
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/dust
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/dust
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man-page/dust.1 \
