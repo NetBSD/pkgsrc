@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/05/10 10:25:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/17 22:29:27 wiz Exp $
 
 DISTNAME=	diffsitter-0.8.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afnanenayet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,14 +20,8 @@ USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS=	bin
-
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		dynamic-grammar-libs
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/diffsitter \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
