@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/05/20 11:43:36 kleink Exp $
+# $NetBSD: Makefile,v 1.35 2023/05/17 11:22:57 wiz Exp $
 #
 
 DISTNAME=		recode-3.6
@@ -16,7 +16,8 @@ GNU_CONFIGURE=			yes
 USE_LIBTOOL=			yes
 BROKEN_GETTEXT_DETECTION=	yes
 
-INFO_FILES=		yes
+INFO_FILES=	yes
+TEST_TARGET=	check
 
 post-extract:
 	${CP} ${WRKSRC}/lib/error.c ${WRKSRC}/src/error.c
