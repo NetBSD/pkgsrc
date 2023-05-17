@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3092 2023/05/17 07:17:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3093 2023/05/17 07:56:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4338,3 +4338,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/warzone2100 to 4.3.5 [triaxx 2023-05-17]
 	Added textproc/py-types-yaml version 6.0.12.9 [adam 2023-05-17]
 	Updated net/py-responses to 0.23.1nb1 [adam 2023-05-17]
+	Updated math/z3 to 4.12.2 [adam 2023-05-17]
+	Updated math/py-z3 to 4.12.2 [adam 2023-05-17]
