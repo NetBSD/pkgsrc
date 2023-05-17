@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/17 15:42:58 wiz Exp $
+share/fonts/X11/OTF/intelone-mono-font-family-bold.otf
+share/fonts/X11/OTF/intelone-mono-font-family-bolditalic.otf
+share/fonts/X11/OTF/intelone-mono-font-family-italic.otf
+share/fonts/X11/OTF/intelone-mono-font-family-light.otf
+share/fonts/X11/OTF/intelone-mono-font-family-lightitalic.otf
+share/fonts/X11/OTF/intelone-mono-font-family-medium.otf
+share/fonts/X11/OTF/intelone-mono-font-family-mediumitalic.otf
+share/fonts/X11/OTF/intelone-mono-font-family-regular.otf
