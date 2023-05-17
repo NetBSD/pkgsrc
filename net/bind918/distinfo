@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2023/04/24 13:48:06 taca Exp $
+$NetBSD: distinfo,v 1.8 2023/05/17 13:43:52 taca Exp $
 
-BLAKE2s (bind-9.18.14.tar.xz) = 997194a201778d57812bf6f40cc43b4e65bc1610eafb7857cc1b754716a2f737
-SHA512 (bind-9.18.14.tar.xz) = 3dccda83ee4c9fa9fa74232a52d97122bd957e98152a12568a099bcfc2780367f17424702e7e0bff3a1ac427e9b71647eefeb9b4f8d462e27893a057e0a5b969
-Size (bind-9.18.14.tar.xz) = 5481396 bytes
+BLAKE2s (bind-9.18.15.tar.xz) = 4a38750651940abff9ebcab59aef9e3162899f99e08639729282f790f9ed8c60
+SHA512 (bind-9.18.15.tar.xz) = e038574f9c7b1156c8e3049b9b2464421d6d5e53ab09c47dc68d3b66af9cec1eda9f41b2517909573307a5341f8cf14a8c5f5155e8bbfffee4e06ecb61baa8bf
+Size (bind-9.18.15.tar.xz) = 5476876 bytes
 SHA1 (patch-bin_named_main.c) = 4e4a763c478f1fcecb7e65968cf6ca20dacf01f1
 SHA1 (patch-bin_named_os.c) = 5ecb0883076575d8ac5fcad68f9daad6c9be0d0b
 SHA1 (patch-bin_named_server.c) = 6e59d3f637ebb829eec2f76ba7c350fb5cf9be6d
