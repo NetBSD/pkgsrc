@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/08 09:13:35 pin Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/17 21:25:59 wiz Exp $
 
 DISTNAME=	bk-0.5.3
 CATEGORIES=	textproc
@@ -11,11 +11,6 @@ COMMENT=	Terminal Epub reader
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/bk ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
