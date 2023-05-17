@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3094 2023/05/17 08:32:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3095 2023/05/17 09:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4339,3 +4339,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-responses to 0.23.1nb1 [adam 2023-05-17]
 	Updated math/z3 to 4.12.2 [adam 2023-05-17]
 	Updated math/py-z3 to 4.12.2 [adam 2023-05-17]
+	Updated www/curl to 8.1.0 [wiz 2023-05-17]
