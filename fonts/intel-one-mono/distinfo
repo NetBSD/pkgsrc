@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/17 15:42:58 wiz Exp $
+
+BLAKE2s (intel-one-mono/otf.zip) = c6d73f80cc6377ce85d840fd458b6dc3343984fb4ca751ead829cd90bda655f8
+SHA512 (intel-one-mono/otf.zip) = 2cba2d86c585f9404d509619ee185ce94c6a5cc274e52f18caabc5bfa69013f9aaf0fa503e9f53f63661da2f288983877f68cad380e4b78ac4eaab6b03a9bad0
+Size (intel-one-mono/otf.zip) = 357385 bytes
