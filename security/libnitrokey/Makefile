@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/05/10 17:05:15 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/17 15:37:07 nikita Exp $
 
 DISTNAME=	libnitrokey-3.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Nitrokey/}
 GITHUB_PROJECT=	libnitrokey
