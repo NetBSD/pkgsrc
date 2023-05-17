@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3093 2023/05/17 07:56:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3094 2023/05/17 08:32:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4314,7 +4314,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/exiv2 to 0.28.0 [wiz 2023-05-16]
 	Updated lang/gawk to 5.2.2 [wiz 2023-05-16]
 	Updated net/wget to 1.21.4 [wiz 2023-05-16]
-	Updated www/litehtml to 0.7 [wiz 2023-05-16]
 	Updated textproc/fmtlib to 10.0.0 [wiz 2023-05-16]
 	Updated fonts/harfbuzz to 7.3.0 [wiz 2023-05-16]
 	Updated security/keepassxc to 2.7.5 [wiz 2023-05-16]
