@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3109 2023/05/17 15:29:23 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3110 2023/05/17 15:42:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4355,3 +4355,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind916 to 9.16.41 [taca 2023-05-17]
 	Updated net/bind918 to 9.18.15 [taca 2023-05-17]
 	Updated devel/openocd to 0.12.0 [nikita 2023-05-17]
+	Updated devel/py-ailment to 9.2.51 [adam 2023-05-17]
+	Updated devel/py-angr to 9.2.51 [adam 2023-05-17]
+	Updated devel/py-archinfo to 9.2.51 [adam 2023-05-17]
+	Updated devel/py-cle to 9.2.51 [adam 2023-05-17]
+	Updated devel/py-pyvex to 9.2.51 [adam 2023-05-17]
+	Updated math/py-claripy to 9.2.51 [adam 2023-05-17]
