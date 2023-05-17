@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.430 2023/05/17 09:44:11 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.431 2023/05/17 19:34:26 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -701,7 +701,9 @@ USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
 
 .if ${FETCH_USING} == "auto"
-.  if defined(TOOLS_PLATFORM.ftp)
+.  if defined(TOOLS_PLATFORM.fetch)
+FETCH_USING=	fetch
+.  elif defined(TOOLS_PLATFORM.ftp)
 FETCH_USING=	ftp
 .  elif defined(TOOLS_PLATFORM.curl)
 FETCH_USING=	curl
