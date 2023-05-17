@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/04/25 07:02:26 adam Exp $
+# $NetBSD: Makefile,v 1.99 2023/05/17 17:00:38 adam Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
 CATEGORIES=	net
@@ -7,7 +7,7 @@ MASTER_SITES=	${OPENVPN_MASTER_SITES}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openvpn.net/
 COMMENT=	Easy-to-use SSL VPN daemon
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2 # soon: apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
