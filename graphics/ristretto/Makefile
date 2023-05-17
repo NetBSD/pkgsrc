@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2023/02/09 23:17:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2023/05/17 03:24:19 gutteridge Exp $
 
-VERSION=	0.13.0
+VERSION=	0.13.1
 DISTNAME=	ristretto-${VERSION}
 CATEGORIES=	graphics
 MASTER_SITES=	https://archive.xfce.org/src/apps/ristretto/${VERSION:R}/
@@ -22,6 +22,7 @@ LDFLAGS.DragonFly=	-lX11
 LDFLAGS.FreeBSD=	-lX11
 LDFLAGS.SunOS=		-lX11
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
