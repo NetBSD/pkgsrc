@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/05/17 21:30:19 pin Exp $
+# $NetBSD: Makefile,v 1.22 2023/05/17 22:26:34 wiz Exp $
 
 DISTNAME=	difftastic-0.47.0
 CATEGORIES=	devel
@@ -14,12 +14,6 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES+=	c c++17
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/difft \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
