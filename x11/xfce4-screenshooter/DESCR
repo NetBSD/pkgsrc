@@ -1,6 +1,6 @@
 This application allows you to capture the entire screen, the active window or
 a selected region. You can set the delay that elapses before the screenshot is
-taken and the action that will be done with the screenshot: save it to a PNG
+taken and the action that will be done with the screenshot: save it to an image
 file, copy it to the clipboard, open it using another application, or host it
 on ZimageZ or Imgur, online image hosting services.
 
