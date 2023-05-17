@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3113 2023/05/17 16:47:59 osa Exp $
+$NetBSD: CHANGES-2023,v 1.3114 2023/05/17 17:11:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4365,3 +4365,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.2.0 [adam 2023-05-17]
 	Updated sysutils/py-Send2Trash to 1.8.2 [adam 2023-05-17]
 	Added devel/libnjs version 0.7.12 [osa 2023-05-17]
+	Updated devel/memcached to 1.6.20 [adam 2023-05-17]
+	Updated net/openvpn to 2.6.4 [adam 2023-05-17]
+	Updated archivers/unrar to 6.2.7 [adam 2023-05-17]
+	Updated net/rabbitmq to 3.11.16 [adam 2023-05-17]
