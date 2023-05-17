@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3082 2023/05/17 03:03:07 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.3083 2023/05/17 03:22:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4327,3 +4327,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-yubikey-manager to 5.1.1 [wiz 2023-05-16]
 	Updated security/ykman to 5.1.1 [wiz 2023-05-16]
 	Updated sysutils/nabud to 1.3.1 [thorpej 2023-05-16]
+	Updated editors/xfce4-mousepad to 0.6.1 [gutteridge 2023-05-17]
