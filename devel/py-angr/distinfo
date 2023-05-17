@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2023/05/11 07:21:34 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/05/17 15:41:25 adam Exp $
 
-BLAKE2s (angr-9.2.50.tar.gz) = e5775b46e7be04bc0906aee7cbec6bcf725809c87518c59b6944e9c4698522c5
-SHA512 (angr-9.2.50.tar.gz) = 5f532a53a69e2a7c52d939da5e9c58d581752bf13d282d9c66467f934169fab3c35cfc38673ff63a9c9a52df4075251c8ce93e038f91971c5c4dba95aa3b6739
-Size (angr-9.2.50.tar.gz) = 2329461 bytes
+BLAKE2s (angr-9.2.51.tar.gz) = 1756ed04be41d8c1fc190db06880c8c6385c1ce47c9d301a05d6b39bd4be1367
+SHA512 (angr-9.2.51.tar.gz) = e699e6bce77f10e9eae48086e625323befd9a5c0d57c5e07a9f8d45b2b1b91ecc62ad7cfbab39fdc58b0e023a12ba99460524fc553515c05d291abb1bac4baf0
+Size (angr-9.2.51.tar.gz) = 2331627 bytes
 SHA1 (patch-native_Makefile) = ddce91d48fc282c5d3b81071a004456955e57111
 SHA1 (patch-native_log.c) = 2405c26e67141bdb0e8668ed4bea2c6db702f646
