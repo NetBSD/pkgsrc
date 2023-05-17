@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/05/05 21:58:39 pin Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/17 21:21:47 wiz Exp $
 
 DISTNAME=	dust-0.8.6
 CATEGORIES=	sysutils
@@ -14,9 +14,7 @@ LICENSE=	apache-2.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/dust
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dust \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/man-page/dust.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/dust.1
 	${INSTALL_DATA} ${WRKSRC}/config/config.toml \
