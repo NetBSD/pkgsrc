@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.19 2023/03/22 20:34:39 nikita Exp $
+# $NetBSD: options.mk,v 1.20 2023/05/17 13:29:30 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
 PKG_SUPPORTED_OPTIONS=		tokyocabinet lmdb
-PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS+=		debug gpgme gssapi ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=		notmuch lua
-PKG_SUGGESTED_OPTIONS=		gpgme gssapi idn ncursesw sasl smime ssl
+PKG_SUGGESTED_OPTIONS=		gpgme gssapi ncursesw sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=		tokyocabinet notmuch
 
 .include "../../mk/bsd.options.mk"
@@ -109,16 +109,6 @@ CONFIGURE_ARGS+=	--disable-gdbm
 CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
 CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
 CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
-.endif
-
-###
-### Internationalized Domain Names
-###
-.if !empty(PKG_OPTIONS:Midn)
-.  include "../../devel/libidn/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-idn=${BUILDLINK_PREFIX.libidn}
-.else
-CONFIGURE_ARGS+=	--disable-idn
 .endif
 
 ###
