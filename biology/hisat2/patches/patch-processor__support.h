@@ -1,4 +1,4 @@
-$NetBSD: patch-processor__support.h,v 1.1 2022/03/17 16:01:12 bacon Exp $
+$NetBSD: patch-processor__support.h,v 1.2 2023/05/17 21:55:34 bacon Exp $
 
 # Support non-x86
 

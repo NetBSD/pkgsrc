@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/17 16:01:11 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/17 21:55:34 bacon Exp $
 bin/hisat2
 bin/hisat2-align-l
 bin/hisat2-align-s
