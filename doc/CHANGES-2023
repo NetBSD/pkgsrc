@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3102 2023/05/17 12:16:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3103 2023/05/17 12:30:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4345,3 +4345,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/recode to 3.7.14 [wiz 2023-05-17]
 	Updated pkgtools/pkglint to 23.1.9 [rillig 2023-05-17]
 	Added databases/anymeal version 1.18 [wiz 2023-05-17]
+	Updated databases/sqlite3 to 3.42.0 [adam 2023-05-17]
+	Updated databases/sqlite3-docs to 3.42.0 [adam 2023-05-17]
+	Updated databases/sqlite3-tcl to 3.42.0 [adam 2023-05-17]
+	Updated devel/lemon to 1.0.3.42.0 [adam 2023-05-17]
