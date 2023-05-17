@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/04/01 15:58:34 pin Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/17 21:41:21 wiz Exp $
 
 DISTNAME=	hgrep-0.3.2
 CATEGORIES=	textproc
@@ -12,8 +12,6 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
-
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		ripgrep syntect-printer
 
@@ -21,10 +19,6 @@ CARGO_FEATURES+=		ripgrep syntect-printer
 # sneak in -latomic in the linker invocation
 BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:atomic
 .endif
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hgrep \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/atomic64.mk"
 .include "../../lang/rust/cargo.mk"
