@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3108 2023/05/17 13:44:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3109 2023/05/17 15:29:23 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4354,3 +4354,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/neomutt to 20230517 [nikita 2023-05-17]
 	Updated net/bind916 to 9.16.41 [taca 2023-05-17]
 	Updated net/bind918 to 9.18.15 [taca 2023-05-17]
+	Updated devel/openocd to 0.12.0 [nikita 2023-05-17]
