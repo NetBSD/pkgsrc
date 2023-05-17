@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/17 07:08:20 adam Exp $
+
+BLAKE2s (types-PyYAML-6.0.12.9.tar.gz) = da9e9a16933892c6913b90edbee6fdcd248075e6d44767d9f432cf9bdb9c29dc
+SHA512 (types-PyYAML-6.0.12.9.tar.gz) = 82a15a68675a5b028ef4272b282d18debaa9d2daf89f63f4e72ebfdc7f8b95253fb5342ef3c39ad92496781df25bac558fb714104ca2dfc8bcb0a9941eb4c87e
+Size (types-PyYAML-6.0.12.9.tar.gz) = 11709 bytes
