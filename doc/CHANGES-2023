@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3085 2023/05/17 03:25:50 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3086 2023/05/17 03:26:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/xfce4-mousepad to 0.6.1 [gutteridge 2023-05-17]
 	Updated graphics/ristretto to 0.13.1 [gutteridge 2023-05-17]
 	Updated x11/libmatekbd to 1.26.1 [gutteridge 2023-05-17]
+	Updated misc/libmateweather to 1.26.1 [gutteridge 2023-05-17]
