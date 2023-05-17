@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2023/05/17 20:08:56 adam Exp $
+
+sincosf detection is broken in meson
+https://github.com/mesonbuild/meson/issues/10641
+
+--- meson.build.orig	2023-05-17 20:04:40.000000000 +0000
++++ meson.build
+@@ -75,7 +75,6 @@ check_funcs = [
+   ['isatty'],
+   ['uselocale'],
+   ['newlocale'],
+-  ['sincosf'],
+ ]
+ 
+ m_dep = cpp.find_library('m', required: false)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2023/05/16 21:40:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.70 2023/05/17 20:08:56 adam Exp $
 bin/hb-info
 bin/hb-ot-shape-closure
 bin/hb-shape
@@ -143,8 +143,8 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-native-opentype.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces-variable.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/fonts-and-faces.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/getting-started.html
-${PLIST.doc}share/gtk-doc/html/harfbuzz/graphite-shaping.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/glyphs-and-rendering.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/graphite-shaping.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-aat-layout.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-blob.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-buffer.html
