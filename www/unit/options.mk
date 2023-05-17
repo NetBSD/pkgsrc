@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2021/02/14 11:56:57 otis Exp $
+# $NetBSD: options.mk,v 1.2 2023/05/17 17:39:43 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unit
-PKG_SUPPORTED_OPTIONS=	debug inet6 pcre pcre2 ssl
+PKG_SUPPORTED_OPTIONS=	debug inet6 njs pcre pcre2 ssl
 PKG_SUGGESTED_OPTIONS=	inet6 pcre2 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -12,6 +12,14 @@ CONFIGURE_ARGS+=	--debug
 
 .if empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--no-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mnjs)
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	--njs
+CONFIGURE_ARGS+=	--cc-opt="-I${PREFIX}/include"
+CONFIGURE_ARGS+=	--ld-opt="-I${PREFIX}/lib"
+.include "../../devel/libnjs/buildlink3.mk"
 .endif
 
 .if empty(PKG_OPTIONS:Mpcre) && empty(PKG_OPTIONS:Mpcre2)
