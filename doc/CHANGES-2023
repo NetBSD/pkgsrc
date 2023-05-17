@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3100 2023/05/17 11:53:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3101 2023/05/17 12:12:50 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hunspell to 1.7.2nb2 [he 2023-05-17]
 	Updated graphics/gexiv2 to 0.14.1 [wiz 2023-05-17]
 	Updated converters/recode to 3.7.14 [wiz 2023-05-17]
+	Updated pkgtools/pkglint to 23.1.9 [rillig 2023-05-17]
