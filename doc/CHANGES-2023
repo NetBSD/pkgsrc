@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3111 2023/05/17 15:43:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3112 2023/05/17 16:02:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4362,3 +4362,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyvex to 9.2.51 [adam 2023-05-17]
 	Updated math/py-claripy to 9.2.51 [adam 2023-05-17]
 	Added fonts/intel-one-mono version 1.0.0 [wiz 2023-05-17]
+	Updated lang/nodejs to 20.2.0 [adam 2023-05-17]
+	Updated sysutils/py-Send2Trash to 1.8.2 [adam 2023-05-17]
