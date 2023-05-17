@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/05/16 20:28:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/05/17 10:54:21 wiz Exp $
 
-DISTNAME=	gexiv2-0.14.0
-PKGREVISION=	3
+DISTNAME=	gexiv2-0.14.1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gexiv2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,9 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-# uses std::auto_ptr, deprecated in c++11
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99 c++03
+USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE=	gexiv2.pc.in
