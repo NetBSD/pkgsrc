@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3104 2023/05/17 12:48:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3105 2023/05/17 13:07:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4350,3 +4350,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-docs to 3.42.0 [adam 2023-05-17]
 	Updated databases/sqlite3-tcl to 3.42.0 [adam 2023-05-17]
 	Updated devel/lemon to 1.0.3.42.0 [adam 2023-05-17]
+	Updated shells/sheldon to 0.7.3 [schmonz 2023-05-17]
