@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/01 15:48:23 pin Exp $
+# $NetBSD: Makefile,v 1.10 2023/05/17 21:30:32 wiz Exp $
 
 DISTNAME=	csvlens-0.1.13
 CATEGORIES=	textproc
@@ -11,12 +11,6 @@ COMMENT=	Command line csv viewer
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/csvlens \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
