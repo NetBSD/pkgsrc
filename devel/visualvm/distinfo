@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/05/12 13:15:58 abs Exp $
+$NetBSD: distinfo,v 1.7 2023/05/17 18:35:25 abs Exp $
 
-BLAKE2s (visualvm_213.zip) = 9e93b37682d2116cddb466ec833d9a40c2e6afe3512e51786617b2090c8d3d44
-SHA512 (visualvm_213.zip) = 07ca452bbab0923fffe883355d14f3160a874794caf5c1722d5922da1b3d79a25b1637dada992dcb46d2c5470461553981650862d3e449358f9af5fc7b0caccf
-Size (visualvm_213.zip) = 20016887 bytes
+BLAKE2s (visualvm_216.zip) = dd49a48d51dd08b6d105dd056de7b258981374ea6f848d28e6b87ed45039835f
+SHA512 (visualvm_216.zip) = d839d444eced9357fab61d0a03da93c23eef7fde37230f5282eb0b1d4c30c54f37ffa5e3816770c586b06a1f5f026bde1968303faf7aba77e12db361c50040c8
+Size (visualvm_216.zip) = 20461523 bytes
