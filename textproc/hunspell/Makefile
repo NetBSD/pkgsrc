@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2023/04/15 09:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/05/17 10:23:02 he Exp $
 
 DISTNAME=	hunspell-1.7.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++11
+GCC_REQD+=		7
 FAKE_NCURSES=		yes
 
 CPPFLAGS.SunOS+=	-D_XPG6
