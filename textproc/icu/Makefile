@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2023/04/20 14:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2023/05/17 11:27:53 he Exp $
 
 DISTNAME=	icu4c-73_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -15,7 +15,7 @@ COMMENT=	Robust and full-featured Unicode services
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/icu/source
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c99 c++11
 USE_TOOLS+=		gmake pkg-config
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
