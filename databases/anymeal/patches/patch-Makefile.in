@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/05/17 12:15:53 wiz Exp $
+
+Disable tests, need gtest-all.cc from googletest which pkgsrc doesn't install.
+
+--- Makefile.in.orig	2022-12-07 18:32:53.000000000 +0000
++++ Makefile.in
+@@ -382,7 +382,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = anymeal tests
++SUBDIRS = anymeal # tests
+ doc_DATA = README.md
+ EXTRA_DIST = README.md LICENSE
+ all: config.h
