@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.123 2023/03/28 13:01:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.124 2023/05/17 12:29:58 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -681,6 +681,7 @@ share/doc/sqlite3/releaselog/3_40_1.html
 share/doc/sqlite3/releaselog/3_41_0.html
 share/doc/sqlite3/releaselog/3_41_1.html
 share/doc/sqlite3/releaselog/3_41_2.html
+share/doc/sqlite3/releaselog/3_42_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -803,9 +804,10 @@ share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
 share/doc/sqlite3/session/c_changeset_abort.html
 share/doc/sqlite3/session/c_changeset_conflict.html
-share/doc/sqlite3/session/c_changesetapply_invert.html
+share/doc/sqlite3/session/c_changesetapply_ignorenoop.html
 share/doc/sqlite3/session/c_changesetstart_invert.html
 share/doc/sqlite3/session/c_session_config_strmsize.html
+share/doc/sqlite3/session/c_session_objconfig_rowid.html
 share/doc/sqlite3/session/changegroup.html
 share/doc/sqlite3/session/changeset_iter.html
 share/doc/sqlite3/session/constlist.html
@@ -846,6 +848,7 @@ share/doc/sqlite3/session/sqlite3session_enable.html
 share/doc/sqlite3/session/sqlite3session_indirect.html
 share/doc/sqlite3/session/sqlite3session_isempty.html
 share/doc/sqlite3/session/sqlite3session_memory_used.html
+share/doc/sqlite3/session/sqlite3session_object_config.html
 share/doc/sqlite3/session/sqlite3session_patchset.html
 share/doc/sqlite3/session/sqlite3session_table_filter.html
 share/doc/sqlite3/sessionintro.html
