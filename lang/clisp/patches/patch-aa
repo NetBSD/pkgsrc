@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.22 2023/05/13 00:44:31 dholland Exp $
+$NetBSD: patch-aa,v 1.23 2023/05/17 10:33:24 jperkin Exp $
 
 Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
@@ -105,7 +105,7 @@ https://sourceforge.net/p/clisp/bugs/740/ (macOS build failure)
    newer(){ echo 'test -f $$m/'$1' -a '"'!'"' -f $@/'$2; }
  else # re-making a module just works
 -  newer(){ echo 'test -f $$m/'$1' -a $$m/'$1' -nt $@/'$2; }
-+  newer(){ echo 'test -f $$m/'$1' -a \( ! -f $@/'$2' -o $$m/'$1' -nt $@/'$2' )'; }
++  newer(){ echo 'test -f $$m/'$1' -a \( ! -f $@/'$2' -o $$m/'$1' -nt $@/'$2' \)'; }
  fi
  # srcdir has to be passed to ./configure because it must be able to find
  # src/build-aux/install-sh _AND_ also its own sources, thus we must
