@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/11/27 04:49:18 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2023/05/17 03:25:39 gutteridge Exp $
 
-BLAKE2s (libmatekbd-1.26.0.tar.xz) = 23c961bad96e63e2a3deca8bbc8bfc10aff4657d80c2b523a5a0831837c00b7d
-SHA512 (libmatekbd-1.26.0.tar.xz) = 1e8bdb331ecb97ccd54931ac59f0692af8665e7c0499a62b25ac69cfc6af1196b5198d707ef5e3985d8fe837a0813a014802b00760d32924af4f38b0df4b8b65
-Size (libmatekbd-1.26.0.tar.xz) = 453996 bytes
+BLAKE2s (libmatekbd-1.26.1.tar.xz) = 2caa2e3c9ccc6ce7b0ffe0f5a72899af255d21d4a4b8fdc0fd9a5055fcd93bb9
+SHA512 (libmatekbd-1.26.1.tar.xz) = bf522d89cf32aea34ecc0e6df6b8cdedf6018b4e3abd935b5f32926b8b546bb85fcf4d2d3dcc1ec16bda38cd2bc69df16b39dd42b7ce32069cb34f682fdc38fd
+Size (libmatekbd-1.26.1.tar.xz) = 460100 bytes
