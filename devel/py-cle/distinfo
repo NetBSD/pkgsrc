@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/05/11 07:19:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/05/17 15:41:25 adam Exp $
 
-BLAKE2s (cle-9.2.50.tar.gz) = faaf270b820c0ad35ff3aab0e5cf7622d722d45537917b45eb857e5b6cc33b1c
-SHA512 (cle-9.2.50.tar.gz) = 5f6f89a6ab5bef6dd9003c176a7b042d7d0e69a6420b3ad836c79c6c2f6133b990e8956a00c65bafaeb0e7540a99ddf6aad5939bdf201c0577b0957f3e71c161
-Size (cle-9.2.50.tar.gz) = 168727 bytes
+BLAKE2s (cle-9.2.51.tar.gz) = 2a441a12489c84c687037b0d658b432989bfbff3c1eb88fb953dab374470d481
+SHA512 (cle-9.2.51.tar.gz) = a7fac4cc41c42e69f8a858d27b0eedc168722f504047d325d26d9fe5a1627213aa0dd44bd4c188631080d27fa1af318cb50321e9ea7517f947f701209552e0d2
+Size (cle-9.2.51.tar.gz) = 168618 bytes
