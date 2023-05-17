@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2023/04/08 08:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/05/17 13:24:32 nikita Exp $
 
-DISTNAME=		neomutt-20230407
+DISTNAME=		neomutt-20230517
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -50,6 +50,7 @@ SUBST_SED.interpreter+=		-e "s,\#! */usr/bin/env *python3,\#!${PYTHONBIN},"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
