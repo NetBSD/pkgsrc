@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2022/06/28 11:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/05/17 15:27:06 wiz Exp $
 
 DISTNAME=	docbook-xsl-nons-1.79.2
 PKGNAME=	${DISTNAME:S/-nons//}
@@ -62,7 +62,7 @@ post-extract:
 	${RM} -f ${${FIND} ${WRKSRC} -type d:L:sh:=/.gitignore}
 
 do-install:
-	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm . ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm * ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${DESTDIR}${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION.xsl ${DESTDIR}${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DESTDIR}${XSLDIR}/catalog.xml
