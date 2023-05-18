@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/02/09 09:59:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/18 13:02:12 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -78,6 +78,9 @@ ${PYSITELIB}/ansible/collections/list.pyo
 ${PYSITELIB}/ansible/compat/__init__.py
 ${PYSITELIB}/ansible/compat/__init__.pyc
 ${PYSITELIB}/ansible/compat/__init__.pyo
+${PYSITELIB}/ansible/compat/importlib_resources.py
+${PYSITELIB}/ansible/compat/importlib_resources.pyc
+${PYSITELIB}/ansible/compat/importlib_resources.pyo
 ${PYSITELIB}/ansible/compat/selectors/__init__.py
 ${PYSITELIB}/ansible/compat/selectors/__init__.pyc
 ${PYSITELIB}/ansible/compat/selectors/__init__.pyo
@@ -704,6 +707,9 @@ ${PYSITELIB}/ansible/modules/copy.pyo
 ${PYSITELIB}/ansible/modules/cron.py
 ${PYSITELIB}/ansible/modules/cron.pyc
 ${PYSITELIB}/ansible/modules/cron.pyo
+${PYSITELIB}/ansible/modules/deb822_repository.py
+${PYSITELIB}/ansible/modules/deb822_repository.pyc
+${PYSITELIB}/ansible/modules/deb822_repository.pyo
 ${PYSITELIB}/ansible/modules/debconf.py
 ${PYSITELIB}/ansible/modules/debconf.pyc
 ${PYSITELIB}/ansible/modules/debconf.pyo
@@ -713,6 +719,9 @@ ${PYSITELIB}/ansible/modules/debug.pyo
 ${PYSITELIB}/ansible/modules/dnf.py
 ${PYSITELIB}/ansible/modules/dnf.pyc
 ${PYSITELIB}/ansible/modules/dnf.pyo
+${PYSITELIB}/ansible/modules/dnf5.py
+${PYSITELIB}/ansible/modules/dnf5.pyc
+${PYSITELIB}/ansible/modules/dnf5.pyo
 ${PYSITELIB}/ansible/modules/dpkg_selections.py
 ${PYSITELIB}/ansible/modules/dpkg_selections.pyc
 ${PYSITELIB}/ansible/modules/dpkg_selections.pyo
@@ -947,6 +956,9 @@ ${PYSITELIB}/ansible/playbook/collectionsearch.pyo
 ${PYSITELIB}/ansible/playbook/conditional.py
 ${PYSITELIB}/ansible/playbook/conditional.pyc
 ${PYSITELIB}/ansible/playbook/conditional.pyo
+${PYSITELIB}/ansible/playbook/delegatable.py
+${PYSITELIB}/ansible/playbook/delegatable.pyc
+${PYSITELIB}/ansible/playbook/delegatable.pyo
 ${PYSITELIB}/ansible/playbook/handler.py
 ${PYSITELIB}/ansible/playbook/handler.pyc
 ${PYSITELIB}/ansible/playbook/handler.pyo
@@ -962,6 +974,9 @@ ${PYSITELIB}/ansible/playbook/included_file.pyo
 ${PYSITELIB}/ansible/playbook/loop_control.py
 ${PYSITELIB}/ansible/playbook/loop_control.pyc
 ${PYSITELIB}/ansible/playbook/loop_control.pyo
+${PYSITELIB}/ansible/playbook/notifiable.py
+${PYSITELIB}/ansible/playbook/notifiable.pyc
+${PYSITELIB}/ansible/playbook/notifiable.pyo
 ${PYSITELIB}/ansible/playbook/play.py
 ${PYSITELIB}/ansible/playbook/play.pyc
 ${PYSITELIB}/ansible/playbook/play.pyo
@@ -1025,6 +1040,9 @@ ${PYSITELIB}/ansible/plugins/action/copy.pyo
 ${PYSITELIB}/ansible/plugins/action/debug.py
 ${PYSITELIB}/ansible/plugins/action/debug.pyc
 ${PYSITELIB}/ansible/plugins/action/debug.pyo
+${PYSITELIB}/ansible/plugins/action/dnf.py
+${PYSITELIB}/ansible/plugins/action/dnf.pyc
+${PYSITELIB}/ansible/plugins/action/dnf.pyo
 ${PYSITELIB}/ansible/plugins/action/fail.py
 ${PYSITELIB}/ansible/plugins/action/fail.pyc
 ${PYSITELIB}/ansible/plugins/action/fail.pyo
@@ -1219,6 +1237,7 @@ ${PYSITELIB}/ansible/plugins/filter/checksum.yml
 ${PYSITELIB}/ansible/plugins/filter/combinations.yml
 ${PYSITELIB}/ansible/plugins/filter/combine.yml
 ${PYSITELIB}/ansible/plugins/filter/comment.yml
+${PYSITELIB}/ansible/plugins/filter/commonpath.yml
 ${PYSITELIB}/ansible/plugins/filter/core.py
 ${PYSITELIB}/ansible/plugins/filter/core.pyc
 ${PYSITELIB}/ansible/plugins/filter/core.pyo
@@ -1247,6 +1266,7 @@ ${PYSITELIB}/ansible/plugins/filter/mathstuff.py
 ${PYSITELIB}/ansible/plugins/filter/mathstuff.pyc
 ${PYSITELIB}/ansible/plugins/filter/mathstuff.pyo
 ${PYSITELIB}/ansible/plugins/filter/md5.yml
+${PYSITELIB}/ansible/plugins/filter/normpath.yml
 ${PYSITELIB}/ansible/plugins/filter/password_hash.yml
 ${PYSITELIB}/ansible/plugins/filter/path_join.yml
 ${PYSITELIB}/ansible/plugins/filter/permutations.yml
