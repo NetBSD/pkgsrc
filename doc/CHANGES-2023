@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3138 2023/05/18 14:05:24 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3139 2023/05/18 14:05:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4396,3 +4396,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/py-macs2 to 2.2.8 [bacon 2023-05-18]
 	Updated databases/ruby-sqlite3 to 1.6.3 [taca 2023-05-18]
 	Updated biology/bwa to 0.7.17nb7 [bacon 2023-05-18]
+	Updated devel/swagger-codegen to 3.0.43 [schmonz 2023-05-18]
