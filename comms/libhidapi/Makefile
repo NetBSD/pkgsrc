@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/17 13:26:35 nikita Exp $
+# $NetBSD: Makefile,v 1.10 2023/05/18 09:04:59 nikita Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.13.1
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi.pc.in
 
-PLIST_VARS+=	libusb hidraw darwin
+PLIST_VARS+=	libusb hidraw
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,8 +31,6 @@ PLIST.libusb=	yes
 .  if ${OPSYS} == "Linux"
 PLIST.hidraw=	yes
 .  endif
-.else
-PLIST.darwin=	yes
 .endif
 
 
