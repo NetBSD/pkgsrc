@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1513 2023/05/04 06:59:56 adam Exp $
+# $NetBSD: Makefile,v 1.1514 2023/05/18 08:10:26 spz Exp $
 #
 
 COMMENT=	Networking tools
@@ -265,6 +265,7 @@ SUBDIR+=	httping
 SUBDIR+=	httpstat
 SUBDIR+=	httptunnel
 SUBDIR+=	hub
+SUBDIR+=	iana-enterprise-numbers
 SUBDIR+=	iana-etc
 SUBDIR+=	icinga-base
 SUBDIR+=	icinga2

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/18 08:10:26 spz Exp $
+
+BLAKE2s (enterprise-numbers-20230518.txt) = 372e6d19126e7e4f654321fd4e2648b5876bc5bfc1c0336bb5e134944290837e
+SHA512 (enterprise-numbers-20230518.txt) = bbfa5bc66388c04a3268eeebe683f6d3ae34ae3bf90d32e6da013369c521db90ee39477204b4c5cc1aeaa59a0941ef3ba42bad2722309b406442fcbec0c06ff3
+Size (enterprise-numbers-20230518.txt) = 4627323 bytes
