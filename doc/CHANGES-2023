@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3125 2023/05/17 23:36:36 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3126 2023/05/18 01:56:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4380,3 +4380,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed fonts/gnome-font-viewer successor sysutils/gnome-font-viewer [gutteridge 2023-05-17]
 	Updated devel/diffsitter to 0.8.0nb1 [wiz 2023-05-17]
 	Updated textproc/libxslt to 1.1.38 [gutteridge 2023-05-17]
+	Updated textproc/py-libxslt to 1.1.38 [gutteridge 2023-05-18]
