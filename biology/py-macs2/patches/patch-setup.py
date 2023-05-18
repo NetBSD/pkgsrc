@@ -1,22 +1,11 @@
-$NetBSD: patch-setup.py,v 1.2 2023/02/10 14:19:45 wiz Exp $
+$NetBSD: patch-setup.py,v 1.3 2023/05/18 14:01:58 bacon Exp $
 
-# Remove lexical version check and pip requirement
+# Unbundle numpy
 
---- setup.py.orig	2020-04-12 00:00:15.000000000 +0000
+--- setup.py.orig	2023-05-18 12:06:38.965674517 +0000
 +++ setup.py
-@@ -16,32 +16,12 @@ from setuptools import setup, Extension
- from distutils.version import LooseVersion
- import subprocess
- 
--numpy_requires = '>=1.17'
-+numpy_requires = '1.17'
- install_requires = [f"numpy>={numpy_requires}",]
- 
- def main():
--    if float(sys.version[:3])<3.6:
--        sys.stderr.write("CRITICAL: Python version must >= 3.6!\n")
--        sys.exit(1)
--
+@@ -25,22 +25,6 @@ def main():
+         sys.exit(1)
      cwd = os.path.abspath(os.path.dirname(__file__))
  
 -    # install required numpy
