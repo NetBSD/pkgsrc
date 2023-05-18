@@ -1,10 +1,15 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:03:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/05/18 18:17:32 bacon Exp $
 
-BLAKE2s (canu-1.8.tar.gz) = 7eb8fabdb5355c7f6ba27c2ceb5d33ddaa9b977c8445fcbda4eabe95d9930c19
-SHA512 (canu-1.8.tar.gz) = 650bc96675f371596f8e7748d4ab2d229f0262bf84cee8fed59af43d534d76095a72e4ba0b4a5ce9f561992268c317964cda2f6c89ee514f4920e2ba47fbc86c
-Size (canu-1.8.tar.gz) = 2465314 bytes
+BLAKE2s (canu-2.2.tar.xz) = 5b585a2e0a31c2181817798b5f267dd4cf43c3ffeba4b0a04ffc8021a4603aed
+SHA512 (canu-2.2.tar.xz) = af08874a319dd5fd6bbe666c8a5d0a43b7c0caaaca3a3cbf4d3fe022d6d6b8c14cd967c2e26f4fbf571129be240dcb65e92fe61fad1e51d554f15254d0b6ce8f
+Size (canu-2.2.tar.xz) = 2400192 bytes
 SHA1 (patch-Makefile) = aa83003677cbb12558e438c776402ec48df0598d
-SHA1 (patch-fastq-utilities_fastqSimulate_C) = 959beef6e42c8158050958964924813b814b5a11
-SHA1 (patch-pipelines_canu_Defaults.pm) = 55a4631d86abb1881b0cc997514d44c536209ea6
-SHA1 (patch-pipelines_canu_Execution.pm) = fbb080c06ea5d2393d1835a61771715d2aef0274
-SHA1 (patch-utility_objectStore.C) = c8407de79abbaf296f027f704080cc7e878b85f4
+SHA1 (patch-pipelines_canu_Defaults.pm) = 5ecea8ebac667499916b0243f34dc25838992444
+SHA1 (patch-pipelines_canu_Execution.pm) = 75c019a93f5b6a4491191b4f32931ac0b8435421
+SHA1 (patch-utgcns_libboost_boost_smart__ptr_detail_shared__count.hpp) = fd219645141ebe9d6f23153a2a2b0f56abc103af
+SHA1 (patch-utility_src_parasail_internal__sse.h) = 3eca097b64273ada2df6f9be895823980ea79902
+SHA1 (patch-utility_src_utility_align-ssw.H) = 146e1959207dfe1deaae7f8f9809ed72be116841
+SHA1 (patch-utility_src_utility_files.H) = bc28dfd6957a2e2928b5df6a0e1d08c8ba5b2c27
+SHA1 (patch-utility_src_utility_logging.H) = 13e9ced966710cef4a2d38fd2b752f8a726ba07b
+SHA1 (patch-utility_src_utility_system.H) = e0bab7ed20431948845fac907584215c0b891406
+SHA1 (patch-utility_src_utility_types.H) = 2d7f94b774c0d557b5f4ea89294fd82b1341f9d3
