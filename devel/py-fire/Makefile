@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/18 12:01:03 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/18 12:52:51 wiz Exp $
 
 DISTNAME=	fire-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,12 +12,10 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 304
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.endif
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
