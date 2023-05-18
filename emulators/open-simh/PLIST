@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/09 18:50:44 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/18 19:30:09 rhialto Exp $
 bin/simh-3b2
 bin/simh-3b2-400
 bin/simh-3b2-700
@@ -38,6 +38,7 @@ bin/simh-microvax3100
 bin/simh-microvax3100e
 bin/simh-microvax3100m80
 bin/simh-microvax3900
+bin/simh-nd100
 bin/simh-nova
 bin/simh-pdp1
 bin/simh-pdp10
