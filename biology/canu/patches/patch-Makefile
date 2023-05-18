@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2019/01/07 02:33:17 bacon Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/05/18 18:17:32 bacon Exp $
 
 # Template Makefile requires platform-specific defaults for each OS
 # To be sent upstream following commit
