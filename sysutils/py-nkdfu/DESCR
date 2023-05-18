@@ -1,0 +1,4 @@
+nkdfu is a Python DFU tool for updating Nitrokeys' firmware.
+It currently supports Nitrokey Pro only.
+It is based on python-dfu project, which brings implementation
+of USB DFU 1.1 spec.
