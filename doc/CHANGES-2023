@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3130 2023/05/18 09:13:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3131 2023/05/18 12:40:12 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4386,3 +4386,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/iana-enterprise-numbers version 20230518 [spz 2023-05-18]
 	Updated sysutils/ipmitool to 1.8.19 [spz 2023-05-18]
 	Removed textproc/py-m2r [wiz 2023-05-18]
+	Added sysutils/py-nkdfu version 0.2 [nikita 2023-05-18]
