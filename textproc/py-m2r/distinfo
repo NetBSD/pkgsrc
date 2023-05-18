@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2022/12/12 08:19:43 adam Exp $
-
-BLAKE2s (m2r-0.3.1.tar.gz) = 9cf4964daa2f29cea0a673ba1086fa29f9e5ba441e73f9f4e0dd19b251c53fa3
-SHA512 (m2r-0.3.1.tar.gz) = 9414d33c8a8f5246a21e92ebc9370f0f3de9c9636eb63b42f0367edef6e7eba24adcc31f2813ef5bbd601d4638bedc0c2ca7c5d18836fc883874dec688959b1d
-Size (m2r-0.3.1.tar.gz) = 16622 bytes

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3129 2023/05/18 08:49:36 spz Exp $
+$NetBSD: CHANGES-2023,v 1.3130 2023/05/18 09:13:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-httpserver to 1.0.7 [adam 2023-05-18]
 	Added net/iana-enterprise-numbers version 20230518 [spz 2023-05-18]
 	Updated sysutils/ipmitool to 1.8.19 [spz 2023-05-18]
+	Removed textproc/py-m2r [wiz 2023-05-18]
