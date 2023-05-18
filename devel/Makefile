@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3992 2023/05/17 16:44:51 osa Exp $
+# $NetBSD: Makefile,v 1.3993 2023/05/18 12:01:02 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -2520,6 +2520,7 @@ SUBDIR+=	py-fields
 SUBDIR+=	py-filebytes
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-filelock
+SUBDIR+=	py-fire
 SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
 SUBDIR+=	py-flake8-docstrings
