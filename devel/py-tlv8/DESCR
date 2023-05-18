@@ -21,14 +21,3 @@ A TLV8 entry consists of the following parts:
         * float: floats are stored as little-endian ieee754 numbers
         * string: strings are always UTF-8 encoded and do not contain the
 	  terminating NULL byte
-
-TLV8 entries whose content is longer than 255 bytes are split up into fragments.
-The type is repeated is repeated in each fragment, only the last fragment may
-contain less than 255 bytes. Fragments of one TLV8 entry must be continuous.
-
-Multiple TLV8 entries can be combined to create larger structures.
-Entries of different types can placed one after another.
-Entries of the same type must be separated by a TLV8 entry of a different
-type (and probably zero length).
-
-TLV8 entries of unknown or unwanted type are to be silently ignored.
