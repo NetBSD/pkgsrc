@@ -1,22 +1,10 @@
-$NetBSD: patch-pipelines_canu_Execution.pm,v 1.1 2019/01/07 02:33:17 bacon Exp $
+$NetBSD: patch-pipelines_canu_Execution.pm,v 1.2 2023/05/18 18:17:32 bacon Exp $
 
-# Add resource limits for SLURM
-# Upstream is considering a scheduler-independent approach to this feature
+# Better task limit control under slurm
 
---- pipelines/canu/Execution.pm.orig	2018-06-22 08:20:52.000000000 +0000
+--- pipelines/canu/Execution.pm.orig	2020-09-07 19:08:24 UTC
 +++ pipelines/canu/Execution.pm
-@@ -303,10 +303,6 @@ sub skipStage ($$@) {
- sub getInstallDirectory () {
-     my $installDir = $FindBin::RealBin;
- 
--    if ($installDir =~ m!^(.*)/\w+-\w+/bin$!) {
--        $installDir = $1;
--    }
--
-     return($installDir);
- }
- 
-@@ -694,8 +690,8 @@ sub submitScript ($$) {
+@@ -762,8 +762,8 @@ sub submitScript ($$) {
  
  
  
@@ -27,7 +15,7 @@ $NetBSD: patch-pipelines_canu_Execution.pm,v 1.1 2019/01/07 02:33:17 bacon Exp $
      my  $off = 0;
  
      #  In some grids (SGE)   this is the maximum size of an array job.
-@@ -725,8 +721,42 @@ sub buildGridArray ($$$$) {
+@@ -803,9 +803,43 @@ sub buildGridArray ($$$$) {
          $off = "-F \"$off\"";
      }
  
@@ -40,7 +28,7 @@ $NetBSD: patch-pipelines_canu_Execution.pm,v 1.1 2019/01/07 02:33:17 bacon Exp $
 +    elsif( $opt =~ m/(ARRAY_JOBS)/ )
 +    {
 +	$opt =~ s/$1/$bgn-$end/; # Replace ARRAY_JOBS with 'bgn-end'
-+
+ 
 +	if( lc( getGlobal( 'gridEngine' ) ) eq 'slurm' && $end > 1 )
 +	{
 +	    if( $name =~ m/^cormhap_/i && defined getGlobal( 'slurmCormhapCoreLimit' ) )
@@ -69,10 +57,11 @@ $NetBSD: patch-pipelines_canu_Execution.pm,v 1.1 2019/01/07 02:33:17 bacon Exp $
 +	    }
 +	}
 +    }
- 
++
      return($opt, $off);
  }
-@@ -870,7 +900,7 @@ sub buildGridJob ($$$$$$$$$) {
+ 
+@@ -951,7 +985,7 @@ sub buildGridJob ($$$$$$$$$) {
      my $jobNameT               = makeUniqueJobName($jobType, $asm);
  
      my ($jobName,  $jobOff)    = buildGridArray($jobNameT, $bgnJob, $endJob, getGlobal("gridEngineArrayName"));

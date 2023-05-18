@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2023/04/23 14:26:11 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/05/18 18:17:32 bacon Exp $
 
-DISTNAME=	canu-1.8
-PKGREVISION=	15
+DISTNAME=	canu-2.2
 CATEGORIES=	biology java
-MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+# Github-generaged files are incomplete
+MASTER_SITES=	https://github.com/marbl/canu/releases/download/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://canu.readthedocs.io/
@@ -24,42 +24,46 @@ SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
 SUBST_SED.optimize+=	-e 's|-finline-functions||g'
 SUBST_FILES.optimize+=	Makefile
 
-SUBST_CLASSES+=		jar
-SUBST_STAGE.jar=	pre-configure
-SUBST_SED.jar+=		-e 's|\\$$bin/\.\./share/java/classes/mhap-|${PREFIX}/${JAVAJARDIR}/mhap-|g'
-SUBST_FILES.jar+=	pipelines/canu/OverlapMhap.pm
-
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
 SUBST_SED.perl+=	-e 's|$$FindBin::RealBin/../lib/site_perl|${PREFIX}/${SITE_PERL_REL}|g'
 SUBST_FILES.perl+=	pipelines/canu.pl
 
-REPLACE_PERL+=		*.pl */*.pl
+REPLACE_PERL+=	bogart/*.pl
+REPLACE_PERL+=	pipelines/*.pl
+REPLACE_PERL+=	bogus/*.pl
+REPLACE_PERL+=	bogart-analysis/*.pl
+REPLACE_PERL+=	overlapBasedTrimming/*.pl
+REPLACE_PERL+=	overlapInCore-analysis/*.pl
+REPLACE_PERL+=	merTrim/*.pl
+REPLACE_PERL+=	erateEstimate/*.pl
+REPLACE_PERL+=	meryl/.pl
+REPLACE_PERL+=	fastq-utilities/*.pl
+REPLACE_PERL+=	*.pl
 
 # May work on other 64-bit processors, but untested
-ONLY_FOR_PLATFORM=	*-*-x86_64
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
 USE_TOOLS+=	gmake pax perl
-GCC_REQD+=	4.8
 
 WRKSRC=		${WRKDIR}/canu-${PKGVERSION_NOREV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
 
-TMP_INST=		${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
+TMP_INST=		${WRKSRC}/build
 SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
 INSTALLATION_DIRS=	bin ${JAVAJARDIR}
 
 post-extract:
-	${CHMOD} -R g-w ${WRKDIR}/${DISTNAME}
+	${CHMOD} -R g-w ${WRKDIR}
 
+# Upstream does not want to use lib/perl5/site_perl
 post-build:
 	${MKDIR} ${TMP_INST}/lib/perl5
 	${MV} ${TMP_INST}/lib/site_perl ${TMP_INST}/lib/perl5
-	${RM} -f ${TMP_INST}/bin/canu.defaults
 
 do-install:
 	cd ${TMP_INST}/bin && ${PAX} -wr * ${DESTDIR}${PREFIX}/bin
@@ -67,5 +71,6 @@ do-install:
 	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/simde/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
