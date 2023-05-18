@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3143 2023/05/18 18:17:42 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3144 2023/05/18 19:30:30 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4401,3 +4401,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 16.5.0 [schmonz 2023-05-18]
 	Updated biology/bowtie2 to 2.4.4nb3 [bacon 2023-05-18]
 	Updated biology/canu to 2.2 [bacon 2023-05-18]
+	Updated emulators/open-simh to 4.1.0.20230511 [rhialto 2023-05-18]
