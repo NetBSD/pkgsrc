@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/09/06 09:29:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2023/05/18 14:46:04 schmonz Exp $
 
 DISTNAME=		rcs-5.9.4
 PKGREVISION=		1
@@ -13,6 +13,11 @@ LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gsoelim diff:run diff3:run
+
+.if !exists(/bin/ed) && !exists(/usr/bin/ed)
+DEPENDS+=		ed-[0-9]*:../../editors/ed
+CONFIGURE_ENV+=		ac_cv_path_ED=${PREFIX:Q}/bin/ged
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
