@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3133 2023/05/18 12:57:35 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3134 2023/05/18 13:07:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4389,3 +4389,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/py-nkdfu version 0.2 [nikita 2023-05-18]
 	Added devel/py-fire version 0.5.0 [nikita 2023-05-18]
 	Added devel/py-tlv8 version 0.10.0 [nikita 2023-05-18]
+	Updated sysutils/ansible-core to 2.15.0 [adam 2023-05-18]
+	Updated sysutils/py-ansible-compat to 4.0.4 [adam 2023-05-18]
+	Updated sysutils/ansible-lint to 6.16.1 [adam 2023-05-18]
