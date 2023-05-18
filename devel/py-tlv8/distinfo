@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/18 12:57:16 nikita Exp $
+
+BLAKE2s (tlv8-0.10.0.tar.gz) = f8f08192aec0759df185c448164cea5de91495dc5c99d28a6aa41f4a4bd3de3e
+SHA512 (tlv8-0.10.0.tar.gz) = b16b284a7fa1e17c7b68633c3efc8114eaebfdfee8593683a68881dadd6ba411ab41060ecdcc4ba2235511c2f7862f646690081e75669dee3e855b10c4def745
+Size (tlv8-0.10.0.tar.gz) = 16054 bytes
