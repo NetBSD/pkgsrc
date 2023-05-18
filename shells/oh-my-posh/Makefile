@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/05/17 21:35:11 pin Exp $
+# $NetBSD: Makefile,v 1.22 2023/05/18 14:08:45 schmonz Exp $
 
-DISTNAME=		oh-my-posh-16.4.4
+DISTNAME=		oh-my-posh-16.5.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -30,6 +30,6 @@ post-install:
 	  ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/${PKGBASE};	\
 	done
 
-#.include "go-modules.mk"
+.include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
