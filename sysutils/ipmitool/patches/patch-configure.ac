@@ -1,0 +1,30 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/05/18 08:43:20 spz Exp $
+
+avoid downloading files in the install phase,
+depend on net/iana-enterprise-numbers instead
+
+--- configure.ac.orig	2022-09-01 18:42:31.000000000 +0000
++++ configure.ac
+@@ -56,21 +56,7 @@ if test "x$exec_prefix" = "xNONE"; then
+ 	exec_prefix="$prefix"
+ fi
+ 
+-if test "x$WGET" = "x"; then
+-	if test "x$CURL" = "x"; then
+-		AC_MSG_WARN([** Neither wget nor curl could be found.])
+-		AC_MSG_WARN([** IANA PEN database will not be installed by `make install` !])
+-	else
+-		DOWNLOAD="$CURL --location --progress-bar"
+-		AM_CONDITIONAL([DOWNLOAD], [true])
+-	fi
+-else
+-	DOWNLOAD="$WGET -c -nd -O -"
+-	AM_CONDITIONAL([DOWNLOAD], [true])
+-fi
+-
+-AC_MSG_WARN([** Download is:])
+-AC_MSG_WARN($DOWNLOAD)
++AM_CONDITIONAL([DOWNLOAD], [false])
+ AC_SUBST(DOWNLOAD, $DOWNLOAD)
+ 
+ dnl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/02/17 08:38:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/18 08:43:20 spz Exp $
 bin/ipmitool
 man/man1/ipmitool.1
 man/man8/ipmievd.8
@@ -7,4 +7,4 @@ share/doc/ipmitool/AUTHORS
 share/doc/ipmitool/COPYING
 share/doc/ipmitool/ChangeLog
 share/doc/ipmitool/README
-share/examples/ipmitool/oem_ibm_sel_map
+share/ipmitool/oem_ibm_sel_map
