@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3132 2023/05/18 12:40:48 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3133 2023/05/18 12:57:35 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed textproc/py-m2r [wiz 2023-05-18]
 	Added sysutils/py-nkdfu version 0.2 [nikita 2023-05-18]
 	Added devel/py-fire version 0.5.0 [nikita 2023-05-18]
+	Added devel/py-tlv8 version 0.10.0 [nikita 2023-05-18]
