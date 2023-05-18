@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3141 2023/05/18 14:08:51 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3142 2023/05/18 14:16:36 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.43 [schmonz 2023-05-18]
 	Updated devel/ruby-async to 2.5.1 [taca 2023-05-18]
 	Updated shells/oh-my-posh to 16.5.0 [schmonz 2023-05-18]
+	Updated biology/bowtie2 to 2.4.4nb3 [bacon 2023-05-18]
