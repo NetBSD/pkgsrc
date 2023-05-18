@@ -1,0 +1,34 @@
+Type-Length-Value8 (TLV8) for python
+
+Type-Length-Value (TLV) are used to encode arbitrary data.
+In this case the type and length are represented by 1 byte each.
+Hence the name TLV8.
+
+A TLV8 entry consists of the following parts:
+    * the type: this 8 bit field denotes the type of information
+      that is represented by the data.
+    * the length: this 8 bit field denotes the length of the data
+      (this does not include the 2 bytes for type and length.
+      For data longer than 255 bytes, there is a defined procedure available.
+    * the value: these length bytes represent the value of this TLV.
+      The different types of data is represented differently:
+        * bytes: this is raw binary data and will be used as is, no further
+	  interpretation takes place
+        * tlv8: this is a specialized case of bytes values. Using this instead
+	  of pure bytes enables nesting of data and creating a hierarchy.
+        * integer: integers are stored in little-endian byte order and are
+	  encoded with the minimal number of bytes possible (1, 2, 4 or 8)
+        * float: floats are stored as little-endian ieee754 numbers
+        * string: strings are always UTF-8 encoded and do not contain the
+	  terminating NULL byte
+
+TLV8 entries whose content is longer than 255 bytes are split up into fragments.
+The type is repeated is repeated in each fragment, only the last fragment may
+contain less than 255 bytes. Fragments of one TLV8 entry must be continuous.
+
+Multiple TLV8 entries can be combined to create larger structures.
+Entries of different types can placed one after another.
+Entries of the same type must be separated by a TLV8 entry of a different
+type (and probably zero length).
+
+TLV8 entries of unknown or unwanted type are to be silently ignored.
