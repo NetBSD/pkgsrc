@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/04/08 13:22:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/05/18 14:03:40 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -40,7 +40,7 @@ ${GEM_LIBDIR}/lib/sqlite3/statement.rb
 ${GEM_LIBDIR}/lib/sqlite3/translator.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
-${GEM_LIBDIR}/ports/archives/sqlite-autoconf-3410200.tar.gz
+${GEM_LIBDIR}/ports/archives/sqlite-autoconf-3420000.tar.gz
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_backup.rb
 ${GEM_LIBDIR}/test/test_collation.rb
