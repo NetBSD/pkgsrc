@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2023/05/06 19:09:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/18 19:30:09 rhialto Exp $
 
 DISTNAME=	open-simh-4.1.0
-PKGNAME=	open-simh-4.1.0.20230207
-PKGREVISION=	2
+PKGNAME=	open-simh-4.1.0.20230511
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	5e01c0516b14d16fa4e780dff13077bed76aa38a
+GITHUB_TAG=	793149d1bdf6fcdbf9ad54632285e3bd13b9e1c8
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -31,12 +30,14 @@ PREFER.zlib=		pkgsrc
 # The makefile tries to autodetect the options below from "gcc --help", but
 # due to the compiler wrapper, it may not always output the expected text.
 # So we hardcode the options here.
+CFLAGS_O+=		-fno-strict-overflow
+CFLAGS_O+=		-fno-unsafe-loop-optimizations
 CFLAGS_O+=		-finline-functions
 CFLAGS_O+=		-fgcse-after-reload
+.if ${PKGSRC_COMPILER} == "gcc"
 CFLAGS_O+=		-fpredictive-commoning
 CFLAGS_O+=		-fipa-cp-clone
-CFLAGS_O+=		-fno-unsafe-loop-optimizations
-CFLAGS_O+=		-fno-strict-overflow
+.endif
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
