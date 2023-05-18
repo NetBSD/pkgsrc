@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/22 23:30:11 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/18 14:01:58 bacon Exp $
 bin/macs2
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt

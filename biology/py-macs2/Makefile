@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/01/29 00:33:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/05/18 14:01:58 bacon Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-macs2-2.2.7.1
+PKGNAME=	${PYPKGPREFIX}-macs2-2.2.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
@@ -21,7 +21,7 @@ CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 # Distributed .c files do not support python > 3.9
 post-extract:
 	${MV} ${WRKSRC}/MACS2/cPosValCalculation.c ${WRKSRC}
-	${RM} ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
+	${RM} -f ${WRKSRC}/MACS2/*.c ${WRKSRC}/MACS2/*/*.c
 	cd ${WRKSRC} && ${CYTHONIZE} ${WRKSRC}/MACS2/*.pyx
 	cd ${WRKSRC} && ${CYTHONIZE} ${WRKSRC}/MACS2/*/*.pyx
 	${MV} ${WRKSRC}/cPosValCalculation.c ${WRKSRC}/MACS2
