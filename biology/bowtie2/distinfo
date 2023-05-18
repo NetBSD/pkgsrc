@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/12/17 15:25:20 bacon Exp $
+$NetBSD: distinfo,v 1.5 2023/05/18 14:16:27 bacon Exp $
 
 BLAKE2s (bowtie2-2.4.4.tar.gz) = 685468ca08b60b58de8ed51fec3c7a22411c278f7e8c8703461707b4de996d3e
 SHA512 (bowtie2-2.4.4.tar.gz) = 2db44e8219bcb916119b8097dd10adcc2185d3ce7df6147210c78070dce57fefddbc79c64dc2a55fdc49a46c4df80c37c8c6d786cce20a95a2e50ce0692befed
