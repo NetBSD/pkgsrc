@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3136 2023/05/18 14:02:10 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3137 2023/05/18 14:04:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4394,3 +4394,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.16.1 [adam 2023-05-18]
 	Updated net/openconnect to 9.11 [schmonz 2023-05-18]
 	Updated biology/py-macs2 to 2.2.8 [bacon 2023-05-18]
+	Updated databases/ruby-sqlite3 to 1.6.3 [taca 2023-05-18]
