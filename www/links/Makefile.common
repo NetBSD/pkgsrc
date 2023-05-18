@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.81 2022/11/02 18:10:03 fcambus Exp $
+# $NetBSD: Makefile.common,v 1.82 2023/05/18 00:11:32 schmonz Exp $
 #
 # used by www/links/Makefile
 # used by www/links-gui/Makefile
@@ -13,6 +13,7 @@ HOMEPAGE=	http://links.twibright.com/
 LICENSE=	gnu-gpl-v2 # including special OpenSSL paragraph
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		ac_cv_prog_CPP=${CPP:Q}
 
 PLIST_SRC=		${.CURDIR}/../../www/links/PLIST
 PATCHDIR=		${.CURDIR}/../../www/links/patches
