@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/16 15:47:14 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/18 09:56:50 nikita Exp $
 
 DISTNAME=	libusb1-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,9 @@ COMMENT=	Python ctype-based wrapper around libusb1
 LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	# none
+
+# dropped support for < 3.6 in version 3.0
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
