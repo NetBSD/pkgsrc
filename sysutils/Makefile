@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1046 2023/05/11 05:27:50 adam Exp $
+# $NetBSD: Makefile,v 1.1047 2023/05/18 12:39:49 nikita Exp $
 #
 
 COMMENT=	System utilities
@@ -577,6 +577,7 @@ SUBDIR+=	py-kazoo
 SUBDIR+=	py-kubernetes
 SUBDIR+=	py-loguru
 SUBDIR+=	py-magic
+SUBDIR+=	py-nkdfu
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify2
 SUBDIR+=	py-pathtools
