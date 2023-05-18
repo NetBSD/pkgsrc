@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22954 2023/05/18 02:02:34 gutteridge Exp $
+$NetBSD: TODO,v 1.22955 2023/05/18 18:17:42 bacon Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calibre-6.17.0 [requires py-qt6/py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
-	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
