@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/05/18 08:10:26 spz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/18 08:13:50 spz Exp $
 #
 # Please also update the dependency pattern in mozilla-rootcerts-openssl
 # and bump its version when updating this package.
 
-DISTNAME=	enterprise-numbers-${PEN_DATE}
+DISTNAME=	iana-enterprise-numbers-${PEN_DATE}
 CATEGORIES=	net
 MASTER_SITES=	-https://www.iana.org/assignments/enterprise-numbers.txt
 EXTRACT_SUFX=	# empty
