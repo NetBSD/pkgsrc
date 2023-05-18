@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/18 09:56:50 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/18 10:24:34 nikita Exp $
 
 DISTNAME=	libusb1-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	# none
 
-# dropped support for < 3.6 in version 3.0
+# dropped support for < 3.4 in version 2.0
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
