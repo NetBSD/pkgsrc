@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22955 2023/05/18 18:17:42 bacon Exp $
+$NetBSD: TODO,v 1.22956 2023/05/19 22:20:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -898,7 +898,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
-	o libimagequant-4.2.0 [https://github.com/ImageOptim/libimagequant/issues/109]
+	o libimagequant-4.2.0 [wip]
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
