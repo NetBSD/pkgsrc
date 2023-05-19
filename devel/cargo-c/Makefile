@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2023/03/10 21:27:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/19 16:42:12 pin Exp $
 
-DISTNAME=	cargo-c-0.9.15+cargo-0.67
+DISTNAME=	cargo-c-0.9.19+cargo-0.70
 PKGNAME=	${DISTNAME:C/\\+cargo-[[:digit:]\.]*//}
 CATEGORIES=	devel
-MAINTAINER=	ryoon@NetBSD.org
 MASTER_SITES=	https://static.crates.io/crates/cargo-c/
+EXTRACT_SUFX=	.crate
+
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/lu-zero/cargo-c
 COMMENT=	Build and install C-compatible libraries from Rust lang
 LICENSE=	2-clause-bsd
-EXTRACT_SUFX=	.crate
 
-SITES.curl-sys-0.4.59+curl-7.86.0.crate=	https://static.crates.io/crates/curl-sys/
+SITES.curl-sys-0.4.61+curl-8.0.1.crate=	https://static.crates.io/crates/curl-sys/
 
 USE_TOOLS+=	pkg-config
 
