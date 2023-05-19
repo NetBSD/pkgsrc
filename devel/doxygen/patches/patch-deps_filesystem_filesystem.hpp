@@ -1,12 +1,12 @@
-$NetBSD: patch-filesystem_filesystem.hpp,v 1.3 2022/05/23 13:08:02 micha Exp $
+$NetBSD: patch-deps_filesystem_filesystem.hpp,v 1.1 2023/05/19 10:37:20 adam Exp $
 
 Disable use of experimental compiler features.
 Failed with GCC 7.4.0 on NetBSD.
 
---- filesystem/filesystem.hpp.orig	2021-05-24 09:14:03.505674000 +0000
-+++ filesystem/filesystem.hpp
-@@ -72,6 +72,7 @@
- #define GHC_OS_CYGWIN
+--- deps/filesystem/filesystem.hpp.orig	2023-03-06 19:17:40.000000000 +0000
++++ deps/filesystem/filesystem.hpp
+@@ -71,6 +71,7 @@
+ #define GHC_OS_SOLARIS
  #elif defined(__svr4__)
  #define GHC_OS_SYS5R4
 +#define GHC_NO_DIRENT_D_TYPE
