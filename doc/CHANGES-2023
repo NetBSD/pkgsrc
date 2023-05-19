@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3154 2023/05/19 16:42:30 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3155 2023/05/19 20:43:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4416,3 +4416,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-player to 0.14.0 [pin 2023-05-19]
 	Updated www/wiki-tui to 0.7.0 [pin 2023-05-19]
 	Updated devel/cargo-c to 0.9.19 [pin 2023-05-19]
+	Updated devel/libuv to 1.45.0 [adam 2023-05-19]
+	Updated devel/py-pylint-plugin-utils to 0.8.1 [adam 2023-05-19]
