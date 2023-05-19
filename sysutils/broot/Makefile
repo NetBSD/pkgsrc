@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2023/05/03 07:26:34 pin Exp $
+# $NetBSD: Makefile,v 1.71 2023/05/19 11:11:35 pin Exp $
 
-DISTNAME=	broot-1.21.3
+DISTNAME=	broot-1.22.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,9 +22,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/broot \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/page \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/broot.1
 
