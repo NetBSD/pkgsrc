@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/03/07 18:31:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/05/19 20:35:47 adam Exp $
 include/uv.h
 include/uv/aix.h
 include/uv/bsd.h
@@ -7,7 +7,6 @@ include/uv/errno.h
 include/uv/linux.h
 include/uv/os390.h
 include/uv/posix.h
-include/uv/stdint-msvc2008.h
 include/uv/sunos.h
 include/uv/threadpool.h
 include/uv/tree.h
