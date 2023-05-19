@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/02/21 13:22:48 pin Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/19 11:16:06 pin Exp $
 
-DISTNAME=	wiki-tui-0.6.4
+DISTNAME=	wiki-tui-0.7.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,9 +21,7 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wiki-tui \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/wiki-tui.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 

@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2023/02/21 13:22:48 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2023/05/19 11:16:06 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.19.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -134,8 +134,8 @@ CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.17
 CARGO_CRATE_DEPENDS+=	precomputed-hash-0.1.1
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.51
-CARGO_CRATE_DEPENDS+=	quote-1.0.23
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.52
+CARGO_CRATE_DEPENDS+=	quote-1.0.26
 CARGO_CRATE_DEPENDS+=	rand-0.7.3
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
@@ -156,9 +156,9 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	security-framework-2.8.2
 CARGO_CRATE_DEPENDS+=	security-framework-sys-2.8.0
 CARGO_CRATE_DEPENDS+=	select-0.5.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.118
+CARGO_CRATE_DEPENDS+=	serde-1.0.158
 CARGO_CRATE_DEPENDS+=	serde-value-0.7.0
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.118
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.158
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.93
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.10
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
@@ -178,6 +178,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	structopt-0.3.26
 CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.18
 CARGO_CRATE_DEPENDS+=	syn-1.0.57
+CARGO_CRATE_DEPENDS+=	syn-2.0.3
 CARGO_CRATE_DEPENDS+=	tempfile-3.3.0
 CARGO_CRATE_DEPENDS+=	tendril-0.4.3
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
