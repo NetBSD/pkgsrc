@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/07/15 13:16:36 adam Exp $
+# $NetBSD: Makefile,v 1.76 2023/05/19 20:35:47 adam Exp $
 
-DISTNAME=	libuv-1.44.2
+DISTNAME=	libuv-1.45.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,8 +23,8 @@ INSTALLATION_DIRS+=	include/uv
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*) || \
-    !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
+.if ${MACHINE_PLATFORM:MSunOS-5.[0-9]-*} || \
+    ${MACHINE_PLATFORM:MSunOS-5.10-*}
 CFLAGS+=	-DSUNOS_NO_IFADDRS
 .endif
 
