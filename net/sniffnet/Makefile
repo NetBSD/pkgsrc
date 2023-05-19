@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/04/30 19:55:37 pin Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/19 11:13:54 pin Exp $
 
-DISTNAME=	sniffnet-1.1.4
+DISTNAME=	sniffnet-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,8 +23,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.alsa-lib}/lib
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/sniffnet \
+#do-install:
+#	${INSTALL_PROGRAM} ${WRKSRC}/target/release/sniffnet \
 		${DESTDIR}${PREFIX}/bin
 
 DEPENDS+=	alsa-plugins-oss-[0-9]*:../../audio/alsa-plugins-oss
