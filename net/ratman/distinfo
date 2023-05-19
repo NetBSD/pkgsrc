@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/01/23 11:45:11 nia Exp $
+$NetBSD: distinfo,v 1.2 2023/05/19 11:20:50 he Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -576,3 +576,4 @@ Size (zeroize-1.2.0.crate) = 15450 bytes
 BLAKE2s (zeroize_derive-1.0.1.crate) = 841eb26ebf9be76709c4babd59a402078cab24e0d5936b17a5f8d904632fbae2
 SHA512 (zeroize_derive-1.0.1.crate) = cbb7fe8d9ecb38c0f6fd11e491afa289cc9d8719f2460f4569816d7d55ec17fc88aa9a167aafb83809e2122481e016039b055e3bc4edfdeaf009fc0d65212dc7
 Size (zeroize_derive-1.0.1.crate) = 8047 bytes
+SHA1 (patch-vendor_pnet__datalink-0.28.0_src_bpf.rs) = 07ed719e6583bcfd982403091d5831c4cd67d0a1
