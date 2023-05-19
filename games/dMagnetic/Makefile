@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/01/28 22:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/19 09:33:26 wiz Exp $
 
-DISTNAME=		dMagnetic_0.36
+DISTNAME=		dMagnetic_0.37
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		https://www.dettus.net/dMagnetic/
@@ -11,14 +11,13 @@ HOMEPAGE=		https://www.dettus.net/dMagnetic/
 COMMENT=		Magnetic Scrolls Interpreter
 LICENSE=		2-clause-bsd
 
-INSTALLATION_DIRS=	bin share/doc/dMagnetic ${PKGMANDIR}/man5 ${PKGMANDIR}/man6
+INSTALLATION_DIRS=	bin share/doc/dMagnetic share/examples/dMagnetic
+INSTALL_MAKE_FLAGS+=	MYPREFIX=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	INSTALLMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dMagnetic ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/dMagnetic
-	${INSTALL_DATA} ${WRKSRC}/dMagnetic.ini ${DESTDIR}${PREFIX}/share/doc/dMagnetic
-	${INSTALL_MAN} ${WRKSRC}/dMagneticini.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/dMagnetic.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/games/dMagnetic/dMagnetic.ini ${DESTDIR}${PREFIX}/share/examples/dMagnetic
+	${MV} ${DESTDIR}${PREFIX}/share/games/dMagnetic/* ${DESTDIR}${PREFIX}/share/doc/dMagnetic
 
 ## The idea of this test is to check if the output is the expected one.
 ## for this, the sha256sum is being compared.
