@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3145 2023/05/19 08:21:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3146 2023/05/19 09:33:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4404,3 +4404,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/open-simh to 4.1.0.20230511 [rhialto 2023-05-18]
 	Updated www/py-httpx to 0.24.1 [adam 2023-05-19]
 	Updated net/py-tldextract to 3.4.3 [adam 2023-05-19]
+	Updated games/dMagnetic to 0.37 [wiz 2023-05-19]
