@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/25 09:17:36 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/19 10:43:03 adam Exp $
 
-DISTNAME=	kubernetes-25.3.0
+DISTNAME=	kubernetes-26.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kubernetes/}
