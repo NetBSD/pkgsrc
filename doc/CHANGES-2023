@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3148 2023/05/19 10:43:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3149 2023/05/19 11:11:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4410,3 +4410,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/doxygen to 1.9.7 [adam 2023-05-19]
 	Updated security/py-google-auth to 2.18.1 [adam 2023-05-19]
 	Updated sysutils/py-kubernetes to 26.1.0 [adam 2023-05-19]
+	Updated sysutils/broot to 1.22.0 [pin 2023-05-19]
