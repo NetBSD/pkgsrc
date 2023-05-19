@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2023/05/10 20:40:47 schmonz Exp $
+$NetBSD: distinfo,v 1.33 2023/05/19 14:12:18 jperkin Exp $
 
 BLAKE2s (gsed-4.9.1) = da49be3990ff24471ce17cacc9174bac9defafc7561e06635988665e94367a76
 SHA512 (gsed-4.9.1) = 3194b79d852c9692e336892acf172be654123c63a6a03b36420c4515758ce4012d2c4aa0aa58b63c12b7eafbb0d17eac89ba1ff1aba4ce052026fab3a5c3de7b
@@ -7,3 +7,4 @@ BLAKE2s (sed-4.9.tar.xz) = 106e94f33309ff895f952e9200ab27817004f10fae357ad3a6d95
 SHA512 (sed-4.9.tar.xz) = 36157a4b4a2430cf421b7bd07f1675d680d9f1616be96cf6ad6ee74a9ec0fe695f8d0b1e1f0b008bbb33cc7fcde5e1c456359bbbc63f8aebdd4fedc3982cf6dc
 Size (sed-4.9.tar.xz) = 1397092 bytes
 SHA1 (patch-Makefile.in) = fb8766d941af00f0f66d903ee7fa4016e987cce2
+SHA1 (patch-gnulib-tests_vma-iter.c) = fc021e079c623a352a2f2c98f94794c7c0ce2197
