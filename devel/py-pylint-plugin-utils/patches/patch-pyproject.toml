@@ -1,0 +1,18 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2023/05/19 20:40:04 adam Exp $
+
+Do not pollute site-packages.
+
+--- pyproject.toml.orig	2023-05-19 20:37:05.000000000 +0000
++++ pyproject.toml
+@@ -24,11 +24,6 @@ keywords=["pylint","plugin","helpers"]
+ packages = [
+   {include = "pylint_plugin_utils/"}
+ ]
+-include = [
+-  "LICENSE",
+-  "*.rst",
+-  "*.md"
+-]
+ 
+ [tool.poetry.dependencies]
+ python = ">=3.7,<4.0"
