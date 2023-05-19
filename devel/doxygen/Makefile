@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.169 2023/04/19 08:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.170 2023/05/19 10:37:19 adam Exp $
 
-DISTNAME=	doxygen-1.9.6.src
+DISTNAME=	doxygen-1.9.7.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://doxygen.nl/files/
 
@@ -11,12 +10,14 @@ HOMEPAGE=	https://www.doxygen.nl/
 COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
 
+EXTRACT_USING=	gtar # Cannot restore extended attributes
+
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
 # doxygen changelog says at least this version of flex is required
-FLEX_REQD=		2.6.4
+FLEX_REQD+=		2.6.4
 # doxygen changelog says a C++17 compiler is required. Uses -std=gnu++1z
 # Native std::filesystem requires GCC 9. Patch for emulation is still present
 # Tested to work with GCC 7.5.0 from NetBSD 9.2
