@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/05/05 22:00:29 pin Exp $
+# $NetBSD: Makefile,v 1.47 2023/05/19 11:12:37 pin Exp $
 
-DISTNAME=	felix-2.2.7
+DISTNAME=	felix-2.2.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +14,7 @@ LICENSE=	mit
 
 INSTALLATION_DIRS=	bin share/examples/felix
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/fx \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.yaml \
 		${DESTDIR}${PREFIX}/share/examples/felix
 
