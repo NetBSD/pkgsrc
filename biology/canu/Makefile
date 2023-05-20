@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/05/20 11:27:27 bacon Exp $
+# $NetBSD: Makefile,v 1.21 2023/05/20 14:42:11 bacon Exp $
 
 DISTNAME=	canu-2.2
 CATEGORIES=	biology java
@@ -31,7 +31,7 @@ REPLACE_PERL+=	fastq-utilities/*.pl
 REPLACE_PERL+=	*.pl
 
 # May work on other 64-bit processors, but untested
-ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64
+ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-aarch64 *-*-powerpc64
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
@@ -46,8 +46,15 @@ SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
 INSTALLATION_DIRS=	bin lib/perl5 ${JAVAJARDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
 post-extract:
 	${CHMOD} -R g-w ${WRKDIR}
+.if ${MACHINE_ARCH} == "aarch64"
+	${CP} ${FILESDIR}/cpuid_arm.c ${WRKSRC}/utility/src/parasail/cpuid.c
+.elif ${MACHINE_ARCH} == "powerpc64"
+	${CP} ${FILESDIR}/cpuid_ppc.c ${WRKSRC}/utility/src/parasail/cpuid.c
+.endif
 
 # Upstream does not want to use lib/perl5/site_perl
 post-build:
@@ -59,8 +66,6 @@ do-install:
 	cd ${TMP_INST}/lib/perl5 && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/perl5
 	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
 
-.include "../../mk/bsd.prefs.mk"
-
 # Xcode supports -Xpreprocessor -fopenmp, but does not supply OpenMP libs
 # parallel/openmp installs an entire llvm
 # Maybe a libomp package would suffice?
@@ -69,6 +74,5 @@ do-install:
 .endif
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/simde/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
