@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.59 2023/01/05 01:42:15 gutteridge Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.60 2023/05/20 15:43:53 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -117,6 +117,85 @@ spelling mistakes) takes place.</para>
 	<!--	DISTDIR -->
 	<!--	FAILOVER_FETCH -->
       </itemizedlist></para>
+  </sect1>
+
+  <sect1 id="native-or-pkgsrc-preference">
+    <title>Preferences for native or pkgsrc software</title>
+
+    <para>Whenever a package depends on a package that has a
+    <filename>builtin.mk</filename> file, the dependent package can
+    either use the built-in (native) version from the base system or the
+    pkgsrc-provided version.  This only affects dependencies, so it is
+    still possible to build the pkgsrc package <filename
+    role="pkg">devel/pcre++</filename> even when other packages depend
+    on the native pcre++ version instead.</para>
+
+    <para>To force using the pkgsrc-provided version for a particular
+    package, define <quote><varname>PREFER_PKGSRC</varname> =
+    <replaceable>package-ID</replaceable></quote> in &mk.conf;. To force
+    using the native package, define
+    <quote><varname>PREFER_NATIVE</varname> =
+    <replaceable>package-ID</replaceable></quote>. In both cases, the
+    <replaceable>package-ID</replaceable> is the one from the
+    <filename>buildlink3.mk</filename> of the package. In most cases,
+    this ID is the same as the directory name of the package, but for
+    example, <filename role="pkgpath">devel/pcre++</filename> has the
+    package ID <quote>pcrexx</quote>.</para>
+
+    <para>For the packages that are not listed by their package ID,
+    pkgsrc uses the pkgsrc-provided version if
+    <varname>PREFER_PKGSRC</varname> contains the word
+    <quote>yes</quote>. Otherwise, if <varname>PREFER_NATIVE</varname>
+    contains the word <quote>yes</quote>, pkgsrc uses the native
+    version. For example, to require using the pkgsrc-provided versions
+    for all but the most basic bits on a NetBSD system, you can
+    set:</para>
+
+<programlisting>
+PREFER_PKGSRC=  yes
+PREFER_NATIVE=  getopt skey tcp_wrappers
+</programlisting>
+
+    <para>A package <emphasis>must</emphasis> have a
+    <filename>builtin.mk</filename> file to be listed in
+    <varname>PREFER_NATIVE</varname>, otherwise it is simply ignored in
+    that list.</para>
+
+    <para><varname>PREFER_PKGSRC</varname> and
+    <varname>PREFER_NATIVE</varname> should be set during bootstrap to
+    ensure that the bootstrap process does not use inapropriate native
+    tools as dependencies for core packages.</para>
+
+<screen>
+&rprompt; <userinput>./bootstrap --prefer-pkgsrc yes --prefer-native openssl</userinput>
+</screen>
+
+    <para>Switching between settings globally at a later date can
+    introduce complications with dependency resolution.  This is caused
+    by packages built with the opposite preference being installed
+    alongside each other.  Hence, when changing any of these variables
+    after bootstrap, you need to rebuild all packages depending on those
+    whose preference has been changed.  This is not trivial and should
+    be avoided.</para>
+
+    <para>When using pkgsrc on Linux systems, there is high risk of
+    <quote>leakage</quote>, where programs installed by pkgsrc may
+    inadvertently use a command or library not installed by pkgsrc, e.g.
+    those installed by yum or apt.  Such foreign dependencies may be
+    installed, removed, or upgraded to a version incompatible with the
+    pkgsrc package at any time, causing pkgsrc packages to subsequently
+    malfunction.  Pkgsrc cannot prevent this, as it has no control over
+    other package managers. Another potential problem is that under
+    Redhat Enterprise and related Linux systems, yum packages are only
+    patched and never upgraded, so eventually they may become too
+    outdated for use by pkgsrc.  Even intentionally using foreign
+    dependencies, not considered leakage, can lead to these problems, so
+    it is generally discouraged.  In order to minimize such problems,
+    PREFER_PKGSRC defaults to <quote>yes</quote> on Linux systems. This ensures that
+    pkgsrc is aware of any changes to dependency packages and can
+    rebuild or upgrade the entire dependency tree as needed.  This
+    default can be overridden by setting --prefer-pkgsrc to a
+    list of packages and --prefer-native to <quote>yes</quote>.</para>
   </sect1>
 
   <sect1 id="variables-affecting-installation">
