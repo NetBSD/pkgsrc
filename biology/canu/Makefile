@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/18 18:17:32 bacon Exp $
+# $NetBSD: Makefile,v 1.20 2023/05/20 11:27:27 bacon Exp $
 
 DISTNAME=	canu-2.2
 CATEGORIES=	biology java
@@ -12,17 +12,6 @@ COMMENT=	Single molecule sequence assembler for genomes large and small
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gnuplot>0:../../graphics/gnuplot
-
-# Makefile compiles directly into ${DESTDIR}${PREFIX}
-SUBST_CLASSES+=		optimize
-SUBST_STAGE.optimize=	pre-configure
-SUBST_SED.optimize+=	-e 's|-g3||g'
-SUBST_SED.optimize+=	-e 's|-O3||g'
-SUBST_SED.optimize+=	-e 's|-O4||g'
-SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
-SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
-SUBST_SED.optimize+=	-e 's|-finline-functions||g'
-SUBST_FILES.optimize+=	Makefile
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
@@ -55,7 +44,7 @@ MAKE_ENV+=	DESTDIR=${WRKSRC}
 TMP_INST=		${WRKSRC}/build
 SITE_PERL_REL=		lib/perl5/site_perl
 JAVAJARDIR=		share/java/classes
-INSTALLATION_DIRS=	bin ${JAVAJARDIR}
+INSTALLATION_DIRS=	bin lib/perl5 ${JAVAJARDIR}
 
 post-extract:
 	${CHMOD} -R g-w ${WRKDIR}
@@ -69,6 +58,15 @@ do-install:
 	cd ${TMP_INST}/bin && ${PAX} -wr * ${DESTDIR}${PREFIX}/bin
 	cd ${TMP_INST}/lib/perl5 && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib/perl5
 	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
+
+.include "../../mk/bsd.prefs.mk"
+
+# Xcode supports -Xpreprocessor -fopenmp, but does not supply OpenMP libs
+# parallel/openmp installs an entire llvm
+# Maybe a libomp package would suffice?
+.if ${OPSYS} == Darwin
+.include "../../parallel/openmp/buildlink3.mk"
+.endif
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/simde/buildlink3.mk"
