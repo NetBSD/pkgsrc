@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.8 2023/05/18 14:08:45 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.9 2023/05/20 15:46:07 schmonz Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -171,7 +171,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.5.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.2.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.2.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.3.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.3.zip
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.11.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.11.zip
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.6.0.mod
