@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:19:56 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/05/20 07:30:20 wiz Exp $
 
-BLAKE2s (File-Remove-1.60.tar.gz) = 6a36546481dffca8b2b8103d431e61379858a8cdcfdd6ebdaa00c95c2c39ad32
-SHA512 (File-Remove-1.60.tar.gz) = 7781629896f16f0b34574a879803473002249c32cf03001f4c1c290edd379571d96d5b1049874f9f71bdb8d7881c3f30a86dcdd0d4f42b4e78998cd6a96de750
-Size (File-Remove-1.60.tar.gz) = 25997 bytes
+BLAKE2s (File-Remove-1.61.tar.gz) = 21394281e4889842b3b9e16b438b6b894ce08f7bbd5154cb8404e2aaf1dc5414
+SHA512 (File-Remove-1.61.tar.gz) = 2ff999f7d71349b7e4a7db8728cfe2b5669c76fb27ca42fe006b0e0061bb73a29d556f3e3da88c004a4dd23bf2d9e12a1e1054b85237e8c14fb2b58c1086971f
+Size (File-Remove-1.61.tar.gz) = 26346 bytes
