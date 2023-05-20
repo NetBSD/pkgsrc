@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3155 2023/05/19 20:43:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3156 2023/05/20 06:16:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cargo-c to 0.9.19 [pin 2023-05-19]
 	Updated devel/libuv to 1.45.0 [adam 2023-05-19]
 	Updated devel/py-pylint-plugin-utils to 0.8.1 [adam 2023-05-19]
+	Updated graphics/p5-Image-ExifTool to 12.60 [wiz 2023-05-20]
