@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3161 2023/05/20 06:25:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3162 2023/05/20 06:26:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4424,3 +4424,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/p5-DBD-SQLite to 1.72 [wiz 2023-05-20]
 	Updated devel/p5-Commandable to 0.10 [wiz 2023-05-20]
 	Updated devel/p5-IO-AIO to 4.80 [wiz 2023-05-20]
+	Updated devel/p5-List-UtilsBy to 0.12 [wiz 2023-05-20]
