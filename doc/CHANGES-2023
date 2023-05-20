@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3224 2023/05/20 23:21:27 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3225 2023/05/20 23:24:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/openconnect to 9.12 [schmonz 2023-05-20]
 	Updated shells/oh-my-posh to 16.7.2 [schmonz 2023-05-20]
 	Updated textproc/p5-Pod-Elemental to 0.103006 [wen 2023-05-21]
+	Updated textproc/p5-Pod-Eventual to 0.094003 [wen 2023-05-21]
