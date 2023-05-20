@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3174 2023/05/20 06:48:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3175 2023/05/20 06:49:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4437,3 +4437,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-OptList to 0.114 [wiz 2023-05-20]
 	Updated devel/p5-Exporter-Tiny to 1.006002 [wiz 2023-05-20]
 	Updated devel/p5-File-Listing to 6.15 [wiz 2023-05-20]
+	Updated devel/p5-File-MimeInfo to 0.33 [wiz 2023-05-20]
