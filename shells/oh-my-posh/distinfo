@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2023/05/18 14:08:45 schmonz Exp $
+$NetBSD: distinfo,v 1.22 2023/05/20 15:46:07 schmonz Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -513,9 +513,12 @@ Size (github.com_stretchr_testify_@v_v1.8.0.mod) = 188 bytes
 BLAKE2s (github.com_stretchr_testify_@v_v1.8.2.mod) = 9cba4c7e673fa366fcec4603d67030a0a278ca58afe2c8e4d74de88ed9d89dd8
 SHA512 (github.com_stretchr_testify_@v_v1.8.2.mod) = 0fe9325c142599f577ef2f281f09dce40b431b21bf32834e30fba68ae8896c0fdee66e93fa64ede86e326ec9d74a639233fe813f701387cacd27d19814c31351
 Size (github.com_stretchr_testify_@v_v1.8.2.mod) = 188 bytes
-BLAKE2s (github.com_stretchr_testify_@v_v1.8.2.zip) = 4efc34406fedc5b5d32393f2e0b3b9cc8e3c3f0a298fdc8e5d84100a246bb9a5
-SHA512 (github.com_stretchr_testify_@v_v1.8.2.zip) = eaa6456c46c1d9518e0f047606c5e74842ce189e7c07cb7e73eea393482d339f0c82f4d19769470250509bc7810ace36ab24d78145ad1da261db5497ba9166f9
-Size (github.com_stretchr_testify_@v_v1.8.2.zip) = 114188 bytes
+BLAKE2s (github.com_stretchr_testify_@v_v1.8.3.mod) = 9cb979f9a53faf1fe49a3cd34a458afe917803f872507c727f8e1f8210726e1c
+SHA512 (github.com_stretchr_testify_@v_v1.8.3.mod) = 10c923ac832f54ecd370cd7441f56561b9adf0bb05858605f3515759cef29383cda816f2d3fe7ef004f51b428afa4a19163a619f7dc2aa30f7177636d7c8d175
+Size (github.com_stretchr_testify_@v_v1.8.3.mod) = 188 bytes
+BLAKE2s (github.com_stretchr_testify_@v_v1.8.3.zip) = 3e8213f2c6bad0a2be252f310fb44ea0db029610b100239cb6984faf28917086
+SHA512 (github.com_stretchr_testify_@v_v1.8.3.zip) = 4bbf8bf13436a77ebb8455f22fd651c52224f0b639deca7365e4392e41383548271fc35e7d638fa03d2595c5a6f795d3b8494cca09a80f0eee1c38d494f0abdd
+Size (github.com_stretchr_testify_@v_v1.8.3.zip) = 120084 bytes
 BLAKE2s (github.com_tklauser_go-sysconf_@v_v0.3.11.mod) = 4f0e14cfa9a25b17338721924486eb76fc74c1a7a9a5c529e02f239fc4f696e0
 SHA512 (github.com_tklauser_go-sysconf_@v_v0.3.11.mod) = 3a0a3f4661c5c36b4e7c20c060b98bf363584e23aacc2d80a8b75e9aa79713dad8df3913f9acbc23271dc2445c1b1a813ca197e946610c331672f0207daafac5
 Size (github.com_tklauser_go-sysconf_@v_v0.3.11.mod) = 121 bytes
@@ -771,8 +774,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-16.5.0.tar.gz) = e915b95fba3d5ab99b4ed614838cd1c045598a2dc84656a991b91f20536653ad
-SHA512 (oh-my-posh-16.5.0.tar.gz) = 17af75f21b34d716193b8ffe39724bcc3a11432ef117aaba5ff628bda79c1cf95bfa44591ae787edc5a8a2df392fc56f96c6fd4e3ad31c62d85d7d7c446fc38e
-Size (oh-my-posh-16.5.0.tar.gz) = 2703878 bytes
+BLAKE2s (oh-my-posh-16.7.2.tar.gz) = 362fc994f1414bf1908fae28ba9000b0302c2b541dd5bc42553f49b4ae4bc105
+SHA512 (oh-my-posh-16.7.2.tar.gz) = e80d4055d795d3afd253851efc2c4d6dee7e729693b5f92bf0e4c5d4b994d2b3c7249cf720d86a5e67445e48bf7e115c6f6fb450db26bd286545179c92551e61
+Size (oh-my-posh-16.7.2.tar.gz) = 2706078 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = cb781ed770d325f97bc71fa545b4ce031a3df27a
