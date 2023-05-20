@@ -1,9 +1,9 @@
-# $NetBSD: help.awk,v 1.43 2022/06/11 15:58:41 rillig Exp $
+# $NetBSD: help.awk,v 1.44 2023/05/20 16:14:07 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
 #
-# usage: env TOPIC="topic" awk help.awk file...
+# usage: env TOPIC="topic" awk -f help.awk file...
 #
 
 BEGIN {
@@ -137,9 +137,7 @@ function array_is_empty(arr,   i) {
 }
 
 # The lines containing the keywords should also not occur in
-# the output for now. This decision is not final since it may
-# be helpful for the user to know by which keywords a topic
-# can be reached.
+# the output, as the relevant keywords are listed above each topic.
 $1 == "#" && $2 == "Keywords:" {
 	for (i = 3; i <= NF; i++) {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
