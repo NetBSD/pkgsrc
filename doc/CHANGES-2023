@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3177 2023/05/20 06:51:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3178 2023/05/20 06:53:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4440,3 +4440,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-File-MimeInfo to 0.33 [wiz 2023-05-20]
 	Updated devel/p5-File-ShareDir-Install to 0.14 [wiz 2023-05-20]
 	Updated devel/p5-MRO-Compat to 0.15 [wiz 2023-05-20]
+	Updated devel/p5-Module-Refresh to 0.18 [wiz 2023-05-20]
