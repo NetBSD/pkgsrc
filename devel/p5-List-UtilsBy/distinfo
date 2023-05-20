@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:51 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/05/20 06:26:26 wiz Exp $
 
-BLAKE2s (List-UtilsBy-0.11.tar.gz) = 1656960c192b43b12826162d33102490368c60d6b681c0b9bbaafd5f57ab3321
-SHA512 (List-UtilsBy-0.11.tar.gz) = 7c912b805e1e21d5d683224b63125bc8385d79c7115d88c08ca28fc1778ec8d22ad4aaf366731df438365a5233108926cbffee284c2e2d37346b47984dbbd4c9
-Size (List-UtilsBy-0.11.tar.gz) = 22939 bytes
+BLAKE2s (List-UtilsBy-0.12.tar.gz) = 1a221d4e9b8a9e175244cd1466cc6e1df7d865509facb5593536449e298396f1
+SHA512 (List-UtilsBy-0.12.tar.gz) = 8be14ef99a49f3e6ff524d08244522a8724857f7aa7af70db4475befcfc7ab34c75041942ef7c737565567c7f578a0d8ecdde1a61d193572e0010838fb1db0de
+Size (List-UtilsBy-0.12.tar.gz) = 23469 bytes
