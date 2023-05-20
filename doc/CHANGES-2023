@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3190 2023/05/20 07:09:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3191 2023/05/20 07:10:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4453,3 +4453,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/p5-Net-DNS to 1.38 [wiz 2023-05-20]
 	Updated security/p5-IO-Socket-SSL to 2.081 [wiz 2023-05-20]
 	Updated textproc/p5-Text-CSV_XS to 1.50 [wiz 2023-05-20]
+	Updated www/p5-URI to 5.19 [wiz 2023-05-20]
