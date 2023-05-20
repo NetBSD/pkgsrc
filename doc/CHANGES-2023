@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3172 2023/05/20 06:46:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3173 2023/05/20 06:47:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4435,3 +4435,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/p5-Convert-Color to 0.17 [wiz 2023-05-20]
 	Updated devel/p5-CPAN-Meta-Check to 0.017 [wiz 2023-05-20]
 	Updated devel/p5-Data-OptList to 0.114 [wiz 2023-05-20]
+	Updated devel/p5-Exporter-Tiny to 1.006002 [wiz 2023-05-20]
