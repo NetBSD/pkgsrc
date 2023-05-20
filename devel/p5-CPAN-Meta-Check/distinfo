@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:16:06 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/05/20 06:45:23 wiz Exp $
 
-BLAKE2s (CPAN-Meta-Check-0.014.tar.gz) = d0beb6d93cb90a8f02a58b9c5b5651694f44bdf5ced3055510e99e6ba7632b8c
-SHA512 (CPAN-Meta-Check-0.014.tar.gz) = a10af09a7ce771ca3983adea8053d141750fd09849609a28e7f973831fd3a3ece55281841aec93c099154bb59135986da4983bf612ae4e956c45dbb3f2770f5e
-Size (CPAN-Meta-Check-0.014.tar.gz) = 13187 bytes
+BLAKE2s (CPAN-Meta-Check-0.017.tar.gz) = c9aec902b4a869fb0ab86e671fe4be1b1c75262128f9fb868525c5bfd9139fb9
+SHA512 (CPAN-Meta-Check-0.017.tar.gz) = cbb71312e9efe35a5d08f2e41d0b32592765587125a57bb3396dbead5d280a7fdfa24991dcfdea6a1b3cc3efc3ad23bbc9cf52ada38e043625eea72b56f3d08d
+Size (CPAN-Meta-Check-0.017.tar.gz) = 13812 bytes
