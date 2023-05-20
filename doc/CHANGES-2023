@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3180 2023/05/20 06:56:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3181 2023/05/20 06:57:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4443,3 +4443,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Module-Refresh to 0.18 [wiz 2023-05-20]
 	Updated devel/p5-Package-DeprecationManager to 0.18 [wiz 2023-05-20]
 	Updated devel/p5-Package-Stash to 0.40 [wiz 2023-05-20]
+	Updated devel/p5-Package-Stash-XS to 0.30 [wiz 2023-05-20]
