@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:17:14 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/05/20 06:55:07 wiz Exp $
 
-BLAKE2s (Package-DeprecationManager-0.17.tar.gz) = dc6e5fe2147c221ab9393ead482d03c99028f814a5ade2acb6e1d721821d73b7
-SHA512 (Package-DeprecationManager-0.17.tar.gz) = 57bf79df657895342ca5b8d13f155d85f34d1a85415570b112138b6c50c5d08b421a1707671fbf807918cc334006e4558a626a7201c60096924fc2200c751cde
-Size (Package-DeprecationManager-0.17.tar.gz) = 27647 bytes
+BLAKE2s (Package-DeprecationManager-0.18.tar.gz) = f527d807ab5b35ef037b94c253b09f7010924d222fdc61dbad5b29421b620330
+SHA512 (Package-DeprecationManager-0.18.tar.gz) = e0e34fd9b90d0266d782b85fe9a74c4bde217009488c75143c0ef2114d8c53f58a01c34214909705628c3816267b288b1b05d341fa8fae7a3fcc6bbdbf2f6031
+Size (Package-DeprecationManager-0.18.tar.gz) = 31812 bytes
