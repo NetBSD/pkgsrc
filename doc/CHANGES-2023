@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3211 2023/05/20 07:42:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3212 2023/05/20 07:43:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Pod-Parser to 1.66 [wiz 2023-05-20]
 	Updated time/p5-DateTime-Locale to 1.38 [wiz 2023-05-20]
 	Updated devel/p5-FFI-CheckLib to 0.31 [wiz 2023-05-20]
+	Updated devel/p5-File-chdir to 0.1011 [wiz 2023-05-20]
