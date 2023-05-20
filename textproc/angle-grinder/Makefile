@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/05/12 09:34:31 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/20 13:59:11 pin Exp $
 
-DISTNAME=	angle-grinder-0.18.0
+DISTNAME=	angle-grinder-0.19.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rcoh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,10 +16,6 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
 
 INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/agrind \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
