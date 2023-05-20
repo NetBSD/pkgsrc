@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/20 07:18:56 wiz Exp $
 
-BLAKE2s (File-BaseDir-0.08.tar.gz) = e7b82b79b581d87224e0b51d2dab6f51ba13e0693273ea96d283c55348e071c7
-SHA512 (File-BaseDir-0.08.tar.gz) = 6b44edca34906c34d574933c21c0e3a1a236a431a3ac12caeabcc2638688dfe1c02efc9a1e75a2c2cd522de0dca00df0620cd262c184ec938cc97766d1121f99
-Size (File-BaseDir-0.08.tar.gz) = 10052 bytes
-SHA1 (patch-lib_File_BaseDir.pm) = 2374434a67b8d0c935a4cdab6d3c31bd8a71ac5e
-SHA1 (patch-t_01__vars.t) = 8f0273889bd698a5b066384dd5ccd89cf3a11338
-SHA1 (patch-t_03__OO.t) = c3a20a26417a1d833c4d462a12b1e01d3127121c
+BLAKE2s (File-BaseDir-0.09.tar.gz) = 0ed48f31512eb6ad3a1f6011f745d9f97ab529ae279fb0506f1c80e05f158059
+SHA512 (File-BaseDir-0.09.tar.gz) = 07b07f43bce392beda6ac10729925c3b6ad850f0af5485c3f540b72353a1e877e7e9b76580057197cf68864086f1a3d1f9459cfcf142f16772f48125426d72db
+Size (File-BaseDir-0.09.tar.gz) = 21508 bytes
+SHA1 (patch-lib_File_BaseDir.pm) = 20e5dffb9bf070f74de8ab245cbc1c86ad441b02
+SHA1 (patch-t_01__vars.t) = 9d888f52ad70c668aaa1ddd7a32b7314010b7973
+SHA1 (patch-t_03__OO.t) = 025b7bdc816ed6b36dad28e900f31e7f1e61e457
