@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3207 2023/05/20 07:36:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3208 2023/05/20 07:37:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4470,3 +4470,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Algorithm-Diff to 1.201 [wiz 2023-05-20]
 	Updated devel/p5-Alien-Build to 2.80 [wiz 2023-05-20]
 	Updated devel/p5-Devel-Caller to 2.07 [wiz 2023-05-20]
+	Updated devel/p5-Params-ValidationCompiler to 0.31 [wiz 2023-05-20]
