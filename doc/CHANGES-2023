@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3212 2023/05/20 07:43:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3213 2023/05/20 07:43:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4475,3 +4475,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/p5-DateTime-Locale to 1.38 [wiz 2023-05-20]
 	Updated devel/p5-FFI-CheckLib to 0.31 [wiz 2023-05-20]
 	Updated devel/p5-File-chdir to 0.1011 [wiz 2023-05-20]
+	Updated devel/p5-Term-Table to 0.016 [wiz 2023-05-20]
