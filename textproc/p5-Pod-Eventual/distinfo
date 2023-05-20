@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/30 08:44:52 wen Exp $
+$NetBSD: distinfo,v 1.7 2023/05/20 23:23:33 wen Exp $
 
-BLAKE2s (Pod-Eventual-0.094002.tar.gz) = 9587195ed4b666e29975b067e439fe3b6e3640d0b7a118bda377b19a833f598b
-SHA512 (Pod-Eventual-0.094002.tar.gz) = 4442a079faaf2f1eeae66639a247a3f1b55eecc1d1bf680dd4429bed6fcfc75824d3ecdf28b32a40780881bab9ebef6712291bcbf955b0f97e82340d407be2a4
-Size (Pod-Eventual-0.094002.tar.gz) = 20886 bytes
+BLAKE2s (Pod-Eventual-0.094003.tar.gz) = c9e27c0bb046c3e1368eb3f040c31e2721b56c245945047275e78c73b1f5b640
+SHA512 (Pod-Eventual-0.094003.tar.gz) = 93ccda890dc69af97c54e1502d82797c2ce0f7fcd89f431ddc8b7c983b8ade94627af8badda28284d08d6d84597d74ed30964311e76caccaf12858addda581a0
+Size (Pod-Eventual-0.094003.tar.gz) = 20922 bytes
