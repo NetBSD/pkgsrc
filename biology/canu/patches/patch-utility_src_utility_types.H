@@ -1,4 +1,4 @@
-$NetBSD: patch-utility_src_utility_types.H,v 1.2 2023/05/20 11:27:27 bacon Exp $
+$NetBSD: patch-utility_src_utility_types.H,v 1.3 2023/05/20 14:42:11 bacon Exp $
 
 # Portability
 

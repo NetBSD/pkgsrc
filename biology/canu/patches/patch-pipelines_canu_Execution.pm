@@ -1,4 +1,4 @@
-$NetBSD: patch-pipelines_canu_Execution.pm,v 1.3 2023/05/20 11:27:27 bacon Exp $
+$NetBSD: patch-pipelines_canu_Execution.pm,v 1.4 2023/05/20 14:42:11 bacon Exp $
 
 # Better task limit control under slurm
 
