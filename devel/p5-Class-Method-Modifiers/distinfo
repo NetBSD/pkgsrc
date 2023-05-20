@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:16:13 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/05/20 07:12:00 wiz Exp $
 
-BLAKE2s (Class-Method-Modifiers-2.13.tar.gz) = c8ff6442e53cab81debf2197d2136c1b3480014d705f06f66cde0077c243d095
-SHA512 (Class-Method-Modifiers-2.13.tar.gz) = 379afff763b647b787dd2049d9a8b928ca88be34e50c91c0848c5652efb1e4b40d8cacd2a1d5f6ce7bb254b9e65801b7c1a710f9807458a129af0af470f5ebbe
-Size (Class-Method-Modifiers-2.13.tar.gz) = 41385 bytes
+BLAKE2s (Class-Method-Modifiers-2.15.tar.gz) = 389006d5954852917eaaf11f9870eb553fd5b1319ccf81cf3c0c983a71432d5f
+SHA512 (Class-Method-Modifiers-2.15.tar.gz) = 427d21418516ff296b5a536a2d1f13b81b92d36f1c17c2366bc65fd2f05bf6afc7d02a4257033f53ee14d806b43e8d4322c6eac256d1c0e892926c4e7f878995
+Size (Class-Method-Modifiers-2.15.tar.gz) = 41167 bytes
