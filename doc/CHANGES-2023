@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3185 2023/05/20 07:03:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3186 2023/05/20 07:04:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4448,3 +4448,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Scalar-List-Utils to 1.63 [wiz 2023-05-20]
 	Updated devel/p5-Sub-Exporter to 0.989 [wiz 2023-05-20]
 	Updated graphics/p5-Image-Info to 1.43 [wiz 2023-05-20]
+	Updated misc/p5-Locale-libintl to 1.33 [wiz 2023-05-20]
