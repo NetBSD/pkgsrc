@@ -103,15 +103,16 @@
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">6.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">6.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">6.3. Variables affecting the installation process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">6.4. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#native-or-pkgsrc-preference">6.3. Preferences for native or pkgsrc software</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">6.4. Variables affecting the installation process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">6.5. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">6.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">6.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">6.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">6.5.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">6.5.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">6.5.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">6.5. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">6.6. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">6.6. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">6.7. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">7. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -268,10 +269,7 @@ builds)</a></span></dt>
       in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">18.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
-<dt><span class="sect2"><a href="#native-or-pkgsrc-preference">18.3.2. Global preferences for native or pkgsrc software</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">19. PLIST issues</a></span></dt>
 <dd><dl>
@@ -883,15 +881,16 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">6.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">6.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">6.3. Variables affecting the installation process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">6.4. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#native-or-pkgsrc-preference">6.3. Preferences for native or pkgsrc software</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">6.4. Variables affecting the installation process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">6.5. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">6.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">6.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">6.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">6.5.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">6.5.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">6.5.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">6.5. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">6.6. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">6.6. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">6.7. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">7. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -1680,15 +1679,16 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dl class="toc">
 <dt><span class="sect1"><a href="#general-configuration">6.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">6.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">6.3. Variables affecting the installation process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">6.4. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#native-or-pkgsrc-preference">6.3. Preferences for native or pkgsrc software</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">6.4. Variables affecting the installation process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">6.5. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">6.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">6.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">6.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">6.5.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">6.5.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">6.5.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">6.5. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">6.6. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">6.6. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">6.7. Selecting Build Options</a></span></dt>
 </dl>
 </div>
 <a name="mk.conf"></a><p>The whole pkgsrc system is configured in a single file, usually
@@ -1788,7 +1788,76 @@ spelling mistakes) takes place.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="variables-affecting-installation"></a>6.3. Variables affecting the installation process</h2></div></div></div>
+<a name="native-or-pkgsrc-preference"></a>6.3. Preferences for native or pkgsrc software</h2></div></div></div>
+<p>Whenever a package depends on a package that has a
+    <code class="filename">builtin.mk</code> file, the dependent package can
+    either use the built-in (native) version from the base system or the
+    pkgsrc-provided version.  This only affects dependencies, so it is
+    still possible to build the pkgsrc package <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/pcre++/index.html" target="_top"><code class="filename">devel/pcre++</code></a> even when other packages depend
+    on the native pcre++ version instead.</p>
+<p>To force using the pkgsrc-provided version for a particular
+    package, define <span class="quote">&#8220;<span class="quote"><code class="varname">PREFER_PKGSRC</code> =
+    <em class="replaceable"><code>package-ID</code></em></span>&#8221;</span> in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>. To force
+    using the native package, define
+    <span class="quote">&#8220;<span class="quote"><code class="varname">PREFER_NATIVE</code> =
+    <em class="replaceable"><code>package-ID</code></em></span>&#8221;</span>. In both cases, the
+    <em class="replaceable"><code>package-ID</code></em> is the one from the
+    <code class="filename">buildlink3.mk</code> of the package. In most cases,
+    this ID is the same as the directory name of the package, but for
+    example, <code class="filename">devel/pcre++</code> has the
+    package ID <span class="quote">&#8220;<span class="quote">pcrexx</span>&#8221;</span>.</p>
+<p>For the packages that are not listed by their package ID,
+    pkgsrc uses the pkgsrc-provided version if
+    <code class="varname">PREFER_PKGSRC</code> contains the word
+    <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>. Otherwise, if <code class="varname">PREFER_NATIVE</code>
+    contains the word <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>, pkgsrc uses the native
+    version. For example, to require using the pkgsrc-provided versions
+    for all but the most basic bits on a NetBSD system, you can
+    set:</p>
+<pre class="programlisting">
+PREFER_PKGSRC=  yes
+PREFER_NATIVE=  getopt skey tcp_wrappers
+</pre>
+<p>A package <span class="emphasis"><em>must</em></span> have a
+    <code class="filename">builtin.mk</code> file to be listed in
+    <code class="varname">PREFER_NATIVE</code>, otherwise it is simply ignored in
+    that list.</p>
+<p><code class="varname">PREFER_PKGSRC</code> and
+    <code class="varname">PREFER_NATIVE</code> should be set during bootstrap to
+    ensure that the bootstrap process does not use inapropriate native
+    tools as dependencies for core packages.</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>./bootstrap --prefer-pkgsrc yes --prefer-native openssl</code></strong>
+</pre>
+<p>Switching between settings globally at a later date can
+    introduce complications with dependency resolution.  This is caused
+    by packages built with the opposite preference being installed
+    alongside each other.  Hence, when changing any of these variables
+    after bootstrap, you need to rebuild all packages depending on those
+    whose preference has been changed.  This is not trivial and should
+    be avoided.</p>
+<p>When using pkgsrc on Linux systems, there is high risk of
+    <span class="quote">&#8220;<span class="quote">leakage</span>&#8221;</span>, where programs installed by pkgsrc may
+    inadvertently use a command or library not installed by pkgsrc, e.g.
+    those installed by yum or apt.  Such foreign dependencies may be
+    installed, removed, or upgraded to a version incompatible with the
+    pkgsrc package at any time, causing pkgsrc packages to subsequently
+    malfunction.  Pkgsrc cannot prevent this, as it has no control over
+    other package managers. Another potential problem is that under
+    Redhat Enterprise and related Linux systems, yum packages are only
+    patched and never upgraded, so eventually they may become too
+    outdated for use by pkgsrc.  Even intentionally using foreign
+    dependencies, not considered leakage, can lead to these problems, so
+    it is generally discouraged.  In order to minimize such problems,
+    PREFER_PKGSRC defaults to <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span> on Linux systems. This ensures that
+    pkgsrc is aware of any changes to dependency packages and can
+    rebuild or upgrade the entire dependency tree as needed.  This
+    default can be overridden by setting --prefer-pkgsrc to a
+    list of packages and --prefer-native to <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>.</p>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="variables-affecting-installation"></a>6.4. Variables affecting the installation process</h2></div></div></div>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="varname">PKGSRC_KEEP_BIN_PKGS</code>:
                 By default, binary packages of built packages are
                 preserved in <code class="filename">${PACKAGES}/All</code>. Setting
@@ -1856,10 +1925,10 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="conf.compiler"></a>6.4. Selecting and configuring the compiler</h2></div></div></div>
+<a name="conf.compiler"></a>6.5. Selecting and configuring the compiler</h2></div></div></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="selecting-the-compiler"></a>6.4.1. Selecting the compiler</h3></div></div></div>
+<a name="selecting-the-compiler"></a>6.5.1. Selecting the compiler</h3></div></div></div>
 <p>By default, pkgsrc will use GCC to build packages.  This may be
     overridden by setting the following variables in /etc/mk.conf:</p>
 <div class="variablelist"><dl class="variablelist">
@@ -1926,7 +1995,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.cflags"></a>6.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
+<a name="conf.cflags"></a>6.5.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
 <p>If you wish to set the <code class="varname">CFLAGS</code> variable,
 	please make sure to use the <code class="literal">+=</code> operator
 	instead of the <code class="literal">=</code> operator:</p>
@@ -1942,7 +2011,7 @@ CFLAGS+=        -your -flags
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.ldflags"></a>6.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
+<a name="conf.ldflags"></a>6.5.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
 <p>If you want to pass flags to the linker, both in the configure
 step and the build step, you can do this in two ways.  Either set
 <code class="varname">LDFLAGS</code> or <code class="varname">LIBS</code>.  The difference
@@ -1960,7 +2029,7 @@ LDFLAGS+=        -your -linkerflags
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="developer-advanced-settings"></a>6.5. Developer/advanced settings</h2></div></div></div>
+<a name="developer-advanced-settings"></a>6.6. Developer/advanced settings</h2></div></div></div>
 <p>
       </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -1994,7 +2063,7 @@ LDFLAGS+=        -your -linkerflags
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="selecting-build-options"></a>6.6. Selecting Build Options</h2></div></div></div>
+<a name="selecting-build-options"></a>6.7. Selecting Build Options</h2></div></div></div>
 <p>Some packages have build time options, usually to select
     between different dependencies, enable optional support for big
     dependencies or enable experimental features.</p>
@@ -3241,10 +3310,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
       in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">18.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
-<dt><span class="sect2"><a href="#native-or-pkgsrc-preference">18.3.2. Global preferences for native or pkgsrc software</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">19. PLIST issues</a></span></dt>
 <dd><dl>
@@ -6147,10 +6213,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
       in <code class="filename">buildlink3.mk</code> files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#writing-builtin.mk">18.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
-<dt><span class="sect2"><a href="#native-or-pkgsrc-preference">18.3.2. Global preferences for native or pkgsrc software</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect2"><a href="#anatomy-of-builtin.mk">18.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt></dl></dd>
 </dl>
 </div>
 <p>Buildlink is a framework in pkgsrc that controls what headers and libraries
@@ -6598,71 +6661,6 @@ CHECK_BUILTIN.foo?=     no
       adding additional dependency restrictions and listing additional
       files to symlink into <code class="filename">${BUILDLINK_DIR}</code> (via
       <code class="varname">BUILDLINK_FILES.<em class="replaceable"><code>pkg</code></em></code>).</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="native-or-pkgsrc-preference"></a>18.3.2. Global preferences for native or pkgsrc software</h3></div></div></div>
-<p>When building packages, it's possible to choose whether to set
-	a global preference for using either the built-in (native)
-	version or the pkgsrc version of software to satisfy a
-	dependency.  This is controlled by setting
-	<code class="varname">PREFER_PKGSRC</code> and
-	<code class="varname">PREFER_NATIVE</code>.  These variables take values
-	of either <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>, <span class="quote">&#8220;<span class="quote">no</span>&#8221;</span>, or a list of
-	packages.  <code class="varname">PREFER_PKGSRC</code> tells pkgsrc to
-	use the pkgsrc versions of software, while
-	<code class="varname">PREFER_NATIVE</code> tells pkgsrc to use the
-	built-in versions.  Preferences are determined by the most
-	specific instance of the package in either
-	<code class="varname">PREFER_PKGSRC</code> or
-	<code class="varname">PREFER_NATIVE</code>.  If a package is specified
-	in neither or in both variables, then
-	<code class="varname">PREFER_PKGSRC</code> has precedence over
-	<code class="varname">PREFER_NATIVE</code>.  For example, to require
-	using pkgsrc versions of software for all but the most basic
-      bits on a NetBSD system, you can set:</p>
-<pre class="programlisting">
-PREFER_PKGSRC=  yes
-PREFER_NATIVE=  getopt skey tcp_wrappers
-</pre>
-<p>A package <span class="emphasis"><em>must</em></span> have a
-      <code class="filename">builtin.mk</code>
-      file to be listed in <code class="varname">PREFER_NATIVE</code>,
-      otherwise it is simply ignored in that list.</p>
-<p><code class="varname">PREFER_PKGSRC</code> and
-      <code class="varname">PREFER_NATIVE</code> should be set during bootstrap
-      to ensure that the bootstrap process does not use inapropriate
-      native tools as dependencies for core packages.
-
-</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>./bootstrap --prefer-pkgsrc yes --prefer-native openssl</code></strong>
-</pre>
-<p>
-
-      Switching between settings globally at a later date can introduce
-      complications with dependency resolution. This is caused by packages
-      built with the opposite preference being installed alongside each
-      other.  Hence, any changes to these variables after bootstrap will
-      necessitate rebuilding all packages depending on one whose preference
-      has been changed.  This is not trivial and should be avoided.</p>
-<p>When using pkgsrc on Linux systems, there is high risk of
-      "leakage", where programs installed by pkgsrc may inadvertently use a
-      command or library not installed by pkgsrc, e.g. those installed by
-      yum or apt.  Such foreign dependencies may be installed, removed, or
-      upgraded to a version incompatible with the pkgsrc package at any
-      time, causing pkgsrc packages to subsequently malfunction.  Pkgsrc
-      cannot prevent this, as it has no control over other package managers.
-      Another potential problem is that under Redhat Enterprise and related
-      Linux systems, yum packages are only patched and never upgraded, so
-      eventually they may become too outdated for use by pkgsrc.  Even
-      intentionally using foreign dependencies, not considered leakage, can
-      lead to these problems, so it is generally discouraged.  In order to
-      minimize such problems, PREFER_PKGSRC defaults to "yes" on Linux systems.
-      This ensures that pkgsrc is aware of any changes to dependency packages
-      and can rebuild or upgrade the entire dependency tree as needed.  This
-      default can be overridden by setting --prefer-pkgsrc to "no" or a list of
-      packages, or by setting --prefer-native to "yes".</p>
 </div>
 </div>
 </div>
@@ -11902,115 +11900,119 @@ source packages</h2></div></div></div>
 <td>ALL_ENV</td>
 </tr>
 <tr>
+<td>ALSA_PC</td>
 <td>ALTERNATIVES_SRC</td>
+</tr>
+<tr>
 <td>AMANDA_TMP</td>
-</tr>
-<tr>
 <td>AMANDA_USER</td>
+</tr>
+<tr>
 <td>AMANDA_VAR</td>
-</tr>
-<tr>
 <td>APACHE_GROUP</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_NAME</td>
-</tr>
-<tr>
 <td>APACHE_MODULE_SRC</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_SRCDIR</td>
-</tr>
-<tr>
 <td>APACHE_PKG_PREFIX</td>
+</tr>
+<tr>
 <td>APACHE_SUEXEC_CONFIGURE_ARGS</td>
-</tr>
-<tr>
 <td>APACHE_SUEXEC_DOCROOT</td>
+</tr>
+<tr>
 <td>APACHE_USER</td>
-</tr>
-<tr>
 <td>APPEND_ABI</td>
+</tr>
+<tr>
 <td>APPEND_ELF</td>
-</tr>
-<tr>
 <td>ARLA_CACHE</td>
+</tr>
+<tr>
 <td>AUDIT_PACKAGES_FLAGS</td>
-</tr>
-<tr>
 <td>AUTOCONF_REQD</td>
+</tr>
+<tr>
 <td>AUTOMAKE_OVERRIDE</td>
-</tr>
-<tr>
 <td>AUTOMAKE_REQD</td>
+</tr>
+<tr>
 <td>AUTO_MKDIRS</td>
-</tr>
-<tr>
 <td>BDB185_DEFAULT</td>
+</tr>
+<tr>
 <td>BDBBASE</td>
-</tr>
-<tr>
 <td>BDB_ACCEPTED</td>
+</tr>
+<tr>
 <td>BDB_DEFAULT</td>
-</tr>
-<tr>
 <td>BDB_LIBS</td>
+</tr>
+<tr>
 <td>BDB_TYPE</td>
-</tr>
-<tr>
 <td>BINCIMAP_GROUP</td>
+</tr>
+<tr>
 <td>BINCIMAP_USER</td>
-</tr>
-<tr>
 <td>BIND_DIR</td>
+</tr>
+<tr>
 <td>BIND_GROUP</td>
-</tr>
-<tr>
 <td>BIND_USER</td>
+</tr>
+<tr>
 <td>BINOWN</td>
-</tr>
-<tr>
 <td>BINPKG_SITES</td>
+</tr>
+<tr>
 <td>BIN_INSTALL_FLAGS</td>
-</tr>
-<tr>
 <td>BISON_PKGDATADIR</td>
+</tr>
+<tr>
 <td>BLAS</td>
-</tr>
-<tr>
 <td>BLAS_ACCEPTED</td>
+</tr>
+<tr>
 <td>BLAS_C_INTERFACE</td>
-</tr>
-<tr>
 <td>BLAS_INCLUDES</td>
+</tr>
+<tr>
 <td>BLAS_INDEX64</td>
-</tr>
-<tr>
 <td>BLAS_LIBS</td>
+</tr>
+<tr>
 <td>BLAS_PC</td>
-</tr>
-<tr>
 <td>BLAS_TYPE</td>
+</tr>
+<tr>
 <td>BOOTSTRAP_DEPENDS</td>
-</tr>
-<tr>
 <td>BROKEN</td>
+</tr>
+<tr>
 <td>BROKEN_EXCEPT_ON_PLATFORM</td>
-</tr>
-<tr>
 <td>BROKEN_ON_PLATFORM</td>
+</tr>
+<tr>
 <td>BSDSRCDIR</td>
-</tr>
-<tr>
 <td>BSDXSRCDIR</td>
+</tr>
+<tr>
 <td>BSD_MAKE_ENV</td>
-</tr>
-<tr>
 <td>BUILDLINK_AUTO_DIRS</td>
+</tr>
+<tr>
 <td>BUILDLINK_AUTO_VARS</td>
-</tr>
-<tr>
 <td>BUILDLINK_CFLAGS</td>
-<td>BUILDLINK_CONTENTS_FILTER</td>
 </tr>
 <tr>
+<td>BUILDLINK_CONTENTS_FILTER</td>
 <td>BUILDLINK_CPPFLAGS</td>
+</tr>
+<tr>
+<td>BUILDLINK_DEPMETHOD</td>
 <td>BUILDLINK_FILES</td>
 </tr>
 <tr>
@@ -12106,95 +12108,107 @@ source packages</h2></div></div></div>
 <td>CHANGES</td>
 </tr>
 <tr>
+<td>CHECKOUT_DATE</td>
 <td>CHECK_COMPILER</td>
+</tr>
+<tr>
 <td>CHECK_FAKEHOME</td>
-</tr>
-<tr>
 <td>CHECK_FILES</td>
+</tr>
+<tr>
 <td>CHECK_FILES_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_FILES_STRICT</td>
+</tr>
+<tr>
 <td>CHECK_HEADERS</td>
-</tr>
-<tr>
 <td>CHECK_HEADERS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_INTERPRETER</td>
-</tr>
-<tr>
 <td>CHECK_INTERPRETER_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PERMS</td>
-</tr>
-<tr>
 <td>CHECK_PERMS_AUTOFIX</td>
+</tr>
+<tr>
 <td>CHECK_PERMS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PIE</td>
+</tr>
+<tr>
 <td>CHECK_PIE_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PIE_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY_EXPERIMENTAL</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_RELRO</td>
+</tr>
+<tr>
 <td>CHECK_RELRO_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_RELRO_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_TOXIC</td>
+</tr>
+<tr>
 <td>CHECK_SSP</td>
-</tr>
-<tr>
 <td>CHECK_SSP_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_SSP_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_STRIPPED</td>
+</tr>
+<tr>
 <td>CHECK_STRIPPED_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF_EXTRA_DIRS</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF_SKIP</td>
+</tr>
+<tr>
 <td>CLAMAV_DBDIR</td>
-</tr>
-<tr>
 <td>CLAMAV_GROUP</td>
+</tr>
+<tr>
 <td>CLAMAV_USER</td>
-</tr>
-<tr>
 <td>CLANGBASE</td>
+</tr>
+<tr>
 <td>CLEANDEPENDS</td>
-</tr>
-<tr>
 <td>CMAKE_DEPENDENCIES_REWRITE</td>
+</tr>
+<tr>
 <td>CMAKE_INSTALL_NAME_DIR</td>
-</tr>
-<tr>
 <td>CMAKE_INSTALL_PREFIX</td>
+</tr>
+<tr>
 <td>CMAKE_MODULE_PATH_OVERRIDE</td>
-</tr>
-<tr>
 <td>CMAKE_PKGSRC_BUILD_FLAGS</td>
-<td>CMAKE_PREFIX_PATH</td>
 </tr>
 <tr>
+<td>CMAKE_PREFIX_PATH</td>
 <td>CMAKE_USE_GNU_INSTALL_DIRS</td>
+</tr>
+<tr>
+<td>COMMON_LISP_DOCFILES</td>
+<td>COMMON_LISP_EXAMPLES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_EXTRAFILES</td>
+<td>COMMON_LISP_PACKAGES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_SYSTEM</td>
 <td>COMPILER_RPATH_FLAG</td>
 </tr>
 <tr>
@@ -12282,232 +12296,260 @@ source packages</h2></div></div></div>
 <td>CURSES_TYPE</td>
 </tr>
 <tr>
+<td>CVS_EXTRACTDIR</td>
+<td>CVS_MODULE</td>
+</tr>
+<tr>
+<td>CVS_PROJECT</td>
+<td>CVS_REPOSITORIES</td>
+</tr>
+<tr>
+<td>CVS_ROOT</td>
+<td>CVS_ROOT_GNU</td>
+</tr>
+<tr>
+<td>CVS_ROOT_NONGNU</td>
+<td>CVS_ROOT_SOURCEFORGE</td>
+</tr>
+<tr>
+<td>CVS_TAG</td>
 <td>CXX</td>
+</tr>
+<tr>
 <td>CYRUS_GROUP</td>
-</tr>
-<tr>
 <td>CYRUS_IDLE</td>
+</tr>
+<tr>
 <td>CYRUS_USER</td>
-</tr>
-<tr>
 <td>DAEMONTOOLS_GROUP</td>
+</tr>
+<tr>
 <td>DAEMONTOOLS_LOG_USER</td>
-</tr>
-<tr>
 <td>DARWIN_NO_SYSTEM_LIBS</td>
+</tr>
+<tr>
 <td>DARWIN_REQUIRES_FILTER</td>
-</tr>
-<tr>
 <td>DBUS_GROUP</td>
+</tr>
+<tr>
 <td>DBUS_USER</td>
-</tr>
-<tr>
 <td>DEFANG_GROUP</td>
+</tr>
+<tr>
 <td>DEFANG_USER</td>
-</tr>
-<tr>
 <td>DEFAULT_ACCEPTABLE_LICENSES</td>
+</tr>
+<tr>
 <td>DEFAULT_DISTFILES</td>
-</tr>
-<tr>
 <td>DEFAULT_IRC_SERVER</td>
+</tr>
+<tr>
 <td>DEFAULT_SERIAL_DEVICE</td>
-</tr>
-<tr>
 <td>DEF_UMASK</td>
+</tr>
+<tr>
 <td>DEINSTALLDEPENDS</td>
-</tr>
-<tr>
 <td>DEINSTALL_SRC</td>
+</tr>
+<tr>
 <td>DEINSTALL_TEMPLATES</td>
-</tr>
-<tr>
 <td>DELAYED_ERROR_MSG</td>
+</tr>
+<tr>
 <td>DELAYED_WARNING_MSG</td>
-</tr>
-<tr>
 <td>DEPENDS</td>
+</tr>
+<tr>
 <td>DEPENDS_TARGET</td>
-</tr>
-<tr>
 <td>DEPENDS_TYPE</td>
+</tr>
+<tr>
 <td>DESTDIR</td>
-</tr>
-<tr>
 <td>DESTDIR_VARNAME</td>
+</tr>
+<tr>
 <td>DIALER_GROUP</td>
-</tr>
-<tr>
 <td>DIGEST_REQD</td>
+</tr>
+<tr>
 <td>DISTDIR</td>
-</tr>
-<tr>
 <td>DISTFILES</td>
+</tr>
+<tr>
 <td>DISTINFO_FILE</td>
-</tr>
-<tr>
 <td>DISTNAME</td>
+</tr>
+<tr>
 <td>DIST_PATH</td>
-</tr>
-<tr>
 <td>DIST_SUBDIR</td>
+</tr>
+<tr>
 <td>DJBDNS_AXFR_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_CACHE_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_DJBDNS_GROUP</td>
-</tr>
-<tr>
 <td>DJBDNS_LOG_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_RBL_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_TINY_USER</td>
+</tr>
+<tr>
 <td>DLOPEN_REQUIRE_PTHREADS</td>
-</tr>
-<tr>
 <td>DL_AUTO_VARS</td>
+</tr>
+<tr>
 <td>DL_CFLAGS</td>
-</tr>
-<tr>
 <td>DL_LDFLAGS</td>
+</tr>
+<tr>
 <td>DL_LIBS</td>
-</tr>
-<tr>
 <td>DNS</td>
+</tr>
+<tr>
 <td>DOCOWN</td>
-</tr>
-<tr>
 <td>DOWNLOADED_DISTFILE</td>
+</tr>
+<tr>
 <td>DQCACHE_GROUP</td>
-</tr>
-<tr>
 <td>DQCACHE_USER</td>
+</tr>
+<tr>
 <td>DT_LAYOUT</td>
-</tr>
-<tr>
 <td>DYNAMIC_SITES_CMD</td>
+</tr>
+<tr>
 <td>DYNAMIC_SITES_SCRIPT</td>
-</tr>
-<tr>
 <td>ECHO</td>
+</tr>
+<tr>
 <td>ECHO_N</td>
-</tr>
-<tr>
 <td>ELK_GUI</td>
+</tr>
+<tr>
 <td>EMACS_TYPE</td>
-</tr>
-<tr>
 <td>EMULDIR</td>
+</tr>
+<tr>
 <td>EMULSUBDIR</td>
-</tr>
-<tr>
 <td>EMULSUBDIRSLASH</td>
+</tr>
+<tr>
 <td>EMUL_ARCH</td>
-</tr>
-<tr>
 <td>EMUL_DISTRO</td>
+</tr>
+<tr>
 <td>EMUL_EXEC_FMT</td>
-</tr>
-<tr>
 <td>EMUL_IS_NATIVE</td>
+</tr>
+<tr>
 <td>EMUL_MODULES</td>
-</tr>
-<tr>
 <td>EMUL_OPSYS</td>
+</tr>
+<tr>
 <td>EMUL_PKG_FMT</td>
-</tr>
-<tr>
 <td>EMUL_PLATFORM</td>
+</tr>
+<tr>
 <td>EMUL_PLATFORMS</td>
-</tr>
-<tr>
 <td>EMUL_PREFER</td>
+</tr>
+<tr>
 <td>EMUL_REQD</td>
-</tr>
-<tr>
 <td>EMUL_TYPE</td>
+</tr>
+<tr>
 <td>ERROR_MSG</td>
-</tr>
-<tr>
 <td>EXIM_GROUP</td>
+</tr>
+<tr>
 <td>EXIM_USER</td>
-</tr>
-<tr>
 <td>EXPORT_SYMBOLS_LDFLAGS</td>
+</tr>
+<tr>
 <td>EXTRACTOR</td>
-</tr>
-<tr>
 <td>EXTRACT_CMD</td>
+</tr>
+<tr>
 <td>EXTRACT_CMD_DEFAULT</td>
-</tr>
-<tr>
 <td>EXTRACT_DIR</td>
+</tr>
+<tr>
 <td>EXTRACT_ELEMENTS</td>
-</tr>
-<tr>
 <td>EXTRACT_ENV</td>
+</tr>
+<tr>
 <td>EXTRACT_ONLY</td>
-</tr>
-<tr>
 <td>EXTRACT_OPTS</td>
+</tr>
+<tr>
 <td>EXTRACT_SUFX</td>
-</tr>
-<tr>
 <td>EXTRACT_USING</td>
+</tr>
+<tr>
 <td>FAIL</td>
-</tr>
-<tr>
 <td>FAILOVER_FETCH</td>
+</tr>
+<tr>
 <td>FAIL_MSG</td>
-</tr>
-<tr>
 <td>FAKE_NCURSES</td>
+</tr>
+<tr>
 <td>FAM</td>
-</tr>
-<tr>
 <td>FAM_ACCEPTED</td>
+</tr>
+<tr>
 <td>FAM_DEFAULT</td>
-</tr>
-<tr>
 <td>FAM_SERVER</td>
+</tr>
+<tr>
 <td>FCPATH</td>
-</tr>
-<tr>
 <td>FEATURE_CPPFLAGS</td>
+</tr>
+<tr>
 <td>FEATURE_LDFLAGS</td>
-</tr>
-<tr>
 <td>FEATURE_LIBS</td>
+</tr>
+<tr>
 <td>FETCH_AFTER_ARGS</td>
-</tr>
-<tr>
 <td>FETCH_BEFORE_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_CMD</td>
-</tr>
-<tr>
 <td>FETCH_OUTPUT_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_PROXY</td>
-</tr>
-<tr>
 <td>FETCH_RESUME_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_TIMEOUT</td>
-</tr>
-<tr>
 <td>FETCH_USE_IPV4_ONLY</td>
+</tr>
+<tr>
 <td>FETCH_USING</td>
-</tr>
-<tr>
 <td>FILES_SUBST</td>
-<td>FILES_SUBST_SED</td>
 </tr>
 <tr>
+<td>FILES_SUBST_SED</td>
 <td>FIX_SYSTEM_HEADERS</td>
+</tr>
+<tr>
+<td>FONTDIR</td>
 <td>FONTS_DIRS</td>
 </tr>
 <tr>
 <td>FONTS_VERBOSE</td>
 <td>FOO_HACKS_MK</td>
+</tr>
+<tr>
+<td>FOSSIL_EXTRACTDIR</td>
+<td>FOSSIL_REPO</td>
+</tr>
+<tr>
+<td>FOSSIL_REPOSITORIES</td>
+<td>FOSSIL_VERSION</td>
 </tr>
 <tr>
 <td>FOX_USE_XUNICODE</td>
@@ -12595,42 +12637,58 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>GITLAB_TYPE</td>
+<td>GIT_BRANCH</td>
+</tr>
+<tr>
+<td>GIT_ENV</td>
+<td>GIT_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>GIT_REPO</td>
+<td>GIT_REPOSITORIES</td>
+</tr>
+<tr>
+<td>GIT_REVISION</td>
+<td>GIT_TAG</td>
+</tr>
+<tr>
 <td>GNU</td>
-</tr>
-<tr>
 <td>GNU_CONFIGURE</td>
+</tr>
+<tr>
 <td>GNU_CONFIGURE_INFODIR</td>
-</tr>
-<tr>
 <td>GNU_CONFIGURE_MANDIR</td>
+</tr>
+<tr>
 <td>GNU_CONFIGURE_QUIET</td>
-</tr>
-<tr>
 <td>GNU_CONFIGURE_STRICT</td>
+</tr>
+<tr>
 <td>GODEP_REDIRECTS</td>
-</tr>
-<tr>
 <td>GO_BUILD_PATTERN</td>
+</tr>
+<tr>
 <td>GO_DEPS</td>
-</tr>
-<tr>
 <td>GO_DIST_BASE</td>
+</tr>
+<tr>
 <td>GO_EXTRA_MOD_DIRS</td>
-</tr>
-<tr>
 <td>GO_MODULE_FILES</td>
+</tr>
+<tr>
 <td>GO_SRCPATH</td>
-</tr>
-<tr>
 <td>GROUP_SPECIFIC_PKGS</td>
+</tr>
+<tr>
 <td>GRUB_NETWORK_CARDS</td>
-</tr>
-<tr>
 <td>GRUB_PRESET_COMMAND</td>
-<td>GRUB_SCAN_ARGS</td>
 </tr>
 <tr>
+<td>GRUB_SCAN_ARGS</td>
 <td>GZIP</td>
+</tr>
+<tr>
+<td>HASKELL_COMPILER</td>
 <td>HASKELL_ENABLE_DYNAMIC_EXECUTABLE</td>
 </tr>
 <tr>
@@ -12650,47 +12708,55 @@ source packages</h2></div></div></div>
 <td>HEADER_TEMPLATES</td>
 </tr>
 <tr>
+<td>HG_REPO</td>
+<td>HG_REPOSITORIES</td>
+</tr>
+<tr>
+<td>HG_TAG</td>
 <td>HOMEPAGE</td>
+</tr>
+<tr>
 <td>HOST_PKGTOOLS_ARGS</td>
-</tr>
-<tr>
 <td>HOST_SPECIFIC_PKGS</td>
+</tr>
+<tr>
 <td>HOWL_GROUP</td>
-</tr>
-<tr>
 <td>HOWL_USER</td>
+</tr>
+<tr>
 <td>ICCBASE</td>
-</tr>
-<tr>
 <td>ICECAST_CHROOTDIR</td>
+</tr>
+<tr>
 <td>ICON_THEMES</td>
-</tr>
-<tr>
 <td>IDOBASE</td>
+</tr>
+<tr>
 <td>IGNORE_CCACHE</td>
-</tr>
-<tr>
 <td>IGNORE_INFO_DIRS</td>
+</tr>
+<tr>
 <td>IGNORE_INTERACTIVE_FETCH</td>
-</tr>
-<tr>
 <td>IMAKE</td>
+</tr>
+<tr>
 <td>IMAKEOPTS</td>
-</tr>
-<tr>
 <td>IMAKE_MAKE</td>
+</tr>
+<tr>
 <td>IMAKE_MANINSTALL</td>
-</tr>
-<tr>
 <td>IMAP_UW_CCLIENT_MBOX_FMT</td>
+</tr>
+<tr>
 <td>IMDICTDIR</td>
-</tr>
-<tr>
 <td>INCOMPAT_CURSES</td>
-<td>INFO_DIR</td>
 </tr>
 <tr>
+<td>INFO_DIR</td>
 <td>INFO_FILES</td>
+</tr>
+<tr>
+<td>INFO_FILES_VERBOSE</td>
 <td>INFO_MSG</td>
 </tr>
 <tr>
@@ -12743,6 +12809,10 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>JABBERD_USER</td>
+<td>JAVA_APP_PATH</td>
+</tr>
+<tr>
+<td>JAVA_APP_TARGETS</td>
 <td>JAVA_BINPREFIX</td>
 </tr>
 <tr>
@@ -12819,70 +12889,78 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>LINK_RPATH_FLAG</td>
+<td>LINUX_BASE_NODEPS</td>
+</tr>
+<tr>
+<td>LINUX_BASE_PREFERRED</td>
+<td>LINUX_BASE_REQUIRED</td>
+</tr>
+<tr>
 <td>LINUX_LOCALES</td>
-</tr>
-<tr>
 <td>LOCALBASE</td>
+</tr>
+<tr>
 <td>LOCALBASE_LOCKTYPE</td>
-</tr>
-<tr>
 <td>LOCALPATCHES</td>
+</tr>
+<tr>
 <td>LOVE_DATA</td>
-</tr>
-<tr>
 <td>LOVE_GAME</td>
+</tr>
+<tr>
 <td>LOVE_VERSION</td>
-</tr>
-<tr>
 <td>LP32PLATFORMS</td>
+</tr>
+<tr>
 <td>LP64PLATFORMS</td>
-</tr>
-<tr>
 <td>LUA_BUSTED_ARGS</td>
+</tr>
+<tr>
 <td>LUA_CDIR</td>
-</tr>
-<tr>
 <td>LUA_COMPILER</td>
+</tr>
+<tr>
 <td>LUA_DOCDIR</td>
-</tr>
-<tr>
 <td>LUA_EXAMPLESDIR</td>
+</tr>
+<tr>
 <td>LUA_INCDIR</td>
-</tr>
-<tr>
 <td>LUA_INTERPRETER</td>
+</tr>
+<tr>
 <td>LUA_LDIR</td>
-</tr>
-<tr>
 <td>LUA_LINKER_MAGIC</td>
+</tr>
+<tr>
 <td>LUA_PKGPREFIX</td>
-</tr>
-<tr>
 <td>LUA_SELF_CONFLICT</td>
+</tr>
+<tr>
 <td>LUA_USE_BUSTED</td>
-</tr>
-<tr>
 <td>LUA_VERSIONS_ACCEPTED</td>
+</tr>
+<tr>
 <td>LUA_VERSIONS_INCOMPATIBLE</td>
-</tr>
-<tr>
 <td>LUA_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>LUA_VERSION_REQD</td>
-</tr>
-<tr>
 <td>Lua</td>
+</tr>
+<tr>
 <td>MACHINE_PLATFORM</td>
-</tr>
-<tr>
 <td>MAILAGENT_DOMAIN</td>
+</tr>
+<tr>
 <td>MAILAGENT_EMAIL</td>
-</tr>
-<tr>
 <td>MAILAGENT_FQDN</td>
-<td>MAILAGENT_ORGANIZATION</td>
 </tr>
 <tr>
+<td>MAILAGENT_ORGANIZATION</td>
 <td>MAJORDOMO_HOMEDIR</td>
+</tr>
+<tr>
+<td>MAJOR_OS_VERSION</td>
 <td>MAKEINFO_ARGS</td>
 </tr>
 <tr>
@@ -12967,135 +13045,143 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>MTOOLS_ENABLE_FLOPPYD</td>
+<td>MUST</td>
+</tr>
+<tr>
 <td>MV</td>
-</tr>
-<tr>
 <td>MYSQL_CHARSET</td>
+</tr>
+<tr>
 <td>MYSQL_DATADIR</td>
-</tr>
-<tr>
 <td>MYSQL_EXTRA_CHARSET</td>
+</tr>
+<tr>
 <td>MYSQL_GROUP</td>
-</tr>
-<tr>
 <td>MYSQL_USER</td>
+</tr>
+<tr>
 <td>MYSQL_VERSION</td>
-</tr>
-<tr>
 <td>MYSQL_VERSIONS_ACCEPTED</td>
+</tr>
+<tr>
 <td>MYSQL_VERSIONS_ALL</td>
-</tr>
-<tr>
 <td>MYSQL_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>NAGIOSCMD_GROUP</td>
-</tr>
-<tr>
 <td>NAGIOSDIR</td>
+</tr>
+<tr>
 <td>NAGIOS_GROUP</td>
-</tr>
-<tr>
 <td>NAGIOS_USER</td>
+</tr>
+<tr>
 <td>NATIVE_APPEND_ABI</td>
-</tr>
-<tr>
 <td>NATIVE_APPEND_ELF</td>
+</tr>
+<tr>
 <td>NATIVE_EXEC_FMT</td>
-</tr>
-<tr>
 <td>NATIVE_MACHINE_PLATFORM</td>
+</tr>
+<tr>
 <td>NATIVE_OBJECT_FMT</td>
-</tr>
-<tr>
 <td>NBPAX_PROGRAM_PREFIX</td>
+</tr>
+<tr>
 <td>NETBSD_LOGIN_NAME</td>
-</tr>
-<tr>
 <td>NMH_EDITOR</td>
+</tr>
+<tr>
 <td>NMH_MTA</td>
-</tr>
-<tr>
 <td>NMH_PAGER</td>
+</tr>
+<tr>
 <td>NODE_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>NODE_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>NODE_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>NODE_VERSION_REQD</td>
+</tr>
+<tr>
 <td>NOLOGIN</td>
-</tr>
-<tr>
 <td>NOTE</td>
+</tr>
+<tr>
 <td>NOT_FOR_PLATFORM</td>
-</tr>
-<tr>
 <td>NOT_PAX_ASLR_SAFE</td>
+</tr>
+<tr>
 <td>NOT_PAX_MPROTECT_SAFE</td>
-</tr>
-<tr>
 <td>NO_BUILD</td>
+</tr>
+<tr>
 <td>NO_CHECKSUM</td>
-</tr>
-<tr>
 <td>NO_CONFIGURE</td>
+</tr>
+<tr>
 <td>NO_SKIP</td>
-</tr>
-<tr>
 <td>NS_PREFERRED</td>
+</tr>
+<tr>
 <td>NULLMAILER_GROUP</td>
-</tr>
-<tr>
 <td>NULLMAILER_USER</td>
+</tr>
+<tr>
 <td>OBJHOSTNAME</td>
-</tr>
-<tr>
 <td>OBJMACHINE</td>
+</tr>
+<tr>
 <td>OCAML_FINDLIB_DIRS</td>
-</tr>
-<tr>
 <td>OCAML_FINDLIB_REGISTER</td>
+</tr>
+<tr>
 <td>OCAML_FINDLIB_REGISTER_VERBOSE</td>
-</tr>
-<tr>
 <td>OCAML_SITELIBDIR</td>
+</tr>
+<tr>
 <td>OMF</td>
-</tr>
-<tr>
 <td>ONLY_FOR_COMPILER</td>
+</tr>
+<tr>
 <td>ONLY_FOR_PLATFORM</td>
-</tr>
-<tr>
 <td>OPENSSH_CHROOT</td>
+</tr>
+<tr>
 <td>OPENSSH_GROUP</td>
-</tr>
-<tr>
 <td>OPENSSH_USER</td>
+</tr>
+<tr>
 <td>OPSYS</td>
-</tr>
-<tr>
 <td>OPSYS_EMULDIR</td>
+</tr>
+<tr>
 <td>OPSYS_VERSION</td>
-</tr>
-<tr>
 <td>OS</td>
+</tr>
+<tr>
 <td>OSS_TYPE</td>
-</tr>
-<tr>
 <td>OSX</td>
+</tr>
+<tr>
 <td>OSX_TOLERATE_SDK_SKEW</td>
+<td>OS_HAVE_ALSA</td>
 </tr>
 <tr>
+<td>OS_HAVE_RCD</td>
 <td>OS_VARIANT</td>
+</tr>
+<tr>
 <td>OS_VERSION</td>
-</tr>
-<tr>
 <td>OTF_FONTS_DIR</td>
-<td>OVERRIDE_DIRDEPTH</td>
 </tr>
 <tr>
+<td>OVERRIDE_DIRDEPTH</td>
 <td>OVERRIDE_GEMSPEC</td>
+</tr>
+<tr>
 <td>OVERRIDE_GNU_CONFIG_SCRIPTS</td>
+<td>OVERRIDE_ROCKSPEC</td>
 </tr>
 <tr>
 <td>OWN_DIRS</td>
@@ -13143,6 +13229,14 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>PCCBASE</td>
+<td>PEAR</td>
+</tr>
+<tr>
+<td>PEAR_CHANNEL</td>
+<td>PEAR_CHANNEL_ALIAS</td>
+</tr>
+<tr>
+<td>PEAR_CHANNEL_VERSION</td>
 <td>PEAR_CMD</td>
 </tr>
 <tr>
@@ -13542,6 +13636,10 @@ source packages</h2></div></div></div>
 <td>RASMOL_DEPTH</td>
 </tr>
 <tr>
+<td>RCD_DIR</td>
+<td>RCD_ORDER</td>
+</tr>
+<tr>
 <td>RCD_SCRIPTS</td>
 <td>RCD_SCRIPTS_DIR</td>
 </tr>
@@ -13554,280 +13652,288 @@ source packages</h2></div></div></div>
 <td>RCD_SCRIPT_SRC</td>
 </tr>
 <tr>
+<td>RCD_SUBR</td>
 <td>RDOC</td>
+</tr>
+<tr>
 <td>READLINE_DEFAULT</td>
-</tr>
-<tr>
 <td>READLINE_TYPE</td>
+</tr>
+<tr>
 <td>REAL_ROOT_GROUP</td>
-</tr>
-<tr>
 <td>REAL_ROOT_USER</td>
+</tr>
+<tr>
 <td>RECURSIVE_MAKE</td>
-</tr>
-<tr>
 <td>RELAY_CTRL_DIR</td>
+</tr>
+<tr>
 <td>RELRO_SUPPORTED</td>
-</tr>
-<tr>
 <td>REPLACE_AWK</td>
+</tr>
+<tr>
 <td>REPLACE_BASH</td>
-</tr>
-<tr>
 <td>REPLACE_CSH</td>
+</tr>
+<tr>
 <td>REPLACE_KSH</td>
-</tr>
-<tr>
 <td>REPLACE_LUA</td>
+</tr>
+<tr>
 <td>REPLACE_NODEJS</td>
-</tr>
-<tr>
 <td>REPLACE_OCTAVE</td>
+</tr>
+<tr>
 <td>REPLACE_PERL</td>
-</tr>
-<tr>
 <td>REPLACE_PERL6</td>
+</tr>
+<tr>
 <td>REPLACE_PHP</td>
-</tr>
-<tr>
 <td>REPLACE_PYTHON</td>
+</tr>
+<tr>
 <td>REPLACE_QORE</td>
-</tr>
-<tr>
 <td>REPLACE_R</td>
+</tr>
+<tr>
 <td>REPLACE_RUBY</td>
-</tr>
-<tr>
 <td>REPLACE_RUBY_DIRS</td>
+</tr>
+<tr>
 <td>REPLACE_RUBY_PAT</td>
-</tr>
-<tr>
 <td>REPLACE_SH</td>
+</tr>
+<tr>
 <td>REPLACE_TEXLUA</td>
-</tr>
-<tr>
 <td>REPLACE_WISH</td>
+</tr>
+<tr>
 <td>REQD_DIRS</td>
-</tr>
-<tr>
 <td>REQD_DIRS_PERMS</td>
+</tr>
+<tr>
 <td>REQD_FILES</td>
-</tr>
-<tr>
 <td>REQD_FILES_MODE</td>
+</tr>
+<tr>
 <td>REQD_FILES_PERMS</td>
-</tr>
-<tr>
 <td>RESOLV_AUTO_VARS</td>
+</tr>
+<tr>
 <td>RESOLV_LDFLAGS</td>
-</tr>
-<tr>
 <td>RESOLV_LIBS</td>
+</tr>
+<tr>
 <td>RM</td>
+<td>ROCKSPEC_NAME</td>
 </tr>
 <tr>
+<td>ROCKSPEC_SPECFILE</td>
 <td>ROOT_CMD</td>
+</tr>
+<tr>
 <td>ROOT_GROUP</td>
-</tr>
-<tr>
 <td>ROOT_USER</td>
+</tr>
+<tr>
 <td>RPCGEN</td>
-</tr>
-<tr>
 <td>RPM</td>
+</tr>
+<tr>
 <td>RPM2PKG_PLIST</td>
-</tr>
-<tr>
 <td>RPM2PKG_PREFIX</td>
+</tr>
+<tr>
 <td>RPM2PKG_STAGE</td>
-</tr>
-<tr>
 <td>RPM2PKG_STRIP</td>
+</tr>
+<tr>
 <td>RPM2PKG_SUBPREFIX</td>
-</tr>
-<tr>
 <td>RPMFILES</td>
+</tr>
+<tr>
 <td>RPMIGNOREPATH</td>
-</tr>
-<tr>
 <td>RPM_DB_PREFIX</td>
+</tr>
+<tr>
 <td>RSSH_CVS_PATH</td>
-</tr>
-<tr>
 <td>RSSH_RDIST_PATH</td>
+</tr>
+<tr>
 <td>RSSH_RSYNC_PATH</td>
-</tr>
-<tr>
 <td>RSSH_SCP_PATH</td>
+</tr>
+<tr>
 <td>RSSH_SFTP_SERVER_PATH</td>
-</tr>
-<tr>
 <td>RUBY</td>
+</tr>
+<tr>
 <td>RUBYGEM</td>
-</tr>
-<tr>
 <td>RUBYGEM_MANPAGES</td>
+</tr>
+<tr>
 <td>RUBYGEM_NAME</td>
-</tr>
-<tr>
 <td>RUBYGEM_OPTIONS</td>
+</tr>
+<tr>
 <td>RUBYGEM_USE_MANPAGES</td>
-</tr>
-<tr>
 <td>RUBYGEM_VERBOSE</td>
+</tr>
+<tr>
 <td>RUBY_ABI_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_ARCH</td>
+</tr>
+<tr>
 <td>RUBY_ARCHINC</td>
-</tr>
-<tr>
 <td>RUBY_ARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_BASE</td>
-</tr>
-<tr>
 <td>RUBY_BASERIDIR</td>
+</tr>
+<tr>
 <td>RUBY_BUILD_DOCUMENT</td>
-</tr>
-<tr>
 <td>RUBY_DLEXT</td>
+</tr>
+<tr>
 <td>RUBY_DOC</td>
-</tr>
-<tr>
 <td>RUBY_DYNAMIC_DIRS</td>
+</tr>
+<tr>
 <td>RUBY_EG</td>
-</tr>
-<tr>
 <td>RUBY_ENCODING_ARG</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_CHECK</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF_DEBUG</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_MAKEFILE</td>
+</tr>
+<tr>
 <td>RUBY_GEM_ARCH</td>
-</tr>
-<tr>
 <td>RUBY_GEM_BASE</td>
+</tr>
+<tr>
 <td>RUBY_INC</td>
-</tr>
-<tr>
 <td>RUBY_LIB</td>
+</tr>
+<tr>
 <td>RUBY_LIB_BASE</td>
-</tr>
-<tr>
 <td>RUBY_NAME</td>
+</tr>
+<tr>
 <td>RUBY_NOVERSION</td>
-</tr>
-<tr>
 <td>RUBY_PKGPREFIX</td>
+</tr>
+<tr>
 <td>RUBY_RAILS</td>
-</tr>
-<tr>
 <td>RUBY_RAILS52_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_RAILS60_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS61_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_RAILS70_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_ACCEPTED</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_DEFAULT</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_REQD</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_STRICT_DEP</td>
-</tr>
-<tr>
 <td>RUBY_RIDIR</td>
+</tr>
+<tr>
 <td>RUBY_SETUP</td>
-</tr>
-<tr>
 <td>RUBY_SHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SHLIBALIAS</td>
-</tr>
-<tr>
 <td>RUBY_SHLIBVER</td>
+</tr>
+<tr>
 <td>RUBY_SIMPLE_INSTALL</td>
-</tr>
-<tr>
 <td>RUBY_SITEARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SITELIB</td>
-</tr>
-<tr>
 <td>RUBY_SITELIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_SITERIDIR</td>
-</tr>
-<tr>
 <td>RUBY_SLEXT</td>
+</tr>
+<tr>
 <td>RUBY_SRCDIR</td>
-</tr>
-<tr>
 <td>RUBY_STATICLIB</td>
+</tr>
+<tr>
 <td>RUBY_SUFFIX</td>
-</tr>
-<tr>
 <td>RUBY_SYSRIDIR</td>
+</tr>
+<tr>
 <td>RUBY_USE_PTHREAD</td>
-</tr>
-<tr>
 <td>RUBY_VENDORARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_VENDORLIB</td>
-</tr>
-<tr>
 <td>RUBY_VENDORLIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_VER</td>
-</tr>
-<tr>
 <td>RUBY_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>RUBY_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>RUBY_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>RUBY_VERSION_REQD</td>
+</tr>
+<tr>
 <td>RUBY_VER_DIR</td>
-</tr>
-<tr>
 <td>RUN</td>
+</tr>
+<tr>
 <td>RUN_LDCONFIG</td>
-</tr>
-<tr>
 <td>RUST_TYPE</td>
+</tr>
+<tr>
 <td>SCO</td>
-</tr>
-<tr>
 <td>SCREWS_GROUP</td>
+</tr>
+<tr>
 <td>SCREWS_USER</td>
-</tr>
-<tr>
 <td>SCRIPTS_ENV</td>
+</tr>
+<tr>
 <td>SCROLLKEEPER_DATADIR</td>
-</tr>
-<tr>
 <td>SCROLLKEEPER_REBUILDDB</td>
+</tr>
+<tr>
 <td>SCROLLKEEPER_UPDATEDB</td>
-</tr>
-<tr>
 <td>SDIST_PAWD</td>
+</tr>
+<tr>
 <td>SDL12_TYPE</td>
-</tr>
-<tr>
 <td>SERIAL_DEVICES</td>
+</tr>
+<tr>
 <td>SETGIDGAME</td>
-</tr>
-<tr>
 <td>SETGID_GAMES_PERMS</td>
-<td>SETUID_ROOT_PERMS</td>
 </tr>
 <tr>
+<td>SETUID_ROOT_PERMS</td>
 <td>SH</td>
+</tr>
+<tr>
 <td>SHLIB</td>
+<td>SHORTNAME</td>
 </tr>
 <tr>
 <td>SIGN_PACKAGES</td>
@@ -13912,6 +14018,14 @@ source packages</h2></div></div></div>
 <tr>
 <td>SUSE_PREFER</td>
 <td>SU_CMD</td>
+</tr>
+<tr>
+<td>SVN_EXTRACTDIR</td>
+<td>SVN_REPO</td>
+</tr>
+<tr>
+<td>SVN_REPOSITORIES</td>
+<td>SVN_REVISION</td>
 </tr>
 <tr>
 <td>SYSCONFBASE</td>
@@ -13999,158 +14113,162 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>TOOL_DEPENDS</td>
+<td>TTF_FONTDIR</td>
+</tr>
+<tr>
 <td>TTF_FONTS_DIR</td>
-</tr>
-<tr>
 <td>TYPE</td>
+</tr>
+<tr>
 <td>UAC_REQD_EXECS</td>
-</tr>
-<tr>
 <td>UCSPI_SSL_GROUP</td>
+</tr>
+<tr>
 <td>UCSPI_SSL_USER</td>
-</tr>
-<tr>
 <td>UNLIMIT_RESOURCES</td>
+</tr>
+<tr>
 <td>UNPRIVILEGED</td>
-</tr>
-<tr>
 <td>UNPRIVILEGED_GROUP</td>
+</tr>
+<tr>
 <td>UNPRIVILEGED_GROUPS</td>
-</tr>
-<tr>
 <td>UNPRIVILEGED_USER</td>
+</tr>
+<tr>
 <td>UNWRAP_FILES</td>
-</tr>
-<tr>
 <td>UNWRAP_PATTERNS</td>
+</tr>
+<tr>
 <td>UPDATE_GEMSPEC</td>
-</tr>
-<tr>
 <td>UPDATE_TARGET</td>
+</tr>
+<tr>
 <td>URI</td>
-</tr>
-<tr>
 <td>USERGROUP_PHASE</td>
+</tr>
+<tr>
 <td>USERPPP_GROUP</td>
-</tr>
-<tr>
 <td>USER_SPECIFIC_PKGS</td>
+</tr>
+<tr>
 <td>USE_ABI_DEPENDS</td>
-</tr>
-<tr>
 <td>USE_APR</td>
+</tr>
+<tr>
 <td>USE_BSD_MAKEFILE</td>
-</tr>
-<tr>
 <td>USE_BUILTIN</td>
+</tr>
+<tr>
 <td>USE_CROSS_COMPILE</td>
-</tr>
-<tr>
 <td>USE_CURSES</td>
+</tr>
+<tr>
 <td>USE_CWRAPPERS</td>
-</tr>
-<tr>
 <td>USE_DB185</td>
+</tr>
+<tr>
 <td>USE_FEATURES</td>
-</tr>
-<tr>
 <td>USE_GAMESGROUP</td>
+</tr>
+<tr>
 <td>USE_GCC_RUNTIME</td>
-</tr>
-<tr>
 <td>USE_IMAKE</td>
+</tr>
+<tr>
 <td>USE_JAVA</td>
-</tr>
-<tr>
 <td>USE_JAVA2</td>
+</tr>
+<tr>
 <td>USE_LANGUAGES</td>
-</tr>
-<tr>
 <td>USE_LIBTOOL</td>
+</tr>
+<tr>
 <td>USE_NATIVE_GCC</td>
-</tr>
-<tr>
 <td>USE_NETBSD_REPO</td>
+</tr>
+<tr>
 <td>USE_PKGSRC_GCC</td>
-</tr>
-<tr>
 <td>USE_PKGSRC_GCC_RUNTIME</td>
+</tr>
+<tr>
 <td>USE_PKGTASKS</td>
-</tr>
-<tr>
 <td>USE_PKG_ADMIN_DIGEST</td>
+</tr>
+<tr>
 <td>USE_RUBY_EXTCONF</td>
-</tr>
-<tr>
 <td>USE_RUBY_INSTALL</td>
+</tr>
+<tr>
 <td>USE_RUBY_SETUP</td>
-</tr>
-<tr>
 <td>USE_RUBY_SETUP_PKG</td>
+</tr>
+<tr>
 <td>USE_TOOLS</td>
-</tr>
-<tr>
 <td>UUCP_GROUP</td>
+</tr>
+<tr>
 <td>UUCP_USER</td>
-</tr>
-<tr>
 <td>VARBASE</td>
+</tr>
+<tr>
 <td>VARNAME</td>
-</tr>
-<tr>
 <td>VIM_EXTRA_OPTS</td>
+</tr>
+<tr>
 <td>WARNING_MSG</td>
-</tr>
-<tr>
 <td>WCALC_CGIDIR</td>
+</tr>
+<tr>
 <td>WCALC_CGIPATH</td>
-</tr>
-<tr>
 <td>WCALC_HTMLDIR</td>
+</tr>
+<tr>
 <td>WCALC_HTMLPATH</td>
-</tr>
-<tr>
 <td>WDM_MANAGERS</td>
+</tr>
+<tr>
 <td>WRAPPER_CC</td>
-</tr>
-<tr>
 <td>WRAPPER_REORDER_CMDS</td>
+</tr>
+<tr>
 <td>WRKDIR</td>
-</tr>
-<tr>
 <td>WRKDIR_BASENAME</td>
+</tr>
+<tr>
 <td>WRKDIR_LOCKTYPE</td>
-</tr>
-<tr>
 <td>WRKLOG</td>
+</tr>
+<tr>
 <td>WRKOBJDIR</td>
-</tr>
-<tr>
 <td>WRKSRC</td>
+</tr>
+<tr>
 <td>X10_PORT</td>
-</tr>
-<tr>
 <td>X11</td>
+</tr>
+<tr>
 <td>X11BASE</td>
-</tr>
-<tr>
 <td>X11_PKGSRCDIR</td>
+</tr>
+<tr>
 <td>X11_TYPE</td>
-</tr>
-<tr>
 <td>X509_CERTIFICATE</td>
+</tr>
+<tr>
 <td>X509_KEY</td>
-</tr>
-<tr>
 <td>XAW_TYPE</td>
+</tr>
+<tr>
 <td>XLOCK_DEFAULT_MODE</td>
-</tr>
-<tr>
 <td>XMKMF</td>
-<td>XMKMF_FLAGS</td>
 </tr>
 <tr>
+<td>XMKMF_FLAGS</td>
 <td>XXX</td>
+</tr>
+<tr>
+<td>XXXX</td>
 <td>YES</td>
 </tr>
 <tr>
@@ -14295,67 +14413,71 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>ctf</td>
+<td>cvs</td>
+</tr>
+<tr>
 <td>debug</td>
-</tr>
-<tr>
 <td>declaration</td>
+</tr>
+<tr>
 <td>declare</td>
-</tr>
-<tr>
 <td>defined</td>
+</tr>
+<tr>
 <td>depend</td>
-</tr>
-<tr>
 <td>dependencies</td>
+</tr>
+<tr>
 <td>depends</td>
-</tr>
-<tr>
 <td>depends-checksum</td>
+</tr>
+<tr>
 <td>depends-fetch</td>
-</tr>
-<tr>
 <td>deps</td>
+</tr>
+<tr>
 <td>describe</td>
-</tr>
-<tr>
 <td>destdir</td>
+</tr>
+<tr>
 <td>disable</td>
-</tr>
-<tr>
 <td>distclean</td>
+</tr>
+<tr>
 <td>distinfo</td>
-</tr>
-<tr>
 <td>dl</td>
+</tr>
+<tr>
 <td>dlopen</td>
-</tr>
-<tr>
 <td>do-buildlink</td>
+</tr>
+<tr>
 <td>do-clean</td>
-</tr>
-<tr>
 <td>do-configure</td>
+</tr>
+<tr>
 <td>do-configure-post-hook</td>
-</tr>
-<tr>
 <td>do-extract</td>
+</tr>
+<tr>
 <td>do-fetch</td>
-</tr>
-<tr>
 <td>do-install</td>
+</tr>
+<tr>
 <td>emul</td>
-</tr>
-<tr>
 <td>emul-distinfo</td>
+</tr>
+<tr>
 <td>emul-fetch</td>
-</tr>
-<tr>
 <td>emulation</td>
-<td>emulator</td>
 </tr>
 <tr>
+<td>emulator</td>
 <td>enable</td>
+</tr>
+<tr>
 <td>endian</td>
+<td>endif</td>
 </tr>
 <tr>
 <td>enomem</td>
@@ -14394,36 +14516,40 @@ source packages</h2></div></div></div>
 <td>fortify_source</td>
 </tr>
 <tr>
+<td>fossil</td>
 <td>friend</td>
+</tr>
+<tr>
 <td>fts</td>
-</tr>
-<tr>
 <td>fts_close</td>
+</tr>
+<tr>
 <td>fts_open</td>
-</tr>
-<tr>
 <td>fts_read</td>
+</tr>
+<tr>
 <td>fts_set</td>
-</tr>
-<tr>
 <td>gcc</td>
+</tr>
+<tr>
 <td>gethostbyaddr</td>
-</tr>
-<tr>
 <td>gethostbyname</td>
+</tr>
+<tr>
 <td>gethostbyname2</td>
-</tr>
-<tr>
 <td>getopt_long</td>
+</tr>
+<tr>
 <td>getprogname</td>
-</tr>
-<tr>
 <td>getservbyname</td>
-<td>getservbyport</td>
 </tr>
 <tr>
+<td>getservbyport</td>
 <td>getservent</td>
+</tr>
+<tr>
 <td>gettext</td>
+<td>git</td>
 </tr>
 <tr>
 <td>github</td>
@@ -14439,6 +14565,10 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>go-deps</td>
+<td>go-modules</td>
+</tr>
+<tr>
+<td>go-modules.mk</td>
 <td>golang</td>
 </tr>
 <tr>
@@ -14450,75 +14580,79 @@ source packages</h2></div></div></div>
 <td>help</td>
 </tr>
 <tr>
+<td>hg</td>
 <td>imake</td>
+</tr>
+<tr>
 <td>increment</td>
-</tr>
-<tr>
 <td>indirect</td>
+</tr>
+<tr>
 <td>inet_aton</td>
-</tr>
-<tr>
 <td>interp</td>
+</tr>
+<tr>
 <td>interpreter</td>
-</tr>
-<tr>
 <td>intl</td>
+</tr>
+<tr>
 <td>ip4</td>
-</tr>
-<tr>
 <td>ip6</td>
+</tr>
+<tr>
 <td>ipv4</td>
-</tr>
-<tr>
 <td>ipv6</td>
+</tr>
+<tr>
 <td>iso</td>
-</tr>
-<tr>
 <td>kerberos</td>
+</tr>
+<tr>
 <td>krb</td>
-</tr>
-<tr>
 <td>krb5</td>
+</tr>
+<tr>
 <td>ksh</td>
-</tr>
-<tr>
 <td>lapack</td>
+</tr>
+<tr>
 <td>latex</td>
-</tr>
-<tr>
 <td>libintl_bindtextdomain</td>
+</tr>
+<tr>
 <td>libintl_gettext</td>
-</tr>
-<tr>
 <td>libintl_textdomain</td>
+</tr>
+<tr>
 <td>libnbcompat</td>
-</tr>
-<tr>
 <td>libs</td>
+</tr>
+<tr>
 <td>libtool</td>
-</tr>
-<tr>
 <td>licence</td>
+</tr>
+<tr>
 <td>license</td>
-</tr>
-<tr>
 <td>lintl</td>
+</tr>
+<tr>
 <td>little-endian</td>
-</tr>
-<tr>
 <td>lock</td>
+</tr>
+<tr>
 <td>locking</td>
-</tr>
-<tr>
 <td>lua</td>
+</tr>
+<tr>
 <td>lvalue</td>
-</tr>
-<tr>
 <td>make</td>
-<td>makesum</td>
 </tr>
 <tr>
+<td>makesum</td>
 <td>memory</td>
+</tr>
+<tr>
+<td>mercurial</td>
 <td>meta</td>
 </tr>
 <tr>
@@ -14746,11 +14880,15 @@ source packages</h2></div></div></div>
 <td>substitutions</td>
 </tr>
 <tr>
+<td>subversion</td>
 <td>sun</td>
-<td>sunpro</td>
 </tr>
 <tr>
+<td>sunpro</td>
 <td>sunwspro</td>
+</tr>
+<tr>
+<td>svn</td>
 <td>symlink</td>
 </tr>
 <tr>
