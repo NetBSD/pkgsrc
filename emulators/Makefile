@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2022/12/15 11:48:59 nia Exp $
+# $NetBSD: Makefile,v 1.348 2023/05/20 12:47:47 thorpej Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -143,6 +143,7 @@ SUBDIR+=	lrmi
 SUBDIR+=	m1
 SUBDIR+=	makeppf
 SUBDIR+=	mame
+SUBDIR+=	marduk
 SUBDIR+=	mednafen
 SUBDIR+=	mednaffe
 SUBDIR+=	melonds
