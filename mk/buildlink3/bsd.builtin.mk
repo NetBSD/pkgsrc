@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.15 2020/10/10 14:17:03 triaxx Exp $
+# $NetBSD: bsd.builtin.mk,v 1.16 2023/05/20 16:15:42 rillig Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -116,7 +116,7 @@
 .include "../../mk/bsd.fast.prefs.mk"
 
 .for _pkg_ in ${BUILTIN_PKG}
-#
+
 # Define PREFER.<pkg> to be either "pkgsrc" or "native" depending on whether
 # to prefer the pkgsrc or native version of a particular package.  Its value
 # is determined by a number of variables described below.
@@ -141,6 +141,8 @@
 #	per-platform default that takes precedence over "yes" in PREFER_* but is
 #	overridden by a more specific package name match.
 #
+# Keywords: native pkgsrc built-in builtin in-tree
+
 _BLTN_PREFER.${_pkg_}=	pkgsrc
 .  if !empty(PREFER_NATIVE:M[yY][eE][sS])
 _BLTN_PREFER.${_pkg_}=	native
