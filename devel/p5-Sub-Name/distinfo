@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:17:31 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/05/20 06:37:32 wiz Exp $
 
-BLAKE2s (Sub-Name-0.26.tar.gz) = 04e66ef16b977171cb500a6f8dbdfcf7c3241f8790b1ddf158ccc22c690f310a
-SHA512 (Sub-Name-0.26.tar.gz) = df032823c340500a0cc5e5f4d88688bbed14344a67a1ded462572aebeb39827563c5f69afbc0af1c5aac483013e7083a8aba2e3e47b805007d006818dadd9b5a
-Size (Sub-Name-0.26.tar.gz) = 84898 bytes
+BLAKE2s (Sub-Name-0.27.tar.gz) = f65aa2c00284470feb09aee461efc11ca49a8353d5849d17f4cb18249ff8be1a
+SHA512 (Sub-Name-0.27.tar.gz) = 766c2b229a222e84c40069f2aba0611f7936a9018c375c66b9ed58c4b3ad074cf102906e23aaf514e6897a8aaeaee1658bc2887d73052b8f67ccdf3cab52f71f
+Size (Sub-Name-0.27.tar.gz) = 157643 bytes
