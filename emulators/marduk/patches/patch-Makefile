@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2023/05/20 12:47:47 thorpej Exp $
+
+Use SDL2 and GTK+-3.0 Cflags / Libs only when building files that need them.
+
+--- Makefile.orig	2023-05-20 12:24:50.772165900 +0000
++++ Makefile	2023-05-20 12:37:55.337663884 +0000
+@@ -21,13 +21,10 @@
+ # This should also work with Windows, using MinGW, if you do LIBS="-lws2_32"
+ # Build with CFLAGS=-DDEBUG for CPU trace (will be better integrated later)
+ 
+-CFLAGS := $(CFLAGS) `sdl2-config --cflags` `pkg-config gtk+-3.0 --cflags`
+-LIBS   := $(LIBS) `sdl2-config --libs` `pkg-config gtk+-3.0 --libs`
+-
+ all:	marduk
+ 
+ marduk:	dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o
+-	$(CC) $(CFLAGS) -o marduk dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o $(LIBS)
++	$(CC) $(CFLAGS) -o marduk dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o `sdl2-config --libs` `pkg-config gtk+-3.0 --libs`
+ 
+ dasm80.o:	dasm80.c z80.h
+ 	$(CC) $(CFLAGS) -c -o dasm80.o dasm80.c
+@@ -39,7 +36,8 @@ emu2149.o:	emu2149.c emu2149.h
+ 	$(CC) $(CFLAGS) -c -o emu2149.o emu2149.c
+ 
+ main.o:	main.c emu2149.h disk.h modem.h tms9918.h tms_util.h z80.h
+-	$(CC) $(CFLAGS) -c -o main.o main.c
++	$(CC) $(CFLAGS) `sdl2-config --cflags` `pkg-config gtk+-3.0 --cflags` \
++	    -c -o main.o main.c
+ 
+ modem.o:	modem.c modem.h
+ 	$(CC) $(CFLAGS) -c -o modem.o modem.c
