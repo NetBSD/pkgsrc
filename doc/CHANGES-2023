@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3222 2023/05/20 15:41:25 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3223 2023/05/20 15:46:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4483,3 +4483,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added emulators/IshkurCPM version 0.0.20230518 [thorpej 2023-05-20]
 	Updated textproc/angle-grinder to 0.19.1 [pin 2023-05-20]
 	Updated net/openconnect to 9.12 [schmonz 2023-05-20]
+	Updated shells/oh-my-posh to 16.7.2 [schmonz 2023-05-20]
