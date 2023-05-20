@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3203 2023/05/20 07:30:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3204 2023/05/20 07:31:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4466,3 +4466,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Sub-Install to 0.929 [wiz 2023-05-20]
 	Updated devel/p5-Sub-Quote to 2.006008 [wiz 2023-05-20]
 	Updated sysutils/p5-File-Remove to 1.61 [wiz 2023-05-20]
+	Updated textproc/p5-XML-LibXML to 2.0208 [wiz 2023-05-20]
