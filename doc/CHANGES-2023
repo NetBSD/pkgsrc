@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3196 2023/05/20 07:22:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3197 2023/05/20 07:22:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4458,4 +4458,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Class-Method-Modifiers to 2.15 [wiz 2023-05-20]
 	Updated devel/p5-Config-Tiny to 2.29 [wiz 2023-05-20]
 	Updated devel/p5-File-BaseDir to 0.09 [wiz 2023-05-20]
+	Updated devel/p5-Test2-Suite to 0.000155 [wiz 2023-05-20]
 	Updated devel/p5-Test2-Suite to 0.000155 [wiz 2023-05-20]
