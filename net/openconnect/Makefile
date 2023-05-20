@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/05/18 13:55:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2023/05/20 15:41:19 schmonz Exp $
 
-DISTNAME=		openconnect-9.11
+DISTNAME=		openconnect-9.12
 CATEGORIES=		net security
 MASTER_SITES=		https://www.infradead.org/openconnect/download/ \
 			ftp://ftp.infradead.org/pub/openconnect/
@@ -20,8 +20,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpnc-script
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-docs
-
-MAKE_FLAGS+=		noinst_PROGRAMS=
 
 REPLACE_PYTHON=		trojans/*.py
 REPLACE_BASH=		trojans/*.sh
