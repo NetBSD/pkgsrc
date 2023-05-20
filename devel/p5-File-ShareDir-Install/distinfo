@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:16:38 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/05/20 06:50:11 wiz Exp $
 
-BLAKE2s (File-ShareDir-Install-0.13.tar.gz) = 58fe9fe0b18f57e43ec913655eb19aee2819c4fc5c889936033c8f9a9a7fd4c9
-SHA512 (File-ShareDir-Install-0.13.tar.gz) = a119e38491fad8ae0ebd95913e3b608e09a2b99376a5160e75083a28abe4f83c4f6a36df216365527ff87bf8ec095254b16a2f6d2515c69f34609df8672605ca
-Size (File-ShareDir-Install-0.13.tar.gz) = 31191 bytes
+BLAKE2s (File-ShareDir-Install-0.14.tar.gz) = e23f1ea9d15d1f3264f5bdc24dd34f95498053ba4020f350be442e7e4e1f3f21
+SHA512 (File-ShareDir-Install-0.14.tar.gz) = 92c1c3899bc58d3e1686fef775ac09e9aab7e3ce6b61d1a8e754127dc1f84627cf1e23e78a5d0042934e011685c0676c706ef7964778c06e073e8725155af34d
+Size (File-ShareDir-Install-0.14.tar.gz) = 31637 bytes
