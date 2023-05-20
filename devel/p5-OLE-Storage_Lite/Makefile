@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/05/20 06:34:53 wiz Exp $
 
-DISTNAME=	OLE-Storage_Lite-0.20
+DISTNAME=	OLE-Storage_Lite-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OLE/}
 
