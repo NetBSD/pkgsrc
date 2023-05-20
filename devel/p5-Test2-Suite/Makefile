@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2022/10/01 09:20:34 wen Exp $
+# $NetBSD: Makefile,v 1.44 2023/05/20 07:22:36 wiz Exp $
 
-DISTNAME=		Test2-Suite-0.000145
+DISTNAME=		Test2-Suite-0.000155
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXODIST/}
@@ -12,10 +12,7 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Importer>=0.024:../../devel/p5-Importer
 DEPENDS+=		p5-Module-Pluggable>=2.7:../../devel/p5-Module-Pluggable
-DEPENDS+=		p5-Sub-Info>=0.002:../../devel/p5-Sub-Info
 DEPENDS+=		p5-Term-Table>=0.013:../../devel/p5-Term-Table
-DEPENDS+=		p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
-
 TEST_DEPENDS+=		p5-Term-Size-Any-[0-9]*:../../devel/p5-Term-Size-Any
 
 PERL5_PACKLIST=		auto/Test2/Suite/.packlist
