@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2023/05/20 12:47:47 thorpej Exp $
+# $NetBSD: Makefile,v 1.349 2023/05/20 13:26:51 thorpej Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -8,6 +8,7 @@ SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
 SUBDIR+=	DatLib
 SUBDIR+=	DatUtil
+SUBDIR+=	IshkurCPM
 SUBDIR+=	MAMEDiff
 SUBDIR+=	PC6001VX
 SUBDIR+=	ROMBuild

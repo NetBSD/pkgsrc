@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/20 13:26:51 thorpej Exp $
+share/IshkurCPM/bin/ASM.COM
+share/IshkurCPM/bin/DDT.COM
+share/IshkurCPM/bin/ED.COM
+share/IshkurCPM/bin/FONT.GRB
+share/IshkurCPM/bin/FUTIL.COM
+share/IshkurCPM/bin/INIT.COM
+share/IshkurCPM/bin/LOAD.COM
+share/IshkurCPM/bin/OBASIC.COM
+share/IshkurCPM/bin/PIP.COM
+share/IshkurCPM/bin/STAT.COM
+share/IshkurCPM/bin/SUBMIT.COM
+share/IshkurCPM/bin/TE.COM
+share/IshkurCPM/bin/XDIR.COM
+share/IshkurCPM/bin/XSUB.COM
+share/IshkurCPM/boot/NDSK_BOOT.nabu
+share/IshkurCPM/boot/NDSK_HYBRID_BOOT.nabu
+share/IshkurCPM/boot/NFS_BOOT.nabu
+share/IshkurCPM/boot/NFS_HYBRID_BOOT.nabu
+share/IshkurCPM/sys/NDSK_CPM22.SYS
+share/IshkurCPM/sys/NDSK_HYBRID_CPM22.SYS
+share/IshkurCPM/sys/NFS_CPM22.SYS
+share/IshkurCPM/sys/NFS_HYBRID_CPM22.SYS

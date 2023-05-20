@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/20 13:26:51 thorpej Exp $
+
+BLAKE2s (IshkurCPM-0.0.20230518-b8f8bea67147fb2bea6e435efb6b4ec71afa6def.tar.gz) = 37f484183eff1937ae6b9f60a8b5c559ada96d06f79f0f1d89ea0d10a15de512
+SHA512 (IshkurCPM-0.0.20230518-b8f8bea67147fb2bea6e435efb6b4ec71afa6def.tar.gz) = 08090ededb10a23eac898a86cdd85ed12858d67e34018febd82731d286c366bee46a8342bc0a999b1396f795e1f2ad5beabad78122b018d4962b2780634c5a94
+Size (IshkurCPM-0.0.20230518-b8f8bea67147fb2bea6e435efb6b4ec71afa6def.tar.gz) = 2475137 bytes
