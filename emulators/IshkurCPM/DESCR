@@ -1,0 +1,7 @@
+Ishkur is an open source, modular CP/M distribution for the NABU computer.
+It is designed to work with both server-based (disk images or native file
+access over NHACP) and local storage options.
+
+This package provides a convenient method to install these binaries on
+a system that can vend them to a NABU PC using a NABU server, or build
+disk images with the binaries using cpmtools.
