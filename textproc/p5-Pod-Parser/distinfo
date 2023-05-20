@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:33 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/05/20 07:39:43 wiz Exp $
 
-BLAKE2s (Pod-Parser-1.63.tar.gz) = cf473f4f9bcc383954de7f61207ad41dc64ba7dfaef9a224ce757ab10337e3f7
-SHA512 (Pod-Parser-1.63.tar.gz) = 55f5741bb906701705f489b2314d3f11cd6d63ca5b64a60fdbda7eed0388945f2e68262735c7cc33b7089794630393049e619f9900e85c71bf9223243bc0984a
-Size (Pod-Parser-1.63.tar.gz) = 79707 bytes
+BLAKE2s (Pod-Parser-1.66.tar.gz) = 3e65514fe6ae865e765b206e593e5b4baa2f55d91d22bf7c40678ce7e876b151
+SHA512 (Pod-Parser-1.66.tar.gz) = 7e9db0166ad74e45a61542a12e901443ae82e5ba06d8c0704f9a617fc792b41b5520b9c071f9ec93bddffaae9a3e2232a777e45d1f64f8e418dd788dd49c189f
+Size (Pod-Parser-1.66.tar.gz) = 84064 bytes
