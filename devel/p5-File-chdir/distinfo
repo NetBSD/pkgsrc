@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:39 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/20 07:43:13 wiz Exp $
 
-BLAKE2s (File-chdir-0.1010.tar.gz) = cf4196c40f0cb84c6d5a0685c5fcf13985581669ee52ea47ae4a6968e6102447
-SHA512 (File-chdir-0.1010.tar.gz) = 0a9390b48d49c2ac0e2f8b409396a6a2ea3518823d1b6d8c23bbf19a438b92d1e784dcf3bc7c0d43b0365b0620557aea1f8d9ef224b68ca9c472fefa8fe1adab
-Size (File-chdir-0.1010.tar.gz) = 24761 bytes
+BLAKE2s (File-chdir-0.1011.tar.gz) = 44fe34d46f292bd07794e8e86dfd1d067efd3fac55f44711eaa467ed954b8fd1
+SHA512 (File-chdir-0.1011.tar.gz) = 249181e43faec925406b1fc86fc256afb27c588a4325122defd955f0f5c15c9d484f515841e6ebb3a643ce5e2a188338c88eee0df76a458aea4216c26bb7d6b7
+Size (File-chdir-0.1011.tar.gz) = 25127 bytes
