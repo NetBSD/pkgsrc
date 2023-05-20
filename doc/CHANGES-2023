@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3169 2023/05/20 06:43:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3170 2023/05/20 06:44:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4432,3 +4432,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Sub-Name to 0.27 [wiz 2023-05-20]
 	Updated www/p5-Template-Toolkit to 3.101 [wiz 2023-05-20]
 	Updated www/p5-libwww to 6.70 [wiz 2023-05-20]
+	Updated converters/p5-Convert-Color to 0.17 [wiz 2023-05-20]
