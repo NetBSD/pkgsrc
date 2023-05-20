@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3166 2023/05/20 06:37:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3167 2023/05/20 06:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-OLE-Storage_Lite to 0.22 [wiz 2023-05-20]
 	Updated devel/p5-Proc-ProcessTable to 0.635 [wiz 2023-05-20]
 	Updated devel/p5-Struct-Dumb to 0.14 [wiz 2023-05-20]
+	Updated devel/p5-Sub-Name to 0.27 [wiz 2023-05-20]
