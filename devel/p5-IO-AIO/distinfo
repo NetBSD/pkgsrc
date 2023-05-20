@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/02/11 23:23:25 wen Exp $
+$NetBSD: distinfo,v 1.20 2023/05/20 06:25:24 wiz Exp $
 
-BLAKE2s (IO-AIO-4.79.tar.gz) = aefa4ea44e9310cc6a98f88213fd1e8aa9d606035d609424a3d37b3fb4d20e23
-SHA512 (IO-AIO-4.79.tar.gz) = ebf4030ee237dde044722e690e1996c22a8c2fa36325c1d5fc641879da9da64facf2300defa759854499c010408a0dfba0cee3191aa024e8332d3aed9b2a4cae
-Size (IO-AIO-4.79.tar.gz) = 189140 bytes
+BLAKE2s (IO-AIO-4.8.tar.gz) = bda571d9dfc2dab576910ff7d9ccfc8cb2eb1e6d86eadd514155cc21991c0b41
+SHA512 (IO-AIO-4.8.tar.gz) = b06e20a75b86ab83cf95121d491c54e10f530d006ed0618b95e9d2c63f1974479bcf41e94e0592c62294ffa8860fac0a0fb471dab0437f9dfef75b980ec8966e
+Size (IO-AIO-4.8.tar.gz) = 189363 bytes

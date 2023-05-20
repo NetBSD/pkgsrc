@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/02/11 23:23:25 wen Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/20 06:25:24 wiz Exp $
 
-DISTNAME=	IO-AIO-4.79
-PKGNAME=	p5-${DISTNAME}
+DISTNAME=	IO-AIO-4.8
+# bug in version number in 4.80 release, remove on update
+PKGNAME=	p5-${DISTNAME}0
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
@@ -15,13 +16,10 @@ LICENSE=	${PERL5_LICENSE}
 # with all perl configuration settings, id est
 # the Config module, set in its environment
 
-# build time requirment
 BUILD_DEPENDS+=	p5-Canary-Stability-[0-9]*:../../devel/p5-Canary-Stability
-
-USE_LANGUAGES=	c
-PERL5_PACKLIST=	auto/IO/AIO/.packlist
-
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
+
+PERL5_PACKLIST=	auto/IO/AIO/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
