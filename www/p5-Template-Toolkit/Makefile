@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2022/08/14 17:21:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.59 2023/05/20 06:39:44 wiz Exp $
 
-DISTNAME=	Template-Toolkit-3.100
+DISTNAME=	Template-Toolkit-3.101
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
