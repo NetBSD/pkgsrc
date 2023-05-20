@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:22:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/20 23:27:30 wen Exp $
 
-BLAKE2s (Pod-Spell-1.20.tar.gz) = 5fcb625745fad6e684e4484c7ff64ab926568f1a61c93d9f0bb52027a8e293e5
-SHA512 (Pod-Spell-1.20.tar.gz) = 9a676a897dae7dfe37e9bfca2e5c11bcdc3221ed532b79970e6cc4d0de8dec0eca754cb9fbc5cbbbf6533a213c284d691609dd86d246ae146187bd9cd37d292e
-Size (Pod-Spell-1.20.tar.gz) = 31220 bytes
+BLAKE2s (Pod-Spell-1.26.tar.gz) = 263f9eadfd7d3b2ac2d74f6e709073bb5c220811d048c0a13f3d23deea5e6bcd
+SHA512 (Pod-Spell-1.26.tar.gz) = 6fba5f6337fcd0e7f8df7d379e9d7a7de5ab13b748831c9f0e48cefbce9b1548d117d96db64693fc71519d700c397d217f27574359518b39225489b96c3c3c9e
+Size (Pod-Spell-1.26.tar.gz) = 35564 bytes
