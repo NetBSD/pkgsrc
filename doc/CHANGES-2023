@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3193 2023/05/20 07:12:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3194 2023/05/20 07:12:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4456,3 +4456,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-URI to 5.19 [wiz 2023-05-20]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.26 [wiz 2023-05-20]
 	Updated devel/p5-Class-Method-Modifiers to 2.15 [wiz 2023-05-20]
+	Updated devel/p5-Config-Tiny to 2.29 [wiz 2023-05-20]
