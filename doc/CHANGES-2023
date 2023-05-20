@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3219 2023/05/20 12:49:29 thorpej Exp $
+$NetBSD: CHANGES-2023,v 1.3220 2023/05/20 13:27:51 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4480,3 +4480,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2 to 2.74.6nb1 [bacon 2023-05-20]
 	Updated geography/qgis to 3.28.6 [gdt 2023-05-20]
 	Added emulators/marduk version 0.26e [thorpej 2023-05-20]
+	Added emulators/IshkurCPM version 0.0.20230518 [thorpej 2023-05-20]
