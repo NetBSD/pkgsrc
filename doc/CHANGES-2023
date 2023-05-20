@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3159 2023/05/20 06:21:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3160 2023/05/20 06:23:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4422,3 +4422,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/p5-Perl-LanguageServer to 2.5.0 [wiz 2023-05-20]
 	Updated converters/p5-JSON to 4.10 [wiz 2023-05-20]
 	Updated databases/p5-DBD-SQLite to 1.72 [wiz 2023-05-20]
+	Updated devel/p5-Commandable to 0.10 [wiz 2023-05-20]
