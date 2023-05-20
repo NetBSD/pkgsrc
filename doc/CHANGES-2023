@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3217 2023/05/20 11:53:19 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3218 2023/05/20 12:30:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Test-Without-Module to 0.21 [wiz 2023-05-20]
 	Updated devel/p5-List-SomeUtils to 0.59 [wiz 2023-05-20]
 	Updated devel/glib2 to 2.74.6nb1 [bacon 2023-05-20]
+	Updated geography/qgis to 3.28.6 [gdt 2023-05-20]
