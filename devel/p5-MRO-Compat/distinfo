@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:54 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/05/20 06:51:01 wiz Exp $
 
-BLAKE2s (MRO-Compat-0.13.tar.gz) = 30c2839736c3db24feb785f0b0db66bb6e95d09c3d16bae76cbee2cdd6c9518b
-SHA512 (MRO-Compat-0.13.tar.gz) = 3311c37c8fc73acaf68bae2b12315a448a87de8f756e817c967cf49b753cf218e8c762ecc44890297afd82193d71b2407060db0bc70720d228b31c0a30de10c1
-Size (MRO-Compat-0.13.tar.gz) = 8711 bytes
+BLAKE2s (MRO-Compat-0.15.tar.gz) = 98c435cf3747ffd43d9bf83d7b2b79ca967c8a84cdfb78338a955a0148191e3e
+SHA512 (MRO-Compat-0.15.tar.gz) = 0767ea5e98414ce55607c599eecde686fe2defed99ade156ce8db63e508bfcd150aea48952eed7624f969c0ca185652a85eedb8dbcae82b826152d18d4152545
+Size (MRO-Compat-0.15.tar.gz) = 16504 bytes
