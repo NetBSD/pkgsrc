@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/05/20 11:27:27 bacon Exp $
+$NetBSD: distinfo,v 1.7 2023/05/20 14:42:11 bacon Exp $
 
 BLAKE2s (canu-2.2.tar.xz) = 5b585a2e0a31c2181817798b5f267dd4cf43c3ffeba4b0a04ffc8021a4603aed
 SHA512 (canu-2.2.tar.xz) = af08874a319dd5fd6bbe666c8a5d0a43b7c0caaaca3a3cbf4d3fe022d6d6b8c14cd967c2e26f4fbf571129be240dcb65e92fe61fad1e51d554f15254d0b6ce8f
@@ -7,8 +7,6 @@ SHA1 (patch-Makefile) = 54a3a216948fea81cfeb6ce91458126adc2ad8da
 SHA1 (patch-pipelines_canu_Defaults.pm) = 5ecea8ebac667499916b0243f34dc25838992444
 SHA1 (patch-pipelines_canu_Execution.pm) = 75c019a93f5b6a4491191b4f32931ac0b8435421
 SHA1 (patch-utgcns_libboost_boost_smart__ptr_detail_shared__count.hpp) = fd219645141ebe9d6f23153a2a2b0f56abc103af
-SHA1 (patch-utility_src_parasail_internal__sse.h) = 3eca097b64273ada2df6f9be895823980ea79902
-SHA1 (patch-utility_src_utility_align-ssw.H) = 146e1959207dfe1deaae7f8f9809ed72be116841
 SHA1 (patch-utility_src_utility_files.H) = bc28dfd6957a2e2928b5df6a0e1d08c8ba5b2c27
 SHA1 (patch-utility_src_utility_logging.H) = 13e9ced966710cef4a2d38fd2b752f8a726ba07b
 SHA1 (patch-utility_src_utility_system.H) = e0bab7ed20431948845fac907584215c0b891406
