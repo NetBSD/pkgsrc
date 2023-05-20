@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3221 2023/05/20 13:59:30 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3222 2023/05/20 15:41:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added emulators/marduk version 0.26e [thorpej 2023-05-20]
 	Added emulators/IshkurCPM version 0.0.20230518 [thorpej 2023-05-20]
 	Updated textproc/angle-grinder to 0.19.1 [pin 2023-05-20]
+	Updated net/openconnect to 9.12 [schmonz 2023-05-20]
