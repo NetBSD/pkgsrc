@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in.in,v 1.2 2017/11/16 15:07:05 hauke Exp $
+$NetBSD: patch-src_Makefile.in.in,v 1.3 2023/05/21 00:13:56 hauke Exp $
 
 Deal with bulk build namespace intrusion.
 
@@ -6,9 +6,9 @@ SunOS 5 bmake / gmake fixes
 
 Was patch-an
 
---- src/Makefile.in.in.orig	2013-08-21 17:43:45.000000000 +0000
+--- src/Makefile.in.in.orig	2023-05-13 18:09:53.000000000 +0000
 +++ src/Makefile.in.in
-@@ -392,9 +392,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
+@@ -365,9 +365,9 @@ ldflags  = $(LDFLAGS) $(ld_switch_all) $
  
  #ifdef SOLARIS2
  %.o : %.c
@@ -20,13 +20,13 @@ Was patch-an
  	$(CC) -c $(cflags) $<
  
  ## Create preprocessor output (debugging purposes only)
-@@ -437,10 +437,10 @@ RAW_EXE  = temacs
+@@ -405,10 +405,10 @@ RAW_EXE  = temacs.exe
  DO_TEMACS = $(DUMPENV) ./$(RAW_EXE)
  DO_XEMACS = ./$(PROGNAME)
  
--BATCH = -no-packages -batch
-+MY_BATCH = -no-packages -batch
- BATCH_PACKAGES = -vanilla -batch
+-BATCH = -no-packages -no-configured-paths -batch
++MY_BATCH = -no-packages -no-configured-paths -batch
+ BATCH_PACKAGES = -vanilla -no-configured-paths -batch
 -TEMACS_BATCH = $(DO_TEMACS) -nd $(BATCH)
 -XEMACS_BATCH = $(DO_XEMACS) $(BATCH)
 +TEMACS_BATCH = $(DO_TEMACS) -nd $(MY_BATCH)
@@ -34,7 +34,7 @@ Was patch-an
  XEMACS_BATCH_PACKAGES = $(DO_XEMACS) $(BATCH_PACKAGES)
  temacs_loadup_args = -l $(LISP)/loadup.el
  dump_temacs_args   = $(temacs_loadup_args) dump
-@@ -644,7 +644,7 @@ load-shadows: update-elc-2
+@@ -611,7 +611,7 @@ load-shadows: update-elc-2
  
  release: all
  	-if [ -w $(LISP) ]; then \
@@ -43,7 +43,7 @@ Was patch-an
  	else true; fi
  	-$(dump_temacs)
  	touch release
-@@ -931,7 +931,7 @@ run-rtcmacs: rtcmacs
+@@ -898,7 +898,7 @@ run-rtcmacs: rtcmacs
  	ignore POLL; \
  	check -access; \
  	suppress rui; \
