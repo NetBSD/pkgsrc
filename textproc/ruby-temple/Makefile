@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/01/25 14:20:44 taca Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/21 03:23:48 taca Exp $
 
-DISTNAME=	temple-0.10.0
+DISTNAME=	temple-0.10.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
