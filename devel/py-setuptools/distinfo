@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.208 2023/04/26 13:34:30 adam Exp $
+$NetBSD: distinfo,v 1.209 2023/05/21 18:58:26 wiz Exp $
 
-BLAKE2s (setuptools-67.7.2.tar.gz) = d60c9f002a5942a37ee529b6da0d3649b190ca353fde189a6497e42fea1b24ff
-SHA512 (setuptools-67.7.2.tar.gz) = 06db096193ef52111f064c327daefb12ea2bb2ebc6712436bae01f986165455fe89a1d2220cbaaa6391a182e2aee19b9cf7a709c158af8c5ab6232dfbc258bd9
-Size (setuptools-67.7.2.tar.gz) = 2491608 bytes
+BLAKE2s (setuptools-67.8.0.tar.gz) = c6bdadf295e87f4c9db4298449cae3048e20785294439744b5840699da1699d9
+SHA512 (setuptools-67.8.0.tar.gz) = 5dda7082fc563ce73d810efc9cdbccb8649fef2eac52f1a902c76ab5ec67a87ff64e36e918d0e3b168f5214d787bdc22e8ef9adeccb77d8d368dcbb48f5fb35d
+Size (setuptools-67.8.0.tar.gz) = 2492475 bytes
