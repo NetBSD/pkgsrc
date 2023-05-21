@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3262 2023/05/21 18:58:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3263 2023/05/21 19:01:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-txtorcon to 23.5.0 [wiz 2023-05-21]
 	Updated time/py-tzlocal to 5.0.1 [wiz 2023-05-21]
 	Updated devel/py-setuptools to 67.8.0 [wiz 2023-05-21]
+	Updated math/double-conversion to 3.3.0 [wiz 2023-05-21]
