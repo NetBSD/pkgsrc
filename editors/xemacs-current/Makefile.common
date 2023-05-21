@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.19 2021/10/03 17:53:11 hauke Exp $
+# $NetBSD: Makefile.common,v 1.20 2023/05/21 00:13:55 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
 
-DISTNAME=	xemacs-21.5.34
-EMACSVERSION=	21.5-b34
+DISTNAME=	xemacs-21.5.35
+EMACSVERSION=	21.5-b35
 EMACS_DISTNAME=	xemacs-${EMACSVERSION}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
@@ -23,14 +23,12 @@ PLIST_SRC=	${.CURDIR}/../../editors/xemacs-current/PLIST
 
 USE_TOOLS+=		gtar makeinfo perl
 
-# The portable dumper creates a dump file with a build ID in its name
-GENERATE_PLIST+=	${ECHO} bin/${EMACS_DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
-
 # Having the build path in the dumped emacs is not a problem.
 CHECK_WRKREF_SKIP+=	bin/xemacs*
 
 PRINT_PLIST_AWK+=	{ gsub(/${EMACS_DISTNAME}/, "$${DISTNAME}"); }
 PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
+PRINT_PLIST_AWK+=	{ gsub(/^share\/applications\/xemacs\.desktop$$/, "$${PLIST.x11}&"); }
 
 PLIST_SUBST+=		DISTNAME=${EMACS_DISTNAME}
 FILES_SUBST+=		DISTNAME=${EMACS_DISTNAME}
@@ -45,10 +43,6 @@ CONFIGURE_ARGS+=	--with-mule
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-bignum=gmp
 CONFIGURE_ARGS+=	--without-msw
-CONFIGURE_ARGS+=	--with-pdump
-CONFIGURE_ARGS+=	--with-system-malloc
-CONFIGURE_ARGS+=	--with-newgc
-CONFIGURE_ARGS+=	--with-kkcc
 CONFIGURE_ARGS+=	--with-postgresql=no
 
 CFLAGS+=		-Dunix
@@ -61,6 +55,11 @@ INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/term.h)
 CPPFLAGS+=	-DTERMINFO
 .endif
+
+pre-patch:
+.for ci in etc lisp lisp/mule
+	rm ${WRKSRC}/${ci}/.cvsignore
+.endfor
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
