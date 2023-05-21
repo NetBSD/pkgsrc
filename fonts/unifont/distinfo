@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.28 2022/09/18 11:46:32 wiz Exp $
+$NetBSD: distinfo,v 1.29 2023/05/21 18:06:17 wiz Exp $
 
-BLAKE2s (unifont-15.0.01.tar.gz) = 4922a223b90b8987342931cc1250756a1c8bb34918c1dd01bfed9738fc6a16ba
-SHA512 (unifont-15.0.01.tar.gz) = 386f6d9b17d0a768f4c4393ec21d5b785678e1cd3eb5e69be2e4e4ca2e89b70c3e3c88ac0e2b89984afff177fbf43e7edc8c8e5d6bbc1af1cf506f42017f571a
-Size (unifont-15.0.01.tar.gz) = 27490811 bytes
+BLAKE2s (unifont-15.0.02.tar.gz) = 38709769e4264639f958cce281f3b4281452c7015eb631a53a9d002503f6c527
+SHA512 (unifont-15.0.02.tar.gz) = 897eb9d49f166c8e1b673ef7fa6fed3df78ddafe39e3bf9adc7b1b593efeb6ff3f7b3771cf5f9388c4cfb9cea6dfff40f1c8776aeb6d6e1b8b90316c2c3a98ac
+Size (unifont-15.0.02.tar.gz) = 38576556 bytes
 SHA1 (patch-man_Makefile) = 3d4274578270fc8df1e713ffacaecabfa356383a
+SHA1 (patch-src_Makefile) = a86cd8514c0bdddead24014cb92545b85b203b88
