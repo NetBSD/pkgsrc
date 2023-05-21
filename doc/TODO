@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22957 2023/05/20 12:32:45 gdt Exp $
+$NetBSD: TODO,v 1.22958 2023/05/21 05:56:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -636,6 +636,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o facter-2.4.5
 	o fakeroot-1.6.5
 	o fastp-0.20.1
+	o fcitx5-5.0.23
 	o fd-3.01j
 	o felt-3.07 [wip]
 	o fet-6.0.1
