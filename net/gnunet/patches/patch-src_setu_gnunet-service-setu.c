@@ -1,9 +1,13 @@
-$NetBSD: patch-src_setu_gnunet-service-setu.c,v 1.1 2023/01/31 18:53:46 nikita Exp $
+$NetBSD: patch-src_setu_gnunet-service-setu.c,v 1.2 2023/05/21 20:09:08 nikita Exp $
 
 Crudely fix NetBSD's missing log2l.
 
---- src/setu/gnunet-service-setu.c.orig	2022-03-18 23:02:08.123202128 +0100
-+++ src/setu/gnunet-service-setu.c	2022-03-18 23:03:42.434385369 +0100
+log2* (2) is always 1.
+
+diff --git a/src/setu/gnunet-service-setu.c b/src/setu/gnunet-service-setu.c
+index f85ddb224..a8572c0e2 100644
+--- src/setu/gnunet-service-setu.c.orig
++++ src/setu/gnunet-service-setu.c
 @@ -38,6 +38,10 @@
  #include "gnunet_setu_service.h"
  #include "setu.h"
@@ -15,3 +19,21 @@ Crudely fix NetBSD's missing log2l.
  #define LOG(kind, ...) GNUNET_log_from (kind, "setu", __VA_ARGS__)
  
  /**
+@@ -1800,7 +1804,7 @@ full_sync_plausibility_check (struct Operation *op)
+                                                                            double)
+                                                                         op->
+                                                                         remote_set_diff)));
+-    long double value = exponent * (log2l (base) / log2l (2));
++    long double value = exponent * (log2l (base) / 1);
+     if ((value < security_level_lb) || (value > SECURITY_LEVEL) )
+     {
+       LOG (GNUNET_ERROR_TYPE_ERROR,
+@@ -1824,7 +1828,7 @@ check_max_differential_rounds (struct Operation *op)
+ {
+   double probability = op->differential_sync_iterations * (log2l (
+                                                              PROBABILITY_FOR_NEW_ROUND)
+-                                                           / log2l (2));
++                                                           / 1);
+   if ((-1 * SECURITY_LEVEL) > probability)
+   {
+     LOG (GNUNET_ERROR_TYPE_ERROR,
