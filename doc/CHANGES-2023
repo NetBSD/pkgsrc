@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3228 2023/05/21 00:23:51 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3229 2023/05/21 00:28:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4489,3 +4489,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Pod-Spell to 1.26 [wen 2023-05-20]
 	Updated editors/xemacs-current to 21.5.35 [hauke 2023-05-21]
 	Updated textproc/p5-Pod-Weaver to 4.019 [wen 2023-05-21]
+	Updated textproc/p5-podlators to 5.01 [wen 2023-05-21]
