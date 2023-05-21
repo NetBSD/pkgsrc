@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/12/31 16:21:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/05/21 03:18:24 taca Exp $
 bin/asciidoctor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
@@ -39,6 +39,7 @@ ${GEM_LIBDIR}/data/locale/attributes-ru.adoc
 ${GEM_LIBDIR}/data/locale/attributes-sr.adoc
 ${GEM_LIBDIR}/data/locale/attributes-sr_Latn.adoc
 ${GEM_LIBDIR}/data/locale/attributes-sv.adoc
+${GEM_LIBDIR}/data/locale/attributes-sw.adoc
 ${GEM_LIBDIR}/data/locale/attributes-th.adoc
 ${GEM_LIBDIR}/data/locale/attributes-tr.adoc
 ${GEM_LIBDIR}/data/locale/attributes-uk.adoc
