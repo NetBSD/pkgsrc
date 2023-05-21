@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/16 21:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/21 05:55:39 wiz Exp $
 
 DISTNAME=	fcitx5-5.0.5
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://download.fcitx-im.org/fcitx5/fcitx5/
+HOMEPAGE=	https://github.com/fcitx/fcitx5
 COMMENT=	Input method framework with extension support
 LICENSE=	gnu-lgpl-v2.1
 
@@ -32,6 +32,7 @@ USE_CMAKE=		yes
 USE_TOOLS+=		bash:run pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+BUILD_DEFS+=		VARBASE
 
 REPLACE_BASH+=		data/fcitx5-diagnose.sh
 
@@ -58,7 +59,7 @@ SUBST_FILES.xdg=	data/CMakeLists.txt
 SUBST_SED.xdg=		-e 's,{CMAKE_INSTALL_FULL_SYSCONFDIR}/xdg/autostart,{CMAKE_INSTALL_PREFIX}/share/examples/fcitx5,'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
-CONF_FILES+=	${PREFIX}/share/examples/fcitx5/org.fcitx.Fcitx5.desktop	\
+CONF_FILES+=	${PREFIX}/share/examples/fcitx5/org.fcitx.Fcitx5.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/org.fcitx.Fcitx5.desktop
 
 pre-configure:
