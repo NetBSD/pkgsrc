@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/05/08 14:28:26 taca Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/21 05:36:10 wiz Exp $
 
 DISTNAME=	selenium-webdriver-4.9.1
 CATEGORIES=	www
@@ -15,10 +15,8 @@ USE_LANGUAGES=	# none
 
 CHECK_SHLIBS_SKIP=	${GEM_LIBDIR}/bin/*
 
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == "27"
-DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=3.2<4:../../textproc/ruby-rexml
-.endif
+RUBY_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
