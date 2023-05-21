@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3232 2023/05/21 02:39:47 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3233 2023/05/21 02:59:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/squid5 to 5.9 [taca 2023-05-21]
 	Updated devel/ruby-msgpack to 1.7.1 [taca 2023-05-21]
 	Updated devel/ruby-parser to 3.20.1 [taca 2023-05-21]
+	Updated devel/ruby-rgl to 0.6.3 [taca 2023-05-21]
