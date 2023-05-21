@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/02/04 13:57:06 taca Exp $
+# $NetBSD: Makefile,v 1.20 2023/05/21 03:09:35 taca Exp $
 
-DISTNAME=	inspec-core-5.21.29
+DISTNAME=	inspec-core-5.22.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
