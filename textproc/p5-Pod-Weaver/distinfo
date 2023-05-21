@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:22:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/21 00:21:53 wen Exp $
 
-BLAKE2s (Pod-Weaver-4.018.tar.gz) = d117cf05c660653f3af699b0d91c460f46bd7cdf3768af7504892f85e7fcc4ad
-SHA512 (Pod-Weaver-4.018.tar.gz) = fd8d2665866e4fb0606111ddeddfc992077b90419bb21905514590815594b0b918a98ccbfa92fa57a646b52a0a061a02e718926edd3a7dfed52977c00bd18472
-Size (Pod-Weaver-4.018.tar.gz) = 43480 bytes
+BLAKE2s (Pod-Weaver-4.019.tar.gz) = 242f5f7ea6710a6206eb215688ea7ab28246f58eb6acf5bf8168efbe204792b0
+SHA512 (Pod-Weaver-4.019.tar.gz) = f33130f0fdb81f219c9f41b0cd1ebc962ba28937f950b6b05e0245ee45650b09e2c37721989ba8ffb90779fc5912775f066f7826ffa3eb797b9b5af084372773
+Size (Pod-Weaver-4.019.tar.gz) = 43677 bytes
