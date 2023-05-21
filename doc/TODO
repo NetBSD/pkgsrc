@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22961 2023/05/21 17:38:02 wiz Exp $
+$NetBSD: TODO,v 1.22962 2023/05/21 17:41:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1202,8 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
-	o protobuf-22.3 [make sure net/grpc supports this version]
-	o protobuf-23.1
+	o protobuf-23.1 [make sure net/grpc supports this version]
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1212,7 +1211,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
-	o py-Glances-3.4.0.3
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
