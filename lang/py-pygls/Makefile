@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/05/05 09:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/05/21 18:47:56 wiz Exp $
 
-DISTNAME=	pygls-1.0.1
+DISTNAME=	pygls-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
@@ -15,7 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-lsprotocol-[0-9]*:../../lang/py-lsprotocol
 DEPENDS+=	${PYPKGPREFIX}-typeguard>=2.10.0:../../devel/py-typeguard
-#TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=4.0.3:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.18.3:../../devel/py-test-asyncio
