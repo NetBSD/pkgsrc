@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/08/08 09:28:06 fox Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/05/21 17:41:04 wiz Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -96,6 +96,9 @@ ${PYSITELIB}/glances/exports/glances_json.pyo
 ${PYSITELIB}/glances/exports/glances_kafka.py
 ${PYSITELIB}/glances/exports/glances_kafka.pyc
 ${PYSITELIB}/glances/exports/glances_kafka.pyo
+${PYSITELIB}/glances/exports/glances_mongodb.py
+${PYSITELIB}/glances/exports/glances_mongodb.pyc
+${PYSITELIB}/glances/exports/glances_mongodb.pyo
 ${PYSITELIB}/glances/exports/glances_mqtt.py
 ${PYSITELIB}/glances/exports/glances_mqtt.pyc
 ${PYSITELIB}/glances/exports/glances_mqtt.pyo
@@ -186,6 +189,18 @@ ${PYSITELIB}/glances/password_list.pyo
 ${PYSITELIB}/glances/plugins/__init__.py
 ${PYSITELIB}/glances/plugins/__init__.pyc
 ${PYSITELIB}/glances/plugins/__init__.pyo
+${PYSITELIB}/glances/plugins/containers/__init__.py
+${PYSITELIB}/glances/plugins/containers/__init__.pyc
+${PYSITELIB}/glances/plugins/containers/__init__.pyo
+${PYSITELIB}/glances/plugins/containers/glances_docker.py
+${PYSITELIB}/glances/plugins/containers/glances_docker.pyc
+${PYSITELIB}/glances/plugins/containers/glances_docker.pyo
+${PYSITELIB}/glances/plugins/containers/glances_podman.py
+${PYSITELIB}/glances/plugins/containers/glances_podman.pyc
+${PYSITELIB}/glances/plugins/containers/glances_podman.pyo
+${PYSITELIB}/glances/plugins/containers/stats_streamer.py
+${PYSITELIB}/glances/plugins/containers/stats_streamer.pyc
+${PYSITELIB}/glances/plugins/containers/stats_streamer.pyo
 ${PYSITELIB}/glances/plugins/glances_alert.py
 ${PYSITELIB}/glances/plugins/glances_alert.pyc
 ${PYSITELIB}/glances/plugins/glances_alert.pyo
@@ -198,6 +213,9 @@ ${PYSITELIB}/glances/plugins/glances_cloud.pyo
 ${PYSITELIB}/glances/plugins/glances_connections.py
 ${PYSITELIB}/glances/plugins/glances_connections.pyc
 ${PYSITELIB}/glances/plugins/glances_connections.pyo
+${PYSITELIB}/glances/plugins/glances_containers.py
+${PYSITELIB}/glances/plugins/glances_containers.pyc
+${PYSITELIB}/glances/plugins/glances_containers.pyo
 ${PYSITELIB}/glances/plugins/glances_core.py
 ${PYSITELIB}/glances/plugins/glances_core.pyc
 ${PYSITELIB}/glances/plugins/glances_core.pyo
@@ -207,9 +225,6 @@ ${PYSITELIB}/glances/plugins/glances_cpu.pyo
 ${PYSITELIB}/glances/plugins/glances_diskio.py
 ${PYSITELIB}/glances/plugins/glances_diskio.pyc
 ${PYSITELIB}/glances/plugins/glances_diskio.pyo
-${PYSITELIB}/glances/plugins/glances_docker.py
-${PYSITELIB}/glances/plugins/glances_docker.pyc
-${PYSITELIB}/glances/plugins/glances_docker.pyo
 ${PYSITELIB}/glances/plugins/glances_folders.py
 ${PYSITELIB}/glances/plugins/glances_folders.pyc
 ${PYSITELIB}/glances/plugins/glances_folders.pyo
