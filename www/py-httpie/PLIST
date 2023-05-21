@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/10/25 07:59:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/21 17:57:54 wiz Exp $
 bin/http-${PYVERSSUFFIX}
 bin/httpie-${PYVERSSUFFIX}
 bin/https-${PYVERSSUFFIX}
@@ -38,9 +38,21 @@ ${PYSITELIB}/httpie/cli/dicts.pyo
 ${PYSITELIB}/httpie/cli/exceptions.py
 ${PYSITELIB}/httpie/cli/exceptions.pyc
 ${PYSITELIB}/httpie/cli/exceptions.pyo
-${PYSITELIB}/httpie/cli/nested_json.py
-${PYSITELIB}/httpie/cli/nested_json.pyc
-${PYSITELIB}/httpie/cli/nested_json.pyo
+${PYSITELIB}/httpie/cli/nested_json/__init__.py
+${PYSITELIB}/httpie/cli/nested_json/__init__.pyc
+${PYSITELIB}/httpie/cli/nested_json/__init__.pyo
+${PYSITELIB}/httpie/cli/nested_json/errors.py
+${PYSITELIB}/httpie/cli/nested_json/errors.pyc
+${PYSITELIB}/httpie/cli/nested_json/errors.pyo
+${PYSITELIB}/httpie/cli/nested_json/interpret.py
+${PYSITELIB}/httpie/cli/nested_json/interpret.pyc
+${PYSITELIB}/httpie/cli/nested_json/interpret.pyo
+${PYSITELIB}/httpie/cli/nested_json/parse.py
+${PYSITELIB}/httpie/cli/nested_json/parse.pyc
+${PYSITELIB}/httpie/cli/nested_json/parse.pyo
+${PYSITELIB}/httpie/cli/nested_json/tokens.py
+${PYSITELIB}/httpie/cli/nested_json/tokens.pyc
+${PYSITELIB}/httpie/cli/nested_json/tokens.pyo
 ${PYSITELIB}/httpie/cli/options.py
 ${PYSITELIB}/httpie/cli/options.pyc
 ${PYSITELIB}/httpie/cli/options.pyo

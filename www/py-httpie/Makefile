@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/03/29 09:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/21 17:57:54 wiz Exp $
 
-DISTNAME=	httpie-3.2.1
+DISTNAME=	httpie-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
@@ -24,6 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin>=0.0.6:../../www/py-test-httpbin
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture>=0.0.6:../../devel/py-test-lazy-fixture
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
@@ -51,8 +52,8 @@ post-install:
 	${MV} ${bin}.1 ${bin}-${PYVERSSUFFIX}.1 || ${TRUE}
 .endfor
 
-# test status as of 3.1.0
-# 12 failed, 966 passed, 6 skipped, 1 xfailed, 327 warnings
+# test status as of 3.2.2
+# 20 failed, 1006 passed, 5 skipped, 3 xfailed, 395 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
