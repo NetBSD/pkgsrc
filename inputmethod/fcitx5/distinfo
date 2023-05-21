@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/12/18 11:41:39 nros Exp $
+$NetBSD: distinfo,v 1.8 2023/05/21 05:55:39 wiz Exp $
 
 BLAKE2s (en_dict-20121020.tar.gz) = 9945545f2402d0eb35bd46701e51f191da0b740854d0c8da11d7670aa1ad014f
 SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
@@ -11,5 +11,6 @@ SHA1 (patch-src_lib_fcitx-utils_endian__p.h) = dfc1ec5fdfacc589b2b0755066e8d3bc2
 SHA1 (patch-src_lib_fcitx-utils_library.cpp) = 89f5a45336823057fcaedb0b3dac5b546e15c537
 SHA1 (patch-src_lib_fcitx-utils_misc.cpp) = 3f7b13bea6fba8d59935465b3ede3732b1571c26
 SHA1 (patch-src_lib_fcitx_inputcontext__p.h) = 11c753f699ad1068e315797911864279b924e231
+SHA1 (patch-src_modules_dbus_dbusmodule.cpp) = 7e7e9afee1397afd088bc3f95d36c8597156d3f8
 SHA1 (patch-src_modules_spell_dict_CMakeLists.txt) = 3bbb67be4209af3d0cc50687c1f1be2ab8757c66
 SHA1 (patch-test_testdbus.cpp) = e20ca569ec6e79a7565471ebccd5fa54de645462
