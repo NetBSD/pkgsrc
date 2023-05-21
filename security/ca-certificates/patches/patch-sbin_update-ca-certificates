@@ -1,7 +1,10 @@
-$NetBSD: patch-sbin_update-ca-certificates,v 1.2 2022/06/12 07:05:30 kim Exp $
+$NetBSD: patch-sbin_update-ca-certificates,v 1.3 2023/05/21 16:33:50 kim Exp $
 
---- sbin/update-ca-certificates.orig	2021-10-16 16:09:43.000000000 +0000
-+++ sbin/update-ca-certificates	2022-06-12 16:09:43.000000000 +0000
+Add a configuration file for enabling CA certificate management in
+a system directory (such as /etc/openssl on NetBSD).
+
+--- sbin/update-ca-certificates.orig	2021-12-15 18:51:05.000000000 +0000
++++ sbin/update-ca-certificates	2023-05-21 15:58:00.334161148 +0000
 @@ -28,9 +28,23 @@
  CERTSDIR=/usr/share/ca-certificates
  LOCALCERTSDIR=/usr/local/share/ca-certificates
@@ -46,7 +49,7 @@ $NetBSD: patch-sbin_update-ca-certificates,v 1.2 2022/06/12 07:05:30 kim Exp $
 +  cat <<-EOF
 +	Please set ETCCERTSDIR to an absolute path in
 +	  $ETCCERTSDIRCONF
-+	and then run it again.
++	and then run update-ca-certificates again.
 +	EOF
 +  exit 1
 +  ;;
@@ -55,14 +58,3 @@ $NetBSD: patch-sbin_update-ca-certificates,v 1.2 2022/06/12 07:05:30 kim Exp $
  if [ ! -s "$CERTSCONF" ]
  then
    fresh=1
-@@ -81,8 +116,8 @@
- # Helper files.  (Some of them are not simple arrays because we spawn
- # subshells later on.)
- TEMPBUNDLE="${ETCCERTSDIR}/${CERTBUNDLE}.new"
--ADDED="$(mktemp --tmpdir "ca-certificates.tmp.XXXXXX")"
--REMOVED="$(mktemp --tmpdir "ca-certificates.tmp.XXXXXX")"
-+ADDED="$(mktemp -t "ca-certificates.tmp.XXXXXX")"
-+REMOVED="$(mktemp -t "ca-certificates.tmp.XXXXXX")"
- 
- # Adds a certificate to the list of trusted ones.  This includes a symlink
- # in /etc/ssl/certs to the certificate file and its inclusion into the
