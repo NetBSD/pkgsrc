@@ -1,7 +1,8 @@
-$NetBSD: patch-glances_plugins_glances__quicklook.py,v 1.3 2022/08/08 09:28:06 fox Exp $
+$NetBSD: patch-glances_plugins_glances__quicklook.py,v 1.4 2023/05/21 17:41:05 wiz Exp $
 
 It seems cpu_hz_current and cpu_hz is not available in NetBSD, so add additional
 check to see if the key exists.
+
 --- glances/plugins/glances_quicklook.py.orig	2022-07-28 16:12:29.000000000 +0000
 +++ glances/plugins/glances_quicklook.py
 @@ -64,10 +64,12 @@ class Plugin(GlancesPlugin):

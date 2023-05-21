@@ -1,6 +1,7 @@
-$NetBSD: patch-glances_plugins_glances__cpu.py,v 1.3 2022/11/12 06:19:26 fox Exp $
+$NetBSD: patch-glances_plugins_glances__cpu.py,v 1.4 2023/05/21 17:41:05 wiz Exp $
 
 Disable system call counts in BSD.
+
 --- glances/plugins/glances_cpu.py.orig	2022-11-03 14:30:13.000000000 +0000
 +++ glances/plugins/glances_cpu.py
 @@ -12,7 +12,7 @@
