@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3245 2023/05/21 12:20:53 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3246 2023/05/21 14:52:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4506,3 +4506,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-loofah to 2.21.3 [taca 2023-05-21]
 	Updated www/ruby-rouge to 4.1.1 [taca 2023-05-21]
 	Updated biology/biolibc-tools to 0.1.4.3 [bacon 2023-05-21]
+	Updated www/squidview to 0.86nb1 [taca 2023-05-21]
