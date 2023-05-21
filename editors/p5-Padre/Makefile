@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/29 21:15:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/05/21 05:30:40 wiz Exp $
 
 DISTNAME=	Padre-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -26,7 +26,7 @@ BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+=		p5-Test-Script>=1.07:../../devel/p5-Test-Script
 
 #DEPENDS+=	p5-ack>=1.86:../../textproc/p5-ack
-DEPENDS+=	p5-Algorithm-Diff>=1.1900:../../devel/p5-Algorithm-Diff
+DEPENDS+=	p5-Algorithm-Diff>=0:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-App-cpanminus>=0.9923:../../devel/p5-App-cpanminus
 DEPENDS+=	p5-CGI>=3.47:../../www/p5-CGI
 DEPENDS+=	p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny

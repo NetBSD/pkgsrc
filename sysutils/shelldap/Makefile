@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/05/21 05:30:39 wiz Exp $
 
 PKGNAME=	shelldap-1.5.1
 PKGREVISION=	4
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	p5-YAML-Syck>=1.15:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-Term-Shell>=0.02:../../devel/p5-Term-Shell
 #DEPENDS+=	{perl>=5.13.6,p5-Digest-MD5>=2.51}:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Algorithm-Diff>=1.1902:../../devel/p5-Algorithm-Diff
+DEPENDS+=	p5-Algorithm-Diff>=0:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-perl-ldap>=0.40.01:../../databases/p5-perl-ldap
 DEPENDS+= 	p5-Tie-IxHash>=1.23:../../devel/p5-Tie-IxHash
 
