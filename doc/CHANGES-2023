@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3248 2023/05/21 17:38:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3249 2023/05/21 17:41:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4509,3 +4509,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/squidview to 0.86nb1 [taca 2023-05-21]
 	Updated security/ca-certificates to 20230311 [kim 2023-05-21]
 	Updated converters/fribidi to 1.0.13 [wiz 2023-05-21]
+	Updated sysutils/py-Glances to 3.4.0.3 [wiz 2023-05-21]
