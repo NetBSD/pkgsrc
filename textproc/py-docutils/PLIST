@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/05/16 22:37:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2023/05/21 17:45:36 wiz Exp $
 bin/docutils-${PYVERSSUFFIX}
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
@@ -13,12 +13,9 @@ bin/rst2xetex-${PYVERSSUFFIX}
 bin/rst2xml-${PYVERSSUFFIX}
 bin/rstpep2html-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.html
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.html
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.html
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
@@ -421,6 +418,9 @@ ${PYSITELIB}/docutils/writers/null.pyo
 ${PYSITELIB}/docutils/writers/odf_odt/__init__.py
 ${PYSITELIB}/docutils/writers/odf_odt/__init__.pyc
 ${PYSITELIB}/docutils/writers/odf_odt/__init__.pyo
+${PYSITELIB}/docutils/writers/odf_odt/prepstyles.py
+${PYSITELIB}/docutils/writers/odf_odt/prepstyles.pyc
+${PYSITELIB}/docutils/writers/odf_odt/prepstyles.pyo
 ${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.py
 ${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.pyc
 ${PYSITELIB}/docutils/writers/odf_odt/pygmentsformatter.pyo
