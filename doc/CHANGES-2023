@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3255 2023/05/21 18:25:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3256 2023/05/21 18:34:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpie to 3.2.2 [wiz 2023-05-21]
 	Updated fonts/unifont to 15.0.02 [wiz 2023-05-21]
 	Updated lang/py-lsp-server to 1.7.3 [wiz 2023-05-21]
+	Updated print/texlab to 5.6.0 [wiz 2023-05-21]
