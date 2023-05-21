@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/02/04 13:57:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/21 03:09:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -195,6 +195,7 @@ ${GEM_LIBDIR}/lib/inspec/resources/mssql_sys_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql_session.rb
+${GEM_LIBDIR}/lib/inspec/resources/nftables.rb
 ${GEM_LIBDIR}/lib/inspec/resources/nginx.rb
 ${GEM_LIBDIR}/lib/inspec/resources/nginx_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/noop.rb
