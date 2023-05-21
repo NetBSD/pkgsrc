@@ -1,20 +1,10 @@
-$NetBSD: patch-configure.in,v 1.3 2022/07/07 08:13:50 nia Exp $
+$NetBSD: patch-configure.in,v 1.4 2023/05/21 18:35:57 abs Exp $
 
 - Add Sun Audio support.
-- Replace a GNU regex with a portable one.
 
---- configure.in.orig	2022-05-24 05:29:40.000000000 +0000
+--- configure.in.orig	2023-04-02 16:36:04.000000000 +0000
 +++ configure.in
-@@ -4270,7 +4270,7 @@ cairo-cocoa)
-     MOZ_USER_DIR="Mozilla"
-     MOZ_FS_LAYOUT=bundle
-     # skip event loop instrumentation on UIKit for now
--    if test "$MOZ_WIDGET_TOOLKIT" == "cocoa"; then
-+    if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
-       MOZ_INSTRUMENT_EVENT_LOOP=1
-     fi
-     ;;
-@@ -5395,6 +5395,13 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+@@ -5263,6 +5263,13 @@ if test -n "$MOZ_OMX_PLUGIN"; then
      fi
  fi
  
@@ -28,7 +18,7 @@ $NetBSD: patch-configure.in,v 1.3 2022/07/07 08:13:50 nia Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -5575,6 +5582,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
+@@ -5443,6 +5450,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
  fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
