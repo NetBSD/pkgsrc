@@ -1,5 +1,24 @@
-$NetBSD: distinfo,v 1.10 2022/01/16 14:32:01 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/21 06:27:31 wiz Exp $
 
 BLAKE2s (easyrpg-player-0.7.0.tar.xz) = c1e9805c977cde92314d10ed419c2ff26d63f48e946fe8152bc855e15cb6fa9e
 SHA512 (easyrpg-player-0.7.0.tar.xz) = 112543adf2e95d68842f21fabeddf9dc5abbf2b2a1b64a5d9da29bf4e2d31c7b85cfb596c453ff1773922260a8e6d7c1cad40ff7bf1d1054a876ec2f5ef24444
 Size (easyrpg-player-0.7.0.tar.xz) = 4845184 bytes
+SHA1 (patch-src_audio__generic.cpp) = 76191a584cfcd1586628841abe4017bade444fac
+SHA1 (patch-src_autobattle.cpp) = 1b87ac19f44cd6080cc5cea50fd739542acfbd8e
+SHA1 (patch-src_bitmap.cpp) = e9c05fa5743d0c40bf36de02a97d98dec41b5d7d
+SHA1 (patch-src_cache.cpp) = 3231d27a97e0374f95cf246a062e345f527f4299
+SHA1 (patch-src_dynrpg.cpp) = 99b238882e6564f61de62c7f6724f8638bf05012
+SHA1 (patch-src_dynrpg.h) = 3bc50392f13696df0e2e904f2f72c50984c258e0
+SHA1 (patch-src_enemyai.cpp) = 0d67b81d4a61a2567b4906e3a8ff2a75044b4061
+SHA1 (patch-src_filefinder.cpp) = 6c53511ddd1568f152d6259cf21b3e2aa7a99dd7
+SHA1 (patch-src_filefinder__rtp.cpp) = c67401a043bb2d3d84a4803afd9a8451ce693dd6
+SHA1 (patch-src_filesystem__root.cpp) = c5e35dc6660b1f46c55588d8564ab062efc24f30
+SHA1 (patch-src_game__character.cpp) = f0a8703d93ad158f19c59e7a01cefc9b2a9512c7
+SHA1 (patch-src_game__interpreter.cpp) = 142556d79cffcaa2875621c667cac8b68b9da9eb
+SHA1 (patch-src_game__interpreter__map.cpp) = 5bc2b652496ae9267601008df62841fc2a8dddb5
+SHA1 (patch-src_game__system.cpp) = acf994e16e723a29e56b20a4cb0e29e5736c83f8
+SHA1 (patch-src_meta.cpp) = 8d11b9811cd466b18c14f3ec84e21bff599efb2b
+SHA1 (patch-src_output.cpp) = 0a86385d32d008b37ca6bbf9be0c618b5e421c19
+SHA1 (patch-src_scene__battle__rpg2k.cpp) = 3df7de5bad294dc712575720368dc9c55dec67d3
+SHA1 (patch-src_scene__battle__rpg2k3.cpp) = 914273345c28c669a88414678fbc1c2c57fbab44
+SHA1 (patch-src_scene__debug.cpp) = db904615b52ced0971af0f18eb4c5abf7796b946
