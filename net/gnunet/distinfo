@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2023/04/05 10:16:34 nikita Exp $
+$NetBSD: distinfo,v 1.5 2023/05/21 20:09:08 nikita Exp $
 
 BLAKE2s (gnunet-0.19.4.tar.gz) = d4d7d30edf94477be7c2f6f7dce9f6d49c09804ec56710bdcbf685ff7ba525fe
 SHA512 (gnunet-0.19.4.tar.gz) = c994269e009c6a97860e1903e87ab08b6f79a8f5bb7c27261020e90d162f81d908fe42173969331f3cada2086df8a719caa62c46342d59d46a2b2dd2fb71efa1
 Size (gnunet-0.19.4.tar.gz) = 8985213 bytes
 SHA1 (patch-src_include_gnunet_common.h) = 44a0f31cd3d7fa4df5491cf9cf2efa31e695cdb9
-SHA1 (patch-src_setu_gnunet-service-setu.c) = 2e6c8eb895544fe79e27edec85e37379ec9b3783
+SHA1 (patch-src_setu_gnunet-service-setu.c) = f1ebdb55087f2cc3b344ad02ff8c54cc0c23aa02
