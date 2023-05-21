@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3263 2023/05/21 19:01:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3264 2023/05/21 19:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/py-tzlocal to 5.0.1 [wiz 2023-05-21]
 	Updated devel/py-setuptools to 67.8.0 [wiz 2023-05-21]
 	Updated math/double-conversion to 3.3.0 [wiz 2023-05-21]
+	Updated graphics/ImageMagick to 7.1.1.10 [wiz 2023-05-21]
