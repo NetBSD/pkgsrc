@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3259 2023/05/21 18:48:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3260 2023/05/21 18:54:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4520,3 +4520,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/arcticfox to 41.0 [abs 2023-05-21]
 	Updated devel/py-poetry to 1.5.0 [wiz 2023-05-21]
 	Updated lang/py-pygls to 1.0.2 [wiz 2023-05-21]
+	Updated net/py-txtorcon to 23.5.0 [wiz 2023-05-21]
