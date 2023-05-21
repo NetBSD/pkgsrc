@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/08/30 15:35:08 taca Exp $
+$NetBSD: distinfo,v 1.6 2023/05/21 03:21:58 taca Exp $
 
-BLAKE2s (rqrcode-2.1.2.gem) = 8035f1381e03a6cd3347cc636e0e0b3a98572b93314ac5768787fc2c21f379d4
-SHA512 (rqrcode-2.1.2.gem) = 0a17d6cafe66ff5c6f3f62f36714ee11a5ac28ddf2262a722704f6b16e2dca9b3d1b0024cae0f64be82ea0aa769dca79bb84bb1e03fabe49412c530556a1ddbe
-Size (rqrcode-2.1.2.gem) = 105472 bytes
+BLAKE2s (rqrcode-2.2.0.gem) = 3527066abf53b2b27c0ff4a8bf5a7abfe04fd0a780c56bcb1bece8ef42fb09ea
+SHA512 (rqrcode-2.2.0.gem) = 926a8d2154db9947a8d014153838a673089b93b918e479b6e9f6e3e99974a54ac4aced23740f0d0e0ac716980708df8c2b74d47c8dc0cef9d8b3b6fa8e2c76cb
+Size (rqrcode-2.2.0.gem) = 105984 bytes
