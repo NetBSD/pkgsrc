@@ -1,12 +1,12 @@
-$NetBSD: patch-lib-src_fakemail.c,v 1.1 2017/11/15 14:57:58 hauke Exp $
+$NetBSD: patch-lib-src_fakemail.c,v 1.2 2023/05/21 00:13:56 hauke Exp $
 
 Fix build on DragonFly.
 
 Was patch-aj
 
---- lib-src/fakemail.c.orig	2013-08-21 17:43:44.000000000 +0000
+--- lib-src/fakemail.c.orig	2023-05-13 18:09:52.000000000 +0000
 +++ lib-src/fakemail.c
-@@ -148,15 +148,13 @@ extern char *malloc (), *realloc ();
+@@ -140,16 +140,16 @@ static boolean no_problems = true;
  #include <osreldate.h>
  #endif
  
@@ -16,11 +16,13 @@ Was patch-aj
  #endif 
  
  #ifdef CURRENT_USER
- extern struct passwd *getpwuid ();
 -#if defined(__FreeBSD_version) && __FreeBSD_version >= 400000 
--extern uid_t geteuid (); 
++#if defined(__FreeBSD_version) && __FreeBSD_version >= 400000 || defined(__DragonFly__)
+ #include <sys/types.h>
+ #include <pwd.h>
+ #include <stdlib.h>
 -#else 
-+#if defined(__FreeBSD_version) && __FreeBSD_version < 400000 
++#else
  extern unsigned short geteuid (); 
  #endif 
  static struct passwd *my_entry;
