@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/07/17 02:58:32 tnn Exp $
+$NetBSD: distinfo,v 1.9 2023/05/21 16:33:50 kim Exp $
 
-BLAKE2s (ca-certificates_20211016.tar.xz) = ee1b82472068aef176dbc9dab2099848e299dbcc92ac309ba5a906a98414731d
-SHA512 (ca-certificates_20211016.tar.xz) = bedf072c8aa1b05b249ea272f5cecfe16bdcd762c02c712323f12ac7a278e8814453f5f3caad86a2581e451788b292ed3a76a6a81620926459bb890133cffde1
-Size (ca-certificates_20211016.tar.xz) = 239608 bytes
-SHA1 (patch-mozilla_certdata2pem.py) = e0752892bf93113bb4a6414f1bef98261a5b832a
-SHA1 (patch-sbin_update-ca-certificates) = e57e4c0ec2be335f6d901c865a7b0a33405fd7f2
+BLAKE2s (ca-certificates_20230311.tar.xz) = 41fb59d81073ce3a758c2fd38f4af420d54b32d367a616198d98a1cad1ec7549
+SHA512 (ca-certificates_20230311.tar.xz) = 00571bdc87897813fd7dbe024f3a186cfc9f0d4f55e92545a90888c9e5282f99cb8d75b5932c034731b911bf27a9b38fd7d062dd511eb1152acf8b2811490fa7
+Size (ca-certificates_20230311.tar.xz) = 257772 bytes
+SHA1 (patch-sbin_update-ca-certificates) = 036c25d5e048451917685e62dfddb81004453146
