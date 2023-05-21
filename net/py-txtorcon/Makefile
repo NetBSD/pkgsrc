@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/05/03 18:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/21 18:54:42 wiz Exp $
 
-DISTNAME=	txtorcon-23.0.0
+DISTNAME=	txtorcon-23.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txtorcon/}
@@ -23,6 +23,7 @@ CHECK_INTERPRETER_SKIP+=	share/txtorcon/examples/*
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# 2 failed, 678 passed, 2 skipped, 129 warnings
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
