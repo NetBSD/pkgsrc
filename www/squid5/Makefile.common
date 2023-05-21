@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2022/08/31 16:08:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/05/21 02:40:59 taca Exp $
 #
-# used by www/squid4/Makefile
+# used by www/squid5/Makefile
 
 SQUID_DATADIR=	${VARBASE}/squid
 
