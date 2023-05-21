@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3230 2023/05/21 02:19:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3231 2023/05/21 02:22:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4491,3 +4491,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Pod-Weaver to 4.019 [wen 2023-05-21]
 	Updated textproc/p5-podlators to 5.01 [wen 2023-05-21]
 	Updated www/squid5 to 5.9 [taca 2023-05-21]
+	Updated devel/ruby-msgpack to 1.7.1 [taca 2023-05-21]
