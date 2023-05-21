@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3253 2023/05/21 17:58:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3254 2023/05/21 18:06:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4514,3 +4514,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptodome to 3.18.0 [wiz 2023-05-21]
 	Updated textproc/py-docutils to 0.20.1 [wiz 2023-05-21]
 	Updated www/py-httpie to 3.2.2 [wiz 2023-05-21]
+	Updated fonts/unifont to 15.0.02 [wiz 2023-05-21]
