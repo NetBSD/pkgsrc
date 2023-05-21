@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3234 2023/05/21 03:03:28 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3235 2023/05/21 03:05:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4495,3 +4495,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-parser to 3.20.1 [taca 2023-05-21]
 	Updated devel/ruby-rgl to 0.6.3 [taca 2023-05-21]
 	Updated net/ruby-connection_pool to 2.4.1 [taca 2023-05-21]
+	Updated security/ruby-metasploit-payloads to 2.0.132 [taca 2023-05-21]
