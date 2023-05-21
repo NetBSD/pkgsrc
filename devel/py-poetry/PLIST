@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/17 20:55:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/21 18:45:07 wiz Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -118,8 +118,6 @@ ${PYSITELIB}/poetry/console/commands/source/remove.py
 ${PYSITELIB}/poetry/console/commands/source/remove.pyc
 ${PYSITELIB}/poetry/console/commands/source/show.py
 ${PYSITELIB}/poetry/console/commands/source/show.pyc
-${PYSITELIB}/poetry/console/commands/source/update.py
-${PYSITELIB}/poetry/console/commands/source/update.pyc
 ${PYSITELIB}/poetry/console/commands/update.py
 ${PYSITELIB}/poetry/console/commands/update.pyc
 ${PYSITELIB}/poetry/console/commands/version.py
@@ -160,8 +158,6 @@ ${PYSITELIB}/poetry/inspection/info.py
 ${PYSITELIB}/poetry/inspection/info.pyc
 ${PYSITELIB}/poetry/installation/__init__.py
 ${PYSITELIB}/poetry/installation/__init__.pyc
-${PYSITELIB}/poetry/installation/base_installer.py
-${PYSITELIB}/poetry/installation/base_installer.pyc
 ${PYSITELIB}/poetry/installation/chef.py
 ${PYSITELIB}/poetry/installation/chef.pyc
 ${PYSITELIB}/poetry/installation/chooser.py
@@ -170,8 +166,6 @@ ${PYSITELIB}/poetry/installation/executor.py
 ${PYSITELIB}/poetry/installation/executor.pyc
 ${PYSITELIB}/poetry/installation/installer.py
 ${PYSITELIB}/poetry/installation/installer.pyc
-${PYSITELIB}/poetry/installation/noop_installer.py
-${PYSITELIB}/poetry/installation/noop_installer.pyc
 ${PYSITELIB}/poetry/installation/operations/__init__.py
 ${PYSITELIB}/poetry/installation/operations/__init__.pyc
 ${PYSITELIB}/poetry/installation/operations/install.py
@@ -182,8 +176,6 @@ ${PYSITELIB}/poetry/installation/operations/uninstall.py
 ${PYSITELIB}/poetry/installation/operations/uninstall.pyc
 ${PYSITELIB}/poetry/installation/operations/update.py
 ${PYSITELIB}/poetry/installation/operations/update.pyc
-${PYSITELIB}/poetry/installation/pip_installer.py
-${PYSITELIB}/poetry/installation/pip_installer.pyc
 ${PYSITELIB}/poetry/installation/wheel_installer.py
 ${PYSITELIB}/poetry/installation/wheel_installer.pyc
 ${PYSITELIB}/poetry/json/__init__.py
@@ -241,6 +233,8 @@ ${PYSITELIB}/poetry/packages/__init__.py
 ${PYSITELIB}/poetry/packages/__init__.pyc
 ${PYSITELIB}/poetry/packages/dependency_package.py
 ${PYSITELIB}/poetry/packages/dependency_package.pyc
+${PYSITELIB}/poetry/packages/direct_origin.py
+${PYSITELIB}/poetry/packages/direct_origin.pyc
 ${PYSITELIB}/poetry/packages/locker.py
 ${PYSITELIB}/poetry/packages/locker.pyc
 ${PYSITELIB}/poetry/packages/package_collection.py
@@ -274,6 +268,10 @@ ${PYSITELIB}/poetry/puzzle/solver.pyc
 ${PYSITELIB}/poetry/puzzle/transaction.py
 ${PYSITELIB}/poetry/puzzle/transaction.pyc
 ${PYSITELIB}/poetry/py.typed
+${PYSITELIB}/poetry/pyproject/__init__.py
+${PYSITELIB}/poetry/pyproject/__init__.pyc
+${PYSITELIB}/poetry/pyproject/toml.py
+${PYSITELIB}/poetry/pyproject/toml.pyc
 ${PYSITELIB}/poetry/repositories/__init__.py
 ${PYSITELIB}/poetry/repositories/__init__.pyc
 ${PYSITELIB}/poetry/repositories/abstract_repository.py
@@ -306,6 +304,12 @@ ${PYSITELIB}/poetry/repositories/repository_pool.py
 ${PYSITELIB}/poetry/repositories/repository_pool.pyc
 ${PYSITELIB}/poetry/repositories/single_page_repository.py
 ${PYSITELIB}/poetry/repositories/single_page_repository.pyc
+${PYSITELIB}/poetry/toml/__init__.py
+${PYSITELIB}/poetry/toml/__init__.pyc
+${PYSITELIB}/poetry/toml/exceptions.py
+${PYSITELIB}/poetry/toml/exceptions.pyc
+${PYSITELIB}/poetry/toml/file.py
+${PYSITELIB}/poetry/toml/file.pyc
 ${PYSITELIB}/poetry/utils/__init__.py
 ${PYSITELIB}/poetry/utils/__init__.pyc
 ${PYSITELIB}/poetry/utils/_compat.py
@@ -336,6 +340,8 @@ ${PYSITELIB}/poetry/utils/shell.py
 ${PYSITELIB}/poetry/utils/shell.pyc
 ${PYSITELIB}/poetry/utils/source.py
 ${PYSITELIB}/poetry/utils/source.pyc
+${PYSITELIB}/poetry/utils/wheel.py
+${PYSITELIB}/poetry/utils/wheel.pyc
 ${PYSITELIB}/poetry/vcs/__init__.py
 ${PYSITELIB}/poetry/vcs/__init__.pyc
 ${PYSITELIB}/poetry/vcs/git/__init__.py
