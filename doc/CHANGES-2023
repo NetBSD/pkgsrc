@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3264 2023/05/21 19:21:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3265 2023/05/21 22:40:44 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4525,3 +4525,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 67.8.0 [wiz 2023-05-21]
 	Updated math/double-conversion to 3.3.0 [wiz 2023-05-21]
 	Updated graphics/ImageMagick to 7.1.1.10 [wiz 2023-05-21]
+	Updated devel/woboq_codebrowser to 2.1.20230517 [nikita 2023-05-21]
