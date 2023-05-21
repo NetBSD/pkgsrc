@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/04/17 20:55:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/21 18:45:07 wiz Exp $
 
-DISTNAME=	poetry-1.4.2
+DISTNAME=	poetry-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -65,14 +65,15 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
 .endif
 
 post-install:
-	# conflicts with py-poetry-core
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/poetry/__init__.py
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/poetry/__pycache__/__init__.*
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} poetry poetry-${PYVERSSUFFIX} || ${TRUE}
 
+# needs 'make install'
+# 6 failed, 1259 passed, 5 skipped, 4 errors
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
+# some tests use 'python'
+.include "../../lang/python/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
