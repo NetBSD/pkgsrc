@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22959 2023/05/21 06:44:50 wiz Exp $
+$NetBSD: TODO,v 1.22960 2023/05/21 14:17:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -384,6 +384,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
+	o ImageMagick-7.1.1.9
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -584,6 +585,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
+	o double-conversion-3.3.0
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
@@ -664,6 +666,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fribidi-1.0.13
 	o fricas-1.3.8
 	o frink-2.3.1a2
 	o ftplibpp-2.0.2
@@ -762,9 +765,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.55
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.22.3
 	o gthumb-3.4.0
 	o gtklevel9-5.1
 	o gtklife-5.2
@@ -932,6 +937,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.7 [breaks qt6-qttools-6.5.0]
+	o litehtml-0.8
 	o llvm-16.0.3
 	o lmbench-3
 	o log4cxx-0.11.0
@@ -1010,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netbt-hcidump-5.58
 	o nethack-3.6.7
 	o netramet-50
+	o nettle-3.9
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -1197,6 +1204,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profit-2.5.3
 	o proj-9.2.0
 	o protobuf-22.3 [make sure net/grpc supports this version]
+	o protobuf-23.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1205,15 +1213,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-Glances-3.4.0.3
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-astroid-2.15.5
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptodome-3.18.0
 	o py-django-4.1
 	o py-django-tagging-0.5.0
+	o py-docutils-0.20.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
@@ -1221,20 +1233,26 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gcovr-6.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
+	o py-httpie-3.2.2
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
+	o py-lsp-server-1.7.3
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.8.0
+	o py-poetry-1.5.0
 	o py-postgresql-5.1.2
+	o py-protobuf-4.23.1
 	o py-ptt-1.10.2
 	o py-py3c-1.3.1
+	o py-pygls-1.0.2
 	o py-pymc3-3.8
 	o py-qt6-6.4.2
 	o py-qtgraph-qt5-0.12.1
@@ -1242,12 +1260,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-requests-kerberos-0.14.0
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-67.8.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
+	o py-txtorcon-23.5.0
+	o py-tzlocal-5.0.1
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-wxWidgets-4.0.0
@@ -1415,6 +1436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-5.6.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
@@ -1438,6 +1460,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trojita-0.6
 	o ttftot42-0.4.1
 	o turba-4.2.12
+	o typst-0.4.0
 	o tyrquake-0.66
 	o uae-0.8.29
 	o ubs-0.20
@@ -1446,6 +1469,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o udunits-2.2.28
 	o ufoai-2.3.1
 	o unicode-screensaver-0.5.2
+	o unifont-15.0.02
 	o units-2.21
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
@@ -1461,7 +1485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vfu-4.09
 	o vicq-0.4.2
 	o vim-9.0
-	o vim-share-9.0.1561
+	o vim-share-9.0.1572
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-3.2.0
