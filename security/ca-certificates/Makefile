@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/10/19 13:56:32 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/21 16:33:50 kim Exp $
 
-PKGNAME=	ca-certificates-20211016
-PKGREVISION=	4
+PKGNAME=	ca-certificates-20230311
 DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
@@ -18,7 +17,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS=	echo:run find:run ln:run openssl:run rm:run sed:run sort:run wc:run
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/${PKGBASE}
 DATADIR=	${PREFIX}/share/${PKGBASE}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
@@ -61,13 +60,10 @@ CONF_FILES=		${EGDIR}/ca-certificates.conf \
 			${PKG_SYSCONFDIR}/ca-certificates-dir.conf
 
 pre-build:
-	@${CP} ${FILESDIR}/ca-certificates.conf ${FILESDIR}/ca-certificates-dir.conf \
+	${CP} ${FILESDIR}/ca-certificates.conf ${FILESDIR}/ca-certificates-dir.conf \
 	    ${FILESDIR}/README.pkgsrc ${WRKSRC}/
-	@${GREP} '^share/ca-certificates/' ${FILESDIR}/../PLIST \
+	${GREP} '^share/ca-certificates/' ${FILESDIR}/../PLIST \
 	    >> ${WRKSRC}/ca-certificates.conf
-
-post-extract:
-	${MV} ${WRKDIR}/work ${WRKSRC}
 
 post-install:
 	${INSTALL_MAN} \
