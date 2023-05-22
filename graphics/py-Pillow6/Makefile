@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/05/07 16:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/22 11:39:02 wiz Exp $
 
 DISTNAME=	Pillow-6.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
 
