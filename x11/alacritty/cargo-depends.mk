@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2023/03/28 20:27:11 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2023/05/22 17:50:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	android-activity-0.4.0
@@ -63,8 +63,8 @@ CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
 CARGO_CRATE_DEPENDS+=	gethostname-0.2.3
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.7
 CARGO_CRATE_DEPENDS+=	gl_generator-0.14.0
-CARGO_CRATE_DEPENDS+=	glutin-0.30.7
-CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.4.0
+CARGO_CRATE_DEPENDS+=	glutin-0.30.8
+CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.5.0
 CARGO_CRATE_DEPENDS+=	glutin_glx_sys-0.4.0
 CARGO_CRATE_DEPENDS+=	glutin_wgl_sys-0.4.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
@@ -146,7 +146,7 @@ CARGO_CRATE_DEPENDS+=	ryu-1.0.11
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scoped-tls-1.0.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
-CARGO_CRATE_DEPENDS+=	sctk-adwaita-0.5.3
+CARGO_CRATE_DEPENDS+=	sctk-adwaita-0.5.4
 CARGO_CRATE_DEPENDS+=	semver-1.0.14
 CARGO_CRATE_DEPENDS+=	serde-1.0.144
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.144
@@ -220,7 +220,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.42.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.42.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.36.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.1
-CARGO_CRATE_DEPENDS+=	winit-0.28.3
+CARGO_CRATE_DEPENDS+=	winit-0.28.6
 CARGO_CRATE_DEPENDS+=	winreg-0.10.1
 CARGO_CRATE_DEPENDS+=	wio-0.2.2
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
