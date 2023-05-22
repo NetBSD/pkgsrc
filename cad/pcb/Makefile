@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2023/01/29 21:15:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2023/05/22 11:38:59 wiz Exp $
 #
 
 DISTNAME=	pcb-4.1.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 

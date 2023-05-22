@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2023/01/29 21:18:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2023/05/22 11:39:04 wiz Exp $
 
 DISTNAME=	webalizer-2.23-08-src
 PKGNAME=	webalizer-2.23.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/
 EXTRACT_SUFX=	.tar.bz2
