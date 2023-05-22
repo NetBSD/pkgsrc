@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3994 2023/05/18 12:57:15 nikita Exp $
+# $NetBSD: Makefile,v 1.3995 2023/05/22 11:24:13 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -180,6 +180,7 @@ SUBDIR+=	bison
 SUBDIR+=	blame
 SUBDIR+=	blib
 SUBDIR+=	blosc
+SUBDIR+=	blosc2
 SUBDIR+=	bmake
 SUBDIR+=	bmkdep
 SUBDIR+=	boa-constructor
