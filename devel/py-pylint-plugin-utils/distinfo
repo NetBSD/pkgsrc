@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/05/19 20:40:04 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/05/22 07:19:32 adam Exp $
 
-BLAKE2s (pylint_plugin_utils-0.8.1.tar.gz) = b06e3d68a6641887f2545643836ba6d7322a325b0aa5af5e924d6e2697c38647
-SHA512 (pylint_plugin_utils-0.8.1.tar.gz) = d42bb732378798eafe5d8309e6a923e453ddaf3a5487b6525259b3341c2abe7fe69d0aa948e24b0aacad6b33fb297b9aeada154abca8e0a033bb7e4ea73a38e0
-Size (pylint_plugin_utils-0.8.1.tar.gz) = 10711 bytes
-SHA1 (patch-pyproject.toml) = 82fab15a9ccbf3691b5cea02b8b6af5ea5040661
+BLAKE2s (pylint_plugin_utils-0.8.2.tar.gz) = f4d183dd0a2b22610644c9ea987fef802c32fbfae1fc4942351e62af291aa422
+SHA512 (pylint_plugin_utils-0.8.2.tar.gz) = 096e3066b1308ba480c3c53ab8c119e73a8921ec95b6d9754826cee49dc2cd00782b3fd0e92e6f76a015d6063879c0d95f5e71d7d3ec2922ae1ae6bc1da1c458
+Size (pylint_plugin_utils-0.8.2.tar.gz) = 10674 bytes
