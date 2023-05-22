@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3265 2023/05/21 22:40:44 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3266 2023/05/22 07:40:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4526,3 +4526,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/double-conversion to 3.3.0 [wiz 2023-05-21]
 	Updated graphics/ImageMagick to 7.1.1.10 [wiz 2023-05-21]
 	Updated devel/woboq_codebrowser to 2.1.20230517 [nikita 2023-05-21]
+	Updated devel/py-pylint-plugin-utils to 0.8.2 [adam 2023-05-22]
+	Updated net/py-tldextract to 3.4.4 [adam 2023-05-22]
+	Updated sysutils/py-ansible-compat to 4.0.5 [adam 2023-05-22]
+	Updated sysutils/ansible-lint to 6.16.2 [adam 2023-05-22]
