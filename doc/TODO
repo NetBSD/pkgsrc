@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22978 2023/05/22 11:37:24 wiz Exp $
+$NetBSD: TODO,v 1.22979 2023/05/22 20:28:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -915,7 +915,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
-	o libproxy-0.5.0 [wip, https://github.com/libproxy/libproxy/issues/226]
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
