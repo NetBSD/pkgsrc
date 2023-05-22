@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/22 15:52:56 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/22 16:32:23 nikita Exp $
+bin/udevadm
 etc/udev/hwdb.d/20-OUI.hwdb
 etc/udev/hwdb.d/20-acpi-vendor.hwdb
 etc/udev/hwdb.d/20-bluetooth-vendor-product.hwdb
@@ -27,6 +28,45 @@ etc/udev/hwdb.d/70-pda.hwdb
 etc/udev/hwdb.d/70-pointingstick.hwdb
 etc/udev/hwdb.d/70-touchpad.hwdb
 etc/udev/hwdb.d/80-ieee1394-unit-function.hwdb
+etc/udev/udev.conf
 include/libudev.h
+include/udev.h
 lib/libudev.la
 lib/pkgconfig/libudev.pc
+lib/udev/ata_id
+lib/udev/cdrom_id
+lib/udev/collect
+lib/udev/dmi_memory_id
+lib/udev/fido_id
+lib/udev/mtd_probe
+lib/udev/rules.d/50-udev-default.rules
+lib/udev/rules.d/60-autosuspend.rules
+lib/udev/rules.d/60-block.rules
+lib/udev/rules.d/60-cdrom_id.rules
+lib/udev/rules.d/60-drm.rules
+lib/udev/rules.d/60-evdev.rules
+lib/udev/rules.d/60-fido-id.rules
+lib/udev/rules.d/60-input-id.rules
+lib/udev/rules.d/60-persistent-alsa.rules
+lib/udev/rules.d/60-persistent-input.rules
+lib/udev/rules.d/60-persistent-storage-tape.rules
+lib/udev/rules.d/60-persistent-v4l.rules
+lib/udev/rules.d/60-sensor.rules
+lib/udev/rules.d/60-serial.rules
+lib/udev/rules.d/64-btrfs.rules
+lib/udev/rules.d/70-camera.rules
+lib/udev/rules.d/70-joystick.rules
+lib/udev/rules.d/70-memory.rules
+lib/udev/rules.d/70-mouse.rules
+lib/udev/rules.d/70-touchpad.rules
+lib/udev/rules.d/75-net-description.rules
+lib/udev/rules.d/75-probe_mtd.rules
+lib/udev/rules.d/78-sound-card.rules
+lib/udev/rules.d/80-net-name-slot.rules
+lib/udev/rules.d/81-net-dhcp.rules
+lib/udev/scsi_id
+lib/udev/v4l_id
+sbin/udevadm
+sbin/udevd
+share/pkgconfig/udev.pc
+@pkgdir etc/udev/rules.d
