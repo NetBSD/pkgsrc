@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3276 2023/05/22 14:20:15 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3277 2023/05/22 15:53:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/binaryen to 113 [fcambus 2023-05-22]
 	Updated devel/wabt to 1.0.33 [fcambus 2023-05-22]
 	Updated shells/oh-my-posh to 16.8.0 [schmonz 2023-05-22]
+	Updated sysutils/libudev to 3.2.12 [nikita 2023-05-22]
