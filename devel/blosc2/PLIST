@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/22 11:24:13 adam Exp $
+include/b2nd.h
+include/blosc2.h
+include/blosc2/blosc2-common.h
+include/blosc2/blosc2-export.h
+include/blosc2/blosc2-stdio.h
+include/blosc2/codecs-registry.h
+include/blosc2/filters-registry.h
+include/blosc2/plugins-utils.h
+include/blosc2/tuners-registry.h
+lib/libblosc2.a
+lib/libblosc2.so
+lib/libblosc2.so.${PKGVERSION}
+lib/libblosc2.so.2
+lib/pkgconfig/blosc2.pc
