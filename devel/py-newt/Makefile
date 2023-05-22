@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/11/03 10:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2023/05/22 16:40:37 schmonz Exp $
 
 DISTNAME=	newt-0.52.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,11 @@ PYTHON_VERSIONS_ACCEPTED= 27
 pre-configure:
 	cd ${WRKSRC}; \
 	aclocal && autoconf
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	configure.ac
+SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		inst-po
 SUBST_STAGE.inst-po=	pre-build
