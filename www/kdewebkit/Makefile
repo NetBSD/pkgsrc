@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2023/05/06 19:08:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2023/05/22 21:00:08 wiz Exp $
 
 DISTNAME=	kdewebkit-${KF5VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 
 HOMEPAGE=	https://community.kde.org/Frameworks
