@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/08/24 09:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/22 12:18:32 adam Exp $
 
-DISTNAME=	sh-1.14.3
+DISTNAME=	sh-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sh/}
@@ -10,11 +10,14 @@ HOMEPAGE=	https://github.com/amoffat/sh
 COMMENT=	Python subprocess replacement
 LICENSE=	mit
 
-# some test failures, see https://github.com/amoffat/sh/issues/347
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
