@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/01/29 21:14:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/22 11:38:59 wiz Exp $
 
 DISTNAME=	libpuzzle-0.11
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/releases/
 EXTRACT_SUFX=	.tar.bz2
