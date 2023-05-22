@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3267 2023/05/22 08:05:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3268 2023/05/22 11:27:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4532,3 +4532,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.16.2 [adam 2023-05-22]
 	Updated net/libtorrent-rasterbar to 2.0.9 [adam 2023-05-22]
 	Updated devel/ccache to 4.8.1 [adam 2023-05-22]
+	Added devel/blosc2 version 2.9.2 [adam 2023-05-22]
+	Updated devel/py-faker to 18.9.0 [adam 2023-05-22]
