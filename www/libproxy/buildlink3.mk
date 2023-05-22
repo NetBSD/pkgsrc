@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/05/22 20:28:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/05/22 21:00:09 wiz Exp $
 
 BUILDLINK_TREE+=	libproxy
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libproxy
 LIBPROXY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.2.3
-BUILDLINK_ABI_DEPENDS.libproxy+=	libproxy>=0.4.11
+BUILDLINK_ABI_DEPENDS.libproxy+=	libproxy>=0.5.0
 BUILDLINK_PKGSRCDIR.libproxy?=		../../www/libproxy
 
 # before version 0.5, the header file was directly in include/proxy.h

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2023/04/19 08:08:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2023/05/22 21:00:10 wiz Exp $
 
 BUILDLINK_TREE+=	kwidgetsaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwidgetsaddons
 KWIDGETSADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwidgetsaddons+=	kwidgetsaddons>=5.18.0
-BUILDLINK_ABI_DEPENDS.kwidgetsaddons?=	kwidgetsaddons>=5.98.0nb4
+BUILDLINK_ABI_DEPENDS.kwidgetsaddons?=	kwidgetsaddons>=5.98.0nb6
 BUILDLINK_PKGSRCDIR.kwidgetsaddons?=	../../x11/kwidgetsaddons
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
