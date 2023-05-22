@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3278 2023/05/22 17:50:44 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3279 2023/05/22 20:28:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4546,3 +4546,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 16.8.0 [schmonz 2023-05-22]
 	Updated sysutils/libudev to 3.2.12 [nikita 2023-05-22]
 	Updated x11/alacritty to 0.12.1 [pin 2023-05-22]
+	Updated www/libproxy to 0.5.0 [wiz 2023-05-22]
