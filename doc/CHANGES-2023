@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3269 2023/05/22 11:37:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3270 2023/05/22 12:25:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4535,3 +4535,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/blosc2 version 2.9.2 [adam 2023-05-22]
 	Updated devel/py-faker to 18.9.0 [adam 2023-05-22]
 	Updated graphics/libimagequant to 4.2.0 [wiz 2023-05-22]
+	Updated sysutils/py-sh to 2.0.4 [adam 2023-05-22]
+	Updated devel/py-dotenv to 1.0.0 [adam 2023-05-22]
