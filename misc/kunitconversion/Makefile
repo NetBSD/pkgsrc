@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:08:31 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/05/22 21:00:04 wiz Exp $
 
 DISTNAME=	kunitconversion-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

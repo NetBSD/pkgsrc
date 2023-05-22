@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.177 2023/04/19 08:10:34 adam Exp $
+# $NetBSD: Makefile,v 1.178 2023/05/22 21:00:35 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../inputmethod/uim/Makefile.common"
 
 COMMENT=	Multilingual input method library

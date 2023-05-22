@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2023/04/19 08:08:49 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/05/22 21:00:09 wiz Exp $
 
 DISTNAME=	libmediawiki-5.37.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_KDE:=libmediawiki/}
 
