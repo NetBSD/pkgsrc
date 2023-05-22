@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/01/25 09:26:21 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/22 12:25:07 adam Exp $
 
-DISTNAME=	python-dotenv-0.21.1
+DISTNAME=	python-dotenv-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-dotenv/}
@@ -10,21 +10,23 @@ HOMEPAGE=	https://github.com/theskumar/python-dotenv
 COMMENT=	Add .env support to your django/flask apps
 LICENSE=	modified-bsd
 
+# cli
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-sh-[0-9]*:../../sysutils/py-sh
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-sh>=2:../../sysutils/py-sh
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.9:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} dotenv dotenv-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
