@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/18 11:24:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/05/22 12:46:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,7 @@ ${PYSITELIB}/dogpile/core.pyo
 ${PYSITELIB}/dogpile/lock.py
 ${PYSITELIB}/dogpile/lock.pyc
 ${PYSITELIB}/dogpile/lock.pyo
+${PYSITELIB}/dogpile/py.typed
 ${PYSITELIB}/dogpile/util/__init__.py
 ${PYSITELIB}/dogpile/util/__init__.pyc
 ${PYSITELIB}/dogpile/util/__init__.pyo
