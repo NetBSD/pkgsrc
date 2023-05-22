@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/10 17:39:09 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/05/22 15:52:56 nikita Exp $
 
-BLAKE2s (libudev-243.tar.gz) = 20cba7485046b0197a05508b1aa3bf026bab00482b6342dd94ea55bb9f980187
-SHA512 (libudev-243.tar.gz) = 33ee9849875fc381fc1bd9eef9119b96ed4014719ccf96f88c957e2c53ae6c46152bc0623e5efc99579a4063ab25251ed63ffe69441bca3b0074398cffda7747
-Size (libudev-243.tar.gz) = 2014826 bytes
+BLAKE2s (libudev-3.2.12.tar.gz) = 0f3aaf76b6056cc959dabb86e5edb43912907b031e8d039a59708c37769691fe
+SHA512 (libudev-3.2.12.tar.gz) = f0d3d6871d53a84ce91ed9354110d876bd1c370aa9b524c9b0419d466f935d673710cbc296a20f78bef342ab222a3d5ee1d9968545eb388e83ed84910fe4b200
+Size (libudev-3.2.12.tar.gz) = 2322106 bytes
