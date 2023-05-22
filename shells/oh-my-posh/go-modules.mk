@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2023/05/20 15:46:07 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.10 2023/05/22 14:20:09 schmonz Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
