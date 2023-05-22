@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/05/22 12:51:35 pin Exp $
+# $NetBSD: Makefile,v 1.56 2023/05/22 17:42:56 pin Exp $
 
 DISTNAME=	xplr-0.21.2
 CATEGORIES=	sysutils
@@ -19,9 +19,6 @@ INSTALLATION_DIRS=	share/examples/xplr share/applications share/icons/hicolor/sc
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
 
-#do-install:
-#	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xplr \
-		${DESTDIR}${PREFIX}/bin
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/init.lua \
 		${DESTDIR}${PREFIX}/share/examples/xplr
