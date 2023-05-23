@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/04/19 08:09:26 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/05/23 21:01:12 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	2
 COMMENT=	MySQL 8, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -75,7 +74,7 @@ SUBST_SED.perlpath=	-e 's,@PERL_PATH@,${PERL5},g'
 INSTALLATION_DIRS+=	bin
 TEST_TARGET=		test
 
-CMAKE_ARGS+=		-DWITHOUT_CLIENTLIBS="ON"
+CMAKE_ARGS+=		-DWITHOUT_CLIENTLIBS=ON
 
 post-extract:
 	${CP} ${FILESDIR}/ffsll.cc ${WRKSRC}/sql/

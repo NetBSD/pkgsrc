@@ -1,0 +1,48 @@
+$NetBSD: patch-utilities_CMakeLists.txt,v 1.1 2023/05/23 21:01:12 adam Exp $
+
+Split configuration between mysql-client and mysql-server.
+
+--- utilities/CMakeLists.txt.orig	2023-03-16 17:22:37.000000000 +0000
++++ utilities/CMakeLists.txt
+@@ -24,11 +24,18 @@ ADD_WSHADOW_WARNING()
+ DISABLE_MISSING_PROFILE_WARNING()
+ MSVC_CPPCHECK_DISABLE()
+ 
++IF(WITHOUT_SERVER)
++  SET(CLIENT_SKIP_INSTALL SKIP_INSTALL)
++ELSE()
++  SET(CLIENT_SKIP_INSTALL "")
++ENDIF()
++
+ IF(NOT CMAKE_CROSSCOMPILING)
+   MYSQL_ADD_EXECUTABLE(comp_err
+     comp_err.cc
+     COMPONENT Test
+     LINK_LIBRARIES mysys
++    ${CLIENT_SKIP_INSTALL}
+     )
+ ENDIF()
+ 
+@@ -117,12 +124,14 @@ MYSQL_ADD_EXECUTABLE(my_print_defaults
+   my_print_defaults.cc
+   COMPONENT Server
+   LINK_LIBRARIES mysys
++  ${CLIENT_SKIP_INSTALL}
+   )
+ MYSQL_ADD_EXECUTABLE(perror
+   perror.cc
+   COMPONENT Server
+   DEPENDENCIES GenError
+   LINK_LIBRARIES mysys
++  ${CLIENT_SKIP_INSTALL}
+   )
+ IF(WITH_LZ4 STREQUAL "bundled")
+   MYSQL_ADD_EXECUTABLE(lz4_decompress
+@@ -136,6 +145,7 @@ MYSQL_ADD_EXECUTABLE(zlib_decompress
+   zlib_decompress.cc
+   COMPONENT Server
+   LINK_LIBRARIES ext::zlib mysys
++  ${CLIENT_SKIP_INSTALL}
+   )
+ 
+ # All targets below belong to COMPONENT Server and depend on InnoDB.

@@ -1,31 +1,56 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2022/11/02 17:02:10 jperkin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/23 21:01:12 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
+Do not install documentation.
 
---- CMakeLists.txt.orig	2022-09-13 16:15:16.000000000 +0000
+--- CMakeLists.txt.orig	2023-03-16 17:22:37.000000000 +0000
 +++ CMakeLists.txt
-@@ -2192,8 +2192,9 @@ ADD_SUBDIRECTORY(utilities)
- ADD_SUBDIRECTORY(share)
+@@ -2185,11 +2185,12 @@ ENDIF()
+ 
+ ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(utilities)
+-ADD_SUBDIRECTORY(share)
  ADD_SUBDIRECTORY(libservices)
  
 -IF(NOT WITHOUT_SERVER)
 +IF(WITHOUT_SERVER)
++  ADD_SUBDIRECTORY(share)
    ADD_SUBDIRECTORY(testclients)
 +ELSE()
    ADD_SUBDIRECTORY(sql)
  ENDIF()
  
-@@ -2278,11 +2279,9 @@ IF(ENABLE_GCOV)
+@@ -2280,7 +2281,7 @@ IF(ENABLE_GCOV)
    INCLUDE(fastcov)
  ENDIF()
  
 -IF(UNIX)
-+IF(WITHOUT_SERVER)
++IF(UNIX AND WITHOUT_SERVER)
    ADD_SUBDIRECTORY(man)
--ENDIF()
--
--IF(NOT WITHOUT_SERVER)
-+ELSE()
-   ADD_SUBDIRECTORY(packaging/rpm-common)
-   ADD_SUBDIRECTORY(packaging/rpm-oel)
-   ADD_SUBDIRECTORY(packaging/rpm-fedora)
+ ENDIF()
+ 
+@@ -2314,6 +2315,7 @@ SET_PROPERTY(DIRECTORY APPEND PROPERTY A
+   "${CMAKE_BINARY_DIR}/library_output_directory"
+   )
+ 
++IF(HAVE_BUILD_ID_SUPPORT AND NOT WITHOUT_SERVER)
+ # Handle the "INFO_*" files.
+ INCLUDE(${CMAKE_BINARY_DIR}/info_macros.cmake)
+ # Source: This can be done during the cmake phase, all information is
+@@ -2327,7 +2329,6 @@ MY_ADD_CUSTOM_TARGET(INFO_SRC ALL
+   COMMENT "Generating Docs/INFO_SRC"
+ )
+ 
+-IF(HAVE_BUILD_ID_SUPPORT AND NOT WITHOUT_SERVER)
+   # Show it by default in pushuild, but not for developers.
+   IF(DEFINED ENV{PB2WORKDIR})
+     OPTION(SHOW_BUILD_ID "Show mysqld build id as final target" ON)
+@@ -2438,7 +2439,7 @@ ENDIF()
+ #
+ # RPM installs documentation directly from the source tree
+ #
+-IF(NOT INSTALL_LAYOUT MATCHES "RPM")
++IF(FALSE)
+   INSTALL(FILES
+     README
+     LICENSE
