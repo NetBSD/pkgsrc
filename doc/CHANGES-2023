@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3281 2023/05/23 07:55:24 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3282 2023/05/23 08:25:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4552,3 +4552,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-types-ujson to 5.7.0.5 [adam 2023-05-23]
 	Updated textproc/py-types-yaml to 6.0.12.10 [adam 2023-05-23]
 	Updated textproc/py-yamllint to 1.32.0 [adam 2023-05-23]
+	Updated graphics/libansilove to 1.4.0 [fcambus 2023-05-23]
