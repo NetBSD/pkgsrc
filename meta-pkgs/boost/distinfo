@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.143 2023/05/03 13:58:17 jperkin Exp $
+$NetBSD: distinfo,v 1.144 2023/05/23 18:23:43 tnn Exp $
 
 BLAKE2s (boost_1_82_0.tar.bz2) = 24d4a1b55cf43e5096242b3a19dd7da5c11900632a96a5ee1e245ddd937a0b73
 SHA512 (boost_1_82_0.tar.bz2) = 6fddc452ca67f99f5c181e21c73d96feb7346e10886477c91b4abc2cdf447750599e0d42f935ef591222200ef6c033de078a7ad2bb577c81fa56a249b17420cb
@@ -32,4 +32,5 @@ SHA1 (patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S) = daaa70c31f2ebc2c357
 SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = f4e9912a3101f10a3f7ac0151aac957f80fdc9cc
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 4b4a6698111042a3e54dc181b555516e0685796d
 SHA1 (patch-tools_build_src_engine_build.sh) = 7a756f04a2f11fd06bfa69c5d8ad160926f7da95
+SHA1 (patch-tools_build_src_tools_clang-darwin.jam) = 2025fe00e5f5317bcafdbd391e366927b1173b9d
 SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
