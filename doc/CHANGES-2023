@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3283 2023/05/23 08:26:46 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.3284 2023/05/23 09:14:33 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4554,3 +4554,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-yamllint to 1.32.0 [adam 2023-05-23]
 	Updated graphics/libansilove to 1.4.0 [fcambus 2023-05-23]
 	Updated graphics/ansilove to 4.2.0 [fcambus 2023-05-23]
+	Updated graphics/jpegoptim to 1.5.4 [fcambus 2023-05-23]
