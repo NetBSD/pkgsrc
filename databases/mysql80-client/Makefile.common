@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2023/01/24 21:42:47 he Exp $
+# $NetBSD: Makefile.common,v 1.8 2023/05/23 21:01:11 adam Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
 
-DISTNAME=	mysql-8.0.31
+DISTNAME=	mysql-8.0.33
 CATEGORIES=	databases
 MASTER_SITES=	https://cdn.mysql.com/Downloads/MySQL-8.0/
 DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -15,9 +15,8 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql80-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql80-client/patches
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++14
-USE_TOOLS+=		bash bison gmake perl:run
+USE_TOOLS+=		bash bison gmake perl:run pkg-config
 USE_GCC_RUNTIME=	yes
 USE_BUILTIN.libevent=	no
 
@@ -44,12 +43,6 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 BUILD_DEFS+=		VARBASE
 
-CONFIGURE_DIRS=		${WRKDIR}/build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-pre-configure:
-	${MKDIR} ${WRKDIR}/build
-
 # paths
 CMAKE_ARGS+=		-DINSTALL_DOCDIR="share/doc/mysql"
 CMAKE_ARGS+=		-DINSTALL_DOCREADMEDIR="share/doc/mysql"
@@ -67,8 +60,10 @@ CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 CMAKE_ARGS+=		-DROUTER_INSTALL_LOGROTATEDIR="share/mysql"
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-
 CMAKE_ARGS+=		-DLOCAL_BOOST_DIR="${WRKSRC}/boost"
+CMAKE_ARGS+=		-DWITH_BUILD_ID=OFF
+CMAKE_ARGS+=		-DWITH_CURL="system"
+CMAKE_ARGS+=		-DWITH_FIDO="system"
 CMAKE_ARGS+=		-DWITH_ICU="system"
 CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
@@ -79,7 +74,9 @@ CMAKE_ARGS+=		-DWITH_ZSTD="system"
 
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION}
+CMAKE_ARGS+=		-DSHOW_BUILD_ID=OFF
 CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
+CMAKE_ARGS+=		-DWITH_ROUTER=OFF
 CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
 
 CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
@@ -121,12 +118,15 @@ post-patch:
 	${ECHO} "#define alloca(sz) __builtin_alloca(sz)" > ${WRKSRC}/include/alloca.h
 .endif
 
-.include "../../mk/atomic64.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../security/libfido2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
+.include "../../mk/curses.buildlink3.mk"
