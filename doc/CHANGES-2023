@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3287 2023/05/23 20:28:01 osa Exp $
+$NetBSD: CHANGES-2023,v 1.3288 2023/05/23 21:01:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4558,3 +4558,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/nettle to 3.9 [wiz 2023-05-23]
 	Updated comms/libhidapi to 0.14.0 [nikita 2023-05-23]
 	Updated www/nginx-devel to 1.25.0 [osa 2023-05-23]
+	Updated databases/mysql80-client to 8.0.33 [adam 2023-05-23]
+	Updated databases/mysql80-server to 8.0.33 [adam 2023-05-23]
