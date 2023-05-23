@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/04/26 10:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/05/23 07:08:15 tnn Exp $
 
 DISTNAME=	libgit2-1.6.4
 CATEGORIES=	devel
@@ -17,6 +17,8 @@ CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
 
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/libgit2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 do-test:
 	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ctest
