@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/08/01 10:08:09 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/23 13:25:32 wiz Exp $
 
-DISTNAME=	nettle-3.8.1
+DISTNAME=	nettle-3.9
 CATEGORIES=	security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/
 MASTER_SITES+=	ftp://ftp.lysator.liu.se/pub/security/lsh/
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-shared
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 

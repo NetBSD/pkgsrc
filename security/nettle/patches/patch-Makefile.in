@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.10 2022/07/03 09:46:45 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.11 2023/05/23 13:25:32 wiz Exp $
 
 Use LIBTOOL.
 
---- Makefile.in.orig	2022-06-02 17:57:16.000000000 +0000
+--- Makefile.in.orig	2023-05-14 15:03:43.000000000 +0000
 +++ Makefile.in
 @@ -26,7 +26,7 @@ include config.make
  PRE_CPPFLAGS = -I.
@@ -13,7 +13,7 @@ Use LIBTOOL.
  SHLIBTARGETS = @IF_SHARED@ $(LIBNETTLE_FORLINK) @IF_HOGWEED@ $(LIBHOGWEED_FORLINK)
  
  getopt_SOURCES = getopt.c getopt1.c
-@@ -276,24 +276,24 @@ nettle_OBJS = $(nettle_SOURCES:.c=.$(OBJ
+@@ -285,24 +285,24 @@ nettle_OBJS = $(nettle_SOURCES:.c=.$(OBJ
  hogweed_OBJS = $(hogweed_SOURCES:.c=.$(OBJEXT)) \
  	       $(OPT_HOGWEED_OBJS) @IF_MINI_GMP@ mini-gmp.$(OBJEXT)
  
@@ -39,7 +39,7 @@ Use LIBTOOL.
  
  %.$(OBJEXT): %.asm $(srcdir)/m4-utils.m4 $(srcdir)/asm.m4 config.m4 machine.m4
  	$(M4) $(srcdir)/m4-utils.m4 $(srcdir)/asm.m4 config.m4 machine.m4 $< >$*.s
--	$(COMPILE) -c $*.s
+-	$(COMPILE) $(ASM_FLAGS) -c $*.s
 +	${LIBTOOL} --mode=compile $(COMPILE) -c $*.s
  
  %.$(OBJEXT): %.c
@@ -48,7 +48,7 @@ Use LIBTOOL.
  	&& $(DEP_PROCESS)
  
  # Rules building shared libraries.
-@@ -484,7 +484,7 @@ install-here: install-doc install-header
+@@ -493,7 +493,7 @@ install-here: install-doc install-header
  install-static: $(LIBTARGETS)
  	$(MKDIR_P) $(DESTDIR)$(libdir)
  	for f in $(LIBTARGETS); do \
