@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/01/23 21:39:11 bacon Exp $
+# $NetBSD: Makefile,v 1.88 2023/05/23 23:19:57 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -75,6 +75,7 @@ SUBDIR+=	racon
 SUBDIR+=	rasmol
 SUBDIR+=	rna-seq
 SUBDIR+=	samtools
+SUBDIR+=	seqtk
 SUBDIR+=	sewer
 SUBDIR+=	stacks
 SUBDIR+=	stride
