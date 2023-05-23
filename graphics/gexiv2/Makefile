@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/05/17 10:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/05/23 13:25:24 tnn Exp $
 
 DISTNAME=	gexiv2-0.14.1
 CATEGORIES=	graphics devel
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	pkg-config
+
+MESON_ARGS+=	-Dcpp_std=c++11
 
 PKGCONFIG_OVERRIDE=	gexiv2.pc.in
 
