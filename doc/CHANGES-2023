@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3289 2023/05/23 21:56:01 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3290 2023/05/23 21:56:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mysql80-client to 8.0.33 [adam 2023-05-23]
 	Updated databases/mysql80-server to 8.0.33 [adam 2023-05-23]
 	Updated lang/erlang to 26.0 [wiz 2023-05-23]
+	Updated lang/erlang-man to 26.0 [wiz 2023-05-23]
