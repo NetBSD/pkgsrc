@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3279 2023/05/22 20:28:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3280 2023/05/23 06:42:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/libudev to 3.2.12 [nikita 2023-05-22]
 	Updated x11/alacritty to 0.12.1 [pin 2023-05-22]
 	Updated www/libproxy to 0.5.0 [wiz 2023-05-22]
+	Updated graphics/pngquant to 3.0.1 [wiz 2023-05-23]
