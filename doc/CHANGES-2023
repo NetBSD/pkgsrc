@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3292 2023/05/23 22:32:16 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3293 2023/05/23 23:19:39 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/erlang-man to 26.0 [wiz 2023-05-23]
 	Updated lang/erlang-doc to 26.0 [wiz 2023-05-23]
 	Added x11/i3lock-color version 2.13.c.4 [nikita 2023-05-23]
+	Added biology/seqtk version 1.4 [bacon 2023-05-23]
