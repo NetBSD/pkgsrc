@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/23 23:19:31 bacon Exp $
+bin/seqtk
