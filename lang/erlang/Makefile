@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2023/04/27 13:15:55 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2023/05/23 21:55:50 wiz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -40,8 +40,6 @@ CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
-# https://github.com/erlang/otp/issues/6909
-CONFIGURE_ARGS.NetBSD+=	--disable-jit
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 
