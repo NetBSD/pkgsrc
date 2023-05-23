@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2023/04/28 16:01:30 gutteridge Exp $
+$NetBSD: distinfo,v 1.41 2023/05/23 21:55:50 wiz Exp $
 
-BLAKE2s (erlang/otp_doc_man_25.3.tar.gz) = 3f06750aba9b5543737f4fcc2af79b8249d0ddce914ca2233261829600e329ff
-SHA512 (erlang/otp_doc_man_25.3.tar.gz) = 433a34e7c4c01c24ca8a43e285c7e89a14db24f35fd1e25fa236c600989e088ad2bcc6df30e8feb39d3c9ba81048398bef078260ff9dd905c35a2854fafd9682
-Size (erlang/otp_doc_man_25.3.tar.gz) = 1715883 bytes
+BLAKE2s (erlang/otp_doc_man_26.0.tar.gz) = 24d41949a26f46a217a733cce5d2906cf0821992b419bb490be0d0547444f2aa
+SHA512 (erlang/otp_doc_man_26.0.tar.gz) = 34f02b61ecb59ba95eeeb08e06c3b84de59e8bf98eb4eb18750738f5e1fad272f27d8c5ee27e5f071d7a66d220eff00d76cfc5363dbb4f8fd1ec2e382be2f82f
+Size (erlang/otp_doc_man_26.0.tar.gz) = 1739379 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/10/15 18:08:06 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.29 2023/05/23 21:55:50 wiz Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -17,6 +17,7 @@ lib/erlang/man/man1/typer.1
 lib/erlang/man/man1/werl.1
 lib/erlang/man/man3/alarm_handler.3
 lib/erlang/man/man3/application.3
+lib/erlang/man/man3/argparse.3
 lib/erlang/man/man3/array.3
 lib/erlang/man/man3/asn1ct.3
 lib/erlang/man/man3/atomics.3
@@ -69,6 +70,7 @@ lib/erlang/man/man3/disk_log.3
 lib/erlang/man/man3/disksup.3
 lib/erlang/man/man3/driver_entry.3
 lib/erlang/man/man3/dyntrace.3
+lib/erlang/man/man3/edlin_expand.3
 lib/erlang/man/man3/edoc.3
 lib/erlang/man/man3/edoc_doclet.3
 lib/erlang/man/man3/edoc_doclet_chunks.3
@@ -116,7 +118,6 @@ lib/erlang/man/man3/erpc.3
 lib/erlang/man/man3/error_handler.3
 lib/erlang/man/man3/error_logger.3
 lib/erlang/man/man3/erts_alloc.3
-lib/erlang/man/man3/erts_alloc_config.3
 lib/erlang/man/man3/et.3
 lib/erlang/man/man3/et_collector.3
 lib/erlang/man/man3/et_selector.3
@@ -295,7 +296,6 @@ lib/erlang/man/man3/ttb.3
 lib/erlang/man/man3/unicode.3
 lib/erlang/man/man3/unix_telnet.3
 lib/erlang/man/man3/uri_string.3
-lib/erlang/man/man3/user.3
 lib/erlang/man/man3/win32reg.3
 lib/erlang/man/man3/wrap_log_reader.3
 lib/erlang/man/man3/wx.3
