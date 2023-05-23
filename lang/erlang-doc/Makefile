@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2022/12/27 16:50:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/23 21:55:50 wiz Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_doc_html_/erlang-doc-/}
 CATEGORIES=		lang
-MASTER_SITES=		https://www.erlang.org/download/
+MASTER_SITES+=		${MASTER_SITE_GITHUB:=erlang/otp/releases/download/OTP-26.0/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.erlang.org/
