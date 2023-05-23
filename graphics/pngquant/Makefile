@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.14 2023/05/22 11:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/23 06:42:08 wiz Exp $
 
-DISTNAME=	pngquant-2.18.0-src
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	3
+DISTNAME=	pngquant-3.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://pngquant.org/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kornelski/}
+# does not contain the git submodules, please update GITHUB_SUBMODULES below
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pngquant.org/
 COMMENT=	Command-line utility for lossy compression of PNG images
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+GITHUB_SUBMODULES=	ImageOptim libimagequant 9f15d1c lib
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-HAS_CONFIGURE=	yes
-CONFIG_SHELL=	${TOOLS_PATH.bash}
-USE_LANGUAGES=	c c99
-USE_TOOLS+=	gmake pkg-config bash
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.lcms2}/lib
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-libimagequant=${BUILDLINK_PREFIX.libimagequant}
-INSTALL_MAKE_FLAGS+=	MANPREFIX=${DESTDIR}${PREFIX}/${PKGMANDIR}
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/pngquant.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../graphics/libimagequant/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "cargo-depends.mk"
+
+.include "../../lang/rust/cargo.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
