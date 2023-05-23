@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/05/18 09:04:59 nikita Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/23 17:54:04 nikita Exp $
 
 GITHUB_PROJECT=	hidapi
-GITHUB_TAG=	${GITHUB_PROJECT}-0.13.1
+GITHUB_TAG=	${GITHUB_PROJECT}-0.14.0
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	comms devel
@@ -23,6 +23,8 @@ PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi.pc.in
 
 PLIST_VARS+=	libusb hidraw
+
+PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
