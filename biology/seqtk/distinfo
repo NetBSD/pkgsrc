@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/05/23 23:19:31 bacon Exp $
+
+BLAKE2s (seqtk-1.4.tar.gz) = e5003661166ace64fdaf3856e23d13163ebe2d5aa3f7a684ff44f76abca5768b
+SHA512 (seqtk-1.4.tar.gz) = d94ff75e23c9c63c948fd5ba23b52ca29df709c2fef76ee201342b4f32c53cf79366b55f05a689071d1b35770e01344787a87ce590b86c542ddc7c4ae393c8a1
+Size (seqtk-1.4.tar.gz) = 23748 bytes
+SHA1 (patch-Makefile) = 73432a36f982aede58914b6e0b1e0fc8e6a77b23
