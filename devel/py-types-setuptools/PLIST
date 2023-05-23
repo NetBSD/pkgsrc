@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/26 13:38:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/05/23 07:47:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,8 @@ ${PYSITELIB}/pkg_resources-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cmd.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/command/bdist_rpm.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/command/build.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_clib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_ext.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_py.pyi
@@ -26,12 +28,16 @@ ${PYSITELIB}/setuptools-stubs/archive_util.pyi
 ${PYSITELIB}/setuptools-stubs/build_meta.pyi
 ${PYSITELIB}/setuptools-stubs/command/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/command/alias.pyi
+${PYSITELIB}/setuptools-stubs/command/bdist_egg.pyi
+${PYSITELIB}/setuptools-stubs/command/bdist_rpm.pyi
+${PYSITELIB}/setuptools-stubs/command/build.pyi
 ${PYSITELIB}/setuptools-stubs/command/build_clib.pyi
 ${PYSITELIB}/setuptools-stubs/command/build_ext.pyi
 ${PYSITELIB}/setuptools-stubs/command/build_py.pyi
 ${PYSITELIB}/setuptools-stubs/command/develop.pyi
 ${PYSITELIB}/setuptools-stubs/command/dist_info.pyi
 ${PYSITELIB}/setuptools-stubs/command/easy_install.pyi
+${PYSITELIB}/setuptools-stubs/command/editable_wheel.pyi
 ${PYSITELIB}/setuptools-stubs/command/egg_info.pyi
 ${PYSITELIB}/setuptools-stubs/command/install.pyi
 ${PYSITELIB}/setuptools-stubs/command/install_egg_info.pyi
@@ -45,9 +51,13 @@ ${PYSITELIB}/setuptools-stubs/command/setopt.pyi
 ${PYSITELIB}/setuptools-stubs/command/test.pyi
 ${PYSITELIB}/setuptools-stubs/command/upload.pyi
 ${PYSITELIB}/setuptools-stubs/command/upload_docs.pyi
-${PYSITELIB}/setuptools-stubs/config.pyi
+${PYSITELIB}/setuptools-stubs/config/__init__.pyi
+${PYSITELIB}/setuptools-stubs/config/expand.pyi
+${PYSITELIB}/setuptools-stubs/config/pyprojecttoml.pyi
+${PYSITELIB}/setuptools-stubs/config/setupcfg.pyi
 ${PYSITELIB}/setuptools-stubs/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/depends.pyi
+${PYSITELIB}/setuptools-stubs/discovery.pyi
 ${PYSITELIB}/setuptools-stubs/dist.pyi
 ${PYSITELIB}/setuptools-stubs/errors.pyi
 ${PYSITELIB}/setuptools-stubs/extension.pyi
@@ -55,10 +65,12 @@ ${PYSITELIB}/setuptools-stubs/extern/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/glob.pyi
 ${PYSITELIB}/setuptools-stubs/installer.pyi
 ${PYSITELIB}/setuptools-stubs/launch.pyi
+${PYSITELIB}/setuptools-stubs/logging.pyi
 ${PYSITELIB}/setuptools-stubs/monkey.pyi
 ${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
 ${PYSITELIB}/setuptools-stubs/package_index.pyi
+${PYSITELIB}/setuptools-stubs/py312compat.pyi
 ${PYSITELIB}/setuptools-stubs/sandbox.pyi
 ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
 ${PYSITELIB}/setuptools-stubs/version.pyi
