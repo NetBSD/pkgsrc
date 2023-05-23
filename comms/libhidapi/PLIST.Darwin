@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2023/05/18 09:04:59 nikita Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2023/05/23 17:54:04 nikita Exp $
 include/hidapi/hidapi_darwin.h
-lib/libhidapi.0.13.1dylib
+lib/libhidapi.${PKGVERSION}dylib
 lib/libhidapi.0.dylib
 lib/libhidapi.dylib
 lib/pkgconfig/hidapi.pc
