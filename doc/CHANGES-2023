@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3296 2023/05/24 08:15:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3297 2023/05/24 08:52:12 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed chat/irssi-xmpp [wiz 2023-05-24]
 	Updated audio/opencore-amr to 0.1.6 [adam 2023-05-24]
 	Updated audio/fdk-aac to 2.0.2 [adam 2023-05-24]
+	Updated sysutils/zabbix60-server to 6.0.17 [otis 2023-05-24]
