@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3318 2023/05/24 22:17:45 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3319 2023/05/24 22:43:43 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4594,3 +4594,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine50 to 5.0.5nb2 [triaxx 2023-05-24]
 	mk: switched USE_PKG_ADMIN_DIGEST to yes [wiz 2023-05-24]
 	Updated graphics/mate-themes to 3.22.24 [gutteridge 2023-05-24]
+	Updated sysutils/lnav to 0.11.1nb2 [he 2023-05-24]
