@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.139 2023/05/22 11:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2023/05/24 17:14:52 wiz Exp $
 
 DISTNAME=	libgd-2.3.3
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 GITHUB_PROJECT=	libgd
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
-CONFIGURE_ARGS+=	--with-liq=${BUILDLINK_PREFIX.libimagequant}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-webp=${BUILDLINK_PREFIX.libwebp}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
@@ -35,7 +34,6 @@ PKGCONFIG_OVERRIDE+=	config/gdlib.pc.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
