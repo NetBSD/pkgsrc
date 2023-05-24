@@ -1,7 +1,14 @@
-$NetBSD: distinfo,v 1.7 2023/01/17 10:18:33 wiz Exp $
+$NetBSD: distinfo,v 1.8 2023/05/24 22:42:53 he Exp $
 
 BLAKE2s (lnav-0.11.1.tar.bz2) = c58a9823d4a50704cad901eb5be99c13c97a605a22db87eb0ebdea7ca283ae6a
 SHA512 (lnav-0.11.1.tar.bz2) = b0db44b02f8b98e9b383e258c1ab228f9c704b5e345583b2ce2d2f68b0519926779d798dc2e61a17af112a371a437c6766b2644fbb92b5f77938f9015ea31fe8
 Size (lnav-0.11.1.tar.bz2) = 2268080 bytes
+SHA1 (patch-src_base_strnatcmp.c) = 8a258fa07e9b6d495edfd239d7ab6ef0bcfbe1da
+SHA1 (patch-src_command__executor.cc) = baf8ad475826c8c93d1280ce2cd921ceab7b3a6f
+SHA1 (patch-src_lnav__commands.cc) = 597c3e23b4b2998b3c001ff5511288269c3bf4b3
+SHA1 (patch-src_ptimec.hh) = f9f10f0c5156907bb4d993d9e51ba20c4fcd83ff
+SHA1 (patch-src_spectro__source.cc) = 66ca4eb992a0c8aec433245bd6faab622c82f2d2
 SHA1 (patch-src_test__override.c) = ea392929f3874ff6ef0eea0002139acb14ad9166
+SHA1 (patch-src_third-party_ArenaAlloc_arenaallocimpl.h) = cdd8c1d6c5c1c39bf7f00770101163080019bf7a
 SHA1 (patch-src_third-party_rapidyaml_ryml__all.hpp) = 9d9a5dee02d7da42841d3fec7021c6de8f352e4a
+SHA1 (patch-src_vtab__module.hh) = c14c3439e63f0a4be0ba581712d052669a509a52

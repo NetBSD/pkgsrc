@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/04/19 08:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/05/24 22:42:53 he Exp $
 
 DISTNAME=	lnav-0.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tstack/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,8 +13,12 @@ COMMENT=	Log file navigator, an enhanced log viewer
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	bash:build gmake
+
+# Force it -- configure thinks it can build with c++14
+# but the program uses alloca() so depends on the gnu feature set
+BUILDLINK_TRANSFORM+=	opt:-std=c++14:-std=gnu++14
 
 GCC_REQD+=	8
 
