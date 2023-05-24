@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2023/05/22 20:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/05/24 17:07:10 wiz Exp $
 
-DISTNAME=	libproxy-0.5.0
+DISTNAME=	libproxy-0.5.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libproxy/}
-GITHUB_TAG=	${DISTNAME}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libproxy.github.io/libproxy/
@@ -22,8 +22,9 @@ REPLACE_BASH+=	data/check-code-style
 REPLACE_BASH+=	data/install-git-hook.sh
 REPLACE_BASH+=	data/pre-commit-hook
 
-# see libsoup comment below
-MESON_ARGS+=	-Dtests=false
+# shouldn't be necessary, but is?
+# https://github.com/libproxy/libproxy/issues/237
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/libproxy
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -32,9 +33,6 @@ MESON_ARGS+=	-Dtests=false
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/libduktape/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-# needed for tests, but causes dependency loop via
-# libsoup3 -> glib-networking -> libproxy
-#.include "../../net/libsoup3/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
