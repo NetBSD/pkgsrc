@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3315 2023/05/24 17:07:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3316 2023/05/24 18:21:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4591,3 +4591,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-highlight to 4.6 [schmonz 2023-05-24]
 	Updated biology/fasda to 0.1.2.30 [bacon 2023-05-24]
 	Updated www/libproxy to 0.5.1 [wiz 2023-05-24]
+	Updated devel/ruby-redmine50 to 5.0.5nb2 [triaxx 2023-05-24]
