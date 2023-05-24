@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/04/27 13:56:06 taca Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/24 18:21:20 triaxx Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -18,6 +18,8 @@ NO_BUILD=	yes
 RUBY_VERSIONS_ACCEPTED=	27 30 31
 
 RUBY_RAILS_ACCEPTED=	61
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 nokogiri>=1.13.4
 
@@ -114,4 +116,5 @@ post-install: unicorn-post-install
 		${DESTDIR}/${EGDIR}
 
 .include "../../devel/ruby-redmine/redmine.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
