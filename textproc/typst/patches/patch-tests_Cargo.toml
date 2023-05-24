@@ -1,12 +1,12 @@
-$NetBSD: patch-tests_Cargo.toml,v 1.2 2023/04/27 12:26:35 wiz Exp $
+$NetBSD: patch-tests_Cargo.toml,v 1.3 2023/05/24 12:17:49 pin Exp $
 
-Patch out the git source request for iai
+Patch out the git source request for iai.
 
---- tests/Cargo.toml.orig	2023-04-26 13:54:05.000000000 +0000
-+++ tests/Cargo.toml
-@@ -10,7 +10,7 @@ typst = { path = ".." }
+--- ../typst-0.4.0/tests/Cargo.toml.orig	2023-05-20 20:05:55.000000000 +0000
++++ ../typst-0.4.0/tests/Cargo.toml
+@@ -11,7 +11,7 @@ typst = { path = ".." }
  typst-library = { path = "../library" }
- comemo = "0.2.2"
+ comemo = "0.3"
  elsa = "1.8"
 -iai = { git = "https://github.com/reknih/iai" }
 +iai = "0.1.1"
