@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3313 2023/05/24 15:55:50 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3314 2023/05/24 16:05:45 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4589,3 +4589,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libhighlight to 4.6 [schmonz 2023-05-24]
 	Updated textproc/highlight to 4.6 [schmonz 2023-05-24]
 	Updated textproc/p5-highlight to 4.6 [schmonz 2023-05-24]
+	Updated biology/fasda to 0.1.2.30 [bacon 2023-05-24]
