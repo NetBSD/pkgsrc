@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3298 2023/05/24 08:52:23 otis Exp $
+$NetBSD: CHANGES-2023,v 1.3299 2023/05/24 08:52:36 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4572,3 +4572,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/fdk-aac to 2.0.2 [adam 2023-05-24]
 	Updated sysutils/zabbix60-server to 6.0.17 [otis 2023-05-24]
 	Updated sysutils/zabbix60-agent to 6.0.17 [otis 2023-05-24]
+	Updated sysutils/zabbix60-proxy to 6.0.17 [otis 2023-05-24]
