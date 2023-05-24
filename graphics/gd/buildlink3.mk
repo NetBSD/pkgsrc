@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.50 2023/05/22 11:38:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.51 2023/05/24 17:14:52 wiz Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -25,7 +25,11 @@ pkgbase := gd
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+
+.if ${PKG_BUILD_OPTIONS.gd:Mlibimagequant}
 .include "../../graphics/libimagequant/buildlink3.mk"
+.endif
+
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
