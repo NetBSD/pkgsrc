@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/27 12:26:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/24 12:17:49 pin Exp $
 
-DISTNAME=	typst-0.3.0
+DISTNAME=	typst-0.4.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=typst/}
 GITHUB_PROJECT=	typst
@@ -11,21 +11,17 @@ HOMEPAGE=	https://typst.app/
 COMMENT=	Markup-based typesetting system
 LICENSE=	apache-2.0
 
-# patched out for now, let's hope it lasts.
-#DISTFILES=	${DEFAULT_DISTFILES}
-# Depends on an unpublished crates. Can't use cargo.mk to fetch it.
-#IAI_REV=	3f0f92736408ebce6545808b98e0cb2aea89b7dd
-#DISTFILES+=	iai-${IAI_REV}.tar.gz
-#SITES.iai-${IAI_REV}.tar.gz+= -${MASTER_SITE_GITHUB:=reknih/}iai/archive/${IAI_REV}.tar.gz
+DISTFILES=	${DEFAULT_DISTFILES}
+SVG2PDF_REV=	35f4bb87fb677473661c6d12919e01a6d64a716d
+DISTFILES+=	svg2pdf-${SVG2PDF_REV}.tar.gz
+SITES.svg2pdf-${SVG2PDF_REV}.tar.gz+= -${MASTER_SITE_GITHUB:=typst/}svg2pdf/archive/${SVG2PDF_REV}.tar.gz
 
 .include "cargo-depends.mk"
 
-#CARGO_ARGS=	${DEFAULT_CARGO_ARGS} -p typst-cli
-
 INSTALLATION_DIRS=	bin
 
-#post-extract:
-#	mv ${WRKDIR}/iai-* ${WRKDIR}/vendor/iai
+post-extract:
+	mv ${WRKDIR}/svg2pdf-* ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/typst ${DESTDIR}${PREFIX}/bin
