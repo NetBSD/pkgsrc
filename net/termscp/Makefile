@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2023/04/19 20:42:52 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/24 12:19:01 pin Exp $
 
 DISTNAME=	termscp-0.11.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://veeso.github.io/termscp/
 COMMENT=	Feature rich TUI file transfer and explorer
 LICENSE=	mit
