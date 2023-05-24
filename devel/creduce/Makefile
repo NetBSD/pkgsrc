@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/19 08:09:39 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/05/24 15:51:58 nikita Exp $
 
 DISTNAME=	creduce-2.10.0
 PKGREVISION=	13
@@ -19,6 +19,7 @@ DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 
 BROKEN=		"Needs to be updated to work with llvm-13.0.0"
 # https://github.com/csmith-project/creduce/issues/232
+# llvm 16 pending: https://github.com/csmith-project/creduce/pull/254
 
 USE_LANGUAGES=	c c++14
 USE_TOOLS+=	flex perl:run gmake
