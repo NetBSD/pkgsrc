@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/07/25 11:12:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/24 08:15:28 adam Exp $
 
-DISTNAME=	fdk-aac-0.1.6
+DISTNAME=	fdk-aac-2.0.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencore-amr/}
 
