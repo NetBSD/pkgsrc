@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3304 2023/05/24 12:05:19 markd Exp $
+$NetBSD: CHANGES-2023,v 1.3305 2023/05/24 12:14:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4580,3 +4580,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-maturin to 1.0.0 [adam 2023-05-24]
 	Updated www/py-httpcore to 0.17.2 [adam 2023-05-24]
 	Updated print/luatex to 1.17.0 [markd 2023-05-24]
+	Updated sysutils/broot to 1.22.1 [pin 2023-05-24]
