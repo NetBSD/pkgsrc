@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2022/07/25 11:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/24 08:14:32 adam Exp $
 
-DISTNAME=	opencore-amr-0.1.5
+DISTNAME=	opencore-amr-0.1.6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencore-amr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://opencore-amr.sourceforge.net/
+HOMEPAGE=	https://sourceforge.net/projects/opencore-amr/
 COMMENT=	Adaptive Multi-Rate speech codec libraries
 LICENSE=	apache-2.0
 
