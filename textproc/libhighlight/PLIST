@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/03/17 11:49:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/05/24 15:53:35 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -14,6 +14,7 @@ share/doc/highlight/README_REGEX.adoc
 share/doc/highlight/README_RELEASE.adoc
 share/doc/highlight/README_TESTCASES.adoc
 share/doc/highlight/README_V4_MIGRATION.adoc
+share/doc/highlight/extras/highlight-service.py
 share/doc/highlight/extras/highlight_pipe.php
 share/doc/highlight/extras/highlight_pipe.pm
 share/doc/highlight/extras/highlight_pipe.py
