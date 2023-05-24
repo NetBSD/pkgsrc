@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3303 2023/05/24 11:40:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3304 2023/05/24 12:05:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4579,3 +4579,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xlsxwriter to 3.1.1 [adam 2023-05-24]
 	Updated devel/py-maturin to 1.0.0 [adam 2023-05-24]
 	Updated www/py-httpcore to 0.17.2 [adam 2023-05-24]
+	Updated print/luatex to 1.17.0 [markd 2023-05-24]
