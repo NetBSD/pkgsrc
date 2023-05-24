@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3311 2023/05/24 15:53:41 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3312 2023/05/24 15:55:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4587,3 +4587,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rakudo to 2023.04 [mef 2023-05-24]
 	Updated devel/libxtend to 0.1.7.12 [bacon 2023-05-24]
 	Updated textproc/libhighlight to 4.6 [schmonz 2023-05-24]
+	Updated textproc/highlight to 4.6 [schmonz 2023-05-24]
