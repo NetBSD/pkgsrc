@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/05/21 18:35:57 abs Exp $
+# $NetBSD: Makefile,v 1.26 2023/05/24 15:51:18 abs Exp $
 
 DISTNAME=	arcticfox-41.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -59,6 +60,11 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "sparc64"
+# Without this NetBSD/sparc64 starts, but crashes on some sites
+SSP_SUPPORTED=no
+.endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
