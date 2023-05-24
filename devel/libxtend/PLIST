@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/12/11 21:12:22 bacon Exp $
-include/xtend/array.h
+@comment $NetBSD: PLIST,v 1.10 2023/05/24 15:32:52 bacon Exp $
 include/xtend/common.h
 include/xtend/ctype.h
 include/xtend/dsv-accessors.h
@@ -12,6 +11,7 @@ include/xtend/math.h
 include/xtend/mem.h
 include/xtend/net.h
 include/xtend/proc.h
+include/xtend/stdlib.h
 include/xtend/string.h
 include/xtend/time.h
 lib/libxtend.a
@@ -72,6 +72,7 @@ man/man3/ltostrn.3
 man/man3/mv.3
 man/man3/parse_cmd.3
 man/man3/resolve_hostname.3
+man/man3/romantoi.3
 man/man3/short_cmp.3
 man/man3/spawnlp.3
 man/man3/spawnvp.3
