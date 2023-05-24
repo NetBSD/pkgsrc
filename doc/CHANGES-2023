@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3295 2023/05/24 07:17:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3296 2023/05/24 08:15:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4568,3 +4568,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-coverage to 7.2.6 [adam 2023-05-24]
 	Updated devel/py-test-xdist to 3.3.1 [adam 2023-05-24]
 	Removed chat/irssi-xmpp [wiz 2023-05-24]
+	Updated audio/opencore-amr to 0.1.6 [adam 2023-05-24]
+	Updated audio/fdk-aac to 2.0.2 [adam 2023-05-24]
