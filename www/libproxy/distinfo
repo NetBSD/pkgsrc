@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.26 2023/05/24 13:16:30 wiz Exp $
+$NetBSD: distinfo,v 1.27 2023/05/24 17:07:10 wiz Exp $
 
-BLAKE2s (libproxy-0.5.0.tar.gz) = 4ed621c85760f691a47513b3b00515b370389d0f774a0c23da247d0c0629b4c9
-SHA512 (libproxy-0.5.0.tar.gz) = 699d09d747c3e56247b1d0a8dee0cd7c122199cc4296aa61753a4e52b4346ad5d98d608f953d28a5779e7d49f64be639e22c696ac82d48bbdaa7b743501b18e6
-Size (libproxy-0.5.0.tar.gz) = 58746 bytes
+BLAKE2s (libproxy-0.5.1.tar.gz) = 6f353a17805d8eba6c2c5c7a3b2879dbb1ac64e1f9ef43bdcf51c42d050b36cb
+SHA512 (libproxy-0.5.1.tar.gz) = 830e4bb1879c6afd1fbebc24de2ca75a597096a8eadb45dd3965b9f8121110039379342facebddce1b679a9b6ceb065089f0fbe38b55411a2c53ac36ef979ab7
+Size (libproxy-0.5.1.tar.gz) = 59939 bytes
 SHA1 (patch-src_backend_plugins_pacrunner-duktape_meson.build) = 680f14bb54f7d030a322dad08e30535e78f4cd92
-SHA1 (patch-src_backend_plugins_pacrunner-duktape_pacrunner-duktape.c) = fb9a76af07848e2a3205a872cd7067e94653701b
-SHA1 (patch-src_libproxy_proxy.h) = 213e4496209521105cadbe95f85c6a03843907e4

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/22 20:28:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/24 17:07:10 wiz Exp $
 bin/proxy
 include/libproxy/proxy.h
 lib/girepository-1.0/Libproxy-1.0.typelib
 lib/libproxy.so
 lib/libproxy.so.1
-lib/libpxbackend-1.0.so
+lib/libproxy/libpxbackend-1.0.so
 lib/pkgconfig/libproxy-1.0.pc
 man/man8/proxy.8
 share/doc/libproxy-1.0/RedHatDisplay-Black.woff
