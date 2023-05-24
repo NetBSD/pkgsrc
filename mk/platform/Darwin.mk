@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.126 2023/05/22 14:55:04 tnn Exp $
+# $NetBSD: Darwin.mk,v 1.127 2023/05/24 17:51:24 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -39,7 +39,8 @@ X11_TYPE?=	native
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
 # bash invoked as /bin/sh on Leopard and newer does not support echo -n.
-.if ${OPSYS_VERSION} >= 100500 && ${TOOLS_PLATFORM.sh} == "/bin/sh"
+.if ${OPSYS_VERSION} >= 100500 && \
+  (!defined(TOOLS_PLATFORM.sh) || ${TOOLS_PLATFORM.sh} == "/bin/sh")
 ECHO_N?=	/bin/echo -n
 .else
 ECHO_N?=	${ECHO} -n
