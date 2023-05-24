@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3302 2023/05/24 10:44:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3303 2023/05/24 11:40:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4577,3 +4577,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-java to 6.0.17 [otis 2023-05-24]
 	Updated sysutils/ansible to 7.6.0 [adam 2023-05-24]
 	Updated textproc/py-xlsxwriter to 3.1.1 [adam 2023-05-24]
+	Updated devel/py-maturin to 1.0.0 [adam 2023-05-24]
+	Updated www/py-httpcore to 0.17.2 [adam 2023-05-24]
