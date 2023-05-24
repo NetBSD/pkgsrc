@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/05/21 00:13:56 hauke Exp $
+# $NetBSD: Makefile,v 1.16 2023/05/24 11:40:11 hauke Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
+PKGREVISION=	1
 COMMENT=	*BETA* XEmacs text editor version 21.5 (no X11 support)
 
 .include "../../editors/xemacs-current/Makefile.common"
