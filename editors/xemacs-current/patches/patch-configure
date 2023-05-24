@@ -1,0 +1,37 @@
+$NetBSD: patch-configure,v 1.6 2023/05/24 11:40:11 hauke Exp $
+
+The 21.5 requirement of makeinfo 4.12 seems arbitrary - the
+NetBSD-enclosed makeinfo 4.8 appears to work just fine. Plus, simply
+not setting MAKEINFO will leave us without .info files.
+
+--- configure.orig	2023-05-13 18:09:51.000000000 +0000
++++ configure
+@@ -11434,14 +11434,14 @@ done
+ test -n "$YACC" || YACC="yacc"
+ 
+ 
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for makeinfo >= 4.12" >&5
+-printf %s "checking for makeinfo >= 4.12... " >&6; }
++{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for makeinfo >= 4.8" >&5
++printf %s "checking for makeinfo >= 4.8... " >&6; }
+ MAKEINFO=
+ for prog in `which -a makeinfo`; do
+   mi_verstr=`$prog --version | sed -n '1s/^.* \([0-9][0-9.]*\)$/\1/p'`
+   mi_major=`echo $mi_verstr | cut -d. -f1`
+   mi_minor=`echo $mi_verstr | cut -d. -f2`
+-  if test "$mi_major" -gt 4 || ( test "$mi_major" -eq 4 && test "$mi_minor" -gt 11 );
++  if test "$mi_major" -gt 4 || ( test "$mi_major" -eq 4 && test "$mi_minor" -ge 8 );
+   then
+     MAKEINFO=$prog
+     break
+@@ -11450,8 +11450,8 @@ done
+ if test -z $MAKEINFO; then
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ printf "%s\n" "no" >&6; }
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: Found Makeinfo $mi_verstr.  4.12 or later required." >&5
+-printf "%s\n" "$as_me: WARNING: Found Makeinfo $mi_verstr.  4.12 or later required." >&2;}
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: Found Makeinfo $mi_verstr.  4.8 or later required." >&5
++printf "%s\n" "$as_me: WARNING: Found Makeinfo $mi_verstr.  4.8 or later required." >&2;}
+ else
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ printf "%s\n" "yes" >&6; }
