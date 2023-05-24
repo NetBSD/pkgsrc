@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/12/18 01:34:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/24 15:53:35 schmonz Exp $
 
 .include "../../textproc/libhighlight/Makefile.common"
 
-PKGNAME=	libhighlight-${VERSION}
-COMMENT+=	(shared library)
+PKGNAME=		libhighlight-${VERSION}
+COMMENT+=		(shared library)
 
 BUILD_TARGET=		lib-shared
 
