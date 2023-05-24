@@ -1,4 +1,4 @@
-$NetBSD: patch-src_backend_plugins_pacrunner-duktape_meson.build,v 1.1 2023/05/24 13:16:30 wiz Exp $
+$NetBSD: patch-src_backend_plugins_pacrunner-duktape_meson.build,v 1.2 2023/05/24 17:07:10 wiz Exp $
 
 Fix build on SmartOS.
 https://github.com/libproxy/libproxy/pull/235/files
