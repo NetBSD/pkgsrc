@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3306 2023/05/24 12:18:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3307 2023/05/24 14:34:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4582,3 +4582,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/luatex to 1.17.0 [markd 2023-05-24]
 	Updated sysutils/broot to 1.22.1 [pin 2023-05-24]
 	Updated textproc/typst to 0.4.0 [pin 2023-05-24]
+	Updated devel/MoarVM to 2023.04 [mef 2023-05-24]
