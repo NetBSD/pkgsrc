@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3294 2023/05/24 06:53:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3295 2023/05/24 07:17:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4567,3 +4567,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added biology/seqtk version 1.4 [bacon 2023-05-23]
 	Updated devel/py-coverage to 7.2.6 [adam 2023-05-24]
 	Updated devel/py-test-xdist to 3.3.1 [adam 2023-05-24]
+	Removed chat/irssi-xmpp [wiz 2023-05-24]
