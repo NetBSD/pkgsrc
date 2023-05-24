@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/10/04 08:00:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/05/24 07:22:18 wiz Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -14,20 +14,21 @@ share/doc/openobex/html/annotated.html
 share/doc/openobex/html/api_8c.html
 share/doc/openobex/html/bc_s.png
 share/doc/openobex/html/bc_sd.png
-share/doc/openobex/html/bdwn.png
 share/doc/openobex/html/classes.html
 share/doc/openobex/html/closed.png
 share/doc/openobex/html/dir_000000.html
 share/doc/openobex/html/dir_000001.html
 share/doc/openobex/html/dir_000002.html
-share/doc/openobex/html/doc.png
-share/doc/openobex/html/docd.png
+share/doc/openobex/html/doc.svg
+share/doc/openobex/html/docd.svg
 share/doc/openobex/html/doxygen.css
 share/doc/openobex/html/doxygen.svg
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
-share/doc/openobex/html/folderclosed.png
-share/doc/openobex/html/folderopen.png
+share/doc/openobex/html/folderclosed.svg
+share/doc/openobex/html/folderclosedd.svg
+share/doc/openobex/html/folderopen.svg
+share/doc/openobex/html/folderopend.svg
 share/doc/openobex/html/functions.html
 share/doc/openobex/html/functions_vars.html
 share/doc/openobex/html/globals.html
