@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2023/04/26 13:33:13 adam Exp $
+# $NetBSD: Makefile,v 1.61 2023/05/24 10:42:51 adam Exp $
 
-DISTNAME=	ansible-7.5.0
+DISTNAME=	ansible-7.6.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -34,6 +34,7 @@ REPLACE_PYTHON+=	ansible_collections/community/general/scripts/vault/*.py
 REPLACE_PYTHON+=	ansible_collections/community/general/tests/integration/targets/django_manage/files/base_test/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/ansible-codecov/process.py
 REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/docker-image-versions/versions.py
+REPLACE_PYTHON+=	ansible_collections/community/mysql/run_all_tests.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/doc_fragment_modules.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
 REPLACE_PYTHON+=	ansible_collections/community/routeros/update-docs.py
