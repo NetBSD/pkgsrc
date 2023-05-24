@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/29 13:16:19 thor Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/24 07:20:46 wiz Exp $
 bin/aubiomfcc
 bin/aubionotes
 bin/aubioonset
@@ -80,7 +80,6 @@ share/doc/libaubio-doc/api/awhitening_8h.html
 share/doc/libaubio-doc/api/awhitening_8h_source.html
 share/doc/libaubio-doc/api/bc_s.png
 share/doc/libaubio-doc/api/bc_sd.png
-share/doc/libaubio-doc/api/bdwn.png
 share/doc/libaubio-doc/api/biquad_8h.html
 share/doc/libaubio-doc/api/biquad_8h_source.html
 share/doc/libaubio-doc/api/c__weighting_8h.html
@@ -100,8 +99,8 @@ share/doc/libaubio-doc/api/dir_000005.html
 share/doc/libaubio-doc/api/dir_000006.html
 share/doc/libaubio-doc/api/dir_000007.html
 share/doc/libaubio-doc/api/dir_000008.html
-share/doc/libaubio-doc/api/doc.png
-share/doc/libaubio-doc/api/docd.png
+share/doc/libaubio-doc/api/doc.svg
+share/doc/libaubio-doc/api/docd.svg
 share/doc/libaubio-doc/api/doxygen.css
 share/doc/libaubio-doc/api/doxygen.svg
 share/doc/libaubio-doc/api/dynsections.js
@@ -121,8 +120,10 @@ share/doc/libaubio-doc/api/filterbank__mel_8h.html
 share/doc/libaubio-doc/api/filterbank__mel_8h_source.html
 share/doc/libaubio-doc/api/fmat_8h.html
 share/doc/libaubio-doc/api/fmat_8h_source.html
-share/doc/libaubio-doc/api/folderclosed.png
-share/doc/libaubio-doc/api/folderopen.png
+share/doc/libaubio-doc/api/folderclosed.svg
+share/doc/libaubio-doc/api/folderclosedd.svg
+share/doc/libaubio-doc/api/folderopen.svg
+share/doc/libaubio-doc/api/folderopend.svg
 share/doc/libaubio-doc/api/functions.html
 share/doc/libaubio-doc/api/functions_vars.html
 share/doc/libaubio-doc/api/fvec_8h.html
