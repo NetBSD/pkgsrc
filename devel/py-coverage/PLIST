@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/05/05 10:34:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/05/24 06:43:40 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -109,15 +109,15 @@ ${PYSITELIB}/coverage/pytracer.pyo
 ${PYSITELIB}/coverage/report.py
 ${PYSITELIB}/coverage/report.pyc
 ${PYSITELIB}/coverage/report.pyo
+${PYSITELIB}/coverage/report_core.py
+${PYSITELIB}/coverage/report_core.pyc
+${PYSITELIB}/coverage/report_core.pyo
 ${PYSITELIB}/coverage/results.py
 ${PYSITELIB}/coverage/results.pyc
 ${PYSITELIB}/coverage/results.pyo
 ${PYSITELIB}/coverage/sqldata.py
 ${PYSITELIB}/coverage/sqldata.pyc
 ${PYSITELIB}/coverage/sqldata.pyo
-${PYSITELIB}/coverage/summary.py
-${PYSITELIB}/coverage/summary.pyc
-${PYSITELIB}/coverage/summary.pyo
 ${PYSITELIB}/coverage/templite.py
 ${PYSITELIB}/coverage/templite.pyc
 ${PYSITELIB}/coverage/templite.pyo
