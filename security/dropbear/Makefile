@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/12/19 11:07:10 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/05/25 21:28:09 wiz Exp $
 
 DISTNAME=	dropbear-2020.81
 CATEGORIES=	security
@@ -38,7 +38,7 @@ SUBST_STAGE.config=	post-build
 SUBST_FILES.config=	dropbear.8 dropbearkey.1
 SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
 
-# used by dbscp
+# needed by dbscp
 CPPFLAGS+=		-DDROPBEAR_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
 
 .include "../../x11/xauth/builtin.mk"
