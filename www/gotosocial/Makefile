@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/05/08 15:24:21 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2023/05/25 23:54:25 nikita Exp $
 
-DISTNAME=	gotosocial-0.8.1-source-code
+DISTNAME=	gotosocial-0.9.0-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
-PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	gotosocial
@@ -64,8 +63,10 @@ SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 # https://gitlab.com/cznic/libc/-/issues/15
 # https://gitlab.com/cznic/libc/-/issues/12
 # https://gitlab.com/cznic/libc/-/issues/11
+# https://github.com/superseriousbusiness/gotosocial/issues/1753
 # on FreeBSD, the modernc.org/* packages do not work on arm64:
 # "imports modernc.org/libc/errno: build constraints exclude all Go files in /usr/ports/net-im/gotosocial/work/gotosocial-0.5.2/vendor/modernc.org/libc/errno"
+# BUG: does not build on Sun
 ONLY_FOR_PLATFORM=	*-*-x86_64
 
 do-build:
