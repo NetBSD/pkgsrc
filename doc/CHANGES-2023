@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3325 2023/05/25 18:52:34 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3326 2023/05/25 20:40:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4603,3 +4603,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/rterm to 0.0.8nb1 [he 2023-05-25]
 	Updated devel/libgit2 to 1.6.4nb1 [he 2023-05-25]
 	Updated security/gpg-tui to 0.9.6 [pin 2023-05-25]
+	Updated devel/py-cython to 0.29.35 [adam 2023-05-25]
+	Updated devel/meson to 1.1.1 [adam 2023-05-25]
