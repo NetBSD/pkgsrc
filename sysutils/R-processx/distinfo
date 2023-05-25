@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/12/18 01:08:06 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/05/25 11:08:57 jperkin Exp $
 
 BLAKE2s (R/processx_3.8.0.tar.gz) = d5875d901f567460a3df3d9aa2425f387d8b3aac68d46869f74903689d9a6fea
 SHA512 (R/processx_3.8.0.tar.gz) = 6ea529869a5999a6273dc5f0f01cb64ff1106f0f625251cca6d15b24127aa46c6d8aa8634bfc4c2347def1bad36b936e857b27bc2e87bdfd619a4dac5e767a85
 Size (R/processx_3.8.0.tar.gz) = 162539 bytes
+SHA1 (patch-src_Makevars) = a3e4f650d9d58db86f22e12dd65cd02608f3cdd4
