@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22984 2023/05/24 17:07:21 wiz Exp $
+$NetBSD: TODO,v 1.22985 2023/05/25 00:30:54 gdt Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,10 @@ Suggested new packages
 	NORM
 	https://github.com/USNavalResearchLaboratory/norm
 	NACK-Oriented Reliable Multicast
+
+	FerretDB
+	https://blog.ferretdb.io/ferretdb-1-0-ga-opensource-mongodb-alternative/
+        MongoDB compatibility layer for PostgreSQL
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
