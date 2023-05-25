@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3320 2023/05/25 09:07:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3321 2023/05/25 10:00:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4597,3 +4597,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/lnav to 0.11.1nb2 [he 2023-05-24]
 	Updated databases/mysql57-client to 5.7.42 [adam 2023-05-25]
 	Updated databases/mysql57-server to 5.7.42 [adam 2023-05-25]
+	Updated databases/py-apsw to 3.42.0.0 [adam 2023-05-25]
+	Updated www/curl to 8.1.1 [adam 2023-05-25]
