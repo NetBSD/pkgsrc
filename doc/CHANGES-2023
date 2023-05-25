@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3321 2023/05/25 10:00:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3322 2023/05/25 11:53:17 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mysql57-server to 5.7.42 [adam 2023-05-25]
 	Updated databases/py-apsw to 3.42.0.0 [adam 2023-05-25]
 	Updated www/curl to 8.1.1 [adam 2023-05-25]
+	Updated x11/libXt to 1.3.0nb1 [jperkin 2023-05-25]
