@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/03/30 20:16:56 pin Exp $
+# $NetBSD: Makefile,v 1.27 2023/05/25 18:52:07 pin Exp $
 
-DISTNAME=	gpg-tui-0.9.5
+DISTNAME=	gpg-tui-0.9.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,9 +22,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/l
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gpg-tui \
+#do-install:
+#	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gpg-tui \
 		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.toml.5 \
