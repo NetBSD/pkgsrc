@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1 2022/04/17 04:07:13 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/05/25 21:25:11 wiz Exp $
 #
-# used by databases/mysql-cluster/Makefile
 
 DISTNAME=	mysql-cluster-gpl-7.5.25
 CATEGORIES=	databases
@@ -68,7 +67,7 @@ CMAKE_ARGS+=		-UWITH_UNIT_TESTS
 CMAKE_ARGS+=		-DWITH_SSL=system
 
 # MySQL 5 depends on builtin functions enabled with i486 and later with GCC.
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == i386
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
