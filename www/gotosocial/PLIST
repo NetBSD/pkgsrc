@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/09 16:47:44 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/05/25 23:54:25 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -32,6 +32,7 @@ share/examples/gotosocial/web/assets/fonts/noto-sans-v27-latin-regular.woff2
 share/examples/gotosocial/web/assets/logo.png
 share/examples/gotosocial/web/assets/logo.svg
 share/examples/gotosocial/web/assets/mastodon.svg
+share/examples/gotosocial/web/assets/plyr.svg
 share/examples/gotosocial/web/assets/tusky.svg
 share/examples/gotosocial/web/source/.browserslistrc
 share/examples/gotosocial/web/source/.eslintignore
@@ -40,11 +41,14 @@ share/examples/gotosocial/web/source/.gitignore
 share/examples/gotosocial/web/source/.license-header.js
 share/examples/gotosocial/web/source/css/_colors.css
 share/examples/gotosocial/web/source/css/base.css
+share/examples/gotosocial/web/source/css/index.css
 share/examples/gotosocial/web/source/css/profile.css
 share/examples/gotosocial/web/source/css/status.css
 share/examples/gotosocial/web/source/frontend/index.js
 share/examples/gotosocial/web/source/index.js
 share/examples/gotosocial/web/source/package.json
+share/examples/gotosocial/web/source/settings/admin/accounts/detail.jsx
+share/examples/gotosocial/web/source/settings/admin/accounts/index.jsx
 share/examples/gotosocial/web/source/settings/admin/actions.js
 share/examples/gotosocial/web/source/settings/admin/emoji/category-select.jsx
 share/examples/gotosocial/web/source/settings/admin/emoji/local/detail.js
