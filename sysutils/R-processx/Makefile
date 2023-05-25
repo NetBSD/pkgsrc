@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/18 01:08:06 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/05/25 11:08:57 jperkin Exp $
 
 R_PKGNAME=	processx
 R_PKGVER=	3.8.0
@@ -15,6 +15,8 @@ DEPENDS+=	R-ps>=1.2.0:../../sysutils/R-ps
 #EST_DEPENDS+=	R-debugme-[0-9]*:../../?/R-debugme
 
 USE_LANGUAGES=	c
+
+LIBS.SunOS+=	-lsocket -lnsl
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
