@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3326 2023/05/25 20:40:05 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3327 2023/05/25 20:59:33 abs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4595,6 +4595,7 @@ Changes to the packages collection and infrastructure in 2023:
 	mk: switched USE_PKG_ADMIN_DIGEST to yes [wiz 2023-05-24]
 	Updated graphics/mate-themes to 3.22.24 [gutteridge 2023-05-24]
 	Updated sysutils/lnav to 0.11.1nb2 [he 2023-05-24]
+	Updated net/synergy to 1.14.6.19 [abs 2023-05-25]
 	Updated databases/mysql57-client to 5.7.42 [adam 2023-05-25]
 	Updated databases/mysql57-server to 5.7.42 [adam 2023-05-25]
 	Updated databases/py-apsw to 3.42.0.0 [adam 2023-05-25]
