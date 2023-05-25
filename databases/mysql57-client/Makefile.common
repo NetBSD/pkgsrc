@@ -1,20 +1,16 @@
-# $NetBSD: Makefile.common,v 1.40 2023/02/01 16:38:12 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.41 2023/05/25 09:06:57 adam Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
 
-DISTNAME=	mysql-5.7.41
+DISTNAME=	mysql-5.7.42
 CATEGORIES=	databases
-#MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.7/}
 MASTER_SITES=	https://dev.mysql.com/get/Downloads/MySQL-5.7/
+DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/
 LICENSE=	gnu-gpl-v2
-
-BOOST=			boost_1_59_0
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${BOOST}.tar.bz2
-SITES.${BOOST}.tar.bz2=	${MASTER_SITE_SOURCEFORGE:=boost/}
 
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql57-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql57-client/patches
@@ -69,7 +65,8 @@ CMAKE_ARGS+=	-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
-CMAKE_ARGS+=	-DWITH_BOOST=${WRKDIR}/${BOOST}
+CMAKE_ARGS+=	-DWITH_BOOST=${WRKSRC}/boost
+CMAKE_ARGS+=	-DWITH_CURL="system"
 CMAKE_ARGS+=	-DWITH_EDITLINE="system"
 CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/${BUILDLINK_INCDIRS.editline}
 CMAKE_ARGS+=	-DWITH_LIBEVENT="system"
@@ -128,5 +125,6 @@ CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/atomic64.mk"

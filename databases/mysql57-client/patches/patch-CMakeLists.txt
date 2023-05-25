@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/01/20 18:22:10 maya Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/05/25 09:06:57 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
 
@@ -6,9 +6,11 @@ Backport of https://github.com/mysql/mysql-server/commit/98ed3d8bc8ad724686d26c7
 Avoid disclosure of files from a client to a malicious server, described here:
 https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability/
 
---- CMakeLists.txt.orig	2018-10-04 05:48:22.000000000 +0000
+ndb is not available anymore.
+
+--- CMakeLists.txt.orig	2023-03-16 15:25:04.000000000 +0000
 +++ CMakeLists.txt
-@@ -408,7 +408,7 @@ IF(REPRODUCIBLE_BUILD)
+@@ -482,7 +482,7 @@ IF(REPRODUCIBLE_BUILD)
  ENDIF()
  
  OPTION(ENABLED_LOCAL_INFILE
@@ -17,7 +19,7 @@ https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability
  MARK_AS_ADVANCED(ENABLED_LOCAL_INFILE)
  
  OPTION(OPTIMIZER_TRACE "Support tracing of Optimizer" ON)
-@@ -636,7 +636,6 @@ ADD_SUBDIRECTORY(vio)
+@@ -702,7 +702,6 @@ ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
  ADD_SUBDIRECTORY(mysys_ssl)
@@ -25,7 +27,17 @@ https://gwillem.gitlab.io/2019/01/17/adminer-4.6.2-file-disclosure-vulnerability
  ADD_SUBDIRECTORY(libbinlogevents)
  ADD_SUBDIRECTORY(libbinlogstandalone)
  
-@@ -674,12 +673,12 @@ ADD_SUBDIRECTORY(client)
+@@ -716,9 +715,6 @@ IF(NOT WITHOUT_SERVER)
+   SET (MYSQLD_STATIC_EMBEDDED_PLUGIN_LIBS "" CACHE INTERNAL "")
+   # Add storage engines and plugins.
+   CONFIGURE_PLUGINS()
+-ELSE()
+-  # We may still want Cluster client libraries, use -DWITH_NDBCLUSTER=1
+-  ADD_SUBDIRECTORY(storage/ndb)
+ ENDIF()
+ 
+ IF(WITH_UNIT_TESTS)
+@@ -745,12 +741,12 @@ ADD_SUBDIRECTORY(client)
  ADD_SUBDIRECTORY(sql/share)
  ADD_SUBDIRECTORY(libservices)
  
