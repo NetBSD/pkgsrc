@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/02/01 16:38:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.27 2023/05/25 09:06:57 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -1609,6 +1609,7 @@ share/mysql/test/r/mysqldump_bug30042589.result
 share/mysql/test/r/mysqldump_bugs.result
 share/mysql/test/r/mysqldump_gtid_state.result
 share/mysql/test/r/mysqldump_restore.result
+share/mysql/test/r/mysqldump_single_trans_min_privs.result
 share/mysql/test/r/mysqldumpslow.result
 share/mysql/test/r/mysqlimport.result
 share/mysql/test/r/mysqlpump.result
@@ -2453,6 +2454,7 @@ share/mysql/test/suite/binlog/r/binlog_bug36391.result
 share/mysql/test/suite/binlog/r/binlog_cache_write_failure.result
 share/mysql/test/suite/binlog/r/binlog_check_flush_log_assertion.result
 share/mysql/test/suite/binlog/r/binlog_checksum.result
+share/mysql/test/suite/binlog/r/binlog_corrupt_update_log_event.result
 share/mysql/test/suite/binlog/r/binlog_crash_safe_master_checksum.result
 share/mysql/test/suite/binlog/r/binlog_database.result
 share/mysql/test/suite/binlog/r/binlog_delete_and_flush_index.result
@@ -2648,6 +2650,7 @@ share/mysql/test/suite/binlog/t/binlog_cache_write_failure-master.opt
 share/mysql/test/suite/binlog/t/binlog_cache_write_failure.test
 share/mysql/test/suite/binlog/t/binlog_check_flush_log_assertion.test
 share/mysql/test/suite/binlog/t/binlog_checksum.test
+share/mysql/test/suite/binlog/t/binlog_corrupt_update_log_event.test
 share/mysql/test/suite/binlog/t/binlog_crash_safe_master_checksum-master.opt
 share/mysql/test/suite/binlog/t/binlog_crash_safe_master_checksum.test
 share/mysql/test/suite/binlog/t/binlog_database.test
@@ -5330,6 +5333,7 @@ share/mysql/test/suite/innodb/r/innodb_bug30919.result
 share/mysql/test/suite/innodb/r/innodb_bug31205266.result
 share/mysql/test/suite/innodb/r/innodb_bug34053.result
 share/mysql/test/suite/innodb/r/innodb_bug34300.result
+share/mysql/test/suite/innodb/r/innodb_bug34750489.result
 share/mysql/test/suite/innodb/r/innodb_bug35220.result
 share/mysql/test/suite/innodb/r/innodb_bug38231.result
 share/mysql/test/suite/innodb/r/innodb_bug39438.result
@@ -5740,6 +5744,8 @@ share/mysql/test/suite/innodb/t/innodb_bug30919.test
 share/mysql/test/suite/innodb/t/innodb_bug31205266.test
 share/mysql/test/suite/innodb/t/innodb_bug34053.test
 share/mysql/test/suite/innodb/t/innodb_bug34300.test
+share/mysql/test/suite/innodb/t/innodb_bug34750489-master.opt
+share/mysql/test/suite/innodb/t/innodb_bug34750489.test
 share/mysql/test/suite/innodb/t/innodb_bug35220.test
 share/mysql/test/suite/innodb/t/innodb_bug38231.test
 share/mysql/test/suite/innodb/t/innodb_bug39438-master.opt
@@ -10043,6 +10049,7 @@ share/mysql/test/suite/rpl/r/rpl_perfschema_no_master_uuid.result
 share/mysql/test/suite/rpl/r/rpl_perfschema_order_by.result
 share/mysql/test/suite/rpl/r/rpl_perfschema_threads_processlist_status.result
 share/mysql/test/suite/rpl/r/rpl_plugin_load.result
+share/mysql/test/suite/rpl/r/rpl_previous_gtids.result
 share/mysql/test/suite/rpl/r/rpl_ps.result
 share/mysql/test/suite/rpl/r/rpl_pump.result
 share/mysql/test/suite/rpl/r/rpl_rbr_to_sbr.result
@@ -10921,6 +10928,8 @@ share/mysql/test/suite/rpl/t/rpl_perfschema_threads_processlist_status.test
 share/mysql/test/suite/rpl/t/rpl_plugin_load-master.opt
 share/mysql/test/suite/rpl/t/rpl_plugin_load-slave.opt
 share/mysql/test/suite/rpl/t/rpl_plugin_load.test
+share/mysql/test/suite/rpl/t/rpl_previous_gtids-master.opt
+share/mysql/test/suite/rpl/t/rpl_previous_gtids.test
 share/mysql/test/suite/rpl/t/rpl_ps.test
 share/mysql/test/suite/rpl/t/rpl_pump-master.opt
 share/mysql/test/suite/rpl/t/rpl_pump-slave.opt
@@ -14249,6 +14258,8 @@ share/mysql/test/t/mysqldump_bugs.test
 share/mysql/test/t/mysqldump_gtid_state-master.opt
 share/mysql/test/t/mysqldump_gtid_state.test
 share/mysql/test/t/mysqldump_restore.test
+share/mysql/test/t/mysqldump_single_trans_min_privs-master.opt
+share/mysql/test/t/mysqldump_single_trans_min_privs.test
 share/mysql/test/t/mysqldumpslow.test
 share/mysql/test/t/mysqlimport.test
 share/mysql/test/t/mysqlpump.test
