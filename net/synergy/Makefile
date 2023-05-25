@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.80 2023/04/19 08:11:13 adam Exp $
+# $NetBSD: Makefile,v 1.81 2023/05/25 08:16:33 abs Exp $
 
-DISTNAME=		synergy-core-1.14.4.37
-PKGREVISION=		5
+DISTNAME=		synergy-core-1.14.6.19
 PKGNAME=		${DISTNAME:S/-core//}
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
-GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
+GITHUB_TAG=		${PKGVERSION_NOREV}-stable
 DISTFILES=		${DEFAULT_DISTFILES}		\
 			  googletest-1.10.0.tar.gz	\
 			  pugixml-1.12.1.tar.gz

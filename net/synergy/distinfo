@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2023/03/28 10:08:30 tnn Exp $
+$NetBSD: distinfo,v 1.43 2023/05/25 08:16:33 abs Exp $
 
 BLAKE2s (googletest-1.10.0.tar.gz) = 53d218b6e7821bf20289e24c4efec5b7a3cc2be8f06373c07a5af078dc4ee892
 SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
@@ -6,9 +6,9 @@ Size (googletest-1.10.0.tar.gz) = 904349 bytes
 BLAKE2s (pugixml-1.12.1.tar.gz) = 89db006704bd615535d7b4eb78c2712de08c04c2f3669b39cd94532455afc1fc
 SHA512 (pugixml-1.12.1.tar.gz) = c1a80518e8d7b21f2a15b2023b77e87484f5b7581e68ff508785a60cab53d1689b5508f5a652d6f0d4fbcc91f66d59246fdfe499fd6b0e188c7914ed5919980b
 Size (pugixml-1.12.1.tar.gz) = 571665 bytes
-BLAKE2s (synergy-core-1.14.4.37.tar.gz) = 97f0633c059232ec735e9427c037ab9c69f5315af432665073d60eda43c830ff
-SHA512 (synergy-core-1.14.4.37.tar.gz) = 5cca4e439c508a71db4bed1af137e71c9b6443818f4d54a5894885c45b3c978a024cd5454c0df46225f0f0e01949913d090b9824cc9c3ed20600772dd817305e
-Size (synergy-core-1.14.4.37.tar.gz) = 4642045 bytes
+BLAKE2s (synergy-core-1.14.6.19.tar.gz) = 7c338506be57a16732ed5d01c21e11df82eeb069088149987f9392e4deca80e7
+SHA512 (synergy-core-1.14.6.19.tar.gz) = 84cbc12a4489e18b412feb29d45254962064ace270ff52043cdd047b714a7396886ab9b5dec8ab9d55be8494072b986d9b74f4e99f86590358a6d5c7e3c5020e
+Size (synergy-core-1.14.6.19.tar.gz) = 4658286 bytes
 SHA1 (patch-CMakeLists.txt) = 3f0e3a894f2233be5dee7efb20fc3931aab0532c
 SHA1 (patch-src_lib_arch_CMakeLists.txt) = 79464a7c2bc2f4012163fd4a84742bdd2e31dd4a
 SHA1 (patch-src_lib_arch_unix_ArchSystemUnix.cpp) = 722df1971a98bfca48792102d2157c91ce130835
@@ -16,4 +16,3 @@ SHA1 (patch-src_lib_platform_CMakeLists.txt) = 0ed41294261e7dc07313a2d93a6874878
 SHA1 (patch-src_lib_platform_XWindowsKeyState.cpp) = 8c7715c4c569a180f825946e11b2b3967b9c84c1
 SHA1 (patch-src_lib_platform_XWindowsPowerManager.cpp) = 630c648cf31aea19d4b8ccd4f200c96401157459
 SHA1 (patch-src_lib_server_Config.cpp) = dc6a00fd33e71480a5f002cf15b8f876143f82a3
-SHA1 (patch-src_lib_synergy_unix_AppUtilUnix.cpp) = 63b6329203ebd1be011e378c5766746fd0c26ce2
