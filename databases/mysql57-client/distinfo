@@ -1,18 +1,14 @@
-$NetBSD: distinfo,v 1.51 2023/02/01 16:38:12 jperkin Exp $
+$NetBSD: distinfo,v 1.52 2023/05/25 09:06:57 adam Exp $
 
-BLAKE2s (boost_1_59_0.tar.bz2) = 8738bf3fbcfd42ce18f2f9e2b9f49f496d3a84c038ace73b02f72889ad7da49b
-SHA512 (boost_1_59_0.tar.bz2) = 8139e1ae997a86974071c5714ad3307e3d8fd15ef702b81a953410dd4d424b932135f53a0ef4891d9b9b747a38e539e66d6a803388fe0cc98e5166be872d682a
-Size (boost_1_59_0.tar.bz2) = 70389425 bytes
-BLAKE2s (mysql-5.7.41.tar.gz) = 6cb4ea06ff270855a0b06220db2bfbdaa13035a877281c579c7aa705e586bd14
-SHA512 (mysql-5.7.41.tar.gz) = b2085cf2eee6c3ab4cce88be4eec8a3ac4ffb21556d2824eae9e459f4771034ae2aff725ee441164440d13792f3f30707ca3129d5b36ebbf197f864b06a5b1fa
-Size (mysql-5.7.41.tar.gz) = 56535698 bytes
-SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
+BLAKE2s (mysql-boost-5.7.42.tar.gz) = df33375b4df62b11e348817540cd651d5c140b8d22d0e816405aa4f536d63a09
+SHA512 (mysql-boost-5.7.42.tar.gz) = c17cc29f99b9944edf27cb5fa9064ba7a0b4ed8a28f10a3d0bc6b3d45f69bc804efc7fc3a20faece6fe341f5ce8f965f914925e8d55a2f2c8c5fa337ada94df9
+Size (mysql-boost-5.7.42.tar.gz) = 53288125 bytes
+SHA1 (patch-CMakeLists.txt) = 03c15cfdc396448bb7db31434d2e7afaac708223
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
 SHA1 (patch-cmake_build__configurations_compiler__options.cmake) = 999110815237c53a69c74c42e66c45df83cbf355
 SHA1 (patch-cmake_build__configurations_mysql__release.cmake) = 7a1fb8c686f187db8fd9d8ad203c1f764d6e55a6
-SHA1 (patch-cmake_curl.cmake) = 08ff31eb8de6b94a46ff90edb6df66a61a94fd9d
 SHA1 (patch-cmake_ldap.cmake) = 9bdc3c311330852286838e6159295ecc5fbdc0ea
 SHA1 (patch-cmake_os_SunOS.cmake) = b71c3e1fafb48ebbba77c19bb1c31556ebe1ad2a
 SHA1 (patch-cmake_plugin.cmake) = 4480438969e297f67890b1974a86fb88a23d28ed
@@ -51,5 +47,4 @@ SHA1 (patch-storage_federated_CMakeLists.txt) = ef0eb2797c5ff0c7da9e234e013230b2
 SHA1 (patch-storage_heap_CMakeLists.txt) = 038be371238eab52708a1eba164541fea7b4b848
 SHA1 (patch-storage_myisam_CMakeLists.txt) = debeb74ec2d4a7d2e8a1166595a1deb384b03a7a
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = e4755536adfb6e837f997061690244da9aa7a6d3
-SHA1 (patch-storage_ndb_mcc_frontend_dojo_dojox_mobile_build_build.sh) = e6939ef781054b4bff006038905e28f7c5cd8d7e
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903

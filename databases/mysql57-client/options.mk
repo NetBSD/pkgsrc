@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2020/05/07 05:31:53 adam Exp $
+# $NetBSD: options.mk,v 1.5 2023/05/25 09:06:57 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
-# ndb-cluster does not configure with cmake
-PKG_SUPPORTED_OPTIONS+=	dtrace embedded-server ldap memcached ndb-cluster
+PKG_SUPPORTED_OPTIONS+=	dtrace embedded-server ldap memcached
 PKG_SUGGESTED_OPTIONS+=	embedded-server
 
 .include "../../mk/bsd.options.mk"
