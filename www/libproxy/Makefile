@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/05/24 17:07:10 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/05/25 19:42:06 adam Exp $
 
 DISTNAME=	libproxy-0.5.1
 CATEGORIES=	www gnome
@@ -16,6 +16,8 @@ USE_TOOLS+=	bash:build pkg-config
 PKGCONFIG_OVERRIDE+=		output/meson-private/libproxy-1.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/src/backend:${WRKSRC}/output/src/libproxy
 TEST_TARGET=	test
 
 REPLACE_BASH+=	data/check-code-style
