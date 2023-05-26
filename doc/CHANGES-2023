@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3332 2023/05/26 15:07:18 he Exp $
+$NetBSD: CHANGES-2023,v 1.3333 2023/05/26 16:33:11 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-prometheus_client to 0.17.0 [adam 2023-05-26]
 	Updated pkgtools/revbump to 3.0 [wiz 2023-05-26]
 	Updated net/radsecproxy to 1.10.0 [he 2023-05-26]
+	Updated sysutils/auto-admin to 0.7.15.17 [bacon 2023-05-26]
