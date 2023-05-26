@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3334 2023/05/26 19:51:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3335 2023/05/26 19:54:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4618,3 +4618,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-requests to 2.31.0 [adam 2023-05-26]
 	Updated math/py-roman to 4.1 [adam 2023-05-26]
 	Updated devel/py-test-cov to 4.1.0 [adam 2023-05-26]
+	Updated sysutils/erdtree to 3.0.0 [pin 2023-05-26]
