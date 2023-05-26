@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/04/09 08:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/05/26 04:26:50 adam Exp $
 
-DISTNAME=	elixir-1.14.4
+DISTNAME=	elixir-1.14.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -33,9 +33,9 @@ CHECK_INTERPRETER_SKIP+=	lib/elixir/bin/mix
 
 # Debug locale problems.
 pre-build:
-	@echo ENV:
-	@${PKGSRC_SETENV} ${MAKE_ENV} env | egrep "^(LANG|LC_)" || true
-	@echo LOCALE:
+	@${ECHO} ENV:
+	@${PKGSRC_SETENV} ${MAKE_ENV} env | egrep "^(LANG|LC_)" || ${TRUE}
+	@${ECHO} LOCALE:
 	@${PKGSRC_SETENV} ${MAKE_ENV} locale
 
 .include "../../mk/bsd.pkg.mk"
