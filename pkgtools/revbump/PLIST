@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/15 23:25:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/26 06:47:54 wiz Exp $
 bin/blbump
 bin/check-cvs-diff
 bin/finddepends
 bin/replace-commonbump
 bin/revbump
+bin/revbump.py
 man/man1/blbump.1
 man/man1/check-cvs-diff.1
 man/man1/finddepends.1
 man/man1/replace-commonbump.1
 man/man1/revbump.1
+man/man1/revbump.py.1
