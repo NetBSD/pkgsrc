@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.30 2022/06/27 15:29:17 fcambus Exp $
+# $NetBSD: Makefile,v 1.31 2023/05/26 18:01:28 schmonz Exp $
 
-DISTNAME=	lowdown-1.0.0
-CATEGORIES=	textproc
-MASTER_SITES=	https://kristaps.bsd.lv/lowdown/snapshots/
+DISTNAME=		lowdown-1.0.0
+CATEGORIES=		textproc
+MASTER_SITES=		https://kristaps.bsd.lv/lowdown/snapshots/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://kristaps.bsd.lv/lowdown/
-COMMENT=	Simple Markdown translator
-LICENSE=	isc
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://kristaps.bsd.lv/lowdown/
+COMMENT=		Simple Markdown translator
+LICENSE=		isc
 
-HAS_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
 
 SUBST_CLASSES+=		install
 SUBST_SED.install+=	-e 's,/usr/local,${PREFIX},' \
@@ -23,6 +23,6 @@ SUBST_MESSAGE.install=	Fixing installation path.
 
 INSTALL_TARGET=		install install_libs
 
-TEST_TARGET=	regress
+TEST_TARGET=		regress
 
 .include "../../mk/bsd.pkg.mk"
