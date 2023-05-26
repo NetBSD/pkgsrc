@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3330 2023/05/26 04:38:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3331 2023/05/26 06:48:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/wireshark to 4.0.6 [adam 2023-05-26]
 	Updated www/py-websocket-client to 1.5.2 [adam 2023-05-26]
 	Updated net/py-prometheus_client to 0.17.0 [adam 2023-05-26]
+	Updated pkgtools/revbump to 3.0 [wiz 2023-05-26]
