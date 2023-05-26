@@ -1,6 +1,7 @@
-$NetBSD: patch-include_X11_Intrinsic.h,v 1.1 2023/05/25 11:53:09 jperkin Exp $
+$NetBSD: patch-include_X11_Intrinsic.h,v 1.2 2023/05/26 05:09:20 wiz Exp $
 
 Do not use _Static_assert in C++ code.
+https://gitlab.freedesktop.org/xorg/lib/libxt/-/issues/17
 
 --- include/X11/Intrinsic.h.orig	2023-04-09 20:48:48.000000000 +0000
 +++ include/X11/Intrinsic.h
