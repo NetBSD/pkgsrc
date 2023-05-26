@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3336 2023/05/26 19:56:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3337 2023/05/26 19:57:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4620,3 +4620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-cov to 4.1.0 [adam 2023-05-26]
 	Updated sysutils/erdtree to 3.0.0 [pin 2023-05-26]
 	Updated sysutils/felix to 2.3.0 [pin 2023-05-26]
+	Updated misc/tui-journal to 0.1.2 [pin 2023-05-26]
