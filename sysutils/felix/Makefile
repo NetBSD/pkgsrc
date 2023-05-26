@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2023/05/19 11:12:37 pin Exp $
+# $NetBSD: Makefile,v 1.48 2023/05/26 19:55:44 pin Exp $
 
-DISTNAME=	felix-2.2.8
+DISTNAME=	felix-2.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin share/examples/felix
+INSTALLATION_DIRS=	share/examples/felix
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.yaml \
