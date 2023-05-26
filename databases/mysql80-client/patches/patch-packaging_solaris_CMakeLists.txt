@@ -1,0 +1,15 @@
+$NetBSD: patch-packaging_solaris_CMakeLists.txt,v 1.1 2023/05/26 11:13:52 jperkin Exp $
+
+Limit files to mysql80-server.
+
+--- packaging/solaris/CMakeLists.txt.orig	2023-03-16 17:22:37.000000000 +0000
++++ packaging/solaris/CMakeLists.txt
+@@ -24,7 +24,7 @@
+ # Any files in this directory are auxiliary files for Solaris "pkg" packages.
+ # They will be configured during "pkg" creation, not during (binary) build.
+ 
+-IF(NOT SOLARIS)
++IF(NOT SOLARIS OR WITHOUT_SERVER)
+   RETURN()
+ ENDIF()
+ 

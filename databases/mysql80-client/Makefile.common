@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2023/05/23 21:01:11 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2023/05/26 11:13:52 jperkin Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -63,7 +63,6 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DLOCAL_BOOST_DIR="${WRKSRC}/boost"
 CMAKE_ARGS+=		-DWITH_BUILD_ID=OFF
 CMAKE_ARGS+=		-DWITH_CURL="system"
-CMAKE_ARGS+=		-DWITH_FIDO="system"
 CMAKE_ARGS+=		-DWITH_ICU="system"
 CMAKE_ARGS+=		-DWITH_LIBEVENT="system"
 CMAKE_ARGS+=		-DWITH_LZ4="system"
@@ -110,6 +109,11 @@ CMAKE_ARGS+=	-DWITH_READLINE="system"
 CMAKE_ARGS+=	-DWITH_EDITLINE="system"
 .endif
 
+.if ${OPSYS} != "SunOS"
+CMAKE_ARGS+=		-DWITH_FIDO="system"
+.include "../../security/libfido2/buildlink3.mk"
+.endif
+
 .if ${OPSYS} == "NetBSD"
 CFLAGS.NetBSD+=		-DHAVE_ALLOCA_H
 CXXFLAGS.NetBSD+=	-DHAVE_ALLOCA_H
@@ -124,7 +128,6 @@ post-patch:
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/libfido2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
