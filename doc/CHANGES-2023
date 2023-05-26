@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3337 2023/05/26 19:57:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3338 2023/05/26 20:01:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4621,3 +4621,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/erdtree to 3.0.0 [pin 2023-05-26]
 	Updated sysutils/felix to 2.3.0 [pin 2023-05-26]
 	Updated misc/tui-journal to 0.1.2 [pin 2023-05-26]
+	Updated www/py-flask-restful to 0.3.10 [adam 2023-05-26]
+	Updated www/py-MechanicalSoup to 1.2.0 [adam 2023-05-26]
