@@ -1,4 +1,4 @@
-$NetBSD: patch-util_Makefile.in,v 1.1 2022/04/04 12:41:24 riastradh Exp $
+$NetBSD: patch-util_Makefile.in,v 1.2 2023/05/26 05:09:20 wiz Exp $
 
 The rules to build the makestrs tool go through libtool, which goes
 through the wrong wrappers as if for cross-compiling, which is wrong
@@ -6,6 +6,8 @@ for a tool that is run during the build.  In practice, this manifests
 as a PIE linking failure: the .o file was built without -fPIE, but the
 wrapper causes linker to be invoked with -pie.  Just use CC_FOR_BUILD
 directly to avoid this.
+
+https://gitlab.freedesktop.org/xorg/lib/libxt/-/issues/18
 
 --- util/Makefile.in.orig	2021-01-24 14:47:52.000000000 +0000
 +++ util/Makefile.in
