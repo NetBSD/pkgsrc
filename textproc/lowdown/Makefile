@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/05/26 18:01:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/26 18:03:31 schmonz Exp $
 
 DISTNAME=		lowdown-1.0.0
 CATEGORIES=		textproc
@@ -12,11 +12,11 @@ LICENSE=		isc
 HAS_CONFIGURE=		yes
 
 SUBST_CLASSES+=		install
-SUBST_SED.install+=	-e 's,/usr/local,${PREFIX},' \
-			-e 's,^MANDIR=.*,MANDIR=${PREFIX}/${PKGMANDIR},' \
-			-e '/^CC=.*/d'						\
-			-e '/^CFLAGS=.*/d'					\
-			-e '/^LDFLAGS=.*/d'
+SUBST_SED.install=	-e 's|/usr/local|${PREFIX}|'
+SUBST_SED.install+=	-e 's|^MANDIR=.*|MANDIR=${PREFIX}/${PKGMANDIR}|'
+SUBST_SED.install+=	-e '/^CC=.*/d'
+SUBST_SED.install+=	-e '/^CFLAGS=.*/d'
+SUBST_SED.install+=	-e '/^LDFLAGS=.*/d'
 SUBST_FILES.install+=	configure
 SUBST_STAGE.install=	pre-configure
 SUBST_MESSAGE.install=	Fixing installation path.
