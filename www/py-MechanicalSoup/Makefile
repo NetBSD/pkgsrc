@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/26 20:00:17 adam Exp $
 
-DISTNAME=	MechanicalSoup-1.1.0
+DISTNAME=	MechanicalSoup-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
 
