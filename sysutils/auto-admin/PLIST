@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/09/19 13:13:28 bacon Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/05/26 16:33:04 bacon Exp $
 bin/auto-append-line
 bin/auto-ask
 bin/auto-backup-file
@@ -22,6 +22,7 @@ bin/auto-pkgsrc-remote-x11
 bin/auto-pkgsrc-setup
 bin/auto-pkgsrc-wip-checkout
 bin/auto-replace-file
+bin/auto-software-manager
 bin/auto-ssh-authorize
 bin/auto-ssh-reverse-authorize
 bin/auto-update-pkgsrc
@@ -96,6 +97,7 @@ sbin/auto-ipmi-remote-status
 sbin/auto-krb-auth-setup
 sbin/auto-last-update
 sbin/auto-ldap-client-setup
+sbin/auto-ldap-lookup
 sbin/auto-lock-local-pw
 sbin/auto-lock-user
 sbin/auto-mark-install-from-source
@@ -125,6 +127,7 @@ sbin/auto-pxe-installer-setup
 sbin/auto-pxe-node-discover
 sbin/auto-remove-from-group
 sbin/auto-remove-user
+sbin/auto-restart-services
 sbin/auto-restore-ownership
 sbin/auto-restore-pw
 sbin/auto-restore-user
@@ -139,7 +142,6 @@ sbin/auto-set-lid-switch-mode
 sbin/auto-set-memory-limits
 sbin/auto-set-sysctl
 sbin/auto-set-umask
-sbin/auto-software-manager
 sbin/auto-sound-driver-setup
 sbin/auto-su+j-toggle
 sbin/auto-sync-pxe-root-pw
