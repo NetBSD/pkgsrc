@@ -1,6 +1,8 @@
-$NetBSD: patch-arch_bsd.xs,v 1.1 2021/12/18 15:07:01 prlw1 Exp $
+$NetBSD: patch-arch_bsd.xs,v 1.2 2023/05/27 11:58:32 gdt Exp $
 
-UVM appeared since NetBSD 2.0.2.
+Add uvm header on NetBSD.
+
+Sent to maintainer via email 20220527.
 
 --- arch/bsd.xs.orig	2006-09-16 14:32:56.000000000 +0000
 +++ arch/bsd.xs
