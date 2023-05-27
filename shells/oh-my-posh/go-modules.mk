@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.10 2023/05/22 14:20:09 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.11 2023/05/27 19:38:13 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -31,8 +31,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.15.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.15.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.23.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.0.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/harmonica/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.6.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.7.1.mod
