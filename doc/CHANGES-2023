@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3344 2023/05/27 19:49:09 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3345 2023/05/27 20:31:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/xdiary to 3.0.3nb1 [he 2023-05-27]
 	Updated shells/oh-my-posh to 16.9.0 [pin 2023-05-27]
 	Updated textproc/csvlens to 0.1.14 [pin 2023-05-27]
+	Updated www/lighttpd to 1.4.71 [schmonz 2023-05-27]
