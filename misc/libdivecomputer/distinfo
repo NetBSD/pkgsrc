@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/27 07:00:07 charlotte Exp $
+
+BLAKE2s (libdivecomputer-0.8.0.tar.gz) = 3da5af217a304f373dea9c7b73a8b4926c12df51be234f93c7230f505b42f345
+SHA512 (libdivecomputer-0.8.0.tar.gz) = f626b8d6f829885a8b3df08f73ae9574f04e557744bdf1f91eb6daddd9ea85d1b3b6eee65993d7711992f9ba005415584177eaaf8b7abef00a0720e5abbf064b
+Size (libdivecomputer-0.8.0.tar.gz) = 810012 bytes
