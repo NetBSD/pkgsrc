@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/01/22 20:08:17 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/27 15:22:36 he Exp $
 
 DISTNAME=	xmdiary-3.0.3
 PKGNAME=	${DISTNAME:S/m//}
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=office/}
 
