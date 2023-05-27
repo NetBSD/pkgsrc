@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3339 2023/05/26 20:38:53 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3340 2023/05/27 06:31:52 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4624,3 +4624,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask-restful to 0.3.10 [adam 2023-05-26]
 	Updated www/py-MechanicalSoup to 1.2.0 [adam 2023-05-26]
 	Updated textproc/lowdown to 1.0.2 [schmonz 2023-05-26]
+	Updated lang/janet to 1.28.0 [charlotte 2023-05-26]
