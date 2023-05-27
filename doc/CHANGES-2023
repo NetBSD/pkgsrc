@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3341 2023/05/27 07:03:50 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.3342 2023/05/27 15:23:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4626,3 +4626,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/lowdown to 1.0.2 [schmonz 2023-05-26]
 	Updated lang/janet to 1.28.0 [charlotte 2023-05-26]
 	Added misc/libdivecomputer version 0.8.0 [charlotte 2023-05-27]
+	Updated time/xdiary to 3.0.3nb1 [he 2023-05-27]
