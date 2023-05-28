@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22987 2023/05/26 13:04:51 wiz Exp $
+$NetBSD: TODO,v 1.22988 2023/05/28 14:16:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -813,6 +813,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.1.8
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o influxdb-2.0.4
@@ -904,6 +905,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.16.2
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -927,6 +929,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libuninameslist-20230523
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -943,6 +946,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lsh-2.1
 	o lua-cov-0.15.0
 	o lua-keybinder-0.3.2
+	o lua-language-server-3.6.21
 	o lua-sql-mysql-2.4.0
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
@@ -999,6 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o munge-0.5.14
 	o muse-0.9.2
 	o musescore-4.0.2 [now has a fixed ALSA dependency, and some features were removed]
+	o musicpd-0.23.13
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
 	o nagios-ncsa-2.10.0
@@ -1029,7 +1034,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-5.0.0
 	o ocaml-cppo-1.6.9
 	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
-	o ocaml-dune-3.7.1
+	o ocaml-dune-3.8.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1200,10 +1205,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
-	o protobuf-23.1 [make sure net/grpc supports this version]
+	o protobuf-23.2 [make sure net/grpc supports this version]
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
+	o psutils-3.0
 	o ptex-2.3.2
 	o ptlib-2.16.2
 	o pvs-6.0
@@ -1214,6 +1220,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-barman-3.0.1
+	o py-cachetools-5.3.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-django-4.1
@@ -1223,9 +1230,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.87.0
+	o py-google-auth-2.19.0
 	o py-gsutil-5.6
+	o py-hatch-fancy-pypi-readme-23.1.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-icalendar-5.0.6
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
@@ -1236,15 +1247,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.5.6
 	o py-postgresql-5.1.2
-	o py-protobuf-4.23.1
+	o py-protobuf-4.23.2
 	o py-ptt-1.10.2
 	o py-py3c-1.3.1
 	o py-pymc3-3.8
+	o py-qt-builder-1.15.1
 	o py-qt6-6.4.2
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
 	o py-requests-kerberos-0.14.0
+	o py-ruamel-yaml-0.17.28
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1253,6 +1267,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-terminator-2.1.1
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
+	o py-tox-4.5.2
+	o py-trove-classifiers-2023.5.24
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-wxWidgets-4.0.0
@@ -1451,6 +1467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o udunits-2.2.28
 	o ufoai-2.3.1
 	o unicode-screensaver-0.5.2
+	o unifont-15.0.03
 	o units-2.21
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
@@ -1466,7 +1483,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vfu-4.09
 	o vicq-0.4.2
 	o vim-9.0
-	o vim-share-9.0.1572
+	o vim-share-9.0.1585
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-3.2.0
