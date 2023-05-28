@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3360 2023/05/28 16:53:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3361 2023/05/28 16:54:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.64 [pin 2023-05-28]
 	Updated databases/mysql80-client to 8.0.33nb1 [wiz 2023-05-28]
 	Updated security/py-pip-audit to 2.5.6 [wiz 2023-05-28]
+	Updated time/py-icalendar to 5.0.6 [wiz 2023-05-28]
