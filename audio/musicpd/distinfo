@@ -1,15 +1,9 @@
-$NetBSD: distinfo,v 1.146 2023/05/17 10:45:41 wiz Exp $
+$NetBSD: distinfo,v 1.147 2023/05/28 17:11:55 wiz Exp $
 
-BLAKE2s (mpd-0.23.12.tar.xz) = a47a41a84d8b8923ca0952d8d5b3cce225dd6b42d3d48262a4bbbcbaa9af7656
-SHA512 (mpd-0.23.12.tar.xz) = 54495b839d86b47ae6e2f6cf4e1baebd0e8eb924742e9db42cc7462ffc4b6f650b83f3eaea291fe905ff5f1975cf875537ffd23a111724013ce58e6df26ce36e
-Size (mpd-0.23.12.tar.xz) = 774708 bytes
+BLAKE2s (mpd-0.23.13.tar.xz) = c1e048652f0756a152c3729168aaf5e9de220bb4eb862380070585a93c04886f
+SHA512 (mpd-0.23.13.tar.xz) = 1ef2b3a2089aa6078a455e43a2fb9097dc0d5b27b170e6d64e416d5e82349a794eb0acf8db72a975ad024083e872e4a1bd0e0fd51302d327d373b61f01bb819d
+Size (mpd-0.23.13.tar.xz) = 776668 bytes
 SHA1 (patch-doc_mpd.conf.5.rst) = ee22092564075cdf7917e4e66687f6ab98b5817c
-SHA1 (patch-src_SongPrint.cxx) = 83694e6e9f62ed775b6b369e6340f1f094f6797d
-SHA1 (patch-src_TagPrint.cxx) = 2491669683562e66c6d74b9de24e06633a27dfe5
-SHA1 (patch-src_TimePrint.cxx) = c50ae3b8cc5f61c5dbbd39b3b4beced91a37ecff
-SHA1 (patch-src_command_FileCommands.cxx) = 744cd47833dfea74b8fe92b62917375fff9c62ae
-SHA1 (patch-src_command_PlayerCommands.cxx) = 6c0346252279f833113ba5bcabbd40aea26f41a2
-SHA1 (patch-src_command_TagCommands.cxx) = ef7f0d87867d0ac9a033713d0345d1fab362c804
 SHA1 (patch-src_decoder_plugins_meson.build) = 8033d6e19da05f472f14f3562a5dfc2f410da98b
 SHA1 (patch-src_net_IPv6Address.hxx) = f89b838ad5e946c5db8d95a6dd560e02bdccae29
 SHA1 (patch-src_util_WStringAPI.hxx) = 92f39096770943c26d8aaae8a7581d4daca2d233
