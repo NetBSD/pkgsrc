@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.71 2022/09/11 12:25:23 wiz Exp $
+$NetBSD: distinfo,v 1.72 2023/05/28 06:12:20 dholland Exp $
 
 BLAKE2s (gc-8.2.2.tar.gz) = 57342fe55dd708b77796317d106759a34769721b35eb502de90af370e8b8001c
 SHA512 (gc-8.2.2.tar.gz) = 4a7b26789ce22ab72bfaadf3029362c5fe26737df1e856e43db7d9b24ee8acf625e35d596bb3f698f91d6a5ddfb6c45a952a1dbd18d47359569696a544c9c248
 Size (gc-8.2.2.tar.gz) = 1200115 bytes
+SHA1 (patch-include_private_gcconfig.h) = 76b2e33017d4792c79f4540b47350649d514fe0e
