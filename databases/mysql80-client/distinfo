@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2023/05/26 11:13:52 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2023/05/28 16:44:25 wiz Exp $
 
 BLAKE2s (mysql-boost-8.0.33.tar.gz) = 6b64fb998afe1854c6a9168b82a11e4254d30d439d4730914863e86ea4ff9071
 SHA512 (mysql-boost-8.0.33.tar.gz) = 47f76819004c7c545d1b0b6b6646d8816899976f92d35c5564b1255b144b597ff7d3e674c721a45bcbb13cc0da3f4474fb29221c0e21d2ff91a1892cd42c636c
@@ -28,7 +28,7 @@ SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_local.h) = d2149f9840dc8b65a4d9d8332bcd5088b4f9b919
 SHA1 (patch-router_src_harness_include_mysql_harness_tty.h) = ca883b2ed83b623922b58cf96f896de9847d37cb
 SHA1 (patch-router_src_harness_src_stdx_io_file_handle.cc) = 5349b05663179e4ef049cfb1532514e48a3885c9
-SHA1 (patch-scripts_CMakeLists.txt) = 15be14619275f0dc39c216901b2cabc6ee517300
+SHA1 (patch-scripts_CMakeLists.txt) = d60000b5213d70b42c61a704c4f36581588f5c84
 SHA1 (patch-scripts_mysqld_safe.sh) = 3d10c84e6fef391b5e7cd9a3ed0223bd8b18c42e
 SHA1 (patch-sql_CMakeLists.txt) = 94809ea12966392b9ea317da42f2b84219d36cc0
 SHA1 (patch-sql_conn__handler_socket__connection.cc) = 91f2f707576618396579809b83f931e51385d2a2
