@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/09 07:26:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/28 01:22:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -29,6 +29,7 @@ ${GEM_LIBDIR}/lib/datasets/hepatitis.rb
 ${GEM_LIBDIR}/lib/datasets/iris.rb
 ${GEM_LIBDIR}/lib/datasets/ita-corpus.rb
 ${GEM_LIBDIR}/lib/datasets/kuzushiji-mnist.rb
+${GEM_LIBDIR}/lib/datasets/lazy.rb
 ${GEM_LIBDIR}/lib/datasets/libsvm-dataset-list.rb
 ${GEM_LIBDIR}/lib/datasets/libsvm.rb
 ${GEM_LIBDIR}/lib/datasets/license.rb
@@ -36,6 +37,7 @@ ${GEM_LIBDIR}/lib/datasets/livedoor-news.rb
 ${GEM_LIBDIR}/lib/datasets/metadata.rb
 ${GEM_LIBDIR}/lib/datasets/mnist.rb
 ${GEM_LIBDIR}/lib/datasets/mushroom.rb
+${GEM_LIBDIR}/lib/datasets/nagoya-university-conversation-corpus.rb
 ${GEM_LIBDIR}/lib/datasets/penguins.rb
 ${GEM_LIBDIR}/lib/datasets/penn-treebank.rb
 ${GEM_LIBDIR}/lib/datasets/pmjt-dataset-list.rb
@@ -80,6 +82,7 @@ ${GEM_LIBDIR}/test/test-livedoor-news.rb
 ${GEM_LIBDIR}/test/test-metadata.rb
 ${GEM_LIBDIR}/test/test-mnist.rb
 ${GEM_LIBDIR}/test/test-mushroom.rb
+${GEM_LIBDIR}/test/test-nagoya-university-conversation-corpus.rb
 ${GEM_LIBDIR}/test/test-penguins.rb
 ${GEM_LIBDIR}/test/test-penn-treebank.rb
 ${GEM_LIBDIR}/test/test-pmjt-dataset-list.rb
