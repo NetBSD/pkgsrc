@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2023/05/05 19:37:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.64 2023/05/28 19:14:51 bsiegert Exp $
 
-DISTNAME=		lf-28
-PKGREVISION=		4
+DISTNAME=		lf-30
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
-GITHUB_TAG=		r28
+GITHUB_TAG=		r${PKGVERSION_NOREV}
 
 HOMEPAGE=		https://github.com/gokcehan/lf
 COMMENT=		Terminal file manager
