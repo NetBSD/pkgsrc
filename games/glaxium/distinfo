@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:44:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/05/28 09:54:19 bsiegert Exp $
 
 BLAKE2s (glaxium_0.5.tar.gz) = c4c6d46cbc7a763d54584350bd172cb59c3640b03d8efc9ed5f996cac463c566
 SHA512 (glaxium_0.5.tar.gz) = 544c59f9b758accb7de270dc9b2e9943fab9a69bea9114de589709cb976b2144913a1247b4950e9edd4c2630c7fcc75f04832196076afbe156b61891591b8a11
 Size (glaxium_0.5.tar.gz) = 1692219 bytes
-SHA1 (patch-aa) = 9b8299ed10aaea1e862c929b6f20eef0811cae35
+SHA1 (patch-aa) = 97d405080adab6baeb6a40921fe8f6d64126b7ea
 SHA1 (patch-ab) = e8f2abea9053d73090fdb9ec92806fe21b68d3ce
 SHA1 (patch-ac) = ac0a11ca229865eb637425d6065729d1c8fc3da2
 SHA1 (patch-ad) = 3572e6f5c97f342d5b68024c7ebb17aeedb8b667
