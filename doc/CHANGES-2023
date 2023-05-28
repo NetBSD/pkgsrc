@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3345 2023/05/27 20:31:46 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3346 2023/05/28 01:22:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4630,3 +4630,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 16.9.0 [pin 2023-05-27]
 	Updated textproc/csvlens to 0.1.14 [pin 2023-05-27]
 	Updated www/lighttpd to 1.4.71 [schmonz 2023-05-27]
+	Updated devel/ruby-red-datasets to 0.1.6 [taca 2023-05-28]
