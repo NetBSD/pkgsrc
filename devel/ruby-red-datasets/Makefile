@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/10/10 03:36:49 taca Exp $
+# $NetBSD: Makefile,v 1.5 2023/05/28 01:22:12 taca Exp $
 
-DISTNAME=	red-datasets-0.1.5
+DISTNAME=	red-datasets-0.1.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
