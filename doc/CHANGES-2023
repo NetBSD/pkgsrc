@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3354 2023/05/28 01:46:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3355 2023/05/28 01:52:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4639,3 +4639,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-core to 3.173.1 [taca 2023-05-28]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.75.0 [taca 2023-05-28]
 	Updated www/ruby-faraday to 2.7.5 [taca 2023-05-28]
+	Updated www/ruby-rails-html-sanitizer to 1.6.0 [taca 2023-05-28]
