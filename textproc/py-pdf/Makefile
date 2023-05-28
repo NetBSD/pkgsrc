@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/28 18:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/28 22:59:53 wiz Exp $
 
 DISTNAME=	pypdf-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
