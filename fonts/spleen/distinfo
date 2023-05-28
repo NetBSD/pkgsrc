@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/04/07 07:59:06 fcambus Exp $
+$NetBSD: distinfo,v 1.20 2023/05/28 17:37:51 fcambus Exp $
 
-BLAKE2s (spleen-1.9.3.tar.gz) = 825dd6184765db66a361bb1026a1aeac7c30939c653f895b3797f5f348723d19
-SHA512 (spleen-1.9.3.tar.gz) = 899b1b43b5935662662e9f6fb92cb835219e3cb462b7279d0412e8b34a7e3d8f8d16c5fecb02d2d2535568888cae8ab33b592880a7afc1950b619541324bdd29
-Size (spleen-1.9.3.tar.gz) = 424202 bytes
+BLAKE2s (spleen-2.0.0.tar.gz) = 5b0bf1469ce2fbb96b00a55b07011fe7ee8087bb819ae945afa79f4b88a48ab5
+SHA512 (spleen-2.0.0.tar.gz) = cae55f1f9d04995e3b6c725fb1d010b4593f6e96a9cf1b594f945f5cc827131a5c8497eb97367f8aa75dfde9841a160a5292c893f8a99bb33bc95ca67445a7a6
+Size (spleen-2.0.0.tar.gz) = 483317 bytes
