@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/03/15 13:35:16 taca Exp $
+$NetBSD: distinfo,v 1.12 2023/05/28 01:54:17 taca Exp $
 
-BLAKE2s (actionmailer-7.0.4.3.gem) = bd12a3f191202d6252971e0a4ed49cd94be3d7d63c496603100aefcf3f34b570
-SHA512 (actionmailer-7.0.4.3.gem) = 90259d0b355ee43dbeac38fe1b1e6812569c1ba6e45ad931e5836390c4486451db2110b28f8a8bbaedaece2f0d48edd0f5311ca6b51c2cc1ba40a1c55d3815ea
-Size (actionmailer-7.0.4.3.gem) = 30720 bytes
+BLAKE2s (actionmailer-7.0.5.gem) = 22ae5f1ceb7ce87cfb6f5ef0f46e0be24469e575f279830e119187502d28b0c6
+SHA512 (actionmailer-7.0.5.gem) = fa17080ce412af789a348f8ef567fc8d9dbe539f2fa135830eb20d39c4b8ab08bd76289b50f30c2e0b56750e1cd6a45642d25e2ab41b87f5327c9186bdff1520
+Size (actionmailer-7.0.5.gem) = 30720 bytes
