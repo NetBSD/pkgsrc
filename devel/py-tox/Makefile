@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/05/01 09:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/05/28 17:01:46 wiz Exp $
 
-DISTNAME=	tox-4.5.1
+DISTNAME=	tox-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -10,17 +10,17 @@ HOMEPAGE=	https://tox.readthedocs.io/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.17:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=5.3:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.1:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.11:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.12:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.2:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.1:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-project-api>=1.5.1:../../devel/py-project-api
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.21:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.23:../../devel/py-virtualenv
 
 # more unpackaged TEST_DEPENDS from pyproject.toml
 # "build[virtualenv]>=0.10",
@@ -32,11 +32,11 @@ DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.21:../../devel/py-virtualenv
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.4:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9.5:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.3.1:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.10:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.2.1:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.3.1:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -44,8 +44,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.4.1:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6.6:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.2:../../devel/py-typing-extensions
 .endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
