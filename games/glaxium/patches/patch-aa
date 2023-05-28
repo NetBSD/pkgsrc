@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 12:39:56 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2023/05/28 09:54:19 bsiegert Exp $
 
---- Makefile.in.orig	Mon Aug 18 11:38:01 2003
-+++ Makefile.in	Mon Aug 18 11:38:12 2003
-@@ -15,7 +15,7 @@
+--- Makefile.in.orig	2023-05-28 09:43:16.671037189 +0000
++++ Makefile.in
+@@ -15,11 +15,11 @@ mandir=@mandir@
  
  GLAXIUM_INSTALLDIR=$(bindir)
  DATA_DIRS=samples textures
@@ -11,3 +11,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/05 12:39:56 xtraeme Exp $
  MAN_DIR=$(mandir)
  
  glaxium : $(OBJ)
+-	$(CC) -g -o glaxium $(OBJ) $(LIB)
++	gcc -g -o glaxium $(OBJ) $(LIB)
+ 
+ 
+ 
