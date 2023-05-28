@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/04/19 08:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/05/28 22:48:27 bacon Exp $
 
-DISTNAME=	ncbi-blast-2.13.0+-src
+DISTNAME=	ncbi-blast-2.14.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	6
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -11,6 +10,9 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
+
+# Nobody does bioinformatics on 32-bit processors anymore
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 
 # Fix "undefined _ThreadRuneLocale" error on FreeBSD 10.0
 # Fix "unknown options" in configure
@@ -59,7 +61,9 @@ CONFIGURE_ARGS+=	--without-openmp
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
+	${FIND} ${DESTDIR}${PREFIX} -name '\.cvs*' -exec rm -rf '{}' \;
+	${FIND} ${DESTDIR}${PREFIX} -name '\.subversion*' -exec rm -rf '{}' \;
+	${FIND} ${DESTDIR}${PREFIX} -name '\.git*' -exec rm -rf '{}' \;
 .if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 .endif
@@ -67,6 +71,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
