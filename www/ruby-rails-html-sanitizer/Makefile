@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/01/21 14:14:29 taca Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/28 01:51:44 taca Exp $
 
-DISTNAME=	rails-html-sanitizer-1.5.0
+DISTNAME=	rails-html-sanitizer-1.6.0
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
