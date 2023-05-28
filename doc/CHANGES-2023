@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3356 2023/05/28 01:55:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3357 2023/05/28 10:52:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4653,3 +4653,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-railties70 to 7.0.5 [taca 2023-05-28]
 	Updated textproc/ruby-actiontext70 to 7.0.5 [taca 2023-05-28]
 	Updated www/ruby-rails70 to 7.0.5 [taca 2023-05-28]
+	Updated devel/py-maturin to 1.0.1 [adam 2023-05-28]
+	Updated devel/py-cachetools to 5.3.1 [adam 2023-05-28]
