@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3358 2023/05/28 13:54:57 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3359 2023/05/28 16:44:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-maturin to 1.0.1 [adam 2023-05-28]
 	Updated devel/py-cachetools to 5.3.1 [adam 2023-05-28]
 	Updated graphics/oculante to 0.6.64 [pin 2023-05-28]
+	Updated databases/mysql80-client to 8.0.33nb1 [wiz 2023-05-28]
