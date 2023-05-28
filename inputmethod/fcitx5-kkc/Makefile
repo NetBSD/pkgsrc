@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/22 21:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/05/28 15:56:13 wiz Exp $
 
 DISTNAME=	fcitx5-kkc-5.0.4
 PKGREVISION=	8
@@ -22,7 +22,7 @@ DEPENDS+=	libkkc-data-[0-9]*:../../misc/libkkc-data
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pkg-config
 
 .include "../../converters/libkkc/buildlink3.mk"
