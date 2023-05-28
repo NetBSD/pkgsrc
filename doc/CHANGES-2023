@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3347 2023/05/28 01:24:29 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3348 2023/05/28 01:28:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4632,3 +4632,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/lighttpd to 1.4.71 [schmonz 2023-05-27]
 	Updated devel/ruby-red-datasets to 0.1.6 [taca 2023-05-28]
 	Updated devel/ruby-test-unit to 3.5.9 [taca 2023-05-28]
+	Updated security/ruby-metasploit-payloads to 2.0.133 [taca 2023-05-28]
