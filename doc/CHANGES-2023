@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3369 2023/05/28 19:16:08 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.3370 2023/05/28 20:55:11 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/spleen to 2.0.0 [fcambus 2023-05-28]
 	Added textproc/py-pdf version 3.9.0 [wiz 2023-05-28]
 	Updated sysutils/lf to 30 [bsiegert 2023-05-28]
+	Updated graphics/libansilove to 1.4.1 [fcambus 2023-05-28]
