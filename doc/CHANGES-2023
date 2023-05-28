@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3357 2023/05/28 10:52:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3358 2023/05/28 13:54:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails70 to 7.0.5 [taca 2023-05-28]
 	Updated devel/py-maturin to 1.0.1 [adam 2023-05-28]
 	Updated devel/py-cachetools to 5.3.1 [adam 2023-05-28]
+	Updated graphics/oculante to 0.6.64 [pin 2023-05-28]
