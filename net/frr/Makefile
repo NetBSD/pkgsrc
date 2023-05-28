@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2022/11/15 09:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/28 16:03:43 wiz Exp $
 
 GITHUB_PROJECT=	frr
 VERSION=	8.2.2
 GITHUB_TAG=	frr-${VERSION}
 DISTNAME=	frr-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FRRouting/}
 
@@ -21,7 +21,7 @@ USE_TOOLS+=		gmake perl bash pkg-config autoconf automake autoreconf bison
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		yes
 BUILD_DEFS=		VARBASE
-BISON_REQD=		3.3
+BISON_REQD+=		3.3
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
