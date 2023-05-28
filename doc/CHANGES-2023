@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3366 2023/05/28 17:13:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3367 2023/05/28 17:38:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libheif to 1.16.2 [wiz 2023-05-28]
 	Updated audio/musicpd to 0.23.13 [wiz 2023-05-28]
 	Updated textproc/libuninameslist to 20230523 [wiz 2023-05-28]
+	Updated fonts/spleen to 2.0.0 [fcambus 2023-05-28]
