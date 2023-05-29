@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3380 2023/05/29 16:38:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3381 2023/05/29 17:34:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4685,3 +4685,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/p5-Number-Bytes-Human version 0.11 [gdt 2023-05-29]
 	Updated devel/py-poetry-core to 1.6.1 [adam 2023-05-29]
 	Updated devel/py-jaraco.functools to 3.7.0 [adam 2023-05-29]
+	Updated net/rabbitmq to 3.11.16nb1 [wiz 2023-05-29]
