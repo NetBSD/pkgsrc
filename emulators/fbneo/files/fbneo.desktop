@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=FinalBurn Neo
+Comment=Arcade game emulator
+Icon=fbneo
+Exec=fbneo -menu -integerscale -joy
+Terminal=false
+Categories=Game;Emulator;
