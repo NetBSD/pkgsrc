@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:23:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/05/29 14:33:14 nia Exp $
 
-BLAKE2s (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = a5b046fd82aceb1d85c03e8cace1dfd52a939bcd9407b2bda24f05bd9a11ad83
-SHA512 (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = 0ef4a27bd9fa0d49f5ea09777f2144a9b0be9c9fced59593ba15e9f4818a305d2ca85a2ef3850cef77032157265376f5f3204b6c81226001c94d85f346829843
-Size (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = 14602038 bytes
-SHA1 (patch-src_burner_libretro_burn__endian.h) = 35b3ea13154bd5380ad5d067f3ec5f32ab18ce36
-SHA1 (patch-src_burner_libretro_retro__common.h) = 5bb4c3ff577841e1c89e689a272ad4a188cba5d4
+BLAKE2s (FBNeo-98e3e5eba0f45cce06c11cc7f9065ddb23ece3e1.tar.gz) = 3cfeb43d9db1f1c51bd926f98ab2b9d2085ea389bea641fad2c12fde717c823e
+SHA512 (FBNeo-98e3e5eba0f45cce06c11cc7f9065ddb23ece3e1.tar.gz) = 0fafd3cc6fc6876920be2486f85c091fb9e9fdeab29196e0157a347a4aad600880b47c46fc12cef52387a64fc8284230a38934937b00b0bd4c2c526b19d9e5c2
+Size (FBNeo-98e3e5eba0f45cce06c11cc7f9065ddb23ece3e1.tar.gz) = 18535308 bytes
+SHA1 (patch-src_burn_burn__endian.h) = ce5f14cc5c349a0bc1ec56ea1310e8ef1086ec64
+SHA1 (patch-src_burner_libretro_retro__common.h) = d0b25d0582223cf2a1bf3b4cd0b08c02e8786e30
