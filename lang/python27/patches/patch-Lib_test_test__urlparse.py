@@ -1,4 +1,4 @@
-$NetBSD: patch-Lib_test_test__urlparse.py,v 1.2 2022/02/25 22:41:32 gutteridge Exp $
+$NetBSD: patch-Lib_test_test__urlparse.py,v 1.3 2023/05/29 23:33:48 gutteridge Exp $
 
 Fix CVE-2021-23336: Add `separator` argument to parse_qs; warn with default
 Via Fedora:
@@ -7,6 +7,10 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
 Fix CVE-2022-0391: urlparse does not sanitize URLs containing ASCII newline and tabs
 Via Fedora:
 https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc2239bf710/f/00377-CVE-2022-0391.patch
+
+Fix CVE-2023-24329: Add more sanitizing to respect the "Remove any leading C0 control or space from input" rule
+Via Fedora:
+https://src.fedoraproject.org/rpms/python2.7/c/3f00cdccd59ef2955a7f4b4c42bb59c631cce4c1.patch
 
 --- Lib/test/test_urlparse.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/test/test_urlparse.py
@@ -134,7 +138,7 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
      def test_roundtrips(self):
          testcases = [
              ('file:///tmp/junk.txt',
-@@ -544,6 +618,55 @@ class UrlParseTestCase(unittest.TestCase
+@@ -544,6 +618,112 @@ class UrlParseTestCase(unittest.TestCase
          self.assertEqual(p1.path, '863-1234')
          self.assertEqual(p1.params, 'phone-context=+1-914-555')
  
@@ -186,11 +190,68 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
 +            self.assertEqual(p.scheme, "https")
 +            self.assertEqual(p.geturl(), "https://www.python.org/javascript:alert('msg')/?query=something#fragment")
 +
++    def test_urlsplit_strip_url(self):
++        noise = "".join([chr(i) for i in range(0, 0x20 + 1)])
++        base_url = "http://User:Pass@www.python.org:080/doc/?query=yes#frag"
 +
++        url = noise.decode("utf-8") + base_url
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.scheme, "http")
++        self.assertEqual(p.netloc, "User:Pass@www.python.org:080")
++        self.assertEqual(p.path, "/doc/")
++        self.assertEqual(p.query, "query=yes")
++        self.assertEqual(p.fragment, "frag")
++        self.assertEqual(p.username, "User")
++        self.assertEqual(p.password, "Pass")
++        self.assertEqual(p.hostname, "www.python.org")
++        self.assertEqual(p.port, 80)
++        self.assertEqual(p.geturl(), base_url)
++
++        url = noise + base_url.encode("utf-8")
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.scheme, b"http")
++        self.assertEqual(p.netloc, b"User:Pass@www.python.org:080")
++        self.assertEqual(p.path, b"/doc/")
++        self.assertEqual(p.query, b"query=yes")
++        self.assertEqual(p.fragment, b"frag")
++        self.assertEqual(p.username, b"User")
++        self.assertEqual(p.password, b"Pass")
++        self.assertEqual(p.hostname, b"www.python.org")
++        self.assertEqual(p.port, 80)
++        self.assertEqual(p.geturl(), base_url.encode("utf-8"))
++
++        # Test that trailing space is preserved as some applications rely on
++        # this within query strings.
++        query_spaces_url = "https://www.python.org:88/doc/?query=    "
++        p = urlparse.urlsplit(noise.decode("utf-8") + query_spaces_url)
++        self.assertEqual(p.scheme, "https")
++        self.assertEqual(p.netloc, "www.python.org:88")
++        self.assertEqual(p.path, "/doc/")
++        self.assertEqual(p.query, "query=    ")
++        self.assertEqual(p.port, 88)
++        self.assertEqual(p.geturl(), query_spaces_url)
++
++        p = urlparse.urlsplit("www.pypi.org ")
++        # That "hostname" gets considered a "path" due to the
++        # trailing space and our existing logic...  YUCK...
++        # and re-assembles via geturl aka unurlsplit into the original.
++        # django.core.validators.URLValidator (at least through v3.2) relies on
++        # this, for better or worse, to catch it in a ValidationError via its
++        # regular expressions.
++        # Here we test the basic round trip concept of such a trailing space.
++        self.assertEqual(urlparse.urlunsplit(p), "www.pypi.org ")
++
++        # with scheme as cache-key
++        url = "//www.python.org/"
++        scheme = noise.decode("utf-8") + "https" + noise.decode("utf-8")
++        for _ in range(2):
++            p = urlparse.urlsplit(url, scheme=scheme)
++            self.assertEqual(p.scheme, "https")
++            self.assertEqual(p.geturl(), "https://www.python.org/")
  
      def test_attributes_bad_port(self):
          """Check handling of non-integer ports."""
-@@ -626,6 +749,132 @@ class UrlParseTestCase(unittest.TestCase
+@@ -626,6 +806,132 @@ class UrlParseTestCase(unittest.TestCase
          self.assertEqual(urlparse.urlparse("http://www.python.org:80"),
                  ('http','www.python.org:80','','','',''))
  

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2023/01/08 00:54:29 gutteridge Exp $
+$NetBSD: distinfo,v 1.93 2023/05/29 23:33:48 gutteridge Exp $
 
 BLAKE2s (Python-2.7.18.tar.xz) = 1b673ec8c9362a178e044691392bc4f67ad13457d7fddd84a88de346f23f9812
 SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
@@ -39,9 +39,9 @@ SHA1 (patch-Lib_test_test__mailcap.py) = 6b869c9e9d9ef097d6fc4aef967e7b7bca3bd41
 SHA1 (patch-Lib_test_test__platform.py) = 3a3b8c05f9bf9adf4862b1022ce864127d36b8b0
 SHA1 (patch-Lib_test_test__unicode.py) = 1bd182bdbd880d0a847f9d8b69277a607f9f0526
 SHA1 (patch-Lib_test_test__urllib2.py) = 89baa57daf2f3282e4fc5009915dbc4910b96ef1
-SHA1 (patch-Lib_test_test__urlparse.py) = d98df667a34eebb994fe1d54a1decb8359df897e
+SHA1 (patch-Lib_test_test__urlparse.py) = d656a6b3fd672633182a2cfd32b2495eac382f3c
 SHA1 (patch-Lib_urllib2.py) = 0cc0dc811bb9544496962e08b040b5c96fb9073c
-SHA1 (patch-Lib_urlparse.py) = 1f102bb85acd99a8be976f9d5b0fdb1a7abf5725
+SHA1 (patch-Lib_urlparse.py) = 09c355c7df32a0f705f246aa81538ab7770c55e2
 SHA1 (patch-Mac_Tools_pythonw.c) = 2b9a60d4b349c240471fd305be69c28e0f654cdc
 SHA1 (patch-Makefile.pre.in) = ceaf34237588b527478ce1f9163c9168382fa201
 SHA1 (patch-Modules___ctypes_callbacks.c) = 8c335edfc9d2ef47988c5bdf1c3dd8473757637b
