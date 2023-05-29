@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.1 2023/05/29 16:29:41 gdt Exp $
+
+DISTNAME=	Number-Bytes-Human-0.11
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	textproc
+# This expression is crazy but MASTER_SITE_PERL_CPAN has modules/by-module/
+# baked into it, and the distfile is at
+#   https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/Number-Bytes-Human-0.11.tar.gz
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FE/FERREIRA/}
+
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	https://metacpan.org/pod/Bytes::Human
+COMMENT=	Convert byte count to human readable format
+LICENSE=	${PERL5_LICENSE}
+
+PERL5_PACKLIST=		auto/Number/Bytes/Human/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
