@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3377 2023/05/29 12:28:09 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3378 2023/05/29 13:37:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4680,3 +4680,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ucspi-ssl to 0.999.12.7 [schmonz 2023-05-29]
 	Updated devel/py-test-doctestplus to 0.12.1 [adam 2023-05-29]
 	Updated devel/py-test-httpserver to 1.0.8 [adam 2023-05-29]
+	Updated multimedia/openh264 to 2.3.1 [adam 2023-05-29]
+	Updated devel/pkgconf to 1.9.5 [adam 2023-05-29]
