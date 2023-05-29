@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/16 14:56:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/05/29 13:28:44 adam Exp $
 include/wels/codec_api.h
 include/wels/codec_app_def.h
 include/wels/codec_def.h
@@ -6,5 +6,5 @@ include/wels/codec_ver.h
 lib/libopenh264.a
 lib/libopenh264.so
 lib/libopenh264.so.${PKGVERSION}
-lib/libopenh264.so.6
+lib/libopenh264.so.7
 lib/pkgconfig/openh264.pc
