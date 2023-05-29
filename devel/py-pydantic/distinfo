@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/04 11:21:37 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/05/29 18:00:36 adam Exp $
 
-BLAKE2s (pydantic-1.10.7.tar.gz) = 7779c67d92066f82d2a9464e92a8934af7dc8a9d206b2b4e9a558cb338c44947
-SHA512 (pydantic-1.10.7.tar.gz) = 7210637461317d869cd93041158f870dbbacc1e08a5c624b59d80abb365ddac311fe837e50961c7ee0cdba169a999228c7df0941b639fd07343fd2701ed5c492
-Size (pydantic-1.10.7.tar.gz) = 344063 bytes
+BLAKE2s (pydantic-1.10.8.tar.gz) = c6f7ac204fef1b7ff772ad6f65ce9ba39d7046558df3ee6ac0bfda7a52ac4d42
+SHA512 (pydantic-1.10.8.tar.gz) = c0ecd47ef4ca9f82d168a00bce38b55f8b0da4279c6f3830ad6a5beef95c1bd1faedd1a01835b37ad4f2ecd26a489d521f50e8ec6905223683c9b3a72283c7f7
+Size (pydantic-1.10.8.tar.gz) = 345301 bytes
