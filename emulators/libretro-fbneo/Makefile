@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2020/08/11 18:47:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2023/05/29 14:33:14 nia Exp $
 
-DISTNAME=	libretro-fbneo-20200530
+FBNEO_TAG=	98e3e5eba0f45cce06c11cc7f9065ddb23ece3e1
+DISTNAME=	FBNeo-${FBNEO_TAG}
+PKGNAME=	libretro-fbneo-20230524
 CATEGORIES=	emulators
 GITHUB_PROJECT=	FBNeo
-GITHUB_TAG=	301cf7b6eeb3e7683952b98b66f39008f580b26d
+MASTER_SITES=	https://git.libretro.com/libretro/FBNeo/-/archive/${FBNEO_TAG}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/libretro/FBNeo/tree/master/src/burner/libretro
+HOMEPAGE=	https://git.libretro.com/libretro/FBNeo/-/tree/master/src/burner/libretro
 COMMENT=	Libretro core based on the FinalBurn Neo arcade game emulator
 LICENSE=	fbalpha-license
 
@@ -25,8 +27,14 @@ MAKE_FLAGS+=	EXTERNAL_ZLIB=1
 
 .if ${MACHINE_ARCH} == "earmv6hf" || ${MACHINE_ARCH} == "earmv7hf"
 MAKE_FLAGS+=	USE_CYCLONE=1
+MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DLSB_FIRST
+.elif ${MACHINE_ARCH} == "aarch64"
+MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DLSB_FIRST
 .elif ${MACHINE_ARCH} == "x86_64"
 MAKE_FLAGS+=	USE_X64_DRC=1
+MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DLSB_FIRST
+.elif ${MACHINE_ARCH} == "i386"
+MAKE_FLAGS+=	ENDIANNESS_DEFINES=-DLSB_FIRST
 .endif
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-undefined
