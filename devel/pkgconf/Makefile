@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/03/17 20:20:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2023/05/29 13:37:08 adam Exp $
 
-DISTNAME=	pkgconf-1.9.4
-PKGREVISION=	1
+DISTNAME=	pkgconf-1.9.5
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -12,10 +11,11 @@ LICENSE=	modified-bsd
 
 CONFLICTS+=	pkg-config-[0-9]*
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-CONFIGURE_ARGS=	--with-system-libdir=/usr/lib \
-		--with-system-includedir=/usr/include
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-system-libdir=/usr/lib
+CONFIGURE_ARGS+=	--with-system-includedir=/usr/include
+
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
