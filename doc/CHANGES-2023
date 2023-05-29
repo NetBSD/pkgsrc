@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3384 2023/05/29 19:31:38 nia Exp $
+$NetBSD: CHANGES-2023,v 1.3385 2023/05/29 21:06:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4690,3 +4690,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-anyio to 3.7.0 [adam 2023-05-29]
 	Updated devel/py-pydantic to 1.10.8 [adam 2023-05-29]
 	Added emulators/fbneo version 1.0.0.2 [nia 2023-05-29]
+	Updated net/qbittorrent to 4.5.3 [adam 2023-05-29]
+	Updated net/py-minio to 7.1.15 [adam 2023-05-29]
