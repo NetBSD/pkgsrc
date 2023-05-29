@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/25 11:08:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/29 16:29:36 wiz Exp $
 
 R_PKGNAME=	processx
 R_PKGVER=	3.8.0
@@ -19,4 +19,5 @@ USE_LANGUAGES=	c
 LIBS.SunOS+=	-lsocket -lnsl
 
 .include "../../math/R/Makefile.extension"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
