@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3383 2023/05/29 19:31:02 nia Exp $
+$NetBSD: CHANGES-2023,v 1.3384 2023/05/29 19:31:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4682,14 +4682,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-httpserver to 1.0.8 [adam 2023-05-29]
 	Updated multimedia/openh264 to 2.3.1 [adam 2023-05-29]
 	Updated devel/pkgconf to 1.9.5 [adam 2023-05-29]
-<<<<<<< CHANGES-2023
 	Updated emulators/libretro-fbneo to 20230524 [nia 2023-05-29]
-=======
 	Added textproc/p5-Number-Bytes-Human version 0.11 [gdt 2023-05-29]
 	Updated devel/py-poetry-core to 1.6.1 [adam 2023-05-29]
 	Updated devel/py-jaraco.functools to 3.7.0 [adam 2023-05-29]
 	Updated net/rabbitmq to 3.11.16nb1 [wiz 2023-05-29]
 	Updated devel/py-anyio to 3.7.0 [adam 2023-05-29]
 	Updated devel/py-pydantic to 1.10.8 [adam 2023-05-29]
->>>>>>> 1.3382
 	Added emulators/fbneo version 1.0.0.2 [nia 2023-05-29]
