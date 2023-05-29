@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2023/05/20 13:26:51 thorpej Exp $
+# $NetBSD: Makefile,v 1.350 2023/05/29 19:30:47 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -61,6 +61,7 @@ SUBDIR+=	dynagen
 SUBDIR+=	dynamips
 SUBDIR+=	e-uae
 SUBDIR+=	emulationstation
+SUBDIR+=	fbneo
 SUBDIR+=	fceu
 SUBDIR+=	fmsx
 SUBDIR+=	free42

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2023/05/29 19:30:47 nia Exp $
+
+BLAKE2s (FBNeo-1.0.0.2.tar.gz) = 53db8d6df7bffe800159d529867168889742523f9db6196972343f9a78a46b35
+SHA512 (FBNeo-1.0.0.2.tar.gz) = 5ba58d89e3f119a3521e9ba4278ca85b818912a11663be3e1aa1ab80a03fc8b76974709232c1dc27f5e5877db251d6878f7c0b9bc9e4ae4ab583a12bd617b98b
+Size (FBNeo-1.0.0.2.tar.gz) = 12171430 bytes
+SHA1 (patch-makefile) = 94c77fe8b5c8f7b924c507d7b327f9ef25bb3409
+SHA1 (patch-makefile.sdl2) = a41b13f31faccf2e6bb075290f926fb64ca7b1d5
+SHA1 (patch-src_burn_burnint.h) = 1050d2088c17b0763c47fef6a0674b5eb94b7ba6
+SHA1 (patch-src_burner_burner.h) = a09ded507381d6f2bb9d4476813122a53415c01d
