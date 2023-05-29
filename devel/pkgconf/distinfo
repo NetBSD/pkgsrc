@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/03/17 20:20:45 riastradh Exp $
+$NetBSD: distinfo,v 1.19 2023/05/29 13:37:08 adam Exp $
 
-BLAKE2s (pkgconf-1.9.4.tar.gz) = 9623ac8227fc71344f60e1764df30f4b83efce712cdf36452476761539cba574
-SHA512 (pkgconf-1.9.4.tar.gz) = 20270fbac82f6729e00a26a9271c72ae86f9773e46d161b7cbf78a3ebde81742d7f9badd2d755d4a1e471a4294ce25c999601d0fa9a6ff50fbd856e5e8a8a820
-Size (pkgconf-1.9.4.tar.gz) = 447284 bytes
-SHA1 (patch-cli_bomtool_main.c) = b18db0fc13617abd1edc554416f1c1609bc2daf2
-SHA1 (patch-cli_main.c) = 1d8fb3830a51a36b5ff4cbb8b4bb9caf4d0cc5b0
-SHA1 (patch-libpkgconf_argvsplit.c) = c63e14cfc2f9a1a0cb3bd91088999ff4e7cb72f6
-SHA1 (patch-libpkgconf_dependency.c) = efcbf7b37a91abcab84ade11d4d7aa615c975779
-SHA1 (patch-libpkgconf_libpkgconf.h) = 62273c4df210d378332346ff3c422b230cef04bd
-SHA1 (patch-libpkgconf_parser.c) = b6c4de629abd3e34e1f44fa1097583b68887e071
-SHA1 (patch-libpkgconf_personality.c) = 2f21573844cfedaf230ea2e27cb706f372513bfe
-SHA1 (patch-libpkgconf_pkg.c) = b42ee38544fd1c011956e770bed886b8adfba2d6
-SHA1 (patch-libpkgconf_win-dirent.h) = 7c450078564f27db5dfe94bdfe326f5d805ac912
+BLAKE2s (pkgconf-1.9.5.tar.gz) = 835231b91d2f13f4d654a3d5ad1d6576e209e9206d3e3b219dead2009bb06139
+SHA512 (pkgconf-1.9.5.tar.gz) = b71481ec232a4e5769e3f06259c16457356babc0fe116b25d902aa8296f95cfff54c7cbf01c428ca345f1b7769d240b3a0abc931919435817432ced851b74801
+Size (pkgconf-1.9.5.tar.gz) = 448803 bytes
