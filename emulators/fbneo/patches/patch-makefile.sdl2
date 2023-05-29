@@ -1,0 +1,54 @@
+$NetBSD: patch-makefile.sdl2,v 1.1 2023/05/29 19:30:48 nia Exp $
+
+Honour CFLAGS. Disable partial linking (incompatible with PIE).
+
+Unbundle libpng and zlib.
+
+--- makefile.sdl2.orig	2021-05-01 20:32:23.000000000 +0000
++++ makefile.sdl2
+@@ -50,7 +50,7 @@ srcdir	= src/
+ include makefile.burn_rules
+ 
+ # Platform stuff
+-alldir	+= 	burner burner/sdl burner/sdl dep/libs/libpng dep/libs/lib7z dep/libs/zlib intf intf/video \
++alldir	+= 	burner burner/sdl burner/sdl dep/libs/lib7z intf intf/video \
+ 			intf/video/scalers 	intf/video/sdl intf/audio intf/audio/sdl intf/input intf/input/sdl intf/cd intf/cd/sdl \
+ 			intf/perfcount intf/perfcount/sdl dep/generated
+ 
+@@ -58,11 +58,6 @@ depobj	+= 	neocdlist.o \
+ 			\
+ 			conc.o cong.o dat.o gamc.o gami.o image.o ioapi.o misc.o sshot.o state.o statec.o unzip.o zipfn.o \
+ 			\
+-			adler32.o compress.o crc32.o deflate.o gzclose.o gzlib.o gzread.o gzwrite.o infback.o inffast.o inflate.o inftrees.o \
+-			trees.o uncompr.o zutil.o \
+-			\
+-			png.o pngerror.o pngget.o pngmem.o pngpread.o pngread.o pngrio.o pngrtran.o pngrutil.o pngset.o pngtrans.o pngwio.o \
+-			pngwrite.o pngwtran.o pngwutil.o \
+ 			\
+ 			aud_dsp.o aud_interface.o cd_interface.o inp_interface.o interface.o lowpass2.o  vid_interface.o \
+ 			vid_softfx.o vid_support.o \
+@@ -183,13 +178,13 @@ AS	= nasm
+ 
+ #LDFLAGS	= -static
+ 
+-CFLAGS = -O2 -fomit-frame-pointer -Wno-write-strings \
++CFLAGS += -Wno-write-strings \
+ 	   -Wall -Wno-long-long -Wno-sign-compare -Wno-uninitialized -Wno-unused \
+ 	   -Wno-conversion -Wno-attributes \
+ 	   -Wno-unused-parameter -Wno-unused-value -std=c99 \
+ 	   $(PLATFLAGS) $(DEF) $(incdir)
+ 
+-CXXFLAGS = -O2 -fomit-frame-pointer -Wno-write-strings \
++CXXFLAGS += -Wno-write-strings \
+ 	   -Wall -W -Wno-long-long \
+ 	   -Wunknown-pragmas -Wundef -Wconversion -Wno-missing-braces \
+ 	   -Wuninitialized -Wpointer-arith -Winline -Wno-multichar \
+@@ -361,7 +356,7 @@ $(NAME):	$(allobj) $(objdir)drivers.o
+ 
+ else
+ 
+-$(NAME):	$(allobj) $(objdir)drivers.o
++$(NAME):	$(allobj) $(autdrv)
+ 	@echo
+ 	@echo Linking executable... $(NAME)
+ 	@$(LD) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(lib)
