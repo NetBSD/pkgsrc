@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3381 2023/05/29 17:34:35 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3382 2023/05/29 18:00:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4686,3 +4686,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-poetry-core to 1.6.1 [adam 2023-05-29]
 	Updated devel/py-jaraco.functools to 3.7.0 [adam 2023-05-29]
 	Updated net/rabbitmq to 3.11.16nb1 [wiz 2023-05-29]
+	Updated devel/py-anyio to 3.7.0 [adam 2023-05-29]
+	Updated devel/py-pydantic to 1.10.8 [adam 2023-05-29]
