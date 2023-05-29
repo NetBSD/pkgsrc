@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/29 16:29:41 gdt Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Number/Bytes/Human.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Number/Bytes/Human/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Number::Bytes::Human.3
