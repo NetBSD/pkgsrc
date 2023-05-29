@@ -1,4 +1,4 @@
-$NetBSD: patch-Lib_urlparse.py,v 1.3 2022/02/25 22:41:32 gutteridge Exp $
+$NetBSD: patch-Lib_urlparse.py,v 1.4 2023/05/29 23:33:48 gutteridge Exp $
 
 Fix CVE-2021-23336: Add `separator` argument to parse_qs; warn with default
 Via Fedora:
@@ -8,9 +8,20 @@ Fix CVE-2022-0391: urlparse does not sanitize URLs containing ASCII newline and 
 Via Fedora:
 https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc2239bf710/f/00377-CVE-2022-0391.patch
 
+Fix CVE-2023-24329: Add more sanitizing to respect the "Remove any leading C0 control or space from input" rule
+Via Fedora:
+https://src.fedoraproject.org/rpms/python2.7/c/3f00cdccd59ef2955a7f4b4c42bb59c631cce4c1.patch
+
 --- Lib/urlparse.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/urlparse.py
-@@ -29,6 +29,7 @@ test_urlparse.py provides a good indicat
+@@ -26,9 +26,14 @@ scenarios for parsing, and for backward
+ parsing quirks from older RFCs are retained. The testcases in
+ test_urlparse.py provides a good indicator of parsing behavior.
+ 
++The WHATWG URL Parser spec should also be considered.  We are not compliant with
++it either due to existing user code API behavior expectations (Hyrum's Law).
++It serves as a useful guide when making changes.
++
  """
  
  import re
@@ -18,17 +29,21 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
  
  __all__ = ["urlparse", "urlunparse", "urljoin", "urldefrag",
             "urlsplit", "urlunsplit", "parse_qs", "parse_qsl"]
-@@ -62,6 +63,9 @@ scheme_chars = ('abcdefghijklmnopqrstuvw
+@@ -62,6 +67,13 @@ scheme_chars = ('abcdefghijklmnopqrstuvw
                  '0123456789'
                  '+-.')
  
++# Leading and trailing C0 control and space to be stripped per WHATWG spec.
++# == "".join([chr(i) for i in range(0, 0x20 + 1)])
++_WHATWG_C0_CONTROL_OR_SPACE = '\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f '
++
 +# Unsafe bytes to be removed per WHATWG spec
 +_UNSAFE_URL_BYTES_TO_REMOVE = ['\t', '\r', '\n']
 +
  MAX_CACHE_SIZE = 20
  _parse_cache = {}
  
-@@ -184,12 +188,19 @@ def _checknetloc(netloc):
+@@ -184,12 +196,21 @@ def _checknetloc(netloc):
                               "under NFKC normalization"
                               % netloc)
  
@@ -45,10 +60,12 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
      (e.g. netloc is a single string) and we don't expand % escapes."""
 +    url = _remove_unsafe_bytes_from_url(url)
 +    scheme = _remove_unsafe_bytes_from_url(scheme)
++    url = url.lstrip(_WHATWG_C0_CONTROL_OR_SPACE)
++    scheme = scheme.strip(_WHATWG_C0_CONTROL_OR_SPACE)
      allow_fragments = bool(allow_fragments)
      key = url, scheme, allow_fragments, type(url), type(scheme)
      cached = _parse_cache.get(key, None)
-@@ -382,7 +393,8 @@ def unquote(s):
+@@ -382,7 +403,8 @@ def unquote(s):
              append(item)
      return ''.join(res)
  
@@ -58,7 +75,7 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
      """Parse a query given as a string argument.
  
          Arguments:
-@@ -405,14 +417,23 @@ def parse_qs(qs, keep_blank_values=0, st
+@@ -405,14 +427,23 @@ def parse_qs(qs, keep_blank_values=0, st
      """
      dict = {}
      for name, value in parse_qsl(qs, keep_blank_values, strict_parsing,
@@ -84,7 +101,7 @@ https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc
      """Parse a query given as a string argument.
  
      Arguments:
-@@ -434,15 +455,72 @@ def parse_qsl(qs, keep_blank_values=0, s
+@@ -434,15 +465,72 @@ def parse_qsl(qs, keep_blank_values=0, s
  
      Returns a list, as G-d intended.
      """
