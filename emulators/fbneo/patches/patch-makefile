@@ -1,0 +1,28 @@
+$NetBSD: patch-makefile,v 1.1 2023/05/29 19:30:48 nia Exp $
+
+Disable stuff we don't necessarily actually want to assume.
+
+--- makefile.orig	2021-05-01 20:32:23.000000000 +0000
++++ makefile
+@@ -22,7 +22,7 @@ UNICODE = 1
+ #BUILD_A68K = 1
+ 
+ # Include x86 Assembly routines
+-BUILD_X86_ASM = 1
++#BUILD_X86_ASM = 1
+ 
+ # Include GCC optmisations for your CPU e.g use -march=native. WARNING: This might mean that the generated binaries will not run on other peoples (older) machines!
+ #BUILD_NATIVE = 1
+@@ -63,10 +63,10 @@ FASTCALL = 1
+ PERL = 1
+ 
+ # Endianness
+-LSB_FIRST = 1
++#LSB_FIRST = 1
+ 
+ # Include png.h from burner.h
+-INCLUDE_LIB_PNGH = 1
++#INCLUDE_LIB_PNGH = 1
+ 
+ # Enable CRT resolution switching
+ # INCLUDE_SWITCHRES = 1
