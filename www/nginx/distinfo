@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.110 2023/05/15 22:02:57 osa Exp $
+$NetBSD: distinfo,v 1.111 2023/05/29 00:24:23 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.06.tar.gz) = fa6ad2a2ce3c3eba3f69287b224e9c01fcaca29a083394ab74f2f655d3e2138b
 SHA512 (array-var-nginx-module-0.06.tar.gz) = bc72158856a1be18a26ee04c6b5b0f0a20bcce688610a493bf31e2a133e7eb12e11f7c18197a09a72b1513f6a08348ee5281b9d5b84cf43603539040ebd23c26
@@ -48,6 +48,9 @@ Size (ngx_http_geoip2_module-3.4.tar.gz) = 8877 bytes
 BLAKE2s (njs-0.7.12.tar.gz) = a4c69c83bcc81ecd593f63f6d3e2d5d9cff8185ad56e8fd4846660c132976133
 SHA512 (njs-0.7.12.tar.gz) = a65a6c6aa3fbd499536284f8d8610f61b87112156885e6c3b1f73872df22195af897766f266b4569098a70e1680aef66594da17d13519f16687b4e43dce49062
 Size (njs-0.7.12.tar.gz) = 662554 bytes
+BLAKE2s (osokin-ngx_http_redis-59eb1c3_GH.tar.gz) = 4970dcfa8b4d51dde1e21b326a0c2a9feda370df9b7081e5e6e480bcfad63607
+SHA512 (osokin-ngx_http_redis-59eb1c3_GH.tar.gz) = 63a488f95167dcd3b87cfc687e68e99beb33766c3f91bbf2eea9d7427e806941d445fa969fcdfae741b6566ef0dc9f95c1be53ce398d6f6d80ea31399f383943
+Size (osokin-ngx_http_redis-59eb1c3_GH.tar.gz) = 12696 bytes
 BLAKE2s (set-misc-nginx-module-0.33.tar.gz) = 306eb7a96ce5650c7e97a91e9cdba48d154d10cf6445d31193ffab889054d893
 SHA512 (set-misc-nginx-module-0.33.tar.gz) = 1ff4c947538a5bd5f9d6adcd87b37f2702f5cc90e3342bc08359cbe8f290b705a3a2daa3dedfb1df3ce4bc19478c8fcac07081c4a53a804fc2862d50078278dc
 Size (set-misc-nginx-module-0.33.tar.gz) = 30084 bytes
