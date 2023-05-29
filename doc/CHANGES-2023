@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3372 2023/05/29 01:49:20 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3373 2023/05/29 09:08:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4670,3 +4670,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libansilove to 1.4.1 [fcambus 2023-05-28]
 	Updated biology/ncbi-blast+ to 2.14.0 [bacon 2023-05-28]
 	Updated devel/py-looseversion to 1.2.0 [gutteridge 2023-05-29]
+	Added devel/py-versioneer version 0.28 [adam 2023-05-29]
+	Updated devel/py-deprecated to 1.2.14 [adam 2023-05-29]
+	Updated www/py-jwcrypto to 1.4.2 [adam 2023-05-29]
+	Updated textproc/py-xlsxwriter to 3.1.2 [adam 2023-05-29]
