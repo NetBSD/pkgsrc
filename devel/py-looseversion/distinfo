@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/03/12 02:58:53 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2023/05/29 01:49:06 gutteridge Exp $
 
-BLAKE2s (looseversion-1.1.2.tar.gz) = 1281096c6d4fb47d94bc51ddf51f861b758bb2a202bd82fb15a170ec9a26515f
-SHA512 (looseversion-1.1.2.tar.gz) = 476cc7b57a9eebdc1c58506f4c394db9a338b4b9689fdfa171aa736fabe62282438d50923a834db104603f09eea44197623e89adcda3121fa522a3fa40585a25
-Size (looseversion-1.1.2.tar.gz) = 8393 bytes
+BLAKE2s (looseversion-1.2.0.tar.gz) = 71f6d915ac2e1455fa234078baa053c57dcefa9337dd33f174a89dfa76fd2c50
+SHA512 (looseversion-1.2.0.tar.gz) = f0c991af7f972d9b50fabceceba47477d2b4eec937267c0100e73d55559a3d8d304fd873f1e7050dfdba2dd8c0c92db83d3ef440cf7842cda902dd87bc6a5adb
+Size (looseversion-1.2.0.tar.gz) = 8614 bytes
