@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3385 2023/05/29 21:06:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3386 2023/05/29 23:33:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added emulators/fbneo version 1.0.0.2 [nia 2023-05-29]
 	Updated net/qbittorrent to 4.5.3 [adam 2023-05-29]
 	Updated net/py-minio to 7.1.15 [adam 2023-05-29]
+	Updated lang/python27 to 2.7.18nb11 [gutteridge 2023-05-29]
