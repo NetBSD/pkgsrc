@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/29 16:29:41 gdt Exp $
+
+BLAKE2s (Number-Bytes-Human-0.11.tar.gz) = 399611c38359ca679026068bb53e5f09ecd774ef0825f204920567b20a62e134
+SHA512 (Number-Bytes-Human-0.11.tar.gz) = 045bfe3d26b3460cb45ef69aeb1398c897605e621f559c43cf199829b1715e12781ad0330d80bed8b7c15b332ca6c9e620e580c71a0f1cf68c7d2fcf4b023936
+Size (Number-Bytes-Human-0.11.tar.gz) = 11571 bytes
