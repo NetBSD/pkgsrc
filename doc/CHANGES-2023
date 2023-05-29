@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3371 2023/05/28 22:48:40 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3372 2023/05/29 01:49:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4669,3 +4669,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/lf to 30 [bsiegert 2023-05-28]
 	Updated graphics/libansilove to 1.4.1 [fcambus 2023-05-28]
 	Updated biology/ncbi-blast+ to 2.14.0 [bacon 2023-05-28]
+	Updated devel/py-looseversion to 1.2.0 [gutteridge 2023-05-29]
