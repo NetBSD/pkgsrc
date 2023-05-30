@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3395 2023/05/30 08:00:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3396 2023/05/30 08:01:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4705,3 +4705,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hatch-fancy-pypi-readme to 23.1.0 [wiz 2023-05-30]
 	Updated devel/py-ruamel-yaml to 0.17.28 [wiz 2023-05-30]
 	Updated misc/py-trove-classifiers to 2023.5.24 [wiz 2023-05-30]
+	Updated x11/py-qt-builder to 1.15.1 [wiz 2023-05-30]
