@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3417 2023/05/30 15:48:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3418 2023/05/30 15:52:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed textproc/ruby-rexml [taca 2023-05-30]
 	Updated meta-pkgs/bulk-medium to 20230530 [taca 2023-05-30]
 	Removed lang/ruby27 [taca 2023-05-30]
+	Removed lang/ruby27-base [taca 2023-05-30]
