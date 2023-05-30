@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2022/06/28 11:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/05/30 10:45:30 markd Exp $
 #
 
-DISTNAME=		nrpe-3.2.0
+DISTNAME=		nrpe-4.1.0
 PKGNAME=		nagios-${DISTNAME}
-PKGREVISION=		7
 CATEGORIES=		net sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=NagiosEnterprises/}
+GITHUB_RELEASE=		${DISTNAME}
+GITHUB_PROJECT=		nrpe
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.nagios.org/

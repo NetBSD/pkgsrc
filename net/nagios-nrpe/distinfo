@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:06:02 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/05/30 10:45:30 markd Exp $
 
-BLAKE2s (nrpe-3.2.0.tar.gz) = ed761f216e4019daa724e5fb9d600c1a0e3480fc323ea0bef92d2ae6b3c537b4
-SHA512 (nrpe-3.2.0.tar.gz) = a2fe7971ce0ab1bdc55cdecb96d096b45db493cfefdb414930a1eb4cf99b92660a99784d14e6e9dc0b951769cf14f066507ee8b0fec0aa13d46288dcc069d473
-Size (nrpe-3.2.0.tar.gz) = 517743 bytes
+BLAKE2s (nrpe-4.1.0.tar.gz) = 36247f5755a76dc85e6f1428f8f26fa8221fb31924647a5d2d7e9c24285ceec8
+SHA512 (nrpe-4.1.0.tar.gz) = a47935eecc65d646737166f98f5f160e3d1d5bbd245e006e8cd0758af75db083f870db6c02c1edd0d44cf9a91909ba26df8eee1620a7ac4d9f98032f2cce8981
+Size (nrpe-4.1.0.tar.gz) = 528228 bytes
