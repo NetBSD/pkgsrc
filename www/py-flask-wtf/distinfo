@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/05/25 15:23:51 kleink Exp $
+$NetBSD: distinfo,v 1.19 2023/05/30 21:06:45 markd Exp $
 
-BLAKE2s (Flask-WTF-1.0.1.tar.gz) = 777e429e493eeb23800322db6b54a96f586e013df02b579f2ea3deba27df1a1d
-SHA512 (Flask-WTF-1.0.1.tar.gz) = e1380e788d0b09ac84e158a6574883a2c061452595973bea8137f9c2789b8ed14bfc6816a571b9116643c36ed31e97ae9ad7fb0fa6c1638e5be142a6fc8d85f4
-Size (Flask-WTF-1.0.1.tar.gz) = 45721 bytes
+BLAKE2s (Flask-WTF-1.1.1.tar.gz) = e1a028180b4cfbf4cbdb81826652a744917397ced23191861f4f04ca36102bb8
+SHA512 (Flask-WTF-1.1.1.tar.gz) = d604305a0fcf293f1327de545606729c327eb297889d9e83d06d497e29ea59fd2ef440e012a53f9e5ba6c68de8796272d8a4670e5ceb82e6635b295fe64b532b
+Size (Flask-WTF-1.1.1.tar.gz) = 52303 bytes
