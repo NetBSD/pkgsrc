@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/30 11:51:26 markd Exp $
+
+BLAKE2s (smartdiagram.r42781.tar.xz) = 32f30cd5d0d35e8e437a4e48b7082ebcfe8dc8b72302e1280bc5a6719ea7e09a
+SHA512 (smartdiagram.r42781.tar.xz) = 322589506d1cdaa30dd9f97b419347fba0d617a3ad35fd15fe91611b10382c595598ce1111a287f5b1aef617595cba77b53490da7744b23942f072f522a68ef1
+Size (smartdiagram.r42781.tar.xz) = 6524 bytes
