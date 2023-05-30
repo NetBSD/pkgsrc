@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/30 11:55:26 markd Exp $
+
+BLAKE2s (worldflags.r59171.tar.xz) = 52acbde5fc5a8981b47a0b98fceb813b18be1efb23c64f4b0d2404f1600c6d5d
+SHA512 (worldflags.r59171.tar.xz) = 128274fc2cdf34b956987c85c4bd00e25673879a3c701965db5ee7d240916df79133843991ea69e0924fe15a3f88140e8bb1754880bbdb1d9eae157ade92c260
+Size (worldflags.r59171.tar.xz) = 1497060 bytes
