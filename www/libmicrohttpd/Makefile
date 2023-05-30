@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/05/30 16:04:28 nikita Exp $
+# $NetBSD: Makefile,v 1.71 2023/05/30 16:05:32 nikita Exp $
 
 DISTNAME=	libmicrohttpd-0.9.77
 CATEGORIES=	www
@@ -13,9 +13,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-# 2 tests skipped as of 0.9.75, this is expected.
+# 1 tests skipped as of 0.9.75, this is expected.
 # SKIP: test_https_get_parallel_threads
-# SKIP: test_https_session_info
 TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	libmicrohttpd.pc.in
