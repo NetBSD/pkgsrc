@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1009 2023/04/21 09:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1010 2023/05/30 11:51:25 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -793,6 +793,8 @@ SUBDIR+=	tex-shapes
 SUBDIR+=	tex-shapes-doc
 SUBDIR+=	tex-slideshow
 SUBDIR+=	tex-slideshow-doc
+SUBDIR+=	tex-smartdiagram
+SUBDIR+=	tex-smartdiagram-doc
 SUBDIR+=	tex-splines
 SUBDIR+=	tex-splines-doc
 SUBDIR+=	tex-suanpan
