@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.166 2023/03/23 06:16:22 wiz Exp $
+$NetBSD: distinfo,v 1.167 2023/05/30 14:52:00 wiz Exp $
 
-BLAKE2s (openssl-1.1.1t.tar.gz) = ef41c557d0e29387b2e6e41349054c1f45e0ab6a208070450c42bc0491ec7b2e
-SHA512 (openssl-1.1.1t.tar.gz) = 628676c9c3bc1cf46083d64f61943079f97f0eefd0264042e40a85dbbd988f271bfe01cd1135d22cc3f67a298f1d078041f8f2e97b0da0d93fe172da573da18c
-Size (openssl-1.1.1t.tar.gz) = 9881866 bytes
+BLAKE2s (openssl-1.1.1u.tar.gz) = 3be5d53d3d57999fcf6c82184980dc0bb02344d1f7e94c5b0dde2665a1678c7b
+SHA512 (openssl-1.1.1u.tar.gz) = d00aeb0b4c4676deff06ff95af7ac33dd683b92f972b4a8ae55cf384bb37c7ec30ab83c6c0745daf87cf1743a745fced6a347fd11fed4c548aa0953610ed4919
+Size (openssl-1.1.1u.tar.gz) = 9892176 bytes
 SHA1 (patch-Configurations_shared-info.pl) = 0e835f6e343b5d05ef9a0e6ef2a195201262d15c
 SHA1 (patch-Configurations_unix-Makefile.tmpl) = 3f47dd453381485aeb6c37dc53f932428fdcef50
 SHA1 (patch-Configure) = 479f1bc826f7721f6b44d6b5a6cf460432924bf2
-SHA1 (patch-crypto_x509v3_pcy__local.h) = 274d1877db4107879398f982e4e9652054ee624e
-SHA1 (patch-crypto_x509v3_pcy__node.c) = c394da4e084765ee668f6b1b8bd72d4ae62b047a
-SHA1 (patch-crypto_x509v3_pcy__tree.c) = 92d87af1dbd55db15d03c3e18c48f018f7c32a67

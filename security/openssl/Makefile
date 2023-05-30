@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.288 2023/03/23 06:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.289 2023/05/30 14:52:00 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-1.1.1t
-PKGREVISION=	1
+DISTNAME=	openssl-1.1.1u
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -29,7 +28,7 @@ CONFIGURE_ARGS+=	shared
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
 # No {get,make,set}context support before Darwin 9
 CONFIGURE_ARGS+=	no-async
 .endif
