@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/05/28 01:24:00 taca Exp $
+# $NetBSD: Makefile,v 1.54 2023/05/30 15:35:54 taca Exp $
 
 DISTNAME=	test-unit-3.5.9
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ LICENSE=	ruby-license
 USE_LANGUAGES=	# none
 
 # Ruby 3.2.0 has the same version as bundled gems.
-RUBY_VERSIONS_ACCEPTED=	27 30 31
+RUBY_VERSIONS_ACCEPTED=	30 31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
