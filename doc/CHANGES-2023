@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3420 2023/05/30 16:04:37 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3421 2023/05/30 21:07:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4736,3 +4736,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed lang/ruby27-base [taca 2023-05-30]
 	Updated lang/ruby32-base to 3.2.2nb1 [taca 2023-05-30]
 	Updated www/libmicrohttpd to 0.9.77 [nikita 2023-05-30]
+	Updated www/py-flask-wtf to 1.1.1 [markd 2023-05-30]
