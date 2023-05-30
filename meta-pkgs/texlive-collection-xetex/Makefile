@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/03/15 06:01:45 markd Exp $
+# $NetBSD: Makefile,v 1.18 2023/05/30 11:58:44 markd Exp $
 
 DISTNAME=	collection-xetex
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	64951
@@ -12,7 +12,7 @@ COMMENT=	XeTeX and packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
-# depend arabxetex
+DEPENDS+=	tex-arabxetex-[0-9]*:../../print/tex-arabxetex
 # depend awesomebox
 # depend bidi-atbegshi
 # depend bidicontour
