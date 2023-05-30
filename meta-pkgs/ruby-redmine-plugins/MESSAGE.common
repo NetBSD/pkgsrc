@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE.common,v 1.2 2021/02/28 16:45:17 taca Exp $
+$NetBSD: MESSAGE.common,v 1.3 2023/05/30 14:40:40 taca Exp $
 
 0) Stop Redmine (if started). Like a good SysOp, you have scheduled
    downtime with your team already;
 
 1) Migrate the plugin(s):
 
-     # redmine${RM_SVER}_migrate_plugins${RUBY_SUFFIX}.sh
+     # redmine${RM_VER}_migrate_plugins${RUBY_SUFFIX}.sh
 
 2) Start Redmine;
