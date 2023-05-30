@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/09/14 08:36:36 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/05/30 09:19:45 adam Exp $
 
-BLAKE2s (typing_inspect-0.8.0.tar.gz) = 4188240adae47e4f319fdc07ad5aa49a895dc9d7c1c013045b833ddaac6de855
-SHA512 (typing_inspect-0.8.0.tar.gz) = 185f8b6f2199203cbc55aa90efb4fbf295e71ec9bd59e550753c1fcfa83f21857840649e23b26e91b443ccdb83933c7a9873709d205e466e2da7f2ae57657f0d
-Size (typing_inspect-0.8.0.tar.gz) = 13550 bytes
+BLAKE2s (typing_inspect-0.9.0.tar.gz) = 15d777238ad601b9c42ce4e5c1b143e12b2ae0d49f761db1038ea9247b6ce461
+SHA512 (typing_inspect-0.9.0.tar.gz) = 5d46e6632895fa0a59007779f49a5812beff09f59e359a81af93bfee7bb5f4c2025566efbd27422299a614baa4d9c22da2317377090b0ad1cdd89fca73e9ee5a
+Size (typing_inspect-0.9.0.tar.gz) = 13825 bytes
