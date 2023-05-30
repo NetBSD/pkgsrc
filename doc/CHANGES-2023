@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3401 2023/05/30 09:45:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3402 2023/05/30 10:47:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typing-inspect to 0.9.0 [adam 2023-05-30]
 	Updated lang/py-libcst to 1.0.0 [adam 2023-05-30]
 	Updated security/py-google-auth-oauthlib to 1.0.0 [adam 2023-05-30]
+	Updated net/nagios-nrpe to 4.1.0 [markd 2023-05-30]
