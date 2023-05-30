@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.5 2022/05/23 11:56:16 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/05/30 07:39:18 wiz Exp $
 
-BLAKE2s (CacheControl-0.12.11.tar.gz) = 0cb70752c9bb683aa31948ef8e00f899c1e02fdefef8467fcbb6a16837e0cd4a
-SHA512 (CacheControl-0.12.11.tar.gz) = 6a39e8fd2ebcca776cad533a79f107897aaffbe68b561f89301ef824d2400f8c36ec4e52682b7cf14734f9f77ab27e251202c71036b43422d81126f48cc27834
-Size (CacheControl-0.12.11.tar.gz) = 16552 bytes
+BLAKE2s (CacheControl-0.12.12.tar.gz) = b8f32c739508711f2fb8103de333f53fe758ed3610872b18f01cd74e49a9c964
+SHA512 (CacheControl-0.12.12.tar.gz) = f3af0e2b341f70cde19cc8d0e16f300b291a7f7277dfee8f8cbac1c62d8582a2fca2c76074d81181ab47cf65493f310f16d55153867674c107f170b78eca02a3
+Size (CacheControl-0.12.12.tar.gz) = 29181 bytes
+SHA1 (patch-cachecontrol_serialize.py) = 6453b9474fc2a7b005e8d18f1c1cfcb36c56fe3f
+SHA1 (patch-tests_test__etag.py) = 22452b237d777cc4ff7187b43760dd059e47fea3
+SHA1 (patch-tests_test__vary.py) = 17b76c7231d8162ec509646107d7694f3939091b
