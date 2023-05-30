@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3386 2023/05/29 23:33:58 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3387 2023/05/30 00:13:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4693,3 +4693,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/qbittorrent to 4.5.3 [adam 2023-05-29]
 	Updated net/py-minio to 7.1.15 [adam 2023-05-29]
 	Updated lang/python27 to 2.7.18nb11 [gutteridge 2023-05-29]
+	Updated devel/kdiff3 to 1.10.4 [gutteridge 2023-05-30]
