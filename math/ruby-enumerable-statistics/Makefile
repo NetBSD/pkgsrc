@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/31 13:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/05/30 15:36:37 taca Exp $
 
 DISTNAME=	enumerable-statistics-2.0.7
 CATEGORIES=	math
@@ -9,8 +9,6 @@ COMMENT=	Statistics features for Enumerable
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-
-#RUBY_VERSIONS_ACCEPTED=	27 30
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
