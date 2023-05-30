@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22996 2023/05/30 07:39:29 wiz Exp $
+$NetBSD: TODO,v 1.22997 2023/05/30 07:47:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1216,7 +1216,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-barman-3.0.1
-	o py-cachetools-5.3.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-django-4.1
@@ -1226,7 +1225,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.87.0
 	o py-google-auth-2.19.0
 	o py-gsutil-5.6
 	o py-hatch-fancy-pypi-readme-23.1.0
