@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2022/09/03 04:02:03 taca Exp $
-
-BLAKE2s (digest-3.1.0.gem) = 58e29dbe7ed244ef4a2dce64e08a8df4487c8bac70f4d9ae7fce48a8427e322d
-SHA512 (digest-3.1.0.gem) = 091eaee40730b8f569fab831911c7f670ed94a1032857f4fc8588d1e6d2195dad656c23578ecce1c14ed33f7005b681e0dcf860aec7cb2d4c276ba52f6bb5aa5
-Size (digest-3.1.0.gem) = 40448 bytes
