@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3387 2023/05/30 00:13:05 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3388 2023/05/30 04:24:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4694,3 +4694,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-minio to 7.1.15 [adam 2023-05-29]
 	Updated lang/python27 to 2.7.18nb11 [gutteridge 2023-05-29]
 	Updated devel/kdiff3 to 1.10.4 [gutteridge 2023-05-30]
+	Updated devel/py-bitarray to 2.7.4 [adam 2023-05-30]
+	Updated devel/py-coverage to 7.2.7 [adam 2023-05-30]
+	Updated textproc/py-epr-reader to 2.4.15 [adam 2023-05-30]
+	Updated time/py-icalendar to 5.0.7 [adam 2023-05-30]
