@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/11 11:26:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/30 09:28:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -224,6 +224,7 @@ ${PYSITELIB}/libcst/_parser/__init__.pyo
 ${PYSITELIB}/libcst/_parser/base_parser.py
 ${PYSITELIB}/libcst/_parser/base_parser.pyc
 ${PYSITELIB}/libcst/_parser/base_parser.pyo
+${PYSITELIB}/libcst/_parser/conversions/README.md
 ${PYSITELIB}/libcst/_parser/conversions/__init__.py
 ${PYSITELIB}/libcst/_parser/conversions/__init__.pyc
 ${PYSITELIB}/libcst/_parser/conversions/__init__.pyo
@@ -636,6 +637,9 @@ ${PYSITELIB}/libcst/helpers/expression.pyo
 ${PYSITELIB}/libcst/helpers/module.py
 ${PYSITELIB}/libcst/helpers/module.pyc
 ${PYSITELIB}/libcst/helpers/module.pyo
+${PYSITELIB}/libcst/helpers/paths.py
+${PYSITELIB}/libcst/helpers/paths.pyc
+${PYSITELIB}/libcst/helpers/paths.pyo
 ${PYSITELIB}/libcst/helpers/tests/__init__.py
 ${PYSITELIB}/libcst/helpers/tests/__init__.pyc
 ${PYSITELIB}/libcst/helpers/tests/__init__.pyo
@@ -645,6 +649,9 @@ ${PYSITELIB}/libcst/helpers/tests/test_expression.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_module.py
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyo
+${PYSITELIB}/libcst/helpers/tests/test_paths.py
+${PYSITELIB}/libcst/helpers/tests/test_paths.pyc
+${PYSITELIB}/libcst/helpers/tests/test_paths.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_template.py
 ${PYSITELIB}/libcst/helpers/tests/test_template.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_template.pyo
@@ -699,6 +706,9 @@ ${PYSITELIB}/libcst/metadata/base_provider.pyo
 ${PYSITELIB}/libcst/metadata/expression_context_provider.py
 ${PYSITELIB}/libcst/metadata/expression_context_provider.pyc
 ${PYSITELIB}/libcst/metadata/expression_context_provider.pyo
+${PYSITELIB}/libcst/metadata/file_path_provider.py
+${PYSITELIB}/libcst/metadata/file_path_provider.pyc
+${PYSITELIB}/libcst/metadata/file_path_provider.pyo
 ${PYSITELIB}/libcst/metadata/full_repo_manager.py
 ${PYSITELIB}/libcst/metadata/full_repo_manager.pyc
 ${PYSITELIB}/libcst/metadata/full_repo_manager.pyo
@@ -732,6 +742,9 @@ ${PYSITELIB}/libcst/metadata/tests/test_base_provider.pyo
 ${PYSITELIB}/libcst/metadata/tests/test_expression_context_provider.py
 ${PYSITELIB}/libcst/metadata/tests/test_expression_context_provider.pyc
 ${PYSITELIB}/libcst/metadata/tests/test_expression_context_provider.pyo
+${PYSITELIB}/libcst/metadata/tests/test_file_path_provider.py
+${PYSITELIB}/libcst/metadata/tests/test_file_path_provider.pyc
+${PYSITELIB}/libcst/metadata/tests/test_file_path_provider.pyo
 ${PYSITELIB}/libcst/metadata/tests/test_full_repo_manager.py
 ${PYSITELIB}/libcst/metadata/tests/test_full_repo_manager.pyc
 ${PYSITELIB}/libcst/metadata/tests/test_full_repo_manager.pyo
@@ -779,6 +792,14 @@ ${PYSITELIB}/libcst/testing/utils.pyo
 ${PYSITELIB}/libcst/tests/__init__.py
 ${PYSITELIB}/libcst/tests/__init__.pyc
 ${PYSITELIB}/libcst/tests/__init__.pyo
+${PYSITELIB}/libcst/tests/__main__.py
+${PYSITELIB}/libcst/tests/__main__.pyc
+${PYSITELIB}/libcst/tests/__main__.pyo
+${PYSITELIB}/libcst/tests/pyre/.pyre_configuration
+${PYSITELIB}/libcst/tests/pyre/simple_class.json
+${PYSITELIB}/libcst/tests/pyre/simple_class.py
+${PYSITELIB}/libcst/tests/pyre/simple_class.pyc
+${PYSITELIB}/libcst/tests/pyre/simple_class.pyo
 ${PYSITELIB}/libcst/tests/test_add_slots.py
 ${PYSITELIB}/libcst/tests/test_add_slots.pyc
 ${PYSITELIB}/libcst/tests/test_add_slots.pyo
