@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3389 2023/05/30 06:29:03 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3390 2023/05/30 07:39:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-epr-reader to 2.4.15 [adam 2023-05-30]
 	Updated time/py-icalendar to 5.0.7 [adam 2023-05-30]
 	Updated sysutils/erdtree to 3.0.1 [pin 2023-05-30]
+	Updated devel/py-cachecontrol to 0.12.12nb1 [wiz 2023-05-30]
