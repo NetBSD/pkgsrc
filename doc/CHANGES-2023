@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3399 2023/05/30 09:20:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3400 2023/05/30 09:32:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4711,3 +4711,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-braintree to 4.20.0 [adam 2023-05-30]
 	Updated textproc/py-phonenumbers to 8.13.11 [adam 2023-05-30]
 	Updated devel/py-typing-inspect to 0.9.0 [adam 2023-05-30]
+	Updated lang/py-libcst to 1.0.0 [adam 2023-05-30]
+	Updated security/py-google-auth-oauthlib to 1.0.0 [adam 2023-05-30]
