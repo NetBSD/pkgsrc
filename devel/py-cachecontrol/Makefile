@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/05/30 07:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/30 09:45:00 wiz Exp $
 
-DISTNAME=	CacheControl-0.12.12
+DISTNAME=	CacheControl-0.12.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
 
@@ -14,10 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 # filecache
-DEPENDS+=	${PYPKGPREFIX}-filelock>=0:../../devel/py-filelock
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-cherrypy>=0:../../www/py-cherrypy
+DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9:../../devel/py-lockfile
 
 USE_LANGUAGES=	# none
 
