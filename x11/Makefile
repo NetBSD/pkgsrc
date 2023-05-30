@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.988 2023/05/23 22:31:45 nikita Exp $
+# $NetBSD: Makefile,v 1.989 2023/05/30 14:47:26 taca Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -421,7 +421,6 @@ SUBDIR+=	rterm
 SUBDIR+=	ruby-gtk3
 SUBDIR+=	ruby-gtksourceview3
 SUBDIR+=	ruby-tk
-SUBDIR+=	ruby-wxruby
 SUBDIR+=	rxvt
 SUBDIR+=	rxvt-unicode
 SUBDIR+=	sakura
