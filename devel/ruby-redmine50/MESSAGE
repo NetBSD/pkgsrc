@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2022/09/03 13:53:58 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2023/05/30 14:23:59 taca Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
@@ -23,7 +23,7 @@ To use Redmine with nginx, you will need to perform the following steps.
 5. Create secret token and write to
      ${PREFIX}/${RM_DIR}/config/configuration.yml
 
-	# redmine42_generate_secret_token${RUBY_SUFFIX}.sh
+	# redmine${RM_VER}_generate_secret_token${RUBY_SUFFIX}.sh
 	# vi config/configuration.yml
 	  [...]
 	  secret_token: 'YOUR_SECRET_KEY'
@@ -31,7 +31,7 @@ To use Redmine with nginx, you will need to perform the following steps.
 
 6. Import some data to Redmine database, select your locale, and migrate the DB:
 
-	# redmine42_migrate_db${RUBY_SUFFIX}.sh
+	# redmine${RM_VER}_migrate_db${RUBY_SUFFIX}.sh
 
 7. Setup nginx.
 
@@ -60,7 +60,7 @@ To use Redmine with nginx, you will need to perform the following steps.
 
 8. Start Redmine with Unicorn.
 
-	# ${RCD_SCRIPTS_DIR}/redmine42_unicorn${RUBY_SUFFIX} start
+	# ${RCD_SCRIPTS_DIR}/redmine${RM_VER}_unicorn${RUBY_SUFFIX} start
 
 9. Start nginx.
 

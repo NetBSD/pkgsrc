@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/05/24 18:21:20 triaxx Exp $
+# $NetBSD: Makefile,v 1.13 2023/05/30 14:23:59 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -71,7 +71,7 @@ SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
 SUBST_VARS.shell=	PREFIX RUBY RM_DIR
 SUBST_STAGE.shell=	post-install
 
-MESSAGE_SUBST+=	RM_DIR=${RM_DIR}
+MESSAGE_SUBST+=	RM_DIR=${RM_DIR} RM_VER=${RM_VER}
 
 USE_LANGUAGES=	# none
 
