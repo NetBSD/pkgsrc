@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3405 2023/05/30 14:44:13 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3406 2023/05/30 14:48:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/tex-worldflags-doc version 2022 [markd 2023-05-30]
 	Updated devel/ruby-redmine50 to 5.0.5nb3 [taca 2023-05-30]
 	Removed devel/ruby-redmine42 [taca 2023-05-30]
+	Removed x11/ruby-wxruby [taca 2023-05-30]
