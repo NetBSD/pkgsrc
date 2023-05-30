@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3400 2023/05/30 09:32:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3401 2023/05/30 09:45:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4699,7 +4699,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-epr-reader to 2.4.15 [adam 2023-05-30]
 	Updated time/py-icalendar to 5.0.7 [adam 2023-05-30]
 	Updated sysutils/erdtree to 3.0.1 [pin 2023-05-30]
-	Updated devel/py-cachecontrol to 0.12.12nb1 [wiz 2023-05-30]
 	Updated www/py-google-api-python-client to 2.87.0 [wiz 2023-05-30]
 	Updated security/py-google-auth to 2.19.0 [wiz 2023-05-30]
 	Updated devel/py-hatch-fancy-pypi-readme to 23.1.0 [wiz 2023-05-30]
