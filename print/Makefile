@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.906 2023/05/07 20:58:20 markd Exp $
+# $NetBSD: Makefile,v 1.907 2023/05/30 11:47:51 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -254,6 +254,8 @@ SUBDIR+=	tex-arabluatex
 SUBDIR+=	tex-arabluatex-doc
 SUBDIR+=	tex-arabtex
 SUBDIR+=	tex-arabtex-doc
+SUBDIR+=	tex-arabxetex
+SUBDIR+=	tex-arabxetex-doc
 SUBDIR+=	tex-around-the-bend-doc
 SUBDIR+=	tex-arsclassica
 SUBDIR+=	tex-arsclassica-doc

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/05/30 11:47:51 markd Exp $
+
+BLAKE2s (arabxetex.doc.r38299.tar.xz) = 7a900d1edf608b3f88c0d9d4d574fc8b7f23da9d6c2fa7842d554f2bd8363a57
+SHA512 (arabxetex.doc.r38299.tar.xz) = 0dff3162a710b458b367bb4ca587d525b68ac79d2d3182e8b9d2ca90ff72f89bf69153960400c344511449c52346c329b8a34eb788e11ed9a5319bb6bca89418
+Size (arabxetex.doc.r38299.tar.xz) = 345168 bytes
