@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2022/10/06 14:12:45 taca Exp $
+# $NetBSD: Makefile,v 1.78 2023/05/30 15:42:39 taca Exp $
 
-DISTNAME=	bulk-medium-20221006
+DISTNAME=	bulk-medium-20230530
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -77,9 +77,11 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=7.4<7.5:../../lang/php74
 BUILD_DEPENDS+=	php>=8.0<8.1:../../lang/php80
-BUILD_DEPENDS+=	ruby27-base-[0-9]*:../../lang/ruby27-base
+BUILD_DEPENDS+=	php>=8.1<8.2:../../lang/php81
+BUILD_DEPENDS+=	php>=8.2<8.3:../../lang/php82
 BUILD_DEPENDS+=	ruby30-base-[0-9]*:../../lang/ruby30-base
 BUILD_DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
+BUILD_DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 BUILD_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 BUILD_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 BUILD_DEPENDS+=	python38-[0-9]*:../../lang/python38
