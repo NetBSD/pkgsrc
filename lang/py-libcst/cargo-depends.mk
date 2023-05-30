@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/11/11 11:26:10 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2023/05/30 09:28:00 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
@@ -7,7 +7,7 @@ CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
-CARGO_CRATE_DEPENDS+=	bumpalo-3.10.0
+CARGO_CRATE_DEPENDS+=	bumpalo-3.12.0
 CARGO_CRATE_DEPENDS+=	cast-0.2.7
 CARGO_CRATE_DEPENDS+=	cast-0.3.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
