@@ -1,0 +1,7 @@
+This is a package for drawing flags using TikZ. Currently the
+national flags of all independent nations are included,
+additionally some other flags of various organizations. A flag
+can be drawn ... as a single TikZ-picture within ordinary text,
+as a picture element within a TikZ-picture. The appearance of a
+flag (size, frame etc.) can be adapted using optional
+parameters.
