@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2023/05/28 16:54:32 wiz Exp $
+$NetBSD: distinfo,v 1.33 2023/05/30 04:23:55 adam Exp $
 
-BLAKE2s (icalendar-5.0.6.tar.gz) = 17ef9fe7693cf5805a58f4ed6616171f92c825b81cc23f61764a8bc765068c24
-SHA512 (icalendar-5.0.6.tar.gz) = 696240e7e4efe57a194be5fa0e6158284e297277e72f7aea0bc547db5f638dae05ca8cafcadedb43673f1d9f19241f25516d90e8247a79660d8b2ef71c5da11a
-Size (icalendar-5.0.6.tar.gz) = 103352 bytes
+BLAKE2s (icalendar-5.0.7.tar.gz) = 47212266f02c0e77462cc5dbdfe9e66b4b9729af6d032212a1249b14ea51a8db
+SHA512 (icalendar-5.0.7.tar.gz) = c541e61d79b76123d119e51ee6d927795a7d675aded427a21bd38d0f069ea454e182a61ff86b96c7769c42560dfc20f7facb00dfe8a9cfa47da74b279d841b42
+Size (icalendar-5.0.7.tar.gz) = 104099 bytes
