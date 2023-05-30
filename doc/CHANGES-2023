@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3412 2023/05/30 15:15:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3413 2023/05/30 15:18:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4728,3 +4728,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed mail/ruby-roadie-rails2 [taca 2023-05-30]
 	Removed mail/ruby-roadie4 [taca 2023-05-30]
 	Removed net/ruby-net-pop [taca 2023-05-30]
+	Removed net/ruby-net-protocol [taca 2023-05-30]
