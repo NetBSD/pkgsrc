@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3409 2023/05/30 14:55:10 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3410 2023/05/30 14:59:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed math/ruby-gsl [taca 2023-05-30]
 	Updated security/openssl to 1.1.1u [wiz 2023-05-30]
 	Removed textproc/ruby-oniguruma [taca 2023-05-30]
+	Removed mail/ruby-roadie-rails2 [taca 2023-05-30]
