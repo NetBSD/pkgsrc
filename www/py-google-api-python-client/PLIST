@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/05/06 09:35:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/05/30 07:47:20 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -271,6 +271,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/gkehub.v1alpha2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gkehub.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gkehub.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gkehub.v2alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/gkeonprem.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmail.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmailpostmastertools.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/gmailpostmastertools.v1beta1.json
@@ -371,6 +372,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/poly.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/privateca.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/prod_tt_sasportal.v1alpha1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/publicca.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/publicca.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/publicca.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/pubsub.v1.json
