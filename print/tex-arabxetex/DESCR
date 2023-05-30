@@ -1,0 +1,12 @@
+ArabXeTeX provides a convenient ArabTeX-like user-interface for
+typesetting languages using the Arabic script in XeLaTeX, with
+flexible access to font features. Input in ArabTeX notation can
+be set in three different vocalization modes or in roman
+transliteration. Direct UTF-8 input is also supported. The
+parsing and converting of ArabTeX input to Unicode is done by
+means of TECkit mappings. Version 1.0 provides support for
+Arabic, Maghribi Arabic, Farsi (Persian), Urdu, Sindhi,
+Kashmiri, Ottoman Turkish, Kurdish, Jawi (Malay) and Uighur.
+The documentation covers topics such as typesetting the Holy
+Quran and typesetting bidirectional critical editions with the
+package ednotes.
