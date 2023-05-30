@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2023/05/06 19:09:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.555 2023/05/30 08:37:37 abs Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		112.0
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -166,7 +166,11 @@ post-build:
 INSTALLATION_DIRS+=	share/applications
 
 post-install:
+.if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
+	${INSTALL_SCRIPT} ${FILESDIR}/firefox.sh ${DESTDIR}${PREFIX}/bin/${MOZILLA}
+.else
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
+.endif
 	${ECHO} '${PREFIX}/lib/${MOZILLA}/${MOZILLA} "$$@"' >> \
 		${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/${MOZILLA}
