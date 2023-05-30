@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2023/05/11 09:57:54 adam Exp $
+# $NetBSD: Makefile,v 1.564 2023/05/30 14:50:32 taca Exp $
 
 COMMENT=	Mathematics
 
@@ -440,7 +440,6 @@ SUBDIR+=	quadpack
 SUBDIR+=	randlib
 SUBDIR+=	ranger
 SUBDIR+=	ruby-enumerable-statistics
-SUBDIR+=	ruby-gsl
 SUBDIR+=	ruby-matrix
 SUBDIR+=	ruby-narray
 SUBDIR+=	ruby-roo
