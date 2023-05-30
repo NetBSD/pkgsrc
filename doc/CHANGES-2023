@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3414 2023/05/30 15:20:46 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3415 2023/05/30 15:23:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/ruby-net-pop [taca 2023-05-30]
 	Removed net/ruby-net-protocol [taca 2023-05-30]
 	Removed security/ruby-digest [taca 2023-05-30]
+	Removed textproc/ruby-rexml [taca 2023-05-30]
