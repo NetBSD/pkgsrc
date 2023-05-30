@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3403 2023/05/30 11:56:38 markd Exp $
+$NetBSD: CHANGES-2023,v 1.3404 2023/05/30 14:24:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/tex-smartdiagram-doc version 0.3b [markd 2023-05-30]
 	Added graphics/tex-worldflags version 2022 [markd 2023-05-30]
 	Added graphics/tex-worldflags-doc version 2022 [markd 2023-05-30]
+	Updated devel/ruby-redmine50 to 5.0.5nb3 [taca 2023-05-30]
