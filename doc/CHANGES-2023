@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3397 2023/05/30 08:03:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3398 2023/05/30 08:56:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4707,3 +4707,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-trove-classifiers to 2023.5.24 [wiz 2023-05-30]
 	Updated x11/py-qt-builder to 1.15.1 [wiz 2023-05-30]
 	Updated fonts/unifont to 15.0.03 [wiz 2023-05-30]
+	Updated devel/py-lru-dict to 1.2.0 [adam 2023-05-30]
+	Updated finance/py-braintree to 4.20.0 [adam 2023-05-30]
