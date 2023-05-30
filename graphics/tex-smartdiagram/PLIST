@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/30 11:51:26 markd Exp $
+share/texmf-dist/tex/latex/smartdiagram/smartdiagram.sty
+share/texmf-dist/tex/latex/smartdiagram/smartdiagramlibraryadditions.code.tex
+share/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.commands.code.tex
+share/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.definitions.code.tex
+share/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.styles.code.tex
