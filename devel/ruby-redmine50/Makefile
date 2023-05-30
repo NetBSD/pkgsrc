@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/05/30 14:23:59 taca Exp $
+# $NetBSD: Makefile,v 1.14 2023/05/30 15:12:11 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -15,7 +15,7 @@ RM_VERSION=	5.0.5
 
 NO_BUILD=	yes
 
-RUBY_VERSIONS_ACCEPTED=	27 30 31
+RUBY_VERSIONS_ACCEPTED=	30 31
 
 RUBY_RAILS_ACCEPTED=	61
 
@@ -51,9 +51,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 .include "../../lang/ruby/modules.mk"
 .include "options.mk"
 
-.if ${RUBY_VER} == 27
-DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.1<0.2:../../net/ruby-net-pop
-.endif
 .if ${RUBY_VER} < 31
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.0<3.3:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.2.2<0.3:../../net/ruby-net-imap
@@ -70,8 +67,6 @@ SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine50_*${RUBY_SUFFIX}.sh
 SUBST_MESSAGE.shell=	Fixing paths in helper shell scripts.
 SUBST_VARS.shell=	PREFIX RUBY RM_DIR
 SUBST_STAGE.shell=	post-install
-
-MESSAGE_SUBST+=	RM_DIR=${RM_DIR} RM_VER=${RM_VER}
 
 USE_LANGUAGES=	# none
 
