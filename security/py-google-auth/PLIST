@@ -1,11 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/12/12 09:49:33 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+@comment $NetBSD: PLIST,v 1.14 2023/05/30 07:55:43 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -105,6 +98,9 @@ ${PYSITELIB}/google/auth/impersonated_credentials.pyo
 ${PYSITELIB}/google/auth/jwt.py
 ${PYSITELIB}/google/auth/jwt.pyc
 ${PYSITELIB}/google/auth/jwt.pyo
+${PYSITELIB}/google/auth/metrics.py
+${PYSITELIB}/google/auth/metrics.pyc
+${PYSITELIB}/google/auth/metrics.pyo
 ${PYSITELIB}/google/auth/pluggable.py
 ${PYSITELIB}/google/auth/pluggable.pyc
 ${PYSITELIB}/google/auth/pluggable.pyo
@@ -183,3 +179,10 @@ ${PYSITELIB}/google/oauth2/sts.pyo
 ${PYSITELIB}/google/oauth2/utils.py
 ${PYSITELIB}/google/oauth2/utils.pyc
 ${PYSITELIB}/google/oauth2/utils.pyo
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
