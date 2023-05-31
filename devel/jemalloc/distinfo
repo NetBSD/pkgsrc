@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2022/09/26 20:32:19 wiz Exp $
+$NetBSD: distinfo,v 1.19 2023/05/31 21:04:17 christos Exp $
 
 BLAKE2s (jemalloc-5.3.0.tar.bz2) = 285e6145b9d3b575b1ec5cfdae8af40b461149085f001839d64685c0d56e2689
 SHA512 (jemalloc-5.3.0.tar.bz2) = 22907bb052096e2caffb6e4e23548aecc5cc9283dce476896a2b1127eee64170e3562fa2e7db9571298814a7a2c7df6e8d1fbe152bd3f3b0c1abec22a2de34b1
@@ -6,3 +6,4 @@ Size (jemalloc-5.3.0.tar.bz2) = 736023 bytes
 SHA1 (patch-Makefile.in) = 502b7b8b80429c3db15ef001dad04805824a9a98
 SHA1 (patch-configure) = 5dec3fb5b2ece549e40743780db3057dd83cc17e
 SHA1 (patch-include_jemalloc_internal_quantum.h) = e291b59958813fc1af28bea0a5a63d5715090a48
+SHA1 (patch-src_pages.c) = a2b9589def01d941e2fe65b30f5f9faf059d8833
