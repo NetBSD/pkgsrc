@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/05/31 18:37:52 nikita Exp $
+lib/libcurl-gnutls.so
+lib/libcurl-gnutls.so.4
+lib/libcurl-gnutls.so.4.8.0
