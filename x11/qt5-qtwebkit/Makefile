@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/05/22 21:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/05/31 10:56:08 adam Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -21,34 +21,30 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		perl:build pkg-config bison
-USE_CMAKE=		yes
-CMAKE_ARG_PATH=		..
-CONFIGURE_DIRS=		_build
-CMAKE_INSTALL_PREFIX=	${PREFIX}/qt5
+USE_TOOLS+=		bison perl:build pkg-config
+CMAKE_INSTALL_PREFIX=	${QTDIR}
+CMAKE_INSTALL_NAME_DIR=	${QTDIR}/lib
 TEST_TARGET=		test
 
 # Source/JavaScriptCore/offlineasm/parser.rb:587:in `block in parseSequence': undefined method `=~'
 RUBY_VERSIONS_INCOMPATIBLE=	32
 
-CMAKE_ARGS+=		-DPORT=Qt
-CMAKE_ARGS+=		-DENABLE_TOOLS=OFF
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=		-DSHARED_CORE:BOOL=ON
-CMAKE_ARGS+=		-DUSE_SYSTEM_MALLOC:BOOL=ON
-CMAKE_ARGS+=		-DUSE_LD_GOLD:BOOL=OFF
-CMAKE_ARGS+=		-DENABLE_API_TESTS=OFF
-CMAKE_ARGS+=		-DMACOS_BUILD_FRAMEWORKS=OFF
-CMAKE_ARGS+=		-DMACOS_USE_SYSTEM_ICU=OFF
-CMAKE_ARGS+=		-DMACOS_FORCE_SYSTEM_XML_LIBRARIES=OFF
-CMAKE_ARGS+=		-DKDE_INSTALL_LIBEXECDIR=${CMAKE_INSTALL_PREFIX}/libexec
+CMAKE_ARGS+=	-DPORT=Qt
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DENABLE_API_TESTS=OFF
+CMAKE_ARGS+=	-DENABLE_TOOLS=OFF
+CMAKE_ARGS+=	-DKDE_INSTALL_LIBEXECDIR=${QTDIR}/libexec
+CMAKE_ARGS+=	-DSHARED_CORE=ON
+CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF
+CMAKE_ARGS+=	-DUSE_SYSTEM_MALLOC=ON
+# for Darwin
+CMAKE_ARGS+=	-DMACOS_BUILD_FRAMEWORKS=OFF
+CMAKE_ARGS+=	-DMACOS_FORCE_SYSTEM_XML_LIBRARIES=OFF
+CMAKE_ARGS+=	-DMACOS_USE_SYSTEM_ICU=OFF
 
 UNLIMIT_RESOURCES+=	cputime
 
 GCC_REQD+=	4.9
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/_build
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
@@ -102,6 +98,7 @@ post-install:
 PLIST_VARS+=	npapi
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
