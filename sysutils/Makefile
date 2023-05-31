@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1047 2023/05/18 12:39:49 nikita Exp $
+# $NetBSD: Makefile,v 1.1048 2023/05/31 22:59:18 abs Exp $
 #
 
 COMMENT=	System utilities
@@ -712,6 +712,7 @@ SUBDIR+=	syslog-ng-sql
 SUBDIR+=	system-tools-backends
 SUBDIR+=	systester
 SUBDIR+=	sysupgrade
+SUBDIR+=	szyszka
 SUBDIR+=	tarsnap
 SUBDIR+=	tarsnap-gui
 SUBDIR+=	tcx
