@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/05/13 15:36:07 fcambus Exp $
+# $NetBSD: Makefile,v 1.31 2023/05/31 08:52:54 fcambus Exp $
 
-DISTNAME=	console-setup_1.220
-PKGNAME=	bdf2psf-1.220
+DISTNAME=	console-setup_1.221
+PKGNAME=	bdf2psf-1.221
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/c/console-setup/}
 EXTRACT_SUFX=	.tar.xz
