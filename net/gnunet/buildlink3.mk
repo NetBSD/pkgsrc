@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/05/06 19:08:53 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/05/31 18:40:00 nikita Exp $
 
 BUILDLINK_TREE+=	gnunet
 
@@ -72,6 +72,9 @@ pkgbase:= gnunet
 .include "../../textproc/jose/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.include "../../www/libcurl-gnutls/buildlink3.mk"
+.endif
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/17 23:24:03 nikita Exp $
+# $NetBSD: Makefile,v 1.11 2023/05/31 18:40:00 nikita Exp $
 
 DISTNAME=		gnunet-0.19.4
 PKGREVISION=		2
@@ -34,6 +34,9 @@ CONFIGURE_ARGS+=	--with-jose=${BUILDLINK_PREFIX.jose}/lib
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 CONFIGURE_ARGS+=	--with-microhttpd=${BUILDLINK_PREFIX.libmicrohttpd}
 CONFIGURE_ARGS+=	--without-zbar
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.libcurl-gnutls}/lib
+.endif
 
 
 GNUNET_LOG_DIR=		${VARBASE}/chroot/gnunet/cache
@@ -128,6 +131,9 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gnunet/libexec/gnunet-helper-nat-server ${SETUID_R
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../textproc/jose/buildlink3.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.include "../../www/libcurl-gnutls/buildlink3.mk"
+.endif
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
 .include "../../mk/atomic64.mk"
