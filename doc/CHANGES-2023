@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3423 2023/05/31 08:53:05 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.3424 2023/05/31 09:01:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4739,3 +4739,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask-wtf to 1.1.1 [markd 2023-05-30]
 	Updated x11/vte3 to 0.68.0nb13 [gutteridge 2023-05-30]
 	Updated converters/bdf2psf to 1.221 [fcambus 2023-05-31]
+	Updated www/curl to 8.1.2 [adam 2023-05-31]
+	Updated devel/orc to 0.4.34 [adam 2023-05-31]
