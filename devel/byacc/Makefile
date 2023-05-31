@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/03/02 21:22:20 fcambus Exp $
+# $NetBSD: Makefile,v 1.34 2023/05/31 09:30:30 fcambus Exp $
 #
 
-DISTNAME=	byacc-20230219
+DISTNAME=	byacc-20230521
 CATEGORIES=	devel
 MASTER_SITES=	https://invisible-mirror.net/archives/byacc/
 EXTRACT_SUFX=	.tgz
