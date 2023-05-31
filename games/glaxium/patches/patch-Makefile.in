@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/05/31 21:53:00 wiz Exp $
+
+Adapt path to data files for pkgsrc.
+Use c++ compiler when linking c++ objects.
+
+--- Makefile.in.orig	2002-10-20 18:30:12.000000000 +0000
++++ Makefile.in
+@@ -15,11 +15,11 @@ mandir=@mandir@
+ 
+ GLAXIUM_INSTALLDIR=$(bindir)
+ DATA_DIRS=samples textures
+-GLAXIUM_HOME=$(datadir)/games/glaxium
++GLAXIUM_HOME=$(datadir)/glaxium
+ MAN_DIR=$(mandir)
+ 
+ glaxium : $(OBJ)
+-	gcc -g -o glaxium $(OBJ) $(LIB)
++	g++ -g -o glaxium $(OBJ) $(LIB)
+ 
+ 
+ 
