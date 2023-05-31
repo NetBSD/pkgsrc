@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.20 2023/05/22 21:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/05/31 19:06:27 adam Exp $
 
-PKGREVISION= 4
 .include "../../x11/qt5-qscintilla/Makefile.common"
 
 PKGNAME=	qt5-${DISTNAME:S/_src//:tl}
@@ -15,5 +14,12 @@ INSTALL_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC}/src && ${QTDIR}/bin/qmake -o Makefile qscintilla.pro
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${QTDIR}/lib/libqscintilla2_qt5.15.2.0.dylib \
+	${DESTDIR}${QTDIR}/lib/libqscintilla2_qt5.15.2.0.dylib
+.endif
 
 .include "../../mk/bsd.pkg.mk"
