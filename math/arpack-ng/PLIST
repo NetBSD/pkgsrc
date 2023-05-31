@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2022/07/07 13:39:48 thor Exp $
-include/arpack/arpackdef.h
-include/arpack/arpackicb.h
-include/arpack/debug.h
-include/arpack/stat.h
-lib/cmake/arpack-ng/arpack-ng-config-version.cmake
-lib/cmake/arpack-ng/arpack-ng-config.cmake
+@comment $NetBSD: PLIST,v 1.4 2023/05/31 21:35:31 adam Exp $
+include/arpack-ng/arpackdef.h
+include/arpack-ng/arpackicb.h
+include/arpack-ng/debug.h
+include/arpack-ng/debugF90.h
+include/arpack-ng/stat.h
+include/arpack-ng/statF90.h
+lib/cmake/arpackng/arpackng-config-version.cmake
+lib/cmake/arpackng/arpackng-config.cmake
+lib/cmake/arpackng/arpackngTargets-release.cmake
+lib/cmake/arpackng/arpackngTargets.cmake
 lib/libarpack.so
 lib/libarpack.so.2
 lib/libarpack.so.2.1.0
