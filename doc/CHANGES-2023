@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3429 2023/05/31 14:04:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3430 2023/05/31 14:32:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-OpenSSL to 23.2.0 [adam 2023-05-31]
 	Updated databases/postgresql-postgis2 to 3.3.3 [gdt 2023-05-31]
 	Updated pkgtools/revbump to 3.1 [wiz 2023-05-31]
+	Updated devel/lua-language-server to 3.6.21 [wiz 2023-05-31]
