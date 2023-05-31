@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.127 2023/05/28 17:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2023/05/31 13:30:12 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
 MAJOR=		3.3
-DISTNAME=	postgis-${MAJOR}.2
+DISTNAME=	postgis-${MAJOR}.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -34,13 +33,13 @@ CONFLICTS=		postgis-[0-9]*
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
 
-USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c c++ c99
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake lex pax perl pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-rpath
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
+USE_GCC_RUNTIME=		yes
+USE_LANGUAGES=			c c++ c99
+USE_LIBTOOL=			yes
+USE_TOOLS+=			gmake lex pax perl pkg-config
+GNU_CONFIGURE=			yes
+CONFIGURE_ARGS+=		--enable-rpath
+CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
 # Documented requirement is pgsql >= 11
 PGSQL_VERSIONS_ACCEPTED=	14 13 12 11
 
