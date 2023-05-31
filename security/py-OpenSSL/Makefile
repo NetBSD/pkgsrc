@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2023/04/18 17:17:39 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/05/31 12:58:48 adam Exp $
 
-DISTNAME=	pyOpenSSL-23.1.1
+DISTNAME=	pyOpenSSL-23.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
@@ -10,18 +10,16 @@ HOMEPAGE=	https://pyopenssl.org/
 COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=38.0.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=40.0.2:../../security/py-cryptography
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
-# https://github.com/pyca/pyopenssl/issues/656
-PYSETUPTESTTARGET=	pytest
-
-# test status as of 23.0.0
-# 2 failed, 535 passed, 1 skipped, 6 warnings
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# https://github.com/pyca/pyopenssl/issues/656
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"
