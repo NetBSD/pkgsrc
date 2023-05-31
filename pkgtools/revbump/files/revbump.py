@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.1 2023/05/26 06:47:54 wiz Exp $
+# $NetBSD: revbump.py,v 1.2 2023/05/31 14:04:40 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -272,6 +272,7 @@ if args.package == 'lang/perl5':
 directories = [path[:path.rfind('/')] for path in makefile_result + bl3result]
 directories = filter(lambda name: name != args.package, directories)
 with open(args.output, 'w', encoding='utf-8') as f:
+    f.write(args.package + '\n')
     for directory in sorted(set(directories)):
         revbump(directory)
         f.write(directory + '\n')
