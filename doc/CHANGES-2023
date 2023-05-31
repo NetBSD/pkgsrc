@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3434 2023/05/31 20:20:06 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.3435 2023/05/31 21:38:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4755,3 +4755,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/qt5-qscintilla to 2.14.0 [adam 2023-05-31]
 	Updated x11/py-qt5-qscintilla to 2.14.0 [adam 2023-05-31]
 	Updated www/libcurl-gnutls to 8.1.2 [nikita 2023-05-31]
+	Updated math/arpack-ng to 3.9.0 [adam 2023-05-31]
+	Updated math/octave to 8.2.0 [adam 2023-05-31]
