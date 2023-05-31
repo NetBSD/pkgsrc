@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/02 15:40:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/05/31 19:06:27 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/PyQt5/Qsci.abi3.so
 ${PYSITELIB}/PyQt5/bindings/Qsci/Qsci.toml
 ${PYSITELIB}/PyQt5/bindings/Qsci/qsciabstractapis.sip
@@ -7,6 +13,7 @@ ${PYSITELIB}/PyQt5/bindings/Qsci/qscicommand.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscicommandset.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscidocument.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexer.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerasm.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexeravs.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerbash.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerbatch.sip
@@ -20,15 +27,19 @@ ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerd.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerdiff.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerfortran.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerfortran77.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerhex.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerhtml.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexeridl.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerintelhex.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerjava.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerjavascript.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerjson.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerlua.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexermakefile.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexermarkdown.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexermasm.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexermatlab.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexernasm.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexeroctave.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerpascal.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerperl.sip
@@ -40,7 +51,9 @@ ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerpython.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerruby.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerspice.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexersql.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexersrec.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexertcl.sip
+${PYSITELIB}/PyQt5/bindings/Qsci/qscilexertekhex.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexertex.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexerverilog.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscilexervhdl.sip
@@ -54,9 +67,3 @@ ${PYSITELIB}/PyQt5/bindings/Qsci/qsciscintilla.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qsciscintillabase.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscistyle.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscistyledtext.sip
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
