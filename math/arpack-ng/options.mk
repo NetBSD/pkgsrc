@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2022/07/07 13:40:40 thor Exp $
+# $NetBSD: options.mk,v 1.3 2023/05/31 21:35:31 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.arpack-ng
 PKG_SUPPORTED_OPTIONS=	mpi
-PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

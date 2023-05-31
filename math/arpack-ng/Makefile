@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/07/07 13:39:48 thor Exp $
+# $NetBSD: Makefile,v 1.8 2023/05/31 21:35:31 adam Exp $
 
-DISTNAME=	arpack-ng-3.8.0
-PKGREVISION=	2
+DISTNAME=	arpack-ng-3.9.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencollab/}
 
@@ -11,25 +10,20 @@ COMMENT=	Library of subroutines to solve eigenvalue problems
 LICENSE=	original-bsd
 
 USE_LANGUAGES=	c fortran
-USE_CMAKE=	yes
 
-OBJDIR=		obj
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_ARGS+=	-DBLA_PREFER_PKGCONFIG=true
+CMAKE_ARGS+=	-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
 
-CONFIGURE_DIRS=	${OBJDIR}
-
-CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
-
-.include "../../mk/blas.buildlink3.mk"
-CMAKE_ARGS+=	-DBLA_PREFER_PKGCONFIG=true -DBLA_PKGCONFIG_BLAS=${BLAS_PC}
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+TEST_TARGET=	test
 
 .include "options.mk"
 
-TEST_TARGET=	test
-
-pre-configure:
-	cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
-
 INSTALLATION_DIRS=	lib
 
+.include "../../devel/cmake/build.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

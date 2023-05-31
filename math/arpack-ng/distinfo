@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/05/31 21:35:31 adam Exp $
 
-BLAKE2s (arpack-ng-3.8.0.tar.gz) = e5292edb8d461dbf5b470fa2297c4fed1468509658555ccb5ebd7bb0b78b7ddd
-SHA512 (arpack-ng-3.8.0.tar.gz) = 8969c74c4c0459ea2d29ea49d5260f668fd33f73886df0da78a42a94aea93c9f5fb70f5df035266db68807ab09a92c13487a7a4e6ca64922145aade8a148a2de
-Size (arpack-ng-3.8.0.tar.gz) = 1014494 bytes
+BLAKE2s (arpack-ng-3.9.0.tar.gz) = b82ffac2169125efbfd4727c5742e14cbe19a86388ba0cc8336de41ecedcbdd2
+SHA512 (arpack-ng-3.9.0.tar.gz) = fbcaa2179dd1aa5a39fc3e7d80f377ec90ddf16ef93184a88e6ecfc464ed97e5659f2cf578294ac3e0b0c0da6408c86acf5bbdce533e1e9d2a3121848340d282
+Size (arpack-ng-3.9.0.tar.gz) = 1015328 bytes
