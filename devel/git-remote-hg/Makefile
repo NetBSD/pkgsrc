@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/31 22:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/05/31 22:15:35 wiz Exp $
 
 DISTNAME=	git-remote-hg-0.6
 CATEGORIES=	devel scm
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
 REPLACE_PYTHON=	git-remote-hg
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALL_TARGET=	install install-doc
 
