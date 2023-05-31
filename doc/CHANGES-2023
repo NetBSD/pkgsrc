@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3426 2023/05/31 09:45:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3427 2023/05/31 12:59:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4744,3 +4744,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/byacc to 20230521 [fcambus 2023-05-31]
 	Updated lang/vala to 0.56.8 [adam 2023-05-31]
 	Updated net/rabbitmq to 3.11.17 [adam 2023-05-31]
+	Updated security/py-cryptography to 41.0.0 [adam 2023-05-31]
+	Updated security/py-cryptography_vectors to 41.0.0 [adam 2023-05-31]
+	Updated security/py-OpenSSL to 23.2.0 [adam 2023-05-31]
