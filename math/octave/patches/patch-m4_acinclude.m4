@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_acinclude.m4,v 1.5 2022/10/24 18:02:19 adam Exp $
+$NetBSD: patch-m4_acinclude.m4,v 1.6 2023/05/31 21:37:51 adam Exp $
 
 we pass and assume a given MACHINE_GNU_PLATFORM, but this package did not
 use this value due to an error.
@@ -10,9 +10,9 @@ Do not look for qcollectiongenerator; it is now part of qhelpgenerator.
 
 On Darwin, do not produce a mach-o bundle.
 
---- m4/acinclude.m4.orig	2022-07-28 13:08:26.000000000 +0000
+--- m4/acinclude.m4.orig	2023-04-13 16:43:35.000000000 +0000
 +++ m4/acinclude.m4
-@@ -37,7 +37,7 @@ AC_DEFUN([OCTAVE_CANONICAL_HOST], [
+@@ -36,7 +36,7 @@ AC_DEFUN([OCTAVE_CANONICAL_HOST], [
      host=unknown-unknown-unknown
      AC_MSG_WARN([configuring Octave for unknown system type])
    fi
@@ -21,7 +21,7 @@ On Darwin, do not produce a mach-o bundle.
    AC_SUBST(canonical_host_type)
    if test -z "$host_cpu"; then
      host_cpu=unknown
-@@ -2200,11 +2200,10 @@ AC_DEFUN([OCTAVE_CHECK_QT_VERSION], [AC_
+@@ -2259,11 +2259,10 @@ AC_DEFUN([OCTAVE_CHECK_QT_VERSION], [AC_
      OCTAVE_CHECK_QT_TOOL([uic])
      OCTAVE_CHECK_QT_TOOL([rcc])
      OCTAVE_CHECK_QT_TOOL([lrelease])
@@ -34,13 +34,11 @@ On Darwin, do not produce a mach-o bundle.
        build_qt_gui=no
        MOC_QTVER=
        UIC_QTVER=
-@@ -2731,10 +2730,8 @@ AC_DEFUN_ONCE([OCTAVE_DEFINE_MKOCTFILE_D
-       SH_LDFLAGS="-shared -Wl,-expect_unresolved -Wl,'*'"
-     ;;
-     *-*-darwin*)
--      DL_LDFLAGS="-bundle -undefined dynamic_lookup -bind_at_load -bundle_loader ${ac_top_build_prefix}src/octave${EXEEXT} ${LDFLAGS}"
-       dnl Contains variables that are defined and undefined at this point, so use
-       dnl appropriate quoting to defer expansion of ${bindir} and ${version}.
+@@ -2793,8 +2792,6 @@ AC_DEFUN_ONCE([OCTAVE_DEFINE_MKOCTFILE_D
+       dnl Contains variables that are defined and undefined at this point,
+       dnl so use appropriate quoting to defer expansion of
+       dnl ${abs_top_builddir}, ${bindir}, and ${version}.
+-      DL_LDFLAGS='-bundle -undefined dynamic_lookup -bind_at_load -bundle_loader ${abs_top_builddir}/src/octave'"${EXEEXT} ${LDFLAGS}"
 -      MKOCTFILE_DL_LDFLAGS='-bundle -undefined dynamic_lookup -bind_at_load -bundle_loader ${bindir}/octave-${version}'"${EXEEXT}"
        SH_LDFLAGS="-dynamiclib -single_module ${LDFLAGS}"
        case $canonical_host_type in

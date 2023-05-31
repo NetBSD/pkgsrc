@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.66 2022/11/06 17:02:55 adam Exp $
+$NetBSD: distinfo,v 1.67 2023/05/31 21:37:51 adam Exp $
 
-BLAKE2s (octave-7.3.0.tar.xz) = d5854b2225153c15e21bee4c77536f5af7e5323a6855757ff03bef77928bba4d
-SHA512 (octave-7.3.0.tar.xz) = 1399d7010cbd4e83d6dc60ab8cc2abb20e64a762e905a00066e6331c5350df93b4ff8f2670fd52fc183918cea21bc176cb263ca71080de6e4041f5e0ea21558e
-Size (octave-7.3.0.tar.xz) = 26215288 bytes
-SHA1 (patch-Makefile.in) = 056c2c43ffe0387ece0a26fe4f2b644257c7ac36
+BLAKE2s (octave-8.2.0.tar.xz) = 7cb0dec397f80e0cf04da78110ac6a72bd829f04527d7c6f2a376d1eb13ae76f
+SHA512 (octave-8.2.0.tar.xz) = 9f56428e990c6aa71a5cfe7698602ba681535c36b140fa9248536c260afebd19f6125c92a0fd6d14fab5a794de49e03ccc98e89ac879108f635b3ffc4ec40514
+Size (octave-8.2.0.tar.xz) = 26970452 bytes
+SHA1 (patch-Makefile.in) = 7fe47cf88e4dff2eba360600f086f8361ec11535
 SHA1 (patch-configure.ac) = 48a2dee11b33ce80a477367479ad348056c2c1f9
 SHA1 (patch-doc_interpreter_module.mk) = 66389cceddbe71fca0c8197275a839170d64ad5b
 SHA1 (patch-libgnu_fseeko.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
@@ -11,7 +11,7 @@ SHA1 (patch-libgnu_stdio.in.h) = 83c8fbecba26868fe9db70a7fb08f67353c982ea
 SHA1 (patch-libinterp_dldfcn_config-module.awk) = a9b6ed5580d670ab0a3632780d90bbeb36f9197c
 SHA1 (patch-libinterp_dldfcn_module.mk) = 8975e881cade802cf1b14bd8256f9fced6c50e38
 SHA1 (patch-liboctave_util_quit.cc) = 17ace431c53de1e5b72b86bb2bf4e15bdc6d4db9
-SHA1 (patch-m4_acinclude.m4) = 60e497f4a2f40ab4ba18b236a55f422f9692e0bd
+SHA1 (patch-m4_acinclude.m4) = 8ad44e92906b8185e63bd6cf7242fcf58a1dd077
 SHA1 (patch-scripts_miscellaneous_unpack.m) = 0f979fd4bcef8926a5d64149d9cc925ef1d2d727
 SHA1 (patch-scripts_pkg_private_configure__make.m) = 7a73a32322a9ba39a2c9597b3e406c2b5a9c8b40
 SHA1 (patch-scripts_plot_util_____gnuplot__drawnow____.m) = 449b178aefd78c5c1b03ffd960f2e8be3874efc2
