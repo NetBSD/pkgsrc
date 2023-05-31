@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1711 2023/05/10 22:47:51 markd Exp $
+# $NetBSD: Makefile,v 1.1712 2023/05/31 18:37:52 nikita Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -201,6 +201,7 @@ SUBDIR+=	kjsembed
 SUBDIR+=	kore
 SUBDIR+=	lariza
 SUBDIR+=	lhs
+SUBDIR+=	libcurl-gnutls
 SUBDIR+=	libecap
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
