@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/05/17 22:25:06 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2023/05/31 14:32:35 wiz Exp $
 
-DISTNAME=		lua-language-server-3.6.19
+DISTNAME=		lua-language-server-3.6.21
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
@@ -31,14 +31,14 @@ INSTALLATION_DIRS+=	share/lua-language-server/bin
 INSTALLATION_DIRS+=	bin
 
 # TODO: Maybe unbundle (some of) them? (lls does build with them included though)
-GITHUB_SUBMODULES=	actboy168 luamake 22f861ac8444d1b85ceb29561b2a599fcbff4e3f 3rd/luamake
-GITHUB_SUBMODULES+=	actboy168 bee.lua ca581b9191d98a0644da1dc3332bb59274c9f101 3rd/bee.lua
-GITHUB_SUBMODULES+=	actboy168 bee.lua 8ff095021f73f5883d4b67ba6eb233eae44f3bb9 3rd/luamake/bee.lua
-GITHUB_SUBMODULES+=	actboy168 json.lua be1d71ff7afe84942eb3f33b76c8bf75306c4635 3rd/json.lua
-GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 081b623d03627b281d5744ab53c420667573b955 3rd/EmmyLuaCodeStyle
-GITHUB_SUBMODULES+=	bjornbytes lovr-docs cd208aeb7dabf47d4edecdb9162c1d7d10e73a10 3rd/lovr-api
+GITHUB_SUBMODULES+=	CppCXY EmmyLuaCodeStyle 82aca211b6ee403a832412b9f7938db797c564d8 3rd/EmmyLuaCodeStyle
+GITHUB_SUBMODULES+=	actboy168 bee.lua a131e39521e230ea2bbca20cb6b1c5abbc6a437b 3rd/bee.lua
+GITHUB_SUBMODULES+=	actboy168 json.lua bd7b7787bb8b586e59b5afe5886dd1b76c86eb56 3rd/json.lua
 GITHUB_SUBMODULES+=	love2d-community love-api ab6dc6756683686b5506107116f994253aef5a20 3rd/love-api
+GITHUB_SUBMODULES+=	bjornbytes lovr-docs 441a21a6eb32e611be889cadf41df16938eda43d 3rd/lovr-api
 GITHUB_SUBMODULES+=	sqmedeiros lpeglabel e25eb35666201b10dc2778d6147ea36a9f6e033d 3rd/lpeglabel
+GITHUB_SUBMODULES+=	actboy168 luamake 22f861ac8444d1b85ceb29561b2a599fcbff4e3f 3rd/luamake
+GITHUB_SUBMODULES+=	actboy168 bee.lua 8ff095021f73f5883d4b67ba6eb233eae44f3bb9 3rd/luamake/bee.lua
 
 post-extract:
 	${CP} ${FILESDIR}/lua-language-server ${WRKSRC}/lua-language-server
