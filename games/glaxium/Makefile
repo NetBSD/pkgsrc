@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/08/11 05:08:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.30 2023/05/31 21:53:00 wiz Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 CONFIGURE_ENV+=		X11_LDFLAGS=${X_LDFLAGS:Q}
+# uses cos()
+X_LDFLAGS=		${X11_LDFLAGS} -lm
 
 BUILD_TARGET=		glaxium
 
@@ -37,13 +39,6 @@ do-install:
 		${DESTDIR}${PREFIX}/share/glaxium/samples/
 	${INSTALL_DATA} ${WRKSRC}/textures/*.png \
 		${DESTDIR}${PREFIX}/share/glaxium/textures/
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
-X_LDFLAGS=	${X11_LDFLAGS} -lm -lstdc++
-.else
-X_LDFLAGS=	${X11_LDFLAGS}
-.endif
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
