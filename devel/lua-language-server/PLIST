@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/28 16:10:41 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/05/31 14:32:35 wiz Exp $
 bin/lua-language-server
 share/lua-language-server/bin/lua-language-server
 share/lua-language-server/bin/main.lua
@@ -690,6 +690,8 @@ share/lua-language-server/meta/template/debug.lua
 share/lua-language-server/meta/template/ffi.lua
 share/lua-language-server/meta/template/io.lua
 share/lua-language-server/meta/template/jit.lua
+share/lua-language-server/meta/template/jit.profile.lua
+share/lua-language-server/meta/template/jit.util.lua
 share/lua-language-server/meta/template/math.lua
 share/lua-language-server/meta/template/os.lua
 share/lua-language-server/meta/template/package.lua
@@ -753,14 +755,17 @@ share/lua-language-server/script/core/diagnostics/duplicate-set-field.lua
 share/lua-language-server/script/core/diagnostics/empty-block.lua
 share/lua-language-server/script/core/diagnostics/global-element.lua
 share/lua-language-server/script/core/diagnostics/global-in-nil-env.lua
+share/lua-language-server/script/core/diagnostics/helper/missing-doc-helper.lua
 share/lua-language-server/script/core/diagnostics/incomplete-signature-doc.lua
 share/lua-language-server/script/core/diagnostics/init.lua
 share/lua-language-server/script/core/diagnostics/invisible.lua
 share/lua-language-server/script/core/diagnostics/lowercase-global.lua
 share/lua-language-server/script/core/diagnostics/missing-global-doc.lua
+share/lua-language-server/script/core/diagnostics/missing-local-export-doc.lua
 share/lua-language-server/script/core/diagnostics/missing-parameter.lua
 share/lua-language-server/script/core/diagnostics/missing-return-value.lua
 share/lua-language-server/script/core/diagnostics/missing-return.lua
+share/lua-language-server/script/core/diagnostics/name-style-check.lua
 share/lua-language-server/script/core/diagnostics/need-check-nil.lua
 share/lua-language-server/script/core/diagnostics/newfield-call.lua
 share/lua-language-server/script/core/diagnostics/newline-call.lua
@@ -848,6 +853,8 @@ share/lua-language-server/script/locale-loader.lua
 share/lua-language-server/script/log.lua
 share/lua-language-server/script/meta/bee/filesystem.lua
 share/lua-language-server/script/meta/bee/filewatch.lua
+share/lua-language-server/script/meta/bee/socket.lua
+share/lua-language-server/script/meta/bee/thread.lua
 share/lua-language-server/script/parser/compile.lua
 share/lua-language-server/script/parser/guide.lua
 share/lua-language-server/script/parser/init.lua
@@ -856,6 +863,17 @@ share/lua-language-server/script/parser/luadoc.lua
 share/lua-language-server/script/parser/relabel.lua
 share/lua-language-server/script/parser/tokens.lua
 share/lua-language-server/script/plugin.lua
+share/lua-language-server/script/plugins/ffi/c-parser/c99.lua
+share/lua-language-server/script/plugins/ffi/c-parser/cdefines.lua
+share/lua-language-server/script/plugins/ffi/c-parser/cdriver.lua
+share/lua-language-server/script/plugins/ffi/c-parser/cpp.lua
+share/lua-language-server/script/plugins/ffi/c-parser/ctypes.lua
+share/lua-language-server/script/plugins/ffi/c-parser/typed.lua
+share/lua-language-server/script/plugins/ffi/c-parser/util.lua
+share/lua-language-server/script/plugins/ffi/cdefRerence.lua
+share/lua-language-server/script/plugins/ffi/init.lua
+share/lua-language-server/script/plugins/ffi/searchCode.lua
+share/lua-language-server/script/plugins/init.lua
 share/lua-language-server/script/progress.lua
 share/lua-language-server/script/proto/converter.lua
 share/lua-language-server/script/proto/define.lua
@@ -871,6 +889,7 @@ share/lua-language-server/script/provider/formatting.lua
 share/lua-language-server/script/provider/init.lua
 share/lua-language-server/script/provider/inlay-hint.lua
 share/lua-language-server/script/provider/markdown.lua
+share/lua-language-server/script/provider/name-style.lua
 share/lua-language-server/script/provider/provider.lua
 share/lua-language-server/script/provider/semantic-tokens.lua
 share/lua-language-server/script/provider/spell.lua
