@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.21 2023/04/18 17:16:21 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.22 2023/05/31 12:57:15 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-3des.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-aes128.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-aes192.txt
@@ -24,10 +29,8 @@ ${PYSITELIB}/cryptography_vectors/KDF/rfc-6070-PBKDF2-SHA1.txt
 ${PYSITELIB}/cryptography_vectors/KDF/scrypt.txt
 ${PYSITELIB}/cryptography_vectors/__about__.py
 ${PYSITELIB}/cryptography_vectors/__about__.pyc
-${PYSITELIB}/cryptography_vectors/__about__.pyo
 ${PYSITELIB}/cryptography_vectors/__init__.py
 ${PYSITELIB}/cryptography_vectors/__init__.pyc
-${PYSITELIB}/cryptography_vectors/__init__.pyo
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.1024.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.2048.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.3072.der
@@ -139,6 +142,8 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-nopsw.key-cert.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-nopsw.key.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-psw.key
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ecdsa-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-aesgcm-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-aesgcm-psw.key.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key-cert.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/ed25519-nopsw.key.pub
@@ -2206,6 +2211,7 @@ ${PYSITELIB}/cryptography_vectors/x509/badasn1time.pem
 ${PYSITELIB}/cryptography_vectors/x509/badssl-sct-anonymous-sig.der
 ${PYSITELIB}/cryptography_vectors/x509/badssl-sct-none-hash.der
 ${PYSITELIB}/cryptography_vectors/x509/badssl-sct.pem
+${PYSITELIB}/cryptography_vectors/x509/belgian-eid-invalid-visiblestring.pem
 ${PYSITELIB}/cryptography_vectors/x509/bigoid.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography-scts-tbs-precert.der
 ${PYSITELIB}/cryptography_vectors/x509/cryptography-scts.pem
@@ -2280,6 +2286,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_utf8_common_name.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_version.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/long-form-name-attribute.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/mismatch_inner_outer_sig_algorithm.der
+${PYSITELIB}/cryptography_vectors/x509/custom/ms-certificate-template.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_excluded.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip4_netmask.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_invalid_ip_netmask.pem
@@ -2298,6 +2305,10 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/policy_constraints_explicit.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/post2000utctime.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss_cert.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss_cert_invalid_mgf.der
+${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss_cert_no_sig_params.der
+${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss_cert_unsupported_mgf_hash.der
+${PYSITELIB}/cryptography_vectors/x509/custom/rsa_pss_sha256_no_null.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_dirname.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_email_dns_ip_dirname_uri.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/san_empty_hostname.pem
@@ -2328,11 +2339,13 @@ ${PYSITELIB}/cryptography_vectors/x509/ed25519/root-ed25519.pem
 ${PYSITELIB}/cryptography_vectors/x509/ed25519/server-ed25519-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/ed448/root-ed448.pem
 ${PYSITELIB}/cryptography_vectors/x509/ed448/server-ed448-cert.pem
+${PYSITELIB}/cryptography_vectors/x509/ee-pss-sha1-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/letsencryptx3.pem
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/ocsp-army.deps.mil-resp.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/ocsp-army.inapplicable-req.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/ocsp-army.revoked-req.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/ocsp-army.valid-req.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/req-acceptable-responses.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-duplicate-ext.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-nonce.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/req-ext-unknown-oid.der
