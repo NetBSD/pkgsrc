@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3427 2023/05/31 12:59:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3428 2023/05/31 13:30:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 41.0.0 [adam 2023-05-31]
 	Updated security/py-cryptography_vectors to 41.0.0 [adam 2023-05-31]
 	Updated security/py-OpenSSL to 23.2.0 [adam 2023-05-31]
+	Updated databases/postgresql-postgis2 to 3.3.3 [gdt 2023-05-31]
