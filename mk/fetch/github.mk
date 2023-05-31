@@ -1,4 +1,4 @@
-# $NetBSD: github.mk,v 1.16 2023/05/12 20:09:09 dholland Exp $
+# $NetBSD: github.mk,v 1.17 2023/05/31 20:30:44 rillig Exp $
 #
 # github.com master site handling
 #
@@ -75,15 +75,14 @@ SITES.${_GITHUB_DEFAULT_DISTFILES}=	-${MASTER_SITES:=${GITHUB_PROJECT}/archive/$
 
 .endif
 
-.if !empty(GITHUB_SUBMODULES)
-.  for _GITHUB_SM_USER _GITHUB_SM_PROJECT _GITHUB_SM_TAG _GITHUB_SM_PLACE in ${GITHUB_SUBMODULES}
-_GITHUB_SM_DISTFILE=			${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRACT_SUFX}
-_GITHUB_DEFAULT_DISTFILES+=		${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRACT_SUFX}
-SITES.${_GITHUB_SM_DISTFILE}=		-${MASTER_SITE_GITHUB:=${_GITHUB_SM_USER}/${_GITHUB_SM_PROJECT}/archive/${_GITHUB_SM_TAG}${EXTRACT_SUFX}}
-EXTRACT_DIR.${_GITHUB_SM_DISTFILE}=	${WRKSRC}/${_GITHUB_SM_PLACE}
-EXTRACT_OPTS_TAR.${_GITHUB_SM_DISTFILE}=	--strip-components=1
+.for user project tag place in ${GITHUB_SUBMODULES}
+.  for distfile in ${user}-${project}-${tag}${EXTRACT_SUFX}
+_GITHUB_DEFAULT_DISTFILES+=	${distfile}
+SITES.${distfile}=		-${MASTER_SITE_GITHUB:=${user}/${project}/archive/${tag}${EXTRACT_SUFX}}
+EXTRACT_DIR.${distfile}=	${WRKSRC}/${place}
+EXTRACT_OPTS_TAR.${distfile}=	--strip-components=1
 .  endfor
-.endif
+.endfor
 
 _VARGROUPS+=		github
 _PKG_VARS.github=	GITHUB_PROJECT DISTNAME GITHUB_TYPE GITHUB_TAG \
