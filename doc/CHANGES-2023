@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3433 2023/05/31 19:07:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3434 2023/05/31 20:20:06 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/libcurl-gnutls version 8.1.1 [nikita 2023-05-31]
 	Updated x11/qt5-qscintilla to 2.14.0 [adam 2023-05-31]
 	Updated x11/py-qt5-qscintilla to 2.14.0 [adam 2023-05-31]
+	Updated www/libcurl-gnutls to 8.1.2 [nikita 2023-05-31]
