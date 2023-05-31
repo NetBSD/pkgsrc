@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3431 2023/05/31 18:28:53 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.3432 2023/05/31 18:38:24 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4751,3 +4751,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/revbump to 3.1 [wiz 2023-05-31]
 	Updated devel/lua-language-server to 3.6.21 [wiz 2023-05-31]
 	Updated pkgtools/pkglint to 23.1.10 [rillig 2023-05-31]
+	Added www/libcurl-gnutls version 8.1.1 [nikita 2023-05-31]
