@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3459 2023/06/01 15:33:50 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.3460 2023/06/01 15:35:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4795,3 +4795,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-Rcpp to 1.0.10 [mef 2023-06-01]
 	Updated devel/R-rlang to 1.1.1 [mef 2023-06-01]
 	Updated net/dbip-asn-lite to 2023.06 [fcambus 2023-06-01]
+	Updated net/dbip-city-lite to 2023.06 [fcambus 2023-06-01]
