@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1048 2023/05/31 22:59:18 abs Exp $
+# $NetBSD: Makefile,v 1.1049 2023/06/01 16:03:17 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -585,6 +585,7 @@ SUBDIR+=	py-pefile
 SUBDIR+=	py-pid
 SUBDIR+=	py-psutil
 SUBDIR+=	py-ptyprocess
+SUBDIR+=	py-puremagic
 SUBDIR+=	py-pyinotify
 SUBDIR+=	py-reprotest
 SUBDIR+=	py-salt-pepper
