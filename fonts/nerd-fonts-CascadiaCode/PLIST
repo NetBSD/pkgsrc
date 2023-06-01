@@ -1,50 +1,37 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:40:39 nikita Exp $
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Bold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Bold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete ExtraLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete ExtraLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Light Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Light.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Bold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Bold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono ExtraLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono ExtraLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Light Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Light.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Regular.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono SemiBold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono SemiBold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono SemiLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono SemiLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Bold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Bold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible ExtraLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible ExtraLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Light Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Light.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible Regular.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible SemiBold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible SemiBold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible SemiLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Mono Windows Compatible SemiLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Regular.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete SemiBold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete SemiBold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete SemiLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete SemiLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Bold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Bold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible ExtraLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible ExtraLight.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Light Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Light.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible Regular.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible SemiBold Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible SemiBold.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible SemiLight Italic.otf
-share/fonts/X11/OTF/Caskaydia Cove Nerd Font Complete Windows Compatible SemiLight.otf
-@pkgdir share/fonts/X11/TTF
+@comment $NetBSD: PLIST,v 1.2 2023/06/01 08:10:38 wiz Exp $
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-Bold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-BoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-ExtraLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-ExtraLightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-Italic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-Light.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-LightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-Regular.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-SemiBold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-SemiBoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-SemiLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFont-SemiLightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-Bold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-BoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-ExtraLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-ExtraLightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-Italic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-Light.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-LightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-Regular.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-SemiBold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-SemiBoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-SemiLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontMono-SemiLightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-Bold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-BoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-ExtraLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-ExtraLightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-Italic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-Light.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-LightItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-Regular.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-SemiBold.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-SemiBoldItalic.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-SemiLight.ttf
+share/fonts/X11/TTF/CaskaydiaCoveNerdFontPropo-SemiLightItalic.ttf

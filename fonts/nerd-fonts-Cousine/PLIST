@@ -1,18 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:58:07 nikita Exp $
-share/fonts/X11/TTF/Cousine Bold Italic Nerd Font Complete Mono Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Bold Italic Nerd Font Complete Mono.ttf
-share/fonts/X11/TTF/Cousine Bold Italic Nerd Font Complete Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Bold Italic Nerd Font Complete.ttf
-share/fonts/X11/TTF/Cousine Bold Nerd Font Complete Mono Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Bold Nerd Font Complete Mono.ttf
-share/fonts/X11/TTF/Cousine Bold Nerd Font Complete Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Bold Nerd Font Complete.ttf
-share/fonts/X11/TTF/Cousine Italic Nerd Font Complete Mono Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Italic Nerd Font Complete Mono.ttf
-share/fonts/X11/TTF/Cousine Italic Nerd Font Complete Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Italic Nerd Font Complete.ttf
-share/fonts/X11/TTF/Cousine Regular Nerd Font Complete Mono Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Regular Nerd Font Complete Mono.ttf
-share/fonts/X11/TTF/Cousine Regular Nerd Font Complete Windows Compatible.ttf
-share/fonts/X11/TTF/Cousine Regular Nerd Font Complete.ttf
-@pkgdir share/fonts/X11/OTF
+@comment $NetBSD: PLIST,v 1.2 2023/06/01 08:10:39 wiz Exp $
+share/fonts/X11/TTF/CousineNerdFont-Bold.ttf
+share/fonts/X11/TTF/CousineNerdFont-BoldItalic.ttf
+share/fonts/X11/TTF/CousineNerdFont-Italic.ttf
+share/fonts/X11/TTF/CousineNerdFont-Regular.ttf
+share/fonts/X11/TTF/CousineNerdFontMono-Bold.ttf
+share/fonts/X11/TTF/CousineNerdFontMono-BoldItalic.ttf
+share/fonts/X11/TTF/CousineNerdFontMono-Italic.ttf
+share/fonts/X11/TTF/CousineNerdFontMono-Regular.ttf
+share/fonts/X11/TTF/CousineNerdFontPropo-Bold.ttf
+share/fonts/X11/TTF/CousineNerdFontPropo-BoldItalic.ttf
+share/fonts/X11/TTF/CousineNerdFontPropo-Italic.ttf
+share/fonts/X11/TTF/CousineNerdFontPropo-Regular.ttf
