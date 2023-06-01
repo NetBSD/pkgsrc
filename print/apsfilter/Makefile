@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2019/11/04 19:57:58 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/01 16:28:16 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 #MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -16,7 +16,7 @@ DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
-DEPENDS+=	psutils-[0-9]*:../../print/psutils
+DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
 
 WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
@@ -38,4 +38,7 @@ SUBST_FILES.prefix=	bin/apsfilter.in SETUP.in tools/prtmgmt
 SUBST_SED.prefix=	-e 's,/usr/local,${LOCALBASE},g'
 SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

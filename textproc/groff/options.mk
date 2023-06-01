@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/04/01 16:48:37 ryoon Exp $
+# $NetBSD: options.mk,v 1.10 2023/06/01 16:28:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	groff-docs x11
@@ -8,9 +8,12 @@ PKG_SUGGESTED_OPTIONS=	groff-docs x11
 
 .if !empty(PKG_OPTIONS:Mgroff-docs)
 DEPENDS+=		netpbm>=10.0:../../graphics/netpbm
-DEPENDS+=		psutils>=1.17:../../print/psutils
+DEPENDS+=		${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
 USE_TOOLS+=		gs:run
 PLIST_SRC+=		PLIST.docs
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+.include "../../lang/python/pyversion.mk"
 .else
 CONFIGURE_ENV+=		with_doc=no
 .endif

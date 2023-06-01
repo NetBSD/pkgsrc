@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2022/06/28 11:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/01 16:28:16 wiz Exp $
 
-DISTNAME=	netbsd-www-1.10
-PKGREVISION=	5
+DISTNAME=	netbsd-www-1.11
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +18,7 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	netbsd-doc-print>=1.4:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
-DEPENDS+=	psutils>=1.17:../../print/psutils
+DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
 DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	w3m>=0.4:../../www/w3m
 DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet
@@ -28,4 +27,7 @@ USE_TOOLS+=	perl:run ps2pdf:run
 
 META_PACKAGE=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
