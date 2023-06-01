@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3465 2023/06/01 21:51:38 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3466 2023/06/01 22:39:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4801,3 +4801,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/py-pspdfutils version 3.0.3 [wiz 2023-06-01]
 	Updated print/psutils to 3.0.3 [wiz 2023-06-01]
 	Updated x11/vte3 to 0.72.1 [gutteridge 2023-06-01]
+	Updated math/R-units to 0.8.2 [makoto 2023-06-01]
