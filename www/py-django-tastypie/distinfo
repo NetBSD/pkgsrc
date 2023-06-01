@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/07/20 22:56:14 wiz Exp $
+$NetBSD: distinfo,v 1.13 2023/06/01 07:59:05 adam Exp $
 
-BLAKE2s (django-tastypie-0.14.4.tar.gz) = 930986f541de2ee5d17296141399c761aa93b279c291ff82032aa67bac5546b6
-SHA512 (django-tastypie-0.14.4.tar.gz) = acb4e8d331ff176e36e1453e475d3420b81661157e4c7a38291f2825c35244ec09d2a84e8a35e19963b1d9f3126cd99d7fa0c7f6335c074fda3ede14e33f1623
-Size (django-tastypie-0.14.4.tar.gz) = 153259 bytes
+BLAKE2s (django-tastypie-0.14.5.tar.gz) = d922b698a94ae1fcfc02ff3bc3baa876a46a3d244b31d01aa0cd0fb087f70864
+SHA512 (django-tastypie-0.14.5.tar.gz) = d4ea09b6e6d8e11731a1fb985964f7806cc384985dba48d60711c44e43f214bbf0ad704b50d4fbeafdb26a6fd9bd5cae5caa4f6f4430c5db4e2e40707a1f0fe9
+Size (django-tastypie-0.14.5.tar.gz) = 154561 bytes
