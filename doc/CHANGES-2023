@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3441 2023/06/01 05:22:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3442 2023/06/01 07:04:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4764,3 +4764,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-test-datafiles version 3.0.0 [wiz 2023-06-01]
 	Updated net/haproxy to 2.8.0 [adam 2023-06-01]
 	Updated archivers/unrar to 6.2.8 [adam 2023-06-01]
+	Updated misc/chatgpt-shell-cli to 0.0.20230516 [wiz 2023-06-01]
