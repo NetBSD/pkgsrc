@@ -1,5 +1,3 @@
-PSUtils is a suite of utilities for manipulating PostScript documents
-produced according to the Document Structuring Conventions. You
-can select and rearrange pages, including arrangement into signatures
-for booklet printing, combine multple pages into a single page for
-n-up printing, and resize, flip and rotate pages.
+This package is just a helper package to install the new Python
+version of psutils under the old name. Switch to installing
+py-pspdfutils directly.
