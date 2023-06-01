@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/09 21:58:07 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/06/01 08:10:39 wiz Exp $
 
-BLAKE2s (nerd-fonts/2.2.2/Cousine.zip) = 5ee151f974296349572f5c56ee03fd4032345a8af26c702f5d244bc6c2cf44db
-SHA512 (nerd-fonts/2.2.2/Cousine.zip) = f5ac764cd18116eeba13eb900da091c0da14df274487209bf8fbef64262c84864d6900a5972235a2fa17f02a0af85dbeff79000462e012d7d2b45ff1f6cf7c0a
-Size (nerd-fonts/2.2.2/Cousine.zip) = 11449366 bytes
+BLAKE2s (nerd-fonts/3.0.1/Cousine.zip) = 7bd97fdbfd654619c59c98f938601ab5656d909cb83ae058f6843a4f31afcfe5
+SHA512 (nerd-fonts/3.0.1/Cousine.zip) = 12c1750ceea785d02c9a1a2851c3c4119a86e085767a2464d20108a46d08b49175b4c6e24ce521d240ea27430904d774ede35f02d4b5e7bcbaa4cbe29a864034
+Size (nerd-fonts/3.0.1/Cousine.zip) = 14197495 bytes

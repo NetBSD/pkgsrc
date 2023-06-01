@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:51:58 nikita Exp $
-share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Mono Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Mono.otf
-share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Bold Nerd Font Complete.otf
-share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Mono Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Mono.otf
-share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Italic Nerd Font Complete.otf
-share/fonts/X11/OTF/Code New Roman Nerd Font Complete Mono Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Nerd Font Complete Mono.otf
-share/fonts/X11/OTF/Code New Roman Nerd Font Complete Windows Compatible.otf
-share/fonts/X11/OTF/Code New Roman Nerd Font Complete.otf
-@pkgdir share/fonts/X11/TTF
+@comment $NetBSD: PLIST,v 1.2 2023/06/01 08:10:38 wiz Exp $
+share/fonts/X11/OTF/CodeNewRomanNerdFont-Bold.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFont-Italic.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFont-Regular.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontMono-Bold.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontMono-Italic.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontMono-Regular.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontPropo-Bold.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontPropo-Italic.otf
+share/fonts/X11/OTF/CodeNewRomanNerdFontPropo-Regular.otf
