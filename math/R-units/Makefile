@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/12/18 13:59:09 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/01 22:38:59 mef Exp $
 
 R_PKGNAME=	units
-R_PKGVER=	0.8-1
+R_PKGVER=	0.8-2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Measurement Units for R Vectors
