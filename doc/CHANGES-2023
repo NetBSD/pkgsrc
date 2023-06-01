@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3445 2023/06/01 08:20:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3446 2023/06/01 10:02:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/nerd-fonts-IBMPlexMono to 3.0.1 [wiz 2023-06-01]
 	Added fonts/nerd-fonts-Meslo version 3.0.1 [wiz 2023-06-01]
 	Updated fonts/nerd-fonts-iA-Writer to 3.0.1 [wiz 2023-06-01]
+	Updated audio/gospt to 0.0.50 [pin 2023-06-01]
