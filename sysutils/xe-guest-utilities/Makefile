@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/08/20 11:31:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/01 08:03:05 sborrill Exp $
 #
 
 # Values from XenServer 7.0 = 7, 0, 0, 125243
@@ -25,7 +25,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	xenstoretools-[0-9]*:../../sysutils/xenstoretools
 
-ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64 NetBSD-*-i386
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-[0-9]+$$//:C/_/-/}
 
