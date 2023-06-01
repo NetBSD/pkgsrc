@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/05/25 05:18:35 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/01 13:03:53 bacon Exp $
 
-DISTNAME=	fastp-0.20.0
+# 0.22.0 is the last release that doesn't depend on the non-portable
+# Intel isa-l library
+DISTNAME=	fastp-0.22.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenGene/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,12 +16,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 BUILD_TARGET=		fastp
 PTHREAD_AUTO_VARS=	yes
-
-# src/stats.cpp: In member function 'void Stats::statRead(Read*)':
-# src/stats.cpp:248:29: error: array subscript has type 'char' [-Werror=char-subscripts]
-#              mCycleQ30Bases[b][i]++;
-# Maybe fix this later.
-BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/fastp
