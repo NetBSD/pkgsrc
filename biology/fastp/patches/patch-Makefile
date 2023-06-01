@@ -1,31 +1,30 @@
-$NetBSD: patch-Makefile,v 1.1 2019/05/04 16:15:25 bacon Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/06/01 13:03:53 bacon Exp $
 
-# Add destdir support, install-strip, and respect LDFLAGS
+# Respect env
 
---- Makefile.orig	2019-04-17 03:23:22.000000000 +0000
+--- Makefile.orig	2021-08-24 14:00:31.000000000 +0000
 +++ Makefile
-@@ -3,9 +3,11 @@ DIR_SRC := ./src
- DIR_OBJ := ./obj
- 
- PREFIX ?= /usr/local
-+DESTDIR ?=
- BINDIR ?= $(PREFIX)/bin
+@@ -7,6 +7,8 @@ BINDIR ?= $(PREFIX)/bin
  INCLUDE_DIRS ?=
  LIBRARY_DIRS ?=
-+STRIP ?= strip
  
++STRIP	?= strip
++
  SRC := $(wildcard ${DIR_SRC}/*.cpp)
  OBJ := $(patsubst %.cpp,${DIR_OBJ}/%.o,$(notdir ${SRC}))
-@@ -15,13 +17,14 @@ TARGET := fastp
+ 
+@@ -15,13 +17,17 @@ TARGET := fastp
  BIN_TARGET := ${TARGET}
  
  CXX ?= g++
 -CXXFLAGS := -std=c++11 -g -O3 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir)) ${CXXFLAGS}
--LIBS := -lz -lpthread
--LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
++# Optional flags that the user can override by setting CXXFLAGS in the
++# env or make argument
 +CXXFLAGS ?= -g -O3
++# Required flags
 +CXXFLAGS += -std=c++11 -I${DIR_INC} $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
-+LIBS := -lz
+ LIBS := -lz -lpthread
+-LD_FLAGS := $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS) $(LD_FLAGS)
 +LDFLAGS += $(foreach librarydir,$(LIBRARY_DIRS),-L$(librarydir)) $(LIBS)
  
  
@@ -35,14 +34,17 @@ $NetBSD: patch-Makefile,v 1.1 2019/05/04 16:15:25 bacon Exp $
  
  ${DIR_OBJ}/%.o:${DIR_SRC}/%.cpp make_obj_dir
  	$(CXX) -c $< -o $@ $(CXXFLAGS)
-@@ -38,5 +41,9 @@ make_obj_dir:
+@@ -43,6 +49,12 @@ make_obj_dir:
+ 		mkdir $(DIR_OBJ) ; \
  	fi
  
++# Respect DESTDIR for staged installs (used by most package managers)
  install:
 -	install $(TARGET) $(BINDIR)/$(TARGET)
-+	install -d $(DESTDIR)$(BINDIR)
++	mkdir $(DESTDIR)$(BINDIR)
 +	install $(TARGET) $(DESTDIR)$(BINDIR)/$(TARGET)
  	@echo "Installed."
 +
++# Many package managers use install-strip target if debugging is not enabled
 +install-strip: install
 +	$(STRIP) $(DESTDIR)$(BINDIR)/$(TARGET)
