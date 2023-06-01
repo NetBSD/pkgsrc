@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/09 21:40:39 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/06/01 08:10:38 wiz Exp $
 
-BLAKE2s (nerd-fonts/2.2.2/CascadiaCode.zip) = 2f4a24727315dbe62f088bbc6b1cbff49bd1f46a8c5cf7d815bef7dd353f12a7
-SHA512 (nerd-fonts/2.2.2/CascadiaCode.zip) = f879499ddadecb6cafa9debb7be3c8d9c6aba2f055db49e62abf97d6277f1203c6451d4e8964977b705ce1c0c6e6a67cc4960bc852ea1459ce37b52192eb89ba
-Size (nerd-fonts/2.2.2/CascadiaCode.zip) = 71392503 bytes
+BLAKE2s (nerd-fonts/3.0.1/CascadiaCode.zip) = 2df96decfe294e32da0abe485d0c5acd55d4983974847e81ab7d0b8df23829da
+SHA512 (nerd-fonts/3.0.1/CascadiaCode.zip) = caa632703b706e027422254b26a2c869c0785957befdb56eba619eeb4ff09e3a9acaa4bf8cc67ee2c133b6c82580822076c53da32140fafab31be3084da321c4
+Size (nerd-fonts/3.0.1/CascadiaCode.zip) = 42095539 bytes
