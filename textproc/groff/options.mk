@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2023/06/01 16:48:29 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	groff-docs x11
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	groff-docs x11
 
 .if !empty(PKG_OPTIONS:Mgroff-docs)
 DEPENDS+=		netpbm>=10.0:../../graphics/netpbm
-DEPENDS+=		${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=		${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 USE_TOOLS+=		gs:run
 PLIST_SRC+=		PLIST.docs
 
