@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3448 2023/06/01 11:53:12 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3449 2023/06/01 11:54:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4784,3 +4784,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/gospt to 0.0.50 [pin 2023-06-01]
 	Updated print/cups-base to 2.4.2nb9 [wiz 2023-06-01]
 	Updated shells/oh-my-posh to 16.9.1 [pin 2023-06-01]
+	Updated audio/spotify-player to 0.14.1 [pin 2023-06-01]
