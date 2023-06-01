@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 21:04:17 nikita Exp $
-share/fonts/X11/TTF/agave regular Nerd Font Complete Mono Windows Compatible.ttf
-share/fonts/X11/TTF/agave regular Nerd Font Complete Mono.ttf
-share/fonts/X11/TTF/agave regular Nerd Font Complete Windows Compatible.ttf
-share/fonts/X11/TTF/agave regular Nerd Font Complete.ttf
-@pkgdir share/fonts/X11/OTF
+@comment $NetBSD: PLIST,v 1.2 2023/06/01 08:10:38 wiz Exp $
+share/fonts/X11/TTF/AgaveNerdFont-Bold.ttf
+share/fonts/X11/TTF/AgaveNerdFont-Regular.ttf
+share/fonts/X11/TTF/AgaveNerdFontMono-Bold.ttf
+share/fonts/X11/TTF/AgaveNerdFontMono-Regular.ttf
+share/fonts/X11/TTF/AgaveNerdFontPropo-Bold.ttf
+share/fonts/X11/TTF/AgaveNerdFontPropo-Regular.ttf
