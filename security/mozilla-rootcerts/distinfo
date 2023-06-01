@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2022/12/04 16:12:46 wiz Exp $
+$NetBSD: distinfo,v 1.29 2023/06/01 13:20:40 wiz Exp $
 
-BLAKE2s (certdata-20221204.txt) = f81ad973767a4503f2cfef3a35d005a4b7605935a3fbf884377f1c5b2abc362a
-SHA512 (certdata-20221204.txt) = 3aee811a23a58649bcca9a6aec2953a3d1ea1f5368782f06fc083007cdde29072f131b19af17cbb57411bb65360ba1bba6ab1bece2d0276606cf6e0ef20aa522
-Size (certdata-20221204.txt) = 1309153 bytes
+BLAKE2s (certdata-20230505.txt) = 87899d8f31f66be8eb644c25ac363ed3c943b166390ba339816ff1cd184f2e0f
+SHA512 (certdata-20230505.txt) = d393f013e5d05373d7a5b338ca1cfe4fbd1ca9febdafde3b178a39cb6de158e0e36865eee603ce3bf85d528c3bf407d5a12c5708f64676c37d6f139aeaa22382
+Size (certdata-20230505.txt) = 1324018 bytes
