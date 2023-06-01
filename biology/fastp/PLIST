@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/04 16:15:25 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/01 13:03:53 bacon Exp $
 bin/fastp
