@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3464 2023/06/01 16:18:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3465 2023/06/01 21:51:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/py-puremagic version 1.15 [wiz 2023-06-01]
 	Added print/py-pspdfutils version 3.0.3 [wiz 2023-06-01]
 	Updated print/psutils to 3.0.3 [wiz 2023-06-01]
+	Updated x11/vte3 to 0.72.1 [gutteridge 2023-06-01]
