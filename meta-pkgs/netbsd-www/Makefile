@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/06/01 16:48:28 wiz Exp $
 
 DISTNAME=	netbsd-www-1.11
 CATEGORIES=	meta-pkgs
@@ -18,7 +18,7 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	netbsd-doc-print>=1.4:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
-DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	w3m>=0.4:../../www/w3m
 DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet

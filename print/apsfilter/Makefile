@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/01 16:48:28 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
 DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
-DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 
 WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
