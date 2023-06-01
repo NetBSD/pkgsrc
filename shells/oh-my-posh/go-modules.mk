@@ -1,11 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.11 2023/05/27 19:38:13 pin Exp $
+# $NetBSD: go-modules.mk,v 1.12 2023/06/01 11:52:50 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.mod
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.zip
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.mod
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.zip
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.0.mod
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.mod
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.zip
 GO_MODULE_FILES+=	github.com/!masterminds/goutils/@v/v1.1.1.mod
@@ -171,8 +171,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.5.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.2.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.3.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.3.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.4.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.4.zip
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.11.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.11.zip
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.6.0.mod
