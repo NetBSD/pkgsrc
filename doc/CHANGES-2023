@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3454 2023/06/01 13:04:46 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3455 2023/06/01 13:20:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4790,3 +4790,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-xts to 0.13.1 [mef 2023-06-01]
 	Updated biology/fastp to 0.22.0 [bacon 2023-06-01]
 	Updated math/R-vctrs to 0.6.2 [mef 2023-06-01]
+	Updated security/mozilla-rootcerts to 1.0.20230505 [wiz 2023-06-01]
