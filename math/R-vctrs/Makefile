@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/06/01 13:04:33 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/01 15:13:26 mef Exp $
 
 R_PKGNAME=	vctrs
 R_PKGVER=	0.6.2
@@ -13,7 +13,7 @@ DEPENDS+=	R-digest>=0.6.25:../../security/R-digest
 DEPENDS+=	R-ellipsis>=0.2.0:../../math/R-ellipsis
 DEPENDS+=	R-glue>=1.4.1:../../devel/R-glue
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
-DEPENDS+=	R-rlang>=0.4.10:../../devel/R-rlang
+DEPENDS+=	R-rlang>=1.0.11:../../devel/R-rlang
 DEPENDS+=	R-zeallot>=0.1.0:../../math/R-zeallot
 
 #Packages suggested but not available: 'pkgdown'
