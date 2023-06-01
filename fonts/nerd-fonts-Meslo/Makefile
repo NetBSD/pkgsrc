@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/01 08:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2023/06/01 08:20:02 wiz Exp $
 
 DISTNAME=	Meslo
 PKGNAME=	nerd-font-${DISTNAME}-${GITHUB_RELEASE:S/v//}
