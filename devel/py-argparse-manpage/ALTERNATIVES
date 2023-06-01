@@ -1,0 +1,1 @@
+bin/argparse-manpage @PREFIX@/bin/argparse-manpage-@PYVERSSUFFIX@
