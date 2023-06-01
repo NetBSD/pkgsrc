@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3440 2023/06/01 04:57:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3441 2023/06/01 05:22:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4762,3 +4762,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libX11 to 1.8.5 [wiz 2023-06-01]
 	Added devel/py-argparse-manpage version 4.3 [wiz 2023-06-01]
 	Added devel/py-test-datafiles version 3.0.0 [wiz 2023-06-01]
+	Updated net/haproxy to 2.8.0 [adam 2023-06-01]
+	Updated archivers/unrar to 6.2.8 [adam 2023-06-01]
