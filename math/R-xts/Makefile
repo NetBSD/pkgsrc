@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/12/18 13:06:35 mef Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/01 12:52:39 mef Exp $
 
 R_PKGNAME=	xts
-R_PKGVER=	0.12.2
+R_PKGVER=	0.13.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	eXtensible Time Series
