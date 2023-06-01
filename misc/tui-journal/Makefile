@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/05/26 19:57:04 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/01 11:55:01 pin Exp $
 
-DISTNAME=	tui-journal-0.1.2
+DISTNAME=	tui-journal-0.1.3
 CATEGORIES=	misc
 MASTER_SITES=	https://static.crates.io/crates/tui-journal/
 EXTRACT_SUFX=	.crate
@@ -14,14 +14,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-#INSTALLATION_DIRS=	bin
-
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
-#do-install:
-#	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tjournal \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
