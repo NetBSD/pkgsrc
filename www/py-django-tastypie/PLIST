@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/23 07:41:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/01 07:59:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -101,9 +101,6 @@ ${PYSITELIB}/tastypie/throttle.pyo
 ${PYSITELIB}/tastypie/utils/__init__.py
 ${PYSITELIB}/tastypie/utils/__init__.pyc
 ${PYSITELIB}/tastypie/utils/__init__.pyo
-${PYSITELIB}/tastypie/utils/dict.py
-${PYSITELIB}/tastypie/utils/dict.pyc
-${PYSITELIB}/tastypie/utils/dict.pyo
 ${PYSITELIB}/tastypie/utils/formatting.py
 ${PYSITELIB}/tastypie/utils/formatting.pyc
 ${PYSITELIB}/tastypie/utils/formatting.pyo
