@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/01 16:02:57 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/puremagic/__init__.py
+${PYSITELIB}/puremagic/__init__.pyc
+${PYSITELIB}/puremagic/__init__.pyo
+${PYSITELIB}/puremagic/__main__.py
+${PYSITELIB}/puremagic/__main__.pyc
+${PYSITELIB}/puremagic/__main__.pyo
+${PYSITELIB}/puremagic/magic_data.json
+${PYSITELIB}/puremagic/main.py
+${PYSITELIB}/puremagic/main.pyc
+${PYSITELIB}/puremagic/main.pyo
