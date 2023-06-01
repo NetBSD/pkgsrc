@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3463 2023/06/01 16:06:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3464 2023/06/01 16:18:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4799,3 +4799,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dbip-country-lite to 2023.06 [fcambus 2023-06-01]
 	Added sysutils/py-puremagic version 1.15 [wiz 2023-06-01]
 	Added print/py-pspdfutils version 3.0.3 [wiz 2023-06-01]
+	Updated print/psutils to 3.0.3 [wiz 2023-06-01]
