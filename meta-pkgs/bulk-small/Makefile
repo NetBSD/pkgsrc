@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/01 16:48:28 wiz Exp $
 
 DISTNAME=	bulk-small-20230601
 CATEGORIES=	meta-pkgs
@@ -75,7 +75,7 @@ BUILD_DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 BUILD_DEPENDS+=	enscript-[0-9]*:../../print/enscript
 BUILD_DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 BUILD_DEPENDS+=	papersize-[0-9]*:../../print/papersize
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 BUILD_DEPENDS+=	sudo-[0-9]*:../../security/sudo
 BUILD_DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 BUILD_DEPENDS+=	bash-[0-9]*:../../shells/bash

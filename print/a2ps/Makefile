@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2023/06/01 16:48:28 wiz Exp $
 
 DISTNAME=		a2ps-4.15.4
 PKGREVISION=		2
@@ -10,7 +10,7 @@ HOMEPAGE=		https://www.gnu.org/software/a2ps/
 COMMENT=		Formats an ascii file for printing on a postscript printer
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=		${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
