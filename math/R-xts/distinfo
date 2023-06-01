@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/12/18 13:06:35 mef Exp $
+$NetBSD: distinfo,v 1.15 2023/06/01 12:52:39 mef Exp $
 
-BLAKE2s (R/xts_0.12.2.tar.gz) = 119affb7774138cfc27aaf8ee0d85e1a5b67662e6fd2d3126faf41fa71f23bec
-SHA512 (R/xts_0.12.2.tar.gz) = e1dd29a01e7e3ca3f5121bb0d48aea31e0992dcaba83c62bba6bda3bb899e19db7d1d5db8f076e8a4d657412a87873ede86ccb038e2c3eb92652cfc1d8436159
-Size (R/xts_0.12.2.tar.gz) = 438931 bytes
+BLAKE2s (R/xts_0.13.1.tar.gz) = 53a99900760503a2370d3a1bdbf882ff8410aee4b4ae25bc911a28326d5b13fb
+SHA512 (R/xts_0.13.1.tar.gz) = de296c432cfd447063f7ec74d0c6af79570ee81434fdaa62c9af9d37c5ee716fcb6c8183b670bb82e88ee084ce1ac2561b918e1bb3b3f21da25ff6b4f73a37e9
+Size (R/xts_0.13.1.tar.gz) = 456115 bytes
