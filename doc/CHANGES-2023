@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3457 2023/06/01 13:21:14 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3458 2023/06/01 13:28:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/mozilla-rootcerts to 1.0.20230505 [wiz 2023-06-01]
 	Updated security/mozilla-rootcerts-openssl to 2.11 [wiz 2023-06-01]
 	Updated devel/R-Rcpp to 1.0.10 [mef 2023-06-01]
+	Updated devel/R-rlang to 1.1.1 [mef 2023-06-01]
