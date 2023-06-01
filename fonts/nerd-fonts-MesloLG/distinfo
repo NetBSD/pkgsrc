@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/01 08:11:01 wiz Exp $
+
+BLAKE2s (nerd-fonts/3.0.1/Meslo.zip) = 7a154e35165ac187f53bea6e3f7197d0ad74764254c1b71bcdc98973004ea7d8
+SHA512 (nerd-fonts/3.0.1/Meslo.zip) = 6e20cb63dad2dc1de18a0cef691402c5ed9f612a51ac132151efd5385c5e87fe178f1970bdef6d2e01f14e61c0fd98e8a8f0257984eacceca0960c9d1695002b
+Size (nerd-fonts/3.0.1/Meslo.zip) = 88472867 bytes
