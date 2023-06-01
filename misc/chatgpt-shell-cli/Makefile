@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2023/05/05 14:04:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/01 07:04:10 wiz Exp $
 
-DISTNAME=		${GITHUB_PROJECT}
-PKGNAME=		${GITHUB_PROJECT:tl}-0.0.20230505
+DISTNAME=		chatgpt-shell-cli-0.0.20230516
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=0xacx/}
 GITHUB_PROJECT=		chatGPT-shell-cli
-GITHUB_TAG=		2e25138caaad77b59edb9936798a92ae80a4e0cd
+GITHUB_TAG=		926587a2234b8ae3754a1db9715f4636205159dc
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/0xacx/chatGPT-shell-cli/
