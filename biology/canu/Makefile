@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2023/05/20 14:42:11 bacon Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/01 03:33:03 wiz Exp $
 
 DISTNAME=	canu-2.2
 CATEGORIES=	biology java
-# Github-generaged files are incomplete
-MASTER_SITES=	https://github.com/marbl/canu/releases/download/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 EXTRACT_SUFX=	.tar.xz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://canu.readthedocs.io/
