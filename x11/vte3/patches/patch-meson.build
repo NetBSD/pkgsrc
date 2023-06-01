@@ -1,7 +1,6 @@
-$NetBSD: patch-meson.build,v 1.2 2022/04/05 15:51:58 jperkin Exp $
+$NetBSD: patch-meson.build,v 1.3 2023/06/01 21:51:27 gutteridge Exp $
 
 Remove silly asserts that do nothing except break portability.
-NetBSD requires -D_NETBSD_SOURCE for grantpt().
 
 --- meson.build.orig	2022-03-27 17:52:19.000000000 +0000
 +++ meson.build
@@ -19,14 +18,6 @@ NetBSD requires -D_NETBSD_SOURCE for grantpt().
  
  # Check for functions
  
-@@ -388,6 +381,7 @@ foreach func: check_functions
-     args: [
-       '-D_GNU_SOURCE',
-       '-D_XOPEN_SOURCE',
-+      '-D_NETBSD_SOURCE',
-     ],
-     dependencies: __deps,
-     name: __name,
 @@ -558,14 +552,10 @@ linker_flags = [
  foreach flag: linker_flags
    if cc.has_link_argument(flag[0])
