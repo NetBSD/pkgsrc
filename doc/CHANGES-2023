@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3442 2023/06/01 07:04:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3443 2023/06/01 07:59:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4765,3 +4765,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.8.0 [adam 2023-06-01]
 	Updated archivers/unrar to 6.2.8 [adam 2023-06-01]
 	Updated misc/chatgpt-shell-cli to 0.0.20230516 [wiz 2023-06-01]
+	Updated devel/cbindgen to 0.24.6 [adam 2023-06-01]
+	Updated www/py-django-tastypie to 0.14.5 [adam 2023-06-01]
