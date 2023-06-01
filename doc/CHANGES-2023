@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3439 2023/06/01 04:31:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3440 2023/06/01 04:57:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/szyszka version 3.0.0 [abs 2023-06-01]
 	Updated x11/libX11 to 1.8.5 [wiz 2023-06-01]
 	Added devel/py-argparse-manpage version 4.3 [wiz 2023-06-01]
+	Added devel/py-test-datafiles version 3.0.0 [wiz 2023-06-01]
