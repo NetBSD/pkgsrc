@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:34:45 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/01 16:28:16 wiz Exp $
 
-DISTNAME=	bulk-small-20210613
-PKGREVISION=	1
+DISTNAME=	bulk-small-20230601
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,6 +13,8 @@ META_PACKAGE=	yes
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 #
 # Note: The purpose of this package is to produce a small set of the
@@ -74,7 +75,7 @@ BUILD_DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 BUILD_DEPENDS+=	enscript-[0-9]*:../../print/enscript
 BUILD_DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 BUILD_DEPENDS+=	papersize-[0-9]*:../../print/papersize
-BUILD_DEPENDS+=	psutils-[0-9]*:../../print/psutils
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
 BUILD_DEPENDS+=	sudo-[0-9]*:../../security/sudo
 BUILD_DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 BUILD_DEPENDS+=	bash-[0-9]*:../../shells/bash
@@ -168,5 +169,5 @@ BUILD_DEPENDS+=	libgpg-error-[0-9]*:../../security/libgpg-error
 BUILD_DEPENDS+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
 BUILD_DEPENDS+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
 
-
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

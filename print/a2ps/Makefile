@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2023/04/15 05:01:48 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2023/06/01 16:28:16 wiz Exp $
 
 DISTNAME=		a2ps-4.15.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=		https://www.gnu.org/software/a2ps/
 COMMENT=		Formats an ascii file for printing on a postscript printer
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		psutils>=1.17:../../print/psutils
+DEPENDS+=		${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	ac_cv_prog_EMACS=no
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
 
 INFO_FILES=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CFLAGS.Darwin+=		-flat_namespace
 
@@ -43,6 +45,7 @@ pre-build:
 post-install:
 	cd ${DESTDIR}${PKG_SYSCONFDIR} && ${MV} a2ps-site.cfg a2ps.cfg ${DESTDIR}${PREFIX}/share/examples/a2ps
 
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
