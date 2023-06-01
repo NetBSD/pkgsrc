@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3443 2023/06/01 07:59:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3444 2023/06/01 08:12:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4767,3 +4767,17 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/chatgpt-shell-cli to 0.0.20230516 [wiz 2023-06-01]
 	Updated devel/cbindgen to 0.24.6 [adam 2023-06-01]
 	Updated www/py-django-tastypie to 0.14.5 [adam 2023-06-01]
+	Updated fonts/nerd-fonts-3270 to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-Agave to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-AnonymousPro to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-Arimo to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-AurulentSansMono to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-BigBlueTerminal to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-BitstreamVeraSansMono to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-CascadiaCode to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-CodeNewRoman to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-Cousine to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-DaddyTimeMono to 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-IBMPlexMono to 3.0.1 [wiz 2023-06-01]
+	Added fonts/nerd-fonts-MesloLG version 3.0.1 [wiz 2023-06-01]
+	Updated fonts/nerd-fonts-iA-Writer to 3.0.1 [wiz 2023-06-01]
