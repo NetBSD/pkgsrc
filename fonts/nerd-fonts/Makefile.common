@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/02/25 18:38:01 nikita Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/06/01 08:10:37 wiz Exp $
 # used by fonts/nerd-fonts-3270/Makefile
 # used by fonts/nerd-fonts-Agave/Makefile
 # used by fonts/nerd-fonts-AnonymousPro/Makefile
@@ -12,17 +12,21 @@
 # used by fonts/nerd-fonts-iA-Writer/Makefile
 # used by fonts/nerd-fonts-IBMPlexMono/Makefile
 # used by fonts/nerd-fonts-DaddyTimeMono/Makefile
+# used by fonts/nerd-fonts-MesloLG/Makefile
 
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
 GITHUB_PROJECT=	nerd-fonts
-GITHUB_RELEASE=	v2.2.2
+GITHUB_RELEASE=	v3.0.1
 DIST_SUBDIR=	${GITHUB_PROJECT}/${GITHUB_RELEASE:S/v//}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ryanoasis/nerd-fonts/
-LICENSE=	mit
+# the glyphs/icons are from multiple sources, so all these licenses need to be accepted
+GLYPH_LICENSES=	cc-by-v4.0 AND mit AND ofl-v1.1 AND unlicense AND apache-2.0
+# allow overriding in case the derived font falls under a license not already covered by the glyphs
+LICENSE?=	${GLYPH_LICENSES}
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
