@@ -1,0 +1,4 @@
+This plugin allows you to specify one or several files/directories
+that are copied to a temporary directory (tmp_path) before the
+execution of the test. This means the original files are not modified
+and every test runs on its own version of the same files.
