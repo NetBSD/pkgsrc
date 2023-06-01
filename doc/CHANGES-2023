@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3438 2023/06/01 03:43:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3439 2023/06/01 04:31:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-remote-hg to 0.6 [wiz 2023-05-31]
 	Added sysutils/szyszka version 3.0.0 [abs 2023-06-01]
 	Updated x11/libX11 to 1.8.5 [wiz 2023-06-01]
+	Added devel/py-argparse-manpage version 4.3 [wiz 2023-06-01]
