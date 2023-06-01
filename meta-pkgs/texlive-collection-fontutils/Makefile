@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/06/01 16:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/01 16:48:28 wiz Exp $
 
 DISTNAME=	collection-fontutils
 PKGNAME=	texlive-${DISTNAME}-2023
@@ -27,7 +27,7 @@ DEPENDS+=	tex-luafindfont-[0-9]*:../../fonts/tex-luafindfont
 DEPENDS+=	tex-mf2pt1-[0-9]*:../../fonts/tex-mf2pt1
 DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
 DEPENDS+=	ps2pkm-[0-9]*:../../fonts/ps2pkm
-DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
 DEPENDS+=	tex-ttfutils-[0-9]*:../../fonts/tex-ttfutils
 
