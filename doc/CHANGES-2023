@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3447 2023/06/01 11:39:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3448 2023/06/01 11:53:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/nerd-fonts-iA-Writer to 3.0.1 [wiz 2023-06-01]
 	Updated audio/gospt to 0.0.50 [pin 2023-06-01]
 	Updated print/cups-base to 2.4.2nb9 [wiz 2023-06-01]
+	Updated shells/oh-my-posh to 16.9.1 [pin 2023-06-01]
