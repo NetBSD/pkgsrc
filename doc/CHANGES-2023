@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3453 2023/06/01 13:04:01 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3454 2023/06/01 13:04:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4789,3 +4789,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-zoo to 1.8.12 [mef 2023-06-01]
 	Updated math/R-xts to 0.13.1 [mef 2023-06-01]
 	Updated biology/fastp to 0.22.0 [bacon 2023-06-01]
+	Updated math/R-vctrs to 0.6.2 [mef 2023-06-01]
