@@ -1,0 +1,2 @@
+bin/ffmpeg @PREFIX@/bin/ffmpeg6
+bin/ffprobe @PREFIX@/bin/ffprobe6
