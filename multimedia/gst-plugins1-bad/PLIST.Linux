@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2023/04/30 12:15:48 tnn Exp $
+@comment $NetBSD: PLIST.Linux,v 1.7 2023/06/02 16:09:46 wiz Exp $
 include/gstreamer-1.0/gst/cuda/cuda-gst.h
 include/gstreamer-1.0/gst/cuda/cuda-prelude.h
 include/gstreamer-1.0/gst/cuda/gstcudabufferpool.h
@@ -11,7 +11,7 @@ lib/girepository-1.0/CudaGst-1.0.typelib
 lib/girepository-1.0/GstCuda-1.0.typelib
 lib/libgstcuda-1.0.so
 lib/libgstcuda-1.0.so.0
-lib/libgstcuda-1.0.so.0.2202.0
+lib/libgstcuda-1.0.so.0.${SHLIBVER}.0
 lib/pkgconfig/gstreamer-cuda-1.0.pc
 share/gir-1.0/CudaGst-1.0.gir
 share/gir-1.0/GstCuda-1.0.gir
