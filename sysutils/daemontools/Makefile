@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/05/15 17:40:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/02 18:35:04 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -23,8 +23,6 @@ TEST_DIRS=		${WRKSRC}/compile
 
 CMDDIR=			${WRKSRC}/command
 
-USE_TOOLS+=		file
-
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		djberrno
@@ -42,7 +40,7 @@ MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 
 do-install:
 	(while read cmd; do \
-	  if ${FILE_CMD} ${CMDDIR}/$$cmd | ${EGREP} "(executable .* script|shell script|text)" >/dev/null 2>&1; then \
+	  if [ $$cmd = svscanboot ]; then \
 	    ${INSTALL_SCRIPT} ${CMDDIR}/$$cmd ${DESTDIR}${PREFIX}/bin; \
 	  else \
 	    ${INSTALL_PROGRAM} ${CMDDIR}/$$cmd ${DESTDIR}${PREFIX}/bin; \
