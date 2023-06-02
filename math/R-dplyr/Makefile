@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/02/12 04:09:37 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/02 12:58:09 mef Exp $
 
 R_PKGNAME=	dplyr
-R_PKGVER=	1.1.0
+R_PKGVER=	1.1.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
@@ -10,16 +10,21 @@ LICENSE=	mit
 DEPENDS+=	R-BH>=1.69.0.1:../../devel/R-BH
 DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
 DEPENDS+=	R-assertthat>=0.2.0:../../devel/R-assertthat
+DEPENDS+=	R-cli>=3.4.0:../../devel/R-cli
+#EPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
+DEPENDS+=	R-generics-[0-9]*:../../math/R-generics
 DEPENDS+=	R-glue>=1.3.2:../../devel/R-glue
-DEPENDS+=	R-lifecycle>=0.2.0:../../devel/R-lifecycle
+DEPENDS+=	R-lifecycle>=1.0.3:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
+#EPENDS+=	R-methods-[0-9]*:../../devel/R-methods
+DEPENDS+=	R-pillar>=1.9.0:../../misc/R-pillar
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
-DEPENDS+=	R-rlang>=0.4.6:../../devel/R-rlang
-DEPENDS+=	R-tidyselect>=1.1.0:../../devel/R-tidyselect
-DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
+DEPENDS+=	R-rlang>=1.1.0:../../devel/R-rlang
+DEPENDS+=	R-tibble>=3.2.0:../../math/R-tibble
+DEPENDS+=	R-tidyselect>=1.2.0:../../devel/R-tidyselect
+DEPENDS+=	R-vctrs>=0.6.0:../../math/R-vctrs
 DEPENDS+=	R-generics>=0.0.2:../../math/R-generics
-DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
-DEPENDS+=	R-vctrs>=0.4.1:../../math/R-vctrs
+DEPENDS+=	R-generics>=0.0.2:../../math/R-generics
 
 # Packages suggested but not available:
 #   'Lahman', 'lobstr', 'nycflights13', 'RMySQL'
