@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/03/30 08:55:51 markd Exp $
+# $NetBSD: options.mk,v 1.2 2023/06/02 13:40:19 plunky Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.phonon
 PKG_SUPPORTED_OPTIONS=	pulseaudio
@@ -9,5 +9,5 @@ PKG_SUGGESTED_OPTIONS=
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PulseAudio:BOOL=TRUE
 .endif
