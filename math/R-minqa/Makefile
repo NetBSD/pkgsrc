@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:51 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/02 13:28:58 mef Exp $
 
 R_PKGNAME=	minqa
-R_PKGVER=	1.2.4
-CATEGORIES=	math
+R_PKGVER=	1.2.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Derivative-free optimization algorithms by quadratic approximation
