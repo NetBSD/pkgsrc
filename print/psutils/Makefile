@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/06/01 16:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/06/02 06:19:23 mrg Exp $
 
 DISTNAME=	psutils-3.0.3
 CATEGORIES=	print
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/rrthomas/psutils/
 COMMENT=	Utilities for manipulating PostScript documents (compatibility package)
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-pypspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 
 META_PACKAGE=	yes
 
