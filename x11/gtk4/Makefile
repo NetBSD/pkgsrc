@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/04/19 08:11:54 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/02 16:56:22 wiz Exp $
 
 DISTNAME=	gtk-4.8.3
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -65,6 +65,8 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
 # librsvg is required by a demo only.
 #.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
+# does not support ffmpeg6 yet
+# https://gitlab.gnome.org/GNOME/gtk/-/issues/5581
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/meson/build.mk"
