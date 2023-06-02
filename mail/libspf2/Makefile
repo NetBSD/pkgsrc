@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.16 2023/06/02 15:57:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/02 15:58:46 schmonz Exp $
 
-DISTNAME=	libspf2-1.2.11
-PKGREVISION=	1
-CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+DISTNAME=		libspf2-1.2.11
+PKGREVISION=		1
+CATEGORIES=		mail
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.libspf2.org/
-COMMENT=	Implementation of the Sender Policy Framework
-LICENSE=	modified-bsd OR gnu-lgpl-v2.1
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://www.libspf2.org/
+COMMENT=		Implementation of the Sender Policy Framework
+LICENSE=		modified-bsd OR gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 
-CONFLICTS+=	libspf_alt-[0-9]*
+CONFLICTS+=		libspf_alt-[0-9]*
 
 .include "../../mk/bsd.fast.prefs.mk"
 
