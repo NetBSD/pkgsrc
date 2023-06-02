@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/05/13 02:44:05 tsutsui Exp $
+$NetBSD: distinfo,v 1.18 2023/06/02 16:43:29 tsutsui Exp $
 
-BLAKE2s (pango-4.1.5.gem) = 56ca6f6400625ed72bc34d889b6fc2f8e4863c30fc8708278efacd5865906995
-SHA512 (pango-4.1.5.gem) = 4cd5c8b1e643717da987b719fc3188bc50a0dba13ecfa4f618a710009239893dc9861f2a7b3b6cf55d460d6fda18be6a1302501b7212726addfb47d9550fa432
-Size (pango-4.1.5.gem) = 25088 bytes
+BLAKE2s (pango-4.1.7.gem) = f8c651d4528967115046712583257e4dfb56c0af6792b6406c48b28076c96cba
+SHA512 (pango-4.1.7.gem) = eb084ad5b370ce4fc82d927a59a3d3ca1629adff1aec6bd91fb2c1e45dc429e0989c80d31045fbc9b31871865ba7c50a257aab861cbc92c2de17d552a0867c81
+Size (pango-4.1.7.gem) = 25088 bytes
