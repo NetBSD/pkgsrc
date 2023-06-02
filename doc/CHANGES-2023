@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3480 2023/06/02 16:44:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3481 2023/06/02 16:45:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/libspf2 to 1.2.11nb1 [schmonz 2023-06-02]
 	Updated multimedia/gstreamer1 to 1.22.3 [wiz 2023-06-02]
 	Added multimedia/ffmpeg6 version 6.0 [wiz 2023-06-02]
+	Added multimedia/ffplay6 version 6.0 [wiz 2023-06-02]
