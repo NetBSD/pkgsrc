@@ -1,6 +1,4 @@
-$NetBSD: patch-contrib_NSI_Mrtg_nsi,v 1.1 2023/06/02 14:16:54 hauke Exp $
-
-Was: patch-ab
+$NetBSD: patch-contrib_NSI_Mrtg_nsi,v 1.2 2023/06/02 14:23:40 wiz Exp $
 
 --- contrib/NSI/Mrtg_nsi.orig	Thu Oct 19 14:20:46 2000
 +++ contrib/NSI/Mrtg_nsi	Thu Oct 19 14:21:08 2000
