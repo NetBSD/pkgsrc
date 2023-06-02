@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3478 2023/06/02 15:58:03 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3479 2023/06/02 16:10:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4820,3 +4820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/vim-share to 9.0.1598 [wiz 2023-06-02]
 	Updated editors/vim-xaw to 9.0.1598 [wiz 2023-06-02]
 	Updated mail/libspf2 to 1.2.11nb1 [schmonz 2023-06-02]
+	Updated multimedia/gstreamer1 to 1.22.3 [wiz 2023-06-02]
