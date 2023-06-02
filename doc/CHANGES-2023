@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3476 2023/06/02 14:26:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3477 2023/06/02 15:31:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4812,3 +4812,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-statmod to 1.5.0 [makoto 2023-06-02]
 	Updated math/R-splancs to 2.01.43 [makoto 2023-06-02]
 	Updated emulators/mame to 0.255 [wiz 2023-06-02]
+	Updated editors/vim to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-gtk2 to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-gtk3 to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-lang to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-motif to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-share to 9.0.1598 [wiz 2023-06-02]
+	Updated editors/vim-xaw to 9.0.1598 [wiz 2023-06-02]
