@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/03/08 21:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/02 16:51:40 wiz Exp $
 
 DISTNAME=	sigal-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sigal/}
 
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	ffmpeg5-[0-9]*:../../multimedia/ffmpeg5
+DEPENDS+=	ffmpeg6-[0-9]*:../../multimedia/ffmpeg6
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
@@ -30,7 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		ffmpeg
-SUBST_SED.ffmpeg+=	-e "s,ffmpeg,${PREFIX}/bin/ffmpeg5,"
+SUBST_SED.ffmpeg+=	-e "s,ffmpeg,${PREFIX}/bin/ffmpeg6,"
 SUBST_FILES.ffmpeg+=	sigal/settings.py
 SUBST_FILES.ffmpeg+=	sigal/video.py
 SUBST_STAGE.ffmpeg=	pre-build
