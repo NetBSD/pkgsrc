@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/09/18 12:31:31 mef Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/02 13:55:59 mef Exp $
 
 R_PKGNAME=	statmod
-R_PKGVER=	1.4.36
+R_PKGVER=	1.5.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Statistical modeling
