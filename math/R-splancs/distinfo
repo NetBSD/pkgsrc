@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/06/02 14:21:34 mef Exp $
 
-BLAKE2s (R/splancs_2.01-42.tar.gz) = df6dca172af2d85bb9335381a0f002d3fd322719e55698accaffdfd62758f41b
-SHA512 (R/splancs_2.01-42.tar.gz) = 0281c6c99ee49b649b65f019886b5f6664738fd1f72ec148412ae7bf70bae87048a2e95046817712ec6c2a395fefaf8ccfc5a2a07972444020c7c591c706bc99
-Size (R/splancs_2.01-42.tar.gz) = 105983 bytes
+BLAKE2s (R/splancs_2.01-43.tar.gz) = 0176294fe1ca58c818970809fbf83484ea4a745efc20c0acd85f3de2af533016
+SHA512 (R/splancs_2.01-43.tar.gz) = aed28f9df688a25f1ea1107ecbe6149f481c8d250e0c230a24faa741e4b2922b13578d91e9f0699d2f8adc19eba7c35d6fc6313bb3dcef6b8a4e6256d535dfea
+Size (R/splancs_2.01-43.tar.gz) = 105999 bytes

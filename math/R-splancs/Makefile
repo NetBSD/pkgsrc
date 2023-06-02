@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/09/18 12:25:31 mef Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/02 14:21:34 mef Exp $
 
 R_PKGNAME=	splancs
-R_PKGVER=	2.01-42
+R_PKGVER=	2.01-43
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spatial and space-time point pattern analysis
