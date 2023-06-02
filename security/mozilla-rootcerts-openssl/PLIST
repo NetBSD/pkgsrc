@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2022/12/05 06:27:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/06/02 09:10:16 adam Exp $
 ${MYETCDIR}/openssl/certs/002c0b4f.0
+${MYETCDIR}/openssl/certs/0179095f.0
 ${MYETCDIR}/openssl/certs/02265526.0
 ${MYETCDIR}/openssl/certs/062cdee6.0
 ${MYETCDIR}/openssl/certs/064e0aa9.0
@@ -36,6 +37,7 @@ ${MYETCDIR}/openssl/certs/32888f65.0
 ${MYETCDIR}/openssl/certs/3513523f.0
 ${MYETCDIR}/openssl/certs/3bde41ac.0
 ${MYETCDIR}/openssl/certs/3bde41ac.1
+${MYETCDIR}/openssl/certs/3e359ba6.0
 ${MYETCDIR}/openssl/certs/3e44d2f7.0
 ${MYETCDIR}/openssl/certs/3e45d192.0
 ${MYETCDIR}/openssl/certs/3fb36b73.0
@@ -228,6 +230,8 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-157.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-158.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-159.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-16.pem
+${MYETCDIR}/openssl/certs/mozilla-rootcert-160.pem
+${MYETCDIR}/openssl/certs/mozilla-rootcert-161.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-17.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-18.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-19.pem
