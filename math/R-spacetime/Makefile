@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/09/18 12:20:06 mef Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/02 23:10:57 mef Exp $
 
 R_PKGNAME=	spacetime
-R_PKGVER=	1.2-5
+R_PKGVER=	1.3-0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classes and methods for spatio-temporal data
