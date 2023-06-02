@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/01/01 05:38:16 mef Exp $
+$NetBSD: distinfo,v 1.8 2023/06/02 12:49:09 mef Exp $
 
-BLAKE2s (R/tibble_3.1.8.tar.gz) = 38370e84e4ce22d71565d65828492bd8440164b0528b89145d4f03af7f8738c0
-SHA512 (R/tibble_3.1.8.tar.gz) = 6a61d239f6cdd16abfeedb9903ecef30dae8431f077a3c76e017f92a8414ea7dd2e9ce57fce6019a92c4fcbc7bd3a18b1c7bf9520c13d3db8cec4552ee93f205
-Size (R/tibble_3.1.8.tar.gz) = 672336 bytes
+BLAKE2s (R/tibble_3.2.1.tar.gz) = 011e7afb21d73e02cf23954339d2f77871f074f0978db6069245f69904c5ccc2
+SHA512 (R/tibble_3.2.1.tar.gz) = cb1cc5248dae6394e2f102c4f3695d3aee17e3f4f838acbf2059adc713f07bdd613c88e1ba1c7cf0b80efc136240d66ef2afac814506deba4f87a67d7ce80f36
+Size (R/tibble_3.2.1.tar.gz) = 565982 bytes
