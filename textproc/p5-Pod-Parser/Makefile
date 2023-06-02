@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/05/20 07:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/02 15:17:48 hauke Exp $
 
 DISTNAME=	Pod-Parser-1.66
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
@@ -9,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Pod-Parser
 COMMENT=	POD filters and translators
 LICENSE=	artistic
-
-CONFLICTS=	mrtg-[0-9]*
 
 PERL5_PACKLIST=		auto/Pod/Parser/.packlist
 
