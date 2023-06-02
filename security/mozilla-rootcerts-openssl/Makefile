@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/06/01 13:20:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/02 09:10:16 adam Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-2.11
 CATEGORIES=	security
@@ -28,7 +28,7 @@ CHECK_BUILTIN.openssl=	no
 #
 # For native openssl this is in /etc outside of ${PREFIX}. Beware.
 #
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if ${USE_BUILTIN.openssl:U:tl} == yes
 NOT_FOR_UNPRIVILEGED=	yes
 PLACE=			/etc
 SET_PREFIX=		yes
