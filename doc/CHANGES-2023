@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3485 2023/06/02 16:51:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3486 2023/06/02 18:47:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4843,3 +4843,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/musicpd to 0.23.13nb1 [wiz 2023-06-02]
 	Updated multimedia/mpv to 0.35.1nb4 [wiz 2023-06-02]
 	Updated www/py-sigal to 2.3nb2 [wiz 2023-06-02]
+	Updated www/firefox to 112.0.1nb5 [wiz 2023-06-02]
