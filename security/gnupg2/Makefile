@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2023/04/28 16:33:41 nikita Exp $
+# $NetBSD: Makefile,v 1.146 2023/06/02 16:27:41 schmonz Exp $
 
 DISTNAME=	gnupg-2.4.1
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -24,6 +24,7 @@ USE_LIBTOOL=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ntbtls
+CONFIGURE_ARGS+=	--disable-tpm2d
 CONFIGURE_ARGS+=	--enable-g13
 CONFIGURE_ARGS+=	--enable-gpg-is-gpg2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
