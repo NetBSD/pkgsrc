@@ -1,6 +1,4 @@
-$NetBSD: patch-src_rateup.c,v 1.1 2023/06/02 14:16:54 hauke Exp $
-
-Was: patch-aa
+$NetBSD: patch-src_rateup.c,v 1.2 2023/06/02 14:23:40 wiz Exp $
 
 --- src/rateup.c.orig	2007-08-08 20:01:48.000000000 +0000
 +++ src/rateup.c
