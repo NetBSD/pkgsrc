@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/20 00:49:49 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/02 13:42:34 mef Exp $
 
 R_PKGNAME=	survey
-R_PKGVER=	4.1-1
+R_PKGVER=	4.2-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Analysis of complex survey samples
