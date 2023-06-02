@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3469 2023/06/02 12:58:21 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3470 2023/06/02 13:22:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/R-pillar to 1.9.0 [makoto 2023-06-02]
 	Updated math/R-tibble to 3.2.1 [makoto 2023-06-02]
 	Updated math/R-dplyr to 1.1.2 [makoto 2023-06-02]
+	Updated devel/mob to 4.4.3 [schmonz 2023-06-02]
