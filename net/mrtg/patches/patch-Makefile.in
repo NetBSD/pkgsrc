@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.9 2010/07/09 08:45:34 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2023/06/02 14:16:54 hauke Exp $
 
---- Makefile.in.orig	2010-05-17 12:07:01.000000000 +0000
+Ignore the enclosed Pod-Parser in favour of textproc/p5-Pod-Parser,
+avoiding pointless conflicts with p5 packages
+
+See also <https://github.com/oetiker/mrtg/issues/105>
+
+Install Perl modules to the proper versioned vendorlib directory
+
+Was: patch-ac
+
+--- Makefile.in.orig	2018-07-13 06:09:40.000000000 +0000
 +++ Makefile.in
-@@ -36,7 +36,7 @@ bin/rateup.o: $(top_srcdir)/src/rateup.c
+@@ -37,7 +37,7 @@ bin/rateup.o: $(top_srcdir)/src/rateup.c
  	$(CC) $(CPPFLAGS) $(CFLAGS) -c $(top_srcdir)/src/rateup.c -o bin/rateup.o
  
  subst:
@@ -11,20 +20,19 @@ $NetBSD: patch-ac,v 1.9 2010/07/09 08:45:34 adam Exp $
  	$(PERL) -0777 -p -i~ -e 's@GRAPHFMT="...";@GRAPHFMT="$(GDFORM_EXT)";@' $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/indexmaker
  
  clean:
-@@ -49,12 +49,12 @@ install: all
+@@ -50,12 +50,10 @@ install: all
  	for x in $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/cfgmaker $(top_srcdir)/bin/indexmaker $(top_srcdir)/bin/mrtg-traffic-sum; do \
  	  $(INSTALL) -m 755 $$x $(DESTDIR)$(bindir); done
  	for x in bin/rateup; do \
 -	  $(INSTALL) -m 755 $$x $(DESTDIR)$(bindir); done
 -	$(MKINSTALLDIRS) $(DESTDIR)$(libdir)/mrtg2/Pod
 +	  $(INSTALL) -m 755 -s $$x $(DESTDIR)$(bindir); done
-+	$(MKINSTALLDIRS) $(DESTDIR)${PERL5_INSTALLVENDORLIB}/Pod
++	$(MKINSTALLDIRS) $(DESTDIR)${PERL5_INSTALLVENDORLIB}
  	for x in $(top_srcdir)/lib/mrtg2/*.pm; do \
 -	  $(INSTALL) -m 644 $$x $(DESTDIR)$(libdir)/mrtg2; done
-+	  $(INSTALL) -m 644 $$x $(DESTDIR)${PERL5_INSTALLVENDORLIB}; done
- 	for x in $(top_srcdir)/lib/mrtg2/Pod/*.pm; do \
+-	for x in $(top_srcdir)/lib/mrtg2/Pod/*.pm; do \
 -	  $(INSTALL) -m 644 $$x $(DESTDIR)$(libdir)/mrtg2/Pod; done
-+	  $(INSTALL) -m 644 $$x $(DESTDIR)${PERL5_INSTALLVENDORLIB}/Pod; done
++	  $(INSTALL) -m 644 $$x $(DESTDIR)${PERL5_INSTALLVENDORLIB}; done
  	$(MKINSTALLDIRS) $(DESTDIR)$(datadir)/mrtg2/icons
  	for x in $(top_srcdir)/images/*.gif $(top_srcdir)/images/*.png; do \
  	  $(INSTALL) -m 644 $$x $(DESTDIR)$(datadir)/mrtg2/icons; done

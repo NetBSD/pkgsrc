@@ -1,23 +1,18 @@
-@comment $NetBSD: PLIST,v 1.14 2019/04/14 21:50:36 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/06/02 14:16:54 hauke Exp $
 bin/cfgmaker
 bin/indexmaker
 bin/mrtg
 bin/mrtg-traffic-sum
 bin/rateup
+${PERL5_SUB_INSTALLVENDORLIB}/BER.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MRTG_lib.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Net_SNMP_util.pm
+${PERL5_SUB_INSTALLVENDORLIB}/SNMP_Session.pm
+${PERL5_SUB_INSTALLVENDORLIB}/SNMP_util.pm
+${PERL5_SUB_INSTALLVENDORLIB}/locales_mrtg.pm
 libexec/envstat2mrtg
 libexec/netstat2mrtg
 libexec/sys2mrtg
-${PERL5_SUB_INSTALLVENDORLIB}/BER.pm
-${PERL5_SUB_INSTALLVENDORLIB}/MRTG_lib.pm
-${PERL5_SUB_INSTALLVENDORLIB}/SNMP_Session.pm
-${PERL5_SUB_INSTALLVENDORLIB}/SNMP_util.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Net_SNMP_util.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Pod/InputObjects.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Pod/Parser.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Pod/PlainText.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Pod/Select.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Pod/Usage.pm
-${PERL5_SUB_INSTALLVENDORLIB}/locales_mrtg.pm
 man/man1/cfgmaker.1
 man/man1/indexmaker.1
 man/man1/mrtg-contrib.1

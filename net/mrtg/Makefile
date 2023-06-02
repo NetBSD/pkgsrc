@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2023/05/22 11:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2023/06/02 14:16:54 hauke Exp $
 
 DISTNAME=	mrtg-2.17.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	https://oss.oetiker.ch/mrtg/pub/
 MASTER_SITES+=	https://oss.oetiker.ch/mrtg/pub/old/
@@ -11,8 +11,10 @@ HOMEPAGE=	https://oss.oetiker.ch/mrtg/
 COMMENT=	The Multi-Router Traffic Grapher
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		perl:run
-PERL5_REQD=		5.14.1
+DEPENDS+=	p5-Pod-Parser>=1.66:../../textproc/p5-Pod-Parser
+
+USE_TOOLS+=		perl pod2man
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gd=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
