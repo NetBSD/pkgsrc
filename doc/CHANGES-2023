@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3472 2023/06/02 13:42:47 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3473 2023/06/02 13:49:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4808,3 +4808,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mob to 4.4.3 [schmonz 2023-06-02]
 	Updated math/R-minqa to 1.2.5 [makoto 2023-06-02]
 	Updated math/R-survey to 4.2.1 [makoto 2023-06-02]
+	Updated math/R-stringdist to 0.9.10 [makoto 2023-06-02]
