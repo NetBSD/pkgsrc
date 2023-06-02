@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:32 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/06/02 23:10:57 mef Exp $
 
-BLAKE2s (R/spacetime_1.2-5.tar.gz) = e84467b03888f7feeb1511e3d786a7fec5c8dcab92e8418e6d76286b6c828d50
-SHA512 (R/spacetime_1.2-5.tar.gz) = cd8b3e1b42287612815cc7e281257525d57242802ceec0a059d150c7de5fc35e71f198f948c5c3814dc5ba68109a1625cd3ac2cc9e01c9daa1b04f105c846490
-Size (R/spacetime_1.2-5.tar.gz) = 2571457 bytes
+BLAKE2s (R/spacetime_1.3-0.tar.gz) = 5690b52a6046b31ec8e0e6bc59443526f40830f224798208aa0926e6c2a62f72
+SHA512 (R/spacetime_1.3-0.tar.gz) = 1ddd7bf081427c4d7c96979ef573591e953bde8274aa3fc67e4b6b6334ca86a122a6b6f905221713d930c8365eef770c178b0e357fdd9f084ef646f5720d9c93
+Size (R/spacetime_1.3-0.tar.gz) = 2598319 bytes
