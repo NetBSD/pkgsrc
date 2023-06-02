@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/06 19:08:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/02 16:09:45 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-opus/}
-PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - Opus audio plugin
