@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2022/11/09 13:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/03 06:20:21 wiz Exp $
 
-DISTNAME=		xtrans-1.4.0
+DISTNAME=		xtrans-1.5.0
 CATEGORIES=		x11 net
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
