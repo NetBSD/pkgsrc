@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/09/20 05:19:08 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/03 13:09:14 mef Exp $
 
 R_PKGNAME=	maptools
-R_PKGVER=	1.1-2
+R_PKGVER=	1.1-7
 CATEGORIES=	geography
 
 MAINTAINER=	wen@NetBSD.org
