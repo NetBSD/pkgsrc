@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:21:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/03 13:51:56 mef Exp $
 
-BLAKE2s (R/formatR_1.11.tar.gz) = 79d6e307f3d054fca07aa35c094ce5d38f84b11b944ac561df5018e325c34a6c
-SHA512 (R/formatR_1.11.tar.gz) = 448eb939300e060b5cf4ae5b2c3b5067469600d7a888de8725bf68fa3ec503419bfa5e2a969e42b295ed823408e9752597478432468758fc98af12ae1943937f
-Size (R/formatR_1.11.tar.gz) = 95158 bytes
+BLAKE2s (R/formatR_1.14.tar.gz) = ff07fb5ff191a7dfb57bb25b45d61e2018f36bd0a6b055fc2500a977b6d60548
+SHA512 (R/formatR_1.14.tar.gz) = bbf5791f677f843fbe63e817eb54e8f727103ca1cc6e92f403380ab4812c07bc7c5b3f1db0a848be986b525ee5c71121079a5f0f688fbd2c9978555482a91197
+Size (R/formatR_1.14.tar.gz) = 96077 bytes
