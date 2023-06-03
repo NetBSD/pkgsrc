@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2020/11/23 06:51:32 khorben Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/06/03 23:55:32 markd Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/flask_babel/__init__.py
 ${PYSITELIB}/flask_babel/__init__.pyc
-${PYSITELIB}/flask_babel/__init__.pyo
-${PYSITELIB}/flask_babel/_compat.py
-${PYSITELIB}/flask_babel/_compat.pyc
-${PYSITELIB}/flask_babel/_compat.pyo
 ${PYSITELIB}/flask_babel/speaklater.py
 ${PYSITELIB}/flask_babel/speaklater.pyc
-${PYSITELIB}/flask_babel/speaklater.pyo
