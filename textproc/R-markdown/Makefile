@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/03/12 09:52:10 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/03 14:10:00 mef Exp $
 
 R_PKGNAME=	markdown
-R_PKGVER=	1.5
+R_PKGVER=	1.7
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
