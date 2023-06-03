@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3496 2023/06/03 06:34:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3497 2023/06/03 06:38:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4853,3 +4853,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-bash version 0.19.0 [wiz 2023-06-03]
 	Added textproc/tree-sitter-css version 0.19.0 [wiz 2023-06-03]
 	Added textproc/tree-sitter-javascript version 0.20.0 [wiz 2023-06-03]
+	Added textproc/tree-sitter-tsx version 0.20.2 [wiz 2023-06-03]
