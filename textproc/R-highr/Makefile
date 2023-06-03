@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/06/06 15:42:24 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/03 13:58:21 mef Exp $
 
 R_PKGNAME=	highr
-R_PKGVER=	0.9
+R_PKGVER=	0.10
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
