@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.23 2023/03/05 20:23:59 triaxx Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.24 2023/06/03 11:54:24 gdt Exp $
 .Dd February 1, 2010
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -65,12 +65,10 @@ to check for packages for which the version in pkgsrc is different
 than the installed version, and run
 .Dq make replace
 on those packages as well (tsorting them along with the unsafe/rebuild
-packages).
-(Usually this results in packages being upgraded to newer versions,
-assuming the pkgsrc tree is more recent than the currently installed
-packages.)
-The packages discovered this way will be marked as mismatched, so that
-in a re-run of
+packages).  This results in packages being upgraded to newer versions,
+in the normal case where the pkgsrc tree is more recent than the
+currently installed packages.  The packages discovered this way will
+be marked as mismatched, so that in a re-run of
 .Nm
 you don't need to repeat the
 .Fl u
@@ -93,11 +91,11 @@ Just fetches the sources of all mismatched packages required to be updated
 .It Fl h
 Brief help.
 .It Fl k
-Keep on going, even on error during handling current package.
-Warning: This could (potential will) rebuild package depending
-on the failed package, anyway.
-This may cause a broken tree.
-Use with caution!
+Keep going, even when replacing a package fails.  This will very
+likely rebuild packages depending on the failed package, and the
+resulting inconsistency may cause problems.  However, it is useful for
+unattended operation to accomplish most of the work, allowing a later
+return to identifying and resolving individual package issues.
 .It Fl L Ar path
 Logs each build (each command output from the commands which are run for
 packages) to given path.
@@ -115,7 +113,8 @@ This option attempts to calculate the new packages that would be
 marked unsafe after each
 .Dq make replace .
 .It Fl r
-Just replace packages, do not build binary packages.
+Do not build binary packages.  (The flag is chosen for 'replace', as
+opposed to 'make package replace'.)
 .It Fl s
 Enable strict mode.
 This makes
@@ -125,13 +124,14 @@ look at
 tags instead of
 .Dq unsafe_depends
 tags.
-This will replace packages more aggressively and can be used to solve
-shared library problems.
+This will replace packages that in theory do not need to be replaced,
+but it can solve shared library issues that arise if this theory is
+incorrect.
 .It Fl u
 Use
 .Xr pkg_chk 8
 to check for mismatched packages, mark them with 'mismatch=YES',
-and replace those too.
+and replace those also.
 Otherwise, consider packages marked 'mismatch=YES' to be mismatched.
 Marking with 'mismatch=YES' only occurs if the calling user can write
 to the package database. It is not an error if this fails; it just does not
@@ -226,12 +226,12 @@ To compile all packages heavily parallel, use
 pkg_rolling-replace -D MAKE_JOBS=8
 .Ed
 .Sh AUTHORS
+Originally developed at BBN by
 .An -nosplit
-.An Nick Goffee
-.Aq ngoffee@bbn.com ,
+.An Nick Goffee ,
 with initial idea and many suggestions from
 .An Greg Troxel
-.Aq gdt@ir.bbn.com .
+.Aq gdt@NetBSD.org .
 The options
 .Fl s
 and
@@ -250,9 +250,24 @@ were added by
 .Aq sno@NetBSD.org .
 .Sh BUGS
 .Nm
-does not run fully automatically when any significant number of
-packages need to be replaced.
+is based on PKGPATH, and thus will malfunction if invoking replace in
+that directory does not replace the correct PKGNAME.  This is a known
+problem with multi-version packages, specifically with installed
+packages that are not the default version.
+.Pp
+While not strictly a bug,
+.Nm
+will often not run to completion when operating on a large number of
+packages because it is likely that at least one of them will not
+rebuild cleanly.  In addition to errors that show up in bulk builds,
+packages sometimes have bugs where they don't build if some
+non-required packages are installed, or if an older version of the
+package itself is installed.  These are bugs in the underlying
+packages that would be observed with a manual make replace, without
+this program.  Please do not report such errors as
+.Nm
+issues.
 .Pp
 .Nm
-does not run fully automatically when the PKGNAME of a package
-changes.
+when run as a non-root user cannot set the 'mismatch=YES' flag.  This
+can occur when one expects to use 'sudo' for 'make replace'.
