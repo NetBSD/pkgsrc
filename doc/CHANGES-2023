@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3510 2023/06/03 13:40:33 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3511 2023/06/03 13:52:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4867,3 +4867,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Log-Dispatch to 2.71 [wen 2023-06-03]
 	Updated devel/p5-Log-Dispatchouli to 3.002 [wen 2023-06-03]
 	Updated devel/R-xfun to 0.39 [mef 2023-06-03]
+	Updated textproc/R-formatR to 1.14 [mef 2023-06-03]
