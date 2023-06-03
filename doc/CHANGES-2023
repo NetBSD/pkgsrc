@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3493 2023/06/03 06:20:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3494 2023/06/03 06:24:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/netcdf to 4.9.2 [mef 2023-06-03]
 	Updated devel/netcdf-cxx to 4.3.1 [mef 2023-06-03]
 	Updated x11/xtrans to 1.5.0 [wiz 2023-06-03]
+	Added textproc/tree-sitter-bash version 0.19.0 [wiz 2023-06-03]
