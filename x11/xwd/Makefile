@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/08/02 10:40:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/03 18:35:17 wiz Exp $
 
-DISTNAME=	xwd-1.0.8
+DISTNAME=	xwd-1.0.9
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://xorg.freedesktop.org/
