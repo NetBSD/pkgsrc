@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:31:59 brook Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/03 14:04:18 mef Exp $
 
 R_PKGNAME=	commonmark
-R_PKGVER=	1.7
+R_PKGVER=	1.9.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
