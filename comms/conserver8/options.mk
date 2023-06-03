@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2019/11/03 12:04:12 rillig Exp $
+# $NetBSD: options.mk,v 1.7 2023/06/03 01:05:47 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	connectivity
 PKG_OPTIONS_GROUP.connectivity=	inet6 uds
 
-PKG_SUPPORTED_OPTIONS=	pam ssl
+PKG_SUPPORTED_OPTIONS=	gssapi pam ssl
 
 PKG_SUGGESTED_OPTIONS=	ssl
 
@@ -16,6 +16,11 @@ PKG_SUGGESTED_OPTIONS+=	inet6
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gssapi
+.endif
 
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
