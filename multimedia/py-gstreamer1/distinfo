@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/04/29 17:26:03 wiz Exp $
+$NetBSD: distinfo,v 1.25 2023/06/03 05:34:58 wiz Exp $
 
-BLAKE2s (gst-python-1.22.2.tar.xz) = 28d121ac402646646039247c92c077293923a42ac2ec72555823e00b8ec1fdbd
-SHA512 (gst-python-1.22.2.tar.xz) = 77ab36b0b6cae92982cb0ead89a7133a7a323aa1568861fa2d859900820008f78caf8e163c38a7ed524bc67a73bbcd5b1e83056f2215069021e5da6bed97230a
-Size (gst-python-1.22.2.tar.xz) = 105628 bytes
+BLAKE2s (gst-python-1.22.3.tar.xz) = 993d5327268907a258b8d7a12b865ed0cb5957c1c243807f1972ea6a3abd4fa2
+SHA512 (gst-python-1.22.3.tar.xz) = 92b31d1d38561bc6f1f31bb5d6cbd90226a960056cbe91fe4c177b0507f9bd635fc4c558a44984d578d2e413efac74a915f4066ec0875f69894819e4ffa3b114
+Size (gst-python-1.22.3.tar.xz) = 107336 bytes
