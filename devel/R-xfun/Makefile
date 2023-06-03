@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/02/19 12:48:24 mef Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/03 13:40:21 mef Exp $
 
 R_PKGNAME=	xfun
-R_PKGVER=	0.37
+R_PKGVER=	0.39
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
