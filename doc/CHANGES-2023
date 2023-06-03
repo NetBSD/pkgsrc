@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3515 2023/06/03 14:16:23 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3516 2023/06/03 14:27:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/R-commonmark to 1.9.0 [mef 2023-06-03]
 	Updated textproc/R-markdown to 1.7 [mef 2023-06-03]
 	Updated textproc/R-yaml to 2.3.7 [mef 2023-06-03]
+	Updated www/R-httr to 1.4.6 [mef 2023-06-03]
