@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/03 13:22:04 riastradh Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -100,6 +100,11 @@ post-extract:
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
+.endif
 
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
