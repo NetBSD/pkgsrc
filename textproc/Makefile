@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1403 2023/06/03 06:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.1404 2023/06/03 06:37:56 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1392,6 +1392,7 @@ SUBDIR+=	tree-sitter-python
 SUBDIR+=	tree-sitter-ruby
 SUBDIR+=	tree-sitter-rust
 SUBDIR+=	tree-sitter-toml
+SUBDIR+=	tree-sitter-tsx
 SUBDIR+=	tree-sitter-typescript
 SUBDIR+=	tree-sitter-yaml
 SUBDIR+=	troffcvt
