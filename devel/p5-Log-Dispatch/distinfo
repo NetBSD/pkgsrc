@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 10:16:52 nia Exp $
+$NetBSD: distinfo,v 1.40 2023/06/03 13:23:55 wen Exp $
 
-BLAKE2s (Log-Dispatch-2.70.tar.gz) = 7438f9421654540d79c2a847909771b401d73f6e409f39b9216501f157c79bb1
-SHA512 (Log-Dispatch-2.70.tar.gz) = c4c8cfb9e74b3176d5f95e3f9fbc86303321caa3e608a7ec318786ecd80d2238fd06a3b74ded65d5d3fab5c3a1297f99c92c62b1136b27d3b5396fd3fca602f6
-Size (Log-Dispatch-2.70.tar.gz) = 70808 bytes
+BLAKE2s (Log-Dispatch-2.71.tar.gz) = 2623e30fb686cd9ff51ed889091ef10a4c3b63f210e91a36bb1bc5452e02508c
+SHA512 (Log-Dispatch-2.71.tar.gz) = b3aac1e0dab7b4c02fe98ac3c82854d9413c97510e390ace26fa5630cdaece628f9ea4e4c925ec10d1e6e386cc24617b348f5df837e6465cc9f49d465eb0e386
+Size (Log-Dispatch-2.71.tar.gz) = 72470 bytes
