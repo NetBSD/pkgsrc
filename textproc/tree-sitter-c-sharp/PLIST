@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/03 06:48:23 wiz Exp $
+lib/libtree-sitter-c-sharp.la
