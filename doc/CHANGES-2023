@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3520 2023/06/03 19:35:03 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3521 2023/06/03 19:36:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xwd to 1.0.9 [wiz 2023-06-03]
 	Updated x11/xrdb to 1.2.2 [wiz 2023-06-03]
 	Updated editors/tp-note to 1.21.5 [pin 2023-06-03]
+	Updated net/netop to 0.1.2 [pin 2023-06-03]
