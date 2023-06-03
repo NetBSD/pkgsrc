@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/04/07 06:48:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/03 13:22:04 riastradh Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC12_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -49,6 +49,11 @@ CONFIGURE_ARGS+=	--enable-libssp
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
+.endif
 
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
