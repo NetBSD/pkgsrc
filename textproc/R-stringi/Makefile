@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/04/19 08:11:36 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/03 12:45:56 mef Exp $
 
 R_PKGNAME=	stringi
-R_PKGVER=	1.7.6
-PKGREVISION=	2
+R_PKGVER=	1.7.12
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
