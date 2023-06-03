@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.13 2022/04/29 11:56:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/03 23:55:32 markd Exp $
 
-DISTNAME=	Flask-Babel-1.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	flask_babel-3.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Babel/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask_babel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mitsuhiko/flask-babel
 COMMENT=	Adds i18n/l10n support to Flask applications
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-babel>=2.3:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-babel>=2.12:../../devel/py-babel
+DEPENDS+=	${PYPKGPREFIX}-flask>=2.0:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-pytz>=2022.7:../../time/py-pytz
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
