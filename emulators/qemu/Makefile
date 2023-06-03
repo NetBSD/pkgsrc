@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.315 2023/05/06 19:22:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.316 2023/06/03 11:12:31 wiz Exp $
 
 DISTNAME=	qemu-8.0.0
-PKGNAME=	${DISTNAME:S/-rc/rc/}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -206,6 +206,7 @@ post-install:
 .include "../../sysutils/dtc/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
