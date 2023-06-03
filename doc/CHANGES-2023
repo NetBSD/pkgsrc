@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3512 2023/06/03 13:58:32 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3513 2023/06/03 14:04:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4869,3 +4869,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-xfun to 0.39 [mef 2023-06-03]
 	Updated textproc/R-formatR to 1.14 [mef 2023-06-03]
 	Updated textproc/R-highr to 0.10 [mef 2023-06-03]
+	Updated textproc/R-commonmark to 1.9.0 [mef 2023-06-03]
