@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/09/20 15:23:56 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/03 14:27:07 mef Exp $
 
 R_PKGNAME=	httr
-R_PKGVER=	1.4.2
+R_PKGVER=	1.4.6
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
