@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3492 2023/06/03 03:45:10 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3493 2023/06/03 06:20:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/packer to 1.9.1 [iquiw 2023-06-03]
 	Updated devel/netcdf to 4.9.2 [mef 2023-06-03]
 	Updated devel/netcdf-cxx to 4.3.1 [mef 2023-06-03]
+	Updated x11/xtrans to 1.5.0 [wiz 2023-06-03]
