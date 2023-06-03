@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/03 06:33:55 wiz Exp $
+
+BLAKE2s (tree-sitter-javascript-0.20.0.tar.gz) = f8c10857f5c0bc2625404b8f912f22c24f5fa33f53a44a6b60fa1df8ce531c4b
+SHA512 (tree-sitter-javascript-0.20.0.tar.gz) = 778e0f2f5bf276d7ffb6eab0fe3f7473b56605de707c8e2f491fbb5826da94067b9f1bc476306013267001b5ecaab11a956e896b78520cdedd27006fac97fe41
+Size (tree-sitter-javascript-0.20.0.tar.gz) = 278831 bytes
