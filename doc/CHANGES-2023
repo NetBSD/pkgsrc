@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3503 2023/06/03 12:52:51 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3504 2023/06/03 13:04:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4860,3 +4860,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/pkg_rolling-replace to 0.24.14 [gdt 2023-06-03]
 	Updated textproc/R-stringi to 1.7.12 [mef 2023-06-03]
 	Updated geography/R-rgeos to 0.6.3 [mef 2023-06-03]
+	Updated geography/R-maps to 3.4.1 [mef 2023-06-03]
