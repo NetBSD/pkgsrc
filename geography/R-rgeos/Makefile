@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/20 05:39:38 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/03 12:52:36 mef Exp $
 
 R_PKGNAME=	rgeos
-R_PKGVER=	0.5-7
+R_PKGVER=	0.6-3
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
