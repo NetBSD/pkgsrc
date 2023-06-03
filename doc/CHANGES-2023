@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3487 2023/06/02 23:11:10 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3488 2023/06/03 01:05:26 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4845,3 +4845,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-sigal to 2.3nb2 [wiz 2023-06-02]
 	Updated www/firefox to 112.0.1nb5 [wiz 2023-06-02]
 	Updated math/R-spacetime to 1.3.0 [makoto 2023-06-02]
+	Updated sysutils/fzf to 0.41.1 [iquiw 2023-06-03]
