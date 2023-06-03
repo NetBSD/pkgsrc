@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:29:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/03 14:27:07 mef Exp $
 
-BLAKE2s (R/httr_1.4.2.tar.gz) = 6c8829ee8c18f5face30c9632b87ec5288a0ed048756fe969d5c6f51920396fa
-SHA512 (R/httr_1.4.2.tar.gz) = cbfb0569e7d61298645ce1cd569fdc3a25ef8ab07654523d001cd7b6292600c0baaf45be0b30fb2f692caed8e58367c4b6095914f5333ea5fb7c131df8931371
-Size (R/httr_1.4.2.tar.gz) = 159950 bytes
+BLAKE2s (R/httr_1.4.6.tar.gz) = 15a9a66a9622f74c271f4f868f898c5b5896ff9480fdc440f3b1309a20fc6faa
+SHA512 (R/httr_1.4.6.tar.gz) = bb5c4d2fb9a96187a8bd16338e50f66c5e88300f87b30283a365f0b5b55404eba18a9e68a89cb04d6e4e58e13a0e16372f00ca8ea8cb9aced90821417296d1bd
+Size (R/httr_1.4.6.tar.gz) = 157621 bytes
