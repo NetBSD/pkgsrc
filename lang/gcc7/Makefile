@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/06/03 13:22:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/03 13:22:43 riastradh Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -28,7 +28,7 @@ CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 NOT_FOR_PLATFORM=	Interix-*-* Darwin-*-aarch64
 
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		gmake makeinfo perl sed:run tar:build
+USE_TOOLS+=		gmake makeinfo perl sed tar:build
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes
