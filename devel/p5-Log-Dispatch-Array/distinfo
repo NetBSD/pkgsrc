@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:16:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/06/03 13:15:12 wen Exp $
 
-BLAKE2s (Log-Dispatch-Array-1.003.tar.gz) = 691ca79fa70058a21270a0beae33ae757534d29960813de4ef04e374459aadb5
-SHA512 (Log-Dispatch-Array-1.003.tar.gz) = 00482172dc41355de5a27f7ae167c1f2c8644c41a2484e4fd5709765ab6a413d15ec268af89cef6a521a0a5570be2652b02efec9a717e8325bbfb8fd51a4bb68
-Size (Log-Dispatch-Array-1.003.tar.gz) = 12926 bytes
+BLAKE2s (Log-Dispatch-Array-1.005.tar.gz) = 9e5b75bb79c220ac01a01a4920e7c06106536071d9b917ecdbb4db5e33aba879
+SHA512 (Log-Dispatch-Array-1.005.tar.gz) = 35d632ae0d2b8c34f132884c606b7e2ec12ad3e763ebc043a53449c0a63da03adf661ae2aa45f1b95d50f39a662f472e37f013ada727fbe53242c7d5d361e87e
+Size (Log-Dispatch-Array-1.005.tar.gz) = 16080 bytes
