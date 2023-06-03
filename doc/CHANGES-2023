@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3499 2023/06/03 06:52:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3500 2023/06/03 11:12:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/tree-sitter-tsx version 0.20.2 [wiz 2023-06-03]
 	Added textproc/tree-sitter-markdown version 0.7.1 [wiz 2023-06-03]
 	Added textproc/tree-sitter-c-sharp version 0.20.0 [wiz 2023-06-03]
+	Updated emulators/qemu to 8.0.0nb1 [wiz 2023-06-03]
