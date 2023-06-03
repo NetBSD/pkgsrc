@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1400 2023/05/30 15:23:24 taca Exp $
+# $NetBSD: Makefile,v 1.1401 2023/06/03 06:24:11 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1374,6 +1374,7 @@ SUBDIR+=	trang
 SUBDIR+=	translate-shell
 SUBDIR+=	translate-toolkit
 SUBDIR+=	tree-sitter
+SUBDIR+=	tree-sitter-bash
 SUBDIR+=	tree-sitter-c
 SUBDIR+=	tree-sitter-cli
 SUBDIR+=	tree-sitter-cmake
