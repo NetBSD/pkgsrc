@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/03 06:48:23 wiz Exp $
+
+BLAKE2s (tree-sitter-c-sharp-0.20.0.tar.gz) = f5e7a7b124247342ab0a4982ae8e6ec3f51f86660d0ad83bce90b68e40c3f205
+SHA512 (tree-sitter-c-sharp-0.20.0.tar.gz) = 31530ff57d02b84c8e7e7183abb927c40839500afc225cfdbe685495962c3f129ea459efaf73abbb76951bfc14b890cbdfa9a847b3ae92c8db495d173d0e0e08
+Size (tree-sitter-c-sharp-0.20.0.tar.gz) = 1050470 bytes
