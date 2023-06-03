@@ -1,4 +1,4 @@
-$NetBSD: TODO.crosscompile,v 1.8 2023/04/23 07:09:37 riastradh Exp $
+$NetBSD: TODO.crosscompile,v 1.9 2023/06/03 15:01:05 riastradh Exp $
 
 * Organize NATIVE_xyz and TARGET_xyz better.
 * Organize host/target compiler tools better.
@@ -14,3 +14,4 @@ $NetBSD: TODO.crosscompile,v 1.8 2023/04/23 07:09:37 riastradh Exp $
 * If you set MACHINE_ARCH, what should MACHINE be?  (Avoid using it?)
 * Make sure cross-builds DTRT with INSTALL scripts.
 * Fix cmake.
+* Handle BUILD_DEPENDS/TOOL_DEPENDS split in bsd.pkg.readme.mk.
