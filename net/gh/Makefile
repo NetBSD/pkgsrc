@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2023/05/05 19:37:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.61 2023/06/03 20:01:00 bsiegert Exp $
 
 # Please also update GH_REL_DATE when upgrading to a new release.
 
-DISTNAME=	gh-2.25.1
-PKGREVISION=	2
+DISTNAME=	gh-2.30.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cli/}
 GITHUB_PROJECT=	cli
@@ -19,7 +18,7 @@ DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 # Because we are not calling scripts/build as the Makefile for gh would
 # do, we do not get these flags set. These flags make the output from
 # "gh --version" meaningful.
-GH_REL_DATE=		2023-03-21
+GH_REL_DATE=		2023-05-30
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X github.com/cli/cli/v2/internal/build.Date=${GH_REL_DATE} \
 			-X github.com/cli/cli/v2/internal/build.Version=${PKGVERSION_NOREV}'
