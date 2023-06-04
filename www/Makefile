@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1715 2023/06/04 02:29:21 markd Exp $
+# $NetBSD: Makefile,v 1.1716 2023/06/04 02:36:27 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -710,6 +710,7 @@ SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-js-asset
 SUBDIR+=	py-django-kronos
 SUBDIR+=	py-django-localflavor
+SUBDIR+=	py-django-mailman3
 SUBDIR+=	py-django-modelcluster
 SUBDIR+=	py-django-mptt
 SUBDIR+=	py-django-permissionedforms
