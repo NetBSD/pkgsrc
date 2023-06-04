@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/04 02:53:08 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/picklefield/__init__.py
+${PYSITELIB}/picklefield/__init__.pyc
+${PYSITELIB}/picklefield/__init__.pyo
+${PYSITELIB}/picklefield/constants.py
+${PYSITELIB}/picklefield/constants.pyc
+${PYSITELIB}/picklefield/constants.pyo
+${PYSITELIB}/picklefield/fields.py
+${PYSITELIB}/picklefield/fields.pyc
+${PYSITELIB}/picklefield/fields.pyo
