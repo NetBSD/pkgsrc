@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/12/31 21:49:13 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/04 09:06:16 plunky Exp $
 
-DISTNAME=		bluez-5.27
+DISTNAME=		bluez-5.66
 PKGNAME=		netbt-hcidump-${BLUEZ_VERSION}
-PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kernel.org/pub/linux/bluetooth/
 EXTRACT_SUFX=		.tar.xz
