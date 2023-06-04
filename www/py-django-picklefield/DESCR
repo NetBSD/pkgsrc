@@ -1,0 +1,2 @@
+django-picklefield provides an implementation of a pickled object field.
+Such fields can contain any picklable objects.
