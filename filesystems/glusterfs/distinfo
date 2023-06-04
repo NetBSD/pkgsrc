@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.76 2023/03/28 01:10:53 gutteridge Exp $
+$NetBSD: distinfo,v 1.77 2023/06/04 00:45:01 gutteridge Exp $
 
-BLAKE2s (glusterfs-10.3.tar.gz) = c2f9b5670d1df7a787e445207caa421a949f1fb98cafb587441925efe8d9e25a
-SHA512 (glusterfs-10.3.tar.gz) = af7c8a15db48196a5f7022e4da87ae8d8d43a12c8968b242f40fb43ea562d1d214e75b3a67800f8594c97847e15c01367b6d464964252551d6f8d3e93fb0f832
-Size (glusterfs-10.3.tar.gz) = 8283537 bytes
+BLAKE2s (glusterfs-10.4.tar.gz) = 9813ba102591f6ab715fc7d3dc089860888effe70dc146a4366667be0cc9bd0c
+SHA512 (glusterfs-10.4.tar.gz) = 06c563ab77a29145b1fac44f5a56a91539accb69ba736fe6297aa3f38b128e68ba4f7d0b49ac6eb56397a51950fb4de882ff60037e91c61ad13dd89a18139d82
+Size (glusterfs-10.4.tar.gz) = 8293872 bytes
 SHA1 (patch-configure.ac) = e4c2f65d6579aab9b62e28ba60b75ba542116811
 SHA1 (patch-events-src-Makefile.am) = 5a112994c9990962a19eecd3933dabb18d5db2b0
 SHA1 (patch-events-tools-Makefile.am) = b224ed16200befdb68e51eebd762257a0911e591
