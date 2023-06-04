@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2023/03/28 01:10:53 gutteridge Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2023/06/04 00:45:01 gutteridge Exp $
 ${PYSITELIB}/gluster/__init__.py
 ${PYSITELIB}/gluster/__init__.pyc
 ${PYSITELIB}/gluster/__init__.pyo
@@ -85,6 +85,7 @@ include/glusterfs/rpc/rpc-transport.h
 include/glusterfs/rpc/rpcsvc-common.h
 include/glusterfs/rpc/rpcsvc.h
 include/glusterfs/rpc/xdr-common.h
+include/glusterfs/rpc/xdr-custom.h
 include/glusterfs/rpc/xdr-generic.h
 include/glusterfs/rpc/xdr-rpc.h
 include/glusterfs/rpc/xdr-rpcclnt.h
@@ -326,9 +327,7 @@ sbin/glusterd
 sbin/glustereventsd
 sbin/glusterfs
 sbin/glusterfsd
-sbin/mount_glusterfs
 sbin/snap_scheduler.py
-sbin/umountd
 share/doc/glusterfs/benchmarking/README
 share/doc/glusterfs/benchmarking/glfs-bm.c
 share/doc/glusterfs/benchmarking/launch-script.sh

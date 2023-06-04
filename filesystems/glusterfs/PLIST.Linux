@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2023/06/04 00:45:01 gutteridge Exp $
+include/glusterfs/gf-io-uring.h
+lib/glusterfs/${GLUSTERFS_VERSION}/cloudsync-plugins/cloudsynccvlt.la
+lib/glusterfs/${GLUSTERFS_VERSION}/xlator/features/cloudsync.la
+lib/systemd/system/gluster-ta-volume.service
+lib/systemd/system/glusterd.service
+lib/systemd/system/glustereventsd.service
+lib/systemd/system/glusterfssharedstorage.service
+libexec/glusterfs/mount-shared-storage.sh
+sbin/mount.glusterfs
+share/glusterfs/scripts/control-cpu-load.sh
+share/glusterfs/scripts/control-mem.sh
