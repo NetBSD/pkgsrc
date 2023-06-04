@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.557 2023/06/02 18:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.558 2023/06/04 09:26:35 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		112.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=		113.0
+MOZ_BRANCH_MINOR=	.2
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-111.0.tgz
+NODEJSKIT=		nodejs-output-113.0.2.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -45,8 +44,6 @@ LICENSE=	mpl-1.1
 # directory).
 #
 # -----------------------------------------------------------------------
-
-UNLIMIT_RESOURCES+=	datasize virtualsize
 
 WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
 

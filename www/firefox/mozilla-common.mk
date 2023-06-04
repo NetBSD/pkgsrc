@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.252 2023/06/02 18:47:20 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.253 2023/06/04 09:26:35 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -134,6 +134,20 @@ SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
+
+# Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or rearlier.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090400
+RUST_MAKE_JOBS=		# empty by default
+.  if ${MAKE_JOBS} > 1
+RUST_MAKE_JOBS=		-j1 # for MAKE_JOBS=1, RUST_MAKE_JOBS should be empty.
+.  endif
+.endif
+
+SUBST_CLASSES+=		njobs
+SUBST_STAGE.njobs=	pre-configure
+SUBST_MESSAGE.njobs=	Setting MAKE_JOBS for cairo
+SUBST_FILES.njobs+=	${MOZILLA_DIR}config/makefiles/rust.mk
+SUBST_VARS.njobs+=	RUST_MAKE_JOBS
 
 # Workaround for link of libxul.so as of 96.0.
 # There are too many -ldl under third_paty/libwebrtc.
