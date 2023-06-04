@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 03:15:07 markd Exp $
+
+BLAKE2s (HyperKitty-1.3.7.tar.gz) = 3e2e7f406895e1b4713919344d573f32c2a6b7b8f27300780cc770a107d1aeae
+SHA512 (HyperKitty-1.3.7.tar.gz) = 5a1310af91253d7b342a3ab6f691ad1df618ab004f05c7445fd1a575c8c16a4521055e15c440af665addc2426ecebf725666c3387959c84e685aab762bbe85cc
+Size (HyperKitty-1.3.7.tar.gz) = 2691781 bytes
