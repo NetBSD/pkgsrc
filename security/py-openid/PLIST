@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/22 14:25:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/06/04 02:20:29 markd Exp $
 ${PYSITELIB}/openid/__init__.py
 ${PYSITELIB}/openid/__init__.pyc
 ${PYSITELIB}/openid/__init__.pyo
 ${PYSITELIB}/openid/association.py
 ${PYSITELIB}/openid/association.pyc
 ${PYSITELIB}/openid/association.pyo
+${PYSITELIB}/openid/codecutil.py
+${PYSITELIB}/openid/codecutil.pyc
+${PYSITELIB}/openid/codecutil.pyo
 ${PYSITELIB}/openid/consumer/__init__.py
 ${PYSITELIB}/openid/consumer/__init__.pyc
 ${PYSITELIB}/openid/consumer/__init__.pyo
@@ -122,4 +125,8 @@ ${PYSITELIB}/openid/yadis/xri.pyo
 ${PYSITELIB}/openid/yadis/xrires.py
 ${PYSITELIB}/openid/yadis/xrires.pyc
 ${PYSITELIB}/openid/yadis/xrires.pyo
-${PYSITELIB}/${EGG_INFODIR}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
