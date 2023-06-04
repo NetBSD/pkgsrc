@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3542 2023/06/04 08:41:16 plunky Exp $
+$NetBSD: CHANGES-2023,v 1.3543 2023/06/04 09:06:30 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4914,3 +4914,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/klayout to 0.28.8 [mef 2023-06-04]
 	Updated cad/py-gdstk to 0.9.41 [mef 2023-06-04]
 	Added net/nextcloud-client to 3.8.2 [plunky 2023-06-04]
+	Updated sysutils/netbt-hcidump to 5.66 [plunky 2023-06-04]
