@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 03:32:47 markd Exp $
+
+BLAKE2s (mailman-hyperkitty-1.2.1.tar.gz) = 4267e16a6a4a5f6a7483f3fe077e1065c940eac1496aba32ae3e68b4d1822169
+SHA512 (mailman-hyperkitty-1.2.1.tar.gz) = 6b7e93b3557d4feb7220459bb71319d82f1d38858903aca131b8b9c3fc8abbf08749730bf89f8f70ed517b8fb66173b1cb98b1b473d5e1b5f5c7984c157aa472
+Size (mailman-hyperkitty-1.2.1.tar.gz) = 22197 bytes
