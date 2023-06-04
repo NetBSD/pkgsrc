@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3528 2023/06/04 03:04:59 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3529 2023/06/04 03:21:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4887,3 +4887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-shiny to 1.7.4 [makoto 2023-06-04]
 	Updated print/R-knitr to 1.43 [mef 2023-06-04]
 	Updated math/R-FNN to 1.1.3.2 [mef 2023-06-04]
+	Updated geography/R-mapdata to 2.3.1 [mef 2023-06-04]
