@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/04 03:32:47 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mailman_hyperkitty/__init__.py
+${PYSITELIB}/mailman_hyperkitty/__init__.pyc
+${PYSITELIB}/mailman_hyperkitty/__init__.pyo
+${PYSITELIB}/mailman_hyperkitty/tests/__init__.py
+${PYSITELIB}/mailman_hyperkitty/tests/__init__.pyc
+${PYSITELIB}/mailman_hyperkitty/tests/__init__.pyo
+${PYSITELIB}/mailman_hyperkitty/tests/test_archiver.py
+${PYSITELIB}/mailman_hyperkitty/tests/test_archiver.pyc
+${PYSITELIB}/mailman_hyperkitty/tests/test_archiver.pyo
