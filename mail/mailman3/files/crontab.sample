@@ -1,0 +1,8 @@
+# daily notifications
+0 8 * * * @PREFIX@/bin/mailman notify
+#
+# periodic digests
+0 12 * * * @PREFIX@/bin/mailman digests --periodic
+#
+# news gatway
+10 * * * * @PREFIX@/bin/mailman gatenews
