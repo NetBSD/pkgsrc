@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3537 2023/06/04 07:24:15 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3538 2023/06/04 07:36:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4910,3 +4910,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/apg to 2.3.0bnb12 [triaxx 2023-06-04]
 	Updated benchmarks/hyperfine to 1.17.0 [pin 2023-06-04]
 	Updated devel/R-testthat to 3.1.8 [mef 2023-06-04]
+	Updated geography/R-rgdal to 1.6.7 [mef 2023-06-04]
