@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2023/04/19 08:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.118 2023/06/04 00:45:01 gutteridge Exp $
 
-DISTNAME=	glusterfs-10.3
-PKGREVISION=	3
+DISTNAME=	glusterfs-10.4
 CATEGORIES=	filesystems
-MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
+MASTER_SITES=	https://bits.gluster.org/pub/gluster/glusterfs/src/
 
 MAINTAINER=	als@thangorodrim.ch
 HOMEPAGE=	https://www.gluster.org/
@@ -135,20 +134,26 @@ pre-build:
 	${ECHO} "glusterd.vol.sample: glusterd.vol" >> Makefile &&	\
 	${ECHO} "	cp glusterd.vol glusterd.vol.sample" >> Makefile
 
-post-install:
-	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
-	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
-
 # Debug
-CFLAGS+=		-g
-INSTALL_UNSTRIPPED=	yes
-CONFIGURE_ARGS+=	--enable-debug
+#CFLAGS+=		-g
+#INSTALL_UNSTRIPPED=	yes
+#CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
 #CFLAGS+=		-DGC_DEBUG
 #CFLAGS+=		-include gc.h
 #LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+post-install:
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/mount.glusterfs
+.else
+post-install:
+	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
+	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
+.endif
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
@@ -157,6 +162,10 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.userspace-rcu+=	userspace-rcu>=0.12.1
 .include "../../devel/userspace-rcu/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.include "../../devel/liburing/buildlink3.mk"
+.include "../../sysutils/acl/buildlink3.mk"
+.endif
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
