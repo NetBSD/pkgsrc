@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/04 03:02:29 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cmarkgfm/__init__.py
+${PYSITELIB}/cmarkgfm/__init__.pyc
+${PYSITELIB}/cmarkgfm/__init__.pyo
+${PYSITELIB}/cmarkgfm/_cmark.abi3.so
+${PYSITELIB}/cmarkgfm/build_cmark.py
+${PYSITELIB}/cmarkgfm/build_cmark.pyc
+${PYSITELIB}/cmarkgfm/build_cmark.pyo
+${PYSITELIB}/cmarkgfm/cmark.cffi.h
+${PYSITELIB}/cmarkgfm/cmark.py
+${PYSITELIB}/cmarkgfm/cmark.pyc
+${PYSITELIB}/cmarkgfm/cmark.pyo
+${PYSITELIB}/cmarkgfm/cmark_module.h
