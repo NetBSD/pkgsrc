@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.431 2023/05/17 19:34:26 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.432 2023/06/04 12:29:52 schmonz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -293,6 +293,9 @@ LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
 .  elif !empty(_UNAME_V:Momnios-*)
 OS_VARIANT=		OmniOS
 LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
+.  elif !empty(_UNAME_V:Mtribblix-*)
+OS_VARIANT=		Tribblix
+LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$2; exit 0; }' /etc/release
 .  else
 OS_VARIANT=		Solaris
 LOWER_VARIANT_VERSION=	${_UNAME_V}
