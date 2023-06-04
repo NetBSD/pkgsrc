@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/06/04 08:39:46 plunky Exp $
+
+install config files to EGDIR
+
+--- CMakeLists.txt.orig	2023-05-16 11:43:06.000000000 +0000
++++ CMakeLists.txt
+@@ -278,7 +278,7 @@ if(BUILD_OWNCLOUD_OSX_BUNDLE)
+     install(FILES sync-exclude.lst DESTINATION ${OWNCLOUD_OSX_BUNDLE}/Contents/Resources/)
+     configure_file(sync-exclude.lst bin/${OWNCLOUD_OSX_BUNDLE}/Contents/Resources/sync-exclude.lst COPYONLY)
+ elseif(BUILD_CLIENT)
+-    install( FILES sync-exclude.lst DESTINATION ${SYSCONFDIR}/${APPLICATION_SHORTNAME} )
++    install( FILES sync-exclude.lst DESTINATION ${SYSCONF_EGDIR} )
+     configure_file(sync-exclude.lst bin/sync-exclude.lst COPYONLY)
+ endif()
+ 
