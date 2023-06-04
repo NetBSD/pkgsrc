@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_hcidump.c,v 1.1 2014/12/30 08:39:13 plunky Exp $
+$NetBSD: patch-tools_hcidump.c,v 1.2 2023/06/04 09:06:16 plunky Exp $
 
 changes here, are that netbt stack
  - uses a string for the device address
@@ -7,7 +7,7 @@ changes here, are that netbt stack
 
 Also, the BSDs provide a socket level TIMESTAMP option
 
---- tools/hcidump.c.orig	2014-10-05 19:31:20.000000000 +0000
+--- tools/hcidump.c.orig	2015-09-04 01:19:36.000000000 +0000
 +++ tools/hcidump.c
 @@ -135,7 +135,7 @@ static inline int write_n(int fd, char *
  	return t;
@@ -18,7 +18,7 @@ Also, the BSDs provide a socket level TIMESTAMP option
  {
  	struct cmsghdr *cmsg;
  	struct msghdr msg;
-@@ -177,7 +177,7 @@ static int process_frames(int dev, int s
+@@ -171,7 +171,7 @@ static int process_frames(int dev, int s
  	if (dev == HCI_DEV_NONE)
  		printf("system: ");
  	else
@@ -27,7 +27,7 @@ Also, the BSDs provide a socket level TIMESTAMP option
  
  	printf("snap_len: %d filter: 0x%lx\n", snap_len, parser.filter);
  
-@@ -522,9 +522,9 @@ static int open_file(char *file, int mod
+@@ -516,9 +516,9 @@ static int open_file(char *file, int mod
  	return fd;
  }
  
@@ -39,14 +39,14 @@ Also, the BSDs provide a socket level TIMESTAMP option
  	struct hci_filter flt;
  	int sk, opt;
  
-@@ -542,12 +542,13 @@ static int open_socket(int dev, unsigned
+@@ -536,12 +536,13 @@ static int open_socket(int dev, unsigned
  	}
  
  	opt = 1;
 -	if (setsockopt(sk, SOL_HCI, HCI_TIME_STAMP, &opt, sizeof(opt)) < 0) {
 +	if (setsockopt(sk, SOL_SOCKET, SO_TIMESTAMP, &opt, sizeof(opt)) < 0) {
  		perror("Can't enable time stamp");
- 		return -1;
+ 		goto fail;
  	}
  
  	/* Setup filter */
@@ -54,9 +54,9 @@ Also, the BSDs provide a socket level TIMESTAMP option
  	hci_filter_clear(&flt);
  	hci_filter_all_ptypes(&flt);
  	hci_filter_all_events(&flt);
-@@ -555,13 +556,34 @@ static int open_socket(int dev, unsigned
+@@ -549,13 +550,34 @@ static int open_socket(int dev, unsigned
  		perror("Can't set filter");
- 		return -1;
+ 		goto fail;
  	}
 +#else
 +	memset(&flt, 0xff, sizeof(flt));
@@ -88,9 +88,9 @@ Also, the BSDs provide a socket level TIMESTAMP option
 -		printf("Can't attach to device hci%d. %s(%d)\n",
 +		printf("Can't attach to device %s. %s(%d)\n",
  					dev, strerror(errno), errno);
- 		return -1;
+ 		goto fail;
  	}
-@@ -672,7 +694,7 @@ int main(int argc, char *argv[])
+@@ -670,7 +692,7 @@ int main(int argc, char *argv[])
  {
  	unsigned long flags = 0;
  	unsigned long filter = 0;
@@ -99,7 +99,7 @@ Also, the BSDs provide a socket level TIMESTAMP option
  	int defpsm = 0;
  	int defcompid = DEFAULT_COMPID;
  	int opt, pppdump_fd = -1, audio_fd = -1;
-@@ -684,7 +706,7 @@ int main(int argc, char *argv[])
+@@ -682,7 +704,7 @@ int main(int argc, char *argv[])
  		switch(opt) {
  		case 'i':
  			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))

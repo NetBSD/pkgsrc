@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:19:54 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/06/04 09:06:16 plunky Exp $
 
-BLAKE2s (bluez-5.27.tar.xz) = ab8a97adae31921171c6239cd93a4c4ee7ec49548eb6f59d39080128a9a34622
-SHA512 (bluez-5.27.tar.xz) = 5e5e3ec17b4552027559083effb076e9c7d45528765fb27ca1aa1f3d8bb6a4a79c9fda91392f7b5b6da7aabf2b2b6e5bb16b0546323901501a93c53f79a66324
-Size (bluez-5.27.tar.xz) = 1542348 bytes
+BLAKE2s (bluez-5.66.tar.xz) = 680796ff604f7d485cbe7cce6f13ad64d7bf6a30771a6fec4accef33b5cf7512
+SHA512 (bluez-5.66.tar.xz) = ed0994932687eacf27207867366671b323671f5d5199daf36ea5eff8f254f2bc99ef989ef7df9883b35c06f2af60452be8bad0a06109428a4717cf2b247b4865
+Size (bluez-5.66.tar.xz) = 2257288 bytes
 SHA1 (patch-Makefile) = 24c3f132b0c454c7f06915ca368b67e463c4e4f0
 SHA1 (patch-lib_Makefile) = d881586878b8ee58f642f993bfad6a614148fb7b
 SHA1 (patch-lib_bluetooth.c) = 997da8b1f00bf0093ca45cdd5c416d6155c591ea
-SHA1 (patch-lib_bluetooth.h) = cd200dfefdabe7a517928c62848faceb41fb302a
+SHA1 (patch-lib_bluetooth.h) = 23a982bfb85e74dc876c42bdd8c0041461963c20
 SHA1 (patch-lib_hci.c) = 825b01082e2be2336c429e27ec78348fe4c39985
-SHA1 (patch-lib_hci.h) = e032192fba2b96cf44888a7ae383685e11ae16b7
+SHA1 (patch-lib_hci.h) = 258596cbbbaf1c1827bdd59fa1bbdd7582244277
 SHA1 (patch-lib_hci__lib.h) = aa2768c85c1a775cbc65d4274e1a9cb47f16a7da
 SHA1 (patch-lib_l2cap.h) = 744d600f5b25eaf8f7fca6646d5dbdd73f709753
-SHA1 (patch-src_shared_util.h) = 349f8869b54746d5799af5beadd390dffd5f260b
+SHA1 (patch-src_shared_util.h) = 3509ed85b0758add9f7704f070f41a3f6aa93ab9
 SHA1 (patch-tools_Makefile) = 4c63cb92ce4fc8446fcb6b16a60f17d68b25078f
-SHA1 (patch-tools_hcidump.1) = 3981ca329e9837ea9719fea59277357a435cc265
-SHA1 (patch-tools_hcidump.c) = ca6871ca562bc218ce445edf8b364f528d260d4e
+SHA1 (patch-tools_hcidump.1) = 7bd27aa48435d8b1ea8f292b27c63eb36c78f820
+SHA1 (patch-tools_hcidump.c) = 2dddf54f9c648a34597f036b281baabadb8689eb
 SHA1 (patch-tools_parser_Makefile) = 4d4410493393d521c89ba429b39b0a3bbbba135b
 SHA1 (patch-tools_parser_bnep.c) = efbbe5f4cd47dcb0bf72c16bd67d9d93ba7cd43a
 SHA1 (patch-tools_parser_lmp.c) = f410be55cf07f6d7f7d3b1466b7fbe708b1a6de5
-SHA1 (patch-tools_parser_parser.h) = 19ff1cdd8d7af71d9ae86497d3e1f49ae9db9a2a
+SHA1 (patch-tools_parser_parser.h) = e8e1c7b9c9ee958e7b0dd8b7e971557375ac33b9
 SHA1 (patch-tools_parser_rfcomm.h) = 917dd10203c62de7679909fc014a69ccd2a5185d
 SHA1 (patch-tools_parser_tcpip.c) = e06881372e8edf23f22c1a0a61c9bc346381a0e3
