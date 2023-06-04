@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/04 03:21:05 mef Exp $
 
-BLAKE2s (R/mapdata_2.3.0.tar.gz) = 0b21ae7a788d7af8d897f04d601f8e5ff9ce03c536a4cb73bd1565ac106febe8
-SHA512 (R/mapdata_2.3.0.tar.gz) = 08df84941a281d4c93f295fa40cef205c6eb67d7ea2736085285287b1a6077f2fbdde81acd0442552464b44bb71dd9858c6fa6c481c303e9c7b7ad3905c6f6b3
-Size (R/mapdata_2.3.0.tar.gz) = 13619287 bytes
+BLAKE2s (R/mapdata_2.3.1.tar.gz) = 11fcab8fab897494e42e3d3854c04e4808d712e32e63ca907998da96bde1c4dc
+SHA512 (R/mapdata_2.3.1.tar.gz) = f2fb048920ccb85c21dd0cb5f5b78596ac90d16d3606f6f6ea3f70730904f432fc584bd2602dcc4a18dbd150768035f6805d1ca0a0ce7e9a89562a53ef252df8
+Size (R/mapdata_2.3.1.tar.gz) = 13623702 bytes
