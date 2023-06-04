@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1717 2023/06/04 02:40:49 markd Exp $
+# $NetBSD: Makefile,v 1.1718 2023/06/04 02:47:57 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -706,6 +706,7 @@ SUBDIR+=	py-django-filer
 SUBDIR+=	py-django-filter
 SUBDIR+=	py-django-formtools
 SUBDIR+=	py-django-gravatar2
+SUBDIR+=	py-django-haystack
 SUBDIR+=	py-django-import-export
 SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-js-asset
