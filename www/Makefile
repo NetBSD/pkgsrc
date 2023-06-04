@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1722 2023/06/04 03:15:07 markd Exp $
+# $NetBSD: Makefile,v 1.1723 2023/06/04 03:42:22 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -232,6 +232,7 @@ SUBDIR+=	lua-resty-lrucache
 SUBDIR+=	lua-web-sanitize
 SUBDIR+=	luakit
 SUBDIR+=	lynx
+SUBDIR+=	mailman3-web
 SUBDIR+=	make_album
 SUBDIR+=	matcha-sns
 SUBDIR+=	mediawiki

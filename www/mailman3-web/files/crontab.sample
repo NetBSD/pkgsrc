@@ -1,0 +1,7 @@
+@hourly	@PREFIX@/bin/mailman-web runjobs hourly
+@daily	@PREFIX@/bin/mailman-web runjobs daily
+@weekly	@PREFIX@/bin/mailman-web runjobs weekly
+@monthly  @PREFIX@/bin/mailman-web runjobs monthly
+@yearly	@PREFIX@/bin/mailman-web runjobs yearly
+* * * * *  @PREFIX@/bin/mailman-web runjobs minutely
+2,17,32,47 * * * * @PREFIX@/bin/mailman-web runjobs quarter_hourly
