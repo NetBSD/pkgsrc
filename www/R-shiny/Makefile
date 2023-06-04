@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/04/30 01:49:59 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/04 02:10:23 mef Exp $
 
 R_PKGNAME=	shiny
-R_PKGVER=	1.7.1
+R_PKGVER=	1.7.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
