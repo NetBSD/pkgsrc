@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/08/24 11:36:24 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/04 02:02:23 mef Exp $
 
 R_PKGNAME=	shinyjs
-R_PKGVER=	2.0.0
+R_PKGVER=	2.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
