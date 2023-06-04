@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1714 2023/06/04 01:45:35 markd Exp $
+# $NetBSD: Makefile,v 1.1715 2023/06/04 02:29:21 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -687,6 +687,7 @@ SUBDIR+=	py-daphne
 SUBDIR+=	py-django
 SUBDIR+=	py-django-admin-rangefilter
 SUBDIR+=	py-django-admin-sortable2
+SUBDIR+=	py-django-allauth
 SUBDIR+=	py-django-appconf
 SUBDIR+=	py-django-appmedia
 SUBDIR+=	py-django-binary-database-files
