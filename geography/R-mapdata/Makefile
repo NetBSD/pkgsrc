@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/08/09 17:00:09 brook Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/04 03:21:05 mef Exp $
 
 R_PKGNAME=	mapdata
-R_PKGVER=	2.3.0
+R_PKGVER=	2.3.1
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-DEPENDS+=	R-maps>=2.0-7:../../geography/R-maps
+DEPENDS+=	R-maps>=2.0.7:../../geography/R-maps
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
