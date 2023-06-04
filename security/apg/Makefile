@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/04 06:34:54 triaxx Exp $
 #
 
 DISTNAME=	apg-2.3.0b
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	security
 #MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 
@@ -35,4 +35,5 @@ post-extract:
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/perl/apgcli.pl ${DESTDIR}${PREFIX}/bin/apgcli
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
