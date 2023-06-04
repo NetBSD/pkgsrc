@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/05/17 21:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/04 20:18:34 pin Exp $
 
-DISTNAME=	delta-0.15.1
-PKGNAME=	git-delta-0.15.1
+DISTNAME=	delta-0.16.5
+PKGNAME=	git-delta-0.16.5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dandavison/}
 GITHUB_PROJECT=	delta
@@ -13,5 +13,8 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+
 .include "../../lang/rust/cargo.mk"
+.include "../../devel/libgit2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
