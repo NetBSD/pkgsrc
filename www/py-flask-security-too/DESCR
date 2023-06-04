@@ -1,0 +1,5 @@
+Flask-Security allows you to quickly add common security mechanisms
+to your Flask application.
+
+This is a independently maintained version of Flask-Security based on
+the 3.0.0 version of the Original.
