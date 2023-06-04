@@ -1,35 +1,31 @@
-$NetBSD: patch-tools_hcidump.1,v 1.1 2014/12/30 08:39:13 plunky Exp $
+$NetBSD: patch-tools_hcidump.1,v 1.2 2023/06/04 09:06:16 plunky Exp $
 
 adjust the manual page
 
---- tools/hcidump.1.orig	2012-12-24 17:46:55.000000000 +0000
+--- tools/hcidump.1.orig	2021-10-13 18:49:06.000000000 +0000
 +++ tools/hcidump.1
-@@ -12,8 +12,8 @@ hcidump \- Parse HCI data
- hcidump
- reads raw HCI data coming from and going to a Bluetooth device (which can be
- specified with the option
--.BR -i ,
--default is the first available one) and prints to screen commands, events and
-+.BR -i )
-+and prints to screen commands, events and
- data in a human-readable form. Optionally, the dump can be written to a file
- rather than parsed, and the dump file can be parsed in a subsequent moment.
+@@ -37,18 +37,18 @@ level margin: \\n[rst2man-indent\\n[rst2
+ \fBhcidump\fP [OPTIONS ...] [FILTERS]
+ .SH DESCRIPTION
+ .sp
+-\fBhcidump(1)\fP reads raw HCI data coming from and going to a Bluetooth device
+-(which can be specified with the option \fB\-i\fP, default is the first available
+-one) and prints to screen commands, events and data in a human\-readable form.
++\fBhcidump(1)\fP reads raw HCI data coming from and going to Bluetooth devices
++(which can be specified with the option \fB\-i\fP)
++and prints to screen commands, events and data in a human\-readable form.
+ Optionally, the dump can be written to a file rather than parsed, and the dump
+ file can be parsed in a subsequent moment.
  .SH OPTIONS
-@@ -21,14 +21,14 @@ rather than parsed, and the dump file ca
- .BI -h
- Prints usage info and exits
+ .INDENT 0.0
  .TP
--.BI -i " <hciX>"
-+.BI -i " <device>"
- Data is read from
--.IR hciX ,
-+.IR device,
- which must be the name of an installed Bluetooth device. If not specified,
- and if
- .B
- -r
--option is not set, data is read from the first available Bluetooth device.
-+option is not set, data is read from all available Bluetooth devices.
+-.BI \-i \ <hciX>
+-Data is read from \fIhciX\fP, which must be the name of an installed Bluetooth
++.BI \-i \ <device>
++Data is read from \fIdevice\fP, which must be the name of an installed Bluetooth
+ device. If not specified, and if \fB\-r\fP option is not set, data is read from
+-the first available Bluetooth device.
++all available Bluetooth devices.
  .TP
- .BI -l " <len>" "\fR,\fP \-\^\-snap-len=" "<len>"
- Sets max length of processed packets to
+ .BI \-l \ <len>\fR,\fB \ \-\-snap\-len\fB= <len>
+ Sets max length of processed packets to \fIlen\fP\&.

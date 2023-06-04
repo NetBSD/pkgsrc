@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_bluetooth.h,v 1.1 2014/12/30 08:39:13 plunky Exp $
+$NetBSD: patch-lib_bluetooth.h,v 1.2 2023/06/04 09:06:16 plunky Exp $
 
 Not much of the original library is needed.
 
---- lib/bluetooth.h.orig	2014-12-12 13:38:33.000000000 +0000
+--- lib/bluetooth.h.orig	2020-03-15 06:38:34.000000000 +0000
 +++ lib/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -12,7 +12,7 @@ Not much of the original library is needed.
  #include <stdio.h>
  #include <stdint.h>
  #include <string.h>
-@@ -153,6 +154,20 @@ enum {
+@@ -172,6 +173,20 @@ enum {
  #else
  #error "Unknown byte order"
  #endif
@@ -33,7 +33,7 @@ Not much of the original library is needed.
  
  /* Bluetooth unaligned access */
  #define bt_get_unaligned(ptr)			\
-@@ -296,6 +311,7 @@ static inline void bt_put_be16(uint16_t 
+@@ -315,6 +330,7 @@ static inline void bt_put_be16(uint16_t 
  #error "Unknown byte order"
  #endif
  
@@ -41,7 +41,7 @@ Not much of the original library is needed.
  /* BD Address */
  typedef struct {
  	uint8_t b[6];
-@@ -309,6 +325,7 @@ typedef struct {
+@@ -328,6 +344,7 @@ typedef struct {
  #define BDADDR_ANY   (&(bdaddr_t) {{0, 0, 0, 0, 0, 0}})
  #define BDADDR_ALL   (&(bdaddr_t) {{0xff, 0xff, 0xff, 0xff, 0xff, 0xff}})
  #define BDADDR_LOCAL (&(bdaddr_t) {{0, 0, 0, 0xff, 0xff, 0xff}})
@@ -49,7 +49,7 @@ Not much of the original library is needed.
  
  /* Copy, swap, convert BD Address */
  static inline int bacmp(const bdaddr_t *ba1, const bdaddr_t *ba2)
-@@ -321,9 +338,12 @@ static inline void bacpy(bdaddr_t *dst, 
+@@ -340,9 +357,12 @@ static inline void bacpy(bdaddr_t *dst, 
  }
  
  void baswap(bdaddr_t *dst, const bdaddr_t *src);
@@ -59,10 +59,10 @@ Not much of the original library is needed.
 +#endif
  int ba2str(const bdaddr_t *ba, char *str);
 +#if 0
+ int ba2strlc(const bdaddr_t *ba, char *str);
  int str2ba(const char *str, bdaddr_t *ba);
  int ba2oui(const bdaddr_t *ba, char *oui);
- int bachk(const char *str);
-@@ -337,6 +357,7 @@ void *bt_malloc(size_t size);
+@@ -357,6 +377,7 @@ void *bt_malloc(size_t size);
  void bt_free(void *ptr);
  
  int bt_error(uint16_t code);
