@@ -1,4 +1,4 @@
-$NetBSD: patch-config_makefiles_rust.mk,v 1.10 2022/06/14 16:44:29 ryoon Exp $
+$NetBSD: patch-config_makefiles_rust.mk,v 1.11 2023/06/04 09:26:35 ryoon Exp $
 
 NetBSD doesn't get along with parallel rust builds (it causes issues
 with ld.so) which are the default. Force -j1.
@@ -13,7 +13,7 @@ From: https://bugzilla.mozilla.org/show_bug.cgi?id=1644409
  RUSTFLAGS += -Zsanitizer=thread
  endif
 +ifeq ($(OS_ARCH),NetBSD)
-+cargo_build_flags += -j1
++cargo_build_flags += @RUST_MAKE_JOBS@
 +endif
  
  rustflags_sancov =
