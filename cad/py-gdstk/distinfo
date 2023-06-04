@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/30 15:01:00 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/06/04 07:49:05 mef Exp $
 
-BLAKE2s (gdstk-0.9.40.tar.gz) = ef46723fc5e69e8fe2d8b53ff00899f8750e3b4482bee0024640527f77156c60
-SHA512 (gdstk-0.9.40.tar.gz) = 5cd091f2d1382f9a83ba1fc26edd17a766a980a610ffaacbe4fe58dfc55178239283d3785b546dad2f183b2420c7c6a12612f3a234ee821b18533ecb2ea967ba
-Size (gdstk-0.9.40.tar.gz) = 629866 bytes
+BLAKE2s (gdstk-0.9.41.tar.gz) = 5c9bcd88a8579696e4c658f4446a2eb6c551cff88e3d43c4f6d683028a2cccb9
+SHA512 (gdstk-0.9.41.tar.gz) = 79f7147412d6c563bf147694cd8cda992d79c5cb3dc62d904db466dfb5f15af7c2a18760b1c6a89388bf551f75678cf0f0b38de21891beadc7ec66b3064aa5cf
+Size (gdstk-0.9.41.tar.gz) = 629335 bytes
