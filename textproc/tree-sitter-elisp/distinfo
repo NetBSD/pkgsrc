@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 04:52:24 wiz Exp $
+
+BLAKE2s (tree-sitter-elisp-1.3.0.tar.gz) = 94751e8e61d6b00a3c42b690d395bad6a2b14824a5be903a9817d692f8ee07c6
+SHA512 (tree-sitter-elisp-1.3.0.tar.gz) = 99d4fc274492a017fb959a98dca5194b83308e0a0612d20788d4ce73d09175529af1783ffa6f424538573bb8cf07a8ad7b93014adcf9a5e4ef7999d1f15a2eb9
+Size (tree-sitter-elisp-1.3.0.tar.gz) = 26288 bytes
