@@ -1,0 +1,14 @@
+A multiprocessing distributed task queue for Django
+
+Features:
+* Multiprocessing worker pool
+* Asynchronous tasks
+* Scheduled, cron and repeated tasks
+* Signed and compressed packages
+* Failure and success database or cache
+* Result hooks, groups and chains
+* Django Admin integration
+* PaaS compatible with multiple instances
+* Multi cluster monitor
+* Redis, Disque, IronMQ, SQS, MongoDB or ORM
+* Rollbar and Sentry support
