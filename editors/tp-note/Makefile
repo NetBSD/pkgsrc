@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/06/03 19:34:29 pin Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/04 06:45:31 pin Exp $
 
 DISTNAME=	tp-note-1.21.5
 CATEGORIES=	editors
@@ -30,7 +30,6 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/tpnote \
 		${DESTDIR}${PREFIX}/bin
-post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/build/man/man1/tpnote.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/assets/tpnote.svg  \
