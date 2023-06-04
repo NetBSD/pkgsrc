@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.18 2023/01/07 23:36:39 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.19 2023/06/04 09:26:35 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2022-12-15 22:31:34.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2023-05-22 16:53:55.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2099,7 +2099,11 @@ pref("reader.pocket.ctaVersion", "");
+@@ -2120,7 +2120,11 @@ pref("reader.pocket.ctaVersion", "");
  
  pref("view_source.tab", true);
  
@@ -18,7 +18,7 @@ each one.
  
  // Enable Push API.
  pref("dom.push.enabled", true);
-@@ -2279,6 +2283,27 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -2329,6 +2333,30 @@ pref("app.normandy.onsync_skew_sec", 600
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -42,6 +42,9 @@ each one.
 +pref("dom.webmidi.enabled", true);
 +pref("midi.prompt.testing", true);
 +pref("media.navigator.permission.disabled", true);
++
++// DIsable WebGL for NetBSD systems
++pref("webgl.disabled", true);
 +
  // Discovery prefs
  pref("browser.discovery.enabled", true);
