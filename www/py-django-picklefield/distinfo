@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 02:53:08 markd Exp $
+
+BLAKE2s (django-picklefield-3.1.tar.gz) = 9289a2ee1b5653a66c9bd22bba30832f65d5f08b6a5d24842147218f611ac4cb
+SHA512 (django-picklefield-3.1.tar.gz) = 1445a21e60a714cb6ac0cbc71bb44c3a2b51f169621bcc0183c788e70e9eaae2d07949e4b6f7ad4ba5dae99d91a2a7225d897771e4f9fb2230481365ee304b53
+Size (django-picklefield-3.1.tar.gz) = 9398 bytes
