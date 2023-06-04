@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 03:02:29 markd Exp $
+
+BLAKE2s (cmarkgfm-2022.10.27.tar.gz) = 67c13dd140487afd7eb40174a1968266636cc31c420f89decb01255acec16d8e
+SHA512 (cmarkgfm-2022.10.27.tar.gz) = b5c1c622a7df9eb882bf152d98baeb61e9103f7683ec5d50e3eee1ada7caac2daf4e1e1e8c34566ab8c8e00136da9e65ae356e06e511da281b8de890aca85a86
+Size (cmarkgfm-2022.10.27.tar.gz) = 141248 bytes
