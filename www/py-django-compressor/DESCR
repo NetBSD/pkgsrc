@@ -1,0 +1,5 @@
+Django Compressor processes, combines and minifies linked and inline
+Javascript or CSS in a Django template into cacheable static files.
+
+It supports compilers such as coffeescript, LESS and SASS and is
+extensible by custom processing steps.
