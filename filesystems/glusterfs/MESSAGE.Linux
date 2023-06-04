@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.Linux,v 1.1 2023/06/04 00:45:01 gutteridge Exp $
+
+For glusterfs servers:
+ - recommended filesystem: XFS
+ - FS tuning: mkfs.xfs -f -i size=512 -n size=8192 -d su=128K,sw=10 BLOCKDEV
+ - mount options: rw,inode64,noatime,nouuid
+===========================================================================
