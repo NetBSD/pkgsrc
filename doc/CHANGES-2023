@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3545 2023/06/04 09:28:22 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.3546 2023/06/04 11:01:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4917,3 +4917,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/netbt-hcidump to 5.66 [plunky 2023-06-04]
 	Updated www/firefox to 113.0.2 [ryoon 2023-06-04]
 	Updated www/firefox-l10n to 113.0.2 [ryoon 2023-06-04]
+	Added sysutils/bracket version 2.17 [wiz 2023-06-04]
