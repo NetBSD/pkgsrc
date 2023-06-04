@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/04 19:35:31 wiz Exp $
+lib/libtree-sitter-go-mod.la
