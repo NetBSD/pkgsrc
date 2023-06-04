@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1049 2023/06/01 16:03:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1050 2023/06/04 11:00:32 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -70,6 +70,7 @@ SUBDIR+=	bkpupsd
 SUBDIR+=	bkt
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
+SUBDIR+=	bracket
 SUBDIR+=	brasero
 SUBDIR+=	broot
 SUBDIR+=	bsdec2-image-upload
