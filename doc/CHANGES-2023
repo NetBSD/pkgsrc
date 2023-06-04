@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3531 2023/06/04 03:44:59 markd Exp $
+$NetBSD: CHANGES-2023,v 1.3532 2023/06/04 04:13:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4904,3 +4904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/mailman3 version 3.3.8 [markd 2023-06-04]
 	Added mail/py-mailman-hyperkitty version 1.2.1 [markd 2023-06-04]
 	Added www/mailman3-web version 0.0.6 [markd 2023-06-04]
+	Updated math/R-XML to 3.99.0.14 [mef 2023-06-04]
