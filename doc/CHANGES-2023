@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3536 2023/06/04 06:44:43 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3537 2023/06/04 07:24:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xscope to 1.4.4 [wiz 2023-06-04]
 	Updated security/apg to 2.3.0bnb12 [triaxx 2023-06-04]
 	Updated benchmarks/hyperfine to 1.17.0 [pin 2023-06-04]
+	Updated devel/R-testthat to 3.1.8 [mef 2023-06-04]
