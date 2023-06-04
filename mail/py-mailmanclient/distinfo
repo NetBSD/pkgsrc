@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 01:40:54 markd Exp $
+
+BLAKE2s (mailmanclient-3.3.5.tar.gz) = 69081fb820af681bb81f21251085d3d009b997bec5b184d83054cab2b1c704d6
+SHA512 (mailmanclient-3.3.5.tar.gz) = 42e1a30e7bbaeb57745cde116d441aafa4941e145429b1117993c24fd8fbd3e35d797e36f331e00a37e8c931fc44621c8103cc927b5bb1da0a273872c96c86c8
+Size (mailmanclient-3.3.5.tar.gz) = 89608 bytes
