@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/04 07:35:52 mef Exp $
 
-BLAKE2s (R/rgdal_1.5-27.tar.gz) = 7bc3c3a82df2382dea79f251ce4c3583482a331a0ae8d227f81c7fb5fd5dc46c
-SHA512 (R/rgdal_1.5-27.tar.gz) = ac748dbca3802d92cfa426e198dcd787f05bfa59e1027f73da8dca8dcb24da5d6b4ec874773379b6f6cb3cca3f3fb0e65176aa986fd059457e82cf21abc3474d
-Size (R/rgdal_1.5-27.tar.gz) = 4391149 bytes
+BLAKE2s (R/rgdal_1.6-7.tar.gz) = 05b211cf9d3d085bb7129bc4adef4ea5d5b0edee9fbadda0d005be86110101ae
+SHA512 (R/rgdal_1.6-7.tar.gz) = a609bed99fae074d500035e2e461a9a70a11374276669523dae3a9afd23cde99c0e5742d2ac527b66d60a12b48b1ee1ae5922a5ca595f33b8ffe934e8933ffb0
+Size (R/rgdal_1.6-7.tar.gz) = 4351163 bytes
