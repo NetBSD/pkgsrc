@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1721 2023/06/04 03:08:41 markd Exp $
+# $NetBSD: Makefile,v 1.1722 2023/06/04 03:15:07 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -812,6 +812,7 @@ SUBDIR+=	py-httptools
 SUBDIR+=	py-httpx
 SUBDIR+=	py-httpx-socks
 SUBDIR+=	py-hyperframe
+SUBDIR+=	py-hyperkitty
 SUBDIR+=	py-hyperlink
 SUBDIR+=	py-idna
 SUBDIR+=	py-ipywidgets
