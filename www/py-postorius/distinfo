@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/04 03:08:41 markd Exp $
+
+BLAKE2s (postorius-1.3.8.tar.gz) = 83a4dafbd56a18b701065456a2b33ac4f1ae8cc27c9436f30736234abf25b750
+SHA512 (postorius-1.3.8.tar.gz) = 49ea63687cf486f70d2e75935d3851df032727c4161334ff27042318f219670bce77726cb880512419cdedad67ffdaaea4517339e0c65854b0000086d3433aae
+Size (postorius-1.3.8.tar.gz) = 3222195 bytes
