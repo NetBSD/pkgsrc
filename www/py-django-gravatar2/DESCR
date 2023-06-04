@@ -1,0 +1,2 @@
+A lightweight django-gravatar app. Includes helper methods for interacting
+with gravatars outside of template code.
