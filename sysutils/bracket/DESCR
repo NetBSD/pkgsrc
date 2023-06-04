@@ -1,0 +1,7 @@
+This is "bracket", a set of scripts for
+
+ - Doing periodic builds of NetBSD-current
+ - Testing the builds using anita (https://www.gson.org/netbsd/anita/)
+ - Pinpointing regressions through automated binary search (aka bisection)
+ - Reporting build and test failures by email
+ - Generating HTML reports and graphs
