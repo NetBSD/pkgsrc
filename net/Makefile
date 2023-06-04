@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1516 2023/05/30 15:17:20 taca Exp $
+# $NetBSD: Makefile,v 1.1517 2023/06/04 08:40:03 plunky Exp $
 #
 
 COMMENT=	Networking tools
@@ -463,6 +463,7 @@ SUBDIR+=	netname
 SUBDIR+=	netop
 SUBDIR+=	netpipes
 SUBDIR+=	netwake
+SUBDIR+=	nextcloud-client
 SUBDIR+=	nfdump
 SUBDIR+=	ngrep
 SUBDIR+=	ngtcp2
