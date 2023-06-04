@@ -1,0 +1,5 @@
+This is a Django project that contains default settings and url settings
+for Mailman 3 Web Interface. It consists of the following sub-projects:
+
+* Postorius
+* Hyperkitty
