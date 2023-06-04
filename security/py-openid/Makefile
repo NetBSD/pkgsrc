@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.16 2022/01/22 14:25:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/04 02:20:29 markd Exp $
 
-DISTVERS=	2.2.5
-GITREF=		b666238
-DISTNAME=	python-openid-${DISTVERS}
-PKGNAME=	${PYPKGPREFIX}-openid-${DISTVERS}
-PKGREVISION=	1
+DISTNAME=	python3-openid-3.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python3-//}
 CATEGORIES=	security python
-MASTER_SITES=	http://github.com/openid/python-openid/tarball/${DISTVERS}/
-WRKSRC=		${WRKDIR}/openid-python-openid-${GITREF}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python3-openid/}
 
-MAINTAINER=	roy@NetBSD.org
-HOMEPAGE=	http://www.openidenabled.com/openid/libraries/python/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/necaris/python3-openid/
 COMMENT=	Python module for OpenID
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	27
+DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
+
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
