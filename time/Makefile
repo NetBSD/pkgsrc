@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2023/05/15 20:03:46 adam Exp $
+# $NetBSD: Makefile,v 1.245 2023/06/05 11:45:21 mef Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -6,6 +6,7 @@ COMMENT=	Clocks, calendars, daily planners and other time related applications
 SUBDIR+=	R-hms
 SUBDIR+=	R-lubridate
 SUBDIR+=	R-timeDate
+SUBDIR+=	R-timechange
 SUBDIR+=	R-tzdb
 SUBDIR+=	abclock
 SUBDIR+=	anacron
