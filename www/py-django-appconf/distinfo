@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/06/05 11:36:55 markd Exp $
 
-BLAKE2s (django-appconf-0.6.tar.gz) = 916d90948a7cb2426295595520ba5501a4fdeb9a649aff0204f4b2ece4c9755a
-SHA512 (django-appconf-0.6.tar.gz) = d2a4aea07eeabdc32ed85cf0625702f3e7861b82d1e47660f3761dedff42a3bd3bfcc54dc3d46072758bea1a34af160f7a908bf0925c05b7409f1224f4a7245d
-Size (django-appconf-0.6.tar.gz) = 14072 bytes
+BLAKE2s (django-appconf-1.0.5.tar.gz) = 5b882640a28d3da1ab92cc1935b2139ee9d5cd741f48d7133315308553ffc2b8
+SHA512 (django-appconf-1.0.5.tar.gz) = 9d1b01e3f8dac5a9a7f6f4f5c0e9fcf4a2a0177e7702e5f932f238379bd2bb065a698c86d27c2dbab7ba6480abdc25595c8a4f7c6f0524517aeb1c0e34f09864
+Size (django-appconf-1.0.5.tar.gz) = 15891 bytes
