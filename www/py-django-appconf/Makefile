@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/05 11:36:55 markd Exp $
 
-DISTNAME=	django-appconf-0.6
+DISTNAME=	django-appconf-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	-http://nodeload.github.com/jezdez/django-appconf/tar.gz/v0.6
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-appconf/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/jezdez/django-appconf/
+HOMEPAGE=	https://github.com/django-compressor/django-appconf/
 COMMENT=	Helper class for handling configuration defaults of Django
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
