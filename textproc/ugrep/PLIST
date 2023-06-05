@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/01 15:13:59 scole Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/05 19:26:22 adam Exp $
 bin/ug
+bin/ug+
 bin/ugrep
+bin/ugrep+
 man/man1/ug.1
 man/man1/ugrep.1
 share/ugrep/patterns/README.md
