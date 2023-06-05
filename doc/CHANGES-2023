@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3557 2023/06/05 15:21:24 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3558 2023/06/05 15:52:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4929,3 +4929,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gopls to 0.12.2 [bsiegert 2023-06-05]
 	Updated textproc/angle-grinder to 0.19.2 [pin 2023-06-05]
 	Updated x11/sakura to 3.8.7 [pin 2023-06-05]
+	Updated x11/xterm to 382 [wiz 2023-06-05]
