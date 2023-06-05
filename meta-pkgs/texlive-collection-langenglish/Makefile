@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2023/04/11 03:26:23 markd Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/05 00:09:19 markd Exp $
 
 DISTNAME=	collection-langenglish
 PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	65496
+TEXLIVE_REV=	66846
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basi
 # comprehensive is documentation only
 # dickimaw is documentation only
 # docsurvey is documentation only
+# drawing-with-metapost is documentation only
 # dtxtut is documentation only
 # first-latex-doc is documentation only
 # fontinstallationguide is documentation only
