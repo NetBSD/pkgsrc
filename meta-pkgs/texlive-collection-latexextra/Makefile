@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.79 2023/05/07 21:00:04 markd Exp $
+# $NetBSD: Makefile,v 1.80 2023/06/05 00:15:52 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	66744
+TEXLIVE_REV=	67187
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -205,6 +205,7 @@ DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 DEPENDS+=	tex-classpack-[0-9]*:../../print/tex-classpack
 # depend clefval
 DEPENDS+=	tex-cleveref-[0-9]*:../../print/tex-cleveref
+# depend cleveref-usedon
 # depend clicks
 # depend clipboard
 # depend clistmap
@@ -218,6 +219,7 @@ DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 # depend cntformats
 # depend cntperchap
 # depend codebox
+# depend codedescribe
 # depend codedoc
 # depend codehigh
 # depend codepage
@@ -265,6 +267,7 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend copyedit
 # depend copyrightbox
 # depend coseoul
+# depend counterz
 # depend counttexruns
 # depend courseoutline
 # depend coursepaper
@@ -604,6 +607,7 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend glossaries-irish
 # depend glossaries-italian
 # depend glossaries-magyar
+# depend glossaries-norsk
 # depend glossaries-nynorsk
 # depend glossaries-polish
 # depend glossaries-portuges
@@ -901,6 +905,7 @@ DEPENDS+=	tex-morefloats-[0-9]*:../../print/tex-morefloats
 # depend moresize
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
 DEPENDS+=	tex-morewrites-[0-9]*:../../print/tex-morewrites
+# depend movement-arrows
 # depend movie15
 DEPENDS+=	tex-mparhack-[0-9]*:../../print/tex-mparhack
 # depend mpostinl
@@ -1170,6 +1175,7 @@ DEPENDS+=	tex-scalerel-[0-9]*:../../print/tex-scalerel
 # depend scrambledenvs
 # depend scrlayer-fancyhdr
 # depend scrlttr2copy
+# depend scrwfile
 # depend sdaps
 # depend sdrt
 DEPENDS+=	tex-secdot-[0-9]*:../../print/tex-secdot
@@ -1247,6 +1253,7 @@ DEPENDS+=	tex-srcltx-[0-9]*:../../print/tex-srcltx
 # depend stack
 DEPENDS+=	tex-stackengine-[0-9]*:../../print/tex-stackengine
 DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
+# depend starray
 DEPENDS+=	tex-stdclsdv-[0-9]*:../../print/tex-stdclsdv
 # depend stdpage
 # depend stealcaps
@@ -1387,7 +1394,9 @@ DEPENDS+=	tex-ucs-[0-9]*:../../print/tex-ucs
 # depend underoverlap
 DEPENDS+=	tex-undolabl-[0-9]*:../../print/tex-undolabl
 # depend uni-titlepage
+# depend unicode-math-input
 # depend unicodefonttable
+# depend unifront
 # depend unisc
 # depend unitconv
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
