@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/10/10 13:50:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/06/05 15:52:19 wiz Exp $
 bin/koi8rxterm
 bin/resize
 bin/uxterm
@@ -15,11 +15,15 @@ man/man1/uxterm.1
 man/man1/xterm.1
 share/applications/uxterm.desktop
 share/applications/xterm.desktop
+share/pixmaps/filled-xterm_16x16.xpm
 share/pixmaps/filled-xterm_32x32.xpm
 share/pixmaps/filled-xterm_48x48.xpm
+share/pixmaps/mini.xterm_16x16.xpm
 share/pixmaps/mini.xterm_32x32.xpm
 share/pixmaps/mini.xterm_48x48.xpm
+share/pixmaps/xterm-color_16x16.xpm
 share/pixmaps/xterm-color_32x32.xpm
 share/pixmaps/xterm-color_48x48.xpm
+share/pixmaps/xterm_16x16.xpm
 share/pixmaps/xterm_32x32.xpm
 share/pixmaps/xterm_48x48.xpm
