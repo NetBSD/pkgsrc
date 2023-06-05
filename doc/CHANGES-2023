@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3550 2023/06/05 11:40:31 markd Exp $
+$NetBSD: CHANGES-2023,v 1.3551 2023/06/05 11:45:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hackernews-tui to 0.13.2 [pin 2023-06-04]
 	Updated textproc/git-delta to 0.16.5 [pin 2023-06-04]
 	Updated www/py-django-appconf to 1.0.5 [markd 2023-06-05]
+	Added time/R-timechange version 0.2.0 [mef 2023-06-05]
