@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2023/03/06 12:33:03 pin Exp $
+$NetBSD: distinfo,v 1.16 2023/06/05 15:20:53 pin Exp $
 
-BLAKE2s (sakura-3.8.6.tar.bz2) = 5ec8051932ddf6a86ff97482dc846ba2feb8547a0458623d4c0a8a901f262f66
-SHA512 (sakura-3.8.6.tar.bz2) = dd9318526685fd866295903f0c77a7a04a09894d8a874af21f0e99bedc25ca80c7b6d14d7db2ffac238b532ea8be4e459d3ec1ef7f23c1ebd330310bf602222e
-Size (sakura-3.8.6.tar.bz2) = 59778 bytes
+BLAKE2s (sakura-3.8.7.tar.bz2) = 9ef345f292baa6538db4cd0391aa6f496bd04f7d3d0f915a00088f02da3b7121
+SHA512 (sakura-3.8.7.tar.bz2) = ec606af0ab808e93366a08ef36199ef7e23677e7aac4765573604230c9ea498a14d6f22983ab7285030e6d10f432b7ad924f33660bce8bc05bd76a2c31c1a76b
+Size (sakura-3.8.7.tar.bz2) = 60003 bytes
 SHA1 (patch-CMakeLists.txt) = 2083126c8a3ba4fa9a5e491f209c567de89c76cf
