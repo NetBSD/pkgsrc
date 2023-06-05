@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/08/11 06:09:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/05 13:46:16 wiz Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -209,7 +209,6 @@ share/doc/xextproto/shm.xml
 share/doc/xextproto/sync.xml
 share/doc/xextproto/tog-cup.xml
 share/doc/xextproto/xtest.xml
-share/doc/xorgproto/PM_spec
 share/doc/xorgproto/compositeproto.txt
 share/doc/xorgproto/damageproto.txt
 share/doc/xorgproto/dri2proto.txt
