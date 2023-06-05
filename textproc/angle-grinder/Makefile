@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/20 13:59:11 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/05 15:19:57 pin Exp $
 
-DISTNAME=	angle-grinder-0.19.1
+DISTNAME=	angle-grinder-0.19.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rcoh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,8 +14,6 @@ LICENSE=	mit
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
-
-INSTALLATION_DIRS=	bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
