@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/04/18 18:48:14 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/05 08:29:59 hauke Exp $
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
@@ -21,7 +21,7 @@ share/applications/vncviewer.desktop
 share/doc/tigervnc/HOWTO.md
 share/doc/tigervnc/LICENCE.TXT
 share/doc/tigervnc/README.rst
-share/examples/tigervnc/tigervnc
+share/examples/tigervnc/tigervnc.pam
 share/examples/tigervnc/vncserver-config-defaults
 share/examples/tigervnc/vncserver-config-mandatory
 share/examples/tigervnc/vncserver.users
