@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/03/14 08:03:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/06/05 19:23:47 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -232,6 +232,7 @@ share/examples/git/templates/hooks/pre-rebase.sample
 share/examples/git/templates/hooks/pre-receive.sample
 share/examples/git/templates/hooks/prepare-commit-msg.sample
 share/examples/git/templates/hooks/push-to-checkout.sample
+share/examples/git/templates/hooks/sendemail-validate.sample
 share/examples/git/templates/hooks/update.sample
 share/examples/git/templates/info/exclude
 share/locale/bg/LC_MESSAGES/git.mo
@@ -249,6 +250,7 @@ share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
 share/locale/tr/LC_MESSAGES/git.mo
+share/locale/uk/LC_MESSAGES/git.mo
 share/locale/vi/LC_MESSAGES/git.mo
 share/locale/zh_CN/LC_MESSAGES/git.mo
 share/locale/zh_TW/LC_MESSAGES/git.mo
