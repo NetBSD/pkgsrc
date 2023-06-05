@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3559 2023/06/05 19:26:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3560 2023/06/05 23:03:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xterm to 382 [wiz 2023-06-05]
 	Updated devel/git to 2.41.0 [adam 2023-06-05]
 	Updated textproc/ugrep to 3.12.1 [adam 2023-06-05]
+	Updated geography/R-sf to 1.0.13 [mef 2023-06-05]
