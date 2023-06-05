@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3553 2023/06/05 13:46:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3554 2023/06/05 14:14:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4925,3 +4925,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added time/R-timechange version 0.2.0 [mef 2023-06-05]
 	Updated time/R-lubridate to 1.9.2 [mef 2023-06-05]
 	Updated x11/xorgproto to 2023.1 [wiz 2023-06-05]
+	Updated devel/R-purrr to 1.0.1 [mef 2023-06-05]
