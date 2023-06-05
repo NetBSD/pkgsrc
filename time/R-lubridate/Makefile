@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2021/05/30 15:56:22 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/05 12:25:59 mef Exp $
 
 R_PKGNAME=	lubridate
-R_PKGVER=	1.7.10
+R_PKGVER=	1.9.2
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Make Dealing with Dates a Little Easier
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	R-stringr>=1.4.0:../../textproc/R-stringr
 DEPENDS+=	R-generics-[0-9]*:../../math/R-generics
+DEPENDS+=	R-stringr>=1.4.0:../../textproc/R-stringr
+DEPENDS+=	R-timechange-[0-9]*:../../time/R-timechange
 
 USE_LANGUAGES=	c c++
 
