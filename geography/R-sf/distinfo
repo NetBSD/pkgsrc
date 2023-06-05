@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:45:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/06/05 23:03:07 mef Exp $
 
-BLAKE2s (R/sf_1.0-2.tar.gz) = 25662fbc9612afeabd12aee2e48fa8c344255e1d73352773a340a312f8230197
-SHA512 (R/sf_1.0-2.tar.gz) = f032cf325b765b410fda461d7d639d462e74a039c365c226174a9d81025e82a3a1c2dcb2e842db649cca7581f49c70250ccf1ddb9e2c7e1492a0d4cecce55404
-Size (R/sf_1.0-2.tar.gz) = 3645982 bytes
+BLAKE2s (R/sf_1.0-13.tar.gz) = 90f3a1f0401a49f19efb4e8a49d6212a94d0ad32447f4ce4f83dfc53f015d626
+SHA512 (R/sf_1.0-13.tar.gz) = 4df61d284baefd6ae0fb1d34b0c6bfd26e9f891aa9f8a4548d0c4092c2da8850af96408b9886d7929b0b43b64582d7bb2ad1611d314a1fcee08319843b9c1f16
+Size (R/sf_1.0-13.tar.gz) = 3488093 bytes
