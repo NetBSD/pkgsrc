@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2023/04/19 08:11:13 adam Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/05 08:29:59 hauke Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.13.1
@@ -30,12 +30,17 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	intltool msgfmt msgmerge patch perl:run autoconf automake autoreconf pkg-config gmake bash:run
+
+USE_TOOLS+=	intltool msgfmt msgmerge patch 
+USE_TOOLS+=	autoconf automake autoreconf pkg-config gmake
+USE_TOOLS+=	perl:run bash:run
+
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 INSTALL_TARGET=	install
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
+# CMake build appends 'tigervnc', so this is not PKG_SYSCONFDIR
+CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE}
 
 # for reallocarray()
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
@@ -56,8 +61,8 @@ SUBST_FILES.hpath+=	vncserver.pl
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 SUBST_VARS.hpath+=	PREFIX X11BASE
 
-REPLACE_PERL+=	unix/vncserver
-REPLACE_PERL+=	vncserver.pl
+REPLACE_PERL+=		unix/vncserver
+REPLACE_PERL+=		vncserver.pl
 
 post-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.xz
@@ -83,6 +88,8 @@ post-patch:
 #      {additional configure options}
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
+# PKG_SYSCONFDIR will be tigervnc-specifiv
+XORG_CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
 XORG_CONFIGURE_ARGS+=	--disable-static --disable-xinerama --without-dtrace
 XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dmx
@@ -92,19 +99,19 @@ XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --
 
 EGDIR=			share/examples/tigervnc
 INSTALLATION_DIRS+=	${EGDIR}
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/pam.d
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/tigervnc
-CONF_FILES+=		${EGDIR}/tigervnc ${PKG_SYSCONFDIR}/pam.d/tigervnc
-CONF_FILES+=		${EGDIR}/vncserver-config-defaults ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-defaults
-CONF_FILES+=		${EGDIR}/vncserver-config-mandatory ${PKG_SYSCONFDIR}/tigervnc/vncserver-config-mandatory
-CONF_FILES+=		${EGDIR}/vncserver.users ${PKG_SYSCONFDIR}/tigervnc/vncserver.users
+
+PKG_SYSCONFSUBDIR=	tigervnc
+
+CONF_FILES+=		${EGDIR}/vncserver-config-defaults ${PKG_SYSCONFDIR}/vncserver-config-defaults
+CONF_FILES+=		${EGDIR}/vncserver-config-mandatory ${PKG_SYSCONFDIR}/vncserver-config-mandatory
+CONF_FILES+=		${EGDIR}/vncserver.users ${PKG_SYSCONFDIR}/vncserver.users
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.pl ${DESTDIR}${PREFIX}/bin/vncserver
-	${MV} ${DESTDIR}${PREFIX}/etc/pam.d/tigervnc ${DESTDIR}${PREFIX}/${EGDIR}
-	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-defaults ${DESTDIR}${PREFIX}/${EGDIR}
-	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver-config-mandatory ${DESTDIR}${PREFIX}/${EGDIR}
-	${MV} ${DESTDIR}${PREFIX}/etc/tigervnc/vncserver.users ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/unix/vncserver/tigervnc.pam ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver-config-defaults ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver-config-mandatory ${DESTDIR}${PREFIX}/${EGDIR}
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver.users ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
