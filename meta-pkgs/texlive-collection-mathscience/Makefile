@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2023/03/15 05:41:02 markd Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/05 00:19:13 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	65753
+TEXLIVE_REV=	67258
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -197,6 +197,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend pseudocode
 # depend pythonhighlight
 # depend qsharp
+# depend quickreaction
 # depend rank-2-roots
 # depend rbt-mathnotes
 # depend rec-thy
@@ -231,6 +232,7 @@ DEPENDS+=	tex-statex-[0-9]*:../../print/tex-statex
 # depend statmath
 # depend steinmetz
 DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
+# depend string-diagrams
 # depend structmech
 # depend struktex
 # depend substances
