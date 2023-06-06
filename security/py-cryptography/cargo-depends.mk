@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2023/05/31 12:57:15 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2023/06/06 08:13:32 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aliasable-0.1.3
@@ -16,7 +16,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.144
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.9
 CARGO_CRATE_DEPENDS+=	memoffset-0.8.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.17.2
-CARGO_CRATE_DEPENDS+=	openssl-0.10.53
+CARGO_CRATE_DEPENDS+=	openssl-0.10.54
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.88
 CARGO_CRATE_DEPENDS+=	ouroboros-0.15.6
