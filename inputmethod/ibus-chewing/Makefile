@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/04/19 08:10:32 adam Exp $
+# $NetBSD: Makefile,v 1.77 2023/06/06 12:41:40 riastradh Exp $
 #
 
 GITHUB_PROJECT=	ibus-chewing
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/ibus/ibus/wiki
 COMMENT=	Chewing engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
+TOOL_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

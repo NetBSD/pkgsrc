@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/03/29 09:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:23 riastradh Exp $
 
 DISTNAME=	structlog-21.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.structlog.org/
 COMMENT=	Painless structural logging
 LICENSE=	apache-2.0 AND mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=0.2.8:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson

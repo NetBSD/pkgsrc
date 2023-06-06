@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:52 riastradh Exp $
 #
 
 DISTNAME=	Math-Random-ISAAC-XS-1.004
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Math-Random-ISAAC-XS
 COMMENT=	C implementation of the ISAAC PRNG algorithm for Perl modules
 LICENSE=	cc0-1.0-universal
 
-BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Math/Random/ISAAC/XS/.packlist

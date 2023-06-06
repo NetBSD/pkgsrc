@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:03 riastradh Exp $
 
 DISTNAME=		Return-MultiLevel-0.08
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=		https://metacpan.org/release/Return-MulitiLevel
 COMMENT=		Perl module to enable returning from a nested call stack
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Return/MultiLevel/.packlist

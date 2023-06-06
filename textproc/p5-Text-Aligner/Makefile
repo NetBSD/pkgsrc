@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Text-Aligner-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Text-Aligner
 COMMENT=	Perl module to align text
 LICENSE=	mit
 
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+TOOL_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 PERL5_PACKLIST=	auto/Text/Aligner/.packlist
 

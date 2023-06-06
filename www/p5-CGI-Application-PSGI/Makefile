@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:37:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:40 riastradh Exp $
 
 DISTNAME=	CGI-Application-PSGI-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/CGI/Application/PSGI/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 DEPENDS+=	p5-CGI-Application-[0-9]*:../../www/p5-CGI-Application
 DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI
 

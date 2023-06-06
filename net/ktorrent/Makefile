@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2023/04/23 14:26:29 adam Exp $
+# $NetBSD: Makefile,v 1.120 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 PKGREVISION=	44
@@ -6,7 +6,7 @@ CATEGORIES=	net kde
 #MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../net/libktorrent/Makefile.version"
 

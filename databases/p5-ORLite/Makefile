@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:31:28 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	ORLite-1.98
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/ORLite
 COMMENT=	Perl 5 extremely light weight SQLite-specific ORM
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Script>=1.06:../../devel/p5-Test-Script
+TOOL_DEPENDS+=	p5-Test-Script>=1.06:../../devel/p5-Test-Script
 
 DEPENDS+=	p5-DBD-SQLite>=1.27:../../databases/p5-DBD-SQLite
 #DEPENDS+=	{perl>=5.12.0,p5-File-Path>=2.08}:../../devel/p5-File-Path

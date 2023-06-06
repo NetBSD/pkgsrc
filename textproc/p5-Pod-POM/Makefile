@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/06/28 11:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/06/06 12:42:27 riastradh Exp $
 
 DISTNAME=	Pod-POM-2.01
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Pod-POM
 COMMENT=	Perl module to format POD into an object format
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-File-Slurper-[0-9]*:../../devel/p5-File-Slurper
+TOOL_DEPENDS+=		p5-File-Slurper-[0-9]*:../../devel/p5-File-Slurper
 
 USE_LANGUAGES=		# empty
 

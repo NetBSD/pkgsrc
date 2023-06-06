@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:45 riastradh Exp $
 
 DISTNAME=	POE-Component-Server-PSGI-0.6
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/POE/Component/Server/PSGI/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-POE-[0-9]*:../../devel/p5-POE

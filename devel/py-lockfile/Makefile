@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/04/29 23:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:14 riastradh Exp $
 
 DISTNAME=	lockfile-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Platform-independent file locking module
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=1.8:../../devel/py-pbr
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=1.8:../../devel/py-pbr
 
 USE_LANGUAGES=	# none
 

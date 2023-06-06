@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/25 21:50:20 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:32 riastradh Exp $
 
 DISTNAME=	glad-0.1.34
 CATEGORIES=	graphics
@@ -17,7 +17,7 @@ CMAKE_ARGS+=	-DGLAD_REPRODUCIBLE=ON
 CMAKE_ARGS+=	-DGLAD_INSTALL=ON
 
 PYTHON_FOR_BUILD_ONLY=	tool
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

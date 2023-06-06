@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:37 riastradh Exp $
 
 DISTNAME=	Time-Duration-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/pod/release/AVIF/Time-Duration-1.04/Duration.pm
 COMMENT=	Perl5 module for rounded or exact English expression of durations
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 PERL5_PACKLIST=		auto/Time/Duration/.packlist
 

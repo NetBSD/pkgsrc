@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/28 15:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:38 riastradh Exp $
 
 DISTNAME=	fcitx5-kkc-5.0.4
 PKGREVISION=	8
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-kkc
 COMMENT=	libkkc input method support for fcitx5
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 # for std::underlying_type_t
 # TODO: check if '8' is correct

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/01/29 21:16:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:25 riastradh Exp $
 
 DISTNAME=	gargoyle-2019.1
 PKGREVISION=	7
@@ -14,7 +14,7 @@ COMMENT=	Graphical player for Interactive Fiction games
 
 WRKSRC=		${WRKDIR}/garglk-${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
+TOOL_DEPENDS+=	jam-[0-9]*:../../devel/jam
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++

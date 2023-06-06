@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:42:43 riastradh Exp $
 
 DISTNAME=		HTML-FormFu-2.07
 PKGNAME=		p5-${DISTNAME}
@@ -48,8 +48,8 @@ DEPENDS+=	p5-Template-Toolkit>=2:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-YAML-LibYAML>=0.32:../../textproc/p5-YAML-LibYAML
 DEPENDS+=	p5-libwww>=5:../../www/p5-libwww
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		c
 

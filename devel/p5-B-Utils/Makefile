@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Utils-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl 5 module providing op tree manipulation helper functions
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Utils/.packlist

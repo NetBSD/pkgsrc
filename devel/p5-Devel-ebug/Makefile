@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:47 riastradh Exp $
 
 DISTNAME=	Devel-ebug-0.64
 PKGNAME=	p5-${DISTNAME}
@@ -19,10 +19,10 @@ DEPENDS+=	p5-String-Koremutake-[0-9]*:../../textproc/p5-String-Koremutake
 DEPENDS+=	p5-YAML-Syck>=0.85:../../textproc/p5-YAML-Syck
 
 # for test target
-BUILD_DEPENDS+=	p5-Test-Expect-[0-9]*:../../devel/p5-Test-Expect
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
-BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+TOOL_DEPENDS+=	p5-Test-Expect-[0-9]*:../../devel/p5-Test-Expect
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+TOOL_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install

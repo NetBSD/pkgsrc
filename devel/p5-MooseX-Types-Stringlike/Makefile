@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:59 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Types-Stringlike-0.003
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 # for make test
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/Stringlike/.packlist

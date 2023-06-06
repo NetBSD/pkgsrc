@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=	PPIx-EditorTools-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://metacpan.org/release/PPIx-EditorTools
 COMMENT=	Utility methods and base class for manipulating Perl via PPI
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
-BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TOOL_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=	p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 
 DEPENDS+=	p5-Class-XSAccessor>=1.02:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-PPI>=1.215:../../devel/p5-PPI

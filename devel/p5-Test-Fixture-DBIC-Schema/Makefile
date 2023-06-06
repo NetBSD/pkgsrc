@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:33:24 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:06 riastradh Exp $
 #
 
 DISTNAME=	Test-Fixture-DBIC-Schema-0.04
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Kwalify>=1.16:../../textproc/p5-Kwalify
 DEPENDS+=	p5-Params-Validate>=0.89:../../devel/p5-Params-Validate
 DEPENDS+=	p5-YAML-Syck>=1.00:../../textproc/p5-YAML-Syck
 # For test really
-BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

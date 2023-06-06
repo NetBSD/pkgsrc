@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:26 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:28 riastradh Exp $
 
 DISTNAME=	String-Koremutake-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/String/Koremutake/.packlist
 
 DEPENDS+=	p5-Error>=0.15:../../devel/p5-Error
-BUILD_DEPENDS+=	p5-Test-Exception>=0.15:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0.15:../../devel/p5-Test-Exception
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

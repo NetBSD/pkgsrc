@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:22 riastradh Exp $
 
 DISTNAME=	Mac-AppleScript-Glue-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 PERL5_PACKLIST=	auto/Mac/AppleScript/Glue/.packlist
 
 DEPENDS+=	p5-Mac-AppleScript>=0.03:../../sysutils/p5-Mac-AppleScript
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

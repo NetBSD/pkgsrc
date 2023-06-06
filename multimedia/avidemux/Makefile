@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2023/05/06 19:09:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.136 2023/06/06 12:41:58 riastradh Exp $
 
 DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://fixounet.free.fr/avidemux/
 COMMENT=	Graphical video editing program
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
 GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++03

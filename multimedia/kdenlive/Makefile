@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/05/22 21:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2023/06/06 12:42:00 riastradh Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
 DEPENDS+=	ffplay4-[0-9]*:../../multimedia/ffplay4
 

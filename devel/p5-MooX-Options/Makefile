@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:40:54 riastradh Exp $
 
 DISTNAME=	MooX-Options-4.103
 PKGNAME=	p5-${DISTNAME}
@@ -25,14 +25,14 @@ DEPENDS+=	p5-Unicode-LineBreak-[0-9]*:../../textproc/p5-Unicode-LineBreak
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-MooX-Locale-Passthrough>=0:../../devel/p5-MooX-Locale-Passthrough
 
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Role-Tiny-[0-9]*:../../devel/p5-Role-Tiny
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
-BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
-BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
-BUILD_DEPENDS+=	p5-Mo-[0-9]*:../../devel/p5-Mo
-BUILD_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Role-Tiny-[0-9]*:../../devel/p5-Role-Tiny
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
+TOOL_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+TOOL_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+TOOL_DEPENDS+=	p5-Mo-[0-9]*:../../devel/p5-Mo
+TOOL_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 
 PERL5_PACKLIST=		auto/MooX/Options/.packlist
 #PERL5_MODULE_TYPE=	Module::Build

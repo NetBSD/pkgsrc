@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/02/07 01:40:25 pho Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	alex-3.2.7.1
 PKGNAME=	${DISTNAME}
@@ -10,9 +10,9 @@ COMMENT=	Tool for generating lexical analysers in Haskell
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	autoconf gmake
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 CONFIGURE_ENV+=	fp_cv_dir_docbook_xsl=${PREFIX}/share/xsl/docbook
 CONFIGURE_ENV+=	ac_cv_path_DbLatexCmd= # empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/22 21:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:17 riastradh Exp $
 
 DISTNAME=	zeal-0.6.1
 PKGREVISION=	11
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=	extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
 
 INSTALLATION_DIRS=	bin share/applications share/metainfo
 INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps

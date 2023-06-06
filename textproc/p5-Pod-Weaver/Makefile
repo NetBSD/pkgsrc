@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/05/21 00:21:53 wen Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:28 riastradh Exp $
 
 DISTNAME=	Pod-Weaver-4.019
 PKGNAME=	p5-${DISTNAME}
@@ -24,9 +24,9 @@ DEPENDS+=	p5-String-Formatter>=0.100680:../../textproc/p5-String-Formatter
 DEPENDS+=	p5-String-RewritePrefix-[0-9]*:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=		p5-PPI-[0-9]*:../../devel/p5-PPI
-BUILD_DEPENDS+=		p5-Software-License-[0-9]*:../../devel/p5-Software-License
-BUILD_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TOOL_DEPENDS+=		p5-PPI-[0-9]*:../../devel/p5-PPI
+TOOL_DEPENDS+=		p5-Software-License-[0-9]*:../../devel/p5-Software-License
+TOOL_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
 PERL5_PACKLIST=		auto/Pod/Weaver/.packlist
 

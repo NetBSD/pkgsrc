@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/08 20:35:35 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:50 riastradh Exp $
 
 DISTNAME=	flufl.bounce-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2023/04/19 08:10:15 adam Exp $
+# $NetBSD: Makefile,v 1.146 2023/06/06 12:41:30 riastradh Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -13,8 +13,8 @@ HOMEPAGE=		http://gallium.inria.fr/camlimages/
 COMMENT=		Image processing library for Objective Caml
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		omake>=0.9.8.6.0rc1:../../devel/omake
-BUILD_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
+TOOL_DEPENDS+=		omake>=0.9.8.6.0rc1:../../devel/omake
+TOOL_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
 
 MAKE_JOBS_SAFE=		no
 

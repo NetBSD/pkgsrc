@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:41:30 riastradh Exp $
 
 DISTNAME=		pyproj-3.2.1
 # 3.3.0 requires proj 8
@@ -14,7 +14,7 @@ LICENSE=		mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 
 .include "../../geography/proj/buildlink3.mk"
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:45 riastradh Exp $
 
 DISTNAME=	Net-FastCGI-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Net/FastCGI/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-HexString-[0-9]*:../../devel/p5-Test-HexString
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-HexString-[0-9]*:../../devel/p5-Test-HexString
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

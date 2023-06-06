@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2023/02/14 18:43:19 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:40:37 riastradh Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-contrib-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (contrib)
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 

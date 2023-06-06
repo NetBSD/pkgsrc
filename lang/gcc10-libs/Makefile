@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/07/03 15:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:42 riastradh Exp $
 
 GCC_PKGNAME=	gcc10
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -27,7 +27,7 @@ CHECK_SHLIBS=		no
 RELRO_SUPPORTED=	no
 
 ## Depend on exactly ${GCC10_DIST_VERSION}.
-BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC10_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc10
+TOOL_DEPENDS+=		${GCC_PKGNAME}-${GCC10_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc10
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/06/28 11:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/06 12:42:06 riastradh Exp $
 
 DISTNAME=	NetAddr-IP-4.079
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module for managing IP addresses
 LICENSE=	artistic OR gnu-gpl-v2
 
 # This is for the 'test' target
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 REPLACE_PERL+=	IP.pm
 REPLACE_PERL+=	Lite/Lite.pm

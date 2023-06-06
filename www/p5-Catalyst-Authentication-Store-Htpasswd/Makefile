@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-Htpasswd-1.006
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Crypt-PasswdMD5-[0-9]*:../../security/p5-Crypt-PasswdMD5
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mechanize-Catalyst
+TOOL_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mechanize-Catalyst
 
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/*.pm
 REPLACE_PERL+=	lib/Catalyst/Authentication/Store/Htpasswd/*.pm

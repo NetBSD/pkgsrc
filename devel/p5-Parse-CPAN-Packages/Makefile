@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:02 riastradh Exp $
 #
 
 DISTNAME=	Parse-CPAN-Packages-2.40
@@ -22,11 +22,11 @@ DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-PPI-[0-9]*:../../devel/p5-PPI
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
-BUILD_DEPENDS+=	p5-Test-InDistDir-[0-9]*:../../devel/p5-Test-InDistDir
+TOOL_DEPENDS+=	p5-Test-InDistDir-[0-9]*:../../devel/p5-Test-InDistDir
 # for make test
-BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+TOOL_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

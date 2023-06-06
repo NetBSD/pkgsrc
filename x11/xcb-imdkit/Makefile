@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/21 18:20:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	xcb-imdkit-1.0.2
 CATEGORIES=	x11
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/fcitx/xcb-imdkit
 COMMENT=	Implementation of xim protocol in xcb
 LICENSE=	gnu-lgpl-v2
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

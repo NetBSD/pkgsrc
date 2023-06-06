@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:28 riastradh Exp $
 
 DISTNAME=	Publican-v4.3.1
 PKGNAME=	p5-${DISTNAME:S/v//1}
@@ -11,10 +11,10 @@ HOMEPAGE=	https://sourceware.org/publican/en-US/index.html
 COMMENT=	Single source publishing tool based on DocBook XML
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
-BUILD_DEPENDS+=	p5-Devel-Cover-[0-9]*:../../devel/p5-Devel-Cover
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
+TOOL_DEPENDS+=	p5-Devel-Cover-[0-9]*:../../devel/p5-Devel-Cover
 DEPENDS+=	p5-XML-TreeBuilder-[0-9]*:../../textproc/p5-XML-TreeBuilder
 DEPENDS+=	p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML

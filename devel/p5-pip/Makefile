@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:41:09 riastradh Exp $
 
 DISTNAME=	pip-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -21,8 +21,8 @@ DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-BUILD_DEPENDS+=	p5-LWP-Online>=1.06:../../www/p5-LWP-Online
-BUILD_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
+TOOL_DEPENDS+=	p5-LWP-Online>=1.06:../../www/p5-LWP-Online
+TOOL_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 PERL5_PACKLIST=		auto/pip/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled

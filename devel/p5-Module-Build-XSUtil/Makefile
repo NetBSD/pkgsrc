@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:32:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:53 riastradh Exp $
 
 DISTNAME=	Module-Build-XSUtil-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +11,10 @@ HOMEPAGE=	https://metacpan.org/release/Module-Build-XSUtil
 COMMENT=	Module::Build class for building XS modules
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Cwd-Guard-[0-9]*:../../devel/p5-Cwd-Guard
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Devel-CheckCompiler>=0.02:../../devel/p5-Devel-CheckCompiler
-BUILD_DEPENDS+=	p5-File-Copy-Recursive-Reduced>=0.002:../../sysutils/p5-File-Copy-Recursive-Reduced
+TOOL_DEPENDS+=	p5-Cwd-Guard-[0-9]*:../../devel/p5-Cwd-Guard
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Devel-CheckCompiler>=0.02:../../devel/p5-Devel-CheckCompiler
+TOOL_DEPENDS+=	p5-File-Copy-Recursive-Reduced>=0.002:../../sysutils/p5-File-Copy-Recursive-Reduced
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Module/Build/XSUtil/.packlist

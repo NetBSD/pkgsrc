@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/05/13 15:25:14 fcambus Exp $
+# $NetBSD: Makefile,v 1.72 2023/06/06 12:40:17 riastradh Exp $
 
 DISTNAME=	libopenmpt-0.7.1+release.autotools
 PKGNAME=	${DISTNAME:C/\+.*//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://lib.openmpt.org/libopenmpt/
 COMMENT=	Library to decode tracked music files into a raw PCM audio stream
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config

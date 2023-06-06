@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2020/08/01 03:58:54 tnn Exp $
+# $NetBSD: options.mk,v 1.11 2023/06/06 12:41:37 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uhd
 PKG_SUPPORTED_OPTIONS=	doxygen
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	doxygen
 PLIST_SRC=	${PLIST_SRC_DFLT}
 
 .if !empty(PKG_OPTIONS:Mdoxygen)
-BUILD_DEPENDS+=	doxygen>=1.8.15:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.8.15:../../devel/doxygen
 PLIST_SRC+=	${PKGDIR}/PLIST.doxygen
 CMAKE_ARGS+=	-DENABLE_MANUAL=ON
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON

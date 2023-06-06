@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.9 2022/09/17 15:27:41 bsiegert Exp $
+# $NetBSD: go-module.mk,v 1.10 2023/06/06 12:41:44 riastradh Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -38,7 +38,7 @@ MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin
 USE_TOOLS+=		pax
 
-BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 
 MAKE_ENV+=	GO111MODULE=on GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy

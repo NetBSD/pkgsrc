@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/06/06 08:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:24 riastradh Exp $
 
 PKGREVISION= 5
 .include "Makefile.common"
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++17
 USE_TOOLS+=	cmake bash gmake pax perl pkg-config
 
 DEPENDS+=		0ad-data-${PKGVERSION_NOREV}{,nb*}:../../games/0ad-data
-BUILD_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
+TOOL_DEPENDS+=		premake5-[0-9]*:../../devel/premake5
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 SUBST_CLASSES+=			sysincludedir

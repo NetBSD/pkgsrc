@@ -1,4 +1,4 @@
-# $NetBSD: dependency.mk,v 1.1 2022/10/19 14:17:54 nia Exp $
+# $NetBSD: dependency.mk,v 1.2 2023/06/06 12:42:16 riastradh Exp $
 #
 # Not for public use - use through versioned_dependencies.mk.
 #
@@ -14,7 +14,7 @@ PYOPENSSL_DIR?=		security/py27-OpenSSL
 .endif
 
 .if "${type}" == ":build"
-BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${PYOPENSSL_VERSION}:../../${PYOPENSSL_DIR}
+TOOL_DEPENDS:=	${TOOL_DEPENDS} ${PYPKGPREFIX}-${PYOPENSSL_VERSION}:../../${PYOPENSSL_DIR}
 .elif "${type}" == ":test"
 TEST_DEPENDS:=	${TEST_DEPENDS} ${PYPKGPREFIX}-${PYOPENSSL_VERSION}:../../${PYOPENSSL_DIR}
 .elif "${type}" == ":tool"

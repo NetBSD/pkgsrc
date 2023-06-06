@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/02/06 11:56:33 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:09 riastradh Exp $
 
 DISTNAME=	rabbitmq-c-0.13.0
 CATEGORIES=	net
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/alanxz/rabbitmq-c
 COMMENT=	C-language AMQP client library for use with AMQP servers
 LICENSE=	mit
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c99

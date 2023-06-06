@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/11/06 10:45:35 wen Exp $
+# $NetBSD: Makefile,v 1.52 2023/06/06 12:40:29 riastradh Exp $
 
 DISTNAME=	DBIx-Class-0.082843
 PKGNAME=	p5-${DISTNAME}
@@ -33,16 +33,16 @@ DEPENDS+=	p5-Sub-Name>=0.04:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Try-Tiny>=0.07:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-clean>=0.24:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=		p5-DBD-SQLite>=1.40:../../databases/p5-DBD-SQLite
-BUILD_DEPENDS+=		p5-Package-Stash>=0.28:../../devel/p5-Package-Stash
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=		p5-Class-DBI>=0:../../databases/p5-Class-DBI
-BUILD_DEPENDS+=		p5-SQL-Translator>=0.11018:../../databases/p5-SQL-Translator
+TOOL_DEPENDS+=		p5-DBD-SQLite>=1.40:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=		p5-Package-Stash>=0.28:../../devel/p5-Package-Stash
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.22}:../../devel/p5-File-Temp
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=		p5-Class-DBI>=0:../../databases/p5-Class-DBI
+TOOL_DEPENDS+=		p5-SQL-Translator>=0.11018:../../databases/p5-SQL-Translator
 # for make test
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 REPLACE_PERL=	script/dbicadmin
 

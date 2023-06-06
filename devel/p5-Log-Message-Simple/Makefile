@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:52 riastradh Exp $
 
 DISTNAME=	Log-Message-Simple-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/pod/Log::Message::Simple
 COMMENT=	Simple - Simplified interface to Log::Message
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Log-Message-[0-9]*:../../devel/p5-Log-Message
+TOOL_DEPENDS+=	p5-Log-Message-[0-9]*:../../devel/p5-Log-Message
 
 PERL5_PACKLIST=	auto/Log/Message/Simple/.packlist
 

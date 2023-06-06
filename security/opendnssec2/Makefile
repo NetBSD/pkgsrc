@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/23 14:26:31 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:14 riastradh Exp $
 #
 
 DISTNAME=	opendnssec-2.1.12
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
+TOOL_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 DEPENDS+=	ldns>=1.6.17:../../net/ldns
 
 # Uses the same package name, but is not a full drop-in replacement for...

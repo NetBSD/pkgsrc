@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:41:09 riastradh Exp $
 
 DISTNAME=	multidimensional-0.014
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/multidimensional
 COMMENT=	Perl 5 module to disable multidmensional array emulation
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/multidimensional/.packlist

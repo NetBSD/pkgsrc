@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/10/01 08:16:34 wen Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:41:06 riastradh Exp $
 
 DISTNAME=	Test-File-Contents-0.242
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Perl5 module for test routines examining the contents of files
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_PACKLIST=		auto/Test/File/Contents/.packlist
 

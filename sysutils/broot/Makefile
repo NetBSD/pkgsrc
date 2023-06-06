@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/05/24 12:14:18 pin Exp $
+# $NetBSD: Makefile,v 1.73 2023/06/06 12:42:17 riastradh Exp $
 
 DISTNAME=	broot-1.22.1
 CATEGORIES=	sysutils
@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/06/03 13:28:21 wen Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:52 riastradh Exp $
 
 DISTNAME=	Log-Dispatchouli-3.002
 PKGNAME=	p5-${DISTNAME}
@@ -18,12 +18,12 @@ DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Exporter-GlobExporter>=0.002:../../devel/p5-Sub-Exporter-GlobExporter
 DEPENDS+=	p5-Try-Tiny>=0.04:../../devel/p5-Try-Tiny
 
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
-BUILD_DEPENDS+=		p5-Specio-[0-9]*:../../devel/p5-Specio
-BUILD_DEPENDS+=		p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+TOOL_DEPENDS+=		p5-Specio-[0-9]*:../../devel/p5-Specio
+TOOL_DEPENDS+=		p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Log/Dispatchouli/.packlist
 

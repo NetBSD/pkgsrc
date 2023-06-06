@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:27 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	MARC-XML-1.0.4
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-MARC-Record>=2.0:../../databases/p5-MARC-Record
 DEPENDS+=	p5-MARC-Charset>=0.98:../../converters/p5-MARC-Charset
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MARC-XML/.packlist

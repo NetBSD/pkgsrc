@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/01/18 23:32:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2023/06/06 12:41:41 riastradh Exp $
 #
 # used by lang/classpath/Makefile
 # used by lang/classpath-gui/Makefile
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnu.org/software/classpath/
 COMMENT=		Class libraries for Java VM
 
-BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes
+TOOL_DEPENDS+=		jikes>=1.18:../../lang/jikes
 
 DISTINFO_FILE=		${.CURDIR}/../../lang/classpath/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/classpath/patches

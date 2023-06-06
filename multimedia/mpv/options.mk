@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2022/11/17 21:31:22 snj Exp $
+# $NetBSD: options.mk,v 1.32 2023/06/06 12:42:02 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -171,7 +171,7 @@ WAF_CONFIGURE_ARGS+=	--disable-egl-x11
 .  endif
 .include "../../graphics/MesaLib/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mrpi)
-BUILD_DEPENDS+=		raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
+TOOL_DEPENDS+=		raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
 CFLAGS+=		"-L${PREFIX}/lib"
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/06/30 11:18:51 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:21 riastradh Exp $
 
 PKGNAME=		OVMF-0.0.20181116
 PKGREVISION=		3
@@ -55,9 +55,9 @@ INSTALLATION_DIRS+=	share/ovmf
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/OVMF*.fd ${DESTDIR}${PREFIX}/share/ovmf/
 
-BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../lang/python/application.mk"
 .include "../../devel/libuuid/buildlink3.mk"

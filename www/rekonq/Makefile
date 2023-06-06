@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/04/23 14:26:33 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/06 12:42:51 riastradh Exp $
 
 DISTNAME=		rekonq-2.4.2
 PKGREVISION=		38
@@ -11,7 +11,7 @@ HOMEPAGE=		https://rekonq.kde.org/
 COMMENT=		web browser for KDE based on WebKit
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=		msgfmt
 TOOLS_BROKEN+=		perl

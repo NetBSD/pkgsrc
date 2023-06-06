@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 19:23:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:07 riastradh Exp $
 
 DISTNAME=		irc-11.1.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/irc/irclib/}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-jaraco_util>=10.0.2:../../devel/py-jaraco_util
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5:../../devel/py-hgtools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5:../../devel/py-hgtools
 
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} ${SHAREMODE} irc.egg-info/*

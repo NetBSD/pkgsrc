@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:11 riastradh Exp $
 
 DISTNAME=	BibTool-2.65
 PKGREVISION=	5
@@ -10,18 +10,18 @@ HOMEPAGE=	http://www.gerd-neugebauer.de/software/TeX/BibTool.en.html
 COMMENT=	Tool to manipulate BibTeX databases
 LICENSE=	gnu-gpl-v1
 
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
-BUILD_DEPENDS+=	tex-bookmark-[0-9]*:../../print/tex-bookmark
-BUILD_DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
-BUILD_DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
-BUILD_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-BUILD_DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
-BUILD_DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
-BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
-BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
+TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+TOOL_DEPENDS+=	tex-bookmark-[0-9]*:../../print/tex-bookmark
+TOOL_DEPENDS+=	tex-booktabs-[0-9]*:../../print/tex-booktabs
+TOOL_DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
+TOOL_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+TOOL_DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+TOOL_DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+TOOL_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+TOOL_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 
 GNU_CONFIGURE=		yes
 MAKE_FILE=		makefile

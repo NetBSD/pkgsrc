@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.125 2023/05/17 23:35:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.126 2023/06/06 12:42:25 riastradh Exp $
 
 .include "Makefile.common"
 
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl

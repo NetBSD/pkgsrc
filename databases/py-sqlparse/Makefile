@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/04/30 18:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	sqlparse-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/andialbrecht/sqlparse
 COMMENT=	Non-validating SQL parser
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

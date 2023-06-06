@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/10/19 13:56:34 nia Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:50 riastradh Exp $
 
 DISTNAME=	Flask-User-1.0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-flask-mail>=0.9:../../www/py-flask-mail
 DEPENDS+=	${PYPKGPREFIX}-flask-sqlalchemy>=1.0:../../www/py-flask-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=0.9:../../www/py-flask-wtf
 DEPENDS+=	${PYPKGPREFIX}-passlib>=0.6:../../security/py-passlib
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=		# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/04/19 08:11:42 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:35 riastradh Exp $
 
 DISTNAME=	ntpsec-1.2.1
 PKGREVISION=	3
@@ -12,8 +12,8 @@ LICENSE=	cc-by-v4.0 AND 2-clause-bsd AND modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	waf-[0-9]*:../../devel/waf
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	waf-[0-9]*:../../devel/waf
 
 USE_TOOLS+=		bison m4 pkg-config
 WAF_CONFIGURE_ARGS+=	--python=${PYTHONBIN}

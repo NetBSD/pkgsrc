@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/08/27 08:27:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:12 riastradh Exp $
 
 DISTNAME=	distlib-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pypa/distlib
 COMMENT=	Distribution utilities
 LICENSE=	python-software-foundation
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/01/14 01:30:53 manu Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:37 riastradh Exp $
 
 DISTNAME=	libobjc2-2.1.0
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/gnustep/libobjc2
 COMMENT=	Objective-C runtime
 LICENSE=	mit
 
-BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 USE_LANGUAGES=			objc c++11
 USE_TOOLS+=			gmake cmake pax

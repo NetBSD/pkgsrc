@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/05/22 21:00:06 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/06/06 12:42:14 riastradh Exp $
 
 DISTNAME=	kwallet-${KF5VER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

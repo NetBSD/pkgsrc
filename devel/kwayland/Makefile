@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/05/22 20:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	kwayland-${KF5VER}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	plasma-wayland-protocols>=1.7:../../devel/plasma-wayland-protocols
+TOOL_DEPENDS+=	plasma-wayland-protocols>=1.7:../../devel/plasma-wayland-protocols
 
 USE_TOOLS+=	pkg-config
 # Don't do autotests.  Some builds are linux specific.

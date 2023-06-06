@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/04/23 14:26:09 adam Exp $
+# $NetBSD: Makefile,v 1.74 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	libktorrent-${LIBKTORRENT_VER}
 PKGREVISION=	43
@@ -24,13 +24,13 @@ USE_CMAKE=		yes
 APIDOCS=		share/doc/libktorrent-api
 WRKSRC=			${WRKDIR}/libktorrent-${LIBKTORRENT_FILEVER}
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	doc
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
 BUILD_TARGET=	all docs
 PLIST.doc=	yes
 USE_TOOLS+=	pax

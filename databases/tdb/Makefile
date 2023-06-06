@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/01/22 13:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	tdb-1.4.8
 CATEGORIES=	databases
@@ -9,8 +9,8 @@ HOMEPAGE=	https://tdb.samba.org/
 COMMENT=	Small database system which uses files to store data
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # both install tdbtool and tdbdump
 CONFLICTS+=	samba<3.6.6nb3

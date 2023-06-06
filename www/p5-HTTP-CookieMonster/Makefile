@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:44 riastradh Exp $
 
 DISTNAME=	HTTP-CookieMonster-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-Safe-Isa-[0-9]*:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_PACKLIST=		auto/HTTP/CookieMonster/.packlist
 

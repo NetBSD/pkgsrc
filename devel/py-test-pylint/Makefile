@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/10/13 16:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:15 riastradh Exp $
 
 DISTNAME=	pytest-pylint-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-test>=5.4:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.7.1:../../textproc/py-toml
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

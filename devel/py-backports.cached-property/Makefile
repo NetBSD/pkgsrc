@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/05/01 09:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:41:10 riastradh Exp $
 
 DISTNAME=	backports.cached-property-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/penguinolog/backports.cached_property
 COMMENT=	Backport functools cached_property
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-backports>=1.0nb2:../../devel/py-backports
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

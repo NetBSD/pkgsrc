@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/04/29 23:40:35 wen Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:45 riastradh Exp $
 
 DISTNAME=	Data-Dump-Streamer-2.42
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Data-Dump-Streamer
 COMMENT=	Perl 5 module to serialize a data structure as Perl
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-Algorithm-Diff-[0-9]*:../../devel/p5-Algorithm-Diff
 DEPENDS+=	p5-PadWalker>=0.99:../../devel/p5-PadWalker
 DEPENDS+=	p5-B-Utils-[0-9]*:../../devel/p5-B-Utils

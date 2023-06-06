@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.14 2022/09/29 00:22:13 markd Exp $
+# $NetBSD: kf5.mk,v 1.15 2023/06/06 12:41:54 riastradh Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -83,7 +83,7 @@ CATEGORIES+=	kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-BUILD_DEPENDS+= extra-cmake-modules>=${KF5VER}:../../devel/extra-cmake-modules
+TOOL_DEPENDS+= extra-cmake-modules>=${KF5VER}:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
 
 CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true

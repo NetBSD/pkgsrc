@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2023/04/19 08:09:00 adam Exp $
+# $NetBSD: Makefile,v 1.149 2023/06/06 12:42:56 riastradh Exp $
 
 DISTNAME=		xscreensaver-6.05.1
 PKGREVISION=		4
@@ -41,7 +41,7 @@ CFLAGS+=		-fno-strict-aliasing
 .endif
 
 .if !exists(/usr/bin/bc)
-BUILD_DEPENDS+=		bc-[0-9]*:../../math/bc
+TOOL_DEPENDS+=		bc-[0-9]*:../../math/bc
 .endif
 
 INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}

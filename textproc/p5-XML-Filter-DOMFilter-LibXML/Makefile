@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-Filter-DOMFilter-LibXML-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/XML-Filter-DOMFilter-LibXML
 COMMENT=	Perl5 module SAX filter allowing DOM processing
 
-BUILD_DEPENDS=	p5-XML-SAX-Writer>=0:../../textproc/p5-XML-SAX-Writer
+TOOL_DEPENDS=	p5-XML-SAX-Writer>=0:../../textproc/p5-XML-SAX-Writer
 DEPENDS+=	p5-XML-LibXML>=1.53:../../textproc/p5-XML-LibXML
 
 EXTRACT_USING=	gtar

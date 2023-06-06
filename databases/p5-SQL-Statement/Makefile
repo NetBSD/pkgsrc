@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/06/28 11:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	SQL-Statement-1.414
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-Math-Base-Convert>=0:../../math/p5-Math-Base-Convert
 DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 
 CONFLICTS+=	p5-DBI<=1.622
 

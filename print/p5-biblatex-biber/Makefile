@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/04/08 06:18:16 markd Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:42:12 riastradh Exp $
 
 DISTNAME=	biber-2.19
 PKGNAME=	p5-biblatex-${DISTNAME}
@@ -54,8 +54,8 @@ DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
 DEPENDS+=		p5-autovivification-[0-9]*:../../devel/p5-autovivification
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 
-BUILD_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.4:../../devel/p5-ExtUtils-LibBuilder
-BUILD_DEPENDS+=		p5-Config-AutoConf>=0.15:../../devel/p5-Config-AutoConf
+TOOL_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.4:../../devel/p5-ExtUtils-LibBuilder
+TOOL_DEPENDS+=		p5-Config-AutoConf>=0.15:../../devel/p5-Config-AutoConf
 
 TEST_DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
 TEST_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences

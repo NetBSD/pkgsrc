@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/05/22 21:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/06/06 12:40:35 riastradh Exp $
 
 DISTNAME=	cppcheck-2.8
 PKGREVISION=	7
@@ -11,8 +11,8 @@ HOMEPAGE=	http://cppcheck.sourceforge.net/
 COMMENT=	Tool for static C/C++ code analysis
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=		c c++0x

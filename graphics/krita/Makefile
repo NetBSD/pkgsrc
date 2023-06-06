@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2023/06/06 08:02:11 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2023/06/06 12:41:33 riastradh Exp $
 
 DISTNAME=		krita-4.4.8
 PKGREVISION=		28
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.krita.org/
 COMMENT=		Raster graphics editor for digital painting
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-#BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+#TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=		msgfmt pkg-config perl
 # Uses targets with spaces in the names

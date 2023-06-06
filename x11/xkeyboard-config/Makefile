@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/02/14 16:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/06/06 12:42:56 riastradh Exp $
 
 DISTNAME=		xkeyboard-config-2.38
 CATEGORIES=		x11
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.freedesktop.org/wiki/Software/XKeyboardConfig
 COMMENT=		X Keyboard Configuration Database
 
-BUILD_DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
+TOOL_DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
 
 CONFLICTS+=		xkbdata-[0-9]*
 

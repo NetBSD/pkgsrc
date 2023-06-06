@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/06/28 11:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/06 12:41:06 riastradh Exp $
 
 DISTNAME=		Test-Inline-2.214
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=		https://metacpan.org/release/Test-Inline
 COMMENT=		Inlining your tests next to the code being tested
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
-BUILD_DEPENDS+=		p5-Test-Script>=1.02:../../devel/p5-Test-Script
+TOOL_DEPENDS+=		p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
+TOOL_DEPENDS+=		p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 DEPENDS+=		p5-Algorithm-Dependency>=1.02:../../devel/p5-Algorithm-Dependency
 DEPENDS+=		p5-Class-Autouse>=1.29:../../devel/p5-Class-Autouse

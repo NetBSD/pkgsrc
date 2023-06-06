@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/04/19 08:10:20 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/06/06 12:41:32 riastradh Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	36
@@ -12,10 +12,10 @@ LICENSE=	gnu-gpl-v3
 
 BROKEN=		"ImageMagick cannot convert the documentation PS files to PNG files due to security policy."
 
-BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
-BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
-BUILD_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
+TOOL_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
+TOOL_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
+TOOL_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		aclocal autoconf automake gmake gs:run makeinfo perl

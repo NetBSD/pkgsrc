@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:32:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:53 riastradh Exp $
 
 DISTNAME=		Module-FromPerlVer-0.030000
 PKGNAME=		p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=		p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 # TEST_DEPENDS
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PERL5_PACKLIST=		auto/Module/FromPerlVer/.packlist
 USE_TOOLS+=		perl

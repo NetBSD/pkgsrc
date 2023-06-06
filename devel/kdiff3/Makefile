@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/05/30 00:12:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.97 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	kdiff3-1.10.4
 CATEGORIES=	devel
@@ -16,7 +16,7 @@ GCC_REQD+=	7 # C++17
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
-BUILD_DEPENDS+=		extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=		extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake=	cmake>=3.1:../../devel/cmake
 
 .include "../../devel/boost-headers/buildlink3.mk"

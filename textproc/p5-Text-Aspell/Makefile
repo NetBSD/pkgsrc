@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:29 riastradh Exp $
 #
 
 DISTNAME=	Text-Aspell-0.09
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Text-Aspell
 COMMENT=	Perl interface to the GNU Aspell library
 
-BUILD_DEPENDS+=	aspell-en>0:../../textproc/aspell-en
+TOOL_DEPENDS+=	aspell-en>0:../../textproc/aspell-en
 
 PERL5_PACKLIST=		auto/Text/Aspell/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/05/17 11:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/06 12:40:25 riastradh Exp $
 
 DISTNAME=	recode-3.7.14
 CATEGORIES=	converters
@@ -11,7 +11,7 @@ COMMENT=	Convert files between character sets and usages
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 # needed only for tests, but detected at configure time
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 # to detect cython properly, configure is only looking for unversioned cython
 CONFIGURE_ENV+=	CYTHON=cython-${PYVERSSUFFIX}

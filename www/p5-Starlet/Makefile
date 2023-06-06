@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Starlet-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Starlet/.packlist
 
-BUILD_DEPENDS+=	p5-Test-TCP>=2.10:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Test-TCP>=2.10:../../net/p5-Test-TCP
 DEPENDS+=	p5-Parallel-Prefork>=0.17:../../devel/p5-Parallel-Prefork
 DEPENDS+=	p5-Plack>=0.992:../../www/p5-Plack
 DEPENDS+=	p5-Server-Starter>=0.06:../../sysutils/p5-Server-Starter

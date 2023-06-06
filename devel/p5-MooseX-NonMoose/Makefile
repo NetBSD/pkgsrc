@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:32:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:40:57 riastradh Exp $
 #
 
 DISTNAME=	MooseX-NonMoose-0.26
@@ -19,8 +19,8 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moose>=1.08:../../devel/p5-Moose
 DEPENDS+=	p5-Try-Tiny>=0:../../devel/p5-Try-Tiny
 # for make test
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

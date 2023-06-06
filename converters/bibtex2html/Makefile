@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2022/06/28 11:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/06/06 12:40:24 riastradh Exp $
 
 DISTNAME=	bibtex2html-1.98
 PKGREVISION=	19
@@ -10,14 +10,14 @@ HOMEPAGE=	https://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
-BUILD_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-BUILD_DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
-BUILD_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TOOL_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
+TOOL_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+TOOL_DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
+TOOL_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 

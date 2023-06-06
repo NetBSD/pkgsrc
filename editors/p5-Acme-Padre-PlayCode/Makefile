@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:18 riastradh Exp $
 #
 
 DISTNAME=	Acme-Padre-PlayCode-0.13
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Acme-Padre-PlayCode
 COMMENT=	Acme::PlayCode Plugin for Padre
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
+TOOL_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
 
 DEPENDS+=	p5-Acme-PlayCode-[0-9]*:../../devel/p5-Acme-PlayCode
 DEPENDS+=	p5-Padre>=0.43:../../editors/p5-Padre

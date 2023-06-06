@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:24 riastradh Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -15,9 +15,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dict-server>=1.9.14:../../textproc/dict-server
 
-BUILD_DEPENDS+=	dict-server>=1.10.2:../../textproc/dict-server
-BUILD_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
-BUILD_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils # we need GNU fmt
+TOOL_DEPENDS+=	dict-server>=1.10.2:../../textproc/dict-server
+TOOL_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
+TOOL_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils # we need GNU fmt
 
 WRKSRC=		${WRKDIR}/usr/local/share/dict
 

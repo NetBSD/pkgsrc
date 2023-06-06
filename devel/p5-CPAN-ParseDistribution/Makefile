@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:43 riastradh Exp $
 #
 
 DISTNAME=	CPAN-ParseDistribution-1.54
@@ -13,11 +13,11 @@ COMMENT=	Index a file from the BackPAN to give name and version of the distr'n
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
-BUILD_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
-BUILD_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+TOOL_DEPENDS+=	p5-Devel-CheckOS-[0-9]*:../../devel/p5-Devel-CheckOS
+TOOL_DEPENDS+=	p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+TOOL_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
 PERL5_PACKLIST=	auto/CPAN/ParseDistribution/.packlist
 USE_LANGUAGES=	# none

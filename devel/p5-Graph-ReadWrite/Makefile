@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:50 riastradh Exp $
 
 DISTNAME=	Graph-ReadWrite-2.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,10 +12,10 @@ COMMENT=	Perl module for reading and writing directed graphs
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Graph-[0-9]*:../../devel/p5-Graph
-BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-BUILD_DEPENDS+=	p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
-BUILD_DEPENDS+=	p5-Parse-Yapp-[0-9]*:../../devel/p5-Parse-Yapp
+TOOL_DEPENDS+=	p5-Graph-[0-9]*:../../devel/p5-Graph
+TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=	p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
+TOOL_DEPENDS+=	p5-Parse-Yapp-[0-9]*:../../devel/p5-Parse-Yapp
 
 PERL5_PACKLIST=	auto/Graph/ReadWrite/.packlist
 

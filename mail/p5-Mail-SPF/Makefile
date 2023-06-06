@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=	Mail-SPF-v2.9.0
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/Mail-SPF
 COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Programmable-[0-9]*:../../net/p5-Net-DNS-Resolver-Programmable
-#BUILD_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0.10}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Net-DNS-Resolver-Programmable-[0-9]*:../../net/p5-Net-DNS-Resolver-Programmable
+#TOOL_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple>=0.10}:../../devel/p5-Test-Simple
 
 #DEPENDS+=	{perl>=5.9.0,p5-version-[0-9]*}:../../devel/p5-version
 DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/05/22 21:00:04 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/06/06 12:42:02 riastradh Exp $
 
 DISTNAME=	phonon-4.11.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -29,7 +29,7 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MKDIR} ${WRKSRC}/_build
 
-BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
 BUILDLINK_ABI_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.10.1nb2
 .include "../../x11/qt5-qtbase/buildlink3.mk"

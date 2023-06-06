@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/05/21 05:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=	Padre-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -17,13 +17,13 @@ USE_LANGUAGES+=	c c++
 REPLACE_PERL+=	share/examples/wx/*.pl
 REPLACE_PERL+=	share/examples/absolute_beginner/*.pl
 
-#BUILD_DEPENDS+=	p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=		p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
-BUILD_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-MockObject>=1.09:../../devel/p5-Test-MockObject
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=		p5-Test-Script>=1.07:../../devel/p5-Test-Script
+#TOOL_DEPENDS+=	p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=		p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
+TOOL_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-MockObject>=1.09:../../devel/p5-Test-MockObject
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Test-Script>=1.07:../../devel/p5-Test-Script
 
 #DEPENDS+=	p5-ack>=1.86:../../textproc/p5-ack
 DEPENDS+=	p5-Algorithm-Diff>=0:../../devel/p5-Algorithm-Diff

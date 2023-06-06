@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:46 riastradh Exp $
 
 DISTNAME=	Plack-Handler-AnyEvent-SCGI-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Plack/Handler/AnyEvent/SCGI/.packlist
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Module-Build-Tiny>=0.039:../../devel/p5-Module-Build-Tiny
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Module-Build-Tiny>=0.039:../../devel/p5-Module-Build-Tiny
 DEPENDS+=	p5-AnyEvent-SCGI-[0-9]*:../../www/p5-AnyEvent-SCGI
 DEPENDS+=	p5-Plack>=0.9901:../../www/p5-Plack
 

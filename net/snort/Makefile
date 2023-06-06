@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/04/19 08:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/06 12:42:09 riastradh Exp $
 #
 
 DISTNAME=		snort-2.9.16.1
@@ -94,7 +94,7 @@ CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
 CONFIGURE_ARGS+=	--disable-so_with_static_lib
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 pre-build:
 	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default

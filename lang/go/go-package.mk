@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.26 2021/05/08 15:55:04 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.27 2023/06/06 12:41:44 riastradh Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -63,7 +63,7 @@ MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	bin gopkg
 USE_TOOLS+=		pax
 
-BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
 
 GOTOOLDIR=		go${GOVERSSUFFIX}/pkg/tool/${GO_PLATFORM}
 
@@ -112,5 +112,5 @@ _USE_VARS.go=		GO_PACKAGE_DEP \
 			TEST_ENV
 _DEF_VARS.go=		INSTALLATION_DIRS MAKE_JOBS_SAFE \
 			WRKSRC \
-			USE_TOOLS BUILD_DEPENDS PRINT_PLIST_AWK MAKE_ENV
+			USE_TOOLS TOOL_DEPENDS PRINT_PLIST_AWK MAKE_ENV
 _SORTED_VARS.go=	INSTALLATION_DIRS *_FOR_PLATFORM *_ENV

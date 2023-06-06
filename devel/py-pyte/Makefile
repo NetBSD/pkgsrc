@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/05 10:16:35 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:14 riastradh Exp $
 
 DISTNAME=	pyte-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/selectel/pyte
 COMMENT=	VTXXX-compatible terminal emulator library
 LICENSE=	gnu-lgpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 

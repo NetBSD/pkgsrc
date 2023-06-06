@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:46 riastradh Exp $
 
 DISTNAME=	Data-ObjectDriver-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Class-Trigger>=0.14:../../devel/p5-Class-Trigger
 DEPENDS+=	p5-Text-SimpleTable>=2.0:../../textproc/p5-Text-SimpleTable
 
 # for mke test
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/ObjectDriver/.packlist

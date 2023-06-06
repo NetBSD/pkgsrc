@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/10/01 15:14:40 wen Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:08 riastradh Exp $
 
 DISTNAME=	Try-Tiny-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Minimal try/catch with proper preservation of $$@
 LICENSE=	mit
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Try/Tiny/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/01/02 20:22:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:40 riastradh Exp $
 #
 
 DISTNAME=	lmdbg-1.3.0
@@ -11,7 +11,7 @@ HOMEPAGE=	https://sourceforge.net/projects/lmdbg/
 COMMENT=	Lightweight Modular malloc Debugger
 LICENSE=	mit
 
-BUILD_DEPENDS+=		mk-configure>=0.24.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>=0.24.0:../../devel/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb

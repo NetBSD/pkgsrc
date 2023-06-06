@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/01/29 21:17:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:42:19 riastradh Exp $
 
 DISTNAME=	dvdisaster-0.79.5
 PKGREVISION=	11
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
-BUILD_DEPENDS+=		gettext-tools>=0.14:../../devel/gettext-tools
+TOOL_DEPENDS+=		gettext-tools>=0.14:../../devel/gettext-tools
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/04/15 14:17:57 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:53 riastradh Exp $
 
 DISTNAME=	jolly-0.2.0
 CATEGORIES=	x11
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/apgoetz/jolly/
 COMMENT=	Small bookmarking launcher for desktop usage
 LICENSE=	mit OR apache-2.0
 
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 

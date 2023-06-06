@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/21 21:08:03 maya Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:42:19 riastradh Exp $
 #
 
 DISTNAME=	extipl-5.04
@@ -13,7 +13,7 @@ COMMENT=	IPL compatible OS boot selector
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX} \
 			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 USE_TOOLS+=	gmake

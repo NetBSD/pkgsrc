@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2020/06/21 04:45:36 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2023/06/06 12:41:17 riastradh Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -55,5 +55,5 @@ _GUIDE_DEPENDS+=	tex-epstopdf-pkg>=2.11:../../print/tex-epstopdf-pkg
 .if ${_GUIDE_DEPTYPE} == "run"
 DEPENDS+=		${_GUIDE_DEPENDS}
 .else
-BUILD_DEPENDS+=		${_GUIDE_DEPENDS}
+TOOL_DEPENDS+=		${_GUIDE_DEPENDS}
 .endif

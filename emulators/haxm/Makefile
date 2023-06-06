@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/02/05 03:25:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:20 riastradh Exp $
 
 DISTNAME=	haxm-7.7.0
 CATEGORIES=	emulators
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-x86_64
 OSVERSION_SPECIFIC=	YES
 USE_BSD_MAKEFILE=	YES
 
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 BUILD_DIRS=	platforms/netbsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:12 riastradh Exp $
 
 DISTNAME=	fann2-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/FutureLinkCorporation/fann2
 COMMENT=	Python bindings for Fast Artificial Neural Network (FANN)
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	swig2-[0-9]*:../../devel/swig2
+TOOL_DEPENDS+=	swig2-[0-9]*:../../devel/swig2
 
 USE_LANGUAGES=	c c++
 

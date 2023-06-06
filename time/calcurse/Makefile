@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:39 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:34 riastradh Exp $
 
 DISTNAME=	calcurse-4.8.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	https://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 
 GNU_CONFIGURE=	yes

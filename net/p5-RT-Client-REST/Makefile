@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:07 riastradh Exp $
 
 DISTNAME=	RT-Client-REST-0.60
 PKGNAME=	p5-${DISTNAME}
@@ -23,9 +23,9 @@ DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
-BUILD_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+TOOL_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
