@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/02 07:39:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/06/06 13:45:18 wiz Exp $
 include/gstreamer-1.0/gst/rtsp-server/rtsp-address-pool.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-auth.h
 include/gstreamer-1.0/gst/rtsp-server/rtsp-client.h
@@ -28,6 +28,6 @@ lib/girepository-1.0/GstRtspServer-1.0.typelib
 lib/gstreamer-1.0/libgstrtspclientsink.so
 lib/libgstrtspserver-1.0.so
 lib/libgstrtspserver-1.0.so.0
-lib/libgstrtspserver-1.0.so.0.2202.0
+lib/libgstrtspserver-1.0.so.0.${SHLIBVER}.0
 lib/pkgconfig/gstreamer-rtsp-server-1.0.pc
 share/gir-1.0/GstRtspServer-1.0.gir
