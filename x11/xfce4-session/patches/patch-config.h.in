@@ -1,8 +1,8 @@
-$NetBSD: patch-config.h.in,v 1.2 2017/06/22 09:40:24 youri Exp $
+$NetBSD: patch-config.h.in,v 1.3 2023/06/06 01:14:53 gutteridge Exp $
 
 Add NetBSD backend.
 
---- config.h.in.orig	2015-03-16 07:29:52.000000000 +0000
+--- config.h.in.orig	2023-05-29 15:39:37.000000000 +0000
 +++ config.h.in
 @@ -12,6 +12,9 @@
  /* OpenBSD suspend/hibernate backend */
@@ -11,6 +11,6 @@ Add NetBSD backend.
 +/* NetBSD suspend/hibernate backend */
 +#undef BACKEND_TYPE_NETBSD
 +
- /* Define for debugging support */
- #undef DEBUG
+ /* Solaris suspend/hibernate backend */
+ #undef BACKEND_TYPE_SOLARIS
  

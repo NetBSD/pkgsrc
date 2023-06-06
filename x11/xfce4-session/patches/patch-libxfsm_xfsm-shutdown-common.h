@@ -1,10 +1,10 @@
-$NetBSD: patch-libxfsm_xfsm-shutdown-common.h,v 1.2 2022/02/06 17:42:47 gutteridge Exp $
+$NetBSD: patch-libxfsm_xfsm-shutdown-common.h,v 1.3 2023/06/06 01:14:53 gutteridge Exp $
 
 Add NetBSD commands.
 
---- libxfsm/xfsm-shutdown-common.h.orig	2019-05-05 22:00:21.000000000 +0000
+--- libxfsm/xfsm-shutdown-common.h.orig	2023-05-18 16:19:55.000000000 +0000
 +++ libxfsm/xfsm-shutdown-common.h
-@@ -70,4 +70,9 @@
+@@ -70,6 +70,11 @@
  #define UP_BACKEND_HIBERNATE_COMMAND "/usr/sbin/ZZZ"
  #endif
  
@@ -13,4 +13,6 @@ Add NetBSD commands.
 +#define UP_BACKEND_HIBERNATE_COMMAND    "/sbin/sysctl -w hw.acpi.sleep.state=4"
 +#endif
 +
- #endif /* __XFSM_SHUTDOWN_COMMON_H_ */
+ #ifdef BACKEND_TYPE_SOLARIS
+ #define UP_BACKEND_SUSPEND_COMMAND "/usr/bin/sys-suspend"
+ #define UP_BACKEND_HIBERNATE_COMMAND "/usr/bin/false"
