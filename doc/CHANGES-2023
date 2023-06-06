@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3602 2023/06/06 13:41:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3603 2023/06/06 13:45:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4988,3 +4988,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-console to 1.17.0 [taca 2023-06-06]
 	Updated devel/ruby-gettext_i18n_rails to 1.11.0 [taca 2023-06-06]
 	Updated devel/ruby-i18n to 1.14.1 [taca 2023-06-06]
+	Updated net/gst-rtsp-server to 1.22.3 [wiz 2023-06-06]
