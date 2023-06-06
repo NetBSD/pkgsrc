@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/05/22 21:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 15:27:57 abs Exp $
 
 DISTNAME=	GPXSee-6.3
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/tumic0/GPXSee/
 COMMENT=	GPS log file viewer and analyzer
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c++03
+USE_LANGUAGES=	c++11
 QMAKE=		${QTDIR}/bin/qmake
 
 INSTALLATION_DIRS+=	bin share/gpxsee/csv share/gpxsee/maps share/applications share/mime/packages share/pixmaps
