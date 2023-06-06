@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/06/03 23:55:32 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 14:05:46 wiz Exp $
 
 DISTNAME=	flask_babel-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/mitsuhiko/flask-babel
 COMMENT=	Adds i18n/l10n support to Flask applications
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.12:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-flask>=2.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
