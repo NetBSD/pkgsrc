@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2023/05/31 12:57:15 adam Exp $
+$NetBSD: distinfo,v 1.80 2023/06/06 08:13:32 wiz Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -27,9 +27,9 @@ Size (cc-1.0.79.crate) = 62624 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (cryptography-41.0.0.tar.gz) = 27a1eaa8c4ce92bd5aa4bf2b28dd6074bb53b386cc053b6fedf626d4b0c20c6b
-SHA512 (cryptography-41.0.0.tar.gz) = c0025064ef4ec3d966cc0629eb01ea134e8283389961c1c07d16197e484e713fb9570672364af900f1cd050e9574ba32206503f7ee28654f26a54e5a90667280
-Size (cryptography-41.0.0.tar.gz) = 628254 bytes
+BLAKE2s (cryptography-41.0.1.tar.gz) = 96c40b29a7aedf155c7b794d5ed781955d960b6999f984193f866c74e26fb304
+SHA512 (cryptography-41.0.1.tar.gz) = 7f944cc99f57db3e3e54eaea74ce65a4477c71fc9475dfb50247ca291d5e806dbf0323651edf9ce8ec3bf03de8912fb86f6c83b3b76f1d0e37369bd83e86805c
+Size (cryptography-41.0.1.tar.gz) = 629124 bytes
 BLAKE2s (foreign-types-0.3.2.crate) = d6fbfbaaa345e5df7be5b4c09a69174fb43c8ab6b79a989c599f7a8c576d78ba
 SHA512 (foreign-types-0.3.2.crate) = bf27b8243ed482c202d120383374f19ff09422535e24b9c1aebccc66529bf300ca17b8bbc76d67f98ac092e614497afe3add9dc68aa69c93074df05762f91232
 Size (foreign-types-0.3.2.crate) = 7504 bytes
@@ -51,9 +51,9 @@ Size (memoffset-0.8.0.crate) = 8912 bytes
 BLAKE2s (once_cell-1.17.2.crate) = 91ac2f53a8f79cbf60edd4058efe6eac5f81a446527c4210c686eed751886961
 SHA512 (once_cell-1.17.2.crate) = 8a00338f5aabe766fe5cd741cafd8c2ff544d60d081e5706b0965db6c86e00cc7b5fa0f73d8aa54cd1f4506a0858de589ceb4bd32afa7046dd3a1fbcf52b69d7
 Size (once_cell-1.17.2.crate) = 33335 bytes
-BLAKE2s (openssl-0.10.53.crate) = 6f228701256984e43b6433ad2d749764650e71e26349a1feeb8125a6270860fe
-SHA512 (openssl-0.10.53.crate) = ac06a4be7976d0297d444aa55aa46b248e8ffa86ddde991f79697b40f4d2b7b08dfb7c2de5b43083d4ae40300bbd5b95d9ad4654e6dc71591d0a4d6e5fd044bb
-Size (openssl-0.10.53.crate) = 258222 bytes
+BLAKE2s (openssl-0.10.54.crate) = a6be2e35689c51b9e1e5fdf528474818b44edff05f11f4d4aee4005eb3f41ce8
+SHA512 (openssl-0.10.54.crate) = c48d92ecf220bdef6e96b3d915ea64964e6a22dafbb8ed0cf25ba69b55dd566a483b860a80ba88db01e6006be69ea59aab038e05fe8e2370ec1a7e6e6ef75150
+Size (openssl-0.10.54.crate) = 258266 bytes
 BLAKE2s (openssl-macros-0.1.1.crate) = edb78e0a672af6601a8a2fb10b3d9064caa4059b92688e022ff5354bfa59cac3
 SHA512 (openssl-macros-0.1.1.crate) = 57e75c84f78fb83f884eeaedb0dd135ecb40192dad2facd908e6a575c9b65b38a2c93bca4630e09ea5a82c77d8bc8364cb2f5778cbfe9d8f484cafe3346b883c
 Size (openssl-macros-0.1.1.crate) = 5601 bytes
