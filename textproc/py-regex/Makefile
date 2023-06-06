@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/05/04 17:25:20 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/06 10:43:25 wiz Exp $
 
-DISTNAME=	regex-2023.5.5
+DISTNAME=	regex-2023.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/regex/}
@@ -12,6 +12,7 @@ LICENSE=	python-software-foundation
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# needs 'make install'
 do-test:
 	${PYTHONBIN} -m regex.test_regex
 
