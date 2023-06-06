@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/04/17 20:53:30 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 10:41:46 wiz Exp $
 
-DISTNAME=	poetry_plugin_export-1.3.1
+DISTNAME=	poetry_plugin_export-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry-plugin-export/}
@@ -22,6 +22,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# as of 1.4.0
+# 1 failed, 67 passed
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
