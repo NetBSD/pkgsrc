@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3614 2023/06/06 19:27:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3615 2023/06/06 20:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5001,3 +5001,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/balance-tui to 0.1.2 [pin 2023-06-06]
 	Updated shells/oh-my-posh to 16.10.0 [pin 2023-06-06]
 	Updated shells/starship to 1.15.0 [pin 2023-06-06]
+	Updated textproc/py-rapidfuzz to 3.1.1 [wiz 2023-06-06]
