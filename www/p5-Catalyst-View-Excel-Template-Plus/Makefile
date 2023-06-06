@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:42 riastradh Exp $
 
 DISTNAME=	Catalyst-View-Excel-Template-Plus-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Catalyst-Runtime-[0-9]*:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Excel-Template-Plus>=0.05:../../math/p5-Excel-Template-Plus
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/View/Excel/Template/Plus/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/04/23 14:26:28 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/06 12:42:03 riastradh Exp $
 #
 
 DISTNAME=	choqok-1.5
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=	no
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl msgfmt pkg-config
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 DEPENDS=	qca2-ossl-[0-9]*:../../security/qca2-ossl
 
 .include "../../meta-pkgs/kde4/kde4.mk"

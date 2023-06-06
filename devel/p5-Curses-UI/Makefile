@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:45 riastradh Exp $
 
 DISTNAME=	Curses-UI-0.9609
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Curses>=1.29:../../devel/p5-Curses
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
-BUILD_DEPENDS+=	p5-Test-Pod>=1.20:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod>=1.20:../../devel/p5-Test-Pod
 
 # Make Curses-UI use Curses' wide character aware functions
 SUBST_CLASSES+=		wide

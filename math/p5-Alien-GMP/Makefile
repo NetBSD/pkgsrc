@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:51 riastradh Exp $
 
 DISTNAME=	Alien-GMP-1.16
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Alien package for the GNU Multiple Precision library
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
-BUILD_DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
+TOOL_DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Alien/GMP/.packlist

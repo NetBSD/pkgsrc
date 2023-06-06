@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/01/29 21:17:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2023/06/06 12:41:46 riastradh Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		20
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake makeinfo pax perl:run
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 
 BUILD_TARGET=		full optional
 INFO_FILES=		yes

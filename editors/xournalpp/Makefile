@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/05/08 09:33:26 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/06/06 12:41:20 riastradh Exp $
 
 DISTNAME=	xournalpp-1.1.3
 PKGREVISION=	5
@@ -29,7 +29,7 @@ USE_PKGSRC_GCC_RUNTIME=	yes
 
 .include "../../archivers/libarchive/buildlink3.mk"
 
-BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex

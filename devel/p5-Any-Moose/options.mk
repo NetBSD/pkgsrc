@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/03 10:15:49 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2023/06/06 12:40:41 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.p5-Any-Moose
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
@@ -9,10 +9,10 @@ PKG_SUGGESTED_OPTIONS=		moose
 
 .if !empty(PKG_OPTIONS:Mmoose)
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-BUILD_DEPENDS+=	p5-MooseX-Types>=0.44nb2:../../devel/p5-MooseX-Types
+TOOL_DEPENDS+=	p5-MooseX-Types>=0.44nb2:../../devel/p5-MooseX-Types
 .endif
 
 .if !empty(PKG_OPTIONS:Mmouse)
 DEPENDS+=	p5-Mouse-[0-9]*:../../devel/p5-Mouse
-BUILD_DEPENDS+=	p5-MouseX-Types-[0-9]*:../../devel/p5-MouseX-Types
+TOOL_DEPENDS+=	p5-MouseX-Types-[0-9]*:../../devel/p5-MouseX-Types
 .endif

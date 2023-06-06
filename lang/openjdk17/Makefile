@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/19 08:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:45 riastradh Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -23,7 +23,7 @@ JAVA_WRAPPERS=	jar jarsigner java javac javadoc javap jcmd jconsole jdb \
 		jrunscript jshell jstack jstat jstatd keytool \
 		rmiregistry serialver
 
-BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
+TOOL_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 # For alloca()
 BUILDLINK_TRANSFORM+=		opt:-std=c99:-std=gnu99

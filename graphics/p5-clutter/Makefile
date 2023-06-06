@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/06/28 11:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/06 12:41:35 riastradh Exp $
 #
 
 DISTNAME=	Clutter-1.110
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.clutter-project.org/
 COMMENT=	Perl interface to the 1.x series of the Clutter toolkit
 LICENSE=	gnu-lgpl-v2.1
 
-#BUILD_DEPENDS+=	{perl>=5.8.8,p5-ExtUtils-MakeMaker>=6.30}:../../devel/p5-ExtUtils-MakeMaker
+#TOOL_DEPENDS+=	{perl>=5.8.8,p5-ExtUtils-MakeMaker>=6.30}:../../devel/p5-ExtUtils-MakeMaker
 DEPENDS+=		p5-glib2>=1.253:../../devel/p5-glib2
 DEPENDS+=		p5-cairo-gobject>=1.000:../../graphics/p5-cairo-gobject
 DEPENDS+=		p5-Glib-Object-Introspection>=0.002:../../devel/p5-Glib-Object-Introspection

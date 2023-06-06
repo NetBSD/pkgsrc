@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:30 riastradh Exp $
 
 DISTNAME=	Text-Trac-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 
-BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
+TOOL_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
 
 REPLACE_PERL=	script/trac2html
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:41:06 riastradh Exp $
 
 DISTNAME=	Test-Identity-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Assert the referential identity of a reference
 LICENSE=	${PERL5_LICENSE}
 
 
-#BUILD_DEPENDS+=	{perl>=5.11.3,p5-Module-Build>=0.36}:../../devel/p5-Module-Build
+#TOOL_DEPENDS+=	{perl>=5.11.3,p5-Module-Build>=0.36}:../../devel/p5-Module-Build
 
 USE_LANGUAGES=	
 PERL5_MODULE_TYPE+=	Module::Build

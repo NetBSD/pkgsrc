@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/01/27 00:22:34 wen Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:48 riastradh Exp $
 
 DISTNAME=		Email-MIME-Encodings-1.317
 PKGNAME=		p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=		Unified interface to MIME encoding and decoding
 LICENSE=		${PERL5_LICENSE}
 
 #DEPENDS+=		{perl>=5.8.6,p5-MIME-Base64>=3.05}:../../converters/p5-MIME-Base64
-BUILD_DEPENDS+=		p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=		p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=		auto/Email/MIME/Encodings/.packlist
 

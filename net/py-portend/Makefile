@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/11/06 18:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:08 riastradh Exp $
 
 DISTNAME=	portend-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jaraco/portend
 COMMENT=	TCP port monitoring utilities
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-tempora>=1.8:../../time/py-tempora
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

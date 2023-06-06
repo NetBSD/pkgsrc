@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Hooks-Parser-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -13,11 +13,11 @@ LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
 
-BUILD_DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-B-Hooks-EndOfScope-[0-9]*:../../devel/p5-B-Hooks-EndOfScope
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 # for make test
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/Parser/.packlist

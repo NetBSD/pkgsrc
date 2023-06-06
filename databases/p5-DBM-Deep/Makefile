@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:40:31 riastradh Exp $
 
 DISTNAME=	DBM-Deep-2.0016
 PKGNAME=	p5-${DISTNAME}
@@ -14,13 +14,13 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBM/Deep/.packlist
 
-BUILD_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
-BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Warn>=0.08:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
+TOOL_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Warn>=0.08:../../devel/p5-Test-Warn
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-FileHandle-Fmode-[0-9]*:../../devel/p5-FileHandle-Fmode
+TOOL_DEPENDS+=	p5-FileHandle-Fmode-[0-9]*:../../devel/p5-FileHandle-Fmode
 
 PERL5_MODULE_TYPE=	Module::Build
 

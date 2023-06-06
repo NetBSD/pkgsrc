@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/11 11:53:21 wen Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:36 riastradh Exp $
 
 DISTNAME=	DateTimeX-Easy-0.091
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-DateTime-Format-Natural-[0-9]*:../../time/p5-DateTime-Format-Natura
 #DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
-BUILD_DEPENDS+=	p5-Test-Most>0:../../devel/p5-Test-Most
+TOOL_DEPENDS+=	p5-Test-Most>0:../../devel/p5-Test-Most
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 USE_LANGUAGES=		#

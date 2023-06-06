@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/03/09 16:44:25 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:24 riastradh Exp $
 #
 
 # VERSION is set in xentool415/version.mk
@@ -21,7 +21,7 @@ INSTALL_DIRS+=		tools/libs/devicemodel tools/libs/ctrl tools/libs/guest
 INSTALL_MAKE_FLAGS+=	XENSTORE_XENSTORED=n
 
 .if !exists(/usr/bin/iasl)
-BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
+TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 
 GNU_CONFIGURE=		yes

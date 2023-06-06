@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:28 riastradh Exp $
 
 DISTNAME=	Pod-Tree-1.31
 PKGNAME=	p5-${DISTNAME}
@@ -16,9 +16,9 @@ DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 #DEPENDS+=	{perl>=5.9.3,p5-Pod-Escapes>=1.02}:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Text-Template>=1.0:../../textproc/p5-Text-Template
 
-BUILD_DEPENDS+=	p5-Path-Tiny>=0:../../filesystems/p5-Path-Tiny
-BUILD_DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
-BUILD_DEPENDS+=	p5-Test-Version>=1.003001:../../devel/p5-Test-Version
+TOOL_DEPENDS+=	p5-Path-Tiny>=0:../../filesystems/p5-Path-Tiny
+TOOL_DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
+TOOL_DEPENDS+=	p5-Test-Version>=1.003001:../../devel/p5-Test-Version
 
 PERL5_PACKLIST=	auto/Pod/Tree/.packlist
 

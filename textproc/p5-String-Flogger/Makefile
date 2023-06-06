@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:28 riastradh Exp $
 #
 
 DISTNAME=		String-Flogger-1.101245
@@ -16,7 +16,7 @@ DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/String/Flogger/.packlist
 

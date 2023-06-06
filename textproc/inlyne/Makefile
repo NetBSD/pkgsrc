@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/05/10 10:26:38 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:42:25 riastradh Exp $
 
 DISTNAME=	inlyne-0.3.1
 CATEGORIES=	textproc
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/trimental/inlyne/
 COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 

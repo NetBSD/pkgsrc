@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:41:01 riastradh Exp $
 
 DISTNAME=	PPI-XS-0.910
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 # If it is greater than version of devel/p5-PPI, p5-PPI should be updated.
 DEPENDS+=	p5-PPI>=1.203:../../devel/p5-PPI
 
-BUILD_DEPENDS+=	p5-ExtUtils-AutoInstall>=0.63:../../devel/p5-ExtUtils-AutoInstall
+TOOL_DEPENDS+=	p5-ExtUtils-AutoInstall>=0.63:../../devel/p5-ExtUtils-AutoInstall
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/PPI/XS/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/11/14 19:29:13 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/06 12:42:52 riastradh Exp $
 
 DISTNAME=	varnish-7.2.1
 CATEGORIES=	www
@@ -10,7 +10,7 @@ HOMEPAGE=	https://varnish-cache.org/
 COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=			${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=			${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 TOOL_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

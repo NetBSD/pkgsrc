@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:31 riastradh Exp $
 #
 
 DISTNAME=	DBIx-Introspector-0.001005
@@ -15,8 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-DBI>=1.628:../../databases/p5-DBI
 DEPENDS+=	p5-Moo>=1.003001:../../devel/p5-Moo
 
-BUILD_DEPENDS+=	p5-DBD-SQLite>=1.4:../../databases/p5-DBD-SQLite
-BUILD_DEPENDS+=	p5-Test-Roo>=1.002:../../devel/p5-Test-Roo
+TOOL_DEPENDS+=	p5-DBD-SQLite>=1.4:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-Test-Roo>=1.002:../../devel/p5-Test-Roo
 
 PERL5_PACKLIST=		auto/DBIx/Introspector/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/04/23 14:26:15 adam Exp $
+# $NetBSD: Makefile,v 1.78 2023/06/06 12:40:27 riastradh Exp $
 
 DISTNAME=	mongodb-src-r4.2.15
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -16,10 +16,10 @@ NOT_FOR_PLATFORM+=	*-*-i386
 
 EXTRACT_USING=	bsdtar
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
-BUILD_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-BUILD_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TOOL_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=	c99 c++17

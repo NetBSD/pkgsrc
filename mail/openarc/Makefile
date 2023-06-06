@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/26 15:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:48 riastradh Exp $
 
 DISTNAME=	openarc-20180921
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Open source ARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
 
 # for m4 file
-BUILD_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
+TOOL_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
 
 RCD_SCRIPTS=	openarc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:56 riastradh Exp $
 
 DISTNAME=	MooseX-Emulate-Class-Accessor-Fast-0.009032
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Moose>=0.84:../../devel/p5-Moose
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 PERL5_PACKLIST=		auto/MooseX/Emulate/Class/Accessor/Fast/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

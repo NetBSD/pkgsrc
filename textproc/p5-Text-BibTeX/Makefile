@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/04/30 02:39:36 wen Exp $
+# $NetBSD: Makefile,v 1.60 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Text-BibTeX-0.89
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +11,10 @@ HOMEPAGE=	https://www.gerg.ca/software/btOOL/
 COMMENT=	Perl library for reading, parsing, and processing BibTeX files
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=		p5-Config-AutoConf>=0.320:../../devel/p5-Config-AutoConf
-BUILD_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.01:../../devel/p5-ExtUtils-LibBuilder
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
+TOOL_DEPENDS+=		p5-Capture-Tiny>=0.06:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=		p5-Config-AutoConf>=0.320:../../devel/p5-Config-AutoConf
+TOOL_DEPENDS+=		p5-ExtUtils-LibBuilder>=0.01:../../devel/p5-ExtUtils-LibBuilder
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.27}:../../devel/p5-ExtUtils-CBuilder
 
 USE_LANGUAGES+=		c c99
 PERL5_PACKLIST=		auto/Text/BibTeX/.packlist

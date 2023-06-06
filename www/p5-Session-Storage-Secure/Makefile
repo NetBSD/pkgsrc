@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Session-Storage-Secure-1.000
 PKGNAME=	p5-${DISTNAME}
@@ -25,9 +25,9 @@ DEPENDS+=	p5-Sereal-Encoder-[0-9]*:../../converters/p5-Sereal-Encoder
 DEPENDS+=	p5-String-Compare-ConstantTime-[0-9]*:../../textproc/p5-String-Compare-ConstantTime
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Number-Tolerant-[0-9]*:../../math/p5-Number-Tolerant
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Number-Tolerant-[0-9]*:../../math/p5-Number-Tolerant
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

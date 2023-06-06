@@ -1,5 +1,5 @@
 
-# $NetBSD: Makefile,v 1.61 2022/10/01 00:44:50 wen Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/06 12:40:28 riastradh Exp $
 
 DISTNAME=	DBD-CSV-0.59
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-SQL-Statement>=1.412nb2:../../databases/p5-SQL-Statement
 DEPENDS+=	p5-Text-CSV_XS>=1.01:../../textproc/p5-Text-CSV_XS
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
 
 CONFLICTS+=	p5-SQL-Statement<=1.27
 CONFLICTS+=	p5-DBI<=1.611

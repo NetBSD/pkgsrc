@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:53 riastradh Exp $
 #
 
 DISTNAME=	Module-Manifest-1.09
@@ -12,8 +12,8 @@ HOMEPAGE=	https://metacpan.org/release/Module-Manifest
 COMMENT=	Parse and examine a Perl distribution MANIFEST file
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 
 DEPENDS+=	p5-Params-Util>=0.10:../../devel/p5-Params-Util
 

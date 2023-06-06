@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/11/14 18:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:16 riastradh Exp $
 
 DISTNAME=	gssapi-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pythongssapi/python-gssapi
 COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 # unpackaged: k5test
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized

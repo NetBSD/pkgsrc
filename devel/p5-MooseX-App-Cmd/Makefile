@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:40:55 riastradh Exp $
 
 DISTNAME=	MooseX-App-Cmd-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -29,7 +29,7 @@ TEST_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 TEST_DEPENDS+=	p5-MooseX-NonMoose-[0-9]*:../../devel/p5-MooseX-NonMoose
 # for others
-BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
+TOOL_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:31:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:31 riastradh Exp $
 #
 
 DISTNAME=	DBIx-Connector-0.57
@@ -12,9 +12,9 @@ HOMEPAGE=	https://metacpan.org/release/DBIx-Connector
 COMMENT=	Fast, safe DBI connection and transaction management
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-MockModule>=0.05:../../devel/p5-Test-MockModule
-BUILD_DEPENDS+=	p5-Test-Pod>=1.26:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-MockModule>=0.05:../../devel/p5-Test-MockModule
+TOOL_DEPENDS+=	p5-Test-Pod>=1.26:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DBIx/Connector/.packlist

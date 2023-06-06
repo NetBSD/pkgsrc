@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/01/29 21:14:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/06 12:41:47 riastradh Exp $
 
 DISTNAME=	Mailer-0.2.0
 PKGNAME=	deforaos-mailer-0.2.0
@@ -11,8 +11,8 @@ HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop e-mail client
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext

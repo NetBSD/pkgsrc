@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/05/05 13:19:39 nia Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:40:18 riastradh Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -12,10 +12,10 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
 
-BUILD_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
+TOOL_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
 
 CONFLICTS+=	gnucap-2006-07-[0-9]*
 

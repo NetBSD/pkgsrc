@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:44 riastradh Exp $
 
 DISTNAME=	HTML-TreeBuilder-LibXML-0.26
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ PERL5_MODULE_TYPE=	Module::Build::Tiny
 DEPENDS+=	p5-HTML-TreeBuilder-XPath>=0.14:../../www/p5-HTML-TreeBuilder-XPath
 DEPENDS+=	p5-XML-LibXML>=1.70:../../textproc/p5-XML-LibXML
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

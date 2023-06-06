@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:33:03 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:41:02 riastradh Exp $
 #
 
 DISTNAME=	Parse-Method-Signatures-1.003019
@@ -21,12 +21,12 @@ DEPENDS+=	p5-PPI>=1.203:../../devel/p5-PPI
 DEPENDS+=	p5-namespace-clean>=0.10:../../devel/p5-namespace-clean
 
 # For test target
-BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled

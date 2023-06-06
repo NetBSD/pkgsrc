@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/05/23 08:49:08 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:10 riastradh Exp $
 #
 
 .include "../../pkgtools/pkg_online-server/Makefile.common"
@@ -15,7 +15,7 @@ DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	netcat-[0-9]*:../../net/netcat
 DEPENDS+=	runawk>=1.1:../../lang/runawk
 
-BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
+TOOL_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
 INSTALL_TARGET=	install-client install-doc
 

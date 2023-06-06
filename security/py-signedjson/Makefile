@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/03/29 09:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:42:16 riastradh Exp $
 
 DISTNAME=	signedjson-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=1.0.0:../../devel/py-canonicaljson
 DEPENDS+=	${PYPKGPREFIX}-nacl>=0.3.0:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.0.1:../../devel/py-unpaddedbase64
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
 

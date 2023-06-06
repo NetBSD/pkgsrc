@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/06/30 11:18:18 nia Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:41:16 riastradh Exp $
 
 DISTNAME=	stgit-0.17.1
 PKGREVISION=	20
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.procode.org/stgit/
 COMMENT=	Stacked GIT
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	asciidoc>=8:../../textproc/asciidoc
-BUILD_DEPENDS+=	docbook-xsl>=1.72:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc>=8:../../textproc/asciidoc
+TOOL_DEPENDS+=	docbook-xsl>=1.72:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base>=1.5.2:../../devel/git-base
 
 EGG_NAME=	${DISTNAME}_dirty

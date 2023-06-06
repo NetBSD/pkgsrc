@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/06/28 11:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/06/06 12:40:59 riastradh Exp $
 
 DISTNAME=	Mouse-v2.5.10
 PKGNAME=	p5-${DISTNAME:S/v//1}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/Mouse
 COMMENT=	Perl module implementing an extension of the perl object system
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Requires>=0.06:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Module-Build-XSUtil>=0:../../devel/p5-Module-Build-XSUtil
+TOOL_DEPENDS+=	p5-Test-Requires>=0.06:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Module-Build-XSUtil>=0:../../devel/p5-Module-Build-XSUtil
 
 # for make test
 TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception

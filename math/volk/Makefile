@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/10/25 11:18:21 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:41:53 riastradh Exp $
 
 DISTNAME=	volk-2.5.2
 CATEGORIES=	math ham
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.libvolk.org/
 COMMENT=	The Vector Optimized Library of Kernels
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
+TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
 GCC_REQD+=	8	# std::filesystem
 USE_CMAKE=	yes

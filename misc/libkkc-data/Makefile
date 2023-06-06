@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/02/27 19:18:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:57 riastradh Exp $
 
 GITHUB_PROJECT=	libkkc
 GITHUB_RELEASE=	v0.3.5
@@ -14,7 +14,7 @@ COMMENT=	Language model data for libkkc
 LICENSE=	gnu-gpl-v3
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-marisa
-BUILD_DEPENDS+=	${PYPKGPREFIX}-marisa-[0-9]*:../../textproc/py-marisa
+TOOL_DEPENDS+=	${PYPKGPREFIX}-marisa-[0-9]*:../../textproc/py-marisa
 
 GNU_CONFIGURE=	yes
 

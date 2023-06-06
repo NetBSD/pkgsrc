@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/05/14 11:27:52 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:21 riastradh Exp $
 #
 
 DISTNAME=	nbase-7.0.0.7
@@ -11,7 +11,7 @@ COMMENT=	NetBSD userlevel portable to other UNIX-like systems
 LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	nbase
-BUILD_DEPENDS+=	mk-configure>=0.34.0:../../devel/mk-configure
+TOOL_DEPENDS+=	mk-configure>=0.34.0:../../devel/mk-configure
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		flex:run byacc

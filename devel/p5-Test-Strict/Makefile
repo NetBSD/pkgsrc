@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:41:07 riastradh Exp $
 
 DISTNAME=	Test-Strict-0.52
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/pod/Test::Strict
 COMMENT=	Check syntax, presence of use strict; and test coverage
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
+TOOL_DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 
 PERL5_PACKLIST=	auto/Test/Strict/.packlist
 USE_LANGUAGES=	# none

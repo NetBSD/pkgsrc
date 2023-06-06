@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:33:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:04 riastradh Exp $
 
 DISTNAME=	Sub-Override-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Sub/Override/.packlist
 
-BUILD_DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
-BUILD_DEPENDS+=	p5-Test-Fatal>=0.013:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
+TOOL_DEPENDS+=	p5-Test-Fatal>=0.013:../../devel/p5-Test-Fatal
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

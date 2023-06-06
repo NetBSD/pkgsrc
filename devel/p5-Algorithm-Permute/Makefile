@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	Algorithm-Permute-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl module for generating permutations with object oriented interface
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
 PERL5_PACKLIST=		auto/Algorithm/Permute/.packlist
 

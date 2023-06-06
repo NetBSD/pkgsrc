@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/05/09 12:17:52 triaxx Exp $
+# $NetBSD: options.mk,v 1.5 2023/06/06 12:42:19 riastradh Exp $
 #
 
 #
@@ -31,8 +31,8 @@ CONFIGURE_ARGS+=	--disable-mm-debug
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--enable-grub-mkfont
 PLIST.freetype=		yes
-BUILD_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
-BUILD_DEPENDS+=		unifont-[0-9]*:../../fonts/unifont
+TOOL_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
+TOOL_DEPENDS+=		unifont-[0-9]*:../../fonts/unifont
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-grub-mkfont

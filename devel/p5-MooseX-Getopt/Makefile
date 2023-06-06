@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/06/28 11:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/06 12:40:56 riastradh Exp $
 
 DISTNAME=	MooseX-Getopt-0.75
 PKGNAME=	p5-${DISTNAME}
@@ -29,10 +29,10 @@ TEST_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 TEST_DEPENDS+=		p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
 TEST_DEPENDS+=		p5-Test-Warnings>=0.009:../../devel/p5-Test-Warnings
 # recommended modules ...
-#BUILD_DEPENDS+=	p5-CPAN-Meta-[0-9]*:../../devel/p5-CPAN-Meta
-#BUILD_DEPENDS+=	p5-CPAN-Meta-Requirements>=2.120900:../../devel/p5-CPAN-Meta-Requirements
-#BUILD_DEPENDS+=	p5-MooseX-ConfigFromFile-[0-9]*:../../devel/p5-MooseX-ConfigFromFile
-#BUILD_DEPENDS+=	p5-MooseX-SimpleConfig>=0.07:../../devel/p5-MooseX-SimpleConfig
+#TOOL_DEPENDS+=	p5-CPAN-Meta-[0-9]*:../../devel/p5-CPAN-Meta
+#TOOL_DEPENDS+=	p5-CPAN-Meta-Requirements>=2.120900:../../devel/p5-CPAN-Meta-Requirements
+#TOOL_DEPENDS+=	p5-MooseX-ConfigFromFile-[0-9]*:../../devel/p5-MooseX-ConfigFromFile
+#TOOL_DEPENDS+=	p5-MooseX-SimpleConfig>=0.07:../../devel/p5-MooseX-SimpleConfig
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build::Tiny

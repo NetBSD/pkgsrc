@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:29 riastradh Exp $
 
 DISTNAME=	DBIx-Class-Candy-0.005003
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-MRO-Compat>=0.11:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Sub-Exporter>=0.982:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-namespace-clean>=0.18:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=		auto/DBIx/Class/Candy/.packlist
 

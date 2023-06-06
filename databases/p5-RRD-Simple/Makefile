@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/04/19 08:09:26 adam Exp $
+# $NetBSD: Makefile,v 1.58 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	RRD-Simple-1.44
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +11,10 @@ HOMEPAGE=	https://metacpan.org/release/RRD-Simple
 COMMENT=	RRD::Simple implementation for Perl
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	p5-Test-Pod>=1.26:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Pod-Coverage>=0.18:../../textproc/p5-Pod-Coverage
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
-BUILD_DEPENDS+=	p5-Test-Deep>=0.096:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Pod>=1.26:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Pod-Coverage>=0.18:../../textproc/p5-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Deep>=0.096:../../devel/p5-Test-Deep
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/RRD/Simple/.packlist

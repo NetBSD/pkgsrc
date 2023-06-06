@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Engine-PSGI-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -15,9 +15,9 @@ DEPENDS+=	p5-Catalyst-Action-RenderView-[0-9]*:../../www/p5-Catalyst-Action-Rend
 DEPENDS+=	p5-Catalyst-Runtime>=5.80007:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
+TOOL_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Engine/PSGI/.packlist

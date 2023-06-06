@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2023/05/22 21:00:22 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=		kile-2.9.93
 PKGREVISION=		18
@@ -10,7 +10,7 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		https://kile.sourceforge.io/
 COMMENT=		LaTeX source editor - TeX shell - Gnuplot front end
 
-BUILD_DEPENDS+=		kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=		kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=		kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=		perl msgmerge pkg-config

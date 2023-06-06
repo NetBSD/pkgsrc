@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/04/19 08:08:56 adam Exp $
+# $NetBSD: Makefile,v 1.111 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	gnome-python-extras-2.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -12,8 +12,8 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Python binding for GNOME2
 
 # need xsltproc to build docs
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PY_PATCHPLIST=			YES
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit via py-gnome2

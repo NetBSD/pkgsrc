@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:42:30 riastradh Exp $
 
 DISTNAME=	XML-Atom-0.43
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/XML-Atom
 COMMENT=	Atom feed and API implementation
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Module-Build-Tiny>=0.034:../../devel/p5-Module-Build-Tiny
+TOOL_DEPENDS+=	p5-Module-Build-Tiny>=0.034:../../devel/p5-Module-Build-Tiny
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-XML-LibXML>=2.0202:../../textproc/p5-XML-LibXML
 #DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64

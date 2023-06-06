@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:44 riastradh Exp $
 
 DISTNAME=	Class-C3-Componentised-1.001002
 PKGNAME=	p5-${DISTNAME:S/00$//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/pod/Class::C3::Componentised
 COMMENT=	Load mix-ins or components to your C3-based class
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Class-C3>=0.20:../../devel/p5-Class-C3
 DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat

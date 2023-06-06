@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:21 riastradh Exp $
 
 DISTNAME=	File-Copy-Recursive-Reduced-0.006
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/release/File-Copy-Recursive
 COMMENT=	Recursive copying of files and directories
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Capture-Tiny>=0:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Path-Tiny>=0:../../filesystems/p5-Path-Tiny
+TOOL_DEPENDS+=	p5-Capture-Tiny>=0:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Path-Tiny>=0:../../filesystems/p5-Path-Tiny
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/File/Copy/Recursive/Reduced/.packlist

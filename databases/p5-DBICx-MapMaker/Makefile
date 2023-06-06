@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:28 riastradh Exp $
 
 DISTNAME=	DBICx-MapMaker-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ COMMENT=	Perl 5 module to automatically create a DBIx::Class mapping table
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBICx/MapMaker/.packlist
 
-BUILD_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
-BUILD_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
+TOOL_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
+TOOL_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 
 .include "../../lang/perl5/module.mk"

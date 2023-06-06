@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:24 riastradh Exp $
 #
 
 DISTNAME=		xapply-3.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Parallel Execution tool a la xargs/apply
 
-BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
+TOOL_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:43 riastradh Exp $
 
 DISTNAME=	Cookie-Baker-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Cookie-Baker
 COMMENT=	Perl extension for cookie string generator/parser
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Time>=0:../../time/p5-Test-Time
+TOOL_DEPENDS+=	p5-Test-Time>=0:../../time/p5-Test-Time
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
 USE_LANGUAGES=	#

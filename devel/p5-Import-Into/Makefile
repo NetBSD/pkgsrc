@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:32:38 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:40:51 riastradh Exp $
 
 DISTNAME=	Import-Into-1.002005
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module to import packages into other packages
 LICENSE=	${PERL5_LICENSE}
 
 # Add for 'make test', as a interim solution
-BUILD_DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
+TOOL_DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 
 PERL5_PACKLIST=	auto/Import/Into/.packlist
 

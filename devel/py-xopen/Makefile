@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/11/08 11:36:19 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:41:15 riastradh Exp $
 
 DISTNAME=	xopen-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/marcelm/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	pbzip2-[0-9]*:../../archivers/pbzip2
 DEPENDS+=	pigz-[0-9]*:../../archivers/pigz
 DEPENDS+=	xz-[0-9]*:../../archivers/xz

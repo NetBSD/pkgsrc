@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2023/04/19 08:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.145 2023/06/06 12:42:10 riastradh Exp $
 
 DISTNAME=		advi-1.10.2
 PKGREVISION=		59
@@ -10,9 +10,9 @@ HOMEPAGE=		http://gallium.inria.fr/advi/
 COMMENT=		Active-DVI Presenter
 LICENSE=		gnu-lgpl-v2
 
-BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
-BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
-BUILD_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
+TOOL_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
+TOOL_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
 DEPENDS+=		camlimages>=4.0.0:../../graphics/camlimages
 
 # "Scripts installed by texlive-tetex have been moved to tex-fontinst,
@@ -22,7 +22,7 @@ DEPENDS+=		tex-fontinst>=1.933:../../fonts/tex-fontinst
 DEPENDS+=		tex-texlive-scripts-extra-[0-9]*:../../print/tex-texlive-scripts-extra
 DEPENDS+=		tex-cyrillic-bin>=2013:../../print/tex-cyrillic-bin
 DEPENDS+=		hevea-[0-9]*:../../textproc/hevea
-BUILD_DEPENDS+=		vera-ttf-[0-9]*:../../fonts/vera-ttf
+TOOL_DEPENDS+=		vera-ttf-[0-9]*:../../fonts/vera-ttf
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

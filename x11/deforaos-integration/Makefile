@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/05/06 19:09:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/06 12:42:52 riastradh Exp $
 
 DISTNAME=	Integration-0.1.1
 PKGNAME=	deforaos-integration-0.1.1
@@ -15,8 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 DEPENDS+=	deforaos-icon-theme>=0.1.1:../../graphics/deforaos-icon-theme
 

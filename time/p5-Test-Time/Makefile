@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/08/02 09:11:51 ast Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:37 riastradh Exp $
 
 DISTNAME=	Test-Time-0.092
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Test-Time
 COMMENT=	Override time()/sleep() core functions for testing
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+TOOL_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 
 PERL5_PACKLIST=	auto/Test/Time/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/08/31 19:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:50 riastradh Exp $
 
 DISTNAME=	mailsuite-1.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/seanthegeek/mailsuite/
 COMMENT=	Python package for retrieving, parsing, and sending emails
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-expiringdict-[0-9]*:../../devel/py-expiringdict
 DEPENDS+=	${PYPKGPREFIX}-html2text>=2020.1.16:../../textproc/py-html2text

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/06/28 11:33:07 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/06 12:41:03 riastradh Exp $
 #
 
 DISTNAME=	Proc-Daemon-0.23
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.mhonarc.org/~ehood/earlsperls.html
 COMMENT=	Provide capability for a Perl program to run as a daemon
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS=	p5-Proc-ProcessTable>=0:../../devel/p5-Proc-ProcessTable
+TOOL_DEPENDS=	p5-Proc-ProcessTable>=0:../../devel/p5-Proc-ProcessTable
 
 PERL5_PACKLIST=		auto/Proc/Daemon/.packlist
 

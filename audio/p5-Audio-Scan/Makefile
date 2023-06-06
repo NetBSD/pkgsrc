@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:40:17 riastradh Exp $
 
 DISTNAME=	Audio-Scan-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	XS parser for MP3, MP4, Ogg Vorbis, etc
 LICENSE=	gnu-gpl-v2
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Audio/Scan/.packlist
 USE_LIBTOOL=		yes

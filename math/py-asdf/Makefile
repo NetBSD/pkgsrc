@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/03/29 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:53 riastradh Exp $
 
 DISTNAME=	asdf-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/asdf-format/asdf
 COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.2:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:29 riastradh Exp $
 
 DISTNAME=	DBIx-Class-DynamicDefault-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ PERL5_PACKLIST=	auto/DBIx/Class/DynamicDefault/.packlist
 
 DEPENDS+=	p5-DBIx-Class>=0.08127:../../databases/p5-DBIx-Class
 
-BUILD_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
+TOOL_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

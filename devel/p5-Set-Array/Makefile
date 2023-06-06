@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:04 riastradh Exp $
 #
 
 DISTNAME=	Set-Array-0.30
@@ -13,9 +13,9 @@ HOMEPAGE=	https://metacpan.org/release/Set-Array
 COMMENT=	Arrays as objects with lots of handy methods
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Try-Tiny>=0.11:../../devel/p5-Try-Tiny
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Pod>=0:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Try-Tiny>=0.11:../../devel/p5-Try-Tiny
+TOOL_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Pod>=0:../../devel/p5-Test-Pod
 DEPENDS+=	p5-Want>=0:../../devel/p5-Want
 
 PERL5_MODULE_TYPE=	Module::Build

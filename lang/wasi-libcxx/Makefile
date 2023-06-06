@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:47 riastradh Exp $
 
 PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
@@ -23,7 +23,7 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-BUILD_DEPENDS+=	lld-[0-9]*:../../devel/lld
+TOOL_DEPENDS+=	lld-[0-9]*:../../devel/lld
 
 # Workaround for header conflicts
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include

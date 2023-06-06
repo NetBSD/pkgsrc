@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/21 05:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:41:37 riastradh Exp $
 
 DISTNAME=	fcitx5-5.0.5
 PKGREVISION=	6
@@ -36,7 +36,7 @@ BUILD_DEFS+=		VARBASE
 
 REPLACE_BASH+=		data/fcitx5-diagnose.sh
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 CMAKE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
 CMAKE_ARGS+=		-DUSE_SYSTEMD=off

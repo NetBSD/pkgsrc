@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/04/19 08:11:23 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/06 12:42:14 riastradh Exp $
 
 DISTNAME=	opensc-0.23.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/OpenSC-${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoreconf autoconf automake gmake pkg-config

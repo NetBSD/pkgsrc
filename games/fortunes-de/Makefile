@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/06/05 03:46:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:24 riastradh Exp $
 #
 
 DISTNAME=	fortunes-de_0.20.orig
@@ -12,7 +12,7 @@ COMMENT=	German data files for fortune
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
+TOOL_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
 STRFILE=		${LOCALBASE}/bin/strfile
 INSTALLATION_DIRS=	share/games/fortune/de

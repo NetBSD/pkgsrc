@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:01 riastradh Exp $
 #
 
 DISTNAME=	PPI-PowerToys-0.14
@@ -17,9 +17,9 @@ DEPENDS+=	p5-File-Find-Rule-Perl>=0.03:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=	p5-PPI>=1.201:../../devel/p5-PPI
 #DEPENDS+=	{perl>=5.10.1,p5-version>=0.7400}:../../devel/p5-version
 
-BUILD_DEPENDS+=	p5-IPC-Run3>=0.034:../../devel/p5-IPC-Run3
-BUILD_DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
-BUILD_DEPENDS+=	p5-Test-Script>=1.03:../../devel/p5-Test-Script
+TOOL_DEPENDS+=	p5-IPC-Run3>=0.034:../../devel/p5-IPC-Run3
+TOOL_DEPENDS+=	p5-Probe-Perl>=0.01:../../devel/p5-Probe-Perl
+TOOL_DEPENDS+=	p5-Test-Script>=1.03:../../devel/p5-Test-Script
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/PPI/PowerToys/.packlist

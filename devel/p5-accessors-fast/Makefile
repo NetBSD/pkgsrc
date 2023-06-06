@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:33:37 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:08 riastradh Exp $
 
 DISTNAME=	accessors-fast-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -13,9 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=		p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=		p5-Class-C3-[0-9]*:../../devel/p5-Class-C3
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 DEPENDS+=		p5-constant-def>=0.01:../../devel/p5-constant-def
-BUILD_DEPENDS+=		p5-lib-abs>=0.90:../../devel/p5-lib-abs
+TOOL_DEPENDS+=		p5-lib-abs>=0.90:../../devel/p5-lib-abs
 
 REPLACE_PERL+=	cpants.pl
 

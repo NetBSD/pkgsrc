@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/05/08 00:32:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:42:38 riastradh Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	Fork of GNOME Metacity
 
 USE_LANGUAGES=	c99
 
-BUILD_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
+TOOL_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 DEPENDS+=		zenity-[0-9]*:../../x11/zenity
 

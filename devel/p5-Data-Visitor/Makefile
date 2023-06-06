@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:32:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:40:46 riastradh Exp $
 
 DISTNAME=	Data-Visitor-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Tie-ToObject>=0.01:../../devel/p5-Tie-ToObject
 DEPENDS+=	p5-namespace-clean>=0.19:../../devel/p5-namespace-clean
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
-BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TOOL_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=	auto/Data/Visitor/.packlist
 

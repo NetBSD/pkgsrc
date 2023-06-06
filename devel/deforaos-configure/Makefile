@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/11/15 18:32:41 khorben Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:36 riastradh Exp $
 
 DISTNAME=	configure-0.4.3
 PKGNAME=	deforaos-configure-0.4.3
@@ -13,8 +13,8 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}

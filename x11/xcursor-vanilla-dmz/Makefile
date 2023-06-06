@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/11/24 15:04:04 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	dmz-cursor-theme_${PKGVERSION_NOREV}
 PKGNAME=	xcursor-vanilla-dmz-0.4.5
@@ -13,7 +13,7 @@ LICENSE=	cc-by-sa-v3.0
 
 WRKSRC=		${WRKDIR}/dmz-cursor-theme-${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	xcursorgen-[0-9]*:../../x11/xcursorgen
+TOOL_DEPENDS+=	xcursorgen-[0-9]*:../../x11/xcursorgen
 
 ICON_THEMES=	yes
 

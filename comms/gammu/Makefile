@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/04/19 08:09:21 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/06 12:40:23 riastradh Exp $
 #
 
 DISTNAME=	gammu-1.41.0
@@ -13,7 +13,7 @@ COMMENT=	Command line utility and library to work with mobile phones
 LICENSE=	gnu-gpl-v2
 
 # cmake tests for it; unclear for what it would be used
-#BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+#TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 # for gammu-config
 DEPENDS+=		dialog-[0-9]*:../../misc/dialog
 

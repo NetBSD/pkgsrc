@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/02/07 09:01:41 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:16 riastradh Exp $
 
 DISTNAME=	tevent-0.14.1
 CATEGORIES=	devel
@@ -9,8 +9,8 @@ HOMEPAGE=	https://tevent.samba.org/
 COMMENT=	Event system based on the talloc
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS+=	samba<=4.9.4nb1
 

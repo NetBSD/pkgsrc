@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-DBIx-Class-0.1506
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 # for make test
-BUILD_DEPENDS+=	p5-Catalyst-Plugin-Authorization-Roles-[0-9]*:../../www/p5-Catalyst-Plugin-Authorization-Roles
+TOOL_DEPENDS+=	p5-Catalyst-Plugin-Authorization-Roles-[0-9]*:../../www/p5-Catalyst-Plugin-Authorization-Roles
 
 PERL5_PACKLIST=		auto/Catalyst/Authentication/Store/DBIx/Class/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

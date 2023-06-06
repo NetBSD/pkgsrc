@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:40:51 riastradh Exp $
 
 DISTNAME=	List-AllUtils-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-List-SomeUtils>=0.56:../../devel/p5-List-SomeUtils
 DEPENDS+=	p5-List-UtilsBy>=0.11:../../devel/p5-List-UtilsBy
 DEPENDS+=	p5-Scalar-List-Utils>=1.31:../../devel/p5-Scalar-List-Utils
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 PERL5_PACKLIST=	auto/List/AllUtils/.packlist
 

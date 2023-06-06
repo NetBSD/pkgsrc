@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/11 05:14:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:09 riastradh Exp $
 
 DISTNAME=	sniproxy-0.6.1
 CATEGORIES=	net
@@ -14,7 +14,7 @@ USE_TOOLS+=	autoconf aclocal automake pkg-config
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/sniproxy.conf ${PKG_SYSCONFDIR}/sniproxy.conf

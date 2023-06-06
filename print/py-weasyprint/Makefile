@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/01/29 21:17:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/06 12:42:12 riastradh Exp $
 
 DISTNAME=	weasyprint-56.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://weasyprint.org/
 COMMENT=	Converts HTML/CSS documents to PDF
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.1:../../textproc/py-cssselect2

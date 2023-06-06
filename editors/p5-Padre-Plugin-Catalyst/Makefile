@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:33:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=	Padre-Plugin-Catalyst-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-Padre>=0.51:../../editors/p5-Padre
 DEPENDS+=	p5-Task-CatInABox>=0.03:../../www/p5-Task-CatInABox
 DEPENDS+=	p5-Task-Catalyst-Tutorial>=0.06:../../www/p5-Task-Catalyst-Tutorial
 
-BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
-BUILD_DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
+TOOL_DEPENDS+=	p5-Locale-Msgfmt>=0.14:../../devel/p5-Locale-Msgfmt
+TOOL_DEPENDS+=	p5-Module-Pluggable>=3.9:../../devel/p5-Module-Pluggable
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Catalyst/.packlist
 

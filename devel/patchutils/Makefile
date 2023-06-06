@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/30 11:18:16 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:41:09 riastradh Exp $
 
 DISTNAME=		patchutils-0.4.2
 PKGREVISION=		3
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		patch-[0-9]*:../../devel/patch
 #  WARNING: xmlto not available so not building doc
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run

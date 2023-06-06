@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:31:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	Net-FileMaker-0.064
 PKGNAME=	p5-${DISTNAME}
@@ -12,9 +12,9 @@ COMMENT=	Perl Module to interact with FileMaker services
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-XML-Twig-[0-9]*:../../textproc/p5-XML-Twig
-BUILD_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
-BUILD_DEPENDS+=	p5-DateTime-Format-CLDR-[0-9]*:../../time/p5-DateTime-Format-CLDR
+TOOL_DEPENDS+=	p5-XML-Twig-[0-9]*:../../textproc/p5-XML-Twig
+TOOL_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
+TOOL_DEPENDS+=	p5-DateTime-Format-CLDR-[0-9]*:../../time/p5-DateTime-Format-CLDR
 
 PERL5_PACKLIST=	auto/Net/FileMaker/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:45 riastradh Exp $
 
 DISTNAME=	HTTP-Server-Simple-Recorder-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/HTTP/Server/Simple/Recorder/.packlist
 
-BUILD_DEPENDS+=	p5-Test-HTTP-Server-Simple>=0.02:../../www/p5-Test-HTTP-Server-Simple
+TOOL_DEPENDS+=	p5-Test-HTTP-Server-Simple>=0.02:../../www/p5-Test-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple>=0.10:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-IO-Tee-[0-9]*:../../devel/p5-IO-Tee
 

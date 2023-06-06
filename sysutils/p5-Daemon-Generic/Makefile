@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:42:21 riastradh Exp $
 
 DISTNAME=	Daemon-Generic-0.85
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	p5-File-Flock-[0-9]*:../../devel/p5-File-Flock
 DEPENDS+=	p5-Data-Structure-Util-[0-9]*:../../devel/p5-Data-Structure-Util
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
-BUILD_DEPENDS+=	p5-Eval-LineNumbers-[0-9]*:../../devel/p5-Eval-LineNumbers
+TOOL_DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent
+TOOL_DEPENDS+=	p5-Eval-LineNumbers-[0-9]*:../../devel/p5-Eval-LineNumbers
 
 PERL5_PACKLIST=	auto/Daemon/Generic/.packlist
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/15 08:34:57 spz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:14 riastradh Exp $
 
 DISTNAME=	Kivy-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-BUILD_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
+TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 # not mentioned, but used
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-Compile-SOAP-3.27
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=	p5-File-Slurper>=0:../../devel/p5-File-Slurper
 DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
 
 PERL5_PACKLIST=	auto/XML/Compile/SOAP/.packlist
 

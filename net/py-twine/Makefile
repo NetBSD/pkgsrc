@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/12/18 16:16:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:08 riastradh Exp $
 
 DISTNAME=	twine-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metada
 DEPENDS+=	${PYPKGPREFIX}-keyring>=15.1:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-rfc3986>=1.4.0:../../www/py-rfc3986
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.0.0:../../comms/py-rich
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 # unpackaged

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/04/19 08:09:47 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:16 riastradh Exp $
 
 DISTNAME=	starbug1-1.6.01
 PKGREVISION=	29
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 .include "options.mk"
 
-BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
-BUILD_DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
-BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+TOOL_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+TOOL_DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
+TOOL_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 DEPENDS+=	p5-HTTP-Date-[0-9]*:../../www/p5-HTTP-Date
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck

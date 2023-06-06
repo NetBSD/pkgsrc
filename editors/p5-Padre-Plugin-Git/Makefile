@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:33:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:19 riastradh Exp $
 
 DISTNAME=	Padre-Plugin-Git-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -15,10 +15,10 @@ DEPENDS+=	p5-Capture-Tiny>=0.03:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Padre>=0.67:../../editors/p5-Padre
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-CPAN-Changes-[0-9]*:../../devel/p5-CPAN-Changes
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-CPAN-Changes-[0-9]*:../../devel/p5-CPAN-Changes
 # Pithub?
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Git/.packlist

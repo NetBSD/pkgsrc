@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2023/05/02 16:19:41 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2023/06/06 12:42:04 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnunet
 
@@ -46,8 +46,8 @@ CONFIGURE_ARGS+=	--disable-testruns
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/tool.mk"
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
-BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 CONFIGURE_ARGS+=	--enable-documentation
 PLIST_SRC+=		PLIST.doc
 INFO_FILES=yes

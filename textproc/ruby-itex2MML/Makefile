@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/16 20:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:34 riastradh Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://golem.ph.utexas.edu/~distler/blog/itex2MML.html
 COMMENT=	Ruby binding for itex2MML
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.0
 
-BUILD_DEPENDS+=	swig>=1.3:../../devel/swig
+TOOL_DEPENDS+=	swig>=1.3:../../devel/swig
 
 ITEX2MML_VERSION=	1.5.5
 

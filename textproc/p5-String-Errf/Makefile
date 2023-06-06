@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:28 riastradh Exp $
 #
 
 DISTNAME=		String-Errf-0.008
@@ -17,11 +17,11 @@ DEPENDS+=	p5-String-Formatter>=0.102081:../../textproc/p5-String-Formatter
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
 #DEPENDS+=	{perl>=5.10.1,p5-Time-Piece-[0-9]*}:../../time/p5-Time-Piece
 
-BUILD_DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # autodie is in core since 5.10
 # for make test
-BUILD_DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+TOOL_DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 
 PERL5_PACKLIST=		auto/String/Errf/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/09 06:59:53 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:16 riastradh Exp $
 
 DISTNAME=	ugdb-0.1.11
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/ftilde/ugdb/
 COMMENT=	Alternative TUI for gdb
 LICENSE=	mit
 
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 

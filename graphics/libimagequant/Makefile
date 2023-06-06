@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/05/22 11:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:41:34 riastradh Exp $
 
 DISTNAME=	libimagequant-4.2.0
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
+TOOL_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/imagequant-sys
 

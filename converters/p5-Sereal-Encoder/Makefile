@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/02/08 16:23:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:40:25 riastradh Exp $
 
 DISTNAME=	Sereal-Encoder-5.003
 PKGNAME=	p5-${DISTNAME}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://metacpan.org/release/Sereal-Encoder
 COMMENT=	Perl5 module for fast, compact, powerful binary serialization
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-Sereal-Decoder>=4.002:../../converters/p5-Sereal-Decoder
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Sereal-Decoder>=4.002:../../converters/p5-Sereal-Decoder
 
 PERL5_PACKLIST=		auto/Sereal/Encoder/.packlist
 

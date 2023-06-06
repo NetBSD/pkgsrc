@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:44 riastradh Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax touch awk
 
 # uses ulimit -T
-BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
+TOOL_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp

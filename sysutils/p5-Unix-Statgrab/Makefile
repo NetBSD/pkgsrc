@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:36:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:42:22 riastradh Exp $
 
 DISTNAME=	Unix-Statgrab-0.112
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://metacpan.org/release/Unix-Statgrab
 COMMENT=	Perl extension for collecting information about the machine
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
-BUILD_DEPENDS+=	p5-Module-Build>=0.4000:../../devel/p5-Module-Build
-BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
+TOOL_DEPENDS+=	p5-Module-Build>=0.4000:../../devel/p5-Module-Build
+TOOL_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config

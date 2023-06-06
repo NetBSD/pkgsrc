@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.18 2023/05/03 16:38:27 nikita Exp $
+# $NetBSD: mozilla-common.mk,v 1.19 2023/06/06 12:42:51 riastradh Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -34,7 +34,7 @@ TOOL_DEPENDS+=			py38-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=			cbindgen>=0.24.3:../../devel/cbindgen
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 # Enable Google widevine CDM. This requires external libwidevinecdm.so.
 #CONFIGURE_ARGS+=	--enable-eme=widevine

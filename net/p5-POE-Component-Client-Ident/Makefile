@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:07 riastradh Exp $
 #
 
 DISTNAME=	POE-Component-Client-Ident-1.16
@@ -13,7 +13,7 @@ COMMENT=	Non-blocking ident lookups to your sessions
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-POE>=0.38:../../devel/p5-POE
-BUILD_DEPENDS+=	p5-Test-POE-Server-TCP-[0-9]*:../../devel/p5-Test-POE-Server-TCP
+TOOL_DEPENDS+=	p5-Test-POE-Server-TCP-[0-9]*:../../devel/p5-Test-POE-Server-TCP
 
 PERL5_PACKLIST=		auto/POE/Component/Client/Ident/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/11/03 11:55:29 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2023/06/06 12:40:18 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sysbench
 PKG_SUPPORTED_OPTIONS+=	mysql pgsql doc
@@ -21,5 +21,5 @@ CONFIGURE_ARGS+=	--without-pgsql
 
 .if !empty(PKG_OPTIONS:Mdoc)
 .  include "../../textproc/libxslt/buildlink3.mk"
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 .endif

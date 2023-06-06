@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2019/11/03 19:24:35 rillig Exp $
+# $NetBSD: options.mk,v 1.10 2023/06/06 12:41:22 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.yabause
 PKG_SUPPORTED_OPTIONS=		openal opengl sdl
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	qt sdl2
 .include "../../mk/bsd.options.mk"
 
 #.if !empty(PKG_OPTIONS:Mdoxygen)
-#BUILD_DEPENDS+=	doxygen>=1.6.3:../../devel/doxygen
+#TOOL_DEPENDS+=	doxygen>=1.6.3:../../devel/doxygen
 #.endif
 
 .if !empty(PKG_OPTIONS:Mqt)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2023/04/19 08:09:45 adam Exp $
+# $NetBSD: Makefile,v 1.128 2023/06/06 12:40:40 riastradh Exp $
 
 DISTNAME=		meld-3.22.0
 PKGREVISION=		5
@@ -11,7 +11,7 @@ HOMEPAGE=		https://meldmerge.org/
 COMMENT=		Visual diff and merge tool
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
+TOOL_DEPENDS+=		${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 DEPENDS+=		${PYPKGPREFIX}-gobject3>=3.30:../../devel/py-gobject3
 DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf

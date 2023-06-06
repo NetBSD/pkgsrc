@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/06/01 16:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:41:54 riastradh Exp $
 
 DISTNAME=	bulk-small-20230601
 CATEGORIES=	meta-pkgs
@@ -36,7 +36,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 #
 # XXX: A few of these packages are commonly built in. The simple
-# BUILD_DEPENDS logic here will cause more or less useless packages to be
+# TOOL_DEPENDS logic here will cause more or less useless packages to be
 # built anyway and then not used, which is a waste of build cycles. It
 # would be good to figure out a way to fix this so these packages only
 # get built when they aren't builtin.
@@ -54,93 +54,93 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # newer, as those versions of emacs take longer to build than this
 # entire package's time budget.
 #
-BUILD_DEPENDS+=	ircII-[0-9]*:../../chat/ircII
-BUILD_DEPENDS+=	irssi-[0-9]*:../../chat/irssi
-BUILD_DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
-BUILD_DEPENDS+=	weechat-[0-9]*:../../chat/weechat
-BUILD_DEPENDS+=	base64-[0-9]*:../../converters/base64
-BUILD_DEPENDS+=	mpack-[0-9]*:../../converters/mpack
-BUILD_DEPENDS+=	emacs21>=21<22:../../editors/emacs21
-BUILD_DEPENDS+=	nano-[0-9]*:../../editors/nano
-BUILD_DEPENDS+=	vim-[0-9]*:../../editors/vim
-BUILD_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
-BUILD_DEPENDS+=	mutt>=1.5:../../mail/mutt
-BUILD_DEPENDS+=	procmail-[0-9]*:../../mail/procmail
-BUILD_DEPENDS+=	screen-[0-9]*:../../misc/screen
-BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-BUILD_DEPENDS+=	wget-[0-9]*:../../net/wget
-BUILD_DEPENDS+=	pkg_chk-[0-9]*:../../pkgtools/pkg_chk
-BUILD_DEPENDS+=	pkg_rolling-replace-[0-9]*:../../pkgtools/pkg_rolling-replace
-BUILD_DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
-BUILD_DEPENDS+=	enscript-[0-9]*:../../print/enscript
-BUILD_DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
-BUILD_DEPENDS+=	papersize-[0-9]*:../../print/papersize
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
-BUILD_DEPENDS+=	sudo-[0-9]*:../../security/sudo
-BUILD_DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
-BUILD_DEPENDS+=	bash-[0-9]*:../../shells/bash
-BUILD_DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
-BUILD_DEPENDS+=	zsh-[0-9]*:../../shells/zsh
-BUILD_DEPENDS+=	icewm>=1.2<1.3:../../wm/icewm
-BUILD_DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
-BUILD_DEPENDS+=	apache>=2.4:../../www/apache24
-BUILD_DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
-BUILD_DEPENDS+=	curl-[0-9]*:../../www/curl
-BUILD_DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
+TOOL_DEPENDS+=	ircII-[0-9]*:../../chat/ircII
+TOOL_DEPENDS+=	irssi-[0-9]*:../../chat/irssi
+TOOL_DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
+TOOL_DEPENDS+=	weechat-[0-9]*:../../chat/weechat
+TOOL_DEPENDS+=	base64-[0-9]*:../../converters/base64
+TOOL_DEPENDS+=	mpack-[0-9]*:../../converters/mpack
+TOOL_DEPENDS+=	emacs21>=21<22:../../editors/emacs21
+TOOL_DEPENDS+=	nano-[0-9]*:../../editors/nano
+TOOL_DEPENDS+=	vim-[0-9]*:../../editors/vim
+TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
+TOOL_DEPENDS+=	mutt>=1.5:../../mail/mutt
+TOOL_DEPENDS+=	procmail-[0-9]*:../../mail/procmail
+TOOL_DEPENDS+=	screen-[0-9]*:../../misc/screen
+TOOL_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+TOOL_DEPENDS+=	wget-[0-9]*:../../net/wget
+TOOL_DEPENDS+=	pkg_chk-[0-9]*:../../pkgtools/pkg_chk
+TOOL_DEPENDS+=	pkg_rolling-replace-[0-9]*:../../pkgtools/pkg_rolling-replace
+TOOL_DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
+TOOL_DEPENDS+=	enscript-[0-9]*:../../print/enscript
+TOOL_DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
+TOOL_DEPENDS+=	papersize-[0-9]*:../../print/papersize
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
+TOOL_DEPENDS+=	sudo-[0-9]*:../../security/sudo
+TOOL_DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
+TOOL_DEPENDS+=	bash-[0-9]*:../../shells/bash
+TOOL_DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
+TOOL_DEPENDS+=	zsh-[0-9]*:../../shells/zsh
+TOOL_DEPENDS+=	icewm>=1.2<1.3:../../wm/icewm
+TOOL_DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
+TOOL_DEPENDS+=	apache>=2.4:../../www/apache24
+TOOL_DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
+TOOL_DEPENDS+=	curl-[0-9]*:../../www/curl
+TOOL_DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 
 #
 # 2. Base packages for the very popular languages that enormous
 # numbers of other packages depend on.
 #
-BUILD_DEPENDS+=	perl>=5:../../lang/perl5
-BUILD_DEPENDS+=	python38-[0-9]*:../../lang/python38
+TOOL_DEPENDS+=	perl>=5:../../lang/perl5
+TOOL_DEPENDS+=	python38-[0-9]*:../../lang/python38
 
 #
 # 3. Archivers and build tools.
 #
-BUILD_DEPENDS+=		bsdtar-[0-9]*:../../archivers/bsdtar
-BUILD_DEPENDS+=		bzip2-[0-9]*:../../archivers/bzip2
-BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
-BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=		xz-[0-9]*:../../archivers/xz
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
-BUILD_DEPENDS+=		automake-[0-9]*:../../devel/automake
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
-BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
-BUILD_DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
-BUILD_DEPENDS+=		m4-[0-9]*:../../devel/m4
-#BUILD_DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
-BUILD_DEPENDS+=		pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
+TOOL_DEPENDS+=		bsdtar-[0-9]*:../../archivers/bsdtar
+TOOL_DEPENDS+=		bzip2-[0-9]*:../../archivers/bzip2
+TOOL_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
+TOOL_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+TOOL_DEPENDS+=		xz-[0-9]*:../../archivers/xz
+TOOL_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+TOOL_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
+TOOL_DEPENDS+=		automake-[0-9]*:../../devel/automake
+TOOL_DEPENDS+=		bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=		flex-[0-9]*:../../devel/flex
+TOOL_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
+TOOL_DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
+TOOL_DEPENDS+=		m4-[0-9]*:../../devel/m4
+#TOOL_DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
+TOOL_DEPENDS+=		pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "native"
-BUILD_DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
+TOOL_DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
 .endif
 
 #
 # 4. Core widely-used libraries.
 #
-BUILD_DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
-BUILD_DEPENDS+=	db4-[0-9]*:../../databases/db4
-BUILD_DEPENDS+=	gdbm-[0-9]*:../../databases/gdbm
-BUILD_DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
-BUILD_DEPENDS+=	gettext-lib-[0-9]*:../../devel/gettext-lib
-BUILD_DEPENDS+=	readline-[0-9]*:../../devel/readline
-BUILD_DEPENDS+=	zlib-[0-9]*:../../devel/zlib
-BUILD_DEPENDS+=	gd-[0-9]*:../../graphics/gd
-BUILD_DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
+TOOL_DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
+TOOL_DEPENDS+=	db4-[0-9]*:../../databases/db4
+TOOL_DEPENDS+=	gdbm-[0-9]*:../../databases/gdbm
+TOOL_DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
+TOOL_DEPENDS+=	gettext-lib-[0-9]*:../../devel/gettext-lib
+TOOL_DEPENDS+=	readline-[0-9]*:../../devel/readline
+TOOL_DEPENDS+=	zlib-[0-9]*:../../devel/zlib
+TOOL_DEPENDS+=	gd-[0-9]*:../../graphics/gd
+TOOL_DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_DEPMETHOD.${JPEG_DEFAULT}=	build
-BUILD_DEPENDS+=	png-[0-9]*:../../graphics/png
-BUILD_DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-BUILD_DEPENDS+=	gnutls-[0-9]*:../../security/gnutls
-BUILD_DEPENDS+=	expat-[0-9]*:../../textproc/expat
-BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
+TOOL_DEPENDS+=	png-[0-9]*:../../graphics/png
+TOOL_DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
+TOOL_DEPENDS+=	gnutls-[0-9]*:../../security/gnutls
+TOOL_DEPENDS+=	expat-[0-9]*:../../textproc/expat
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
 
 #
 # 5. Depends.
@@ -154,20 +154,20 @@ BUILD_DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
 # out for native X11; it will of course work for pkgsrc X11 also but
 # take somewhat longer.
 #
-BUILD_DEPENDS+=	lzo-[0-9]*:../../archivers/lzo		# required by gnutls
-BUILD_DEPENDS+=	gmp-[0-9]*:../../devel/gmp		# required by nettle
-BUILD_DEPENDS+=	libcfg+-[0-9]*:../../devel/libcfg+	# required by gnutls
-BUILD_DEPENDS+=	libffi-[0-9]*:../../devel/libffi	# required by python
-BUILD_DEPENDS+=	libidn-[0-9]*:../../devel/libidn	# required by curl
-BUILD_DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
+TOOL_DEPENDS+=	lzo-[0-9]*:../../archivers/lzo		# required by gnutls
+TOOL_DEPENDS+=	gmp-[0-9]*:../../devel/gmp		# required by nettle
+TOOL_DEPENDS+=	libcfg+-[0-9]*:../../devel/libcfg+	# required by gnutls
+TOOL_DEPENDS+=	libffi-[0-9]*:../../devel/libffi	# required by python
+TOOL_DEPENDS+=	libidn-[0-9]*:../../devel/libidn	# required by curl
+TOOL_DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 							# req'd by ghostscript
-BUILD_DEPENDS+=	f2c-[0-9]*:../../lang/f2c		# req'd by libtool-base
-BUILD_DEPENDS+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
-BUILD_DEPENDS+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
-BUILD_DEPENDS+=	libgpg-error-[0-9]*:../../security/libgpg-error
+TOOL_DEPENDS+=	f2c-[0-9]*:../../lang/f2c		# req'd by libtool-base
+TOOL_DEPENDS+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
+TOOL_DEPENDS+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
+TOOL_DEPENDS+=	libgpg-error-[0-9]*:../../security/libgpg-error
 							# required by libgcrypt
-BUILD_DEPENDS+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
-BUILD_DEPENDS+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
+TOOL_DEPENDS+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
+TOOL_DEPENDS+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

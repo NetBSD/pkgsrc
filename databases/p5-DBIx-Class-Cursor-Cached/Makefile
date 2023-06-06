@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:29 riastradh Exp $
 
 DISTNAME=	DBIx-Class-Cursor-Cached-1.001004
 PKGNAME=	p5-${DISTNAME:S/00100/1./}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-DBIx-Class>=0.08124:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBD-SQLite>=1.25:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-Carp-Clan>=6.0:../../devel/p5-Carp-Clan
 
-BUILD_DEPENDS+=	p5-Cache-Cache-[0-9]*:../../devel/p5-Cache-Cache
+TOOL_DEPENDS+=	p5-Cache-Cache-[0-9]*:../../devel/p5-Cache-Cache
 
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1

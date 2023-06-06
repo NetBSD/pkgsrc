@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:51 riastradh Exp $
 
 DISTNAME=	Excel-Template-0.34
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Spreadsheet-WriteExcel>=0.42:../../math/p5-Spreadsheet-WriteExcel
 DEPENDS+=	p5-XML-Parser>=0.01:../../textproc/p5-XML-Parser
 
-BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Excel/Template/.packlist

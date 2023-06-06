@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/23 20:05:37 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:04 riastradh Exp $
 
 DISTNAME=	daq-2.0.7
 DIST_SUBDIR=	${DISTNAME}	# remove on next update
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.snort.org/
 COMMENT=	Abstraction layer for libpcap
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+TOOL_DEPENDS+=	bison-[0-9]*:../../devel/bison
 .include "../../net/libdnet/buildlink3.mk"
 
 GNU_CONFIGURE=	yes

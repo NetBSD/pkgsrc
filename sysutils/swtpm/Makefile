@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:23 riastradh Exp $
 
 GITHUB_PROJECT=	swtpm
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,8 +12,8 @@ HOMEPAGE=	https://github.com/stefanberger/swtpm/
 COMMENT=	Software TPM (Trusted Platform Module) emulator
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=		tcl-expect-[0-9]*:../../lang/tcl-expect
-BUILD_DEPENDS+=		socat-[0-9]*:../../net/socat
+TOOL_DEPENDS+=		tcl-expect-[0-9]*:../../lang/tcl-expect
+TOOL_DEPENDS+=		socat-[0-9]*:../../net/socat
 
 SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	pre-configure

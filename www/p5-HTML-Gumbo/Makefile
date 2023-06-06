@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/08/08 14:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:43 riastradh Exp $
 
 DISTNAME=	HTML-Gumbo-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	HTML5 parser based on gumbo C library
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Alien-LibGumbo-[0-9]*:../../www/p5-Alien-LibGumbo
-BUILD_DEPENDS+=	p5-PkgConfig-[0-9]*:../../devel/p5-PkgConfig
+TOOL_DEPENDS+=	p5-PkgConfig-[0-9]*:../../devel/p5-PkgConfig
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTML/Gumbo/.packlist

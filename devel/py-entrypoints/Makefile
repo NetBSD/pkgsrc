@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/04/07 12:39:06 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:12 riastradh Exp $
 
 DISTNAME=	entrypoints-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/takluyver/entrypoints
 COMMENT=	Discover and load entry points from installed packages
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none

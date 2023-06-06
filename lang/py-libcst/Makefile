@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/30 09:28:00 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:45 riastradh Exp $
 
 DISTNAME=	libcst-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/Instagram/LibCST
 COMMENT=	Concrete syntax tree with AST-like properties for Python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.0.0:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.2:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-inspect>=0.4.0:../../devel/py-typing-inspect
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml

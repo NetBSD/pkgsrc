@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/25 21:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:33 riastradh Exp $
 
 DISTNAME=	tomli_w-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:35 riastradh Exp $
 
 DISTNAME=	GraphViz2-2.66
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/GraphViz2
 COMMENT=	Wrapper for AT&T\'s Graphviz
 LICENSE=	artistic-2.0
 
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 DEPENDS+=	p5-Algorithm-Dependency>=1.110:../../devel/p5-Algorithm-Dependency
 DEPENDS+=	p5-Capture-Tiny>=0.10:../../devel/p5-Capture-Tiny

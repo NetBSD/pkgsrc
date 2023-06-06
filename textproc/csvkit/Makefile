@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/30 11:18:53 nia Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:42:24 riastradh Exp $
 
 DISTNAME=	csvkit-0.9.0
 PKGREVISION=	7
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/wireservice/csvkit
 COMMENT=	Suite of utilities for converting to and working with CSV
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dbf-[0-9]*:../../databases/py-dbf
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.0.3:../../textproc/py-openpyxl

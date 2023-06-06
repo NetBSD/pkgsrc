@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/08/17 17:40:04 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:42:24 riastradh Exp $
 #
 VERSION=	4.13.4
 
@@ -27,9 +27,9 @@ COMMENT=		Userland Tools for Xen 4.13.x
 LICENSE=		gnu-gpl-v2
 
 # XXX add version check: Xen requires dev86 >= 0.16.14
-BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
+TOOL_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
-BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
+TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
 DEPENDS+=	${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 

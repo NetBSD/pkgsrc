@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:31:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:30 riastradh Exp $
 
 DISTNAME=	DBIx-Class-RDBOHelpers-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 
-BUILD_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
-BUILD_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
+TOOL_DEPENDS+=	p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
+TOOL_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/RDBOHelpers/.packlist

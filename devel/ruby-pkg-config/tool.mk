@@ -1,4 +1,4 @@
-# $NetBSD: tool.mk,v 1.1.1.1 2010/09/23 15:24:28 obache Exp $
+# $NetBSD: tool.mk,v 1.2 2023/06/06 12:41:16 riastradh Exp $
 
 .if !defined(RUBY_PKG_CONFIG_TOOL_MK)
 
@@ -11,6 +11,6 @@ MAKE_ENV+=	PKG_CONFIG_PATH=
 
 .include "../../lang/ruby/rubyversion.mk"
 
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-pkg-config-[0-9]*:../../devel/ruby-pkg-config
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-pkg-config-[0-9]*:../../devel/ruby-pkg-config
 
 .endif

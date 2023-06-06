@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:52 riastradh Exp $
 #
 
 DISTNAME=	Math-Random-MT-Perl-1.15
@@ -15,7 +15,7 @@ LICENSE=	artistic-2.0
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Math/Random/MT/Perl/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Number-Delta>=0:../../math/p5-Test-Number-Delta
+TOOL_DEPENDS+=	p5-Test-Number-Delta>=0:../../math/p5-Test-Number-Delta
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

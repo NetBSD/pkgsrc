@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/06/28 11:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/06/06 12:40:54 riastradh Exp $
 
 DISTNAME=	Module-ScanDeps-1.31
 PKGNAME=	p5-${DISTNAME}
@@ -12,9 +12,9 @@ COMMENT=	Perl 5 module to recursively scan Perl code for dependencies
 LICENSE=	${PERL5_LICENSE}
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-prefork-[0-9]*:../../devel/p5-prefork
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-prefork-[0-9]*:../../devel/p5-prefork
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Module/ScanDeps/.packlist

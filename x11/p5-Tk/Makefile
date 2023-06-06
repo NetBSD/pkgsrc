@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2022/06/28 11:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	Tk-804.035
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 interface to Tk
 
 MAKE_JOBS_SAFE=	no
 
-BUILD_DEPENDS+=	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
+TOOL_DEPENDS+=	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
 
 USE_TOOLS+=		pkg-config
 PERL5_PACKLIST=		auto/Tk/.packlist

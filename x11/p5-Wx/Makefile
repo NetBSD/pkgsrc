@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/01/29 21:15:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	Wx-0.9932
 PKGNAME=	p5-${DISTNAME}
@@ -16,9 +16,9 @@ MAKE_JOBS_SAFE=		no
 # All .so's "Invalid type identifier"
 CTF_SUPPORTED=		no
 
-BUILD_DEPENDS+=		p5-Alien-wxWidgets>=0.25:../../x11/p5-Alien-wxWidgets
-#BUILD_DEPENDS+=	{perl>=5.16.6,p5-ExtUtils-ParseXS>=3.15}:../../devel/p5-ExtUtils-ParseXS
-BUILD_DEPENDS+=		p5-ExtUtils-XSpp>=0.16.02:../../devel/p5-ExtUtils-XSpp
+TOOL_DEPENDS+=		p5-Alien-wxWidgets>=0.25:../../x11/p5-Alien-wxWidgets
+#TOOL_DEPENDS+=	{perl>=5.16.6,p5-ExtUtils-ParseXS>=3.15}:../../devel/p5-ExtUtils-ParseXS
+TOOL_DEPENDS+=		p5-ExtUtils-XSpp>=0.16.02:../../devel/p5-ExtUtils-XSpp
 
 #USE_TOOLS+=		gmake pkg-config wx-config
 USE_TOOLS+=		perl

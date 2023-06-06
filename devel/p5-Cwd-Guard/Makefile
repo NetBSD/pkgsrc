@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:32:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:40:45 riastradh Exp $
 
 DISTNAME=	Cwd-Guard-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl module for changing the working directory
 LICENSE=	${PERL5_LICENSE}
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/Cwd/Guard/.packlist
 PERL5_MODULE_TYPE=	Module::Build

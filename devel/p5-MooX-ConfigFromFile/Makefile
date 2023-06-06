@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:54 riastradh Exp $
 
 DISTNAME=	MooX-ConfigFromFile-0.009
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-File-ConfigDir-[0-9]*:../../devel/p5-MooX-File-ConfigDir
-BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+TOOL_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 
 PERL5_PACKLIST=		auto/MooX/ConfigFromFile/.packlist
 
