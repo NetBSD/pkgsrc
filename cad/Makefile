@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/02/12 14:46:06 tnn Exp $
+# $NetBSD: Makefile,v 1.107 2023/06/06 09:56:38 bouyer Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -50,6 +50,7 @@ SUBDIR+=	mex-wcalc
 SUBDIR+=	mpac
 SUBDIR+=	nelma
 SUBDIR+=	ng-spice
+SUBDIR+=	ng-spice-shared
 SUBDIR+=	ntesla
 SUBDIR+=	occt
 SUBDIR+=	openscad
