@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:30 riastradh Exp $
 
 DISTNAME=	Text-Sass-v1.0.4
 PKGNAME=	p5-${DISTNAME:S/v//}
@@ -17,7 +17,7 @@ PERL5_MODULE_TYPE=	Module::Build
 
 REPLACE_PERL+=	bin/sass2css.pl
 
-BUILD_DEPENDS+=	p5-Try-Tiny>=0.06:../../devel/p5-Try-Tiny
+TOOL_DEPENDS+=	p5-Try-Tiny>=0.06:../../devel/p5-Try-Tiny
 
 DEPENDS+=	p5-Readonly>=1.03:../../devel/p5-Readonly
 DEPENDS+=	p5-Convert-Color>=0.05:../../converters/p5-Convert-Color

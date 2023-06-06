@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/01/29 21:15:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/06 12:40:36 riastradh Exp $
 
 DISTNAME=	Coder-0.3.0
 PKGNAME=	deforaos-coder-0.3.0
@@ -15,8 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 DEPENDS+=	modular-xorg-xephyr-[0-9]*:../../x11/modular-xorg-xephyr
 

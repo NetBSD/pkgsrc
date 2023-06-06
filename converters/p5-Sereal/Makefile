@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/02/08 16:24:54 fcambus Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:24 riastradh Exp $
 
 DISTNAME=	Sereal-5.003
 PKGNAME=	p5-${DISTNAME}
@@ -14,9 +14,9 @@ DEPENDS+=	p5-Sereal-Decoder>=4.007:../../converters/p5-Sereal-Decoder
 DEPENDS+=	p5-Sereal-Encoder>=4.007:../../converters/p5-Sereal-Encoder
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=	auto/Sereal/.packlist
 

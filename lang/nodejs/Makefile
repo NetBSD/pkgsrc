@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2023/05/17 15:55:05 adam Exp $
+# $NetBSD: Makefile,v 1.262 2023/06/06 12:41:44 riastradh Exp $
 
 DISTNAME=	node-v20.2.0
 EXTRACT_SUFX=	.tar.xz
@@ -6,7 +6,7 @@ EXTRACT_SUFX=	.tar.xz
 USE_LANGUAGES=	c gnu++17
 GCC_REQD+=	8
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../mk/bsd.prefs.mk"
 

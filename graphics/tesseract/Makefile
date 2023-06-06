@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/04/25 14:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/06/06 12:41:36 riastradh Exp $
 
 DISTNAME=	tesseract-5.3.1
 PKGREVISION=	1
@@ -17,7 +17,7 @@ SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata_best/archive/${LANG
 
 GCC_REQD+=	8 # std::filesystem
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

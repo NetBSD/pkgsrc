@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:33:32 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:41:08 riastradh Exp $
 #
 
 DISTNAME=	Test-YAML-Meta-0.22
@@ -15,8 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Test-CPAN-Meta-YAML-[0-9]*:../../devel/p5-Test-CPAN-Meta-YAML
 
 # These are recommended:
-BUILD_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=0.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=0.08:../../devel/p5-Test-Pod-Coverage
 
 PERL5_PACKLIST=	auto/Test/YAML/Meta/.packlist
 

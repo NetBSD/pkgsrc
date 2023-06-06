@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:18 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:40:40 riastradh Exp $
 
 DISTNAME=	libnfc-1.7.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--with-drivers=all
 CONFIGURE_ARGS+=	--enable-doc
 
-BUILD_DEPENDS+=	doxygen>=1.8.11:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen>=1.8.11:../../devel/doxygen
 
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

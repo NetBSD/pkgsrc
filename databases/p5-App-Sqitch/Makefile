@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/10/02 23:51:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:40:28 riastradh Exp $
 
 DISTNAME=		App-Sqitch-v1.3.1
 PKGNAME=		p5-${DISTNAME:S/-v/-/}
@@ -44,19 +44,19 @@ DEPENDS+=		p5-namespace-autoclean>=0.16:../../devel/p5-namespace-autoclean
 
 # XXX TEST_TARGET
 # p5-DBD-Mem not yet in pkgsrc
-BUILD_DEPENDS+=		p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-BUILD_DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=		p5-Test-Dir-[0-9]*:../../devel/p5-Test-Dir
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-Exit-[0-9]*:../../devel/p5-Test-Exit
-BUILD_DEPENDS+=		p5-Test-File-[0-9]*:../../devel/p5-Test-File
-BUILD_DEPENDS+=		p5-Test-File-Contents>=0.20:../../devel/p5-Test-File-Contents
-BUILD_DEPENDS+=		p5-Test-MockModule>=0.17:../../devel/p5-Test-MockModule
-BUILD_DEPENDS+=		p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
-BUILD_DEPENDS+=		p5-Test-NoWarnings>=0.083:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=		p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=		p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Test-Dir-[0-9]*:../../devel/p5-Test-Dir
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Exit-[0-9]*:../../devel/p5-Test-Exit
+TOOL_DEPENDS+=		p5-Test-File-[0-9]*:../../devel/p5-Test-File
+TOOL_DEPENDS+=		p5-Test-File-Contents>=0.20:../../devel/p5-Test-File-Contents
+TOOL_DEPENDS+=		p5-Test-MockModule>=0.17:../../devel/p5-Test-MockModule
+TOOL_DEPENDS+=		p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
+TOOL_DEPENDS+=		p5-Test-NoWarnings>=0.083:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl

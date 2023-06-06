@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Text-Hunspell-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Text-Hunspell
 COMMENT=	Perl module to interface with GNU Hunspell
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Alien-Hunspell-[0-9]*:../../textproc/p5-Alien-Hunspell
+TOOL_DEPENDS+=	p5-Alien-Hunspell-[0-9]*:../../textproc/p5-Alien-Hunspell
 
 USE_LANGUAGES=		c c++
 

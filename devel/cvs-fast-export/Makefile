@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/30 11:18:12 nia Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:35 riastradh Exp $
 
 DISTNAME=	cvs-fast-export-1.44
 PKGREVISION=	3
@@ -15,7 +15,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	flex gmake yacc
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 REPLACE_PYTHON+=	cvsconvert cvssync
 

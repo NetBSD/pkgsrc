@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Hooks-OP-PPAddr-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/B-Hooks-OP-PPAddr
 COMMENT=	Hook into opcode execution
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/OP/PPAddr/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2023/01/03 12:04:43 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2023/06/06 12:40:25 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -9,40 +9,40 @@ PLIST_VARS+=			doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
 CONFIGURE_ARGS+=	--enable-doc
-BUILD_DEPENDS+=		doxygen>=1.9.5:../../devel/doxygen
-BUILD_DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
-BUILD_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
-BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
-BUILD_DEPENDS+=		tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
-BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
-BUILD_DEPENDS+=		tex-alphalph-[0-9]*:../../print/tex-alphalph
-BUILD_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
-BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
-BUILD_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
-BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=		tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
-BUILD_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
-BUILD_DEPENDS+=		tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
-BUILD_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
-BUILD_DEPENDS+=		tex-float-[0-9]*:../../print/tex-float
-BUILD_DEPENDS+=		tex-geometry-[0-9]*:../../print/tex-geometry
-BUILD_DEPENDS+=		tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
-BUILD_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
-BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
-BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=		tex-multirow-[0-9]*:../../print/tex-multirow
-BUILD_DEPENDS+=		tex-natbib-[0-9]*:../../print/tex-natbib
-BUILD_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
-BUILD_DEPENDS+=		tex-pgf-[0-9]*:../../print/tex-pgf
-BUILD_DEPENDS+=		tex-sectsty-[0-9]*:../../print/tex-sectsty
-BUILD_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
-BUILD_DEPENDS+=		tex-tabu-[0-9]*:../../print/tex-tabu
-BUILD_DEPENDS+=		tex-tocloft-[0-9]*:../../print/tex-tocloft
-BUILD_DEPENDS+=		tex-ulem-[0-9]*:../../print/tex-ulem
-BUILD_DEPENDS+=		tex-xcolor-[0-9]*:../../print/tex-xcolor
-BUILD_DEPENDS+=		tex-xkeyval-[0-9]*:../../print/tex-xkeyval
-BUILD_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
-BUILD_DEPENDS+=		makeindexk-[0-9]*:../../textproc/makeindexk
+TOOL_DEPENDS+=		doxygen>=1.9.5:../../devel/doxygen
+TOOL_DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
+TOOL_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
+TOOL_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
+TOOL_DEPENDS+=		tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
+TOOL_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+TOOL_DEPENDS+=		tex-alphalph-[0-9]*:../../print/tex-alphalph
+TOOL_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
+TOOL_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
+TOOL_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
+TOOL_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=		tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
+TOOL_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
+TOOL_DEPENDS+=		tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
+TOOL_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
+TOOL_DEPENDS+=		tex-float-[0-9]*:../../print/tex-float
+TOOL_DEPENDS+=		tex-geometry-[0-9]*:../../print/tex-geometry
+TOOL_DEPENDS+=		tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
+TOOL_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
+TOOL_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
+TOOL_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=		tex-multirow-[0-9]*:../../print/tex-multirow
+TOOL_DEPENDS+=		tex-natbib-[0-9]*:../../print/tex-natbib
+TOOL_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
+TOOL_DEPENDS+=		tex-pgf-[0-9]*:../../print/tex-pgf
+TOOL_DEPENDS+=		tex-sectsty-[0-9]*:../../print/tex-sectsty
+TOOL_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
+TOOL_DEPENDS+=		tex-tabu-[0-9]*:../../print/tex-tabu
+TOOL_DEPENDS+=		tex-tocloft-[0-9]*:../../print/tex-tocloft
+TOOL_DEPENDS+=		tex-ulem-[0-9]*:../../print/tex-ulem
+TOOL_DEPENDS+=		tex-xcolor-[0-9]*:../../print/tex-xcolor
+TOOL_DEPENDS+=		tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+TOOL_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
+TOOL_DEPENDS+=		makeindexk-[0-9]*:../../textproc/makeindexk
 
 # Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
 # Only installed if option doc is enabled.

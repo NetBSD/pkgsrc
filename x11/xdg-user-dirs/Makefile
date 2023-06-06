@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/10/24 14:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	xdg-user-dirs-0.18
 CATEGORIES=	x11
@@ -9,8 +9,8 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xdg-user-dirs
 COMMENT=	Tool to manage "well known" user directories
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/02/15 12:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:40:38 riastradh Exp $
 
 DISTNAME=	happy-1.20.1.1
 PKGNAME=	${DISTNAME}
@@ -9,9 +9,9 @@ COMMENT=	Parser generator for Haskell
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	autoconf gmake
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 CONFIGURE_ENV+=	fp_cv_dir_docbook_xsl=${PREFIX}/share/xsl/docbook
 CONFIGURE_ENV+=	ac_cv_path_DbLatexCmd= # empty

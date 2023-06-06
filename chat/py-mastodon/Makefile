@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:22 riastradh Exp $
 
 PKGNAME=	${PYPKGPREFIX}-mastodon-1.5.0
 PKGREVISION=	1
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2

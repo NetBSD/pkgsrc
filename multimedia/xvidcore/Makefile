@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/05/16 17:44:15 nia Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:42:03 riastradh Exp $
 
 DISTNAME=	xvidcore-1.3.7
 CATEGORIES=	multimedia
@@ -24,9 +24,9 @@ USE_TOOLS+=		gmake
     !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
 CONFIGURE_ARGS+=	--disable-assembly
 .elif ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
+TOOL_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
 #.elif ${MACHINE_ARCH} == "x86_64"
-#BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
+#TOOL_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 .endif
 
 CFLAGS.SunOS+=		-D__inline=inline

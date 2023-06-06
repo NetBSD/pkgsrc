@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/01/29 21:16:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2023/06/06 12:41:20 riastradh Exp $
 #
 
 DISTNAME=		gens-rc3
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gens.consolemul.com/
 COMMENT=		Sega Genesis emulator with Sega CD support
 
-BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 # contains i386 assembler sources
 ONLY_FOR_PLATFORM=	*-*-i386

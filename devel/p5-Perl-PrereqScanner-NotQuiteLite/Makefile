@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:33:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:02 riastradh Exp $
 
 DISTNAME=	Perl-PrereqScanner-NotQuiteLite-0.9916
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-Module-Find>=0:../../devel/p5-Module-Find
 DEPENDS+=	p5-Regexp-Trie>=0:../../devel/p5-Regexp-Trie
 DEPENDS+=	p5-Parse-Distname>=0:../../devel/p5-Parse-Distname
 
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0.06:../../devel/p5-ExtUtils-MakeMaker-CPANfile
-BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
-BUILD_DEPENDS+=	p5-Test-UseAllModules>=0.17:../../devel/p5-Test-UseAllModules
+TOOL_DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0.06:../../devel/p5-ExtUtils-MakeMaker-CPANfile
+TOOL_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TOOL_DEPENDS+=	p5-Test-UseAllModules>=0.17:../../devel/p5-Test-UseAllModules
 
 PERL5_PACKLIST=	auto/Perl/PrereqScanner/NotQuiteLite/.packlist
 

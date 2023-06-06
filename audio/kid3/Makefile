@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2023/05/22 21:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2023/06/06 12:40:16 riastradh Exp $
 
 DISTNAME=	kid3-3.9.3
 PKGREVISION=	5
@@ -10,8 +10,8 @@ HOMEPAGE=	https://kid3.kde.org/
 COMMENT=	ID3 tagger for QT
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:build pkg-config

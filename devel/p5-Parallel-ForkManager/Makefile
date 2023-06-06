@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:33:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:41:01 riastradh Exp $
 
 DISTNAME=	Parallel-ForkManager-2.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Simple parallel processing fork manager
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 DEPENDS+=	p5-Moo>=0:../../devel/p5-Moo
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:41:08 riastradh Exp $
 
 DISTNAME=	Test-Warnings-0.031
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Test-Warnings
 COMMENT=	Test for warnings and the lack of them
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
+TOOL_DEPENDS=	p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 
 PERL5_PACKLIST=		auto/Test/Warnings/.packlist
 

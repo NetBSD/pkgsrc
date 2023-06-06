@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:11 riastradh Exp $
 
 DISTNAME=	ConfigUpdater-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pyscaffold/configupdater
 COMMENT=	Parser like ConfigParser but for updating configuration files
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv>0:../../devel/py-test-virtualenv

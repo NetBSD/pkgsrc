@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/05/22 21:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2023/06/06 12:40:35 riastradh Exp $
 
 DISTNAME=	cervisia-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge

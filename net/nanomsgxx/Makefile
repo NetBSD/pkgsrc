@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/28 11:56:52 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	nanomsgxx-0.2
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	waf>=1.8.4:../../devel/waf
+TOOL_DEPENDS+=	waf>=1.8.4:../../devel/waf
 
 WAF_HAS_MANDIR=		no
 WAF_REPLACE_EXECUTABLE=	yes

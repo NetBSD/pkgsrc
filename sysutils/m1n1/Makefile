@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/09 23:42:03 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:21 riastradh Exp $
 
 GITHUB_PROJECT=	m1n1
 GITHUB_TAG=	4df78129aac4547231dbac662d28c3b67b13cc79
@@ -23,7 +23,7 @@ USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
-BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
+TOOL_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 MAKE_FLAGS+=	ARCH=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf-
 
 INSTALLATION_DIRS=	share/m1n1

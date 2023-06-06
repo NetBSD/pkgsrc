@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/05/20 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-LibXML-2.0208
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://metacpan.org/release/XML-LibXML
 COMMENT=	Perl interface to the libxml2 library
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
-BUILD_DEPENDS+=	p5-Alien-Libxml2-[0-9]*:../../textproc/p5-Alien-Libxml2
+TOOL_DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
+TOOL_DEPENDS+=	p5-Alien-Libxml2-[0-9]*:../../textproc/p5-Alien-Libxml2
 DEPENDS+=	p5-XML-SAX>=0.11:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-NamespaceSupport>=1.07:../../textproc/p5-XML-NamespaceSupport
 

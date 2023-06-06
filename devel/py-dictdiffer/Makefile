@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/06 08:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:12 riastradh Exp $
 
 DISTNAME=	dictdiffer-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/inveniosoftware/dictdiffer
 COMMENT=	Library that helps you to diff and patch dictionaries
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=2.7:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=2.7:../../devel/py-test-runner
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.1.0:../../devel/py-setuptools_scm
 #TEST_DEPENDS+=	${PYPKGPREFIX}-check-manifest>=0.42:../../wip/py-check-manifest
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock

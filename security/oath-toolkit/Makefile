@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/04/19 08:11:23 adam Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:14 riastradh Exp $
 
 DISTNAME=	oath-toolkit-2.6.7
 PKGREVISION=	2
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 
 USE_TOOLS+=	autoconf automake m4 autoreconf perl
 
-BUILD_DEPENDS+=	automake>=1.14:../../devel/automake
+TOOL_DEPENDS+=	automake>=1.14:../../devel/automake
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 PKGCONFIG_OVERRIDE+=	liboath/liboath.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/09/30 10:25:37 nros Exp $
+# $NetBSD: Makefile,v 1.65 2023/06/06 12:42:25 riastradh Exp $
 
 DISTNAME=	iso-codes-v4.11.0
 PKGNAME=	${DISTNAME:S/v//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://salsa.debian.org/iso-codes-team/iso-codes
 COMMENT=	List of country, language and currency names
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=		# empty
 USE_PKGLOCALEDIR=	yes

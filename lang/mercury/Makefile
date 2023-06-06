@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2022/06/28 11:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2023/06/06 12:41:44 riastradh Exp $
 
 DISTNAME=		mercury-srcdist-14.01.1
 PKGNAME=		mercury-14.01.1
@@ -13,11 +13,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.mercurylang.org/
 COMMENT=		Modern logic/functional programming language
 
-BUILD_DEPENDS+=		dvipsk>=0:../../print/dvipsk # dvips
-BUILD_DEPENDS+=		web2c>=0:../../print/web2c # pdftex
-BUILD_DEPENDS+=		gtexinfo>=0:../../devel/gtexinfo # texi2dvi
-BUILD_DEPENDS+=		tex-texinfo>=0:../../print/tex-texinfo # texinfo.tex
-BUILD_DEPENDS+=		tex-latex-fonts>=0:../../fonts/tex-latex-fonts
+TOOL_DEPENDS+=		dvipsk>=0:../../print/dvipsk # dvips
+TOOL_DEPENDS+=		web2c>=0:../../print/web2c # pdftex
+TOOL_DEPENDS+=		gtexinfo>=0:../../devel/gtexinfo # texi2dvi
+TOOL_DEPENDS+=		tex-texinfo>=0:../../print/tex-texinfo # texinfo.tex
+TOOL_DEPENDS+=		tex-latex-fonts>=0:../../fonts/tex-latex-fonts
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pax bison flex makeinfo

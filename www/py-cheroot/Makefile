@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/11/17 10:13:52 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:42:49 riastradh Exp $
 
 DISTNAME=	cheroot-8.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://cherrypy.dev/
 COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.6:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six

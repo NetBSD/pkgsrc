@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:10 riastradh Exp $
 #
 
 DISTNAME=	distbb-0.47.2
@@ -17,7 +17,7 @@ DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
-BUILD_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
+TOOL_DEPENDS+=	mk-configure>=0.21:../../devel/mk-configure
 
 USE_LANGUAGES=		# none
 

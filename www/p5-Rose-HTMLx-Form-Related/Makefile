@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Rose-HTMLx-Form-Related-0.24
 PKGNAME=	p5-${DISTNAME}
@@ -20,10 +20,10 @@ DEPENDS+=	p5-Rose-HTMLx-Form-Field-PopUpMenuNumeric-[0-9]*:../../www/p5-Rose-HTM
 DEPENDS+=	p5-Rose-HTMLx-Form-Field-Serial>=0.002:../../www/p5-Rose-HTMLx-Form-Field-Serial
 
 # For test target
-BUILD_DEPENDS+=	p5-Rose-DB-Object-[0-9]*:../../databases/p5-Rose-DB-Object
-BUILD_DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers-[0-9]*:../../databases/p5-Rose-DBx-Object-MoreHelpers
-BUILD_DEPENDS+=	p5-DBIx-Class>=0.08010:../../databases/p5-DBIx-Class
-BUILD_DEPENDS+=	p5-DBIx-Class-RDBOHelpers-[0-9]*:../../databases/p5-DBIx-Class-RDBOHelpers
+TOOL_DEPENDS+=	p5-Rose-DB-Object-[0-9]*:../../databases/p5-Rose-DB-Object
+TOOL_DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers-[0-9]*:../../databases/p5-Rose-DBx-Object-MoreHelpers
+TOOL_DEPENDS+=	p5-DBIx-Class>=0.08010:../../databases/p5-DBIx-Class
+TOOL_DEPENDS+=	p5-DBIx-Class-RDBOHelpers-[0-9]*:../../databases/p5-DBIx-Class-RDBOHelpers
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Rose/HTMLx/Form/Related/.packlist

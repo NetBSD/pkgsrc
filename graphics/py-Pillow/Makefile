@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/05/22 11:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/06 12:41:36 riastradh Exp $
 
 DISTNAME=	Pillow-9.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

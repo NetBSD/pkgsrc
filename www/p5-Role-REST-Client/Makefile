@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Role-REST-Client-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -25,10 +25,10 @@ DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 PERL5_PACKLIST=	auto/Role/REST/Client/.packlist
 

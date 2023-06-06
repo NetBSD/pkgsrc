@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/05/22 20:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	kdoctools-${KF5VER}
 PKGREVISION=	5
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgmerge perl
 
-BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 .include "../../archivers/karchive/buildlink3.mk"

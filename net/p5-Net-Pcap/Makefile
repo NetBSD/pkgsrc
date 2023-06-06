@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:35:13 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:42:06 riastradh Exp $
 #
 
 DISTNAME=	Net-Pcap-0.18
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-IO-Interface-[0-9]*:../../net/p5-IO-Interface
 # Used during test, doesn't work properly:
-# BUILD_DEPENDS+= p5-Test-Distribution-[0-9]*:../../devel/p5-Test-Distribution
+# TOOL_DEPENDS+= p5-Test-Distribution-[0-9]*:../../devel/p5-Test-Distribution
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9.5
 

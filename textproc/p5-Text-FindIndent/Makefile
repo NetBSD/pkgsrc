@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Text-FindIndent-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Text-FindIndent
 COMMENT=	Heuristically determine the indent style
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1

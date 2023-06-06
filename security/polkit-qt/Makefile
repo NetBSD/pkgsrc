@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/01/29 21:14:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/06 12:42:15 riastradh Exp $
 
 DISTNAME=	polkit-qt-1-0.112.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt-/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://projects.kde.org/projects/kdesupport/polkit-qt-1
 COMMENT=	Qt Wrapper around PolicyKit
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

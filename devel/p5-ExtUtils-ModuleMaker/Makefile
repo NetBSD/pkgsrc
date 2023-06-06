@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	ExtUtils-ModuleMaker-0.63
 PKGNAME=	p5-${DISTNAME}
@@ -15,9 +15,9 @@ DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-File-Copy-Recursive-Reduced-[0-9]*:../../sysutils/p5-File-Copy-Recursive-Reduced
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
+TOOL_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=		auto/ExtUtils/ModuleMaker/.packlist
 

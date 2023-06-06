@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:42:40 riastradh Exp $
 
 DISTNAME=		CGI-FormBuilder-3.10
 PKGNAME=		p5-${DISTNAME}00
@@ -18,7 +18,7 @@ DEPENDS+=		p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 #DEPENDS+=		p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 
 # for make test
-BUILD_DEPENDS+=		p5-CGI-[0-9]*:../../www/p5-CGI
+TOOL_DEPENDS+=		p5-CGI-[0-9]*:../../www/p5-CGI
 
 # Note. Cannot avoid warning from CGI.pm 4.05 or newer by replacing
 # $self->{params}->param( with @{$self->{params}->param_fetch

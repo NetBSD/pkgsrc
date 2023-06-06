@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:36 riastradh Exp $
 
 DISTNAME=	DateTime-Incomplete-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	DateTime::Incomplete - An incomplete datetime, like January 5
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-DateTime-Set-[0-9]*:../../time/p5-DateTime-Set
-BUILD_DEPENDS+=	p5-DateTime-Event-Recurrence-[0-9]*:../../time/p5-DateTime-Event-Recurrence
+TOOL_DEPENDS+=	p5-DateTime-Set-[0-9]*:../../time/p5-DateTime-Set
+TOOL_DEPENDS+=	p5-DateTime-Event-Recurrence-[0-9]*:../../time/p5-DateTime-Event-Recurrence
 
 PERL5_PACKLIST=	auto/DateTime/Incomplete/.packlist
 

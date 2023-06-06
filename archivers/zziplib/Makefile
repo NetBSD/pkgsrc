@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/01/24 18:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:40:16 riastradh Exp $
 
 DISTNAME=	zziplib-0.13.72
 PKGREVISION=	1
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/gdraheim/zziplib
 COMMENT=	Library for ZIP archive handling
 LICENSE=	gnu-lgpl-v2 OR mpl-1.1
 
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_TOOLS+=	bash:build
 

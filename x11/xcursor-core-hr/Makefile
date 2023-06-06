@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/06 15:00:38 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	xc-core-hr
 PKGVER=		20220127
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 ICON_THEMES=	yes
 
-BUILD_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
+TOOL_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
 
 INSTALLATION_DIRS+=	share/icons
 

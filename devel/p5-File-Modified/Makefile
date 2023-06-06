@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:49 riastradh Exp $
 
 DISTNAME=	File-Modified-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/File-Modified
 COMMENT=	Perl module for checking intelligently if files have changed
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.6.1,p5-File-Temp>=0}:../../devel/p5-File-Temp
+#TOOL_DEPENDS+=	{perl>=5.6.1,p5-File-Temp>=0}:../../devel/p5-File-Temp
 DEPENDS+=		p5-Digest-SHA1>=0:../../security/p5-Digest-SHA1
 #DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=0}:../../security/p5-Digest-MD5
 

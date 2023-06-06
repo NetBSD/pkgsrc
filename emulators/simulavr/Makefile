@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/11/12 09:10:23 nikita Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:41:21 riastradh Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		6
@@ -10,8 +10,8 @@ HOMEPAGE=		https://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-BUILD_DEPENDS+=		avr-libc-[0-9]*:../../cross/avr-libc
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		avr-libc-[0-9]*:../../cross/avr-libc
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}

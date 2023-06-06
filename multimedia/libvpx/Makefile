@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/02/14 16:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/06/06 12:42:01 riastradh Exp $
 
 DISTNAME=	libvpx-1.13.0
 CATEGORIES=	multimedia
@@ -104,7 +104,7 @@ CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
 .if !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
-BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
+TOOL_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
 TOOLS_PLATFORM.tr=	${PREFIX}/bin/gtr
 .endif
 

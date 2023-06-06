@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2023/04/23 14:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.84 2023/06/06 12:40:24 riastradh Exp $
 
 DISTNAME=	libvisio-0.1.7
 PKGREVISION=	20
@@ -11,8 +11,8 @@ HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libvisio
 COMMENT=	Library and tools for parsing the visio file format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
-#BUILD_DEPENDS+=	doxygen>=1.8.9:../../devel/doxygen
-BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
+#TOOL_DEPENDS+=	doxygen>=1.8.9:../../devel/doxygen
+TOOL_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes

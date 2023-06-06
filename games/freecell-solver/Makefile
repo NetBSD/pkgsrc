@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/09/18 19:06:27 he Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:25 riastradh Exp $
 
 DISTNAME=	freecell-solver-5.14.0
 PKGREVISION=	5
@@ -20,7 +20,7 @@ CMAKE_ARGS+=	-DBUILD_STATIC_LIBRARY=OFF
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
 DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny

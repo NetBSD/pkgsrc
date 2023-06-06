@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/05/25 18:53:17 pin Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	gpg-tui-0.9.6
 CATEGORIES=	security
@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-BUILD_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib

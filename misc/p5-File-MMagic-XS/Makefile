@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:57 riastradh Exp $
 
 DISTNAME=		File-MMagic-XS-0.09008
 PKGNAME=		p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=		https://metacpan.org/release/File-MMagic-XS
 COMMENT=		File Type With XS (a la mod_mime_magic)
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Module-Install-AuthorTests-[0-9]*:../../devel/p5-Module-Install-AuthorTests
-BUILD_DEPENDS+=		p5-Module-Install-Repository-[0-9]*:../../devel/p5-Module-Install-Repository
-BUILD_DEPENDS+=		p5-Module-Install-XSUtil-[0-9]*:../../devel/p5-Module-Install-XSUtil
+TOOL_DEPENDS+=		p5-Module-Install-AuthorTests-[0-9]*:../../devel/p5-Module-Install-AuthorTests
+TOOL_DEPENDS+=		p5-Module-Install-Repository-[0-9]*:../../devel/p5-Module-Install-Repository
+TOOL_DEPENDS+=		p5-Module-Install-XSUtil-[0-9]*:../../devel/p5-Module-Install-XSUtil
 
 MAKE_JOBS_SAFE=		no
 

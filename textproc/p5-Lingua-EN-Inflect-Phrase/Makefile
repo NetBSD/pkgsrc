@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:26 riastradh Exp $
 
 DISTNAME=	Lingua-EN-Inflect-Phrase-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-Lingua-EN-Inflect-Number-[0-9]*:../../textproc/p5-Lingua-EN-Inflect
 DEPENDS+=	p5-Lingua-EN-Number-IsOrdinal-[0-9]*:../../textproc/p5-Lingua-EN-Number-IsOrdinal
 DEPENDS+=	p5-Lingua-EN-Tagger-[0-9]*:../../textproc/p5-Lingua-EN-Tagger
 
-#BUILD_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+#TOOL_DEPENDS+=	{perl>=5.12.0,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Lingua/EN/Inflect/Phrase/.packlist

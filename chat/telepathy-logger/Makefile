@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/04/19 08:08:05 adam Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/06 12:40:23 riastradh Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
 PKGREVISION=	35
@@ -20,7 +20,7 @@ CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
 PKGCONFIG_OVERRIDE+=	extensions/tpl-extensions.pc.in
 PKGCONFIG_OVERRIDE+=	telepathy-logger/telepathy-logger-0.1.pc.in
 
-BUILD_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.7

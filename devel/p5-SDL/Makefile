@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/01/29 21:15:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2023/06/06 12:41:04 riastradh Exp $
 
 DISTNAME=	SDL-2.548
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	SDL - Simple DirectMedia Layer for Perl
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Alien-SDL-[0-9]*:../../devel/p5-Alien-SDL
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 PERL5_OPTIONS+=		threads
 PERL5_MODULE_TYPE=	Module::Build

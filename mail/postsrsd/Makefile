@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/10 08:41:56 spz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=	postsrsd-1.11
 #PKGREVISION=	0
@@ -22,7 +22,7 @@ PKG_GECOS.${POSTSRSD_USER}?=	postSRSd
 
 
 USE_CMAKE=	yes
-BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

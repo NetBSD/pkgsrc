@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2023/04/30 21:55:14 mef Exp $
+# $NetBSD: Makefile,v 1.126 2023/06/06 12:40:19 riastradh Exp $
 #
 
 DISTNAME=		gtkwave-3.3.115
@@ -11,7 +11,7 @@ HOMEPAGE=		http://gtkwave.sourceforge.net/
 COMMENT=		Electronic waveform viewer
 LICENSE=		gnu-gpl-v3
 
-BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

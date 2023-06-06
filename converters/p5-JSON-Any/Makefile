@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/06/28 11:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:40:24 riastradh Exp $
 
 DISTNAME=	JSON-Any-1.39
 PKGNAME=	p5-${DISTNAME}
@@ -18,10 +18,10 @@ PERL5_MODULE_TYPE=	Module::Install::Bundled
 # and is the preferred JSON dependency (see Makefile.PL)
 DEPENDS+=	p5-JSON-XS>=2.232:../../converters/p5-JSON-XS
 # for make test
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
+TOOL_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

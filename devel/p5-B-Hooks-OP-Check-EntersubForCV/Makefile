@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/B-Hooks-OP-Check-EntersubForCV
 COMMENT=	Invoke callbacks on construction of entersub OPs for certain CVs
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-B-Utils>=0.19:../../devel/p5-B-Utils
 # requires parent, Scalar::Util
 PERL5_REQD+=	5.10.1

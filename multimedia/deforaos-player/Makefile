@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/01/29 21:14:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:41:58 riastradh Exp $
 
 DISTNAME=	Player-0.2.0
 PKGNAME=	deforaos-player-0.2.0
@@ -15,8 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
 

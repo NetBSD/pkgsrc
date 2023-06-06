@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2022/11/22 14:52:43 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/06/06 12:41:43 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -172,8 +172,8 @@ STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 # -----------------------------------------------------------------------------
 # Dependencies
 #
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # NetBSD 9.x have libcurses with a newer major version than the
 # bootstrap kit is linked against. For now, work around this with
@@ -183,7 +183,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # installed libraries themselves, since the symlinks compatXX adds
 # to the /usr tree can't be applied.
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
-BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
+TOOL_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
 .endif
 

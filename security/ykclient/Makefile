@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:08:42 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:42:17 riastradh Exp $
 
 DISTNAME=	ykclient-2.15
 PKGREVISION=	10
@@ -12,7 +12,7 @@ HOMEPAGE=	https://developers.yubico.com/yubico-c-client/
 COMMENT=	Libraries for online validation of Yubikey OTPs
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 MAKE_JOBS_SAFE=	no
 

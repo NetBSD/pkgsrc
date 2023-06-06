@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	BackPAN-Index-0.42
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PERL5_MODULE_TYPE=	Module::Build
 
 REPLACE_PERL+=	create_backpan_index.pl
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.90}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Archive-Extract>=0.74:../../archivers/p5-Archive-Extract
 DEPENDS+=		p5-App-Cache>=0.37:../../devel/p5-App-Cache
 DEPENDS+=		p5-CLASS>=1.00:../../devel/p5-CLASS
@@ -33,9 +33,9 @@ DEPENDS+=		p5-Path-Class>=0.17:../../devel/p5-Path-Class
 
 # for make test
 #   SQLite.so: Undefined PLT symbol "sqlite3_strlike" with the prior version
-BUILD_DEPENDS+=	sqlite3>=3.10.0:../../databases/sqlite3
-BUILD_DEPENDS+=	p5-Mouse-[0-9]*:../../devel/p5-Mouse
-BUILD_DEPENDS+=	p5-Test-Compile>=0.11:../../devel/p5-Test-Compile
+TOOL_DEPENDS+=	sqlite3>=3.10.0:../../databases/sqlite3
+TOOL_DEPENDS+=	p5-Mouse-[0-9]*:../../devel/p5-Mouse
+TOOL_DEPENDS+=	p5-Test-Compile>=0.11:../../devel/p5-Test-Compile
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

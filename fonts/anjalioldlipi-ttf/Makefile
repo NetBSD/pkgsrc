@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/31 11:39:08 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:22 riastradh Exp $
 
 DISTNAME=	anjalioldlipi-${GITLAB_TAG}
 PKGREVISION=	1
@@ -19,8 +19,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
-BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+TOOL_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
+TOOL_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 FONTDIR=		${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=		${FONTDIR}

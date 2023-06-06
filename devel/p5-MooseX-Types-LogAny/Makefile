@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:59 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Types-LogAny-0.001003
@@ -15,9 +15,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Log-Any-[0-9]*:../../devel/p5-Log-Any
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 
-BUILD_DEPENDS+=	p5-Class-Load>=0.20:../../devel/p5-Class-Load
-BUILD_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Class-Load>=0.20:../../devel/p5-Class-Load
+TOOL_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/LogAny/.packlist

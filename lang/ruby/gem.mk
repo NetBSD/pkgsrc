@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.51 2022/12/20 02:53:10 taca Exp $
+# $NetBSD: gem.mk,v 1.52 2023/06/06 12:41:46 riastradh Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -176,7 +176,7 @@ PLIST_VARS+=		rubygem_man
 
 .if ${RUBYGEM_USE_MANPAGES:tl} == "yes"
 .  if ${RUBYGEM_MANPAGES:tl} == "yes"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-manpages>=0.6.1:../../misc/ruby-manpages
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-manpages>=0.6.1:../../misc/ruby-manpages
 PLIST.rubygem_man=	yes
 .  endif
 .else

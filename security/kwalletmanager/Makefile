@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/05/22 21:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/06 12:42:14 riastradh Exp $
 
 DISTNAME=	kwalletmanager-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 CMAKE_ARGS+=		-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/kwalletmanager
 INSTALLATION_DIRS+=	share/examples/kwalletmanager

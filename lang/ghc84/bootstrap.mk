@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2022/07/07 16:26:36 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2023/06/06 12:41:43 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -86,7 +86,7 @@ CONFLICTS+=	libelf-[0-9]*
 
 # current bootstrap binary kit for SmartOS is built with ncurses5
 .if !empty(MACHINE_PLATFORM:MSunOS-*) && ${OS_VARIANT:U} == "SmartOS"
-BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
+TOOL_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 .endif
 
 

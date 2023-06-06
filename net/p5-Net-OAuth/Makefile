@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:06 riastradh Exp $
 
 DISTNAME=	Net-OAuth-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Digest-SHA1>=2.12:../../security/p5-Digest-SHA1
 #DEPENDS+=	{perl>=5.10.1,p5-Encode>=2.35}:../../textproc/p5-Encode
 DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
 
-BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Net/OAuth/.packlist
 PERL5_MODULE_TYPE=	Module::Build

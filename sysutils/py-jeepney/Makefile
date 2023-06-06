@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/18 10:57:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:22 riastradh Exp $
 
 DISTNAME=	jeepney-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://gitlab.com/takluyver/jeepney
 COMMENT=	Low-level pure Python DBus protocol wrapper
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-async-timeout-[0-9]*:../../devel/py-async-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test

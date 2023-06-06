@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/04/19 08:10:08 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:29 riastradh Exp $
 #
 
 DISTNAME=	lincity-ng-2.0
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2 #AND cc-by-sa-v2.0 AND Bitstream Vera Fonts
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
+TOOL_DEPENDS+=	jam-[0-9]*:../../devel/jam
 
 USE_TOOLS+=	pkg-config
 

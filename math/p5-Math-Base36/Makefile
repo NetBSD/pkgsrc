@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:52 riastradh Exp $
 #
 
 DISTNAME=	Math-Base36-0.14
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Math-Base36
 COMMENT=	Perl 5 module to encode and decode base36 strings
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+TOOL_DEPENDS=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 USE_LANGUAGES=		# empty

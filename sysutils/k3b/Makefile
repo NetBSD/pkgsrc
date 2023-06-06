@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2023/05/22 21:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2023/06/06 12:42:19 riastradh Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
 PKGREVISION=	7
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
 DEPENDS+=	cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=	{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 

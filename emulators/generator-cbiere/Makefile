@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/12/24 09:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:20 riastradh Exp $
 
 DISTNAME=	generator-0.35-cbiere-r4
 PKGNAME=	generator-cbiere-0.35r4
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 
 .if (${MACHINE_ARCH} == "i386")
-BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+=	--with-gtk --with-raze
 .else
 CONFIGURE_ARGS+=	--with-gtk --with-cmz80

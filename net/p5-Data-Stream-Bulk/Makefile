@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:35:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	Data-Stream-Bulk-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,8 @@ DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
 # For tests:
-BUILD_DEPENDS+=	p5-Test-TempDir>=0:../../devel/p5-Test-TempDir
-BUILD_DEPENDS+=	p5-DBD-Mock>=1.37:../../databases/p5-DBD-Mock
+TOOL_DEPENDS+=	p5-Test-TempDir>=0:../../devel/p5-Test-TempDir
+TOOL_DEPENDS+=	p5-DBD-Mock>=1.37:../../databases/p5-DBD-Mock
 
 PERL5_PACKLIST=	auto/Data/Stream/Bulk/.packlist
 

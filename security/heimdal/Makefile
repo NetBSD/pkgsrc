@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2023/04/19 08:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.159 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	heimdal-7.8.0
 PKGREVISION=	3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.h5l.org/
 COMMENT=	Kerberos 5 implementation
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+TOOL_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*

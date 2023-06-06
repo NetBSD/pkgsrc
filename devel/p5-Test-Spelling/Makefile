@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:33:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:07 riastradh Exp $
 
 DISTNAME=	Test-Spelling-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,8 @@ DEPENDS+=	p5-Module-Manifest-Skip-[0-9]*:../../devel/p5-Module-Manifest-Skip
 DEPENDS+=	p5-Pod-Spell-[0-9]*:../../textproc/p5-Pod-Spell
 
 # for make test:
-BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
-BUILD_DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+TOOL_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+TOOL_DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Spelling/.packlist

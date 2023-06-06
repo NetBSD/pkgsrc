@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:27 riastradh Exp $
 
 DISTNAME=	Pod-Readme-v1.2.3
 PKGNAME=	p5-${DISTNAME:S/v1/1/}
@@ -21,8 +21,8 @@ DEPENDS+=	p5-IO-String>=0:../../devel/p5-IO-String
 DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
 DEPENDS+=	p5-namespace-autoclean>=0:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-Getopt-Long-Descriptive>=0:../../devel/p5-Getopt-Long-Descriptive
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
 PERL5_PACKLIST=		auto/Pod/Readme/.packlist
 #PERL5_MODULE_TYPE=	Module::Build

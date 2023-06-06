@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:42:42 riastradh Exp $
 
 DISTNAME=	Catalyst-View-TT-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Template-Timer-[0-9]*:../../www/p5-Template-Timer
 
 # for test target
-BUILD_DEPENDS+=	p5-Template-Provider-Encoding-[0-9]*:../../www/p5-Template-Provider-Encoding
+TOOL_DEPENDS+=	p5-Template-Provider-Encoding-[0-9]*:../../www/p5-Template-Provider-Encoding
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/View/TT/.packlist

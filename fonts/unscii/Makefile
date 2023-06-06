@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/06/28 11:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	unscii-2.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -14,9 +14,9 @@ LICENSE=	gnu-gpl-v2
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 USE_TOOLS+=	perl:build
-BUILD_DEPENDS+=	bdftopcf-[0-9]*:../../fonts/bdftopcf
-BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
-BUILD_DEPENDS+=	p5-Text-CharWidth-[0-9]*:../../textproc/p5-Text-CharWidth
+TOOL_DEPENDS+=	bdftopcf-[0-9]*:../../fonts/bdftopcf
+TOOL_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+TOOL_DEPENDS+=	p5-Text-CharWidth-[0-9]*:../../textproc/p5-Text-CharWidth
 
 REPLACE_PERL+=	*.pl
 

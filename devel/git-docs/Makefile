@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/07/06 11:53:59 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:37 riastradh Exp $
 
 PKGNAME=	git-docs-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (documentation)
@@ -8,8 +8,8 @@ SUPERSEDES+=		scmgit-docs-[0-9]*
 
 DISTINFO_FILE=		../../devel/git-base/distinfo
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}

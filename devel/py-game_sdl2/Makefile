@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/05/06 19:08:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:13 riastradh Exp $
 
 DISTNAME=	pygame_sdl2-2.1.0-for-renpy-8.0.3
 PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 USE_TOOLS+=	pkg-config
 

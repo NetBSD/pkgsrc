@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2022/07/02 19:46:21 tsutsui Exp $
+# $NetBSD: options.mk,v 1.4 2023/06/06 12:41:20 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.PC6001VX
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg manual sdl2
@@ -37,8 +37,8 @@ QMAKE_ARGS+=	"DEFINES+=NOJOYSTICK"
 .if !empty(PKG_OPTIONS:Mmanual)
 PLIST.manual=	yes
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	source-highlight-[0-9]*:../../textproc/source-highlight
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	source-highlight-[0-9]*:../../textproc/source-highlight
 
 INSTALLATION_DIRS+=	share/doc/PC6001VX
 

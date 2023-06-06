@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/06/06 08:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	kio-extras-${KAPPSVER}
 PKGREVISION=	11
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config perl:run
 

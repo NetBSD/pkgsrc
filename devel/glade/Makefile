@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/04/19 08:08:10 adam Exp $
+# $NetBSD: Makefile,v 1.114 2023/06/06 12:40:37 riastradh Exp $
 
 DISTNAME=		glade-3.40.0
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		User interface builder for the GTK3+ toolkit
 LICENSE=		gnu-gpl-v2
 
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=		itstool msgfmt pkg-config
 

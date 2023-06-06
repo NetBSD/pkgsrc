@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:55 riastradh Exp $
 
 DISTNAME=	MooseX-App-1.42
 PKGNAME=	p5-${DISTNAME}
@@ -16,13 +16,13 @@ DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
 DEPENDS+=	p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 # for make test
-BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
-BUILD_DEPENDS+=	p5-FindBin-libs-[0-9]*:../../devel/p5-FindBin-libs
-BUILD_DEPENDS+=	p5-IO-Interactive-[0-9]*:../../devel/p5-IO-Interactive
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
-BUILD_DEPENDS+=	p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=	p5-FindBin-libs-[0-9]*:../../devel/p5-FindBin-libs
+TOOL_DEPENDS+=	p5-IO-Interactive-[0-9]*:../../devel/p5-IO-Interactive
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=	auto/MooseX/App/.packlist
 USE_LANGUAGES=	# none

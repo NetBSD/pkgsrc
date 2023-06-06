@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:09 riastradh Exp $
 
 DISTNAME=	namespace-clean-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-B-Hooks-EndOfScope>=0.12:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-Package-Stash>=0.23:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/namespace/clean/.packlist
 

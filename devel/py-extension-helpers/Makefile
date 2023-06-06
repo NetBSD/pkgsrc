@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:12 riastradh Exp $
 
 DISTNAME=	extension-helpers-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 # without this line, EGG_INFODIR gets 0.0.0. The right one is the same as PKGVERSION
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

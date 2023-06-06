@@ -1,6 +1,6 @@
-# $NetBSD: xsltproc-nonet.mk,v 1.4 2019/11/06 13:23:45 wiz Exp $
+# $NetBSD: xsltproc-nonet.mk,v 1.5 2023/06/06 12:42:25 riastradh Exp $
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 pre-configure: create-xsltproc-wrapper
 

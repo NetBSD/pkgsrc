@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	ExtUtils-XSpp-0.18
 #                                    0.1602               -> 0.16.02
@@ -12,9 +12,9 @@ HOMEPAGE=	https://metacpan.org/release/ExtUtils-XSpp
 COMMENT=	XS for C++
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Module-Build>=0.38000}:../../devel/p5-Module-Build
-BUILD_DEPENDS+=		p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
-BUILD_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Module-Build>=0.38000}:../../devel/p5-Module-Build
+TOOL_DEPENDS+=		p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
+TOOL_DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 #DEPENDS+=		{perl>=5.14.1,p5-ExtUtils-ParseXS>=2.22.02}:../../devel/p5-ExtUtils-ParseXS
 #DEPENDS+=		{perl>=5.7.3,p5-Digest-MD5>=2.0}:../../security/p5-Digest-MD5
 

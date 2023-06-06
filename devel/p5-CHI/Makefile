@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:40:43 riastradh Exp $
 
 DISTNAME=	CHI-0.60
 PKGNAME=	p5-${DISTNAME}
@@ -34,11 +34,11 @@ DEPENDS+=	p5-Time-Duration-Parse>=0.03:../../time/p5-Time-Duration-Parse
 DEPENDS+=	p5-Try-Tiny>=0.05:../../devel/p5-Try-Tiny
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Class-[0-9]*:../../devel/p5-Test-Class
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+TOOL_DEPENDS+=	p5-Test-Class-[0-9]*:../../devel/p5-Test-Class
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

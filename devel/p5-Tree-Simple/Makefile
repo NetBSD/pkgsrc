@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/06 12:41:08 riastradh Exp $
 
 DISTNAME=	Tree-Simple-1.34
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ COMMENT=	Simple extension to manipulate tree objects
 LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
-BUILD_DEPENDS+=	p5-Test-Exception>=0.20:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Version>=1.002003:../../devel/p5-Test-Version
+TOOL_DEPENDS+=	p5-Test-Exception>=0.20:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Version>=1.002003:../../devel/p5-Test-Version
 
 PERL5_PACKLIST=		auto/Tree/Simple/.packlist
 

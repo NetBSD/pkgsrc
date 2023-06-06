@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/30 11:18:10 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	redo-0.42d
 PKGNAME=	apenwarr-${DISTNAME}
@@ -13,8 +13,8 @@ HOMEPAGE=	https://github.com/apenwarr/redo/
 COMMENT=	Python implementation of DJB's redo build tool
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-BUILD_DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+TOOL_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TOOL_DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	dash-[0-9]*:../../shells/dash
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3

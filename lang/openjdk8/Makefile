@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2023/04/19 08:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.118 2023/06/06 12:41:45 riastradh Exp $
 
 DISTNAME=	jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -25,7 +25,7 @@ JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jhat jmap jps jstack \
 		keytool orbd policytool rmid rmiregistry servertool tnameserv
 
-BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
+TOOL_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # not really GNU configure, only similar

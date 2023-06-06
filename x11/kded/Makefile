@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/05/22 21:00:47 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:42:53 riastradh Exp $
 
 DISTNAME=	kded-${KF5VER}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 DEPENDS+=	kinit>=${KF5VER}:../../x11/kinit
 
 .include "../../devel/kservice/buildlink3.mk"

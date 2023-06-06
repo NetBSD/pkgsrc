@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/22 21:00:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:39 riastradh Exp $
 
 DISTNAME=	fcitx5-qt-5.0.3
 PKGREVISION=	8
@@ -11,7 +11,7 @@ HOMEPAGE=	https://download.fcitx-im.org/fcitx5/fcitx5-qt/
 COMMENT=	Qt5 library and IM module for fcitx5
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes

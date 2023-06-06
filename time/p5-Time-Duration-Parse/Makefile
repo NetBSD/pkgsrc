@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:37 riastradh Exp $
 
 DISTNAME=	Time-Duration-Parse-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Time/Duration/Parse/.packlist
 
-BUILD_DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
+TOOL_DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

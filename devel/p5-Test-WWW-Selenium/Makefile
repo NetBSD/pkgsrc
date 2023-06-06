@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:41:07 riastradh Exp $
 #
 
 DISTNAME=	Test-WWW-Selenium-1.36
@@ -20,9 +20,9 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # contains URI::Escape 3.30
 DEPENDS+=	p5-URI>=1.54:../../www/p5-URI
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

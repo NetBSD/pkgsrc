@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/01/29 21:14:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:35 riastradh Exp $
 
 DISTNAME=	Cairo-GObject-1.005
 PKGNAME=	p5-${DISTNAME:tl}
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
-BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
+TOOL_DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
 
 PERL5_PACKLIST=	auto/Cairo/GObject/.packlist
 

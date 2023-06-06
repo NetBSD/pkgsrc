@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/10 23:52:33 markd Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:42:12 riastradh Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -9,8 +9,8 @@ CATEGORIES=	print
 HOMEPAGE=	http://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 
-BUILD_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
-BUILD_DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
+TOOL_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
+TOOL_DEPENDS+=	tex-xdvi-[0-9]*:../../print/tex-xdvi
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
 

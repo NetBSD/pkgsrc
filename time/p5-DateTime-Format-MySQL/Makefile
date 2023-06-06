@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:36 riastradh Exp $
 
 DISTNAME=	DateTime-Format-MySQL-0.0701
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,8 @@ PERL5_PACKLIST=		auto/DateTime/Format/MySQL/.packlist
 
 DEPENDS+=	p5-DateTime-Format-Builder>=0.60:../../time/p5-DateTime-Format-Builder
 # for make test
-BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
-BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+TOOL_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+TOOL_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

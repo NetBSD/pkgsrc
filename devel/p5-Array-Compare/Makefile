@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:31:53 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	Array-Compare-v3.0.8
 PKGNAME=	p5-${DISTNAME:S/v3/3/}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build

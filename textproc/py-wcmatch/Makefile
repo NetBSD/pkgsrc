@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/09/27 08:21:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:33 riastradh Exp $
 
 DISTNAME=	wcmatch-8.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/facelessuser/wcmatch
 COMMENT=	Wildcard/glob file name matcher
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-bracex>=2.1.1:../../textproc/py-bracex
 
 USE_LANGUAGES=	# none

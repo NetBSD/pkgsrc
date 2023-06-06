@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:42 riastradh Exp $
 
 DISTNAME=	CatalystX-LeakChecker-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Text-SimpleTable-[0-9]*:../../textproc/p5-Text-SimpleTable
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean>=0.05:../../devel/p5-namespace-clean
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CatalystX/LeakChecker/.packlist

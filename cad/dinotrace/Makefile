@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2022/06/28 11:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/06/06 12:40:18 riastradh Exp $
 #
 DISTNAME=	dinotrace-9.4f
 PKGREVISION=	2
@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.veripool.org/dinotrace/
 COMMENT=	Tool for viewing the output of digital simulators
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
-BUILD_DEPENDS+=	web2c>=2020:../../print/web2c
-BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
+TOOL_DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
+TOOL_DEPENDS+=	web2c>=2020:../../print/web2c
+TOOL_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		YES

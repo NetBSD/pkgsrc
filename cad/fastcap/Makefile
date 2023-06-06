@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/12/22 15:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/06 12:40:18 riastradh Exp $
 
 DISTNAME=	fastcap-2.0-18Sep92
 PKGNAME=	fastcap-2.0.19920918
@@ -11,13 +11,13 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	https://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
-BUILD_DEPENDS+=	dvipsk>=5.99:../../print/dvipsk
-BUILD_DEPENDS+=	tex-amsfonts>=3.0:../../fonts/tex-amsfonts
-BUILD_DEPENDS+=	tex-bibtex>=0.99c:../../print/tex-bibtex
-BUILD_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-metapost>=1.212:../../graphics/tex-metapost
+TOOL_DEPENDS+=	dvipsk>=5.99:../../print/dvipsk
+TOOL_DEPENDS+=	tex-amsfonts>=3.0:../../fonts/tex-amsfonts
+TOOL_DEPENDS+=	tex-bibtex>=0.99c:../../print/tex-bibtex
+TOOL_DEPENDS+=	tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-metapost>=1.212:../../graphics/tex-metapost
 
 MAKE_JOBS_SAFE=		no
 

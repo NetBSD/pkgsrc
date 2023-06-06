@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/22 21:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 # TODO: check if this is correct or should this be a full DEPENDS
-BUILD_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
+TOOL_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

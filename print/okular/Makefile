@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2023/05/22 21:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2023/06/06 12:42:11 riastradh Exp $
 
 DISTNAME=	okular-${KAPPSVER}
 PKGREVISION=	9
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 

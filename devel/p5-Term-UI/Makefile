@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:04 riastradh Exp $
 
 DISTNAME=	Term-UI-0.46
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Methods to ask both elaborate questions and simple yes/no
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Log-Message-Simple-[0-9]*:../../devel/p5-Log-Message-Simple
-BUILD_DEPENDS+=	p5-Log-Message-[0-9]*:../../devel/p5-Log-Message
+TOOL_DEPENDS+=	p5-Log-Message-Simple-[0-9]*:../../devel/p5-Log-Message-Simple
+TOOL_DEPENDS+=	p5-Log-Message-[0-9]*:../../devel/p5-Log-Message
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Term/UI/.packlist

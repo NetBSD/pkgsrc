@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/30 11:18:32 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:41:41 riastradh Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
 PKGREVISION=	12
@@ -13,7 +13,7 @@ COMMENT=	Simple handwriting recognition engine based on DTW
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-python>=0.3:../../inputmethod/tegaki-python
-BUILD_DEPENDS+=	swig-1.[0-9]*:../../devel/swig
+TOOL_DEPENDS+=	swig-1.[0-9]*:../../devel/swig
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config

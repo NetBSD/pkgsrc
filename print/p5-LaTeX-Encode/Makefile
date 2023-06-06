@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:12 riastradh Exp $
 
 DISTNAME=	LaTeX-Encode-0.092.0
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 
 DEPENDS+=	p5-Readonly>=0:../../devel/p5-Readonly
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Carp-Always-[0-9]*:../../devel/p5-Carp-Always
+TOOL_DEPENDS+=	p5-Carp-Always-[0-9]*:../../devel/p5-Carp-Always
 
 PERL5_PACKLIST=		auto/LaTeX/Encode/.packlist
 REPLACE_PERL+=		scripts/format-encoding-reference

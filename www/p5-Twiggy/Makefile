@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/04/29 23:03:54 wen Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:48 riastradh Exp $
 
 DISTNAME=	Twiggy-0.1026
 PKGNAME=	p5-${DISTNAME}
@@ -13,9 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Twiggy/.packlist
 
-BUILD_DEPENDS+=	p5-Server-Starter-[0-9]*:../../sysutils/p5-Server-Starter
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Server-Starter-[0-9]*:../../sysutils/p5-Server-Starter
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 DEPENDS+=	p5-EV-[0-9]*:../../devel/p5-EV
 DEPENDS+=	p5-HTTP-Parser-XS-[0-9]*:../../www/p5-HTTP-Parser-XS
 DEPENDS+=	p5-AnyEvent-[0-9]*:../../devel/p5-AnyEvent

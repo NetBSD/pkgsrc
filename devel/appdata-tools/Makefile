@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/04/19 08:09:37 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	appdata_tools-0.1.7
 PKGREVISION=	31
@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Application data tools
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 WRKSRC=		${WRKDIR}/appdata-tools-${GITHUB_TAG}

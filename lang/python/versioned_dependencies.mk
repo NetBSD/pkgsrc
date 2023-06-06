@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.97 2023/05/05 10:13:09 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.98 2023/06/06 12:41:46 riastradh Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -82,7 +82,7 @@ PKG_FAIL_REASON+=	"${pkg} unsupported in PYTHON_VERSIONED_DEPENDENCIES"
 .    if "${type}" == ":link"
 .include "../../${dir}/buildlink3.mk"
 .    elif "${type}" == ":build"
-BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
+TOOL_DEPENDS:=	${TOOL_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .    elif "${type}" == ":test"
 TEST_DEPENDS:=	${TEST_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .    elif "${type}" == ":tool"

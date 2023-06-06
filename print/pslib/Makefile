@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:35:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:12 riastradh Exp $
 #
 
 DISTNAME=		pslib-0.4.5
@@ -11,7 +11,7 @@ HOMEPAGE=		http://pslib.sourceforge.net/
 COMMENT=		C-library to create PostScript files
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/02/11 15:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:21 riastradh Exp $
 
 DISTNAME=	mmix-20060918
 PKGREVISION=	1
@@ -9,10 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
-BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
-BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
+TOOL_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+TOOL_DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
+TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+TOOL_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 MAKE_JOBS_SAFE=		no
 

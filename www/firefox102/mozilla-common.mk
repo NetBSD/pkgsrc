@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2022/11/02 20:36:32 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2023/06/06 12:42:39 riastradh Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -113,7 +113,7 @@ CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 # RLBox WASM sandbox
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 # For wasm-ld command
-BUILD_DEPENDS+=		lld-[0-9]*:../../devel/lld
+TOOL_DEPENDS+=		lld-[0-9]*:../../devel/lld
 .include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-libcxx/buildlink3.mk"
 # NB the exact versions of the clang and wasi-compiler-rt dependencies must

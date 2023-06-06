@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/05/31 09:33:45 adam Exp $
+# $NetBSD: Makefile,v 1.93 2023/06/06 12:41:46 riastradh Exp $
 
 DISTNAME=	vala-0.56.8
 CATEGORIES=	lang gnome
@@ -10,8 +10,8 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Vala
 COMMENT=	Compiler for the GObject type system
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config

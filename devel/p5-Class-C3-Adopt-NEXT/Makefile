@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:32:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:43 riastradh Exp $
 
 DISTNAME=	Class-C3-Adopt-NEXT-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Class-C3-Adopt-NEXT
 COMMENT=	Perl5 module to make NEXT suck less
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 

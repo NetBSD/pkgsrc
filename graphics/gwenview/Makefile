@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2023/05/22 21:00:31 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2023/06/06 12:41:32 riastradh Exp $
 
 DISTNAME=	gwenview-${KAPPSVER}
 PKGREVISION=	9
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kimageformats>=5.19.0:../../graphics/kimageformats
 
 USE_TOOLS+=	msgmerge pkg-config

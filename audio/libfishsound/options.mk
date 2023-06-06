@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/11/02 21:09:14 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2023/06/06 12:40:16 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libfishsound
 PKG_SUPPORTED_OPTIONS=		doc valgrind
@@ -11,7 +11,7 @@ PLIST_VARS+=		doc nodoc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 PLIST.doc=		yes
 .else
 CONFIGURE_ARGS+=	HAVE_DOXYGEN=no
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-speex
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
-BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
+TOOL_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 CONFIGURE_ARGS+=	--enable-valgrind-testing
 .else
 CONFIGURE_ARGS+=	--disable-valgrind-testing

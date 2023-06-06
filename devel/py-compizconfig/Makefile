@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/04/19 08:08:19 adam Exp $
+# $NetBSD: Makefile,v 1.90 2023/06/06 12:41:11 riastradh Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		compizconfig-python-${PKGVER}
@@ -12,7 +12,7 @@ HOMEPAGE=		http://compiz.org/
 COMMENT=		Python bindings for libcompizconfig
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
+TOOL_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

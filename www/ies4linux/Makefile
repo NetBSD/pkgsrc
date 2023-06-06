@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/30 11:18:58 nia Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:39 riastradh Exp $
 
 DISTNAME=	ies4linux-2.99.0.1
 PKGREVISION=	8
@@ -12,7 +12,7 @@ COMMENT=	Microsoft Internet Explorer installer
 DEPENDS+=	wget-[0-9]*:../../net/wget
 DEPENDS+=	wine-[0-9]*:../../emulators/wine
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
+TOOL_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none

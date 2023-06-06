@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/05/16 21:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/06 12:41:37 riastradh Exp $
 
 DISTNAME=	gr-osmosdr-0.2.4
 PKGREVISION=	3
@@ -14,7 +14,7 @@ COMMENT=	SDR Hardware support for OsmoSDR and so many more
 LICENSE=	gnu-gpl-v2
 
 # for docs/doxygen/update_pydoc.py
-BUILD_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 GCC_REQD+=	8 # stdc++fs
 

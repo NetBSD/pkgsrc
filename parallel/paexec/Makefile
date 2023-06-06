@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/06/16 10:38:40 otis Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:09 riastradh Exp $
 #
 
 DISTNAME=	paexec-1.1.4
@@ -10,7 +10,7 @@ HOMEPAGE=	https://sourceforge.net/projects/paexec
 COMMENT=	Distributes tasks over network or CPUs
 LICENSE=	mit
 
-BUILD_DEPENDS+=		mk-configure>=0.33.0:../../devel/mk-configure
+TOOL_DEPENDS+=		mk-configure>=0.33.0:../../devel/mk-configure
 DEPENDS+=		runawk>=1.4.3:../../lang/runawk
 
 REPLACE_INTERPRETER+=	runawk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/10/21 08:00:16 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:08 riastradh Exp $
 
 DISTNAME=	pypiserver-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/pypiserver/pypiserver
 COMMENT=	Minimal PyPI server for use with pip/easy_install
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-watchdog-[0-9]*:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest

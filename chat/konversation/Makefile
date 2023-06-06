@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2023/04/23 14:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.126 2023/06/06 12:40:19 riastradh Exp $
 #
 
 DISTNAME=	konversation-1.5.1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://konversation.kde.org/
 COMMENT=	KDE IRC Client
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++

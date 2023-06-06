@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/28 14:57:32 taca Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:41:10 riastradh Exp $
 
 MODNAME=	raphf
 PECL_VERSION=	2.0.1
@@ -9,7 +9,7 @@ HOMEPAGE=	https://pecl.php.net/package/raphf
 COMMENT=	Resource and persistent handles factory
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
+TOOL_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
 
 PHP_VERSIONS_ACCEPTED=	74 80 81
 
