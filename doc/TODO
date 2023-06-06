@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23043 2023/06/06 10:58:42 wiz Exp $
+$NetBSD: TODO,v 1.23044 2023/06/06 13:40:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,6 +508,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o blur6ex-0.3.462
 	o boolean-7.1
 	o bos-2.5
+	o bossa-1.9.1
 	o botan-3.0.0
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
@@ -644,6 +645,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fet-6.0.1
 	o filerunner-14.06.18.10
 	o firefox-114
+	o fityk-1.3.2
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -794,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hiawatha-10.8.1
 	o hivex-1.3.19
 	o hmmer-3.1b2
+	o holtz-1.5.0
 	o honggfuzz-2.5
 	o horde-5.2.9
 	o howm-1.4.7
@@ -1500,6 +1503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o x16-rom-38
 	o x2vnc-1.31
 	o xaric-0.13.9
+	o xchm-1.36
 	o xcoral-3.14
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
