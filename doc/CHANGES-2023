@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3587 2023/06/06 10:45:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3588 2023/06/06 10:46:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-poetry-plugin-export to 1.4.0 [wiz 2023-06-06]
 	Updated textproc/py-regex to 2023.6.3 [wiz 2023-06-06]
 	Updated comms/py-rich to 13.4.1 [wiz 2023-06-06]
+	Updated devel/py-ruamel-yaml to 0.17.31 [wiz 2023-06-06]
