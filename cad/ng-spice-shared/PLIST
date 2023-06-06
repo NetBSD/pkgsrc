@@ -1,0 +1,6 @@
+include/ngspice/sharedspice.h
+lib/libngspice.la
+lib/libngspice.so
+lib/libngspice.so.0
+lib/libngspice.so.0.0.7
+lib/pkgconfig/ngspice.pc
