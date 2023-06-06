@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1 2023/06/06 09:54:12 bouyer Exp $
+#
+# used by can/ng-spice
+# used by can/ng-spice-shared
+
+VERSION=	40
+DISTNAME=	ngspice-${VERSION}
+CATEGORIES=	cad
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
+
+DISTINFO_FILE=  ${.CURDIR}/../../cad/ng-spice/distinfo
+
+MAINTAINER=	dmcmahill@NetBSD.org
+HOMEPAGE=	http://ngspice.sourceforge.net/
+LICENSE=	modified-bsd AND gnu-lgpl-v2.1 AND gnu-gpl-v2 AND mpl-2.0
+
+USE_LIBTOOL=		YES
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-debug

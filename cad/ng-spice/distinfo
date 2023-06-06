@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:04:14 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/06/06 09:54:12 bouyer Exp $
 
-BLAKE2s (ngspice-31.tar.gz) = f351a3232b945596e78094a17d21ed705319766606f8f1272ea699d82a2e205b
-SHA512 (ngspice-31.tar.gz) = 448024f398d267911d5d2a48da03eb0d87ba1133ce39d5132bd318dde8ad359d19c7f85f6b4ec88c08b081c9140f7b931334d84173019a22aa2ac98482bd7d5d
-Size (ngspice-31.tar.gz) = 7250057 bytes
+BLAKE2s (ngspice-40.tar.gz) = d284f6fe323a5519d85a5c1afa72c68ad2a237dc71a4a5fa43be39b49f13294e
+SHA512 (ngspice-40.tar.gz) = dab422cc8677e6f4bb92e06be0ce695a53d3e9abbe533c7bb91540d55d2a13514b0b166c8ccafcc17699799a846a35e260dddc400664c6e1137e1b18504e9954
+Size (ngspice-40.tar.gz) = 9431981 bytes
