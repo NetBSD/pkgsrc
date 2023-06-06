@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/02/11 01:36:52 gutteridge Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 01:17:50 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-power-manager-4.18.1
+DISTNAME=	xfce4-power-manager-4.18.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-power-manager/${PKGVERSION_NOREV:R}/
 
