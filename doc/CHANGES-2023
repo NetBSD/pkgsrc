@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3597 2023/06/06 13:13:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3598 2023/06/06 13:18:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4983,3 +4983,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 18.10.1 [adam 2023-06-06]
 	Updated sysutils/py-ansible-compat to 4.1.2 [adam 2023-06-06]
 	Updated sysutils/ansible-lint to 6.17.0 [adam 2023-06-06]
+	Removed multimedia/mkvtoolnix-old [wiz 2023-06-06]

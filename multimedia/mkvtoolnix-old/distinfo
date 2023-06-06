@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:01:12 nia Exp $
-
-BLAKE2s (mkvtoolnix-2.9.8.tar.bz2) = 41bce4b890ce13a9d89d5c7e84aabb5d008dc02c483babbe621b0a4b0a0362a6
-SHA512 (mkvtoolnix-2.9.8.tar.bz2) = 0768f04205f82aed92ae9b3452df224e35ce95cee8912575f0c998b4e694d11f221b731e49f35c17283a09b5836e05e7d513030dd7af8da31d277d9e09595e12
-Size (mkvtoolnix-2.9.8.tar.bz2) = 1093036 bytes
-SHA1 (patch-aa) = f34d52914908e54fef20c857c3fde28aa560ff91
-SHA1 (patch-src_common_common.cpp) = 8710f2a56bbdfce9d5ff823b3d2834082a5bf672
