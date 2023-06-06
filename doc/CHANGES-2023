@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3578 2023/06/06 08:18:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3579 2023/06/06 08:21:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4952,3 +4952,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 41.0.1 [wiz 2023-06-06]
 	Updated www/py-google-api-python-client to 2.88.0 [wiz 2023-06-06]
 	Updated security/py-google-auth to 2.19.1 [wiz 2023-06-06]
+	Updated textproc/py-markdown-it-py to 3.0.0 [wiz 2023-06-06]
