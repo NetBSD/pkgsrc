@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/06 04:17:39 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/06 18:16:24 schmonz Exp $
 
-BLAKE2s (cvs-for-gits-20230606.tar.gz) = aaef51c33790eb698ccb9d9818329cada9872213d13b9911eade0fa72b10d902
-SHA512 (cvs-for-gits-20230606.tar.gz) = 3c9fbff35328788df757a56b43990930bc7422d4b9955222edfd1aecdaf89ca0bb96f6a4dfc95e1c3d56d8d00538f546c1bf5417e1dd81ee150ec168e24b1a44
-Size (cvs-for-gits-20230606.tar.gz) = 1945 bytes
+BLAKE2s (cvs-for-gits-20230606.1.tar.gz) = afb60494e4d831277a7a523e80b7abeb2394d3df16db014c58c9513fdd88f33c
+SHA512 (cvs-for-gits-20230606.1.tar.gz) = ed70842cb6e98da88301b859bcd4bd0aecf9b469b91fef4e3ec280eb972921b309550bcf94f44dfc91452a284615070549a6ea705bb9fdb6c5b415ca2daa7aae
+Size (cvs-for-gits-20230606.1.tar.gz) = 2529 bytes
