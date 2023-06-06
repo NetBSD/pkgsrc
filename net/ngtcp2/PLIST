@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/26 19:42:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/06/06 07:14:35 adam Exp $
 include/ngtcp2/ngtcp2.h
 include/ngtcp2/version.h
 lib/libngtcp2.a
 lib/libngtcp2.so
-lib/libngtcp2.so.12
-lib/libngtcp2.so.12.0.0
+lib/libngtcp2.so.13
+lib/libngtcp2.so.13.0.0
 lib/pkgconfig/libngtcp2.pc
 share/doc/ngtcp2/README.rst
