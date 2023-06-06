@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/06 04:17:39 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/06 18:16:24 schmonz Exp $
 bin/cvs-for-gits
+share/doc/cvs-for-gits/README.md
