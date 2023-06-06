@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/06 18:47:27 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/06/06 10:45:10 adam Exp $
 
-BLAKE2s (nmap-7.93.tar.bz2) = 8c2e549318f6329d7252750ab903cbeec79c93cc001b542ed3166eaa1b2c7fbd
-SHA512 (nmap-7.93.tar.bz2) = 4ec9295e25bd7a215e718c3dbbf09bfe6339b60850f4a8d09b5ad0cbf41a0da8ece0168efc5ca91ba1ecbd83b1d31735d77dacd5f1ec1a9fd212454dd1f0f0fd
-Size (nmap-7.93.tar.bz2) = 10823114 bytes
-SHA1 (patch-zenmapCore_Paths.py) = 55ccc83a8f7dd302e4b0ffc1df0837ff651ba913
+BLAKE2s (nmap-7.94.tar.bz2) = fb58b74eaf86ab57d253e947fc1dea5cfc6a418fba62001a767e37833399979f
+SHA512 (nmap-7.94.tar.bz2) = a55cddf9c1d9272243d01251eb3315b26f232d0596818857083222a385398618b428dc2bd8282c3e832527e135a74aeb020ca8609d83d8337342f5d8a04d7f2c
+Size (nmap-7.94.tar.bz2) = 11102195 bytes

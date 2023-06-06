@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/08/26 08:24:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2023/06/06 10:45:10 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -22,7 +22,6 @@ man/zh/man1/nmap.1
 share/ncat/ca-bundle.crt
 share/nmap/nmap-mac-prefixes
 share/nmap/nmap-os-db
-share/nmap/nmap-payloads
 share/nmap/nmap-protocols
 share/nmap/nmap-rpc
 share/nmap/nmap-service-probes
@@ -89,6 +88,7 @@ ${PLIST.lua}share/nmap/nselib/data/rtsp-urls.txt
 ${PLIST.lua}share/nmap/nselib/data/snmpcommunities.lst
 ${PLIST.lua}share/nmap/nselib/data/ssl-fingerprints
 ${PLIST.lua}share/nmap/nselib/data/targets-ipv6-wordlist
+${PLIST.lua}share/nmap/nselib/data/tftp-fingerprints.lua
 ${PLIST.lua}share/nmap/nselib/data/tftplist.txt
 ${PLIST.lua}share/nmap/nselib/data/usernames.lst
 ${PLIST.lua}share/nmap/nselib/data/vhosts-default.lst
@@ -785,6 +785,7 @@ ${PLIST.lua}share/nmap/scripts/telnet-brute.nse
 ${PLIST.lua}share/nmap/scripts/telnet-encryption.nse
 ${PLIST.lua}share/nmap/scripts/telnet-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/tftp-enum.nse
+${PLIST.lua}share/nmap/scripts/tftp-version.nse
 ${PLIST.lua}share/nmap/scripts/tls-alpn.nse
 ${PLIST.lua}share/nmap/scripts/tls-nextprotoneg.nse
 ${PLIST.lua}share/nmap/scripts/tls-ticketbleed.nse

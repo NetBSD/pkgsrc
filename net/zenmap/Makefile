@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/09/06 18:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 10:45:10 adam Exp $
 
 .include "../../net/nmap/Makefile.common"
 
@@ -12,13 +12,12 @@ EXTRACT_ELEMENTS=	${DISTNAME}/zenmap
 
 EGG_NAME=	zenmap-${PKGVERSION_NOREV}
 
-# There is an ongoing effort of porting Zenmap to Python 3. See
-# https://github.com/nmap/nmap/issues/1176
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 PYSETUPARGS+=		vanilla
