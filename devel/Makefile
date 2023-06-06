@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3999 2023/06/01 04:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4000 2023/06/06 04:17:42 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -271,6 +271,7 @@ SUBDIR+=	cut
 SUBDIR+=	cutter
 SUBDIR+=	cvise
 SUBDIR+=	cvs-fast-export
+SUBDIR+=	cvs-for-gits
 SUBDIR+=	cvs2cl
 SUBDIR+=	cvs2html
 SUBDIR+=	cvs2svn
