@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3599 2023/06/06 13:28:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3600 2023/06/06 13:33:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4985,3 +4985,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.17.0 [adam 2023-06-06]
 	Removed multimedia/mkvtoolnix-old [wiz 2023-06-06]
 	Updated databases/ruby-sequel to 5.69.0 [taca 2023-06-06]
+	Updated devel/ruby-console to 1.17.0 [taca 2023-06-06]
