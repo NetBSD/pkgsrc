@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2023/05/22 07:39:00 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 13:13:33 adam Exp $
 
-DISTNAME=	ansible-lint-6.16.2
+DISTNAME=	ansible-lint-6.17.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -12,12 +12,14 @@ LICENSE=	gnu-gpl-v3 AND mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.12.0:../../sysutils/ansible-core
+DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=4.0.5:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-black>=22.8.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.10.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.0.0:../../comms/py-rich
-DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.17.24:../../devel/py-ruamel-yaml
+DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.17.31:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=8.1.2:../../textproc/py-wcmatch
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
