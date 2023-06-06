@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/11/30 14:35:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/06/06 13:54:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/check.yml
 ${GEM_LIBDIR}/.github/workflows/rubocop.yml
@@ -13,12 +13,15 @@ ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/image_size.gemspec
 ${GEM_LIBDIR}/lib/image_size.rb
 ${GEM_LIBDIR}/lib/image_size/chunky_reader.rb
+${GEM_LIBDIR}/lib/image_size/format_error.rb
+${GEM_LIBDIR}/lib/image_size/isobmff.rb
 ${GEM_LIBDIR}/lib/image_size/reader.rb
 ${GEM_LIBDIR}/lib/image_size/seekable_io_reader.rb
 ${GEM_LIBDIR}/lib/image_size/stream_io_reader.rb
 ${GEM_LIBDIR}/lib/image_size/string_reader.rb
 ${GEM_LIBDIR}/lib/image_size/uri_reader.rb
 ${GEM_LIBDIR}/spec/image_size/chunky_reader_spec.rb
+${GEM_LIBDIR}/spec/image_size/isobmff_spec.rb
 ${GEM_LIBDIR}/spec/image_size/seekable_io_reader_spec.rb
 ${GEM_LIBDIR}/spec/image_size_spec.rb
 ${GEM_LIBDIR}/spec/images/.gitattributes
@@ -30,6 +33,11 @@ ${GEM_LIBDIR}/spec/images/emf/74x77.emf
 ${GEM_LIBDIR}/spec/images/emf/77x77.emf
 ${GEM_LIBDIR}/spec/images/empty
 ${GEM_LIBDIR}/spec/images/gif/668x481.gif
+${GEM_LIBDIR}/spec/images/heif/ap_maloletka_mariupol.452x301.heic
+${GEM_LIBDIR}/spec/images/heif/maxar_mariupol.400x300.avif
+${GEM_LIBDIR}/spec/images/heif/multiple.169x83.heic
+${GEM_LIBDIR}/spec/images/heif/rotate.73x173.avif
+${GEM_LIBDIR}/spec/images/heif/sequence.7x5.avif
 ${GEM_LIBDIR}/spec/images/ico/32x256.ico
 ${GEM_LIBDIR}/spec/images/jp2/163x402.jp2
 ${GEM_LIBDIR}/spec/images/jp2/176x373.jpx
