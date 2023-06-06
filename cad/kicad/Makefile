@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2023/04/23 14:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.78 2023/06/06 10:20:58 bouyer Exp $
 #
 
-V=		7.0.0
+V=		7.0.5
 DISTNAME=	kicad-${V}
-PKGREVISION=	2
+#PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
 GITLAB_PROJECT=	kicad
@@ -26,7 +26,6 @@ USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=		-DKICAD_SPICE=OFF
 CMAKE_ARGS+=		-DKICAD_SCRIPTING_WXPYTHON=OFF
 CMAKE_ARGS+=		-DKICAD_BUILD_I18N=ON
 
@@ -47,6 +46,8 @@ PY_PATCHPLIST=		yes
 # additional patches. Ping if you you want the patches.
 # I didn't commit them yet because it segfaults. -tnn 20220102
 NOT_FOR_PLATFORM+=	Darwin-*-*
+
+.include "options.mk"
 
 # needs 64-bit CAS for std::atomic<size_t>
 .include "../../mk/atomic64.mk"
