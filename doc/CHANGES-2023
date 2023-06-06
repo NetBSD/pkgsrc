@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3593 2023/06/06 10:58:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3594 2023/06/06 11:42:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4977,3 +4977,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/serf to 1.3.10 [wiz 2023-06-06]
 	Updated pkgtools/revbump to 3.2 [wiz 2023-06-06]
 	Updated graphics/ImageMagick to 7.1.1.11 [wiz 2023-06-06]
+	Updated www/sqtop to 20170416 [taca 2023-06-06]
