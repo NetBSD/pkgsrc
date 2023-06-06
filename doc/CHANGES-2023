@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3609 2023/06/06 18:16:30 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3610 2023/06/06 18:31:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4995,3 +4995,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ruby-braintree to 4.12.0 [taca 2023-06-06]
 	Updated graphics/ruby-image_size to 3.3.0 [taca 2023-06-06]
 	Updated devel/cvs-for-gits to 20230606.1 [schmonz 2023-06-06]
+	Updated devel/py-ipython to 8.14.0 [adam 2023-06-06]
+	Updated devel/py-ipykernel to 6.23.1 [adam 2023-06-06]
