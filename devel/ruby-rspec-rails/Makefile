@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/05/06 02:24:15 taca Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/06 13:47:54 taca Exp $
 
-DISTNAME=	rspec-rails-6.0.2
+DISTNAME=	rspec-rails-6.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
