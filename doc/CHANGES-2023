@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3570 2023/06/06 07:17:08 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3571 2023/06/06 07:55:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4944,3 +4944,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/mkvtoolnix to 77.0 [adam 2023-06-06]
 	Updated net/ngtcp2 to 0.16.0 [adam 2023-06-06]
 	Updated www/nghttp3 to 0.12.0 [adam 2023-06-06]
+	Updated textproc/enchant2 to 2.5.0 [wiz 2023-06-06]
