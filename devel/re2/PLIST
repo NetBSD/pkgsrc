@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/26 19:26:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/06/06 10:50:48 wiz Exp $
 include/re2/filtered_re2.h
 include/re2/re2.h
 include/re2/set.h
@@ -8,6 +8,6 @@ lib/cmake/re2/re2ConfigVersion.cmake
 lib/cmake/re2/re2Targets-noconfig.cmake
 lib/cmake/re2/re2Targets.cmake
 lib/libre2.so
-lib/libre2.so.10
-lib/libre2.so.10.0.0
+lib/libre2.so.11
+lib/libre2.so.11.0.0
 lib/pkgconfig/re2.pc

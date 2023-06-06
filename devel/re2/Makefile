@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2023/04/26 19:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 10:50:48 wiz Exp $
 
 DISTNAME=	re2-${GITHUB_TAG:S/-//g}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	2023-03-01
+GITHUB_TAG=	2023-06-02
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/re2
@@ -19,5 +19,6 @@ CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 PKGCONFIG_OVERRIDE=	re2.pc.in
 INSTALLATION_DIRS+=	lib/pkgconfig
 
+.include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
