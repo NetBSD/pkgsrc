@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/05/31 12:57:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/06/06 12:46:27 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
@@ -2273,6 +2273,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unrecognized_extension.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/crl_unsupported_reason.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_selfsigned_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ec_no_named_curve.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ecdsa_null_alg.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/extended_key_usage.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/freshestcrl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ian_uri.pem
