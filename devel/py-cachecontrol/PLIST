@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/30 09:45:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/06 07:58:53 wiz Exp $
 bin/doesitcache-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,9 +27,6 @@ ${PYSITELIB}/cachecontrol/caches/file_cache.pyo
 ${PYSITELIB}/cachecontrol/caches/redis_cache.py
 ${PYSITELIB}/cachecontrol/caches/redis_cache.pyc
 ${PYSITELIB}/cachecontrol/caches/redis_cache.pyo
-${PYSITELIB}/cachecontrol/compat.py
-${PYSITELIB}/cachecontrol/compat.pyc
-${PYSITELIB}/cachecontrol/compat.pyo
 ${PYSITELIB}/cachecontrol/controller.py
 ${PYSITELIB}/cachecontrol/controller.pyc
 ${PYSITELIB}/cachecontrol/controller.pyo
@@ -39,6 +36,7 @@ ${PYSITELIB}/cachecontrol/filewrapper.pyo
 ${PYSITELIB}/cachecontrol/heuristics.py
 ${PYSITELIB}/cachecontrol/heuristics.pyc
 ${PYSITELIB}/cachecontrol/heuristics.pyo
+${PYSITELIB}/cachecontrol/py.typed
 ${PYSITELIB}/cachecontrol/serialize.py
 ${PYSITELIB}/cachecontrol/serialize.pyc
 ${PYSITELIB}/cachecontrol/serialize.pyo
