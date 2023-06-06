@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.4 2023/03/12 17:57:44 js Exp $
+$NetBSD: patch-configure.ac,v 1.5 2023/06/06 00:58:05 gutteridge Exp $
 
 Check for sizeof(time_t).
 
@@ -19,7 +19,7 @@ Defang bash 4.0 syntax in configure
  # YACC needs a check
  AC_PROG_YACC
  if test "x${YACC}" = "xbyacc" -o "x${YACC}" = "xyacc" -o "x${YACC}" = "x"; then
-@@ -1896,10 +1896,10 @@
+@@ -1899,10 +1904,10 @@
  echo "Building with LTO    : $LTO_BUILD"
  echo
  
