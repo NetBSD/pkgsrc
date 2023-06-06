@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/05/28 17:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 08:01:09 wiz Exp $
 
-DISTNAME=	imath-3.1.8
+DISTNAME=	imath-3.1.9
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	Imath
