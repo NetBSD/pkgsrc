@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3568 2023/06/06 04:17:48 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3569 2023/06/06 05:15:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4939,3 +4939,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfce4-power-manager to 4.18.2 [gutteridge 2023-06-06]
 	Updated meta-pkgs/xfce4 to 4.18.0nb7 [gutteridge 2023-06-06]
 	Added devel/cvs-for-gits version 20230606 [schmonz 2023-06-06]
+	Updated security/nettle to 3.9.1 [adam 2023-06-06]
+	Updated devel/py-hatchling to 1.17.1 [adam 2023-06-06]
