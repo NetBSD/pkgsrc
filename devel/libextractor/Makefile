@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2023/05/28 17:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2023/06/06 08:02:08 wiz Exp $
 
 DISTNAME=	libextractor-1.11
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libextractor/}
 
