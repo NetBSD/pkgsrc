@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2023/06/06 10:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2023/06/06 10:59:30 wiz Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://imagemagick.org/script/perl-magick.php
 COMMENT=	Object-oriented Perl interface to ImageMagick
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
-#PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
+PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
