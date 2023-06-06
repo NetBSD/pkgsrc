@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3595 2023/06/06 12:34:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3596 2023/06/06 12:48:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4979,3 +4979,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.1.11 [wiz 2023-06-06]
 	Updated www/sqtop to 20170416 [taca 2023-06-06]
 	Updated x11/wxGTK31 to 3.1.7nb6 [wiz 2023-06-06]
+	Updated security/py-cryptography_vectors to 41.0.1 [adam 2023-06-06]
+	Updated devel/py-faker to 18.10.1 [adam 2023-06-06]
