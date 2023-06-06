@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/09/06 18:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 10:45:10 adam Exp $
 
 .include "../../net/nmap/Makefile.common"
 
@@ -10,7 +10,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/ndiff
 
 EXTRACT_ELEMENTS=	${DISTNAME}/ndiff
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	pre-configure

@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/06 10:45:10 adam Exp $
 bin/zenmap
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/radialnet/__init__.py
 ${PYSITELIB}/radialnet/__init__.pyc
 ${PYSITELIB}/radialnet/__init__.pyo
@@ -102,7 +106,6 @@ ${PYSITELIB}/radialnet/util/integration.pyo
 ${PYSITELIB}/radialnet/util/misc.py
 ${PYSITELIB}/radialnet/util/misc.pyc
 ${PYSITELIB}/radialnet/util/misc.pyo
-${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/zenmapCore/BasePaths.py
 ${PYSITELIB}/zenmapCore/BasePaths.pyc
 ${PYSITELIB}/zenmapCore/BasePaths.pyo
@@ -323,17 +326,6 @@ share/zenmap/config/scan_profile.usp
 share/zenmap/config/zenmap.conf
 share/zenmap/config/zenmap_version
 share/zenmap/docs/help.html
-share/zenmap/locale/de/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/es/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/fr/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/hi/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/hr/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/it/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/ja/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/pl/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/pt_BR/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/ru/LC_MESSAGES/zenmap.mo
-share/zenmap/locale/zh/LC_MESSAGES/zenmap.mo
 share/zenmap/misc/profile_editor.xml
 share/zenmap/pixmaps/default_32.png
 share/zenmap/pixmaps/default_75.png
