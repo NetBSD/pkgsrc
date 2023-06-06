@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/05/21 18:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 10:40:35 wiz Exp $
 
-DISTNAME=	poetry-1.5.0
+DISTNAME=	poetry-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -36,6 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=2022.5.19:../../misc/py-trove-classi
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.26.0:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.4.7:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-cachy>=0.3.0:../../devel/py-cachy
+TEST_DEPENDS+=	${PYPKGPREFIX}-deepdiff>=0:../../textproc/py-deepdiff
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpretty>=1.0:../../www/py-httpretty
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
@@ -69,7 +70,8 @@ post-install:
 	${MV} poetry poetry-${PYVERSSUFFIX} || ${TRUE}
 
 # needs 'make install'
-# 6 failed, 1259 passed, 5 skipped, 4 errors
+# as of 1.5.1:
+# 1 failed, 1374 passed, 6 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
