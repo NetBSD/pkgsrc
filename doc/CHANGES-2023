@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3591 2023/06/06 10:55:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3592 2023/06/06 10:57:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4975,3 +4975,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/zenmap to 7.94 [adam 2023-06-06]
 	Updated devel/re2 to 20230602 [wiz 2023-06-06]
 	Updated www/serf to 1.3.10 [wiz 2023-06-06]
+	Updated pkgtools/revbump to 3.2 [wiz 2023-06-06]
