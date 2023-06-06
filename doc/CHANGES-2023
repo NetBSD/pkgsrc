@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3583 2023/06/06 10:25:03 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.3584 2023/06/06 10:40:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4963,3 +4963,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/kicad-packages3d to 7.0.5 [bouyer 2023-06-06]
 	Updated cad/kicad-symbols to 7.0.5 [bouyer 2023-06-06]
 	Updated cad/kicad-templates to 7.0.5 [bouyer 2023-06-06]
+	Updated devel/py-poetry to 1.5.1 [wiz 2023-06-06]
