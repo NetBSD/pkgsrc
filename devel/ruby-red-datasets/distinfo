@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/05/28 01:22:12 taca Exp $
+$NetBSD: distinfo,v 1.7 2023/06/06 13:45:14 taca Exp $
 
-BLAKE2s (red-datasets-0.1.6.gem) = ab613f21be670d026c7b1431f2994dad870af6c587f6a937ed5a20586c54d511
-SHA512 (red-datasets-0.1.6.gem) = 74c522cb998eabab3b7596c9205576acb5dfeb793d589848c373d659763944aad502c0a14a6d8602b6912d5cc9937c65bb3c961a11d4b0167fe8742fec99413d
-Size (red-datasets-0.1.6.gem) = 70144 bytes
+BLAKE2s (red-datasets-0.1.7.gem) = 54d7fb7adfc7d9ed92d87230688134f2181339d89c0dcef5af1b43736642a573
+SHA512 (red-datasets-0.1.7.gem) = d0837f70b2d0b8a232433ae49aa281383cd41ed410b1516744cd931d32ff57b8773aa31ad24929f800fc28efe60cfb35264ee6da8c6905cb51db466e0461b68e
+Size (red-datasets-0.1.7.gem) = 70144 bytes
