@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/06/06 04:17:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 18:16:24 schmonz Exp $
 
-DISTNAME=		cvs-for-gits-20230606
+DISTNAME=		cvs-for-gits-20230606.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=schmonz/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -11,6 +11,7 @@ COMMENT=		Make CVS a bit more Gittish
 LICENSE=		unlicense
 
 DEPENDS+=		colordiff-[0-9]*:../../devel/colordiff
+DEPENDS+=		cvsps-[0-9]*:../../devel/cvsps
 .if !exists(/usr/bin/less)
 DEPENDS+=		less-[0-9]*:../../misc/less
 .endif
@@ -19,9 +20,10 @@ USE_LANGUAGES=		# none
 REPLACE_SH=		${PKGBASE}
 NO_BUILD=		yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
