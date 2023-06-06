@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/17 20:35:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/06 09:39:09 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rapidfuzz/__init__.pxd
@@ -25,6 +26,7 @@ ${PYSITELIB}/rapidfuzz/_common_py.pyo
 ${PYSITELIB}/rapidfuzz/_feature_detector.py
 ${PYSITELIB}/rapidfuzz/_feature_detector.pyc
 ${PYSITELIB}/rapidfuzz/_feature_detector.pyo
+${PYSITELIB}/rapidfuzz/_feature_detector_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/_utils.py
 ${PYSITELIB}/rapidfuzz/_utils.pyc
 ${PYSITELIB}/rapidfuzz/_utils.pyo
@@ -104,10 +106,13 @@ ${PYSITELIB}/rapidfuzz/distance/_initialize.py
 ${PYSITELIB}/rapidfuzz/distance/_initialize.pyc
 ${PYSITELIB}/rapidfuzz/distance/_initialize.pyi
 ${PYSITELIB}/rapidfuzz/distance/_initialize.pyo
+${PYSITELIB}/rapidfuzz/distance/_initialize_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/distance/_initialize_py.py
 ${PYSITELIB}/rapidfuzz/distance/_initialize_py.pyc
 ${PYSITELIB}/rapidfuzz/distance/_initialize_py.pyo
+${PYSITELIB}/rapidfuzz/distance/metrics_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/distance/metrics_cpp.pyi
+${PYSITELIB}/rapidfuzz/distance/metrics_cpp_avx2.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.py
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyc
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyo
@@ -115,6 +120,8 @@ ${PYSITELIB}/rapidfuzz/fuzz.py
 ${PYSITELIB}/rapidfuzz/fuzz.pyc
 ${PYSITELIB}/rapidfuzz/fuzz.pyi
 ${PYSITELIB}/rapidfuzz/fuzz.pyo
+${PYSITELIB}/rapidfuzz/fuzz_cpp.cpython-${PYTHON_VERSION}.so
+${PYSITELIB}/rapidfuzz/fuzz_cpp_avx2.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/fuzz_py.py
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyc
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyo
@@ -125,6 +132,7 @@ ${PYSITELIB}/rapidfuzz/process.pyo
 ${PYSITELIB}/rapidfuzz/process_cpp.py
 ${PYSITELIB}/rapidfuzz/process_cpp.pyc
 ${PYSITELIB}/rapidfuzz/process_cpp.pyo
+${PYSITELIB}/rapidfuzz/process_cpp_impl.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/process_cpp_impl.pyi
 ${PYSITELIB}/rapidfuzz/process_py.py
 ${PYSITELIB}/rapidfuzz/process_py.pyc
@@ -135,6 +143,7 @@ ${PYSITELIB}/rapidfuzz/utils.py
 ${PYSITELIB}/rapidfuzz/utils.pyc
 ${PYSITELIB}/rapidfuzz/utils.pyi
 ${PYSITELIB}/rapidfuzz/utils.pyo
+${PYSITELIB}/rapidfuzz/utils_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/utils_py.py
 ${PYSITELIB}/rapidfuzz/utils_py.pyc
 ${PYSITELIB}/rapidfuzz/utils_py.pyo
