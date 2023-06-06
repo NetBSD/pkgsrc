@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3573 2023/06/06 08:01:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3574 2023/06/06 08:05:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4947,3 +4947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/enchant2 to 2.5.0 [wiz 2023-06-06]
 	Updated devel/py-cachecontrol to 0.13.0 [wiz 2023-06-06]
 	Updated math/imath to 3.1.9 [wiz 2023-06-06]
+	Updated security/libssh2 to 1.11.0 [wiz 2023-06-06]
