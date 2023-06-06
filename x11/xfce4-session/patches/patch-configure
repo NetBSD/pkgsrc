@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.8 2023/01/01 19:19:26 gutteridge Exp $
+$NetBSD: patch-configure,v 1.9 2023/06/06 01:14:53 gutteridge Exp $
 
 * Add NetBSD backend detection.
 
 * Allow Polkit to be disabled in the build while still being present in the
 underlying system.
 
---- configure.orig	2022-12-15 09:27:27.000000000 +0000
+--- configure.orig	2023-05-29 15:39:33.000000000 +0000
 +++ configure
-@@ -18012,7 +18012,7 @@ printf %s "checking for optional package
+@@ -18184,7 +18184,7 @@ printf %s "checking for optional package
  printf "%s\n" "disabled" >&6; }
    fi
  
@@ -16,7 +16,7 @@ underlying system.
    HAVE_POLKIT_TRUE=
    HAVE_POLKIT_FALSE='#'
  else
-@@ -18307,6 +18307,8 @@ if test x$with_backend = x; then
+@@ -18464,6 +18464,8 @@ if test x$with_backend = x; then
      with_backend=freebsd ;; #(
    *-*dragonfly*) :
      with_backend=freebsd ;; #(
@@ -24,8 +24,8 @@ underlying system.
 +    with_backend=netbsd ;; #(
    *-openbsd*) :
      with_backend=openbsd ;; #(
-   *) :
-@@ -18334,6 +18336,11 @@ if test x$with_backend = xopenbsd; then
+   *-solaris*) :
+@@ -18493,6 +18495,11 @@ if test x$with_backend = xopenbsd; then
  printf "%s\n" "#define BACKEND_TYPE_OPENBSD 1" >>confdefs.h
  
  fi
@@ -34,6 +34,6 @@ underlying system.
 +printf "%s\n" "#define BACKEND_TYPE_NETBSD 1" >>confdefs.h
 +
 +fi
+ if test x$with_backend = xsolaris; then
  
- ac_config_files="$ac_config_files Makefile doc/Makefile icons/Makefile icons/16x16/Makefile icons/24x24/Makefile icons/24x24-actions/Makefile icons/32x32/Makefile icons/48x48-actions/Makefile icons/48x48/Makefile icons/128x128/Makefile icons/scalable/Makefile libxfsm/Makefile po/Makefile.in settings/Makefile scripts/Makefile scripts/xinitrc.in xfce4-session/Makefile xfce4-session-logout/Makefile xfsm-shutdown-helper/Makefile"
- 
+ printf "%s\n" "#define BACKEND_TYPE_SOLARIS 1" >>confdefs.h
