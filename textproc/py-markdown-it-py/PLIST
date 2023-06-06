@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/20 10:52:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/06 08:21:18 wiz Exp $
 bin/markdown-it-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.markdown-it
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/markdown_it/__init__.py
 ${PYSITELIB}/markdown_it/__init__.pyc
 ${PYSITELIB}/markdown_it/_compat.py
@@ -103,6 +94,8 @@ ${PYSITELIB}/markdown_it/rules_core/smartquotes.py
 ${PYSITELIB}/markdown_it/rules_core/smartquotes.pyc
 ${PYSITELIB}/markdown_it/rules_core/state_core.py
 ${PYSITELIB}/markdown_it/rules_core/state_core.pyc
+${PYSITELIB}/markdown_it/rules_core/text_join.py
+${PYSITELIB}/markdown_it/rules_core/text_join.pyc
 ${PYSITELIB}/markdown_it/rules_inline/__init__.py
 ${PYSITELIB}/markdown_it/rules_inline/__init__.pyc
 ${PYSITELIB}/markdown_it/rules_inline/autolink.py
@@ -117,12 +110,16 @@ ${PYSITELIB}/markdown_it/rules_inline/entity.py
 ${PYSITELIB}/markdown_it/rules_inline/entity.pyc
 ${PYSITELIB}/markdown_it/rules_inline/escape.py
 ${PYSITELIB}/markdown_it/rules_inline/escape.pyc
+${PYSITELIB}/markdown_it/rules_inline/fragments_join.py
+${PYSITELIB}/markdown_it/rules_inline/fragments_join.pyc
 ${PYSITELIB}/markdown_it/rules_inline/html_inline.py
 ${PYSITELIB}/markdown_it/rules_inline/html_inline.pyc
 ${PYSITELIB}/markdown_it/rules_inline/image.py
 ${PYSITELIB}/markdown_it/rules_inline/image.pyc
 ${PYSITELIB}/markdown_it/rules_inline/link.py
 ${PYSITELIB}/markdown_it/rules_inline/link.pyc
+${PYSITELIB}/markdown_it/rules_inline/linkify.py
+${PYSITELIB}/markdown_it/rules_inline/linkify.pyc
 ${PYSITELIB}/markdown_it/rules_inline/newline.py
 ${PYSITELIB}/markdown_it/rules_inline/newline.pyc
 ${PYSITELIB}/markdown_it/rules_inline/state_inline.py
@@ -131,11 +128,18 @@ ${PYSITELIB}/markdown_it/rules_inline/strikethrough.py
 ${PYSITELIB}/markdown_it/rules_inline/strikethrough.pyc
 ${PYSITELIB}/markdown_it/rules_inline/text.py
 ${PYSITELIB}/markdown_it/rules_inline/text.pyc
-${PYSITELIB}/markdown_it/rules_inline/text_collapse.py
-${PYSITELIB}/markdown_it/rules_inline/text_collapse.pyc
 ${PYSITELIB}/markdown_it/token.py
 ${PYSITELIB}/markdown_it/token.pyc
 ${PYSITELIB}/markdown_it/tree.py
 ${PYSITELIB}/markdown_it/tree.pyc
 ${PYSITELIB}/markdown_it/utils.py
 ${PYSITELIB}/markdown_it/utils.pyc
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.markdown-it
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt

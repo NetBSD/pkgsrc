@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/03/05 07:27:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 08:21:18 wiz Exp $
 
-DISTNAME=	markdown-it-py-2.2.0
+DISTNAME=	markdown-it-py-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown-it-py/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-mdurl>=0.1:../../www/py-mdurl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
