@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3575 2023/06/06 08:09:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3576 2023/06/06 08:13:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4949,3 +4949,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/imath to 3.1.9 [wiz 2023-06-06]
 	Updated security/libssh2 to 1.11.0 [wiz 2023-06-06]
 	Updated devel/py-cattrs to 23.1.2 [wiz 2023-06-06]
+	Updated security/py-cryptography to 41.0.1 [wiz 2023-06-06]
