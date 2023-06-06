@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/02/13 07:59:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/06/06 10:23:19 bouyer Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -200,6 +200,7 @@ share/kicad/symbols/Sensor_Temperature.kicad_sym
 share/kicad/symbols/Sensor_Touch.kicad_sym
 share/kicad/symbols/Sensor_Voltage.kicad_sym
 share/kicad/symbols/Simulation_SPICE.kicad_sym
+share/kicad/symbols/Simulation_SPICE.sp
 share/kicad/symbols/Switch.kicad_sym
 share/kicad/symbols/Timer.kicad_sym
 share/kicad/symbols/Timer_PLL.kicad_sym
