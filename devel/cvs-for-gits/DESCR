@@ -1,0 +1,4 @@
+For most `cvs` subcommands, `cvs-for-gits` simply executes `cvs(1)`,
+passing along any command-line arguments.
+
+For `cvs diff`, output is colorized and paged just like `git diff`.
