@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/03 19:24:54 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/06/06 18:49:04 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -450,10 +450,6 @@ go119/misc/wasm/go_js_wasm_exec
 go119/misc/wasm/wasm_exec.html
 go119/misc/wasm/wasm_exec.js
 go119/misc/wasm/wasm_exec_node.js
-go119/pkg/include/asm_amd64.h
-go119/pkg/include/asm_ppc64x.h
-go119/pkg/include/funcdata.h
-go119/pkg/include/textflag.h
 go119/pkg/${GO_PLATFORM}/archive/tar.a
 go119/pkg/${GO_PLATFORM}/archive/zip.a
 go119/pkg/${GO_PLATFORM}/bufio.a
@@ -907,6 +903,10 @@ go119/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/secure/bidirule.a
 go119/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/transform.a
 go119/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/unicode/bidi.a
 go119/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/unicode/norm.a
+go119/pkg/include/asm_amd64.h
+go119/pkg/include/asm_ppc64x.h
+go119/pkg/include/funcdata.h
+go119/pkg/include/textflag.h
 go119/pkg/tool/${GO_PLATFORM}/addr2line
 go119/pkg/tool/${GO_PLATFORM}/api
 go119/pkg/tool/${GO_PLATFORM}/asm
@@ -2321,6 +2321,7 @@ go119/src/cmd/go/testdata/mod/example.com_downgrade_v2.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_downgrade_v2_v2.0.1.txt
 go119/src/cmd/go/testdata/mod/example.com_fuzzfail_v0.1.0.txt
 go119/src/cmd/go/testdata/mod/example.com_fuzzfail_v0.2.0.txt
+go119/src/cmd/go/testdata/mod/example.com_generics_v1.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_incompatiblewithsub_v1.0.0.txt
 go119/src/cmd/go/testdata/mod/example.com_incompatiblewithsub_v2.0.0+incompatible.txt
 go119/src/cmd/go/testdata/mod/example.com_invalidpath_v1_v1.0.0.txt
@@ -2495,6 +2496,7 @@ go119/src/cmd/go/testdata/script/build_cache_trimpath.txt
 go119/src/cmd/go/testdata/script/build_cd_gopath_different.txt
 go119/src/cmd/go/testdata/script/build_cgo_consistent_results.txt
 go119/src/cmd/go/testdata/script/build_concurrent_backend.txt
+go119/src/cmd/go/testdata/script/build_cwd_newline.txt
 go119/src/cmd/go/testdata/script/build_darwin_cc_arch.txt
 go119/src/cmd/go/testdata/script/build_dash_n_cgo.txt
 go119/src/cmd/go/testdata/script/build_dash_o_dev_null.txt
@@ -2586,6 +2588,7 @@ go119/src/cmd/go/testdata/script/fileline.txt
 go119/src/cmd/go/testdata/script/fmt_load_errors.txt
 go119/src/cmd/go/testdata/script/fsys_walk.txt
 go119/src/cmd/go/testdata/script/gccgo_link_c.txt
+go119/src/cmd/go/testdata/script/gccgo_link_ldflags.txt
 go119/src/cmd/go/testdata/script/gccgo_m.txt
 go119/src/cmd/go/testdata/script/gccgo_mangle.txt
 go119/src/cmd/go/testdata/script/gcflags_patterns.txt
@@ -2936,6 +2939,7 @@ go119/src/cmd/go/testdata/script/mod_skip_write.txt
 go119/src/cmd/go/testdata/script/mod_std_vendor.txt
 go119/src/cmd/go/testdata/script/mod_string_alias.txt
 go119/src/cmd/go/testdata/script/mod_sum_ambiguous.txt
+go119/src/cmd/go/testdata/script/mod_sum_issue56222.txt
 go119/src/cmd/go/testdata/script/mod_sum_lookup.txt
 go119/src/cmd/go/testdata/script/mod_sum_readonly.txt
 go119/src/cmd/go/testdata/script/mod_sum_replaced.txt
@@ -7668,7 +7672,6 @@ go119/src/runtime/export_linux_test.go
 go119/src/runtime/export_mmap_test.go
 go119/src/runtime/export_pipe2_test.go
 go119/src/runtime/export_pipe_test.go
-go119/src/runtime/export_solaris_test.go
 go119/src/runtime/export_test.go
 go119/src/runtime/export_unix_test.go
 go119/src/runtime/export_windows_test.go
@@ -7741,6 +7744,16 @@ go119/src/runtime/internal/syscall/asm_linux_mipsx.s
 go119/src/runtime/internal/syscall/asm_linux_ppc64x.s
 go119/src/runtime/internal/syscall/asm_linux_riscv64.s
 go119/src/runtime/internal/syscall/asm_linux_s390x.s
+go119/src/runtime/internal/syscall/defs_linux_386.go
+go119/src/runtime/internal/syscall/defs_linux_amd64.go
+go119/src/runtime/internal/syscall/defs_linux_arm.go
+go119/src/runtime/internal/syscall/defs_linux_arm64.go
+go119/src/runtime/internal/syscall/defs_linux_loong64.go
+go119/src/runtime/internal/syscall/defs_linux_mips64x.go
+go119/src/runtime/internal/syscall/defs_linux_mipsx.go
+go119/src/runtime/internal/syscall/defs_linux_ppc64x.go
+go119/src/runtime/internal/syscall/defs_linux_riscv64.go
+go119/src/runtime/internal/syscall/defs_linux_s390x.go
 go119/src/runtime/internal/syscall/syscall_linux.go
 go119/src/runtime/lfstack.go
 go119/src/runtime/lfstack_32bit.go
@@ -7854,8 +7867,6 @@ go119/src/runtime/msize.go
 go119/src/runtime/mspanset.go
 go119/src/runtime/mstats.go
 go119/src/runtime/mwbbuf.go
-go119/src/runtime/nbpipe_fcntl_libc_test.go
-go119/src/runtime/nbpipe_fcntl_unix_test.go
 go119/src/runtime/nbpipe_pipe.go
 go119/src/runtime/nbpipe_pipe2.go
 go119/src/runtime/nbpipe_pipe_test.go
@@ -8085,6 +8096,12 @@ go119/src/runtime/runtime_test.go
 go119/src/runtime/runtime_unix_test.go
 go119/src/runtime/rwmutex.go
 go119/src/runtime/rwmutex_test.go
+go119/src/runtime/security_aix.go
+go119/src/runtime/security_issetugid.go
+go119/src/runtime/security_linux.go
+go119/src/runtime/security_nonunix.go
+go119/src/runtime/security_test.go
+go119/src/runtime/security_unix.go
 go119/src/runtime/select.go
 go119/src/runtime/sema.go
 go119/src/runtime/sema_test.go
@@ -8304,6 +8321,7 @@ go119/src/runtime/testdata/testprognet/main.go
 go119/src/runtime/testdata/testprognet/net.go
 go119/src/runtime/testdata/testprognet/signal.go
 go119/src/runtime/testdata/testprognet/signalexec.go
+go119/src/runtime/testdata/testsuid/main.go
 go119/src/runtime/testdata/testwinlib/main.c
 go119/src/runtime/testdata/testwinlib/main.go
 go119/src/runtime/testdata/testwinlibsignal/dummy.go
