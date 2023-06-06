@@ -1,20 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2020/01/26 05:26:16 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/06 09:54:12 bouyer Exp $
 
-DISTNAME=	ngspice-31
-PKGNAME=	ng-spice-31
-#PKGREVISION=	1
-CATEGORIES=	cad
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
+.include "../../cad/ng-spice/Makefile.common"
 
-MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://ngspice.sourceforge.net/
+PKGNAME=	ng-spice-${VERSION}
 COMMENT=	Next generation circuit simulation program
+USE_TOOLS+=	makeinfo
 
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake makeinfo
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-readline=yes
 LIBS+=			${BUILDLINK_LDADD.getopt}
 
@@ -24,6 +15,7 @@ TEXINFO_REQD=	4.6
 .include "../../devel/libgetopt/buildlink3.mk"
 # uses rl_* interface
 .include "../../devel/readline/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
