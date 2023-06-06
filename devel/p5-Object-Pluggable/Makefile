@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:00 riastradh Exp $
 #
 
 DISTNAME=	Object-Pluggable-1.29
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Object-Pluggable
 COMMENT=	Base class for creating plugin-enabled objects
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Pod-Parser>=1.36}:../../textproc/p5-Pod-Parser
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Pod-Parser>=1.36}:../../textproc/p5-Pod-Parser
 
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 

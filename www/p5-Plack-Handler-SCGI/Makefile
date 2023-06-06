@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:46 riastradh Exp $
 
 DISTNAME=	Plack-Handler-SCGI-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Plack/Handler/SCGI/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Plack>=0.9901:../../www/p5-Plack
 DEPENDS+=	p5-SCGI-[0-9]*:../../www/p5-SCGI
 DEPENDS+=	p5-Try-Tiny>=0.04:../../devel/p5-Try-Tiny

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2023/05/08 09:33:27 wiz Exp $
+# $NetBSD: Makefile,v 1.266 2023/06/06 12:41:33 riastradh Exp $
 
 DISTNAME=	inkscape-1.2.2
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
 
 .if !exists(/usr/bin/iconv)
-BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
+TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 DEPENDS+=		adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/01/26 23:56:22 wen Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:59 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Types-Perl-0.101344
@@ -18,9 +18,9 @@ PERL5_PACKLIST=		auto/MooseX/Types/Perl/.packlist
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

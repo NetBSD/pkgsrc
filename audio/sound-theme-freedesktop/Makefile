@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:03:20 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:17 riastradh Exp $
 #
 
 DISTNAME=	sound-theme-freedesktop-0.8
@@ -15,7 +15,7 @@ COMMENT=	Set of audio files for FreeDesktop
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool msgfmt autoconf automake
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 pre-configure:
 	(cd ${WRKSRC} && autoreconf -i)

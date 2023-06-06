@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:34:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:48 riastradh Exp $
 
 DISTNAME=	Catalyst-View-Email-0.36
 PKGNAME=	p5-${DISTNAME}
@@ -20,9 +20,9 @@ DEPENDS+=	p5-Email-Sender>=0.100110:../../mail/p5-Email-Sender
 DEPENDS+=	p5-Moose>=0.93:../../devel/p5-Moose
 #DEPENDS+=	{perl>=5.12.0,p5-parent>=0.223}:../../devel/p5-parent
 
-BUILD_DEPENDS+=	p5-Catalyst-View-Mason-[0-9]*:../../www/p5-Catalyst-View-Mason
-BUILD_DEPENDS+=	p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Catalyst-View-Mason-[0-9]*:../../www/p5-Catalyst-View-Mason
+TOOL_DEPENDS+=	p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/View/Email/.packlist

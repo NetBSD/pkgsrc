@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:27:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:48 riastradh Exp $
 
 MODNAME=	propro
 PECL_VERSION=	1.0.2
@@ -9,7 +9,7 @@ HOMEPAGE=	https://pecl.php.net/package/propro
 COMMENT=	Reusable split-off of pecl_http's property proxy API
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
+TOOL_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
 
 PHP_VERSIONS_ACCEPTED=	56
 

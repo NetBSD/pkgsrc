@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:35 riastradh Exp $
 
 DISTNAME=		Data-ICal-DateTime-0.82
 PKGNAME=		p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=		p5-Data-ICal>=0.07:../../time/p5-Data-ICal
 DEPENDS+=		p5-DateTime-Format-ICal>=0.08:../../time/p5-DateTime-Format-ICal
 DEPENDS+=		p5-DateTime-Set>=0.25:../../time/p5-DateTime-Set
 
-BUILD_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
-BUILD_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
-BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+TOOL_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/Data/ICal/DateTime/.packlist
 

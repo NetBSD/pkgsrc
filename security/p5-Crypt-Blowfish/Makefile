@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/06/28 11:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/06 12:42:15 riastradh Exp $
 #
 
 DISTNAME=		Crypt-Blowfish-2.14
@@ -13,7 +13,7 @@ COMMENT=		Perl5 Blowfish implementation
 # LICENSE=		unclear
 
 # recommended for tests
-BUILD_DEPENDS+=		p5-Crypt-CBC>=1.25:../../security/p5-Crypt-CBC
+TOOL_DEPENDS+=		p5-Crypt-CBC>=1.25:../../security/p5-Crypt-CBC
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Crypt/Blowfish/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:45 riastradh Exp $
 
 DISTNAME=	POE-Component-Server-SimpleHTTP-2.28
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/POE/Component/Server/SimpleHTTP/.packlist
 
-BUILD_DEPENDS+=	p5-POE-Filter-HTTP-Parser>=1.06:../../www/p5-POE-Filter-HTTP-Parser
-BUILD_DEPENDS+=	p5-Test-POE-Client-TCP>=0.10:../../devel/p5-Test-POE-Client-TCP
+TOOL_DEPENDS+=	p5-POE-Filter-HTTP-Parser>=1.06:../../www/p5-POE-Filter-HTTP-Parser
+TOOL_DEPENDS+=	p5-Test-POE-Client-TCP>=0.10:../../devel/p5-Test-POE-Client-TCP
 DEPENDS+=	p5-POE>=1.0:../../devel/p5-POE
 DEPENDS+=	p5-HTTP-Date-[0-9]*:../../www/p5-HTTP-Date
 #DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable

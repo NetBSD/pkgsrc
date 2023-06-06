@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/06/05 12:49:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:31 riastradh Exp $
 
 PKGREVISION= 1
 .include "../../graphics/giflib/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=	GIF image format utility
 
 CONFLICTS+=	libungif-[0-9]*
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 HTMLDIR=		share/doc/giflib
 INSTALLATION_DIRS=	${HTMLDIR} ${HTMLDIR}/gifstandard \

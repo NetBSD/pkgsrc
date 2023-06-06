@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:42:30 riastradh Exp $
 #
 
 DISTNAME=	Text-Ngram-0.15
@@ -13,7 +13,7 @@ COMMENT=	Ngram analysis of text
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Unicode-CaseFold-[0-9]*:../../textproc/p5-Unicode-CaseFold
+TOOL_DEPENDS+=	p5-Unicode-CaseFold-[0-9]*:../../textproc/p5-Unicode-CaseFold
 
 PERL5_PACKLIST=	auto/Text/Ngram/.packlist
 

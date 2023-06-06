@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:34:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/06 12:41:34 riastradh Exp $
 
 DISTNAME=	GDGraph-1.54
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,8 @@ DEPENDS+=		p5-GD>=1.18:../../graphics/p5-GD
 DEPENDS+=		p5-GDTextUtil>=0.80:../../graphics/p5-GDTextUtil
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/GD/Graph/.packlist

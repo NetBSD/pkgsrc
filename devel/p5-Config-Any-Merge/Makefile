@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:32:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:44 riastradh Exp $
 
 DISTNAME=	Config-Any-Merge-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Config-Any>=0.15:../../devel/p5-Config-Any
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
-BUILD_DEPENDS+=	p5-Config-Tiny-[0-9]*:../../devel/p5-Config-Tiny
+TOOL_DEPENDS+=	p5-Config-Tiny-[0-9]*:../../devel/p5-Config-Tiny
 
 PERL5_PACKLIST=	auto/Config/Any/Merge/.packlist
 

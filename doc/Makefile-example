@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.27 2020/05/31 21:22:47 rillig Exp $
+# $NetBSD: Makefile-example,v 1.28 2023/06/06 12:41:17 riastradh Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION CATEGORIES MASTER_SITES
@@ -19,7 +19,7 @@ LICENSE=		hptools-license # Licenses should be added to the pkgsrc/licenses dire
 # Paragraph for any build or run dependencies -- not libraries,
 # those should be handled using buildlink3.mk files.
 # Not needed for gmake, just an example:
-# BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
+# TOOL_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
 # Set RESTRICTED to a very short explanation (typically "No permission to
 # redistribute for a fee.").  NO_*_ON_* may only be set to ${RESTRICTED}.

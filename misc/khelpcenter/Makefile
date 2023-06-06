@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/05/22 21:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:41:55 riastradh Exp $
 
 DISTNAME=	khelpcenter-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.21.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config perl:run

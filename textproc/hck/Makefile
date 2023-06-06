@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/12 10:23:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:24 riastradh Exp $
 
 DISTNAME=	hck-0.9.2
 CATEGORIES=	textproc
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/sstadick/hck/
 COMMENT=	Sharp cut(1) clone
 LICENSE=	unlicense OR mit
 
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 

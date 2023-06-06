@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/04/29 23:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:51 riastradh Exp $
 
 DISTNAME=	wstools-0.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

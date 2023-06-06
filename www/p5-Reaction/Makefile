@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Reaction-0.002005
 PKGNAME=	p5-Reaction-0.2.5
@@ -55,10 +55,10 @@ DEPENDS+=	p5-MooseX-Role-Parameterized>=0.24:../../devel/p5-MooseX-Role-Paramete
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 
 # For test target
-BUILD_DEPENDS+=	p5-Test-Class>=0.31:../../devel/p5-Test-Class
-BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst>=0.51:../../www/p5-Test-WWW-Mechanize-Catalyst
-BUILD_DEPENDS+=	p5-Test-Memory-Cycle>=1.04:../../devel/p5-Test-Memory-Cycle
-BUILD_DEPENDS+=	p5-SQL-Translator>=0.09004:../../databases/p5-SQL-Translator
+TOOL_DEPENDS+=	p5-Test-Class>=0.31:../../devel/p5-Test-Class
+TOOL_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst>=0.51:../../www/p5-Test-WWW-Mechanize-Catalyst
+TOOL_DEPENDS+=	p5-Test-Memory-Cycle>=1.04:../../devel/p5-Test-Memory-Cycle
+TOOL_DEPENDS+=	p5-SQL-Translator>=0.09004:../../databases/p5-SQL-Translator
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

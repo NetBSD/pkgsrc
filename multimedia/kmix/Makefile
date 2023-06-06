@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/05/22 21:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/06/06 12:42:00 riastradh Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
 PKGREVISION=	7
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/12 22:30:55 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:15 riastradh Exp $
 
 DISTNAME=	pam_u2f-1.2.0
 PKGNAME=	${DISTNAME:S/pam_/pam-/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://developers.yubico.com/pam-u2f/
 COMMENT=	PAM module for U2F over FIDO2 authentication
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

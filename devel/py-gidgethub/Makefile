@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/26 21:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:13 riastradh Exp $
 
 DISTNAME=	gidgethub-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.org/project/gidgethub/
 COMMENT=	Async GitHub API library
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.1:../../textproc/py-uritemplate
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0.0:../../textproc/py-JWT
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp

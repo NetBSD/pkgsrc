@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/30 11:18:55 nia Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:34 riastradh Exp $
 
 DISTNAME=	queequeg-0.91
 PKGREVISION=	4
@@ -11,7 +11,7 @@ COMMENT=	Tiny English grammar checker for non-native speakers
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cdb-[0-9]*:../../databases/py-cdb
-BUILD_DEPENDS+=	WordNet-[0-9]*:../../textproc/WordNet
+TOOL_DEPENDS+=	WordNet-[0-9]*:../../textproc/WordNet
 
 USE_LANGUAGES=	# none
 PY_PATCHPLIST=	yes

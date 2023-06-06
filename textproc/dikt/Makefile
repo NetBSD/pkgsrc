@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/04/23 14:26:32 adam Exp $
+# $NetBSD: Makefile,v 1.68 2023/06/06 12:42:24 riastradh Exp $
 
 DISTNAME=	dikt-2j
 PKGREVISION=	51
@@ -11,8 +11,8 @@ HOMEPAGE=	https://www.dikt.tv/
 COMMENT=	Dictionary protocol client for KDE
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-BUILD_DEPENDS+=	xz-[0-9]*:../../archivers/xz
+TOOL_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
+TOOL_DEPENDS+=	xz-[0-9]*:../../archivers/xz
 
 USE_TOOLS+=	tar
 TOOLS_BROKEN+=	perl

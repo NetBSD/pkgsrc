@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:40:45 riastradh Exp $
 
 DISTNAME=	Data-Munge-0.097
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Various utility functions
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 PERL5_PACKLIST=	auto/Data/Munge/.packlist
 

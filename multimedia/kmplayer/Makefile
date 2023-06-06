@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2023/05/22 21:00:39 wiz Exp $
+# $NetBSD: Makefile,v 1.160 2023/06/06 12:42:01 riastradh Exp $
 #
 
 DISTNAME=	kmplayer-0.12.0b
@@ -12,7 +12,7 @@ HOMEPAGE=	https://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-fdl-v1.2
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 DEPENDS+=	mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=	mencoder>=1.0rc3:../../multimedia/mencoder

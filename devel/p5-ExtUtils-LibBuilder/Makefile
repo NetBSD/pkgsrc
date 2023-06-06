@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	ExtUtils-LibBuilder-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/ExtUtils-LibBuilder
 COMMENT=	Perl5 module for building C libraries
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=		{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.23}:../../devel/p5-ExtUtils-CBuilder
+#TOOL_DEPENDS+=		{perl>=5.14.1,p5-ExtUtils-CBuilder>=0.23}:../../devel/p5-ExtUtils-CBuilder
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/ExtUtils/LibBuilder/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=	Mail-Mbox-MessageParser-1.5111
 PKGNAME=	p5-${DISTNAME}
@@ -16,9 +16,9 @@ DEPENDS+=	lzip>=0:../../archivers/lzip
 
 #DEPENDS+=	{perl>=5.10,p5-Storable-[0-9]*}:../../devel/p5-Storable
 
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
-BUILD_DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
-BUILD_DEPENDS+=	p5-File-Slurper>=0:../../devel/p5-File-Slurper
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
+TOOL_DEPENDS+=	p5-File-Slurper>=0:../../devel/p5-File-Slurper
 
 PERL5_PACKLIST=		auto/Mail/Mbox/MessageParser/.packlist
 

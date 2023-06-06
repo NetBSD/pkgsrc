@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/04/12 22:02:17 khorben Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:40:36 riastradh Exp $
 
 DISTNAME=	libSystem-0.4.3
 PKGNAME=	deforaos-libsystem-0.4.3
@@ -11,8 +11,8 @@ COMMENT=	DeforaOS core system library
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	libtool-[0-9]*:../../devel/libtool
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libtool-[0-9]*:../../devel/libtool
 
 LDFLAGS+=	${BUILDLINK_LDADD.dl}
 MAKE_FLAGS+=	PREFIX=${PREFIX}

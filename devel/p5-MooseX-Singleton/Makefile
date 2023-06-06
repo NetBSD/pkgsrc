@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:40:58 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Singleton-0.30
@@ -18,11 +18,11 @@ PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-Moose>=1.10:../../devel/p5-Moose
 
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=		p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

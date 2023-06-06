@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/03/02 01:13:38 abs Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:38 riastradh Exp $
 
 DISTNAME=	jna-5.13.0
 PKGREVISION=	1
@@ -70,7 +70,7 @@ PLIST_SRC+=	PLIST.java17-javadoc
 .  endif
 .endif
 
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 INSTALLATION_DIRS+= \
 		lib/java/jna share/doc/${PKGBASE}

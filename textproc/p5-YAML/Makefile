@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/06/28 11:36:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/06 12:42:32 riastradh Exp $
 
 DISTNAME=	YAML-1.30
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://metacpan.org/release/YAML
 COMMENT=	YAML implementation for Perl
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-YAML>=1.05:../../textproc/p5-Test-YAML
-BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Base>=0:../../devel/p5-Test-Base
+TOOL_DEPENDS+=	p5-Test-YAML>=1.05:../../textproc/p5-Test-YAML
+TOOL_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Base>=0:../../devel/p5-Test-Base
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/YAML/.packlist

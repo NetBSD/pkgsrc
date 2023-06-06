@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/10/01 08:10:38 wen Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:05 riastradh Exp $
 
 DISTNAME=	Test-Differences-0.69
 PKGNAME=	p5-${DISTNAME}00
@@ -11,9 +11,9 @@ COMMENT=	Test strings and data structures and show differences if not ok
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Text-Diff>=0.35:../../textproc/p5-Text-Diff
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
-BUILD_DEPENDS+=	p5-Test-Pod>=1.22:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod>=1.22:../../devel/p5-Test-Pod
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Differences/.packlist

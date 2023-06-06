@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:32:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:50 riastradh Exp $
 
 DISTNAME=		Git-Wrapper-0.048
 PKGNAME=		p5-${DISTNAME}
@@ -11,11 +11,11 @@ HOMEPAGE=		https://metacpan.org/release/Git-Wrapper
 COMMENT=		Wrap git(7) command-line interface
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Env-Path-[0-9]*:../../devel/p5-Env-Path
-#BUILD_DEPENDS+=	{perl>=5.001,p5-File-Path-[0-9]*}:../../devel/p5-File-Path
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+TOOL_DEPENDS+=		p5-Env-Path-[0-9]*:../../devel/p5-Env-Path
+#TOOL_DEPENDS+=	{perl>=5.001,p5-File-Path-[0-9]*}:../../devel/p5-File-Path
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 
 #DEPENDS+=		{perl>=5.6.1,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
 DEPENDS+=		p5-Devel-CheckBin-[0-9]*:../../devel/p5-Devel-CheckBin

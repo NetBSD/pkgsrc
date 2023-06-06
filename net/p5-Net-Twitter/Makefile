@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:42:06 riastradh Exp $
 
 DISTNAME=	Net-Twitter-4.01043
 PKGNAME=	p5-${DISTNAME}
@@ -33,7 +33,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-namespace-autoclean>=0.09:../../devel/p5-namespace-autoclean
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=	auto/Net/Twitter/.packlist
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/07/11 00:32:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:42:33 riastradh Exp $
 
 DISTNAME=	rst2pdf-0.99
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://rst2pdf.org/
 COMMENT=	Convert restructured text to PDF via reportlab
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2

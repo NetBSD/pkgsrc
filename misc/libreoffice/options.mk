@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2023/04/14 15:33:16 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2023/06/06 12:41:57 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -25,7 +25,7 @@ USE_JAVA=		yes
 USE_JAVA2=		9
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-ant-home=${PREFIX}
 
 DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18

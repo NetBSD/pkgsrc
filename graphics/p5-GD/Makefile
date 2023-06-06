@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/05/22 11:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/06/06 12:41:34 riastradh Exp $
 
 DISTNAME=	GD-2.76
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/GD
 COMMENT=	Perl5 interface to gd graphics library
 LICENSE=	gnu-gpl-v2 OR artistic-2.0
 
-BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
+TOOL_DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
 
 USE_TOOLS+=	pkg-config
 

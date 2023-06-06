@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/01 08:59:36 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:37 riastradh Exp $
 
 DISTNAME=	soapy-sdr-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/pothosware/SoapySDR/wiki/PythonSupport
 COMMENT=	Python bindings for SoapySDR
 LICENSE=	boost-license
 
-BUILD_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
+TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

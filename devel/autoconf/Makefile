@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/06/28 11:31:39 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2023/06/06 12:40:34 riastradh Exp $
 #
 # When updating this package, please update mk/gnu-config/config.guess and
 # mk/gnu-config/config.sub as well.
@@ -13,7 +13,7 @@ HOMEPAGE=		https://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.3
 
-BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 # XXX: needs m4>1.4.6; wants m4>1.4.13
 USE_TOOLS+=		gm4:run perl:run

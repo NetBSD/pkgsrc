@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	ExtUtils-MakeMaker-CPANfile-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Loads CPANfile & modifies parameters for WriteMakefile (Makefile.PL)
 LICENSE=	${PERL5_LICENSE}
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Module-CPANfile-[0-9]*:../../devel/p5-Module-CPANfile
+TOOL_DEPENDS+=	p5-Module-CPANfile-[0-9]*:../../devel/p5-Module-CPANfile
 
 PERL5_PACKLIST=	auto/ExtUtils/MakeMaker/CPANfile/.packlist
 

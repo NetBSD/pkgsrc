@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2023/06/06 08:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2023/06/06 12:40:33 riastradh Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS=		postgis-[0-9]*
 
@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	-with-xsldir=${PREFIX}/share/xsl/docbook
 # defined/non-empty incorrect test in postgis.
 MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 
-# These are really all BUILD_DEPENDS.
+# These are really all TOOL_DEPENDS.
 # \todo Report upstream; they are not mentioned in README.postgis.
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

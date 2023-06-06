@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/09/30 10:05:19 maya Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:22 riastradh Exp $
 #
 
 DISTNAME=		xm71020s
@@ -19,7 +19,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
+TOOL_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
 NOT_FOR_BULK_PLATFORM=	Linux-*-*
 

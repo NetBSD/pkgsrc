@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/04/23 14:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:20 riastradh Exp $
 
 PKGREVISION= 34
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/ktp-common-internals/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/02/27 23:56:08 khorben Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:24 riastradh Exp $
 #
 
 DISTNAME=	obexftp-0.24-Source
@@ -20,8 +20,8 @@ CMAKE_ARGS+=	-DENABLE_PYTHON:BOOL=OFF
 CMAKE_ARGS+=	-DENABLE_RUBY:BOOL=OFF
 CMAKE_ARGS+=	-DENABLE_TCL:BOOL=OFF
 
-BUILD_DEPENDS+=	asciidoc>=8.6.6:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto>=0.0.25:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc>=8.6.6:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto>=0.0.25:../../textproc/xmlto
 
 BUILD_TARGET=	all doc
 

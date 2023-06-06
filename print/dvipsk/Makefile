@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/04/10 23:47:43 markd Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:11 riastradh Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -8,7 +8,7 @@ CATEGORIES=	print
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
 COMMENT=	DVI-to-PostScript translator
 
-#BUILD_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
+#TOOL_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/dvipsk

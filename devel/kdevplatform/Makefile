@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/04/23 14:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.114 2023/06/06 12:40:39 riastradh Exp $
 #
 
 DISTNAME=	kdevplatform-1.7.0
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.kdevelop.org/
 COMMENT=	KDE development platform, used by KDevelop 4
 #LICENSE=	# TODO: (see mk/license.mk)
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl msgfmt bash:run
 USE_LANGUAGES=	c c++

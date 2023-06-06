@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/02/20 15:35:46 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:22 riastradh Exp $
 
 DISTNAME=	podman-4.4.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake gsed
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/go/version.mk"
 
-BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
 DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gvproxy-[0-9]*:../../net/gvproxy
 

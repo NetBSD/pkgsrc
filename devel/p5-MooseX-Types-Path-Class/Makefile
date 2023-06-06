@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:40:59 riastradh Exp $
 
 DISTNAME=	MooseX-Types-Path-Class-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -16,9 +16,9 @@ DEPENDS+=	p5-MooseX-Types>=0.04:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
 
 # For tests (but introduce a circular dependency for devel/p5-MooseX-Getopt)
-#BUILD_DEPENDS+=	p5-MooseX-Getopt>=0:../../devel/p5-MooseX-Getopt
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=		p5-Test-Needs>=0:../../devel/p5-Test-Needs
+#TOOL_DEPENDS+=	p5-MooseX-Getopt>=0:../../devel/p5-MooseX-Getopt
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Test-Needs>=0:../../devel/p5-Test-Needs
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/Path/Class/.packlist

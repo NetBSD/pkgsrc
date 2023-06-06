@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/04/23 14:26:21 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/06/06 12:41:33 riastradh Exp $
 
 PKGNAME=		koverartist-0.7.6
 DISTNAME=		38195-koverartist_0.7.6.orig
@@ -11,7 +11,7 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.kde-apps.org/content/show.php?content=38195
 COMMENT=		CD/DVD case designer
 
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 USE_TOOLS+=		msgfmt perl
 USE_LANGUAGES=		c c++

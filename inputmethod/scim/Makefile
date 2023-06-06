@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/29 21:14:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/06 12:41:40 riastradh Exp $
 #
 
 DISTNAME=		scim-1.4.17
@@ -23,7 +23,7 @@ USE_TOOLS+=		gmake	# make scim-setup.desktop
 USE_TOOLS+=		perl intltool
 USE_TOOLS+=		autopoint autoconf automake
 
-BUILD_DEPENDS+=		gettext>=0.19.4:../../devel/gettext
+TOOL_DEPENDS+=		gettext>=0.19.4:../../devel/gettext
 
 PKGCONFIG_OVERRIDE=	scim-gtkutils.pc.in
 PKGCONFIG_OVERRIDE+=	scim-x11utils.pc.in

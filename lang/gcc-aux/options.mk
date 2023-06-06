@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2023/06/06 12:41:42 riastradh Exp $
 
 # NLS is failing, might be linking with wrong iconv lib.
 # Disable option until further notice
@@ -63,7 +63,7 @@ LANGS+=	objc
 #########################
 
 .if !empty(PKG_OPTIONS:Mtestsuite) && empty(PKG_OPTIONS:Mbootstrap)
-BUILD_DEPENDS+=	dejagnu>=1.4:../../devel/dejagnu
+TOOL_DEPENDS+=	dejagnu>=1.4:../../devel/dejagnu
 APPLY_DIFFS+=	ada-testsuite
 APPLY_DIFFS+=	cxx-testsuite
 APPLY_DIFFS+=	gcc-testsuite

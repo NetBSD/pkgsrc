@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:35:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	libquic-0.0.3
 PKGREVISION=	7
@@ -11,7 +11,7 @@ COMMENT=	Multiplexed stream transport over UDP
 LICENSE=	modified-bsd
 
 .include "../../lang/go/version.mk"
-BUILD_DEPENDS+=		${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
 
 SUBST_CLASSES+=		path go
 SUBST_STAGE.link=	pre-configure

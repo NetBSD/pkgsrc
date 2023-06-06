@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:15 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:41:25 riastradh Exp $
 #
 
 DISTNAME=	fortunes-h2g2-0.1
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.netmeister.org/misc.html
 COMMENT=	Fortunes from Douglas Adams' "Hitchhiker's Guide to the Galaxy"
 
-BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
+TOOL_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
 STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}

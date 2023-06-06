@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2022/09/11 00:48:27 wen Exp $
+# $NetBSD: Makefile,v 1.56 2023/06/06 12:42:46 riastradh Exp $
 
 DISTNAME=	Plack-1.0050
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://metacpan.org/release/Plack
 COMMENT=	PSGI toolkit and servers
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-CGI-Compile-[0-9]*:../../www/p5-CGI-Compile
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-CGI-Compile-[0-9]*:../../www/p5-CGI-Compile
 
 DEPENDS+=	p5-libwww>=5.814:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Message>=5.814:../../www/p5-HTTP-Message

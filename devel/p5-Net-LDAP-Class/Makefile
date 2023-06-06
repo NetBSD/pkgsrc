@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:00 riastradh Exp $
 
 DISTNAME=	Net-LDAP-Class-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Net-LDAP-SID-[0-9]*:../../devel/p5-Net-LDAP-SID
 DEPENDS+=	p5-Rose-Object-[0-9]*:../../devel/p5-Rose-Object
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 
-BUILD_DEPENDS+=	p5-Net-LDAP-Server-Test>=0.09:../../devel/p5-Net-LDAP-Server-Test
+TOOL_DEPENDS+=	p5-Net-LDAP-Server-Test>=0.09:../../devel/p5-Net-LDAP-Server-Test
 
 PERL5_PACKLIST=	auto/Net/LDAP/Class/.packlist
 

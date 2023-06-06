@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/06/28 11:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	App-Cmd-0.334
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	p5-String-RewritePrefix-[0-9]*:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Sub-Exporter>=0.975:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
 
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=		auto/App/Cmd/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

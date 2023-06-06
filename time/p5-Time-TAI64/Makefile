@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:37 riastradh Exp $
 
 DISTNAME=	Time-TAI64-2.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Time-TAI64
 COMMENT=	Convert TAI64 strings into standard unix timestamps
 
-#BUILD_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 #DEPENDS+=		{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST=		auto/Time/TAI64/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/04/19 08:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/06/06 12:42:52 riastradh Exp $
 
 DISTNAME=		devilspie-0.22
 PKGREVISION=		43
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Window-matching utility to customize window behavior
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
+TOOL_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
 
 USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES

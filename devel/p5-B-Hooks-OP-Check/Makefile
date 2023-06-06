@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Hooks-OP-Check-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/B-Hooks-OP-Check
 COMMENT=	Perl 5 module to wrap OP check callbacks
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 #DEPENDS+=	{perl>=5.10.1,p5-parent>0}:../../devel/p5-parent
 
 USE_LANGUAGES=		c

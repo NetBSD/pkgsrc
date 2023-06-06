@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:01 riastradh Exp $
 #
 
 DISTNAME=	Package-Variant-1.003002
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Import-Into>=1.0:../../devel/p5-Import-Into
 DEPENDS+=	p5-Module-Runtime>=0.13:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-strictures>=1.0:../../devel/p5-strictures
 
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 PERL5_PACKLIST=	auto/Package/Variant/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-Compile-1.63
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-Log-Report-Optional-[0-9]*:../../devel/p5-Log-Report-Optional
 DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestruction
 DEPENDS+=	p5-Types-Serialiser>=0:../../devel/p5-Types-Serialiser
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
-BUILD_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
+TOOL_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
+TOOL_DEPENDS+=	p5-Test-Deep>=0.095:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 
 PERL5_PACKLIST=	auto/XML/Compile/.packlist
 

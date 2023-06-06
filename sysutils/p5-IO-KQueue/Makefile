@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:21 riastradh Exp $
 
 DISTNAME=	IO-KQueue-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/IO-KQueue
 COMMENT=	Perl interface to the BSD kqueue system call
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
+TOOL_DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
 DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
 
 .include "../../mk/bsd.prefs.mk"

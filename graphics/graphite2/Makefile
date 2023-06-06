@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/01/29 21:16:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:32 riastradh Exp $
 
 DISTNAME=	graphite2-1.3.14
 PKGREVISION=	1
@@ -31,7 +31,7 @@ BUILDLINK_DEPMETHOD.freetype2?=	build
 #TEST_TARGET=			test
 #PYTHON_FOR_BUILD_ONLY?=	tool
 #.include "../../lang/python/tool.mk"
-#BUILD_DEPENDS+=		${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools/
+#TOOL_DEPENDS+=		${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools/
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

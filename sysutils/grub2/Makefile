@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/02/01 04:22:08 khorben Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:19 riastradh Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -52,7 +52,7 @@ MAKE_FLAGS+=		BUILD_LDFLAGS=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 #
 GCC_REQD+=		4.4
 FLEX_REQD=		2.5.35
-BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+TOOL_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
 #
 # The configure script sets the variables `target_cpu' and `platform', which

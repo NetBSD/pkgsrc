@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/09/14 13:17:59 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:17 riastradh Exp $
 #
 
 GITHUB_PROJECT=	yubikey-personalization
@@ -12,7 +12,7 @@ HOMEPAGE=	https://developers.yubico.com/yubikey-personalization/
 COMMENT=	Yubico's YubiKey re-programming toolkit
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf

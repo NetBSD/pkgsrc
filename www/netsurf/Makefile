@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2023/04/19 08:11:49 adam Exp $
+# $NetBSD: Makefile,v 1.105 2023/06/06 12:42:40 riastradh Exp $
 
 DISTNAME=	netsurf-all-3.10
 PKGNAME=	${DISTNAME:S/-all//}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://www.netsurf-browser.org/
 COMMENT=	Web browser for RISC OS and UNIX-like platforms
 LICENSE=	gnu-gpl-v2 AND mit
 
-BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
-BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
-BUILD_DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+TOOL_DEPENDS+=	lemon>=1.0:../../devel/lemon
+TOOL_DEPENDS+=	re2c>=0.12:../../devel/re2c
+TOOL_DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config

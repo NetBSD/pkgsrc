@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:49 riastradh Exp $
 
 DISTNAME=	daphne-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.18:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.7:../../net/py-twisted
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

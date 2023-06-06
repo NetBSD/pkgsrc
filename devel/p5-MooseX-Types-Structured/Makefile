@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:40:59 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Types-Structured-0.36
@@ -18,13 +18,13 @@ DEPENDS+=	p5-MooseX-Types>=0.22:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Sub-Exporter>=0.982:../../devel/p5-Sub-Exporter
 
 # For test target
-BUILD_DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
-BUILD_DEPENDS+=		p5-MooseX-Types-DateTime-[0-9]*:../../time/p5-MooseX-Types-DateTime
-BUILD_DEPENDS+=		p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
-BUILD_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-#BUILD_DEPENDS+=	{perl>=5.11.1,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
+TOOL_DEPENDS+=		p5-MooseX-Types-DateTime-[0-9]*:../../time/p5-MooseX-Types-DateTime
+TOOL_DEPENDS+=		p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+#TOOL_DEPENDS+=	{perl>=5.11.1,p5-Test-Simple>=0.94}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install::Bundled

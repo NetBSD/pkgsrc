@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.43 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: modules.mk,v 1.44 2023/06/06 12:41:46 riastradh Exp $
 #
 #
 # Package-settable variables:
@@ -118,7 +118,7 @@ RUBY_SETUP?=		setup.rb
 RUBY_SETUP_SUBDIRS?=	.
 
 .  if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
+TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
 .  endif
 
 .  if !target(do-configure)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/19 08:10:30 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:41:37 riastradh Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
@@ -26,7 +26,7 @@ MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		https://www.fcitx-im.org/
 COMMENT=		Free Chinese Input Toy of X
 
-BUILD_DEPENDS+=		extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=		extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_LANGUAGES+=		c c++
 

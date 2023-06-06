@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/05/22 21:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:38 riastradh Exp $
 
 DISTNAME=	fcitx5-chinese-addons-5.0.4
 PKGREVISION=	16
@@ -22,7 +22,7 @@ SITES.${f}=	https://download.fcitx-im.org/data/
 .endfor
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:41:06 riastradh Exp $
 
 DISTNAME=		Test-Kwalitee-1.28
 PKGNAME=		p5-${DISTNAME}
@@ -17,11 +17,11 @@ DEPENDS+=		p5-CPAN-Meta-Check>=0:../../devel/p5-CPAN-Meta-Check
 DEPENDS+=		p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 # for make test
-BUILD_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-BUILD_DEPENDS+=		p5-File-Find-Object-[0-9]*:../../devel/p5-File-Find-Object
-BUILD_DEPENDS+=		p5-Class-XSAccessor-[0-9]*:../../devel/p5-Class-XSAccessor
-BUILD_DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+TOOL_DEPENDS+=		p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+TOOL_DEPENDS+=		p5-File-Find-Object-[0-9]*:../../devel/p5-File-Find-Object
+TOOL_DEPENDS+=		p5-Class-XSAccessor-[0-9]*:../../devel/p5-Class-XSAccessor
+TOOL_DEPENDS+=		p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Kwalitee/.packlist

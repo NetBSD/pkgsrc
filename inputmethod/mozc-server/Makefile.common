@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2022/04/24 22:19:15 tnn Exp $
+# $NetBSD: Makefile.common,v 1.37 2023/06/06 12:41:40 riastradh Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -30,9 +30,9 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp>=0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6:../../devel/gyp
-BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gyp>=0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6:../../devel/gyp
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: linux-dtb.mk,v 1.3 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: linux-dtb.mk,v 1.4 2023/06/06 12:42:18 riastradh Exp $
 
 LK_VERSION=	4.11.3
 PKGNAME=	dtb-${DTB_ARCH}-${DTB_DEVICE}-${LK_VERSION}
@@ -41,4 +41,4 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/dtb/${DTB_ARCH}
 .endfor
 
-BUILD_DEPENDS+=	dtc>=1.4.2:../../sysutils/dtc
+TOOL_DEPENDS+=	dtc>=1.4.2:../../sysutils/dtc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/10/25 07:58:13 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:41:15 riastradh Exp $
 
 DISTNAME=	pytest-mock-3.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-mock
 COMMENT=	Thin-wrapper around the mock package for easier use with py.test
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-test>=5.0:../../devel/py-test
 
 USE_LANGUAGES=	# none

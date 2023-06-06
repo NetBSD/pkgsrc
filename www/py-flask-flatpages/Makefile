@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/05/22 16:06:45 kleink Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:50 riastradh Exp $
 
 DISTNAME=	Flask-FlatPages-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-yaml>5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

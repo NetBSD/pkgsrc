@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/06/06 10:20:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.79 2023/06/06 12:40:19 riastradh Exp $
 #
 
 V=		7.0.5
@@ -15,7 +15,7 @@ HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Schematic and PCB CAD software (stable branch)
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
+TOOL_DEPENDS+=	swig4-[0-9]*:../../devel/swig4
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes

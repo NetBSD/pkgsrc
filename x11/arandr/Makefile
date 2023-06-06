@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/02/13 17:17:12 tsutsui Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:52 riastradh Exp $
 
 DISTNAME=	arandr-0.1.11
 CATEGORIES=	x11
@@ -9,7 +9,7 @@ HOMEPAGE=	https://christian.amsuess.com/tools/arandr/
 COMMENT=	Designed to provide a simple visual front end for XRandR
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../mk/bsd.prefs.mk"

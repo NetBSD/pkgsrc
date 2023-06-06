@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/30 18:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:42:49 riastradh Exp $
 
 DISTNAME=	PasteDeploy-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/Pylons/pastedeploy/
 COMMENT=	Load, configure, and compose WSGI applications and servers
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

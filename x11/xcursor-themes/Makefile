@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/02/23 17:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	xcursor-themes-1.0.7
 CATEGORIES=	x11 graphics
@@ -9,7 +9,7 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular X.org xcursor themes
 
-BUILD_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
+TOOL_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c

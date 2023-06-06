@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:26 riastradh Exp $
 
 DISTNAME=	Kwalify-1.23
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Kwalify/.packlist
 
 # For test really
-BUILD_DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
+TOOL_DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

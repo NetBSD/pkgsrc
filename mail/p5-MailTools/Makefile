@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/06/28 11:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=	MailTools-2.21
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/MailTools
 COMMENT=	Perl5 modules related to mail applications
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Net>=1.09:../../net/p5-Net
+TOOL_DEPENDS+=	p5-Net>=1.09:../../net/p5-Net
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 PERL5_PACKLIST=	auto/MailTools/.packlist

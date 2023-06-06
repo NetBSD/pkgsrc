@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	AtExit-2.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Provides an ANSI C style atexit() function to Perl programs
 LICENSE=	artistic
 
 # for make test
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=		auto/AtExit/.packlist
 

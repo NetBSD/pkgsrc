@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/05/22 20:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	kservice-${KF5VER}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	bison flex msgmerge
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/04/19 08:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.54 2023/06/06 12:42:02 riastradh Exp $
 
 DISTNAME=	minidlna-1.3.0
 PKGREVISION=	6
@@ -25,7 +25,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/minidlnad.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"

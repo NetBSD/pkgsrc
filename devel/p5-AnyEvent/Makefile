@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	AnyEvent-7.17
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,8 @@ DEPENDS+=	p5-Guard>=1.020:../../devel/p5-Guard
 DEPENDS+=	p5-Async-Interrupt>=1:../../devel/p5-Async-Interrupt
 
 # setup for make test (expecting PASS with several skipping items)
-#BUILD_DEPENDS+=	p5-AnyEvent-AIO-[0-9]*:../../devel/p5-AnyEvent-AIO
-BUILD_DEPENDS+=		p5-IO-Async-[0-9]*:../../devel/p5-IO-Async
+#TOOL_DEPENDS+=	p5-AnyEvent-AIO-[0-9]*:../../devel/p5-AnyEvent-AIO
+TOOL_DEPENDS+=		p5-IO-Async-[0-9]*:../../devel/p5-IO-Async
 
 TEST_ENV+=	PERL_ANYEVENT_LOOP_TESTS=true
 TEST_ENV+=	PERL_ANYEVENT_NET_TESTS=true

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/06/28 11:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	File-ChangeNotify-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -11,17 +11,17 @@ HOMEPAGE=	https://metacpan.org/release/File-ChangeNotify
 COMMENT=	Watch for changes to files, cross-platform style
 LICENSE=	artistic-2.0
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
 DEPENDS+=		p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
 DEPENDS+=		p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=		p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 
 # for make test
-BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+TOOL_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
 PERL5_PACKLIST=		auto/File/ChangeNotify/.packlist
 

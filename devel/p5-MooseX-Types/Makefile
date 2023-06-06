@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/06/28 11:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/06 12:40:58 riastradh Exp $
 
 DISTNAME=	MooseX-Types-0.50
 PKGNAME=	p5-${DISTNAME}
@@ -19,12 +19,12 @@ DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 DEPENDS+=	p5-namespace-clean>=0.19:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Sub-Exporter-ForMethods>=0.100052:../../devel/p5-Sub-Exporter-ForMethods
 
-BUILD_DEPENDS+=		p5-Module-Build-Tiny>=0.035:../../devel/p5-Module-Build-Tiny
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=		p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=		p5-Module-Build-Tiny>=0.035:../../devel/p5-Module-Build-Tiny
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/.packlist

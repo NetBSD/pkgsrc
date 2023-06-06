@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/05/06 19:08:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:23 riastradh Exp $
 
 DISTNAME=	spice-gtk-0.41
 PKGREVISION=	4
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes

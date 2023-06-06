@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/22 11:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:36 riastradh Exp $
 
 DISTNAME=	Pillow-6.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
 DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 USE_TOOLS+=	pkg-config

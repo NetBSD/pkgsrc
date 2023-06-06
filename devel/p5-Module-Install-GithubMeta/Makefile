@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:32:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:53 riastradh Exp $
 
 DISTNAME=	Module-Install-GithubMeta-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Module::Install extension to include GitHub meta info in META.yml
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
-BUILD_DEPENDS+=	p5-Module-Install-[0-9]*:../../devel/p5-Module-Install
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Module-Install-[0-9]*:../../devel/p5-Module-Install
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Module/Install/GithubMeta/.packlist

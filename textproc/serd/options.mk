@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/12/14 17:53:39 nia Exp $
+# $NetBSD: options.mk,v 1.3 2023/06/06 12:42:34 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.serd
 PKG_SUPPORTED_OPTIONS=	debug doc tests valgrind
@@ -13,7 +13,7 @@ WAF_ARGS+=		--debug
 
 .if !empty(PKG_OPTIONS:Mdoc)
 WAF_ARGS+=		--docs
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 PLIST.doc=		yes
 .endif
 
@@ -23,5 +23,5 @@ WAF_ARGS+=		--test
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
 WAF_ARGS+=		--grind
-BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
+TOOL_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 .endif

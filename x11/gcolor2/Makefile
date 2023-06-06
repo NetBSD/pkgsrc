@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/01/29 21:18:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:53 riastradh Exp $
 
 DISTNAME=	gcolor2-0.4
 PKGREVISION=	20
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl pkg-config
 
-BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
+TOOL_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 SUBST_CLASSES+=		df
 SUBST_STAGE.df=		post-configure

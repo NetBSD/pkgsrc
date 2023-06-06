@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:45 riastradh Exp $
 
 DISTNAME=	Context-Preserve-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Context-Preserve
 COMMENT=	Perl 5 module to run code after a subroutine call
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Context/Preserve/.packlist

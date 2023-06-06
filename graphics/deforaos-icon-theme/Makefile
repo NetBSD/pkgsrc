@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/03 08:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:31 riastradh Exp $
 #
 
 DISTNAME=	DeforaOS-Artwork-0.1.3
@@ -11,8 +11,8 @@ MAINTAINER=	khorben@defora.org
 COMMENT=	Artwork for the DeforaOS desktop
 LICENSE=	cc-by-sa-v3.0
 
-BUILD_DEPENDS+=	awesome-ttf-[0-9]*:../../fonts/awesome-ttf
-BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=	awesome-ttf-[0-9]*:../../fonts/awesome-ttf
+TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}

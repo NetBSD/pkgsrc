@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/05/22 21:00:46 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2023/06/06 12:42:38 riastradh Exp $
 
 DISTNAME=	rsibreak-0.12.13
 PKGREVISION=	21
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

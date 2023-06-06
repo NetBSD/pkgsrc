@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/11/03 19:03:59 rillig Exp $
+# $NetBSD: options.mk,v 1.8 2023/06/06 12:41:42 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc5-aux
 PKG_SUPPORTED_OPTIONS=	fortran objc testsuite static bootstrap allstages always-libgcc
@@ -65,7 +65,7 @@ LANGS+=	objc
 #########################
 
 .if !empty(PKG_OPTIONS:Mtestsuite) && empty(PKG_OPTIONS:Mbootstrap)
-BUILD_DEPENDS+=	dejagnu>=1.4:../../devel/dejagnu
+TOOL_DEPENDS+=	dejagnu>=1.4:../../devel/dejagnu
 APPLY_DIFFS+=	ada-testsuite
 APPLY_DIFFS+=	cxx-testsuite
 APPLY_DIFFS+=	gcc-testsuite

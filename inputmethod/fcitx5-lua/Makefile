@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/03/29 08:45:48 nia Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:41:38 riastradh Exp $
 
 DISTNAME=	fcitx5-lua-5.0.3
 CATEGORIES=	inputmethod
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-lua
 COMMENT=	Lua support for fcitx5
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes

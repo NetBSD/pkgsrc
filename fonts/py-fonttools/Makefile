@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/05/16 15:45:08 adam Exp $
+# $NetBSD: Makefile,v 1.88 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	fonttools-4.39.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/fonttools/fonttools
 COMMENT=	Library for manipulating fonts
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # lxml
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.0:../../textproc/py-lxml

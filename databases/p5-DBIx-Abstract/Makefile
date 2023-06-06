@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:29 riastradh Exp $
 #
 
 DISTNAME=	DBIx-Abstract-1.04
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Check-ISA-[0-9]*:../../devel/p5-Check-ISA
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
-BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 PERL5_PACKLIST=		auto/DBIx/Abstract/.packlist
 

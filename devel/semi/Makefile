@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/05/14 22:25:35 dholland Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:41:16 riastradh Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -17,7 +17,7 @@ HOMEPAGE=	http://git.chise.org/elisp/semi/
 COMMENT=	Emacs lisp library to provide MIME feature
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
+TOOL_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/semi \
 			${EMACS_INFOPREFIX:C|^${PREFIX}/||}

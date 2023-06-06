@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:08 riastradh Exp $
 
 DISTNAME=	TryCatch-1.003002
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,8 @@ DEPENDS+=	p5-Scope-Upper>=0.06:../../devel/p5-Scope-Upper
 DEPENDS+=	p5-Sub-Exporter>=0.979:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Variable-Magic>=0.28:../../devel/p5-Variable-Magic
 
-BUILD_DEPENDS+=		p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/TryCatch/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

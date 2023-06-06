@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:55 riastradh Exp $
 
 DISTNAME=	Moos-0.30
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Class-XSAccessor>=1.07:../../devel/p5-Class-XSAccessor
 DEPENDS+=	p5-Role-Tiny>=1.002.000:../../devel/p5-Role-Tiny
 
-BUILD_DEPENDS+=	p5-namespace-autoclean>=0:../../devel/p5-namespace-autoclean
+TOOL_DEPENDS+=	p5-namespace-autoclean>=0:../../devel/p5-namespace-autoclean
 
 REPLACE_PERL=	bin/remoos
 

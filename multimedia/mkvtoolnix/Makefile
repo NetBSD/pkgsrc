@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2023/06/06 07:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.219 2023/06/06 12:42:02 riastradh Exp $
 
 DISTNAME=	mkvtoolnix-77.0
 CATEGORIES=	multimedia
@@ -10,8 +10,8 @@ HOMEPAGE=	https://mkvtoolnix.download/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+TOOL_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 # 'The following features of the C++17 standards are not supported by c++:
 #  * file system library (C++17)

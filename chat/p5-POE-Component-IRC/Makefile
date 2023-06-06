@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:40:22 riastradh Exp $
 
 DISTNAME=	POE-Component-IRC-6.90
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-POE-Filter-IRCD>=2.42:../../chat/p5-POE-Filter-IRCD
 DEPENDS+=	p5-Test-Differences>=0.61:../../devel/p5-Test-Differences
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+TOOL_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_PACKLIST=		auto/POE/Component/IRC/.packlist
 

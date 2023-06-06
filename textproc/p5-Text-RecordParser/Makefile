@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:30 riastradh Exp $
 #
 
 DISTNAME=	Text-RecordParser-1.6.5
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Pod-Readme>=0:../../textproc/p5-Pod-Readme
 DEPENDS+=	p5-Pod-Markdown>=0:../../textproc/p5-Pod-Markdown
 DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
 
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 # Recommended dependencies
 DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz

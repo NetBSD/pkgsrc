@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/10 17:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:58 riastradh Exp $
 
 DISTNAME=	asciinema-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://asciinema.org/
 COMMENT=	Terminal session recorder
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
