@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.18 2022/01/28 14:22:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/06/06 10:41:43 adam Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
-DISTNAME=	pygobject-3.42.0
+DISTNAME=	pygobject-3.44.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,11 +11,11 @@ MAINTAINER?=	prlw1@cam.ac.uk
 HOMEPAGE=	https://pygobject.readthedocs.io/
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c99
-USE_TOOLS+=		pkg-config
+USE_LANGUAGES=	c c99
+USE_TOOLS+=	pkg-config
 
-DISTINFO_FILE=		../../devel/py-gobject3/distinfo
-#PATCHDIR=		../../devel/py-gobject3/patches
+DISTINFO_FILE=	../../devel/py-gobject3/distinfo
+#PATCHDIR=	../../devel/py-gobject3/patches
 
-CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
-CONFLICTS+=		${PYPKGPREFIX}-gobject<2.28.6nb4
+CONFLICTS+=	${PYPKGPREFIX}-gtk2<2.8.4
+CONFLICTS+=	${PYPKGPREFIX}-gobject<2.28.6nb4
