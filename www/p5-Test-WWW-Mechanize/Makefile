@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/04/29 23:32:31 wen Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:42:48 riastradh Exp $
 
 DISTNAME=	Test-WWW-Mechanize-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-WWW-Mechanize>=1.68:../../www/p5-WWW-Mechanize
 
 # XXX for test
-#BUILD_DEPENDS+=	p5-HTML-Lint>=2.20:../../www/p5-HTML-Lint
+#TOOL_DEPENDS+=	p5-HTML-Lint>=2.20:../../www/p5-HTML-Lint
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

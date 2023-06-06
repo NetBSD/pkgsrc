@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:01 riastradh Exp $
 #
 
 DISTNAME=	PPIx-Utilities-1.001000
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-PPI-XS-[0-9]*:../../devel/p5-PPI-XS
 DEPENDS+=	p5-Readonly-XS-[0-9]*:../../devel/p5-Readonly-XS
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/PPIx/Utilities/.packlist

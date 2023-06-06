@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/05/22 21:00:04 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2023/06/06 12:42:01 riastradh Exp $
 
 DISTNAME=	libkcddb-${KAPPSVER}
 PKGREVISION=	7
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

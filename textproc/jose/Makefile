@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/30 19:38:06 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:25 riastradh Exp $
 
 DISTNAME=	jose-11
 CATEGORIES=	textproc
@@ -12,8 +12,8 @@ LICENSE=	apache-2.0
 
 USE_TOOLS+=	pkg-config cmake
 
-BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 post-install:
 	${RM} -rf ${DESTDIR}/usr/pkg/share/licenses/jose

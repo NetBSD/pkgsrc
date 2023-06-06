@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/06/03 12:42:24 rjs Exp $
+# $NetBSD: Makefile,v 1.97 2023/06/06 12:41:46 riastradh Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-2.3.5
@@ -44,10 +44,10 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Use "clisp -ansi -on-error abort" to make the build more reproducible,
 # per Christophe Rhodes:
 SBCL_BOOT_SYSTEM=	clisp -norc -ansi -on-error abort
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+TOOL_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 UNLIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == abcl
-BUILD_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
+TOOL_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
 .endif
 
 SUBST_CLASSES+=			fix-paths

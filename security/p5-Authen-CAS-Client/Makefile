@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:35:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:14 riastradh Exp $
 #
 
 DISTNAME=	Authen-CAS-Client-0.08
@@ -16,7 +16,7 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Authen/CAS/Client/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
-BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
+TOOL_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww

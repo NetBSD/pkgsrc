@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/10 00:57:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:53 riastradh Exp $
 
 DISTNAME=	lmfit-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-asteval>=0.9.22:../../math/py-asteval
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.4:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-uncertainties>=3.0.1:../../math/py-uncertainties
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none

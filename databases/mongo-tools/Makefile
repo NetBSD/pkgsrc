@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/08/11 07:23:18 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:27 riastradh Exp $
 
 DISTNAME=	mongo-tools-4.2.15
 CATEGORIES=	databases
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mongodb/mongo-tools
 COMMENT=	MongoDB CLI tools
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${GO_PACKAGE_DEP}
+TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config

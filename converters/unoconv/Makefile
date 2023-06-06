@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/30 11:18:08 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:40:25 riastradh Exp $
 
 DISTNAME=	unoconv-0.7
 PKGREVISION=	5
@@ -14,7 +14,7 @@ USE_TOOLS+=	gmake
 
 REPLACE_PYTHON+=	unoconv
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 DEPENDS+=	libreoffice>=5.3.4.2nb1:../../misc/libreoffice
 
 pre-build:

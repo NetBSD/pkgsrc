@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/23 14:26:25 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:41:40 riastradh Exp $
 
 DISTNAME=	libime-1.0.4
 CATEGORIES=	inputmethod
@@ -25,7 +25,7 @@ DISTFILES+=	${f}
 SITES.${f}=	https://download.fcitx-im.org/data/
 .endfor
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

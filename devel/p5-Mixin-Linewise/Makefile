@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:40:52 riastradh Exp $
 #
 
 DISTNAME=	Mixin-Linewise-0.110
@@ -16,7 +16,7 @@ DEPENDS+=	p5-PerlIO-utf8_strict-[0-9]*:../../devel/p5-PerlIO-utf8_strict
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Sub-Exporter>=0.900:../../devel/p5-Sub-Exporter
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Mixin/Linewise/.packlist

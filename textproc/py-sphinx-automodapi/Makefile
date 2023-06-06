@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/05 18:16:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:33 riastradh Exp $
 
 DISTNAME=	sphinx-automodapi-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Sphinx extension for auto-generating API documentation for modules
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0:../../textproc/py-sphinx
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none

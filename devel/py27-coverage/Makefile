@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/30 18:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:15 riastradh Exp $
 
 DISTNAME=	coverage-5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://coverage.readthedocs.io/
 COMMENT=	Python module that measures code coverage for Python
 LICENSE=	modified-bsd
 
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
 #TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis4

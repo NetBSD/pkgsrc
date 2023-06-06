@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/09/02 13:20:10 adam Exp $
+# $NetBSD: options.mk,v 1.11 2023/06/06 12:42:01 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libkate
 PKG_SUPPORTED_OPTIONS=	debug doc oggz python valgrind vorbis
@@ -34,9 +34,9 @@ CONFIGURE_ENV+=		PYTHON=":"
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
-BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
+TOOL_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-BUILD_DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
+TOOL_DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 .endif

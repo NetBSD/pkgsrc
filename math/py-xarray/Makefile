@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/02/10 14:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:53 riastradh Exp $
 
 DISTNAME=	xarray-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pydata/xarray
 COMMENT=	N-D labeled arrays and datasets in Python
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1:../../math/py-pandas

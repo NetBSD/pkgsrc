@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	Algorithm-CheckDigits-v1.3.5
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Algorithm-CheckDigits
 COMMENT=	Perl extension to generate and test check digits
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Probe-Perl-[0-9]*:../../devel/p5-Probe-Perl
+TOOL_DEPENDS+=	p5-Probe-Perl-[0-9]*:../../devel/p5-Probe-Perl
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Algorithm/CheckDigits/.packlist

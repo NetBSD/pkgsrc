@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:30:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:40:15 riastradh Exp $
 
 DISTNAME=	Archive-Any-Lite-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Module-CPANfile>=0:../../devel/p5-Module-CPANfile
 DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0:../../devel/p5-ExtUtils-MakeMaker-CPANfile
 # for make test
-BUILD_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-BUILD_DEPENDS+=	p5-Test-UseAllModules-[0-9]*:../../devel/p5-Test-UseAllModules
+TOOL_DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+TOOL_DEPENDS+=	p5-Test-UseAllModules-[0-9]*:../../devel/p5-Test-UseAllModules
 
 PERL5_PACKLIST=	auto/Archive/Any/Lite/.packlist
 

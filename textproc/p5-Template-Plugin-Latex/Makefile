@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Template-Plugin-Latex-3.12
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-LaTeX-Driver>=0.07:../../print/p5-LaTeX-Driver
 DEPENDS+=	p5-LaTeX-Encode>=0.02:../../print/p5-LaTeX-Encode
 DEPENDS+=	p5-LaTeX-Table-[0-9]*:../../print/p5-LaTeX-Table
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Template/Plugin/Latex/.packlist
 

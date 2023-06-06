@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/22 21:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:10 riastradh Exp $
 
 DISTNAME=	plasma-wayland-protocols-1.10.0
 PKGREVISION=	2
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	Plasma Specific Protocols for Wayland
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

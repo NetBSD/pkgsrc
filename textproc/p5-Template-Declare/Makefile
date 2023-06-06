@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Template-Declare-0.47
 PKGNAME=	p5-${DISTNAME}
@@ -20,8 +20,8 @@ DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=	p5-String-BufferStack>=1.1:../../textproc/p5-String-BufferStack
 
-BUILD_DEPENDS+=	p5-HTML-Lint-[0-9]*:../../www/p5-HTML-Lint
-BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-HTML-Lint-[0-9]*:../../www/p5-HTML-Lint
+TOOL_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

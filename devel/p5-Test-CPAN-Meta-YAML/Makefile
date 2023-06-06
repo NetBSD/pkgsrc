@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:05 riastradh Exp $
 #
 
 DISTNAME=	Test-CPAN-Meta-YAML-0.25
@@ -12,8 +12,8 @@ HOMEPAGE=	https://metacpan.org/release/Test-CPAN-Meta-YAML
 COMMENT=	Perl 5 module to validate the META.yml file in a distribution
 LICENSE=	artistic-2.0
 
-BUILD_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=0.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=0.08:../../devel/p5-Test-Pod-Coverage
 
 DEPENDS+=	p5-Test-YAML-Valid>=0.03:../../devel/p5-Test-YAML-Valid
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML

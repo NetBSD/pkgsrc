@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/08/31 19:41:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:32 riastradh Exp $
 
 DISTNAME=	bracex-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/facelessuser/bracex
 COMMENT=	Bash style brace expander
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 

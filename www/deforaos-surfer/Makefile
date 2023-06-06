@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/04/19 08:11:46 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/06 12:42:39 riastradh Exp $
 
 DISTNAME=	Surfer-0.3.1
 PKGNAME=	deforaos-surfer-0.3.1
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 

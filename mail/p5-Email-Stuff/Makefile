@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:34:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:41:48 riastradh Exp $
 
 DISTNAME=	Email-Stuff-2.105
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Email-Simple>=1.998:../../mail/p5-Email-Simple
 DEPENDS+=	p5-File-Type>=0.22:../../devel/p5-File-Type
 DEPENDS+=	p5-Params-Util>=0.23:../../devel/p5-Params-Util
 DEPENDS+=	p5-prefork>=1.01:../../devel/p5-prefork
-# BUILD_DEPENDS+= Email-Send-Test
+# TOOL_DEPENDS+= Email-Send-Test
 
 PERL5_PACKLIST=		auto/Email/Stuff/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

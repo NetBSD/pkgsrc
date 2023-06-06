@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/04/19 08:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:20 riastradh Exp $
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/DeviceKit
 COMMENT=	Modular hardware abstraction layer
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

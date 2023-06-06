@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/08/12 07:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:42:23 riastradh Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
@@ -61,7 +61,7 @@ post-extract:
 # XXX For now, we use the fip_create and aml_encrypt_gxb binaries
 # from Hardkernel.
 #
-BUILD_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
+TOOL_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
 post-build:
 	${PREFIX}/bin/aml_fip_create \
 		--bl30 ${WRKSRC}/${xBL30_BIN} \
@@ -80,7 +80,7 @@ post-build:
 
 # XXX We'd prefer this, but fiptool doesn't create a working image
 # for Odroid-C2.
-#BUILD_DEPENDS+=	arm-trusted-firmware-fiptool>=2.0nb2:../../sysutils/arm-trusted-firmware-fiptool
+#TOOL_DEPENDS+=	arm-trusted-firmware-fiptool>=2.0nb2:../../sysutils/arm-trusted-firmware-fiptool
 #x-post-build-tf-a:
 #	fiptool create --align 0x4000 \
 #		--scp-fw ${WRKSRC}/${xBL30_BIN} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/04/19 08:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:37 riastradh Exp $
 
 DISTNAME=	fcitx5-chewing-5.0.4
 PKGREVISION=	5
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-chewing
 COMMENT=	Chewing engine for Fcitx5
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:30:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:40:18 riastradh Exp $
 
 DISTNAME=	Benchmark-Timer-0.7112
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 #DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 # for make test
-BUILD_DEPENDS+=	p5-URI-Escape-XS-[0-9]*:../../www/p5-URI-Escape-XS
+TOOL_DEPENDS+=	p5-URI-Escape-XS-[0-9]*:../../www/p5-URI-Escape-XS
 
 PERL5_PACKLIST=		auto/Benchmark/Timer/.packlist
 REPLACE_PERL=		delta.pl

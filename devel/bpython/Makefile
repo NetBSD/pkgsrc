@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/05/07 12:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:34 riastradh Exp $
 
 DISTNAME=	bpython-0.24
 PKGREVISION=	1
@@ -10,8 +10,8 @@ HOMEPAGE=	https://bpython-interpreter.org/
 COMMENT=	Fancy interface to the Python interpreter
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-curtsies>=0.4.0:../../devel/py-curtsies
 DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth

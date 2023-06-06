@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 00:02:53 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:50 riastradh Exp $
 
 DISTNAME=	Flask-Security-Too-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Flask-Middleware/flask-security
 COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-babel>=2.12.1:../../devel/py-babel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-babel>=2.12.1:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.1.1:../../mail/py-email_validator
 DEPENDS+=	${PYPKGPREFIX}-flask>=2.3.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-principal>=0.4.0:../../www/py-flask-principal

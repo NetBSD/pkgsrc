@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/05/07 00:28:01 scole Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:42:34 riastradh Exp $
 
 ST_VERSION=	2.25
 PKGNAME=	split-thai-${ST_VERSION}
@@ -24,7 +24,7 @@ USE_LANGUAGES=	c++11
 
 USE_TOOLS=	pkg-config mkdir cp sh:run env awk cat sort uniq grep wc echo
 USE_TOOLS+=	perl:run
-BUILD_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
+TOOL_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	swath-[0-9]*:../../textproc/swath
 DEPENDS+=	sox-[0-9]*:../../audio/sox

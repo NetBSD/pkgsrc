@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/02/11 23:20:47 wen Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:51 riastradh Exp $
 
 DISTNAME=	Inline-C-0.82
 PKGNAME=	p5-${DISTNAME}
@@ -10,14 +10,14 @@ HOMEPAGE=	https://metacpan.org/release/Inline-C
 COMMENT=	Write Perl Subroutines in C
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
+TOOL_DEPENDS+=	p5-File-ShareDir-Install-[0-9]*:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-Inline>=0.79:../../devel/p5-Inline
 DEPENDS+=	p5-Parse-RecDescent>=1.967:../../devel/p5-Parse-RecDescent
 DEPENDS+=	p5-Pegex>=0.58:../../devel/p5-Pegex
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
-BUILD_DEPENDS+=	p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
+TOOL_DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
+TOOL_DEPENDS+=	p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
 
 MAKE_ENV+=	PERL_MM_USE_DEFAULT=1
 

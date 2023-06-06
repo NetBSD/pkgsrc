@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/06/04 06:45:31 pin Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:41:19 riastradh Exp $
 
 DISTNAME=	tp-note-1.21.5
 CATEGORIES=	editors
@@ -10,7 +10,7 @@ HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
 COMMENT=	Minimalistic note taking and template system
 LICENSE=	mit OR apache-2.0
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 

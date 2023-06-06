@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:19 riastradh Exp $
 
 DISTNAME=	Padre-Plugin-XS-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Software-License-[0-9]*:../../devel/p5-Software-License
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-File-Find-Rule-Perl-[0-9]*:../../devel/p5-File-Find-Rule-Perl
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/Padre/Plugin/XS/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

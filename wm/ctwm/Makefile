@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/03/29 08:51:30 rhialto Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/06 12:42:38 riastradh Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
@@ -48,10 +48,10 @@ pre-install:
 	    ${DESTDIR}${PREFIX}/share/xsessions/ctwm.desktop
 
 # The build optionally uses these, if found:
-#BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-#BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-#BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
-#BUILD_DEPENDS+=	dblatex-[0-9]*:../../textproc/dblatex
+#TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+#TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+#TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+#TOOL_DEPENDS+=	dblatex-[0-9]*:../../textproc/dblatex
 
 # but for consistent builds, we disable them entirely.
 CMAKE_ARGS+=		-DASCIIDOCTOR=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/05/31 21:04:17 christos Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:38 riastradh Exp $
 
 DISTNAME=	jemalloc-5.3.0
 PKGREVISION=	1
@@ -12,8 +12,8 @@ HOMEPAGE=	http://jemalloc.net/
 COMMENT=	General purpose malloc(3) implementation
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		autoconf automake aclocal gmake perl:run

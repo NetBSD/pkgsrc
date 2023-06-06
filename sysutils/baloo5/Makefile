@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/05/22 21:00:07 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/06/06 12:42:17 riastradh Exp $
 
 DISTNAME=	baloo-${KF5VER}
 PKGNAME=	baloo5-${KF5VER}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 CONFLICTS+=	baloo-[0-9]*
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

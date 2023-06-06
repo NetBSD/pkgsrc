@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2023/06/02 14:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2023/06/06 12:41:21 riastradh Exp $
 
 DISTNAME=	mame-0.255
 CATEGORIES=	emulators
@@ -17,7 +17,7 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/border_blur
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c99 c++
 GCC_REQD+=		7

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	oxygen-fonts-${PLASMAVER}
 CATEGORIES=	fonts kde
@@ -11,8 +11,8 @@ COMMENT=	The Oxygen font family
 LICENSE=	gnu-gpl-v3 AND ofl-v1.1
 
 PLASMAVER=	5.4.3
-BUILD_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
-BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

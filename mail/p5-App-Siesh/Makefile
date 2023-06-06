@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:48 riastradh Exp $
 
 DISTNAME=	App-Siesh-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,8 @@ DEPENDS+=	p5-Term-ShellUI>=0.86:../../devel/p5-Term-ShellUI
 #DEPENDS+=	{perl>=5.10.1,p5-autodie-[0-9]*}:../../devel/p5-autodie
 #DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
-BUILD_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
-BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TOOL_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
+TOOL_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 
 # recommends
 DEPENDS+=	p5-Authen-SASL-[0-9]*:../../security/p5-Authen-SASL

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:32:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:50 riastradh Exp $
 
 DISTNAME=	Filesys-Notify-Simple-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Filesys-Notify-Simple
 COMMENT=	Perl5 module providing a simple and dumb file system watcher
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
+TOOL_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
 
 PERL5_PACKLIST=		auto/Filesys/Notify/Simple/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

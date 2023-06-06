@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/06/05 08:29:59 hauke Exp $
+# $NetBSD: Makefile,v 1.63 2023/06/06 12:42:09 riastradh Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
@@ -15,9 +15,9 @@ HOMEPAGE=	https://tigervnc.org/
 COMMENT=	High-performance, platform-neutral VNC client/server
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
-BUILD_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
-BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=	xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
+TOOL_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
+TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
 DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
 DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config

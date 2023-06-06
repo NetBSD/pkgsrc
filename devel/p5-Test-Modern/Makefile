@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:33:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:06 riastradh Exp $
 
 DISTNAME=	Test-Modern-0.013
 PKGNAME=	p5-${DISTNAME}
@@ -11,10 +11,10 @@ HOMEPAGE=		https://metacpan.org/release/Test-Modern
 COMMENT=		Precision testing for modern perl
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-API>=0.004:../../devel/p5-Test-API
-BUILD_DEPENDS+=	p5-Test-Deep>=0.111:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Fatal>0.007:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Warnings>0.009:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-Test-API>=0.004:../../devel/p5-Test-API
+TOOL_DEPENDS+=	p5-Test-Deep>=0.111:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Fatal>0.007:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Warnings>0.009:../../devel/p5-Test-Warnings
 
 DEPENDS+=		p5-Module-Runtime>=0.012:../../devel/p5-Module-Runtime
 DEPENDS+=		p5-Exporter-Tiny>=0.030:../../devel/p5-Exporter-Tiny

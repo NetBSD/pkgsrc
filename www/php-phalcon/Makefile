@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/01/03 15:26:12 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:48 riastradh Exp $
 #
 
 MODNAME=		phalcon
@@ -18,7 +18,7 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
-BUILD_DEPENDS+=		re2c>=0.15.3:../../devel/re2c
+TOOL_DEPENDS+=		re2c>=0.15.3:../../devel/re2c
 DEPENDS+=		${PHP_PKG_PREFIX}-curl>=5.6.0:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-json>=5.6.0:../../textproc/php-json

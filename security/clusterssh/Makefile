@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	App-ClusterSSH-4.03_06
 PKGNAME=	p5-${DISTNAME:S/_/./}
@@ -16,16 +16,16 @@ DEPENDS+=	p5-Tk>=804.030:../../x11/p5-Tk
 DEPENDS+=	p5-X11-Protocol>=0.56:../../x11/p5-X11-Protocol
 DEPENDS+=	p5-Try-Tiny>=0.11:../../devel/p5-Try-Tiny
 
-BUILD_DEPENDS+=	p5-CPAN-Changes>=0.400002:../../devel/p5-CPAN-Changes
-BUILD_DEPENDS+=	p5-File-Which>=1.09:../../devel/p5-File-Which
-BUILD_DEPENDS+=	p5-File-Slurp>=9999.19:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Readonly>=1.03:../../devel/p5-Readonly
-BUILD_DEPENDS+=	p5-Test-Differences>=0.6300:../../devel/p5-Test-Differences
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
-BUILD_DEPENDS+=	p5-Test-Trap>=0.2.1:../../devel/p5-Test-Trap
-BUILD_DEPENDS+=	p5-Test-Pod>=1.45:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-DistManifest>=1.012:../../devel/p5-Test-DistManifest
-BUILD_DEPENDS+=	xterm>=322:../../x11/xterm
+TOOL_DEPENDS+=	p5-CPAN-Changes>=0.400002:../../devel/p5-CPAN-Changes
+TOOL_DEPENDS+=	p5-File-Which>=1.09:../../devel/p5-File-Which
+TOOL_DEPENDS+=	p5-File-Slurp>=9999.19:../../devel/p5-File-Slurp
+TOOL_DEPENDS+=	p5-Readonly>=1.03:../../devel/p5-Readonly
+TOOL_DEPENDS+=	p5-Test-Differences>=0.6300:../../devel/p5-Test-Differences
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage>=1.08:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Trap>=0.2.1:../../devel/p5-Test-Trap
+TOOL_DEPENDS+=	p5-Test-Pod>=1.45:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-DistManifest>=1.012:../../devel/p5-Test-DistManifest
+TOOL_DEPENDS+=	xterm>=322:../../x11/xterm
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/App/ClusterSSH/.packlist

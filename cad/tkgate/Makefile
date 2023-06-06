@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/01/29 21:15:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:19 riastradh Exp $
 #
 
 DISTNAME=	tkgate-1.8.7
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.tkgate.org/
 LICENSE=	gnu-gpl-v2
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 
-BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
+TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 
 USE_IMAKE=		yes
 USE_TOOLS+=		gm4 bison

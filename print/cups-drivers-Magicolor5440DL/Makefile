@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/04/19 08:11:17 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/06 12:42:11 riastradh Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://printer.konicaminolta.com/support/current_printers/mc5440dl_sup.htm
 COMMENT=	CUPS drivers for printer Konica Minolta Magicolor 5440DL
 
-BUILD_DEPENDS+=	jbigkit>=1.6:../../graphics/jbigkit
+TOOL_DEPENDS+=	jbigkit>=1.6:../../graphics/jbigkit
 
 GHOSTSCRIPT_REQD=	8.0
 USE_TOOLS+=		gs:run

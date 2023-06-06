@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:10 riastradh Exp $
 
 PKGNAME=	pkglint4-4.193.2
 PKGREVISION=	3
@@ -24,8 +24,8 @@ PREV_PKGPATH=	pkgtools/pkglint
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
 .endif
 
 SUBST_CLASSES+=		pkglint

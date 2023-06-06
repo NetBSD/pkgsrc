@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2022/11/08 00:35:13 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2023/06/06 12:41:50 riastradh Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -33,8 +33,8 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		nasm>=1.1:../../devel/nasm
-BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+TOOL_DEPENDS+=		nasm>=1.1:../../devel/nasm
+TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
 # This is to work around build failures where an upstream configuration script

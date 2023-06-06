@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/07/16 08:22:25 wen Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:48 riastradh Exp $
 
 DISTNAME=	ExtUtils-CppGuess-0.26
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/SMUELLER/ExtUtils-CppGuess-0.07
 COMMENT=	Perl5 module for guess C++ compiler and flags
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+TOOL_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 LDFLAGS+=	-lstdc++

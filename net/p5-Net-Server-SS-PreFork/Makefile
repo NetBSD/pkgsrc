@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:06 riastradh Exp $
 #
 
 DISTNAME=	Net-Server-SS-PreFork-0.05
@@ -18,9 +18,9 @@ USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Net/Server/SS/PreFork/.packlist
 
-BUILD_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
-BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-BUILD_DEPENDS+=	p5-Test-TCP>=0.06:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
+TOOL_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+TOOL_DEPENDS+=	p5-Test-TCP>=0.06:../../net/p5-Test-TCP
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 DEPENDS+=	p5-Server-Starter>=0.02:../../sysutils/p5-Server-Starter
 

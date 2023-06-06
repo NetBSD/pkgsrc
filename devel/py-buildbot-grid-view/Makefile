@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/11/09 13:14:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:10 riastradh Exp $
 
 DISTNAME=	buildbot-grid-view-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Grid View Plugin for the buildbot CI system
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
-BUILD_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
+TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
 

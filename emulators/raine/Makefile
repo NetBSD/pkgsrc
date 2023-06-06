@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/06 12:41:21 riastradh Exp $
 #
 
 DISTNAME=	raines-0.43.3
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rainemu.swishparty.co.uk/
 COMMENT=	680x0 Arcade Emulator
 
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake perl:run pkg-config

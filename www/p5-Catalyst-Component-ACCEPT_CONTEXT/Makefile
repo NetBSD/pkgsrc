@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Component-ACCEPT_CONTEXT-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Catalyst-Runtime>=0:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 
-BUILD_DEPENDS+=	p5-Devel-Cycle-[0-9]*:../../devel/p5-Devel-Cycle
+TOOL_DEPENDS+=	p5-Devel-Cycle-[0-9]*:../../devel/p5-Devel-Cycle
 
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1

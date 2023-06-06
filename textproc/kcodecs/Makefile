@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/05/22 21:00:07 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/06 12:42:25 riastradh Exp $
 
 DISTNAME=	kcodecs-${KF5VER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build

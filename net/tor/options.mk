@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2021/07/01 07:42:38 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2023/06/06 12:42:09 riastradh Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=		doc
@@ -16,7 +16,7 @@ PLIST_VARS+=		doc openssl
 ### may not be wanted under certain circumstances.
 ###
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc>=8.3.3:../../textproc/asciidoc
 CONFIGURE_ARGS+=	--enable-asciidoc
 PLIST.doc=		yes
 .else

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/19 08:09:23 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:26 riastradh Exp $
 
 DISTNAME=	gom-0.4
 PKGREVISION=	10
@@ -11,7 +11,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Gom
 COMMENT=	Object mapper from GObjects to SQLite
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/01/29 21:16:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2023/06/06 12:41:30 riastradh Exp $
 
 DISTNAME=	puzzles-20220127
 GIT_COMMIT=	c43a34fbfe430d235bafc379595761880a19ed9f
@@ -11,8 +11,8 @@ HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
 COMMENT=	Collection of small one-player puzzle games by Simon Tatham
 LICENSE=	mit
 
-BUILD_DEPENDS+=		halibut>=1.1:../../textproc/halibut
-BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=		halibut>=1.1:../../textproc/halibut
+TOOL_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 WRKSRC=		${WRKDIR}/puzzles-${GIT_COMMIT:C,(.......).*,\1,}
 AUTO_MKDIRS=	yes

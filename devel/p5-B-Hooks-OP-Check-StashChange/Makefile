@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	B-Hooks-OP-Check-StashChange-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/B-Hooks-OP-Check-StashChange
 COMMENT=	Invoke callbacks when the stash code is being compiled in changes
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
 
 #DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:03 riastradh Exp $
 
 DISTNAME=	Role-Identifiable-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 
-BUILD_DEPENDS+=		p5-Moose-[0-9]*:../../devel/p5-Moose
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Moose-[0-9]*:../../devel/p5-Moose
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Role/Identifiable/.packlist
 

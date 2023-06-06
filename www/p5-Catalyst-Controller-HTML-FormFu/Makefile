@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Controller-HTML-FormFu-2.04
 PKGNAME=	p5-${DISTNAME}
@@ -22,17 +22,17 @@ DEPENDS+=	p5-Regexp-Assemble-[0-9]*:../../devel/p5-Regexp-Assemble
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=		p5-Catalyst-Action-RenderView-[0-9]*:../../www/p5-Catalyst-Action-RenderView
-BUILD_DEPENDS+=		p5-Catalyst-Plugin-ConfigLoader>=0.23:../../www/p5-Catalyst-Plugin-ConfigLoader
-BUILD_DEPENDS+=		p5-Catalyst-Plugin-Session-[0-9]*:../../www/p5-Catalyst-Plugin-Session
-BUILD_DEPENDS+=		p5-Catalyst-Plugin-Session-State-Cookie-[0-9]*:../../www/p5-Catalyst-Plugin-Session-State-Cookie
-BUILD_DEPENDS+=		p5-Catalyst-Plugin-Session-Store-File-[0-9]*:../../www/p5-Catalyst-Plugin-Session-Store-File
-BUILD_DEPENDS+=		p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT
-BUILD_DEPENDS+=		p5-Config-General-[0-9]*:../../devel/p5-Config-General
-BUILD_DEPENDS+=		p5-Template-Toolkit>=2:../../www/p5-Template-Toolkit
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Test-WWW-Mechanize>=1.16:../../www/p5-Test-WWW-Mechanize
-BUILD_DEPENDS+=		p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mechanize-Catalyst
+TOOL_DEPENDS+=		p5-Catalyst-Action-RenderView-[0-9]*:../../www/p5-Catalyst-Action-RenderView
+TOOL_DEPENDS+=		p5-Catalyst-Plugin-ConfigLoader>=0.23:../../www/p5-Catalyst-Plugin-ConfigLoader
+TOOL_DEPENDS+=		p5-Catalyst-Plugin-Session-[0-9]*:../../www/p5-Catalyst-Plugin-Session
+TOOL_DEPENDS+=		p5-Catalyst-Plugin-Session-State-Cookie-[0-9]*:../../www/p5-Catalyst-Plugin-Session-State-Cookie
+TOOL_DEPENDS+=		p5-Catalyst-Plugin-Session-Store-File-[0-9]*:../../www/p5-Catalyst-Plugin-Session-Store-File
+TOOL_DEPENDS+=		p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT
+TOOL_DEPENDS+=		p5-Config-General-[0-9]*:../../devel/p5-Config-General
+TOOL_DEPENDS+=		p5-Template-Toolkit>=2:../../www/p5-Template-Toolkit
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-WWW-Mechanize>=1.16:../../www/p5-Test-WWW-Mechanize
+TOOL_DEPENDS+=		p5-Test-WWW-Mechanize-Catalyst-[0-9]*:../../www/p5-Test-WWW-Mechanize-Catalyst
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Controller/HTML/FormFu/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:33:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:41:01 riastradh Exp $
 
 DISTNAME=	Parallel-Prefork-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -18,9 +18,9 @@ DEPENDS+=	p5-Scope-Guard-[0-9]*:../../devel/p5-Scope-Guard
 DEPENDS+=	p5-Signal-Mask-[0-9]*:../../devel/p5-Signal-Mask
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
-BUILD_DEPENDS+=	p5-forks-[0-9]*:../../devel/p5-forks
-BUILD_DEPENDS+=	p5-IPC-Signal-[0-9]*:../../devel/p5-IPC-Signal
+TOOL_DEPENDS+=	p5-Test-SharedFork-[0-9]*:../../devel/p5-Test-SharedFork
+TOOL_DEPENDS+=	p5-forks-[0-9]*:../../devel/p5-forks
+TOOL_DEPENDS+=	p5-IPC-Signal-[0-9]*:../../devel/p5-IPC-Signal
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Parallel/Prefork/.packlist

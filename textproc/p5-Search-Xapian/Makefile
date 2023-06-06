@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/06/28 11:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:42:28 riastradh Exp $
 
 DISTNAME=		Search-Xapian-1.2.25.5
 PKGNAME=		${DISTNAME:S/^/p5-/}
@@ -11,7 +11,7 @@ HOMEPAGE=		https://xapian.org/docs/bindings/perl/Search/Xapian.html
 COMMENT=		Perl XS frontend to the Xapian C++ search library
 LICENSE=		${PERL5_LICENSE}
 
-BUILD_DEPENDS+=		p5-Devel-Leak-[0-9]*:../../devel/p5-Devel-Leak
+TOOL_DEPENDS+=		p5-Devel-Leak-[0-9]*:../../devel/p5-Devel-Leak
 
 USE_LANGUAGES=		c++
 

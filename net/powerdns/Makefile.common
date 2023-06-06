@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2022/12/28 18:24:53 otis Exp $
+# $NetBSD: Makefile.common,v 1.37 2023/06/06 12:42:07 riastradh Exp $
 # used by net/powerdns/Makefile.backend
 
 PDNS_VERSION=	4.6.4
@@ -11,7 +11,7 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.powerdns.com/
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		ragel-[0-9]*:../../devel/ragel
+TOOL_DEPENDS+=		ragel-[0-9]*:../../devel/ragel
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

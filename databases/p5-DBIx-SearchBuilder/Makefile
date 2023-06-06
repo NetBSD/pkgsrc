@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/08/21 20:38:27 markd Exp $
+# $NetBSD: Makefile,v 1.65 2023/06/06 12:40:31 riastradh Exp $
 
 DISTNAME=	DBIx-SearchBuilder-1.71
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/DBIx-SearchBuilder
 COMMENT=	Extension for easy SQL SELECT Statement generation
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 DEPENDS+=	p5-Cache-Simple-TimedExpiry>=0.21:../../devel/p5-Cache-Simple-TimedExpiry
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue

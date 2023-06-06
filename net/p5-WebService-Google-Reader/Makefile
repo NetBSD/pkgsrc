@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:07 riastradh Exp $
 #
 
 DISTNAME=		WebService-Google-Reader-0.23
@@ -14,7 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/WebService/Google/Reader/.packlist
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.82}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-JSON-XS>=2:../../converters/p5-JSON-XS
 DEPENDS+=		p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww

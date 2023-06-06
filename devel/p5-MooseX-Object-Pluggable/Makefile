@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:57 riastradh Exp $
 
 DISTNAME=	MooseX-Object-Pluggable-0.0014
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moose>=0:../../devel/p5-Moose
 # for make test
-BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+TOOL_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Object/Pluggable/.packlist

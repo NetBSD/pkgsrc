@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:00 riastradh Exp $
 #
 
 DISTNAME=		MouseX-Types-Path-Class-0.07
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
 # XXX recommends 'MouseX::Getopt' => '0.2200';
 
-BUILD_DEPENDS+=		p5-Test-UseAllModules-[0-9]*:../../devel/p5-Test-UseAllModules
+TOOL_DEPENDS+=		p5-Test-UseAllModules-[0-9]*:../../devel/p5-Test-UseAllModules
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

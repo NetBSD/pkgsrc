@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/04/23 10:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.95 2023/06/06 12:40:33 riastradh Exp $
 
 DISTNAME=	peewee-3.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # needs features from newer sphinx than python 2.7 supports
 

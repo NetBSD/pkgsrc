@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:34:18 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:12 riastradh Exp $
 
 DISTNAME=	igo
 PKGNAME=	tex-${DISTNAME}-0
@@ -11,9 +11,9 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.ctan.org/tex-archive/fonts/igo/
 COMMENT=	Fonts and macro to typeset Go diagrams
 
-BUILD_DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
-BUILD_DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
-BUILD_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
+TOOL_DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea
+TOOL_DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
+TOOL_DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
 
 .include "../../print/kpathsea/texmf.mk"
 

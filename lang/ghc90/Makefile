@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/11/22 14:35:32 nia Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:41:43 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -229,7 +229,7 @@ STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 .if ${BUILD_SPHINX_HTML} != "no"
 BUILDLINK_DEPMETHOD.python:=	build
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif
 
 # NetBSD 9.x have libcurses with a newer major version than the
@@ -240,10 +240,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 # installed libraries themselves, since the symlinks compatXX adds
 # to the /usr tree can't be applied.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*) && ${OPSYS_VERSION} >= 099000
-BUILD_DEPENDS+=	compat90-[0-9]*:../../emulators/compat90
+TOOL_DEPENDS+=	compat90-[0-9]*:../../emulators/compat90
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib
 .elif !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && ${OPSYS_VERSION} >= 090000
-BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
+TOOL_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib:${WRKDIR}/lib
 # XXX: ${WRKDIR}/lib is a temporary workaround for compat80 not having
 # libterminfo.so.1. See ./bootstrap.mk

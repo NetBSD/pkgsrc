@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/05/06 19:09:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/06 12:41:21 riastradh Exp $
 
 PKGREVISION= 12
 .include "Makefile.common"
@@ -12,7 +12,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoreconf autoconf automake
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif

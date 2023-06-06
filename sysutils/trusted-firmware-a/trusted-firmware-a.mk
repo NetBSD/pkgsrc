@@ -1,4 +1,4 @@
-# $NetBSD: trusted-firmware-a.mk,v 1.1 2022/02/09 01:57:57 mrg Exp $
+# $NetBSD: trusted-firmware-a.mk,v 1.2 2023/06/06 12:42:23 riastradh Exp $
 
 .include "../../sysutils/trusted-firmware-a/trusted-firmware-a-dist.mk"
 
@@ -17,9 +17,9 @@ MAKE_FLAGS+=	CFLAGS='-gdwarf-2'
 MAKE_FLAGS+=	BUILD_STRING=${GITHUB_TAG}
 BUILD_TARGET=	bl31
 
-BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
+TOOL_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 .if !empty(ATF_CORTEX_M0:Myes)
-BUILD_DEPENDS+=	cross-arm-none-eabi-gcc-[0-9]*:../../cross/arm-none-eabi-gcc
+TOOL_DEPENDS+=	cross-arm-none-eabi-gcc-[0-9]*:../../cross/arm-none-eabi-gcc
 .endif
 
 .if empty(MAKE_FLAGS:MDEBUG=1)

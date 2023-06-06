@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/02/23 15:59:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:47 riastradh Exp $
 
 DISTNAME=		feed2exec-0.19.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,10 @@ HOMEPAGE=		https://feed2exec.readthedocs.io/
 COMMENT=		The programmable feed reader
 LICENSE=		gnu-agpl-v3
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-BUILD_DEPENDS+=		${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-BUILD_DEPENDS+=		${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=		${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
+TOOL_DEPENDS+=		${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=		${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol

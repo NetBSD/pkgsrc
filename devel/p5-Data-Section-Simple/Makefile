@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:32:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:40:46 riastradh Exp $
 
 DISTNAME=	Data-Section-Simple-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Data-Section-Simple
 COMMENT=	Extract data from __DATA__ section of the file
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/Data/Section/Simple/.packlist
 

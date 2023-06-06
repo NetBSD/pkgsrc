@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:43 riastradh Exp $
 
 DISTNAME=	CPAN-Inject-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-CPAN-Checksums>=1.05:../../devel/p5-CPAN-Checksums
 DEPENDS+=	p5-File-chmod>=0.30:../../sysutils/p5-File-chmod
 DEPENDS+=	p5-Params-Util>=0.21:../../devel/p5-Params-Util
-BUILD_DEPENDS+=	p5-File-Remove>=0.38:../../sysutils/p5-File-Remove
-BUILD_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
+TOOL_DEPENDS+=	p5-File-Remove>=0.38:../../sysutils/p5-File-Remove
+TOOL_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CPAN/Inject/.packlist

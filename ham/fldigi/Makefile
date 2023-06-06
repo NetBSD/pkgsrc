@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2023/05/06 19:09:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.140 2023/06/06 12:41:36 riastradh Exp $
 
 DISTNAME=	fldigi-4.1.01
 PKGREVISION=	26
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 # NetBSD 5.1 fails to find strip - install: exec of strip failed:
 CONFIGURE_ENV+=		STRIP=${STRIP}
 
-BUILD_DEPENDS+=	asciidoc>=9.0.5:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc>=9.0.5:../../textproc/asciidoc
 
 SUBST_CLASSES+=		asciidoc
 SUBST_STAGE.asciidoc=	post-configure

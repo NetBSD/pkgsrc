@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/02/25 18:01:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:44 riastradh Exp $
 
 DISTNAME=	hamlet-2.0.0
 CATEGORIES=	lang
@@ -9,7 +9,7 @@ HOMEPAGE=	https://people.mpi-sws.org/~rossberg/hamlet/
 COMMENT=	Faithful and complete implementation of the Standard ML
 LICENSE=	hamlet-license
 
-BUILD_DEPENDS+=	moscow_ml>=2.10:../../lang/moscow_ml
+TOOL_DEPENDS+=	moscow_ml>=2.10:../../lang/moscow_ml
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake

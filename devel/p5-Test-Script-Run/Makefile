@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:07 riastradh Exp $
 #
 
 DISTNAME=	Test-Script-Run-0.08
@@ -19,7 +19,7 @@ PERL5_PACKLIST=		auto/Test/Script/Run/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

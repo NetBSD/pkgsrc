@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:31:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:43 riastradh Exp $
 
 DISTNAME=	Carp-REPL-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Lexical-Persistence-[0-9]*:../../devel/p5-Lexical-Persistence
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 # For test target
-BUILD_DEPENDS+=	p5-Test-Expect-[0-9]*:../../devel/p5-Test-Expect
+TOOL_DEPENDS+=	p5-Test-Expect-[0-9]*:../../devel/p5-Test-Expect
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

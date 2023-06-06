@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.51 2023/01/29 21:15:13 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.52 2023/06/06 12:42:54 riastradh Exp $
 
 BUILDLINK_TREE+=	p5-Wx
 
@@ -14,8 +14,8 @@ BUILDLINK_LIBDIRS.p5-Wx?=	${PERL5_SUB_INSTALLVENDORARCH}/auto/Wx
 # We want all of the arch-dependent Wx files.
 BUILDLINK_CONTENTS_FILTER.p5-Wx?=	${GREP} ${PERL5_SUB_INSTALLVENDORARCH}
 
-BUILD_DEPENDS+=	p5-Alien-wxWidgets>=0.69:../../x11/p5-Alien-wxWidgets
-BUILD_DEPENDS+=	p5-ExtUtils-XSpp>=0.05:../../devel/p5-ExtUtils-XSpp
+TOOL_DEPENDS+=	p5-Alien-wxWidgets>=0.69:../../x11/p5-Alien-wxWidgets
+TOOL_DEPENDS+=	p5-ExtUtils-XSpp>=0.05:../../devel/p5-ExtUtils-XSpp
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"

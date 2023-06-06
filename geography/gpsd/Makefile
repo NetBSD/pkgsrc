@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/03/09 00:52:42 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2023/06/06 12:41:30 riastradh Exp $
 
 DISTNAME=	gpsd-3.25
 CATEGORIES=	geography
@@ -87,7 +87,7 @@ PLIST_SUBST+=	PLIST_DYLIB=
 .include "../../lang/ruby/rubyversion.mk"
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
 
-# \todo Change to TOOLS or BUILD_DEPENDS after scons support is improved.
+# \todo Change to TOOLS or TOOL_DEPENDS after scons support is improved.
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/01/29 21:18:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	lxappearance-0.6.3
 PKGREVISION=	9
@@ -18,8 +18,8 @@ CONFIGURE_ARGS+=	--enable-dbus
 USE_LIBTOOL=		yes
 USE_TOOLS+=		intltool pkg-config msgfmt
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

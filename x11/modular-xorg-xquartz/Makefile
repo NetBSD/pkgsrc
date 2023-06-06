@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/01/29 21:18:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 PKGREVISION=	1
@@ -70,7 +70,7 @@ CONFIGURE_ARGS+=	--with-apple-applications-dir=${PREFIX}/Applications/Utilities
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
 
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../security/nettle/buildlink3.mk"

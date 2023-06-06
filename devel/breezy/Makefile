@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/07/27 18:52:41 rhialto Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:40:35 riastradh Exp $
 
 DISTNAME=	breezy-3.2.2
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Friendly distributed version control system
 LICENSE=	gnu-gpl-v2
 
 # For building from repo instead of release tarball:
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-dulwich>=0.20.23:../../devel/py-dulwich
 DEPENDS+=		${PYPKGPREFIX}-fastbencode>=0.0.9:../../converters/py-fastbencode

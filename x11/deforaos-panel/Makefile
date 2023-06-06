@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/01/29 21:15:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/06 12:42:52 riastradh Exp $
 
 DISTNAME=	Panel-0.4.3
 PKGNAME=	deforaos-panel-0.4.3
@@ -15,8 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}

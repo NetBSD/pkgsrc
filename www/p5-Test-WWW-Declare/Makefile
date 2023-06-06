@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:48 riastradh Exp $
 
 DISTNAME=	Test-WWW-Declare-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Test/WWW/Declare/.packlist
 
-BUILD_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
+TOOL_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-Test-WWW-Mechanize-[0-9]*:../../www/p5-Test-WWW-Mechanize
 DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 

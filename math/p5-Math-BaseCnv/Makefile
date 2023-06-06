@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:34:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:52 riastradh Exp $
 #
 
 DISTNAME=	Math-BaseCnv-1.14
@@ -14,8 +14,8 @@ COMMENT=	Fast functions to CoNVert between number Bases
 LICENSE=	gnu-gpl-v3
 
 # actually, TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 PERL5_PACKLIST=		auto/Math/BaseCnv/.packlist
 

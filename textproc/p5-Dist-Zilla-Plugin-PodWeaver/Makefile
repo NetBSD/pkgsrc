@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:26 riastradh Exp $
 
 DISTNAME=	Dist-Zilla-Plugin-PodWeaver-4.008
 PKGNAME=	p5-${DISTNAME}
@@ -21,10 +21,10 @@ DEPENDS+=	p5-Pod-Elemental-PerlMunger-[0-9]*:../../textproc/p5-Pod-Elemental-Per
 DEPENDS+=	p5-Pod-Weaver>=4:../../textproc/p5-Pod-Weaver
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Dist/Zilla/Plugin/PodWeaver/.packlist
 

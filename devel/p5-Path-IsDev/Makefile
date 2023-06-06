@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:33:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:02 riastradh Exp $
 
 DISTNAME=	Path-IsDev-1.001003
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Role-Tiny>0:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Sub-Exporter>0:../../devel/p5-Sub-Exporter
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

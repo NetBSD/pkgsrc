@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:32:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:54 riastradh Exp $
 
 DISTNAME=	MooX-Cmd-0.017
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-IO-TieCombine-[0-9]*:../../devel/p5-IO-TieCombine
 DEPENDS+=	p5-MooX-Options>=4.002:../../devel/p5-MooX-Options
 
 # for make test
-BUILD_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=	auto/MooX/Cmd/.packlist
 

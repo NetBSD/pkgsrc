@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:22 riastradh Exp $
 
 DISTNAME=	Module-Path-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ REPLACE_PERL+=	bin/mpath
 
 PERL5_PACKLIST=		auto/Module/Path/.packlist
 
-BUILD_DEPENDS+=	p5-Devel-FindPerl-[0-9]*:../../devel/p5-Devel-FindPerl
+TOOL_DEPENDS+=	p5-Devel-FindPerl-[0-9]*:../../devel/p5-Devel-FindPerl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

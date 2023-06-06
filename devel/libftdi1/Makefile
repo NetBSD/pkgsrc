@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/04/23 14:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/06 12:40:39 riastradh Exp $
 
 DISTNAME=	libftdi1-1.5
 PKGREVISION=	6
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.intra2net.com/en/developer/libftdi/
 COMMENT=	Userland driver library for FTDI USB chips
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
+TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

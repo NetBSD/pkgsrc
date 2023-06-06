@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/03 11:44:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:46 riastradh Exp $
 
 DISTNAME=		python-lua
 PKGNAME=		${PYPKGPREFIX}-python-lua-20170109
@@ -15,7 +15,7 @@ HOMEPAGE=		https://github.com/NeonMercury/python-lua
 COMMENT=		Simple python to lua translator
 LICENSE=		apache-2.0
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-yaml>=3.12:../../textproc/py-yaml
+TOOL_DEPENDS+=		${PYPKGPREFIX}-yaml>=3.12:../../textproc/py-yaml
 
 USE_LANGUAGES=		# none
 

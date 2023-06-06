@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:41:00 riastradh Exp $
 
 DISTNAME=	Object-Realize-Later-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Delayed creation of objects
 LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
-BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=	auto/Object/Realize/Later/.packlist
 

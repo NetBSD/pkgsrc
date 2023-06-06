@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/06/28 11:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/06 12:41:35 riastradh Exp $
 
 DISTNAME=	Image-Size-3.300
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.9.3,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Zlib
 
-#BUILD_DEPENDS+=	{perl>=5.10.0,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.0,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Image/Size/.packlist
 

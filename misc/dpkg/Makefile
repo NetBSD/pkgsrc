@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2022/11/02 10:47:32 adam Exp $
+# $NetBSD: Makefile,v 1.56 2023/06/06 12:41:55 riastradh Exp $
 
 DISTNAME=	dpkg_1.21.9
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,7 +12,7 @@ COMMENT=	Package maintenance system for Debian
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	patch-[0-9]*:../../devel/patch
-BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
+TOOL_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 TEST_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

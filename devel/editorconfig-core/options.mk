@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2021/03/20 18:52:45 adam Exp $
+# $NetBSD: options.mk,v 1.4 2023/06/06 12:40:37 riastradh Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.editorconfig-core
 PKG_SUPPORTED_OPTIONS=	doc
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	doc
 ###
 PLIST_VARS+=	doc
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=ON
 CMAKE_ARGS+=	-DINSTALL_HTML_DOC=ON
 PLIST.doc=	yes

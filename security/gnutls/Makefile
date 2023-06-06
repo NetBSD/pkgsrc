@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2023/05/14 08:11:51 he Exp $
+# $NetBSD: Makefile,v 1.241 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	gnutls-3.8.0
 PKGREVISION=	3
@@ -64,7 +64,7 @@ GNUTLS_GAS_VERSION!=	\
 .  if ${GNUTLS_GAS_VERSION} != 0
 GNUTLS_GAS_NEW_ENOUGH=	no
 # for ssse3, >=2.22
-# better to BUILD_DEPENDS on binutils's gas
+# better to TOOL_DEPENDS on binutils's gas
 GNUTLS_GAS_ACCEPTABLE_PATTERNS=	\
 	2.2[2-9]		\
 	2.2[2-9].*		\

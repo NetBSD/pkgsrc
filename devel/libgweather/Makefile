@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/04/19 08:08:17 adam Exp $
+# $NetBSD: Makefile,v 1.100 2023/06/06 12:40:40 riastradh Exp $
 
 DISTNAME=	libgweather-40.0
 PKGREVISION=	13
@@ -19,7 +19,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gweather-3.0.pc
 
-BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-gobject3-[0-9]*:../../devel/py-gobject3
+TOOL_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

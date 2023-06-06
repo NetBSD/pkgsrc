@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:46 riastradh Exp $
 
 DISTNAME=	Data-Record-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,9 +12,9 @@ COMMENT=	Perl5 module for "split" on steroids
 LICENSE=	${PERL5_LICENSE}
 
 # actually, TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/Record/.packlist

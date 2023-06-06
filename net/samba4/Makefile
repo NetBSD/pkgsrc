@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2023/04/29 08:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2023/06/06 12:42:09 riastradh Exp $
 
 DISTNAME=	samba-4.18.2
 CATEGORIES=	net
@@ -14,9 +14,9 @@ CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]*
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GCC_REQD+=	4.4
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
-BUILD_DEPENDS+=	docbook-xsl>=1.79.2:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TOOL_DEPENDS+=	docbook-xsl>=1.79.2:../../textproc/docbook-xsl
 DEPENDS+=	p5-JSON>=4.05:../../converters/p5-JSON
 DEPENDS+=	p5-Parse-Yapp>=1.05:../../devel/p5-Parse-Yapp
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns

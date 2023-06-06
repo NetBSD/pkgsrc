@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/05/08 00:12:41 nikita Exp $
+# $NetBSD: Makefile,v 1.83 2023/06/06 12:42:38 riastradh Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	11
@@ -43,7 +43,7 @@ EGDIR=		${PREFIX}/share/examples/awesome
 CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
 
 .include "../../lang/ruby/rubyversion.mk"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
 

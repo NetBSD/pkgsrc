@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:06 riastradh Exp $
 #
 
 DISTNAME=	Net-Google-Code-0.19
@@ -16,9 +16,9 @@ USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Net/Google/Code/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
-BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
-BUILD_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
+TOOL_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+TOOL_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
+TOOL_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 DEPENDS+=	p5-Any-Moose-[0-9]*:../../devel/p5-Any-Moose
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-File-MMagic-[0-9]*:../../misc/p5-File-MMagic
@@ -31,7 +31,7 @@ DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-XML-FeedPP-[0-9]*:../../textproc/p5-XML-FeedPP
 
 # for make test
-BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
+TOOL_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 

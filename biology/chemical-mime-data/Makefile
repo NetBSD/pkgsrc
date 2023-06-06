@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/12/24 09:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:40:18 riastradh Exp $
 
 DISTNAME=	chemical-mime-data-0.1.94
 CATEGORIES=	biology
@@ -9,8 +9,8 @@ MAINTAINER=	kamel.derouiche@gmail.com
 COMMENT=	Chemical mime and file type support for desktops
 LICENSE=	gnu-lgpl-v2.1 # or later
 
-BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

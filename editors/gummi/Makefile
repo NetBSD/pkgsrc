@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/05/08 09:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=		gummi-0.6.6
 PKGREVISION=		54
@@ -13,7 +13,7 @@ COMMENT=		LaTeX editor, written in C/GTK+
 LICENSE=		mit
 
 USE_TOOLS+=		pkg-config intltool msgfmt gmake automake autoreconf
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # we need some latex, but not all
 #DEPENDS+=	texlive-collection-all-[0-9]*:../../meta-pkgs/texlive-collection-all

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:40:30 riastradh Exp $
 
 DISTNAME=	DBIx-Class-Fixtures-1.001039
 PKGNAME=	p5-${DISTNAME}
@@ -31,8 +31,8 @@ DEPENDS+=	p5-Hash-Merge>=0.10:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-YAML-Syck>=1.27:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-Test-Compile>=0:../../devel/p5-Test-Compile
 
-BUILD_DEPENDS+=	p5-Test-TempDir-Tiny>=0:../../devel/p5-Test-TempDir-Tiny
-BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-Test-TempDir-Tiny>=0:../../devel/p5-Test-TempDir-Tiny
+TOOL_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DBIx/Class/Fixtures/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/05/08 19:24:46 yhardy Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:42:03 riastradh Exp $
 
 DISTNAME=	streamlink-5.5.1
 CATEGORIES=	multimedia
@@ -21,9 +21,9 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.6:../../net/py-Socks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-websocket-client>=1.2.1:../../www/py-websocket-client
-BUILD_DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-import-order-[0-9]*:../../devel/py-flake8-import-order
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.0.0:../../devel/py-freezegun

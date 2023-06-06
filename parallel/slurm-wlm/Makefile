@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/19 08:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:42:10 riastradh Exp $
 
 DISTNAME=	slurm-19.05.5
 PKGNAME=	${DISTNAME:S/-/-wlm-/}
@@ -14,7 +14,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
+TOOL_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

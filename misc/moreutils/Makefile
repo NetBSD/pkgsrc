@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/06/28 11:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:57 riastradh Exp $
 
 DISTNAME=	moreutils-0.67
 PKGREVISION=	1
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pod2man perl:run
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
 

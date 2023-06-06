@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/06 12:41:04 riastradh Exp $
 
 DISTNAME=	Role-Tiny-2.002004
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 CONFLICTS+=	p5-Moo<0.009014
 
-BUILD_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
+#TOOL_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=	auto/Role/Tiny/.packlist
 

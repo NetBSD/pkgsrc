@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:42:07 riastradh Exp $
 
 DISTNAME=	XMLRPC-Lite-0.717
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Client and server implementation of XML-RPC protocol
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
+TOOL_DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
 
 PERL5_PACKLIST=	auto/XMLRPC-Lite/.packlist
 USE_LANGUAGES=	# none

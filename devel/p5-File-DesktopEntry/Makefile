@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:49 riastradh Exp $
 
 DISTNAME=	File-DesktopEntry-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-File-BaseDir>=0.03:../../devel/p5-File-BaseDir
 # for make test
-BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/File/DesktopEntry/.packlist
 

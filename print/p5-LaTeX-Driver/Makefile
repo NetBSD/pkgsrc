@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:42:11 riastradh Exp $
 
 DISTNAME=	LaTeX-Driver-1.2.0
 PKGNAME=	p5-${DISTNAME}
@@ -31,16 +31,16 @@ DEPENDS+=	web2c-[0-9]*:../../print/web2c
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 # test dependency, but build fails if it's not there
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 TEST_DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
 TEST_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 TEST_DEPENDS+=	p5-Test-Spelling-[0-9]*:../../devel/p5-Test-Spelling
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 # t/20-complexdoc.t requires following package
-BUILD_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
+TOOL_DEPENDS+=	tex-bibtex-[0-9]*:../../print/tex-bibtex
 
 # xelatex is necessary for FORMATTER_TESTING
 #EST_ENV+=	FORMATTER_TESTING=yes

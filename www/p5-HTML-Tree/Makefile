@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/06 12:42:44 riastradh Exp $
 
 DISTNAME=		HTML-Tree-5.07
 PKGNAME=		p5-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=		p5-HTML-Tagset>=3.02:../../www/p5-HTML-Tagset
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 
 # Build dependencies Encode, Test::More and base are in Perl5 core ...
-BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
 PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=		# empty

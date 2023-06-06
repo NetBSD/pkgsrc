@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/09/03 20:50:00 jmcneill Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:23 riastradh Exp $
 
 PKGREVISION=		1
 
@@ -21,8 +21,8 @@ BUILD_TARGET=	u-boot-nodtb.bin
 
 USE_TOOLS+=	gzip
 
-BUILD_DEPENDS+=	m1n1>=0:../../sysutils/m1n1
-BUILD_DEPENDS+=	dtc>=0:../../sysutils/dtc
+TOOL_DEPENDS+=	m1n1>=0:../../sysutils/m1n1
+TOOL_DEPENDS+=	dtc>=0:../../sysutils/dtc
 
 DTS_DIR=	${WRKSRC}/arch/arm/dts
 DTS_INC=	${WRKSRC}/include

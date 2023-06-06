@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/06/28 11:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/06/06 12:40:32 riastradh Exp $
 
 DISTNAME=	SQL-Abstract-2.000001
 PKGNAME=	p5-${DISTNAME}
@@ -18,10 +18,10 @@ DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Test-Deep>=0.101:../../devel/p5-Test-Deep
 
-BUILD_DEPENDS+=		p5-Moo-[0-9]*:../../devel/p5-Moo
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=		p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
+TOOL_DEPENDS+=		p5-Moo-[0-9]*:../../devel/p5-Moo
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=		p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

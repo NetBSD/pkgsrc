@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/01/05 19:56:50 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2023/06/06 12:40:17 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opus
 PKG_SUPPORTED_OPTIONS=	doc
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	doc
 PLIST_VARS+=	doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 PLIST.doc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:40 riastradh Exp $
 #
 
 DISTNAME=	Apache2-AuthCASSimple-0.10
@@ -22,7 +22,7 @@ DEPENDS+=	p5-Authen-CAS-Client-[0-9]*:../../security/p5-Authen-CAS-Client
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
-BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
+TOOL_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 
 .include "../../www/ap2-perl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

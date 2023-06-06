@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:13 riastradh Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -21,7 +21,7 @@ NO_BUILD=		yes
 
 CHECK_INTERPRETER_SKIP+=	share/Bastille/bastille-tmpdir.csh
 
-BUILD_DEPENDS+=		checkperms>=1.4:../../sysutils/checkperms
+TOOL_DEPENDS+=		checkperms>=1.4:../../sysutils/checkperms
 DEPENDS+=		p5-Tk-[0-9]*:../../x11/p5-Tk
 
 SUBST_CLASSES+=		b

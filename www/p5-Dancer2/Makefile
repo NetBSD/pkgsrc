@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/04/29 08:03:22 wen Exp $
+# $NetBSD: Makefile,v 1.66 2023/06/06 12:42:43 riastradh Exp $
 
 DISTNAME=	Dancer2-0.400001
 PKGNAME=	p5-${DISTNAME}
@@ -13,13 +13,13 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Dancer2/.packlist
 
-BUILD_DEPENDS+=	p5-Exporter-Tiny>=0:../../devel/p5-Exporter-Tiny
-BUILD_DEPENDS+=	p5-Test-Memory-Cycle>=0:../../devel/p5-Test-Memory-Cycle
-BUILD_DEPENDS+=	p5-Test-MockTime>=0:../../time/p5-Test-MockTime
-BUILD_DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
-BUILD_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
-BUILD_DEPENDS+=	p5-LWP-Protocol-PSGI>=0.06:../../www/p5-LWP-Protocol-PSGI
+TOOL_DEPENDS+=	p5-Exporter-Tiny>=0:../../devel/p5-Exporter-Tiny
+TOOL_DEPENDS+=	p5-Test-Memory-Cycle>=0:../../devel/p5-Test-Memory-Cycle
+TOOL_DEPENDS+=	p5-Test-MockTime>=0:../../time/p5-Test-MockTime
+TOOL_DEPENDS+=	p5-Test-TCP>=0:../../net/p5-Test-TCP
+TOOL_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-File-ShareDir-Install>=0.06:../../devel/p5-File-ShareDir-Install
+TOOL_DEPENDS+=	p5-LWP-Protocol-PSGI>=0.06:../../www/p5-LWP-Protocol-PSGI
 
 DEPENDS+=	p5-CLI-Osprey>=0:../../devel/p5-CLI-Osprey
 DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny

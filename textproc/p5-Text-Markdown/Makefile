@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:30 riastradh Exp $
 
 DISTNAME=	Text-Markdown-1.000031
 PKGNAME=	p5-${DISTNAME:S/000031/0.31/}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://metacpan.org/release/Text-Markdown
 COMMENT=	Convert Markdown to HTML
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
+TOOL_DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
 PERL5_PACKLIST=		auto/Text/Markdown/.packlist
 USE_LANGUAGES=		# none

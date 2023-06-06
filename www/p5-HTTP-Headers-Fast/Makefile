@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:44 riastradh Exp $
 
 DISTNAME=	HTTP-Headers-Fast-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl extension for faster implementation of HTTP::Headers
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-HTTP-Date>0:../../www/p5-HTTP-Date
-BUILD_DEPENDS=	p5-Test-Requires>0:../../devel/p5-Test-Requires
+TOOL_DEPENDS=	p5-Test-Requires>0:../../devel/p5-Test-Requires
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 PERL5_PACKLIST=		auto/HTTP/Headers/Fast/.packlist

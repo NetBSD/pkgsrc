@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
@@ -15,7 +15,7 @@ BROKEN_EXCEPT_ON_PLATFORM=	OSF1-*-* Linux-*-* FreeBSD-*-* NetBSD-*-* \
 
 USE_IMAKE=		yes
 USE_TOOLS+=		perl makedepend
-BUILD_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
+TOOL_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MAKE_JOBS_SAFE=		no

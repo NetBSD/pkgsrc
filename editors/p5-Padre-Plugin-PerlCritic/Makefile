@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:41:19 riastradh Exp $
 #
 
 DISTNAME=	Padre-Plugin-PerlCritic-0.12
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Padre-Plugin-PerlCritic
 COMMENT=	Analyze perl files in Padre with Perl::Critic
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
+TOOL_DEPENDS+=	p5-Locale-Msgfmt>=0.15:../../devel/p5-Locale-Msgfmt
 
 DEPENDS+=	p5-Padre>=0.57:../../editors/p5-Padre
 DEPENDS+=	p5-Perl-Critic-[0-9]*:../../devel/p5-Perl-Critic

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/01/10 08:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:42:55 riastradh Exp $
 
 GITHUB_PROJECT=	terminator
 DISTNAME=	terminator-2.1.0
@@ -28,7 +28,7 @@ SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/09/26 16:22:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:15 riastradh Exp $
 
 DISTNAME=	reposurgeon-3.41
 PKGREVISION=	3
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.catb.org/~esr/reposurgeon/
 COMMENT=	Tool for editing version-control repository history
 LICENSE=	2-clause-bsd
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 PYTHON_VERSIONS_ACCEPTED=	27
 

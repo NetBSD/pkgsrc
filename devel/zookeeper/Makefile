@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/06/27 06:32:44 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:17 riastradh Exp $
 #
 
 .include "Makefile.common"
@@ -8,7 +8,7 @@ COMMENT=		Highly reliable distributed coordination server
 DISTFILES=			${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
 SITES.${DISTNAME}-deps.tar.gz=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/
 
-BUILD_DEPENDS+=		apache-ivy>=2.2.0:../../devel/apache-ivy
+TOOL_DEPENDS+=		apache-ivy>=2.2.0:../../devel/apache-ivy
 
 USE_JAVA=		yes
 USE_JAVA2=		yes

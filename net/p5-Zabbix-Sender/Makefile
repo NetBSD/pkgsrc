@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:42:07 riastradh Exp $
 
 DISTNAME=	Zabbix-Sender-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -20,8 +20,8 @@ DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Zabbix/Sender/.packlist

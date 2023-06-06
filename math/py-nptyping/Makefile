@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/06 09:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:53 riastradh Exp $
 
 DISTNAME=	nptyping-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 # for pandas support
 #DEPENDS+=		${PYPKGPREFIX}-pandas>=0:../../math/py-pandas
 # unpackaged
-#BUILD_DEPENDS+=	# TODO: pandas-stubs-fork;python_version>="3.8"
+#TOOL_DEPENDS+=	# TODO: pandas-stubs-fork;python_version>="3.8"
 
 # unpackaged
 #TEST_DEPENDS+=	# TODO: beartype>=0.10.0;python_version>='3.10'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/01/22 14:35:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:08 riastradh Exp $
 
 DISTNAME=	pypcap-1.1
 PKGNAME=	${PYPKGPREFIX}-pcap-1.1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/dugsong/pypcap
 COMMENT=	Simplified object-oriented python module for libpcap
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
+TOOL_DEPENDS+=		${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python=	Makefile

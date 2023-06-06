@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:42:48 riastradh Exp $
 
 DISTNAME=		URI-Fetch-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 
-BUILD_DEPENDS+=		p5-Test-RequiresInternet>=0:../../net/p5-Test-RequiresInternet
+TOOL_DEPENDS+=		p5-Test-RequiresInternet>=0:../../net/p5-Test-RequiresInternet
 
 USE_LANGUAGES=		# empty
 

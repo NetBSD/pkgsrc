@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/04/19 08:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/06 12:42:15 riastradh Exp $
 
 POLICYKIT_VER=		0.9
 DISTNAME=		PolicyKit-${POLICYKIT_VER}
@@ -12,8 +12,8 @@ HOMEPAGE=		https://hal.freedesktop.org/
 COMMENT=		Framework for managing admin policies and privileges
 LICENSE=		mit
 
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PKG_SYSCONFSUBDIR=	PolicyKit
 

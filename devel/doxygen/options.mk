@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2022/03/30 16:35:27 micha Exp $
+# $NetBSD: options.mk,v 1.18 2023/06/06 12:40:36 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -15,7 +15,7 @@ PLIST.latex=	yes
 # XXX Clearly separate what is build time vs runtime, and move
 # build-time dependencies into USE_TOOLS framework.
 
-BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 DEPENDS+=	tex-a4wide>=2010nb1:../../print/tex-a4wide

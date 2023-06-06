@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/04/11 12:25:25 wen Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:26 riastradh Exp $
 
 DISTNAME=	Alien-Hunspell-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Alien-Hunspell
 COMMENT=	Perl5 module providing hunspell
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
+TOOL_DEPENDS+=	p5-Alien-Build-[0-9]*:../../devel/p5-Alien-Build
 
 DEPENDS+=	p5-HTML-LinkExtractor-[0-9]*:../../www/p5-HTML-LinkExtractor
 DEPENDS+=	p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions

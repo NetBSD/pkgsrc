@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/05/22 21:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/06/06 12:42:20 riastradh Exp $
 
 DISTNAME=	ksystemlog-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 

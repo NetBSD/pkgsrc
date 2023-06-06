@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2023/05/16 20:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2023/06/06 12:41:31 riastradh Exp $
 
 DISTNAME=	geeqie-2.0.1
 PKGREVISION=	7
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.geeqie.org/
 COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 # .../geeqie-2.0.1/scripts/generate-ClayRGB1998-icc-h.sh: xxd: not found
 TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 

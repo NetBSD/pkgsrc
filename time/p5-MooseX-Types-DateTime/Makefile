@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/06 12:42:36 riastradh Exp $
 
 DISTNAME=	MooseX-Types-DateTime-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=	p5-MooseX-Types>=0.30:../../devel/p5-MooseX-Types
 DEPENDS+=	p5-Time-Duration-Parse>=0.06:../../time/p5-Time-Duration-Parse
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=	p5-Test-Exception>=0.27:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Types/DateTime/.packlist

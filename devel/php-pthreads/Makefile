@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/03/07 08:11:02 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:09 riastradh Exp $
 
 MODNAME=	pthreads
 PECL_VERSION=	2.0.10
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/krakjoe/pthreads
 COMMENT=	PHP extension for POSIX threads support
 LICENSE=	php
 
-BUILD_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
+TOOL_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
 
 PHP_VERSIONS_ACCEPTED=	56
 

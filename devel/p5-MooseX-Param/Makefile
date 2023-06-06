@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:57 riastradh Exp $
 #
 
 DISTNAME=	MooseX-Param-0.02
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/MooseX-Param
 COMMENT=	Simple role to provide a standard param method
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Moose>=0.32:../../devel/p5-Moose
 
 USE_LANGUAGES=	# empty

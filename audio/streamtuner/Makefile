@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2023/04/19 08:08:05 adam Exp $
+# $NetBSD: Makefile,v 1.116 2023/06/06 12:40:18 riastradh Exp $
 
 DISTNAME=	streamtuner-0.99.99
 PKGREVISION=	75
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.nongnu.org/streamtuner/
 COMMENT=	Stream directory browser
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
+TOOL_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
 USE_TOOLS+=		gmake msgfmt pkg-config intltool
 USE_LIBTOOL=		yes

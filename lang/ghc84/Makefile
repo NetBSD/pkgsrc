@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/11/22 14:52:43 nia Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:41:43 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -190,7 +190,7 @@ STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 .if ${BUILD_SPHINX_HTML} != "no"
 BUILDLINK_DEPMETHOD.python:=	build
 .include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif
 
 # NetBSD 9.x have libcurses with a newer major version than the
@@ -201,7 +201,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 # installed libraries themselves, since the symlinks compatXX adds
 # to the /usr tree can't be applied.
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
-BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
+TOOL_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib:${WRKDIR}/lib
 .endif
 

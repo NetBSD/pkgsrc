@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:31:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:40:41 riastradh Exp $
 
 DISTNAME=	AnnoCPAN-Perldoc-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-IO-String>=0:../../devel/p5-IO-String
 
 # For test target
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

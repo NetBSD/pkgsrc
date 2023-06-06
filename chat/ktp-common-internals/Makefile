@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/04/23 14:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.42 2023/06/06 12:40:20 riastradh Exp $
 
 PKGREVISION= 37
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -17,7 +17,7 @@ USE_TOOLS+=	msgfmt
 TOOLS_BROKEN+=	perl
 
 DEPENDS+=	telepathy-mission-control5>=5.7.9:../../chat/telepathy-mission-control5
-BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/telepathy-qt/buildlink3.mk"

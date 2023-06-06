@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2023/04/19 08:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.163 2023/06/06 12:42:53 riastradh Exp $
 #
 
 DISTNAME=		gnome-desktop-2.32.1
@@ -20,7 +20,7 @@ AUTOCONF_REQD=		2.62
 
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
-BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png

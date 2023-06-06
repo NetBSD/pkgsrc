@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/01/29 21:14:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	gcr-3.38.1
 PKGREVISION=	6
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library for crypto UI and related tasks
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config

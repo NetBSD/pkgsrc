@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/04/19 08:10:15 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:31 riastradh Exp $
 
 DISTNAME=	colord-1.3.5
 PKGREVISION=	14
@@ -56,7 +56,7 @@ INSTALLATION_DIRS+=	share/vala/vapi
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-BUILD_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/colord/colord.vapi ${DESTDIR}${PREFIX}/share/vala/vapi/

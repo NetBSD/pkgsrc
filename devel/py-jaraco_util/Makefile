@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:13 riastradh Exp $
 
 DISTNAME=	jaraco.util-11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
@@ -13,7 +13,7 @@ COMMENT=	General utility modules that supply commonly-used functionality
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools-[0-9]*:../../devel/py-hgtools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hgtools-[0-9]*:../../devel/py-hgtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.0:../../devel/py-test
 

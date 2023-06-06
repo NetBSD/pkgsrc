@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/11/03 19:04:01 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/06 12:41:44 riastradh Exp $
 
 DISTNAME=	hugs98-Sep2006
 PKGNAME=	hugs98-200609
@@ -26,7 +26,7 @@ PKG_SUPPORTED_OPTIONS=	readline
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ARGS+=	ice_cv_traditional_cpp=${PREFIX}/bin/tradcpp
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/01/22 13:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/06 12:41:16 riastradh Exp $
 
 DISTNAME=	talloc-2.4.0
 CATEGORIES=	devel
@@ -9,8 +9,8 @@ HOMEPAGE=	https://talloc.samba.org/talloc/doc/html/index.html
 COMMENT=	Hierarchical pool based memory allocator with destructors
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # include/talloc.h
 CONFLICTS+=	samba<=4.6.8nb3

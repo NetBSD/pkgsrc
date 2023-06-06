@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:47 riastradh Exp $
 
 DISTNAME=	Debug-Client-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -14,9 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-PadWalker>=1.9.2:../../devel/p5-PadWalker
 DEPENDS+=	p5-Term-ReadLine-Perl>=1.0303:../../devel/p5-Term-ReadLine-Perl
 
-BUILD_DEPENDS+=		p5-Test-Class>=0.36:../../devel/p5-Test-Class
-BUILD_DEPENDS+=		p5-Test-Deep>=0.108:../../devel/p5-Test-Deep
-#BUILD_DEPENDS+=	{perl>=5.14.2,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
+TOOL_DEPENDS+=		p5-Test-Class>=0.36:../../devel/p5-Test-Class
+TOOL_DEPENDS+=		p5-Test-Deep>=0.108:../../devel/p5-Test-Deep
+#TOOL_DEPENDS+=	{perl>=5.14.2,p5-Test-Simple>=0.98}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST=		auto/Debug/Client/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

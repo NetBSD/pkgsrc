@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/05/22 21:00:01 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/06/06 12:41:35 riastradh Exp $
 
 DISTNAME=	prison-${KF5VER}
 PKGREVISION=	7
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	pkg-config
 

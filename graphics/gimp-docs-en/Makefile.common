@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2019/11/02 22:37:57 rillig Exp $
+# $NetBSD: Makefile.common,v 1.21 2023/06/06 12:41:32 riastradh Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -28,9 +28,9 @@ LICENSE=	gnu-fdl-v1.2
 # Makefile:1378: recipe for target 'html/de/index.html' failed
 MAKE_JOBS_SAFE=	no
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILD_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/gimp-docs-en/distinfo
 PATCHDIR=	${.CURDIR}/../../graphics/gimp-docs-en/patches

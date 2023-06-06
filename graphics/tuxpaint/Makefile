@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/04/19 08:10:27 adam Exp $
+# $NetBSD: Makefile,v 1.112 2023/06/06 12:41:36 riastradh Exp $
 
 DISTNAME=	tuxpaint-0.9.23
 PKGREVISION=	16
@@ -11,7 +11,7 @@ COMMENT=	Drawing program for small children
 # program itself is gnu-gpl-v2, other licenses are packaged fonts
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND public-domain AND modified-bsd
 
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_TOOLS+=		bash:run gmake gsed msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES

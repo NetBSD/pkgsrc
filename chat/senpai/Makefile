@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/05 19:37:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:22 riastradh Exp $
 
 DISTNAME=	senpai-v0.2.0
 PKGNAME=	${DISTNAME:S,-v,-,}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://git.sr.ht/~taiite/senpai/
 COMMENT=	Modern terminal IRC client
 LICENSE=	isc
 
-BUILD_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
+TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 GO_BUILD_PATTERN=	./...

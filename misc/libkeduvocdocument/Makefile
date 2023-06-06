@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/05/22 21:00:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:57 riastradh Exp $
 
 DISTNAME=	libkeduvocdocument-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kdeedu-data>=${KAPPSVER}:../../misc/kdeedu-data
 
 USE_TOOLS+=	msgmerge

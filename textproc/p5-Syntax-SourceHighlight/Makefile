@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/04/23 14:26:32 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/06 12:42:29 riastradh Exp $
 
 DISTNAME=	Syntax-SourceHighlight-2.1.2
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Syntax-SourceHighlight
 COMMENT=	Perl binding to GNU source-highlight
 LICENSE=	public-domain
 
-BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=1.12:../../devel/p5-ExtUtils-PkgConfig
+TOOL_DEPENDS+=	p5-ExtUtils-PkgConfig>=1.12:../../devel/p5-ExtUtils-PkgConfig
 
 PERL5_PACKLIST=	auto/Syntax/SourceHighlight/.packlist
 

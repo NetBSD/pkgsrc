@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:44 riastradh Exp $
 
 DISTNAME=	HTTP-Body-1.22
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTTP/Body/.packlist

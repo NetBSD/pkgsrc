@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/05/28 06:01:30 adam Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/06 12:42:51 riastradh Exp $
 
 DISTNAME=	tinyproxy-1.11.1
 CATEGORIES=	www
@@ -11,8 +11,8 @@ HOMEPAGE=	https://tinyproxy.github.io/
 COMMENT=	Lightweight HTTP/SSL proxy
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/03/29 09:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:14 riastradh Exp $
 
 DISTNAME=	pluggy-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pluggy
 COMMENT=	Plugin and hook calling mechanisms for python
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 

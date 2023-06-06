@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/01/29 21:15:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:40:16 riastradh Exp $
 
 DISTNAME=	Mixer-0.4.1
 PKGNAME=	deforaos-mixer-0.4.1
@@ -15,8 +15,8 @@ LICENSE=	2-clause-bsd
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CFLAGS+=	-fPIC
 

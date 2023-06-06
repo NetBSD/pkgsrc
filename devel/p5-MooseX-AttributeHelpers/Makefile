@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:40:55 riastradh Exp $
 #
 
 DISTNAME=	MooseX-AttributeHelpers-0.25
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 DEPENDS+=	p5-Moose>=0.56:../../devel/p5-Moose
 
 PERL5_PACKLIST=		auto/MooseX/AttributeHelpers/.packlist

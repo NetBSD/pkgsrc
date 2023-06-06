@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/06/28 11:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/06/06 12:42:27 riastradh Exp $
 
 DISTNAME=	PDF-Create-1.46
 PKGNAME=	p5-${DISTNAME}
@@ -19,8 +19,8 @@ DEPENDS+=	p5-File-ShareDir-Install>=0:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 
-BUILD_DEPENDS=	p5-Test-LeakTrace>=0.14:../../devel/p5-Test-LeakTrace
-BUILD_DEPENDS+=	p5-Test-CheckManifest>=0.9:../../devel/p5-Test-CheckManifest
+TOOL_DEPENDS=	p5-Test-LeakTrace>=0.14:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=	p5-Test-CheckManifest>=0.9:../../devel/p5-Test-CheckManifest
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

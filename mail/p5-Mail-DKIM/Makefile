@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:34:28 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=		Mail-DKIM-1.20220520
 PKGNAME=		p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=		p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
 DEPENDS+=		p5-Mail-AuthenticationResults>=1.20180215:../../mail/p5-Mail-AuthenticationResults
 # TEST_DEPENDS
-BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Mock-[0-9]*:../../net/p5-Net-DNS-Resolver-Mock
-BUILD_DEPENDS+=		p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
+TOOL_DEPENDS+=		p5-Net-DNS-Resolver-Mock-[0-9]*:../../net/p5-Net-DNS-Resolver-Mock
+TOOL_DEPENDS+=		p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Mail/DKIM/.packlist

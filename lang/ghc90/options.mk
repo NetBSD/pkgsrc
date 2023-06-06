@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2022/02/06 05:31:57 pho Exp $
+# $NetBSD: options.mk,v 1.6 2023/06/06 12:41:43 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 
@@ -18,7 +18,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 # can cause a transitional problem when a new compiler arrives with NCG for
 # a platform which used to lack one. In this case we have to either (1)
 # build a new bootkit for the platform with LLVM backend disabled, or (2)
-# reuse the old bootkit by putting llvm/clang in BUILD_DEPENDS (regardless
+# reuse the old bootkit by putting llvm/clang in TOOL_DEPENDS (regardless
 # of user choice) and arrange parameters so that they are used only by the
 # stage-0 compiler. We don't have an infrastructure for (2), as it's not
 # worth the additional complexity, so (1) is the only option atm.

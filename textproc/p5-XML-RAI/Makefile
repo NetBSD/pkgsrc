@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:36:43 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/06 12:42:32 riastradh Exp $
 
 DISTNAME=	XML-RAI-1.3031
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Task-Weaken>=1.02:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-XML-RSS-Parser>=4.0:../../textproc/p5-XML-RSS-Parser
 
-BUILD_DEPENDS+=	p5-Test-Weaken-[0-9]*:../../devel/p5-Test-Weaken
+TOOL_DEPENDS+=	p5-Test-Weaken-[0-9]*:../../devel/p5-Test-Weaken
 
 PERL5_PACKLIST=		auto/XML/RAI/.packlist
 

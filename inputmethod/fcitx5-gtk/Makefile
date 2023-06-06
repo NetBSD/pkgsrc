@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/16 21:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:38 riastradh Exp $
 
 DISTNAME=	fcitx5-gtk-5.0.4
 PKGREVISION=	5
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/fcitx/fcitx5-gtk
 COMMENT=	GTK input method module for fcitx5
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

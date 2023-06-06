@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/02/26 13:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:41:11 riastradh Exp $
 
 DISTNAME=	clickclick-20.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # tests are not included in pypi distfile
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

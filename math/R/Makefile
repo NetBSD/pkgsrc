@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2023/04/19 08:10:44 adam Exp $
+# $NetBSD: Makefile,v 1.240 2023/06/06 12:41:50 riastradh Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -119,24 +119,24 @@ INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
 ## to build NEWS.pdf
-#BUILD_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-#BUILD_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
-#BUILD_DEPENDS+=		tex-ae-[0-9]*:../../fonts/tex-ae
-#BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
-#BUILD_DEPENDS+=		tex-tools-[0-9]*:../../print/tex-tools
-#BUILD_DEPENDS+=		tex-url-[0-9]*:../../print/tex-url
-#BUILD_DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
-#BUILD_DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
-#BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
-#BUILD_DEPENDS+=		tex-cm-super-[0-9]*:../../fonts/tex-cm-super
-#BUILD_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
-#BUILD_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
-#BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
-#BUILD_DEPENDS+=		tex-iftex>=1.0d:../../print/tex-iftex
-#BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
-#BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
-#BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
-#BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
+#TOOL_DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+#TOOL_DEPENDS+=		tex-metafont-[0-9]*:../../fonts/tex-metafont
+#TOOL_DEPENDS+=		tex-ae-[0-9]*:../../fonts/tex-ae
+#TOOL_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
+#TOOL_DEPENDS+=		tex-tools-[0-9]*:../../print/tex-tools
+#TOOL_DEPENDS+=		tex-url-[0-9]*:../../print/tex-url
+#TOOL_DEPENDS+=		tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+#TOOL_DEPENDS+=		tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+#TOOL_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
+#TOOL_DEPENDS+=		tex-cm-super-[0-9]*:../../fonts/tex-cm-super
+#TOOL_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
+#TOOL_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
+#TOOL_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
+#TOOL_DEPENDS+=		tex-iftex>=1.0d:../../print/tex-iftex
+#TOOL_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
+#TOOL_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
+#TOOL_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
+#TOOL_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure

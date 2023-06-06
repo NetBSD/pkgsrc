@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:19 riastradh Exp $
 
 DISTNAME=	Padre-Plugin-Nopaste-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Module-Util-[0-9]*:../../devel/p5-Module-Util
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-Padre>=0.30:../../editors/p5-Padre
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/Padre/Plugin/Nopaste/.packlist
 PERL5_MODULE_TYPE=	Module::Install

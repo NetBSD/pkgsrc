@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:31:27 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:40:31 riastradh Exp $
 
 DISTNAME=	Jifty-DBI-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
 DEPENDS+=	p5-Class-Trigger>=0.12:../../devel/p5-Class-Trigger
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
-BUILD_DEPENDS+=	p5-DBD-SQLite>=1.14:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-DBD-SQLite>=1.14:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-DBSchema>=0.34:../../databases/p5-DBIx-DBSchema
 DEPENDS+=	p5-Data-Page-[0-9]*:../../devel/p5-Data-Page
@@ -34,7 +34,7 @@ DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-Lingua-EN-Inflect-[0-9]*:../../textproc/p5-Lingua-EN-Inflect
 DEPENDS+=	p5-Object-Declare>=0.22:../../devel/p5-Object-Declare
 DEPENDS+=	p5-Scalar-Defer>=0.10:../../devel/p5-Scalar-Defer
-BUILD_DEPENDS+=	p5-Test-Warn>=0.10:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Warn>=0.10:../../devel/p5-Test-Warn
 DEPENDS+=	p5-Time-Duration-Parse>=0.06:../../time/p5-Time-Duration-Parse
 DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require

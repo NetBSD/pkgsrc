@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/05/22 21:00:10 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/06/06 12:42:53 riastradh Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 PKGREVISION=	6
@@ -11,8 +11,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
-BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	kded>=${KF5VER}:../../x11/kded
 DEPENDS+=	kdesignerplugin>=${KF5VER}:../../x11/kdesignerplugin
 

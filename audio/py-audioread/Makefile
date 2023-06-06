@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/04/30 18:31:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:40:17 riastradh Exp $
 
 DISTNAME=	audioread-2.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/sampsyo/audioread
 COMMENT=	Audio file decoder
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 

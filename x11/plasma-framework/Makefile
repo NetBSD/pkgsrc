@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/05/22 21:00:11 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/06/06 12:42:54 riastradh Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	gmake msgmerge pkg-config
 

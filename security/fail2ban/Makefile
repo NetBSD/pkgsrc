@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/12/01 17:36:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:13 riastradh Exp $
 
 DISTNAME=	fail2ban-0.11.2
 PKGREVISION=	2
@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PYTHON_VERSIONS_ACCEPTED=	39 38
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:24 riastradh Exp $
 
 DISTNAME=	black-hole-solver-1.10.1
 PKGREVISION=	2
@@ -20,7 +20,7 @@ CMAKE_ARGS+=	-DBUILD_STATIC_LIBRARY=OFF
 PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILD_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+TOOL_DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 
 PKGCONFIG_OVERRIDE+=	libblack-hole-solver.pc.in
 

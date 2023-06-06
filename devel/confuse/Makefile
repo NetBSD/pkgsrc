@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/12/05 12:35:25 nia Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:35 riastradh Exp $
 
 DISTNAME=	confuse-3.3
 CATEGORIES=	devel
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/libconfuse/libconfuse
 COMMENT=	Configuration file parser library
 LICENSE=	isc
 
-BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-shared

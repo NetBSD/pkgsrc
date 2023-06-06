@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:00 riastradh Exp $
 #
 
 DISTNAME=		MouseX-NativeTraits-1.09
@@ -15,8 +15,8 @@ LICENSE=		${PERL5_LICENSE}
 MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/MouseX/NativeTraits/.packlist
 
-BUILD_DEPENDS+=		p5-Any-Moose>=0.13:../../devel/p5-Any-Moose
-BUILD_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=		p5-Any-Moose>=0.13:../../devel/p5-Any-Moose
+TOOL_DEPENDS+=		p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 
 DEPENDS+=		p5-Mouse>=0.82:../../devel/p5-Mouse
 

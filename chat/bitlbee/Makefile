@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/04/19 08:09:14 adam Exp $
+# $NetBSD: Makefile,v 1.91 2023/06/06 12:40:19 riastradh Exp $
 
 DISTNAME=		bitlbee-3.6
 PKGREVISION=		10
@@ -10,9 +10,9 @@ HOMEPAGE=		https://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=		w3m-[0-9]*:../../www/w3m
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=		w3m-[0-9]*:../../www/w3m
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.13 2022/07/07 16:26:37 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.14 2023/06/06 12:41:43 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -79,8 +79,8 @@ SITES.${i}?=	${MASTER_SITE_LOCAL}
 # Current bootstrap binary kit for SunOS is built with GNU libiconv
 # and ncurses6.
 .if !empty(MACHINE_PLATFORM:MSunOS-*)
-BUILD_DEPENDS+=	libiconv>=1.9.1:../../converters/libiconv
-BUILD_DEPENDS+=	ncurses>=6.0:../../devel/ncurses
+TOOL_DEPENDS+=	libiconv>=1.9.1:../../converters/libiconv
+TOOL_DEPENDS+=	ncurses>=6.0:../../devel/ncurses
 .endif
 
 .if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"

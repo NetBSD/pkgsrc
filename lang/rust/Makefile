@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.282 2023/05/03 22:39:09 he Exp $
+# $NetBSD: Makefile,v 1.283 2023/06/06 12:41:46 riastradh Exp $
 
 DISTNAME=	rustc-1.69.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -397,8 +397,8 @@ RUST_BOOTSTRAP_PATH?=	${WRKDIR}/rust-bootstrap
 .endif
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
-BUILD_DEPENDS+=		gzip>=0:../../archivers/gzip
+TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
+TOOL_DEPENDS+=		gzip>=0:../../archivers/gzip
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
@@ -665,7 +665,7 @@ stage0-bootstrap: install
 .if (${MACHINE_PLATFORM:MNetBSD-*-i386} || \
      ${MACHINE_PLATFORM:MNetBSD-*-sparc64}) \
     && empty(OS_VERSION:M8.*)
-BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
+TOOL_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
 .include "../../mk/atomic64.mk"
@@ -677,7 +677,7 @@ BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 DEPENDS+=	libatomic-links>=0:../../devel/libatomic-links
 .endif
 
-BUILD_DEPENDS+= cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+= cmake-[0-9]*:../../devel/cmake
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"

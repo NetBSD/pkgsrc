@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:29 riastradh Exp $
 
 DISTNAME=	DBICx-TestDatabase-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# empty
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/DBICx/TestDatabase/.packlist
 
-BUILD_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
+TOOL_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-SQL-Translator-[0-9]*:../../databases/p5-SQL-Translator
 

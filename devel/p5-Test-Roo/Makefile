@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:07 riastradh Exp $
 
 DISTNAME=		Test-Roo-1.004
 PKGNAME=		p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Moo>=1.000008:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0:../../devel/p5-MooX-Types-MooseLike
 DEPENDS+=	p5-strictures>=0:../../devel/p5-strictures
 
-BUILD_DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
+TOOL_DEPENDS+=	p5-Capture-Tiny>=0.12:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=		auto/Test/Roo/.packlist
 

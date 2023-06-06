@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-LibXML-Simple-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-File-Slurp-Tiny-[0-9]*:../../devel/p5-File-Slurp-Tiny
 DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
 EXTRACT_USING=	bsdtar
 

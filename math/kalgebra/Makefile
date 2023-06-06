@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/05/22 21:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2023/06/06 12:41:51 riastradh Exp $
 
 DISTNAME=	kalgebra-${KAPPSVER}
 PKGREVISION=	6
@@ -10,7 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

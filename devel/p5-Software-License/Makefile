@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:33:13 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:04 riastradh Exp $
 
 DISTNAME=	Software-License-0.104001
 # put a period in the center of 6 digit, for example, 0.103004 -> 0.103.004
@@ -12,13 +12,13 @@ HOMEPAGE=	https://metacpan.org/release/Software-License
 COMMENT=	Perl 5 module which provide templated software licenses
 LICENSE=	${PERL5_LICENSE}
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Data-Section-[0-9]*:../../devel/p5-Data-Section
 DEPENDS+=		p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
 DEPENDS+=		p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 
 # for make test
-BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+TOOL_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 PERL5_PACKLIST=		auto/Software/License/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

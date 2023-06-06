@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/01/03 17:37:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/06 12:41:35 riastradh Exp $
 
 DISTNAME=	Image-Sane-5
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Exception-Class>=0:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Readonly>=0:../../devel/p5-Readonly
-BUILD_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
-BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig-[0-9]*:../../devel/p5-ExtUtils-PkgConfig
+TOOL_DEPENDS+=	p5-ExtUtils-Depends-[0-9]*:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-PkgConfig-[0-9]*:../../devel/p5-ExtUtils-PkgConfig
 TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 TEST_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 TEST_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick

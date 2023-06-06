@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/05/20 06:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/06 12:40:49 riastradh Exp $
 
 DISTNAME=	File-MimeInfo-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-File-DesktopEntry-[0-9]*:../../devel/p5-File-DesktopEntry
 DEPENDS+=	p5-Encode-Locale-[0-9]*:../../textproc/p5-Encode-Locale
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
 # for make test (when t/05_more.t 'require (File::DesktopEntry);'
-BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/File/MimeInfo/.packlist
 

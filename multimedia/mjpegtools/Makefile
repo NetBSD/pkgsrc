@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/08/18 01:09:32 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/06 12:42:02 riastradh Exp $
 
 DISTNAME=	mjpegtools-2.1.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=		mplex-[0-9]*
 DEPENDS+=		toolame>=02l:../../audio/toolame
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

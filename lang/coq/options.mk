@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2022/06/21 02:21:22 dholland Exp $
+# $NetBSD: options.mk,v 1.14 2023/06/06 12:41:41 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	coqide
 CONFIGURE_ARGS+=		-with-doc yes
 PLIST.doc=			yes
 
-BUILD_DEPENDS+=			hevea>=1.10:../../textproc/hevea
+TOOL_DEPENDS+=			hevea>=1.10:../../textproc/hevea
 
 #
 # python
@@ -25,46 +25,46 @@ SUBST_FILES.sphinx-build+=	Makefile.doc configure.ml doc/dune
 SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
 TOOL_DEPENDS+=			py[0-9]*-sphinx-[0-9]*:../../textproc/py-sphinx
-BUILD_DEPENDS+=			py[0-9]*-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
-BUILD_DEPENDS+=			py[0-9]*-sphinxcontrib-bibtex-[0-9]*:../../textproc/py-sphinxcontrib-bibtex
-BUILD_DEPENDS+=			py[0-9]*-pybtex-[0-9]*:../../textproc/py-pybtex
-BUILD_DEPENDS+=			py[0-9]*-pybtex-docutils-[0-9]*:../../textproc/py-pybtex-docutils
-BUILD_DEPENDS+=			py[0-9]*-pexpect-[0-9]*:../../devel/py-pexpect
-BUILD_DEPENDS+=			py[0-9]*-antlr4-[0-9]*:../../textproc/py-antlr4
-BUILD_DEPENDS+=			py[0-9]*-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TOOL_DEPENDS+=			py[0-9]*-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
+TOOL_DEPENDS+=			py[0-9]*-sphinxcontrib-bibtex-[0-9]*:../../textproc/py-sphinxcontrib-bibtex
+TOOL_DEPENDS+=			py[0-9]*-pybtex-[0-9]*:../../textproc/py-pybtex
+TOOL_DEPENDS+=			py[0-9]*-pybtex-docutils-[0-9]*:../../textproc/py-pybtex-docutils
+TOOL_DEPENDS+=			py[0-9]*-pexpect-[0-9]*:../../devel/py-pexpect
+TOOL_DEPENDS+=			py[0-9]*-antlr4-[0-9]*:../../textproc/py-antlr4
+TOOL_DEPENDS+=			py[0-9]*-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 
 #
 # tex
 #
 
-BUILD_DEPENDS+=			latexmk-[0-9]*:../../print/latexmk
-BUILD_DEPENDS+=			tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=			tex-moreverb-[0-9]*:../../print/tex-moreverb
-BUILD_DEPENDS+=			tex-preprint-[0-9]*:../../print/tex-preprint
-BUILD_DEPENDS+=			tex-ucs-[0-9]*:../../print/tex-ucs
-BUILD_DEPENDS+=			tex-xetex-[0-9]*:../../print/tex-xetex
-BUILD_DEPENDS+=			tex-polyglossia-[0-9]*:../../print/tex-polyglossia
-BUILD_DEPENDS+=			tex-fncychap-[0-9]*:../../print/tex-fncychap
-BUILD_DEPENDS+=			tex-tabulary-[0-9]*:../../print/tex-tabulary
-BUILD_DEPENDS+=			tex-varwidth-[0-9]*:../../print/tex-varwidth
-BUILD_DEPENDS+=			tex-parskip-[0-9]*:../../print/tex-parskip
-BUILD_DEPENDS+=			tex-upquote-[0-9]*:../../print/tex-upquote
-BUILD_DEPENDS+=			tex-capt-of-[0-9]*:../../print/tex-capt-of
-BUILD_DEPENDS+=			tex-needspace-[0-9]*:../../print/tex-needspace
-BUILD_DEPENDS+=			tex-unicode-math-[0-9]*:../../math/tex-unicode-math
-BUILD_DEPENDS+=			tex-microtype-[0-9]*:../../print/tex-microtype
-BUILD_DEPENDS+=			tex-adjustbox-[0-9]*:../../print/tex-adjustbox
-BUILD_DEPENDS+=			tex-xindy-[0-9]*:../../textproc/tex-xindy
-BUILD_DEPENDS+=			tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=			tex-xcolor-[0-9]*:../../print/tex-xcolor
-BUILD_DEPENDS+=			tex-xkeyval-[0-9]*:../../print/tex-xkeyval
-BUILD_DEPENDS+=			tex-titlesec-[0-9]*:../../print/tex-titlesec
-BUILD_DEPENDS+=			tex-framed-[0-9]*:../../print/tex-framed
-BUILD_DEPENDS+=			tex-float-[0-9]*:../../print/tex-float
-BUILD_DEPENDS+=			tex-wrapfig-[0-9]*:../../print/tex-wrapfig
-BUILD_DEPENDS+=			tex-lm-math-[0-9]*:../../fonts/tex-lm-math
-BUILD_DEPENDS+=			tex-gnu-freefont-[0-9]*:../../fonts/tex-gnu-freefont
-BUILD_DEPENDS+=			dvipsk-[0-9]*:../../print/dvipsk
+TOOL_DEPENDS+=			latexmk-[0-9]*:../../print/latexmk
+TOOL_DEPENDS+=			tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=			tex-moreverb-[0-9]*:../../print/tex-moreverb
+TOOL_DEPENDS+=			tex-preprint-[0-9]*:../../print/tex-preprint
+TOOL_DEPENDS+=			tex-ucs-[0-9]*:../../print/tex-ucs
+TOOL_DEPENDS+=			tex-xetex-[0-9]*:../../print/tex-xetex
+TOOL_DEPENDS+=			tex-polyglossia-[0-9]*:../../print/tex-polyglossia
+TOOL_DEPENDS+=			tex-fncychap-[0-9]*:../../print/tex-fncychap
+TOOL_DEPENDS+=			tex-tabulary-[0-9]*:../../print/tex-tabulary
+TOOL_DEPENDS+=			tex-varwidth-[0-9]*:../../print/tex-varwidth
+TOOL_DEPENDS+=			tex-parskip-[0-9]*:../../print/tex-parskip
+TOOL_DEPENDS+=			tex-upquote-[0-9]*:../../print/tex-upquote
+TOOL_DEPENDS+=			tex-capt-of-[0-9]*:../../print/tex-capt-of
+TOOL_DEPENDS+=			tex-needspace-[0-9]*:../../print/tex-needspace
+TOOL_DEPENDS+=			tex-unicode-math-[0-9]*:../../math/tex-unicode-math
+TOOL_DEPENDS+=			tex-microtype-[0-9]*:../../print/tex-microtype
+TOOL_DEPENDS+=			tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+TOOL_DEPENDS+=			tex-xindy-[0-9]*:../../textproc/tex-xindy
+TOOL_DEPENDS+=			tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=			tex-xcolor-[0-9]*:../../print/tex-xcolor
+TOOL_DEPENDS+=			tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+TOOL_DEPENDS+=			tex-titlesec-[0-9]*:../../print/tex-titlesec
+TOOL_DEPENDS+=			tex-framed-[0-9]*:../../print/tex-framed
+TOOL_DEPENDS+=			tex-float-[0-9]*:../../print/tex-float
+TOOL_DEPENDS+=			tex-wrapfig-[0-9]*:../../print/tex-wrapfig
+TOOL_DEPENDS+=			tex-lm-math-[0-9]*:../../fonts/tex-lm-math
+TOOL_DEPENDS+=			tex-gnu-freefont-[0-9]*:../../fonts/tex-gnu-freefont
+TOOL_DEPENDS+=			dvipsk-[0-9]*:../../print/dvipsk
 .else
 CONFIGURE_ARGS+=		-with-doc no
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/04/21 15:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:25 riastradh Exp $
 
 DISTNAME=	fortune-it-1.99
 PKGNAME=	${DISTNAME:S/fortune/fortunes/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.fortune-it.net/
 COMMENT=	Italian fortunes
 LICENSE=	public-domain
 
-BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
+TOOL_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
 STRFILE=	${LOCALBASE}/bin/strfile
 

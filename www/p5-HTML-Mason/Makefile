@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/04/29 09:08:45 wen Exp $
+# $NetBSD: Makefile,v 1.64 2023/06/06 12:42:43 riastradh Exp $
 
 DISTNAME=	HTML-Mason-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Log-Any>=0.08:../../devel/p5-Log-Any
 DEPENDS+=	p5-Params-Validate>=0.70:../../devel/p5-Params-Validate
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 

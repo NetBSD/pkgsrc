@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:34 riastradh Exp $
 
 DISTNAME=	libpgf-src-6.14.12
 PKGNAME=	${DISTNAME:S/-src//}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 # https://sourceforge.net/p/libpgf/bugs/7/
-BUILD_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 pre-patch:
 	${CP} ${WRKSRC}/configure.ac ${WRKSRC}/configure.ac.orig

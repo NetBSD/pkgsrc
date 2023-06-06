@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/06/03 13:15:12 wen Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:40:52 riastradh Exp $
 
 DISTNAME=		Log-Dispatch-Array-1.005
 PKGNAME=		p5-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 
 # for make test
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
-BUILD_DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
-BUILD_DEPENDS+=	p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+TOOL_DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
+TOOL_DEPENDS+=	p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
 
 PERL5_PACKLIST=		auto/Log/Dispatch/Array/.packlist
 

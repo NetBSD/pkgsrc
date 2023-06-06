@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/30 19:04:21 plunky Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:41:58 riastradh Exp $
 
 DISTNAME=	xdg-utils-1.1.3
 PKGREVISION=	3
@@ -10,8 +10,8 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xdg-utils/
 COMMENT=	Tools to assist applications with various desktop integration tasks
 LICENSE=	mit
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-BUILD_DEPENDS+=	w3m-[0-9]*:../../www/w3m
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	w3m-[0-9]*:../../www/w3m
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none

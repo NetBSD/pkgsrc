@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/06/30 11:18:50 nia Exp $
+# $NetBSD: Makefile,v 1.58 2023/06/06 12:42:19 riastradh Exp $
 
 DISTNAME=	duplicity-0.8.20
 PKGREVISION=	3
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-fasteners-[0-9]*:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 

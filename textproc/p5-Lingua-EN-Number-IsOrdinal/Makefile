@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/06 12:42:27 riastradh Exp $
 
 DISTNAME=	Lingua-EN-Number-IsOrdinal-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Lingua-EN-FindNumber-[0-9]*:../../textproc/p5-Lingua-EN-FindNumber
 
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
 USE_LANGUAGES=	# empty
 

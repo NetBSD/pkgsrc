@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:41:09 riastradh Exp $
 
 DISTNAME=	signatures-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/signatures/.packlist
 #PERL5_MODULE_TYPE=	Module::Install::Bundled
 
-BUILD_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+TOOL_DEPENDS+=	p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 
 DEPENDS+=	p5-B-Hooks-EndOfScope>=0.08:../../devel/p5-B-Hooks-EndOfScope
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/08/24 07:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:42:16 riastradh Exp $
 
 DISTNAME=	python-gnupg-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-build
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 DEPENDS+=	gnupg2>=2.2.0:../../security/gnupg2
 
 USE_LANGUAGES=	# none

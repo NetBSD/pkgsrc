@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/02/09 09:57:01 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/06 12:41:34 riastradh Exp $
 
 DISTNAME=	libjpeg-turbo-2.1.5.1
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v2 AND ijg # OR wxWindows Library Licence, Version 3.1
 CONFLICTS=	jpeg-[0-9]*
 
 .if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == i386
-BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/25 12:53:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:25 riastradh Exp $
 #
 
 DISTNAME=	mecab-naist-jdic-0.6.3-20100801
@@ -12,7 +12,7 @@ HOMEPAGE=	http://osdn.jp/projects/naist-jdic/wiki/FrontPage
 COMMENT=	Japanese Morphological Dictionary for MeCab
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	mecab-base-[0-9]*:../../textproc/mecab-base
+TOOL_DEPENDS+=	mecab-base-[0-9]*:../../textproc/mecab-base
 
 GNU_CONFIGURE=	yes
 

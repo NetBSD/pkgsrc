@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/19 08:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:40:16 riastradh Exp $
 #
 
 DISTNAME=	flactag-2.0.4
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

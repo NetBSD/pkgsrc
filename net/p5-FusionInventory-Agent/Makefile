@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:05 riastradh Exp $
 
 DISTNAME=	FusionInventory-Agent-2.6
 PKGNAME=	p5-${DISTNAME}
@@ -38,11 +38,11 @@ DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
 DEPENDS+=	p5-Net-SNMP-[0-9]*:../../net/p5-Net-SNMP
 DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
-BUILD_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
+TOOL_DEPENDS+=	p5-Test-MockObject-[0-9]*:../../devel/p5-Test-MockObject
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST=	auto/FusionInventory/Agent/.packlist
 

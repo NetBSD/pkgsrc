@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/12/08 16:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.53 2023/06/06 12:40:26 riastradh Exp $
 
 DISTNAME=	elasticsearch-6.8.8
 PKGREVISION=	1
@@ -18,7 +18,7 @@ JNA=			jna-4.5.1
 DISTFILES=		${DEFAULT_DISTFILES} ${JNA}.tar.gz
 SITES.${JNA}.tar.gz=	-${MASTER_SITE_GITHUB:=java-native-access/}jna/archive/${JNA:S/jna-//}.tar.gz
 
-BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run

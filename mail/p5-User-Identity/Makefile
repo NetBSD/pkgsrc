@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/01/27 04:08:58 wen Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:41:49 riastradh Exp $
 
 DISTNAME=	User-Identity-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Helps maintaining user information from various sources
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Geography-Countries>=1.4:../../geography/p5-Geography-Countries
-BUILD_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod>=1.0:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=	auto/User/Identity/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/26 10:30:15 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	meera-${GITLAB_TAG}
 PKGNAME=	ttf-meera-7.0.3.20191223
@@ -19,8 +19,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	gmake
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
-BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
+TOOL_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
+TOOL_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 FONTDIR=		${PREFIX}/share/fonts/X11/TTF
 FONTS_DIRS.ttf=		${FONTDIR}

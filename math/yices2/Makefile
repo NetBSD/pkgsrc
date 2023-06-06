@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/07/13 19:45:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:53 riastradh Exp $
 
 PKGNAME=	yices2-2.6.1
 DISTNAME=	Yices-${PKGVERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://yices.csl.sri.com/
 COMMENT=	Yices 2 SMT solver
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_TOOLS+=		autoconf bash gmake
 USE_LANGUAGES=		c

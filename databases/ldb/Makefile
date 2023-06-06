@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/29 08:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:40:27 riastradh Exp $
 
 DISTNAME=	ldb-2.7.2
 CATEGORIES=	databases
@@ -9,8 +9,8 @@ HOMEPAGE=	https://ldb.samba.org/
 COMMENT=	LDAP-like embedded database
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

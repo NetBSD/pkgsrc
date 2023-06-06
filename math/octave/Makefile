@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2023/05/31 21:37:51 adam Exp $
+# $NetBSD: Makefile,v 1.244 2023/06/06 12:41:51 riastradh Exp $
 
 DISTNAME=	octave-8.2.0
 CATEGORIES=	math
@@ -10,12 +10,12 @@ HOMEPAGE=	https://octave.org/
 COMMENT=	High-level language, intended for numerical computations
 LICENSE=	gnu-gpl-v3
 
-# These BUILD_DEPENDS are only needed if we need to rebuild the documentation
-#BUILD_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
-#BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-#BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-#BUILD_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
-#BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+# These TOOL_DEPENDS are only needed if we need to rebuild the documentation
+#TOOL_DEPENDS+=	tex-latex-fonts-[0-9]*:../../fonts/tex-latex-fonts
+#TOOL_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+#TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+#TOOL_DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
+#TOOL_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 #TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot

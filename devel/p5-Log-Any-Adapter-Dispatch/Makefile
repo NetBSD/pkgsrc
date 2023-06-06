@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:52 riastradh Exp $
 #
 
 DISTNAME=	Log-Any-Adapter-Dispatch-0.08
@@ -16,8 +16,8 @@ DEPENDS+=	p5-Log-Any-[0-9]*:../../devel/p5-Log-Any
 DEPENDS+=	p5-Log-Dispatch>=2.26:../../devel/p5-Log-Dispatch
 
 # for make test
-BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
-BUILD_DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
+TOOL_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+TOOL_DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
 
 PERL5_PACKLIST=		auto/Log/Any/Adapter/Dispatch/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled

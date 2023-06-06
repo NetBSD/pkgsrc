@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2023/06/06 12:41:46 riastradh Exp $
 #
 # used by lang/sablevm-classpath-gui/Makefile
 
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sablevm.org/
 COMMENT=	Class libraries for the SableVM Java virtual machine
 
-BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes
+TOOL_DEPENDS+=		jikes>=1.18:../../lang/jikes
 
 DISTINFO_FILE=		${.CURDIR}/../../lang/sablevm-classpath/distinfo
 

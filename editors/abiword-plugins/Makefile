@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2023/04/23 14:26:17 adam Exp $
+# $NetBSD: Makefile,v 1.139 2023/06/06 12:41:17 riastradh Exp $
 
 PKGREVISION=	14
 .include	"../../editors/abiword/Makefile.common"
@@ -17,7 +17,7 @@ PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 
 CONFLICTS=	abiword-personal-[0-9]* abiword2-[0-9]*
 
-BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
+TOOL_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

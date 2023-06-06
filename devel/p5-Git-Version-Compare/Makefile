@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:32:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/06 12:40:50 riastradh Exp $
 
 DISTNAME=	Git-Version-Compare-1.004
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Functions to compare Git versions
 LICENSE=	${PERL5_LICENSE}
 
 # for make test
-BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Git/Version/Compare/.packlist

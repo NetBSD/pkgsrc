@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/04/21 07:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	xfntmizi-1.1-2.noarch
 PKGNAME=	ko-mizi-20010718
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSC 5601 standard
 
-BUILD_DEPENDS+=	rpm2cpio>=1.3:../../converters/rpm2cpio
+TOOL_DEPENDS+=	rpm2cpio>=1.3:../../converters/rpm2cpio
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
 

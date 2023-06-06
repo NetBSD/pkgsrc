@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/13 19:31:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:13 riastradh Exp $
 
 DISTNAME=	hyperscan-0.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/02 16:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:50 riastradh Exp $
 
 DISTNAME=	postfix_mta_sts_resolver-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/Snawoot/postfix-mta-sts-resolver
 COMMENT=	Daemon providing TLS client policy for Postfix based on MTA-STS policy
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pylint>=0:../../devel/py-pylint
-BUILD_DEPENDS+=	${PYPKGPREFIX}-tox>=0:../../devel/py-tox
-BUILD_DEPENDS+=	${PYPKGPREFIX}-twine>=1.11.0:../../net/py-twine
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.31.0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pylint>=0:../../devel/py-pylint
+TOOL_DEPENDS+=	${PYPKGPREFIX}-tox>=0:../../devel/py-tox
+TOOL_DEPENDS+=	${PYPKGPREFIX}-twine>=1.11.0:../../net/py-twine
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.31.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiodns>=1.1.1:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.4.4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-aiosqlite>=0.10:../../databases/py-aiosqlite

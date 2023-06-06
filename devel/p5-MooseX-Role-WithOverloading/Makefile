@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/06/28 11:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:40:58 riastradh Exp $
 
 DISTNAME=	MooseX-Role-WithOverloading-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
 DEPENDS+=	p5-namespace-autoclean>=0.12:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/MooseX/Role/WithOverloading/.packlist

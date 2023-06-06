@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:42:30 riastradh Exp $
 
 DISTNAME=	Text-Table-1.134
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://metacpan.org/release/Text-Table
 COMMENT=	Perl module to generate formatted text tables
 LICENSE=	mit
 
-BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+TOOL_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 
 DEPENDS+=	p5-Text-Aligner-[0-9]*:../../textproc/p5-Text-Aligner
 

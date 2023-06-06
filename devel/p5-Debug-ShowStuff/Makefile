@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:47 riastradh Exp $
 
 DISTNAME=	Debug-ShowStuff-1.16
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://metacpan.org/pod/Debug::ShowStuff
 COMMENT=	Collection of handy debugging routines to display values of variables
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-String-Util-[0-9]*:../../devel/p5-String-Util
-BUILD_DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
+TOOL_DEPENDS+=	p5-String-Util-[0-9]*:../../devel/p5-String-Util
+TOOL_DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Debug/ShowStuff/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:37 riastradh Exp $
 #
 
 DISTNAME=	Time-Format_XS-1.03
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Time-Format_XS
 COMMENT=	Companion module for Time::Format, to speed up time formatting
 
-BUILD_DEPENDS+=	p5-Time-Format>=1.01:../../time/p5-Time-Format
+TOOL_DEPENDS+=	p5-Time-Format>=1.01:../../time/p5-Time-Format
 
 PERL5_PACKLIST=	auto/Time/Format_XS/.packlist
 USE_LANGUAGES=	c

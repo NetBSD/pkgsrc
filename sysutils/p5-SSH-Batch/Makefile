@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:22 riastradh Exp $
 
 DISTNAME=	SSH-Batch-0.030
 PKGNAME=	p5-${DISTNAME}
@@ -26,7 +26,7 @@ DEPENDS+=	p5-Net-OpenSSH>=0.34:../../security/p5-Net-OpenSSH
 DEPENDS+=	p5-Set-Scalar>=1.23:../../devel/p5-Set-Scalar
 DEPENDS+=	p5-Term-ReadKey>=2.30:../../devel/p5-Term-ReadKey
 
-BUILD_DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+TOOL_DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

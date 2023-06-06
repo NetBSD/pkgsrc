@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/05/22 21:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/06/06 12:41:25 riastradh Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 

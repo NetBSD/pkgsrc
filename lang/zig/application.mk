@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.5 2023/02/28 20:56:27 nikita Exp $
+# $NetBSD: application.mk,v 1.6 2023/06/06 12:41:47 riastradh Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
@@ -25,7 +25,7 @@ ZIGCPUMODE?=		-Dcpu=baseline
 ZIGBUILDARGS?=
 ZIGTESTARGS?=
 
-BUILD_DEPENDS+=		zig-[0-9]*:../../lang/zig
+TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
 USE_LANGUAGES=		c
 
 #MAKE_ENV+=		ZIG_GLOBAL_CACHE_DIR=${WRKSRC}/tmp

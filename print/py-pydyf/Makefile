@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/13 19:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:12 riastradh Exp $
 
 DISTNAME=	pydyf-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.courtbouillon.org/pydyf
 COMMENT=	Low-level PDF generator
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 TEST_DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage

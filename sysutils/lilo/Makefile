@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:20 riastradh Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGREVISION=		11
@@ -20,11 +20,11 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 # Don't force perl for extra tool -- maybe a MESSAGE?
 #USE_PERL5=		YES
 
-#BUILD_DEPENDS+=	dev86>=0.16.10:../../devel/dev86
+#TOOL_DEPENDS+=	dev86>=0.16.10:../../devel/dev86
 # bcc is old and doesn't have -v switch to indicate version
-#BUILD_DEPENDS+=	bcc>=95.3.12:../../devel/bcc
-BUILD_DEPENDS+=		bin86>=0.16.10:../../devel/bin86
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+#TOOL_DEPENDS+=	bcc>=95.3.12:../../devel/bcc
+TOOL_DEPENDS+=		bin86>=0.16.10:../../devel/bin86
+TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=		gmake perl:run
 MAKE_ENV+=		ROOT=${PREFIX:Q}

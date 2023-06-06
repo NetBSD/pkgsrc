@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:41:00 riastradh Exp $
 
 DISTNAME=	MouseX-Types-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ PERL5_PACKLIST=	auto/MouseX/Types/.packlist
 
 DEPENDS+=	p5-Mouse>=0.41:../../devel/p5-Mouse
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

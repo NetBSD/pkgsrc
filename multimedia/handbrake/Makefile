@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/05/06 19:09:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.95 2023/06/06 12:42:00 riastradh Exp $
 
 DISTNAME=	HandBrake-1.6.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -51,9 +51,9 @@ MAKE_FILE=		GNUmakefile
 BUILD_DIRS=		build
 BUILD_TARGET=		# empty
 
-BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
-BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
-BUILD_DEPENDS+=		meson-[0-9]*:../../devel/meson
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
+TOOL_DEPENDS+=		meson-[0-9]*:../../devel/meson
 
 .include "../../mk/compiler.mk"
 

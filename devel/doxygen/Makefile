@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2023/05/22 21:00:20 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2023/06/06 12:40:36 riastradh Exp $
 
 DISTNAME=	doxygen-1.9.7.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	gtar # Cannot restore extended attributes
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/05 08:59:12 pho Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/06 12:41:23 riastradh Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ricty-ttf-4.1.1
@@ -17,9 +17,9 @@ COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
 LICENSE=	ipafont AND ofl-v1.1 AND 2-clause-bsd
 
 USE_TOOLS+=		bash
-BUILD_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
-BUILD_DEPENDS+=		migu-ttf>=20150712:../../fonts/migu-ttf
-BUILD_DEPENDS+=		inconsolata-ttf>=2.000:../../fonts/inconsolata-ttf
+TOOL_DEPENDS+=		fontforge-[0-9]*:../../fonts/fontforge
+TOOL_DEPENDS+=		migu-ttf>=20150712:../../fonts/migu-ttf
+TOOL_DEPENDS+=		inconsolata-ttf>=2.000:../../fonts/inconsolata-ttf
 
 # LICESE of generated TTF fonts is "ipafont AND open-font-license",
 # but OPEN FONT LICENSE version 1.1 section 5) require to distribute entirely

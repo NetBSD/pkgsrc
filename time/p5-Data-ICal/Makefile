@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/06 12:42:35 riastradh Exp $
 
 DISTNAME=		Data-ICal-0.24
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		p5-Class-ReturnValue>=0.53:../../devel/p5-Class-ReturnValue
 #DEPENDS+=		{perl>=5.7.3,p5-MIME-Base64-[0-9]*}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Text-vFile-asData>=0.05:../../textproc/p5-Text-vFile-asData
 
-#BUILD_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.6.2,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
 TEST_DEPENDS+=		p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
 TEST_DEPENDS+=		p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 TEST_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn

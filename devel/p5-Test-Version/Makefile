@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:41:07 riastradh Exp $
 
 DISTNAME=		Test-Version-2.09
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-File-Find-Rule-Perl>=0:../../devel/p5-File-Find-Rule-Perl
 
-BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Version/.packlist

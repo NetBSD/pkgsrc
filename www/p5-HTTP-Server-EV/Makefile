@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:45 riastradh Exp $
 
 DISTNAME=	HTTP-Server-EV-0.69
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-Guard-[0-9]*:../../devel/p5-Guard
 DEPENDS+=	p5-IO-AIO-[0-9]*:../../devel/p5-IO-AIO
 DEPENDS+=	p5-AnyEvent-AIO-[0-9]*:../../devel/p5-AnyEvent-AIO
 # actually, test dependencies
-BUILD_DEPENDS+=	p5-AnyEvent-HTTP-[0-9]*:../../www/p5-AnyEvent-HTTP
-BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+TOOL_DEPENDS+=	p5-AnyEvent-HTTP-[0-9]*:../../www/p5-AnyEvent-HTTP
+TOOL_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 EXTRACT_USING=	bsdtar
 PERL5_PACKLIST=	auto/HTTP/Server/EV/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/06/06 12:40:47 riastradh Exp $
 
 DISTNAME=	Devel-OverloadInfo-0.007
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
 
-BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+TOOL_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
 
 PERL5_PACKLIST=	auto/Devel/OverloadInfo/.packlist
 

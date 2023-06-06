@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/06 12:40:42 riastradh Exp $
 
 DISTNAME=	Autodia-2.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=	auto/Autodia/.packlist
 REPLACE_PERL=	autodia.pl

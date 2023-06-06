@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/06/06 10:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/06/06 12:42:55 riastradh Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -22,7 +22,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	nodejs>=14:../../lang/nodejs
+TOOL_DEPENDS+=	nodejs>=14:../../lang/nodejs
 
 #JPEG_ACCEPTED=	libjpeg-turbo
 

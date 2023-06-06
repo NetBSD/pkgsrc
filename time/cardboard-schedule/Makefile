@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/02 16:28:37 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:42:35 riastradh Exp $
 #
 
 DISTNAME=	cs113ins
@@ -23,7 +23,7 @@ USE_TOOLS+=	pax gtar
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+TOOL_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 UNZIP_CMD?=	unzip
 .else
 USE_TOOLS+=	unzip

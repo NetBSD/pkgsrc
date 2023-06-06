@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2022/06/28 11:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2023/06/06 12:40:24 riastradh Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
@@ -15,7 +15,7 @@ DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
 MAKE_JOBS_SAFE=		no
 
-BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
+TOOL_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 
 CONFLICTS=	hylafax-[0-9]*
 

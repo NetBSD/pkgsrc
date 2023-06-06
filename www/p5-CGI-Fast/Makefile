@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:40 riastradh Exp $
 
 DISTNAME=		CGI-Fast-2.16
 PKGNAME=		p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=	p5-CGI>=4:../../www/p5-CGI
 DEPENDS+=	p5-FCGI-[0-9]*:../../www/p5-FCGI
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-CPAN-Changes-[0-9]*:../../devel/p5-CPAN-Changes
+TOOL_DEPENDS+=	p5-CPAN-Changes-[0-9]*:../../devel/p5-CPAN-Changes
 
 PERL5_PACKLIST=		auto/CGI/Fast/.packlist
 

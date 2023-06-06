@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/11/15 09:12:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:11 riastradh Exp $
 
 DISTNAME=	cwcwidth-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/sebastinas/cwcwidth
 COMMENT=	Python bindings for wc(s)width
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/03/12 02:28:08 khorben Exp $
+# $NetBSD: options.mk,v 1.2 2023/06/06 12:42:05 riastradh Exp $
 
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nng
@@ -11,7 +11,7 @@ PLIST_VARS+=		doc shared static
 
 .if !empty(PKG_OPTIONS:Mdoc)
 .include "../../lang/ruby/rubyversion.mk"
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
+TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 CMAKE_ARGS+=		-DNNG_ENABLE_DOC=1
 CMAKE_ARGS+=		-DASCIIDOCTOR=${PREFIX}/bin/asciidoctor${RUBY_VER}
 PLIST.doc=		yes

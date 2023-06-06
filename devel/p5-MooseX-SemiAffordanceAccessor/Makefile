@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/06 12:40:58 riastradh Exp $
 #
 
 DISTNAME=	MooseX-SemiAffordanceAccessor-0.10
@@ -15,10 +15,10 @@ LICENSE=	artistic-2.0
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/SemiAffordanceAccessor/.packlist
 
-#BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+#TOOL_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Moose>=0.94:../../devel/p5-Moose
 # for make test
-BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TOOL_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/03/29 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:57 riastradh Exp $
 
 DISTNAME=	ansi-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/tehmaze/ansi
 COMMENT=	ANSI cursor movement and graphics
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:41 riastradh Exp $
 
 DISTNAME=	Catalyst-Action-RenderView-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.70000:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Data-Visitor>=0.24:../../devel/p5-Data-Visitor
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 
-BUILD_DEPENDS+=	p5-HTTP-Request-AsCGI-[0-9]*:../../www/p5-HTTP-Request-AsCGI
+TOOL_DEPENDS+=	p5-HTTP-Request-AsCGI-[0-9]*:../../www/p5-HTTP-Request-AsCGI
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Action/RenderView/.packlist

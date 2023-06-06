@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 03:42:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:40 riastradh Exp $
 
 DISTNAME=	mailman-web-0.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	Mailman 3 Web interface
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-hyperkitty-[0-9]*:../../www/py-hyperkitty
 DEPENDS+=	${PYPKGPREFIX}-postorius-[0-9]*:../../www/py-postorius

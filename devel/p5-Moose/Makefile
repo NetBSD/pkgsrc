@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2023/01/26 23:47:57 wen Exp $
+# $NetBSD: Makefile,v 1.127 2023/06/06 12:40:55 riastradh Exp $
 
 DISTNAME=	Moose-2.2203
 PKGNAME=	p5-${DISTNAME}
@@ -34,47 +34,47 @@ DEPENDS+=	p5-Scalar-List-Utils>=1.56:../../devel/p5-Scalar-List-Utils
 # Note: Moose can take advantage of PartialDump, but as PartialDump depends
 # on Moose, we cannot add it to DEPENDS
 
-BUILD_DEPENDS+=	p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Needs>=0.002010:../../devel/p5-Test-Needs
+TOOL_DEPENDS+=	p5-Test-Fatal>=0.05:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Needs>=0.002010:../../devel/p5-Test-Needs
 
 #CONFLICTS+=	p5-Class-MOP-[0-9]*
 
-BUILD_DEPENDS+=	p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
-BUILD_DEPENDS+=	p5-DateTime-Calendar-Mayan-[0-9]*:../../time/p5-DateTime-Calendar-Mayan
-BUILD_DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
-BUILD_DEPENDS+=	p5-Declare-Constraints-Simple-[0-9]*:../../devel/p5-Declare-Constraints-Simple
-BUILD_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
-BUILD_DEPENDS+=	p5-Locale-US-[0-9]*:../../misc/p5-Locale-US
-BUILD_DEPENDS+=	p5-Module-Refresh-[0-9]*:../../devel/p5-Module-Refresh
-BUILD_DEPENDS+=	p5-Params-Coerce-[0-9]*:../../devel/p5-Params-Coerce
-BUILD_DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Warnings>=0.016:../../devel/p5-Test-Warnings
+TOOL_DEPENDS+=	p5-DBM-Deep-[0-9]*:../../databases/p5-DBM-Deep
+TOOL_DEPENDS+=	p5-DateTime-Calendar-Mayan-[0-9]*:../../time/p5-DateTime-Calendar-Mayan
+TOOL_DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
+TOOL_DEPENDS+=	p5-Declare-Constraints-Simple-[0-9]*:../../devel/p5-Declare-Constraints-Simple
+TOOL_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
+TOOL_DEPENDS+=	p5-Locale-US-[0-9]*:../../misc/p5-Locale-US
+TOOL_DEPENDS+=	p5-Module-Refresh-[0-9]*:../../devel/p5-Module-Refresh
+TOOL_DEPENDS+=	p5-Params-Coerce-[0-9]*:../../devel/p5-Params-Coerce
+TOOL_DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Warnings>=0.016:../../devel/p5-Test-Warnings
 
 # other documented develop dependencies
-BUILD_DEPENDS+=		p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
-BUILD_DEPENDS+=		p5-Test-CleanNamespaces>=0.13:../../devel/p5-Test-CleanNamespaces
+TOOL_DEPENDS+=		p5-Algorithm-C3-[0-9]*:../../devel/p5-Algorithm-C3
+TOOL_DEPENDS+=		p5-Test-CleanNamespaces>=0.13:../../devel/p5-Test-CleanNamespaces
 # devel/p5-Data-Visitor depends on devel/p5-Moose
-# BUILD_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
-BUILD_DEPENDS+=		p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
-BUILD_DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
-BUILD_DEPENDS+=		p5-SUPER-[0-9]*:../../devel/p5-SUPER
+# TOOL_DEPENDS+=	p5-Data-Visitor-[0-9]*:../../devel/p5-Data-Visitor
+TOOL_DEPENDS+=		p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+TOOL_DEPENDS+=		p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
+TOOL_DEPENDS+=		p5-SUPER-[0-9]*:../../devel/p5-SUPER
 # missing Test::DependentModules>=0.13
-BUILD_DEPENDS+=		p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
-BUILD_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
-BUILD_DEPENDS+=		p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
-BUILD_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
-BUILD_DEPENDS+=		p5-Test-CheckDeps>=0.006:../../devel/p5-Test-CheckDeps
-BUILD_DEPENDS+=		p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
+TOOL_DEPENDS+=		p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
+TOOL_DEPENDS+=		p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
+TOOL_DEPENDS+=		p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
+TOOL_DEPENDS+=		p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TOOL_DEPENDS+=		p5-Test-CheckDeps>=0.006:../../devel/p5-Test-CheckDeps
+TOOL_DEPENDS+=		p5-CPAN-Meta-Check>=0.007:../../devel/p5-CPAN-Meta-Check
 # missing Test::Spelling
-BUILD_DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
-#BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage # xt/author/pod_coverage.t
-#BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod # xt/author/pod.t
-#BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-#BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+TOOL_DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
+#TOOL_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage # xt/author/pod_coverage.t
+#TOOL_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod # xt/author/pod.t
+#TOOL_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+#TOOL_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # circular test dependency: p5-MetaCPAN-Client => p5-Type-Tiny => p5-Moose
 # => p5-Test-DependentModules => p5-MetaCPAN-Client
-#BUILD_DEPENDS+=	p5-Test-DependentModules-[0-9]*:../../devel/p5-Test-DependentModules
+#TOOL_DEPENDS+=	p5-Test-DependentModules-[0-9]*:../../devel/p5-Test-DependentModules
 
 PERL5_PACKLIST=	auto/Moose/.packlist
 

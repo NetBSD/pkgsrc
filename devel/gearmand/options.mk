@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/10/04 07:03:37 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2023/06/06 12:40:37 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gearmand
 PKG_SUPPORTED_OPTIONS+=	dtrace memcached mysql pgsql sqlite tokyocabinet
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--with-sqlite3=no
 CONFIGURE_ARGS+=	--enable-libmemcached
 CONFIGURE_ARGS+=	--with-memcached=${BUILDLINK_PREFIX.memcached}/bin/memcached
 .include "../../devel/libmemcached/buildlink3.mk"
-BUILD_DEPENDS+=		memcached-[0-9]*:../../devel/memcached
+TOOL_DEPENDS+=		memcached-[0-9]*:../../devel/memcached
 .else
 CONFIGURE_ARGS+=	--disable-libmemcached
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:42:47 riastradh Exp $
 
 DISTNAME=	Rose-HTML-Objects-0.623
 PKGNAME=	p5-${DISTNAME}
@@ -26,7 +26,7 @@ DEPENDS+=	p5-Rose-URI>=0.021:../../www/p5-Rose-URI
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 # For tests:
-BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
+TOOL_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Rose/HTML/Objects/.packlist

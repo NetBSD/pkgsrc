@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/01 09:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/06 12:40:15 riastradh Exp $
 
 DISTNAME=	zipp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Backport of pathlib-compatible object wrapper for zip files (for Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
 TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 # not available for python 2.x
 # https://github.com/jaraco/zipp/issues/49

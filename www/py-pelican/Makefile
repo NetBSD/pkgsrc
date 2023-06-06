@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/14 18:07:55 nils Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:50 riastradh Exp $
 
 DISTNAME=		pelican-4.8.0
 GITHUB_PROJECT=		pelican
@@ -11,7 +11,7 @@ HOMEPAGE=		https://blog.getpelican.com/
 COMMENT=		Static site generator that supports Markdown and reST syntax
 LICENSE=		gnu-agpl-v3
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 DEPENDS+=		${PYPKGPREFIX}-blinker>=1.4:../../devel/py-blinker
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
 DEPENDS+=		${PYPKGPREFIX}-feedgenerator>=1.9:../../www/py-feedgenerator

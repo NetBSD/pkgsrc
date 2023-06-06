@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/04/19 08:09:44 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:40 riastradh Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	12
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libhid.alioth.debian.org/
 COMMENT=	Abstraction layer for HID-class devices over USB/serial
 
-BUILD_DEPENDS+=	docbook-[0-9]*:../../textproc/docbook
+TOOL_DEPENDS+=	docbook-[0-9]*:../../textproc/docbook
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:27 riastradh Exp $
 
 DISTNAME=	Net-IDN-Encode-2.500
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://metacpan.org/release/Net-IDN-Encode
 COMMENT=	IDN, Internationalized Domain Names (Encode, UTS46, Punycode)
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+TOOL_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 
 PERL5_REQD+=	5.7.3
 

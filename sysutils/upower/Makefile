@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:13:20 nia Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:23 riastradh Exp $
 
 DISTNAME=	upower-0.99.13
 PKGREVISION=	1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config intltool xgettext msgmerge msgfmt
 BUILD_DEFS+=	VARBASE PKG_SYSCONFBASE
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

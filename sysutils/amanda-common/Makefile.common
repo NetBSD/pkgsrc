@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2023/04/14 22:58:24 nia Exp $
+# $NetBSD: Makefile.common,v 1.47 2023/06/06 12:42:17 riastradh Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -48,7 +48,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gzip:run gtar:run perl:run
 USE_TOOLS+=		gmake pkg-config autoconf automake
 # for autopoint
-BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 PERL5_CONFIGURE=	no
 AUTO_MKDIRS=		yes
 

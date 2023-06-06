@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/04/19 08:09:51 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/06/06 12:41:18 riastradh Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	24
@@ -11,7 +11,7 @@ HOMEPAGE=	http://mooedit.sourceforge.net/index.html
 COMMENT=	Programming and around-programming text editor
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

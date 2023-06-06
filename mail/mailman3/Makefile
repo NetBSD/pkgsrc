@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 03:27:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:47 riastradh Exp $
 
 DISTNAME=	mailman-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,9 +36,9 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeEvent-[0-9]*:../../devel/py-ZopeEvent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=5.0:../../devel/py-ZopeInterface
 
 # TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
-BUILD_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
+TOOL_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+TOOL_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
 
 BUILD_DEFS+=		VARBASE
 

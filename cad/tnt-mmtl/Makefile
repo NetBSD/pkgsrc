@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/01/29 21:15:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/06 12:40:19 riastradh Exp $
 
 DISTNAME=	tnt-1.2.2
 PKGNAME=	${DISTNAME:S/tnt/tnt-mmtl/}
@@ -10,14 +10,14 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://mmtl.sourceforge.net/
 COMMENT=	Multilayer Multiconductor Transmission Line 2-D and 2.5-D simulator
 
-BUILD_DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html
-BUILD_DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
-BUILD_DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
-BUILD_DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-BUILD_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-BUILD_DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
+TOOL_DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html
+TOOL_DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
+TOOL_DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
+TOOL_DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+TOOL_DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+TOOL_DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	aclocal autoconf automake gmake

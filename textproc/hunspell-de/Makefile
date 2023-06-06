@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:42:25 riastradh Exp $
 
 DISTNAME=	igerman98-20161207
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://www.j3e.de/ispell/igerman98/
 COMMENT=	German dictionaries for hunspell
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-BUILD_DEPENDS+=	ispell>=3.1.20nb1:../../textproc/ispell
+TOOL_DEPENDS+=	ispell>=3.1.20nb1:../../textproc/ispell
 DEPENDS+=	hunspell>=1.1.5:../../textproc/hunspell
 
 USE_LANGUAGES=	# none

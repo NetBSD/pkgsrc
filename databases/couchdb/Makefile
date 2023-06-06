@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/04/19 08:09:23 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/06/06 12:40:26 riastradh Exp $
 
 DISTNAME=		apache-couchdb-3.2.2
 PKGNAME=		${DISTNAME:S/apache-//}
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake pax pkg-config
 USE_LIBTOOL=		yes
 BUILD_DEFS+=		VARBASE
 
-BUILD_DEPENDS+=		rebar21>=2.6.0<3:../../devel/rebar21
+TOOL_DEPENDS+=		rebar21>=2.6.0<3:../../devel/rebar21
 
 MAKE_ENV+=		REBAR=${PREFIX}/bin/rebar
 

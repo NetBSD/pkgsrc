@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:36:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:31 riastradh Exp $
 
 DISTNAME=	XML-Compile-SOAP12-3.06
 PKGNAME=	p5-${DISTNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	p5-XML-Compile-Cache-[0-9]*:../../textproc/p5-XML-Compile-Cache
 DEPENDS+=	p5-XML-Compile-SOAP-[0-9]*:../../textproc/p5-XML-Compile-SOAP
 DEPENDS+=	p5-common-sense-[0-9]*:../../devel/p5-common-sense
 # TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-XML-Compile-Tester-[0-9]*:../../textproc/p5-XML-Compile-Tester
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-XML-Compile-Tester-[0-9]*:../../textproc/p5-XML-Compile-Tester
 
 PERL5_PACKLIST=	auto/XML/Compile/SOAP12/.packlist
 

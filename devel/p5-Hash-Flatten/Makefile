@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/06 12:40:51 riastradh Exp $
 #
 
 DISTNAME=	Hash-Flatten-1.19
@@ -12,8 +12,8 @@ HOMEPAGE=	https://metacpan.org/release/Hash-Flatten
 COMMENT=	Perl 5 module to flatten/unflatten complex data hashes
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	p5-Log-Trace-[0-9]*:../../devel/p5-Log-Trace
-BUILD_DEPENDS+=	p5-Test-Assertions-[0-9]*:../../devel/p5-Test-Assertions
+TOOL_DEPENDS+=	p5-Log-Trace-[0-9]*:../../devel/p5-Log-Trace
+TOOL_DEPENDS+=	p5-Test-Assertions-[0-9]*:../../devel/p5-Test-Assertions
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Hash/Flatten/.packlist

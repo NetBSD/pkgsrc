@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/06/06 08:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/06/06 12:41:31 riastradh Exp $
 
 DISTNAME=	enblend-enfuse-4.2
 PKGREVISION=	38
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GNUPLOT=false
 CFLAGS+=		-DCMS_NO_REGISTER_KEYWORD
 
-BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 .include "../../mk/bsd.prefs.mk"
 

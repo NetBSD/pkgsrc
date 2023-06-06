@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:57:54 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:41 riastradh Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
@@ -12,7 +12,7 @@ HOMEPAGE=	http://zinnia.sourceforge.net/
 COMMENT=	Zinna recognition models traned with Tomoe data
 #LICENSE=	# Tomoe's
 
-BUILD_DEPENDS+=	zinnia-[0-9]*:../../inputmethod/zinnia
+TOOL_DEPENDS+=	zinnia-[0-9]*:../../inputmethod/zinnia
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none

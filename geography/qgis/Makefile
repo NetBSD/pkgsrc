@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2023/05/22 21:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2023/06/06 12:41:30 riastradh Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -40,7 +40,7 @@ DEPENDS+=		${PYPKGPREFIX}-qt5-qscintilla-[0-9]*:../../x11/py-qt5-qscintilla
 CMAKE_PREFIX_PATH+=	${QTDIR}
 
 # This could be used if we want to build pdf doc, which is currently false
-#BUILD_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
+#TOOL_DEPENDS+=	txt2tags-[0-9]*:../../wip/txt2tags
 
 # Disable building of QGIS.app.  \todo Consider building it.
 SUBST_CLASSES+=			xapple

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/06/28 11:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/06 12:40:44 riastradh Exp $
 
 DISTNAME=	Class-Load-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,9 @@ DEPENDS+=	p5-Module-Runtime>=0.012:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TOOL_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TOOL_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
+TOOL_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Class/Load/.packlist

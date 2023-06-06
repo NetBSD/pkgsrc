@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:52 riastradh Exp $
 
 DISTNAME=	Method-Signatures-20170211
 PKGNAME=	p5-${DISTNAME}
@@ -21,8 +21,8 @@ DEPENDS+=	p5-Mouse>=0.64:../../devel/p5-Mouse
 DEPENDS+=	p5-Sub-Name>=0.03:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Lexical-SealRequireHints>=0.007:../../devel/p5-Lexical-SealRequireHints
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.29:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Warn>=0.10:../../devel/p5-Test-Warn
+TOOL_DEPENDS+=	p5-Test-Exception>=0.29:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Warn>=0.10:../../devel/p5-Test-Warn
 
 USE_LANGUAGES=	# empty
 

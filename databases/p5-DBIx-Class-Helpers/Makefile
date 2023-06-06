@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/06 12:40:30 riastradh Exp $
 
 DISTNAME=	DBIx-Class-Helpers-2.036000
 PKGNAME=	p5-${DISTNAME}
@@ -23,15 +23,15 @@ DEPENDS+=	p5-Role-Tiny>=0:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Text-Brew>=0:../../textproc/p5-Text-Brew
 DEPENDS+=	p5-Try-Tiny>=0:../../devel/p5-Try-Tiny
 
-BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
-BUILD_DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
-BUILD_DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
-BUILD_DEPENDS+=	p5-DateTime-Format-SQLite>=0:../../time/p5-DateTime-Format-SQLite
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
-BUILD_DEPENDS+=	p5-Test-Roo>=1.003:../../devel/p5-Test-Roo
-BUILD_DEPENDS+=	p5-DateTime-Format-Strptime>=0:../../time/p5-DateTime-Format-Strptime
-BUILD_DEPENDS+=	p5-aliased>=0.34:../../devel/p5-aliased
+TOOL_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+TOOL_DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
+TOOL_DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
+TOOL_DEPENDS+=	p5-DateTime-Format-SQLite>=0:../../time/p5-DateTime-Format-SQLite
+TOOL_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TOOL_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TOOL_DEPENDS+=	p5-Test-Roo>=1.003:../../devel/p5-Test-Roo
+TOOL_DEPENDS+=	p5-DateTime-Format-Strptime>=0:../../time/p5-DateTime-Format-Strptime
+TOOL_DEPENDS+=	p5-aliased>=0.34:../../devel/p5-aliased
 
 PERL5_PACKLIST=		auto/DBIx/Class/Helpers/.packlist
 

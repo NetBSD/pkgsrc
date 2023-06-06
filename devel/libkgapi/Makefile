@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/04/23 14:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/06 12:40:40 riastradh Exp $
 
 DISTNAME=	libkgapi-2.2.0
 PKGREVISION=	39
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	KDE-based library for accessing various Google services
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+TOOL_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

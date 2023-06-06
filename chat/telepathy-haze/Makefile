@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/04/19 08:09:20 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/06 12:40:23 riastradh Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
 PKGREVISION=	13
@@ -10,7 +10,7 @@ MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	Libpurple connection manager for Telepathy
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	gmake pkg-config
