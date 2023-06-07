@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/07 06:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/07 07:00:02 wiz Exp $
 
 .include "../../math/xylib/Makefile.common"
 
@@ -13,8 +13,9 @@ USE_LANGUAGES+=	c++11
 
 GNU_CONFIGURE_WX_VERSION=	no
 
+INSTALLATION_DIRS+=	bin
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/gui/xyconvert \
 		${DESTDIR}${PREFIX}/bin
 
