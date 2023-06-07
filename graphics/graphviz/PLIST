@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2022/10/17 09:12:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2023/06/07 10:09:48 micha Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -74,7 +74,6 @@ lib/graphviz/libgvplugin_pango.la
 ${PLIST.poppler}lib/graphviz/libgvplugin_poppler.la
 ${PLIST.quartz}lib/graphviz/libgvplugin_quartz.la
 ${PLIST.svg}lib/graphviz/libgvplugin_rsvg.la
-lib/graphviz/libgvplugin_visio.la
 lib/graphviz/libgvplugin_webp.la
 ${PLIST.x11}lib/graphviz/libgvplugin_xlib.la
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
