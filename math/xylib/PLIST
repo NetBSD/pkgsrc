@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/07 13:03:50 nros Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/07 06:58:46 wiz Exp $
 bin/xyconv
 include/xylib/bruker_raw.h
+include/xylib/bruker_spc.h
 include/xylib/cache.h
 include/xylib/canberra_cnf.h
 include/xylib/canberra_mca.h
@@ -8,7 +9,6 @@ include/xylib/chiplot.h
 include/xylib/cpi.h
 include/xylib/csv.h
 include/xylib/dbws.h
-include/xylib/gsas.h
 include/xylib/pdcif.h
 include/xylib/philips_raw.h
 include/xylib/philips_udf.h
@@ -21,6 +21,8 @@ include/xylib/uxd.h
 include/xylib/vamas.h
 include/xylib/winspec_spe.h
 include/xylib/xfit_xdd.h
+include/xylib/xrdml.h
+include/xylib/xsyg.h
 include/xylib/xylib.h
 lib/libxy.la
 man/man1/xyconv.1
