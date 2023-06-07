@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2020/03/20 11:58:01 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/06/07 06:58:46 wiz Exp $
 # used by math/xylib/Makefile
 # used by math/xyconvert/Makefile
 
-DISTNAME=	xylib-1.5
+DISTNAME=	xylib-1.6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wojdyr/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,6 +13,6 @@ HOMEPAGE=	http://xylib.sourceforge.net/
 
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
