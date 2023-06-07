@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3638 2023/06/07 16:00:24 micha Exp $
+$NetBSD: CHANGES-2023,v 1.3639 2023/06/07 18:25:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ucspi-ssl to 0.999.12.7nb1 [schmonz 2023-06-07]
 	Updated security/polkit to 121 [wiz 2023-06-07]
 	Updated games/woof to 11.1.4 [micha 2023-06-07]
+	Added devel/scons4 version 4.5.2 [wiz 2023-06-07]
