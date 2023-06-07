@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2018/06/24 07:31:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/06/07 11:10:38 leot Exp $
 bin/easyrsa
 share/doc/easyrsa/COPYING.md
 share/doc/easyrsa/EasyRSA-Advanced.md
+share/doc/easyrsa/EasyRSA-Contributing.md
 share/doc/easyrsa/EasyRSA-Readme.md
+share/doc/easyrsa/EasyRSA-Renew-and-Revoke.md
 share/doc/easyrsa/EasyRSA-Upgrade-Notes.md
 share/doc/easyrsa/Hacking.md
 share/doc/easyrsa/Intro-To-PKI.md
