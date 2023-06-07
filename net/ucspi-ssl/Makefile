@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2023/05/29 11:52:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.60 2023/06/07 15:11:53 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.12.7
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
