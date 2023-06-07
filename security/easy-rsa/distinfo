@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2023/06/06 16:15:25 leot Exp $
+$NetBSD: distinfo,v 1.14 2023/06/07 11:10:38 leot Exp $
 
-BLAKE2s (EasyRSA-3.0.8.tgz) = 982b53198ba2140451f51a40e8ed8a93b89b2fc0d005bc7da6731ca553ab8848
-SHA512 (EasyRSA-3.0.8.tgz) = fd2cde4725cffd60c6af1b6aeaff0dbf15f31f0f322c9df75c22838e2297ba9dc3bba610d956464c8227bd74b3e63840e2a3da41fbc5ee1c79c1e7f5350adc94
-Size (EasyRSA-3.0.8.tgz) = 48907 bytes
-SHA1 (patch-easyrsa) = 767ff3df6e6863864eee6d76758558d77a22c51f
-SHA1 (patch-vars.example) = 31ffcf40ced1fb07a7531ec7de373ad24c04455e
+BLAKE2s (EasyRSA-3.1.4.tgz) = 608b15678f80043385638349f818f99badbe7c08b485cf7ec6e87cfe62e61933
+SHA512 (EasyRSA-3.1.4.tgz) = 1a1500c909f086fa45b13543a6ad0f0b8708055f95a07abc5ea67e3b1340cb884e5c6c4c3d7777cc05646b7d8d7ef3193a5506f51d01c27ea980204c4a24b231
+Size (EasyRSA-3.1.4.tgz) = 73536 bytes
+SHA1 (patch-easyrsa) = 9c5855682cee9674fc6695ad08dd69b1c3ee1561
+SHA1 (patch-vars.example) = 6148e15e404da398b9e04064f3195b60361339e9
