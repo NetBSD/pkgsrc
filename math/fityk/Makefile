@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2023/06/07 07:03:43 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/07 08:43:49 wiz Exp $
 
 DISTNAME=	fityk-1.3.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wojdyr/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,7 @@ GNU_CONFIGURE=		yes
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xylib+=	xylib>=1.6
 .include "../../math/xylib/buildlink3.mk"
-.include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
