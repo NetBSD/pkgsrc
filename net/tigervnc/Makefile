@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/06/06 12:42:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.64 2023/06/07 06:13:28 wiz Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
@@ -31,7 +31,7 @@ USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	intltool msgfmt msgmerge patch 
+USE_TOOLS+=	intltool msgfmt msgmerge patch
 USE_TOOLS+=	autoconf automake autoreconf pkg-config gmake
 USE_TOOLS+=	perl:run bash:run
 
@@ -112,6 +112,7 @@ post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver-config-defaults ${DESTDIR}${PREFIX}/${EGDIR}
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver-config-mandatory ${DESTDIR}${PREFIX}/${EGDIR}
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/vncserver.users ${DESTDIR}${PREFIX}/${EGDIR}
+	${RM} -f ${DESTDIR}${PREFIX}/etc/pam.d/tigervnc
 
 .include "../../mk/bsd.prefs.mk"
 
