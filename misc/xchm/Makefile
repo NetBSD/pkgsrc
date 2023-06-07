@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2023/06/07 07:15:40 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2023/06/07 08:52:39 wiz Exp $
 
 DISTNAME=	xchm-1.35
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rzvncj/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,5 +17,5 @@ GNU_CONFIGURE=		yes
 
 .include "../../devel/chmlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/wxGTK31/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
