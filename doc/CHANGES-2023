@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3633 2023/06/07 13:30:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3634 2023/06/07 14:38:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py38-html-docs to 3.8.17 [adam 2023-06-07]
 	Updated lang/py39-html-docs to 3.9.17 [adam 2023-06-07]
 	Updated lang/py310-html-docs to 3.10.12 [adam 2023-06-07]
+	Updated shells/nushell to 0.81.0 [pin 2023-06-07]
