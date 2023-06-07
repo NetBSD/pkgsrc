@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 10:59:37 nia Exp $
+$NetBSD: distinfo,v 1.32 2023/06/07 07:15:40 wiz Exp $
 
-BLAKE2s (xchm-1.23.tar.gz) = 3b6c1e20e67a40b651aabb15d7bcfff3986d5402523cf4bb5aae868d842287bb
-SHA512 (xchm-1.23.tar.gz) = c0df4362ff6db8136b20f62a76e7e93185375f6ef9eeeb1001e27ead9806d486332573ba8c3ca1863a70ce6b1d3bcc6d3af48d42add719312774dccfd7d18c90
-Size (xchm-1.23.tar.gz) = 474274 bytes
+BLAKE2s (xchm-1.35.tar.gz) = a07c59bc4cba059114614aa0e0207efdf5d8e70840abf3bc0f1172942d10459f
+SHA512 (xchm-1.35.tar.gz) = 53a334b460c2de51b1f5a6afbca888e376430ab2fb48f2d60c71d34886b19ca5982cf3a4f23c3cb7456781c3b658affa5a64da3ade961accf258096b5fa6df3d
+Size (xchm-1.35.tar.gz) = 884353 bytes
