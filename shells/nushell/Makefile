@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/05/17 21:33:35 pin Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/07 14:37:51 pin Exp $
 
-DISTNAME=	nushell-0.80.0
+DISTNAME=	nushell-0.81.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin
 PKG_SHELL=		bin/nu
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
@@ -27,10 +26,6 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		plugin which-support sqlite
 .endif
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/nu \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
