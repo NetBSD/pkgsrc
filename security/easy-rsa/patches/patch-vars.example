@@ -1,20 +1,19 @@
-$NetBSD: patch-vars.example,v 1.1 2018/06/24 07:31:09 adam Exp $
+$NetBSD: patch-vars.example,v 1.2 2023/06/07 11:10:38 leot Exp $
 
 Set default location for configuration files.
 
---- vars.example.orig	2018-01-21 15:37:26.000000000 +0000
+--- vars.example.orig	2023-05-24 12:02:30.000000000 +0000
 +++ vars.example
-@@ -42,12 +42,8 @@ fi
- # This variable is used as the base location of configuration files needed by
- # easyrsa.  More specific variables for specific files (e.g., EASYRSA_SSL_CONF)
+@@ -43,11 +43,7 @@ fi
+ # easyrsa.  More specific variables for specific files (eg: EASYRSA_SSL_CONF)
  # may override this default.
--#
+ #
 -# The default value of this variable is the location of the easyrsa script
 -# itself, which is also where the configuration files are located in the
 -# easy-rsa tree.
- 
+-#
 -#set_var EASYRSA	"${0%/*}"
 +set_var EASYRSA	"@SYSCONFDIR@"
  
- # If your OpenSSL command is not in the system PATH, you will need to define the
- # path to it here. Normally this means a full path to the executable, otherwise
+ # If your OpenSSL command is not in the system PATH, you will need to define
+ # the path here. Normally this means a full path to the executable, otherwise
