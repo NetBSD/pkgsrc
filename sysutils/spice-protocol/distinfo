@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:20:14 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/06/07 10:24:06 wiz Exp $
 
-BLAKE2s (spice-protocol-0.14.3.tar.xz) = e34cb7f47438459cc9807cb82080996481741735fb55263556465530d01cbd5a
-SHA512 (spice-protocol-0.14.3.tar.xz) = 9e35fd0d9be14074a482bdb20fe6954e5f0a616d0ad60da63a065435df2b169ec134a95d5756df73e2606c7497c9bf0427023d4e5ebfbb1abb181cf8020879a6
-Size (spice-protocol-0.14.3.tar.xz) = 22224 bytes
+BLAKE2s (spice-protocol-0.14.4.tar.xz) = 5a00fac9c6a39ca55a693a077ca0b2c60f5b6c91d886e8953e14c99028c92ac1
+SHA512 (spice-protocol-0.14.4.tar.xz) = c55677fd6da37303487f8245388cbd555715c736e15bca4a305c4374feafc655b74e549ea401949d72e17b2e6ad76f16c5add3963008a18a1fefedd4b4a001c1
+Size (spice-protocol-0.14.4.tar.xz) = 23540 bytes
