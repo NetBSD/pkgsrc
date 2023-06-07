@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:56:12 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/06/07 06:58:46 wiz Exp $
 
-BLAKE2s (xylib-1.5.tar.bz2) = 9a3dd67772a7859c9c57057a84aeb47d295574e0a0c436c89c709ba021082bc3
-SHA512 (xylib-1.5.tar.bz2) = 67da8653b422fa4b5ffdc9fe19d23f49e36e2692fb3aa98e130511cfe6db46b8e81b30d45cf302a1fe8b6d1a9b776d3c364ecdabb6489f1d7518e2736b6e2210
-Size (xylib-1.5.tar.bz2) = 365316 bytes
-SHA1 (patch-Makefile.in) = 607a06800f945aa5e406e4b0e4f32809e48ed2cf
-SHA1 (patch-configure) = 6ff770c0ccae9ed19514a7abba6c47e030296617
-SHA1 (patch-configure.ac) = cc05a0ec1abf7cca08719c831398eaaa43957cf4
-SHA1 (patch-gui_xyconvert.cpp) = 6739098920d2abbb63a8b0abd9dd89b0b4f4684e
-SHA1 (patch-xylib_util.cpp) = dbdecf2f2694f6febb036be0c9720260eb93f898
+BLAKE2s (xylib-1.6.tar.bz2) = 1458401311e31b230bd95cfbaeb8c9026049d32b2e2647a8e1ea87a9fe8113f8
+SHA512 (xylib-1.6.tar.bz2) = 9861cbf03f8b921a93a2d32a529ff94d77723e2510cd61096b4b85f91af4be6330ed82e8da94bc45dbca7f9814077360d1dae204315b28c2b6d85e3d2c7f6696
+Size (xylib-1.6.tar.bz2) = 370765 bytes
+SHA1 (patch-Makefile.in) = a2baddfb61b80b5a6d781755e97fcac5b2851cf9
