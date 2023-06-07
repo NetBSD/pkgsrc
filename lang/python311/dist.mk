@@ -1,8 +1,8 @@
-# $NetBSD: dist.mk,v 1.4 2023/04/06 11:30:37 adam Exp $
+# $NetBSD: dist.mk,v 1.5 2023/06/07 13:28:49 adam Exp $
 
-PY_DISTVERSION=	3.11.3
+PY_DISTVERSION=	3.11.4
 DISTNAME=	Python-${PY_DISTVERSION}
 EXTRACT_SUFX=	.tar.xz
 DISTINFO_FILE=	${.CURDIR}/../../lang/python311/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/python311/patches
-MASTER_SITES=	http://www.python.org/ftp/python/${PY_DISTVERSION}/
+MASTER_SITES=	https://www.python.org/ftp/python/${PY_DISTVERSION}/
