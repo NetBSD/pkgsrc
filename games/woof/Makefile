@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2023/05/06 19:09:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/07 15:58:46 micha Exp $
 
-DISTNAME=	woof_10.5.1
+DISTNAME=	woof_11.1.4
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -31,15 +30,6 @@ SUBST_FILES.waddir=	src/d_iwad.c
 SUBST_SED.waddir=	-e 's,PKGSRC_PREFIX,"${PREFIX}",'
 SUBST_SED.waddir+=	-e 's,PKGSRC_DOOMWADDIR,"/${DOOMWADDIR}",'
 
-# XDG desktop file and icon are installed by the build system with the logic:
-#     if(UNIX AND NOT APPLE)
-# Remove Apple exception because pkgsrc users maybe have X11 on Apple machines
-SUBST_CLASSES+=		xdg
-SUBST_STAGE.xdg=	pre-configure
-SUBST_MESSAGE.xdg=	Preparing data/CMakeLists.txt file ...
-SUBST_FILES.xdg=	data/CMakeLists.txt
-SUBST_SED.xdg=		-e 's,UNIX AND NOT APPLE,UNIX,'
-
 # Process INSTALL.pkgsrc
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	do-configure
@@ -55,11 +45,14 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/woof/INSTALL.pkgsrc
 
-.include "../../audio/SDL2_mixer/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=2.2.0
 .include "../../audio/fluidsynth/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.1.0
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libxmp/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL2+=		SDL2>=2.0.18
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
