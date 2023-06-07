@@ -1,0 +1,5 @@
+Classes and methods for spatial objects that have a registered time
+column, in particular for irregular spatiotemporal data. The time
+column can be of any type, but needs to be ordinal. Regularly laid out
+spatiotemporal data (vector or raster data cubes) are handled by
+package 'stars'.
