@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2023/06/07 10:09:48 micha Exp $
+# $NetBSD: Makefile,v 1.271 2023/06/07 13:32:49 micha Exp $
 
 DISTNAME=	graphviz-8.0.5
 CATEGORIES=	graphics
@@ -127,6 +127,7 @@ DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.22.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
