@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3632 2023/06/07 12:48:15 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3633 2023/06/07 13:30:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5021,3 +5021,12 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-gstat to 2.1.1 [mef 2023-06-07]
 	Updated math/R-sp to 1.6.1 [mef 2023-06-07]
 	Updated math/R-shapefiles to 0.7.2 [mef 2023-06-07]
+	Updated lang/python37 to 3.7.17 [adam 2023-06-07]
+	Updated lang/python38 to 3.8.17 [adam 2023-06-07]
+	Updated lang/python39 to 3.9.17 [adam 2023-06-07]
+	Updated lang/python310 to 3.10.12 [adam 2023-06-07]
+	Updated lang/python311 to 3.11.4 [adam 2023-06-07]
+	Updated lang/py37-html-docs to 3.7.17 [adam 2023-06-07]
+	Updated lang/py38-html-docs to 3.8.17 [adam 2023-06-07]
+	Updated lang/py39-html-docs to 3.9.17 [adam 2023-06-07]
+	Updated lang/py310-html-docs to 3.10.12 [adam 2023-06-07]
