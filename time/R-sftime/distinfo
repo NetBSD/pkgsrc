@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/07 12:14:43 mef Exp $
+
+BLAKE2s (R/sftime_0.2-0.tar.gz) = 73a734ace950957f8163592c9aeca05b125f31961de70cbe4257a85a74a2c0e0
+SHA512 (R/sftime_0.2-0.tar.gz) = 03fa7526c7867c1a38b71b15a2aa3ae1c74372e0e7da39b847900a31bfa765f9f03a1fbfb2b616b062b6196134e657b072aaa807ecde02d947ef9d1a2d45da77
+Size (R/sftime_0.2-0.tar.gz) = 90511 bytes
