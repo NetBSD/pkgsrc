@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/08/08 19:53:53 brook Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/07 12:48:06 mef Exp $
 
 R_PKGNAME=	shapefiles
-R_PKGVER=	0.7
+R_PKGVER=	0.7.2
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
