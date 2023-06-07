@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23047 2023/06/07 09:10:14 wiz Exp $
+$NetBSD: TODO,v 1.23048 2023/06/07 10:23:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dap-3.10
 	o darktable-4.2
 	o dateutils-0.4.8
-	o dav1d-1.2.1
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
