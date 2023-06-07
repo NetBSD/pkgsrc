@@ -1,20 +1,13 @@
-$NetBSD: distinfo,v 1.18 2022/01/25 19:40:46 wiz Exp $
+$NetBSD: distinfo,v 1.19 2023/06/07 15:36:40 wiz Exp $
 
-BLAKE2s (polkit-0.120.tar.gz) = d13513e4e4d643bb1f3581fe3c58d467c8f26cd33711034accee42a1546c9781
-SHA512 (polkit-0.120.tar.gz) = db072769439d5e17d0eed681e7b94251b77828c1474b40fe40b94293903a64333e7fa17515a3270648691f04a1374d8b404405ead6abf292a8eb8483164adc46
-Size (polkit-0.120.tar.gz) = 1626659 bytes
-SHA1 (patch-configure.ac) = e6c26b07908b05e38b9049470bdd5da14f91b9ae
-SHA1 (patch-meson.build) = 707d8065d65ae85909cde193785192cc8e933899
-SHA1 (patch-meson__options.txt) = cb8d920382f3b2dca0d5992abb0adf979a729a1f
+BLAKE2s (polkit-121.tar.gz) = 6314805cdcb42137a3ccfbdc827b1e00054b227d45f6e07b7d9c7595805d5940
+SHA512 (polkit-121.tar.gz) = f565027b80f32833c558900b612e089ab25027da5bf9a90c421a292467d4db9a291f6dc9850c4bca8f9ee890d476fd064a643a5f7e28497661ba1e31d4227624
+Size (polkit-121.tar.gz) = 743287 bytes
 SHA1 (patch-src_polkit_polkitunixprocess.c) = 88818b7b64502f64eade34ad379c07f2b0fd1aea
-SHA1 (patch-src_polkitbackend_Makefile.am) = 3e821914e54ce5d3dc31275cd05d5266a3edc9ba
-SHA1 (patch-src_polkitbackend_meson.build) = 8f4788a5080902eaae949d1c026046d6a3321259
-SHA1 (patch-src_polkitbackend_polkitbackendduktapeauthority.c) = a80ba55ecd4726f28c02bd0add0a454b7597519a
-SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = dd91b4e74e6c39f24e0f5a9b3150fdac12899cb5
+SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = 0182d49ad112ea354678e40453388b266216e4de
 SHA1 (patch-src_polkitbackend_polkitbackendjsauthority.cpp) = 432a3d7d082ba6e596ba164d91408fc521b84422
 SHA1 (patch-src_polkitbackend_polkitd.c) = b8e11b40e2b171d4f030eb4c4cbc6fdc7a96b2c2
-SHA1 (patch-src_programs_pkcheck.c) = 3dd53a15f6741b883447be4d5ccd6e86fd6b6be0
-SHA1 (patch-src_programs_pkexec.c) = c373d8e7eac1107fe056a82510fee85c4c97ea57
+SHA1 (patch-src_programs_pkexec.c) = 053123e3da0fe76dd3639b2a6235dfd37db710d8
 SHA1 (patch-src_programs_pkttyagent.c) = 2c249b61501a1ad2c077bc83fd497e45f2db69a8
 SHA1 (patch-test_mocklibc_src_grp.c) = 435ff94fd4c7f5511d74d03839fad453dd841633
 SHA1 (patch-test_mocklibc_src_netdb.c) = 0fe71068a6261d5e2c8874f2b4507e7e3c002526
