@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3622 2023/06/07 10:00:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3623 2023/06/07 10:11:16 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5011,3 +5011,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-extensions to 3.2.3 [adam 2023-06-07]
 	Updated security/gnupg2 to 2.4.2 [adam 2023-06-07]
 	Updated devel/py-boltons to 23.0.0 [adam 2023-06-07]
+	Updated graphics/graphviz to 8.0.5 [micha 2023-06-07]
