@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.316 2023/06/03 11:12:31 wiz Exp $
+# $NetBSD: Makefile,v 1.317 2023/06/07 07:19:22 adam Exp $
 
-DISTNAME=	qemu-8.0.0
-PKGREVISION=	1
+DISTNAME=	qemu-8.0.2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -206,7 +205,9 @@ post-install:
 .include "../../sysutils/dtc/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../x11/xkeyboard-config/buildlink3.mk"
+.endif
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
