@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/01/07 13:35:44 nros Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2023/06/07 06:58:46 wiz Exp $
 
-* make converters/xyconvert link with pkgsrc xylib
+Link against pkgsrc libxy.
 
---- Makefile.in.orig	2016-12-17 12:46:01.000000000 +0000
+--- Makefile.in.orig	2020-09-14 07:56:17.000000000 +0000
 +++ Makefile.in
 @@ -121,7 +121,7 @@ am__dirstamp = $(am__leading_dot)dirstam
  gui_xyconvert_OBJECTS = $(am_gui_xyconvert_OBJECTS)
@@ -13,12 +13,12 @@ $NetBSD: patch-Makefile.in,v 1.1 2020/01/07 13:35:44 nros Exp $
  AM_V_lt = $(am__v_lt_@AM_V@)
  am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
  am__v_lt_0 = --silent
-@@ -464,7 +464,7 @@ xyconv_LDADD = xylib/libxy.la -lm
+@@ -465,7 +465,7 @@ xyconv_LDADD = xylib/libxy.la -lm
  @BUILD_GUI_TRUE@			gui/uplot.cpp gui/uplot.h
  
  @BUILD_GUI_TRUE@gui_xyconvert_CPPFLAGS = $(WX_CPPFLAGS) -DXYCONVERT
 -@BUILD_GUI_TRUE@gui_xyconvert_LDADD = $(xyconvert_res) $(WX_LIBS) xylib/libxy.la -lm
-+@BUILD_GUI_TRUE@gui_xyconvert_LDADD = $(xyconvert_res) $(WX_LIBS) -lxy  -lm
++@BUILD_GUI_TRUE@gui_xyconvert_LDADD = $(xyconvert_res) $(WX_LIBS) -lxy -lm
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
