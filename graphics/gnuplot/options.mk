@@ -1,11 +1,9 @@
-# $NetBSD: options.mk,v 1.22 2023/06/06 12:41:32 riastradh Exp $
+# $NetBSD: options.mk,v 1.23 2023/06/07 10:09:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua qt5 wxwidgets x11
 PKG_SUGGESTED_OPTIONS=	cairo cerf gd x11
 
-# remove after pkgsrc-2020Q3
-PKG_OPTIONS_LEGACY_OPTS+=	pdf:cairo
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	gnuplot-pdf-doc lua qt x11
@@ -75,7 +73,7 @@ CONFIGURE_ARGS+=	--with-qt=no
 .if !empty(PKG_OPTIONS:Mwxwidgets)
 USE_LANGUAGES+=		c++
 CONFIGURE_ARGS+=	--enable-wxwidgets
-.include "../../x11/wxGTK31/buildlink3.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-wxwidgets
 .endif
