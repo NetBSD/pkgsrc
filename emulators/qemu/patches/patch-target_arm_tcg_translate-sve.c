@@ -1,4 +1,4 @@
-$NetBSD: patch-target_arm_translate-sve.c,v 1.2 2023/05/06 19:22:37 ryoon Exp $
+$NetBSD: patch-target_arm_tcg_translate-sve.c,v 1.1 2023/06/07 07:19:22 adam Exp $
 
 Avoid FSCALE define, notably on SunOS.
 
