@@ -1,0 +1,15 @@
+$NetBSD: patch-man_WoofInstall.cmake.in,v 1.1 2023/06/07 15:58:46 micha Exp $
+
+Treat macOS as Unix.
+
+--- man/WoofInstall.cmake.in.orig	2022-12-28 15:38:06.000000000 +0000
++++ man/WoofInstall.cmake.in
+@@ -20,7 +20,7 @@ if(Python3_EXECUTABLE)
+         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+         OUTPUT_FILE "CMDLINE.md")
+ 
+-    if(UNIX AND NOT APPLE)
++    if(UNIX)
+         execute_process(COMMAND
+             "${Python3_EXECUTABLE}" docgen
+             -s "${PROJECT_NAME}" -z "${PROJECT_SHORTNAME}"
