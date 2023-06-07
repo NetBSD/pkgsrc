@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:40 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/06/07 07:03:43 wiz Exp $
 
-BLAKE2s (fityk-0.9.7.tar.bz2) = be30c77b80d910399a3c3f264926d3f6b53d47aaf4ac701f809d01511d1e0102
-SHA512 (fityk-0.9.7.tar.bz2) = bb5a5ce05a8cf0557e638470123b367c00892d87cc2d503879cf6b393dd820c6a5cf78980c9680cfc2d547be367a9c968334c95170f420e42be4e7025bf14a4c
-Size (fityk-0.9.7.tar.bz2) = 1146628 bytes
-SHA1 (patch-aa) = c923919db013ca9ddb8370617bf0b4b0aaa31922
-SHA1 (patch-src_GAfit.cpp) = 6543899d3861853d0738bbb5ced2cc9f59fda6db
-SHA1 (patch-src_common.h) = 1ab3f9d0c72c1f4bb0740a22ccc7960fb18b4c90
-SHA1 (patch-src_data.cpp) = b3aa6c9561a117b93e0447786c9fb4ca50d9438f
-SHA1 (patch-src_eparser.cpp) = 6120b71f1bcafc1efc5b774426955084739a42c0
-SHA1 (patch-src_guess.cpp) = 2379b3bc3de4d24a8c5a2781c27b8eeccbb516c2
-SHA1 (patch-src_wxgui_ceria.cpp) = d3d07180b20b563c67d1bb7316d38ef64ff91a8a
-SHA1 (patch-src_wxgui_dload.cpp) = 08df6c1d5d7cc859927e452450379363710f0a0a
-SHA1 (patch-src_wxgui_frame.cpp) = d3b24c7babb143f0a4e50186b418c45e908e26de
+BLAKE2s (fityk-1.3.2.tar.bz2) = 93302037871d833b696f204f58d2bbb154d3719cb22f37bcddf125bb798a199a
+SHA512 (fityk-1.3.2.tar.bz2) = 6871358cc1d12479f4ae8d76260412095fa17247b2bd76d7b036be330d73b8aac6d242239aea5c086a2eefad1bc387caa83e5a61452016cd77ea6a88e387aee3
+Size (fityk-1.3.2.tar.bz2) = 1611794 bytes
