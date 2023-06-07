@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/06/06 12:42:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.45 2023/06/07 08:44:58 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -60,6 +60,9 @@ pre-configure:
 	${CP} ${FILESDIR}/audio_manager_openbsd.* ${CHROMESRC}/media/audio/openbsd
 	cd ${WRKSRC} && env -i ${MAKE_ENV} ${CHROMESRC}/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS}
+	# re2 pulls in abseil headers, but doesn't need them
+	# avoid conflict with the ones included in the tarball
+	${RM} -rf ${BUILDLINK_DIR}/include/absl
 
 post-install:
 .for i in Qt5Pdf.pc Qt5PdfWidgets.pc Qt5WebEngine.pc Qt5WebEngineCore.pc Qt5WebEngineWidgets.pc
