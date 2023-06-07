@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/04/23 14:26:19 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/06/07 06:35:14 wiz Exp $
 
-DISTNAME=	holtz-1.4.0
-PKGREVISION=	32
+DISTNAME=	holtz-1.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=holtz/}
 
@@ -15,5 +14,5 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
