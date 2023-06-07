@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2023/01/30 17:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/07 15:36:40 wiz Exp $
 
-DISTNAME=	polkit-0.120
-PKGREVISION=	4
+DISTNAME=	polkit-121
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
@@ -14,32 +13,20 @@ TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-# autoreconf processing requires gtkdocize
-TOOL_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 NOT_PAX_MPROTECT_SAFE=	lib/polkit-1/polkitd
 
-GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # has sub-configures
+WRKSRC=			${WRKDIR}/polkit-v.${PKGVERSION_NOREV}
 USE_LANGUAGES=		c c++14
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config gmake perl
-USE_TOOLS+=		msgfmt msgmerge xgettext
-USE_TOOLS+=		autoconf autoreconf automake
+USE_TOOLS+=		msgfmt msgmerge pkg-config perl xgettext
+
+MESON_ARGS+=		-Dman=true
 
 # configure: error: *** A compiler with support for C++17 language features is required.
 GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE+=	data/polkit-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
-CONFIGURE_ARGS+=	--disable-libsystemd-login
-CONFIGURE_ARGS+=	--disable-libelogind
-CONFIGURE_ARGS+=	--with-duktape
-CONFIGURE_ARGS+=	--enable-introspection
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
@@ -58,8 +45,7 @@ BUILD_DEFS+=		VARBASE
 
 REPLACE_PERL+=		src/polkitbackend/toarray.pl
 
-INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/polkit
-INSTALL_MAKE_FLAGS+=	pamdir=${PREFIX}/share/examples/pam.d
+INSTALLATION_DIRS+=	share/examples/polkit/polkit-1/rules.d
 
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/polkit-1/rules.d \
 			${POLKITD_USER} ${POLKITD_GROUP} 700
@@ -80,12 +66,15 @@ SUBST_FILES.paths+=	docs/man/pkexec.xml
 SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.policy.in
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/polkit-1/rules.d/50-default.rules \
+		${DESTDIR}${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules
 
+.include "../../devel/meson/build.mk"
 .include "../../lang/libduktape/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.32
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
