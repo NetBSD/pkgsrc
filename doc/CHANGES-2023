@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3630 2023/06/07 12:30:23 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3631 2023/06/07 12:43:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5019,3 +5019,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-tidyr to 1.3.0 [mef 2023-06-07]
 	Added time/R-sftime version 0.2.0 [mef 2023-06-07]
 	Updated math/R-gstat to 2.1.1 [mef 2023-06-07]
+	Updated math/R-sp to 1.6.1 [mef 2023-06-07]
