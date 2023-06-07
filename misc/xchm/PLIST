@@ -1,12 +1,22 @@
-@comment $NetBSD: PLIST,v 1.18 2013/11/16 06:37:52 shattered Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/06/07 07:15:40 wiz Exp $
 bin/xchm
+man/man1/xchm.1
+share/applications/xchm.desktop
+share/icons/hicolor/128x128/apps/xchm.png
+share/icons/hicolor/128x128/apps/xchmdoc.png
+share/icons/hicolor/16x16/apps/xchm.png
+share/icons/hicolor/16x16/apps/xchmdoc.png
+share/icons/hicolor/32x32/apps/xchm.png
+share/icons/hicolor/32x32/apps/xchmdoc.png
+share/icons/hicolor/48x48/apps/xchm.png
+share/icons/hicolor/48x48/apps/xchmdoc.png
 share/locale/be/LC_MESSAGES/xchm.mo
 share/locale/bg/LC_MESSAGES/xchm.mo
 share/locale/cs/LC_MESSAGES/xchm.mo
 share/locale/de/LC_MESSAGES/xchm.mo
+share/locale/el/LC_MESSAGES/xchm.mo
 share/locale/es/LC_MESSAGES/xchm.mo
 share/locale/fr/LC_MESSAGES/xchm.mo
-share/locale/gr/LC_MESSAGES/xchm.mo
 share/locale/hu/LC_MESSAGES/xchm.mo
 share/locale/it/LC_MESSAGES/xchm.mo
 share/locale/lv/LC_MESSAGES/xchm.mo
@@ -20,19 +30,4 @@ share/locale/sv/LC_MESSAGES/xchm.mo
 share/locale/uk/LC_MESSAGES/xchm.mo
 share/locale/zh_CN/LC_MESSAGES/xchm.mo
 share/locale/zh_TW/LC_MESSAGES/xchm.mo
-share/pixmaps/xchm-128.png
-share/pixmaps/xchm-128.xpm
-share/pixmaps/xchm-16.png
-share/pixmaps/xchm-16.xpm
-share/pixmaps/xchm-32.png
-share/pixmaps/xchm-32.xpm
-share/pixmaps/xchm-48.png
-share/pixmaps/xchm-48.xpm
-share/pixmaps/xchmdoc-128.png
-share/pixmaps/xchmdoc-128.xpm
-share/pixmaps/xchmdoc-16.png
-share/pixmaps/xchmdoc-16.xpm
-share/pixmaps/xchmdoc-32.png
-share/pixmaps/xchmdoc-32.xpm
-share/pixmaps/xchmdoc-48.png
-share/pixmaps/xchmdoc-48.xpm
+share/metainfo/xchm.appdata.xml
