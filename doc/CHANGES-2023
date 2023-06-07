@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3619 2023/06/07 07:03:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3620 2023/06/07 07:15:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5006,3 +5006,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/xylib to 1.6 [wiz 2023-06-07]
 	Updated math/xyconvert to 1.6 [wiz 2023-06-07]
 	Updated math/fityk to 1.3.2 [wiz 2023-06-07]
+	Updated misc/xchm to 1.35 [wiz 2023-06-07]
