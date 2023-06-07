@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3621 2023/06/07 07:22:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3622 2023/06/07 10:00:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5009,3 +5009,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/xchm to 1.35 [wiz 2023-06-07]
 	Updated emulators/qemu to 8.0.2 [adam 2023-06-07]
 	Updated www/py-django-extensions to 3.2.3 [adam 2023-06-07]
+	Updated security/gnupg2 to 2.4.2 [adam 2023-06-07]
+	Updated devel/py-boltons to 23.0.0 [adam 2023-06-07]
