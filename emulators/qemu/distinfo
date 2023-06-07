@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.202 2023/05/06 19:22:37 ryoon Exp $
+$NetBSD: distinfo,v 1.203 2023/06/07 07:19:22 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-8.0.0.tar.xz) = 9f47afef0e23e47e402c2857b98e3c5efa56948f9424c14cbc4c9b660ea86e06
-SHA512 (qemu-8.0.0.tar.xz) = 1f31d1e653dec2d35f1b7a5468ee3f471553b48eca8c8afafffcf9243c6b2260e78a5b73da3fe567f9b85d4133573eebd397747b3aec501fb24076263eb07b27
-Size (qemu-8.0.0.tar.xz) = 127835148 bytes
+BLAKE2s (qemu-8.0.2.tar.xz) = 96da02b9dc511b2ffb553158de057a42e074606369734f54d05e9e5f6384936f
+SHA512 (qemu-8.0.2.tar.xz) = 4e915d33a662bf55b09247fb85150be376c92270d3764e3d6470c452cb70cc558f54e84de5610dd60a9eb3ea02d5d4277b1ec75c9804967d278fa8361c7f9b9a
+Size (qemu-8.0.2.tar.xz) = 126707132 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
 SHA1 (patch-hw-mips-Kconfig) = c7199ad26ac45116ab4d38252db4234ae93bdf9a
 SHA1 (patch-hw-mips-mipssim.c) = 1f682b74b34398b3ff15f9e7f24a85f4b8bb4853
@@ -19,7 +19,7 @@ SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
 SHA1 (patch-meson.build) = 67fcc428b1953a63e4c0aa32ac1d41ec234a2462
 SHA1 (patch-meson_mesonbuild_linkers_linkers.py) = 842b01f543c99c66630df8450f71ab9fc422ff32
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
-SHA1 (patch-target_arm_translate-sve.c) = b5eeb08331e61a16b2cf4b7ab9b668755aa9a04e
+SHA1 (patch-target_arm_tcg_translate-sve.c) = b5eeb08331e61a16b2cf4b7ab9b668755aa9a04e
 SHA1 (patch-target_i386_cpu.c) = afa8a2f83399b2d142709322eb88d1112f1547e4
 SHA1 (patch-target_i386_meson.build) = 0ef0636dd68e5eeb9a2a34473e2a24bf3c141c0f
 SHA1 (patch-target_sparc_translate.c) = f633b3953847c1a7e93f1d09a67964431979b197
