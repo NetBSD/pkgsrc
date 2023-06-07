@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3636 2023/06/07 15:11:59 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3637 2023/06/07 15:36:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/nushell to 0.81.0 [pin 2023-06-07]
 	Updated www/goaccess to 1.7.2 [schmonz 2023-06-07]
 	Updated net/ucspi-ssl to 0.999.12.7nb1 [schmonz 2023-06-07]
+	Updated security/polkit to 121 [wiz 2023-06-07]
