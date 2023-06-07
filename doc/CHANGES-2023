@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3623 2023/06/07 10:11:16 micha Exp $
+$NetBSD: CHANGES-2023,v 1.3624 2023/06/07 10:23:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gnupg2 to 2.4.2 [adam 2023-06-07]
 	Updated devel/py-boltons to 23.0.0 [adam 2023-06-07]
 	Updated graphics/graphviz to 8.0.5 [micha 2023-06-07]
+	Updated multimedia/dav1d to 1.2.1 [wiz 2023-06-07]
