@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/06/07 12:48:06 mef Exp $
 
-BLAKE2s (R/shapefiles_0.7.tar.gz) = 824b04810ea28fa1d865f4800beebfb19faa10d3c002f6d6ca6dcf0b9f95d8c8
-SHA512 (R/shapefiles_0.7.tar.gz) = 864bbb25d096445323f6a69846c2ba9ead9ec440736ded35fda4cf953ba079310125fedd1c72d1daca9f36a58ba0d5ffc26dc79009f55c0a45d2b1cd1092f327
-Size (R/shapefiles_0.7.tar.gz) = 10589 bytes
+BLAKE2s (R/shapefiles_0.7.2.tar.gz) = 5a9013e3848ad75d92038d716e2b4b6fc4b9eda2ae97e89a12617151dce95d1b
+SHA512 (R/shapefiles_0.7.2.tar.gz) = eb782d0b17aa5c361740e1148ce18fa929309b6c59ae9a938b823a3638f99c95b5d1301b6c5c66c475dada5a6baf6257afeea26a9cbd7471a39bc777c2333b4e
+Size (R/shapefiles_0.7.2.tar.gz) = 10964 bytes
