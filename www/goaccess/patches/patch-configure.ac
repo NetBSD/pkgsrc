@@ -1,7 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.3 2021/02/26 15:39:46 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.4 2023/06/07 15:03:08 schmonz Exp $
 
 Remove ncursesw hack which actually breaks macOS.
-Use portable shell string-equality test.
 
 --- configure.ac.orig	2021-01-26 00:21:46.000000000 +0000
 +++ configure.ac
