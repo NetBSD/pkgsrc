@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.254 2023/06/06 12:42:39 riastradh Exp $
+# $NetBSD: mozilla-common.mk,v 1.255 2023/06/07 14:40:13 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -136,10 +136,12 @@ SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or rearlier.
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090400
 RUST_MAKE_JOBS=		# empty by default
-.  if ${MAKE_JOBS} > 1
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090400
+.  if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
+.    if ${MAKE_JOBS} > 1
 RUST_MAKE_JOBS=		-j1 # for MAKE_JOBS=1, RUST_MAKE_JOBS should be empty.
+.    endif
 .  endif
 .endif
 
