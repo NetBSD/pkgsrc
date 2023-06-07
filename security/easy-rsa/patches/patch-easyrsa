@@ -1,39 +1,33 @@
-$NetBSD: patch-easyrsa,v 1.3 2023/06/06 16:15:25 leot Exp $
+$NetBSD: patch-easyrsa,v 1.4 2023/06/07 11:10:38 leot Exp $
 
-- Only FreeBSD and OpenBSD date(1) knowns about `-f' and `-v' option.
-  Exclude possible other *BSD and fallbacks to date(1) `-d' there
-  that is supported by NetBSD.
-- Stick to POSIX basic regular expression (spell spaces via `[[:blank:]]'
-  instead of `\s' that could be not supported and undefined).
 - Set a sane default for config file. Needs to be SUBSTed.
 
---- easyrsa.orig	2020-09-09 20:59:45.000000000 +0000
+--- easyrsa.orig	2023-05-24 12:02:30.000000000 +0000
 +++ easyrsa
-@@ -1179,7 +1179,7 @@ at: $crt_in"
- 		sed 's/^notAfter=//'
- 		)
-         case $(uname 2>/dev/null) in
--        	"Darwin"|*"BSD")
-+        	"Darwin"|"FreeBSD"|"OpenBSD")
-                 	expire_date=$(date -j -f '%b %d %T %Y %Z' "$expire_date" +%s)
-                 	allow_renew_date=$(date -j -v"+${EASYRSA_CERT_RENEW}d" +%s)
-                 	;;
-@@ -1515,7 +1515,7 @@ display_san() {
- 	echo "$EASYRSA_EXTRA_EXTS" | grep -q subjectAltName
+@@ -1308,7 +1308,7 @@ install_data_to_pki() {
+ 	# '/usr/local/share/easy-rsa' - Default user installed
+ 	# '/usr/share/easy-rsa' - Default system installed
+ 	# Room for more..
+-	# '/etc/easy-rsa' - Last resort
++	# '@SYSCONFDIR@' - Last resort
  
- 	if [ $? -eq 0 ]; then
--		print "$(echo "$EASYRSA_EXTRA_EXTS" | grep subjectAltName | sed 's/^\s*subjectAltName\s*=\s*//')"
-+		print "$(echo "$EASYRSA_EXTRA_EXTS" | grep subjectAltName | sed 's/^[[:space:]]*subjectAltName[[:space:]]*=[[:space:]]*//')"
- 	else
- 		san=$(
- 			"$EASYRSA_OPENSSL" "$format" -in "$path" -noout -text |
-@@ -1685,6 +1685,9 @@ vars_setup() {
- 	# EASYRSA, if defined:
- 	elif [ -n "$EASYRSA" ] && [ -f "$EASYRSA/vars" ]; then
- 		vars="$EASYRSA/vars"
-+	# sysconf location:
-+	elif [ -f "@SYSCONFDIR@/vars" ]; then
-+		vars="@SYSCONFDIR@/vars"
- 	# program location:
- 	elif [ -f "$prog_vars" ]; then
- 		vars="$prog_vars"
+ 	# Find and optionally copy data-files, in specific order
+ 	for area in \
+@@ -1318,7 +1318,7 @@ install_data_to_pki() {
+ 		"${0%/*}" \
+ 		'/usr/local/share/easy-rsa' \
+ 		'/usr/share/easy-rsa' \
+-		'/etc/easy-rsa' \
++		'@SYSCONFDIR@' \
+ 		# EOL
+ 	do
+ 		if [ "$context" = x509-types-only ]; then
+@@ -5143,6 +5143,8 @@ The 'vars' file was not found:
+ 		# Some other place vars, out of scope.
+ 		if [ "$EASYRSA" ]; then
+ 			easy_vars="${EASYRSA}/vars"
++		elif [ -f "@SYSCONFDIR@/vars" ]; then
++			easy_vars="@SYSCONFDIR@/vars"
+ 		else
+ 			unset -v easy_vars
+ 		fi
