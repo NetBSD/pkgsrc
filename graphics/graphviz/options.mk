@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2022/09/28 19:58:26 wiz Exp $
+# $NetBSD: options.mk,v 1.36 2023/06/07 13:32:49 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua perl poppler svg tcl x11
@@ -72,6 +72,7 @@ CONFIGURE_ARGS+=	--without-quartz
 .endif
 
 .if !empty(PKG_OPTIONS:Msvg)
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.36.0
 .  include "../../graphics/librsvg/buildlink3.mk"
 PLIST.svg=		yes
 CONFIGURE_ARGS+=	--with-rsvg
