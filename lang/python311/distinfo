@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.5 2023/04/06 11:30:37 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/06/07 13:28:49 adam Exp $
 
-BLAKE2s (Python-3.11.3.tar.xz) = e8507165d2b1eba2af14e12f6e750364b79071133404596e5a0e9347e2d4142b
-SHA512 (Python-3.11.3.tar.xz) = a3bba4b69322a47bfeefe42ba0fd7331b5b67fd2ab41441e2219d16ef8c6f307f1a48977afd073c18cfd24ec6cb1bfe0c4bb4b273031eb524dc7e9fb5fbcc3b6
-Size (Python-3.11.3.tar.xz) = 19906156 bytes
+BLAKE2s (Python-3.11.4.tar.xz) = c18c396b72d794ede405921276aa43b1923a4bda964d7dcf797bded7e8e30b1b
+SHA512 (Python-3.11.4.tar.xz) = 7eb14fecbf60824d10c22a9057584c3a142c2866f4af6caa2525c10c8bcb24e6e7afb32a44a0e118df0a2b2543d578c3b422ffd4a5fa317dfe6ea371cc7ee1ee
+Size (Python-3.11.4.tar.xz) = 19954828 bytes
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 8a91e8f4f86517a62408c3a10ed5eb50c4091fbf
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 593c4e93c5653ab400f0a98b91db92630c0a7390
 SHA1 (patch-Lib_sysconfig.py) = bc6d91bf8f7121456b26ea7f080f588c96f2596f
 SHA1 (patch-Makefile.pre.in) = 352633b0c261fb3feaec2e11ee3fdbabfe4bc0f4
 SHA1 (patch-Modules_socketmodule.c) = dcf93806374bb8d983b7c8cefd7a3360a90064d7
-SHA1 (patch-configure) = 6008074e9d6e04802b1fa66e61e54f33a834b004
+SHA1 (patch-configure) = 6221cff9d7949c1d1d9ea434dd70a8e3e4e2bac6
 SHA1 (patch-setup.py) = e9d63094f547bd0a9e00d4ded88ebcdfeb3a7ea2
