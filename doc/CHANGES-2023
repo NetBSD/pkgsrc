@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3639 2023/06/07 18:25:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3640 2023/06/07 20:47:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5036,3 +5036,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/polkit to 121 [wiz 2023-06-07]
 	Updated games/woof to 11.1.4 [micha 2023-06-07]
 	Added devel/scons4 version 4.5.2 [wiz 2023-06-07]
+	Updated devel/py-virtualenv to 20.23.0nb1 [jperkin 2023-06-07]
