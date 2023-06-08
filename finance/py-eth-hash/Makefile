@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/11/15 05:42:26 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/08 10:23:14 adam Exp $
 
-DISTNAME=	eth-hash-0.5.1
+DISTNAME=	eth-hash-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-hash/}
@@ -11,11 +11,8 @@ COMMENT=	Ethereum keccak256 hashing function
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.6.6:../../security/py-cryptodome
-# optional
-#DEPENDS+=	${PYPKGPREFIX}-pysha3>=1.0.0:../../devel/py-pysha3
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=3.14.6:../../devel/py-tox
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.4.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
