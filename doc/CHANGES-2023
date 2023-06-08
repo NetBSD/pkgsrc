@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3643 2023/06/08 05:34:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3644 2023/06/08 07:05:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/scons4 to 4.5.2nb1 [wiz 2023-06-08]
 	Removed x11/wxGTK31 successor x11/wxGTK32 [wiz 2023-06-08]
 	Updated geography/gpsd to 3.25nb1 [wiz 2023-06-08]
+	Updated audio/chromaprint to 1.5.1nb3 [wiz 2023-06-08]
