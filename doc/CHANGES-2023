@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3650 2023/06/08 16:09:24 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3651 2023/06/08 16:14:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5052,3 +5052,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-sets to 1.0.24 [mef 2023-06-08]
 	Updated math/R-sandwich to 3.0.2 [mef 2023-06-08]
 	Updated math/R-rstudioapi to 0.14 [mef 2023-06-08]
+	Updated math/R-DEoptimR to 1.0.13 [mef 2023-06-08]
