@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3654 2023/06/08 21:41:26 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3655 2023/06/08 23:06:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5056,3 +5056,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sniffnet to 1.2.1 [pin 2023-06-08]
 	Updated textproc/p5-Alien-Hunspell to 0.17nb1 [gutteridge 2023-06-08]
 	Updated textproc/p5-Text-Hunspell to 2.16 [gutteridge 2023-06-08]
+	Updated math/R-robustbase to 0.95.1 [makoto 2023-06-08]
