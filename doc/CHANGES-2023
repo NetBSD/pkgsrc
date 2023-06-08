@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3640 2023/06/07 20:47:19 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.3641 2023/06/08 05:28:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5037,3 +5037,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/woof to 11.1.4 [micha 2023-06-07]
 	Added devel/scons4 version 4.5.2 [wiz 2023-06-07]
 	Updated devel/py-virtualenv to 20.23.0nb1 [jperkin 2023-06-07]
+	Updated devel/scons4 to 4.5.2nb1 [wiz 2023-06-08]
