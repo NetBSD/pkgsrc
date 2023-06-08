@@ -1,0 +1,20 @@
+$NetBSD: patch-tests_CMakeLists.txt,v 1.1 2023/06/08 07:05:18 wiz Exp $
+
+Support ffmpeg5
+https://github.com/acoustid/chromaprint/pull/120/files
+
+--- tests/CMakeLists.txt.orig	2021-12-23 05:57:54.000000000 +0000
++++ tests/CMakeLists.txt
+@@ -38,6 +38,12 @@ set(SRCS
+ 
+ if(BUILD_TOOLS)
+ 	set(SRCS ${SRCS} ../src/audio/ffmpeg_audio_reader_test.cpp)
++    include_directories(
++        ${FFMPEG_LIBAVFORMAT_INCLUDE_DIRS}
++        ${FFMPEG_LIBAVCODEC_INCLUDE_DIRS}
++        ${FFMPEG_LIBAVUTIL_INCLUDE_DIRS}
++        ${AUDIO_PROCESSOR_INCLUDE_DIRS}
++    )
+ 	link_libraries(fpcalc_libs)
+ endif()
+ 

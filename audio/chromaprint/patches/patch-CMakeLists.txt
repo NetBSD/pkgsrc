@@ -1,0 +1,49 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/06/08 07:05:18 wiz Exp $
+
+Support ffmpeg5
+https://github.com/acoustid/chromaprint/pull/120/files
+
+--- CMakeLists.txt.orig	2021-12-23 05:57:54.000000000 +0000
++++ CMakeLists.txt
+@@ -82,9 +82,6 @@ find_package(FFmpeg)
+ if(FFMPEG_LIBRARIES)
+ 	cmake_push_check_state(RESET)
+ 	set(CMAKE_REQUIRED_LIBRARIES ${FFMPEG_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} -lm)
+-	check_function_exists(av_packet_unref HAVE_AV_PACKET_UNREF)
+-	check_function_exists(av_frame_alloc HAVE_AV_FRAME_ALLOC)
+-	check_function_exists(av_frame_free HAVE_AV_FRAME_FREE)
+ 	cmake_pop_check_state()
+ endif()
+ 
+@@ -161,14 +158,11 @@ message(STATUS "Using ${FFT_LIB} for FFT
+ if(NOT AUDIO_PROCESSOR_LIB)
+ 	if(FFMPEG_LIBSWRESAMPLE_FOUND)
+ 		set(AUDIO_PROCESSOR_LIB "swresample")
+-	elseif(FFMPEG_LIBAVRESAMPLE_FOUND)
+-		set(AUDIO_PROCESSOR_LIB "avresample")
+ 	endif()
+ endif()
+ 
+ if(AUDIO_PROCESSOR_LIB STREQUAL "swresample")
+ 	if(FFMPEG_LIBSWRESAMPLE_FOUND)
+-		set(USE_AVRESAMPLE OFF)
+ 		set(USE_SWRESAMPLE ON)
+ 		set(AUDIO_PROCESSOR_LIBRARIES ${FFMPEG_LIBSWRESAMPLE_LIBRARIES})
+ 		set(AUDIO_PROCESSOR_INCLUDE_DIRS ${FFMPEG_LIBSWRESAMPLE_INCLUDE_DIRS})
+@@ -176,16 +170,6 @@ if(AUDIO_PROCESSOR_LIB STREQUAL "swresam
+ 		message(FATAL_ERROR "Selected ${AUDIO_PROCESSOR_LIB} for audio processing, but the library is not found")
+ 	endif()
+ 	message(STATUS "Using ${AUDIO_PROCESSOR_LIB} for audio conversion")
+-elseif(AUDIO_PROCESSOR_LIB STREQUAL "avresample")
+-	if(FFMPEG_LIBAVRESAMPLE_FOUND)
+-		set(USE_AVRESAMPLE ON)
+-		set(USE_SWRESAMPLE OFF)
+-		set(AUDIO_PROCESSOR_LIBRARIES ${FFMPEG_LIBAVRESAMPLE_LIBRARIES})
+-		set(AUDIO_PROCESSOR_INCLUDE_DIRS ${FFMPEG_LIBAVRESAMPLE_INCLUDE_DIRS})
+-	else()
+-		message(FATAL_ERROR "Selected ${AUDIO_PROCESSOR_LIB} for audio processing, but the library is not found")
+-	endif()
+-	message(STATUS "Using ${AUDIO_PROCESSOR_LIB} for audio conversion")
+ else()
+ 	message(STATUS "Building without audio conversion support, please install FFmpeg with libswresample")
+ endif()
