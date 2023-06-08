@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/01/29 21:15:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2023/06/08 07:05:17 wiz Exp $
 
 DISTNAME=	chromaprint-1.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=acoustid/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,8 +25,8 @@ SOEXT=	so
 .endif
 
 .for lib in AVCODEC AVFORMAT AVUTIL SWRESAMPLE
-CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg4}/include/ffmpeg4
-CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg4}/lib/ffmpeg4/lib${lib:tl}.${SOEXT}
+CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg5}/include/ffmpeg5
+CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg5}/lib/ffmpeg5/lib${lib:tl}.${SOEXT}
 .endfor
 
 PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
@@ -34,7 +34,5 @@ PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
 .include "../../devel/cmake/build.mk"
 .include "../../math/fftw/buildlink3.mk"
 # On Darwin, chromaprint uses Accelerate.framework, but fpcalc still needs FFmpeg
-# does not support ffmpeg4 yet:
-# https://github.com/acoustid/chromaprint/issues/117
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
