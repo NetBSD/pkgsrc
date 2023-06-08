@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/07 18:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/08 05:28:43 wiz Exp $
 
 DISTNAME=	SCons-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SCons/}
 
@@ -19,6 +20,13 @@ REPLACE_PYTHON+=	script/scons-configure-cache
 REPLACE_PYTHON+=	script/sconsign
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# XXX: not sure why this is needed exactly
+# but -Wl,-rpath is filtered out by buildlink from the c++ command line
+SUBST_CLASSES+=		rflag
+SUBST_STAGE.rflag=	pre-configure
+SUBST_FILES.rflag=	SCons/Tool/gnulink.py
+SUBST_SED.rflag=	-e 's|-Wl,-rpath=|${COMPILER_RPATH_FLAG}|g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
