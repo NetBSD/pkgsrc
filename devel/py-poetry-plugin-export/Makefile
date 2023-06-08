@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 10:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/08 10:13:30 adam Exp $
 
 DISTNAME=	poetry_plugin_export-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://python-poetry.org/
 COMMENT=	Poetry plugin to export the dependencies to various formats
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.3.0:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-poetry>=1.3.0:../../devel/py-poetry
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.6.0:../../devel/py-poetry-core
+TEST_DEPENDS+=	${PYPKGPREFIX}-poetry>=1.5.0:../../devel/py-poetry
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.9:../../devel/py-test-mock
