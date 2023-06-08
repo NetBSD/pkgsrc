@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2022/11/28 13:18:23 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/06/08 14:35:46 joerg Exp $
 
 BLAKE2s (rdfind-1.5.0.tar.gz) = c8c290dce6ffca48f614e0d7cafeeada36190a5cf26b58145aad7ee8a861f980
 SHA512 (rdfind-1.5.0.tar.gz) = 0ba95e3d9ed4f127d271500c6f36c8945d0c8193fa2719636cc780e56de108e35404d1860edcb2fca2d9a4fb8b09dcd5dab904e55cf0530d664aaf8510be266b
 Size (rdfind-1.5.0.tar.gz) = 131167 bytes
+SHA1 (patch-Fileinfo.hh) = 006fa7dfcc3dbbceae27da376f46ca2b82d920f9
+SHA1 (patch-rdfind.cc) = 858e8fac4fe8f97d290a85b9a8e43f9f943b367b
