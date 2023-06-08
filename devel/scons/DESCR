@@ -1,3 +1,6 @@
 SCons is an Open Source software construction tool--that is, a build tool;
 an improved substitute for the classic Make utility; a better way to build
 software.
+
+This is major version 3 of scons, which still supports Python 2.
+Use scons4 instead, if possible.
