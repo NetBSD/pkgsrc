@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/11/14 14:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/08 10:34:37 adam Exp $
 
-DISTNAME=	eth-keyfile-0.6.0
+DISTNAME=	eth-keyfile-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-keyfile/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
