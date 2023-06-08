@@ -1,0 +1,21 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_build_scripts_templates_make__qualified__names.h.tmpl,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3
+
+--- src/3rdparty/chromium/third_party/blink/renderer/build/scripts/templates/make_qualified_names.h.tmpl.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/third_party/blink/renderer/build/scripts/templates/make_qualified_names.h.tmpl
+@@ -24,12 +24,12 @@ namespace {{cpp_namespace}} {
+ {{symbol_export}}extern const WTF::AtomicString& {{namespace_prefix}}NamespaceURI;
+ 
+ // Tags
+-{% for tag in tags|sort %}
++{% for tag in tags|sort(attribute='name') %}
+ {{symbol_export}}extern const blink::{{namespace}}QualifiedName& {{tag|symbol}}Tag;
+ {% endfor %}
+ 
+ // Attributes
+-{% for attr in attrs|sort %}
++{% for attr in attrs|sort(attribute='name') %}
+ {{symbol_export}}extern const blink::QualifiedName& {{attr|symbol}}Attr;
+ {% endfor %}
+ 

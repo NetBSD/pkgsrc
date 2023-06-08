@@ -1,0 +1,18 @@
+$NetBSD: patch-src_3rdparty_chromium_mojo_public_tools_bindings_BUILD.gn,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3
+
+--- src/3rdparty/chromium/mojo/public/tools/bindings/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/mojo/public/tools/bindings/BUILD.gn
+@@ -2,9 +2,11 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
++import("//build/config/python.gni")
+ import("//mojo/public/tools/bindings/mojom.gni")
+ import("//third_party/jinja2/jinja2.gni")
+ 
++# TODO(crbug.com/1194274): Investigate nondeterminism in Py3 builds.
+ action("precompile_templates") {
+   sources = mojom_generator_sources
+   sources += [
