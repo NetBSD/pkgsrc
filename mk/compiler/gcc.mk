@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.249 2023/01/06 23:11:31 wiz Exp $
+# $NetBSD: gcc.mk,v 1.250 2023/06/08 22:59:53 riastradh Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -62,7 +62,7 @@ _VARGROUPS+=	gcc
 _USER_VARS.gcc=	\
 	USE_NATIVE_GCC USE_PKGSRC_GCC USE_PKGSRC_GCC_RUNTIME \
 	GCCBASE GCC_VERSION_SUFFIX \
-	USE_CROSS_COMPILE \
+	TOOLS_USE_CROSS_COMPILE \
 	PKGSRC_USE_FORTIFY PKGSRC_USE_RELRO PKGSRC_USE_SSP \
 	COMPILER_USE_SYMLINKS CC
 _PKG_VARS.gcc=	\
@@ -201,7 +201,7 @@ _CC:=	${_dir_}/${CC:[1]}
 .      endif
 .    endif
 .  endfor
-.  if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if ${TOOLS_USE_CROSS_COMPILE:tl} == "no"
 # Pass along _CC only if we're working on native packages -- don't pass
 # the cross-compiler on to submakes for building native packages.
 MAKEFLAGS+=	_CC=${_CC:Q}
