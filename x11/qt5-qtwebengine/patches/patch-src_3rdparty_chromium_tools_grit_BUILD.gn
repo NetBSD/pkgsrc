@@ -1,0 +1,14 @@
+$NetBSD: patch-src_3rdparty_chromium_tools_grit_BUILD.gn,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/tools/grit/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/tools/grit/BUILD.gn
+@@ -33,7 +33,6 @@ group("grit_python_unittests") {
+     "//testing/scripts/run_isolated_script_test.py",
+     "//testing/xvfb.py",
+     "//tools/grit/",
+-    "//third_party/catapult/third_party/typ/",
+   ]
+ }
+ 

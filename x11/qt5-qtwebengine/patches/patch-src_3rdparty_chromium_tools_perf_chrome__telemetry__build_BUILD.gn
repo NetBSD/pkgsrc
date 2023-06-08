@@ -1,6 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_tools_perf_chrome__telemetry__build_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_tools_perf_chrome__telemetry__build_BUILD.gn,v 1.3 2023/06/08 20:38:06 markd Exp $
 
---- src/3rdparty/chromium/tools/perf/chrome_telemetry_build/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+support bsd
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/tools/perf/chrome_telemetry_build/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
 +++ src/3rdparty/chromium/tools/perf/chrome_telemetry_build/BUILD.gn
 @@ -43,7 +43,7 @@ group("telemetry_chrome_test") {
      data_deps += [ "//chrome:reorder_imports" ]
@@ -11,3 +14,19 @@ $NetBSD: patch-src_3rdparty_chromium_tools_perf_chrome__telemetry__build_BUILD.g
      data_deps += [ "//third_party/breakpad:dump_syms($host_toolchain)" ]
  
      # CrOS currently has issues with the locally compiled version of
+@@ -107,7 +107,6 @@ group("telemetry_chrome_test_without_chr
+     "//tools/perf/core/",  # chrome_telemetry_build/ depends on core/
+   ]
+   data_deps = [
+-    "//third_party/catapult:telemetry_chrome_test_support",
+     "//tools/metrics:metrics_python_tests",
+   ]
+ 
+@@ -151,7 +150,5 @@ group("telemetry_chrome_test_without_chr
+       "//build/android:devil_chromium_py",
+       "//build/android:stack_tools",
+     ]
+-  } else if (!is_fuchsia) {
+-    data_deps += [ "//third_party/catapult/telemetry:bitmaptools" ]
+   }
+ }

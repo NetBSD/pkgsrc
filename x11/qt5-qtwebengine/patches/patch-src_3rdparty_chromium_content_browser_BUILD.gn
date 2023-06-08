@@ -1,6 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.3 2023/06/08 20:38:06 markd Exp $
 
---- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+support bsd
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
 @@ -2067,7 +2067,7 @@ jumbo_static_library("browser") {
      deps += [ "//ui/events" ]
@@ -20,7 +23,15 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 1
      sources += [
        "tracing/cast_tracing_agent.cc",
        "tracing/cast_tracing_agent.h",
-@@ -2417,7 +2417,7 @@ jumbo_static_library("browser") {
+@@ -2169,7 +2169,6 @@ jumbo_static_library("browser") {
+   if (!is_android) {
+     deps += [
+       "//components/vector_icons",
+-      "//content/browser/tracing:resources",
+     ]
+   }
+ 
+@@ -2417,7 +2416,7 @@ jumbo_static_library("browser") {
        sources += [ "renderer_host/pepper/pepper_truetype_font_list_pango.cc" ]
      }
  
@@ -29,7 +40,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 1
        deps += [ "//components/services/font:ppapi_fontconfig_matching" ]
      }
    }
-@@ -2455,7 +2455,7 @@ jumbo_static_library("browser") {
+@@ -2455,7 +2454,7 @@ jumbo_static_library("browser") {
      }
    }
  
@@ -38,7 +49,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 1
      deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -2726,7 +2726,7 @@ jumbo_static_library("browser") {
+@@ -2726,7 +2725,7 @@ jumbo_static_library("browser") {
        "web_contents/aura/gesture_nav_simple.h",
      ]
  
@@ -47,7 +58,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 1
        deps += [ "//ui/base/ime/linux" ]
      }
    } else {  # Not aura.
-@@ -2807,7 +2807,7 @@ jumbo_static_library("browser") {
+@@ -2807,7 +2806,7 @@ jumbo_static_library("browser") {
      ]
    }
  
