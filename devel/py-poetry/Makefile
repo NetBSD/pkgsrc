@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 10:40:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/08 10:12:30 adam Exp $
 
 DISTNAME=	poetry-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,8 +25,8 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.7.0:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.9.4:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.5.2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.5.2:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-poetry-plugin-export>=1.3.0:../../devel/py-poetry-plugin-export
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.6.1:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-poetry-plugin-export>=1.4.0:../../devel/py-poetry-plugin-export
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=1.0.0:../../devel/py-pyproject_hooks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.18:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
