@@ -1,6 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.3 2023/06/08 20:38:05 markd Exp $
 
---- src/3rdparty/chromium/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+support bsd
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
 +++ src/3rdparty/chromium/BUILD.gn
 @@ -206,7 +206,7 @@ group("gn_all") {
      ]
@@ -11,7 +14,23 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      deps += [
        "//weblayer/shell:weblayer_shell",
        "//weblayer/test:weblayer_browsertests",
-@@ -409,12 +409,12 @@ group("gn_all") {
+@@ -239,7 +239,6 @@ group("gn_all") {
+       "//media/capture:capture_unittests",
+       "//media/cast:cast_unittests",
+       "//third_party/angle/src/tests:angle_white_box_tests",
+-      "//third_party/catapult/telemetry:bitmaptools($host_toolchain)",
+     ]
+   } else if (is_ios && !use_qt) {
+     deps += [
+@@ -354,7 +353,6 @@ group("gn_all") {
+       "//net/android:net_junit_tests",
+       "//services:services_junit_tests",
+       "//testing/android/junit:junit_unit_tests",
+-      "//third_party/catapult/devil",
+       "//third_party/smhasher:murmurhash3",
+       "//tools/android:android_tools",
+       "//tools/android:memconsumer",
+@@ -409,12 +407,12 @@ group("gn_all") {
    #       seems currently broken for this platform at the moment, and the
    #       corresponding code build and works on Linux unmodified.
    #       See instructions in the corresponding BUILD.gn.
@@ -26,7 +45,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      # This is only used by ChromeOS, but we want maximal fuzzer coverage, so
      # run it under linux too.
      deps += [
-@@ -469,6 +469,15 @@ group("gn_all") {
+@@ -469,6 +467,15 @@ group("gn_all") {
        "//testing:empty_main",
      ]
  
@@ -42,7 +61,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      if (use_dbus) {
        deps += [
          "//dbus:dbus_test_server",
-@@ -482,7 +491,7 @@ group("gn_all") {
+@@ -482,7 +489,7 @@ group("gn_all") {
      }
    }
  
@@ -51,7 +70,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      deps += [
        "//base:base_i18n_perftests",
        "//google_apis:google_apis_unittests",
-@@ -515,7 +524,7 @@ group("gn_all") {
+@@ -515,7 +522,7 @@ group("gn_all") {
        "//ui/compositor:compositor_unittests",
      ]
  
@@ -60,7 +79,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
        deps += [
          "//chrome/test:load_library_perf_tests",
          "//chrome/test:sync_performance_tests",
-@@ -552,6 +561,27 @@ group("gn_all") {
+@@ -552,6 +559,27 @@ group("gn_all") {
        }
      }
  
@@ -88,7 +107,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      if (is_android) {
        deps += [ "//chrome/test/chromedriver:chromedriver($host_toolchain)" ]
      }
-@@ -566,7 +596,7 @@ group("gn_all") {
+@@ -566,7 +594,7 @@ group("gn_all") {
      if (enable_nacl) {
        deps += [ "//components/nacl/loader:nacl_loader_unittests" ]
  
@@ -97,7 +116,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
          # TODO(dpranke): Figure out what platforms should actually have this.
          deps += [ "//components/nacl/loader:nacl_helper" ]
  
-@@ -600,6 +630,17 @@ group("gn_all") {
+@@ -600,6 +628,17 @@ group("gn_all") {
        "//third_party/breakpad:minidump_dump($host_toolchain)",
        "//third_party/breakpad:minidump_stackwalk($host_toolchain)",
      ]
@@ -115,7 +134,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
  
      if (!is_android) {
        deps += [
-@@ -676,7 +717,7 @@ group("gn_all") {
+@@ -676,7 +715,7 @@ group("gn_all") {
          host_os == "win" && !use_qt) {
        deps += [ "//chrome/test/mini_installer:mini_installer_tests" ]
      }
@@ -124,7 +143,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      deps += [ "//third_party/breakpad:symupload($host_toolchain)" ]
    }
  
-@@ -691,7 +732,7 @@ group("gn_all") {
+@@ -691,7 +730,7 @@ group("gn_all") {
      }
    }
  
@@ -133,7 +152,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      deps += [
        "//third_party/crashpad/crashpad:crashpad_tests",
        "//third_party/crashpad/crashpad/handler:crashpad_handler",
-@@ -715,19 +756,19 @@ group("gn_all") {
+@@ -715,19 +754,19 @@ group("gn_all") {
      deps += [ "//content/browser/bluetooth/tools:bluetooth_metrics_hash" ]
    }
  
@@ -157,7 +176,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      # TODO(GYP): Figure out if any of these should be in gn_all
      # and figure out how cross-platform they are
      deps += [
-@@ -769,12 +810,12 @@ group("gn_all") {
+@@ -769,12 +808,12 @@ group("gn_all") {
        }
        deps += [ "//third_party/libjpeg_turbo:simd_asm" ]
      }
@@ -172,7 +191,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
        (is_win && use_libfuzzer) || (use_libfuzzer && is_mac)) {
      deps += [
        "//chrome/services/ipp_parser/public/cpp:fuzzers",
-@@ -798,7 +839,7 @@ group("gn_all") {
+@@ -798,7 +837,7 @@ group("gn_all") {
      deps += [ "//native_client_sdk/src:nacl_core_sdk" ]
    }
  
@@ -181,7 +200,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      deps += [
        "//headless:headless_non_renderer",
        "//headless:headless_tests",
-@@ -810,8 +851,12 @@ group("gn_all") {
+@@ -810,8 +849,12 @@ group("gn_all") {
        "//chrome/browser/vr:vr_common_perftests",
        "//chrome/browser/vr:vr_common_unittests",
        "//chrome/browser/vr:vr_pixeltests",
@@ -194,7 +213,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      if (is_android) {
        deps += [ "//chrome/browser/android/vr:vr_android_unittests" ]
      }
-@@ -851,7 +896,7 @@ group("gn_all") {
+@@ -851,7 +894,7 @@ group("gn_all") {
  # ozone. We also need to figure out what to do with remoting_host that is set for
  # use_x11 && is_linux. See remoting/remoting_options.gni.  For now, just allow to
  # enable remoting for is_linux && use_x11 && use_ozone.
@@ -203,7 +222,31 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
      (use_x11 || !use_ozone)) {
    # This group is used for network annotation check test.
    group("shipped_binaries") {
-@@ -1103,7 +1148,7 @@ if (!is_ios && !use_qt) {
+@@ -959,7 +1002,6 @@ if (is_chromeos) {
+       "//third_party/dawn/src/tests:dawn_unittests",
+ 
+       # Blocked on https://github.com/catapult-project/catapult/issues/2297
+-      #"//third_party/catapult/telemetry:bitmaptools",
+       "//tools/perf/clear_system_cache",
+       "//ui/ozone/gl:ozone_gl_unittests",
+     ]
+@@ -1037,7 +1079,6 @@ if (!is_ios && !use_qt) {
+       data_deps = [
+         "//chrome:chrome",
+         "//chrome/test/chromedriver",
+-        "//third_party/catapult/third_party/typ",
+       ]
+       if (is_win) {
+         data_deps += [ "//build/win:copy_cdb_to_output" ]
+@@ -1084,7 +1125,6 @@ if (!is_ios && !use_qt) {
+       "//third_party/blink/public:blink_devtools_inspector_resources",
+       "//third_party/blink/public/mojom:mojom_platform_js_data_deps",
+       "//third_party/blink/renderer/core/html:js_files_for_form_controls_web_tests",
+-      "//third_party/catapult/third_party/typ",
+       "//third_party/mesa_headers",
+       "//tools/imagediff",
+     ]
+@@ -1103,7 +1143,7 @@ if (!is_ios && !use_qt) {
        data_deps += [ "//content/web_test:web_test_common_mojom_js_data_deps" ]
      }
  
@@ -212,7 +255,27 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp
        data_deps +=
            [ "//third_party/breakpad:minidump_stackwalk($host_toolchain)" ]
      }
-@@ -1308,7 +1353,7 @@ group("chromium_builder_perf") {
+@@ -1152,7 +1192,6 @@ if (!is_ios && !use_qt) {
+ 
+     if (is_android) {
+       data += [
+-        "//third_party/catapult/",
+         "//build/android/",
+       ]
+     }
+@@ -1259,11 +1298,6 @@ if (!is_ios && !use_qt) {
+       "//third_party/blink/web_tests/StaleTestExpectations",
+       "//third_party/blink/web_tests/TestExpectations",
+       "//third_party/blink/web_tests/VirtualTestSuites",
+-      "//third_party/catapult/common/py_utils/",
+-      "//third_party/catapult/devil/",
+-      "//third_party/catapult/dependency_manager/",
+-      "//third_party/catapult/third_party/zipfile/",
+-      "//third_party/catapult/third_party/typ/",
+       "//third_party/depot_tools/pylint",
+       "//third_party/depot_tools/pylint-1.5",
+       "//third_party/depot_tools/pylint_main.py",
+@@ -1308,7 +1342,7 @@ group("chromium_builder_perf") {
  
      if (is_win) {
        data_deps += [ "//chrome/installer/mini_installer:mini_installer" ]
