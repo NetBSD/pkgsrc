@@ -1,0 +1,14 @@
+$NetBSD: patch-src_3rdparty_chromium_testing_BUILD.gn,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/testing/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/testing/BUILD.gn
+@@ -27,7 +27,6 @@ group("run_perf_test") {
+ 
+   data_deps = [
+     ":test_scripts_shared",
+-    "//third_party/catapult/tracing:convert_chart_json",
+   ]
+ 
+   if (is_android) {

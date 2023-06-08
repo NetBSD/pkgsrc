@@ -1,0 +1,29 @@
+$NetBSD: patch-src_3rdparty_chromium_build_print__python__deps.py,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3
+
+--- src/3rdparty/chromium/build/print_python_deps.py.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/build/print_python_deps.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.7
++#!/usr/bin/python
+ # Copyright 2016 The Chromium Authors. All rights reserved.
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+@@ -80,7 +80,6 @@ def _GetTargetPythonVersion(module):
+   if shebang.startswith('#!'):
+     # Examples:
+     # '#!/usr/bin/python'
+-    # '#!/usr/bin/python2.7'
+     # '#!/usr/bin/python3'
+     # '#!/usr/bin/env python3'
+     # '#!/usr/bin/env vpython'
+@@ -152,7 +151,7 @@ def main():
+ 
+   # Trybots run with vpython as default Python, but with a different config
+   # from //.vpython. To make the is_vpython test work, and to match the behavior
+-  # of dev machines, the shebang line must be run with python2.7.
++  # of dev machines, the shebang line must be run with python.
+   #
+   # E.g. $HOME/.vpython-root/dd50d3/bin/python
+   # E.g. /b/s/w/ir/cache/vpython/ab5c79/bin/python
