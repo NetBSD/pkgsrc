@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/09/18 11:30:32 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/08 16:09:11 mef Exp $
 
 R_PKGNAME=	rstudioapi
-R_PKGVER=	0.13
+R_PKGVER=	0.14
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Safely access the RStudio API
