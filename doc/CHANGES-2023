@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3652 2023/06/08 18:51:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3653 2023/06/08 21:34:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5054,3 +5054,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-rstudioapi to 0.14 [mef 2023-06-08]
 	Updated math/R-DEoptimR to 1.0.13 [mef 2023-06-08]
 	Updated net/sniffnet to 1.2.1 [pin 2023-06-08]
+	Updated textproc/p5-Alien-Hunspell to 0.17nb1 [gutteridge 2023-06-08]
