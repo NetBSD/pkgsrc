@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3646 2023/06/08 10:37:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3647 2023/06/08 13:20:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5048,3 +5048,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-eth-utils to 2.1.1 [adam 2023-06-08]
 	Updated finance/py-eth-abi to 4.0.0 [adam 2023-06-08]
 	Updated finance/py-eth-keyfile to 0.6.1 [adam 2023-06-08]
+	Updated lang/php80 to 8.0.29 [taca 2023-06-08]
