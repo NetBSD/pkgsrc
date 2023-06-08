@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.20 2022/01/05 21:41:28 wiz Exp $
+$NetBSD: distinfo,v 1.21 2023/06/08 07:05:17 wiz Exp $
 
 BLAKE2s (chromaprint-1.5.1.tar.gz) = 01980cfdadf11d35ed19fb2cd6e320aba31fd34d390e5839bbe0f275abe1571c
 SHA512 (chromaprint-1.5.1.tar.gz) = ea16e4d2b879c15b1d9b9ec93878da8b893f1834c70942663e1d2d106c2e0a661094fe2dd3bae7a6c2a1f9d5d8fab5e0b0ba493561090cf57b2228606fad1e66
 Size (chromaprint-1.5.1.tar.gz) = 1581159 bytes
+SHA1 (patch-CMakeLists.txt) = 342172504f9cfbeaf222b3442ed965d37163c153
+SHA1 (patch-src_audio_ffmpeg__audio__processor.h) = 4a1177cee10533d5592dd0e30fce159aa9c66478
+SHA1 (patch-src_audio_ffmpeg__audio__processor__avresample.h) = 69a902829418b9e9389f47600c0937fd5022d1ea
+SHA1 (patch-src_audio_ffmpeg__audio__processor__swresample.h) = db419ef311cc72e9f0ff7f8667778e2d000da69d
+SHA1 (patch-src_audio_ffmpeg__audio__reader.h) = ecb0d9b22816f81d29f52518aeffb617bad43eea
+SHA1 (patch-tests_CMakeLists.txt) = bfee40d2bfd080ada8544387f61b7b58ae86d101
