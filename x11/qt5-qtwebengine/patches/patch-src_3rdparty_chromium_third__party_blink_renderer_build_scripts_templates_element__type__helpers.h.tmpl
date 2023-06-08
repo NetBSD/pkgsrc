@@ -1,0 +1,15 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_build_scripts_templates_element__type__helpers.h.tmpl,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3
+
+--- src/3rdparty/chromium/third_party/blink/renderer/build/scripts/templates/element_type_helpers.h.tmpl.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/third_party/blink/renderer/build/scripts/templates/element_type_helpers.h.tmpl
+@@ -15,7 +15,7 @@ namespace blink {
+ class Document;
+ 
+ // Type checking.
+-{% for tag in tags|sort if not tag.multipleTagNames and not tag.noTypeHelpers %}
++{% for tag in tags|sort(attribute='name') if not tag.multipleTagNames and not tag.noTypeHelpers %}
+ class {{tag.interface}};
+ template <>
+ inline bool IsElementOfType<const {{tag.interface}}>(const Node& node) {

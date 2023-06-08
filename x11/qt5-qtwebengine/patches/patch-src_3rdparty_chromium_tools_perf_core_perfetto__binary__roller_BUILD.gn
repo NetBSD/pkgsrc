@@ -1,0 +1,14 @@
+$NetBSD: patch-src_3rdparty_chromium_tools_perf_core_perfetto__binary__roller_BUILD.gn,v 1.1 2023/06/08 20:38:06 markd Exp $
+
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/tools/perf/core/perfetto_binary_roller/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
++++ src/3rdparty/chromium/tools/perf/core/perfetto_binary_roller/BUILD.gn
+@@ -7,7 +7,6 @@ import("//build/util/generate_wrapper.gn
+ generate_wrapper("upload_trace_processor") {
+   testonly = true
+   data_deps = [
+-    "//third_party/catapult:telemetry_chrome_test_support",
+     "//third_party/perfetto/src/trace_processor:trace_processor_shell",
+   ]
+   data = [

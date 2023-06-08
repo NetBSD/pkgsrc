@@ -1,6 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_content_shell_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_shell_BUILD.gn,v 1.3 2023/06/08 20:38:06 markd Exp $
 
---- src/3rdparty/chromium/content/shell/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+support bsd
+build with python3 (remove catapult)
+
+--- src/3rdparty/chromium/content/shell/BUILD.gn.orig	2022-03-30 09:48:18.000000000 +0000
 +++ src/3rdparty/chromium/content/shell/BUILD.gn
 @@ -94,7 +94,7 @@ static_library("content_shell_app") {
        "//content/web_test:web_test_renderer",
@@ -33,7 +36,23 @@ $NetBSD: patch-src_3rdparty_chromium_content_shell_BUILD.gn,v 1.2 2022/04/18 11:
      deps += [ "//build/config/freetype" ]
    }
  
-@@ -510,7 +516,7 @@ if (is_android) {
+@@ -390,7 +396,6 @@ repack("pak") {
+   sources = [
+     "$root_gen_dir/content/app/resources/content_resources_100_percent.pak",
+     "$root_gen_dir/content/browser/resources/media/media_internals_resources.pak",
+-    "$root_gen_dir/content/browser/tracing/tracing_resources.pak",
+     "$root_gen_dir/content/browser/webrtc/resources/webrtc_internals_resources.pak",
+     "$root_gen_dir/content/content_resources.pak",
+     "$root_gen_dir/content/dev_ui_content_resources.pak",
+@@ -413,7 +418,6 @@ repack("pak") {
+     "//content:dev_ui_content_resources",
+     "//content/app/resources",
+     "//content/browser/resources/media:media_internals_resources",
+-    "//content/browser/tracing:resources",
+     "//content/browser/webrtc/resources",
+     "//mojo/public/js:resources",
+     "//net:net_resources",
+@@ -510,7 +514,7 @@ if (is_android) {
            [ "//third_party/crashpad/crashpad/handler:crashpad_handler" ]
      }
  
@@ -42,7 +61,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_shell_BUILD.gn,v 1.2 2022/04/18 11:
        # Set rpath to find our own libfreetype even in a non-component build.
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
-@@ -800,7 +806,7 @@ group("content_shell_crash_test") {
+@@ -800,7 +804,7 @@ group("content_shell_crash_test") {
    if (is_win) {
      data_deps += [ "//build/win:copy_cdb_to_output" ]
    }
