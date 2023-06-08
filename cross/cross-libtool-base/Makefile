@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/08 22:59:17 riastradh Exp $
 
 # XXX This is kludgerific copypasta of devel/libtool-base/Makefile for
 # cross-compilation.  Please make it go away!
@@ -72,6 +72,8 @@ CONFIGURE_ARGS+=	--disable-ltdl-install
 CONFIGURE_ARGS+=	F77=no FC=no
 
 USE_TOOLS+=		echo
+
+REPLACE_SH+=	libtoolize.in
 
 # XXX Added for cross-compilation.
 FILESDIR=	../../devel/libtool-base/files
