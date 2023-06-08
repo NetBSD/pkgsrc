@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/11/14 14:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/08 10:31:23 adam Exp $
 
 DISTNAME=	eth-keys-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
