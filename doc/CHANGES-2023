@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3642 2023/06/08 05:30:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3643 2023/06/08 05:34:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.23.0nb1 [jperkin 2023-06-07]
 	Updated devel/scons4 to 4.5.2nb1 [wiz 2023-06-08]
 	Removed x11/wxGTK31 successor x11/wxGTK32 [wiz 2023-06-08]
+	Updated geography/gpsd to 3.25nb1 [wiz 2023-06-08]
