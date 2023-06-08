@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2023/05/19 11:36:04 pin Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/08 18:50:36 pin Exp $
 
-DISTNAME=	sniffnet-1.2.0
+DISTNAME=	sniffnet-1.2.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/GyulyVGC/sniffnet/
+MAINTAINER=	pin@NetBSD.org
+HOMEPAGE=	https://www.sniffnet.net/
 COMMENT=	Application to comfortably monitor your network traffic
 LICENSE=	mit OR apache-2.0
 
@@ -15,10 +15,6 @@ LICENSE=	mit OR apache-2.0
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
-INSTALLATION_DIRS=	bin
-
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.alsa-lib}/lib
