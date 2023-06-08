@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.9 2023/05/16 16:29:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q1,v 1.1.2.10 2023/06/08 19:03:53 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q1 branch:
 
@@ -59,4 +59,7 @@ security/gnutls: build fix
 Pullup ticket #6760 - requested by nia
 www/firefox102: security fix
 www/firefox102-l10n: dependent update
+
+Pullup ticket #6761 - requested by bsiegert
+print/cups-base: security fix
 
