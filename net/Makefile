@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1517 2023/06/04 08:40:03 plunky Exp $
+# $NetBSD: Makefile,v 1.1518 2023/06/09 19:28:56 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -620,6 +620,7 @@ SUBDIR+=	p5-SNMP-Info
 SUBDIR+=	p5-SNMP-MIB-Compiler
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
+SUBDIR+=	p5-SOAP-WSDL
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Test-DNS
 SUBDIR+=	p5-Test-RequiresInternet
