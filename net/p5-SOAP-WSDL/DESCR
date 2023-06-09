@@ -1,0 +1,9 @@
+SOAP-WSDL provides a SOAP client with WSDL support.
+
+This module is not recommended for new application development. Please
+use XML::Compile::SOAP or SOAP::Lite instead if possible.
+
+This module has a large number of known bugs and is not being actively
+developed. This 3.0 release is intended to update the module to pass
+tests on newer Perls. This is a service to existing applications
+already dependent on this module.
