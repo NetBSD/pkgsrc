@@ -1,0 +1,1 @@
+bin/nihtest @PREFIX@/bin/nihtest-@PYVERSSUFFIX@
