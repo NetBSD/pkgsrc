@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3687 2023/06/09 15:29:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3688 2023/06/09 15:32:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5090,3 +5090,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-excon to 0.100.0 [taca 2023-06-09]
 	Updated www/ruby-faraday to 2.7.6 [taca 2023-06-09]
 	Updated www/ruby-faraday-retry to 2.2.0 [taca 2023-06-09]
+	Updated www/ruby-puma to 6.3.0 [taca 2023-06-09]
