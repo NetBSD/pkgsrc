@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23052 2023/06/08 21:34:56 gutteridge Exp $
+$NetBSD: TODO,v 1.23053 2023/06/09 10:34:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-23.1.1
+	o MesaLib-23.1.2
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o QuantLib-1.22
@@ -1427,7 +1427,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.0.6
+	o tor-browser-12.0.7
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
