@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.3 2013/05/11 20:24:01 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.4 2023/06/09 23:54:10 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -64,7 +64,7 @@ pass in the pkgsrc make variables NATIVE_CC and friends:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:tl} == "yes"
 CONFIGURE_ENV+= CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+= CXX_FOR_BUILD=${NATIVE_CXX:Q}
 CONFIGURE_ENV+= LD_FOR_BUILD=${NATIVE_LD:Q}
@@ -98,10 +98,8 @@ pre-answer the tests for autoconf:
 
 .include "../../bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.  if ${OPSYS} == "NetBSD"
+.if ${USE_CROSS_COMPILE:tl} == "yes"
 # Configure wants to check for /dev/random but can't.  We know NetBSD
 # always has a /dev/random, so inform autoconf of the fact.
-CONFIGURE_ENV+= ac_cv_file__dev_random=yes
-.  endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
 .endif
