@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/09 04:21:39 taca Exp $
+
+BLAKE2s (tzdiff-1.1.1.tar.gz) = 5b88fe471f7dc27938e3a3813b930504118d2df8e0fe4690149f8d77a238d21b
+SHA512 (tzdiff-1.1.1.tar.gz) = 4fe450611bee67e46e7aee826d9b6e1df679afcfebdfb7f7999fb06706caaa1255ba2ff0a3211d49755b45e0f72ea7246614486ae4bf03009ba3f7856699ad2a
+Size (tzdiff-1.1.1.tar.gz) = 4960 bytes
