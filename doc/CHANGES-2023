@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3676 2023/06/09 14:57:53 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3677 2023/06/09 14:59:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5079,3 +5079,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-parser to 3.20.2 [taca 2023-06-09]
 	Updated security/ruby-metasploit-payloads to 2.0.136 [taca 2023-06-09]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.35 [taca 2023-06-09]
+	Updated textproc/ruby-temple to 0.10.2 [taca 2023-06-09]
