@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2023/05/10 12:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/09 00:53:17 riastradh Exp $
 
+PKGREVISION=	1
 .include "../../www/nghttp2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
 
 COMMENT=	Tools for nghttp2
+
+CONFLICTS+=	nghttp2<1.53.0nb1 # share/nghttp2/fetch-ocsp-response
 
 # Upstream documents that c++14 is required for C++ parts of the code;
 # the base package does not use C++.
@@ -19,10 +22,15 @@ CONFIGURE_ARGS+=	--enable-hpack-tools
 
 GCC_REQD+=		6
 
-INSTALL_DIRS+=		src
+INSTALL_DIRS+=		src script
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON+=	script/fetch-ocsp-response
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
