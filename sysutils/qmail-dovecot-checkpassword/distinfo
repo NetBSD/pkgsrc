@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/06/09 19:38:24 schmonz Exp $
+
+BLAKE2s (qmail-dovecot-checkpassword-9ff0341fa93d638c0249d0ae90fe20349ce9ab37-9ff0341fa93d638c0249d0ae90fe20349ce9ab37.tar.gz) = 8b5e8c8be5cfdd4a67bf80977463eca886d511479a1a9335ffb6abe0977bf56a
+SHA512 (qmail-dovecot-checkpassword-9ff0341fa93d638c0249d0ae90fe20349ce9ab37-9ff0341fa93d638c0249d0ae90fe20349ce9ab37.tar.gz) = e306110544700bacaff9c5934f81b2b0ad90e56a6e58f430e6acc3fa926d139cde78584afc677abca46bfa227338a8dab3d1fa141e3a5d3f0eb723bda33f6c73
+Size (qmail-dovecot-checkpassword-9ff0341fa93d638c0249d0ae90fe20349ce9ab37-9ff0341fa93d638c0249d0ae90fe20349ce9ab37.tar.gz) = 2700 bytes
+SHA1 (patch-Makefile) = f214c662912069083c34a760d84454383507ef50
+SHA1 (patch-base64.c) = 1780bbf8767bc6caa4786be9ed7b9ef63b147e3d
+SHA1 (patch-checkpasswd.c) = c67f5478cc499c9f55ba1759597eef13fd03f25a
