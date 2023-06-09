@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3665 2023/06/09 10:34:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3666 2023/06/09 13:16:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5069,3 +5069,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp2-tools to 1.54.0 [adam 2023-06-09]
 	Updated news/flnews to 1.2.0 [micha 2023-06-09]
 	Updated sysutils/bracket to 2.18 [wiz 2023-06-09]
+	Updated lang/php82 to 8.2.7 [taca 2023-06-09]
