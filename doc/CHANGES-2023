@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3697 2023/06/09 19:51:46 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.3698 2023/06/09 21:00:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5100,3 +5100,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/p5-Class-Std-Fast version 0.0.8 [gdt 2023-06-09]
 	Added sysutils/qmail-dovecot-checkpassword version 0.0.20141125 [schmonz 2023-06-09]
 	Updated security/pcsc-lite to 2.0.0 [gdt 2023-06-09]
+	Updated devel/diff-so-fancy to 1.4.4 [wiz 2023-06-09]
