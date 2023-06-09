@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3666 2023/06/09 13:16:38 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3667 2023/06/09 13:19:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4295,7 +4295,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-python to 1.30.0 [osa 2023-05-15]
 	Updated www/unit-ruby to 1.30.0 [osa 2023-05-15]
 	Updated x11/xfce4-screenshooter to 1.10.4 [gutteridge 2023-05-16]
-	Updated emulators/x16-emulator to x16-emulator-41nb4 [thorpej 2023-05-16]
+	Updated emulators/x16-emulator to 41nb4 [thorpej 2023-05-16]
 	Updated www/py-tornado to 6.3.2 [adam 2023-05-16]
 	Updated devel/py-typeguard to 4.0.0 [adam 2023-05-16]
 	Updated net/py-botocore to 1.29.134 [adam 2023-05-16]
