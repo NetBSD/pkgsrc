@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.9 2023/02/23 15:38:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/06/09 15:06:30 taca Exp $
 bin/tilt${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/bin/tilt
 ${GEM_LIBDIR}/lib/tilt.rb
+${GEM_LIBDIR}/lib/tilt/_emacs_org.rb
+${GEM_LIBDIR}/lib/tilt/_handlebars.rb
+${GEM_LIBDIR}/lib/tilt/_jbuilder.rb
+${GEM_LIBDIR}/lib/tilt/_org.rb
 ${GEM_LIBDIR}/lib/tilt/asciidoc.rb
 ${GEM_LIBDIR}/lib/tilt/babel.rb
-${GEM_LIBDIR}/lib/tilt/bluecloth.rb
 ${GEM_LIBDIR}/lib/tilt/builder.rb
+${GEM_LIBDIR}/lib/tilt/cli.rb
 ${GEM_LIBDIR}/lib/tilt/coffee.rb
 ${GEM_LIBDIR}/lib/tilt/commonmarker.rb
 ${GEM_LIBDIR}/lib/tilt/creole.rb
@@ -18,7 +22,6 @@ ${GEM_LIBDIR}/lib/tilt/erubis.rb
 ${GEM_LIBDIR}/lib/tilt/etanni.rb
 ${GEM_LIBDIR}/lib/tilt/haml.rb
 ${GEM_LIBDIR}/lib/tilt/kramdown.rb
-${GEM_LIBDIR}/lib/tilt/less.rb
 ${GEM_LIBDIR}/lib/tilt/liquid.rb
 ${GEM_LIBDIR}/lib/tilt/livescript.rb
 ${GEM_LIBDIR}/lib/tilt/mapping.rb
@@ -36,7 +39,7 @@ ${GEM_LIBDIR}/lib/tilt/redcarpet.rb
 ${GEM_LIBDIR}/lib/tilt/redcloth.rb
 ${GEM_LIBDIR}/lib/tilt/rst-pandoc.rb
 ${GEM_LIBDIR}/lib/tilt/sass.rb
-${GEM_LIBDIR}/lib/tilt/sigil.rb
+${GEM_LIBDIR}/lib/tilt/slim.rb
 ${GEM_LIBDIR}/lib/tilt/string.rb
 ${GEM_LIBDIR}/lib/tilt/template.rb
 ${GEM_LIBDIR}/lib/tilt/typescript.rb
