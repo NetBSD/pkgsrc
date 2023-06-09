@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2023/04/30 14:58:58 spz Exp $
+# $NetBSD: Makefile,v 1.139 2023/06/09 12:03:58 micha Exp $
 
 DISTNAME=		inn-2.7.1
 CATEGORIES=		news
@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
 
 MAINTAINER=		spz@NetBSD.org
-HOMEPAGE=		http://www.isc.org/software/inn/
+HOMEPAGE=		https://www.eyrie.org/~eagle/software/inn/
 COMMENT=		The public release of InterNet News (INN)
 LICENSE=		modified-bsd AND gnu-gpl-v2
 
