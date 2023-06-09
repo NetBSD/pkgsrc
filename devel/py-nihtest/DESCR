@@ -1,0 +1,8 @@
+This is nihtest, a testing tool for command line utilities.
+
+Tests are run in a sandbox directory to guarantee a clean separation
+of the test.
+
+It checks that exit code, standard and error outputs are as expected
+and compares the files in the sandbox after the run with the expected
+results.
