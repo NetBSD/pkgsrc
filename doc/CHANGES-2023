@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3662 2023/06/09 09:39:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3663 2023/06/09 09:50:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5065,3 +5065,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-eth-abi to 4.1.0 [adam 2023-06-09]
 	Updated www/py-urllib3 to 2.0.3 [adam 2023-06-09]
 	Updated devel/py-pydantic to 1.10.9 [adam 2023-06-09]
+	Updated www/nghttp2 to 1.54.0 [adam 2023-06-09]
+	Updated www/nghttp2-tools to 1.54.0 [adam 2023-06-09]
