@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3660 2023/06/09 07:05:23 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3661 2023/06/09 07:06:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5061,3 +5061,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added time/tzdiff version 1.1.1 [taca 2023-06-09]
 	Updated graphics/digikam to 8.0.0nb9 [wiz 2023-06-09]
 	Updated shells/oh-my-posh to 17.0.0 [pin 2023-06-09]
+	Updated devel/py-hexbytes to 0.3.1 [adam 2023-06-09]
+	Updated finance/py-eth-abi to 4.1.0 [adam 2023-06-09]
