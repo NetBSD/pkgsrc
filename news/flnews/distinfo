@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/05/23 09:38:14 micha Exp $
+$NetBSD: distinfo,v 1.10 2023/06/09 10:06:43 micha Exp $
 
-BLAKE2s (flnews-1.1.0.tar.bz2) = f96d172ce6dccc2e5ca4374de7061587baf11ee7c35374a0c9cc8d7d4b9b756d
-SHA512 (flnews-1.1.0.tar.bz2) = 54358bf9792f68ffb661c4ed1150db94fad300b321177eb92983769527cd0faa7c8b6b1b68583098195774c286895198a189db7869aed71b01acd5173dab3e67
-Size (flnews-1.1.0.tar.bz2) = 1185534 bytes
+BLAKE2s (flnews-1.2.0.tar.bz2) = d29a766f8401041c7347f184b443894a2b8d22853c03d8bc6ac2a31ea8db911a
+SHA512 (flnews-1.2.0.tar.bz2) = 36f17ff3e393082cc88bf8dd402ae1e008b0e2da6b92b82d56fdefbba151a303f9c211f0ce56f88cee09fb6fd3edd7b6abeb7953c12062f1e419faf85ece25a8
+Size (flnews-1.2.0.tar.bz2) = 1216868 bytes

@@ -21,6 +21,10 @@ CFG_PREFIX="@PREFIX@"
 # report IPv6 option (IP6) as available
 CFG_IP6_DISABLE=@IP6@
 
+# User defined TCP connection timeout in seconds
+# The value 0 uses the default timeout of the operating system
+CFG_TCP_CONNECT_TIMEOUT=0
+
 # Disable compression
 # Set this to 1 if NNTP COMPRESS extension should never be used, even if the
 # required libraries (currently libz) are installed and usable
@@ -80,6 +84,12 @@ CFG_FORCE_TMR=1
 # Set this to 1 if your system report no sufficient THR extension, but you want
 # to try anyway
 CFG_FORCE_THR=1
+
+# Force usage of POSIX.1c thread-safe functions (TSF) option even if system
+# reports TSF option as not available
+# Set this to 1 if your system report no sufficient TSF extension, but you want
+# to try anyway
+CFG_FORCE_TSF=1
 
 # Force usage of POSIX.2a user portability (UP) utilities even if system reports
 # UP extension as not available
