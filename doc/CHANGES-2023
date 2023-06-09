@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3689 2023/06/09 15:35:15 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3690 2023/06/09 15:37:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5092,3 +5092,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-faraday-retry to 2.2.0 [taca 2023-06-09]
 	Updated www/ruby-puma to 6.3.0 [taca 2023-06-09]
 	Updated www/ruby-rouge to 4.1.2 [taca 2023-06-09]
+	Updated www/ruby-selenium-webdriver to 4.10.0 [taca 2023-06-09]
