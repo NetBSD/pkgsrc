@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2023/05/06 18:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/09 09:37:30 adam Exp $
 
-DISTNAME=	urllib3-2.0.2
+DISTNAME=	urllib3-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 # optional dependencies:
 # "socks"; higher requirement from dev_requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
@@ -25,17 +25,18 @@ DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.18.0:../../archivers/py-zstandard
 #DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
 # but also needs unpackaged urlib3-secure-extra
 
-TEST_DEPENDS+=			${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
 # needs py-cryptography>=39.0.1
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
-TEST_DEPENDS+=			${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
-TEST_DEPENDS+=			${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-TEST_DEPENDS+=			${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
-#TEST_DEPENDS+=			${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
-TEST_DEPENDS+=			${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
-TEST_DEPENDS+=			${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
-#backports.zoneinfo=		=0.2.1;python_version<"3.9"
-#pytest-memray=			=1.4.0;python_version>="3.8" and python_version<"3.12" and sys_platform!="win32" and implementation_name=="cpython"
+
+TEST_DEPENDS+=		${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
+TEST_DEPENDS+=		${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
+TEST_DEPENDS+=		${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
+TEST_DEPENDS+=		${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
+#TEST_DEPENDS+=		${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
+TEST_DEPENDS+=		${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
+TEST_DEPENDS+=		${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
+#backports.zoneinfo=	=0.2.1;python_version<"3.9"
+#pytest-memray=		=1.4.0;python_version>="3.8" and python_version<"3.12" and sys_platform!="win32" and implementation_name=="cpython"
 
 USE_LANGUAGES=	# none
 
