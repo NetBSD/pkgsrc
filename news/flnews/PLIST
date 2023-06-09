@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2020/11/09 12:02:25 micha Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/06/09 10:06:43 micha Exp $
 bin/flnews
 ${PLIST.nls}lib/flnews/nls/de_DE.cat
+${PLIST.nls}lib/flnews/nls/fr_FR.cat
 man/man1/flnews.1
 ${PLIST.xdg}share/applications/flnews.desktop
 share/flnews/license.txt
