@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4002 2023/06/09 12:05:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.4003 2023/06/09 13:41:00 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3187,6 +3187,7 @@ SUBDIR+=	ruby-fast_gettext
 SUBDIR+=	ruby-ffi
 SUBDIR+=	ruby-ffi-compiler
 SUBDIR+=	ruby-ffi-yajl
+SUBDIR+=	ruby-fiber-annotation
 SUBDIR+=	ruby-fiber-local
 SUBDIR+=	ruby-filesize
 SUBDIR+=	ruby-flexmock
