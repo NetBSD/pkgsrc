@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3694 2023/06/09 19:29:17 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.3695 2023/06/09 19:35:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5097,3 +5097,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-nihtest version 1.0.0 [wiz 2023-06-09]
 	Added sysutils/checkpassword-phpbb version 0.0.20150326 [schmonz 2023-06-09]
 	Added net/p5-SOAP-WSDL version 3.004 [gdt 2023-06-09]
+	Added devel/p5-Class-Std-Fast version 0.0.8 [gdt 2023-06-09]
