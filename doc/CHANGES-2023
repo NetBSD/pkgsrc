@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3657 2023/06/09 00:16:54 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3658 2023/06/09 04:23:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Text-Hunspell to 2.16 [gutteridge 2023-06-08]
 	Updated math/R-robustbase to 0.95.1 [mef 2023-06-08]
 	Updated math/R-repurrrsive to 1.1.0 [mef 2023-06-09]
+	Added time/tzdiff version 1.1.1 [taca 2023-06-09]
