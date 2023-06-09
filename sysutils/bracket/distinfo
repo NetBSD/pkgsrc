@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/04 11:00:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/09 10:34:30 wiz Exp $
 
-BLAKE2s (bracket-2.17.tar.gz) = 53d0310f92b85198cf45a1007fbc08cc93ddb50d6a9cbfb9474b281b291bed0e
-SHA512 (bracket-2.17.tar.gz) = 53de89f3e053a130b29f409f3b77c5f5bd3746fcdfb0aca07b5265871bdf952cf46b54ed4ee01786c6a171e4282c0771203781ff42f97ab98c3b7b68617fb052
-Size (bracket-2.17.tar.gz) = 113588 bytes
-SHA1 (patch-Makefile.in) = f36e6ebfb76d22c2867d6a4609b8d1a102db50a3
+BLAKE2s (bracket-2.18.tar.gz) = 9478a9888fb62b45d66dc7f6599b5106b39cab05de55ba302e638069a7050bfd
+SHA512 (bracket-2.18.tar.gz) = d75d9fc19a0cd9f0f66cf34875904910821c2fc286cb4b1bae1359dee92be50d259e1f56404d26b20868f6f3bacfc7360cde2822fa2c79e2611abe6d151bb647
+Size (bracket-2.18.tar.gz) = 114839 bytes
