@@ -1,11 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.13 2023/06/06 19:26:23 pin Exp $
+# $NetBSD: go-modules.mk,v 1.14 2023/06/09 07:04:45 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.mod
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20230124172434-306776ec8161.zip
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.0.mod
-GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.0.zip
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.1.mod
+GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.3.1.zip
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.mod
 GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20210318200717-ce8d41cc0732.zip
 GO_MODULE_FILES+=	github.com/!masterminds/goutils/@v/v1.1.1.mod
@@ -29,8 +29,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.16.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.16.1.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.2.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.7.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.7.1.zip
 GO_MODULE_FILES+=	github.com/containerd/console/@v/v1.0.4-0.20230313162750-1ae8d489ac81.mod
