@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3656 2023/06/09 00:07:48 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3657 2023/06/09 00:16:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4883,8 +4883,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask-babel to 3.1.0 [markd 2023-06-03]
 	Added www/py-flask-security-too version 5.2.0 [markd 2023-06-04]
 	Updated filesystems/glusterfs to 10.4 [gutteridge 2023-06-04]
-	Updated www/R-shinyjs to 2.1.0 [makoto 2023-06-04]
-	Updated www/R-shiny to 1.7.4 [makoto 2023-06-04]
+	Updated www/R-shinyjs to 2.1.0 [mef 2023-06-04]
+	Updated www/R-shiny to 1.7.4 [mef 2023-06-04]
 	Updated print/R-knitr to 1.43 [mef 2023-06-04]
 	Updated math/R-FNN to 1.1.3.2 [mef 2023-06-04]
 	Updated geography/R-mapdata to 2.3.1 [mef 2023-06-04]
@@ -5056,5 +5056,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sniffnet to 1.2.1 [pin 2023-06-08]
 	Updated textproc/p5-Alien-Hunspell to 0.17nb1 [gutteridge 2023-06-08]
 	Updated textproc/p5-Text-Hunspell to 2.16 [gutteridge 2023-06-08]
-	Updated math/R-robustbase to 0.95.1 [makoto 2023-06-08]
-	Updated math/R-repurrrsive to 1.1.0 [makoto 2023-06-09]
+	Updated math/R-robustbase to 0.95.1 [mef 2023-06-08]
+	Updated math/R-repurrrsive to 1.1.0 [mef 2023-06-09]
