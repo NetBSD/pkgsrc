@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/08/30 15:42:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/09 15:09:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -7,7 +7,6 @@ ${GEM_LIBDIR}/lib/will_paginate/active_record.rb
 ${GEM_LIBDIR}/lib/will_paginate/array.rb
 ${GEM_LIBDIR}/lib/will_paginate/collection.rb
 ${GEM_LIBDIR}/lib/will_paginate/core_ext.rb
-${GEM_LIBDIR}/lib/will_paginate/data_mapper.rb
 ${GEM_LIBDIR}/lib/will_paginate/deprecation.rb
 ${GEM_LIBDIR}/lib/will_paginate/i18n.rb
 ${GEM_LIBDIR}/lib/will_paginate/locale/en.yml
@@ -22,34 +21,5 @@ ${GEM_LIBDIR}/lib/will_paginate/view_helpers/action_view.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/hanami.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/link_renderer.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/link_renderer_base.rb
-${GEM_LIBDIR}/lib/will_paginate/view_helpers/merb.rb
 ${GEM_LIBDIR}/lib/will_paginate/view_helpers/sinatra.rb
-${GEM_LIBDIR}/spec/collection_spec.rb
-${GEM_LIBDIR}/spec/console
-${GEM_LIBDIR}/spec/console_fixtures.rb
-${GEM_LIBDIR}/spec/database.yml
-${GEM_LIBDIR}/spec/finders/active_record_spec.rb
-${GEM_LIBDIR}/spec/finders/activerecord_test_connector.rb
-${GEM_LIBDIR}/spec/fixtures/admin.rb
-${GEM_LIBDIR}/spec/fixtures/developer.rb
-${GEM_LIBDIR}/spec/fixtures/developers_projects.yml
-${GEM_LIBDIR}/spec/fixtures/project.rb
-${GEM_LIBDIR}/spec/fixtures/projects.yml
-${GEM_LIBDIR}/spec/fixtures/replies.yml
-${GEM_LIBDIR}/spec/fixtures/reply.rb
-${GEM_LIBDIR}/spec/fixtures/schema.rb
-${GEM_LIBDIR}/spec/fixtures/topic.rb
-${GEM_LIBDIR}/spec/fixtures/topics.yml
-${GEM_LIBDIR}/spec/fixtures/user.rb
-${GEM_LIBDIR}/spec/fixtures/users.yml
-${GEM_LIBDIR}/spec/matchers/deprecation_matcher.rb
-${GEM_LIBDIR}/spec/matchers/phrase_matcher.rb
-${GEM_LIBDIR}/spec/matchers/query_count_matcher.rb
-${GEM_LIBDIR}/spec/page_number_spec.rb
-${GEM_LIBDIR}/spec/per_page_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/view_helpers/action_view_spec.rb
-${GEM_LIBDIR}/spec/view_helpers/base_spec.rb
-${GEM_LIBDIR}/spec/view_helpers/link_renderer_base_spec.rb
-${GEM_LIBDIR}/spec/view_helpers/view_example_group.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
