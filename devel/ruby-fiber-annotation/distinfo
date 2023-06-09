@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/09 13:40:03 taca Exp $
+
+BLAKE2s (fiber-annotation-0.2.0.gem) = 9361fb0d759c5ed2aad2c718e2d8db61d2db11a92ef5239cd042ca001ce16436
+SHA512 (fiber-annotation-0.2.0.gem) = 4a0d51c753e1c6ad47881302c643821892a5f544aa8a73b64555a0d545c8c9780ef3af88580dbb8452732cae6c6ba24406cd41e87a256c4b2f9f4077357cfbbe
+Size (fiber-annotation-0.2.0.gem) = 10240 bytes
