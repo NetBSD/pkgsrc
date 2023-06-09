@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2023/06/07 12:16:39 mef Exp $
+# $NetBSD: Makefile,v 1.247 2023/06/09 04:23:03 taca Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -254,6 +254,7 @@ SUBDIR+=	tex-datetime2-welsh
 SUBDIR+=	titrax
 SUBDIR+=	todotxt
 SUBDIR+=	tty-clock
+SUBDIR+=	tzdiff
 SUBDIR+=	vixie-cron
 SUBDIR+=	wmCalClock
 SUBDIR+=	wmclockmon
