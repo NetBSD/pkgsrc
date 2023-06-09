@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3693 2023/06/09 18:46:54 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3694 2023/06/09 19:29:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5096,3 +5096,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.6 [pin 2023-06-09]
 	Added devel/py-nihtest version 1.0.0 [wiz 2023-06-09]
 	Added sysutils/checkpassword-phpbb version 0.0.20150326 [schmonz 2023-06-09]
+	Added net/p5-SOAP-WSDL version 3.004 [gdt 2023-06-09]
