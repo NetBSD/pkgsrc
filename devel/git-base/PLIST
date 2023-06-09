@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2023/06/05 19:23:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2023/06/09 12:05:14 riastradh Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -6,31 +6,11 @@ bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
 bin/scalar
-${PERL5_SUB_INSTALLVENDORLIB}/FromCPAN/Error.pm
-${PERL5_SUB_INSTALLVENDORLIB}/FromCPAN/Mail/Address.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/I18N.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/IndexInfo.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/LoadCPAN.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/LoadCPAN/Error.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/LoadCPAN/Mail/Address.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/Packet.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Editor.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Fetcher.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/GlobSpec.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Log.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Memoize/YAML.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Migration.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Prompt.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Ra.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Git/SVN/Utils.pm
 libexec/git-core/git
 libexec/git-core/git-add
 libexec/git-core/git-am
 libexec/git-core/git-annotate
 libexec/git-core/git-apply
-libexec/git-core/git-archimport
 libexec/git-core/git-archive
 libexec/git-core/git-bisect
 libexec/git-core/git-blame
@@ -59,9 +39,6 @@ libexec/git-core/git-credential
 libexec/git-core/git-credential-cache
 libexec/git-core/git-credential-cache--daemon
 libexec/git-core/git-credential-store
-libexec/git-core/git-cvsexportcommit
-libexec/git-core/git-cvsimport
-libexec/git-core/git-cvsserver
 libexec/git-core/git-daemon
 libexec/git-core/git-describe
 libexec/git-core/git-diagnose
@@ -96,7 +73,6 @@ libexec/git-core/git-imap-send
 libexec/git-core/git-index-pack
 libexec/git-core/git-init
 libexec/git-core/git-init-db
-libexec/git-core/git-instaweb
 libexec/git-core/git-interpret-trailers
 libexec/git-core/git-log
 libexec/git-core/git-ls-files
@@ -147,7 +123,6 @@ libexec/git-core/git-remote-http
 libexec/git-core/git-remote-https
 libexec/git-core/git-repack
 libexec/git-core/git-replace
-libexec/git-core/git-request-pull
 libexec/git-core/git-rerere
 libexec/git-core/git-reset
 libexec/git-core/git-restore
@@ -155,7 +130,6 @@ libexec/git-core/git-rev-list
 libexec/git-core/git-rev-parse
 libexec/git-core/git-revert
 libexec/git-core/git-rm
-libexec/git-core/git-send-email
 libexec/git-core/git-send-pack
 libexec/git-core/git-sh-i18n
 libexec/git-core/git-sh-i18n--envsubst
@@ -173,7 +147,6 @@ libexec/git-core/git-status
 libexec/git-core/git-stripspace
 libexec/git-core/git-submodule
 libexec/git-core/git-submodule--helper
-libexec/git-core/git-svn
 libexec/git-core/git-switch
 libexec/git-core/git-symbolic-ref
 libexec/git-core/git-tag
