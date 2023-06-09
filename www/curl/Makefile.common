@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/05/31 20:19:46 nikita Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/06/09 12:52:12 riastradh Exp $
 # used by www/libcurl-gnutls/Makefile
 
 DISTNAME=	curl-8.1.2
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-impacket-[0-9]*:../../net/py-impacket
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-impacket
 
-USE_TOOLS+=		nroff perl
+USE_TOOLS+=		nroff perl:test
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 # Some systems use bundles instead of directories; this needs configuring
