@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2023/05/21 02:39:26 taca Exp $
+$NetBSD: distinfo,v 1.43 2023/06/09 14:00:00 taca Exp $
 
-BLAKE2s (ruby_parser-3.20.1.gem) = 31c81733281c5491c28f37d190d23ac4840a88f2c97a489c10203621586612dc
-SHA512 (ruby_parser-3.20.1.gem) = 50e77dcf4893e0b56399e10804e7c6652f57b812444edcd247d3c70f89cf4e5308a90103dd63e032588557472513bc2e6ac49988fddeea81f9f7262e14653abd
-Size (ruby_parser-3.20.1.gem) = 856576 bytes
+BLAKE2s (ruby_parser-3.20.2.gem) = 9c482b38f25730bca84f2fecb3cc5c2742506639edee7b529db1b723600b8e91
+SHA512 (ruby_parser-3.20.2.gem) = ccc3c5a97b891d10863419adc73d9d7e66cc76ff97844fbe9c9d29484a60676245cdf727dba69b2a40cc313608ac51175521622df33b4efa57332778bedd6c95
+Size (ruby_parser-3.20.2.gem) = 853504 bytes
