@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1051 2023/06/09 18:46:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.1052 2023/06/09 19:38:27 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -603,6 +603,7 @@ SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
 SUBDIR+=	qdirstat
 SUBDIR+=	qlogtools
+SUBDIR+=	qmail-dovecot-checkpassword
 SUBDIR+=	qpasswd
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
