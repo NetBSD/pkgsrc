@@ -1,6 +1,7 @@
-$NetBSD: patch-RULES_MKLINKS,v 1.1 2023/06/05 06:17:36 mrg Exp $
+$NetBSD: patch-RULES_MKLINKS,v 1.2 2023/06/09 10:33:03 micha Exp $
 
 Build on all arm, and maybe riscv.
+https://codeberg.org/schilytools/schilytools/issues/59
 
 --- RULES/MKLINKS.orig	2023-04-19 11:36:31.000000000 -0700
 +++ RULES/MKLINKS	2023-06-04 22:59:03.423738523 -0700
