@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3670 2023/06/09 13:44:20 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3671 2023/06/09 13:48:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5073,3 +5073,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php81 to 8.1.20 [taca 2023-06-09]
 	Added devel/ruby-fiber-annotation version 0.2.0 [taca 2023-06-09]
 	Updated devel/ruby-async to 2.6.1 [taca 2023-06-09]
+	Updated devel/ruby-console to 1.17.2 [taca 2023-06-09]
