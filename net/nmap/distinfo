@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.86 2023/06/06 10:45:10 adam Exp $
+$NetBSD: distinfo,v 1.87 2023/06/09 12:53:14 adam Exp $
 
 BLAKE2s (nmap-7.94.tar.bz2) = fb58b74eaf86ab57d253e947fc1dea5cfc6a418fba62001a767e37833399979f
 SHA512 (nmap-7.94.tar.bz2) = a55cddf9c1d9272243d01251eb3315b26f232d0596818857083222a385398618b428dc2bd8282c3e832527e135a74aeb020ca8609d83d8337342f5d8a04d7f2c
 Size (nmap-7.94.tar.bz2) = 11102195 bytes
+SHA1 (patch-charpool.cc) = 6d72e5723f41965fd80e166c5507167aab760022
 SHA1 (patch-configure) = 5fc39f084eadd6ea0560cd8e6f52074113566600
 SHA1 (patch-libdnet-stripped_src_arp-bsd.c) = c56c4e70eca2fa04dd8aab38ed2c3f4cac83f5e3
 SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
