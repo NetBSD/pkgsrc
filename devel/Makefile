@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4003 2023/06/09 13:41:00 taca Exp $
+# $NetBSD: Makefile,v 1.4004 2023/06/09 15:57:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2678,6 +2678,7 @@ SUBDIR+=	py-multipledispatch
 SUBDIR+=	py-nampa
 SUBDIR+=	py-nest-asyncio
 SUBDIR+=	py-newt
+SUBDIR+=	py-nihtest
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose-exclude
 SUBDIR+=	py-nose2
