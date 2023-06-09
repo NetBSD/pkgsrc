@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/06/09 15:14:19 taca Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/09 15:18:06 taca Exp $
 
 DISTNAME=	aws-sdk-core-3.174.0
 CATEGORIES=	www
@@ -9,7 +9,7 @@ COMMENT=	AWS SDK for Ruby - Core
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-jmespath>=1.6.1<2:../../textproc/ruby-jmespath
-DEPENDS+=	${RUBY_PKGPREFIX}-aws-partitions>=1.525<2:../../www/ruby-aws-partitions
+DEPENDS+=	${RUBY_PKGPREFIX}-aws-partitions>=1.651<2:../../www/ruby-aws-partitions
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sigv4>=1.5<2:../../www/ruby-aws-sigv4
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-eventstream>=1.0.2<2:../../www/ruby-aws-eventstream
 
