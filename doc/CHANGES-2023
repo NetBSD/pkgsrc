@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3661 2023/06/09 07:06:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3662 2023/06/09 09:39:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5063,3 +5063,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 17.0.0 [pin 2023-06-09]
 	Updated devel/py-hexbytes to 0.3.1 [adam 2023-06-09]
 	Updated finance/py-eth-abi to 4.1.0 [adam 2023-06-09]
+	Updated www/py-urllib3 to 2.0.3 [adam 2023-06-09]
+	Updated devel/py-pydantic to 1.10.9 [adam 2023-06-09]
