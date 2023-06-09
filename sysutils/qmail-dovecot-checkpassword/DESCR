@@ -1,0 +1,4 @@
+qmail checkpassword helper for dovecot auth socket. This can be used as
+checkpassword tool from within qmail. Very useful if you use dovecot
+with several authdbs and you want to ask all at once. Checks user auth
+on (hardcoded) dovecot auth socket.
