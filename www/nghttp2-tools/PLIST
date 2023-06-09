@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/30 13:54:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/09 00:53:17 riastradh Exp $
 bin/deflatehd
 bin/h2load
 bin/inflatehd
 bin/nghttp
 bin/nghttpd
 bin/nghttpx
+share/nghttp2/fetch-ocsp-response
