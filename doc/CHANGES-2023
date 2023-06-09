@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3673 2023/06/09 13:58:38 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3674 2023/06/09 14:00:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5076,3 +5076,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-console to 1.17.2 [taca 2023-06-09]
 	Updated devel/hoe to 4.0.4 [taca 2023-06-09]
 	Updated devel/ruby-ffi-yajl to 2.5.0 [taca 2023-06-09]
+	Updated devel/ruby-parser to 3.20.2 [taca 2023-06-09]
