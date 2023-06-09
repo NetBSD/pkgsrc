@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4004 2023/06/09 15:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4005 2023/06/09 19:34:48 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -1397,6 +1397,7 @@ SUBDIR+=	p5-Class-Refresh
 SUBDIR+=	p5-Class-ReturnValue
 SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Class-Std
+SUBDIR+=	p5-Class-Std-Fast
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Tiny
 SUBDIR+=	p5-Class-Trigger

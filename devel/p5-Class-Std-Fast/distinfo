@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/09 19:34:48 gdt Exp $
+
+BLAKE2s (Class-Std-Fast-v0.0.8.tar.gz) = c65520069582be6d1cb7015b1d3a8ee4ebe1a1656065c994e4e02e29efbf25a7
+SHA512 (Class-Std-Fast-v0.0.8.tar.gz) = 6240e0d383a1bcb8d60abcd134c524e3f48df20ca547868db5f23c960daf10678f650b69543fe6d68d7030d975c77c789d8684139fc2b856cc80aa95744d1282
+Size (Class-Std-Fast-v0.0.8.tar.gz) = 20915 bytes
