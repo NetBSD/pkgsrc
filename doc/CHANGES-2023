@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3658 2023/06/09 04:23:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3659 2023/06/09 06:49:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5059,3 +5059,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-robustbase to 0.95.1 [mef 2023-06-08]
 	Updated math/R-repurrrsive to 1.1.0 [mef 2023-06-09]
 	Added time/tzdiff version 1.1.1 [taca 2023-06-09]
+	Updated graphics/digikam to 8.0.0nb9 [wiz 2023-06-09]
