@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3659 2023/06/09 06:49:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3660 2023/06/09 07:05:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-repurrrsive to 1.1.0 [mef 2023-06-09]
 	Added time/tzdiff version 1.1.1 [taca 2023-06-09]
 	Updated graphics/digikam to 8.0.0nb9 [wiz 2023-06-09]
+	Updated shells/oh-my-posh to 17.0.0 [pin 2023-06-09]
