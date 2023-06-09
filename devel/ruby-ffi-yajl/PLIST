@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/20 15:33:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/09 13:58:13 taca Exp $
 bin/ffi-yajl-bench${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_yajl/ext/dlopen.${RUBY_DLEXT}
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/ffi-yajl-bench
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/dlopen.c
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/extconf.rb
+${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/yajl.sym
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/encoder/encoder.c
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/encoder/extconf.rb
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/parser/extconf.rb
