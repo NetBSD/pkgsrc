@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/04 11:46:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/06/09 10:34:30 wiz Exp $
 bin/bracket
 lib/bracket/blacklists/2012.12.09.23.42.16-2012.12.09.23.53.39-mkdep-loop.bl
 lib/bracket/blacklists/2015.05.18.06.25.05-2015.05.19.06.58.52-unreadable-dir.bl
@@ -73,9 +73,6 @@ lib/bracket/py/utils.py
 lib/bracket/py/vc/__init__.py
 lib/bracket/py/vc/git/__init__.py
 lib/bracket/py/vc/hg/__init__.py
-lib/bracket/py/vc/hg/cluster.py
-lib/bracket/py/vc/hg/hgutils.py
-lib/bracket/py/vc/hg/index-repo.sh
 lib/bracket/py/vc/xcvs/__init__.py
 lib/bracket/py/vc/xcvs/cluster.py
 lib/bracket/py/vc/xcvs/index-repo.sh
