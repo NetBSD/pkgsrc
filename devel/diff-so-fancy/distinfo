@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/04/20 20:31:00 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/06/09 21:00:09 wiz Exp $
 
-BLAKE2s (diff-so-fancy-1.4.3.tar.gz) = a808f8b317c6c74260e77eb1f55622fbae1a000968e0ef0e373135115212de1f
-SHA512 (diff-so-fancy-1.4.3.tar.gz) = 9c85c0ffcb7235ad985377206e93e56bdac3926f029d8ab8a899a4391339f344049e9bfe4b77df0f2bda29720ab454378218ea3752b97f40b5ac7ba72a5fa047
-Size (diff-so-fancy-1.4.3.tar.gz) = 51800 bytes
+BLAKE2s (diff-so-fancy-1.4.4.tar.gz) = 3668a0d546b28b96c4011381772fd8132a5b599e301958d792a03ba0d7e8c05f
+SHA512 (diff-so-fancy-1.4.4.tar.gz) = 477ad58a55ebc765f525b7d16993af18ee5ccf0c9f2835f4a608c6a1a9afa3170f2071dd93b9009dc3c2dab06f700763ac7652d0bedb932a67af23abf4f8884e
+Size (diff-so-fancy-1.4.4.tar.gz) = 188528 bytes
