@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3681 2023/06/09 15:14:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3682 2023/06/09 15:19:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-will-paginate to 4.0.0 [taca 2023-06-09]
 	Updated www/ruby-aws-partitions to 1.777.0 [taca 2023-06-09]
 	Updated www/ruby-aws-sdk-core to 3.174.0 [taca 2023-06-09]
+	Updated www/ruby-aws-sdk-secretsmanager to 1.76.0 [taca 2023-06-09]
