@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3690 2023/06/09 15:37:09 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3691 2023/06/09 15:48:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-puma to 6.3.0 [taca 2023-06-09]
 	Updated www/ruby-rouge to 4.1.2 [taca 2023-06-09]
 	Updated www/ruby-selenium-webdriver to 4.10.0 [taca 2023-06-09]
+	Updated editors/tp-note to 1.21.6 [pin 2023-06-09]
