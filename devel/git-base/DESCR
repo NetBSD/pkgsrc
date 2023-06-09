@@ -8,4 +8,5 @@ and ClearCase with features like cheap local branching, convenient
 staging areas, and multiple workflows.
 
 This package contains only the git program (and subcommands).  It does
-not contain man pages or the tk-based repository browser.
+not contain man pages or the tk-based repository browser or the git
+subcommands that rely on Perl.
