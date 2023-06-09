@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2023/05/10 12:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.82 2023/06/09 00:53:17 riastradh Exp $
 
+PKGREVISION=	1
 .include "Makefile.common"
 
 COMMENT=	Implementation of HTTP/2 in C
@@ -14,10 +15,5 @@ CONFIGURE_ARGS+=	--enable-lib-only
 PKGCONFIG_OVERRIDE+=	lib/libnghttp2.pc.in
 PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-REPLACE_PYTHON+=	script/fetch-ocsp-response
-
-.include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

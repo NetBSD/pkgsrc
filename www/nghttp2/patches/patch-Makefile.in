@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/06/09 00:53:17 riastradh Exp $
+
+Don't descend into script/ for the Python script -- we'll install
+that separately in nghttp2-tools.
+
+--- Makefile.in.orig	2023-05-10 08:29:50.000000000 +0000
++++ Makefile.in
+@@ -449,7 +449,7 @@ top_srcdir = @top_srcdir@
+ # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ SUBDIRS = lib third-party src bpf examples tests integration-tests \
+-	doc contrib script
++	doc contrib #script
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ dist_doc_DATA = README.rst
