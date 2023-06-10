@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3705 2023/06/10 12:37:52 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3706 2023/06/10 12:43:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5107,3 +5107,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/go120 to 1.20.5 [bsiegert 2023-06-10]
 	Updated textproc/R-rjson to 0.2.21 [mef 2023-06-10]
 	Updated geography/R-prettymapr to 0.2.4 [mef 2023-06-10]
+	Updated geography/R-rosm to 0.2.6 [mef 2023-06-10]
