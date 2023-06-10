@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/05 19:29:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/10 18:51:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -56,6 +56,8 @@ ${PYSITELIB}/skbuild/platform_specifics/__init__.py
 ${PYSITELIB}/skbuild/platform_specifics/__init__.pyc
 ${PYSITELIB}/skbuild/platform_specifics/abstract.py
 ${PYSITELIB}/skbuild/platform_specifics/abstract.pyc
+${PYSITELIB}/skbuild/platform_specifics/aix.py
+${PYSITELIB}/skbuild/platform_specifics/aix.pyc
 ${PYSITELIB}/skbuild/platform_specifics/bsd.py
 ${PYSITELIB}/skbuild/platform_specifics/bsd.pyc
 ${PYSITELIB}/skbuild/platform_specifics/cygwin.py
@@ -66,6 +68,8 @@ ${PYSITELIB}/skbuild/platform_specifics/osx.py
 ${PYSITELIB}/skbuild/platform_specifics/osx.pyc
 ${PYSITELIB}/skbuild/platform_specifics/platform_factory.py
 ${PYSITELIB}/skbuild/platform_specifics/platform_factory.pyc
+${PYSITELIB}/skbuild/platform_specifics/sunos.py
+${PYSITELIB}/skbuild/platform_specifics/sunos.pyc
 ${PYSITELIB}/skbuild/platform_specifics/unix.py
 ${PYSITELIB}/skbuild/platform_specifics/unix.pyc
 ${PYSITELIB}/skbuild/platform_specifics/windows.py
