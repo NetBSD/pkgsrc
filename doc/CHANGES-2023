@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3708 2023/06/10 13:31:45 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3709 2023/06/10 13:34:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5110,3 +5110,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/R-rosm to 0.2.6 [mef 2023-06-10]
 	Updated sysutils/auto-admin to 0.7.16 [bacon 2023-06-10]
 	Updated devel/R-tinytest to 1.4.1 [mef 2023-06-10]
+	Added geography/R-cartography version 3.1.3 [mef 2023-06-10]
