@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2023/04/12 19:24:07 adam Exp $
+$NetBSD: distinfo,v 1.31 2023/06/10 18:23:07 adam Exp $
 
-BLAKE2s (qtxmlpatterns-everywhere-opensource-src-5.15.9.tar.xz) = 89df876dacb6909ab44e65aaf0e4fcae221f3f2dd1f556bd39282e370cfefea6
-SHA512 (qtxmlpatterns-everywhere-opensource-src-5.15.9.tar.xz) = 60cdee139c04dbd2c381f65fcd579af0b2b6f40234870a782c8b7342c8d0caf92fef94acb959260e4ef615b2c60b5527cd44b8efa85f04ceb4a3659a47a0ee89
-Size (qtxmlpatterns-everywhere-opensource-src-5.15.9.tar.xz) = 5190900 bytes
+BLAKE2s (qtxmlpatterns-everywhere-opensource-src-5.15.10.tar.xz) = a73756c9d5792a3e143dbd76cb44e8b4812fc660855b9de6ab1e4c6e295e4545
+SHA512 (qtxmlpatterns-everywhere-opensource-src-5.15.10.tar.xz) = 308203fafdd572998563a30b3289002f848c05b6de5a18545dc06489f97aa197c32f37019880b068c152e678ff5254ebe33333b581572811111c45a5ccb4a243
+Size (qtxmlpatterns-everywhere-opensource-src-5.15.10.tar.xz) = 5195076 bytes
 SHA1 (patch-src_imports_imports.pro) = 6bcac62bbfe46fc3e245b2cda5b9bbd172eac6cd

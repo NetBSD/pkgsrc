@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/05/22 21:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/10 18:23:04 adam Exp $
 
 DISTNAME=	qtconnectivity-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtconnectivity-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	Qt5 module for connectivity framework
 
 BUILD_TARGET=		sub-src
