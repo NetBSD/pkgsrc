@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3699 2023/06/10 07:40:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3700 2023/06/10 11:55:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5102,3 +5102,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/pcsc-lite to 2.0.0 [gdt 2023-06-09]
 	Updated devel/diff-so-fancy to 1.4.4 [wiz 2023-06-09]
 	Updated devel/py-flufl.lock to 7.1.1nb2 [wiz 2023-06-10]
+	Updated ham/xnec2c to 4.2.1 [makoto 2023-06-10]
