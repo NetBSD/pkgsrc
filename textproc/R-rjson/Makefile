@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/08/07 02:36:25 brook Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/10 12:28:29 mef Exp $
 
 R_PKGNAME=	rjson
-R_PKGVER=	0.2.20
+R_PKGVER=	0.2.21
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
