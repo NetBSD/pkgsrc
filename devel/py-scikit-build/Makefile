@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/05/15 20:57:36 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/10 18:51:13 adam Exp $
 
-DISTNAME=	scikit_build-0.17.5
+DISTNAME=	scikit_build-0.17.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build/}
@@ -23,7 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=0.25.1:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.10.4:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-virtualenv>=1.2.5:../../devel/py-test-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	c c++
