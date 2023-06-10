@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/10 12:37:41 mef Exp $
 
-BLAKE2s (R/prettymapr_0.2.2.tar.gz) = b85f402561af20f86660d7b7db36a384e4db54212f6fb6eec664cdcb8694ad36
-SHA512 (R/prettymapr_0.2.2.tar.gz) = d48dc807f625d171efee0d929bf1b011cc8d9938f9337acde0f2f01bd4b1549e28d7503cea2b9eda45a4d29f7fa5f32f918355f51501802af0c51750e738ab9d
-Size (R/prettymapr_0.2.2.tar.gz) = 874716 bytes
+BLAKE2s (R/prettymapr_0.2.4.tar.gz) = a66ce77b83f97000556882ffe71ab4f6a2e2484561b8907b5812c8631d1f0c70
+SHA512 (R/prettymapr_0.2.4.tar.gz) = 0d4c30003f4130386da7c1171437322b74bd52dde4fd311b5c4ca2420e2b40d786d68f480dba13b0e5c80e73c8c3ecc0bf55a7b3c3e0ead7590dd8b7f33555d1
+Size (R/prettymapr_0.2.4.tar.gz) = 871428 bytes
