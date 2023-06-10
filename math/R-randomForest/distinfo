@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:55:31 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/10 11:58:44 mef Exp $
 
-BLAKE2s (R/randomForest_4.6-14.tar.gz) = 0ecacc8c275198521384974e999bc5616e07a96dccb13ab42e6237286274a6e0
-SHA512 (R/randomForest_4.6-14.tar.gz) = 3e1ff9be3517a6b3ea6e3749e7c8697d7c3c695272ef699224e56bbbcd26e856ad8f556a434b73011ca0f0053de216a9e97a1aa0b77304bc4245638621436cd2
-Size (R/randomForest_4.6-14.tar.gz) = 80074 bytes
+BLAKE2s (R/randomForest_4.7-1.1.tar.gz) = 9906c315a60a8696f2b87ccf0fb7ecdb5f99f4f5edbe5ec6923ad109c2c561bc
+SHA512 (R/randomForest_4.7-1.1.tar.gz) = 1a0277e84fed321397384425af1e1e52e116dfadea2f066117f2cd9817707dd22a28f9b4d6e285087c7e651e6f75c735171cd66edea83364e943e5562071391c
+Size (R/randomForest_4.7-1.1.tar.gz) = 80886 bytes
