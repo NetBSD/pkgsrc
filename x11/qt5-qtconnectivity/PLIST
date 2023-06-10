@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/02 06:41:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/10 18:23:04 adam Exp $
 lib/pkgconfig/Qt5Bluetooth.pc
 lib/pkgconfig/Qt5Nfc.pc
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/adapter1_bluez5_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/adapter_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/agent_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/androidbroadcastreceiver_p.h
+qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/androidutils_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/battery1_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/bluetoothmanagement_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/bluez5_helper_p.h
@@ -74,7 +75,7 @@ qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothtransferrepl
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothtransferreply_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothtransferrequest_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothutils_winrt_p.h
-qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qleadvertiser_p.h
+qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qleadvertiser_bluez_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_android_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_bluez_p.h
 qt5/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_bluezdbus_p.h

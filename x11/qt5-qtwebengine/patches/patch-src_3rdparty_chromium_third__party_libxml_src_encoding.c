@@ -1,12 +1,12 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c,v 1.2 2023/06/10 18:23:07 adam Exp $
 
 Fix building with ICU 68.1.
 
---- src/3rdparty/chromium/third_party/libxml/src/encoding.c.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/libxml/src/encoding.c.orig	2022-04-06 13:32:17.000000000 +0000
 +++ src/3rdparty/chromium/third_party/libxml/src/encoding.c
-@@ -48,6 +48,11 @@
- #include "buf.h"
- #include "enc.h"
+@@ -57,6 +57,11 @@ struct _uconv_t {
+ };
+ #endif
  
 +#if !defined(FALSE)
 +# define FALSE (1 == 0)
