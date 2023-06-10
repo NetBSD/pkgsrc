@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3713 2023/06/10 15:57:28 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3714 2023/06/10 18:51:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5115,3 +5115,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/MoarVM to 2023.05 [mef 2023-06-10]
 	Updated lang/nqp to 2023.05 [mef 2023-06-10]
 	Updated lang/rakudo to 2023.05 [mef 2023-06-10]
+	Updated x11/qt5 to 5.15.10 [adam 2023-06-10]
+	Updated devel/py-scikit-build to 0.17.6 [adam 2023-06-10]
