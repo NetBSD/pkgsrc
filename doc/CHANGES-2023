@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3702 2023/06/10 12:12:56 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.3703 2023/06/10 12:28:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5105,3 +5105,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/xnec2c to 4.2.1 [makoto 2023-06-10]
 	Updated math/R-randomForest to 4.7.1.1 [mef 2023-06-10]
 	Updated lang/go120 to 1.20.5 [bsiegert 2023-06-10]
+	Updated textproc/R-rjson to 0.2.21 [mef 2023-06-10]
