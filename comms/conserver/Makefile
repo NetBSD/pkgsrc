@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/06/09 23:51:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/10 01:57:47 riastradh Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${USE_CROSS_COMPILE:tl} == "yes"
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
 CONFIGURE_ENV.NetBSD+=	ac_cv_func_setpgrp_void=no
 .endif
 
