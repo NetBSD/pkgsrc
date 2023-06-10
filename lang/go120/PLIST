@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/05 18:33:15 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/10 11:41:31 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -1891,6 +1891,7 @@ go120/src/cmd/go/testdata/script/build_cd_gopath_different.txt
 go120/src/cmd/go/testdata/script/build_cgo_consistent_results.txt
 go120/src/cmd/go/testdata/script/build_cgo_error.txt
 go120/src/cmd/go/testdata/script/build_concurrent_backend.txt
+go120/src/cmd/go/testdata/script/build_cwd_newline.txt
 go120/src/cmd/go/testdata/script/build_darwin_cc_arch.txt
 go120/src/cmd/go/testdata/script/build_dash_n_cgo.txt
 go120/src/cmd/go/testdata/script/build_dash_o_dev_null.txt
@@ -1995,6 +1996,7 @@ go120/src/cmd/go/testdata/script/fileline.txt
 go120/src/cmd/go/testdata/script/fmt_load_errors.txt
 go120/src/cmd/go/testdata/script/fsys_walk.txt
 go120/src/cmd/go/testdata/script/gccgo_link_c.txt
+go120/src/cmd/go/testdata/script/gccgo_link_ldflags.txt
 go120/src/cmd/go/testdata/script/gccgo_m.txt
 go120/src/cmd/go/testdata/script/gccgo_mangle.txt
 go120/src/cmd/go/testdata/script/gcflags_patterns.txt
@@ -2359,6 +2361,7 @@ go120/src/cmd/go/testdata/script/mod_stale.txt
 go120/src/cmd/go/testdata/script/mod_std_vendor.txt
 go120/src/cmd/go/testdata/script/mod_string_alias.txt
 go120/src/cmd/go/testdata/script/mod_sum_ambiguous.txt
+go120/src/cmd/go/testdata/script/mod_sum_issue56222.txt
 go120/src/cmd/go/testdata/script/mod_sum_lookup.txt
 go120/src/cmd/go/testdata/script/mod_sum_readonly.txt
 go120/src/cmd/go/testdata/script/mod_sum_replaced.txt
@@ -6460,6 +6463,7 @@ go120/src/net/file_plan9.go
 go120/src/net/file_stub.go
 go120/src/net/file_test.go
 go120/src/net/file_unix.go
+go120/src/net/file_unix_test.go
 go120/src/net/file_windows.go
 go120/src/net/hook.go
 go120/src/net/hook_plan9.go
@@ -7316,10 +7320,8 @@ go120/src/runtime/export_debug_test.go
 go120/src/runtime/export_debuglog_test.go
 go120/src/runtime/export_linux_test.go
 go120/src/runtime/export_mmap_test.go
-go120/src/runtime/export_openbsd_test.go
 go120/src/runtime/export_pipe2_test.go
 go120/src/runtime/export_pipe_test.go
-go120/src/runtime/export_solaris_test.go
 go120/src/runtime/export_test.go
 go120/src/runtime/export_unix2_test.go
 go120/src/runtime/export_unix_test.go
@@ -7524,8 +7526,6 @@ go120/src/runtime/msize.go
 go120/src/runtime/mspanset.go
 go120/src/runtime/mstats.go
 go120/src/runtime/mwbbuf.go
-go120/src/runtime/nbpipe_fcntl_libc_test.go
-go120/src/runtime/nbpipe_fcntl_unix_test.go
 go120/src/runtime/nbpipe_pipe.go
 go120/src/runtime/nbpipe_pipe2.go
 go120/src/runtime/nbpipe_pipe_test.go
@@ -7771,6 +7771,12 @@ go120/src/runtime/runtime_test.go
 go120/src/runtime/runtime_unix_test.go
 go120/src/runtime/rwmutex.go
 go120/src/runtime/rwmutex_test.go
+go120/src/runtime/security_aix.go
+go120/src/runtime/security_issetugid.go
+go120/src/runtime/security_linux.go
+go120/src/runtime/security_nonunix.go
+go120/src/runtime/security_test.go
+go120/src/runtime/security_unix.go
 go120/src/runtime/select.go
 go120/src/runtime/sema.go
 go120/src/runtime/sema_test.go
@@ -8001,6 +8007,7 @@ go120/src/runtime/testdata/testprognet/main.go
 go120/src/runtime/testdata/testprognet/net.go
 go120/src/runtime/testdata/testprognet/signal.go
 go120/src/runtime/testdata/testprognet/signalexec.go
+go120/src/runtime/testdata/testsuid/main.go
 go120/src/runtime/testdata/testwinlib/main.c
 go120/src/runtime/testdata/testwinlib/main.go
 go120/src/runtime/testdata/testwinlibsignal/dummy.go
