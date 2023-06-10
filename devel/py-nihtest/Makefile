@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/09 21:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/10 03:17:24 wiz Exp $
 
 DISTNAME=	nihtest-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,10 @@ HOMEPAGE=	https://github.com/nih-at/nihtest
 COMMENT=	Testing tool for command line utilities
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} nihtest nihtest-${PYVERSSUFFIX} || ${TRUE}
