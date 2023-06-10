@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.py.1,v 1.1 2023/05/26 06:47:54 wiz Exp $
+.\"	$NetBSD: revbump.py.1,v 1.2 2023/06/10 14:35:29 wiz Exp $
 .\"
 .\" Copyright (c) 2023 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd May 26, 2023
+.Dd June 10, 2023
 .Dt REVBUMP.PY 1
 .Os
 .Sh NAME
@@ -82,6 +82,10 @@ Also bump packages in the
 .Pa wip/
 subtree.
 .El
+.Pp
+For bumping all go packages, use
+.Ar lang/go
+as argument.
 .Sh EXAMPLES
 .Dl revbump.py devel/glib2
 .Pp

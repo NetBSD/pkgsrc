@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.2 2023/05/31 14:04:40 wiz Exp $
+# $NetBSD: revbump.py,v 1.3 2023/06/10 14:35:29 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -190,11 +190,14 @@ if not pathlib.Path(args.pkgsrcdir).exists() or \
     print(f'invalid pkgsrc directory "{args.pkgsrcdir}"')
     sys.exit(1)
 
-initial_bl3 = args.package.rstrip('/') + '/buildlink3.mk'
-if not pathlib.Path(args.pkgsrcdir + '/' + initial_bl3).exists():
-    print(f'package {args.package} provides no buildlink3.mk file')
-    sys.exit(1)
-searchlist = [initial_bl3]
+if args.package == 'lang/go':
+    searchlist = ['lang/go/version.mk']
+else:
+    initial_bl3 = args.package.rstrip('/') + '/buildlink3.mk'
+    if not pathlib.Path(args.pkgsrcdir + '/' + initial_bl3).exists():
+        print(f'package {args.package} provides no buildlink3.mk file')
+        sys.exit(1)
+    searchlist = [initial_bl3]
 
 bl3files = glob.glob(args.pkgsrcdir + '/*/*/buildlink3.mk')
 bl3files.append(args.pkgsrcdir + '/lang/ocaml/ocaml.mk')
