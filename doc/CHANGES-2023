@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3706 2023/06/10 12:43:51 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3707 2023/06/10 12:59:11 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5108,3 +5108,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/R-rjson to 0.2.21 [mef 2023-06-10]
 	Updated geography/R-prettymapr to 0.2.4 [mef 2023-06-10]
 	Updated geography/R-rosm to 0.2.6 [mef 2023-06-10]
+	Updated sysutils/auto-admin to 0.7.16 [bacon 2023-06-10]
