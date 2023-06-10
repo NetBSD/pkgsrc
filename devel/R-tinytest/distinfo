@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/10 13:31:33 mef Exp $
 
-BLAKE2s (R/tinytest_1.3.1.tar.gz) = 4584f2a49fb5e989adec2f5d6ee1f84eabacb3eca43ac22c83783f9e18496225
-SHA512 (R/tinytest_1.3.1.tar.gz) = bb580f42f47375e730a698072645c1cb8c5e6d46c8ab2e69b2fbd4c0f9edd5c97ddbbc0d4d3cc35d3d785e937f10d74a4c2c41f86777add8c81ec43c884bc019
-Size (R/tinytest_1.3.1.tar.gz) = 445398 bytes
+BLAKE2s (R/tinytest_1.4.1.tar.gz) = 8625290933d27ec548550df8da896a53c60b91ca88e534121702d41b24fef058
+SHA512 (R/tinytest_1.4.1.tar.gz) = a719187b18e41cd4df51c876d9d8b969244ec76c67daca3c6270e7080c35ef2a94b1fcd1fce1b863177bd7d5a8822291ecc49f7c837c823c62113485a85651ed
+Size (R/tinytest_1.4.1.tar.gz) = 587352 bytes
