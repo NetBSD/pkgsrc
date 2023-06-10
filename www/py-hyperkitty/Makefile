@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 03:15:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/10 07:45:24 wiz Exp $
 
 DISTNAME=	HyperKitty-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	Web interface to access GNU Mailman v3 archives
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-isort>=0:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-mailman3>=1.3.8:../../www/py-django-mailman3
 DEPENDS+=	${PYPKGPREFIX}-django-gravatar2>=1.0.6:../../www/py-django-gravatar2
@@ -27,6 +28,9 @@ DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=4.0:../../devel/py-flufl.lock
 DEPENDS+=	${PYPKGPREFIX}-django-q>=1.0.0:../../www/py-django-q
 DEPENDS+=	${PYPKGPREFIX}-Whoosh-[0-9]*:../../textproc/py-Whoosh
 DEPENDS+=	sassc-[0-9]*:../../www/sassc
+TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+TEST_DEPENDS+=	${PYPKGPREFIX}-django-debug-toolbar-[0-9]*:../../www/py-django-debug-toolbar
 
 USE_LANGUAGES=	# none
 
