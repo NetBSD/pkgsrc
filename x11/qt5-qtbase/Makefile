@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2023/06/10 18:23:03 adam Exp $
+# $NetBSD: Makefile,v 1.133 2023/06/10 18:26:57 adam Exp $
 
 DISTNAME=	qtbase-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	-system-zlib
 CONFIGURE_ARGS+=	-system-doubleconversion
 CONFIGURE_ARGS+=	-system-libmd4c
 .if defined(MAKE_JOBS)
-.  if !defined(MAKE_JOBS_SAFE) || empty(MAKE_JOBS_SAFE:M[nN][oO])
+.  if !defined(MAKE_JOBS_SAFE) || ${MAKE_JOBS_SAFE:U:tl} != no
 CONFIGURE_ENV+=		MAKEFLAGS=-j${MAKE_JOBS}
 .  endif
 .endif
@@ -54,7 +54,7 @@ CONFIGURE_ENV+=		MAKEFLAGS=-j${MAKE_JOBS}
 CONFIGURE_ARGS+=	-fontconfig
 QMAKE_CONF=		qmake.conf
 .  if ${OPSYS} != "SunOS" && \
-      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
+      ${MACHINE_ARCH} == i386 || ${MACHINE_ARCH} == x86_64
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
