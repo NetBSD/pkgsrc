@@ -1,0 +1,7 @@
+Create and integrate maps in your R workflow. This package helps to
+design cartographic representations such as proportional symbols,
+choropleth, typology, flows or discontinuities maps. It also offers
+several features that improve the graphic presentation of maps, for
+instance, map palettes, layout elements (scale, north arrow,
+title...), labels or legends. See Giraud and Lambert (2017)
+<doi:10.1007/978-3-319-57336-6_13>.
