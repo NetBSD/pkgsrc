@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/10 06:00:53 markd Exp $
 
 DISTNAME=	mailman-web-0.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman-web/}
 
@@ -28,6 +29,7 @@ SUBST_CLASSES+=		fhs
 SUBST_STAGE.fhs=	pre-configure
 SUBST_FILES.fhs=	mailman_web/manage.py
 SUBST_FILES.fhs+=	mailman_web/settings/base.py
+SUBST_FILES.fhs+=	mailman_web/settings/mailman.py
 SUBST_FILES.fhs+=	crontab.sample
 SUBST_MESSAGE.fhs=	Fixing default paths
 SUBST_VARS.fhs=		PKG_SYSCONFDIR PREFIX VARBASE
