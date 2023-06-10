@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2023/04/12 19:24:04 adam Exp $
+$NetBSD: distinfo,v 1.38 2023/06/10 18:23:04 adam Exp $
 
-BLAKE2s (qtdeclarative-everywhere-opensource-src-5.15.9.tar.xz) = 3ee4a339ab951baa7fe1e92b36841ffd1762f253c68114d7f4df4fd6b2c76678
-SHA512 (qtdeclarative-everywhere-opensource-src-5.15.9.tar.xz) = ada3e32f42270899d92c46f0c0b8cd78028cf2e658ac60b3745c804ec494fb1fc6f31a670668074433b3e702f81524415ef132a757ca80151eb13d0a19352af7
-Size (qtdeclarative-everywhere-opensource-src-5.15.9.tar.xz) = 21587820 bytes
+BLAKE2s (qtdeclarative-everywhere-opensource-src-5.15.10.tar.xz) = bc90a2fb43a2178c63c2df4eeb8af1461070ace4ceace3dbbfcda8b424ab66df
+SHA512 (qtdeclarative-everywhere-opensource-src-5.15.10.tar.xz) = 378fc41a31edb52d85fd5e37fe6c086e35b5d5d759ceacc49cf7981a8a38d25ae5f2ca27d99547bd1db381f32128e7947800e2a01a857177707cc2a9980373a8
+Size (qtdeclarative-everywhere-opensource-src-5.15.10.tar.xz) = 21596352 bytes
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d
 SHA1 (patch-src_3rdparty_masm_wtf_Compiler.h) = 8d7e318e0148eea0f262ec13463bc15bd03478dc
 SHA1 (patch-src_3rdparty_masm_yarr_YarrCanonicalize.h) = 3cb31384f5287a5449d1a6bdd03d42870ac9385f

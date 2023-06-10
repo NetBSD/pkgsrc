@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc,v 1.2 2023/06/10 18:23:07 adam Exp $
 
---- src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc.orig	2020-07-15 19:01:44.000000000 +0000
+--- src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc.orig	2022-04-06 13:32:17.000000000 +0000
 +++ src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  
@@ -11,12 +11,12 @@ $NetBSD: patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc
  #include <ucontext.h>
  #elif V8_OS_MACOSX
  #include <sys/ucontext.h>
-@@ -114,6 +114,8 @@ bool TryHandleSignal(int signum, siginfo
-     auto* context_rip = &uc->uc_mcontext->__ss.__rip;
- #elif V8_OS_FREEBSD
-     auto* context_rip = &uc->uc_mcontext.mc_rip;
+@@ -120,6 +120,8 @@ bool TryHandleSignal(int signum, siginfo
+     auto* context_ip = &uc->uc_mcontext.mc_rip;
+ #elif V8_OS_FREEBSD && V8_HOST_ARCH_ARM64
+     auto* context_ip = &uc->uc_mcontext.mc_pc;
 +#elif V8_OS_NETBSD
-+    auto* context_rip = &_UC_MACHINE_PC(uc);
++    auto* context_ip = &_UC_MACHINE_PC(uc);
  #else
  #error Unsupported platform
  #endif

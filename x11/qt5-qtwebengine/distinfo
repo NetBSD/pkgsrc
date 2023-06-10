@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2023/06/08 20:38:05 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/06/10 18:23:06 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.9.tar.xz) = 0b239527cbe32a555bf4273188533c0912e45719038e619489d61cdf4060f0c5
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.9.tar.xz) = 7142ac2e59e4aa2bedbe35e6242c1359fc9c51bd7db9f31d89f01dc2843f38bf7f80869e603a57190791a97aef9ba1064eb0f90cf09e5293f61f250c455cb07a
-Size (qtwebengine-everywhere-opensource-src-5.15.9.tar.xz) = 316318672 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 0801cd15847412f2316affd5a7cd4efe628abfb0e3251a9069184dde1b42ad5b
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = e35d0cab5f66a148420206616b3517e62b8320572beac53650096c0db58db8b4942d52a3abf4f0d6db1450de27befeb92f8b632c1277b0939464c1407a904b1b
+Size (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 316141752 bytes
 SHA1 (patch-configure.pri) = e9d971f18d0a7a8a58d635eb6688193fb92020f3
 SHA1 (patch-mkspecs_features_functions.prf) = 6bf237521df3d60649b603b7cb7d21f793df1386
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 228416b6472c48727df1a6c86ac97814fd5cb3b5
@@ -653,7 +653,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_flatbuffers_src_src_util.cpp) = 9
 SHA1 (patch-src_3rdparty_chromium_third__party_fontconfig_BUILD.gn) = 47e19aa2f1c4b7762586c48d8681ddb99539ed04
 SHA1 (patch-src_3rdparty_chromium_third__party_fontconfig_fontconfig.gni) = b29a5fba2bb29611152fd9d3e04477c137e98e8a
 SHA1 (patch-src_3rdparty_chromium_third__party_freetype_BUILD.gn) = 04383e872c4f62085b2ef4df253fb0c8b9353d4c
-SHA1 (patch-src_3rdparty_chromium_third__party_harfbuzz-ng_src_src_hb-subset-cff1.cc) = f2b005ab8d7ca4d43b270ed89ea2ab233bb8f253
 SHA1 (patch-src_3rdparty_chromium_third__party_icu_BUILD.gn) = 51ecb1995faeb18ce646d63fe83b3a294f97fee5
 SHA1 (patch-src_3rdparty_chromium_third__party_icu_source_common_putil.cpp) = b35edb5d0d256bee92d08dbcdf47c19c2ab7bf70
 SHA1 (patch-src_3rdparty_chromium_third__party_icu_source_common_umapfile.cpp) = 868021cc67d4d1efb53732cfcdb96fff3da32591
@@ -665,7 +664,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_libdrm_BUILD.gn) = fcd6dcd1392304
 SHA1 (patch-src_3rdparty_chromium_third__party_libjpeg__turbo_BUILD.gn) = 11938aa04114feba7913d0ee341e0602559cc8f3
 SHA1 (patch-src_3rdparty_chromium_third__party_libpng_pnglibconf.h) = 131371c66ba1acc25f0bebde8863b582c6e5c0dc
 SHA1 (patch-src_3rdparty_chromium_third__party_libxml_BUILD.gn) = 3fb0071a56dcfcd8ea10640fd2f1d372dc2ec564
-SHA1 (patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c) = 94eeadd0c4777fcd4597eed9550191b8500922ef
+SHA1 (patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c) = 16bc356bfe85bf3a3db68064cf4bdd78d1fe2d21
 SHA1 (patch-src_3rdparty_chromium_third__party_libxslt_BUILD.gn) = 9b5a87f7997f57cfefcf32e06b0ba171cc915821
 SHA1 (patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn) = 896dba64969d78f6f968bdbfc0bef2f42893f999
 SHA1 (patch-src_3rdparty_chromium_third__party_minigbm_BUILD.gn) = 6eebeab3d0fa62752c54435658610149e406ef18
@@ -891,7 +890,7 @@ SHA1 (patch-src_3rdparty_chromium_v8_gni_v8.gni) = 37cbd6b92dac3370c039aa04424e4
 SHA1 (patch-src_3rdparty_chromium_v8_src_api_api.cc) = d563a6b50e5dff265d5a4b1b516de02e7149cab6
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_cpu.cc) = f6ec99bba983bb93e8515478f64681440ffbda1e
 SHA1 (patch-src_3rdparty_chromium_v8_src_base_platform_platform-posix.cc) = 7e587fac8a26a975b33a93aa09ccf9af82afabb7
-SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc) = 568877d1ebcaaee5782527f232a6fcc7f096066a
+SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.cc) = 01a6e7e6c5cd3a30cbe85e3f418dc36e7884c4b8
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_handler-inside-posix.h) = a64ca7574cca4cb804e0ca24dd3454507d3d556d
 SHA1 (patch-src_3rdparty_chromium_v8_src_trap-handler_trap-handler.h) = d0b72fff980d5072d2221dd31b2e95526cd33875
 SHA1 (patch-src_3rdparty_chromium_v8_tools_BUILD.gn) = a87faf61f2641f981c1cdda1c1b0a95777df49df
@@ -910,7 +909,7 @@ SHA1 (patch-src_3rdparty_gn_base_files_file_util_posix.cc) = 49ffb3f29ad78bbe255
 SHA1 (patch-src_3rdparty_gn_base_files_scoped_file.cc) = abbb5ad1c4d9ead8fb9ec3d2438b053fd9b222bf
 SHA1 (patch-src_3rdparty_gn_build_build_netbsd.ninja.template) = 81e98a9b9ff209a3a1ec6a513620371fa1a4633b
 SHA1 (patch-src_3rdparty_gn_build_gen.py) = f3348866a0189d174987b685728180383e22ceb4
-SHA1 (patch-src_3rdparty_gn_tools_gn_args.cc) = 2bfac3d4db1fb11504194f35036e39c2eed0131c
+SHA1 (patch-src_3rdparty_gn_tools_gn_args.cc) = 6a171b3b30ebecf36ac713af1ca5297e01dc775e
 SHA1 (patch-src_3rdparty_gn_tools_gn_c_tool.cc) = f14c525273c2448b88f38d961ac6e73677f8b631
 SHA1 (patch-src_3rdparty_gn_tools_gn_ninja_binary_target_writer.cc) = 81dc567ec158c4fd9cfd31c855b637201c822d24
 SHA1 (patch-src_3rdparty_gn_tools_gn_qmake_link_writer.cc) = f05536612a16c52c1cbcfc176aaf849285f8a2fe
