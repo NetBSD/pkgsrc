@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1724 2023/06/11 07:58:40 wiz Exp $
+# $NetBSD: Makefile,v 1.1725 2023/06/11 08:19:44 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -658,6 +658,7 @@ SUBDIR+=	pup
 SUBDIR+=	py-BrowserID
 SUBDIR+=	py-ClientForm
 SUBDIR+=	py-FormEncode
+SUBDIR+=	py-FxA
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-MechanicalSoup
 SUBDIR+=	py-PasteDeploy
