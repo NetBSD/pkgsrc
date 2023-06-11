@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/11 10:45:44 mef Exp $
 
-BLAKE2s (R/spelling_2.2.tar.gz) = 8844d51c34a59fdd4a4e74d479f7e6225968af6e6648c5074158c51591052f76
-SHA512 (R/spelling_2.2.tar.gz) = 53449c14d0146e9ccaefad518eb4aee7cedc12dc7744b405eb7c1f7b0dca0edcefcdfa7ce240be9a5531e95a24df92c685417f616ccdb30060d11794ca948604
-Size (R/spelling_2.2.tar.gz) = 10764 bytes
+BLAKE2s (R/spelling_2.2.1.tar.gz) = a2299e290ac9ee05f64078b0e03170dde7c40011d81a4b280c3094f9c77f9e52
+SHA512 (R/spelling_2.2.1.tar.gz) = e03ca39a5fa02135dfd7fc1562e977dcccd03222e663a7c2fccf2b6465b8e1320493f4cd3df8adcb2c7b50bf3867a362fe6c5afa428999bc4942e589ab1c1161
+Size (R/spelling_2.2.1.tar.gz) = 11032 bytes
