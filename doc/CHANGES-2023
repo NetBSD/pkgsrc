@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3779 2023/06/11 23:00:30 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3780 2023/06/11 23:10:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5241,3 +5241,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-googledrive to 2.1.0 [mef 2023-06-11]
 	Updated math/R-fracdiff to 1.5.2 [mef 2023-06-11]
 	Updated math/R-forcats to 1.0.0 [mef 2023-06-11]
+	Updated finance/R-quantmod to 0.4.22 [mef 2023-06-11]
