@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3718 2023/06/11 00:32:13 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.3719 2023/06/11 00:45:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-plumbum to 1.8.2 [adam 2023-06-10]
 	Updated math/R-mnormt to 2.1.1 [mef 2023-06-11]
 	Updated finance/p5-Finance-Quote to 1.56 [gutteridge 2023-06-11]
+	Updated math/R-psych to 2.3.3 [mef 2023-06-11]
