@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/03/11 10:05:26 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/06/11 03:24:46 mef Exp $
 
-BLAKE2s (R/nimble_0.13.1.tar.gz) = 7d108c5dfab341f1b1a99553e5485b7bf044b349d2f14bb15dc0fcf1b843bd0e
-SHA512 (R/nimble_0.13.1.tar.gz) = 42c183af879d0706228c73cd0b5f8984682454cef081aaa03cff33afd5f1c7c827b88074336c529e6b717827e873ad10918b203fa2538ef633fe081c9cdde1ec
-Size (R/nimble_0.13.1.tar.gz) = 2149097 bytes
+BLAKE2s (R/nimble_1.0.0.tar.gz) = 2158c2a08dbffaa494a86273e0a84d4fbcd740feeddfda2ae3ce41cf27181280
+SHA512 (R/nimble_1.0.0.tar.gz) = 1d3bf3c6239455fe21ea4fc6c94a786c843991c4abb1f464a177c5631e0602760ffb1b98a65c03a7c8a58259588b50bcea3d928bf17543de388e56170479d6a6
+Size (R/nimble_1.0.0.tar.gz) = 3060379 bytes
