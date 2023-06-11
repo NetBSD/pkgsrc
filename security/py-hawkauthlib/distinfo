@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 07:47:37 wiz Exp $
+
+BLAKE2s (hawkauthlib-2.0.0.tar.gz) = e0912ae77e56721c8dc0c2ec3409bdcf48d5571560b5b6938f8a8d7f4f105569
+SHA512 (hawkauthlib-2.0.0.tar.gz) = 4552f41a71d9998bf34179d4aad32a0e77b55862a6e38a8b5bef59967bd5e3c2b25ec3022a8f8d9e86f5162d7d1a73dfe3302f8a25b2afd4f6a276e6859901f4
+Size (hawkauthlib-2.0.0.tar.gz) = 14886 bytes
