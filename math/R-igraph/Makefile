@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/04/19 08:10:44 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/11 02:48:20 mef Exp $
 
 R_PKGNAME=	igraph
-R_PKGVER=	1.4.1
-PKGREVISION=	1
+R_PKGVER=	1.4.3
 CATEGORIES=	math graphics
 
 MAINTAINER=	minskim@NetBSD.org
@@ -26,6 +25,7 @@ TEST_DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
 
 USE_LANGUAGES=	c c++ fortran
 
-.include "../../math/R/Makefile.extension"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../lang/R-cpp11/buildlink3.mk"
+.include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
