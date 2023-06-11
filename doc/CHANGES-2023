@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3726 2023/06/11 03:47:49 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3727 2023/06/11 03:57:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-nimble to 1.0.0 [mef 2023-06-11]
 	Updated cad/ghdl to 3.0.0 [mef 2023-06-11]
 	Updated math/R-mvtnorm to 1.2.2 [mef 2023-06-11]
+	Updated math/R-modelr to 0.1.11 [mef 2023-06-11]
