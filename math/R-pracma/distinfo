@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 02:54:34 mef Exp $
+
+BLAKE2s (R/pracma_2.4.2.tar.gz) = d65db797815044cbd0f2c04546b05da886c8d3e3a20df1cb46c52160692a59b4
+SHA512 (R/pracma_2.4.2.tar.gz) = da6450e4d413c5400023fb0306ee00b99e28b4339dc4c336e60ec00255f08898a43ebdbbf547eaaa59ea8b8be82fde73b86cbb37e2b02649d4faf8a0f2e32e31
+Size (R/pracma_2.4.2.tar.gz) = 399611 bytes
