@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4005 2023/06/09 19:34:48 gdt Exp $
+# $NetBSD: Makefile,v 1.4006 2023/06/11 08:55:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2636,6 +2636,7 @@ SUBDIR+=	py-lama-quotes
 SUBDIR+=	py-lazr.config
 SUBDIR+=	py-lazr.delegates
 SUBDIR+=	py-lazy-object-proxy
+SUBDIR+=	py-lexid
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
 SUBDIR+=	py-libusb1
