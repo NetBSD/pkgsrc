@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/02 11:25:22 markd Exp $
+$NetBSD: distinfo,v 1.6 2023/06/11 07:15:59 markd Exp $
 
-BLAKE2s (lineno.r65586.tar.xz) = a94c100ee31365be3b2bfebae1f09a4ee551d66ac5df111d61e9edc72713a670
-SHA512 (lineno.r65586.tar.xz) = c1a1ed8480634176c2b375550ddac8d50581d3d3bbd93c98ac9ede07b6289937462d99d35b59cad9bd11f64f14fbefd10043027443c7a8d8e65d370e9bd44dbc
-Size (lineno.r65586.tar.xz) = 62148 bytes
+BLAKE2s (lineno.r67171.tar.xz) = 29b73a38659636a24957116b8fde9ae023cf7e4e453735cb0552cb80d7be231a
+SHA512 (lineno.r67171.tar.xz) = 7171da9917c0218a0c55c43126ecfe07b9e55e9633b673c89ae18f08897bb1634cc8412cc3051ebf6640afc228e246f1e5549ddea45261a6ddee01d158f3b9e6
+Size (lineno.r67171.tar.xz) = 62736 bytes
