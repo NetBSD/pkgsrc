@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3741 2023/06/11 08:19:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3742 2023/06/11 08:43:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/py-BrowserID version 0.14.0 [wiz 2023-06-11]
 	Added net/py-grequests version 0.7.0 [wiz 2023-06-11]
 	Added www/py-FxA version 0.7.7 [wiz 2023-06-11]
+	Updated math/R-goftest to 1.2.3 [mef 2023-06-11]
