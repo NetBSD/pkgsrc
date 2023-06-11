@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2022/05/05 02:24:41 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/11 10:41:01 mef Exp $
 
 R_PKGNAME=	bslib
-R_PKGVER=	0.3.1
+R_PKGVER=	0.4.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'
 LICENSE=	mit	# + file LICENSE
 
-DEPENDS+=	R-magrittr>=2.0.1:../../devel/R-magrittr
-DEPENDS+=	R-rlang>=0.4.11:../../devel/R-rlang
+DEPENDS+=	R-cachem-[0-9]*:../../devel/R-cachem
 DEPENDS+=	R-htmltools>=0.5.1:../../textproc/R-htmltools
-DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
-DEPENDS+=	R-sass>=0.4.0:../../www/R-sass
 DEPENDS+=	R-jquerylib-[0-9]*:../../www/R-jquerylib
+DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
+DEPENDS+=	R-magrittr>=2.0.1:../../devel/R-magrittr
+DEPENDS+=	R-memoise-[0-9]*:../../devel/R-memoise
+DEPENDS+=	R-rlang>=0.4.11:../../devel/R-rlang
+DEPENDS+=	R-sass>=0.4.0:../../www/R-sass
 
 TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
