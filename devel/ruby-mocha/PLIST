@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2022/11/29 13:04:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2023/06/11 14:28:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -97,6 +97,4 @@ ${GEM_LIBDIR}/lib/mocha/thrown_object.rb
 ${GEM_LIBDIR}/lib/mocha/version.rb
 ${GEM_LIBDIR}/lib/mocha/yield_parameters.rb
 ${GEM_LIBDIR}/mocha.gemspec
-${GEM_LIBDIR}/yard-templates/default/layout/html/google_analytics.erb
-${GEM_LIBDIR}/yard-templates/default/layout/html/setup.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
