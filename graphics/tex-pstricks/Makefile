@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/04/01 22:16:41 markd Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/11 07:38:04 markd Exp $
 
 DISTNAME=	pstricks
-PKGNAME=	tex-${DISTNAME}-3.18
-TEXLIVE_REV=	65346
+PKGNAME=	tex-${DISTNAME}-3.19
+TEXLIVE_REV=	66973
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pstricks-base
