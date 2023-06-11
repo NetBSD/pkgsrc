@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/04/09 05:30:16 markd Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/11 06:42:07 markd Exp $
 
 DISTNAME=	hyperref
-PKGNAME=	tex-${DISTNAME}-7.00v
-TEXLIVE_REV=	65758
+PKGNAME=	tex-${DISTNAME}-7.00y
+TEXLIVE_REV=	67233
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperref
