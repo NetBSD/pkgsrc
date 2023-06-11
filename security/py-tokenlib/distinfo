@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 07:34:09 wiz Exp $
+
+BLAKE2s (tokenlib-2.0.0.tar.gz) = 5e00a429ac77b35871b05f83e75a45f678703330bcd29e7efd4b4e2948a24acd
+SHA512 (tokenlib-2.0.0.tar.gz) = ab17994f85676ff304b30d6f9480ebe681d82e61c11b331cb6b662100e4fb28b160ebc1dcf2f73620829a552ccdb3d6feb2850deabef9c63b6affc1210ae2078
+Size (tokenlib-2.0.0.tar.gz) = 9374 bytes
