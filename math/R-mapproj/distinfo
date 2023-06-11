@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/28 15:55:37 mef Exp $
+$NetBSD: distinfo,v 1.13 2023/06/11 04:42:04 mef Exp $
 
-BLAKE2s (R/mapproj_1.2.8.tar.gz) = 62ab54e91afec0ed84b66aa6dc28a589503e033a8939c6c613bb161c12e2a155
-SHA512 (R/mapproj_1.2.8.tar.gz) = 171c3d808dc8b058a25c3428c32e6379bed34e8a0146e2741c08ea064879135401d2682dc088d3d9534deb2522d3989eadddb98f8f0e8ac87e12317fd6856dc2
-Size (R/mapproj_1.2.8.tar.gz) = 25485 bytes
+BLAKE2s (R/mapproj_1.2.11.tar.gz) = 20cc9ed453e1f0c195d429f842e09f8aee736fab622986e1ffc7bf735864a48c
+SHA512 (R/mapproj_1.2.11.tar.gz) = a2c78e58c025f8380eb9ea68a57a5ea4acf731a16f550108a13123d9841e38324e2bf188e27b069b1a832b79abcca3f1f676642864d0dfed8ae0e1dacd7246e3
+Size (R/mapproj_1.2.11.tar.gz) = 25544 bytes
