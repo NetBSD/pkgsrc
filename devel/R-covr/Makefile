@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/02/19 12:13:10 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/11 08:51:32 mef Exp $
 
 R_PKGNAME=	covr
-R_PKGVER=	3.6.1
+R_PKGVER=	3.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
