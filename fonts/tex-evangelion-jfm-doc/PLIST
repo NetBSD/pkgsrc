@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/11 01:45:10 markd Exp $
-share/texmf-dist/doc/luatex/evangelion-jfm/Evangelion-doc.pdf
-share/texmf-dist/doc/luatex/evangelion-jfm/Evangelion-doc.tex
+@comment $NetBSD: PLIST,v 1.2 2023/06/11 06:32:35 markd Exp $
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-en.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-en.tex
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-jp.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-jp.tex
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-sc.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/Eva-JFM_doc-sc.tex
 share/texmf-dist/doc/luatex/evangelion-jfm/LICENSE
 share/texmf-dist/doc/luatex/evangelion-jfm/README.md
+share/texmf-dist/doc/luatex/evangelion-jfm/figure/fig-jp.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/figure/fig-tc.pdf
+share/texmf-dist/doc/luatex/evangelion-jfm/figure/fig.tex
+share/texmf-dist/doc/luatex/evangelion-jfm/make.sh
