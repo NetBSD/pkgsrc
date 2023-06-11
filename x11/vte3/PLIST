@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/06/01 21:51:27 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/06/11 02:19:46 gutteridge Exp $
 bin/vte-2.91
 include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
@@ -14,7 +14,7 @@ include/vte-2.91/vte/vteversion.h
 lib/girepository-1.0/Vte-2.91.typelib
 lib/libvte-2.91.so
 lib/libvte-2.91.so.0
-lib/libvte-2.91.so.0.7200.1
+lib/libvte-2.91.so.0.7200.2
 lib/pkgconfig/vte-2.91.pc
 libexec/vte-urlencode-cwd
 share/examples/profile.d/vte.csh
@@ -121,5 +121,3 @@ share/locale/xh/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_CN/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_HK/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_TW/LC_MESSAGES/vte-2.91.mo
-share/vala/vapi/vte-2.91.deps
-share/vala/vapi/vte-2.91.vapi
