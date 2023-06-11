@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/11/28 00:49:54 mef Exp $
+$NetBSD: distinfo,v 1.5 2023/06/11 10:37:33 mef Exp $
 
-BLAKE2s (R/cachem_1.0.6.tar.gz) = 9c64e3da8b60c11f21926d00e3b41b644c0af0b184d637bad41d83e001cb33a2
-SHA512 (R/cachem_1.0.6.tar.gz) = 79736de4d40119c13dbddd33ddc589da37ddb7a95d611e24b8a3246209b4ebd396590eab645712ea308df744324bcc1d173d06f3567797983cd066618c7fd976
-Size (R/cachem_1.0.6.tar.gz) = 25413 bytes
+BLAKE2s (R/cachem_1.0.8.tar.gz) = b58ad14e8a60279dbf52be5002183c6b06d9df312066ae29c83f14c3eb8e2ad4
+SHA512 (R/cachem_1.0.8.tar.gz) = ac3818bff98e3efd4ab1e94b72be7ff919004b081973d29c5838405e1abf241624fcbeb963103aba33db11b9fde1d8f838659b883c39b9fb8499e0b9f48c328e
+Size (R/cachem_1.0.8.tar.gz) = 26510 bytes
