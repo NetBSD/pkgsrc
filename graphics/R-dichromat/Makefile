@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:42 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/11 08:59:04 mef Exp $
 
 R_PKGNAME=	dichromat
-R_PKGVER=	2.0-0
+R_PKGVER=	2.0-0.1
 CATEGORIES=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
