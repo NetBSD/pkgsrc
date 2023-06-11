@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/05/03 12:27:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/11 05:15:17 markd Exp $
 share/texmf-dist/doc/latex/babel/README.md
+share/texmf-dist/doc/latex/babel/babel-code.pdf
 share/texmf-dist/doc/latex/babel/babel.pdf
