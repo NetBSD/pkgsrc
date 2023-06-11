@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 07:58:21 wiz Exp $
+
+BLAKE2s (PyBrowserID-0.14.0.tar.gz) = 3b01fd8db4ebbb4c2df18f1ac9d7673c33bbdac3c8bcbc17a4e594b7a6e3e846
+SHA512 (PyBrowserID-0.14.0.tar.gz) = de7a271c7824b6143dd2c4518f7cc36482734b2669417910eca25eda36ba6c9a07fd9c600bac93d1b6d5c77149f210f5313577f4f2f11e88c54d727c82f14e84
+Size (PyBrowserID-0.14.0.tar.gz) = 36566 bytes
