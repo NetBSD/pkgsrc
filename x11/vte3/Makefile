@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2023/06/07 11:27:34 micha Exp $
+# $NetBSD: Makefile,v 1.66 2023/06/11 02:19:46 gutteridge Exp $
 
-DISTNAME=	vte-0.72.1
+DISTNAME=	vte-0.72.2
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
@@ -24,6 +23,9 @@ GCC_REQD+=		10
 # Otherwise, this will fail on Linux distributions that don't
 # have libsystemd.
 MESON_ARGS+=		-D_systemd=false
+# The Vala API isn't used by any dependants in pkgsrc, has a large dependency
+# footprint, and has caused issues in the past.
+MESON_ARGS+=		-Dvapi=false
 
 CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.sh \
 			${PKG_SYSCONFDIR}/profile.d/vte.sh
@@ -45,7 +47,6 @@ REPLACE_PYTHON=		src/*.py
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/vala/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
