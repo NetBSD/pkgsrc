@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/11 03:01:14 mef Exp $
 
-BLAKE2s (R/ncdf4_1.17.tar.gz) = b4197c165be30aa83e8ee938bd596a38ed04bfd436c56c58ce6ab05d3177af72
-SHA512 (R/ncdf4_1.17.tar.gz) = 21d71ceaff3276289e8a76f73776a1a561423bb1a446f24b115b527927cdee2557b412406ca36caee9e453505ee5fe0575c4296ccc1c0acec1470409d2910a3f
-Size (R/ncdf4_1.17.tar.gz) = 124458 bytes
+BLAKE2s (R/ncdf4_1.21.tar.gz) = bca0a7e85aa86bf67819c4b291185739d1eb57f65e75a0f979963fb218955f82
+SHA512 (R/ncdf4_1.21.tar.gz) = af7e90819db98e19786c630decb8eb96e6bd36afe4fa9ca48e516f3ea77548dd43b2a2f72dd6bbdba080f1ad58d2db171eb1e96b9e611383535d10e6cbb3b668
+Size (R/ncdf4_1.21.tar.gz) = 127380 bytes
