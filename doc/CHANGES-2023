@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3715 2023/06/10 18:58:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3716 2023/06/11 00:26:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5119,3 +5119,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-scikit-build to 0.17.6 [adam 2023-06-10]
 	Updated devel/py-test-check to 2.1.5 [adam 2023-06-10]
 	Updated devel/py-plumbum to 1.8.2 [adam 2023-06-10]
+	Updated math/R-mnormt to 2.1.1 [makoto 2023-06-11]
