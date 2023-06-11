@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3747 2023/06/11 09:12:11 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3748 2023/06/11 09:29:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5211,3 +5211,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/R-dichromat to 2.0.0.1 [mef 2023-06-11]
 	Added devel/py-bumpver version 2023.1124 [wiz 2023-06-11]
 	Updated devel/R-waldo to 0.5.1 [mef 2023-06-11]
+	Updated www/R-httpuv to 1.6.11 [mef 2023-06-11]
