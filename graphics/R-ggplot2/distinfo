@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:45:55 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/06/11 15:05:51 mef Exp $
 
-BLAKE2s (R/ggplot2_3.3.5.tar.gz) = a8514f9bf3a06468bf58b2db35df5bd3709ffecfef298a1d10c2f080dde7439f
-SHA512 (R/ggplot2_3.3.5.tar.gz) = 94ed976e48ddd08a2a840f3638bf7552cb05e5c588f362c1dffc57d903a222961516d28ab43f85f571f81e0fd12ecc7eb9690b2153d4eec2e358e2561e0c9c03
-Size (R/ggplot2_3.3.5.tar.gz) = 3063309 bytes
+BLAKE2s (R/ggplot2_3.4.2.tar.gz) = 8dd9c04b4cf3adceccba025d23f75f653c4955f62bb722c04cbcb0091b36933e
+SHA512 (R/ggplot2_3.4.2.tar.gz) = f66f1ebddabd6a133d95f7c1eb5928873f50fb57fbb5e4ef623bdab2527ae319c0ca2f4f8f547daa40a34782641b22eebaf60ddab2c1359b3edd36ed6c75b2b4
+Size (R/ggplot2_3.4.2.tar.gz) = 3153811 bytes
