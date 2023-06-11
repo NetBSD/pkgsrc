@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.564 2023/05/30 14:50:32 taca Exp $
+# $NetBSD: Makefile,v 1.565 2023/06/11 02:56:46 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -94,6 +94,7 @@ SUBDIR+=	R-pbkrtest
 SUBDIR+=	R-pixmap
 SUBDIR+=	R-plyr
 SUBDIR+=	R-poweRlaw
+SUBDIR+=	R-pracma
 SUBDIR+=	R-prettyunits
 SUBDIR+=	R-prob
 SUBDIR+=	R-proxy
