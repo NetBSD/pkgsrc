@@ -1,0 +1,7 @@
+This is a low-level library for implementing Hawk Access Authentication,
+a simple HTTP request-signing scheme described.
+
+To access resources using Hawk Access Authentication, the client
+must have obtained a set of Hawk credentials including an id and
+a secret key. They use these credentials to make signed requests
+to the server.
