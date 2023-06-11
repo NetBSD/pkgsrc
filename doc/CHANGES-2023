@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3719 2023/06/11 00:45:18 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3720 2023/06/11 02:20:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5122,3 +5122,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-mnormt to 2.1.1 [mef 2023-06-11]
 	Updated finance/p5-Finance-Quote to 1.56 [gutteridge 2023-06-11]
 	Updated math/R-psych to 2.3.3 [mef 2023-06-11]
+	Updated x11/vte3 to 0.72.2 [gutteridge 2023-06-11]
