@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3742 2023/06/11 08:43:14 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3743 2023/06/11 08:51:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5206,3 +5206,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/py-grequests version 0.7.0 [wiz 2023-06-11]
 	Added www/py-FxA version 0.7.7 [wiz 2023-06-11]
 	Updated math/R-goftest to 1.2.3 [mef 2023-06-11]
+	Updated devel/R-covr to 3.6.2 [mef 2023-06-11]
