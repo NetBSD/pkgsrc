@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/23 05:15:16 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/11 03:57:24 mef Exp $
 
 R_PKGNAME=	modelr
-R_PKGVER=	0.1.8
+R_PKGVER=	0.1.11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Modelling Functions that Work with the Pipe
@@ -15,6 +15,9 @@ DEPENDS+=	R-broom>=0.7.9:../../math/R-broom
 DEPENDS+=	R-tibble>=3.1.4:../../math/R-tibble
 DEPENDS+=	R-tidyr>=0.8.0:../../math/R-tidyr
 DEPENDS+=	R-vctrs>=0.3.8:../../math/R-vctrs
+
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	# none
 
