@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/11 05:55:34 mef Exp $
 
-BLAKE2s (R/hexbin_1.28.2.tar.gz) = f76f656caf150a27114f9e2fda4f974e8fc93b045dd9cf023fc0355e619ea758
-SHA512 (R/hexbin_1.28.2.tar.gz) = 07e9a7a34eb38bca3055c4712b256946edb1d413d413901f5ea128cd12a3909f1abc6e029a5d33de0bf1e37afb1cc559721d9b231186e911aa9d1b6928c91ff7
-Size (R/hexbin_1.28.2.tar.gz) = 1066670 bytes
+BLAKE2s (R/hexbin_1.28.3.tar.gz) = c72df7c942b7f38f16a0e17abadadea33e6e1d7a01e03cbc3924ec716fcb8005
+SHA512 (R/hexbin_1.28.3.tar.gz) = e316acb37e5ce32ffdc12f5ac34f59edfcb2df37fb0063d3def6564d26e43d41fe4298a2c8f64a9f75b2bc0ff90253bcfa5be0befd3bdd655d88722f2cd04fd1
+Size (R/hexbin_1.28.3.tar.gz) = 1199967 bytes
