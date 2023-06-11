@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23055 2023/06/11 03:35:52 mef Exp $
+$NetBSD: TODO,v 1.23056 2023/06/11 13:09:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,6 +408,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-pbdZMQ-0.3.5
 	o R-poweRlaw-0.70.6
 	o R-quadprog-1.5.8
+	o SDL2_image-2.6.3
 	o SOGo5-5.8.3 [wip]
 	o SOPE5-5.8.3 [wip]
 	o SQLiteCpp-2.5.0
@@ -612,6 +613,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epiphany-extensions-3.2.0
 	o epubcheck-4.0.2
 	o eric5-5.4.6
+	o erlang-26.0.1
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -857,6 +859,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
+	o khal-0.11.2
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
 	o knot-resolver-1.1.1
@@ -880,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libcups-2.4.4
 	o libdbusmenu-glib-16.04.0
 	o libdbusmenu-gtk-16.04.0
 	o libdbusmenu-gtk-doc-16.04.0
@@ -999,10 +1003,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o nerd-fonts-Meslo-3.0.2
 	o nethack-3.6.7
 	o netramet-50
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
+	o nodejs-20.3.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1016,7 +1022,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-5.0.0
 	o ocaml-cppo-1.6.9
 	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
-	o ocaml-dune-3.8.0
+	o ocaml-dune-3.8.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1040,6 +1046,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-4.7
 	o opendnssec-2.1.8
+	o openexr-3.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openimageio-2.4.6.0
@@ -1159,6 +1166,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-23.06.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgresql-pljava-1.6.4
@@ -1187,31 +1195,41 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-autobahn-23.6.1
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cppy-1.2.1
 	o py-django-4.1
 	o py-django-tagging-0.5.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-filelock-3.12.1
 	o py-gammu-3.1
 	o py-gcovr-6.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
+	o py-iso8601-2.0.0
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
+	o py-kiwisolver-1.4.4
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.4.4
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
+	o py-pdf-3.9.1
 	o py-pdf-parser-0.7.4
+	o py-pdm_backend-2.1.0
+	o py-platformdirs-3.5.3
 	o py-postgresql-5.1.2
 	o py-protobuf-4.23.2
+	o py-pspdfutils-3.0.4
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-qt6-6.4.2
@@ -1221,13 +1239,18 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autoapi-2.1.1
+	o py-sphinx-rtd-theme-1.2.2
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
+	o py-test-7.3.2
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
+	o py-tox-4.6.0
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
+	o py-werkzeug-2.3.6
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1281,6 +1304,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sabayon-2.30.1
 	o sablecc-3.7
 	o samba-4.18.3
+	o samba4-4.18.3
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.3.5
@@ -1330,6 +1354,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sparse-0.6.4
 	o sparsehash-2.0.4
 	o spcaview-20060501
+	o spice-server-0.15.2
 	o spin-649
 	o spiped-1.6.1b
 	o spl-1.0pre6
@@ -1412,6 +1437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trojita-0.6
 	o ttftot42-0.4.1
 	o turba-4.2.12
+	o typst-0.5.0
 	o tyrquake-0.66
 	o uae-0.8.29
 	o ubs-0.20
@@ -1435,6 +1461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o verilator-4.204
 	o vfu-4.09
 	o vicq-0.4.2
+	o vim-share-9.0.1626
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-3.2.0
