@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/12/18 01:29:20 mef Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/11 15:08:17 mef Exp $
 
 R_PKGNAME=	evaluate
-R_PKGVER=	0.19
+R_PKGVER=	0.21
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
