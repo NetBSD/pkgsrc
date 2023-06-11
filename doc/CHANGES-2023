@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3772 2023/06/11 15:30:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3773 2023/06/11 17:17:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5236,3 +5236,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-gargle to 1.4.0 [mef 2023-06-11]
 	Updated math/R-googlesheets4 to 1.1.0 [mef 2023-06-11]
 	Updated net/py-zeroconf to 0.47.3nb1 [wiz 2023-06-11]
+	Updated net/sayaka to 3.6.4 [tsutsui 2023-06-11]
