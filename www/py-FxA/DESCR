@@ -1,0 +1,11 @@
+This is python library for interacting with the Firefox Accounts
+ecosystem.
+
+Eventually, it is planned to provide easy support for the following
+features:
+
+- being a direct firefox accounts authentication client
+- being an FxA OAuth Service Provider
+- accessing attached services
+- helps interactions with Firefox Account servers wiht requests
+  Authentication plugins.
