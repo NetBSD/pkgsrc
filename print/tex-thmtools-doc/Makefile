@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/04/02 11:38:07 markd Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/11 07:48:43 markd Exp $
 
 DISTNAME=	thmtools.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-75
-TEXLIVE_REV=	65863
+PKGNAME=	tex-${DISTNAME:S/./-/}-76
+TEXLIVE_REV=	67018
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/thmtools
