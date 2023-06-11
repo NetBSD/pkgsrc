@@ -1,4 +1,6 @@
-The file provides modes for monotonic (single-diacritic) and
-polytonic (multiple-diacritic) modes of writing. Provision is
-made for Greek function names in mathematics, and for
-classical-era symbols.
+The bundle provides comprehensive support for the Greek
+language and script via the Babel system. Document authors can
+select between the monotonic (single-diacritic), polytonic
+(multiple-diacritic), and ancient orthography of the Greek
+language. Included are the packages grmath for Greek function
+names in mathematics, and athnum for Attic numerals.
