@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3733 2023/06/11 06:27:40 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3734 2023/06/11 06:50:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5136,3 +5136,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-hexbin to 1.28.3 [mef 2023-06-11]
 	Updated math/R-gtools to 3.9.4 [mef 2023-06-11]
 	Updated math/R-gtable to 0.3.3 [mef 2023-06-11]
+	Updated math/R-gsl to 2.1.8 [mef 2023-06-11]
