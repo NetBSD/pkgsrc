@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/09 05:40:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/06/11 06:48:13 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -7,6 +7,8 @@ share/texmf-dist/doc/latex-dev/base/cfgguide.tex
 share/texmf-dist/doc/latex-dev/base/changes.old.txt
 share/texmf-dist/doc/latex-dev/base/changes.txt
 share/texmf-dist/doc/latex-dev/base/classes.pdf
+share/texmf-dist/doc/latex-dev/base/clsguide-historic.pdf
+share/texmf-dist/doc/latex-dev/base/clsguide-historic.tex
 share/texmf-dist/doc/latex-dev/base/clsguide.pdf
 share/texmf-dist/doc/latex-dev/base/clsguide.tex
 share/texmf-dist/doc/latex-dev/base/cmfonts.pdf
@@ -157,6 +159,8 @@ share/texmf-dist/doc/latex-dev/base/source2e.tex
 share/texmf-dist/doc/latex-dev/base/syntonly.pdf
 share/texmf-dist/doc/latex-dev/base/tlc2.err
 share/texmf-dist/doc/latex-dev/base/tlc2.pdf
+share/texmf-dist/doc/latex-dev/base/tlc3.err
+share/texmf-dist/doc/latex-dev/base/tlc3.pdf
 share/texmf-dist/doc/latex-dev/base/tulm.pdf
 share/texmf-dist/doc/latex-dev/base/usrguide-historic.pdf
 share/texmf-dist/doc/latex-dev/base/usrguide-historic.tex
