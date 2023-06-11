@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3767 2023/06/11 15:06:03 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3768 2023/06/11 15:08:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-test-unit to 3.6.0 [taca 2023-06-11]
 	Updated www/ruby-capybara to 3.39.2 [taca 2023-06-11]
 	Updated graphics/R-ggplot2 to 3.4.2 [mef 2023-06-11]
+	Updated devel/R-evaluate to 0.21 [mef 2023-06-11]
