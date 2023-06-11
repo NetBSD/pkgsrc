@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3730 2023/06/11 05:50:25 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3731 2023/06/11 05:55:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5133,3 +5133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-mapproj to 1.2.11 [mef 2023-06-11]
 	Updated math/R-intervals to 0.15.3 [mef 2023-06-11]
 	Updated math/R-httpRequest to 0.0.11 [mef 2023-06-11]
+	Updated math/R-hexbin to 1.28.3 [mef 2023-06-11]
