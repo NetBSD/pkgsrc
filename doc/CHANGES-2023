@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3777 2023/06/11 22:54:07 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3778 2023/06/11 22:57:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5239,3 +5239,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.6.4 [tsutsui 2023-06-11]
 	Updated fonts/vlgothic-ttf to 20220612 [tsutsui 2023-06-11]
 	Updated www/R-googledrive to 2.1.0 [mef 2023-06-11]
+	Updated math/R-fracdiff to 1.5.2 [mef 2023-06-11]
