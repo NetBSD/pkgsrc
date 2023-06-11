@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3723 2023/06/11 03:01:41 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3724 2023/06/11 03:24:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-igraph to 1.4.3 [mef 2023-06-11]
 	Added math/R-pracma versioln 2.4.2 [mef 2023-06-11]
 	Updated math/R-ncdf4 to 1.21 [mef 2023-06-11]
+	Updated math/R-nimble to 1.0.0 [mef 2023-06-11]
