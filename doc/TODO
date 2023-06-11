@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23057 2023/06/11 22:57:17 mef Exp $
+$NetBSD: TODO,v 1.23058 2023/06/11 23:14:18 mef Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.9
 	o R-pbdZMQ-0.3.5
 	o R-poweRlaw-0.70.6
-	o R-quadprog-1.5.8
 	o SDL2_image-2.6.3
 	o SOGo5-5.8.3 [wip]
 	o SOPE5-5.8.3 [wip]
