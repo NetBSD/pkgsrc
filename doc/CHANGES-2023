@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3751 2023/06/11 10:37:45 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3752 2023/06/11 10:41:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5215,3 +5215,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-sass to 0.4.6 [mef 2023-06-11]
 	Updated devel/R-fastmap to 1.1.1 [mef 2023-06-11]
 	Updated devel/R-cachem to 1.0.8 [mef 2023-06-11]
+	Updated www/R-bslib to 0.4.2 [mef 2023-06-11]
