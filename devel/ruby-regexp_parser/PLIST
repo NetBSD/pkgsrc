@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/04/27 14:13:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/11 14:29:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -47,7 +47,6 @@ ${GEM_LIBDIR}/lib/regexp_parser/scanner/char_type.rl
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/premature_end_error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/scanner_error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/errors/validation_error.rb
-${GEM_LIBDIR}/lib/regexp_parser/scanner/mapping.rb
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/long.csv
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/properties/short.csv
 ${GEM_LIBDIR}/lib/regexp_parser/scanner/property.rl
