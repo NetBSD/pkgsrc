@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:53 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/11 23:14:07 mef Exp $
 
 R_PKGNAME=	quadprog
-R_PKGVER=	1.5-7
-CATEGORIES=	math
+R_PKGVER=	1.5-8
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Functions to solve quadratic programming problems
