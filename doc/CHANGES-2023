@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3762 2023/06/11 12:41:50 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3763 2023/06/11 14:28:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/R-scales to 1.2.1 [mef 2023-06-11]
 	Updated www/p5-CGI to 4.57 [wen 2023-06-11]
 	Updated www/p5-HTML-Restrict to 3.0.2 [wen 2023-06-11]
+	Updated devel/ruby-mocha to 2.0.4 [taca 2023-06-11]
