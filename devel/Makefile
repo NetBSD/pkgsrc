@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4006 2023/06/11 08:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4007 2023/06/11 08:59:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2420,6 +2420,7 @@ SUBDIR+=	py-buildbot-waterfall-view
 SUBDIR+=	py-buildbot-worker
 SUBDIR+=	py-buildbot-www
 SUBDIR+=	py-bump2version
+SUBDIR+=	py-bumpver
 SUBDIR+=	py-cachecontrol
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachelib
