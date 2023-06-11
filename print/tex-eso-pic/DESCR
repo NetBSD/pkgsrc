@@ -1,3 +1,4 @@
-Eso-pic is an extension of everyshi. Using everyshi's \EveryShipout
-command, eso-pic adds one or more user commands to LaTeX's shipout
-actions.
+The package adds one or more user commands to LaTeX's shipout
+routine, which may be used to place the output at fixed
+positions. The grid option may be used to find the correct
+places.
