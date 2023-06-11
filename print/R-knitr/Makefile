@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/04 02:54:56 mef Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/11 09:42:47 mef Exp $
 
 R_PKGNAME=	knitr
 R_PKGVER=	1.43
@@ -14,7 +14,7 @@ DEPENDS+=	R-formatR>=0.10:../../textproc/R-formatR
 DEPENDS+=	R-highr>=0.8:../../textproc/R-highr
 DEPENDS+=	R-markdown>=1.0:../../textproc/R-markdown
 DEPENDS+=	R-stringr>=0.6:../../textproc/R-stringr
-DEPENDS+=	R-xfun>=0.29:../../devel/R-xfun
+DEPENDS+=	R-xfun>=0.39:../../devel/R-xfun
 DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
 
 # Packages suggested but not available:
