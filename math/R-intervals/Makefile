@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/09/16 22:46:50 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/11 05:47:25 mef Exp $
 
 R_PKGNAME=	intervals
-R_PKGVER=	0.15.2
+R_PKGVER=	0.15.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tools for working with points and intervals
