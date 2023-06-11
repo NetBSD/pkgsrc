@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/01/08 00:05:19 wen Exp $
+$NetBSD: distinfo,v 1.10 2023/06/11 12:40:54 wen Exp $
 
-BLAKE2s (HTML-Restrict-v3.0.1.tar.gz) = 817f58d3379dce9224e0d025c2ce7c927e0c2e6941cccc581fa5c6a6a5a2f60b
-SHA512 (HTML-Restrict-v3.0.1.tar.gz) = ec56aec2d5eedb92ef1a980fa640197d9d26b7f278ce8d45227a53e2e5c015cb7694f1df369022c873b1e590c1f3c966867690c6085c2144ab74b9d70c26d13f
-Size (HTML-Restrict-v3.0.1.tar.gz) = 41505 bytes
+BLAKE2s (HTML-Restrict-v3.0.2.tar.gz) = b6f9092ef7c165138f573b5af074d7725e5d04ea32e4e91c8caabd3afa2720ab
+SHA512 (HTML-Restrict-v3.0.2.tar.gz) = eaa831a00d310ea66dfc7d90e3406285fc0c02b22ed8b676fbe6d0d6a313897b2b7f7c1ea64ee906e5fd539539edc23972e86bdd4482c98c577e19f8519ef78b
+Size (HTML-Restrict-v3.0.2.tar.gz) = 42018 bytes
