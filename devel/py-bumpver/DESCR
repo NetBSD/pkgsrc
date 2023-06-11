@@ -1,0 +1,8 @@
+With the CLI command bumpver, you can search for and update version
+strings in your project files. It has a flexible pattern syntax to
+support many version schemes (SemVer, CalVer or otherwise). BumpVer
+features:
+
+- Configurable version patterns
+- Optional Git or Mercurial integration
+- Works with plaintext, so you can use it with any project.
