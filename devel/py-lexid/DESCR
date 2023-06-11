@@ -1,0 +1,15 @@
+lexid is a micro library to increment lexically ordered numerical
+ids.
+
+Throughout the sequence of ids, this expression will always be
+true, whether you are dealing with integers or strings:
+
+    older_id < newer_id
+
+The left most character/digit is only used to maintain lexical
+order, so that the position in the sequence is maintained in the
+remaining digits.
+
+Such ids can be useful as build or version numbers, which are often
+displayed by tooling which does not understand their correct
+ordering.
