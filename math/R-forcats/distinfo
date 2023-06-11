@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/11 23:00:18 mef Exp $
 
-BLAKE2s (R/forcats_0.5.1.tar.gz) = a53e23e131cac957722ee0440437af76a4d5fe0c404e06c516734cc97c916008
-SHA512 (R/forcats_0.5.1.tar.gz) = 44b3e90e764afe4a2a7339e72a8c01c053ba972611a194d7d278a4bb7c4959b0a514a0ac1f2c41a82219060e699e961b079c1edceac52fa1d42e53e7c2d15b97
-Size (R/forcats_0.5.1.tar.gz) = 258301 bytes
+BLAKE2s (R/forcats_1.0.0.tar.gz) = 2e0cf5b59c218196ba4e9cb07a6ba8b0cdde54c4bc05a3963035c4ce477795b1
+SHA512 (R/forcats_1.0.0.tar.gz) = 1a55c0694658d8b60809e5465f22791c2d1b6c9d8e9f85d625c347ae708bf32f911a17d0f10114b0fbb81c651aedf0b4da7ef0c38a499a4ffe429f0be8c3f8cb
+Size (R/forcats_1.0.0.tar.gz) = 294183 bytes
