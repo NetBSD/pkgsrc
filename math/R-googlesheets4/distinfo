@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/23 14:21:53 mef Exp $
+$NetBSD: distinfo,v 1.2 2023/06/11 15:22:00 mef Exp $
 
-BLAKE2s (R/googlesheets4_1.0.0.tar.gz) = 6539ee2004efd570d272db69ce34513c0f88550a87db6ea317350df5fb767cce
-SHA512 (R/googlesheets4_1.0.0.tar.gz) = 2c2be5ad134fc5eae823b1341b1ebebd334fa2f975b2145c9dd771b77a3f09b9d71f13878722c04b66c17232c35cb196ffa049c3cff9482c5787374562481217
-Size (R/googlesheets4_1.0.0.tar.gz) = 222038 bytes
+BLAKE2s (R/googlesheets4_1.1.0.tar.gz) = 1f34616cc5525aa42df9418761b6ab3c756cffc23a18a2d79b3e55212fa5cad9
+SHA512 (R/googlesheets4_1.1.0.tar.gz) = 076e490547181a31d2dc3081f7fd253945265907f52571fc3dbdd87f129a1b61c8dc992cc8e85c7db48a6802e7aff977e0de253e94ecfc5f547909b480a00be8
+Size (R/googlesheets4_1.1.0.tar.gz) = 229847 bytes
