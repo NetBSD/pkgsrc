@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2023/04/30 04:50:27 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/06/11 15:13:47 wiz Exp $
 
 BLAKE2s (frozendict-2.3.8.tar.gz) = 030462ae54946174c1cbaae8d579528cd7aa535457d76e096f5beed75a268317
 SHA512 (frozendict-2.3.8.tar.gz) = e0607e695bd7b70b32bdd939b394e6efad604948d1c0b14d3d5ae074c3d9e7a602f32c71c2ce66fb27a99bdd7fb3bf14998df9bea8a42ee7c11192cfe81380f3
 Size (frozendict-2.3.8.tar.gz) = 312109 bytes
+SHA1 (patch-setup.py) = 6c85ddd9dd392b68bb1c5a909e41e623e5911601
