@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3764 2023/06/11 14:30:13 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3765 2023/06/11 14:32:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5228,3 +5228,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-HTML-Restrict to 3.0.2 [wen 2023-06-11]
 	Updated devel/ruby-mocha to 2.0.4 [taca 2023-06-11]
 	Updated devel/ruby-regexp_parser to 2.8.1 [taca 2023-06-11]
+	Updated devel/ruby-test-unit to 3.6.0 [taca 2023-06-11]
