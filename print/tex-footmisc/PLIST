@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/09 22:56:02 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/11 06:35:35 markd Exp $
+share/texmf-dist/tex/latex/footmisc/footmisc-2011-06-06.sty
 share/texmf-dist/tex/latex/footmisc/footmisc.sty

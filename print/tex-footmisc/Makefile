@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:21:27 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/11 06:35:35 markd Exp $
 
 DISTNAME=	footmisc
-PKGNAME=	tex-${DISTNAME}-5.5b
-TEXLIVE_REV=	23330
+PKGNAME=	tex-${DISTNAME}-6.0e
+TEXLIVE_REV=	67232
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/footmisc
 COMMENT=	Range of footnote options
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
