@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.13 2022/10/30 11:17:47 wiz Exp $
+$NetBSD: distinfo,v 1.14 2023/06/11 00:41:07 schmonz Exp $
 
 BLAKE2s (libidn2-2.3.4.tar.gz) = 945e961371d041f46f684e2d9690c819c27accd1c34fbe0c885bd12ebc3b1e93
 SHA512 (libidn2-2.3.4.tar.gz) = a6e90ccef56cfd0b37e3333ab3594bb3cec7ca42a138ca8c4f4ce142da208fa792f6c78ca00c01001c2bc02831abcbaf1cf9bcc346a5290fd7b30708f5a462f3
 Size (libidn2-2.3.4.tar.gz) = 2083823 bytes
+SHA1 (patch-config.h.in) = e816f95edf082f0dbaf924216ee53b9ed7afaf9f
+SHA1 (patch-gl_m4_assert__h.m4) = 29e36c8b7604f266825759b2a18223b11ae446e8
