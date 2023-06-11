@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/04/11 02:27:56 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/11 07:21:20 markd Exp $
 
 DISTNAME=	mpchess.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
-TEXLIVE_REV=	66795
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
+TEXLIVE_REV=	66943
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mpchess
