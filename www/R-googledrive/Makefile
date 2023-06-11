@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/23 06:10:12 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/11 15:19:19 mef Exp $
 
 R_PKGNAME=	googledrive
-R_PKGVER=	2.0.0
+R_PKGVER=	2.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
