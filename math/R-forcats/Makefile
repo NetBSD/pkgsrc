@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/06/06 13:45:50 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/11 23:00:18 mef Exp $
 
 R_PKGNAME=	forcats
-R_PKGVER=	0.5.1
-CATEGORIES=	math
+R_PKGVER=	1.0.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tools for working with categorical variables (factors)
