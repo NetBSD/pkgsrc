@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3757 2023/06/11 10:52:54 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3758 2023/06/11 10:54:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added archivers/R-brotli version 1.3.0 [mef 2023-06-11]
 	Updated www/R-webfakes to 1.2.0 [mef 2023-06-11]
 	Updated sysutils/R-ps to 1.7.5 [mef 2023-06-11]
+	Updated sysutils/R-processx to 3.8.1 [mef 2023-06-11]
