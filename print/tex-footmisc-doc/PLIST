@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/09 22:56:21 minskim Exp $
-share/texmf-dist/doc/latex/footmisc/README
-share/texmf-dist/doc/latex/footmisc/footmisc.pdf
+@comment $NetBSD: PLIST,v 1.2 2023/06/11 06:35:35 markd Exp $
+share/texmf-dist/doc/latex/footmisc/README.md
+share/texmf-dist/doc/latex/footmisc/changes.txt
+share/texmf-dist/doc/latex/footmisc/footmisc-code.pdf
+share/texmf-dist/doc/latex/footmisc/footmisc-code.tex
+share/texmf-dist/doc/latex/footmisc/footmisc-doc.pdf
+share/texmf-dist/doc/latex/footmisc/footmisc-doc.tex
