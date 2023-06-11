@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/02 11:32:09 markd Exp $
+$NetBSD: distinfo,v 1.12 2023/06/11 07:41:55 markd Exp $
 
-BLAKE2s (repere.doc.r65769.tar.xz) = b22e4d3ff65d8e6593be5d497ce6fea6b2e45c9c0b891858c382fba3b3cbf16d
-SHA512 (repere.doc.r65769.tar.xz) = 04ad845cf7a32a6f242612caf9b53230220c73c7854f46db0b3c35ee2533f6a0a6115a931d73a76e5c33f119216b3b75632454bf7b07992e3f38b4f2419726f1
-Size (repere.doc.r65769.tar.xz) = 651244 bytes
+BLAKE2s (repere.doc.r66998.tar.xz) = 9c3a5c3df6d246c9e98bea7837509a58554c70b3f6636dc29021cb6685cb70f4
+SHA512 (repere.doc.r66998.tar.xz) = c16864711c87f2632cfa56ba06968ed967874ca25139360476f6fa2bb7bd89b900ff8a98c4514b4664e5d623c9d29437e375284bfd0073b2cdda0eae13e896ca
+Size (repere.doc.r66998.tar.xz) = 703336 bytes
