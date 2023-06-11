@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3739 2023/06/11 07:58:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3740 2023/06/11 08:11:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5203,3 +5203,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-thmtools to 76 [markd 2023-06-11]
 	Updated print/tex-thmtools-doc to 76 [markd 2023-06-11]
 	Added www/py-BrowserID version 0.14.0 [wiz 2023-06-11]
+	Added net/py-grequests version 0.7.0 [wiz 2023-06-11]
