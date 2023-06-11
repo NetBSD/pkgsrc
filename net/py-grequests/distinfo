@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 08:10:26 wiz Exp $
+
+BLAKE2s (grequests-0.7.0.tar.gz) = d64e011e1b52b94e4a3dbbb9257b2d1bbd9df0d59a82d296c996a7e191aed076
+SHA512 (grequests-0.7.0.tar.gz) = a9b90797d7ebecc3a5a95f178286aa62e9466499aafb4e03d450d0f4ddf6fafa76ec3210ffe4e68cf1a38295731bba15394b02361a16bd8dcfe3d3b62fcb4673
+Size (grequests-0.7.0.tar.gz) = 6524 bytes
