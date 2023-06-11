@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 08:19:27 wiz Exp $
+
+BLAKE2s (PyFxA-0.7.7.tar.gz) = 8528d4b5c72e725748556ec33f17ac3cecea97a486c168d88fa8e0d1a34b6b9e
+SHA512 (PyFxA-0.7.7.tar.gz) = add697d8132d565a00edb28d4fcdc73a244a8484b3b93c21bf5c06a8dda5990b6c394ab14f5bae2e4fcc23549699640bbe629bdaa8c5411d5e9c98b181cba661
+Size (PyFxA-0.7.7.tar.gz) = 39053 bytes
+SHA1 (patch-dev-requirements.txt) = 24ce678cfaa2aa24f5087e429a03b38551661e87
