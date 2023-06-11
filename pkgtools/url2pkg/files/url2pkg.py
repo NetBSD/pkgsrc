@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.47 2023/04/22 13:21:58 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.48 2023/06/11 07:42:16 wiz Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1031,6 +1031,7 @@ class Adjuster:
 
         self.pkgname_prefix = '${PYPKGPREFIX}-'
         self.categories.append('python')
+        self.extra_vars.append(Var('PYTHON_VERSIONS_INCOMPATIBLE', '=', '27'))
         self.includes.append('../../lang/python/egg.mk')
 
     def adjust_cargo(self):
