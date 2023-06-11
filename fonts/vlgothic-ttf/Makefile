@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2020/11/06 18:04:27 maya Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/11 17:28:28 tsutsui Exp $
 
-DISTNAME=	VLGothic-20200720
+DISTNAME=	VLGothic-20220612
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_OSDN:=vlgothic/73361/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=vlgothic/77450/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yamajun@ofug.net
