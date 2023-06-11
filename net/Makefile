@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1518 2023/06/09 19:28:56 gdt Exp $
+# $NetBSD: Makefile,v 1.1519 2023/06/11 08:10:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -730,6 +730,7 @@ SUBDIR+=	py-gcs-oauth2-boto-plugin
 SUBDIR+=	py-gevent
 SUBDIR+=	py-geventhttpclient
 SUBDIR+=	py-google-cloud-sdk
+SUBDIR+=	py-grequests
 SUBDIR+=	py-grpcio
 SUBDIR+=	py-grpcio-testing
 SUBDIR+=	py-grpcio-tools
