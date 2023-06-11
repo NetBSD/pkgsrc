@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/11 08:55:01 wiz Exp $
+bin/lexid_incr
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/lexid/__init__.py
+${PYSITELIB}/lexid/__init__.pyc
+${PYSITELIB}/lexid/__init__.pyo
+${PYSITELIB}/lexid/__main__.py
+${PYSITELIB}/lexid/__main__.pyc
+${PYSITELIB}/lexid/__main__.pyo
