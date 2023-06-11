@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/11 09:54:58 mef Exp $
 
-BLAKE2s (R/sass_0.4.0.tar.gz) = 05495dc6931928215b41e88f30a55f6aa73e0171526150701a5ab7e6fa3bfde3
-SHA512 (R/sass_0.4.0.tar.gz) = 825ead64431f37056e72cf98c6da36ac77d067125072c134cc3273fac3a2af41189fcb8cd1944d6c4c6ab47255cd6142d7d85a94f4f916dc1b04b1a9fd474fc0
-Size (R/sass_0.4.0.tar.gz) = 3022459 bytes
+BLAKE2s (R/sass_0.4.6.tar.gz) = 40423a3d88a70a92351f4e29767856dec2ac6b382fc7c65be64b864f6c651953
+SHA512 (R/sass_0.4.6.tar.gz) = 291c8cbdff377cc3b641b3773c68c4b49a16f3a1922a39cd5eee805fe4f65e300b35d419ba223c3bce29ee65a35df6826d1fa214a69521a09c976a0c878303cd
+Size (R/sass_0.4.6.tar.gz) = 3024838 bytes
