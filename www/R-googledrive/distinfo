@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/23 06:10:12 mef Exp $
+$NetBSD: distinfo,v 1.2 2023/06/11 15:19:19 mef Exp $
 
-BLAKE2s (R/googledrive_2.0.0.tar.gz) = d04e5cc600fdad52c0e7c274c42f87add3b86b1cd5dcd78f25141940d949c066
-SHA512 (R/googledrive_2.0.0.tar.gz) = fb5ee3ced372364c448432fd936bb178d5318842c8642a497e52e35038a3ae0a7536d538eba539c1c1e2cc63aabbcdbdac7b3d7d00cf3ffedcdbab2720dd38c9
-Size (R/googledrive_2.0.0.tar.gz) = 1593656 bytes
+BLAKE2s (R/googledrive_2.1.0.tar.gz) = 96bda5cd03f8bc4a4b565de5e34349ee47f338358b68e5b236eae51f2386e1fc
+SHA512 (R/googledrive_2.1.0.tar.gz) = 3b341e4a5d4c428d6eeb51126b155683c06405154bd75e5c67b3260d08ad9c05c6b5a10532e61bbfb3c733362902dc66f42e976935a5d913f99ea030986b3e4e
+Size (R/googledrive_2.1.0.tar.gz) = 1604996 bytes
