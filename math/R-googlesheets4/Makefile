@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/23 14:21:53 mef Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/11 15:22:00 mef Exp $
 
 R_PKGNAME=	googlesheets4
-R_PKGVER=	1.0.0
+R_PKGVER=	1.1.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Access Google Sheets using the Sheets API V4
