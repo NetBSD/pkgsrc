@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:13:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/06/11 06:38:50 markd Exp $
 
-BLAKE2s (tex-forloop-15878/forloop.tar.xz) = e3486698459addb6a7b4617c52d0c38f2bda2f3a83d6266429bcf0cfc30fb44c
-SHA512 (tex-forloop-15878/forloop.tar.xz) = dfb4d56e22297b2ff962be0576aadd3a4d79e1e70aa879cc90f793da187e836df7987acc6aea3972a71f941fd9283dd7c3e39ef52de03e619339a54f6aa9b89d
-Size (tex-forloop-15878/forloop.tar.xz) = 1252 bytes
+BLAKE2s (forloop.r67017.tar.xz) = 548a37cdc98e426680409fe73c441902b4e72d37ff7572997a29983e95e3007c
+SHA512 (forloop.r67017.tar.xz) = e4cf4d9fdf01b753b40d4fb2c5edac94756ccf60a7e0b1bf0da8b5b0c433eff5669858fcc35096967f9a53e6a365880e6677956ebb86764cd68ba3093fa4be91
+Size (forloop.r67017.tar.xz) = 1252 bytes

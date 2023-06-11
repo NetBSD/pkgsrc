@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:28 markd Exp $
-#
+# $NetBSD: Makefile,v 1.4 2023/06/11 06:38:50 markd Exp $
 
-DISTNAME=		forloop
-PKGNAME=		tex-${DISTNAME}-3.0
-TEXLIVE_REV=		15878
+DISTNAME=	forloop
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	67017
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Provide the LaTeX command \forloop
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/forloop
+COMMENT=	Iteration in LaTeX
+LICENSE=	gnu-lgpl-v2
 
-LICENSE=		gnu-lgpl-v2.1
-
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
