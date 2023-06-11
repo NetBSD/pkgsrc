@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/23 06:02:59 mef Exp $
+$NetBSD: distinfo,v 1.2 2023/06/11 15:15:44 mef Exp $
 
-BLAKE2s (R/gargle_1.2.0.tar.gz) = 769789ea901dc80fea8f2c4115773ca3172861b5a6c858b3a07449282de058b4
-SHA512 (R/gargle_1.2.0.tar.gz) = 1d11c9b07c461fc07ecb809fc0020d5fbb20b3955dead0cb97aaf494849fc16f545ae0854758d3eebc063add304efa9f7c207e1655ae893cd6624610e563d026
-Size (R/gargle_1.2.0.tar.gz) = 313418 bytes
+BLAKE2s (R/gargle_1.4.0.tar.gz) = a7a7d4e61c0422952fd973abcaf64025f6e27ce78e23de72d4c9fd8d3d13ba51
+SHA512 (R/gargle_1.4.0.tar.gz) = 27c1a956e5c64df11c738c5848a76684c4320823a23c9df1de39414f5be59fe0f035ce2219885781cf63ce60f0ff4dc7a6cda6e427d0fbaec6930754df8f228e
+Size (R/gargle_1.4.0.tar.gz) = 597755 bytes
