@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/11 10:47:04 mef Exp $
+
+BLAKE2s (R/brotli_1.3.0.tar.gz) = a8dcf136e9191a3ea7ae584eb29bebdf7da969e85146bbb84097012718dfc92f
+SHA512 (R/brotli_1.3.0.tar.gz) = 1fb6b21257a1c258e5352036616d8d27c88d2cdc74adaac5e41937eec56d295c34da34c60f3920548b7c04e78f79a7adb24c66744e8a2dd02ae047ac45468c06
+Size (R/brotli_1.3.0.tar.gz) = 1053221 bytes
