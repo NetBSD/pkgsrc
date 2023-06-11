@@ -1,15 +1,10 @@
-The package gives the user complete control of how the entries
-of the table of contents should be constituted from the name,
-number, and page number of each sectioning unit. The layout is
-controlled by the definition of 'line styles' for each
-sectioning level used in the document. The package provides its
-own custom line styles (which may be used as examples), and
-continues to support the standard formatting inherited from the
-LaTeX document classes, but the package can also allow the user
-to delegate the details to packages dealing with list making
-environments (such as enumitem). The package's default global
-style typesets tables of contents in a multi-column format,
-with either a standard heading, or a ruled title (optionally
-with a frame around the table). The \tableofcontents command
-may be used arbitrarily many times in the same document, while
-\localtableofcontents provides a 'local' table of contents.
+With etoc loaded, \tableofcontents can be used multiple times,
+and an added command \localtableofcontents allows to typeset
+"local" tables of contents, i.e. TOCs having their scope
+limited to the last sectioning command encountered. Since
+release 1.2, also \locallistoffigures and \locallistoftables
+are available. Loading etoc per itself does not modify the
+"contents lines" inherited from the class default or changed
+via other packages. But full usage of the package allows
+spectacular effects such as displaying TOCs as trees or mind
+maps.
