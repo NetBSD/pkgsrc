@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3760 2023/06/11 11:23:43 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3761 2023/06/11 12:38:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5224,3 +5224,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/R-processx to 3.8.1 [mef 2023-06-11]
 	Updated graphics/R-farver to 2.1.1 [mef 2023-06-11]
 	Updated graphics/R-scales to 1.2.1 [mef 2023-06-11]
+	Updated www/p5-CGI to 4.57 [wen 2023-06-11]
