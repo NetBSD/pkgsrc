@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/12/22 16:23:28 wiz Exp $
+$NetBSD: distinfo,v 1.9 2023/06/11 03:35:39 mef Exp $
 
-BLAKE2s (ghdl-2.0.0.tar.gz) = a3297be935cd7a25f9003810c2a0895162ac3ead5d83fe61b4b15fac1ff415d8
-SHA512 (ghdl-2.0.0.tar.gz) = f4474a7916f9cc5cce976d0b4620d1441c377d72b749867b170397bf62d534983b37d4fc9bb31ef85e40eb7beb9b3a681a7ac32931f665934b357e97e74be6da
-Size (ghdl-2.0.0.tar.gz) = 6825565 bytes
-SHA1 (patch-configure) = fc358c33df2272a0bfaab9fbe334f24365da149b
-SHA1 (patch-src_ortho_llvm6_llvm-cbindings.cpp) = 6592a31925004573beb7d8bc4519f0e4fffc6340
+BLAKE2s (ghdl-3.0.0.tar.gz) = 3dfcd821e81a470eb1f5b9e42ff69cf56634af8edf531f90ac9839c0c85aa7a6
+SHA512 (ghdl-3.0.0.tar.gz) = 11b638d0ae757ce2e247ab438c15a8f5cd78c3a025ba6272aa05df548d2a7276c25dbbf83b846284ded8c9864eca3dcdb8342cb532faecd01e7cefaada524ab0
+Size (ghdl-3.0.0.tar.gz) = 7160245 bytes
+SHA1 (patch-configure) = 2a3450627786c2e4f31c045263b6e0a056fab347
 SHA1 (patch-src_ortho_mcode_memsegs__c.c) = 5669dda0130ade50caf7538c3f2c6cfed061ac5b
