@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/18 01:59:15 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/11 00:26:20 mef Exp $
 
 R_PKGNAME=	mnormt
-R_PKGVER=	2.0.2
+R_PKGVER=	2.1.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/mnormt/
