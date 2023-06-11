@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/08/08 19:53:50 brook Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/11 05:50:14 mef Exp $
 
 R_PKGNAME=	httpRequest
-R_PKGVER=	0.0.10
-CATEGORIES=	math
+R_PKGVER=	0.0.11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Basic HTTP request
