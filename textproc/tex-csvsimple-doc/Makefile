@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/04/01 10:45:45 markd Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/11 05:40:42 markd Exp $
 
 DISTNAME=	csvsimple.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.3.2
-TEXLIVE_REV=	64450
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.4.0
+TEXLIVE_REV=	67058
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/csvsimple
