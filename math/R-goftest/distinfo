@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:55:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/11 08:42:59 mef Exp $
 
-BLAKE2s (R/goftest_1.2-2.tar.gz) = 538a06e0f24fa566e9d66eb1e5c18da4b14819d75de61359893bcb236a3350e8
-SHA512 (R/goftest_1.2-2.tar.gz) = b5e37d2a015c84c0b518871e58c57c833c8b14beabb892aa09fcabf692a0821320e59529cd3dd011f7f316d65f416d48e1c143eeb1bafef547c63f98126918e3
-Size (R/goftest_1.2-2.tar.gz) = 18485 bytes
+BLAKE2s (R/goftest_1.2-3.tar.gz) = 90146e2e47ab520c27d921d1be551778f9f05d1c791cd6247fc9f19aa9f6ad36
+SHA512 (R/goftest_1.2-3.tar.gz) = e7ef492d382a177bdebf4dfdd61bb0ad53b47b251f35448251d98684bd842ecdbfa24ee977f12bc61d23bdb4551cebda5bc6f5796b37f6419a8a6ce9dbe4296c
+Size (R/goftest_1.2-3.tar.gz) = 32319 bytes
