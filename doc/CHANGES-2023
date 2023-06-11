@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3754 2023/06/11 10:45:54 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3755 2023/06/11 10:48:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5218,3 +5218,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-bslib to 0.4.2 [mef 2023-06-11]
 	Updated textproc/R-hunspell to 3.0.2 [mef 2023-06-11]
 	Updated textproc/R-spelling to 2.2.1 [mef 2023-06-11]
+	Added archivers/R-brotli version 1.3.0 [mef 2023-06-11]
