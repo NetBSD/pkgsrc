@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3744 2023/06/11 08:55:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3745 2023/06/11 08:59:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5208,3 +5208,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-goftest to 1.2.3 [mef 2023-06-11]
 	Updated devel/R-covr to 3.6.2 [mef 2023-06-11]
 	Added devel/py-lexid version 2021.1006 [wiz 2023-06-11]
+	Updated graphics/R-dichromat to 2.0.0.1 [mef 2023-06-11]
