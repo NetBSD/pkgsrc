@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/06/11 07:44:01 markd Exp $
 
-BLAKE2s (revtex.doc.r56591.tar.xz) = e68d40061fc2dbb229e0f33900b993760ed43fa38e312501462bdc4b5467a3d7
-SHA512 (revtex.doc.r56591.tar.xz) = 9110bca4c358d5364acddc8a04d95df821249bc93a9e811a4d94b703b6daf124962fcec404354bbecc32557ddb7ce67993a6dba7ebad514672dd586995cb23c0
-Size (revtex.doc.r56591.tar.xz) = 4487388 bytes
+BLAKE2s (revtex.doc.r67271.tar.xz) = 5591b53b7efdb00fb36d9be65b70242575779b83b58af08983f6a5e26f5ef184
+SHA512 (revtex.doc.r67271.tar.xz) = de2053c650920b4e83183883b4fb15f25abde4210eb0c0a81adde4838c76db8e755a2afc74c8f3cafc0819d57b762e701380687e589ffc785cf6439d120c1474
+Size (revtex.doc.r67271.tar.xz) = 5065364 bytes
