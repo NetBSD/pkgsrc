@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/05/29 00:04:50 wen Exp $
+$NetBSD: distinfo,v 1.6 2023/06/11 23:10:03 mef Exp $
 
-BLAKE2s (R/quantmod_0.4.20.tar.gz) = d13d955fb0b5f1014fc92bf5cd776e0a0c137e231c6ffe7a250a99fe2be6362e
-SHA512 (R/quantmod_0.4.20.tar.gz) = 27b0c31eb42a82c79be2a32b0bf59e3ce3c8c0463eca3709e3a82b8dbde500f58d5b21babe2116ab5b44df0ab41c2addfa709c4732e5e84671d94e16804794f7
-Size (R/quantmod_0.4.20.tar.gz) = 156640 bytes
+BLAKE2s (R/quantmod_0.4.22.tar.gz) = 81b726acd9c87a4b0c96eeecbf838a71b88c0b79245fdbf93de0ddebc6fb41ab
+SHA512 (R/quantmod_0.4.22.tar.gz) = efdb8bef6fd978ef7da30ed0b7541c0fca9785ce448ec21788f1e46f69a80ecb7d2bdf7d030c46796f9ebeba2893ec310898cc705e2e7e4d95b000b6b1bed4f3
+Size (R/quantmod_0.4.22.tar.gz) = 157912 bytes
