@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/04/19 12:46:05 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/06/11 15:12:14 mef Exp $
 
-BLAKE2s (R/fs_1.5.2.tar.gz) = 53d5399508d6f1989a219eba265af2f41e18fbd25f2023e07367c70005fb7fa6
-SHA512 (R/fs_1.5.2.tar.gz) = 0d114613946ef03a9fa4a1a07cd30f04f0a677646692f17e9adaa55f8e65eb26575822875dc9054c19817fffae9dc11662c89115d4ea123846bea9bdfb06b305
-Size (R/fs_1.5.2.tar.gz) = 793627 bytes
+BLAKE2s (R/fs_1.6.2.tar.gz) = 93209f835fc40c0cce2462a5ec9357bb996d9eeadd15c6233307b317d606c1fd
+SHA512 (R/fs_1.6.2.tar.gz) = aeaf74162f9d4e9b433111def551c34b7b28531ee25e409c8446b35bc7f27aded1726a87d809ca7bbbb337801d233fa4df998df178f625a67f5e3c87ff08a92a
+Size (R/fs_1.6.2.tar.gz) = 1185454 bytes
 SHA1 (patch-src_Makevars) = 5f6344c4860457b55e2ba5cbeffef862a557dab4
