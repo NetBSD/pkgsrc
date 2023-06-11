@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:49 brook Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/11 22:57:05 mef Exp $
 
 R_PKGNAME=	fracdiff
-R_PKGVER=	1.4-2
-CATEGORIES=	math
+R_PKGVER=	1.5-2
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Fractionally differenced ARIMA aka ARFIMA(p,d,q) models
