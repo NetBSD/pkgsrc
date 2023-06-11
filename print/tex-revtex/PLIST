@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/15 00:33:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/06/11 07:44:00 markd Exp $
 share/texmf-dist/bibtex/bst/revtex/aapmrev4-2.bst
 share/texmf-dist/bibtex/bst/revtex/aipauth4-2.bst
 share/texmf-dist/bibtex/bst/revtex/aipnum4-2.bst
@@ -15,7 +15,6 @@ share/texmf-dist/tex/latex/revtex/ltxdocext.sty
 share/texmf-dist/tex/latex/revtex/ltxfront.sty
 share/texmf-dist/tex/latex/revtex/ltxgrid.sty
 share/texmf-dist/tex/latex/revtex/ltxutil.sty
-share/texmf-dist/tex/latex/revtex/reftest4-2.tex
 share/texmf-dist/tex/latex/revtex/revsymb4-2.sty
 share/texmf-dist/tex/latex/revtex/revtex4-2.cls
 share/texmf-dist/tex/latex/revtex/sor4-2.rtx
