@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/11 02:27:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/11 07:21:20 markd Exp $
+share/texmf-dist/fonts/truetype/public/mpchess/mpchessfont.ttf
 share/texmf-dist/metapost/mpchess/mpchess-cburnett.mp
 share/texmf-dist/metapost/mpchess/mpchess-chessboard.mp
 share/texmf-dist/metapost/mpchess/mpchess-fen.mp
