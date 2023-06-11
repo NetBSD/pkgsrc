@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1723 2023/06/04 03:42:22 markd Exp $
+# $NetBSD: Makefile,v 1.1724 2023/06/11 07:58:40 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -655,6 +655,7 @@ SUBDIR+=	phraseanet-indexer
 SUBDIR+=	pound
 SUBDIR+=	privoxy
 SUBDIR+=	pup
+SUBDIR+=	py-BrowserID
 SUBDIR+=	py-ClientForm
 SUBDIR+=	py-FormEncode
 SUBDIR+=	py-HTMLgen
