@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/04/01 22:09:34 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/11 07:32:57 markd Exp $
 
 DISTNAME=	polyglossia
-PKGNAME=	tex-${DISTNAME}-1.60
-TEXLIVE_REV=	65792
+PKGNAME=	tex-${DISTNAME}-1.62
+TEXLIVE_REV=	66917
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/polyglossia
