@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:47:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/11 07:19:16 markd Exp $
 
-BLAKE2s (tex-metapost-49482/metapost.tar.xz) = 6d915157f842f35d6b42d6f055db4aa20cff5894ece7647d8f937fed2221bad5
-SHA512 (tex-metapost-49482/metapost.tar.xz) = 8a532d1931e2d1f870918cd604f336ed5fac19da33168a4e275b05e8e97903c3eccdae461a5b575153c5cbb5c7f762244b2cb2d36b472ad7ec8c525203d7495f
-Size (tex-metapost-49482/metapost.tar.xz) = 73720 bytes
+BLAKE2s (metapost.r66815.tar.xz) = a81e6611c973688f581ddde363d3abb2ed76b6a327061edf6b7386ce270e3499
+SHA512 (metapost.r66815.tar.xz) = fb50b9d45a36cbe11d07fe2d0a1307bf257132e195825a2007894d5accb33ae1d10e0ca6d6a27405e79d3c439fca4dc1df00f21814eb530ac3707ca516bb9a0a
+Size (metapost.r66815.tar.xz) = 73764 bytes
