@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3773 2023/06/11 17:17:29 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.3774 2023/06/11 17:28:43 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-googlesheets4 to 1.1.0 [mef 2023-06-11]
 	Updated net/py-zeroconf to 0.47.3nb1 [wiz 2023-06-11]
 	Updated net/sayaka to 3.6.4 [tsutsui 2023-06-11]
+	Updated fonts/vlgothic-ttf to 20220612 [tsutsui 2023-06-11]
