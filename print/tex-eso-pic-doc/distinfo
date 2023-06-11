@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/08 10:08:53 markd Exp $
+$NetBSD: distinfo,v 1.12 2023/06/11 06:26:41 markd Exp $
 
-BLAKE2s (eso-pic.doc.r66655.tar.xz) = e8c979e00a423ff4ebef19f2388c6c5afb51935453af46458e5a25c0fd6d7356
-SHA512 (eso-pic.doc.r66655.tar.xz) = b4a71d5e6d6e979ce0178ee87c5db7389d65101ba74633d457e63bf32e49111948246f3edb0cd467d2cfd8735216308de6b87c72423f4c167df75dfed980ea32
-Size (eso-pic.doc.r66655.tar.xz) = 290156 bytes
+BLAKE2s (eso-pic.doc.r67001.tar.xz) = 74d171cd67d296eb634c621e11be8e2104bcad42782d90a8b8d48c947690438b
+SHA512 (eso-pic.doc.r67001.tar.xz) = ed03cbb8e57d28abbf3260c4a97c10833c89a603e219882920ed95fc2eab404c461a9c89b21772757a37245783c3ee10743f7ed248d4915d04a0619508469095
+Size (eso-pic.doc.r67001.tar.xz) = 290476 bytes
