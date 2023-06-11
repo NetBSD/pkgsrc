@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/02/15 00:33:09 markd Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/11 07:44:00 markd Exp $
 
 DISTNAME=	revtex
-PKGNAME=	tex-${DISTNAME}-4.2e
-TEXLIVE_REV=	56591
+PKGNAME=	tex-${DISTNAME}-4.2f
+TEXLIVE_REV=	67271
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/revtex
