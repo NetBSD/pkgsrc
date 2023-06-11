@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/08 03:39:59 wen Exp $
+$NetBSD: distinfo,v 1.6 2023/06/11 23:18:04 mef Exp $
 
-BLAKE2s (R/tseries_0.10-52.tar.gz) = 66b210a0cdee2264951ec657e2e1a9a316f60cc122450f181346a8ae2cde8996
-SHA512 (R/tseries_0.10-52.tar.gz) = 405178e439f031119e085d10a973eda0f06b039890d91300b1150d72da7a8d0cd97c8b9982bb021340632ff857a2bdf434d6e7b0d6791170cbca8c29bbc214a9
-Size (R/tseries_0.10-52.tar.gz) = 165058 bytes
+BLAKE2s (R/tseries_0.10-54.tar.gz) = 86159207663483772f4dfd6bd2f3996236b4c7b6e5c3d3779365f627315f9ae9
+SHA512 (R/tseries_0.10-54.tar.gz) = b5ae2c445ca4eb180e3fbb63575af70257931fb7071b2385f80feea7a6cdd1d60521d61f43240286f36663e09f7e213d6eee50f0dff06872fefc70bcb281065f
+Size (R/tseries_0.10-54.tar.gz) = 164667 bytes
