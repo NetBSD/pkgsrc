@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/12 11:06:28 wen Exp $
+
+BLAKE2s (Text-Transliterator-1.03.tar.gz) = b04474aaf2bedd202aafcc3f98389fc8fa71da6bf636ebdc0ac8fddefa0c29db
+SHA512 (Text-Transliterator-1.03.tar.gz) = bd0e0c79caee6a56d8a285ac46881b78b8f4a084d38b479622fa6100339393ce4b91f09f288bd3c37d9041bffeece9035afacd891cd3e49017ecee4ffcf14771
+Size (Text-Transliterator-1.03.tar.gz) = 8518 bytes
