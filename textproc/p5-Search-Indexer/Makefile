@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/12 11:13:00 wen Exp $
 
-DISTNAME=	Search-Indexer-0.79
+DISTNAME=	Search-Indexer-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Search/}
 
@@ -17,6 +16,7 @@ PERL5_PACKLIST=	auto/Search/Indexer/.packlist
 DEPENDS+=	p5-BerkeleyDB>=0.22:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Search-QueryParser>=0.91:../../databases/p5-Search-QueryParser
+DEPENDS+=	p5-Text-Transliterator-[0-9]*:../../print/p5-Text-Transliterator
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
