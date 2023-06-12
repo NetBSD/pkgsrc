@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/02/15 23:53:07 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/12 15:33:04 mef Exp $
 
 R_PKGNAME=	bayesm
-R_PKGVER=	3.1-4
+R_PKGVER=	3.1-5
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
