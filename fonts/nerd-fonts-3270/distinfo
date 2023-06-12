@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/01 08:10:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/06/12 07:50:34 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.0.1/3270.zip) = bdee385aead82eb20896f4ef6830e704ef7b20a242d8d39df5c489111ffe6c1e
-SHA512 (nerd-fonts/3.0.1/3270.zip) = 8f7a22046a48048b9a5ef5136681df4f2cabce27b67380b51d0f3ebc6fa081e3f36ad330407c50d4dd43dec1042ba814fae6bf56f952f33779dd86c2b1cb98f8
-Size (nerd-fonts/3.0.1/3270.zip) = 10515160 bytes
+BLAKE2s (nerd-fonts/3.0.2/3270.tar.xz) = a903d7c8ce892ca3f00a7b81666bd8c04c52338c64d476ed14d947b5a22eb6b1
+SHA512 (nerd-fonts/3.0.2/3270.tar.xz) = bf9d09cafaab257d626f145b83f1b9fe5320acba234d9bde8d439258374c18c77d31f82036fb177dac2d5646fe93de8a5a39c06b744a1938dde183c43253011e
+Size (nerd-fonts/3.0.2/3270.tar.xz) = 3575980 bytes
