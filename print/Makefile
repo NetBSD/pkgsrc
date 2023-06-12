@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.908 2023/06/01 16:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.909 2023/06/12 11:08:43 wen Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -102,6 +102,7 @@ SUBDIR+=	p5-Net-CUPS
 SUBDIR+=	p5-PostScript
 SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	p5-PostScript-Simple
+SUBDIR+=	p5-Text-Transliterator
 SUBDIR+=	p5-biblatex-biber
 SUBDIR+=	papersize
 SUBDIR+=	paps
