@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3794 2023/06/12 11:20:58 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3795 2023/06/12 12:38:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-filelock to 3.12.1 [adam 2023-06-12]
 	Updated textproc/p5-Search-Indexer to 1.01 [wen 2023-06-12]
 	Updated www/p5-Pod-POM-Web to 1.27 [wen 2023-06-12]
+	Updated devel/p5-Scope-Upper to 0.34 [wen 2023-06-12]
