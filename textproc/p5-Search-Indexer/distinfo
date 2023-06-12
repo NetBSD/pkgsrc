@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:22:35 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/06/12 11:13:00 wen Exp $
 
-BLAKE2s (Search-Indexer-0.79.tar.gz) = 6647a7d2f1dba58fe255ea203546258da35f9298ce0194ad164806ad41b1d762
-SHA512 (Search-Indexer-0.79.tar.gz) = 935bc1df4dd708673c8b0e51777504ee27410d03157c780e6426e63c754455cf5beba9260749c417bceec33f9b087e0b716ca03013307ce186cec61ee1cf1481
-Size (Search-Indexer-0.79.tar.gz) = 291249 bytes
+BLAKE2s (Search-Indexer-1.01.tar.gz) = 2e4adc8d81b95749f8c0bb17dd047d67b8bedb9209fdf209e1b793b50d4b0cc1
+SHA512 (Search-Indexer-1.01.tar.gz) = c116832c9b6c65ae416034e8fa6f9b970f3e45ef387ae65d4f7054cd4411b8e1324da98bcd54756bad8aab50cd552fab7c23f1ad0240b3efc657a09a1d90fd5b
+Size (Search-Indexer-1.01.tar.gz) = 297295 bytes
