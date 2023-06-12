@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3791 2023/06/12 11:10:32 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3792 2023/06/12 11:13:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5269,3 +5269,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-ujson to 5.8.0 [adam 2023-06-12]
 	Updated devel/py-types-ujson to 5.8.0.0 [adam 2023-06-12]
 	Added print/p5-Text-Transliterator version 1.03 [wen 2023-06-12]
+	Updated www/py-websocket-client to 1.5.3 [adam 2023-06-12]
+	Updated devel/py-filelock to 3.12.1 [adam 2023-06-12]
