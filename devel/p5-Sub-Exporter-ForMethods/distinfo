@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/06/12 13:07:27 wen Exp $
 
-BLAKE2s (Sub-Exporter-ForMethods-0.100054.tar.gz) = 4ce94a868c83c12ea0cb8312d98af4ab517731d8cb86e0ae619f3b5cc1b859e3
-SHA512 (Sub-Exporter-ForMethods-0.100054.tar.gz) = bed6109790e72040c3546bd2c523ab1ab53df1e3a12ebe109cd53cf8db6ddf458d874a1a49d6008326bf4835cd5af2f0229fbe184ca0402f5261f8d25a267dd9
-Size (Sub-Exporter-ForMethods-0.100054.tar.gz) = 17241 bytes
+BLAKE2s (Sub-Exporter-ForMethods-0.100055.tar.gz) = f2351321c7e44ae7552b6b75254c51c29ead50f47e4fc64404e33e691f1099e8
+SHA512 (Sub-Exporter-ForMethods-0.100055.tar.gz) = d4e2a02d7628f5d51b3d17937ba3f14ae4efead8e1ca298ae7c901e15177fa2e6df4367543303f21307137d857e232190a8b2c286ff6fe64fbae11e26172868d
+Size (Sub-Exporter-ForMethods-0.100055.tar.gz) = 17446 bytes
