@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3786 2023/06/12 06:44:04 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3787 2023/06/12 07:58:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5248,3 +5248,18 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cargo-c to 0.9.20 [pin 2023-06-12]
 	Updated audio/ncspot to 0.13.3 [pin 2023-06-12]
 	Updated www/p5-HTTP-OAI to 4.13 [wen 2023-06-12]
+	Updated fonts/nerd-fonts-3270 to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-Agave to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-AnonymousPro to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-Arimo to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-AurulentSansMono to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-BigBlueTerminal to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-BitstreamVeraSansMono to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-CascadiaCode to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-CodeNewRoman to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-Cousine to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-DaddyTimeMono to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-IBMPlexMono to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-Meslo to 3.0.2 [wiz 2023-06-12]
+	Updated fonts/nerd-fonts-iA-Writer to 3.0.2 [wiz 2023-06-12]
+	Added fonts/nerd-fonts-JetBrainsMono version 3.0.2 [wiz 2023-06-12]
