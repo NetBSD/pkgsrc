@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.105 2022/09/11 12:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2023/06/12 10:43:00 ivmai Exp $
 
-DISTNAME=	gc-8.2.2
+DISTNAME=	gc-8.2.4
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
 CATEGORIES=	devel
-MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ivmai/}
+GITHUB_PROJECT=	bdwgc
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.hboehm.info/gc/
