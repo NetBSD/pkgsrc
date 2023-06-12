@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/01 08:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/12 07:51:41 wiz Exp $
 
 DISTNAME=	iA-Writer
-PKGNAME=	nerd-font-${DISTNAME}-${GITHUB_RELEASE:S/v//}
+PKGNAME=	nerd-fonts-${DISTNAME}-${GITHUB_RELEASE:S/v//}
 
 COMMENT=	iA Writer font with extra glyphs
 
