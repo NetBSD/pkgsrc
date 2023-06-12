@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/01 08:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/12 07:51:39 wiz Exp $
 
 DISTNAME=	Arimo
-PKGNAME=	nerd-font-${DISTNAME}-${GITHUB_RELEASE:S/v//}
+PKGNAME=	nerd-fonts-${DISTNAME}-${GITHUB_RELEASE:S/v//}
 
 COMMENT=	Font similar to Arial with extra glyphs
 
