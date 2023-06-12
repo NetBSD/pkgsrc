@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/29 09:28:25 wen Exp $
+$NetBSD: distinfo,v 1.14 2023/06/12 06:42:25 wen Exp $
 
-BLAKE2s (HTTP-OAI-4.12.tar.gz) = a991391bfff55b0d9679ee7a96b73946447fb2208f49b719af72cf02b3be7f83
-SHA512 (HTTP-OAI-4.12.tar.gz) = c9cfcabe88b0078f345e21b5aa8600ef2eeb3073ca4ccaeed24bc54d11027207f8d0dc9433ab68ace60a9c7d2b8804b4e21bcb63f719967a71d5761eb66571b9
-Size (HTTP-OAI-4.12.tar.gz) = 46508 bytes
+BLAKE2s (HTTP-OAI-4.13.tar.gz) = 7ef93e7726621b4dcc7589dfd1ec53abe94b83771ed3f9fae0d5ea15eb291dba
+SHA512 (HTTP-OAI-4.13.tar.gz) = 99dfd3204f44d4c15a4e46c141ece8077c953a5a912dbab98ccc95b0a85e86ed6f7bd880ffa73deac4ebb3e6b2e359acad92f19ab08d225e470bd7f1f8f3d353
+Size (HTTP-OAI-4.13.tar.gz) = 46629 bytes
