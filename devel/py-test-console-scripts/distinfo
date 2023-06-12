@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/05/29 09:19:12 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/12 09:30:55 adam Exp $
 
-BLAKE2s (pytest-console-scripts-1.4.0.tar.gz) = 8ccf8638d0afa7e49860e8026f423a12e4cab0dc15f4abab31773bbb7a2e9128
-SHA512 (pytest-console-scripts-1.4.0.tar.gz) = ccfc9032a05934fb12b5f29052f5335fc37c90f5bbbc2a31b0bd422c3a04a1cc23fbc23fb3537415905ac1dba9d6ea916e2ae0b659330189f0184a8e70f4eff1
-Size (pytest-console-scripts-1.4.0.tar.gz) = 19718 bytes
+BLAKE2s (pytest-console-scripts-1.4.1.tar.gz) = 000990e887c1c29aa328fcf28112a43029ee8822f269c2ea4801d8574c07a3da
+SHA512 (pytest-console-scripts-1.4.1.tar.gz) = b96def518a8c2930f092f68c1ba4a0ea55757c38cfa9dd39dd0ffdc54127bca3a2333c39159d7723ad1b412047244fde08753652e1945509b80dcbfa00dacfbb
+Size (pytest-console-scripts-1.4.1.tar.gz) = 20994 bytes
