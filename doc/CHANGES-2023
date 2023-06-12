@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3784 2023/06/12 04:38:27 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3785 2023/06/12 04:39:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5246,3 +5246,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/R-tseries to 0.10.54 [mef 2023-06-11]
 	Updated textproc/split-thai to 2.26 [scole 2023-06-12]
 	Updated devel/cargo-c to 0.9.20 [pin 2023-06-12]
+	Updated audio/ncspot to 0.13.3 [pin 2023-06-12]
