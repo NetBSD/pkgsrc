@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:17:28 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/06/12 12:48:08 wen Exp $
 
-BLAKE2s (Software-License-0.104001.tar.gz) = 9de2887c31ee17c49a0ace5f1369e50a53c5dae4bbb526a0437c40bb4c25c6d0
-SHA512 (Software-License-0.104001.tar.gz) = 4ba5e11e8aa34a4f59ad4028e8e4547e22d5d56e04836cf280a0fb52a2fb64c8cf5347f6f6e2c368506c35eeb7e189527e4339d11541aac34c2c28737717e34e
-Size (Software-License-0.104001.tar.gz) = 131973 bytes
+BLAKE2s (Software-License-0.104004.tar.gz) = c5bd74f2c61a725ffc3a5d8e7e5bd0f2f5cf158689810cb9338cae0b0832721c
+SHA512 (Software-License-0.104004.tar.gz) = 0dfb3a75d0fb4f430560f995193d11f4de7e1bcd0d240f8c4586b8b2ede93635ff8ac88bcbda4ffb9fd6cec61c6c1bdeb84bb0103c0870d76f267bf4d9ce48c8
+Size (Software-License-0.104004.tar.gz) = 127346 bytes
