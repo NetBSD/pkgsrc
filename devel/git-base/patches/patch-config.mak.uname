@@ -1,4 +1,6 @@
-$NetBSD: patch-config.mak.uname,v 1.4 2014/08/25 07:49:08 adam Exp $
+$NetBSD: patch-config.mak.uname,v 1.5 2023/06/12 21:41:59 schmonz Exp $
+
+Use pkgsrc-provided tools on Solarish.
 
 --- config.mak.uname.orig	2014-08-15 22:26:55.000000000 +0000
 +++ config.mak.uname
