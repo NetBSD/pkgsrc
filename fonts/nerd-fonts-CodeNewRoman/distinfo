@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/01 08:10:38 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/06/12 07:50:35 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.0.1/CodeNewRoman.zip) = 479521522ff08fdfa69b88f2b05de4adfe4fd00d74df2d38a470a530f8bceb35
-SHA512 (nerd-fonts/3.0.1/CodeNewRoman.zip) = bfd348c6949a8c1783d61187775fc7a753b8fc5c70559c6285b20f68581aa599ca134f5891ecfba2e977376a57a04529fb3d0cd2a218327acaeb0bc71397c7fb
-Size (nerd-fonts/3.0.1/CodeNewRoman.zip) = 24027750 bytes
+BLAKE2s (nerd-fonts/3.0.2/CodeNewRoman.tar.xz) = 5adb7ecf85d0d3796fcade9f48da458ffc16741e76c2f24aa1239cc02d05d915
+SHA512 (nerd-fonts/3.0.2/CodeNewRoman.tar.xz) = 91e2d433bd86ae130f50498fe6bedc9623fc035a9da4c91367978b7f0ab853c9a3e2515f3e8def1137da2c939f7482c2c5dff09151df9fb893cbc176e6a48078
+Size (nerd-fonts/3.0.2/CodeNewRoman.tar.xz) = 4666560 bytes

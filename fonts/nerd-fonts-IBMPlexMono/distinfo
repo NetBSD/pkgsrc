@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/01 08:10:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/06/12 07:50:35 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.0.1/IBMPlexMono.zip) = 6a56393b3355cbc60a2669037e05bc8845435e2aa21b5b66561f52fd023694ca
-SHA512 (nerd-fonts/3.0.1/IBMPlexMono.zip) = 7d7e303a18b9a70a2c514b92d0f2eb72954598e73f45f78a9c8664051e7a2b2803d3025bf545efc519588d24c09365a3716231a245dbed90f74c1069ccce3dac
-Size (nerd-fonts/3.0.1/IBMPlexMono.zip) = 49414576 bytes
+BLAKE2s (nerd-fonts/3.0.2/IBMPlexMono.tar.xz) = ca52459dd7e3d1d88e8868ed9bdda05b9fb12ccccc13bcdefa49c6ebde6100e8
+SHA512 (nerd-fonts/3.0.2/IBMPlexMono.tar.xz) = 91e1e5f851043fe60b2df0b45026ed2fd8d95c9d1a831ad756c09598232bd17ffe616427e655def853f9ec4d5e671e66ef47b6a729ee5f7aeb1baef1a3ce4528
+Size (nerd-fonts/3.0.2/IBMPlexMono.tar.xz) = 2408232 bytes
