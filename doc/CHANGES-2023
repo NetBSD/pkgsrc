@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3782 2023/06/11 23:18:14 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3783 2023/06/12 01:37:43 scole Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5244,3 +5244,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/R-quantmod to 0.4.22 [mef 2023-06-11]
 	Updated math/R-quadprog to 1.5.8 [mef 2023-06-11]
 	Updated finance/R-tseries to 0.10.54 [mef 2023-06-11]
+	Updated textproc/split-thai to 2.26 [scole 2023-06-12]
