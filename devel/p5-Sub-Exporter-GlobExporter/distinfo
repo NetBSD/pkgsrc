@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/06/12 13:10:10 wen Exp $
 
-BLAKE2s (Sub-Exporter-GlobExporter-0.005.tar.gz) = 8add72c5437e85333d0252bd967784860657c847fb70573870941ba5f9ba467c
-SHA512 (Sub-Exporter-GlobExporter-0.005.tar.gz) = 4c71209d8ee73bc01bcd52612dfded4bee1d6a9728fc7d70fc3c42b1f742bf836293184cb1b50e90e872bacac2c1585fcf663c702054d796a58fe494b6321b9a
-Size (Sub-Exporter-GlobExporter-0.005.tar.gz) = 16177 bytes
+BLAKE2s (Sub-Exporter-GlobExporter-0.006.tar.gz) = ade8583389b3a0375431708279a0279c712ca1f39a3a6a93f8a4753b2d21b2b7
+SHA512 (Sub-Exporter-GlobExporter-0.006.tar.gz) = 310afc8a2d0e097ce23204e69c8ff4a77dee5e03cb2a322d8b1702593c5b741d4870e77ee509fab1b91322e536fca35c25228c2b09200e39a245e2ad48de24ca
+Size (Sub-Exporter-GlobExporter-0.006.tar.gz) = 17178 bytes
