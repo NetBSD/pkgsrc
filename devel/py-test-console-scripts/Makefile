@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/05/29 09:19:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/12 09:30:55 adam Exp $
 
-DISTNAME=	pytest-console-scripts-1.4.0
+DISTNAME=	pytest-console-scripts-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-console-scripts/}
