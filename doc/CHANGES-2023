@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3787 2023/06/12 07:58:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3788 2023/06/12 08:05:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5263,3 +5263,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/nerd-fonts-Meslo to 3.0.2 [wiz 2023-06-12]
 	Updated fonts/nerd-fonts-iA-Writer to 3.0.2 [wiz 2023-06-12]
 	Added fonts/nerd-fonts-JetBrainsMono version 3.0.2 [wiz 2023-06-12]
+	Updated misc/tui-journal to 0.1.4 [pin 2023-06-12]
