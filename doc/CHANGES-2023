@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3801 2023/06/12 13:10:56 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3802 2023/06/12 19:13:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-String-Util to 1.34 [wen 2023-06-12]
 	Updated devel/p5-Sub-Exporter-ForMethods to 0.100055 [wen 2023-06-12]
 	Updated devel/p5-Sub-Exporter-GlobExporter to 0.006 [wen 2023-06-12]
+	Updated devel/swagger-codegen to 3.0.46 [schmonz 2023-06-12]
