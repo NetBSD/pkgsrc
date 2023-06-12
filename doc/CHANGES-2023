@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3800 2023/06/12 13:08:24 wen Exp $
+$NetBSD: CHANGES-2023,v 1.3801 2023/06/12 13:10:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5279,3 +5279,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-forecast to 8.21 [mef 2023-06-12]
 	Updated devel/p5-String-Util to 1.34 [wen 2023-06-12]
 	Updated devel/p5-Sub-Exporter-ForMethods to 0.100055 [wen 2023-06-12]
+	Updated devel/p5-Sub-Exporter-GlobExporter to 0.006 [wen 2023-06-12]
