@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3817 2023/06/13 14:14:05 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3818 2023/06/13 14:16:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5296,3 +5296,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-broom to 1.0.5 [mef 2023-06-13]
 	Updated math/R-pbkrtest to 0.5.2 [mef 2023-06-13]
 	Updated math/R-car to 3.1.2 [mef 2023-06-13]
+	Updated math/R-carData to 3.0.5 [mef 2023-06-13]
