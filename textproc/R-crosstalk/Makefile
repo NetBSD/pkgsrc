@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/08 02:24:26 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/13 13:15:58 mef Exp $
 
 R_PKGNAME=	crosstalk
-R_PKGVER=	1.1.1
+R_PKGVER=	1.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
