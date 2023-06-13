@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3819 2023/06/13 15:53:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3820 2023/06/13 16:08:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5301,3 +5301,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.3.0 [adam 2023-06-13]
 	Updated multimedia/libde265 to 1.0.12 [adam 2023-06-13]
 	Updated sysutils/ansible-lint to 6.17.1 [adam 2023-06-13]
+	Updated devel/py-googleapis-common-protos to 1.59.1 [adam 2023-06-13]
+	Updated devel/py-bitarray to 2.7.5 [adam 2023-06-13]
