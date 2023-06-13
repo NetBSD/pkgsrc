@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/13 13:15:58 mef Exp $
 
-BLAKE2s (R/crosstalk_1.1.1.tar.gz) = 085434f011d4c4951d82992df0ff2b0adda787a87439ff4520d3dd28d7eac68b
-SHA512 (R/crosstalk_1.1.1.tar.gz) = 49042a544855c9bf13a2703f26d6347d9c9d114272f15a2cf4202fe677913fedd7b5899b4fc719f599ed8dc63cba9ad29fefb7f83a2bc2cf5845ecf9896f72d0
-Size (R/crosstalk_1.1.1.tar.gz) = 676543 bytes
+BLAKE2s (R/crosstalk_1.2.0.tar.gz) = 21c7379a935e11762c538d92cacc932fe252744d3230347c5da3b2ed3fdeda0f
+SHA512 (R/crosstalk_1.2.0.tar.gz) = b14eeb88f0d0e57b3637e3fa69b16a9c82e191c9f1b39f75ed7c74b34a5d68585c5a9064576fb0d50429276cc6d9046ec7e385a6f494653f6d1517e91cbc7a7f
+Size (R/crosstalk_1.2.0.tar.gz) = 296495 bytes
