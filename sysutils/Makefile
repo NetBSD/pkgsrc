@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1052 2023/06/09 19:38:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.1053 2023/06/13 13:15:05 bacon Exp $
 #
 
 COMMENT=	System utilities
@@ -167,6 +167,7 @@ SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-terminal
 SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
+SUBDIR+=	desktop-installer
 SUBDIR+=	detox
 SUBDIR+=	devkitd
 SUBDIR+=	dfc
