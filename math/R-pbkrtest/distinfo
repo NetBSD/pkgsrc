@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/13 14:06:43 mef Exp $
 
-BLAKE2s (R/pbkrtest_0.5.1.tar.gz) = 6ee553bd3ba8d0637ef2a5bafd68eec3eb5c17378ec91291f15e9adcc865da8d
-SHA512 (R/pbkrtest_0.5.1.tar.gz) = b13cbcb3740be0a86510eb3ce933a54f6ef3fcf225f8203099c50de75c88b473a0367a5215aaf3c18566e07835d75dbd5a1be514ff5bed6e3c39293c50c6cce7
-Size (R/pbkrtest_0.5.1.tar.gz) = 246327 bytes
+BLAKE2s (R/pbkrtest_0.5.2.tar.gz) = a26f266d652e49cdc08987fe2c296b565fb72ac5b1f8acbcf8334203cfb28242
+SHA512 (R/pbkrtest_0.5.2.tar.gz) = e4182b918e69a4e5cd0a3b0ebaf71a664f1f7e9782375ab0531279dde372908b055631f9ded27606125e701cab35c84186d7a0b768388ad35be6c9a4b9bf5132
+Size (R/pbkrtest_0.5.2.tar.gz) = 75295 bytes
