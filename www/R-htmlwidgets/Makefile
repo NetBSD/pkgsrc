@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/03/12 05:51:48 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/13 13:20:46 mef Exp $
 
 R_PKGNAME=	htmlwidgets
-R_PKGVER=	1.6.1
+R_PKGVER=	1.6.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
