@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/13 13:14:38 bacon Exp $
+man/man1/desktop-installer.1
+sbin/battery-shutdown.sh
+sbin/desktop-installer
+share/desktop-installer/CDE/cde.desktop
+share/desktop-installer/CDE/xinitrc
+share/desktop-installer/CINNAMON/xinitrc
+share/desktop-installer/FLUXBOX/xinitrc
+share/desktop-installer/GNOME/xinitrc
+share/desktop-installer/ICEWM/xinitrc
+share/desktop-installer/KDE5/xinitrc
+share/desktop-installer/KODI/xinitrc
+share/desktop-installer/LUMINA/gtkrc
+share/desktop-installer/LUMINA/xinitrc
+share/desktop-installer/LXDE/xinitrc
+share/desktop-installer/LXQT/xinitrc
+share/desktop-installer/MATE/xinitrc
+share/desktop-installer/OTHER/xinitrc
+share/desktop-installer/SDDM/sddm.conf
+share/desktop-installer/WMAKER/xinitrc
+share/desktop-installer/XDM/GiveConsole
+share/desktop-installer/XDM/Xsetup_0
+share/desktop-installer/XDM/netbsd-background.jpg
+share/desktop-installer/XDM/xdmshutdown
+share/desktop-installer/XFCE4/xinitrc
+share/desktop-installer/Xdefaults-xterm
