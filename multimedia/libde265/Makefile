@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/02/03 21:29:41 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/13 15:51:32 adam Exp $
 
-DISTNAME=	libde265-1.0.11
+DISTNAME=	libde265-1.0.12
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
