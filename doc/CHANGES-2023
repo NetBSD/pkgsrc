@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3805 2023/06/13 10:40:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3806 2023/06/13 10:40:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/mate to 1.26.0nb4 [gutteridge 2023-06-12]
 	Updated finance/R-bayesm to 3.1.5 [mef 2023-06-13]
 	Updated sysutils/erdtree to 3.0.2 [pin 2023-06-13]
+	Updated shells/oh-my-posh to 17.1.0 [pin 2023-06-13]
