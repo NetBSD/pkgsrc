@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/13 14:16:36 mef Exp $
 
-BLAKE2s (R/carData_3.0-4.tar.gz) = b4c3c938c7eb5866082ad0fc1adda0f27057c177dadeb8d3164715728cddd31e
-SHA512 (R/carData_3.0-4.tar.gz) = 071108df88a0d76ae10f9a0c01801222e6899c82ad8e42c3832ae6a5629ac61d3fa77e7c6c3339260280de1114da7c4e1c9862c2a001da22748e4670c39e0287
-Size (R/carData_3.0-4.tar.gz) = 993536 bytes
+BLAKE2s (R/carData_3.0-5.tar.gz) = 8981a8f744393bc7fffc5664c9435aaeb5640508ac652884385e752ebb0e155c
+SHA512 (R/carData_3.0-5.tar.gz) = 3e774c9c9cc4cad46079c843498b4439002326950fc3ce7bd2c6d268b164a196365ddc9d5185b3ca8b136d90c0dbe85c5d42ce44340a0c9648374f318243fd81
+Size (R/carData_3.0-5.tar.gz) = 1004201 bytes
