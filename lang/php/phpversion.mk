@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.400 2023/06/09 13:18:55 taca Exp $
+# $NetBSD: phpversion.mk,v 1.401 2023/06/13 14:43:49 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -244,5 +244,7 @@ PHP_BASE_VERS=	${_PHP_VER_MAJOR}.${_PHP_VER_MINOR}.${PHP_INITIAL_TEENY}
 PKG_FAIL_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is already installed."
 .endif
 .endif
+
+MAKEFLAGS+=	PHP_VERSION_REQD=${PHP_VERSION_REQD}
 
 .endif	# PHPVERSION_MK
