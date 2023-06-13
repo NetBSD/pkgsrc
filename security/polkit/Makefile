@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/06/07 15:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/06/13 07:57:56 mrg Exp $
 
 DISTNAME=	polkit-121
 CATEGORIES=	security
@@ -67,7 +67,7 @@ SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.polic
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/polkit-1/rules.d/50-default.rules \
+	${MV} ${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules \
 		${DESTDIR}${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules
 
 .include "../../devel/meson/build.mk"
