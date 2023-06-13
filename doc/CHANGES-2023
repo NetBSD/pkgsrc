@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3818 2023/06/13 14:16:49 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3819 2023/06/13 15:53:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5297,3 +5297,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-pbkrtest to 0.5.2 [mef 2023-06-13]
 	Updated math/R-car to 3.1.2 [mef 2023-06-13]
 	Updated math/R-carData to 3.0.5 [mef 2023-06-13]
+	Updated misc/dpkg to 1.21.22 [adam 2023-06-13]
+	Updated lang/nodejs to 20.3.0 [adam 2023-06-13]
+	Updated multimedia/libde265 to 1.0.12 [adam 2023-06-13]
+	Updated sysutils/ansible-lint to 6.17.1 [adam 2023-06-13]
