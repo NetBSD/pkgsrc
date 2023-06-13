@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3809 2023/06/13 13:14:46 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3810 2023/06/13 13:16:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/featherpad to 1.4.1 [pin 2023-06-13]
 	Updated math/R-DEoptimR to 1.0.14 [mef 2023-06-13]
 	Added sysutils/desktop-installer version 0.8.0.23 [bacon 2023-06-13]
+	Updated textproc/R-crosstalk to 1.2.0 [mef 2023-06-13]
