@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3822 2023/06/13 17:54:50 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3823 2023/06/13 19:07:09 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5305,3 +5305,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.7.5 [adam 2023-06-13]
 	Added math/py-xgboost version 1.7.5 [adam 2023-06-13]
 	Updated security/libssh to 0.105nb1 [schmonz 2023-06-13]
+	Updated www/nginx-devel to 1.25.1 [osa 2023-06-13]
