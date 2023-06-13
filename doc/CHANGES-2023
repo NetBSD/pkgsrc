@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3821 2023/06/13 17:37:24 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3822 2023/06/13 17:54:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-googleapis-common-protos to 1.59.1 [adam 2023-06-13]
 	Updated devel/py-bitarray to 2.7.5 [adam 2023-06-13]
 	Added math/py-xgboost version 1.7.5 [adam 2023-06-13]
+	Updated security/libssh to 0.105nb1 [schmonz 2023-06-13]
