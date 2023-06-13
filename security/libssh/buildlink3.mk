@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2023/04/15 21:36:14 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2023/06/13 17:54:44 schmonz Exp $
 
 BUILDLINK_TREE+=	libssh
 
@@ -12,12 +12,15 @@ BUILDLINK_PKGSRCDIR.libssh?=	../../security/libssh
 pkgbase := libssh
 .include "../../mk/pkg-build-options.mk"
 
+.if ${PKG_BUILD_OPTIONS.libssh:Mgssapi}
+.include "../../mk/krb5.buildlink3.mk"
+.endif
+
 .if ${PKG_BUILD_OPTIONS.libssh:Mopenssl}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/krb5.buildlink3.mk"
 .endif # LIBSSH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libssh
