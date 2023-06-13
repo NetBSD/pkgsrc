@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2021/09/21 22:35:16 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/13 14:06:43 mef Exp $
 
 R_PKGNAME=	pbkrtest
-R_PKGVER=	0.5.1
+R_PKGVER=	0.5.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Parametric bootstrap and Kenward Roger based methods for mixed model comparison
+COMMENT=	Parametric bootstrap & Kenward Roger based methods for mixed model comparison
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-lme4>=1.1.10:../../math/R-lme4
