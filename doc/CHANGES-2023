@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3813 2023/06/13 13:26:16 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3814 2023/06/13 13:56:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/R-htmlwidgets to 1.6.2 [mef 2023-06-13]
 	Updated math/R-compositions to 2.0.6 [mef 2023-06-13]
 	Updated math/R-chron to 2.3.61 [mef 2023-06-13]
+	Updated math/R-lme4 to 1.1.33 [mef 2023-06-13]
