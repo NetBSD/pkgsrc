@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/12/18 10:31:25 mef Exp $
+$NetBSD: distinfo,v 1.13 2023/06/13 13:26:03 mef Exp $
 
-BLAKE2s (R/chron_2.3-58.tar.gz) = eb7d41dd72f21c183df5328494674b7448a3c79907b481b5faca605cd05b127a
-SHA512 (R/chron_2.3-58.tar.gz) = 335999397db14b83324497e8c1010944a22d0622e1f37e28f39a566fcad922f10eda1b8de0a87a30e20abda8e233896e9a18905a4c45653b50680b693770127f
-Size (R/chron_2.3-58.tar.gz) = 37756 bytes
+BLAKE2s (R/chron_2.3-61.tar.gz) = 3ec7578d246eb3c6d1cb7265c9564dc7b359bab8477d5ddf0542944b2e7540de
+SHA512 (R/chron_2.3-61.tar.gz) = a91e3dbb636487e918060ffed8004d1b7ec1bb7e4ba81a423f353f83e1491ddb0b984ff6482112aece51165f9ecc9d523ef9e20510cdae2f0de86de6bf0b5361
+Size (R/chron_2.3-61.tar.gz) = 37347 bytes
