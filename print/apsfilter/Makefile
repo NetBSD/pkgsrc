@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/06/01 16:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/13 18:24:45 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
 PKGREVISION=	2
@@ -38,7 +38,7 @@ SUBST_FILES.prefix=	bin/apsfilter.in SETUP.in tools/prtmgmt
 SUBST_SED.prefix=	-e 's,/usr/local,${LOCALBASE},g'
 SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
