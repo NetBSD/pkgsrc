@@ -1,0 +1,61 @@
+$NetBSD: patch-configure,v 1.1 2023/06/13 15:44:29 adam Exp $
+
+Allow libdpkg being a shared library.
+Use md5 from OpenSSL.
+
+--- configure.orig	2023-05-11 02:04:01.000000000 +0000
++++ configure
+@@ -17030,12 +17030,6 @@ CC=$lt_save_CC
+ 
+ 
+ 
+-  if test "$enable_shared" = "yes" && test -z "$AUTHOR_TESTING"
+-then :
+-
+-    as_fn_error $? "building libdpkg as a shared library is not supported" "$LINENO" 5
+-
+-fi
+    if test "$enable_shared" = "yes"; then
+   BUILD_SHARED_TRUE=
+   BUILD_SHARED_FALSE='#'
+@@ -23416,16 +23410,16 @@ fi
+ 
+ 
+   have_libmd="no"
+-         for ac_header in md5.h
++         for ac_header in openssl/md5.h
+ do :
+-  ac_fn_c_check_header_compile "$LINENO" "md5.h" "ac_cv_header_md5_h" "$ac_includes_default"
++  ac_fn_c_check_header_compile "$LINENO" "openssl/md5.h" "ac_cv_header_md5_h" "$ac_includes_default"
+ if test "x$ac_cv_header_md5_h" = xyes
+ then :
+   printf "%s\n" "#define HAVE_MD5_H 1" >>confdefs.h
+ 
+     dpkg_save_libmd_LIBS=$LIBS
+-    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for library containing MD5Init" >&5
+-printf %s "checking for library containing MD5Init... " >&6; }
++    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for library containing MD5_Init" >&5
++printf %s "checking for library containing MD5_Init... " >&6; }
+ if test ${ac_cv_search_MD5Init+y}
+ then :
+   printf %s "(cached) " >&6
+@@ -23437,16 +23431,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ /* Override any GCC internal prototype to avoid an error.
+    Use char because int might match the return type of a GCC
+    builtin and then its argument prototype would still apply.  */
+-char MD5Init ();
++char MD5_Init ();
+ int
+ main (void)
+ {
+-return MD5Init ();
++return MD5_Init ();
+   ;
+   return 0;
+ }
+ _ACEOF
+-for ac_lib in '' md
++for ac_lib in '' crypto
+ do
+   if test -z "$ac_lib"; then
+     ac_res="none required"
