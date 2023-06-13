@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/06/06 12:41:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.57 2023/06/13 15:44:29 adam Exp $
 
-DISTNAME=	dpkg_1.21.9
+DISTNAME=	dpkg_1.21.22
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
@@ -30,6 +30,7 @@ CONFIGURE_ARGS.Darwin+=	--enable-linker-optimizations=no
 CONFIGURE_ENV+=		PATCH=${PREFIX}/bin/gpatch
 TEST_TARGET=		check
 INCOMPAT_CURSES+=	NetBSD-[0-5].*-*
+LIBS.NetBSD+=		-lterminfo
 
 REPLACE_PERL=		scripts/*.pl
 
@@ -37,12 +38,15 @@ CONFIGURE_ARGS+=	DPKG_DEVEL_MODE=1
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 PERL5_CONFIGURE=	no
 .include "../../lang/perl5/module.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 # override the default
 CONFIGURE_ENV+=		TAR=${GTAR:Q}
