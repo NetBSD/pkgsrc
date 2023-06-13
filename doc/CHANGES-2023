@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3823 2023/06/13 19:07:09 osa Exp $
+$NetBSD: CHANGES-2023,v 1.3824 2023/06/13 21:34:00 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5306,3 +5306,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/py-xgboost version 1.7.5 [adam 2023-06-13]
 	Updated security/libssh to 0.105nb1 [schmonz 2023-06-13]
 	Updated www/nginx-devel to 1.25.1 [osa 2023-06-13]
+	Updated pkgtools/pkglint to 23.1.11 [rillig 2023-06-13]
