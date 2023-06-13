@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/08 15:19:02 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/13 18:20:22 wiz Exp $
 
 DISTNAME=	rapidfuzz-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,10 +19,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PLIST_SUBST+=	PYTHON_VERSION=${PYTHON_VERSION}
+PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 
 USE_LANGUAGES=	c c++17
-GCC_REQD=	10
+GCC_REQD+=	10
 
 # needs 'make install'
 do-test:
