@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3808 2023/06/13 13:00:21 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3809 2023/06/13 13:14:46 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 17.1.0 [pin 2023-06-13]
 	Updated editors/featherpad to 1.4.1 [pin 2023-06-13]
 	Updated math/R-DEoptimR to 1.0.14 [mef 2023-06-13]
+	Added sysutils/desktop-installer version 0.8.0.23 [bacon 2023-06-13]
