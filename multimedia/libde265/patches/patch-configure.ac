@@ -1,12 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.2 2023/02/03 21:29:41 adam Exp $
+$NetBSD: patch-configure.ac,v 1.3 2023/06/13 15:51:32 adam Exp $
 
-* Fix libde265.pc.
+Fix libde265.pc.
 
---- configure.ac.orig	2023-02-01 09:41:13.000000000 +0000
+--- configure.ac.orig	2023-06-13 14:00:53.000000000 +0000
 +++ configure.ac
 @@ -18,6 +18,9 @@ AC_SUBST(NUMERIC_VERSION)
  LIBDE265_CURRENT=1
- LIBDE265_REVISION=4
+ LIBDE265_REVISION=5
  LIBDE265_AGE=1
 +CMAKE_INSTALL_PREFIX=${prefix}
 +CMAKE_INSTALL_LIBDIR=lib
