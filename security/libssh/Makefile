@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/05/07 10:21:56 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2023/06/13 17:54:44 schmonz Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
@@ -6,6 +6,7 @@
 VER=		0.10.5
 DISTNAME=	libssh-${VER}
 PKGNAME=	libssh-0.105
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -36,5 +37,4 @@ BUILDLINK_DEPMETHOD.argp=  build
 BUILDLINK_DEPMETHOD.cmocka=  build
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
