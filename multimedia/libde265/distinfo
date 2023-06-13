@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/02/03 21:29:41 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/06/13 15:51:32 adam Exp $
 
-BLAKE2s (libde265-1.0.11.tar.gz) = 24a773526ece05bf9f552a8f0a70c276f3728b1f9fb277c533272b7c565b523e
-SHA512 (libde265-1.0.11.tar.gz) = 2ce28558c66e20714c07bf3011bc10dccabb770649903616bc32f1c4f18beba559ef7e0e42365ead77d7e813316b8c051039dc393cd351221cbab7248b3fa34c
-Size (libde265-1.0.11.tar.gz) = 845996 bytes
-SHA1 (patch-configure.ac) = 61c9b0ca860ed2caa9e096960d22ecc56e9e9899
+BLAKE2s (libde265-1.0.12.tar.gz) = d65d705dc0ef4fe858eb1d0a0723d8a95b3796ed486c9c034d3c60ba4f5cd1a2
+SHA512 (libde265-1.0.12.tar.gz) = 2cd105f3ce15a075da758f5429670b78ec162217017d1057eb828d7bc45414d35f2a8ab3b2cd5f247320c361740f4ab92d2ce5a6d943feeb33dc28c273e1ed64
+Size (libde265-1.0.12.tar.gz) = 846345 bytes
+SHA1 (patch-configure.ac) = 5f59b12b9b87d3e8fc3346016f5a878717d6a307
