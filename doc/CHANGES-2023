@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3810 2023/06/13 13:16:09 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3811 2023/06/13 13:20:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-DEoptimR to 1.0.14 [mef 2023-06-13]
 	Added sysutils/desktop-installer version 0.8.0.23 [bacon 2023-06-13]
 	Updated textproc/R-crosstalk to 1.2.0 [mef 2023-06-13]
+	Updated www/R-htmlwidgets to 1.6.2 [mef 2023-06-13]
