@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/03/12 05:11:37 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/13 13:22:54 mef Exp $
 
 R_PKGNAME=	compositions
-R_PKGVER=	2.0-5
+R_PKGVER=	2.0-6
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Compositional data analysis
@@ -13,8 +13,10 @@ DEPENDS+=	R-robustbase>=0.93.5:../../math/R-robustbase
 DEPENDS+=	R-tensorA>=0.36.1:../../math/R-tensorA
 
 # Packages suggested but not available: 'rgl'
-#TEST_DEPENDS+=	R-rgl-[0-9]*:../..
+TEST_DEPENDS+=	R-rgl-[0-9]*:../../graphics/R-rgl
 TEST_DEPENDS+=	R-combinat-[0-9]*:../../math/R-combinat
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	c fortran
 
