@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/12/18 10:31:25 mef Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/13 13:26:03 mef Exp $
 
 R_PKGNAME=	chron
-R_PKGVER=	2.3-58
+R_PKGVER=	2.3-61
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Chronological objects which can handle dates and times
