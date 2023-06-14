@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 18:16:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/14 15:02:37 schmonz Exp $
 
-DISTNAME=		cvs-for-gits-20230606.1
+DISTNAME=		cvs-for-gits-20230614
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=schmonz/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
