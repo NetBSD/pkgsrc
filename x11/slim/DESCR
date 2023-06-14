@@ -1,4 +1,7 @@
-SLiM (Simple Login Manager) is a graphical login manager for X11.
-It aims to be simple, fast and independent from the various
-desktop environments.
-SLiM is based on latest stable release of Login.app by Per Liden.
+SLiM is an acronym for Simple Login Manager. SLiM is lightweight
+and easy to configure, and requires minimal dependencies - none of
+the GNOME or KDE desktop environments or their corresponding
+toolkits.
+
+It thus contributes to a lightweight system for users who also like
+to use lightweight desktops such as IceWM, Xfce, Openbox, or Fluxbox.
