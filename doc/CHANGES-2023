@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3829 2023/06/14 12:25:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3830 2023/06/14 13:03:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/slim to 1.4.0 [abs 2023-06-14]
 	Updated misc/py-platformdirs to 3.5.3 [adam 2023-06-14]
 	Updated comms/py-rich to 13.4.2 [adam 2023-06-14]
+	Updated graphics/tiff to 4.5.1 [gdt 2023-06-14]
