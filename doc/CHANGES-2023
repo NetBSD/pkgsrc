@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3835 2023/06/14 17:27:44 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3836 2023/06/14 18:05:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox to 114.0.1 [ryoon 2023-06-14]
 	Updated www/firefox-l10n to 114.0.1 [ryoon 2023-06-14]
 	Updated graphics/scrot to 1.10 [pin 2023-06-14]
+	Updated x11/xst to 0.9.0 [pin 2023-06-14]
