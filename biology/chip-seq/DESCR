@@ -1,0 +1,5 @@
+The chip-seq meta-package provides the core tools needed for performing
+a typical ChIP-Seq differential accessibility analysis, including
+adapter trimming, quality control, alignment, peak calling, and
+identification of differentially accessible peaks.  Researchers may
+want additional tools for data manipulation, gene ontology, etc.
