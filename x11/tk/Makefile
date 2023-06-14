@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/01/29 21:15:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.93 2023/06/14 10:29:45 riastradh Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -20,7 +20,7 @@ USE_GCC_RUNTIME=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
-CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tcl=${_CROSS_DESTDIR:U}${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
 
 PKGCONFIG_OVERRIDE+=	unix/tk.pc.in
