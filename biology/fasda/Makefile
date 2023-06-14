@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/05/24 16:05:38 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/14 18:45:12 bacon Exp $
 
-DISTNAME=	fasda-0.1.2.30
+DISTNAME=	fasda-0.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	aea98dcf93f5d124c007a1607752bc8f5dfb62f9
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/fasda
