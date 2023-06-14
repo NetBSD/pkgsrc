@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/14 18:05:24 pin Exp $
 
-BLAKE2s (xst-0.8.4.1.tar.gz) = ec394f9c0136713b88eeeba2ef948411e2fdc7fc1eab6229dae56d51aefa6fe7
-SHA512 (xst-0.8.4.1.tar.gz) = 00478f16caf599ae4a0c1cdfc7e5e148eb864ae5e28c416d5872d7e1d20f56e01b58475653f742418168edfc64eba781926b51adc815ef3a63f28da85025c0ac
-Size (xst-0.8.4.1.tar.gz) = 58339 bytes
+BLAKE2s (xst-0.9.0.tar.gz) = d126673f395a6a33b0642e78219fe31ef93c390d3a9fb359ed18adcabcab4f28
+SHA512 (xst-0.9.0.tar.gz) = 04a4e0c39ffa3a7733a4b62041a30a7c8510994d7da2b9d076e0499025d6f95da08d97db3414f3281c860d55bbb02347f783da2aa49c86b23a6c5225c2437eb5
+Size (xst-0.9.0.tar.gz) = 65278 bytes
 SHA1 (patch-Makefile) = 12d096790c7c808114297d44404932f7d00156f8
