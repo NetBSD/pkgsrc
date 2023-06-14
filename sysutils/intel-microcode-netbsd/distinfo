@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.47 2023/05/13 22:28:19 msaitoh Exp $
+$NetBSD: distinfo,v 1.48 2023/06/14 05:41:23 msaitoh Exp $
 
-BLAKE2s (microcode-20230512.tar.gz) = 0878b196add4283ecffea83c1bd01eb5aa9cf30fb1376b8dcbf04c9dbc400933
-SHA512 (microcode-20230512.tar.gz) = e21c82846f7f5e2c8d9559931e90389a7d21f8a59fbdec4c5b11fe43f010a21d3e9f27d67be12fe98b3dbdf26558a8ed74dc149bedd93f4b7728795dc6e86d48
-Size (microcode-20230512.tar.gz) = 12654272 bytes
+BLAKE2s (microcode-20230512-rev2.tar.gz) = deec47b0d37a127210d834261f13d3c63e9d2c9c90143e057832d9260c5a4be9
+SHA512 (microcode-20230512-rev2.tar.gz) = 9604a3758ae93f1fbe1342a7add2f5f57519194c8feddeb626588d7952a0e13311b7ec7b22d5924ca14d6eba5f9a70712b15a9e361717607164b4eae4ea23514
+Size (microcode-20230512-rev2.tar.gz) = 12338648 bytes
