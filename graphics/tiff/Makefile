@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.156 2023/02/12 09:45:47 tnn Exp $
+# $NetBSD: Makefile,v 1.157 2023/06/14 13:03:31 gdt Exp $
 
-VERSION_BASE=	4.5.0
+VERSION_BASE=	4.5.1
 # Accomodate testing unreleased versions.
-#VERSION_RC=	rc1
+#VERSION_RC=	rc3
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
