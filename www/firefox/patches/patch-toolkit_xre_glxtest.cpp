@@ -1,13 +1,13 @@
-$NetBSD: patch-toolkit_xre_glxtest.cpp,v 1.6 2023/06/04 09:26:35 ryoon Exp $
+$NetBSD: patch-toolkit_xre_glxtest.cpp,v 1.7 2023/06/14 16:22:18 ryoon Exp $
 
 * Do not test Linux-specific entry for non-Linux.
 
---- toolkit/xre/glxtest.cpp.orig	2023-04-14 16:28:10.000000000 +0000
-+++ toolkit/xre/glxtest.cpp
-@@ -289,11 +289,15 @@ static void close_logging() {
- #define PCI_BASE_CLASS_DISPLAY 0x03
- 
+--- toolkit/xre/glxtest/glxtest.cpp.orig	2023-05-25 21:19:41.000000000 +0000
++++ toolkit/xre/glxtest/glxtest.cpp
+@@ -195,11 +195,15 @@ extern "C" {
  static void get_pci_status() {
+   log("GLX_TEST: get_pci_status start\n");
+ 
 +#if defined(__linux__)
    if (access("/sys/bus/pci/", F_OK) != 0 &&
        access("/sys/bus/pci_express/", F_OK) != 0) {
