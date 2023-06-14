@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3831 2023/06/14 15:02:44 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3832 2023/06/14 15:39:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5316,3 +5316,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/py-rich to 13.4.2 [adam 2023-06-14]
 	Updated graphics/tiff to 4.5.1 [gdt 2023-06-14]
 	Updated devel/cvs-for-gits to 20230614 [schmonz 2023-06-14]
+	Updated devel/py-stem to 1.8.2 [adam 2023-06-14]
+	Updated lang/py-libcst to 1.0.1 [adam 2023-06-14]
