@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2023/03/25 22:54:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/14 09:43:50 abs Exp $
 
-DISTNAME=	slim-1.3.6
-PKGREVISION=	11
+DISTNAME=	slim-1.4.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim.berlios/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim-fork/}
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://github.com/iwamatsu/slim
+HOMEPAGE=	https://slim-fork.sourceforge.io/
 COMMENT=	Simple login manager
 LICENSE=	gnu-gpl-v2
 
@@ -32,14 +31,21 @@ SUBST_VARS.paths+=	X11BASE
 
 .include "../../mk/bsd.prefs.mk"
 
+# Possible todos
+# - Install adjusted xinitrc.sample which uses ~/.xsession if present
+# - Adjust CMakeLists.txt to find fontconfig
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/xinitrc.sample ${DESTDIR}${PREFIX}/share/examples/slim
+
 .if ${OPSYS} == "NetBSD"
 # Drops the ability to pass theme as %session param to .xinitrc
-SLIM_LOGIN_CMD?=	/bin/sh - /etc/X11/xdm/Xsession
-SLIM_XSERVER_ARGUMENTS?=vt05 -noretro
+SLIM_LOGIN_CMD?=		/bin/sh - /etc/X11/xdm/Xsession
+SLIM_XSERVER_ARGUMENTS?=	vt05 -noretro -nolisten tcp
 .else
-DEPENDS+=    bash-[0-9]*:../../shells/bash
-SLIM_LOGIN_CMD?=	@PREFIX@/bin/bash -login ~/.xinitrc %session
-SLIM_XSERVER_ARGUMENTS?=	
+DEPENDS+=			bash-[0-9]*:../../shells/bash
+SLIM_LOGIN_CMD?=		@PREFIX@/bin/bash -login ~/.xinitrc %session
+SLIM_XSERVER_ARGUMENTS?=	-nolisten tcp
 .endif
 
 CONF_FILES+=	share/examples/slim/slim.conf \

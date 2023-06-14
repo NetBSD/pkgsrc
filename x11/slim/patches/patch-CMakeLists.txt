@@ -1,61 +1,45 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2018/10/08 17:46:07 abs Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/06/14 09:43:50 abs Exp $
 
 Fix build.
 
---- CMakeLists.txt.orig	2013-10-01 22:38:05.000000000 +0000
+--- CMakeLists.txt.orig	2023-01-21 19:54:32.000000000 +0000
 +++ CMakeLists.txt
-@@ -21,11 +21,11 @@ set(SLIM_VERSION_MINOR "3")
- set(SLIM_VERSION_PATCH "6")
+@@ -23,7 +23,7 @@ set(SLIM_VERSION_PATCH "0")
  set(SLIM_VERSION "${SLIM_VERSION_MAJOR}.${SLIM_VERSION_MINOR}.${SLIM_VERSION_PATCH}")
  
--set(CMAKE_INSTALL_PREFIX "/usr/local" CACHE PATH "Installation Directory")
-+set(CMAKE_INSTALL_PREFIX "@PREFIX@" CACHE PATH "Installation Directory")
- set(PKGDATADIR "${CMAKE_INSTALL_PREFIX}/share/slim")
+ set(PKGDATADIR "${CMAKE_INSTALL_FULL_DATADIR}/slim")
 -set(SYSCONFDIR "/etc")
 +set(SYSCONFDIR "@PKG_SYSCONFDIR@")
- set(LIBDIR "/lib")
--set(MANDIR "${CMAKE_INSTALL_PREFIX}/share/man")
-+set(MANDIR "${CMAKE_INSTALL_PREFIX}/man")
  
  set(SLIM_DEFINITIONS)
  if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" OR
-@@ -104,13 +104,13 @@ find_package(PNG REQUIRED)
- find_package(ZLIB REQUIRED)
+@@ -96,13 +96,13 @@ find_package(JPEG REQUIRED)
+ find_package(PNG REQUIRED)
  
  # Fontconfig
 -set(FONTCONFIG_DIR ${CMAKE_MODULE_PATH})
 -find_package(FONTCONFIG REQUIRED)
 -if(FONTCONFIG_FOUND)
 -	message("\tFontConfig Found")
--	target_link_libraries(${PROJECT_NAME} ${FONTCONFIG_LIBRARY})
+-	target_link_libraries(slim ${FONTCONFIG_LIBRARY})
 -	include_directories(${FONTCONFIG_INCLUDE_DIR})
 -endif(FONTCONFIG_FOUND)
 +#set(FONTCONFIG_DIR ${CMAKE_MODULE_PATH})
 +#find_package(FONTCONFIG REQUIRED)
 +#if(FONTCONFIG_FOUND)
-+	#message("\tFontConfig Found")
-+	#target_link_libraries(${PROJECT_NAME} ${FONTCONFIG_LIBRARY})
-+	#include_directories(${FONTCONFIG_INCLUDE_DIR})
++#	message("\tFontConfig Found")
++#	target_link_libraries(slim ${FONTCONFIG_LIBRARY})
++#	include_directories(${FONTCONFIG_INCLUDE_DIR})
 +#endif(FONTCONFIG_FOUND)
  
  # PAM
  if(USE_PAM)
-@@ -221,7 +221,9 @@ endif(BUILD_SLIMLOCK)
- ####### install
- # slim
- install(TARGETS slim RUNTIME DESTINATION bin)
-+if(BUILD_SLIMLOCK)
- install(TARGETS slimlock RUNTIME DESTINATION bin)
-+endif(BUILD_SLIMLOCK)
+@@ -235,7 +235,7 @@ endif (BUILD_SHARED_LIBS)
+ install(FILES slim.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
  
- if (BUILD_SHARED_LIBS)
- 	set_target_properties(libslim PROPERTIES
-@@ -238,7 +240,7 @@ endif (BUILD_SHARED_LIBS)
- install(FILES slim.1 DESTINATION ${MANDIR}/man1/)
- install(FILES slimlock.1 DESTINATION ${MANDIR}/man1/)
- # configure
+ # configure - in theory we should use CMAKE_INSTALL_SYSCONFDIR but that doesn't work
 -install(FILES slim.conf DESTINATION ${SYSCONFDIR})
 +install(FILES slim.conf DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/slim/)
- # systemd service file
- if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
- 	install(FILES slim.service DESTINATION ${LIBDIR}/systemd/system)
+ 
+ # systemd service file - commented out as broken - not all Linux uses systemd!
+ #if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
