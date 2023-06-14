@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2023/05/23 23:19:57 bacon Exp $
+# $NetBSD: Makefile,v 1.89 2023/06/14 21:28:54 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -22,6 +22,7 @@ SUBDIR+=	canu
 SUBDIR+=	cdhit
 SUBDIR+=	chemical-mime-data
 SUBDIR+=	chemtool
+SUBDIR+=	chip-seq
 SUBDIR+=	clustalw
 SUBDIR+=	coalesce
 SUBDIR+=	coordgenlibs
