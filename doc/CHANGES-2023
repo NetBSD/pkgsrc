@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3833 2023/06/14 16:22:55 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.3834 2023/06/14 16:23:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5319,3 +5319,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-stem to 1.8.2 [adam 2023-06-14]
 	Updated lang/py-libcst to 1.0.1 [adam 2023-06-14]
 	Updated www/firefox to 114.0.1 [ryoon 2023-06-14]
+	Updated www/firefox-l10n to 114.0.1 [ryoon 2023-06-14]
