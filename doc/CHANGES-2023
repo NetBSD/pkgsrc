@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3828 2023/06/14 09:49:59 abs Exp $
+$NetBSD: CHANGES-2023,v 1.3829 2023/06/14 12:25:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5312,3 +5312,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ccache to 4.8.2 [adam 2023-06-14]
 	Updated www/py-werkzeug to 2.3.6 [adam 2023-06-14]
 	Updated x11/slim to 1.4.0 [abs 2023-06-14]
+	Updated misc/py-platformdirs to 3.5.3 [adam 2023-06-14]
+	Updated comms/py-rich to 13.4.2 [adam 2023-06-14]
