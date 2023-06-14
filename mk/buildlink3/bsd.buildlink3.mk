@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.259 2023/06/08 22:59:38 riastradh Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.260 2023/06/14 11:25:59 riastradh Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -346,12 +346,12 @@ _BLNK_PKG_DBDIR.${_pkg_}?=	_BLNK_PKG_DBDIR.${_pkg_}_not_found
 _BLNK_PKG_INFO.${_pkg_}?=	${TRUE}
 BUILDLINK_PKGNAME.${_pkg_}?=	${_pkg_}
 # Usual systems has builtin packages in /usr
-.    if exists(/usr)
+.    if exists(${_CROSS_DESTDIR:U}/usr)
 BUILDLINK_PREFIX.${_pkg_}?=	/usr
 # Haiku OS has posix packages in /boot/sytem/develop (or /boot/common)
-.    elif exists(/boot/system/develop)
+.    elif exists(${_CROSS_DESTDIR:U}/boot/system/develop)
 BUILDLINK_PREFIX.${_pkg_}?=	/boot/system/develop
-.    elif exists(/boot/common)
+.    elif exists(${_CROSS_DESTDIR:U}/boot/common)
 BUILDLINK_PREFIX.${_pkg_}?=	/boot/common
 .    else
 # XXX: elsewhere?
@@ -464,7 +464,7 @@ BUILDLINK_LIBS+=	${_flag_}
      !empty(BUILDLINK_AUTO_DIRS.${_pkg_}:M[yY][eE][sS])
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_INCDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
-.      if exists(${_dir_})
+.      if exists(${_CROSS_DESTDIR:U}${_dir_})
 .        if empty(BUILDLINK_CPPFLAGS:M-I${_dir_})
 BUILDLINK_CPPFLAGS+=	-I${_dir_}
 .        endif
@@ -473,7 +473,7 @@ BUILDLINK_CPPFLAGS+=	-I${_dir_}
 .  endif
 .  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
-.      if exists(${_dir_})
+.      if exists(${_CROSS_DESTDIR:U}${_dir_})
 .        if empty(BUILDLINK_LDFLAGS:M-L${_dir_})
 BUILDLINK_LDFLAGS+=	-L${_dir_}
 .        endif
@@ -482,7 +482,7 @@ BUILDLINK_LDFLAGS+=	-L${_dir_}
 .  endif
 .  if !empty(BUILDLINK_RPATHDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
-.      if exists(${_dir_})
+.      if exists(${_CROSS_DESTDIR:U}${_dir_})
 .        if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${_dir_})
 BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${_dir_}
 .        endif
@@ -499,7 +499,7 @@ BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${_dir_}
 .for _pkg_ in ${_BLNK_PACKAGES}
 .  if !empty(BUILDLINK_RPATHDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${LOCALBASE}\//}
-.      if exists(${_dir_})
+.      if exists(${_CROSS_DESTDIR:U}${_dir_})
 .        if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${_dir_})
 BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${_dir_}
 .        endif
@@ -881,7 +881,7 @@ _CWRAPPERS_TRANSFORM+=	I:${_dir_}/:
 .for _pkg_ in ${_BLNK_PACKAGES}
 .  if !empty(BUILDLINK_LIBDIRS.${_pkg_})
 .    for _dir_ in ${BUILDLINK_LIBDIRS.${_pkg_}}
-.      if exists(${BUILDLINK_PREFIX.${_pkg_}}/${_dir_})
+.      if exists(${_CROSS_DESTDIR:U}${BUILDLINK_PREFIX.${_pkg_}}/${_dir_})
 _BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}/${_dir_}
 .      endif
 .    endfor
