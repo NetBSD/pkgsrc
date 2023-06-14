@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2023/04/19 08:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.80 2023/06/14 10:29:33 riastradh Exp $
 
 DISTNAME=	fossil-src-2.21
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib:Q}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
 LDFLAGS.Darwin+=	-liconv
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+.endif
 
 .include "options.mk"
 
