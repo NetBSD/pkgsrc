@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.148 2023/03/28 19:57:06 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.149 2023/06/14 11:06:46 riastradh Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -172,7 +172,7 @@ PYPACKAGE=				python${_PYTHON_VERSION}
 PYVERSSUFFIX=				${_PYTHON_VERSION:C/^([0-9])/\1./1}
 BUILDLINK_API_DEPENDS.${PYPACKAGE}?=	${PYPACKAGE}>=${PYVERSSUFFIX}
 PYPKGSRCDIR=				../../lang/${PYPACKAGE}
-PYDEPENDENCY=				${BUILDLINK_API_DEPENDS.${PYPACKAGE}}:${PYPKGSRCDIR}
+PYDEPENDENCY=				${BUILDLINK_API_DEPENDS.${PYPACKAGE}:=:${PYPKGSRCDIR}}
 PYPKGPREFIX=				py${_PYTHON_VERSION}
 .endif
 .if !empty(_PYTHON_VERSION:M3*)
