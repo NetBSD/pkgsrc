@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/18 14:51:17 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/14 09:43:50 abs Exp $
 bin/slim
 lib/libslim.so
 lib/libslim.so.${PKGVERSION}
 man/man1/slim.1
-man/man1/slimlock.1
 share/examples/slim/slim.conf
+share/examples/slim/xinitrc.sample
 share/slim/themes/default/background.jpg
 share/slim/themes/default/panel.png
 share/slim/themes/default/slim.theme
+share/slim/themes/original/background.jpg
+share/slim/themes/original/panel.png
+share/slim/themes/original/slim.theme
