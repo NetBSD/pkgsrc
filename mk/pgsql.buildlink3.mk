@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.61 2023/03/06 13:16:25 wiz Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.62 2023/06/14 11:26:14 riastradh Exp $
 #
 # User-settable variables:
 #
@@ -41,35 +41,35 @@ PG_LIB_EXT=so
 
 # check what is installed
 .if ${OPSYS} == "Darwin"
-.  if exists(${LOCALBASE}/lib/libecpg.6.15.dylib)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.15.dylib)
 _PGSQL_VERSION_15_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.6.14.dylib)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.14.dylib)
 _PGSQL_VERSION_14_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.6.13.dylib)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.13.dylib)
 _PGSQL_VERSION_13_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.6.12.dylib)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.12.dylib)
 _PGSQL_VERSION_12_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.6.11.dylib)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.11.dylib)
 _PGSQL_VERSION_11_INSTALLED=	yes
 .  endif
 .else
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.15)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.15)
 _PGSQL_VERSION_15_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.14)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.14)
 _PGSQL_VERSION_14_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.13)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.13)
 _PGSQL_VERSION_13_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.12)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.12)
 _PGSQL_VERSION_12_INSTALLED=	yes
 .  endif
-.  if exists(${LOCALBASE}/lib/libecpg.so.6.11)
+.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.11)
 _PGSQL_VERSION_11_INSTALLED=	yes
 .  endif
 .endif
