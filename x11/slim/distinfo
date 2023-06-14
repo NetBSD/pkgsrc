@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2023/03/15 13:39:16 abs Exp $
+$NetBSD: distinfo,v 1.11 2023/06/14 09:43:50 abs Exp $
 
-BLAKE2s (slim-1.3.6.tar.gz) = 45b562196e1253a1a341b821c866f4d0db9c747c73fda215cac52097af77ed2c
-SHA512 (slim-1.3.6.tar.gz) = 345b1dee5d6f0c3716dfa7c5c16274adbf18586bdaaa6af4f310e24c5a61f79a297ffac921a5ba545523317e9fe120916df226c36b9c9b49c2ac9c1ca21dee0c
-Size (slim-1.3.6.tar.gz) = 232547 bytes
-SHA1 (patch-CMakeLists.txt) = 8eaeba1bb48bcdb825a3809feefb62b7182fde42
-SHA1 (patch-panel.cpp) = 51f87c90214cbc55fd5628f7d852d6287d763903
-SHA1 (patch-slim.conf) = 3bc88e703e002801e757c27c778b0e79f0cb0ad6
+BLAKE2s (slim-1.4.0.tar.gz) = 92dcdcdab082c4aaaeecffe62b2dba939959fef4983232df0b2258542927b48e
+SHA512 (slim-1.4.0.tar.gz) = 2ef38d39e2d5186f9342161d99740b0c8cd87f234deaf550ca1528c9a61c052d26123c7da26f4a0a5e658d01cb200b115cf7879d349ed51a6e8c729ee3fdf77f
+Size (slim-1.4.0.tar.gz) = 530318 bytes
+SHA1 (patch-CMakeLists.txt) = c922b9cbf6293d21a0f9ab9b3bf2c54c657a2879
+SHA1 (patch-slim.conf) = d2b80700fd4227c350d63eba02e093099437ab25
