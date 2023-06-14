@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.255 2023/06/07 14:40:13 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.256 2023/06/14 16:22:18 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -19,8 +19,9 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_LANGUAGES+=		c c++
 
-# ERROR: Only GCC 7.1 or newer is supported (found version 5.5.0).
-GCC_REQD+=		7
+# XXX: As of 114.0.2
+# For nested constant initializer support in rlbox, requires 8.
+GCC_REQD+=		8
 
 TOOL_DEPENDS+=		cbindgen>=0.24.3:../../devel/cbindgen
 
@@ -34,6 +35,9 @@ CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
 TOOL_DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+# malloc_usable_size()
+LDFLAGS.NetBSD+=	-ljemalloc
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
@@ -132,8 +136,19 @@ CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
-SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+SQLITE3OPTFLAG=		'-O0',
+.else
+SQLITE3OPTFLAG=		# empty
+.endif
+SUBST_CLASSES+=				sqlite3-opt
+SUBST_STAGE.sqlite3-opt=		pre-configure
+SUBST_MESSAGE.sqlite3-opt=		Fixing segfault in libmozsqlite3.so
+SUBST_FILES.sqlite3-opt+=		${MOZILLA_DIR}third_party/sqlite3/src/moz.build
+SUBST_VARS.sqlite3-opt+=		SQLITE3OPTFLAG
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or rearlier.
 RUST_MAKE_JOBS=		# empty by default
