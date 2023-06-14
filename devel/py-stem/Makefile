@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/11/28 19:07:30 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/14 15:35:31 adam Exp $
 
-DISTNAME=	stem-1.8.1
+DISTNAME=	stem-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stem/}
@@ -12,12 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
-
-DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
+TEST_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
+TEST_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
