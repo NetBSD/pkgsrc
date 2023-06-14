@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/08 12:24:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/14 10:30:11 riastradh Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (gitk)
@@ -27,6 +27,13 @@ WISH_APP=	Wish
 WISH_APP=	Wish Shell
 .  endif
 PLIST_SUBST+=	WISH_APP=${WISH_APP:Q}
+.endif
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+ALL_ENV+=		gitexecdir=${PREFIX:Q}/libexec/git-core	# XXX
+CONFIGURE_ENV.NetBSD+=	ac_cv_iconv_omits_bom=no
+CONFIGURE_ENV.NetBSD+=	ac_cv_fread_reads_directories=yes
+CONFIGURE_ENV.NetBSD+=	ac_cv_snprintf_returns_bogus=no
 .endif
 
 .include "../../devel/git/Makefile.common"
