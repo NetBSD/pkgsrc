@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.558 2023/06/04 09:26:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.559 2023/06/14 16:22:18 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		113.0
-MOZ_BRANCH_MINOR=	.2
+MOZ_BRANCH=		114.0
+MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -69,6 +69,9 @@ LDFLAGS.SunOS+=		-lm
 
 # XXX not sure how to test this! likely unnecessary
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
+# Should revisit to complete mprotect support.
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
