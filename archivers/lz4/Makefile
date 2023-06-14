@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/08/16 13:02:56 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/14 11:07:42 riastradh Exp $
 
 DISTNAME=	lz4-1.9.4
 CATEGORIES=	archivers
@@ -17,5 +17,11 @@ TEST_TARGET=		test
 
 # Needed for nanosleep() on Solaris 10, PR pkg/56226
 LDFLAGS.SunOS+=		-lrt
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+MAKE_FLAGS+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
