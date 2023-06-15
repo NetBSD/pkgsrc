@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1011 2023/05/30 11:55:26 markd Exp $
+# $NetBSD: Makefile,v 1.1012 2023/06/15 11:47:56 mef Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -27,6 +27,7 @@ SUBDIR+=	R-ggplot2
 SUBDIR+=	R-ggtern
 SUBDIR+=	R-ggthemes
 SUBDIR+=	R-gridExtra
+SUBDIR+=	R-interp
 SUBDIR+=	R-isoband
 SUBDIR+=	R-jpeg
 SUBDIR+=	R-labeling
