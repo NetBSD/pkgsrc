@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/21 13:39:34 mef Exp $
+$NetBSD: distinfo,v 1.2 2023/06/15 10:39:51 mef Exp $
 
-BLAKE2s (R/bdsmatrix_1.3-4.tar.gz) = ea63735da6f39af331caecd624d5e9d5e649c7355a41a45d73d4d8850b05fad4
-SHA512 (R/bdsmatrix_1.3-4.tar.gz) = 951a670b7f028c16cf80c37d2d7a80e0e85eae94e4038ef2655e4bcda3387f52d527a89153bddfd0fbd39a927f2364239c055c64c41a725f30aac7947e46b85d
-Size (R/bdsmatrix_1.3-4.tar.gz) = 47961 bytes
+BLAKE2s (R/bdsmatrix_1.3-6.tar.gz) = 01d917451676531e4255152ba641c98a49e5d83dc565ba1eabb1241406dd64cb
+SHA512 (R/bdsmatrix_1.3-6.tar.gz) = 5d4f0836f62e41024d035fe84c32dc1258ee94b9b0703b7de05a2933ac2693940f525526ec40d6fdf33d0952270545037e0dd003ee030b3bba1bfdf4bee9e7ee
+Size (R/bdsmatrix_1.3-6.tar.gz) = 48147 bytes
