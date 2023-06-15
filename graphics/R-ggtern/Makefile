@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/08/28 07:12:05 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/15 07:40:26 mef Exp $
 
 R_PKGNAME=	ggtern
-R_PKGVER=	3.3.5
+R_PKGVER=	3.4.2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
