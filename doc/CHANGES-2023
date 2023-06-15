@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3863 2023/06/15 14:47:32 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.3864 2023/06/15 17:32:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-Rcmdr to 2.8.0 [mef 2023-06-15]
 	Updated devel/py-nihtest to 1.1.0 [wiz 2023-06-15]
 	Updated pkgtools/pkglint to 23.1.12 [rillig 2023-06-15]
+	Updated devel/asdf to 0.12.0 [schmonz 2023-06-15]
