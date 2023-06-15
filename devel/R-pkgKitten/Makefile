@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/11/29 10:30:33 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/15 11:06:53 mef Exp $
 
 R_PKGNAME=	pkgKitten
-R_PKGVER=	0.2.2
+R_PKGVER=	0.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
