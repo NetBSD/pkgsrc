@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3844 2023/06/15 07:10:27 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3845 2023/06/15 07:17:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5328,3 +5328,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/peak-classifier to 0.1.4.8 [bacon 2023-06-14]
 	Added biology/chip-seq version 1.1 [bacon 2023-06-14]
 	Updated devel/py-nihtest to 1.0.0nb1 [wiz 2023-06-15]
+	Updated audio/fluidsynth to 2.3.3 [adam 2023-06-15]
+	Updated devel/py-filelock to 3.12.2 [adam 2023-06-15]
