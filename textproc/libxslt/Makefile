@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2023/06/06 12:42:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.127 2023/06/15 23:41:52 riastradh Exp $
 
 .include "Makefile.common"
 
@@ -16,6 +16,19 @@ PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 TEST_TARGET=		check
 
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# Both libgcrypt and libxml2 install scripts in the _target_ system,
+# that are expected to be run on the _build_ system when compiling
+# downstream dependencies like libxslt.  I don't see a way to use
+# pkg-config or anything reasonable to override this, so, we do the
+# nonsense thing instead of executing cross-compiled `binaries' on the
+# build system.
+CONFIGURE_ARGS+=	LIBGCRYPT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/libgcrypt-config
+CONFIGURE_ARGS+=	XML_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/xml2-config
+.endif
 
 .include "../../security/libgcrypt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
