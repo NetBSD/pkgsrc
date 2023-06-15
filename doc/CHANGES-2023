@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3854 2023/06/15 11:20:57 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3855 2023/06/15 11:30:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5339,3 +5339,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-RcppArmadillo to 0.12.4.0.0 [mef 2023-06-15]
 	Updated math/R-aplpack to 1.3.5 [mef 2023-06-15]
 	Updated geography/R-deldir to 1.0.9 [mef 2023-06-15]
+	Updated misc/stellarium to 23.1 [adam 2023-06-15]
+	Updated devel/py-modulegraph to 0.19.5 [adam 2023-06-15]
