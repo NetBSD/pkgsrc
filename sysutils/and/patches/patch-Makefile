@@ -1,0 +1,81 @@
+$NetBSD: patch-Makefile,v 1.1 2023/06/15 09:55:25 hauke Exp $
+
+Use pkgsrc  paths and build options
+
+--- Makefile.orig	2005-03-27 19:39:37.000000000 +0000
++++ Makefile
+@@ -22,11 +22,15 @@ INITSCRIPT=and.init
+ # Target directories. Examples for common configurations are
+ # given below.
+ #
+-PREFIX=/usr/local
+-INSTALL_ETC=$(PREFIX)/etc
+-INSTALL_INITD=/etc/init.d
+-INSTALL_SBIN=$(PREFIX)/sbin
+-INSTALL_MAN=$(PREFIX)/man
++#PREFIX=/usr/local
++#INSTALL_ETC=$(PREFIX)/etc
++#INSTALL_INITD=/etc/init.d
++#INSTALL_SBIN=$(PREFIX)/sbin
++#INSTALL_MAN=$(PREFIX)/man
++
++# pkgsrc
++PREFIX=@PREFIX@
++INSTALL_ETC=@PKG_SYSCONFDIR@
+ 
+ # typical OpenBSD or FreeBSD configuration
+ #PREFIX=/usr/local
+@@ -91,53 +95,6 @@ MANPAGES=and.8 and.conf.5 and.priorities
+ #
+ ARCH=$(shell uname)
+ 
+-#
+-# Architecture-dependent settings: ANSI C compiler and linker
+-#
+-ifeq (${ARCH},Linux)
+-  CC = gcc -ansi -pedantic -Wall -g
+-  LD = gcc
+-  LIBS =
+-else
+-ifeq (${ARCH},OSF1)
+-  CC = cc -ansi
+-  LD = cc
+-  LIBS =
+-else
+-ifeq (${ARCH},OpenBSD)
+-  CC = gcc
+-  LD = gcc
+-  LIBS = -lkvm
+-else
+-ifeq (${ARCH},FreeBSD)
+-  CC = gcc -Wall
+-  LD = gcc
+-  LIBS = -lkvm
+-else
+-ifeq (${ARCH},SunOS)
+-  CC = cc -D__SunOS__
+-  LD = cc
+-else
+-ifeq (${ARCH},IRIX)
+-  CC = cc
+-  LD = cc
+-else
+-ifeq (${ARCH},IRIX64)
+-  CC = cc
+-  LD = cc
+-else
+-  # unsupported architecture
+-  CC = false
+-  LD = false
+-  LIBS =
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-
+ 
+ #
+ # Build the auto-nice daemon.

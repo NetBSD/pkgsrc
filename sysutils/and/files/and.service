@@ -1,0 +1,17 @@
+# Linux systemd service definition
+
+[Unit]
+Description=Auto Nice Daemon
+# We need group information from YP
+Requires=rpcbind.service domainname.service
+After=rpcbind.service domainname.service network.target
+
+[Service]
+Type=forking
+GuessMainPID=yes
+ExecStart=@PREFIX@/sbin/and
+ExecReload=/bin/kill -1 -- $MAINPID
+ExecStop=/bin/kill -- $MAINPID
+
+[Install]
+WantedBy=multi-user.target
