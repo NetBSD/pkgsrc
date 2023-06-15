@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/21 15:27:28 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/15 12:53:56 mef Exp $
 
 R_PKGNAME=	insight
-R_PKGVER=	0.17.1
+R_PKGVER=	0.19.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easy Access to Model Information for Various Model Objects
