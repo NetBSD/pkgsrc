@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.58 2023/04/07 09:14:48 adam Exp $
+$NetBSD: distinfo,v 1.59 2023/06/15 23:41:31 riastradh Exp $
 
 BLAKE2s (libgpg-error-1.47.tar.bz2) = 91e8ad1fa6a7f42b68a9dca5b285c90bf9f3def9bdae1c23767c9bc29e5658fd
 SHA512 (libgpg-error-1.47.tar.bz2) = bbb4b15dae75856ee5b1253568674b56ad155524ae29a075cb5b0a7e74c4af685131775c3ea2226fff2f84ef80855e77aa661645d002b490a795c7ae57b66a30
 Size (libgpg-error-1.47.tar.bz2) = 1020862 bytes
 SHA1 (patch-src_estream.c) = 0502a55403062abeab22c83a6d919c57ff1c5d82
+SHA1 (patch-src_syscfg_lock-obj-pub.netbsd.h) = 6f00890bc3d821da9b715c00a8f068fa4964df9e
