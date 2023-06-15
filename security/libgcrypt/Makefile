@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/04/07 09:15:55 adam Exp $
+# $NetBSD: Makefile,v 1.109 2023/06/15 23:41:41 riastradh Exp $
 
 DISTNAME=	libgcrypt-1.10.2
 CATEGORIES=	security
@@ -31,6 +31,18 @@ SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 PKGCONFIG_OVERRIDE+=	src/libgcrypt.pc.in
 
 .include "options.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+
+# libgpg-error installs scripts in the _target_ system, that are
+# expected to be run on the _build_ system when compiling downstream
+# dependencies like libgcrypt.  I don't see a way to use pkg-config or
+# anything reasonable to override this, so, we do the nonsense thing
+# instead.
+CONFIGURE_ARGS+=	GPGRT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/gpgrt-config
+CONFIGURE_ARGS+=	GPG_ERROR_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/gpg-error-config
+.endif
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.13
 .include "../../security/libgpg-error/buildlink3.mk"
