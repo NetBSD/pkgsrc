@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/11 10:41:01 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/15 06:58:31 mef Exp $
 
 R_PKGNAME=	bslib
 R_PKGVER=	0.4.2
@@ -16,6 +16,7 @@ DEPENDS+=	R-magrittr>=2.0.1:../../devel/R-magrittr
 DEPENDS+=	R-memoise-[0-9]*:../../devel/R-memoise
 DEPENDS+=	R-rlang>=0.4.11:../../devel/R-rlang
 DEPENDS+=	R-sass>=0.4.0:../../www/R-sass
+DEPENDS+=	R-mime-[0-9]*:../../mail/R-mime
 
 TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
