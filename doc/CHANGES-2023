@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3858 2023/06/15 12:13:25 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3859 2023/06/15 12:37:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5344,3 +5344,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/R-interp version 1.1.4 [mef 2023-06-15]
 	Updated graphics/R-latticeExtra to 0.6.30 [mef 2023-06-15]
 	Updated misc/R-Hmisc to 5.1.0 [mef 2023-06-15]
+	Updated math/R-RcmdrMisc to 2.7.2 [mef 2023-06-15]
