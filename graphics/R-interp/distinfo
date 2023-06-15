@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/15 11:45:30 mef Exp $
+
+BLAKE2s (R/interp_1.1-4.tar.gz) = 93605bce0328c7f8fa32465cf39bcb665431a24d818edc6c3826e4f1c4711fd0
+SHA512 (R/interp_1.1-4.tar.gz) = 158dbad236c5c2a31ed900b5e741cee7c3494f757ed996285b08af4e16cb34bf69e2709324752028a1bfe52e5bf0b7ed492f7ccf4c1a1df54546547770d11f62
+Size (R/interp_1.1-4.tar.gz) = 1112571 bytes
