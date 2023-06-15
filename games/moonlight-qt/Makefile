@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/05/22 21:00:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/15 02:07:29 charlotte Exp $
 
 DISTNAME=	MoonlightSrc-4.3.1
 PKGNAME=	moonlight-qt-4.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=moonlight-stream/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ COMMENT=	GameStream client
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
