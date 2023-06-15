@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/09 15:57:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/15 06:10:33 wiz Exp $
 bin/nihtest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -31,3 +31,6 @@ ${PYSITELIB}/nihtest/__init__.py
 ${PYSITELIB}/nihtest/__init__.pyc
 ${PYSITELIB}/nihtest/__main__.py
 ${PYSITELIB}/nihtest/__main__.pyc
+man/man1/nihtest-${PYVERSSUFFIX}.1
+man/man1/nihtest-case-${PYVERSSUFFIX}.1
+man/man1/nihtest.conf-${PYVERSSUFFIX}.1

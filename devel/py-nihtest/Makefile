@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/06/10 03:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/15 06:10:33 wiz Exp $
 
 DISTNAME=	nihtest-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
 
@@ -15,8 +16,13 @@ TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} nihtest nihtest-${PYVERSSUFFIX} || ${TRUE}
+.for man in nihtest-case nihtest.conf nihtest
+	${INSTALL_DATA} ${WRKSRC}/manpages/${man}.mdoc ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${man}-${PYVERSSUFFIX}.1
+.endfor
 
 do-test:
 	${MKDIR} ${WRKSRC}/build
