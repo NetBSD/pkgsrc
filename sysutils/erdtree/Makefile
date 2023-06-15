@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/06/13 10:39:36 pin Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/15 07:09:35 pin Exp $
 
-DISTNAME=	erdtree-3.0.2
+DISTNAME=	erdtree-3.0.1
+# Newer versions require Rust-1.70 to build
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=solidiquis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
