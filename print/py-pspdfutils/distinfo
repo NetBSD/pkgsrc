@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/01 16:05:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/15 19:48:06 adam Exp $
 
-BLAKE2s (pspdfutils-3.0.3.tar.gz) = 2ed275e5528d9dab6bd4a20086e24d2ab5f95e4ba87cc0076630d2da17f95006
-SHA512 (pspdfutils-3.0.3.tar.gz) = 1bad9e14e6f4cf94f59622825b7bb2cbeac3f0ad3b90e1b19d36a70c62bfa3cfd2a87a099380a8777c7ce849056126189a818a03119c9051285f8a6939259fab
-Size (pspdfutils-3.0.3.tar.gz) = 1097116 bytes
+BLAKE2s (pspdfutils-3.0.4.tar.gz) = 6a772a5fb35064c7ca87aa897840b3a37eb7f7d1c134d41a178bc62a936d127c
+SHA512 (pspdfutils-3.0.4.tar.gz) = c4eb5c3602f5794fb74e4b7985c4d5bfb3bec363f20d04969b3474da0e746f8bd41454f3103fbbd3e2a90ef8b0cc9dfffb87506d29bb89e254fff15b7ce365b6
+Size (pspdfutils-3.0.4.tar.gz) = 1097252 bytes
