@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/03/17 11:19:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/15 17:32:09 schmonz Exp $
 
-DISTNAME=		asdf-0.11.3
+DISTNAME=		asdf-0.12.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -21,12 +21,12 @@ AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	do-configure
-SUBST_FILES.prefix=	lib/utils.bash lib/commands/reshim.bash
+SUBST_FILES.prefix=	lib/commands/reshim.bash
 SUBST_VARS.prefix=	PREFIX BASH
 
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	do-configure
-SUBST_FILES.lib=	bin/asdf lib/commands/*
+SUBST_FILES.lib=	bin/asdf lib/commands/*.bash
 SUBST_SED.lib=		-e 's|\$$(dirname "\$$(dirname "\$$0")")/lib|${PREFIX}/share/${PKGBASE}/lib|g'
 
 do-install:
@@ -44,10 +44,6 @@ do-install:
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/
 	${INSTALL_DATA} ${WRKSRC}/asdf.sh \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/
-	${INSTALL_DATA} ${WRKSRC}/lib/asdf.fish \
-		${DESTDIR}${PREFIX}/share/${PKGBASE}/lib/
-	${INSTALL_DATA} ${WRKSRC}/lib/asdf.sh \
-		${DESTDIR}${PREFIX}/share/${PKGBASE}/lib/
 	${INSTALL_DATA} ${WRKSRC}/lib/utils.bash \
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/lib/
 	${INSTALL_DATA} ${WRKSRC}/lib/commands/*.bash \
