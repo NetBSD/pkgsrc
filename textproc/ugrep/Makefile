@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/06/05 19:26:22 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/06/15 06:34:19 adam Exp $
 
 DISTNAME=	ugrep-3.12.1
 CATEGORIES=	textproc
@@ -12,9 +12,12 @@ LICENSE=	modified-bsd
 
 .include "options.mk"
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash:run gmake pkg-config
+GNU_CONFIGURE=	yes
+
+REPLACE_BASH+=	bin/ug+
+REPLACE_BASH+=	bin/ugrep+
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
