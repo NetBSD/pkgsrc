@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/21 15:27:28 mef Exp $
+$NetBSD: distinfo,v 1.5 2023/06/15 12:53:56 mef Exp $
 
-BLAKE2s (R/insight_0.17.1.tar.gz) = c2f481d336101c002e26a4f8b9b416ea6f630ce9091c1214fbfbfb26d7ebed5f
-SHA512 (R/insight_0.17.1.tar.gz) = 1d0998a7094c5aae1087b4f843b57515e80f4f57b15ba8c420e66939ed5dfd8274f520c69fc2e47c70a949d1347c880de2c9605b98a80e22925db212c33bbccb
-Size (R/insight_0.17.1.tar.gz) = 863795 bytes
+BLAKE2s (R/insight_0.19.2.tar.gz) = 27546bc02180e245ac4839c3c831f807e1efe13e610bb99f4c6447b3489b6e8c
+SHA512 (R/insight_0.19.2.tar.gz) = 05ca3c0552b6d33fb654c29c77379f546fd56836f853c919903298f840b07a2a02ab60c6f37d2a93a4e91fabe95b3c013b90e33910d3295069abf66857595839
+Size (R/insight_0.19.2.tar.gz) = 930723 bytes
