@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/09/20 02:57:34 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/15 11:52:16 mef Exp $
 
 R_PKGNAME=	latticeExtra
-R_PKGVER=	0.6-29
+R_PKGVER=	0.6-30
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-RColorBrewer>=1.0.5:../../math/R-RColorBrewer
 DEPENDS+=	R-jpeg-[0-9]*:../../graphics/R-jpeg
 DEPENDS+=	R-png-[0-9]*:../../graphics/R-png
+DEPENDS+=	R-interp-[0-9]*:../../graphics/R-interp
 
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
 TEST_DEPENDS+=	R-mapproj-[0-9]*:../../math/R-mapproj
