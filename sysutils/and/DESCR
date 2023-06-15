@@ -1,0 +1,4 @@
+The auto nice daemon will renice or even kill jobs according to a priority
+database, after they take up too much CPU time.
+
+You define what "too much" actually means.

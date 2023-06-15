@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/15 09:55:25 hauke Exp $
+man/man5/and.conf.5
+man/man5/and.priorities.5
+man/man8/and.8
+sbin/and
+share/examples/and/and.conf
+share/examples/and/and.init.debian
+share/examples/and/and.priorities
+share/examples/and/and.service
+share/examples/and/and.startup
