@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/09/20 23:38:08 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/15 12:37:20 mef Exp $
 
 R_PKGNAME=	RcmdrMisc
-R_PKGVER=	2.7-1
+R_PKGVER=	2.7-2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R Commander miscellaneous functions
