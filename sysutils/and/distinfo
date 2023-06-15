@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/06/15 09:55:25 hauke Exp $
+
+BLAKE2s (and-1.2.2.tar.gz) = 0b2c5970802a3698b0239be10227af29675ee370ca6088854b69bfb46b0a3550
+SHA512 (and-1.2.2.tar.gz) = f9ae5a6193a0029b6d1e6ce3c160635d39b152c49ad88b7ae686f3abf8ebcb5ec994edce5915a7f0eaa0f327c3ee7c4f0be2fc7c8bb01b7f374afdd594d6b609
+Size (and-1.2.2.tar.gz) = 29989 bytes
+SHA1 (patch-Makefile) = 78c44b93317d4f726e33c22a490995ec06eb269b
+SHA1 (patch-and-NetBSD.c) = ff29d9d34b2c5e0e3c6c1b58e7e71a42b0b5bddd
+SHA1 (patch-and.c) = 1dd220def1520ef2b3d967eb0c940e001a75c917

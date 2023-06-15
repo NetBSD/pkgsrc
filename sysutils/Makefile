@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1053 2023/06/13 13:15:05 bacon Exp $
+# $NetBSD: Makefile,v 1.1054 2023/06/15 09:55:25 hauke Exp $
 #
 
 COMMENT=	System utilities
@@ -30,6 +30,7 @@ SUBDIR+=	amanda-plot
 SUBDIR+=	amanda-server
 SUBDIR+=	amlogic-meson-fwtools
 SUBDIR+=	amtterm
+SUBDIR+=	and
 SUBDIR+=	ansible
 SUBDIR+=	ansible-core
 SUBDIR+=	ansible-lint
