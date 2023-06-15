@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3851 2023/06/15 11:07:04 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3852 2023/06/15 11:11:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5336,3 +5336,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/R-jpeg to 0.1.10 [mef 2023-06-15]
 	Updated math/R-VGAM to 1.1.8 [mef 2023-06-15]
 	Updated devel/R-pkgKitten to 0.2.3 [mef 2023-06-15]
+	Updated math/R-RcppArmadillo to 0.12.4.0.0 [mef 2023-06-15]
