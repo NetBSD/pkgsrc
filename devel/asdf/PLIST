@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/27 16:11:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/15 17:32:09 schmonz Exp $
 bin/asdf
 share/asdf/asdf.elv
 share/asdf/asdf.fish
 share/asdf/asdf.nu
 share/asdf/asdf.sh
 share/asdf/help.txt
-share/asdf/lib/asdf.fish
-share/asdf/lib/asdf.sh
 share/asdf/lib/asdf_updates_disabled
 share/asdf/lib/commands/command-current.bash
 share/asdf/lib/commands/command-env.bash
