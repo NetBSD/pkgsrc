@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/15 10:49:00 mef Exp $
 
-BLAKE2s (R/jpeg_0.1-9.tar.gz) = 0811ebafb2f9453d3549aee61eade736d7454438ef9b70d49fe8e8d4364959d4
-SHA512 (R/jpeg_0.1-9.tar.gz) = d023d926b6670d93789f18155a04597db1a53b84251c73931e71c2e619799cc8e0f3823f0d23c65d1ec6454ce1fd77a31b96735053e0de76bb61c0fc1b58dc1a
-Size (R/jpeg_0.1-9.tar.gz) = 18596 bytes
+BLAKE2s (R/jpeg_0.1-10.tar.gz) = 8590c86012df45e4d6733af0a203145480680b2eab2a0f161a2e4d646f76f7ae
+SHA512 (R/jpeg_0.1-10.tar.gz) = 6ea333577d70b7d3a128d3635217db84a539283c37791c6177a077a85be63ab219a75db5e9ca2a2c488bde4a626d474f9185de6ccd84cfc3b50150044edd2400
+Size (R/jpeg_0.1-10.tar.gz) = 18667 bytes
