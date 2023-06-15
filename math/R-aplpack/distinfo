@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/15 10:52:04 mef Exp $
 
-BLAKE2s (R/aplpack_1.3.2.tar.gz) = db790513750bc367e1828dcb0c174396022b0c8568266c3c81baae3b11c64d35
-SHA512 (R/aplpack_1.3.2.tar.gz) = 0cd80eec9b79717458c927634ca81f62ed8451684dc6557705f1922e44c9dfcc8f41dba4c18ef200637e4710384586d52bbbfbd1ac7a4569a958b1a4cef708db
-Size (R/aplpack_1.3.2.tar.gz) = 3423583 bytes
+BLAKE2s (R/aplpack_1.3.5.tar.gz) = 691a07e02d8d4cdd9e41428aa79cd556f9f36309e981ec4a1e4c695cc466ad15
+SHA512 (R/aplpack_1.3.5.tar.gz) = ed0b0741b7edecea876f1c7da30a9c16ff514fb5be2a6da9af6ab836b6af07b48905a445c13afd30d600d6f4894818247da0f73baadc45895ebcebac8718b911
+Size (R/aplpack_1.3.5.tar.gz) = 3437817 bytes
