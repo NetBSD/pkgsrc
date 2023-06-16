@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3865 2023/06/15 20:04:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3866 2023/06/16 04:58:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5352,3 +5352,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/asdf to 0.12.0 [schmonz 2023-06-15]
 	Updated print/py-pspdfutils to 3.0.4 [adam 2023-06-15]
 	Updated textproc/py-pdf to 3.9.1 [adam 2023-06-15]
+	Updated shells/oh-my-posh to 17.3.0 [pin 2023-06-16]
