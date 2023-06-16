@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3876 2023/06/16 20:59:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3877 2023/06/16 21:00:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5367,3 +5367,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/icu to 73.2 [adam 2023-06-16]
 	Updated graphics/py-pygraphviz to 1.11 [adam 2023-06-16]
 	Updated graphics/SDL2_image to 2.6.3 [wiz 2023-06-16]
+	Updated time/khal to 0.11.2 [wiz 2023-06-16]
