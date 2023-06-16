@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3883 2023/06/16 21:34:44 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3884 2023/06/16 21:40:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5376,3 +5376,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cppy to 1.2.1 [wiz 2023-06-16]
 	Updated math/py-kiwisolver to 1.4.4 [wiz 2023-06-16]
 	Updated sysutils/broot to 1.23.0 [pin 2023-06-16]
+	Updated net/samba4 to 4.18.3 [wiz 2023-06-16]
