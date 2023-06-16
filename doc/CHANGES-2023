@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3869 2023/06/16 08:05:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3870 2023/06/16 08:08:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.40.0 [adam 2023-06-16]
 	Updated devel/py-maturin to 1.1.0 [adam 2023-06-16]
 	Updated x11/xorgproto to 2023.2 [wiz 2023-06-16]
+	Updated textproc/json2tsv to 1.1 [leot 2023-06-16]
