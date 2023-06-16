@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/06/16 23:37:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/16 23:42:21 wiz Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -19,7 +19,6 @@ CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -33,7 +32,6 @@ CONFIGURE_ARGS+=	--with-components=libcups
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--with-tls=gnutls
-CONFIGURE_ARGS+=	--enable-libtool_unsupported=${LIBTOOL}
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
@@ -68,7 +66,7 @@ SUBST_STAGE.piefix=	pre-configure
 PKGCONFIG_OVERRIDE+=		cups.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-AUTOCONF_REQD=		2.71
+AUTOCONF_REQD+=		2.71
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
 
