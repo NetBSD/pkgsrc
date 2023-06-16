@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3875 2023/06/16 16:56:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3876 2023/06/16 20:59:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5366,3 +5366,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/py-geoip2 to 4.7.0 [adam 2023-06-16]
 	Updated textproc/icu to 73.2 [adam 2023-06-16]
 	Updated graphics/py-pygraphviz to 1.11 [adam 2023-06-16]
+	Updated graphics/SDL2_image to 2.6.3 [wiz 2023-06-16]
