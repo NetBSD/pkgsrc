@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6480 2023/04/26 15:48:37 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6481 2023/06/16 20:22:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7990,7 +7990,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/py-xmpppy to 0.6.3 [gdt 2021-10-21]
 	Updated sysutils/broot to 1.6.5 [pin 2021-10-21]
 	Updated sysutils/zoxide to 0.7.8 [pin 2021-10-21]
-	Updated graphics/graphviz to 2.49.2 [buildbox 2021-10-21]
+	Updated graphics/graphviz to 2.49.2 [schmonz 2021-10-21]
 	Added www/httpfile version 20151206 [schmonz 2021-10-21]
 	Updated net/fehqlibs to 19 [schmonz 2021-10-21]
 	Updated net/ucspi-tcp6 to 1.12.3nb2 [schmonz 2021-10-21]
@@ -9533,7 +9533,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/s6-dns to 2.3.5.3 [schmonz 2021-12-22]
 	Updated net/s6-networking to 2.5.1.0 [schmonz 2021-12-22]
 	Updated mail/smtpd-starttls-proxy to 0.0.1.1 [schmonz 2021-12-22]
-	Added net/prettyping version 1.0.1 [buildbox 2021-12-22]
+	Added net/prettyping version 1.0.1 [schmonz 2021-12-22]
 	Updated www/firefox to 95.0.1nb1 [ryoon 2021-12-22]
 	Updated devel/py-approvaltests to 3.3.2 [schmonz 2021-12-22]
 	Updated devel/py-tryton to 6.2.0 [mef 2021-12-22]
@@ -9645,7 +9645,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-configobj to 5.0.6nb3 [wiz 2021-12-31]
 	Updated devel/meld to 3.21.0nb10 [wiz 2021-12-31]
 	Updated net/mosquitto to 2.0.14 [triaxx 2021-12-31]
-	Updated sysutils/etckeeper to 1.18.14nb2 [buildbox 2021-12-31]
+	Updated sysutils/etckeeper to 1.18.14nb2 [schmonz 2021-12-31]
 	Updated sysutils/py-filetype to 1.0.9 [adam 2021-12-31]
 	Updated devel/py-yapf to 0.32.0 [adam 2021-12-31]
 	Removed sysutils/py-eliot17 [adam 2021-12-31]
