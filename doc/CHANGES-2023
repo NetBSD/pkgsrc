@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3867 2023/06/16 06:21:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3868 2023/06/16 06:49:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5354,3 +5354,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pdf to 3.9.1 [adam 2023-06-15]
 	Updated shells/oh-my-posh to 17.3.0 [pin 2023-06-16]
 	Updated x11/libX11 to 1.8.6 [wiz 2023-06-16]
+	Updated fonts/py-fonttools to 4.40.0 [adam 2023-06-16]
+	Updated devel/py-maturin to 1.1.0 [adam 2023-06-16]
