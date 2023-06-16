@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2023/06/06 12:41:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.89 2023/06/16 06:42:46 adam Exp $
 
-DISTNAME=	fonttools-4.39.4
+DISTNAME=	fonttools-4.40.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fonttools/fonttools
