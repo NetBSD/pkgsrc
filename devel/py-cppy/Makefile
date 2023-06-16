@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/16 21:24:59 wiz Exp $
 
-DISTNAME=	cppy-1.1.0
+DISTNAME=	cppy-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cppy/}
 
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nucleic/cppy
 COMMENT=	C++ headers for C extension development
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
