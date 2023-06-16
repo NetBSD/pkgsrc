@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/09/05 20:53:44 leot Exp $
+$NetBSD: distinfo,v 1.11 2023/06/16 08:08:47 leot Exp $
 
-BLAKE2s (json2tsv-1.0.tar.gz) = 19f08a1e5e4cc6a4ece75b347cdc3a4626a4ab98c50d4ad7c128b44777772691
-SHA512 (json2tsv-1.0.tar.gz) = 131ebbeec3bcb6dda4298eedd1258168fae171beb93c0047a3eec78b8af13296e50c2e36f8e13327e17ffb8ea432fbb5db02a4e2083f39b35242cbd5322baa69
-Size (json2tsv-1.0.tar.gz) = 8551 bytes
+BLAKE2s (json2tsv-1.1.tar.gz) = 3a1a7f40cdc8262b999dd79d4d199158f8a77b4b3a6edc39b4aa13bf85432ef4
+SHA512 (json2tsv-1.1.tar.gz) = 3166a32ad2ba09e1f54915322ccf68324c67486e5374045b2a70784dc4b97d7cc55af2d516cf4d011942fe18337005032cead10ddf8c7942cfb7c1af44294a8c
+Size (json2tsv-1.1.tar.gz) = 8687 bytes
