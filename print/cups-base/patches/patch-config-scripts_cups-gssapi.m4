@@ -1,15 +1,15 @@
-$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.3 2022/05/10 20:47:37 markd Exp $
+$NetBSD: patch-config-scripts_cups-gssapi.m4,v 1.4 2023/06/16 21:12:11 wiz Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- config-scripts/cups-gssapi.m4.orig	2022-01-27 11:11:42.000000000 +0000
+--- config-scripts/cups-gssapi.m4.orig	2023-06-06 12:55:36.000000000 +0000
 +++ config-scripts/cups-gssapi.m4
 @@ -30,31 +30,22 @@ AS_IF([test x$enable_gssapi = xyes], [
  	], [
  	    AC_MSG_RESULT([no])
  	])
--    ], [sunos*], [
+-    ], [sunos* | solaris*], [
 -	# Solaris has a non-standard krb5-config, don't use it!
 -	SAVELIBS="$LIBS"
 -	AC_CHECK_LIB([gss], [gss_display_status], [
@@ -34,16 +34,16 @@ the gssapi option, and need an explicit -lgss
 -	    CFLAGS="$($KRB5CONFIG --cflags gssapi) $CFLAGS"
 -	    CPPFLAGS="$($KRB5CONFIG --cflags gssapi) $CPPFLAGS"
 -	    LIBGSSAPI="$($KRB5CONFIG --libs gssapi)"
-+	    # make sure krb5-config supports gssapi option
-+	    AS_IF([$KRB5CONFIG --cflags gssapi 2>&1 | grep "Unknown option" > /dev/null], [
-+		CFLAGS="$($KRB5CONFIG --cflags) $CFLAGS"
-+		CPPFLAGS="$($KRB5CONFIG --cflags) $CPPFLAGS"
-+		LIBGSSAPI="-lgss $($KRB5CONFIG --libs)"
-+	    ], [ 
-+		CFLAGS="$($KRB5CONFIG --cflags gssapi) $CFLAGS"
-+		CPPFLAGS="$($KRB5CONFIG --cflags gssapi) $CPPFLAGS"
-+		LIBGSSAPI="$($KRB5CONFIG --libs gssapi)"
-+	    ])
++            # make sure krb5-config supports gssapi option
++            AS_IF([$KRB5CONFIG --cflags gssapi 2>&1 | grep "Unknown option" > /dev/null], [
++                CFLAGS="$($KRB5CONFIG --cflags) $CFLAGS"
++                CPPFLAGS="$($KRB5CONFIG --cflags) $CPPFLAGS"
++                LIBGSSAPI="-lgss $($KRB5CONFIG --libs)"
++            ], [
++                CFLAGS="$($KRB5CONFIG --cflags gssapi) $CFLAGS"
++                CPPFLAGS="$($KRB5CONFIG --cflags gssapi) $CPPFLAGS"
++                LIBGSSAPI="$($KRB5CONFIG --libs gssapi)"
++            ])
  	])
      ])
  
