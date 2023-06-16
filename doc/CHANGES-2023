@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3868 2023/06/16 06:49:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3869 2023/06/16 08:05:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5356,3 +5356,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libX11 to 1.8.6 [wiz 2023-06-16]
 	Updated fonts/py-fonttools to 4.40.0 [adam 2023-06-16]
 	Updated devel/py-maturin to 1.1.0 [adam 2023-06-16]
+	Updated x11/xorgproto to 2023.2 [wiz 2023-06-16]
