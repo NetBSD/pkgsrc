@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/31 10:10:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/16 20:59:44 wiz Exp $
 bin/showimage2
 include/SDL2/SDL_image.h
+lib/cmake/SDL2_image/sdl2_image-config-version.cmake
+lib/cmake/SDL2_image/sdl2_image-config.cmake
 lib/libSDL2_image.la
 lib/pkgconfig/SDL2_image.pc
