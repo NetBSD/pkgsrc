@@ -1,33 +1,37 @@
-$NetBSD: patch-Makefile,v 1.1 2020/10/25 19:31:17 tnn Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/06/16 15:05:12 schmonz Exp $
 
 install fixup for pkgsrc
 
---- Makefile.orig	2020-10-19 19:01:00.000000000 +0000
+--- Makefile.orig	2022-10-10 18:10:19.000000000 +0000
 +++ Makefile
-@@ -1,9 +1,9 @@
+@@ -1,9 +1,8 @@
  # A bunch of installation-related paths people can override on the command line
+-DESTDIR = /
 -prefix = $(HOME)
--bindir = $(prefix)/libexec/git-core
--localedir = $(prefix)/share/locale
--mandir = $(prefix)/share/man
--htmldir = $(prefix)/share/doc/git-doc
 +prefix = ${PREFIX}
-+bindir = ${DESTDIR}$(prefix)/libexec/git-core
-+localedir = ${DESTDIR}$(prefix)/share/locale
-+mandir = ${DESTDIR}$(prefix)/${PKGMANDIR}
-+htmldir = ${DESTDIR}$(prefix)/share/doc/git-doc
+ bindir = $(prefix)/libexec/git-core
+ localedir = $(prefix)/share/locale
+-mandir = $(prefix)/share/man
++mandir = $(prefix)/${PKGMANDIR}
+ htmldir = $(prefix)/share/doc/git-doc
  pythondir = $(prefix)/lib64/python3.6/site-packages
  
- default: build
-@@ -35,9 +35,9 @@ Documentation/html/git-filter-repo.html:
+@@ -35,12 +34,12 @@ Documentation/html/git-filter-repo.html:
+ 	git show origin/docs:html/git-filter-repo.html >Documentation/html/git-filter-repo.html
  
  install: snag_docs #fixup_locale
- 	cp -a git-filter-repo "$(bindir)/"
--	ln -sf "$(bindir)/git-filter-repo" "$(pythondir)/git_filter_repo.py"
-+	#ln -sf "$(bindir)/git-filter-repo" "$(pythondir)/git_filter_repo.py"
- 	cp -a Documentation/man1/git-filter-repo.1 "$(mandir)/man1/git-filter-repo.1"
--	cp -a Documentation/html/git-filter-repo.html "$(htmldir)/git-filter-repo.html"
-+	#cp -a Documentation/html/git-filter-repo.html "$(htmldir)/git-filter-repo.html"
+-	install -Dm0755 git-filter-repo "$(DESTDIR)/$(bindir)/git-filter-repo"
+-	install -dm0755 "$(DESTDIR)/$(pythondir)"
+-	ln -sf "$(bindir)/git-filter-repo" "$(DESTDIR)/$(pythondir)/git_filter_repo.py"
+-	install -Dm0644 Documentation/man1/git-filter-repo.1 "$(DESTDIR)/$(mandir)/man1/git-filter-repo.1"
+-	install -Dm0644 Documentation/html/git-filter-repo.html "$(DESTDIR)/$(htmldir)/git-filter-repo.html"
+-	if which mandb > /dev/null; then mandb; fi
++	${BSD_INSTALL_SCRIPT} git-filter-repo "$(DESTDIR)/$(bindir)/git-filter-repo"
++	#install -dm0755 "$(DESTDIR)/$(pythondir)"
++	#ln -sf "$(bindir)/git-filter-repo" "$(DESTDIR)/$(pythondir)/git_filter_repo.py"
++	${BSD_INSTALL_MAN} Documentation/man1/git-filter-repo.1 "$(DESTDIR)/$(mandir)/man1/git-filter-repo.1"
++	#install -Dm0644 Documentation/html/git-filter-repo.html "$(DESTDIR)/$(htmldir)/git-filter-repo.html"
++	#if which mandb > /dev/null; then mandb; fi
  
  
  #
