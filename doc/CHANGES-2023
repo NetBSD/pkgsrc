@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3873 2023/06/16 15:05:18 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.3874 2023/06/16 15:48:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5362,3 +5362,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_core to 5.3.1 [adam 2023-06-16]
 	Updated cad/klayout to 0.28.9 [mef 2023-06-16]
 	Updated devel/git-filter-repo to 2.38.0 [schmonz 2023-06-16]
+	Updated geography/py-maxminddb to 2.3.0 [adam 2023-06-16]
+	Updated geography/py-geoip2 to 4.7.0 [adam 2023-06-16]
