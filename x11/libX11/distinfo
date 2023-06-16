@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.52 2023/06/01 03:43:32 wiz Exp $
+$NetBSD: distinfo,v 1.53 2023/06/16 06:21:17 wiz Exp $
 
-BLAKE2s (libX11-1.8.5.tar.xz) = f0089559d0caba1deedf4835042454d385fb79507600d2933452655d9b4c2b4a
-SHA512 (libX11-1.8.5.tar.xz) = 5274f6073ead119c8f915d302f1e2bf9579f88d28a2a2d084a4be2050b14fb605efe91099c89ba55aeb7ad36ae0ecbd519b0808be0e29f56367d5dd8faa063d3
-Size (libX11-1.8.5.tar.xz) = 1811288 bytes
+BLAKE2s (libX11-1.8.6.tar.xz) = 23115534decd90fb1e9fb49468209d06e740f2de1c196cf2073c2416bbe35ae7
+SHA512 (libX11-1.8.6.tar.xz) = b94a578003078a42cea43d80fae2c54a3aaa30f706088bb3546331e9abfc180131cafb37887117abcc5b6116992e299974981eef96ecfcf883cc8a1aba4d1ade
+Size (libX11-1.8.6.tar.xz) = 1859460 bytes
