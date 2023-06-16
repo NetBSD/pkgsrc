@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3870 2023/06/16 08:08:52 leot Exp $
+$NetBSD: CHANGES-2023,v 1.3871 2023/06/16 08:42:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5358,3 +5358,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-maturin to 1.1.0 [adam 2023-06-16]
 	Updated x11/xorgproto to 2023.2 [wiz 2023-06-16]
 	Updated textproc/json2tsv to 1.1 [leot 2023-06-16]
+	Updated devel/py-hypothesis to 6.78.3 [adam 2023-06-16]
+	Updated devel/py-jupyter_core to 5.3.1 [adam 2023-06-16]
