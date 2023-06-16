@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3885 2023/06/16 22:30:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3886 2023/06/16 22:47:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5378,3 +5378,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.23.0 [pin 2023-06-16]
 	Updated net/samba4 to 4.18.3 [wiz 2023-06-16]
 	Updated devel/py-mercurial to 6.4.4 [wiz 2023-06-16]
+	Updated cad/py-gdstk to 0.9.42 [mef 2023-06-16]
