@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2023/05/16 15:45:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2023/06/16 06:42:46 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -316,6 +316,9 @@ ${PYSITELIB}/fontTools/pens/cocoaPen.pyo
 ${PYSITELIB}/fontTools/pens/cu2quPen.py
 ${PYSITELIB}/fontTools/pens/cu2quPen.pyc
 ${PYSITELIB}/fontTools/pens/cu2quPen.pyo
+${PYSITELIB}/fontTools/pens/explicitClosingLinePen.py
+${PYSITELIB}/fontTools/pens/explicitClosingLinePen.pyc
+${PYSITELIB}/fontTools/pens/explicitClosingLinePen.pyo
 ${PYSITELIB}/fontTools/pens/filterPen.py
 ${PYSITELIB}/fontTools/pens/filterPen.pyc
 ${PYSITELIB}/fontTools/pens/filterPen.pyo
