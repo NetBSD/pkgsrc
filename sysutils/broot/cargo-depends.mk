@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.58 2023/05/24 12:14:18 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.59 2023/06/16 21:34:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
-CARGO_CRATE_DEPENDS+=	ahash-0.7.6
+CARGO_CRATE_DEPENDS+=	ahash-0.8.3
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	ansi_colours-1.2.1
@@ -56,7 +56,7 @@ CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	csv2svg-0.1.9
 CARGO_CRATE_DEPENDS+=	custom_error-1.9.2
 CARGO_CRATE_DEPENDS+=	data-url-0.2.0
-CARGO_CRATE_DEPENDS+=	deser-hjson-1.1.1
+CARGO_CRATE_DEPENDS+=	deser-hjson-1.2.0
 CARGO_CRATE_DEPENDS+=	directories-4.0.1
 CARGO_CRATE_DEPENDS+=	directories-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
@@ -130,7 +130,7 @@ CARGO_CRATE_DEPENDS+=	memmap2-0.6.1
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
 CARGO_CRATE_DEPENDS+=	memoffset-0.8.0
 CARGO_CRATE_DEPENDS+=	minimad-0.9.1
-CARGO_CRATE_DEPENDS+=	minimad-0.11.0
+CARGO_CRATE_DEPENDS+=	minimad-0.12.0
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.5.4
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.6.2
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
@@ -227,7 +227,7 @@ CARGO_CRATE_DEPENDS+=	syntect-no-panic-4.6.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.5.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.20.6
-CARGO_CRATE_DEPENDS+=	termimad-0.22.0
+CARGO_CRATE_DEPENDS+=	termimad-0.23.1
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.4.0
 CARGO_CRATE_DEPENDS+=	terminal-light-1.1.1
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
