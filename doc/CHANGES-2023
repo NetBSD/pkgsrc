@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3871 2023/06/16 08:42:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3872 2023/06/16 15:03:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5360,3 +5360,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/json2tsv to 1.1 [leot 2023-06-16]
 	Updated devel/py-hypothesis to 6.78.3 [adam 2023-06-16]
 	Updated devel/py-jupyter_core to 5.3.1 [adam 2023-06-16]
+	Updated cad/klayout to 0.28.9 [mef 2023-06-16]
