@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/04/19 08:10:44 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/17 10:52:59 mef Exp $
 
 R_PKGNAME=	RNetCDF
-R_PKGVER=	2.6-1
+R_PKGVER=	2.6-2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to NetCDF datasets
