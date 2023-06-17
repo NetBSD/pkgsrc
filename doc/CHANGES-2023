@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3888 2023/06/17 09:49:46 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.3889 2023/06/17 09:58:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5381,3 +5381,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/py-gdstk to 0.9.42 [mef 2023-06-16]
 	Updated mail/mimedefang to 3.4.1 [markd 2023-06-17]
 	Updated www/hugo to 0.113.0 [bsiegert 2023-06-17]
+	Updated net/openvpn to 2.6.5 [gdt 2023-06-17]
