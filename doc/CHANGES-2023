@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3911 2023/06/17 13:41:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3912 2023/06/17 13:54:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5464,3 +5464,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/ruby-activemerchant to 1.130.0 [taca 2023-06-17]
 	Updated textproc/R-jsonlite to 1.8.5 [mef 2023-06-17]
 	Updated security/ruby-metasploit-payloads to 2.0.141 [taca 2023-06-17]
+	Updated benchmarks/R-bench to 1.1.3 [mef 2023-06-17]
