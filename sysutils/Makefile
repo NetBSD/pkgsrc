@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1056 2023/06/17 15:24:28 bacon Exp $
+# $NetBSD: Makefile,v 1.1057 2023/06/17 17:34:34 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -577,6 +577,7 @@ SUBDIR+=	py-eliot
 SUBDIR+=	py-filetype
 SUBDIR+=	py-fsspec
 SUBDIR+=	py-google-compute-engine
+SUBDIR+=	py-hupper
 SUBDIR+=	py-invoke
 SUBDIR+=	py-jeepney
 SUBDIR+=	py-kazoo
