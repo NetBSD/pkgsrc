@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:25:04 markd Exp $
+share/texmf-dist/tex/context/third/calendar-examples/A5-day_per_page.mkiv
+share/texmf-dist/tex/context/third/calendar-examples/A6-1week_per_2pages.mkiv
+share/texmf-dist/tex/context/third/calendar-examples/Menu-calendar.mkiv
+share/texmf-dist/tex/context/third/calendar-examples/Photocalendar.mkiv
+share/texmf-dist/tex/context/third/calendar-examples/Sundata-calendar.mkiv
