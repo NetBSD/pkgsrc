@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/05/06 03:03:54 taca Exp $
+$NetBSD: distinfo,v 1.20 2023/06/17 13:33:37 taca Exp $
 
-BLAKE2s (activemerchant-1.129.0.gem) = 5ba5ee2224eb3eb2384cea6aae39e2376b30ff86260f7caf5e73eade450f0b56
-SHA512 (activemerchant-1.129.0.gem) = 416fa702c4c7b78f111910d7098b4fb88d174799013133e429b9ee7f80b19ea677099ce76b1c640c46cfacb271eb58a97942f55b49dc90f6f5b13dc142dadd10
-Size (activemerchant-1.129.0.gem) = 753152 bytes
+BLAKE2s (activemerchant-1.130.0.gem) = c331aa6aa19adfc0639af947ab9f4c16939c865429fff2a08bc112d65dea650b
+SHA512 (activemerchant-1.130.0.gem) = 91f5c9dde1940346d1f16772a94ca12c8c01b41f7857a7ec7e44469f27ff4c550517e675ef2ce48fc3a483439cf5d8275b0b3a6d7cf2c7e49e20d62548d77c3c
+Size (activemerchant-1.130.0.gem) = 754176 bytes
