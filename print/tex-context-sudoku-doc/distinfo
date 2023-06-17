@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:30:57 markd Exp $
+
+BLAKE2s (context-sudoku.doc.r67289.tar.xz) = 49869fa5d66016e09f77092aa3fe049916f8577e47a23a6941e6818ce55adab4
+SHA512 (context-sudoku.doc.r67289.tar.xz) = e7f9b6c0ae6bad729074ffb2e4e1673336954adb9013ee6525e87715f3d22720efbe1f7e2cb6b695e01940a4d7f58489889612749ea2f4dbcba3ac6faaa741c4
+Size (context-sudoku.doc.r67289.tar.xz) = 1632 bytes
