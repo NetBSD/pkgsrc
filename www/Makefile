@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1725 2023/06/11 08:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.1726 2023/06/17 17:52:44 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -843,6 +843,7 @@ SUBDIR+=	py-notebook_shim
 SUBDIR+=	py-parsel
 SUBDIR+=	py-paste
 SUBDIR+=	py-pelican
+SUBDIR+=	py-plaster_pastedeploy
 SUBDIR+=	py-pook
 SUBDIR+=	py-postorius
 SUBDIR+=	py-priority
