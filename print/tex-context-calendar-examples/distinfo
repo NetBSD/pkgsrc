@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:25:04 markd Exp $
+
+BLAKE2s (context-calendar-examples.r66947.tar.xz) = 668c12bf68c611a8191df10ca5f84fe250cf466d764b2a6d20ea1e047d8a8e9b
+SHA512 (context-calendar-examples.r66947.tar.xz) = aae09b844ae244839f82088ffbad9c777355696023fa95c24221b6ae0e4ac6dfce6a4d70efe9f09d5e5dc89e6e7a17d98282a77b90697ee6a3496ed0568734b4
+Size (context-calendar-examples.r66947.tar.xz) = 10056 bytes
