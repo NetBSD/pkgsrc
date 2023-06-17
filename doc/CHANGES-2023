@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3894 2023/06/17 12:03:48 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3895 2023/06/17 12:13:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5386,3 +5386,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-RNetCDF to 2.6.2 [mef 2023-06-17]
 	Updated math/R-RPostgreSQL to 0.7.5 [mef 2023-06-17]
 	Updated math/R-gdata to 2.19.0 [mef 2023-06-17]
+	Updated devel/memcached to 1.6.21 [adam 2023-06-17]
+	Updated devel/py-ruamel-yaml to 0.17.32 [adam 2023-06-17]
