@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2023/04/05 09:16:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2023/06/17 18:19:06 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -136,8 +136,8 @@ lib/rlm_sqlcounter.${SOEXT}
 lib/rlm_sqlippool.${SOEXT}
 lib/rlm_test.${SOEXT}
 lib/rlm_totp.${SOEXT}
-lib/rlm_unix.${SOEXT}
 lib/rlm_unbound.${SOEXT}
+lib/rlm_unix.${SOEXT}
 lib/rlm_unpack.${SOEXT}
 lib/rlm_utf8.${SOEXT}
 lib/rlm_wimax.${SOEXT}
@@ -763,6 +763,7 @@ share/freeradius/dictionary.digium
 share/freeradius/dictionary.dlink
 share/freeradius/dictionary.dragonwave
 share/freeradius/dictionary.efficientip
+share/freeradius/dictionary.eleven
 share/freeradius/dictionary.eltex
 share/freeradius/dictionary.epygi
 share/freeradius/dictionary.equallogic
