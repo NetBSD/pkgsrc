@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:29:11 markd Exp $
+
+BLAKE2s (context-pocketdiary.doc.r66953.tar.xz) = 722e7c45b7dffee832074be09902b2a1d69e590e5ab025f0bd6e9188d3ca7b68
+SHA512 (context-pocketdiary.doc.r66953.tar.xz) = a78ed374f6a7ad63a93aef4c9cb2ecc0937c2e3df821c543f49a3ad762ed6949a7d1c4c5a03c7cf54eeb0b9ad891a18c5d10b97a42bbb840c74fef2bf8f14cfb
+Size (context-pocketdiary.doc.r66953.tar.xz) = 205312 bytes
