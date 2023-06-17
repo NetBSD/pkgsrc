@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/12/26 22:10:22 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/17 18:58:43 pin Exp $
 
-DISTNAME=	leftwm-0.4.1
+DISTNAME=	leftwm-0.4.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
