@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:29:11 markd Exp $
+share/texmf-dist/tex/context/third/pocketdiary/Moonphase/moons-MP.mkiv
+share/texmf-dist/tex/context/third/pocketdiary/Moonphase/t-moonphase.lua
+share/texmf-dist/tex/context/third/pocketdiary/PocketDiary.mkiv
+share/texmf-dist/tex/context/third/pocketdiary/Solar/sun-MP.mkiv
+share/texmf-dist/tex/context/third/pocketdiary/Solar/t-solar.lua
+share/texmf-dist/tex/context/third/pocketdiary/t-calendar.lua
+share/texmf-dist/tex/context/third/pocketdiary/t-pocketdiary.lua
+share/texmf-dist/tex/context/third/pocketdiary/t-pocketdiary.mkiv
