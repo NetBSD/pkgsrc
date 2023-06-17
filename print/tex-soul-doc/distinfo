@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/09 06:22:20 markd Exp $
+$NetBSD: distinfo,v 1.7 2023/06/17 10:43:51 markd Exp $
 
-BLAKE2s (soul.doc.r65908.tar.xz) = 82ac1e6f1b10514a2e39b4bc04c1ff47123730b4711c66e5234ed2b4464c905a
-SHA512 (soul.doc.r65908.tar.xz) = 9cc277dff738325baef2e8a481e48b82421e68600b295e7e83e696bdbc48c27eccede5362e9f4d40d8ad3f263e55cf60abe438b8a8f9fc66054469f68ad04299
-Size (soul.doc.r65908.tar.xz) = 822736 bytes
+BLAKE2s (soul.doc.r67365.tar.xz) = 19a8e73c6fca7e6a2322448c02b35c285f3ddc980d33a7380d5deaed4f052b34
+SHA512 (soul.doc.r67365.tar.xz) = c734b198050f5fda61e0477e7cadbb6f6f9257a0fa41babed664621d7b64c4971412d831b350879a5405976d4e35a11caa0519fb67f308bcd622f0c72f431b4e
+Size (soul.doc.r67365.tar.xz) = 822656 bytes
