@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/04/23 02:15:38 mef Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/17 13:36:13 mef Exp $
 
 R_PKGNAME=	jsonlite
-R_PKGVER=	1.8.0
+R_PKGVER=	1.8.5
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
