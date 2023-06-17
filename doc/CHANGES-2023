@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3899 2023/06/17 12:39:25 markd Exp $
+$NetBSD: CHANGES-2023,v 1.3900 2023/06/17 12:42:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5451,3 +5451,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/tex-context-pocketdiary-doc version 2023 [markd 2023-06-17]
 	Added print/tex-context-sudoku version 2023 [markd 2023-06-17]
 	Added print/tex-context-sudoku-doc version 2023 [markd 2023-06-17]
+	Updated math/R-nimble to 1.0.1 [mef 2023-06-17]
