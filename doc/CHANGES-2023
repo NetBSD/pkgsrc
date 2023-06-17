@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3900 2023/06/17 12:42:10 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3901 2023/06/17 12:44:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5452,3 +5452,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/tex-context-sudoku version 2023 [markd 2023-06-17]
 	Added print/tex-context-sudoku-doc version 2023 [markd 2023-06-17]
 	Updated math/R-nimble to 1.0.1 [mef 2023-06-17]
+	Updated devel/py-ipykernel to 6.23.2 [adam 2023-06-17]
+	Updated devel/py-hatchling to 1.18.0 [adam 2023-06-17]
