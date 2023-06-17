@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/04/09 05:37:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/06/17 10:30:57 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -7,6 +7,8 @@ share/texmf-dist/doc/latex/base/cfgguide.tex
 share/texmf-dist/doc/latex/base/changes.old.txt
 share/texmf-dist/doc/latex/base/changes.txt
 share/texmf-dist/doc/latex/base/classes.pdf
+share/texmf-dist/doc/latex/base/clsguide-historic.pdf
+share/texmf-dist/doc/latex/base/clsguide-historic.tex
 share/texmf-dist/doc/latex/base/clsguide.pdf
 share/texmf-dist/doc/latex/base/clsguide.tex
 share/texmf-dist/doc/latex/base/cmfonts.pdf
@@ -131,6 +133,8 @@ share/texmf-dist/doc/latex/base/ltnews35.pdf
 share/texmf-dist/doc/latex/base/ltnews35.tex
 share/texmf-dist/doc/latex/base/ltnews36.pdf
 share/texmf-dist/doc/latex/base/ltnews36.tex
+share/texmf-dist/doc/latex/base/ltnews37.pdf
+share/texmf-dist/doc/latex/base/ltnews37.tex
 share/texmf-dist/doc/latex/base/ltpara-code.pdf
 share/texmf-dist/doc/latex/base/ltpara-code.tex
 share/texmf-dist/doc/latex/base/ltpara-doc.pdf
@@ -155,6 +159,8 @@ share/texmf-dist/doc/latex/base/source2e.tex
 share/texmf-dist/doc/latex/base/syntonly.pdf
 share/texmf-dist/doc/latex/base/tlc2.err
 share/texmf-dist/doc/latex/base/tlc2.pdf
+share/texmf-dist/doc/latex/base/tlc3.err
+share/texmf-dist/doc/latex/base/tlc3.pdf
 share/texmf-dist/doc/latex/base/tulm.pdf
 share/texmf-dist/doc/latex/base/usrguide-historic.pdf
 share/texmf-dist/doc/latex/base/usrguide-historic.tex
