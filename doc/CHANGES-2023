@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3903 2023/06/17 12:59:42 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3904 2023/06/17 13:04:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hatchling to 1.18.0 [adam 2023-06-17]
 	Updated math/R-vctrs to 0.6.3 [mef 2023-06-17]
 	Updated devel/R-usethis to 2.2.0 [mef 2023-06-17]
+	Updated devel/R-blob to 1.2.4 [mef 2023-06-17]
