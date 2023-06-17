@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/09/01 03:42:27 markd Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/17 10:08:42 markd Exp $
 
 DISTNAME=	context-simpleslides
-PKGNAME=	tex-${DISTNAME}-2022
-TEXLIVE_REV=	63903
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	67070
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-simpleslides
