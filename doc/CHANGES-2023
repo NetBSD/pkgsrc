@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3940 2023/06/17 18:31:27 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3941 2023/06/17 18:39:36 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-zope.component version 6.0 [wiz 2023-06-17]
 	Updated net/freeradius to 3.2.3 [adam 2023-06-17]
 	Updated devel/py-test-mock to 3.11.1 [adam 2023-06-17]
+	Updated sysutils/desktop-installer to 0.8.1 [bacon 2023-06-17]
