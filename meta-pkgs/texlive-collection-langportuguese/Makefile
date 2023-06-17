@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2023/04/11 03:30:32 markd Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/17 12:04:50 markd Exp $
 
 DISTNAME=	collection-langportuguese
-PKGNAME=	texlive-${DISTNAME}-2023
+PKGNAME=	texlive-${DISTNAME}-2023.67125
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	67125
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	tex-hyphen-portuguese-[0-9]*:../../print/tex-hyphen-portuguese
 # lshort-portuguese is documentation only
 DEPENDS+=	tex-numberpt-[0-9]*:../../print/tex-numberpt
 DEPENDS+=	tex-ordinalpt-[0-9]*:../../print/tex-ordinalpt
+DEPENDS+=	tex-ptlatexcommands-[0-9]*:../../print/tex-ptlatexcommands
 # xypic-tut-pt is documentation only
 
 META_PACKAGE=	yes
