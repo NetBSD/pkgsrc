@@ -1,0 +1,4 @@
+plaster_pastedeploy is a plaster plugin that provides a plaster.Loader
+that can parse ini files according to the standard set by PasteDeploy.
+It supports the wsgi plaster protocol, implementing the
+plaster.protocols.IWSGIProtocol interface.
