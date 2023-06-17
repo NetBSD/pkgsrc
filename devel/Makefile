@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4010 2023/06/17 18:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4011 2023/06/17 18:28:44 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3068,6 +3068,7 @@ SUBDIR+=	py-yapf
 SUBDIR+=	py-zanata-python-client
 SUBDIR+=	py-zc.lockfile
 SUBDIR+=	py-zconfig
+SUBDIR+=	py-zope.component
 SUBDIR+=	py-zope.deferredimport
 SUBDIR+=	py-zope.deprecation
 SUBDIR+=	py-zope.event
