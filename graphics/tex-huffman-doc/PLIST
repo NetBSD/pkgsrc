@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:11:01 markd Exp $
+share/texmf-dist/doc/metapost/huffman/LICENSE
+share/texmf-dist/doc/metapost/huffman/README.md
+share/texmf-dist/doc/metapost/huffman/ctan.bib
+share/texmf-dist/doc/metapost/huffman/fond.pdf
+share/texmf-dist/doc/metapost/huffman/huffman-doc-en.pdf
+share/texmf-dist/doc/metapost/huffman/huffman-doc-en.tex
+share/texmf-dist/doc/metapost/huffman/huffman-preamble.tex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1012 2023/06/15 11:47:56 mef Exp $
+# $NetBSD: Makefile,v 1.1013 2023/06/17 12:11:01 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -679,6 +679,8 @@ SUBDIR+=	tex-hatching
 SUBDIR+=	tex-hatching-doc
 SUBDIR+=	tex-hershey-mp
 SUBDIR+=	tex-hershey-mp-doc
+SUBDIR+=	tex-huffman
+SUBDIR+=	tex-huffman-doc
 SUBDIR+=	tex-incgraph
 SUBDIR+=	tex-incgraph-doc
 SUBDIR+=	tex-latexmp
