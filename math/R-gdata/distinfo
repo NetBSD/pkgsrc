@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:55:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/17 12:03:36 mef Exp $
 
-BLAKE2s (R/gdata_2.18.0.tar.gz) = 832dd1512e7aeaac0be03e373ee02cecae9de9bacbf3cccca51f01e30bc18d5c
-SHA512 (R/gdata_2.18.0.tar.gz) = 609a412970d46bed0d12191b1015fac96b48244cb9fb35506be07ae0544583566669c0e233a52f418dafdfc787a92cfbbf6554cb336af06c257b3bb6058e4fd5
-Size (R/gdata_2.18.0.tar.gz) = 1058430 bytes
+BLAKE2s (R/gdata_2.19.0.tar.gz) = 3a7718398e1f59a2ea1397dc4a2e20c9ebb54617fdba5fc2c89ed40a09c0421e
+SHA512 (R/gdata_2.19.0.tar.gz) = 62f1a0cf8d03d318bb0a1f0183d1bf1e463659f2b9cdd30b8603505760daff80d2f2712af5d49fc6e8bb24f79bb56a39bb3cea1c7b6340d49efba4f3dc5e43d9
+Size (R/gdata_2.19.0.tar.gz) = 1435207 bytes
