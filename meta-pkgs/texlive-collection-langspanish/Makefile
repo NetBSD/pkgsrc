@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2023/04/11 03:31:15 markd Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/17 11:14:56 markd Exp $
 
 DISTNAME=	collection-langspanish
 PKGNAME=	texlive-${DISTNAME}-2023
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54141
+TEXLIVE_REV=	67307
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -12,6 +12,7 @@ COMMENT=	Spanish TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
+# antique-spanish-units is documentation only
 DEPENDS+=	tex-babel-catalan-[0-9]*:../../print/tex-babel-catalan
 DEPENDS+=	tex-babel-galician-[0-9]*:../../print/tex-babel-galician
 DEPENDS+=	tex-babel-spanish-[0-9]*:../../print/tex-babel-spanish
