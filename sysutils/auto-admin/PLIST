@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/06/10 12:59:02 bacon Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/06/17 15:17:40 bacon Exp $
 bin/auto-append-line
 bin/auto-ask
 bin/auto-backup-file
@@ -15,6 +15,7 @@ bin/auto-octet-to-hex
 bin/auto-pkg-branch
 bin/auto-pkg-latest
 bin/auto-pkgsrc-branch
+bin/auto-pkgsrc-checkout
 bin/auto-pkgsrc-delete-all
 bin/auto-pkgsrc-dir
 bin/auto-pkgsrc-prefix
