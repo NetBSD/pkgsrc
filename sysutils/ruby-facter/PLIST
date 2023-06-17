@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2022/12/04 15:27:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/06/17 15:22:09 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -466,6 +466,10 @@ ${GEM_LIBDIR}/lib/facter/facts/mageia/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/mariner/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/meego/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/oel/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/ol/lsbdistdescription.rb
+${GEM_LIBDIR}/lib/facter/facts/ol/lsbdistid.rb
+${GEM_LIBDIR}/lib/facter/facts/ol/os/distro/description.rb
+${GEM_LIBDIR}/lib/facter/facts/ol/os/distro/id.rb
 ${GEM_LIBDIR}/lib/facter/facts/ol/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/openwrt/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/ovs/os/release.rb
@@ -593,7 +597,6 @@ ${GEM_LIBDIR}/lib/facter/facts/ubuntu/lsbdistrelease.rb
 ${GEM_LIBDIR}/lib/facter/facts/ubuntu/os/distro/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/ubuntu/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/aio_agent_version.rb
-${GEM_LIBDIR}/lib/facter/facts/windows/augeas/version.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/az_metadata.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/cloud/provider.rb
 ${GEM_LIBDIR}/lib/facter/facts/windows/dhcp_servers.rb
