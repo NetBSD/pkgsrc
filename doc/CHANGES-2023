@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3892 2023/06/17 10:54:40 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3893 2023/06/17 11:21:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/openvpn to 2.6.5 [gdt 2023-06-17]
 	Updated math/R-Formula to 1.2.5 [mef 2023-06-17]
 	Updated math/R-RNetCDF to 2.6.2 [mef 2023-06-17]
+	Updated math/R-RPostgreSQL to 0.7.5 [mef 2023-06-17]
