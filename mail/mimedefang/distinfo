@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.34 2023/03/03 11:19:19 bouyer Exp $
+$NetBSD: distinfo,v 1.35 2023/06/17 01:33:43 markd Exp $
 
-BLAKE2s (mimedefang-3.3.tar.gz) = f464307b1a34e15e9879ba3bc1622841743fa28dcb47f17f1f05747152c54311
-SHA512 (mimedefang-3.3.tar.gz) = f973d6bf8e5bb5043f6d255961dcf3f4f8208c7fb159694f5d62884e4dd480ab2d04cf6b71c8f48f56f368aa31b7ce54ec499503a4a3f55b9bf0696299a240ef
-Size (mimedefang-3.3.tar.gz) = 495544 bytes
+BLAKE2s (mimedefang-3.4.1.tar.gz) = 93f97ff59080302ec660780d2d4b7ed498971ef5af2c15cc7af7a10f211ff3e1
+SHA512 (mimedefang-3.4.1.tar.gz) = 2734834774c44d53a4e5632d113385e13e4e2ae8e94d5a766dca4f5a08b974373dbd6ee8a815a5b12d967b485154344ddbc9b70eb5ffe4988f061523e60ac0ab
+Size (mimedefang-3.4.1.tar.gz) = 501547 bytes
 SHA1 (patch-Makefile.in) = 14d53b305bc1bb099624d02cc8bca63ab7226ace
 SHA1 (patch-mimedefang.pl.in) = d46c79ad616a6abc5c2791d32c678c5988ed64c9
-SHA1 (patch-modules_lib_Mail_MIMEDefang_Actions.pm) = ca20c24f4e4888e6b21e7963b79727482bb59ff1
