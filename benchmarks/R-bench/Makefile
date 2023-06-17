@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/06/02 11:48:57 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/17 13:53:52 mef Exp $
 
 R_PKGNAME=	bench
-R_PKGVER=	1.1.2
+R_PKGVER=	1.1.3
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +20,6 @@ TEST_DEPENDS+=	R-forcats-[0-9]*:../../math/R-forcats
 #EST_DEPENDS+=	R-ggbeeswarm-[0-9]*:
 TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 #EST_DEPENDS+=	R-ggridgesjsonlite-[0-9]*:
-TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
 TEST_DEPENDS+=	R-scales-[0-9]*:../../graphics/R-scales
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
