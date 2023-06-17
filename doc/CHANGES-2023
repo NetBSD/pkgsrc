@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3917 2023/06/17 15:10:54 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3918 2023/06/17 15:15:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libxtend to 0.1.8.2 [bacon 2023-06-17]
 	Updated security/ruby-rex-powershell to 0.1.98 [taca 2023-06-17]
 	Updated security/ruby-rex-socket to 0.1.52 [taca 2023-06-17]
+	Updated security/ruby-rex-text to 0.2.52 [taca 2023-06-17]
