@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2023/04/11 01:29:26 markd Exp $
+# $NetBSD: Makefile,v 1.13 2023/06/17 12:37:54 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2023
+PKGNAME=	texlive-${DISTNAME}-2023.67175
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	66802
+TEXLIVE_REV=	67175
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -18,9 +18,11 @@ DEPENDS+=	tex-context-algorithmic-[0-9]*:../../print/tex-context-algorithmic
 DEPENDS+=	tex-context-animation-[0-9]*:../../print/tex-context-animation
 DEPENDS+=	tex-context-annotation-[0-9]*:../../print/tex-context-annotation
 DEPENDS+=	tex-context-bnf-[0-9]*:../../print/tex-context-bnf
+DEPENDS+=	tex-context-calendar-examples-[0-9]*:../../print/tex-context-calendar-examples
 DEPENDS+=	tex-context-chromato-[0-9]*:../../print/tex-context-chromato
 DEPENDS+=	tex-context-cmscbf-[0-9]*:../../print/tex-context-cmscbf
 DEPENDS+=	tex-context-cmttbf-[0-9]*:../../print/tex-context-cmttbf
+DEPENDS+=	tex-context-collating-marks-[0-9]*:../../print/tex-context-collating-marks
 DEPENDS+=	tex-context-construction-plan-[0-9]*:../../print/tex-context-construction-plan
 DEPENDS+=	tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
 DEPENDS+=	tex-context-degrade-[0-9]*:../../print/tex-context-degrade
@@ -36,10 +38,12 @@ DEPENDS+=	tex-context-letter-[0-9]*:../../print/tex-context-letter
 DEPENDS+=	tex-context-lettrine-[0-9]*:../../print/tex-context-lettrine
 DEPENDS+=	tex-context-mathsets-[0-9]*:../../print/tex-context-mathsets
 # context-notes-zh-cn is documentation only
+DEPENDS+=	tex-context-pocketdiary-[0-9]*:../../print/tex-context-pocketdiary
 DEPENDS+=	tex-context-rst-[0-9]*:../../print/tex-context-rst
 DEPENDS+=	tex-context-ruby-[0-9]*:../../print/tex-context-ruby
 DEPENDS+=	tex-context-simplefonts-[0-9]*:../../print/tex-context-simplefonts
 DEPENDS+=	tex-context-simpleslides-[0-9]*:../../print/tex-context-simpleslides
+DEPENDS+=	tex-context-sudoku-[0-9]*:../../print/tex-context-sudoku
 DEPENDS+=	tex-context-texlive-[0-9]*:../../print/tex-context-texlive
 DEPENDS+=	tex-context-title-[0-9]*:../../print/tex-context-title
 DEPENDS+=	tex-context-transliterator-[0-9]*:../../print/tex-context-transliterator
