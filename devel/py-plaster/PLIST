@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 17:41:50 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/plaster/__init__.py
+${PYSITELIB}/plaster/__init__.pyc
+${PYSITELIB}/plaster/__init__.pyo
+${PYSITELIB}/plaster/exceptions.py
+${PYSITELIB}/plaster/exceptions.pyc
+${PYSITELIB}/plaster/exceptions.pyo
+${PYSITELIB}/plaster/interfaces.py
+${PYSITELIB}/plaster/interfaces.pyc
+${PYSITELIB}/plaster/interfaces.pyo
+${PYSITELIB}/plaster/loaders.py
+${PYSITELIB}/plaster/loaders.pyc
+${PYSITELIB}/plaster/loaders.pyo
+${PYSITELIB}/plaster/protocols.py
+${PYSITELIB}/plaster/protocols.pyc
+${PYSITELIB}/plaster/protocols.pyo
+${PYSITELIB}/plaster/uri.py
+${PYSITELIB}/plaster/uri.pyc
+${PYSITELIB}/plaster/uri.pyo
