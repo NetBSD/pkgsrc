@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4008 2023/06/17 17:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4009 2023/06/17 18:00:51 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3070,6 +3070,7 @@ SUBDIR+=	py-zc.lockfile
 SUBDIR+=	py-zconfig
 SUBDIR+=	py-zope.deferredimport
 SUBDIR+=	py-zope.deprecation
+SUBDIR+=	py-zope.event
 SUBDIR+=	py-zope.exceptions
 SUBDIR+=	py-zope.hookable
 SUBDIR+=	py-zope.testing
