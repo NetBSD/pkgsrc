@@ -1,0 +1,4 @@
+This module provides a possibility to place collating marks on
+the spines of sections when using imposition. Placing collating
+marks is a method to make the correct sequence of sections of a
+book block visible.
