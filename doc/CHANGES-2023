@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3886 2023/06/16 22:47:23 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3887 2023/06/17 01:35:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5379,3 +5379,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.18.3 [wiz 2023-06-16]
 	Updated devel/py-mercurial to 6.4.4 [wiz 2023-06-16]
 	Updated cad/py-gdstk to 0.9.42 [mef 2023-06-16]
+	Updated mail/mimedefang to 3.4.1 [markd 2023-06-17]
