@@ -1,0 +1,3 @@
+A port of Peter Norvig's sudoku solver to Lua/ConTeXt. It
+provides four basic commands for typesettings sudokus, as well
+as a command handler.

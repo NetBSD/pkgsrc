@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:30:57 markd Exp $
+share/texmf-dist/tex/context/third/sudoku/t-sudoku-test-01.txt
+share/texmf-dist/tex/context/third/sudoku/t-sudoku-test-02.txt
+share/texmf-dist/tex/context/third/sudoku/t-sudoku-test-03.txt
+share/texmf-dist/tex/context/third/sudoku/t-sudoku.lua
+share/texmf-dist/tex/context/third/sudoku/t-sudoku.mkvi
