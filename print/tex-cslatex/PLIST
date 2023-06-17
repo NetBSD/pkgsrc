@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
-bin/cslatex
-bin/pdfcslatex
+@comment $NetBSD: PLIST,v 1.2 2023/06/17 11:40:31 markd Exp $
 share/texmf-dist/tex/cslatex/base/cslatex.ini
 share/texmf-dist/tex/cslatex/base/czech.sty
 share/texmf-dist/tex/cslatex/base/fonttext.cfg
