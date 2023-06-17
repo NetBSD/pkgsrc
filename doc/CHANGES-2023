@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3925 2023/06/17 15:30:52 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3926 2023/06/17 15:41:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5478,3 +5478,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-specinfra to 2.86.0 [taca 2023-06-17]
 	Updated textproc/ruby-rdiscount to 2.2.7.1 [taca 2023-06-17]
 	Updated www/ruby-rack to 3.0.8 [taca 2023-06-17]
+	Updated www/ruby-aws-partitions to 1.780.0 [taca 2023-06-17]
