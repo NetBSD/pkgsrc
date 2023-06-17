@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/14 17:26:16 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2023/06/17 16:19:19 wiz Exp $
 ${PYSITELIB}/MySQLdb/__init__.py
 ${PYSITELIB}/MySQLdb/__init__.pyc
 ${PYSITELIB}/MySQLdb/__init__.pyo
@@ -10,9 +6,6 @@ ${PYSITELIB}/MySQLdb/_exceptions.py
 ${PYSITELIB}/MySQLdb/_exceptions.pyc
 ${PYSITELIB}/MySQLdb/_exceptions.pyo
 ${PYSITELIB}/MySQLdb/_mysql.so
-${PYSITELIB}/MySQLdb/compat.py
-${PYSITELIB}/MySQLdb/compat.pyc
-${PYSITELIB}/MySQLdb/compat.pyo
 ${PYSITELIB}/MySQLdb/connections.py
 ${PYSITELIB}/MySQLdb/connections.pyc
 ${PYSITELIB}/MySQLdb/connections.pyo
@@ -46,3 +39,7 @@ ${PYSITELIB}/MySQLdb/release.pyo
 ${PYSITELIB}/MySQLdb/times.py
 ${PYSITELIB}/MySQLdb/times.pyc
 ${PYSITELIB}/MySQLdb/times.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
