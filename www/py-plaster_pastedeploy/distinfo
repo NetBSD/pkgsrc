@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 17:52:23 wiz Exp $
+
+BLAKE2s (plaster_pastedeploy-1.0.1.tar.gz) = 90261a301ad65a727cbaf497c540371df5a103c84ee0a7284c51bbe7b336aa2a
+SHA512 (plaster_pastedeploy-1.0.1.tar.gz) = 3ac7f25ab886b6d8ee800ffa69fb44ac8733c405883091d30017bebca7deeadd311182f8971992f96523ab3d4da0ba22bd6aff1cf626709684a697abd67867e6
+Size (plaster_pastedeploy-1.0.1.tar.gz) = 20915 bytes
