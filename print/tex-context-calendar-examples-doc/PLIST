@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:25:04 markd Exp $
+share/texmf-dist/doc/context/third/calendar-examples/LICENSE
+share/texmf-dist/doc/context/third/calendar-examples/README.md
+share/texmf-dist/doc/context/third/calendar-examples/VERSION
+share/texmf-dist/doc/context/third/calendar-examples/calendar-examples.md
