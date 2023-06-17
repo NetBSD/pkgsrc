@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3933 2023/06/17 17:34:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3934 2023/06/17 17:42:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5486,3 +5486,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-mysqlclient to 2.1.1 [wiz 2023-06-17]
 	Updated graphics/geeqie to 2.1 [wiz 2023-06-17]
 	Added sysutils/py-hupper version 1.12 [wiz 2023-06-17]
+	Added devel/py-plaster version 1.1.2 [wiz 2023-06-17]
