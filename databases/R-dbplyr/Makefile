@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/02/19 12:15:54 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/17 13:08:06 mef Exp $
 
 R_PKGNAME=	dbplyr
-R_PKGVER=	2.3.0
+R_PKGVER=	2.3.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Database backend for dplyr
