@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2023/06/17 16:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2023/06/17 16:50:53 wiz Exp $
 
 DISTNAME=	geeqie-2.1
 CATEGORIES=	graphics
@@ -18,6 +18,7 @@ TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 # ld: src/geeqie.p/main.cc.o: undefined reference to symbol 'backtrace'
 # ld: /usr/lib/libexecinfo.so.0: error adding symbols: DSO missing from command line
+# https://github.com/BestImageViewer/geeqie/issues/1111
 LDFLAGS.NetBSD+=	-lexecinfo
 
 MESON_ARGS+=	-Ddoxygen=disabled
