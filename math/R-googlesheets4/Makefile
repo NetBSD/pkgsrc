@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2023/06/11 15:22:00 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/17 12:21:39 mef Exp $
 
 R_PKGNAME=	googlesheets4
-R_PKGVER=	1.1.0
+R_PKGVER=	1.1.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Access Google Sheets using the Sheets API V4
 LICENSE=	mit	# + file LICENSE
 
 DEPENDS+=	R-cli>=3.0.0:../../devel/R-cli
+DEPENDS+=	R-gargle>=1.5.0:../../www/R-gargle
 DEPENDS+=	R-glue>=1.3.0:../../devel/R-glue
 DEPENDS+=	R-googledrive-[0-9]*:../../www/R-googledrive
 DEPENDS+=	R-ids-[0-9]*:../../math/R-ids
