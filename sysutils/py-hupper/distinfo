@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 17:34:06 wiz Exp $
+
+BLAKE2s (hupper-1.12.tar.gz) = 522aabb8cee9e46956c11dc8fdbb2f7a691f1ce90905ae1707645ca6412a9c7c
+SHA512 (hupper-1.12.tar.gz) = 9de90ff100d26f6e12781c66591f1b4fc274c7b3efa867102d2fbfab6aae37d135e9d3923d6b45b34326320758d87034d2ee2cbaaf691901363f1cd8b7ff00ea
+Size (hupper-1.12.tar.gz) = 41901 bytes
