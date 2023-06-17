@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/17 16:19:19 wiz Exp $
 
-DISTNAME=	mysqlclient-1.4.6
+DISTNAME=	mysqlclient-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mysqlclient/}
 
@@ -11,13 +10,15 @@ HOMEPAGE=	https://github.com/PyMySQL/mysqlclient-python
 COMMENT=	MySQL database connector for Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # testing requires a running MySQL server
+DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
