@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.13 2018/04/12 01:21:07 nonaka Exp $
+$NetBSD: patch-configure,v 1.1 2023/06/17 18:19:06 adam Exp $
 
 Portable test syntax
 
---- configure.orig	2017-07-17 12:43:00.000000000 +0000
+--- configure.orig	2023-05-26 13:56:52.000000000 +0000
 +++ configure
-@@ -10133,7 +10133,49 @@ $as_echo "no" >&6; }
+@@ -12066,7 +12066,49 @@ printf "%s\n" "no" >&6; }
      eval "ac_cv_type_${ac_safe_type}_has_ipi_addr="
   fi
  
@@ -53,5 +53,5 @@ Portable test syntax
 +
 +if test "$ac_cv_type_struct_in_pktinfo_has_ipi_addr" = "yes" && test "$ac_cv_type_struct_in_pktinfo_has_ipi_spec_dst" = "yes"; then
  
- $as_echo "#define HAVE_IP_PKTINFO /**/" >>confdefs.h
+ printf "%s\n" "#define HAVE_IP_PKTINFO /**/" >>confdefs.h
  
