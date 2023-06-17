@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3906 2023/06/17 13:27:59 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3907 2023/06/17 13:30:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5459,3 +5459,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-blob to 1.2.4 [mef 2023-06-17]
 	Updated databases/R-dbplyr to 2.3.2 [mef 2023-06-17]
 	Updated devel/ruby-async to 2.6.2 [taca 2023-06-17]
+	Updated devel/ruby-pkg-config to 1.5.2 [taca 2023-06-17]
