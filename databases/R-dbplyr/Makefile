@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/17 13:08:06 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/17 13:24:56 mef Exp $
 
 R_PKGNAME=	dbplyr
 R_PKGVER=	2.3.2
@@ -22,6 +22,7 @@ DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
 DEPENDS+=	R-tidyselect-[0-9]*:../../devel/R-tidyselect
 DEPENDS+=	R-vctrs-[0-9]*:../../math/R-vctrs
 DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
+DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 
 # Packages suggested but not available for checking:
 #   'Lahman', 'nycflights13', 'odbc', 'RMariaDB', 'RPostgres',
