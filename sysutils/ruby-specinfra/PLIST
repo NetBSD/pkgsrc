@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/05/28 01:31:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/06/17 15:24:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -318,6 +318,8 @@ ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18/port.rb
+${GEM_LIBDIR}/lib/specinfra/command/vyos.rb
+${GEM_LIBDIR}/lib/specinfra/command/vyos/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows/base/feature.rb
