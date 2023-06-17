@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4009 2023/06/17 18:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4010 2023/06/17 18:04:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3073,6 +3073,7 @@ SUBDIR+=	py-zope.deprecation
 SUBDIR+=	py-zope.event
 SUBDIR+=	py-zope.exceptions
 SUBDIR+=	py-zope.hookable
+SUBDIR+=	py-zope.interface
 SUBDIR+=	py-zope.testing
 SUBDIR+=	py27-attrs
 SUBDIR+=	py27-babel
