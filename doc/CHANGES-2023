@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3901 2023/06/17 12:44:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3902 2023/06/17 12:47:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5454,3 +5454,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-nimble to 1.0.1 [mef 2023-06-17]
 	Updated devel/py-ipykernel to 6.23.2 [adam 2023-06-17]
 	Updated devel/py-hatchling to 1.18.0 [adam 2023-06-17]
+	Updated math/R-vctrs to 0.6.3 [mef 2023-06-17]
