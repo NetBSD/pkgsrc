@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.910 2023/06/17 10:53:12 markd Exp $
+# $NetBSD: Makefile,v 1.911 2023/06/17 12:03:06 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1398,6 +1398,8 @@ SUBDIR+=	tex-ptex-base
 SUBDIR+=	tex-ptex-base-doc
 SUBDIR+=	tex-ptex2pdf
 SUBDIR+=	tex-ptex2pdf-doc
+SUBDIR+=	tex-ptlatexcommands
+SUBDIR+=	tex-ptlatexcommands-doc
 SUBDIR+=	tex-pxbase
 SUBDIR+=	tex-pxbase-doc
 SUBDIR+=	tex-pxcjkcat
