@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2023/06/05 00:25:32 markd Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/17 11:09:40 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2023pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	66894
+TEXLIVE_REV=	67281
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -123,6 +123,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend jmlr
 # depend jnuexam
 # depend jourcl
+# depend jourrr
 # depend jpsj
 # depend jwjournal
 # depend kdgdocs
