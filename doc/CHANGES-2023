@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3921 2023/06/17 15:22:36 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3922 2023/06/17 15:24:13 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5474,3 +5474,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/auto-admin to 0.7.17 [bacon 2023-06-17]
 	Added sysutils/npmount version 0.1.1.1 [bacon 2023-06-17]
 	Updated sysutils/ruby-facter to 4.4.1 [taca 2023-06-17]
+	Added sysutils/devpub-mount version 0.1.0 [bacon 2023-06-17]
