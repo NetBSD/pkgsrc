@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/17 10:39:50 mef Exp $
 
-BLAKE2s (R/Formula_1.2-4.tar.gz) = 50ff3176d63f2616d15d79dcde7aa6a7a23a5e159207389aa8c97eb7f628a2fd
-SHA512 (R/Formula_1.2-4.tar.gz) = 9fa7bf9710c37ae28454b533dfe82cc602b0ddae4ecae38e31155cd957cba51060ba84fa0bbc3adf65aa02d0a2c56fea3a852da292bb71d615437fbdc246a741
-Size (R/Formula_1.2-4.tar.gz) = 164214 bytes
+BLAKE2s (R/Formula_1.2-5.tar.gz) = 3dbaabcc917d057554273afb8a11a244abab702066ecbef5d698cc8a1b699d80
+SHA512 (R/Formula_1.2-5.tar.gz) = 49021a4788f8551c0201581a94d38af4fb4becae4c85a85224d05ff5c37f5e29132bca23e38f6226def77c2a25f3d393e4bb462f4b3d2c0babe97b7e951ca2d3
+Size (R/Formula_1.2-5.tar.gz) = 128259 bytes
