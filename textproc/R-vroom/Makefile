@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/01 14:22:58 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/17 14:00:31 mef Exp $
 
 R_PKGNAME=	vroom
-R_PKGVER=	1.5.7
+R_PKGVER=	1.6.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +23,7 @@ DEPENDS+=	R-progress-[0-9]*:../../sysutils/R-progress
 DEPENDS+=	R-tzdb-[0-9]*:../../time/R-tzdb
 
 #EST_DEPENDS+=	R-archive-[0-9]*:
-#EST_DEPENDS+=	R-bench-[0-9]*:
+TEST_DEPENDS+=	R-bench-[0-9]*:../../benchmarks/R-bench
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
