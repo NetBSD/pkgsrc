@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3913 2023/06/17 14:00:44 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3914 2023/06/17 14:14:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5466,3 +5466,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-metasploit-payloads to 2.0.141 [taca 2023-06-17]
 	Updated benchmarks/R-bench to 1.1.3 [mef 2023-06-17]
 	Updated textproc/R-vroom to 1.6.3 [mef 2023-06-17]
+	Updated textproc/R-readr to 2.1.4 [mef 2023-06-17]
