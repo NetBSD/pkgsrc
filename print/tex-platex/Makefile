@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/04/09 06:03:34 markd Exp $
+# $NetBSD: Makefile,v 1.16 2023/06/17 11:25:14 markd Exp $
 
 DISTNAME=	platex
-PKGNAME=	tex-${DISTNAME}-2022
-TEXLIVE_REV=	66186
+PKGNAME=	tex-${DISTNAME}-2023
+TEXLIVE_REV=	67315
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/platex
@@ -31,7 +31,7 @@ DEPENDS+=	tex-uptex-[0-9]*:../../print/tex-uptex
 
 INSTALLATION_DIRS+=	bin
 
-TEX_FORMATS+=	"platex eptex language.dat *platex.ini\\nplatex-dev euptex language.dat *platex.ini\\n"
+TEX_FORMATS+=	"platex euptex language.dat *platex.ini\\nplatex-dev euptex language.dat *platex.ini\\n"
 
 .include "../../print/texlive/package.mk"
 
