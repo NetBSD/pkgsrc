@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 15:24:05 bacon Exp $
+man/man8/devpub-mount.8
+sbin/devpub-mount
+share/devpub-mount/03-devpub-mount
+share/examples/devpub-mount/devpub-mount.conf.sample

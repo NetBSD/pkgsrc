@@ -1,0 +1,5 @@
+devpub-mount(8) is a devpubd(8) based automounter for NetBSD.  It supports
+most popular filesystems such as FFS, NTFS, FAT, exFAT, ISO9660, UDF,
+and NetBSD's native FFS.  The devpubd script mounts recognized
+filesystems and invokes a specified command with the mount point as
+an argument.
