@@ -1,0 +1,4 @@
+This MetaPost package allows to draw binary Huffman trees from
+two arrays : an array of strings, and an array of weights
+(numeric). It is based on the METAOBJ package which provides
+many tools for building trees in general.
