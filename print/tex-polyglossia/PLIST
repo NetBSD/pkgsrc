@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/01 22:09:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/06/17 10:39:31 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -126,6 +126,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-fa.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-farsi.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-fi.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-finnish.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-fr-CA-u-sd-canb.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-fr-CA.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-fr-CH.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-fr-FR.ldf
