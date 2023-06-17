@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/01/05 10:21:41 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/17 18:41:56 adam Exp $
 
-DISTNAME=	google-api-core-2.11.0
+DISTNAME=	google-api-core-2.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
