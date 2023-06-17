@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3931 2023/06/17 16:19:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3932 2023/06/17 16:45:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-kms to 1.67.0 [taca 2023-06-17]
 	Updated www/ruby-aws-sdk-s3 to 1.126.0 [taca 2023-06-17]
 	Updated databases/py-mysqlclient to 2.1.1 [wiz 2023-06-17]
+	Updated graphics/geeqie to 2.1 [wiz 2023-06-17]
