@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3914 2023/06/17 14:14:50 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3915 2023/06/17 14:57:51 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5467,3 +5467,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated benchmarks/R-bench to 1.1.3 [mef 2023-06-17]
 	Updated textproc/R-vroom to 1.6.3 [mef 2023-06-17]
 	Updated textproc/R-readr to 2.1.4 [mef 2023-06-17]
+	Updated devel/libxtend to 0.1.8.2 [bacon 2023-06-17]
