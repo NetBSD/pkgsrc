@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/04/14 06:25:34 markd Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/17 10:03:57 markd Exp $
 
 DISTNAME=	bxjscls
-PKGNAME=	tex-${DISTNAME}-2.7a
-TEXLIVE_REV=	63011
+PKGNAME=	tex-${DISTNAME}-2.8
+TEXLIVE_REV=	67364
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxjscls
