@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3937 2023/06/17 18:04:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3938 2023/06/17 18:25:33 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/py-plaster_pastedeploy version 1.0.1 [wiz 2023-06-17]
 	Added devel/py-zope.event version 4.6 [wiz 2023-06-17]
 	Added devel/py-zope.interface version 6.0 [wiz 2023-06-17]
+	Added sysutils/qmediamanager version 0.1.0.5 [bacon 2023-06-17]
