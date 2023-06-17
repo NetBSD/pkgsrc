@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/12/31 16:21:51 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/17 15:27:05 taca Exp $
 
-DISTNAME=		rdiscount-2.2.7
-PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
+DISTNAME=		rdiscount-2.2.7.1
 CATEGORIES=		textproc
 
 MAINTAINER=		nils@NetBSD.org
