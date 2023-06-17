@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:03:06 markd Exp $
+share/texmf-dist/tex/latex/ptlatexcommands/PTLatexCommands.sty
