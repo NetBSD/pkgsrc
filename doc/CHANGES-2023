@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3893 2023/06/17 11:21:08 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3894 2023/06/17 12:03:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5385,3 +5385,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-Formula to 1.2.5 [mef 2023-06-17]
 	Updated math/R-RNetCDF to 2.6.2 [mef 2023-06-17]
 	Updated math/R-RPostgreSQL to 0.7.5 [mef 2023-06-17]
+	Updated math/R-gdata to 2.19.0 [mef 2023-06-17]
