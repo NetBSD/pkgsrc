@@ -1,0 +1,3 @@
+hupper is an integrated process monitor that will track changes to
+any imported Python files in sys.modules as well as custom paths.
+When files are changed the process is restarted.
