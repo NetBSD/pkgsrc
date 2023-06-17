@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/02/28 11:33:03 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/06/17 01:33:43 markd Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Actions.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Antispam.pm
@@ -15,6 +15,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Mail/MIMEDefang/Utils.pm
 bin/md-mx-ctrl
 bin/mimedefang
 bin/mimedefang-multiplexor
+bin/mimedefang-release
 bin/mimedefang-util
 bin/mimedefang.pl
 bin/watch-mimedefang
@@ -38,6 +39,7 @@ man/man7/mimedefang-notify.7
 man/man7/mimedefang-protocol.7
 man/man8/md-mx-ctrl.8
 man/man8/mimedefang-multiplexor.8
+man/man8/mimedefang-release.8
 man/man8/mimedefang.8
 man/man8/mimedefang.pl.8
 man/man8/watch-mimedefang.8
