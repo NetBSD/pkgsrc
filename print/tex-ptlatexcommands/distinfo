@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:03:06 markd Exp $
+
+BLAKE2s (ptlatexcommands.r67125.tar.xz) = 54e8f556de95c0bf7ffb0d736219c6f95e94e5b511b0b655bb4b60f60c08bb1c
+SHA512 (ptlatexcommands.r67125.tar.xz) = 2a2924af70b0ed8d76f6062482a500371d67d5a3bc0b87382d76626b34da9c1acdf9c123ebfdab2e5e79041b10d0e327e9cd732781e5fa1620247bdf02dc21fb
+Size (ptlatexcommands.r67125.tar.xz) = 3412 bytes
