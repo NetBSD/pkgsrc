@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3897 2023/06/17 12:21:53 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3898 2023/06/17 12:26:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ruamel-yaml to 0.17.32 [adam 2023-06-17]
 	Updated www/R-gargle to 1.5.0 [mef 2023-06-17]
 	Updated math/R-googlesheets4 to 1.1.1 [mef 2023-06-17]
+	Updated math/R-gss to 2.2.4 [mef 2023-06-17]
