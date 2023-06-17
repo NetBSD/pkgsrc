@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/15 07:03:56 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/17 12:17:14 mef Exp $
 
 R_PKGNAME=	gargle
-R_PKGVER=	1.4.0
+R_PKGVER=	1.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
