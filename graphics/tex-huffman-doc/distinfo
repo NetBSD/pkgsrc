@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:11:01 markd Exp $
+
+BLAKE2s (huffman.doc.r67071.tar.xz) = dc219b02e13f51ef89ae012106903a970ea8c43afab365e105d2bb5c19bbf429
+SHA512 (huffman.doc.r67071.tar.xz) = 3c1651e5cb8b527e1c55aaf682003c1639c91efd9bcaa4fa51779fac572550195979c0baf2bb4738f8b5e2628b6deb4af6109938ce70e4238696ca35f7e4ea34
+Size (huffman.doc.r67071.tar.xz) = 126832 bytes
