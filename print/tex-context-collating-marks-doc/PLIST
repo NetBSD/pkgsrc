@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:27:05 markd Exp $
+share/texmf-dist/doc/context/third/collating-marks/LICENSE
+share/texmf-dist/doc/context/third/collating-marks/README.md
+share/texmf-dist/doc/context/third/collating-marks/VERSION
+share/texmf-dist/doc/context/third/collating-marks/t-collatingmarks-module-doc.pdf
+share/texmf-dist/doc/context/third/collating-marks/t-collatingmarks-module-doc.tex
