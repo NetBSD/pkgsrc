@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.21 2023/05/26 19:55:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.22 2023/06/17 18:57:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aes-0.8.2
@@ -51,7 +51,7 @@ CARGO_CRATE_DEPENDS+=	inout-0.1.3
 CARGO_CRATE_DEPENDS+=	itoa-1.0.6
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.26
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.63
-CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
+CARGO_CRATE_DEPENDS+=   lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.144
 CARGO_CRATE_DEPENDS+=	line-wrap-0.1.1
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
