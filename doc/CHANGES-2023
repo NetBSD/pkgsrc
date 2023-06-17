@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3915 2023/06/17 14:57:51 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3916 2023/06/17 15:08:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5468,3 +5468,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/R-vroom to 1.6.3 [mef 2023-06-17]
 	Updated textproc/R-readr to 2.1.4 [mef 2023-06-17]
 	Updated devel/libxtend to 0.1.8.2 [bacon 2023-06-17]
+	Updated security/ruby-rex-powershell to 0.1.98 [taca 2023-06-17]
