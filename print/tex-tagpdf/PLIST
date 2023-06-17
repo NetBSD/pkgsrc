@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 10:53:12 markd Exp $
+share/texmf-dist/tex/latex/tagpdf/tagpdf-base.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-debug-generic.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-debug-lua.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-debug.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-luatex.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-mc-code-generic.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-mc-code-lua.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-latex-book.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-latex-inline.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-latex.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-mathml.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-pdf.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-ns-pdf2.def
+share/texmf-dist/tex/latex/tagpdf/tagpdf-parent-child-2.csv
+share/texmf-dist/tex/latex/tagpdf/tagpdf-parent-child.csv
+share/texmf-dist/tex/latex/tagpdf/tagpdf.lua
+share/texmf-dist/tex/latex/tagpdf/tagpdf.sty
+share/texmf-dist/tex/latex/tagpdf/tagpdfdocu-patches.sty
