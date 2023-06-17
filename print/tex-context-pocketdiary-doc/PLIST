@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/17 12:29:11 markd Exp $
+share/texmf-dist/doc/context/third/pocketdiary/LICENSE
+share/texmf-dist/doc/context/third/pocketdiary/README.md
+share/texmf-dist/doc/context/third/pocketdiary/VERSION
+share/texmf-dist/doc/context/third/pocketdiary/t-pocketdiary-module-doc.pdf
+share/texmf-dist/doc/context/third/pocketdiary/t-pocketdiary-module-doc.tex
