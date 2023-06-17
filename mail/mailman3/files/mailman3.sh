@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mailman3.sh,v 1.1 2023/06/04 03:27:43 markd Exp $
+# $NetBSD: mailman3.sh,v 1.2 2023/06/17 01:28:02 markd Exp $
 #
 # PROVIDE: mailman3
 # REQUIRE: mail
@@ -15,7 +15,7 @@ name="mailman3"
 rcvar=$name
 command="@PREFIX@/bin/mailman"
 #command_args="-C ${mailman_config}"
-start_cmd="mailman_doit start"
+start_cmd="mailman_doit start --force"
 stop_cmd="mailman_doit stop"
 restart_cmd="mailman_doit restart"
 status_cmd="mailman_doit status"
@@ -34,7 +34,7 @@ mailman_prestart() {
 
 mailman_doit()
 {
-	LANG=en_US.UTF-8 @SU@ -m @MAILMAN_USER@ -c "${command} ${command_args} ${rc_arg}"
+	LANG=en_US.UTF-8 @SU@ -m @MAILMAN_USER@ -c "${command} ${command_args} $*"
 }
 
 if [ -f /etc/rc.subr ]; then
