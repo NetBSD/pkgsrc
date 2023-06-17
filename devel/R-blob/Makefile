@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/05/29 00:27:37 wen Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/17 13:04:42 mef Exp $
 
 R_PKGNAME=	blob
-R_PKGVER=	1.2.3
+R_PKGVER=	1.2.4
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
