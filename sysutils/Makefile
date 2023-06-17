@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1055 2023/06/17 15:22:10 bacon Exp $
+# $NetBSD: Makefile,v 1.1056 2023/06/17 15:24:28 bacon Exp $
 #
 
 COMMENT=	System utilities
@@ -171,6 +171,7 @@ SUBDIR+=	desktop-file-utils
 SUBDIR+=	desktop-installer
 SUBDIR+=	detox
 SUBDIR+=	devkitd
+SUBDIR+=	devpub-mount
 SUBDIR+=	dfc
 SUBDIR+=	di
 SUBDIR+=	direnv
