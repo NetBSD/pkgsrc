@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.80 2023/06/05 00:15:52 markd Exp $
+# $NetBSD: Makefile,v 1.81 2023/06/17 11:01:03 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre3
+PKGNAME=	texlive-${DISTNAME}-2023pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	67187
+TEXLIVE_REV=	67376
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -112,6 +112,7 @@ DEPENDS+=	tex-beamerthemenirma-[0-9]*:../../print/tex-beamerthemenirma
 # depend beamerthemenord
 # depend bearwear
 # depend beaulivre
+# depend beautybook
 DEPENDS+=	tex-beton-[0-9]*:../../print/tex-beton
 # depend bewerbung
 # depend bez123
@@ -473,6 +474,7 @@ DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 # depend examdesign
 # depend example
 # depend examplep
+# depend examz
 # depend exceltex
 DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 # depend exercise
@@ -1088,6 +1090,7 @@ DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
 DEPENDS+=	tex-probsoln-[0-9]*:../../print/tex-probsoln
+# depend profmaquette
 DEPENDS+=	tex-program-[0-9]*:../../print/tex-program
 # depend progress
 # depend progressbar
@@ -1306,7 +1309,7 @@ DEPENDS+=	tex-tabularray-[0-9]*:../../print/tex-tabularray
 DEPENDS+=	tex-tabulary-[0-9]*:../../print/tex-tabulary
 # depend tagging
 # depend tagpair
-# depend tagpdf
+DEPENDS+=	tex-tagpdf-[0-9]*:../../print/tex-tagpdf
 # depend talk
 # depend tamefloats
 # depend tangocolors
