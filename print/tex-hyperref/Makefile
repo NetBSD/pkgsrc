@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/06/17 01:21:43 markd Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/17 01:37:12 markd Exp $
 
 DISTNAME=	hyperref
 PKGNAME=	tex-${DISTNAME}-7.00y
@@ -14,7 +14,7 @@ DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
 DEPENDS+=	tex-auxhook-[0-9]*:../../print/tex-auxhook
 DEPENDS+=	tex-bitset-[0-9]*:../../print/tex-bitset
 DEPENDS+=	tex-etexcmds-[0-9]*:../../print/tex-etexcmds
-DEPENDS+=	tex-etoolbox-[0-9]*:../../print/tex-etoolbox
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-gettitlestring-[0-9]*:../../print/tex-gettitlestring
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 DEPENDS+=	tex-hycolor-[0-9]*:../../print/tex-hycolor
