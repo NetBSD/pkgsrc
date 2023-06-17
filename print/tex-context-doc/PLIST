@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2023/04/09 12:23:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/06/17 10:06:28 markd Exp $
 man/man1/context.1
-man/man1/luatools.1
 man/man1/mtx-babel.1
 man/man1/mtx-base.1
 man/man1/mtx-bibtex.1
@@ -38,6 +37,7 @@ man/man1/mtx-vscode.1
 man/man1/mtx-watch.1
 man/man1/mtx-youless.1
 man/man1/mtxrun.1
+share/texmf-dist/doc/context/README.adoc
 share/texmf-dist/doc/context/documents/general/leaflets/leaflet-context.pdf
 share/texmf-dist/doc/context/documents/general/leaflets/leaflet-luametatex.pdf
 share/texmf-dist/doc/context/documents/general/leaflets/leaflet-mixing.pdf
@@ -73,11 +73,13 @@ share/texmf-dist/doc/context/documents/general/manuals/languages-mkiv.pdf
 share/texmf-dist/doc/context/documents/general/manuals/libraries-mkiv.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-alignments.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-boxes.pdf
+share/texmf-dist/doc/context/documents/general/manuals/lowlevel-buffers.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-characters.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-conditionals.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-expansion.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-grouping.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-inserts.pdf
+share/texmf-dist/doc/context/documents/general/manuals/lowlevel-localboxes.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-loops.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-macros.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-marks.pdf
@@ -85,6 +87,7 @@ share/texmf-dist/doc/context/documents/general/manuals/lowlevel-paragraphs.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-registers.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-scope.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel-security.pdf
+share/texmf-dist/doc/context/documents/general/manuals/lowlevel-tokens.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lowlevel.pdf
 share/texmf-dist/doc/context/documents/general/manuals/lua-mkiv.pdf
 share/texmf-dist/doc/context/documents/general/manuals/luametafun.pdf
@@ -321,8 +324,6 @@ share/texmf-dist/doc/context/presentations/tug/2001/tug-2001-ideas.pdf
 share/texmf-dist/doc/context/presentations/tug/2001/tug-2001-ideas.tex
 share/texmf-dist/doc/context/presentations/tug/2007/tug-2007-fonts.pdf
 share/texmf-dist/doc/context/presentations/tug/2007/tug-2007-fonts.tex
-share/texmf-dist/doc/context/scripts/mkii/mptopdf.1
-share/texmf-dist/doc/context/scripts/mkii/mptopdf.man1.pdf
 share/texmf-dist/doc/context/scripts/mkiv/context.html
 share/texmf-dist/doc/context/scripts/mkiv/context.man
 share/texmf-dist/doc/context/scripts/mkiv/context.xml
@@ -778,6 +779,7 @@ share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel-registers
 share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel-scope.tex
 share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel-security.tex
 share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel-style.tex
+share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel-tokens.tex
 share/texmf-dist/doc/context/sources/general/manuals/lowlevel/lowlevel.tex
 share/texmf-dist/doc/context/sources/general/manuals/lua/lua-mkiv.tex
 share/texmf-dist/doc/context/sources/general/manuals/luametafun/luametafun-arrow.tex
@@ -1039,6 +1041,7 @@ share/texmf-dist/doc/context/sources/general/manuals/mk/mk-zapfino.tex
 share/texmf-dist/doc/context/sources/general/manuals/mk/mk.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-children.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-contents.tex
+share/texmf-dist/doc/context/sources/general/manuals/musings/musings-hownotto.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-introduction.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-names.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-perception.tex
@@ -1048,8 +1051,10 @@ share/texmf-dist/doc/context/sources/general/manuals/musings/musings-speed.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-stability.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-staygo.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-style.tex
+share/texmf-dist/doc/context/sources/general/manuals/musings/musings-texlive.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-titlepage.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-toocomplex.tex
+share/texmf-dist/doc/context/sources/general/manuals/musings/musings-unicode.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings-whytex.tex
 share/texmf-dist/doc/context/sources/general/manuals/musings/musings.tex
 share/texmf-dist/doc/context/sources/general/manuals/nodes/nodes-sun-pia-03149.jpg
@@ -1095,6 +1100,7 @@ share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-binary.te
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-contents.tex
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-dk.tex
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-eventually.tex
+share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-fairphone.tex
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-gettingridof.tex
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-introduction.tex
 share/texmf-dist/doc/context/sources/general/manuals/ontarget/ontarget-makesnosense.tex
