@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/17 12:27:05 markd Exp $
+
+BLAKE2s (context-collating-marks.doc.r66956.tar.xz) = fc8e6bd86739fdf5449761b17149ec540f77d38bf5c5f5784d0ce9c61ce48fd9
+SHA512 (context-collating-marks.doc.r66956.tar.xz) = 6f90934615d99f858b4ee68f09b2f4a4c913d954a6be48ddb539e563891a4b22ea50e919623ec28c076e347dd169a1fa75232f45ba78b6db5f8e6146dcf57d19
+Size (context-collating-marks.doc.r66956.tar.xz) = 115224 bytes
