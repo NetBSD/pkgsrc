@@ -1,0 +1,14 @@
+$NetBSD: patch-meson.build,v 1.3 2023/06/18 12:13:28 wiz Exp $
+
+https://github.com/BestImageViewer/geeqie/issues/1111
+
+--- meson.build.orig	2023-06-17 12:12:30.000000000 +0000
++++ meson.build
+@@ -190,6 +190,7 @@ option = get_option('execinfo')
+ if not option.disabled()
+     result = cc.check_header('execinfo.h')
+     if result
++        libexecinfo_dep = cc.find_library('execinfo', required : false)
+         conf_data.set('HAVE_EXECINFO_H', 1)
+         summary({'execinfo' : ['stacktrace supported:', true]}, section : 'Debugging', bool_yn : true)
+     else
