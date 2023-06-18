@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/11/23 05:56:53 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/18 05:26:01 adam Exp $
 
 DISTNAME=	gevent-22.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12.2:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=1.1.3:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-ZopeEvent-[0-9]*:../../devel/py-ZopeEvent
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 MAKE_ENV+=	GEVENTSETUP_EMBED_CARES=0
 MAKE_ENV+=	GEVENTSETUP_EMBED_LIBEV=0
