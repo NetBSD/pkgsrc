@@ -1,0 +1,14 @@
+$NetBSD: patch-src_meson.build,v 1.1 2023/06/18 12:13:28 wiz Exp $
+
+https://github.com/BestImageViewer/geeqie/issues/1111
+
+--- src/meson.build.orig	2023-06-17 12:12:30.000000000 +0000
++++ src/meson.build
+@@ -281,6 +281,7 @@ gspell_dep,
+ lcms_dep,
+ libarchive_dep,
+ libdw_dep,
++libexecinfo_dep,
+ libffmpegthumbnailer_dep,
+ libheif_dep,
+ libjpeg_dep,
