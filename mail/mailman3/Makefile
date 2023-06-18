@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/18 05:21:44 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/18 12:22:57 adam Exp $
 
 DISTNAME=	mailman-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-zope.component-[0-9]*:../../devel/py-zope.component
-DEPENDS+=	${PYPKGPREFIX}-ZopeConfiguration-[0-9]*:../../devel/py-ZopeConfiguration
+DEPENDS+=	${PYPKGPREFIX}-zope.configuration-[0-9]*:../../devel/py-zope.configuration
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0:../../devel/py-zope.interface
 
