@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/04/30 12:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	zope.configuration-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.c/ZopeC/}
@@ -11,7 +11,7 @@ COMMENT=	Zope Configuration Markup Language
 LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeI18NMessageid-[0-9]*:../../devel/py-ZopeI18NMessageid
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-ZopeSchema>=4.9.0:../../devel/py-ZopeSchema
 TEST_DEPENDS+=	${PYPKGPREFIX}-manuel-[0-9]*:../../textproc/py-manuel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
