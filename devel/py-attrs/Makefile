@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/04/30 13:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	attrs-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatc
 #TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.3.0:../../devel/py-test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.1.1:../../lang/py-mypy
-#TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+#TEST_DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 #TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.3:../../devel/py-coverage
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

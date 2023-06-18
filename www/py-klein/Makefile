@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/06 12:42:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/18 05:39:38 adam Exp $
 
-DISTNAME=	klein-20.6.0
+DISTNAME=	klein-21.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/klein/}
 
@@ -18,11 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tubes-[0-9]*:../../devel/py-tubes
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
