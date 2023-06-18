@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/18 14:36:18 mef Exp $
 
-BLAKE2s (R/pbdZMQ_0.3-3.tar.gz) = ba869fb75eedb5fbb85fe1f32a1f7b08812fc1b46e5b1abf694d583b34e45ce2
-SHA512 (R/pbdZMQ_0.3-3.tar.gz) = 3dac074c116b18e1d92f5c9b0cca042ac8d8d1dfcd982b476e9957622cfca38fa94508740376619b5a0a74f73d3e146893358d07ae97214df04096a18eadae9d
-Size (R/pbdZMQ_0.3-3.tar.gz) = 1052217 bytes
+BLAKE2s (R/pbdZMQ_0.3-9.tar.gz) = 36fd961d6f44e0f16d4ba8fcdf340462a5d2e666de617c571284b25879979a8a
+SHA512 (R/pbdZMQ_0.3-9.tar.gz) = 6221f309b4818651a3145cfa54a03af801faddea8dfea5bf2ad5f976cbde32b3947cab30600988ec369a4a302f657f591b96e3144bc3d26ad26c415fa1178756
+Size (R/pbdZMQ_0.3-9.tar.gz) = 1213785 bytes
