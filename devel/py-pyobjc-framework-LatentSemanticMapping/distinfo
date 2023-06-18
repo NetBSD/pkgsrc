@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/04/07 05:25:13 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/06/18 05:03:01 adam Exp $
 
-BLAKE2s (pyobjc-framework-LatentSemanticMapping-9.0.1.tar.gz) = e076572733a47fb29cb760d9b359fa441e24dc02e75798ab86fcd3faaa609dfb
-SHA512 (pyobjc-framework-LatentSemanticMapping-9.0.1.tar.gz) = c2e09cb275d77837960c926a6de723cdc1020f18deea11b88671def0594c8d91c2fe8332a33cb2e8ab6e3a654be0c633efcb0c5a54810566c82ef0c9f8973485
-Size (pyobjc-framework-LatentSemanticMapping-9.0.1.tar.gz) = 15941 bytes
+BLAKE2s (pyobjc-framework-LatentSemanticMapping-9.2.tar.gz) = ab9f23ed9469994f924db811e6b34857949616689fa9b32a278ac033e7c11e86
+SHA512 (pyobjc-framework-LatentSemanticMapping-9.2.tar.gz) = ee56d4ca558727e1bbdceaf26e7b6e4d52dd0bb7041bcf6bb88a1636bd781e4b14aef9bc0c4eb8bbcc5f5269a3595f07666da0b8caf4a759b4e181ec3c22322c
+Size (pyobjc-framework-LatentSemanticMapping-9.2.tar.gz) = 16133 bytes

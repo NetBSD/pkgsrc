@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/07 05:25:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/18 05:02:58 adam Exp $
 
-BLAKE2s (pyobjc-framework-DeviceCheck-9.0.1.tar.gz) = 79c5b5359fe08f7408ff861cce0ec2052efe35fa1118e7dbe166d2e477b1ad21
-SHA512 (pyobjc-framework-DeviceCheck-9.0.1.tar.gz) = f2cf3cd006dc7e95583d762973d4310cd4b00bdcaa1ed5533a97dc345005f65f768ff4ad00e7c5a37c2f7c6bca0472d49e3c2f70d6c46ad26a500f638635c7b5
-Size (pyobjc-framework-DeviceCheck-9.0.1.tar.gz) = 12347 bytes
+BLAKE2s (pyobjc-framework-DeviceCheck-9.2.tar.gz) = b30686d7fff16bf5370314cccd437611c826e4f1737a02d5d8741bb3468a2bab
+SHA512 (pyobjc-framework-DeviceCheck-9.2.tar.gz) = 70799fd164154f9ccb5c9df0cc270244f396bce876be9e30ea5f0d96d2dcadeed5e44524a18da98bce6adb7c9daa9ce1e3e99669fc04cbe58e25e76f7c5deeb9
+Size (pyobjc-framework-DeviceCheck-9.2.tar.gz) = 12842 bytes

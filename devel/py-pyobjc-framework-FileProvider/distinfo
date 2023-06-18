@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/07 05:25:12 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/18 05:02:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-FileProvider-9.0.1.tar.gz) = f269cdf7482de11c219c98ecd89df2f8bc3bab4229467acf048bed3b867949fe
-SHA512 (pyobjc-framework-FileProvider-9.0.1.tar.gz) = 9bbd51ff8e03112d92589b8dff0aef6e6ba086a6bebe4b4cdc1ebe362e3d3e8228f9484721342696b9c21db779d907a413c7f2a129c6c7e4c1472ded7b052779
-Size (pyobjc-framework-FileProvider-9.0.1.tar.gz) = 61748 bytes
+BLAKE2s (pyobjc-framework-FileProvider-9.2.tar.gz) = f49702efff9186088aaed22657fc530b84a7d4da9bf8926c7740211d6f1f3c9a
+SHA512 (pyobjc-framework-FileProvider-9.2.tar.gz) = c493922bbcbdc4eca401011c9bd8a547621750d462466310b0e7cdebd8d7f3ca18a189aaf6f6e64c6c32ba16b396c7755af9bbf363f50a13a207043446bf7dce
+Size (pyobjc-framework-FileProvider-9.2.tar.gz) = 73617 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:00 adam Exp $
+
+BLAKE2s (pyobjc-framework-HealthKit-9.2.tar.gz) = ba6f9be909d6a7ccf375e17f6e60ce502e003c53a99f7ed5ac32c48b3a976937
+SHA512 (pyobjc-framework-HealthKit-9.2.tar.gz) = 89d48f7c4bfb443f3579d889e0dd567878e98e2a56cbfeb68b15a6d51034b4c3b2726e1c48c707e8ddcf052ca7cc340552845c269fd359644a0689516a396cc9
+Size (pyobjc-framework-HealthKit-9.2.tar.gz) = 110923 bytes

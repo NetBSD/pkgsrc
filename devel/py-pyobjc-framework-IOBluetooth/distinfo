@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:00 adam Exp $
+
+BLAKE2s (pyobjc-framework-IOBluetooth-9.2.tar.gz) = 1852061147932f4284fb90c795d9ca1c0a4433e88b448d554b27968ee81d6db9
+SHA512 (pyobjc-framework-IOBluetooth-9.2.tar.gz) = d494ba23634651c4013233855f6b6f8bc9a54bb062c3f3a24464c2fb32fe9cd455aea0a174e2b72b99075dff53c2503b5731dd1ce0179d4f49f84627d2a3bd83
+Size (pyobjc-framework-IOBluetooth-9.2.tar.gz) = 153320 bytes

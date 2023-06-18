@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:02 adam Exp $
+
+BLAKE2s (pyobjc-framework-MetalFX-9.2.tar.gz) = b01a3bbd807539a7c588e4a5d232b531142926798f9f5b4c4ad50a57f484caee
+SHA512 (pyobjc-framework-MetalFX-9.2.tar.gz) = 438dc0a817d18a2a52a0c6292f54cff1da01326b3e295bd3aa5f0f4ceb6cd2852725412d2b40db151e8707a1b36786b39f1df2e9a05b52f200c74e38c10848cb
+Size (pyobjc-framework-MetalFX-9.2.tar.gz) = 21667 bytes
