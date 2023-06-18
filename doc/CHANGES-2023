@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3949 2023/06/18 12:01:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3950 2023/06/18 12:11:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5505,3 +5505,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-ZopeInterface successor py-zope.interface [adam 2023-06-18]
 	Renamed devel/py-ZopeTestrunner to devel/py-zope.testrunner [adam 2023-06-18]
 	Updated devel/py-zope.testrunner to 6.0 [adam 2023-06-18]
+	Renamed devel/py-ZopeI18NMessageid to devel/py-zope.i18nmessageid [adam 2023-06-18]
+	Updated devel/py-zope.i18nmessageid to 6.0.1 [adam 2023-06-18]
