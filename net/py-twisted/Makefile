@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.52 2022/10/19 14:25:19 nia Exp $
+# $NetBSD: Makefile,v 1.53 2023/06/18 05:39:37 adam Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.2:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.4.2:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-automat>=0.8.0:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly

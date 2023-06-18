@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/10/19 14:25:18 nia Exp $
+# $NetBSD: Makefile,v 1.42 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	foolscap-21.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	RPC protocol for Twisted
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.1:../../devel/py-zope.interface
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

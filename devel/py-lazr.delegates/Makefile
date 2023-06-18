@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/04/30 12:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/18 05:39:36 adam Exp $
 
 DISTNAME=	lazr.delegates-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://launchpad.net/lazr.delegates/
 COMMENT=	Easily write objects that delegate behavior
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 

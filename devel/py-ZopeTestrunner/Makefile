@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/30 12:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	zope.testrunner-5.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.t/ZopeT/}
@@ -12,7 +12,7 @@ LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
