@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/06/18 12:10:23 adam Exp $
+# $NetBSD: Makefile,v 1.1 2023/06/18 12:17:21 adam Exp $
 
-DISTNAME=	zope.schema-6.2.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.s/ZopeS/}
+DISTNAME=	zope.schema-7.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.schema/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0.0:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.i18nmessageid-[0-9]*:../../devel/py-zope.i18nmessageid
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
