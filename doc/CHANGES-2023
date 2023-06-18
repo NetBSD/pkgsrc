@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3954 2023/06/18 13:50:45 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3955 2023/06/18 13:55:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-zope.testing to 5.0.1 [adam 2023-06-18]
 	Updated textproc/py-sphinx-autoapi to 2.1.1 [adam 2023-06-18]
 	Updated devel/R-git2r to 0.32.0 [mef 2023-06-18]
+	Updated devel/R-cli to 3.6.1 [mef 2023-06-18]
