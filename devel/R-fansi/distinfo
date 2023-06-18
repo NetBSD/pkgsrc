@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/18 14:42:29 mef Exp $
 
-BLAKE2s (R/fansi_0.5.0.tar.gz) = 370df6288ba4f195a7f7aa2232cdcf94205d90d47fe7fac42950467dee35d672
-SHA512 (R/fansi_0.5.0.tar.gz) = cc2c52e5c122d4b99c5af47997ece264e90e7969e40c2f0acca694da8b6b3b6699fa53624ccfeb45e3dfcb3e789865e64e3b8a3c8ba8eac8bddeccb66bb835d4
-Size (R/fansi_0.5.0.tar.gz) = 301724 bytes
+BLAKE2s (R/fansi_1.0.4.tar.gz) = ee56745674fa40574db9abd07bf8d57bf8000f241957976d4b84da0e56d2c420
+SHA512 (R/fansi_1.0.4.tar.gz) = f74a453910eb394ce1ea1969997ce45b3e708b92c1513e48a09e84e5f7137eceabe66e9df279bf7759e2e0316869d4ff91f418e758f8346dce4adc27f7e543ba
+Size (R/fansi_1.0.4.tar.gz) = 482055 bytes
