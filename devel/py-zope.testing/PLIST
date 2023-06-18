@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/03/07 10:46:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/06/18 12:31:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,9 +29,6 @@ ${PYSITELIB}/zope/testing/loggingsupport.py
 ${PYSITELIB}/zope/testing/loggingsupport.pyc
 ${PYSITELIB}/zope/testing/loggingsupport.pyo
 ${PYSITELIB}/zope/testing/loggingsupport.txt
-${PYSITELIB}/zope/testing/loghandler.py
-${PYSITELIB}/zope/testing/loghandler.pyc
-${PYSITELIB}/zope/testing/loghandler.pyo
 ${PYSITELIB}/zope/testing/module.py
 ${PYSITELIB}/zope/testing/module.pyc
 ${PYSITELIB}/zope/testing/module.pyo
@@ -40,9 +37,6 @@ ${PYSITELIB}/zope/testing/renormalizing.py
 ${PYSITELIB}/zope/testing/renormalizing.pyc
 ${PYSITELIB}/zope/testing/renormalizing.pyo
 ${PYSITELIB}/zope/testing/renormalizing.txt
-${PYSITELIB}/zope/testing/server.py
-${PYSITELIB}/zope/testing/server.pyc
-${PYSITELIB}/zope/testing/server.pyo
 ${PYSITELIB}/zope/testing/setupstack.py
 ${PYSITELIB}/zope/testing/setupstack.pyc
 ${PYSITELIB}/zope/testing/setupstack.pyo
@@ -51,9 +45,6 @@ ${PYSITELIB}/zope/testing/test-1.txt
 ${PYSITELIB}/zope/testing/test4.txt
 ${PYSITELIB}/zope/testing/test4e.txt
 ${PYSITELIB}/zope/testing/test4f.txt
-${PYSITELIB}/zope/testing/test_renormalizing.py
-${PYSITELIB}/zope/testing/test_renormalizing.pyc
-${PYSITELIB}/zope/testing/test_renormalizing.pyo
 ${PYSITELIB}/zope/testing/testrunner.py
 ${PYSITELIB}/zope/testing/testrunner.pyc
 ${PYSITELIB}/zope/testing/testrunner.pyo
