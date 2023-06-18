@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/18 05:03:02 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/MetalFX/_MetalFX.abi3.so
+${PYSITELIB}/MetalFX/__init__.py
+${PYSITELIB}/MetalFX/__init__.pyc
+${PYSITELIB}/MetalFX/__init__.pyo
+${PYSITELIB}/MetalFX/_metadata.py
+${PYSITELIB}/MetalFX/_metadata.pyc
+${PYSITELIB}/MetalFX/_metadata.pyo

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/18 05:03:07 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/SharedWithYou/_SharedWithYou.abi3.so
+${PYSITELIB}/SharedWithYou/__init__.py
+${PYSITELIB}/SharedWithYou/__init__.pyc
+${PYSITELIB}/SharedWithYou/__init__.pyo
+${PYSITELIB}/SharedWithYou/_metadata.py
+${PYSITELIB}/SharedWithYou/_metadata.pyc
+${PYSITELIB}/SharedWithYou/_metadata.pyo

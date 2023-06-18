@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:07 adam Exp $
+
+BLAKE2s (pyobjc-framework-SharedWithYou-9.2.tar.gz) = 0f8b8e0ef5d2389d5e88997d54d2421766e3b9e1f4bfd52eef69d65ee62a64b5
+SHA512 (pyobjc-framework-SharedWithYou-9.2.tar.gz) = a9c0b06f2cf63ebc129370001eb9709a3171c2cbdd27bbd135547387d5465c2b93a63b437c7c7f239fde95813fa2bfe3571a31814aaf920fd79080c8a645a9a7
+Size (pyobjc-framework-SharedWithYou-9.2.tar.gz) = 23564 bytes

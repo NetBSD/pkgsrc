@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/04/07 05:25:18 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/06/18 05:03:06 adam Exp $
 
-BLAKE2s (pyobjc-framework-ScreenSaver-9.0.1.tar.gz) = 6cb8ae78f9c159b94a9071eb50c56eb5f469797bb3ef8ae775515627dffd4a94
-SHA512 (pyobjc-framework-ScreenSaver-9.0.1.tar.gz) = 89d4e01f707b7df26c465ccf6fe618ea645233f56ee33a5e2c197527527b1039de7b918a41206e7ec8835ab2c6a7ab098ca235dfaa9553cf9d29850be6fbf7e8
-Size (pyobjc-framework-ScreenSaver-9.0.1.tar.gz) = 21902 bytes
+BLAKE2s (pyobjc-framework-ScreenSaver-9.2.tar.gz) = a7d993930bf4d838964d828728ca2c3dd6df68f15019bb1fccd4da1ba2395316
+SHA512 (pyobjc-framework-ScreenSaver-9.2.tar.gz) = 9137786d19aeca1acb40722e5294800eb45c111e99c64785b39423514f8263685b13582a62dd5ffa428347c90eae6f9b52dab9e15845f49b4574e2acabbb15a3
+Size (pyobjc-framework-ScreenSaver-9.2.tar.gz) = 22481 bytes
