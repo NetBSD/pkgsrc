@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 05:17:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/06/18 05:02:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -78,6 +78,9 @@ ${PYSITELIB}/objc/_dyld.pyo
 ${PYSITELIB}/objc/_framework.py
 ${PYSITELIB}/objc/_framework.pyc
 ${PYSITELIB}/objc/_framework.pyo
+${PYSITELIB}/objc/_informal_protocol.py
+${PYSITELIB}/objc/_informal_protocol.pyc
+${PYSITELIB}/objc/_informal_protocol.pyo
 ${PYSITELIB}/objc/_lazyimport.py
 ${PYSITELIB}/objc/_lazyimport.pyc
 ${PYSITELIB}/objc/_lazyimport.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/objc/_pythonify.pyo
 ${PYSITELIB}/objc/_structtype.py
 ${PYSITELIB}/objc/_structtype.pyc
 ${PYSITELIB}/objc/_structtype.pyo
+${PYSITELIB}/objc/_transform.py
+${PYSITELIB}/objc/_transform.pyc
+${PYSITELIB}/objc/_transform.pyo
 ${PYSITELIB}/objc/simd.py
 ${PYSITELIB}/objc/simd.pyc
 ${PYSITELIB}/objc/simd.pyo

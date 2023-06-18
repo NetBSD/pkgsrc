@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:02:54 adam Exp $
+
+BLAKE2s (pyobjc-framework-BackgroundAssets-9.2.tar.gz) = 84aa9dabf18c66f786ab6c1da4a841762066a8192f47c4a5149a182a00a4eb40
+SHA512 (pyobjc-framework-BackgroundAssets-9.2.tar.gz) = 927ff33dd27b628e625a017356a74851314e304d3e698b9e6700befcade910fd93074a7f90852386376c45f795a40d18c91b7fa7ba9c1f71abd502f05329613b
+Size (pyobjc-framework-BackgroundAssets-9.2.tar.gz) = 20976 bytes

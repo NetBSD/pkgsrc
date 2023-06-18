@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/07 05:25:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/06/18 05:02:56 adam Exp $
 
-BLAKE2s (pyobjc-framework-CoreMedia-9.0.1.tar.gz) = 4c61f8cc53d4c1dca12f40aedb3d6bb5d5e4aade1a3ed04a2e6506630d25e486
-SHA512 (pyobjc-framework-CoreMedia-9.0.1.tar.gz) = 840cd87136736e9c1f5c49c881a8d40c4338a4c633be058f2db7aac8cb1ac70e9aefb8d4765b640c16f3228bb69910e04921f394b550cb4ac9f622cef0a331c7
-Size (pyobjc-framework-CoreMedia-9.0.1.tar.gz) = 169102 bytes
+BLAKE2s (pyobjc-framework-CoreMedia-9.2.tar.gz) = 0c824e2b472c5a0edfe8323e773be2a2d912e04f55ba2b44db3f38506cda16ac
+SHA512 (pyobjc-framework-CoreMedia-9.2.tar.gz) = b488678fa061e4f57dae1a35d39f4ea3efb70618e0d67e72c36990919e68263a6dfa7debaf669bc52ee162079afcf1ded50bcbe370cbc5cd1c9590a6be887bb3
+Size (pyobjc-framework-CoreMedia-9.2.tar.gz) = 169875 bytes

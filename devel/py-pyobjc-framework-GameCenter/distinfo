@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/07 05:25:12 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/06/18 05:02:59 adam Exp $
 
-BLAKE2s (pyobjc-framework-GameCenter-9.0.1.tar.gz) = 062569f6f54e7aef96888f658d34b99df354ef1448500849b2666ac5e2f5a9aa
-SHA512 (pyobjc-framework-GameCenter-9.0.1.tar.gz) = f7bba138d401c765d5a3f83bab6ec5e266bc0a44ff3248947d4519577ab5ed25b24cdfe7154958785389428f8ea4d2d613918efdb4588756be5d7e16a9e21cc3
-Size (pyobjc-framework-GameCenter-9.0.1.tar.gz) = 30279 bytes
+BLAKE2s (pyobjc-framework-GameCenter-9.2.tar.gz) = 3d47e8919d251a5564c4a9b0e30d3c5bcf3d7eaea41aa750132b03d481861665
+SHA512 (pyobjc-framework-GameCenter-9.2.tar.gz) = 80f322a4a834eca71688bc65df3e9f79c245ab90ad7e1b2c97ad339658f5807e51fcfa2a55a968b9b7fcd66b516d5ca0d310f2595e3d2efa9047c7940d09cf1b
+Size (pyobjc-framework-GameCenter-9.2.tar.gz) = 30526 bytes

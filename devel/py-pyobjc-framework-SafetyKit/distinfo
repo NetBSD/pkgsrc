@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:06 adam Exp $
+
+BLAKE2s (pyobjc-framework-SafetyKit-9.2.tar.gz) = ec39a2e5f2765873c85768628d5fe2007b20a74b41cb92a9dba1b9486dc734ba
+SHA512 (pyobjc-framework-SafetyKit-9.2.tar.gz) = bc1896db458df5c152e1322e47e7ff450386d0b2c9ef8ea51e2f8db45f5889461aafdb5ef2da736391061e9622b5c23e5ab82aafba1856ead72ee1df801028c6
+Size (pyobjc-framework-SafetyKit-9.2.tar.gz) = 19128 bytes

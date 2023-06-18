@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/07 05:25:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/18 05:02:58 adam Exp $
 
-BLAKE2s (pyobjc-framework-ExecutionPolicy-9.0.1.tar.gz) = 6c092e3cc14f5138aa3acafbc32d899e5336de148e9ce40d847ae044af5c8e00
-SHA512 (pyobjc-framework-ExecutionPolicy-9.0.1.tar.gz) = 6764e829f7369ee481b9b3b96ac1aa0f7f014e4d5e5c2714ee554f9ac4f26461c16f6859a918bb4bf83bfa23616629d972a5b00541da1a1d7b4f33181aa3105b
-Size (pyobjc-framework-ExecutionPolicy-9.0.1.tar.gz) = 12074 bytes
+BLAKE2s (pyobjc-framework-ExecutionPolicy-9.2.tar.gz) = ac7926ab5d8bd7e9169d7433f1fa7c3d5c60bc8f511c3a2aabd5be1fe9693b48
+SHA512 (pyobjc-framework-ExecutionPolicy-9.2.tar.gz) = 9339a8089b15b43fa6af1a4ed9473412397db4ec0863310ac115f3f28ff77a67cf69512bc40ac6e5c378ce5dbb211222f83399c61170d2cdb2c04f9510710662
+Size (pyobjc-framework-ExecutionPolicy-9.2.tar.gz) = 12473 bytes
