@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3946 2023/06/18 05:26:55 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3947 2023/06/18 05:40:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5502,3 +5502,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyobjc to 9.2 [adam 2023-06-18]
 	Removed devel/py-ZopeComponent successor py-zope.component [adam 2023-06-18]
 	Removed devel/py-ZopeEvent successor py-zope.event [adam 2023-06-18]
+	Updated sysutils/py-eliot to 1.14.0 [adam 2023-06-18]
+	Removed devel/py-ZopeInterface successor py-zope.interface [adam 2023-06-18]
