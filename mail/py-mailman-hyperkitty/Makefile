@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 03:32:47 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	mailman-hyperkitty-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-mailman>=3.0.0:../../mail/mailman3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
 

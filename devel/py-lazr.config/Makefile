@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/30 12:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/18 05:39:36 adam Exp $
 
 DISTNAME=	lazr.config-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://launchpad.net/lazr.config/
 COMMENT=	Create configuration schemas, and process and validate configurations
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-lazr.delegates-[0-9]*:../../devel/py-lazr.delegates
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 

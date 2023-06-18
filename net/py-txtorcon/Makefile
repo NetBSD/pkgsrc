@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/05/21 18:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/18 05:39:37 adam Exp $
 
 DISTNAME=	txtorcon-23.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://txtorcon.readthedocs.io/
 COMMENT=	Twisted Python library for controlling tor daemon
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.1:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-automat-[0-9]*:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-twisted>=15.5.0:../../net/py-twisted

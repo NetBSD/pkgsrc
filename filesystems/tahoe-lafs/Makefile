@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2022/11/28 19:07:30 nia Exp $
+# $NetBSD: Makefile,v 1.59 2023/06/18 05:39:38 adam Exp $
 
 VERSION_BASE=	1.18.0
 VERSION_RC=
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # install_requires
 # setuptools 28.8.0
 DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.0:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-foolscap>=21.7.0:../../net/py-foolscap
 # twisted needs tls, conch options.  pkgsrc has tls.
 # TODO: conch??
