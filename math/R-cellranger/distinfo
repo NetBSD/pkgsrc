@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 14:21:13 mef Exp $
+
+BLAKE2s (R/cellranger_1.1.0.tar.gz) = dd1b9968bc61e926a980034729d9cf044f7a8e8926a23480e8553f201af04587
+SHA512 (R/cellranger_1.1.0.tar.gz) = 5a27ce21b5d22b0eea06f64ef6faf26a63860ccefa17e3d4cb74ffceaf8b0b6f332b482d476dbc32f8174d5bfef01a5f9fc20673db2fa5386682be1baf11d2a9
+Size (R/cellranger_1.1.0.tar.gz) = 63857 bytes
