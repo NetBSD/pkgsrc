@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/04/07 05:25:19 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/06/18 05:03:07 adam Exp $
 
-BLAKE2s (pyobjc-framework-Social-9.0.1.tar.gz) = 0d049c561f63aaee55cf4795eed7af9686851bf22737f61b66a06fc11c5f7b8f
-SHA512 (pyobjc-framework-Social-9.0.1.tar.gz) = 008c83c47a0a324b610399b257977f5789fcd5f606d56dc6e975849afaa9e966cc1f6db5daa9ea0ccbadc5b9312cb9bbb095abe304f4e0ef5222f16f9eb2d0a2
-Size (pyobjc-framework-Social-9.0.1.tar.gz) = 13071 bytes
+BLAKE2s (pyobjc-framework-Social-9.2.tar.gz) = 96553a75db77ff773c16ad21fdeeb5dce5efefecb72a56f45c4c13ec373f17df
+SHA512 (pyobjc-framework-Social-9.2.tar.gz) = 7ec19abfc1291497e5626e9e069444af36a3d663fbf81b2ca0d9b6db033016fefcc246a046d9445e5bc769ac3b17f7350cbd143aec6300cdd3957d76ec1c88d8
+Size (pyobjc-framework-Social-9.2.tar.gz) = 13262 bytes

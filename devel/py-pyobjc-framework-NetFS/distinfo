@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/07 05:25:16 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/06/18 05:03:03 adam Exp $
 
-BLAKE2s (pyobjc-framework-NetFS-9.0.1.tar.gz) = 5127882d989f6a593ff0bece432d165d605aaa7868be615f0ba393014d8ad790
-SHA512 (pyobjc-framework-NetFS-9.0.1.tar.gz) = d206ba69f368cfb1d785dd71e5f2ba0f0ec751266d32f323c3d8946e901ea00d6f262d0740b089b0307a1c8d51d6ddbb56ea99eccf02c3e4a8368a0a1f60ca18
-Size (pyobjc-framework-NetFS-9.0.1.tar.gz) = 14781 bytes
+BLAKE2s (pyobjc-framework-NetFS-9.2.tar.gz) = 828eecd735bb892a050600a1592ebcb273044a5aaf949cb1609450606a4b39fc
+SHA512 (pyobjc-framework-NetFS-9.2.tar.gz) = ab0f3de22dc3148d13d9412f2bb22b0c61a324307534da6c102ab55a0f11ca8394e22f3c981af86b1504ca02331044a5e24efb766a40c5812b15f29b313ce4ed
+Size (pyobjc-framework-NetFS-9.2.tar.gz) = 15003 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2023/04/07 05:25:05 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2023/06/18 05:02:52 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -16,6 +16,7 @@
 # used by devel/py-pyobjc-framework-AuthenticationServices/Makefile
 # used by devel/py-pyobjc-framework-AutomaticAssessmentConfiguration/Makefile
 # used by devel/py-pyobjc-framework-Automator/Makefile
+# used by devel/py-pyobjc-framework-BackgroundAssets/Makefile
 # used by devel/py-pyobjc-framework-BusinessChat/Makefile
 # used by devel/py-pyobjc-framework-CFNetwork/Makefile
 # used by devel/py-pyobjc-framework-CallKit/Makefile
@@ -53,6 +54,7 @@
 # used by devel/py-pyobjc-framework-EventKit/Makefile
 # used by devel/py-pyobjc-framework-ExceptionHandling/Makefile
 # used by devel/py-pyobjc-framework-ExecutionPolicy/Makefile
+# used by devel/py-pyobjc-framework-ExtensionKit/Makefile
 # used by devel/py-pyobjc-framework-ExternalAccessory/Makefile
 # used by devel/py-pyobjc-framework-FSEvents/Makefile
 # used by devel/py-pyobjc-framework-FileProvider/Makefile
@@ -62,7 +64,10 @@
 # used by devel/py-pyobjc-framework-GameController/Makefile
 # used by devel/py-pyobjc-framework-GameKit/Makefile
 # used by devel/py-pyobjc-framework-GameplayKit/Makefile
+# used by devel/py-pyobjc-framework-HealthKit/Makefile
 # used by devel/py-pyobjc-framework-IMServicePlugIn/Makefile
+# used by devel/py-pyobjc-framework-IOBluetooth/Makefile
+# used by devel/py-pyobjc-framework-IOBluetoothUI/Makefile
 # used by devel/py-pyobjc-framework-IOSurface/Makefile
 # used by devel/py-pyobjc-framework-ImageCaptureCore/Makefile
 # used by devel/py-pyobjc-framework-InputMethodKit/Makefile
@@ -84,6 +89,7 @@
 # used by devel/py-pyobjc-framework-MediaPlayer/Makefile
 # used by devel/py-pyobjc-framework-MediaToolbox/Makefile
 # used by devel/py-pyobjc-framework-Metal/Makefile
+# used by devel/py-pyobjc-framework-MetalFX/Makefile
 # used by devel/py-pyobjc-framework-MetalKit/Makefile
 # used by devel/py-pyobjc-framework-MetalPerformanceShaders/Makefile
 # used by devel/py-pyobjc-framework-MetalPerformanceShadersGraph/Makefile
@@ -98,6 +104,7 @@
 # used by devel/py-pyobjc-framework-OSAKit/Makefile
 # used by devel/py-pyobjc-framework-OSLog/Makefile
 # used by devel/py-pyobjc-framework-OpenDirectory/Makefile
+# used by devel/py-pyobjc-framework-PHASE/Makefile
 # used by devel/py-pyobjc-framework-PassKit/Makefile
 # used by devel/py-pyobjc-framework-PencilKit/Makefile
 # used by devel/py-pyobjc-framework-Photos/Makefile
@@ -109,6 +116,7 @@
 # used by devel/py-pyobjc-framework-QuickLookThumbnailing/Makefile
 # used by devel/py-pyobjc-framework-ReplayKit/Makefile
 # used by devel/py-pyobjc-framework-SafariServices/Makefile
+# used by devel/py-pyobjc-framework-SafetyKit/Makefile
 # used by devel/py-pyobjc-framework-SceneKit/Makefile
 # used by devel/py-pyobjc-framework-ScreenCaptureKit/Makefile
 # used by devel/py-pyobjc-framework-ScreenSaver/Makefile
@@ -119,6 +127,9 @@
 # used by devel/py-pyobjc-framework-SecurityFoundation/Makefile
 # used by devel/py-pyobjc-framework-SecurityInterface/Makefile
 # used by devel/py-pyobjc-framework-ServiceManagement/Makefile
+# used by devel/py-pyobjc-framework-SharedWithYou/Makefile
+# used by devel/py-pyobjc-framework-SharedWithYouCore/Makefile
+# used by devel/py-pyobjc-framework-ShazamKit/Makefile
 # used by devel/py-pyobjc-framework-Social/Makefile
 # used by devel/py-pyobjc-framework-SoundAnalysis/Makefile
 # used by devel/py-pyobjc-framework-Speech/Makefile
@@ -127,6 +138,7 @@
 # used by devel/py-pyobjc-framework-SyncServices/Makefile
 # used by devel/py-pyobjc-framework-SystemConfiguration/Makefile
 # used by devel/py-pyobjc-framework-SystemExtensions/Makefile
+# used by devel/py-pyobjc-framework-ThreadNetwork/Makefile
 # used by devel/py-pyobjc-framework-UniformTypeIdentifiers/Makefile
 # used by devel/py-pyobjc-framework-UserNotifications/Makefile
 # used by devel/py-pyobjc-framework-UserNotificationsUI/Makefile
@@ -137,8 +149,9 @@
 # used by devel/py-pyobjc-framework-WebKit/Makefile
 # used by devel/py-pyobjc-framework-iTunesLibrary/Makefile
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
+# used by devel/py-pyobjc-framework-libxpc/Makefile
 
-PYOBJC_VERS=	9.0.1
+PYOBJC_VERS=	9.2
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/

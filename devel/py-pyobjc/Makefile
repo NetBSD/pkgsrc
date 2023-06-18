@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/09/27 19:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/18 05:02:52 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -53,6 +53,19 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-SystemConfiguration>=${PYOBJC_VERS}:..
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-WebKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-WebKit
 
 .include "../../mk/bsd.prefs.mk"
+
+# 13.0+
+.if !empty(OS_VERSION:M2[2-9].*)
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-AVRouting>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-AVRouting
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-BackgroundAssets>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-BackgroundAssets
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-ExtensionKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-ExtensionKit
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-HealthKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-HealthKit
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MetalFX>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MetalFX
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-SafetyKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-SafetyKit
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-SharedWithYou>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-SharedWithYou
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-SharedWithYouCore>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-SharedWithYouCore
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-ThreadNetwork>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-ThreadNetwork
+.endif
 
 # 12.0+
 .if !empty(OS_VERSION:M2[1-9].*)
