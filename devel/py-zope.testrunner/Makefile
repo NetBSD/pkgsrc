@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/18 12:00:13 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/18 12:03:54 adam Exp $
 
 DISTNAME=	zope.testrunner-6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	zpl-2.1
 DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
+
+USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
