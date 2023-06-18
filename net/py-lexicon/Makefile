@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2023/01/15 21:15:24 adam Exp $
+# $NetBSD: Makefile,v 1.83 2023/06/18 16:23:05 adam Exp $
 
-DISTNAME=	dns_lexicon-3.11.7
+DISTNAME=	dns_lexicon-3.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/AnalogJ/lexicon
 COMMENT=	Manipulate DNS records on various DNS providers
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
@@ -31,7 +32,7 @@ post-install:
 do-test:
 	cd ${WRKSRC}/lexicon && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/test_*
 
-.include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
