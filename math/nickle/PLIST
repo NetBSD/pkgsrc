@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/18 21:31:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/06/18 19:37:37 wiz Exp $
 bin/nickle
 include/nickle/builtin-namespaces.h
 include/nickle/builtin.h
@@ -16,6 +16,7 @@ share/nickle/COPYING
 share/nickle/abort.5c
 share/nickle/arc4.5c
 share/nickle/builtin.5c
+share/nickle/cha-cha.5c
 share/nickle/command.5c
 share/nickle/ctype.5c
 share/nickle/examples/COPYING
@@ -69,6 +70,7 @@ share/nickle/sort.5c
 share/nickle/string.5c
 share/nickle/svg.5c
 share/nickle/test/arraytest.5c
+share/nickle/test/chacha_test.5c
 share/nickle/test/datetest.5c
 share/nickle/test/factorial.5c
 share/nickle/test/gcdtest.5c
