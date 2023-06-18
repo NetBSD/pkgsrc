@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:18:07 nia Exp $
-
-BLAKE2s (zope.component-5.0.1.tar.gz) = 744ff5c4bffec359cdc370d6f36ae7a0aacc6edb49cfad5e5ed79bc49c421417
-SHA512 (zope.component-5.0.1.tar.gz) = fad011816fe5bb869bb2e43e11a66841a6be2abf9002e41207ef1dfe69b1afb5ca486d275daeddf71d2a0e79e1a9c839c4735190dddcd118b675a976bde07a64
-Size (zope.component-5.0.1.tar.gz) = 91130 bytes
