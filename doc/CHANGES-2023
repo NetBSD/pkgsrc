@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3969 2023/06/18 16:25:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3970 2023/06/18 17:55:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-fansi to 1.0.4 [mef 2023-06-18]
 	Updated security/acmesh to 3.0.6 [js 2023-06-18]
 	Updated net/py-lexicon to 3.12.0 [adam 2023-06-18]
+	Updated graphics/oculante to 0.6.65 [pin 2023-06-18]
