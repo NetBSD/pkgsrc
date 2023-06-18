@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/06/05 08:05:51 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/18 14:42:29 mef Exp $
 
 R_PKGNAME=	fansi
-R_PKGVER=	0.5.0
+R_PKGVER=	1.0.4
 CATEGORIES=	devel
 
 MAINTAINER=	wen@NetBSD.org
