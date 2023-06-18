@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/01/04 17:27:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/18 15:42:22 js Exp $
 
-DISTNAME=	acme.sh-3.0.5
+DISTNAME=	acme.sh-3.0.6
 PKGNAME=	${DISTNAME:S/acme.sh/acmesh/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=acmesh-official/}
