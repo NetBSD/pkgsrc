@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/17 01:28:02 markd Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/18 05:21:44 adam Exp $
 
 DISTNAME=	mailman-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,10 +31,10 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
+DEPENDS+=	${PYPKGPREFIX}-zope.component-[0-9]*:../../devel/py-zope.component
 DEPENDS+=	${PYPKGPREFIX}-ZopeConfiguration-[0-9]*:../../devel/py-ZopeConfiguration
-DEPENDS+=	${PYPKGPREFIX}-ZopeEvent-[0-9]*:../../devel/py-ZopeEvent
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=5.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0:../../devel/py-zope.interface
 
 # TEST_DEPENDS
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
