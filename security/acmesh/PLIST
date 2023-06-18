@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/04 17:27:10 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/18 15:42:22 js Exp $
 sbin/acme.sh
 share/acmesh/acme.sh
 share/acmesh/deploy/apache.sh
@@ -87,8 +87,10 @@ share/acmesh/dnsapi/dns_fornex.sh
 share/acmesh/dnsapi/dns_freedns.sh
 share/acmesh/dnsapi/dns_gandi_livedns.sh
 share/acmesh/dnsapi/dns_gcloud.sh
+share/acmesh/dnsapi/dns_gcore.sh
 share/acmesh/dnsapi/dns_gd.sh
 share/acmesh/dnsapi/dns_geoscaling.sh
+share/acmesh/dnsapi/dns_googledomains.sh
 share/acmesh/dnsapi/dns_he.sh
 share/acmesh/dnsapi/dns_hetzner.sh
 share/acmesh/dnsapi/dns_hexonet.sh
@@ -99,6 +101,7 @@ share/acmesh/dnsapi/dns_infomaniak.sh
 share/acmesh/dnsapi/dns_internetbs.sh
 share/acmesh/dnsapi/dns_inwx.sh
 share/acmesh/dnsapi/dns_ionos.sh
+share/acmesh/dnsapi/dns_ipv64.sh
 share/acmesh/dnsapi/dns_ispconfig.sh
 share/acmesh/dnsapi/dns_jd.sh
 share/acmesh/dnsapi/dns_joker.sh
@@ -124,6 +127,7 @@ share/acmesh/dnsapi/dns_mythic_beasts.sh
 share/acmesh/dnsapi/dns_namecheap.sh
 share/acmesh/dnsapi/dns_namecom.sh
 share/acmesh/dnsapi/dns_namesilo.sh
+share/acmesh/dnsapi/dns_nanelo.sh
 share/acmesh/dnsapi/dns_nederhost.sh
 share/acmesh/dnsapi/dns_neodigit.sh
 share/acmesh/dnsapi/dns_netcup.sh
