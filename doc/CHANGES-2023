@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3960 2023/06/18 14:10:33 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3961 2023/06/18 14:14:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-checkmate to 2.2.0 [mef 2023-06-18]
 	Updated devel/R-pkgbuild to 1.4.1 [mef 2023-06-18]
 	Updated devel/R-renv to 0.17.3 [mef 2023-06-18]
+	Updated devel/R-pkgcache to 2.1.1 [mef 2023-06-18]
