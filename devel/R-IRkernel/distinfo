@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/12/18 05:36:18 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/06/18 14:39:31 mef Exp $
 
-BLAKE2s (R/IRkernel_1.3.1.tar.gz) = 59e037dc3e2513d1a0e6fa33486171663072913da5f160d6cadd8f55c16fe13e
-SHA512 (R/IRkernel_1.3.1.tar.gz) = 1a8216406269eb2d34bd5e19edfff3361d9c7512fa91cc9301b59c10e8b2beaca4427322a5d0989158889749538651973fc78c89de1140456cf672e82fdf62c1
-Size (R/IRkernel_1.3.1.tar.gz) = 69823 bytes
+BLAKE2s (R/IRkernel_1.3.2.tar.gz) = 763b787b77c8bc1228dc3752b9623b9c5d68a2d2ae3e3db23fe27a5a7a5a025a
+SHA512 (R/IRkernel_1.3.2.tar.gz) = 1e4ddeb777defe0e6f71136a5b86cbcca9fe95f63653ac6fc36eef7f409494e3d1d226187446da4b3f68105b4b565a8d65488425075bce415751acece2fb1dc9
+Size (R/IRkernel_1.3.2.tar.gz) = 45172 bytes

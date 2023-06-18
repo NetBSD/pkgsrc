@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/12/18 05:36:18 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/18 14:39:31 mef Exp $
 
 R_PKGNAME=	IRkernel
-R_PKGVER=	1.3.1
+R_PKGVER=	1.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
