@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2023/06/13 17:36:58 adam Exp $
+# $NetBSD: Makefile,v 1.567 2023/06/18 14:23:06 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -40,6 +40,7 @@ SUBDIR+=	R-bitops
 SUBDIR+=	R-broom
 SUBDIR+=	R-car
 SUBDIR+=	R-carData
+SUBDIR+=	R-cellranger
 SUBDIR+=	R-chron
 SUBDIR+=	R-circular
 SUBDIR+=	R-classInt
