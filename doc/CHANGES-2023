@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3952 2023/06/18 12:23:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3953 2023/06/18 12:38:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5511,3 +5511,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-zope.schema to 7.0.1 [adam 2023-06-18]
 	Renamed devel/py-ZopeConfiguration to devel/py-zope.configuration [adam 2023-06-18]
 	Updated devel/py-zope.configuration to 5.0 [adam 2023-06-18]
+	Updated devel/py-zope.deprecation to 5.0 [adam 2023-06-18]
+	Updated www/py-zope.proxy to 5.0.0 [adam 2023-06-18]
+	Updated devel/py-zope.testing to 5.0.1 [adam 2023-06-18]
+	Updated textproc/py-sphinx-autoapi to 2.1.1 [adam 2023-06-18]
