@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3964 2023/06/18 14:31:42 mef Exp $
+$NetBSD: CHANGES-2023,v 1.3965 2023/06/18 14:36:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-pak to 0.5.1 [mef 2023-06-18]
 	Added math/R-cellranger version 1.1.0 [mef 2023-06-18]
 	Updated devel/R-repr to 1.1.6 [mef 2023-06-18]
+	Updated net/R-pbdZMQ to 0.3.9 [mef 2023-06-18]
