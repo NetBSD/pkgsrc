@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/30 12:25:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/18 05:26:01 adam Exp $
 
 DISTNAME=	zope.schema-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.s/ZopeS/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.schema
 COMMENT=	Zope Interface extension for defining data schemas
 LICENSE=	zpl-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-ZopeEvent-[0-9]*:../../devel/py-ZopeEvent
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=5.0.0:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0.0:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeI18NMessageid-[0-9]*:../../devel/py-ZopeI18NMessageid
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
