@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23083 2023/06/18 14:36:31 mef Exp $
+$NetBSD: TODO,v 1.23084 2023/06/18 17:15:06 riastradh Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,7 @@ Suggested new packages
 	libretro-tyrquake (wip), libretro-prboom (wip), libretro-easyrpg,
 	libretro-scummvm, libretro-stonesoup, libretro-cannonball,
 	libretro-reminiscence
-	
+
 	Missing components for modern DEs
 	libayatana-indicator
 
@@ -912,6 +912,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libslang2-2.3.2
 	o libtecla-1.6.3
 	o libthai-0.2.2
+	o libtpms-0.9.6 [CVE-2023-1017, CVE-2023-1018]
 	o libtrace-4.0.16
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
