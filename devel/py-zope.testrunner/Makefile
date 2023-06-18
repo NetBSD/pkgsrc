@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.1 2023/06/18 12:00:13 adam Exp $
 
-DISTNAME=	zope.testrunner-5.5.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.t/ZopeT/}
+DISTNAME=	zope.testrunner-6.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.testrunner/}
 
@@ -10,15 +10,19 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.testrunner
 COMMENT=	Zope testrunner script
 LICENSE=	zpl-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
+USE_PKG_RESOURCES=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-USE_PKG_RESOURCES=	yes
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} zope-testrunner zope-testrunner-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
