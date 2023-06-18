@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 05:03:09 adam Exp $
+
+BLAKE2s (pyobjc-framework-libxpc-9.2.tar.gz) = a7530ac1c3f32a123d2c9e3b29003f8f4bd602365476e25bf59929122e4991e8
+SHA512 (pyobjc-framework-libxpc-9.2.tar.gz) = 6270a45e729c0470f8ae32e53c08abc405527032e31a80253222f3cfa0f07b114241e78ab622e0332ed6af1f51b530a28e83ee6b1e4ee10edb66fc04f6326c7c
+Size (pyobjc-framework-libxpc-9.2.tar.gz) = 32107 bytes

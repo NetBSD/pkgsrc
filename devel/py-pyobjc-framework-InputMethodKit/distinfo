@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/04/07 05:25:13 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/06/18 05:03:00 adam Exp $
 
-BLAKE2s (pyobjc-framework-InputMethodKit-9.0.1.tar.gz) = fe4067b88a96a6b33faaed7c73719d19a57e1931693136e94b5f79c763ccdb69
-SHA512 (pyobjc-framework-InputMethodKit-9.0.1.tar.gz) = b22a92105434063569a997824ddb82cba2b2b451f4f44373a5609146d1f94096a1638a797e49b1e2ecbd910a26f2dd0715a67f03c7c26c095b69b118cb05e91a
-Size (pyobjc-framework-InputMethodKit-9.0.1.tar.gz) = 24497 bytes
+BLAKE2s (pyobjc-framework-InputMethodKit-9.2.tar.gz) = e905f1acf8b5664d9cc1c6a812c5ef97c635f65f9ccab76b9469627bf1e2528d
+SHA512 (pyobjc-framework-InputMethodKit-9.2.tar.gz) = bec1ac11fd85382318f5f66f82da17dcb48a5f144965b30936d3576ba532ea380eed9b140fafca1d884c36a7e6538e1e0ce7e677aaa9035d69838fa0040d2a0b
+Size (pyobjc-framework-InputMethodKit-9.2.tar.gz) = 24784 bytes

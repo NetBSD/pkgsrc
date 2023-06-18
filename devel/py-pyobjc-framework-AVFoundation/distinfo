@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/07 05:25:05 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/06/18 05:02:52 adam Exp $
 
-BLAKE2s (pyobjc-framework-AVFoundation-9.0.1.tar.gz) = 5fe0938c6973c09b1949f683f8b5b274bd5a0b4738b1a9ce39579578a9d82ecf
-SHA512 (pyobjc-framework-AVFoundation-9.0.1.tar.gz) = 60972bfbd7846e23412f930c7347baa93e6e780b2cedae71db0446d75fc80624a3984f0d3f1ea087b4a38a77f4010a36c62bc1484989fe3985f52d32a5cf9c41
-Size (pyobjc-framework-AVFoundation-9.0.1.tar.gz) = 670834 bytes
+BLAKE2s (pyobjc-framework-AVFoundation-9.2.tar.gz) = 5d0bba682c59704a9ac950dedb69e8c7b1371e182374c286beae4701da7e319a
+SHA512 (pyobjc-framework-AVFoundation-9.2.tar.gz) = f40477be2a430e5f1dd21af9c18f3329459b2cb1b8d59f300a85e64acfa9b56a4a09b1345e56336ba4f5c873e5131eb9af8bce46cb382bc1f7eac9a24d8943d1
+Size (pyobjc-framework-AVFoundation-9.2.tar.gz) = 785336 bytes

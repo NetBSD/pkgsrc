@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/07 05:25:15 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/06/18 05:03:02 adam Exp $
 
-BLAKE2s (pyobjc-framework-Metal-9.0.1.tar.gz) = 41b5c5a2e57c1b8bea114b725d979589d44db2190f5629a0478c70ea57d69853
-SHA512 (pyobjc-framework-Metal-9.0.1.tar.gz) = 836434d14200bd61d39ba4c8588c48c60df3958021a5b3e2e6a191493550c3aacf403e746b5495bf8ff980d118d5bc9b2b98a09bc396a7cff0c03537905a82a9
-Size (pyobjc-framework-Metal-9.0.1.tar.gz) = 283716 bytes
+BLAKE2s (pyobjc-framework-Metal-9.2.tar.gz) = ae4195e59bbf42c4510581d38d286b592083b674ecd4089f661e13bb3b2df86c
+SHA512 (pyobjc-framework-Metal-9.2.tar.gz) = d51aa782b7090fe7b22d63470239b661a1666d815fa70c0b809b08aee735b666c0e046b219eb97e843575f44800395e2996f9ec33907ba5f14800b8493d9ffdf
+Size (pyobjc-framework-Metal-9.2.tar.gz) = 349068 bytes

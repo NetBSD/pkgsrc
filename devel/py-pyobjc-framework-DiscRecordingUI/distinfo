@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/07 05:25:11 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/18 05:02:58 adam Exp $
 
-BLAKE2s (pyobjc-framework-DiscRecordingUI-9.0.1.tar.gz) = cebaf4fe53c40af47ddc89a3eb16358fe532c0e5177953e9f412f97d803d7e8b
-SHA512 (pyobjc-framework-DiscRecordingUI-9.0.1.tar.gz) = 190c3ffbe623209377146c7709bf87dfabaaebe8c10ed41f7a6f56cdf3a0c3dde81cdda3cf58cb5ac725aee7c112de42cd551073dc6c5e92c3ee8bbb788247b2
-Size (pyobjc-framework-DiscRecordingUI-9.0.1.tar.gz) = 17087 bytes
+BLAKE2s (pyobjc-framework-DiscRecordingUI-9.2.tar.gz) = 6c5e2a85139a867e76bdba252ba01ffa48ce8bf828baf025fae606fe5cc7d76f
+SHA512 (pyobjc-framework-DiscRecordingUI-9.2.tar.gz) = fe3240ee31204c9502af074e6e942c46af1c42942be99bb05f5836347dbd8c9642a423021f527d54226af8dd1a2e6789981a68147cae6352a1ad429181e66e6b
+Size (pyobjc-framework-DiscRecordingUI-9.2.tar.gz) = 17291 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/07 05:25:05 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/06/18 05:02:52 adam Exp $
 
-BLAKE2s (pyobjc-framework-AVRouting-9.0.1.tar.gz) = 7ebf037f7b728d55c5f84ad6aa79809363f4be46487bb1126af629731cd336e3
-SHA512 (pyobjc-framework-AVRouting-9.0.1.tar.gz) = f549868c465344b1ad99003daaf4cf1907f6374d9a6116c5a021814dbacaa1b0c546d1df1a348bb9fb58b5f42e81d2c3691884817061826feafee8db4ea38154
-Size (pyobjc-framework-AVRouting-9.0.1.tar.gz) = 18243 bytes
+BLAKE2s (pyobjc-framework-AVRouting-9.2.tar.gz) = 74fc481a38c1f29e6ca76422076401f5b8698a2c0b5d6d91be5006d13d489218
+SHA512 (pyobjc-framework-AVRouting-9.2.tar.gz) = e7c844d3c25ee13540565053fc2bebdb87ee72d00ba24969bdbb54a9c1a4c1b54eeeea7857c813080e60e03d2573af008b9f5fd6400a00e36ac71621dc91cbf1
+Size (pyobjc-framework-AVRouting-9.2.tar.gz) = 18561 bytes

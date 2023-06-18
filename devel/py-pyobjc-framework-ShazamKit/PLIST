@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/18 05:03:07 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ShazamKit/_ShazamKit.abi3.so
+${PYSITELIB}/ShazamKit/__init__.py
+${PYSITELIB}/ShazamKit/__init__.pyc
+${PYSITELIB}/ShazamKit/__init__.pyo
+${PYSITELIB}/ShazamKit/_metadata.py
+${PYSITELIB}/ShazamKit/_metadata.pyc
+${PYSITELIB}/ShazamKit/_metadata.pyo

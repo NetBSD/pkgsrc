@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/07 05:25:21 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/06/18 05:03:09 adam Exp $
 
-BLAKE2s (pyobjc-framework-Vision-9.0.1.tar.gz) = b309f1d74e2e91f515616b7caa89684c948d292040d05cf362ee9bee05018f46
-SHA512 (pyobjc-framework-Vision-9.0.1.tar.gz) = 3b6ee5918136c5d375a19b1f42abad1cef4ec0d53610b1fd49bac36cc717e47a246d2df4c404e87f644a718022cbc4676e5d9f871acbadf8e8bbae6cf1b33616
-Size (pyobjc-framework-Vision-9.0.1.tar.gz) = 100459 bytes
+BLAKE2s (pyobjc-framework-Vision-9.2.tar.gz) = 966177fd8f9fe759c999bd1a36814da0a40e2e6e5d56ae8d2c0697c62de1deee
+SHA512 (pyobjc-framework-Vision-9.2.tar.gz) = ad497ed11a2bb2542a4eb6623d607c256f1fd4a03a111e6fcb6339e7bbb696e3bfce175a9d8eff4da765d8ce77a6b1e429ce008f09e52a01651fbf5ff99f25bb
+Size (pyobjc-framework-Vision-9.2.tar.gz) = 100841 bytes

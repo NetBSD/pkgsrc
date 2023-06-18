@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/04/07 05:25:20 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/18 05:03:08 adam Exp $
 
-BLAKE2s (pyobjc-framework-UniformTypeIdentifiers-9.0.1.tar.gz) = db09e15991edacef8be07fa5b0936b08ac8a3bbab3b5459a5f95ce8e24284eeb
-SHA512 (pyobjc-framework-UniformTypeIdentifiers-9.0.1.tar.gz) = 294c55b22c5f6ca4461120cda38a00961219b74d0f28949490516912d358bdc958469914ba8c73d11de6cca6d457c24bdf7f66b6b492a640e0da16836fe63577
-Size (pyobjc-framework-UniformTypeIdentifiers-9.0.1.tar.gz) = 17505 bytes
+BLAKE2s (pyobjc-framework-UniformTypeIdentifiers-9.2.tar.gz) = 930002498c8a6b4c1475682a55e26799895ed1daf22a8401a06d26ec3047d0ef
+SHA512 (pyobjc-framework-UniformTypeIdentifiers-9.2.tar.gz) = 20d04da257fb29aadde388896fc82afada5ab28580acc38f83189a412dc1365fc00a37038cba8b8f3945c40d2a1ef80ab36e3bb91c6e88ca674be1d3087eda9a
+Size (pyobjc-framework-UniformTypeIdentifiers-9.2.tar.gz) = 17710 bytes

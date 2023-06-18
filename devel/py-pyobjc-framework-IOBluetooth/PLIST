@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/18 05:03:00 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/IOBluetooth/_IOBluetooth.abi3.so
+${PYSITELIB}/IOBluetooth/__init__.py
+${PYSITELIB}/IOBluetooth/__init__.pyc
+${PYSITELIB}/IOBluetooth/__init__.pyo
+${PYSITELIB}/IOBluetooth/_funcmacros.py
+${PYSITELIB}/IOBluetooth/_funcmacros.pyc
+${PYSITELIB}/IOBluetooth/_funcmacros.pyo
+${PYSITELIB}/IOBluetooth/_metadata.py
+${PYSITELIB}/IOBluetooth/_metadata.pyc
+${PYSITELIB}/IOBluetooth/_metadata.pyo
