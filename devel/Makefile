@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4018 2023/06/18 12:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.4019 2023/06/18 12:22:57 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2350,7 +2350,6 @@ SUBDIR+=	py-Pympler
 SUBDIR+=	py-Pyro
 SUBDIR+=	py-SDL2
 SUBDIR+=	py-Spans
-SUBDIR+=	py-ZopeConfiguration
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-adb
 SUBDIR+=	py-aenum
@@ -3076,6 +3075,7 @@ SUBDIR+=	py-zanata-python-client
 SUBDIR+=	py-zc.lockfile
 SUBDIR+=	py-zconfig
 SUBDIR+=	py-zope.component
+SUBDIR+=	py-zope.configuration
 SUBDIR+=	py-zope.deferredimport
 SUBDIR+=	py-zope.deprecation
 SUBDIR+=	py-zope.event

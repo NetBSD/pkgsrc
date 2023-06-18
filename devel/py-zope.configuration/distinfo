@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/18 12:22:58 adam Exp $
+
+BLAKE2s (zope.configuration-5.0.tar.gz) = af6411e89db70fef42ae671461383273478b24066ea404916c3f246f0a509316
+SHA512 (zope.configuration-5.0.tar.gz) = 59a720b9062ba5254b8a0c9b7dd4f44ab709ac29050c9f2eeb05827ed34f74940eed52ce5ec551bc0c8292f5ed0921a4d07c110f1b68baedcc6c02cd5edd9e00
+Size (zope.configuration-5.0.tar.gz) = 83357 bytes
