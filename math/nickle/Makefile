@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/06/17 11:25:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/18 19:37:37 wiz Exp $
 
-DISTNAME=	nickle-2.91
+DISTNAME=	nickle-2.92
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 
@@ -9,20 +9,12 @@ HOMEPAGE=	https://nickle.org/
 COMMENT=	Desk calculator language
 LICENSE=	mit
 
-USE_TOOLS+=	autoconf automake autoreconf
-TOOL_DEPENDS+=	autoconf-archive>=0:../../devel/autoconf-archive
-
 GNU_CONFIGURE=	yes
 
 # suppress detection of DOCBOOK
 CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
-CONFIGURE_ARGS+=CC_FOR_BUILD=${NATIVE_CC:Q}
-
 TEST_TARGET=	check
-
-pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -fi
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
