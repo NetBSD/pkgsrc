@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/01/02 12:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/18 12:00:13 adam Exp $
 
 DISTNAME=	ZConfig-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,7 @@ LICENSE=	zpl-2.1
 TEST_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 TEST_DEPENDS+=	${PYPKGPREFIX}-manuel-[0-9]*:../../textproc/py-manuel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
-TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
 
 USE_LANGUAGES=	# none
 

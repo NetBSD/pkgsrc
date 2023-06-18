@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/19 08:44:59 adam Exp $
-bin/zope-testrunner
+@comment $NetBSD: PLIST,v 1.1 2023/06/18 12:00:13 adam Exp $
+bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
