@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4014 2023/06/18 05:27:04 adam Exp $
+# $NetBSD: Makefile,v 1.4015 2023/06/18 05:39:36 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2352,7 +2352,6 @@ SUBDIR+=	py-SDL2
 SUBDIR+=	py-Spans
 SUBDIR+=	py-ZopeConfiguration
 SUBDIR+=	py-ZopeI18NMessageid
-SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-ZopeSchema
 SUBDIR+=	py-ZopeTestrunner
 SUBDIR+=	py-absl-py
