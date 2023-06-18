@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/18 12:00:13 adam Exp $
 
 DISTNAME=	zope.configuration-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.c/ZopeC/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeI18NMessageid-[0-9]*:../../devel/py-ZopeI18NMessage
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-ZopeSchema>=4.9.0:../../devel/py-ZopeSchema
 TEST_DEPENDS+=	${PYPKGPREFIX}-manuel-[0-9]*:../../textproc/py-manuel
-TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

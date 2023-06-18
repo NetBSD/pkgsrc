@@ -1,0 +1,1 @@
+bin/zope-testrunner @PREFIX@/bin/zope-testrunner-@PYVERSSUFFIX@
