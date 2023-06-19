@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/06/16 23:42:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/19 19:28:36 schmonz Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -69,6 +69,10 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 AUTOCONF_REQD+=		2.71
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
+
+.if ${OPSYS} == Darwin
+MAKE_ENV+=		INSTALL_STRIP_LIB=
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

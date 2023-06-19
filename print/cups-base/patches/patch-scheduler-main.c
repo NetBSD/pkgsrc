@@ -1,10 +1,10 @@
-$NetBSD: patch-scheduler-main.c,v 1.2 2020/05/26 08:36:56 triaxx Exp $
+$NetBSD: patch-scheduler-main.c,v 1.3 2023/06/19 19:28:36 schmonz Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/main.c.orig	2017-10-13 18:22:26.000000000 +0000
+--- scheduler/main.c.orig	2023-06-06 12:55:36.000000000 +0000
 +++ scheduler/main.c
-@@ -62,6 +62,7 @@
+@@ -63,6 +63,7 @@
   * Local functions...
   */
  
@@ -12,7 +12,7 @@ Add a PidFile configuration directive to write a PID file.
  static void		parent_handler(int sig);
  static void		process_children(void);
  static void		sigchld_handler(int sig);
-@@ -676,6 +677,13 @@ main(int  argc,				/* I - Number of comm
+@@ -675,6 +676,13 @@ main(int  argc,				/* I - Number of comm
  #endif /* __APPLE__ */
  
   /*
@@ -26,7 +26,7 @@ Add a PidFile configuration directive to write a PID file.
    * Send server-started event...
    */
  
-@@ -1158,6 +1166,7 @@ main(int  argc,				/* I - Number of comm
+@@ -1166,6 +1174,7 @@ main(int  argc,				/* I - Number of comm
                    "Scheduler shutting down due to program error.");
    }
  
@@ -34,7 +34,7 @@ Add a PidFile configuration directive to write a PID file.
   /*
    * Close all network clients...
    */
-@@ -1183,6 +1192,12 @@ main(int  argc,				/* I - Number of comm
+@@ -1191,6 +1200,12 @@ main(int  argc,				/* I - Number of comm
    */
  
    cupsdDeleteTemporaryPrinters(1);
@@ -47,10 +47,11 @@ Add a PidFile configuration directive to write a PID file.
  
  #ifdef __APPLE__
   /*
-@@ -2122,6 +2137,36 @@ service_checkout(int shutdown)          
+@@ -2126,6 +2141,36 @@ service_checkout(int shutdown)
+ }
  
  
- /*
++/*
 + * 'create_pidfile()' - Create PID file.
 + */
 +static int
@@ -80,7 +81,6 @@ Add a PidFile configuration directive to write a PID file.
 +}
 +
 +
-+/*
+ /*
   * 'usage()' - Show scheduler usage.
   */
- 
