@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2023/06/14 13:03:31 gdt Exp $
+# $NetBSD: Makefile,v 1.158 2023/06/19 17:34:13 schmonz Exp $
 
 VERSION_BASE=	4.5.1
 # Accomodate testing unreleased versions.
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
+CONFIGURE_ARGS+=	--disable-sphinx
 CONFIGURE_ARGS+=	--disable-webp
 CONFIGURE_ARGS+=	--disable-zstd
 
