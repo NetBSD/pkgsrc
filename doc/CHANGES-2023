@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3973 2023/06/19 08:04:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3974 2023/06/19 08:11:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/bup to 0.32.1 [gdt 2023-06-18]
 	Updated devel/py-pyparsing to 3.1.0 [adam 2023-06-19]
 	Updated math/py-xgboost to 1.7.6 [adam 2023-06-19]
+	Updated www/libproxy to 0.5.2 [wiz 2023-06-19]
