@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/06/18 19:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/06/19 22:07:22 tnn Exp $
 
 DISTNAME=	nickle-2.92
 CATEGORIES=	math lang
@@ -10,6 +10,8 @@ COMMENT=	Desk calculator language
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 # suppress detection of DOCBOOK
 CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
