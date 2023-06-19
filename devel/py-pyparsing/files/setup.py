@@ -12,7 +12,7 @@ extras_require = \
 {'diagrams': ['railroad-diagrams', 'jinja2']}
 
 setup(name='pyparsing',
-      version='3.0.8',
+      version='3.1.0',
       description='pyparsing module - Classes and methods to define and execute parsing grammars',
       author=None,
       author_email='Paul McGuire <ptmcg.gm+pyparsing@gmail.com>',
