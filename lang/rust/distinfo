@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.158 2023/05/03 22:39:09 he Exp $
+$NetBSD: distinfo,v 1.159 2023/06/19 14:46:47 bsiegert Exp $
 
 BLAKE2s (rust-1.68.2-aarch64-apple-darwin.tar.gz) = 2ce1385b1966325074f41065a834f57621c641335ccc1b011543deaa15758430
 SHA512 (rust-1.68.2-aarch64-apple-darwin.tar.gz) = 9525012c5fd8f2fcf498b79b698a74655a4520c18d369762acfdd7e7eb899e0793ce620630a18fc4a0840f0b7faa6e5e082398ec0c41967199f3344c6a8bc3ef
@@ -157,6 +157,7 @@ SHA1 (patch-vendor_lzma-sys_config.h) = b654c7e129fa02697734bc87173f89b3056a5437
 SHA1 (patch-vendor_nix_src_sys_signal.rs) = bf4fcdc5b71d8d73b3d7e8acfccd0554d822c131
 SHA1 (patch-vendor_openssl-src_openssl_Configurations_10-main.conf) = 1c4e1d5520776e70d588f3da0fd54b6f956835b5
 SHA1 (patch-vendor_openssl-src_src_lib.rs) = 918fac850f3a6e948d25ef3f673ef62345de386f
+SHA1 (patch-vendor_openssl-sys_build_find__normal.rs) = 8c4311cdd2bd66882fa8406e28119a0144df5301
 SHA1 (patch-vendor_openssl-sys_build_main.rs) = 3924efda02e7d8e2115db55b84a7dcc9756e365c
 SHA1 (patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs) = 4e86aec4c89db9a331950a12f8ec7b8aaa50eed7
 SHA1 (patch-vendor_stacker_src_lib.rs) = e00a1e95eb16540ff182715db778bf97ebd07a5e
