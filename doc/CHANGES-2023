@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3972 2023/06/18 23:03:16 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.3973 2023/06/19 08:04:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5534,3 +5534,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.65 [pin 2023-06-18]
 	Updated math/nickle to 2.92 [wiz 2023-06-18]
 	Updated sysutils/bup to 0.32.1 [gdt 2023-06-18]
+	Updated devel/py-pyparsing to 3.1.0 [adam 2023-06-19]
+	Updated math/py-xgboost to 1.7.6 [adam 2023-06-19]
