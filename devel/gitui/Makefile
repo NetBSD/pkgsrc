@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/11/22 20:18:06 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/19 19:52:17 pin Exp $
 
-DISTNAME=	gitui-0.22.1
+DISTNAME=	gitui-0.23.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=extrawurst/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

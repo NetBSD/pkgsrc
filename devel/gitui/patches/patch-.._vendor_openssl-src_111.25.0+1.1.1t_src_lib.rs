@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_openssl-src_111.24.0+1.1.1s_src_lib.rs,v 1.1 2022/11/22 20:18:06 pin Exp $
+$NetBSD: patch-.._vendor_openssl-src_111.25.0+1.1.1t_src_lib.rs,v 1.1 2023/06/19 19:52:17 pin Exp $
 
 Add recognition of the various rust-supporting NetBSD variants.
 
---- ../vendor/openssl-src-111.24.0+1.1.1s/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
-+++ ../vendor/openssl-src-111.24.0+1.1.1s/src/lib.rs
+--- ../vendor/openssl-src-111.25.0+1.1.1t/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/openssl-src-111.25.0+1.1.1t/src/lib.rs
 @@ -239,6 +239,8 @@ impl Build {
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
              "aarch64-unknown-linux-musl" => "linux-aarch64",
