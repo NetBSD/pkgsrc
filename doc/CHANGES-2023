@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3977 2023/06/19 12:46:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3978 2023/06/19 19:50:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5540,3 +5540,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-autobahn to 23.6.2 [wiz 2023-06-19]
 	Updated devel/py-codespell to 2.2.5 [wiz 2023-06-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q2 branch [wiz 2023-06-19]
+	Updated shells/oh-my-posh to 17.4.0 [pin 2023-06-19]
