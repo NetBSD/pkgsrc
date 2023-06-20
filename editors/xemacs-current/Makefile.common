@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2023/05/21 00:13:55 hauke Exp $
+# $NetBSD: Makefile.common,v 1.21 2023/06/20 20:45:42 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -54,6 +54,13 @@ INSTALL_MAKE_FLAGS+=	TAR=${TOOLS_PATH.gtar}
 # but this is fine for us.
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/term.h)
 CPPFLAGS+=	-DTERMINFO
+.endif
+
+.if ${OPSYS} == "SunOS"
+.  if !exists(/usr/demo/SOUND/libaudio.a) && \
+      !exists(/usr/demo/SOUND/lib/libaudio.a)
+CONFIGURE_ARGS+=	--with_sound=none
+.  endif
 .endif
 
 pre-patch:
