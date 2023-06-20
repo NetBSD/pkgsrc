@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/01 04:30:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/20 08:20:53 adam Exp $
 bin/argparse-manpage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -30,4 +30,4 @@ ${PYSITELIB}/build_manpages/compat.py
 ${PYSITELIB}/build_manpages/compat.pyc
 ${PYSITELIB}/build_manpages/manpage.py
 ${PYSITELIB}/build_manpages/manpage.pyc
-man/man1/argparse-manpage.1
+man/man1/argparse-manpage-${PYVERSSUFFIX}.1
