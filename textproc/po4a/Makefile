@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/04/29 14:31:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.58 2023/06/20 15:30:12 schmonz Exp $
 
 DISTNAME=	po4a-0.69
 PKGREVISION=	2
@@ -25,7 +25,7 @@ DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 
 .include "options.mk"
 
-USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run
+USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run diff:run
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/po4a/.packlist
@@ -35,6 +35,11 @@ REPLACE_PERL+=		po4a-translate po4a-updatepo
 REPLACE_PERL+=		lib/Locale/Po4a/*
 
 MAKE_ENV+=		COLUMNS=76
+
+SUBST_CLASSES+=		tools
+SUBST_FILES.tools=	lib/Locale/Po4a/Po.pm Po4aBuilder.pm
+SUBST_STAGE.tools=	pre-configure
+SUBST_VARS.tools=	DIFF
 
 # work around not to set PATH to msgmerge, please somebody to fix correctly
 SUBST_CLASSES+=		path
