@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/11 09:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/20 10:44:42 adam Exp $
 
 PKGREVISION=	5
 
@@ -36,11 +36,6 @@ CMAKE_ARGS+=	-DPYTHON=${PREFIX}/bin/python${PYVERSSUFFIX}
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
-
-post-install:
-.for binaryfile in futurize pasteurize
-	${MV} ${FAKEHOMEDIR}/.local/bin/${binaryfile} ${DESTDIR}${PREFIX}/bin/${binaryfile}
-.endfor
 
 .include "Makefile.common"
 .include "../../lang/python/pyversion.mk"
