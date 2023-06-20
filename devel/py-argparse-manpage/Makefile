@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/01 04:30:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/20 08:20:53 adam Exp $
 
 DISTNAME=	argparse-manpage-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,11 +17,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-INSTALLATION_DIRS=	${PKGMANDIR}
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} argparse-manpage argparse-manpage-${PYVERSSUFFIX}
-	cd ${DESTDIR}${PREFIX}/share/man && ${MV} * ${DESTDIR}${PREFIX}/${PKGMANDIR}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} argparse-manpage argparse-manpage-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} share/man/man1/argparse-manpage.1 ${PKGMANDIR}/man1/argparse-manpage-${PYVERSSUFFIX}.1 || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
