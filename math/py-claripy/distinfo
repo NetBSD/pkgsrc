@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/05/17 15:41:25 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/06/20 10:20:20 adam Exp $
 
 BLAKE2s (claripy-9.2.51.tar.gz) = 78f3cafa453f4cbcd10a863d0296933ed3c8b1b05a2ece80c8e756576a83932c
 SHA512 (claripy-9.2.51.tar.gz) = 2a2edbbe2a44469fca2d45d8f45f59bd8ef4eeae2721e16034cdc107eb712bed0bc1f1fe53f7841a68da52b1c85c6e98d4539cbd3fbb17c6bf0191ce5ffb291d
 Size (claripy-9.2.51.tar.gz) = 158089 bytes
+SHA1 (patch-setup.cfg) = 9049ffadb50af8f3e3c51efdc662f3661b294a48
