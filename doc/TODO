@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23087 2023/06/19 08:16:13 wiz Exp $
+$NetBSD: TODO,v 1.23088 2023/06/21 14:44:39 taca Exp $
 
 Suggested new packages
 ======================
@@ -402,8 +402,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o R-poweRlaw-0.70.6
-	o SOGo5-5.8.3 [wip]
-	o SOPE5-5.8.3 [wip]
+	o SOGo5-5.8.4 [wip]
+	o SOPE5-5.8.4 [wip]
 	o SQLiteCpp-2.5.0
 	o TeXmacs-2.1.1
 	o TiffIO-140a
@@ -1348,6 +1348,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
+	o squidclamav-7.2
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
 	o stalin-0.11
