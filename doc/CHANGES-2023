@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3984 2023/06/21 07:54:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.3985 2023/06/21 07:55:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/qgis to 3.28.7 [gdt 2023-06-20]
 	Updated lang/janet to 1.29.1 [charlotte 2023-06-20]
 	Updated sysutils/felix to 2.4.1 [pin 2023-06-21]
+	Updated sysutils/onefetch to 2.18.0 [pin 2023-06-21]
