@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.76 2023/04/27 13:26:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.77 2023/06/21 15:16:15 schmonz Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -69,6 +69,10 @@ SUBST_MESSAGE.fh=	Rename file_handle.
 SUBST_STAGE.fh=		pre-configure
 SUBST_FILES.fh=		istream.*
 SUBST_SED.fh=		-e 's/file_handle/file_handle_rofl/g'
+
+.if ${OPSYS} == SunOS && ${OS_VARIANT} == Solaris
+LDFLAGS+=		-lm
+.endif
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
