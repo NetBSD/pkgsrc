@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3982 2023/06/20 22:19:53 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.3983 2023/06/21 06:38:24 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/readline to 8.2nb2 [wiz 2023-06-20]
 	Updated editors/tp-note to 1.21.7 [pin 2023-06-20]
 	Updated geography/qgis to 3.28.7 [gdt 2023-06-20]
+	Updated lang/janet to 1.29.1 [charlotte 2023-06-20]
