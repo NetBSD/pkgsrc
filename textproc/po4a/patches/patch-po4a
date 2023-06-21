@@ -1,0 +1,95 @@
+$NetBSD: patch-po4a,v 1.1 2023/06/21 19:08:06 schmonz Exp $
+
+Invoke pkgsrc's gettext-tools.
+Write to the full physical null device.
+
+--- po4a.orig	2023-01-01 00:30:43.000000000 +0000
++++ po4a
+@@ -723,7 +723,7 @@ sub show_version {
+ my @ORIGINAL_ARGV = @ARGV;
+ 
+ # Use /NUL instead of /dev/null on Windows
+-my $devnull = ( $^O =~ /Win/ ) ? '/NUL' : '/dev/null';
++my $devnull = ( $^O =~ /Win/ ) ? '/NUL' : '@PO4A_DEVNULL@';
+ 
+ # Parse the options provided on the command line, or in argument
+ sub get_options {
+@@ -1615,7 +1615,7 @@ if ( $po4a_opts{"split"} ) {
+                 mkdir $dir or die wrap_msg( gettext("Cannot create directory '%s': %s"), $dir, $! );
+             }
+             my $outfile = $po4a_opts{"force"} ? find_output_file($master_pot) : $tmp_file;
+-            my $cmd     = "msggrep$Config{_exe} $split_pot_files{$master_pot} -o $outfile $pot_filename";
++            my $cmd     = "@PREFIX@/bin/msggrep$Config{_exe} $split_pot_files{$master_pot} -o $outfile $pot_filename";
+             run_cmd($cmd);
+ 
+             die wrap_msg(
+@@ -1658,7 +1658,7 @@ if ( $po4a_opts{"split"} ) {
+             $split_po{$lang}{$master} = $master_po;
+         }
+         if ( length $cmd_cat ) {
+-            $cmd_cat = "msgcat" . $Config{_exe} . " -o $tmp_bigpo $cmd_cat";
++            $cmd_cat = "@PREFIX@/bin/msgcat" . $Config{_exe} . " -o $tmp_bigpo $cmd_cat";
+             run_cmd($cmd_cat);
+         }
+ 
+@@ -1685,7 +1685,7 @@ if ( not $po4a_opts{"no-update"} ) {
+ 
+                 my $msgmerge_opt = $po4a_opts{"msgmerge-opt"};
+                 $msgmerge_opt =~ s/\$lang\b/$lang/g if scalar @langs;
+-                my $cmd = "msgmerge" . $Config{_exe} . " $infile $updated_potfile " . $msgmerge_opt;
++                my $cmd = "@PREFIX@/bin/msgmerge" . $Config{_exe} . " $infile $updated_potfile " . $msgmerge_opt;
+                 if ( $infile eq $outfile ) {    # in place
+                     $cmd .= " --backup=none --update";
+                 } else {
+@@ -1700,7 +1700,7 @@ if ( not $po4a_opts{"no-update"} ) {
+                         printf( gettext("Updating %s:"), $po_filename{$lang} );
+                     }
+ 
+-                    my $stat = qx(msgfmt$Config{_exe} --statistics -v -o $devnull $outfile 2>&1);
++                    my $stat = qx(@PREFIX@/bin/msgfmt$Config{_exe} --statistics -v -o $devnull $outfile 2>&1);
+                     $stat =~ s/^[^:]*://;
+                     print $stat;
+                 }
+@@ -1708,7 +1708,7 @@ if ( not $po4a_opts{"no-update"} ) {
+             } else {
+                 my $read_pot_filename = find_input_file($pot_filename);
+                 my $cmd =
+-                  "msginit$Config{_exe} -i $read_pot_filename --locale $lang -o $outfile --no-translator >$devnull";
++                  "@PREFIX@/bin/msginit$Config{_exe} -i $read_pot_filename --locale $lang -o $outfile --no-translator >$devnull";
+                 run_cmd($cmd);
+             }
+         }
+@@ -1741,13 +1741,13 @@ if ( not $po4a_opts{"no-update"} ) {
+ 
+                         $cmd =
+                             $env
+-                          . " msggrep$Config{_exe}"
++                          . " @PREFIX@/bin/msggrep$Config{_exe}"
+                           . " --force-po --invert-match --msgid --regexp '.'"
+                           . " --output $tmp_file "
+                           . find_input_file( $split_po{$lang}{$master} );
+                     } else {
+                         $cmd =
+-                            "msginit$Config{_exe} "
++                            "@PREFIX@/bin/msginit$Config{_exe} "
+                           . "--no-translator -l $lang --input "
+                           . find_output_file( $split_pot{$master} )
+                           . " --output $tmp_file  >$devnull";
+@@ -1756,7 +1756,7 @@ if ( not $po4a_opts{"no-update"} ) {
+ 
+                     # Update the PO according to the new POT and to the big PO (compendium).
+                     $cmd =
+-                        "msgmerge$Config{_exe} "
++                        "@PREFIX@/bin/msgmerge$Config{_exe} "
+                       . " --compendium "
+                       . $po_filename{$lang}
+                       . " --update --backup=none "
+@@ -1817,7 +1817,7 @@ if ( not $po4a_opts{"no-translations"} )
+         print "Reading PO file $pofile for language $lang: "
+           if ( $po4a_opts{"debug"} );
+         $po->read($pofile);
+-        system( "msgfmt" . $Config{_exe} . " --statistics -v -o $devnull $pofile" )
++        system( "@PREFIX@/bin/msgfmt" . $Config{_exe} . " --statistics -v -o $devnull $pofile" )
+           if ( $po4a_opts{"debug"} );
+ 
+       DOC: foreach my $master (

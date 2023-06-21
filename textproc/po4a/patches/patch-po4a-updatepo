@@ -1,0 +1,23 @@
+$NetBSD: patch-po4a-updatepo,v 1.3 2023/06/21 19:08:06 schmonz Exp $
+
+Invoke pkgsrc's gettext-tools.
+Write to the full physical null device.
+
+--- po4a-updatepo.orig	2023-01-01 00:30:43.000000000 +0000
++++ po4a-updatepo
+@@ -308,13 +308,13 @@ while ( my $po_filename = shift @pofiles
+     if ( -e $po_filename ) {
+         print STDERR wrap_msg( gettext("Updating %s:"), $po_filename )
+           if $verbose;
+-        my @cmd = ( "msgmerge" . $Config{_exe} );
++        my @cmd = ( "@PREFIX@/bin/msgmerge" . $Config{_exe} );
+         push( @cmd, split( /\s+/, $msgmerge_opt ) ) if length($msgmerge_opt);
+         push @cmd, ( "-U", $po_filename, $pot_filename );
+         print STDERR join( ' ', @cmd ) . "\n" if $debug;
+         system(@cmd) == 0
+           or die wrap_msg( gettext("Could not run msgmerge: %s"), $! );
+-        @cmd = ( "msgfmt" . $Config{_exe}, "--statistics", "-v", "-o", File::Spec->devnull(), $po_filename );
++        @cmd = ( "@PREFIX@/bin/msgfmt" . $Config{_exe}, "--statistics", "-v", "-o", "@PO4A_DEVNULL@", $po_filename );
+         print STDERR join( ' ', @cmd ) . "\n" if $debug;
+         system(@cmd)
+           if $verbose;
