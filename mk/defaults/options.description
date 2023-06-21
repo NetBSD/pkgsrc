@@ -795,6 +795,7 @@ sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serf			Use serf HTTP/WebDAV client library.
 serialconsole		Enable use of serial console.
 sge			Support for Sun Grid Engine batch scheduler
+sgml			Enable SGML support.
 shine			Enable shine (non-FPU mp3) support.
 shout			Enable SHOUTcast support.
 sidplay			Enable support for the SID audio file format.
