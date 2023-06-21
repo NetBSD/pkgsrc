@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2023/06/20 15:30:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.59 2023/06/21 19:08:06 schmonz Exp $
 
 DISTNAME=	po4a-0.69
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mquinson/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -23,9 +23,23 @@ DEPENDS+=	p5-PerlIO-utf8_strict-[0-9]*:../../devel/p5-PerlIO-utf8_strict
 DEPENDS+=	p5-Unicode-LineBreak-[0-9]*:../../textproc/p5-Unicode-LineBreak
 DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 
+.include "../../mk/bsd.prefs.mk"
+
+# sync with pkgtools/pkgdiff/Makefile
+.if	\
+	${OPSYS} == "SunOS" ||	\
+	${OPSYS} == "OSF1" ||	\
+	${OPSYS} == "Darwin" && empty(OSX_VERSION:M[0-9].*) && empty(OSX_VERSION:M1[0-2].*)
+DEPENDS+=		diffutils-[0-9]*:../../devel/diffutils
+DIFF?=			${PREFIX}/bin/gdiff
+.else
+DIFF?=			diff
+.endif
+
 .include "options.mk"
 
-USE_TOOLS+=		pkg-config perl:run msgmerge:run msgfmt:run diff:run
+USE_TOOLS+=		pkg-config perl:run diff:run
+USE_TOOLS+=		msgconv:run msgfmt:run msgmerge:run
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/po4a/.packlist
@@ -36,17 +50,21 @@ REPLACE_PERL+=		lib/Locale/Po4a/*
 
 MAKE_ENV+=		COLUMNS=76
 
-SUBST_CLASSES+=		tools
-SUBST_FILES.tools=	lib/Locale/Po4a/Po.pm Po4aBuilder.pm
-SUBST_STAGE.tools=	pre-configure
-SUBST_VARS.tools=	DIFF
+.if ${OPSYS} == "SunOS"
+# If /dev/null is a symlink into /devices/pseudo/, msgfmt won't follow it
+# (maybe because it's in a different filesystem?)
+# So we expand the symlink (if any) before building.
+PO4A_DEVNULL_cmd=	readlink -f /dev/null | sed -e 's|@|\\@|'
+PO4A_DEVNULL=		${PO4A_DEVNULL_cmd:sh}
+.else
+PO4A_DEVNULL=		/dev/null
+.endif
 
-# work around not to set PATH to msgmerge, please somebody to fix correctly
-SUBST_CLASSES+=		path
-SUBST_FILES.path=	po4a
-SUBST_MESSAGE.path=	Fix msgmerge command path (not found)
-SUBST_STAGE.path=	pre-configure
-SUBST_SED.path=		-e 's|"msgmerge"|"${PREFIX}/bin/msgmerge"|;'
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	lib/Locale/Po4a/Po.pm Po4aBuilder.pm
+SUBST_FILES.paths+=	msguntypot po4a po4a-updatepo
+SUBST_STAGE.paths=	pre-configure
+SUBST_VARS.paths=	PREFIX DIFF SH PO4A_DEVNULL
 
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
