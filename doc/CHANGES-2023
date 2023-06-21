@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3988 2023/06/21 14:42:49 taca Exp $
+$NetBSD: CHANGES-2023,v 1.3989 2023/06/21 15:00:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5551,3 +5551,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/feh to 3.10 [nia 2023-06-21]
 	Updated net/bind916 to 9.16.42 [taca 2023-06-21]
 	Updated net/bind918 to 9.18.16 [taca 2023-06-21]
+	Updated devel/cvs-for-gits to 20230621 [schmonz 2023-06-21]
