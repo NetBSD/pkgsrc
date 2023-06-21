@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/21 22:20:22 gutteridge Exp $
 
-BLAKE2s (isc_dhcp_leases-0.9.1.tar.gz) = 3f7eb92dae7304371ea0f818826243a62363ca74fd81b7ae23328d12c423a769
-SHA512 (isc_dhcp_leases-0.9.1.tar.gz) = 271b449ae9c90e399596dea986042dd85eac3634005ad602dadcf0489b4213ee3e6845d9ddf69373ce1577da907a74f4d2568394e9dae0dad60ff24c4e9be6f3
-Size (isc_dhcp_leases-0.9.1.tar.gz) = 6798 bytes
-SHA1 (patch-isc__dhcp__leases_iscdhcpleases.py) = 5dc3366313d9c25b9bdeaf00da3fb8027a37e702
-SHA1 (patch-isc__dhcp__leases_test__iscDhcpLeases.py) = 94b5ad3b8efd5f07fe49d721b180aab913ca7b47
-SHA1 (patch-isc__dhcp__leases_test__lease.py) = 86518d345541a81dbb0c5053dce0df94b2b32699
-SHA1 (patch-isc__dhcp__leases_test__lease6.py) = c795d104480a155f7b9812d3d1b3979868350514
+BLAKE2s (isc_dhcp_leases-0.10.0.tar.gz) = 45faa64a27335ed50414835556943640c62e76407e3ae690a6d9953db7edd293
+SHA512 (isc_dhcp_leases-0.10.0.tar.gz) = 6c103ad74fb3bd6254887beeac00dc572a17b43330982edac9d072d2afa22724493a4ed206ab66c4ddbfa4d4d4c8f20a74131d77ddb29e5ad19656a822caf905
+Size (isc_dhcp_leases-0.10.0.tar.gz) = 13584 bytes
