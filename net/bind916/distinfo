@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.48 2023/05/17 13:41:58 taca Exp $
+$NetBSD: distinfo,v 1.49 2023/06/21 14:40:43 taca Exp $
 
-BLAKE2s (bind-9.16.41.tar.xz) = 609295ad902ba361027c30457a65814b5fc4161a3c248cb918b8cc063445a41b
-SHA512 (bind-9.16.41.tar.xz) = 93c374ef82ff36e222a790161942635d0b977813b5040f8895e1c032b4ca1925addc8ef3a06417445036dc35aeb708cc61bd589c6a9cb78980f77ab402c44bee
-Size (bind-9.16.41.tar.xz) = 5121884 bytes
+BLAKE2s (bind-9.16.42.tar.xz) = aac597ba81beb6b82c17910d38a5fee3c383fcdbaf0d01b785ad186ec615990d
+SHA512 (bind-9.16.42.tar.xz) = cf29e72c9c979f3cf8ba0b17357fb09c37f1436a7f3a518f49ce4b4c682fb367dd3d8e71de6603c166c95a7c535a77a9f2a1393a59723294626acefebbc95fd6
+Size (bind-9.16.42.tar.xz) = 5123476 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98
 SHA1 (patch-bin_dig_include_dig_dig.h) = 10166f5bb98b208c7b10d63eb31e8253f704acc8
 SHA1 (patch-bin_named_Makefile.in) = f1367da6a226ba44d0ee13acf00b8abeb5b1b7eb

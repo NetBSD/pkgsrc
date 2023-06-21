@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/12/19 16:41:36 taca Exp $
+# $NetBSD: options.mk,v 1.5 2023/06/21 14:40:43 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -13,10 +13,10 @@ PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none") || \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-vax) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-sparc) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
+	${MACHINE_PLATFORM:MNetBSD-*-vax} || \
+	${MACHINE_PLATFORM:MNetBSD-*-sparc} || \
+	${MACHINE_PLATFORM:MNetBSD-*-sparc64} || \
+	${MACHINE_PLATFORM:MNetBSD-*-m68k}
 # don't touch PKG_SUGGESTED_OPTIONS
 .else
 PKG_SUGGESTED_OPTIONS+=	threads
