@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3986 2023/06/21 08:28:47 nia Exp $
+$NetBSD: CHANGES-2023,v 1.3987 2023/06/21 14:41:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5549,3 +5549,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.4.1 [pin 2023-06-21]
 	Updated sysutils/onefetch to 2.18.0 [pin 2023-06-21]
 	Updated graphics/feh to 3.10 [nia 2023-06-21]
+	Updated net/bind916 to 9.16.42 [taca 2023-06-21]
