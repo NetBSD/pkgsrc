@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/05/27 06:29:51 charlotte Exp $
+$NetBSD: distinfo,v 1.25 2023/06/21 06:37:06 charlotte Exp $
 
-BLAKE2s (janet-1.28.0.tar.gz) = b5a0c66d67fa5878b194296cfa427f2a8a0b182295dcc599ebf840c74024092e
-SHA512 (janet-1.28.0.tar.gz) = 2804157740617699c901e2bc4a0caa08c0504ddfb48556b40dd21d504b8c2dced0f9dac194588e4a143f5a3523423a8a77c136a77baf00edccd08133061b1071
-Size (janet-1.28.0.tar.gz) = 531528 bytes
+BLAKE2s (janet-1.29.1.tar.gz) = 262cf96cf5de92d51610c6b661a6f0bed6bc5d77ed2ba66f8235160c4eb70068
+SHA512 (janet-1.29.1.tar.gz) = c04ab8cd951968d262daf8e1e5df66d2fbecaab5f66635c8765d438f6c25bb133a0fed52e37cbc59b680fa36549b39670b6585b52be3e8037c5a0fc47eb14f46
+Size (janet-1.29.1.tar.gz) = 548328 bytes
