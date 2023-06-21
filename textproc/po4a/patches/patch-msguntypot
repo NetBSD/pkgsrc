@@ -1,0 +1,15 @@
+$NetBSD: patch-msguntypot,v 1.1 2023/06/21 19:08:06 schmonz Exp $
+
+Invoke pkgsrc's gettext-tools.
+
+--- msguntypot.orig	2023-01-01 00:30:43.000000000 +0000
++++ msguntypot
+@@ -206,7 +206,7 @@ my $pocount = 0;
+ while (my $poarg = shift) {
+     $pocount ++;
+     print wrap_msg(gettext("Handling %s"),$poarg) if $verbose;
+-    if (system("msgmerge $msgmergeOpts -o $pofile $poarg $oldfile 2>/dev/null")) {
++    if (system("@PREFIX@/bin/msgmerge $msgmergeOpts -o $pofile $poarg $oldfile 2>/dev/null")) {
+         my $msg = $!;
+         unlink ($pofile);
+         die wrap_msg(gettext("Could not run msgmerge: %s"), $msg);
