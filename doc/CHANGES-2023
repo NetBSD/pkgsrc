@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3990 2023/06/21 15:16:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.3991 2023/06/21 19:08:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.3.1 [adam 2023-06-21]
 	Updated lang/nodejs18 to 18.16.1 [adam 2023-06-21]
 	Updated lang/nodejs16 to 16.20.1 [adam 2023-06-21]
+	Updated textproc/po4a to 0.69nb3 [schmonz 2023-06-21]
