@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2022/09/04 12:12:01 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/21 08:12:25 nia Exp $
 
 DISTNAME=	picom-9.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/yshui/picom
 COMMENT=	Lightweight compositor for X11 (fork of Compton)
 LICENSE=	mpl-2.0 AND mit
