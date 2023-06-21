@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/05/27 06:29:51 charlotte Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/21 06:37:06 charlotte Exp $
 
-DISTNAME=	janet-1.28.0
+DISTNAME=	janet-1.29.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janet-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
