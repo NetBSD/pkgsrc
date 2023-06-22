@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/06/18 12:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/06/22 11:23:02 jperkin Exp $
 
 DISTNAME=	geeqie-2.1
 CATEGORIES=	graphics
@@ -31,7 +31,9 @@ REPLACE_BASH+=		version.sh
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endif
 
 .include "options.mk"
 
