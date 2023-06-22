@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3996 2023/06/22 12:08:31 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.3997 2023/06/22 16:45:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5563,3 +5563,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/cups-base to 2.4.6 [wiz 2023-06-22]
 	Updated print/cups to 2.4.6 [wiz 2023-06-22]
 	Updated biology/mopac to 22.0.6 [bacon 2023-06-22]
+	Updated www/py-klein to 21.8.0 [adam 2023-06-22]
