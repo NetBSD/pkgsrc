@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/13 18:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/22 10:52:35 jperkin Exp $
 
 DISTNAME=	rapidfuzz-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 
 USE_LANGUAGES=	c c++17
 GCC_REQD+=	10
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-fno-fat-lto-objects
 
 # needs 'make install'
 do-test:
