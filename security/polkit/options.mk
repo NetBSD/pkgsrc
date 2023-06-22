@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/06/07 15:36:40 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2023/06/22 10:41:16 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polkit
 PKG_SUPPORTED_OPTIONS=	pam
@@ -18,6 +18,6 @@ INSTALLATION_DIRS+=	share/examples/pam.d
 post-install: pam-move
 .PHONY: pam-move
 pam-move:
-	${MV} ${DESTDIR}${PREFIX}/etc/pam.d/polkit-1 \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/pam.d/polkit-1 \
 		${DESTDIR}${PREFIX}/share/examples/pam.d/polkit-1
 .endif
