@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/28 21:22:04 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/22 16:45:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/klein/__init__.py
@@ -25,9 +26,6 @@ ${PYSITELIB}/klein/_headers.pyo
 ${PYSITELIB}/klein/_headers_compat.py
 ${PYSITELIB}/klein/_headers_compat.pyc
 ${PYSITELIB}/klein/_headers_compat.pyo
-${PYSITELIB}/klein/_iapp.py
-${PYSITELIB}/klein/_iapp.pyc
-${PYSITELIB}/klein/_iapp.pyo
 ${PYSITELIB}/klein/_iform.py
 ${PYSITELIB}/klein/_iform.pyc
 ${PYSITELIB}/klein/_iform.pyo
@@ -67,9 +65,6 @@ ${PYSITELIB}/klein/_session.pyo
 ${PYSITELIB}/klein/_tubes.py
 ${PYSITELIB}/klein/_tubes.pyc
 ${PYSITELIB}/klein/_tubes.pyo
-${PYSITELIB}/klein/_typing.py
-${PYSITELIB}/klein/_typing.pyc
-${PYSITELIB}/klein/_typing.pyo
 ${PYSITELIB}/klein/_version.py
 ${PYSITELIB}/klein/_version.pyc
 ${PYSITELIB}/klein/_version.pyo
@@ -94,16 +89,9 @@ ${PYSITELIB}/klein/storage/memory.pyo
 ${PYSITELIB}/klein/test/__init__.py
 ${PYSITELIB}/klein/test/__init__.pyc
 ${PYSITELIB}/klein/test/__init__.pyo
-${PYSITELIB}/klein/test/_strategies.py
-${PYSITELIB}/klein/test/_strategies.pyc
-${PYSITELIB}/klein/test/_strategies.pyo
 ${PYSITELIB}/klein/test/_trial.py
 ${PYSITELIB}/klein/test/_trial.pyc
 ${PYSITELIB}/klein/test/_trial.pyo
-${PYSITELIB}/klein/test/idna-tables-properties.csv
-${PYSITELIB}/klein/test/py3_test_resource.py
-${PLIST.py3x}${PYSITELIB}/klein/test/py3_test_resource.pyc
-${PLIST.py3x}${PYSITELIB}/klein/test/py3_test_resource.pyo
 ${PYSITELIB}/klein/test/test_app.py
 ${PYSITELIB}/klein/test/test_app.pyc
 ${PYSITELIB}/klein/test/test_app.pyo
