@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/18 05:39:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/22 16:45:39 adam Exp $
 
 DISTNAME=	klein-21.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,12 +10,11 @@ HOMEPAGE=	https://klein.readthedocs.io/en/latest/
 COMMENT=	Micro-framework for developing web services
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-hyperlink-[0-9]*:../../www/py-hyperlink
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-tubes-[0-9]*:../../devel/py-tubes
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=16.6:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
