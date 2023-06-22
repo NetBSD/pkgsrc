@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/16 17:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/22 11:23:48 jperkin Exp $
 
 DISTNAME=	puddletag-2.0.1
 CATEGORIES=	audio python
@@ -26,7 +26,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
