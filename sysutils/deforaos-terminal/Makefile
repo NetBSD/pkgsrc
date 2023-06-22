@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/06/06 12:42:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/22 11:25:23 jperkin Exp $
 #
 
 DISTNAME=	Terminal-0.2.0
@@ -28,11 +28,13 @@ AUTO_MKDIRS=	yes
 DEPENDS+=	{xterm,mxterm}-[0-9]*:../../x11/xterm
 
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/terminal.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/terminal.html
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/terminal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/terminal.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 
