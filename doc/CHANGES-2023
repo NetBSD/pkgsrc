@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3994 2023/06/22 11:16:15 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.3995 2023/06/22 11:47:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5559,3 +5559,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-isc_dhcp_leases to 0.10.0 [gutteridge 2023-06-21]
 	Updated sysutils/ups-nut to 2.8.0nb6 [wiz 2023-06-22]
 	Updated lang/python311 to 3.11.4nb1 [jperkin 2023-06-22]
+	Updated print/libcups to 2.4.6 [wiz 2023-06-22]
+	Updated print/cups-base to 2.4.6 [wiz 2023-06-22]
+	Updated print/cups to 2.4.6 [wiz 2023-06-22]
