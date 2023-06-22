@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/15 19:48:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/22 11:19:31 jperkin Exp $
 
 DISTNAME=	pspdfutils-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,9 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
 CONFLICTS+=	psutils<3
 
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	cd ${DESTDIR}${PREFIX}/share/man && ${MV} * ${DESTDIR}${PREFIX}/${PKGMANDIR}
+.endif
 
 # still needs 'make install'
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
