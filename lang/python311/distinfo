@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2023/06/07 13:28:49 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/06/22 11:16:06 jperkin Exp $
 
 BLAKE2s (Python-3.11.4.tar.xz) = c18c396b72d794ede405921276aa43b1923a4bda964d7dcf797bded7e8e30b1b
 SHA512 (Python-3.11.4.tar.xz) = 7eb14fecbf60824d10c22a9057584c3a142c2866f4af6caa2525c10c8bcb24e6e7afb32a44a0e118df0a2b2543d578c3b422ffd4a5fa317dfe6ea371cc7ee1ee
 Size (Python-3.11.4.tar.xz) = 19954828 bytes
+SHA1 (patch-Include_pymacro.h) = 271a891892dca1a3aaa3bedcae626a68a36cae0b
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 8a91e8f4f86517a62408c3a10ed5eb50c4091fbf
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 593c4e93c5653ab400f0a98b91db92630c0a7390
