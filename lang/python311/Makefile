@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/01/14 17:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/22 11:16:06 jperkin Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python311-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -58,7 +59,7 @@ MAKE_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC}
 .endif
 
 # http://bugs.python.org/issue13241
-.if !empty(MACHINE_PLATFORM:MDarwin-1[12].*)
+.if ${MACHINE_PLATFORM:MDarwin-1[12].*}
 PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
