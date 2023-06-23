@@ -1,8 +1,8 @@
-$NetBSD: patch-scheduler-main.c,v 1.3 2023/06/19 19:28:36 schmonz Exp $
+$NetBSD: patch-scheduler-main.c,v 1.4 2023/06/23 06:46:48 wiz Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/main.c.orig	2023-06-06 12:55:36.000000000 +0000
+--- scheduler/main.c.orig	2023-06-22 10:17:14.000000000 +0000
 +++ scheduler/main.c
 @@ -63,6 +63,7 @@
   * Local functions...
@@ -47,11 +47,10 @@ Add a PidFile configuration directive to write a PID file.
  
  #ifdef __APPLE__
   /*
-@@ -2126,6 +2141,36 @@ service_checkout(int shutdown)
- }
+@@ -2127,6 +2142,36 @@ service_checkout(int shutdown)          
  
  
-+/*
+ /*
 + * 'create_pidfile()' - Create PID file.
 + */
 +static int
@@ -81,6 +80,7 @@ Add a PidFile configuration directive to write a PID file.
 +}
 +
 +
- /*
++/*
   * 'usage()' - Show scheduler usage.
   */
+ 
