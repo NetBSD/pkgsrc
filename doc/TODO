@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23090 2023/06/22 11:47:39 wiz Exp $
+$NetBSD: TODO,v 1.23091 2023/06/23 22:08:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -915,6 +915,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
+	o libzip-1.10.0
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -1419,7 +1420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.0.7
+	o tor-browser-12.5
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
