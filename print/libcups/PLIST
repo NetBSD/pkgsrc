@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/06/16 23:42:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/06/23 06:46:48 wiz Exp $
 bin/cups-config
 include/cups/adminutil.h
 include/cups/array.h
@@ -17,6 +17,8 @@ include/cups/transcode.h
 include/cups/versioning.h
 lib/libcups.so
 lib/libcups.so.2
+lib/libcupsimage.so
+lib/libcupsimage.so.2
 lib/pkgconfig/cups.pc
 share/locale/ca/cups_ca.po
 share/locale/cs/cups_cs.po
