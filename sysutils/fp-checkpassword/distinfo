@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/05/02 22:01:50 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/23 20:30:22 schmonz Exp $
 
 BLAKE2s (fp-checkpassword-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f.tar.gz) = a952dfea0a06dfab8f0aa038724ebfb02ab0cc60ebf6f5fadcb262b1b57ae20a
 SHA512 (fp-checkpassword-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f.tar.gz) = c52e42af3ab1f411228ee3e9e726f1e3fe9613b12ddc5b0ab90c78785bd5491595d1440af93305b8142b5aab16a8ae25ee6b68e92e4055e4d5ca820e7ff7ca0f
 Size (fp-checkpassword-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f-f92fc7c51bc4bd98f404cb29e843db1cd5ed623f.tar.gz) = 7152 bytes
-SHA1 (patch-main.c) = 114c2d2b21de535be48b7a906520d1e6a59d4376
+SHA1 (patch-main.c) = e4da53382292252d23a96113d6baa603f9893525
