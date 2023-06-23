@@ -1,6 +1,7 @@
-$NetBSD: patch-main.c,v 1.1 2023/05/02 22:01:50 schmonz Exp $
+$NetBSD: patch-main.c,v 1.2 2023/06/23 20:30:22 schmonz Exp $
 
 Avoid clearenv(), not available on all platforms.
+Provide no-op definition of LOG_PERROR for Solarish.
 
 --- main.c.orig	2017-11-08 07:08:02.000000000 +0000
 +++ main.c
@@ -13,7 +14,17 @@ Avoid clearenv(), not available on all platforms.
  int create_socket() {
      int sock;
      struct sockaddr_in dest;
-@@ -146,7 +148,7 @@ int main(int argc, char** argv) {
+@@ -99,6 +101,9 @@ void timeout(int signum) {
+ int main(int argc, char** argv) {
+     char *user, *passwd, *remoteIP;
+ 
++#ifndef LOG_PERROR
++#define LOG_PERROR 0x0
++#endif
+     openlog(NULL, LOG_NDELAY | LOG_PERROR, 0);
+     
+     // Give ourselves 8 seconds
+@@ -146,7 +151,7 @@ int main(int argc, char** argv) {
      trimNewline(result);
  
      if (strcmp("success", result) == 0) {
