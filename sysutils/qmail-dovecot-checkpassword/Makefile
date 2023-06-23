@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/09 19:38:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/23 19:36:39 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20141125
@@ -18,5 +18,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	checkpasswd.c
 SUBST_VARS.paths=	VARBASE
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
