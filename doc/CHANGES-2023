@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.3998 2023/06/23 06:47:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.3999 2023/06/23 14:37:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5565,3 +5565,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/mopac to 22.0.6 [bacon 2023-06-22]
 	Updated www/py-klein to 21.8.0 [adam 2023-06-22]
 	Updated print/libcups to 2.4.6nb1 [wiz 2023-06-23]
+	Updated audio/libopenmpt to 0.7.2 [fcambus 2023-06-23]
