@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/22 11:23:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/23 07:42:59 wiz Exp $
 
 DISTNAME=	puddletag-2.0.1
 CATEGORIES=	audio python
@@ -24,6 +24,8 @@ PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 post-install:
 .if ${PKGMANDIR} != "share/man"
