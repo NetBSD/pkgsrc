@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2021/04/25 07:51:25 mrg Exp $
+# $NetBSD: Makefile,v 1.39 2023/06/23 23:25:52 mrg Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://flpsed.org/
 

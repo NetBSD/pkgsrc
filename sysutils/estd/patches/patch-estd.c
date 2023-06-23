@@ -1,10 +1,12 @@
-$NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
+$NetBSD: patch-estd.c,v 1.3 2023/06/23 23:25:52 mrg Exp $
 
 - Removed useless "estd: Forked" message
 - Add support for generic multi-domain frequency controls
+- Add support for -x/-X options: SIGUSR* adjust min or max speed.
+  Will adjust all frequency domains max or min, up or down.
 
---- estd.c.orig	2015-02-18 21:38:03.000000000 +0000
-+++ estd.c
+--- estd.c.orig	2015-02-18 13:38:03.000000000 -0800
++++ estd.c	2023-06-22 02:47:03.614057986 -0700
 @@ -58,8 +58,9 @@
  #define TECH_INTREPID 4
  #define TECH_LOONGSON 5
@@ -17,7 +19,16 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
   
  /* this is ugly, but... <shrug> */
  #define MAX_FREQS 32
-@@ -128,6 +129,7 @@ static char	*techdesc[TECH_MAX + 1] = {"
+@@ -108,6 +109,8 @@
+ int             ncpus = 0;
+ struct domain  *domain;
+ int             ndomains;
++char		minmax_mode;
++sig_atomic_t	got_sigminmax;
+ 
+ #if defined(__DragonFly__)
+  static struct kinfo_cputime *cp_time;
+@@ -128,6 +131,7 @@
  				"Intrepid",
  				"Loongson",
  				"Rockchip",
@@ -25,7 +36,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  				"Generic"
  				};
  static char	*freqctl[TECH_MAX + 1] = {	"",	
-@@ -137,6 +139,7 @@ static char	*freqctl[TECH_MAX + 1] = {	"
+@@ -137,6 +141,7 @@
  				"machdep.intrepid.frequency.available",
  				"machdep.loongson.frequency.available",
  				"machdep.cpu.frequency.available",
@@ -33,7 +44,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  				"machdep.frequency.available"
  				};
  static char	*setctl[TECH_MAX + 1] = {	"",
-@@ -146,6 +149,7 @@ static char	*setctl[TECH_MAX + 1] = {	""
+@@ -146,6 +151,7 @@
  				"machdep.intrepid.frequency.target",
  				"machdep.loongson.frequency.target",
  				"machdep.cpu.frequency.target",
@@ -41,7 +52,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  				"machdep.frequency.current"
  				};
  
-@@ -234,6 +238,63 @@ acpi_init()
+@@ -234,6 +240,63 @@
  }
  
  
@@ -105,7 +116,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  /* returns cpu-usage in percent, mean over the sleep-interval or -1 if an error occured */
  #if defined(__DragonFly__)
  int
-@@ -308,8 +369,10 @@ get_cpuusage(int d)
+@@ -308,8 +371,10 @@
  	int		cpu_of_max = 0;
  	int		cpu;
  	int             i;
@@ -117,7 +128,93 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  		u_int64_t total_time = 0;
  
  		for (i = 0; i < CPUSTATES; i++) {
-@@ -401,7 +464,7 @@ main(int argc, char *argv[])
+@@ -384,13 +449,80 @@
+ void
+ sigusrhandler(int sig)
+ {
+-	switch (sig) {
++	if (minmax_mode) {
++		got_sigminmax = sig;
++	} else {
++		switch (sig) {
+ 		case SIGUSR1:
+-				if (strategy>BATTERY) strategy--;
+-				break;
++			if (strategy>BATTERY) strategy--;
++			break;
+ 		case SIGUSR2:
+-				if (strategy<AGGRESSIVE) strategy++;
+-				break;
++			if (strategy<AGGRESSIVE) strategy++;
++			break;
++		}
++	}
++}
++
++static void handle_sigminmax(int sig)
++{
++	int d, idx;
++
++	/* SIGUSR1 to reduce, SIGUSR2 to increase */
++	for (d = 0; d < ndomains; d++) {
++		if (minmax_mode == 'X' && sig == SIGUSR1) {
++			if (domain[d].maxidx == 0)	
++				return;
++			domain[d].maxidx--;
++			if (verbose)
++				printf("SIGUSR1, reducing maxfreq to %d Mhz\n", domain[d].freqtab[domain[d].maxidx]);
++			if (domain[d].maxidx < domain[d].curfreq) {
++				domain[d].curfreq--;
++				set_freq(d);
++				set_clockmod(clockmod_min);
++				if (verbose)
++					printf("SIGUSR1, also set curfreq to %d Mhz\n", domain[d].freqtab[domain[d].maxidx]);
++			}
++			return;
++		}
++		if (minmax_mode == 'X' && sig == SIGUSR2) {
++			if (domain[d].maxidx + 1 == domain[d].nfreqs)	
++				return;
++			domain[d].maxidx++;
++			/*
++			 * Nothing to worry about here; if we need to increase the
++			 * frequency due to load, the current iteration will.
++			 */
++			if (verbose)
++				printf("SIGUSR1, increased maxfreq to %d Mhz\n", domain[d].freqtab[domain[d].maxidx]);
++			return;
++		}
++		if (minmax_mode == 'x' && sig == SIGUSR1) {
++			if (domain[d].minidx == 0)	
++				return;
++			domain[d].minidx--;
++			/*
++			 * Nothing to worry about here; if we need to increase the
++			 * frequency due to load, the current iteration will.
++			 */
++			if (verbose)
++				printf("SIGUSR1, reducing minfreq to %d Mhz\n", domain[d].freqtab[domain[d].minidx]);
++			return;
++		}
++		if (minmax_mode == 'x' && sig == SIGUSR2) {
++			if (domain[d].minidx + 1 == domain[d].nfreqs)	
++				return;
++			domain[d].minidx++;
++			if (verbose)
++				printf("SIGUSR1, increased minfreq to %d Mhz\n", domain[d].freqtab[domain[d].minidx]);
++			if (domain[d].minidx < domain[d].curfreq) {
++				domain[d].curfreq--;
++				set_freq(d);
++				set_clockmod(clockmod_min);
++				if (verbose)
++					printf("SIGUSR1, also set curfreq to %d Mhz\n", domain[d].freqtab[domain[d].minidx]);
++			}
++			return;
++		}
+ 	}
+ }
+ 
+@@ -401,7 +533,7 @@
  	int             i;
  	char            frequencies[SYSCTLBUF];	/* XXX Ugly */
  	char           *fp;
@@ -126,16 +223,16 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  	int	            curstrat = strategy;
  	int             d;
  	FILE           *fexists;
-@@ -410,7 +473,7 @@ main(int argc, char *argv[])
+@@ -410,7 +542,7 @@
  #endif
  
  	/* get command-line options */
 -	while ((ch = getopt(argc, argv, "vfdonACEGILPasbp:h:l:g:m:M:")) != -1)
-+	while ((ch = getopt(argc, argv, "vfdonACDEGILPasbp:h:l:g:m:M:")) != -1)
++	while ((ch = getopt(argc, argv, "vfdonACDEGILPasbp:h:l:g:m:M:xX")) != -1)
  		switch (ch) {
  		case 'v':
  			version();
-@@ -438,6 +501,9 @@ main(int argc, char *argv[])
+@@ -438,6 +570,9 @@
  			 fprintf(stderr, "-C not available under DragonFly\n");
  			 exit(1);
  			#endif
@@ -145,7 +242,20 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  		case 'E':
  			tech = TECH_EST;
  			break;
-@@ -516,6 +582,7 @@ main(int argc, char *argv[])
+@@ -483,6 +618,12 @@
+ 		case 'M':
+ 			maxmhz = atoi(optarg);
+ 			break;
++		case 'x':
++			minmax_mode = 'x';
++			break;
++		case 'X':
++			minmax_mode = 'X';
++			break;
+ 		default:
+ 			usage();
+ 			/* NOTREACHED */
+@@ -516,6 +657,7 @@
  	/* try to guess cpu-scaling technology */
  	if (tech == TECH_UNKNOWN) {
  		for (tech = 1; tech <= TECH_MAX; tech++) {
@@ -153,7 +263,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  			if (sysctlbyname(freqctl[tech], &frequencies, &freqsize, NULL, 0) >= 0) break;
  		}
  		if (tech > TECH_MAX) {
-@@ -529,6 +596,11 @@ main(int argc, char *argv[])
+@@ -529,6 +671,11 @@
  			fprintf(stderr, "estd: Cannot ACPI P-States\n");
  			exit(1);
  		}
@@ -165,7 +275,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  	} else {
  		domain[0].freqctl = freqctl[tech];
  		domain[0].setctl = setctl[tech];
-@@ -552,6 +624,7 @@ main(int argc, char *argv[])
+@@ -552,6 +699,7 @@
  	/* for each cpu domain... */
  	for (d = 0; d < ndomains; d++) {
  		/* get supported frequencies... */
@@ -173,7 +283,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  		if (sysctlbyname(domain[d].freqctl, &frequencies, &freqsize, NULL, 0) < 0) {
  			fprintf(stderr, "estd: Cannot get supported frequencies (maybe you forced the wrong CPU-scaling technology?)\n");
  			exit(1);
-@@ -588,7 +661,11 @@ main(int argc, char *argv[])
+@@ -588,7 +736,11 @@
  	if (listfreq) {
  		printf("Supported frequencies (%s Mode):\n",techdesc[tech]);
  		for (d = 0; d < ndomains; d++) {
@@ -186,7 +296,7 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  			for (i = 0; i < domain[d].nfreqs; i++) {
  				printf("%i MHz\n", domain[d].freqtab[i]);
  			}
-@@ -626,7 +703,6 @@ main(int argc, char *argv[])
+@@ -626,7 +778,6 @@
  	/* all ok, here we go */
  	if (daemonize) {
  		if (fork()) {
@@ -194,3 +304,16 @@ $NetBSD: patch-estd.c,v 1.2 2019/10/06 11:35:16 jmcneill Exp $
  			exit(0);
  		}
  	} else {
+@@ -664,6 +815,12 @@
+ 
+ 	/* the big processing loop, we will only exit via signal */
+ 	while (1) {
++		if (got_sigminmax) {
++			int sig = got_sigminmax;
++
++			got_sigminmax = 0;
++			handle_sigminmax(sig);
++		}
+ 		get_cputime();
+ 		for (d = 0; d < ndomains; d++) {
+ 			domain[d].curcpu = get_cpuusage(d);
