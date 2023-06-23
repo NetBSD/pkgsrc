@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/06/22 11:23:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.113 2023/06/23 06:52:21 wiz Exp $
 
 DISTNAME=	geeqie-2.1
 CATEGORIES=	graphics
@@ -29,6 +29,8 @@ REPLACE_BASH+=		g*.sh
 REPLACE_BASH+=		version.sh
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 post-install:
 .if ${PKGMANDIR} != "share/man"
