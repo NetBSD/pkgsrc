@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/06/16 21:12:11 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/06/23 17:02:15 jperkin Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -45,6 +45,7 @@ CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create=no
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS.SunOS+=		-lsocket
 
 LIBS+=			${BUILDLINK_LDADD.iconv}
 
