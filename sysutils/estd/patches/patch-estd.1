@@ -1,22 +1,23 @@
-$NetBSD: patch-estd.1,v 1.1 2019/10/06 11:35:16 jmcneill Exp $
+$NetBSD: patch-estd.1,v 1.2 2023/06/23 23:25:52 mrg Exp $
 
 Document Generic Multi-domain Mode.
+Document -x/-X.
 
---- estd.1.orig	2015-02-18 21:38:03.000000000 +0000
-+++ estd.1
+--- estd.1.orig	2015-02-18 13:38:03.000000000 -0800
++++ estd.1	2023-06-23 16:17:50.117530062 -0700
 @@ -1,9 +1,9 @@
 -.TH estd 1 "February 18, 2015" "release 11" "USER COMMANDS"
-+.TH estd 1 "October 6, 2019" "release 11" "USER COMMANDS"
++.TH estd 1 "June 23, 2023" "release 11" "USER COMMANDS"
  .SH NAME
  estd \- Enhanced SpeedStep & PowerNow management daemon
  .SH SYNOPSIS
  .B estd
 -[\-d] [\-o] [\-A] [\-C] [\-E] [\-I] [\-L] [\-R] [\-P] [\-G] [\-a] [\-s] [\-b] [\-p interval] [\-g period] [\-l low] [\-h high] [\-m minimum] [\-M maximum]
-+[\-d] [\-o] [\-A] [\-C] [\-D] [\-E] [\-I] [\-L] [\-R] [\-P] [\-G] [\-a] [\-s] [\-b] [\-p interval] [\-g period] [\-l low] [\-h high] [\-m minimum] [\-M maximum]
++[\-d] [\-o] [\-A] [\-C] [\-D] [\-E] [\-I] [\-L] [\-R] [\-P] [\-G] [\-a] [\-s] [\-b] [\-x] [\-X] [\-p interval] [\-g period] [\-l low] [\-h high] [\-m minimum] [\-M maximum]
  .PP
  .B estd
  -f
-@@ -51,6 +51,9 @@ clock modulation feature will be turned 
+@@ -51,6 +51,9 @@
  speed mode is chosen by estd, in which case the lowest clock duty cycle
  is used (this feature is not available on Dragonfly BSD)
  .TP
@@ -26,3 +27,18 @@ Document Generic Multi-domain Mode.
  \-E
  Force Enhanced Speedstep-Mode.
  .TP
+@@ -83,6 +86,14 @@
+ Select frequency-switching strategy: battery. This tries to optimize for
+ maximum battery lifetime
+ .TP
++\-x
++Convert SIGUSR1 and SIGUSR2 to adjust the minimum frequency, the same as
++using the -m option.
++.TP
++\-X
++Convert SIGUSR1 and SIGUSR2 to adjust the maximum frequency, the same as
++using the -M option.
++.TP
+ \-p interval
+ Poll Interval between CPU-updates in microseconds. Lower values will adapt
+ smoothly to your workload, but increase overhead. (default 500000 = 0.5s)
