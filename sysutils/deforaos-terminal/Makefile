@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/22 11:25:23 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.34 2023/06/23 07:46:36 wiz Exp $
 
 DISTNAME=	Terminal-0.2.0
 PKGNAME=	deforaos-terminal-0.2.0
@@ -26,6 +25,8 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 DEPENDS+=	{xterm,mxterm}-[0-9]*:../../x11/xterm
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 post-install:
 .if ${PKGMANDIR} != "share/man"
