@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/02 22:01:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/23 20:30:22 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20171108
@@ -17,8 +17,7 @@ BUILD_TARGET=		main
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
-#do-build:
-#	cd ${WRKSRC} && ${MAKE} main
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main ${DESTDIR}${PREFIX}/bin/${PKGBASE}
