@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:19:33 nia Exp $
+$NetBSD: distinfo,v 1.27 2023/06/23 23:25:52 mrg Exp $
 
 BLAKE2s (estd-r11.tar.gz) = 7da35ee29b4c69dd9b2a8b240996a2bed2f28f1108714ca1bf4fdb71f2268cca
 SHA512 (estd-r11.tar.gz) = 37b005ab451f7a26248064cee5736ca43c6345b419e00050186158d5830fe96035fa78d2651a908899e6c61d44b1aaeb8b3cac0fbde19fb4c82976f709b011dc
 Size (estd-r11.tar.gz) = 9361 bytes
 SHA1 (patch-aa) = 6671d042e8b593b33e8633d657b14acaf3f115eb
-SHA1 (patch-estd.1) = 9e58f33fc722681728306c92678e1cfe6d5b373e
-SHA1 (patch-estd.c) = 1cfdf7b8f90152c1b420ada3f22c297f1256f98e
+SHA1 (patch-estd.1) = e1c17a02cdeeba9635057d2c2a132d438635cf04
+SHA1 (patch-estd.c) = 42f1152031a4241e34beb03061c26ffbaa34e5a6
