@@ -2,3 +2,7 @@ Pillow is the "friendly" PIL fork.
 The Python Imaging Library (PIL) adds image processing capabilities to your
 Python environment.  This library provides extensive file format support, an
 efficient internal representation, and powerful image processing capabilities.
+
+This package is the current version of Pillow, which is available for
+Python 3 only.  See devel/py-Pillow6 for an old version which can be
+used with Python 2.7.
