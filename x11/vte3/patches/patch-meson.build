@@ -1,10 +1,22 @@
-$NetBSD: patch-meson.build,v 1.3 2023/06/01 21:51:27 gutteridge Exp $
+$NetBSD: patch-meson.build,v 1.4 2023/06/24 00:47:48 gutteridge Exp $
 
 Remove silly asserts that do nothing except break portability.
 
---- meson.build.orig	2022-03-27 17:52:19.000000000 +0000
+Fix Solaris derivate builds, where defining _XOPEN_SOURCE_EXTENDED can be
+harmful, avoid _XOPEN_SOURCE clashes, etc.
+
+--- meson.build.orig	2023-06-01 19:33:31.000000000 +0000
 +++ meson.build
-@@ -230,13 +230,6 @@ endforeach
+@@ -222,7 +222,7 @@ libc_feature_defines = [
+ 
+ system = host_machine.system()
+ 
+-if system == 'freebsd'
++if system == 'freebsd' or system == 'sunos'
+   # Defining _POSIX_C_SOURCE above makes freebsd not expose some functionality
+   # that's hidden behind __BSD_VISIBLE.  Not defininy any of the above however
+   # makes it expose verything.
+@@ -273,13 +273,6 @@ endforeach
  
  # Check for symbols
  
@@ -18,7 +30,7 @@ Remove silly asserts that do nothing except break portability.
  
  # Check for functions
  
-@@ -558,14 +552,10 @@ linker_flags = [
+@@ -603,14 +596,10 @@ linker_flags = [
  foreach flag: linker_flags
    if cc.has_link_argument(flag[0])
      add_project_link_arguments(flag[0], language: 'c')
