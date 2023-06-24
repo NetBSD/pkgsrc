@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/06/14 09:43:50 abs Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/24 08:53:32 nia Exp $
 
 DISTNAME=	slim-1.4.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim-fork/}
 
@@ -43,8 +44,7 @@ post-install:
 SLIM_LOGIN_CMD?=		/bin/sh - /etc/X11/xdm/Xsession
 SLIM_XSERVER_ARGUMENTS?=	vt05 -noretro -nolisten tcp
 .else
-DEPENDS+=			bash-[0-9]*:../../shells/bash
-SLIM_LOGIN_CMD?=		@PREFIX@/bin/bash -login ~/.xinitrc %session
+SLIM_LOGIN_CMD?=		${TOOLS_PATH.sh} -login ~/.xinitrc %session
 SLIM_XSERVER_ARGUMENTS?=	-nolisten tcp
 .endif
 
