@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4004 2023/06/25 22:51:47 js Exp $
+$NetBSD: CHANGES-2023,v 1.4005 2023/06/25 22:54:46 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5572,3 +5572,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox102 to 102.12.0 [nia 2023-06-25]
 	Updated devel/fossil to 2.22 [js 2023-06-25]
 	Updated devel/py-canonicaljson to 2.0.0 [js 2023-06-25]
+	Updated chat/matrix-synapse to 1.86.0 [js 2023-06-25]
