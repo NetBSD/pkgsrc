@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2023/04/09 17:55:13 js Exp $
+@comment $NetBSD: PLIST,v 1.42 2023/06/25 22:54:34 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -31,6 +31,8 @@ ${PYSITELIB}/synapse/_scripts/generate_log_config.py
 ${PYSITELIB}/synapse/_scripts/generate_log_config.pyc
 ${PYSITELIB}/synapse/_scripts/generate_signing_key.py
 ${PYSITELIB}/synapse/_scripts/generate_signing_key.pyc
+${PYSITELIB}/synapse/_scripts/generate_workers_map.py
+${PYSITELIB}/synapse/_scripts/generate_workers_map.pyc
 ${PYSITELIB}/synapse/_scripts/hash_password.py
 ${PYSITELIB}/synapse/_scripts/hash_password.pyc
 ${PYSITELIB}/synapse/_scripts/move_remote_media_to_new_store.py
@@ -47,8 +49,14 @@ ${PYSITELIB}/synapse/_scripts/update_synapse_database.py
 ${PYSITELIB}/synapse/_scripts/update_synapse_database.pyc
 ${PYSITELIB}/synapse/api/__init__.py
 ${PYSITELIB}/synapse/api/__init__.pyc
-${PYSITELIB}/synapse/api/auth.py
-${PYSITELIB}/synapse/api/auth.pyc
+${PYSITELIB}/synapse/api/auth/__init__.py
+${PYSITELIB}/synapse/api/auth/__init__.pyc
+${PYSITELIB}/synapse/api/auth/base.py
+${PYSITELIB}/synapse/api/auth/base.pyc
+${PYSITELIB}/synapse/api/auth/internal.py
+${PYSITELIB}/synapse/api/auth/internal.pyc
+${PYSITELIB}/synapse/api/auth/msc3861_delegated.py
+${PYSITELIB}/synapse/api/auth/msc3861_delegated.pyc
 ${PYSITELIB}/synapse/api/auth_blocking.py
 ${PYSITELIB}/synapse/api/auth_blocking.pyc
 ${PYSITELIB}/synapse/api/constants.py
@@ -216,10 +224,6 @@ ${PYSITELIB}/synapse/events/presence_router.py
 ${PYSITELIB}/synapse/events/presence_router.pyc
 ${PYSITELIB}/synapse/events/snapshot.py
 ${PYSITELIB}/synapse/events/snapshot.pyc
-${PYSITELIB}/synapse/events/spamcheck.py
-${PYSITELIB}/synapse/events/spamcheck.pyc
-${PYSITELIB}/synapse/events/third_party_rules.py
-${PYSITELIB}/synapse/events/third_party_rules.pyc
 ${PYSITELIB}/synapse/events/utils.py
 ${PYSITELIB}/synapse/events/utils.pyc
 ${PYSITELIB}/synapse/events/validator.py
@@ -294,6 +298,8 @@ ${PYSITELIB}/synapse/handlers/identity.py
 ${PYSITELIB}/synapse/handlers/identity.pyc
 ${PYSITELIB}/synapse/handlers/initial_sync.py
 ${PYSITELIB}/synapse/handlers/initial_sync.pyc
+${PYSITELIB}/synapse/handlers/jwt.py
+${PYSITELIB}/synapse/handlers/jwt.pyc
 ${PYSITELIB}/synapse/handlers/message.py
 ${PYSITELIB}/synapse/handlers/message.pyc
 ${PYSITELIB}/synapse/handlers/oidc.py
@@ -372,6 +378,8 @@ ${PYSITELIB}/synapse/http/matrixfederationclient.py
 ${PYSITELIB}/synapse/http/matrixfederationclient.pyc
 ${PYSITELIB}/synapse/http/proxyagent.py
 ${PYSITELIB}/synapse/http/proxyagent.pyc
+${PYSITELIB}/synapse/http/replicationagent.py
+${PYSITELIB}/synapse/http/replicationagent.pyc
 ${PYSITELIB}/synapse/http/request_metrics.py
 ${PYSITELIB}/synapse/http/request_metrics.pyc
 ${PYSITELIB}/synapse/http/server.py
@@ -440,6 +448,10 @@ ${PYSITELIB}/synapse/module_api/callbacks/__init__.py
 ${PYSITELIB}/synapse/module_api/callbacks/__init__.pyc
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.py
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.pyc
+${PYSITELIB}/synapse/module_api/callbacks/spamchecker_callbacks.py
+${PYSITELIB}/synapse/module_api/callbacks/spamchecker_callbacks.pyc
+${PYSITELIB}/synapse/module_api/callbacks/third_party_event_rules_callbacks.py
+${PYSITELIB}/synapse/module_api/callbacks/third_party_event_rules_callbacks.pyc
 ${PYSITELIB}/synapse/module_api/errors.py
 ${PYSITELIB}/synapse/module_api/errors.pyc
 ${PYSITELIB}/synapse/notifier.py
@@ -505,6 +517,8 @@ ${PYSITELIB}/synapse/replication/tcp/client.py
 ${PYSITELIB}/synapse/replication/tcp/client.pyc
 ${PYSITELIB}/synapse/replication/tcp/commands.py
 ${PYSITELIB}/synapse/replication/tcp/commands.pyc
+${PYSITELIB}/synapse/replication/tcp/context.py
+${PYSITELIB}/synapse/replication/tcp/context.pyc
 ${PYSITELIB}/synapse/replication/tcp/external_cache.py
 ${PYSITELIB}/synapse/replication/tcp/external_cache.pyc
 ${PYSITELIB}/synapse/replication/tcp/handler.py
@@ -585,6 +599,8 @@ ${PYSITELIB}/synapse/rest/admin/devices.py
 ${PYSITELIB}/synapse/rest/admin/devices.pyc
 ${PYSITELIB}/synapse/rest/admin/event_reports.py
 ${PYSITELIB}/synapse/rest/admin/event_reports.pyc
+${PYSITELIB}/synapse/rest/admin/experimental_features.py
+${PYSITELIB}/synapse/rest/admin/experimental_features.pyc
 ${PYSITELIB}/synapse/rest/admin/federation.py
 ${PYSITELIB}/synapse/rest/admin/federation.pyc
 ${PYSITELIB}/synapse/rest/admin/media.py
@@ -735,6 +751,8 @@ ${PYSITELIB}/synapse/rest/synapse/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/__init__.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/client/__init__.pyc
+${PYSITELIB}/synapse/rest/synapse/client/jwks.py
+${PYSITELIB}/synapse/rest/synapse/client/jwks.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.py
 ${PYSITELIB}/synapse/rest/synapse/client/new_user_consent.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/oidc/__init__.py
@@ -788,11 +806,6 @@ ${PYSITELIB}/synapse/static/client/login/js/jquery-3.4.1.min.js
 ${PYSITELIB}/synapse/static/client/login/js/login.js
 ${PYSITELIB}/synapse/static/client/login/spinner.gif
 ${PYSITELIB}/synapse/static/client/login/style.css
-${PYSITELIB}/synapse/static/client/register/index.html
-${PYSITELIB}/synapse/static/client/register/js/jquery-3.4.1.min.js
-${PYSITELIB}/synapse/static/client/register/js/register.js
-${PYSITELIB}/synapse/static/client/register/register_config.sample.js
-${PYSITELIB}/synapse/static/client/register/style.css
 ${PYSITELIB}/synapse/static/index.html
 ${PYSITELIB}/synapse/storage/__init__.py
 ${PYSITELIB}/synapse/storage/__init__.pyc
@@ -808,6 +821,8 @@ ${PYSITELIB}/synapse/storage/controllers/purge_events.py
 ${PYSITELIB}/synapse/storage/controllers/purge_events.pyc
 ${PYSITELIB}/synapse/storage/controllers/state.py
 ${PYSITELIB}/synapse/storage/controllers/state.pyc
+${PYSITELIB}/synapse/storage/controllers/stats.py
+${PYSITELIB}/synapse/storage/controllers/stats.pyc
 ${PYSITELIB}/synapse/storage/database.py
 ${PYSITELIB}/synapse/storage/database.pyc
 ${PYSITELIB}/synapse/storage/databases/__init__.py
@@ -846,6 +861,8 @@ ${PYSITELIB}/synapse/storage/databases/main/events_forward_extremities.py
 ${PYSITELIB}/synapse/storage/databases/main/events_forward_extremities.pyc
 ${PYSITELIB}/synapse/storage/databases/main/events_worker.py
 ${PYSITELIB}/synapse/storage/databases/main/events_worker.pyc
+${PYSITELIB}/synapse/storage/databases/main/experimental_features.py
+${PYSITELIB}/synapse/storage/databases/main/experimental_features.pyc
 ${PYSITELIB}/synapse/storage/databases/main/filtering.py
 ${PYSITELIB}/synapse/storage/databases/main/filtering.pyc
 ${PYSITELIB}/synapse/storage/databases/main/keys.py
@@ -992,8 +1009,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/30/push_rule_stream.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/30/threepid_guest_access_tokens.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/31/invites.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/31/local_media_repository_url_cache.sql
-${PYSITELIB}/synapse/storage/schema/main/delta/31/pushers.py
-${PYSITELIB}/synapse/storage/schema/main/delta/31/pushers.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/31/pushers_0.py
+${PYSITELIB}/synapse/storage/schema/main/delta/31/pushers_0.pyc
 ${PYSITELIB}/synapse/storage/schema/main/delta/31/pushers_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/31/search_update.py
 ${PYSITELIB}/synapse/storage/schema/main/delta/31/search_update.pyc
@@ -1302,7 +1319,33 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/73/23_un_partial_stated_room_stre
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/24_events_jump_to_date_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/73/25drop_presence.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/74/01_user_directory_stale_remote_users.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/74/02_set_device_id_for_pushers_bg_update.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/74/03_membership_tables_event_stream_ordering.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/74/03_membership_tables_event_stream_ordering.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/74/03_room_membership_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/74/04_delete_e2e_backup_keys_for_deactivated_users.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/74/04_membership_tables_event_stream_ordering_triggers.py
+${PYSITELIB}/synapse/storage/schema/main/delta/74/04_membership_tables_event_stream_ordering_triggers.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/74/05_events_txn_id_device_id.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/74/90COMMENTS_destinations.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/76/01_add_profiles_full_user_id_column.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/76/02_add_user_filters_full_user_id_column.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/76/03_per_user_experimental_features.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/76/04_add_room_forgetter.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/77/01_add_profiles_not_valid_check.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/77/02_add_user_filters_not_valid_check.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/77/03bg_populate_full_user_id_profiles.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/77/04bg_populate_full_user_id_user_filters.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/77/05thread_notifications_backfill.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/77/06thread_notifications_not_null.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/77/06thread_notifications_not_null_event_push_actions.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/77/06thread_notifications_not_null_event_push_actions_staging.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/77/06thread_notifications_not_null_event_push_summary.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/77/14bg_indices_event_stream_ordering.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/78/01_validate_and_update_profiles.py
+${PYSITELIB}/synapse/storage/schema/main/delta/78/01_validate_and_update_profiles.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/78/02_validate_and_update_user_filters.py
+${PYSITELIB}/synapse/storage/schema/main/delta/78/02_validate_and_update_user_filters.pyc
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
