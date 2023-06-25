@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23092 2023/06/24 13:05:37 wiz Exp $
+$NetBSD: TODO,v 1.23093 2023/06/25 11:56:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,6 +408,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SQLiteCpp-2.5.0
 	o TeXmacs-2.1.1
 	o TiffIO-140a
+	o a2ps-4.15.5
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abcl-1.8.0
@@ -598,6 +599,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
+	o elixir-1.15.0
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
@@ -646,6 +648,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fop-2.6
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
+	o fossil-2.22
 	o fplll-5.4.0
 	o freecell-solver-6.2.0
 	o freemint-binutils-2.30
@@ -682,6 +685,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gettext-lib-0.22
 	o gfract-0.33
+	o ghostscript-agpl-10.01.2
 	o gimp-2.10.34
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
@@ -742,6 +746,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golangci-lint-1.39.0
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.12.4
 	o gossip-0.31
 	o got-0.88
 	o gourmet-0.13.3
@@ -758,6 +763,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.22.4
 	o gthumb-3.4.0
 	o gtklevel9-5.1
 	o gtklife-5.2
@@ -1192,6 +1198,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-barman-3.0.1
+	o py-cairo-1.24.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-contourpy-1.1.0
@@ -1203,23 +1210,31 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.89.0
+	o py-google-api-python-client-2.90.0
+	o py-grpcio-1.56.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-importlib-metadata-6.7.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-keyring-24.2.0
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
+	o py-lsprotocol-2023.0.0a2
+	o py-mercurial-6.4.5
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
+	o py-natsort-8.4.0
 	o py-newt-0.52.21
 	o py-numpy-1.25.0
 	o py-omniORBpy-3.7
+	o py-pdf-3.11.0
 	o py-pdf-parser-0.7.4
 	o py-pdm_backend-2.1.0
-	o py-platformdirs-3.6.0
+	o py-platformdirs-3.8.0
+	o py-pluggy-1.2.0
 	o py-postgresql-5.1.2
 	o py-project-api-1.5.2
 	o py-protobuf-4.23.3
@@ -1228,24 +1243,27 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-qt6-6.4.2
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-readme_renderer-40.0
 	o py-requests-kerberos-0.14.0
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-service_identity-23.1.0
+	o py-setuptools-68.0.0
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-1.23.2
 	o py-sphinx-rtd-theme-1.2.2
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
+	o py-test-7.4.0
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
-	o py-tox-4.6.2
+	o py-tox-4.6.3
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.1 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-virtualenv-20.23.1
 	o py-wxWidgets-4.0.0
-	o py-yapf-0.40.0
+	o py-yapf-0.40.1
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1407,6 +1425,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-5.7.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
@@ -1543,6 +1562,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-2.14.3
 	o yorick-2.1.05
+	o yt-dlp-2023.6.22
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
