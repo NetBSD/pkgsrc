@@ -8,7 +8,7 @@ if [ -f /usr/X11R7/lib/libEGL.so ] && [ -z "$LD_PRELOAD" ] && \
     export LD_PRELOAD=/usr/X11R7/lib/libEGL.so
     # Note that there is an _additional_ issue with firefox >= 111 that
     # needs to be addressed, and that is worked around by disabling webgl
-    # by default, but its not even worth looking at that on a system without
+    # by default, but it's not even worth looking at that on a system without
     # the fixed libGL
 fi
 exec /usr/pkg/lib/firefox/firefox "$@"
