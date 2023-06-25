@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4002 2023/06/25 16:09:42 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4003 2023/06/25 18:01:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mob to 4.4.5 [schmonz 2023-06-24]
 	Updated www/firefox102-l10n to 102.12.0 [nia 2023-06-25]
 	Updated www/firefox102 to 102.12.0 [nia 2023-06-25]
+	Updated devel/fossil to 2.22 [js 2023-06-25]
