@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/06 09:39:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/06/25 18:17:33 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,7 +26,7 @@ ${PYSITELIB}/rapidfuzz/_common_py.pyo
 ${PYSITELIB}/rapidfuzz/_feature_detector.py
 ${PYSITELIB}/rapidfuzz/_feature_detector.pyc
 ${PYSITELIB}/rapidfuzz/_feature_detector.pyo
-${PYSITELIB}/rapidfuzz/_feature_detector_cpp.cpython-${PYTHON_VERSION}.so
+${PLIST.avx2}${PYSITELIB}/rapidfuzz/_feature_detector_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/_utils.py
 ${PYSITELIB}/rapidfuzz/_utils.pyc
 ${PYSITELIB}/rapidfuzz/_utils.pyo
@@ -112,7 +112,7 @@ ${PYSITELIB}/rapidfuzz/distance/_initialize_py.pyc
 ${PYSITELIB}/rapidfuzz/distance/_initialize_py.pyo
 ${PYSITELIB}/rapidfuzz/distance/metrics_cpp.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/distance/metrics_cpp.pyi
-${PYSITELIB}/rapidfuzz/distance/metrics_cpp_avx2.cpython-${PYTHON_VERSION}.so
+${PLIST.avx2}${PYSITELIB}/rapidfuzz/distance/metrics_cpp_avx2.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.py
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyc
 ${PYSITELIB}/rapidfuzz/distance/metrics_py.pyo
@@ -121,7 +121,7 @@ ${PYSITELIB}/rapidfuzz/fuzz.pyc
 ${PYSITELIB}/rapidfuzz/fuzz.pyi
 ${PYSITELIB}/rapidfuzz/fuzz.pyo
 ${PYSITELIB}/rapidfuzz/fuzz_cpp.cpython-${PYTHON_VERSION}.so
-${PYSITELIB}/rapidfuzz/fuzz_cpp_avx2.cpython-${PYTHON_VERSION}.so
+${PLIST.avx2}${PYSITELIB}/rapidfuzz/fuzz_cpp_avx2.cpython-${PYTHON_VERSION}.so
 ${PYSITELIB}/rapidfuzz/fuzz_py.py
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyc
 ${PYSITELIB}/rapidfuzz/fuzz_py.pyo
