@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/06/25 18:17:33 js Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/25 21:23:10 wiz Exp $
 
 DISTNAME=	rapidfuzz-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64"
-PLIST.amd64=	yes
+PLIST.avx2=	yes
 .endif
 
 USE_LANGUAGES=	c c++17
