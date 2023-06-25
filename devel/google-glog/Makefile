@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/03/03 09:59:58 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/25 11:26:19 he Exp $
 
 DISTNAME=	glog-0.6.0
 PKGNAME=	google-${DISTNAME}
@@ -27,4 +27,5 @@ LDFLAGS+=	-lexecinfo
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gflags/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
