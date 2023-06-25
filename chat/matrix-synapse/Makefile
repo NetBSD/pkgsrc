@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.76 2023/04/17 13:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.77 2023/06/25 22:54:34 js Exp $
 
-DISTNAME=	matrix-synapse-1.80.0
+DISTNAME=	matrix-synapse-1.86.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	js@NetBSD.org
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/synapse/
 COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	apache-2.0
@@ -23,9 +24,9 @@ DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
-DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=1.4.0:../../devel/py-canonicaljson
+DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-frozendict>=1:../../devel/py-frozendict
+DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.0:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
