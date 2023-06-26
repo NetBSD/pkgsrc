@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/11/28 10:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/26 11:38:37 wiz Exp $
 
-DISTNAME=	hg-git-1.0.1
+DISTNAME=	hg-git-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${PKGVERSION_NOREV}/
