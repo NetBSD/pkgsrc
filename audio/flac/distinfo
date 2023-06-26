@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2022/10/23 10:45:21 adam Exp $
+$NetBSD: distinfo,v 1.36 2023/06/26 11:35:49 adam Exp $
 
-BLAKE2s (flac-1.4.2.tar.xz) = fd1aba9030f31aa1cf9af900d286843594e1c9c4ecab2c41b5beb2c296a8127d
-SHA512 (flac-1.4.2.tar.xz) = 20bdf0990a7432ac765037764bc8733a0d5646866fe6cc6f4868152d2a051c89676e501012ae489c7f87b3aacb45a5b30265afaca164cf0cf53ac058644a74c5
-Size (flac-1.4.2.tar.xz) = 1013700 bytes
+BLAKE2s (flac-1.4.3.tar.xz) = bb421b8ededeb1012ba00077c734f6c30d0df009038c488f62a0cabca4e9be35
+SHA512 (flac-1.4.3.tar.xz) = 3cf095720bd590a588be8ccbe187d22e7a1c60ab85b1d510ce5e8a22ab0a51827b9acfeaad59bbd645a17d1f200f559255a640101b0330709a164306c0e9709e
+Size (flac-1.4.3.tar.xz) = 1006728 bytes
 SHA1 (patch-microbench_util.c) = f03bfbef537d10ceb9742451ec3509be886e15ed

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2022/10/23 10:45:21 adam Exp $
+# $NetBSD: Makefile,v 1.61 2023/06/26 11:35:49 adam Exp $
 
-DISTNAME=	flac-1.4.2
+DISTNAME=	flac-1.4.3
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://downloads.xiph.org/releases/flac/
 EXTRACT_SUFX=	.tar.xz
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-asm-optimizations
 .  endif
 .endif
 
-.if !empty(MACHINE_PLATFORM:M*-*-powerpc)
+.if ${MACHINE_PLATFORM:M*-*-powerpc}
 .  if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--disable-asm-optimizations
 CONFIGURE_ARGS+=	--disable-altivec
