@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/11/11 16:22:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/26 09:28:08 jperkin Exp $
 
 DISTNAME=	tsocks-1.8beta5
 PKGREVISION=	4
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--with-conf=${PKG_SYSCONFDIR}/tsocks.conf
+
+LIBS.SunOS+=	-lnsl
 
 EGDIR=			${PREFIX}/share/examples/tsocks
 
