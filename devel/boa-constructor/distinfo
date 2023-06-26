@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:20 nia Exp $
-
-BLAKE2s (boa-constructor-0.6.1.src.zip) = 3e2f152b5500d3657e58d76990c5e7356c7db340573872f6b5f84f1920fb8332
-SHA512 (boa-constructor-0.6.1.src.zip) = f87ecd16e6e61972cedee34bbd759db9ebade7fbe3a2aa899bac1ea921495f7bae7c248b25b010819876a50a2f520faa7e5282f70f65c62ab55b09188c9a0ad3
-Size (boa-constructor-0.6.1.src.zip) = 13782538 bytes
