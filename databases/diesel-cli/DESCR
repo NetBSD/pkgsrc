@@ -1,0 +1,3 @@
+Diesel CLI is a tool that aids in managing your database schema.
+Migrations are bi-directional changes to your database that get applied
+sequentially.
