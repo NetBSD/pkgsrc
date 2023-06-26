@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/06/07 11:27:32 micha Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/26 09:22:50 jperkin Exp $
 
 DISTNAME=	gssdp-1.2.2
 PKGNAME=	${DISTNAME:S/gssdp/gssdp12/}
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 
 # needs GTK3+
 MESON_ARGS+=	-Dsniffer=false
+
+LDFLAGS.SunOS+=	-lsocket
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
