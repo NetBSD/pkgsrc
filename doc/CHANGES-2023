@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4028 2023/06/26 11:57:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4029 2023/06/26 12:01:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5595,3 +5595,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed misc/usbprog [wiz 2023-06-26]
 	Removed net/gitso [wiz 2023-06-26]
 	Removed time/wxRemind [wiz 2023-06-26]
+	Removed x11/py-wxWidgets [wiz 2023-06-26]
