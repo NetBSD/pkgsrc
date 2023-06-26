@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/06/06 12:41:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.82 2023/06/26 09:09:46 jperkin Exp $
 
 DISTNAME=	kate-${KAPPSVER}
 PKGREVISION=	6
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 GCC_REQD+=	10	# uses <charconv>
+
+LDFLAGS.SunOS+=	-lsocket
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
