@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/15 00:41:42 rodent Exp $
-${PLIST.python}bin/KateDJ
+@comment $NetBSD: PLIST,v 1.2 2023/06/26 11:56:22 wiz Exp $
 bin/katalyzer
 bin/katedec
 bin/kateenc
@@ -10,39 +9,6 @@ lib/libkate.la
 lib/liboggkate.la
 lib/pkgconfig/kate.pc
 lib/pkgconfig/oggkate.pc
-${PLIST.python}${PYSITELIB}/kdj/__init__.py
-${PLIST.python}${PYSITELIB}/kdj/__init__.pyc
-${PLIST.python}${PYSITELIB}/kdj/__init__.pyo
-${PLIST.python}${PYSITELIB}/kdj/constants.py
-${PLIST.python}${PYSITELIB}/kdj/constants.pyc
-${PLIST.python}${PYSITELIB}/kdj/constants.pyo
-${PLIST.python}${PYSITELIB}/kdj/demuxer.py
-${PLIST.python}${PYSITELIB}/kdj/demuxer.pyc
-${PLIST.python}${PYSITELIB}/kdj/demuxer.pyo
-${PLIST.python}${PYSITELIB}/kdj/finder.py
-${PLIST.python}${PYSITELIB}/kdj/finder.pyc
-${PLIST.python}${PYSITELIB}/kdj/finder.pyo
-${PLIST.python}${PYSITELIB}/kdj/muxer.py
-${PLIST.python}${PYSITELIB}/kdj/muxer.pyc
-${PLIST.python}${PYSITELIB}/kdj/muxer.pyo
-${PLIST.python}${PYSITELIB}/kdj/options.py
-${PLIST.python}${PYSITELIB}/kdj/options.pyc
-${PLIST.python}${PYSITELIB}/kdj/options.pyo
-${PLIST.python}${PYSITELIB}/kdj/tester.py
-${PLIST.python}${PYSITELIB}/kdj/tester.pyc
-${PLIST.python}${PYSITELIB}/kdj/tester.pyo
-${PLIST.python}${PYSITELIB}/kdj/tools.py
-${PLIST.python}${PYSITELIB}/kdj/tools.pyc
-${PLIST.python}${PYSITELIB}/kdj/tools.pyo
-${PLIST.python}${PYSITELIB}/kdj/ui_editor.py
-${PLIST.python}${PYSITELIB}/kdj/ui_editor.pyc
-${PLIST.python}${PYSITELIB}/kdj/ui_editor.pyo
-${PLIST.python}${PYSITELIB}/kdj/ui_main.py
-${PLIST.python}${PYSITELIB}/kdj/ui_main.pyc
-${PLIST.python}${PYSITELIB}/kdj/ui_main.pyo
-${PLIST.python}${PYSITELIB}/kdj/ui_options.py
-${PLIST.python}${PYSITELIB}/kdj/ui_options.pyc
-${PLIST.python}${PYSITELIB}/kdj/ui_options.pyo
 man/man1/KateDJ.1
 man/man1/katalyzer.1
 man/man1/katedec.1
