@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/05/22 21:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/06/26 08:36:15 jperkin Exp $
 
 DISTNAME=		kchmviewer-7.2.1
 PKGREVISION=		66
@@ -16,6 +16,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 
 WRKSRC=			${WRKDIR}/kchmviewer-7.2
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		zip
 SUBST_SED.zip+=		-e 's,-I${PREFIX}/include,-I${PREFIX}/include -I${PREFIX}/lib/libzip/include,'
