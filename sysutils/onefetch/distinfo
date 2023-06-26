@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2023/06/21 07:54:44 pin Exp $
+$NetBSD: distinfo,v 1.25 2023/06/26 08:21:09 pin Exp $
 
 BLAKE2s (addr2line-0.19.0.crate) = c0485ba9fdf036b53d78b606222e7ce9d647d27f582d7df92948b8dbd686a8bb
 SHA512 (addr2line-0.19.0.crate) = 18da72e412bb89028e2ccb838192330535e45300f6fd8edc7d1d64397792a3db12418aa24a3312730c5414e2a1b1d65e6b9d5691ba234c9142b5d885523a5e94
@@ -696,9 +696,9 @@ Size (object-0.30.3.crate) = 258901 bytes
 BLAKE2s (once_cell-1.17.1.crate) = 4e7e4583b148b41c5ee92bcdab4b1ba6891d8f21f80b3f9c5c84e23a90dc6c8b
 SHA512 (once_cell-1.17.1.crate) = 1302d51801e38bfee23e74c0046f1ecb1d3c27309b5fe11c2b6c99553b357db502ce1718695602f9d8b10429e8ff03f91c016d5d604957083728293824c05904
 Size (once_cell-1.17.1.crate) = 32856 bytes
-BLAKE2s (onefetch-2.18.0.tar.gz) = aea3f71bd8ac1dfc7f9d96ee04e3e8a124dd76819d8f9ff4691e0af884ddda75
-SHA512 (onefetch-2.18.0.tar.gz) = 4ab8c5da8ac2c14146c7a775fadf2f329b5846ac5bd47b6d71ee1599ee8e74d613ba72f7ccdad7b1303ff1246fc3c9131dadff30c9e05f89eb04b61dc1e03289
-Size (onefetch-2.18.0.tar.gz) = 1932087 bytes
+BLAKE2s (onefetch-2.18.1.tar.gz) = 6cf968027b574e089b181ddd0e25081d8fbe9719680bb79cf8729eafaad7646b
+SHA512 (onefetch-2.18.1.tar.gz) = 4ce4bc860264d8ac645b21b8593a02bf6d1ffd4e8c170552ca3c42d05989dbe77f37b1a6c0d1520efc6f3dd79b66a659735c21a7bc3df06a41a0d21596242031
+Size (onefetch-2.18.1.tar.gz) = 1934244 bytes
 BLAKE2s (oorandom-11.1.3.crate) = c0d14acf22446baea9e4176c4b8bfd89e852e7b293c251606a59346ed7a23f81
 SHA512 (oorandom-11.1.3.crate) = 51ae60ef51da56d7673f36a6c5b99b743580c5f5be54fdcb54b69e5e2f6bbba3267f96b74e7cd6dee6962dfa6696fd9ed073f22726a2861b8f2601946a8efab9
 Size (oorandom-11.1.3.crate) = 10068 bytes
