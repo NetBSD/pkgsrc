@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.254 2023/01/29 21:14:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.255 2023/06/26 19:49:32 adam Exp $
 
-DISTNAME=	pango-1.50.12
-PKGREVISION=	1
+DISTNAME=	pango-1.50.14
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -70,9 +69,6 @@ BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=2.7.2
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.12.10
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
-# XXX freetype versioning is insane. needs libtool version >= 21.0.15,
-# which corresponds to release version 2.8.1
-BUILDLINK_API_DEPENDS.freetype2+= freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
