@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2023/04/24 10:52:04 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/06/26 16:06:58 adam Exp $
 
-DISTNAME=	xmlschema-2.2.3
+DISTNAME=	xmlschema-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
