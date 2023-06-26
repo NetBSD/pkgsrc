@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4021 2023/06/26 11:51:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4022 2023/06/26 11:52:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed cad/boolean [wiz 2023-06-26]
 	Removed cross/bossa [wiz 2023-06-26]
 	Removed devel/ExmanIDE [wiz 2023-06-26]
+	Removed devel/boa-constructor [wiz 2023-06-26]
