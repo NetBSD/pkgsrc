@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2023/04/19 08:08:10 adam Exp $
+# $NetBSD: Makefile,v 1.105 2023/06/26 20:24:39 he Exp $
 
 DISTNAME=	gnustep-base-1.29.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
@@ -71,4 +71,5 @@ INSTALLATION_DIRS+=	share/GNUstep/Frameworks
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
