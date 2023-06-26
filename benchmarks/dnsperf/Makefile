@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/19 08:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/26 09:10:38 jperkin Exp $
 
 DISTNAME=	dnsperf-2.5.1
 PKGREVISION=	5
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	sh:run pkg-config
+
+LDFLAGS.SunOS+=	-lsocket
 
 # This package needs "isc" include files and "isc-config.sh" to build.
 # The built-in check only considers "libbind".
