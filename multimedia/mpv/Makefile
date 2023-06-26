@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2023/06/02 16:50:50 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2023/06/26 08:13:02 jperkin Exp $
 
 DISTNAME=	mpv-0.35.1
 PKGREVISION=	4
@@ -45,10 +45,12 @@ SUBST_FILES.python+=	wscript wscript_build.py
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fix Python command names.
 
-.include "../../mk/bsd.prefs.mk"
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script rm:-Wl,mpv.def
 
-# strcasecmp, etc
-CFLAGS.SunOS+=	-D__EXTENSIONS__
+CFLAGS.SunOS+=		-D__EXTENSIONS__
+LDFLAGS.SunOS+=		-lsocket
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # At some point this should be consolidated into mk/platform/Darwin.mk, it is
