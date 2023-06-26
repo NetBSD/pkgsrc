@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/26 20:53:23 wiz Exp $
+
+BLAKE2s (wxPython-4.2.1.tar.gz) = 12a049858c1d3c9764c31dad1476d8b9685ebebb9b708b4eb363129e02667fb9
+SHA512 (wxPython-4.2.1.tar.gz) = ee9ab8effb3c71de004c3d61ec583b9980c6b75fe9bb04cf2c76025ea70afc206bc3073c44d1c83c7ba604afed9fd38c01b9ef506617ba279a4ac58e3cf34438
+Size (wxPython-4.2.1.tar.gz) = 73724359 bytes
