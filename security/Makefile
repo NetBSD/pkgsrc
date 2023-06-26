@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.903 2023/06/11 07:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.904 2023/06/26 11:41:13 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -43,6 +43,7 @@ SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
 SUBDIR+=	botan1
 SUBDIR+=	botan2
+SUBDIR+=	botan3
 SUBDIR+=	ca-certificates
 SUBDIR+=	caff
 SUBDIR+=	cargo-audit
