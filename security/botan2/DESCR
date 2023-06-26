@@ -9,7 +9,4 @@ Assembly optimizations for common CPUs, including x86, x86-64, and
 PowerPC, offers further speedups for critical tasks such as SHA-1
 hashing and multiple precision integer operations.
 
-This package contains major version 2 of the library.
-
-The version contains a much improved TLS infrastructure.  It also
-depends on C++11.
+This package contains the old major version 2 of the library.
