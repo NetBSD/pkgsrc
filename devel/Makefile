@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4020 2023/06/26 11:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4021 2023/06/26 11:52:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -182,7 +182,6 @@ SUBDIR+=	blosc
 SUBDIR+=	blosc2
 SUBDIR+=	bmake
 SUBDIR+=	bmkdep
-SUBDIR+=	boa-constructor
 SUBDIR+=	boehm-gc
 SUBDIR+=	boost-build
 SUBDIR+=	boost-docs
