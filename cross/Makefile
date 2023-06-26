@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2023/01/20 21:43:56 thorpej Exp $
+# $NetBSD: Makefile,v 1.111 2023/06/26 11:51:03 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -19,7 +19,6 @@ SUBDIR+=	avrdude
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils-mips-current
-SUBDIR+=	bossa
 SUBDIR+=	cc65
 SUBDIR+=	cross-binutils
 #SUBDIR+=	cross-libtool-base	# added here to keep pkglint happy
