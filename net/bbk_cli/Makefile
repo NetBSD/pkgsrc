@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/19 08:11:01 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/26 09:18:59 jperkin Exp $
 
 GITHUB_PROJECT=	bbk
 GITHUB_TAG=	7b810a696c78b746185c11282bdbe3fb7f8c5d4b
@@ -17,6 +17,8 @@ USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 MAKEFLAGS+=		CXX=${CXX}
 BUILD_DIRS=		src/cli
+
+LDFLAGS.SunOS+=		-lsocket
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bbk_cli
 PKG_SUPPORTED_OPTIONS+=	tls
