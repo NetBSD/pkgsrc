@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/05/16 16:46:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2023/06/26 23:33:33 gutteridge Exp $
 
-VERSION=	8.3.0
+VERSION=	9.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
 CATEGORIES=	audio python
@@ -30,7 +30,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+# Only the latest two major versions of released Python are supported,
+# per policy on feature use.
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38 39
 
 # NB lilypond must be installed in order to run the full test suite.
 do-test:
