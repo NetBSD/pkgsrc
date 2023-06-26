@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4019 2023/06/18 12:22:57 adam Exp $
+# $NetBSD: Makefile,v 1.4020 2023/06/26 11:51:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
 
 SUBDIR+=	ETL
-SUBDIR+=	ExmanIDE
 SUBDIR+=	GConf
 SUBDIR+=	GConf-ui
 SUBDIR+=	Gorm
