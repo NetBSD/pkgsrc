@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/04/19 08:11:02 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/06/26 08:30:30 jperkin Exp $
 
 DISTNAME=	dctc-0.85.9
 PKGREVISION=	26
@@ -21,6 +21,8 @@ REPLACE_PERL+=		GDLjoiner
 
 CPPFLAGS+=		-I${BDBBASE}/include/${BDB_TYPE}
 BUILDLINK_TRANSFORM+=	l:db4:${BDB_TYPE}
+
+LDFLAGS.SunOS+=		-lnsl
 
 SUBST_CLASSES+=		inethack
 SUBST_STAGE.inethack=	pre-configure
