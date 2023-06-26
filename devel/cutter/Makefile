@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/04/19 08:09:39 adam Exp $
-#
+# $NetBSD: Makefile,v 1.83 2023/06/26 12:17:40 wiz Exp $
 
 DISTNAME=	cutter-1.2.4
 PKGREVISION=	38
@@ -30,7 +29,7 @@ TEST_TARGET=	check
 
 .include "../../mk/compiler.mk"
 # PR#lib/39986
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000 && !empty(CC_VERSION:Mgcc*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000 && ${CC_VERSION:Mgcc*}
 LDFLAGS.NetBSD+=	-lgcc_s
 .endif
 
