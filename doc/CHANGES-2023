@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4014 2023/06/26 11:39:42 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4015 2023/06/26 11:41:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5581,3 +5581,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/libzip to 1.10.0 [wiz 2023-06-26]
 	Updated devel/py-hg-git to 1.0.2 [wiz 2023-06-26]
 	Added databases/prometheus-cpp version 1.1.0 [wiz 2023-06-26]
+	Added security/botan3 version 3.0.0 [wiz 2023-06-26]
