@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/17 13:23:17 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/26 08:48:49 jperkin Exp $
 
 DISTNAME=	xsol_0.31.orig
 PKGNAME=	${DISTNAME:S/_/-/g:S/.orig$//g}
@@ -11,6 +11,8 @@ COMMENT=	Solitaire game for the X Window System
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/g}
+
+LDFLAGS.SunOS+=	-lX11 -lXt
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
