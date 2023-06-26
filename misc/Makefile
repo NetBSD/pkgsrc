@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2023/05/27 07:01:26 charlotte Exp $
+# $NetBSD: Makefile,v 1.591 2023/06/26 11:54:50 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -385,7 +385,6 @@ SUBDIR+=	ukpostcodes
 SUBDIR+=	uptimec
 SUBDIR+=	urjtag
 SUBDIR+=	usbids
-SUBDIR+=	usbprog
 SUBDIR+=	utftools
 SUBDIR+=	vera
 SUBDIR+=	vfu
