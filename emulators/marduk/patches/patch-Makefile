@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2023/05/20 12:47:47 thorpej Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/06/26 17:13:01 jperkin Exp $
 
 Use SDL2 and GTK+-3.0 Cflags / Libs only when building files that need them.
 
@@ -15,7 +15,7 @@ Use SDL2 and GTK+-3.0 Cflags / Libs only when building files that need them.
  
  marduk:	dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o
 -	$(CC) $(CFLAGS) -o marduk dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o $(LIBS)
-+	$(CC) $(CFLAGS) -o marduk dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o `sdl2-config --libs` `pkg-config gtk+-3.0 --libs`
++	$(CC) $(CFLAGS) -o marduk dasm80.o disk.o emu2149.o main.o modem.o tms9918.o tms_util.o z80.o $(LDFLAGS) `sdl2-config --libs` `pkg-config gtk+-3.0 --libs`
  
  dasm80.o:	dasm80.c z80.h
  	$(CC) $(CFLAGS) -c -o dasm80.o dasm80.c
