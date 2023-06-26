@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/06/01 07:42:08 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/06/26 09:20:58 jperkin Exp $
 
 DISTNAME=	dante-1.4.3
 CATEGORIES=	net security
@@ -15,6 +15,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf
 CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/sockd.conf
+
+LDFLAGS.SunOS+=		-lnsl
 
 CHECK_PORTABILITY_SKIP=	contrib/StartupItems.Dante
 
