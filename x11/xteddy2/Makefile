@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/01/29 21:18:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2023/06/26 09:35:18 jperkin Exp $
 
 DISTNAME=	xteddy-2.2
 PKGREVISION=	1
@@ -15,6 +15,8 @@ CONFLICTS+=	xteddy-1.*
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	ksh:run pkg-config
+
+LDFLAGS.SunOS+=	-lXext
 
 REPLACE_KSH+=	xtoys
 
