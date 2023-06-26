@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2023/05/10 08:58:29 adam Exp $
+$NetBSD: distinfo,v 1.34 2023/06/26 16:05:55 adam Exp $
 
-BLAKE2s (elementpath-4.1.2.tar.gz) = 011e84822d2c31c6d8d065e096440a23d91c5f7f5b2a0b45851646edfddaf166
-SHA512 (elementpath-4.1.2.tar.gz) = f6ab5905986fab88398e9a3774460069f610234126649299228f86020bee48f3d98be90434a4f662b371ef0051e80147df0a0f323e7095fedcab8567237c2c00
-Size (elementpath-4.1.2.tar.gz) = 320962 bytes
+BLAKE2s (elementpath-4.1.4.tar.gz) = b883b21b5d83254eca394deb5f22f29ca9c5a86bd8347b7b86beebf4e315426e
+SHA512 (elementpath-4.1.4.tar.gz) = 279ca4447b086f47f69e7cecbeb998e949ab6d5772cb5cddf231df8da2eed3a580813b0609758097bc409cbba46a884a3859d604cdf8a956c90503409ab90db2
+Size (elementpath-4.1.4.tar.gz) = 321593 bytes
