@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/05/16 16:46:06 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/26 23:33:33 gutteridge Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/INSTALLER
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
@@ -152,6 +152,8 @@ ${PYSITELIB}/music21/configure.pyc
 ${PYSITELIB}/music21/converter/__init__.py
 ${PYSITELIB}/music21/converter/__init__.pyc
 ${PYSITELIB}/music21/converter/incorrectExtension.txt
+${PYSITELIB}/music21/converter/museScore.py
+${PYSITELIB}/music21/converter/museScore.pyc
 ${PYSITELIB}/music21/converter/qmConverter.py
 ${PYSITELIB}/music21/converter/qmConverter.pyc
 ${PYSITELIB}/music21/converter/quarterMusicTestIn.qm
@@ -254,6 +256,8 @@ ${PYSITELIB}/music21/interval.py
 ${PYSITELIB}/music21/interval.pyc
 ${PYSITELIB}/music21/ipython21/__init__.py
 ${PYSITELIB}/music21/ipython21/__init__.pyc
+${PYSITELIB}/music21/ipython21/converters.py
+${PYSITELIB}/music21/ipython21/converters.pyc
 ${PYSITELIB}/music21/ipython21/ipExtension.py
 ${PYSITELIB}/music21/ipython21/ipExtension.pyc
 ${PYSITELIB}/music21/ipython21/objects.py
@@ -584,6 +588,8 @@ ${PYSITELIB}/music21/romanText/translate.pyc
 ${PYSITELIB}/music21/romanText/tsvConverter.py
 ${PYSITELIB}/music21/romanText/tsvConverter.pyc
 ${PYSITELIB}/music21/romanText/tsvEg_v1.tsv
+${PYSITELIB}/music21/romanText/tsvEg_v2_measures.tsv
+${PYSITELIB}/music21/romanText/tsvEg_v2_repeats.tsv
 ${PYSITELIB}/music21/romanText/tsvEg_v2major.tsv
 ${PYSITELIB}/music21/romanText/tsvEg_v2minor.tsv
 ${PYSITELIB}/music21/romanText/writeRoman.py
@@ -4571,6 +4577,8 @@ ${PYSITELIB}/music21/stream/streamStatus.py
 ${PYSITELIB}/music21/stream/streamStatus.pyc
 ${PYSITELIB}/music21/stream/tests.py
 ${PYSITELIB}/music21/stream/tests.pyc
+${PYSITELIB}/music21/stream/tools.py
+${PYSITELIB}/music21/stream/tools.pyc
 ${PYSITELIB}/music21/stream/tripletOffsetBugtest.xml
 ${PYSITELIB}/music21/style.py
 ${PYSITELIB}/music21/style.pyc
@@ -4604,8 +4612,18 @@ ${PYSITELIB}/music21/test/testSingleCoreAll.py
 ${PYSITELIB}/music21/test/testSingleCoreAll.pyc
 ${PYSITELIB}/music21/test/test_base.py
 ${PYSITELIB}/music21/test/test_base.pyc
+${PYSITELIB}/music21/test/test_chord.py
+${PYSITELIB}/music21/test/test_chord.pyc
+${PYSITELIB}/music21/test/test_clef.py
+${PYSITELIB}/music21/test/test_clef.pyc
+${PYSITELIB}/music21/test/test_expressions.py
+${PYSITELIB}/music21/test/test_expressions.pyc
+${PYSITELIB}/music21/test/test_interval.py
+${PYSITELIB}/music21/test/test_interval.pyc
 ${PYSITELIB}/music21/test/test_metadata.py
 ${PYSITELIB}/music21/test/test_metadata.pyc
+${PYSITELIB}/music21/test/test_note.py
+${PYSITELIB}/music21/test/test_note.pyc
 ${PYSITELIB}/music21/test/test_pitch.py
 ${PYSITELIB}/music21/test/test_pitch.pyc
 ${PYSITELIB}/music21/test/test_repeat.py
