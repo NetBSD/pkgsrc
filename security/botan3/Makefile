@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/26 11:40:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/26 11:45:48 wiz Exp $
 
 DISTNAME=	Botan-3.0.0
 PKGNAME=	${DISTNAME:S/Botan/botan3/}
@@ -16,9 +16,7 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
-# actually, 11, but that version is not in pkgsrc
-# GCC_REQD+=		11
-GCC_REQD+=		12
+GCC_REQD+=		11
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
