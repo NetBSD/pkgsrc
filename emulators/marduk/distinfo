@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2023/05/20 12:47:47 thorpej Exp $
+$NetBSD: distinfo,v 1.2 2023/06/26 17:13:01 jperkin Exp $
 
 BLAKE2s (marduk-0.26e-7cf954b7f9681daafa7240f49b7860f6f2107898.tar.gz) = 175b7a8ad33282e6a34d6cc3db3166173f2639ee74eeaca6c7fcf2a02365a5a3
 SHA512 (marduk-0.26e-7cf954b7f9681daafa7240f49b7860f6f2107898.tar.gz) = abb364821abb457fe3eeedb975c812b170f5e41ab0bbc19b4184a055097c620c90f208ed49df5d801ec7f2d3557eabf61cf54e118145c1ca5b80cabd9744eb8b
 Size (marduk-0.26e-7cf954b7f9681daafa7240f49b7860f6f2107898.tar.gz) = 48799 bytes
-SHA1 (patch-Makefile) = 0e667cb949fbfe782e090786e34e7fd18fcabf07
+SHA1 (patch-Makefile) = 8cf4c1b9f44e1e9f54b02858c7850bb3f1a49b0e
 SHA1 (patch-disk.c) = a56d1cc888464545b2eb1819f3fa7294c3fb006c
 SHA1 (patch-main.c) = e45240edf8b625ea47ad164a660a1b501f109054

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/20 12:47:47 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/26 17:13:01 jperkin Exp $
 
 # The author has not yet created any tags, but this is what it reports
 # as its version.
@@ -16,6 +16,8 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
+LDFLAGS.SunOS+=	-lsocket
+
 MARDUK_ROMDIR=	share/marduk
 
 INSTALLATION_DIRS=	bin ${MARDUK_ROMDIR}
@@ -26,7 +28,7 @@ CPPFLAGS+=	-DROM_PATHSPEC="\"${PREFIX}/${MARDUK_ROMDIR}\""
 CFLAGS+=	${CPPFLAGS}	# Makefile ignores CPPFLAGS
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} CFLAGS=${CFLAGS:Q}
+	cd ${WRKSRC} && ${MAKE} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/marduk ${DESTDIR}${PREFIX}/bin
