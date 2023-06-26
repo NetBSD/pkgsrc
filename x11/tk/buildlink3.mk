@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2023/01/29 21:15:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2023/06/26 15:53:25 adam Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -21,12 +21,12 @@ TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 _TOOLS_USE_PKGSRC.wish=	yes
 
-WISH=			${LOCALBASE}/bin/wish
+WISH=	${PREFIX}/bin/wish
 
 pkgbase := tk
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.tk:Mxft2)
+.if ${PKG_BUILD_OPTIONS.tk:Mxft2}
 .  include "../../x11/libXft/buildlink3.mk"
 .endif
 .if empty(PKG_BUILD_OPTIONS.tk:Maqua)
