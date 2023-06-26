@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/04/19 08:11:01 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/06/26 09:19:45 jperkin Exp $
 #
 
 DISTNAME=		libbt-1.05
@@ -14,6 +14,8 @@ COMMENT=		Fast bittorrent client and library written in C
 USE_TOOLS+=		makedepend
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+LDFLAGS.SunOS+=		-lcrypto -lsocket
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
