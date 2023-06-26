@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4033 2023/06/26 13:09:09 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4034 2023/06/26 13:10:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5653,3 +5653,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/gst-plugins0.10-x11 [wiz 2023-06-26]
 	Updated wm/marswm to 0.5.0 [pin 2023-06-26]
 	Updated graphics/oculante to 0.6.66 [pin 2023-06-26]
+	Updated misc/tui-journal to 0.2.0 [pin 2023-06-26]
