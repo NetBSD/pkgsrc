@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/01/29 21:17:19 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.28 2023/06/26 11:56:22 wiz Exp $
 
 DISTNAME=	libkate-0.4.1
 PKGREVISION=	23
@@ -16,6 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex pkg-config
 
 CONFIGURE_ENV+=		ac_cv_lib_lex="none needed"
+CONFIGURE_ENV+=		PYTHON=":"
 
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/oggkate.pc.in
 PKGCONFIG_OVERRIDE+=	misc/pkgconfig/kate.pc.in
