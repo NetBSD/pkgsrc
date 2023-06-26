@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2020/05/11 21:06:01 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/06/26 11:37:07 wiz Exp $
 
 BUILDLINK_TREE+=	editline
 
@@ -20,7 +20,7 @@ CHECK_BUILTIN.editline:=	yes
 CHECK_BUILTIN.editline:=	no
 
 # A built-in editline is always going to use a built-in termcap.
-.if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
+.if ${USE_BUILTIN.editline:U:tl} == yes
 USE_BUILTIN.termcap=	yes
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2019/11/03 10:39:10 rillig Exp $
+# $NetBSD: builtin.mk,v 1.10 2023/06/26 11:37:07 wiz Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -15,8 +15,8 @@ BUILTIN_FIND_HEADERS.H_EDITLINE=	editline/readline.h \
 ###
 .if !defined(IS_BUILTIN.editline)
 IS_BUILTIN.editline=	no
-.  if empty(H_EDITLINE:M__nonexistent__) && \
-      !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+.  if ${H_EDITLINE:U} != __nonexistent__ && \
+      ${BUILTIN_LIB_FOUND.edit:U:tl} == yes
 IS_BUILTIN.editline=	yes
 .  endif
 .endif
@@ -32,7 +32,7 @@ USE_BUILTIN.editline=	no
 .  else
 USE_BUILTIN.editline=	${IS_BUILTIN.editline}
 .    if defined(BUILTIN_PKG.editline) && \
-        !empty(IS_BUILTIN.editline:M[yY][eE][sS])
+        ${IS_BUILTIN.editline:tl} == yes
 USE_BUILTIN.editline=	yes
 .    endif
 MAKEVARS+=		USE_BUILTIN.editline
@@ -40,14 +40,14 @@ MAKEVARS+=		USE_BUILTIN.editline
 .endif
 
 CHECK_BUILTIN.editline?=	no
-.if !empty(CHECK_BUILTIN.editline:M[nN][oO])
+.if ${CHECK_BUILTIN.editline:tl} == no
 
 .  if !empty(_PKG_USE_READLINE:U:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
 BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 .  endif
 
-.  if !empty(USE_BUILTIN.editline:M[yY][eE][sS])
+.  if ${USE_BUILTIN.editline:tl} == yes
 .    if !empty(H_EDITLINE:M*/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2021/05/07 07:13:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/06/26 11:37:07 wiz Exp $
 include/editline/history.h
 include/editline/readline.h
 include/histedit.h
 lib/libedit.la
 lib/pkgconfig/libedit.pc
+man/man3/editline-history.3
 man/man3/editline.3
 man/man3/el_deletestr.3
 man/man3/el_end.3
