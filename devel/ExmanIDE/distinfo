@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:13:59 nia Exp $
-
-BLAKE2s (ExmanIDE-0.9.4.tar.gz) = 6af5b4a1c3f59d506edbaaf58a844f09a8bdacf0af4d68fd7081fa195c421951
-SHA512 (ExmanIDE-0.9.4.tar.gz) = b66e147b538d49cee9db049e53631f21f0d57a2a212ed2cc5b362b2ecad88c3681a657795666ce34295656d3b02e03452ddaf75b0db64d3c47507de790fead25
-Size (ExmanIDE-0.9.4.tar.gz) = 365495 bytes
