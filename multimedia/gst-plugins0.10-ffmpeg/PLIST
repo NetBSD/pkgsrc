@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/14 17:06:19 drochner Exp $
-lib/gstreamer-0.10/libgstffmpeg.la
-lib/gstreamer-0.10/libgstffmpegscale.la
-lib/gstreamer-0.10/libgstpostproc.la

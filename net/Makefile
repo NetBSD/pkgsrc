@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1520 2023/06/26 11:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.1521 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -215,9 +215,6 @@ SUBDIR+=	grpc
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
 SUBDIR+=	gssdp12
-SUBDIR+=	gst-plugins0.10-mms
-SUBDIR+=	gst-plugins0.10-rtmp
-SUBDIR+=	gst-plugins0.10-soup
 SUBDIR+=	gst-plugins1-adaptivedemux2
 SUBDIR+=	gst-plugins1-libnice
 SUBDIR+=	gst-plugins1-rtmp
@@ -330,7 +327,6 @@ SUBDIR+=	libbind
 SUBDIR+=	libcares
 SUBDIR+=	libcmis
 SUBDIR+=	libdlna
-SUBDIR+=	libdmapsharing3
 SUBDIR+=	libdnet
 SUBDIR+=	libexosip
 SUBDIR+=	libfetch

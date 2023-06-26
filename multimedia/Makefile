@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.335 2023/06/07 06:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.336 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -54,22 +54,6 @@ SUBDIR+=	gnome-video-effects
 SUBDIR+=	goggles
 SUBDIR+=	gopchop
 SUBDIR+=	gpac
-SUBDIR+=	gst-plugins0.10-bad
-SUBDIR+=	gst-plugins0.10-base
-SUBDIR+=	gst-plugins0.10-dvdread
-SUBDIR+=	gst-plugins0.10-ffmpeg
-SUBDIR+=	gst-plugins0.10-gnonlin
-SUBDIR+=	gst-plugins0.10-good
-SUBDIR+=	gst-plugins0.10-hal
-SUBDIR+=	gst-plugins0.10-mpeg2dec
-SUBDIR+=	gst-plugins0.10-ogg
-SUBDIR+=	gst-plugins0.10-resindvd
-SUBDIR+=	gst-plugins0.10-theora
-SUBDIR+=	gst-plugins0.10-ugly
-SUBDIR+=	gst-plugins0.10-v4l2
-SUBDIR+=	gst-plugins0.10-vp8
-SUBDIR+=	gst-plugins0.10-x264
-SUBDIR+=	gst-plugins0.10-xvid
 SUBDIR+=	gst-plugins1-aom
 SUBDIR+=	gst-plugins1-bad
 SUBDIR+=	gst-plugins1-base
@@ -96,7 +80,6 @@ SUBDIR+=	gst-plugins1-vpx
 SUBDIR+=	gst-plugins1-x264
 SUBDIR+=	gst-plugins1-x265
 SUBDIR+=	gst123
-SUBDIR+=	gstreamer0.10
 SUBDIR+=	gstreamer1
 SUBDIR+=	gstreamermm1
 SUBDIR+=	gtranscode
@@ -178,7 +161,6 @@ SUBDIR+=	olive-editor
 SUBDIR+=	omxplayer
 SUBDIR+=	openh264
 SUBDIR+=	openquicktime
-SUBDIR+=	p5-GStreamer
 SUBDIR+=	p5-xmltv
 SUBDIR+=	phonon
 SUBDIR+=	phonon-backend-gstreamer
@@ -190,7 +172,6 @@ SUBDIR+=	phonon-qt5-backend-vlc
 SUBDIR+=	php-ming
 SUBDIR+=	pitivi
 SUBDIR+=	py-enzyme
-SUBDIR+=	py-gstreamer0.10
 SUBDIR+=	py-gstreamer1
 SUBDIR+=	py-m3u8
 SUBDIR+=	py-ming

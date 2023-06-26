@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1014 2023/06/26 11:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1015 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -242,9 +242,6 @@ SUBDIR+=	graphite2
 SUBDIR+=	graphviz
 SUBDIR+=	graphviz-dot-mode
 SUBDIR+=	gri
-SUBDIR+=	gst-plugins0.10-cairo
-SUBDIR+=	gst-plugins0.10-jpeg
-SUBDIR+=	gst-plugins0.10-png
 SUBDIR+=	gst-plugins1-aalib
 SUBDIR+=	gst-plugins1-cairo
 SUBDIR+=	gst-plugins1-gdk_pixbuf

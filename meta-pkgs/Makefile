@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/12/11 14:19:27 taca Exp $
+# $NetBSD: Makefile,v 1.123 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -18,7 +18,6 @@ SUBDIR+=	gimp-docs
 SUBDIR+=	gnome
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
-SUBDIR+=	gstreamer0.10-plugins
 SUBDIR+=	gstreamer1-default-backend
 SUBDIR+=	kde-telepathy
 SUBDIR+=	kde4

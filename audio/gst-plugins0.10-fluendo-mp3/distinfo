@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:01 nia Exp $
-
-BLAKE2s (gst-fluendo-mp3-0.10.32.tar.bz2) = d052b87d433e1904f0dd443201ab26f2f4ba4ad73cee62e3a57fd36fa839d268
-SHA512 (gst-fluendo-mp3-0.10.32.tar.bz2) = 535a5167af828cb4d5988077892f5a353f53a6179d923e1d0b016ecf68f43995ecdd7d4b09cb2b0399ab8c63742e7f67268d036a255ccc4fe19f331bffac380a
-Size (gst-fluendo-mp3-0.10.32.tar.bz2) = 406173 bytes
-SHA1 (patch-configure) = 70598decc332f7ff789d78a8c9ca3e3c9954e76d
