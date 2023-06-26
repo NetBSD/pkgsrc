@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2023/02/14 07:12:45 fcambus Exp $
+# $NetBSD: Makefile,v 1.236 2023/06/26 11:52:54 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -101,7 +101,6 @@ SUBDIR+=	neatvi
 SUBDIR+=	nedit
 SUBDIR+=	neovim
 SUBDIR+=	ng
-SUBDIR+=	nts
 SUBDIR+=	nvi
 SUBDIR+=	nvi-m17n
 SUBDIR+=	nvi2
