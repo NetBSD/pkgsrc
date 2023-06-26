@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4009 2023/06/26 11:23:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4010 2023/06/26 11:36:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5575,3 +5575,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/onefetch to 2.18.1 [pin 2023-06-26]
 	Updated shells/oh-my-posh to 17.5.0 [pin 2023-06-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q2 branch [wiz 2023-06-26]
+	Updated print/ghostscript-agpl to 10.01.2 [adam 2023-06-26]
+	Updated audio/flac to 1.4.3 [adam 2023-06-26]
