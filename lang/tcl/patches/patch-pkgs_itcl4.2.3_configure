@@ -1,10 +1,10 @@
-$NetBSD: patch-pkgs_itcl4.2.2_configure,v 1.1 2021/11/16 16:24:40 adam Exp $
+$NetBSD: patch-pkgs_itcl4.2.3_configure,v 1.1 2023/06/26 15:51:55 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/itcl4.2.2/configure.orig	2021-11-01 01:02:18.000000000 +0000
-+++ pkgs/itcl4.2.2/configure
+--- pkgs/itcl4.2.3/configure.orig	2021-11-01 01:02:18.000000000 +0000
++++ pkgs/itcl4.2.3/configure
 @@ -7423,20 +7423,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
