@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.251 2023/06/12 21:50:41 wiz Exp $
+# $NetBSD: gcc.mk,v 1.252 2023/06/26 11:38:13 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -178,7 +178,8 @@ _GCC9_PATTERNS= 9 9.*
 _GCC10_PATTERNS= 10 10.*
 
 # _GCC12_PATTERNS matches N s.t. 12.0 <= N < 13.
-_GCC12_PATTERNS= 12 12.*
+# gcc 11.x is not packaged, so depend on gcc12 in that case too
+_GCC12_PATTERNS= 11 11.* 12 12.*
 
 # _GCC13_PATTERNS matches N s.t. 13.0 <= N < 14.
 _GCC13_PATTERNS= 13 13.*
