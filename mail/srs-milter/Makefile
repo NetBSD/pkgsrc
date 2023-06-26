@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/25 15:45:31 manu Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/26 09:18:20 jperkin Exp $
 
 GITHUB_PROJECT=	srs-milter
 GITHUB_TAG=	3c44b13a10471df0361c08786c8826ea1d0ecc7b
@@ -16,6 +16,8 @@ COMMENT=	Sender Rewriting Scheme milter
 LICENSE=	generic-nonlicense
 
 WRKSRC=	${WRKDIR}/srs-milter-3c44b13a10471df0361c08786c8826ea1d0ecc7b/src
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	sbin
 
