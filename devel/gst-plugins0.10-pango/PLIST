@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/07/02 11:56:01 drochner Exp $
-lib/gstreamer-0.10/libgstpango.la

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:01:15 nia Exp $
-
-BLAKE2s (gst-python-0.10.22.tar.bz2) = 7a817e86255daa3b281150fff9ef0c209fb6f6f281b95a609ab9898bd47f7e4e
-SHA512 (gst-python-0.10.22.tar.bz2) = bbbd6b661778cca990da0e216294d86da31a6e472049905989a3311459dd1227bf8f2ae3699a3cdbb66a16288569764352f1e1b93e696d3db4b0728bc38e5b12
-Size (gst-python-0.10.22.tar.bz2) = 632651 bytes
-SHA1 (patch-ac) = b0d45bacffc79ceaa67aa37c03d1c4d5fdd21385
