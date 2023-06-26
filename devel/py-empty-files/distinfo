@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/12/15 10:04:59 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2023/06/26 16:31:33 schmonz Exp $
 
-BLAKE2s (empty-files-0.0.3.tar.gz) = c17dc9925e4ec0f480cdc7959d81acaecea0bdc76218ae0c32e0469da7f39b00
-SHA512 (empty-files-0.0.3.tar.gz) = fdedbb027862f82eb35e9647e48b01bd4884629a35815d1eb35949a9498ad09ef04d561b34ba182a23718f6965bda6ea7609d19f65ccd79d2daf9c58d43dbf70
-Size (empty-files-0.0.3.tar.gz) = 6731 bytes
+BLAKE2s (empty-files-0.0.4.tar.gz) = c965eaae3f048248b4796ca0828dcfc8014dd644b8afd9869f67702358492d01
+SHA512 (empty-files-0.0.4.tar.gz) = d660b977fff33d2eaeaa4d55b8ae854f304dab23c762b6946df603b72a77b241cb7dd40f6202bc34ed64c4c5f0d504f084905c4cb322b69c682affbf70179475
+Size (empty-files-0.0.4.tar.gz) = 6752 bytes
