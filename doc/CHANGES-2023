@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4039 2023/06/26 15:30:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4040 2023/06/26 15:53:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5660,3 +5660,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/sourcehansans-fonts to 2.004 [pho 2023-06-26]
 	Updated devel/py-yapf to 0.40.1 [adam 2023-06-26]
 	Updated time/dateutils to 0.4.10 [adam 2023-06-26]
+	Updated lang/tcl to 8.6.13 [adam 2023-06-26]
+	Updated x11/tk to 8.6.13 [adam 2023-06-26]
