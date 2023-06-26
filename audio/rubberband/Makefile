@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/05/06 19:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2023/06/26 08:15:10 jperkin Exp $
 
 DISTNAME=	rubberband-3.1.2
 PKGREVISION=	1
@@ -17,8 +17,9 @@ USE_LANGUAGES=	c c++
 MESON_ARGS+=	-Dfft=fftw
 MESON_ARGS+=	-Dresampler=libsamplerate
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/vamp/vamp-plugin.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/ladspa-lv2/ladspa-plugin.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/ladspa/ladspa-plugin.map
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/vamp/vamp-plugin.map
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
