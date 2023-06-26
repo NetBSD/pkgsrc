@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2023/05/22 21:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/06/26 11:46:13 wiz Exp $
 
 DISTNAME=	keepassxc-2.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v2 AND gnu-lgpl-v3 AND mit AND 
 
 SUPERSEDES+=	keepassx-[0-9]*
 SUPERSEDES+=	keepassx0-[0-9]*
+
+# botan3
+GCC_REQD+=	11
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
@@ -31,12 +34,14 @@ pre-configure: qmake-bin-add
 qmake-bin-add:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
+.include "options.mk"
+
 .include "../../devel/cmake/build.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
-.include "../../security/botan2/buildlink3.mk"
+.include "../../security/botan3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
