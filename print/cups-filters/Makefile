@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2023/05/08 09:33:28 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2023/06/26 09:29:36 jperkin Exp $
 
 DISTNAME=	cups-filters-1.28.16
 PKGREVISION=	2
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--with-gs-path=${PREFIX}/bin/gs
 CONFIGURE_ARGS+=	--with-pdftops-path=${PREFIX}/bin/pdftops
 CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
 CONFIGURE_ARGS+=	--with-test_font_path=${PREFIX}/share/fonts/X11/TTF/DejaVuSans.ttf
+
+LDFLAGS.SunOS+=		-lresolv
 
 PKGCONFIG_OVERRIDE+=	libcupsfilters.pc.in
 PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
