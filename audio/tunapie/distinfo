@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:34 nia Exp $
-
-BLAKE2s (tunapie-2.1.18.tar.gz) = 49277a5965f7b5caa75cf612ad28f5b62928575bdc558ddb9c07b8c86843d8f2
-SHA512 (tunapie-2.1.18.tar.gz) = 473fddf6266dac7d3e7d7bae361f2b9357e7782ee1b731aa5d062922bbf722614d7bf5584b485c98479c903d550bae840afd0674cb73d5f13c07c1598a9906af
-Size (tunapie-2.1.18.tar.gz) = 49496 bytes
