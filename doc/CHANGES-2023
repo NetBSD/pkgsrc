@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4048 2023/06/26 19:35:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4049 2023/06/26 19:40:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5679,3 +5679,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2-tools to 2.76.3 [adam 2023-06-26]
 	Updated devel/mm-common to 1.0.5 [adam 2023-06-26]
 	Updated devel/glibmm to 2.66.6 [adam 2023-06-26]
+	Updated security/libksba to 1.6.4 [adam 2023-06-26]
+	Updated security/libassuan2 to 2.5.6 [adam 2023-06-26]
