@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/12/05 18:34:17 maya Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/26 09:31:36 jperkin Exp $
 
 GITHUB_PROJECT=	bsdec2-image-upload
 DISTNAME=	1.4.5
@@ -16,6 +16,8 @@ WRKSRC=		${WRKDIR}/bsdec2-image-upload-${PKGVERSION_NOREV}
 
 MAKE_ENV+=	NOMAN=1
 CFLAGS+=	-DCERTFILE=\"${PREFIX}/share/mozilla-rootcerts/cacert.pem\"
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
