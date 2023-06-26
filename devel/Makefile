@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4021 2023/06/26 11:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4022 2023/06/26 12:24:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -477,7 +477,6 @@ SUBDIR+=	gradle
 SUBDIR+=	grantlee
 SUBDIR+=	grantlee-qt5
 SUBDIR+=	gsoap
-SUBDIR+=	gst-plugins0.10-pango
 SUBDIR+=	gst-plugins1-pango
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtl
