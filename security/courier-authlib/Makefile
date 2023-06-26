@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/01/25 19:31:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.65 2023/06/26 16:49:12 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -30,6 +30,10 @@ BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-stdheaderdir
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--enable-new-dtags
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 .include "../../mk/bsd.prefs.mk"
 
