@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2023/05/24 10:42:51 adam Exp $
+# $NetBSD: Makefile,v 1.62 2023/06/26 16:16:45 adam Exp $
 
-DISTNAME=	ansible-7.6.0
+DISTNAME=	ansible-8.1.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 PREV_PKGPATH=	sysutils/ansible2
 
-DEPENDS+=	ansible-core>=2.14.1:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.15.1:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -62,6 +62,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/dev/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/scripts/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/test-fixtures/cloud-function-source/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/grafana/grafana/tools/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/infinidat/infinibox/bin/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/lowlydba/sqlserver/plugins/modules/*.ps1
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/netbox/netbox/hacking/*.sh
