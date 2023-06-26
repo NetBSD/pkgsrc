@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2023/06/20 20:45:42 hauke Exp $
+# $NetBSD: Makefile.common,v 1.22 2023/06/26 18:21:08 hauke Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -59,7 +59,7 @@ CPPFLAGS+=	-DTERMINFO
 .if ${OPSYS} == "SunOS"
 .  if !exists(/usr/demo/SOUND/libaudio.a) && \
       !exists(/usr/demo/SOUND/lib/libaudio.a)
-CONFIGURE_ARGS+=	--with_sound=none
+CONFIGURE_ARGS+=	--with-sound=none
 .  endif
 .endif
 
