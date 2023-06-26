@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/06/26 11:47:35 wiz Exp $
+bin/diesel
+share/bash-completion/completions/diesel
+share/fish/vendor_completions.d/diesel.fish
+share/zsh/site-functions/_diesel
