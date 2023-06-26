@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4043 2023/06/26 16:13:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4044 2023/06/26 16:16:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xmlschema to 2.3.1 [adam 2023-06-26]
 	Updated devel/py-requests-futures to 1.0.1 [adam 2023-06-26]
 	Updated devel/py-virtualenv to 20.23.1 [adam 2023-06-26]
+	Updated print/a2ps to 4.15.5 [wiz 2023-06-26]
