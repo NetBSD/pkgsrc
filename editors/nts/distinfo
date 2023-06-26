@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:21:34 nia Exp $
-
-BLAKE2s (nts-78.tar.gz) = 08c238fe04546b98e06a80fb41eae8c9dcb23629dc47def3996e17eac1669c53
-SHA512 (nts-78.tar.gz) = e464da056eb41fb61c5ab9757167c6aa3a9f06f20402a03003e93912151d5bd3ffa8e9bfbf1cbc3967e3275dc66d72494019282ed6888c290ef0d73664826339
-Size (nts-78.tar.gz) = 157012 bytes
