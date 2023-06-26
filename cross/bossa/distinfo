@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:07:52 nia Exp $
-
-BLAKE2s (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = fe328fd927b0d34b0a9c359760a2a656cae5060cc63607a2576d12d3b523dbdf
-SHA512 (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = 72e1d283b4f1bdd6e65a74b6f9958151f52ed070514697322f7d2494960d7e122cbaaf49458fc804263f87362f7fa86db7cd3f2395b78f371da41847bd1e6238
-Size (b-o-s-s-a-code-05bfcc39bc0453c3028b1161175b95a81af7a901.zip) = 692158 bytes
-SHA1 (patch-Makefile-NetBSD) = f3a145cadd6a889295b6f589c07c14d0468b7c98
-SHA1 (patch-PortFactory.h) = c848b89e38bb1bbd5fa47a0344feb98d747c977c
-SHA1 (patch-src_PosixSerialPort.cpp) = 925fffc18dd033d726d55e4908549b26a93b0a14
-SHA1 (patch-src_arm-dis_arm-dis.cpp) = 3e3b96bf9ea2213cbfd82df5e91c54cbdf2b9b52

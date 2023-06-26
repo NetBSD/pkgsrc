@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4019 2023/06/26 11:50:26 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4020 2023/06/26 11:51:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5586,3 +5586,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/diesel-cli version 2.1.0 [wiz 2023-06-26]
 	Removed audio/tunapie [wiz 2023-06-26]
 	Removed cad/boolean [wiz 2023-06-26]
+	Removed cross/bossa [wiz 2023-06-26]
