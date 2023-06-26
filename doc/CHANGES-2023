@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4045 2023/06/26 16:20:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4046 2023/06/26 16:31:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5673,3 +5673,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible to 8.1.0 [adam 2023-06-26]
 	Updated sysutils/ansible-lint to 6.17.2 [adam 2023-06-26]
 	Updated net/qbittorrent to 4.5.4 [adam 2023-06-26]
+	Updated devel/py-empty-files to 0.0.4 [schmonz 2023-06-26]
