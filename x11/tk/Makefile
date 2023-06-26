@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2023/06/14 10:29:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.94 2023/06/26 15:53:25 adam Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -22,10 +21,10 @@ CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 CONFIGURE_ARGS+=	--with-tcl=${_CROSS_DESTDIR:U}${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		LIB_RUNTIME_DIR=${PREFIX}/lib
-
 PKGCONFIG_OVERRIDE+=	unix/tk.pc.in
-
 TEST_TARGET=		test
+
+CHECK_PORTABILITY_SKIP=	win/configure
 
 .if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
