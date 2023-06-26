@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/01/29 21:17:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2023/06/26 08:49:33 jperkin Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
 PKGREVISION=		40
@@ -13,7 +13,9 @@ USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CONFIGURE_LDFLAGS=${LDFLAGS:M*:Q}
+
 LDFLAGS.DragonFly+=	-lX11 -lgmodule-2.0
+LDFLAGS.SunOS+=		-lX11 -lgmodule-2.0
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
