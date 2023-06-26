@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/21 09:26:30 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/06/26 15:27:14 adam Exp $
 
-BLAKE2s (yapf-0.33.0.tar.gz) = 4bb7e2371b729b7e4c8d6e3a45a65f77be71bb8a6ba8bed502964920d4652431
-SHA512 (yapf-0.33.0.tar.gz) = 9cbb89e35580db0506fd4b8b1f7c0f35d5671a889f7344dc8c58b153b6b4568a267fd43abf142e6a2917a8e70dda0f0f8ba8980a0f7221b09fe28ca6383a0862
-Size (yapf-0.33.0.tar.gz) = 203773 bytes
+BLAKE2s (yapf-0.40.1.tar.gz) = 4d3912056d67f5277dea00efbaad7b3acb8b7cda7516396b605719a6f53eac8a
+SHA512 (yapf-0.40.1.tar.gz) = 89e217683ca42b6a3f5b5117de68ba5c0c93d3c77b9a571c6826f9c057d208f35a52c4e9dbc50e3626d659f5f23742f08de5f95fba2e100d49131683b7fafaf7
+Size (yapf-0.40.1.tar.gz) = 247509 bytes
