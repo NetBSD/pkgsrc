@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4005 2023/06/25 22:54:46 js Exp $
+$NetBSD: CHANGES-2023,v 1.4006 2023/06/26 08:21:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5573,3 +5573,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/fossil to 2.22 [js 2023-06-25]
 	Updated devel/py-canonicaljson to 2.0.0 [js 2023-06-25]
 	Updated chat/matrix-synapse to 1.86.0 [js 2023-06-25]
+	Updated sysutils/onefetch to 2.18.1 [pin 2023-06-26]
