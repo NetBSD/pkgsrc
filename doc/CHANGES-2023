@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4040 2023/06/26 15:53:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4041 2023/06/26 16:04:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5662,3 +5662,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/dateutils to 0.4.10 [adam 2023-06-26]
 	Updated lang/tcl to 8.6.13 [adam 2023-06-26]
 	Updated x11/tk to 8.6.13 [adam 2023-06-26]
+	Updated net/yt-dlp to 2023.6.22 [adam 2023-06-26]
+	Updated devel/py-test to 7.4.0 [adam 2023-06-26]
