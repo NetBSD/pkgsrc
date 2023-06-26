@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:01:14 nia Exp $
-
-BLAKE2s (GStreamer-0.20.tar.gz) = a5d376c9607f40a5af54e1f8cffb5033a3ca13742d8bd058b28e10ce8c44d3f2
-SHA512 (GStreamer-0.20.tar.gz) = 70615f1b49851861ea1a2f4f9f944e0fde5b04bd4bb15f365e27d9c4976367f89a5855c73035812cf25c1cea45601631eb3b1b6f993b9ecc07dca4f2e54d3b95
-Size (GStreamer-0.20.tar.gz) = 70641 bytes

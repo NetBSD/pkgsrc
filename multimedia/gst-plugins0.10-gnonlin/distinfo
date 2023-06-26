@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:01:03 nia Exp $
-
-BLAKE2s (gnonlin-0.10.17.tar.bz2) = c591e8b34f5c8f06094254676cf792407906b9a4d6979eba13db524947a3542e
-SHA512 (gnonlin-0.10.17.tar.bz2) = e7e7c7999a1886641cf327ad75ba63171c2f9e74fe7a18c4e7c0a5ca69ea3926d4de21f92b01c7896591d2fb48a5c040be2fe05d4d8d43237948c9fe8e4d0f74
-Size (gnonlin-0.10.17.tar.bz2) = 468711 bytes
