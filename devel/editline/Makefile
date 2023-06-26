@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/05/07 07:13:28 nia Exp $
-#
+# $NetBSD: Makefile,v 1.14 2023/06/26 11:37:07 wiz Exp $
 
-DISTNAME=		libedit-20210419-3.1
-PKGNAME=		editline-3.1.20210419
-PKGREVISION=		1
+DISTNAME=		libedit-20221030-3.1
+PKGNAME=		editline-3.1.20221030
 CATEGORIES=		devel
 MASTER_SITES=		https://thrysoee.dk/editline/
 
@@ -17,12 +15,12 @@ PKGCONFIG_OVERRIDE+=	libedit.pc.in
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		automake autoreconf
-CONFIGURE_ARGS+=	--enable-widec
 
 post-install:
 	# Avoid conflict with devel/readline.
-	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/history.3
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && ${MV} history.3 editline-history.3
+	# Install symlink like NetBSD base system has
+	cd ${DESTDIR}${PREFIX}/include/editline && ln -sf readline.h history.h
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,7 +28,6 @@ pre-configure:
 .if ${OPSYS} == "SunOS" && !exists(/usr/include/err.h)
 	${CP} ${FILESDIR}/err.h ${BUILDLINK_DIR}/include
 .endif
-	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
