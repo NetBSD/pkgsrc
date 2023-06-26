@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4025 2023/06/26 11:54:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4026 2023/06/26 11:54:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5592,3 +5592,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed editors/nts [wiz 2023-06-26]
 	Removed games/atque [wiz 2023-06-26]
 	Removed graphics/extrema [wiz 2023-06-26]
+	Removed misc/usbprog [wiz 2023-06-26]
