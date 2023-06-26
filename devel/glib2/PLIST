@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.147 2023/02/24 08:20:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.148 2023/06/26 19:25:56 adam Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -86,6 +86,7 @@ include/glib-2.0/gio/ginetsocketaddress.h
 include/glib-2.0/gio/ginitable.h
 include/glib-2.0/gio/ginputstream.h
 include/glib-2.0/gio/gio-autocleanups.h
+include/glib-2.0/gio/gio-visibility.h
 include/glib-2.0/gio/gio.h
 include/glib-2.0/gio/gioenums.h
 include/glib-2.0/gio/gioenumtypes.h
@@ -212,6 +213,7 @@ include/glib-2.0/glib/giochannel.h
 include/glib-2.0/glib/gkeyfile.h
 include/glib-2.0/glib/glib-autocleanups.h
 include/glib-2.0/glib/glib-typeof.h
+include/glib-2.0/glib/glib-visibility.h
 include/glib-2.0/glib/glist.h
 include/glib-2.0/glib/gmacros.h
 include/glib-2.0/glib/gmain.h
@@ -221,6 +223,7 @@ include/glib-2.0/glib/gmem.h
 include/glib-2.0/glib/gmessages.h
 include/glib-2.0/glib/gnode.h
 include/glib-2.0/glib/goption.h
+include/glib-2.0/glib/gpathbuf.h
 include/glib-2.0/glib/gpattern.h
 include/glib-2.0/glib/gpoll.h
 include/glib-2.0/glib/gprimes.h
@@ -262,6 +265,7 @@ include/glib-2.0/glib/gversion.h
 include/glib-2.0/glib/gversionmacros.h
 include/glib-2.0/glib/gwin32.h
 include/glib-2.0/gmodule.h
+include/glib-2.0/gmodule/gmodule-visibility.h
 include/glib-2.0/gobject/gbinding.h
 include/glib-2.0/gobject/gbindinggroup.h
 include/glib-2.0/gobject/gboxed.h
@@ -271,6 +275,7 @@ include/glib-2.0/gobject/glib-enumtypes.h
 include/glib-2.0/gobject/glib-types.h
 include/glib-2.0/gobject/gmarshal.h
 include/glib-2.0/gobject/gobject-autocleanups.h
+include/glib-2.0/gobject/gobject-visibility.h
 include/glib-2.0/gobject/gobject.h
 include/glib-2.0/gobject/gobjectnotifyqueue.c
 include/glib-2.0/gobject/gparam.h
@@ -288,19 +293,19 @@ include/glib-2.0/gobject/gvaluetypes.h
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.7400.6
+lib/libgio-2.0.so.0.7600.3
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.7400.6
+lib/libglib-2.0.so.0.7600.3
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.7400.6
+lib/libgmodule-2.0.so.0.7600.3
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.7400.6
+lib/libgobject-2.0.so.0.7600.3
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.7400.6
+lib/libgthread-2.0.so.0.7600.3
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -313,8 +318,8 @@ ${PLIST.nococoa}libexec/gio-launch-desktop
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7400.6-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7400.6-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7600.3-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7600.3-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib_gdb.py
