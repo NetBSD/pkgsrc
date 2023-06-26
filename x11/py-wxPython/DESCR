@@ -1,0 +1,21 @@
+wxPython is a cross-platform GUI toolkit for the Python programming
+language. It allows Python programmers to create programs with a
+robust, highly functional graphical user interface, simply and
+easily. It is implemented as a set of Python extension modules that
+wrap the GUI components of the popular wxWidgets cross platform
+library, which is written in C++.
+
+Like Python and wxWidgets, wxPython is Open Source, which means
+that it is free for anyone to use and the source code is available
+for anyone to look at and modify. And anyone can contribute fixes
+or enhancements to the project.
+
+wxPython is a cross-platform toolkit. This means that the same
+program will run on multiple platforms without modification.
+Currently Supported platforms are Microsoft Windows, Mac OS X and
+macOS, and Linux or other unix-like systems with GTK2 or GTK3
+libraries. In most cases the native widgets are used on each platform
+to provide a 100% native look and feel for the application.
+
+Since the programming language is Python, wxPython programs are
+simple, easy to write and easy to understand.
