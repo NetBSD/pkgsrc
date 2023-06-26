@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:14:30 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/06/26 15:42:53 schmonz Exp $
 
 BLAKE2s (cvsps-2.1.tar.gz) = f53a01d4ab914f817f2cb483c77bc2370b63ba966aff0473bea820f34a4f5a4c
 SHA512 (cvsps-2.1.tar.gz) = 8ba703fc4dd1c7a8201f4cefec533a6e228943f53f5380d8d17107718d8cb607c861a733d7ad1d6ed9288c4dbeae9fd59ceaf52172f16885a00d000a667e0e38
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 20d84dc236a5c259677fdf68268de5bb64e6d26f
 SHA1 (patch-ae) = 345036b4021f90a2f6629a5d32e85caa786d961f
 SHA1 (patch-af) = d32eb67ede1d81ee3abe55a7f94515fcf3ea93cf
 SHA1 (patch-ag) = c68adbb42938ecb2f42c55bc9be0aa6db3b013f9
+SHA1 (patch-cbtcommon_text__util.c) = 9dd43cc1ed4d832a0b525278b4fcccaff20b03eb
