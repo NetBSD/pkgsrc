@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/26 15:29:13 pho Exp $
 
-BLAKE2s (SourceHanSansOTF-1.000.zip) = e732005fce11acb7b4f987d80f42b024ea2ee47f5d10c15102df086cc50aad70
-SHA512 (SourceHanSansOTF-1.000.zip) = 545b94afd6192eaccc6612cb7ad61925160f04c3fe99ae72d0ea8d70fda798b4ca46e5f07ab20e7a9cfa5fa827f7ee1ba7b19757db9ae004522ef317b3b8ae61
-Size (SourceHanSansOTF-1.000.zip) = 95664535 bytes
+BLAKE2s (sourcehansans-fonts-2.004/SourceHanSansOTC.zip) = 6689c014f4e547976f519e4b30f50c055a0ba58c914d333ef0496c098e012147
+SHA512 (sourcehansans-fonts-2.004/SourceHanSansOTC.zip) = e5448965ad61bfe6e2dab9bf42316cc32628616c45e63df8a09e5cbbe5e1ee02f8cacc1b76e55ae9996b2051c503877daf8294c0abf9854b2be67ce80a6a13db
+Size (sourcehansans-fonts-2.004/SourceHanSansOTC.zip) = 104683291 bytes
