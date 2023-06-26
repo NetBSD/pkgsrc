@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/05/22 21:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/26 09:32:25 jperkin Exp $
 
 DISTNAME=	pcmanfm-qt-1.3.0
 PKGREVISION=	2
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+LDFLAGS.SunOS+=	-lsocket
 
 AUTOSTART_CONF=		share/examples/autostart
 SETTINGS_CONF=		share/examples/pcmanfm-qt/lxqt
