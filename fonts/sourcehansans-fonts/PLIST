@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/17 14:52:08 ryoon Exp $
-share/fonts/X11/TTF/SourceHanSans-Bold.otf
-share/fonts/X11/TTF/SourceHanSans-ExtraLight.otf
-share/fonts/X11/TTF/SourceHanSans-Heavy.otf
-share/fonts/X11/TTF/SourceHanSans-Light.otf
-share/fonts/X11/TTF/SourceHanSans-Medium.otf
-share/fonts/X11/TTF/SourceHanSans-Normal.otf
-share/fonts/X11/TTF/SourceHanSans-Regular.otf
+@comment $NetBSD: PLIST,v 1.2 2023/06/26 15:29:13 pho Exp $
+share/fonts/X11/TTF/SourceHanSans-Bold.ttc
+share/fonts/X11/TTF/SourceHanSans-ExtraLight.ttc
+share/fonts/X11/TTF/SourceHanSans-Heavy.ttc
+share/fonts/X11/TTF/SourceHanSans-Light.ttc
+share/fonts/X11/TTF/SourceHanSans-Medium.ttc
+share/fonts/X11/TTF/SourceHanSans-Normal.ttc
+share/fonts/X11/TTF/SourceHanSans-Regular.ttc
+@pkgdir share/fonts/X11/OTF
