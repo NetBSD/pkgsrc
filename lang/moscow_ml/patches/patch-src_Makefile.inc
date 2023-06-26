@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.inc,v 1.1 2023/02/25 17:55:24 ryoon Exp $
+$NetBSD: patch-src_Makefile.inc,v 1.2 2023/06/26 16:29:18 jperkin Exp $
 
 * Linux and the other Unix-like OSes should use CC as linker.
 
@@ -9,7 +9,7 @@ $NetBSD: patch-src_Makefile.inc,v 1.1 2023/02/25 17:55:24 ryoon Exp $
  # we had "elif" things would have been much nicer...
  
 -ifeq ($(UNAME_S),Linux)
-+ifeq ($(UNAME_S), $(filter LINUX %BSD SOLARIS, $(UNAME_S)))
++ifeq ($(UNAME_S), $(filter LINUX %BSD SunOS, $(UNAME_S)))
  	CPP=cpp -P -traditional -Dunix -Umsdos
  	STRIP=strip -S
 -	LD=gcc -rdynamic -Wl,-rpath,$(LIBDIR)
