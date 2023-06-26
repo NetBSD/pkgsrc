@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:05:39 nia Exp $
-
-BLAKE2s (gitso_0.6_linux_all.tar.gz) = c6ff99d936011ed7475d109c9bb2e788bf9889b9dc253a1bf074403c94d1c3cb
-SHA512 (gitso_0.6_linux_all.tar.gz) = 6e09b0d1ab1e5a9b87dcbdea689e17e32176d3683c9ca87f55a6fa3cf1e9c2182b56c63dfe8305c98c4e32f2739c233e92723a5c6d2b58c121429b2104ad3ce6
-Size (gitso_0.6_linux_all.tar.gz) = 192753 bytes
-SHA1 (patch-ArgParser.py) = 721c7082c5eef67de9709003d9b51499c948e81c
-SHA1 (patch-GitsoThread.py) = 962343bd4f842df2cbf003f8cdc0707189238463
-SHA1 (patch-Processes.py) = 8260b888733d1a514ae15477bbd8a7a09140b787
-SHA1 (patch-gitso) = 000f3a3d6da58ef4cd942089be563e30ddfcb708
