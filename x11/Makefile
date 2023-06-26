@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.992 2023/06/26 12:03:22 wiz Exp $
+# $NetBSD: Makefile,v 1.993 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -74,7 +74,6 @@ SUBDIR+=	gnustep-back
 SUBDIR+=	gnustep-gui
 SUBDIR+=	gromit
 SUBDIR+=	gselt
-SUBDIR+=	gst-plugins0.10-x11
 SUBDIR+=	gst-plugins1-x11
 SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gtk

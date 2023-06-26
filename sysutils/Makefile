@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1058 2023/06/17 18:27:24 bacon Exp $
+# $NetBSD: Makefile,v 1.1059 2023/06/26 12:24:03 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -281,8 +281,6 @@ SUBDIR+=	grub
 SUBDIR+=	grub2
 SUBDIR+=	grun
 SUBDIR+=	gsettings-desktop-schemas
-SUBDIR+=	gst-plugins0.10-gio
-SUBDIR+=	gst-plugins0.10-gnomevfs
 SUBDIR+=	gtk-send-pr
 SUBDIR+=	gvfs
 SUBDIR+=	gworkspace

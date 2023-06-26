@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2023/06/26 11:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.670 2023/06/26 12:24:02 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -152,28 +152,6 @@ SUBDIR+=	gramofile
 SUBDIR+=	grip
 SUBDIR+=	gsm
 SUBDIR+=	gsound
-SUBDIR+=	gst-plugins0.10-a52
-SUBDIR+=	gst-plugins0.10-alsa
-SUBDIR+=	gst-plugins0.10-cdparanoia
-SUBDIR+=	gst-plugins0.10-dts
-SUBDIR+=	gst-plugins0.10-faac
-SUBDIR+=	gst-plugins0.10-faad
-SUBDIR+=	gst-plugins0.10-flac
-SUBDIR+=	gst-plugins0.10-fluendo-mp3
-SUBDIR+=	gst-plugins0.10-jack
-SUBDIR+=	gst-plugins0.10-lame
-SUBDIR+=	gst-plugins0.10-libvisual
-SUBDIR+=	gst-plugins0.10-mad
-SUBDIR+=	gst-plugins0.10-musepack
-SUBDIR+=	gst-plugins0.10-oss
-SUBDIR+=	gst-plugins0.10-pulse
-SUBDIR+=	gst-plugins0.10-sid
-SUBDIR+=	gst-plugins0.10-soundtouch
-SUBDIR+=	gst-plugins0.10-spc
-SUBDIR+=	gst-plugins0.10-speex
-SUBDIR+=	gst-plugins0.10-twolame
-SUBDIR+=	gst-plugins0.10-vorbis
-SUBDIR+=	gst-plugins0.10-wavpack
 SUBDIR+=	gst-plugins1-a52
 SUBDIR+=	gst-plugins1-alsa
 SUBDIR+=	gst-plugins1-cdparanoia

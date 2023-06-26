@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:54 nia Exp $
-
-BLAKE2s (libdmapsharing-2.9.15.tar.gz) = c1e2c27a515d0571482b895a24da963211855fbe87669fbf7f51eaf374f09436
-SHA512 (libdmapsharing-2.9.15.tar.gz) = 95790149e3a8bf177f6b1701eb6a44339b96997ac6e957a7ce404878ebe71d2124f57367dc9e5b8a0cbe1ff5cc1dc59713eb133adc0d4624fc083a30fc2a60c5
-Size (libdmapsharing-2.9.15.tar.gz) = 708500 bytes
