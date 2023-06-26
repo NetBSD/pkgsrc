@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/21 21:10:20 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/26 13:07:28 pin Exp $
 
-DISTNAME=	marswm-0.4.1
+DISTNAME=	marswm-0.5.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jzbor/}
 
