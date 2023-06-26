@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2023/06/06 09:56:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.108 2023/06/26 11:50:26 wiz Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -7,7 +7,6 @@ SUBDIR+=	MyHDL-gplcver
 SUBDIR+=	MyHDL-iverilog
 SUBDIR+=	adms
 SUBDIR+=	atlc
-SUBDIR+=	boolean
 SUBDIR+=	cascade
 SUBDIR+=	cgi-wcalc
 SUBDIR+=	covered
