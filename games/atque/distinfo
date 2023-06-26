@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:47 nia Exp $
-
-BLAKE2s (atque-1.1.2.tar.bz2) = f4ed175ad814d33221de46c25f116028956d35cc300541a9aa1a9ca71a3856d7
-SHA512 (atque-1.1.2.tar.bz2) = a6ed2d9137cb7a40ca960a1caff7f576af3470d8a263a9e8e458770aa3c8b3a2b61101f284e2b1786f6cdaa1d80b0d06e7e4902ff480b4b7f1677fd51f001f51
-Size (atque-1.1.2.tar.bz2) = 588348 bytes

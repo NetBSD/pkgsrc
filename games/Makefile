@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2023/05/04 15:23:41 nikita Exp $
+# $NetBSD: Makefile,v 1.530 2023/06/26 11:53:55 wiz Exp $
 #
 
 COMMENT=	Games
@@ -40,7 +40,6 @@ SUBDIR+=	asciiquarium
 SUBDIR+=	assaultcube
 SUBDIR+=	astromenace
 SUBDIR+=	atomix
-SUBDIR+=	atque
 SUBDIR+=	augustus
 SUBDIR+=	barrage
 SUBDIR+=	bastet
