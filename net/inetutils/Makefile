@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/09 15:43:33 vins Exp $
+# $NetBSD: Makefile,v 1.9 2023/06/26 09:26:37 jperkin Exp $
 
 DISTNAME=	inetutils-2.4
 CATEGORIES=	net
@@ -15,6 +15,8 @@ INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
 CONFIGURE_ENV+=		inetutils_cv_path_cp=${CP}
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .for prog in ping ping6 rcp rlogin rsh traceroute
 SPECIAL_PERMS+=		bin/g${prog} ${SETUID_ROOT_PERMS}
