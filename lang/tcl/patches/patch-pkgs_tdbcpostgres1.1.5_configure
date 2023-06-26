@@ -1,11 +1,11 @@
-$NetBSD: patch-pkgs_thread2.8.7_configure,v 1.1 2021/11/16 16:24:40 adam Exp $
+$NetBSD: patch-pkgs_tdbcpostgres1.1.5_configure,v 1.1 2023/06/26 15:51:56 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/thread2.8.7/configure.orig	2021-11-01 00:56:26.000000000 +0000
-+++ pkgs/thread2.8.7/configure
-@@ -13101,20 +13101,18 @@ then :
+--- pkgs/tdbcpostgres1.1.5/configure.orig	2021-11-01 00:45:56.000000000 +0000
++++ pkgs/tdbcpostgres1.1.5/configure
+@@ -7907,20 +7907,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
@@ -23,8 +23,8 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
  	    SHLIB_CFLAGS="-fPIC"
--	    SHLIB_LD='${CCLD} ${SHLIB_CFLAGS} -shared'
-+	    SHLIB_LD='${CCLD} ${SHLIB_CFLAGS} -shared ${LDFLAGS_DEFAULT}'
+-	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared'
++	    SHLIB_LD='${CC} ${SHLIB_CFLAGS} -shared ${LDFLAGS_DEFAULT}'
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes
