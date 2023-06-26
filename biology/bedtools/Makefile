@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/30 11:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/26 17:21:15 jperkin Exp $
 
 DISTNAME=	bedtools-2.30.0
 PKGREVISION=	1
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:test gmake
 REPLACE_SH+=	scripts/vcfsort.sh
 REPLACE_PYTHON=	scripts/makeBashScripts.py
+
+LDFLAGS.SunOS+=	-lsocket
 
 SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure
