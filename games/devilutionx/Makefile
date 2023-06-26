@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/05/06 19:09:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/06/26 08:53:17 jperkin Exp $
 
 DISTNAME=	devilutionx-1.2.1
 PKGREVISION=	9
@@ -28,6 +28,8 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DASAN=OFF -DUBSAN=OFF
 CMAKE_ARGS+=	-DDEBUG=OFF
 CMAKE_ARGS+=	-DVERSION_NUM=${PKGVERSION_NOREV}
+
+LDFLAGS.SunOS+=	-lsocket
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
