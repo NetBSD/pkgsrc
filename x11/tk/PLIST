@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/01/20 20:40:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/06/26 15:53:25 adam Exp $
 bin/wish
 bin/wish${BASEVER}
 ${PLIST.aqua}include/X11/DECkeysym.h
@@ -47,6 +47,7 @@ include/tk/generic/tkUndo.h
 include/tk/unix/tkUnixDefault.h
 include/tk/unix/tkUnixInt.h
 include/tk/unix/tkUnixPort.h
+include/tk/unix/tkUuid.h
 include/tkDecls.h
 include/tkInt.h
 include/tkIntDecls.h
@@ -182,6 +183,7 @@ lib/tk${BASEVER}/msgs/en.msg
 lib/tk${BASEVER}/msgs/en_gb.msg
 lib/tk${BASEVER}/msgs/eo.msg
 lib/tk${BASEVER}/msgs/es.msg
+lib/tk${BASEVER}/msgs/fi.msg
 lib/tk${BASEVER}/msgs/fr.msg
 lib/tk${BASEVER}/msgs/hu.msg
 lib/tk${BASEVER}/msgs/it.msg
@@ -190,6 +192,7 @@ lib/tk${BASEVER}/msgs/pl.msg
 lib/tk${BASEVER}/msgs/pt.msg
 lib/tk${BASEVER}/msgs/ru.msg
 lib/tk${BASEVER}/msgs/sv.msg
+lib/tk${BASEVER}/msgs/zh_cn.msg
 lib/tk${BASEVER}/obsolete.tcl
 lib/tk${BASEVER}/optMenu.tcl
 lib/tk${BASEVER}/palette.tcl

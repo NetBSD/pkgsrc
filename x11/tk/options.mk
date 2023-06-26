@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/12/14 08:46:56 dbj Exp $
+# $NetBSD: options.mk,v 1.10 2023/06/26 15:53:25 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tk
 PKG_SUPPORTED_OPTIONS=	threads debug xft2
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--without-x
 PLIST.aqua=		yes
 .else
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib${LIBABISUFFIX:Q}
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib${LIBABISUFFIX}
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
