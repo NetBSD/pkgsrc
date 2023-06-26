@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/04/19 08:11:05 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/06/26 09:22:14 jperkin Exp $
 
 DISTNAME=	grilo-plugins-0.3.10
 PKGREVISION=	16
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config xgettext itstool
 USE_TOOLS+=	gdbus-codegen
+
+LDFLAGS.SunOS+=	-lsocket
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
