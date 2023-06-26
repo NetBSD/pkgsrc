@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/09/19 05:33:15 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/06/26 15:29:56 adam Exp $
 bin/dadd
 bin/dateadd
 bin/dateconv
@@ -18,27 +18,7 @@ bin/dsort
 bin/dtest
 bin/dzone
 bin/strptime
-include/dateutils/boops.h
-include/dateutils/date-core-strpf.h
-include/dateutils/date-core.h
-include/dateutils/dt-core-strpf.h
-include/dateutils/dt-core-tz-glue.h
-include/dateutils/dt-core.h
-include/dateutils/generics.h
-include/dateutils/gmtime.h
-include/dateutils/leaps.h
-include/dateutils/leapseconds.def
-include/dateutils/leapseconds.h
-include/dateutils/nifty.h
-include/dateutils/strops.h
-include/dateutils/time-core-strpf.h
-include/dateutils/time-core.h
-include/dateutils/token.h
-include/dateutils/tzmap.h
-include/dateutils/tzraw.h
-include/dateutils/version.h
 info/dateutils.info
-lib/libdut.a
 man/man1/dadd.1
 man/man1/dateadd.1
 man/man1/dateconv.1
