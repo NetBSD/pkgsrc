@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/01/29 21:17:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/06/26 17:28:14 jperkin Exp $
 
 DISTNAME=		amtterm-1.6
 PKGREVISION=		9
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake pkg-config perl:run tr
 
 MAKE_FILE=		GNUmakefile
 MAKE_FLAGS+=		prefix=${PREFIX}
+
+LDFLAGS.SunOS+=		-lsocket
 
 REPLACE_PERL+=		amttool
 
