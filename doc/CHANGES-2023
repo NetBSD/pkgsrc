@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4031 2023/06/26 12:24:03 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4032 2023/06/26 13:07:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5651,3 +5651,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed sysutils/gst-plugins0.10-gio [wiz 2023-06-26]
 	Removed sysutils/gst-plugins0.10-gnomevfs [wiz 2023-06-26]
 	Removed x11/gst-plugins0.10-x11 [wiz 2023-06-26]
+	Updated wm/marswm to 0.5.0 [pin 2023-06-26]
