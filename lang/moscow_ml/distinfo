@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2023/02/25 17:55:24 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2023/06/26 16:29:18 jperkin Exp $
 
 BLAKE2s (mosml-ver-2.10.1.tar.gz) = b1cce201c3011a27f8f80be3a563b87ec67855f9600978059e76141cb0041f8b
 SHA512 (mosml-ver-2.10.1.tar.gz) = 1463ee8dbcd979795ceca0439c7b2d545520590e036bd0c428d9617802a4e40efba82caf0afd5e24761b857cceb63a69269bf765c91df27c3e5f84242519af60
 Size (mosml-ver-2.10.1.tar.gz) = 2558644 bytes
-SHA1 (patch-src_Makefile.inc) = db5d3b94a9df06e1d8f7308553cfff6daa4ed49c
+SHA1 (patch-src_Makefile.inc) = 74ef466bf8678effbe1fcfca20322a042913f384
 SHA1 (patch-src_dynlibs_intinf_Makefile) = c0ad341de2dff6a81164d30d65fbcde48318b0ed
