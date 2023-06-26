@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4026 2023/06/26 11:54:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4027 2023/06/26 11:56:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed games/atque [wiz 2023-06-26]
 	Removed graphics/extrema [wiz 2023-06-26]
 	Removed misc/usbprog [wiz 2023-06-26]
+	Removed net/gitso [wiz 2023-06-26]
