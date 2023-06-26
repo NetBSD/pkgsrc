@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/04/19 08:10:00 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/26 08:55:49 jperkin Exp $
 
 DISTNAME=	enigma-1.21
 PKGNAME=	${DISTNAME:S/-r/./}
@@ -21,6 +21,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.9
