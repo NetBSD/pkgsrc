@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/04/19 08:10:30 adam Exp $
+# $NetBSD: Makefile,v 1.68 2023/06/26 11:58:11 wiz Exp $
 
 DISTNAME=		tqsl-2.6.5
 PKGREVISION=		4
@@ -44,7 +44,5 @@ post-install:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-# Upstream uses wxGTK28 on Windows because it has accessibility patches, but
-# 30 is newer.
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
