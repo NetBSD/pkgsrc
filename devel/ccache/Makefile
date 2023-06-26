@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/06/14 06:54:16 adam Exp $
+# $NetBSD: Makefile,v 1.75 2023/06/26 08:32:42 jperkin Exp $
 
 DISTNAME=	ccache-4.8.2
 CATEGORIES=	devel
@@ -17,6 +17,8 @@ USE_TOOLS+=	perl:build pkg-config
 TEST_TARGET=	test
 
 GCC_REQD+=	8 # std::filesystem
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../lang/ruby/rubyversion.mk"
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
