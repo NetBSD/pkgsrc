@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/06 12:40:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/26 09:06:56 jperkin Exp $
 
 DISTNAME=	kldap-${KAPPSVER}
 PKGREVISION=	6
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
