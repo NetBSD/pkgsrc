@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
+$NetBSD: patch-unix_configure,v 1.15 2023/06/26 15:51:56 adam Exp $
 
---- unix/configure.orig	2021-11-04 15:04:06.000000000 +0000
+--- unix/configure.orig	2022-06-06 16:00:23.000000000 +0000
 +++ unix/configure
-@@ -6772,12 +6772,12 @@ fi
+@@ -6771,12 +6771,12 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	BSD/OS-4.*)
@@ -17,7 +17,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  	    CC_SEARCH_FLAGS=""
  	    LD_SEARCH_FLAGS=""
  	    ;;
-@@ -7462,7 +7462,7 @@ fi
+@@ -7461,7 +7461,7 @@ fi
  	    CC_SEARCH_FLAGS=""
  	    LD_SEARCH_FLAGS=""
  	    ;;
@@ -26,7 +26,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  	    arch=`arch -s`
  	    case "$arch" in
  	    alpha|sparc64)
-@@ -7483,7 +7483,7 @@ fi
+@@ -7482,7 +7482,7 @@ fi
  
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
@@ -35,7 +35,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  	    CFLAGS_OPTIMIZE="-O2"
  	    if test "${TCL_THREADS}" = "1"; then
  
-@@ -7505,7 +7505,7 @@ fi
+@@ -7504,7 +7504,7 @@ fi
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
@@ -44,15 +44,15 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  	    if test $doRpath = yes; then
  
  		CC_SEARCH_FLAGS='"-Wl,-rpath,${LIB_RUNTIME_DIR}"'
-@@ -7523,7 +7523,6 @@ fi
+@@ -7522,7 +7522,6 @@ fi
  
  	    ;;
  	Darwin-*)
--	    CFLAGS_OPTIMIZE="-Os"
+-	    CFLAGS_OPTIMIZE="-O2"
  	    SHLIB_CFLAGS="-fno-common"
  	    # To avoid discrepancies between what headers configure sees during
  	    # preprocessing tests and compiling tests, move any -isysroot and
-@@ -8735,7 +8734,11 @@ fi
+@@ -8800,7 +8799,11 @@ fi
  
  else
  
@@ -65,7 +65,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  
  fi
  
-@@ -8770,7 +8773,7 @@ else
+@@ -8835,7 +8838,7 @@ else
  
  fi
  
@@ -74,7 +74,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  
      # Define TCL_LIBS now that we know what DL_LIBS is.
      # The trick here is that we don't want to change the value of TCL_LIBS if
-@@ -18744,9 +18747,9 @@ fi
+@@ -18811,9 +18814,9 @@ fi
  #	building libtcl as a shared library instead of a static library.
  #--------------------------------------------------------------------
  
@@ -87,7 +87,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  
  # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
  # since on some platforms TCL_LIB_FILE contains shell escapes.
-@@ -18859,13 +18862,10 @@ else
+@@ -18926,13 +18929,10 @@ else
      eval libdir="$libdir"
      # default install directory for bundled packages
      PACKAGE_DIR="$libdir"
@@ -104,7 +104,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  fi
  VERSION='${VERSION}'
  eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
-@@ -18884,10 +18884,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -18951,10 +18951,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
  	TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl ~/Library/Frameworks /Library/Frameworks"
      test -z "$TCL_MODULE_PATH"  && \
  	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl"
@@ -116,7 +116,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -18902,12 +18900,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+@@ -18969,12 +18967,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  eval "TCL_STUB_LIB_DIR=\"${libdir}\""
  
@@ -130,7 +130,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
  TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
  TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
-@@ -19061,34 +19054,15 @@ fi
+@@ -19128,34 +19121,15 @@ fi
  # Transform confdefs.h into DEFS.
  # Protect against shell expansion while executing Makefile rules.
  # Protect against Makefile macro expansion.
@@ -174,7 +174,7 @@ $NetBSD: patch-unix_configure,v 1.14 2021/11/16 16:24:40 adam Exp $
  
  
  
-@@ -19718,6 +19692,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+@@ -19785,6 +19759,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
  s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
  s,@DLTEST_LD@,$DLTEST_LD,;t t
  s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t

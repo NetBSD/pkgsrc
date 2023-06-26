@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.19 2022/06/23 09:07:01 thor Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.20 2023/06/26 15:51:56 adam Exp $
 
 Honour LDFLAGS.
 
---- unix/Makefile.in.orig	2021-10-29 17:08:08.000000000 +0000
+--- unix/Makefile.in.orig	2022-10-28 15:19:48.000000000 +0000
 +++ unix/Makefile.in
 @@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
@@ -56,7 +56,7 @@ Honour LDFLAGS.
  #TCL_LIB_FILE		= libtcl.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -711,7 +715,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
+@@ -715,7 +719,7 @@ SRCS = $(GENERIC_SRCS) $(UNIX_SRCS) $(NO
  
  all: binaries libraries doc packages
  
@@ -65,7 +65,7 @@ Honour LDFLAGS.
  
  libraries:
  
-@@ -730,6 +734,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+@@ -734,6 +738,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
  
@@ -77,7 +77,7 @@ Honour LDFLAGS.
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -893,9 +902,16 @@ install-binaries: binaries
+@@ -900,9 +909,16 @@ install-binaries: binaries
  	done
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -95,7 +95,7 @@ Honour LDFLAGS.
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)/tclConfig.sh"
  	@echo "Installing tclooConfig.sh to $(CONFIG_INSTALL_DIR)/"
-@@ -1039,20 +1064,24 @@ install-doc: doc
+@@ -1044,20 +1060,24 @@ install-doc: doc
  	done
  
  install-headers:
@@ -127,7 +127,7 @@ Honour LDFLAGS.
  	done
  
  # Optional target to install private headers
-@@ -1810,7 +1839,7 @@ configure-packages:
+@@ -1814,7 +1834,7 @@ configure-packages:
  		    mkdir -p $(PKG_DIR)/$$pkg; \
  		    if [ ! -f $(PKG_DIR)/$$pkg/Makefile ] ; then \
  			( cd $(PKG_DIR)/$$pkg; \

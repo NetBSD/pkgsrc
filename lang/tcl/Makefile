@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.123 2023/06/26 15:51:55 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -35,7 +34,7 @@ TEST_TARGET=		test
 .include "options.mk"
 
 # This is needed for SGI and maybe sun (according to tcl developers)
-.if defined(ABI) && ${ABI} == "64" && empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if defined(ABI) && ${ABI} == "64" && !${MACHINE_PLATFORM:MDarwin-*-aarch64}
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 

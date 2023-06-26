@@ -1,0 +1,15 @@
+$NetBSD: patch-pkgs_sqlite3.40.0_Makefile.in,v 1.1 2023/06/26 15:51:55 adam Exp $
+
+Fix building with system sqlite3.
+
+--- pkgs/sqlite3.40.0/Makefile.in.orig	2022-11-18 18:49:30.000000000 +0000
++++ pkgs/sqlite3.40.0/Makefile.in
+@@ -155,7 +155,7 @@ SHARED_BUILD	= @SHARED_BUILD@
+ INCLUDES	= @PKG_INCLUDES@ @TCL_INCLUDES@ -I. -I$(srcdir)/..
+ #INCLUDES	= @PKG_INCLUDES@ @TCL_INCLUDES@ @TK_INCLUDES@ @TK_XINCLUDES@
+ 
+-PKG_CFLAGS	= @PKG_CFLAGS@ -DSQLITE_EXTERN=
++PKG_CFLAGS	= @PKG_CFLAGS@
+ 
+ # TCL_DEFS is not strictly need here, but if you remove it, then you
+ # must make sure that configure.ac checks for the necessary components
