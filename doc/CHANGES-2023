@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4008 2023/06/26 11:03:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4009 2023/06/26 11:23:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -3896,7 +3896,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cyclonedx-python-lib to 4.0.0 [wiz 2023-05-04]
 	Added devel/py-serializable version 0.12.0 [wiz 2023-05-04]
 	Updated security/py-google-auth to 2.17.3 [wiz 2023-05-04]
-	Removed time/etm [wiz 2023-05-04]
 	Removed time/etm [wiz 2023-05-04]
 	Updated time/py-icalendar to 5.0.5 [wiz 2023-05-04]
 	Updated lang/py-js2py to 0.74 [wiz 2023-05-04]
