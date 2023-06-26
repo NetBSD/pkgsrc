@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2023/04/19 08:11:52 adam Exp $
+# $NetBSD: Makefile,v 1.101 2023/06/26 09:33:41 jperkin Exp $
 
 DISTNAME=	wwwoffle-2.9j
 PKGREVISION=	15
@@ -17,6 +17,8 @@ BUILD_DEFS+=	VARBASE
 
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/wwwoffle
+
+LDFLAGS.SunOS+=	-lnsl
 
 CHECK_PORTABILITY_SKIP+=	configure.in
 
