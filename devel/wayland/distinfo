@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.11 2022/08/04 15:21:26 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/06/27 10:42:07 riastradh Exp $
 
 BLAKE2s (wayland-1.21.0.tar.xz) = a4c8a8c41c3b502fe6f56a5ad4913762ddfe6dea619287d44443b8b54633847f
 SHA512 (wayland-1.21.0.tar.xz) = 5575216d30fdf5c63caa6bcad071e15f2a4f3acb12df776806073f65db37a50b5b5b3cc7957c5497636f4ac01893e2eaab26e453ded44b287acde01762f5fdc3
 Size (wayland-1.21.0.tar.xz) = 225936 bytes
 SHA1 (patch-meson.build) = 50b64c24a298596c7fdadf96551e8923a1f3eb38
+SHA1 (patch-meson__options.txt) = af930cd03994d7a2202af97b17939555c3aa7409
+SHA1 (patch-src_meson.build) = 47bb46d9af0ab428667bebbed36b09f0b0b9c414
 SHA1 (patch-src_wayland-os.c) = 8bbd574108e06697c874d372062d3129eb7937d1
