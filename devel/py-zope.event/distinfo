@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/17 18:00:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/27 08:54:28 adam Exp $
 
-BLAKE2s (zope.event-4.6.tar.gz) = 36bfeee2320c8f4db848c65cfa0611aed7aa5a4936d2cf9be87f3ff4451b9137
-SHA512 (zope.event-4.6.tar.gz) = 0042ef679ba95f1306d11fa23c0b48c59b018c8630cefb2e245ca77f4979b314d338cf1f6d2b12376d59c0eee172180d217965d54676504530a8af0c6c128547
-Size (zope.event-4.6.tar.gz) = 17430 bytes
+BLAKE2s (zope.event-5.0.tar.gz) = 60f5d0eedb4f7969793e110ec9f2d63c18ab639b460680417de49ab66f22cd07
+SHA512 (zope.event-5.0.tar.gz) = f3807580d948c11c75351d306450714b8cc285c45bed581069608e24fd20b705cff73c349c3fb3dd3f0af70508c5b8895f68bf60f8bf0c7e0a1d676191d5ce10
+Size (zope.event-5.0.tar.gz) = 17350 bytes
