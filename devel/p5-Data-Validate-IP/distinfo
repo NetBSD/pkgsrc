@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/27 02:44:59 wen Exp $
 
-BLAKE2s (Data-Validate-IP-0.30.tar.gz) = f5e64dafd06f8645a10ec7ad7bef9747d3f38d379d0809300618453cb0c65ccf
-SHA512 (Data-Validate-IP-0.30.tar.gz) = ac556445f1eec0440be17263bcffce46d0c3b719d3c64022bcb3fc6d1191ed9de94c0e4d6b2c3c5c1704dc7945b14a5c87abfcf2b7dc43ec4f10a4cc6629b761
-Size (Data-Validate-IP-0.30.tar.gz) = 41761 bytes
+BLAKE2s (Data-Validate-IP-0.31.tar.gz) = d7885f1315e3863047f164c9d2f2990cc1190abbab642bd9cf13161f0efdda66
+SHA512 (Data-Validate-IP-0.31.tar.gz) = 22ea6a8673fa07d405cb2f8645bd019265abf4104057c73d0399951a837549cedb97737f50b2e9e605202679c85ae5a7b7a24dd8d9fd8736624551b0b41fd6d8
+Size (Data-Validate-IP-0.31.tar.gz) = 43477 bytes
