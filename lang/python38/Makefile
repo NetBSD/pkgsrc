@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/03/19 18:56:44 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/06/27 10:35:30 riastradh Exp $
 
 .include "dist.mk"
 
@@ -59,19 +59,10 @@ LIBS.SunOS+=		-lrt # fdatasync()
 PY_VER_SUFFIX=		3.8
 
 .if ${OPSYS} == "Darwin"
-PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
-.elif ${OPSYS} == "IRIX"
-PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
-.elif ${OPSYS} == "SunOS"
-PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
-.elif ${OPSYS} == "HPUX"
-PY_PLATNAME=	hp-ux11
-.elif ${OPSYS} == "Linux"
-PY_PLATNAME=	linux
-.else
-PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
+
+.include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 # ossaudiodev is only available on x86 for the following platforms

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/06/27 10:29:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2023/06/27 10:35:30 riastradh Exp $
 
 .include "dist.mk"
 
@@ -78,19 +78,10 @@ SUBST_SED.setup=	-e "s,'crypt','crypt_i',"
 PY_VER_SUFFIX=		3.9
 
 .if ${OPSYS} == "Darwin"
-PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
-.elif ${OPSYS} == "IRIX"
-PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
-.elif ${OPSYS} == "SunOS"
-PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
-.elif ${OPSYS} == "HPUX"
-PY_PLATNAME=	hp-ux11
-.elif ${OPSYS} == "Linux"
-PY_PLATNAME=	linux
-.else
-PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
+
+.include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise
