@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/01 14:11:01 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/27 13:07:54 mef Exp $
 
 R_PKGNAME=	tzdb
-R_PKGVER=	0.3.0
+R_PKGVER=	0.4.0
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
