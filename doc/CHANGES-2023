@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4079 2023/06/27 13:00:33 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4080 2023/06/27 13:08:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5717,3 +5717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-authlib to 1.2.1 [adam 2023-06-27]
 	Updated devel/py-click-repl to 0.3.0 [adam 2023-06-27]
 	Updated time/R-hms to 1.1.3 [mef 2023-06-27]
+	Updated time/R-tzdb to 0.4.0 [mef 2023-06-27]
