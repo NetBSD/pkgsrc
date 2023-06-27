@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.151 2023/06/27 10:35:29 riastradh Exp $
+# $NetBSD: pyversion.mk,v 1.152 2023/06/27 10:35:57 riastradh Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -247,16 +247,16 @@ PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 ALL_ENV+=		PYTHON=${TOOL_PYTHONBIN}
 .if defined(USE_CMAKE) || defined(BUILD_USES_CMAKE)
 # used by FindPython
-CMAKE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
 CMAKE_ARGS+=		-DPython_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 # used by FindPython2
 .  if !empty(_PYTHON_VERSION:M2*)
-CMAKE_ARGS+=		-DPython2_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython2_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
 CMAKE_ARGS+=		-DPython2_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 .  endif
 # used by FindPython3
 .  if !empty(_PYTHON_VERSION:M3*)
-CMAKE_ARGS+=		-DPython3_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPython3_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
 CMAKE_ARGS+=		-DPython3_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 .  endif
 # used by FindPythonInterp.cmake and FindPythonLibs.cmake
@@ -265,7 +265,7 @@ CMAKE_ARGS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 # on Darwin
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_PATH:PATH=${BUILDLINK_DIR}/${PYINC}
-CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
+CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${TOOL_PYTHONBIN}
 .endif
 
 _VARGROUPS+=		pyversion
