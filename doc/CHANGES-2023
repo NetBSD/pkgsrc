@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4052 2023/06/26 23:33:46 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4053 2023/06/27 02:26:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5685,3 +5685,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/pango to 1.50.14 [adam 2023-06-26]
 	Added x11/py-wxPython version 4.2.1 [wiz 2023-06-26]
 	Updated audio/py-music21 to 9.1.0 [gutteridge 2023-06-26]
+	Updated devel/p5-Data-ObjectDriver to 0.22 [wen 2023-06-27]
