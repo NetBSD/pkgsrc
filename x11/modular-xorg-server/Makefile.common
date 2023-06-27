@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2023/06/06 12:42:54 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.57 2023/06/27 10:28:34 riastradh Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -108,7 +108,7 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
 CONFIGURE_ARGS+=	--with-sha1=libc

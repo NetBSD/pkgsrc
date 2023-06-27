@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/05/25 11:53:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=		libXt-1.3.0
 PKGREVISION=		1
@@ -32,7 +32,7 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 .include "../../mk/compiler.mk"
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_peath_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 X11_LIB_NAME?=		libXt
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"

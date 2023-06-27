@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=		libXext-1.3.5
 CATEGORIES=		x11 devel
@@ -17,7 +17,8 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xext.pc.in
 
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
