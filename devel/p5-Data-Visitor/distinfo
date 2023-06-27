@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:16:23 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/06/27 02:50:14 wen Exp $
 
-BLAKE2s (Data-Visitor-0.31.tar.gz) = edb2561fc6b048822e487765573a277a90d2f038bc74c285b5833d9f5880c57a
-SHA512 (Data-Visitor-0.31.tar.gz) = 4c2cba80e3ef5ed0a19836b58f82da18e8ea1adf25c60767f308807c0e592bc679df6e4d58a0b1fd9fc65d558403d4beab1c327914c4572902971857cbdb8198
-Size (Data-Visitor-0.31.tar.gz) = 39537 bytes
+BLAKE2s (Data-Visitor-0.32.tar.gz) = a043ba4dcf121c76099cf0565543a7490d1b77b50ab6ef5368fb1dd068bccc96
+SHA512 (Data-Visitor-0.32.tar.gz) = f192f851d0e31b432c89573d85a165c9bc7e7f687980610ed8841bc77d72a55d4d3a2c104bab04d0b797ebc18f4b134596683be865aa052cde2b837a02426632
+Size (Data-Visitor-0.32.tar.gz) = 39313 bytes
