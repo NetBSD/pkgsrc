@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.39 2022/09/06 09:05:59 nia Exp $
+# $NetBSD: egg.mk,v 1.40 2023/06/27 10:31:21 riastradh Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -46,7 +46,7 @@ do-build: ensurepip
 .PHONY: ensurepip
 
 ensurepip:
-	${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m ensurepip --user
+	${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} -m ensurepip --user
 .else
 .  if "${PYVERSSUFFIX}" == "2.7"
 SETUPTOOLS_PATH=../../devel/py-setuptools44
@@ -60,6 +60,19 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 # in all cases (in particular, for cross-compilation), setuptools
 # also needs to be a tool dependency
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
+.endif
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+.if ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "no" || \
+    ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "build"
+_COOKIE.pysetupcross=	${WRKDIR}/.pysetupcross_done
+pre-configure: ${_COOKIE.pysetupcross}
+${_COOKIE.pysetupcross}:
+	@${STEP_MSG} "Adjusting Python setup.cfg for cross-compiling"
+	${RUN} ${PRINTF} "\\n[build]\\nexecutable = '%s'\\n" ${PYTHONBIN:Q} \
+		>>${WRKSRC}/setup.cfg
+	${RUN} touch $@
+.endif
 .endif
 
 INSTALLATION_DIRS+=	${PYSITELIB}

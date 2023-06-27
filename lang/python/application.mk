@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.13 2020/03/24 04:40:34 rillig Exp $
+# $NetBSD: application.mk,v 1.14 2023/06/27 10:31:21 riastradh Exp $
 #
 # Replace the #! interpreter for Python scripts.
 #
@@ -18,6 +18,7 @@
 
 .include "../../lang/python/pyversion.mk"
 
+# XXX Handle TOOL_PYTHONBIN replacement too.
 .if defined(REPLACE_PYTHON)
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	.*python3\{0,1\}[^ ]*
