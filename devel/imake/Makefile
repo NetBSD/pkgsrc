@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/11/09 13:14:08 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2023/06/27 10:40:40 riastradh Exp $
 
 DISTNAME=		imake-1.0.9
 CATEGORIES=		devel x11
@@ -12,13 +12,19 @@ COMMENT=		Obsolete build tool for X software
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
+TOOL_DEPENDS+=		tradcpp>=0.5.2:../../devel/tradcpp
 DEPENDS+=		tradcpp>=0.5.2:../../devel/tradcpp
 DEPENDS+=		xorg-cf-files>=1.0.3:../../x11/xorg-cf-files
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 CONFIGURE_ENV+=		HAS_PERL=no
-CONFIGURE_ENV+=		RAWCPP=${PREFIX}/bin/tradcpp
-CPPFLAGS+=		-DRAWCPP=\"${PREFIX}/bin/tradcpp\"
+CONFIGURE_ENV+=		RAWCPP=${TOOLBASE:Q}/bin/tradcpp
+
+# The configure script wants to run tradcpp to test its
+# characteristics, but what gets baked into the package needs to be
+# where tradcpp will live at run-time.
+CPPFLAGS+=		-DRAWCPP=\"${PREFIX:Q}/bin/tradcpp\"
+MAKE_FLAGS+=		RAWCPP=${PREFIX:Q}/bin/rawcpp
 
 REPLACE_SH+=		mkhtmlindex.sh
 
