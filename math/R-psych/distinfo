@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/11 00:44:59 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/06/27 13:33:52 mef Exp $
 
-BLAKE2s (R/psych_2.3.3.tar.gz) = 0a401ae4366ae576d0b7b44a5ab90b46f8be512e0aa4ba2119f8eb1a4b21f746
-SHA512 (R/psych_2.3.3.tar.gz) = 745e5e84a840b9a2dbcaacd1c8131099d0f53a1c131febc7bdaa12832c70a9ccfb7c44c89c99230816a5310e65e6285518ddcce73f4d2fb86db5783a1559bbe2
-Size (R/psych_2.3.3.tar.gz) = 1588126 bytes
+BLAKE2s (R/psych_2.3.6.tar.gz) = 1aabcad16e81c2837ccc9a9b098733acf2321a3bf123b71a53bce54173a5d089
+SHA512 (R/psych_2.3.6.tar.gz) = e0daa844a79001cba32d6c4f61d2b2747eb2376ce77652c3afef72439bda6dda51f31ef456d63f9f825b26d46f5f44fd8c2440fd98eb9c833129812495b8f201
+Size (R/psych_2.3.6.tar.gz) = 1636660 bytes
