@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2023/02/09 19:49:45 wiz Exp $
+# $NetBSD: builtin.mk,v 1.21 2023/06/27 08:52:57 adam Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -82,7 +82,7 @@ CHECK_BUILTIN.freetype2?=	no
 .  if ${USE_BUILTIN.freetype2:tl} == no
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  else
-.    if !empty(MACHINE_PLATFORM:MNetBSD-[67].*-*) && \
+.    if ${MACHINE_PLATFORM:MNetBSD-[67].*-*} && \
 	(("${BUILTIN_VERSION.freetype2}" == "2.4.5") || \
 	("${BUILTIN_VERSION.freetype2}" == "2.5.3"))
 _FT2_VER_MAP.2.5.3=			17.2.11
