@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/12/05 08:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/27 10:42:38 riastradh Exp $
 
 DISTNAME=		libXxf86dga-1.1.6
 CATEGORIES=		x11
@@ -12,6 +12,8 @@ COMMENT=		Library for the XFree86-DGA X extension
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
