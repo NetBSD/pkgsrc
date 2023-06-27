@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.318 2022/11/11 17:22:14 jperkin Exp $
+# $NetBSD: bootstrap,v 1.319 2023/06/27 14:36:41 riastradh Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1370,10 +1370,10 @@ run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/add/pkg_ad
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/create/pkg_create $wrkdir/sbin/pkg_create"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/info/pkg_info $wrkdir/sbin/pkg_info"
-echo "PKG_ADD_CMD?=			$wrkdir/sbin/pkg_add" >> ${BOOTSTRAP_MKCONF}
-echo "PKG_ADMIN_CMD?=			$wrkdir/sbin/pkg_admin" >> ${BOOTSTRAP_MKCONF}
-echo "PKG_CREATE_CMD?=			$wrkdir/sbin/pkg_create" >> ${BOOTSTRAP_MKCONF}
-echo "PKG_INFO_CMD?=			$wrkdir/sbin/pkg_info" >> ${BOOTSTRAP_MKCONF}
+echo "NATIVE_PKG_ADD_CMD?=		$wrkdir/sbin/pkg_add" >> ${BOOTSTRAP_MKCONF}
+echo "NATIVE_PKG_ADMIN_CMD?=		$wrkdir/sbin/pkg_admin" >> ${BOOTSTRAP_MKCONF}
+echo "NATIVE_PKG_CREATE_CMD?=		$wrkdir/sbin/pkg_create" >> ${BOOTSTRAP_MKCONF}
+echo "NATIVE_PKG_INFO_CMD?=		$wrkdir/sbin/pkg_info" >> ${BOOTSTRAP_MKCONF}
 
 MAKECONF=$wrkdir/mk.conf
 export MAKECONF
