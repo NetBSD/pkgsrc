@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4054 2023/06/27 02:30:35 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4055 2023/06/27 02:37:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5687,3 +5687,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/py-music21 to 9.1.0 [gutteridge 2023-06-26]
 	Updated devel/p5-Data-ObjectDriver to 0.22 [wen 2023-06-27]
 	Updated devel/p5-Data-Peek to 0.52 [wen 2023-06-27]
+	Updated devel/p5-Data-Section to 0.200008 [wen 2023-06-27]
