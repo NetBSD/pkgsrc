@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/11/09 13:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/27 10:29:40 riastradh Exp $
 
 DISTNAME=		libXrender-0.9.11
 CATEGORIES=		x11 devel
@@ -15,6 +15,8 @@ CONFLICTS+=		Xrender-[0-9]*
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 PKGCONFIG_OVERRIDE+=	xrender.pc.in
 
