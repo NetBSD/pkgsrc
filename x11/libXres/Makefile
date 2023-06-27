@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/12/05 08:50:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/06/27 10:42:38 riastradh Exp $
 
 DISTNAME=		libXres-1.2.2
 CATEGORIES=		x11
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xres.pc.in
+
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libXres
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
