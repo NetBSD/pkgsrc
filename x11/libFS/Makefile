@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/11/09 13:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/27 10:42:38 riastradh Exp $
 
 DISTNAME=		libFS-1.0.9
 CATEGORIES=		x11 devel
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	libfs.pc.in
+
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libFS
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
