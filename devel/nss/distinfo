@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.167 2023/05/05 21:01:20 wiz Exp $
+$NetBSD: distinfo,v 1.168 2023/06/27 10:44:46 riastradh Exp $
 
 BLAKE2s (nss-3.89.1.tar.gz) = ef2b47b75831de2f96ac8f48be41a0cbc96bafd6b1168a2d95bcb3835275c8b1
 SHA512 (nss-3.89.1.tar.gz) = aeece4e8bc28113fc53997b29c89d40b4be74fee4f5d27c4e065d2fa6701038442f4eeeb1fcf98befedb03537a5a48a4701fe270f56197da57946529f9fa02dd
@@ -17,6 +17,7 @@ SHA1 (patch-nss_cmd_signtool_util.c) = 7bf8f7770dbbd3163b9a480b382eda91072e8bc9
 SHA1 (patch-nss_coreconf_Darwin.mk) = 5f40bb2733b88b26a40c5317d1b5edc762dfd18b
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = 944f71fcaaa7d5b2b3ed008341b1392a65480f2b
 SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
+SHA1 (patch-nss_coreconf_nsinstall_Makefile) = 69981ba7355a4413111754859ef08cbd5e1bf4f4
 SHA1 (patch-nss_lib_certdb_alg1485.c) = 319ecd8bc83f4309fe24267a6b7b8d03f11d06cb
 SHA1 (patch-nss_lib_certdb_certdb.c) = 1635d99677720b7813014a70cd2a7febc2584c05
 SHA1 (patch-nss_lib_dbm_src_mktemp.c) = 999ae164ff1f2390b0e6dc2160c27906d56aa940
