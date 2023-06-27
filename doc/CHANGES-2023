@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4062 2023/06/27 07:16:09 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4063 2023/06/27 07:24:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5695,3 +5695,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Devel-Cover to 1.40 [wen 2023-06-27]
 	Updated devel/p5-Devel-NYTProf to 6.12 [wen 2023-06-27]
 	Updated devel/p5-Devel-TraceUse to 2.097 [wen 2023-06-27]
+	Updated devel/py-jaraco.path to 3.6.0 [adam 2023-06-27]
+	Updated devel/py-jaraco.functools to 3.8.0 [adam 2023-06-27]
