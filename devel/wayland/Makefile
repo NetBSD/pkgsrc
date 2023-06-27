@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/04/19 08:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/06/27 10:42:07 riastradh Exp $
 
 DISTNAME=	wayland-1.21.0
 PKGREVISION=	2
@@ -28,9 +28,16 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-egl.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-scanner.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-server.pc
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# wayland runs wayland-scanner at build-time.
+TOOL_DEPENDS+=	${PKGNAME}:../../${PKGPATH}
+MESON_ARGS+=	-Dcross_scanner=${TOOLBASE:Q}/bin/wayland-scanner
+.endif
+
 .include "platform.mk"
 .include "../../devel/meson/build.mk"
-.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Linux"
 .  include "../../devel/libepoll-shim/buildlink3.mk"
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.libepoll-shim}/include/libepoll-shim
