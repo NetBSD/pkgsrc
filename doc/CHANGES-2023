@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4058 2023/06/27 02:59:55 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4059 2023/06/27 03:24:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5691,3 +5691,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Data-Validate-IP to 0.31 [wen 2023-06-27]
 	Updated devel/p5-Data-Visitor to 0.32 [wen 2023-06-27]
 	Updated devel/p5-Date-Manip to 6.92 [wen 2023-06-27]
+	Updated devel/p5-Devel-CheckOS to 1.96 [wen 2023-06-27]
