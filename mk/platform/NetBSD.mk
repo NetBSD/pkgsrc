@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.74 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: NetBSD.mk,v 1.75 2023/06/27 10:36:50 riastradh Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -70,7 +70,7 @@ _OPSYS_SYSTEM_RPATH?=		/usr/lib
 _OPSYS_LIB_DIRS?=		/usr/lib
 _OPSYS_INCLUDE_DIRS?=		/usr/include
 
-.if exists(/usr/include/netinet6)
+.if exists(${_CROSS_DESTDIR:U}/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
@@ -127,17 +127,17 @@ FFLAGS+=	-mieee
 .endif
 
 # check for kqueue(2) support, added in NetBSD-1.6J
-.if exists(/usr/include/sys/event.h)
+.if exists(${_CROSS_DESTDIR:U}/usr/include/sys/event.h)
 OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 # check for eventfd(2) support, added in NetBSD-9.99.x
-.if exists(/usr/include/sys/eventfd.h)
+.if exists(${_CROSS_DESTDIR:U}/usr/include/sys/eventfd.h)
 OPSYS_HAS_EVENTFD=	# defined
 .endif
 
 # check for timerfd(2) support, added in NetBSD-9.99.x
-.if exists(/usr/include/sys/timerfd.h)
+.if exists(${_CROSS_DESTDIR:U}/usr/include/sys/timerfd.h)
 OPSYS_HAS_TIMERFD=	# defined
 .endif
 
