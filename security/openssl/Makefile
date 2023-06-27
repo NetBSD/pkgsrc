@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2023/05/30 14:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.290 2023/06/27 10:46:50 riastradh Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -37,6 +37,28 @@ CONFIGURE_ARGS+=	no-async
 .if ${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ENV+=		KERNEL_BITS=${ABI}
 .endif
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+
+OPENSSL_ARCH.aarch64=	arm64
+OPENSSL_ARCH.x86_64=	amd64
+CONFIGURE_ENV+=		MACHINE=${OPENSSL_ARCH.${MACHINE_ARCH}:U${MACHINE_GNU_ARCH}:Q}
+CONFIGURE_ENV+=		RELEASE=${OS_VERSION:Q}
+CONFIGURE_ENV+=		SYSTEM=${OPSYS:Q}
+CONFIGURE_ENV+=		BUILD=${OPSYS:Q}\ ${OS_VERSION:Q}
+
+# We don't carry a runtime dependency on Perl, but OpenSSL does provide
+# a Perl script that you can use if you do install Perl.
+SUBST_CLASSES+=			perlcross
+SUBST_MESSAGE.perlcross=	Fixing Perl interpreter path for cross-build
+SUBST_STAGE.perlcross=		pre-install
+SUBST_FILES.perlcross+=		tools/c_rehash
+SUBST_FILES.perlcross+=		apps/CA.pl
+SUBST_FILES.perlcross+=		apps/tsget.pl
+SUBST_SED.perlcross=		-e s,${PERL5:Q},${LOCALBASE:Q}/bin/perl5,g
+CHECK_INTERPRETER_SKIP+=	bin/c_rehash
+
+.endif				# USE_CROSS_COMPILE
 
 .include "options.mk"
 
