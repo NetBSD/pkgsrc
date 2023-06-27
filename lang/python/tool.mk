@@ -1,4 +1,4 @@
-# $NetBSD: tool.mk,v 1.3 2019/12/15 23:59:00 gutteridge Exp $
+# $NetBSD: tool.mk,v 1.4 2023/06/27 10:31:21 riastradh Exp $
 #
 # Create `python' interpreter wrapper for applicable Python bin.
 #
@@ -22,8 +22,8 @@ buildlink-bin-python:
 .for bin in python python${PYVERSSUFFIX:R}
 	${RUN} \
 	t=${BUILDLINK_DIR}/bin/${bin}; \
-	if ${TEST} -f "${PYTHONBIN}" -a ! -f $$t; then \
-		${LN} -sf "${PYTHONBIN}" $$t; \
+	if ${TEST} -f "${TOOL_PYTHONBIN}" -a ! -f $$t; then \
+		${LN} -sf "${TOOL_PYTHONBIN}" $$t; \
 	fi
 .endfor
 

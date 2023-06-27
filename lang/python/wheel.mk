@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.7 2022/05/22 19:32:41 kleink Exp $
+# $NetBSD: wheel.mk,v 1.8 2023/06/27 10:31:21 riastradh Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -44,7 +44,8 @@ TOOL_DEPENDS+= ${PYPKGPREFIX}-build>=0:../../devel/py-build
 
 .if !target(do-build)
 do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m build --wheel --skip-dependency-check --no-isolation
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} \
+		-m build --wheel --skip-dependency-check --no-isolation
 .endif
 
 .endif
@@ -77,4 +78,6 @@ INSTALL_ENV+= PIP_NO_CACHEDIR=1
 do-install:
 	${RUN} cd ${WRKDIR} && \
 	${SETENV} ${INSTALL_ENV} \
-	${PYTHONBIN} -m pip install --no-cache-dir --no-deps --root ${DESTDIR:Q} --prefix ${PREFIX:Q} --compile --force-reinstall -I ${WHEELFILE}
+	${TOOL_PYTHONBIN} -m pip install --no-cache-dir --no-deps \
+		--root ${DESTDIR:Q} --prefix ${PREFIX:Q} --compile \
+		--force-reinstall -I --executable=${PYTHONBIN:Q} ${WHEELFILE}
