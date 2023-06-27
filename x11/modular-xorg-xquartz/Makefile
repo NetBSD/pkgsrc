@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/06/06 12:42:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 PKGREVISION=	1
@@ -71,7 +71,7 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 .include "../../security/nettle/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sha1=libnettle

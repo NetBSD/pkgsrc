@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/01/29 21:18:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=	xdm-1.1.14
 PKGREVISION=	1
@@ -43,7 +43,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 			  ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 CONFIGURE_ENV+=		ADMIN_MAN_SUFFIX=8
 
