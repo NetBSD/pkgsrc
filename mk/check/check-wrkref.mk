@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.27 2023/03/04 23:03:34 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.28 2023/06/27 10:27:54 riastradh Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -19,8 +19,9 @@
 #		pkgsrc		PKGSRCDIR
 #		buildlink	BUILDLINK_DIR and BUILDLINK_X11_DIR
 #		extra		see CHECK_WRKREF_EXTRA_DIRS
+#		cross		TOOLBASE (only if distinct from LOCALBASE)
 #
-#	Default value: "tools home" for PKG_DEVELOPERs, "no" otherwise.
+#	Default value: "tools home cross" for PKG_DEVELOPERs, "no" otherwise.
 #
 #	The "buildlink" option works best in combination with
 #	STRIP_DEBUG=yes.
@@ -43,7 +44,7 @@ _USER_VARS.check-wrkref=	CHECK_WRKREF CHECK_WRKREF_EXTRA_DIRS
 _PKG_VARS.check-wrkref=		CHECK_WRKREF_SKIP
 
 .if ${PKG_DEVELOPER:Uno} != "no"
-CHECK_WRKREF?=		tools home
+CHECK_WRKREF?=		tools home cross
 .else
 CHECK_WRKREF?=		no
 .endif
@@ -64,13 +65,15 @@ _CHECK_WRKREF_DIR.buildlink=	${BUILDLINK_DIR}
 _CHECK_WRKREF_DIR.buildlink+=	${BUILDLINK_X11_DIR}
 .endif
 _CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
+_CHECK_WRKREF_DIR.cross=	\
+	${${TOOLBASE} != ${LOCALBASE}:?${TOOLBASE}:}
 
 _CHECK_WRKREF_DIRS=	# none
 .for d in ${CHECK_WRKREF}
 .  if !defined(_CHECK_WRKREF_DIR.${d})
 PKG_FAIL_REASON+=	"[check-wrkref.mk] Invalid value \"${d:Q}\" for CHECK_WRKREF."
 PKG_FAIL_REASON+=	"[check-wrkref.mk] Valid options are:"
-.    for refvar in work tools wrappers home wrkobjdir wrksrc pkgsrc buildlink extra
+.    for refvar in work tools wrappers home wrkobjdir wrksrc pkgsrc buildlink extra cross
 PKG_FAIL_REASON+=	"[check-wrkref.mk]	${refvar}"
 .    endfor
 .  else
