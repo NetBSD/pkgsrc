@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2023/02/28 20:05:02 tnn Exp $
+# $NetBSD: Makefile,v 1.93 2023/06/27 10:46:03 riastradh Exp $
 
+PKGREVISION=	1
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=	PDF rendering library
@@ -21,6 +22,8 @@ CMAKE_ARGS+=	-DENABLE_QT5=OFF
 CMAKE_ARGS+=	-DENABLE_QT6=OFF
 # Don't build libcurl based HTTP support. ## might want to include
 CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
+# Don't run gperf if it's present
+CMAKE_ARGS+=	-DRUN_GPERF_IF_PRESENT=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
