@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.13 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.14 2023/06/27 14:36:29 riastradh Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -31,6 +31,7 @@ PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
+NATIVE_PKG_TOOLS_BIN?=		${PKG_TOOLS_BIN}
 NATIVE_PKG_ADD_CMD?=		${NATIVE_PKG_TOOLS_BIN}/pkg_add
 NATIVE_PKG_ADMIN_CMD?=		${NATIVE_PKG_TOOLS_BIN}/pkg_admin
 NATIVE_PKG_CREATE_CMD?=		${NATIVE_PKG_TOOLS_BIN}/pkg_create
