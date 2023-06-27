@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/06/17 16:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/06/27 10:28:45 riastradh Exp $
 
 DISTNAME=	libxcb-1.15
 PKGREVISION=	1
@@ -24,13 +24,21 @@ CONFIGURE_ARGS+=	--without-doxygen
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
 # No native C compiler needed -- the tool that gobbles up the xcb
 # prototypes is in Python.
 #
 # XXX This needs to match the version of xcb-proto we get for the
 # target by buildlink3.
 TOOL_DEPENDS+=		xcb-proto-[0-9]*:../../x11/xcb-proto
+SUBST_CLASSES+=		xcbproto
+SUBST_FILES.xcbproto=	src/Makefile
+SUBST_MESSAGE.xcbproto=	Fixing xcb-proto paths dir for cross-compile.
+SUBST_STAGE.xcbproto=	post-configure
+SUBST_SED.xcbproto+=	\
+	-e 's,^\(XCBPROTO_XCBINCLUDEDIR = \).*$$,\1${TOOLBASE}/share/xcb,'
+SUBST_SED.xcbproto+=	\
+	-e 's,^\(XCBPROTO_XCBPYTHONDIR = \).*$$,\1${TOOLBASE}/${PYSITELIB},'
 .endif
 
 # Adds -Wl,-R to pkgconfig files automatically
