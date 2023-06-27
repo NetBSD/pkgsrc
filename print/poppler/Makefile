@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/06/27 10:46:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.94 2023/06/27 10:46:15 riastradh Exp $
 
 PKGREVISION=	1
 .include "../../print/poppler/Makefile.common"
@@ -26,6 +26,11 @@ CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
 CMAKE_ARGS+=	-DRUN_GPERF_IF_PRESENT=OFF
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+ALL_ENV+=	PKG_CONFIG_SYSROOT_DIR=${CROSS_DESTDIR:Q}
+CMAKE_ARGS+=	-DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
+.endif
 
 # Passing "-ansi" turns "long long" support off on FreeBSD/amd64:
 .if ${OPSYS} == "FreeBSD" && ${MACHINE_ARCH} == "x86_64"
