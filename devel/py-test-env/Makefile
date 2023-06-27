@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/11/30 15:08:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/06/27 10:27:23 adam Exp $
 
-DISTNAME=	pytest_env-0.8.1
+DISTNAME=	pytest_env-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-env/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11.1:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.2:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-test>=7.1.3:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.10:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
