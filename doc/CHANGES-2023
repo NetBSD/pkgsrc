@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4064 2023/06/27 07:27:49 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4065 2023/06/27 07:32:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5698,3 +5698,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.path to 3.6.0 [adam 2023-06-27]
 	Updated devel/py-jaraco.functools to 3.8.0 [adam 2023-06-27]
 	Updated devel/p5-Dist-Zilla to 6.030 [wen 2023-06-27]
+	Updated devel/p5-DynaLoader-Functions to 0.004 [wen 2023-06-27]
