@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/09/07 15:33:19 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/06/27 10:29:58 riastradh Exp $
 
 .include "dist.mk"
 
@@ -36,11 +36,10 @@ PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 # XXX copied from ../../lang/python/pyversion.mk to avoid including it
-# XXX should use NATIVE_PREFIX but we don't have that
-CONFIGURE_ARGS+=	PYTHON_FOR_BUILD=${PREFIX:Q}/bin/python3.9
+CONFIGURE_ARGS+=	PYTHON_FOR_BUILD=${TOOLBASE:Q}/bin/python3.9
 CONFIGURE_ARGS+=	MACHDEP=${PY_PLATNAME}
 CONFIGURE_ARGS+=	\
 	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
