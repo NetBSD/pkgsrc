@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.5 2023/06/10 01:58:20 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.6 2023/06/27 10:27:20 riastradh Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -49,6 +49,15 @@ a normal dependency.  For example, if building your package entails
 transforming some XML with XSLT, you might add:
 
 TOOL_DEPENDS+=  libxslt>=1.1.0:../../textproc/libxslt
+
+If you need to refer to the full pathname of a file in a package
+installed with TOOL_DEPENDS, it will generally be relative to TOOLBASE
+rather than LOCALBASE.  For example:
+
+XSLTPROC=	${TOOLBASE}/bin/xsltproc
+
+post-build:
+	cd ${WRKSRC}/xmlstuff && ${XSLTPROC} ...
 
 * Native C and C++ compilers
 

@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.23 2022/11/23 11:55:43 jperkin Exp $
+# $NetBSD: check-perms.mk,v 1.24 2023/06/27 10:27:20 riastradh Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -32,7 +32,7 @@ _USER_VARS.check-perms=	CHECK_PERMS
 _PKG_VARS.check-perms=	CHECK_PERMS_SKIP CHECK_PERMS_AUTOFIX
 _DEF_VARS.check-perms=	TOOL_DEPENDS
 _USE_VARS.check-perms=	PKG_DEVELOPER MACHINE_PLATFORM DESTDIR PREFIX
-_IGN_VARS.check-perms=	_* LOCALBASE PKGNAME HOST_PKG_INFO
+_IGN_VARS.check-perms=	_* TOOLBASE PKGNAME HOST_PKG_INFO
 
 .if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_PERMS?=		yes
@@ -59,7 +59,7 @@ TOOL_DEPENDS+=	checkperms>=1.1:../../sysutils/checkperms
 privileged-install-hook: _check-perms
 .endif
 
-_CHECK_PERMS_CMD=	${LOCALBASE}/bin/checkperms
+_CHECK_PERMS_CMD=	${TOOLBASE}/bin/checkperms
 _CHECK_PERMS_GETDIRS_AWK=						\
 	/.*/ {								\
 		print $$0;						\

@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.19 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: f2c.mk,v 1.20 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,7 +60,7 @@ PKG_FC?=	${FC}
 _F2C_VARS+=	FC
 _F2C_FC:=	${_F2C_DIR}/bin/${PKG_FC:T}
 _ALIASES.FC+=	f77 g77 f2c-f77
-FCPATH=		${LOCALBASE}/bin/f2c-f77
+FCPATH=		${TOOLBASE}/bin/f2c-f77
 PKG_FC:=	${_F2C_FC}
 #
 # The f2c-f77 shell script invokes the C compiler, so ensure that it finds
@@ -111,11 +111,11 @@ override-tools: ${_F2C_${_var_}}
 ${_F2C_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}					\
-	${LN} -fs ${LOCALBASE}/bin/f2c-f77 ${.TARGET}
+	${LN} -fs ${TOOLBASE}/bin/f2c-f77 ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${LOCALBASE}/bin/f2c-f77 ${_alias_};		\
+		${LN} -fs ${TOOLBASE}/bin/f2c-f77 ${_alias_};		\
 	fi
 .      endfor
 .    endif

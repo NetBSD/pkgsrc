@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.39 2023/01/06 23:11:31 wiz Exp $
+# $NetBSD: clang.mk,v 1.40 2023/06/27 10:27:21 riastradh Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -17,7 +17,7 @@ COMPILER_CLANG_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-CLANGBASE?=		${LOCALBASE}
+CLANGBASE?=		${TOOLBASE}
 LANGUAGES.clang=	# empty
 
 .if exists(${CLANGBASE}/bin/clang)

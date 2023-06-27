@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2050 2023/02/12 20:14:02 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2051 2023/06/27 10:27:20 riastradh Exp $
 #
 # This file is in the public domain.
 #
@@ -179,7 +179,7 @@ ALL_ENV+=	LC_NUMERIC=C
 ALL_ENV+=	LC_TIME=C
 ALL_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
 ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
-ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
+ALL_ENV+=	PATH=${PATH:Q}:${TOOLBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MAKELEVEL=0
 ALL_ENV+=	CONFIG_SITE=${PKGSRC_CONFIG_SITE:U}
@@ -685,7 +685,7 @@ su-target: .USE
 # Run pkglint:
 .PHONY: lint
 lint:
-	${RUN} ${LOCALBASE}/bin/pkglint
+	${RUN} ${TOOLBASE}/bin/pkglint
 
 # List of flags to pass to pkg_add(1) for bin-install:
 

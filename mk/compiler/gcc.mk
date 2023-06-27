@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.252 2023/06/26 11:38:13 wiz Exp $
+# $NetBSD: gcc.mk,v 1.253 2023/06/27 10:27:21 riastradh Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -117,7 +117,7 @@ _DEF_VARS.gcc=	\
 	_SSP_CFLAGS \
 	_CXX_STD_FLAG.c++03 _CXX_STD_FLAG.gnu++03
 _USE_VARS.gcc=	\
-	MACHINE_ARCH PATH DRAGONFLY_CCVER OPSYS LOCALBASE \
+	MACHINE_ARCH PATH DRAGONFLY_CCVER OPSYS TOOLBASE \
 	USE_LIBTOOL \
 	LIBABISUFFIX \
 	COMPILER_RPATH_FLAG \
@@ -248,7 +248,7 @@ _CXX_STD_FLAG.c++03=	-std=c++0x
 _CXX_STD_FLAG.gnu++03=	-std=gnu++0x
 .endif
 
-.if !empty(_CC:M${LOCALBASE}/*)
+.if !empty(_CC:M${TOOLBASE}/*)
 _IS_BUILTIN_GCC=	NO
 GCC_REQD+=		${_GCC_VERSION}
 .else
@@ -723,6 +723,8 @@ _COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG}
 #
 # Ensure that the correct rpath is passed to the linker if we need to
 # link against gcc shared libs.
+#
+# XXX cross-compilation -- is this TOOLBASE or LOCALBASE?
 #
 _GCC_SUBPREFIX!=	\
 	if ${PKG_INFO} -qe ${_GCC_PKGBASE}; then			\

@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.22 2023/01/28 17:01:18 bacon Exp $
+# $NetBSD: gfortran.mk,v 1.23 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -91,7 +91,7 @@ _USE_GFORTRAN=	YES
 .endif
 
 .if !empty(_USE_GFORTRAN:M[yY][eE][sS])
-_GFORTRANBASE=	${LOCALBASE}/gcc${GFORTRAN_VERSION}
+_GFORTRANBASE=	${TOOLBASE}/gcc${GFORTRAN_VERSION}
 FC=		gfortran
 
 _GFORTRAN_DIR=	${WRKDIR}/.gfortran

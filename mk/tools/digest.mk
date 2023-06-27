@@ -1,4 +1,4 @@
-# $NetBSD: digest.mk,v 1.5 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: digest.mk,v 1.6 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -66,7 +66,7 @@ _TOOLS_USE_PKGSRC.digest=	yes
 .    if !empty(_TOOLS_USE_PKGSRC.digest:M[yY][eE][sS])
 TOOLS_DEPENDS.digest?=	digest>=${DIGEST_REQD}:../../pkgtools/digest
 TOOLS_CREATE+=		digest
-TOOLS_PATH.digest=	${LOCALBASE}/bin/digest
+TOOLS_PATH.digest=	${TOOLBASE}/bin/digest
 .    endif
 .  endif
 .endif

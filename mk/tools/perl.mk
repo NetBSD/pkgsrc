@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.26 2020/05/10 06:05:35 rillig Exp $
+# $NetBSD: perl.mk,v 1.27 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -61,7 +61,7 @@ TOOLS_PATH.perl=	${TOOLS_CMD.perl}
 .  if defined(TOOLS_PLATFORM.perl) && !empty(TOOLS_PLATFORM.perl)
 TOOLS_${_TOOLS_VARNAME.perl}?=	${TOOLS_PLATFORM.perl}
 .  else
-TOOLS_${_TOOLS_VARNAME.perl}?=	${LOCALBASE}/bin/perl
+TOOLS_${_TOOLS_VARNAME.perl}?=	${TOOLBASE}/bin/perl
 .  endif
 .  if !defined(${_TOOLS_VARNAME.perl})
 ${_TOOLS_VARNAME.perl}?=	${TOOLS_${_TOOLS_VARNAME.perl}}

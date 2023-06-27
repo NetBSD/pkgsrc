@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.23 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: gettext.mk,v 1.24 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -109,7 +109,7 @@ MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
 .    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
 TOOLS_CREATE+=		msgfmt
 TOOLS_DEPENDS.msgfmt?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
-TOOLS_PATH.msgfmt=	${LOCALBASE}/bin/msgfmt
+TOOLS_PATH.msgfmt=	${TOOLBASE}/bin/msgfmt
 .    endif
 
 .    if !empty(_TOOLS_USE_MSGFMT_SH:M[yY][eE][sS])
@@ -138,7 +138,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
 TOOLS_CREATE+=		${_t_}
-TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${TOOLBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor

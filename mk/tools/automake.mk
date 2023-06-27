@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.33 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: automake.mk,v 1.34 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -128,10 +128,10 @@ ${_TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
 .    endif
 
 _TOOLS_AM_TYPE.aclocal=		TOOLS_CREATE
-TOOLS_PATH.aclocal=		${LOCALBASE}/bin/aclocal
+TOOLS_PATH.aclocal=		${TOOLBASE}/bin/aclocal
 
 _TOOLS_AM_TYPE.automake=	TOOLS_CREATE
-TOOLS_PATH.automake=		${LOCALBASE}/bin/automake
+TOOLS_PATH.automake=		${TOOLBASE}/bin/automake
 .  endif
 .endif
 
@@ -156,12 +156,12 @@ ${_TOOLS_DEPMETHOD.automake14}+=	${TOOLS_DEPENDS.automake14}
 
 _TOOLS_AM_TYPE.aclocal-1.4=	TOOLS_CREATE
 _TOOLS_AM_TYPE.aclocal=		# empty
-TOOLS_PATH.aclocal-1.4=		${LOCALBASE}/bin/aclocal-1.4
+TOOLS_PATH.aclocal-1.4=		${TOOLBASE}/bin/aclocal-1.4
 TOOLS_ALIASES.aclocal-1.4=	aclocal
 
 _TOOLS_AM_TYPE.automake-1.4=	TOOLS_CREATE
 _TOOLS_AM_TYPE.automake=	# empty
-TOOLS_PATH.automake-1.4=	${LOCALBASE}/bin/automake-1.4
+TOOLS_PATH.automake-1.4=	${TOOLBASE}/bin/automake-1.4
 TOOLS_ALIASES.automake-1.4=	automake
 .  endif
 .endif
