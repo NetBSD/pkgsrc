@@ -1,12 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/07 05:13:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/27 11:47:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/click_repl/__init__.py
 ${PYSITELIB}/click_repl/__init__.pyc
 ${PYSITELIB}/click_repl/__init__.pyo
+${PYSITELIB}/click_repl/_completer.py
+${PYSITELIB}/click_repl/_completer.pyc
+${PYSITELIB}/click_repl/_completer.pyo
+${PYSITELIB}/click_repl/_repl.py
+${PYSITELIB}/click_repl/_repl.pyc
+${PYSITELIB}/click_repl/_repl.pyo
 ${PYSITELIB}/click_repl/exceptions.py
 ${PYSITELIB}/click_repl/exceptions.pyc
 ${PYSITELIB}/click_repl/exceptions.pyo
+${PYSITELIB}/click_repl/utils.py
+${PYSITELIB}/click_repl/utils.pyc
+${PYSITELIB}/click_repl/utils.pyo
