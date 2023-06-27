@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/27 10:30:46 wen Exp $
 
-BLAKE2s (File-Find-Rule-VCS-1.08.tar.gz) = 12ef163fee7e7e4eab305cf1a7ff69862807e395c15883ae4297dacec9be0091
-SHA512 (File-Find-Rule-VCS-1.08.tar.gz) = e9ed73c4528022d49b71e5ccc1062e7a145d0fd30124fa3b009e244dd56404dd5415ba37ec4836d1f9ce6fabb22712727a8217a9714eb13b2a65249406368267
-Size (File-Find-Rule-VCS-1.08.tar.gz) = 30225 bytes
+BLAKE2s (File-Find-Rule-VCS-1.09.tar.gz) = 620ce0247885629bb88c2bd5204af88d4c0856127469632c7ca584b3c093d19f
+SHA512 (File-Find-Rule-VCS-1.09.tar.gz) = 1aef60b0ea7bb473b8ab266cddd0f5754703b61c2e98c5e387fb5fd4d0069068546bc4beefa139bb6e048988a4be8144648c50165d14358cb348bcf887b9973e
+Size (File-Find-Rule-VCS-1.09.tar.gz) = 26246 bytes
 SHA1 (patch-Makefile.PL) = e7bcc27234587720150c6c67d9fde2dd37d5d96b
