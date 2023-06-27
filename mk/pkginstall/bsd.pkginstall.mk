@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.78 2023/04/26 10:24:50 wiz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.79 2023/06/27 10:27:21 riastradh Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -1077,7 +1077,7 @@ FILES_SUBST+=		GTAR=${GTAR:Q}
 FILES_SUBST+=		HEAD=${HEAD:Q}
 FILES_SUBST+=		ID=${ID:Q}
 FILES_SUBST+=		INSTALL_INFO=${INSTALL_INFO:Q}
-FILES_SUBST+=		LINKFARM=${LINKFARM:Q}
+FILES_SUBST+=		LINKFARM=${LINKFARM_CMD:Q}
 FILES_SUBST+=		LN=${LN:Q}
 FILES_SUBST+=		LS=${LS:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.41 2022/12/18 01:23:16 gdt Exp $
+# $NetBSD: ccache.mk,v 1.42 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -32,9 +32,9 @@
 #
 # CCACHE_BASE
 #	The directory where ccache is installed. The build dependency on
-#	devel/ccache is only added when this is ${LOCALBASE}.
+#	devel/ccache is only added when this is ${TOOLBASE}.
 #
-#	Default: ${LOCALBASE}
+#	Default: ${TOOLBASE}
 #
 # CCACHE_DIR
 #	The directory where the cached compiler results are stored. By
@@ -71,7 +71,7 @@ _PKG_VARS.ccache=	IGNORE_CCACHE
 
 .include "../bsd.fast.prefs.mk"
 
-CCACHE_BASE?=	${LOCALBASE}
+CCACHE_BASE?=	${TOOLBASE}
 CCACHE_DIR?=	${WRKDIR}/.ccache-cache
 
 _USE_CCACHE=	yes
@@ -93,7 +93,7 @@ _CCACHE_CIRCULAR_DEPENDENCY_PACKAGES=	\
 	sysutils/checkperms
 
 # break circular dependencies
-.if ${CCACHE_BASE} == ${LOCALBASE} &&	\
+.if ${CCACHE_BASE} == ${TOOLBASE} &&	\
 	!empty(_CCACHE_CIRCULAR_DEPENDENCY_PACKAGES:M${PKGPATH})
 _USE_CCACHE=	no
 MAKEFLAGS+=	_USE_CCACHE=${_USE_CCACHE}
@@ -138,7 +138,7 @@ PKG_CXX:=	${_CCACHE_CXX}
 PREPEND_PATH+=	${_CCACHE_DIR}/bin
 
 # Add the dependency on ccache.
-.  if ${CCACHE_BASE} == ${LOCALBASE}
+.  if ${CCACHE_BASE} == ${TOOLBASE}
 TOOL_DEPENDS+=	ccache-[0-9]*:../../devel/ccache3
 .  endif
 

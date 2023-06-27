@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.432 2023/06/04 12:29:52 schmonz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.433 2023/06/27 10:27:20 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -601,6 +601,10 @@ IPV6_READY=		NO
 .endif
 
 LOCALBASE?=		/usr/pkg
+TOOLBASE:=		${LOCALBASE}
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+LOCALBASE=		${CROSS_LOCALBASE:U/usr/pkg}
+.endif
 X11_TYPE?=		modular
 .if !empty(X11_TYPE:Mnative)
 .  if ${OPSYS} == "SunOS"
@@ -626,7 +630,7 @@ X11BASE?=	/usr
 X11BASE?=	/usr/X11R6
 .  endif
 .endif
-CROSSBASE?=	${LOCALBASE}/cross
+CROSSBASE?=	${TOOLBASE}/cross
 
 .if defined(FIX_SYSTEM_HEADERS) && ${FIX_SYSTEM_HEADERS} == "yes" && \
     !defined(BOOTSTRAP_PKG) && \

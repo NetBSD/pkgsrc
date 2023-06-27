@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.73 2023/06/03 14:26:36 riastradh Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.74 2023/06/27 10:27:20 riastradh Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -82,8 +82,8 @@ BUILD_DEFS+=		KERBEROS
 PKG_FAIL_REASON+=	"Cross-compiling Fortran with libtool NYI."
 .  endif
 
-PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool-fortran
-PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool-fortran
+PKG_LIBTOOL?=		${TOOLBASE}/bin/libtool-fortran
+PKG_SHLIBTOOL?=		${TOOLBASE}/bin/shlibtool-fortran
 
 .  if defined(USE_LIBTOOL)
 # XXX This really needs cross-libtool-fortran like cross-libtool-base.
@@ -91,11 +91,11 @@ TOOL_DEPENDS+=		libtool-fortran>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../d
 .  endif
 .else
 .  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-PKG_LIBTOOL?=		${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/libtool
-PKG_SHLIBTOOL?=		${LOCALBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/shlibtool
+PKG_LIBTOOL?=		${TOOLBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/libtool
+PKG_SHLIBTOOL?=		${TOOLBASE}/cross-${TARGET_ARCH:U${MACHINE_ARCH}}/bin/shlibtool
 .  else
-PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
-PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
+PKG_LIBTOOL?=		${TOOLBASE}/bin/libtool
+PKG_SHLIBTOOL?=		${TOOLBASE}/bin/shlibtool
 .  endif
 .endif
 LIBTOOL?=		${WRAPPER_BINDIR}/libtool
@@ -115,5 +115,5 @@ MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 # when building cwrappers, so use the shell tools in that instance.
 .if ${_PKGSRC_USE_MKTOOLS} == "yes" && empty(PKGPATH:Mpkgtools/cwrappers)
 TOOL_DEPENDS+=		mktools-[0-9]*:../../pkgtools/mktools
-PKG_MKSYMLINKS?=	${LOCALBASE}/libexec/mktools/mk-buildlink-symlinks
+PKG_MKSYMLINKS?=	${TOOLBASE}/libexec/mktools/mk-buildlink-symlinks
 .endif

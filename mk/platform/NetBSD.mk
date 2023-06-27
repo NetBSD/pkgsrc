@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.73 2022/09/27 08:46:33 jperkin Exp $
+# $NetBSD: NetBSD.mk,v 1.74 2023/06/27 10:27:21 riastradh Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -33,8 +33,9 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
 # This must be lazy and using :? evaluation doesn't work due to a make bugs.
-PKG_TOOLS_BIN_cmd=	if [ -x ${LOCALBASE}/sbin/pkg_info ]; then echo ${LOCALBASE}/sbin; else echo /usr/sbin; fi
-PKG_TOOLS_BIN?=		${PKG_TOOLS_BIN_cmd:sh}
+NATIVE_PKG_TOOLS_BIN_cmd=	if [ -x ${TOOLBASE}/sbin/pkg_info ]; then echo ${TOOLBASE}/sbin; else echo /usr/sbin; fi
+NATIVE_PKG_TOOLS_BIN?=		${NATIVE_PKG_TOOLS_BIN_cmd:sh}
+PKG_TOOLS_BIN?=			${"${USE_CROSS_COMPILE:U:tl}" == "yes":?${CROSS_PKG_TOOLS_BIN:U/usr/sbin}:${NATIVE_PKG_TOOLS_BIN}}
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel

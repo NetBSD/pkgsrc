@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.11 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: intltool.mk,v 1.12 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -49,7 +49,7 @@ TOOL_DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    for _t_ in ${_TOOLS.intltool}
 TOOLS_DEPENDS.${_t_}=	${TOOLS_DEPENDS.intltool}
 TOOLS_CREATE+=		${_t_}
-TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${TOOLBASE}/bin/${_t_}
 .    endfor
 .  endif
 .elif defined(GNU_CONFIGURE)
