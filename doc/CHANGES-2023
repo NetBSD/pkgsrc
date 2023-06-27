@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4081 2023/06/27 13:14:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4082 2023/06/27 13:34:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5720,3 +5720,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/R-tzdb to 0.4.0 [mef 2023-06-27]
 	Updated www/py-telepath to 0.3.1 [adam 2023-06-27]
 	Updated textproc/py-xml2rfc to 3.17.4 [adam 2023-06-27]
+	Updated math/R-psych to 2.3.6 [mef 2023-06-27]
