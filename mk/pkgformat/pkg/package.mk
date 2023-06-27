@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.18 2022/11/23 11:17:51 jperkin Exp $
+# $NetBSD: package.mk,v 1.19 2023/06/27 10:27:21 riastradh Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -100,7 +100,7 @@ stage-package-remove:
 ### tarup is a public target to generate a binary package from an
 ### installed package instance.
 ###
-_PKG_TARUP_CMD= ${LOCALBASE}/bin/pkg_tarup
+_PKG_TARUP_CMD= ${TOOLBASE}/bin/pkg_tarup
 
 .PHONY: tarup
 tarup: package-remove tarup-pkg

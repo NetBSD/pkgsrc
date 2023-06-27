@@ -1,4 +1,4 @@
-# $NetBSD: gmake.mk,v 1.6 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: gmake.mk,v 1.7 2023/06/27 10:27:21 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -59,7 +59,7 @@ MAKEVARS+=	_TOOLS_USE_PKGSRC.gmake
 
 .if defined(_TOOLS_USE_PKGSRC.gmake) && !empty(_TOOLS_USE_PKGSRC.gmake)
 .  if !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
-TOOLS_PLATFORM.gmake=	${LOCALBASE}/bin/gmake
+TOOLS_PLATFORM.gmake=	${TOOLBASE}/bin/gmake
 .  endif
 .endif
 
