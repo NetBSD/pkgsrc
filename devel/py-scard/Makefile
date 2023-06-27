@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/30 18:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/27 10:34:03 riastradh Exp $
 
 DISTNAME=	pyscard-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
@@ -17,7 +17,7 @@ CPPFLAGS+=	-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
-	${LN} -sf ${PREFIX}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
+	${LN} -sf ${TOOLBASE}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
 
 .include "../../lang/python/egg.mk"
 .include "../../security/pcsc-lite/buildlink3.mk"
