@@ -1,4 +1,4 @@
-$NetBSD: TODO.crosscompile,v 1.9 2023/06/03 15:01:05 riastradh Exp $
+$NetBSD: TODO.crosscompile,v 1.10 2023/06/27 11:20:33 riastradh Exp $
 
 * Organize NATIVE_xyz and TARGET_xyz better.
 * Organize host/target compiler tools better.
@@ -6,12 +6,10 @@ $NetBSD: TODO.crosscompile,v 1.9 2023/06/03 15:01:05 riastradh Exp $
 * Automatically set WRKDIR_BASENAME=work.${MACHINE_ARCH}.
 * Simplify mk.conf setup (see HOWTO-use-crosscompile).
 * Make USE_CROSS_COMPILE and MACHINE_ARCH passable on the command line.
-* Allow LOCALBASE &c. to be set differently on host and target.
 * Make cross-OS builds work.  Use MACHINE_PLATFORM, not MACHINE_ARCH.
 * Judiciously insert ${CROSS_DESTDIR} into various `.if exists(/xyz)'.
 * Teach pbulk about TOOL_DEPENDS so it can easily do bulk cross-builds.
 * Distinguish host build-time tools from target run-time tools.
 * If you set MACHINE_ARCH, what should MACHINE be?  (Avoid using it?)
 * Make sure cross-builds DTRT with INSTALL scripts.
-* Fix cmake.
 * Handle BUILD_DEPENDS/TOOL_DEPENDS split in bsd.pkg.readme.mk.
