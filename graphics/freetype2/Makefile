@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2023/05/05 17:28:49 gdt Exp $
+# $NetBSD: Makefile,v 1.132 2023/06/27 08:52:57 adam Exp $
 
-DISTNAME=	freetype-2.13.0
+DISTNAME=	freetype-2.13.1
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	https://download.savannah.gnu.org/releases/freetype/
@@ -38,7 +37,7 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 .include "options.mk"
 
 # source code breaks strict aliasing in gcc>=2.95
-.if !empty(CC_VERSION:Mgcc-[3-9]*) || !empty(CC_VERSION:Mgcc-2.95*)
+.if ${CC_VERSION:Mgcc-[3-9]*} || ${CC_VERSION:Mgcc-2.95*}
 CFLAGS+=	-fno-strict-aliasing
 .endif
 
