@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/02/22 07:44:55 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/06/27 10:41:06 riastradh Exp $
 
 DISTNAME=		xorg-cf-files-1.0.8
 CATEGORIES=		x11 devel
@@ -30,6 +30,8 @@ SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/lex,${PREFIX}/bin/flex,g'
 SUBST_SED.fixpaths+=	-e 's,/usr/ccs/bin/yacc,${PREFIX}/bin/yacc,g'
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+
 post-extract:
 	${CP} ${FILESDIR}/host.def ${WRKSRC}
 	${CP} ${FILESDIR}/xorgsite.def ${WRKSRC}
@@ -45,6 +47,7 @@ pre-configure:
 		-e "s|@@INSTALL@@|${INSTALL}|g"	\
 		${WRKSRC}/${sys}.cf.before > ${WRKSRC}/${sys}.cf
 .endfor
+.if ${USE_CROSS_COMPILE:tl} != "yes" # MAKE_PROGRAM is wrong; empty host.def is fine
 	${SED} -e "s|@PREFIX@|${PREFIX}|g"		\
 		-e "s|@PKGMANDIR@|${PKGMANDIR}|"	\
 		-e "s|@MAKE@|${MAKE_PROGRAM}|"	${FILESDIR}/host.def > \
@@ -52,6 +55,7 @@ pre-configure:
 	if [ ${X11BASE} != ${PREFIX} ]; then \
 		${ECHO} '#define RealProjectRoot ${X11BASE}' >> ${WRKSRC}/host.def; \
 	fi
+.endif
 
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
