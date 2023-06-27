@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4075 2023/06/27 10:54:22 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4076 2023/06/27 10:54:37 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5712,3 +5712,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipykernel to 6.23.3 [adam 2023-06-27]
 	Updated devel/p5-File-Find-Rule-VCS to 1.09 [wen 2023-06-27]
 	Updated shells/oh-my-posh to 17.5.2 [pin 2023-06-27]
+	Added fonts/tex-culmus-latex version 0.7 [riastradh 2023-06-27]
