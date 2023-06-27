@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/05/29 23:33:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.107 2023/06/27 10:35:29 riastradh Exp $
 
 .include "dist.mk"
 
@@ -65,21 +65,10 @@ CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
 .if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
-PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
-.elif ${OPSYS} == "IRIX"
-PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
-.elif ${OPSYS} == "SunOS"
-PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
-.elif ${OPSYS} == "HPUX"
-PY_PLATNAME=	hp-ux11
-.elif ${OPSYS} == "Linux"
-PY_PLATNAME=	linux2
-.elif ${OS_VARIANT} == "SCOOSR5"
-PY_PLATNAME=	sco_sv3
-.else
-PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
+
+.include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 .if !empty(LP64PLATFORMS:@.PLAT.@${MACHINE_PLATFORM:M${.PLAT.}}@) || \
