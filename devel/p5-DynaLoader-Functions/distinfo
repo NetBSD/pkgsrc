@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:16:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/06/27 07:31:23 wen Exp $
 
-BLAKE2s (DynaLoader-Functions-0.003.tar.gz) = 7b2fa03e2702427f799124a85fcc6dfaa13c1dde2fee84712ee91b1eb4a1e7da
-SHA512 (DynaLoader-Functions-0.003.tar.gz) = 58147714352fbd6e90bb42599e5967c9a93dbb899a587ef8a2a64dd13fc9e24176e17b3c2b870b5fa846b077373ca9ea27bec49b31113a8d9cb7d800f6d29599
-Size (DynaLoader-Functions-0.003.tar.gz) = 9797 bytes
+BLAKE2s (DynaLoader-Functions-0.004.tar.gz) = 419d32f66bb0f89de18299edd1dc961a131c6e95327ce7a4605181a21da81b9b
+SHA512 (DynaLoader-Functions-0.004.tar.gz) = d888c3763a4d90f9edba21c13df726be11baf48d61b83a68c3d2253cd6b6f8294550b6da2eaa113a50743bab477d9e0a6591dba43877f0dbc363f72ac468fdf7
+Size (DynaLoader-Functions-0.004.tar.gz) = 10349 bytes
