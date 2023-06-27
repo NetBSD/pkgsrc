@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4082 2023/06/27 13:34:07 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4083 2023/06/27 13:38:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5721,3 +5721,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-telepath to 0.3.1 [adam 2023-06-27]
 	Updated textproc/py-xml2rfc to 3.17.4 [adam 2023-06-27]
 	Updated math/R-psych to 2.3.6 [mef 2023-06-27]
+	Updated devel/ruby-activesupport61 to 6.1.7.4 [taca 2023-06-27]
+	Updated devel/ruby-activemodel61 to 6.1.7.4 [taca 2023-06-27]
+	Updated devel/ruby-activejob61 to 6.1.7.4 [taca 2023-06-27]
+	Updated www/ruby-actionview61 to 6.1.7.4 [taca 2023-06-27]
+	Updated www/ruby-actionpack61 to 6.1.7.4 [taca 2023-06-27]
+	Updated databases/ruby-activerecord61 to 6.1.7.4 [taca 2023-06-27]
+	Updated devel/ruby-activestorage61 to 6.1.7.4 [taca 2023-06-27]
+	Updated mail/ruby-actionmailer61 to 6.1.7.4 [taca 2023-06-27]
+	Updated mail/ruby-actionmailbox61 to 6.1.7.4 [taca 2023-06-27]
+	Updated www/ruby-actioncable61 to 6.1.7.4 [taca 2023-06-27]
+	Updated devel/ruby-railties61 to 6.1.7.4 [taca 2023-06-27]
+	Updated textproc/ruby-actiontext61 to 6.1.7.4 [taca 2023-06-27]
+	Updated www/ruby-rails61 to 6.1.7.4 [taca 2023-06-27]
