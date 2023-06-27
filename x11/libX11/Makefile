@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/06/16 06:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/06/27 10:28:56 riastradh Exp $
 
 DISTNAME=		libX11-1.8.6
 CATEGORIES=		x11 devel
@@ -31,12 +31,15 @@ LDFLAGS.OpenBSD+=	${PTHREAD_LDFLAGS}
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.11.1
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
+CONFIGURE_ARGS+=	\
+	--with-keysymdefdir=${_CROSS_DESTDIR}${BUILDLINK_PREFIX.xorgproto}/include/X11
 
 # XXX This needs to match the version of xcb-proto we get for the
 # target by buildlink3.
