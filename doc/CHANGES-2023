@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4077 2023/06/27 11:27:34 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.4078 2023/06/27 11:48:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5714,3 +5714,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 17.5.2 [pin 2023-06-27]
 	Added fonts/tex-culmus-latex version 0.7 [riastradh 2023-06-27]
 	Updated pkgtools/libnbcompat to 20230609nb1 [riastradh 2023-06-27]
+	Updated security/py-authlib to 1.2.1 [adam 2023-06-27]
+	Updated devel/py-click-repl to 0.3.0 [adam 2023-06-27]
