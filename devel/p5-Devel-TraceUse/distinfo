@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:16:29 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/06/27 07:15:07 wen Exp $
 
-BLAKE2s (Devel-TraceUse-2.096.tar.gz) = 1d17f6c916ce364293cab1885ae03b7cda83994591a128a3034287a28763ff0c
-SHA512 (Devel-TraceUse-2.096.tar.gz) = dffe8a64c47110e500ca53f12af32cd63aa3fd1857795433f672e25b2003cdd42af6d7967f3b2db4485abee835e5c124331103987b6e6d3d9af1fb28c827cd66
-Size (Devel-TraceUse-2.096.tar.gz) = 25425 bytes
+BLAKE2s (Devel-TraceUse-2.097.tar.gz) = 52a002ec05511d2cdd4c3d4ad07f3c060428d29c552635f512f6fa6f3f788b8d
+SHA512 (Devel-TraceUse-2.097.tar.gz) = 75111b4c6f55475c473d9abe4d7d15e3a9f5913807934a10d0f393238d8895db30113187240c179cddb0cbb19c0daffac8e3f7acb073e060dc583b795d716e9b
+Size (Devel-TraceUse-2.097.tar.gz) = 25419 bytes
