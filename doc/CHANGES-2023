@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4068 2023/06/27 08:34:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4069 2023/06/27 08:54:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5703,3 +5703,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-File-Find-Object to 0.3.7 [wen 2023-06-27]
 	Updated lang/erlang to 26.0.1 [adam 2023-06-27]
 	Updated net/rabbitmq to 3.12.1 [adam 2023-06-27]
+	Updated graphics/freetype2 to 2.13.1 [adam 2023-06-27]
+	Updated devel/py-zope.event to 5.0 [adam 2023-06-27]
