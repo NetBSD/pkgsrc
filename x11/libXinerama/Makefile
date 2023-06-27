@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/11/09 13:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2023/06/27 10:29:16 riastradh Exp $
 
 DISTNAME=	libXinerama-1.1.5
 CATEGORIES=	x11
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xinerama.pc.in
+
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 X11_LIB_NAME?=		libXinerama
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
