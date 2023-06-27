@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.14 2018/08/07 12:04:36 jperkin Exp $
+# $NetBSD: inplace.mk,v 1.15 2023/06/27 09:30:58 riastradh Exp $
 #
 # This file should not be included directly. Use USE_FEATURES instead.
 #
@@ -38,14 +38,20 @@ libnbcompat-extract:
 	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${LIBNBCOMPAT_PICDIR}/config.sub
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
 NBCOMPAT_CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .endif
 NBCOMPAT_CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 
 # The illumos fts(3) implementation is not (as of August 2018) largefile aware
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	ac_cv_func_fts_open=no
+CONFIGURE_ENV.SunOS+=	ac_cv_func_fts_open=no
+
+# NetBSD has working printf %lld and correct vsnprintf return values,
+# which can only be detected by runtime tests, not permitted when
+# cross-compiling.
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ENV.NetBSD+=	nb_cv_printf_lld=yes
+CONFIGURE_ENV.NetBSD+=	nb_cv_std_vsnprintf=yes
 .endif
 
 pre-configure: libnbcompat-build
