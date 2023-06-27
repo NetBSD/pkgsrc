@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/03/20 11:58:30 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/06/27 10:27:36 riastradh Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -31,7 +31,7 @@ INSTALLATION_DIRS+=	share/examples/xmlcatmgr
 XMLCATMGR=	${WRKSRC}/xmlcatmgr
 .else
 TOOL_DEPENDS+=	${PKGNAME}:../../textproc/xmlcatmgr
-XMLCATMGR=	${PREFIX}/bin/xmlcatmgr
+XMLCATMGR=	${TOOLBASE}/bin/xmlcatmgr
 .endif
 
 post-build:
