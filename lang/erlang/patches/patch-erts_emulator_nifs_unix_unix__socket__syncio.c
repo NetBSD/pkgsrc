@@ -1,8 +1,8 @@
-$NetBSD: patch-erts_emulator_nifs_unix_unix__socket__syncio.c,v 1.1 2023/05/25 10:14:00 jperkin Exp $
+$NetBSD: patch-erts_emulator_nifs_unix_unix__socket__syncio.c,v 1.2 2023/06/27 08:33:10 adam Exp $
 
 Expose required socket features on SunOS.
 
---- erts/emulator/nifs/unix/unix_socket_syncio.c.orig	2023-05-15 10:36:09.000000000 +0000
+--- erts/emulator/nifs/unix/unix_socket_syncio.c.orig	2023-06-08 05:33:54.000000000 +0000
 +++ erts/emulator/nifs/unix/unix_socket_syncio.c
 @@ -29,6 +29,15 @@
  #    include "config.h"
@@ -19,4 +19,4 @@ Expose required socket features on SunOS.
 +
  #ifdef ESOCK_ENABLE
  
- #ifdef HAVE_SENDFILE
+ /* If we HAVE_SCTP_H and Solaris, we need to define the following in
