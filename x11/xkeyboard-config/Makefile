@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/06/06 12:42:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.54 2023/06/27 10:29:06 riastradh Exp $
 
 DISTNAME=		xkeyboard-config-2.38
 CATEGORIES=		x11
@@ -15,7 +15,7 @@ CONFLICTS+=		xkbdata-[0-9]*
 
 USE_TOOLS+=		msgfmt perl pkg-config
 PKGCONFIG_OVERRIDE+=	xkeyboard-config.pc.in
-PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_FOR_BUILD_ONLY=	tool
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
