@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/02/28 06:58:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/27 10:43:34 riastradh Exp $
 
 DISTNAME=		font-bh-lucidatypewriter-75dpi-1.0.4
 CATEGORIES=		fonts
@@ -14,6 +14,6 @@ USE_TOOLS+=		pkg-config bdftopcf ucs2any gzip
 
 FONTS_DIRS.x11=		share/fonts/X11/75dpi
 
-.include "../../fonts/font-util/buildlink3.mk"
+.include "../../fonts/font-util/pkgconfig.mk"
 
 .include "../../mk/bsd.pkg.mk"
