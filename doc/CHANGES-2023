@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4073 2023/06/27 10:29:39 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4074 2023/06/27 10:35:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5710,3 +5710,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-File-Find-Rule-PPI to 1.07 [wen 2023-06-27]
 	Updated devel/py-test-env to 0.8.2 [adam 2023-06-27]
 	Updated devel/py-ipykernel to 6.23.3 [adam 2023-06-27]
+	Updated devel/p5-File-Find-Rule-VCS to 1.09 [wen 2023-06-27]
