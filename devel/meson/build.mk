@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.17 2023/02/24 08:19:00 adam Exp $
+# $NetBSD: build.mk,v 1.18 2023/06/27 10:41:25 riastradh Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -84,6 +84,7 @@ MESON_CROSS.sys_root=	'${_CROSS_DESTDIR}'
 MESON_CROSS_FILE=	${WRKDIR}/.meson_cross
 meson-configure: ${MESON_CROSS_FILE}
 ${MESON_CROSS_FILE}:
+	@${STEP_MSG} Creating meson cross file
 	${RUN}${ECHO} '[properties]' >$@.tmp
 .  for _v_ in ${MESON_CROSS_VARS}
 .    if defined(MESON_CROSS.${_v_})
@@ -113,7 +114,10 @@ MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 do-configure: meson-configure
 meson-configure:
 .for d in ${CONFIGURE_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} meson setup \
+.  if ${CONFIGURE_DIRS:[#]} != 1
+	@${STEP_MSG} Configuring meson in ${d}
+.  endif
+	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} meson setup \
 		--prefix ${PREFIX} \
 		--libdir lib \
 		--libexecdir libexec \
@@ -126,23 +130,33 @@ meson-configure:
 do-build: meson-build
 meson-build:
 .for d in ${BUILD_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} ninja -j ${_MAKE_JOBS_N:U1} -C output
+.  if ${BUILD_DIRS:[#]} != 1
+	@${STEP_MSG} Building with ninja in ${d}
+.  endif
+	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${MAKE_ENV} \
+	    ninja -j ${_MAKE_JOBS_N:U1} -C output
 .endfor
 
 do-install: meson-install
 meson-install:
 .for d in ${INSTALL_DIRS}
-	if [ -f ${WRKSRC}/meson_post_install.py ]; then		\
+	${RUN}if [ -f ${WRKSRC}/meson_post_install.py ]; then	\
 		${CHMOD} +x ${WRKSRC}/meson_post_install.py;	\
 	fi
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+.  if ${INSTALL_DIRS:[#]} != 1
+	@${STEP_MSG} Installing with ninja in ${d}
+.  endif
+	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 	    ninja -j ${_MAKE_JOBS_N:U1} -C output install
 .endfor
 
 do-test: meson-test
 meson-test:
 .for d in ${TEST_DIRS}
-	cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
+.  if ${TEST_DIRS:[#]} != 1
+	@${STEP_MSG} Testing with ninja in ${d}
+.  endif
+	${RUN}cd ${WRKSRC} && cd ${d} && ${SETENV} ${TEST_ENV} \
 	    ninja -j ${_MAKE_JOBS_N:U1} -C output test
 .endfor
 
