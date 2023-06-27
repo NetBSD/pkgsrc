@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2023/05/05 21:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.247 2023/06/27 10:44:46 riastradh Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -33,15 +33,11 @@ BUILD_DIRS=		nss
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 
-# nss doesn't really depend on nspr as a tool, but the
-# EXTRA_SHARED_LIBS we set there get passed through to the build of a
-# tool `nsinstall' and getting them to not be passed through is more
-# trouble than it is worth to nix this dependency.  (But if you feel
-# like going to the trouble to patch around it -- go for it!)
-TOOL_DEPENDS+=		nspr>=0:../../devel/nspr
-
 MAKE_FLAGS+=		CROSS_COMPILE=1
 MAKE_FLAGS+=		NATIVE_CC=${NATIVE_CC:Q}
+MAKE_FLAGS+=		NATIVE_CFLAGS=
+MAKE_FLAGS+=		NATIVE_LDFLAGS=
+MAKE_FLAGS+=		NATIVE_EXTRA_SHARED_LIBS=
 
 NSS_CPU_ARCH.aarch64eb=		aarch64
 NSS_CPU_ARCH.amd64=		x86_64
