@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.11 2022/04/10 19:54:02 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.12 2023/06/27 10:27:20 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -61,9 +61,13 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    MACHINE_ARCH=        powerpc
    .endif
 
-XXX Some variables, notably LOCALBASE and other paths that get baked
-into packages, cannot currently be set differently for native and
-target packages.
+Optionally, you can set CROSS_LOCALBASE for cross-compiled packages
+separately from LOCALBASE for natively compiled packages.  For example,
+you can use an unprivileged pkgsrc build into /home/user/cross/pkg that
+will create packages which install to /opt/pkg:
+
+   LOCALBASE=		/home/user/cross/pkg
+   CROSS_LOCALBASE=	/opt/pkg
 
 ** Bootstrapped pkgsrc
 

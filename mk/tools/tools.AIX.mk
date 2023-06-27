@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.19 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.AIX.mk,v 1.20 2023/06/27 10:27:21 riastradh Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -68,4 +68,4 @@ TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 
 # Special bootstrap script:
-TOOLS_PLATFORM.strip?=		${LOCALBASE}/bin/strip
+TOOLS_PLATFORM.strip?=		${TOOLBASE}/bin/strip
