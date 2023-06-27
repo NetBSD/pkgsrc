@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4060 2023/06/27 03:45:52 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4061 2023/06/27 07:12:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5693,3 +5693,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Date-Manip to 6.92 [wen 2023-06-27]
 	Updated devel/p5-Devel-CheckOS to 1.96 [wen 2023-06-27]
 	Updated devel/p5-Devel-Cover to 1.40 [wen 2023-06-27]
+	Updated devel/p5-Devel-NYTProf to 6.12 [wen 2023-06-27]
