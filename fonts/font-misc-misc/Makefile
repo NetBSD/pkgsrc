@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/02/28 07:13:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/27 10:43:34 riastradh Exp $
 
 DISTNAME=		font-misc-misc-1.1.3
 CATEGORIES=		fonts
@@ -14,6 +14,6 @@ USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
 
 FONTS_DIRS.x11=		share/fonts/X11/misc
 
-.include "../../fonts/font-util/buildlink3.mk"
+.include "../../fonts/font-util/pkgconfig.mk"
 
 .include "../../mk/bsd.pkg.mk"
