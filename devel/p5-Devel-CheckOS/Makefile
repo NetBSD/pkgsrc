@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/07/16 00:35:07 wen Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/27 03:15:43 wen Exp $
 
-DISTNAME=	Devel-CheckOS-1.93
+DISTNAME=	Devel-CheckOS-1.96
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
