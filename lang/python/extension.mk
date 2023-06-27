@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.60 2022/09/06 09:05:59 nia Exp $
+# $NetBSD: extension.mk,v 1.61 2023/06/27 10:31:21 riastradh Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -20,6 +20,9 @@ PYSETUPBUILDARGS?=	# empty
 PYSETUPBUILDARGS+=	-j${MAKE_JOBS}
 .    endif
 .  endif
+.  if ${USE_CROSS_COMPILE:U:tl} == "yes"
+PYSETUPBUILDARGS+=	--executable=${PYTHONBIN:Q}
+.  endif
 PYSETUPARGS?=		# empty
 PYSETUPINSTALLARGS?=	# empty
 PYSETUPOPTARGS?=	-c -O1
@@ -31,17 +34,20 @@ PYSETUPTESTARGS?=	# empty
 PYSETUPSUBDIR?=		# empty
 
 do-build:
-	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
-	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPBUILDTARGET} ${PYSETUPBUILDARGS})
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} \
+	 ${TOOL_PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} ${PYSETUPBUILDTARGET} \
+	 ${PYSETUPBUILDARGS})
 
 do-install:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
-	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" ${_PYSETUPINSTALLARGS})
+	 ${TOOL_PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" \
+	 ${_PYSETUPINSTALLARGS})
 
 .  if !target(do-test) && !(defined(TEST_TARGET) && !empty(TEST_TARGET))
 do-test:
-	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} \
-	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} ${PYSETUPTESTARGS})
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} \
+	 ${TOOL_PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} \
+	 ${PYSETUPTESTARGS})
 .  endif
 
 .endif
@@ -72,6 +78,6 @@ EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 DISTUTILS_BUILDDIR_IN_TEST_ENV?=	no
 
 .if ${DISTUTILS_BUILDDIR_IN_TEST_ENV} == "yes"
-DISTUTILS_BUILDDIR_CMD=	cd ${WRKSRC} && ${PYTHONBIN} ${.CURDIR}/../../lang/python/distutils-builddir.py
+DISTUTILS_BUILDDIR_CMD=	cd ${WRKSRC} && ${TOOL_PYTHONBIN} ${.CURDIR}/../../lang/python/distutils-builddir.py
 TEST_ENV+=	PYTHONPATH=${DISTUTILS_BUILDDIR_CMD:sh}
 .endif

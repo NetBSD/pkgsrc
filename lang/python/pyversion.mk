@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.149 2023/06/14 11:06:46 riastradh Exp $
+# $NetBSD: pyversion.mk,v 1.150 2023/06/27 10:31:21 riastradh Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -196,19 +196,40 @@ TEST_DEPENDS+=			${PYDEPENDENCY}
 BUILDLINK_DEPMETHOD.python?=	build
 .    endif
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
+.    if ${USE_CROSS_COMPILE:U:tl} == "yes"
+TOOL_DEPENDS+=			${PYDEPENDENCY}
+MAKE_ENV+=			PYTHONPATH=${WRKDIR:Q}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/${PYLIB:Q}
+pre-configure: ${WRKDIR}/.pysite/sitecustomize.py
+${WRKDIR}/.pysite/sitecustomize.py:
+	@${STEP_MSG} "Creating Python sitecustomize.py for cross-compiling"
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ( \
+		${ECHO} "import sys" && \
+		for v in \
+			sys.base_exec_prefix \
+			sys.base_prefix \
+			sys.exec_prefix \
+			sys.prefix \
+		; do \
+			${PRINTF} "%s = '%s'\\n" "$$v" ${LOCALBASE:Q}; \
+		done; \
+	) >${.TARGET}.tmp
+	${RUN} ${MV} -f ${.TARGET}.tmp ${.TARGET}
+.    endif
 .  endif
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
-.if exists(${PYTHONBIN}m)
-PYTHONCONFIG=	${LOCALBASE}/bin/python${PYVERSSUFFIX}m-config
+TOOL_PYTHONBIN=	${TOOLBASE}/bin/python${PYVERSSUFFIX}
+.if exists(${TOOL_PYTHONBIN}m)
+PYTHONCONFIG=	${TOOLBASE}/bin/python${PYVERSSUFFIX}m-config
 .else
-PYTHONCONFIG=	${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
+PYTHONCONFIG=	${TOOLBASE}/bin/python${PYVERSSUFFIX}-config
 .endif
 PY_COMPILE_ALL= \
-	${PYTHONBIN} ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
+	${TOOL_PYTHONBIN} ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 PY_COMPILE_O_ALL= \
-	${PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
+	${TOOL_PYTHONBIN} -O ${PREFIX}/lib/python${PYVERSSUFFIX}/compileall.py -q
 
 PYINC=		include/python${PYVERSSUFFIX}
 PYLIB=		lib/python${PYVERSSUFFIX}
@@ -221,7 +242,7 @@ PRINT_PLIST_AWK+=	/^${PYSITELIB:S|/|\\/|g}/ \
 PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
 
-ALL_ENV+=		PYTHON=${PYTHONBIN}
+ALL_ENV+=		PYTHON=${TOOL_PYTHONBIN}
 .if defined(USE_CMAKE) || defined(BUILD_USES_CMAKE)
 # used by FindPython
 CMAKE_ARGS+=		-DPython_EXECUTABLE:FILEPATH=${PYTHONBIN}
@@ -253,7 +274,8 @@ _PKG_VARS.pyversion=	\
 _SYS_VARS.pyversion=	\
 	PYTHON_VERSION PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX PYPKGSRCDIR		\
 	PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL		\
-	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_ARGS
+	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_ARGS		\
+	TOOL_PYTHONBIN
 _USE_VARS.pyversion=	\
 	PKGNAME_REQD PKGNAME_OLD LOCALBASE PREFIX BUILDLINK_DIR PKGNAME
 _DEF_VARS.pyversion=	\
