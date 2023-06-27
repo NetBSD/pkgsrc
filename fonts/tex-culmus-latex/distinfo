@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/27 10:52:47 riastradh Exp $
+
+BLAKE2s (culmus-latex-0.7.tar.gz) = 3bcc48099de7ac87a65c65aa162b2d6ea8ebee2e5b9b5303f9a10e5291b28654
+SHA512 (culmus-latex-0.7.tar.gz) = 75240bc163c43f445e1fa502bfc9bd9fdd70ad9f263242c7219e11d5b90a65f0abdec3268525771056f11ea468595a9349883a1726b3e9899f34e553b5875e89
+Size (culmus-latex-0.7.tar.gz) = 1885416 bytes
