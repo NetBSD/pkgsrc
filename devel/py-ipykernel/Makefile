@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/06/17 12:42:24 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/06/27 10:28:52 adam Exp $
 
-DISTNAME=	ipykernel-6.23.2
+DISTNAME=	ipykernel-6.23.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
