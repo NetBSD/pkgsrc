@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4084 2023/06/27 13:40:55 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4085 2023/06/27 17:13:47 roy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-railties70 to 7.0.5.1 [taca 2023-06-27]
 	Updated textproc/ruby-actiontext70 to 7.0.5.1 [taca 2023-06-27]
 	Updated www/ruby-rails70 to 7.0.5.1 [taca 2023-06-27]
+	Updated net/openresolv to 3.13.2 [roy 2023-06-27]
