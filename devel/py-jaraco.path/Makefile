@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/04/20 05:52:12 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/06/27 07:17:17 adam Exp $
 
-DISTNAME=	jaraco.path-3.5.0
+DISTNAME=	jaraco.path-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.path/}
@@ -15,6 +15,11 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == Darwin
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa-[0-9]*:../../devel/py-pyobjc-framework-Cocoa
+.endif
 
 USE_LANGUAGES=	# none
 
