@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/06/07 06:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
@@ -49,7 +49,7 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create1=no
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-CONFIGURE_ENV+=			ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=			ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 LIBTOOL_OVERRIDE=		unix/xserver/libtool
 

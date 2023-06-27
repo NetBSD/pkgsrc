@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/01/29 21:18:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=	xf86-video-sis-0.12.0
 PKGREVISION=	1
@@ -21,7 +21,7 @@ RELRO_SUPPORTED=	partial
 .include "../../mk/bsd.prefs.mk"
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

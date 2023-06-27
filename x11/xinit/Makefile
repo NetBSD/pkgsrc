@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/12/04 15:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/27 10:28:34 riastradh Exp $
 
 DISTNAME=		xinit-1.4.2
 CATEGORIES=		x11
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-xinit=${PREFIX}/bin/xinit --without-launchd
 USE_TOOLS+=		pkg-config xauth:run
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
-CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 CONFIGURE_ENV+=		ac_cv_path_MCOOKIE="${PREFIX}/bin/mcookie"
 
 INSTALL_MAKE_FLAGS+=	xinitrcdir=${PREFIX}/share/examples/xinit
