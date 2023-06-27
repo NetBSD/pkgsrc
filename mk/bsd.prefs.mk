@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.433 2023/06/27 10:27:20 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.434 2023/06/27 10:36:40 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -450,6 +450,28 @@ SHAREMODE?=		${DOCMODE}
 	@${FALSE}
 .endif
 
+# When cross-compilation support is requested, the following options
+# must be specified as well or guessable:
+# - MACHINE_ARCH is set to TARGET_ARCH if set.
+# - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
+# - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
+# - DESTDIR support is required
+#
+# _CROSS_DESTDIR is set for internal use to avoid conditionalising
+# the use.
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if defined(TARGET_ARCH)
+MACHINE_ARCH=	${TARGET_ARCH}
+.  endif
+CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
+.  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
+PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
+.  else
+_CROSS_DESTDIR=	${CROSS_DESTDIR}
+.  endif
+.endif
+
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
 .if exists(${_PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk)
@@ -528,28 +550,6 @@ _MAKE_INSTALL_AS_ROOT?=	yes
 # Whether to run the install target as root.
 _MAKE_PACKAGE_AS_ROOT?=	yes
 # Whether to run the package target as root.
-
-# When cross-compilation support is requested, the following options
-# must be specified as well or guessable:
-# - MACHINE_ARCH is set to TARGET_ARCH if set.
-# - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
-# - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
-# - DESTDIR support is required
-#
-# _CROSS_DESTDIR is set for internal use to avoid conditionalising
-# the use.
-
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.  if defined(TARGET_ARCH)
-MACHINE_ARCH=	${TARGET_ARCH}
-.  endif
-CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
-.  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
-PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
-.  else
-_CROSS_DESTDIR=	${CROSS_DESTDIR}
-.  endif
-.endif
 
 # TOOLS_CROSS_DESTDIR is used for the libtool build to make a wrapper
 # that points at the cross-destdir as sysroot, without setting
