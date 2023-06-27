@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/01 14:11:01 mef Exp $
+$NetBSD: distinfo,v 1.5 2023/06/27 13:07:54 mef Exp $
 
-BLAKE2s (R/tzdb_0.3.0.tar.gz) = c4922b666349b2bdf33adb84ffac946cbb73cdec01a2500c9f84801b06468469
-SHA512 (R/tzdb_0.3.0.tar.gz) = ca3de0e75d932dcf9e23dbd05788d3684336f8fc2e5e929817e48de2c1180ab68e5afc155f53c309f5fc3058cff2ebb4ef0931d5384234fe585fc1460f21668a
-Size (R/tzdb_0.3.0.tar.gz) = 567544 bytes
+BLAKE2s (R/tzdb_0.4.0.tar.gz) = be187c3abbd8484cddb53c2b7682059f4fc47de7cacfd7dd40af1499bed81ae6
+SHA512 (R/tzdb_0.4.0.tar.gz) = 4f2141850983e070ed85220bda374ea4c59d1ef0d2f939b30ec69a61633df0ed921ad65fe1ac3c8b98441763bf09c4cde0478d41229cff57c8fa4f0001489cdc
+Size (R/tzdb_0.4.0.tar.gz) = 586327 bytes
