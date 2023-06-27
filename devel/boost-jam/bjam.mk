@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.22 2023/01/22 16:24:29 ryoon Exp $
+# $NetBSD: bjam.mk,v 1.23 2023/06/27 10:43:43 riastradh Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 .include "../../devel/boost-build/toolset.mk"
@@ -7,7 +7,7 @@
 # just a tool that runs at build-time?
 TOOL_DEPENDS+=		boost-jam>=0:../../devel/boost-jam
 
-BJAM=			${BUILDLINK_PREFIX.boost-jam}/bin/b2
+BJAM=			${TOOLBASE}/bin/b2
 
 BJAM_ARGS+=		${MAKE_JOBS:D-j${MAKE_JOBS}}
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
