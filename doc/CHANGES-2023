@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4069 2023/06/27 08:54:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4070 2023/06/27 09:58:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5705,3 +5705,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/rabbitmq to 3.12.1 [adam 2023-06-27]
 	Updated graphics/freetype2 to 2.13.1 [adam 2023-06-27]
 	Updated devel/py-zope.event to 5.0 [adam 2023-06-27]
+	Updated devel/py-nihtest to 1.1.1 [wiz 2023-06-27]
