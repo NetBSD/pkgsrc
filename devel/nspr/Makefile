@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/12/15 23:01:17 adam Exp $
+# $NetBSD: Makefile,v 1.123 2023/06/27 10:44:01 riastradh Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
 NSPR_RELEASE=	4.35.0
@@ -31,9 +31,24 @@ CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX}/lib/nspr
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		native
+
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 MAKE_FLAGS+=		HOST_CC=${NATIVE_CC:Q}
 MAKE_FLAGS+=		HOST_CXX=${NATIVE_CXX:Q}
+post-install: post-install-rm-perl
+.PHONY: post-install-rm-perl
+post-install-rm-perl:
+	${RUN} rm ${DESTDIR:Q}${PREFIX:Q}/bin/compile-et.pl
+	${RUN} rm ${DESTDIR:Q}${PREFIX:Q}/bin/prerr.properties
+.else
+# XXX Not actually sure if compile-et.pl or prerr.properties are
+# supposed to be included -- they are run at build-time, and other
+# packaging systems like Debian exclude them.  But out of an abundance
+# of caution, let's avoid breaking downstream packages for now
+# (20230609) by continuing to include these in native builds.  (Cross
+# builds break because of the missing interpreter.)
+PLIST.native=		yes
 .endif
 
 BUILDLINK_TRANSFORM+=	rm:-Wall
