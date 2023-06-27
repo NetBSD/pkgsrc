@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.410 2023/06/12 07:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.411 2023/06/27 10:52:47 riastradh Exp $
 #
 
 COMMENT=	Fonts
@@ -445,6 +445,7 @@ SUBDIR+=	tex-courier-scaled-doc
 SUBDIR+=	tex-cryst
 SUBDIR+=	tex-cryst-doc
 SUBDIR+=	tex-cs
+SUBDIR+=	tex-culmus-latex
 SUBDIR+=	tex-cyklop
 SUBDIR+=	tex-cyklop-doc
 SUBDIR+=	tex-dancers
