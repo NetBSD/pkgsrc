@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/02/28 06:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/06/27 10:43:33 riastradh Exp $
 
 DISTNAME=		font-bh-100dpi-1.0.4
 CATEGORIES=		fonts
@@ -19,6 +19,6 @@ INSTALLATION_DIRS=	share/doc/font-bh-100dpi
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/font-bh-100dpi
 
-.include "../../fonts/font-util/buildlink3.mk"
+.include "../../fonts/font-util/pkgconfig.mk"
 
 .include "../../mk/bsd.pkg.mk"
