@@ -1,0 +1,15 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2023/06/27 10:42:07 riastradh Exp $
+
+New cross_scanner option so we can pass the exact path to the
+build-time wayland-scanner tool through when cross-compiling.
+
+--- meson_options.txt.orig	2022-06-30 21:59:11.000000000 +0000
++++ meson_options.txt
+@@ -22,3 +22,7 @@ option('icon_directory',
+   description: 'Location used to look for cursors (defaults to ${datadir}/icons if unset)',
+   type: 'string',
+   value: '')
++option('cross_scanner',
++  description: 'Path to build-time wayland-scanner binary',
++  type: 'string',
++  value: 'wayland-scanner')
