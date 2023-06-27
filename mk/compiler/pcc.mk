@@ -1,4 +1,4 @@
-# $NetBSD: pcc.mk,v 1.8 2015/10/09 17:27:09 he Exp $
+# $NetBSD: pcc.mk,v 1.9 2023/06/27 10:27:21 riastradh Exp $
 #
 # This is the compiler definition for the PCC compiler.
 #
@@ -18,7 +18,7 @@ COMPILER_PCC_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-PCCBASE?=		${LOCALBASE}
+PCCBASE?=		${TOOLBASE}
 
 # common definitions
 _COMPILER_TYPE.c=	CC
