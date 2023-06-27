@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/27 10:29:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/06/27 10:35:29 riastradh Exp $
 
 .include "dist.mk"
 
@@ -52,6 +52,8 @@ CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=false
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptmx=yes
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptc=no
 MAKE_ENV+=		\
+	_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_${PY_PLATNAME:Q}
+MAKE_ENV+=		\
 	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
 MAKE_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC}
 .endif
@@ -78,19 +80,10 @@ SUBST_SED.setup=	-e "s,'crypt','crypt_i',"
 PY_VER_SUFFIX=		3.10
 
 .if ${OPSYS} == "Darwin"
-PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
-.elif ${OPSYS} == "IRIX"
-PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
-.elif ${OPSYS} == "SunOS"
-PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
-.elif ${OPSYS} == "HPUX"
-PY_PLATNAME=	hp-ux11
-.elif ${OPSYS} == "Linux"
-PY_PLATNAME=	linux
-.else
-PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
+
+.include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise

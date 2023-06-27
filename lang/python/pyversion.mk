@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.150 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: pyversion.mk,v 1.151 2023/06/27 10:35:29 riastradh Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -200,11 +200,13 @@ BUILDLINK_DEPMETHOD.python?=	build
 TOOL_DEPENDS+=			${PYDEPENDENCY}
 MAKE_ENV+=			PYTHONPATH=${WRKDIR:Q}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/${PYLIB:Q}
 pre-configure: ${WRKDIR}/.pysite/sitecustomize.py
+.include "${PYPKGSRCDIR}/platname.mk"
 ${WRKDIR}/.pysite/sitecustomize.py:
 	@${STEP_MSG} "Creating Python sitecustomize.py for cross-compiling"
 	${RUN} ${MKDIR} ${.TARGET:H}
 	${RUN} ( \
 		${ECHO} "import sys" && \
+		${PRINTF} "sys.platform = '%s'\\n" ${PY_PLATNAME:Q} && \
 		for v in \
 			sys.base_exec_prefix \
 			sys.base_prefix \
