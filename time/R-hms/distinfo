@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/06/27 13:00:21 mef Exp $
 
-BLAKE2s (R/hms_1.1.0.tar.gz) = 59d1118dd54061296a7d5e3bf75dfda690514dec74ccd09b4626635e1383ec74
-SHA512 (R/hms_1.1.0.tar.gz) = 9d53858655ceb88e0184dfe4fe44da1ee6a3144325add17b3e208202eed976897b8fcf4c2aef0d47af89b86697b71da26fc5ed612a1aa78caae4701d40b62a41
-Size (R/hms_1.1.0.tar.gz) = 43142 bytes
+BLAKE2s (R/hms_1.1.3.tar.gz) = 31a00412616dbfd8182dacef149a13af43dfc1e67b9e0e5a0fbd1b4122371892
+SHA512 (R/hms_1.1.3.tar.gz) = ea0b8b242e9d441893214c1a973f1f664895a58a8063e6f66ecd7c9459272cf594bb39960f6d9b5ff4d5bdc084b18fab4bcaf3a1bd663647fbb5bfe5740d48df
+Size (R/hms_1.1.3.tar.gz) = 43379 bytes
