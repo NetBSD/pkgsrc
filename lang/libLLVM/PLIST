@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/03/13 15:22:32 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/06/27 10:33:41 riastradh Exp $
 include/libLLVM/llvm-c/Analysis.h
 include/libLLVM/llvm-c/BitReader.h
 include/libLLVM/llvm-c/BitWriter.h
@@ -1666,6 +1666,7 @@ ${PLIST.notdylib}lib/libLLVM/libLLVM-${LLVM_MAJOR_MINOR}.${SOEXT}
 ${PLIST.notdylib}lib/libLLVM/libLLVM-${PKGVERSION}.${SOEXT}
 lib/libLLVM/libLLVM.${SOEXT}
 libexec/libLLVM/llvm-config
+libexec/libLLVM/llvm-tblgen
 share/libLLVM/cmake/AddLLVM.cmake
 share/libLLVM/cmake/AddLLVMDefinitions.cmake
 share/libLLVM/cmake/AddOCaml.cmake
