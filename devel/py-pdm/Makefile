@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/05/15 20:46:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/06/28 14:11:53 adam Exp $
 
-DISTNAME=	pdm-2.6.1
+DISTNAME=	pdm-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
-DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.12.11:../../devel/py-cachecontrol
+DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.13.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.15:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-findpython>=0.2.2:../../lang/py-findpython
@@ -27,8 +27,8 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=12.3.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.1:../../textproc/py-tomlkit
 DEPENDS+=	${PYPKGPREFIX}-unearth>=0.9.0:../../net/py-unearth
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=1.0.6:../../devel/py-test-httpserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=10.2:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.31.0:../../devel/py-test-xdist
 
