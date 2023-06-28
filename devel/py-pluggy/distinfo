@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/10/11 13:14:15 adam Exp $
+$NetBSD: distinfo,v 1.17 2023/06/28 08:55:29 wiz Exp $
 
-BLAKE2s (pluggy-1.0.0.tar.gz) = 9f378760f1f7c951fc6bfde5bbf709dd1895641268b4f007c660487a7d1e607e
-SHA512 (pluggy-1.0.0.tar.gz) = cf0bcbb4330c24ce473614befa19548f33fb39fa0ad094e1eae786202d7adadc28e16499f80ab96b630091765404ca5c5b6f9a55bc605e03514d8ab50cf9ae00
-Size (pluggy-1.0.0.tar.gz) = 51510 bytes
+BLAKE2s (pluggy-1.2.0.tar.gz) = c368b747fc330bb48761a78ad5e84e7f5ceca73e91f52743992642db5210c2f1
+SHA512 (pluggy-1.2.0.tar.gz) = b2b6a80737c06e1507eb12513ed7f5ce508fd4a139c559a3a15d9f173f4455ef3847783efb91c32eca6e26cbe37b0336467d50c5db0563d8dbd17bd825cd7407
+Size (pluggy-1.2.0.tar.gz) = 61613 bytes
