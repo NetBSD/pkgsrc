@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.12 2023/01/03 16:32:42 wiz Exp $
+$NetBSD: patch-ag,v 1.13 2023/06/28 21:14:10 wiz Exp $
 
---- gettext-tools/gnulib-lib/Makefile.in.orig	2022-10-09 21:32:08.000000000 +0000
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2023-06-17 11:54:41.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in
-@@ -4264,13 +4264,13 @@ info: info-am
+@@ -6186,13 +6186,13 @@ info: info-am
  
  info-am:
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ag,v 1.12 2023/01/03 16:32:42 wiz Exp $
  
  install-html: install-html-am
  
-@@ -4552,14 +4552,6 @@ fcntl.h: fcntl.in.h $(top_builddir)/conf
+@@ -6538,14 +6538,6 @@ fcntl.h: fcntl.in.h $(top_builddir)/conf
  @GL_GENERATE_GETOPT_CDEFS_H_FALSE@getopt-cdefs.h: $(top_builddir)/config.status
  @GL_GENERATE_GETOPT_CDEFS_H_FALSE@	rm -f $@
  
@@ -30,6 +30,6 @@ $NetBSD: patch-ag,v 1.12 2023/01/03 16:32:42 wiz Exp $
 -	  *) rm -f $(DESTDIR)$(libdir)/libgettextlib.a ;; \
 -	esac
 -
- # We need the following in order to create <iconv.h> when the system
- # doesn't have one that works with the given compiler.
- @GL_GENERATE_ICONV_H_TRUE@iconv.h: iconv.in.h $(top_builddir)/config.status $(CXXDEFS_H) $(ARG_NONNULL_H) $(WARN_ON_USE_H)
+ malloc/scratch_buffer.gl.h: malloc/scratch_buffer.h
+ 	$(AM_V_GEN)$(MKDIR_P) 'malloc'
+ 	$(AM_V_at)$(SED_HEADER_STDOUT) \
