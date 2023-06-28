@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4104 2023/06/28 09:19:08 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4105 2023/06/28 09:37:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5768,3 +5768,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 68.0.0 [wiz 2023-06-28]
 	Updated graphics/py-cairo to 1.24.0 [wiz 2023-06-28]
 	Updated print/texlab to 5.7.0 [wiz 2023-06-28]
+	Updated converters/bdf2psf to 1.222 [fcambus 2023-06-28]
