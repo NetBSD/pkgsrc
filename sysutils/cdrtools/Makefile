@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2023/02/10 10:52:21 adam Exp $
+# $NetBSD: Makefile,v 1.130 2023/06/28 18:38:52 bsiegert Exp $
 
 DISTNAME=	2023-01-12
 PKGNAME=	cdrtools-3.02a10
@@ -12,7 +12,7 @@ HOMEPAGE=	https://codeberg.org/schilytools/schilytools/
 COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 LICENSE=	cddl-1.0 AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND 2-clause-bsd
 
-LDFLAGS.Darwin+=	-liconv
+LDFLAGS.Darwin+=	-L${PREFIX}/lib -lintl -liconv
 
 .include "../../mk/bsd.prefs.mk"
 
