@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.31 2023/06/05 15:10:17 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.32 2023/06/28 08:33:57 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.2.1.zip
@@ -27,19 +27,19 @@ GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20220722155223-a9213eeb770e.zip
 GO_MODULE_FILES+=	golang.org/x/exp/typeparams/@v/v0.0.0-20221212164502-fae10dda9338.mod
 GO_MODULE_FILES+=	golang.org/x/exp/typeparams/@v/v0.0.0-20221212164502-fae10dda9338.zip
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.10.0.mod
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.10.0.zip
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.11.0.mod
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.11.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20210220032951-036812b2e83c.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.2.0.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.2.0.zip
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.3.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.3.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.9.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.9.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.10.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.10.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.3.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.9.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.9.0.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.9.4-0.20230601215739-41a7dc76dd8f.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.9.4-0.20230601215739-41a7dc76dd8f.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.10.1-0.20230622221742-0622ad2359a7.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.10.1-0.20230622221742-0622ad2359a7.zip
 GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20230110180137-6ad3e3d07815.mod
 GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20230110180137-6ad3e3d07815.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
