@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4097 2023/06/28 08:49:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4098 2023/06/28 08:52:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5761,3 +5761,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pdf to 3.11.0 [wiz 2023-06-28]
 	Updated devel/py-importlib-metadata to 6.7.0 [wiz 2023-06-28]
 	Updated security/py-keyring to 24.2.0 [wiz 2023-06-28]
+	Updated lang/py-lsprotocol to 2023.0.0a2 [wiz 2023-06-28]
