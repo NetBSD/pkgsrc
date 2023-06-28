@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4111 2023/06/28 14:16:08 leot Exp $
+$NetBSD: CHANGES-2023,v 1.4112 2023/06/28 14:30:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5776,3 +5776,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm_backend to 2.1.2 [adam 2023-06-28]
 	Updated devel/py-pdm to 2.7.4 [adam 2023-06-28]
 	Updated devel/opa to 0.53.1 [leot 2023-06-28]
+	Updated devel/conftest to 0.43.1 [leot 2023-06-28]
