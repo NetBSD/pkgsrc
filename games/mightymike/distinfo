@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/06/28 23:40:48 charlotte Exp $
+
+BLAKE2s (jorio-Pomme-d57c28e205462e51063e787f9ebddaadff592f1e.tar.gz) = b626a018fcd485e04cc498da7cff6b185c6746b837812bd416616dcb6d3f28ef
+SHA512 (jorio-Pomme-d57c28e205462e51063e787f9ebddaadff592f1e.tar.gz) = 79613bd5670488645bcb2d6e20d9945507d53365cded204ab5045e01af79c4dcbe3143cc28e341859f36205837f5051ef16089e7983401a1f746d2bc0e857b77
+Size (jorio-Pomme-d57c28e205462e51063e787f9ebddaadff592f1e.tar.gz) = 148831 bytes
+BLAKE2s (mightymike-3.0.2.tar.gz) = 704784bfb403fe4cb8e4f37238826c6e636bd802d7f6004ba9a2e02fa59164cf
+SHA512 (mightymike-3.0.2.tar.gz) = cc8c7ee781ca61fcc5aec9da5046b93268e02bcb41dfd71d6eeaf3b01af55fa6b38b361d21be4bd2d432a6b33358e0882d74f035fdc69c51a8c5a98b6a938d2b
+Size (mightymike-3.0.2.tar.gz) = 28153613 bytes
