@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4113 2023/06/28 20:04:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4114 2023/06/28 21:14:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5778,3 +5778,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/opa to 0.53.1 [leot 2023-06-28]
 	Updated devel/conftest to 0.43.1 [leot 2023-06-28]
 	Updated print/poppler to 23.06.0 [wiz 2023-06-28]
+	Updated devel/gettext to 0.22 [wiz 2023-06-28]
