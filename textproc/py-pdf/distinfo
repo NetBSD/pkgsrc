@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/15 20:04:20 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/06/28 08:45:30 wiz Exp $
 
-BLAKE2s (pypdf-3.9.1.tar.gz) = 7e705dd55115944a7134c943132e77b372f283a70eeb43f64583eb4a286557a4
-SHA512 (pypdf-3.9.1.tar.gz) = b232221ea3eba67651e1ac170620e8ff874802e36919c02365c38e361f138e5a1ffda47ead3144af4f8c34fca8a362d14ec566fcc1a8d628243b3d0af52f6292
-Size (pypdf-3.9.1.tar.gz) = 250975 bytes
+BLAKE2s (pypdf-3.11.0.tar.gz) = a1bcb8c1ec2e9d332fdf7c94f1195475e4d3a92f6e9f79e00e4f26a52ec55572
+SHA512 (pypdf-3.11.0.tar.gz) = ccc6de6c7401eb5342a8dc72af6c99591d11f3c6a7cae040a4092ab5a3628945ebefcae2a05da57a41e036a91e0e03199240f7830cee709beddc0fec0c776424
+Size (pypdf-3.11.0.tar.gz) = 259329 bytes
