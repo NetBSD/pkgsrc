@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/06/27 10:36:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.21 2023/06/28 01:34:36 riastradh Exp $
 
 DISTNAME=	libxshmfence-1.3.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,8 +23,6 @@ PKGCONFIG_OVERRIDE+=	xshmfence.pc.in
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-futex
 CONFIGURE_ARGS+=	--enable-semaphore
-LIBXSHM_PAGESIZE!=	/sbin/sysctl -n hw.pagesize
-CPPFLAGS+=		-DLIBXSHM_PAGESIZE=${LIBXSHM_PAGESIZE}
 .endif
 
 post-extract:
