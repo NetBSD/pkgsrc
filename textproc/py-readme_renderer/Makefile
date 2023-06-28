@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/05/02 16:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/06/28 08:57:58 wiz Exp $
 
-DISTNAME=	readme_renderer-37.3
+DISTNAME=	readme_renderer-40.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/readme_renderer/}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
