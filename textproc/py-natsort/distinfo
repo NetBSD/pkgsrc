@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/03/08 12:18:09 adam Exp $
+$NetBSD: distinfo,v 1.24 2023/06/28 08:43:18 wiz Exp $
 
-BLAKE2s (natsort-8.3.1.tar.gz) = 440bc6e6399f22079533e710dd6768bb95c12c6b55910d1c0338fa04226c95c4
-SHA512 (natsort-8.3.1.tar.gz) = 98ee9bfed9307487b9ae9ced5ce723b6840c6f882d06702f205986430572b767f3ac0930ffdf0663d99256f6feed704394b2b7e11f4b01f4f0241cd8639df622
-Size (natsort-8.3.1.tar.gz) = 123736 bytes
+BLAKE2s (natsort-8.4.0.tar.gz) = 987fae68ebe07248ded10be5170d102f8da71e786b702c7b038963b62383711d
+SHA512 (natsort-8.4.0.tar.gz) = a005abc0fe7ccbb58d1926698a841d90f7f3eac72f062044a6716f0676e0b0766f3e7e14867fb2a0ff1124deaf9796d096744d68b2f6eea001841abed49345c8
+Size (natsort-8.4.0.tar.gz) = 76575 bytes

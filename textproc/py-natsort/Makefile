@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/03/08 12:18:09 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/06/28 08:43:18 wiz Exp $
 
-DISTNAME=	natsort-8.3.1
+DISTNAME=	natsort-8.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/natsort/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
@@ -23,6 +24,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} natsort natsort-${PYVERSSUFFIX} || ${TRUE}
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
