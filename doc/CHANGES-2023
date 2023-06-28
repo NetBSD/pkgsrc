@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4099 2023/06/28 08:55:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4100 2023/06/28 08:57:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5763,3 +5763,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-keyring to 24.2.0 [wiz 2023-06-28]
 	Updated lang/py-lsprotocol to 2023.0.0a2 [wiz 2023-06-28]
 	Updated devel/py-pluggy to 1.2.0 [wiz 2023-06-28]
+	Updated shells/nushell to 0.82.0 [pin 2023-06-28]
