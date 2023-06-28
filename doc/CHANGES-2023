@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4106 2023/06/28 09:49:20 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4107 2023/06/28 10:00:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5770,3 +5770,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/texlab to 5.7.0 [wiz 2023-06-28]
 	Updated converters/bdf2psf to 1.222 [fcambus 2023-06-28]
 	Updated x11/xkeyboard-config to 2.39 [wiz 2023-06-28]
+	Updated finance/gnucash to 5.3 [wiz 2023-06-28]
