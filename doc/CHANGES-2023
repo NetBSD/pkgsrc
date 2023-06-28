@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4095 2023/06/28 08:45:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4096 2023/06/28 08:47:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5759,3 +5759,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-platformdirs to 3.8.0 [adam 2023-06-28]
 	Updated textproc/py-natsort to 8.4.0 [wiz 2023-06-28]
 	Updated textproc/py-pdf to 3.11.0 [wiz 2023-06-28]
+	Updated devel/py-importlib-metadata to 6.7.0 [wiz 2023-06-28]
