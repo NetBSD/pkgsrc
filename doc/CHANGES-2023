@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4109 2023/06/28 10:47:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4110 2023/06/28 14:12:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5773,3 +5773,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/gnucash to 5.3 [wiz 2023-06-28]
 	Updated finance/gnucash-docs to 5.2 [wiz 2023-06-28]
 	Updated devel/py-mercurial to 6.4.5 [wiz 2023-06-28]
+	Updated devel/py-pdm_backend to 2.1.2 [adam 2023-06-28]
+	Updated devel/py-pdm to 2.7.4 [adam 2023-06-28]
