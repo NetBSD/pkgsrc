@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/05/19 20:35:47 adam Exp $
+# $NetBSD: Makefile,v 1.77 2023/06/28 13:45:23 riastradh Exp $
 
 DISTNAME=	libuv-1.45.0
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	agc@pkgsrc.org
 HOMEPAGE=	https://github.com/libuv/libuv
 COMMENT=	Cross-platform asychronous I/O
 LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
+
+USE_LANGUAGES+=	c11		# stdatomic.h
+GCC_REQD+=	4.9		# XXX until USE_LANGUAGES knows about c11/gcc49
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake pkg-config
