@@ -1,8 +1,8 @@
-$NetBSD: patch-gettext-tools_tests_Makefile.in,v 1.2 2020/04/20 08:37:14 wiz Exp $
+$NetBSD: patch-gettext-tools_tests_Makefile.in,v 1.3 2023/06/28 21:14:10 wiz Exp $
 
---- gettext-tools/tests/Makefile.in.orig	2020-04-14 04:46:33.000000000 +0000
+--- gettext-tools/tests/Makefile.in.orig	2023-06-17 11:54:44.000000000 +0000
 +++ gettext-tools/tests/Makefile.in
-@@ -2613,7 +2613,12 @@ AM_CPPFLAGS = \
+@@ -3786,7 +3786,12 @@ AM_CPPFLAGS = \
  
  # INTL_MACOSX_LIBS is needed because the programs depend on libintl.la
  # but libtool doesn't put -Wl,-framework options into .la files.
@@ -12,6 +12,6 @@ $NetBSD: patch-gettext-tools_tests_Makefile.in,v 1.2 2020/04/20 08:37:14 wiz Exp
 +.else
  LDADD = $(LDADD_@USE_INCLUDED_LIBINTL@) @INTL_MACOSX_LIBS@
 +.endif
- LDADD_yes = ../intl/libintl.la @LTLIBTHREAD@
- LDADD_no = ../intl/libgnuintl.la @LTLIBTHREAD@ @LTLIBINTL@
+ LDADD_yes = ../../gettext-runtime/intl/libintl.la @LTLIBTHREAD@
+ LDADD_no = ../../gettext-runtime/intl/libgnuintl.la @LTLIBTHREAD@ @LTLIBINTL@
  tstgettext_SOURCES = \
