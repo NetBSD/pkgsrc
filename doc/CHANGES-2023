@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4086 2023/06/28 03:34:36 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4087 2023/06/28 07:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5749,3 +5749,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails70 to 7.0.5.1 [taca 2023-06-27]
 	Updated net/openresolv to 3.13.2 [roy 2023-06-27]
 	Added games/bugdom version 1.3.3 [charlotte 2023-06-27]
+	Updated emulators/mame to 0.256 [wiz 2023-06-28]
