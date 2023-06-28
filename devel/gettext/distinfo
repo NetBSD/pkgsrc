@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.43 2023/01/03 16:32:42 wiz Exp $
+$NetBSD: distinfo,v 1.44 2023/06/28 21:14:10 wiz Exp $
 
-BLAKE2s (gettext-0.21.1.tar.gz) = ac628eb0776bbfd93f71fd6f6b59efb1738f05b956d77281b513c828dbf2450d
-SHA512 (gettext-0.21.1.tar.gz) = ccd43a43fab3c90ed99b3e27628c9aeb7186398153b137a4997f8c7ddfd9729b0ba9d15348567e5206af50ac027673d2b8a3415bb3fc65f87ad778f85dc03a05
-Size (gettext-0.21.1.tar.gz) = 25248473 bytes
-SHA1 (patch-aa) = ec9cad88d5a0de67b70d417915ec0f1cfb3552b2
-SHA1 (patch-ad) = 56222fbc6f1db47a70457bb06d0b82f06f286563
-SHA1 (patch-ae) = 662975f811495f13604001964fcc6e3d13b1276c
-SHA1 (patch-ag) = 7aa7375507a0aed0bf251101a1a3fecb1660c8b6
+BLAKE2s (gettext-0.22.tar.gz) = 6b3b0b9824a6c8d58b28717b2d9089ed4895bbf4a1f7b0979117d8449a28b4ba
+SHA512 (gettext-0.22.tar.gz) = e2a58dde1cae3e6b79c03e7ef3d888f7577c1f4cba283b3b0f31123ceea8c33d7c9700e83de57104644de23e5f5c374868caa0e091f9c45edbbe87b98ee51c04
+Size (gettext-0.22.tar.gz) = 26105696 bytes
+SHA1 (patch-aa) = 8bf684967fe7dc50d63c70665068c28911e8f53c
+SHA1 (patch-ad) = 030dc7d1b02ac01898cf456f79115c395cd36bcd
+SHA1 (patch-ae) = bcfde6f6b70fbb383df08e0e3987874d2029cc52
+SHA1 (patch-ag) = 69b28fe217a9ac61d72f84fdfdd06e5b7158ad75
 SHA1 (patch-aj) = bf45d1093d8156615670bd6c781796b62ad79b92
 SHA1 (patch-al) = 15563935bd43886309dd95a0816a5c2153b5da3c
 SHA1 (patch-an) = 2284bfe8a44873776970af7fc70a419fa2a10054
-SHA1 (patch-ao) = d0ab5520f53f38c7b2eb76395c5d6dd24407ef4f
 SHA1 (patch-gettext-runtime_m4_gettext.m4) = a154919e5da2013c3a2eaa965dc5f12460b1d4f4
 SHA1 (patch-gettext-tools_src_write-mo.c) = e0d3512fd60b5d471248ffe9998d272bdc0a60ef
-SHA1 (patch-gettext-tools_tests_Makefile.in) = 17dbffc987536d56d2792cf5f459a3a0eccd33dc
+SHA1 (patch-gettext-tools_tests_Makefile.in) = af9c9ecbecfafc1c34d0bd3347d3d399122aaa80
