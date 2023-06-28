@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.40 2023/02/14 16:13:15 wiz Exp $
+$NetBSD: distinfo,v 1.41 2023/06/28 09:49:11 wiz Exp $
 
-BLAKE2s (xkeyboard-config-2.38.tar.xz) = 4b63a04afa844417caa2ddee77179c20b2923127c56501c494e2537b211b30f1
-SHA512 (xkeyboard-config-2.38.tar.xz) = 20848a5a10cfa58265518add796fd97ddd2e39e7a87b18170cd9ebc3ec87268e92641f2cd8aaed1ed80cdbe3801b65a8a916321ffc20a419511b3d2a85b0dd2a
-Size (xkeyboard-config-2.38.tar.xz) = 884988 bytes
+BLAKE2s (xkeyboard-config-2.39.tar.xz) = 65ac243f6a9cf7e5ed32d208b2a1167a0b70cefc6821a47cfe1dd1b2a1287135
+SHA512 (xkeyboard-config-2.39.tar.xz) = 4690a0291c1f8c2c53b84984221a60a935c9b7cfc8ae20a8740403571f3704dedf06e5755b45775a15a5df21ebd2acac3ff785ff19f54d792ae359c4c6d60756
+Size (xkeyboard-config-2.39.tar.xz) = 896112 bytes
 SHA1 (patch-meson.build) = 0fc63dac9019f9e180be3f95dee70d3dfd80e486
