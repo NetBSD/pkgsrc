@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/03/29 09:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/06/28 08:49:47 wiz Exp $
 
-DISTNAME=	keyring-23.13.1
+DISTNAME=	keyring-24.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
 
@@ -22,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/pyversion.mk"
 
@@ -39,7 +38,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} keyring keyring-${PYVERSSUFFIX} || ${TRUE}
 
-# 2 failed, 11 passed, 83 skipped
+# 2 failed, 13 passed, 83 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
