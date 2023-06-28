@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/03/10 17:00:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/06/28 08:49:47 wiz Exp $
 bin/keyring-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -20,8 +20,6 @@ ${PYSITELIB}/keyring/_properties_compat.pyc
 ${PYSITELIB}/keyring/backend.py
 ${PYSITELIB}/keyring/backend.pyc
 ${PYSITELIB}/keyring/backend_complete.zsh
-${PYSITELIB}/keyring/backends/OS_X.py
-${PYSITELIB}/keyring/backends/OS_X.pyc
 ${PYSITELIB}/keyring/backends/SecretService.py
 ${PYSITELIB}/keyring/backends/SecretService.pyc
 ${PYSITELIB}/keyring/backends/Windows.py
@@ -69,5 +67,3 @@ ${PYSITELIB}/keyring/util/__init__.py
 ${PYSITELIB}/keyring/util/__init__.pyc
 ${PYSITELIB}/keyring/util/platform_.py
 ${PYSITELIB}/keyring/util/platform_.pyc
-${PYSITELIB}/keyring/util/properties.py
-${PYSITELIB}/keyring/util/properties.pyc
