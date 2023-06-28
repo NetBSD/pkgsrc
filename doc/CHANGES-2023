@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4110 2023/06/28 14:12:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4111 2023/06/28 14:16:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5775,3 +5775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-mercurial to 6.4.5 [wiz 2023-06-28]
 	Updated devel/py-pdm_backend to 2.1.2 [adam 2023-06-28]
 	Updated devel/py-pdm to 2.7.4 [adam 2023-06-28]
+	Updated devel/opa to 0.53.1 [leot 2023-06-28]
