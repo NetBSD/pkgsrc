@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/04/19 08:09:33 adam Exp $
+# $NetBSD: Makefile,v 1.48 2023/06/28 14:05:32 riastradh Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-${PY_DISTVERSION}
 PKGREVISION=	24
@@ -16,6 +16,10 @@ PY_SETUP_SUBST+=	SQLITE_PREFIX=${BUILDLINK_PREFIX.sqlite3}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 .include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} >= 310
+USE_LANGUAGES+=		c99	# for (const char *pos = ...
+.endif
 
 .if ${PYTHON_VERSION} == 311
 SUBST_CLASSES+=		py311
