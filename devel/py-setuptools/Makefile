@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.233 2023/05/21 18:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2023/06/28 09:10:40 wiz Exp $
 
-DISTNAME=	setuptools-67.8.0
+DISTNAME=	setuptools-68.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -30,7 +30,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# 12 failed, 1132 passed, 26 skipped, 6 xfailed, 3 xpassed, 1 warning
+# 28 failed, 1104 passed, 27 skipped, 6 xfailed, 3 xpassed, 1 warning
 PYSETUPTESTTARGET=	pytest
 
 BOOTSTRAP_SETUPTOOLS=	yes
