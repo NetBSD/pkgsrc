@@ -1,0 +1,9 @@
+Bugdom is a 1999 Macintosh game by Pangea Software. You play as Rollie
+McFly, a pill bug on a quest to save ladybugs from King Thorax's iron grip
+on the Bugdom.
+
+This port aims to provide the best way to experience Bugdom today. It
+introduces some modern comforts (such as support for arbitrary resolutions)
+and fixes some gameplay bugs. The overall experience is intended to be
+faithful to the spirit of the original game, so modifications to the game's
+design are out of the scope of this project.
