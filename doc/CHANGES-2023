@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4114 2023/06/28 21:14:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4115 2023/06/28 23:43:10 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/conftest to 0.43.1 [leot 2023-06-28]
 	Updated print/poppler to 23.06.0 [wiz 2023-06-28]
 	Updated devel/gettext to 0.22 [wiz 2023-06-28]
+	Added games/mightymike version 3.0.2 [charlotte 2023-06-28]
