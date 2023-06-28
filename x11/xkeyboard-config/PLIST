@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/10/17 07:45:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/06/28 09:49:11 wiz Exp $
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
 share/X11/xkb/compat/basic
@@ -88,6 +88,7 @@ share/X11/xkb/symbols/af
 share/X11/xkb/symbols/al
 share/X11/xkb/symbols/altwin
 share/X11/xkb/symbols/am
+share/X11/xkb/symbols/ancient
 share/X11/xkb/symbols/apl
 share/X11/xkb/symbols/ara
 share/X11/xkb/symbols/at
