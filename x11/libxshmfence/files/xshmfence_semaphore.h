@@ -28,7 +28,12 @@
 
 #define LOCK_ALIGN __attribute__((aligned(128)))
 #ifndef LIBXSHM_PAGESIZE
-#error unknown machine page size
+#include <machine/vmparam.h>
+#ifdef MAX_PAGE_SIZE
+#define	LIBXSHM_PAGESIZE	MAX_PAGE_SIZE
+#else
+#define	LIBXSHM_PAGESIZE	PAGE_SIZE
+#endif
 #endif
 #define PAGE_ALIGN __attribute__((aligned(LIBXSHM_PAGESIZE)))
 
