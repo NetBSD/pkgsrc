@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/05/05 09:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/06/28 08:52:26 wiz Exp $
 
-DISTNAME=	lsprotocol-2023.0.0a1
+DISTNAME=	lsprotocol-2023.0.0a2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lsprotocol/}
