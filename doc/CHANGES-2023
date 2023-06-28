@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4092 2023/06/28 08:39:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4093 2023/06/28 08:43:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5755,3 +5755,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gopls to 0.12.4 [wiz 2023-06-28]
 	Updated print/mupdf to 1.22.2 [wiz 2023-06-28]
 	Updated www/py-google-api-python-client to 2.90.0 [wiz 2023-06-28]
+	Updated devel/py-jupyter_client to 8.3.0 [adam 2023-06-28]
+	Updated misc/py-platformdirs to 3.8.0 [adam 2023-06-28]
