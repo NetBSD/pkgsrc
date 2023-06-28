@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4094 2023/06/28 08:43:27 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4095 2023/06/28 08:45:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_client to 8.3.0 [adam 2023-06-28]
 	Updated misc/py-platformdirs to 3.8.0 [adam 2023-06-28]
 	Updated textproc/py-natsort to 8.4.0 [wiz 2023-06-28]
+	Updated textproc/py-pdf to 3.11.0 [wiz 2023-06-28]
