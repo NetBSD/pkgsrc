@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/05 09:20:06 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/06/28 08:52:26 wiz Exp $
 
-BLAKE2s (lsprotocol-2023.0.0a1.tar.gz) = 08e9d2271a02fadc6b09e2ac0866e81cdf7ceeadcd4a0187cb7438e13ec4b3bf
-SHA512 (lsprotocol-2023.0.0a1.tar.gz) = d7c8dab273bfcaa2539dc73386fcff1a2389d04816369d8953443420dd0b725d646f9b4ac830e47de6ad3ce1fba27396447cd8be98e2e2e97c8273c1b42e72d3
-Size (lsprotocol-2023.0.0a1.tar.gz) = 68113 bytes
+BLAKE2s (lsprotocol-2023.0.0a2.tar.gz) = 8ce0652ffa6c2163a6e9388ced7e4f59e7e4549a75208269c4202d0d02ebc55c
+SHA512 (lsprotocol-2023.0.0a2.tar.gz) = b98c6f26e4098b1d38567de14c204e486196ec711210547c868b861c1623f69392ff03a3328ce26e57b514b47dc74ebfac002b443d16f465a5996ce2b4056935
+Size (lsprotocol-2023.0.0a2.tar.gz) = 67956 bytes
