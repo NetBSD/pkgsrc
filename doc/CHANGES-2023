@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4107 2023/06/28 10:00:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4108 2023/06/28 10:04:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5771,3 +5771,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/bdf2psf to 1.222 [fcambus 2023-06-28]
 	Updated x11/xkeyboard-config to 2.39 [wiz 2023-06-28]
 	Updated finance/gnucash to 5.3 [wiz 2023-06-28]
+	Updated finance/gnucash-docs to 5.2 [wiz 2023-06-28]
