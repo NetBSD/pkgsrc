@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/04/19 08:11:10 adam Exp $
+# $NetBSD: Makefile,v 1.63 2023/06/29 18:06:21 adam Exp $
 
-DISTNAME=	ntopng-5.2.1
-PKGREVISION=	5
+DISTNAME=	ntopng-5.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -12,15 +11,33 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	redis-[0-9]*:../../databases/redis
 
+# How to rebuild UI after bumping version:
+# 1. install lang/nodejs
+# 2. comment out the DISTFILES=... line
+# 3. run "make distinfo extract update-ui"
+# 4. publish the resulting distfile on MASTER_SITE_LOCAL
+# 5. uncomment the DISTFILES=... line and regen distinfo
+.PHONY: update-ui
+update-ui:
+	cd ${WRKSRC} && npm install && npm run build && \
+	cd .. && ${TAR} -czf ${HTTPDOCS_DIST} ${DISTNAME}/httpdocs/dist && \
+	${CP} ${HTTPDOCS_DIST} ${DISTDIR}/${HTTPDOCS_DIST} && \
+	${ECHO} "UI built. Run this command:" && \
+	${ECHO} "# scp ${DISTDIR}/${HTTPDOCS_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
+
+HTTPDOCS_DIST=		${DISTNAME}-httpdocs.tar.gz
+SITES.${HTTPDOCS_DIST}=	${MASTER_SITE_LOCAL}
+# comment out this when running make update-ui
+DISTFILES=		${DEFAULT_DISTFILES} ${HTTPDOCS_DIST}
+
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake bash gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ndpi-includes=${BUILDLINK_PREFIX.ndpi}/include/ndpi
+CONFIGURE_ARGS+=	--with-ndpi-static-lib=${BUILDLINK_PREFIX.ndpi}/lib
 
 RCD_SCRIPTS+=		ntopng
-
-CXXFLAGS+=		-std=c++11  # va_copy()
 
 MAKE_FLAGS+=		LUA_LIB=-llua5.4
 
