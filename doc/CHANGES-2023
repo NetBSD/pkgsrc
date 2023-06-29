@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4123 2023/06/29 15:42:37 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4124 2023/06/29 16:01:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5789,3 +5789,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/ruby30-base to 3.0.6nb1 [taca 2023-06-29]
 	Updated lang/ruby31-base to 3.1.4nb1 [taca 2023-06-29]
 	Updated lang/ruby32-base to 3.2.2nb2 [taca 2023-06-29]
+	Updated www/ruby-actionpack52 to 5.2.8.1nb1 [taca 2023-06-29]
