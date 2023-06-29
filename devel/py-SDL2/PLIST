@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/23 12:08:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/06/29 09:28:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -126,6 +126,9 @@ ${PYSITELIB}/sdl2/ext/events.pyo
 ${PYSITELIB}/sdl2/ext/image.py
 ${PYSITELIB}/sdl2/ext/image.pyc
 ${PYSITELIB}/sdl2/ext/image.pyo
+${PYSITELIB}/sdl2/ext/input.py
+${PYSITELIB}/sdl2/ext/input.pyc
+${PYSITELIB}/sdl2/ext/input.pyo
 ${PYSITELIB}/sdl2/ext/mouse.py
 ${PYSITELIB}/sdl2/ext/mouse.pyc
 ${PYSITELIB}/sdl2/ext/mouse.pyo
@@ -392,6 +395,9 @@ ${PYSITELIB}/sdl2/test/sdl2ext_font_test.pyo
 ${PYSITELIB}/sdl2/test/sdl2ext_image_test.py
 ${PYSITELIB}/sdl2/test/sdl2ext_image_test.pyc
 ${PYSITELIB}/sdl2/test/sdl2ext_image_test.pyo
+${PYSITELIB}/sdl2/test/sdl2ext_input_test.py
+${PYSITELIB}/sdl2/test/sdl2ext_input_test.pyc
+${PYSITELIB}/sdl2/test/sdl2ext_input_test.pyo
 ${PYSITELIB}/sdl2/test/sdl2ext_mouse_test.py
 ${PYSITELIB}/sdl2/test/sdl2ext_mouse_test.pyc
 ${PYSITELIB}/sdl2/test/sdl2ext_mouse_test.pyo
