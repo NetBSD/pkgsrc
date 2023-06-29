@@ -1,0 +1,14 @@
+$NetBSD: patch-gettext-runtime_intl_configure,v 1.1 2023/06/29 08:24:19 adam Exp $
+
+Do not force relocatable.
+
+--- gettext-runtime/intl/configure.orig	2023-06-29 07:43:54.000000000 +0000
++++ gettext-runtime/intl/configure
+@@ -6695,7 +6695,6 @@ fi
+ 
+ 
+ 
+-enable_relocatable=yes
+ 
+ ac_header= ac_cache=
+ for ac_item in $ac_header_c_list
