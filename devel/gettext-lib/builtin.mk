@@ -1,12 +1,12 @@
-# $NetBSD: builtin.mk,v 1.49 2020/10/15 23:32:07 mcf Exp $
+# $NetBSD: builtin.mk,v 1.50 2023/06/29 08:24:19 adam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=				intl
-BUILTIN_FIND_HEADERS_VAR:=			H_GETTEXT H_GENTOO_GETTEXT	\
-						H_NGETTEXT_GETTEXT		\
+BUILTIN_FIND_HEADERS_VAR:=			H_GETTEXT H_GENTOO_GETTEXT \
+						H_NGETTEXT_GETTEXT \
 						H_OPNSVR5_GETTEXT
 BUILTIN_FIND_HEADERS.H_GETTEXT=			libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=			\#define[ 	]*__USE_GNU_GETTEXT
@@ -60,12 +60,12 @@ USE_BUILTIN.gettext=	no
 .  else
 USE_BUILTIN.gettext=	${IS_BUILTIN.gettext}
 .    if defined(BUILTIN_PKG.gettext) && \
-	!empty(IS_BUILTIN.gettext:M[yY][eE][sS])
+	${IS_BUILTIN.gettext:tl} == yes
 USE_BUILTIN.gettext=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
-.        if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.        if ${USE_BUILTIN.gettext:tl} == yes
 USE_BUILTIN.gettext!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext:Q}; then \
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -91,7 +91,7 @@ MAKEVARS+=		USE_BUILTIN.gettext
 # Define BUILTIN_LIBNAME.gettext to be the base name of the built-in
 # gettext library.
 #
-.if !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
+.if ${BUILTIN_LIB_FOUND.intl:U:tl} == yes
 BUILTIN_LIBNAME.gettext=	intl
 .else
 BUILTIN_LIBNAME.gettext=	# empty (part of the C library)
@@ -102,11 +102,11 @@ BUILTIN_LIBNAME.gettext=	# empty (part of the C library)
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.gettext?=	no
-.if !empty(CHECK_BUILTIN.gettext:M[nN][oO])
+.if ${CHECK_BUILTIN.gettext:tl} == no
 
-.  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.  if ${USE_BUILTIN.gettext:tl} == yes
 BUILDLINK_LIBNAME.gettext=	${BUILTIN_LIBNAME.gettext}
-.    if !empty(OS_VARIANT:MSCOOSR5)
+.    if ${OS_VARIANT} == SCOOSR5
 BUILDLINK_PREFIX.gettext=	/usr/gnu
 .    endif
 .    if empty(BUILTIN_LIBNAME.gettext)
@@ -119,8 +119,8 @@ BUILDLINK_TRANSFORM+=		rm:-lintl
 # so that it will detect "GNU gettext" in the existing libintl.
 #
 .  if defined(GNU_CONFIGURE)
-.    if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.      if !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
+.    if ${USE_BUILTIN.gettext:tl} == yes
+.      if ${BUILTIN_LIB_FOUND.intl:U:tl} == yes
 CONFIGURE_ENV+=		gt_cv_func_gnugettext_libintl="yes"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
 .        if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
