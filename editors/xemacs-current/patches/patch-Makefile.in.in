@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in.in,v 1.4 2023/05/21 00:13:56 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.5 2023/06/29 20:57:44 hauke Exp $
 
 Sprinkle DESTDIR dust.
 
@@ -69,10 +69,19 @@ was patch-aa
 -	    chmod 0644 $(DESTDIR)${mandir}/$${page}${manext} ; \
 +            if [ $${page} = etags ] || [ $${page} = ctags ] ; \
 +            then \
-+              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/xemacs-$${page}${manext} ; \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/man1/xemacs-$${page}${manext} ; \
 +            else \
-+              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/$${page}${manext} ; \
++              ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 $(DESTDIR)${mandir}/man1/$${page}${manext} ; \
 +            fi \
  	  done
  	@echo "If you would like to save approximately 4M of disk space, do"
  	@echo "make gzip-el"
+@@ -500,7 +506,7 @@ gzip-el:
+ mkdir: FRC.mkdir
+ 	for dir in \
+ 	    ${COPYDESTS} ${docdir} ${infodir} ${archlibdir} \
+-	    ${mandir} ${bindir} ${datadir} ${libdir} \
++	    ${mandir}/man1 ${bindir} ${datadir} ${libdir} \
+ #ifdef HAVE_SHLIB
+ 	    ${moduledir} ${sitemoduledir} \
+ #endif
