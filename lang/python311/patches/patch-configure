@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2023/06/07 13:28:49 adam Exp $
+$NetBSD: patch-configure,v 1.4 2023/06/29 01:32:28 riastradh Exp $
 
 Fix linking on Darwin; don't use -stack_size.
 Changes for consistency across pkgsrc platforms.
@@ -7,6 +7,15 @@ Disable barrier to cross-compilation.
 
 --- configure.orig	2023-06-06 22:00:27.000000000 +0000
 +++ configure
+@@ -3630,7 +3630,7 @@ fi
+     fi
+         ac_cv_prog_PYTHON_FOR_REGEN=$with_build_python
+     PYTHON_FOR_FREEZE="$with_build_python"
+-    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) '$with_build_python
++    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) '$with_build_python
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $with_build_python" >&5
+ printf "%s\n" "$with_build_python" >&6; }
+ 
 @@ -4253,7 +4253,7 @@ fi
  printf "%s\n" "\"$MACHDEP\"" >&6; }
  
