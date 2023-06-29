@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2022/08/11 13:37:24 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/06/29 08:24:19 adam Exp $
 
 BUILDLINK_TREE+=	gettext
 
@@ -22,7 +22,7 @@ BUILDLINK_LDADD.gettext+=	${BUILDLINK_LDADD.iconv}
 # to LIBS to workaround this brokenness.
 #
 BROKEN_GETTEXT_DETECTION?=	no
-.if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
+.if ${BROKEN_GETTEXT_DETECTION:tl} == yes
 BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
 CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
 .endif
@@ -50,7 +50,7 @@ CHECK_BUILTIN.gettext:=	yes
 CHECK_BUILTIN.gettext:=	no
 
 # A built-in gettext is always going to use a built-in iconv.
-.if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.if ${USE_BUILTIN.gettext:tl} == yes
 USE_BUILTIN.iconv=			yes
 .else
 #BUILDLINK_INCDIRS.gettext+=		include/gettext
