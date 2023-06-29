@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.44 2023/06/28 21:14:10 wiz Exp $
+$NetBSD: distinfo,v 1.45 2023/06/29 18:27:42 tnn Exp $
 
 BLAKE2s (gettext-0.22.tar.gz) = 6b3b0b9824a6c8d58b28717b2d9089ed4895bbf4a1f7b0979117d8449a28b4ba
 SHA512 (gettext-0.22.tar.gz) = e2a58dde1cae3e6b79c03e7ef3d888f7577c1f4cba283b3b0f31123ceea8c33d7c9700e83de57104644de23e5f5c374868caa0e091f9c45edbbe87b98ee51c04
 Size (gettext-0.22.tar.gz) = 26105696 bytes
-SHA1 (patch-aa) = 8bf684967fe7dc50d63c70665068c28911e8f53c
+SHA1 (patch-aa) = 83e1314a01623b9ac68e4787983d42964be67869
 SHA1 (patch-ad) = 030dc7d1b02ac01898cf456f79115c395cd36bcd
-SHA1 (patch-ae) = bcfde6f6b70fbb383df08e0e3987874d2029cc52
+SHA1 (patch-ae) = 3e83e3cdebd1205b515a58cb838a5eb3fb2fe389
 SHA1 (patch-ag) = 69b28fe217a9ac61d72f84fdfdd06e5b7158ad75
 SHA1 (patch-aj) = bf45d1093d8156615670bd6c781796b62ad79b92
 SHA1 (patch-al) = 15563935bd43886309dd95a0816a5c2153b5da3c

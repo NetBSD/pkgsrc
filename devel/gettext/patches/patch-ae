@@ -1,15 +1,18 @@
-$NetBSD: patch-ae,v 1.7 2023/06/28 21:14:10 wiz Exp $
+$NetBSD: patch-ae,v 1.8 2023/06/29 18:27:42 tnn Exp $
 
 --- gettext-tools/configure.orig	2023-06-17 11:54:38.000000000 +0000
 +++ gettext-tools/configure
-@@ -26146,10 +26146,6 @@ printf "%s\n" "$ac_res" >&6; }
+@@ -26145,13 +26145,6 @@ printf "%s\n" "$ac_res" >&6; }
+         fi
        fi
  
-       if test "$nls_cv_use_gnu_gettext" = "yes"; then
+-      if test "$nls_cv_use_gnu_gettext" = "yes"; then
 -                USE_INCLUDED_LIBINTL=yes
 -        LIBINTL="\${top_builddir}/../gettext-runtime/intl/libintl.la $LIBICONV $LIBTHREAD"
 -        LTLIBINTL="\${top_builddir}/../gettext-runtime/intl/libintl.la $LTLIBICONV $LTLIBTHREAD"
 -        LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
-       fi
- 
+-      fi
+-
        CATOBJEXT=
+       if test "$gt_use_preinstalled_gnugettext" = "yes" \
+          || test "$nls_cv_use_gnu_gettext" = "yes"; then
