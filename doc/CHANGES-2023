@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4120 2023/06/29 10:25:51 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4121 2023/06/29 15:37:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5786,3 +5786,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-project-metadata version 0.7.1 [wiz 2023-06-29]
 	Added devel/py-meson_python version 0.13.2 [wiz 2023-06-29]
 	Updated graphics/py-contourpy to 1.1.0 [wiz 2023-06-29]
+	Updated lang/ruby30-base to 3.0.6nb1 [taca 2023-06-29]
