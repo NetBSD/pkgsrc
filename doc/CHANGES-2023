@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4116 2023/06/29 09:20:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4117 2023/06/29 09:32:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5781,3 +5781,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gettext to 0.22 [wiz 2023-06-28]
 	Added games/mightymike version 3.0.2 [charlotte 2023-06-28]
 	Updated multimedia/gstreamer1 to 1.22.4 [wiz 2023-06-29]
+	Updated devel/py-SDL2 to 0.9.16 [adam 2023-06-29]
+	Updated security/py-google-auth to 2.21.0 [adam 2023-06-29]
