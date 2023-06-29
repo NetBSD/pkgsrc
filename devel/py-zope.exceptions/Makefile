@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/18 05:39:36 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/29 20:09:38 adam Exp $
 
-DISTNAME=	zope.exceptions-4.6
+DISTNAME=	zope.exceptions-5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.exceptions/}
@@ -12,7 +12,7 @@ LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 # circular dependency
-#TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
+#TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
 
 USE_LANGUAGES=	# none
 
