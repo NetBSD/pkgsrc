@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/06/28 21:33:19 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/06/29 06:05:02 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -12,8 +12,6 @@ INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
 CMAKE_ARGS+=	-DENABLE_GLIB=OFF
-# Don't compile gpgme crypto backend
-CMAKE_ARGS+=	-DWITH_Gpgmepp:BOOL=OFF
 # Don't build and install the tools
 CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 # Don't compile poppler cpp wrapper.
