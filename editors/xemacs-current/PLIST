@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2023/05/21 00:13:55 hauke Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/06/29 20:57:44 hauke Exp $
 bin/ellcc
 bin/gnuattach
 bin/gnuclient
@@ -1498,13 +1498,13 @@ lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/profile
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/rcs2log
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/sorted-doc
 lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/vcdiff
-man/gnuattach.1
-man/gnuclient.1
-man/gnudoit.1
-man/gnuserv.1
-man/xemacs-ctags.1
-man/xemacs-etags.1
-man/xemacs.1
+man/man1/gnuattach.1
+man/man1/gnuclient.1
+man/man1/gnudoit.1
+man/man1/gnuserv.1
+man/man1/xemacs-ctags.1
+man/man1/xemacs-etags.1
+man/man1/xemacs.1
 ${PLIST.x11}share/applications/xemacs.desktop
 @pkgdir lib/xemacs/site-modules
 @pkgdir lib/xemacs/site-lisp
