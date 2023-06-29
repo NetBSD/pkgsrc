@@ -1,17 +1,19 @@
-$NetBSD: patch-src_vis.c,v 1.1 2023/06/29 16:18:56 hauke Exp $
+$NetBSD: patch-src_vis.c,v 1.2 2023/06/29 17:55:29 hauke Exp $
 
-OmniOS has MIN() in <utility.h>, which autoconf could check for.
+vis(3): Avoid nonportable MIN in portable code.
+Adopt upstream's resolution, to be dropped with the next update.
 
 --- src/vis.c.orig	2022-06-11 07:56:37.000000000 +0000
 +++ src/vis.c
-@@ -85,6 +85,10 @@ __weak_alias(strvisx,_strvisx)
- #include <stdio.h>
- #include <string.h>
- 
-+#ifndef MIN
-+#define MIN(a,b)        (((a)<(b))?(a):(b))
-+#endif
-+
- /*
-  * The reason for going through the trouble to deal with character encodings
-  * in vis(3), is that we use this to safe encode output of commands. This
+@@ -468,7 +468,10 @@ istrsenvisx(char **mbdstp, size_t *dlen,
+ 	while (mbslength > 0) {
+ 		/* Convert one multibyte character to wchar_t. */
+ 		if (!cerr)
+-			clen = mbrtowc(src, mbsrc, MIN(mbslength, MB_LEN_MAX),
++			clen = mbrtowc(src, mbsrc,
++			    (mbslength < MB_LEN_MAX
++				? mbslength
++				: MB_LEN_MAX),
+ 			    &mbstate);
+ 		if (cerr || clen < 0) {
+ 			/* Conversion error, process as a byte instead. */
