@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4118 2023/06/29 09:34:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4119 2023/06/29 09:44:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-SDL2 to 0.9.16 [adam 2023-06-29]
 	Updated security/py-google-auth to 2.21.0 [adam 2023-06-29]
 	Added devel/py-project-metadata version 0.7.1 [wiz 2023-06-29]
+	Added devel/py-meson_python version 0.13.2 [wiz 2023-06-29]
