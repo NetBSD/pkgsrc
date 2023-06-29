@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/29 09:32:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/06/29 21:51:38 wiz Exp $
 
 DISTNAME=	pyproject-metadata-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
