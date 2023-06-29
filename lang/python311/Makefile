@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/06/27 10:35:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/29 01:32:28 riastradh Exp $
 
 .include "dist.mk"
 
@@ -39,8 +39,7 @@ PTHREAD_OPTS+=	require
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
-# XXX copied from ../../lang/python/pyversion.mk to avoid including it
-CONFIGURE_ARGS+=	PYTHON_FOR_BUILD=${TOOLBASE:Q}/bin/python3.11
+CONFIGURE_ARGS+=	--with-build-python=${TOOLBASE:Q}/bin/python3.11
 CONFIGURE_ARGS+=	MACHDEP=${PY_PLATNAME}
 CONFIGURE_ARGS+=	\
 	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
@@ -52,9 +51,6 @@ CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=false
 .  endif
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptmx=yes
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptc=no
-MAKE_ENV+=		\
-	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
-MAKE_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC}
 .endif
 
 # http://bugs.python.org/issue13241
