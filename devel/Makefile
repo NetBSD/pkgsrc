@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4024 2023/06/29 09:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4025 2023/06/29 09:44:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2656,6 +2656,7 @@ SUBDIR+=	py-memcached
 SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
 SUBDIR+=	py-mergedeep
+SUBDIR+=	py-meson_python
 SUBDIR+=	py-minidump
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mixbox
