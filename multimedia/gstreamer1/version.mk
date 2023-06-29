@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.5 2023/06/02 16:09:47 wiz Exp $
+# $NetBSD: version.mk,v 1.6 2023/06/29 09:20:44 wiz Exp $
 
-GST_VERSION=	1.22.3
+GST_VERSION=	1.22.4
 SHLIBVER=	${GST_VERSION:S/1.//:S/./0/}
 PLIST_SUBST+=	SHLIBVER=${SHLIBVER}
 
