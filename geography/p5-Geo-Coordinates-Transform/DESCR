@@ -1,0 +1,4 @@
+Geo::Coordinates::Transform converts a list of provided latitude and longitude
+coordinates in any of the three formats above (mixed input is ok) and converts
+to the desired format. Note that special characters or non-numerical characters
+such as " will throw an warning and return NaN for that list item.
