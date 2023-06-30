@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/05/06 19:09:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2023/06/30 11:20:19 micha Exp $
 
-DISTNAME=	prboom-plus-2.6.2
-PKGREVISION=	5
+DISTNAME=	prboom-plus-2.6.66
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coelckers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -57,6 +56,7 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
