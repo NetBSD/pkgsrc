@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2023/06/30 08:31:04 tnn Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-lib-/}
+PKGREVISION=	1
 COMMENT=	Internationalized Message Handling Library (libintl)
 
 USE_LANGUAGES=		c
