@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.310 2023/06/26 19:25:56 adam Exp $
+$NetBSD: distinfo,v 1.311 2023/06/30 13:08:37 riastradh Exp $
 
 BLAKE2s (glib-2.76.3.tar.xz) = c3f1e917538c736a42ca9a11490d5c1bb2931cbbf88ef5870ba6a933c6d314dc
 SHA512 (glib-2.76.3.tar.xz) = 291b8913918d411b679442b888f56893a857a77decfe428086c8bd1da1949498938ddb0bf254ed99d192e4a09b5e8cee1905fd6932ee642463fb229cac7c226e
 Size (glib-2.76.3.tar.xz) = 5273460 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = f719ae41a9eb1d2f04d866b246fa5176543f2df9
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = 76ed9658ac11fb33b97143938b6a60b5aa515cae
-SHA1 (patch-gio_giomodule.c) = 68e612ac178c41aa0aae2bd66c3e4263910711ac
+SHA1 (patch-gio_giomodule.c) = 8e12ba27d0f13f43cff9a4e2301edf67aba0d1fe
 SHA1 (patch-gio_glib-compile-schemas.c) = 4fc8e8ba62bef01762007ebf21569053374808d0
 SHA1 (patch-gio_gresource-tool.c) = ad0e59f48f5f98ea66be568dbe2e5a5d1ac602fc
 SHA1 (patch-gio_gunixcredentialsmessage.c) = c13119ddd6262db7c03e53857e987f0c495d3312
