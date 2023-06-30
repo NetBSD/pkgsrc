@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:17:42 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/30 12:02:19 wen Exp $
 
-BLAKE2s (Test-MinimumVersion-0.101082.tar.gz) = faf0b6f82bc28f6910f6c42e0beec002aa60a24c35b5a38c08573f0347eb93cc
-SHA512 (Test-MinimumVersion-0.101082.tar.gz) = 9cc952f554d0e6ff3c80e43356bc2942e415893796c721847c31246ac338ed6ca372bdd8bec42e6d6c3943754f3ede1cfcbc772b32b53954f129ffc60e5370b8
-Size (Test-MinimumVersion-0.101082.tar.gz) = 17700 bytes
+BLAKE2s (Test-MinimumVersion-0.101083.tar.gz) = bed2eef883bd116437c310b67580b295633b38564d22117c43795293d85d5a04
+SHA512 (Test-MinimumVersion-0.101083.tar.gz) = f35dcb6f902d36bf4244955d7e73e9cb6182aef716aeeff9d090de0e070e2c363ce9c8d7548a897a834d983facfbb3226122bc96e8105e19b7555ee89eb31acb
+Size (Test-MinimumVersion-0.101083.tar.gz) = 18812 bytes
