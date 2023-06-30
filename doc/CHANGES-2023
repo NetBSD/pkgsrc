@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4150 2023/06/30 20:51:41 osa Exp $
+$NetBSD: CHANGES-2023,v 1.4151 2023/06/30 22:50:25 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5820,3 +5820,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-php to 1.30.1nb1 [osa 2023-06-30]
 	Updated www/unit-python to 1.30.1nb1 [osa 2023-06-30]
 	Updated www/unit-ruby to 1.30.1nb1 [osa 2023-06-30]
+	Updated x11/qt6-qtbase to 6.5.0nb3 [bacon 2023-06-30]
