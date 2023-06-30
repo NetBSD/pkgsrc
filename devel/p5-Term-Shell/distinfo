@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:17:35 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/06/30 13:35:40 wen Exp $
 
-BLAKE2s (Term-Shell-0.12.tar.gz) = 02f30243d6aa93963220efc190e92192a9b356f5ff4a0327556ce479a6bd6a2d
-SHA512 (Term-Shell-0.12.tar.gz) = 8411505cb798fdcb728bb7814c80d809630689782e1235927d13902466043f41753219ef9827402f233ef7cfa186670bc36651a905da2dc2534696596abb234c
-Size (Term-Shell-0.12.tar.gz) = 36300 bytes
+BLAKE2s (Term-Shell-0.13.tar.gz) = 560dfbef35a48757fc995a7ce24f455c785aade788324d860100957ae670b4dc
+SHA512 (Term-Shell-0.13.tar.gz) = bf0a4662aaae95ce4e2b104d3d68582c393e07be0b95148a27e01e2eb696a59bc484b9c84eb05db10c62774d7b18e032598038687bd72f8cb9b9c49e0c04eed2
+Size (Term-Shell-0.13.tar.gz) = 36338 bytes
