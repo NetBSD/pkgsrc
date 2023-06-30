@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4141 2023/06/30 12:31:28 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4142 2023/06/30 13:20:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5809,3 +5809,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Type-Tiny to 2.004000 [wen 2023-06-30]
 	Updated devel/p5-Test-MinimumVersion to 0.101083 [wen 2023-06-30]
 	Updated devel/p5-Test-Compile to 3.2.2 [wen 2023-06-30]
+	Updated devel/p5-Test-CheckManifest to 1.43 [wen 2023-06-30]
