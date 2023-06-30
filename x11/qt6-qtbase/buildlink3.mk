@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/05/22 21:00:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/06/30 22:50:12 bacon Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -16,6 +16,9 @@ BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
 # \todo Fix duplication with prefix coded in Makefile.common
 QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
 CMAKE_PREFIX_PATH+=	${QTDIR}
+
+# https://doc.qt.io/qt-6/supported-platforms.html
+GCC_REQD+=		9
 
 CONFIGURE_ENV+=	QTDIR=${QTDIR}
 MAKE_ENV+=	QTDIR=${QTDIR}
