@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4143 2023/06/30 13:24:37 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4144 2023/06/30 13:31:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Test-Compile to 3.2.2 [wen 2023-06-30]
 	Updated devel/p5-Test-CheckManifest to 1.43 [wen 2023-06-30]
 	Updated devel/MoarVM to 2023.06 [mef 2023-06-30]
+	Updated databases/gramps5 to 5.1.6 [gdt 2023-06-30]
