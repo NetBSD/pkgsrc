@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:12:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/06/30 19:09:39 bsiegert Exp $
 
-BLAKE2s (foomatic-db-4.0-20180721.tar.xz) = 38ab5dae8ce411167434072b4be46e8fb3ca8abef409b91680cbcb727ebbc3ef
-SHA512 (foomatic-db-4.0-20180721.tar.xz) = 50af20a0c5d12ed93f4cf649742213e0e417d11e3347a4c0203d95ad759972f571a593de525d31456ab8e023fdeb881d5c0b400570fd3420e6bdf3adcdbb4d7f
-Size (foomatic-db-4.0-20180721.tar.xz) = 6052764 bytes
+BLAKE2s (foomatic-db-4.0-20230629.tar.xz) = c8fbf5c4b15f486ab0641cd5822e350d8059f115fced8e2817d97e9d897daa7f
+SHA512 (foomatic-db-4.0-20230629.tar.xz) = 7e06f4e8b9061e1a59f2309bf6e02dadb6f7f87ee41ea42fe59881a80c62c70c681766697e0d94260d504a701d14c8ce31bfe8776b9a58fc76ab041d2d1e975e
+Size (foomatic-db-4.0-20230629.tar.xz) = 7799848 bytes

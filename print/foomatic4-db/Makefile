@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2023/06/30 19:09:39 bsiegert Exp $
 #
 
-DISTNAME=	foomatic-db-4.0-20180721
+DISTNAME=	foomatic-db-4.0-20230629
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/foomatic/
 EXTRACT_SUFX=	.tar.xz
