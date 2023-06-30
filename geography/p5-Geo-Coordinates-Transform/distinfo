@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/06/30 09:55:10 wen Exp $
+
+BLAKE2s (Geo-Coordinates-Transform-0.10.tar.gz) = 008e149cb0fe80f73a8618462707d90b7a1502c90bbba0a32e95be922c9e445f
+SHA512 (Geo-Coordinates-Transform-0.10.tar.gz) = 09a203a2dcfc01c3ec3d4a95adc9a6a3a344bb569183728f6079169d48f44b95575978e88bdfaeee63faace1cef7e61a04b461a04d8dce5ae08f43c6cc02c7a0
+Size (Geo-Coordinates-Transform-0.10.tar.gz) = 4319 bytes
