@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/11 15:12:42 micha Exp $
+$NetBSD: distinfo,v 1.7 2023/06/30 11:20:19 micha Exp $
 
-BLAKE2s (prboom-plus-2.6.2.tar.gz) = ab576697a6ea29ed985a512cf8ea61d68f3cc9ff3b38ab04008960720c8bb3a1
-SHA512 (prboom-plus-2.6.2.tar.gz) = 7005fa55bdbfffa1b6b24ff470f5e1962e89367eaa28b23e95ebde0d1385dbe14e1c0f2d67d8ebefb1adfeeca8d551ec2b7b04a23a6af3a0f708b36da09613b3
-Size (prboom-plus-2.6.2.tar.gz) = 1557494 bytes
+BLAKE2s (prboom-plus-2.6.66.tar.gz) = 790ad42d4e9cf272be269e6eb7ed77a2e422a08804802fa085d9b2533faba509
+SHA512 (prboom-plus-2.6.66.tar.gz) = 72c9b209584de25589af52586d62eca96a0b63b50678f89673eac9706528332317250f1c309649aa1ec66d8b24da931c6e31eca06787b8fd7cf41730161c6644
+Size (prboom-plus-2.6.66.tar.gz) = 1558712 bytes
