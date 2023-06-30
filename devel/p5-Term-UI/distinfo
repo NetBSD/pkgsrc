@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:17:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/06/30 13:24:51 wen Exp $
 
-BLAKE2s (Term-UI-0.46.tar.gz) = 86341814a1acb0cd81e2f97f4a9f33d449e73e6fc68460eafd2bad53d89cee73
-SHA512 (Term-UI-0.46.tar.gz) = 7788d651e29e9c7b9c0c2b2074b39f143216a321a5a71c9c4e52fe32e44a246faade8cfdf109bcf7cfe1bac5d9d97fc920c6344a5692e8508361f1c780c41054
-Size (Term-UI-0.46.tar.gz) = 12295 bytes
+BLAKE2s (Term-UI-0.50.tar.gz) = 8e599fa55b0866f697ba3e9b5747a04e324e516374e10a98bea80830faad5c7a
+SHA512 (Term-UI-0.50.tar.gz) = 338f564a5405804d3f34840dbd26309911b0dfa6de346fc11c0fb4e33e0e2d42915a26b3f9569ccf95333a8cf20bded9830c923c69df48aa72670cdabe05fc98
+Size (Term-UI-0.50.tar.gz) = 13363 bytes
