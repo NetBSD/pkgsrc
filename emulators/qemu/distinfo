@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.204 2023/06/30 13:34:21 wiz Exp $
+$NetBSD: distinfo,v 1.205 2023/06/30 13:36:04 wiz Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
@@ -18,7 +18,7 @@ SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
 SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
 SHA1 (patch-meson.build) = 67fcc428b1953a63e4c0aa32ac1d41ec234a2462
 SHA1 (patch-meson_mesonbuild_linkers_linkers.py) = 842b01f543c99c66630df8450f71ab9fc422ff32
-SHA1 (patch-pc-bios_keymaps_meson.build) = d4ac0cb579397139f28d6ac248e22c27d4b53b63
+SHA1 (patch-pc-bios_keymaps_meson.build) = fd4a3570d42b08af20166b80370407af8f6aeee2
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
 SHA1 (patch-target_arm_tcg_translate-sve.c) = b5eeb08331e61a16b2cf4b7ab9b668755aa9a04e
 SHA1 (patch-target_i386_cpu.c) = afa8a2f83399b2d142709322eb88d1112f1547e4
