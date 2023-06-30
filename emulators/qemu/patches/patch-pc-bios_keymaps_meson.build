@@ -1,0 +1,13 @@
+$NetBSD: patch-pc-bios_keymaps_meson.build,v 1.1 2023/06/30 13:34:22 wiz Exp $
+
+Arabic language keymap was renamed from 'ar' to 'ara' in 2004.
+
+--- pc-bios/keymaps/meson.build.orig	2023-05-31 01:02:04.000000000 +0000
++++ pc-bios/keymaps/meson.build
+@@ -1,5 +1,5 @@
+ keymaps = {
+-  'ar': '-l ar',
++  'ar': '-l ara',
+   'bepo': '-l fr -v dvorak',
+   'cz': '-l cz',
+   'da': '-l dk',
