@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:45:14 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/06/30 09:39:26 wen Exp $
 
-BLAKE2s (Geo-ShapeFile-3.01.tar.gz) = 5166219b16d71300e81f87d5eb078a530e80f8a6c3e982f2600de6a720f05135
-SHA512 (Geo-ShapeFile-3.01.tar.gz) = 5e1799cb211beddead3f194af68ba15b00e0cc688ee7ed04a4de35e2084fe3a1b1d832aa765ee02919a157f2f89f7c73e248f1360594d70946bd578d697fe93c
-Size (Geo-ShapeFile-3.01.tar.gz) = 358669 bytes
+BLAKE2s (Geo-ShapeFile-3.03.tar.gz) = f05379b2077033f3670556833ade136f5a7de108df39a2cd11d99d915db96bc4
+SHA512 (Geo-ShapeFile-3.03.tar.gz) = a55e0819014904fe44ebc823a60e1dfc877013b15d18f84e412e66707ab0a09c2e20665bfb55a09c65dbeea86d1d6d55037f4a42b140cb4ac77a6536b5be7dee
+Size (Geo-ShapeFile-3.03.tar.gz) = 351571 bytes
 SHA1 (patch-t_main__tests.t) = eab0bb1ff1eb506a0f2d93aa2a5fb36dacfe891f
