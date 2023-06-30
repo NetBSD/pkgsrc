@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4145 2023/06/30 13:33:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4146 2023/06/30 13:37:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5813,3 +5813,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/MoarVM to 2023.06 [mef 2023-06-30]
 	Updated databases/gramps5 to 5.1.6 [gdt 2023-06-30]
 	Updated devel/p5-Term-UI to 0.50 [wen 2023-06-30]
+	Updated devel/p5-Term-Shell to 0.13 [wen 2023-06-30]
