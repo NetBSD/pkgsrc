@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2023/06/10 13:34:48 mef Exp $
+# $NetBSD: Makefile,v 1.126 2023/06/30 09:56:30 wen Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -78,6 +78,7 @@ SUBDIR+=	osm-gps-map
 SUBDIR+=	osm2pgsql
 SUBDIR+=	p5-Class-Measure
 SUBDIR+=	p5-GIS-Distance
+SUBDIR+=	p5-Geo-Coordinates-Transform
 SUBDIR+=	p5-Geo-Coordinates-UTM
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-Ellipsoid
