@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23133 2023/06/30 07:06:05 wiz Exp $
+$NetBSD: TODO,v 1.23134 2023/06/30 13:51:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencolorio-2.2.0
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
-	o opencv-4.7
+	o opencv-4.8
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
