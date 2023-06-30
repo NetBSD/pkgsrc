@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:33:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/06/30 10:03:33 wen Exp $
 #
 
-DISTNAME=	Geo-Gpx-0.26
+DISTNAME=	Geo-Gpx-1.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
-CATEGORIES=	perl5
+CATEGORIES=	geography perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://metacpan.org/pod/release/ANDYA/Geo-Gpx-0.26/lib/Geo/Gpx.pm
-COMMENT=	Geo::Gpx - Create and parse GPX files.
+HOMEPAGE=	https://metacpan.org/dist/Geo-Gpx/changes
+COMMENT=	Geo::Gpx - Create and parse GPX files
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/Geo/Gpx/.packlist
-#PERL5_MODULE_TYPE=	Module::Install::Bundled
+
 MAKE_PARAMS+=		--skipdeps
 
 DEPENDS+=	p5-DateTime-Format-ISO8601>=0.0800:../../time/p5-DateTime-Format-ISO8601
 DEPENDS+=	p5-HTML-Parser>=3.71:../../www/p5-HTML-Parser
 DEPENDS+=	p5-XML-Descent>=1.04:../../textproc/p5-XML-Descent
-
+DEPENDS+=	p5-Geo-Coordinates-Transform>=0:../../geography/p5-Geo-Coordinates-Transform
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
