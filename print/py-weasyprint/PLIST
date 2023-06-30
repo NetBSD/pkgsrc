@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/07/09 18:39:22 kleink Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/06/30 07:56:34 kleink Exp $
 bin/weasyprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -12,6 +12,8 @@ ${PYSITELIB}/weasyprint/__init__.py
 ${PYSITELIB}/weasyprint/__init__.pyc
 ${PYSITELIB}/weasyprint/__main__.py
 ${PYSITELIB}/weasyprint/__main__.pyc
+${PYSITELIB}/weasyprint/anchors.py
+${PYSITELIB}/weasyprint/anchors.pyc
 ${PYSITELIB}/weasyprint/css/__init__.py
 ${PYSITELIB}/weasyprint/css/__init__.pyc
 ${PYSITELIB}/weasyprint/css/computed_values.py
@@ -20,6 +22,7 @@ ${PYSITELIB}/weasyprint/css/counters.py
 ${PYSITELIB}/weasyprint/css/counters.pyc
 ${PYSITELIB}/weasyprint/css/html5_ph.css
 ${PYSITELIB}/weasyprint/css/html5_ua.css
+${PYSITELIB}/weasyprint/css/html5_ua_form.css
 ${PYSITELIB}/weasyprint/css/media_queries.py
 ${PYSITELIB}/weasyprint/css/media_queries.pyc
 ${PYSITELIB}/weasyprint/css/properties.py
@@ -79,18 +82,22 @@ ${PYSITELIB}/weasyprint/layout/replaced.py
 ${PYSITELIB}/weasyprint/layout/replaced.pyc
 ${PYSITELIB}/weasyprint/layout/table.py
 ${PYSITELIB}/weasyprint/layout/table.pyc
-${PYSITELIB}/weasyprint/links.py
-${PYSITELIB}/weasyprint/links.pyc
 ${PYSITELIB}/weasyprint/logger.py
 ${PYSITELIB}/weasyprint/logger.pyc
 ${PYSITELIB}/weasyprint/matrix.py
 ${PYSITELIB}/weasyprint/matrix.pyc
 ${PYSITELIB}/weasyprint/pdf/__init__.py
 ${PYSITELIB}/weasyprint/pdf/__init__.pyc
+${PYSITELIB}/weasyprint/pdf/anchors.py
+${PYSITELIB}/weasyprint/pdf/anchors.pyc
 ${PYSITELIB}/weasyprint/pdf/fonts.py
 ${PYSITELIB}/weasyprint/pdf/fonts.pyc
+${PYSITELIB}/weasyprint/pdf/metadata.py
+${PYSITELIB}/weasyprint/pdf/metadata.pyc
 ${PYSITELIB}/weasyprint/pdf/pdfa.py
 ${PYSITELIB}/weasyprint/pdf/pdfa.pyc
+${PYSITELIB}/weasyprint/pdf/pdfua.py
+${PYSITELIB}/weasyprint/pdf/pdfua.pyc
 ${PYSITELIB}/weasyprint/pdf/sRGB2014.icc
 ${PYSITELIB}/weasyprint/pdf/stream.py
 ${PYSITELIB}/weasyprint/pdf/stream.pyc
