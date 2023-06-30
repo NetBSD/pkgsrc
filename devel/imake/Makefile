@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/06/27 10:40:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.32 2023/06/30 06:31:20 wiz Exp $
 
 DISTNAME=		imake-1.0.9
+PKGREVISION=		1
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
@@ -24,7 +25,7 @@ CONFIGURE_ENV+=		RAWCPP=${TOOLBASE:Q}/bin/tradcpp
 # characteristics, but what gets baked into the package needs to be
 # where tradcpp will live at run-time.
 CPPFLAGS+=		-DRAWCPP=\"${PREFIX:Q}/bin/tradcpp\"
-MAKE_FLAGS+=		RAWCPP=${PREFIX:Q}/bin/rawcpp
+MAKE_FLAGS+=		RAWCPP=${PREFIX:Q}/bin/tradcpp
 
 REPLACE_SH+=		mkhtmlindex.sh
 
