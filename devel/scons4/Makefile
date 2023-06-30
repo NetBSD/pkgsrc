@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/06/08 05:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/06/30 13:26:02 hauke Exp $
 
 DISTNAME=	SCons-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SCons/}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.scons.org/
