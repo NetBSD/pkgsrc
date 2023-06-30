@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4128 2023/06/30 06:31:45 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4129 2023/06/30 07:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5796,3 +5796,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-zope.exceptions to 5.0 [adam 2023-06-29]
 	Updated devel/py-zope.deferredimport to 5.0 [adam 2023-06-29]
 	Updated devel/imake to 1.0.9nb1 [wiz 2023-06-30]
+	Updated devel/nss to 3.91 [wiz 2023-06-30]
