@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/04/10 00:57:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:38 wiz Exp $
 
 DISTNAME=	abcpmc-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

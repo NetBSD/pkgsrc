@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2023/07/01 08:37:45 wiz Exp $
 
 DISTNAME=	khard-0.18.0
 CATEGORIES=	misc net python
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autoapi-[0-9]*:../../textproc/py-sphinx-autoapi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10:../../textproc/py-sphinx-autodoc-typehints
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # does not support python-2.x any longer
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 USE_PKG_RESOURCES=	yes
 

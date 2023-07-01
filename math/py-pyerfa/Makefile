@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/08/29 15:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/01 08:37:40 wiz Exp $
 
 DISTNAME=	pyerfa-2.0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,18 +10,18 @@ HOMEPAGE=	https://github.com/liberfa/pyerfa/
 COMMENT=	Python wrapper for ERFA library
 LICENSE=	modified-bsd
 
-MAKE_ENV+=	PYERFA_USE_SYSTEM_LIBERFA=1
-
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-numpy
-
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=4.1.2:../../devel/py-setuptools_scm
 DEPENDS+=	erfa>=2.0.0:../../math/erfa
+
+MAKE_ENV+=	PYERFA_USE_SYSTEM_LIBERFA=1
+
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

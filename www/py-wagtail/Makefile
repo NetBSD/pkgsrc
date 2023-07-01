@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/04/18 21:58:02 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/01 08:37:46 wiz Exp $
 
 DISTNAME=	wagtail-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -46,7 +46,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>=2014.7:../../time/py-pytz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-django2
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 USE_PKG_RESOURCES=	yes
 

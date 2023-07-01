@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/05/06 19:09:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/01 08:37:33 wiz Exp $
 
 DISTNAME=	soundfile-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

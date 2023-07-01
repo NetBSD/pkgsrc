@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/29 09:28:02 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/01 08:37:44 wiz Exp $
 
 DISTNAME=	PySDL2-0.9.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -17,6 +17,8 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
 
 TEST_ENV+=	PYSDL2_DLL_PATH=${BUILDLINK_PREFIX.SDL2}/lib
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 BUILDLINK_API_DEPENDS.SDL2+=	SDL2>=2.0.5
 .include "../../devel/SDL2/buildlink3.mk"

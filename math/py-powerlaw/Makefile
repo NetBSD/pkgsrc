@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/04/10 00:57:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:40 wiz Exp $
 
 DISTNAME=	powerlaw-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
