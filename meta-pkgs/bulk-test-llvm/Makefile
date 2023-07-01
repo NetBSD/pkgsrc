@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/06 12:41:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/01 14:19:45 nia Exp $
 
 DISTNAME=	bulk-test-llvm-20211207
 CATEGORIES=	meta-pkgs
@@ -21,29 +21,29 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 .include "../../lang/python/pyversion.mk"
 
-TOOL_DEPENDS+=		clang-[0-9]*:../../lang/clang
-TOOL_DEPENDS+=		creduce-[0-9]*:../../devel/creduce
-TOOL_DEPENDS+=		cvise-[0-9]*:../../devel/cvise
-TOOL_DEPENDS+=		firefox-[0-9]*:../../www/firefox
-TOOL_DEPENDS+=		firefox-esr-[0-9]*:../../www/firefox-esr
-TOOL_DEPENDS+=		include-what-you-use-[0-9]*:../../devel/include-what-you-use
-TOOL_DEPENDS+=		polly-[0-9]*:../../devel/polly
-TOOL_DEPENDS+=		qtcreator-[0-9]*:../../editors/qtcreator
-TOOL_DEPENDS+=		libcxx-[0-9]*:../../lang/libcxx
-TOOL_DEPENDS+=		libcxxabi-[0-9]*:../../lang/libcxxabi
-TOOL_DEPENDS+=		libunwind-[0-9]*:../../lang/libunwind
-TOOL_DEPENDS+=		lld-[0-9]*:../../devel/lld
-TOOL_DEPENDS+=		lldb-[0-9]*:../../devel/lldb
-TOOL_DEPENDS+=		mozjs78-[0-9]*:../../lang/mozjs78
-TOOL_DEPENDS+=		opencl-clang-[0-9]*:../../parallel/opencl-clang
-TOOL_DEPENDS+=		openmp-[0-9]*:../../parallel/openmp
-TOOL_DEPENDS+=		pocl-[0-9]*:../../parallel/pocl
-TOOL_DEPENDS+=		${PYPKGPREFIX}-llvmlite-[0-9]*:../../devel/py-llvmlite
-TOOL_DEPENDS+=		rust-[0-9]*:../../lang/rust
-TOOL_DEPENDS+=		seamonkey-[0-9]*:../../www/seamonkey
-TOOL_DEPENDS+=		spirv-llvm-translator-[0-9]*:../../parallel/spirv-llvm-translator
-TOOL_DEPENDS+=		thunderbird-[0-9]*:../../mail/thunderbird
-TOOL_DEPENDS+=		woboq_codebrowser-[0-9]*:../../devel/woboq_codebrowser
-TOOL_DEPENDS+=		zig-[0-9]*:../../lang/zig
+DEPENDS+=	clang-[0-9]*:../../lang/clang
+DEPENDS+=	creduce-[0-9]*:../../devel/creduce
+DEPENDS+=	cvise-[0-9]*:../../devel/cvise
+DEPENDS+=	firefox-[0-9]*:../../www/firefox
+DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
+DEPENDS+=	include-what-you-use-[0-9]*:../../devel/include-what-you-use
+DEPENDS+=	polly-[0-9]*:../../devel/polly
+DEPENDS+=	qtcreator-[0-9]*:../../editors/qtcreator
+DEPENDS+=	libcxx-[0-9]*:../../lang/libcxx
+DEPENDS+=	libcxxabi-[0-9]*:../../lang/libcxxabi
+DEPENDS+=	libunwind-[0-9]*:../../lang/libunwind
+DEPENDS+=	lld-[0-9]*:../../devel/lld
+DEPENDS+=	lldb-[0-9]*:../../devel/lldb
+DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
+DEPENDS+=	opencl-clang-[0-9]*:../../parallel/opencl-clang
+DEPENDS+=	openmp-[0-9]*:../../parallel/openmp
+DEPENDS+=	pocl-[0-9]*:../../parallel/pocl
+DEPENDS+=	${PYPKGPREFIX}-llvmlite-[0-9]*:../../devel/py-llvmlite
+DEPENDS+=	rust-[0-9]*:../../lang/rust
+DEPENDS+=	seamonkey-[0-9]*:../../www/seamonkey
+DEPENDS+=	spirv-llvm-translator-[0-9]*:../../parallel/spirv-llvm-translator
+DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
+DEPENDS+=	woboq_codebrowser-[0-9]*:../../devel/woboq_codebrowser
+DEPENDS+=	zig-[0-9]*:../../lang/zig
 
 .include "../../mk/bsd.pkg.mk"
