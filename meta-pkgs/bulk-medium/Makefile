@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2023/06/06 12:41:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/01 08:35:09 wiz Exp $
 
-DISTNAME=	bulk-medium-20230530
+DISTNAME=	bulk-medium-20230701
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -84,7 +84,7 @@ TOOL_DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
 TOOL_DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 TOOL_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 TOOL_DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-TOOL_DEPENDS+=	python38-[0-9]*:../../lang/python38
+TOOL_DEPENDS+=	python310-[0-9]*:../../lang/python310
 TOOL_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 TOOL_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 TOOL_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
@@ -219,7 +219,7 @@ TOOL_DEPENDS+=	${LUA_PKGPREFIX}-stdlib-[0-9]*:../../devel/lua-stdlib
 TOOL_DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 .include "../../lang/lua/luaversion.mk" # for LUA_PKGPREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../mk/bsd.pkg.mk"
