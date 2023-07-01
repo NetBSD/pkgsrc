@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/06/10 14:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/07/01 09:11:58 wiz Exp $
 
 PKGNAME=		revbump-3.3
 CATEGORIES=		pkgtools
@@ -6,7 +6,7 @@ CATEGORIES=		pkgtools
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		https://www.pkgsrc.org/
 COMMENT=		Tool for bumping PKGREVISIONs (for pkgsrc developers)
-LICENSE=		modified-bsd AND 2-clause-bsd
+LICENSE=		2-clause-bsd
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
