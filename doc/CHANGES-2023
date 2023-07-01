@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4152 2023/07/01 06:48:17 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.4153 2023/07/01 07:29:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5822,3 +5822,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-ruby to 1.30.1nb1 [osa 2023-06-30]
 	Updated x11/qt6-qtbase to 6.5.0nb3 [bacon 2023-06-30]
 	Updated sysutils/fzf to 0.42.0 [iquiw 2023-07-01]
+	Updated net/nanotodon to 0.3.1 [tsutsui 2023-07-01]
