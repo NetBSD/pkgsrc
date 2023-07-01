@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/11/10 08:19:36 adam Exp $
+$NetBSD: distinfo,v 1.16 2023/07/01 08:54:01 wiz Exp $
 
-BLAKE2s (colorama-0.4.6-py2.py3-none-any.whl) = c0514d594a37965ea850bd2b9840ec265637521b98e03cb6adeceac4ae41cd75
-SHA512 (colorama-0.4.6-py2.py3-none-any.whl) = a5301fe83709a4632969bf32e0e5564679bac01fcb2068a57781c0fbd04ad48f90f14b6439c27155a9ed1ef6567a70f509b0d27d9661fa1dc56abd32bcc599dd
-Size (colorama-0.4.6-py2.py3-none-any.whl) = 25335 bytes
+BLAKE2s (colorama-0.4.6.tar.gz) = 1a11cc4f067a1e8ec3e205503d8c35cedad4fbee4be43902d8ca5fd09c8d1c0d
+SHA512 (colorama-0.4.6.tar.gz) = 472f00647dec5955562d8a7f7a9078baefc8a449f8f83331a9e73fb246a4588bb4cf07d8d53fb5e53d411d63c7f362ce5f855511a0cf436684258a72dfb2bec0
+Size (colorama-0.4.6.tar.gz) = 27697 bytes

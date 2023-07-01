@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/11/10 08:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/01 08:54:01 wiz Exp $
 
 DISTNAME=	colorama-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/tartley/colorama
 COMMENT=	Cross-platform coloured terminal text
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+
 USE_LANGUAGES=	# none
-# as long as Python 2.7 is around
-NO_BUILD=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
