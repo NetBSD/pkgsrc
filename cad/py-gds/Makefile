@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/12/12 07:57:03 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/01 08:37:34 wiz Exp $
 
 DISTNAME=	gdspy-1.6.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,7 +14,7 @@ LICENSE=	boost-license
 # tests not included in pypi distfile
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 USE_LANGUAGES+=	c c++
 

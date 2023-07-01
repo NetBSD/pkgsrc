@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/09 13:14:18 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/01 08:37:47 wiz Exp $
 
 DISTNAME=	wagtailnews-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-wagtail>=2.9:../../www/py-wagtail
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-wagtail
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} runtests.py

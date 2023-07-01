@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/04/17 20:28:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/01 08:37:42 wiz Exp $
 
 DISTNAME=	deepdiff-6.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

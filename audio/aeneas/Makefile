@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/06 19:08:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/01 08:37:33 wiz Exp $
 
 DISTNAME=	aeneas-1.7.3
 PKGREVISION=	15
@@ -21,7 +21,7 @@ EGG_NAME=	${DISTNAME}.0
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-beautifulsoup4
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../audio/espeak/buildlink3.mk"

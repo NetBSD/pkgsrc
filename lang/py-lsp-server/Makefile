@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/21 18:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:37 wiz Exp $
 
 DISTNAME=	python-lsp-server-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -44,7 +44,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-pylint, py-parso via py-jedi
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 SUBST_CLASSES+=		pylint
 SUBST_FILES.pylint+=	test/plugins/test_pylint_lint.py

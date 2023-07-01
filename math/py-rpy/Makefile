@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/01/04 20:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/07/01 08:37:40 wiz Exp $
 
 DISTNAME=	rpy2-3.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -27,17 +27,16 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 
 USE_LANGUAGES+=		c fortran77
 
-BUILDLINK_API_DEPENDS.R+=	R>=3.3.0
-
 LDFLAGS.SunOS+=		-mimpure-text
 
 REPLACE_PYTHON=		rpy/tests.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+BUILDLINK_API_DEPENDS.R+=	R>=3.3.0
 .include "../../math/R/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"

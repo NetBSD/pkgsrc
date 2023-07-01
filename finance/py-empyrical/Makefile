@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/04/10 00:57:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/01 08:37:35 wiz Exp $
 
 DISTNAME=	empyrical-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.15.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

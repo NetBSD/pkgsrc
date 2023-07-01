@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/18 12:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/01 08:37:44 wiz Exp $
 
 DISTNAME=	fire-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/08 10:13:30 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/01 08:37:46 wiz Exp $
 
 DISTNAME=	poetry_plugin_export-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 # as of 1.4.0
 # 1 failed, 67 passed

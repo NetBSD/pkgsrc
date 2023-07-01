@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/04/27 06:02:54 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/01 08:37:46 wiz Exp $
 
 .include "../../security/ykman/version.mk"
 
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-fido2>=1:../../security/py-fido2
 DEPENDS+=	${PYPKGPREFIX}-scard>=2:../../devel/py-scard
 DEPENDS+=	${PYPKGPREFIX}-keyring>=23.4:../../security/py-keyring
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
