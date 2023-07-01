@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/01/29 21:18:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.109 2023/07/01 14:12:58 nia Exp $
 #
 
 DISTNAME=	zenity-3.41.0
@@ -14,6 +14,9 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		pkg-config perl:run
 USE_TOOLS+=		itstool msgfmt
+
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+USE_LANGUAGES=		c99
 
 TOOL_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
