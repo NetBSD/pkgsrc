@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/01 09:15:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/01 11:25:04 wiz Exp $
 
-DISTNAME=	pyproject_api-1.5.1
+DISTNAME=	pyproject_api-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_api/}
@@ -25,6 +25,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# needs 'make install'
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
