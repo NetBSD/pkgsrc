@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/01 11:31:53 wiz Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-1.23.0
+DISTNAME=	sphinx_autodoc_typehints-1.23.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
@@ -22,6 +22,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
+# needs 'make install'
 do-test:
 	cd ${WRKSRC} && ${MAKE_ENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
