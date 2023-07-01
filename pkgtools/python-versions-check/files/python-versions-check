@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: python-versions-check,v 1.1 2023/07/01 09:26:59 wiz Exp $
+# $NetBSD: python-versions-check,v 1.2 2023/07/01 11:17:12 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -89,6 +89,8 @@ def extract_includes(path, dict_key=None):
     #     # already handled
     #     return includes[dict_key]
     any_python_include = False
+    if args.debug:
+        print(f"DEBUG: parsing {path}")
     with open(path, 'r', encoding='utf-8') as input_file:
         for line in input_file.readlines():
             if m := include_re.match(line):
@@ -137,7 +139,7 @@ def absolute_path(path):
 
 def get_pkg_path(full_path):
     '''Strip pkgsrcdir from path.'''
-    cand = full_path
+    cand = str(full_path)
     if cand.startswith(args.pkgsrcdir):
         cand = cand[len(args.pkgsrcdir)+1:]
     elif cand.startswith('../../'):
@@ -156,18 +158,25 @@ def report_problem(first, first_versions, second_versions):
     print(f'{first}: supports {first_versions}, missing: {difference}')
 
 
-parser = argparse.ArgumentParser(description='find all packages that' +
-                                 ' link against a given package')
+if 'PKGSRCDIR' in os.environ:
+    pkgsrcdir = os.environ['PKGSRCDIR']
+else:
+    pkgsrcdir = '/usr/pkgsrc'
+
+parser = argparse.ArgumentParser(description='compare supported Python versions for package' +
+                                 'and all packages it depends upon and that depend on it')
 parser.add_argument('package', nargs='?',
                     help='package whose dependencies we want to check (default: current directory)')
-parser.add_argument('-p', dest='pkgsrcdir', default='/usr/pkgsrc',
+parser.add_argument('-d', dest='debug', default=False,
+                    help='debug mode - print each file name when its parsed', action='store_true')
+parser.add_argument('-p', dest='pkgsrcdir', default=pkgsrcdir,
                     help='path to the pkgsrc root directory', action='store')
 parser.add_argument('-w', dest='wip', default=False,
-                    help='include wip in search', action='store_true')
+                    help='include wip in search for packages using it', action='store_true')
 args = parser.parse_args()
 
 if not args.package:
-    args.package = get_pkg_path(os.getcwd())
+    args.package = get_pkg_path(pathlib.Path().resolve())
 
 if not pathlib.Path(args.pkgsrcdir).exists() or \
    not pathlib.Path(args.pkgsrcdir + '/doc').exists() or \
