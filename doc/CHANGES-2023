@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4153 2023/07/01 07:29:07 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4154 2023/07/01 08:35:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5823,3 +5823,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/qt6-qtbase to 6.5.0nb3 [bacon 2023-06-30]
 	Updated sysutils/fzf to 0.42.0 [iquiw 2023-07-01]
 	Updated net/nanotodon to 0.3.1 [tsutsui 2023-07-01]
+	Updated meta-pkgs/bulk-medium to 20230701 [wiz 2023-07-01]
