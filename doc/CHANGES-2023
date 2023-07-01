@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4160 2023/07/01 11:25:19 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4161 2023/07/01 11:29:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5831,3 +5831,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/gcc12 to 12.3.0 [wiz 2023-07-01]
 	Updated pkgtools/python-versions-check to 1.1 [wiz 2023-07-01]
 	Updated devel/py-project-api to 1.5.2 [wiz 2023-07-01]
+	Updated security/py-service_identity to 23.1.0 [wiz 2023-07-01]
