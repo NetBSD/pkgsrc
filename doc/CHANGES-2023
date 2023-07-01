@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4170 2023/07/01 17:07:06 fox Exp $
+$NetBSD: CHANGES-2023,v 1.4171 2023/07/01 18:27:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5652,7 +5652,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed sysutils/gst-plugins0.10-gnomevfs [wiz 2023-06-26]
 	Removed x11/gst-plugins0.10-x11 [wiz 2023-06-26]
 	Updated wm/marswm to 0.5.0 [pin 2023-06-26]
-	Updated graphics/oculante to 0.6.66 [pin 2023-06-26]
 	Updated misc/tui-journal to 0.2.0 [pin 2023-06-26]
 	Updated graphics/png to 1.6.40 [wiz 2023-06-26]
 	Updated www/firefox to 114.0.2 [ryoon 2023-06-26]
