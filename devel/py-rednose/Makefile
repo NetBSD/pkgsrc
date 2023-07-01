@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/01 08:53:22 wiz Exp $
 
 DISTNAME=	rednose-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-termstyle>=0.1.7:../../comms/py-termstyle
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
