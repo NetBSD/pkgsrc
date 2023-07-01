@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4165 2023/07/01 13:56:41 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4166 2023/07/01 16:02:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5836,4 +5836,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-rtd-theme to 1.2.2 [wiz 2023-07-01]
 	Updated devel/py-tox to 4.6.3 [wiz 2023-07-01]
 	Updated databases/mariadb106-client to 10.6.14 [nia 2023-07-01]
+	Updated databases/mariadb106-server to 10.6.14 [nia 2023-07-01]
+	Updated databases/mariadb105-client to 10.5.21 [nia 2023-07-01]
 	Updated databases/mariadb106-server to 10.6.14 [nia 2023-07-01]
