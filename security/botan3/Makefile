@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/26 11:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/01 12:29:50 nros Exp $
 
 DISTNAME=	Botan-3.0.0
 PKGNAME=	${DISTNAME:S/Botan/botan3/}
@@ -43,13 +43,17 @@ CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
 CONFIGURE_ARGS+=	--cc=gcc
 .endif
 
+PLIST_VARS+=		prng
 .if ${MACHINE_ARCH} == "x86_64"
+PLIST.prng=		yes
 CONFIGURE_ARGS+=	--cpu=amd64
 .elif ${MACHINE_ARCH} == "i386"
+PLIST.prng=		yes
 CONFIGURE_ARGS+=	--cpu=i386
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
+PLIST.prng=		yes
 CONFIGURE_ARGS+=	--cpu=ppc64
 .elif ${MACHINE_ARCH:Maarch64*}
 CONFIGURE_ARGS+=	--cpu=arm64
