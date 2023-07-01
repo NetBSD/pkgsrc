@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.54 2023/05/17 10:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/07/01 22:13:14 wiz Exp $
 
-DISTNAME=	exiv2-0.27.6-Source
+DISTNAME=	exiv2-0.28.0-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exiv2/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.exiv2.org/
+HOMEPAGE=	https://exiv2.org/
 COMMENT=	Image metadata manipulation
 LICENSE=	gnu-gpl-v2
 
@@ -34,9 +34,11 @@ CXXFLAGS.SunOS+=	-fPIC
 PKGCONFIG_OVERRIDE=	cmake/exiv2.pc.in
 
 .include "../../devel/cmake/build.mk"
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/inih/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
