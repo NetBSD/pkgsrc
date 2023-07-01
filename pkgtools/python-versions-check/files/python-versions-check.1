@@ -1,0 +1,85 @@
+.\"	$NetBSD: python-versions-check.1,v 1.1 2023/07/01 09:26:59 wiz Exp $
+.\"
+.\" Copyright (c) 2023 The NetBSD Foundation, Inc.
+.\" All rights reserved.
+.\"
+.\" This code is derived from software contributed to The NetBSD Foundation
+.\" by Thomas Klausner.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+.\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+.\" TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+.\" PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+.\" BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+.\" POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd June 10, 2023
+.Dt PYTHON-VERSIONS-CHECK.PY 1
+.Os
+.Sh NAME
+.Nm python-versions-check.py
+.Nd check Python versions for a package and its dependencies and users
+.Sh SYNOPSIS
+.Nm
+.Op Fl hw
+.Op Fl p Ar pkgsrcdir
+.Op Ar category/package
+.Sh DESCRIPTION
+.Nm
+is a script for pkgsrc developers that compares the Python versions
+supported by a package to the ones supported by its dependencies and
+the packages depending on it.
+.Pp
+.Nm
+checks
+.Ar category/package
+or the package in its current working directory, if no argument is
+provided.
+.Pp
+.Nm
+supports the following options:
+.Bl -tag -width 12n -offset indent
+.It Fl h
+Show the usage.
+.It Fl p Ar pkgsrcdir
+Use
+.Ar pkgsrcdir
+as root of the pkgsrc tree.
+Defaults to
+.Pa /usr/pkgsrc .
+.It Fl w
+Also bump packages in the
+.Pa wip/
+subtree.
+.El
+.Sh EXAMPLES
+Example for the output if there is a problem:
+.Bd -literal
+# python-versions-check.py math/py-numpy
+Supported Python versions for math/py-numpy: [39, 310, 311]
+Checking packages used by math/py-numpy:
+Checking packages using math/py-numpy:
+math/py-scipy: supports [38, 39, 310, 311], missing: [38]
+.Ed
+This means that while
+.Pa math/py-numpy
+only supports Python version 3.9, 3.10, and 3.11,
+.Pa math/py-scipy
+also supports Python version 3.8.
+This will break e.g. bulk builds because the required
+.Pa py38-numpy
+package will not exist.
