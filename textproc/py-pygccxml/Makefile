@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/10/08 13:17:21 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/01 08:46:13 wiz Exp $
 
 DISTNAME=	pygccxml-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	boost-license
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
