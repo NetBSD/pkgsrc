@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4158 2023/07/01 10:53:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4159 2023/07/01 11:17:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5829,3 +5829,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libuv to 1.46.0 [adam 2023-07-01]
 	Added pkgtools/python-versions-check version 1.0 [wiz 2023-07-01]
 	Updated lang/gcc12 to 12.3.0 [wiz 2023-07-01]
+	Updated pkgtools/python-versions-check to 1.1 [wiz 2023-07-01]
