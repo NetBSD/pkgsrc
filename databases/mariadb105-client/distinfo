@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.18 2023/03/18 15:05:41 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/07/01 16:02:04 nia Exp $
 
-BLAKE2s (mariadb-10.5.19.tar.gz) = cc7735ea49b9b2f5e14a9534b26859461b977266bfa605e44201e9dfcc431f92
-SHA512 (mariadb-10.5.19.tar.gz) = 4a72ca4dfee0d3fa5432495f62c7eb03addc067e2f023b1ebe32bd1d3a0687c2c61c3316c0c4f690db4f74559bce668c6accbe137d906a52116db2bb2f454699
-Size (mariadb-10.5.19.tar.gz) = 111958233 bytes
+BLAKE2s (mariadb-10.5.21.tar.gz) = 1f2eaa28d86256bb1092c5e2578ad116ad2243317d2a087a65c49c3d0dcb0f0a
+SHA512 (mariadb-10.5.21.tar.gz) = b95d66e32153ae609450a98da2b32d7bccde80c4cb41070655084d2064d713b21ce460ce275a2b84513dec2567f44aaa2c358230bbd620ae13a0829587339e0c
+Size (mariadb-10.5.21.tar.gz) = 112102574 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = 574131db46854715758c60ba5f026498f5b29564
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = 89fe80fb66b8791131a8c6d1b209e57082804a01
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
-SHA1 (patch-include_mysql_service__encryption.h) = bfc2fcba9f33cc58b726f8645dc5400a0df27bd9
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
 SHA1 (patch-mysys_my__gethwaddr.c) = f4fd827617697ff386099defc839fe8d082e6c3e
 SHA1 (patch-plugin_auth__pam_testing_pam__mariadb__mtr.c) = 5c7978b5bec79bbc09d3ebeb69dd85f3e6f8a423
