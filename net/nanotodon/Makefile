@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/04/19 08:11:09 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/01 07:28:51 tsutsui Exp $
 
-GITHUB_TAG=	0.2.0
+GITHUB_TAG=	0.3.1
 DISTNAME=	nanotodon-${GITHUB_TAG}
-#PKGREVISION=	0
-PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taka-tuos/}
 
@@ -31,6 +29,5 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/doc/nanotodon
 
 .include "../../devel/ncursesw/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
