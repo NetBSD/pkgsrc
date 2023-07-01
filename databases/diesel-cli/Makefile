@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/26 11:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/01 07:02:46 wiz Exp $
 
 DISTNAME=	diesel-cli-2.1.0
 CATEGORIES=	databases
@@ -32,9 +32,9 @@ post-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${DIESEL_BINARY} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/diesel.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/diesel
-	${INSTALL_PROGRAM} ${WRKSRC}/diesel.zsh ${DESTDIR}${PREFIX}/share/zsh/site-functions/_diesel
-	${INSTALL_PROGRAM} ${WRKSRC}/diesel.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/diesel.fish
+	${INSTALL_DATA} ${WRKSRC}/diesel.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/diesel
+	${INSTALL_DATA} ${WRKSRC}/diesel.zsh ${DESTDIR}${PREFIX}/share/zsh/site-functions/_diesel
+	${INSTALL_DATA} ${WRKSRC}/diesel.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/diesel.fish
 
 .include "../../lang/rust/cargo.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
