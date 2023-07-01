@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/05/18 13:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/01 08:37:46 wiz Exp $
 
 DISTNAME=	nkdfu-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 DEPENDS+=	${PYPKGPREFIX}-fire-[0-9]*:../../devel/py-fire
 
-# Only supports python 3.6 or higher.
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 USE_LANGUAGES=	# none
 

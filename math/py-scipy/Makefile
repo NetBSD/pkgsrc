@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/05/05 14:59:25 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/07/01 08:37:41 wiz Exp $
 
 DISTNAME=	scipy-1.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -39,7 +39,7 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 # Prefer boost-headers from PkgSrc which are properly patched.
 post-configure:

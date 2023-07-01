@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/24 07:07:33 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/01 08:37:36 wiz Exp $
 
 DISTNAME=	imageio-2.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

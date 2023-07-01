@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/14 21:28:31 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/01 08:37:43 wiz Exp $
 
 DISTNAME=	chip-seq-1.1
 CATEGORIES=	biology meta-pkgs
@@ -22,7 +22,7 @@ DEPENDS+=	webbrowser>=0:../../www/webbrowser
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-macs2
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

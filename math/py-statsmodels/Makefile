@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/05/08 08:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/01 08:37:41 wiz Exp $
 
 DISTNAME=	statsmodels-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 # FIXME: conflicts with installed tests
 do-test:

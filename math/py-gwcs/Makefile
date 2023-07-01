@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/10 00:57:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/01 08:37:38 wiz Exp $
 
 DISTNAME=	gwcs-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,11 +11,11 @@ HOMEPAGE=	https://gwcs.readthedocs.io/en/latest/
 COMMENT=	Generalized World Coordinate System
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
-
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-asdf>=2.7.1:../../math/py-asdf
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
