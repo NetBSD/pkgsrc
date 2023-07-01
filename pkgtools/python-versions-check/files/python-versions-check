@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: python-versions-check,v 1.2 2023/07/01 11:17:12 wiz Exp $
+# $NetBSD: python-versions-check,v 1.3 2023/07/01 13:16:52 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -176,7 +176,13 @@ parser.add_argument('-w', dest='wip', default=False,
 args = parser.parse_args()
 
 if not args.package:
-    args.package = get_pkg_path(pathlib.Path().resolve())
+    current_path = pathlib.Path().resolve()
+    mk = current_path.joinpath('../../mk')
+    doc = current_path.joinpath('../../doc')
+    if not doc.exists() or not mk.exists():
+        print('not inside a pkgsrc directory, can not guess package')
+        sys.exit(1)
+    args.package = str(current_path.parent.name) + '/' + str(current_path.name)
 
 if not pathlib.Path(args.pkgsrcdir).exists() or \
    not pathlib.Path(args.pkgsrcdir + '/doc').exists() or \
