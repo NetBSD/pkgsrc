@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2022/09/04 21:38:47 rillig Exp $
+# $NetBSD: Makefile,v 1.124 2023/07/01 09:27:20 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -70,6 +70,7 @@ SUBDIR+=	pkgtasks
 SUBDIR+=	plist-utils
 SUBDIR+=	port2pkg
 #SUBDIR+=	prereq-readme	# Only used by the README.html generation
+SUBDIR+=	python-versions-check
 SUBDIR+=	rc.d-boot
 SUBDIR+=	rc.subr
 SUBDIR+=	rcorder
