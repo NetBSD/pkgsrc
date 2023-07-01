@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/05/22 17:50:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/07/01 20:39:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	android-activity-0.4.0
@@ -63,7 +63,7 @@ CARGO_CRATE_DEPENDS+=	fuchsia-zircon-sys-0.3.3
 CARGO_CRATE_DEPENDS+=	gethostname-0.2.3
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.7
 CARGO_CRATE_DEPENDS+=	gl_generator-0.14.0
-CARGO_CRATE_DEPENDS+=	glutin-0.30.8
+CARGO_CRATE_DEPENDS+=	glutin-0.30.9
 CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.5.0
 CARGO_CRATE_DEPENDS+=	glutin_glx_sys-0.4.0
 CARGO_CRATE_DEPENDS+=	glutin_wgl_sys-0.4.0
