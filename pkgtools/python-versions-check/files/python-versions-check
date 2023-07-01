@@ -1,0 +1,231 @@
+#!/usr/bin/env python3
+#
+# $NetBSD: python-versions-check,v 1.1 2023/07/01 09:26:59 wiz Exp $
+#
+# Copyright (c) 2023 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Thomas Klausner.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+
+'''For a given Python package, find all packages that use it
+(by looking at DEPENDS, BUILD_DEPENDS, TOOL_DEPENDS)
+the compare acceptable and incompatible versions.'''
+
+import argparse
+from collections import defaultdict
+import glob
+import os
+import pathlib
+import re
+import sys
+
+# only accept includes with ../../ or in the current directory
+include_re = re.compile(r'\s*\.\s*include\s+"(\.\./\.\./[^/]*/[^/]*/|)([^/]*)"')
+depends_re = re.compile(r'[^#]*DEPENDS.*:(\.\./\.\./.*)')
+# '+=', '?='
+pva_re = re.compile(r'PYTHON_VERSIONS_ACCEPTED\s*\+?\??\s*=\s*([0-9 ]*)')
+pvi_re = re.compile(r'PYTHON_VERSIONS_INCOMPATIBLE\s*\+?\??\s*=\s*([0-9 ]*)')
+
+
+# all available Python versions
+existing = set([])
+# dictionary for pkg_path -> dependencies
+includes = defaultdict(set)
+# dictionary for pkg_path -> allowed Python versions
+python_versions = defaultdict(set)
+
+
+def supported_versions(pkg_path):
+    '''Return Python versions supported by a package.'''
+    if pkg_path in python_versions:
+        return python_versions[pkg_path]
+    return existing
+
+
+def extract_python_versions(path, apply_existing=True):
+    '''Find the supported Python versions for a package.'''
+    accepted = set([])
+    if apply_existing:
+        accepted = existing
+    with open(path, 'r', encoding='utf-8') as input_file:
+        for line in input_file.readlines():
+            if m := pva_re.match(line):
+                accepted = set(m.group(1).split())
+            elif m := pvi_re.match(line):
+                accepted = accepted - set(m.group(1).split())
+    return accepted
+
+
+def extract_includes(path, dict_key=None):
+    '''Read the interesting parts of a Makefile (fragment).'''
+    pkg_path = get_pkg_path(path)
+    directory = path[:path.rfind('/')+1]
+    if not dict_key:
+        dict_key = pkg_path
+    # elif dict_key in includes:
+    #     # already handled
+    #     return includes[dict_key]
+    any_python_include = False
+    with open(path, 'r', encoding='utf-8') as input_file:
+        for line in input_file.readlines():
+            if m := include_re.match(line):
+                file_path = m.group(1)
+                file_name = m.group(2)
+                # skip any unexpanded variables - we're not a full parser
+                # skip 'mk' includes
+                if '/mk/' in file_path or '${' in file_path or '${' in file_name:
+                    continue
+                if 'lang/python/' in file_path:
+                    any_python_include = True
+                # local includes and Makefile.common includes are parsed immediately
+                if len(file_path) == 0:
+                    extract_includes(directory + m.group(2), dict_key)
+                elif pkg_path + '/' in file_path or file_name == 'Makefile.common':
+                    full_path = absolute_path(file_path + file_name)
+                    extract_includes(full_path, dict_key)
+                # non-local ones are dependencies
+                elif 'lang/lua/' in file_path \
+                     or 'print/texlive' in file_path \
+                     or 'lang/python' in file_path:
+                    # has no Makefile
+                    continue
+                else:
+                    includes[dict_key].add(get_pkg_path(file_path))
+            elif m := depends_re.match(line):
+                file_path = m.group(1)
+                if '${' in file_path:
+                    continue
+                includes[dict_key].add(get_pkg_path(m.group(1)))
+            elif m := pva_re.match(line):
+                python_versions[dict_key] = set(m.group(1).split())
+            elif m := pvi_re.match(line):
+                python_versions[dict_key] = supported_versions(dict_key) - set(m.group(1).split())
+    if not any_python_include:
+        includes[dict_key] = set([])
+    return includes[dict_key]
+
+
+def absolute_path(path):
+    '''Convert relative path to absolute one.'''
+    if path.startswith('../../'):
+        return args.pkgsrcdir + '/' + path[6:]
+    return path
+
+
+def get_pkg_path(full_path):
+    '''Strip pkgsrcdir from path.'''
+    cand = full_path
+    if cand.startswith(args.pkgsrcdir):
+        cand = cand[len(args.pkgsrcdir)+1:]
+    elif cand.startswith('../../'):
+        cand = cand[6:]
+
+    if cand.count('/') == 2:
+        cand = cand[:cand.rfind('/')]
+    return cand
+
+
+def report_problem(first, first_versions, second_versions):
+    '''Pretty-print a problem with mismatching Python versions.'''
+    difference = first_versions ^ second_versions
+    difference = sorted([int(x) for x in difference])
+    first_versions = sorted([int(x) for x in first_versions])
+    print(f'{first}: supports {first_versions}, missing: {difference}')
+
+
+parser = argparse.ArgumentParser(description='find all packages that' +
+                                 ' link against a given package')
+parser.add_argument('package', nargs='?',
+                    help='package whose dependencies we want to check (default: current directory)')
+parser.add_argument('-p', dest='pkgsrcdir', default='/usr/pkgsrc',
+                    help='path to the pkgsrc root directory', action='store')
+parser.add_argument('-w', dest='wip', default=False,
+                    help='include wip in search', action='store_true')
+args = parser.parse_args()
+
+if not args.package:
+    args.package = get_pkg_path(os.getcwd())
+
+if not pathlib.Path(args.pkgsrcdir).exists() or \
+   not pathlib.Path(args.pkgsrcdir + '/doc').exists() or \
+   not pathlib.Path(args.pkgsrcdir + '/mk').exists():
+    print(f'invalid pkgsrc directory "{args.pkgsrcdir}"')
+    sys.exit(1)
+
+existing = extract_python_versions(args.pkgsrcdir + '/lang/python/pyversion.mk', False)
+supported = extract_python_versions(args.pkgsrcdir + '/' + args.package + '/Makefile')
+
+searchlist = set([args.package])
+result = set([])
+while searchlist:
+    entry = searchlist.pop()
+    # already handled?
+    if entry in result:
+        continue
+    result.add(entry)
+    searchlist |= extract_includes(args.pkgsrcdir + '/' + entry + '/Makefile')
+
+# print(f"dependencies for {args.package}: {sorted(result)}")
+print(f"Supported Python versions for {args.package}: {sorted([int(x) for x in supported_versions(args.package)])}")
+print(f"Checking packages used by {args.package}:")
+for entry in result:
+    entry_versions = supported_versions(entry)
+    # print(f"python version for {entry}: {entry_versions}")
+    if supported_versions(args.package) > entry_versions:
+        report_problem(entry, entry_versions, supported_versions(args.package))
+
+makefiles = glob.glob(args.pkgsrcdir + '/*/*/Makefile*')
+makefiles.extend(glob.glob(args.pkgsrcdir + '/*/*/*.mk'))
+makefiles = list(filter(lambda name: name.find('/mk/') == -1
+                        and not name.endswith('buildlink3.mk')
+                        and not name.endswith('cargo-depends.mk')
+                        and not name.endswith('go-modules.mk'),
+                        makefiles))
+if not args.wip:
+    makefiles = list(filter(lambda name: name.find('/wip/') == -1, makefiles))
+
+print(f"Checking packages using {args.package}:")
+checked_packages = set([])
+makefile_content = {}
+for makefile in makefiles:
+    extract_includes(makefile)
+
+searchlist = set([args.package])
+handled = set([])
+while searchlist:
+    entry = searchlist.pop()
+    if entry in handled:
+        continue
+    handled.add(entry)
+
+    entry_versions = supported_versions(entry)
+    for package, dependencies in includes.items():
+        if entry in dependencies:
+            package_versions = supported_versions(package)
+            if entry_versions < package_versions:
+                report_problem(package, package_versions, entry_versions)
+                python_versions[package] = entry_versions
+                searchlist.add(package)
