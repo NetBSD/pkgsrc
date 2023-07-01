@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2023/05/28 17:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/01 11:40:28 wiz Exp $
 
-DISTNAME=	tox-4.5.2
+DISTNAME=	tox-4.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tox.readthedocs.io/
+HOMEPAGE=	https://tox.wiki/en/latest/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
