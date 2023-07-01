@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/01 07:28:51 tsutsui Exp $
 
-BLAKE2s (nanotodon-0.2.0.tar.gz) = 952f036084e51ca2efd3822e119ecb1329d17c31be47e95daf9769dfe24de6e7
-SHA512 (nanotodon-0.2.0.tar.gz) = 9cfd8c5c31bf10da53d04a89942a3500f255908369d86cb4bd2f390c211b798934f224456d2c6933dd03e1a62d16d387b26357e2b2a0e4719c0f7388d6c5c5ca
-Size (nanotodon-0.2.0.tar.gz) = 24262 bytes
+BLAKE2s (nanotodon-0.3.1.tar.gz) = 9a656f6330849cee52952ff097a759e10f8e988a6da230b7e0fa38de89233367
+SHA512 (nanotodon-0.3.1.tar.gz) = b2e09d889e84ad8b98d7d0bd4821b0495e9667b2337777c81d9a28a150e1d30b073c149f7888e74391972617617542a1bdbc17db57fff2a9e671550a730daeb6
+Size (nanotodon-0.3.1.tar.gz) = 40213 bytes
 SHA1 (patch-Makefile.base) = 5fa2123753e095ba19ae3190f5c71643ac488a65
 SHA1 (patch-Makefile.in) = c5110768d81c6dcb3e85928fcd465f7bbb01d61d
