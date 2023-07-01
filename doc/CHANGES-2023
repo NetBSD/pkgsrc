@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4171 2023/07/01 18:27:31 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4172 2023/07/01 18:28:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5841,3 +5841,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/jira-cli to 1.4.0 [fox 2023-07-01]
 	Updated security/wolfssl to 5.6.3 [fox 2023-07-01]
 	Updated audio/fasttracker2 to 1.68 [fox 2023-07-01]
+	Updated shells/oh-my-posh to 17.5.3 [pin 2023-07-01]
