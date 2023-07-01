@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/26 11:40:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/01 12:29:50 nros Exp $
 bin/botan3
 include/botan-3/botan/aead.h
 include/botan-3/botan/argon2.h
@@ -103,7 +103,7 @@ include/botan-3/botan/pkcs11t.h
 include/botan-3/botan/pkcs8.h
 include/botan-3/botan/pkix_enums.h
 include/botan-3/botan/pkix_types.h
-include/botan-3/botan/processor_rng.h
+${PLIST.prng}include/botan-3/botan/processor_rng.h
 include/botan-3/botan/psk_db.h
 include/botan-3/botan/pubkey.h
 include/botan-3/botan/pwdhash.h
