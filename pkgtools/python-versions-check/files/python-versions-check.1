@@ -1,4 +1,4 @@
-.\"	$NetBSD: python-versions-check.1,v 1.1 2023/07/01 09:26:59 wiz Exp $
+.\"	$NetBSD: python-versions-check.1,v 1.2 2023/07/01 11:17:12 wiz Exp $
 .\"
 .\" Copyright (c) 2023 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -28,16 +28,16 @@
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
 .Dd June 10, 2023
-.Dt PYTHON-VERSIONS-CHECK.PY 1
+.Dt PYTHON-VERSIONS-CHECK 1
 .Os
 .Sh NAME
-.Nm python-versions-check.py
+.Nm python-versions-check
 .Nd check Python versions for a package and its dependencies and users
 .Sh SYNOPSIS
 .Nm
-.Op Fl hw
+.Op Fl dhw
 .Op Fl p Ar pkgsrcdir
-.Op Ar category/package
+.Ar category/package
 .Sh DESCRIPTION
 .Nm
 is a script for pkgsrc developers that compares the Python versions
@@ -53,16 +53,21 @@ provided.
 .Nm
 supports the following options:
 .Bl -tag -width 12n -offset indent
+.It Fl d
+Debug mode - print each file name when its parsed.
 .It Fl h
 Show the usage.
 .It Fl p Ar pkgsrcdir
 Use
 .Ar pkgsrcdir
 as root of the pkgsrc tree.
-Defaults to
-.Pa /usr/pkgsrc .
+Defaults to the value of the environment variable
+.Ev PKGSRCDIR ,
+and falls back to
+.Pa /usr/pkgsrc
+if that is not set.
 .It Fl w
-Also bump packages in the
+When looking for packages using the package, also check the
 .Pa wip/
 subtree.
 .El
