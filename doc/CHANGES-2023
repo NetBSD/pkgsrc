@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4156 2023/07/01 09:10:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4157 2023/07/01 09:27:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5827,3 +5827,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numpy to 1.25.0 [wiz 2023-07-01]
 	Updated devel/libgsf to 1.14.50 [adam 2023-07-01]
 	Updated devel/libuv to 1.46.0 [adam 2023-07-01]
+	Added pkgtools/python-versions-check version 1.0 [wiz 2023-07-01]
