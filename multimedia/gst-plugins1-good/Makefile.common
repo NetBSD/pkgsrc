@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2023/03/09 08:25:41 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.45 2023/07/01 14:05:16 nia Exp $
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -27,7 +27,8 @@ DISTNAME=	gst-plugins-good-${GST_VERSION}
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
 EXTRACT_SUFX=	.tar.xz
 
-USE_LANGUAGES=	c c++
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+USE_LANGUAGES=	c99 c++
 
 USE_TOOLS+=	pkg-config
 
