@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4155 2023/07/01 08:38:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4156 2023/07/01 09:10:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5825,3 +5825,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/nanotodon to 0.3.1 [tsutsui 2023-07-01]
 	Updated meta-pkgs/bulk-medium to 20230701 [wiz 2023-07-01]
 	Updated math/py-numpy to 1.25.0 [wiz 2023-07-01]
+	Updated devel/libgsf to 1.14.50 [adam 2023-07-01]
+	Updated devel/libuv to 1.46.0 [adam 2023-07-01]
