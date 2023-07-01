@@ -1,0 +1,6 @@
+python-versions-check is a script for pkgsrc developers that compares
+the Python versions supported by a package to the ones supported
+by its dependencies and the packages depending on it.
+
+This helps recognizing problems when a package wants to use another
+package which does not support all the Python versions it supports.
