@@ -1,0 +1,16 @@
+$NetBSD: patch-gexiv2_meson.build,v 1.1 2023/07/01 22:14:59 wiz Exp $
+
+Fix build with exiv2 0.28.0.
+https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d8251811106ef8
+
+--- gexiv2/meson.build.orig	2023-05-06 08:50:03.000000000 +0000
++++ gexiv2/meson.build
+@@ -61,7 +61,7 @@ gexiv2 = library('gexiv2',
+                   'gexiv2-preview-properties-private.h',
+                   'gexiv2-preview-image-private.h'] +
+                  gexiv2_headers +
+-                 [version_header] +
++                 [version_header, config_h] +
+                  enum_sources,
+                  include_directories : include_directories('..'),
+                  version: libversion,
