@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4173 2023/07/01 20:39:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4174 2023/07/01 22:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5843,3 +5843,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/fasttracker2 to 1.68 [fox 2023-07-01]
 	Updated shells/oh-my-posh to 17.5.3 [pin 2023-07-01]
 	Updated x11/alacritty to 0.12.2 [pin 2023-07-01]
+	Updated graphics/exiv2 to 0.28.0 [wiz 2023-07-01]
