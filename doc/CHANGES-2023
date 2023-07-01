@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4162 2023/07/01 11:32:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4163 2023/07/01 11:38:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5833,3 +5833,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-project-api to 1.5.2 [wiz 2023-07-01]
 	Updated security/py-service_identity to 23.1.0 [wiz 2023-07-01]
 	Updated textproc/py-sphinx-autodoc-typehints to 1.23.2 [wiz 2023-07-01]
+	Updated textproc/py-sphinx-rtd-theme to 1.2.2 [wiz 2023-07-01]
