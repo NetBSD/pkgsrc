@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4168 2023/07/01 16:57:13 fox Exp $
+$NetBSD: CHANGES-2023,v 1.4169 2023/07/01 17:01:46 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5840,3 +5840,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mariadb105-client to 10.5.21 [nia 2023-07-01]
 	Updated databases/mariadb105-server to 10.5.21 [nia 2023-07-01]
 	Updated www/jira-cli to 1.4.0 [fox 2023-07-01]
+	Updated security/wolfssl to 5.6.3 [fox 2023-07-01]
