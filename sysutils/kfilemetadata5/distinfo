@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2022/09/29 19:32:48 markd Exp $
+$NetBSD: distinfo,v 1.16 2023/07/01 22:14:10 wiz Exp $
 
 BLAKE2s (kfilemetadata-5.98.0.tar.xz) = d845bb161e558c07f0c445ef5b255a1a043f0a0a06e7d0564b08f1cc652c692f
 SHA512 (kfilemetadata-5.98.0.tar.xz) = 49e6606ee11c971a612b33647d025f0ecaf567c61e4b71651b6461350e329c0970035aa253f82fd5d47390f5cfcf9fbc930e6a4dcbd3c493bcd0b3be0dbdf167
 Size (kfilemetadata-5.98.0.tar.xz) = 437964 bytes
 SHA1 (patch-CMakeLists.txt) = 57d022aa86e532e9fe4185a2b5fc8b90b3e5e463
 SHA1 (patch-cmake_FindFFmpeg.cmake) = 94c7699d9a62b86f3c188ad162385bc3319b7753
+SHA1 (patch-src_extractors_exiv2extractor.cpp) = a03ca62ce0bea8c980354e5c262d52e39b6a09ef
