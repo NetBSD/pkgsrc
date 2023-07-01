@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.56 2021/10/26 10:15:21 nia Exp $
+$NetBSD: distinfo,v 1.57 2023/07/01 08:59:42 adam Exp $
 
-BLAKE2s (libgsf-1.14.47.tar.xz) = c8d4fbf03e6dfd80316e16ade53a37553c8cb8d1cec399e47929cf96343eb00d
-SHA512 (libgsf-1.14.47.tar.xz) = 143d48eb02be8202b9eb97e29e5909061a0e1a562b86e4bb4b2eac3fb0a42b139ead131ed1ffa4dfe304b65527089777823122223a74ebbc9df94c17d013f97b
-Size (libgsf-1.14.47.tar.xz) = 691448 bytes
+BLAKE2s (libgsf-1.14.50.tar.xz) = 1c57b56ad8fda07663d15aa94bee0d4395a1ea021f4e7008c28c79f896521620
+SHA512 (libgsf-1.14.50.tar.xz) = e4a405d01440654bfe5059536524d494e5b66859235648bcf6031a74b59967504b50750f471bbe1607c4a5ef11cac98aa2ca9ebb31151cf5a19ffa340d421adb
+Size (libgsf-1.14.50.tar.xz) = 702424 bytes
 SHA1 (patch-thumbnailer_main.c) = bb7d25d26f19d676305a02a64474d11881bfc7fc
