@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/09 08:07:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/01 08:37:41 wiz Exp $
 
 DISTNAME=	scikit-learn-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"

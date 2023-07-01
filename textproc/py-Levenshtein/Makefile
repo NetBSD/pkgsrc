@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/15 21:23:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/01 08:37:44 wiz Exp $
 
 DISTNAME=	Levenshtein-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++
 
 GCC_REQD+=	7 # C++17
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/egg.mk"

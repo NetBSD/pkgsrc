@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/19 08:03:48 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/01 08:37:37 wiz Exp $
 
 DISTNAME=	xgboost-1.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ REPLACE_PYTHON+=	xgboost/dmlc-core/tracker/dmlc-submit
 REPLACE_PYTHON+=	xgboost/dmlc-core/tracker/dmlc_tracker/launcher.py
 REPLACE_SH+=		xgboost/dmlc-core/tracker/yarn/build.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 pre-configure:
 	${RM} ${WRKSRC}/xgboost/include/xgboost/collective/socket.h.orig

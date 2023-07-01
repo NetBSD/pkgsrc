@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/12/18 10:12:42 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/01 08:37:42 wiz Exp $
 
 DISTNAME=	cftime-1.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 TEST_ENV+=	PYTHONPATH=build/lib
 do-test:

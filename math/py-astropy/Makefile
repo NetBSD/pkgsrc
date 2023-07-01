@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/08/30 15:54:37 thor Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/01 08:37:38 wiz Exp $
 
 DISTNAME=	astropy-5.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-colorlog>=6.6.0:../../devel/py-colorlog
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 USE_PKG_RESOURCES=	yes
 

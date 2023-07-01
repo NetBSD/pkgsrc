@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: Makefile,v 1.54 2023/07/01 08:37:45 wiz Exp $
 
 DISTNAME=	bulk-large-20211103
 CATEGORIES=	meta-pkgs
@@ -144,6 +144,7 @@ TOOL_DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
 TOOL_DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 .include "../../lang/php/phpversion.mk" # for PHP_PKG_PREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../lang/ruby/rubyversion.mk" # for RUBY_PKGPREFIX

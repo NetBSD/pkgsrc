@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/01 08:37:43 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-mastodon-1.5.0
 PKGREVISION=	1
@@ -31,8 +31,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
-# "Note that python 2.7 is now no longer officially supported."
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

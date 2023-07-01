@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/01 08:37:36 wiz Exp $
 
 DISTNAME=	blurhash-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pillow test:test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/06 09:28:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:43 wiz Exp $
 
 DISTNAME=	sphinx_autodoc_typehints-1.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -20,7 +20,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-nptyping-[0-9]*:../../math/py-nptyping
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${MAKE_ENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
