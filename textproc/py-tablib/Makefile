@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/26 10:08:11 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:44 wiz Exp $
 
 DISTNAME=	tablib-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests

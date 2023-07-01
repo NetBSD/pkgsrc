@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2023/06/20 22:19:44 gdt Exp $
+# $NetBSD: Makefile,v 1.178 2023/07/01 08:37:35 wiz Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -63,7 +63,7 @@ SUBST_SED.pyqt+=		-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-gdal
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 # \todo Consider (optional?) dependency on GRASS.
 # \todo Consider (optional?) dependency on SAGA.

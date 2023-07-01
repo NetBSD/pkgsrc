@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/01 08:37:41 wiz Exp $
 
 DISTNAME=	xarray-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

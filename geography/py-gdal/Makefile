@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/04/19 08:10:14 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/07/01 08:37:35 wiz Exp $
 
 PKGREVISION= 3
 .include "../../geography/gdal-lib/Makefile.common"
@@ -11,7 +11,7 @@ BUILD_DIRS=	swig/python
 
 MAKE_FILE=	GNUmakefile
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 REPLACE_PYTHON+=	swig/python/scripts/*py
 
