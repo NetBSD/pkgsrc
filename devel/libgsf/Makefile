@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2023/04/19 08:08:17 adam Exp $
+# $NetBSD: Makefile,v 1.110 2023/07/01 08:59:42 adam Exp $
 
-DISTNAME=	libgsf-1.14.47
-PKGREVISION=	8
+DISTNAME=	libgsf-1.14.50
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,12 +10,14 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	GNOME structured file library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-USE_TOOLS+=		gmake msgfmt pkg-config
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-
+USE_TOOLS+=		gmake msgfmt perl:test pkg-config
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
+
+REPLACE_PERL=	tests/*.pl
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
