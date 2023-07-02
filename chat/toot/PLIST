@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/03/02 08:30:42 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/02 20:55:54 vins Exp $
 bin/toot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -24,6 +24,9 @@ ${PYSITELIB}/toot/config.pyo
 ${PYSITELIB}/toot/console.py
 ${PYSITELIB}/toot/console.pyc
 ${PYSITELIB}/toot/console.pyo
+${PYSITELIB}/toot/entities.py
+${PYSITELIB}/toot/entities.pyc
+${PYSITELIB}/toot/entities.pyo
 ${PYSITELIB}/toot/exceptions.py
 ${PYSITELIB}/toot/exceptions.pyc
 ${PYSITELIB}/toot/exceptions.pyo
@@ -69,6 +72,9 @@ ${PYSITELIB}/toot/tui/utils.pyo
 ${PYSITELIB}/toot/tui/widgets.py
 ${PYSITELIB}/toot/tui/widgets.pyc
 ${PYSITELIB}/toot/tui/widgets.pyo
+${PYSITELIB}/toot/typing_compat.py
+${PYSITELIB}/toot/typing_compat.pyc
+${PYSITELIB}/toot/typing_compat.pyo
 ${PYSITELIB}/toot/utils/__init__.py
 ${PYSITELIB}/toot/utils/__init__.pyc
 ${PYSITELIB}/toot/utils/__init__.pyo
