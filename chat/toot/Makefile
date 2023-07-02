@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/04/08 11:17:59 vins Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/02 20:55:54 vins Exp $
 
-DISTNAME=	toot-0.36.0
+DISTNAME=	toot-0.37.0
 CATEGORIES=	chat net
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toot/}
 
