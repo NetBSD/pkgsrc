@@ -1,0 +1,88 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/02 17:32:30 nia Exp $
+
+- Always prefer SDL2 from pkgsrc.
+- Treat APPLE less specially.
+- Use proper dependencies when building libretro core.
+
+--- CMakeLists.txt.orig	2023-02-15 17:59:44.000000000 +0000
++++ CMakeLists.txt
+@@ -356,9 +356,7 @@ if(NOT LIBRETRO)
+ 	endif()
+ 
+ 	if(NOT ANDROID AND NOT IOS)
+-		if(NOT APPLE AND (NOT UNIX OR CMAKE_SYSTEM_NAME MATCHES "(FreeBSD|OpenBSD|NetBSD)"))
+-			find_package(SDL2)
+-		endif()
++		find_package(SDL2)
+ 		if(NOT SDL2_FOUND)
+ 			add_subdirectory(core/deps/SDL EXCLUDE_FROM_ALL)
+ 			set(SDL2_FOUND 1)
+@@ -395,7 +393,7 @@ if(NOT LIBRETRO)
+ 	endif()
+ 
+ 	find_package(Lua)
+-	if(NOT APPLE AND LUA_FOUND)
++	if(LUA_FOUND)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LUA)
+ 		target_include_directories(${PROJECT_NAME} PRIVATE ${LUA_INCLUDE_DIR} core/deps/luabridge/Source)
+ 		list(TRANSFORM LUA_LIBRARIES REPLACE "\.dll" "")
+@@ -418,7 +416,7 @@ if(NOT WITH_SYSTEM_ZLIB)
+ endif()
+ 
+ find_package(PkgConfig)
+-if(PKG_CONFIG_FOUND AND NOT ANDROID AND NOT APPLE AND NOT LIBRETRO)
++if(PKG_CONFIG_FOUND AND NOT ANDROID AND NOT LIBRETRO)
+ 	pkg_check_modules(AO IMPORTED_TARGET ao)
+ 	if(AO_FOUND)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LIBAO)
+@@ -445,22 +443,22 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND 
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBPULSE)
+ 	endif()
+ 
+-	if(USE_HOST_LIBZIP)
+-		pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
+-		if(LIBZIP_FOUND)
+-			target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBZIP)
+-		endif()
+-	endif()
+-
+ 	if(ENABLE_OPROFILE)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE DYNA_OPROF)
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE opagent)
+ 	endif()
++endif()
+ 
+-	find_package(MiniUPnPc)
+-	if(MINIUPNP_FOUND)
+-		target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
+-		target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
++find_package(MiniUPnPc)
++if(MINIUPNP_FOUND)
++	target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
++	target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
++endif()
++
++if(USE_HOST_LIBZIP)
++	pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
++	if(LIBZIP_FOUND)
++		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBZIP)
+ 	endif()
+ endif()
+ 
+@@ -1664,10 +1662,14 @@ if(IOS)
+ elseif(NINTENDO_SWITCH AND NOT LIBRETRO)
+ 	install(FILES ${CMAKE_BINARY_DIR}/flycast.nro DESTINATION "${CMAKE_INSTALL_BINDIR}")
+ else()
+-	install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_BINDIR}")
++	if(NOT LIBRETRO)
++		install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_BINDIR}")
++	else()
++		install(TARGETS ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_LIBDIR}/libretro")
++	endif()
+ endif()
+ 
+-if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT LIBRETRO)
++if(UNIX AND NOT ANDROID AND NOT LIBRETRO)
+ 	install(FILES shell/linux/man/${PROJECT_NAME}.1
+ 		DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+ 	)
