@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4197 2023/07/02 20:04:42 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4198 2023/07/02 20:51:15 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5816,9 +5816,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Term-ReadLine-Gnu to 1.45 [wen 2023-06-30]
 	Updated devel/p5-Term-ProgressBar to 2.23 [wen 2023-06-30]
 	Updated print/foomatic4-db to 20230629 [bsiegert 2023-06-30]
-	Updated www/unit-php to 1.30.1nb1 [osa 2023-06-30]
-	Updated www/unit-python to 1.30.1nb1 [osa 2023-06-30]
-	Updated www/unit-ruby to 1.30.1nb1 [osa 2023-06-30]
+	Updated www/unit-php to 1.30.0nb1 [osa 2023-06-30]
+	Updated www/unit-python to 1.30.0nb1 [osa 2023-06-30]
+	Updated www/unit-ruby to 1.30.0nb1 [osa 2023-06-30]
 	Updated x11/qt6-qtbase to 6.5.0nb3 [bacon 2023-06-30]
 	Updated sysutils/fzf to 0.42.0 [iquiw 2023-07-01]
 	Updated net/nanotodon to 0.3.1 [tsutsui 2023-07-01]
