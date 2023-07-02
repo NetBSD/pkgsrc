@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/07/08 22:10:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/07/02 08:03:38 wiz Exp $
 bin/fail2ban-client
 bin/fail2ban-python
 bin/fail2ban-regex
@@ -152,9 +152,6 @@ ${PYSITELIB}/fail2ban/tests/__init__.pyo
 ${PYSITELIB}/fail2ban/tests/action_d/__init__.py
 ${PYSITELIB}/fail2ban/tests/action_d/__init__.pyc
 ${PYSITELIB}/fail2ban/tests/action_d/__init__.pyo
-${PYSITELIB}/fail2ban/tests/action_d/test_badips.py
-${PYSITELIB}/fail2ban/tests/action_d/test_badips.pyc
-${PYSITELIB}/fail2ban/tests/action_d/test_badips.pyo
 ${PYSITELIB}/fail2ban/tests/action_d/test_smtp.py
 ${PYSITELIB}/fail2ban/tests/action_d/test_smtp.pyc
 ${PYSITELIB}/fail2ban/tests/action_d/test_smtp.pyo
@@ -291,10 +288,13 @@ ${PYSITELIB}/fail2ban/tests/files/logs/kerio
 ${PYSITELIB}/fail2ban/tests/files/logs/lighttpd-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/mongodb-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/monit
+${PYSITELIB}/fail2ban/tests/files/logs/monitorix
+${PYSITELIB}/fail2ban/tests/files/logs/mssql-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/murmur
 ${PYSITELIB}/fail2ban/tests/files/logs/mysqld-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/nagios
 ${PYSITELIB}/fail2ban/tests/files/logs/named-refused
+${PYSITELIB}/fail2ban/tests/files/logs/nginx-bad-request
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-botsearch
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-http-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-limit-req
@@ -313,6 +313,7 @@ ${PYSITELIB}/fail2ban/tests/files/logs/pure-ftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/qmail
 ${PYSITELIB}/fail2ban/tests/files/logs/recidive
 ${PYSITELIB}/fail2ban/tests/files/logs/roundcube-auth
+${PYSITELIB}/fail2ban/tests/files/logs/scanlogd
 ${PYSITELIB}/fail2ban/tests/files/logs/screensharingd
 ${PYSITELIB}/fail2ban/tests/files/logs/selinux-ssh
 ${PYSITELIB}/fail2ban/tests/files/logs/sendmail-auth
@@ -433,10 +434,10 @@ share/doc/fail2ban/release.txt
 share/doc/fail2ban/run-rootless.txt
 share/examples/fail2ban/action.d/abuseipdb.conf
 share/examples/fail2ban/action.d/apf.conf
-share/examples/fail2ban/action.d/badips.conf
-share/examples/fail2ban/action.d/badips.py
+share/examples/fail2ban/action.d/apprise.conf
 share/examples/fail2ban/action.d/blocklist_de.conf
 share/examples/fail2ban/action.d/bsd-ipfw.conf
+share/examples/fail2ban/action.d/cloudflare-token.conf
 share/examples/fail2ban/action.d/cloudflare.conf
 share/examples/fail2ban/action.d/complain.conf
 share/examples/fail2ban/action.d/dshield.conf
@@ -453,15 +454,16 @@ share/examples/fail2ban/action.d/hostsdeny.conf
 share/examples/fail2ban/action.d/ipfilter.conf
 share/examples/fail2ban/action.d/ipfw.conf
 share/examples/fail2ban/action.d/iptables-allports.conf
-share/examples/fail2ban/action.d/iptables-common.conf
 share/examples/fail2ban/action.d/iptables-ipset-proto4.conf
 share/examples/fail2ban/action.d/iptables-ipset-proto6-allports.conf
 share/examples/fail2ban/action.d/iptables-ipset-proto6.conf
+share/examples/fail2ban/action.d/iptables-ipset.conf
 share/examples/fail2ban/action.d/iptables-multiport-log.conf
 share/examples/fail2ban/action.d/iptables-multiport.conf
 share/examples/fail2ban/action.d/iptables-new.conf
 share/examples/fail2ban/action.d/iptables-xt_recent-echo.conf
 share/examples/fail2ban/action.d/iptables.conf
+share/examples/fail2ban/action.d/ipthreat.conf
 share/examples/fail2ban/action.d/mail-buffered.conf
 share/examples/fail2ban/action.d/mail-whois-common.conf
 share/examples/fail2ban/action.d/mail-whois-lines.conf
@@ -540,10 +542,13 @@ share/examples/fail2ban/filter.d/kerio.conf
 share/examples/fail2ban/filter.d/lighttpd-auth.conf
 share/examples/fail2ban/filter.d/mongodb-auth.conf
 share/examples/fail2ban/filter.d/monit.conf
+share/examples/fail2ban/filter.d/monitorix.conf
+share/examples/fail2ban/filter.d/mssql-auth.conf
 share/examples/fail2ban/filter.d/murmur.conf
 share/examples/fail2ban/filter.d/mysqld-auth.conf
 share/examples/fail2ban/filter.d/nagios.conf
 share/examples/fail2ban/filter.d/named-refused.conf
+share/examples/fail2ban/filter.d/nginx-bad-request.conf
 share/examples/fail2ban/filter.d/nginx-botsearch.conf
 share/examples/fail2ban/filter.d/nginx-http-auth.conf
 share/examples/fail2ban/filter.d/nginx-limit-req.conf
@@ -562,6 +567,7 @@ share/examples/fail2ban/filter.d/pure-ftpd.conf
 share/examples/fail2ban/filter.d/qmail.conf
 share/examples/fail2ban/filter.d/recidive.conf
 share/examples/fail2ban/filter.d/roundcube-auth.conf
+share/examples/fail2ban/filter.d/scanlogd.conf
 share/examples/fail2ban/filter.d/screensharingd.conf
 share/examples/fail2ban/filter.d/selinux-common.conf
 share/examples/fail2ban/filter.d/selinux-ssh.conf
