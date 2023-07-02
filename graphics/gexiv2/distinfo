@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2023/07/01 22:14:58 wiz Exp $
+$NetBSD: distinfo,v 1.14 2023/07/02 15:27:51 tnn Exp $
 
 BLAKE2s (gexiv2-0.14.1.tar.xz) = 22e5e884cb248e3a332fa204d2da6e2905f3cdb760a0dfbacf7b405f52d992d1
 SHA512 (gexiv2-0.14.1.tar.xz) = f510e49c0b2633bcc370ca21af0822032f04f5d5b57c7f76807797601b0a98b7749fdf68df37a405c9d90734adf75282a3dad59c24830874f64f7bd33152052d
@@ -7,10 +7,10 @@ SHA1 (patch-gexiv2_gexiv2-metadata-exif.cpp) = 55f9e5f7f8bff841359b53f3682c58133
 SHA1 (patch-gexiv2_gexiv2-metadata-gps.cpp) = ca85d6a85da7a0f6cfdfbfa715906ffcac8a0098
 SHA1 (patch-gexiv2_gexiv2-metadata-iptc.cpp) = f5cfde230049ef08594f71a95ad188d274928e2d
 SHA1 (patch-gexiv2_gexiv2-metadata-xmp.cpp) = d00cce03e2ef2815fe795b2c75054c9b1c6d0dac
-SHA1 (patch-gexiv2_gexiv2-metadata.cpp) = a03aa972c783a2cac20125fcc42183ebaac13c84
+SHA1 (patch-gexiv2_gexiv2-metadata.cpp) = f2b3278a6fc0184591d42fd03f117f4a0be7dc10
 SHA1 (patch-gexiv2_gexiv2-preview-image.cpp) = c85191e9eca7001e8b1c4ee584f8cfebf17a1a75
-SHA1 (patch-gexiv2_gexiv2-stream-io.cpp) = 21bbf132420ac046ed699cd26c1b7cb226c3c632
-SHA1 (patch-gexiv2_gexiv2-stream-io.h) = db9e18736c171475423e4ee703b1fbe4a4920f44
+SHA1 (patch-gexiv2_gexiv2-stream-io.cpp) = c5f7c641a88de7cacec489c1214db39510b36d32
+SHA1 (patch-gexiv2_gexiv2-stream-io.h) = a96e74dcda24e6a7c457fce34a7e79ff58bb714c
 SHA1 (patch-gexiv2_meson.build) = 8d106c99fa1ada8e22ec82567b38f223be9e6ad3
 SHA1 (patch-meson.build) = 06cf41e7773326d5b9cea57f1a7eed13d4d72cfe
 SHA1 (patch-test_python_test__metadata.py) = 95e372d9daaffc921b9436b5cd0be2eb446965d5
