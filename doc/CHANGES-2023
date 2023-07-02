@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4191 2023/07/02 18:43:27 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4192 2023/07/02 18:54:01 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5862,3 +5862,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-approval-utilities to 8.3.1 [schmonz 2023-07-02]
 	Updated devel/py-approvaltests to 8.3.1 [schmonz 2023-07-02]
 	Updated devel/got-portable to 0.90 [vins 2023-07-02]
+	Updated sysutils/bsdfetch to 1.1.2 [vins 2023-07-02]
