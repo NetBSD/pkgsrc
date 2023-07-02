@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4182 2023/07/02 08:18:41 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4183 2023/07/02 08:39:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/elixir to 1.15.0 [wiz 2023-07-02]
 	Updated finance/ruby-activemerchant to 1.131.0 [taca 2023-07-02]
 	Updated misc/ruby-colorize to 1.1.0 [taca 2023-07-02]
+	Updated net/ruby-train-core to 3.10.8 [taca 2023-07-02]
