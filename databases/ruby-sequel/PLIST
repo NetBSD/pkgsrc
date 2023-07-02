@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.108 2023/06/06 13:27:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.109 2023/07/02 04:54:41 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -95,6 +95,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.67.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.68.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.69.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.70.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
@@ -161,6 +162,7 @@ ${GEM_LIBDIR}/lib/sequel/ast_transformer.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/sharded_single.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/sharded_threaded.rb
+${GEM_LIBDIR}/lib/sequel/connection_pool/sharded_timed_queue.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/single.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/threaded.rb
 ${GEM_LIBDIR}/lib/sequel/connection_pool/timed_queue.rb
