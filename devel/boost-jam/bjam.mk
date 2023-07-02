@@ -1,11 +1,8 @@
-# $NetBSD: bjam.mk,v 1.23 2023/06/27 10:43:43 riastradh Exp $
+# $NetBSD: bjam.mk,v 1.24 2023/07/02 13:01:07 riastradh Exp $
 
-.include "../../devel/boost-jam/buildlink3.mk"
 .include "../../devel/boost-build/toolset.mk"
 
-# XXX Unclear why this needs a buildlink dependency at all -- isn't it
-# just a tool that runs at build-time?
-TOOL_DEPENDS+=		boost-jam>=0:../../devel/boost-jam
+TOOL_DEPENDS+=		boost-jam-1.82.*:../../devel/boost-jam
 
 BJAM=			${TOOLBASE}/bin/b2
 
