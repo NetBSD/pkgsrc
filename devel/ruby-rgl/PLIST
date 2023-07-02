@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2023/02/23 14:57:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/07/02 05:28:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/canvas.rb
 ${GEM_LIBDIR}/examples/examples.rb
-${GEM_LIBDIR}/examples/graph.dot
 ${GEM_LIBDIR}/examples/insel_der_tausend_gefahren.rb
 ${GEM_LIBDIR}/examples/north.rb
 ${GEM_LIBDIR}/examples/north/Graph.log
@@ -106,6 +105,7 @@ ${GEM_LIBDIR}/lib/rgl/topsort.rb
 ${GEM_LIBDIR}/lib/rgl/transitiv_closure.rb
 ${GEM_LIBDIR}/lib/rgl/transitivity.rb
 ${GEM_LIBDIR}/lib/rgl/traversal.rb
+${GEM_LIBDIR}/lib/rgl/version.rb
 ${GEM_LIBDIR}/rakelib/dep_graph.rake
 ${GEM_LIBDIR}/test/bellman_ford_test.rb
 ${GEM_LIBDIR}/test/bidirectional_graph_test.rb
@@ -127,6 +127,7 @@ ${GEM_LIBDIR}/test/prim_test.rb
 ${GEM_LIBDIR}/test/rdot_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/transitivity_test.rb
+${GEM_LIBDIR}/test/traversal_bfs_require.rb
 ${GEM_LIBDIR}/test/traversal_test.rb
 ${GEM_LIBDIR}/test/undirected_graph_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
