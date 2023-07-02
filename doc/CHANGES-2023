@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4189 2023/07/02 18:32:23 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.4190 2023/07/02 18:32:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added emulators/flycast version 2.1 [nia 2023-07-02]
 	Updated emulators/libretro-flycast to 2.1 [nia 2023-07-02]
 	Updated devel/py-approval-utilities to 8.3.1 [schmonz 2023-07-02]
+	Updated devel/py-approvaltests to 8.3.1 [schmonz 2023-07-02]
