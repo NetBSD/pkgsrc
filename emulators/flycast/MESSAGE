@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2023/07/02 17:32:30 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2023/07/02 21:00:16 nia Exp $
 
 Flycast requires the following BIOS files in order to work:
 
-SHA256 (dc/dc_boot.bin) =
+SHA256 (dc_boot.bin) =
 88d6a666495ad14ab5988d8cb730533cfc94ec2cfd53a7eeda14642ab0d4abf9
 
-SHA256 (dc/dc_flash.bin) =
+SHA256 (dc_flash.bin) =
 dd8b365521a9c08bb4c170da3592212580f7251f35a45d6083774d1c030bc3e3
 
 Place them in ~/.local/share/flycast.
