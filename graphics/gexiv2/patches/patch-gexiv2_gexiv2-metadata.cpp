@@ -1,4 +1,4 @@
-$NetBSD: patch-gexiv2_gexiv2-metadata.cpp,v 1.1 2023/07/01 22:14:58 wiz Exp $
+$NetBSD: patch-gexiv2_gexiv2-metadata.cpp,v 1.2 2023/07/02 15:27:51 tnn Exp $
 
 Fix build with exiv2 0.28.0.
 https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d8251811106ef8
@@ -46,6 +46,15 @@ https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d825181
  #else
      using size_type = long;
  #endif
+@@ -54,7 +57,7 @@ public:
+     size_type _size;
+ 
+     ~GioIo() { g_clear_object (&_is); g_clear_error (&_error); _seekable = NULL;}
+-#if defined(_MSC_VER)
++#if defined(_MSC_VER) || EXIV2_TEST_VERSION(0,27,99)
+     typedef int64_t seek_offset_t;
+ #else
+     typedef long seek_offset_t;
 @@ -66,6 +69,9 @@ public:
      using ptr_type = Exiv2::BasicIo::AutoPtr;
  #endif
