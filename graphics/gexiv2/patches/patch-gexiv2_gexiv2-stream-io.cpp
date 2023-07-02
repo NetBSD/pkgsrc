@@ -1,4 +1,4 @@
-$NetBSD: patch-gexiv2_gexiv2-stream-io.cpp,v 1.1 2023/07/01 22:14:59 wiz Exp $
+$NetBSD: patch-gexiv2_gexiv2-stream-io.cpp,v 1.2 2023/07/02 15:27:51 tnn Exp $
 
 Fix build with exiv2 0.28.0.
 https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d8251811106ef8
@@ -24,6 +24,15 @@ https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d825181
  StreamIo::StreamIo (ManagedStreamCallbacks* callbacks)
      : cb (callbacks), memio(nullptr), is_open (FALSE), can_write(FALSE) {
      /* at least reading and seeking must be possible to read metatada */
+@@ -119,7 +120,7 @@ int StreamIo::putb (Exiv2::byte data) {
+     return EOF;
+ }
+ 
+-int StreamIo::seek (long offset, Position position) {
++int StreamIo::seek (int64_t offset, Position position) {
+     // FIXME: handle Error
+     switch (position) {
+         case (beg):
 @@ -138,7 +139,7 @@ int StreamIo::seek (long offset, Positio
      return 0;
  }
