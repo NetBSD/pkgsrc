@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/07/04 20:09:05 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/07/02 19:14:48 vins Exp $
 
-BLAKE2s (emwm-1.0a/emwm-src.tar.xz) = 7b9b357b4339fddaffd1f37c249f6ee1b6923dca4812d8c3323317569dd51d1d
-SHA512 (emwm-1.0a/emwm-src.tar.xz) = 64128186a70e0d4d4814fab951c9cc8cfec3faf61bab4885dd5d0059b7cec6b5e45710084954f72205e473ce015e59d5cd8aa4ca93258c0f4da22bc27ba5dcfb
-Size (emwm-1.0a/emwm-src.tar.xz) = 329364 bytes
+BLAKE2s (emwm-1.0/emwm-src.tar.xz) = 16eba91424b8a86e8aa24af231a7248c123334183613b1f9da333e18f4a06743
+SHA512 (emwm-1.0/emwm-src.tar.xz) = 07d2eb1d4a14035291d6939a8c56c1c051aa4b8681d73096b7a806acb5a3f89d295e5f45a9788ad63d0f19b4e8ef458bb8f7fc41d372e54557aebe17f4984444
+Size (emwm-1.0/emwm-src.tar.xz) = 330596 bytes
