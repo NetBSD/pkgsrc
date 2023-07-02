@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.350 2023/05/29 19:30:47 nia Exp $
+# $NetBSD: Makefile,v 1.351 2023/07/02 17:32:30 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -63,6 +63,7 @@ SUBDIR+=	e-uae
 SUBDIR+=	emulationstation
 SUBDIR+=	fbneo
 SUBDIR+=	fceu
+SUBDIR+=	flycast
 SUBDIR+=	fmsx
 SUBDIR+=	free42
 SUBDIR+=	freebsd_lib
