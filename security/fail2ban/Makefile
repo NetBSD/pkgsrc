@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/02 08:03:38 wiz Exp $
 
-DISTNAME=	fail2ban-0.11.2
-PKGREVISION=	2
+DISTNAME=	fail2ban-1.0.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fail2ban/}
 
@@ -14,8 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-
-PYTHON_VERSIONS_ACCEPTED=	39 38
 
 USE_TOOLS+=	make:build
 
@@ -33,7 +30,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${PKGMANDIR}/man5/ ${EGDIR} ${EGDIR}/acti
 CONF_FILES+=		${EGDIR}/${config} ${PKG_SYSCONFDIR}/${config}
 .endfor
 
-.for action in abuseipdb.conf apf.conf badips.conf badips.py blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-allports.conf firewallcmd-common.conf firewallcmd-ipset.conf firewallcmd-multiport.conf firewallcmd-new.conf firewallcmd-rich-logging.conf firewallcmd-rich-rules.conf helpers-common.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-common.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-common.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf netscaler.conf nftables-allports.conf nftables-multiport.conf nftables.conf nginx-block-map.conf npf.conf nsupdate.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-geoip-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-lines.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall-ipset-proto6.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
+.for action in abuseipdb.conf apf.conf blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-allports.conf firewallcmd-common.conf firewallcmd-ipset.conf firewallcmd-multiport.conf firewallcmd-new.conf firewallcmd-rich-logging.conf firewallcmd-rich-rules.conf helpers-common.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-ipset.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-common.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf netscaler.conf nftables-allports.conf nftables-multiport.conf nftables.conf nginx-block-map.conf npf.conf nsupdate.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-geoip-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-lines.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall-ipset-proto6.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
 CONF_FILES+=		${EGDIR}/action.d/${action} ${PKG_SYSCONFDIR}/action.d/${action}
 .endfor
 
@@ -95,7 +92,6 @@ SUBST_SED.ostype=	-e "s,\#before = paths-distro.conf,before = paths-freebsd.conf
 SUBST_SED.ostype=	-e 's,this cant be empty,,g'
 SUBST_NOOP_OK.ostype=	yes
 .endif
-
 
 post-extract:
 	${CP} ${FILESDIR}/paths-netbsd.conf ${WRKSRC}/config/paths-netbsd.conf
