@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/03/13 13:55:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/07/02 18:32:18 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/approval_utilities/approvaltests/__init__.pyo
 ${PYSITELIB}/approval_utilities/approvaltests/core/__init__.py
 ${PYSITELIB}/approval_utilities/approvaltests/core/__init__.pyc
 ${PYSITELIB}/approval_utilities/approvaltests/core/__init__.pyo
+${PYSITELIB}/approval_utilities/approvaltests/core/executable_command.py
+${PYSITELIB}/approval_utilities/approvaltests/core/executable_command.pyc
+${PYSITELIB}/approval_utilities/approvaltests/core/executable_command.pyo
 ${PYSITELIB}/approval_utilities/approvaltests/core/verifiable.py
 ${PYSITELIB}/approval_utilities/approvaltests/core/verifiable.pyc
 ${PYSITELIB}/approval_utilities/approvaltests/core/verifiable.pyo
@@ -63,6 +66,15 @@ ${PYSITELIB}/approval_utilities/utilities/multiline_string_utils.pyo
 ${PYSITELIB}/approval_utilities/utilities/os_utilities.py
 ${PYSITELIB}/approval_utilities/utilities/os_utilities.pyc
 ${PYSITELIB}/approval_utilities/utilities/os_utilities.pyo
+${PYSITELIB}/approval_utilities/utilities/persistence/__init__.py
+${PYSITELIB}/approval_utilities/utilities/persistence/__init__.pyc
+${PYSITELIB}/approval_utilities/utilities/persistence/__init__.pyo
+${PYSITELIB}/approval_utilities/utilities/persistence/loader.py
+${PYSITELIB}/approval_utilities/utilities/persistence/loader.pyc
+${PYSITELIB}/approval_utilities/utilities/persistence/loader.pyo
+${PYSITELIB}/approval_utilities/utilities/persistence/saver.py
+${PYSITELIB}/approval_utilities/utilities/persistence/saver.pyc
+${PYSITELIB}/approval_utilities/utilities/persistence/saver.pyo
 ${PYSITELIB}/approval_utilities/utilities/stack_frame_utilities.py
 ${PYSITELIB}/approval_utilities/utilities/stack_frame_utilities.pyc
 ${PYSITELIB}/approval_utilities/utilities/stack_frame_utilities.pyo
