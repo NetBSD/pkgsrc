@@ -1,4 +1,4 @@
-$NetBSD: patch-gexiv2_gexiv2-stream-io.h,v 1.1 2023/07/01 22:14:59 wiz Exp $
+$NetBSD: patch-gexiv2_gexiv2-stream-io.h,v 1.2 2023/07/02 15:27:51 tnn Exp $
 
 Fix build with exiv2 0.28.0.
 https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d8251811106ef8
@@ -21,8 +21,12 @@ https://gitlab.gnome.org/GNOME/gexiv2/-/commit/06adc8fb70cb8c77c0cd364195d825181
  #endif
  
  	StreamIo (ManagedStreamCallbacks* cb);
-@@ -45,14 +49,25 @@ public:
- 	int seek (long offset, Position pos) override;
+@@ -42,17 +46,28 @@ public:
+     size_type read (Exiv2::byte* buf, size_type rcount) override;
+ 	int getb () override;
+ 	void transfer (Exiv2::BasicIo& src) override;
+-	int seek (long offset, Position pos) override;
++	int seek (int64_t offset, Position pos) override;
  	Exiv2::byte* mmap (bool isWriteable = false) override;
  	int munmap () override;
 -	long tell () const override;
