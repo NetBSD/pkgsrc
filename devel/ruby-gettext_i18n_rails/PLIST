@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/03/14 15:39:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/02 04:58:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/lib/gettext_i18n_rails.rb
@@ -15,7 +15,6 @@ ${GEM_LIBDIR}/lib/gettext_i18n_rails/html_safe_translations.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/i18n_hacks.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/model_attributes_finder.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/railtie.rb
-${GEM_LIBDIR}/lib/gettext_i18n_rails/ruby_gettext_extractor.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/slim_parser.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/string_interpolate_fix.rb
 ${GEM_LIBDIR}/lib/gettext_i18n_rails/tasks.rb
