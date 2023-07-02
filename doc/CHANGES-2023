@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4195 2023/07/02 19:26:15 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4196 2023/07/02 19:50:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5866,3 +5866,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/calcurse to 4.8.1 [vins 2023-07-02]
 	Updated wm/emwm to 1.0 [vins 2023-07-02]
 	Updated wm/emwm-utils to 1.1 [vins 2023-07-02]
+	Added finance/rex version 0.1.11 [pin 2023-07-02]
