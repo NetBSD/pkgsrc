@@ -1,0 +1,3 @@
+Rex is a terminal user interface app for managing incomes, expenses, and
+transactions. Built with Rust and ratatui with a simple interface that's
+easy to use.
