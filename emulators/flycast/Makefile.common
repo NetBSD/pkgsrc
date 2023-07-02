@@ -1,0 +1,40 @@
+# $NetBSD: Makefile.common,v 1.1 2023/07/02 17:32:30 nia Exp $
+# used by emulators/flycast/Makefile
+# used by emulators/libretro-flycast/Makefile
+
+DISTNAME=	flycast-2.1
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=flyinghead/}
+GITHUB_PROJECT=	flycast
+GITHUB_TAG=	V${PKGVERSION_NOREV}
+
+HOMEPAGE=	https://github.com/flyinghead/flycast
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+# C++17
+GCC_REQD+=	7
+
+CMAKE_ARGS+=	-DUSE_HOST_LIBZIP=ON
+CMAKE_ARGS+=	-DUSE_VULKAN=OFF
+CMAKE_ARGS+=	-DUSE_DX9=OFF
+CMAKE_ARGS+=	-DUSE_DX11=OFF
+
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/flycast/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/flycast/patches
+
+GITHUB_SUBMODULES+=	rtissera libchdr 2781322c4a7f8315c5fd6499129ad4b718e35843 core/deps/libchdr
+GITHUB_SUBMODULES+=	flyinghead mingw-breakpad 4c3d5fce1a4fef4decfbfeaf20f3746ecd209775 core/deps/breakpad
+GITHUB_SUBMODULES+=	vinniefalco LuaBridge fab7b33b896a42dcc865ba5ecdbacd9f40 core/deps/luabridge
+
+.include "../../archivers/libzip/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../net/miniupnpc/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/02 17:32:30 nia Exp $
+bin/flycast
+man/man1/flycast.1
+share/applications/flycast.desktop
+share/icons/hicolor/128x128/apps/flycast.png
+share/icons/hicolor/16x16/apps/flycast.png
+share/icons/hicolor/256x256/apps/flycast.png
+share/icons/hicolor/32x32/apps/flycast.png
+share/icons/hicolor/512x512/apps/flycast.png
+share/icons/hicolor/64x64/apps/flycast.png
+share/metainfo/org.flycast.Flycast.metainfo.xml
+share/pixmaps/flycast.png
