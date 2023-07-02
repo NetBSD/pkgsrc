@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4180 2023/07/02 08:03:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4181 2023/07/02 08:09:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5850,3 +5850,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rgl to 0.6.5 [taca 2023-07-02]
 	Updated devel/ruby-rspec-support to 3.12.1 [taca 2023-07-02]
 	Updated security/fail2ban to 1.0.2 [wiz 2023-07-02]
+	Updated lang/elixir to 1.15.0 [wiz 2023-07-02]
