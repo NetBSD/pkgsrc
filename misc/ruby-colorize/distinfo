@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/02 08:16:55 taca Exp $
 
-BLAKE2s (colorize-0.8.1.gem) = 5b1446ede891f93207787a7a811f44efce457f51db98b116dd9638153d22867e
-SHA512 (colorize-0.8.1.gem) = 0819dfaa94150c85cbe633c77006f2f4bdd6c4f9bf9dfa954b8c4038b8a680c99a2b4b160da05bf426402d287a0db4c4eb1cc66a949405188b632f39da381c72
-Size (colorize-0.8.1.gem) = 15872 bytes
+BLAKE2s (colorize-1.1.0.gem) = b6652d1153096017917871f6274b8377af15f8aaa461e9e613d876b6f5a383e6
+SHA512 (colorize-1.1.0.gem) = d1257c6be909e92ef59e39536e802bbcbbc5f49b0ac0f1f372f36f9ac1a0ed9016ab374f6f6b389b5d158dcebfabc9e047d9b0d797b408b82224355e5c9a2b2a
+Size (colorize-1.1.0.gem) = 17920 bytes
