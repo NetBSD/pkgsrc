@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4185 2023/07/02 08:49:55 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.4186 2023/07/02 08:51:25 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-train-core to 3.10.8 [taca 2023-07-02]
 	Updated net/dbip-asn-lite to 2023.07 [fcambus 2023-07-02]
 	Updated net/dbip-city-lite to 2023.07 [fcambus 2023-07-02]
+	Updated net/dbip-country-lite to 2023.07 [fcambus 2023-07-02]
