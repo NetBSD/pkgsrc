@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/12/18 15:42:56 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/02 19:25:50 vins Exp $
 
 DISTNAME=	emwm-utils-src
-PKGVER=		1.0
+PKGVER=		1.1
 PKGNAME=	${DISTNAME:S,-src,,}-${PKGVER}
 CATEGORIES=	wm x11
 DIST_SUBDIR=	${PKGNAME_NOREV}
