@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/10/08 13:17:21 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/07/02 12:39:23 wiz Exp $
 
-BLAKE2s (pygccxml-2.2.1-py2.py3-none-any.whl) = b73c14bc80a57db5cf839caa4357354203ddd852c681ba4d5e7f42a074f6dd48
-SHA512 (pygccxml-2.2.1-py2.py3-none-any.whl) = 4149fc3f5ee54bcf5f23d96c7654efbdef183f669cf3439794712b1defec33d01c67d3bdac7df80258fc0be9c1e680302f6a68dbf669625a5231a6071e1c327d
-Size (pygccxml-2.2.1-py2.py3-none-any.whl) = 120585 bytes
+BLAKE2s (pygccxml-2.2.1.tar.gz) = 7514ead8983b8b2ab31b0b2d564d09cec6b4df2b40fcdb9986545e7f035d7bd4
+SHA512 (pygccxml-2.2.1.tar.gz) = 32013617d4d632617b616d3787631c5b09da441a87bb15b88e3b287f17b85e1388308e85dd385276966ac09114536a5863edd5fbb96539547783fd2d41c6e8ce
+Size (pygccxml-2.2.1.tar.gz) = 3170283 bytes
