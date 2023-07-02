@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4199 2023/07/02 20:56:32 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4200 2023/07/02 21:22:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/emwm-utils to 1.1 [vins 2023-07-02]
 	Added finance/rex version 0.1.11 [pin 2023-07-02]
 	Updated chat/toot to 0.37.0 [vins 2023-07-02]
+	Updated devel/binaryen to 114 [fcambus 2023-07-02]
