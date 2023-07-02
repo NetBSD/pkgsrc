@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/11 15:36:09 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2023/07/02 18:32:18 schmonz Exp $
 
-BLAKE2s (approval_utilities-8.2.5.tar.gz) = c6ee768102b8c73842380ffd43dbd54658807db1c3d914d5020f0df5a89afef5
-SHA512 (approval_utilities-8.2.5.tar.gz) = 8ee28eaa98b3189c6ae4fa953ce2be4cb16c42fd1ef77710b9f5d7076a8c436765e1605a6157dd6e7111c26a0b88c2a629be2f6d5f56d698f1c2fa3cb98a0cf2
-Size (approval_utilities-8.2.5.tar.gz) = 16493 bytes
+BLAKE2s (approval_utilities-8.3.1.tar.gz) = 8b2d340a9f32d3c27809c0080711b97e01dd3d2c486b316383e47686dff28ca7
+SHA512 (approval_utilities-8.3.1.tar.gz) = e8c2d3d5e1c7d7ee258440252858227a1b9a8ec121068921ec3686f27f65d46cd1427be86dd2757dffecf7d9afccfd9ec58078c37ba3d4ea77e80330dde5baca
+Size (approval_utilities-8.3.1.tar.gz) = 16947 bytes
