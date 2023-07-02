@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/03/13 06:59:19 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/02 12:29:11 riastradh Exp $
 
 VERSION=	1.1.3
 GITHUB_PROJECT=	OpenCC
@@ -27,5 +27,8 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src
 
 TEST_TARGET=	test
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
