@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4179 2023/07/02 05:32:38 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4180 2023/07/02 08:03:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5849,3 +5849,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-inline to 3.14.0 [taca 2023-07-02]
 	Updated devel/ruby-rgl to 0.6.5 [taca 2023-07-02]
 	Updated devel/ruby-rspec-support to 3.12.1 [taca 2023-07-02]
+	Updated security/fail2ban to 1.0.2 [wiz 2023-07-02]
