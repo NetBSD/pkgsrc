@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/12/04 15:09:10 taca Exp $
+$NetBSD: distinfo,v 1.19 2023/07/02 08:38:39 taca Exp $
 
-BLAKE2s (train-core-3.10.7.gem) = f8a798f1b2c9f54d1e0eee28b10744f78c5cc30a234e9fca4ff8ea8b93c3ae47
-SHA512 (train-core-3.10.7.gem) = ca8f78eebbf9501cd7bac6789d8f48f09acbe1205f8cb488c2bb05dd1bce5940fc7a2619910b29fed1743ea59ec470b15cc273f1a707fb2d3b2ca4dd0c8c8f95
-Size (train-core-3.10.7.gem) = 46592 bytes
+BLAKE2s (train-core-3.10.8.gem) = 0675055fb9f7f29369f00e4a5be7cf6d640d6cd19baa900f31ef7a3cb9c3acad
+SHA512 (train-core-3.10.8.gem) = 2cc8b030d26f2a22b7158ede8e50c9c228afb396d0b1f4dc458cc00d4f40022414fcd354125159fc8757b1a4013d210e404c2f93e6bac41ff11ddb7c5ef87877
+Size (train-core-3.10.8.gem) = 46592 bytes
