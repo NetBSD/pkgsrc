@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.8 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: wheel.mk,v 1.9 2023/07/02 13:01:21 riastradh Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -19,7 +19,7 @@
 
 .include "../../lang/python/pyversion.mk"
 
-TOOL_DEPENDS+= ${PYPKGPREFIX}-pip>=0:../../devel/py-pip
+TOOL_DEPENDS+= ${PYPKGPREFIX}-pip>=23.1.2nb1:../../devel/py-pip
 
 WHEELFILE?= ${WRKSRC}/dist/*.whl
 
