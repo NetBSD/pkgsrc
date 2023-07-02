@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4176 2023/07/02 04:58:55 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4177 2023/07/02 05:26:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5846,3 +5846,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/exiv2 to 0.28.0 [wiz 2023-07-01]
 	Updated databases/ruby-sequel to 5.70.0 [taca 2023-07-02]
 	Updated devel/ruby-gettext_i18n_rails to 1.12.0 [taca 2023-07-02]
+	Updated devel/ruby-inline to 3.14.0 [taca 2023-07-02]
