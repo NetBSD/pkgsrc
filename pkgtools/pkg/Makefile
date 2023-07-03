@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/12/19 16:49:59 vins Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/03 11:29:04 vins Exp $
 
 DISTNAME=	pkg-1.10.99.7
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
