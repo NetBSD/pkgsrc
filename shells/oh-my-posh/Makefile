@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2023/07/01 18:28:04 pin Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/03 18:34:38 pin Exp $
 
-DISTNAME=		oh-my-posh-17.5.3
+DISTNAME=		oh-my-posh-17.6.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -13,11 +13,6 @@ LICENSE=		mit
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 USE_LANGUAGES=		c
-
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	do-configure
-SUBST_FILES.version=	main.go
-SUBST_SED.version=	-e 's|"development"|"${PKGVERSION_NOREV}"|'
 
 INSTALLATION_DIRS=	share/${PKGBASE}
 
