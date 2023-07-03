@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2023/05/02 16:15:05 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2023/07/03 21:19:05 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
-PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
+PKG_SUPPORTED_OPTIONS=	arrow babel furl intervals ipaddress json password
 PKG_SUPPORTED_OPTIONS+=	phone tests timezone
 PKG_SUGGESTED_OPTIONS+=	# blank
 
@@ -13,10 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
 
 .if !empty(PKG_OPTIONS:Mbabel)
 DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
-.endif
-
-.if !empty(PKG_OPTIONS:Mcolor)
-DEPENDS+=	${PYPKGPREFIX}-colour>=0.0.4:../../textproc/py-colour
 .endif
 
 .if !empty(PKG_OPTIONS:Mfurl)
@@ -52,7 +48,6 @@ DEPENDS+=	${PYPKGPREFIX}-pytz>=2014.2:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-pymysql-[0-9]*:../../databases/py-pymysql
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-babel>=1.3:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-colour>=0.0.4:../../textproc/py-colour
 DEPENDS+=	${PYPKGPREFIX}-furl>=0.3.5:../../www/py-furl
 DEPENDS+=	${PYPKGPREFIX}-intervals>=0.2.4:../../math/py-intervals
 DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
