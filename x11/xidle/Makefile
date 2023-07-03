@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/12/19 16:37:21 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/03 11:29:04 vins Exp $
 
 DISTNAME=	xidle-20220718
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 DIST_SUBDIR=	${PKGNAME_NOREV}
