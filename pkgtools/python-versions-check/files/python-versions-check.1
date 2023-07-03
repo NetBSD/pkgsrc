@@ -1,4 +1,4 @@
-.\"	$NetBSD: python-versions-check.1,v 1.2 2023/07/01 11:17:12 wiz Exp $
+.\"	$NetBSD: python-versions-check.1,v 1.3 2023/07/03 21:00:46 wiz Exp $
 .\"
 .\" Copyright (c) 2023 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -88,3 +88,9 @@ also supports Python version 3.8.
 This will break e.g. bulk builds because the required
 .Pa py38-numpy
 package will not exist.
+.Sh BUGS
+.Nm
+does not handle any conditionals, so if some dependencies
+are only intended for some Python versions,
+.Nm
+will report false warnings.
