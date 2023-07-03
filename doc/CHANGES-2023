@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4201 2023/07/03 05:49:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4202 2023/07/03 10:44:50 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5870,3 +5870,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/toot to 0.37.0 [vins 2023-07-02]
 	Updated devel/binaryen to 114 [fcambus 2023-07-02]
 	Updated www/lua-resty-core to 0.1.27 [adam 2023-07-03]
+	Updated shells/ksh93 to 1.0.6 [vins 2023-07-03]
