@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/03 23:30:40 wen Exp $
 
-BLAKE2s (Lingua-EN-Fathom-1.22.tar.gz) = ac7090bef7a2fa3d77d7cd4dc3344dcd6e87f9905227a9b3f48866d9c27c0a82
-SHA512 (Lingua-EN-Fathom-1.22.tar.gz) = 46d997bc4a7621196bdfa58f52751c3eeba6b1d8d6dc913eeffaa86c80d19646fb6aea847fdc3c3d77118b6f1bd279e6915debcea4889576c97ca046a80beb7d
-Size (Lingua-EN-Fathom-1.22.tar.gz) = 10976 bytes
+BLAKE2s (Lingua-EN-Fathom-1.24.tar.gz) = d67d47da58bcf64481583e23594e6375f386c2c18a87c9a662047469f5f7d581
+SHA512 (Lingua-EN-Fathom-1.24.tar.gz) = d428afd33a9ff0994df4d360c02fd7fc34e0b1d788710b089b160a2d83dc4797494415ff8df6554f6f5802e3714d98dc57932af45618fae5f41446bea18d0b13
+Size (Lingua-EN-Fathom-1.24.tar.gz) = 10808 bytes
