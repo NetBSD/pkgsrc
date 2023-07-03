@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/07/01 08:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/03 13:54:32 gdt Exp $
 
 DISTNAME=	rapidfuzz-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+# Only x86_64 is guaranteed to have avx2; while some i386 CPUs do, our
+# build target does not.
+.if ${MACHINE_ARCH} == "x86_64"
 PLIST.avx2=	yes
 .endif
 
