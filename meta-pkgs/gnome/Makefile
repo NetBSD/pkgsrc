@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2022/10/26 10:13:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.152 2023/07/03 12:49:17 wiz Exp $
 
 PKGNAME=	gnome-3.38.1
 PKGREVISION=	1
@@ -26,7 +26,7 @@ DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 #DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
 DEPENDS+=	file-roller-[0-9]*:../../archivers/file-roller
 DEPENDS+=	evince-[0-9]*:../../print/evince
-DEPENDS+=	dconf-[0-9]*:../../devel/dconf-editor
+DEPENDS+=	dconf-[0-9]*:../../devel/dconf
 #DEPENDS+=	evolution-[0-9]*:../../mail/evolution
 #DEPENDS+=	epiphany-[0-9]*:../../www/epiphany
 DEPENDS+=	eog-[0-9]*:../../graphics/eog
