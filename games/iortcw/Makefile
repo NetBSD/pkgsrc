@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/05/06 19:09:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/03 21:15:07 wiz Exp $
 
 DISTNAME=	iortcw-1.51c
 PKGREVISION=	19
@@ -50,13 +50,16 @@ MAKE_FLAGS+=	COMPILE_ARCH=${MACHINE_ARCH}
 IORTCW_ARCH=	x86
 .elif ${MACHINE_ARCH} == "x86_64"
 IORTCW_ARCH=	x86_64
-.elif !empty(MACHINE_ARCH:Mpowerpc64*)
+.elif ${MACHINE_ARCH:Mpowerpc64*}
 IORTCW_ARCH=	ppc64
 .elif ${MACHINE_ARCH} == "sparc64"
 IORTCW_ARCH=	sparc
 .else
 IORTCW_ARCH=	${MACHINE_ARCH}
 .endif
+
+# shm_open()
+LDFLAGS.NetBSD+=	-lrt
 
 PLIST_SUBST+=	IORTCW_ARCH=${IORTCW_ARCH}
 
