@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2023/07/03 17:18:48 wiz Exp $
 
 DISTNAME=	blender-3.5.0
 PKGREVISION=	5
@@ -70,7 +70,7 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
 
 INSTALLATION_DIRS=	bin share/blender
 
-PYTHON_VERSIONS_ACCEPTED?=	310 311
+PYTHON_VERSIONS_ACCEPTED=	310 311
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
