@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:22 agc Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/03 12:51:21 wiz Exp $
 
 .include "Makefile.common"
 
@@ -17,7 +17,7 @@ MASTER_SITES+=	http://www.linuxprinting.org/download/foomatic/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Foomatic PPDs collection
 
-DEPENDS=	foomatic-filters>=3.0.2:../../print/foomatic-filters
+DEPENDS=	foomatic-filters>=3.0.2<4:../../print/foomatic-filters
 
 REQD_DIRS=	share/foomatic
 
