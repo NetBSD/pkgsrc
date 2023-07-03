@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4205 2023/07/03 12:44:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4206 2023/07/03 13:44:52 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5874,3 +5874,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libmd to 1.1.0 [vins 2023-07-03]
 	Updated misc/stellarium to 23.2 [adam 2023-07-03]
 	Removed math/R-cellranger successor textproc/R-cellranger [wiz 2023-07-03]
+	Added security/py-botan3 version 3.0.0 [nros 2023-07-03]
