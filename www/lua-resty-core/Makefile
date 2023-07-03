@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 08:29:08 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/03 05:40:59 adam Exp $
 
-DISTNAME=	lua-resty-core-0.1.26
+DISTNAME=	lua-resty-core-0.1.27
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openresty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
