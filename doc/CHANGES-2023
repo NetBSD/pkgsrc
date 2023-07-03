@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4211 2023/07/03 21:20:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4212 2023/07/03 21:49:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/python-versions-check to 1.4 [wiz 2023-07-03]
 	Removed devel/py-stsci.distutils [wiz 2023-07-03]
 	Removed textproc/py-colour [wiz 2023-07-03]
+	Added emulators/advancemame version 3.9 [nia 2023-07-03]
