@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/03 13:10:39 wiz Exp $
 
 DISTNAME=	doc2html
 PKGNAME=	doc2html-3.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	converters
 #MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 
@@ -12,7 +12,7 @@ COMMENT=	PERL external filter for htdig to convert numerous doc formats to HTML
 
 DEPENDS+=	xlhtml-[0-9]*:../../converters/xlhtml
 DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
-DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
+DEPENDS+=	xpdf-[0-9]*:../../print/xpdf4
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
 USE_TOOLS+=	gs:run perl:run
