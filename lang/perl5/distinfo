@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.178 2023/04/25 07:29:47 adam Exp $
+$NetBSD: distinfo,v 1.179 2023/07/03 21:06:13 nikita Exp $
 
 BLAKE2s (perl-5.36.1.tar.xz) = d1bfb3348be21613b3bde6246682ba15afe58d2dd786e99ffa8325ee368256c3
 SHA512 (perl-5.36.1.tar.xz) = 8d1ec654c59d078bfc477f11c9526233199a85e4d4f6f5a55bf9eb7802cd355189c669cc6785d2d5e741c1de4d740b7a0cfd3c0198122586a07ac7f527fb14af
 Size (perl-5.36.1.tar.xz) = 13053604 bytes
-SHA1 (patch-Configure) = a72983dba63f32f57418f2702b039585ba7236a7
+SHA1 (patch-Configure) = afbc6660012128531e53ec7da8f077c5e39f0dfd
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-caretx.c) = b76b4175a58123fa4dfd2adf36b2207dcb6cf65a
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
@@ -14,3 +14,4 @@ SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_solaris__2.sh) = 364a28ca57dbabe1f902b601e336532996db6a0e
 SHA1 (patch-installperl) = b129d64cc17b898b44fe6282b8b1df36e342d0ef
+SHA1 (patch-perl.c) = 2e2e536a8a7e5165af7c429d36181ef4105f5e4e
