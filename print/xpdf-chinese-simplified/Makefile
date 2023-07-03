@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/04/24 11:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/03 13:11:47 wiz Exp $
 
 DISTNAME=	xpdf-chinese-simplified-2011-sep-02
 PKGNAME=	xpdf-chinese-simplified-20110902
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.xpdfreader.com/
 COMMENT=	Xpdf support files for Chinese (Simplified)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	xpdf>=2.02:../../print/xpdf
+DEPENDS+=	xpdf>=2.02<4:../../print/xpdf
 
 WRKSRC=		${WRKDIR}/xpdf-chinese-simplified
 NO_CONFIGURE=	yes
