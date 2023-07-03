@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:06 nia Exp $
-
-BLAKE2s (stsci.distutils-0.3.7.tar.gz) = bc5324d95570468ac7a80b31cdd062390440f5dd6cad1bc14b4a708a2070fa4b
-SHA512 (stsci.distutils-0.3.7.tar.gz) = 8ef81afe43dc080d28ce7e640c1e03cd0e0a857151ad307af742ef434e3a1abb489213a63a95618bac39a743624510a0d59a2817b6cadb929a2bcf64406ac85e
-Size (stsci.distutils-0.3.7.tar.gz) = 48831 bytes
