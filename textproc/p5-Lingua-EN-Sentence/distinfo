@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:22:29 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/03 23:40:53 wen Exp $
 
-BLAKE2s (Lingua-EN-Sentence-0.31.tar.gz) = b6177143441d5bd6350a347d1333980e7f93a285d281c7554077705e646145c5
-SHA512 (Lingua-EN-Sentence-0.31.tar.gz) = d7e9d1ab7f8193b848e197176c60874db1c3385ebb3e7d28b7b85ac3dc429a94952b12646d18e77369ee979db6175540c3dbee5f8750a3c377df07940ea93365
-Size (Lingua-EN-Sentence-0.31.tar.gz) = 18074 bytes
+BLAKE2s (Lingua-EN-Sentence-0.34.tar.gz) = 17871975634a06b88442b64583976d967feda30b641ac7ffebe96f301615ccfd
+SHA512 (Lingua-EN-Sentence-0.34.tar.gz) = 6577ffddce7ec96c804a472b25a5fac3c2a95702802cd713afb9c72001930d528643e6e0dd89b6bb4a45f22e7a0d365b98a4fdc23f0b71b77548284cc9990968
+Size (Lingua-EN-Sentence-0.34.tar.gz) = 19085 bytes
