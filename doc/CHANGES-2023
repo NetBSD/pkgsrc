@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4212 2023/07/03 21:49:50 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4213 2023/07/03 23:31:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/py-stsci.distutils [wiz 2023-07-03]
 	Removed textproc/py-colour [wiz 2023-07-03]
 	Added emulators/advancemame version 3.9 [nia 2023-07-03]
+	Updated textproc/p5-Lingua-EN-Fathom to 1.24 [wen 2023-07-03]
