@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2023/07/01 14:19:45 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/07/03 12:47:46 wiz Exp $
 
-DISTNAME=	bulk-large-20211103
+DISTNAME=	bulk-large-20230703
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -50,7 +50,7 @@ DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 # 2. Applications
 #
 DEPENDS+=	quassel-[0-9]*:../../chat/quassel
-DEPENDS+=	asterisk>=16:../../comms/asterisk16
+DEPENDS+=	asterisk>=19:../../comms/asterisk19
 DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
