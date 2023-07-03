@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/03 13:43:28 nros Exp $
+${PYSITELIB}/botan3.py
