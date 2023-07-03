@@ -1,12 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.2 2023/07/03 20:58:30 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.3 2023/07/03 20:59:32 bsiegert Exp $
 
-Changes to packages and infrastructure on the $BRANCH branch:
+Changes to packages and infrastructure on the 2023Q2 branch:
 
 Pullup ticket #6766 - requested by taca
 www/ruby-rails61: security fix
-
-Pullup ticket #6767 - requested by taca
-www/ruby-rails70: security fix
 
 Pullup ticket #6767 - requested by taca
 www/ruby-rails70: security fix
