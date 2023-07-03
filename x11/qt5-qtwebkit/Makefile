@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.112 2023/05/31 10:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.113 2023/07/03 11:46:28 gdt Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
@@ -106,6 +106,7 @@ PLIST_VARS+=	npapi
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
