@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4203 2023/07/03 10:52:35 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4204 2023/07/03 10:55:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5872,3 +5872,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/lua-resty-core to 0.1.27 [adam 2023-07-03]
 	Updated shells/ksh93 to 1.0.6 [vins 2023-07-03]
 	Updated devel/libmd to 1.1.0 [vins 2023-07-03]
+	Updated misc/stellarium to 23.2 [adam 2023-07-03]
