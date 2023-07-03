@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/12/19 17:15:34 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/03 10:56:55 vins Exp $
 
 DISTNAME=	libbsd-0.11.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
