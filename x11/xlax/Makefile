@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/12/11 10:51:05 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/03 11:29:04 vins Exp $
 
 DISTNAME=	xlax2.4
 PKGNAME=	xlax-2.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://hea-www.harvard.edu/~fine/Tech/
 

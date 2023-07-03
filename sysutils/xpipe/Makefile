@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/19 16:39:37 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/03 11:29:04 vins Exp $
 
 DISTNAME=	xpipe-2.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.netmeister.org/apps/
 
