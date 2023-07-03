@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 10:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/03 12:37:55 wiz Exp $
 
 DISTNAME=	click-default-group-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/sublee/click-default-group/
 COMMENT=	Extends click.Group to invoke a command without explicit subcommand name
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 # no tests included in pypi distfile
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES=	click
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
