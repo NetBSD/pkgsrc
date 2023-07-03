@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2022/12/28 19:12:30 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2023/07/03 10:55:04 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2022-12-25 14:37:17.000000000 +0000
+--- CMakeLists.txt.orig	2023-07-02 10:30:23.000000000 +0000
 +++ CMakeLists.txt
-@@ -208,14 +208,6 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -194,14 +194,6 @@ IF(OPENGL_DEBUG_LOGGING)
       ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
  ENDIF()
  
@@ -20,7 +20,7 @@ Do not use application bundle on Darwin.
  
  # Add gprof build options if necessary.  Note gmon.out will be created in working directory when Stellarium is executed
  IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")
-@@ -263,7 +255,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
+@@ -249,7 +241,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
       ENDIF()
  ENDIF()
  
@@ -29,16 +29,16 @@ Do not use application bundle on Darwin.
       SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
-@@ -368,7 +360,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
+@@ -354,7 +346,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
       IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)
            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-const-variable -Wno-unused-result")
       ENDIF()
 -     IF(APPLE)
 +     IF(FALSE)
-           SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter")
-           SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option")
+ 	  SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter -Wno-string-plus-int")
+ 	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option -Wno-string-plus-int")
       ENDIF()
-@@ -838,7 +830,7 @@ ENDIF()
+@@ -832,7 +824,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -47,7 +47,7 @@ Do not use application bundle on Darwin.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -983,7 +975,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -978,7 +970,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### macOS Bundling ###############
