@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2023/07/03 13:43:28 nros Exp $
+# used by security/py-botan3/Makefile
+
+DISTNAME=	Botan-3.0.0
+CATEGORIES=	security
+MASTER_SITES=	https://botan.randombit.net/releases/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	nros@NetBSD.org
+HOMEPAGE=	https://botan.randombit.net/
+LICENSE=	2-clause-bsd
+
+DISTINFO_FILE=	../../security/botan3/distinfo
+PATCHDIR=	../../security/botan3/patches
