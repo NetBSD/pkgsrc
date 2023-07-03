@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/12/19 15:08:04 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/03 10:51:40 vins Exp $
 
-DISTNAME=	libmd-1.0.4
+DISTNAME=	libmd-1.1.0
 CATEGORIES=	devel
 MASTER_SITES=	https://archive.hadrons.org/software/libmd/
 EXTRACT_SUFX=	.tar.xz

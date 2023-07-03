@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/19 15:08:04 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/03 10:51:40 vins Exp $
 include/md2.h
 include/md4.h
 include/md5.h
@@ -88,3 +88,4 @@ man/man3/md5.3
 man/man3/rmd160.3
 man/man3/sha1.3
 man/man3/sha2.3
+man/man7/libmd.7
