@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/06/13 11:26:27 mef Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/03 12:44:50 wiz Exp $
 
 R_PKGNAME=	tidyr
 R_PKGVER=	1.3.0
@@ -7,7 +7,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easily tidy data with 'spread()' and 'gather()' functions
 LICENSE=	mit
 
-DEPENDS+=	R-cli>=3.4.1:../../math/R-dplyr
+DEPENDS+=	R-cli>=3.4.1:../../devel/R-cli
 DEPENDS+=	R-dplyr>=1.0.10:../../math/R-dplyr
 DEPENDS+=	R-ellipsis>=0.1.0:../../math/R-ellipsis
 DEPENDS+=	R-glue>=1.3.1:../../devel/R-glue
