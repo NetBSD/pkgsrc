@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/11/15 08:17:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/03 17:31:43 wiz Exp $
 
 DISTNAME=	scikit-image-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0.3:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-tifffile, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 # no python 3.11 support as of 0.19.3
 # https://github.com/scikit-image/scikit-image/issues/6598
 PYTHON_VERSIONS_INCOMPATIBLE+=	311
