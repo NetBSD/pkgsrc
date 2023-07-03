@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2023/05/22 21:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2023/07/03 21:10:14 wiz Exp $
 
 DISTNAME=	qpdfview-0.4.18
 PKGREVISION=	32
@@ -12,7 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	poppler-data-[0-9]*:../../print/poppler-data
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
+GCC_REQD+=	8 # std::optional
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
