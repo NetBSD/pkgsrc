@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/07/03 21:49:20 nia Exp $
+
+AdvanceMENU expects ROMs to be installed to
+${PREFIX}/share/advance/rom or ${HOME}/.advance/rom.
+
+If none are installed it will not be able to launch.
+
+===========================================================================
