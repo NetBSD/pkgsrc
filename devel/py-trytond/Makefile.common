@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2023/07/03 17:18:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2023/07/03 17:33:06 wiz Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -245,7 +245,7 @@ PKGNAME?=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 MASTER_SITES=	https://downloads-cdn.tryton.org/6.2/
 
 DIST_SUBDIR=	tryton-${TRYTON_BASEVER}
-PYTHON_VERSIONS_INCOMPATIBLE+= 27
+PYTHON_VERSIONS_INCOMPATIBLE+= 27 37 38
 
 # predefine these so modules don't have to.
 PY_PATCHPLIST=	yes
