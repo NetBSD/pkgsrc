@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=AdvanceMAME
+GenericName=Arcade Game Emulator
+Comment=Arcade game and multi-system emulator with advanced video support
+Icon=advancemame
+Exec=advmenu
+Terminal=false
+Categories=Game;Emulator;

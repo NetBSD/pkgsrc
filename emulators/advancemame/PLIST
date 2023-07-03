@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/03 21:49:20 nia Exp $
+bin/advj
+bin/advk
+bin/advm
+bin/advmame
+bin/advmenu
+bin/advmess
+bin/advs
+man/man1/advcfg.1
+man/man1/advdev.1
+man/man1/advj.1
+man/man1/advk.1
+man/man1/advm.1
+man/man1/advmame.1
+man/man1/advmenu.1
+man/man1/advs.1
+man/man1/advv.1
+share/applications/advancemame.desktop
+share/doc/advancemame/authors.html
+share/doc/advancemame/build.html
+share/doc/advancemame/carddos.html
+share/doc/advancemame/cardlinx.html
+share/doc/advancemame/cardwin.html
+share/doc/advancemame/cost.html
+share/doc/advancemame/faq.html
+share/doc/advancemame/history.html
+share/doc/advancemame/install.html
+share/doc/advancemame/readme.html
+share/doc/advancemame/release.html
+share/doc/advancemame/script.html
+share/doc/advancemame/svgawin.html
+share/icons/hicolor/16x16/apps/advancemame.png
+share/icons/hicolor/256x256/apps/advancemame.png
+share/icons/hicolor/32x32/apps/advancemame.png
+share/icons/hicolor/48x48/apps/advancemame.png
+@pkgdir share/advance/snap/ti99_4a
+@pkgdir share/advance/sample
+@pkgdir share/advance/rom
+@pkgdir share/advance/image/ti99_4a
+@pkgdir share/advance/crc
+@pkgdir share/advance/artwork
