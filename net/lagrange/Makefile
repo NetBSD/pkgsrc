@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/06 19:09:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/03 13:12:13 wiz Exp $
 
 DISTNAME=	lagrange-1.15.8
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-DEPENDS+=	zip-[0-9]*:../../archivers/zip/
+DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 .include "options.mk"
 .include "../../converters/fribidi/buildlink3.mk"
