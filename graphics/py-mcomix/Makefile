@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:16:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/03 13:06:02 wiz Exp $
 
 DISTNAME=	mcomix-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://mcomix.sourceforge.net/
 COMMENT=	GTK+ comic book viewer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow6
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.36.0:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 
