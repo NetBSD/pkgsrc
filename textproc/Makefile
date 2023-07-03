@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1409 2023/06/04 19:35:47 wiz Exp $
+# $NetBSD: Makefile,v 1.1410 2023/07/03 21:20:11 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1011,7 +1011,6 @@ SUBDIR+=	py-cmarkgfm
 SUBDIR+=	py-cmudict
 SUBDIR+=	py-color
 SUBDIR+=	py-colored
-SUBDIR+=	py-colour
 SUBDIR+=	py-commonmark
 SUBDIR+=	py-creole
 SUBDIR+=	py-css-parser
