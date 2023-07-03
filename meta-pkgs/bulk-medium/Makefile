@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2023/07/01 14:19:45 nia Exp $
+# $NetBSD: Makefile,v 1.82 2023/07/03 13:10:14 wiz Exp $
 
 DISTNAME=	bulk-medium-20230701
 CATEGORIES=	meta-pkgs
@@ -105,7 +105,7 @@ DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
+DEPENDS+=	xpdf>=4:../../print/xpdf4
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
