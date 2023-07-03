@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/03/29 09:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/03 13:04:57 wiz Exp $
 
 DISTNAME=	supervisor-4.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,7 @@ LICENSE=	original-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 207
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	supervisor/scripts/*.py
 
