@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4025 2023/06/29 09:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4026 2023/07/03 21:06:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2961,7 +2961,6 @@ SUBDIR+=	py-speaklater
 SUBDIR+=	py-stdio-mgr
 SUBDIR+=	py-stem
 SUBDIR+=	py-stevedore
-SUBDIR+=	py-stsci.distutils
 SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
