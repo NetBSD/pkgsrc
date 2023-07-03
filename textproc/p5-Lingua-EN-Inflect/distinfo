@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:22:28 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/07/03 23:33:03 wen Exp $
 
-BLAKE2s (Lingua-EN-Inflect-1.904.tar.gz) = cfeffe1c24234adec421ad605d2b91e173c2b2bf2ccdc255148f716bd1598c43
-SHA512 (Lingua-EN-Inflect-1.904.tar.gz) = 242417424d8ab7d52d219af838df955add337c3ef97ceb27e0fd72151988e6cce44e504d5ebf7b0c15f32b496bc0179d6659845c258dd7cbfaa5ddbb0e7ec8a5
-Size (Lingua-EN-Inflect-1.904.tar.gz) = 59797 bytes
+BLAKE2s (Lingua-EN-Inflect-1.905.tar.gz) = e81701d0d080137ac53da853e81a7b2db8541062e2fa6f8747896783b98c3bb7
+SHA512 (Lingua-EN-Inflect-1.905.tar.gz) = 394671c4a645edd426d3f8d7b3980aac10345b68f9c7d2558f46ec3b7ffadad86138c5f27d3afd64e2c193c6d20a537f179ff01aa40a84cd1cee718e4afde42b
+Size (Lingua-EN-Inflect-1.905.tar.gz) = 59715 bytes
