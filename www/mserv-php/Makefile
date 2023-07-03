@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/12/09 14:20:56 taca Exp $
-#
+# $NetBSD: Makefile,v 1.11 2023/07/03 12:54:50 wiz Exp $
 
 DISTNAME=	mserv-php-090
 PKGNAME=	mserv-php-0.90
@@ -12,7 +11,7 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	# 404: http://dougiamas.com/mserv/
 COMMENT=	Quick web interface to mserv audio jukebox
 
-DEPENDS+=	mserv-[0-9]*:../../audio/mserv
+DEPENDS+=	mserv<0.39:../../audio/mserv
 
 WRKSRC=		${WRKDIR}/mserv-php
 
