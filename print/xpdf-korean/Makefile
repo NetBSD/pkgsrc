@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/04/24 11:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/03 13:11:48 wiz Exp $
 
 DISTNAME=	xpdf-korean-2011-sep-02
 PKGNAME=	xpdf-korean-20110902
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.xpdfreader.com/
 COMMENT=	Xpdf support files for Korean
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	xpdf>=2.02:../../print/xpdf
+DEPENDS+=	xpdf>=2.02<4:../../print/xpdf
 DEPENDS+=	baekmuk-ttf>=1.0:../../fonts/baekmuk-ttf
 
 WRKSRC=		${WRKDIR}/xpdf-korean
