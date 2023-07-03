@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/07/01 12:29:50 nros Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/03 13:43:28 nros Exp $
 
-DISTNAME=	Botan-3.0.0
+.include "Makefile.common"
+
 PKGNAME=	${DISTNAME:S/Botan/botan3/}
-CATEGORIES=	security
-MASTER_SITES=	https://botan.randombit.net/releases/
-EXTRACT_SUFX=	.tar.xz
-
-MAINTAINER=	nros@NetBSD.org
-HOMEPAGE=	https://botan.randombit.net/
 COMMENT=	Portable, easy to use, and efficient C++ crypto library (v3)
-LICENSE=	2-clause-bsd
 
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
