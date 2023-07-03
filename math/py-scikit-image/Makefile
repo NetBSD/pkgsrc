@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/07/03 17:31:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/03 19:10:55 wiz Exp $
 
 DISTNAME=	scikit-image-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-tifffile>=2019.7.26:../../graphics/py-tifffile
 DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
 # optional
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0.3:../../graphics/py-matplotlib
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
@@ -34,6 +35,9 @@ USE_PKG_RESOURCES=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} skivi skivi-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
