@@ -1,0 +1,11 @@
+AdvanceMAME is an unofficial port of the arcade game emulator MAME
+0.106 and multi-system emulator MESS 0.106 for Arcade Monitors and
+TVs but also for LCDs and PC monitors.
+
+The main difference compared with the official emulators is that
+the Advance versions are able to program directly the video board
+to always get a video mode with the correct size and frequency.
+
+Generally the Advance emulators are able to use a video mode which
+doesn't require any stretching or other unneeded effects to match
+the original arcade display.

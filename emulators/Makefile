@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2023/07/02 17:32:30 nia Exp $
+# $NetBSD: Makefile,v 1.352 2023/07/03 21:49:20 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -14,6 +14,7 @@ SUBDIR+=	PC6001VX
 SUBDIR+=	ROMBuild
 SUBDIR+=	ROMInfo
 SUBDIR+=	ZIPIdent
+SUBDIR+=	advancemame
 SUBDIR+=	aliados
 SUBDIR+=	applyppf
 SUBDIR+=	aranym
