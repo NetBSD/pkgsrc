@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/11/14 14:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/04 10:24:38 adam Exp $
 
 DISTNAME=	rlp-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=2.9.1:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
