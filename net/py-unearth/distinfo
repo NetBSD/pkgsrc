@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/05/15 20:44:54 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/07/04 13:12:37 adam Exp $
 
-BLAKE2s (unearth-0.9.1.tar.gz) = 814c0bf95b8881ad3264979df5a9f276a75093e3915077bcff621a56905694fb
-SHA512 (unearth-0.9.1.tar.gz) = afd865699c9839d4dba38f135771a613ed3afe43a5c8eae295cbba838490b78e18df53fdca35fdfc4cfc3fae673f853830b23dfad58bca3bc34c6affc0337e9d
-Size (unearth-0.9.1.tar.gz) = 270441 bytes
+BLAKE2s (unearth-0.9.2.tar.gz) = 3d5a3a546ac9486be5008342254778dbb9823b5393cdaf361e3ee0b3ccaf5510
+SHA512 (unearth-0.9.2.tar.gz) = be8f1301c7184c94d6c22a5780b92daf803e1f5ac904cdaf75bf1828208dd0d9f433e3726d89f77511d75ac4f75aa9a5fd812a665be8a7ee67dd83d58216b4c8
+Size (unearth-0.9.2.tar.gz) = 270469 bytes
 SHA1 (patch-pyproject.toml) = 8615a980449fb5757d6d42a0b5589121e33b5ef1
