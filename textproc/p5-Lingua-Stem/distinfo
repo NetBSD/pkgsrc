@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/04 01:56:32 wen Exp $
 
-BLAKE2s (Lingua-Stem-2.30.tar.gz) = 392b19d28e8186e683432eee34f6c8c0c0f020e1bd5d31c3b51b0190211b4087
-SHA512 (Lingua-Stem-2.30.tar.gz) = 3cbd5df1254a9d7f58481117a05fbe7e8e8c19e33df173ef3bc22334eb9797bda44c402807e2ae77410e152c5cee8215cff36bb65d1f869fa4ae1f8a028af667
-Size (Lingua-Stem-2.30.tar.gz) = 1615868 bytes
+BLAKE2s (Lingua-Stem-2.31.tar.gz) = 4e120b9badcea477f8d6088c7c6d8bfa278dae74285c3c749ed6e2f74b9da3f1
+SHA512 (Lingua-Stem-2.31.tar.gz) = 34edbe25e1d48019114b91e2a7f723d73d08431fa0f2f3de51e11d17cfd57bb1da2e557188fd2ef8c88eb27334f2896036d67506848938e49bf6165d33fadbe5
+Size (Lingua-Stem-2.31.tar.gz) = 1354267 bytes
