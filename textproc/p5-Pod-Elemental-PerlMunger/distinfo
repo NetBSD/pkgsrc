@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:22:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/07/04 03:02:18 wen Exp $
 
-BLAKE2s (Pod-Elemental-PerlMunger-0.200006.tar.gz) = 6e246fcd918af9329f942dc08e3f4305f30645a0f87bd5e6fac2a8976611fc00
-SHA512 (Pod-Elemental-PerlMunger-0.200006.tar.gz) = 3b1bbb60db4c92e3f2d60bd4aaf36dad938a59856e2fcff8325369b12685f6df9d680e2e1222494671f06cbde1aebd19f08f933fc0d66ee39b07e5535d4a84b3
-Size (Pod-Elemental-PerlMunger-0.200006.tar.gz) = 19944 bytes
+BLAKE2s (Pod-Elemental-PerlMunger-0.200007.tar.gz) = 403d62c61c87b0c6ac2de36740c86947aed0341cd7d7e235c3e7f58f7977f33e
+SHA512 (Pod-Elemental-PerlMunger-0.200007.tar.gz) = 0d8cc8251c481d25ab2e77a526b7bced48f66627e6e1af88697a771e5d184f69b28545b92b3323a8dc81697b986c654c2571fde81c551fa2d93ee4f1d7b65050
+Size (Pod-Elemental-PerlMunger-0.200007.tar.gz) = 20797 bytes
