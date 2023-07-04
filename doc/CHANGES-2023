@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4226 2023/07/04 03:08:35 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4227 2023/07/04 03:11:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Pod-Coverage-TrustPod to 0.100006 [wen 2023-07-04]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200007 [wen 2023-07-04]
 	Updated textproc/p5-String-Errf to 0.009 [wen 2023-07-04]
+	Updated textproc/p5-String-Flogger to 1.101246 [wen 2023-07-04]
