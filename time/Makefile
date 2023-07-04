@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.248 2023/06/26 11:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.249 2023/07/04 20:27:31 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -255,6 +255,7 @@ SUBDIR+=	titrax
 SUBDIR+=	todotxt
 SUBDIR+=	tty-clock
 SUBDIR+=	tzdiff
+SUBDIR+=	uair
 SUBDIR+=	vixie-cron
 SUBDIR+=	wmCalClock
 SUBDIR+=	wmclockmon
