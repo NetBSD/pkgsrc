@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/04 03:13:23 wen Exp $
 
-BLAKE2s (String-Formatter-1.234.tar.gz) = c5d462b8f255cd1f95e024b097b3d134f907e2f4f92a7bdf55d6bc26969fd5d1
-SHA512 (String-Formatter-1.234.tar.gz) = be5fb27182437c0e89e02d53d6c931eac614634cdd6c287109779afe1e305728ce9b0807e54c018bd68e4554fe02f2722586e8cf61de477bcb79b69db3ad55dc
-Size (String-Formatter-1.234.tar.gz) = 26321 bytes
+BLAKE2s (String-Formatter-1.235.tar.gz) = a698d889a512fe19e657c3431d25a3ecfee8d5a909a02cdac3c4f339aa8e3887
+SHA512 (String-Formatter-1.235.tar.gz) = 3713c281f912dd42b4c56da6727e432b531e99ffa98f4cf6efddf46bf4788e1fe6ecd3b1b95e2f6be2ff19344434849813d29214710e123c97105245bf6ba436
+Size (String-Formatter-1.235.tar.gz) = 26376 bytes
