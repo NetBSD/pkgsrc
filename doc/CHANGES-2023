@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4218 2023/07/04 01:57:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4219 2023/07/04 02:01:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5887,3 +5887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Lingua-EN-Sentence to 0.34 [wen 2023-07-03]
 	Updated textproc/p5-Lingua-EN-Syllable to 0.31 [wen 2023-07-04]
 	Updated textproc/p5-Lingua-Stem to 2.31 [wen 2023-07-04]
+	Updated textproc/p5-Lingua-Translit to 0.29 [wen 2023-07-04]
