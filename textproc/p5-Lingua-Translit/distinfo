@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/07/04 02:00:47 wen Exp $
 
-BLAKE2s (Lingua-Translit-0.28.tar.gz) = a46956e654c6f5deddc0f1a6ffc9083d05eb8af0360b08a89c678996254a6497
-SHA512 (Lingua-Translit-0.28.tar.gz) = eb6d6fb6cda3b4c73fffc3ccc907453b3f285cf3e1d7e3349c971c55af855c301bdb1fb0e9d6dbab77d6f036740ce5aebe28c6d7f04f812460b9e2b6f53d4bb8
-Size (Lingua-Translit-0.28.tar.gz) = 110433 bytes
+BLAKE2s (Lingua-Translit-0.29.tar.gz) = 343a6f6b65cc54f6a502a6ca5d3fb20932b23fc8a2e66d72a6c3037d1a9810ae
+SHA512 (Lingua-Translit-0.29.tar.gz) = 96c17e2fb62a6f2240a43181c7b83ffc51b21e80bcaa0d3900991c7a49f3b63f1b8a6fa7ee720a666061d459cd4985ab66acfbbdb5110b9d0bb41bd1924aa671
+Size (Lingua-Translit-0.29.tar.gz) = 111275 bytes
