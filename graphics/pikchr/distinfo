@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/11/26 19:39:15 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2023/07/04 02:29:15 schmonz Exp $
 
-BLAKE2s (pikchr-b79ce27929e9cc79/pikchr.tar.gz) = 00125e7b4de045b7454fa39b094e717f891de99e9ba35c2f6e97a9cb58dbd106
-SHA512 (pikchr-b79ce27929e9cc79/pikchr.tar.gz) = 2339ac1ce17b97698f32d022f92014ba01f279c7aa64e9f1ebbbc1808c58ed75fbb1f935cc8eccb883a7b627aa9de4eaac1ece1b444abc6f5769c2ff77c07d1f
-Size (pikchr-b79ce27929e9cc79/pikchr.tar.gz) = 245370 bytes
+BLAKE2s (pikchr-6d40a5f041311bbe/pikchr.tar.gz) = 0cb817bc20fd9d781c84614a70e0a15dd75cfd2502d7d09ca38c0ce047373b19
+SHA512 (pikchr-6d40a5f041311bbe/pikchr.tar.gz) = 92e953a15e824c8385619347ed6bc5267b755041db3206eac0b1a18fdfc8ad785ae91c841acddaa206446528f6b6bf36edfdb506ee001a5acd810919f0e7d981
+Size (pikchr-6d40a5f041311bbe/pikchr.tar.gz) = 265676 bytes
 SHA1 (patch-Makefile) = e3900e12fd25b89ebf848820594977a9776cbb75
