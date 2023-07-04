@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23148 2023/07/04 01:59:12 wen Exp $
+$NetBSD: TODO,v 1.23149 2023/07/04 03:05:53 wen Exp $
 
 Suggested new packages
 ======================
@@ -1088,7 +1088,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Search-Elasticsearch-7.712
 	o p5-Search-QueryParser-0.95
 	o p5-Spreadsheet-ReadSXC-0.34
-	o p5-String-Similarity-1.16
 	o p5-Sys-Filesystem-1.408
 	o p5-Test-TempDir-0.018
 	o p5-Text-xSV-0.23
