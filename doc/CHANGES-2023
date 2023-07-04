@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4231 2023/07/04 07:01:28 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4232 2023/07/04 07:08:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5900,3 +5900,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-String-RewritePrefix to 0.009 [wen 2023-07-04]
 	Updated textproc/p5-String-Truncate to 1.100603 [wen 2023-07-04]
 	Updated textproc/p5-Syntax-SourceHighlight to 2.1.3 [wen 2023-07-04]
+	Updated textproc/p5-Text-Table to 1.135 [wen 2023-07-04]
