@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4245 2023/07/04 11:52:11 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4246 2023/07/04 11:55:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5919,3 +5919,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-XML-XPath to 1.48 [wen 2023-07-04]
 	Updated textproc/p5-YAML-LibYAML to 0.88 [wen 2023-07-04]
 	Updated textproc/p5-YAML-PP to 0.036 [wen 2023-07-04]
+	Updated textproc/p5-YAML-Tiny to 1.74 [wen 2023-07-04]
