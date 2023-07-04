@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4238 2023/07/04 10:03:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4239 2023/07/04 10:10:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5910,3 +5910,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.8.1 [adam 2023-07-04]
 	Updated devel/py-proto-plus to 1.22.3 [adam 2023-07-04]
 	Updated devel/py-pygit2 to 1.12.2 [adam 2023-07-04]
+	Updated devel/py-exceptiongroup to 1.1.2 [adam 2023-07-04]
+	Updated devel/py-bitarray to 2.7.6 [adam 2023-07-04]
