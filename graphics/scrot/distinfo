@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2023/06/14 17:27:21 pin Exp $
+$NetBSD: distinfo,v 1.17 2023/07/04 15:05:19 jperkin Exp $
 
 BLAKE2s (scrot-1.10.tar.gz) = dae2347f7e2bb8ba640af66dec24727a76236fb70f0fd92f3b3585d82b4d331c
 SHA512 (scrot-1.10.tar.gz) = 4429c46aafd0928901672cad9c947566b7c5dfec644d041c59489325be06d226488978fe96292bf3d9b478470c8de4313da4451eace81ee869e8aa7e478b0d5f
 Size (scrot-1.10.tar.gz) = 178710 bytes
+SHA1 (patch-src_scrot.c) = 71d803dda4912f7f4e5f82534f1f1e27ce547dbe
