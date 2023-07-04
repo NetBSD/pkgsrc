@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4222 2023/07/04 02:26:13 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4223 2023/07/04 02:29:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-Number-Format to 1.76 [wen 2023-07-04]
 	Updated textproc/p5-PDF-API2 to 2.044 [wen 2023-07-04]
 	Updated textproc/p5-PDF-Table to 1.005 [wen 2023-07-04]
+	Updated graphics/pikchr to 1.0.20230526 [schmonz 2023-07-04]
