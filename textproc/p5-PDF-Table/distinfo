@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:22:32 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/07/04 02:25:13 wen Exp $
 
-BLAKE2s (PDF-Table-1.002.tar.gz) = 461c8829cf574b7b44c4f6c5a420e970c573992e75fe982ae84e36bc944db2ac
-SHA512 (PDF-Table-1.002.tar.gz) = 45630dbb43ed9745b0c0a84ba605c021c46141c8fd61b8546b12333e2477843f4eb3ce7ce976ce4e66fed1f60d39acbdf28ae60bea7ade49bd9ceefdf483384a
-Size (PDF-Table-1.002.tar.gz) = 75274 bytes
+BLAKE2s (PDF-Table-1.005.tar.gz) = 3396e95e177607ca93470b1415bfbd15e369313e028a4f594717aa48a031c64e
+SHA512 (PDF-Table-1.005.tar.gz) = b93aaeb37ec8500fecd50ff3e5bdf79872ee942b76561f6ad62a6f33907fec3401af571272063fcb2950d73f6e92355e1f34ade0ff3448898eb0b0ca037c178f
+Size (PDF-Table-1.005.tar.gz) = 91154 bytes
