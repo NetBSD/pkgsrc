@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/07/04 09:35:36 adam Exp $
+# $NetBSD: Makefile,v 1.48 2023/07/04 13:09:08 adam Exp $
 
 DISTNAME=	taglib-1.13.1
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Library for accessing id tags in various media files
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_LANGUAGES=	c c++11
-USE_LIBTOOL=	yes
 GCC_REQD+=	4.7
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
