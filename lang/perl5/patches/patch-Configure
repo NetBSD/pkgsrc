@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.12 2023/07/03 21:06:13 nikita Exp $
+$NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -8,66 +8,57 @@ $NetBSD: patch-Configure,v 1.12 2023/07/03 21:06:13 nikita Exp $
 * Several other changes.
 * Add rpath for QNX
 
-* reproducibility patch from guix:
-Don't encode the current timestamp.
-
-This affects the output of `perl -V`, specifically the message "Compiled
-at [...]".
-
-The 'cf_time' and 'cf_by' values show up in 'config.h' and
-in 'Config_heavy.pl'.
-
-Use the output of 'uname -s' instead of 'uname -a' to avoid recording
-the kernel version ('uname -o' leads to directory names like
-'x86_64-gnulinux' instead of 'x86_64-linux', which might cause breakage
-down the road.)
-
 --- Configure.orig	2021-05-04 06:52:48.000000000 +0000
 +++ Configure
-@@ -3317,7 +3317,7 @@
- : Try to determine whether config.sh was made on this system
- case "$config_sh" in
- '')
--myuname=`$uname -a 2>/dev/null`
-+myuname=`$uname -s 2>/dev/null`
- $test -z "$myuname" && myuname=`hostname 2>/dev/null`
- # Downcase everything to avoid ambiguity.
- # Remove slashes and single quotes so we can use parts of this in
-@@ -3520,7 +3520,7 @@
+@@ -3482,13 +3482,14 @@ EOM
+ 			osvers="$3"
  			;;
- 		MiNT)	osname=mint
+ 		dragonfly) osname=dragonfly
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
  			;;
--		minix)	osname=minix
-+		minix*)	osname=minix
+ 		dynixptx*) osname=dynixptx
+ 			osvers=`echo "$4"|sed 's/^v//'`
+ 			;;
+ 		freebsd) osname=freebsd
+-			osvers="$3" ;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
++			;;
+ 		genix)	osname=genix ;;
+ 		gnu)	osname=gnu
+ 			osvers="$3" ;;
+@@ -3513,8 +3514,11 @@ EOM
+ 		minix)	osname=minix
  			osvers=`$uname -r`
  			;;
++		minix*) osname=minix
++			osvers=`$uname -r`
++			;;
  		netbsd*) osname=netbsd
-@@ -3549,6 +3549,9 @@
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
+ 		news-os) osvers="$3"
+ 			case "$3" in
+@@ -3524,7 +3528,7 @@ EOM
+ 			;;
+ 		nonstop-ux) osname=nonstopux ;;
+ 		openbsd) osname=openbsd
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
+ 		os2)	osname=os2
+ 			osvers="$4"
+@@ -3539,6 +3543,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
 +		sco_sv) osname=sco_sv
-+			osvers="$3"
++			osvers=`$uname -r`v`$uname -v`
 +			;;
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -3889,13 +3889,13 @@
- . ./posthint.sh
- 
- : who configured the system
--cf_time=`LC_ALL=C; LANGUAGE=C; export LC_ALL; export LANGUAGE; $date 2>&1`
-+cf_time="1970-01-01"
- case "$cf_by" in
- "")
- 	cf_by=`(logname) 2>/dev/null`
- 	case "$cf_by" in
- 	"")
--		cf_by=`(whoami) 2>/dev/null`
-+		cf_by="pkgsrc"
- 		case "$cf_by" in
- 		"") cf_by=unknown ;;
- 		esac ;;
 @@ -4861,7 +4868,7 @@ esac
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
