@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/04 20:26:46 pin Exp $
+bin/uair
+bin/uairctl
+man/man1/uair.1
+man/man1/uairctl.1
+man/man5/uair.5
+share/examples/uair/uair.toml
