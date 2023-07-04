@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/04 10:55:03 wen Exp $
 
-BLAKE2s (XML-Generator-1.04.tar.gz) = acf1c8fdc1126dd158f3db538fd7ab11bd7611a3df4a0972d70b82ed92a8468c
-SHA512 (XML-Generator-1.04.tar.gz) = ce151a2d575c9ec4cd42819a5d573bfc4985e0daa3945c310d61bb0a6376e4b8a0dcef5ce89e444795d99c9751719d45981675d1418ba6d729d152187688d552
-Size (XML-Generator-1.04.tar.gz) = 24606 bytes
+BLAKE2s (XML-Generator-1.13.tar.gz) = 0a5edc119f35938fc1dc3f25c43b476bedbd51b6e608323eea2bcdac21130433
+SHA512 (XML-Generator-1.13.tar.gz) = ae2b09633a7d9d1bf6cc3ca8c19532585e69534f865e712969cff50d60d1e05589dfbfae6a5ecdb59ef68fbb127431744bf09b0bf91a1c86a9853c596667d248
+Size (XML-Generator-1.13.tar.gz) = 45541 bytes
