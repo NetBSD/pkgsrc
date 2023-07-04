@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/11/21 11:47:35 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/07/04 13:53:59 hauke Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
 emul/linux/etc/init.d/dsmcad
@@ -116,7 +116,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/libgpfs.so
 emul/linux/opt/tivoli/tsm/client/api/bin64/libssl.so.1.0.2
 emul/linux/opt/tivoli/tsm/client/api/bin64/libtsmxerces-c.so.28.0
 emul/linux/opt/tivoli/tsm/client/api/bin64/libtsmxerces-depdom.so.28.0
-emul/linux/opt/tivoli/tsm/client/api/bin64/libxmlutil-8.1.15.0.so
+emul/linux/opt/tivoli/tsm/client/api/bin64/libxmlutil-8.1.17.0.so
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callbuff.c
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callevnt.c
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/callhold.c
@@ -150,7 +150,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/sample/makesmp64.linux86
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/release.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapifp.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapitd.h
-emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.15.swidtag
+emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Spectrum_Protect_API-8.1.17.swidtag
 emul/linux/opt/tivoli/tsm/client/ba/README.htm
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dscjres.txt
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dsmc.hlp
@@ -304,9 +304,9 @@ ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/htt
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpclient-4.5.13.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-4.4.15.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/httpcore-nio-4.4.15.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-annotations-2.13.3.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-core-2.13.3.jar
-${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-databind-2.13.3.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-annotations-2.14.0-rc2.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-core-2.14.0-rc2.jar
+${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/jackson-databind-2.14.0-rc2.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-api-2.17.1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-core-2.17.1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/plugins/vcloudsuite/sdk/log4j-jcl-2.17.1.jar
@@ -347,9 +347,9 @@ emul/linux/opt/tivoli/tsm/client/ba/bin/vmtsmvss/register_app.vbs
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xercesImpl_2_2_1.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xmlParserAPIs_2_2_1.jar
 emul/linux/opt/tivoli/tsm/client/ba/client_message.chg
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag.configured
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.15.swidtag.unconfigured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.17.swidtag
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.17.swidtag.configured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Spectrum_Protect_Client_and_VSS_Requestor-8.1.17.swidtag.unconfigured
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_cs.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_de.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_el.txt
@@ -513,7 +513,7 @@ emul/linux/usr/bin/dsmtrace
 emul/linux/usr/lib64/libApiTSM64.so
 emul/linux/usr/lib64/libtsmxerces-c.so.28
 emul/linux/usr/lib64/libtsmxerces-depdom.so.28
-emul/linux/usr/lib64/libxmlutil-8.1.15.0.so
+emul/linux/usr/lib64/libxmlutil-8.1.17.0.so
 emul/linux/usr/local/ibm/gsk8_64/ReadMe.txt
 emul/linux/usr/local/ibm/gsk8_64/bin/gsk8capicmd_64
 emul/linux/usr/local/ibm/gsk8_64/bin/gsk8ver_64
