@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:16:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/04 12:15:59 wen Exp $
 
-BLAKE2s (Algorithm-Permute-0.16.tar.gz) = 2a353b24590fa0c1958a2a6307f318c25bcadf3621d44c040b6eb7b2e50e99fe
-SHA512 (Algorithm-Permute-0.16.tar.gz) = 1d9748903593d065cc8bc7358a5984c0f6c7e8539a175a87e39f30831103f0be8eb00a1a2ce3a8c83660a19f2a082749d23072d79543cae44601898b263aff14
-Size (Algorithm-Permute-0.16.tar.gz) = 73830 bytes
+BLAKE2s (Algorithm-Permute-0.17.tar.gz) = 5e6bd7a29348dfdf1d6cb2934275c4a44ac057a8e0f4e3b64d6bcb58fa785f92
+SHA512 (Algorithm-Permute-0.17.tar.gz) = eb7aa9003f12371067c398dd3ed7007615c525a936f618ae867594338d6638ed4d4875aa9b86e5fae6fa4f518d46d56f0392f6415c874b3e509e19b32de8f811
+Size (Algorithm-Permute-0.17.tar.gz) = 74165 bytes
