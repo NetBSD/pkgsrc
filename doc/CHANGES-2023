@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4242 2023/07/04 11:08:46 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4243 2023/07/04 11:31:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5916,3 +5916,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 4.6.0 [adam 2023-07-04]
 	Updated textproc/p5-XML-Generator to 1.13 [wen 2023-07-04]
 	Updated textproc/p5-XML-LibXSLT to 2.002001 [wen 2023-07-04]
+	Updated textproc/p5-XML-XPath to 1.48 [wen 2023-07-04]
