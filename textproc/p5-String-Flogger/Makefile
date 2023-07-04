@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/04 03:10:28 wen Exp $
 #
 
-DISTNAME=		String-Flogger-1.101245
+DISTNAME=		String-Flogger-1.101246
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		8
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=String/}
 
