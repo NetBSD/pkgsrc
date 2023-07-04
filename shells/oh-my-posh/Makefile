@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/07/04 01:36:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.38 2023/07/04 15:49:57 pin Exp $
 
 DISTNAME=		oh-my-posh-17.6.0
 CATEGORIES=		shells
@@ -15,6 +15,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_LANGUAGES=		c
 
 INSTALLATION_DIRS=	share/${PKGBASE}
+
+GO_BUILD_PATTERN=	-ldflags="-s -w -X 'github.com/jandedobbeleer/oh-my-posh/src/build.Version=${PKGVERSION_NOREV}'" ./...
 
 post-build:
 	${MV} ${WRKDIR}/.gopath/bin/src ${WRKDIR}/.gopath/bin/oh-my-posh
