@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4254 2023/07/04 17:20:11 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.4255 2023/07/04 19:30:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5929,3 +5929,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/tsm8 to 8.1.17.2 [hauke 2023-07-04]
 	Added meta-pkgs/bulk-test-essential version 20230704 [nia 2023-07-04]
 	Updated sysutils/tsm8 to 8.1.19.0 [hauke 2023-07-04]
+	Updated x11/xterm to 383 [pin 2023-07-04]
