@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/04 01:50:22 wen Exp $
 
-BLAKE2s (Lingua-EN-Syllable-0.30.tar.gz) = 96e7778009ccc6ad0a211f2285447a73fd506b9382170dc7a11c957fc546543b
-SHA512 (Lingua-EN-Syllable-0.30.tar.gz) = 343591fc01eac98d61684b3a3ecdfd57faa7e532ef0c1fa5e2b2878468f34760e66e2b7e7490dac33e2901eb16288a8aad9c854c5fec9988444d3695c97b7cea
-Size (Lingua-EN-Syllable-0.30.tar.gz) = 11523 bytes
+BLAKE2s (Lingua-EN-Syllable-0.31.tar.gz) = d79e132425d3eac174e6b0480bdfa3e7ed1a8d2318840ea3b89e704e962a3cae
+SHA512 (Lingua-EN-Syllable-0.31.tar.gz) = f1185da6afdf965efb0eb3348c843a572f6e02bbf6f4259c78c70ce742af2acc65df6fa8d9165b3c9cab35bcf8c139a3247634deee7b0469fd13d7a20a9b2e03
+Size (Lingua-EN-Syllable-0.31.tar.gz) = 11599 bytes
