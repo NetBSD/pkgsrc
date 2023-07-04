@@ -1,0 +1,5 @@
+Meta-package for testing essential packages.
+
+The failure of this package in a bulk build indicates problems
+that should be investigated immediately before it is made available
+to users.
