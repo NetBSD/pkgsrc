@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:22:54 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/07/04 11:30:35 wen Exp $
 
-BLAKE2s (XML-XPath-1.44.tar.gz) = fcebefcf6148b21f22cfac0350d188f281c0ad423abfcd1619c28a66b006b85a
-SHA512 (XML-XPath-1.44.tar.gz) = 9314523baa55b48b8e684fbf9cc53006ef39829e2bcbd61a432508a96946c50384dff7eba47bd9f54aadc67c12fae6c1219104b017063d23ec3ee350a67eb12e
-Size (XML-XPath-1.44.tar.gz) = 55903 bytes
+BLAKE2s (XML-XPath-1.48.tar.gz) = b07699cd32f0583e115a581394db71bac1f36a928aa9329fc1ee73a6d3f9d601
+SHA512 (XML-XPath-1.48.tar.gz) = c7347dd6e052e0145577ee624da5cef2ee8088ea434351ea2461e0bb3746c114fe571af1bc971333e046feb7dab808c6c84ab385310acbc9e8a9a89025969e48
+Size (XML-XPath-1.48.tar.gz) = 56854 bytes
