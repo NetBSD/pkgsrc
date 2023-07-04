@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/04 02:56:35 wen Exp $
 
-BLAKE2s (Pod-Coverage-TrustPod-0.100005.tar.gz) = 3f4464a93e7d511f8bee65b0994733e26ab37e5c3769a4514d8641b3cdf61721
-SHA512 (Pod-Coverage-TrustPod-0.100005.tar.gz) = d96b75cbaff8ef4860372bca0a78a3ede20bc303760f1edf6fe5287234561e636ae4f54f670014c6dfc14d1a1c667dc2f8e79955bfca58b34235cef4a3437c21
-Size (Pod-Coverage-TrustPod-0.100005.tar.gz) = 17712 bytes
+BLAKE2s (Pod-Coverage-TrustPod-0.100006.tar.gz) = ddac1d8ffce6b4e1b4f000e2a997ec690c805a5039ecd3cef07353f7c109b818
+SHA512 (Pod-Coverage-TrustPod-0.100006.tar.gz) = 5d9521d47a117fb36f2baa1437f708db70e27a8c91492d12b131cc499d2b5117ec0fe8552836dec80ecd1215ca3a987c0f807ebe428d1c80064d7e97c0b82d71
+Size (Pod-Coverage-TrustPod-0.100006.tar.gz) = 18294 bytes
