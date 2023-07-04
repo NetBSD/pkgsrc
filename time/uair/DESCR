@@ -1,0 +1,15 @@
+Minimal pomodoro timer for UNIX-like operating systems. Unlike other timers,
+uair simply prints the remaining time to standard output. Other than making the
+code more maintainable, this design allows uair to be very extensible as it can
+be used in various status bars and even command-line and graphical user
+interfaces.
+
+Features
+- Extensible: Can be used in status bars, desktop widgets, CLIs, GUIs, etc.
+- Keyboard-driven: Uses uairctl command-line utility for pausing/resuming the
+  timer. It can be binded to a keyboard shortcut.
+- Resource-efficient: Uses concurrency instead of spawing multiple threads.
+- Multiple synchronized timers: Multiple synchronized uair timers can co-exist
+  while sharing a single handle
+- Minimal: It adheres to the UNIX philosophy of focusing in doing one thing,
+  and doing it well.
