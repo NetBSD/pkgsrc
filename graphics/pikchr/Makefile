@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/26 09:38:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/04 02:29:15 schmonz Exp $
 
 DISTNAME=		pikchr
-PKGVERSION=		1.0.20211104
-FOSSIL_TAG=		b79ce27929e9cc79
+PKGVERSION=		1.0.20230526
+FOSSIL_TAG=		6d40a5f041311bbe
 PKGNAME=		${DISTNAME}-${PKGVERSION}
 CATEGORIES=		graphics textproc
 MASTER_SITES=		https://pikchr.org/home/tarball/${FOSSIL_TAG}/
