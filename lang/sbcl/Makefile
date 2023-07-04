@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2023/06/06 12:41:46 riastradh Exp $
+# $NetBSD: Makefile,v 1.98 2023/07/04 07:55:56 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-2.3.5
+PKGNAME=		sbcl-2.3.6
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -111,4 +111,5 @@ PLIST_SUBST+=	SUFX64=-64
 PLIST_SUBST+=	SUFX64=
 .endif
 
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
