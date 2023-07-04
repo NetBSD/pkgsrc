@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4248 2023/07/04 12:16:46 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4249 2023/07/04 12:26:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5922,3 +5922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/p5-YAML-Tiny to 1.74 [wen 2023-07-04]
 	Updated devel/p5-Algorithm-CheckDigits to 1.3.6 [wen 2023-07-04]
 	Updated devel/p5-Algorithm-Permute to 0.17 [wen 2023-07-04]
+	Updated devel/p5-Alien-Base-ModuleBuild to 1.17 [wen 2023-07-04]
