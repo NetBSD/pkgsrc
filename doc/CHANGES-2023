@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4253 2023/07/04 16:08:38 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4254 2023/07/04 17:20:11 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5928,3 +5928,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-rope to 1.9.0 [adam 2023-07-04]
 	Updated sysutils/tsm8 to 8.1.17.2 [hauke 2023-07-04]
 	Added meta-pkgs/bulk-test-essential version 20230704 [nia 2023-07-04]
+	Updated sysutils/tsm8 to 8.1.19.0 [hauke 2023-07-04]
