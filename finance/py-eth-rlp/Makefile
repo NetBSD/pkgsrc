@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/11/14 14:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/04 10:25:48 adam Exp $
 
 DISTNAME=	eth-rlp-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-rlp>=0.6.0:../../devel/py-rlp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
