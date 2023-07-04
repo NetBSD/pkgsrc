@@ -1,0 +1,16 @@
+$NetBSD: patch-libmate-panel-applet_Makefile.in,v 1.1 2023/07/04 01:31:23 gutteridge Exp $
+
+Fix build with gettext 0.22.
+https://github.com/mate-desktop/mate-panel/commit/5a7f770082568453f3a5f271a274156f08352101
+
+--- libmate-panel-applet/Makefile.in.orig	2023-05-02 14:46:00.000000000 +0000
++++ libmate-panel-applet/Makefile.in
+@@ -1032,7 +1032,7 @@ mate-panel-applet-enums.h: @REBUILD@ $(m
+ 			--eprod "GType @enum_name@_get_type (void);\n" \
+ 		$(mate_panel_applet_enum_headers) > $@
+ $(noinst_DATA): $(applet_in_files)
+-	$(AM_V_GEN) $(MSGFMT) --desktop --keyword Name --keyword Description --template $< -d $(top_srcdir)/po -o $@
++	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+ 
+ ###############################
+ # Introspection generation
