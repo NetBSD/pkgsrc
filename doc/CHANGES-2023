@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4240 2023/07/04 10:30:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4241 2023/07/04 10:56:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bitarray to 2.7.6 [adam 2023-07-04]
 	Updated finance/py-eth-account to 0.9.0 [adam 2023-07-04]
 	Updated databases/py-redis to 4.6.0 [adam 2023-07-04]
+	Updated textproc/p5-XML-Generator to 1.13 [wen 2023-07-04]
