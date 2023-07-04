@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/04 06:13:04 wen Exp $
 
-BLAKE2s (String-Truncate-1.100602.tar.gz) = b0fdcec3bed1f5c8cbdb0559c1a26751e9ab47b4a3978b195cee20e8791694af
-SHA512 (String-Truncate-1.100602.tar.gz) = 67519f7c4e3b5b7021b71d70468e3b74b0a60b09cf32988bdf0058a10ee4bec80b189ee33f7c2bc67db804d92ceddaac11feb2f39c7f8b941b12f52eee47b90e
-Size (String-Truncate-1.100602.tar.gz) = 16889 bytes
+BLAKE2s (String-Truncate-1.100603.tar.gz) = 12893814c60340232f002efc375d9451fe039166a47d56b6baa625cfd14ecbf5
+SHA512 (String-Truncate-1.100603.tar.gz) = 6a6adeda78f5e649d09b1d9297c1d48566a373569edf34a1c1a5a55af221449d2243909563457836fb2d66b0811203cfb26268dd2fbdf0bb4cee3d37ffcdc0fe
+Size (String-Truncate-1.100603.tar.gz) = 19860 bytes
