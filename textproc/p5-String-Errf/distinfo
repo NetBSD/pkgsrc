@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/04 03:07:37 wen Exp $
 
-BLAKE2s (String-Errf-0.008.tar.gz) = d5fc5a0b617eb39c4772196afb41c4eabd791a3c53aa363bfcb62b0f3bb93d2c
-SHA512 (String-Errf-0.008.tar.gz) = 0684613c932ace4b7ee2f44a73a1bfd90ce195203ffb3da8ec5689d7ed912854490288d8e559cd97ff7af5b8c0486abdb357353c1dee4edbdc4b17ada56b156b
-Size (String-Errf-0.008.tar.gz) = 21477 bytes
+BLAKE2s (String-Errf-0.009.tar.gz) = ac90cbf6003f52491f71671bbe2e8d217e6d7e5622a6ae868689562029a77f4f
+SHA512 (String-Errf-0.009.tar.gz) = 2089e1240e896e1e573a38911965171103b085b99aeacb06e92b59846017c133bee0db71cc39c963e3d63a1e939b5503941fb4efbf83b856d87a0e3a332ba571
+Size (String-Errf-0.009.tar.gz) = 22161 bytes
