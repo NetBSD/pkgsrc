@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/04 03:10:28 wen Exp $
 
-BLAKE2s (String-Flogger-1.101245.tar.gz) = 95a1e3ea9f39bd69a186c27bddc157483945a48f9860f3a570c3bcefdaa80adb
-SHA512 (String-Flogger-1.101245.tar.gz) = 6bd9c413ba1816221278521f6a43d475f4d4748be23034da0340b37e20044afb2d26e03b7529ddac3d98485cc1de69a4b0dcffe75ce61eea1eed7b154ab6e11e
-Size (String-Flogger-1.101245.tar.gz) = 14438 bytes
+BLAKE2s (String-Flogger-1.101246.tar.gz) = 7b473b5b627072275830ecafff68863a05ba37b91da039e3f5a9fd589092020b
+SHA512 (String-Flogger-1.101246.tar.gz) = dcf880833d76a4aa79f18f58ab24144ff6f4ec3a8c0677e57db31c94c280658f13ec6d5ceaf76a53dfdebdc971d451411945ae799c142bec3dbba03da6920bcc
+Size (String-Flogger-1.101246.tar.gz) = 16981 bytes
