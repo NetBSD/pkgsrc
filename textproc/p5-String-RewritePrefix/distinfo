@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:36 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/07/04 03:26:15 wen Exp $
 
-BLAKE2s (String-RewritePrefix-0.008.tar.gz) = 709db4d11553246b62fb13f790ed786e251ad3383fbba23afb67c04606d99fed
-SHA512 (String-RewritePrefix-0.008.tar.gz) = 9aa814c28863453f3e684f96914462bf09d72d909aa41452b08748e6a47a9c1c2aad5b6e56091dae546c62b0d3d9db0b087f8af12c085e86c69ac8e08c610611
-Size (String-RewritePrefix-0.008.tar.gz) = 16528 bytes
+BLAKE2s (String-RewritePrefix-0.009.tar.gz) = b061280732eaf852d30897f50e01db0d40121af2477a8ea70edc680ffe2c2435
+SHA512 (String-RewritePrefix-0.009.tar.gz) = e2498aebb2c9fbb8fe32a8e8aceb29e0e1d514092385b14d72cc5c2c9921dacff4dc7c4ec1e3d0b27e89ebca4cd0226b416c3aa99ca57174d845cec7fceceb8d
+Size (String-RewritePrefix-0.009.tar.gz) = 17175 bytes
