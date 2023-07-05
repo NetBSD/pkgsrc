@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23153 2023/07/04 13:15:58 adam Exp $
+$NetBSD: TODO,v 1.23154 2023/07/05 06:15:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -635,6 +635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o firefox-115
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -888,6 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
+	o libjpeg-turbo-3.0
 	o libkactivities4-5.81.0
 	o liblzo-2.10
 	o libmcs-0.7.2
@@ -1410,7 +1412,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.5
+	o tor-browser-12.5.1
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
