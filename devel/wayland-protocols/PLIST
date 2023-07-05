@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/03 15:30:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/07/05 22:36:44 wiz Exp $
 share/pkgconfig/wayland-protocols.pc
 share/wayland-protocols/stable/presentation-time/presentation-time.xml
 share/wayland-protocols/stable/viewporter/viewporter.xml
 share/wayland-protocols/stable/xdg-shell/xdg-shell.xml
 share/wayland-protocols/staging/content-type/content-type-v1.xml
+share/wayland-protocols/staging/cursor-shape/cursor-shape-v1.xml
 share/wayland-protocols/staging/drm-lease/drm-lease-v1.xml
+share/wayland-protocols/staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml
 share/wayland-protocols/staging/ext-idle-notify/ext-idle-notify-v1.xml
 share/wayland-protocols/staging/ext-session-lock/ext-session-lock-v1.xml
 share/wayland-protocols/staging/fractional-scale/fractional-scale-v1.xml
+share/wayland-protocols/staging/security-context/security-context-v1.xml
 share/wayland-protocols/staging/single-pixel-buffer/single-pixel-buffer-v1.xml
 share/wayland-protocols/staging/tearing-control/tearing-control-v1.xml
 share/wayland-protocols/staging/xdg-activation/xdg-activation-v1.xml
