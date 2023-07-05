@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/07/02 19:25:50 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/05 14:30:18 vins Exp $
 
-DISTNAME=	emwm-utils-src
-PKGVER=		1.1
-PKGNAME=	${DISTNAME:S,-src,,}-${PKGVER}
+DISTNAME=	emwm-utils-src-1.1
+PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	wm x11
-DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -22,13 +21,11 @@ USE_TOOLS+=	gmake
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/examples/${DISTNAME:S,-src,,}
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4755
 SPECIAL_PERMS+=		bin/xmsm ${SETUID_ROOT_PERMS}
-
-WRKSRC=	${WRKDIR}/utils
 
 do-install:
 .for p in xmtoolbox xmsm
@@ -47,7 +44,7 @@ post-install:
 	${DESTDIR}${PREFIX}/lib/X11/app-defaults/${f}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/src/toolboxrc \
-	${DESTDIR}${PREFIX}/share/examples/${DISTNAME:S,-src,,}
+	${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
