@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/06/01 07:55:08 adam Exp $
+$NetBSD: distinfo,v 1.29 2023/07/05 20:33:42 he Exp $
 
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -135,3 +135,5 @@ Size (winapi-util-0.1.5.crate) = 10164 bytes
 BLAKE2s (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 85ecec73b9874f5f443e29d99f93a11889e74ddf5a4bfeb929e2355a7cee32f1
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
+SHA1 (patch-vendor_libc-0.2.144_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c849d09b86efb0ec1950f8c4b6d0e3ee6890bf55
+SHA1 (patch-vendor_libc-0.2.144_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = 03ceeb3121f8d7289ff40b4e207e8b849c8b0c29
