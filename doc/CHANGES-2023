@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4274 2023/07/05 22:03:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4275 2023/07/05 22:07:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5955,3 +5955,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-test_socket version 0.6.0 [wiz 2023-07-05]
 	Updated textproc/py-pdf to 3.12.0 [wiz 2023-07-05]
 	Updated devel/lua-lpeg to 1.1.0 [wiz 2023-07-05]
+	Updated textproc/py-sphinx-autodoc-typehints to 1.23.3 [wiz 2023-07-05]
