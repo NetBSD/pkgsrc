@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/07/04 16:08:17 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/05 15:19:53 nia Exp $
 
-DISTNAME=	bulk-test-essential-20230704
+DISTNAME=	bulk-test-essential-20230705
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,6 +13,12 @@ META_PACKAGE=	yes
 RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+#
+# Essential for binary package usage.
+# Required for parts of the NetBSD installer (sysinst) to function.
+#
+DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 
 #
 # Start out with some popular languages and database engines where
@@ -55,6 +61,27 @@ DEPENDS+=	${GO_PACKAGE_DEP}
 .endif
 
 #
+# Essential client packages.
+# Long history in pkgsrc. Most of these build even on vax.
+#
+DEPENDS+=	emacs-nox11-[0-9]*:../../editors/emacs-nox11
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	mutt-[0-9]*:../../mail/mutt
+DEPENDS+=	nano-[0-9]*:../../editors/nano
+DEPENDS+=	nmap-[0-9]*:../../net/nmap
+DEPENDS+=	rsync-[0-9]*:../../net/rsync
+DEPENDS+=	screen-[0-9]*:../../misc/screen
+DEPENDS+=	vim-[0-9]*:../../editors/vim
+
+#
+# Essential server packages.
+# Long history in pkgsrc. Most of these build even on vax.
+#
+DEPENDS+=	apache24-[0-9]*:../../www/apache24
+DEPENDS+=	dovecot2-[0-9]*:../../mail/dovecot2
+DEPENDS+=	nginx-[0-9]*:../../www/nginx
+
+#
 # Big desktop environment meta-packages.
 # These ones are both popular among NetBSD users and reasonably
 # portable. If they go missing, it also affects downstream
@@ -68,13 +95,16 @@ DEPENDS+=	xfce4-[0-9]*:../../meta-pkgs/xfce4
 .endif
 
 #
-# In the 2020s, on some platforms, a web browser is essential.
+# Essential desktop packages.
+# Important for handling "core" file formats. Long history in pkgsrc.
 #
 
 .if ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "aarch64"
+DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
+DEPENDS+=	libreoffice-[0-9]*:../../misc/libreoffice
 .endif
 
 .include "../../mk/bsd.pkg.mk"
