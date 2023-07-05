@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4026 2023/07/03 21:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4027 2023/07/05 21:07:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3011,6 +3011,7 @@ SUBDIR+=	py-test-watch
 SUBDIR+=	py-test-xdist
 SUBDIR+=	py-test-xprocess
 SUBDIR+=	py-test4
+SUBDIR+=	py-test_socket
 SUBDIR+=	py-testpath
 SUBDIR+=	py-testrepository
 SUBDIR+=	py-testresources
