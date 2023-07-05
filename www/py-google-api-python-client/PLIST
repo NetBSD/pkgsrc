@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/05/30 07:47:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/07/05 22:26:23 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -108,6 +108,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/businessprofileperformanc
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/calendar.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/certificatemanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chat.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/checks.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromemanagement.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromepolicy.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromeuxreport.v1.json
