@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.265.2.1 2023/07/04 15:44:43 bsiegert Exp $
+# $NetBSD: rubyversion.mk,v 1.265.2.2 2023/07/05 11:48:45 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -435,7 +435,7 @@ RUBY_TIMEOUT_VER=		0.2.0
 RUBY_TMPDIR_VER=		0.1.2
 RUBY_TSORT_VER=			0.1.0
 RUBY_UN_VER=			0.2.0
-RUBY_URI_VER=			0.12.1
+RUBY_URI_VER=			0.12.2
 RUBY_WEAKREF_VER=		0.1.1
 RUBY_YAML_VER=			0.2.0
 RUBY_ZLIB_VER=			2.1.1
