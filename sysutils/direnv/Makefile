@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.32 2023/07/05 19:39:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/05 19:40:14 schmonz Exp $
 
-DISTNAME=	direnv-2.32.3
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GITHUB:=direnv/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=		direnv-2.32.3
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_GITHUB:=direnv/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://direnv.net/
-COMMENT=	Environment switcher for the shell
-LICENSE=	mit
+MAINTAINER=		leot@NetBSD.org
+HOMEPAGE=		https://direnv.net/
+COMMENT=		Environment switcher for the shell
+LICENSE=		mit
 
 # Do not build `script/' binaries
 GO_BUILD_PATTERN+=	.
