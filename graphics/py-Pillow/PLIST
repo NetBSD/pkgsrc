@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/04/01 14:30:30 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.21 2023/07/05 20:10:14 wiz Exp $
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -38,9 +32,6 @@ ${PYSITELIB}/PIL/ExifTags.pyo
 ${PYSITELIB}/PIL/FitsImagePlugin.py
 ${PYSITELIB}/PIL/FitsImagePlugin.pyc
 ${PYSITELIB}/PIL/FitsImagePlugin.pyo
-${PYSITELIB}/PIL/FitsStubImagePlugin.py
-${PYSITELIB}/PIL/FitsStubImagePlugin.pyc
-${PYSITELIB}/PIL/FitsStubImagePlugin.pyo
 ${PYSITELIB}/PIL/FliImagePlugin.py
 ${PYSITELIB}/PIL/FliImagePlugin.pyc
 ${PYSITELIB}/PIL/FliImagePlugin.pyo
@@ -297,3 +288,9 @@ ${PYSITELIB}/PIL/_webp.so
 ${PYSITELIB}/PIL/features.py
 ${PYSITELIB}/PIL/features.pyc
 ${PYSITELIB}/PIL/features.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
