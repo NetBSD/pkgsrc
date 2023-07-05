@@ -1,7 +1,10 @@
-# $NetBSD: INSTALL,v 1.1 2020/05/31 15:53:44 kim Exp $
+# $NetBSD: INSTALL,v 1.2 2023/07/05 17:30:23 kim Exp $
+
+# Refresh certificates on existing installations.
+# Output instructions on new installations.
 
 case ${STAGE} in
 POST-INSTALL)
-	@PREFIX@/sbin/update-ca-certificates
+	"${PKG_PREFIX}"/sbin/update-ca-certificates
 	;;
 esac
