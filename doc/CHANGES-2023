@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4262 2023/07/05 15:48:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4263 2023/07/05 19:39:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/fuse-exfat to 1.4.0 [bacon 2023-07-05]
 	Updated graphics/libjpeg-turbo to 3.0.0 [adam 2023-07-05]
 	Updated devel/py-immutabledict to 2.2.5 [adam 2023-07-05]
+	Updated sysutils/direnv to 2.32.3 [schmonz 2023-07-05]
