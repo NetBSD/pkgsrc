@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4281 2023/07/05 22:29:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4282 2023/07/05 22:36:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-google-api-python-client to 2.91.0 [wiz 2023-07-05]
 	Updated devel/re2 to 20230701 [wiz 2023-07-05]
 	Updated devel/py-trio to 0.22.1 [wiz 2023-07-05]
+	Updated devel/wayland-protocols to 1.32 [wiz 2023-07-05]
