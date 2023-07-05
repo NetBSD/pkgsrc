@@ -1,27 +1,27 @@
-$NetBSD: patch-unstable_xdg-output_xdg-output-unstable-v1.xml,v 1.1 2023/01/02 22:17:58 ryoon Exp $
+$NetBSD: patch-unstable_xdg-output_xdg-output-unstable-v1.xml,v 1.2 2023/07/05 22:36:45 wiz Exp $
 
 * Remove 0x97 characters to fix gtk3 under NetBSD/amd64 10.99.2 as of 2022-01-03.
 
---- unstable/xdg-output/xdg-output-unstable-v1.xml.orig	2022-07-07 15:48:25.360891600 +0000
+--- unstable/xdg-output/xdg-output-unstable-v1.xml.orig	2023-07-03 09:26:25.000000000 +0000
 +++ unstable/xdg-output/xdg-output-unstable-v1.xml
-@@ -129,18 +129,18 @@
+@@ -125,18 +125,18 @@
  	may apply a different scale from what is advertised by the output
  	scaling property (to achieve fractional scaling, for example).
  
 -	For example, for a wl_output mode 3840×2160 and a scale factor 2:
 +	For example, for a wl_output mode 3840x2160 and a scale factor 2:
  
- 	- A compositor not scaling the surface buffers will advertise a
--	  logical size of 3840×2160,
-+	  logical size of 3840x2160,
+ 	- A compositor not scaling the monitor viewport in its compositing space
+-	  will advertise a logical size of 3840×2160,
++	  will advertise a logical size of 3840x2160,
  
- 	- A compositor automatically scaling the surface buffers will
+ 	- A compositor scaling the monitor viewport with scale factor 2 will
 -	  advertise a logical size of 1920×1080,
 +	  advertise a logical size of 1920x1080,
  
- 	- A compositor using a fractional scale of 1.5 will advertise a
--	  logical size of 2560×1440.
-+	  logical size of 2560x1440.
+ 	- A compositor scaling the monitor viewport using a fractional scale of
+-	  1.5 will advertise a logical size of 2560×1440.
++	  1.5 will advertise a logical size of 2560x1440.
  
 -	For example, for a wl_output mode 1920×1080 and a 90 degree rotation,
 +	For example, for a wl_output mode 1920x1080 and a 90 degree rotation,
