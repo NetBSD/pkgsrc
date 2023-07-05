@@ -1,16 +1,16 @@
-$NetBSD: patch-sbin_update-ca-certificates,v 1.4 2023/07/05 17:30:24 kim Exp $
+$NetBSD: patch-sbin_update-ca-certificates,v 1.5 2023/07/05 18:13:22 kim Exp $
 
 Add a configuration file for enabling CA certificate management in
 a system directory (such as /etc/openssl on NetBSD).
 
 --- sbin/update-ca-certificates.orig	2021-12-15 18:51:05.000000000 +0000
-+++ sbin/update-ca-certificates	2023-07-05 16:50:18.405110442 +0000
++++ sbin/update-ca-certificates	2023-07-05 18:10:26.326602441 +0000
 @@ -25,12 +25,27 @@
  fresh=0
  default=0
  CERTSCONF=/etc/ca-certificates.conf
 -CERTSDIR=/usr/share/ca-certificates
-+PROGDIR="$(dirname "${0%/*}")"
++PROGDIR="$(dirname "${0}")"
 +CERTSDIR="${PROGDIR}/../share/ca-certificates"
  LOCALCERTSDIR=/usr/local/share/ca-certificates
  CERTBUNDLE=ca-certificates.crt
