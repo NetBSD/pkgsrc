@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/01/16 06:33:51 dholland Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2023/07/05 11:48:45 bsiegert Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
