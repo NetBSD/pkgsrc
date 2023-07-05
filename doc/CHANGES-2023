@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4263 2023/07/05 19:39:46 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.4264 2023/07/05 20:02:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5944,3 +5944,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libjpeg-turbo to 3.0.0 [adam 2023-07-05]
 	Updated devel/py-immutabledict to 2.2.5 [adam 2023-07-05]
 	Updated sysutils/direnv to 2.32.3 [schmonz 2023-07-05]
+	Updated security/p11-kit to 0.25.0 [wiz 2023-07-05]
