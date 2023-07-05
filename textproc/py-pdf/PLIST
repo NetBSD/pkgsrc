@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/28 18:52:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/05 22:02:21 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,8 +34,6 @@ ${PYSITELIB}/pypdf/_protocols.py
 ${PYSITELIB}/pypdf/_protocols.pyc
 ${PYSITELIB}/pypdf/_reader.py
 ${PYSITELIB}/pypdf/_reader.pyc
-${PYSITELIB}/pypdf/_security.py
-${PYSITELIB}/pypdf/_security.pyc
 ${PYSITELIB}/pypdf/_text_extraction/__init__.py
 ${PYSITELIB}/pypdf/_text_extraction/__init__.pyc
 ${PYSITELIB}/pypdf/_utils.py
