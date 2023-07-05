@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4266 2023/07/05 20:13:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4267 2023/07/05 20:28:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5947,3 +5947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p11-kit to 0.25.0 [wiz 2023-07-05]
 	Updated graphics/py-Pillow to 10.0.0 [wiz 2023-07-05]
 	Updated textproc/py-anyascii to 0.3.2 [wiz 2023-07-05]
+	Updated devel/py-anytree to 2.9.0 [wiz 2023-07-05]
