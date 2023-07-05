@@ -1,13 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.1 2022/10/06 00:51:49 perseant Exp $
+$NetBSD: patch-configure.ac,v 1.2 2023/07/05 14:52:53 bacon Exp $
 
-Supply -lutil and -lprop, required for the NetBSD disk size routine.
+# Portability
 
---- configure.ac	2018-09-14 22:03:24.000000000 -0700
-+++ configure.ac	2022-09-27 08:59:46.680435126 -0700
-@@ -38,6 +38,8 @@
-     [Define if block devices are not supported.])
- ], [:])
- PKG_CHECK_MODULES([FUSE], [fuse])
+--- configure.ac.orig	2023-07-05 13:45:39.933803250 +0000
++++ configure.ac
+@@ -47,6 +47,8 @@ case "$host_os" in
+     AC_DEFINE([_DEFAULT_SOURCE], [], [Enable vsyslog().])
+ 	;;
+ esac
 +AC_CHECK_LIB(util, opendisk)
 +AC_CHECK_LIB(prop, prop_dictionary_get_int64)
  AC_CONFIG_HEADERS([libexfat/config.h])
