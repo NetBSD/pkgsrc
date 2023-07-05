@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/07/05 21:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/05 21:59:01 wiz Exp $
 
 DISTNAME=	pytest_socket-0.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest_socket/}
 
