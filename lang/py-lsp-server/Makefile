@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/05 20:58:04 wiz Exp $
 
-DISTNAME=	python-lsp-server-1.7.3
+DISTNAME=	python-lsp-server-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
