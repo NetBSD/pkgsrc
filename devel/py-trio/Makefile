@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/03/29 09:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/05 22:29:29 wiz Exp $
 
-DISTNAME=	trio-0.22.0
+DISTNAME=	trio-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
 TEST_DEPENDS+=	${PYPKGPREFIX}-jedi-[0-9]*:../../editors/py-jedi
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+# recursive dependency, but adding it makes testing just fail differently
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-trio-[0-9]*:../../devel/py-test-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 
 USE_LANGUAGES=	# none
@@ -32,6 +34,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 .endif
 
+# needs 'make install'
+# without py-test-trio
+# 474 failed, 163 passed, 27 skipped, 47 errors
+# with:
+# testing doesn't start
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
