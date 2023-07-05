@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4256 2023/07/04 20:27:56 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4257 2023/07/05 12:07:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5931,3 +5931,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/tsm8 to 8.1.19.0 [hauke 2023-07-04]
 	Updated x11/xterm to 383 [pin 2023-07-04]
 	Added time/uair version 0.6.1 [pin 2023-07-04]
+	Updated graphics/py-objgraph to 3.6.0 [adam 2023-07-05]
+	Updated devel/py-prompt_toolkit to 3.0.39 [adam 2023-07-05]
+	Updated devel/py-types-setuptools to 68.0.0.1 [adam 2023-07-05]
+	Updated devel/py-ipykernel to 6.24.0 [adam 2023-07-05]
