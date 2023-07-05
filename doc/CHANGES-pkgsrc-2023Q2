@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.3 2023/07/03 20:59:32 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.4 2023/07/05 12:04:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -10,4 +10,19 @@ www/ruby-rails70: security fix
 
 Pullup ticket #6773 - requested by gdt
 textproc/py-rapidfuzz: i386 build fix
+
+Pullup ticket #6768 - requested by taca
+lang/ruby30-base: security fix
+
+Pullup ticket #6769 - requested by taca
+lang/ruby31-base: security fix
+
+Pullup ticket #6770 - requested by taca
+lang/ruby32-base: security fix
+
+Pullup ticket #6771 - requested by taca
+www/ruby-actionpack52: security fix (CVE-2023-28362)
+
+Pullup ticket #6772 - requested by taca
+www/ruby-actionpack60: security fix (CVE-2023-28362)
 
