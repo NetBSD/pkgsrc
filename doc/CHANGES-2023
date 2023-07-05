@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4278 2023/07/05 22:19:55 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4279 2023/07/05 22:26:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/p5-Finance-Quote to 1.57 [gutteridge 2023-07-05]
 	Updated print/libpaper to 2.1.1 [wiz 2023-07-05]
 	Updated security/py-cyclonedx-python-lib to 4.0.1 [wiz 2023-07-05]
+	Updated www/py-google-api-python-client to 2.91.0 [wiz 2023-07-05]
