@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/23 07:47:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/05 12:05:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,8 @@ ${PYSITELIB}/pkg_resources-stubs/METADATA.toml
 ${PYSITELIB}/pkg_resources-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/archive_util.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/ccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cmd.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/bdist_rpm.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build.pyi
@@ -20,10 +22,13 @@ ${PYSITELIB}/setuptools-stubs/_distutils/command/register.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/sdist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/upload.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/config.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/errors.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/extension.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/filelist.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/sysconfig.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/util.pyi
 ${PYSITELIB}/setuptools-stubs/archive_util.pyi
 ${PYSITELIB}/setuptools-stubs/build_meta.pyi
 ${PYSITELIB}/setuptools-stubs/command/__init__.pyi
