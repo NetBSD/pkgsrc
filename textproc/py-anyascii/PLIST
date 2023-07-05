@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/12 11:24:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/05 20:13:20 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -256,11 +256,13 @@ ${PYSITELIB}/anyascii/_data/117
 ${PYSITELIB}/anyascii/_data/118
 ${PYSITELIB}/anyascii/_data/119
 ${PYSITELIB}/anyascii/_data/11a
+${PYSITELIB}/anyascii/_data/11b
 ${PYSITELIB}/anyascii/_data/11c
 ${PYSITELIB}/anyascii/_data/11d
 ${PYSITELIB}/anyascii/_data/11e
 ${PYSITELIB}/anyascii/_data/11f
 ${PYSITELIB}/anyascii/_data/124
+${PYSITELIB}/anyascii/_data/12f
 ${PYSITELIB}/anyascii/_data/130
 ${PYSITELIB}/anyascii/_data/131
 ${PYSITELIB}/anyascii/_data/132
@@ -307,6 +309,7 @@ ${PYSITELIB}/anyascii/_data/1b0
 ${PYSITELIB}/anyascii/_data/1b1
 ${PYSITELIB}/anyascii/_data/1b2
 ${PYSITELIB}/anyascii/_data/1bc
+${PYSITELIB}/anyascii/_data/1cf
 ${PYSITELIB}/anyascii/_data/1d0
 ${PYSITELIB}/anyascii/_data/1d1
 ${PYSITELIB}/anyascii/_data/1d2
@@ -315,9 +318,12 @@ ${PYSITELIB}/anyascii/_data/1d4
 ${PYSITELIB}/anyascii/_data/1d5
 ${PYSITELIB}/anyascii/_data/1d6
 ${PYSITELIB}/anyascii/_data/1d7
+${PYSITELIB}/anyascii/_data/1df
 ${PYSITELIB}/anyascii/_data/1e0
 ${PYSITELIB}/anyascii/_data/1e1
 ${PYSITELIB}/anyascii/_data/1e2
+${PYSITELIB}/anyascii/_data/1e4
+${PYSITELIB}/anyascii/_data/1e7
 ${PYSITELIB}/anyascii/_data/1e8
 ${PYSITELIB}/anyascii/_data/1e9
 ${PYSITELIB}/anyascii/_data/1ec
@@ -542,11 +548,11 @@ ${PYSITELIB}/anyascii/_data/2cb
 ${PYSITELIB}/anyascii/_data/2cc
 ${PYSITELIB}/anyascii/_data/2cd
 ${PYSITELIB}/anyascii/_data/2ce
+${PYSITELIB}/anyascii/_data/2cf
 ${PYSITELIB}/anyascii/_data/2d0
 ${PYSITELIB}/anyascii/_data/2d1
 ${PYSITELIB}/anyascii/_data/2d2
 ${PYSITELIB}/anyascii/_data/2d3
-${PYSITELIB}/anyascii/_data/2d4
 ${PYSITELIB}/anyascii/_data/2d5
 ${PYSITELIB}/anyascii/_data/2d6
 ${PYSITELIB}/anyascii/_data/2d7
@@ -592,6 +598,14 @@ ${PYSITELIB}/anyascii/_data/310
 ${PYSITELIB}/anyascii/_data/311
 ${PYSITELIB}/anyascii/_data/312
 ${PYSITELIB}/anyascii/_data/313
+${PYSITELIB}/anyascii/_data/314
+${PYSITELIB}/anyascii/_data/315
+${PYSITELIB}/anyascii/_data/316
+${PYSITELIB}/anyascii/_data/317
+${PYSITELIB}/anyascii/_data/318
+${PYSITELIB}/anyascii/_data/319
+${PYSITELIB}/anyascii/_data/31f
+${PYSITELIB}/anyascii/_data/320
 ${PYSITELIB}/anyascii/_data/__init__.py
 ${PYSITELIB}/anyascii/_data/__init__.pyc
 ${PYSITELIB}/anyascii/_data/__init__.pyo
