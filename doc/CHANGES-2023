@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4259 2023/07/05 12:24:22 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.4260 2023/07/05 12:33:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5938,3 +5938,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated benchmarks/google-benchmark to 1.8.1 [adam 2023-07-05]
 	Updated textproc/cJSON to 1.7.16 [adam 2023-07-05]
 	Updated sysutils/libtpms to 0.9.6 [bsiegert 2023-07-05]
+	Updated devel/py-cython to 0.29.36 [adam 2023-07-05]
+	Updated textproc/py-lxml to 4.9.3 [adam 2023-07-05]
