@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/05/21 16:33:50 kim Exp $
+$NetBSD: distinfo,v 1.10 2023/07/05 17:30:23 kim Exp $
 
 BLAKE2s (ca-certificates_20230311.tar.xz) = 41fb59d81073ce3a758c2fd38f4af420d54b32d367a616198d98a1cad1ec7549
 SHA512 (ca-certificates_20230311.tar.xz) = 00571bdc87897813fd7dbe024f3a186cfc9f0d4f55e92545a90888c9e5282f99cb8d75b5932c034731b911bf27a9b38fd7d062dd511eb1152acf8b2811490fa7
 Size (ca-certificates_20230311.tar.xz) = 257772 bytes
-SHA1 (patch-sbin_update-ca-certificates) = 036c25d5e048451917685e62dfddb81004453146
+SHA1 (patch-sbin_update-ca-certificates) = 0f8e96ac9be00a581eac5138329a087235466d65
