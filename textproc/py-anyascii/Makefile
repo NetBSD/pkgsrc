@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/04/16 07:36:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/05 20:13:20 wiz Exp $
 
-DISTNAME=	anyascii-0.3.0
+DISTNAME=	anyascii-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyascii/}
