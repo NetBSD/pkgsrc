@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:18:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/07/05 20:28:07 wiz Exp $
 
-BLAKE2s (anytree-2.8.0.tar.gz) = 6421a50a9b12dc3222fe07ba431b42c0de97c392abc670ff21da1d6fedb1cbe9
-SHA512 (anytree-2.8.0.tar.gz) = 907fe690965b143b51b61dda837625d882f83268eb25d8e59b63b129681922c76e61616de9c030ef1fb42c23b502942584e99736432393f4c7b5e1dadb8f7eea
-Size (anytree-2.8.0.tar.gz) = 189484 bytes
-SHA1 (patch-setup.py) = b66fbac9e4b242fc8170afa64d5025dc877efab7
+BLAKE2s (anytree-2.9.0.tar.gz) = e7ea2139b1c19402e6cd7fcee25445eb84dd0f7fa4ef627ccd787321c8c00337
+SHA512 (anytree-2.9.0.tar.gz) = 2caa6d88fbeda41cf4df3f1b399f4ed95ee74c32f2766851a4a58504fdfab74e3f01f977772d32723e2f3ab7e363e90d6422b31db95511c07a113442dbf51414
+Size (anytree-2.9.0.tar.gz) = 29226 bytes
