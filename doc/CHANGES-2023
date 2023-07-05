@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4268 2023/07/05 20:35:25 he Exp $
+$NetBSD: CHANGES-2023,v 1.4269 2023/07/05 20:49:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5949,3 +5949,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-anyascii to 0.3.2 [wiz 2023-07-05]
 	Updated devel/py-anytree to 2.9.0 [wiz 2023-07-05]
 	Updated devel/cbindgen to 0.24.6nb1 [he 2023-07-05]
+	Updated devel/py-configargparse to 1.5.5 [wiz 2023-07-05]
