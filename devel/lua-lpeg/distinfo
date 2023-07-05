@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/07/05 22:03:44 wiz Exp $
 
-BLAKE2s (lpeg-1.0.2.tar.gz) = b4c0f1428f69d94753647186bf5c97007f8297897b2c22b787d7b84c22372827
-SHA512 (lpeg-1.0.2.tar.gz) = 110527ddf9f8e5e8a80ef0ae8847c8ba8cd2597dba3bfe2865cba9af60daafbb885f21e74231952f5ab793d021e050b482066a821c6954d52090a5eae77e9814
-Size (lpeg-1.0.2.tar.gz) = 71840 bytes
+BLAKE2s (lpeg-1.1.0.tar.gz) = d3681bbc523cb81bc921bb22ce5a4ccaae8ce593916ba17b573b788b05651e75
+SHA512 (lpeg-1.1.0.tar.gz) = 01b2a4ceb2d110e143603bc63c84a59736ea735dd0ed9866286ba115d41be48d09c9ff21c8e2327974d2296944f6508d50a5c3a18f26ac1d81b8b2fc41f61222
+Size (lpeg-1.1.0.tar.gz) = 78042 bytes
 SHA1 (patch-makefile) = e229f3278a5dde00a4ef6736459caca4deeacea6
