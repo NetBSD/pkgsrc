@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4276 2023/07/05 22:09:51 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4277 2023/07/05 22:14:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5957,3 +5957,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lua-lpeg to 1.1.0 [wiz 2023-07-05]
 	Updated textproc/py-sphinx-autodoc-typehints to 1.23.3 [wiz 2023-07-05]
 	Updated finance/p5-Finance-Quote to 1.57 [gutteridge 2023-07-05]
+	Updated print/libpaper to 2.1.1 [wiz 2023-07-05]
