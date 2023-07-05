@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/07/02 20:01:29 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/05 14:30:18 vins Exp $
 
-DISTNAME=	emwm-src
-PKGVER=		1.1
-PKGNAME=	${DISTNAME:S,-src,,}-${PKGVER}
+DISTNAME=	emwm-src-1.1
+PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	wm
-DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
 
@@ -22,10 +21,8 @@ USE_TOOLS+=	gmake
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/examples/${DISTNAME:S,-src,,}
+INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	lib/X11/app-defaults
-
-WRKSRC=	${WRKDIR}/emwm
 
 pre-install:
 .for f in system.emwmrc
