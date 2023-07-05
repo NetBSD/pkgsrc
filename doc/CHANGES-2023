@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4260 2023/07/05 12:33:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4261 2023/07/05 14:53:03 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5940,3 +5940,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/libtpms to 0.9.6 [bsiegert 2023-07-05]
 	Updated devel/py-cython to 0.29.36 [adam 2023-07-05]
 	Updated textproc/py-lxml to 4.9.3 [adam 2023-07-05]
+	Updated filesystems/fuse-exfat to 1.4.0 [bacon 2023-07-05]
