@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/08/24 09:25:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/05 20:28:07 wiz Exp $
 
-DISTNAME=	anytree-2.8.0
+DISTNAME=	anytree-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anytree/}
 
@@ -11,15 +10,12 @@ HOMEPAGE=	https://github.com/c0fec0de/anytree
 COMMENT=	Powerful and Lightweight Python Tree Data Structure
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYSETUPTESTTARGET=	nosetests
-
-.include "../../lang/python/versioned_dependencies.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
