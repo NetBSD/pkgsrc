@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23171 2023/07/05 22:36:54 wiz Exp $
+$NetBSD: TODO,v 1.23172 2023/07/05 22:39:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -924,7 +924,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-cov-0.15.0
 	o lua-keybinder-0.3.2
 	o lua-language-server-3.6.22
-	o lua-lpeg-1.1.0
 	o lua-sql-mysql-2.4.0
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
@@ -1034,7 +1033,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-4.8
 	o opendnssec-2.1.8
-	o openexr-3.1.9
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openimageio-2.4.6.0
