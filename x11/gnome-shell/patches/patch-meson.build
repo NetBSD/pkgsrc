@@ -1,10 +1,12 @@
-$NetBSD: patch-meson.build,v 1.1 2020/11/10 12:06:59 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2023/07/06 21:45:25 wiz Exp $
 
 Install config files to examples.
 
---- meson.build.orig	2020-10-05 18:36:07.906838400 +0000
+Fix build with polkit-121.
+
+--- meson.build.orig	2021-06-10 11:33:01.644928700 +0000
 +++ meson.build
-@@ -52,7 +52,7 @@ sysconfdir = join_paths(prefix, get_opti
+@@ -53,7 +53,7 @@ sysconfdir = join_paths(prefix, get_opti
  pkgdatadir = join_paths(datadir, meson.project_name())
  pkglibdir = join_paths(libdir, meson.project_name())
  
@@ -13,3 +15,17 @@ Install config files to examples.
  convertdir = join_paths(datadir, 'GConf', 'gsettings')
  desktopdir = join_paths(datadir, 'applications')
  icondir = join_paths(datadir, 'icons')
+@@ -168,6 +168,13 @@ cdata.set('HAVE_FDWALK',
+           cc.has_function('fdwalk')
+ )
+ 
++polkit_has_autocleanup = cc.compiles(
++  '#define POLKIT_AGENT_I_KNOW_API_IS_SUBJECT_TO_CHANGE
++  #include <polkitagent/polkitagent.h>
++  void main(void) { g_autoptr(PolkitAgentListener) agent = NULL; }',
++  dependencies: polkit_dep)
++cdata.set('HAVE_POLKIT_AUTOCLEANUP', polkit_has_autocleanup)
++
+ buildtype = get_option('buildtype')
+ if buildtype != 'plain'
+   all_warnings = [
