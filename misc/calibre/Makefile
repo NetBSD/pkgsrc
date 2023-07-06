@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2023/06/06 12:41:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.286 2023/07/06 14:01:04 abs Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
@@ -47,7 +47,6 @@ TOOL_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
-PYTHON_VERSIONS_INCOMPATIBLE+=	310 311 # as of 5.40.0
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
