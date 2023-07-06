@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/09/11 02:00:59 wen Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/06 09:42:47 wiz Exp $
 
 DISTNAME=	LWP-ConsoleLogger-1.000000
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 

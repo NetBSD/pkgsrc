@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:32:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/06 09:39:16 wiz Exp $
 
 DISTNAME=	Git-CPAN-Patch-2.3.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 

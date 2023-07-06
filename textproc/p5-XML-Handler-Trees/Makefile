@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/06 09:42:02 wiz Exp $
 
 DISTNAME=	XML-Handler-Trees-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

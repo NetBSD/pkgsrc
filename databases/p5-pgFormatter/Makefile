@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/06 09:38:30 wiz Exp $
 
 GITHUB_PROJECT=	pgFormatter
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	pgFormatter-5.2
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases textproc perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darold/}
 

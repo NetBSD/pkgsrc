@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/07/06 09:38:09 wiz Exp $
 
 DISTNAME=	Audio-CD-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	audio perl5
 MASTER_SITES=	http://www.vanhemert.co.uk/files/
 

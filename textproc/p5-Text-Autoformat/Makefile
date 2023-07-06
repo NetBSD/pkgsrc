@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2022/10/10 12:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/06 09:41:49 wiz Exp $
 
 DISTNAME=	Text-Autoformat-1.75
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

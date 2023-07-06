@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2023/07/06 09:41:15 wiz Exp $
 #
 
 DISTNAME=		WebService-Google-Reader-0.23
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WebService/}
 

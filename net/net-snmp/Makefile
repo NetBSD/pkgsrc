@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2022/10/25 19:33:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.141 2023/07/06 09:41:02 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 CATEGORIES=	net
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/06 09:39:57 wiz Exp $
 
 DISTNAME=		Return-MultiLevel-0.08
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/P/PL/PLICEASE/}
 
