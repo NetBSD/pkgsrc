@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
+$NetBSD: patch-Configure,v 1.14 2023/07/06 09:22:14 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -8,16 +8,9 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
 * Several other changes.
 * Add rpath for QNX
 
---- Configure.orig	2021-05-04 06:52:48.000000000 +0000
+--- Configure.orig	2022-12-20 12:11:59.000000000 +0000
 +++ Configure
-@@ -3482,13 +3482,14 @@ EOM
- 			osvers="$3"
- 			;;
- 		dragonfly) osname=dragonfly
--			osvers="$3"
-+			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
- 			;;
- 		dynixptx*) osname=dynixptx
+@@ -3515,7 +3515,8 @@ EOM
  			osvers=`echo "$4"|sed 's/^v//'`
  			;;
  		freebsd) osname=freebsd
@@ -27,20 +20,21 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3513,8 +3514,11 @@ EOM
- 		minix)	osname=minix
+@@ -3537,11 +3538,11 @@ EOM
+ 			;;
+ 		MiNT)	osname=mint
+ 			;;
+-		minix)	osname=minix
++		minix*) osname=minix
  			osvers=`$uname -r`
  			;;
-+		minix*) osname=minix
-+			osvers=`$uname -r`
-+			;;
  		netbsd*) osname=netbsd
 -			osvers="$3"
 +			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3524,7 +3528,7 @@ EOM
+@@ -3551,7 +3552,7 @@ EOM
  			;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -49,7 +43,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  			;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3539,6 +3543,9 @@ EOM
+@@ -3566,6 +3567,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -59,7 +53,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4861,7 +4868,7 @@ esac
+@@ -4943,7 +4947,7 @@ esac
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
  # Note that ccname for clang is also gcc.
@@ -68,7 +62,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
      gcc)
  	realpath=`which realpath 2>/dev/null | sed 's/no realpath in.*//'`
  	$echo 'extern int foo;' > try.c
-@@ -4945,14 +4952,14 @@ case "$plibpth" in
+@@ -5027,14 +5031,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -85,7 +79,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -5068,7 +5075,7 @@ lib_ext=$_a
+@@ -5150,7 +5154,7 @@ lib_ext=$_a
  obj_ext=$_o
  path_sep=$p_
  
@@ -94,7 +88,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -5401,7 +5408,7 @@ default|recommended)
+@@ -5493,7 +5497,7 @@ default|recommended)
  	*-fno-stack-protector*)
  	    echo "Do not add -fstack-protector nor -fstack-protector-strong" 2>&1
  	    ;;
@@ -103,7 +97,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  	   ?*)	set stack-protector-strong -fstack-protector-strong
  		eval $checkccflag
  		case "$dflt" in
-@@ -6384,6 +6391,15 @@ case "$nm_so_opt" in
+@@ -6476,6 +6480,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -119,7 +113,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -7564,7 +7580,9 @@ rp='Pathname for the site-specific libra
+@@ -7656,7 +7669,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -130,7 +124,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -7977,7 +7995,9 @@ case "$vendorprefix" in
+@@ -8069,7 +8084,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -141,7 +135,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8477,6 +8497,7 @@ EOM
+@@ -8569,6 +8586,7 @@ EOM
  			  esac
  			  ;;
  		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
@@ -149,7 +143,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8516,7 +8537,7 @@ EOM
+@@ -8608,7 +8626,7 @@ EOM
  	esac
  	for thisflag in $ldflags; do
  	    case "$thisflag" in
@@ -158,7 +152,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		    case " $dflt " in
  			*" $thisflag "*) ;;
  			*) dflt="$dflt $thisflag" ;;
-@@ -8772,7 +8793,7 @@ if "$useshrplib"; then
+@@ -8864,7 +8882,7 @@ if "$useshrplib"; then
  	freebsd|minix|mirbsd|netbsd|openbsd|interix|dragonfly|bitrig)
  		xxx="-Wl,-R$shrpdir"
  		;;
@@ -167,7 +161,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  		xxx="-Wl,-rpath,$shrpdir"
  		;;
  	hpux*)
-@@ -8782,6 +8803,9 @@ if "$useshrplib"; then
+@@ -8874,6 +8892,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -177,7 +171,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9858,6 +9882,13 @@ esac
+@@ -9948,6 +9969,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -191,7 +185,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20225,7 +20256,15 @@ RCAT(Rei,ser)
+@@ -20573,7 +20601,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
@@ -208,7 +202,7 @@ $NetBSD: patch-Configure,v 1.13 2023/07/04 10:26:29 jperkin Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
-@@ -23062,6 +23101,18 @@ eval $inhdr
+@@ -23519,6 +23555,18 @@ eval $inhdr
  set fenv.h i_fenv
  eval $inhdr
  
