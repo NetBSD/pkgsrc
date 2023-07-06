@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2023/05/05 23:01:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.278 2023/07/06 09:22:14 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -53,6 +53,10 @@ LDFLAGS.QNX+=		-lm
 
 CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 
+# As of 5.38.0
+# Failed 2 tests out of 2610, 99.92% okay.
+#        porting/customized.t
+#        porting/regen.t
 TEST_TARGET=		test
 
 # Policy.sh generation

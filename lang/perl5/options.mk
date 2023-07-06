@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2023/04/25 07:29:47 adam Exp $
+# $NetBSD: options.mk,v 1.19 2023/07/06 09:22:14 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
