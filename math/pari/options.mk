@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: options.mk,v 1.16 2023/07/06 13:05:26 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -43,6 +43,4 @@ CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 .include "../../x11/fltk13/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--graphic=none
-# don't let the configure script find an installed fltk
-CONFIGURE_ARGS+=	--with-fltk={BUILDLINK_DIR:Q}/nonexistent
 .endif
