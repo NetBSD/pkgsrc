@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2023/06/06 10:40:25 adam Exp $
+# $NetBSD: Makefile,v 1.186 2023/07/06 12:06:46 jperkin Exp $
 
 DISTNAME=	gtk+-3.24.38
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -26,6 +26,8 @@ MESON_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MESON_ARGS+=	--sysconfdir=${PREFIX}/libdata
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
+
+MAKE_ENV.Darwin+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk:${WRKSRC}/output/gtk
 
 # There is no logic in gettext.mk to detect the native version of xgettext,
 # and we do need it to be compiled with Glade support.
