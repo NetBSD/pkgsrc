@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4286 2023/07/06 09:45:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4287 2023/07/06 10:09:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5968,3 +5968,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpcore to 0.17.3 [adam 2023-07-06]
 	Updated lang/perl5 to 5.38.0 [wiz 2023-07-06]
 	Updated graphics/ImageMagick to 7.1.1.12 [wiz 2023-07-06]
+	Updated lang/nodejs to 20.4.0 [adam 2023-07-06]
+	Updated lang/py-mypy to 1.4.1 [adam 2023-07-06]
