@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.27 2023/04/25 07:29:47 adam Exp $
+# $NetBSD: hacks.mk,v 1.28 2023/07/06 09:22:14 wiz Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
