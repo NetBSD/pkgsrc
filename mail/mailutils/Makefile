@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:10:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/06 17:59:38 vins Exp $
 
-DISTNAME=	mailutils-3.15
-PKGREVISION=	1
+DISTNAME=	mailutils-3.16
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/mailutils/
 
@@ -17,12 +16,6 @@ USE_TOOLS+=	gmake yacc
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 INFO_FILES=	yes
-
-SUBST_CLASSES+=		iconv
-SUBST_STAGE.iconv=	pre-configure
-SUBST_MESSAGE.iconv=	Do not require lib/charset.alias.
-SUBST_FILES.iconv+=	lib/gnu/Makefile.in
-SUBST_SED.iconv=	-e '/need_charset_alias=/s|true|false|'
 
 .include "../../mk/bsd.fast.prefs.mk"
 
