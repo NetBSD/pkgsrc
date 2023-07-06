@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/06 09:39:18 wiz Exp $
 #
 
 DISTNAME=	Hash-FieldHash-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Hash/}
 

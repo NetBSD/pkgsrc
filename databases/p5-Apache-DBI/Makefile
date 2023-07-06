@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2022/06/28 11:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/06 09:38:18 wiz Exp $
 
 DISTNAME=	Apache-DBI-1.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 

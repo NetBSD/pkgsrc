@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/08/14 16:52:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/06 09:42:58 wiz Exp $
 
 DISTNAME=	URI-db-0.20
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=URI/}
 

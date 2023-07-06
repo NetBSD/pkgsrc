@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/07/06 09:38:18 wiz Exp $
 #
 
 DISTNAME=		txt2html-2.51
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		converters www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=txt2html/}
 

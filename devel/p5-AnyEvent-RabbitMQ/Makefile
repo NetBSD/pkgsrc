@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/06 09:38:35 wiz Exp $
 
 DISTNAME=	AnyEvent-RabbitMQ-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DL/DLAMBLEY/}
 

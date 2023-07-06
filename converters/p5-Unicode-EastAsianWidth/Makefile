@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/06 09:38:16 wiz Exp $
 
 DISTNAME=	Unicode-EastAsianWidth-12.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 

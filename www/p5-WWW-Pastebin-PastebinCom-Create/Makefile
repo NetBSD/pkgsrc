@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/06/06 12:42:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/06 09:43:00 wiz Exp $
 
 DISTNAME=	WWW-Pastebin-PastebinCom-Create-1.003
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
