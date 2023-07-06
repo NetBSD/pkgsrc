@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.128 2023/05/28 09:38:37 bsiegert Exp $
+# $NetBSD: Darwin.mk,v 1.129 2023/07/06 19:35:37 bacon Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -99,28 +99,6 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 .endif
 
 #
-# From Xcode 5 onwards system headers are no longer installed by default
-# into /usr/include, so we need to query their location if /usr/include is
-# not available.
-#
-# Apple do not always keep the SDK version in step with the OS version.  When
-# that happens add a mapping below, but only within the same OS release major.
-#
-OSX_SDK_MAP.11.2=	11.1
-OSX_SDK_MAP.11.4=	11.3
-OSX_SDK_MAP.11.5=	11.3
-OSX_SDK_MAP.11.6=	11.3
-OSX_SDK_MAP.11.7=	12.1
-OSX_SDK_MAP.12.2=	12.1
-OSX_SDK_MAP.12.4=	12.3
-OSX_SDK_MAP.12.5=	12.3
-OSX_SDK_MAP.12.6=	12.3
-OSX_SDK_MAP.13.0=	13.0
-OSX_SDK_MAP.13.1=	13.1
-OSX_SDK_MAP.13.2=	13.1
-OSX_SDK_MAP.13.3=	13.3
-OSX_SDK_MAP.13.4=	13.3
-#
 # If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap time) to
 # select a specific SDK then we prefer that.
 #
@@ -140,13 +118,7 @@ _WRAP_EXTRA_ARGS.CXX+=	-isysroot ${OSX_SDK_PATH}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 .elif exists(/usr/bin/xcrun)
 .  if !defined(OSX_SDK_PATH)
-OSX_SDK_PATH!=	/usr/bin/xcrun \
-		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
-		    --show-sdk-path 2>/dev/null || echo /nonexistent
-OSX_TOLERATE_SDK_SKEW?=	no
-.    if ${OSX_SDK_PATH} == "/nonexistent" && !empty(OSX_TOLERATE_SDK_SKEW:M[Yy][Ee][Ss])
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx --show-sdk-path 2>/dev/null || echo /nonexistent
-.    endif
 MAKEFLAGS+=	OSX_SDK_PATH=${OSX_SDK_PATH:Q}
 .  endif
 .  if exists(${OSX_SDK_PATH}/usr/include/stdio.h)
