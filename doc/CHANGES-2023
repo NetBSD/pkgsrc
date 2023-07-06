@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4285 2023/07/06 09:22:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4286 2023/07/06 09:45:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5967,3 +5967,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-google-api-python-client to 2.92.0 [adam 2023-07-06]
 	Updated www/py-httpcore to 0.17.3 [adam 2023-07-06]
 	Updated lang/perl5 to 5.38.0 [wiz 2023-07-06]
+	Updated graphics/ImageMagick to 7.1.1.12 [wiz 2023-07-06]
