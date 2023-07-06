@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/06/03 13:22:43 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/07/06 12:22:14 jperkin Exp $
 # used by lang/gcc12-libjit/Makefile
 
 GCC_PKGNAME=		gcc12
@@ -54,8 +54,8 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-12.2.0-arm.diff
-PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/1d184289/gcc/
+PATCHFILES=		gcc-12.3.0.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/f1188b90/gcc/
 PATCH_DIST_STRIP=	-p1
 .endif
 
