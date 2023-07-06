@@ -1,0 +1,704 @@
+$NetBSD: patch-exiv2-0.28-upstream.diff,v 1.1 2023/07/06 23:20:19 mrg Exp $
+
+Upstream patch to fix exiv2 0.28 issues, commit 68c21bba5f73ea6abfdf031139ed085251ef660d.
+
+diff --git src/kexiv2.cpp b/src/kexiv2.cpp
+index 29149b5..ebe2035 100644
+--- src/kexiv2.cpp
++++ src/kexiv2.cpp
+@@ -207,7 +207,11 @@ bool KExiv2::loadFromData(const QByteArray& imgData) const
+ 
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image = Exiv2::ImageFactory::open((Exiv2::byte*)imgData.data(), imgData.size());
++#else
+         Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((Exiv2::byte*)imgData.data(), imgData.size());
++#endif
+ 
+         d->filePath.clear();
+         image->readMetadata();
+@@ -263,7 +267,11 @@ bool KExiv2::load(const QString& filePath) const
+ 
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image;
++#else
+         Exiv2::Image::AutoPtr image;
++#endif
+ 
+         image        = Exiv2::ImageFactory::open((const char*)(QFile::encodeName(filePath)).constData());
+ 
+@@ -312,7 +320,11 @@ bool KExiv2::load(const QString& filePath) const
+             QString xmpSidecarPath = sidecarFilePathForFile(filePath);
+             QFileInfo xmpSidecarFileInfo(xmpSidecarPath);
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Image::UniquePtr xmpsidecar;
++#else
+             Exiv2::Image::AutoPtr xmpsidecar;
++#endif
+ 
+             if (xmpSidecarFileInfo.exists() && xmpSidecarFileInfo.isReadable())
+             {
+@@ -321,7 +333,11 @@ bool KExiv2::load(const QString& filePath) const
+                 xmpsidecar->readMetadata();
+ 
+                 // Merge
++#if EXIV2_TEST_VERSION(0,28,0)
++                d->loadSidecarData(std::move(xmpsidecar));
++#else
+                 d->loadSidecarData(xmpsidecar);
++#endif
+                 hasLoaded = true;
+             }
+         }
+diff --git src/kexiv2_p.cpp b/src/kexiv2_p.cpp
+index 039fb10..93c08a3 100644
+--- src/kexiv2_p.cpp
++++ src/kexiv2_p.cpp
+@@ -76,9 +76,17 @@ bool KExiv2Private::saveToXMPSidecar(const QFileInfo& finfo) const
+ 
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image;
++#else
+         Exiv2::Image::AutoPtr image;
++#endif
+         image = Exiv2::ImageFactory::create(Exiv2::ImageType::xmp, (const char*)(QFile::encodeName(filePath).constData()));
++#if EXIV2_TEST_VERSION(0,28,0)
++        return saveOperations(finfo, std::move(image));
++#else
+         return saveOperations(finfo, image);
++#endif
+     }
+     catch( Exiv2::Error& e )
+     {
+@@ -155,9 +163,17 @@ bool KExiv2Private::saveToFile(const QFileInfo& finfo) const
+ 
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image;
++#else
+         Exiv2::Image::AutoPtr image;
++#endif
+         image = Exiv2::ImageFactory::open((const char*)(QFile::encodeName(finfo.filePath()).constData()));
++#if EXIV2_TEST_VERSION(0,28,0)
++        return saveOperations(finfo, std::move(image));
++#else
+         return saveOperations(finfo, image);
++#endif
+     }
+     catch( Exiv2::Error& e )
+     {
+@@ -171,7 +187,11 @@ bool KExiv2Private::saveToFile(const QFileInfo& finfo) const
+     }
+ }
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++bool KExiv2Private::saveOperations(const QFileInfo& finfo, Exiv2::Image::UniquePtr image) const
++#else
+ bool KExiv2Private::saveOperations(const QFileInfo& finfo, Exiv2::Image::AutoPtr image) const
++#endif
+ {
+     try
+     {
+@@ -345,7 +365,12 @@ void KExiv2Private::printExiv2ExceptionError(const QString& msg, Exiv2::Error& e
+ {
+     std::string s(e.what());
+     qCCritical(LIBKEXIV2_LOG) << msg.toLatin1().constData() << " (Error #"
+-                              << e.code() << ": " << s.c_str();
++#if EXIV2_TEST_VERSION(0,28,0)
++                              << Exiv2::Error(e.code()).what()
++#else
++                              << e.code() << ": " << s.c_str()
++#endif
++                              << ")";
+ }
+ 
+ void KExiv2Private::printExiv2MessageHandler(int lvl, const char* msg)
+@@ -599,7 +624,11 @@ int KExiv2Private::getXMPTagsListFromPrefix(const QString& pf, KExiv2::TagsMap&
+ }
+ 
+ #ifdef _XMP_SUPPORT_
++#if EXIV2_TEST_VERSION(0,28,0)
++void KExiv2Private::loadSidecarData(Exiv2::Image::UniquePtr xmpsidecar)
++#else
+ void KExiv2Private::loadSidecarData(Exiv2::Image::AutoPtr xmpsidecar)
++#endif
+ {
+     // Having a sidecar is a special situation.
+     // The sidecar data often "dominates", see in particular bug 309058 for important aspects:
+diff --git src/kexiv2_p.h b/src/kexiv2_p.h
+index 7d6028d..4d110fc 100644
+--- src/kexiv2_p.h
++++ src/kexiv2_p.h
+@@ -94,7 +94,11 @@ class KExiv2Private
+ 
+     bool saveToXMPSidecar(const QFileInfo& finfo)                            const;
+     bool saveToFile(const QFileInfo& finfo)                                  const;
++#if EXIV2_TEST_VERSION(0,28,0)
++    bool saveOperations(const QFileInfo& finfo, Exiv2::Image::UniquePtr image) const;
++#else
+     bool saveOperations(const QFileInfo& finfo, Exiv2::Image::AutoPtr image) const;
++#endif
+ 
+     /** Wrapper method to convert a Comments content to a QString.
+      */
+@@ -125,8 +129,12 @@ class KExiv2Private
+ #ifdef _XMP_SUPPORT_
+     Exiv2::XmpData&        xmpMetadata()         { return data.data()->xmpMetadata;        }
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++    void loadSidecarData(Exiv2::Image::UniquePtr xmpsidecar);
++#else
+     void loadSidecarData(Exiv2::Image::AutoPtr xmpsidecar);
+ #endif
++#endif
+ 
+ public:
+ 
+diff --git src/kexiv2comments.cpp b/src/kexiv2comments.cpp
+index 3f71981..d73e44a 100644
+--- src/kexiv2comments.cpp
++++ src/kexiv2comments.cpp
+@@ -18,7 +18,12 @@ bool KExiv2::canWriteComment(const QString& filePath)
+ {
+     try
+     {
+-        Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((const char*)
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image
++#else
++        Exiv2::Image::AutoPtr image
++#endif
++                                    = Exiv2::ImageFactory::open((const char*)
+                                       (QFile::encodeName(filePath).constData()));
+ 
+         Exiv2::AccessMode mode = image->checkMode(Exiv2::mdComment);
+@@ -28,7 +33,12 @@ bool KExiv2::canWriteComment(const QString& filePath)
+     {
+         std::string s(e.what());
+         qCCritical(LIBKEXIV2_LOG) << "Cannot check Comment access mode using Exiv2 (Error #"
+-                                  << e.code() << ": " << s.c_str() << ")";
++#if EXIV2_TEST_VERSION(0,28,0)
++                                  << Exiv2::Error(e.code()).what()
++#else
++                                  << e.code() << ": " << s.c_str()
++#endif
++                                  << ")";
+     }
+     catch(...)
+     {
+diff --git src/kexiv2exif.cpp b/src/kexiv2exif.cpp
+index 319d317..affca29 100644
+--- src/kexiv2exif.cpp
++++ src/kexiv2exif.cpp
+@@ -28,7 +28,12 @@ bool KExiv2::canWriteExif(const QString& filePath)
+ {
+     try
+     {
+-        Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((const char*)
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image =
++#else
++        Exiv2::Image::AutoPtr image =
++#endif
++                                      Exiv2::ImageFactory::open((const char*)
+                                       (QFile::encodeName(filePath).constData()));
+ 
+         Exiv2::AccessMode mode = image->checkMode(Exiv2::mdExif);
+@@ -39,7 +44,12 @@ bool KExiv2::canWriteExif(const QString& filePath)
+     {
+         std::string s(e.what());
+         qCCritical(LIBKEXIV2_LOG) << "Cannot check Exif access mode using Exiv2 (Error #"
+-                    << e.code() << ": " << s.c_str() << ")";
++#if EXIV2_TEST_VERSION(0,28,0)
++                    << Exiv2::Error(e.code()).what()
++#else
++                    << e.code() << ": " << s.c_str()
++#endif
++                    << ")";
+     }
+     catch(...)
+     {
+@@ -658,7 +668,11 @@ bool KExiv2::getExifTagLong(const char* exifTagName, long& val, int component) c
+ 
+         if (it != exifData.end() && it->count() > 0)
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            val = it->toUint32(component);
++#else
+             val = it->toLong(component);
++#endif
+             return true;
+         }
+     }
+@@ -722,7 +736,11 @@ QVariant KExiv2::getExifTagVariant(const char* exifTagName, bool rationalAsListO
+                 case Exiv2::signedShort:
+                 case Exiv2::signedLong:
+                     if (it->count() > component)
++#if EXIV2_TEST_VERSION(0,28,0)
++                        return QVariant((int)it->toUint32(component));
++#else
+                         return QVariant((int)it->toLong(component));
++#endif
+                     else
+                         return QVariant(QVariant::Int);
+                 case Exiv2::unsignedRational:
+@@ -854,7 +872,11 @@ QImage KExiv2::getExifThumbnail(bool fixOrientation) const
+     {
+         Exiv2::ExifThumbC thumb(d->exifMetadata());
+         Exiv2::DataBuf const c1 = thumb.copy();
++#if EXIV2_TEST_VERSION(0,28,0)
++        thumbnail.loadFromData(c1.c_data(), c1.size());
++#else
+         thumbnail.loadFromData(c1.pData_, c1.size_);
++#endif
+ 
+         if (!thumbnail.isNull())
+         {
+@@ -870,7 +892,11 @@ QImage KExiv2::getExifThumbnail(bool fixOrientation) const
+ 
+                 if (it != exifData.end() && it->count())
+                 {
++#if EXIV2_TEST_VERSION(0,28,0)
++                    long orientation = it->toUint32();
++#else
+                     long orientation = it->toLong();
++#endif
+                     qCDebug(LIBKEXIV2_LOG) << "Exif Thumbnail Orientation: " << (int)orientation;
+                     rotateExifQImage(thumbnail, (ImageOrientation)orientation);
+                 }
+@@ -948,9 +974,15 @@ bool KExiv2::setTiffThumbnail(const QImage& thumbImage, bool setProgramName) con
+         // Make sure IFD0 is explicitly marked as a main image
+         Exiv2::ExifData::const_iterator pos = d->exifMetadata().findKey(Exiv2::ExifKey("Exif.Image.NewSubfileType"));
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++        if (pos == d->exifMetadata().end() || pos->count() != 1 || pos->toUint32() != 0)
++#else
+         if (pos == d->exifMetadata().end() || pos->count() != 1 || pos->toLong() != 0)
++#endif
+         {
+-#if EXIV2_TEST_VERSION(0,27,0)
++#if EXIV2_TEST_VERSION(0,28,0)
++            throw Exiv2::Error(Exiv2::ErrorCode::kerErrorMessage, "Exif.Image.NewSubfileType missing or not set as main image");
++#elif EXIV2_TEST_VERSION(0,27,0)
+             throw Exiv2::Error(Exiv2::kerErrorMessage, "Exif.Image.NewSubfileType missing or not set as main image");
+ #else
+             throw Exiv2::Error(1, "Exif.Image.NewSubfileType missing or not set as main image");
+@@ -979,9 +1011,17 @@ bool KExiv2::setTiffThumbnail(const QImage& thumbImage, bool setProgramName) con
+             Exiv2::DataBuf buf((Exiv2::byte *)data.data(), data.size());
+             Exiv2::ULongValue val;
+             val.read("0");
++#if EXIV2_TEST_VERSION(0,28,0)
++            val.setDataArea(buf.c_data(), buf.size());
++#else
+             val.setDataArea(buf.pData_, buf.size_);
++#endif
+             d->exifMetadata()["Exif.SubImage1.JPEGInterchangeFormat"]       = val;
++#if EXIV2_TEST_VERSION(0,28,0)
++            d->exifMetadata()["Exif.SubImage1.JPEGInterchangeFormatLength"] = uint32_t(buf.size());
++#else
+             d->exifMetadata()["Exif.SubImage1.JPEGInterchangeFormatLength"] = uint32_t(buf.size_);
++#endif
+             d->exifMetadata()["Exif.SubImage1.Compression"]                 = uint16_t(6); // JPEG (old-style)
+             d->exifMetadata()["Exif.SubImage1.NewSubfileType"]              = uint32_t(1); // Thumbnail image
+             return true;
+diff --git src/kexiv2gps.cpp b/src/kexiv2gps.cpp
+index 857e6a2..3873fc1 100644
+--- src/kexiv2gps.cpp
++++ src/kexiv2gps.cpp
+@@ -325,7 +325,11 @@ bool KExiv2::initializeGPSInfo(const bool setProgramName)
+         // Do all the easy constant ones first.
+         // GPSVersionID tag: standard says is should be four bytes: 02 00 00 00
+         // (and, must be present).
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Value::UniquePtr value = Exiv2::Value::create(Exiv2::unsignedByte);
++#else
+         Exiv2::Value::AutoPtr value = Exiv2::Value::create(Exiv2::unsignedByte);
++#endif
+         value->read("2 0 0 0");
+         d->exifMetadata().add(Exiv2::ExifKey("Exif.GPSInfo.GPSVersionID"), value.get());
+ 
+@@ -380,7 +384,11 @@ bool KExiv2::setGPSInfo(const double* const altitude, const double latitude, con
+         if (altitude)
+         {
+             // Altitude reference: byte "00" meaning "above sea level", "01" mening "behing sea level".
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr value = Exiv2::Value::create(Exiv2::unsignedByte);
++#else
+             Exiv2::Value::AutoPtr value = Exiv2::Value::create(Exiv2::unsignedByte);
++#endif
+ 
+             if ((*altitude) >= 0) value->read("0");
+             else               value->read("1");
+diff --git src/kexiv2image.cpp b/src/kexiv2image.cpp
+index a15edef..a857671 100644
+--- src/kexiv2image.cpp
++++ src/kexiv2image.cpp
+@@ -94,13 +94,21 @@ QSize KExiv2::getImageDimensions() const
+         Exiv2::ExifData::iterator it = exifData.findKey(key);
+ 
+         if (it != exifData.end() && it->count())
++#if EXIV2_TEST_VERSION(0,28,0)
++            width = it->toUint32();
++#else
+             width = it->toLong();
++#endif
+ 
+         Exiv2::ExifKey key2("Exif.Photo.PixelYDimension");
+         Exiv2::ExifData::iterator it2 = exifData.findKey(key2);
+ 
+         if (it2 != exifData.end() && it2->count())
++#if EXIV2_TEST_VERSION(0,28,0)
++            height = it2->toUint32();
++#else
+             height = it2->toLong();
++#endif
+ 
+         if (width != -1 && height != -1)
+             return QSize(width, height);
+@@ -114,13 +122,21 @@ QSize KExiv2::getImageDimensions() const
+         Exiv2::ExifData::iterator it3 = exifData.findKey(key3);
+ 
+         if (it3 != exifData.end() && it3->count())
++#if EXIV2_TEST_VERSION(0,28,0)
++            width = it3->toUint32();
++#else
+             width = it3->toLong();
++#endif
+ 
+         Exiv2::ExifKey key4("Exif.Image.ImageLength");
+         Exiv2::ExifData::iterator it4 = exifData.findKey(key4);
+ 
+         if (it4 != exifData.end() && it4->count())
++#if EXIV2_TEST_VERSION(0,28,0)
++            height = it4->toUint32();
++#else
+             height = it4->toLong();
++#endif
+ 
+         if (width != -1 && height != -1)
+             return QSize(width, height);
+@@ -261,7 +277,11 @@ KExiv2::ImageOrientation KExiv2::getImageOrientation() const
+ 
+         if (it != exifData.end() && it->count())
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            orientation = it->toUint32();
++#else
+             orientation = it->toLong();
++#endif
+             qCDebug(LIBKEXIV2_LOG) << "Orientation => Exif.MinoltaCs7D.Rotation => " << (int)orientation;
+ 
+             switch(orientation)
+@@ -282,7 +302,11 @@ KExiv2::ImageOrientation KExiv2::getImageOrientation() const
+ 
+         if (it != exifData.end() && it->count())
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            orientation = it->toUint32();
++#else
+             orientation = it->toLong();
++#endif
+             qCDebug(LIBKEXIV2_LOG) << "Orientation => Exif.MinoltaCs5D.Rotation => " << (int)orientation;
+ 
+             switch(orientation)
+@@ -305,7 +329,11 @@ KExiv2::ImageOrientation KExiv2::getImageOrientation() const
+ 
+         if (it != exifData.end() && it->count())
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            orientation = it->toUint32();
++#else
+             orientation = it->toLong();
++#endif
+             qCDebug(LIBKEXIV2_LOG) << "Orientation => Exif.Image.Orientation => " << (int)orientation;
+             return (ImageOrientation)orientation;
+         }
+@@ -381,7 +409,11 @@ bool KExiv2::setImageOrientation(ImageOrientation orientation, bool setProgramNa
+ 
+         if (it != d->exifMetadata().end() && it->count())
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            RotationMatrix operation((KExiv2Iface::KExiv2::ImageOrientation)it->toUint32());
++#else
+             RotationMatrix operation((KExiv2Iface::KExiv2::ImageOrientation)it->toLong());
++#endif
+             operation *= orientation;
+             (*it) = static_cast<uint16_t>(operation.exifOrientation());
+         }
+@@ -849,7 +881,11 @@ bool KExiv2::setImageDateTime(const QDateTime& dateTime, bool setDateTimeDigitiz
+ 
+         const std::string &xmpdatetime(dateTime.toString(Qt::ISODate).toLatin1().constData());
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Value::UniquePtr xmpTxtVal = Exiv2::Value::create(Exiv2::xmpText);
++#else
+         Exiv2::Value::AutoPtr xmpTxtVal = Exiv2::Value::create(Exiv2::xmpText);
++#endif
+         xmpTxtVal->read(xmpdatetime);
+         d->xmpMetadata().add(Exiv2::XmpKey("Xmp.exif.DateTimeOriginal"),  xmpTxtVal.get());
+         d->xmpMetadata().add(Exiv2::XmpKey("Xmp.photoshop.DateCreated"),  xmpTxtVal.get());
+diff --git src/kexiv2iptc.cpp b/src/kexiv2iptc.cpp
+index cb8afa1..ee4d6db 100644
+--- src/kexiv2iptc.cpp
++++ src/kexiv2iptc.cpp
+@@ -18,7 +18,12 @@ bool KExiv2::canWriteIptc(const QString& filePath)
+ {
+     try
+     {
+-        Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((const char*)
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image = 
++#else
++        Exiv2::Image::AutoPtr image = 
++#endif
++                                      Exiv2::ImageFactory::open((const char*)
+                                       (QFile::encodeName(filePath).constData()));
+ 
+         Exiv2::AccessMode mode = image->checkMode(Exiv2::mdIptc);
+@@ -28,7 +33,12 @@ bool KExiv2::canWriteIptc(const QString& filePath)
+     {
+         std::string s(e.what());
+         qCCritical(LIBKEXIV2_LOG) << "Cannot check Iptc access mode using Exiv2 (Error #"
+-                                  << e.code() << ": " << s.c_str() << ")";
++#if EXIV2_TEST_VERSION(0,28,0)
++                                  << Exiv2::Error(e.code()).what()
++#else
++                                  << e.code() << ": " << s.c_str()
++#endif
++                                  << ")";
+     }
+     catch(...)
+     {
+@@ -80,7 +90,11 @@ QByteArray KExiv2::getIptc(bool addIrbHeader) const
+                 c2 = Exiv2::IptcParser::encode(d->iptcMetadata());
+             }
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            QByteArray data((const char*)c2.c_data(), c2.size());
++#else
+             QByteArray data((const char*)c2.pData_, c2.size_);
++#endif
+             return data;
+ 
+         }
+@@ -510,7 +524,11 @@ bool KExiv2::setIptcTagsStringList(const char* iptcTagName, int maxSize,
+             QString key = *it;
+             key.truncate(maxSize);
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr val = Exiv2::Value::create(Exiv2::string);
++#else
+             Exiv2::Value::AutoPtr val = Exiv2::Value::create(Exiv2::string);
++#endif
+             val->read(key.toUtf8().constData());
+             iptcData.add(iptcTag, val.get());
+         }
+@@ -611,7 +629,11 @@ bool KExiv2::setIptcKeywords(const QStringList& oldKeywords, const QStringList&
+             QString key = *it;
+             key.truncate(64);
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr val = Exiv2::Value::create(Exiv2::string);
++#else
+             Exiv2::Value::AutoPtr val = Exiv2::Value::create(Exiv2::string);
++#endif
+             val->read(key.toUtf8().constData());
+             iptcData.add(iptcTag, val.get());
+         }
+@@ -705,7 +727,11 @@ bool KExiv2::setIptcSubjects(const QStringList& oldSubjects, const QStringList&
+             QString key = *it;
+             key.truncate(236);
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr val = Exiv2::Value::create(Exiv2::string);
++#else
+             Exiv2::Value::AutoPtr val = Exiv2::Value::create(Exiv2::string);
++#endif
+             val->read(key.toUtf8().constData());
+             iptcData.add(iptcTag, val.get());
+         }
+@@ -800,7 +826,11 @@ bool KExiv2::setIptcSubCategories(const QStringList& oldSubCategories, const QSt
+             QString key = *it;
+             key.truncate(32);
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr val = Exiv2::Value::create(Exiv2::string);
++#else
+             Exiv2::Value::AutoPtr val = Exiv2::Value::create(Exiv2::string);
++#endif
+             val->read(key.toUtf8().constData());
+             iptcData.add(iptcTag, val.get());
+         }
+diff --git src/kexiv2previews.cpp b/src/kexiv2previews.cpp
+index 4313253..d7782eb 100644
+--- src/kexiv2previews.cpp
++++ src/kexiv2previews.cpp
+@@ -29,9 +29,17 @@ class KExiv2PreviewsPrivate
+         delete manager;
+     }
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++    void load(Exiv2::Image::UniquePtr image_)
++#else
+     void load(Exiv2::Image::AutoPtr image_)
++#endif
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        image                              = std::move(image_);
++#else
+         image                              = image_;
++#endif
+ 
+         image->readMetadata();
+ 
+@@ -49,7 +57,11 @@ class KExiv2PreviewsPrivate
+ 
+ public:
+ 
++#if EXIV2_TEST_VERSION(0,28,0)
++    Exiv2::Image::UniquePtr         image;
++#else
+     Exiv2::Image::AutoPtr           image;
++#endif
+     Exiv2::PreviewManager*          manager;
+     QList<Exiv2::PreviewProperties> properties;
+ };
+@@ -59,8 +71,13 @@ KExiv2Previews::KExiv2Previews(const QString& filePath)
+ {
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image = Exiv2::ImageFactory::open((const char*)(QFile::encodeName(filePath).constData()));
++        d->load(std::move(image));
++#else
+         Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((const char*)(QFile::encodeName(filePath).constData()));
+         d->load(image);
++#endif
+     }
+     catch( Exiv2::Error& e )
+     {
+@@ -77,8 +94,13 @@ KExiv2Previews::KExiv2Previews(const QByteArray& imgData)
+ {
+     try
+     {
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image = Exiv2::ImageFactory::open((Exiv2::byte*)imgData.data(), imgData.size());
++        d->load(std::move(image));
++#else
+         Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((Exiv2::byte*)imgData.data(), imgData.size());
+         d->load(image);
++#endif
+     }
+     catch( Exiv2::Error& e )
+     {
+diff --git src/kexiv2xmp.cpp b/src/kexiv2xmp.cpp
+index 99b3003..6b83b51 100644
+--- src/kexiv2xmp.cpp
++++ src/kexiv2xmp.cpp
+@@ -19,7 +19,12 @@ bool KExiv2::canWriteXmp(const QString& filePath)
+ #ifdef _XMP_SUPPORT_
+     try
+     {
+-        Exiv2::Image::AutoPtr image = Exiv2::ImageFactory::open((const char*)
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Image::UniquePtr image =
++#else
++        Exiv2::Image::AutoPtr image = 
++#endif
++                                      Exiv2::ImageFactory::open((const char*)
+                                       (QFile::encodeName(filePath).constData()));
+ 
+         Exiv2::AccessMode mode = image->checkMode(Exiv2::mdXmp);
+@@ -29,7 +34,12 @@ bool KExiv2::canWriteXmp(const QString& filePath)
+     {
+         std::string s(e.what());
+         qCCritical(LIBKEXIV2_LOG) << "Cannot check Xmp access mode using Exiv2 (Error #"
+-                    << e.code() << ": " << s.c_str() << ")";
++#if EXIV2_TEST_VERSION(0,28,0)
++                    << Exiv2::Error(e.code()).what()
++#else
++                    << e.code() << ": " << s.c_str()
++#endif
++                    << ")";
+     }
+     catch(...)
+     {
+@@ -374,7 +384,11 @@ bool KExiv2::setXmpTagString(const char* xmpTagName, const QString& value, bool
+     try
+     {
+         const std::string &txt(value.toUtf8().constData());
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Value::UniquePtr xmpTxtVal = Exiv2::Value::create(Exiv2::xmpText);
++#else
+         Exiv2::Value::AutoPtr xmpTxtVal = Exiv2::Value::create(Exiv2::xmpText);
++#endif
+         xmpTxtVal->read(txt);
+         d->xmpMetadata()[xmpTagName].setValue(xmpTxtVal.get());
+         return true;
+@@ -515,7 +529,11 @@ bool KExiv2::setXmpTagStringListLangAlt(const char* xmpTagName, const KExiv2::Al
+ 
+         if (!values.isEmpty())
+         {
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr xmpTxtVal = Exiv2::Value::create(Exiv2::langAlt);
++#else
+             Exiv2::Value::AutoPtr xmpTxtVal = Exiv2::Value::create(Exiv2::langAlt);
++#endif
+ 
+             for (AltLangMap::const_iterator it = values.constBegin(); it != values.constEnd(); ++it)
+             {
+@@ -621,7 +639,11 @@ bool KExiv2::setXmpTagStringLangAlt(const char* xmpTagName, const QString& value
+         QString txtLangAlt = QString(QString::fromLatin1("lang=%1 %2")).arg(language).arg(value);
+ 
+         const std::string &txt(txtLangAlt.toUtf8().constData());
++#if EXIV2_TEST_VERSION(0,28,0)
++        Exiv2::Value::UniquePtr xmpTxtVal = Exiv2::Value::create(Exiv2::langAlt);
++#else
+         Exiv2::Value::AutoPtr xmpTxtVal = Exiv2::Value::create(Exiv2::langAlt);
++#endif
+ 
+         // Search if an Xmp tag already exist.
+ 
+@@ -735,7 +757,11 @@ bool KExiv2::setXmpTagStringSeq(const char* xmpTagName, const QStringList& seq,
+         else
+         {
+             const QStringList list = seq;
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr xmpTxtSeq = Exiv2::Value::create(Exiv2::xmpSeq);
++#else
+             Exiv2::Value::AutoPtr xmpTxtSeq = Exiv2::Value::create(Exiv2::xmpSeq);
++#endif
+ 
+             for (QStringList::const_iterator it = list.constBegin(); it != list.constEnd(); ++it )
+             {
+@@ -835,7 +861,11 @@ bool KExiv2::setXmpTagStringBag(const char* xmpTagName, const QStringList& bag,
+         else
+         {
+             QStringList list = bag;
++#if EXIV2_TEST_VERSION(0,28,0)
++            Exiv2::Value::UniquePtr xmpTxtBag = Exiv2::Value::create(Exiv2::xmpBag);
++#else
+             Exiv2::Value::AutoPtr xmpTxtBag = Exiv2::Value::create(Exiv2::xmpBag);
++#endif
+ 
+             for (QStringList::const_iterator it = list.constBegin(); it != list.constEnd(); ++it )
+             {
+@@ -929,7 +959,11 @@ QVariant KExiv2::getXmpTagVariant(const char* xmpTagName, bool rationalAsListOfI
+                 case Exiv2::unsignedLong:
+                 case Exiv2::signedShort:
+                 case Exiv2::signedLong:
++#if EXIV2_TEST_VERSION(0,28,0)
++                    return QVariant((int)it->toUint32());
++#else
+                     return QVariant((int)it->toLong());
++#endif
+                 case Exiv2::unsignedRational:
+                 case Exiv2::signedRational:
+                     if (rationalAsListOfInts)
