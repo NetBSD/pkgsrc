@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/06/28 11:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/07/06 09:41:18 wiz Exp $
 
 DISTNAME=	dnssec-tools-2.2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DNSSEC-Tools/}
 GITHUB_PROJECT=	DNSSEC-Tools

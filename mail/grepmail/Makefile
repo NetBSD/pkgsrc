@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/07/06 09:40:41 wiz Exp $
 
 DISTNAME=	grepmail-5.3033
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grepmail/}
 

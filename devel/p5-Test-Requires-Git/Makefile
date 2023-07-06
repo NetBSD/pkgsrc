@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/06 09:40:18 wiz Exp $
 
 DISTNAME=	Test-Requires-Git-1.008
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BO/BOOK/}
 

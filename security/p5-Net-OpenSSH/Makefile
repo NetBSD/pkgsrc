@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2022/06/28 11:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/07/06 09:41:28 wiz Exp $
 
 DISTNAME=		Net-OpenSSH-0.80
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 

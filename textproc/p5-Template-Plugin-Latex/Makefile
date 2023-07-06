@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:29 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/06 09:41:48 wiz Exp $
 
 DISTNAME=	Template-Plugin-Latex-3.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

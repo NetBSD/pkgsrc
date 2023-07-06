@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2022/06/28 11:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/06 09:40:22 wiz Exp $
 #
 
 DISTNAME=	Tie-Function-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2022/06/28 11:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/06 09:39:24 wiz Exp $
 #
 
 DISTNAME=	Lexical-Persistence-1.023
 PKGNAME=	p5-${DISTNAME:S/020/02/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lexical/}
 

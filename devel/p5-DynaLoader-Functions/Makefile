@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/06/27 07:31:23 wen Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/06 09:39:05 wiz Exp $
 
 DISTNAME=	DynaLoader-Functions-0.004
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Z/ZE/ZEFRAM/}
 

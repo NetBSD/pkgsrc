@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2022/06/28 11:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/07/06 09:38:45 wiz Exp $
 
 DISTNAME=	Class-C3-XS-0.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-PKGREVISION=	6
+PKGREVISION=	7
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

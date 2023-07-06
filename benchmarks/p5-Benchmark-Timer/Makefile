@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/06/06 12:40:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/06 09:38:10 wiz Exp $
 
 DISTNAME=	Benchmark-Timer-0.7112
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Benchmark/}
 

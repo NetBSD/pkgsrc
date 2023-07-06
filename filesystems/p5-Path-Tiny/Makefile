@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2023/01/08 00:39:07 wen Exp $
+# $NetBSD: Makefile,v 1.37 2023/07/06 09:40:33 wiz Exp $
 
 DISTNAME=	Path-Tiny-0.144
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	filesystems devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 

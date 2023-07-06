@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/06/28 11:33:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/06 09:40:05 wiz Exp $
 
 DISTNAME=	Sys-Mmap-0.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/T/TO/TODDR/
 

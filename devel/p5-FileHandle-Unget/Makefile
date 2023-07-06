@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2022/06/28 11:32:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/06 09:39:14 wiz Exp $
 
 DISTNAME=	FileHandle-Unget-0.1634
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=FileHandle/}
 

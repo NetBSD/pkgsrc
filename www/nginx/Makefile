@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2023/05/22 11:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2023/07/06 09:42:18 wiz Exp $
 
 DISTNAME=	nginx-1.24.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/06 09:41:58 wiz Exp $
 
 DISTNAME=	Unicode-LineBreak-2019.001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 

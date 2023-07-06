@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:32:33 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/06 09:39:19 wiz Exp $
 
 DISTNAME=	IMDB-Film-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/ST/STEPANOV/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/06/28 11:36:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/06 09:42:08 wiz Exp $
 
 DISTNAME=	sdf-2.001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IA/IANC/}
 

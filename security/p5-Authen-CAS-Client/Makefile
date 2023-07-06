@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/06/06 12:42:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/06 09:41:19 wiz Exp $
 #
 
 DISTNAME=	Authen-CAS-Client-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/06 09:39:36 wiz Exp $
 
 DISTNAME=	MooX-StrictConstructor-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HARTZELL/}
 

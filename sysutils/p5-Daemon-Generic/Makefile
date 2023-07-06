@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/06/06 12:42:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/06 09:41:30 wiz Exp $
 
 DISTNAME=	Daemon-Generic-0.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MU/MUIR/modules/}
 
