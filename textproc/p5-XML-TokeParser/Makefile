@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/06/28 11:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/06 09:42:05 wiz Exp $
 
 DISTNAME=	XML-TokeParser-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

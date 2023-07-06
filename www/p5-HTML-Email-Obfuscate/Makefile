@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/06 09:42:33 wiz Exp $
 
 DISTNAME=		HTML-Email-Obfuscate-1.00
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/06 09:39:36 wiz Exp $
 
 DISTNAME=	MooX-TypeTiny-0.002003
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HAARG/}
 

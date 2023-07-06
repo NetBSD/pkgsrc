@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/06/06 12:40:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.28 2023/07/06 09:38:39 wiz Exp $
 
 DISTNAME=	B-Hooks-Parser-0.21
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=B/}
 

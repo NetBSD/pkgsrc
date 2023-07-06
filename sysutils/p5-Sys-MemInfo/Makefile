@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/06/28 11:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/06 09:41:33 wiz Exp $
 
 DISTNAME=	Sys-MemInfo-0.99
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SC/SCRESTO/}
 

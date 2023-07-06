@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:32:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/06 09:39:46 wiz Exp $
 #
 
 DISTNAME=	PHP-Serialization-0.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PHP/}
 

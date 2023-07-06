@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/06/06 12:40:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.35 2023/07/06 09:38:25 wiz Exp $
 
 DISTNAME=	DBM-Deep-2.0016
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBM/}
 

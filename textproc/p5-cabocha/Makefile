@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/06 09:42:07 wiz Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../textproc/cabocha/Makefile.common"
 
 PKGNAME=	p5-${DISTNAME}

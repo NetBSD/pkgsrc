@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/06/06 12:40:44 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/06 09:38:50 wiz Exp $
 
 DISTNAME=	Config-Any-Merge-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	perl5 devel textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 

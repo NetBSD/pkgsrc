@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/06/28 11:31:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/06 09:38:33 wiz Exp $
 
 DISTNAME=	Algorithm-Backoff-0.009
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PERLANCAR/
 
