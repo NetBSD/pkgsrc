@@ -1,0 +1,13 @@
+$NetBSD: patch-config.h.meson,v 1.1 2023/07/06 21:45:25 wiz Exp $
+
+Fix build with polkit-121.
+
+--- config.h.meson.orig	2021-06-10 11:33:01.518931600 +0000
++++ config.h.meson
+@@ -30,3 +30,6 @@
+ 
+ /* Define if fdwalk is available in libc */
+ #mesondefine HAVE_FDWALK
++
++/* Define if polkit defines autocleanup functions */
++#mesondefine HAVE_POLKIT_AUTOCLEANUP
