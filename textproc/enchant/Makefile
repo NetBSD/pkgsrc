@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/12/08 16:02:41 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/07/06 07:24:26 nia Exp $
 #
 
 DISTNAME=		enchant-1.6.0
@@ -12,7 +12,7 @@ COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
 USE_TOOLS+=		pkg-config autoconf
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
