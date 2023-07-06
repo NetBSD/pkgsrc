@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/04/23 13:49:50 js Exp $
+$NetBSD: distinfo,v 1.7 2023/07/06 08:38:41 wiz Exp $
 
 BLAKE2s (telegram-0.11.3.tar.gz) = 0275fba27113439b0e76409bc36d2b17cb744402f9e3cd3da27251a4d378fb32
 SHA512 (telegram-0.11.3.tar.gz) = e7746cfa85fb4d54a0e1f694436ab69b6bbda903d081e9c7af151e710e2ed980a33c454643adddd682d932efbd8cc2cf4230f1fc5f75f39eaafef89df4630218
 Size (telegram-0.11.3.tar.gz) = 698132 bytes
+SHA1 (patch-optional-requirements.txt) = 3e4617e36892ff7f09032b9d64ee1db5ae9416dd
