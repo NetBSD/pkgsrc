@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/05 15:19:53 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/06 06:21:03 nia Exp $
 
 DISTNAME=	bulk-test-essential-20230705
 CATEGORIES=	meta-pkgs
@@ -77,8 +77,8 @@ DEPENDS+=	vim-[0-9]*:../../editors/vim
 # Essential server packages.
 # Long history in pkgsrc. Most of these build even on vax.
 #
-DEPENDS+=	apache24-[0-9]*:../../www/apache24
-DEPENDS+=	dovecot2-[0-9]*:../../mail/dovecot2
+DEPENDS+=	apache-[0-9]*:../../www/apache24
+DEPENDS+=	dovecot-[0-9]*:../../mail/dovecot2
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
 
 #
