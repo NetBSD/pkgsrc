@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/03/30 17:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/06 09:39:08 wiz Exp $
 
 DISTNAME=	Feature-Compat-Try-0.05
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/06 09:41:32 wiz Exp $
 
 DISTNAME=	IO-KQueue-0.39
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 

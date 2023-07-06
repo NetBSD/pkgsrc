@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/06 09:41:48 wiz Exp $
 #
 
 DISTNAME=	Template-Plugin-CSV-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

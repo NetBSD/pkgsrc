@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/06/28 11:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/06 09:40:28 wiz Exp $
 
 DISTNAME=	ex-lib-0.90
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ex/}
 

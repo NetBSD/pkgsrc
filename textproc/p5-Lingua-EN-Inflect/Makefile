@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2023/07/03 23:33:03 wen Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/06 09:41:38 wiz Exp $
 
 DISTNAME=	Lingua-EN-Inflect-1.905
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Lingua/}
 

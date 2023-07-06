@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/06/28 11:35:46 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/06 09:41:26 wiz Exp $
 
 DISTNAME=	Digest-HMAC-1.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 

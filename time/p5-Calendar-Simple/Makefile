@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/06/28 11:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/06 09:42:09 wiz Exp $
 
 DISTNAME=	Calendar-Simple-v2.0.1
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Calendar/}
 
