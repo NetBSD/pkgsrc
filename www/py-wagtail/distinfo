@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2023/04/10 22:06:21 joerg Exp $
+$NetBSD: distinfo,v 1.11 2023/07/06 08:34:50 wiz Exp $
 
 BLAKE2s (wagtail-4.2.2.tar.gz) = c8b79ac445dd2786912981c64dcf7e0df5c7fd165150271de6fa37bffeee8496
 SHA512 (wagtail-4.2.2.tar.gz) = e3484f1c619a09f28779e78449279c8b9203e396ce7cbf333d4e5496d91accf9b7301abf04a8a6728b822034ed77b8cfb0b7260ad03abd839ce59c29bd4dfa6f
 Size (wagtail-4.2.2.tar.gz) = 6090673 bytes
+SHA1 (patch-setup.py) = f6bf9880b9342e3077d191b5fcd720031fc04e8f
