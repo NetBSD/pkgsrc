@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4288 2023/07/06 14:17:29 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4289 2023/07/06 18:00:15 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5971,3 +5971,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.4.0 [adam 2023-07-06]
 	Updated lang/py-mypy to 1.4.1 [adam 2023-07-06]
 	Updated textproc/R-DT to 0.28 [mef 2023-07-06]
+	Updated mail/mailutils to 3.16 [vins 2023-07-06]
