@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.27 2022/09/29 00:53:12 markd Exp $
+$NetBSD: distinfo,v 1.28 2023/07/06 23:20:18 mrg Exp $
 
 BLAKE2s (libkexiv2-22.08.1.tar.xz) = f20c891463d8143b32d51ae72cbfe4be824044a4629232fa0a01359b2519a5b5
 SHA512 (libkexiv2-22.08.1.tar.xz) = 97bb72f679b4153c742adfa520e200557a472f7df529e6f0a40f562ccf68ae48e163e3c790131a60960b7617b015b22381363c54a83f42503c1e38c5a1bd0248
 Size (libkexiv2-22.08.1.tar.xz) = 59736 bytes
+SHA1 (patch-exiv2-0.28-upstream.diff) = e67aab6c0556cc445d25a6628aa1b61441027a98
