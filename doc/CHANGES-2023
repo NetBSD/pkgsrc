@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4287 2023/07/06 10:09:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4288 2023/07/06 14:17:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5970,3 +5970,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/ImageMagick to 7.1.1.12 [wiz 2023-07-06]
 	Updated lang/nodejs to 20.4.0 [adam 2023-07-06]
 	Updated lang/py-mypy to 1.4.1 [adam 2023-07-06]
+	Updated textproc/R-DT to 0.28 [mef 2023-07-06]
