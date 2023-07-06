@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.14 2023/07/05 22:26:23 wiz Exp $
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
+@comment $NetBSD: PLIST,v 1.15 2023/07/06 07:59:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -101,6 +101,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/billingbudgets.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/billingbudgets.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/binaryauthorization.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/binaryauthorization.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/blockchainnodeengine.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/blogger.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/blogger.v3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/books.v1.json
@@ -150,6 +151,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudscheduler.v1beta1.js
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudshell.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudshell.v1alpha1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudsupport.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudsupport.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudtasks.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudtasks.v2beta2.json
