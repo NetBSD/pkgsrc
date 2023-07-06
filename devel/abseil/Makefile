@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/04 17:14:15 adam Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/06 07:26:16 nia Exp $
 
 DISTNAME=	abseil-20230125.3
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c++14
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+
+GCC_REQD+=	5
 
 .include "../../mk/bsd.prefs.mk"
 
