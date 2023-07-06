@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/06 06:21:03 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/06 07:01:03 nia Exp $
 
 DISTNAME=	bulk-test-essential-20230705
 CATEGORIES=	meta-pkgs
@@ -37,13 +37,20 @@ DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
-.if ${MACHINE_ARCH} != "vax" # FP issues
-.  include "../../lang/python/pyversion.mk"
-.endif
 .include "../../lang/ruby/buildlink3.mk"
 
+# FP issues
+.if ${MACHINE_ARCH} != "vax"
+.  include "../../lang/python/pyversion.mk"
+.endif
+
 .include "../../mk/mysql.buildlink3.mk"
-.include "../../mk/pgsql.buildlink3.mk"
+
+# mips: TAS implementation issues
+# alpha: locking/membar issues
+.if ${MACHINE_ARCH} != "mips" && ${MACHINE_ARCH} != "alpha"
+.  include "../../mk/pgsql.buildlink3.mk"
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "i386" || \
