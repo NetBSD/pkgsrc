@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/06/26 16:03:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/07/07 07:22:25 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -2154,6 +2154,9 @@ ${PYSITELIB}/yt_dlp/extractor/puls4.pyo
 ${PYSITELIB}/yt_dlp/extractor/pyvideo.py
 ${PYSITELIB}/yt_dlp/extractor/pyvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/pyvideo.pyo
+${PYSITELIB}/yt_dlp/extractor/qdance.py
+${PYSITELIB}/yt_dlp/extractor/qdance.pyc
+${PYSITELIB}/yt_dlp/extractor/qdance.pyo
 ${PYSITELIB}/yt_dlp/extractor/qingting.py
 ${PYSITELIB}/yt_dlp/extractor/qingting.pyc
 ${PYSITELIB}/yt_dlp/extractor/qingting.pyo
@@ -2505,6 +2508,9 @@ ${PYSITELIB}/yt_dlp/extractor/srgssr.pyo
 ${PYSITELIB}/yt_dlp/extractor/srmediathek.py
 ${PYSITELIB}/yt_dlp/extractor/srmediathek.pyc
 ${PYSITELIB}/yt_dlp/extractor/srmediathek.pyo
+${PYSITELIB}/yt_dlp/extractor/stacommu.py
+${PYSITELIB}/yt_dlp/extractor/stacommu.pyc
+${PYSITELIB}/yt_dlp/extractor/stacommu.pyo
 ${PYSITELIB}/yt_dlp/extractor/stageplus.py
 ${PYSITELIB}/yt_dlp/extractor/stageplus.pyc
 ${PYSITELIB}/yt_dlp/extractor/stageplus.pyo
