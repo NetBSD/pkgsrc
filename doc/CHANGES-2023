@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4305 2023/07/07 13:49:09 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4306 2023/07/07 14:05:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5993,3 +5993,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-parse_type to 0.6.2 [adam 2023-07-07]
 	Updated www/firefox to 115.0 [ryoon 2023-07-07]
 	Updated www/firefox-l10n to 115.0 [ryoon 2023-07-07]
+	Updated print/qpdf to 11.4.0 [ryoon 2023-07-07]
