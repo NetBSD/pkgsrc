@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2023/01/28 13:48:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.53 2023/07/07 12:57:21 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -285,6 +285,7 @@ share/roundcube/plugins/acl/localization/th_TH.inc
 share/roundcube/plugins/acl/localization/ti.inc
 share/roundcube/plugins/acl/localization/tr_TR.inc
 share/roundcube/plugins/acl/localization/tzl.inc
+share/roundcube/plugins/acl/localization/ug.inc
 share/roundcube/plugins/acl/localization/uk_UA.inc
 share/roundcube/plugins/acl/localization/uz.inc
 share/roundcube/plugins/acl/localization/vi_VN.inc
@@ -375,6 +376,7 @@ share/roundcube/plugins/archive/localization/ta_IN.inc
 share/roundcube/plugins/archive/localization/th_TH.inc
 share/roundcube/plugins/archive/localization/tr_TR.inc
 share/roundcube/plugins/archive/localization/tzl.inc
+share/roundcube/plugins/archive/localization/ug.inc
 share/roundcube/plugins/archive/localization/uk_UA.inc
 share/roundcube/plugins/archive/localization/uz.inc
 share/roundcube/plugins/archive/localization/vi_VN.inc
@@ -436,6 +438,7 @@ share/roundcube/plugins/attachment_reminder/localization/mk_MK.inc
 share/roundcube/plugins/attachment_reminder/localization/ml_IN.inc
 share/roundcube/plugins/attachment_reminder/localization/mn_MN.inc
 share/roundcube/plugins/attachment_reminder/localization/nb_NO.inc
+share/roundcube/plugins/attachment_reminder/localization/nl_BE.inc
 share/roundcube/plugins/attachment_reminder/localization/nl_NL.inc
 share/roundcube/plugins/attachment_reminder/localization/pl_PL.inc
 share/roundcube/plugins/attachment_reminder/localization/pt_BR.inc
@@ -448,6 +451,7 @@ share/roundcube/plugins/attachment_reminder/localization/sq_AL.inc
 share/roundcube/plugins/attachment_reminder/localization/sr_CS.inc
 share/roundcube/plugins/attachment_reminder/localization/sv_SE.inc
 share/roundcube/plugins/attachment_reminder/localization/tr_TR.inc
+share/roundcube/plugins/attachment_reminder/localization/ug.inc
 share/roundcube/plugins/attachment_reminder/localization/uk_UA.inc
 share/roundcube/plugins/attachment_reminder/localization/uz.inc
 share/roundcube/plugins/attachment_reminder/localization/vi_VN.inc
@@ -513,6 +517,7 @@ share/roundcube/plugins/emoticons/localization/sq_AL.inc
 share/roundcube/plugins/emoticons/localization/sr_CS.inc
 share/roundcube/plugins/emoticons/localization/sv_SE.inc
 share/roundcube/plugins/emoticons/localization/tr_TR.inc
+share/roundcube/plugins/emoticons/localization/ug.inc
 share/roundcube/plugins/emoticons/localization/uk_UA.inc
 share/roundcube/plugins/emoticons/localization/uz.inc
 share/roundcube/plugins/emoticons/localization/zh_CN.inc
@@ -599,6 +604,7 @@ share/roundcube/plugins/help/localization/th_TH.inc
 share/roundcube/plugins/help/localization/ti.inc
 share/roundcube/plugins/help/localization/tr_TR.inc
 share/roundcube/plugins/help/localization/tzl.inc
+share/roundcube/plugins/help/localization/ug.inc
 share/roundcube/plugins/help/localization/uk_UA.inc
 share/roundcube/plugins/help/localization/uz.inc
 share/roundcube/plugins/help/localization/vi_VN.inc
@@ -682,6 +688,7 @@ share/roundcube/plugins/hide_blockquote/localization/sv_SE.inc
 share/roundcube/plugins/hide_blockquote/localization/th_TH.inc
 share/roundcube/plugins/hide_blockquote/localization/tr_TR.inc
 share/roundcube/plugins/hide_blockquote/localization/tzl.inc
+share/roundcube/plugins/hide_blockquote/localization/ug.inc
 share/roundcube/plugins/hide_blockquote/localization/uk_UA.inc
 share/roundcube/plugins/hide_blockquote/localization/ur_PK.inc
 share/roundcube/plugins/hide_blockquote/localization/uz.inc
@@ -889,6 +896,7 @@ share/roundcube/plugins/managesieve/localization/th_TH.inc
 share/roundcube/plugins/managesieve/localization/ti.inc
 share/roundcube/plugins/managesieve/localization/tr_TR.inc
 share/roundcube/plugins/managesieve/localization/tzl.inc
+share/roundcube/plugins/managesieve/localization/ug.inc
 share/roundcube/plugins/managesieve/localization/uk_UA.inc
 share/roundcube/plugins/managesieve/localization/ur_PK.inc
 share/roundcube/plugins/managesieve/localization/uz.inc
@@ -941,6 +949,7 @@ share/roundcube/plugins/markasjunk/localization/is_IS.inc
 share/roundcube/plugins/markasjunk/localization/it_IT.inc
 share/roundcube/plugins/markasjunk/localization/ja_JP.inc
 share/roundcube/plugins/markasjunk/localization/ko_KR.inc
+share/roundcube/plugins/markasjunk/localization/ku.inc
 share/roundcube/plugins/markasjunk/localization/lt_LT.inc
 share/roundcube/plugins/markasjunk/localization/lv_LV.inc
 share/roundcube/plugins/markasjunk/localization/nb_NO.inc
@@ -953,6 +962,7 @@ share/roundcube/plugins/markasjunk/localization/sk_SK.inc
 share/roundcube/plugins/markasjunk/localization/sq_AL.inc
 share/roundcube/plugins/markasjunk/localization/sv_SE.inc
 share/roundcube/plugins/markasjunk/localization/tr_TR.inc
+share/roundcube/plugins/markasjunk/localization/ug.inc
 share/roundcube/plugins/markasjunk/localization/zh_TW.inc
 share/roundcube/plugins/markasjunk/markasjunk.js
 share/roundcube/plugins/markasjunk/markasjunk.min.js
@@ -1027,6 +1037,7 @@ share/roundcube/plugins/new_user_dialog/localization/sr_CS.inc
 share/roundcube/plugins/new_user_dialog/localization/sv_SE.inc
 share/roundcube/plugins/new_user_dialog/localization/th_TH.inc
 share/roundcube/plugins/new_user_dialog/localization/tr_TR.inc
+share/roundcube/plugins/new_user_dialog/localization/ug.inc
 share/roundcube/plugins/new_user_dialog/localization/uk_UA.inc
 share/roundcube/plugins/new_user_dialog/localization/vi_VN.inc
 share/roundcube/plugins/new_user_dialog/localization/zh_CN.inc
@@ -1105,6 +1116,7 @@ share/roundcube/plugins/newmail_notifier/localization/sv_SE.inc
 share/roundcube/plugins/newmail_notifier/localization/th_TH.inc
 share/roundcube/plugins/newmail_notifier/localization/ti.inc
 share/roundcube/plugins/newmail_notifier/localization/tr_TR.inc
+share/roundcube/plugins/newmail_notifier/localization/ug.inc
 share/roundcube/plugins/newmail_notifier/localization/uk_UA.inc
 share/roundcube/plugins/newmail_notifier/localization/uz.inc
 share/roundcube/plugins/newmail_notifier/localization/vi_VN.inc
@@ -1194,6 +1206,7 @@ share/roundcube/plugins/subscriptions_option/localization/sr_CS.inc
 share/roundcube/plugins/subscriptions_option/localization/sv_SE.inc
 share/roundcube/plugins/subscriptions_option/localization/th_TH.inc
 share/roundcube/plugins/subscriptions_option/localization/tr_TR.inc
+share/roundcube/plugins/subscriptions_option/localization/ug.inc
 share/roundcube/plugins/subscriptions_option/localization/uk_UA.inc
 share/roundcube/plugins/subscriptions_option/localization/uz.inc
 share/roundcube/plugins/subscriptions_option/localization/vi_VN.inc
@@ -1270,6 +1283,7 @@ share/roundcube/plugins/userinfo/localization/sv_SE.inc
 share/roundcube/plugins/userinfo/localization/th_TH.inc
 share/roundcube/plugins/userinfo/localization/ti.inc
 share/roundcube/plugins/userinfo/localization/tr_TR.inc
+share/roundcube/plugins/userinfo/localization/ug.inc
 share/roundcube/plugins/userinfo/localization/uk_UA.inc
 share/roundcube/plugins/userinfo/localization/uz.inc
 share/roundcube/plugins/userinfo/localization/vi_VN.inc
@@ -1343,6 +1357,7 @@ share/roundcube/plugins/vcard_attachments/localization/sr_CS.inc
 share/roundcube/plugins/vcard_attachments/localization/sv_SE.inc
 share/roundcube/plugins/vcard_attachments/localization/th_TH.inc
 share/roundcube/plugins/vcard_attachments/localization/tr_TR.inc
+share/roundcube/plugins/vcard_attachments/localization/ug.inc
 share/roundcube/plugins/vcard_attachments/localization/uk_UA.inc
 share/roundcube/plugins/vcard_attachments/localization/uz.inc
 share/roundcube/plugins/vcard_attachments/localization/vi_VN.inc
@@ -1813,6 +1828,7 @@ share/roundcube/program/localization/ja_JP/timezones.inc
 share/roundcube/program/localization/ka_GE/labels.inc
 share/roundcube/program/localization/ka_GE/messages.inc
 share/roundcube/program/localization/kab/labels.inc
+share/roundcube/program/localization/kab/messages.inc
 share/roundcube/program/localization/km_KH/labels.inc
 share/roundcube/program/localization/km_KH/messages.inc
 share/roundcube/program/localization/kn_IN/labels.inc

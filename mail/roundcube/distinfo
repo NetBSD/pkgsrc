@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.83 2023/01/28 13:48:39 taca Exp $
+$NetBSD: distinfo,v 1.84 2023/07/07 12:57:21 taca Exp $
 
-BLAKE2s (roundcubemail-1.6.1-complete.tar.gz) = dafde904497d565587eb4ec7d21ce7a220bdaab0212206ffc034e3e54c64bc80
-SHA512 (roundcubemail-1.6.1-complete.tar.gz) = d5804e91c2da3b732cf14ad86f06099254540dd826ae5b7f14b98a7af8b90a7e9457221da2945aace8d12a60381eec85161e8bc6e0af4572b798a66cb36f2f00
-Size (roundcubemail-1.6.1-complete.tar.gz) = 5970713 bytes
+BLAKE2s (roundcubemail-1.6.2-complete.tar.gz) = 91400b528de68ebca896960e72280c9bcc19dac8578602e288c0d703dba26c42
+SHA512 (roundcubemail-1.6.2-complete.tar.gz) = 1889548dbe9913555cec4115137157de9daf5e2cca9e4004fb19c8ddebd3081cce32b6d8634891341c890379c4f9e35a5c705739f24b0b3b93fc31449f090297
+Size (roundcubemail-1.6.2-complete.tar.gz) = 6004046 bytes
 SHA1 (patch-config_config.inc.php.sample) = 92a48a97b16fe3f5f4b9441fce762a559d8daca7
 SHA1 (patch-program_include_iniset.php) = 8a6c13c0c87d583ed60e43c01a4173d9d802a6a1
 SHA1 (patch-program_lib_Roundcube_rcube__mime.php) = b1e9479d575b7fd61c413e2b76ee36c06ece7a5c
