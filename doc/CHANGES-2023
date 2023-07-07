@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4291 2023/07/07 02:01:39 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4292 2023/07/07 03:28:02 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5974,3 +5974,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mailutils to 3.16 [vins 2023-07-06]
 	Updated x11/gnome-shell to 40.2nb17 [wiz 2023-07-06]
 	Added games/redeclipse16 version 1.6.0 [charlotte 2023-07-06]
+	Added net/croc version 9.6.5 [charlotte 2023-07-06]
