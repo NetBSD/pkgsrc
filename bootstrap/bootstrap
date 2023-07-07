@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.319 2023/06/27 14:36:41 riastradh Exp $
+# $NetBSD: bootstrap,v 1.320 2023/07/07 12:53:22 gdt Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -393,7 +393,9 @@ checkarg_sane_relative_path() {
 #
 # If we determine that a native version is good enough to use then it is saved
 # and we later write the appropriate TOOLS_PLATFORM variable to mk.conf to
-# override any further processing from mk/tools.
+# override any further processing from mk/tools.  Note that while these are
+# "bootstrap_foo" they are not used during bootstrap, but are stored in
+# TOOLS_PLATFORM.foo in the generated mk.conf.
 #
 bootstrap_awk=
 bootstrap_sed=
@@ -852,6 +854,7 @@ SunOS)
 	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
+		shprog=$bootstrap_sh
 	else
 		need_mksh=yes
 	fi
@@ -964,6 +967,8 @@ if [ "x$preserve_path" != "xyes" ]; then
 	PATH="$overpath:$PATH"
 fi
 
+# These programs are used during the bootstrapping process, as opposed
+# to $bootstrap_foo which are stored in mk.conf as TOOLS_PLATFORM.foo.
 check_prog awkprog awk
 check_prog chmodprog chmod
 if [ -n "$CP" ]; then
