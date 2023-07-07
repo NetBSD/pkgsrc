@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/11/20 18:26:21 is Exp $
+$NetBSD: distinfo,v 1.9 2023/07/07 08:35:34 nia Exp $
 
 BLAKE2s (saytime_27jan2015.tar.gz) = 2f9d2c5681d672663bdb4394b4627157ce7f3bebba89921bce8b68dd68d9cedb
 SHA512 (saytime_27jan2015.tar.gz) = bde4fc67bb18271baa5fb5b9ff0c7027869dbd132805425dbc5e8460196ed46bb9f43df3ffd66b0d4733e707b41caeeef0b90118d0080cd0b837daab00b85c55
 Size (saytime_27jan2015.tar.gz) = 105160 bytes
-SHA1 (patch-aa) = e20301da0f63c238609fe4a163bb3e3445f70183
+SHA1 (patch-aa) = 14b2ba5cd8a4cdd4a2b5933a3744e9b280c56978
 SHA1 (patch-ab) = a578185627da19a4274df3d96d2a6c3c3c8f2b0b
