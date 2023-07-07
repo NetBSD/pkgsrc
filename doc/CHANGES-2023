@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4298 2023/07/07 12:18:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4299 2023/07/07 12:49:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5982,3 +5982,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/knot to 3.2.8 [ryoon 2023-07-07]
 	Updated net/proftpd to 1.3.7f [jperkin 2023-07-07]
 	Updated devel/fq to 0.7.0 [wiz 2023-07-07]
+	Updated lang/php82 to 8.2.8 [taca 2023-07-07]
