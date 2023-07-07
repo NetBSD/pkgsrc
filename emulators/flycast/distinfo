@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/07/02 17:32:30 nia Exp $
+$NetBSD: distinfo,v 1.2 2023/07/07 07:31:50 nia Exp $
 
 BLAKE2s (flycast-2.1.tar.gz) = 00b437bf7ff8731b0784cbc919641a1ead0c518f49e146a3ed82faa8e4f1cf49
 SHA512 (flycast-2.1.tar.gz) = 98db9c4c2b843bbfd3a6b9d15ed1d487891c42e4c91113f6167c5afcbf0bcd70a034e1d488c2ec0c74e71fc829a117d7f61f0a094cf25326b655be94e8a6e556
@@ -12,7 +12,7 @@ Size (rtissera-libchdr-2781322c4a7f8315c5fd6499129ad4b718e35843.tar.gz) = 416898
 BLAKE2s (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 2b0d728012815bb58fa974be88e37abaf37e8509eec9fa68356a2eff9616954d
 SHA512 (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = b47ac42637d615bd6497a8d09f6c7c6e8f7a762b80fc1a4b284cb65754302def2a7b1339c8aeb146900ad5ad247a5b33fb381ce07451f97b60a155f7f1b41a9a
 Size (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 543800 bytes
-SHA1 (patch-CMakeLists.txt) = c5df98646e003579b7c575d84943f7f786ada70c
+SHA1 (patch-CMakeLists.txt) = 72339dbcf395a8a91c1684700cfb61d9165f1e7d
 SHA1 (patch-core_khronos_GL4_gl3w.c) = 83f5d38c3cdcb6ffaf4a0d7ff45a2185d55dec33
 SHA1 (patch-core_linux_context.cpp) = 4640cb74d38f0919deadd7efc740b353dc387571
 SHA1 (patch-core_log_StringUtil.h) = dc0cf0ee8a6926ca2e63b01e636c49646c534cf3

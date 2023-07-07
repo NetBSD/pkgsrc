@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/02 17:32:30 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2023/07/07 07:31:50 nia Exp $
 
 - Always prefer SDL2 from pkgsrc.
 - Treat APPLE less specially.
@@ -6,6 +6,15 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/02 17:32:30 nia Exp $
 
 --- CMakeLists.txt.orig	2023-02-15 17:59:44.000000000 +0000
 +++ CMakeLists.txt
+@@ -207,7 +207,7 @@ if(NINTENDO_SWITCH)
+ endif()
+ 
+ if(NOT LIBRETRO)
+-	if((WIN32 AND NOT MSVC) OR (UNIX AND NOT APPLE AND NOT CMAKE_SYSTEM_NAME MATCHES "(FreeBSD|OpenBSD|NetBSD)"))
++	if((WIN32 AND NOT MSVC) OR (CMAKE_SYSTEM_NAME MATCHES "Linux"))
+ 		add_subdirectory(core/deps/breakpad)
+ 		if(WIN32)
+ 			target_link_options(${PROJECT_NAME} PRIVATE "-Wl,--build-id")
 @@ -356,9 +356,7 @@ if(NOT LIBRETRO)
  	endif()
  
