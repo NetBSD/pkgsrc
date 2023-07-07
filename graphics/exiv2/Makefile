@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/07/07 10:33:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2023/07/07 12:25:39 jperkin Exp $
 
 DISTNAME=	exiv2-0.28.0-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -15,7 +15,7 @@ CHECK_PORTABILITY_SKIP+=	contrib/coverity.sh
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
-GCC_REQD+=	3.3
+GCC_REQD+=	8 # std::filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
