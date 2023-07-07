@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/04/24 07:38:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/07/07 14:04:20 ryoon Exp $
 bin/fix-qdf
 bin/qpdf
 bin/zlib-flate
@@ -77,7 +77,7 @@ lib/cmake/qpdf/qpdfConfigVersion.cmake
 lib/libqpdf.a
 lib/libqpdf.so
 lib/libqpdf.so.29
-lib/libqpdf.so.29.3.0
+lib/libqpdf.so.29.4.0
 lib/pkgconfig/libqpdf.pc
 man/man1/fix-qdf.1
 man/man1/qpdf.1
@@ -103,4 +103,5 @@ share/doc/qpdf/examples/pdf-split-pages.cc
 share/doc/qpdf/examples/qpdf-job.cc
 share/doc/qpdf/examples/qpdfjob-c-save-attachment.c
 share/doc/qpdf/examples/qpdfjob-c.c
+share/doc/qpdf/examples/qpdfjob-remove-annotations.cc
 share/doc/qpdf/examples/qpdfjob-save-attachment.cc
