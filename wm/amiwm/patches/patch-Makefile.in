@@ -1,0 +1,39 @@
+$NetBSD: patch-Makefile.in,v 1.3 2023/07/07 08:11:21 nia Exp $
+
+Honour LDFLAGS.
+
+--- Makefile.in.orig	2010-07-19 16:07:34.000000000 +0000
++++ Makefile.in
+@@ -129,25 +129,25 @@ cde-install : Xresources.amiwm Amilogo.b
+ 
+ 
+ amiwm : $(OBJS) $(LIBAMI)
+-	$(CC) -o amiwm $(OBJS) $(LIBS)
++	$(CC) $(LDFLAGS) -o amiwm $(OBJS) $(LIBS)
+ 
+ requestchoice : requestchoice.o $(LIBAMI)
+-	$(CC) -o requestchoice requestchoice.o $(LIBS)
++	$(CC) $(LDFLAGS) -o requestchoice requestchoice.o $(LIBS)
+ 
+ executecmd : executecmd.o $(LIBAMI)
+-	$(CC) -o executecmd executecmd.o $(LIBS)
++	$(CC) $(LDFLAGS) -o executecmd executecmd.o $(LIBS)
+ 
+ Filesystem : filesystem.o $(LIBAMI)
+-	$(CC) -o Filesystem filesystem.o $(LIBS)
++	$(CC) $(LDFLAGS) -o Filesystem filesystem.o $(LIBS)
+ 
+ Keyboard : kbdmodule.o kbdlexer.o $(LIBAMI)
+-	$(CC) -o Keyboard kbdmodule.o kbdlexer.o $(LIBS)
++	$(CC) $(LDFLAGS) -o Keyboard kbdmodule.o kbdlexer.o $(LIBS)
+ 
+ ppmtoinfo : ppmtoinfo.o
+-	$(CC) -o ppmtoinfo ppmtoinfo.o -lm
++	$(CC) $(LDFLAGS) -o ppmtoinfo ppmtoinfo.o -lm
+ 
+ localetest : localetest.o $(LIBAMI)
+-	$(CC) -o localetest localetest.o $(LIBS)
++	$(CC) $(LDFLAGS) -o localetest localetest.o $(LIBS)
+ 
+ clean :
+ 	$(RM) core $(PROGS) $(LIBAMI) Keyboard *.o libami/*.o
