@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2023/07/07 07:34:56 nia Exp $
 #
 
 DISTNAME=		xm71020s
@@ -23,6 +23,11 @@ TOOL_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
 NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
+.include "../../mk/oss.buildlink3.mk"
+.if ${OSS_TYPE} == "none"
+PKG_SKIP_REASON+=	"Requires an OSS implementation"
+.endif
+
 EXTRACT_OPTS_ZIP=	-aqoLL	# lower-case filenames are expected
 
 WRKSRC=			${WRKDIR}/vm
@@ -38,5 +43,4 @@ do-install:
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
