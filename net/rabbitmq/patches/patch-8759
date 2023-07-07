@@ -1,0 +1,219 @@
+$NetBSD: patch-8759,v 1.1 2023/07/07 13:45:06 adam Exp $
+
+Fix building with Elixir 1.15.2.
+https://github.com/rabbitmq/rabbitmq-server/pull/8759
+
+--- WORKSPACE
++++ WORKSPACE
+@@ -19,7 +19,7 @@ rules_pkg_dependencies()
+ git_repository(
+     name = "rules_erlang",
+     remote = "https://github.com/rabbitmq/rules_erlang.git",
+-    tag = "3.10.5",
++    tag = "3.11.1",
+ )
+ 
+ load("@rules_erlang//:internal_deps.bzl", "rules_erlang_internal_deps")
+@@ -182,6 +182,11 @@ elixir_config(
+             sha256 = "2ea249566c67e57f8365ecdcd0efd9b6c375f57609b3ac2de326488ac37c8ebd",
+             version = "1.14.5",
+         ),
++        internal_elixir_from_github_release(
++            name = "1_15",
++            sha256 = "3cfadca57c3092ccbd3ec3f17e5eab529bbd2946f50e4941a903c55c39e3c5f5",
++            version = "1.15.2",
++        ),
+     ],
+     rabbitmq_server_workspace = "@",
+ )
+--- deps/rabbitmq_cli/config/config.exs
++++ deps/rabbitmq_cli/config/config.exs
+@@ -24,7 +24,7 @@ import Config
+ #
+ # Or configure a 3rd-party app:
+ #
+-config :logger, level: :warn, console: [device: :standard_error]
++config :logger, level: :warning, console: [device: :standard_error]
+ #
+ 
+ # It is also possible to import configuration files, relative to this
+--- deps/rabbitmq_cli/lib/rabbit_common/records.ex
++++ deps/rabbitmq_cli/lib/rabbit_common/records.ex
+@@ -8,6 +8,10 @@ defmodule RabbitCommon.Records do
+   require Record
+   import Record, only: [defrecord: 2, extract: 2]
+ 
++  # Elixir 1.15 compiler optimizations require that we explicitly
++  # add the rabbit_common code path
++  true = Code.append_path(Path.join([System.get_env("DEPS_DIR"), "rabbit_common", "ebin"]))
++
+   # Important: amqqueue records must not be used directly since they are versioned
+   #            for mixed version cluster compatibility. Convert records
+   #            to maps on the server end to access the fields of those records. MK.
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/core/code_path.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/core/code_path.ex
+@@ -61,9 +61,9 @@ defmodule RabbitMQ.CLI.Core.CodePath do
+ 
+     case :erl_prim_loader.list_dir(app_dir) do
+       {:ok, list} ->
+-        case Enum.member?(list, 'ebin') do
++        case Enum.member?(list, ~c"ebin") do
+           true ->
+-            ebin_dir = :filename.join(app_dir, 'ebin')
++            ebin_dir = :filename.join(app_dir, ~c"ebin")
+             Code.append_path(ebin_dir)
+ 
+           false ->
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/core/config.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/core/config.ex
+@@ -44,7 +44,7 @@ defmodule RabbitMQ.CLI.Core.Config do
+ 
+   def normalise(:longnames, true), do: :longnames
+   def normalise(:longnames, "true"), do: :longnames
+-  def normalise(:longnames, 'true'), do: :longnames
++  def normalise(:longnames, ~c"true"), do: :longnames
+   def normalise(:longnames, "\"true\""), do: :longnames
+   def normalise(:longnames, _val), do: :shortnames
+   def normalise(_, value), do: value
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/core/listeners.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/core/listeners.ex
+@@ -13,6 +13,11 @@ defmodule RabbitMQ.CLI.Core.Listeners do
+   # API
+   #
+ 
++  # TODO: Remove when we require Elixir 1.15
++  if function_exported?(Mix, :ensure_application!, 1) do
++    Mix.ensure_application!(:public_key)
++  end
++
+   defrecord :certificate,
+             :Certificate,
+             extract(:Certificate, from_lib: "public_key/include/public_key.hrl")
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/ctl/commands/shutdown_command.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/ctl/commands/shutdown_command.ex
+@@ -84,7 +84,7 @@ defmodule RabbitMQ.CLI.Ctl.Commands.ShutdownCommand do
+   #
+ 
+   def addressing_local_node?(_, remote_hostname) when remote_hostname == :localhost, do: true
+-  def addressing_local_node?(_, remote_hostname) when remote_hostname == 'localhost', do: true
++  def addressing_local_node?(_, remote_hostname) when remote_hostname == ~c"localhost", do: true
+   def addressing_local_node?(_, remote_hostname) when remote_hostname == "localhost", do: true
+ 
+   def addressing_local_node?(local_hostname, remote_hostname) do
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/ctl/commands/wait_command.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/ctl/commands/wait_command.ex
+@@ -155,7 +155,7 @@ defmodule RabbitMQ.CLI.Ctl.Commands.WaitCommand do
+   end
+ 
+   defp wait_for_pid_funs(node_name, app_names, timeout, quiet) do
+-    app_names_formatted = :io_lib.format('~p', [app_names])
++    app_names_formatted = :io_lib.format(~c"~p", [app_names])
+ 
+     [
+       log_param(
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/diagnostics/commands/remote_shell_command.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/diagnostics/commands/remote_shell_command.ex
+@@ -47,11 +47,11 @@ defmodule RabbitMQ.CLI.Diagnostics.Commands.RemoteShellCommand do
+   defp start_shell_on_otp_25(node_name) do
+     _ = Supervisor.terminate_child(:kernel_sup, :user)
+     Process.flag(:trap_exit, true)
+-    user_drv = :user_drv.start(['tty_sl -c -e', {node_name, :shell, :start, []}])
++    user_drv = :user_drv.start([~c"tty_sl -c -e", {node_name, :shell, :start, []}])
+     Process.link(user_drv)
+ 
+     receive do
+-      {'EXIT', _user_drv, _} ->
++      {~c"EXIT", _user_drv, _} ->
+         {:ok, "Disconnected from #{node_name}."}
+     end
+   end
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/formatters/csv.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/formatters/csv.ex
+@@ -94,6 +94,10 @@ defmodule RabbitMQ.CLI.Formatters.Csv do
+   end
+ end
+ 
++# Elixir 1.15 compiler optimizations require that we explicitly
++# add the csv code path
++true = Code.append_path(Path.join(["_build", Atom.to_string(Mix.env()), "lib", "csv", "ebin"]))
++
+ defimpl CSV.Encode, for: PID do
+   def encode(pid, env \\ []) do
+     FormatterHelpers.format_info_item(pid)
+--- deps/rabbitmq_cli/lib/rabbitmq/cli/formatters/pretty_table.ex
++++ deps/rabbitmq_cli/lib/rabbitmq/cli/formatters/pretty_table.ex
+@@ -12,6 +12,10 @@ defmodule RabbitMQ.CLI.Formatters.PrettyTable do
+   require Record
+   import Record
+ 
++  # Elixir 1.15 compiler optimizations require that we explicitly
++  # add the stdout_formatter code path
++  true = Code.append_path(Path.join([System.get_env("DEPS_DIR"), "stdout_formatter", "ebin"]))
++
+   defrecord :table,
+             extract(:table,
+               from_lib: "stdout_formatter/include/stdout_formatter.hrl"
+--- deps/rabbitmq_cli/lib/rabbitmqctl.ex
++++ deps/rabbitmq_cli/lib/rabbitmqctl.ex
+@@ -628,7 +628,7 @@ defmodule RabbitMQCtl do
+   ## {:fun, fun} - run a custom function to enable distribution.
+   ## custom mode is usefult for commands which should have specific node name.
+   ## Runs code if distribution is successful, or not needed.
+-  @spec maybe_with_distribution(module(), options(), (() -> command_result())) :: command_result()
++  @spec maybe_with_distribution(module(), options(), (-> command_result())) :: command_result()
+   defp maybe_with_distribution(command, options, code) do
+     try do
+       maybe_with_distribution_without_catch(command, options, code)
+--- deps/rabbitmq_cli/mix.exs
++++ deps/rabbitmq_cli/mix.exs
+@@ -135,6 +135,7 @@ defmodule RabbitMQCtl.MixfileBase do
+     end
+ 
+     make_cmd = System.get_env("MAKE", "make")
++    fake_cmd = "true"
+     is_bazel = System.get_env("IS_BAZEL") != nil
+ 
+     [
+@@ -149,17 +150,17 @@ defmodule RabbitMQCtl.MixfileBase do
+       {
+         :stdout_formatter,
+         path: Path.join(deps_dir, "stdout_formatter"),
+-        compile: if(is_bazel, do: false, else: make_cmd)
++        compile: if(is_bazel, do: fake_cmd, else: make_cmd)
+       },
+       {
+         :observer_cli,
+         path: Path.join(deps_dir, "observer_cli"),
+-        compile: if(is_bazel, do: false, else: make_cmd)
++        compile: if(is_bazel, do: fake_cmd, else: make_cmd)
+       },
+       {
+         :rabbit_common,
+         path: Path.join(deps_dir, "rabbit_common"),
+-        compile: if(is_bazel, do: false, else: make_cmd),
++        compile: if(is_bazel, do: fake_cmd, else: make_cmd),
+         override: true
+       }
+     ] ++
+@@ -174,6 +175,12 @@ defmodule RabbitMQCtl.MixfileBase do
+               :dialyxir,
+               path: Path.join(deps_dir, "dialyxir"), runtime: false
+             },
++            {
++              :rabbit,
++              path: Path.join(deps_dir, "rabbit"),
++              compile: if(is_bazel, do: fake_cmd, else: make_cmd),
++              override: true
++            },
+             {
+               :temp,
+               path: Path.join(deps_dir, "temp")
+@@ -185,7 +192,7 @@ defmodule RabbitMQCtl.MixfileBase do
+             {
+               :amqp_client,
+               path: Path.join(deps_dir, "amqp_client"),
+-              compile: if(is_bazel, do: false, else: make_cmd),
++              compile: if(is_bazel, do: fake_cmd, else: make_cmd),
+               override: true
+             }
+           ]
