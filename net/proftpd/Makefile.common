@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.14 2022/09/19 17:36:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.15 2023/07/07 11:44:35 jperkin Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
 
-DISTNAME=	proftpd-1.3.7c
+DISTNAME=	proftpd-1.3.7f
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 MASTER_SITES+=	ftp://ftp.servus.at/ProFTPD/distrib/source/
