@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:24:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/07 08:25:37 nia Exp $
 
 BLAKE2s (xbeats-0.4.tar.gz) = 3d20da62c10d512680cc858601a298b3b8bd383771a535bfa8ad26de58a028ea
 SHA512 (xbeats-0.4.tar.gz) = d2b7ff29278b4088483f7283c18fd56bafc0ccf966aa9ca3ee9c5e6501130e3efa096af8c4524eee07c103927972091b24d135538c2012de059aa8acb1a4b25a
 Size (xbeats-0.4.tar.gz) = 37526 bytes
 SHA1 (patch-aa) = 79226edb7949514983c6c83f13e2056cac3f0c51
+SHA1 (patch-parser.c) = 681d7e057bad0017015ae9af5264ab33636d2554
+SHA1 (patch-xbeats.c) = 2aca5752d8a5f585fbe9b2fd705fd54b89f676e4
