@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/07 07:25:55 adam Exp $
 
-DISTNAME=	click-8.1.3
+DISTNAME=	click-8.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click/}
@@ -10,19 +10,14 @@ HOMEPAGE=	https://palletsprojects.com/p/click/
 COMMENT=	Simple wrapper around optparse for powerful command line utilities
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-.endif
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
