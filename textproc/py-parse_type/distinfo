@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/02/14 18:29:33 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/07/07 13:47:11 adam Exp $
 
-BLAKE2s (parse_type-0.6.0.tar.gz) = 32a0aca82e353eb5a5f53d692e23804a3be86f000abcbfca798b886dac1d4e87
-SHA512 (parse_type-0.6.0.tar.gz) = bc0c20d485996761831c37f3be08639a67c145a87367f8b05bc3f3b67bed61888cb3318d060aa4ce068f9318f4a803311fbf20436df05f79433dcc8600881955
-Size (parse_type-0.6.0.tar.gz) = 272751 bytes
+BLAKE2s (parse_type-0.6.2.tar.gz) = 8428c0fbc606da7faa1c6e42290e0b96542074a6e91303193a4767cf0faebe3d
+SHA512 (parse_type-0.6.2.tar.gz) = d614b105696baf135a7f8c84f751a2491dc7558cadf1c3891f1223f6196a7b041c499f3df4902b04daca5e6507522ec0f99533b6b1d027773a15f7738a574958
+Size (parse_type-0.6.2.tar.gz) = 69720 bytes
