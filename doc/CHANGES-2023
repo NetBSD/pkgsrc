@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4293 2023/07/07 07:26:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4294 2023/07/07 08:07:29 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5977,3 +5977,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/croc version 9.6.5 [charlotte 2023-07-06]
 	Updated net/yt-dlp to 2023.7.6 [adam 2023-07-07]
 	Updated devel/py-click to 8.1.4 [adam 2023-07-07]
+	Updated comms/libhidapi to 0.14.0 [triaxx 2023-07-07]
