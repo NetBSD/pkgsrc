@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/08/08 09:40:43 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/07 08:30:15 nia Exp $
 
 DISTNAME=	wmitime-0.5
 PKGREVISION=	1
@@ -20,6 +20,7 @@ BUILD_TARGET=	wmitime
 
 USE_TOOLS+=	gmake
 
+.include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libdockapp+=	libdockapp>=0.7.0
 .include "../../devel/libdockapp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
