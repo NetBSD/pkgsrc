@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/11/20 18:28:44 is Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/07 08:35:34 nia Exp $
 #
 
 DISTNAME=		saytime_27jan2015
@@ -9,15 +9,17 @@ MASTER_SITES=		https://www.acme.com/software/saytime/
 MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		https://www.acme.com/software/saytime/
 COMMENT=		Talking clock
+LICENSE=		2-clause-bsd
 
 USE_TOOLS+=	pax
 
-# Needs /dev/audio.
-NOT_FOR_PLATFORM=	Interix-*-*
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS" && !exists(/usr/include/sys/audioio.h)
+PKG_SKIP_REASON+=	"Needs /dev/audio"
+.endif
 
 WRKSRC=			${WRKDIR}/saytime
-
-.include "../../mk/bsd.prefs.mk"
 
 pre-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.template

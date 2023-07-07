@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2022/11/20 18:26:21 is Exp $
+$NetBSD: patch-aa,v 1.5 2023/07/07 08:35:34 nia Exp $
 
 Use pkgsrc layout/flags.
 
---- Makefile.orig	1995-11-11 20:39:27.000000000 +0100
+--- Makefile.orig	2015-01-27 20:13:39.000000000 +0000
 +++ Makefile
-@@ -1,16 +1,13 @@
+@@ -1,25 +1,19 @@
  # Makefile for saytime
  
 -#SOUND_DIR =	\"/usr/local/lib/saytime\"
@@ -26,7 +26,17 @@ Use pkgsrc layout/flags.
  #DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DWRITE_STDOUT -DAUDIO_HEADER
  #DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DWRITE_STDOUT
  
-@@ -30,10 +26,10 @@ saytime:	saytime.o
+ 
+ CC =		cc
+-CFLAGS =	-O $(DEFINES)
+-
+-#LDFLAGS =	-s
+-LDFLAGS =	-s -static
++CFLAGS+=	-O $(DEFINES)
+ 
+ all:		saytime
+ 
+@@ -30,10 +24,10 @@ saytime:	saytime.o
  	$(CC) $(CFLAGS) -c $<
  
  install:        all
