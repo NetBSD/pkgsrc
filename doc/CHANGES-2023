@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4302 2023/07/07 13:39:44 micha Exp $
+$NetBSD: CHANGES-2023,v 1.4303 2023/07/07 13:47:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5989,3 +5989,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/roundcube-plugin-password to 1.6.2nb1 [taca 2023-07-07]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.2 [taca 2023-07-07]
 	Updated graphics/graphviz to 8.1.0 [micha 2023-07-07]
+	Updated lang/elixir to 1.15.2 [adam 2023-07-07]
+	Updated textproc/py-parse_type to 0.6.2 [adam 2023-07-07]
