@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/17 15:41:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/07/07 12:57:21 taca Exp $
 share/examples/roundcube/plugins/password/config.inc.php
 share/roundcube/plugins/password/README
 share/roundcube/plugins/password/composer.json
@@ -109,6 +109,7 @@ share/roundcube/plugins/password/localization/sv_SE.inc
 share/roundcube/plugins/password/localization/th_TH.inc
 share/roundcube/plugins/password/localization/ti.inc
 share/roundcube/plugins/password/localization/tr_TR.inc
+share/roundcube/plugins/password/localization/ug.inc
 share/roundcube/plugins/password/localization/uk_UA.inc
 share/roundcube/plugins/password/localization/uz.inc
 share/roundcube/plugins/password/localization/vi_VN.inc
