@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/07/06 10:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/07 10:33:26 jperkin Exp $
 
 DISTNAME=	exiv2-0.28.0-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -15,8 +15,7 @@ CHECK_PORTABILITY_SKIP+=	contrib/coverity.sh
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
-# std::filesystem
-GCC_REQD+=	8
+GCC_REQD+=	3.3
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,7 +29,7 @@ CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-CXXFLAGS.SunOS+=	-fPIC
+CXXFLAGS.SunOS+=	-fPIC -DICONV_ACCEPTS_CONST_INPUT
 
 PKGCONFIG_OVERRIDE=	cmake/exiv2.pc.in
 
