@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/06/06 12:42:38 riastradh Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/07 08:05:21 nia Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
@@ -61,7 +61,12 @@ CMAKE_ARGS+=		-DXMLTO=
 CMAKE_ARGS+=		-DDBLATEX=
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
