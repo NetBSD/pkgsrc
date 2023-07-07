@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4300 2023/07/07 12:51:48 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4301 2023/07/07 12:58:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5984,3 +5984,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/fq to 0.7.0 [wiz 2023-07-07]
 	Updated lang/php82 to 8.2.8 [taca 2023-07-07]
 	Updated lang/php81 to 8.1.21 [taca 2023-07-07]
+	Updated mail/roundcube to 1.6.2 [taca 2023-07-07]
+	Updated mail/roundcube-plugin-enigma to 1.6.2 [taca 2023-07-07]
+	Updated mail/roundcube-plugin-password to 1.6.2nb1 [taca 2023-07-07]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.2 [taca 2023-07-07]
