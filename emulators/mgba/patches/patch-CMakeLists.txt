@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.7 2023/07/07 07:27:07 nia Exp $
+
+Avoid PLIST complexity on Haiku and Darwin.
+
+--- CMakeLists.txt.orig	2023-01-11 03:51:20.000000000 +0000
++++ CMakeLists.txt
+@@ -919,7 +919,7 @@ if(NOT SKIP_LIBRARY)
+ 	if(BUILD_SHARED)
+ 		install(TARGETS ${BINARY_NAME} LIBRARY DESTINATION ${LIBDIR} COMPONENT ${BINARY_NAME}-dev NAMELINK_ONLY)
+ 	endif()
+-	if(UNIX AND NOT APPLE AND NOT HAIKU)
++	if(UNIX)
+ 		install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/mgba-16.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/16x16/apps RENAME io.mgba.${PROJECT_NAME}.png COMPONENT ${BINARY_NAME})
+ 		install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/mgba-24.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/24x24/apps RENAME io.mgba.${PROJECT_NAME}.png COMPONENT ${BINARY_NAME})
+ 		install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/mgba-32.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/32x32/apps RENAME io.mgba.${PROJECT_NAME}.png COMPONENT ${BINARY_NAME})
