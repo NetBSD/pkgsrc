@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2023/06/28 23:41:41 charlotte Exp $
+# $NetBSD: Makefile,v 1.533 2023/07/07 02:00:14 charlotte Exp $
 #
 
 COMMENT=	Games
@@ -362,6 +362,7 @@ SUBDIR+=	quakeforge
 SUBDIR+=	quakespasm
 SUBDIR+=	quarry
 SUBDIR+=	redeclipse
+SUBDIR+=	redeclipse16
 SUBDIR+=	rftg
 SUBDIR+=	robotfindskitten
 SUBDIR+=	rocksndiamonds
