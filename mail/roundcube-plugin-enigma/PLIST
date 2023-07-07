@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/17 15:41:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/07 12:57:21 taca Exp $
 share/examples/roundcube/plugins/enigma/config.inc.php
 share/roundcube/plugins/enigma/README
 share/roundcube/plugins/enigma/bin/import_keys.sh
@@ -97,6 +97,7 @@ share/roundcube/plugins/enigma/localization/th_TH.inc
 share/roundcube/plugins/enigma/localization/ti.inc
 share/roundcube/plugins/enigma/localization/tr_TR.inc
 share/roundcube/plugins/enigma/localization/tzl.inc
+share/roundcube/plugins/enigma/localization/ug.inc
 share/roundcube/plugins/enigma/localization/uk_UA.inc
 share/roundcube/plugins/enigma/localization/ur_PK.inc
 share/roundcube/plugins/enigma/localization/uz.inc
