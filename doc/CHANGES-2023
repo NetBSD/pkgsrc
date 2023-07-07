@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4292 2023/07/07 03:28:02 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4293 2023/07/07 07:26:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5975,3 +5975,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/gnome-shell to 40.2nb17 [wiz 2023-07-06]
 	Added games/redeclipse16 version 1.6.0 [charlotte 2023-07-06]
 	Added net/croc version 9.6.5 [charlotte 2023-07-06]
+	Updated net/yt-dlp to 2023.7.6 [adam 2023-07-07]
+	Updated devel/py-click to 8.1.4 [adam 2023-07-07]
