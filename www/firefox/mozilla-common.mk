@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.256 2023/06/14 16:22:18 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.257 2023/07/07 13:47:09 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -91,8 +91,7 @@ CONFIGURE_ARGS+=	--disable-tests
 # Mozilla Bug 1432751
 #CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
-# webrtc option requires internal libvpx
-#CONFIGURE_ARGS+=	--with-system-libvpx
+CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
@@ -228,7 +227,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.89
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.90
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -241,9 +240,8 @@ BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 RUST_REQ=	1.65.0
 .include "../../lang/rust/rust.mk"
-# webrtc option requires internal libvpx
-#BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
-#.include "../../multimedia/libvpx/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.13.0
+.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 # TODO: check again, pkgsrc has hunspell 1.7
 # was: textproc/hunspell 1.3 is too old
