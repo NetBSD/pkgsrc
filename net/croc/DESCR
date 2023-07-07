@@ -1,0 +1,12 @@
+Croc is a tool that allows any two computers to simply and securely transfer
+files and folders. Croc may be the only CLI file-transfer tool that does all
+of the following:
+
+- Allows any two computers to transfer data (using a relay)
+- Provides end-to-end encryption (using PAKE)
+- Enables easy cross-platform transfers (Windows, Linux, Mac)
+- Allows multiple file transfers
+- Allows resuming transfers that are interrupted
+- Local server or port-forwarding not needed
+- IPv6-first with IPv4 fallback
+- Can use proxy, like Tor
