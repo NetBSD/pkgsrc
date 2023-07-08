@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/06/15 11:11:09 mef Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/08 07:02:39 mef Exp $
 
 R_PKGNAME=	RcppArmadillo
-R_PKGVER=	0.12.4.0.0
+R_PKGVER=	0.12.4.1.0
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Rcpp integration for the Armadillo templated linear algebra library
