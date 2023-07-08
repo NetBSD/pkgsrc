@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/05/10 05:16:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/08 06:59:49 adam Exp $
 
-DISTNAME=	pyxbe-1.0.1
+DISTNAME=	pyxbe-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyxbe/}
