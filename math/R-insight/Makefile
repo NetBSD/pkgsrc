@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/06/15 12:53:56 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/08 04:31:42 mef Exp $
 
 R_PKGNAME=	insight
-R_PKGVER=	0.19.2
+R_PKGVER=	0.19.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easy Access to Model Information for Various Model Objects
@@ -9,17 +9,17 @@ LICENSE=	gnu-gpl-v3
 
 # Packages suggested but not available:
 #   'AER', 'afex', 'aod', 'BayesFactor', 'bayestestR', 'betareg', 'bife',
-#   'biglm', 'blavaan', 'blme', 'brms', 'censReg', 'cgam',
-#   'clubSandwich', 'coxme', 'cplm', 'crch', 'datawizard', 'effectsize',
-#   'emmeans', 'epiR', 'estimatr', 'feisr', 'fixest', 'fungible', 'gam',
-#   'gamlss', 'gamm4', 'gbm', 'gee', 'geepack', 'GLMMadaptive',
-#   'glmmTMB', 'gmnl', 'gt', 'ivreg', 'JM', 'lavaan', 'lfe', 'lmerTest',
-#   'logistf', 'marginaleffects', 'mclust', 'MCMCglmm', 'merTools',
-#   'metaBMA', 'mice', 'mlogit', 'mhurdle', 'multgee', 'nonnest2',
-#   'ordinal', 'panelr', 'parameters', 'parsnip', 'pbkrtest',
+#   'biglm', 'blavaan', 'blme', 'brms', 'broom', 'car', 'carData',
+#   'censReg', 'cgam', 'clubSandwich', 'coxme', 'cplm', 'crch',
+#   'datawizard', 'effectsize', 'emmeans', 'epiR', 'estimatr', 'feisr',
+#   'fixest', 'fungible', 'gam', 'gamlss', 'gamlss.data', 'gamm4', 'gbm',
+#   'gee', 'geepack', 'geoR', 'GLMMadaptive', 'glmmTMB', 'gmnl', 'gt',
+#   'interp', 'ivreg', 'JM', 'lavaan', 'lavaSearch2', 'lfe', 'lmerTest',
+#   'MCMCglmm', 'merTools', 'metaBMA', 'metadat', 'metafor', 'metaplus',
+#   'mice', 'mlogit', 'mhurdle', 'mmrm', 'multgee', 'nestedLogit',
+#   'nonnest2', 'ordinal', 'parameters', 'parsnip', 'pbkrtest',
 #   'performance', 'plm', 'poorman', 'pscl', 'rms', 'robustlmm',
-#   'rstanarm', 'rstantools', 'speedglm', 'tripack', 'truncreg',
-#   'tweedie'
+#   'rstanarm', 'rstantools', 'speedglm', 'truncreg', 'tweedie', 'TMB'
 
 
 TEST_DEPENDS+=	R-VGAM-[0-9]*:../../math/R-VGAM
