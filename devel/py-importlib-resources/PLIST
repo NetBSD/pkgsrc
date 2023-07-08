@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/04 12:24:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/08 04:42:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -17,8 +17,6 @@ ${PYSITELIB}/importlib_resources/_compat.py
 ${PYSITELIB}/importlib_resources/_compat.pyc
 ${PYSITELIB}/importlib_resources/_itertools.py
 ${PYSITELIB}/importlib_resources/_itertools.pyc
-${PYSITELIB}/importlib_resources/_legacy.py
-${PYSITELIB}/importlib_resources/_legacy.pyc
 ${PYSITELIB}/importlib_resources/abc.py
 ${PYSITELIB}/importlib_resources/abc.pyc
 ${PYSITELIB}/importlib_resources/py.typed
