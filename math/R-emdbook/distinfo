@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/12/18 11:27:33 mef Exp $
+$NetBSD: distinfo,v 1.6 2023/07/08 00:16:39 mef Exp $
 
-BLAKE2s (R/emdbook_1.3.12.tar.gz) = 46aeb65dd3d46cbe5b5b3b46f7f4b9bc7192efb6ef33b1d6f5da949059b46174
-SHA512 (R/emdbook_1.3.12.tar.gz) = 37cdf17499d22acbe8b3d3f78413dcb3bf5762111583c1157d3f0c2d4a5611a7d8a5e26db907da5fa4499184e4a60658e0eb8ab388b4392dbc1753ee62bf5e24
-Size (R/emdbook_1.3.12.tar.gz) = 93562 bytes
+BLAKE2s (R/emdbook_1.3.13.tar.gz) = 6f2ab8bb6d4e24886ac3c64e98caab1ec8e4eef9c683a63ea1ea82a25c60fe53
+SHA512 (R/emdbook_1.3.13.tar.gz) = 47f04577923584e6d486e375914b6bdac51095a11eff8343c44fec56c1077e7bfea2f48572ceabab47b1e836896c378499604ce0c57d659d83cfab0f84109a58
+Size (R/emdbook_1.3.13.tar.gz) = 90415 bytes
