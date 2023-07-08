@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1060 2023/07/08 21:32:16 vins Exp $
+# $NetBSD: Makefile,v 1.1061 2023/07/08 22:17:44 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -363,6 +363,7 @@ SUBDIR+=	hs-process-extras
 SUBDIR+=	hs-temporary
 SUBDIR+=	hs-typed-process
 SUBDIR+=	htop
+SUBDIR+=	hw-probe
 SUBDIR+=	hytctl
 SUBDIR+=	i2ocfg
 SUBDIR+=	i3status
