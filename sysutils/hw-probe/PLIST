@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/08 22:15:42 vins Exp $
+bin/hw-probe
