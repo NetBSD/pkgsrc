@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/05/29 17:58:23 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/08 05:33:19 adam Exp $
 
-DISTNAME=	anyio-3.7.0
+DISTNAME=	anyio-3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -28,10 +28,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=4:../../devel/py-mock
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
 .endif
