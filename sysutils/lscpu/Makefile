@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/08 21:29:33 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/08 21:39:27 vins Exp $
 
 DISTNAME=	lscpu-1.2.0
 CATEGORIES=	sysutils
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NanXiao/lscpu/
 COMMENT=	The lscpu for BSD
 LICENSE=	modified-bsd
+
+ONLY_FOR_PLATFORM+=	FreeBSD-*-* OpenBSD-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-* Darwin-*-*
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
