@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4320 2023/07/08 20:17:01 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4321 2023/07/08 21:32:45 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/djbdnscurve6 to 44c [schmonz 2023-07-08]
 	Updated chat/iamb to 0.0.8 [pin 2023-07-08]
 	Updated net/termscp to 0.12.1 [pin 2023-07-08]
+	Added sysutils/lscpu version 1.2.0 [vins 2023-07-08]
