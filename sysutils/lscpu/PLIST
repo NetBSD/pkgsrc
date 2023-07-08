@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/08 21:29:33 vins Exp $
+bin/lscpu
+man/man1/lscpu.1
