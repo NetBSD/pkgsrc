@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4322 2023/07/08 22:09:32 otis Exp $
+$NetBSD: CHANGES-2023,v 1.4323 2023/07/08 22:19:03 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6017,3 +6017,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/termscp to 0.12.1 [pin 2023-07-08]
 	Added sysutils/lscpu version 1.2.0 [vins 2023-07-08]
 	Updated sysutils/zabbix60-server to 6.0.19 [otis 2023-07-08]
+	Added sysutils/hw-probe version 1.6 [vins 2023-07-08]
