@@ -1,0 +1,4 @@
+lscpu for OpenBSD, FreeBSD, NetBSD, Mac OS X & DragonFly.
+The main usage of this program should be for x86 architecture since it
+leverages CPUID instructions. For other architectures, it just shows
+very limited facts.
