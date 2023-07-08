@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.37 2022/09/29 00:53:10 markd Exp $
+$NetBSD: distinfo,v 1.38 2023/07/08 20:35:19 mrg Exp $
 
 BLAKE2s (gwenview-22.08.1.tar.xz) = a22f10dfcdee6b8a284265eb1ee11114822254b8c02bd097d0abb13cf48206d6
 SHA512 (gwenview-22.08.1.tar.xz) = 805d6e505cd74b731d01ba3930010e5bb46bd972741a7bc529f78d56bd3088e508757c61a58c2f147b4e2fbaca034d58590f59151080052e7d750e1f3e16ab6f
 Size (gwenview-22.08.1.tar.xz) = 6825004 bytes
+SHA1 (patch-lib_jpegcontent.cpp) = 91d3403c99347dfed6c789797353d8224492f69e
