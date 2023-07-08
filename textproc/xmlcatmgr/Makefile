@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/06/27 10:27:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/08 11:42:46 riastradh Exp $
 #
 
 DISTNAME=	xmlcatmgr-2.2
@@ -27,23 +27,23 @@ INSTALLATION_DIRS+=	share/examples/xmlcatmgr
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:tl} != "yes"
 XMLCATMGR=	${WRKSRC}/xmlcatmgr
 .else
-TOOL_DEPENDS+=	${PKGNAME}:../../textproc/xmlcatmgr
+TOOL_DEPENDS+=	${PKGNAME}:../../${PKGPATH}
 XMLCATMGR=	${TOOLBASE}/bin/xmlcatmgr
 .endif
 
 post-build:
-	@${ECHO} "Creating SGML catalogs..."
-	@${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml create
-	@${XMLCATMGR} -sc ${WRKDIR}/catalog.sgml create
-	@${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml add \
+	@${STEP_MSG} "Creating SGML catalogs..."
+	${RUN}${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml create
+	${RUN}${XMLCATMGR} -sc ${WRKDIR}/catalog.sgml create
+	${RUN}${XMLCATMGR} -sc ${WRKDIR}/catalog.etc.sgml add \
 		CATALOG ${PREFIX}/share/sgml/catalog
-	@${ECHO} "Creating XML catalogs..."
-	@${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml create
-	@${XMLCATMGR} -c ${WRKDIR}/catalog.xml create
-	@${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml add \
+	@${STEP_MSG} "Creating XML catalogs..."
+	${RUN}${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml create
+	${RUN}${XMLCATMGR} -c ${WRKDIR}/catalog.xml create
+	${RUN}${XMLCATMGR} -c ${WRKDIR}/catalog.etc.xml add \
 		nextCatalog ${PREFIX}/share/xml/catalog
 
 post-install:
