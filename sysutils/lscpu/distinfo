@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/07/08 21:29:33 vins Exp $
+
+BLAKE2s (lscpu-1.2.0.tar.gz) = a4133355535f08c6f7ccda2b4451d4ae3699654cfd1ae723410ba0b8c7339c51
+SHA512 (lscpu-1.2.0.tar.gz) = 4d884c792aa2c91d3b4f860c9054c5f11644c7a91dc6bb2ffe51601348063cedfa946fb49671589d379ed04dfd96fec58a71825df0d0c3eb5a5590f21abeb155
+Size (lscpu-1.2.0.tar.gz) = 7863 bytes
+SHA1 (patch-lscpu.c) = ee8e55e865330f249f8e66a79b1e66f45b5dc0f5
