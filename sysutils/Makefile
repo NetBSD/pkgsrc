@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1059 2023/06/26 12:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1060 2023/07/08 21:32:16 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -426,6 +426,7 @@ SUBDIR+=	logfinder
 SUBDIR+=	logrider
 SUBDIR+=	logrot
 SUBDIR+=	logrotate
+SUBDIR+=	lscpu
 SUBDIR+=	lsd
 SUBDIR+=	lsfp
 SUBDIR+=	lsof
