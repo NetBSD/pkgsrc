@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/03/10 11:01:17 otis Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/07/08 22:04:59 otis Exp $
 share/examples/${PKGBASE}/httpd-zabbix.conf
 share/examples/${PKGBASE}/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
@@ -409,9 +409,9 @@ share/zabbix/app/views/js/monitoring.host.dashboard.view.js.php
 share/zabbix/app/views/js/monitoring.host.view.js.php
 share/zabbix/app/views/js/monitoring.latest.view.js.php
 share/zabbix/app/views/js/monitoring.map.view.js.php
+share/zabbix/app/views/js/monitoring.navtreeitem.edit.js.php
 share/zabbix/app/views/js/monitoring.problem.view.js.php
 share/zabbix/app/views/js/monitoring.web.view.js.php
-share/zabbix/app/views/js/monitoring.widget.navtreeitem.edit.js.php
 share/zabbix/app/views/js/popup.acknowledge.edit.js.php
 share/zabbix/app/views/js/popup.dashboard.share.edit.js.php
 share/zabbix/app/views/js/popup.discovery.check.js.php
@@ -732,7 +732,6 @@ share/zabbix/include/classes/helpers/CElasticsearchHelper.php
 share/zabbix/include/classes/helpers/CEncryptHelper.php
 share/zabbix/include/classes/helpers/CHintBoxHelper.php
 share/zabbix/include/classes/helpers/CHousekeepingHelper.php
-share/zabbix/include/classes/helpers/CHtml.php
 share/zabbix/include/classes/helpers/CMapHelper.php
 share/zabbix/include/classes/helpers/CMathHelper.php
 share/zabbix/include/classes/helpers/CMediatypeHelper.php
@@ -785,6 +784,7 @@ share/zabbix/include/classes/html/CFormGrid.php
 share/zabbix/include/classes/html/CFormList.php
 share/zabbix/include/classes/html/CHorList.php
 share/zabbix/include/classes/html/CHostAvailability.php
+share/zabbix/include/classes/html/CHtmlEntity.php
 share/zabbix/include/classes/html/CIFrame.php
 share/zabbix/include/classes/html/CImageTextTable.php
 share/zabbix/include/classes/html/CImg.php
@@ -1045,13 +1045,13 @@ share/zabbix/include/classes/widgets/fields/CWidgetFieldMsItem.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldMsItemPrototype.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldMsService.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldMsSla.php
+share/zabbix/include/classes/widgets/fields/CWidgetFieldMsSysmap.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldNavTree.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldNumericBox.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldRadioButtonList.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldRangeControl.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldReference.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldSelect.php
-share/zabbix/include/classes/widgets/fields/CWidgetFieldSelectResource.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldSeverities.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldTags.php
 share/zabbix/include/classes/widgets/fields/CWidgetFieldTextArea.php
@@ -1215,7 +1215,6 @@ share/zabbix/items.php
 share/zabbix/js/browsers.js
 share/zabbix/js/chkbxrange.js
 share/zabbix/js/class.base-component.js
-share/zabbix/js/class.bbcode.js
 share/zabbix/js/class.browsertab.js
 share/zabbix/js/class.calendar.js
 share/zabbix/js/class.cdate.js
