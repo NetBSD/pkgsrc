@@ -1,0 +1,16 @@
+A tool to probe for hardware, check operability and find drivers
+with the help of BSD hardware database.
+
+Probe is a snapshot of your computer hardware state and system
+logs.  The tool checks operability of devices by analysis of logs
+and returns a permanent URL to view the probe of the computer.
+
+The tool is intended to simplify collecting of logs necessary for
+investigating hardware related problems.  Just run one simple
+command (requires superuser privileges) in the console to check
+your hardware and collect all the system logs at once:
+
+    # hw-probe -all -upload
+
+By creating probes you also contribute to the HDD/SSD reliability
+test study (https://github.com/bsdhw/SMART).

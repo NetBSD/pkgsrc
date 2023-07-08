@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/08 22:15:42 vins Exp $
+
+BLAKE2s (hw-probe-1.6/hw-probe) = 635ebfd03db6d806aa8c54396a07ec6c3ec83b0ee9ca04197f0623249226a331
+SHA512 (hw-probe-1.6/hw-probe) = f811d34297f1cca048cd02929d2c962a36f593c8f15385578082671dd0d2e1cc0aef7de991559adfeca98abf1cad88b97be0dd0e6094194103323fdd8d35b177
+Size (hw-probe-1.6/hw-probe) = 551369 bytes
