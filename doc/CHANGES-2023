@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4307 2023/07/07 20:48:41 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4308 2023/07/08 00:16:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -5996,3 +5996,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/qpdf to 11.4.0 [ryoon 2023-07-07]
 	Updated www/firefox102-l10n to 102.13.0 [nia 2023-07-07]
 	Updated www/firefox102 to 102.13.0 [nia 2023-07-07]
+	Updated math/R-emdbook to 1.3.13 [mef 2023-07-08]
