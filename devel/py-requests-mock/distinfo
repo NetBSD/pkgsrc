@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/10/13 16:13:43 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/07/08 07:33:35 adam Exp $
 
-BLAKE2s (requests-mock-1.10.0.tar.gz) = f2a8e11c21576d89c4da9b91f6a6ccef51df81152e16d1c59d9eebb6ce790bf2
-SHA512 (requests-mock-1.10.0.tar.gz) = 873c9b219e2a2360872fac22c83371ce40f4dee45e6a0d40365f4f551271c2168a662dced6e8baad890b1dadfc03d21d4ce013f149d25a42d998af4f4fca2a79
-Size (requests-mock-1.10.0.tar.gz) = 72627 bytes
+BLAKE2s (requests-mock-1.11.0.tar.gz) = 071f077178cfafdb62ce6b7d0a7c9632ad3c8bf4b460ae47122b92d6b48e5b1b
+SHA512 (requests-mock-1.11.0.tar.gz) = 8d161cb0f6183994053d4dd06b801c2614b7ac937798addcdc52ee8e3973a7ef874ca615ca1946ea4bc0e05ce36c5c813460f7a41b3254671095059536fd2961
+Size (requests-mock-1.11.0.tar.gz) = 74377 bytes

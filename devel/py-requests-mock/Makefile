@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/06/06 12:41:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/08 07:33:35 adam Exp $
 
-DISTNAME=	requests-mock-1.10.0
+DISTNAME=	requests-mock-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-mock/}
@@ -14,16 +14,16 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.3:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-purl-[0-9]*:../../www/py-purl
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-futures-[0-9]*:../../devel/py-requests-futures
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-testrepository>=0.0.18:../../devel/py-testrepository
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
