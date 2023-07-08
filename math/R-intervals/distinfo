@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/06/11 05:47:25 mef Exp $
+$NetBSD: distinfo,v 1.11 2023/07/08 05:14:49 mef Exp $
 
-BLAKE2s (R/intervals_0.15.3.tar.gz) = 57b16494e6c01509ee45ad464284701787ba71196106530f98e3bb06773f7592
-SHA512 (R/intervals_0.15.3.tar.gz) = e73fa59dd0782a9a857141da2202db0bf80f87d92ce0d912c34c818fa670bb7d6be277f20a1af58d24a1062978d15603092955866ac24b9bcb0ab9320358da8a
-Size (R/intervals_0.15.3.tar.gz) = 499808 bytes
+BLAKE2s (R/intervals_0.15.4.tar.gz) = d0a64ba320fc2e2411a57a53957ce6b79514babf06a21b122d4f363d332adbbb
+SHA512 (R/intervals_0.15.4.tar.gz) = db89695752c45c07f2efad5b1f59313e6b64d146fcdf0d3770542c168b7415fa45084a710fe4acf2474fd44ece2bf10abec8c7b5a94fb004bafda2153fff923f
+Size (R/intervals_0.15.4.tar.gz) = 499991 bytes
