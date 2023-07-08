@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/05/10 05:16:19 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/07/08 06:59:49 adam Exp $
 
-BLAKE2s (pyxbe-1.0.1.tar.gz) = 787493a1fa1bd1581da76117ba2f581c487f3aea888bdb4a5ca1b0b7b1876b73
-SHA512 (pyxbe-1.0.1.tar.gz) = 7989c3c376bb7fc2a2a1fa32d2ab651c215e84d2c8e98cb92ed38f82a1828d1a77b9d7ac16bdb7576050754c1b081966319b9ae6dbea621444790bb17f8252a9
-Size (pyxbe-1.0.1.tar.gz) = 18103 bytes
+BLAKE2s (pyxbe-1.0.2.tar.gz) = 351be58aa08ae6f68898b0d78da6cc6299c925ba24eaf3d65197618275e49b7a
+SHA512 (pyxbe-1.0.2.tar.gz) = de663d7533fa9d63e52b76c24be230a6c35baf74743a110937deaadd2399fa43af40d41d1c68086b5e76d7d81e6d0d7911c38ff6e1d5439a248e48e81b609541
+Size (pyxbe-1.0.2.tar.gz) = 17160 bytes
+SHA1 (patch-setup.cfg) = 14881f7adb83a05fec49137ca7e56162f43058b3
