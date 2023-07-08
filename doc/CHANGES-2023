@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4313 2023/07/08 06:06:28 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4314 2023/07/08 07:02:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6006,3 +6006,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-MechanicalSoup to 1.3.0 [adam 2023-07-08]
 	Updated devel/py-anyio to 3.7.1 [adam 2023-07-08]
 	Updated math/R-lme4 to 1.1.34 [mef 2023-07-08]
+	Updated math/R-RcppArmadillo to 0.12.4.1.0 [mef 2023-07-08]
