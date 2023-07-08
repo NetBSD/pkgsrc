@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/29 07:44:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/08 07:33:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -23,6 +23,7 @@ ${PYSITELIB}/requests_mock/contrib/__init__.pyc
 ${PYSITELIB}/requests_mock/contrib/__init__.pyo
 ${PYSITELIB}/requests_mock/contrib/_pytest_plugin.py
 ${PYSITELIB}/requests_mock/contrib/_pytest_plugin.pyc
+${PYSITELIB}/requests_mock/contrib/_pytest_plugin.pyi
 ${PYSITELIB}/requests_mock/contrib/_pytest_plugin.pyo
 ${PYSITELIB}/requests_mock/contrib/fixture.py
 ${PYSITELIB}/requests_mock/contrib/fixture.pyc
