@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4310 2023/07/08 04:42:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4311 2023/07/08 05:15:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6002,3 +6002,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-trove-classifiers to 2023.7.6 [adam 2023-07-08]
 	Updated devel/py-importlib-metadata to 6.8.0 [adam 2023-07-08]
 	Updated devel/py-importlib-resources to 6.0.0 [adam 2023-07-08]
+	Updated math/R-intervals to 0.15.4 [mef 2023-07-08]
