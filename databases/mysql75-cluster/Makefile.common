@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/05/25 21:25:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/07/09 10:18:21 nia Exp $
 #
 
 DISTNAME=	mysql-cluster-gpl-7.5.25
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++03
-USE_TOOLS+=		bash gmake perl:run
+USE_TOOLS+=		bash gmake perl:run pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
