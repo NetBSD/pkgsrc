@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4342 2023/07/09 09:29:51 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4343 2023/07/09 09:54:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6049,3 +6049,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-actiontext70 to 7.0.6 [taca 2023-07-09]
 	Updated www/ruby-rails70 to 7.0.6 [taca 2023-07-09]
 	Updated net/sayaka to 3.6.5 [tsutsui 2023-07-09]
+	Removed www/squidpurge [nia 2023-07-09]
