@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/06/06 12:40:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/09 10:15:58 nia Exp $
 
 DISTNAME=	mongo-tools-4.2.15
 CATEGORIES=	databases
@@ -54,4 +54,5 @@ do-install:
 
 .include "../../lang/go/version.mk"
 .include "../../devel/go-sys/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
