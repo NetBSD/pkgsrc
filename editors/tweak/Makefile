@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/06/27 15:29:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/09 15:27:00 nia Exp $
 #
 
 DISTNAME=	tweak-3.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/tweak/
 
