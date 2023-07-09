@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/05/06 19:09:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/09 22:21:52 nia Exp $
 
 DISTNAME=	teeworlds-0.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -12,7 +12,8 @@ HOMEPAGE=	https://www.teeworlds.com/
 COMMENT=	Fast-paced retro multiplayer shooter
 LICENSE=	zlib AND 2-clause-bsd AND modified-bsd AND cc-by-sa-v3.0
 
-USE_LANGUAGES=	c c++03
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99 c++03
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
