@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/09/02 22:16:48 kim Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/09 22:14:42 nia Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 # The "offical" master site has lost the pub/Games directory.
 #MASTER_SITES=		ftp://ftp.cis.ksu.edu/pub/Games/Moria/source/
