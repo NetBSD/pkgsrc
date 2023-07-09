@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/06/28 23:40:48 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/09 22:02:18 nia Exp $
 
 DISTNAME=	mightymike-3.0.2
 CATEGORIES=	games
@@ -18,6 +18,9 @@ WRKSRC=	${WRKDIR}/MightyMike-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
+
+# __has_include
+GCC_REQD+=	5
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
