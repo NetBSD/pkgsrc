@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/07 10:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/09 13:59:49 nia Exp $
 
 DISTNAME=	cvise-2.8.0
 CATEGORIES=	devel
@@ -18,6 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex
 TEST_TARGET=	test
+
+# g++: error: unrecognized command line option '-std=c++17'
+GCC_REQD+=	7
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
