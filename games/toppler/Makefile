@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:45 nia Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/09 22:25:44 nia Exp $
 #
 
 DISTNAME=	toppler-1.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=toppler/}
 
@@ -12,10 +12,12 @@ COMMENT=	Tower Toppler/Nebulous clone
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
