@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/01/26 17:31:04 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/09 15:09:01 nia Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.cs.rhul.ac.uk/pub/rdp/
 MASTER_SITES+=		ftp://ftp.cs.rhul.ac.uk/pub/rdp/old_versions/
