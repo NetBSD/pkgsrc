@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/11/01 21:33:26 fcambus Exp $
+$NetBSD: distinfo,v 1.10 2023/07/09 15:27:00 nia Exp $
 
 BLAKE2s (tweak-3.02.tar.gz) = 170eca560ea496ce821c273c481e638ef65fa22d81d3179a8c1fbdeffbe23376
 SHA512 (tweak-3.02.tar.gz) = 4cf16eae1c48073ca77b0577585473288d7ecbc2d261a359db2cff372c1850cd809becb46bc745ac7d07e982d5eae9a0e0332402267ebab6b12cc952a02cff4e
 Size (tweak-3.02.tar.gz) = 71939 bytes
-SHA1 (patch-Makefile) = 43041b78d4bb28c84ab53792cbd39603c8ece038
+SHA1 (patch-Makefile) = 1bc33c0e261e6ae5329562b490f5e79ed6a87d04
 SHA1 (patch-keytab.c) = 369ec87681d21cc26f104ba5ef9cd59a2c99707a
 SHA1 (patch-rcfile.c) = 82bf8d167537de068650d3feaf5552ff7bb2be1b
