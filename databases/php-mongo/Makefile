@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:30:53 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/09 13:49:01 nia Exp $
 
 MODNAME=		mongo
 PECL_VERSION=		1.6.14
@@ -14,4 +14,5 @@ PHP_VERSIONS_ACCEPTED=	56
 .include "options.mk"
 
 .include "../../lang/php/ext.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
