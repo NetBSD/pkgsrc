@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:19:57 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/07/09 15:14:41 nia Exp $
 
 BLAKE2s (spiff-1.0.tar.gz) = 1eefbd7dacba51cf114bcb279e2efff622e3eb92fe899c1690fb7aedbbb1d13a
 SHA512 (spiff-1.0.tar.gz) = a93ff7a22644e67d548f31a3692d72242ead9a4b1ca69875b9cde748ea39a2c8d6a24eaac680fd02337290b87a10d0363111ef14ffca8eb02e36c83e0409b277
 Size (spiff-1.0.tar.gz) = 48291 bytes
-SHA1 (patch-aa) = 0a32ca2e2fd838cc21eca476111fe81a3f545181
+SHA1 (patch-aa) = 426ec126bf8196f387fadb81fe8b3284751f9566
 SHA1 (patch-ab) = 265a62ded94e73b42f8f46180613ff6e5de90399
 SHA1 (patch-ac) = d88280626b3d1621377d38037a52e79e6e35bb1a
 SHA1 (patch-ad) = 86d90bf42e1735f20fc8538522638f1b5af92d60
 SHA1 (patch-ae) = a4d5f04fa69e775f3e39e60c93b764d0a6c0af7c
 SHA1 (patch-af) = 5d922bcafe13e5f24347e78b9e1cd0859d295631
 SHA1 (patch-line.c) = 3eb93ebdb9918799b7f532019f4dcb65dc4fa75c
+SHA1 (patch-output.c) = ab59db490ca01e6983eebe830b7881a81bdd3590
