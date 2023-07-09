@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/09 14:36:30 nia Exp $
 
 DISTNAME=	Devel-MAT-Dumper-0.47
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Devel::MAT::Dumper
 COMMENT=	Write a heap dump file for later analysis
 LICENSE=	${PERL5_LICENSE}
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 #DEPENDS+=	p5-Commandable-[0-9]*:../../devel/p5-Commandable
 #TEST_DEPENDS+=	p5-Test-Identity-[0-9]*:../../devel/p5-Test-Identity
