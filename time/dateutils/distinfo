@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2023/06/26 15:29:56 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/07/09 20:35:20 jperkin Exp $
 
 BLAKE2s (dateutils-0.4.10.tar.xz) = 88da7c184dda111f19e6102d80ef353df0a638f26b9971deb19f4fa17b9dd192
 SHA512 (dateutils-0.4.10.tar.xz) = 04a9fff177596bb9bc47d3b221865bbeafeafbc708385610845a1cdcb2a7fa379e8d9363cce578836ae121dab7ee64e19f61d82e8f222250e52d23c5f43cf521
 Size (dateutils-0.4.10.tar.xz) = 652548 bytes
+SHA1 (patch-lib_ltrcc.c) = 1ad1ce98cb02ac90a62013e96f9e9a16e232a07b
 SHA1 (patch-m4_sxe-compiler.m4) = 43900ecee585b60b5283c82da89ad141f6f3cd91
