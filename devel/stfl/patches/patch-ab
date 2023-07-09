@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2016/06/07 17:57:11 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2023/07/09 15:16:33 nia Exp $
 
 libtoolify.
 
@@ -12,7 +12,7 @@ libtoolify.
 -export CFLAGS += -I. -Wall -Os -ggdb -D_GNU_SOURCE -fPIC
 -export LDLIBS += -lncursesw
 +export CFLAGS += -I. -Wall -D_GNU_SOURCE -pthread
-+export LDLIBS += ${CURSES_LIB}
++export LDLIBS += ${LDFLAGS} ${CURSES_LIB}
  
 -SONAME  := libstfl.so.0
 -VERSION := 0.24

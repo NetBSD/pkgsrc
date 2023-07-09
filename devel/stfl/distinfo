@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:19:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/07/09 15:16:33 nia Exp $
 
 BLAKE2s (stfl-0.24.tar.gz) = b5a87ea81ba698267b63233ee9e4d8fbcd7ddaede00fede2953f678fbac15e6d
 SHA512 (stfl-0.24.tar.gz) = 95df4574b1bc32d795751156dc5b93afbca3ba241607a3a55210c89dda61b9a26ad574bb5f729a0158c9052235dbf63d6c58b38e7f1061d14ab7062af6150fa0
 Size (stfl-0.24.tar.gz) = 45585 bytes
 SHA1 (patch-aa) = d7da2b2e561bc972a7ac976a9deb48805ed4a090
-SHA1 (patch-ab) = 8577547eed804983f4c09028bc4fc48e8f73661d
+SHA1 (patch-ab) = 195190daeb0acf3c210c00a58be38a18b5c74a87
 SHA1 (patch-ac) = dfaa67b489463ff4758161ffbf4bccad510f0d7f
 SHA1 (patch-ad) = 3a92ae825c02ced62802630ca82affedeab88a03
