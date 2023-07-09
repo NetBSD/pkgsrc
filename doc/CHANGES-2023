@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4344 2023/07/09 13:43:02 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.4345 2023/07/09 16:21:06 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6051,3 +6051,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.6.5 [tsutsui 2023-07-09]
 	Removed www/squidpurge [nia 2023-07-09]
 	Updated pkgtools/pkglint to 23.2.0 [rillig 2023-07-09]
+	Updated biology/vsearch to 2.23.0 [bacon 2023-07-09]
