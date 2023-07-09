@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 1999/08/30 02:35:10 simonb Exp $
---- source/main.c.orig	Fri Jul 22 11:47:27 1994
-+++ source/main.c	Sun Aug 29 09:25:32 1999
+$NetBSD: patch-ag,v 1.2 2023/07/09 22:14:42 nia Exp $
+--- source/main.c.orig	1994-07-22 01:47:27.000000000 +0000
++++ source/main.c
 @@ -92,7 +92,7 @@
  #ifndef MAC
  #ifndef GEMDOS
@@ -10,7 +10,24 @@ $NetBSD: patch-ag,v 1.1 1999/08/30 02:35:10 simonb Exp $
  #endif
  #endif
  char *getenv();
-@@ -363,7 +363,7 @@
+@@ -103,14 +103,12 @@ char *getenv();
+ #ifndef AMIGA
+ #ifdef USG
+ #if !defined(MSDOS) && !defined(ATARIST_TC)
+-unsigned short getuid(), getgid();
++#include <unistd.h>
+ #endif
+ #else
+ #ifndef SECURE
+ #ifdef BSD4_3
+-uid_t getuid(), getgid();
+-#else  /* other BSD versions */
+-int getuid(), getgid();
++#include <unistd.h>
+ #endif
+ #endif
+ #endif
+@@ -363,7 +361,7 @@ char *argv[];
  #ifdef MAC
        birth_date = time ((time_t *)0);
  #else

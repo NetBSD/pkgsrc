@@ -1,7 +1,32 @@
-$NetBSD: patch-af,v 1.1 1999/08/30 02:35:10 simonb Exp $
---- source/death.c.orig	Fri Jul 22 11:47:16 1994
-+++ source/death.c	Sun Aug 29 09:28:44 1999
-@@ -126,7 +126,7 @@
+$NetBSD: patch-af,v 1.2 2023/07/09 22:14:42 nia Exp $
+--- source/death.c.orig	1994-07-22 01:47:16.000000000 +0000
++++ source/death.c
+@@ -50,23 +50,7 @@
+ #endif
+ #endif
+ 
+-#ifdef VMS
+-unsigned int getuid(), getgid();
+-#else
+-#ifdef unix
+-#ifdef USG
+-unsigned short getuid(), getgid();
+-#else
+-#ifndef SECURE
+-#ifdef BSD4_3
+-uid_t getuid(), getgid();
+-#else  /* other BSD versions */
+-int getuid(), getgid();
+-#endif
+-#endif
+-#endif
+-#endif
+-#endif
++#include <unistd.h>
+ 
+ #ifdef USG
+ #ifndef ATARIST_MWC
+@@ -126,7 +110,7 @@ static void kingly(void);
  #ifndef VMS
  #ifndef MAC
  #if !defined(ATARIST_MWC) && !defined(AMIGA)
@@ -10,7 +35,7 @@ $NetBSD: patch-af,v 1.1 1999/08/30 02:35:10 simonb Exp $
  #endif
  #endif
  #endif
-@@ -144,9 +144,9 @@
+@@ -144,9 +128,9 @@ char *day;
  #ifdef MAC
    clockvar = time((time_t *) 0);
  #else
