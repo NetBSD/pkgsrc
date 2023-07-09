@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/04/26 19:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/09 15:17:46 nia Exp $
 
 DISTNAME=	tomlplusplus-3.3.0
 CATEGORIES=	devel
@@ -13,6 +13,9 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 MESON_ARGS+=	--datadir=lib
+
+# C++17
+GCC_REQD+=	7
 
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
