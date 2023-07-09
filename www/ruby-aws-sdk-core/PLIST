@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/12/04 15:39:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/09 03:10:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -94,6 +94,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_json.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/protocols/rest_xml.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/recursion_detection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/regional_endpoint.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/request_compression.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/response_paging.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/retries/client_rate_limiter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/retries/clock_skew.rb
