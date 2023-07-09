@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/03/05 14:15:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/09 02:52:41 taca Exp $
 bin/review-catalog-converter${RUBY_SUFFIX}
 bin/review-check${RUBY_SUFFIX}
 bin/review-checkdep${RUBY_SUFFIX}
@@ -126,6 +126,7 @@ ${GEM_LIBDIR}/lib/review/i18n.rb
 ${GEM_LIBDIR}/lib/review/i18n.yml
 ${GEM_LIBDIR}/lib/review/idgxmlbuilder.rb
 ${GEM_LIBDIR}/lib/review/idgxmlmaker.rb
+${GEM_LIBDIR}/lib/review/img_graph.rb
 ${GEM_LIBDIR}/lib/review/img_math.rb
 ${GEM_LIBDIR}/lib/review/index_builder.rb
 ${GEM_LIBDIR}/lib/review/init-web/finish.html
