@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/22 14:10:42 fcambus Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/09 15:28:30 nia Exp $
 
 DISTNAME=	wabt-1.0.33
 CATEGORIES=	devel
@@ -13,11 +13,15 @@ CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c gnu++17
+USE_LANGUAGES=	c c++
+
+# C++17
+GCC_REQD+=	7
 
 CMAKE_ARGS+=	-DBUILD_TESTS=OFF -DBUILD_LIBWASM=OFF
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
