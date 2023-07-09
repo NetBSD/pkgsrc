@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/05/06 19:09:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/09 21:48:44 nia Exp $
 
 DISTNAME=	xroar-1.0.2
 PKGREVISION=	6
@@ -10,12 +10,13 @@ HOMEPAGE=	https://www.6809.org.uk/xroar/
 COMMENT=	MC6809-based Dragon and Colour Computer (CoCo) emulator
 LICENSE=	gnu-gpl-v3
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 
+.include "options.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
