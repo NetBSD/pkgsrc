@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:20:07 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/07/09 15:21:38 nia Exp $
 
 BLAKE2s (uno_v213.tar.gz) = f58e9550eb72dfccace7a662dcf03aee73e1869d4f21271a43ea4e83326a5fee
 SHA512 (uno_v213.tar.gz) = 07335bd4110034a2067c1958ce04de31af792ae86d78bae0d615b0ec90e9146340f7953bb5e4d22be10352c669712eac90d4164bbf2bc839b1af7c4e7adbd35a
 Size (uno_v213.tar.gz) = 239127 bytes
 SHA1 (patch-aa) = 1585fa0e6fa1c3229fbb705c046996314391c5a2
 SHA1 (patch-ab) = 01fe0a5fdc85e8d6103d2a9bbd8556661a84a7c8
+SHA1 (patch-makefile) = fb60e51412844aa3bebf968e01fe8505e023bd2f
