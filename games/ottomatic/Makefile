@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/06 19:09:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/09 22:18:44 nia Exp $
 
 DISTNAME=	ottomatic-4.0.1
 PKGREVISION=	2
@@ -16,6 +16,9 @@ GITHUB_SUBMODULES=	\
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
+
+# __has_include
+GCC_REQD+=	5
 
 WRKSRC=			${WRKDIR}/OttoMatic-${PKGVERSION_NOREV}
 
