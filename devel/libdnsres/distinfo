@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/09 14:11:49 nia Exp $
 
 BLAKE2s (libdnsres-0.1a.tar.gz) = 90c2d0a6f9c262523d6ed3b5b7dd6991fa315b33d24afa4ce8715c5c83640dd7
 SHA512 (libdnsres-0.1a.tar.gz) = d6b1c248a99eeaea3524ee8af01dd31ba507179a69ffb313a167611792084d5efc99fe6462a63480932faa3493b01c3c43fc7575dab6aaade885583bee006f67
 Size (libdnsres-0.1a.tar.gz) = 360583 bytes
-SHA1 (patch-aa) = e18e80c307c26e0d7c1626171f7c881092174b29
+SHA1 (patch-aa) = edf36576052ff920f438b1cfbcc233c161965b35
 SHA1 (patch-ab) = 29d8a2092c444899e4fdc703b35af33efa95192b
 SHA1 (patch-resolv.h) = 22b59a63b26ffcc5816809f7384c4fc9125d4cbd
