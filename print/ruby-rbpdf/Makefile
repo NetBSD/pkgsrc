@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/30 13:20:51 taca Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/09 02:11:21 taca Exp $
 
-DISTNAME=	rbpdf-1.21.1
+DISTNAME=	rbpdf-1.21.2
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
