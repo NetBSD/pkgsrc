@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/05/06 19:09:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2023/07/09 22:19:25 nia Exp $
 
 DISTNAME=		quakeforge-0.7.2
 PKGREVISION=		19
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--enable-xdg
 CONFIGURE_ARGS+=	--with-cpp=${CPP:Q}" %d %i %o"
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake pkg-config
+USE_TOOLS+=		bison flex gmake pkg-config
 USE_LIBTOOL=		YES
 
 SUBST_CLASSES+=		dsp
