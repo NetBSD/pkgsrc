@@ -1,7 +1,0 @@
-The purge tool is a kind of magnifying glass into your squid-2 cache.
-You can use purge to have a look at what URLs are stored in which file
-within your cache.  The purge tool can also be used to release objects
-which URLs match user specified regular expressions.  It can extract
-objects matching a regular expression, creating a directory tree
-matching the server layout.  A more troublesome feature is the ability
-to remove files squid does not seem to know about any longer.
