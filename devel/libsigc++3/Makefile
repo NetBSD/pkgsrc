@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/07/25 19:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/09 14:24:08 nia Exp $
 
 DISTNAME=	libsigc++-3.2.0
 PKGNAME=	${DISTNAME:S/-/3-/}
@@ -11,11 +11,12 @@ HOMEPAGE=	https://github.com/libsigcplusplus/libsigcplusplus
 COMMENT=	Type-safe callback system for C++ programs
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gm4 pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
-GCC_REQD+=	4.8
+# C++17
+GCC_REQD+=		7
 
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
