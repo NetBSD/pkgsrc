@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/07/04 10:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/09 15:06:43 nia Exp $
 
 DISTNAME=	pygit2-1.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.9.1:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 PYSETUPTESTTARGET=	pytest
 
