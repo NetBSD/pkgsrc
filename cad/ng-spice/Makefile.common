@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/06/06 09:54:12 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/07/09 13:20:23 nia Exp $
 #
 # used by can/ng-spice
 # used by can/ng-spice-shared
@@ -16,7 +16,8 @@ LICENSE=	modified-bsd AND gnu-lgpl-v2.1 AND gnu-gpl-v2 AND mpl-2.0
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=		c99 c++
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-debug
