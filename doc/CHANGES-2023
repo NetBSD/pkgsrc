@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4333 2023/07/09 03:06:03 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4334 2023/07/09 03:08:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6028,3 +6028,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-review to 5.8.0 [taca 2023-07-09]
 	Updated textproc/ruby-sanitize to 6.0.2 [taca 2023-07-09]
 	Updated www/ruby-aws-partitions to 1.785.0 [taca 2023-07-09]
+	Updated www/ruby-aws-sigv4 to 1.6.0 [taca 2023-07-09]
