@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/05/28 22:48:27 bacon Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/09 08:39:03 nia Exp $
 
 DISTNAME=	ncbi-blast-2.14.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
@@ -10,6 +10,10 @@ MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
+
+# configure: error:
+# Please upgrade to a compiler supporting C++ '17, such as GCC 7.1 or newer.
+GCC_REQD+=	7
 
 # Nobody does bioinformatics on 32-bit processors anymore
 ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
