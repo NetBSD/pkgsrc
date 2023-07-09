@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:44:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/09 22:09:28 nia Exp $
 
 BLAKE2s (KnightCap-3.6.tar.gz) = 8c369b356315c72f96825ea2a1a252a90afa473b7bc9a740bc11dc5670ab5722
 SHA512 (KnightCap-3.6.tar.gz) = 13eb4d92dc289d3794143ed3eb318aef8f5e5d969b8de67b3cdba343dd95e6cb0ba963f40133381835df229330baae35b38907e0fe28794b522f5ff3bd489d4f
@@ -6,7 +6,7 @@ Size (KnightCap-3.6.tar.gz) = 157943 bytes
 SHA1 (patch-aa) = 8be5487db04419c82e8fcb9569145303ab783ef2
 SHA1 (patch-ab) = ad31712d14e820521f38432eaa75be5a47a23693
 SHA1 (patch-ac) = de3ce657b4d45aabde42faebe1e32dd95c190795
-SHA1 (patch-ad) = e9d87f18e34ec50defa435bc040f107da581e087
+SHA1 (patch-ad) = cdb56150cc70b7997f38539e63cb86761aa13115
 SHA1 (patch-ae) = 40882eb1368e90283a0bd79d1dd0d3f354fdb2ff
 SHA1 (patch-af) = cb051c8780f6cd81924747e8c140c4a32193f330
 SHA1 (patch-ag) = 54358f858d37569eb13fb6c8fa76b38586051636

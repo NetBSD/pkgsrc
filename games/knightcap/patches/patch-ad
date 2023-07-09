@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2010/10/03 08:53:00 obache Exp $
+$NetBSD: patch-ad,v 1.4 2023/07/09 22:09:28 nia Exp $
 
---- knightcap.h.orig	1998-05-18 02:09:21 +0300
-+++ knightcap.h	2009-08-01 07:33:40 +0300
+--- knightcap.h.orig	1998-05-17 23:09:21.000000000 +0000
++++ knightcap.h
 @@ -92,7 +92,22 @@ typedef short etype;
  #define USE_PBRAIN 1
  #endif
@@ -46,27 +46,41 @@ $NetBSD: patch-ad,v 1.3 2010/10/03 08:53:00 obache Exp $
  
  typedef enum {B_KING = -6,B_QUEEN = -5,B_ROOK = -4,B_BISHOP = -3,
  	      B_KNIGHT = -2,B_PAWN = -1,
-@@ -632,6 +656,11 @@ static inline int imax(int i1, int i2)
- 	return i1 > i2? i1 : i2;
- }
+@@ -622,25 +646,29 @@ static inline Square mirror_square(Squar
  
-+#if defined(__DragonFly__) || defined(__NetBSD__)
-+#include <sys/param.h>
-+#endif
-+
-+#if !(defined(__DragonFly__) && __DragonFly_version >= 200204) && !(defined(__NetBSD__) && (__NetBSD_Version__ >= 599002100 || (__NetBSD_Version__ >= 501000000 && __NetBSD_Version__ < 599000000)))
- static inline float fmin(float i1, float i2)
+ #define RAMP(x) ((x)<0?(x):RAMP_FACTOR*(x))
+ 
+-static inline int imin(int i1, int i2)
++static inline int knightcap_imin(int i1, int i2)
  {
  	return i1 > i2? i2 : i1;
-@@ -641,6 +670,7 @@ static inline float fmax(float i1, float
+ }
++#define imin knightcap_imin
+ 
+-static inline int imax(int i1, int i2)
++static inline int knightcap_imax(int i1, int i2)
  {
  	return i1 > i2? i1 : i2;
  }
-+#endif
++#define imax knightcap_imax
+ 
+-static inline float fmin(float i1, float i2)
++static inline float knightcap_fmin(float i1, float i2)
+ {
+ 	return i1 > i2? i2 : i1;
+ }
++#define fmin knightcap_fmin
+ 
+-static inline float fmax(float i1, float i2)
++static inline float knightcap_fmax(float i1, float i2)
+ {
+ 	return i1 > i2? i1 : i2;
+ }
++#define fmax knightcap_fmax
  
  static inline etype emin(etype i1, etype i2)
  {
-@@ -884,4 +914,8 @@ static inline int pop_count32(uint32 x)
+@@ -884,4 +912,8 @@ static inline int pop_count32(uint32 x)
  	return pop_count16((x) & 0xFFFF) + pop_count16((x) >> 16);
  }
  
