@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:03:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/07/09 08:31:06 nia Exp $
 
 BLAKE2s (miniasm/v0.3.tar.gz) = 0a6cd0d9e5c1872f30cafd665a597744eacea7d04f002b63ac751a96c998657e
 SHA512 (miniasm/v0.3.tar.gz) = e5f622e079283d69bb878cbb9768f7522d279f89fc11f86a2b1fdade9e09e681e742d9e4be46bed4c864e4fef3d0d6760348c85cf1d5e029a36d96c45f885160
 Size (miniasm/v0.3.tar.gz) = 204805 bytes
+SHA1 (patch-Makefile) = 34c4a68d7fd88659162e534a8a92a265a6982a4a
