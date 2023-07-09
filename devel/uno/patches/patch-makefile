@@ -1,0 +1,32 @@
+$NetBSD: patch-makefile,v 1.1 2023/07/09 15:21:38 nia Exp $
+
+Honour CFLAGS/LDFLAGS.
+
+--- makefile.orig	2007-10-27 00:33:12.000000000 +0000
++++ makefile
+@@ -26,7 +26,7 @@
+ BINDIR=/usr/bin/
+ # note the terminal / in the above line is needed
+ CC=gcc
+-CFLAGS=-ansi -Wall -m32 -ggdb -DBINDIR=\"$(BINDIR)\"
++CFLAGS+=-Wall -m32 -ggdb -DBINDIR=\"$(BINDIR)\"
+ 
+ # on PC add:
+ #	-DPC
+@@ -66,13 +66,13 @@ sharing:
+ 		uno_generic.c uno_intervals.c uno_lts.c
+ 
+ uno:	uno.c
+-	$(CC) $(CFLAGS) -o uno uno.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o uno uno.c
+ 
+ uno_local:	c_gram.h $(OFILES) 
+-	$(CC) $(CFLAGS) -o uno_local $(OFILES)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o uno_local $(OFILES)
+ 
+ uno_global:	uno_global.o uno_fcts.o
+-	$(CC) $(CFLAGS) -o uno_global uno_global.o uno_fcts.o
++	$(CC) $(CFLAGS) $(LDFLAGS) -o uno_global uno_global.o uno_fcts.o
+ 
+ c_gram.c c_gram.h:	c_gram.y tree.h symtab.h globals.h
+ 	bison -v -d -o c_gram.c c_gram.y	# expect 6 shift/reduce 23 reduce/reduce conflicts
