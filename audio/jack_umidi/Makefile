@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/05/06 19:09:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/09 08:12:25 nia Exp $
 
 DISTNAME=	jack_umidi-1.1.2
 PKGREVISION=	3
@@ -15,6 +15,8 @@ MAKE_FLAGS+=	HAVE_MAN=yes
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 USE_BSD_MAKEFILE=	yes
+
+ONLY_FOR_PLATFORM+=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
