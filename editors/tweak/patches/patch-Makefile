@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2021/05/14 14:22:04 nia Exp $
+$NetBSD: patch-Makefile,v 1.6 2023/07/09 15:27:00 nia Exp $
 
 DESTDIR and curses support.
 
@@ -35,3 +35,12 @@ DESTDIR and curses support.
  TWEAK += curses.o
  endif
  
+@@ -44,7 +44,7 @@ endif
+ all: tweak tweak.1 btree.html
+ 
+ tweak:	$(TWEAK)
+-	$(LINK) -o tweak $(TWEAK) $(LIBS)
++	$(LINK) $(LFLAGS) -o tweak $(TWEAK) $(LIBS)
+ 
+ tweak.1:  manpage.but
+ 	halibut --man=$@ $<
