@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/04/19 08:11:59 adam Exp $
+# $NetBSD: Makefile,v 1.69 2023/07/09 09:09:11 nia Exp $
 
 DISTNAME=		tint2-v17.0.2
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -14,7 +14,9 @@ HOMEPAGE=		https://gitlab.com/o9000/tint2
 COMMENT=		Lightweight panel/taskbar for X11
 LICENSE=		gnu-gpl-v2
 
-USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+# XXX CMake. pkg does not really need c++
+USE_LANGUAGES=		c99 c++
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt msgmerge pkg-config
