@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:37:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/09 09:11:51 nia Exp $
 
 DISTNAME=	ufdbGuard-${VERSION}
 VERSION=	1.35.3
@@ -55,5 +55,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/security/cacerts \
 		${DESTDIR}${PREFIX}/${EGDIR}/cacerts
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
