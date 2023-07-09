@@ -1,14 +1,16 @@
-# $NetBSD: options.mk,v 1.1 2020/10/02 10:25:03 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2023/07/09 21:48:44 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xroar
 
-PKG_SUPPORTED_OPTIONS+=		alsa oss pulseaudio
-PKG_OPTIONS_REQUIRED_GROUPS=	audio
-PKG_OPTIONS_GROUP.audio=	alsa oss pulseaudio
+PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.include "../../mk/oss.buildlink3.mk"
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa
-.else
+.elif ${OSS_TYPE} != "none"
 PKG_SUGGESTED_OPTIONS+=	oss
 .endif
 
