@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:29:22 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/07/09 09:50:47 nia Exp $
 
 BLAKE2s (c_icap-0.5.5.tar.gz) = 7e3d4b6abddfc2b93670f72e0a4f32923d73b9dc9a1b3ac431d522ba6a9c04f0
 SHA512 (c_icap-0.5.5.tar.gz) = 7a24c90116df40c5a8dc29785efacba65f16557f44f6b26de7bb1bb4890e8bf017db582ccac7d82a1be4efe41d3a7f420ad27c3f012d9c1741c3fd69abd9e571
@@ -6,4 +6,5 @@ Size (c_icap-0.5.5.tar.gz) = 690954 bytes
 SHA1 (patch-Makefile.in) = e8f3b47030f06051f392d4c343bc0c3f523320cc
 SHA1 (patch-cfg__param.c) = e25b0c8145e7bbe6eddc1f8eafbd2fa5304fdda6
 SHA1 (patch-configure) = d2e08b9717d6566b6f66f18abcc9bc0dd5098df5
+SHA1 (patch-modules_memcached.c) = f3967aa445007591b3ed5bc8ac7b098fb250f1da
 SHA1 (patch-os_unix_shared_mem.c) = 2510558df7be6cdb6169b45b0271dc47fc463095
