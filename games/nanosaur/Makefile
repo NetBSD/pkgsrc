@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/06 19:09:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/09 22:16:17 nia Exp $
 
 DISTNAME=	nanosaur-1.4.4
 PKGREVISION=	2
@@ -19,6 +19,9 @@ WRKSRC=		${WRKDIR}/Nanosaur-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
+
+# __has_include
+GCC_REQD+=	5
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
