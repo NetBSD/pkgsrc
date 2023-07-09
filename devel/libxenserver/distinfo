@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/09 14:29:49 nia Exp $
 
 BLAKE2s (XenServer-6.2.0-SDK.zip) = 8d8587ed4e06b84f9d7d5f244011d29937f8e7886563e5e907cafffd5f9bcf99
 SHA512 (XenServer-6.2.0-SDK.zip) = d108d3bcd7d98e667912ffde4ed3e162a1f80a95fb0881550db165e1b647a5d4c983d5b14dc42aedd44a3d502a2c508486c28a66bfdb661d9ce804d38afefa04
 Size (XenServer-6.2.0-SDK.zip) = 10367600 bytes
-SHA1 (patch-Makefile) = d2159549bf4307411ab9b99f4beb3c3ab2cb411b
+SHA1 (patch-Makefile) = a079fd6587fcbe049523ab3f17e7b0f9fb2a96bd
 SHA1 (patch-xen_common.c) = b750589e7c7bcd33fedca8a564371251eeb1f3c9

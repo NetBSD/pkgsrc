@@ -1,15 +1,24 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2011/02/17 09:54:02 sborrill Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/07/09 14:29:50 nia Exp $
 
 Don't embed current build dir
 
---- Makefile.orig	2011-02-16 16:50:42.000000000 +0000
-+++ Makefile	2011-02-16 16:50:52.000000000 +0000
-@@ -25,8 +25,7 @@
-          -W -Wall -Wmissing-prototypes -Werror -std=c99 -fPIC
+--- Makefile.orig	2013-06-14 13:51:06.000000000 +0000
++++ Makefile
+@@ -31,14 +31,13 @@
+ MAJOR = 2
+ MINOR = 0
  
- LDFLAGS = -g $(shell xml2-config --libs) \
+-CFLAGS = -g -Iinclude                     \
++CFLAGS += -Iinclude                     \
+          $(shell xml2-config --cflags) \
+          $(shell curl-config --cflags) \
+-         -W -Wall -Wmissing-prototypes -Werror -std=c99 -fPIC
++         -W -Wall -Wmissing-prototypes -std=c99 -fPIC
+ 
+-LDFLAGS = -g $(shell xml2-config --libs) \
 -          $(shell curl-config --libs) \
 -	  -Wl,-rpath,$(shell pwd)
++LDFLAGS += $(shell xml2-config --libs) \
 +          $(shell curl-config --libs)
  
  # -h for Solaris
