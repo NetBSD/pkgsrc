@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.21 2022/09/29 01:10:58 markd Exp $
+$NetBSD: distinfo,v 1.22 2023/07/09 20:31:46 wiz Exp $
 
 BLAKE2s (okular-22.08.1.tar.xz) = 44487711f16fc0a0753f121a658dd53a48486a90021986f5e25768e57ce6f467
 SHA512 (okular-22.08.1.tar.xz) = 1fa3c8763d7432a21448c3715e69658609bf9cc50d767f74db89a37f0ef890dff97d276526aa6f41a0fcb91c36df39a1274d243785da74ce811448d896588d43
 Size (okular-22.08.1.tar.xz) = 8225648 bytes
+SHA1 (patch-CMakeLists.txt) = 02a25bb2a13adfc2530ff51558343d9bebd20f25

@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/09 20:31:46 wiz Exp $
+
+poppler-qt5 needs c++17 for std::optional.
+
+--- CMakeLists.txt.orig	2022-09-04 20:26:23.000000000 +0000
++++ CMakeLists.txt
+@@ -93,7 +93,7 @@ elseif(WIN32)
+     set(ENV{QT_PLUGIN_PATH} "$ENV{QT_PLUGIN_PATH};${KDE_INSTALL_FULL_QTPLUGINDIR}")
+ endif()
+ 
+-set(CMAKE_CXX_STANDARD 14)
++set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ 
