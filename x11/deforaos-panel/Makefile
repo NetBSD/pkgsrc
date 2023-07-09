@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/06/06 12:42:52 riastradh Exp $
+# $NetBSD: Makefile,v 1.49 2023/07/09 09:08:36 nia Exp $
 
 DISTNAME=	Panel-0.4.3
 PKGNAME=	deforaos-panel-0.4.3
@@ -50,8 +50,10 @@ post-install:
 .endif
 
 .include "options.mk"
-
 .include "../../devel/deforaos-configure/deforaos-configure.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
