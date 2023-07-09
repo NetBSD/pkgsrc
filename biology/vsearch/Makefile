@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/12/17 19:20:44 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/09 16:20:58 bacon Exp $
 
-DISTNAME=	vsearch-2.18.0
+DISTNAME=	vsearch-2.23.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,8 +17,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake autoreconf gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-pdfman
-
-CXXFLAGS+=	-std=c++11
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
