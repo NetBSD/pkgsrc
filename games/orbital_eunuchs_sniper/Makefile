@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/09/20 06:58:00 nia Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/09 22:17:59 nia Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
@@ -23,7 +23,7 @@ REPLACE_FILES.bash=	src/snipe2d.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "x86_64" && ${OPSYS} != "DragonFly"
+.if ${MACHINE_ARCH} == "x86_64" && ${OPSYS} != "DragonFly" && ${OPSYS} != "Linux"
 CPU=			amd64
 .elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "SunOS"
 CPU=			i86pc
