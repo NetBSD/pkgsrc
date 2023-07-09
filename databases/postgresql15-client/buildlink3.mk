@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/10/19 13:16:45 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/07/09 13:57:20 nia Exp $
 
 BUILDLINK_TREE+=	postgresql15-client
 
@@ -28,6 +28,10 @@ pkgbase := postgresql15-client
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+
+.if ${PKG_BUILD_OPTIONS.postgresql15-client:Mgssapi}
+.  include "../../mk/krb5.buildlink3.mk"
+.endif
 .endif # POSTGRESQL15_CLIENT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-postgresql15-client
