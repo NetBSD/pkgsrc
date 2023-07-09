@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2023/06/06 12:42:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.140 2023/07/09 20:31:46 wiz Exp $
 
 DISTNAME=	okular-${KAPPSVER}
 PKGREVISION=	9
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+
+GCC_REQD+=	8 # std::optional
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
