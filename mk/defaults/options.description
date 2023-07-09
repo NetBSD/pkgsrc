@@ -76,7 +76,7 @@ bluez			Enable bluetooth support via bluez for Linux.
 bluray			Enable libbluray support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
-brotli			Provides the BROTLI_COMPRESS output filter.
+brotli			Enable support for Google's Brotli compression.
 bugzilla-charts		Enable generation of charts.
 bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-patchviewer	Enable patchviewer support.
