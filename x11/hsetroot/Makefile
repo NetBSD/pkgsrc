@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/01/29 21:18:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/09 09:04:06 nia Exp $
 
 DISTNAME=	hsetroot-1.0.5
 PKGREVISION=	1
@@ -11,6 +11,8 @@ COMMENT=	Allows you to compose wallpapers for X
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
