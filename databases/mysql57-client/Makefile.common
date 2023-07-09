@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2023/05/25 09:06:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.42 2023/07/09 10:17:15 nia Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql57-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql57-client/patches
+
+# C++14
+GCC_REQD+=	5
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c99 gnu++14
