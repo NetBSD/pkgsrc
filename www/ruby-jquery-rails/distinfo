@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/12/04 16:24:17 taca Exp $
+$NetBSD: distinfo,v 1.16 2023/07/09 03:22:27 taca Exp $
 
-BLAKE2s (jquery-rails-4.5.1.gem) = 5bdcda010ba9233e8e696f84feedbcd04599f748b5059b894c0770d716ebf0f5
-SHA512 (jquery-rails-4.5.1.gem) = 7921de900d1678e0af9adb1a83bf0ceebc75666a991d0babdc47465c45d08df0de959650eef750670b225354c942a2795fb08cb67694ce05d33af90fa1de5917
-Size (jquery-rails-4.5.1.gem) = 527360 bytes
+BLAKE2s (jquery-rails-4.6.0.gem) = aa443bd922385c6abbf5ae0029549c6b45db2614d35c9befa5e83d8bf47dadb1
+SHA512 (jquery-rails-4.6.0.gem) = 3b5867036f0f415f1063b9cb393d8cb4ad1d28d3a97a7d623089111dcf0abbc3cf00bde5a4a35aa8b1d2351b0398c007c71c5dd8e5e51857f24f9d4a35fc9ca9
+Size (jquery-rails-4.6.0.gem) = 523776 bytes
