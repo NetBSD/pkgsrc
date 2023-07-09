@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2012/06/12 15:46:03 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2023/07/09 02:00:52 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.stunnel
 PKG_SUPPORTED_OPTIONS=	inet6 threads tcpwrappers
@@ -7,7 +7,7 @@ CHECK_BUILTIN.pthread:=		yes
 .include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:=		no
 
-.if !empty(BUILTIN_LIB_FOUND.pthread:M[yY][eE][sS])
+.if "${BUILTIN_LIB_FOUND.pthread:U:tl}" == "yes"
 PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
