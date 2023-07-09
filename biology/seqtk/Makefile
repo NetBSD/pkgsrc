@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/23 23:19:31 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/09 08:41:40 nia Exp $
 
 DISTNAME=	seqtk-1.4
 CATEGORIES=	biology
@@ -12,4 +12,5 @@ LICENSE=	gnu-gpl-v2
 
 INSTALLATION_DIRS=	bin
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
