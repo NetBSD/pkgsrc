@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/06/09 19:51:38 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2023/07/09 09:58:29 nia Exp $
 
 DISTNAME=	pcsc-lite-2.0.0
 CATEGORIES=	security
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake flex
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
