@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4346 2023/07/09 19:10:52 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.4347 2023/07/09 21:09:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6053,3 +6053,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/pkglint to 23.2.0 [rillig 2023-07-09]
 	Updated biology/vsearch to 2.23.0 [bacon 2023-07-09]
 	Updated devel/go-staticcheck to 2023.1.3 [bsiegert 2023-07-09]
+	Updated devel/blosc2 to 2.10.0 [adam 2023-07-09]
+	Updated benchmarks/google-benchmark to 1.8.2 [adam 2023-07-09]
