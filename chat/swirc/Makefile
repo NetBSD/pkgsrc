@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/04/19 08:09:19 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/09 10:02:09 nia Exp $
 
 DISTNAME=	swirc-3.4.3
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 HAS_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+
+GCC_REQD+=	7 # C++17
 
 MAKE_FLAGS+=	Q= CC="${CC}" CXX="${CXX}" LDFLAGS="${LDFLAGS}"
 MAKE_FLAGS+=	DEST_MANUAL=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
