@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:19:20 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/09 15:09:01 nia Exp $
 
 BLAKE2s (rdp1_5.zip) = 8b65e6c83971ea91ac32a8bd4deeb251853c2da47010d3d0360b67130cfa1055
 SHA512 (rdp1_5.zip) = 549365ea62fb1ffae2c144f7c62929ff66f3991f0828ce12c1e6bd8ec02cd8e19e27303def25a19f009b40ea29b8f88f39916650c50e14bc00af8ba9a0665b46
 Size (rdp1_5.zip) = 1234919 bytes
-SHA1 (patch-aa) = 63ae9329472522a1e609dd01c4bb9275277753b3
+SHA1 (patch-aa) = 2e0afaafefac4dc1bf27c7f94b5afe1e771d3442
 SHA1 (patch-ab) = e4a44c122221196147b9dd16d59fac6da09f2e67
 SHA1 (patch-ac) = 0c9ee2458e999086ef29c1fedb294df31a2e6961
 SHA1 (patch-ad) = 0364b33207f0207876a549fd129e00417eed7769
