@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/09 21:53:50 nia Exp $
+
+-O0 is incompatible with FORTIFY_SOURCE in some places.
+
+--- CMakeLists.txt.orig	2021-04-11 21:06:20.000000000 +0000
++++ CMakeLists.txt
+@@ -41,7 +41,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PAT
+ 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules/")
+ 
+ add_definitions(-D_FILE_OFFSET_BITS=64)
+-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -ggdb -O0")
++SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -ggdb")
+ 
+ include(FindLibXml2)
+ 
