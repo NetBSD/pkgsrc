@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:40:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/09 14:38:46 nia Exp $
 
 DISTNAME=	Syntax-Keyword-Match-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,9 @@ COMMENT=	Perl5 module to provide a match/case syntax
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-XS-Parse-Keyword>=0.23:../../devel/p5-XS-Parse-Keyword
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 PERL5_PACKLIST=		auto/Syntax/Keyword/Match/.packlist
 PERL5_MODULE_TYPE=	Module::Build
