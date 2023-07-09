@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/06 19:09:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/09 20:27:59 nia Exp $
 
 DISTNAME=	pcsxr-1.9.95.20190306
 PKGREVISION=	8
@@ -13,7 +13,8 @@ COMMENT=	Sony PlayStation emulator
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99 c++
 
 USE_CMAKE=	yes
 
