@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/06/17 15:47:10 taca Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/09 03:10:14 taca Exp $
 
-DISTNAME=	aws-sdk-core-3.175.0
+DISTNAME=	aws-sdk-core-3.177.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-jmespath>=1.6.1<2:../../textproc/ruby-jmespath
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-partitions>=1.651<2:../../www/ruby-aws-partitions
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sigv4>=1.5<2:../../www/ruby-aws-sigv4
-DEPENDS+=	${RUBY_PKGPREFIX}-aws-eventstream>=1.0.2<2:../../www/ruby-aws-eventstream
+#DEPENDS+=	${RUBY_PKGPREFIX}-aws-eventstream>=1.0.2<2:../../www/ruby-aws-eventstream
 
 USE_LANGUAGES=		# none
 
