@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/08/28 05:13:33 taca Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/09 02:15:17 taca Exp $
 
-DISTNAME=	bcrypt-3.1.18
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+DISTNAME=	bcrypt-3.1.19
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
