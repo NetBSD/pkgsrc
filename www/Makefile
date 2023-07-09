@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1726 2023/06/17 17:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.1727 2023/07/09 09:53:53 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1089,7 +1089,6 @@ SUBDIR+=	squid5
 SUBDIR+=	squidGuard
 SUBDIR+=	squidanalyzer
 SUBDIR+=	squidclamav
-SUBDIR+=	squidpurge
 SUBDIR+=	squidview
 SUBDIR+=	squirm
 SUBDIR+=	stagit

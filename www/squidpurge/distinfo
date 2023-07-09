@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:31:09 nia Exp $
-
-BLAKE2s (purge-20040201-src.tar.gz) = c712010aef8c626febd62cf041304e9cb272332663283cabdee520f869f83fae
-SHA512 (purge-20040201-src.tar.gz) = e32fa6b3de1b03573d0908e684817efc914700475694c8de76218e433c26a7b1af5a1f1dda8b8e97be358c62763520d460268c506598b26c0ebdc54883cbe335
-Size (purge-20040201-src.tar.gz) = 30572 bytes
-SHA1 (patch-aa) = cb01736e19a00eaaec18c5e4f61b20ca1609eb1b
-SHA1 (patch-ab) = c461769a7eae2f249ec3b8acb4fe40b42f2f411b
-SHA1 (patch-ac) = d18823eca80d17a9c3768df5ffd515508b38f38c
-SHA1 (patch-copyout.cc) = 804ead27a304a197e2709779534b4056231849e5
