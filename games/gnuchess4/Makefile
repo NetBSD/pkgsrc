@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/09 22:11:26 nia Exp $
 
 DISTNAME=		gnuchess-4.0.pl80
 PKGNAME=		gnuchess4-4.0.80
@@ -27,4 +27,6 @@ post-install:
 		README.font README.output \
 		${DESTDIR}${PREFIX}/share/doc/gnuchess4
 
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
