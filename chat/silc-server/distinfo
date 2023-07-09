@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 10:05:25 nia Exp $
+$NetBSD: distinfo,v 1.40 2023/07/09 10:02:38 nia Exp $
 
 BLAKE2s (silc-server-1.1.18.tar.bz2) = 75f6610828fab20cef983389c809121c500f77036a30f45fb05c3fc8da55c810
 SHA512 (silc-server-1.1.18.tar.bz2) = bf457a5f75037c56138154cfdba62d7ec27a91bc3606c84760a2103c90dff1ea9beb09c6e86e25074142610c6e14d7dffc24956debfa8355b37a4a1fb5e68e47
 Size (silc-server-1.1.18.tar.bz2) = 908188 bytes
 SHA1 (patch-aa) = 434f064e5d95e4590cebc2be651dcc0b5433d06e
 SHA1 (patch-ab) = 94fad845b0efd346643acbea600833246bdbda46
-SHA1 (patch-ac) = 53f13f15466f6d62a59068810896d763b60e8d70
