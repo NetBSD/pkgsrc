@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2023/04/19 08:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/09 21:53:50 nia Exp $
 #
 
 DISTNAME=	fuse-darling-dmg-1.0.4.20210411
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darlinghq/}
 GITHUB_PROJECT=	darling-dmg
@@ -14,10 +14,11 @@ COMMENT=	FUSE module for .dmg files (containing an HFS+ filesystem)
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 
-.include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

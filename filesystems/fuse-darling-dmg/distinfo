@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/11/12 15:44:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/07/09 21:53:50 nia Exp $
 
 BLAKE2s (fuse-darling-dmg-1.0.4.20210411-34d3a346039f25a407c64aca1c7ecbdd9af85933.tar.gz) = d6a26cf6d2d72f827d5c452d9621fa6b2deae42bfb47183edfe5fee6bf35debc
 SHA512 (fuse-darling-dmg-1.0.4.20210411-34d3a346039f25a407c64aca1c7ecbdd9af85933.tar.gz) = b2a4740fdf4499b2a541f03d71522430650e09c1219b888409cae992c97405d6652d6d69726b442caf8780cec35937f6829dc750036e724a3d3bd21a3ba16a11
 Size (fuse-darling-dmg-1.0.4.20210411-34d3a346039f25a407c64aca1c7ecbdd9af85933.tar.gz) = 55896 bytes
-SHA1 (patch-src_HFSAttributeBTree.cpp) = 4f875eb6feaf9242f809a4e96727e50218664e71
-SHA1 (patch-src_HFSCatalogBTree.cpp) = fed0de35df11f91e324ed2be72c11c0efd94e28d
-SHA1 (patch-src_be.h) = 9c6554c84ee3ed15cc1232b70cf87c23aa4c88fa
-SHA1 (patch-src_main-fuse.cpp) = a302b6467185f6f94731b07ed04792b6a5ef2801
-SHA1 (patch-src_unichar.cpp) = 961a79118fdc9a2d307169b8be212e66365d9de9
+SHA1 (patch-CMakeLists.txt) = be9862c614e85b487b3699236e58d1bd2e99d73b
