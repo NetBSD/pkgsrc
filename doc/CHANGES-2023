@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4339 2023/07/09 03:21:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4340 2023/07/09 03:22:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6034,3 +6034,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-kms to 1.70.0 [taca 2023-07-09]
 	Updated www/ruby-aws-sdk-s3 to 1.128.0 [taca 2023-07-09]
 	Updated www/ruby-faraday to 2.7.10 [taca 2023-07-09]
+	Updated www/ruby-jquery-rails to 4.6.0 [taca 2023-07-09]
