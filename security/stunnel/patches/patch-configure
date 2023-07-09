@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.4 2018/06/07 18:54:20 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2023/07/09 02:00:53 taca Exp $
 
 Leave pkgsrc to handle security features.
 
---- configure.orig	2018-05-23 12:54:05.000000000 +0000
+--- configure.orig	2023-02-07 19:03:07.000000000 +0000
 +++ configure
-@@ -6271,7 +6271,7 @@ fi
+@@ -6649,7 +6649,7 @@ fi
  eval ac_res=\$$as_CACHEVAR
- 	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
- $as_echo "$ac_res" >&6; }
--if eval test \"x\$"$as_CACHEVAR"\" = x"yes"; then :
-+if eval test \"x\$"$as_CACHEVAR"\" = x"DISABLED"; then :
+ 	       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
+ printf "%s\n" "$ac_res" >&6; }
+-if eval test \"x\$"$as_CACHEVAR"\" = x"yes"
++if eval test \"x\$"$as_CACHEVAR"\" = x"DISABLED"
+ then :
  
- if ${CFLAGS+:} false; then :
- 
+ if test ${CFLAGS+y}
