@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4324 2023/07/09 02:01:23 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4325 2023/07/09 02:11:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6019,3 +6019,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-server to 6.0.19 [otis 2023-07-08]
 	Added sysutils/hw-probe version 1.6 [vins 2023-07-08]
 	Updated security/stunnel to 5.69 [taca 2023-07-09]
+	Updated print/ruby-rbpdf to 1.21.2 [taca 2023-07-09]
