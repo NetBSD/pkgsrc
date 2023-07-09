@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/05/06 19:09:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/09 21:57:41 nia Exp $
 
 DISTNAME=	corsix-th-0.65.1
 PKGREVISION=	9
@@ -22,6 +22,9 @@ DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# std::make_unique
+GCC_REQD+=	5
 
 .include "../../mk/bsd.prefs.mk"
 
