@@ -1,0 +1,12 @@
+$NetBSD: patch-extra_readline_CMakeLists.txt,v 1.1 2023/07/10 22:55:49 nia Exp $
+
+On NetBSD, tgoto is in libtermcap - helper patch.
+
+--- extra/readline/CMakeLists.txt.orig	2022-11-03 10:07:23.000000000 +0000
++++ extra/readline/CMakeLists.txt
+@@ -56,4 +56,4 @@ ADD_LIBRARY(readline STATIC
+ 
+ # Declare dependency
+ # so every executable that links with readline links with curses as well
+-TARGET_LINK_LIBRARIES(readline ${CURSES_LIBRARY})
++TARGET_LINK_LIBRARIES(readline ${CURSES_LIBRARY} ${TGOTOLIB})

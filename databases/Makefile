@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2023/06/26 11:47:46 wiz Exp $
+# $NetBSD: Makefile,v 1.680 2023/07/10 22:55:49 nia Exp $
 
 COMMENT=	Databases
 
@@ -100,6 +100,8 @@ SUBDIR+=	lua-sql-postgres
 SUBDIR+=	lua-sql-sqlite3
 SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
+SUBDIR+=	mariadb1011-client
+SUBDIR+=	mariadb1011-server
 SUBDIR+=	mariadb104-client
 SUBDIR+=	mariadb104-server
 SUBDIR+=	mariadb105-client

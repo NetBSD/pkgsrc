@@ -1,0 +1,130 @@
+# $NetBSD: Makefile.common,v 1.1 2023/07/10 22:55:49 nia Exp $
+#
+# used by databases/mariadb1011-client/Makefile
+# used by databases/mariadb1011-server/Makefile
+
+DISTNAME=	mariadb-10.11.4
+CATEGORIES=	databases
+MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://mariadb.org/
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE?=	${.CURDIR}/../../databases/mariadb1011-client/distinfo
+PATCHDIR?=	${.CURDIR}/../../databases/mariadb1011-client/patches
+
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	perl:run pkg-config bison
+USE_CURSES=	wide
+
+PLIST_SRC=	${PLIST_SRC_DFLT}
+
+.include "../../mk/bsd.prefs.mk"
+
+#
+# Use MySQL defaults if set.
+#
+MARIADB_DATADIR?=	${MYSQL_DATADIR:U${VARBASE}/db/mariadb}
+MARIADB_CHARSET?=	${MYSQL_CHARSET:Uutf8mb4}
+MARIADB_COLLATION?=	${MYSQL_COLLATION:Uutf8mb4_unicode_ci}
+MARIADB_EXTRA_CHARSET?=	${MYSQL_EXTRA_CHARSET:Uall}
+
+BUILD_DEFS+=		VARBASE
+
+CMAKE_ARGS+=		-DCOMPILATION_COMMENT="pkgsrc"
+
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
+
+CMAKE_ARGS+=		-DINSTALL_BINDIR="bin"
+CMAKE_ARGS+=		-DINSTALL_DOCDIR="share/doc/mysql"
+CMAKE_ARGS+=		-DINSTALL_DOCREADMEDIR="share/doc/mysql"
+CMAKE_ARGS+=		-DINSTALL_INCLUDEDIR="include/mysql"
+CMAKE_ARGS+=		-DINSTALL_INFODIR="${PKGINFODIR}"
+CMAKE_ARGS+=		-DINSTALL_LIBDIR="lib"
+CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
+CMAKE_ARGS+=		-DINSTALL_MYSQLSHAREDIR="share/mysql"
+CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR=""
+CMAKE_ARGS+=		-DINSTALL_PAMDIR="lib/security"
+CMAKE_ARGS+=		-DINSTALL_PAMDATADIR="share/examples/mariadb_auth_pam"
+CMAKE_ARGS+=		-DINSTALL_PLUGINDIR="lib/mysql/plugin"
+CMAKE_ARGS+=		-DINSTALL_SBINDIR="sbin"
+CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
+CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
+CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
+CMAKE_ARGS+=		-DINSTALL_SYSCONFDIR="${PKG_SYSCONFDIR}"
+CMAKE_ARGS+=		-DMYSQL_DATADIR=${MARIADB_DATADIR}
+
+CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
+CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
+CMAKE_ARGS+=		-DWITH_PCRE="system"
+CMAKE_ARGS+=		-DWITH_ZLIB="system"
+CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MARIADB_CHARSET}
+CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MARIADB_COLLATION:Q}
+CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MARIADB_EXTRA_CHARSET:Q}
+
+CMAKE_ARGS+=		-DPLUGIN_EXAMPLE=NO
+CMAKE_ARGS+=		-DPLUGIN_FEEDBACK=NO
+
+# Requires Java
+CMAKE_ARGS+=		-DCONNECT_WITH_JDBC=OFF
+
+# Options which affect generation of includes
+CMAKE_ARGS+=		-DWITH_ARIA_STORAGE_ENGINE=ON
+CMAKE_ARGS+=		-DWITH_PARTITION_STORAGE_ENGINE=ON
+CMAKE_ARGS+=		-DWITH_PERFSCHEMA_STORAGE_ENGINE=ON
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Snappy=ON
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LZO=ON
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LZ4=ON
+CMAKE_ARGS+=		-DWITHOUT_MROONGA_STORAGE_ENGINE=ON
+
+CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
+
+# Ensure the correct DTrace ABI is used.
+.if !empty(ABI)
+CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
+.endif
+
+# We don't clone MariaDB from git, so avoid peeking into
+# the parent repository.
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
+
+
+# https://github.com/MariaDB/server/pull/2326
+# https://github.com/MariaDB/server/pull/2321
+CFLAGS.SunOS+=		-fPIC -DHAVE_ALLOCA_H=1
+CFLAGS.NetBSD+=		-DIOAPI_NO_64
+
+REPLACE_PERL+=		scripts/mytop.sh
+REPLACE_PERL+=		sql-bench/*.sh
+
+SUBST_CLASSES+=		perl
+SUBST_STAGE.perl=	pre-configure
+SUBST_FILES.perl=	scripts/CMakeLists.txt
+SUBST_SED.perl=		-e "s,/usr/bin/perl,${TOOLS_PATH.perl},g"
+SUBST_SED.perl+=	-e "s,/usr/local/bin/perl,${TOOLS_PATH.perl},g"
+
+CHECK_INTERPRETER_SKIP+=	share/mysql/test/*
+CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/cloud/*.sh.in
+CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/install_scripts/*.sh.in
+CHECK_PORTABILITY_SKIP+=	storage/columnstore/columnstore/oam/install_scripts/*.in
+CHECK_PORTABILITY_SKIP+=	BUILD/compile-pentium-gcov
+
+PKGCONFIG_OVERRIDE+=	support-files/mariadb.pc.in
+PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+.include "../../mk/krb5.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"

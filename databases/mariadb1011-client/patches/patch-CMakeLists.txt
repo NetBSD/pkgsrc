@@ -1,0 +1,109 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/10 22:55:49 nia Exp $
+
+Allow building a server-only configuration.
+
+--- CMakeLists.txt.orig	2023-06-05 17:14:07.000000000 +0000
++++ CMakeLists.txt
+@@ -426,8 +426,6 @@ ENDIF()
+ 
+ UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
+ 
+-INCLUDE(mariadb_connector_c) # this does ADD_SUBDIRECTORY(libmariadb)
+-
+ INCLUDE(cpack_tgz)
+ INCLUDE(cpack_rpm)
+ INCLUDE(cpack_deb)
+@@ -438,19 +436,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+ # Add storage engines and plugins.
+ CONFIGURE_PLUGINS()
+ 
+-ADD_SUBDIRECTORY(include)
+ ADD_SUBDIRECTORY(dbug)
+ ADD_SUBDIRECTORY(strings)
+ ADD_SUBDIRECTORY(vio)
+ ADD_SUBDIRECTORY(mysys)
+ ADD_SUBDIRECTORY(mysys_ssl)
+-ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(extra)
+ ADD_SUBDIRECTORY(libservices)
+ ADD_SUBDIRECTORY(sql/share)
+ 
+ IF(NOT WITHOUT_SERVER)
+-  ADD_SUBDIRECTORY(tests)
+   ADD_SUBDIRECTORY(sql)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MariaDB with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER)
+@@ -469,23 +464,26 @@ IF(NOT WITHOUT_SERVER)
+     ADD_SUBDIRECTORY(win/upgrade_wizard)
+     ADD_SUBDIRECTORY(win/packaging)
+   ENDIF()
+-ENDIF()
+-
+-IF(UNIX)
++ELSE()
++  INCLUDE(mariadb_connector_c) # this does ADD_SUBDIRECTORY(libmariadb)
++  ADD_SUBDIRECTORY(client)
++  ADD_SUBDIRECTORY(include)
+   ADD_SUBDIRECTORY(man)
++  ADD_SUBDIRECTORY(support-files)
+ ENDIF()
+ 
+ INCLUDE(cmake/abi_check.cmake)
+ INCLUDE(cmake/tags.cmake)
+ INCLUDE(for_clients)
+ ADD_SUBDIRECTORY(scripts)
+-ADD_SUBDIRECTORY(support-files)
+ ADD_SUBDIRECTORY(extra/aws_sdk)
+ 
+ IF(NOT CMAKE_CROSSCOMPILING OR DEFINED CMAKE_CROSSCOMPILING_EMULATOR)
+-  SET(EXPORTED comp_err comp_sql factorial uca-dump)
++  SET(EXPORTED comp_err factorial uca-dump)
+   IF(NOT WITHOUT_SERVER)
+     SET(EXPORTED ${EXPORTED} gen_lex_hash gen_lex_token)
++  ELSE()
++    SET(EXPORTED ${EXPORTED} comp_sql)
+   ENDIF()
+   # minimal target to build only binaries for export
+   ADD_CUSTOM_TARGET(import_executables DEPENDS ${EXPORTED})
+@@ -569,41 +567,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
+   MESSAGE(WARNING "
+ You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNING} libraries!  You may not distribute the resulting binary. If you do, you will put yourself into a legal problem with the Free Software Foundation.")
+ ENDIF()
+-
+-IF(NOT WITHOUT_SERVER)
+-  # Define target for minimal mtr-testable build
+-  ADD_CUSTOM_TARGET(minbuild)
+-  ADD_DEPENDENCIES(minbuild
+-   aria_chk
+-   aria_pack
+-   mariadb
+-   mariadb-admin
+-   mariadb-binlog
+-   mariadb-check
+-   mariadb-client-test
+-   mariadb-conv
+-   mariadb-dump
+-   mariadb-import
+-   mariadb-plugin
+-   mariadb-show
+-   mariadb-slap
+-   mariadb-test
+-   mariadb-tzinfo-to-sql
+-   mariadb-upgrade
+-   mariadbd
+-   my_print_defaults
+-   my_safe_process
+-   myisam_ftdump
+-   myisamchk
+-   myisamlog
+-   myisampack
+-   perror
+-   replace)
+-  IF(WIN32)
+-    ADD_DEPENDENCIES(minbuild echo mariadb-install-db my_safe_kill)
+-  ENDIF()
+-  ADD_CUSTOM_TARGET(smoketest
+-    COMMAND perl ./mysql-test-run.pl main.1st
+-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/mysql-test)
+-  ADD_DEPENDENCIES(smoketest minbuild)
+-ENDIF()

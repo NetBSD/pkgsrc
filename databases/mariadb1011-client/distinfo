@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2023/07/10 22:55:49 nia Exp $
+
+BLAKE2s (mariadb-10.11.4.tar.gz) = 46bcc07ff234fcd7b1e96aeae72c28d2364cd4c390c8b1666fa9ead59f3803a1
+SHA512 (mariadb-10.11.4.tar.gz) = 62fc05395857dd036ebeed53b1ff0ecd9abd95ce8e5316194286521caae0f9452cf96a93613adec809e39e1d8ef20c330b24fee82b3bb90ee27a84f2bbd0d8d2
+Size (mariadb-10.11.4.tar.gz) = 96770117 bytes
+SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
+SHA1 (patch-CMakeLists.txt) = 9bdc3c88521b9bd217d37d286950a71ae0d0e1e0
+SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
+SHA1 (patch-client_mysql.cc) = e9c33cd51c11b6be309ee6d1404da2d9ece38efd
+SHA1 (patch-extra_readline_CMakeLists.txt) = 37873deaeccb37e1313179103bb12dcde4a496d6
+SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
+SHA1 (patch-mysys_my__gethwaddr.c) = c3f179aa659e16f2fd9b858a718dd1cdd6f93c9f
+SHA1 (patch-plugin_auth__pam_testing_pam__mariadb__mtr.c) = 6062cfbb200af5b95ac05e4759f08b414f63db3d
+SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = b2fddab1d94ba75c69cbf660f546f8e5821e1d51
+SHA1 (patch-scripts_CMakeLists.txt) = b8a13304e314162ab0a1fc06c5620d6b757975f5
+SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
+SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
+SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
+SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = d5ff507acdd21858791246ef5a2559e653cb7833
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
+SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
+SHA1 (patch-storage_rocksdb_rocksdb_build__tools_fb__compile__mongo.sh) = 3b632521c23765c39f4638dc7a80d04b9e1d58bd
+SHA1 (patch-support-files_mysql.server.sh) = a98d82cdda1dbd5ef8ebb7e457bb51661b5fd275
