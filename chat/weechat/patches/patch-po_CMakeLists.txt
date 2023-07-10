@@ -1,15 +1,25 @@
-$NetBSD: patch-po_CMakeLists.txt,v 1.5 2019/12/10 13:04:06 nia Exp $
+$NetBSD: patch-po_CMakeLists.txt,v 1.6 2023/07/10 08:16:59 jperkin Exp $
 
 Drop package-name and package-version args to xgettext.
+Don't run --statistics to /dev/null, it tries to handle it as a regular file
+and aborts.
 
---- po/CMakeLists.txt.orig	2019-12-08 08:48:53.000000000 +0000
+--- po/CMakeLists.txt.orig	2023-06-30 19:18:01.000000000 +0000
 +++ po/CMakeLists.txt
-@@ -57,7 +57,7 @@ if(XGETTEXT_EXECUTABLE AND MSGMERGE_EXEC
+@@ -58,7 +58,7 @@ if(XGETTEXT_EXECUTABLE AND MSGMERGE_EXEC
    add_custom_command(
-     OUTPUT ${POT_FILE_PATH}
-     COMMAND ${XGETTEXT_EXECUTABLE}
--    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory=${CMAKE_SOURCE_DIR} --package-name='WeeChat' --package-version=${VERSION} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
-+    ARGS -o ${POT_FILE_PATH} --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory=${CMAKE_SOURCE_DIR} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
+     OUTPUT "${POT_FILE_PATH}"
+     COMMAND "${XGETTEXT_EXECUTABLE}"
+-    ARGS -o "${POT_FILE_PATH}" --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory="${CMAKE_SOURCE_DIR}" --package-name='WeeChat' --package-version=${VERSION} --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
++    ARGS -o "${POT_FILE_PATH}" --add-comments='TRANSLATORS:' --keyword='_' --keyword='weechat_gettext' --keyword='N_' --keyword='NG_:1,2' --keyword='weechat_ngettext:1,2' --no-location --from-code=UTF-8 --directory="${CMAKE_SOURCE_DIR}" --msgid-bugs-address=${BUGS_ADDRESS} --copyright-holder='NAME' ${SRC_FILES}
      DEPENDS ${POT_DEPENDS}
      COMMENT "Generating ${POT_FILE}"
    )
+@@ -76,7 +76,6 @@ if(XGETTEXT_EXECUTABLE AND MSGMERGE_EXEC
+       OUTPUT "${mofile}"
+       COMMAND "${MSGMERGE_EXECUTABLE}" ARGS --quiet -o "${CMAKE_CURRENT_BINARY_DIR}/${pofile}" "${CMAKE_CURRENT_SOURCE_DIR}/${pofile}" ${POT_FILE_PATH}
+       COMMAND "${MSGFMT_EXECUTABLE}" ARGS -o "${mofile}" "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
+-      COMMAND "${MSGFMT_EXECUTABLE}" ARGS -c --statistics --verbose --output-file=/dev/null "${CMAKE_CURRENT_BINARY_DIR}/${pofile}"
+       DEPENDS "${POT_FILE_PATH}" "${CMAKE_CURRENT_SOURCE_DIR}/${pofile}"
+       COMMENT "Compiling ${polang}.po"
+     )
