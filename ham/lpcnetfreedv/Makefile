@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/11/29 23:12:43 dbj Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/10 08:55:02 nia Exp $
 
 # https://github.com/drowe67/LPCNet/archive/v0.2.tar.gz
 # http://rowetel.com/downloads/deep/lpcnet_191005_v1.0.tgz
@@ -17,7 +17,8 @@ HOMEPAGE=	https://github.com/drowe67/LPCNet
 COMMENT=	LPCNet library for use by FreeDV
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 USE_TOOLS+=	tar pkg-config
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
