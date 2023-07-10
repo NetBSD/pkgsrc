@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/05/24 12:17:49 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/10 19:43:05 pin Exp $
 
-DISTNAME=	typst-0.4.0
+DISTNAME=	typst-0.6.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=typst/}
 GITHUB_PROJECT=	typst
