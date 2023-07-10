@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2023/07/06 09:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2023/07/10 08:16:59 jperkin Exp $
 
-DISTNAME=	weechat-3.8
-PKGREVISION=	2
+DISTNAME=	weechat-4.0.1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -48,7 +47,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Adjusting pkg-config python checks
-SUBST_FILES.python=	configure.ac cmake/FindPython.cmake
+SUBST_FILES.python=	cmake/FindPython.cmake
 SUBST_SED.python=	-e 's,python3,python-${PYVERSSUFFIX},g'
 .endif
 
