@@ -1,9 +1,9 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2023/05/24 12:17:49 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2023/07/10 19:43:05 pin Exp $
 
 Fetch git source of svg2pdf ahead of build.
 
---- ../typst-0.4.0/Cargo.toml.orig	2023-05-20 20:05:55.000000000 +0000
-+++ ../typst-0.4.0/Cargo.toml
+--- Cargo.toml.orig	2023-06-30 14:21:57.000000000 +0000
++++ Cargo.toml
 @@ -52,7 +52,7 @@ rustybuzz = "0.7"
  serde = { version = "1", features = ["derive"] }
  siphasher = "0.3"
@@ -11,5 +11,5 @@ Fetch git source of svg2pdf ahead of build.
 -svg2pdf = { git = "https://github.com/typst/svg2pdf" }
 +svg2pdf = { path = "svg2pdf-35f4bb87fb677473661c6d12919e01a6d64a716d" }
  tiny-skia = "0.9.0"
+ toml = { version = "0.7.3", default-features = false, features = ["parse"] }
  tracing = "0.1.37"
- ttf-parser = "0.18.1"
