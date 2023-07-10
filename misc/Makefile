@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2023/06/26 11:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.592 2023/07/10 19:52:02 pin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -256,6 +256,7 @@ SUBDIR+=	pixd
 SUBDIR+=	plan9port
 SUBDIR+=	ppower
 SUBDIR+=	preftools
+SUBDIR+=	projectable
 SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
 SUBDIR+=	py-ansi
