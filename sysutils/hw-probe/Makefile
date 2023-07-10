@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/08 22:15:42 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/10 10:35:20 vins Exp $
 
 DISTNAME=	hw-probe
 PKGNAME=	hw-probe-1.6
@@ -22,8 +22,6 @@ DEPENDS+=	smartmontools-[0-9]*:../../sysutils/smartmontools
 USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=	hw-probe
-
-USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS+=	bin
 
