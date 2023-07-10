@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/06/06 08:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/07/10 07:42:45 nia Exp $
 
 DISTNAME=	pfstools-2.1.0
 PKGREVISION=	37
@@ -23,6 +23,9 @@ CMAKE_ARGS+=		-DPKGMANDIR=${PKGMANDIR}
 CMAKE_ARGS+=		-DWITH_MATLAB=OFF
 CMAKE_ARGS+=		-DWITH_OpenCV=OFF
 CXXFLAGS+=		-std=c++14  # OpenEXR
+
+# C++14
+GCC_REQD+=		5
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
