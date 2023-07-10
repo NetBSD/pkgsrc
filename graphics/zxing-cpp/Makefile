@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/04/26 19:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/10 07:51:27 nia Exp $
 
 DISTNAME=	zxing-cpp-2.0.0
 CATEGORIES=	graphics
@@ -10,7 +10,10 @@ HOMEPAGE=	https://github.com/nu-book/zxing-cpp/
 COMMENT=	1D/2D barcode reader/writer library in C++
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+
+# C++17
+GCC_REQD+=	7
 
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
 # Blackbox tests target pulls fmtlib with git command.
