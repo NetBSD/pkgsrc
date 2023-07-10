@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4362 2023/07/10 19:39:35 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4363 2023/07/10 19:43:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6076,3 +6076,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/erdtree to 3.1.2 [pin 2023-07-10]
 	Updated graphics/oculante to 0.6.68 [pin 2023-07-10]
 	Updated editors/tp-note to 1.21.8 [pin 2023-07-10]
+	Updated www/wiki-tui to 0.8.0 [pin 2023-07-10]
+	Updated textproc/typst to 0.6.0 [pin 2023-07-10]
