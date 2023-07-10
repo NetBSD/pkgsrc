@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4351 2023/07/10 12:01:54 he Exp $
+$NetBSD: CHANGES-2023,v 1.4352 2023/07/10 12:59:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6062,3 +6062,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/weechat to 4.0.1 [jperkin 2023-07-10]
 	Updated sysutils/zabbix50-server to 5.0.36 [otis 2023-07-10]
 	Updated lang/rust to 1.70.0 [he 2023-07-10]
+	Updated textproc/ugrep to 3.12.2 [adam 2023-07-10]
+	Updated devel/py-dogpile-cache to 1.2.2 [adam 2023-07-10]
