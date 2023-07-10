@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.9 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.10 2023/07/10 12:01:24 he Exp $
 
 Provide defaults for the various NetBSD targets.
 
@@ -47,8 +47,11 @@ Provide defaults for the various NetBSD targets.
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-@@ -274,6 +282,7 @@ impl Build {
+@@ -272,8 +280,10 @@ impl Build {
+             "powerpc64le-unknown-linux-gnu" => "linux-ppc64le",
+             "powerpc64le-unknown-linux-musl" => "linux-ppc64le",
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",
++            "riscv64gc-unknown-netbsd" => "BSD-generic64",
              "s390x-unknown-linux-gnu" => "linux64-s390x",
              "s390x-unknown-linux-musl" => "linux64-s390x",
 +            "sparc64-unknown-netbsd" => "BSD-generic64",
