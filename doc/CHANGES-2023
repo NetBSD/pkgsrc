@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4356 2023/07/10 16:19:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4357 2023/07/10 19:32:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6070,3 +6070,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/xapian-omega to 1.4.23 [schmonz 2023-07-10]
 	Updated databases/redis to 7.0.12 [adam 2023-07-10]
 	Updated security/py-asyncssh to 2.13.2 [adam 2023-07-10]
+	Updated shells/oh-my-posh to 17.9.0 [pin 2023-07-10]
