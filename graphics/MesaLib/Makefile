@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2022/08/11 05:08:38 gutteridge Exp $
+# $NetBSD: Makefile,v 1.206 2023/07/10 03:16:45 pho Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -54,8 +54,7 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .  endif
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
-.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" ||	\
-      ${MACHINE_ARCH:M*arm*} || ${MACHINE_CPU} == "aarch64"
+.  if ${_MESALIB_ARCH_SUPPORTS_XA} == "yes"
 # XA state tracker requires at least one of the following gallium drivers:
 # nouveau, freedreno, i915, svga
 MESON_ARGS+=		-Dgallium-xa=enabled
