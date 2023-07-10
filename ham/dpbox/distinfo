@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:48:37 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/07/10 07:56:13 nia Exp $
 
 BLAKE2s (dpbox-60000.tar.gz) = 5ef71d0d23db2ff5b0d4ec8052f615a50b51d6abbd1e49a4a8b2a3f6f2a28c1f
 SHA512 (dpbox-60000.tar.gz) = 24258c73e657d1a1daa55d65262acdf967e350956958a807ab786e891938df324a4639b55b51c2dfa0015c3a944cac7f419194edea970a0564d3f370aefb02bc
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = abeee7b86844c8937792ef09a938caf232574fb3
 SHA1 (patch-ac) = f81ea8e6441bd3bf95d8d60660cf9b407895a070
 SHA1 (patch-ad) = 589a69328b5959f81b86739a6e3c32f6d1d71ffe
 SHA1 (patch-ae) = 82c22fd343ab353012c822d84d39c8018b285f83
-SHA1 (patch-af) = a875f03b78a1afb444fa9301e24b5718f0f285cc
+SHA1 (patch-af) = 5e6fa5a76caacf04ca06f626fedb5da8416a0e3f
 SHA1 (patch-ag) = 7f0a7fa59aa48a0aaf940558b4de3498fb00dacd
 SHA1 (patch-ah) = 6501eb257f10c4907d875a14d134bfb5fe6736f1
 SHA1 (patch-ai) = 9d96b644d0b29a6bfc787202d2c42223570b1ee5
