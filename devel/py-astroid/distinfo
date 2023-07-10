@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.69 2023/05/21 17:42:11 wiz Exp $
+$NetBSD: distinfo,v 1.70 2023/07/10 03:41:20 adam Exp $
 
-BLAKE2s (astroid-2.15.5.tar.gz) = cfdd1606facc1ab88a43156d6d7154e9ee5e25a178d57be07b6dc0e9a15be18b
-SHA512 (astroid-2.15.5.tar.gz) = 7f4c339a93b90cb6fb9769396e41fcbd4377b0cc8723f30c3fdc688025ae5b2f7fcd20a6e6111da6c078d4fcac5bdfce6b515b5bd9e3e36afc64679f20636097
-Size (astroid-2.15.5.tar.gz) = 343686 bytes
+BLAKE2s (astroid-2.15.6.tar.gz) = 8971aa41f6a4295c8f15766ab1c67a93e3026807524be8fb14a6dac836aa951d
+SHA512 (astroid-2.15.6.tar.gz) = 777c17ad38600e7dd14aade8d379d38d977b5675cb4156e10cdcaf723f9979ab7e304425d1810ca5046c17ae2bfdbced40cd042a598cdae45f17d6871d58121d
+Size (astroid-2.15.6.tar.gz) = 344027 bytes
