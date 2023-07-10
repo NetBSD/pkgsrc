@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2023/03/17 17:18:31 adam Exp $
+$NetBSD: distinfo,v 1.36 2023/07/10 16:19:36 adam Exp $
 
-BLAKE2s (asyncssh-2.13.1.tar.gz) = ad125329295c0c39934acc6706762306e4c3aedc39ccffdcc15ec7708dedde2c
-SHA512 (asyncssh-2.13.1.tar.gz) = 0c027283681a24058dbe18bad5289488d65d5ebecdda34f38ad63a6d84b54fd457475ada9ab7269925ced5eacbd22f27fea739ace99bd83ca9ce8f9b2d5f0714
-Size (asyncssh-2.13.1.tar.gz) = 497376 bytes
+BLAKE2s (asyncssh-2.13.2.tar.gz) = dbc314fb7b9841565d6ee05b838f260a6fdb9f25cf31859615daa93dac8f1ac7
+SHA512 (asyncssh-2.13.2.tar.gz) = 7d77b21cefda0d3275c2b422d1e5c4c57f691d60ab4c82feffdd1b45bbc1af3b485fd10e09a799bcae6834d53cbc249df44f1ff26e198240d10019785d97ecea
+Size (asyncssh-2.13.2.tar.gz) = 498674 bytes
