@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/09/04 18:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/10 08:12:15 nia Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	# ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
 
@@ -28,4 +28,5 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/skk.conf \
 		${DESTDIR}${PREFIX}/share/examples/skk/skk.conf
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
