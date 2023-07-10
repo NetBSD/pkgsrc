@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/03 13:59:15 otis Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/10 11:24:08 otis Exp $
 share/examples/${PKGBASE}/httpd-zabbix.conf
 share/examples/${PKGBASE}/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
@@ -512,7 +512,6 @@ share/zabbix/include/classes/helpers/CBrandHelper.php
 share/zabbix/include/classes/helpers/CConditionHelper.php
 share/zabbix/include/classes/helpers/CElasticsearchHelper.php
 share/zabbix/include/classes/helpers/CHintBoxHelper.php
-share/zabbix/include/classes/helpers/CHtml.php
 share/zabbix/include/classes/helpers/CMapHelper.php
 share/zabbix/include/classes/helpers/CMathHelper.php
 share/zabbix/include/classes/helpers/CMediatypeHelper.php
@@ -542,6 +541,7 @@ share/zabbix/include/classes/html/CFilter.php
 share/zabbix/include/classes/html/CForm.php
 share/zabbix/include/classes/html/CFormList.php
 share/zabbix/include/classes/html/CHorList.php
+share/zabbix/include/classes/html/CHtmlEntity.php
 share/zabbix/include/classes/html/CIFrame.php
 share/zabbix/include/classes/html/CImageTextTable.php
 share/zabbix/include/classes/html/CImg.php
@@ -997,7 +997,6 @@ share/zabbix/items.php
 share/zabbix/js/browsers.js
 share/zabbix/js/chkbxrange.js
 share/zabbix/js/class.base-component.js
-share/zabbix/js/class.bbcode.js
 share/zabbix/js/class.browsertab.js
 share/zabbix/js/class.calendar.js
 share/zabbix/js/class.cclock.js
@@ -1092,6 +1091,8 @@ share/zabbix/locale/fr/LC_MESSAGES/frontend.mo
 share/zabbix/locale/fr/LC_MESSAGES/frontend.po
 share/zabbix/locale/he/LC_MESSAGES/frontend.mo
 share/zabbix/locale/he/LC_MESSAGES/frontend.po
+share/zabbix/locale/hr/LC_MESSAGES/frontend.mo
+share/zabbix/locale/hr/LC_MESSAGES/frontend.po
 share/zabbix/locale/hu/LC_MESSAGES/frontend.mo
 share/zabbix/locale/hu/LC_MESSAGES/frontend.po
 share/zabbix/locale/id/LC_MESSAGES/frontend.mo
