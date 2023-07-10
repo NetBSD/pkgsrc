@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/04/19 08:11:35 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/10 11:24:08 otis Exp $
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-agent/Makefile
 #
-PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-server-${ZABBIX_DB_TYPE}-/}
