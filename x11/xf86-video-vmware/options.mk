@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2023/07/09 16:49:33 pho Exp $
+# $NetBSD: options.mk,v 1.2 2023/07/10 03:18:20 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-vmware
 PKG_SUPPORTED_OPTIONS=	xatracker
 PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../graphics/MesaLib/features.mk"
 
 # libudev is a Systemd thing, which only makes sense on Linux.
 .if ${OPSYS} == "Linux"
@@ -12,9 +13,9 @@ PKG_SUPPORTED_OPTIONS+=	udev
 PKG_SUGGESTED_OPTIONS+=	udev
 .endif
 
-# xatracker is optionally provided by MesaLib. If X11 is a modular one
-# we're sure it's available. Otherwise we don't know.
-.if ${X11_TYPE} == "modular"
+# xatracker is optionally provided by MesaLib. It's required for DRM/KMS
+# and 3D acceleration.
+.if ${MESALIB_SUPPORTS_XA} == "yes"
 PKG_SUGGESTED_OPTIONS+=	xatracker
 .endif
 
