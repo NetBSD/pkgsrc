@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.27 2023/07/10 21:46:54 gutteridge Exp $
+$NetBSD: distinfo,v 1.28 2023/07/10 22:18:38 gutteridge Exp $
 
 BLAKE2s (AfterStep-2.2.12.tar.bz2) = 7805d82301489abce1fb81b73beeff5c2efee85592281578a06c3bcbe1056ac8
 SHA512 (AfterStep-2.2.12.tar.bz2) = 5cac6ce74b24cbcc5b8e8a6f7cc9308e110f0d09597af1fa0a8730d5f5111932a23332629bc4d372fc8d9583a514d97e35f747b17decf8d4ebfe5e3f20cdbbee
 Size (AfterStep-2.2.12.tar.bz2) = 6132233 bytes
 SHA1 (patch-aa) = 208bcf8a5ec05f3916553f0763f72504ec3fd593
 SHA1 (patch-afterstep_desktop_desklets_desklet.display) = 40c5db3f72cdb7d0a0f6adc43fa9b7968176f47e
-SHA1 (patch-autoconf_Makefile.common.in) = fdf524612b92b2e818adae53c3ff46daa4b1e35f
-SHA1 (patch-autoconf_Makefile.common.lib.in) = dc14e3c43729db8a09dec3be4c1830829bd21f0d
+SHA1 (patch-autoconf_Makefile.common.in) = b47323f28648e9a0f6e7ad13e80aea4a6b043504
+SHA1 (patch-autoconf_Makefile.common.lib.in) = dbb54af9a0f02feac66a3885be350bd62df2127a
 SHA1 (patch-autoconf_Makefile.defines.in) = db514fe09dc5099608eba0e79fdb43730163ef73
-SHA1 (patch-autoconf_configure.in) = d89b42717506dbd096c85b07232cddca83fd59eb
+SHA1 (patch-autoconf_configure.in) = 0cfa6bd097b448366c158069d7e835c36367ff80
 SHA1 (patch-configure) = 4e64f3f86da064a9b2bc061183afe602356e6d25
 SHA1 (patch-libAfterBase_Makefile.in) = 37341614052652d0370e5406096ef1b695e6eeb1
 SHA1 (patch-libAfterBase_ashash.c) = d893caaf3db1523e7e6a11f5677def3078a2c8e5
@@ -38,6 +38,6 @@ SHA1 (patch-libAfterStep_mylook.h) = 0ebab667d7e03f211f9b4e68ccef2452b49ff9db
 SHA1 (patch-libAfterStep_parser.c) = ae7ba594cf19c0001f99567f5c4a9d8754fd4ac4
 SHA1 (patch-libAfterStep_parser__xml.c) = e02a1c2399fceee2cd25e7775f0643d85a5b01c9
 SHA1 (patch-src_ASDocGen_Makefile.in) = c879bca9d2e4acf6776dfeef8557b8f72f77ab82
-SHA1 (patch-src_Animate_Makefile.in) = 5a0db32f7e6acc70cd8778b9d6c2d8d8b379acc9
+SHA1 (patch-src_Animate_Makefile.in) = fd5c50d91233e062c05c3bd4abe85741f345dff4
 SHA1 (patch-src_afterstep_asinternals.h) = 46264bce63b9252be0731a2c864e3334ea675af5
 SHA1 (patch-src_afterstep_misc.c) = 5025169242453fb35b96adbb5e0aec1173db8447
