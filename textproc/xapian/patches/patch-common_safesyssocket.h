@@ -1,12 +1,12 @@
-$NetBSD: patch-common_safesyssocket.h,v 1.1 2016/11/07 13:02:17 schmonz Exp $
+$NetBSD: patch-common_safesyssocket.h,v 1.2 2023/07/10 15:07:26 schmonz Exp $
 
 Fix compilation error on NetBSD-current (as of 2015-05-26).
 
---- common/safesyssocket.h.orig	2016-10-21 04:54:32.000000000 +0000
+--- common/safesyssocket.h.orig	2023-07-07 01:59:19.000000000 +0000
 +++ common/safesyssocket.h
-@@ -25,6 +25,7 @@
- // Some older BSDs require sys/types.h to be included first.
- # include <sys/types.h>
+@@ -26,6 +26,7 @@
+ #include <sys/types.h>
+ #ifndef __WIN32__
  # include <sys/socket.h>
 +# include <sys/time.h>
  #else
