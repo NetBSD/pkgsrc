@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/06 19:09:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/10 07:39:13 nia Exp $
 
 DISTNAME=	mojoshader-0.0.20220415
 PKGREVISION=	3
@@ -11,7 +11,8 @@ HOMEPAGE=	https://www.icculus.org/mojoshader/
 COMMENT=	Library to move calls to Direct3D shaders to OpenGL
 LICENSE=	zlib
 
-USE_LANGUAGES+=	c c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES+=	c99 c++
 
 USE_CMAKE=	yes
 
