@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1522 2023/07/07 03:26:53 charlotte Exp $
+# $NetBSD: Makefile,v 1.1523 2023/07/10 19:47:02 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -209,6 +209,7 @@ SUBDIR+=	go-net
 SUBDIR+=	go-websocket
 SUBDIR+=	gofish
 SUBDIR+=	gopher
+SUBDIR+=	gping
 SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grive2
