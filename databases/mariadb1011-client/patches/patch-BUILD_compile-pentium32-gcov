@@ -1,0 +1,15 @@
+$NetBSD: patch-BUILD_compile-pentium32-gcov,v 1.1 2023/07/10 22:55:49 nia Exp $
+
+Shell portability.
+
+--- BUILD/compile-pentium32-gcov.orig	2020-01-26 20:43:49.000000000 +0000
++++ BUILD/compile-pentium32-gcov
+@@ -22,7 +22,7 @@ CCACHE_GCOV_VERSION_ENABLED=0
+ if ccache -V > /dev/null 2>&1
+ then
+   CCACHE_VER=`ccache -V | head -1 | sed s/"ccache version "//`
+-  if test "$CCACHE_VER" == "2.4-gcov"
++  if test "$CCACHE_VER" = "2.4-gcov"
+   then
+     CCACHE_GCOV_VERSION_ENABLED=1
+   else
