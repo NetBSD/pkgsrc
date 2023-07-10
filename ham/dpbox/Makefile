@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/11/03 19:32:07 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/10 07:55:51 nia Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -10,6 +10,7 @@ MASTER_SITES=	http://home.snafu.de/wahlm/dl8hbs/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.snafu.de/wahlm/dl8hbs/dpbox.html
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 USE_TOOLS+=	gmake
