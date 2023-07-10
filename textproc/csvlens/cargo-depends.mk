@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2023/05/01 15:48:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2023/07/10 19:33:48 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.1
 CARGO_CRATE_DEPENDS+=	anstream-0.3.1
@@ -22,6 +22,7 @@ CARGO_CRATE_DEPENDS+=	crossterm-0.26.1
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.0
 CARGO_CRATE_DEPENDS+=	csv-1.2.1
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
+CARGO_CRATE_DEPENDS+=	csv-sniffer-0.3.1
 CARGO_CRATE_DEPENDS+=	errno-0.3.1
 CARGO_CRATE_DEPENDS+=	errno-dragonfly-0.1.2
 CARGO_CRATE_DEPENDS+=	fastrand-1.7.0
