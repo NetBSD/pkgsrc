@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4353 2023/07/10 13:39:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4354 2023/07/10 15:07:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6066,3 +6066,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-dogpile-cache to 1.2.2 [adam 2023-07-10]
 	Updated math/py-numpy to 1.25.1 [adam 2023-07-10]
 	Updated misc/py-platformdirs to 3.8.1 [adam 2023-07-10]
+	Updated textproc/xapian to 1.4.23 [schmonz 2023-07-10]
