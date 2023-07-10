@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2023/01/29 21:14:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/10 07:31:50 nia Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
 # Date of the latest git commit
 DISTNAME=	adaptagrams-0.20160901
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjwybrow/}
 
@@ -19,7 +19,10 @@ WRKSRC=		${WRKDIR}/adaptagrams-${GITHUB_TAG}/cola
 
 USE_TOOLS+=	aclocal autoconf autoheader automake autoreconf pkg-config
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+
+# Does not set -std=c++XX, but sigc++ (via cairomm) uses C++11 features in
+# its headers.
+USE_LANGUAGES=	c c++11
 
 GNU_CONFIGURE=	yes
 
