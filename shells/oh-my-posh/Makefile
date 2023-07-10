@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/07/04 15:49:57 pin Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/10 19:32:32 pin Exp $
 
-DISTNAME=		oh-my-posh-17.6.0
+DISTNAME=		oh-my-posh-17.9.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JanDeDobbeleer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -16,7 +16,10 @@ USE_LANGUAGES=		c
 
 INSTALLATION_DIRS=	share/${PKGBASE}
 
-GO_BUILD_PATTERN=	-ldflags="-s -w -X 'github.com/jandedobbeleer/oh-my-posh/src/build.Version=${PKGVERSION_NOREV}'" ./...
+GO_BUILD_DATE_cmd=	${DATE} "+%Y-%m-%d"
+GO_FLAG_PREFIX=		github.com/jandedobbeleer/oh-my-posh/src
+GO_BUILD_PATTERN=	-ldflags="-s -w -X '${GO_FLAG_PREFIX}/build.Version=${PKGVERSION_NOREV}' \
+			-X '${GO_FLAG_PREFIX}/build.Date=${GO_BUILD_DATE_cmd:sh}'" ./...
 
 post-build:
 	${MV} ${WRKDIR}/.gopath/bin/src ${WRKDIR}/.gopath/bin/oh-my-posh
