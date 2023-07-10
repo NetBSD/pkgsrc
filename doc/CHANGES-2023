@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4354 2023/07/10 15:07:58 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.4355 2023/07/10 15:08:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6067,3 +6067,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numpy to 1.25.1 [adam 2023-07-10]
 	Updated misc/py-platformdirs to 3.8.1 [adam 2023-07-10]
 	Updated textproc/xapian to 1.4.23 [schmonz 2023-07-10]
+	Updated textproc/xapian-omega to 1.4.23 [schmonz 2023-07-10]
