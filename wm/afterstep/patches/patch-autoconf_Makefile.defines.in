@@ -1,0 +1,16 @@
+$NetBSD: patch-autoconf_Makefile.defines.in,v 1.1 2023/07/10 21:46:54 gutteridge Exp $
+
+Fix builds with GNU binutils >= 2.36.
+https://github.com/afterstep/afterstep/pull/7/commits/5e9e897cf8c455390dd6f5b27fec49707f6b9088
+
+--- autoconf/Makefile.defines.in.orig	2013-05-01 13:34:11.000000000 +0000
++++ autoconf/Makefile.defines.in
+@@ -9,7 +9,7 @@ CCFLAGS         = @CFLAGS@
+ EXTRA_DEFINES	= 
+ 
+ RANLIB		= @RANLIB@
+-AR		= ar clq
++AR		= ar cq
+ CP		= @CP@
+ MV		= @MV@
+ RM		= @RM@
