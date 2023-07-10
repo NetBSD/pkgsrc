@@ -1,0 +1,37 @@
+$NetBSD: patch-plugin_auth__socket_CMakeLists.txt,v 1.1 2023/07/10 22:55:49 nia Exp $
+
+Add SO_PEERCRED definitions for NetBSD.
+https://github.com/MariaDB/server/pull/1884
+
+--- plugin/auth_socket/CMakeLists.txt.orig	2021-07-05 10:15:49.000000000 +0000
++++ plugin/auth_socket/CMakeLists.txt
+@@ -57,6 +57,21 @@ IF (HAVE_XUCRED)
+   SET(ok 1)
+ ELSE()
+ 
++# NetBSD, is that you?
++CHECK_CXX_SOURCE_COMPILES(
++"#include <sys/un.h>
++#include <sys/socket.h>
++int main() {
++  struct unpcbid unp;
++  socklen_t unpl = sizeof(unp);
++  getsockopt(0, 0, LOCAL_PEEREID, &unp, &unpl);
++  }" HAVE_UNPCBID)
++
++IF (HAVE_UNPCBID)
++  ADD_DEFINITIONS(-DHAVE_UNPCBID)
++  SET(ok 1)
++ELSE()
++
+ # illumos, is that you?
+ CHECK_CXX_SOURCE_COMPILES(
+ "#include <ucred.h>
+@@ -104,6 +119,7 @@ ENDIF()
+ ENDIF()
+ ENDIF()
+ ENDIF()
++ENDIF()
+ 
+ IF(ok)
+   MYSQL_ADD_PLUGIN(auth_socket auth_socket.c DEFAULT)
