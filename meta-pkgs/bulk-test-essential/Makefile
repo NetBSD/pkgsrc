@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/07/06 09:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/10 13:07:30 jperkin Exp $
 
 DISTNAME=	bulk-test-essential-20230705
 PKGREVISION=	1
@@ -14,6 +14,21 @@ META_PACKAGE=	yes
 RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+#
+# Limit to only building for the default versions, otherwise this package
+# ends up being scanned over 9000 times (despite only supporting a single
+# package name).
+#
+LUA_VERSIONS_ACCEPTED=		${LUA_VERSION_DEFAULT}
+MYSQL_VERSIONS_ACCEPTED=	${MYSQL_VERSION_DEFAULT}
+PGSQL_VERSIONS_ACCEPTED=	${PGSQL_VERSION_DEFAULT}
+PHP_VERSIONS_ACCEPTED=		${PHP_VERSION_DEFAULT}
+PKG_APACHE_ACCEPTED=		${PKG_APACHE_DEFAULT}
+PKG_JVMS_ACCEPTED=		${PKG_JVM_DEFAULT}
+PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT}
+RUBY_RAILS_ACCEPTED=		${RUBY_RAILS_DEFAULT}
+RUBY_VERSIONS_ACCEPTED=		${RUBY_VERSION_DEFAULT}
 
 #
 # Essential for binary package usage.
