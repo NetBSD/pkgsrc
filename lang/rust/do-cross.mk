@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.6 2023/01/23 18:49:03 he Exp $
+# $NetBSD: do-cross.mk,v 1.7 2023/07/10 12:01:24 he Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
@@ -9,11 +9,11 @@ SHORT_TARGETS+=		armv7
 SHORT_TARGETS+=		armv6
 SHORT_TARGETS+=		sparc64
 SHORT_TARGETS+=		powerpc
-SHORT_TARGETS+=		powerpc90
 SHORT_TARGETS+=		arm64
 SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
 SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
+SHORT_TARGETS+=		riscv64
 
 # Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"
@@ -24,36 +24,36 @@ ROOT.armv7?=		/u/evbarm-armv7hf
 ROOT.armv6?=		/u/evbarm-armv6hf
 ROOT.sparc64?=		/u/sparc64
 ROOT.powerpc?=		/u/macppc
-ROOT.powerpc90?=	/u/9.0-macppc
 ROOT.arm64?=		/u/evbarm64
 ROOT.arm64_be?=		/u/evbarm64eb
 ROOT.i386?=		/u/i386
 ROOT.mipsel?=		/u/mipsel
+ROOT.riscv64?=		/u/riscv64
 
 # Mapping to GNU triple
 G_TGT.armv7=		armv7--netbsdelf-eabihf
 G_TGT.armv6=		armv6--netbsdelf-eabihf
 G_TGT.sparc64=		sparc64--netbsd
 G_TGT.powerpc=		powerpc--netbsd
-G_TGT.powerpc90=	powerpc--netbsd
 G_TGT.arm64=		aarch64--netbsd
 G_TGT.arm64_be=		aarch64_be--netbsd
 G_TGT.i386=		i486--netbsdelf
 G_TGT.mipsel=		mipsel--netbsd
+G_TGT.riscv64=		riscv64--netbsd
 
 # Mapping to rust's TARGET specification
 TGT.armv7=		armv7-unknown-netbsd-eabihf
 TGT.armv6=		armv6-unknown-netbsd-eabihf
 TGT.sparc64=		sparc64-unknown-netbsd
 TGT.powerpc=		powerpc-unknown-netbsd
-TGT.powerpc90=		powerpc-unknown-netbsd
 TGT.arm64=		aarch64-unknown-netbsd
 TGT.arm64_be=		aarch64_be-unknown-netbsd
 TGT.i386=		i586-unknown-netbsd
 TGT.mipsel=		mipsel-unknown-netbsd
+TGT.riscv64=		riscv64gc-unknown-netbsd
 
 # Optional target tweak for bootstrap files
-TT.powerpc90=		powerpc-unknown-netbsd90
+TT.powerpc=		powerpc-unknown-netbsd90
 
 WRKDIR=		${.CURDIR}/work
 SCRIPTS=	${WRKDIR}/scripts
