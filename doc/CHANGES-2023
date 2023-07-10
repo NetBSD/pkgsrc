@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4360 2023/07/10 19:36:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4361 2023/07/10 19:38:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6074,3 +6074,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/csvlens to 0.2.0 [pin 2023-07-10]
 	Updated sysutils/dusage to 0.3.6 [pin 2023-07-10]
 	Updated sysutils/erdtree to 3.1.2 [pin 2023-07-10]
+	Updated graphics/oculante to 0.6.68 [pin 2023-07-10]
