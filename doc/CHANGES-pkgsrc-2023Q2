@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.4 2023/07/05 12:04:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.5 2023/07/10 20:28:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -25,4 +25,15 @@ www/ruby-actionpack52: security fix (CVE-2023-28362)
 
 Pullup ticket #6772 - requested by taca
 www/ruby-actionpack60: security fix (CVE-2023-28362)
+
+Pullup ticket #6774 - requested by nia
+databases-mariadb105-client: security fix
+databases-mariadb105-server: security fix
+
+Pullup ticket #6775 - requested by nia
+databases/mariadb106-client: security fix
+databases/mariadb106-server: security fix
+
+Pullup ticket #6777 - requested by abs
+x11/qt5-qtwebkit: build fix
 
