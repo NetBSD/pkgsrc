@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4352 2023/07/10 12:59:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4353 2023/07/10 13:39:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6064,3 +6064,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rust to 1.70.0 [he 2023-07-10]
 	Updated textproc/ugrep to 3.12.2 [adam 2023-07-10]
 	Updated devel/py-dogpile-cache to 1.2.2 [adam 2023-07-10]
+	Updated math/py-numpy to 1.25.1 [adam 2023-07-10]
+	Updated misc/py-platformdirs to 3.8.1 [adam 2023-07-10]
