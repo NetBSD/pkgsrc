@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:25:10 nia Exp $
+$NetBSD: distinfo,v 1.27 2023/07/10 21:46:54 gutteridge Exp $
 
 BLAKE2s (AfterStep-2.2.12.tar.bz2) = 7805d82301489abce1fb81b73beeff5c2efee85592281578a06c3bcbe1056ac8
 SHA512 (AfterStep-2.2.12.tar.bz2) = 5cac6ce74b24cbcc5b8e8a6f7cc9308e110f0d09597af1fa0a8730d5f5111932a23332629bc4d372fc8d9583a514d97e35f747b17decf8d4ebfe5e3f20cdbbee
@@ -7,9 +7,10 @@ SHA1 (patch-aa) = 208bcf8a5ec05f3916553f0763f72504ec3fd593
 SHA1 (patch-afterstep_desktop_desklets_desklet.display) = 40c5db3f72cdb7d0a0f6adc43fa9b7968176f47e
 SHA1 (patch-autoconf_Makefile.common.in) = fdf524612b92b2e818adae53c3ff46daa4b1e35f
 SHA1 (patch-autoconf_Makefile.common.lib.in) = dc14e3c43729db8a09dec3be4c1830829bd21f0d
+SHA1 (patch-autoconf_Makefile.defines.in) = db514fe09dc5099608eba0e79fdb43730163ef73
 SHA1 (patch-autoconf_configure.in) = d89b42717506dbd096c85b07232cddca83fd59eb
 SHA1 (patch-configure) = 4e64f3f86da064a9b2bc061183afe602356e6d25
-SHA1 (patch-libAfterBase_Makefile.in) = 090ef7a135df43160d38af785a61db73e41b81d9
+SHA1 (patch-libAfterBase_Makefile.in) = 37341614052652d0370e5406096ef1b695e6eeb1
 SHA1 (patch-libAfterBase_ashash.c) = d893caaf3db1523e7e6a11f5677def3078a2c8e5
 SHA1 (patch-libAfterBase_asvector.c) = b4feb2a0f10110464d798f1ea405fd4a40490e52
 SHA1 (patch-libAfterBase_asvector.h) = f1c775e576dcdbbd8fa73a4fd362dc6e17d84b58
@@ -19,9 +20,9 @@ SHA1 (patch-libAfterBase_parse.h) = 5e2e0a1b3351f7d3b7d84076879e3827d47e3f24
 SHA1 (patch-libAfterBase_selfdiag.c) = 72fa80bb37f8c73bcf27eb9c0a7b65af561d2e96
 SHA1 (patch-libAfterConf_Color.c) = fb4de950918c36cedf0b0364466f16660257f43e
 SHA1 (patch-libAfterConf_DesktopEntry.c) = e62c9cdb7fb1a05954fed56a28b5b2b38f79aa07
-SHA1 (patch-libAfterImage_Makefile.in) = 092564ab8bdd78ded9155a63a126aeda7cf205cd
-SHA1 (patch-libAfterImage_aftershow_Makefile.in) = 3d5c4f3141f51fcb4d4c8b95d244e2722e088cc6
-SHA1 (patch-libAfterImage_apps_Makefile.in) = a23ad87dcc2e0c96abc6c4896edf79f345d54acb
+SHA1 (patch-libAfterImage_Makefile.in) = ab36cc32d9d4ff44ec33471b279715715227ee26
+SHA1 (patch-libAfterImage_aftershow_Makefile.in) = 7183aa0afcf0bccd7fea676184ebd5afa2c453d5
+SHA1 (patch-libAfterImage_apps_Makefile.in) = b7eadc7631ba0b076d481b318511b2273c1d7082
 SHA1 (patch-libAfterImage_asfont.c) = 4fd6498495855c2909530ac5e34accb715b48497
 SHA1 (patch-libAfterImage_import.c) = 6b1704fc631fcfdc559d0cf2aff9caf18f7137d2
 SHA1 (patch-libAfterStep_asapp.c) = b682e6a8ea7bb988cc9e35ca7d73f23a18f428bb

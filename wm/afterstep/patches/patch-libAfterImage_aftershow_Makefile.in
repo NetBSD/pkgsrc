@@ -1,7 +1,21 @@
-$NetBSD: patch-libAfterImage_aftershow_Makefile.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+$NetBSD: patch-libAfterImage_aftershow_Makefile.in,v 1.2 2023/07/10 21:46:54 gutteridge Exp $
 
---- libAfterImage/aftershow/Makefile.in.orig	2020-03-18 14:06:01.994412756 +0000
+Fix unportable test expression.
+
+Fix builds with GNU binutils >= 2.36.
+https://github.com/afterstep/afterstep/pull/7/commits/5e9e897cf8c455390dd6f5b27fec49707f6b9088
+
+--- libAfterImage/aftershow/Makefile.in.orig	2013-05-01 13:34:11.000000000 +0000
 +++ libAfterImage/aftershow/Makefile.in
+@@ -11,7 +11,7 @@ CCFLAGS         = @CFLAGS@
+ EXTRA_DEFINES	= @DEFINE_XLOCALE@
+ 
+ RANLIB		= @RANLIB@
+-AR		= ar clq
++AR		= ar cq
+ CP		= @CP@
+ MV		= @MV@
+ RM		= @RM@
 @@ -84,7 +84,7 @@ distclean:
  
  indent:
