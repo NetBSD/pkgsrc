@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4348 2023/07/10 03:41:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4349 2023/07/10 08:17:08 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6059,3 +6059,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.path to 3.7.0 [adam 2023-07-10]
 	Updated devel/py-jaraco.classes to 3.3.0 [adam 2023-07-10]
 	Updated devel/py-astroid to 2.15.6 [adam 2023-07-10]
+	Updated chat/weechat to 4.0.1 [jperkin 2023-07-10]
