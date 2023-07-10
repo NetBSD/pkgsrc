@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2023/07/01 08:38:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/07/10 13:38:10 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -689,6 +689,7 @@ ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh17859.f
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh23533.f
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh23598.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh23598Warn.f90
+${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh23879.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/gh2848.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/operators.f90
 ${PYSITELIB}/numpy/f2py/tests/src/crackfortran/privatemod.f90
