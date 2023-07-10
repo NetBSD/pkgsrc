@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:38 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/10 08:03:24 nia Exp $
 
 DISTNAME=	fcitx5-gtk-5.0.4
 PKGREVISION=	5
@@ -16,6 +16,9 @@ TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# C++17
+GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE+=	fcitx-gclient/Fcitx5GClient.pc.in
 
