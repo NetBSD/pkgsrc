@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2023/01/29 21:16:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2023/07/10 07:24:22 nia Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/demos/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,16 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+
+# GLEW's headers use <cstdint>, which requires -std=c++11 with
+# older versions of GCC.
+#
+# It's probably quite unsafe to mandate C++11 through GLEW's
+# buildlink3 file (in case a dependent package actually requires
+# a more recent version), so this remains here as a hack.
+#
+# mesa-demos is not explicitly using -std=c++XX anyway (it should be).
+USE_LANGUAGES=	c c++11
 
 SUBST_CLASSES+=		bitmap
 SUBST_STAGE.bitmap=	pre-configure
