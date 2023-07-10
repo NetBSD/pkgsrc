@@ -1,4 +1,6 @@
-$NetBSD: patch-autoconf_Makefile.common.in,v 1.2 2021/07/11 12:13:17 bsiegert Exp $
+$NetBSD: patch-autoconf_Makefile.common.in,v 1.3 2023/07/10 22:18:38 gutteridge Exp $
+
+Fix unportable test expression.
 
 --- autoconf/Makefile.common.in.orig	2013-05-01 13:34:11.000000000 +0000
 +++ autoconf/Makefile.common.in

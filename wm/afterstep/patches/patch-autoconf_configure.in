@@ -1,4 +1,6 @@
-$NetBSD: patch-autoconf_configure.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+$NetBSD: patch-autoconf_configure.in,v 1.2 2023/07/10 22:18:38 gutteridge Exp $
+
+Fix unportable test expression.
 
 --- autoconf/configure.in.orig	2020-03-18 14:07:14.156091126 +0000
 +++ autoconf/configure.in
