@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/06/17 18:25:25 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/11 15:03:25 bacon Exp $
 
-DISTNAME=	qmediamanager-0.1.0.5
+DISTNAME=	qmediamanager-0.1.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=	d3e10ac467a88679ad805a562e98a143a016166c
+GITHUB_TAG=	2dc5c7b3ad946932cfdaf214630e23aaea4f0b76
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/qmediamanager
@@ -12,9 +12,9 @@ LICENSE=	2-clause-bsd
 
 DEPENDS=	npmount>0:../../sysutils/npmount
 DEPENDS+=	devpub-mount>0:../../sysutils/devpub-mount
-DEPENDS+=	auto-admin>=0.7.17:../../sysutils/auto-admin
+DEPENDS+=	auto-admin>=0.7.17.8:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
-DEPENDS+=	qt5-qttools>0:../../x11/qt5-qttools
+DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
@@ -26,12 +26,12 @@ USE_LANGUAGES=	c c++
 INSTALLATION_DIRS=	bin man/man1
 
 do-configure:
-	(cd ${WRKSRC} && ${PREFIX}/qt5/bin/qmake)
+	(cd ${WRKSRC} && ${PREFIX}/qt6/bin/qmake)
 
 do-install:
 	${INSTALL} -c ${WRKSRC}/qmediamanager ${DESTDIR}${PREFIX}/bin
 	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libxtend/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
