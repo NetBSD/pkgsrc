@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4377 2023/07/11 19:35:40 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4378 2023/07/11 21:17:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6099,3 +6099,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/devpub-mount to 0.1.0.5 [bacon 2023-07-11]
 	Updated sysutils/qmediamanager to 0.1.1.2 [bacon 2023-07-11]
 	Updated sysutils/lscpu to 1.2.0nb1 [vins 2023-07-11]
+	Updated databases/openldap to 2.6.5 [adam 2023-07-11]
+	Updated www/py-httpx-socks to 0.7.7 [adam 2023-07-11]
+	Updated databases/lmdb to 0.9.31 [adam 2023-07-11]
