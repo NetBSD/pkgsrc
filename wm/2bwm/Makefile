@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/07/01 18:29:48 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/11 05:37:06 nia Exp $
 
 DISTNAME=	2bwm-0.3
 CATEGORIES=	wm
@@ -9,6 +9,9 @@ MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	https://github.com/venam/2bwm
 COMMENT=	Fast floating WM written over the XCB library and derived from mcwm
 LICENSE=	isc
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
