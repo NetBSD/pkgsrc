@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:36:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/11 06:12:45 nia Exp $
 
 DISTNAME=	pod2mdoc-0.2
 PKGREVISION=	7
@@ -13,12 +13,15 @@ LICENSE=	isc
 
 BUILD_TARGET=	pod2mdoc
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "OpenBSD"
+CPPFLAGS+=	-DHAVE_OHASH=0
+.endif
+
 INSTALLATION_DIRS=	bin	${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pod2mdoc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/pod2mdoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-CPPFLAGS.NetBSD+=	-DHAVE_OHASH=0
 
 .include "../../mk/bsd.pkg.mk"
