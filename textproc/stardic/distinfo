@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:23:32 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/11 06:04:18 nia Exp $
 
 BLAKE2s (stardic-1.31/dic.tar.gz) = 879a11ff2a39b8da3fe0c71d953ec48eef31903ddd36b14b8cb01ef973c7a96c
 SHA512 (stardic-1.31/dic.tar.gz) = 9cbfda8a1d9c60eaad3b11cfbf26c7830c82e2842cdf99240e5a850cd164b027d50c9899a6ac670d9dbe13570a5379ecd3f2b4371b11f22939a0bc61ad0e66bd
 Size (stardic-1.31/dic.tar.gz) = 1800940 bytes
 SHA1 (patch-aa) = 49e9a60550efa36d45a8dc907d87a9cf28dc1829
 SHA1 (patch-ab) = ccfe1401645b465785b087fc35eb8fa340bd74d2
-SHA1 (patch-ac) = 91f647c7d3ddfe5bd8cf85533dd9902ec37f39a6
+SHA1 (patch-ac) = 3d03da2b4f324c1dc05d2535d2a394ffd80ec507
 SHA1 (patch-ad) = 50a623487e1bcfd90157574bf5d35deaa4c1e048
