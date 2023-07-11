@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/04/05 09:08:11 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/11 05:58:40 nia Exp $
 
 DISTNAME=	uncrustify-0.76.0
 CATEGORIES=	textproc
@@ -12,6 +12,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+# gcc 4.9 added support for std::regex_replace.
+GCC_REQD+=	4.9
 
 OBJDIR=			${WRKSRC}/build
 CONFIGURE_DIRS=		${OBJDIR}
