@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/07/07 21:32:21 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/11 05:25:28 nia Exp $
 
 DISTNAME=	xbanish-1.8
 CATEGORIES=	x11
@@ -19,4 +19,5 @@ MAKE_FLAGS+=	LDPATH=${X11_LDFLAGS:Q}\ ${LDFLAGS:Q}
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
