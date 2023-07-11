@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/07/11 05:42:33 nia Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/11 05:46:30 nia Exp $
 #
 
 DISTNAME=	xmlindent-0.2.16
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.cs.helsinki.fi/u/penberg/xmlindent/src/
 
