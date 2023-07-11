@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4378 2023/07/11 21:17:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4379 2023/07/11 23:49:15 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6102,3 +6102,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/openldap to 2.6.5 [adam 2023-07-11]
 	Updated www/py-httpx-socks to 0.7.7 [adam 2023-07-11]
 	Updated databases/lmdb to 0.9.31 [adam 2023-07-11]
+	Added devel/raylib version 4.5.0 [charlotte 2023-07-11]
