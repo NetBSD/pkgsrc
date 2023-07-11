@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/03/13 14:17:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/07/11 06:09:29 nia Exp $
 #
 # used by textproc/sentencepiece/Makefile
 # used by textproc/py-sentencepiece/Makefile
@@ -13,4 +13,7 @@ HOMEPAGE=	https://github.com/google/sentencepiece/
 COMMENT=	Unsupervised text tokenizer for Neural Network-based text generation
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
+
+# C++17
+GCC_REQD+=	7
