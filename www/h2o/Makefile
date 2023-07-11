@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/06/28 11:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/11 05:35:42 nia Exp $
 
 DISTNAME=	h2o-2.2.6
 PKGREVISION=	3
@@ -12,7 +12,8 @@ COMMENT=	Optimized HTTP server with support for HTTP/1.x and HTTP/2
 LICENSE=	mit
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	libh2o-evloop.pc.in
 PKGCONFIG_OVERRIDE+=	libh2o.pc.in
