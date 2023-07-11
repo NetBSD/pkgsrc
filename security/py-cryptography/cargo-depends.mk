@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2023/06/06 08:13:32 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2023/07/11 07:49:22 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	aliasable-0.1.3
@@ -27,7 +27,7 @@ CARGO_CRATE_DEPENDS+=	pem-1.1.1
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.27
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.59
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.64
 CARGO_CRATE_DEPENDS+=	pyo3-0.18.3
 CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.18.3
 CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.18.3
