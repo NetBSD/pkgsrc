@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2004/05/03 23:00:20 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2023/07/11 06:04:18 nia Exp $
 
---- image.h.orig	2000-01-29 04:34:31.000000000 +0100
+--- image.h.orig	2000-01-29 03:34:31.000000000 +0000
 +++ image.h
-@@ -17,7 +17,7 @@
+@@ -17,8 +17,9 @@
  #ifndef IMAGE_H
  #define IMAGE_H
  
 -#include <stdiostream.h>
 +#include <iosfwd>
  #include <stdlib.h>
++#include <stdio.h>
  #include <memory.h>
  #include <string.h>
+ #include <ctype.h>
