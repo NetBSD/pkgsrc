@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/06/07 14:40:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/11 22:36:43 abs Exp $
 
 DISTNAME=	libheif-1.16.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_PROJECT=	libheif
@@ -23,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	libheif.pc.in
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
+.include "../../multimedia/svt-av1/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
