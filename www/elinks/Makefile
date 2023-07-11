@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/04/19 08:11:46 adam Exp $
+# $NetBSD: Makefile,v 1.79 2023/07/11 05:32:49 nia Exp $
 
 DISTNAME=	elinks-0.16.0
 PKGREVISION=	1
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	felinks-[0-9]*
 SUPERSEDES+=	felinks-[0-9]*
+
+# C++17
+GCC_REQD+=	7
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
