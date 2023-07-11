@@ -1,4 +1,5 @@
-lscpu for OpenBSD, FreeBSD, NetBSD, Mac OS X & DragonFly.
-The main usage of this program should be for x86 architecture since it
+lscpu equivalent for systems based on BSD UNIX.
+This utility gathers CPU architecture information on *BSD and macOS. 
+The main usage of lscpu should be for x86 architecture since it
 leverages CPUID instructions. For other architectures, it just shows
 very limited facts.
