@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4375 2023/07/11 14:59:26 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4376 2023/07/11 15:03:32 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6097,3 +6097,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/spin to 6.5.2 [wiz 2023-07-11]
 	Updated lang/gcc10 to 10.5.0 [wiz 2023-07-11]
 	Updated sysutils/devpub-mount to 0.1.0.5 [bacon 2023-07-11]
+	Updated sysutils/qmediamanager to 0.1.1.2 [bacon 2023-07-11]
