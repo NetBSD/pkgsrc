@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4371 2023/07/11 07:13:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4372 2023/07/11 07:49:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6092,3 +6092,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ngtcp2 to 0.17.0 [adam 2023-07-11]
 	Updated security/gnupg2 to 2.4.3 [adam 2023-07-11]
 	Updated security/gpgme to 1.21.0 [adam 2023-07-11]
+	Updated security/py-cryptography to 41.0.2 [adam 2023-07-11]
+	Updated security/py-cryptography_vectors to 41.0.2 [adam 2023-07-11]
