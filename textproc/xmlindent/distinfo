@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:23:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/11 05:46:30 nia Exp $
 
 BLAKE2s (xmlindent-0.2.16.tar.gz) = c89734fd8d45ac9e6aadc0e27512a326f7699328eb4f4d7c3535ce14ab202c44
 SHA512 (xmlindent-0.2.16.tar.gz) = 019f1e431c920b93762747865927df2816bf8e93bc2d856658ab07cacf4d0daa6d8b4c159be90e65bbff174c8270420082f089cb9166cb03b3d1cc68cee9b4fd
 Size (xmlindent-0.2.16.tar.gz) = 17657 bytes
+SHA1 (patch-Makefile) = 2b324a5a6ee939499666f9f475e4a1a6aebb4133
