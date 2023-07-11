@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/07 12:40:08 nros Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/11 05:55:10 nia Exp $
 
 DISTNAME=	uriparser-0.9.6
 CATEGORIES=	textproc
@@ -13,9 +13,7 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=		yes
 USE_FEATURES=		snprintf
-USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	liburiparser.pc.in
-TEST_TARGET=		test
 
 CMAKE_ARGS+=		-DURIPARSER_BUILD_DOCS=OFF
 
@@ -24,5 +22,5 @@ CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-.include "../../devel/googletest/buildlink3.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
