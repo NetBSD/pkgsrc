@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2023/06/06 08:13:32 wiz Exp $
+$NetBSD: distinfo,v 1.81 2023/07/11 07:49:22 adam Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -27,9 +27,9 @@ Size (cc-1.0.79.crate) = 62624 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (cryptography-41.0.1.tar.gz) = 96c40b29a7aedf155c7b794d5ed781955d960b6999f984193f866c74e26fb304
-SHA512 (cryptography-41.0.1.tar.gz) = 7f944cc99f57db3e3e54eaea74ce65a4477c71fc9475dfb50247ca291d5e806dbf0323651edf9ce8ec3bf03de8912fb86f6c83b3b76f1d0e37369bd83e86805c
-Size (cryptography-41.0.1.tar.gz) = 629124 bytes
+BLAKE2s (cryptography-41.0.2.tar.gz) = 92aeb4b2634ef049adf9f580dbccc3347ee3fbcbaeb094131130c7c468006569
+SHA512 (cryptography-41.0.2.tar.gz) = 9c9b7fd047430bbde841fcd97e4ce76be6c708b372a7c1170013d8d8baaa263d90bed4a0fa4fca82ff713e8acf25971e7eab0f4ec1c8cbc8e9658a8527787e3a
+Size (cryptography-41.0.2.tar.gz) = 630080 bytes
 BLAKE2s (foreign-types-0.3.2.crate) = d6fbfbaaa345e5df7be5b4c09a69174fb43c8ab6b79a989c599f7a8c576d78ba
 SHA512 (foreign-types-0.3.2.crate) = bf27b8243ed482c202d120383374f19ff09422535e24b9c1aebccc66529bf300ca17b8bbc76d67f98ac092e614497afe3add9dc68aa69c93074df05762f91232
 Size (foreign-types-0.3.2.crate) = 7504 bytes
@@ -84,9 +84,9 @@ Size (proc-macro-error-1.0.4.crate) = 25293 bytes
 BLAKE2s (proc-macro-error-attr-1.0.4.crate) = 3204ef6b947e06798ac6e978bd1a40f2f7e81de7d3079fd7b639242f8ed032a8
 SHA512 (proc-macro-error-attr-1.0.4.crate) = 2606afa9ec78d7dad4500c98d3a5ecbd02c6b53ab829c742bed7f57b322a95238ab4e01cf268746815f1424fd9b02eddfa30e72f98c66106f57765f3d3116495
 Size (proc-macro-error-attr-1.0.4.crate) = 7971 bytes
-BLAKE2s (proc-macro2-1.0.59.crate) = e60e6937e0b624c3f9aec91bc4bb711ca7bd3bc15542ee4cd97a8f93134c6956
-SHA512 (proc-macro2-1.0.59.crate) = 30e3340f53593afb3f07c4ba4c3d51acabd9a7513976aeaeed4c063fee268a28066c53b265b629d5d3f56597d1d34a9e69378f0ef5cda37b51a8fa8b67424aea
-Size (proc-macro2-1.0.59.crate) = 44360 bytes
+BLAKE2s (proc-macro2-1.0.64.crate) = 2c1f33565fbf1361db48252e716b920b074a605b10b938b5cd075b596cf44c39
+SHA512 (proc-macro2-1.0.64.crate) = 884fd14ff23c19420692e35a38f88bb6a766a09da105759cd958c315b9360a2c49cfe61ceaa3122307d44040195ec9dffb12b6d0ce224fbac5d3701621a12b04
+Size (proc-macro2-1.0.64.crate) = 44848 bytes
 BLAKE2s (pyo3-0.18.3.crate) = 9defdb07d04b9e11c6f3bc44a9f0ec15e3999e4ff9a7592b9aca59ae35a204d9
 SHA512 (pyo3-0.18.3.crate) = 39f044a19a42a5e2f46049431fbe3fe10c14d12a4741cc789b42de7cbf448bcbded7fe38a0f124d994ff9bcd3d95a19305dbfdc7462331fda3e6686cc4289be5
 Size (pyo3-0.18.3.crate) = 420236 bytes
