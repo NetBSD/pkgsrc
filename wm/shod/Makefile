@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/30 19:54:25 pin Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/11 05:34:12 nia Exp $
 
 DISTNAME=	shod-2.6.2
 CATEGORIES=	wm
@@ -34,5 +34,6 @@ DEPENDS+=	sxhkd-[0-9]*:../../x11/sxhkd
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
