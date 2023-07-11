@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.6 2017/12/10 14:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/11 11:07:05 wiz Exp $
 
-DISTNAME=	spin647
-PKGNAME=	spin-6.4.7
+DISTNAME=	spin-6.5.2
 CATEGORIES=	devel
-MASTER_SITES=	http://spinroot.com/spin/Src/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=nimble-code/}
+GITHUB_PROJECT=	Spin
+GITHUB_TAG=	version-${PKGVERSION_NOREV}
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://spinroot.com/spin/whatispin.html
-COMMENT=	Formal correctness prover
+COMMENT=	Tool for formal verification of multi-threaded software applications
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/Spin/Src${PKGVERSION_NOREV}
-USE_TOOLS+=	yacc
+WRKSRC=		${WRKDIR}/Spin-${GITHUB_TAG}
+USE_TOOLS+=	pax yacc
 MAKE_FILE=	makefile
 MAKE_FLAGS=	CC=${CC:Q}
-BUILD_TARGET=	spin
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/spin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/spin ${DESTDIR}${PREFIX}/bin/spin
-	${INSTALL_MAN} ${WRKDIR}/Spin/Man/spin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/spin.1
+	${INSTALL_PROGRAM} ${WRKSRC}/Src/spin ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/Man/spin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/spin.1
+	cd ${WRKSRC}/Examples && ${PAX} -pp -rw * ${DESTDIR}${PREFIX}/share/examples/spin
 
 .include "../../mk/bsd.pkg.mk"
