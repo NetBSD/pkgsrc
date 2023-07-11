@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4373 2023/07/11 11:07:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4374 2023/07/11 13:42:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6095,3 +6095,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 41.0.2 [adam 2023-07-11]
 	Updated security/py-cryptography_vectors to 41.0.2 [adam 2023-07-11]
 	Updated devel/spin to 6.5.2 [wiz 2023-07-11]
+	Updated lang/gcc10 to 10.5.0 [wiz 2023-07-11]
