@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/04/26 19:44:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/07/11 06:13:09 adam Exp $
 
 BUILDLINK_TREE+=	ngtcp2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ngtcp2
 NGTCP2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ngtcp2+=	ngtcp2>=0.11.0
-BUILDLINK_ABI_DEPENDS.ngtcp2+=	ngtcp2>=0.15.0
+BUILDLINK_ABI_DEPENDS.ngtcp2+=	ngtcp2>=0.17.0
 BUILDLINK_PKGSRCDIR.ngtcp2?=	../../net/ngtcp2
 
 .endif	# NGTCP2_BUILDLINK3_MK
