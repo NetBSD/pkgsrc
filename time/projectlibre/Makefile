@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/27 14:14:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/11 05:40:17 nia Exp $
 
 DISTNAME=	projectlibre-1.9.3
 CATEGORIES=	time
@@ -8,7 +8,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.projectlibre.org/
 COMMENT=	Project management software
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run pax
 USE_JAVA=	run
 USE_JAVA2=	7
 
@@ -31,7 +31,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin share/${PKGBASE}
 
 do-install:
-	cd ${WRKSRC} && pax -rwpm . ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	cd ${WRKSRC} && ${PAX} -rwpm . ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${LN} -sf ${PREFIX}/share/${PKGBASE}/projectlibre.sh ${DESTDIR}${PREFIX}/bin/projectlibre
 
 .include "../../mk/java-vm.mk"
