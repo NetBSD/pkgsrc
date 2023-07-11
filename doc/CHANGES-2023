@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4370 2023/07/11 06:04:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4371 2023/07/11 07:13:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6090,3 +6090,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gdbus-codegen to 2.76.4 [adam 2023-07-11]
 	Updated www/nghttp3 to 0.13.0 [adam 2023-07-11]
 	Updated net/ngtcp2 to 0.17.0 [adam 2023-07-11]
+	Updated security/gnupg2 to 2.4.3 [adam 2023-07-11]
+	Updated security/gpgme to 1.21.0 [adam 2023-07-11]
