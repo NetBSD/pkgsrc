@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/06/06 12:46:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/07/11 07:49:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
@@ -120,6 +120,8 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/ed448-pub.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed448/rfc8032.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/dsa-p256.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-dsa.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-ed25519-non-singular-crit-opt-val.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-ed25519-non-singular-ext-val.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-broken-signature-key-type.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-duplicate-crit-opts.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/certs/p256-p256-duplicate-extension.pub
