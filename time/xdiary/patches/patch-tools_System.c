@@ -1,18 +1,9 @@
-$NetBSD: patch-tools_System.c,v 1.2 2023/07/07 12:45:25 nia Exp $
+$NetBSD: patch-tools_System.c,v 1.3 2023/07/12 12:42:36 vins Exp $
 
 Avoid int to pointer conversion warnings.
 
 --- tools/System.c.orig	1997-05-07 20:15:47.000000000 +0000
 +++ tools/System.c
-@@ -35,7 +35,7 @@ static char SCCSID[] = "@(#) Module: Sys
- --  Include files
- ----------------------------------------------------------------------------*/
- 
--#include <malloc.h>
-+#include <stdlib.h>
- #include <stdio.h>
- #include <stdlib.h>
- #include <string.h>
 @@ -102,8 +102,8 @@ void
      if( line_no > 0 ) 
        printf( "%s: (%d), ", file_name, line_no );
