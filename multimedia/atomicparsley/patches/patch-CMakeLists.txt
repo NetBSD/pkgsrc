@@ -1,0 +1,40 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/12 19:45:18 nia Exp $
+
+Build with C++11, this uses nullptr and will fail with a compiler
+that defaults to an earlier standard.
+
+Don't try to invoke git to get the version number since this
+isn't cloned from git.
+
+--- CMakeLists.txt.orig	2022-12-30 01:21:26.000000000 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,6 @@
+ cmake_minimum_required(VERSION 3.5)
+ project(AtomicParsley)
++set(CMAKE_CXX_STANDARD 11)
+ 
+ if(NOT CMAKE_BUILD_TYPE)
+   set(CMAKE_BUILD_TYPE Release)
+@@ -7,22 +8,6 @@ endif()
+ 
+ option(ASAN "whether to enable ASAN" OFF)
+ 
+-find_program(GIT git)
+-if(GIT)
+-  execute_process(
+-    COMMAND "${GIT}" "show" "-s" "--format=%H;%cd" "--date=format:%Y%m%d.%H%M%S.0"
+-    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+-    RESULT_VARIABLE git_result
+-    OUTPUT_VARIABLE git_data
+-    ERROR_VARIABLE git_err
+-    OUTPUT_STRIP_TRAILING_WHITESPACE
+-  )
+-  if(git_result EQUAL 0)
+-    list(GET git_data 0 BUILD_INFO)
+-    list(GET git_data 1 PACKAGE_VERSION)
+-  endif()
+-endif()
+-
+ include(CheckSymbolExists)
+ check_symbol_exists(strsep "string.h" HAVE_STRSEP)
+ if(HAVE_STRSEP)
