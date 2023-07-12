@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/06/27 10:28:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.66 2023/07/12 20:37:18 nia Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
@@ -158,5 +158,6 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .endif
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
