@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4382 2023/07/12 13:23:25 micha Exp $
+$NetBSD: CHANGES-2023,v 1.4383 2023/07/12 16:29:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6107,3 +6107,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-prometheus_client to 0.17.1 [adam 2023-07-12]
 	Updated sysutils/auto-admin to 0.7.18 [bacon 2023-07-12]
 	Updated editors/xnedit to 1.5.0 [micha 2023-07-12]
+	Updated math/py-scipy to 1.11.1 [adam 2023-07-12]
+	Updated devel/py-zope.exceptions to 5.0.1 [adam 2023-07-12]
