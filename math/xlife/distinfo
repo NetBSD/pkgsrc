@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:56:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/07/12 19:17:37 nia Exp $
 
 BLAKE2s (xlife-5.0.tar.gz) = d2496e309ee90bd98bb86033683879905330c65078c19f8fe2ae14a10d76b2af
 SHA512 (xlife-5.0.tar.gz) = d876986ead303a4e4fa0fc1562dc91f640189184f4ae0f8994c245fef7188db2573fda35bd31cbeb75cc8927dbc436f6b3e0689db6ba65bac59de9023dda562a
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = a1797c733efa564b361f299650ea521987635feb
 SHA1 (patch-ab) = 891c098845652ad9f172b3693cdf416685e9a960
 SHA1 (patch-ac) = 952eb7c45be5cb767cd98e028f7305ea7efc249f
 SHA1 (patch-ad) = 07f653049e43dc9bf2681d32a6357421add9357e
-SHA1 (patch-ae) = 119164be84be7fa0b00f9c783a492a2a1d81092e
+SHA1 (patch-ae) = aa40873c8ac47c38030770719127ef125774fc31
 SHA1 (patch-lifeconv.c) = 9e943c035284a89bef68fcdaeaa45535ecce2def
 SHA1 (patch-main.c) = 970110bf3da87617c389d3f46e456a2d2256d998
 SHA1 (patch-tile.c) = ec40288864b143cacab84ee76f5fc2bd3117b14d

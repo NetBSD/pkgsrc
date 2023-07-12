@@ -1,12 +1,14 @@
-$NetBSD: patch-ae,v 1.1 2003/11/09 04:20:19 fredb Exp $
+$NetBSD: patch-ae,v 1.2 2023/07/12 19:17:37 nia Exp $
 
---- tile.h.orig	1996-06-17 15:07:41.000000000 -0500
+64-bit safety, unsigned long is not always 4 bytes wide.
+
+--- tile.h.orig	1996-06-17 20:07:41.000000000 +0000
 +++ tile.h
 @@ -20,10 +20,12 @@
   * PERFORMANCE OF THIS SOFTWARE.
   */
  
-+#include <sys/types.h>
++#include <stdint.h>
 +
  #define BOXSIZE         8
  
