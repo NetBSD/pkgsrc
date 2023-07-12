@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2022/04/24 10:57:28 tnn Exp $
+$NetBSD: distinfo,v 1.24 2023/07/12 19:47:08 nia Exp $
 
 BLAKE2s (fxtv-1.03.tgz) = 1800aa8e7a387ad88f6c902846096aceed7fed0957df191b9bd09c708e197e80
 SHA512 (fxtv-1.03.tgz) = 5aa0372227f7c8d5b7bdf4885fead20ce174fcd1102e77febcd5166ecc1a8123f15c9b23ca536b9486bd281ff1c872c96f32845a188d503564de9aebc0d26016
@@ -32,7 +32,7 @@ SHA1 (patch-bd) = c11c09060d3f2b9512682078b035e93195e0e16e
 SHA1 (patch-be) = f93df2ce14cb83641d29031d541b5c822d5d1e63
 SHA1 (patch-bf) = a2c7b93ef9fb5eb28c2ac867d84d9b8e6f06dab8
 SHA1 (patch-bg) = 8078acbccbb34bb30251187f56cb2a28db579bf4
-SHA1 (patch-ca) = f80c76b57cd6b4be91a432d506141896d6630be5
+SHA1 (patch-ca) = c2fc6c26d62ef921e6c6a5972facd5bf8353ef9c
 SHA1 (patch-remotetrans_c) = 87e8cc3ad428c082f89d76c018bcca76298d62cf
 SHA1 (patch-tvscreen_c) = 4e9d49674610e827a42ea02fc350698c435162cf
 SHA1 (patch-videolib_Makefile) = a15a33fb4e756d2b2ddfa2e72835b1ffcbcd8c60
