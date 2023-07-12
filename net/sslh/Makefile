@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/01 16:47:20 rhialto Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/12 20:29:57 nia Exp $
 
 DISTNAME=	sslh-1.22c
 CATEGORIES=	net
@@ -14,7 +14,9 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	gmake gzip pod2man
-USE_LANGUAGES=	c
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 MAKE_FLAGS+=	USELIBWRAP=1
 
