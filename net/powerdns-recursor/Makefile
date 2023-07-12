@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/09/29 12:47:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2023/07/12 20:23:50 nia Exp $
 
 DISTNAME=	pdns-recursor-4.7.3
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
@@ -17,6 +17,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-net-snmp
 # currently not portable
 CONFIGURE_ENV.NetBSD+=	ac_cv_search_pthread_setaffinity_np=no
+
+# "A compiler with support for C++17 language features is required."
+GCC_REQD+=		7
 
 RCD_SCRIPTS=		pdns_recursor
 
