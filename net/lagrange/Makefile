@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/03 13:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/12 20:05:53 nia Exp $
 
 DISTNAME=	lagrange-1.15.8
 PKGREVISION=	1
@@ -12,6 +12,9 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+# GCC 4.9 added support for C11 atomics.
+GCC_REQD+=	4.9
 
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
