@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/02/14 18:19:49 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2023/07/12 21:31:08 nia Exp $
 #
 
 DISTNAME=	putty-0.78
@@ -12,6 +12,9 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 #INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
