@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2023/01/29 21:17:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/07/12 21:05:30 nia Exp $
 
 DISTNAME=	podofo-0.9.8
-#PKGREVISION=	0
 PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
@@ -11,7 +10,10 @@ HOMEPAGE=	http://podofo.sourceforge.net/
 COMMENT=	Library to work with the PDF file format
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
+# Podofo uses thread_local, which is a C++11 feature, but does not
+# appropriately set -std=c++11.
+USE_LANGUAGES=	c c++11
+
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DPODOFO_BUILD_SHARED=ON
