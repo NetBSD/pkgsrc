@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/04/19 13:38:53 sjmulder Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/12 19:16:10 nia Exp $
 
 DISTNAME=	sc-im-0.8.3
 CATEGORIES=	math
@@ -17,6 +17,9 @@ INSTALL_DIRS=	src
 
 # pkg-config to avoid broken Makefile self-configuration
 USE_TOOLS+=	gmake pkg-config bison bash:run
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 REPLACE_BASH+=	src/scopen
 
