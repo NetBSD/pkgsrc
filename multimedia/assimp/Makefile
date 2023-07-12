@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/04/26 19:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/12 19:35:40 nia Exp $
 
 DISTNAME=	assimp-5.2.5
 CATEGORIES=	multimedia
@@ -13,6 +13,9 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# 'Target "assimp" requires the language dialect "CXX17"'
+GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE=	assimp.pc.in
 
