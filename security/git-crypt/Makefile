@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/05 21:57:58 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/12 20:59:34 nia Exp $
 
 DISTNAME=	git-crypt-0.7.0
 CATEGORIES=	security
@@ -17,4 +17,5 @@ SUBST_MESSAGE.explicit_memset=	Avoid conflicts with explicit_memset(3)
 SUBST_FILES.explicit_memset=	*.cpp *.hpp
 SUBST_SED.explicit_memset+=	-e 's,explicit_memset,gitcrypt_explicit_memset,g'
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
