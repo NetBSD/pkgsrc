@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/06/29 20:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/12 16:29:13 adam Exp $
 
-DISTNAME=	zope.exceptions-5.0
+DISTNAME=	zope.exceptions-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.exceptions/}
