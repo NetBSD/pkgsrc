@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2023/07/01 08:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/07/12 16:26:29 adam Exp $
 
-DISTNAME=	scipy-1.10.1
+DISTNAME=	scipy-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -39,12 +39,7 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
-
-# Prefer boost-headers from PkgSrc which are properly patched.
-post-configure:
-	${RM} -f -r ${WRKSRC}/scipy/_lib/boost/boost
-	${LN} -s ${BUILDLINK_DIR}/include/boost ${WRKSRC}/scipy/_lib/boost/boost
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -67,14 +62,12 @@ do-test:
 	cd ${WRKDIR} && \
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
-BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.77.0nb1
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/fftw/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.18.5
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.21.6
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
