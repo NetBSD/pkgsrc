@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2023/07/12 21:30:42 nia Exp $
+
+Do not force -O2, -g, or -Werror.
+
+--- Makefile.orig	2020-04-22 16:11:18.000000000 +0000
++++ Makefile
+@@ -23,7 +23,7 @@ USE_OPENSSL?=	1
+ #
+ # Common C compiler flags.
+ #
+-CFLAGS+=	-std=gnu11 -O2 -g -Wall -Wextra -Werror
++CFLAGS+=	-std=gnu11 -Wall -Wextra
+ CFLAGS+=	-I core/ -I fuse/ -I sys/ -I crypto/ -I lua/ -I misc/
+ 
+ #
