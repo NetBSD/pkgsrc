@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4380 2023/07/12 07:05:18 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4381 2023/07/12 13:03:36 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6105,3 +6105,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/raylib version 4.5.0 [charlotte 2023-07-11]
 	Updated devel/py-pdm_backend to 2.1.3 [adam 2023-07-12]
 	Updated net/py-prometheus_client to 0.17.1 [adam 2023-07-12]
+	Updated sysutils/auto-admin to 0.7.18 [bacon 2023-07-12]
