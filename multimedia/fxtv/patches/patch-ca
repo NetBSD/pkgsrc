@@ -1,12 +1,14 @@
-$NetBSD: patch-ca,v 1.4 2022/04/24 10:57:28 tnn Exp $
+$NetBSD: patch-ca,v 1.5 2023/07/12 19:47:08 nia Exp $
 
 Use correct sized types.
 
---- tvtypes.h.orig	2008-01-15 18:31:30.000000000 -0500
-+++ tvtypes.h	2008-01-15 18:32:33.000000000 -0500
-@@ -34,12 +34,12 @@
+--- tvtypes.h.orig	1998-01-15 17:49:20.000000000 +0000
++++ tvtypes.h
+@@ -33,13 +33,14 @@
+ #include <sys/param.h>
  #include <math.h>
  #include <string.h>
++#include <stdint.h>
  
 -typedef unsigned char  TV_UINT8;
 -typedef signed   char  TV_INT8;
