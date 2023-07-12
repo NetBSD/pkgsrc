@@ -1,0 +1,7 @@
+MirMake is a package of MirBSD's make(1) as well as its system makefile
+includes, a few required tools, and a library containing hash functions,
+strlcpy and strlcat functions, etc. for operating systems which do not
+have these in libc. Tools included are: bmake (name is freely
+choosable), UCB install (only on Interix/SFU), lorder, mkdep, tsort
+(required by a few *.mk files), readlink (re- quired by bsd.obj.mk and
+bsd.cfwrap.mk).
