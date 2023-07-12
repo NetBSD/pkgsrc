@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2022/12/24 00:10:26 wiz Exp $
+$NetBSD: distinfo,v 1.10 2023/07/12 21:30:42 nia Exp $
 
 BLAKE2s (rvault-0.3.tar.gz) = 4ff52e5edf6156c4c9cc0046f02ef8845e9678a2c4719c64a1f7e83a040bd1b6
 SHA512 (rvault-0.3.tar.gz) = 0687d14cf646adccb3c09a3d5a16e771ef9b046bd4e596a487413e83e06709b27a62c2f08a9a23d47f6253cadc1fb7cbe53262455faa6628d5b23d8539f12271
 Size (rvault-0.3.tar.gz) = 76921 bytes
+SHA1 (patch-Makefile) = 2dff59157d80a067b46ebda143eb15aa64b08252
 SHA1 (patch-core_cli.c) = 8214fe7f75273a0d434751b600d89d70f735a24c
