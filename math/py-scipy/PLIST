@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.24 2023/05/05 14:59:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/07/12 16:26:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/scipy/HACKING.rst.txt
-${PYSITELIB}/scipy/INSTALL.rst.txt
 ${PYSITELIB}/scipy/LICENSE.txt
 ${PYSITELIB}/scipy/LICENSES_bundled.txt
 ${PYSITELIB}/scipy/__config__.py
@@ -24,9 +22,6 @@ ${PYSITELIB}/scipy/_build_utils/_fortran.pyo
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.py
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.pyc
 ${PYSITELIB}/scipy/_build_utils/compiler_helper.pyo
-${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.py
-${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.pyc
-${PYSITELIB}/scipy/_build_utils/gcc_build_bitness.pyo
 ${PYSITELIB}/scipy/_build_utils/setup.py
 ${PYSITELIB}/scipy/_build_utils/setup.pyc
 ${PYSITELIB}/scipy/_build_utils/setup.pyo
@@ -866,6 +861,8 @@ ${PYSITELIB}/scipy/linalg/_decomp_ldl.pyo
 ${PYSITELIB}/scipy/linalg/_decomp_lu.py
 ${PYSITELIB}/scipy/linalg/_decomp_lu.pyc
 ${PYSITELIB}/scipy/linalg/_decomp_lu.pyo
+${PYSITELIB}/scipy/linalg/_decomp_lu_cython.pyi
+${PYSITELIB}/scipy/linalg/_decomp_lu_cython.so
 ${PYSITELIB}/scipy/linalg/_decomp_polar.py
 ${PYSITELIB}/scipy/linalg/_decomp_polar.pyc
 ${PYSITELIB}/scipy/linalg/_decomp_polar.pyo
@@ -1000,6 +997,7 @@ ${PYSITELIB}/scipy/linalg/tests/test_decomp.py
 ${PYSITELIB}/scipy/linalg/tests/test_decomp_cholesky.py
 ${PYSITELIB}/scipy/linalg/tests/test_decomp_cossin.py
 ${PYSITELIB}/scipy/linalg/tests/test_decomp_ldl.py
+${PYSITELIB}/scipy/linalg/tests/test_decomp_lu.py
 ${PYSITELIB}/scipy/linalg/tests/test_decomp_polar.py
 ${PYSITELIB}/scipy/linalg/tests/test_decomp_update.py
 ${PYSITELIB}/scipy/linalg/tests/test_fblas.py
@@ -1281,10 +1279,13 @@ ${PYSITELIB}/scipy/optimize/_shgo.pyo
 ${PYSITELIB}/scipy/optimize/_shgo_lib/__init__.py
 ${PYSITELIB}/scipy/optimize/_shgo_lib/__init__.pyc
 ${PYSITELIB}/scipy/optimize/_shgo_lib/__init__.pyo
+${PYSITELIB}/scipy/optimize/_shgo_lib/_complex.py
+${PYSITELIB}/scipy/optimize/_shgo_lib/_complex.pyc
+${PYSITELIB}/scipy/optimize/_shgo_lib/_complex.pyo
+${PYSITELIB}/scipy/optimize/_shgo_lib/_vertex.py
+${PYSITELIB}/scipy/optimize/_shgo_lib/_vertex.pyc
+${PYSITELIB}/scipy/optimize/_shgo_lib/_vertex.pyo
 ${PYSITELIB}/scipy/optimize/_shgo_lib/meson.build
-${PYSITELIB}/scipy/optimize/_shgo_lib/triangulation.py
-${PYSITELIB}/scipy/optimize/_shgo_lib/triangulation.pyc
-${PYSITELIB}/scipy/optimize/_shgo_lib/triangulation.pyo
 ${PYSITELIB}/scipy/optimize/_slsqp.so
 ${PYSITELIB}/scipy/optimize/_slsqp_py.py
 ${PYSITELIB}/scipy/optimize/_slsqp_py.pyc
@@ -1577,9 +1578,6 @@ ${PYSITELIB}/scipy/signal/windows/windows.pyo
 ${PYSITELIB}/scipy/sparse/__init__.py
 ${PYSITELIB}/scipy/sparse/__init__.pyc
 ${PYSITELIB}/scipy/sparse/__init__.pyo
-${PYSITELIB}/scipy/sparse/_arrays.py
-${PYSITELIB}/scipy/sparse/_arrays.pyc
-${PYSITELIB}/scipy/sparse/_arrays.pyo
 ${PYSITELIB}/scipy/sparse/_base.py
 ${PYSITELIB}/scipy/sparse/_base.pyc
 ${PYSITELIB}/scipy/sparse/_base.pyo
@@ -1623,6 +1621,9 @@ ${PYSITELIB}/scipy/sparse/_index.pyo
 ${PYSITELIB}/scipy/sparse/_lil.py
 ${PYSITELIB}/scipy/sparse/_lil.pyc
 ${PYSITELIB}/scipy/sparse/_lil.pyo
+${PYSITELIB}/scipy/sparse/_matrix.py
+${PYSITELIB}/scipy/sparse/_matrix.pyc
+${PYSITELIB}/scipy/sparse/_matrix.pyo
 ${PYSITELIB}/scipy/sparse/_matrix_io.py
 ${PYSITELIB}/scipy/sparse/_matrix_io.pyc
 ${PYSITELIB}/scipy/sparse/_matrix_io.pyo
@@ -1871,6 +1872,7 @@ ${PYSITELIB}/scipy/sparse/tests/test_base.py
 ${PYSITELIB}/scipy/sparse/tests/test_construct.py
 ${PYSITELIB}/scipy/sparse/tests/test_csc.py
 ${PYSITELIB}/scipy/sparse/tests/test_csr.py
+${PYSITELIB}/scipy/sparse/tests/test_deprecations.py
 ${PYSITELIB}/scipy/sparse/tests/test_extract.py
 ${PYSITELIB}/scipy/sparse/tests/test_matrix_io.py
 ${PYSITELIB}/scipy/sparse/tests/test_sparsetools.py
@@ -2183,6 +2185,9 @@ ${PYSITELIB}/scipy/stats/_boost/setup.py
 ${PYSITELIB}/scipy/stats/_boost/setup.pyc
 ${PYSITELIB}/scipy/stats/_boost/setup.pyo
 ${PYSITELIB}/scipy/stats/_boost/skewnorm_ufunc.so
+${PYSITELIB}/scipy/stats/_censored_data.py
+${PYSITELIB}/scipy/stats/_censored_data.pyc
+${PYSITELIB}/scipy/stats/_censored_data.pyo
 ${PYSITELIB}/scipy/stats/_common.py
 ${PYSITELIB}/scipy/stats/_common.pyc
 ${PYSITELIB}/scipy/stats/_common.pyo
@@ -2244,6 +2249,9 @@ ${PYSITELIB}/scipy/stats/_mstats_basic.pyo
 ${PYSITELIB}/scipy/stats/_mstats_extras.py
 ${PYSITELIB}/scipy/stats/_mstats_extras.pyc
 ${PYSITELIB}/scipy/stats/_mstats_extras.pyo
+${PYSITELIB}/scipy/stats/_multicomp.py
+${PYSITELIB}/scipy/stats/_multicomp.pyc
+${PYSITELIB}/scipy/stats/_multicomp.pyo
 ${PYSITELIB}/scipy/stats/_multivariate.py
 ${PYSITELIB}/scipy/stats/_multivariate.pyc
 ${PYSITELIB}/scipy/stats/_multivariate.pyo
@@ -2259,6 +2267,9 @@ ${PYSITELIB}/scipy/stats/_qmc.pyc
 ${PYSITELIB}/scipy/stats/_qmc.pyo
 ${PYSITELIB}/scipy/stats/_qmc_cy.pyi
 ${PYSITELIB}/scipy/stats/_qmc_cy.so
+${PYSITELIB}/scipy/stats/_qmvnt.py
+${PYSITELIB}/scipy/stats/_qmvnt.pyc
+${PYSITELIB}/scipy/stats/_qmvnt.pyo
 ${PYSITELIB}/scipy/stats/_rcont/__init__.py
 ${PYSITELIB}/scipy/stats/_rcont/__init__.pyc
 ${PYSITELIB}/scipy/stats/_rcont/__init__.pyo
@@ -2278,6 +2289,9 @@ ${PYSITELIB}/scipy/stats/_result_classes.pyo
 ${PYSITELIB}/scipy/stats/_rvs_sampling.py
 ${PYSITELIB}/scipy/stats/_rvs_sampling.pyc
 ${PYSITELIB}/scipy/stats/_rvs_sampling.pyo
+${PYSITELIB}/scipy/stats/_sensitivity_analysis.py
+${PYSITELIB}/scipy/stats/_sensitivity_analysis.pyc
+${PYSITELIB}/scipy/stats/_sensitivity_analysis.pyo
 ${PYSITELIB}/scipy/stats/_sobol.pyi
 ${PYSITELIB}/scipy/stats/_sobol.so
 ${PYSITELIB}/scipy/stats/_sobol_direction_numbers.npz
@@ -2293,6 +2307,9 @@ ${PYSITELIB}/scipy/stats/_stats_pythran.py
 ${PYSITELIB}/scipy/stats/_stats_pythran.pyc
 ${PYSITELIB}/scipy/stats/_stats_pythran.pyo
 ${PYSITELIB}/scipy/stats/_stats_pythran.so
+${PYSITELIB}/scipy/stats/_survival.py
+${PYSITELIB}/scipy/stats/_survival.pyc
+${PYSITELIB}/scipy/stats/_survival.pyo
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.py
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.pyc
 ${PYSITELIB}/scipy/stats/_tukeylambda_stats.pyo
@@ -2355,6 +2372,7 @@ ${PYSITELIB}/scipy/stats/stats.pyc
 ${PYSITELIB}/scipy/stats/stats.pyo
 ${PYSITELIB}/scipy/stats/tests/__init__.py
 ${PYSITELIB}/scipy/stats/tests/common_tests.py
+${PYSITELIB}/scipy/stats/tests/data/_mvt.py
 ${PYSITELIB}/scipy/stats/tests/data/fisher_exact_results_from_r.py
 ${PYSITELIB}/scipy/stats/tests/data/levy_stable/meson.build
 ${PYSITELIB}/scipy/stats/tests/data/levy_stable/stable-Z1-cdf-sample-data.npy
@@ -2375,13 +2393,16 @@ ${PYSITELIB}/scipy/stats/tests/data/nist_anova/SmLs09.dat
 ${PYSITELIB}/scipy/stats/tests/data/nist_anova/meson.build
 ${PYSITELIB}/scipy/stats/tests/data/nist_linregress/Norris.dat
 ${PYSITELIB}/scipy/stats/tests/data/nist_linregress/meson.build
+${PYSITELIB}/scipy/stats/tests/data/rel_breitwigner_pdf_sample_data_ROOT.npy
 ${PYSITELIB}/scipy/stats/tests/data/studentized_range_mpmath_ref.json
 ${PYSITELIB}/scipy/stats/tests/meson.build
 ${PYSITELIB}/scipy/stats/tests/test_axis_nan_policy.py
 ${PYSITELIB}/scipy/stats/tests/test_binned_statistic.py
 ${PYSITELIB}/scipy/stats/tests/test_boost_ufuncs.py
+${PYSITELIB}/scipy/stats/tests/test_censored_data.py
 ${PYSITELIB}/scipy/stats/tests/test_contingency.py
 ${PYSITELIB}/scipy/stats/tests/test_continuous_basic.py
+${PYSITELIB}/scipy/stats/tests/test_continuous_fit_censored.py
 ${PYSITELIB}/scipy/stats/tests/test_crosstab.py
 ${PYSITELIB}/scipy/stats/tests/test_discrete_basic.py
 ${PYSITELIB}/scipy/stats/tests/test_discrete_distns.py
@@ -2390,12 +2411,15 @@ ${PYSITELIB}/scipy/stats/tests/test_entropy.py
 ${PYSITELIB}/scipy/stats/tests/test_fit.py
 ${PYSITELIB}/scipy/stats/tests/test_generation/generate_fisher_exact_results_from_r.R
 ${PYSITELIB}/scipy/stats/tests/test_generation/meson.build
+${PYSITELIB}/scipy/stats/tests/test_generation/reference_distribution_infrastructure_tests.py
+${PYSITELIB}/scipy/stats/tests/test_generation/reference_distributions.py
 ${PYSITELIB}/scipy/stats/tests/test_generation/studentized_range_mpmath_ref.py
 ${PYSITELIB}/scipy/stats/tests/test_hypotests.py
 ${PYSITELIB}/scipy/stats/tests/test_kdeoth.py
 ${PYSITELIB}/scipy/stats/tests/test_morestats.py
 ${PYSITELIB}/scipy/stats/tests/test_mstats_basic.py
 ${PYSITELIB}/scipy/stats/tests/test_mstats_extras.py
+${PYSITELIB}/scipy/stats/tests/test_multicomp.py
 ${PYSITELIB}/scipy/stats/tests/test_multivariate.py
 ${PYSITELIB}/scipy/stats/tests/test_odds_ratio.py
 ${PYSITELIB}/scipy/stats/tests/test_qmc.py
@@ -2403,7 +2427,9 @@ ${PYSITELIB}/scipy/stats/tests/test_rank.py
 ${PYSITELIB}/scipy/stats/tests/test_relative_risk.py
 ${PYSITELIB}/scipy/stats/tests/test_resampling.py
 ${PYSITELIB}/scipy/stats/tests/test_sampling.py
+${PYSITELIB}/scipy/stats/tests/test_sensitivity_analysis.py
 ${PYSITELIB}/scipy/stats/tests/test_stats.py
+${PYSITELIB}/scipy/stats/tests/test_survival.py
 ${PYSITELIB}/scipy/stats/tests/test_tukeylambda_stats.py
 ${PYSITELIB}/scipy/stats/tests/test_variation.py
 ${PYSITELIB}/scipy/version.py
