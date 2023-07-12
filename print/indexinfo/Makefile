@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/23 05:22:00 mef Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/12 20:52:21 nia Exp $
 
 DISTNAME=	indexinfo-0.3.1
 CATEGORIES=	print
@@ -21,4 +21,5 @@ AUTO_MKDIRS=	yes
 # SUBST_MESSAGE.reallocf=	Replace reallocf with realloc on ${OPSYS}
 # .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
