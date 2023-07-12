@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/07/11 06:09:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/07/12 14:52:15 he Exp $
 #
 # used by textproc/sentencepiece/Makefile
 # used by textproc/py-sentencepiece/Makefile
@@ -17,3 +17,5 @@ USE_LANGUAGES=	c c++
 
 # C++17
 GCC_REQD+=	7
+
+.include "../../mk/atomic64.mk"
