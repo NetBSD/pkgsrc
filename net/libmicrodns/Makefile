@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/07/25 11:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/12 20:06:51 nia Exp $
 
 DISTNAME=	microdns-0.2.0
 PKGNAME=	${DISTNAME:S/microdns/libmicrodns/}
@@ -12,6 +12,9 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/videolabs/libmicrodns/
 COMMENT=	Minimal mDNS resolver (and announcer) cross-platform library
 LICENSE=	gnu-lgpl-v2.1
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 LDFLAGS.SunOS+=	-lsocket
 
