@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2023/07/12 20:14:48 nia Exp $
+
+Don't override CFLAGS or compile in strict ANSI mode (the code uses some
+C99 functions).
+
+--- Makefile.orig	2023-04-05 14:17:28.000000000 +0000
++++ Makefile
+@@ -1,4 +1,4 @@
+-CFLAGS=	-Wall -Werror -ansi
++CFLAGS+=	-std=c99
+ 
+ all:	check_mqueue
+ 
