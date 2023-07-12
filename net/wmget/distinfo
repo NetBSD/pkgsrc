@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:07:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/12 20:46:24 nia Exp $
 
 BLAKE2s (wmget-0.6.0-src.tar.gz) = d104fe0b89c13ed43753f44194a5105849a4e290ceed65426ede7374c13ecbf4
 SHA512 (wmget-0.6.0-src.tar.gz) = 18ce66925473eefc5e4e174450abb0505d3cf85f8d1d242faa5608d6c9dfd34464c771dcf2ee1da3df2f59241f7f0a4d63fc0f8783bfb454a82777a248179e88
 Size (wmget-0.6.0-src.tar.gz) = 41155 bytes
+SHA1 (patch-Makefile) = c0ff63fe6fcb39daa8ada74eeaa6bffec0cae37e
 SHA1 (patch-aa) = cdcab9a51b4e688f49d78e2307d0752c33705f06
+SHA1 (patch-dockapp_Makefile) = d67f3620f1edd92b9608655053b823a0f79fa55e
 SHA1 (patch-dockapp_da_run.c) = 53815436dfa015d8eb434693ff98cc002a73ffd2

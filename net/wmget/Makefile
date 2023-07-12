@@ -1,29 +1,20 @@
-# $NetBSD: Makefile,v 1.38 2023/04/19 08:11:15 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/12 20:46:24 nia Exp $
 
 DISTNAME=	wmget-0.6.0-src
 PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/wmget
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	net
 MASTER_SITES=	http://amtrickey.net/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://amtrickey.net/wmget/index.html
 COMMENT=	Background download manager in a Window Maker dock app
-
-SUBST_CLASSES+=		ldflags
-SUBST_MESSAGE.ldflags=	Fixing hardcoded LDFLAGS.
-SUBST_STAGE.ldflags=	pre-configure
-SUBST_FILES.ldflags=	Makefile
-SUBST_SED.ldflags=	-e 's|^LDFLAGS=|&${LDFLAGS}|'
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	Makefile
-SUBST_SED.paths=	-e 's|^PREFIX=.*|PREFIX=${LOCALBASE}|'
+LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
