@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4379 2023/07/11 23:49:15 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4380 2023/07/12 07:05:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6103,3 +6103,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpx-socks to 0.7.7 [adam 2023-07-11]
 	Updated databases/lmdb to 0.9.31 [adam 2023-07-11]
 	Added devel/raylib version 4.5.0 [charlotte 2023-07-11]
+	Updated devel/py-pdm_backend to 2.1.3 [adam 2023-07-12]
+	Updated net/py-prometheus_client to 0.17.1 [adam 2023-07-12]
