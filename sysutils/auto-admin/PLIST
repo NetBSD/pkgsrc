@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/06/17 15:17:40 bacon Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/07/12 13:03:30 bacon Exp $
 bin/auto-append-line
 bin/auto-ask
 bin/auto-backup-file
@@ -9,8 +9,10 @@ bin/auto-get-netmask
 bin/auto-get-netmask-bits
 bin/auto-get-network
 bin/auto-hex-to-octet
+bin/auto-image2dev
 bin/auto-insert-line
 bin/auto-localbase
+bin/auto-media-format
 bin/auto-octet-to-hex
 bin/auto-pkg-branch
 bin/auto-pkg-latest
@@ -31,6 +33,7 @@ bin/auto-using-pkgsrc
 bin/auto-wacom-map-display
 man/man1/auto-add-swap.1
 man/man1/auto-admin.1
+man/man1/auto-image2dev.1
 man/man1/auto-update-system.1
 sbin/auto-add-fdesc-mount
 sbin/auto-add-group
@@ -103,7 +106,6 @@ sbin/auto-lock-local-pw
 sbin/auto-lock-user
 sbin/auto-mark-install-from-source
 sbin/auto-mark-package-critical
-sbin/auto-media-format
 sbin/auto-mount-any
 sbin/auto-mount-noautos
 sbin/auto-network-config
