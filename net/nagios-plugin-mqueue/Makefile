@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/04/21 00:59:41 manu Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/12 20:14:48 nia Exp $
 #
 
 DISTNAME=	check_mqueue-0.1
 PKGNAME=	nagios-plugin-mqueue-${DISTNAME:C/.*-//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
