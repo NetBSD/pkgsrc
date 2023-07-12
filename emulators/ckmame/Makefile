@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/04/19 08:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.73 2023/07/12 12:17:20 wiz Exp $
 
 DISTNAME=		ckmame-2.0
 PKGREVISION=		4
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.nih.at/ckmame/
 COMMENT=		Check ROM sets for MAME
 LICENSE=		modified-bsd
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++17
 USE_TOOLS+=		pkg-config perl:test
 TEST_TARGET=		test
 
