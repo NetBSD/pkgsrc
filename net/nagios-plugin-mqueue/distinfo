@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/04/21 00:59:41 manu Exp $
+$NetBSD: distinfo,v 1.2 2023/07/12 20:14:48 nia Exp $
 
 BLAKE2s (check_mqueue-0.1.tgz) = 6c87c6b19e1fa9c6ab49b81ded3ad3607b1bb2eaec8432c6c23c49a78b675282
 SHA512 (check_mqueue-0.1.tgz) = 984a0a7c10510ac2e70e5873b081317eb57e01254624042089a2347033bdeb3513ba13850456ecc7dc9d24b5b56c9fae386563062d142b88648b93525f491065
 Size (check_mqueue-0.1.tgz) = 1889 bytes
+SHA1 (patch-Makefile) = d2d632b3f2e72c476700e72427586dd996781213
