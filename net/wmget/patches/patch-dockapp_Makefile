@@ -1,0 +1,16 @@
+$NetBSD: patch-dockapp_Makefile,v 1.1 2023/07/12 20:46:24 nia Exp $
+
+Append, don't set LDFLAGS, to ensure that the environment is honoured.
+
+--- dockapp/Makefile.orig	2003-02-09 03:08:07.000000000 +0000
++++ dockapp/Makefile
+@@ -22,8 +22,7 @@
+ 
+ DAOBJS=		da_run.o da_x.o da_mouse.o
+ 
+-CFLAGS=		-ansi -Wall -W -Werror -g
+-LDFLAGS=	-L/usr/X11R6/lib -lXpm -lXext -lX11
++LDFLAGS+=	-lXpm -lXext -lX11
+ 
+ dockapp.a:	$(DAOBJS)
+ 		ar rcsv dockapp.a $(DAOBJS)
