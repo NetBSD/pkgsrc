@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4385 2023/07/12 19:09:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4386 2023/07/12 19:39:15 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6111,3 +6111,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-zope.exceptions to 5.0.1 [adam 2023-07-12]
 	Updated emulators/hercules4sdl to 4.6 [rhialto 2023-07-12]
 	Updated devel/py-hg-fastimport to 0.1.1nb3 [wiz 2023-07-12]
+	Added devel/mirmake version 20141220 [vins 2023-07-12]
