@@ -1,19 +1,20 @@
-$NetBSD: patch-makefile,v 1.2 2020/10/19 12:30:30 mef Exp $
+$NetBSD: patch-makefile,v 1.3 2023/07/12 21:17:16 nia Exp $
 
+This uses many C99 features in its code.
 Allow overriding CC, DESTDIR and PREFIX
 Use the more standard MANDIR (that we override)
 
 --- makefile.orig	2020-04-22 00:00:00.000000000 +0000
 +++ makefile
-@@ -49,14 +49,14 @@
+@@ -49,14 +49,13 @@
  # You should have received a copy of the CC0 Public Domain Dedication along
  # with this software.  If not, see
  # <https://creativecommons.org/publicdomain/zero/1.0/>
 -CC=gcc -std=gnu99 # speed tests don't work with -std=cxx, they need the POSIX extensions
-+CC?=gcc -std=gnu99 # speed tests don't work with -std=cxx, they need the POSIX extensions
- CFLAGS= -pedantic -Wall -Wextra -O3 -march=native
+-CFLAGS= -pedantic -Wall -Wextra -O3 -march=native
 -DESTDIR=
 -PREFIX=usr/local
++CFLAGS+= -std=c99 -Wall -Wextra
 +DESTDIR?=
 +PREFIX?=usr/local
  LIBDIR=$(PREFIX)/lib

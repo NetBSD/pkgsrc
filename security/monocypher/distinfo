@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/07/12 21:17:16 nia Exp $
 
 BLAKE2s (monocypher-3.1.1.tar.gz) = ebd9d2d43ac61989545f4b9b324b65399709eac49ed16dfb0a721dabb113cdac
 SHA512 (monocypher-3.1.1.tar.gz) = 9c202ffe74eac1f2a7f21b8e195d981c21c5792b788315dea168cf40f1ee83cb787f3409c2d6135f517a58fee5f3e44c9ef521e132cee40c04e4b4868787f366
 Size (monocypher-3.1.1.tar.gz) = 1066382 bytes
-SHA1 (patch-makefile) = 788ffa96918136c9fe602e55d72f6036f196227a
+SHA1 (patch-makefile) = 56e770ab18e58f25165e0470f2f060f0d943451e
