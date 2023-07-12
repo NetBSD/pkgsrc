@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/11/27 15:43:13 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/07/12 17:17:15 rhialto Exp $
 bin/cckd2ckd
 bin/cckd642ckd
 bin/cckdcdsk
@@ -44,6 +44,9 @@ bin/maketape
 bin/tapecopy
 bin/tapemap
 bin/tapesplt
+bin/tfprint
+bin/tfswap
+bin/txt2card
 bin/vmfplc2
 lib/hercules/dyncrypt.la
 lib/hercules/dyngui.la
