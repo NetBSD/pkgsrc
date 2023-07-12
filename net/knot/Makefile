@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/07/07 10:53:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2023/07/12 20:56:03 nia Exp $
 
 DISTNAME=	knot-3.2.8
 CATEGORIES=	net
@@ -9,6 +9,9 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://www.knot-dns.cz/
 COMMENT=	Knot (auth) DNS server
 LICENSE=	gnu-gpl-v3
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 BUILD_DEFS+=	VARBASE
 
