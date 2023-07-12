@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4028 2023/07/11 23:47:41 charlotte Exp $
+# $NetBSD: Makefile,v 1.4029 2023/07/12 19:37:25 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -1098,6 +1098,7 @@ SUBDIR+=	meson
 SUBDIR+=	metslib
 SUBDIR+=	mgdiff
 SUBDIR+=	mimalloc
+SUBDIR+=	mirmake
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
