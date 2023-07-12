@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/01/16 13:41:13 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/12 21:04:46 nia Exp $
+
+CFLAGS+=	-std=c99
 
 OBJS+=	main.o
 OBJS+=	bcrypt.o
