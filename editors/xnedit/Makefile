@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/01/29 21:15:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/12 13:22:10 micha Exp $
 
-DISTNAME=	xnedit-1.4.1
-PKGREVISION=	1
+DISTNAME=	xnedit-1.5.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -11,18 +10,19 @@ COMMENT=	Fork of NEdit with Unicode support and antialiased text
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c99
-USE_TOOLS=	pkg-config yacc
+USE_TOOLS=	perl pkg-config yacc
+
+# Redefinition of macros bcopy and bzero (at leat on NetBSD 9.3)
+FORTIFY_SUPPORTED=	no
 
 WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
-# Use POSIX struct dirent (instead of BSD struct direct)
-CFLAGS+=	-DUSE_DIRENT
 # Workaround for bugs in IRIX Motif library
-CFLAGS.IRIX+=	-DNO_XMIM
+CFLAGS.IRIX+=		-DNO_XMIM
 # Workaround for bugs in Solaris Motif library
-CFLAGS.SunOS+=	-DROWCOLPATCH
+CFLAGS.SunOS+=		-DROWCOLPATCH
 
 LDFLAGS.Darwin+=	-liconv
 
@@ -32,6 +32,10 @@ SUBST_STAGE.fix-cflags=		pre-configure
 SUBST_MESSAGE.fix-cflags=	Fixing Makefile.generic.
 SUBST_FILES.fix-cflags=		makefiles/Makefile.generic
 SUBST_SED.fix-cflags=		-e 's,CFLAGS=,CFLAGS+=,'
+
+# Perl is required only for this step
+post-build:
+	cd ${WRKSRC} && ${MAKE} ${MAKE_FLAGS} VERSION="XNEdit ${PKGVERSION_NOREV}" docs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/xnedit ${DESTDIR}${PREFIX}/bin
@@ -43,7 +47,7 @@ do-install:
 .for f in README.md ReleaseNotes
 	 ${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
-.for f in NEdit.ad faq.txt xnedit.txt
+.for f in NEdit.ad faq.txt xnedit.html xnedit.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
 
@@ -55,7 +59,6 @@ do-install:
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
