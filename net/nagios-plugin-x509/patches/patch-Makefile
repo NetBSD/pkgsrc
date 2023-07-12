@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2023/07/12 20:17:12 nia Exp $
+
+Avoid use of strict C89 mode when some non-standard functions (asprintf)
+are used. Honour CFLAGS. Avoid Werror when the target system is not
+predictable.
+
+--- Makefile.orig	2022-11-29 10:13:20.000000000 +0000
++++ Makefile
+@@ -1,4 +1,4 @@
+-CFLAGS=	-Wall -Werror -ansi -g
++CFLAGS+=	-std=gnu99
+ 
+ all:	check_x509
+ 
