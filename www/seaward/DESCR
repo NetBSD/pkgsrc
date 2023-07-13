@@ -1,0 +1,9 @@
+Seaward is a crawler used to discover every link on a web page and its linked
+pages without duplicates or to search for a word starting from the given URL.
+
+If you want to save the links inside a file, you can run
+'seaward <URL> --silent > file.txt', and if you experience many timeout errors
+try using a higher timeout with '-t'.
+With the '-d 0' option you crawl only the web page passed in the URL parameter,
+with '-d 1' also the pages linked to it (always within the same web site) and
+so on.
