@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2023/07/08 22:04:59 otis Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/07/13 10:49:56 nia Exp $
 # used by sysutils/zabbix60-agent/Makefile
 # used by sysutils/zabbix60-proxy/Makefile
 # used by sysutils/zabbix60-server/Makefile
@@ -12,6 +12,9 @@ MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PKGVERSION_NOREV:R}
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.zabbix.com/
 LICENSE=	gnu-gpl-v2
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_LANGUAGES=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
