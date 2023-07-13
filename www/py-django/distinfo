@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.95 2021/10/26 11:30:29 nia Exp $
-
-BLAKE2s (Django-1.11.29.tar.gz) = d0b91b42068910cc89bc24b6e2d400d8b24cb41aa968cf3a8f773668b9dccbcd
-SHA512 (Django-1.11.29.tar.gz) = dc8d1c5c09f998bf7015967961247e56a9c1dd55701534c6bce6dac2270a5531e1162d9bcbf5ec5f4d411d2d0dc820c82fd9b69628c5ff944bb9f1a22290a562
-Size (Django-1.11.29.tar.gz) = 7977916 bytes
