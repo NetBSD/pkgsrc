@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/07/05 20:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/13 09:12:16 wiz Exp $
 
 DISTNAME=	ConfigArgParse-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,12 +11,12 @@ COMMENT=	Argparse-like with config files or environment variables support
 LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
