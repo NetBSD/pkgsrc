@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/04/19 08:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/13 13:45:42 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	17
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++14
-GCC_REQD+=	6
 
 OPSYSVARS+=	SOEXT
 SOEXT.Darwin=	dylib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/05/06 19:09:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2023/07/13 13:45:42 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	38
@@ -15,9 +15,6 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	msgfmt msgmerge pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-
-# std::make_unique
-GCC_REQD+=	4.9
 
 # Since SFML is not available in pkgsrc, make sure the included version
 # is always used.

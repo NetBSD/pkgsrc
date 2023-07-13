@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/12 19:58:50 nia Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/13 13:45:43 nia Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -12,9 +12,6 @@ COMMENT=	Berkeley Internet Name Daemon implementation of DNS, version 9.18
 LICENSE=	mpl-2.0
 
 CONFLICTS+=	host-[0-9]*
-
-# GCC 4.9 added support for C11 atomics.
-GCC_REQD+=	4.9
 
 MAKE_JOBS_SAFE=	no
 

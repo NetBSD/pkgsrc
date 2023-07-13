@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2023/04/17 19:40:58 adam Exp $
+# $NetBSD: Makefile.common,v 1.13 2023/07/13 13:45:43 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
@@ -20,9 +20,6 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 CXXFLAGS+=	-DCURSES_INCLUDE_FILE='<ncursesw/ncurses.h>'
-
-# C++11
-GCC_REQD+=	4.8
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	SAVEDIR='~/.crawl'

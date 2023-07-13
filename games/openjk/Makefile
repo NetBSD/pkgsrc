@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/06 19:09:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/13 13:45:42 nia Exp $
 
 DISTNAME=	openjk-0.0.0.20191030
 PKGREVISION=	8
@@ -19,9 +19,6 @@ TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
-
-# C++11
-GCC_REQD+=	4.7
 
 CMAKE_ARGS+=	-DJK2InstallDir="share/JediAcademy"
 

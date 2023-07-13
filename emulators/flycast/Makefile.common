@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/07/02 17:32:30 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/07/13 13:45:42 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
@@ -16,9 +16,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-
-# C++17
-GCC_REQD+=	7
 
 CMAKE_ARGS+=	-DUSE_HOST_LIBZIP=ON
 CMAKE_ARGS+=	-DUSE_VULKAN=OFF
