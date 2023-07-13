@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4391 2023/07/13 14:43:13 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4392 2023/07/13 14:52:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6123,3 +6123,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp2-tools to 1.55.0 [adam 2023-07-13]
 	Updated lang/vala to 0.56.9 [adam 2023-07-13]
 	Updated www/libproxy to 0.5.3 [adam 2023-07-13]
+	Updated net/wireshark to 4.0.7 [adam 2023-07-13]
+	Updated archivers/py-zipp to 3.16.1 [adam 2023-07-13]
