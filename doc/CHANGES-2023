@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4397 2023/07/13 20:33:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4398 2023/07/13 20:34:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6130,3 +6130,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ap2-perl to 2.0.12nb3 [jperkin 2023-07-13]
 	Updated devel/difftastic to 0.48.0 [pin 2023-07-13]
 	Updated devel/cargo-c to 0.9.21 [pin 2023-07-13]
+	Updated sysutils/felix to 2.5.0 [pin 2023-07-13]
