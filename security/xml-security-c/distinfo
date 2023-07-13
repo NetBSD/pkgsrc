@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:18:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/07/13 17:54:17 pho Exp $
 
-BLAKE2s (xml-security-c-2.0.2.tar.gz) = 29fcee1f359ed586292870516d0ce9c6b4942f6f85a21525809bd06a7524ef11
-SHA512 (xml-security-c-2.0.2.tar.gz) = bebadee2daf27181f5bcc955a909397976e8fd2e67f5e546f5adbede0ca790647cbec9181b0b609da59d525ff3baa9f899af2a3d815bc7a2f3a57bd8b30c011b
-Size (xml-security-c-2.0.2.tar.gz) = 904933 bytes
+BLAKE2s (xml-security-c-2.0.4.tar.gz) = 7187a0034f999ecd0896eae300639e797cf85beb7190c7cb2654adbaca71f073
+SHA512 (xml-security-c-2.0.4.tar.gz) = c2a83b0415ec0a83c932bffb709beac5763e20397f3ec4dfb350a3190de878a860b75482c095b9ac1cae3bbfbcc968b2a26ea912816b0dd4456c7ea0e07f3060
+Size (xml-security-c-2.0.4.tar.gz) = 913785 bytes
