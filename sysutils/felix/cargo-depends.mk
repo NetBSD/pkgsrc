@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2023/06/21 07:53:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2023/07/13 20:34:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aes-0.8.3
@@ -88,7 +88,7 @@ CARGO_CRATE_DEPENDS+=	rayon-core-1.11.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
-CARGO_CRATE_DEPENDS+=   regex-syntax-0.6.29
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
 CARGO_CRATE_DEPENDS+=	ryu-1.0.13
 CARGO_CRATE_DEPENDS+=	safemem-0.3.3
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
