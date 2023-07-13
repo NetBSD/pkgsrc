@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4387 2023/07/12 20:16:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4388 2023/07/13 07:30:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6113,3 +6113,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hg-fastimport to 0.1.1nb3 [wiz 2023-07-12]
 	Added devel/mirmake version 20141220 [vins 2023-07-12]
 	Updated audio/termusic to 0.7.11 [pin 2023-07-12]
+	Updated converters/py-reedsolo to 1.7.0 [adam 2023-07-13]
+	Updated net/py-onionbalance to 0.2.1 [adam 2023-07-13]
