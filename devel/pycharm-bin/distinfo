@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:19:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/07/13 11:30:18 hauke Exp $
 
 BLAKE2s (pycharm-community-2019.1.2.tar.gz) = 23decd66d6ea35acc13b88e73dd436e9fabe94064d55859e80dcb0a1dd191ffd
 SHA512 (pycharm-community-2019.1.2.tar.gz) = 48782960022efe48f37b2bdec0be1f15741f6dde2a2dcec686ecfb07c81996c3d6fc46cf3eda2fa4cc53a67f7ec47909e47ed57b2edbf973482ca37781067415
 Size (pycharm-community-2019.1.2.tar.gz) = 333983594 bytes
 SHA1 (patch-bin_pycharm.sh) = 9a210e61e8f66ddba82c9f23c9b4ecec2c65c055
+SHA1 (patch-bin_pycharm.vmoptions) = d2402e3c804dcaee2396eeb74db8b808884abbd6
+SHA1 (patch-bin_pycharm64.vmoptions) = ac16bb00efae7817f043da4028d50ebd2ffabedb
