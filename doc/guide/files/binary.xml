@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.35 2016/07/10 07:43:23 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.36 2023/07/13 13:29:07 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -22,14 +22,14 @@
 &uprompt; <userinput>make package</userinput>
 </screen>
 
-    <para>This will build and install your package (if not already done),
-    and then build a binary package from what was installed. You can
-    then use the <command>pkg_*</command> tools to manipulate
-    it. Binary packages are created by default in
-    <filename>/usr/pkgsrc/packages</filename>, in the form of a
-    gzipped tar file. See <xref linkend="logs.package"/> for a
-    continuation of the above <filename
-    role="pkg">misc/figlet</filename> example.</para>
+    <para>This will build your package (if not already done) and package
+    it into a binary package. You can then use the
+    <command>pkg_*</command> tools to manipulate it. Binary packages are
+    created in <varname>PACKAGES</varname>, which defaults to
+    <filename>/usr/pkgsrc/packages</filename>, in the form of a compressed
+    tar file. See <xref linkend="logs.package"/> for a continuation of
+    the above <filename role="pkg">misc/figlet</filename>
+    example.</para>
 
     <para>See <xref linkend="submit"/> for information on how to submit
     such a binary package.</para>
