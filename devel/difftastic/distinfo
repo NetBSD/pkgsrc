@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.21 2023/05/17 21:30:19 pin Exp $
+$NetBSD: distinfo,v 1.22 2023/07/13 20:31:23 pin Exp $
 
+BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
+SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
+Size (ahash-0.7.6.crate) = 38030 bytes
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
 Size (aho-corasick-0.7.20.crate) = 111440 bytes
@@ -69,9 +72,9 @@ Size (diff-0.1.12.crate) = 10223 bytes
 BLAKE2s (difflib-0.4.0.crate) = 9dedf118200e28f553a5eac255f0d880196f1e55fb258011866d9f8421cb0122
 SHA512 (difflib-0.4.0.crate) = fcb57859424fea6958a4407061c421599fbca111357b1fe72faa65d8fb0b74425c993a24484e8414f475fa146cd8368c4f82e1ceb4e8dd9f95741149345b37a9
 Size (difflib-0.4.0.crate) = 7638 bytes
-BLAKE2s (difftastic-0.47.0.tar.gz) = fc435ffa9ed94e609f006227bf0bead8e5d98feaa2d52c5c28d353c1345c0f32
-SHA512 (difftastic-0.47.0.tar.gz) = fcb2383442c259d633ae2792f4bf6b06b026632bb1e4b83cb76d90f576afccdc812edb2cff49a598c56c9c3fe40ead58da75c5a2b7476d059e25e7242962535e
-Size (difftastic-0.47.0.tar.gz) = 55155162 bytes
+BLAKE2s (difftastic-0.48.0.tar.gz) = 7bf00d4561dd475be13b91d2a3156f04d1597d0e4024b2e1a8a6eae3e5645675
+SHA512 (difftastic-0.48.0.tar.gz) = ad88295d80037c84b21c11ca27fc5d08f12d488b74da055614fb73c900575435ec1b076143f6720cde471fa8a652266bcb4935c0a3ac3c8f8c3731a8504570cd
+Size (difftastic-0.48.0.tar.gz) = 54525480 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
@@ -90,12 +93,18 @@ Size (float-cmp-0.9.0.crate) = 10102 bytes
 BLAKE2s (fnv-1.0.7.crate) = ffa8e3e3e120c65486f2575822704aa79aac381f375d7295875475e36775ff09
 SHA512 (fnv-1.0.7.crate) = 2195a4b34a78e2dd9838caf0ee556bf87cbb4a8ef5505aac663b614eb59dcfc0c40f432463ede41ecca57bfe7711f72673d39a85fe03d426f1324097d5628334
 Size (fnv-1.0.7.crate) = 11266 bytes
+BLAKE2s (getrandom-0.2.9.crate) = 0e135b1f9294b9b12405927d5d104f9c1b6e29731cd458b40a68c15144b2ae91
+SHA512 (getrandom-0.2.9.crate) = 48e341125223945d1c02c4dfc54df303ae27d3ceca0d5a30b42065f5e40da600cb2010bb59e88af6b990d54b5eb4bf83ae5bbd27e13e56363f5f68be03ea9082
+Size (getrandom-0.2.9.crate) = 34457 bytes
 BLAKE2s (glob-0.3.1.crate) = cf1632af0a03d2505ae99d4e4ed0ee695c8383a0cddf1191f7f59e197e9fb17f
 SHA512 (glob-0.3.1.crate) = 29368160138bcb7ea5660f9f30c5711cfca8bc8ba836bbade3fbe8c424e7b4118daf27cffa677962e37e36f025fd2bb5a9c2aea865b0ff155cace455dfbb658b
 Size (glob-0.3.1.crate) = 18880 bytes
 BLAKE2s (hashbrown-0.11.2.crate) = abc7a6572c0284c484fdb4f678d265bc7a1571c78272b16a4a924565bc14063c
 SHA512 (hashbrown-0.11.2.crate) = c21ca68fd49bbb741901f59fed04cc124b8da99e2a4dfc26e2e5e1140637872b344612a01691bd30cc771575c571be15f756c84dde225441699cd2322af2ad6c
 Size (hashbrown-0.11.2.crate) = 85713 bytes
+BLAKE2s (hashbrown-0.12.3.crate) = 333ec43a87815091d115d166101d9719d9b951279aea1a2050e6c49813d5a79a
+SHA512 (hashbrown-0.12.3.crate) = b3700fcd659a21a6b9b3777c18b37a83bf25542b4e8f2b963779a122f5d22e1742c064cfc03e649583e7dd5c6e90ca8407f8c51a0e8755f6a108682853022f76
+Size (hashbrown-0.12.3.crate) = 102968 bytes
 BLAKE2s (heck-0.4.1.crate) = 2d8cd3bc30076ec6e8717de87da253e7d5e1aac22079242ff7d74fba5a4e1741
 SHA512 (heck-0.4.1.crate) = 8c80e959d2f10a2893f9a71994720f90747742bb5b61fc0a539eed3ea5679b140c48fd7f7690d7122cd6af5f7f20a19d412e3569fe741c6d31f6b2ce1e0b80e8
 Size (heck-0.4.1.crate) = 11567 bytes
