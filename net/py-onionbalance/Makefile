@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/10/19 13:56:32 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/13 07:30:17 adam Exp $
 
-DISTNAME=	OnionBalance-0.2.0
+DISTNAME=	OnionBalance-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OnionBalance/}
 
@@ -20,18 +19,23 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
-USE_PKG_RESOURCES=	yes
+SUBST_CLASSES+=		crypto
+SUBST_STAGE.crypto=	pre-configure
+SUBST_MESSAGE.crypto=	Replace Cryptodome with Crypto
+SUBST_FILES.crypto=	onionbalance/config_generator/config_generator.py
+SUBST_FILES.crypto+=	onionbalance/hs_v2/descriptor.py
+SUBST_FILES.crypto+=	onionbalance/hs_v2/manager.py
+SUBST_FILES.crypto+=	onionbalance/hs_v2/service.py
+SUBST_FILES.crypto+=	onionbalance/hs_v2/util.py
+SUBST_SED.crypto=	-e 's,Cryptodome,Crypto,g'
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -39,5 +43,4 @@ post-install:
 	${MV} onionbalance-config onionbalance-config-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
