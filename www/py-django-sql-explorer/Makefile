@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/04/30 18:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/13 10:03:29 wiz Exp $
 
 DISTNAME=	django-sql-explorer-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sql-explorer/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/epantry/django-sql-explorer
 COMMENT=	Pluggable app that allows to execute SQL, view, and export the results
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django>=1.7.0:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.1.18:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-unicodecsv>=0.14.1:../../databases/py-unicodecsv

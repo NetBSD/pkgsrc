@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	filebrowser_safe-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filebrowser_safe/}
 
@@ -11,9 +11,11 @@ HOMEPAGE=	https://github.com/stephenmcd/filebrowser-safe
 COMMENT=	Permanent fork of FileBrowser asset manager for Mezzanine
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
