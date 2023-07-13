@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4389 2023/07/13 09:39:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4390 2023/07/13 10:05:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6116,3 +6116,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-reedsolo to 1.7.0 [adam 2023-07-13]
 	Updated net/py-onionbalance to 0.2.1 [adam 2023-07-13]
 	Removed www/py-django-appmedia [wiz 2023-07-13]
+	Removed www/py-django successor www/py-django3 [wiz 2023-07-13]
+	Removed www/py-django14 successor www/py-django3 [wiz 2023-07-13]
+	Removed www/py-django2 successor www/py-django3 [wiz 2023-07-13]
