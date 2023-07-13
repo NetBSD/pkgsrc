@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/13 07:30:17 adam Exp $
 
-BLAKE2s (OnionBalance-0.2.0.tar.gz) = 57384f458f2cc16ccc954c24e66c7af27040e51af49d7aae19cb34204c97cf79
-SHA512 (OnionBalance-0.2.0.tar.gz) = 74601210d9d0703043fdc424120f3b2b5ef7daeeed512ce18cd21f81298a17f738914d6782d2ee868c0f58af1ffe7a25c0de95f8cc70a7dfac4c3a60352130a6
-Size (OnionBalance-0.2.0.tar.gz) = 92830 bytes
-SHA1 (patch-setup.py) = cf1f186b0824931a53e03ff30d3070a78eb03f23
+BLAKE2s (OnionBalance-0.2.1.tar.gz) = 9e0f7f7037a7a535e59db8a30a9f8f83725c13ffba1f7ea6095f41e9fef3cb7f
+SHA512 (OnionBalance-0.2.1.tar.gz) = 78e047156ed01f560564968f2b50f2a04893cd1d7ff49b5d5964c9f07ee779129893fd365aa590d3e8cd2bf465b9c3ae0d97c24ac1e07a7882bec0c5d065b3cd
+Size (OnionBalance-0.2.1.tar.gz) = 95972 bytes
+SHA1 (patch-setup.py) = ec78ae5e3e42fc71a5d7a9927f69012c9d3315c9

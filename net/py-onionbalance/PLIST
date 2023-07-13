@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/12 18:40:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/13 07:30:17 adam Exp $
 bin/onionbalance-${PYVERSSUFFIX}
 bin/onionbalance-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -37,6 +37,9 @@ ${PYSITELIB}/onionbalance/common/scheduler.pyo
 ${PYSITELIB}/onionbalance/common/signalhandler.py
 ${PYSITELIB}/onionbalance/common/signalhandler.pyc
 ${PYSITELIB}/onionbalance/common/signalhandler.pyo
+${PYSITELIB}/onionbalance/common/status.py
+${PYSITELIB}/onionbalance/common/status.pyc
+${PYSITELIB}/onionbalance/common/status.pyo
 ${PYSITELIB}/onionbalance/common/util.py
 ${PYSITELIB}/onionbalance/common/util.pyc
 ${PYSITELIB}/onionbalance/common/util.pyo
@@ -119,6 +122,9 @@ ${PYSITELIB}/onionbalance/hs_v3/params.pyo
 ${PYSITELIB}/onionbalance/hs_v3/service.py
 ${PYSITELIB}/onionbalance/hs_v3/service.pyc
 ${PYSITELIB}/onionbalance/hs_v3/service.pyo
+${PYSITELIB}/onionbalance/hs_v3/status.py
+${PYSITELIB}/onionbalance/hs_v3/status.pyc
+${PYSITELIB}/onionbalance/hs_v3/status.pyo
 ${PYSITELIB}/onionbalance/hs_v3/stem_controller.py
 ${PYSITELIB}/onionbalance/hs_v3/stem_controller.pyc
 ${PYSITELIB}/onionbalance/hs_v3/stem_controller.pyo
