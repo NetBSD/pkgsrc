@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:17 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/13 11:30:18 hauke Exp $
 
 
 VERSION=	2019.1.2
 DISTNAME=	pycharm-community-${VERSION}
 PKGNAME=	pycharm-bin-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/python/
 
@@ -18,6 +18,9 @@ DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 WRKSRC=		${WRKDIR}/pycharm-community-${VERSION}
 USE_JAVA=	yes
 USE_JAVA2=	8
+
+# 2019 breaks on java17
+PKG_JVMS_ACCEPTED= openjdk11 adoptopenjdk11-bin openjdk-bin openjdk8 oracle-jdk8
 
 USE_TOOLS+=	pax sed
 
@@ -39,7 +42,7 @@ SUBST_VARS.jdk=		PKG_JAVA_HOME
 
 do-install:
 	cd ${WRKSRC} &&	\
-	${RM} -r bin/fsnotifier bin/fsnotifier-arm bin/pycharm.sh.orig\
+	${RM} -r bin/fsnotifier bin/fsnotifier-arm bin/*.orig	\
 	bin/fsnotifier64 bin/libdbm64.so			\
 	lib/pty4j-native/linux/x86/libpty.so			\
 	lib/pty4j-native/linux/x86_64/libpty.so			\
