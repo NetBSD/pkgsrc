@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/01/25 10:40:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/07/13 07:13:53 adam Exp $
 
-BLAKE2s (reedsolo-1.5.4.tar.gz) = 7c70f109d3c329f1759a883fa5b9c7d87117e9ff0a115f82dfc76b1c9a4e2897
-SHA512 (reedsolo-1.5.4.tar.gz) = f41203bbdae9012e72f723d38dd8ee93c9f9fbab62f4ed5dd1c2b9ca9b7e87f5fc91871049d7d952d8ee6be25ed2793c90ac7134eda5cc351e1adf8ed460e8df
-Size (reedsolo-1.5.4.tar.gz) = 271280 bytes
-SHA1 (patch-setup.py) = bce91d0950b473a27002667f69e244285f8dd8fa
+BLAKE2s (reedsolo-1.7.0.tar.gz) = 9ea48266cfbe59e02b3bc6342b0243002cb7e7387b9acfe4ce06d426d39bec22
+SHA512 (reedsolo-1.7.0.tar.gz) = 6f476473b4a90214f033dddda4c7a7a2b38acbd29b70805668a90b25c8d40bb23fffe61c780d36e1677f7dd479796e6548119fa3e97e817f79dabdadac7d9cef
+Size (reedsolo-1.7.0.tar.gz) = 59723 bytes
