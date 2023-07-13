@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/07/10 07:13:53 nia Exp $
+# $NetBSD: Makefile,v 1.60 2023/07/13 13:55:10 nia Exp $
 #
 
 DISTNAME=	gama-2.24
@@ -11,12 +11,9 @@ HOMEPAGE=	https://www.gnu.org/s/gama/
 COMMENT=	Geodetic network adjustment (surveying)
 LICENSE=	gnu-gpl-v2 # or later
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 # Not documented, but apparent.
 USE_TOOLS+=	gmake
-
-# C++14
-GCC_REQD+=	5
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
