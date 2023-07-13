@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/05/16 21:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/13 13:45:42 nia Exp $
 
 DISTNAME=	easyrpg-player-0.7.0
 PKGREVISION=	10
@@ -14,10 +14,6 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES+=	c c++
-
-# "We require now the C++ language standard C++14.
-# The lowest GCC compiler supporting this fully is GCC5"
-GCC_REQD+=	5
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 

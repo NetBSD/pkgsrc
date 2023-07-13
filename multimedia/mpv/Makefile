@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2023/07/12 19:56:41 nia Exp $
+# $NetBSD: Makefile,v 1.155 2023/07/13 13:45:43 nia Exp $
 
 DISTNAME=	mpv-0.35.1
 PKGREVISION=	4
@@ -10,9 +10,6 @@ MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://mpv.io/
 COMMENT=	Video player based on MPlayer and mplayer2
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-# GCC 4.9 added support for C11 atomics.
-GCC_REQD+=	4.9
 
 # needs sem_timedwait(3)
 NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*

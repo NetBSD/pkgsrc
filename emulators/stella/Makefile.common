@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2023/01/09 18:16:33 fcambus Exp $
+# $NetBSD: Makefile.common,v 1.15 2023/07/13 13:45:42 nia Exp $
 # used by emulators/stella/Makefile
 # used by emulators/libretro-stella/Makefile
 
@@ -17,8 +17,5 @@ PATCHDIR=	${.CURDIR}/../../emulators/stella/patches
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//1}
 
 USE_LANGUAGES=	c c++
-
-# c++17, std::string_view
-GCC_REQD+=	7
 
 UNLIMIT_RESOURCES=	datasize
