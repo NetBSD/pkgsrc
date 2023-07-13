@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	django-treebeard-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-treebeard/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/django-treebeard/django-treebeard
 COMMENT=	Efficient tree implementations for the Django Web Framework
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none
 
