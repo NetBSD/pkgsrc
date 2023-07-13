@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/07/09 09:02:44 nia Exp $
+# $NetBSD: Makefile,v 1.41 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=	kitty-0.26.5
 PKGREVISION=	1
@@ -16,9 +16,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
-
-# __has_include
-GCC_REQD+=	5
 
 # don't force LTO
 BUILDLINK_TRANSFORM+=	rm:-flto
