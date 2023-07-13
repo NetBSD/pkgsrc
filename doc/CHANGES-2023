@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4390 2023/07/13 10:05:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4391 2023/07/13 14:43:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6119,3 +6119,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed www/py-django successor www/py-django3 [wiz 2023-07-13]
 	Removed www/py-django14 successor www/py-django3 [wiz 2023-07-13]
 	Removed www/py-django2 successor www/py-django3 [wiz 2023-07-13]
+	Updated www/nghttp2 to 1.55.0 [adam 2023-07-13]
+	Updated www/nghttp2-tools to 1.55.0 [adam 2023-07-13]
+	Updated lang/vala to 0.56.9 [adam 2023-07-13]
+	Updated www/libproxy to 0.5.3 [adam 2023-07-13]
