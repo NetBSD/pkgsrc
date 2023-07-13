@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.592 2023/07/10 19:52:02 pin Exp $
+# $NetBSD: Makefile,v 1.593 2023/07/13 18:07:25 nia Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -123,7 +123,6 @@ SUBDIR+=	iwatch
 SUBDIR+=	ja-less
 SUBDIR+=	ja-man
 SUBDIR+=	jhd
-SUBDIR+=	jive
 SUBDIR+=	kaccessible
 SUBDIR+=	kalzium
 SUBDIR+=	kanjidic
