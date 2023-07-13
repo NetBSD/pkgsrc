@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/07/06 07:24:26 nia Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=		enchant-2.5.0
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -31,9 +31,6 @@ CONFIGURE_ARGS+=	--without-voikko
 # As of 2.3.2
 # FAILURE: 230 out of 425 tests failed (390 failures).
 TEST_TARGET=		check
-
-# C++11
-GCC_REQD+=		4.8
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/share && ${MV} enchant/enchant.ordering examples/enchant.ordering
