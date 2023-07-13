@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2020/10/25 12:53:54 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2023/07/13 13:49:17 nia Exp $
 
 BUILDLINK_TREE+=	gpgme
 
@@ -8,8 +8,6 @@ GPGME_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=0.9.0
 BUILDLINK_ABI_DEPENDS.gpgme+=	gpgme>=1.8.0nb1
 BUILDLINK_PKGSRCDIR.gpgme?=	../../security/gpgme
-
-GCC_REQD+=		4.8
 
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"

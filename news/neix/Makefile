@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/07/12 20:49:36 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	4
@@ -14,9 +14,6 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++11
-
-# gcc 4.9 added support for std::regex_replace.
-GCC_REQD+=	4.9
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
