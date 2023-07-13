@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/12/16 10:22:57 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/07/13 13:45:42 nia Exp $
 #
 # When updating this, please also update devel/py-protobuf
 #
@@ -36,9 +36,6 @@ CHECK_PORTABILITY_SKIP=		benchmarks/Makefile.in
 CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh
 
 SET_LIBDIR=	yes
-
-# configure: error: *** A compiler with support for C++11 language features is required.
-GCC_REQD+=	4.8
 
 # included in third_party
 #.include "../../devel/googletest/buildlink3.mk"
