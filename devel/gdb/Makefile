@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/12/06 09:45:51 he Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/13 19:34:27 triaxx Exp $
 
 DISTNAME=	gdb-10.1
 PKGREVISION=	5
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 LICENSE=	gnu-gpl-v3
+
+NOT_FOR_PLATFORM+=	Darwin-*-aarch64
 
 USE_LANGUAGES=		c gnu++11
 
