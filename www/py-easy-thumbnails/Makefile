@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/13 09:40:58 wiz Exp $
 
 DISTNAME=	easy-thumbnails-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,12 +13,12 @@ LICENSE=	modified-bsd
 
 PREV_PKGPATH=	www/py-djangoeasy-thumbnails
 
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
-
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
