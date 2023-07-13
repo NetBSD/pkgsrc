@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/06/22 10:39:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=	polkit-121
 CATEGORIES=	security
@@ -21,9 +21,6 @@ USE_LANGUAGES=		c c++14
 USE_TOOLS+=		msgfmt msgmerge pkg-config perl xgettext
 
 MESON_ARGS+=		-Dman=true
-
-# configure: error: *** A compiler with support for C++17 language features is required.
-GCC_REQD+=	7
 
 PKGCONFIG_OVERRIDE+=	data/polkit-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in

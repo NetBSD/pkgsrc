@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/04/25 23:23:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=	mbedtls-2.28.3
 CATEGORIES=	security
@@ -16,8 +16,6 @@ SUPERSEDES+=	polarssl-[0-9]*
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config
-
-GCC_REQD+=	4.4
 
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DUSE_SHARED_MBEDTLS_LIBRARY=ON

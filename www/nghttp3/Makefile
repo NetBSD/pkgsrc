@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/07/11 06:02:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/13 13:49:17 nia Exp $
 
 DISTNAME=	nghttp3-0.13.0
 CATEGORIES=	www
@@ -12,9 +12,6 @@ COMMENT=	Implementation of RFC 9114 HTTP/3 mapping over QUIC and RFC 9204 QPACK
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-
-# C++17
-GCC_REQD+=	7
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
