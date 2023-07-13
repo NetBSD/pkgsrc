@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:40:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/13 07:13:53 adam Exp $
 
-DISTNAME=	reedsolo-1.5.4
+DISTNAME=	reedsolo-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=r/reedsolo/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/tomerfiliba/reedsolomon
 COMMENT=	Pure-Python Reed Solomon encoder/decoder
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
