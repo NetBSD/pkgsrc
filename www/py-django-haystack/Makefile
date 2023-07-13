@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 13:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/13 10:03:27 wiz Exp $
 
 DISTNAME=	django-haystack-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-haystack/}
 
@@ -11,7 +12,7 @@ COMMENT=	Modular search for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none
 

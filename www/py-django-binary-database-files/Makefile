@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/11/29 10:26:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/13 10:03:26 wiz Exp $
 
 DISTNAME=	django-binary-database-files-1.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-binary-database-files/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/kimetrica/django-binary-database-files
 COMMENT=	In-database file storage backend for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=	# none

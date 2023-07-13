@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 02:57:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/13 10:03:29 wiz Exp $
 
 DISTNAME=	django-q-1.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-q/}
 
@@ -12,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-arrow>=1.1.0:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-blessed>=1.1.0:../../devel/py-blessed
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-picklefield>=3.0.1:../../www/py-django-picklefield
 
 USE_LANGUAGES=	# none

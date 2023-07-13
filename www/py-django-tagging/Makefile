@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/13 10:03:29 wiz Exp $
 
 DISTNAME=	django-tagging-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Fantomas42/}
 
@@ -14,11 +14,13 @@ LICENSE=	mit
 GITHUB_PROJECT=	django-tagging
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=		# none
 
 INSTALLATION_DIRS+=	share/doc/py-django-tagging
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} tagging/tests/tests.py

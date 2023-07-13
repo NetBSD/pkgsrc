@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/07/13 09:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	easy-thumbnails-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/easy-thumbnails/}
 
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 PREV_PKGPATH=	www/py-djangoeasy-thumbnails
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none
 
