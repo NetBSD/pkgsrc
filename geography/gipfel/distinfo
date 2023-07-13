@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:45:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/13 09:31:07 wiz Exp $
 
 BLAKE2s (gipfel-0.4.0.tar.gz) = dd95234e479df818c5b41fd8b5b34a84d5cc21319c59b50889a323d65509c479
 SHA512 (gipfel-0.4.0.tar.gz) = d8deeae94ce7b9e6a1a4ca19296a1c19e91b0ccdecef320ad9857441e06a96e07ee1f8432f59fe484f39f69d00654d2e622799491e7c982e22ac69211ba2b793
 Size (gipfel-0.4.0.tar.gz) = 496685 bytes
-SHA1 (patch-src_ImageMetaData.cxx) = 123e06d21d78e8447318d185f05cc46d9700c4fe
+SHA1 (patch-src_ImageMetaData.cxx) = d28c775edb7dc958d60439f95aefaa1fb8c1cfc5
