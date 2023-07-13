@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	djangocms-admin-style-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-admin-style/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/divio/djangocms-admin-style
 COMMENT=	Adds pretty CSS styles for the django CMS admin interface
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none
 

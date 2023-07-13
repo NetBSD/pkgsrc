@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/04/30 18:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/13 10:03:28 wiz Exp $
 
 DISTNAME=	django-localflavor-3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-localflavor/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://django-localflavor.readthedocs.io/en/latest/
 COMMENT=	L18N support for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-stdnum-[0-9]*:../../misc/py-stdnum
 
 USE_LANGUAGES=	# none
