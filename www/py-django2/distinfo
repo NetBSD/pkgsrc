@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.40 2022/04/20 12:28:57 adam Exp $
-
-BLAKE2s (Django-2.2.28.tar.gz) = 5ea76cca148513c4af6a38d1ed05bff2674dac53492a8b85b10c4be79709c4d7
-SHA512 (Django-2.2.28.tar.gz) = 228aec6ee8619ff3d0397ff867bd59352900fb95557bd02cfea594b3bc3f813b5bcd13f488b451b0ee79a4d52deab19c5e97aa40f1075ba06db72542d119228e
-Size (Django-2.2.28.tar.gz) = 9187543 bytes
