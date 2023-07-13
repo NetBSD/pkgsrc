@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1729 2023/07/13 10:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1730 2023/07/13 20:43:20 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1069,6 +1069,7 @@ SUBDIR+=	sassc
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-l10n
+SUBDIR+=	seaward
 SUBDIR+=	serf
 SUBDIR+=	shibboleth-sp
 SUBDIR+=	shoutrrr
