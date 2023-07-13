@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/06 19:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/13 13:45:41 nia Exp $
 
 DISTNAME=	vamp-plugin-sdk-2.10.0
 PKGREVISION=	3
@@ -14,9 +14,6 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-
-# C++11
-GCC_REQD+=	4.7
 
 SUBST_CLASSES+=		dl
 SUBST_STAGE.dl=		pre-configure
