@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/06/12 04:38:04 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/13 20:32:57 pin Exp $
 
-DISTNAME=	cargo-c-0.9.20+cargo-0.71
+DISTNAME=	cargo-c-0.9.21+cargo-0.71
 PKGNAME=	${DISTNAME:C/\\+cargo-[[:digit:]\.]*//}
 CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/cargo-c/
