@@ -1,32 +1,105 @@
-$NetBSD: patch-GNUmakefile,v 1.4 2023/04/27 08:12:44 wiz Exp $
+$NetBSD: patch-GNUmakefile,v 1.5 2023/07/13 06:21:47 nia Exp $
 
-* Build dynamic library, from archlinux.
+* Libtoolize.
 
 --- GNUmakefile.orig	2021-11-10 02:42:18.000000000 +0000
 +++ GNUmakefile
-@@ -170,12 +170,12 @@ C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.
+@@ -159,23 +159,23 @@ ADA_SOURCES = $(libstemmer_algorithms:%=
+         $(libstemmer_algorithms:%=$(ada_src_dir)/stemmer-%.adb) \
+         $(ada_src_dir)/stemmer-factory.ads $(ada_src_dir)/stemmer-factory.adb
+ 
+-COMPILER_OBJECTS=$(COMPILER_SOURCES:.c=.o)
+-RUNTIME_OBJECTS=$(RUNTIME_SOURCES:.c=.o)
+-LIBSTEMMER_OBJECTS=$(LIBSTEMMER_SOURCES:.c=.o)
+-LIBSTEMMER_UTF8_OBJECTS=$(LIBSTEMMER_UTF8_SOURCES:.c=.o)
+-STEMWORDS_OBJECTS=$(STEMWORDS_SOURCES:.c=.o)
+-STEMTEST_OBJECTS=$(STEMTEST_SOURCES:.c=.o)
+-C_LIB_OBJECTS = $(C_LIB_SOURCES:.c=.o)
+-C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.o)
++COMPILER_OBJECTS=$(COMPILER_SOURCES:.c=.lo)
++RUNTIME_OBJECTS=$(RUNTIME_SOURCES:.c=.lo)
++LIBSTEMMER_OBJECTS=$(LIBSTEMMER_SOURCES:.c=.lo)
++LIBSTEMMER_UTF8_OBJECTS=$(LIBSTEMMER_UTF8_SOURCES:.c=.lo)
++STEMWORDS_OBJECTS=$(STEMWORDS_SOURCES:.c=.lo)
++STEMTEST_OBJECTS=$(STEMTEST_SOURCES:.c=.lo)
++C_LIB_OBJECTS = $(C_LIB_SOURCES:.c=.lo)
++C_OTHER_OBJECTS = $(C_OTHER_SOURCES:.c=.lo)
  JAVA_CLASSES = $(JAVA_SOURCES:.java=.class)
  JAVA_RUNTIME_CLASSES=$(JAVARUNTIME_SOURCES:.java=.class)
  
 -CFLAGS=-O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations
 -CPPFLAGS=
-+CFLAGS+=-O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations
++CFLAGS+=-fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations
 +CPPFLAGS+=
  
  INCLUDES=-Iinclude
  
 -all: snowball$(EXEEXT) libstemmer.a stemwords$(EXEEXT) $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
-+all: snowball$(EXEEXT) libstemmer.so stemwords$(EXEEXT) $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
++all: snowball$(EXEEXT) libstemmer.la stemwords$(EXEEXT) $(C_OTHER_SOURCES) $(C_OTHER_HEADERS) $(C_OTHER_OBJECTS)
  
  algorithms.mk: libstemmer/mkalgorithms.pl libstemmer/modules.txt
  	libstemmer/mkalgorithms.pl algorithms.mk libstemmer/modules.txt
-@@ -214,6 +214,9 @@ libstemmer/libstemmer.c: libstemmer/libs
+@@ -204,7 +204,12 @@ clean:
+ 	-rmdir $(js_output_dir)
+ 
+ snowball$(EXEEXT): $(COMPILER_OBJECTS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $^
++
++.SUFFIXES: .lo
++
++.c.lo:
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -o $@ -c $<
+ 
+ $(COMPILER_OBJECTS): $(COMPILER_HEADERS)
+ 
+@@ -214,28 +219,28 @@ libstemmer/libstemmer.c: libstemmer/libs
  libstemmer/libstemmer_utf8.c: libstemmer/libstemmer_c.in
  	sed 's/@MODULES_H@/modules_utf8.h/' $^ >$@
  
-+libstemmer.so: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
-+	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname,libstemmer.so.0 -Wl,--version-script=libstemmer/symbol.map -o $@.0.0.0 $^
++libstemmer.la: libstemmer/libstemmer.lo $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -version-info 0:0 -rpath $(PREFIX)/lib -o $@ $^
 +
  libstemmer/modules.h libstemmer/mkinc.mak: libstemmer/mkmodules.pl libstemmer/modules.txt
  	libstemmer/mkmodules.pl $@ $(c_src_dir) libstemmer/modules.txt libstemmer/mkinc.mak
  
+ libstemmer/modules_utf8.h libstemmer/mkinc_utf8.mak: libstemmer/mkmodules.pl libstemmer/modules.txt
+ 	libstemmer/mkmodules.pl $@ $(c_src_dir) libstemmer/modules.txt libstemmer/mkinc_utf8.mak utf8
+ 
+-libstemmer/libstemmer.o: libstemmer/modules.h $(C_LIB_HEADERS)
+-
+-libstemmer.a: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
+-	$(AR) -cru $@ $^
++libstemmer/libstemmer.lo: libstemmer/modules.h $(C_LIB_HEADERS)
+ 
+-examples/%.o: examples/%.c
+-	$(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
++examples/%.lo: examples/%.c
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
+ 
+ stemwords$(EXEEXT): $(STEMWORDS_OBJECTS) libstemmer.a
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $^
+ 
+-tests/%.o: tests/%.c
+-	$(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
++tests/%.lo: tests/%.c
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
+ 
+ stemtest$(EXEEXT): $(STEMTEST_OBJECTS) libstemmer.a
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
++	$(LIBTOOL) --quiet --tag=CC --mode=link $(CC) $(LDFLAGS) -o $@ $^
+ 
+ csharp_stemwords$(EXEEXT): $(CSHARP_STEMWORDS_SOURCES) $(CSHARP_RUNTIME_SOURCES) $(CSHARP_SOURCES)
+ 	$(MCS) -unsafe -target:exe -out:$@ $(CSHARP_STEMWORDS_SOURCES) $(CSHARP_RUNTIME_SOURCES) $(CSHARP_SOURCES)
+@@ -274,8 +279,8 @@ $(c_src_dir)/stem_ISO_8859_2_%.c $(c_src
+ 	echo "./snowball charsets/ISO-8859-2.sbl $< -o $${o} -eprefix $${l}_ISO_8859_2_ -r ../runtime"; \
+ 	./snowball charsets/ISO-8859-2.sbl $< -o $${o} -eprefix $${l}_ISO_8859_2_ -r ../runtime
+ 
+-$(c_src_dir)/stem_%.o: $(c_src_dir)/stem_%.c $(c_src_dir)/stem_%.h
+-	$(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
++$(c_src_dir)/stem_%.lo: $(c_src_dir)/stem_%.c $(c_src_dir)/stem_%.h
++	$(LIBTOOL) --quiet --tag=CC --mode=compile $(CC) $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -c -o $@ $<
+ 
+ $(java_src_dir)/%Stemmer.java: algorithms/%.sbl snowball$(EXEEXT)
+ 	@mkdir -p $(java_src_dir)
