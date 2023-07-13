@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/05/25 15:36:09 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	WTForms-Django-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Django/}
 EXTRACT_SUFX=	.zip
@@ -11,10 +12,10 @@ HOMEPAGE=	https://github.com/wtforms/wtforms-django
 COMMENT=	Django tools for WTForms
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# empty
-
-DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=2.1:../../www/py-wtforms
+
+USE_LANGUAGES=	# empty
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

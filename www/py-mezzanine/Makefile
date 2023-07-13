@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/13 10:03:30 wiz Exp $
 
 DISTNAME=	Mezzanine-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
 
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.5.3:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-bleach>=2.0:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-contrib-comments-[0-9]*:../../www/py-django-contrib-comments
 DEPENDS+=	${PYPKGPREFIX}-filebrowser_safe>=0.5.0:../../www/py-filebrowser_safe
 DEPENDS+=	${PYPKGPREFIX}-future>=0.9.0:../../devel/py-future
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.4.1:../../devel/py-pep8
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-django-contrib-comments
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
