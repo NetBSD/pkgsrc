@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4392 2023/07/13 14:52:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4393 2023/07/13 17:54:35 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6125,3 +6125,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/libproxy to 0.5.3 [adam 2023-07-13]
 	Updated net/wireshark to 4.0.7 [adam 2023-07-13]
 	Updated archivers/py-zipp to 3.16.1 [adam 2023-07-13]
+	Updated security/xml-security-c to 2.0.4 [pho 2023-07-13]
