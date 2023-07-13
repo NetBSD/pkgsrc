@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.184 2023/04/22 13:09:28 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.185 2023/07/13 13:14:41 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1440,26 +1440,6 @@ fortran77, java, objc, obj-c++, and ada.
     <quote>c</quote>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
     phase.</para>
-
-    <para>To express a general requirement on a specific C or C++
-    version, normally only <varname>GCC_REQD</varname> needs to be set.
-    For example, GCC 7 includes support for C++17, so if the package uses
-    C++17 it should specify:
-
-<programlisting>
-GCC_REQD+=	7
-</programlisting></para>
-
-    <para>Language variants like <literal>c++11</literal> for
-    <varname>USE_LANGUAGES</varname> should only be specified
-    if the package does not explicitly set <literal>-std=...</literal>
-    when compiling (i.e. the package assumes the compiler defaults to
-    C++11 or some other standard).  This is usually a bug in the
-    upstream build system.</para>
-
-    <para>GCC version 5 includes support for C++14, while GCC 4.7 includes
-    more-or-less complete support for C++11.  For more information, consult
-    <ulink url="https://gcc.gnu.org/projects/cxx-status.html">GCC's own documentation on programming language support.</ulink></para>
   </sect2>
 
   <sect2 id="java-programming-language">
