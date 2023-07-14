@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2023/04/19 08:08:16 adam Exp $
+# $NetBSD: Makefile,v 1.94 2023/07/14 06:44:49 pho Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	libcompizconfig-${PKGVER}
-PKGREVISION=	62
+PKGREVISION=	63
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -30,6 +30,7 @@ INSTALLATION_DIRS=	${EGDIR}
 .include "../../devel/protobuf/buildlink3.mk"
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
+LDFLAGS+=	-linotify
 .endif
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
