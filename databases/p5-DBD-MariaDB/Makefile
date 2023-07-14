@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/06 09:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/14 13:04:55 abs Exp $
 
 DISTNAME=	DBD-MariaDB-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ REPLACE_PERL=		lib/DBD/MariaDB.pm
 
 # MAKE_PARAMS+=		--nocatchstderr
 
-MYSQL_VERSIONS_ACCEPTED=	mariadb106 mariadb105 mariadb104
+MYSQL_VERSIONS_ACCEPTED=	mariadb1011 mariadb106 mariadb105 mariadb104
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
