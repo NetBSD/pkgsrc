@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4409 2023/07/14 15:50:06 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4410 2023/07/14 19:03:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6144,3 +6144,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gimp to 2.10.34 [adam 2023-07-14]
 	Updated net/glib-networking to 2.76.1 [adam 2023-07-14]
 	Updated wm/enlightenment16 to 1.0.28 [gutteridge 2023-07-14]
+	Updated shells/oh-my-posh to 17.11.2 [pin 2023-07-14]
