@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4406 2023/07/14 11:51:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4407 2023/07/14 12:36:24 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6140,3 +6140,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xlockmore to 5.72 [micha 2023-07-14]
 	Updated x11/xlockmore-lite to 5.72 [micha 2023-07-14]
 	Updated shells/oh-my-posh to 17.9.1 [pin 2023-07-14]
+	Updated devel/pycharm-bin to 2022.1.4 [hauke 2023-07-14]
