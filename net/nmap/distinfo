@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2023/06/09 12:53:14 adam Exp $
+$NetBSD: distinfo,v 1.88 2023/07/14 11:50:38 nia Exp $
 
 BLAKE2s (nmap-7.94.tar.bz2) = fb58b74eaf86ab57d253e947fc1dea5cfc6a418fba62001a767e37833399979f
 SHA512 (nmap-7.94.tar.bz2) = a55cddf9c1d9272243d01251eb3315b26f232d0596818857083222a385398618b428dc2bd8282c3e832527e135a74aeb020ca8609d83d8337342f5d8a04d7f2c
@@ -10,3 +10,4 @@ SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
 SHA1 (patch-nping_EchoServer.cc) = e5b0213e3cfff8a32b5ae291c1921a86b9b17dd3
 SHA1 (patch-nping_NpingOps.cc) = 074766040fbf6dc16315b6313d6dad4ff514a91a
 SHA1 (patch-nsock_tests_run__tests.sh) = 88a7447f93dd3377e7e24e317c55528a73a17401
+SHA1 (patch-protocols.cc) = c3e2013a0c7016fbe1cabef5226685bd74377302
