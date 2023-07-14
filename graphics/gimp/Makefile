@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.378 2023/07/01 22:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.379 2023/07/14 14:10:08 adam Exp $
 
-DISTNAME=	gimp-2.10.32
-PKGREVISION=	14
+DISTNAME=	gimp-2.10.34
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -64,9 +63,6 @@ PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
 
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
@@ -74,9 +70,9 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.78
 .include "../../graphics/babl/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36
 .include "../../graphics/gegl/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
@@ -93,6 +89,7 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.gtk2:Mx11}
@@ -108,5 +105,6 @@ CONFIGURE_ARGS+=	--without-libxpm
 .if ${PKG_BUILD_OPTIONS.gtk2:Mquartz}
 .include "../../x11/gtk-mac-integration/buildlink3.mk"
 .endif
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
