@@ -1,14 +1,14 @@
-$NetBSD: patch-bin_pycharm64.vmoptions,v 1.1 2023/07/13 11:30:18 hauke Exp $
+$NetBSD: patch-bin_pycharm64.vmoptions,v 1.2 2023/07/14 12:36:13 hauke Exp $
 
-Remove unsupported VM option.
+Add JVM options for a typical NetBSD setup.
 
---- bin/pycharm64.vmoptions.orig	2019-05-07 14:53:11.000000000 +0000
+--- bin/pycharm64.vmoptions.orig	2022-07-20 20:50:22.000000000 +0000
 +++ bin/pycharm64.vmoptions
-@@ -1,7 +1,6 @@
+@@ -1,5 +1,7 @@
  -Xms128m
  -Xmx750m
- -XX:ReservedCodeCacheSize=240m
---XX:+UseConcMarkSweepGC
- -XX:SoftRefLRUPolicyMSPerMB=50
- -ea
- -Dsun.io.useCanonCaches=false
++-XX:-UseCompressedClassPointers
++-XX:-UseCompressedOops
+ -XX:ReservedCodeCacheSize=512m
+ -XX:+IgnoreUnrecognizedVMOptions
+ -XX:+UseG1GC
