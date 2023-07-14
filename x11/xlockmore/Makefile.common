@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.86 2022/08/19 10:11:09 micha Exp $
+# $NetBSD: Makefile.common,v 1.87 2023/07/14 10:43:33 micha Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
 
-DISTNAME=	xlockmore-5.71
+DISTNAME=	xlockmore-5.72
 CATEGORIES=	x11
 MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
@@ -32,13 +32,15 @@ PKG_OPTIONS_LEGACY_VARS+=	XLOCK_NO_DPMS:-xlockmore-dpms
 .include "../../mk/bsd.options.mk"
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		xmkmf
+USE_TOOLS+=		autoconf autoreconf bash xmkmf
 
 XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules
 DEFINES+=		-DDEF_MODULEPATH="\"${XLOCK_MODULEDIR}\""
 CPPFLAGS+=		${DEFINES}
 CXXFLAGS+=		${DEFINES}
 
+# Variable RANDOM is used (a POSIX shell is not sufficient)
+CONFIG_SHELL=		bash
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-editres
@@ -140,6 +142,9 @@ SUBST_VARS.install+=	EGDIR
 
 post-patch:
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam-xlock-NetBSD \
