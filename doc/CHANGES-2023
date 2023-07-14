@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4404 2023/07/14 10:44:38 micha Exp $
+$NetBSD: CHANGES-2023,v 1.4405 2023/07/14 10:47:16 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6138,3 +6138,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/babl to 0.1.106 [adam 2023-07-14]
 	Updated graphics/gegl to 0.4.46 [adam 2023-07-14]
 	Updated x11/xlockmore to 5.72 [micha 2023-07-14]
+	Updated x11/xlockmore-lite to 5.72 [micha 2023-07-14]
