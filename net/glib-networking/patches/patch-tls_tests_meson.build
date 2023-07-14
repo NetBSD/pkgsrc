@@ -1,0 +1,15 @@
+$NetBSD: patch-tls_tests_meson.build,v 1.1 2023/07/14 14:11:51 adam Exp $
+
+Fix build on NetBSD.
+
+--- tls/tests/meson.build.orig	2023-07-14 06:35:37.000000000 +0000
++++ tls/tests/meson.build
+@@ -71,7 +71,7 @@ foreach backend: backends
+       '-D_GNU_SOURCE',
+     ]
+ 
+-    if not ['windows'].contains(host_system)
++    if not ['netbsd', 'windows'].contains(host_system)
+       program_deps += cc.find_library('dl')
+     endif
+ 
