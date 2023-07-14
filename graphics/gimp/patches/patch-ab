@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.41 2021/11/15 22:13:56 nia Exp $
+$NetBSD: patch-ab,v 1.42 2023/07/14 13:52:50 ryoon Exp $
 
 CC_VERSION_OPTS for gcc is modified to avoid going through the link
 stage. If pkgsrc appends or prepends any linker flags through
 CWRAPPERS (e.g. for MKRELRO), getting the version of the compiler may
 fail because GCC will try to link the nonexistent program.
 
---- configure.orig	2021-09-14 15:56:15.000000000 +0000
+Fix build with babl-0.1.106.
+
+--- configure.orig	2022-06-12 20:29:28.000000000 +0000
 +++ configure
-@@ -22344,11 +22344,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
+@@ -22502,11 +22502,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
           See https://bugzilla.gnome.org/show_bug.cgi?id=787222"
    fi
    # For GCC, use -v which has more information than --version.
@@ -21,7 +23,84 @@ fail because GCC will try to link the nonexistent program.
  fi
  
  for CC_VERSION_OPT in $CC_VERSION_OPTS; do
-@@ -36084,7 +36084,7 @@ esac
+@@ -24498,19 +24498,19 @@ printf "%s\n" "$have_iso_codes" >&6; }
+ 
+ 
+ pkg_failed=no
+-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for babl >= 0.1.78" >&5
+-printf %s "checking for babl >= 0.1.78... " >&6; }
++{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for babl-0.1 >= 0.1.78" >&5
++printf %s "checking for babl-0.1 >= 0.1.78... " >&6; }
+ 
+ if test -n "$BABL_CFLAGS"; then
+     pkg_cv_BABL_CFLAGS="$BABL_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"babl >= 0.1.78\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "babl >= 0.1.78") 2>&5
++    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"babl-0.1 >= 0.1.78\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "babl-0.1 >= 0.1.78") 2>&5
+   ac_status=$?
+   printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_BABL_CFLAGS=`$PKG_CONFIG --cflags "babl >= 0.1.78" 2>/dev/null`
++  pkg_cv_BABL_CFLAGS=`$PKG_CONFIG --cflags "babl-0.1 >= 0.1.78" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -24522,12 +24522,12 @@ if test -n "$BABL_LIBS"; then
+     pkg_cv_BABL_LIBS="$BABL_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"babl >= 0.1.78\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "babl >= 0.1.78") 2>&5
++    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"babl-0.1 >= 0.1.78\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "babl-0.1 >= 0.1.78") 2>&5
+   ac_status=$?
+   printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_BABL_LIBS=`$PKG_CONFIG --libs "babl >= 0.1.78" 2>/dev/null`
++  pkg_cv_BABL_LIBS=`$PKG_CONFIG --libs "babl-0.1 >= 0.1.78" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -24548,27 +24548,27 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        BABL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "babl >= 0.1.78" 2>&1`
++	        BABL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "babl-0.1 >= 0.1.78" 2>&1`
+         else
+-	        BABL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "babl >= 0.1.78" 2>&1`
++	        BABL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "babl-0.1 >= 0.1.78" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$BABL_PKG_ERRORS" >&5
+ 
+ 
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl >= 0.1.78" >&5
+-printf "%s\n" "$as_me: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl >= 0.1.78" >&6;}
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl-0.1 >= 0.1.78" >&5
++printf "%s\n" "$as_me: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl-0.1 >= 0.1.78" >&6;}
+   required_deps="$required_deps
+-  - Error: missing dependency babl >= 0.1.78"
++  - Error: missing dependency babl-0.1 >= 0.1.78"
+ 
+ elif test $pkg_failed = untried; then
+         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ printf "%s\n" "no" >&6; }
+ 
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl >= 0.1.78" >&5
+-printf "%s\n" "$as_me: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl >= 0.1.78" >&6;}
++  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl-0.1 >= 0.1.78" >&5
++printf "%s\n" "$as_me: Eeeeeeeeeeeeeeeeeeeeek! Missing dep: babl-0.1 >= 0.1.78" >&6;}
+   required_deps="$required_deps
+-  - Error: missing dependency babl >= 0.1.78"
++  - Error: missing dependency babl-0.1 >= 0.1.78"
+ 
+ else
+ 	BABL_CFLAGS=$pkg_cv_BABL_CFLAGS
+@@ -36417,7 +36417,7 @@ esac
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
