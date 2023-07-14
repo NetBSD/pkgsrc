@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/06/07 11:27:31 micha Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/14 07:34:16 adam Exp $
 
-DISTNAME=	babl-0.1.98
-PKGREVISION=	2
+DISTNAME=	babl-0.1.106
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -50,7 +49,7 @@ PKG_SUPPORTED_OPTIONS+=	mmx
 .include "../../mk/compiler.mk"
 
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") \
-	&& empty(CC_VERSION:Mgcc-7.*)
+	&& !${CC_VERSION:Mgcc-7.*}
 PKG_SUGGESTED_OPTIONS+=	mmx
 .endif
 
