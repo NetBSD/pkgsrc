@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/06/10 11:41:31 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/07/15 10:40:37 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -2081,6 +2081,7 @@ go120/src/cmd/go/testdata/script/list_compiled_imports.txt
 go120/src/cmd/go/testdata/script/list_compiler_output.txt
 go120/src/cmd/go/testdata/script/list_constraints.txt
 go120/src/cmd/go/testdata/script/list_dedup_packages.txt
+go120/src/cmd/go/testdata/script/list_empty_import.txt
 go120/src/cmd/go/testdata/script/list_err_cycle.txt
 go120/src/cmd/go/testdata/script/list_err_stack.txt
 go120/src/cmd/go/testdata/script/list_export_e.txt
@@ -2391,6 +2392,7 @@ go120/src/cmd/go/testdata/script/mod_tidy_downgrade_ambiguous.txt
 go120/src/cmd/go/testdata/script/mod_tidy_duplicates.txt
 go120/src/cmd/go/testdata/script/mod_tidy_error.txt
 go120/src/cmd/go/testdata/script/mod_tidy_indirect.txt
+go120/src/cmd/go/testdata/script/mod_tidy_issue60313.txt
 go120/src/cmd/go/testdata/script/mod_tidy_lazy_self.txt
 go120/src/cmd/go/testdata/script/mod_tidy_newroot.txt
 go120/src/cmd/go/testdata/script/mod_tidy_old.txt
@@ -8015,6 +8017,8 @@ go120/src/runtime/testdata/testwinlibsignal/main.c
 go120/src/runtime/testdata/testwinlibthrow/main.go
 go120/src/runtime/testdata/testwinlibthrow/veh.c
 go120/src/runtime/testdata/testwinsignal/main.go
+go120/src/runtime/testdata/testwintls/main.c
+go120/src/runtime/testdata/testwintls/main.go
 go120/src/runtime/textflag.h
 go120/src/runtime/time.go
 go120/src/runtime/time_fake.go
@@ -11035,6 +11039,7 @@ go120/test/fixedbugs/issue5963.go
 go120/test/fixedbugs/issue6004.go
 go120/test/fixedbugs/issue6036.go
 go120/test/fixedbugs/issue6055.go
+go120/test/fixedbugs/issue60601.go
 go120/test/fixedbugs/issue6131.go
 go120/test/fixedbugs/issue6140.go
 go120/test/fixedbugs/issue6247.go
