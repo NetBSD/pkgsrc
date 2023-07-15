@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/06/06 18:49:04 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/07/15 10:35:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go119/CONTRIBUTING.md
@@ -2670,6 +2670,7 @@ go119/src/cmd/go/testdata/script/list_constraints.txt
 go119/src/cmd/go/testdata/script/list_dedup_packages.txt
 go119/src/cmd/go/testdata/script/list_err_cycle.txt
 go119/src/cmd/go/testdata/script/list_err_stack.txt
+go119/src/cmd/go/testdata/script/list_export_e.txt
 go119/src/cmd/go/testdata/script/list_find.txt
 go119/src/cmd/go/testdata/script/list_find_nodeps.txt
 go119/src/cmd/go/testdata/script/list_gofile_in_goroot.txt
@@ -2683,6 +2684,7 @@ go119/src/cmd/go/testdata/script/list_module_when_error.txt
 go119/src/cmd/go/testdata/script/list_overlay.txt
 go119/src/cmd/go/testdata/script/list_parse_err.txt
 go119/src/cmd/go/testdata/script/list_perm.txt
+go119/src/cmd/go/testdata/script/list_pkgconfig_error.txt
 go119/src/cmd/go/testdata/script/list_replace_absolute_windows.txt
 go119/src/cmd/go/testdata/script/list_reserved.txt
 go119/src/cmd/go/testdata/script/list_shadow.txt
@@ -2969,6 +2971,7 @@ go119/src/cmd/go/testdata/script/mod_tidy_downgrade_ambiguous.txt
 go119/src/cmd/go/testdata/script/mod_tidy_duplicates.txt
 go119/src/cmd/go/testdata/script/mod_tidy_error.txt
 go119/src/cmd/go/testdata/script/mod_tidy_indirect.txt
+go119/src/cmd/go/testdata/script/mod_tidy_issue60313.txt
 go119/src/cmd/go/testdata/script/mod_tidy_lazy_self.txt
 go119/src/cmd/go/testdata/script/mod_tidy_newroot.txt
 go119/src/cmd/go/testdata/script/mod_tidy_old.txt
