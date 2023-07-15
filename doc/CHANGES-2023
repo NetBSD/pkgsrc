@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4411 2023/07/15 03:33:41 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4412 2023/07/15 10:35:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6146,3 +6146,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/enlightenment16 to 1.0.28 [gutteridge 2023-07-14]
 	Updated shells/oh-my-posh to 17.11.2 [pin 2023-07-14]
 	Updated graphics/ruby-cairo to 1.17.12 [tsutsui 2023-07-15]
+	Updated lang/go119 to 1.19.11 [bsiegert 2023-07-15]
