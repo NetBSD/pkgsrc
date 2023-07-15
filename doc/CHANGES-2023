@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4419 2023/07/15 14:56:36 otis Exp $
+$NetBSD: CHANGES-2023,v 1.4420 2023/07/15 14:57:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6154,3 +6154,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-rspec-mocks to 3.12.6 [taca 2023-07-15]
 	Updated print/ruby-rbpdf to 1.21.3 [taca 2023-07-15]
 	Updated mail/postfix to 3.8.1 [otis 2023-07-15]
+	Updated security/ruby-metasploit-payloads to 2.0.149 [taca 2023-07-15]
