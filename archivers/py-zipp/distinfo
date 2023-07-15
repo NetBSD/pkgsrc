@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/07/13 14:51:54 adam Exp $
+$NetBSD: distinfo,v 1.24 2023/07/15 16:25:20 adam Exp $
 
-BLAKE2s (zipp-3.16.1.tar.gz) = 1066687f7dcb491dff8a4254b41e38a80a4839ba90f4b728d8efb681c82cc3a4
-SHA512 (zipp-3.16.1.tar.gz) = e1f8d03c8b8c49e4745e03b65e32c9b76bb4e7c87e24304af630e8875843ad4cfc12f46f5dce3f210698a9e9a5f58be251eafed83893128657d8cb23c11066d0
-Size (zipp-3.16.1.tar.gz) = 19194 bytes
+BLAKE2s (zipp-3.16.2.tar.gz) = 3a73492964d8a22967b6f859a995af81ef9ddea58cdb9256865637e9bdbb3a53
+SHA512 (zipp-3.16.2.tar.gz) = cb7f19638b2bc2bb1c38241078836c4e484b8f1fae8232073da25967f01e449eb8a6c870d2afde285ea9ae319785a9e4b7cb0e5edc2d0f4690f3ce27c359be93
+Size (zipp-3.16.2.tar.gz) = 20002 bytes
