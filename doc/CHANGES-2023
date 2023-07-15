@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4415 2023/07/15 14:37:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4416 2023/07/15 14:39:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6150,3 +6150,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/go120 to 1.20.6 [bsiegert 2023-07-15]
 	Updated devel/ruby-minitest to 5.18.1 [taca 2023-07-15]
 	Updated devel/ruby-parser to 3.20.3 [taca 2023-07-15]
+	Updated devel/ruby-rgl to 0.6.6 [taca 2023-07-15]
