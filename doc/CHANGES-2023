@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4433 2023/07/16 20:23:04 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4434 2023/07/16 20:50:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6170,3 +6170,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/go-getpass version 0.2.1 [jschauma 2023-07-16]
 	Updated devel/slibtool to 0.5.34 [wiedi 2023-07-16]
 	Updated sysutils/xfce4-verve-plugin to 2.0.3 [gutteridge 2023-07-16]
+	Updated meta-pkgs/xfce4-extras to 4.18.0nb12 [gutteridge 2023-07-16]
