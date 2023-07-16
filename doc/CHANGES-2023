@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4437 2023/07/16 21:17:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4438 2023/07/16 23:22:49 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6174,3 +6174,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.24.1 [pin 2023-07-16]
 	Updated devel/garden to 0.8.0 [pin 2023-07-16]
 	Updated graphics/wallust to 2.5.0 [pin 2023-07-16]
+	Updated wm/fvwm3 to 1.0.7 [vins 2023-07-16]
