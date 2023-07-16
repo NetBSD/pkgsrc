@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/07/12 19:50:19 nia Exp $
-#
+# $NetBSD: Makefile,v 1.10 2023/07/16 14:04:03 wiz Exp $
 
-DISTNAME=		${PKGNAME}-linux
-PKGNAME=		ggrab-0.22a
+DISTNAME=		ggrab-0.22a-linux
+PKGNAME=		${DISTNAME:S/-linux//}
 PKGREVISION=		1
 CATEGORIES=		multimedia
 #MASTER_SITES=		http://www.menzebach.de/ggrab/
