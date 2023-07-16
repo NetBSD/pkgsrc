@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.py.1,v 1.2 2023/06/10 14:35:29 wiz Exp $
+.\"	$NetBSD: revbump.py.1,v 1.3 2023/07/16 10:12:22 wiz Exp $
 .\"
 .\" Copyright (c) 2023 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 10, 2023
+.Dd July 16, 2023
 .Dt REVBUMP.PY 1
 .Os
 .Sh NAME
@@ -35,7 +35,7 @@
 .Nd tool to bump PKGREVISIONs automatically
 .Sh SYNOPSIS
 .Nm
-.Op Fl hw
+.Op Fl hnw
 .Op Fl o Ar output
 .Op Fl p Ar pkgsrcdir
 .Ar category/package
@@ -64,6 +64,9 @@ supports the following options:
 .Bl -tag -width 12n -offset indent
 .It Fl h
 Show the usage.
+.It Fl n
+Print the list of packages that would be bumped, but do not actually
+bump them.
 .It Fl o Ar output
 Write the list of changed package directories (relative to the
 .Pa pkgsrc
