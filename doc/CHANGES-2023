@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4430 2023/07/16 10:12:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4431 2023/07/16 18:41:23 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/py-zipp to 3.16.2 [adam 2023-07-15]
 	Updated www/hugo to 0.115.3 [bsiegert 2023-07-16]
 	Updated pkgtools/revbump to 3.4 [wiz 2023-07-16]
+	Added security/go-getpass version 0.2.1 [jschauma 2023-07-16]
