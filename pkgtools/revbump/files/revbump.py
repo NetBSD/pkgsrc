@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.3 2023/06/10 14:35:29 wiz Exp $
+# $NetBSD: revbump.py,v 1.4 2023/07/16 10:12:22 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -175,6 +175,9 @@ parser = argparse.ArgumentParser(description='find all packages that' +
                                  ' link against a given package')
 parser.add_argument('package', help='package for which we want to find' +
                     ' its dependencies')
+parser.add_argument('-n', dest='test', default=False,
+                    help='print list of packages that would be bumped, but' +
+                    ' do not actually bump', action='store_true')
 parser.add_argument('-o', dest='output', default='commitlist',
                     help='output file containing the directories with changes',
                     action='store')
@@ -274,10 +277,18 @@ if args.package == 'lang/perl5':
 
 directories = [path[:path.rfind('/')] for path in makefile_result + bl3result]
 directories = filter(lambda name: name != args.package, directories)
-with open(args.output, 'w', encoding='utf-8') as f:
-    f.write(args.package + '\n')
+if args.package == 'lang/go':
+    directories = filter(lambda name: name != 'lang/go-bin'
+                         and not re.match('lang/go1[0-9]*', name), directories)
+if args.test:
+    print(args.package)
     for directory in sorted(set(directories)):
-        revbump(directory)
-        f.write(directory + '\n')
-for bl3file in sorted(set(bl3result)):
-    bl3bump(bl3file[:-len('/buildlink3.mk')])
+        print(directory)
+else:
+    with open(args.output, 'w', encoding='utf-8') as f:
+        f.write(args.package + '\n')
+        for directory in sorted(set(directories)):
+            revbump(directory)
+            f.write(directory + '\n')
+        for bl3file in sorted(set(bl3result)):
+            bl3bump(bl3file[:-len('/buildlink3.mk')])
