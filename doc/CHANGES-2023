@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4435 2023/07/16 21:15:19 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4436 2023/07/16 21:16:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6172,3 +6172,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfce4-verve-plugin to 2.0.3 [gutteridge 2023-07-16]
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb12 [gutteridge 2023-07-16]
 	Updated sysutils/broot to 1.24.1 [pin 2023-07-16]
+	Updated devel/garden to 0.8.0 [pin 2023-07-16]
