@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.5 2023/07/10 20:28:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.6 2023/07/16 18:07:26 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -36,4 +36,11 @@ databases/mariadb106-server: security fix
 
 Pullup ticket #6777 - requested by abs
 x11/qt5-qtwebkit: build fix
+
+Pullup ticket #6778 - requested by abs
+www/arcticfox: sparc64 and alpha build fix
+
+Pullup ticket #6780 - requested by nia
+www/firefox102: security fix
+www/firefox102-l10n: dependent update
 
