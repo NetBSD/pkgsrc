@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/16 18:36:44 jschauma Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/jschauma/getpass.a
+gopkg/src/github.com/jschauma/getpass/LICENSE
+gopkg/src/github.com/jschauma/getpass/LICENSE
+gopkg/src/github.com/jschauma/getpass/README.md
+gopkg/src/github.com/jschauma/getpass/getpass.go
+gopkg/src/github.com/jschauma/getpass/getpass_test.go
+gopkg/src/github.com/jschauma/getpass/example/getpass_example.go
+gopkg/src/github.com/jschauma/getpass/go.mod
