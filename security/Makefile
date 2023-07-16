@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.905 2023/07/03 13:43:28 nros Exp $
+# $NetBSD: Makefile,v 1.906 2023/07/16 18:36:44 jschauma Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -113,6 +113,7 @@ SUBDIR+=	gnupg2
 SUBDIR+=	gnutls
 SUBDIR+=	go-asn1-ber
 SUBDIR+=	go-crypto
+SUBDIR+=	go-getpass
 SUBDIR+=	go-mkcert
 SUBDIR+=	google-authenticator
 SUBDIR+=	gopass
