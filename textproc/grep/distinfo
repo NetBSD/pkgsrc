@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.33 2023/04/14 03:37:52 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2023/07/17 14:15:43 ryoon Exp $
 
-BLAKE2s (grep-3.10.tar.xz) = f939f211e9312df64ed8ea3fdce9db44f855ad6ec8c1559a0b2bc461ac88cb14
-SHA512 (grep-3.10.tar.xz) = 865e8f3fd7afc68f1a52f5e1e1ee05fb9c6d6182201efb0dbdf6075347b0b1d2bf0784537a8f8dd4fb050d523f7a1d2fb5b9c3e3245087d0e6cc12d6e9d3961b
-Size (grep-3.10.tar.xz) = 1687464 bytes
+BLAKE2s (grep-3.11.tar.xz) = 8e44c05eccba9401c52d37abb792b08b1b8a5a99cbf5c005fe04cd1fc7142cb7
+SHA512 (grep-3.11.tar.xz) = f254a1905a08c8173e12fbdd4fd8baed9a200217fba9d7641f0d78e4e002c1f2a621152d67027d9b25f0bb2430898f5233dc70909d8464fd13d7dd9298e65c42
+Size (grep-3.11.tar.xz) = 1703776 bytes
 SHA1 (patch-configure) = b574ebe1575afc5767b0c6634451a3485bb98312
 SHA1 (patch-src_Makefile.in) = 9efe4748d4b1ff33adca4e251e2e4249c62f0035
