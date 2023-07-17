@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2023/07/04 13:53:59 hauke Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/17 12:01:50 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.17.2
+PKGVER=		8.1.19.0
 PKGNAME=	${DISTNAME:C/-/8-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/patches/client/v8r1/Linux/LinuxX86/BA/v8117/
-# 550 SSL/TLS required on the control channel
-#MASTER_SITES+=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8117/
+MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8119/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
-
-# pkgsrc fetch corrupts the distfile ftp download
-FETCH_USING=	wget
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://www.ibm.com/us-en/marketplace/data-protection-and-recovery
@@ -55,8 +50,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.55.29.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.55.29.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.55.31.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.55.31.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
