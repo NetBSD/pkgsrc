@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/17 14:00:50 ryoon Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk17u
-GITHUB_TAG=	jdk-17.0.6+10-1
+GITHUB_TAG=	jdk-17.0.7+7-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
