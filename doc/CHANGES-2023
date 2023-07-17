@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4438 2023/07/16 23:22:49 vins Exp $
+$NetBSD: CHANGES-2023,v 1.4439 2023/07/17 07:19:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6175,3 +6175,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/garden to 0.8.0 [pin 2023-07-16]
 	Updated graphics/wallust to 2.5.0 [pin 2023-07-16]
 	Updated wm/fvwm3 to 1.0.7 [vins 2023-07-16]
+	Updated net/iperf3 to 3.14 [adam 2023-07-17]
+	Updated math/py-asteval to 0.9.31 [adam 2023-07-17]
