@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/04/19 08:10:47 adam Exp $
+# $NetBSD: Makefile,v 1.93 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	celestia-1.6.1
 PKGREVISION=	35
@@ -19,7 +19,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
-GCC_REQD+=		3.0
 CXXFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 EGDIR=		${PREFIX}/share/examples/celestia

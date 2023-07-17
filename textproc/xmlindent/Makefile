@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/07/11 05:46:30 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/17 22:00:25 nia Exp $
 #
 
 DISTNAME=	xmlindent-0.2.16
@@ -12,8 +12,6 @@ COMMENT=	XML stream reformatter written in ANSI C
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	flex:run
-
-GCC_REQD+=	3.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/04/06 09:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/17 22:00:25 nia Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gunzip
-GCC_REQD+=		3.0
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		ECHO=${ECHO:Q}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
