@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4445 2023/07/17 13:24:00 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4446 2023/07/17 14:01:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6187,3 +6187,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-deepdiff to 6.3.1 [adam 2023-07-17]
 	Updated sysutils/tsm8 to 8.1.19.0 [hauke 2023-07-17]
 	Added fonts/elstob-font version 2.100 [wiz 2023-07-17]
+	Updated lang/openjdk17 to 1.17.0.7.7 [ryoon 2023-07-17]
