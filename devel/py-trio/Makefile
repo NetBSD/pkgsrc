@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/07/06 09:16:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/17 14:40:14 adam Exp $
 
-DISTNAME=	trio-0.22.1
+DISTNAME=	trio-0.22.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
