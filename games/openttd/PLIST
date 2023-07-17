@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/05/08 12:06:01 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/07/17 20:26:08 triaxx Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
@@ -27,6 +27,7 @@ share/openttd/ai/compat_1.7.nut
 share/openttd/ai/compat_1.8.nut
 share/openttd/ai/compat_1.9.nut
 share/openttd/ai/compat_12.nut
+share/openttd/ai/compat_13.nut
 share/openttd/baseset/no_music.obm
 share/openttd/baseset/no_sound.obs
 share/openttd/baseset/openttd.32.bmp
@@ -52,6 +53,7 @@ share/openttd/game/compat_1.7.nut
 share/openttd/game/compat_1.8.nut
 share/openttd/game/compat_1.9.nut
 share/openttd/game/compat_12.nut
+share/openttd/game/compat_13.nut
 share/openttd/lang/afrikaans.lng
 share/openttd/lang/arabic_egypt.lng
 share/openttd/lang/basque.lng
