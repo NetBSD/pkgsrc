@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/17 16:08:31 adam Exp $
+
+BLAKE2s (time_machine-2.11.0.tar.gz) = a11d270c262c79ca8a2e0605b42b2cd0705541a8a3c3cf9031451d1de084f6ee
+SHA512 (time_machine-2.11.0.tar.gz) = 115c264b4f87f4088e6e0884b5ad655e025a917ee8783af3e936e80e1713f7f0d58944da31418333d11b9f3eef82c4fb199da9d369717ff7a34cd47e851b3e53
+Size (time_machine-2.11.0.tar.gz) = 23913 bytes
