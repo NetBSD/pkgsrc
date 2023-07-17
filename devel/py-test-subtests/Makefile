@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/04/18 13:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/17 15:09:37 adam Exp $
 
-DISTNAME=	pytest-subtests-0.10.0
+DISTNAME=	pytest-subtests-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-subtests/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-subtests
 COMMENT=	Unittest subTest() support and subtests fixture
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
@@ -20,5 +22,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
