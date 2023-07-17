@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/17 13:23:33 wiz Exp $
+
+BLAKE2s (Elstob_v2_100.zip) = d0419afa9be478a9b1f4a6b18772fe4faee2caba78b82cd46728d881f727d90e
+SHA512 (Elstob_v2_100.zip) = f9e14479a5120e637292d79af9bb6586cdd97f07e997769f8148a9db3112a9ef14fedfdb0aa44b747fa8ac2cf92352ad2e8d3fdb37a8ddc5fbbd09572413eca5
+Size (Elstob_v2_100.zip) = 13539101 bytes
