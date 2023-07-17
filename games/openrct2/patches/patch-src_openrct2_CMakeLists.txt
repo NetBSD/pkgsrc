@@ -1,18 +1,21 @@
-$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.1 2020/05/30 20:47:08 joerg Exp $
+$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.2 2023/07/17 19:41:15 triaxx Exp $
 
---- src/openrct2/CMakeLists.txt.orig	2020-05-27 23:23:58.110984083 +0000
+GCC 9 does not require linking with -lstdc++fs to use types and functions in
+<filesystem> now (https://gcc.gnu.org/gcc-9/changes.html).
+
+--- src/openrct2/CMakeLists.txt.orig	2020-03-24 20:46:30.000000000 +0000
 +++ src/openrct2/CMakeLists.txt
-@@ -143,13 +143,6 @@ if (NOT MINGW AND NOT MSVC)
-     endif ()
- endif ()
+@@ -17,13 +17,6 @@ add_library(${PROJECT_NAME} ${OPENRCT2_C
+ set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+ SET_CHECK_CXX_FLAGS(${PROJECT_NAME})
  
--if (NOT APPLE AND NOT MINGW AND NOT MSVC)
--    # This is ugly hack to work around https://bugs.launchpad.net/ubuntu/+source/gcc-5/+bug/1568899.
--    # Once C++17 is enabled (and thus old compilers are no longer supported, this needs to be gone.
--    # We cannot simply detect the _compiler_ version, as the bug exists with the C++ _library_
--    target_link_libraries(${PROJECT_NAME} gcc_s gcc)
--endif ()
+-# GCC / Clang likes us to pass the -lstdc++fs flag to link C++17 filesystem implementation.
+-if (NOT MINGW)
+-    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+-        target_link_libraries(${PROJECT_NAME} stdc++fs)
+-    endif()
+-endif()
 -
- if (NOT DISABLE_TTF)
-     if (STATIC)
-         target_link_libraries(${PROJECT_NAME} ${FREETYPE_STATIC_LIBRARIES})
+ if (NOT DISABLE_NETWORK OR NOT DISABLE_HTTP)
+     if (WIN32)
+         target_link_libraries(${PROJECT_NAME} bcrypt)
