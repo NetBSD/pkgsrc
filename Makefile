@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/02/12 15:04:51 rillig Exp $
+# $NetBSD: Makefile,v 1.89 2023/07/17 01:03:19 thor Exp $
 #
 # This is the top-level Makefile of pkgsrc.
 # See README.md for a more detailed introduction.
@@ -78,6 +78,7 @@ SUBDIR+=	news
 SUBDIR+=	parallel
 SUBDIR+=	pkgtools
 SUBDIR+=	print
+SUBDIR+=	science
 SUBDIR+=	security
 SUBDIR+=	shells
 SUBDIR+=	sysutils
