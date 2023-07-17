@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4455 2023/07/17 19:11:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4456 2023/07/17 19:18:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6201,3 +6201,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.24.0 [adam 2023-07-17]
 	Updated devel/py-pybind11 to 2.11.1 [adam 2023-07-17]
 	Updated net/py-unearth to 0.9.3 [adam 2023-07-17]
+	Updated devel/py-aenum to 3.1.15 [adam 2023-07-17]
+	Updated devel/py-project-api to 1.5.3 [adam 2023-07-17]
