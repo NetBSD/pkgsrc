@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/04/19 08:09:14 adam Exp $
+# $NetBSD: Makefile,v 1.68 2023/07/17 22:00:23 nia Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -39,10 +39,6 @@ CPPFLAGS+=		-DAUDIO_PLAYER="\"${LOCALBASE}/bin/play\""
 
 # 1 safe instance in xmltok.c:1494
 BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
-
-.if !empty(MACHINE_ARCH:Msparc64)
-GCC_REQD+=		3.0	# see PR 29185
-.endif
 
 .include "../../lang/python/application.mk"
 .include "../../converters/libiconv/buildlink3.mk"
