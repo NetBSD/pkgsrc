@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/17 14:58:09 adam Exp $
 
-DISTNAME=	distlib-0.3.6
+DISTNAME=	distlib-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distlib/}
