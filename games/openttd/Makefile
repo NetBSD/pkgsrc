@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/07/17 20:26:08 triaxx Exp $
+# $NetBSD: Makefile,v 1.113 2023/07/17 21:07:58 adam Exp $
 
 DISTNAME=	openttd-13.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -13,11 +13,8 @@ COMMENT=	Open source clone of Transport Tycoon Deluxe
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 
 # C++17
 GCC_REQD+=	8 # std::charconv
@@ -35,24 +32,28 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_DATADIR=share
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Allegro=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Grfcodec=ON
+CMAKE_ARGS+=	-DOPTION_INSTALL_FHS=ON
 
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17 # alloca
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z # alloca
 
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
+PLIST_VARS=	unix
+.if ${OPSYS} != "Darwin"
+PLIST.unix=	yes
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.endif
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
