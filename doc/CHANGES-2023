@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4457 2023/07/17 19:37:55 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4458 2023/07/17 19:41:51 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6205,3 +6205,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-project-api to 1.5.3 [adam 2023-07-17]
 	Updated graphics/tesseract to 5.3.2 [adam 2023-07-17]
 	Updated databases/hiredis to 1.2.0 [adam 2023-07-17]
+	Updated games/openrct2 to 0.2.5 [triaxx 2023-07-17]
