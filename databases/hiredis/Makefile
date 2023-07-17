@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/01/24 18:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/17 19:37:34 adam Exp $
 
-DISTNAME=	hiredis-1.1.0
+DISTNAME=	hiredis-1.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,8 +15,8 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}
 
 # needs running redis-server
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./hiredis-test
+#do-test:
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./hiredis-test
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
