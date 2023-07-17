@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/12/25 21:34:12 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -23,8 +23,6 @@ USE_NCURSES=		yes
 PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
-
-GCC_REQD+=		2.95.3
 
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=		-DNETBSD_NATIVE

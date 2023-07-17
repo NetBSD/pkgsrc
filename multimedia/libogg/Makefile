@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/07/25 11:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	libogg-1.3.5
 PKGREVISION=	1
@@ -15,7 +15,5 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	ogg.pc.in
 TEST_TARGET=		check
-
-GCC_REQD+=	2.95.3
 
 .include "../../mk/bsd.pkg.mk"

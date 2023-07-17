@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2023/07/06 09:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2023/07/17 22:00:25 nia Exp $
 
 DISTNAME=		inn-2.7.1
 PKGREVISION=		1
@@ -201,10 +201,6 @@ SUBST_STAGE.blcklist=	pre-configure
 post-extract:
 	${MV} ${WRKSRC}/m4/blacklist.m4 ${WRKSRC}/m4/blocklist.m4
 
-.endif
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
 .endif
 
 .include "options.mk"

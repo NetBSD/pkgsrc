@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/01/03 17:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	16
@@ -22,10 +22,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ENV+=		COMPILED_BY="The NetBSD Packages Collection"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == x86_64
-GCC_REQD+=	3.4
-.endif
 
 PLIST_SUBST+=	POVRAY=povray-3.6
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2023/06/06 12:41:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.137 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
-GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

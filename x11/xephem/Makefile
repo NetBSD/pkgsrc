@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/06/28 11:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/07/17 22:00:25 nia Exp $
 
 DISTNAME=	xephem-3.7.7
 PKGREVISION=	6
@@ -40,10 +40,6 @@ REPLACE_INTERPRETER+=	perl
 REPLACE.perl.old=	.*/bin/perl
 REPLACE.perl.new=	${PREFIX}/bin/perl
 REPLACE_FILES.perl=	auxil/astorb2edb.pl auxil/mpcorb2edb.pl
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=	2.95.3
-.endif
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults share/xephem/tools \
 			${PKGMANDIR}/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/17 22:00:25 nia Exp $
 
 DISTNAME=	neXtaw-0.15.1
 PKGREVISION=	3
@@ -14,12 +14,6 @@ USE_LIBTOOL=		yes
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
-GCC_REQD+=	2.95
-.endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 

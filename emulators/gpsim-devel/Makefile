@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/01/29 21:14:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2023/07/17 22:00:23 nia Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -15,8 +15,6 @@ USE_LANGUAGES=	c c++03
 
 USE_TOOLS+=	bison gmake lex pkg-config
 USE_LIBTOOL=	YES
-
-GCC_REQD+=		3.0
 
 CONFLICTS=	eXdbm-[0-9]* gpsim-[0-9]*
 
