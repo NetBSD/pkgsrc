@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2023/02/13 14:59:36 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.52 2023/07/17 14:30:50 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -10369,6 +10369,8 @@ ${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sukapura.zip
+${PKGNAME}/lib/libreoffice/share/config/images_sukapura_dark.zip
+${PKGNAME}/lib/libreoffice/share/config/images_sukapura_dark_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sukapura_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/aboutconfigdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/aboutconfigvaluedialog.ui
