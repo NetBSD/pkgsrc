@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4451 2023/07/17 14:43:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4452 2023/07/17 14:45:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6194,3 +6194,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/libreoffice to 7.5.4.2 [ryoon 2023-07-17]
 	Updated devel/py-trio to 0.22.2 [adam 2023-07-17]
 	Updated security/py-trustme to 1.1.0 [adam 2023-07-17]
+	Updated graphics/lcms2 to 2.15 [ryoon 2023-07-17]
