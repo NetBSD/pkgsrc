@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/01/03 17:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/17 14:41:56 ryoon Exp $
 
-DISTNAME=	lcms2-2.14
-PKGREVISION=	1
+DISTNAME=	lcms2-2.15
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcms/}
 
