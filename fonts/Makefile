@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2023/06/27 10:52:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.412 2023/07/17 13:23:51 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -72,6 +72,7 @@ SUBDIR+=	dbz-ttf
 SUBDIR+=	dejavu-ttf
 SUBDIR+=	droid-ttf
 SUBDIR+=	efont-unicode
+SUBDIR+=	elstob-font
 SUBDIR+=	encodings
 SUBDIR+=	evermono-ttf
 SUBDIR+=	fira
