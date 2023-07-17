@@ -1,15 +1,15 @@
-$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.1 2021/05/04 17:08:05 nia Exp $
+$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.2 2023/07/17 20:26:08 triaxx Exp $
 
 Do not try to generate Linux distribution packages.
 
---- cmake/InstallAndPackage.cmake.orig	2021-05-03 18:41:45.000000000 +0000
+--- cmake/InstallAndPackage.cmake.orig	2023-06-11 16:42:59.000000000 +0000
 +++ cmake/InstallAndPackage.cmake
-@@ -145,47 +145,9 @@ elseif(UNIX)
+@@ -154,51 +154,9 @@ elseif(UNIX)
      if(OPTION_PACKAGE_DEPENDENCIES)
          set(CPACK_GENERATOR "TXZ")
          set(PLATFORM "generic")
 -    elseif(NOT OPTION_INSTALL_FHS)
-+    else()
++    else(NOT OPTION_INSTALL_FHS)
          set(CPACK_GENERATOR "TXZ")
          set(PLATFORM "unknown")
 -    else()
@@ -38,6 +38,10 @@ Do not try to generate Linux distribution packages.
 -            if(DISTRO_ID STREQUAL "arch")
 -                set(PLATFORM "arch")
 -                set(CPACK_GENERATOR "TXZ")
+-            elseif(DISTRO_ID STREQUAL "fedora" OR DISTRO_ID STREQUAL "rhel")
+-                set(PLATFORM "fedora")
+-                set(CPACK_GENERATOR "RPM")
+-                include(PackageRPM)
 -            else()
 -                set(UNSUPPORTED_PLATFORM_NAME "Linux distribution '${DISTRO_ID}' from /etc/os-release")
 -            endif()
