@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4450 2023/07/17 14:32:58 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4451 2023/07/17 14:43:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6192,3 +6192,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox-l10n to 115.0.2 [ryoon 2023-07-17]
 	Updated textproc/grep to 3.11 [ryoon 2023-07-17]
 	Updated misc/libreoffice to 7.5.4.2 [ryoon 2023-07-17]
+	Updated devel/py-trio to 0.22.2 [adam 2023-07-17]
+	Updated security/py-trustme to 1.1.0 [adam 2023-07-17]
