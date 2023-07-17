@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/07/06 09:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -19,7 +19,6 @@ DEPENDS+=	maildrop>=2.5.0:../../mail/maildrop
 
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
-GCC_REQD+=		3.0	# need Standard C++ Library
 
 .include "Makefile.common"
 

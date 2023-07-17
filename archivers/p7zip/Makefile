@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2020/01/26 05:26:08 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2023/07/17 22:00:22 nia Exp $
 
 DISTNAME=	p7zip_16.02_src_all
 PKGNAME=	${DISTNAME:S/_src_all//S/_/-/}
@@ -22,8 +22,6 @@ PTHREAD_OPTS+=		require
 .include "options.mk"
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}
-
-GCC_REQD+=		3.0
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/p7zip
