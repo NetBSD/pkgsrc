@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.309 2023/06/06 12:41:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.310 2023/07/17 14:30:50 ryoon Exp $
 
-VERREL=		7.5.1
+VERREL=		7.5.4
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -110,7 +109,7 @@ MORE_DISTFILES= \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-13.8.tar.bz2 \
+	postgresql-13.10.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -127,9 +126,7 @@ MORE_DISTFILES= \
 	pdfium-5408.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m103-b301ff025004c9cd82816c86c547588e6c24b466.tar.xz \
-	libcmis-0.5.2.tar.xz \
-
-#	libjpeg-turbo-2.1.1.tar.gz
+	libcmis-0.5.2.tar.xz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -175,7 +172,6 @@ USE_TOOLS+=		msgfmt perl pkg-config unzip zip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
-#GNU_CONFIGURE=		yes
 
 CXXFLAGS.NetBSD+=	-DNO_CPLUSPLUS_ALLOCA
 
@@ -235,8 +231,6 @@ CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--with-system-cppunit
-# gengal.bin segfault, in runtime same problem causes application error.
-#CONFIGURE_ARGS+=	--without-galleries
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
 .if ${LIBRSVG_TYPE} == "rust"
@@ -267,19 +261,12 @@ LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter
 #LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 #			startcenter.desktop writer.desktop
 
-#OBJDIR=		pkgsrcbuild
-#CONFIGURE_DIRS=	${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/autogen.sh
-
-#LD_LIBRARY_PATH+=	${WRKSRC}/instdir/sdk/lib:${WRKSRC}/instdir/ure/lib:${WRKSRC}/instdir/program
 
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP}
 MAKE_ENV+=		SHELL=${BASH:Q}
-# configure script should use `pkg-config --cflags xzing`
-#MAKE_ENV+=		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILD_MAKE_FLAGS+=	VERBOSE=true
-#BUILD_MAKE_FLAGS+=	GMAKE_OPTIONS+=-p
 
 .if ${MACHINE_ARCH} == "i386"
 # XXX: avoid unexpected substitution in the include path (work.i386 -> work.1)
@@ -287,9 +274,8 @@ BUILD_MAKE_FLAGS+=	VERBOSE=true
 CFLAGS+=		-Ui386
 .endif
 
-.if ${OPSYS} != "Linux"
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 INSTALLATION_DIRS=	bin share/applications
 
@@ -306,7 +292,6 @@ post-extract:
 	${LN} -s ${DISTDIR}/${DIST_SUBDIR}/${md} ${WRKSRC}/src/${md}
 .endfor
 	mkdir ${WRKSRC}/tmp
-#	mkdir ${WRKSRC}/${OBJDIR}
 
 pre-configure: provide-python3
 
@@ -329,10 +314,6 @@ post-install:
 .for f in ${LO_PROGRAMS}
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../${PKGNAME_NOREV}/bin/${f}
 .endfor
-#	${LN} -s ${DESTDIR}${PREFIX}/bin/soffice ${DESTDIR}${PREFIX}/bin/libreoffice
-#.for f in ${LO_DESKTOP_FILES}
-#	cd ${DESTDIR}${PREFIX}/share/applications && ${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/${f}
-#.endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libabw/buildlink3.mk"
@@ -445,7 +426,6 @@ BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
