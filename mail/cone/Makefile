@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/04/19 08:10:40 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/07/17 22:00:24 nia Exp $
 
 DISTNAME=	cone-0.90
 PKGREVISION=	36
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl true
-GCC_REQD+=		3.0	# need Standard C++ Library
 
 .include "options.mk"
 

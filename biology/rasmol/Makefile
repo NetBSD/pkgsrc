@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/23 10:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/07/17 22:00:22 nia Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -17,10 +17,6 @@ USE_TOOLS+=	gunzip mkdirhier
 MAKE_ENV+=	DEPTHDEF=${DEPTHDEF:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
 
 .if defined(RASMOL_DEPTH)
 .  if ${RASMOL_DEPTH} == 32
