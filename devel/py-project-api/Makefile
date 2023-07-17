@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/07/01 11:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/17 19:17:43 adam Exp $
 
-DISTNAME=	pyproject_api-1.5.2
+DISTNAME=	pyproject_api-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//S/_/-/}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_api/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,9 +33,6 @@ do-test:
 
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23:../../devel/py-packaging
-.endif
-.if ${PYTHON_VERSION} < 308
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6:../../devel/py-importlib-metadata
 .endif
 
 .include "../../lang/python/wheel.mk"
