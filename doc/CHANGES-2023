@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4453 2023/07/17 15:09:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4454 2023/07/17 16:10:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6197,3 +6197,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/lcms2 to 2.15 [ryoon 2023-07-17]
 	Updated devel/py-distlib to 0.3.7 [adam 2023-07-17]
 	Updated devel/py-test-subtests to 0.11.0 [adam 2023-07-17]
+	Added time/py-time-machine version 2.11.0 [adam 2023-07-17]
+	Updated devel/py-virtualenv to 20.24.0 [adam 2023-07-17]
