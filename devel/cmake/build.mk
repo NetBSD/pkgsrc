@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.8 2023/03/25 18:29:44 gdt Exp $
+# $NetBSD: build.mk,v 1.9 2023/07/17 06:43:59 ryoon Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -80,7 +80,8 @@ cmake-configure:
 		--install-prefix ${PREFIX} \
 		-B ${CMAKE_BUILD_DIR} \
 		-G ${_CMAKE_BUILD_SYSTEM:Q} \
-		${CMAKE_CONFIGURE_ARGS}
+		${CMAKE_CONFIGURE_ARGS} \
+		${WRKSRC}
 .endfor
 
 do-build: cmake-build
