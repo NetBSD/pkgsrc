@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4439 2023/07/17 07:19:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4440 2023/07/17 09:00:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6177,3 +6177,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/fvwm3 to 1.0.7 [vins 2023-07-16]
 	Updated net/iperf3 to 3.14 [adam 2023-07-17]
 	Updated math/py-asteval to 0.9.31 [adam 2023-07-17]
+	Updated devel/py-test-localserver to 0.8.0 [adam 2023-07-17]
+	Updated devel/py-test-asyncio to 0.21.1 [adam 2023-07-17]
