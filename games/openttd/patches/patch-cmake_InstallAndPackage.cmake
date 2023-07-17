@@ -1,59 +1,29 @@
-$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.2 2023/07/17 20:26:08 triaxx Exp $
+$NetBSD: patch-cmake_InstallAndPackage.cmake,v 1.3 2023/07/17 21:07:58 adam Exp $
 
 Do not try to generate Linux distribution packages.
 
 --- cmake/InstallAndPackage.cmake.orig	2023-06-11 16:42:59.000000000 +0000
 +++ cmake/InstallAndPackage.cmake
-@@ -154,51 +154,9 @@ elseif(UNIX)
+@@ -121,7 +121,7 @@ set(CPACK_PACKAGE_EXECUTABLES "openttd;O
+ set(CPACK_STRIP_FILES YES)
+ set(CPACK_OUTPUT_FILE_PREFIX "bundles")
+ 
+-if(APPLE)
++if(FALSE)
+     # Stripping would produce unreadable stacktraces.
+     set(CPACK_STRIP_FILES NO)
+     set(CPACK_GENERATOR "Bundle")
+@@ -154,10 +154,11 @@ elseif(UNIX)
      if(OPTION_PACKAGE_DEPENDENCIES)
          set(CPACK_GENERATOR "TXZ")
          set(PLATFORM "generic")
 -    elseif(NOT OPTION_INSTALL_FHS)
-+    else(NOT OPTION_INSTALL_FHS)
++    else()
          set(CPACK_GENERATOR "TXZ")
          set(PLATFORM "unknown")
 -    else()
--        find_program(LSB_RELEASE_EXEC lsb_release)
--        execute_process(COMMAND ${LSB_RELEASE_EXEC} -is
--            OUTPUT_VARIABLE LSB_RELEASE_ID
--            OUTPUT_STRIP_TRAILING_WHITESPACE
--        )
--        if(LSB_RELEASE_ID)
--            if(LSB_RELEASE_ID STREQUAL "Ubuntu" OR LSB_RELEASE_ID STREQUAL "Debian")
--                execute_process(COMMAND ${LSB_RELEASE_EXEC} -cs
--                    OUTPUT_VARIABLE LSB_RELEASE_CODENAME
--                    OUTPUT_STRIP_TRAILING_WHITESPACE
--                )
--                string(TOLOWER "${LSB_RELEASE_ID}-${LSB_RELEASE_CODENAME}" PLATFORM)
--
--                set(CPACK_GENERATOR "DEB")
--                include(PackageDeb)
--            else()
--                set(UNSUPPORTED_PLATFORM_NAME "LSB-based Linux distribution '${LSB_RELEASE_ID}'")
--            endif()
--        elseif(EXISTS "/etc/os-release")
--            file(STRINGS "/etc/os-release" OS_RELEASE_CONTENTS REGEX "^ID=")
--            string(REGEX MATCH "ID=(.*)" _ ${OS_RELEASE_CONTENTS})
--            set(DISTRO_ID ${CMAKE_MATCH_1})
--            if(DISTRO_ID STREQUAL "arch")
--                set(PLATFORM "arch")
--                set(CPACK_GENERATOR "TXZ")
--            elseif(DISTRO_ID STREQUAL "fedora" OR DISTRO_ID STREQUAL "rhel")
--                set(PLATFORM "fedora")
--                set(CPACK_GENERATOR "RPM")
--                include(PackageRPM)
--            else()
--                set(UNSUPPORTED_PLATFORM_NAME "Linux distribution '${DISTRO_ID}' from /etc/os-release")
--            endif()
--        else()
--            set(UNSUPPORTED_PLATFORM_NAME "Linux distribution")
--        endif()
--
--        if(NOT PLATFORM)
--            set(PLATFORM "generic")
--            set(CPACK_GENERATOR "TXZ")
--            message(WARNING "Unknown ${UNSUPPORTED_PLATFORM_NAME} found for packaging; can only pack to a txz. Please consider creating a Pull Request to add support for this distribution.")
--        endif()
-     endif()
- 
-     set(CPACK_PACKAGE_FILE_NAME "openttd-#CPACK_PACKAGE_VERSION#-linux-${PLATFORM}-${CPACK_SYSTEM_NAME}")
++    endif()
++    if(FALSE)
+         find_program(LSB_RELEASE_EXEC lsb_release)
+         execute_process(COMMAND ${LSB_RELEASE_EXEC} -is
+             OUTPUT_VARIABLE LSB_RELEASE_ID
