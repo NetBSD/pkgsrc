@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.30 2023/07/17 20:26:08 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.31 2023/07/17 21:07:58 adam Exp $
 bin/openttd
 man/man6/openttd.6
-share/applications/openttd.desktop
+${PLIST.unix}share/applications/openttd.desktop
 share/doc/openttd/COPYING.md
 share/doc/openttd/README.md
 share/doc/openttd/changelog.txt
 share/doc/openttd/known-bugs.txt
 share/doc/openttd/multiplayer.md
-share/icons/hicolor/128x128/apps/openttd.png
-share/icons/hicolor/16x16/apps/openttd.png
-share/icons/hicolor/256x256/apps/openttd.png
-share/icons/hicolor/32x32/apps/openttd.png
-share/icons/hicolor/48x48/apps/openttd.png
-share/icons/hicolor/64x64/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/128x128/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/16x16/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/256x256/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/32x32/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/48x48/apps/openttd.png
+${PLIST.unix}share/icons/hicolor/64x64/apps/openttd.png
 share/openttd/ai/compat_0.7.nut
 share/openttd/ai/compat_1.0.nut
 share/openttd/ai/compat_1.1.nut
@@ -128,5 +128,5 @@ share/openttd/scripts/on_server_connect.scr.example
 share/openttd/scripts/pre_dedicated.scr.example
 share/openttd/scripts/pre_server.scr.example
 share/openttd/scripts/readme.txt
-share/pixmaps/openttd.32.xpm
-share/pixmaps/openttd.64.xpm
+${PLIST.unix}share/pixmaps/openttd.32.xpm
+${PLIST.unix}share/pixmaps/openttd.64.xpm
