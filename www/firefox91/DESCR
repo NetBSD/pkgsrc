@@ -13,3 +13,6 @@ Note: Due to upstream's trademark policies, this package identifies as
 "Nightly" rather than "Firefox" by default.
 
 This package provides Firefox 91 Extended Support Release.
+
+This package is being kept alongside newer Firefox versions for screen
+recording support (see PR pkg/56955).
