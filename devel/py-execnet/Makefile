@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/13 19:31:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/18 08:18:34 adam Exp $
 
-DISTNAME=	execnet-1.9.0
+DISTNAME=	execnet-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/execnet/}
 
@@ -11,15 +10,16 @@ HOMEPAGE=	https://execnet.readthedocs.io/
 COMMENT=	Rapid multi-Python deployment
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
