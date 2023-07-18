@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/07/13 13:45:42 nia Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/07/18 18:02:46 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
@@ -26,6 +26,8 @@ CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/flycast/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/flycast/patches
+
+USE_CXX_FEATURES+=	c++17
 
 GITHUB_SUBMODULES+=	rtissera libchdr 2781322c4a7f8315c5fd6499129ad4b718e35843 core/deps/libchdr
 GITHUB_SUBMODULES+=	flyinghead mingw-breakpad 4c3d5fce1a4fef4decfbfeaf20f3746ecd209775 core/deps/breakpad
