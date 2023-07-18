@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/07/16 18:36:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/18 01:15:41 jschauma Exp $
 
-DISTNAME=	getpass-0.2.1
+DISTNAME=	getpass-0.2.3
 PKGNAME=	go-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jschauma/}
 CATEGORIES=	security
@@ -16,7 +16,12 @@ GO_DIST_BASE=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 GO_SRCPATH=	github.com/jschauma/getpass
 
 post-build:
-	rm -fr ${WRKDIR}/bin
+	rm -f ${WRKDIR}/bin/example
+
+post-install:
+	mkdir -p ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/getpass.1 \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
