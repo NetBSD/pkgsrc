@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/07/09 11:20:58 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/18 18:45:37 ryoon Exp $
 
 DISTNAME=	crypt-1.18.2
 PKGNAME=	libtom${DISTNAME}
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://github.com/libtom/libtomcrypt
+HOMEPAGE=	https://www.libtom.net/LibTomCrypt/
 COMMENT=	Tom St Denis's cryptographic library
 LICENSE=	public-domain
 
