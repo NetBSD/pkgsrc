@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.185 2023/07/13 13:14:41 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.186 2023/07/18 12:49:46 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1428,7 +1428,8 @@ MESON_ARGS+=	-Dx11=false
     is written in C and will hide all other compilers (via the wrapper
     framework, see <xref linkend="buildlink" />).</para>
 
-    <para>To declare which language's compiler a package needs, set
+    <para>To declare which languages should be made available through
+    pkgsrc's compiler wrappers, use 
     the <varname>USE_LANGUAGES</varname> variable. Allowed values
     currently are:
 <programlisting>
@@ -1439,7 +1440,28 @@ fortran77, java, objc, obj-c++, and ada.
     (and any combination).  The default is
     <quote>c</quote>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
-    phase.</para>
+    phase.
+    Language variants like <literal>c++11</literal>
+    can be specified if the package does not explicitly set
+    <literal>-std=...</literal> when compiling (i.e. the package
+    assumes the compiler defaults to C++11 or some other standard).
+    This is a common bug in upstream build systems.</para>
+
+    <para>To declare which features a package requies from the
+    compiler, set either <varname>USE_CC_FEATURES</varname>
+    or <varname>USE_CXX_FEATURES</varname>. Allowed values for
+    <varname>USE_CC_FEATURES</varname> are currently:
+<programlisting>
+c11, c99, has_include
+</programlisting>
+    Allowed values for <varname>USE_CXX_FEATURES</varname> are
+    currently:
+<programlisting>
+c++11, c++14, c++17, c++20, has_include, regex, filesystem,
+charconv, parallelism_ts, unique_ptr
+</programlisting>
+    .</para>
+    </para>
   </sect2>
 
   <sect2 id="java-programming-language">
