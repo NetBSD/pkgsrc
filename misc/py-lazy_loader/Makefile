@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/09 08:32:36 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/18 04:43:21 adam Exp $
 
-DISTNAME=	lazy_loader-0.2
+DISTNAME=	lazy_loader-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy_loader/}
@@ -11,8 +11,8 @@ COMMENT=	Load subpackages and functions on demand
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.4:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
