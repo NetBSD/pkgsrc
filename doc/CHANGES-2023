@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4466 2023/07/18 06:56:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4467 2023/07/18 08:22:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6221,3 +6221,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pip to 23.2 [adam 2023-07-18]
 	Removed devel/py-test-cache [adam 2023-07-18]
 	Updated devel/py-gitpython to 3.1.32 [adam 2023-07-18]
+	Updated devel/py-execnet to 2.0.2 [adam 2023-07-18]
+	Updated textproc/py-parse to 1.19.1 [adam 2023-07-18]
