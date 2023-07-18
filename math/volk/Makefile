@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/18 18:30:01 nia Exp $
 
 DISTNAME=	volk-2.5.2
 CATEGORIES=	math ham
@@ -13,11 +13,12 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
-GCC_REQD+=	8	# std::filesystem
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	test
+
+USE_CXX_FEATURES+=	c++17 filesystem
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-mako
 
