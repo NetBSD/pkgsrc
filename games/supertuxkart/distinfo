@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:44:26 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/07/18 14:51:45 ryoon Exp $
 
-BLAKE2s (supertuxkart-1.1-src.tar.xz) = 4bd7949cbb94c1d29ca114fe0a048b7d5bcbe0875dbcd7a460a835193d1bcea7
-SHA512 (supertuxkart-1.1-src.tar.xz) = 81d5ff59bb33eba8a00547239d54cacfde25eed0c56c857712a00a62032e4cf371cdd367159eaa4bfec6d4dd5781b705e41b58a26b864aa43678cfe9926bb804
-Size (supertuxkart-1.1-src.tar.xz) = 616739152 bytes
+BLAKE2s (SuperTuxKart-1.4-src.tar.xz) = 860086124a9b4bcbabae25f6fac2b5fd4c98d87c532b376dc89686e49ec8b10c
+SHA512 (SuperTuxKart-1.4-src.tar.xz) = e88f3fb5ccdb38d0ef75e92d73b43c5cc7a1f6c76ac9502033df099a00d6dc3e86b2c5442b806237d2420c44ada7dd23a2c90ecf94785a44d2348c933770a5ab
+Size (SuperTuxKart-1.4-src.tar.xz) = 650010456 bytes
