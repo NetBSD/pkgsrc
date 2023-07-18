@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/05/22 21:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/07/18 12:59:31 nia Exp $
 
 DISTNAME=	mumble-1.4.230
 PKGREVISION=	12
@@ -22,8 +22,7 @@ USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
 
-# C++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 LDFLAGS.NetBSD+=	-lrt
 

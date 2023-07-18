@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/05/22 21:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/07/18 12:59:31 nia Exp $
 
 DISTNAME=	quassel-0.14.0
 PKGREVISION=	11
@@ -15,7 +15,7 @@ USE_TOOLS+=	bash perl
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	5 # C++14
+USE_CXX_FEATURES+=	c++14
 
 REPLACE_BASH+=	po/update.sh
 REPLACE_BASH+=	scripts/tx-sync.sh

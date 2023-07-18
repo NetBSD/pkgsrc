@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/07/06 09:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/18 12:59:31 nia Exp $
 
 DISTNAME=	znc-1.8.2
 PKGREVISION=	17
@@ -12,11 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config msgfmt
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 MANCOMPRESSED=	yes
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
