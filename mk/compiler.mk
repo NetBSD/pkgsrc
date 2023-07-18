@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.99 2022/11/23 13:30:38 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.100 2023/07/18 12:49:46 nia Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -41,20 +41,47 @@
 #	If set to yes, fail early if the compiler.mk variables are not
 #	set correctly.
 #
+# ALLOW_NEWER_COMPILER
+#	If set to no, fail early if a package requires newer compiler
+#	features than supported by the system's compiler. If set to
+#	yes (the default), pkgsrc may attempt to build a newer compiler
+#	to use instead.
+#
 # The following variables may be set by a package:
 #
 # USE_LANGUAGES
-#	Declares the languages used in the source code of the package.
-#	This is used to determine the correct compilers to make
-#	visible to the build environment, installing them if
-#	necessary.  Flags such as -std=c++99 are also added.
+#	Declares the languages that should be made available via
+#	pkgsrc's compiler wrappers.
+#
+#	If the package assumes the compiler defaults to a specific
+#	language version, the USE_LANGUAGES variable can also be used
+#	to force the inclusion of flags such as -std=c++11. In this case,
+#	USE_CC_FEATURES/USE_CXX_FEATURES should also be set.
+#
 #	Valid values are: c, c99, gnu99, c11, gnu11, c17, gnu17, c++, c++03,
 #	gnu++03, c++0x, gnu++0x, c++11, gnu++11, c++14, gnu++14, c++17,
 #	gnu++17, c++20, gnu++20, fortran, fortran77, java, objc, obj-c++, ada.
+#
 #	The default is "c".
 #
-#       The above is partly aspirational.  As an example c++11 does
-#       not force a new enough version of gcc.
+# USE_CC_FEATURES
+#
+# 	Declares the C compiler features required by the package.
+#
+#	This is used to (optionally) install a newer compiler
+#	than provided by the system, or to skip building the package.
+#
+#	Valid values are: c11, c99, has_include.
+#
+# USE_CXX_FEATURES
+#
+# 	Declares the C++ compiler features required by the package.
+#
+#	This is used to (optionally) install a newer compiler
+#	than provided by the system, to or skip building the package.
+#
+#	Valid values are: c++11, c++14, c++17, c++20, has_include,
+#	regex, filesystem, unique_ptr, charconv, parallelism_ts.
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
