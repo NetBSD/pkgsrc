@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java17-javadoc,v 1.1 2023/03/02 01:13:38 abs Exp $
+@comment $NetBSD: PLIST.java17-javadoc,v 1.2 2023/07/18 12:23:48 abs Exp $
 share/doc/java-jna/doc/javadoc/allclasses-index.html
 share/doc/java-jna/doc/javadoc/allpackages-index.html
 share/doc/java-jna/doc/javadoc/com/sun/jna/AltCallingConvention.html
@@ -1348,7 +1348,7 @@ share/doc/java-jna/doc/javadoc/overview-tree.html
 share/doc/java-jna/doc/javadoc/package-search-index.js
 share/doc/java-jna/doc/javadoc/resources/glass.png
 share/doc/java-jna/doc/javadoc/resources/x.png
-share/doc/java-jna/doc/javadoc/script-dir/jquery-3.6.0.min.js
+share/doc/java-jna/doc/javadoc/script-dir/jquery-3.6.1.min.js
 share/doc/java-jna/doc/javadoc/script-dir/jquery-ui.min.css
 share/doc/java-jna/doc/javadoc/script-dir/jquery-ui.min.js
 share/doc/java-jna/doc/javadoc/script.js
