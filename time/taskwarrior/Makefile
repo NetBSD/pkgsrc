@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/07/11 05:37:58 nia Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/18 18:49:25 nia Exp $
 #
 
 DISTNAME=	task-2.6.2
@@ -15,8 +15,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-# C++17 required
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
