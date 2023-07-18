@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/07/13 13:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.46 2023/07/18 18:02:45 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	38
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SFML=ON
 
 CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
+
+USE_CXX_FEATURES+=	unique_ptr
 
 .include "../../mk/bsd.prefs.mk"
 

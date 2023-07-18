@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/05/22 21:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/18 18:02:46 nia Exp $
 
 PKGREVISION= 4
 .include "${.CURDIR}/../../emulators/mgba/Makefile.common"
@@ -14,8 +14,7 @@ CMAKE_ARGS+=	-DBUILD_QT=ON
 CMAKE_ARGS+=	-DBUILD_GL=OFF
 CMAKE_ARGS+=	-DUSE_EPOXY=OFF
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 # We probably don't actually want Qt5Multimedia.
 # It's an option as an audio output, but SDL supports many more pkgsrc
