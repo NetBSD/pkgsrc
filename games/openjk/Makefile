@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/13 13:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/18 18:13:44 nia Exp $
 
 DISTNAME=	openjk-0.0.0.20191030
 PKGREVISION=	8
@@ -42,6 +42,8 @@ OPENJK_ARCH=	${MACHINE_ARCH}
 .endif
 
 PLIST_SUBST+=	OPENJK_ARCH=${OPENJK_ARCH}
+
+USE_CXX_FEATURES+=	c++11
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications

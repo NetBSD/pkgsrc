@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/09 22:16:17 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/18 18:13:44 nia Exp $
 
 DISTNAME=	nanosaur-1.4.4
 PKGREVISION=	2
@@ -20,8 +20,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
 
-# __has_include
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	has_include
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec

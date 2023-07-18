@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2023/07/09 22:31:19 nia Exp $
+# $NetBSD: Makefile,v 1.200 2023/07/18 18:13:45 nia Exp $
 
 DISTNAME=	wesnoth-1.16.9
 PKGREVISION=	1
@@ -23,8 +23,7 @@ CMAKE_ARGS+=		-DENABLE_HISTORY=OFF
 # if OPT is set, -O3 will not be added
 CMAKE_ARGS+=		-DOPT="${DBG}"
 
-# std::string_view
-GCC_REQD+=		7
+USE_CXX_FEATURES+=	c++17
 
 CFLAGS.Darwin=		-framework Cocoa
 
