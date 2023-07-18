@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/07/13 13:45:43 nia Exp $
+# $NetBSD: Makefile.common,v 1.14 2023/07/18 18:13:44 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
@@ -46,6 +46,8 @@ REPLACE_PYTHON+=	sources/webserver/server.py
 REPLACE_PYTHON+=	sources/webserver/ws_handler.py
 
 LUA_VERSIONS_ACCEPTED=	51
+
+USE_CXX_FEATURES+=	c++11
 
 CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	source/contrib/sdl2/build-scripts/iosbuild.sh
