@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/08/19 22:05:10 abs Exp $
+# $NetBSD: Makefile,v 1.49 2023/07/18 18:42:31 nia Exp $
 
 DISTNAME=	desktop-file-utils-0.26
 PKGREVISION=	2
@@ -11,8 +11,7 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/desktop-file-utils
 COMMENT=	Utilities to manage desktop entries
 LICENSE=	gnu-gpl-v2
 
-# cc1: error: unrecognized command line option "-std=gnu11"
-GCC_REQD+=	4.7
+USE_CC_FEATURES+=	c11
 
 USE_TOOLS+=		pkg-config
 
