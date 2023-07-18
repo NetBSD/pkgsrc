@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/06 19:09:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/18 18:13:43 nia Exp $
 
 DISTNAME=	gemrb-0.9.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-GCC_REQD+=	4.7 # -std=gnu++11
+USE_CXX_FEATURES+=	c++11
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gemrb
 LDFLAGS+=	-lm # ldexpf

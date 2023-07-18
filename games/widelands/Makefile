@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/05/06 19:09:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/18 18:13:45 nia Exp $
 
 DISTNAME=	widelands-build21-source
 PKGNAME=	widelands-21
@@ -16,8 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
