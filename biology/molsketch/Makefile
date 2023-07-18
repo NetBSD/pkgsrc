@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/22 21:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/18 12:57:52 nia Exp $
 
 DISTNAME=	Molsketch-0.8.0-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
@@ -16,9 +16,10 @@ USE_TOOLS=	pkg-config
 USE_CMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+USE_LANGUAGES=	c c++
+
 # std::transform_reduce
-GCC_REQD+=	12
-USE_LANGUAGES=	c c++17
+USE_CXX_FEATURES+=	parallelism_ts
 
 CMAKE_ARGS+=	-DMSK_PREFIX=${PREFIX:Q}
 CMAKE_ARGS+=	-DMSK_INSTALL_PREFIX=${PREFIX:Q}
