@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/07/13 13:49:17 nia Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/18 18:56:03 nia Exp $
 
 DISTNAME=	kitty-0.26.5
 PKGREVISION=	1
@@ -14,8 +14,9 @@ COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c
-EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
+
+USE_CXX_FEATURES+=	has_include
 
 # don't force LTO
 BUILDLINK_TRANSFORM+=	rm:-flto
