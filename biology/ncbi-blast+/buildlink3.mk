@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/05/28 22:48:27 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/07/18 12:57:52 nia Exp $
 
 BUILDLINK_TREE+=	ncbi-blast+
 
 .if !defined(NCBI_BLAST+_BUILDLINK3_MK)
 NCBI_BLAST+_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=			c++17
 
 BUILDLINK_API_DEPENDS.ncbi-blast++=	ncbi-blast+>=2.14.0
 BUILDLINK_PKGSRCDIR.ncbi-blast+?=	../../biology/ncbi-blast+
