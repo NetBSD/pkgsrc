@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/04/23 14:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.48 2023/07/18 13:01:21 nia Exp $
 
 DISTNAME=	libwpg-0.3.3
 PKGREVISION=	10
@@ -16,8 +16,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl pkg-config
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--without-docs
 
