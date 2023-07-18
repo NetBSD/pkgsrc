@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/05/22 21:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/18 12:56:05 nia Exp $
 
 DISTNAME=	mixxx-2.3.1
 PKGREVISION=	15
@@ -14,15 +14,14 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-# c++11
-GCC_REQD+=	4.9
-
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DUSE_SYMLINKS=OFF
 CMAKE_ARGS+=	-DPORTMIDI=OFF
 
 PLIST_SRCS+=	PLIST
+
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 

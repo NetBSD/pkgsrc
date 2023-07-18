@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/05/06 19:08:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2023/07/18 12:56:05 nia Exp $
 #
 
 DISTNAME=	darkice-1.4
@@ -16,12 +16,13 @@ GNU_CONFIGURE=	yes
 # Uses std::regex without setting -std=...
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pkg-config
-GCC_REQD+=	4.7 # C++11
 
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/darkice
 
 CONF_FILES=	${EGDIR}/darkice.conf ${PKG_SYSCONFDIR}/darkice.conf
+
+USE_CXX_FEATURES+=	c++11 regex
 
 CONFIGURE_ARGS+=	--without-aacplus
 

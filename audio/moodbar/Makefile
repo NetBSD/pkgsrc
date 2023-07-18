@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:03:16 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/18 12:56:05 nia Exp $
 
 DISTNAME=	moodbar-1.2
 PKGREVISION=	3
@@ -13,10 +13,9 @@ COMMENT=	Audio timeline visualization
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
