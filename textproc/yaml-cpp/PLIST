@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/08/31 17:22:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/07/18 18:34:53 ryoon Exp $
 include/yaml-cpp/anchor.h
 include/yaml-cpp/binary.h
 include/yaml-cpp/contrib/anchordict.h
@@ -36,11 +36,11 @@ include/yaml-cpp/parser.h
 include/yaml-cpp/stlemitter.h
 include/yaml-cpp/traits.h
 include/yaml-cpp/yaml.h
+lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake
+lib/cmake/yaml-cpp/yaml-cpp-config.cmake
+lib/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake
+lib/cmake/yaml-cpp/yaml-cpp-targets.cmake
 lib/libyaml-cpp.so
-lib/libyaml-cpp.so.${PKGVERSION}
 lib/libyaml-cpp.so.0.7
-share/cmake/yaml-cpp/yaml-cpp-config-version.cmake
-share/cmake/yaml-cpp/yaml-cpp-config.cmake
-share/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake
-share/cmake/yaml-cpp/yaml-cpp-targets.cmake
-share/pkgconfig/yaml-cpp.pc
+lib/libyaml-cpp.so.${PKGVERSION}
+lib/pkgconfig/yaml-cpp.pc
