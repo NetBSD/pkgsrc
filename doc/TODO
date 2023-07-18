@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23208 2023/07/18 08:49:24 adam Exp $
+$NetBSD: TODO,v 1.23209 2023/07/18 14:51:22 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1358,7 +1358,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sudo-1.9.14
 	o sup-0.4
 	o superlu-5.2.2
-	o supertux-0.6.3
 	o supertuxkart-1.4
 	o svt-av1-1.5
 	o swapd-1.0.5
