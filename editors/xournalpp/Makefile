@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/06/06 12:41:20 riastradh Exp $
+# $NetBSD: Makefile,v 1.53 2023/07/18 14:13:24 nia Exp $
 
 DISTNAME=	xournalpp-1.1.3
 PKGREVISION=	5
@@ -17,17 +17,7 @@ USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	translations xournalpp
 
-# C++17, std::filesystem
-GCC_REQD+=	8
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
-USE_PKGSRC_GCC=		yes
-USE_PKGSRC_GCC_RUNTIME=	yes
-.endif
-
-.include "../../archivers/libarchive/buildlink3.mk"
+USE_CXX_FEATURES+=	c++17 filesystem
 
 TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
@@ -42,6 +32,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
 .include "../../devel/cmake/build.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"

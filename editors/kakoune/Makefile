@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/22 10:35:44 nia Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/18 14:13:23 nia Exp $
 
 DISTNAME=	kakoune-2020.01.16
 CATEGORIES=	editors
@@ -13,10 +13,9 @@ LICENSE=	unlicense
 
 BUILD_DIRS=	src
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
 
-# C++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 CXXFLAGS+=	-D'KAK_BIN_PATH="${PREFIX}/bin/kak"'
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
