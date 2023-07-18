@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/04/29 14:23:35 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/07/18 18:27:34 nia Exp $
 
 DISTNAME=	rspamd-3.5
 CATEGORIES=	mail
@@ -12,19 +12,13 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
-# std::string ends_with()
-GCC_REQD+=	9
-
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
 
-.include "../../mk/bsd.prefs.mk"
+USE_CXX_FEATURES+=	c++20
 
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
-USE_PKGSRC_GCC=		yes
-USE_PKGSRC_GCC_RUNTIME=	yes
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS.SunOS+=			-D__EXTENSIONS__
 
