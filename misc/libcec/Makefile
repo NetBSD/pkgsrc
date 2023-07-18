@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:38 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/18 18:31:20 nia Exp $
 
 DISTNAME=	libcec-4.0.4
 PKGREVISION=	2
@@ -14,10 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DSKIP_PYTHON_WRAPPER=ON
 
