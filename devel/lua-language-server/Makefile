@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/31 14:32:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/18 14:11:17 nia Exp $
 
 DISTNAME=		lua-language-server-3.6.21
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -23,7 +23,7 @@ TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 DEPENDS+=		clang-[0-9]*:../../lang/clang
 
 USE_LANGUAGES+=		c c++17
-GCC_REQD+=		7 # C++17
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 

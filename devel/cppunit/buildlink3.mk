@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/07/18 14:11:14 nia Exp $
 
 BUILDLINK_TREE+=	cppunit
 
 .if !defined(CPPUNIT_BUILDLINK3_MK)
 CPPUNIT_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_API_DEPENDS.cppunit+=	cppunit>=1.10.2
 BUILDLINK_ABI_DEPENDS.cppunit+=	cppunit>=1.10.2nb5

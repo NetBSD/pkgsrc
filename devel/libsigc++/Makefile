@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/07/25 19:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2023/07/18 14:11:16 nia Exp $
 
 DISTNAME=	libsigc++-2.10.8
 CATEGORIES=	devel gnome
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 CONFLICTS+=	libsigc++2-[0-9]*
 GCC_REQD+=	4.8
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gm4 pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
