@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2023/04/19 08:10:11 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/07/18 14:51:45 ryoon Exp $
 
-DISTNAME=	supertuxkart-1.1-src
-PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	8
+DISTNAME=	SuperTuxKart-1.4-src
+PKGNAME=	${DISTNAME:tl:S/-src//}
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=supertuxkart/}
+GITHUB_PROJECT=	stk-code
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,6 +27,8 @@ CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
+# SDL2 is for GamePad support.
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
@@ -33,6 +36,7 @@ CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
