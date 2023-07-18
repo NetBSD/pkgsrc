@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/04/19 08:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.88 2023/07/18 18:36:30 nia Exp $
 
 DISTNAME=	rtorrent-0.9.8
 PKGREVISION=	11
@@ -10,21 +10,12 @@ HOMEPAGE=	https://github.com/rakshasa/rtorrent
 COMMENT=	Ncurses based torrent client with support for sessions
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes # chgat
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-
-.include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_ARCH} == "alpha" || \
-    ${MACHINE_ARCH} == "i386" || \
-    ${MACHINE_ARCH} == "powerpc" || \
-    ${MACHINE_ARCH} == "x86_64"
-GCC_REQD+=		4.1.3
-.else
-GCC_REQD+=		4.2.1
-.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LDFLAGS}
