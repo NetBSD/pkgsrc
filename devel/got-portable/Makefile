@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/07/06 15:18:36 vins Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/18 09:33:18 vins Exp $
 
 DISTNAME=	got-portable-0.90
 PKGREVISION=	2
@@ -18,6 +18,8 @@ ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
+LDFLAGS+=	-lmd -lbsd
+
 USE_TOOLS+=	pkg-config yacc
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,7 +34,9 @@ INSTALLATION_DIRS=	bin libexec
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 .if ${OPSYS} == "Linux"
-USE_TOOLS+=	bison
+post-patch:
+# let libmd include the correct header.
+	${RM} -f ${WRKSRC}/compat/sha2.h
 # compatibility macros and functions for Linux.
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
