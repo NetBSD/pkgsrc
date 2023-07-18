@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/18 15:51:27 adam Exp $
 
-DISTNAME=	pytest-relaxed-1.1.5
+DISTNAME=	pytest-relaxed-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-relaxed/}
 
@@ -11,15 +10,15 @@ HOMEPAGE=	https://github.com/bitprophet/pytest-relaxed
 COMMENT=	Relaxed test discovery/organization for pytest
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
-
-PYTHON_VERSIONED_DEPENDENCIES=	test
+DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
+# Needs: invocations>=3.3
+#PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
