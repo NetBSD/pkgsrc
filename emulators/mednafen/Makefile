@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/05/06 19:09:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2023/07/18 18:02:46 nia Exp $
 
 DISTNAME=	mednafen-1.29.0
 PKGREVISION=	4
@@ -29,7 +29,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 INSTALLATION_DIRS=	share/doc/mednafen
 
-GCC_REQD+=		4.7 # gnu++11
+USE_CXX_FEATURES+=	c++11
 
 # Complains, loudly.
 MKPIE_SUPPORTED=	no
