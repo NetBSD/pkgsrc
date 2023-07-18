@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/13 13:49:17 nia Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/18 18:37:42 nia Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	4
@@ -12,13 +12,15 @@ COMMENT=	RSS/Atom feed reader for your terminal
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++11
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+
+USE_CXX_FEATURES+=	regex
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
