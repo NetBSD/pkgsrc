@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/05/05 17:59:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/07/18 15:54:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/paramiko/agent.pyo
 ${PYSITELIB}/paramiko/auth_handler.py
 ${PYSITELIB}/paramiko/auth_handler.pyc
 ${PYSITELIB}/paramiko/auth_handler.pyo
+${PYSITELIB}/paramiko/auth_strategy.py
+${PYSITELIB}/paramiko/auth_strategy.pyc
+${PYSITELIB}/paramiko/auth_strategy.pyo
 ${PYSITELIB}/paramiko/ber.py
 ${PYSITELIB}/paramiko/ber.pyc
 ${PYSITELIB}/paramiko/ber.pyo
@@ -94,9 +97,6 @@ ${PYSITELIB}/paramiko/primes.pyo
 ${PYSITELIB}/paramiko/proxy.py
 ${PYSITELIB}/paramiko/proxy.pyc
 ${PYSITELIB}/paramiko/proxy.pyo
-${PYSITELIB}/paramiko/py3compat.py
-${PYSITELIB}/paramiko/py3compat.pyc
-${PYSITELIB}/paramiko/py3compat.pyo
 ${PYSITELIB}/paramiko/rsakey.py
 ${PYSITELIB}/paramiko/rsakey.pyc
 ${PYSITELIB}/paramiko/rsakey.pyo
