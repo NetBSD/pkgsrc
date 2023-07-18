@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/04/23 14:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.70 2023/07/18 18:56:03 nia Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGREVISION=	36
@@ -12,8 +12,7 @@ DEPENDS+=	libkactivities4-[0-9]*:../../x11/libkactivities4
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/libkactivities4/distinfo
 
-# Needs C++11 features for kactivitymanager
-GCC_REQD+=	4.5
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 

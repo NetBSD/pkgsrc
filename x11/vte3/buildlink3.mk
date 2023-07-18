@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.23 2023/01/29 21:15:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2023/07/18 18:56:03 nia Exp $
 
 BUILDLINK_TREE+=	vte3
 
 .if !defined(VTE3_BUILDLINK3_MK)
 VTE3_BUILDLINK3_MK:=
 
-# for c++20
-GCC_REQD+=	10
+USE_CXX_FEATURES+=		c++20
 
 BUILDLINK_API_DEPENDS.vte3+=	vte3>=0.52.2
 BUILDLINK_ABI_DEPENDS.vte3+=	vte3>=0.68.0nb11
