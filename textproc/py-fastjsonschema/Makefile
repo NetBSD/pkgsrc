@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/05/29 09:15:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/07/18 06:51:36 adam Exp $
 
 DISTNAME=	fastjsonschema-2.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cache-[0-9]*:../../devel/py-test-cache
 
 USE_LANGUAGES=	# none
 
