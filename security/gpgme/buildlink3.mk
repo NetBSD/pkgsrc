@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.33 2023/07/13 13:49:17 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2023/07/18 18:44:16 nia Exp $
 
 BUILDLINK_TREE+=	gpgme
 
 .if !defined(GPGME_BUILDLINK3_MK)
 GPGME_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=		c++11
 
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=0.9.0
 BUILDLINK_ABI_DEPENDS.gpgme+=	gpgme>=1.8.0nb1

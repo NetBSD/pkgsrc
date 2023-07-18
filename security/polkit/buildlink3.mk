@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/07/13 13:49:17 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/07/18 18:44:16 nia Exp $
 
 BUILDLINK_TREE+=	polkit
 
 .if !defined(POLKIT_BUILDLINK3_MK)
 POLKIT_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=		c++17
 
 BUILDLINK_API_DEPENDS.polkit+=	polkit>=0.103
 BUILDLINK_ABI_DEPENDS.polkit?=	polkit>=0.120nb4
