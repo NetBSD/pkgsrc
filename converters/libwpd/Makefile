@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/04/23 14:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.61 2023/07/18 13:01:21 nia Exp $
 
 DISTNAME=	libwpd-0.10.3
 PKGREVISION=	7
@@ -11,12 +11,10 @@ HOMEPAGE=	https://libwpd.sourceforge.net/
 COMMENT=	Library for importing and exporting WordPerfect(tm) documents
 LICENSE=	gnu-lgpl-v2.1
 
-# C++11
-GCC_REQD+=	4.7
-
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_CXX_FEATURES+=	c++11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-docs
 PKGCONFIG_OVERRIDE+=	libwpd.pc.in

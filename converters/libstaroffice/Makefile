@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/04/23 14:26:14 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/18 13:01:21 nia Exp $
 
 DISTNAME=	libstaroffice-0.0.7
 PKGREVISION=	7
@@ -16,8 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--disable-werror
