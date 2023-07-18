@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2023/07/13 13:45:43 nia Exp $
+# $NetBSD: Makefile,v 1.156 2023/07/18 18:34:31 nia Exp $
 
 DISTNAME=	mpv-0.35.1
 PKGREVISION=	4
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 # needs sem_timedwait(3)
 NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
+
+# Requires support for c11 atomics.
+USE_CC_FEATURES+=	c11
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
