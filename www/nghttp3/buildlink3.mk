@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/04/27 12:15:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/07/18 18:52:35 nia Exp $
 
 BUILDLINK_TREE+=	nghttp3
 
 .if !defined(NGHTTP3_BUILDLINK3_MK)
 NGHTTP3_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=		c++17
 
 BUILDLINK_API_DEPENDS.nghttp3+=	nghttp3>=0.7.1
 BUILDLINK_ABI_DEPENDS.nghttp3+=	nghttp3>=0.11.0
