@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4476 2023/07/18 20:52:03 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4477 2023/07/18 20:53:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6237,3 +6237,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-paramiko to 3.2.0 [adam 2023-07-18]
 	Updated textproc/yaml-cpp to 0.7.0nb1 [ryoon 2023-07-18]
 	Updated devel/cargo-c to 0.9.22 [pin 2023-07-18]
+	Updated sysutils/broot to 1.24.2 [pin 2023-07-18]
