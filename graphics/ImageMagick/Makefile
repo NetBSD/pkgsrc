@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2023/06/06 10:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.325 2023/07/18 18:19:22 nia Exp $
 
 .include "Makefile.common"
 
@@ -27,15 +27,11 @@ PKGCONFIG_OVERRIDE+=	MagickCore/MagickCore.pc.in
 PKGCONFIG_OVERRIDE+=	MagickCore/ImageMagick.pc.in
 PKGCONFIG_OVERRIDE+=	Magick++/lib/Magick++.pc.in
 
-GCC_REQD+=		2.95.3
-
 TEST_TARGET=		check
 
-.include "options.mk"
+USE_CC_FEATURES+=	c99
 
-.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64}
-GCC_REQD+=		3.0
-.endif
+.include "options.mk"
 
 # Avoid compiler bug on "mipsel" (cobalt?)
 .if ${MACHINE_ARCH} == "mipsel"

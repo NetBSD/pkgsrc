@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/18 18:19:22 nia Exp $
 
 DISTNAME=	blender-2.83.5
 PKGREVISION=	26
@@ -12,10 +12,9 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c c++03
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
