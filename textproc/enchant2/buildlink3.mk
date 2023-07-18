@@ -1,15 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.7 2021/12/08 16:02:41 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/07/18 18:47:53 nia Exp $
 
 BUILDLINK_TREE+=	enchant2
 
 .if !defined(ENCHANT2_BUILDLINK3_MK)
 ENCHANT2_BUILDLINK3_MK:=
 
+USE_CXX_FEATURES+=			c++11
+
 BUILDLINK_API_DEPENDS.enchant2+=	enchant2>=2
 BUILDLINK_ABI_DEPENDS.enchant2+=	enchant2>=2.3.2
 BUILDLINK_PKGSRCDIR.enchant2?=		../../textproc/enchant2
-
-GCC_REQD+=	4.8
 
 # Lots of older software looks for enchant.pc instead of enchant-2.pc.
 ${BUILDLINK_DIR}/lib/pkgconfig/enchant.pc:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/01 08:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/18 18:47:53 nia Exp $
 
 DISTNAME=	Levenshtein-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-rapidfuzz>=2.3.0:../../textproc/py-rapidfuzz
 
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	7 # C++17
+USE_CXX_FEATURES+=	c++17
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 

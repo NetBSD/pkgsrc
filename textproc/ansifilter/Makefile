@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/07/13 08:23:41 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/18 18:47:52 nia Exp $
 
 DISTNAME=	ansifilter-2.18
 CATEGORIES=	textproc
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	4.7 # C++11
+USE_CXX_FEATURES+=	c++11
 
 MAKE_FILE=	makefile
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}

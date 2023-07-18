@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/04/19 08:11:38 adam Exp $
+# $NetBSD: Makefile,v 1.50 2023/07/18 18:47:53 nia Exp $
 
 MODNAME=		intl
 CATEGORIES+=		textproc
@@ -6,12 +6,12 @@ COMMENT=		PHP extension for i18n
 PKGREVISION=		10
 LICENSE=		php
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_PHP_EXT_PATCHES=	yes
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 CPPFLAGS+=		-DU_USING_ICU_NAMESPACE=1
 
-GCC_REQD+=		4.7 # minimum for -std=c++11
+USE_CXX_FEATURES+=	c++11
 
 USE_PHP_EXT_PATCHES=	yes
 
