@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/07/13 13:49:16 nia Exp $
+# $NetBSD: Makefile,v 1.46 2023/07/18 18:36:30 nia Exp $
 
 DISTNAME=	pdns-recursor-4.7.3
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
@@ -11,10 +11,12 @@ HOMEPAGE=	https://www.powerdns.com/
 COMMENT=	PowerDNS resolver/recursing nameserver
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-net-snmp
+
 # currently not portable
 CONFIGURE_ENV.NetBSD+=	ac_cv_search_pthread_setaffinity_np=no
 

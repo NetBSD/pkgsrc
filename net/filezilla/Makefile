@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2023/04/30 05:11:47 wiz Exp $
+# $NetBSD: Makefile,v 1.157 2023/07/18 18:36:29 nia Exp $
 
 VERSION=	3.64.0
 DISTNAME=	FileZilla_${VERSION}_src
@@ -23,8 +23,7 @@ CONFIGURE_ARGS+=	--disable-autoupdatecheck
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 #CONFIGURE_ENV+=	ac_cv_path_WX_CONFIG_PATH=${PREFIX}/bin/wx-config
 
-# For C++17.
-GCC_REQD+=		7
+USE_CXX_FEATURES+=	c++17
 
 .include "options.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

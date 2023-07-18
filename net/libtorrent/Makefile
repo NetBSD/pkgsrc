@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/18 21:48:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2023/07/18 18:36:29 nia Exp $
 
 DISTNAME=	libtorrent-0.13.8
 PKGREVISION=	1
@@ -10,22 +10,15 @@ HOMEPAGE=	https://github.com/rakshasa/libtorrent
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_CXX_FEATURES+=	c++11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 LDFLAGS+=		-lz
 
 .include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_ARCH} == "alpha" || \
-    ${MACHINE_ARCH} == "i386" || \
-    ${MACHINE_ARCH} == "powerpc" || \
-    ${MACHINE_ARCH} == "x86_64"
-GCC_REQD+=		4.1.3
-.else
-GCC_REQD+=		4.2.1
-.endif
 
 # configure check is fooled by trap & emulate of unaligned access on alpha
 .if (${MACHINE_ARCH} == "alpha")
