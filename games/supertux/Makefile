@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/05/06 19:09:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/18 14:50:45 ryoon Exp $
 
-PKGNAME=		supertux-0.6.2
-PKGREVISION=		17
+PKGNAME=		supertux-0.6.3
 DISTNAME=		SuperTux-v${PKGVERSION_NOREV}-Source
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/}
@@ -30,6 +29,7 @@ CHECK_PORTABILITY_SKIP+=	external/SDL_ttf/configure.in
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
