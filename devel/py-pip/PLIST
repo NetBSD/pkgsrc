@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2023/04/21 09:21:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/07/18 06:18:10 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1417,6 +1417,9 @@ ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/__init__.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.py
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/packages/backports/makefile.pyo
+${PYSITELIB}/pip/_vendor/urllib3/packages/backports/weakref_finalize.py
+${PYSITELIB}/pip/_vendor/urllib3/packages/backports/weakref_finalize.pyc
+${PYSITELIB}/pip/_vendor/urllib3/packages/backports/weakref_finalize.pyo
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.py
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/packages/six.pyo
