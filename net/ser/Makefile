@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2022/11/21 18:20:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/18 18:36:31 nia Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
 PKGNAME=	ser-0.8.14
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net comms
 MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/0.8.14/src/
 
@@ -25,9 +25,9 @@ REQD_DIRS=	${PREFIX}/${EGDIR}
 MAKE_ENV+=	BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
 MAKE_ENV+=	cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+=	EGDIR=${EGDIR:Q}
+# Override its attempt to override LDFLAGS
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 INSTALL_ENV+=	BASEDIR=${DESTDIR}
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O2 rm:-Wl,-E
 
 CHECK_PORTABILITY_SKIP+=	scripts/sc
 
