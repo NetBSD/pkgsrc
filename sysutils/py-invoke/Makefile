@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/10/25 18:56:32 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/18 15:31:12 adam Exp $
 
-DISTNAME=	invoke-1.7.3
+DISTNAME=	invoke-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/invoke/}
@@ -11,6 +11,10 @@ COMMENT=	Pythonic task execution
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in inv invoke
