@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.434 2023/06/27 10:36:40 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.435 2023/07/18 12:49:46 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -968,5 +968,13 @@ _LITTLEENDIANCPUS+=	${_ARMCPUS}
 BIGENDIANPLATFORMS=	${_BIGENDIANCPUS:S/^/*-*-/}
 LITTLEENDIANPLATFORMS=	${_LITTLEENDIANCPUS:S/^/*-*-/}
 
+#
+# Allow installing a newer C/C++ compiler to build a package
+# than what the system provides.
+#
+# Impact: allowing this can sometimes result in mismatches
+# with libstdc++ versions.
+#
+ALLOW_NEWER_COMPILER?=	yes
 
 .endif	# BSD_PKG_MK

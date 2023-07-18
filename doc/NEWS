@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.27 2022/06/30 13:08:25 nia Exp $
+# $NetBSD: NEWS,v 1.28 2023/07/18 12:49:46 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,16 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Support for USE_CC_FEATURES and USE_CXX_FEAUTRES [nia 2023-07-18]
+
+	USE_CC_FEATURES and USE_CXX_FEATURES can now be used
+	to specify a minimum level of C and C++ support required
+	to compile a package, including specific libstdc++ features.
+
+	ALLOW_NEWER_COMPILER can be set to no in mk.conf to skip
+	building packages that require a newer compiler than the system
+	provides.
 
 Default versions bumped [nia 2022-06-30]
 
