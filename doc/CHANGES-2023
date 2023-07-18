@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4465 2023/07/18 06:18:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4466 2023/07/18 06:56:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6219,3 +6219,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/spdlog to 1.12.0 [adam 2023-07-18]
 	Updated misc/rhash to 1.4.4 [adam 2023-07-18]
 	Updated devel/py-pip to 23.2 [adam 2023-07-18]
+	Removed devel/py-test-cache [adam 2023-07-18]
+	Updated devel/py-gitpython to 3.1.32 [adam 2023-07-18]
