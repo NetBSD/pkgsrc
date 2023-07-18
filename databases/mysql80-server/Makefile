@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/05/23 21:01:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/18 14:03:59 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	MySQL 8, a free SQL database (server)
@@ -12,7 +12,7 @@ CMAKE_ARGS+=		-DWITH_PROTOBUF="system"
 
 PLIST_VARS+=		auth_socket
 
-GCC_REQD+=		8 # needs <charconv> include
+USE_CXX_FEATURES+=	charconv
 
 .if ${OPSYS} == "Linux"
 PLIST.auth_socket=	yes
