@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/19 08:09:11 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/18 12:56:07 nia Exp $
 
 DISTNAME=	vimpc-0.09.2
 PKGREVISION=	10
@@ -14,12 +14,11 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoreconf autoconf automake
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
-
-# C++11
-GCC_REQD+=	4.7
+USE_LANGUAGES=	c c++
 
 USE_CURSES=	wide getmouse
+
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--enable-boost=no
 

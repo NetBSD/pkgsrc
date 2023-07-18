@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2023/05/06 19:08:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.179 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	pulseaudio-16.1
 PKGREVISION=	4
@@ -28,9 +28,9 @@ SUBST_FILES.egdir+=	src/daemon/meson.build
 SUBST_VARS.egdir+=	EGDIR
 
 LIBTOOL_REQD=	2.4
-GCC_REQD+=	4.8
 
 USE_LANGUAGES=		c11 c++
+USE_CC_FEATURES+=	c11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash:run gm4
