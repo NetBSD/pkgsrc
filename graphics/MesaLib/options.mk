@@ -1,10 +1,13 @@
-# $NetBSD: options.mk,v 1.83 2022/03/13 15:50:05 tnn Exp $
+# $NetBSD: options.mk,v 1.84 2023/07/18 19:33:31 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
 .include "features.mk"
 
-PKG_SUPPORTED_OPTIONS+=		elf-tls llvm vulkan x11
+PKG_SUPPORTED_OPTIONS+=		llvm vulkan x11
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 109904
+PKG_SUPPORTED_OPTIONS+=		elf-tls
+.endif
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 PKG_SUPPORTED_OPTIONS+=		wayland
