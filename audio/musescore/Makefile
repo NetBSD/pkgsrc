@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/05/22 21:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/07/18 12:56:05 nia Exp $
 
 DISTNAME=	musescore-3.6.2
 PKGREVISION=	18
@@ -15,9 +15,6 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
-
-# C++11
-GCC_REQD+=	4.8
 
 CONFIGURE_DIRS=	bindir
 CMAKE_ARG_PATH=	..
@@ -37,6 +34,8 @@ pre-configure:
 
 DEPENDS+=	qt5-qtgraphicaleffects>=5.15.2:../../x11/qt5-qtgraphicaleffects
 DEPENDS+=	qt5-qttranslations>=5.15.2:../../x11/qt5-qttranslations
+
+USE_CXX_FEATURES+=	c++11
 
 .include "options.mk"
 .include "../../audio/lame/buildlink3.mk"

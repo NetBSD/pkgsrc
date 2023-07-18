@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/05/22 21:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	strawberry-1.0.14
 PKGREVISION=	5
@@ -17,7 +17,6 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-GCC_REQD+=	7 # std::optional
 
 CMAKE_ARGS+=	-DBUILD_WITH_QT5=ON
 CMAKE_ARGS+=	-DBUILD_WITH_QT6=OFF
@@ -27,6 +26,8 @@ DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
 DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
 DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
 DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
+
+USE_CXX_FEATURES+=	c++17
 
 .include "../../mk/oss.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2023/06/06 12:40:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.136 2023/07/18 12:56:05 nia Exp $
 
 DISTNAME=	kid3-3.9.3
 PKGREVISION=	5
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	filesystem
 USE_TOOLS+=		perl:build pkg-config
 CMAKE_ARGS+=		-DQT_QMAKE_EXECUTABLE:PATH=${QTDIR}/bin/qmake
 CMAKE_ARGS+=		-DWITH_DOCBOOKDIR:PATH=${PREFIX}/share/xsl/docbook
@@ -24,9 +25,6 @@ CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3
 
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
-
-# std::filesystem
-GCC_REQD+=	8
 
 SUBST_CLASSES+=		apple
 SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
