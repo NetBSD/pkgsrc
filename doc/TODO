@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23205 2023/07/18 04:59:31 adam Exp $
+$NetBSD: TODO,v 1.23206 2023/07/18 06:18:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1216,7 +1216,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-parser-0.7.4
 	o py-pdm_backend-2.1.4
 	o py-pillow_heif-0.12.0
-	o py-pip-23.2
 	o py-pip-audit-2.6.0
 	o py-platformdirs-3.9.1
 	o py-postgresql-5.1.2
@@ -1272,7 +1271,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o resize_image-0.7
 	o retext-8.0.0 [requires py-qt6/py-qt6-webengine]
 	o rexx-regina-3.9.0
-	o rhash-1.4.4
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
 	o rmtrash-1.14
