@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/05/06 19:09:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/18 18:13:45 nia Exp $
 
 DISTNAME=	taisei-v1.3.2
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -15,8 +15,7 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 MESON_ARGS+=	-Db_pch=false
 MESON_ARGS+=	-Db_lto=false

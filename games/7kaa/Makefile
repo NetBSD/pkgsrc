@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/05/06 19:09:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/18 18:13:42 nia Exp $
 
 DISTNAME=	7kaa-2.15.4p1
 PKGREVISION=	11
@@ -14,13 +14,12 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
-USE_LANGUAGES+=	c c++11
+USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	pkg-config
 
-# C++11
-GCC_REQD+=	4.6
+USE_CXX_FEATURES+=	c++11
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/06 19:09:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/18 18:13:44 nia Exp $
 
 DISTNAME=	powder-toy-95.0
 PKGREVISION=	11
@@ -14,7 +14,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-GCC_REQD+=	4.8
+
+USE_CXX_FEATURES+=	c++11
 
 SCONS_ARGS+=	${_MAKE_JOBS}
 SCONS_ARGS+=	--output=powder-toy
