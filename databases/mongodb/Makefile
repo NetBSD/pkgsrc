@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/06/06 12:40:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.79 2023/07/18 14:03:58 nia Exp $
 
 DISTNAME=	mongodb-src-r4.2.15
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -23,9 +23,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=	c99 c++17
-# Note that USE_LANGUAGES should contain c11, per SConstruct, but
-# pkgsrc does not yet support that.
-GCC_REQD+=	8
 
 USE_TOOLS+=	pkg-config
 
@@ -46,6 +43,8 @@ SCONS_ARGS+=	--use-system-tcmalloc
 SCONS_ARGS+=	--use-system-yaml
 SCONS_ARGS+=	--use-system-zlib
 SCONS_ARGS+=	--use-system-zstd
+
+USE_CXX_FEATURES+=	c++17
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

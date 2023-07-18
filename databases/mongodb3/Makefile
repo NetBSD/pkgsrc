@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/04/23 14:26:15 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/18 14:03:58 nia Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
@@ -22,7 +22,8 @@ EXTRACT_USING=	bsdtar
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-GCC_REQD+=	5.3.0
+
+USE_CXX_FEATURES+=	c++14
 
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--dbg=off # on: argument parsing problem
