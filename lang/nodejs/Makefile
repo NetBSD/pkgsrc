@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.266 2023/07/11 06:13:10 adam Exp $
+# $NetBSD: Makefile,v 1.267 2023/07/18 18:25:29 nia Exp $
 
 DISTNAME=	node-v20.4.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
-GCC_REQD+=	8
+
+USE_CXX_FEATURES+=	c++17 charconv
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/11/14 18:44:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/18 18:25:29 nia Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -13,10 +13,11 @@ LICENSE=	apache-2.0
 
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
+USE_CXX_FEATURES+=	c++14
+
 USE_CMAKE=	yes
-USE_LANGUAGES=	c99 c++11
+USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	ggrep
-GCC_REQD+=	4.8
 SSP_SUPPORTED=	no
 
 CONFIGURE_DIRS=	${WRKDIR}/build
