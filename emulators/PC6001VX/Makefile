@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/05/22 21:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/07/18 18:02:45 nia Exp $
 
 VERSION=		4.1.3
 DISTNAME=		PC6001VX_${VERSION}_src
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-GCC_REQD+=		9	# for qt6 that requires <filesystem>
+USE_CXX_FEATURES+=	c++17 filesystem
 
 INSTALLATION_DIRS+=	bin
 

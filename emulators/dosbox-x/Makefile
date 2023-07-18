@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/05/06 19:09:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/07/18 18:02:45 nia Exp $
 
 DISTNAME=	dosbox-x-0.84.3
 PKGREVISION=	2
@@ -18,8 +18,7 @@ USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 LIBS.NetBSD+=	-lcompat
 
