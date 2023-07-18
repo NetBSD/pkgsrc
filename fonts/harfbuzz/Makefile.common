@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2023/05/16 21:40:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.34 2023/07/18 18:07:57 nia Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-7.3.0
@@ -16,8 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 DISTINFO_FILE=	${.CURDIR}/../../fonts/harfbuzz/distinfo
 PATCHDIR=	${.CURDIR}/../../fonts/harfbuzz/patches
 
-# C++11
-GCC_REQD+=	4.9
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../graphics/librsvg/available.mk"
