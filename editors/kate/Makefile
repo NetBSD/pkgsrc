@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/06/26 09:09:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2023/07/18 14:13:23 nia Exp $
 
 DISTNAME=	kate-${KAPPSVER}
 PKGREVISION=	6
@@ -13,7 +13,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
-GCC_REQD+=	10	# uses <charconv>
+
+USE_CXX_FEATURES+=	charconv
 
 LDFLAGS.SunOS+=	-lsocket
 
