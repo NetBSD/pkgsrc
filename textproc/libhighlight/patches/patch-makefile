@@ -1,8 +1,8 @@
-$NetBSD: patch-makefile,v 1.8 2022/10/03 18:09:12 schmonz Exp $
+$NetBSD: patch-makefile,v 1.9 2023/07/18 12:19:41 schmonz Exp $
 
 Use pkgsrc-provided paths and tools.
 
---- makefile.orig	2022-09-28 17:52:30.000000000 +0000
+--- makefile.orig	2023-07-17 17:56:37.000000000 +0000
 +++ makefile
 @@ -7,7 +7,7 @@
  DESTDIR =
@@ -120,6 +120,6 @@ Use pkgsrc-provided paths and tools.
 -	rm -rf ${DESTDIR}${man_dir}man5/filetypes.conf.5.gz
 +	rm -rf ${DESTDIR}${man_dir}man1/highlight.1*
 +	rm -rf ${DESTDIR}${man_dir}man5/filetypes.conf.5*
- 	rm -rf ${DESTDIR}${bash_comp_dir}highlight.bash
+ 	rm -rf ${DESTDIR}${bash_comp_dir}highlight
  	rm -rf ${DESTDIR}${fish_comp_dir}highlight.fish
- 
+ 	rm -rf ${DESTDIR}${zsh_comp_dir}_highlight
