@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/18 15:46:27 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/icecream/__init__.py
+${PYSITELIB}/icecream/__init__.pyc
+${PYSITELIB}/icecream/__init__.pyo
+${PYSITELIB}/icecream/__version__.py
+${PYSITELIB}/icecream/__version__.pyc
+${PYSITELIB}/icecream/__version__.pyo
+${PYSITELIB}/icecream/builtins.py
+${PYSITELIB}/icecream/builtins.pyc
+${PYSITELIB}/icecream/builtins.pyo
+${PYSITELIB}/icecream/coloring.py
+${PYSITELIB}/icecream/coloring.pyc
+${PYSITELIB}/icecream/coloring.pyo
+${PYSITELIB}/icecream/icecream.py
+${PYSITELIB}/icecream/icecream.pyc
+${PYSITELIB}/icecream/icecream.pyo
