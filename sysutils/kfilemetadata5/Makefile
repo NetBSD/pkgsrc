@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2023/07/01 22:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2023/07/18 22:32:41 wiz Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
@@ -8,6 +8,8 @@ CATEGORIES=	sysutils
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Library for extracting file metadata
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
+
+USE_CXX_FEATURES+=	filesystem
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
