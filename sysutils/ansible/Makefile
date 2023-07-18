@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/06/26 16:16:45 adam Exp $
+# $NetBSD: Makefile,v 1.63 2023/07/18 15:15:26 adam Exp $
 
-DISTNAME=	ansible-8.1.0
+DISTNAME=	ansible-8.2.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -15,7 +15,7 @@ DEPENDS+=	ansible-core>=2.15.1:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_WRKREF_SKIP=	*
@@ -54,6 +54,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/grafana/hack
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/hashi_vault/docs/preview/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/kubernetes/utils/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/okd/ci/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/tools/antsibull-docs-wrapper.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/tools/check-ignores-order
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/files/*.bsx
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_server/files/*.bsx
