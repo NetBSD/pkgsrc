@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2022/11/14 09:28:16 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/07/18 15:54:43 adam Exp $
 
-DISTNAME=	paramiko-2.12.0
+DISTNAME=	paramiko-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
@@ -10,15 +10,18 @@ HOMEPAGE=	https://www.paramiko.org/
 COMMENT=	SSH2 protocol library
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.3:../../security/py-bcrypt
-DEPENDS+=	${PYPKGPREFIX}-nacl>=1.0.1:../../security/py-nacl
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.2:../../security/py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-nacl>=1.5:../../security/py-nacl
+TEST_DEPENDS+=	${PYPKGPREFIX}-icecream-[0-9]*:../../misc/py-icecream
+TEST_DEPENDS+=	${PYPKGPREFIX}-invoke>=2.0:../../sysutils/py-invoke
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.4.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed>=1.1.5:../../devel/py-test-relaxed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.28.0:../../devel/py-test-xdist
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-bcrypt
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
