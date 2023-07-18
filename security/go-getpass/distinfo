@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/07/16 18:36:44 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2023/07/18 01:15:41 jschauma Exp $
 
-BLAKE2s (getpass-0.2.1.tar.gz) = b175b5961c3c8ebb61d499d7c5b766df89c57e4e9532fcee753bfd0c9dff6dcf
-SHA512 (getpass-0.2.1.tar.gz) = 9f476d4a2a172a2913d606fe7898022a6eebed0e89f04ef05b2454e887bdb43d671dec269e9ea3df19a32d782197e1bb4f50d1b29ec5aeafb5cc0e6bae9b5e02
-Size (getpass-0.2.1.tar.gz) = 4742 bytes
+BLAKE2s (getpass-0.2.3.tar.gz) = 2ab7195617e53441fae4d693d46f54b7a92b2286acef8d0465b6a1d9e135cc00
+SHA512 (getpass-0.2.3.tar.gz) = bc5aed45508d27744da0a75571c74fdbfadf5b1ab593fcfd27f68bb90246a8263a77d4ee7662d2898aac1c5672cd9e7e03bf20aa383e363a66b459a4801e1a61
+Size (getpass-0.2.3.tar.gz) = 7924 bytes
