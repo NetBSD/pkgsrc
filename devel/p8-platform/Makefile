@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/08 12:27:08 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/18 14:11:17 nia Exp $
 
 DISTNAME=	p8-platform-2.1.0.1
 CATEGORIES=	devel
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 
-# c++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.pkg.mk"
