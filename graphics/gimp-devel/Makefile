@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/07/01 22:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/18 22:16:32 wiz Exp $
 
-DISTNAME=	gimp-2.99.14
+DISTNAME=	gimp-2.99.16
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
-PKGREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -51,7 +50,7 @@ GCC_REQD+=	5
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/2.99
 EGDIR=			${PREFIX}/share/examples/gimp
-.for f in controllerrc gimp.css gimprc menurc sessionrc templaterc toolrc unitrc
+.for f in controllerrc gimp.css gimprc sessionrc templaterc toolrc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/2.99/${f}
 .endfor
 
@@ -81,7 +80,6 @@ post-install:
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/appstream-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
@@ -90,10 +88,11 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.98
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.40
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.46
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
