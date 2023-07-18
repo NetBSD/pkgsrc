@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/07/18 12:56:06 nia Exp $
 
 BUILDLINK_TREE+=	vamp-plugin-sdk
 
 .if !defined(VAMP_PLUGIN_SDK_BUILDLINK3_MK)
 VAMP_PLUGIN_SDK_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_API_DEPENDS.vamp-plugin-sdk+=	vamp-plugin-sdk>=2.6
 BUILDLINK_ABI_DEPENDS.vamp-plugin-sdk?=	vamp-plugin-sdk>=2.10.0nb3

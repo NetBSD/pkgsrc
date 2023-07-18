@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/18 12:56:07 nia Exp $
 
 DISTNAME=	zynaddsubfx-3.0.5
 PKGREVISION=	8
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/oss.buildlink3.mk"
 

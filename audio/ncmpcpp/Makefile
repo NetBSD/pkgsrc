@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/04/23 14:26:11 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	ncmpcpp-0.9.2
 PKGREVISION=	12
@@ -11,14 +11,13 @@ HOMEPAGE=	https://rybczak.net/ncmpcpp/
 COMMENT=	Featureful (n)curses based musicpd client inspired by ncmpc
 LICENSE=	gnu-gpl-v2
 
-# C++14
-GCC_REQD+=	5
-
 GNU_CONFIGURE=	yes
 FAKE_NCURSES=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_CURSES=	wide getmouse
+
+USE_CXX_FEATURES+=	c++14
 
 .include "../../mk/curses.buildlink3.mk"
 

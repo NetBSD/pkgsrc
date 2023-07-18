@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/05/06 19:09:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	openal-soft-1.23.1
 PKGREVISION=	1
@@ -11,12 +11,10 @@ HOMEPAGE=	https://openal-soft.org/
 COMMENT=	Software implementation of the OpenAL 3D audio API
 LICENSE=	gnu-lgpl-v2
 
-# c++20 not yet supported by mk/
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
-# uses [[likely]] from C++20
-GCC_REQD+=	9
+USE_CXX_FEATURES+=	c++20
 
 PKGCONFIG_OVERRIDE+=	openal.pc.in
 PKG_SYSCONFSUBDIR=	openal
