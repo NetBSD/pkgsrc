@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/04/23 14:26:20 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/18 18:19:23 nia Exp $
 
 DISTNAME=	gpick-0.2.6
 PKGREVISION=	6
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config msgfmt msgmerge xgettext
 
-GCC_REQD+=	5 # C++14
+USE_CXX_FEATURES+=	c++14
 
 TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 

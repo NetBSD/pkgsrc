@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/07/18 18:19:22 nia Exp $
 
 PKGREVISION= 22
 .include "Makefile.common"
@@ -51,15 +51,11 @@ SUBST_NOOP_OK.pkgcfg=	yes
 # modified, and they don't need to since their names don't appear in any
 # "Requires:" line.
 
-GCC_REQD+=		2.95.3
+USE_CC_FEATURES+=	c99
 
 TEST_TARGET=		check
 
 .include "options.mk"
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-GCC_REQD+=		3.0
-.endif
 
 # Avoid compiler bug on "mipsel" (cobalt?)
 .if ${MACHINE_ARCH} == "mipsel"

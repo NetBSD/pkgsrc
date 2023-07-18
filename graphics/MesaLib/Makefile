@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2023/07/14 06:27:52 pho Exp $
+# $NetBSD: Makefile,v 1.208 2023/07/18 18:19:22 nia Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -13,10 +13,9 @@ COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
 
 USE_TOOLS+=	bison flex pkg-config xgettext
-USE_LANGUAGES=	c99 c++14
+USE_LANGUAGES=	c c++03
 
-# ERROR: C++ Compiler does not support -std=c++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 USE_FEATURES+=	strnlen
 
