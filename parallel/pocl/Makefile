@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/04/19 08:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/18 18:39:06 nia Exp $
 
 DISTNAME=	pocl-1.8
 PKGREVISION=	4
@@ -18,8 +18,7 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR="lib"

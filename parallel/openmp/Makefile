@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/11/14 18:44:07 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/18 18:39:06 nia Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -14,10 +14,11 @@ LICENSE=	apache-2.0
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c gnu++14
+USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_TOOLS+=		perl pkg-config
-GCC_REQD+=		4.8
+
+USE_CXX_FEATURES+=	c++14
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DOPENMP_ENABLE_LIBOMPTARGET=OFF
