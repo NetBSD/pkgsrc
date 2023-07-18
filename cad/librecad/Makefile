@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/05/22 21:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2023/07/18 12:58:53 nia Exp $
 
 DISTNAME=	LibreCAD-2.2.0-rc2
 PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
 
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
