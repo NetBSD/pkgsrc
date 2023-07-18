@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/06 19:09:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/18 18:13:45 nia Exp $
 
 DISTNAME=	xonotic-0.8.2
 PKGREVISION=	9
@@ -12,10 +12,9 @@ COMMENT=	Fast arena-style FPS
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake gsed 7za bash zip
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 WRKSRC=		${WRKDIR}/Xonotic
 BUILD_TARGET=	all-zip-source

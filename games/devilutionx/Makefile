@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/06/26 08:53:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/18 18:13:43 nia Exp $
 
 DISTNAME=	devilutionx-1.2.1
 PKGREVISION=	9
@@ -18,8 +18,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# std::make_unique, etc
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	unique_ptr
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..

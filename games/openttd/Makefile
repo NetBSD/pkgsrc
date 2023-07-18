@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/07/17 21:07:58 adam Exp $
+# $NetBSD: Makefile,v 1.114 2023/07/18 18:13:44 nia Exp $
 
 DISTNAME=	openttd-13.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -16,8 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-# C++17
-GCC_REQD+=	8 # std::charconv
+USE_CXX_FEATURES+=	charconv
 
 BUILD_DEFS+=	VARBASE
 

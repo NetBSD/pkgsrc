@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/06/06 12:41:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/18 18:13:42 nia Exp $
 
 PKGREVISION= 5
 .include "Makefile.common"
@@ -11,11 +11,11 @@ COMMENT=	Historical real-time strategy game
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-unix-build//}
-# Requires C++17 and add "--std" option itself
-GCC_REQD+=	7
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	cmake bash gmake pax perl pkg-config
+
+USE_CXX_FEATURES+=	c++17
 
 DEPENDS+=		0ad-data-${PKGVERSION_NOREV}{,nb*}:../../games/0ad-data
 TOOL_DEPENDS+=		premake5-[0-9]*:../../devel/premake5

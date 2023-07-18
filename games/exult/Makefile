@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/05/06 19:09:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/18 18:13:43 nia Exp $
 
 DISTNAME=	exult-1.6
 PKGREVISION=	9
@@ -14,8 +14,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config yacc flex
 
-# C++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 CONFIGURE_ARGS+=	--with-sdl=sdl2
 CONFIGURE_ARGS+=	--disable-timidity-midi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/05/22 21:00:29 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/07/18 18:13:44 nia Exp $
 
 VERSION=	1.5.1
 DISTNAME=	solarus-${VERSION}-src
@@ -18,8 +18,9 @@ WRKSRC=		${WRKDIR}/solarus-${VERSION}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	4.8
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+USE_CXX_FEATURES+=	c++11
 
 .include "options.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2021/09/03 11:38:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2023/07/18 18:13:43 nia Exp $
 # used by games/cataclysm-dda/Makefile
 # used by games/cataclysm-dda-sdl/Makefile
 
@@ -15,8 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake msgfmt pkg-config
 USE_TOOLS+=	pax
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 DISTINFO_FILE=	${.CURDIR}/../../games/cataclysm-dda/distinfo
 PATCHDIR=	${.CURDIR}/../../games/cataclysm-dda/patches

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/07/18 18:13:44 nia Exp $
 
 DISTNAME=	openmw-openmw-0.47.0
 PKGNAME=	${DISTNAME:S/^openmw-//1}
@@ -19,8 +19,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-# C++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DGLOBAL_CONFIG_DIR=${PKG_SYSCONFDIR}
