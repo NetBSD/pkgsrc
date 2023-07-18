@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/07/13 13:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.67 2023/07/18 14:11:17 nia Exp $
 #
 # When updating this, please also update devel/py-protobuf
 #
@@ -29,6 +29,8 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
 PKGCONFIG_OVERRIDE+=	protobuf.pc.in
 TEST_TARGET=		check
+
+USE_CXX_FEATURES+=	c++11
 
 # false positive: the Makefile generates bash programs
 CHECK_PORTABILITY_SKIP=		benchmarks/Makefile.in

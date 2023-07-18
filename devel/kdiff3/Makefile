@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/07/11 00:13:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.99 2023/07/18 14:11:16 nia Exp $
 
 DISTNAME=	kdiff3-1.10.5
 CATEGORIES=	devel
@@ -11,8 +11,9 @@ COMMENT=	File and directory diff and merge tool
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++17
-GCC_REQD+=	7 # C++17
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 

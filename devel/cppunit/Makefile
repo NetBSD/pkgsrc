@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: Makefile,v 1.33 2023/07/18 14:11:14 nia Exp $
 
 DISTNAME=	cppunit-1.15.1
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--disable-werror
 

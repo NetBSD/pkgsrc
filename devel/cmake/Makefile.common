@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2022/08/17 13:38:30 tnn Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/07/18 14:11:14 nia Exp $
 # used by devel/cmake-gui/Makefile
 # used by devel/cmake-mode/Makefile
 
@@ -15,7 +15,9 @@ LICENSE=	modified-bsd
 DISTINFO_FILE=	${.CURDIR}/../../devel/cmake/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/cmake/patches
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++11
 
 # Workaround issue in NetBSD before stdio.h r1.35 (NetBSD 9_STABLE)
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE

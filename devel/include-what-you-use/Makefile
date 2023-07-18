@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/04/19 08:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/07/18 14:11:15 nia Exp $
 
 DISTNAME=	include-what-you-use-0.19
 PKGREVISION=	2
@@ -11,9 +11,9 @@ COMMENT=	Analyze \#includes in C and C++ source files
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++17
 
 CMAKE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 

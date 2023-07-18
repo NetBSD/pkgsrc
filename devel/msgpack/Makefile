@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/07/09 14:45:20 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/18 14:11:17 nia Exp $
 
 DISTNAME=	msgpack-3.3.0
 PKGREVISION=	1
@@ -23,7 +23,8 @@ TEST_TARGET=		test
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_GTest=ON
 CMAKE_ARGS+=	-DMSGPACK_BUILD_TESTS=OFF
 CMAKE_ARGS+=	-DMSGPACK_CXX11=ON
-GCC_REQD+=	4.8
+
+USE_CXX_FEATURES+=	c++11
 
 #.include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

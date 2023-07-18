@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/03/19 22:09:55 markd Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/18 14:11:17 nia Exp $
 
 DISTNAME=		xsd-4.0.0+dep
 PKGNAME=		${DISTNAME:S/+dep//1}
@@ -14,8 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		bash gmake gm4
 USE_LANGUAGES=		c c++11
-
-GCC_REQD+=		4.7 # C++11
+USE_CXX_FEATURES+=	c++11
 
 MAKE_FILE=		makefile
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/06/26 08:32:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2023/07/18 14:11:14 nia Exp $
 
 DISTNAME=	ccache-4.8.2
 CATEGORIES=	devel
@@ -12,11 +12,11 @@ HOMEPAGE=	https://ccache.dev/
 COMMENT=	Cache for C/C++ compilers
 LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
-USE_LANGUAGES=	c99 c++17
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:build pkg-config
 TEST_TARGET=	test
 
-GCC_REQD+=	8 # std::filesystem
+USE_CXX_FEATURES+=	filesystem
 
 LDFLAGS.SunOS+=	-lsocket
 

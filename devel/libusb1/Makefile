@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/18 14:11:16 nia Exp $
 
 DISTNAME=	libusb-1.0.26
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -16,6 +16,8 @@ LICENSE=	gnu-lgpl-v2.1
 # Works on Dragonfly but explicitly not wanted by DragonFly upstream;
 # see PR 47042.
 NOT_FOR_PLATFORM=	DragonFly-*-*
+
+USE_CC_FEATURES+=	c11
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
