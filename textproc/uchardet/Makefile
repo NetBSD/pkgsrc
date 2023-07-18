@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/25 23:16:50 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/18 18:47:53 nia Exp $
 
 DISTNAME=	uchardet-0.0.7
 CATEGORIES=	textproc
@@ -15,8 +15,7 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	test
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 PKGCONFIG_OVERRIDE+=	uchardet.pc.in
 

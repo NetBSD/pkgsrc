@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/02/19 20:55:31 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/18 18:47:53 nia Exp $
 
 DISTNAME=	lua-rapidjson-0.7.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -21,8 +21,7 @@ TEST_DEPENDS+=	${LUA_PKGPREFIX}-utf8-[0-9]*:../../textproc/lua-utf8
 
 CMAKE_ARGS+=	-DLUA_RAPIDJSON_VERSION=${PKGVERSION}
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 

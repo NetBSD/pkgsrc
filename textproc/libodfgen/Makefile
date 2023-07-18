@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/04/23 14:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/18 18:47:53 nia Exp $
 
 DISTNAME=	libodfgen-0.1.7
 PKGREVISION=	7
@@ -14,10 +14,9 @@ LICENSE=	mpl-2.0 OR gnu-lgpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--without-docs
