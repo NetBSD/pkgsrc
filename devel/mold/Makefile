@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/03/17 16:33:52 fcambus Exp $
+# $NetBSD: Makefile,v 1.32 2023/07/18 14:11:17 nia Exp $
 
 DISTNAME=	mold-1.11.0
 CATEGORIES=	devel
@@ -26,7 +26,7 @@ SUBST_SED.alloca=	-e 's|<alloca.h>|<stdlib.h>|g'
 
 # This package uses a lot of C++20 features. GCC 10 is the oldest GCC that can
 # build it.
-GCC_REQD+=	10
+USE_CXX_FEATURES+=	c++20
 
 # Handle linker flags for dlopen and pthread automatically.
 DL_AUTO_VARS=		yes

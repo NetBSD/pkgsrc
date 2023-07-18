@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2023/07/18 06:14:50 adam Exp $
+# $NetBSD: Makefile,v 1.207 2023/07/18 14:11:14 nia Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,6 @@ PKGREVISION=	1
 COMMENT=	Cross platform make
 
 USE_TOOLS+=		gmake
-GCC_REQD+=		4.8
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
 
