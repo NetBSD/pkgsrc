@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/04/23 14:26:18 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/18 18:04:48 nia Exp $
 
 DISTNAME=	QuantLib-1.12.1
 PKGREVISION=	12
@@ -14,7 +14,8 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=		4.8
+USE_CXX_FEATURES+=	c++11
+
 TOOLS_DEPENDS.cmake=	cmake>=3.0:../../devel/cmake
 
 SUBST_CLASSES+=		sover
