@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java11-javadoc,v 1.4 2023/03/02 01:13:38 abs Exp $
+@comment $NetBSD: PLIST.java11-javadoc,v 1.5 2023/07/18 21:09:04 ryoon Exp $
 share/doc/java-jna/doc/javadoc/allclasses-index.html
 share/doc/java-jna/doc/javadoc/allclasses.html
 share/doc/java-jna/doc/javadoc/allpackages-index.html
@@ -1338,7 +1338,7 @@ share/doc/java-jna/doc/javadoc/index-all.html
 share/doc/java-jna/doc/javadoc/index.html
 share/doc/java-jna/doc/javadoc/jquery-ui.overrides.css
 share/doc/java-jna/doc/javadoc/jquery/external/jquery/jquery.js
-share/doc/java-jna/doc/javadoc/jquery/jquery-3.6.0.min.js
+share/doc/java-jna/doc/javadoc/jquery/jquery-3.6.1.min.js
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.css
 share/doc/java-jna/doc/javadoc/jquery/jquery-ui.min.js
 share/doc/java-jna/doc/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js
