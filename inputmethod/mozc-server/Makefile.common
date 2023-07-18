@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2023/06/06 12:41:40 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.38 2023/07/18 18:22:11 nia Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -36,7 +36,8 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
-GCC_REQD+=	4.7	# for c++11
+
+USE_CXX_FEATURES+=	c++11
 
 CHECK_PORTABILITY_SKIP+=	third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 
