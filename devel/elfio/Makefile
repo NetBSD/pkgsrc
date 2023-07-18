@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/09 14:03:20 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/18 14:11:15 nia Exp $
 #
 
 DISTNAME=	elfio-3.11
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-# std::make_unique
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	unique_ptr
 
 .include "../../mk/bsd.pkg.mk"

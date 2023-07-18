@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/07/09 14:48:40 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/18 14:11:17 nia Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -17,8 +17,8 @@ CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
 USE_LANGUAGES=		c c++14
+USE_CXX_FEATURES+=	c++14
 USE_CMAKE=		yes
-GCC_REQD+=		5
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}

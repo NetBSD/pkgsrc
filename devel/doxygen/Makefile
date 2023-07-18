@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2023/06/07 11:27:29 micha Exp $
+# $NetBSD: Makefile,v 1.174 2023/07/18 14:11:15 nia Exp $
 
 DISTNAME=	doxygen-1.9.7.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -19,11 +19,8 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
 # doxygen changelog says at least this version of flex is required
 FLEX_REQD+=		2.6.4
-# doxygen changelog says a C++17 compiler is required. Uses -std=gnu++1z
-# Native std::filesystem requires GCC 9. Patch for emulation is still present
-# Tested to work with GCC 7.5.0 from NetBSD 9.2
-GCC_REQD+=		5
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
