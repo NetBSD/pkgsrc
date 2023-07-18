@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/05/22 21:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/07/18 12:56:05 nia Exp $
 
 DISTNAME=	hydrogen-1.0.2
 PKGREVISION=	19
@@ -18,9 +18,6 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-# C++14
-GCC_REQD+=	5
-
 CMAKE_ARGS+=	-DWANT_LRDF=ON
 
 .include "../../mk/oss.buildlink3.mk"
@@ -33,6 +30,8 @@ CMAKE_ARGS+=	-DWANT_OSS=OFF
 CMAKE_ARGS+=	-DWANT_CPPUNIT=OFF
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+USE_CXX_FEATURES+=	c++14
 
 # It rejectes the genreated .pc file for NetBSD libarchive.
 PREFER.libarchive=	pkgsrc

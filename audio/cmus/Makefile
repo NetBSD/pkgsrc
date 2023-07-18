@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2023/05/06 19:08:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2023/07/18 12:56:04 nia Exp $
 
 DISTNAME=		cmus-2.10.0
 PKGREVISION=		2
@@ -14,11 +14,9 @@ LICENSE=		gnu-gpl-v2
 EXTRACT_USING=		bsdtar
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_CC_FEATURES+=	c11
 
 REPLACE_SH+=		cmus-status-display
-
-# C11 atomics
-GCC_REQD+=		4.9
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 # not in pkgsrc yet

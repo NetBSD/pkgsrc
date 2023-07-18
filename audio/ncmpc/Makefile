@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/08/09 12:08:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	ncmpc-0.46
 CATEGORIES=	audio
@@ -21,8 +21,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 MESON_ARGS+=	-Dlirc=disabled
 MESON_ARGS+=	-Dhtml_manual=false
 
-# C++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 # make stderr readable
 CXXFLAGS+=	-Wno-undef

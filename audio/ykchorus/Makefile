@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/05/06 19:09:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/18 12:56:07 nia Exp $
 
 DISTNAME=	ykchorus-v0.2.2-source
 PKGNAME=	${DISTNAME:S/-source//1:S/-v/-/1}
@@ -17,8 +17,7 @@ WRKSRC=		${WRKDIR}/ykchorus
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
-# C++0x
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections

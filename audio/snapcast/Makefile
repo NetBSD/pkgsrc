@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/06 19:09:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/18 12:56:06 nia Exp $
 
 DISTNAME=	snapcast-0.26.0
 PKGREVISION=	4
@@ -15,8 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# std::filesystem
-GCC_REQD+=	8
+USE_CXX_FEATURES+=	filesystem
 
 REPLACE_PYTHON+=	server/etc/plug-ins/meta_mpd.py
 
