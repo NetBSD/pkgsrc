@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.28 2023/05/24 15:53:35 schmonz Exp $
+$NetBSD: distinfo,v 1.29 2023/07/18 12:19:41 schmonz Exp $
 
-BLAKE2s (highlight-4.6.tar.bz2) = 0d8475b1ad7438339a0f04e2d19b4e5e81506efea6b026bac5d7c78e76eca6dd
-SHA512 (highlight-4.6.tar.bz2) = 0214f2141ecf2ab350368ff165dc5f58eb3a23b31142b9d1c443a35f8ea72b9e33770c2de185cd2e3645e298ad41ec1fd45db5ebf546da3144e1dc93da32b811
-Size (highlight-4.6.tar.bz2) = 1488327 bytes
+BLAKE2s (highlight-4.7.tar.bz2) = 10fca9db612f05390080521be4ca2990416b6b498d358cf3a57daf708f977dbf
+SHA512 (highlight-4.7.tar.bz2) = b75106687fcfbc8629f36698dd690cd2935777be384583197a34dadadffd3eb6e9fc66f2bdb7599e9dcff18e70ddb84834b469f6e6c4d1efc11ea7a4fb696e04
+Size (highlight-4.7.tar.bz2) = 1489235 bytes
 SHA1 (patch-extras_swig_makefile) = 071290b9eb92124eb5605173b77575c5747a4b5e
-SHA1 (patch-makefile) = f2fb560b6fb7f49882f0c83e5aed47ca69bdf74b
+SHA1 (patch-makefile) = 92f6514c39f6aa437f9beaafc10a1f6275e241b3
 SHA1 (patch-src_core_platform__fs.cpp) = dfc7addeca0faf4ff4996c1efcf5114ea78aebe3
 SHA1 (patch-src_gui-qt_highlight.pro) = f24da8f3a136a9ae5066401a4d46ee802a789c8a
 SHA1 (patch-src_gui-qt_mainwindow.cpp) = 8589c68e032385801bc969abe805f1be3dc2630f
