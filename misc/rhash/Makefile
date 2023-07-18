@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/06/15 08:54:58 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/18 06:13:51 adam Exp $
 
-DISTNAME=	rhash-1.4.3
+DISTNAME=	rhash-1.4.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
@@ -14,12 +14,14 @@ LICENSE=	mit
 WRKSRC=			${WRKDIR}/${DISTNAME:S/rh/RH/}
 HAS_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--disable-gettext
 CONFIGURE_ARGS+=	--disable-symlinks
 CONFIGURE_ARGS+=	--enable-lib-shared
 CONFIGURE_ARGS+=	--enable-lib-static
 CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--extra-cflags=-I${PREFIX}/include\ ${CFLAGS:Q}
-CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib\ ${LDFLAGS:Q}
+CONFIGURE_ARGS+=	--extra-ldflags=-L${PREFIX}/lib\ ${COMPILER_RPATH_FLAG}${PREFIX}/lib\ ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
