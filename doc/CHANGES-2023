@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4472 2023/07/18 14:51:22 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4473 2023/07/18 14:52:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6229,3 +6229,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/openjdk8 to 1.8.372 [ryoon 2023-07-18]
 	Updated lang/openjdk11 to 1.11.0.19.7 [ryoon 2023-07-18]
 	Updated games/supertux to 0.6.3 [ryoon 2023-07-18]
+	Updated games/supertuxkart to 1.4 [ryoon 2023-07-18]
