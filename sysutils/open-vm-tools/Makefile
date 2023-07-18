@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2023/04/26 21:52:52 snj Exp $
+# $NetBSD: Makefile,v 1.118 2023/07/18 18:42:31 nia Exp $
 
 OVTVER=		12.1.5
 DISTNAME=	open-vm-tools-${OVTVER}-20735119
@@ -15,14 +15,13 @@ LICENSE=	gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
-GCC_REQD+=	4.8
-
 # Workaround for glib2-2.68.0 c++ fallout.
 CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 USE_LANGUAGES=		c gnu++11
+USE_CXX_FEATURES+=	c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake pkg-config
 GNU_CONFIGURE=		yes
