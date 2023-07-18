@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/06/06 12:42:01 riastradh Exp $
+# $NetBSD: Makefile,v 1.98 2023/07/18 18:34:31 nia Exp $
 
 DISTNAME=	libvpx-1.13.0
 CATEGORIES=	multimedia
@@ -11,6 +11,7 @@ COMMENT=	On2 VP8/VP9 video codec library from Google
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake bash:build perl:build
 HAS_CONFIGURE=		yes
@@ -20,9 +21,6 @@ CONFIGURE_ARGS+=	--enable-pic
 CONFIGURE_ARGS+=	--enable-runtime-cpu-detect
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-unit-tests
-
-# Uses -std=c++11
-GCC_REQD+=		4.8
 
 .include "../../mk/bsd.prefs.mk"
 
