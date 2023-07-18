@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/07/17 19:33:04 adam Exp $
+# $NetBSD: Makefile,v 1.70 2023/07/18 18:19:23 nia Exp $
 
 DISTNAME=	tesseract-5.3.2
 CATEGORIES=	graphics
@@ -14,11 +14,10 @@ LANGVER=	4.1.0
 DISTFILES+=	tessdata-${LANGVER}${EXTRACT_SUFX}
 SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata_best/archive/${LANGVER}.tar.gz
 
-GCC_REQD+=	8 # std::filesystem
-
 TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	filesystem
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake bash gmake pax pkg-config
 GNU_CONFIGURE=		yes

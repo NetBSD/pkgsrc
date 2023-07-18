@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2023/06/06 08:02:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/07/18 18:19:23 nia Exp $
 
 BUILDLINK_TREE+=	openexr
 
@@ -11,8 +11,7 @@ BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
 
 PTHREAD_OPTS+=	require
 
-# C++14
-GCC_REQD+=	6
+USE_CXX_FEATURES+=		c++14
 
 .include "../../math/imath/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

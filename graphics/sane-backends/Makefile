@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/04/19 08:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/07/18 18:19:23 nia Exp $
 
 PKGREVISION=	7
 .include "Makefile.common"
@@ -13,11 +13,10 @@ USE_PKGLOCALEDIR=	YES
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-# c++11 is needed for genesys backend
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 
-# C++11
-GCC_REQD+=		4.8
+# c++11 is needed for genesys backend
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--with-gphoto2=no
