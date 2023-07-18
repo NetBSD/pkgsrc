@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/06 19:09:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/18 18:02:45 nia Exp $
 
 DISTNAME=	bsnes-115
 PKGREVISION=	17
@@ -14,8 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
-# c++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 # incorrect warnings for certain strings with gcc-7.5.0.
 CXXFLAGS+=	-Wno-trigraphs

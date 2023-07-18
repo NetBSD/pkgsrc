@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2023/06/28 07:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2023/07/18 18:02:46 nia Exp $
 
 DISTNAME=	mame-0.256
 CATEGORIES=	emulators
@@ -20,7 +20,7 @@ DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c99 c++
-GCC_REQD+=		7
+USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize virtualsize
 MAKE_FILE=		makefile

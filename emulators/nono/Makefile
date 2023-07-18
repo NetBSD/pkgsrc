@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/05/08 21:53:48 jun Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/18 18:02:46 nia Exp $
 
 DISTNAME=	nono-0.6.1
 #PKGREVISION=	1
@@ -23,11 +23,9 @@ RESTRICTED=	License disallows binary redistribution
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-GCC_REQD+=		7
-
 USE_TOOLS+=		awk:build xgettext
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++14
+USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS+=	share/doc/nono
 

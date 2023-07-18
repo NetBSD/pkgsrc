@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/07/13 13:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/18 18:02:46 nia Exp $
 
 DISTNAME=	libretro-dolphin-20180827
 PKGREVISION=	17
@@ -34,6 +34,8 @@ CMAKE_ARGS+=	-DENABLE_QT=OFF
 CMAKE_ARGS+=	-DENABLE_SDL=OFF
 CMAKE_ARGS+=	-DENABLE_EVDEV=OFF
 CMAKE_ARGS+=	-DLIBRETRO=ON
+
+USE_CXX_FEATURES+=	c++14
 
 .include "../../mk/bsd.prefs.mk"
 
