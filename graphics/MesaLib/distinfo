@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.165 2023/07/14 06:27:52 pho Exp $
+$NetBSD: distinfo,v 1.166 2023/07/18 19:33:31 ryoon Exp $
 
 BLAKE2s (mesa-21.3.9.tar.xz) = e948a37881a088c0df4df880e3d1218b874ed5a8cac951a109249b3648519472
 SHA512 (mesa-21.3.9.tar.xz) = 4cec6f4f50f444fcd327f7c40f8899c2f265e348e121455262b540b1f890a1468bbea59965af0876c548fa97aa0a05a1b23fa6ca7d308bd60328cfdeab757684
@@ -22,7 +22,7 @@ SHA1 (patch-src_glx_dri__common.c) = 7fa80f8da89ba90649db170e45c8e842cf69c1eb
 SHA1 (patch-src_glx_dri__common.h) = 0274877f8c65a4bb729536a897df4704897a4c6e
 SHA1 (patch-src_glx_glx__pbuffer.c) = 92844cfa08dc33047326ecc818d77e8d48f03303
 SHA1 (patch-src_glx_glxclient.h) = 7b59d5632e35aa945ad77cd5d1d2fc2e7711e82b
-SHA1 (patch-src_glx_glxcurrent.c) = bc844ab6bfe32c0a322ff0fc2c1405b67b90b64a
+SHA1 (patch-src_glx_glxcurrent.c) = 38de869a62f3c20b44a0e6cbd3046953f4f2542d
 SHA1 (patch-src_glx_glxext.c) = 1eacf9062b5926ea6c756e769bf6eebc7671ccba
 SHA1 (patch-src_intel_compiler_brw__fs__bank__conflicts.cpp) = 6276d2c6846bb4dd08699921bec4e20202a17478
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
