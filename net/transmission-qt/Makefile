@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/05/22 21:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2023/07/18 18:36:31 nia Exp $
 
 PKGNAME=	transmission-qt-${VERSION}
 PKGREVISION=	2
@@ -16,7 +16,7 @@ CMAKE_ARGS+=	-DENABLE_CLI=OFF
 CMAKE_ARGS+=	-DINSTALL_DOC=OFF
 CMAKE_ARGS+=	-DENABLE_TESTS=OFF
 
-GCC_REQD+=		8 # std::filesystem
+USE_CXX_FEATURES+=	filesystem
 
 CONFLICTS+=		Transmission-gui-[0-9]*
 

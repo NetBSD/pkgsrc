@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/13 13:45:43 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/18 18:36:29 nia Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -23,6 +23,8 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 
 USE_TOOLS+=		aclocal autoconf automake pax perl pkg-config
 USE_LIBTOOL=		yes
+# Requires support for C11 atomics.
+USE_CC_FEATURES+=	c11
 GNU_CONFIGURE=		yes
 CHECK_FILES_SKIP=	bin/tests/system/system-test-driver.sh
 MAKE_ENV+=		WRKDIR=${WRKDIR} PREFIX=${PREFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2023/07/12 20:23:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.39 2023/07/18 18:36:30 nia Exp $
 # used by net/powerdns/Makefile.backend
 
 PDNS_VERSION=	4.6.4
@@ -20,8 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 CONFIGURE_ARGS+=	--with-lua=lua-${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
 
-# "A compiler with support for C++17 language features is required."
-GCC_REQD+=		7
+USE_CXX_FEATURES+=	c++17
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

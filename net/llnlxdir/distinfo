@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:57 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/07/18 18:36:30 nia Exp $
 
 BLAKE2s (llnlxdir2_1_2.tar.Z) = e98238f2d9a18a6fde57d6156fd5eabcf3650d3edd175252017ce12a2ecee641
 SHA512 (llnlxdir2_1_2.tar.Z) = 02526c0457bdaaab31351ff230cb4ecbcdb77970399a823df1302d90dea8df0dd296461e1515187851af0e3ac2b84f56f82b760508595c6e014f68a2eae276a9
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 4bc2943612db8b22d7b782b4a56cf19870bcd16f
 SHA1 (patch-ab) = 977e88048bccc4ba8fe0fd95709d1762e4b1ece5
 SHA1 (patch-ac) = bfa98390b65d2bc26fa23212a349aaadd7a0d300
 SHA1 (patch-ad) = c46dd7785488b42c90d731d78fca87c80f549e81
+SHA1 (patch-str.h) = 5a8d4ee451833700e9acb8d6901fe24f99f8e9f4
