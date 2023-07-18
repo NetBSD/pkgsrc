@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2023/04/19 08:08:29 adam Exp $
+# $NetBSD: Makefile,v 1.219 2023/07/18 18:27:34 nia Exp $
 
 DISTNAME=	evolution-data-server-3.42.2
 PKGREVISION=	9
@@ -15,10 +15,9 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl:run
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	gdbus-codegen
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 CMAKE_ARGS+=	-DWITH_LIBDB=OFF
 CMAKE_ARGS+=	-DENABLE_GOA=OFF
