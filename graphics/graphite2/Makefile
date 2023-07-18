@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/06 12:41:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/18 18:19:23 nia Exp $
 
 DISTNAME=	graphite2-1.3.14
 PKGREVISION=	1
@@ -11,11 +11,10 @@ HOMEPAGE=	http://graphite.sil.org/
 COMMENT=	Cross-platform rendering for complex writing systems
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-# C++11
-GCC_REQD+=	4.8
+USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 

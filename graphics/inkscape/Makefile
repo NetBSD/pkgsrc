@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2023/07/01 08:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2023/07/18 18:19:23 nia Exp $
 
 DISTNAME=	inkscape-1.2.2
 PKGREVISION=	3
@@ -23,13 +23,11 @@ DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 
 WRKSRC=		${WRKDIR}/inkscape-1.2.2_2022-12-01_b0a8486541
 
-# std::optional
-GCC_REQD+=		7
-
 # This should be resolved in CMakeLists.txt.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
 
-USE_LANGUAGES=		c c++17
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt msgmerge perl pkg-config

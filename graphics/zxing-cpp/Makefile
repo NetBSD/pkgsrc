@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/10 07:51:27 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/18 18:19:24 nia Exp $
 
 DISTNAME=	zxing-cpp-2.0.0
 CATEGORIES=	graphics
@@ -12,12 +12,11 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
 
-# C++17
-GCC_REQD+=	7
-
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
 # Blackbox tests target pulls fmtlib with git command.
 CMAKE_ARGS+=	-DBUILD_BLACKBOX_TESTS=OFF
+
+USE_CXX_FEATURES+=	c++17
 
 PKGCONFIG_OVERRIDE+=	zxing.pc.in
 
