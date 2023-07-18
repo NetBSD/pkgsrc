@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 08:01:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/18 18:30:01 nia Exp $
 
 DISTNAME=	imath-3.1.9
 CATEGORIES=	math
@@ -14,8 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++14
 PTHREAD_OPTS=	require
 
-# C++14
-GCC_REQD+=	6
+USE_CXX_FEATURES+=	c++14
 
 PKGCONFIG_OVERRIDE=	config/Imath.pc.in
 
