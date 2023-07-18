@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/07/13 13:45:41 nia Exp $
+# $NetBSD: Makefile,v 1.55 2023/07/18 13:01:21 nia Exp $
 
 DISTNAME=	libfreehand-0.1.2
 PKGREVISION=	18
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:build pkg-config
 USE_LANGUAGES=	c c++11
+
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--disable-tests
