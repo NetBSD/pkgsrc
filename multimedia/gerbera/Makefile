@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/05/16 21:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/07/18 18:34:30 nia Exp $
 
 DISTNAME=	gerbera-1.12.1
 PKGREVISION=	4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	8
+USE_CXX_FEATURES+=	filesystem
 
 RCD_SCRIPTS=	gerbera
 

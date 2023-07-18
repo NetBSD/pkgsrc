@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2023/07/04 09:21:55 adam Exp $
+# $NetBSD: Makefile,v 1.221 2023/07/18 18:34:31 nia Exp $
 
 DISTNAME=	mkvtoolnix-78.0
 CATEGORIES=	multimedia
@@ -17,9 +17,9 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 #  * file system library (C++17)
 # If you are using the GNU C compiler collection (gcc), you need
 # at least v8; for clang v7 and newer should work.'
-GCC_REQD+=	8
+USE_CXX_FEATURES+=	filesystem
 
-USE_LANGUAGES=		c c++17
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes

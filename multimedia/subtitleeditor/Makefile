@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/04/19 08:11:00 adam Exp $
+# $NetBSD: Makefile,v 1.65 2023/07/18 18:34:31 nia Exp $
 
 DISTNAME=	subtitleeditor-0.54.0
 PKGREVISION=	18
@@ -18,8 +18,7 @@ USE_TOOLS+=	pkg-config perl gmake
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++14
 
-# C++14
-GCC_REQD+=	5
+USE_CXX_FEATURES+=	c++14
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

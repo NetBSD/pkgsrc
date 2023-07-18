@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/05/22 21:00:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/18 18:34:31 nia Exp $
 
 DISTNAME=	olive-editor-0.1.2
 PKGREVISION=	9
@@ -18,8 +18,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CMAKE_ARGS+=	-DFFMPEG_INCLUDE_ROOT=${BUILDLINK_DIR}/include/ffmpeg4
 CMAKE_ARGS+=	-DFFMPEG_LIB_ROOT=${BUILDLINK_DIR}/lib/ffmpeg4
