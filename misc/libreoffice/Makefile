@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.310 2023/07/17 14:30:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.311 2023/07/18 18:31:20 nia Exp $
 
 VERREL=		7.5.4
 VERRC=		2
@@ -15,9 +15,9 @@ LICENSE=	gnu-lgpl-v3
 
 UNLIMIT_RESOURCES+=	cputime
 
-USE_LANGUAGES=	c gnu++17
+USE_LANGUAGES=	c c++
 
-# Do not use alloca(3) in libc at least on NetBSD.
+# Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
 BUILDLINK_TRANSFORM+=	opt:-std=c++2a:-std=gnu++2a
@@ -43,7 +43,7 @@ SUBST_MESSAGE.font-path=	Use pkgsrc fonts for PDF import
 SUBST_FILES.font-path+=		external/pdfium/pkgsrc.patch.1
 SUBST_VARS.font-path+=		X11BASE
 
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 BUILD_TARGET=	build
 
