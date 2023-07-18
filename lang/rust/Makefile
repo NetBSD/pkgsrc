@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.287 2023/07/10 12:01:24 he Exp $
+# $NetBSD: Makefile,v 1.288 2023/07/18 18:25:29 nia Exp $
 
 DISTNAME=	rustc-1.70.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -13,7 +13,7 @@ LICENSE=	mit OR apache-2.0
 CONFLICTS+=	rust-bin-[0-9]*
 
 # LLVM requires gcc7, follow suit.  Also, uses -std=c++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++17
