@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2023/06/06 12:41:39 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.6 2023/07/18 18:22:11 nia Exp $
 # used by inputmethod/fcitx5-mozc/Makefile
 
 # Find version number in src/data/version/mozc_version_template.bzl
@@ -22,7 +22,8 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake pkg-config
-GCC_REQD+=	4.7	# for c++11
+
+USE_CXX_FEATURES+=	c++11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
