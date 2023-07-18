@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4470 2023/07/18 14:40:26 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4471 2023/07/18 14:41:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6227,3 +6227,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-frozenlist to 1.4.0 [adam 2023-07-18]
 	Updated textproc/libhighlight to 4.7 [schmonz 2023-07-18]
 	Updated lang/openjdk8 to 1.8.372 [ryoon 2023-07-18]
+	Updated lang/openjdk11 to 1.11.0.19.7 [ryoon 2023-07-18]
