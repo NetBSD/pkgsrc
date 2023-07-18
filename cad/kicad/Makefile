@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2023/06/06 12:40:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/18 12:58:53 nia Exp $
 #
 
 V=		7.0.5
@@ -20,8 +20,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++17
-# charconv (8), std::filesystem (9)
-GCC_REQD+=		9
+USE_CXX_FEATURES+=	charconv filesystem
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
