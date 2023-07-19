@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4513 2023/07/19 14:57:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4514 2023/07/19 15:20:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6282,3 +6282,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/openssh to 9.3p2 [wiz 2023-07-19]
 	Updated archivers/php-pecl-zip to 1.22.1 [taca 2023-07-19]
 	Updated devel/py-hg-evolve to 11.0.2 [wiz 2023-07-19]
+	Updated net/bind918 to 9.18.17 [taca 2023-07-19]
