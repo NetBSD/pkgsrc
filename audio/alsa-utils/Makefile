@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/08/07 23:39:44 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/19 14:16:11 vins Exp $
 
 DISTNAME=	alsa-utils-1.2.6
 CATEGORIES=	audio
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
+LDFLAGS.Linux+=		-lm -lpthread
 CPPFLAGS.NetBSD+=	-D__u32=uint32_t -D__u64=uint64_t
 CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
 CPPFLAGS.NetBSD+=	-Doff64_t=off_t
