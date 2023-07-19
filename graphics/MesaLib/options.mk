@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.84 2023/07/18 19:33:31 ryoon Exp $
+# $NetBSD: options.mk,v 1.85 2023/07/19 18:32:49 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
 .include "features.mk"
 
 PKG_SUPPORTED_OPTIONS+=		llvm vulkan x11
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 109904
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 109904
+# Thread local storage dispatch not supported here due to ld.elf_so too old.
+.else
 PKG_SUPPORTED_OPTIONS+=		elf-tls
 .endif
 
