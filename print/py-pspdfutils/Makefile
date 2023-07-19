@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/06/22 11:19:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/19 12:59:26 wiz Exp $
 
-DISTNAME=	pspdfutils-3.0.4
+DISTNAME=	pspdfutils-3.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
@@ -36,6 +36,7 @@ post-install:
 .endif
 
 # still needs 'make install'
+# most tests don't pass, should be investigated
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
