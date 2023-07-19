@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/07/09 14:24:08 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/19 15:04:32 nia Exp $
 
 DISTNAME=	libsigc++-3.2.0
 PKGNAME=	${DISTNAME:S/-/3-/}
@@ -15,8 +15,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gm4 pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
-# C++17
-GCC_REQD+=		7
+USE_CXX_FEATURES+=	c++17
 
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
