@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.47 2023/06/16 06:42:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2023/07/19 11:04:59 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -899,4 +893,13 @@ ${PYSITELIB}/fontTools/voltLib/lexer.pyo
 ${PYSITELIB}/fontTools/voltLib/parser.py
 ${PYSITELIB}/fontTools/voltLib/parser.pyc
 ${PYSITELIB}/fontTools/voltLib/parser.pyo
+${PYSITELIB}/fontTools/voltLib/voltToFea.py
+${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
+${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
