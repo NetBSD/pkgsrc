@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/05/30 16:00:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/07/19 11:21:58 wiz Exp $
 bin/g-lensfun-update-data
 bin/lensfun-add-adapter
 bin/lensfun-update-data
@@ -46,6 +46,7 @@ share/lensfun/version_1/mil-tamron.xml
 share/lensfun/version_1/mil-tokina.xml
 share/lensfun/version_1/mil-zeiss.xml
 share/lensfun/version_1/misc.xml
+share/lensfun/version_1/om-system.xml
 share/lensfun/version_1/rf-leica.xml
 share/lensfun/version_1/slr-canon.xml
 share/lensfun/version_1/slr-hasselblad.xml
