@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2022/12/29 12:35:41 adam Exp $
+$NetBSD: distinfo,v 1.14 2023/07/19 12:48:21 wiz Exp $
 
 BLAKE2s (supervisor-4.2.5.tar.gz) = 6cf1b0af6affab2adbb1c45e64b9368e77facf65e8db461926629a560b7a33f3
 SHA512 (supervisor-4.2.5.tar.gz) = ea80c8c91356646deccf20735e065fd9b341f3be6d56838d333989297a912b0a59142338925b2eb08690e038f0617814e03447673701a19093aa483432ce6d41
 Size (supervisor-4.2.5.tar.gz) = 466073 bytes
+SHA1 (patch-supervisor_skel_sample.conf) = c117955f4e2f0bcde3bf0adcad20de07c3031e9b
