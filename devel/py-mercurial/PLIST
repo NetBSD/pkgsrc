@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2023/03/29 11:29:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2023/07/19 14:40:50 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -467,6 +467,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
+${PYSITELIB}/mercurial/__main__.py
+${PYSITELIB}/mercurial/__main__.pyc
+${PYSITELIB}/mercurial/__main__.pyo
 ${PYSITELIB}/mercurial/__modulepolicy__.py
 ${PYSITELIB}/mercurial/__modulepolicy__.pyc
 ${PYSITELIB}/mercurial/__modulepolicy__.pyo
@@ -1005,6 +1008,12 @@ ${PYSITELIB}/mercurial/sshpeer.pyo
 ${PYSITELIB}/mercurial/sslutil.py
 ${PYSITELIB}/mercurial/sslutil.pyc
 ${PYSITELIB}/mercurial/sslutil.pyo
+${PYSITELIB}/mercurial/stabletailgraph/__init__.py
+${PYSITELIB}/mercurial/stabletailgraph/__init__.pyc
+${PYSITELIB}/mercurial/stabletailgraph/__init__.pyo
+${PYSITELIB}/mercurial/stabletailgraph/stabletailsort.py
+${PYSITELIB}/mercurial/stabletailgraph/stabletailsort.pyc
+${PYSITELIB}/mercurial/stabletailgraph/stabletailsort.pyo
 ${PYSITELIB}/mercurial/stack.py
 ${PYSITELIB}/mercurial/stack.pyc
 ${PYSITELIB}/mercurial/stack.pyo
