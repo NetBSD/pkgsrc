@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/06/02 16:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/07/19 07:15:30 adam Exp $
 
-DISTNAME=	gtk-4.8.3
+DISTNAME=	gtk-4.10.4
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +24,7 @@ USE_TOOLS+=	gdbus-codegen msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
 MESON_REQD+=		0.60.0
-MESON_ARGS+=		-Dgtk_doc=false
+MESON_ARGS+=		-Dintrospection=enabled
 # needs gstreamer-gl
 MESON_ARGS+=		-Dmedia-gstreamer=disabled
 # ffmpeg backend is disabled by default
