@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4479 2023/07/19 05:44:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4480 2023/07/19 06:00:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6241,3 +6241,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gimp-devel to 2.99.16 [wiz 2023-07-18]
 	Updated devel/meson to 1.2.0 [adam 2023-07-19]
 	Updated devel/py-click to 8.1.6 [adam 2023-07-19]
+	Updated devel/garden to 0.8.1 [pin 2023-07-19]
