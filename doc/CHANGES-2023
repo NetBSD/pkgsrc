@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4493 2023/07/19 11:23:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4494 2023/07/19 11:32:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6262,3 +6262,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.41.0 [wiz 2023-07-19]
 	Updated graphics/lensfun to 0.3.4 [wiz 2023-07-19]
 	Updated textproc/py-pdf to 3.12.1 [wiz 2023-07-19]
+	Updated graphics/py-pillow_heif to 0.12.0 [wiz 2023-07-19]
