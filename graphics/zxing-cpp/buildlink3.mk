@@ -1,9 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/07/18 18:19:24 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/07/19 13:10:11 wiz Exp $
 
 BUILDLINK_TREE+=	zxing-cpp
 
 .if !defined(ZXING_CPP_BUILDLINK3_MK)
-
 ZXING_CPP_BUILDLINK3_MK:=
 
 USE_CXX_FEATURES+=			c++17
