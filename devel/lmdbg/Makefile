@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/06/06 12:40:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/19 15:24:27 nia Exp $
 #
 
 DISTNAME=	lmdbg-1.3.0
@@ -18,6 +18,13 @@ DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 
 ONLY_FOR_COMPILER=	gcc icc clang
 BROKEN_ON_PLATFORM=	Darwin-*-*
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+# Fairly intrusive used of -O0, which is incompatible with
+# glibc FORTIFY.
+FORTIFY_SUPPORTED=	no
+.endif
 
 TEST_TARGET=		test
 
