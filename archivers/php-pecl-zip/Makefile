@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2023/04/19 08:09:01 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/19 14:51:39 taca Exp $
 #
 
 MODNAME=	zip
-PECL_VERSION=	1.21.1
+PECL_VERSION=	1.22.1
 PKGNAME=	${PHP_PKG_PREFIX}-pecl-${MODNAME}-${PECL_VERSION}
-PKGREVISION=	2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,7 @@ HOMEPAGE=	https://pecl.php.net/package/zip
 COMMENT=	Zip management extension with libzip
 LICENSE=	php
 
-PHP_VERSIONS_INCOMPATIBLE=	56
+#PHP_VERSIONS_INCOMPATIBLE=	56
 
 CONFIGURE_ARGS+=	--enable-zip
 CONFIGURE_ARGS+=	--with-libzip=${PREFIX}
