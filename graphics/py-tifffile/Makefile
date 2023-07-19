@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/07/01 08:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/19 11:54:30 adam Exp $
 
-DISTNAME=	tifffile-2023.4.12
+DISTNAME=	tifffile-2023.7.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tifffile/}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 .for bin in lsm2bin tiff2fsspec tiffcomment tifffile
