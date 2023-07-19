@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/05/15 21:03:37 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/07/19 08:23:39 adam Exp $
 
-BLAKE2s (findpython-0.2.5.tar.gz) = 2a437c9395baa87d95835621310855d4aa5c42fac894bc39af0b9c6a5e28d4de
-SHA512 (findpython-0.2.5.tar.gz) = e3cfd3b8e6b3511df775817cadb29ad39f4fbc0cef6e2ff0a3f0428c95510838e3aecbb1d8fe7b9aae08d7d5ce1ca40a9ed35049a3bb5990584104e81f52a10d
-Size (findpython-0.2.5.tar.gz) = 16147 bytes
+BLAKE2s (findpython-0.3.1.tar.gz) = 8950d5ab47510d0fc93f79f091a7fc07ef4563a46593f17cbd00d361d7e4c6d1
+SHA512 (findpython-0.3.1.tar.gz) = a9931cd305a12302753fc74be24f845242ac1d4a0b0bc4494dfaec4a32cb1edc88cc30f0924b24109db01409e20a4aa8dc3c3e3136cc8e780b00cd3a0eeb9816
+Size (findpython-0.3.1.tar.gz) = 17379 bytes
 SHA1 (patch-pyproject.toml) = de8d1d3e73ebcf1f658a05ea1be59a427e26688b
