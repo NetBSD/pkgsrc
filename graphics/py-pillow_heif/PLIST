@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/03/09 06:55:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/19 11:32:01 wiz Exp $
 ${PYSITELIB}/_pillow_heif.so
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -15,6 +15,8 @@ ${PYSITELIB}/pillow_heif/HeifImagePlugin.py
 ${PYSITELIB}/pillow_heif/HeifImagePlugin.pyc
 ${PYSITELIB}/pillow_heif/__init__.py
 ${PYSITELIB}/pillow_heif/__init__.pyc
+${PYSITELIB}/pillow_heif/_deffered_error.py
+${PYSITELIB}/pillow_heif/_deffered_error.pyc
 ${PYSITELIB}/pillow_heif/_lib_info.py
 ${PYSITELIB}/pillow_heif/_lib_info.pyc
 ${PYSITELIB}/pillow_heif/_version.py
