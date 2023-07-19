@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4484 2023/07/19 08:01:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4485 2023/07/19 08:06:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libadwaita to 1.2.4 [adam 2023-07-19]
 	Updated devel/py-test-check to 2.2.0 [adam 2023-07-19]
 	Updated devel/py-test-checkdocs to 2.10.0 [adam 2023-07-19]
+	Updated www/curl to 8.2.0 [wiz 2023-07-19]
