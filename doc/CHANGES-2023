@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4483 2023/07/19 07:17:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4484 2023/07/19 08:01:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6246,3 +6246,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed graphics/gthumb3 successor graphics/gthumb [wiz 2023-07-19]
 	Updated x11/gtk4 to 4.10.4 [adam 2023-07-19]
 	Updated devel/libadwaita to 1.2.4 [adam 2023-07-19]
+	Updated devel/py-test-check to 2.2.0 [adam 2023-07-19]
+	Updated devel/py-test-checkdocs to 2.10.0 [adam 2023-07-19]
