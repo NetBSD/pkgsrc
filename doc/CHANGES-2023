@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4489 2023/07/19 10:56:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4490 2023/07/19 11:03:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6257,3 +6257,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs18 to 18.17.0 [adam 2023-07-19]
 	Updated multimedia/libva to 2.19.0 [wiz 2023-07-19]
 	Updated net/py-dns to 2.4.0 [wiz 2023-07-19]
+	Updated devel/py-path to 16.7.1 [adam 2023-07-19]
+	Updated textproc/py-markdown2 to 2.4.9 [adam 2023-07-19]
