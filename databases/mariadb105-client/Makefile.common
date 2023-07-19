@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2023/07/01 16:02:04 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2023/07/19 21:53:19 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
@@ -84,6 +84,10 @@ CMAKE_ARGS+=		-DTOKUDB_OK=OFF
 # Ensure the correct DTrace ABI is used.
 .if !empty(ABI)
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
+.endif
+
+.if !empty(CURSES_TYPE:M*ncursesw*)
+CMAKE_ARGS+=		-DCURSES_NEED_WIDE=ON
 .endif
 
 CFLAGS.SunOS+=		-fPIC
