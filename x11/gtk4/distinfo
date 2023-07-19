@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/01/23 21:04:31 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/07/19 07:15:30 adam Exp $
 
-BLAKE2s (gtk-4.8.3.tar.xz) = 70e8422a70c05c786ef56171b8ad0b0bbb98d85a2faed19e7fd1e50ee62ceece
-SHA512 (gtk-4.8.3.tar.xz) = 56be0f5ce85a9cbbda4a5de53baeeb6b8cc527a5d34723ae5548759ec7c28f03d204b6b6758dffed02a9e226f3bfcd1f15971105c2f2f7be7cef22538be27754
-Size (gtk-4.8.3.tar.xz) = 20297060 bytes
-SHA1 (patch-demos_gtk-demo_gtkgears.c) = f09912bb4bef8589f694d4ed1a4744afe422ccbd
-SHA1 (patch-meson.build) = 89b91ba48b35baafb35598d3dd82577de8fc424c
-SHA1 (patch-tests_gtkgears.c) = 2af0628eb8c8286c85cd5c64a9da561fa375e8b3
+BLAKE2s (gtk-4.10.4.tar.xz) = f6a2247632075bde1bc76130d6b76f83d281aa9b798bfb6db5ea16a7b3f8a3a9
+SHA512 (gtk-4.10.4.tar.xz) = 0c5db3af72227977e11fea3adddec1321b82bcace3c3d10a7c914b8d98b0bdb7994084c0a9e883b24815038bf4a0efe1eb1c4ff79e6838e83cadb6ddf2a1239f
+Size (gtk-4.10.4.tar.xz) = 20526652 bytes
