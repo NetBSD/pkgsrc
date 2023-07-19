@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/31 13:28:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/19 12:48:21 wiz Exp $
 bin/echo_supervisord_conf-${PYVERSSUFFIX}
 bin/pidproxy-${PYVERSSUFFIX}
 bin/supervisorctl-${PYVERSSUFFIX}
@@ -251,3 +251,5 @@ ${PYSITELIB}/supervisor/web.pyo
 ${PYSITELIB}/supervisor/xmlrpc.py
 ${PYSITELIB}/supervisor/xmlrpc.pyc
 ${PYSITELIB}/supervisor/xmlrpc.pyo
+share/examples/rc.d/supervisord
+share/examples/supervisor/supervisord.conf
