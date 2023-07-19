@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2023/07/19 12:40:33 gdt Exp $
+# $NetBSD: Makefile,v 1.62 2023/07/19 17:10:33 gdt Exp $
 #
 
 DISTNAME=	gama-2.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNU:=gama/}
 
@@ -12,9 +12,7 @@ COMMENT=	Geodetic network adjustment (surveying)
 LICENSE=	gnu-gpl-v2 # or later
 
 USE_LANGUAGES+=	c c++
-# gama is documented to require only c++11
-# \todo configure looks for c++14
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++14
 
 # Not documented, but apparent.
 USE_TOOLS+=	gmake
