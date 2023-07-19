@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/04/25 19:54:40 nikita Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/07/19 05:36:20 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -75,6 +75,24 @@ ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyo
 ${PYSITELIB}/mesonbuild/build.py
 ${PYSITELIB}/mesonbuild/build.pyc
 ${PYSITELIB}/mesonbuild/build.pyo
+${PYSITELIB}/mesonbuild/cargo/__init__.py
+${PYSITELIB}/mesonbuild/cargo/__init__.pyc
+${PYSITELIB}/mesonbuild/cargo/__init__.pyo
+${PYSITELIB}/mesonbuild/cargo/builder.py
+${PYSITELIB}/mesonbuild/cargo/builder.pyc
+${PYSITELIB}/mesonbuild/cargo/builder.pyo
+${PYSITELIB}/mesonbuild/cargo/cfg.py
+${PYSITELIB}/mesonbuild/cargo/cfg.pyc
+${PYSITELIB}/mesonbuild/cargo/cfg.pyo
+${PYSITELIB}/mesonbuild/cargo/interpreter.py
+${PYSITELIB}/mesonbuild/cargo/interpreter.pyc
+${PYSITELIB}/mesonbuild/cargo/interpreter.pyo
+${PYSITELIB}/mesonbuild/cargo/manifest.py
+${PYSITELIB}/mesonbuild/cargo/manifest.pyc
+${PYSITELIB}/mesonbuild/cargo/manifest.pyo
+${PYSITELIB}/mesonbuild/cargo/version.py
+${PYSITELIB}/mesonbuild/cargo/version.pyc
+${PYSITELIB}/mesonbuild/cargo/version.pyo
 ${PYSITELIB}/mesonbuild/cmake/__init__.py
 ${PYSITELIB}/mesonbuild/cmake/__init__.pyc
 ${PYSITELIB}/mesonbuild/cmake/__init__.pyo
@@ -178,6 +196,9 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/intel.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/islinker.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/islinker.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/islinker.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.py
+${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyo
@@ -361,6 +382,9 @@ ${PYSITELIB}/mesonbuild/interpreterbase/operator.pyo
 ${PYSITELIB}/mesonbuild/linkers/__init__.py
 ${PYSITELIB}/mesonbuild/linkers/__init__.pyc
 ${PYSITELIB}/mesonbuild/linkers/__init__.pyo
+${PYSITELIB}/mesonbuild/linkers/base.py
+${PYSITELIB}/mesonbuild/linkers/base.pyc
+${PYSITELIB}/mesonbuild/linkers/base.pyo
 ${PYSITELIB}/mesonbuild/linkers/detect.py
 ${PYSITELIB}/mesonbuild/linkers/detect.pyc
 ${PYSITELIB}/mesonbuild/linkers/detect.pyo
@@ -557,6 +581,9 @@ ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyo
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.py
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyc
 ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyo
+${PYSITELIB}/mesonbuild/scripts/pycompile.py
+${PYSITELIB}/mesonbuild/scripts/pycompile.pyc
+${PYSITELIB}/mesonbuild/scripts/pycompile.pyo
 ${PYSITELIB}/mesonbuild/scripts/python_info.py
 ${PYSITELIB}/mesonbuild/scripts/python_info.pyc
 ${PYSITELIB}/mesonbuild/scripts/python_info.pyo
