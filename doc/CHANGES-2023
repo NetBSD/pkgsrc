@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4481 2023/07/19 06:58:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4482 2023/07/19 06:59:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6243,3 +6243,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-click to 8.1.6 [adam 2023-07-19]
 	Updated devel/garden to 0.8.1 [pin 2023-07-19]
 	Updated graphics/gthumb to 3.12.2 [wiz 2023-07-19]
+	Removed graphics/gthumb3 successor graphics/gthumb [wiz 2023-07-19]
