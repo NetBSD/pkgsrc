@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/05/07 10:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/19 14:50:44 nia Exp $
 
 DISTNAME=	gcc-13.1.0
 PKGNAME=	${DISTNAME:S/gcc/libatomic/}
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake perl
+
+# Attempts to include stdatomic.h.
+USE_CC_FEATURES+=	c11
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
