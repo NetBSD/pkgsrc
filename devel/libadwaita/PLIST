@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2022/07/29 16:39:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/07/19 07:16:58 adam Exp $
 bin/adwaita-1-demo
+include/libadwaita-1/adw-about-window.h
 include/libadwaita-1/adw-action-row.h
 include/libadwaita-1/adw-animation-target.h
 include/libadwaita-1/adw-animation-util.h
@@ -18,6 +19,7 @@ include/libadwaita-1/adw-clamp.h
 include/libadwaita-1/adw-combo-row.h
 include/libadwaita-1/adw-deprecation-macros.h
 include/libadwaita-1/adw-easing.h
+include/libadwaita-1/adw-entry-row.h
 include/libadwaita-1/adw-enum-list-model.h
 include/libadwaita-1/adw-enums.h
 include/libadwaita-1/adw-expander-row.h
@@ -26,7 +28,9 @@ include/libadwaita-1/adw-fold-threshold-policy.h
 include/libadwaita-1/adw-header-bar.h
 include/libadwaita-1/adw-leaflet.h
 include/libadwaita-1/adw-main.h
+include/libadwaita-1/adw-message-dialog.h
 include/libadwaita-1/adw-navigation-direction.h
+include/libadwaita-1/adw-password-entry-row.h
 include/libadwaita-1/adw-preferences-group.h
 include/libadwaita-1/adw-preferences-page.h
 include/libadwaita-1/adw-preferences-row.h
@@ -61,11 +65,13 @@ share/gir-1.0/Adw-1.gir
 share/icons/hicolor/scalable/apps/org.gnome.Adwaita1.Demo.svg
 share/icons/hicolor/symbolic/apps/org.gnome.Adwaita1.Demo-symbolic.svg
 share/locale/ab/LC_MESSAGES/libadwaita.mo
+share/locale/be/LC_MESSAGES/libadwaita.mo
 share/locale/bg/LC_MESSAGES/libadwaita.mo
 share/locale/ca/LC_MESSAGES/libadwaita.mo
 share/locale/cs/LC_MESSAGES/libadwaita.mo
 share/locale/da/LC_MESSAGES/libadwaita.mo
 share/locale/de/LC_MESSAGES/libadwaita.mo
+share/locale/el/LC_MESSAGES/libadwaita.mo
 share/locale/en_GB/LC_MESSAGES/libadwaita.mo
 share/locale/es/LC_MESSAGES/libadwaita.mo
 share/locale/eu/LC_MESSAGES/libadwaita.mo
@@ -80,6 +86,7 @@ share/locale/hu/LC_MESSAGES/libadwaita.mo
 share/locale/id/LC_MESSAGES/libadwaita.mo
 share/locale/it/LC_MESSAGES/libadwaita.mo
 share/locale/ja/LC_MESSAGES/libadwaita.mo
+share/locale/ka/LC_MESSAGES/libadwaita.mo
 share/locale/kk/LC_MESSAGES/libadwaita.mo
 share/locale/ko/LC_MESSAGES/libadwaita.mo
 share/locale/lt/LC_MESSAGES/libadwaita.mo
