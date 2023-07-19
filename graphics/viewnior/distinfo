@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:47:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/19 07:53:37 wiz Exp $
 
 BLAKE2s (viewnior-1.7.tar.gz) = 0c04f7c700d7f6b76465a0e49322ddbfd9c5e48f46062e439a20179e8c729cd3
 SHA512 (viewnior-1.7.tar.gz) = 5ba17d7b5ceeffa65b04213f179c1439b09ac44e412e0750dde159b118a714f28d3a290509a402b234e4e7ba5b185fc73eef65d418598f344911e4e2c1373fe5
 Size (viewnior-1.7.tar.gz) = 165719 bytes
+SHA1 (patch-src_uni-exiv2.cpp) = e5a02ccce78ecc6e79fd249b0beb8d089e9f90fa

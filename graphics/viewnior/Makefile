@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/07/01 22:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/07/19 07:53:37 wiz Exp $
 
 DISTNAME=	viewnior-1.7
 PKGREVISION=	6
@@ -9,7 +9,7 @@ GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://siyanpanayotov.com/project/viewnior
-COMMENT=	Viewnior is a fast and simple image viewer
+COMMENT=	Fast and simple image viewer
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/Viewnior-${DISTNAME}
@@ -24,6 +24,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
