@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4511 2023/07/19 14:46:22 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4512 2023/07/19 14:52:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6280,3 +6280,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/dhcpcd to 10.0.2 [roy 2023-07-19]
 	Updated devel/py-mercurial to 6.5 [wiz 2023-07-19]
 	Updated security/openssh to 9.3p2 [wiz 2023-07-19]
+	Updated archivers/php-pecl-zip to 1.22.1 [taca 2023-07-19]
