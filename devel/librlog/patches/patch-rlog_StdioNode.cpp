@@ -1,10 +1,18 @@
-$NetBSD: patch-rlog_StdioNode.cpp,v 1.1 2020/05/14 19:08:07 joerg Exp $
+$NetBSD: patch-rlog_StdioNode.cpp,v 1.2 2023/07/19 15:19:36 nia Exp $
 
 pthread_self() often returns a pointer, so use widest type.
 
---- rlog/StdioNode.cpp.orig	2020-05-12 13:29:29.773360583 +0000
+--- rlog/StdioNode.cpp.orig	2005-09-20 20:17:36.000000000 +0000
 +++ rlog/StdioNode.cpp
-@@ -220,7 +220,7 @@ StdioNode::publish( const RLogData &data
+@@ -41,6 +41,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <stdint.h>
+ #include <stdarg.h>
+ 
+ #ifdef _WIN32
+@@ -220,7 +221,7 @@ StdioNode::publish( const RLogData &data
  #ifndef _WIN32
      if (outputThreadId) {
          char tid[16] = "";
