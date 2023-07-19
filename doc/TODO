@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23229 2023/07/19 14:53:42 taca Exp $
+$NetBSD: TODO,v 1.23230 2023/07/19 15:33:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1204,7 +1204,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
-	o py-pip-audit-2.6.0
 	o py-postgresql-5.1.2
 	o py-protobuf-4.23.4
 	o py-ptt-1.10.2
@@ -1275,7 +1274,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o sablecc-3.7
-	o samba4-4.18.4
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.3.5

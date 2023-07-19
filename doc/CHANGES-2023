@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4514 2023/07/19 15:20:46 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4515 2023/07/19 15:33:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6283,3 +6283,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/php-pecl-zip to 1.22.1 [taca 2023-07-19]
 	Updated devel/py-hg-evolve to 11.0.2 [wiz 2023-07-19]
 	Updated net/bind918 to 9.18.17 [taca 2023-07-19]
+	Updated net/samba4 to 4.18.4 [wiz 2023-07-19]
