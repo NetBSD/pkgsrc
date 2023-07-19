@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/05/15 21:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/19 08:23:39 adam Exp $
 
-DISTNAME=	findpython-0.2.5
+DISTNAME=	findpython-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/findpython/}
