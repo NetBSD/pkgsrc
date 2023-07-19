@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/06/28 14:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/19 08:32:08 adam Exp $
 
-DISTNAME=	pdm-2.7.4
+DISTNAME=	pdm-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.13.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.15:../../devel/py-dotenv
-DEPENDS+=	${PYPKGPREFIX}-findpython>=0.2.2:../../lang/py-findpython
+DEPENDS+=	${PYPKGPREFIX}-findpython>=0.3.0:../../lang/py-findpython
 DEPENDS+=	${PYPKGPREFIX}-installer>=0.7:../../misc/py-installer
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.1:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-platformdirs-[0-9]*:../../misc/py-platformdirs
@@ -37,6 +37,9 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 309
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5:../../devel/py-importlib-resources
+.endif
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 .endif
