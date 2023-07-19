@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2023/07/19 22:01:00 nia Exp $
+
+Make libseccomp optional. Not all Linuxes include it.
+
+--- meson.build.orig	2021-11-02 20:09:24.630838600 +0000
++++ meson.build
+@@ -61,7 +61,7 @@ host_cpu = host_machine.cpu()
+ supported_os = ['linux']
+ unsupported_cpus = ['alpha', 'ia64', 'm68k', 'sh4', 'sparc', 'sparc64']
+ if supported_os.contains(host_os) and not unsupported_cpus.contains(host_cpu)
+-  seccomp_dep = dependency('libseccomp')
++  seccomp_dep = dependency('libseccomp', required: false)
+ else
+   seccomp_dep = dependency('', required: false)
+ endif
