@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2020/04/07 12:13:01 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2023/07/19 14:46:38 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
 PKG_SUPPORTED_OPTIONS=	curl opengl
@@ -28,7 +28,7 @@ PLIST.curl=	yes
 PLIST.opengl=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
-LDFLAGS.NetBSD+=	-lGL # for glCallList
+LDFLAGS+=	-lGL # for glCallList
 .else
 MAKE_ENV+=	HAVE_GLUT=no
 .endif

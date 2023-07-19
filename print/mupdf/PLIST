@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.25 2023/04/29 08:17:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/07/19 14:46:38 vins Exp $
 bin/mupdf
-${PLIST.curl}bin/mupdf-curl
+${PLIST.curl}bin/mupdf-x11-curl
 ${PLIST.opengl}bin/mupdf-gl
 bin/muraster
 bin/mutool
