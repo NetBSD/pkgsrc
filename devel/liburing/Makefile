@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/04/17 21:32:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/19 15:20:48 nia Exp $
 
 DISTNAME=	liburing-2.3
 CATEGORIES=	devel
@@ -13,7 +13,11 @@ LICENSE=	gnu-gpl-v2
 HAS_CONFIGURE=	YES
 
 USE_TOOLS+=	gmake
+
 USE_LANGUAGES=	c c++
+
+# Uses stdatomic.
+USE_CC_FEATURES+=	c11
 
 PKGCONFIG_OVERRIDE+=	liburing.pc.in
 
