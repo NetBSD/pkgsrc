@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2021/07/13 11:48:58 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2023/07/19 08:05:51 wiz Exp $
 
 openexr3 fix
 
---- CMakeLists.txt.orig	2021-07-13 11:32:17.221425394 +0000
+--- CMakeLists.txt.orig	2019-06-09 19:18:38.000000000 +0000
 +++ CMakeLists.txt
 @@ -188,7 +188,7 @@ INCLUDE_DIRECTORIES(${TIFF_INCLUDE_DIR})
  FIND_PACKAGE(PNG REQUIRED)
