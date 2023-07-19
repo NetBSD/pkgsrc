@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2022/12/21 07:52:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.94 2023/07/19 08:06:20 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -179,6 +179,7 @@ man/man3/CURLOPT_FTP_USE_PRET.3
 man/man3/CURLOPT_GSSAPI_DELEGATION.3
 man/man3/CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS.3
 man/man3/CURLOPT_HAPROXYPROTOCOL.3
+man/man3/CURLOPT_HAPROXY_CLIENT_IP.3
 man/man3/CURLOPT_HEADER.3
 man/man3/CURLOPT_HEADERDATA.3
 man/man3/CURLOPT_HEADERFUNCTION.3
@@ -221,7 +222,7 @@ man/man3/CURLOPT_LOW_SPEED_TIME.3
 man/man3/CURLOPT_MAIL_AUTH.3
 man/man3/CURLOPT_MAIL_FROM.3
 man/man3/CURLOPT_MAIL_RCPT.3
-man/man3/CURLOPT_MAIL_RCPT_ALLLOWFAILS.3
+man/man3/CURLOPT_MAIL_RCPT_ALLOWFAILS.3
 man/man3/CURLOPT_MAXAGE_CONN.3
 man/man3/CURLOPT_MAXCONNECTS.3
 man/man3/CURLOPT_MAXFILESIZE.3
@@ -467,6 +468,8 @@ man/man3/curl_multi_strerror.3
 man/man3/curl_multi_timeout.3
 man/man3/curl_multi_wait.3
 man/man3/curl_multi_wakeup.3
+man/man3/curl_pushheader_byname.3
+man/man3/curl_pushheader_bynum.3
 man/man3/curl_share_cleanup.3
 man/man3/curl_share_init.3
 man/man3/curl_share_setopt.3
@@ -497,5 +500,6 @@ man/man3/libcurl-symbols.3
 man/man3/libcurl-thread.3
 man/man3/libcurl-tutorial.3
 man/man3/libcurl-url.3
+man/man3/libcurl-ws.3
 man/man3/libcurl.3
 share/aclocal/libcurl.m4
