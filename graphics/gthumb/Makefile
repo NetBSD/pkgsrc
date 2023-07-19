@@ -1,53 +1,48 @@
-# $NetBSD: Makefile,v 1.113 2023/07/01 22:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2023/07/19 06:58:04 wiz Exp $
 
-DISTNAME=	gthumb-2.14.4
-PKGREVISION=	39
+DISTNAME=	gthumb-3.12.2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://gthumb.sourceforge.net/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/action/show/Apps/Gthumb
 COMMENT=	Image viewer and browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt pkg-config gmake bison
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		bison intltool itstool msgfmt pkg-config
 
-GCONF_SCHEMAS+=	gthumb.schemas
-GCONF_SCHEMAS+=	gthumb-comments.schemas gthumb-image-viewer.schemas
-GCONF_SCHEMAS+=	gthumb-importer.schemas gthumb-pixbuf-savers.schemas
-GCONF_SCHEMAS+=	gthumb-slideshow.schemas gthumb_convert_format.schemas
-GCONF_SCHEMAS+=	gthumb_crop_options.schemas gthumb_image_print.schemas
-GCONF_SCHEMAS+=	gthumb_photo_importer.schemas gthumb_rename_series.schemas
-GCONF_SCHEMAS+=	gthumb_resize_images.schemas gthumb_resize_options.schemas
-GCONF_SCHEMAS+=	gthumb_webalbums.schemas
+LDFLAGS+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/gthumb/extensions
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+# TODO: add options for
+# - clutter
+# - colord
+# - gstreamer
+# - libchamplain
+# - webp
+# - jxl
+# - libraw
+# - librsvg2
+# - libheif
+# - web services: webkit-gtk, libsecret
+# - libbrasero
 
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/schemas.mk"
+.include "../../lang/python/tool.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-#.include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-#.include "../../mk/omf-scrollkeeper.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.endif
-.include "../../x11/libunique/buildlink3.mk"
+#.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
