@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/04 07:22:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/19 08:23:39 adam Exp $
 bin/findpython-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,10 +34,12 @@ ${PYSITELIB}/findpython/providers/macos.py
 ${PYSITELIB}/findpython/providers/macos.pyc
 ${PYSITELIB}/findpython/providers/path.py
 ${PYSITELIB}/findpython/providers/path.pyc
-${PYSITELIB}/findpython/providers/pep514.py
-${PYSITELIB}/findpython/providers/pep514.pyc
 ${PYSITELIB}/findpython/providers/pyenv.py
 ${PYSITELIB}/findpython/providers/pyenv.pyc
+${PYSITELIB}/findpython/providers/rye.py
+${PYSITELIB}/findpython/providers/rye.pyc
+${PYSITELIB}/findpython/providers/winreg.py
+${PYSITELIB}/findpython/providers/winreg.pyc
 ${PYSITELIB}/findpython/python.py
 ${PYSITELIB}/findpython/python.pyc
 ${PYSITELIB}/findpython/utils.py
