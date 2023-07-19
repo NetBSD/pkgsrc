@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:46:17 nia Exp $
+$NetBSD: distinfo,v 1.34 2023/07/19 06:58:04 wiz Exp $
 
-BLAKE2s (gthumb-2.14.4.tar.xz) = 91c06a5eb8ffe059d6c10542d281795ec99529ca3d77061f3e6ac99b77db90de
-SHA512 (gthumb-2.14.4.tar.xz) = 0423b5beb2a317f7e585c1f8bb32d3873accd61e9ff5e7356b3dc968b39d2613d2d97eeb4fdb39220094f67dfccbfb5d30f2fa4d5d5720056de86181453076c9
-Size (gthumb-2.14.4.tar.xz) = 5721384 bytes
-SHA1 (patch-ab) = 25d44a6312d372da08c9428dff7f4ec39f0d0d30
-SHA1 (patch-ac) = 8e28e914f6d72c83069ba5577f5d51d55e321d58
-SHA1 (patch-ad) = 12a530d10726d5ec07bba4cd8a7a42da6cff4303
-SHA1 (patch-ae) = 2ce0608493b3a261a0c0b5a67932173081837522
-SHA1 (patch-af) = 55ce1101c8e06f6341934c474772d3bac7680046
-SHA1 (patch-ag) = cb1fe9401d9ea3a89ce797465c548b01f99db129
-SHA1 (patch-ah) = d6ebd939dda6459a1dd20b4e7921ada2c9f6fdd2
-SHA1 (patch-extensions_exiv2__tools_exiv2-utils.cpp) = cf67e3993ba51b2a6e3f9627f1b4d8cdcfe06621
+BLAKE2s (gthumb-3.12.2.tar.xz) = ab728ca22b7a5473ba489e9edc501966887b25842e0c0303d1128a0a856e266e
+SHA512 (gthumb-3.12.2.tar.xz) = 5304b5cfefa4ced6a244db5a6e2880dad4f5a598654c9ea6c7707ddc0a766bdfa108f827a74e400168dbc338e35db519fffb7ac7382e0ee564771d56af3ac97c
+Size (gthumb-3.12.2.tar.xz) = 7585700 bytes
+SHA1 (patch-extensions_exiv2__tools_exiv2-utils.cpp) = 985a3a6d4025b48a6a42faca6e51485c3ceed5a6
