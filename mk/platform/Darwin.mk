@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.129 2023/07/06 19:35:37 bacon Exp $
+# $NetBSD: Darwin.mk,v 1.130 2023/07/19 08:11:35 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -189,22 +189,6 @@ _OPSYS_PREFER.libuuid?=		native	# system headers assume uuid_string_t
 _OPSYS_PREFER.linux-pam?=	native
 _OPSYS_PREFER.mit-krb5?=	native
 _OPSYS_PREFER.openssl?=		pkgsrc	# builtin deprecated from 10.7 onwards
-
-# Remove common GNU ld arguments incompatible with the Darwin linker.
-BUILDLINK_TRANSFORM+=	rm:-Wl,-O1
-BUILDLINK_TRANSFORM+=	rm:-Wl,-O2
-BUILDLINK_TRANSFORM+=	rm:-Wl,-Bdynamic
-BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
-BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
-BUILDLINK_TRANSFORM+=	rm:-Wl,-no_warn_inits 
-BUILDLINK_TRANSFORM+=	rm:-Wl,-warn-common
-BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
-BUILDLINK_TRANSFORM+=	rm:-Wl,--disable-new-dtags
-BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
-BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
-BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
 _OPSYS_SUPPORTS_MKTOOLS=	yes
