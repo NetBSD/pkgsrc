@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2021/01/09 21:17:37 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2023/07/19 07:17:47 wiz Exp $
 
 Do not make an application bundle on OS X.
 
---- CMakeLists.txt.orig	2020-12-12 11:09:15.000000000 +0000
+--- CMakeLists.txt.orig	2022-12-18 09:05:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -558,16 +558,6 @@ IF (APPLE)
+@@ -573,16 +573,6 @@ IF (APPLE)
    ENDIF (NOT MAC_SELF_CONTAINED_BUNDLE)
  ENDIF (APPLE)
  
