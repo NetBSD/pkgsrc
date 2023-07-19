@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/07/09 14:11:49 nia Exp $
+# $NetBSD: Makefile,v 1.23 2023/07/19 15:11:51 nia Exp $
 #
 
 DISTNAME=		libdnsres-0.1a
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		devel
 MASTER_SITES=		https://www.monkey.org/~provos/
 
@@ -14,6 +14,10 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 MAKE_JOBS_SAFE=		NO
+
+# Need -fPIC when compiling objects for shared libraries, even
+# if PKGSRC_MKPIE is no.
+CFLAGS+=		-fPIC
 
 # uses event_once
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.9
