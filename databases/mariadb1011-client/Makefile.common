@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/07/10 22:55:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/07/19 21:53:19 nia Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
@@ -84,6 +84,10 @@ CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
 # Ensure the correct DTrace ABI is used.
 .if !empty(ABI)
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
+.endif
+
+.if !empty(CURSES_TYPE:M*ncursesw*)
+CMAKE_ARGS+=		-DCURSES_NEED_WIDE=ON
 .endif
 
 # We don't clone MariaDB from git, so avoid peeking into
