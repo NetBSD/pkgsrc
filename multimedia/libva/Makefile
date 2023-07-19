@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/03/29 11:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/07/19 10:34:37 wiz Exp $
 
-DISTNAME=	libva-2.18.0
+DISTNAME=	libva-2.19.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
