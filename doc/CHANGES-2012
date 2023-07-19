@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4040 2020/05/08 18:21:08 rillig Exp $
+$NetBSD: CHANGES-2012,v 1.4041 2023/07/19 05:42:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -4159,6 +4159,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Added graphics/eog3 version 3.4.3 [prlw1 2012-08-23]
 	Updated textproc/mdoclint to 1.17 [wiz 2012-08-23]
 	Updated news/inn to 2.5.3 [spz 2012-08-23]
+	Added graphics/gthumb3 version 3.0.2 [drochner 2012-08-23]
 	Updated editors/TeXmacs to 1.0.6.15nb12 [dholland 2012-08-24]
 	Updated games/onscripter to 20120721 [tsutsui 2012-08-24]
 	Updated x11/xcursorgen to 1.0.5 [wiz 2012-08-24]
