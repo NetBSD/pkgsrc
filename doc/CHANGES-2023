@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4504 2023/07/19 13:36:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4505 2023/07/19 13:41:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6273,3 +6273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/svt-av1 to 1.5.0 [wiz 2023-07-19]
 	Updated net/libfilezilla to 0.44.0 [wiz 2023-07-19]
 	Updated net/filezilla to 3.65.0 [wiz 2023-07-19]
+	Updated security/py-pip-audit to 2.6.0 [wiz 2023-07-19]
