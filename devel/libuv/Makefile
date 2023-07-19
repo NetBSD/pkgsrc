@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2023/07/18 14:11:16 nia Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/19 14:47:54 nia Exp $
 
 DISTNAME=	libuv-1.46.0
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 
 USE_LANGUAGES=	c11	# stdatomic.h
 
-USE_CXX_FEATURES+=	c11
+USE_CC_FEATURES+=	c11
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake pkg-config
