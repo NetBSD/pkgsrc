@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1015 2023/06/26 12:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1016 2023/07/19 06:59:38 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -249,7 +249,6 @@ SUBDIR+=	gst-plugins1-jpeg
 SUBDIR+=	gst-plugins1-png
 SUBDIR+=	gst-plugins1-webp
 SUBDIR+=	gthumb
-SUBDIR+=	gthumb3
 SUBDIR+=	gtkam
 SUBDIR+=	gtkglext
 SUBDIR+=	gtkimageview
