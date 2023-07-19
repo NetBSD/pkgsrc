@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2022/05/26 21:25:38 pin Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/19 06:00:55 pin Exp $
 
 DISTNAME=	pastel-0.9.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sharkdp/pastel/
 COMMENT=	Command-line tool to generate, analyze, convert and manipulate colors
 LICENSE=	apache-2.0
