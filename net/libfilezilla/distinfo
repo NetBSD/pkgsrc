@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2023/04/30 04:43:39 wiz Exp $
+$NetBSD: distinfo,v 1.42 2023/07/19 13:16:07 wiz Exp $
 
-BLAKE2s (libfilezilla-0.42.2.tar.xz) = 428c827ef2a458f0c3e9589414375b14748bd5971467492bbe4d6e596b0846d3
-SHA512 (libfilezilla-0.42.2.tar.xz) = a453854f3a7143a63a2fc79458096e9b8f2f6a07f480cb15a0c0873a4cc147c0373d6f1647e1dd3dece015fbdedc3ce3085d4c7d26c801c0948fd1c593fd6d8c
-Size (libfilezilla-0.42.2.tar.xz) = 529032 bytes
+BLAKE2s (libfilezilla-0.44.0.tar.xz) = 31fa66ab0c9d2f32b8a898e71cab18d53b07cf096708f3e946b79ada24b37a01
+SHA512 (libfilezilla-0.44.0.tar.xz) = 44547cfce1c2b33cbddbd3c7150613d050c9d6f1130e7969b0ad26e96d4e18a0a7251ca045e1dba1442a1d9c7f19e463b5eab7985a0cc98e652caf79809d291f
+Size (libfilezilla-0.44.0.tar.xz) = 541136 bytes
 SHA1 (patch-lib_impersonation.cpp) = d02a10cbcbec23ec1cc6966c1721bd222c02670d
