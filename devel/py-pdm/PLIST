@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/15 20:46:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/07/19 08:32:08 adam Exp $
 bin/pdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -110,6 +110,17 @@ ${PYSITELIB}/pdm/cli/hooks.py
 ${PYSITELIB}/pdm/cli/hooks.pyc
 ${PYSITELIB}/pdm/cli/options.py
 ${PYSITELIB}/pdm/cli/options.pyc
+${PYSITELIB}/pdm/cli/templates/__init__.py
+${PYSITELIB}/pdm/cli/templates/__init__.pyc
+${PYSITELIB}/pdm/cli/templates/default/.gitignore
+${PYSITELIB}/pdm/cli/templates/default/README.md
+${PYSITELIB}/pdm/cli/templates/default/__init__.py
+${PYSITELIB}/pdm/cli/templates/default/__init__.pyc
+${PYSITELIB}/pdm/cli/templates/default/pyproject.toml
+${PYSITELIB}/pdm/cli/templates/default/src/example_package/__init__.py
+${PYSITELIB}/pdm/cli/templates/default/src/example_package/__init__.pyc
+${PYSITELIB}/pdm/cli/templates/default/tests/__init__.py
+${PYSITELIB}/pdm/cli/templates/default/tests/__init__.pyc
 ${PYSITELIB}/pdm/cli/utils.py
 ${PYSITELIB}/pdm/cli/utils.pyc
 ${PYSITELIB}/pdm/compat.py
@@ -154,6 +165,7 @@ ${PYSITELIB}/pdm/installers/synchronizers.py
 ${PYSITELIB}/pdm/installers/synchronizers.pyc
 ${PYSITELIB}/pdm/installers/uninstallers.py
 ${PYSITELIB}/pdm/installers/uninstallers.pyc
+${PYSITELIB}/pdm/models/VERSION
 ${PYSITELIB}/pdm/models/__init__.py
 ${PYSITELIB}/pdm/models/__init__.pyc
 ${PYSITELIB}/pdm/models/auth.py
