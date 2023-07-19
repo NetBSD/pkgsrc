@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/01/09 09:29:03 vins Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/19 06:02:21 pin Exp $
 
 DISTNAME=	ufetch-v0.3
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITLAB:=jschx/}
 GITLAB_PROJECT=	ufetch
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jschx/ufetch/
 COMMENT=	Tiny system info for Unix-like Operating Systems
 LICENSE=	mit
