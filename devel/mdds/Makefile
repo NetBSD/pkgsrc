@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/04/23 14:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.54 2023/07/19 14:53:20 nia Exp $
 
 DISTNAME=	mdds-2.0.1
 PKGREVISION=	2
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
+
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_DEPMETHOD.boost-headers?=	build
 .include "../../devel/boost-headers/buildlink3.mk"
