@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4506 2023/07/19 13:44:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4507 2023/07/19 13:53:15 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6275,3 +6275,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/filezilla to 3.65.0 [wiz 2023-07-19]
 	Updated security/py-pip-audit to 2.6.0 [wiz 2023-07-19]
 	Updated devel/py-tortoisehg to 6.4.5 [wiz 2023-07-19]
+	Updated mbone/mdd to 20230428 [manu 2023-07-19]
