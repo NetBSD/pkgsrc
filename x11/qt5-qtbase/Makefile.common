@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2023/07/19 22:08:05 tnn Exp $
+# $NetBSD: Makefile.common,v 1.52 2023/07/19 22:45:56 tnn Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -56,8 +56,9 @@ CXXFLAGS.SunOS+=	-D_Noreturn=""
 # for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
 BUILDLINK_TRANSFORM+=	rm:-Wundef
 
-# ld: unknown option: -O1
+# Remove unknown ld(1) options
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,-O1
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-undefined
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 PLIST_VARS+=		notdarwin
