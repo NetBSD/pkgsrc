@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/06/28 10:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/07/19 14:40:50 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -29,20 +29,13 @@ PYTHON_SELF_CONFLICT=		yes
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.4.5
-# test-remotefilelog-gc.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6783
-# test-push-cgi.t, test-oldcgi.t, test-newcgi.t, test-newercgi.t, test-clone-cgi.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6784
-# test-patchbomb-tls.t:
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6727
-# test-demandimport.py
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6786
+# Known test failures as of 6.5
+# test-bundle-phase-internal.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6835
 # test-revlog-delta-find.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6808
 # (fixed in pkgsrc)
-#
-# Ran 922 tests, 82 skipped, 8 failed.
+# Ran 931 tests, 83 skipped.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
