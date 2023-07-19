@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4487 2023/07/19 09:26:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4488 2023/07/19 10:34:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6255,3 +6255,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-JWT to 2.8.0 [adam 2023-07-19]
 	Updated textproc/ugrep to 3.12.4 [adam 2023-07-19]
 	Updated lang/nodejs18 to 18.17.0 [adam 2023-07-19]
+	Updated multimedia/libva to 2.19.0 [wiz 2023-07-19]
