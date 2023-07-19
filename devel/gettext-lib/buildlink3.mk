@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.43 2023/06/29 08:24:19 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2023/07/19 03:03:15 mef Exp $
 
 BUILDLINK_TREE+=	gettext
 
 .if !defined(GETTEXT_BUILDLINK3_MK)
 GETTEXT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.18
-BUILDLINK_ABI_DEPENDS.gettext+=	gettext-lib>=0.18
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.22
+BUILDLINK_ABI_DEPENDS.gettext+=	gettext-lib>=0.22
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 BUILDLINK_LIBNAME.gettext=	intl
 BUILDLINK_LDADD.gettext=	${BUILDLINK_LIBNAME.gettext:S/^/-l/:S/^-l$//}
