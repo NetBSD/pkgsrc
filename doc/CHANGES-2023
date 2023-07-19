@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4498 2023/07/19 12:55:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4499 2023/07/19 12:59:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-supervisor to 4.2.5nb1 [wiz 2023-07-19]
 	Updated textproc/py-pdf to 3.12.2 [wiz 2023-07-19]
 	Updated misc/py-platformdirs to 3.9.1 [wiz 2023-07-19]
+	Updated print/py-pspdfutils to 3.0.6 [wiz 2023-07-19]
