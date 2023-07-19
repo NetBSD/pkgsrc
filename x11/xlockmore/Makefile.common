@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.87 2023/07/14 10:43:33 micha Exp $
+# $NetBSD: Makefile.common,v 1.88 2023/07/19 08:42:57 tnn Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
 
 DISTNAME=	xlockmore-5.72
 CATEGORIES=	x11
-MASTER_SITES=	http://sillycycle.com/xlock/
+# the curl User-Agent is blocked with code 406
+#MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
