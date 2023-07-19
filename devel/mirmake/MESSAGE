@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2023/07/12 19:34:39 vins Exp $
+$NetBSD: MESSAGE,v 1.2 2023/07/19 11:08:52 vins Exp $
 
 All binaries provided by MirMake have been installed at ${PREFIX}/bin,
-by preprending a m* (e.g. mbmake, minstall...), to avoid conflicts
-with bmake and other native utilities.
+by prepending then a  "\m*" (e.g. mbmake, minstall...), thus to avoid
+conflicting names with bmake and other built-in utilities. 
 
 ===========================================================================
