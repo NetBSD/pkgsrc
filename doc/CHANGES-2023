@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4528 2023/07/20 14:24:02 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4529 2023/07/20 14:46:51 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6302,3 +6302,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/py-colormath version 3.0.0 [bacon 2023-07-20]
 	Added graphics/py-spectra version 0.0.11 [bacon 2023-07-20]
 	Added devel/py-rich-click version 1.6.1 [bacon 2023-07-20]
+	Updated graphics/py-matplotlib to 3.7.2nb1 [bacon 2023-07-20]
