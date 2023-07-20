@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4529 2023/07/20 14:46:51 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4530 2023/07/20 15:06:53 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6303,3 +6303,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/py-spectra version 0.0.11 [bacon 2023-07-20]
 	Added devel/py-rich-click version 1.6.1 [bacon 2023-07-20]
 	Updated graphics/py-matplotlib to 3.7.2nb1 [bacon 2023-07-20]
+	Updated devel/libnjs to 0.8.0 [osa 2023-07-20]
+	Updated lang/njs to 0.8.0 [osa 2023-07-20]
+	Updated www/nginx to 1.24.0nb9 [osa 2023-07-20]
+	Updated www/nginx-devel to 1.25.1nb2 [osa 2023-07-20]
+	Updated www/unit to 1.30.0nb2 [osa 2023-07-20]
