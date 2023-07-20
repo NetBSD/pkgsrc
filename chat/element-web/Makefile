@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/06/24 11:27:16 js Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/20 19:57:07 js Exp $
 
 DISTNAME=	element-v${PKGVERSION_NOREV}
-PKGNAME=	element-web-1.11.34
+PKGNAME=	element-web-1.11.36
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vector-im/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 # GPG signature:
 #   https://github.com/vector-im/element-web/releases/download/v${PKGVERSION_NOREV}/element-v${PKGVERSION_NOREV}.tar.gz.asc
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://element.io/
 COMMENT=	Matrix web client
 LICENSE=	apache-2.0
