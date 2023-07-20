@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/07/18 14:11:16 nia Exp $
+# $NetBSD: Makefile,v 1.69 2023/07/20 11:59:27 nia Exp $
 
 DISTNAME=	libsigc++-2.10.8
 CATEGORIES=	devel gnome
@@ -11,12 +11,13 @@ COMMENT=	Type-safe callback system for C++ programs (v2)
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	libsigc++2-[0-9]*
-GCC_REQD+=	4.8
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gm4 pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
+
+USE_CXX_FEATURES+=	c++11
 
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
