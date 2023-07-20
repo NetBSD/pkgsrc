@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4538 2023/07/20 21:48:41 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4539 2023/07/20 22:05:26 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6320,3 +6320,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/tdb to 1.4.9 [adam 2023-07-20]
 	Updated devel/talloc to 2.4.1 [adam 2023-07-20]
 	Updated multimedia/py-gstreamer1 to 1.22.4nb1 [wiz 2023-07-20]
+	Updated cross/lwtools to 4.19nb1 [thorpej 2023-07-20]
