@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2023/07/20 00:11:02 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/20 13:16:14 gdt Exp $
 
 DISTNAME=	scons-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 
@@ -12,6 +12,8 @@ COMMENT=	Python-based, open-source build system (old version 3)
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+CONFLICTS=	py[0-9]*-scons-3[0-9\.]*
 
 USE_PKG_RESOURCES=	yes
 
