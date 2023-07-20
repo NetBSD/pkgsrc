@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.152 2023/06/27 10:35:57 riastradh Exp $
+# $NetBSD: pyversion.mk,v 1.153 2023/07/20 13:24:38 gdt Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -47,7 +47,10 @@
 #
 # PYTHON_SELF_CONFLICT
 #	If set to "yes", additional CONFLICTS entries are added for
-#	registering a conflict between pyNN-<modulename> packages.
+#	registering a conflict between pyNN-<modulename> packages,
+#	covering all versions.  (Expressing CONFLICTS that are limited
+#	to some versions must be done with a hand-written CONFLICTS
+#	entry.)
 #
 #	Possible values: yes no
 #	Default: no
