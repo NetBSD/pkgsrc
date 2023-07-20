@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/06/28 09:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2023/07/20 13:41:25 ryoon Exp $
 
 DISTNAME=	pycairo-1.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -21,6 +21,7 @@ PY_PATCHPLIST=			yes
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.13.1
 .include "../../graphics/cairo/buildlink3.mk"
 #.include "../../lang/python/egg.mk"
+MESON_REQD=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/extension.mk"
