@@ -2,9 +2,9 @@ Ghostscript is the well-known PostScript interpreter which is available for
 all common and most esoteric platforms and supports many different printers
 and some displays.
 
-Support for Cups is enabled by the "cups" option (off by default).
-
 This package contains Ghostscript 9.06, the last Ghostscript release
 under GPL3 (August, 2012).  Newer releases are under AGPL3 (see
-ghostscript-agpl); this package exists for those that prefer an old
-GPL3 version to the AGPL3 version maintained by upstream.
+ghostscript-agpl); this package exists for those that prefer a very
+old unmaintained GPL3 version to the AGPL3 version maintained by
+upstream.  The most recent security patch in this package was
+backported in 2017.
