@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2023/05/16 10:47:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2023/07/20 20:29:36 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -78,6 +78,9 @@ ${PYSITELIB}/awscli/customizations/assumerole.pyo
 ${PYSITELIB}/awscli/customizations/awslambda.py
 ${PYSITELIB}/awscli/customizations/awslambda.pyc
 ${PYSITELIB}/awscli/customizations/awslambda.pyo
+${PYSITELIB}/awscli/customizations/binaryhoist.py
+${PYSITELIB}/awscli/customizations/binaryhoist.pyc
+${PYSITELIB}/awscli/customizations/binaryhoist.pyo
 ${PYSITELIB}/awscli/customizations/cliinputjson.py
 ${PYSITELIB}/awscli/customizations/cliinputjson.pyc
 ${PYSITELIB}/awscli/customizations/cliinputjson.pyo
@@ -477,6 +480,9 @@ ${PYSITELIB}/awscli/customizations/preview.pyo
 ${PYSITELIB}/awscli/customizations/putmetricdata.py
 ${PYSITELIB}/awscli/customizations/putmetricdata.pyc
 ${PYSITELIB}/awscli/customizations/putmetricdata.pyo
+${PYSITELIB}/awscli/customizations/quicksight.py
+${PYSITELIB}/awscli/customizations/quicksight.pyc
+${PYSITELIB}/awscli/customizations/quicksight.pyo
 ${PYSITELIB}/awscli/customizations/rds.py
 ${PYSITELIB}/awscli/customizations/rds.pyc
 ${PYSITELIB}/awscli/customizations/rds.pyo
