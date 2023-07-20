@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/20 14:20:02 bacon Exp $
+
+BLAKE2s (spectra-0.0.11.tar.gz) = c91c559e3302f839837d76c72445a813bf45585fac342ff6a6bf32f94a6ac5ab
+SHA512 (spectra-0.0.11.tar.gz) = 7b4e244ba200df8c6d7cff19ddf36a5af6cfe8cf6f89283f8dbb64345a3eb85b4f62456e3c75b7c8ce2d24e01c8a123a5763605b1e702903fe16839966e47b32
+Size (spectra-0.0.11.tar.gz) = 18819 bytes
