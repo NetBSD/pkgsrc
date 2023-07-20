@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/18 18:34:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/20 09:46:34 nia Exp $
 
 DISTNAME=	yaml-cpp-0.7.0
 PKGREVISION=	1
@@ -13,13 +13,12 @@ COMMENT=	YAML parser and emitter for C++
 LICENSE=	mit
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
-
-# C++11
-GCC_REQD+=	4.7
+USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DYAML_BUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DYAML_CPP_BUILD_TESTS=OFF # issue 539
+
+USE_CXX_FEATURES+=	c++11
 
 PKGCONFIG_OVERRIDE+=	yaml-cpp.pc.cmake
 
