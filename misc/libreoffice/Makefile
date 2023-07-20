@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2023/07/18 18:31:20 nia Exp $
+# $NetBSD: Makefile,v 1.312 2023/07/20 19:16:34 wiz Exp $
 
 VERREL=		7.5.4
 VERRC=		2
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 
 UNLIMIT_RESOURCES+=	cputime
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 # Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
