@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.211 2023/05/19 10:34:23 adam Exp $
+$NetBSD: distinfo,v 1.212 2023/07/20 06:12:13 adam Exp $
 
-BLAKE2s (cmake-3.26.4.tar.gz) = 03ab7c73988b55fe3f21de0bc0ee424fdd48991df63c31719ecc9f1ed2e67e41
-SHA512 (cmake-3.26.4.tar.gz) = fe817c8d5e247db3f0a9a58ee37c466a47220100d9e90711cd5d06c223cef87e41d1a756e75d1537e5f8cd010dcb8971cbeab4684b1ac12bcecf84bf7b720167
-Size (cmake-3.26.4.tar.gz) = 10669686 bytes
+BLAKE2s (cmake-3.27.0.tar.gz) = 8c12e8d5f93a098cc187cb3246410bcfccc4fb5f0e221a6894529a393944097d
+SHA512 (cmake-3.27.0.tar.gz) = 8b5836ac1c1f1e741ebbf6c9a1c9dca322dfd963598838a8789cd926fc071bde2fc53e42b6a2d5d8697f12d96dbf2cebdf03817d7d84b68256ef80b779a27fed
+Size (cmake-3.27.0.tar.gz) = 10977223 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 7a26ef79be53b9d0370029e83f203440aa0be2a4
 SHA1 (patch-CMakeLists.txt) = 0fb79458828a021a96e350bc4cf12875914f868b
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
-SHA1 (patch-Modules_FindOpenGL.cmake) = 365d422b50a1b1279cab04a8fd11e05633f52833
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
 SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
 SHA1 (patch-Modules_FindPython_Support.cmake) = aaec7767cad795dd269c851bd110ccefbfc87eb3
