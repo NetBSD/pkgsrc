@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:40:15 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/20 21:09:00 nia Exp $
 
 DISTNAME=	ancient-2.0.0
 CATEGORIES=	archivers
@@ -16,6 +16,8 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake autoconf pkg-config
+
+USE_CXX_FEATURES+=	c++17
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
