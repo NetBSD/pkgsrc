@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/10/17 12:10:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/20 21:47:47 nia Exp $
 
 DISTNAME=	Catch2-2.13.10
 PKGNAME=	${DISTNAME:tl}
@@ -13,10 +13,12 @@ LICENSE=	boost-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+
+USE_CXX_FEATURES+=	c++11
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
