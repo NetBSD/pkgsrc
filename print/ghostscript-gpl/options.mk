@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/11/04 19:57:59 rillig Exp $
+# $NetBSD: options.mk,v 1.11 2023/07/20 14:01:57 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits utf8
@@ -63,8 +63,6 @@ CONFIGURE_ARGS+=	--disable-freetype
 .if !empty(PKG_OPTIONS:Mdisable-compile-inits)
 CONFIGURE_ARGS+=	--disable-compile-inits
 PLIST.no_cidfmap=	YES
-.else
-PLIST.cidfmap=		YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mutf8)
