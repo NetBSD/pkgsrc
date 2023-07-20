@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/23 20:34:46 nros Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/20 21:45:26 nia Exp $
 
 DISTNAME=	GSL-3.1.0
 PKGNAME=	c++${DISTNAME:tl}
@@ -14,8 +14,10 @@ LICENSE=	mit
 
 NO_BUILD=	yes
 USE_CMAKE=	yes
-USE_LANGUAGES+=	c c++14
+USE_LANGUAGES+=	c c++
 
 CMAKE_ARGS+=	-DGSL_TEST=False
+
+USE_CXX_FEATURES+=	c++14
 
 .include "../../mk/bsd.pkg.mk"
