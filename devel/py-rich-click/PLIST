@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/20 14:23:56 bacon Exp $
+bin/rich-click
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rich_click/__init__.py
+${PYSITELIB}/rich_click/__init__.pyc
+${PYSITELIB}/rich_click/__init__.pyo
+${PYSITELIB}/rich_click/__main__.py
+${PYSITELIB}/rich_click/__main__.pyc
+${PYSITELIB}/rich_click/__main__.pyo
+${PYSITELIB}/rich_click/cli.py
+${PYSITELIB}/rich_click/cli.pyc
+${PYSITELIB}/rich_click/cli.pyo
+${PYSITELIB}/rich_click/py.typed
+${PYSITELIB}/rich_click/rich_click.py
+${PYSITELIB}/rich_click/rich_click.pyc
+${PYSITELIB}/rich_click/rich_click.pyo
+${PYSITELIB}/rich_click/rich_command.py
+${PYSITELIB}/rich_click/rich_command.pyc
+${PYSITELIB}/rich_click/rich_command.pyo
+${PYSITELIB}/rich_click/rich_group.py
+${PYSITELIB}/rich_click/rich_group.pyc
+${PYSITELIB}/rich_click/rich_group.pyo
