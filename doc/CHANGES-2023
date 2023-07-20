@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4524 2023/07/20 07:59:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4525 2023/07/20 14:11:14 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6298,3 +6298,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.24.1 [adam 2023-07-20]
 	Updated graphics/py-tifffile to 2023.7.18 [adam 2023-07-20]
 	Updated devel/py-hypothesis to 6.82.0 [adam 2023-07-20]
+	Added archivers/py-lzstring version 1.0.4 [bacon 2023-07-20]
