@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/07/18 22:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/07/20 13:42:54 ryoon Exp $
 
 DISTNAME=	gexiv2-0.14.1
 PKGREVISION=	2
@@ -27,6 +27,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./gexiv2/gexiv2.map
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
+MESON_REQD=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
@@ -36,4 +37,5 @@ BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.27.5nb1
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
