@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4537 2023/07/20 20:48:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4538 2023/07/20 21:48:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6319,3 +6319,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 19.2.0 [adam 2023-07-20]
 	Updated databases/tdb to 1.4.9 [adam 2023-07-20]
 	Updated devel/talloc to 2.4.1 [adam 2023-07-20]
+	Updated multimedia/py-gstreamer1 to 1.22.4nb1 [wiz 2023-07-20]
