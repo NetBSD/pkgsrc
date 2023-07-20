@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.254 2023/07/18 12:49:46 nia Exp $
+# $NetBSD: gcc.mk,v 1.255 2023/07/20 21:12:16 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -216,14 +216,7 @@ GCC_REQD+=	4.9
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mfilesystem)
-# std::filesystem was "experimental" in gcc7 and NetBSD 9 shipped
-# GCC without the experimental C++ library headers (a break from
-# upstream).
-.  if ${OPSYS} == "NetBSD"
 GCC_REQD+=	8
-.  else
-GCC_REQD+=	7
-.  endif
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mparallelism_ts)
