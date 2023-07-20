@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/06/06 12:40:38 riastradh Exp $
+# $NetBSD: Makefile,v 1.112 2023/07/20 09:46:33 nia Exp $
 #
 
 DISTNAME=	kdevelop-4.7.0
@@ -23,8 +23,7 @@ USE_TOOLS+=	gmake
 
 CMAKE_ARGS+=	-DWITH_KDE4Workspace:BOOL=OFF
 
-#   -std=c++11 is set
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"

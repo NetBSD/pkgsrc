@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/07/18 14:11:15 nia Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/20 09:46:33 nia Exp $
 
 DISTNAME=	googletest-1.13.0
 CATEGORIES=	devel
@@ -10,12 +10,9 @@ HOMEPAGE=	https://github.com/google/googletest
 COMMENT=	Google's C++ testing framework
 LICENSE=	modified-bsd
 
-# XXX check this and update it to use USE_CXX_FEATURES
-# gcc7 is very high for a c++11 or c++14 baseline
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 
-# cc1plus: error: unrecognized command line option "-std=c++11"
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++14
 
 CFLAGS+=	-fPIE
 CXXFLAGS+=	-fPIE

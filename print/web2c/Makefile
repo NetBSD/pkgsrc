@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2023/04/10 23:51:59 markd Exp $
+# $NetBSD: Makefile,v 1.113 2023/07/20 09:46:34 nia Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -19,8 +19,7 @@ USE_TOOLS+=		gmake lex yacc
 GNU_CONFIGURE_STRICT=	no # texk/web2c/web2c doesn't know the options
 PKGCONFIG_OVERRIDE=	synctexdir/synctex.pc.in
 
-# C++14
-GCC_REQD+=		5
+USE_CXX_FEATURES+=	c++14
 
 INFO_FILES=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/texk/web2c
