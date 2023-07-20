@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/20 11:48:09 nia Exp $
 
 DISTNAME=	glibmm-2.68.2
 PKGNAME=	${DISTNAME:S/glibmm/glibmm2.68/}
@@ -12,10 +12,8 @@ HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ bindings for glib (2.68 API)
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-# With 4.8, one gets the following:
-#   error: no matching function for call to 'regex_replace(const char*&, std::regex, const char [3])'
-GCC_REQD+=		4.9
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11 regex
 USE_TOOLS+=		gm4:run perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	gio/giomm.pc.in
 PKGCONFIG_OVERRIDE+=	glib/glibmm.pc.in
