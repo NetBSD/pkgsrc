@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4520 2023/07/20 04:07:17 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4521 2023/07/20 04:09:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6289,3 +6289,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-nihtest to 1.2.0 [wiz 2023-07-19]
 	Updated net/samba4 to 4.18.5 [taca 2023-07-20]
 	Updated x11/xfce4-settings to 4.18.3 [gutteridge 2023-07-20]
+	Updated meta-pkgs/xfce4 to 4.18.0nb8 [gutteridge 2023-07-20]
