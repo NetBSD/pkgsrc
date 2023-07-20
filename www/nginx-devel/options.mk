@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2023/05/23 20:26:22 osa Exp $
+# $NetBSD: options.mk,v 1.24 2023/07/20 15:02:52 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
 PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	http3 image-filter luajit mail-proxy memcache
-PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip redis rtmp
+PKG_SUPPORTED_OPTIONS+=	naxsi njs njs-xml perl push realip redis rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sts sub upload uwsgi vts
 
@@ -322,15 +322,21 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.7.12
+NJS_VERSION=		0.8.0
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
-NJS_CONFIGURE_ARGS=	--no-libxml2
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
 DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
 NJS_SUBDIR=		/nginx
 PLIST.njs=		yes
+.  if !empty(PKG_OPTIONS:Mnjs-xml)
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.  else
+NJS_CONFIGURE_ARGS=	--no-libxml2
+CONFIGURE_ENV+=		NJS_LIBXSLT=NO
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mupload) || make(makesum) || make(mdi) || make(distclean)
