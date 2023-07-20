@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2022/12/16 21:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/07/20 21:48:30 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-python-${GST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer1/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=	.tar.xz
@@ -25,6 +26,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.1
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+MESON_REQD+=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
