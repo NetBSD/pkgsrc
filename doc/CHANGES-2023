@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4518 2023/07/19 16:09:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4519 2023/07/20 01:29:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/harfbuzz to 8.0.1 [wiz 2023-07-19]
 	Updated www/py-google-api-python-client to 2.93.0 [wiz 2023-07-19]
 	Updated devel/py-nihtest to 1.2.0 [wiz 2023-07-19]
+	Updated net/samba4 to 4.18.5 [taca 2023-07-20]
