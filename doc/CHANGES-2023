@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4536 2023/07/20 20:37:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4537 2023/07/20 20:48:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6317,3 +6317,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-boto3 to 1.28.8 [adam 2023-07-20]
 	Updated net/py-awscli to 1.29.8 [adam 2023-07-20]
 	Updated devel/py-faker to 19.2.0 [adam 2023-07-20]
+	Updated databases/tdb to 1.4.9 [adam 2023-07-20]
+	Updated devel/talloc to 2.4.1 [adam 2023-07-20]
