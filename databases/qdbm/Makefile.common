@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2020/01/26 17:30:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.22 2023/07/20 06:53:06 msaitoh Exp $
 #
 # used by databases/java-qdbm/Makefile
 # used by databases/p5-qdbm/Makefile
@@ -9,11 +9,11 @@
 
 DISTNAME=	qdbm-${QDBM_VERSION}
 CATEGORIES=	databases
-MASTER_SITES=	http://fallabs.com/qdbm/
+MASTER_SITES=	https://dbmx.net/qdbm/
 QDBM_VERSION=	1.8.78
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/qdbm/
+HOMEPAGE=	https://dbmx.net/qdbm/
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/qdbm/distinfo
 PATCHDIR=	${.CURDIR}/../../databases/qdbm/patches
