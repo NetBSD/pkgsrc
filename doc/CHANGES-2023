@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4535 2023/07/20 19:57:36 js Exp $
+$NetBSD: CHANGES-2023,v 1.4536 2023/07/20 20:37:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6313,3 +6313,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/libreoffice to 7.5.5.2 [ryoon 2023-07-20]
 	Updated shells/oh-my-posh to 17.11.3 [pin 2023-07-20]
 	Updated chat/element-web to 1.11.36 [js 2023-07-20]
+	Updated net/py-botocore to 1.31.8 [adam 2023-07-20]
+	Updated net/py-boto3 to 1.28.8 [adam 2023-07-20]
+	Updated net/py-awscli to 1.29.8 [adam 2023-07-20]
+	Updated devel/py-faker to 19.2.0 [adam 2023-07-20]
