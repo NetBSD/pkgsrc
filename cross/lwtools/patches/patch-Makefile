@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2022/07/18 03:43:05 thorpej Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/07/20 22:02:46 thorpej Exp $
 
 Use portable arguments to fmt(1).
 
@@ -9,7 +9,7 @@ Use portable arguments to fmt(1).
  	@mv -f $*.d $*.d.tmp
  	@sed -e 's|.*:|$*.o $*.d:|' < $*.d.tmp > $*.d
 -	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
-+	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -w 1 -g 0 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
++	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -w 1 | sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
  	@rm -f $*.d.tmp
  	@echo Building $@
  	@$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
