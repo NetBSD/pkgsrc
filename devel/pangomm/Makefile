@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/29 21:14:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/07/20 09:46:33 nia Exp $
 
 DISTNAME=	pangomm-2.46.3
 PKGREVISION=	1
@@ -13,11 +13,12 @@ LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	gtkmm<=2.13.5
 
-GCC_REQD+=		4.9
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	pango/pangomm.pc.in
+
+USE_CXX_FEATURES+=	c++11
 
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/meson/build.mk"

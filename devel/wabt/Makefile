@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/07/09 15:28:30 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/20 09:46:33 nia Exp $
 
 DISTNAME=	wabt-1.0.33
 CATEGORIES=	devel
@@ -15,8 +15,7 @@ CMAKE_ARG_PATH=	${WRKSRC}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-# C++17
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++17
 
 CMAKE_ARGS+=	-DBUILD_TESTS=OFF -DBUILD_LIBWASM=OFF
 
