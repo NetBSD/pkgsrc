@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/20 14:16:23 bacon Exp $
+
+BLAKE2s (colormath-3.0.0.tar.gz) = 2076721b972a1c05f64976559db7abdb8f79192b8e5df04b96ad1e112b9d0d4e
+SHA512 (colormath-3.0.0.tar.gz) = 12d1ab931000dadb087fdf7e56280690ff51a299e976347026703eac83373edcacd3310255fd52e05d842aab54d4f7d3ed19deda8db4b78574a7273f1c8cc058
+Size (colormath-3.0.0.tar.gz) = 39761 bytes
