@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/07/02 12:29:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/20 21:29:00 nia Exp $
 
 VERSION=	1.1.3
 GITHUB_PROJECT=	OpenCC
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME} # GitHub rule is not relevant for this.
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++14
 
 PKGCONFIG_OVERRIDE+=	opencc.pc.in
 
