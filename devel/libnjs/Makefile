@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/05/17 16:44:51 osa Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/20 15:02:51 osa Exp $
 
-PKGNAME=	libnjs-${VERSION}
-VERSION=	0.7.12
-DISTNAME=	njs-${VERSION}
+DISTNAME=	njs-0.8.0
+PKGNAME=	libnjs-0.8.0
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 
@@ -15,6 +14,13 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES+=	c
 
 INSTALLATION_DIRS=	include lib/pkgconfig
+
+SUBST_CLASSES+=		fix-pc
+SUBST_STAGE.fix-pc=	pre-configure
+SUBST_MESSAGE.fix-pc=	Fix NJS pkg-config
+SUBST_FILES.fix-pc=	auto/make
+SUBST_NOOP_OK.fix-pc=	yes
+SUBST_SED.fix-pc=	-e 's|%%LOCALBASE%%|${LOCALBASE}|'
 
 do-build:
 	${RUN} cd ${WRKSRC} && ${BUILD_MAKE_CMD} libnjs
