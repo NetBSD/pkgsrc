@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/20 14:10:59 bacon Exp $
+
+BLAKE2s (lzstring-1.0.4.tar.gz) = b8e32b037aa01162e1b884ae5c5e82c3617e7cef707aa71e317905c11d8dd2fb
+SHA512 (lzstring-1.0.4.tar.gz) = 0d61fe04402aaa5325d3ab555b9b83132048124a2ff11ae3a947a188d5507f1043b0522fcb7024009d75cf3efd3afbb64d24c238c4c2181346a823c77cb4ea02
+Size (lzstring-1.0.4.tar.gz) = 4256 bytes
