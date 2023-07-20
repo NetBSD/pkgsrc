@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.312 2023/07/20 19:16:34 wiz Exp $
+# $NetBSD: Makefile,v 1.313 2023/07/20 19:28:12 ryoon Exp $
 
-VERREL=		7.5.4
+VERREL=		7.5.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -15,7 +15,7 @@ LICENSE=	gnu-lgpl-v3
 
 UNLIMIT_RESOURCES+=	cputime
 
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c gnu++17
 
 # Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
@@ -123,7 +123,7 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-1.000.zip \
 	ReemKufi-1.2.zip \
-	pdfium-5408.tar.bz2 \
+	pdfium-5778.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m103-b301ff025004c9cd82816c86c547588e6c24b466.tar.xz \
 	libcmis-0.5.2.tar.xz
