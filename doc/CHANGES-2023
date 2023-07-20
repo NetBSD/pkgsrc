@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4530 2023/07/20 15:06:53 osa Exp $
+$NetBSD: CHANGES-2023,v 1.4531 2023/07/20 15:26:00 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6308,3 +6308,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx to 1.24.0nb9 [osa 2023-07-20]
 	Updated www/nginx-devel to 1.25.1nb2 [osa 2023-07-20]
 	Updated www/unit to 1.30.0nb2 [osa 2023-07-20]
+	Updated security/vaultwarden to 1.28.1 [hauke 2023-07-20]
