@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/21 22:40:33 nikita Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/20 09:46:33 nia Exp $
 
 DISTNAME=	codebrowser-2.1.20230517
 PKGNAME=	woboq_${DISTNAME}
@@ -13,11 +13,12 @@ LICENSE=	cc-by-nc-sa-v3.0-license
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
-GCC_REQD+=	7
 CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # CMAKE_ARGS+=	-DCLANG_BUILTIN_HEADERS_DIR=${BUILDLINK_PREFIX.clang}/lib/clang/16/include
 WRKSRC=		${WRKDIR}/codebrowser-${GITHUB_TAG}
+
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 

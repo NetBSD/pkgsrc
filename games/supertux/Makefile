@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/07/18 14:50:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/07/20 09:46:34 nia Exp $
 
 PKGNAME=		supertux-0.6.3
 DISTNAME=		SuperTux-v${PKGVERSION_NOREV}-Source
@@ -17,8 +17,7 @@ CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=off
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++14
 
-# C++14
-GCC_REQD+=		5
+USE_CXX_FEATURES+=	c++14
 
 # We already patch 'configure'...
 CHECK_PORTABILITY_SKIP+=	external/SDL_ttf/configure.in
