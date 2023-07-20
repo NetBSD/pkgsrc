@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/07/01 08:38:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/07/20 21:07:12 nia Exp $
 
 BUILDLINK_TREE+=	py-numpy
 
 .if !defined(PY_NUMPY_BUILDLINK3_MK)
 PY_NUMPY_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++17
 
 .include "../../lang/python/pyversion.mk"
 
