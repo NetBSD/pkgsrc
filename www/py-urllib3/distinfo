@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2023/06/09 09:37:30 adam Exp $
+$NetBSD: distinfo,v 1.42 2023/07/20 07:38:53 adam Exp $
 
-BLAKE2s (urllib3-2.0.3.tar.gz) = 5a75ebd7b502233ba3e706c7da9f2268c1b47b263ed32aa0c55d45b140dd77e2
-SHA512 (urllib3-2.0.3.tar.gz) = fd586a12b25a30ea801cfd6e207854a0f762cefee54512d742b3fffcc772db9dd75f436f0b998edd32a60857a7bd818bd10f6984e26f2ea47f56b5c545ead45b
-Size (urllib3-2.0.3.tar.gz) = 280489 bytes
+BLAKE2s (urllib3-2.0.4.tar.gz) = 2b28dbc85bed36e60aaf3f5f058cbd729f1c15bb1cc8033db138f73330bcec8b
+SHA512 (urllib3-2.0.4.tar.gz) = 64d55714d871716730af5a691fc222722cffc13b0603ecae597e5f4cfd82297beede2b08cedc030b2419bd446f51c4c6e54f466ad96c71dd0848abbf806b4db4
+Size (urllib3-2.0.4.tar.gz) = 281517 bytes
