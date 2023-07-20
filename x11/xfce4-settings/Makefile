@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2023/04/19 08:12:00 adam Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/20 04:06:56 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-settings-4.18.2
+DISTNAME=	xfce4-settings-4.18.3
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${PKGVERSION_NOREV:R}/
 
@@ -51,7 +50,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
-# Only really required if CSDs are enabled (now disabled by default).
+# Only really required if CSDs are enabled at runtime (now disabled by default).
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
