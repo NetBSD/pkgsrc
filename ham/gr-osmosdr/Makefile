@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/07/01 08:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/07/20 11:59:27 nia Exp $
 
 DISTNAME=	gr-osmosdr-0.2.4
 PKGREVISION=	3
@@ -16,8 +16,6 @@ LICENSE=	gnu-gpl-v2
 # for docs/doxygen/update_pydoc.py
 TOOL_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-GCC_REQD+=	8 # stdc++fs
-
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS=	cmake
@@ -29,6 +27,8 @@ CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
 CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+
+USE_CXX_FEATURES+=	filesystem
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
