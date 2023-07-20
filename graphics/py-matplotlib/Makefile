@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2023/07/10 21:22:29 adam Exp $
+# $NetBSD: Makefile,v 1.84 2023/07/20 14:46:43 bacon Exp $
 
 DISTNAME=	matplotlib-3.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
@@ -29,6 +30,9 @@ USE_TOOLS+=	pkg-config
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+
+post-patch:
+	${RM} ${WRKSRC}/lib/matplotlib.egg-info/requires.txt.orig
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
