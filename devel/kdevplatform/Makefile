@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2023/06/06 12:40:39 riastradh Exp $
+# $NetBSD: Makefile,v 1.115 2023/07/20 11:59:27 nia Exp $
 #
 
 DISTNAME=	kdevplatform-1.7.0
@@ -17,8 +17,7 @@ TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 USE_TOOLS+=	pkg-config perl msgfmt bash:run
 USE_LANGUAGES=	c c++
 
-# sublime uses "auto",  -std=c++11 is set
-GCC_REQD+=	4.7
+USE_CXX_FEATURES+=	c++11
 
 CXXFLAGS.Linux+=	-fpermissive
 LDFLAGS.SunOS+=		-lsocket -lnsl

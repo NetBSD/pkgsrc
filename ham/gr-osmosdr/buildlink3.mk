@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/05/16 21:20:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/07/20 11:59:27 nia Exp $
 
 BUILDLINK_TREE+=	gr-osmosdr
 
 .if !defined(GR_OSMOSDR_BUILDLINK3_MK)
 GR_OSMOSDR_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	filesystem
 
 BUILDLINK_API_DEPENDS.gr-osmosdr+=	gr-osmosdr>=0.2.2
 BUILDLINK_ABI_DEPENDS.gr-osmosdr+=	gr-osmosdr>=0.2.4nb3
