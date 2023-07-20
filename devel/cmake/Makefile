@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.207 2023/07/18 14:11:14 nia Exp $
+# $NetBSD: Makefile,v 1.208 2023/07/20 06:12:13 adam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
 COMMENT=	Cross platform make
 
 USE_TOOLS+=		gmake
@@ -19,7 +18,8 @@ CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
-# jsoncpp requires cmake to build, so use the one provided with cmake
+# cppdap and jsoncpp require cmake to build, so use the one provided with cmake
+CONFIGURE_ARGS+=	--no-system-cppdap
 CONFIGURE_ARGS+=	--no-system-jsoncpp
 
 LDFLAGS.Darwin+=	-framework CoreServices # for LSOpenCFURLRef()
