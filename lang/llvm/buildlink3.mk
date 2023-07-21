@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.21 2023/05/02 18:04:02 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/07/21 08:33:42 nia Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
+
+GCC_REQD+=			7
 
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=15<16
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
