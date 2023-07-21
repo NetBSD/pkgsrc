@@ -1,0 +1,43 @@
+# $NetBSD: Makefile,v 1.1 2023/07/21 22:42:04 ryoon Exp $
+
+DISTNAME=	7z2301-src
+PKGNAME=	7-zip-23.01
+CATEGORIES=	archivers
+MASTER_SITES=	https://www.7-zip.org/a/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	https://www.7-zip.org/
+COMMENT=	Latest command-line tool for .7z and some archive formats
+LICENSE=	gnu-lgpl-v2.1
+
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	gmake
+
+BUILD_DIRS+=	CPP/7zip/Bundles/Alone2
+MAKE_FILE=	makefile.gcc
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+
+# Disable RAR archive file support licensed under unRAR license.
+# You can see file listing and extract files without compression.
+BUILD_MAKE_FLAGS+=	DISABLE_RAR_COMPRESS=1
+
+INSTALLATION_DIRS+=	bin
+
+SUBST_CLASSES+=		crlf
+SUBST_MESSAGE.crlf=	Converting CRLF to LF.
+SUBST_STAGE.crlf=	post-extract
+SUBST_FILES.crlf=	CPP/7zip/Common/*
+SUBST_FILES.crlf+=	CPP/7zip/UI/Common/*
+SUBST_FILES.crlf+=	CPP/Windows/*
+SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/CPP/7zip/Bundles/Alone2/_o/7zz \
+		${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/bsd.pkg.mk"
