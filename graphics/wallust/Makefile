@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/07/16 21:17:34 pin Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/21 04:58:41 pin Exp $
 
-DISTNAME=	wallust-2.5.0
+DISTNAME=	wallust-2.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://static.crates.io/crates/wallust/
 EXTRACT_SUFX=	.crate
