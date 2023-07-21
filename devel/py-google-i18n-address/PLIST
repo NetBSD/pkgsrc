@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/16 19:10:29 riastradh Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/07/21 10:07:11 adam Exp $
+bin/update-validation-files-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/i18naddress/__init__.py
 ${PYSITELIB}/i18naddress/__init__.pyc
-${PYSITELIB}/i18naddress/__init__.pyo
 ${PYSITELIB}/i18naddress/data/ac.json
 ${PYSITELIB}/i18naddress/data/ad.json
 ${PYSITELIB}/i18naddress/data/ae.json
@@ -264,4 +266,5 @@ ${PYSITELIB}/i18naddress/data/zw.json
 ${PYSITELIB}/i18naddress/data/zz.json
 ${PYSITELIB}/i18naddress/downloader.py
 ${PYSITELIB}/i18naddress/downloader.pyc
-${PYSITELIB}/i18naddress/downloader.pyo
+${PYSITELIB}/i18naddress/scripts.py
+${PYSITELIB}/i18naddress/scripts.pyc
