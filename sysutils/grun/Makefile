@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/01/29 21:17:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2023/07/21 12:29:21 jperkin Exp $
 
 DISTNAME=	grun-0.9.3
 PKGREVISION=	35
@@ -19,6 +19,7 @@ CONF_FILES=		${EGDIR}/gassoc ${PKG_SYSCONFDIR}/gassoc
 CONF_FILES+=		${EGDIR}/consfile ${PKG_SYSCONFDIR}/consfile
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/grun
