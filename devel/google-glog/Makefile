@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/06/25 11:26:19 he Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/21 08:16:01 nia Exp $
 
 DISTNAME=	glog-0.6.0
 PKGNAME=	google-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	glog
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/google/glog
 COMMENT=	Application Level Logging library for C++
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DWITH_UNWIND=OFF
@@ -24,8 +25,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 LDFLAGS+=	-lexecinfo
 .endif
 
+.include "options.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gflags/buildlink3.mk"
-.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
