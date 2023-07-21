@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.51 2023/07/21 08:30:48 nia Exp $
 
 DISTNAME=	ogre-1.12.11
 PKGREVISION=	1
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_LANGUAGES+=	gnu++11	# uses alloca()
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++11 put_time
 
 # Unsupported on some pkgsrc platforms (e.g. NetBSD).
 # It attempts to enable them solely based on the compiler version, which
