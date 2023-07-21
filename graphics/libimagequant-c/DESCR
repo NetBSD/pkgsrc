@@ -1,0 +1,4 @@
+Small, portable C library for high-quality conversion of RGBA images
+to 8-bit indexed-color (palette) images.
+
+This package provides the older 2.x branch written in plain C.
