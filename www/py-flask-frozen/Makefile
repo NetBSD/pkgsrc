@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/04/29 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/21 04:36:41 adam Exp $
 
-DISTNAME=	Frozen-Flask-0.15
-PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.15
-PKGREVISION=	1
+DISTNAME=	Frozen-Flask-0.18
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Frozen-Flask/}
 
@@ -11,9 +10,9 @@ HOMEPAGE=	https://pythonhosted.org/Frozen-Flask/
 COMMENT=	Freezes a Flask application into a set of static files
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-flask>=0.7:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-flask>=1.1.0:../../www/py-flask
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
