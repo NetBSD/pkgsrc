@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/07/09 09:04:06 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/21 12:29:21 jperkin Exp $
 
 DISTNAME=	hsetroot-1.0.5
 PKGREVISION=	1
@@ -14,6 +14,7 @@ USE_TOOLS+=	gmake pkg-config
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_LANGUAGES=	c99
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
 
 INSTALLATION_DIRS+=	bin
