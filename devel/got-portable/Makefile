@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/07/18 09:33:18 vins Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/21 14:05:29 vins Exp $
 
 DISTNAME=	got-portable-0.90
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
 
@@ -17,8 +17,6 @@ ONLY_FOR_PLATFORM+=	Darwin-*-*
 ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-*
-
-LDFLAGS+=	-lmd -lbsd
 
 USE_TOOLS+=	pkg-config yacc
 
