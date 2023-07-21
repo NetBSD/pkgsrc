@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/01/29 21:17:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/21 12:29:22 jperkin Exp $
 
 DISTNAME=	icewm-1.4.2
 PKGREVISION=	7
@@ -23,6 +23,7 @@ USE_TOOLS+=	msgfmt pkg-config
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 CMAKE_ARGS.NetBSD+=	-DCMAKE_CXX_FLAGS="-DHAVE_SYSCTL_CP_TIME"

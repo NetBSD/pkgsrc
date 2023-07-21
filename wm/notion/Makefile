@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/11/21 18:20:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/21 12:29:21 jperkin Exp $
 
 DISTNAME=	notion-3-2017050501
 PKGNAME=	${DISTNAME:S/3-/3./}
@@ -63,6 +63,8 @@ INSTALLATION_DIRS=	${EGDIR}
 .for f in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 
 # Abuse buildlink to add required libraries.
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-lsocket
