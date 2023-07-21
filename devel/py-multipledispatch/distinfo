@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/07/21 07:56:10 adam Exp $
 
-BLAKE2s (multipledispatch-0.6.0.tar.gz) = 3b9f28633537fd09e9a43712f7cbe5ae2e2396376a2efd99d8eb5c8575929d69
-SHA512 (multipledispatch-0.6.0.tar.gz) = a9b5fcd4ea9f22f96423f20000dd33c9ac361fa1f27d23be1832135ef65c42ae39f4684d0d827dede71f526c2f5dad3c4c465c36c11025cc719583a7fd3b9a4c
-Size (multipledispatch-0.6.0.tar.gz) = 10294 bytes
+BLAKE2s (multipledispatch-1.0.0.tar.gz) = 8da02e9763f505af94c21a4bb47f408a6c2f059093f89be359bd688f20becec8
+SHA512 (multipledispatch-1.0.0.tar.gz) = 26e0cc1ee36ee85186249941580abdd892e5753dc6cf269bc4a8336f84b38faca3f28fd3af07688bf8bf0d5838218c1180c874a398d9496bd210654510878914
+Size (multipledispatch-1.0.0.tar.gz) = 12385 bytes
