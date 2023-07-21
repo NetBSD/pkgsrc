@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:23:51 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/07/21 09:32:36 nia Exp $
 
-BLAKE2s (gnuboy-1.0.3.tar.gz) = 7986d7c531d04e56a30f1f2732320caa4c690aa97e65ac1633bd5c91dc74e706
-SHA512 (gnuboy-1.0.3.tar.gz) = 89e8075dac5ec17b375a5739367b46c55130211fb487a052be1cca49a5d86cc1a7f1619b2b2473d744fbe3c51fdb1a11110b15836cc9cc9de588932b91d258e6
-Size (gnuboy-1.0.3.tar.gz) = 187627 bytes
-SHA1 (patch-aa) = d99a316e40d1249685204f23e66e3709cefc03e3
-SHA1 (patch-ab) = e3fe25086d105864f4d127c84bfe3f3234820927
-SHA1 (patch-ac) = 1c3851d5a65c377b25fae529d4505fdb9dd12729
-SHA1 (patch-ad) = cac88fded5d8422824faf57d8d32ab571a611fc1
+BLAKE2s (gnuboy-1.0.4.tar.xz) = 4ea0a1d510e61e92d514d5d1726af675415e6fac005a8001452f1e4639d0e846
+SHA512 (gnuboy-1.0.4.tar.xz) = 04a86b3326e8ac944535275af1aa2d124dc4a59c5625463a41a1e8af0a6fef5e5e230209f1d05fdf32a10a2924750b2494a424afaa7ac1360a15ffa709cb5b5c
+Size (gnuboy-1.0.4.tar.xz) = 188192 bytes

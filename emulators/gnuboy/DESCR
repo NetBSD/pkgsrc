@@ -1,2 +1,10 @@
-gnuboy is a portable program for emulating the Nintendo GameBoy Color
-software platform.
+Welcome to gnuboy, one of the fastest if not the fastest GB/GBC emu-
+lator available.
+
+gnuboy was written well over 20 years ago and achieved full speed
+on most machines of that era, on today's machines it runs close to
+0% CPU usage.
+
+Unlike most modern GB emulators, gnuboy doesn't strive to be
+cycle-accurate (except where necessary), but to be fast, portable
+and compatible and to provide a good gaming experience.

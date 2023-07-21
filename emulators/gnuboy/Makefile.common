@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1 2023/07/21 09:32:36 nia Exp $
+# used by emulators/gnuboy/Makefile
+# used by emulators/gnuboy-sdl/Makefile
+
+DISTNAME=	gnuboy-1.0.4
+CATEGORIES=	emulators games
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rofl0r/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	njl@sdf.lonestar.org
+HOMEPAGE=	https://github.com/rofl0r/gnuboy
+LICENSE=	gnu-gpl-v2
+
+GNU_CONFIGURE=	yes
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/gnuboy/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/gnuboy/patches
