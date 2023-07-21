@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/06/09 04:21:39 taca Exp $
-DISTNAME=	tzdiff-1.1.1
+# $NetBSD: Makefile,v 1.2 2023/07/21 09:32:22 taca Exp $
+
+DISTNAME=	tzdiff-1.2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=belgianbeer/}
 
