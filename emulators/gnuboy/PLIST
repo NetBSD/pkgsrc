@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/21 09:32:36 nia Exp $
 bin/xgnuboy
+man/man6/xgnuboy.6
 share/doc/gnuboy/CHANGES
 share/doc/gnuboy/CONFIG
 share/doc/gnuboy/CREDITS
