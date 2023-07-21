@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2023/06/06 12:40:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.129 2023/07/21 06:54:29 wiz Exp $
 
 DISTNAME=		meld-3.22.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -47,5 +47,6 @@ BUILDLINK_API_DEPENDS.gtksourceview4?=	gtksourceview4>=4.6.0nb1
 .include "../../x11/gtksourceview4/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
+MESON_REQD+=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
