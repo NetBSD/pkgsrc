@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.199 2023/07/20 14:11:37 bacon Exp $
+# $NetBSD: Makefile,v 1.200 2023/07/21 22:43:22 ryoon Exp $
 #
 
 COMMENT=	Archivers and compression tools
 
+SUBDIR+=	7-zip
 SUBDIR+=	9e
 SUBDIR+=	R-brotli
 SUBDIR+=	R-zip
