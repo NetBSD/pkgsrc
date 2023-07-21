@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4549 2023/07/21 15:55:21 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.4550 2023/07/21 20:40:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-gevent to 23.7.0 [adam 2023-07-21]
 	Updated devel/py-google-i18n-address to 3.1.0 [adam 2023-07-21]
 	Added graphics/libimagequant-c version 2.18.0 [hauke 2023-07-21]
+	Updated shells/oh-my-posh to 17.12.0 [pin 2023-07-21]
