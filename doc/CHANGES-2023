@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4545 2023/07/21 07:56:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4546 2023/07/21 09:33:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6329,3 +6329,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/meld to 3.22.0nb6 [wiz 2023-07-21]
 	Updated www/py-gunicorn to 21.2.0 [adam 2023-07-21]
 	Updated devel/py-multipledispatch to 1.0.0 [adam 2023-07-21]
+	Updated emulators/gnuboy-sdl to 1.0.4 [nia 2023-07-21]
+	Updated emulators/gnuboy to 1.0.4 [nia 2023-07-21]
