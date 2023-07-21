@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4547 2023/07/21 09:35:06 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4548 2023/07/21 10:07:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6332,3 +6332,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/gnuboy-sdl to 1.0.4 [nia 2023-07-21]
 	Updated emulators/gnuboy to 1.0.4 [nia 2023-07-21]
 	Updated time/tzdiff to 1.2 [taca 2023-07-21]
+	Updated net/py-gevent to 23.7.0 [adam 2023-07-21]
+	Updated devel/py-google-i18n-address to 3.1.0 [adam 2023-07-21]
