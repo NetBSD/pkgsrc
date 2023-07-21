@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/21 09:57:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/21 12:34:54 bacon Exp $
 
 DISTNAME=	colormath-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=1.9.1:../../math/py-networkx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# Inherited from py-networkx
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
