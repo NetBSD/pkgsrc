@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/05 20:24:41 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/07/21 10:07:11 adam Exp $
 
-BLAKE2s (google-i18n-address-2.5.2.tar.gz) = 1249390f197dedd9cdec3650619d483c119cd0768532c7398898a8a3181afb88
-SHA512 (google-i18n-address-2.5.2.tar.gz) = a48b07cb9cb82358810a36449e35cd06f48565494273f4e1ad9439c064586c929f00c460c2d23f036f69cd2f3d788e0eb3405f2eccb3acefa5c57bbef9302aa8
-Size (google-i18n-address-2.5.2.tar.gz) = 723785 bytes
+BLAKE2s (google_i18n_address-3.1.0.tar.gz) = b0e5681f4f63a2444cb4da4446e327d98db6f723cb9f50d2fe3b74a344e04e2e
+SHA512 (google_i18n_address-3.1.0.tar.gz) = 0154fb93ff8e277c139fa9746ddf4b18516b6071091f50f7b3c79e0b71d174cda7c817af323fc4a68f895c1128bcef28f9d5bd715794fbb2b8a575e3bb174d0f
+Size (google_i18n_address-3.1.0.tar.gz) = 720252 bytes
