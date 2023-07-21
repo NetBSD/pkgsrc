@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:14 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/21 12:33:37 jperkin Exp $
 #
 
 DISTNAME=	tap-plugins-0.7.2
@@ -20,7 +20,7 @@ SUBST_SED.prefix=	-e 's|/usr/local|${DESTDIR}${PREFIX}|'
 
 INSTALLATION_DIRS+=	lib/ladspa share/ladspa/rdf
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,-Bsymbolic
 BUILDLINK_TRANSFORM.OpenBSD+=	rm:-lrt
-BUILDLINK_TRANSFORM.Darwin+=	rm:-Bsymbolic
 
 .include "../../mk/bsd.pkg.mk"
