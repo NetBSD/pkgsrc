@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:20 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2023/07/21 12:29:21 jperkin Exp $
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
@@ -26,6 +26,7 @@ USE_TOOLS+=	autoconf automake pkg-config gmake
 CONFIGURE_ARGS+=	--disable-devkitd
 .endif
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 PKGCONFIG_OVERRIDE+=	src/devkit-gobject/devkit-gobject.pc.in

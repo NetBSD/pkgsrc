@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.75 2022/11/21 18:20:45 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.76 2023/07/21 12:29:22 jperkin Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--disable-xinerama
 .endif
 MAKE_FLAGS+=		LOCDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 PKG_SYSCONFSUBDIR=	icewm

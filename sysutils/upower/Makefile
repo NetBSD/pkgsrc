@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2023/07/21 12:29:22 jperkin Exp $
 
 DISTNAME=	upower-0.99.13
 PKGREVISION=	1
@@ -33,6 +33,8 @@ CONF_FILES+=		${EGDIR}/org.freedesktop.UPower.conf \
 PKGCONFIG_OVERRIDE+=	upower-glib.pc.in
 USE_PKGLOCALEDIR=	yes
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--no-as-needed:-Wl,-zrecord
 BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
 
