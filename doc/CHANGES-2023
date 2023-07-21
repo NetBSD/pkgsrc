@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4540 2023/07/21 04:47:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4541 2023/07/21 04:56:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cross/lwtools to 4.19nb1 [thorpej 2023-07-20]
 	Updated www/py-flask-frozen to 0.18 [adam 2023-07-21]
 	Updated devel/py-extension-helpers to 1.0.0 [adam 2023-07-21]
+	Updated math/kalker to 2.0.4 [pin 2023-07-21]
