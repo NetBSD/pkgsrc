@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/07/21 15:54:20 hauke Exp $
+
+BLAKE2s (libimagequant-2.18.0.tar.gz) = 17a3a23927f5fc2e05401a5cb21430c026d040a2b6182a8d1696573d804af96b
+SHA512 (libimagequant-2.18.0.tar.gz) = ff2d4c2b901108525f403567ed2cc81dcda6e3600c58661de6324abb191ec04d954987e23b9c4d0e02cbec64ab905d717e3a0e1aecc6e1399ecc6126e889a356
+Size (libimagequant-2.18.0.tar.gz) = 382092 bytes
+SHA1 (patch-Makefile) = 979f07975806619b8bff6a7868c948903f8697db
+SHA1 (patch-configure) = 89e4a07015ba59e6688eeee35e30289d24ac5307
