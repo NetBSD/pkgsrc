@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/06 19:09:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/21 09:35:46 nia Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -14,7 +14,7 @@ MAKE_FLAGS+=	FREEDESKTOP=true
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
