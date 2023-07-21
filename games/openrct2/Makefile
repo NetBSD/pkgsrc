@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/07/18 18:13:44 nia Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/21 22:02:14 nia Exp $
 
 DISTNAME=	openrct2-0.2.5
 CATEGORIES=	games
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++17
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
