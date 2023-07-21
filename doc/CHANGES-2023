@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4542 2023/07/21 04:58:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4543 2023/07/21 04:59:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6325,3 +6325,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-extension-helpers to 1.0.0 [adam 2023-07-21]
 	Updated math/kalker to 2.0.4 [pin 2023-07-21]
 	Updated graphics/oculante to 0.6.69 [pin 2023-07-21]
+	Updated graphics/wallust to 2.5.1 [pin 2023-07-21]
