@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.255 2023/07/20 21:12:16 nia Exp $
+# $NetBSD: gcc.mk,v 1.256 2023/07/21 08:29:56 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -213,6 +213,10 @@ GCC_REQD+=	4.9
 
 .if !empty(USE_CXX_FEATURES:Mregex)
 GCC_REQD+=	4.9
+.endif
+
+.if !empty(USE_CXX_FEATURES:Mput_time)
+GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mfilesystem)
