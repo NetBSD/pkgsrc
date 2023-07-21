@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4544 2023/07/21 06:54:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4545 2023/07/21 07:56:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6327,3 +6327,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.6.69 [pin 2023-07-21]
 	Updated graphics/wallust to 2.5.1 [pin 2023-07-21]
 	Updated devel/meld to 3.22.0nb6 [wiz 2023-07-21]
+	Updated www/py-gunicorn to 21.2.0 [adam 2023-07-21]
+	Updated devel/py-multipledispatch to 1.0.0 [adam 2023-07-21]
