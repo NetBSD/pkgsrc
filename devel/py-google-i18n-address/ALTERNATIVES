@@ -1,0 +1,1 @@
+bin/update-validation-files @PREFIX@/bin/update-validation-files-@PYVERSSUFFIX@
