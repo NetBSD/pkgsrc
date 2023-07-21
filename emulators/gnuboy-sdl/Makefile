@@ -1,29 +1,28 @@
-# $NetBSD: Makefile,v 1.16 2017/08/01 16:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/21 09:32:36 nia Exp $
 
-DISTNAME=	gnuboy-1.0.3
+.include "../../emulators/gnuboy/Makefile.common"
+
 PKGNAME=	${DISTNAME:S/-/-sdl-/}
-PKGREVISION=	7
-CATEGORIES=	emulators
-#MASTER_SITES=	http://gnuboy.unix-fu.org/src/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://gnuboy.unix-fu.org/
-COMMENT=	SDL port of Gameboy emulator
+COMMENT=	Fast gameboy emulator (SDL2 version)
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-sdl
+CONFIGURE_ARGS+=	--with-sdl2
+CONFIGURE_ARGS+=	--with-sound=sdl
 
-INSTALLATION_DIRS=	bin share/doc/gnuboy-sdl share/examples/gnuboy-sdl
-BUILDLINK_TRANSFORM+=	rm:-fforce-mem
-
-.include "../../devel/SDL/buildlink3.mk"
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man6
+INSTALLATION_DIRS+=	share/doc/gnuboy-sdl
+INSTALLATION_DIRS+=	share/examples/gnuboy-sdl
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sdlgnuboy \
+	${INSTALL_PROGRAM} ${WRKSRC}/sdl2gnuboy \
 		${DESTDIR}${PREFIX}/bin/gnuboy-sdl
+	${INSTALL_MAN} ${FILESDIR}/gnuboy-sdl.6 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/gnuboy-sdl.6
 	${INSTALL_DATA} ${WRKSRC}/etc/sample.rc \
 		${DESTDIR}${PREFIX}/share/examples/gnuboy-sdl/
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/docs/* \
 		${DESTDIR}${PREFIX}/share/doc/gnuboy-sdl/
 
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
