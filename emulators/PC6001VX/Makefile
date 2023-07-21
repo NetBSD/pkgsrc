@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2023/07/18 18:02:45 nia Exp $
+# $NetBSD: Makefile,v 1.84 2023/07/21 05:03:59 tsutsui Exp $
 
 VERSION=		4.1.3
 DISTNAME=		PC6001VX_${VERSION}_src
@@ -15,8 +15,6 @@ LICENSE=		gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
-
-USE_CXX_FEATURES+=	c++17 filesystem
 
 INSTALLATION_DIRS+=	bin
 
