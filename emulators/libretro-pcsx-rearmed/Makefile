@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/09/11 12:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/21 09:37:18 nia Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-20200526
 PKGREVISION=	2
@@ -17,6 +17,9 @@ MAKE_FILE=	Makefile.libretro
 LDFLAGS+=	-lFLAC
 
 MAKE_FLAGS+=	WANT_ZLIB=0 # disable vendored zlib
+
+# lightrec requires stdatomic.h
+USE_CC_FEATURES+=	c11
 
 .include "../../mk/bsd.prefs.mk"
 
