@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4554 2023/07/22 10:11:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4555 2023/07/22 10:55:35 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-usethis to 2.2.2 [mef 2023-07-22]
 	Updated graphics/ImageMagick6 to 6.9.12.91 [adam 2023-07-22]
 	Updated devel/cfitsio to 4.2.0 [adam 2023-07-22]
+	Updated games/openrct2 to 0.3.0 [triaxx 2023-07-22]
