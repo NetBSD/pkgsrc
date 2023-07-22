@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4553 2023/07/22 01:50:38 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4554 2023/07/22 10:11:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6339,3 +6339,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added archivers/7-zip version 23.01 [ryoon 2023-07-21]
 	Updated devel/R-Rcpp to 1.0.11 [mef 2023-07-22]
 	Updated devel/R-usethis to 2.2.2 [mef 2023-07-22]
+	Updated graphics/ImageMagick6 to 6.9.12.91 [adam 2023-07-22]
+	Updated devel/cfitsio to 4.2.0 [adam 2023-07-22]

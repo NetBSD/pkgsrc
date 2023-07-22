@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23233 2023/07/20 21:48:41 wiz Exp $
+$NetBSD: TODO,v 1.23234 2023/07/22 10:11:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
-	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-23.1.3
