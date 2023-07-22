@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/22 12:08:30 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/22 12:16:06 bacon Exp $
 
 DISTNAME=	humanfriendly-10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanfriendly/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://humanfriendly.readthedocs.io/
+HOMEPAGE=	https://pypi.org/project/humanfriendly/
 COMMENT=	Human friendly output for text interfaces using Python
 LICENSE=	mit
 
