@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/22 12:08:30 bacon Exp $
+
+BLAKE2s (humanfriendly-10.0.tar.gz) = 1eef488037d461dd31eb367ca3b8995fd31b1c9101e9bc1f6243727ea77984f2
+SHA512 (humanfriendly-10.0.tar.gz) = 496700bcea1dabf003c938558bf807fabb41b71192f69622979dd9e243dda9b4b06c5ac8f65cef217df85ebadf99099dc22b50d63216791a569be11081d267d6
+Size (humanfriendly-10.0.tar.gz) = 360702 bytes
