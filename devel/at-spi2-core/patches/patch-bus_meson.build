@@ -1,0 +1,24 @@
+$NetBSD: patch-bus_meson.build,v 1.1 2023/07/22 12:48:44 nia Exp $
+
+Avoid a systemd dependency.
+
+--- bus/meson.build.orig	2021-07-09 13:51:52.300186400 +0000
++++ bus/meson.build
+@@ -55,17 +55,6 @@ else
+ endif
+ 
+ needs_systemd = false
+-if get_option('dbus_broker') != 'default'
+-  launcher_args += '-DDBUS_BROKER="@0@"'.format(get_option('dbus_broker'))
+-  needs_systemd = true
+-else
+-  dbus_broker = find_program('dbus-broker-launch',
+-                             required: false)
+-  if dbus_broker.found()
+-    launcher_args += '-DDBUS_BROKER="@0@"'.format(dbus_broker.path())
+-    needs_systemd = true
+-  endif
+-endif
+ 
+ if get_option('default_bus') == 'dbus-broker'
+   launcher_args += '-DWANT_DBUS_BROKER'
