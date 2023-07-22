@@ -1,8 +1,17 @@
-# $NetBSD: options.mk,v 1.1 2019/11/30 13:40:29 nia Exp $
+# $NetBSD: options.mk,v 1.2 2023/07/22 04:22:15 pho Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openal-soft
-PKG_SUPPORTED_OPTIONS=		alsa jack pulseaudio
+PKG_SUPPORTED_OPTIONS=		jack pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# The ALSA backend is known not to work on this platform:
+# https://mail-index.netbsd.org/pkgsrc-users/2023/07/17/msg037726.html
+.else
+PKG_SUPPORTED_OPTIONS+=	alsa
+.endif
 
 .include "../../mk/bsd.options.mk"
 
