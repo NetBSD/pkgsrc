@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4558 2023/07/22 13:06:24 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4559 2023/07/22 13:10:11 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6345,3 +6345,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/py-humanfriendly version 10.0 [bacon 2023-07-22]
 	Added devel/py-capturer version 3.0 [bacon 2023-07-22]
 	Added devel/py-verboselogs version 1.7 [bacon 2023-07-22]
+	Added devel/py-coloredlogs version 15.0.1 [bacon 2023-07-22]
