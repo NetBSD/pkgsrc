@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4557 2023/07/22 12:34:02 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4558 2023/07/22 13:06:24 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6344,3 +6344,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.3.0 [triaxx 2023-07-22]
 	Added textproc/py-humanfriendly version 10.0 [bacon 2023-07-22]
 	Added devel/py-capturer version 3.0 [bacon 2023-07-22]
+	Added devel/py-verboselogs version 1.7 [bacon 2023-07-22]
