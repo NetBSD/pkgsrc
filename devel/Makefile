@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4032 2023/07/22 13:06:48 bacon Exp $
+# $NetBSD: Makefile,v 1.4033 2023/07/22 13:10:33 bacon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2444,6 +2444,7 @@ SUBDIR+=	py-codespell
 SUBDIR+=	py-codestyle
 SUBDIR+=	py-cogapp
 SUBDIR+=	py-collections-extended
+SUBDIR+=	py-coloredlogs
 SUBDIR+=	py-colorlog
 SUBDIR+=	py-compizconfig
 SUBDIR+=	py-configargparse
