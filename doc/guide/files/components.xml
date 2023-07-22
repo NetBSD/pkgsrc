@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.62 2022/04/15 13:47:57 gutteridge Exp $ -->
+<!-- $NetBSD: components.xml,v 1.63 2023/07/22 22:47:22 gutteridge Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -113,7 +113,7 @@ converters    games         mbone         print         x11
     developers to update or change the package without contacting
     you first. A package Makefile should contain one of
     <varname>MAINTAINER</varname> or <varname>OWNER</varname>, but
-    not both.  </para></listitem>
+    not both.</para></listitem>
 
     <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
     find more information about the package.</para></listitem>
@@ -201,8 +201,8 @@ converters    games         mbone         print         x11
   ensures that the distfiles retrieved from the Internet have not been
   corrupted during transfer or altered by a malign force to introduce
   a security hole. To provide maximum security, all distfiles are
-  protected using three different message digest algorithms (SHA1,
-  RMD160, SHA512), as well as the file size.</para>
+  protected using two different message digest algorithms (BLAKE2s
+  and SHA512), as well as the file size.</para>
 
   <para>The <filename>distinfo</filename> file also contains the
   checksums for all the patches found in the
