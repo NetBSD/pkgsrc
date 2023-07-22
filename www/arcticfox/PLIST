@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/02/01 14:41:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/22 10:31:38 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -45,10 +45,6 @@ lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidl.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidllex.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidlyacc.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpt.py
-lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libmozglue.a
-lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libunicharutil_external_s.a
-lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libxpcomglue.a
-lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libxpcomglue_s.a
 lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libxul.so
 lib/arcticfox-devel-${PKGVERSION}/xpcom-config.h
 share/applications/arcticfox.desktop
