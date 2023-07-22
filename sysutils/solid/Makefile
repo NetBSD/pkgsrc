@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/05/22 21:00:07 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/07/22 08:32:34 nia Exp $
 
 DISTNAME=	solid-${KF5VER}
 PKGREVISION=	6
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	flex bison
 
+.include "options.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
