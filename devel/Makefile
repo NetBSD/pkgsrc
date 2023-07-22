@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4030 2023/07/18 06:54:21 adam Exp $
+# $NetBSD: Makefile,v 1.4031 2023/07/22 12:34:23 bacon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2422,6 +2422,7 @@ SUBDIR+=	py-calver
 SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-canvasapi
 SUBDIR+=	py-capstone
+SUBDIR+=	py-capturer
 SUBDIR+=	py-case
 SUBDIR+=	py-cattrs
 SUBDIR+=	py-cbor2
@@ -2930,6 +2931,7 @@ SUBDIR+=	py-requirements-parser
 SUBDIR+=	py-resolvelib
 SUBDIR+=	py-restructuredtext_lint
 SUBDIR+=	py-retry_decorator
+SUBDIR+=	py-rich-click
 SUBDIR+=	py-rlp
 SUBDIR+=	py-rope
 SUBDIR+=	py-rply
