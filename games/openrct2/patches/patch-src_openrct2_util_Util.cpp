@@ -1,4 +1,6 @@
-$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.1 2020/05/30 20:47:08 joerg Exp $
+$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.2 2023/07/22 02:15:16 triaxx Exp $
+
+Support NetBSD.
 
 --- src/openrct2/util/Util.cpp.orig	2020-05-27 23:27:33.350998119 +0000
 +++ src/openrct2/util/Util.cpp

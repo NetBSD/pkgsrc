@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/07/21 22:02:14 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/22 02:15:16 triaxx Exp $
 
-DISTNAME=	openrct2-0.2.5
+DISTNAME=	openrct2-0.2.6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2
@@ -15,6 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++17
 
+GCC_REQD+=		9
 USE_CXX_FEATURES+=	c++17 filesystem
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
