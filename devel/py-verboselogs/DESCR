@@ -1,0 +1,12 @@
+The verboselogs package extends Pythonâs logging module to add the log
+levels NOTICE, SPAM, SUCCESS and VERBOSE:
+
+    The NOTICE level sits between the predefined WARNING and INFO
+    levels.
+
+    The SPAM level sits between the predefined DEBUG and NOTSET levels.
+
+    The SUCCESS level sits between the predefined WARNING and ERROR
+    levels.
+
+    The VERBOSE level sits between the predefined INFO and DEBUG levels.
