@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2015/04/14 08:14:01 hiramatsu Exp $
+$NetBSD: patch-cfortran.h,v 1.1 2023/07/22 10:11:02 adam Exp $
 
 Add definition for NetBSD and DragonFlyBSD.
 
