@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/01/29 21:16:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/22 09:52:31 nia Exp $
 
 PKGNAME=	libretro-ppsspp-1.7.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -54,7 +54,7 @@ MAKE_FLAGS+=		TARGET_ARCH=x86_64
 MAKE_FLAGS+=		TARGET_ARCH=x86
 .endif
 
-LDFLAGS+=		-lpng -lsnappy -lxxhash
+LDFLAGS+=		-lpng -lsnappy -lxxhash -lz
 LDFLAGS+=		${BUILDLINK_LDADD.libexecinfo}
 
 post-extract:
