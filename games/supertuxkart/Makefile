@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/07/18 14:51:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/07/22 09:11:17 nia Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
