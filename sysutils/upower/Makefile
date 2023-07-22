@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/07/21 12:29:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/22 08:39:26 nia Exp $
 
 DISTNAME=	upower-0.99.13
 PKGREVISION=	1
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ARGS+=	--enable-introspection
+
+# Real Linux backend requires gudev, which we lack in pkgsrc.
+CONFIGURE_ARGS.Linux+=	--with-backend=dummy
 
 PKG_SYSCONFSUBDIR=	UPower
 INSTALL_MAKE_FLAGS+=	configdir=${EGDIR} dbusconfdir=${EGDIR}
