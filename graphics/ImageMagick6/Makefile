@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.56 2023/07/18 18:19:22 nia Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/22 10:09:06 adam Exp $
 
-PKGREVISION= 22
 .include "Makefile.common"
 
 PKGNAME=	ImageMagick6-${DISTVERSION}
@@ -102,7 +101,9 @@ CTF_FILES_SKIP+=	lib/libMagickCore-6.Q16.so.*	# CPU limit exceeded
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
