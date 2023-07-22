@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/18 18:02:46 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/22 09:50:55 nia Exp $
 
 PKGREVISION= 4
 .include "${.CURDIR}/../../emulators/mgba/Makefile.common"
@@ -12,6 +12,8 @@ CMAKE_ARGS+=	-DBUILD_QT=ON
 
 # performance problems...
 CMAKE_ARGS+=	-DBUILD_GL=OFF
+CMAKE_ARGS+=	-DBUILD_GLES2=OFF
+CMAKE_ARGS+=	-DBUILD_GLES3=OFF
 CMAKE_ARGS+=	-DUSE_EPOXY=OFF
 
 USE_CXX_FEATURES+=	c++14
@@ -26,6 +28,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
