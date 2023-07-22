@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/10 21:51:30 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/22 21:38:17 yhardy Exp $
 bin/fennel-${LUADOTVER}
 man/man1/fennel.1
+man/man3/fennel-api.3
+man/man5/fennel-reference.5
+man/man7/fennel-tutorial.7
 share/lua/${LUADOTVER}/fennel.lua
