@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2023/07/19 15:48:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2023/07/22 12:21:32 nia Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-8.0.1
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 DISTINFO_FILE=	${.CURDIR}/../../fonts/harfbuzz/distinfo
 PATCHDIR=	${.CURDIR}/../../fonts/harfbuzz/patches
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++11 is_trivially_copy_constructible
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../graphics/librsvg/available.mk"

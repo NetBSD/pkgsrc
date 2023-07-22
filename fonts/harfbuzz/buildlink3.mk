@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.16 2023/01/29 21:14:35 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2023/07/22 12:21:32 nia Exp $
 
 BUILDLINK_TREE+=	harfbuzz
 
 .if !defined(HARFBUZZ_BUILDLINK3_MK)
 HARFBUZZ_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++11 is_trivially_copy_constructible
 
 .include "../../graphics/librsvg/available.mk"
 
