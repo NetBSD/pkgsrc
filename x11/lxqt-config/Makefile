@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/05/22 21:00:48 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/22 08:48:42 nia Exp $
 
 DISTNAME=	lxqt-config-1.3.0
 PKGREVISION=	2
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
+
 CMAKE_ARG_PATH=	..
 
 MENUS_CONF=		share/examples/menus
@@ -26,10 +27,10 @@ MAKE_DIRS=		${PKG_SYSCONFDIR}/menus
 CONF_FILES+=	${MENUS_CONF}/lxqt-config.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
+# Requires xorg-libinput, which we lack in pkgsrc.
 CMAKE_ARGS+=	-DWITH_TOUCHPAD=OFF
-.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lxqt-config \
 		-L${PREFIX}/lib/lxqt-config/
