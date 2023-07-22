@@ -1,15 +1,36 @@
-$NetBSD: patch-Makefile,v 1.1 2023/01/10 21:51:30 nikita Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/07/22 21:38:18 yhardy Exp $
 
 Let pkgsrc add the shebang to the fennel launcher script
+Install manual pages relative to PKGMANDIR
 
---- Makefile.orig	2022-05-05 21:57:31.282820992 -0700
-+++ Makefile	2022-05-05 21:57:36.826751085 -0700
-@@ -41,7 +41,7 @@
+--- Makefile.orig	2023-07-07 20:09:35.000000000 +0000
++++ Makefile
+@@ -42,7 +42,7 @@ format: ; for f in $(SRC); do fnlfmt --f
  
  # All-in-one pure-lua script:
- fennel: src/launcher.fnl $(SRC)
+ fennel: src/launcher.fnl $(SRC) bootstrap/view.lua
 -	echo "#!/usr/bin/env $(LUA)" > $@
 +	echo "#!$(LUA_INTERPRETER)" > $@
- 	$(LAUNCHER) --no-metadata --require-as-include --compile $< >> $@
+ 	FENNEL_PATH=src/?.fnl $(LUA) bootstrap/aot.lua $< --require-as-include >> $@
  	chmod 755 $@
  
+@@ -134,8 +134,8 @@ coverage: fennel
+ 	$(LUA) -lluacov test/init.lua
+ 	@echo "generated luacov.report.out"
+ 
+-MAN_DOCS := man/man1/fennel.1 man/man3/fennel-api.3 man/man5/fennel-reference.5\
+-	    man/man7/fennel-tutorial.7
++MAN_DOCS := man1/fennel.1 man3/fennel-api.3 man5/fennel-reference.5\
++	    man7/fennel-tutorial.7
+ 
+ define maninst =
+ mkdir -p $(dir $(2)) && cp $(1) $(2)
+@@ -146,7 +146,7 @@ install: fennel fennel.lua
+ 	mkdir -p $(DESTDIR)$(BIN_DIR) && cp fennel $(DESTDIR)$(BIN_DIR)/
+ 	mkdir -p $(DESTDIR)$(LUA_LIB_DIR) && cp fennel.lua $(DESTDIR)$(LUA_LIB_DIR)/
+ 	$(foreach doc,$(MAN_DOCS),\
+-		$(call maninst,$(doc),$(DESTDIR)$(MAN_DIR)/$(doc)))
++		$(call maninst,man/$(doc),$(DESTDIR)$(MAN_DIR)/$(doc)))
+ 
+ uninstall:
+ 	rm $(DESTDIR)$(BIN_DIR)/fennel
