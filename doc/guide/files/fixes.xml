@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.187 2023/07/21 08:29:56 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.188 2023/07/22 12:20:37 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1458,7 +1458,8 @@ c11, c99, has_include
     currently:
 <programlisting>
 c++11, c++14, c++17, c++20, has_include, regex, filesystem,
-charconv, parallelism_ts, unique_ptr, put_time
+charconv, parallelism_ts, unique_ptr, put_time,
+is_trivially_copy_constructible
 </programlisting>
     .</para>
     </para>
