@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/05/16 21:20:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/07/22 12:15:22 nia Exp $
 
 BUILDLINK_TREE+=	spdlog
 
@@ -12,6 +12,8 @@ BUILDLINK_PKGSRCDIR.spdlog?=	../../devel/spdlog
 # Support the use of SPDLOG_FMT_EXTERNAL.
 # Sometimes tweakme.h is not properly applied...
 BUILDLINK_CPPFLAGS.spdlog+=	-DSPDLOG_FMT_EXTERNAL
+
+USE_CXX_FEATURES+=	c++11 put_time
 
 .include "../../textproc/fmtlib/buildlink3.mk"
 .endif	# SPDLOG_BUILDLINK3_MK
