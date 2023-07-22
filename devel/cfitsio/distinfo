@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:14:23 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/07/22 10:11:02 adam Exp $
 
-BLAKE2s (cfitsio-3.47.tar.gz) = dab62fdddd57feb8e347b8151f30b3635bc004b8853380d7a6d03fda5051c474
-SHA512 (cfitsio-3.47.tar.gz) = c0502699e266928dd25abe57730dc4b357ccc9023789fe745324ae01aa688516aceaf37321ee578f0430111d9718f0fec0dc5b54c07f935529560f00b32ce1e3
-Size (cfitsio-3.47.tar.gz) = 4853990 bytes
-SHA1 (patch-aa) = 7613403161f03ce968760c410f9687ac91eac2b8
-SHA1 (patch-ad) = 761aedc2ae885c119ac2726ba89aaa7c193a8834
+BLAKE2s (cfitsio-4.2.0.tar.gz) = fe50b429537acf2f390d4b914d5586bcdc9735d33dd5990366775ddaa2e9e988
+SHA512 (cfitsio-4.2.0.tar.gz) = 41b51653370874f50a7a9fe7d5f61577a979ab9d146b8249afa407d3858cb4dce0581eba23093972b66f7d1042b9693b98ad9130ec67b3b44e94005e72d60853
+Size (cfitsio-4.2.0.tar.gz) = 4356372 bytes
+SHA1 (patch-Makefile.in) = 81211da9b3c4c654f5a9153ae761604349ea4480
+SHA1 (patch-cfortran.h) = 761aedc2ae885c119ac2726ba89aaa7c193a8834

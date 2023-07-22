@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2019/11/26 10:24:11 markd Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2023/07/22 10:11:02 adam Exp $
 
 Use libtool.
 
---- Makefile.in.orig	2018-05-10 04:16:01.000000000 +0900
-+++ Makefile.in	2019-11-23 15:43:52.872488997 +0900
-@@ -37,13 +37,15 @@ SHELL =		/bin/sh
+--- Makefile.in.orig	2022-10-31 18:40:23.000000000 +0000
++++ Makefile.in
+@@ -38,13 +38,15 @@ SHELL =		/bin/sh
  ARCHIVE =	@ARCHIVE@
  RANLIB =	@RANLIB@
  CC =		@CC@
@@ -21,7 +21,7 @@ Use libtool.
  LIBS =		@LIBS@
  LIBS_CURL =	@LIBS_CURL@
  FLEX =		flex
-@@ -94,10 +96,10 @@ all:
+@@ -93,11 +95,11 @@ all:
  all-nofitsio:
  		${MAKE} stand_alone "FITSIO_SRC="
  
@@ -33,40 +33,47 @@ Use libtool.
 -		${RANLIB} $@;
 +lib${PACKAGE}.la:	${OBJECTS}
 +		${ARCHIVE} $lib${PACKAGE}.la ${OBJECTS}; \
-+		${LIBTOOL} --mode=link @CC@ -o $@ ${OBJECTS:.o=.lo} ${LIBS_CURL} -rpath ${PREFIX}/lib -version-info 3:0
++		${LIBTOOL} --mode=link @CC@ -o $@ ${OBJECTS:.o=.lo} ${LIBS_CURL} -rpath ${PREFIX}/lib -version-info 4:0
  
  shared: lib${PACKAGE}${SHLIB_SUFFIX}
-@@ -109,16 +111,17 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
+ 
+@@ -108,23 +110,15 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
  			ln -sf ${CFITSIO_SHLIB_SONAME} $@; \
  		fi
  
 -install:	lib${PACKAGE}.a ${INSTALL_DIRS}
 -		@for lib in lib${PACKAGE}.a lib${PACKAGE}${SHLIB_SUFFIX} \
-+install:	lib${PACKAGE}.la ${INSTALL_DIRS}
-+		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcfitsio.la ${CFITSIO_LIB}
-+		@for lib in  lib${PACKAGE}${SHLIB_SUFFIX} \
- 				${CFITSIO_SHLIB} ${CFITSIO_SHLIB_SONAME}; do \
- 		    if [ -f $$lib ]; then \
- 			echo "/bin/cp -a $$lib ${CFITSIO_LIB}"; \
+-				${CFITSIO_SHLIB} ${CFITSIO_SHLIB_SONAME}; do \
+-		    if [ -f $$lib ]; then \
+-			echo "/bin/rm -f ${CFITSIO_LIB}/$$lib"; \
+-			/bin/rm -f ${CFITSIO_LIB}/$$lib; \
+-			echo "/bin/cp -a $$lib ${CFITSIO_LIB}"; \
 -			/bin/cp -a $$lib ${CFITSIO_LIB}; \
-+			${BSD_INSTALL_DATA} -a $$lib ${CFITSIO_LIB}; \
- 		    fi; \
- 		done
+-		    fi; \
+-		done
 -		/bin/cp fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
 -		/bin/cp cfitsio.pc ${CFITSIO_LIB}/pkgconfig
++install:	lib${PACKAGE}.la ${INSTALL_DIRS}
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} lib${PACKAGE}.la ${CFITSIO_LIB}
 +		${BSD_INSTALL_DATA} fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
 +		${BSD_INSTALL_DATA} cfitsio.pc ${CFITSIO_LIB}/pkgconfig
  		@for task in ${FPACK_UTILS} ${UTILS}; do \
  		    if [ -f $$task ]; then \
  			if [ ! -d ${CFITSIO_BIN} ]; then mkdir -p ${CFITSIO_BIN}; fi; \
-@@ -139,29 +142,29 @@ utils:		${FPACK_UTILS} ${UTILS}
+ 			echo "/bin/cp $$task ${CFITSIO_BIN}"; \
+-			/bin/cp $$task ${CFITSIO_BIN}; \
++			${BSD_INSTALL_PROGRAM} $$task ${CFITSIO_BIN}; \
+ 		    fi; \
+ 		done
+ 
+@@ -141,31 +135,31 @@ utils:		${FPACK_UTILS} ${UTILS}
  swapproc.o:	swapproc.c
  		${CC} -c ${CFLAGS} ${CPPFLAGS} ${SSE_FLAGS} ${DEFS} $<
  
 -smem:		smem.o lib${PACKAGE}.a ${OBJECTS}
 -		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm
 +smem:		smem.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o smem smem.o -L. -lcfitsio -lm
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm
  
 -testprog:	testprog.o lib${PACKAGE}.a ${OBJECTS}
 -		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
@@ -91,7 +98,7 @@ Use libtool.
 -speed:		speed.o lib${PACKAGE}.a ${OBJECTS}
 -		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
 +speed:		speed.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++		${LDD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
 -imcopy:		imcopy.o lib${PACKAGE}.a ${OBJECTS}
 -		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
@@ -103,5 +110,8 @@ Use libtool.
 +cookbook:	cookbook.o lib${PACKAGE}.la ${OBJECTS}
 +		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
- eval:		# Rebuild eval_* files from flex/bison source
- 		${FLEX} -t eval.l > eval_l.c1
+-testf77:	testf77.o lib${PACKAGE}.a ${OBJECTS}
++testf77:	testf77.o lib${PACKAGE}.la ${OBJECTS}
+ 		${FC} ${LDFLAGS_BIN} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+ 
+ # Tested with bison 3.8 and flex 2.6.4
