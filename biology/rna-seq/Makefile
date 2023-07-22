@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/01/23 21:41:53 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/22 13:23:46 bacon Exp $
 #
 
-DISTNAME=	rna-seq-1.1
+DISTNAME=	rna-seq-1.2
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -18,7 +18,9 @@ DEPENDS+=	samtools>=0:../../biology/samtools
 DEPENDS+=	igv>=0:../../biology/igv
 DEPENDS+=	fasda>=0:../../biology/fasda
 DEPENDS+=	webbrowser>=0:../../www/webbrowser
+DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../biology/py-multiqc
 
 META_PACKAGE=	yes
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
