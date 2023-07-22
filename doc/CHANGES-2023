@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4560 2023/07/22 13:19:00 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4561 2023/07/22 13:23:57 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6347,3 +6347,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-verboselogs version 1.7 [bacon 2023-07-22]
 	Added devel/py-coloredlogs version 15.0.1 [bacon 2023-07-22]
 	Added biology/py-multiqc version 1.14 [bacon 2023-07-22]
+	Updated biology/rna-seq to 1.2 [bacon 2023-07-22]
