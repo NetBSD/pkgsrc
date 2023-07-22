@@ -1,4 +1,4 @@
-$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.2 2023/07/22 02:15:16 triaxx Exp $
+$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.3 2023/07/22 10:55:16 triaxx Exp $
 
 Support NetBSD.
 

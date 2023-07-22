@@ -1,16 +1,16 @@
-$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.3 2023/07/22 02:15:16 triaxx Exp $
+$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.4 2023/07/22 10:55:16 triaxx Exp $
 
 GCC 9 does not require linking with -lstdc++fs to use types and functions in
 <filesystem> now (https://gcc.gnu.org/gcc-9/changes.html).
 
---- src/openrct2/CMakeLists.txt.orig	2020-04-17 14:13:30.000000000 +0000
+--- src/openrct2/CMakeLists.txt.orig	2020-08-15 19:13:50.000000000 +0000
 +++ src/openrct2/CMakeLists.txt
 @@ -22,13 +22,6 @@ add_library(${PROJECT_NAME} ${OPENRCT2_C
  set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
  SET_CHECK_CXX_FLAGS(${PROJECT_NAME})
  
 -# GCC / Clang likes us to pass the -lstdc++fs flag to link C++17 filesystem implementation.
--if (NOT MINGW AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+-if (NOT MINGW AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
 -    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 -        target_link_libraries(${PROJECT_NAME} stdc++fs)
 -    endif()
