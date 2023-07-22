@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/07 09:21:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/22 21:46:57 yhardy Exp $
 bin/cog-${PYVERSSUFFIX}
+bin/cog-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cogapp/__init__.py
 ${PYSITELIB}/cogapp/__init__.pyc
