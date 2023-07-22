@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/22 21:46:57 yhardy Exp $
 
-DISTNAME=	cogapp-2.5.1
+DISTNAME=	cogapp-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogapp/}
 
@@ -14,7 +13,8 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cog.py cog-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} cog cog-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} cog.py cog-${PYVERSSUFFIX}.py || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} -m unittest discover -v
