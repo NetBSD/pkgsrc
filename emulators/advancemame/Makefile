@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/03 21:49:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/22 09:57:53 nia Exp $
 
 DISTNAME=	advancemame-3.9
 CATEGORIES=	emulators
@@ -48,6 +48,12 @@ LDFLAGS+=		${BUILDLINK_LDADD.oss}
 CONFIGURE_ARGS+=	--disable-oss
 .endif
 
+.if ${OPSYS} == "Linux"
+ADVMAME_OPSYS=	linux
+.else
+ADVMAME_OPSYS=	generic
+.endif
+
 ICON_SIZES=	16 32 48 256
 
 INSTALLATION_DIRS+=	bin
@@ -87,19 +93,19 @@ post-configure:
 	    ${WRKDIR}/advancemame-256.png
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/mame/generic/blend/advmame \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/mame/${ADVMAME_OPSYS}/blend/advmame \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/mess/generic/blend/advmess \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/mess/${ADVMAME_OPSYS}/blend/advmess \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/menu/generic/blend/advmenu \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/menu/${ADVMAME_OPSYS}/blend/advmenu \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/s/generic/blend/advs \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/s/${ADVMAME_OPSYS}/blend/advs \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/k/generic/blend/advk \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/k/${ADVMAME_OPSYS}/blend/advk \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/j/generic/blend/advj \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/j/${ADVMAME_OPSYS}/blend/advj \
 	    ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/m/generic/blend/advm \
+	${INSTALL_PROGRAM} ${WRKSRC}/obj/m/${ADVMAME_OPSYS}/blend/advm \
 	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${FILESDIR}/advancemame.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
