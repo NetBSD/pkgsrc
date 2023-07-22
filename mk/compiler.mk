@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.101 2023/07/21 08:29:56 nia Exp $
+# $NetBSD: compiler.mk,v 1.102 2023/07/22 12:20:37 nia Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -82,7 +82,7 @@
 #
 #	Valid values are: c++11, c++14, c++17, c++20, has_include,
 #	regex, filesystem, unique_ptr, charconv, parallelism_ts,
-#	put_time.
+#	put_time, is_trivially_copy_constructible.
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
