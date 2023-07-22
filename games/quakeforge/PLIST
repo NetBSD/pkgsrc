@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2019/07/06 22:53:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/07/22 09:20:37 nia Exp $
 bin/bsp2img
 bin/hw-master
-${PLIST.linux}bin/nq-fbdev
 bin/nq-sdl
 bin/nq-server
 bin/nq-x11
@@ -17,7 +16,6 @@ bin/qfspritegen
 bin/qfvis
 bin/qfwavinfo
 bin/qtv
-${PLIST.linux}bin/qw-client-fbdev
 bin/qw-client-sdl
 bin/qw-client-x11
 bin/qw-master
