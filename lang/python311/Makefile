@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2023/06/29 01:32:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2023/07/22 18:27:45 js Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python311-${PY_DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -89,7 +89,10 @@ CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
 
 LDFLAGS.SunOS+=	-lresolv
 
-PLIST_VARS+=	nis
+PLIST_VARS+=	dbm nis
+.if ${OPSYS} != "Linux"
+PLIST.dbm=	yes
+.endif
 .for incdir in ${_OPSYS_INCLUDE_DIRS}
 .  if (exists(${incdir}/rpc/rpc.h) || exists(${incdir}/tirpc/rpc/rpc.h))
 HAVE_RPC_H=	yes
