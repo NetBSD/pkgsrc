@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/07/18 18:02:45 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/22 10:01:11 nia Exp $
 
 DISTNAME=	bsnes-115
 PKGREVISION=	17
@@ -60,6 +60,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
+.  include "../../audio/libao/buildlink3.mk"
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 .if ${OPSYS} != "Darwin"
