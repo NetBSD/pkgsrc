@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/22 13:10:04 bacon Exp $
+
+BLAKE2s (coloredlogs-15.0.1.tar.gz) = d9176feb27ac0567bbd2840474cc59261d21708965b116670c2aac4ff0eb2a4f
+SHA512 (coloredlogs-15.0.1.tar.gz) = 577af26af8d27bca3f10e6aaa257245aba608cc3832985ba57bcb2b590b10bf054796a2210749c15ee1b1a17623e007e4ac3ba17bed6af95544f85f5dfafaf21
+Size (coloredlogs-15.0.1.tar.gz) = 278520 bytes
