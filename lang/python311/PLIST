@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/06/07 13:28:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/22 18:27:45 js Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2060,7 +2060,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_csv.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes_test.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_datetime.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
+${PLIST.dbm}lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_decimal.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_hashlib.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_heapq.so
