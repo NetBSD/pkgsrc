@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2023/07/22 09:33:08 nia Exp $
 
 DISTNAME=	flightgear-2020.3.11
 PKGREVISION=	26
@@ -26,7 +26,11 @@ CMAKE_ARGS+=		-DFG_BUILD_TYPE=Release
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} fgbuild
 
+.include "../../audio/flite/buildlink3.mk"
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../audio/hts_engine/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2
 .include "../../devel/libevent/buildlink3.mk"
