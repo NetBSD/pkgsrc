@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4552 2023/07/22 01:46:39 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4553 2023/07/22 01:50:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6338,3 +6338,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 17.12.0 [pin 2023-07-21]
 	Added archivers/7-zip version 23.01 [ryoon 2023-07-21]
 	Updated devel/R-Rcpp to 1.0.11 [mef 2023-07-22]
+	Updated devel/R-usethis to 2.2.2 [mef 2023-07-22]
