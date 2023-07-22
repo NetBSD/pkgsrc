@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/22 13:06:15 bacon Exp $
+
+BLAKE2s (verboselogs-1.7.tar.gz) = 010f9483421dc456369cbe69b7cbe49445cfb77c0980930521f7529c70c5ff45
+SHA512 (verboselogs-1.7.tar.gz) = 13e96ac21e1cb5c68428b348bab63fc4d4ad34eaffe8e1554c05380f9115d2a3ccc6fa2e0a5ca8941e73bfb06537a3e46f29880e7ba3f47da0284279a9740211
+Size (verboselogs-1.7.tar.gz) = 10338 bytes
