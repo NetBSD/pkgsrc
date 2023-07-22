@@ -1,20 +1,21 @@
-$NetBSD: patch-Makefile.in,v 1.1 2016/05/25 12:41:17 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2023/07/22 10:09:06 adam Exp $
 
 * Do not install non-versioned pkgconfig pc files
   to coexist with graphics/ImageMagick
 
---- Makefile.in.orig	2016-05-21 12:14:51.000000000 +0000
+--- Makefile.in.orig	2023-07-16 11:15:23.000000000 +0000
 +++ Makefile.in
-@@ -4185,8 +4185,6 @@ MAGICK_BIN_SCRPTS = \
+@@ -4639,9 +4639,7 @@ MAGICK_BIN_SCRPTS = \
    magick/MagickCore-config
  
  MAGICK_PKGCONFIG = \
 -  magick/ImageMagick.pc \
--  magick/MagickCore.pc \
    magick/ImageMagick-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc \
+-  magick/MagickCore.pc \
    magick/MagickCore-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc
  
-@@ -4722,8 +4720,6 @@ WAND_BIN_SCRPTS = \
+ MAGICK_MANS = \
+@@ -5199,8 +5197,6 @@ WAND_BIN_SCRPTS = \
  	wand/MagickWand-config
  
  WAND_PKGCONFIG = \
@@ -23,7 +24,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2016/05/25 12:41:17 ryoon Exp $
  	wand/MagickWand-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc \
  	wand/Wand-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc
  
-@@ -4778,8 +4774,6 @@ MAGICKPP_MANS_OPT = \
+@@ -5255,8 +5251,6 @@ MAGICKPP_MANS_OPT = \
  	Magick++/bin/Magick++-config.1
  
  MAGICKPP_PKGCONFIG_OPT = \

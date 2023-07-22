@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2023/06/06 08:02:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2023/07/22 10:09:06 adam Exp $
 
 BUILDLINK_TREE+=	ImageMagick6
 
@@ -11,19 +11,19 @@ BUILDLINK_PKGSRCDIR.ImageMagick6?=	../../graphics/ImageMagick6
 pkgbase := ImageMagick6
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.ImageMagick6:Mdjvu)
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mdjvu}
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.ImageMagick6:Mjp2)
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mjp2}
 .include "../../graphics/openjpeg/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.ImageMagick6:Mopenexr)
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mopenexr}
 .include "../../graphics/openexr/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.ImageMagick6:Mwmf)
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mwmf}
 .include "../../graphics/libwmf/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.ImageMagick6:Mx11)
+.if ${PKG_BUILD_OPTIONS.ImageMagick6:Mx11}
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

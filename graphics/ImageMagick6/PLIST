@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/02/26 12:48:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/07/22 10:09:06 adam Exp $
 bin/Magick++-config6
 bin/Magick-config6
 bin/MagickCore-config6
@@ -151,7 +151,7 @@ include/ImageMagick-6/wand/pixel-iterator.h
 include/ImageMagick-6/wand/pixel-wand.h
 include/ImageMagick-6/wand/stream.h
 include/ImageMagick-6/wand/wand-view.h
-lib/ImageMagick-6.9.11/config-Q16/configure.xml
+lib/ImageMagick-6.9.12/config-Q16/configure.xml
 lib/libMagick++-6.Q16.la
 lib/libMagickCore-6.Q16.la
 lib/libMagickWand-6.Q16.la
