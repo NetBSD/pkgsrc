@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/07/22 02:15:16 triaxx Exp $
+# $NetBSD: Makefile,v 1.32 2023/07/22 10:55:16 triaxx Exp $
 
-DISTNAME=	openrct2-0.2.6
+DISTNAME=	openrct2-0.3.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2
@@ -15,10 +15,11 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++17
 
-GCC_REQD+=		9
-USE_CXX_FEATURES+=	c++17 filesystem
+# C++17
+GCC_REQD+=	9
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	-DENABLE_SCRIPTING=OFF
 
 CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 
@@ -37,6 +38,12 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 #        actual hash: [da39a3ee5e6b4b0d3255bfef95601890afd80709]
 #             status: [6;"Couldn't resolve host name"]
 #
+
+SUBST_CLASSES+=		doc
+SUBST_STAGE.doc=	pre-configure
+SUBST_MESSAGE.doc=	Fixing documentation path.
+SUBST_FILES.doc=	src/openrct2/platform/Platform.Linux.cpp
+SUBST_VARS.doc=		PREFIX
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
