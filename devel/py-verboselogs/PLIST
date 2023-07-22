@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/22 13:06:15 bacon Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/verboselogs/__init__.py
+${PYSITELIB}/verboselogs/__init__.pyc
+${PYSITELIB}/verboselogs/__init__.pyo
+${PYSITELIB}/verboselogs/pylint.py
+${PYSITELIB}/verboselogs/pylint.pyc
+${PYSITELIB}/verboselogs/pylint.pyo
+${PYSITELIB}/verboselogs/tests.py
+${PYSITELIB}/verboselogs/tests.pyc
+${PYSITELIB}/verboselogs/tests.pyo
