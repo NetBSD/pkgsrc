@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 10:14:17 nia Exp $
+$NetBSD: distinfo,v 1.31 2023/07/22 12:48:44 nia Exp $
 
 BLAKE2s (at-spi2-core-2.40.3.tar.xz) = dd0423b9c07a817ee8ab24d316d1f574cb61b69ed1fdd1f69c147ae1fedfb9de
 SHA512 (at-spi2-core-2.40.3.tar.xz) = 85adf3da0a369d7f3481646a495a9c4c3337da3ae6a20ce8c924f8621d3d6ed1d9461bfac0e821dfe86e4ad6b930e4fd65d24c26401cbea644ef4951e5dda5ce
 Size (at-spi2-core-2.40.3.tar.xz) = 197528 bytes
+SHA1 (patch-bus_meson.build) = 086a8113d887da65a245a958b95d5fc4bfca7025
