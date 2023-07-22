@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/06/05 20:35:45 abs Exp $
+# $NetBSD: Makefile,v 1.29 2023/07/22 08:46:23 nia Exp $
 
 DISTNAME=	lxqt-session-1.3.0
 PKGREVISION=	3
@@ -18,11 +18,6 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
-CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
-.endif
 
 AUTOSTART_CONF=		share/examples/autostart
 PKG_SYSCONFSUBDIR=	xdg
@@ -47,6 +42,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	qtxdg-tools>=3.9.1:../../x11/qtxdg-tools
 DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
 
+.include "options.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
