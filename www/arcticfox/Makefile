@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/07/06 14:14:38 abs Exp $
+# $NetBSD: Makefile,v 1.30 2023/07/22 10:31:38 nia Exp $
 
 DISTNAME=	arcticfox-41.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 starts, but crashes on some sites
-SSP_SUPPORTED=no
+SSP_SUPPORTED=		no
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -104,6 +104,7 @@ pre-configure:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src
 
 post-install:
+	${FIND} ${DESTDIR}${PREFIX} -name '*.a' -exec ${RM} '{}' ';'
 	${RM} -rf ${DESTDIR}${PREFIX}/include
 	${RM} -rf ${DESTDIR}${PREFIX}/share/idl
 	${INSTALL_DATA} ${WRKSRC}/browser/branding/arcticfox/default16.png \
