@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/22 09:57:53 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/22 09:59:25 nia Exp $
 
 DISTNAME=	advancemame-3.9
 CATEGORIES=	emulators
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--disable-oss
 
 .if ${OPSYS} == "Linux"
 ADVMAME_OPSYS=	linux
+.elif ${OPSYS} == "Darwin"
+ADVMAME_OPSYS=	darwin
 .else
 ADVMAME_OPSYS=	generic
 .endif
