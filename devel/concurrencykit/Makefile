@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/07/25 19:47:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/23 13:46:45 yhardy Exp $
 
-DISTNAME=	ck-0.6.0
+DISTNAME=	ck-0.7.1
 CATEGORIES=	devel
-MASTER_SITES=	http://concurrencykit.org/releases/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=concurrencykit/}
+GITHUB_PROJECT=	ck
+GITHUB_TAG=	0.7.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://concurrencykit.org/
