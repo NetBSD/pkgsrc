@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4566 2023/07/23 05:52:44 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.4567 2023/07/23 06:51:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6353,3 +6353,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cogapp to 3.3.0 [yhardy 2023-07-22]
 	Updated pkgtools/python-versions-check to 1.5 [wiz 2023-07-23]
 	Updated sysutils/packer to 1.9.2 [iquiw 2023-07-23]
+	Updated cad/klayout to 0.28.10 [mef 2023-07-23]
