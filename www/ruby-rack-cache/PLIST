@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/03/15 16:18:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/23 13:59:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -19,4 +19,5 @@ ${GEM_LIBDIR}/lib/rack/cache/options.rb
 ${GEM_LIBDIR}/lib/rack/cache/request.rb
 ${GEM_LIBDIR}/lib/rack/cache/response.rb
 ${GEM_LIBDIR}/lib/rack/cache/storage.rb
+${GEM_LIBDIR}/lib/rack/cache/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
