@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/07/23 10:17:23 bsiegert Exp $
+
+Add check for strlcpy and strlcat.
+
+--- configure.ac.orig	2012-07-02 14:50:46.000000000 +0000
++++ configure.ac
+@@ -43,7 +43,7 @@ AC_TYPE_SIGNAL
+ AC_FUNC_STRTOD
+ AC_FUNC_VPRINTF
+ AC_CHECK_FUNCS([dup2 getcwd gethostname regcomp setenv strcasecmp strchr strcspn strdup strncasecmp strndup strrchr strstr strcasestr strtol])
+-
++AC_CHECK_FUNCS([strlcpy strlcat])
+ 
+ ETCSEARCHPATH=${prefix}/etc:/usr/etc:/usr/local/etc
+ LIBSEARCHPATH=${libdir}:/usr/lib:/usr/lib64:/usr/local/lib:${prefix}/libexec:/usr/libexec:/usr/local/libexec

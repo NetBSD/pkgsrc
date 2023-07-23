@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2023/07/23 10:17:23 bsiegert Exp $
+
+Install config files to EGDIR.
+
+--- Makefile.am.orig	2012-07-02 14:50:46.000000000 +0000
++++ Makefile.am
+@@ -14,7 +14,7 @@ SRC=@srcdir@
+ BINDIR=$(bindir)
+ SBINDIR=$(sbindir)
+ MANDIR=$(mandir)
+-ETCDIR=$(sysconfdir)/foomatic
++ETCDIR=$(prefix)/share/examples/foomatic
+ INSTALL=@INSTALL@
+ 
+ # Paths for CUPS
