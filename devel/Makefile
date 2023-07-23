@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4033 2023/07/22 13:10:33 bacon Exp $
+# $NetBSD: Makefile,v 1.4034 2023/07/23 09:58:36 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -470,6 +470,7 @@ SUBDIR+=	got
 SUBDIR+=	got-portable
 SUBDIR+=	gotags
 SUBDIR+=	gotests
+SUBDIR+=	govulncheck
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
 SUBDIR+=	gputils
