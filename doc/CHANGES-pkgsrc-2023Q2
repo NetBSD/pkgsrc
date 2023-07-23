@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.6 2023/07/16 18:07:26 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.7 2023/07/23 08:35:20 spz Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -43,4 +43,7 @@ www/arcticfox: sparc64 and alpha build fix
 Pullup ticket #6780 - requested by nia
 www/firefox102: security fix
 www/firefox102-l10n: dependent update
+
+Pullup ticket #6776 - requested by bsiegert
+print/ghostscript-agpl: security update
 
