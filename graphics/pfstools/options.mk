@@ -1,20 +1,22 @@
-# $NetBSD: options.mk,v 1.8 2019/12/15 21:32:52 adam Exp $
+# $NetBSD: options.mk,v 1.9 2023/07/23 21:47:15 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pfstools
-PKG_SUPPORTED_OPTIONS=		imagemagick octave opengl qt
+PKG_SUPPORTED_OPTIONS=		octave opengl qt
 PKG_SUGGESTED_OPTIONS.Darwin+=	opengl
 
-PLIST_VARS+=	im octave gl qt
+PLIST_VARS+=	octave gl qt
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mimagemagick)
-.include "../../graphics/ImageMagick6/buildlink3.mk"
-PLIST.im=	yes
-CMAKE_ARGS+=	-DWITH_ImageMagick=ON
-.else
+# ImageMagick-6 detection does not work in Modules/FindImageMagick.cmake
+# and ImageMagic-7 has incompatible API.
+#.if !empty(PKG_OPTIONS:Mimagemagick)
+#.include "../../graphics/ImageMagick6/buildlink3.mk"
+#PLIST.im=	yes
+#CMAKE_ARGS+=	-DWITH_ImageMagick=ON
+#.else
 CMAKE_ARGS+=	-DWITH_ImageMagick=OFF
-.endif
+#.endif
 
 .if !empty(PKG_OPTIONS:Moctave)
 .include "../../math/octave/buildlink3.mk"

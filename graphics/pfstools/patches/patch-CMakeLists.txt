@@ -1,10 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/08/25 20:16:31 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2023/07/23 21:47:15 adam Exp $
 
 Make use of PKGMANDIR.
+Fix for OpenEXR 3.
 
---- CMakeLists.txt.orig	2015-07-16 20:53:21.000000000 +0000
+--- CMakeLists.txt.orig	2021-08-12 09:36:11.000000000 +0000
 +++ CMakeLists.txt
-@@ -29,7 +29,7 @@ set (pfstools_VERSION_MINOR 0.0)
+@@ -35,7 +35,7 @@ set (pfstools_VERSION_MINOR ${CPACK_PACK
  set (pfslib_version 1.2)
  set(CMAKE_LEGACY_CYGWIN_WIN32 0)
   
@@ -13,3 +14,14 @@ Make use of PKGMANDIR.
  
  include( CheckCXXSourceCompiles )
  
+@@ -106,8 +106,8 @@ OPTION(WITH_OpenEXR "Compile with OpenEX
+ 
+ if( WITH_OpenEXR )
+ 
+-find_package (OpenEXR)
+-if( NOT OPENEXR_FOUND )
++find_package (OpenEXR CONFIG REQUIRED)
++if( NOT OpenEXR_FOUND )
+ MESSAGE( STATUS "OpenEXR not found. The following command will not be
+ compiled: pfsinexr pfsoutexr. " )
+ endif( NOT OPENEXR_FOUND )
