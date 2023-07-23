@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/23 02:09:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/23 02:09:54 wiz Exp $
 
 DISTNAME=	rich-click-1.6.1
 PKGNAME=	${PYPKGPREFIX}-rich-click-1.6.1
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-click>0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-rich>0:../../comms/py-rich
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
