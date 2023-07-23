@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/07/23 16:02:22 leot Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/23 16:04:48 leot Exp $
 
+# XXX: excuse to commit, remove this comment next time!
 DISTNAME=	nuclei-2.9.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
