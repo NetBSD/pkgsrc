@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/22 12:33:55 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/23 01:56:19 wiz Exp $
 
 DISTNAME=	capturer-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-humanfriendly>=8.0:../../textproc/py-humanfriendly
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.4:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov 
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
