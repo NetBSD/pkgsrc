@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/22 13:23:46 bacon Exp $
-#
+# $NetBSD: Makefile,v 1.5 2023/07/23 02:10:54 wiz Exp $
 
 DISTNAME=	rna-seq-1.2
 CATEGORIES=	biology meta-pkgs
@@ -21,6 +20,8 @@ DEPENDS+=	webbrowser>=0:../../www/webbrowser
 DEPENDS+=	${PYPKGPREFIX}-multiqc-[0-9]*:../../biology/py-multiqc
 
 META_PACKAGE=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
