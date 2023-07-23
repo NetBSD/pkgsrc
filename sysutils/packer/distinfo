@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/06/03 01:32:06 iquiw Exp $
+$NetBSD: distinfo,v 1.4 2023/07/23 05:51:54 iquiw Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -1320,12 +1320,6 @@ Size (github.com_hashicorp_packer-plugin-googlecompute_@v_v1.1.0.mod) = 4538 byt
 BLAKE2s (github.com_hashicorp_packer-plugin-googlecompute_@v_v1.1.0.zip) = 54968bc9e1f87197d552546ad98fb65334efbe527731e5fd10da705710e4d69b
 SHA512 (github.com_hashicorp_packer-plugin-googlecompute_@v_v1.1.0.zip) = 7acf52033f30d101120f421e5e2c384b3ed7b6319fd1cb4ec35fd2277d0928688c16b7b335d4923d25910b6b682676c892dd6139da164a3a2a752fae6964b4b2
 Size (github.com_hashicorp_packer-plugin-googlecompute_@v_v1.1.0.zip) = 185181 bytes
-BLAKE2s (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.mod) = 661d3fd53d724cee099145bfe8314df9f1a1207782e2a5a26d2a0283e31bf832
-SHA512 (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.mod) = be61501be7bd714d32796985372814777ab8581d15a17ffd70f013f5c87a2a06b3a9ee558d6f2412977668fd575168b68867093af6a8f2dec36cdbe8c5876446
-Size (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.mod) = 4415 bytes
-BLAKE2s (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.zip) = 8bb39ca9cb3d27c0bce8fa869c2694f672ee0c86ca9699f4911281f1a3f4d6ca
-SHA512 (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.zip) = 1c08c6aaf0d9f14be402ab1803c086490665e4332fd878be3afcc30d08b47afeb6f00184fa07d0cf5cd4349744cbdd0516b9c4ff0a29624d0cfa4cb651d49e4d
-Size (github.com_hashicorp_packer-plugin-parallels_@v_v1.0.3.zip) = 156400 bytes
 BLAKE2s (github.com_hashicorp_packer-plugin-qemu_@v_v1.0.9.mod) = 2877d7cf896ca4488b6a792fe3debd02de41dbedad2209f002991100e1d15964
 SHA512 (github.com_hashicorp_packer-plugin-qemu_@v_v1.0.9.mod) = d42671c1394b7565713129f95f0046c545b396d2e6d124307f735dd17a6465eb7546b9d5ed63b8e4bdbb0470d9249eccde43a6129e63b007227a7c56af27b4d3
 Size (github.com_hashicorp_packer-plugin-qemu_@v_v1.0.9.mod) = 4860 bytes
@@ -2991,6 +2985,6 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
-BLAKE2s (packer-1.9.1.tar.gz) = 75cab51d8e00cbc20228abbb0793cee91bc35545ab250e8e27ab551044854fac
-SHA512 (packer-1.9.1.tar.gz) = c24ba1ccb4e0c7ad147482040363e910b1c1d9a47503194fcf744e397c148d93bcf5364f2d3cb673db5c3f9b2b468f3e7488cb982c506fa0ebc982ca1a16b2a1
-Size (packer-1.9.1.tar.gz) = 2297254 bytes
+BLAKE2s (packer-1.9.2.tar.gz) = 14b77ad23c6ca3064454f571e5ba9bbada8708eac125159ebba2cd15bf0f5350
+SHA512 (packer-1.9.2.tar.gz) = e0d246571a5bac72a40eb1cea00572119bb0b3b5d8b3b40a74e0e47baca713b25fe3fd81a8e799ca5ec83be3d6d9d1be1b1e2309e3119f290c216a1a3c8db398
+Size (packer-1.9.2.tar.gz) = 2300541 bytes
