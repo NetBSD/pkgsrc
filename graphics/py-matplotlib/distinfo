@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.55 2023/07/20 14:46:43 bacon Exp $
+$NetBSD: distinfo,v 1.56 2023/07/23 14:43:02 bacon Exp $
 
 BLAKE2s (matplotlib-3.7.2.tar.gz) = 64843ae84c2d9270682380569fef63795b56178e695e74b845c37ebd654bcd30
 SHA512 (matplotlib-3.7.2.tar.gz) = 3ddb223c869c01cf71ab65a628a3c996eed1ff8b2375c02e3158a5750652a5d8277a55706e50890c15c14c7a104db01f01b01ca8964f85b6ffec104fc273872d
 Size (matplotlib-3.7.2.tar.gz) = 38095843 bytes
-SHA1 (patch-environment.yml) = a86cf81f749f862f65af7fda1b4b7e7a2601cfa0
-SHA1 (patch-lib_matplotlib.egg-info_requires.txt) = c4ed622c0cc799352c7ed9f31986f7efba4591f5
+SHA1 (patch-environment.yml) = ee90f3806410c05d4396f8ab6e2ce2f07385f41e
+SHA1 (patch-lib_matplotlib.egg-info_requires.txt) = 444dc332ccba024b7320334cf237773ff0ab2a97
 SHA1 (patch-mplsetup.cfg) = 06bf93f112ab4ed4604179c1cc7fd2bdee62b56d
-SHA1 (patch-setup.py) = 8e370514af5577677b05c6362792664b5762853a
+SHA1 (patch-setup.py) = f8c1b72e7ac1acefb324b53bb60b2f7de4aae3e8
