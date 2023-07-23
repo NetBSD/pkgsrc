@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/20 14:23:56 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/23 02:09:36 wiz Exp $
 
 DISTNAME=	rich-click-1.6.1
 PKGNAME=	${PYPKGPREFIX}-rich-click-1.6.1
@@ -10,8 +10,8 @@ HOMEPAGE=	https://pypi.python.org/project/rich-click/
 COMMENT=	Format click help output nicely with rich
 LICENSE=	mit
 
-DEPENDS=	${PYPKGPREFIX}-click>0:../../devel/py-click \
-		${PYPKGPREFIX}-rich>0:../../comms/py-rich
+DEPENDS+=	${PYPKGPREFIX}-click>0:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-rich>0:../../comms/py-rich
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
