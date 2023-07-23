@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4592 2023/07/23 21:16:08 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.4593 2023/07/23 21:47:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6380,3 +6380,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hgrep to 0.3.3 [pin 2023-07-23]
 	Updated sysutils/felix to 2.6.0 [pin 2023-07-23]
 	Updated games/openrct2 to 0.3.0nb1 [triaxx 2023-07-23]
+	Updated graphics/luminance-hdr to 2.6.1.1 [adam 2023-07-23]
+	Updated graphics/pfstools to 2.2.0 [adam 2023-07-23]
