@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2023/06/03 01:32:06 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/07/23 05:51:54 iquiw Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.105.0.mod
@@ -440,8 +440,6 @@ GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-docker/@v/v1.0.8.mod
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-docker/@v/v1.0.8.zip
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-googlecompute/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-googlecompute/@v/v1.1.0.zip
-GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-parallels/@v/v1.0.3.mod
-GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-parallels/@v/v1.0.3.zip
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-qemu/@v/v1.0.9.mod
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-qemu/@v/v1.0.9.zip
 GO_MODULE_FILES+=	github.com/hashicorp/packer-plugin-sdk/@v/v0.4.0.mod
