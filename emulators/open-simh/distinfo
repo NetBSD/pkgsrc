@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/05/18 19:30:09 rhialto Exp $
+$NetBSD: distinfo,v 1.7 2023/07/23 15:44:25 rhialto Exp $
 
-BLAKE2s (open-simh-4.1.0-793149d1bdf6fcdbf9ad54632285e3bd13b9e1c8.tar.gz) = 6fe046ace4cf269ab20ada7f9aaa321aad93a6455f1e9ca390b6c427f92ff79f
-SHA512 (open-simh-4.1.0-793149d1bdf6fcdbf9ad54632285e3bd13b9e1c8.tar.gz) = a735fc8fa70645e61f945318401ea15ddeab390996d06a4cf0c74fb479dcde87a9e9c5ae0f9f30a9f041885df874f754ec12ecea7e2b6e4a018eda0c6ca8f06a
-Size (open-simh-4.1.0-793149d1bdf6fcdbf9ad54632285e3bd13b9e1c8.tar.gz) = 31601083 bytes
-SHA1 (patch-makefile) = 1958d111733c76b3cb1bff838278ec9cd5313dbf
+BLAKE2s (open-simh-4.1.0-cf47a20fd459d63be6c2e5a4728f2d2a31eaf884.tar.gz) = 786d1e57e30ced7b7f89758f5b997e855c18a3a8e1240e9b94ebc5cc610d23ef
+SHA512 (open-simh-4.1.0-cf47a20fd459d63be6c2e5a4728f2d2a31eaf884.tar.gz) = a5ab7f531911f3200af4351a117bf7f7d01bb206a6f84d3319e449d35214ac214d9a9f08cd7f734d0c1994e54dec8409ce64615d395897a10cc6102015a5f4c1
+Size (open-simh-4.1.0-cf47a20fd459d63be6c2e5a4728f2d2a31eaf884.tar.gz) = 31207679 bytes
+SHA1 (patch-makefile) = 2feca1d40a5657c3b9f5fe9f2418826abb3163bf

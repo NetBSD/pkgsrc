@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2023/05/18 19:30:09 rhialto Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/23 15:44:25 rhialto Exp $
 
 DISTNAME=	open-simh-4.1.0
-PKGNAME=	open-simh-4.1.0.20230511
+PKGNAME=	open-simh-4.1.0.20230717
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	793149d1bdf6fcdbf9ad54632285e3bd13b9e1c8
+GITHUB_TAG=	cf47a20fd459d63be6c2e5a4728f2d2a31eaf884
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -95,6 +95,7 @@ do-install:
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do \
 		${INSTALL_DATA} "$$TXT" ${DESTDIR}${PREFIX}/share/doc/simh; \
 	done)
+	rm ${DESTDIR}${PREFIX}/share/doc/simh/CMakeLists.txt
 
 # Note: tests require shm (/var/shm is a tmpfs) for the uc15.
 # They are part of the build and can't be run separately.
