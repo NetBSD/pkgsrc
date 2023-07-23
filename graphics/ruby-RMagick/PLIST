@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.36 2022/11/30 14:33:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.37 2023/07/23 12:18:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.devcontainer/Dockerfile
 ${GEM_LIBDIR}/.devcontainer/ImageMagick6/devcontainer.json
 ${GEM_LIBDIR}/.devcontainer/devcontainer.json
