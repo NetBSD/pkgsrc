@@ -1,6 +1,8 @@
-$NetBSD: patch-setup.py,v 1.5 2023/07/20 14:46:43 bacon Exp $
+$NetBSD: patch-setup.py,v 1.6 2023/07/23 14:43:02 bacon Exp $
 
 # Hack to allow apps to run despite known issues
+# Remove this patch when the upstream issue is fixed
+# https://github.com/matplotlib/matplotlib/issues/26152
 
 --- setup.py.orig	2023-07-20 13:08:02.696854685 +0000
 +++ setup.py
