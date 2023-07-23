@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:12:06 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/23 10:17:23 bsiegert Exp $
 
-BLAKE2s (foomatic-filters-3.0.2.tar.gz) = 214ff6154f1a162ba5bfc3da653839f1fa8e7bf316657952f4f1c730b5f65aa4
-SHA512 (foomatic-filters-3.0.2.tar.gz) = 6159531f004e18e5f8ec822befc5c6c26a98103ede4fd18a661fdeeb0054700dae2aabec57de43e275c18718d8e3a3ed3abd5dd8a9e809a5ee1453b69de7f0c2
-Size (foomatic-filters-3.0.2.tar.gz) = 125875 bytes
-SHA1 (patch-aa) = 4b471d5fec7147d82eba47512bf851ed0b9d97a3
-SHA1 (patch-foomatic-gswrapper.in) = 7622c2e1e6e21b996207d74414d29c36012e2867
-SHA1 (patch-makeMan.in) = 2e317a37ae0f605f57a15555003b09dcc4b53f79
+BLAKE2s (foomatic-filters-4.0.17.tar.gz) = 918beef56eeed1c796cd9defc1d60c69840e068d2f6fd5392feb98fdd5b14875
+SHA512 (foomatic-filters-4.0.17.tar.gz) = f07d2ac64a28e9353418deb9dd2009f5ef7676ab268af211edfcd012c231c9081516dae450f2b7910b687f75f7e53c8198fda2508f3fd527120940b4905292dd
+Size (foomatic-filters-4.0.17.tar.gz) = 266276 bytes
+SHA1 (patch-Makefile.am) = fa8b549d58171299fe8921fe31b5c27ddaa11538
+SHA1 (patch-configure.ac) = 9cefd7a9f3fb1ff07c247e69a0bf3c678c1f1841
+SHA1 (patch-process.c) = 6eb16c17153b1435a26d8b3c56677f06eacb809f
+SHA1 (patch-util.c) = de0732672e510cb13432f89aebd4bcd74a92c84e
+SHA1 (patch-util.h) = ca0bdade982b07eb0302bb1647304775cc0e912a
