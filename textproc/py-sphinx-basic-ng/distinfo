@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/07/23 11:28:34 schmonz Exp $
+
+BLAKE2s (sphinx_basic_ng-1.0.0b2.tar.gz) = 313666844f51d1c245a87df2b4774abc775670ab0aae2083234e863e99451dbc
+SHA512 (sphinx_basic_ng-1.0.0b2.tar.gz) = 2676f80ed15e37ea2f48bbc01251ce511bae8756dab8d74c3628e8d6164a346531f00ea17c73b5d8f76a37cd722536586b4291854a7907f60ebe2b690545cb07
+Size (sphinx_basic_ng-1.0.0b2.tar.gz) = 20736 bytes
