@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/07/23 10:17:23 bsiegert Exp $
 #
 # used by print/foomatic-filters/Makefile
 # used by print/foomatic-filters-cups/Makefile
 
-FOOMATIC_FILTERS_VERSION=	3.0.2
+FOOMATIC_FILTERS_VERSION=	4.0.17
 CATEGORIES=			print
 HOMEPAGE=			http://www.linuxprinting.org/foomatic.html
