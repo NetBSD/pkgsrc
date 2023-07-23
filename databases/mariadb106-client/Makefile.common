@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2023/07/19 21:53:19 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/07/23 09:29:52 nia Exp $
 #
 # used by databases/mariadb106-client/Makefile
 # used by databases/mariadb106-server/Makefile
@@ -84,6 +84,12 @@ CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
 CMAKE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 .endif
 
+.include "../../mk/curses.buildlink3.mk"
+
+.if !empty(CURSES_TYPE:M*ncurses*)
+CMAKE_ARGS+=		-DCURSES_NEED_NCURSES=ON
+.endif
+
 .if !empty(CURSES_TYPE:M*ncursesw*)
 CMAKE_ARGS+=		-DCURSES_NEED_WIDE=ON
 .endif
@@ -116,7 +122,6 @@ PKGCONFIG_OVERRIDE+=	libmariadb/mariadb_config/libmariadb.pc.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/krb5.buildlink3.mk"
