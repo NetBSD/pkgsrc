@@ -1,0 +1,26 @@
+$NetBSD: patch-src_fileformat_CMakeLists.txt,v 1.1 2023/07/23 21:47:15 adam Exp $
+
+Fix for OpenEXR 3.
+
+--- src/fileformat/CMakeLists.txt.orig	2021-08-12 09:36:13.000000000 +0000
++++ src/fileformat/CMakeLists.txt
+@@ -67,16 +67,15 @@ target_link_libraries(pfsoutpfm pfs)
+ install (TARGETS pfsoutpfm DESTINATION bin)
+ install (FILES pfsoutpfm.1 DESTINATION ${MAN_DIR})
+ 
+-if( OPENEXR_FOUND )
+-    include_directories("${OPENEXR_INCLUDE_DIR}")
++if( OpenEXR_FOUND )
+ 
+     add_executable(pfsinexr pfsinexr.cpp "${GETOPT_OBJECT}")
+-    target_link_libraries(pfsinexr pfs ${OPENEXR_LIBRARIES})
++    target_link_libraries(pfsinexr pfs OpenEXR::OpenEXR)
+     install (TARGETS pfsinexr DESTINATION bin)
+     install (FILES pfsinexr.1 DESTINATION ${MAN_DIR})
+ 
+     add_executable(pfsoutexr pfsoutexr.cpp "${GETOPT_OBJECT}")
+-    target_link_libraries(pfsoutexr pfs ${OPENEXR_LIBRARIES})
++    target_link_libraries(pfsoutexr pfs OpenEXR::OpenEXR)
+     install (TARGETS pfsoutexr DESTINATION bin)
+     install (FILES pfsoutexr.1 DESTINATION ${MAN_DIR})
+  endif( OPENEXR_FOUND )
