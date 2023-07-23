@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4578 2023/07/23 13:51:44 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4579 2023/07/23 13:53:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/concurrencykit to 0.7.1 [yhardy 2023-07-23]
 	Updated sysutils/ruby-puppet-resource_api to 1.8.18 [taca 2023-07-23]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.6.39 [taca 2023-07-23]
+	Updated www/ruby-aws-partitions to 1.791.0 [taca 2023-07-23]
