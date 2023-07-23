@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/07/25 19:47:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/23 13:46:45 yhardy Exp $
 include/ck_array.h
 include/ck_backoff.h
 include/ck_barrier.h
@@ -7,6 +7,7 @@ include/ck_brlock.h
 include/ck_bytelock.h
 include/ck_cc.h
 include/ck_cohort.h
+include/ck_ec.h
 include/ck_elide.h
 include/ck_epoch.h
 include/ck_fifo.h
@@ -48,6 +49,8 @@ include/gcc/ppc/ck_f_pr.h
 include/gcc/ppc/ck_pr.h
 include/gcc/ppc64/ck_f_pr.h
 include/gcc/ppc64/ck_pr.h
+include/gcc/s390x/ck_f_pr.h
+include/gcc/s390x/ck_pr.h
 include/gcc/sparcv9/ck_f_pr.h
 include/gcc/sparcv9/ck_pr.h
 include/gcc/x86/ck_f_pr.h
