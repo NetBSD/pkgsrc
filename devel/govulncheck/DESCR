@@ -1,0 +1,8 @@
+Govulncheck is a low-noise tool that helps you find and fix vulnerable
+dependencies in your Go projects. It does this by scanning your
+project's dependencies for known vulnerabilities and then identifying
+any direct or indirect calls to those vulnerabilities in your code.
+
+To run govulncheck inside your module, run:
+
+govulncheck ./...
