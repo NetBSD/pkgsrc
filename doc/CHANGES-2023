@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4590 2023/07/23 19:08:37 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4591 2023/07/23 19:09:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6378,3 +6378,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/mikutter to 5.0.4nb4 [tsutsui 2023-07-23]
 	Updated shells/oh-my-posh to 17.12.1 [pin 2023-07-23]
 	Updated textproc/hgrep to 0.3.3 [pin 2023-07-23]
+	Updated sysutils/felix to 2.6.0 [pin 2023-07-23]
