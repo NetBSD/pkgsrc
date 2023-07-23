@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2023/01/03 17:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/23 17:02:03 tsutsui Exp $
 
-DISTNAME=	libwebp-1.2.4
-PKGREVISION=	1
+DISTNAME=	libwebp-1.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/downloads.webmproject.org/releases/webp/
 
@@ -27,6 +26,7 @@ CONFIGURE_ARGS+=	--enable-libwebpmux
 CPPFLAGS+=	-D__pic__
 .endif
 
+PKGCONFIG_OVERRIDE+=	sharpyuv/libsharpyuv.pc.in
 PKGCONFIG_OVERRIDE+=	src/demux/libwebpdemux.pc.in
 PKGCONFIG_OVERRIDE+=	src/libwebp.pc.in
 PKGCONFIG_OVERRIDE+=	src/libwebpdecoder.pc.in
