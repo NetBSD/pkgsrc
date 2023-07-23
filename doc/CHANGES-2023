@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4570 2023/07/23 10:44:31 leot Exp $
+$NetBSD: CHANGES-2023,v 1.4571 2023/07/23 10:57:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6358,3 +6358,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/foomatic-filters to 4.0.17 [bsiegert 2023-07-23]
 	Updated print/foomatic-filters-cups to 4.0.17 [bsiegert 2023-07-23]
 	Updated security/tlsx to 1.1.1 [leot 2023-07-23]
+	Updated security/subfinder to 2.6.1 [leot 2023-07-23]
