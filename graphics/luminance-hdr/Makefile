@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2023/07/01 22:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2023/07/23 21:00:18 adam Exp $
 
-DISTNAME=	luminance-hdr-2.6.0
-PKGREVISION=	32
+DISTNAME=	luminance-hdr-2.6.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtpfsgui/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,18 +10,20 @@ HOMEPAGE=	http://qtpfsgui.sourceforge.net/
 COMMENT=	GUI application that aims to provide a workflow for HDR imaging
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DQt5WebEngineCore_FOUND=FALSE
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cfitsio/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
@@ -30,6 +31,6 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
-CMAKE_ARGS+=	-DQt5WebEngineCore_FOUND=FALSE
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

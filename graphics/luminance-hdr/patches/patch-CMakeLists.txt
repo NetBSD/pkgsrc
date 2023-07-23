@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2023/07/19 08:05:51 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2023/07/23 21:00:18 adam Exp $
 
 openexr3 fix
 
---- CMakeLists.txt.orig	2019-06-09 19:18:38.000000000 +0000
+--- CMakeLists.txt.orig	2021-01-11 09:41:28.000000000 +0000
 +++ CMakeLists.txt
 @@ -188,7 +188,7 @@ INCLUDE_DIRECTORIES(${TIFF_INCLUDE_DIR})
  FIND_PACKAGE(PNG REQUIRED)
@@ -13,3 +13,28 @@ openexr3 fix
  INCLUDE_DIRECTORIES(${OPENEXR_INCLUDE_DIR} "${OPENEXR_INCLUDE_DIR}/OpenEXR")
  
  FIND_PACKAGE(GSL REQUIRED)
+@@ -272,7 +272,7 @@ SET(LUMINANCE_FILES
+     ${LUMINANCE_QM})
+ 
+ # MacOSX
+-IF(APPLE)
++IF(FALSE)
+     SET(CMAKE_INSTALL_PREFIX ".")
+ 
+     # Set Bundle settings
+@@ -399,10 +399,15 @@ ELSEIF(UNIX)
+     TARGET_LINK_LIBRARIES(luminance-hdr-cli Qt5::Core Qt5::Gui Qt5::Widgets)
+ 
+     # link libraries
++    if(APPLE)
++    TARGET_LINK_LIBRARIES(luminance-hdr ${LUMINANCE_MODULES_GUI} ${LIBS})
++    TARGET_LINK_LIBRARIES(luminance-hdr-cli ${LUMINANCE_MODULES_CLI} ${LIBS})
++    else()
+     TARGET_LINK_LIBRARIES(luminance-hdr -Xlinker --start-group ${LUMINANCE_MODULES_GUI} -Xlinker --end-group)
+     TARGET_LINK_LIBRARIES(luminance-hdr-cli -Xlinker --start-group ${LUMINANCE_MODULES_CLI} -Xlinker --end-group)
+     TARGET_LINK_LIBRARIES(luminance-hdr ${LIBS})
+     TARGET_LINK_LIBRARIES(luminance-hdr-cli ${LIBS})
++    endif()
+ 
+     # make install directivies
+     INSTALL(TARGETS luminance-hdr RUNTIME DESTINATION bin) # main GUI exec
