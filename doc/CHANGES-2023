@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4575 2023/07/23 12:18:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4576 2023/07/23 13:47:03 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6363,3 +6363,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-console to 1.18.0 [taca 2023-07-23]
 	Updated devel/ruby-msgpack to 1.7.2 [taca 2023-07-23]
 	Updated graphics/ruby-RMagick to 5.3.0 [taca 2023-07-23]
+	Updated devel/concurrencykit to 0.7.1 [yhardy 2023-07-23]
