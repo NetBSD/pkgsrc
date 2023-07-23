@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4586 2023/07/23 16:38:28 leot Exp $
+$NetBSD: CHANGES-2023,v 1.4587 2023/07/23 17:02:20 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6374,3 +6374,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/nuclei to 2.9.9 [leot 2023-07-23]
 	Updated devel/opa to 0.54.0 [leot 2023-07-23]
 	Updated devel/conftest to 0.44.1 [leot 2023-07-23]
+	Updated graphics/libwebp to 1.3.1 [tsutsui 2023-07-23]
