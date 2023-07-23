@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/11/20 17:26:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/23 17:02:03 tsutsui Exp $
 bin/cwebp
 bin/dwebp
 bin/gif2webp
@@ -10,11 +10,15 @@ include/webp/demux.h
 include/webp/encode.h
 include/webp/mux.h
 include/webp/mux_types.h
+include/webp/sharpyuv/sharpyuv.h
+include/webp/sharpyuv/sharpyuv_csp.h
 include/webp/types.h
+lib/libsharpyuv.la
 lib/libwebp.la
 lib/libwebpdecoder.la
 lib/libwebpdemux.la
 lib/libwebpmux.la
+lib/pkgconfig/libsharpyuv.pc
 lib/pkgconfig/libwebp.pc
 lib/pkgconfig/libwebpdecoder.pc
 lib/pkgconfig/libwebpdemux.pc
