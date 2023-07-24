@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/09/08 07:44:36 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/07/24 18:51:09 adam Exp $
 
-BLAKE2s (pytest-randomly-3.12.0.tar.gz) = 5bfe9a68ed40de7c4505a799c9fbea8dfbf850542c95f0b1a7068d111491ec43
-SHA512 (pytest-randomly-3.12.0.tar.gz) = dcfa7a3438729cf81d3473461397cf309d751a72542ad0d6d5892f87a00f03c160e1689f50d2533598913638ddfa9e3dbe970a8e666c07442f2651507f0fd7c0
-Size (pytest-randomly-3.12.0.tar.gz) = 21487 bytes
+BLAKE2s (pytest_randomly-3.13.0.tar.gz) = 0c921203b0128360b33b02a1e954fb946815f457478ab2599d3955f07f9e268d
+SHA512 (pytest_randomly-3.13.0.tar.gz) = ae08e12ee2398bd6183ef7b68a5ac83174d026a76c5461836ebf584c8a99c617b6429ceb42505dc2606b43cf3c12026acb3f7f5a2dc508068d4b040bc6244c19
+Size (pytest_randomly-3.13.0.tar.gz) = 21465 bytes
