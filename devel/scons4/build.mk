@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.4 2023/06/08 12:19:15 gdt Exp $
+# $NetBSD: build.mk,v 1.5 2023/07/24 16:40:47 wiz Exp $
 #
 # This Makefile fragment supports building using the SCons build tool.
 #
@@ -13,8 +13,16 @@
 # SCONS_INSTALL_ARGS
 #	Arguments to pass to SCons during installation: Default: empty
 #
+# SCONS_DO_INSTALL
+#	Use scons' install target. (Some scons scripts do not provide this.)
+#	Default: yes
+#
 
-PYTHON_FOR_BUILD_ONLY?=	tool
+PYTHON_FOR_BUILD_ONLY?=		tool
+# scons4 does not support Python 2
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
+
+SCONS_DO_INSTALL?=	yes
 
 .include "../../lang/python/pyversion.mk"
 
@@ -40,13 +48,16 @@ do-test: scons-test
 scons-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${SCONSBIN} ${_SCONS_TEST_ARGS} check
 
+.if ${SCONS_DO_INSTALL} == "yes"
 do-install: scons-install
 scons-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${SCONSBIN} ${_SCONS_INSTALL_ARGS} install
+.endif
 
 _VARGROUPS+=		scons
 _PKG_VARS.scons+=	PYPKGPREFIX
 _PKG_VARS.scons+=	SCONS_BUILD_ARGS
+_PKG_VARS.scons+=	SCONS_DO_INSTALL
 _PKG_VARS.scons+=	SCONS_TEST_ARGS
 _PKG_VARS.scons+=	SCONS_INSTALL_ARGS
 _PKG_VARS.scons+=	SCONSBIN
@@ -54,6 +65,7 @@ _PKG_VARS.scons+=	_SCONS_BUILD_ARGS
 _PKG_VARS.scons+=	_SCONS_TEST_ARGS
 _PKG_VARS.scons+=	_SCONS_INSTALL_ARGS
 _IGN_VARS.scons+=	MAKE_JOBS PREFIX WRKSRC PYVERSSUFFIX PYTHON_FOR_BUILD_ONLY
+_IGN_VARS.scons+=	PYTHON_VERSIONS_INCOMPATIBLE
 _IGN_VARS.scons+=	SETENV TOOL_DEPENDS MAKE_ENV TEST_ENV INSTALL_ENV
 #_LISTED_VARS.scons+=	*_ARGS
 #_SORTED_VARS.scons+=	*_ENV
