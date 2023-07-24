@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/29 08:44:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/24 04:55:34 adam Exp $
 
-DISTNAME=	versioneer-0.28
+DISTNAME=	versioneer-0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/versioneer/}
@@ -11,6 +11,8 @@ COMMENT=	Version-string management for VCS-controlled trees
 LICENSE=	unlicense
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
