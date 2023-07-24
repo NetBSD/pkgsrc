@@ -1,0 +1,15 @@
+$NetBSD: patch-liboriutil_SConscript,v 1.1 2023/07/24 16:52:45 wiz Exp $
+
+Support Python 3.
+
+--- liboriutil/SConscript.orig	2019-01-28 01:12:19.000000000 +0000
++++ liboriutil/SConscript
+@@ -25,7 +25,7 @@ src = [
+ if os.name == 'posix':
+     src += ['mutex_posix.cc', 'rwlock_posix.cc', 'thread_posix.cc']
+ else:
+-    print "Error unsupported operating system!"
++    print("Error unsupported operating system!")
+ 
+ if env["WITH_MDNS"]:
+     src.append("zeroconf.cc")
