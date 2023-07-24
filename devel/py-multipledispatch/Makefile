@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/21 07:56:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/24 18:57:50 wiz Exp $
 
 DISTNAME=	multipledispatch-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Efficient, mostly complete implementation of multiple dispatch
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
