@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4598 2023/07/24 14:16:12 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4599 2023/07/24 15:48:21 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6389,3 +6389,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/rabbitmq to 3.12.2 [adam 2023-07-24]
 	Updated games/openrct2 to 0.3.1 [triaxx 2023-07-24]
 	Updated www/firefox to 115.0.2nb1 [ryoon 2023-07-24]
+	Update sysutils/dmidecode to 3.5 [msaitoh 2023-07-24]
