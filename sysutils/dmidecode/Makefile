@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/11/28 04:26:08 mrg Exp $
+# $NetBSD: Makefile,v 1.40 2023/07/24 15:07:57 msaitoh Exp $
 #
 
-DISTNAME=	dmidecode-3.4
+DISTNAME=	dmidecode-3.5
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.savannah.gnu.org/releases/dmidecode/

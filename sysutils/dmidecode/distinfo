@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.35 2022/11/28 04:26:08 mrg Exp $
+$NetBSD: distinfo,v 1.36 2023/07/24 15:07:57 msaitoh Exp $
 
-BLAKE2s (dmidecode-3.4.tar.xz) = 4c77dc57ab99615165128047f803e6bf0844e7f97396a6754da4780d39a620c3
-SHA512 (dmidecode-3.4.tar.xz) = 62990b6159e5a7c8688d37e44957e7948391d2c6afeabaa4514ba9dad2d08b020297676e2dbbfcb6471efc6fb6f3682750422931a953f78f358bb3dd3745e95b
-Size (dmidecode-3.4.tar.xz) = 61420 bytes
+BLAKE2s (dmidecode-3.5.tar.xz) = 2b8eb57d5a5e3f74c928db69ea69389e41dd8a735132cfe374eed84cda638d3a
+SHA512 (dmidecode-3.5.tar.xz) = 690c9bea391f6bbfc8cd48e8db408a61d5b551a07a2823c29d03a09607fc2043cc1bea44ee9fd27fd0e7bc0b287bf9de9f22a1a66053f5b1e63d77c03d93e1ae
+Size (dmidecode-3.5.tar.xz) = 65068 bytes
 SHA1 (patch-aa) = 4ffeddeb647d07d8d712bab9983c1530e59e6f37
 SHA1 (patch-biosdecode.c) = 76366037a20d7bed2f90771343fbe777ac1e1059
 SHA1 (patch-config.h) = d06c1d45b60e0c687a39b76b4beb007ffa1b4ee4
 SHA1 (patch-dmidecode.c) = fe63079df824753a2aca9b9d0371523a36bb08ce
-SHA1 (patch-dmiopt.c) = dd4b990fdf9b5b417459a0a2ddb2e97589605377
+SHA1 (patch-dmiopt.c) = d2ac52bf638a0c1177056c11efe9abbadb482890
 SHA1 (patch-ownership.c) = 4417df76809b187be5c2c3ef691cba2285278df2
 SHA1 (patch-util.c) = d87f60f232e3facbd9aa8fae2e2a2be6bfe4ade5
 SHA1 (patch-vpdopt.c) = 1237207adb8db7aae294153f1bdc27a4e7941737
