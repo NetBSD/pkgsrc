@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4601 2023/07/24 18:43:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4602 2023/07/24 18:53:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6396,3 +6396,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pip to 23.2.1 [adam 2023-07-24]
 	Updated devel/py-virtualenv to 20.24.2 [adam 2023-07-24]
 	Updated devel/py-bitarray to 2.8.0 [adam 2023-07-24]
+	Updated devel/py-test-randomly to 3.13.0 [adam 2023-07-24]
+	Updated www/py-respx to 0.20.2 [adam 2023-07-24]
