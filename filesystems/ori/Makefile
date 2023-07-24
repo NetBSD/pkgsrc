@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/04/19 08:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/24 16:52:45 wiz Exp $
 
 DISTNAME=	ori-0.8.2
 PKGREVISION=	5
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 # (insert swearing)
 CWRAPPERS_APPEND.cxx+=	-Wno-narrowing
 
-PYTHON_VERSIONS_ACCEPTED=	27	# python2 SCons files
+SCONS_INSTALL_ARGS+=	DESTDIR=${DESTDIR}
 
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
@@ -32,19 +32,11 @@ _WRAP_EXTRA_ARGS.CXX+=	-D_KERNTYPES
 CWRAPPERS_APPEND.cxx+=	-D_KERNTYPES
 .endif
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN}
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${SCONSBIN} install PREFIX=${DESTDIR}${PREFIX}
-
-# configure script demands libevent 2.0 or greater
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
-
 .include "../../archivers/xz/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY?=	yes
-.include "../../devel/scons/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../devel/scons4/build.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
