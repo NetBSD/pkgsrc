@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23235 2023/07/24 07:10:47 adam Exp $
+$NetBSD: TODO,v 1.23236 2023/07/24 17:37:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -550,6 +550,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o courier-mta-0.74.2
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
+	o csound6-6.18.1
 	o csvkit-1.0.5
 	o ctemplate-2.4
 	o cups-filters-1.28.17
@@ -739,7 +740,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o got-0.88
 	o gourmet-0.13.3
 	o gperiodic-3.0.3
-	o gpick-0.3
+	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0

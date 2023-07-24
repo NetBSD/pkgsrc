@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:58:51 nia Exp $
-
-BLAKE2s (csound5-manual-5.19/Csound5.19_manual_html.zip) = ba48b7c2907977daee5a7e31716b206d86f69014e07a6453a5715f200216ec69
-SHA512 (csound5-manual-5.19/Csound5.19_manual_html.zip) = e01ca0e6bac13d7a466d6d93634a870b8dd29ad9b827c8c3ef3fe59ebc942eb32aed2d8cf75a8560debf85c01f7cd94c08e7285c0def8e8aa50f0fb11a443792
-Size (csound5-manual-5.19/Csound5.19_manual_html.zip) = 9860517 bytes
