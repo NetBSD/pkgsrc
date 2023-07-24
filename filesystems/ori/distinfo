@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:25:30 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/07/24 16:52:45 wiz Exp $
 
 BLAKE2s (ori-0.8.2.tar.xz) = 2bdccbc1f76f2de550c65eb94f1be60efbb731673eb5e97ffc6d6d2fb59a4ca8
 SHA512 (ori-0.8.2.tar.xz) = 19e913506cb5edb4961def9f19a97a9e3ac54d32f20e379830349fd8d5a37923ce97b3419a04d6cbd665c74d4aa0cd9a3cf6d23c5b7c63440f2cf3f51a8ac8bd
 Size (ori-0.8.2.tar.xz) = 238576 bytes
+SHA1 (patch-SConstruct) = 91e98e6952986d36a86ad37bbadd7cc93cee6c6c
+SHA1 (patch-liboriutil_SConscript) = 9fd7b34f45be8878bd70b2059b050359693836de
 SHA1 (patch-liboriutil_key.cc) = cb1b773b43ee53df75863d02186c1390ab114e01
 SHA1 (patch-ori_SConscript) = e2eba2c01f2b6d4b7f3edea5eafc39656e047894
 SHA1 (patch-ori__httpd_SConscript) = 8b8ba3a1545a87e9a3c150fec8c1e7c271cc8603
