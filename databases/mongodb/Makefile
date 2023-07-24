@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2023/07/18 14:03:58 nia Exp $
+# $NetBSD: Makefile,v 1.80 2023/07/24 18:39:28 wiz Exp $
 
 DISTNAME=	mongodb-src-r4.2.15
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -26,23 +26,23 @@ USE_LANGUAGES=	c99 c++17
 
 USE_TOOLS+=	pkg-config
 
-SCONS_ARGS=	${_MAKE_JOBS}
-SCONS_ARGS+=	--dbg=off # on: argument parsing problem
-SCONS_ARGS+=	--disable-warnings-as-errors
-SCONS_ARGS+=	--release
-SCONS_ARGS+=	--runtime-hardening=off # on: does not produce executables
-#SCONS_ARGS+=	--use-system-asio
-SCONS_ARGS+=	--use-system-boost
-SCONS_ARGS+=	--use-system-icu
-SCONS_ARGS+=	--use-system-mongo-c
-SCONS_ARGS+=	--use-system-pcre
-SCONS_ARGS+=	--use-system-snappy
-SCONS_ARGS+=	--use-system-sqlite
-SCONS_ARGS+=	--use-system-tcmalloc
-#SCONS_ARGS+=	--use-system-wiredtiger
-SCONS_ARGS+=	--use-system-yaml
-SCONS_ARGS+=	--use-system-zlib
-SCONS_ARGS+=	--use-system-zstd
+SCONS_BUILD_ARGS=	${_MAKE_JOBS}
+SCONS_BUILD_ARGS+=	--dbg=off # on: argument parsing problem
+SCONS_BUILD_ARGS+=	--disable-warnings-as-errors
+SCONS_BUILD_ARGS+=	--release
+SCONS_BUILD_ARGS+=	--runtime-hardening=off # on: does not produce executables
+#SCONS_BUILD_ARGS+=	--use-system-asio
+SCONS_BUILD_ARGS+=	--use-system-boost
+SCONS_BUILD_ARGS+=	--use-system-icu
+SCONS_BUILD_ARGS+=	--use-system-mongo-c
+SCONS_BUILD_ARGS+=	--use-system-pcre
+SCONS_BUILD_ARGS+=	--use-system-snappy
+SCONS_BUILD_ARGS+=	--use-system-sqlite
+SCONS_BUILD_ARGS+=	--use-system-tcmalloc
+#SCONS_BUILD_ARGS+=	--use-system-wiredtiger
+SCONS_BUILD_ARGS+=	--use-system-yaml
+SCONS_BUILD_ARGS+=	--use-system-zlib
+SCONS_BUILD_ARGS+=	--use-system-zstd
 
 USE_CXX_FEATURES+=	c++17
 
@@ -54,6 +54,15 @@ CPPFLAGS+=	-fno-jump-tables  # XXX: still needed?
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libbson-1.0
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
+
+SCONS_BUILD_ARGS+=	CC=${CC:Q}
+SCONS_BUILD_ARGS+=	CXX=${CXX:Q}
+SCONS_BUILD_ARGS+=	CFLAGS=${CFLAGS:Q}
+SCONS_BUILD_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
+SCONS_BUILD_ARGS+=	LINKFLAGS=${LDFLAGS:Q}
+SCONS_BUILD_ARGS+=	CPPPATH=${INCL_PATH:Q}
+SCONS_BUILD_ARGS+=	core
+SCONS_INSTALL_ARGS+=	--prefix=${DESTDIR}${PREFIX}
 
 .include "options.mk"
 
@@ -145,17 +154,6 @@ post-extract:
 do-configure:
 	${DO_NADA}
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
-	CC=${CC:Q} CXX=${CXX:Q} CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \
-	LINKFLAGS=${LDFLAGS:Q} CPPPATH=${INCL_PATH:Q} VERBOSE=1 core
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
-	CC=${CC:Q} CXX=${CXX:Q} CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \
-	LINKFLAGS=${LDFLAGS:Q} CPPPATH=${INCL_PATH:Q} \
-	--prefix=${DESTDIR}${PREFIX} install
-
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/debian/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/debian/mongod.conf \
@@ -170,7 +168,9 @@ post-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/scons/buildlink3.mk"
+.include "../../devel/scons4/build.mk"
+_SCONS_BUILD_ARGS=     -j${MAKE_JOBS:U1}
+_SCONS_BUILD_ARGS+=     ${SCONS_BUILD_ARGS}
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
