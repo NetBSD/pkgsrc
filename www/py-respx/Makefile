@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/11/18 18:55:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/07/24 18:53:11 adam Exp $
 
-DISTNAME=	respx-0.20.1
+DISTNAME=	respx-0.20.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/respx/}
