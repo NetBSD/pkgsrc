@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/04/23 14:26:19 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/07/24 17:05:46 wiz Exp $
 
 DISTNAME=	pingus-0.7.6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Pingus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,10 +11,8 @@ HOMEPAGE=	https://pingus.seul.org/
 COMMENT=	Lemmings(TM) Clone
 LICENSE=	gnu-gpl-v3
 
-BUILD_TARGET=	build/pingus
 MAKE_ENV+=	FIND=${TOOLS_CMD.find:Q} MKDIR=${TOOLS_CMD.mkdir:Q}
 MAKE_ENV+=	RM=${TOOLS_CMD.rm:Q} SCONSBIN=${SCONSBIN:Q}
-#NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS=	pkg-config
 
@@ -26,11 +24,15 @@ SUBST_STAGE.data=	pre-configure
 SUBST_FILES.data=	src/pingus/pingus_main.cpp
 SUBST_VARS.data=	DATADIR
 
+SCONS_DO_INSTALL=	no
+do-install:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${MAKE} install
+
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY?=	yes
-.include "../../devel/scons/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../devel/scons4/build.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
