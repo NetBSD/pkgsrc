@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/07/20 13:16:14 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2023/07/24 18:47:25 wiz Exp $
 
 DISTNAME=	scons-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-CONFLICTS=	py[0-9]*-scons-3[0-9\.]*
+PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_PKG_RESOURCES=	yes
 

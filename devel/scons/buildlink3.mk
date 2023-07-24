@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/06/08 04:55:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/07/24 18:47:25 wiz Exp $
 
 # Note that while scons is a build tool, it requires running a python
 # program on the host that uses the scons library.  Currently, the
@@ -13,6 +13,7 @@
 
 SCONSBIN=	${PREFIX}/bin/scons
 
+PYTHON_VERSIONS_ACCEPTED+=	27
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_TREE+=	scons
