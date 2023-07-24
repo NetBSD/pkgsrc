@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/07/18 18:13:44 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/24 16:41:19 wiz Exp $
 
 DISTNAME=	powder-toy-95.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ThePowderToy/}
 GITHUB_PROJECT=	The-Powder-Toy
@@ -17,8 +17,9 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
 
-SCONS_ARGS+=	${_MAKE_JOBS}
-SCONS_ARGS+=	--output=powder-toy
+SCONS_BUILD_ARGS+=	${_MAKE_JOBS}
+SCONS_BUILD_ARGS+=	--output=powder-toy
+SCONS_DO_INSTALL=	no
 
 CXXFLAGS+=	-DNO_INSTALL_CHECK
 
@@ -33,10 +34,7 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${size}x${size}/apps
 
 .include "options.mk"
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} \
-	    CC=${CC:Q} CXX=${CXX:Q} CFLAGS=${CFLAGS:Q} CXXFLAGS=${CXXFLAGS:Q} \
-	    LINKFLAGS=${LDFLAGS:Q} CPPPATH=${INCL_PATH:Q}
+post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/powder-toy.sh.in > \
 	    ${WRKDIR}/powder-toy.sh
 
@@ -58,7 +56,7 @@ do-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../devel/scons/buildlink3.mk"
+.include "../../devel/scons4/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
