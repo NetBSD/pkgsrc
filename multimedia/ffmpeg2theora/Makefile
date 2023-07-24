@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/07/24 15:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/07/24 16:41:49 wiz Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
 PKGREVISION=	12
@@ -20,7 +20,6 @@ SCONS_BUILD_ARGS+=	APPEND_LINKFLAGS=${LDFLAGS:Q}
 SCONS_INSTALL_ARGS+=	destdir=${DESTDIR:Q} prefix=${PREFIX:Q}
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
