@@ -1,0 +1,1 @@
+bin/rich-click @PREFIX@/bin/rich-click-@PYVERSSUFFIX@
