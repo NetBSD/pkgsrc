@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2023/04/29 07:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/24 19:45:39 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-editing-services-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
@@ -24,6 +25,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/ges
 
+MESON_REQD+=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
