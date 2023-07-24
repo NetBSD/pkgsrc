@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4596 2023/07/24 07:10:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4597 2023/07/24 08:43:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6387,3 +6387,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.41.1 [adam 2023-07-24]
 	Updated lang/elixir to 1.15.4 [adam 2023-07-24]
 	Updated net/rabbitmq to 3.12.2 [adam 2023-07-24]
+	Updated games/openrct2 to 0.3.1 [triaxx 2023-07-24]
