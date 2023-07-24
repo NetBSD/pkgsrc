@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.34 2023/05/13 13:06:46 nikita Exp $
+# $NetBSD: Makefile.common,v 1.35 2023/07/24 22:21:42 khorben Exp $
 #
 # used by chat/irssi-icb/Makefile
-# used by chat/irssi-xmpp/Makefile
 
 # Specific distribution information.
 IRSSI_VERSION=			1.4.4
