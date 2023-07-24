@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2020/07/31 11:05:49 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.47 2023/07/24 19:41:50 wiz Exp $
 bin/gedit
 include/gedit-3.36/gedit/gedit-app-activatable.h
 include/gedit-3.36/gedit/gedit-app.h
@@ -73,6 +73,7 @@ lib/gedit/plugins/time.plugin
 lib/libgedit-3.36.so
 lib/pkgconfig/gedit.pc
 ${PYSITELIB}/gi/overrides/Gedit.py
+${PYSITELIB}/gi/overrides/Gedit.pyc
 man/man1/gedit.1
 share/applications/org.gnome.gedit.desktop
 share/dbus-1/services/org.gnome.gedit.service
