@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/09/11 18:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/24 17:41:40 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/thrift/Makefile.version"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,9 @@ COMMENT=	Python bindings for the Apache Thrift RPC system
 EXTRACT_ELEMENTS=	${DISTNAME}/lib/py
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7.2:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-scons-[0-9]*:../../devel/scons
-TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-tornado>=4:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+TEST_DEPENDS+=	${PYPKGPREFIX}-scons>=4:../../devel/scons4
 
 USE_LANGUAGES=	c c++
 PYSETUPSUBDIR=	lib/py
