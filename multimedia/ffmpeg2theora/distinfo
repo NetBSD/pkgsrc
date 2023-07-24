@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:01:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/07/24 15:18:38 wiz Exp $
 
 BLAKE2s (ffmpeg2theora-0.30.tar.bz2) = c0a89b4ae9204a87b4b05cb105741c63d0bc5cd92fe183e668d996f75fe290c2
 SHA512 (ffmpeg2theora-0.30.tar.bz2) = 2c77d2c5e705751928e2bfd86c4fe4c2b7df2ca2ce70f3dfeb0014a3269eef067587eaa045c11b0db86c69176d8f01a43b3ad75544d181c016a89aa50b6518c1
 Size (ffmpeg2theora-0.30.tar.bz2) = 91269 bytes
-SHA1 (patch-SConstruct) = 3bec58615c8e855b127748bf54a523f215b41303
+SHA1 (patch-SConstruct) = 8adfa8ab0874a33c6722f03e0b40c982a0c2cf83
 SHA1 (patch-src_theorautils.c) = b46d6d2a3ac3ac42ede2c10fd0657379ee5645ea
