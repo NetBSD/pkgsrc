@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.671 2023/07/13 20:39:50 pin Exp $
+# $NetBSD: Makefile,v 1.672 2023/07/24 17:37:18 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -58,8 +58,6 @@ SUBDIR+=	cmusfm
 SUBDIR+=	cplay
 SUBDIR+=	cripple
 SUBDIR+=	cs4235
-SUBDIR+=	csound5
-SUBDIR+=	csound5-manual
 SUBDIR+=	csound6
 SUBDIR+=	csound6-manual
 SUBDIR+=	cutmp3
