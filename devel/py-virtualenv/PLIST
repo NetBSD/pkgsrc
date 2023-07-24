@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2023/07/20 07:53:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2023/07/24 18:40:03 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -174,9 +174,9 @@ ${PYSITELIB}/virtualenv/seed/wheels/bundle.py
 ${PYSITELIB}/virtualenv/seed/wheels/bundle.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-23.2-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-23.2.1-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-68.0.0-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.40.0-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.41.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/util.py
