@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4594 2023/07/24 01:58:49 scole Exp $
+$NetBSD: CHANGES-2023,v 1.4595 2023/07/24 05:03:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6383,3 +6383,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/luminance-hdr to 2.6.1.1 [adam 2023-07-23]
 	Updated graphics/pfstools to 2.2.0 [adam 2023-07-23]
 	Updated textproc/split-thai to 2.27 [scole 2023-07-24]
+	Updated devel/py-versioneer to 0.29 [adam 2023-07-24]
+	Updated fonts/py-fonttools to 4.41.1 [adam 2023-07-24]
