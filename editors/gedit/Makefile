@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.173 2023/04/19 08:09:50 adam Exp $
+# $NetBSD: Makefile,v 1.174 2023/07/24 19:41:50 wiz Exp $
 
 DISTNAME=	gedit-3.36.2
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -37,6 +37,7 @@ BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.14.1
 .include "../../devel/libpeas/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.52
 .include "../../devel/glib2/schemas.mk"
+MESON_REQD+=	1.2.0
 .include "../../devel/meson/build.mk"
 .include "../../editors/tepl4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
