@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/17 18:39:27 bacon Exp $
+$NetBSD: distinfo,v 1.3 2023/07/25 14:28:36 bacon Exp $
 
-BLAKE2s (desktop-installer-0.8.1.tar.gz) = 797fa60e3f0dff04285e96d1dfc4db75ac9489e17ad7e8214d18ab2ae4bec471
-SHA512 (desktop-installer-0.8.1.tar.gz) = 7e843b682c4f64da5b7b4e0a04c6a6edb0c0b3919fbcc78d3c09a972b6c22b30e074cb8385437a0013cb686135c313142e852a707bdd32ff0dde68b3e97b6bb1
-Size (desktop-installer-0.8.1.tar.gz) = 231690 bytes
+BLAKE2s (desktop-installer-0.8.1.24-aa7870599030446d1adb42b12aafe79e85396a71.tar.gz) = 4b3dadf196dfa369625a3a502fdddef80dfd490d913ebed2c351486df7ef185b
+SHA512 (desktop-installer-0.8.1.24-aa7870599030446d1adb42b12aafe79e85396a71.tar.gz) = 3aaed8ee5510ee858a4f207bde1bd46eddce6e004aac06d6f9dac8aa299128b6110fd110efea56a22e84083186fd8c5f4d574d1dc3174975d338561dc5c21d99
+Size (desktop-installer-0.8.1.24-aa7870599030446d1adb42b12aafe79e85396a71.tar.gz) = 232659 bytes

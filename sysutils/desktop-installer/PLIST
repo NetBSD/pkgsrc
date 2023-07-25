@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/17 18:39:27 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/07/25 14:28:36 bacon Exp $
 man/man1/desktop-installer.1
 sbin/battery-shutdown.sh
 sbin/desktop-installer
@@ -24,3 +24,4 @@ share/desktop-installer/XDM/netbsd-background.jpg
 share/desktop-installer/XDM/xdmshutdown
 share/desktop-installer/XFCE4/xinitrc
 share/desktop-installer/Xdefaults-xterm
+share/desktop-installer/battery-shutdown.cron
