@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2022/09/22 09:22:21 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2023/07/25 01:09:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk4
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -58,13 +58,12 @@ MESON_ARGS+=		-Dx11-backend=true
 MESON_ARGS+=		-Dx11-backend=false
 .endif
 
-PLIST_VARS+=		cups lpr
+PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 PLIST.cups=		yes
 MESON_ARGS+=		-Dprint-cups=enabled
 .include "../../print/libcups/buildlink3.mk"
 .else
-PLIST.lpr=		yes
 MESON_ARGS+=		-Dprint-cups=disabled
 .endif
 
