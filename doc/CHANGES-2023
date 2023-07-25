@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4612 2023/07/25 10:05:41 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4613 2023/07/25 10:06:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6412,3 +6412,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-random-order to 1.1.0 [adam 2023-07-25]
 	Updated benchmarks/glmark2 to 2023.01 [abs 2023-07-25]
 	Updated devel/diffsitter to 0.8.1 [pin 2023-07-25]
+	Updated audio/ncspot to 0.13.4 [pin 2023-07-25]
