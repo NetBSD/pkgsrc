@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2023/07/23 19:06:38 pin Exp $
+$NetBSD: distinfo,v 1.43 2023/07/25 10:08:26 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -294,12 +294,12 @@ Size (github.com_mattn_go-localereader_@v_v0.0.1.zip) = 3031 bytes
 BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.12.mod) = 9deaf64c65ec9058bf78e39deaef7b1780b1fb68736208198b080d3e710f5b22
 SHA512 (github.com_mattn_go-runewidth_@v_v0.0.12.mod) = 939623ea34e482faf1cb055cd861471367cd69257abb28bd348efb4572ac95428330947ca0a1cac2820cc2cf7bbc6cada12623ff873d9ebc8c4af490d8237fbe
 Size (github.com_mattn_go-runewidth_@v_v0.0.12.mod) = 84 bytes
-BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.14.mod) = 8df0af400904d313f84666016bb58fa961611b14296a6ee0b534ea7942608632
-SHA512 (github.com_mattn_go-runewidth_@v_v0.0.14.mod) = b96cca212a7024f0039ddd3a744fe818ab2e028b8ac2fd4472ce76ee9b496de3abb0960718c1106a98cf7e6df652dcf2884fe5ed95979bd9016399ea4abd324d
-Size (github.com_mattn_go-runewidth_@v_v0.0.14.mod) = 84 bytes
-BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.14.zip) = 3056984ecc71fdb17141246766a8399aba41e3a6e9a2e5f95c80e3671085b81d
-SHA512 (github.com_mattn_go-runewidth_@v_v0.0.14.zip) = 9998ab38bd10a2498c810634d5d45e92baedf1eca5956c9f3640b09e26d13f48fde9c04dd3ab169a3be6ca826553ca2a1db13fc3932dfa5c33aada169b2fac55
-Size (github.com_mattn_go-runewidth_@v_v0.0.14.zip) = 21752 bytes
+BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.15.mod) = 8df0af400904d313f84666016bb58fa961611b14296a6ee0b534ea7942608632
+SHA512 (github.com_mattn_go-runewidth_@v_v0.0.15.mod) = b96cca212a7024f0039ddd3a744fe818ab2e028b8ac2fd4472ce76ee9b496de3abb0960718c1106a98cf7e6df652dcf2884fe5ed95979bd9016399ea4abd324d
+Size (github.com_mattn_go-runewidth_@v_v0.0.15.mod) = 84 bytes
+BLAKE2s (github.com_mattn_go-runewidth_@v_v0.0.15.zip) = 9ff69049548192349f86d7285323d3ff0f692681d2339f7486f55e5df9b5c2bf
+SHA512 (github.com_mattn_go-runewidth_@v_v0.0.15.zip) = 7937432cba9f1ccc9bf4f99d58b8bf70eb64d65c1a3221df1173dcdc63aebe535c44bcbfae73b38f6dd156f5a747c58649031f7cefd32a902314279db175de56
+Size (github.com_mattn_go-runewidth_@v_v0.0.15.zip) = 21768 bytes
 BLAKE2s (github.com_mitchellh_copystructure_@v_v1.0.0.mod) = 9dbf04388e6d7f240f7b22170162bfe4d0c298697f034866298449b4a48da280
 SHA512 (github.com_mitchellh_copystructure_@v_v1.0.0.mod) = 8858ec62f3bcef65224ee7d66bbc16c080b2ed16609c46c5c6b6d983b9f7eef9e020a2ae78a16d0226c0f02c609ec5da92565861c02a81494cd6060dd56d005b
 Size (github.com_mitchellh_copystructure_@v_v1.0.0.mod) = 91 bytes
@@ -726,8 +726,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-17.12.1.tar.gz) = 289899a1c9947c1b63833ee01755e82d9cd74a6658ffd1c1a92d1238515eb1b6
-SHA512 (oh-my-posh-17.12.1.tar.gz) = e42473958d8f78ddf7f1d52e26ed19c79b29ef2addb6e26dc0d14e3dc066652d866867221f4ec1375235bbbf4f70f521d7d5bfcfb7cbb491a2eba1580d728d54
-Size (oh-my-posh-17.12.1.tar.gz) = 2714152 bytes
+BLAKE2s (oh-my-posh-18.0.1.tar.gz) = 98e4cbeedde880c65473e17b2f88b8813200c59fc31f4ddc640e2c942766fcbe
+SHA512 (oh-my-posh-18.0.1.tar.gz) = 7e3433d2314fe964904c133a5f1a5a851f0c85a9a2551e83661dc7b8161a234c0715f69b2bf01f0336733a5e7dd113a4a9840cfae53bbac2ba4a09164630b0ce
+Size (oh-my-posh-18.0.1.tar.gz) = 2714684 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = cb781ed770d325f97bc71fa545b4ce031a3df27a
