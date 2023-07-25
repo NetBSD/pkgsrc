@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2023/07/25 11:23:54 thor Exp $
+bin/adf2hdf
+bin/cgnscheck
+bin/cgnscompress
+bin/cgnsconvert
+bin/cgnsdiff
+bin/cgnslist
+bin/cgnsnames
+bin/cgnsupdate
+bin/hdf2adf
+include/cgnsBuild.defs
+include/cgns_io.h
+include/cgnsconfig.h
+include/cgnslib.h
+include/cgnstypes.h
+include/cgnstypes_f.h
+include/cgnstypes_f03.h
+include/cgnswin_f.h
+lib/cmake/cgns/cgns-targets-release.cmake
+lib/cmake/cgns/cgns-targets.cmake
+lib/libcgns.a
+lib/libcgns.so
+lib/libcgns.so.4.4
