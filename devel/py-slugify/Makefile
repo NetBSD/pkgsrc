@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/25 13:20:33 adam Exp $
 
-DISTNAME=	python-slugify-5.0.2
+DISTNAME=	python-slugify-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	2
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-slugify/}
 
@@ -24,9 +23,6 @@ USE_PKG_RESOURCES=	yes
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} slugify slugify-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} test.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
