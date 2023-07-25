@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/05/17 22:29:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/25 10:05:16 pin Exp $
 
-DISTNAME=	diffsitter-0.8.0
-PKGREVISION=	1
+DISTNAME=	diffsitter-0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afnanenayet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
