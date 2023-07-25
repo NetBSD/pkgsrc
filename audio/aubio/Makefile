@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2023/05/24 07:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/07/25 14:37:34 thor Exp $
 
 DISTNAME=	aubio-0.4.9
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pho@cielonegro.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aubio.org/
 COMMENT=	Extracting annotations from audio signals
 LICENSE=	gnu-gpl-v2
@@ -16,9 +16,14 @@ TOOL_DEPENDS+=	doxygen>=1.9.7:../../devel/doxygen
 
 USE_TOOLS+=	pkg-config
 
+# avoid loads of html if doxygen is found in host
+TOOLS_PATH.doxygen=	${FALSE}
+
 PKGCONFIG_OVERRIDE+=	aubio.pc.in
 
 WAF_ARGS+=	--disable-tests
+
+TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
