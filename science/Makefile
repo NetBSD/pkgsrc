@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/07/17 01:03:19 thor Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/25 11:23:54 thor Exp $
 #
 
 COMMENT=	Scientific software in general
+
+SUBDIR+=	cgnslib
 
 .include "../mk/misc/category.mk"
