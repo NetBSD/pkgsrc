@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/08/25 20:19:57 leot Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/25 13:17:03 adam Exp $
 
-DISTNAME=	cookiecutter-2.1.1
+DISTNAME=	cookiecutter-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/audreyr/cookiecutter
 COMMENT=	Command-line utility that creates projects from project templates
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-binaryornot>=0.4.4:../../devel/py-binaryornot
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-jinja2-time>=0.2.0:../../time/py-jinja2-time
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.23.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-slugify>=4.0.0:../../devel/py-slugify
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
@@ -26,7 +26,7 @@ USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-slugify
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
