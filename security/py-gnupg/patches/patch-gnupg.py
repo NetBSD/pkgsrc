@@ -1,11 +1,11 @@
-$NetBSD: patch-gnupg.py,v 1.2 2022/05/22 12:17:38 adam Exp $
+$NetBSD: patch-gnupg.py,v 1.3 2023/07/25 08:08:54 adam Exp $
 
 Look for gpg2 executable.
 
---- gnupg.py.orig	2022-05-20 08:01:43.000000000 +0000
+--- gnupg.py.orig	2023-07-22 09:48:02.000000000 +0000
 +++ gnupg.py
-@@ -874,7 +874,7 @@ class GPG(object):
-     "Encapsulate access to the gpg executable"
+@@ -1029,7 +1029,7 @@ class GPG(object):
+     "A map of GPG operations to result object types."
  
      def __init__(self,
 -                 gpgbinary='gpg',
