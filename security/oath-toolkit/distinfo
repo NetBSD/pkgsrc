@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/08/22 07:42:52 sborrill Exp $
+$NetBSD: distinfo,v 1.15 2023/07/25 13:59:57 sborrill Exp $
 
-BLAKE2s (oath-toolkit-2.6.7.tar.gz) = 60abf1cd8341cc5ed887aea4c58928bfcac3347ab43dd3704bd69cf5e9a7e5ec
-SHA512 (oath-toolkit-2.6.7.tar.gz) = 50edff75c8366887d69cf4740c4cc3bdfc3e43cbd4910ff40f735bca489f0953d7e5a21130f12782ac7a1f2fb00f0db313aff139085f23daba78a69bc7b2eb12
-Size (oath-toolkit-2.6.7.tar.gz) = 5625279 bytes
-SHA1 (patch-liboath_gl_fflush.c) = 65b10470b8ba45973d11e3bdf32b9511461f87dc
-SHA1 (patch-pam__oath_Makefile.in) = c3fd5dea44e6c604e77dbe81ff7b062dc12925bf
-SHA1 (patch-pam__oath_configure.ac) = 525c51b98d0fc444440aa77a9b821b4c820cca31
-SHA1 (patch-pam__oath_pam__modutil.c) = f60b9d7a71efd79425be7ca3257d1a37b3d806fb
-SHA1 (patch-pam__oath_pam__modutil.h) = fe361f7430cf8a26c74653b4dbc42c01825f90f2
-SHA1 (patch-pam__oath_pam__oath.c) = f138397e7f5593f248c3ff761449b968ce6d9129
+BLAKE2s (oath-toolkit-2.6.9.tar.gz) = 83f262a7827f0d5335d164719a15ed5d8b99b0d0c890c9aa0205a05a94265841
+SHA512 (oath-toolkit-2.6.9.tar.gz) = 6e96b5a926f6e2448661fef267dcf9c99167b7bdfc71e319d2ab7ddc051a7be002043485547ad83744209c25ea0d87f8e28f25cccd6856281321f3d22e3cf160
+Size (oath-toolkit-2.6.9.tar.gz) = 4693524 bytes
