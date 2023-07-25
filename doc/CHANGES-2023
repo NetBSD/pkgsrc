@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4619 2023/07/25 14:00:51 sborrill Exp $
+$NetBSD: CHANGES-2023,v 1.4620 2023/07/25 14:28:53 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6419,3 +6419,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cookiecutter to 2.2.3 [adam 2023-07-25]
 	Updated devel/py-slugify to 8.0.1 [adam 2023-07-25]
 	Updated security/oath-toolkit to 2.6.9 [sborrill 2023-07-25]
+	Updated sysutils/desktop-installer to 0.8.1.24 [bacon 2023-07-25]
