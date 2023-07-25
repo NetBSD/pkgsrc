@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2023/06/06 12:41:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/25 13:44:01 thor Exp $
 
-DISTNAME=	VTK-9.0.3
+DISTNAME=	VTK-9.2.6
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.vtk.org/files/release/${PKGVERSION_NOREV:R}/
 
-MAINTAINER=	prlw1@cam.ac.uk
+MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://vtk.org/
 COMMENT=	Visualization toolkit
 LICENSE=	modified-bsd
@@ -34,10 +33,20 @@ CMAKE_ARGS+=	-DVTK_WRAP_JAVA=OFF
 CMAKE_ARGS+=	-DVTK_FORBID_DOWNLOADS=ON
 # https://discourse.vtk.org/t/9-0-0-rc1-contextopengl2-not-built/2933
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2=YES
+# A header-only C++ lib shipped with VTK. Non-versioned archive with the
+# 1.5M header at http://www.partow.net/downloads/exprtk.zip .
+CMAKE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_exprtk=OFF
+# The fork needed by forked ioss.
+CMAKE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_fmt=OFF
+# SEACAS ioss. Uneasy about packaging that. No proper releases, even.
+CMAKE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_ioss=OFF
+# Verdict, some quadrature computations in 2D, 3D. Unsure if useful as pkg.
+CMAKE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_verdict=OFF
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
 
 PLIST_VARS+=	cocoa opengl
+PLIST_SUBST+=	VTKVER=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
 
 CHECK_PORTABILITY_SKIP+=	Examples/Build/vtkMy/Utilities/Doxygen/doc_makeall.sh.in
 
@@ -76,5 +85,9 @@ post-extract:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
+# not compatible, misses specializations in vendored vork
+#.include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
+.include "../../science/cgnslib/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
