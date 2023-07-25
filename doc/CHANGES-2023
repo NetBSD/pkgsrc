@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4620 2023/07/25 14:28:53 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4621 2023/07/25 20:16:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6420,3 +6420,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-slugify to 8.0.1 [adam 2023-07-25]
 	Updated security/oath-toolkit to 2.6.9 [sborrill 2023-07-25]
 	Updated sysutils/desktop-installer to 0.8.1.24 [bacon 2023-07-25]
+	Updated devel/p5-Test-BDD-Cucumber to 0.84 [schmonz 2023-07-25]
