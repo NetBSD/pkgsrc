@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/04/25 12:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/25 07:20:06 adam Exp $
 
-DISTNAME=	validate-pyproject-0.12.2
+DISTNAME=	validate-pyproject-0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-pyproject/}
@@ -22,12 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>0:../../devel/py-importlib-metadata
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
