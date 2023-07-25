@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/07/19 07:15:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/25 01:09:27 wiz Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -383,7 +383,6 @@ lib/girepository-1.0/Gtk-4.0.typelib
 lib/gtk-4.0/4.0.0/media/libmedia-ffmpeg.so
 ${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
-${PLIST.lpr}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-lpr.so
 lib/libgtk-4.${SOEXT}
 ${PLIST.dylib}lib/libgtk-4.1.dylib
 ${PLIST.no-dylib}lib/libgtk-4.so.1
