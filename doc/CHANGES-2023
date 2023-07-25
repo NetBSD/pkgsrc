@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4606 2023/07/25 07:20:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4607 2023/07/25 07:33:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6400,3 +6400,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.5.0 [adam 2023-07-25]
 	Updated devel/py-typing-extensions to 4.7.1 [adam 2023-07-25]
 	Updated textproc/py-validate-pyproject to 0.13 [adam 2023-07-25]
+	Updated archivers/unrar to 6.2.9 [adam 2023-07-25]
+	Updated finance/py-braintree to 4.21.0 [adam 2023-07-25]
