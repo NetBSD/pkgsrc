@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/05/22 21:00:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/07/25 13:44:01 thor Exp $
 
 BUILDLINK_TREE+=	vtk
 
@@ -26,6 +26,8 @@ BUILDLINK_PKGSRCDIR.vtk?=	../../graphics/vtk
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
+.include "../../science/cgnslib/buildlink3.mk"
 
 pkgbase := vtk
 .include "../../mk/pkg-build-options.mk"
@@ -35,7 +37,7 @@ pkgbase := vtk
 .endif
 
 # Referenced in the CMake stuff and needs to be linked with it.
-BUILDLINK_FILES.vtk+=	bin/vtkProbeOpenGLVersion-9.0
+BUILDLINK_FILES.vtk+=	bin/vtkProbeOpenGLVersion-*
 
 .endif	# VTK_BUILDLINK3_MK
 
