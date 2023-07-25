@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.21 2023/07/21 20:40:30 pin Exp $
+# $NetBSD: go-modules.mk,v 1.22 2023/07/25 10:08:26 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -98,8 +98,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.18.zip
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.12.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.14.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.14.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.15.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.15.zip
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.zip
