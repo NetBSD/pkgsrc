@@ -1,0 +1,18 @@
+$NetBSD: patch-meson.build,v 1.1 2023/07/25 09:07:34 abs Exp $
+
+meson.build: fix build and avoid sigsegv
+
+https://github.com/glmark2/glmark2/commit/7d4c4da5d34e2e70a285c345c979e5e3c1eb2c3a
+
+--- meson.build.orig	2023-01-19 11:02:15.000000000 +0000
++++ meson.build
+@@ -23,7 +23,8 @@ if extras_path != ''
+ endif
+ 
+ m_dep = cpp.find_library('m', required : false)
+-dl_dep = cpp.find_library('dl')
++dl_dep = cpp.find_library('dl', required : false)
++thread_dep = dependency('threads')
+ libjpeg_dep = dependency('libjpeg')
+ libpng_dep = dependency('libpng')
+ 
