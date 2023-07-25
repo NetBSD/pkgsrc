@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:02:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/07/25 09:07:34 abs Exp $
 
-BLAKE2s (glmark2-2020.04-c493520253fbfe3676c8b34b6f91a7c9a838fc8e.tar.gz) = 9142e84454a5365b2dcc9cfd800fe85d983cfff49d5ceb1b13e8f07e86e7666e
-SHA512 (glmark2-2020.04-c493520253fbfe3676c8b34b6f91a7c9a838fc8e.tar.gz) = a477d9d43dd698d48b3e012d387ac7727a16bfbf746d7eed66562e6eca342fab49481934e7f401e3d82417f7fe0fe7519f630fcbf51190fdbbe313245b6bdb37
-Size (glmark2-2020.04-c493520253fbfe3676c8b34b6f91a7c9a838fc8e.tar.gz) = 9367248 bytes
-SHA1 (patch-waflib_Tools_c__config.py) = 8bb7716b211731cb8cfa8a73276e950fa363f710
+BLAKE2s (glmark2-2023.01.tar.gz) = 02fc1fd23d7ea66bb6dc8fc205a104e3d47f0a31458d17e9c0d2e0439a0060ae
+SHA512 (glmark2-2023.01.tar.gz) = 5aaad56bb341e9c09d8dc78ac8d07d9af39f2414a158fd6e7c2717db2427d1b353408a874a8f38065e241474c674e8220d001652a5dd5a6c893ffe778cff9006
+Size (glmark2-2023.01.tar.gz) = 9366116 bytes
+SHA1 (patch-meson.build) = bb495a1b6fadfe2788e490b6048f3f61e3f1d5ac
+SHA1 (patch-src_meson.build) = f6e6d459a87332a0e30250a7fc135516af02a0fe

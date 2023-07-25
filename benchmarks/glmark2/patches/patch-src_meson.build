@@ -1,0 +1,16 @@
+$NetBSD: patch-src_meson.build,v 1.1 2023/07/25 09:07:34 abs Exp $
+
+meson.build: fix build and avoid sigsegv
+
+https://github.com/glmark2/glmark2/commit/7d4c4da5d34e2e70a285c345c979e5e3c1eb2c3a
+
+--- src/meson.build.orig	2023-01-19 11:02:15.000000000 +0000
++++ src/meson.build
+@@ -71,6 +71,7 @@ libmatrix_headers_dep = declare_dependen
+ common_deps = [
+     m_dep,
+     dl_dep,
++    thread_dep,
+     libjpeg_dep,
+     libpng_dep,
+     libmatrix_headers_dep,

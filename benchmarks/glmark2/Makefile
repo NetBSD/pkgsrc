@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/06/30 11:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/07/25 09:07:34 abs Exp $
 
-DISTNAME=	glmark2-2020.04
-PKGREVISION=	2
+DISTNAME=	glmark2-2023.01
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
-GITHUB_TAG=	c493520253fbfe3676c8b34b6f91a7c9a838fc8e
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
@@ -16,7 +14,7 @@ USE_LANGUAGES=	c c++14
 USE_TOOLS+=	pkg-config
 
 .include "../../mk/dlopen.buildlink3.mk"
-.if empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
+.if ${BUILTIN_LIB_FOUND.dl:U:tl} != yes
 SUBST_CLASSES+=		rmdl
 SUBST_STAGE.rmdl=	pre-configure
 SUBST_MESSAGE.rmdl=	remove -ldl
@@ -30,17 +28,17 @@ LIBS+=		${PTHREAD_LIBS}
 #./waf configure --with-flavors=<drm-gl,drm-glesv2,mir-gl,mir-glesv2,wayland-gl,wayland-glesv2,x11-gl,x11-glesv2> [--data-path=DATA_PATH --prefix=PREFIX]
 # drm-gl requires libdrm and "gbm"
 do-configure:
-	cd ${WRKSRC:Q} && \
+	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
 			--with-flavors=x11-gl \
 			--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 
 do-build:
-	cd ${WRKSRC:Q} && \
+	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf build
 
 do-install:
-	cd ${WRKSRC:Q} && \
+	cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf install \
 			--destdir=${DESTDIR}
 
