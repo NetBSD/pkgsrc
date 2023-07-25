@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4609 2023/07/25 08:32:05 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4610 2023/07/25 08:59:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6408,3 +6408,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-qt-builder to 1.15.2 [adam 2023-07-25]
 	Updated x11/py-sip-qt5 to 12.12.2 [adam 2023-07-25]
 	Updated lang/py-solc-select to 1.0.4 [adam 2023-07-25]
+	Updated devel/py-tox to 4.6.4 [adam 2023-07-25]
+	Updated devel/py-test-random-order to 1.1.0 [adam 2023-07-25]
