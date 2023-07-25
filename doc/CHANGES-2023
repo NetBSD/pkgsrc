@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4614 2023/07/25 10:08:46 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4615 2023/07/25 11:24:25 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6414,3 +6414,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/diffsitter to 0.8.1 [pin 2023-07-25]
 	Updated audio/ncspot to 0.13.4 [pin 2023-07-25]
 	Updated shells/oh-my-posh to 18.0.1 [pin 2023-07-25]
+	Updated science/cgnslib to 4.4.0 [thomas 2023-07-25]
