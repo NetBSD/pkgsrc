@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/06/17 18:39:27 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/25 14:28:36 bacon Exp $
 
-DISTNAME=	desktop-installer-0.8.1
+DISTNAME=	desktop-installer-0.8.1.24
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	aa7870599030446d1adb42b12aafe79e85396a71
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
@@ -22,7 +23,7 @@ NO_BUILD=	yes
 
 CHECK_INTERPRETER_SKIP+=	share/desktop-installer/XDM/xdmshutdown
 
-DEPENDS=	auto-admin>=0.7.17:../../sysutils/auto-admin
+DEPENDS=	auto-admin>=0.7.18:../../sysutils/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
