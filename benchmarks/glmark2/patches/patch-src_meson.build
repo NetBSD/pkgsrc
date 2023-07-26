@@ -1,8 +1,10 @@
-$NetBSD: patch-src_meson.build,v 1.1 2023/07/25 09:07:34 abs Exp $
+$NetBSD: patch-src_meson.build,v 1.2 2023/07/26 13:37:35 abs Exp $
 
 meson.build: fix build and avoid sigsegv
 
 https://github.com/glmark2/glmark2/commit/7d4c4da5d34e2e70a285c345c979e5e3c1eb2c3a
+
+Also add x11_dep when -DGLMARK2_USE_GLX
 
 --- src/meson.build.orig	2023-01-19 11:02:15.000000000 +0000
 +++ src/meson.build
@@ -14,3 +16,11 @@ https://github.com/glmark2/glmark2/commit/7d4c4da5d34e2e70a285c345c979e5e3c1eb2c
      libjpeg_dep,
      libpng_dep,
      libmatrix_headers_dep,
+@@ -244,6 +245,7 @@ if need_glx
+             include_directories('libmatrix'),
+             ],
+         compile_args: ['-DGLMARK2_USE_GLX'],
++        dependencies: x11_dep,
+         )
+ else
+     wsi_glx_dep = declare_dependency()
