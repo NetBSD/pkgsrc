@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.11 2023/07/25 09:07:34 abs Exp $
+$NetBSD: distinfo,v 1.12 2023/07/26 13:37:35 abs Exp $
 
 BLAKE2s (glmark2-2023.01.tar.gz) = 02fc1fd23d7ea66bb6dc8fc205a104e3d47f0a31458d17e9c0d2e0439a0060ae
 SHA512 (glmark2-2023.01.tar.gz) = 5aaad56bb341e9c09d8dc78ac8d07d9af39f2414a158fd6e7c2717db2427d1b353408a874a8f38065e241474c674e8220d001652a5dd5a6c893ffe778cff9006
 Size (glmark2-2023.01.tar.gz) = 9366116 bytes
 SHA1 (patch-meson.build) = bb495a1b6fadfe2788e490b6048f3f61e3f1d5ac
-SHA1 (patch-src_meson.build) = f6e6d459a87332a0e30250a7fc135516af02a0fe
+SHA1 (patch-src_gl-state-egl.cpp) = c4522d35b40bbfe57c17246be8e15853edb72874
+SHA1 (patch-src_gl-state-glx.cpp) = 3bcb7cb79a5316178425d573b635264deb791e69
+SHA1 (patch-src_meson.build) = c538f29b55fc1c040d723ae010d53e17664973a4
