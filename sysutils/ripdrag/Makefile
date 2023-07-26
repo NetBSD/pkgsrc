@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/03/11 18:45:25 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/26 19:39:03 pin Exp $
 
-DISTNAME=	ripdrag-0.3.0
+DISTNAME=	ripdrag-0.3.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/ripdrag/
 EXTRACT_SUFX=	.crate
@@ -15,13 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin
-
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk4}/lib
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ripdrag \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk4/buildlink3.mk"
