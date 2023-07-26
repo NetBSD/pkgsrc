@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4621 2023/07/25 20:16:31 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.4622 2023/07/26 08:47:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6421,3 +6421,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/oath-toolkit to 2.6.9 [sborrill 2023-07-25]
 	Updated sysutils/desktop-installer to 0.8.1.24 [bacon 2023-07-25]
 	Updated devel/p5-Test-BDD-Cucumber to 0.84 [schmonz 2023-07-25]
+	Updated www/curl to 8.2.1 [adam 2023-07-26]
+	Updated www/libcurl-gnutls to 8.2.1 [adam 2023-07-26]
+	Updated devel/cmake to 3.27.1 [adam 2023-07-26]
+	Updated devel/cmake-gui to 3.27.1 [adam 2023-07-26]
