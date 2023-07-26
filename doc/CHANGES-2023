@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4623 2023/07/26 15:32:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4624 2023/07/26 15:52:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6427,3 +6427,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake-gui to 3.27.1 [adam 2023-07-26]
 	Updated devel/py-pylint to 2.17.5 [adam 2023-07-26]
 	Updated devel/py-pdm to 2.8.1 [adam 2023-07-26]
+	Updated www/firefox102 to 102.13.0nb1 [ryoon 2023-07-26]
