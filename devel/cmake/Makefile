@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2023/07/20 06:12:13 adam Exp $
+# $NetBSD: Makefile,v 1.209 2023/07/26 10:54:51 adam Exp $
 
 .include "Makefile.common"
 
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
 CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:U1}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--system-libs
+# Debugger is not available for all platforms
+CONFIGURE_ARGS+=	--no-debugger
 # cppdap and jsoncpp require cmake to build, so use the one provided with cmake
 CONFIGURE_ARGS+=	--no-system-cppdap
 CONFIGURE_ARGS+=	--no-system-jsoncpp
