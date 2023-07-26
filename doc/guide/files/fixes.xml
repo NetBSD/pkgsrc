@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.189 2023/07/22 22:55:18 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.190 2023/07/26 22:41:02 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1423,7 +1423,7 @@ MESON_ARGS+=	-Dx11=false
   <sect2 id="basic-programming-languages">
     <title>C, C++, and Fortran</title>
 
-    <para>Compilers for the C and C++ languages comes with
+    <para>Compilers for the C and C++ languages come with
     the NetBSD base system.  By default, pkgsrc assumes that a package
     is written in C and will hide all other compilers (via the wrapper
     framework, see <xref linkend="buildlink" />).</para>
