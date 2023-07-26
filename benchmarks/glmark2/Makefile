@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2023/07/25 09:07:34 abs Exp $
+# $NetBSD: Makefile,v 1.21 2023/07/26 13:37:35 abs Exp $
 
 DISTNAME=	glmark2-2023.01
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
+PKGREVISION=	1
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
