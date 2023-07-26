@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2023/03/11 18:45:25 pin Exp $
+$NetBSD: distinfo,v 1.4 2023/07/26 19:39:03 pin Exp $
 
 BLAKE2s (anyhow-1.0.69.crate) = b160fbd1ad83a1b3e26611c8e3980f3c41ddce9a7a76b3efafdbaf8c0ebbd60e
 SHA512 (anyhow-1.0.69.crate) = d65e5c9404a70b1e0af90dd66af157f8c31ad0858f703765d5fc6c828f1fc8db690b17451c4108e3a52a7da2d6c2366e745d7b4bd7d19e6dba3485f7c3a43071
@@ -207,9 +207,9 @@ Size (quote-1.0.23.crate) = 28058 bytes
 BLAKE2s (regex-automata-0.1.10.crate) = 283615bf1114bdcf5a2ebd639ba1889a8a9a0195b566f41226f7e0961f3d5d81
 SHA512 (regex-automata-0.1.10.crate) = 56d64da361afce82c6cb49e70b99ce1fca3e1969c54bba5f9971db135f8544c65f49feb8827789947b3d1dcefc9c49a7a434a7ffe0d09c5900345a1733723c5f
 Size (regex-automata-0.1.10.crate) = 114533 bytes
-BLAKE2s (ripdrag-0.3.0.crate) = d2f5691344b069041a609cf5447e4ba51c8e50ede22577dcea17f4a1728552ad
-SHA512 (ripdrag-0.3.0.crate) = 20f681a060a53bea1eb1181510ae0bf4cd54d839d314ca5c7d82472ea5e0fe6c641ce551b10a3df7103a7c6be0f0a46680d5b7f4021b0b131d5cf4dea9031c55
-Size (ripdrag-0.3.0.crate) = 25570 bytes
+BLAKE2s (ripdrag-0.3.2.crate) = 962a1b7922ba8d7f49cd86cf67ca67e70bb6adeee3bc10c80b032e9a35e7f4bf
+SHA512 (ripdrag-0.3.2.crate) = a0ad27b667dad20ba4608ee3dd543d6dde33b71afe5061b19595a3bc0970b9f19cfa9c5ecb1c4c1a43fb6887139c369d05b605d17a50d6edd7045fa34e0a5f45
+Size (ripdrag-0.3.2.crate) = 25648 bytes
 BLAKE2s (rustc_version-0.4.0.crate) = 8244e9157b6b8811ae926fc0ed00edeb2b0a0f0f34d6e7b93ad236cbb6ffffba
 SHA512 (rustc_version-0.4.0.crate) = f66da7c6efe431db06cd01180d84ba67fcd38f8cd6ef693762957c00ccc2211f23c08079d7f184776e08f28d2d6ca3bdb5f5016f7de245c6193d4722891ba1db
 Size (rustc_version-0.4.0.crate) = 12175 bytes
