@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2023/07/19 08:06:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/07/26 08:31:17 adam Exp $
 # used by www/libcurl-gnutls/Makefile
 
-DISTNAME=	curl-8.2.0
+DISTNAME=	curl-8.2.1
 CATEGORIES=	www
 MASTER_SITES=	https://curl.se/download/
 EXTRACT_SUFX=	.tar.xz
