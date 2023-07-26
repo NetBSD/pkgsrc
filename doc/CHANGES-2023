@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4625 2023/07/26 19:37:05 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4626 2023/07/26 19:38:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6429,3 +6429,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.8.1 [adam 2023-07-26]
 	Updated www/firefox102 to 102.13.0nb1 [ryoon 2023-07-26]
 	Updated shells/nushell to 0.83.0 [pin 2023-07-26]
+	Updated sysutils/hexyl to 0.13.1 [pin 2023-07-26]
