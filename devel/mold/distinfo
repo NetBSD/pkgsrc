@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2023/03/17 16:33:52 fcambus Exp $
+$NetBSD: distinfo,v 1.28 2023/07/27 12:39:20 fcambus Exp $
 
-BLAKE2s (mold-1.11.0.tar.gz) = 90f88211f953d81359a5e2c7dee93acf90e26666ec9b5c6ca0f7210a52a1d343
-SHA512 (mold-1.11.0.tar.gz) = a9068600dd2db757552cce027f358c0b9e6af0941b92f81c1e99e2dde674bd06cc3533d432258e42a2197d9b3f8e7bb263de281928357a79e4fb17fb19719bc0
-Size (mold-1.11.0.tar.gz) = 8210923 bytes
-SHA1 (patch-CMakeLists.txt) = ca9361a34f272817450c9062292e74ac8ec843c9
+BLAKE2s (mold-2.0.0.tar.gz) = 9b20ec49e3d4f23b3aa213d3925066390e49c19d8b1876f8e875e716641c2d02
+SHA512 (mold-2.0.0.tar.gz) = 11c3d1e07fe4fcc28cff58b8e432526e4604aa55b49fa47c9495e439206fb9f6a1686b1c5bd2dc907ffd7fe62ac1c72317619fc8a5d7caaa5c327de585f16827
+Size (mold-2.0.0.tar.gz) = 9205927 bytes
+SHA1 (patch-CMakeLists.txt) = f9c305fa3771273c48f6172b0bc5a66a636a1d16
