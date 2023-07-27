@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/07/18 18:36:31 nia Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/27 17:32:51 nia Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -25,9 +25,9 @@ REQD_DIRS=	${PREFIX}/${EGDIR}
 MAKE_ENV+=	BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
 MAKE_ENV+=	cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+=	EGDIR=${EGDIR:Q}
-# Override its attempt to override LDFLAGS
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 INSTALL_ENV+=	BASEDIR=${DESTDIR}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O2 rm:-Wl,-E
 
 CHECK_PORTABILITY_SKIP+=	scripts/sc
 
