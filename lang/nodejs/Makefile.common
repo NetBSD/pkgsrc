@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2023/06/06 12:41:44 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.51 2023/07/27 08:43:16 jperkin Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs14/Makefile
 # used by lang/nodejs16/Makefile
@@ -17,6 +17,9 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake pkg-config
 
 PYTHON_FOR_BUILD_ONLY=		yes
+
+CONFLICTS+=	npm-[0-9]*
+SUPERSEDES+=	npm-[0-9]*
 
 GCC_REQD+=		4.9.4
 
