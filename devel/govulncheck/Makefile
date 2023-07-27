@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/23 09:58:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/27 23:01:50 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	vuln
@@ -12,7 +12,7 @@ HOMEPAGE=	https://vuln.go.dev/
 COMMENT=	Go vulnerability checker tool
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# go
+USE_LANGUAGES=	c
 
 GO_BUILD_PATTERN=	./cmd/govulncheck
 
