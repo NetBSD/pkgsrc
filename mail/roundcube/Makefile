@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2023/01/28 13:48:39 taca Exp $
+# $NetBSD: Makefile,v 1.98 2023/07/27 08:18:00 abs Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
+PKGREVISION=	1
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Browser-based multilingual IMAP client
@@ -18,7 +19,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_IDNA2>=0.1.1:../../net/pear-Net_IDNA2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.10.0:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.6:../../mail/pear-Auth_SASL
 
-RC_SUBDIRS=	SQL bin installer plugins program skins
+RC_SUBDIRS=	SQL bin installer plugins program skins vendor
 
 .for d in ${RC_SUBDIRS}
 INSTALLATION_DIRS+=	${RCDIR}/${d}
