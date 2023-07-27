@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4628 2023/07/27 06:54:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4629 2023/07/27 08:35:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6433,3 +6433,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ripdrag to 0.3.2 [pin 2023-07-26]
 	Updated net/py-dns to 2.4.1 [adam 2023-07-27]
 	Updated net/py-responses to 0.23.2 [adam 2023-07-27]
+	Updated devel/py-types-setuptools to 68.0.0.3 [adam 2023-07-27]
+	Updated devel/py-types-toml to 0.10.8.7 [adam 2023-07-27]
+	Updated devel/py-types-ujson to 5.8.0.1 [adam 2023-07-27]
+	Updated textproc/py-types-yaml to 6.0.12.11 [adam 2023-07-27]
