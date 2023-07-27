@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4627 2023/07/26 19:39:36 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4628 2023/07/27 06:54:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6431,3 +6431,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/nushell to 0.83.0 [pin 2023-07-26]
 	Updated sysutils/hexyl to 0.13.1 [pin 2023-07-26]
 	Updated sysutils/ripdrag to 0.3.2 [pin 2023-07-26]
+	Updated net/py-dns to 2.4.1 [adam 2023-07-27]
+	Updated net/py-responses to 0.23.2 [adam 2023-07-27]
