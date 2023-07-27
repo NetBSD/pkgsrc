@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/05/17 07:15:04 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/07/27 06:53:53 adam Exp $
 
-DISTNAME=	responses-0.23.1
-PKGREVISION=	1
+DISTNAME=	responses-0.23.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
@@ -11,8 +10,8 @@ HOMEPAGE=	https://github.com/getsentry/responses
 COMMENT=	Utility library for mocking out the requests Python library
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.10:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.0.0:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-types-yaml-[0-9]*:../../textproc/py-types-yaml
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.0.0:../../devel/py-coverage
@@ -21,12 +20,14 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver-[0-9]*:../../devel/py-test-httpserver
+TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
 
 USE_LANGUAGES=	# none
 
-PYSETUPTESTTARGET=	pytest
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} responses/tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
