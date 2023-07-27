@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/07/27 11:34:40 tnn Exp $
 
 BLAKE2s (nsis-3.04-src.tar.bz2) = 8ebc6f16b7e17f7b866549d93696613462f14406d9b34c8438472a1a5ab5d6b6
 SHA512 (nsis-3.04-src.tar.bz2) = 1fa0e4ed99716e36a1feb6efb2261d0bd876077aeae0c7735bd0ac97eaac4413bf49016f1efa4e929e12ffe896007a2f2905704c50abc3a7a4d2bc514ea59e2e
@@ -6,3 +6,4 @@ Size (nsis-3.04-src.tar.bz2) = 1740579 bytes
 BLAKE2s (nsis-3.04.zip) = 9fcc0d6cc826d0ec757891c9c7e4020a1e581d7e8e3002e8530a85428ea4a0f1
 SHA512 (nsis-3.04.zip) = 5e7d0a8e2e329ed7d4affd2bff3de58e096d6bcadb517b2ee3b56cf6500c355e6e9e7e12f28e92c79fe2b05d26e7666da0df834b48973b4bcc5157e8a3325192
 Size (nsis-3.04.zip) = 2246851 bytes
+SHA1 (patch-Docs_src_bin_halibut_halibut.h) = 8872a64c4b7a6dfadb55edbcb5ce66a69ef8f401
