@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4636 2023/07/28 20:49:54 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4637 2023/07/28 21:21:51 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/atac-seq to 1.2.1 [bacon 2023-07-28]
 	Updated devel/difftastic to 0.49.0 [pin 2023-07-28]
 	Updated editors/tp-note to 1.21.9 [pin 2023-07-28]
+	Updated cross/asm6809 to 2.13 [thorpej 2023-07-28]
