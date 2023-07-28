@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/03/05 16:17:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/28 21:20:55 thorpej Exp $
 
-DISTNAME=	asm6809-2.12
+DISTNAME=	asm6809-2.13
 CATEGORIES=	cross
 MASTER_SITES=	https://www.6809.org.uk/asm6809/dl/
 
