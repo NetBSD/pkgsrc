@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2023/07/13 20:31:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2023/07/28 20:47:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
@@ -19,7 +19,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.4
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.8
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.8
-CARGO_CRATE_DEPENDS+=	crossterm-0.25.0
+CARGO_CRATE_DEPENDS+=	crossterm-0.26.1
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.0
 CARGO_CRATE_DEPENDS+=	ctor-0.1.22
 CARGO_CRATE_DEPENDS+=	diff-0.1.12
@@ -65,9 +65,9 @@ CARGO_CRATE_DEPENDS+=	predicates-core-1.0.3
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.5
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.3.0
 CARGO_CRATE_DEPENDS+=	pretty_env_logger-0.4.0
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.39
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.66
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.3
-CARGO_CRATE_DEPENDS+=	quote-1.0.18
+CARGO_CRATE_DEPENDS+=	quote-1.0.32
 CARGO_CRATE_DEPENDS+=	radix-heap-0.4.2
 CARGO_CRATE_DEPENDS+=	rayon-1.6.1
 CARGO_CRATE_DEPENDS+=	rayon-core-1.10.1
@@ -84,9 +84,10 @@ CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.3
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.10.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
-CARGO_CRATE_DEPENDS+=	strum-0.24.1
-CARGO_CRATE_DEPENDS+=	strum_macros-0.24.3
+CARGO_CRATE_DEPENDS+=	strum-0.25.0
+CARGO_CRATE_DEPENDS+=	strum_macros-0.25.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.95
+CARGO_CRATE_DEPENDS+=	syn-2.0.27
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.1.17
 CARGO_CRATE_DEPENDS+=	termtree-0.2.4
