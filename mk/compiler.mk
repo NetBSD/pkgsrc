@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.103 2023/07/29 17:55:47 nia Exp $
+# $NetBSD: compiler.mk,v 1.104 2023/07/29 18:09:39 nia Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -244,9 +244,9 @@ CWRAPPERS_PREPEND.f77+=	${_COMPILER_ABI_FLAG.${ABI}}
 .if ${_PKGSRC_USE_SSP} == "yes" && defined(_SSP_CFLAGS)
 _WRAP_EXTRA_ARGS.CC+=	${_SSP_CFLAGS}
 _WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_SSP_CFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_SSP_CFLAGS}
+CWRAPPERS_PREPEND.f77+=	${_SSP_CFLAGS}
 .endif
 
 # Enable FORTIFY_SOURCE if the user has chosen to and the compiler
