@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/09/29 01:23:23 markd Exp $
+$NetBSD: distinfo,v 1.16 2023/07/29 02:35:33 markd Exp $
 
-BLAKE2s (kdewebkit-5.98.0.tar.xz) = 9f418551c087f6d3f230cfb1235224eeba9d15b4fb8c0ffa34312b3f11e4eaee
-SHA512 (kdewebkit-5.98.0.tar.xz) = 6ec86c63f8373bd87491973011fbdbd6ab962913c619ed9777093597b57369ac67163121521ca7bd2f6ce1e7a1d335e47d946a2635affa369c80e9db21a12260
-Size (kdewebkit-5.98.0.tar.xz) = 30080 bytes
+BLAKE2s (kdewebkit-5.108.0.tar.xz) = a25885934c000d86f12fdea7ac3b35445a1c63a27e5a61f0853325426368227f
+SHA512 (kdewebkit-5.108.0.tar.xz) = fbef701421f8b9efda31b2f548fa155baa8abe387f22eec794bd4f9c0df073e1f319b9ba45276e8fda3cae54bf8fc8aa1b4ccf644f30c0234b649d2272cef3dd
+Size (kdewebkit-5.108.0.tar.xz) = 29776 bytes
