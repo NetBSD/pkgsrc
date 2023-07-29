@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.257 2023/07/22 12:20:37 nia Exp $
+# $NetBSD: gcc.mk,v 1.258 2023/07/29 17:55:47 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -149,6 +149,8 @@ GCC_REQD+=	3.0
 GCC_REQD+=	2.8.0
 .  endif
 .endif
+
+.include "gcc-style-args.mk"
 
 #
 # Most of the time, GCC adds support for features of new C and C++
@@ -515,59 +517,6 @@ _LANGUAGES.gcc=		# empty
 _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .endfor
 
-_WRAP_EXTRA_ARGS.cc+=	-fcommon
-CWRAPPERS_PREPEND.cc+=	-fcommon
-
-.if ${_PKGSRC_MKPIE} == "yes"
-_MKPIE_CFLAGS.gcc=	-fPIC
-_MKPIE_FCFLAGS.gcc=	-fPIC
-# for libraries a sink wrapper around gcc is required and used instead
-_MKPIE_LDFLAGS=		-pie
-
-.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
-_GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
-_GCC_FCFLAGS+=		${_MKPIE_FCFLAGS.gcc}
-CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
-CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.gcc}
-CWRAPPERS_APPEND.f77+=	${_MKPIE_FCFLAGS.gcc}
-.  endif
-.endif
-
-.if ${_PKGSRC_MKREPRO} == "yes"
-.export WRKDIR
-# XXX the dollar sign should not be expanded by the shell
-_GCC_CFLAGS+=		-fdebug-prefix-map=$$$$WRKDIR/=
-.endif
-
-.if ${_PKGSRC_MKREPRO} == "yes"
-_GCC_CFLAGS+=		${_MKREPRO_CFLAGS.gcc}
-CWRAPPERS_APPEND.cc+=	${_MKREPRO_CFLAGS.gcc}
-.endif
-
-# The user can choose the level of FORTIFY.
-.if ${PKGSRC_USE_FORTIFY} == "weak"
-_FORTIFY_CFLAGS=	-D_FORTIFY_SOURCE=1
-.else
-_FORTIFY_CFLAGS=	-D_FORTIFY_SOURCE=2
-.endif
-
-.if ${_PKGSRC_USE_FORTIFY} == "yes"
-_GCC_CFLAGS+=		${_FORTIFY_CFLAGS}
-CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS}
-.endif
-
-# The user or package can choose the level of RELRO.
-.if ${PKGSRC_USE_RELRO} != "partial" && \
-    ${RELRO_SUPPORTED:Uyes:tl} != "partial"
-_RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
-.else
-_RELRO_LDFLAGS=		-Wl,-zrelro
-.endif
-
-.if !empty(_RELRO_LDFLAGS) && !empty(MACHINE_PLATFORM:MNetBSD-*-*mips*)
-_RELRO_LDFLAGS+=	-Wl,-z,common-page-size=0x10000
-.endif
-
 .if ${_PKGSRC_USE_STACK_CHECK} == "yes"
 _STACK_CHECK_CFLAGS=	-fstack-check
 _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
@@ -575,8 +524,6 @@ _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 _STACK_CHECK_CFLAGS=	-fstack-clash-protection
 _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .endif
-
-_CTF_CFLAGS=		-gdwarf-2
 
 # GCC has this annoying behaviour where it advocates in a multi-line
 # banner the use of "#include" over "#import" when including headers.
@@ -819,12 +766,6 @@ _NEED_NEWER_GCC!=	\
 PKG_FAIL_REASON+=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 .endif
 
-# GNU ld option used to set the rpath
-_LINKER_RPATH_FLAG=	-R
-
-# GCC passes rpath directives to the linker using "-Wl,-R".
-_COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG}
-
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 #
 # Ensure that the correct rpath is passed to the linker if we need to
@@ -867,12 +808,6 @@ _GCC_LDFLAGS=	# empty
 .  for _dir_ in ${_GCC_LIBDIRS:N*not_found*}
 _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 .  endfor
-.endif
-
-.if ${_PKGSRC_USE_RELRO} == "yes"
-_GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 .endif
 
 LDFLAGS+=	${_GCC_LDFLAGS}
@@ -1024,17 +959,6 @@ CC_VERSION=		gcc-${_GCC_REQD}
 .else
 CC_VERSION_STRING=	${CC_VERSION}
 CC_VERSION=		${_GCC_PKG}
-.endif
-
-# The user can choose the level of stack smashing protection.
-.if empty(CC_VERSION:Mgcc-[1-3].*)
-.  if ${PKGSRC_USE_SSP} == "all"
-_SSP_CFLAGS=		-fstack-protector-all
-.  elif ${PKGSRC_USE_SSP} == "strong"
-_SSP_CFLAGS=		-fstack-protector-strong
-.  else
-_SSP_CFLAGS=		-fstack-protector
-.  endif
 .endif
 
 # Prepend the path to the compiler to the PATH.
