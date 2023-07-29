@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/09/29 01:12:53 markd Exp $
+$NetBSD: distinfo,v 1.26 2023/07/29 02:24:01 markd Exp $
 
-BLAKE2s (kwallet-5.98.0.tar.xz) = 1fd40469a74da7205ae3c16cd33a9b8339a65c244695f0133f709b24e68f004c
-SHA512 (kwallet-5.98.0.tar.xz) = 72c09201e549ffb240dbdb5a09f0aead3bd2e32e31e2fc49f2a8a7895d381e1bf5cec2bddd076bd46cf4665d44cf12564742439baec6dbd7a4cb9710deb8d925
-Size (kwallet-5.98.0.tar.xz) = 332948 bytes
+BLAKE2s (kwallet-5.108.0.tar.xz) = 10b11b8b977180f4874ee1892345ed8462f1038a90ae552c2c2635c894a0bc7e
+SHA512 (kwallet-5.108.0.tar.xz) = ba129b8f20d1fc853075735127394629daafefd9c1c42d0a657a82ffc1634bcfa36ceddea98ac1e21fda1a4db842ae9e681cc87153571fedb3a596638d62fed7
+Size (kwallet-5.108.0.tar.xz) = 349548 bytes
