@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/05 10:04:10 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/07/29 21:15:22 fcambus Exp $
 bin/swirc
 man/man1/swirc.1
 man/man5/swirc.conf.5
+man/man5/swirc.theme.5
 share/locale/de/LC_MESSAGES/swirc.mo
 share/locale/fi/LC_MESSAGES/swirc.mo
 share/locale/fr/LC_MESSAGES/swirc.mo
