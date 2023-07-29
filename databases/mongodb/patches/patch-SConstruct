@@ -1,22 +1,23 @@
-$NetBSD: patch-SConstruct,v 1.10 2021/12/27 09:36:10 nia Exp $
+$NetBSD: patch-SConstruct,v 1.11 2023/07/29 11:45:43 adam Exp $
 
 Add support for NetBSD and Dragonfly.
+Avoid -fatal-warnings: ld might complain about conflicting versions.
 Fix locations.
 Don't compile with debug info.
 Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS.
 
---- SConstruct.orig	2021-06-30 17:39:08.000000000 +0000
+--- SConstruct.orig	2023-06-29 13:37:52.000000000 +0000
 +++ SConstruct
-@@ -1043,6 +1043,7 @@ envDict = dict(BUILD_ROOT=buildDir,
-                INSTALL_DIR=installDir,
+@@ -1266,6 +1266,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                CONFIGURELOG='$BUILD_ROOT/scons/config.log',
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
 +               ENV=os.environ,
                 )
  
- env = Environment(variables=env_vars, **envDict)
-@@ -1193,7 +1194,9 @@ def CheckForProcessor(context, which_arc
+ # By default, we will get the normal SCons tool search. But if the
+@@ -1455,7 +1456,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "defined(_WIN32)",
      "solaris": "defined(__sun)",
@@ -26,16 +27,25 @@ Respect LDFLAGS and CXXFLAGS.
      "openbsd": "defined(__OpenBSD__)",
      "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
      "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
-@@ -1590,7 +1593,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+@@ -1591,7 +1594,7 @@ if env.TargetOSIs('posix'):
+         env.Append(
+             CCFLAGS_WERROR=["-Werror"],
+             CXXFLAGS_WERROR=['-Werror=unused-result'] if env.ToolchainIs('clang') else [],
+-            LINKFLAGS_WERROR=['-Wl,-fatal_warnings' if env.TargetOSIs('darwin') else "-Wl,--fatal-warnings"],
++            LINKFLAGS_WERROR=[''],
+         )
+ elif env.TargetOSIs('windows'):
+         env.Append(
+@@ -2006,7 +2009,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
      if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
          env.Tool('thin_archive')
  
 -if env.TargetOSIs('linux', 'freebsd', 'openbsd'):
-+if env.TargetOSIs('linux', 'dragonfly', 'freebsd', 'netbsd', 'openbsd'):
-     env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
-     env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
-     # NOTE: The leading and trailing spaces here are important. Do not remove them.
-@@ -1626,14 +1629,14 @@ if env.TargetOSIs('linux'):
++if env.TargetOSIs('linux', 'freebsd', 'openbsd', 'netbsd', 'dragonfly'):
+     env['LINK_WHOLE_ARCHIVE_LIB_START'] = '-Wl,--whole-archive'
+     env['LINK_WHOLE_ARCHIVE_LIB_END'] = '-Wl,--no-whole-archive'
+     env['LINK_AS_NEEDED_LIB_START'] = '-Wl,--as-needed'
+@@ -2183,14 +2186,14 @@ if env.TargetOSIs('linux'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -52,37 +62,43 @@ Respect LDFLAGS and CXXFLAGS.
      env.Append( LIBS=[ "kvm" ] )
  
  elif env.TargetOSIs('windows'):
-@@ -1891,7 +1894,6 @@ if env.TargetOSIs('posix'):
+@@ -2492,7 +2495,6 @@ if env.TargetOSIs('posix'):
+ 
      # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
-     env.Append( CCFLAGS=["-fno-omit-frame-pointer",
-                          "-fno-strict-aliasing",
+     env.Append( CCFLAGS=["-fasynchronous-unwind-tables",
 -                         "-ggdb" if not env.TargetOSIs('emscripten') else "-g",
-                          "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -2533,9 +2535,9 @@ def doConfigure(myenv):
-     if usingLibStdCxx:
-         def CheckModernLibStdCxx(context):
-             test_body = """
--            #if !__has_include(<experimental/filesystem>)
--            #error "libstdc++ from GCC 5.3.0 or newer is required"
--            #endif
-+            //#if !__has_include(<experimental/filesystem>)
-+            //#error "libstdc++ from GCC 5.3.0 or newer is required"
-+            //#endif
-             """
- 
-             context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -2779,7 +2781,7 @@ def doConfigure(myenv):
-         #
-         myenv.Append( CCFLAGS=["/Zc:inline"])
+                          "-Wno-unknown-pragmas",
+@@ -3019,7 +3021,7 @@ def doConfigure(myenv):
+         myenv.AddMethod(
+             functools.partial(var_func, var=var, func=CheckFlag), f"Check{var}Supported")
  
 -    if myenv.ToolchainIs('gcc', 'clang'):
 +    if myenv.ToolchainIs('gcc', 'clang') and get_option('runtime-hardening') == "on":
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster. Don't use it if the user has already configured another linker
          # selection manually.
-@@ -3021,8 +3023,9 @@ def doConfigure(myenv):
+@@ -3415,9 +3417,6 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
+-            #error "libstdc++ from GCC 5.3.0 or newer is required"
+-            #endif
+             """
+ 
+             context.Message('Checking for libstdc++ 5.3.0 or better... ')
+@@ -3828,7 +3827,7 @@ def doConfigure(myenv):
+         # Explicitly use the new gnu hash section if the linker offers
+         # it, except on android since older runtimes seem to not
+         # support it. For that platform, use 'both'.
+-        if env.TargetOSIs('android'):
++        if env.TargetOSIs('android') or env.TargetOSIs('netbsd'):
+             myenv.AddToLINKFLAGSIfSupported('-Wl,--hash-style=both')
+         else:
+             myenv.AddToLINKFLAGSIfSupported('-Wl,--hash-style=gnu')
+@@ -4119,8 +4118,9 @@ def doConfigure(myenv):
      def checkOpenSSL(conf):
          sslLibName = "ssl"
          cryptoLibName = "crypto"
@@ -94,7 +110,7 @@ Respect LDFLAGS and CXXFLAGS.
              sslLinkDependencies = ["crypto"]
  
          if conf.env.TargetOSIs('windows'):
-@@ -3368,7 +3371,7 @@ def doConfigure(myenv):
+@@ -4457,7 +4457,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed

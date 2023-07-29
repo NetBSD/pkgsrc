@@ -1,8 +1,8 @@
-$NetBSD: patch-src_mongo_util_processinfo__netbsd.cpp,v 1.4 2020/02/01 20:00:08 adam Exp $
+$NetBSD: patch-src_mongo_util_processinfo__netbsd.cpp,v 1.5 2023/07/29 11:45:43 adam Exp $
 
 Add NetBSD support.
 
---- src/mongo/util/processinfo_netbsd.cpp.orig	2020-01-27 09:41:08.452841019 +0000
+--- src/mongo/util/processinfo_netbsd.cpp.orig	2023-07-26 08:58:34.000000000 +0000
 +++ src/mongo/util/processinfo_netbsd.cpp
 @@ -26,6 +26,7 @@
   *    exception statement from all source files in the program, then also delete
@@ -10,7 +10,7 @@ Add NetBSD support.
   */
 +#define _KMEMUSER
  
- #define MONGO_LOG_DEFAULT_COMPONENT ::mongo::logger::LogComponent::kControl
+ #define MONGO_LOGV2_DEFAULT_COMPONENT ::mongo::logv2::LogComponent::kControl
  
 @@ -38,7 +39,6 @@
  #include <sys/param.h>
@@ -29,7 +29,7 @@ Add NetBSD support.
      char value[256] = {0};
      size_t len = sizeof(value);
      if (sysctl(sysctlID, idLen, &value, &len, NULL, 0) == -1) {
-@@ -109,7 +109,7 @@ int ProcessInfo::getVirtualMemorySize() 
+@@ -105,7 +105,7 @@ int ProcessInfo::getVirtualMemorySize() 
          return -1;
      }
  
@@ -38,8 +38,8 @@ Add NetBSD support.
      int vss = ((task->p_vm_dsize + task->p_vm_ssize + task->p_vm_tsize) * sysconf(_SC_PAGESIZE)) /
          1048576;
      kvm_close(kd);
-@@ -124,7 +124,7 @@ int ProcessInfo::getResidentSize() {
-         log() << "Unable to get res mem size: " << err;
+@@ -120,7 +120,7 @@ int ProcessInfo::getResidentSize() {
+         LOGV2(23344, "Unable to get res mem size: {err}", "err"_attr = err);
          return -1;
      }
 -    kinfo_proc* task = kvm_getprocs(kd, KERN_PROC_PID, _pid.toNative(), sizeof(kinfo_proc), &cnt);
@@ -47,7 +47,7 @@ Add NetBSD support.
      int rss = (task->p_vm_rssize * sysconf(_SC_PAGESIZE)) / 1048576;  // convert from pages to MB
      kvm_close(kd);
      return rss;
-@@ -136,7 +136,7 @@ double ProcessInfo::getSystemMemoryPress
+@@ -128,7 +128,7 @@ int ProcessInfo::getResidentSize() {
  
  void ProcessInfo::SystemInfo::collectSystemInfo() {
      osType = "BSD";
