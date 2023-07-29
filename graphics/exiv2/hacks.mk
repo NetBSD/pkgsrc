@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2023/07/29 07:15:18 nia Exp $
+# $NetBSD: hacks.mk,v 1.2 2023/07/29 09:49:47 nia Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -9,8 +9,11 @@
 PKG_HACKS+=		EXIV2_STDCXXFS
 LIBSTDCXXFS=		-lstdc++fs
 LDFLAGS+=		${LIBSTDCXXFS}
+.else
+LIBSTDCXXFS=
+.endif
+
 SUBST_CLASSES+=		fslib
 SUBST_STAGE.fslib=	pre-configure
 SUBST_FILES.fslib=	cmake/exiv2.pc.in
 SUBST_VARS.fslib=	LIBSTDCXXFS
-.endif
