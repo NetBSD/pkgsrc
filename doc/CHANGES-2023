@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4641 2023/07/29 18:10:36 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4642 2023/07/29 19:42:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6531,3 +6531,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/mongodb4 version 4.4.23 [adam 2023-07-29]
 	Updated databases/mongo-tools to 100.7.4 [adam 2023-07-29]
 	Added graphics/webp-pixbuf-loader version 0.2.4 [tsutsui 2023-07-29]
+	Updated emulators/mame to 0.257 [wiz 2023-07-29]
