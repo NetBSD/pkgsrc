@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:03:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/29 02:16:23 markd Exp $
 include/KF5/KContacts/KContacts/Address
 include/KF5/KContacts/KContacts/AddressFormat
 include/KF5/KContacts/KContacts/Addressee
@@ -74,7 +74,6 @@ lib/libKF5Contacts.so.5
 lib/libKF5Contacts.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KContacts.pri
 share/locale/ar/LC_MESSAGES/kcontacts5.mo
-share/locale/ast/LC_MESSAGES/kcontacts5.mo
 share/locale/az/LC_MESSAGES/kcontacts5.mo
 share/locale/be/LC_MESSAGES/kcontacts5.mo
 share/locale/bg/LC_MESSAGES/kcontacts5.mo
@@ -101,6 +100,7 @@ share/locale/ia/LC_MESSAGES/kcontacts5.mo
 share/locale/id/LC_MESSAGES/kcontacts5.mo
 share/locale/it/LC_MESSAGES/kcontacts5.mo
 share/locale/ja/LC_MESSAGES/kcontacts5.mo
+share/locale/ka/LC_MESSAGES/kcontacts5.mo
 share/locale/kk/LC_MESSAGES/kcontacts5.mo
 share/locale/km/LC_MESSAGES/kcontacts5.mo
 share/locale/ko/LC_MESSAGES/kcontacts5.mo
