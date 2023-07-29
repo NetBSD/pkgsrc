@@ -1,19 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2020/02/01 20:00:08 adam Exp $
-bin/install_compass
+@comment $NetBSD: PLIST,v 1.5 2023/07/29 11:45:43 adam Exp $
 bin/mongo
 bin/mongod
 bin/mongos
-man/man1/bsondump.1
-man/man1/mongo.1
 man/man1/mongod.1
-man/man1/mongodump.1
-man/man1/mongoexport.1
-man/man1/mongofiles.1
-man/man1/mongoimport.1
+man/man1/mongokerberos.1
 man/man1/mongoldap.1
-man/man1/mongoreplay.1
-man/man1/mongorestore.1
 man/man1/mongos.1
-man/man1/mongostat.1
-man/man1/mongotop.1
 share/examples/mongodb/mongod.conf

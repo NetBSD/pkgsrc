@@ -1,6 +1,8 @@
-$NetBSD: patch-src_mongo_db_storage_storage__repair__observer.cpp,v 1.1 2023/01/22 17:36:31 ryoon Exp $
+$NetBSD: patch-src_mongo_db_storage_storage__repair__observer.cpp,v 1.2 2023/07/29 11:45:43 adam Exp $
 
---- src/mongo/db/storage/storage_repair_observer.cpp.orig	2021-06-30 17:39:08.000000000 +0000
+boost::filesystem::ofstream is deprected, use std::ofstream instead.
+
+--- src/mongo/db/storage/storage_repair_observer.cpp.orig	2023-06-29 13:37:52.000000000 +0000
 +++ src/mongo/db/storage/storage_repair_observer.cpp
 @@ -34,6 +34,7 @@
  #include <algorithm>
@@ -10,12 +12,12 @@ $NetBSD: patch-src_mongo_db_storage_storage__repair__observer.cpp,v 1.1 2023/01/
  
  #ifdef __linux__
  #include <fcntl.h>
-@@ -120,7 +121,7 @@ bool StorageRepairObserver::isDataInvali
+@@ -121,7 +122,7 @@ bool StorageRepairObserver::isDataInvali
  }
  
  void StorageRepairObserver::_touchRepairIncompleteFile() {
 -    boost::filesystem::ofstream fileStream(_repairIncompleteFilePath);
-+    std::ofstream fileStream(_repairIncompleteFilePath);
++    std::ofstream fileStream(_repairIncompleteFilePath.string());
      fileStream << "This file indicates that a repair operation is in progress or incomplete.";
      if (fileStream.fail()) {
-         severe() << "Failed to write to file " << _repairIncompleteFilePath.string() << ": "
+         LOGV2_FATAL_NOTRACE(50920,
