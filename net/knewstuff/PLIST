@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/09/29 01:09:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/07/29 02:21:19 markd Exp $
 bin/knewstuff-dialog
 include/KF5/KMoreTools/KMoreTools
 include/KF5/KMoreTools/KMoreToolsMenuFactory
@@ -125,6 +125,7 @@ lib/libKF5NewStuffWidgets.so.5
 lib/libKF5NewStuffWidgets.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KNewStuff.pri
 qt5/mkspecs/modules/qt_KNewStuffCore.pri
+qt5/plugins/designer/knewstuffwidgets.so
 qt5/qml/org/kde/newstuff/Action.qml
 qt5/qml/org/kde/newstuff/Button.qml
 qt5/qml/org/kde/newstuff/Dialog.qml
@@ -151,6 +152,7 @@ qt5/qml/org/kde/newstuff/private/entrygriddelegates/FeedbackOverlay.qml
 qt5/qml/org/kde/newstuff/private/entrygriddelegates/ThumbDelegate.qml
 qt5/qml/org/kde/newstuff/private/entrygriddelegates/TileDelegate.qml
 qt5/qml/org/kde/newstuff/qmldir
+share/applications/org.kde.knewstuff-dialog.desktop
 share/kf5/kmoretools/presets-kmoretools/_README.md
 share/kf5/kmoretools/presets-kmoretools/angrysearch.desktop
 share/kf5/kmoretools/presets-kmoretools/catfish.desktop
