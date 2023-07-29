@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2023/07/23 14:36:30 bacon Exp $
+# $NetBSD: Makefile,v 1.1019 2023/07/29 03:07:15 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -345,7 +345,6 @@ SUBDIR+=	libiptcdata
 SUBDIR+=	libjpeg-turbo
 SUBDIR+=	libkdcraw
 SUBDIR+=	libkexiv2
-SUBDIR+=	libkexiv2-kde4
 SUBDIR+=	libkipi
 SUBDIR+=	libksane
 SUBDIR+=	liblqr
