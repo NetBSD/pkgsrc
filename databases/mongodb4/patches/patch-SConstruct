@@ -1,0 +1,105 @@
+$NetBSD: patch-SConstruct,v 1.1 2023/07/29 11:51:15 adam Exp $
+
+Add support for NetBSD and Dragonfly.
+Fix locations.
+Don't compile with debug info.
+Don't mess with the linker.
+Respect LDFLAGS and CXXFLAGS.
+
+--- SConstruct.orig	2023-06-29 02:35:52.000000000 +0000
++++ SConstruct
+@@ -1196,6 +1196,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                CONFIGURELOG='$BUILD_ROOT/scons/config.log',
+                CONFIG_HEADER_DEFINES={},
+                LIBDEPS_TAG_EXPANSIONS=[],
++               ENV=os.environ,
+                )
+ 
+ # TODO: Remove these when hygienic builds are default.
+@@ -1367,7 +1368,9 @@ def CheckForProcessor(context, which_arc
+ os_macros = {
+     "windows": "defined(_WIN32)",
+     "solaris": "defined(__sun)",
++    "dragonfly": "defined(__DragonFly__)",
+     "freebsd": "defined(__FreeBSD__)",
++    "netbsd": "defined(__NetBSD__)",
+     "openbsd": "defined(__OpenBSD__)",
+     "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
+     "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
+@@ -1859,7 +1862,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+     if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
+         env.Tool('thin_archive')
+ 
+-if env.TargetOSIs('linux', 'freebsd', 'openbsd'):
++if env.TargetOSIs('linux', 'freebsd', 'openbsd', 'netbsd', 'dragonfly'):
+     # NOTE: The leading and trailing spaces here are important. Do not remove them.
+     env['LINK_WHOLE_ARCHIVE_LIB_START'] = '-Wl,--whole-archive '
+     env['LINK_WHOLE_ARCHIVE_LIB_END'] = ' -Wl,--no-whole-archive'
+@@ -1899,14 +1902,14 @@ if env.TargetOSIs('linux'):
+ elif env.TargetOSIs('solaris'):
+      env.Append( LIBS=["socket","resolv","lgrp"] )
+ 
+-elif env.TargetOSIs('freebsd'):
++elif env.TargetOSIs('freebsd', 'dragonfly'):
+     env.Append( LIBS=[ "kvm" ] )
+     env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
+ 
+ elif env.TargetOSIs('darwin'):
+     env.Append( LIBS=["resolv"] )
+ 
+-elif env.TargetOSIs('openbsd'):
++elif env.TargetOSIs('netbsd', 'openbsd'):
+     env.Append( LIBS=[ "kvm" ] )
+ 
+ elif env.TargetOSIs('windows'):
+@@ -2204,7 +2207,6 @@ if env.TargetOSIs('posix'):
+     env.Append( CCFLAGS=["-fno-omit-frame-pointer",
+                          "-fno-strict-aliasing",
+                          "-fasynchronous-unwind-tables",
+-                         "-ggdb" if not env.TargetOSIs('emscripten') else "-g",
+                          "-pthread",
+                          "-Wall",
+                          "-Wsign-compare",
+@@ -2869,9 +2871,9 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
+-            #error "libstdc++ from GCC 5.3.0 or newer is required"
+-            #endif
++            //#if !__has_include(<experimental/filesystem>)
++            //#error "libstdc++ from GCC 5.3.0 or newer is required"
++            //#endif
+             """
+ 
+             context.Message('Checking for libstdc++ 5.3.0 or better... ')
+@@ -3226,7 +3228,7 @@ def doConfigure(myenv):
+         #
+         myenv.Append( CCFLAGS=["/Zc:inline"])
+ 
+-    if myenv.ToolchainIs('gcc', 'clang'):
++    if myenv.ToolchainIs('gcc', 'clang') and get_option('runtime-hardening') == "on":
+         # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
+         # because it is much faster. Don't use it if the user has already configured another linker
+         # selection manually.
+@@ -3458,8 +3460,9 @@ def doConfigure(myenv):
+     def checkOpenSSL(conf):
+         sslLibName = "ssl"
+         cryptoLibName = "crypto"
+-        sslLinkDependencies = ["crypto", "dl"]
+-        if conf.env.TargetOSIs('freebsd'):
++        if conf.env.TargetOSIs('linux', 'solaris'):
++            sslLinkDependencies = ["crypto", "dl"]
++        else:
+             sslLinkDependencies = ["crypto"]
+ 
+         if conf.env.TargetOSIs('windows'):
+@@ -3796,7 +3799,7 @@ def doConfigure(myenv):
+         myenv.ConfError("Couldn't find SASL header/libraries")
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if env.TargetOSIs('freebsd', 'openbsd'):
++    if env.TargetOSIs('dragonfly', 'freebsd', 'netbsd', 'openbsd'):
+         if not conf.CheckLib("execinfo"):
+             myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
+ 
