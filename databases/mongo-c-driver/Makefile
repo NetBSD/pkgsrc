@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2023/04/19 08:08:07 adam Exp $
+# $NetBSD: Makefile,v 1.58 2023/07/29 11:39:29 adam Exp $
 
-DISTNAME=	mongo-c-driver-1.17.7
-PKGREVISION=	4
+DISTNAME=	mongo-c-driver-1.24.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,15 +13,16 @@ LICENSE=	apache-2.0
 # Requires shm_open()
 NOT_FOR_PLATFORM+=	OpenBSD-*-*
 
-USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	check
 
 CMAKE_ARGS+=	-DENABLE_ICU=ON
-#CMAKE_ARGS+=	-DENABLE_MAN_PAGES=ON
-CMAKE_ARGS+=	-DENABLE_SNAPPY=SYSTEM
+CMAKE_ARGS+=	-DENABLE_SNAPPY=ON
 CMAKE_ARGS+=	-DENABLE_UNINSTALL=OFF
 CMAKE_ARGS+=	-DENABLE_ZLIB=SYSTEM
+CMAKE_ARGS+=	-DENABLE_ZSTD=ON
+CMAKE_ARGS+=	-DENABLE_SHM_COUNTERS=OFF # ON is only supported on Linux or ARM Darwin
 
 PKGCONFIG_OVERRIDE+=	src/libbson/src/libbson-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbson/src/libbson-static-1.0.pc.in
@@ -35,13 +35,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 LDFLAGS.SunOS+=			-lsocket
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/libmongoc/../../build/cmake/libmongoc-hidden-symbols.map
 
-PLIST_VARS+=	unix
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Darwin"
-PLIST.unix=	yes
-.endif
-
 .include "options.mk"
 
 post-install:
@@ -50,6 +43,8 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 .endfor
 
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
