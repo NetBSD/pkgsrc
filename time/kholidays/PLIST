@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/25 07:14:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/29 02:34:45 markd Exp $
 include/KF5/KHolidays/KHolidays/AstroSeasons
 include/KF5/KHolidays/KHolidays/Holiday
 include/KF5/KHolidays/KHolidays/HolidayRegion
@@ -24,7 +24,6 @@ qt5/mkspecs/modules/qt_KHolidays.pri
 qt5/qml/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 qt5/qml/org/kde/kholidays/qmldir
 share/locale/ar/LC_MESSAGES/libkholidays5_qt.qm
-share/locale/ast/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/az/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/be/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/bg/LC_MESSAGES/libkholidays5_qt.qm
@@ -57,6 +56,7 @@ share/locale/id/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/is/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/it/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/ja/LC_MESSAGES/libkholidays5_qt.qm
+share/locale/ka/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/kk/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/km/LC_MESSAGES/libkholidays5_qt.qm
 share/locale/ko/LC_MESSAGES/libkholidays5_qt.qm
