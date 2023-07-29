@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/25 04:02:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/29 01:56:53 markd Exp $
 include/KF5/KI18n/KLazyLocalizedString
 include/KF5/KI18n/KLocalizedContext
 include/KF5/KI18n/KLocalizedString
@@ -42,7 +42,6 @@ qt5/qml/org/kde/i18n/localeData/qmldir
 share/locale/af/LC_MESSAGES/ki18n5.mo
 share/locale/ar/LC_MESSAGES/ki18n5.mo
 share/locale/as/LC_MESSAGES/ki18n5.mo
-share/locale/ast/LC_MESSAGES/ki18n5.mo
 share/locale/az/LC_MESSAGES/ki18n5.mo
 share/locale/be/LC_MESSAGES/ki18n5.mo
 share/locale/be@latin/LC_MESSAGES/ki18n5.mo
@@ -89,6 +88,7 @@ share/locale/hu/LC_MESSAGES/ki18n5.mo
 share/locale/hy/LC_MESSAGES/ki18n5.mo
 share/locale/ia/LC_MESSAGES/ki18n5.mo
 share/locale/id/LC_MESSAGES/ki18n5.mo
+share/locale/ie/LC_MESSAGES/ki18n5.mo
 share/locale/is/LC_MESSAGES/ki18n5.mo
 share/locale/it/LC_MESSAGES/ki18n5.mo
 share/locale/ja/LC_MESSAGES/ki18n5.mo
