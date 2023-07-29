@@ -1,0 +1,19 @@
+$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.1 2023/07/29 11:51:15 adam Exp $
+
+Support NetBSD and Dragonfly.
+
+--- src/third_party/wiredtiger/SConscript.orig	2017-04-20 21:43:42.000000000 +0000
++++ src/third_party/wiredtiger/SConscript
+@@ -62,8 +62,12 @@ elif env.TargetOSIs('solaris'):
+     # For an explanation of __EXTENSIONS__,
+     # see http://docs.oracle.com/cd/E19253-01/816-5175/standards-5/index.html
+     env.Append(CPPDEFINES=["__EXTENSIONS__"])
++elif env.TargetOSIs('dragonfly'):
++    env.Append(CPPPATH=["build_dragonfly"])
+ elif env.TargetOSIs('freebsd'):
+     env.Append(CPPPATH=["build_freebsd"])
++elif env.TargetOSIs('netbsd'):
++    env.Append(CPPPATH=["build_netbsd"])
+ elif env.TargetOSIs('openbsd'):
+     env.Append(CPPPATH=["build_openbsd"])
+ elif env.TargetOSIs('linux'):

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.680 2023/07/10 22:55:49 nia Exp $
+# $NetBSD: Makefile,v 1.681 2023/07/29 11:51:15 adam Exp $
 
 COMMENT=	Databases
 
@@ -113,6 +113,7 @@ SUBDIR+=	mongo-c-driver
 SUBDIR+=	mongo-tools
 SUBDIR+=	mongodb
 SUBDIR+=	mongodb3
+SUBDIR+=	mongodb4
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-connector-c++
 SUBDIR+=	mysql56-client
