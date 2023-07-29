@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <create_default_instance enabled='false'/>
+    <single_instance/>
+    <dependency name='fs' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local'/>
+    </dependency>
+    <dependency name='net' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/loopback'/>
+    </dependency>
+    <dependency name='config' grouping='require_all' restart_on='none' type='path'>
+      <service_fmri value='file://@PKG_SYSCONFDIR@/mongod.conf'/>
+    </dependency>
+    <method_context working_directory='@MONGODB_DBPATH@'>
+      <method_credential group='@MONGODB_USER@' user='@MONGODB_GROUP@'/>
+        <method_environment>
+          <envvar name='PATH' value='@PREFIX@/bin:@PREFIX@/gnu/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin'/>
+        </method_environment>
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mongodb@ start' timeout_seconds='18446744073709551615'/>
+    <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mongodb@ stop' timeout_seconds='18446744073709551615'/>
+    <exec_method name='restart' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mongodb@ restart' timeout_seconds='18446744073709551615'/>
+      <property_group name='replication' type='application'>
+       <propval name='name' type='astring' value=''/>
+       <propval name='key' type='astring' value=''/>
+       <propval name='members' type='astring' value=''/>
+      </property_group>
+      <template>
+        <common_name>
+          <loctext xml:lang='C'>MongoDB Database</loctext>
+        </common_name>
+        <documentation>
+          <doc_link name='wiki.joyent.com' uri='http://wiki.joyent.com/display/jpc2/Joyent+MongoDB+SmartMachine'/>
+        </documentation>
+      </template>
+  </service>
+</service_bundle>
+
