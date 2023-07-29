@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/09/29 01:16:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/07/29 02:25:45 markd Exp $
 bin/kquitapp5
 include/KF5/KDBusAddons/KDBusConnectionPool
 include/KF5/KDBusAddons/KDBusInterProcessLock
@@ -46,6 +46,7 @@ share/locale/hi/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/hu/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ia/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/id/LC_MESSAGES/kdbusaddons5_qt.qm
+share/locale/is/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/it/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ja/LC_MESSAGES/kdbusaddons5_qt.qm
 share/locale/ka/LC_MESSAGES/kdbusaddons5_qt.qm
