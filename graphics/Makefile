@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1019 2023/07/29 03:07:15 markd Exp $
+# $NetBSD: Makefile,v 1.1020 2023/07/29 18:09:14 tsutsui Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -860,6 +860,7 @@ SUBDIR+=	vtk-docs
 SUBDIR+=	vulkan-headers
 SUBDIR+=	wallust
 SUBDIR+=	wcslib
+SUBDIR+=	webp-pixbuf-loader
 SUBDIR+=	wld
 SUBDIR+=	wm-icons
 SUBDIR+=	wmphoto
