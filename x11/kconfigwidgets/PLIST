@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2022/09/29 01:28:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/07/29 02:40:15 markd Exp $
 bin/preparetips5
 include/KF5/KConfigWidgets/KCModule
 include/KF5/KConfigWidgets/KCodecAction
 include/KF5/KConfigWidgets/KColorScheme
 include/KF5/KConfigWidgets/KColorSchemeManager
+include/KF5/KConfigWidgets/KColorSchemeMenu
 include/KF5/KConfigWidgets/KColorSchemeModel
 include/KF5/KConfigWidgets/KCommandBar
 include/KF5/KConfigWidgets/KConfigDialog
@@ -23,6 +24,7 @@ include/KF5/KConfigWidgets/kcmodule.h
 include/KF5/KConfigWidgets/kcodecaction.h
 include/KF5/KConfigWidgets/kcolorscheme.h
 include/KF5/KConfigWidgets/kcolorschememanager.h
+include/KF5/KConfigWidgets/kcolorschememenu.h
 include/KF5/KConfigWidgets/kcolorschememodel.h
 include/KF5/KConfigWidgets/kcommandbar.h
 include/KF5/KConfigWidgets/kconfigdialog.h
@@ -60,6 +62,7 @@ man/pt/man1/preparetips5.1
 man/pt_BR/man1/preparetips5.1
 man/ru/man1/preparetips5.1
 man/sv/man1/preparetips5.1
+man/tr/man1/preparetips5.1
 man/uk/man1/preparetips5.1
 qt5/mkspecs/modules/qt_KConfigWidgets.pri
 qt5/plugins/designer/kconfigwidgets5widgets.so
@@ -69,7 +72,6 @@ share/locale/ar/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/ar/kf5_entry.desktop
 share/locale/as/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/as/kf5_entry.desktop
-share/locale/ast/kf5_entry.desktop
 share/locale/az/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/az/kf5_entry.desktop
 share/locale/be/LC_MESSAGES/kconfigwidgets5.mo
@@ -151,6 +153,7 @@ share/locale/ia/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/ia/kf5_entry.desktop
 share/locale/id/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/id/kf5_entry.desktop
+share/locale/ie/kf5_entry.desktop
 share/locale/is/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/is/kf5_entry.desktop
 share/locale/it/LC_MESSAGES/kconfigwidgets5.mo
