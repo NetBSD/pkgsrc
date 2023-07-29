@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/09/29 01:03:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/07/29 02:17:02 markd Exp $
 include/KF5/KDAV/KDAV/DavCollection
 include/KF5/KDAV/KDAV/DavCollectionDeleteJob
 include/KF5/KDAV/KDAV/DavCollectionModifyJob
@@ -19,6 +19,7 @@ include/KF5/KDAV/KDAV/DavUrl
 include/KF5/KDAV/KDAV/Enums
 include/KF5/KDAV/KDAV/EtagCache
 include/KF5/KDAV/KDAV/ProtocolInfo
+include/KF5/KDAV/kdav_version.h
 include/KF5/KDAV/kdav/davcollection.h
 include/KF5/KDAV/kdav/davcollectiondeletejob.h
 include/KF5/KDAV/kdav/davcollectionmodifyjob.h
@@ -40,7 +41,6 @@ include/KF5/KDAV/kdav/enums.h
 include/KF5/KDAV/kdav/etagcache.h
 include/KF5/KDAV/kdav/kdav_export.h
 include/KF5/KDAV/kdav/protocolinfo.h
-include/KF5/kdav_version.h
 lib/cmake/KF5DAV/KF5DAVConfig.cmake
 lib/cmake/KF5DAV/KF5DAVConfigVersion.cmake
 lib/cmake/KF5DAV/KF5DAVTargets-noconfig.cmake
