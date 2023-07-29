@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/09/29 19:43:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/07/29 02:46:06 markd Exp $
 include/KF5/Kirigami2/Kirigami/KirigamiPluginFactory
 include/KF5/Kirigami2/Kirigami/PlatformTheme
 include/KF5/Kirigami2/Kirigami/TabletModeWatcher
@@ -97,6 +97,7 @@ qt5/qml/org/kde/kirigami.2/private/CornerShadow.qml
 qt5/qml/org/kde/kirigami.2/private/DefaultCardBackground.qml
 qt5/qml/org/kde/kirigami.2/private/DefaultChipBackground.qml
 qt5/qml/org/kde/kirigami.2/private/DefaultListItemBackground.qml
+qt5/qml/org/kde/kirigami.2/private/DefaultPageTitleDelegate.qml
 qt5/qml/org/kde/kirigami.2/private/EdgeShadow.qml
 qt5/qml/org/kde/kirigami.2/private/GlobalDrawerActionItem.qml
 qt5/qml/org/kde/kirigami.2/private/PageActionPropertyGroup.qml
@@ -147,11 +148,10 @@ qt5/qml/org/kde/kirigami.2/templates/private/ForwardButton.qml
 qt5/qml/org/kde/kirigami.2/templates/private/GenericDrawerIcon.qml
 qt5/qml/org/kde/kirigami.2/templates/private/IconPropertiesGroup.qml
 qt5/qml/org/kde/kirigami.2/templates/private/MenuIcon.qml
-qt5/qml/org/kde/kirigami.2/templates/private/PassiveNotification.qml
+qt5/qml/org/kde/kirigami.2/templates/private/PassiveNotificationsManager.qml
 qt5/qml/org/kde/kirigami.2/templates/qmldir
 share/kdevappwizard/templates/kirigami.tar.bz2
 share/locale/ar/LC_MESSAGES/libkirigami2plugin_qt.qm
-share/locale/ast/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/az/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/bg/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ca/LC_MESSAGES/libkirigami2plugin_qt.qm
@@ -173,6 +173,7 @@ share/locale/ia/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/id/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/it/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ja/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/ka/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ko/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/lt/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/ml/LC_MESSAGES/libkirigami2plugin_qt.qm
