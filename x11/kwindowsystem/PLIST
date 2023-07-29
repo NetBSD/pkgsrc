@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/25 09:13:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/29 02:49:42 markd Exp $
 include/KF5/KWindowSystem/KKeyServer
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionOwner
 ${PLIST.x11}include/KF5/KWindowSystem/KSelectionWatcher
@@ -11,6 +11,7 @@ include/KF5/KWindowSystem/KWindowShadowTile
 include/KF5/KWindowSystem/KWindowSystem
 ${PLIST.x11}include/KF5/KWindowSystem/KXMessages
 ${PLIST.x11}include/KF5/KWindowSystem/NETWM
+include/KF5/KWindowSystem/KX11Extras
 include/KF5/KWindowSystem/config-kwindowsystem.h
 ${PLIST.x11}include/KF5/KWindowSystem/fixx11h.h
 include/KF5/KWindowSystem/kkeyserver.h
@@ -27,6 +28,7 @@ include/KF5/KWindowSystem/kwindowshadow.h
 include/KF5/KWindowSystem/kwindowsystem.h
 include/KF5/KWindowSystem/kwindowsystem_export.h
 include/KF5/KWindowSystem/kwindowsystem_version.h
+include/KF5/KWindowSystem/kx11extras.h
 ${PLIST.x11}include/KF5/KWindowSystem/kxmessages.h
 ${PLIST.x11}include/KF5/KWindowSystem/netwm.h
 include/KF5/KWindowSystem/netwm_def.h
@@ -47,7 +49,6 @@ ${PLIST.x11}qt5/plugins/kf5/kwindowsystem/KF5WindowSystemX11Plugin.so
 share/locale/af/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/ar/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/as/LC_MESSAGES/kwindowsystem5_qt.qm
-share/locale/ast/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/az/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/be/LC_MESSAGES/kwindowsystem5_qt.qm
 share/locale/be@latin/LC_MESSAGES/kwindowsystem5_qt.qm
