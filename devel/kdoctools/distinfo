@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/09/29 00:36:32 markd Exp $
+$NetBSD: distinfo,v 1.16 2023/07/29 01:55:55 markd Exp $
 
-BLAKE2s (kdoctools-5.98.0.tar.xz) = 0430169df8f3b37d1c30dfda7ee1ed05b1e5702ec656002c6e5401755d2f0b5b
-SHA512 (kdoctools-5.98.0.tar.xz) = 5ebc7a012a2cdd68e5b9e39616f970f9508cca149653f8a2f3d9867228136b13a041e37d1163b977e785a846899090558b0ae69ae073ebdb578584f73fd4e3f2
-Size (kdoctools-5.98.0.tar.xz) = 440760 bytes
+BLAKE2s (kdoctools-5.108.0.tar.xz) = 16c7a3524a283deeecb662f5229920d52f8fe8cd6e5e9de3e76d12e4edc98672
+SHA512 (kdoctools-5.108.0.tar.xz) = 307bb472fa8bbb4165bce174fccb321498fde81e40aaa0f540c7cb9091674ae4f43210f9ad405e063a95ff3c0b518e0c0d609a03f82b3c3101ea29b6f47ed910
+Size (kdoctools-5.108.0.tar.xz) = 465352 bytes
