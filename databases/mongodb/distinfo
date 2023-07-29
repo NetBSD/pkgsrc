@@ -1,27 +1,31 @@
-$NetBSD: distinfo,v 1.36 2023/01/22 17:36:31 ryoon Exp $
+$NetBSD: distinfo,v 1.37 2023/07/29 11:45:43 adam Exp $
 
-BLAKE2s (mongodb-src-r4.2.15.tar.gz) = 917d4e65f16a7ba228bf335965c2608f73645fe24e764e8f49f19ae052f47d48
-SHA512 (mongodb-src-r4.2.15.tar.gz) = ee46a2dfb7ae23ad38da49bf126a2bc7932bded8f01d34516ad575d2aed5d6233c5ad620b2a4424a98afb9e80e26acf40c66982cdd0637c13f0f7aaae8b746a0
-Size (mongodb-src-r4.2.15.tar.gz) = 62187847 bytes
-SHA1 (patch-SConstruct) = 34749f069c6e6415f1b496e5c8ac2cc838c0ea5b
+BLAKE2s (mongodb-src-r6.0.8.tar.gz) = f436ef2f5e9e8ab566effa8bad60272bb4f83cfab9ed9e6144c20d509b43b786
+SHA512 (mongodb-src-r6.0.8.tar.gz) = cd4619e3653f686e28f0a8523ced7988a153e83049c1875c620734f53638bc38a9e1304a5ac8f0b5c21c37cd8681213519f4059a65121fbaa2c44b41b9e5382f
+Size (mongodb-src-r6.0.8.tar.gz) = 89692574 bytes
+SHA1 (patch-SConstruct) = 247af4df0f9f13da774e58d0f22994b5e092f166
 SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
-SHA1 (patch-site__scons_site__tools_libtool.py) = 2fb5947703f4292acc1306f92ca7938e8cbc62e0
-SHA1 (patch-src_mongo_base_initializer.h) = efaec2e3b5b8a4bfb15c65c6952924cd1469bdc7
-SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = f6382a3dcdbaed26fe692aa1ea43b2640168b253
+SHA1 (patch-site__scons_site__tools_libtool.py) = 72ec0ff7fa1c06d6d7d3881d7ed521c8c1285124
+SHA1 (patch-src_mongo_base_initializer.h) = 955a3762a26a89af6b91331289885de8f0cc8585
+SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = c45861a0e57410c3a2b90f71c51852de3f7531da
 SHA1 (patch-src_mongo_db_repl_isself.cpp) = b7931feac26dcffa7eac68f5cb348feb6b993c37
-SHA1 (patch-src_mongo_db_storage_storage__repair__observer.cpp) = a45223c828f249cdb6f2e6f12b42f7ef4671379b
-SHA1 (patch-src_mongo_db_storage_wiredtiger_wiredtiger__util.cpp) = 5d76b8bc20b8142d325613b5d1781a0599903ebe
-SHA1 (patch-src_mongo_platform_random.cpp) = 0b42d1b8bf41f8a7448daca0b72bfed1ba462b99
-SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 0826e976048c79598ead6146f143ab3b4a2577fb
+SHA1 (patch-src_mongo_db_repl_tenant__file__cloner.h) = baac73a2b7d3766bd001321f38dcb3ea6cc2885e
+SHA1 (patch-src_mongo_db_storage_storage__repair__observer.cpp) = 8d3be42e52f8bd68c210316341f5af4359111df7
+SHA1 (patch-src_mongo_db_storage_wiredtiger_wiredtiger__kv__engine.cpp) = 73c781aa6a258319f366ad8672e0d7e043439e5c
+SHA1 (patch-src_mongo_platform_process__id.cpp) = 393f0ba30d68ad20a178440873a9d0c1453117fa
+SHA1 (patch-src_mongo_platform_random.cpp) = 11829afcfc6153c84e42a5f8c1fde9f85c52d5bd
+SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 7b79cc0548c4336947555f312f93338b5bcdc22f
 SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = a29cbf034716ce48a23192320caf4928282b6c1a
-SHA1 (patch-src_mongo_shell_shell__utils__extended.cpp) = d639465e37855591b5ca7b23fea798f0eaab94a4
+SHA1 (patch-src_mongo_shell_shell__utils__extended.cpp) = fd70d82aa152e98f0b608377df88502fffe6882a
+SHA1 (patch-src_mongo_util_dns__query__posix-impl.h) = 09712e9ce9feb3c14a39e9647e3ffcb8ced57dcd
 SHA1 (patch-src_mongo_util_intrusive__counter.h) = 4c8e0d2e834686403a557de489ad518071851911
-SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 9f3161c0693b3905299e0e022b9eb68d466d30c4
+SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = fe62de77e5ccb737dfad1b492d8e918e81ca420a
 SHA1 (patch-src_mongo_util_time__support.cpp) = d576d8d39b10c496e492c8f0faf7e81f09ca875c
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 3c168389b9288df9055df0b01e8d26cf2f67293e
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = aed897879501d74b19dd06a142ded0abf910898d
 SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
-SHA1 (patch-src_third__party_mozjs-60_platform_x86__64_netbsd_build_js-confdefs.h) = 2474fc221f0c59381c8529e986db1f3f67c405ec
+SHA1 (patch-src_third__party_mozjs_SConscript) = b0e7318f735b3fce46745ab4221bc5690089b94e
+SHA1 (patch-src_third__party_mozjs_platform_x86__64_netbsd_build_js-confdefs.h) = 4c08643abe225e326d7ed52572b7293b1f5fe981
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = e97dea310463f246c0a8007a1ba9c5385105036d
-SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = f965c0919573f17ca910a7ba0530826741978f80
+SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = 07188f44d7aa0fefaa5ef9cbefef8c046beb0047
