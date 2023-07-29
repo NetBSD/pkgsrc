@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4639 2023/07/29 03:08:59 markd Exp $
+$NetBSD: CHANGES-2023,v 1.4640 2023/07/29 11:54:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6525,3 +6525,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/plasma-framework to 5.108.0 [markd 2023-07-29]
 	Updated x11/qqc2-desktop-style to 5.108.0 [markd 2023-07-29]
 	Removed graphics/libkexiv2-kde4 [markd 2023-07-29]
+	Updated databases/mongo-c-driver to 1.24.2 [adam 2023-07-29]
+	Updated databases/py-mongo to 4.4.1 [adam 2023-07-29]
+	Updated databases/mongodb to 6.0.8 [adam 2023-07-29]
+	Added databases/mongodb4 version 4.4.23 [adam 2023-07-29]
+	Updated databases/mongo-tools to 100.7.4 [adam 2023-07-29]
