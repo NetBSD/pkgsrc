@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/05/22 20:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/07/29 01:57:46 markd Exp $
 
 DISTNAME=	kidletime-${KF5VER}
-PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -12,7 +11,10 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 
+.include "../../devel/plasma-wayland-protocols/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwayland/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
