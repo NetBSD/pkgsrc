@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.102 2023/07/22 12:20:37 nia Exp $
+# $NetBSD: compiler.mk,v 1.103 2023/07/29 17:55:47 nia Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -247,6 +247,48 @@ _WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
 CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
+.endif
+
+# Enable FORTIFY_SOURCE if the user has chosen to and the compiler
+# supports it.
+#
+.if ${_PKGSRC_USE_FORTIFY} != "no" && defined(_FORTIFY_CFLAGS)
+_WRAP_EXTRA_ARGS.CC+=	${_FORTIFY_CFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_FORTIFY_CFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_FORTIFY_CFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_FORTIFY_CFLAGS}
+.endif
+
+# Enable reproducible executables if the user has chosen to and the
+# compiler supports it.
+#
+.if ${_PKGSRC_MKREPRO} != "no" && defined(_MKREPRO_CFLAGS)
+_WRAP_EXTRA_ARGS.CC+=	${_MKREPRO_CFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_MKREPRO_CFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_MKREPRO_CFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_MKREPRO_CFLAGS}
+.endif
+
+# Enable relocation read-only if the user has chosen to and the compiler
+# supports it.
+#
+.if defined(_RELRO_LDFLAGS)
+LDFLAGS+=		${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+= ${_RELRO_LDFLAGS}
+.endif
+
+# Enable position-independent executables if the user has chosen to and
+# the compiler supports it.
+#
+.if ${_PKGSRC_MKPIE} == "yes" && ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
+_WRAP_EXTRA_ARGS.CC+=	${_MKPIE_CFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_MKPIE_CFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_MKPIE_CFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_MKPIE_CFLAGS}
+CWRAPPERS_PREPEND.f77+=	${_MKPIE_FCFLAGS}
 .endif
 
 # Add debug flags if the user has requested CTF and the compiler supports it.
