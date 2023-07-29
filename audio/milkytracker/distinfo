@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 09:59:13 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/07/29 23:49:38 charlotte Exp $
 
-BLAKE2s (milkytracker-1.03.00.tar.gz) = 82370a041b5a987121f249ca6786947da0e036515fda2c08295909dd70f039c2
-SHA512 (milkytracker-1.03.00.tar.gz) = d5489994d9c5d24552073afcbd787c20720096dd81d640356fc13b2e2b8a49713b798066d54f2b589f3819c14279142e295e4d6317ed325537069faad47abbe6
-Size (milkytracker-1.03.00.tar.gz) = 3705395 bytes
+BLAKE2s (milkytracker-1.04.00.tar.gz) = eed572213484e863645a8714aacb58cd75d90b3e1cbb4db329f1edb496c81cd8
+SHA512 (milkytracker-1.04.00.tar.gz) = 5a41fa07d51880e220f15ff3f50e73b999931c875d31e627233669f5a07dfd38621478b8ec27b2242aa4ae6143a0d2ad51627a366fd366256331b71c47ad25da
+Size (milkytracker-1.04.00.tar.gz) = 3756275 bytes
+SHA1 (patch-CMakeLists.txt) = b4c6c17d5fac239213807a24f722b535209602ab
 SHA1 (patch-docs_CMakeLists.txt) = 096dc06a4f898665a00d409cfb124925df9f93f6

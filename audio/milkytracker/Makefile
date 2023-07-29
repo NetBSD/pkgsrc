@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.23 2023/05/06 19:09:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/29 23:49:38 charlotte Exp $
 
-DISTNAME=	milkytracker-1.03.00
-PKGREVISION=	6
+DISTNAME=	milkytracker-1.04.00
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=milkytracker/}
 GITHUB_PROJECT=	MilkyTracker
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://milkytracker.titandemo.org/
+HOMEPAGE=	https://milkytracker.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++11
 
 # Resolve inconsistent PLIST on diferent platforms.
 # As in docs/CMakeLists.txt, on "BSD", "share/doc/milkytracker" is always used
