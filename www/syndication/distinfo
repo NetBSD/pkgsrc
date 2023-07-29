@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/09/29 01:23:23 markd Exp $
+$NetBSD: distinfo,v 1.6 2023/07/29 02:37:52 markd Exp $
 
-BLAKE2s (syndication-5.98.0.tar.xz) = 71c7db82b4dbd0521081e9aff00f8724005a40b3b777134fba4e548f1a2e8ea9
-SHA512 (syndication-5.98.0.tar.xz) = 18a879bbfef722d1abd9ce51f46dc27867b36a6965c563be9c58331101f3aa5a605948587c819408fd62e7ff7fdf5dbd79653cb413cc9ea49206ea44ad6cc32c
-Size (syndication-5.98.0.tar.xz) = 510440 bytes
+BLAKE2s (syndication-5.108.0.tar.xz) = 54339a8019505275d7b522d9792974b8deb85a7e28a2e363a66e59e6dd9a29a1
+SHA512 (syndication-5.108.0.tar.xz) = 6f8645fc7c06a0fb5c34d058a01d4550f078bffe8201542cdab7e3f15239169401f27abc0ee8fb81e8b7f1a80b99eaaa5521e82f4102cdc78b15844da0cd1cd1
+Size (syndication-5.108.0.tar.xz) = 510544 bytes
