@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2023/07/15 10:52:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2023/07/29 11:52:55 adam Exp $
 
-DISTNAME=	mongo-tools-4.2.15
-PKGREVISION=	1
+DISTNAME=	mongo-tools-100.7.4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
-GITHUB_TAG=	r${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mongodb/mongo-tools
@@ -21,7 +20,7 @@ CHECK_PORTABILITY_SKIP=	vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
 .include "options.mk"
 
 MONGO_TOOLS=	bsondump mongodump mongoexport mongofiles mongoimport \
-		mongoreplay mongorestore mongostat mongotop
+		mongorestore mongostat mongotop
 
 # go uses volatile /tmp dirs that contain required includes files too
 BUILDLINK_PASSTHRU_DIRS+=	/tmp
@@ -47,6 +46,11 @@ do-build:
 	  ${PKGSRC_SETENV} ${MAKE_ENV} \
 	  ${GO} build -tags "${MONGO_TAGS}" -o bin/${tool} ${tool}/main/${tool}.go
 .endfor
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
 
 do-install:
 .for tool in ${MONGO_TOOLS}
