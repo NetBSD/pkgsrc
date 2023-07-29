@@ -1,0 +1,22 @@
+$NetBSD: patch-src_third__party_mozjs_SConscript,v 1.1 2023/07/29 11:45:43 adam Exp $
+
+Do not redefine what is in include/unicode/uconfig.h, or linking might fail.
+
+--- src/third_party/mozjs/SConscript.orig	2023-07-27 17:48:28.000000000 +0000
++++ src/third_party/mozjs/SConscript
+@@ -25,15 +25,6 @@ env.Prepend(CPPDEFINES=[
+         ('IMPL_MFBT', 1),
+         ('JS_USE_CUSTOM_ALLOCATOR', 1),
+         ('STATIC_JS_API', 1),
+-        ('U_NO_DEFAULT_INCLUDE_UTF_HEADERS', 1),
+-        ('UCONFIG_NO_BREAK_ITERATION', 1),
+-        ('UCONFIG_NO_FORMATTING', 1),
+-        ('UCONFIG_NO_TRANSLITERATION', 1),
+-        ('UCONFIG_NO_REGULAR_EXPRESSIONS', 1),
+-        ('U_CHARSET_IS_UTF8', 1),
+-        ('U_DISABLE_RENAMING', 1),
+-        ('U_STATIC_IMPLEMENTATION', 1),
+-        ('U_USING_ICU_NAMESPACE', 0),
+         ])
+ 
+ if get_option('spider-monkey-dbg') == "on":

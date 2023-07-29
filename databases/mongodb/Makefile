@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2023/07/24 18:39:28 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2023/07/29 11:45:43 adam Exp $
 
-DISTNAME=	mongodb-src-r4.2.15
+DISTNAME=	mongodb-src-r6.0.8
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	11
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -16,13 +15,19 @@ NOT_FOR_PLATFORM+=	*-*-i386
 
 EXTRACT_USING=	bsdtar
 
+# etc/pip/compile-requirements.txt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-mongo>=3.9:../../databases/py-mongo
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TOOL_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
+TOOL_DEPENDS+=	${PYPKGPREFIX}-types-yaml>=6.0.5:../../textproc/py-types-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
-USE_LANGUAGES=	c99 c++17
+USE_LANGUAGES=		c99 c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 
 USE_TOOLS+=	pkg-config
 
@@ -33,36 +38,36 @@ SCONS_BUILD_ARGS+=	--release
 SCONS_BUILD_ARGS+=	--runtime-hardening=off # on: does not produce executables
 #SCONS_BUILD_ARGS+=	--use-system-asio
 SCONS_BUILD_ARGS+=	--use-system-boost
+#SCONS_BUILD_ARGS+=	--use-system-fmt
 SCONS_BUILD_ARGS+=	--use-system-icu
 SCONS_BUILD_ARGS+=	--use-system-mongo-c
 SCONS_BUILD_ARGS+=	--use-system-pcre
 SCONS_BUILD_ARGS+=	--use-system-snappy
-SCONS_BUILD_ARGS+=	--use-system-sqlite
 SCONS_BUILD_ARGS+=	--use-system-tcmalloc
 #SCONS_BUILD_ARGS+=	--use-system-wiredtiger
 SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 
-USE_CXX_FEATURES+=	c++17
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
-CPPFLAGS+=	-fno-jump-tables  # XXX: still needed?
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libbson-1.0
 INCL_PATH+=	${BUILDLINK_PREFIX.mongo-c-driver}/include/libmongoc-1.0
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
 
+# needed for linking against boost_log, otherwise some symbols are not found
+SCONS_BUILD_ARGS+=	CPPDEFINES=-DBOOST_LOG_DYN_LINK=1
 SCONS_BUILD_ARGS+=	CC=${CC:Q}
 SCONS_BUILD_ARGS+=	CXX=${CXX:Q}
 SCONS_BUILD_ARGS+=	CFLAGS=${CFLAGS:Q}
 SCONS_BUILD_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
 SCONS_BUILD_ARGS+=	LINKFLAGS=${LDFLAGS:Q}
 SCONS_BUILD_ARGS+=	CPPPATH=${INCL_PATH:Q}
-SCONS_BUILD_ARGS+=	core
-SCONS_INSTALL_ARGS+=	--prefix=${DESTDIR}${PREFIX}
+INSTALL_TARGET=		install-devcore
+SCONS_INSTALL_ARGS+=	DESTDIR=${DESTDIR}
+SCONS_INSTALL_ARGS+=	PREFIX=${PREFIX}
 
 .include "options.mk"
 
@@ -100,7 +105,7 @@ FILES_SUBST+=		MONGODB_LOGPATH=${MONGODB_LOGPATH}
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Replacing database paths.
-SUBST_FILES.path=	debian/mongo.1 debian/mongod.1
+SUBST_FILES.path=	debian/mongod.1 debian/mongoldap.1 debian/mongos.1
 SUBST_FILES.path+=	src/mongo/db/storage/storage_options.cpp
 SUBST_SED.path=		-e 's,/data/db,${MONGODB_DBPATH},g'
 SUBST_SED.path+=	-e 's,/data/configdb,${MONGODB_CONFIGDBPATH},g'
@@ -115,7 +120,7 @@ SUBST_SED.varbase+=	-e 's,/var/log/mongodb,${VARBASE}/mongodb,g'
 
 REPLACE_PYTHON+=	src/mongo/installer/compass/install_compass
 
-NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongod
+NOT_PAX_MPROTECT_SAFE+=	bin/mongo bin/mongod bin/mongos
 
 RCD_SCRIPTS=		mongodb
 
@@ -124,15 +129,16 @@ INSTALLATION_DIRS+=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
 CONF_FILES+=		share/examples/mongodb/mongod.conf \
 			${PKG_SYSCONFDIR}/mongod.conf
 
-CHECK_PORTABILITY_SKIP=	src/mongo/gotools/src/github.com/mongodb/mongo-tools/vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
+CHECK_PORTABILITY_SKIP+=	src/mongo/gotools/src/github.com/mongodb/mongo-tools/vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
+CHECK_PORTABILITY_SKIP+=	src/third_party/unwind/dist/tests/check-namespace.sh.in
 
 # Copy system specific files for NetBSD and DragonFly
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
-	${CP} -R ${WRKSRC}/src/third_party/mozjs-60/platform/x86_64/freebsd \
-		${WRKSRC}/src/third_party/mozjs-60/platform/x86_64/dragonfly
-	${CP} -R ${WRKSRC}/src/third_party/mozjs-60/platform/x86_64/freebsd \
-		${WRKSRC}/src/third_party/mozjs-60/platform/x86_64/netbsd
+	${CP} -R ${WRKSRC}/src/third_party/mozjs/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs/platform/x86_64/dragonfly
+	${CP} -R ${WRKSRC}/src/third_party/mozjs/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs/platform/x86_64/netbsd
 	${CP} ${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_openbsd.cpp \
 		${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_netbsd.cpp
 	${CP} ${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_freebsd.cpp \
@@ -155,13 +161,15 @@ do-configure:
 	${DO_NADA}
 
 post-install:
+.for junk in LICENSE-Community.txt MPL-2 README THIRD-PARTY-NOTICES bin/resmoke.py macos_mongodb.plist
+	${RM} -f ${DESTDIR}${PREFIX}/${junk}
+.endfor
 	${INSTALL_MAN} ${WRKSRC}/debian/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/debian/mongod.conf \
 		${DESTDIR}${PREFIX}/share/examples/mongodb
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/mongo-c-driver/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 #.include "../../databases/wiredtiger/buildlink3.mk"
 #.include "../../devel/asio/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
@@ -175,6 +183,7 @@ _SCONS_BUILD_ARGS+=     ${SCONS_BUILD_ARGS}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libpcap/buildlink3.mk"
+#.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
