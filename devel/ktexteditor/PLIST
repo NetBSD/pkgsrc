@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/25 05:21:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/07/29 02:08:09 markd Exp $
 include/KF5/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
@@ -76,13 +76,12 @@ qt5/plugins/kf5/parts/katepart.so
 share/dbus-1/system-services/org.kde.ktexteditor.katetextbuffer.service
 share/examples/ktexteditor/org.kde.ktexteditor.katetextbuffer.conf
 share/katepart5/script/README.md
-share/kdevfiletemplates/templates/ktexteditor-plugin.tar.bz2
+share/kdevappwizard/templates/ktexteditor-plugin.tar.bz2
 share/kservices5/katepart.desktop
 share/kservicetypes5/ktexteditor.desktop
 share/kservicetypes5/ktexteditorplugin.desktop
 share/locale/af/LC_MESSAGES/ktexteditor5.mo
 share/locale/ar/LC_MESSAGES/ktexteditor5.mo
-share/locale/ast/LC_MESSAGES/ktexteditor5.mo
 share/locale/az/LC_MESSAGES/ktexteditor5.mo
 share/locale/be/LC_MESSAGES/ktexteditor5.mo
 share/locale/bg/LC_MESSAGES/ktexteditor5.mo
