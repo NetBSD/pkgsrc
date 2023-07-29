@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/07/29 23:49:38 charlotte Exp $
+
+This code actually uses C++11 features.
+
+--- CMakeLists.txt.orig	2023-07-29 16:39:59.293802020 -0700
++++ CMakeLists.txt	2023-07-29 16:40:56.764591389 -0700
+@@ -22,8 +22,8 @@
+ cmake_minimum_required(VERSION 3.10)
+ project(MilkyTracker)
+ 
+-# Set C++ standard to C++98
+-set(CMAKE_CXX_STANDARD 98)
++# Set C++ standard to C++11
++set(CMAKE_CXX_STANDARD 11)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ 
+ # Enable IDE solution folders
