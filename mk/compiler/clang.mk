@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.40 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: clang.mk,v 1.41 2023/07/29 17:55:47 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -49,45 +49,8 @@ CC_VERSION?=		clang
 
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
-_COMPILER_LD_FLAG=	-Wl,
-_LINKER_RPATH_FLAG=	-R
-_COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG}
 
-_CTF_CFLAGS=		-gdwarf-2
-
-# The user or package can choose the level of RELRO.
-.if ${PKGSRC_USE_RELRO} != "partial" && \
-    ${RELRO_SUPPORTED:Uyes:tl} != "partial"
-_RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
-.else
-_RELRO_LDFLAGS=		-Wl,-zrelro
-.endif
-
-# The user can choose the level of stack smashing protection.
-.if ${PKGSRC_USE_SSP} == "all"
-_SSP_CFLAGS=		-fstack-protector-all
-.elif ${PKGSRC_USE_SSP} == "strong"
-_SSP_CFLAGS=		-fstack-protector-strong
-.else
-_SSP_CFLAGS=		-fstack-protector
-.endif
-
-.if ${_PKGSRC_USE_RELRO} == "yes"
-_CLANG_LDFLAGS+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
-.endif
-
-.if ${_PKGSRC_MKPIE} == "yes"
-_MKPIE_CFLAGS.clang=	-fPIC
-_MKPIE_LDFLAGS=		-pie
-
-.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
-CFLAGS+=		${_MKPIE_CFLAGS.clang}
-CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.clang}
-CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.clang}
-.  endif
-.endif
+.include "gcc-style-args.mk"
 
 LDFLAGS+=	${_CLANG_LDFLAGS}
 
@@ -105,9 +68,9 @@ PKGSRC_FORTRAN?=gfortran
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
 .endif
 
-_WRAP_EXTRA_ARGS.CC+=	-Qunused-arguments -fcommon
+_WRAP_EXTRA_ARGS.CC+=	-Qunused-arguments
 CWRAPPERS_APPEND.cc+=	-Qunused-arguments
-CWRAPPERS_PREPEND.cc+=	-Qunused-arguments -fcommon
+CWRAPPERS_PREPEND.cc+=	-Qunused-arguments
 _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
