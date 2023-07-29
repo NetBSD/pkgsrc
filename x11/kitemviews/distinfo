@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/09/29 01:28:24 markd Exp $
+$NetBSD: distinfo,v 1.16 2023/07/29 02:46:49 markd Exp $
 
-BLAKE2s (kitemviews-5.98.0.tar.xz) = b340c5822b3d7c660f41fe9873c410ca13ce665bda1df9514ea4495e36f1c8d3
-SHA512 (kitemviews-5.98.0.tar.xz) = 520b066ed4a354836f32e28546ede6492f63dccde3bf7089e291ba06db78f1f5a289d0d9ab5868864664099209f63159636fbf0444b08d50189f79d84eb3b204
-Size (kitemviews-5.98.0.tar.xz) = 77300 bytes
+BLAKE2s (kitemviews-5.108.0.tar.xz) = 6e09b93ca7c0c1852e881f06b6423c5c9e364808bf85ff451c4b16533a095371
+SHA512 (kitemviews-5.108.0.tar.xz) = 7662216fa4fab9c6e9527e3590ce46de72cc05517c341825e3ee620d241520c0b488f17cd3ce452d5c2fd40788313241b977e06fc713a3e0f793ed380d355de0
+Size (kitemviews-5.108.0.tar.xz) = 2264820 bytes
