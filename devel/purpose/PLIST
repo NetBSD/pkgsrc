@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:36:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/07/29 02:09:53 markd Exp $
 include/KF5/purpose/Purpose/AlternativesModel
 include/KF5/purpose/Purpose/Configuration
 include/KF5/purpose/Purpose/Job
@@ -9,9 +9,11 @@ include/KF5/purpose/purpose/job.h
 include/KF5/purpose/purpose/pluginbase.h
 include/KF5/purpose/purpose/purpose_export.h
 include/KF5/purpose/purpose_version.h
+include/KF5/purposewidgets/Purpose/Menu
 include/KF5/purposewidgets/PurposeWidgets/Menu
+include/KF5/purposewidgets/purpose/menu.h
+include/KF5/purposewidgets/purpose/purposewidgets_export.h
 include/KF5/purposewidgets/purposewidgets/menu.h
-include/KF5/purposewidgets/purposewidgets/purposewidgets_export.h
 lib/cmake/KDEExperimentalPurpose/KDEExperimentalPurposeConfig.cmake
 lib/cmake/KF5Purpose/KF5PurposeConfig.cmake
 lib/cmake/KF5Purpose/KF5PurposeConfigVersion.cmake
@@ -68,9 +70,6 @@ share/locale/ar/LC_MESSAGES/purpose_phabricator.mo
 share/locale/ar/LC_MESSAGES/purpose_reviewboard.mo
 share/locale/ar/LC_MESSAGES/purpose_saveas.mo
 share/locale/ar/LC_MESSAGES/purpose_youtube.mo
-share/locale/ast/LC_MESSAGES/purpose_kdeconnectsms.mo
-share/locale/ast/LC_MESSAGES/purpose_ktp-sendfile.mo
-share/locale/ast/LC_MESSAGES/purpose_pastebin.mo
 share/locale/az/LC_MESSAGES/libpurpose_quick.mo
 share/locale/az/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/az/LC_MESSAGES/purpose-fileitemaction.mo
@@ -282,6 +281,7 @@ share/locale/fr/LC_MESSAGES/purpose_youtube.mo
 share/locale/gl/LC_MESSAGES/libpurpose_quick.mo
 share/locale/gl/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/gl/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/gl/LC_MESSAGES/purpose_barcode.mo
 share/locale/gl/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/gl/LC_MESSAGES/purpose_imgur.mo
 share/locale/gl/LC_MESSAGES/purpose_kdeconnect.mo
@@ -355,6 +355,7 @@ share/locale/it/LC_MESSAGES/purpose_youtube.mo
 share/locale/ja/LC_MESSAGES/libpurpose_quick.mo
 share/locale/ja/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/ja/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/ja/LC_MESSAGES/purpose_barcode.mo
 share/locale/ja/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/ja/LC_MESSAGES/purpose_imgur.mo
 share/locale/ja/LC_MESSAGES/purpose_kdeconnect.mo
@@ -399,6 +400,7 @@ share/locale/ko/LC_MESSAGES/purpose_youtube.mo
 share/locale/lt/LC_MESSAGES/libpurpose_quick.mo
 share/locale/lt/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/lt/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/lt/LC_MESSAGES/purpose_barcode.mo
 share/locale/lt/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/lt/LC_MESSAGES/purpose_imgur.mo
 share/locale/lt/LC_MESSAGES/purpose_kdeconnect.mo
@@ -443,6 +445,7 @@ share/locale/nl/LC_MESSAGES/purpose_youtube.mo
 share/locale/nn/LC_MESSAGES/libpurpose_quick.mo
 share/locale/nn/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/nn/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/nn/LC_MESSAGES/purpose_barcode.mo
 share/locale/nn/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/nn/LC_MESSAGES/purpose_imgur.mo
 share/locale/nn/LC_MESSAGES/purpose_kdeconnect.mo
@@ -515,6 +518,7 @@ share/locale/ro/LC_MESSAGES/purpose_youtube.mo
 share/locale/ru/LC_MESSAGES/libpurpose_quick.mo
 share/locale/ru/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/ru/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/ru/LC_MESSAGES/purpose_barcode.mo
 share/locale/ru/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/ru/LC_MESSAGES/purpose_imgur.mo
 share/locale/ru/LC_MESSAGES/purpose_kdeconnect.mo
