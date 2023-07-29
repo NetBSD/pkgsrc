@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:23:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/29 02:37:30 markd Exp $
 include/KF5/KHtml/KHTMLPart
 include/KF5/KHtml/KHTMLSettings
 include/KF5/KHtml/KHTMLView
@@ -106,6 +106,7 @@ share/locale/hu/LC_MESSAGES/khtml5.mo
 share/locale/hy/LC_MESSAGES/khtml5.mo
 share/locale/ia/LC_MESSAGES/khtml5.mo
 share/locale/id/LC_MESSAGES/khtml5.mo
+share/locale/ie/LC_MESSAGES/khtml5.mo
 share/locale/is/LC_MESSAGES/khtml5.mo
 share/locale/it/LC_MESSAGES/khtml5.mo
 share/locale/ja/LC_MESSAGES/khtml5.mo
