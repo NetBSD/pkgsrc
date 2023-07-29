@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/04/25 06:57:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/07/29 02:31:35 markd Exp $
 bin/gentrigrams
 bin/parsetrigrams
 include/KF5/Sonnet/sonnet_version.h
@@ -47,7 +47,6 @@ qt5/qml/org/kde/sonnet/qmldir
 share/locale/af/LC_MESSAGES/sonnet5_qt.qm
 share/locale/ar/LC_MESSAGES/sonnet5_qt.qm
 share/locale/as/LC_MESSAGES/sonnet5_qt.qm
-share/locale/ast/LC_MESSAGES/sonnet5_qt.qm
 share/locale/az/LC_MESSAGES/sonnet5_qt.qm
 share/locale/be/LC_MESSAGES/sonnet5_qt.qm
 share/locale/be@latin/LC_MESSAGES/sonnet5_qt.qm
