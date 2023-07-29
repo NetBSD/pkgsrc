@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4642 2023/07/29 19:42:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4643 2023/07/29 21:15:34 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6532,3 +6532,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mongo-tools to 100.7.4 [adam 2023-07-29]
 	Added graphics/webp-pixbuf-loader version 0.2.4 [tsutsui 2023-07-29]
 	Updated emulators/mame to 0.257 [wiz 2023-07-29]
+	Updated chat/swirc to 3.4.4 [fcambus 2023-07-29]
