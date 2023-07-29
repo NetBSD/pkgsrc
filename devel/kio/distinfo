@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.19 2022/09/29 00:36:32 markd Exp $
+$NetBSD: distinfo,v 1.20 2023/07/29 01:59:09 markd Exp $
 
-BLAKE2s (kio-5.98.0.tar.xz) = d4fb51e7ebeeaec54e280264786cd595a324afd8ceee970a7e9d11646caa5867
-SHA512 (kio-5.98.0.tar.xz) = 14eaa2b3a1ea2e4736c515accf1325bd49d9ed0de5321a889eaff2f0a829977cf8746c9b4e4d7cec7cfc0aa6d5a89704a3b6e7d1236b6b2a62225a3a2432d312
-Size (kio-5.98.0.tar.xz) = 3402060 bytes
+BLAKE2s (kio-5.108.0.tar.xz) = 69265ae76323f8aa611aff4902865ea48b58257f4aa1a55dac689750eff31a2b
+SHA512 (kio-5.108.0.tar.xz) = 846ae1931793b97dde436396ced9341e072cae18869e4eb755c4024dee7c725dde9d02f44779705d744823bfe898f08b6139b070737617d09122fbc6c72c8154
+Size (kio-5.108.0.tar.xz) = 3778556 bytes
 SHA1 (patch-autotests_kcoredirlister__benchmark.cpp) = b0d8c7543c15682f4f1699e9db2cba560a7ab5c2
 SHA1 (patch-src_core_kmountpoint.cpp) = 463809efb317c5eb721209504521a0c0013b0442
-SHA1 (patch-src_filewidgets_kurlnavigator.cpp) = a6a459fdbeaa7e07b2596079c8f5f4a6789fd0eb
 SHA1 (patch-src_ioslaves_file_file__unix.cpp) = 30db3f02a507b7a4f561eeccba955c96e07c2c7d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/09/29 00:36:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/07/29 01:59:09 markd Exp $
 bin/kcookiejar5
 bin/ktelnetservice5
 bin/ktrash5
@@ -8,6 +8,7 @@ include/KF5/KIOCore/KACL
 include/KF5/KIOCore/KCoreDirLister
 include/KF5/KIOCore/KDirNotify
 include/KF5/KIOCore/KDiskFreeSpaceInfo
+include/KF5/KIOCore/KFileFilter
 include/KF5/KIOCore/KFileItem
 include/KF5/KIOCore/KFileItemListProperties
 include/KF5/KIOCore/KIO/AskUserActionInterface
@@ -25,6 +26,7 @@ include/KF5/KIOCore/KIO/FileCopyJob
 include/KF5/KIOCore/KIO/FileJob
 include/KF5/KIOCore/KIO/FileSystemFreeSpaceJob
 include/KF5/KIOCore/KIO/ForwardingSlaveBase
+include/KF5/KIOCore/KIO/ForwardingWorkerBase
 include/KF5/KIOCore/KIO/Global
 include/KF5/KIOCore/KIO/HostInfo
 include/KF5/KIOCore/KIO/IdleSlave
@@ -51,6 +53,7 @@ include/KF5/KIOCore/KIO/SpecialJob
 include/KF5/KIOCore/KIO/StatJob
 include/KF5/KIOCore/KIO/StoredTransferJob
 include/KF5/KIOCore/KIO/TCPSlaveBase
+include/KF5/KIOCore/KIO/TCPWorkerBase
 include/KF5/KIOCore/KIO/TransferJob
 include/KF5/KIOCore/KIO/UDSEntry
 include/KF5/KIOCore/KIO/WorkerBase
@@ -73,6 +76,7 @@ include/KF5/KIOCore/kacl.h
 include/KF5/KIOCore/kcoredirlister.h
 include/KF5/KIOCore/kdirnotify.h
 include/KF5/KIOCore/kdiskfreespaceinfo.h
+include/KF5/KIOCore/kfilefilter.h
 include/KF5/KIOCore/kfileitem.h
 include/KF5/KIOCore/kfileitemlistproperties.h
 include/KF5/KIOCore/kio/askuseractioninterface.h
@@ -90,9 +94,11 @@ include/KF5/KIOCore/kio/filecopyjob.h
 include/KF5/KIOCore/kio/filejob.h
 include/KF5/KIOCore/kio/filesystemfreespacejob.h
 include/KF5/KIOCore/kio/forwardingslavebase.h
+include/KF5/KIOCore/kio/forwardingworkerbase.h
 include/KF5/KIOCore/kio/global.h
 include/KF5/KIOCore/kio/hostinfo.h
 include/KF5/KIOCore/kio/http_slave_defaults.h
+include/KF5/KIOCore/kio/http_worker_defaults.h
 include/KF5/KIOCore/kio/idleslave.h
 include/KF5/KIOCore/kio/ioslave_defaults.h
 include/KF5/KIOCore/kio/ioworker_defaults.h
@@ -121,6 +127,7 @@ include/KF5/KIOCore/kio/specialjob.h
 include/KF5/KIOCore/kio/statjob.h
 include/KF5/KIOCore/kio/storedtransferjob.h
 include/KF5/KIOCore/kio/tcpslavebase.h
+include/KF5/KIOCore/kio/tcpworkerbase.h
 include/KF5/KIOCore/kio/transferjob.h
 include/KF5/KIOCore/kio/udsentry.h
 include/KF5/KIOCore/kio/workerbase.h
@@ -180,6 +187,7 @@ include/KF5/KIOFileWidgets/kpreviewwidgetbase.h
 include/KF5/KIOFileWidgets/krecentdirs.h
 include/KF5/KIOFileWidgets/kstatusbarofflineindicator.h
 include/KF5/KIOFileWidgets/kurlnavigator.h
+include/KF5/KIOGui/KCoreUrlNavigator
 include/KF5/KIOGui/KEMailClientLauncherJob
 include/KF5/KIOGui/KIO/ApplicationLauncherJob
 include/KF5/KIOGui/KIO/CommandLauncherJob
@@ -187,7 +195,9 @@ include/KF5/KIOGui/KIO/FavIconRequestJob
 include/KF5/KIOGui/KIO/KCoreUrlNavigator
 include/KF5/KIOGui/KIO/OpenUrlJob
 include/KF5/KIOGui/KIO/OpenWithHandlerInterface
+include/KF5/KIOGui/KIO/ThumbnailCreator
 include/KF5/KIOGui/KTerminalLauncherJob
+include/KF5/KIOGui/kcoreurlnavigator.h
 include/KF5/KIOGui/kemailclientlauncherjob.h
 include/KF5/KIOGui/kio/applicationlauncherjob.h
 include/KF5/KIOGui/kio/commandlauncherjob.h
@@ -195,6 +205,7 @@ include/KF5/KIOGui/kio/faviconrequestjob.h
 include/KF5/KIOGui/kio/kcoreurlnavigator.h
 include/KF5/KIOGui/kio/openurljob.h
 include/KF5/KIOGui/kio/openwithhandlerinterface.h
+include/KF5/KIOGui/kio/thumbnailcreator.h
 include/KF5/KIOGui/kiogui_export.h
 include/KF5/KIOGui/kterminallauncherjob.h
 include/KF5/KIOWidgets/KAbstractFileItemActionPlugin
@@ -207,6 +218,7 @@ include/KF5/KIOWidgets/KFile
 include/KF5/KIOWidgets/KFileItemActions
 include/KF5/KIOWidgets/KFileItemDelegate
 include/KF5/KIOWidgets/KIO/AccessManager
+include/KF5/KIOWidgets/KIO/DeleteOrTrashJob
 include/KF5/KIOWidgets/KIO/DndPopupMenuPlugin
 include/KF5/KIOWidgets/KIO/DropJob
 include/KF5/KIOWidgets/KIO/FileUndoManager
@@ -248,6 +260,7 @@ include/KF5/KIOWidgets/kfile.h
 include/KF5/KIOWidgets/kfileitemactions.h
 include/KF5/KIOWidgets/kfileitemdelegate.h
 include/KF5/KIOWidgets/kio/accessmanager.h
+include/KF5/KIOWidgets/kio/deleteortrashjob.h
 include/KF5/KIOWidgets/kio/dndpopupmenuplugin.h
 include/KF5/KIOWidgets/kio/dropjob.h
 include/KF5/KIOWidgets/kio/fileundomanager.h
@@ -386,10 +399,6 @@ share/doc/HTML/ca/kioslave5/help/index.cache.bz2
 share/doc/HTML/ca/kioslave5/help/index.docbook
 share/doc/HTML/ca/kioslave5/http/index.cache.bz2
 share/doc/HTML/ca/kioslave5/http/index.docbook
-share/doc/HTML/ca/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/ca/kioslave5/mailto/index.docbook
-share/doc/HTML/ca/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/ca/kioslave5/telnet/index.docbook
 share/doc/HTML/ca/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/ca/kioslave5/webdav/index.docbook
 share/doc/HTML/ca@valencia/kcontrol5/cookies/index.cache.bz2
@@ -416,10 +425,6 @@ share/doc/HTML/ca@valencia/kioslave5/help/index.cache.bz2
 share/doc/HTML/ca@valencia/kioslave5/help/index.docbook
 share/doc/HTML/ca@valencia/kioslave5/http/index.cache.bz2
 share/doc/HTML/ca@valencia/kioslave5/http/index.docbook
-share/doc/HTML/ca@valencia/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/ca@valencia/kioslave5/mailto/index.docbook
-share/doc/HTML/ca@valencia/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/ca@valencia/kioslave5/telnet/index.docbook
 share/doc/HTML/ca@valencia/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/ca@valencia/kioslave5/webdav/index.docbook
 share/doc/HTML/de/kcontrol5/cookies/index.cache.bz2
@@ -446,10 +451,6 @@ share/doc/HTML/de/kioslave5/help/index.cache.bz2
 share/doc/HTML/de/kioslave5/help/index.docbook
 share/doc/HTML/de/kioslave5/http/index.cache.bz2
 share/doc/HTML/de/kioslave5/http/index.docbook
-share/doc/HTML/de/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/de/kioslave5/mailto/index.docbook
-share/doc/HTML/de/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/de/kioslave5/telnet/index.docbook
 share/doc/HTML/de/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/de/kioslave5/webdav/index.docbook
 share/doc/HTML/en/kcontrol5/cookies/index.cache.bz2
@@ -476,10 +477,6 @@ share/doc/HTML/en/kioslave5/help/index.cache.bz2
 share/doc/HTML/en/kioslave5/help/index.docbook
 share/doc/HTML/en/kioslave5/http/index.cache.bz2
 share/doc/HTML/en/kioslave5/http/index.docbook
-share/doc/HTML/en/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/en/kioslave5/mailto/index.docbook
-share/doc/HTML/en/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/en/kioslave5/telnet/index.docbook
 share/doc/HTML/en/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/en/kioslave5/webdav/index.docbook
 share/doc/HTML/es/kcontrol5/cookies/index.cache.bz2
@@ -506,10 +503,6 @@ share/doc/HTML/es/kioslave5/help/index.cache.bz2
 share/doc/HTML/es/kioslave5/help/index.docbook
 share/doc/HTML/es/kioslave5/http/index.cache.bz2
 share/doc/HTML/es/kioslave5/http/index.docbook
-share/doc/HTML/es/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/es/kioslave5/mailto/index.docbook
-share/doc/HTML/es/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/es/kioslave5/telnet/index.docbook
 share/doc/HTML/es/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/es/kioslave5/webdav/index.docbook
 share/doc/HTML/et/kioslave5/data/index.cache.bz2
@@ -522,10 +515,6 @@ share/doc/HTML/et/kioslave5/help/index.cache.bz2
 share/doc/HTML/et/kioslave5/help/index.docbook
 share/doc/HTML/et/kioslave5/http/index.cache.bz2
 share/doc/HTML/et/kioslave5/http/index.docbook
-share/doc/HTML/et/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/et/kioslave5/mailto/index.docbook
-share/doc/HTML/et/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/et/kioslave5/telnet/index.docbook
 share/doc/HTML/et/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/et/kioslave5/webdav/index.docbook
 share/doc/HTML/fr/kcontrol5/cookies/index.cache.bz2
@@ -552,8 +541,6 @@ share/doc/HTML/fr/kioslave5/help/index.cache.bz2
 share/doc/HTML/fr/kioslave5/help/index.docbook
 share/doc/HTML/fr/kioslave5/http/index.cache.bz2
 share/doc/HTML/fr/kioslave5/http/index.docbook
-share/doc/HTML/fr/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/fr/kioslave5/telnet/index.docbook
 share/doc/HTML/fr/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/fr/kioslave5/webdav/index.docbook
 share/doc/HTML/gl/kioslave5/file/index.cache.bz2
@@ -564,8 +551,6 @@ share/doc/HTML/gl/kioslave5/help/index.cache.bz2
 share/doc/HTML/gl/kioslave5/help/index.docbook
 share/doc/HTML/gl/kioslave5/http/index.cache.bz2
 share/doc/HTML/gl/kioslave5/http/index.docbook
-share/doc/HTML/gl/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/gl/kioslave5/telnet/index.docbook
 share/doc/HTML/gl/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/gl/kioslave5/webdav/index.docbook
 share/doc/HTML/it/kcontrol5/cookies/index.cache.bz2
@@ -592,10 +577,6 @@ share/doc/HTML/it/kioslave5/help/index.cache.bz2
 share/doc/HTML/it/kioslave5/help/index.docbook
 share/doc/HTML/it/kioslave5/http/index.cache.bz2
 share/doc/HTML/it/kioslave5/http/index.docbook
-share/doc/HTML/it/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/it/kioslave5/mailto/index.docbook
-share/doc/HTML/it/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/it/kioslave5/telnet/index.docbook
 share/doc/HTML/it/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/it/kioslave5/webdav/index.docbook
 share/doc/HTML/nb/kcontrol5/trash/index.cache.bz2
@@ -624,10 +605,6 @@ share/doc/HTML/nl/kioslave5/help/index.cache.bz2
 share/doc/HTML/nl/kioslave5/help/index.docbook
 share/doc/HTML/nl/kioslave5/http/index.cache.bz2
 share/doc/HTML/nl/kioslave5/http/index.docbook
-share/doc/HTML/nl/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/nl/kioslave5/mailto/index.docbook
-share/doc/HTML/nl/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/nl/kioslave5/telnet/index.docbook
 share/doc/HTML/nl/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/nl/kioslave5/webdav/index.docbook
 share/doc/HTML/pt/kcontrol5/cookies/index.cache.bz2
@@ -654,10 +631,6 @@ share/doc/HTML/pt/kioslave5/help/index.cache.bz2
 share/doc/HTML/pt/kioslave5/help/index.docbook
 share/doc/HTML/pt/kioslave5/http/index.cache.bz2
 share/doc/HTML/pt/kioslave5/http/index.docbook
-share/doc/HTML/pt/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/pt/kioslave5/mailto/index.docbook
-share/doc/HTML/pt/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/pt/kioslave5/telnet/index.docbook
 share/doc/HTML/pt/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/pt/kioslave5/webdav/index.docbook
 share/doc/HTML/pt_BR/kcontrol5/cookies/index.cache.bz2
@@ -684,10 +657,6 @@ share/doc/HTML/pt_BR/kioslave5/help/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/help/index.docbook
 share/doc/HTML/pt_BR/kioslave5/http/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/http/index.docbook
-share/doc/HTML/pt_BR/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/pt_BR/kioslave5/mailto/index.docbook
-share/doc/HTML/pt_BR/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/pt_BR/kioslave5/telnet/index.docbook
 share/doc/HTML/pt_BR/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/webdav/index.docbook
 share/doc/HTML/ru/kcontrol5/cookies/index.cache.bz2
@@ -714,8 +683,6 @@ share/doc/HTML/ru/kioslave5/help/index.cache.bz2
 share/doc/HTML/ru/kioslave5/help/index.docbook
 share/doc/HTML/ru/kioslave5/http/index.cache.bz2
 share/doc/HTML/ru/kioslave5/http/index.docbook
-share/doc/HTML/ru/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/ru/kioslave5/telnet/index.docbook
 share/doc/HTML/ru/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/ru/kioslave5/webdav/index.docbook
 share/doc/HTML/sr/kcontrol5/cookies/index.cache.bz2
@@ -740,10 +707,6 @@ share/doc/HTML/sr/kioslave5/help/index.cache.bz2
 share/doc/HTML/sr/kioslave5/help/index.docbook
 share/doc/HTML/sr/kioslave5/http/index.cache.bz2
 share/doc/HTML/sr/kioslave5/http/index.docbook
-share/doc/HTML/sr/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/sr/kioslave5/mailto/index.docbook
-share/doc/HTML/sr/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/sr/kioslave5/telnet/index.docbook
 share/doc/HTML/sr/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/sr/kioslave5/webdav/index.docbook
 share/doc/HTML/sr@latin/kcontrol5/cookies/index.cache.bz2
@@ -768,10 +731,6 @@ share/doc/HTML/sr@latin/kioslave5/help/index.cache.bz2
 share/doc/HTML/sr@latin/kioslave5/help/index.docbook
 share/doc/HTML/sr@latin/kioslave5/http/index.cache.bz2
 share/doc/HTML/sr@latin/kioslave5/http/index.docbook
-share/doc/HTML/sr@latin/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/sr@latin/kioslave5/mailto/index.docbook
-share/doc/HTML/sr@latin/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/sr@latin/kioslave5/telnet/index.docbook
 share/doc/HTML/sr@latin/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/sr@latin/kioslave5/webdav/index.docbook
 share/doc/HTML/sv/kcontrol5/cookies/index.cache.bz2
@@ -798,12 +757,16 @@ share/doc/HTML/sv/kioslave5/help/index.cache.bz2
 share/doc/HTML/sv/kioslave5/help/index.docbook
 share/doc/HTML/sv/kioslave5/http/index.cache.bz2
 share/doc/HTML/sv/kioslave5/http/index.docbook
-share/doc/HTML/sv/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/sv/kioslave5/mailto/index.docbook
-share/doc/HTML/sv/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/sv/kioslave5/telnet/index.docbook
 share/doc/HTML/sv/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/sv/kioslave5/webdav/index.docbook
+share/doc/HTML/tr/kcontrol5/netpref/index.cache.bz2
+share/doc/HTML/tr/kcontrol5/netpref/index.docbook
+share/doc/HTML/tr/kioslave5/file/index.cache.bz2
+share/doc/HTML/tr/kioslave5/file/index.docbook
+share/doc/HTML/tr/kioslave5/ftp/index.cache.bz2
+share/doc/HTML/tr/kioslave5/ftp/index.docbook
+share/doc/HTML/tr/kioslave5/help/index.cache.bz2
+share/doc/HTML/tr/kioslave5/help/index.docbook
 share/doc/HTML/uk/kcontrol5/cookies/index.cache.bz2
 share/doc/HTML/uk/kcontrol5/cookies/index.docbook
 share/doc/HTML/uk/kcontrol5/netpref/index.cache.bz2
@@ -828,18 +791,12 @@ share/doc/HTML/uk/kioslave5/help/index.cache.bz2
 share/doc/HTML/uk/kioslave5/help/index.docbook
 share/doc/HTML/uk/kioslave5/http/index.cache.bz2
 share/doc/HTML/uk/kioslave5/http/index.docbook
-share/doc/HTML/uk/kioslave5/mailto/index.cache.bz2
-share/doc/HTML/uk/kioslave5/mailto/index.docbook
-share/doc/HTML/uk/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/uk/kioslave5/telnet/index.docbook
 share/doc/HTML/uk/kioslave5/webdav/index.cache.bz2
 share/doc/HTML/uk/kioslave5/webdav/index.docbook
-share/doc/HTML/zh_CN/kioslave5/telnet/index.cache.bz2
-share/doc/HTML/zh_CN/kioslave5/telnet/index.docbook
 share/examples/kde-xdg/accept-languages.codes
 share/examples/kde-xdg/kshorturifilterrc
 share/kconf_update/filepicker.upd
-share/kdevfiletemplates/templates/kioworker.tar.bz2
+share/kdevappwizard/templates/kioworker.tar.bz2
 share/kf5/kcookiejar/domain_info
 share/knotifications5/proxyscout.notifyrc
 share/kservices5/cookies.desktop
@@ -996,7 +953,6 @@ share/kservices5/webshortcuts.desktop
 share/kservicetypes5/kfileitemactionplugin.desktop
 share/kservicetypes5/konqpopupmenuplugin.desktop
 share/kservicetypes5/kpropertiesdialogplugin.desktop
-share/kservicetypes5/kurifilterplugin.desktop
 share/kservicetypes5/searchprovider.desktop
 share/locale/af/LC_MESSAGES/kio5.mo
 share/locale/ar/LC_MESSAGES/kio5.mo
@@ -1035,6 +991,7 @@ share/locale/hsb/LC_MESSAGES/kio5.mo
 share/locale/hu/LC_MESSAGES/kio5.mo
 share/locale/ia/LC_MESSAGES/kio5.mo
 share/locale/id/LC_MESSAGES/kio5.mo
+share/locale/ie/LC_MESSAGES/kio5.mo
 share/locale/is/LC_MESSAGES/kio5.mo
 share/locale/it/LC_MESSAGES/kio5.mo
 share/locale/ja/LC_MESSAGES/kio5.mo
