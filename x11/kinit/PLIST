@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/29 01:28:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/07/29 02:44:05 markd Exp $
 bin/kdeinit5
 bin/kdeinit5_shutdown
 bin/kdeinit5_wrapper
@@ -28,7 +28,6 @@ share/dbus-1/interfaces/kf5_org.kde.KLauncher.xml
 share/locale/af/LC_MESSAGES/kinit5.mo
 share/locale/ar/LC_MESSAGES/kinit5.mo
 share/locale/as/LC_MESSAGES/kinit5.mo
-share/locale/ast/LC_MESSAGES/kinit5.mo
 share/locale/az/LC_MESSAGES/kinit5.mo
 share/locale/be/LC_MESSAGES/kinit5.mo
 share/locale/be@latin/LC_MESSAGES/kinit5.mo
