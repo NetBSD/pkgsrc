@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/09/29 01:03:16 markd Exp $
+$NetBSD: distinfo,v 1.18 2023/07/29 02:15:42 markd Exp $
 
-BLAKE2s (attica-5.98.0.tar.xz) = f4ca096b124df83698779d7144583204a6eb369bd484e28bd457e8a22165e326
-SHA512 (attica-5.98.0.tar.xz) = 778a6bc38ea57421fa8e342fa6cc7ad47dbc7c32d7696e35df3a3ae76b06b88eefa9d9b5e9b4ae5e1e25bcb3ba6cbc9afcb24c2b517d83d5500443de16a00802
-Size (attica-5.98.0.tar.xz) = 69428 bytes
+BLAKE2s (attica-5.108.0.tar.xz) = 633302ed282d334b52f4a11e67c2a0ce332799ce77a7e28748dde7062770726b
+SHA512 (attica-5.108.0.tar.xz) = 38a28b03909e53399157cef9341c73b92bc129c65c0de61c39c9fca6133652cf8a689a9c1d32ff16f967e0ed6bd21183153b733843a78a0f7fa8b491c04f840f
+Size (attica-5.108.0.tar.xz) = 69436 bytes
