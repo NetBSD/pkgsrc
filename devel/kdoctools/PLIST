@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2022/09/29 00:36:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/07/29 01:55:55 markd Exp $
 bin/checkXML5
 bin/meinproc5
 include/KF5/KDocTools/docbookxslt.h
 include/KF5/KDocTools/kdoctools_export.h
+include/KF5/KDocTools/kdoctools_version.h
 lib/cmake/KF5DocTools/KF5DocToolsConfig.cmake
 lib/cmake/KF5DocTools/KF5DocToolsConfigVersion.cmake
 lib/cmake/KF5DocTools/KF5DocToolsMacros.cmake
@@ -1081,7 +1082,6 @@ share/kf5/kdoctools/customization/zh-TW/strings.entities
 share/kf5/kdoctools/customization/zh-TW/user.entities
 share/locale/af/LC_MESSAGES/kdoctools5.mo
 share/locale/ar/LC_MESSAGES/kdoctools5.mo
-share/locale/ast/LC_MESSAGES/kdoctools5.mo
 share/locale/az/LC_MESSAGES/kdoctools5.mo
 share/locale/be/LC_MESSAGES/kdoctools5.mo
 share/locale/bg/LC_MESSAGES/kdoctools5.mo
