@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/09/29 00:36:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/07/29 02:01:11 markd Exp $
 include/KF5/KNotifications/KNotification
 include/KF5/KNotifications/KNotificationJobUiDelegate
 include/KF5/KNotifications/KNotificationPlugin
@@ -32,7 +32,6 @@ share/dbus-1/interfaces/kf5_org.kde.StatusNotifierWatcher.xml
 share/locale/af/LC_MESSAGES/knotifications5_qt.qm
 share/locale/ar/LC_MESSAGES/knotifications5_qt.qm
 share/locale/as/LC_MESSAGES/knotifications5_qt.qm
-share/locale/ast/LC_MESSAGES/knotifications5_qt.qm
 share/locale/az/LC_MESSAGES/knotifications5_qt.qm
 share/locale/be/LC_MESSAGES/knotifications5_qt.qm
 share/locale/be@latin/LC_MESSAGES/knotifications5_qt.qm
