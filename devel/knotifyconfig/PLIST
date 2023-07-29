@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/25 04:45:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/07/29 02:01:56 markd Exp $
 include/KF5/KNotifyConfig/KNotifyConfigWidget
 include/KF5/KNotifyConfig/knotifyconfig_export.h
 include/KF5/KNotifyConfig/knotifyconfig_version.h
@@ -14,7 +14,6 @@ qt5/mkspecs/modules/qt_KNotifyConfig.pri
 share/locale/af/LC_MESSAGES/knotifyconfig5.mo
 share/locale/ar/LC_MESSAGES/knotifyconfig5.mo
 share/locale/as/LC_MESSAGES/knotifyconfig5.mo
-share/locale/ast/LC_MESSAGES/knotifyconfig5.mo
 share/locale/az/LC_MESSAGES/knotifyconfig5.mo
 share/locale/be/LC_MESSAGES/knotifyconfig5.mo
 share/locale/be@latin/LC_MESSAGES/knotifyconfig5.mo
