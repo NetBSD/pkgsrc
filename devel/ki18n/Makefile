@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/05/22 21:00:20 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/07/29 01:56:53 markd Exp $
 
 DISTNAME=	ki18n-${KF5VER}
-PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
