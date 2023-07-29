@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/09/29 00:36:33 markd Exp $
+$NetBSD: distinfo,v 1.9 2023/07/29 02:05:30 markd Exp $
 
-BLAKE2s (kross-5.98.0.tar.xz) = 6141a947630d965bd82f7b0794670e21d850b39a0e0ba43311cc838afd6c7098
-SHA512 (kross-5.98.0.tar.xz) = 815e5e647c22b4da72eb27999f5970a156f6a695ac55612cfb5ecded55e76a899bf49895d2e51273edd5bebee97dbf9e85cc58d270abaa889dbd6daab0f6c023
-Size (kross-5.98.0.tar.xz) = 129392 bytes
+BLAKE2s (kross-5.108.0.tar.xz) = 65145a6e3ca7460c608921da689d623a993fef08812bc178e5b76226514874b1
+SHA512 (kross-5.108.0.tar.xz) = 577722bb280dfe7084fd70866297cea2a34c9f762fe98744a61e92bcb0ee12e4e5852d79a651f0121180641df4ff6b1ff995a8af71ad5ee361444f8c0aea4bad
+Size (kross-5.108.0.tar.xz) = 2440312 bytes
