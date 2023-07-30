@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/03/05 14:07:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/07/30 04:20:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/build/aarch64-apple-darwin/bin/mettle
 ${GEM_LIBDIR}/build/aarch64-apple-darwin/bin/sniffer
@@ -63,5 +63,6 @@ ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/sniffer
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/sniffer.bin
 ${GEM_LIBDIR}/build/x86_64-w64-mingw32/bin/mettle.exe
 ${GEM_LIBDIR}/lib/metasploit_payloads/mettle.rb
+${GEM_LIBDIR}/lib/metasploit_payloads/mettle/error.rb
 ${GEM_LIBDIR}/lib/metasploit_payloads/mettle/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
