@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4657 2023/07/30 04:21:19 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4658 2023/07/30 04:23:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6547,3 +6547,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-zeitwerk to 2.6.9 [taca 2023-07-30]
 	Updated finance/ruby-activemerchant to 1.133.0 [taca 2023-07-30]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.26 [taca 2023-07-30]
+	Updated www/ruby-aws-partitions to 1.794.0 [taca 2023-07-30]
