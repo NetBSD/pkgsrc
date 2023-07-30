@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/08/19 13:22:16 adam Exp $
+$NetBSD: distinfo,v 1.27 2023/07/30 08:10:39 adam Exp $
 
-BLAKE2s (Paste-3.5.2.tar.gz) = 3a657553b2ea69261d0b666a55583adc24e04fc5d5c58d4a30e93330e7fd9b63
-SHA512 (Paste-3.5.2.tar.gz) = a1920dbd7ebea137ca33f8f8c33aad563329d1eea193d84e6aa7fc57690f706c1969e3ba76bbf21a73c59a0fe0f732daa4db15705914ac359814b4332a01bc75
-Size (Paste-3.5.2.tar.gz) = 638207 bytes
+BLAKE2s (Paste-3.5.3.tar.gz) = a0d1416f7edc116a261e0b5604d01c167975e177b854161fba0b19e6d0d4e580
+SHA512 (Paste-3.5.3.tar.gz) = 3087ea7b6cc45a90b85c473cbff7f018ca961536ff70fbed4610f86dedc82cef0274ccddb767de411ec2955d0c265cb4e797a14a25697870c38667ccd7c4a2d8
+Size (Paste-3.5.3.tar.gz) = 638791 bytes
