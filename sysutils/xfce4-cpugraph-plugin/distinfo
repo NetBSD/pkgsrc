@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2023/01/01 19:12:38 gutteridge Exp $
+$NetBSD: distinfo,v 1.21 2023/07/30 17:06:20 gutteridge Exp $
 
-BLAKE2s (xfce4-cpugraph-plugin-1.2.7.tar.bz2) = 662fd862fd2a884ed7a8089f2902f8c87575158fb8d37ce43f4167f2f1460568
-SHA512 (xfce4-cpugraph-plugin-1.2.7.tar.bz2) = a89f5d9f986717a78a2cbd31db378c1b220cabfc83bf1c85f2533ecccd17b4ed70a3de9321f2e06fcbca2b77d3b02e5a8541e2adf936567a426e1d7221faaa3b
-Size (xfce4-cpugraph-plugin-1.2.7.tar.bz2) = 438674 bytes
+BLAKE2s (xfce4-cpugraph-plugin-1.2.8.tar.bz2) = 57d7554511f4f13973209f498b758e7de210afcff79091a9c5b61e257ca6c2f7
+SHA512 (xfce4-cpugraph-plugin-1.2.8.tar.bz2) = f0f4201d0572997e8c610a25fcb957ebe4dd224204421aeba4e8ca54da71bdd97fa147dd7af7097b9e09ce6e1317836622a0bcbfec9589858010942993e27940
+Size (xfce4-cpugraph-plugin-1.2.8.tar.bz2) = 465181 bytes
