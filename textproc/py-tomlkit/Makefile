@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/04/27 17:49:20 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/30 08:00:34 adam Exp $
 
-DISTNAME=	tomlkit-0.11.8
+DISTNAME=	tomlkit-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tomlkit/}
@@ -11,8 +11,8 @@ COMMENT=	Style preserving TOML library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.1:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=5.0:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
