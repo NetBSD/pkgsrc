@@ -1,4 +1,4 @@
-# $NetBSD: gcc-style-args.mk,v 1.1 2023/07/29 17:55:47 nia Exp $
+# $NetBSD: gcc-style-args.mk,v 1.2 2023/07/30 18:57:44 nia Exp $
 
 #
 # Some compilers (e.g. clang) share command line argument formats with GCC.
@@ -21,11 +21,13 @@ CWRAPPERS_PREPEND.cc+=	-fcommon
 #
 
 # The user or package can choose the level of RELRO.
-.if ${PKGSRC_USE_RELRO} != "partial" && \
+.if ${_PKGSRC_USE_RELRO} != "no"
+.  if ${_PKGSRC_USE_RELRO} != "partial" && \
     ${RELRO_SUPPORTED:Uyes:tl} != "partial"
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
-.else
+.  else
 _RELRO_LDFLAGS=		-Wl,-zrelro
+.  endif
 .endif
 
 .if !empty(_RELRO_LDFLAGS) && !empty(MACHINE_PLATFORM:MNetBSD-*-*mips*)
