@@ -1,11 +1,14 @@
-$NetBSD: patch-Imakefile,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
+$NetBSD: patch-Imakefile,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
 
 - use jpeg, png, tiff, and zlib from pkgsrc
 - make ghostscript support optional
+- add webp support from forked upstream
+  https://gitlab.com/DavidGriffith/xv/-/commit/5682a07e
+  and use libwebp from pkgsrc
 
---- Imakefile.orig	2019-02-21 14:07:37.512579350 +0000
+--- Imakefile.orig	2023-07-30 04:38:19.657014071 +0000
 +++ Imakefile
-@@ -6,13 +6,15 @@
+@@ -6,13 +6,20 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
   * on your machine, *COMMENT OUT* the following line
   */
@@ -13,6 +16,11 @@ $NetBSD: patch-Imakefile,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
 +/* #define HaveJpeg */
 +#define UseInstalledJpeg
  
++/* if, for whatever reason, you're unable to get the WEBP library to compile
++ * on your machine, *COMMENT OUT* the following line
++ */
++/* #define HaveWEBP */
++#define UseInstalledWEBP
  
  /* if, for whatever reason, you're unable to get the TIFF library to compile
   * on your machine, *COMMENT OUT* the following line
@@ -23,7 +31,7 @@ $NetBSD: patch-Imakefile,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
  
  
  /* if, for whatever reason, you're unable to get the PDS/VICAR support
-@@ -21,6 +23,10 @@
+@@ -21,6 +28,10 @@
  #define HavePDS
  
  
@@ -34,7 +42,27 @@ $NetBSD: patch-Imakefile,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
  /*
   * if you are running on a SysV-based machine, such as HP, Silicon Graphics,
   * etc, uncomment one of the following lines to get you *most* of the way
-@@ -124,20 +130,66 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
+@@ -116,28 +127,84 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
+ 
+ /* This marks the end of the configuration parameters */
+ 
++#ifdef HaveWEBP
++WEBP = -DDOWEBP
++WEBPDIR = /usr
++LIBWEBP = $(WEBPDIR)/lib/libwebp.so
++DEPLIBWEBP = $(LIBWEBP)
++WEBPINCLUDE = -I$(WEBPDIR)/include
++#endif
+ 
+-
+-
++#ifdef UseInstalledWEBP
++WEBP = -DDOWEBP
++LIBWEBP = $(LDFLAGS) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -lwebp
++WEBPINCLUDE = -I$(PREFIX)/include
++#endif
+ 
+ #ifdef HaveJpeg
  JPEG = -DDOJPEG
  JPEGDIR = jpeg
  LIBJPEG = $(JPEGDIR)/libjpeg.a
@@ -101,22 +129,41 @@ $NetBSD: patch-Imakefile,v 1.1 2019/02/21 14:32:32 tsutsui Exp $
  
  #if defined(SCOArchitecture)
  SCO= -Dsco -DPOSIX -DNO_RANDOM 
-@@ -149,14 +201,14 @@ SYS_LIBRARIES=        -lm
+@@ -149,14 +216,15 @@ SYS_LIBRARIES=        -lm
  #endif
  
  
 -DEPLIBS = $(LIBJPEG) $(LIBTIFF)
 -LOCAL_LIBRARIES = $(XLIB) $(DEPLIBS)
-+DEPLIBS = $(DEPLIBJPEG) $(DEPLIBTIFF) $(DEPLIBPNG) $(DEPLIBZLIB)
-+LOCAL_LIBRARIES = $(XLIB) $(LIBJPEG) $(LIBTIFF) $(LIBPNG) $(LIBZLIB)
++DEPLIBS = $(DEPLIBJPEG) $(DEPLIBTIFF) $(DEPLIBPNG) $(DEPLIBWEBP) $(DEPLIBZLIB)
++LOCAL_LIBRARIES = $(XLIB) $(LIBJPEG) $(LIBTIFF) $(LIBPNG) $(LIBWEBP) $(LIBZLIB)
  
  DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
 -	$(HPUX7) $(JPEG) $(TIFF) $(PDS) $(DXWM) $(RAND) \
-+	$(HPUX7) $(JPEG) $(TIFF) $(GS) $(PNG) $(PDS) $(DXWM) $(RAND) \
++	$(HPUX7) $(JPEG) $(TIFF) $(GS) $(PNG) $(WEBP) $(PDS) $(DXWM) $(RAND) \
  	$(BACKING_STORE) $(BSDTYPES) $(SGI) $(MGCSFX)
  
 -INCLUDES = $(JPEGINCLUDE) $(TIFFINCLUDE)
-+INCLUDES = $(JPEGINCLUDE) $(TIFFINCLUDE) $(PNGINCLUDE) $(ZLIBINCLUDE)
++INCLUDES = $(JPEGINCLUDE) $(TIFFINCLUDE) $(PNGINCLUDE) $(WEBPINCLUDE) \
++	$(ZLIBINCLUDE)
  
  SRCS1 =	xv.c xvevent.c xvroot.c xvmisc.c xvimage.c xvcolor.c xvsmooth.c \
  	xv24to8.c xvgif.c xvpm.c xvinfo.c xvctrl.c xvscrl.c xvalg.c \
+@@ -166,7 +234,7 @@ SRCS1 =	xv.c xvevent.c xvroot.c xvmisc.c
+ 	xvbrowse.c xvtext.c xvpcx.c xviff.c xvtarga.c xvxpm.c xvcut.c \
+ 	xvxwd.c xvfits.c xvpng.c xvzx.c xvwbmp.c xvpcd.c \
+ 	xvmag.c xvpic.c xvmaki.c xvpi.c xvpic2.c xvvd.c xvmgcsfx.c \
+-	xvml.c
++	xvml.c xvwebp.c
+ 
+ OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o xvimage.o xvcolor.o xvsmooth.o \
+ 	xv24to8.o xvgif.o xvpm.o xvinfo.o xvctrl.o xvscrl.o xvalg.o \
+@@ -176,7 +244,7 @@ OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o
+ 	xvbrowse.o xvtext.o xvpcx.o xviff.o xvtarga.o xvxpm.o xvcut.o \
+ 	xvxwd.o xvfits.o xvpng.o xvzx.o xvwbmp.o xvpcd.o \
+ 	xvmag.o xvpic.o xvmaki.o xvpi.o xvpic2.o xvvd.o xvmgcsfx.o \
+-	xvml.o
++	xvml.o xvwebp.o
+ 
+ SRCS2=	bggen.c
+ OBJS2=	bggen.o
