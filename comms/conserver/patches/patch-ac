@@ -1,12 +1,64 @@
-$NetBSD: patch-ac,v 1.2 2010/08/02 07:05:09 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2023/07/30 11:49:48 hauke Exp $
 
 Add patch from
 https://www.conserver.com/pipermail/users/2004-June/msg00001.html
 to make network consoles work on LP64 platforms.
 
---- conserver/consent.c.orig	2003-04-06 08:32:41.000000000 -0400
+Add faster connection rates, keeping up with newer hardware
+
+--- conserver/consent.c.orig	2003-04-06 12:32:41.000000000 +0000
 +++ conserver/consent.c
-@@ -788,7 +788,7 @@ ConsInit(pCE, pfdSet, useHostCache)
+@@ -52,6 +52,9 @@
+ #include <ctype.h>
+ #include <signal.h>
+ #include <pwd.h>
++#ifdef HAVE_TERMIOS_H
++#include <termios.h>
++#endif
+ 
+ #include <compat.h>
+ #include <util.h>
+@@ -67,6 +70,39 @@ struct hostcache *hostcachelist = NULL;
+ BAUD baud[] = {
+     {"Netwk", 0},
+     {"Local", 0},
++#if defined(B4000000)
++    {"4000000", B4000000},
++#endif
++#if defined(B3500000)
++    {"3500000", B3500000},
++#endif
++#if defined(B3000000)
++    {"3000000", B3000000},
++#endif
++#if defined(B2500000)
++    {"2500000", B2500000},
++#endif
++#if defined(B2000000)
++    {"2000000", B2000000},
++#endif
++#if defined(B1500000)
++    {"1500000", B1500000},
++#endif
++#if defined(B1000000)
++    {"1000000", B1000000},
++#endif
++#if defined(B921600)
++    {"921600", B921600},
++#endif
++#if defined(B500000)
++    {"500000", B500000},
++#endif
++#if defined(B460800)
++    {"460800", B460800},
++#endif
++#if defined(B230400)
++    {"230400", B230400},
++#endif
+ #if defined(B115200)
+     {"115200", B115200},
+ #endif
+@@ -788,7 +824,7 @@ ConsInit(pCE, pfdSet, useHostCache)
      } else if (pCE->isNetworkConsole) {
  	struct sockaddr_in port;
  	struct hostent *hp;
