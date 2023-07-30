@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/25 18:44:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/07/30 08:15:38 adam Exp $
+bin/get_gprof-${PYVERSSUFFIX}
 bin/get_objgraph-${PYVERSSUFFIX}
 bin/undill-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -55,6 +56,9 @@ ${PYSITELIB}/dill/tests/__init__.pyo
 ${PYSITELIB}/dill/tests/__main__.py
 ${PYSITELIB}/dill/tests/__main__.pyc
 ${PYSITELIB}/dill/tests/__main__.pyo
+${PYSITELIB}/dill/tests/test_abc.py
+${PYSITELIB}/dill/tests/test_abc.pyc
+${PYSITELIB}/dill/tests/test_abc.pyo
 ${PYSITELIB}/dill/tests/test_check.py
 ${PYSITELIB}/dill/tests/test_check.pyc
 ${PYSITELIB}/dill/tests/test_check.pyo
