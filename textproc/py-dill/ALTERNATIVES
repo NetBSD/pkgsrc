@@ -1,2 +1,3 @@
+bin/get_gprof @PREFIX@/bin/get_gprof-@PYVERSSUFFIX@
 bin/get_objgraph @PREFIX@/bin/get_objgraph-@PYVERSSUFFIX@
 bin/undill @PREFIX@/bin/undill-@PYVERSSUFFIX@

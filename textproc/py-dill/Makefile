@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/10/25 18:44:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/30 08:15:38 adam Exp $
 
-DISTNAME=	dill-0.3.6
+DISTNAME=	dill-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dill/}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-.for file in get_objgraph undill
+.for file in get_gprof get_objgraph undill
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${file} ${file}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
