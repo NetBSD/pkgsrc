@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:05:58 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/07/30 11:49:48 hauke Exp $
 
 BLAKE2s (conserver-7.2.7.tar.gz) = fb82185c1ec9b7e5f8534171871c920d24f7c81992280f92c9d378b36b454d83
 SHA512 (conserver-7.2.7.tar.gz) = c9257e9581e8bcced71f4ecd446bb7a2f799ca851a1d5a957e58345d7afd29a687a9c52c665658f1f357af7dd8262487085071af9bbff110611f0c9f4c41fa91
 Size (conserver-7.2.7.tar.gz) = 200861 bytes
 SHA1 (patch-aa) = 01ab5e3430137e72b786164026785f91295232d4
 SHA1 (patch-ab) = 79125fed0be843528dd208664b90323cb23b9e8d
-SHA1 (patch-ac) = 45fb5253032347961f123ad9a75b72f7c2f15a2b
+SHA1 (patch-ac) = 8b0ffc092ae577f8b902067477f0a3946481c6fa
 SHA1 (patch-conserver_util.c) = 9bca7aeaa0239017aa5386218abcc0dd8dfd1b31
