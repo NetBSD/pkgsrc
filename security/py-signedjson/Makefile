@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 12:42:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	signedjson-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,13 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.0.1:../../devel/py-unpaddedbase64
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.5:../../devel/py-typing-extensions
-.endif
 
 USE_LANGUAGES=	# none
 
