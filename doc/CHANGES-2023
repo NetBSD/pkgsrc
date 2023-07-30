@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4664 2023/07/30 08:02:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4665 2023/07/30 08:16:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6557,3 +6557,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typeguard to 4.1.0 [adam 2023-07-30]
 	Updated devel/py-pathspec to 0.11.2 [adam 2023-07-30]
 	Updated textproc/py-tomlkit to 0.12.1 [adam 2023-07-30]
+	Updated sysutils/py-ansible-compat to 4.1.5 [adam 2023-07-30]
+	Updated devel/py-ipykernel to 6.25.0 [adam 2023-07-30]
+	Updated www/py-paste to 3.5.3 [adam 2023-07-30]
+	Updated textproc/py-dill to 0.3.7 [adam 2023-07-30]
