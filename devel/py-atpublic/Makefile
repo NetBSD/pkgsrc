@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/03/29 09:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/30 15:24:05 adam Exp $
 
-DISTNAME=	atpublic-2.3
+DISTNAME=	atpublic-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atpublic/}
 
@@ -11,15 +10,11 @@ HOMEPAGE=	https://public.readthedocs.io/
 COMMENT=	@public decorator for Python
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
