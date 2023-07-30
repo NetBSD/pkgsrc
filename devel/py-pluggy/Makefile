@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/06/28 08:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/30 15:32:48 adam Exp $
 
 DISTNAME=	pluggy-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,12 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
-.endif
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} testing
