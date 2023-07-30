@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.75 2023/06/27 10:36:50 riastradh Exp $
+# $NetBSD: NetBSD.mk,v 1.76 2023/07/30 21:49:13 ryoon Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -139,6 +139,11 @@ OPSYS_HAS_EVENTFD=	# defined
 # check for timerfd(2) support, added in NetBSD-9.99.x
 .if exists(${_CROSS_DESTDIR:U}/usr/include/sys/timerfd.h)
 OPSYS_HAS_TIMERFD=	# defined
+.endif
+
+# check for epoll(2) support, added in NetBSD-10.99.x
+.if exists(${_CROSS_DESTDIR:U}/usr/include/sys/epoll.h)
+OPSYS_HAS_EPOLL=	# defined
 .endif
 
 # Register support for FORTIFY (with GCC)
