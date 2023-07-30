@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/07/30 07:55:44 tsutsui Exp $
+# $NetBSD: Makefile,v 1.98 2023/07/30 16:30:17 tsutsui Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	27
@@ -54,7 +54,7 @@ SUBST_SED.ccflags+=	-e 's| CDEBUGFLAGS = .*| CDEBUGFLAGS =|'
 SUBST_STAGE.ccflags=	post-configure
 SUBST_MESSAGE.ccflags=	Fixing compiler flags for Solaris.
 
-.if ${OPSYS} == "SunOS" || !empty(MACHINE_PLATFORM:MIRIX-5*)
+.if ${OPSYS} == "SunOS" || ${MACHINE_PLATFORM:MIRIX-5.*}
 CPPFLAGS+=	-DNEED_ALLOCA_H
 .endif
 
