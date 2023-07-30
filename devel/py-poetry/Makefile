@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/07/01 08:37:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/30 15:32:48 adam Exp $
 
 DISTNAME=	poetry-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -47,7 +47,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zipp>=3.4:../../archivers/py-zipp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
@@ -55,9 +55,6 @@ DEPENDS+=	${PYPKGPREFIX}-xattr>=0.10.1:../../sysutils/py-xattr
 .endif
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 308
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-.endif
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.4:../../devel/py-importlib-metadata
 .endif

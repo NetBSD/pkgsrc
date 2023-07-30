@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	structlog-21.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,12 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 USE_LANGUAGES=	# none
 

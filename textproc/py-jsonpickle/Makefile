@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/04/30 15:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	jsonpickle-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,12 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-.endif
 
 USE_LANGUAGES=	# none
 
