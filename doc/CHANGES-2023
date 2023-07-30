@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4660 2023/07/30 04:27:08 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4661 2023/07/30 04:57:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6550,3 +6550,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-partitions to 1.794.0 [taca 2023-07-30]
 	Updated www/ruby-aws-sdk-core to 3.180.0 [taca 2023-07-30]
 	Updated www/ruby-aws-sdk-s3 to 1.132.0 [taca 2023-07-30]
+	Updated devel/php-xdebug to 3.2.2 [taca 2023-07-30]
