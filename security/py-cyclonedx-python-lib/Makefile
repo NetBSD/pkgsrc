@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/05 22:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	cyclonedx_python_lib-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -24,12 +24,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.4:../../devel/py-importlib-metadata
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

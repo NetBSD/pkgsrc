@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/07/30 15:32:48 adam Exp $
 
 DISTNAME=	attrs-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,13 +30,8 @@ USE_LANGUAGES=	# none
 #	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-plugins-[0-9]*:../../devel/py-test-mypy-plugins
-.endif
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
 .include "../../lang/python/wheel.mk"
