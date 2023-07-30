@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4671 2023/07/30 20:34:22 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.4672 2023/07/30 20:53:02 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6571,3 +6571,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-apsw to 3.42.0.1 [adam 2023-07-30]
 	Updated sysutils/xfce4-cpugraph-plugin to 1.2.8 [gutteridge 2023-07-30]
 	Updated lang/gleam to 0.30.4 [nikita 2023-07-30]
+	Updated www/gotosocial to 0.10.0 [nikita 2023-07-30]
