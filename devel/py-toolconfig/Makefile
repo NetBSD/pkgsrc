@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/05/04 10:02:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/07/30 15:32:48 adam Exp $
 
 DISTNAME=	pytoolconfig-1.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -24,12 +24,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
-.endif
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 .endif
 
 do-test:

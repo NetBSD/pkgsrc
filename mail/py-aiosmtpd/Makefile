@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/07 21:08:39 markd Exp $
+# $NetBSD: Makefile,v 1.12 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	aiosmtpd-1.4.4.post2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,12 +18,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 pre-configure:
 	${CHMOD} -R go-w ${WRKSRC}

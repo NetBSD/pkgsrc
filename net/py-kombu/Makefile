@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/03/29 09:34:12 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/30 15:32:49 adam Exp $
 
 DISTNAME=	kombu-5.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,13 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.18:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
-.endif
 
 USE_LANGUAGES=	# none
 
