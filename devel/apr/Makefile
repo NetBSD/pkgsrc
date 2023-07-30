@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/04/23 08:57:08 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2023/07/30 21:31:50 tnn Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-devrandom=/dev/urandom
 CONFIGURE_ARGS+=	--with-installbuilddir=${PREFIX}/libexec/apr
 CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
+CONFIGURE_ENV.NetBSD+=	apr_cv_epoll=no
 LIBS.SunOS+=		-lnsl
 TEST_TARGET=		check
 
