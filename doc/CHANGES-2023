@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4649 2023/07/30 02:26:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4650 2023/07/30 03:45:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6539,3 +6539,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/tree-sitter-cpp to 0.20.2 [wiz 2023-07-30]
 	Updated textproc/tree-sitter-python to 0.20.3 [wiz 2023-07-30]
 	Updated devel/xxhash to 0.8.2 [wiz 2023-07-30]
+	Updated devel/hoe to 4.0.5 [taca 2023-07-30]
