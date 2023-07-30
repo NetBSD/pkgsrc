@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4644 2023/07/29 23:51:05 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4645 2023/07/30 02:00:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6534,3 +6534,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/mame to 0.257 [wiz 2023-07-29]
 	Updated chat/swirc to 3.4.4 [fcambus 2023-07-29]
 	Updated audio/milkytracker to 1.04.00 [charlotte 2023-07-29]
+	Updated math/R-gss to 2.2.5 [mef 2023-07-30]
