@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4668 2023/07/30 15:24:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4669 2023/07/30 15:39:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6567,3 +6567,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-asgiref to 3.7.2 [adam 2023-07-30]
 	Updated devel/py-argcomplete to 3.1.1 [adam 2023-07-30]
 	Updated devel/py-atpublic to 4.0 [adam 2023-07-30]
+	Removed devel/py-backports.cached-property [adam 2023-07-30]
+	Updated databases/py-apsw to 3.42.0.1 [adam 2023-07-30]
