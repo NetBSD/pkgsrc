@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4646 2023/07/30 02:20:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4647 2023/07/30 02:21:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6536,3 +6536,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/milkytracker to 1.04.00 [charlotte 2023-07-29]
 	Updated math/R-gss to 2.2.5 [mef 2023-07-30]
 	Updated textproc/tree-sitter-c to 0.20.4 [wiz 2023-07-30]
+	Updated textproc/tree-sitter-cpp to 0.20.2 [wiz 2023-07-30]
