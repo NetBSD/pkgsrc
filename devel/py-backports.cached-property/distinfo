@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2021/11/08 12:27:36 adam Exp $
-
-BLAKE2s (backports.cached-property-1.0.1.tar.gz) = fec0d19b13cd161ef53433ac44f4f101053ef0473b317b347b8e56708f3f31ba
-SHA512 (backports.cached-property-1.0.1.tar.gz) = 2751bed957408a3d27f4b8419dc910f88d4045493886e9561b4e2b8e425b0532da1e142c848b98e4cfc93c99b559fef465fb0b648f5636eb725da5e49d2d9a59
-Size (backports.cached-property-1.0.1.tar.gz) = 7430 bytes
