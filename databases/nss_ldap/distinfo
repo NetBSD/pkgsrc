@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:09:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/07/30 00:18:07 manu Exp $
 
-BLAKE2s (nss_ldap-265.tar.gz) = 654573b702f64e4eb24435adf513c232867ec917705182756d5eab37a13a81c4
-SHA512 (nss_ldap-265.tar.gz) = c4584682968861dd5880992fe7d11c6005d94f0c17252ab1cda04380fd7a81b419ba7e87d0efa44c24c5ce5bf76b9fd8331034dddb4f1400f132eb2192472077
-Size (nss_ldap-265.tar.gz) = 280976 bytes
-SHA1 (patch-ab) = 418fca750b9b6f40dd3a904af84fababf8c55022
-SHA1 (patch-af) = 7a09ee93a903dc7df256a50d9e904b74e6e5747f
-SHA1 (patch-ag) = 4fa04f6b577b7c5a6977403dae3e91a3faab4152
-SHA1 (patch-configure.in) = 45d86bcaae5ca27ad1ab5a8816720c40982f85c4
-SHA1 (patch-ldap-ethers.c) = 0e4e27e4f03e7e8a821aaddabb91c443f5d1db22
-SHA1 (patch-ldap-pwd.c) = 5d4720aaa88e2e7b46d1c1cde9648466b82598e1
+BLAKE2s (nss_ldap-266a.tar.gz) = 8bdbaae42c8bec6e1f3476b00ae9e66d4d9b688b3d636a61cae252a7aee80865
+SHA512 (nss_ldap-266a.tar.gz) = 430b5d97c826b308169b5ee5f1b70f6610700c5d947881bc51ff2974f04311c1da6f46e48a8843f6664a3a45b6989be6d3052bd4af0924f0982ac0de6165c3d8
+Size (nss_ldap-266a.tar.gz) = 303265 bytes
