@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4653 2023/07/30 04:03:51 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4654 2023/07/30 04:07:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6543,3 +6543,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-async to 2.6.3 [taca 2023-07-30]
 	Updated devel/ruby-io-event to 1.2.3 [taca 2023-07-30]
 	Updated devel/ruby-mocha to 2.1.0 [taca 2023-07-30]
+	Updated devel/ruby-native-package-installer to 1.1.8 [taca 2023-07-30]
