@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2023/07/30 15:41:40 adam Exp $
 
 DISTNAME=	ConfigUpdater-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,12 +21,6 @@ USE_LANGUAGES=	# none
 USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 307
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>0:../../devel/py-importlib-metadata
-.endif
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
