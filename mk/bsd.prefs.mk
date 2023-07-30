@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.435 2023/07/18 12:49:46 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.436 2023/07/30 19:04:02 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -830,7 +830,11 @@ _PKGSRC_USE_RELRO=	no
 .if ${PKGSRC_USE_RELRO:tl} != "no" && \
     ${RELRO_SUPPORTED:Uyes:tl} != "no" && \
     ${_OPSYS_SUPPORTS_RELRO:Uno} == "yes"
-_PKGSRC_USE_RELRO=	yes
+.  if ${PKGSRC_USE_RELRO:tl} != "full"
+_PKGSRC_USE_RELRO=	partial
+.  else
+_PKGSRC_USE_RELRO=	full
+.  endif
 .endif
 
 # Enable Stack-Smashing Protection
