@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4667 2023/07/30 15:09:39 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4668 2023/07/30 15:24:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6565,3 +6565,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed lang/py37-html-docs [adam 2023-07-30]
 	Updated net/py-moto to 4.1.13 [adam 2023-07-30]
 	Updated www/py-asgiref to 3.7.2 [adam 2023-07-30]
+	Updated devel/py-argcomplete to 3.1.1 [adam 2023-07-30]
+	Updated devel/py-atpublic to 4.0 [adam 2023-07-30]
