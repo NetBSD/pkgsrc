@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.105 2023/07/30 15:09:25 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.106 2023/07/30 21:47:44 ryoon Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -272,7 +272,8 @@ CWRAPPERS_PREPEND.cxx+=	${_MKREPRO_CFLAGS}
 # Enable relocation read-only if the user has chosen to and the compiler
 # supports it.
 #
-.if ${_PKGSRC_USE_RELRO} == "yes" && defined(_RELRO_LDFLAGS)
+.if (${_PKGSRC_USE_RELRO} == "partial" || ${_PKGSRC_USE_RELRO} == "full") \
+     && defined(_RELRO_LDFLAGS)
 LDFLAGS+=		${_RELRO_LDFLAGS}
 _WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
 _WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
