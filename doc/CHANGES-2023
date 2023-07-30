@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4665 2023/07/30 08:16:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4666 2023/07/30 14:41:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6561,3 +6561,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipykernel to 6.25.0 [adam 2023-07-30]
 	Updated www/py-paste to 3.5.3 [adam 2023-07-30]
 	Updated textproc/py-dill to 0.3.7 [adam 2023-07-30]
+	Removed lang/python37 [adam 2023-07-30]
+	Removed lang/py37-html-docs [adam 2023-07-30]
