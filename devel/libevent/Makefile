@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/07/06 10:08:58 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/30 21:28:27 tnn Exp $
 
 .include "../../devel/libevent/Makefile.common"
 
@@ -22,8 +22,9 @@ CPPFLAGS.QNX+=		-D__EXT_POSIX2
 
 .include "../../mk/bsd.prefs.mk"
 
-# Explicitly disable epoll on illumos, provided for Linux compat only.
+# Explicitly disable epoll on illumos & NetBSD, provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
+CONFIGURE_ENV.NetBSD+=	ac_cv_func_epoll_ctl=no
 
 .if !empty(MACHINE_PLATFORM:MHPUX-11.11-*)
 CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
