@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4666 2023/07/30 14:41:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4667 2023/07/30 15:09:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6563,3 +6563,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-dill to 0.3.7 [adam 2023-07-30]
 	Removed lang/python37 [adam 2023-07-30]
 	Removed lang/py37-html-docs [adam 2023-07-30]
+	Updated net/py-moto to 4.1.13 [adam 2023-07-30]
+	Updated www/py-asgiref to 3.7.2 [adam 2023-07-30]
