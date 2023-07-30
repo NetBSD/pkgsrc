@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/06/06 10:51:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/07/30 09:58:02 nia Exp $
 
 BUILDLINK_TREE+=	grpc
 
 .if !defined(GRPC_BUILDLINK3_MK)
 GRPC_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++14
 
 BUILDLINK_API_DEPENDS.grpc+=	grpc>=1.11.0
 BUILDLINK_ABI_DEPENDS.grpc+=	grpc>=1.54.2nb1
