@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2023/01/03 17:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/07/30 07:55:44 tsutsui Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
@@ -64,6 +64,7 @@ post-install:
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
