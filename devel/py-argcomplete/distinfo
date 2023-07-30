@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.25 2023/04/30 12:50:12 wiz Exp $
+$NetBSD: distinfo,v 1.26 2023/07/30 15:19:42 adam Exp $
 
-BLAKE2s (argcomplete-3.0.8.tar.gz) = bcb08e18d63b9038e4669482f5d64a7f2e73cb614a2b967706a2e354a2019932
-SHA512 (argcomplete-3.0.8.tar.gz) = 4667f0d03485c81048c53ecfd53fa1bbe50beea15f723f3ebd8a92aae37dd2bbca709f9b6a1e0a5a682f9e769883f94614b4fcefc1fd7c9fad9f1d8cbc1429f3
-Size (argcomplete-3.0.8.tar.gz) = 56035 bytes
-SHA1 (patch-setup.py) = 02a39926125ad244350d49799ebcce0d08c62948
+BLAKE2s (argcomplete-3.1.1.tar.gz) = 0b08af89561538c30ccd7d24c5c6a7e1c16d442dc6683b736766263b2487e65c
+SHA512 (argcomplete-3.1.1.tar.gz) = 14765d33dddcd65a65f71970f7588786711db7ea641df9238706f277e6f867b9b6902efcca0000cbc331b0a213507adb94e984951fe7326fbb8502f21c7c9467
+Size (argcomplete-3.1.1.tar.gz) = 79356 bytes
