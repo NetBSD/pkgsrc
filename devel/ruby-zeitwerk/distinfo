@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/29 13:41:52 taca Exp $
+$NetBSD: distinfo,v 1.14 2023/07/30 04:09:01 taca Exp $
 
-BLAKE2s (zeitwerk-2.6.8.gem) = d0405d721d93db587786d88e520afc9e61944b371f44017a42cd901254f91a0d
-SHA512 (zeitwerk-2.6.8.gem) = 937f972b2581685aa4fbe1e5fcccfa91230cfcae84553bedb4f2278483b392133bdb6593681c247086a3da6720e4d0d9c5e291f9afaeb6c0e63871422d3898b7
-Size (zeitwerk-2.6.8.gem) = 37376 bytes
+BLAKE2s (zeitwerk-2.6.9.gem) = 51205d7b4ce4530322f527be4b5db8333c6db10309d45546d51f4ff455aae7f1
+SHA512 (zeitwerk-2.6.9.gem) = a860a4970f5a70a501858705947dafd36e59b7caefad662937e069ec9c58902f0d94b88c6d1249662dc6f23c61463db8e3c65b42d064b9295afc838fa96cce98
+Size (zeitwerk-2.6.9.gem) = 38400 bytes
