@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/05/21 17:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/07/30 15:41:40 adam Exp $
 
 DISTNAME=	httpie-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -31,12 +31,6 @@ USE_LANGUAGES=	# none
 USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 307
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=1.4.0:../../devel/py-importlib-metadata
-.endif
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
