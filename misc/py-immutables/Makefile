@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/03/29 09:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/07/30 15:41:40 adam Exp $
 
 DISTNAME=	immutables-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,12 +14,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.942:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.4:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 307
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
