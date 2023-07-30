@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/03/15 14:38:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/07/30 08:28:23 nia Exp $
 
 DISTNAME=	libfido2-1.13.0
 CATEGORIES=	security devel
@@ -21,4 +21,8 @@ CHECK_PORTABILITY_SKIP+=	misc/hooks
 .include "../../devel/libcbor/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../sysutils/libudev/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
