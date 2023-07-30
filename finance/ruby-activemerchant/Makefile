@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/07/02 05:36:36 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/07/30 04:12:17 taca Exp $
 
-DISTNAME=	activemerchant-1.131.0
+DISTNAME=	activemerchant-1.133.0
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
