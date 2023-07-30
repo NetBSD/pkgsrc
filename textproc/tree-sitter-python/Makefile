@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/05/08 17:24:29 he Exp $
+# $NetBSD: Makefile,v 1.4 2023/07/30 02:24:50 wiz Exp $
 
-DISTNAME=	tree-sitter-python-0.20.0
-PKGREVISION=	2
+DISTNAME=	tree-sitter-python-0.20.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
