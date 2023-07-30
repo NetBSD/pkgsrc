@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4662 2023/07/30 07:37:08 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4663 2023/07/30 07:56:01 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6552,3 +6552,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.132.0 [taca 2023-07-30]
 	Updated devel/php-xdebug to 3.2.2 [taca 2023-07-30]
 	Updated shells/oh-my-posh to 18.2.0 [pin 2023-07-30]
+	Updated graphics/xv to 3.10anb27 [tsutsui 2023-07-30]
