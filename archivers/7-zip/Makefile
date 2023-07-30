@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/21 22:42:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/07/30 07:55:48 nia Exp $
 
 DISTNAME=	7z2301-src
 PKGNAME=	7-zip-23.01
@@ -18,6 +18,9 @@ USE_TOOLS+=	gmake
 
 BUILD_DIRS+=	CPP/7zip/Bundles/Alone2
 MAKE_FILE=	makefile.gcc
+
+# Disable -Werror.
+MAKE_FLAGS+=	CFLAGS_WARN_WALL=${CFLAGS:Q}
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
