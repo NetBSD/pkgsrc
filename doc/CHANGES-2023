@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4677 2023/07/31 14:38:43 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4678 2023/07/31 15:00:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6579,3 +6579,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/binutils to 2.41 [fcambus 2023-07-31]
 	Added biology/rna-star version 2.7.10b [bacon 2023-07-31]
 	Updated biology/rna-seq to 1.2.2 [bacon 2023-07-31]
+	Updated lang/openjdk11 to 1.11.0.20.8 [ryoon 2023-07-31]
