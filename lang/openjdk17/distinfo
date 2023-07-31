@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2023/07/17 21:59:46 tnn Exp $
+$NetBSD: distinfo,v 1.13 2023/07/31 15:14:02 ryoon Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = b632092d25292e795a2d7567ec55d03f21021dbba27eab3e81a48aed5e5bdd68
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = fb86749d56be94cc1509f92d8fbdec481b0c7f6fdd5e731826098e6eaa668539052571ffd09125346c1920262b07857ea675799ab8476fcff53c03e158536c1d
@@ -12,9 +12,9 @@ Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz) = 96766088 byt
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = a8e6a44e1470cf2e8845f6b5a6edff142d06c76e12a793b5991b1bf05cf36a98
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 9fc54d9a31270cbec5e0454bbf1ddf3bb99ab5c916660e1f5e89163b384368a7f1fd5311db71b21c1638eb916899199a1080e90cc1f9615bfdbd871bb94a3216
 Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
-BLAKE2s (jdk17u-jdk-17.0.7-7-1.tar.gz) = 1e3249bb825d1464de840376f55dc1e068ede19e66548f775e72daf35f106532
-SHA512 (jdk17u-jdk-17.0.7-7-1.tar.gz) = fbe9db25cd7ea9636cf99c32fd69dfd32baafe8a58fb532424b566fd5287ab7f588cf5dac40b3195585a270386990193a49150729017160d306031f3dc22d7ed
-Size (jdk17u-jdk-17.0.7-7-1.tar.gz) = 105679891 bytes
+BLAKE2s (jdk17u-jdk-17.0.8-7-1.tar.gz) = d541ab9e88926b7e61e3ce22a487a023ef961bcc0347c314c372db96af4276ce
+SHA512 (jdk17u-jdk-17.0.8-7-1.tar.gz) = 3e24079058f6d5de99848f2e8dbd3bc1ebe1c7e4aa5a9b66313674bf26760d07c9f3f1ec220dbf6c5545c39ca71c7a89f8c4080b445707d9c5108961590b2e02
+Size (jdk17u-jdk-17.0.8-7-1.tar.gz) = 105990448 bytes
 SHA1 (patch-make_autoconf_buildjdk-spec.gmk.in) = 01b6ac6dae1a886949020b9d472aab1e357084b0
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 0379aeecc6181cbd15f6f31518b73ca915f1f73b
 SHA1 (patch-make_autoconf_hotspot.m4) = 6370c6cb2a3f225c502e7916342104cf1288f4cf
