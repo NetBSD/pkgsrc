@@ -1,8 +1,8 @@
-$NetBSD: patch-ld_Makefile.in,v 1.5 2023/01/14 20:11:04 fcambus Exp $
+$NetBSD: patch-ld_Makefile.in,v 1.6 2023/07/31 14:08:34 fcambus Exp $
 
 NetBSD/aarch64 support patches for ld from src.
 
---- ld/Makefile.in.orig	2023-01-14 00:00:00.000000000 +0000
+--- ld/Makefile.in.orig	2023-07-02 23:00:00.000000000 +0000
 +++ ld/Makefile.in
 @@ -674,6 +674,8 @@ ALL_EMULATION_SOURCES = \
  	earmelf_linux_fdpiceabi.c \
@@ -28,6 +28,6 @@ NetBSD/aarch64 support patches for ld from src.
  	eaarch64linuxb.c \
 +	eaarch64nbsd.c \
 +	eaarch64nbsdb.c \
+ 	eaarch64nto.c \
  	eaarch64pe.c \
- 	eelf32_x86_64.c \
- 	eelf32b4300.c \
+ 	earm64pe.c \
