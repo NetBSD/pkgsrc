@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/04/30 14:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/07/31 07:26:08 adam Exp $
 
-DISTNAME=	pycodestyle-2.10.0
+DISTNAME=	pycodestyle-2.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
@@ -19,9 +19,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pycodestyle pycodestyle-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} -m unittest -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
