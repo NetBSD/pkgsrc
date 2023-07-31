@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/07/30 00:18:07 manu Exp $
+# $NetBSD: Makefile,v 1.36 2023/07/31 12:03:36 tron Exp $
 
 DISTNAME=	nss_ldap-266a
 #PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 # needs nsswitch
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* Linux-*-*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-schema-mapping
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
