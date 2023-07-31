@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2023/07/18 14:39:52 ryoon Exp $
+$NetBSD: distinfo,v 1.98 2023/07/31 15:01:25 ryoon Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -24,9 +24,9 @@ Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2) = 379
 BLAKE2s (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 98777d4ff1f864a9ff5a42870b30319abd39488be2abfdc5e7d3d59b016c5807
 SHA512 (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 1403e582dacd0474e57d9aa8f1333060c50d099ef5d2c5a992ff7f63dcde2e538ff1e7fb78e45d12fd5aea6daf0704672e7f326399d415ee0d6bb53b6f925e9f
 Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 37883700 bytes
-BLAKE2s (openjdk7/jdk8u-jdk8u372-b07.1.tar.gz) = aaefe3b600d50f544815d09185385119d967734467659bfc128ed348a29451f4
-SHA512 (openjdk7/jdk8u-jdk8u372-b07.1.tar.gz) = 23ecbb42c1377da7fd186d3e9518ee7be9ea9f9d8ab3d6c29f8f9aec8cb9f8e19cf0f6ad4ba8a89f1b4969a05fc25187915666bd537567725bf9ee212314552b
-Size (openjdk7/jdk8u-jdk8u372-b07.1.tar.gz) = 88590956 bytes
+BLAKE2s (openjdk7/jdk8u-jdk8u382-b05.1.tar.gz) = 701ebad5bf69a3301b7ca2d19532b9be8f5dab52ffd8ce2de0530c455dde2687
+SHA512 (openjdk7/jdk8u-jdk8u382-b05.1.tar.gz) = 5daebf26824f8a2228ef2572ef053f0bef0d11bbd90013157c0082404e4d96ca6c02f9b950fb88e4082d261266a6553001cb5c9f7a7a87777af689faca67bb8f
+Size (openjdk7/jdk8u-jdk8u382-b05.1.tar.gz) = 93689861 bytes
 SHA1 (patch-aa) = 8810cfed600ee3bf36a408cc77e497ac7b3e6838
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
@@ -38,7 +38,7 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 5409f0944d6f850baeaaa7c64d2e8ad52233e1e9
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = a29767c79544dea243019cc841d834f756172462
-SHA1 (patch-common_autoconf_generated-configure.sh) = e28eec3e1e6de016d4f9356d781d925d3660547d
+SHA1 (patch-common_autoconf_generated-configure.sh) = df07bc97a90b332e5073618d94064fe68be41a3d
 SHA1 (patch-common_autoconf_spec.gmk.in) = 5fbf47f2241b5c898a75fb1741873043f1c983f0
 SHA1 (patch-hotspot_agent_src_os_bsd_Makefile) = 6e4c41b080577ed7cd418ee3b84f7f5a73dd11e6
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
