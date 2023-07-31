@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4673 2023/07/31 07:26:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4674 2023/07/31 09:32:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6574,3 +6574,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/gotosocial to 0.10.0 [nikita 2023-07-30]
 	Updated devel/py-pyparsing to 3.1.1 [adam 2023-07-31]
 	Updated devel/py-codestyle to 2.11.0 [adam 2023-07-31]
+	Updated security/py-google-auth to 2.22.0 [adam 2023-07-31]
+	Updated security/py-fido2 to 1.1.2 [adam 2023-07-31]
