@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4675 2023/07/31 14:08:45 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.4676 2023/07/31 14:34:26 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6577,3 +6577,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-google-auth to 2.22.0 [adam 2023-07-31]
 	Updated security/py-fido2 to 1.1.2 [adam 2023-07-31]
 	Updated devel/binutils to 2.41 [fcambus 2023-07-31]
+	Added biology/rna-star version 2.7.10b [bacon 2023-07-31]
