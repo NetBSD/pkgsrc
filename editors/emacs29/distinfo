@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/07/31 15:03:33 ryoon Exp $
+
+BLAKE2s (emacs-29.1.tar.xz) = 7dd23c25b0d63dbf7d611ed013a743362e000df35f1cb61fb9050be16cd87b59
+SHA512 (emacs-29.1.tar.xz) = de10f2af462682019af680e6a82fd33feb05ce6d995bedf5756264fa06e29d90cab02c5884b0aeade1c5ab39cf064e0fb6ff9f78d9eedbd162f0a985945b9ec2
+Size (emacs-29.1.tar.xz) = 52081008 bytes
+SHA1 (patch-Makefile.in) = cb43792c8996c781f382ae102ea771af8f3d3190
