@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2023/07/18 14:40:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2023/07/31 15:00:46 ryoon Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk11u
-GITHUB_TAG=	jdk-11.0.19+7-1
+GITHUB_TAG=	jdk-11.0.20+8-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
