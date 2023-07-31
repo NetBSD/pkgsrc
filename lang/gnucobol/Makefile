@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2020/12/31 22:16:15 fcambus Exp $
+# $NetBSD: Makefile,v 1.10 2023/07/31 16:43:09 fcambus Exp $
 #
 
-DISTNAME=	gnucobol-3.1.2
+DISTNAME=	gnucobol-3.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnucobol/}
 
