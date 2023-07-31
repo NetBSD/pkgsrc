@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/12/04 15:56:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2023/07/31 09:13:58 tnn Exp $
 
 DISTNAME=	libev-4.33
 CATEGORIES=	devel
@@ -17,6 +17,9 @@ CONFIGURE_ARGS+=		--includedir=${PREFIX}/include/ev
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_epoll_h=no
+
+# Disable epoll(2) on NetBSD since we prefer kqueue(2).
+CONFIGURE_ARGS.NetBSD+=	ac_cv_header_sys_epoll_h=no
 
 # Issues seen with multithreaded programs without _REENTRANT.
 CPPFLAGS.SunOS+=	-D_REENTRANT
