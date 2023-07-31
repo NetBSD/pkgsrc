@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4681 2023/07/31 15:06:20 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4682 2023/07/31 15:14:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6583,3 +6583,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/openjdk8 to 1.8.382 [ryoon 2023-07-31]
 	Added editors/emacs29 version 29.1 [ryoon 2023-07-31]
 	Added editors/emacs29-nox11 version 29.1 [ryoon 2023-07-31]
+	Updated lang/openjdk17 to 1.17.0.8.7 [ryoon 2023-07-31]
