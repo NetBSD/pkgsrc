@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/04/30 14:36:13 wiz Exp $
+$NetBSD: distinfo,v 1.11 2023/07/31 07:26:08 adam Exp $
 
-BLAKE2s (pycodestyle-2.10.0.tar.gz) = 0fa0519c091f7932f8fd64f00a0bd959804e4c5bc5b6f25230567f501d5519c4
-SHA512 (pycodestyle-2.10.0.tar.gz) = b0c3ee7ac56942db1e8cb5f3a59c2bd2a44b7467e73b46ab7b6f932603beefbbd29f2760ee49907447af1a5987dc1961f00788b01456bdd0aed7690e2d54446b
-Size (pycodestyle-2.10.0.tar.gz) = 101916 bytes
+BLAKE2s (pycodestyle-2.11.0.tar.gz) = a0f4c3b22d3def7a0e3625c614e6e91c090a92c98288a3e8029de1a0f1c0c205
+SHA512 (pycodestyle-2.11.0.tar.gz) = 6e8a53dbf3e290b4aded3ef8b31c5905b5638c898969230ac8801cd1efe41c410d1165b3b0181d6a7a812af49501f73723528f2d081e53b94c6bb379df0d6d9f
+Size (pycodestyle-2.11.0.tar.gz) = 38949 bytes
