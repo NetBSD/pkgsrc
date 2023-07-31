@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4674 2023/07/31 09:32:55 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4675 2023/07/31 14:08:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6576,3 +6576,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-codestyle to 2.11.0 [adam 2023-07-31]
 	Updated security/py-google-auth to 2.22.0 [adam 2023-07-31]
 	Updated security/py-fido2 to 1.1.2 [adam 2023-07-31]
+	Updated devel/binutils to 2.41 [fcambus 2023-07-31]
