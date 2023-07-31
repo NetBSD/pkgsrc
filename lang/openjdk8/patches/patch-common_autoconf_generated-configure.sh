@@ -1,8 +1,8 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.23 2023/07/31 15:01:25 ryoon Exp $
 
---- common/autoconf/generated-configure.sh.orig	2022-05-26 16:48:39.258220648 +0000
+--- common/autoconf/generated-configure.sh.orig	2023-07-19 02:06:20.000000000 +0000
 +++ common/autoconf/generated-configure.sh
-@@ -4198,7 +4198,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
+@@ -4202,7 +4202,7 @@ VALID_TOOLCHAINS_all="gcc clang solstudi
  # These toolchains are valid on different platforms
  VALID_TOOLCHAINS_bsd="clang gcc"
  VALID_TOOLCHAINS_linux="gcc clang"
@@ -11,7 +11,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  VALID_TOOLCHAINS_macosx="gcc clang"
  VALID_TOOLCHAINS_aix="xlc"
  VALID_TOOLCHAINS_windows="microsoft"
-@@ -15475,9 +15475,6 @@ done
+@@ -15559,9 +15559,6 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
      # User has supplied a make, test it.
@@ -21,7 +21,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
    MAKE_CANDIDATE=""$MAKE""
    DESCRIPTION="user supplied MAKE=$MAKE"
-@@ -20352,7 +20349,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20436,7 +20433,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -30,7 +30,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -20684,7 +20681,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -20779,7 +20776,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -39,7 +39,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21002,7 +20999,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21119,7 +21116,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -48,7 +48,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21190,7 +21187,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21318,7 +21315,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -57,7 +57,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21468,7 +21465,7 @@ fi
+@@ -21607,7 +21604,7 @@ fi
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -66,7 +66,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -21518,7 +21515,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21657,7 +21654,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -75,7 +75,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21733,7 +21730,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -21883,7 +21880,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -84,7 +84,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -21913,7 +21910,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22074,7 +22071,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -93,7 +93,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22121,7 +22118,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22293,7 +22290,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -102,7 +102,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22301,7 +22298,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22484,7 +22481,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -111,7 +111,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22509,7 +22506,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22703,7 +22700,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -120,7 +120,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22689,7 +22686,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -22894,7 +22891,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -129,7 +129,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -22897,7 +22894,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23113,7 +23110,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -138,7 +138,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23077,7 +23074,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23304,7 +23301,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -147,7 +147,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23272,7 +23269,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23510,7 +23507,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -156,7 +156,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23450,7 +23447,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23699,7 +23696,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -165,7 +165,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23646,7 +23643,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -23906,7 +23903,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -174,7 +174,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -23824,7 +23821,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24095,7 +24092,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -183,7 +183,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24019,7 +24016,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24301,7 +24298,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -192,7 +192,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24197,7 +24194,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24490,7 +24487,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -201,7 +201,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24393,7 +24390,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24697,7 +24694,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -210,7 +210,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24571,7 +24568,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -24886,7 +24883,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -219,7 +219,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -24748,7 +24745,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+@@ -25074,7 +25071,7 @@ $as_echo "$as_me: Potential Boot JDK fou
              BOOT_JDK_FOUND=no
            else
              # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
@@ -228,7 +228,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -25154,16 +25151,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -25491,16 +25488,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -246,7 +246,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
    $ECHO "Check if jvm arg is ok: -Xmx$JVM_MAX_HEAP" >&5
    $ECHO "Command: $JAVA -Xmx$JVM_MAX_HEAP -version" >&5
-@@ -27719,7 +27715,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -28058,7 +28054,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -255,7 +255,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -28174,7 +28170,7 @@ $as_echo_n "checking for resolved symbol
+@@ -28513,7 +28509,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -264,7 +264,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29460,7 +29456,7 @@ $as_echo_n "checking resolved symbolic l
+@@ -29799,7 +29795,7 @@ $as_echo_n "checking resolved symbolic l
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -273,7 +273,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -29915,7 +29911,7 @@ $as_echo_n "checking for resolved symbol
+@@ -30254,7 +30250,7 @@ $as_echo_n "checking for resolved symbol
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
          ISLINK=`$LS -l $sym_link_dir/$sym_link_file | $GREP '\->' | $SED -e 's/.*-> \(.*\)/\1/'`
@@ -282,7 +282,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -42022,6 +42018,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42372,6 +42368,12 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
        SET_SHARED_LIBRARY_ORIGIN="$SET_EXECUTABLE_ORIGIN"
        SET_SHARED_LIBRARY_NAME='-Xlinker -install_name -Xlinker @rpath/$1'
        SET_SHARED_LIBRARY_MAPFILE=''
@@ -295,17 +295,18 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'
-@@ -42093,7 +42095,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42443,7 +42445,9 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xsolaris; then
      CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
      CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
+-    CFLAGS_JDKLIB_EXTRA='-xstrconst'
 +    if test "x$TOOLCHAIN_TYPE" = xsolstudio; then
-     CFLAGS_JDKLIB_EXTRA='-xstrconst'
++      CFLAGS_JDKLIB_EXTRA='-xstrconst'
 +    fi
    fi
    # The (cross) compiler is now configured, we can now test capabilities
    # of the target platform.
-@@ -42253,7 +42257,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42603,7 +42607,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
    elif test "x$TOOLCHAIN_TYPE" = xgcc; then
      LEGACY_EXTRA_CFLAGS="$LEGACY_EXTRA_CFLAGS -fstack-protector"
      LEGACY_EXTRA_CXXFLAGS="$LEGACY_EXTRA_CXXFLAGS -fstack-protector"
@@ -314,17 +315,18 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
        LDFLAGS_JDK="$LDFLAGS_JDK -Wl,-z,relro"
        LEGACY_EXTRA_LDFLAGS="$LEGACY_EXTRA_LDFLAGS -Wl,-z,relro"
      fi
-@@ -43112,7 +43116,9 @@ $as_echo "$supports" >&6; }
+@@ -43462,7 +43466,9 @@ $as_echo "$supports" >&6; }
        # Enabling pie on 32 bit builds prevents the JVM from allocating a continuous
        # java heap.
        if test "x$OPENJDK_TARGET_CPU_BITS" != "x32"; then
-+       if test "x$OPENJDK_TARGET_OS" != "xsolaris"; then
-         LDFLAGS_JDKEXE="$LDFLAGS_JDKEXE -pie"
-+       fi
+-        LDFLAGS_JDKEXE="$LDFLAGS_JDKEXE -pie"
++        if test "x$OPENJDK_TARGET_OS" != "xsolaris"; then
++          LDFLAGS_JDKEXE="$LDFLAGS_JDKEXE -pie"
++        fi
        fi
      fi
    fi
-@@ -43600,7 +43606,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -43950,7 +43956,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -334,7 +336,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -44830,7 +44837,7 @@ $as_echo "$as_me: WARNING: Can't find pr
+@@ -45180,7 +45187,7 @@ $as_echo "$as_me: WARNING: Can't find pr
      BUILD_FREETYPE=no
    fi
    # Now check if configure found a version of 'msbuild.exe'
@@ -343,20 +345,18 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&5
  $as_echo "$as_me: WARNING: Can't find an msbuild.exe executable (you may try to install .NET 4.0) - ignoring --with-freetype-src" >&2;}
      BUILD_FREETYPE=no
-@@ -45246,7 +45253,11 @@ $as_echo "$as_me: WARNING: --with-freety
- 
+@@ -45619,6 +45626,10 @@ $as_echo "$as_me: WARNING: --with-freety
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
--        POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"
-+          POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"
-+           # deal w/ freetype2 in new location
-+          if test -f "$with_freetype_include"/freetype2/ft2build.h; then
-+            POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"/freetype2
-+          fi
+         POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"
++        # deal w/ freetype2 in new location
++        if test -f "$with_freetype_include"/freetype2/ft2build.h; then
++          POTENTIAL_FREETYPE_INCLUDE_PATH="$with_freetype_include"/freetype2
++        fi
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -48356,7 +48367,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -48937,7 +48948,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -365,7 +365,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -48489,7 +48500,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -49081,7 +49092,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -374,7 +374,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
        fi
      fi
  
-@@ -49824,9 +49835,6 @@ fi
+@@ -50416,9 +50427,6 @@ fi
  
  
  
@@ -384,7 +384,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.22 2022/07/10 14:47:24
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -49869,7 +49877,7 @@ fi
+@@ -50461,7 +50469,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
