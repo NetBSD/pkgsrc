@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/06/29 09:32:14 adam Exp $
+# $NetBSD: Makefile,v 1.57 2023/07/31 09:26:31 adam Exp $
 
-DISTNAME=	google-auth-2.21.0
+DISTNAME=	google-auth-2.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
@@ -26,7 +26,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-u2f-[0-9]*:../../security/py-u2f
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-cachetools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# hack
+post-install:
+	${RM} -r ${DESTDIR}${PREFIX}/${PYSITELIB}/build
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
