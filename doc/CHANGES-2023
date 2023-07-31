@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4683 2023/07/31 15:38:36 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4684 2023/07/31 16:09:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6585,3 +6585,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added editors/emacs29-nox11 version 29.1 [ryoon 2023-07-31]
 	Updated lang/openjdk17 to 1.17.0.8.7 [ryoon 2023-07-31]
 	Updated chat/weechat to 4.0.2 [ryoon 2023-07-31]
+	Updated net/ngtcp2 to 0.18.0 [adam 2023-07-31]
+	Updated www/nghttp3 to 0.14.0 [adam 2023-07-31]
