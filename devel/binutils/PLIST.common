@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.40 2023/01/14 20:11:04 fcambus Exp $
+@comment $NetBSD: PLIST.common,v 1.41 2023/07/31 14:08:34 fcambus Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -81,6 +81,7 @@ info/binutils.info
 ${PLIST.ctf}info/ctf-spec.info
 ${PLIST.gprof}info/gprof.info
 ${PLIST.gld}info/ld.info
+info/ldint.info
 info/sframe-spec.info
 ${PLIST.gld}lib/bfd-plugins/libdep.so
 lib/libbfd.la
@@ -165,6 +166,7 @@ ${PLIST.gas}share/locale/ja/LC_MESSAGES/gas.mo
 ${PLIST.gold}share/locale/ja/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/ja/LC_MESSAGES/gprof.mo
 ${PLIST.gld}share/locale/ja/LC_MESSAGES/ld.mo
+share/locale/ka/LC_MESSAGES/bfd.mo
 ${PLIST.gprof}share/locale/ka/LC_MESSAGES/gprof.mo
 ${PLIST.gprof}share/locale/ms/LC_MESSAGES/gprof.mo
 ${PLIST.gprof}share/locale/nl/LC_MESSAGES/gprof.mo
