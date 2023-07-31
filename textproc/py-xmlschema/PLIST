@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/11/14 10:07:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/07/31 16:28:35 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -71,6 +71,8 @@ ${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.po
+${PYSITELIB}/xmlschema/locale/pl/LC_MESSAGES/xmlschema.mo
+${PYSITELIB}/xmlschema/locale/pl/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/locale/ru/LC_MESSAGES/xmlschema.mo
 ${PYSITELIB}/xmlschema/locale/ru/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/names.py
@@ -83,12 +85,16 @@ ${PYSITELIB}/xmlschema/py.typed
 ${PYSITELIB}/xmlschema/resources.py
 ${PYSITELIB}/xmlschema/resources.pyc
 ${PYSITELIB}/xmlschema/resources.pyo
+${PYSITELIB}/xmlschema/schemas/DSIG/xmldsig-core-schema.xsd
+${PYSITELIB}/xmlschema/schemas/DSIG/xmldsig11-schema.xsd
 ${PYSITELIB}/xmlschema/schemas/HFP/XMLSchema-hasFacetAndProperty_minimal.xsd
 ${PYSITELIB}/xmlschema/schemas/VC/XMLSchema-versioning.xsd
 ${PYSITELIB}/xmlschema/schemas/WSDL/soap-encoding.xsd
 ${PYSITELIB}/xmlschema/schemas/WSDL/soap-envelope.xsd
 ${PYSITELIB}/xmlschema/schemas/WSDL/wsdl-soap.xsd
 ${PYSITELIB}/xmlschema/schemas/WSDL/wsdl.xsd
+${PYSITELIB}/xmlschema/schemas/XENC/xenc-schema-11.xsd
+${PYSITELIB}/xmlschema/schemas/XENC/xenc-schema.xsd
 ${PYSITELIB}/xmlschema/schemas/XHTML/xhtml1-strict.xsd
 ${PYSITELIB}/xmlschema/schemas/XLINK/xlink.xsd
 ${PYSITELIB}/xmlschema/schemas/XML/xml_minimal.xsd
