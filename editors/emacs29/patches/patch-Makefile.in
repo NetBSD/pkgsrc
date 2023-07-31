@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/07/31 15:03:34 ryoon Exp $
+
+* Static pdmp filename.
+
+--- Makefile.in.orig	2023-04-29 09:22:11.000000000 +0000
++++ Makefile.in
+@@ -622,7 +622,7 @@ ifeq (${DUMPING},pdumper)
+ ifeq (${HAVE_BE_APP},yes)
+ 	${INSTALL_DATA} src/Emacs.pdmp "$(DESTDIR)${libexecdir}/emacs/${version}/${configuration}"/Emacs.pdmp
+ endif
+-	${INSTALL_DATA} src/emacs.pdmp "$(DESTDIR)${libexecdir}/emacs/${version}/${configuration}"/emacs-${EMACS_PDMP}
++	${INSTALL_DATA} src/emacs.pdmp "$(DESTDIR)${libexecdir}/emacs/${version}/${configuration}"/emacs.pdmp
+ endif
+ 	-chmod 755 "$(DESTDIR)${bindir}/$(EMACSFULL)"
+ ifndef NO_BIN_LINK
