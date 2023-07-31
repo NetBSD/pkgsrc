@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4684 2023/07/31 16:09:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4685 2023/07/31 16:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6587,3 +6587,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/weechat to 4.0.2 [ryoon 2023-07-31]
 	Updated net/ngtcp2 to 0.18.0 [adam 2023-07-31]
 	Updated www/nghttp3 to 0.14.0 [adam 2023-07-31]
+	Updated security/py-certifi to 2023.7.22 [adam 2023-07-31]
+	Updated security/py-paramiko to 3.3.1 [adam 2023-07-31]
+	Updated devel/py-flakes to 3.1.0 [adam 2023-07-31]
+	Updated devel/py-flake8 to 6.1.0 [adam 2023-07-31]
