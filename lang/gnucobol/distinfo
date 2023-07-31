@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:51:36 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/07/31 16:43:09 fcambus Exp $
 
-BLAKE2s (gnucobol-3.1.2.tar.gz) = 4adcbebf32298825247c87dff312bd24e4c0098147cd545574dcff82d6195f24
-SHA512 (gnucobol-3.1.2.tar.gz) = ccda68e6da84b358a4b25b1bed495eaa4d0729fef754d89501de5bfb68f1d92f0dbcfdfb95a31dd0fb30a02a985f36df575774f6387ff01d2bfe0a7fad75f766
-Size (gnucobol-3.1.2.tar.gz) = 3897397 bytes
+BLAKE2s (gnucobol-3.2.tar.gz) = 1e44d0ef8c4aa42b2401a69f356e1fe6fdfa76cd9d448c6c22328a77ab8f2ae8
+SHA512 (gnucobol-3.2.tar.gz) = 8fffb22ea0a7b2dc3abdc836aca543b744f678685ece22758d75973a709bd72cc6dcba504f58e4c8f3ac6f8fd40c9b40ba291c5b39835121ee3deb54e9774241
+Size (gnucobol-3.2.tar.gz) = 5488582 bytes
