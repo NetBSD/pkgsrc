@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4689 2023/07/31 18:49:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4690 2023/07/31 21:59:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6597,3 +6597,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/oracle-jdk17 to 17.0.8 [adam 2023-07-31]
 	Updated devel/py-pdm to 2.8.2 [adam 2023-07-31]
 	Updated math/py-numpy to 1.25.2 [adam 2023-07-31]
+	Updated textproc/py-markups to 4.0.0 [gutteridge 2023-07-31]
