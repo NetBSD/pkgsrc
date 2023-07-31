@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/07/28 16:43:40 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2023/07/31 14:38:36 bacon Exp $
 #
 
-DISTNAME=	rna-seq-1.2.1
+DISTNAME=	rna-seq-1.2.2
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
@@ -14,6 +14,7 @@ DEPENDS+=	biolibc-tools>0:../../biology/biolibc-tools
 DEPENDS+=	gffread>0:../../biology/gffread
 DEPENDS+=	kallisto>0:../../biology/kallisto
 DEPENDS+=	hisat2>0:../../biology/hisat2
+DEPENDS+=	rna-star>0:../../biology/rna-star
 DEPENDS+=	samtools>0:../../biology/samtools
 DEPENDS+=	igv>0:../../biology/igv
 DEPENDS+=	fasda>0:../../biology/fasda
