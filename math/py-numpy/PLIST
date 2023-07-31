@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/07/10 13:38:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/07/31 18:36:01 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -1078,6 +1078,7 @@ ${PYSITELIB}/numpy/random/_examples/cffi/parse.py
 ${PYSITELIB}/numpy/random/_examples/cffi/parse.pyc
 ${PYSITELIB}/numpy/random/_examples/cython/extending.pyx
 ${PYSITELIB}/numpy/random/_examples/cython/extending_distributions.pyx
+${PYSITELIB}/numpy/random/_examples/cython/meson.build
 ${PYSITELIB}/numpy/random/_examples/cython/setup.py
 ${PYSITELIB}/numpy/random/_examples/cython/setup.pyc
 ${PYSITELIB}/numpy/random/_examples/numba/extending.py
