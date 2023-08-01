@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4697 2023/08/01 12:38:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4698 2023/08/01 21:18:54 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-markdown to 3.4.4 [adam 2023-08-01]
 	Updated www/py-uwsgi to 2.0.22 [adam 2023-08-01]
 	Updated security/py-pip-audit to 2.6.1 [adam 2023-08-01]
+	Updated net/dbip-asn-lite to 2023.08 [fcambus 2023-08-01]
