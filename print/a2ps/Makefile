@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2023/06/26 16:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2023/08/01 23:20:51 wiz Exp $
 
 DISTNAME=		a2ps-4.15.5
 CATEGORIES=		print
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
 
 INFO_FILES=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CFLAGS.Darwin+=		-flat_namespace
 

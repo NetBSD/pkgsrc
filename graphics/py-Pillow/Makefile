@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/07/05 20:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/01 23:20:43 wiz Exp $
 
 DISTNAME=	Pillow-10.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYSETUPBUILDTARGET=	build_ext
 PYSETUPBUILDARGS+=	--disable-xcb

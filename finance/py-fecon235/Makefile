@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/01 08:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:42 wiz Exp $
 
 GITHUB_PROJECT=	fecon235
 GITHUB_TAG=	v5.17.0722
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-sympy-[0-9]*:../../math/py-sympy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 NO_BUILD=		yes
 PY_PATCHPLIST=		yes

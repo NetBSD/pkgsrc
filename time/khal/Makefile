@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/06/16 21:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/08/01 23:20:54 wiz Exp $
 
 DISTNAME=	khal-0.11.2
 CATEGORIES=	time net python
@@ -32,7 +32,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 

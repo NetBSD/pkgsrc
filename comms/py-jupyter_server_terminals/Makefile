@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 10:20:30 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:39 wiz Exp $
 
 DISTNAME=	jupyter_server_terminals-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
