@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/06/06 12:41:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.31 2023/08/01 23:20:51 wiz Exp $
 
 DISTNAME=		todoman-4.0.0
 PKGREVISION=		2
@@ -39,7 +39,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		bin/todo
 USE_LANGUAGES=			# none
 

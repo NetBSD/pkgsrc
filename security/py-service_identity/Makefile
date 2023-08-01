@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/01 12:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	service_identity-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # needs 'make install'
 do-test:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 08:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:53 wiz Exp $
 
 DISTNAME=	markdown-it-py-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-mdurl>=0.1:../../www/py-mdurl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

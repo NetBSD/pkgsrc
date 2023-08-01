@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/07/18 04:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	ansible-core-2.15.2
 CATEGORIES=	sysutils python
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310

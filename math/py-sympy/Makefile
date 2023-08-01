@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/05/11 09:38:04 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/08/01 23:20:49 wiz Exp $
 
 DISTNAME=	sympy-1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/07/20 11:59:27 nia Exp $
+# $NetBSD: Makefile,v 1.51 2023/08/01 23:20:45 wiz Exp $
 
 DISTNAME=	gr-osmosdr-0.2.4
 PKGREVISION=	3
@@ -30,7 +30,7 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
 USE_CXX_FEATURES+=	filesystem
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include "../../audio/libsndfile/buildlink3.mk"

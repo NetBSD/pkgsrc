@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/19 12:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	pspdfutils-3.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 
 INSTALLATION_DIRS+=	${PKGMANDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 

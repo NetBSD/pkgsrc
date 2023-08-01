@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/07/03 19:10:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/01 23:20:49 wiz Exp $
 
 DISTNAME=	scikit-image-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 # no python 3.11 support as of 0.19.3
 # https://github.com/scikit-image/scikit-image/issues/6598
 PYTHON_VERSIONS_INCOMPATIBLE+=	311

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/06/06 18:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.92 2023/08/01 23:20:40 wiz Exp $
 
 DISTNAME=	ipython-8.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310

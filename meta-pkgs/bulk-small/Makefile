@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/07/01 14:19:45 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/01 23:20:50 wiz Exp $
 
 DISTNAME=	bulk-small-20230601
 CATEGORIES=	meta-pkgs
@@ -14,7 +14,7 @@ RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 #
 # Note: The purpose of this package is to produce a small set of the

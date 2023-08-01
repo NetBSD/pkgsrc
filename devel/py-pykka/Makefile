@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/10 20:03:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:41 wiz Exp $
 
 DISTNAME=	pykka-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV=	PYTHONPATH=${WRKSRC}/build/lib
 

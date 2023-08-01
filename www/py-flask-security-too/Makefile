@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/01 23:20:55 wiz Exp $
 
 DISTNAME=	Flask-Security-Too-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-wtforms>=3.0.0:../../www/py-wtforms
 
 USE_LANGUAGES=	# empty
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

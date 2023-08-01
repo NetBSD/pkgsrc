@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/07/30 08:04:51 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	ansible-compat-4.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310

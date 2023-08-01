@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/06/06 12:42:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.44 2023/08/01 23:20:53 wiz Exp $
 
 DISTNAME=	borgbackup-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
 # DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 

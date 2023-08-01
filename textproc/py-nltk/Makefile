@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/07/01 08:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/01 23:20:53 wiz Exp $
 
 DISTNAME=	nltk-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -55,7 +55,7 @@ REPLACE_PYTHON=		nltk/corpus/reader/knbc.py
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-extract:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} g-w,o-w {} +
