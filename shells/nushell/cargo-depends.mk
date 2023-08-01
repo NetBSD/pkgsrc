@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2023/07/26 19:36:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2023/08/01 08:04:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
@@ -481,7 +481,7 @@ CARGO_CRATE_DEPENDS+=	toml_edit-0.19.12
 CARGO_CRATE_DEPENDS+=	tower-service-0.3.2
 CARGO_CRATE_DEPENDS+=	tracing-0.1.37
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.31
-CARGO_CRATE_DEPENDS+=	trash-3.0.5
+CARGO_CRATE_DEPENDS+=	trash-3.0.6
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.4
 CARGO_CRATE_DEPENDS+=	typed-arena-1.7.0
 CARGO_CRATE_DEPENDS+=	typenum-1.16.0
