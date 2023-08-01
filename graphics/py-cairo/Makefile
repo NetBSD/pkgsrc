@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/07/20 13:41:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2023/08/01 23:20:44 wiz Exp $
 
 DISTNAME=	pycairo-1.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,7 +14,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
 PY_PATCHPLIST=			yes
 

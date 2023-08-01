@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/06/13 18:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/01 23:20:50 wiz Exp $
 
 DISTNAME=	netbsd-www-1.11
 CATEGORIES=	meta-pkgs
@@ -27,7 +27,7 @@ USE_TOOLS+=	perl:run ps2pdf:run
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

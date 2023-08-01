@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/02 16:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/01 23:20:56 wiz Exp $
 
 DISTNAME=	sigal-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-pilkit-[0-9]*:../../graphics/py-pilkit
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 

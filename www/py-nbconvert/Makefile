@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/05/05 09:14:44 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/01 23:20:55 wiz Exp $
 
 DISTNAME=	nbconvert-7.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,7 +37,7 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 REPLACE_PYTHON+=	nbconvert/nbconvertapp.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310

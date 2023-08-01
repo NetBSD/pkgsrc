@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/06/13 18:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/08/01 23:20:51 wiz Exp $
 
 DISTNAME=	psutils-3.0.3
 CATEGORIES=	print
@@ -12,7 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

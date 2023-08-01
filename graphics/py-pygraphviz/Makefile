@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/06/16 16:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/01 23:20:44 wiz Exp $
 
 DISTNAME=	pygraphviz-1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"

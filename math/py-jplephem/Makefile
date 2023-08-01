@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/01 08:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/01 23:20:46 wiz Exp $
 
 DISTNAME=	jplephem-2.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"

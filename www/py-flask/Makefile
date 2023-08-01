@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/05/05 15:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/01 23:20:55 wiz Exp $
 
 DISTNAME=	Flask-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.3.3:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 

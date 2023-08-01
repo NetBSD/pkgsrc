@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/01 08:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/01 23:20:44 wiz Exp $
 
 DISTNAME=	seaborn-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests

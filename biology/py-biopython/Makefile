@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/07/01 08:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/08/01 23:20:38 wiz Exp $
 
 DISTNAME=	biopython-1.79
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	share/doc/biopython-${PYVERSSUFFIX} share/examples/biopython-${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${PREFIX}/share/doc/biopython-${PYVERSSUFFIX}

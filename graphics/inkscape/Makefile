@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2023/07/18 18:19:23 nia Exp $
+# $NetBSD: Makefile,v 1.269 2023/08/01 23:20:43 wiz Exp $
 
 DISTNAME=	inkscape-1.2.2
 PKGREVISION=	3
@@ -38,7 +38,7 @@ REPLACE_PERL+=		share/templates/create_defaults.pl
 
 UNLIMIT_RESOURCES=	datasize
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 SUBST_CLASSES+=		pypath
 SUBST_STAGE.pypath=	pre-configure

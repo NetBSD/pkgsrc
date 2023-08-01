@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 11:01:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:56 wiz Exp $
 
 DISTNAME=	notebook_shim-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
