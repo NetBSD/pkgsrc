@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/28 18:58:01 leot Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/01 23:20:39 wiz Exp $
 
 DISTNAME=	kb-manager-0.1.7
 EGGNAME=	${DISTNAME:S/-manager//}
@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
-# Not for 2.7. 3.7 would need py-attr that is currently not packaged
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+# Not for 2.7.
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 

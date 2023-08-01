@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/05/15 21:01:45 adam Exp $
+# $NetBSD: Makefile,v 1.91 2023/08/01 23:20:54 wiz Exp $
 
 DISTNAME=	Sphinx-7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -37,7 +37,7 @@ WHEEL_NAME?=	${DISTNAME:tl:C/-([^0-9])/_\1/g}
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/07/01 08:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2023/08/01 23:20:51 wiz Exp $
 
 DISTNAME=	pitivi-0.999
 PKGREVISION=	12
@@ -31,7 +31,7 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 
 REPLACE_PYTHON+=	bin/pitivi.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 PY_PATCHPLIST=			yes
 # Workaround for Python 3.8
 LDFLAGS+=			-lpython${PYVERSSUFFIX}

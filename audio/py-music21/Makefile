@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/06/26 23:33:33 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/01 23:20:37 wiz Exp $
 
 VERSION=	9.1.0
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -32,7 +32,7 @@ USE_LANGUAGES=	# none
 
 # Only the latest two major versions of released Python are supported,
 # per policy on feature use.
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 # NB lilypond must be installed in order to run the full test suite.
 do-test:

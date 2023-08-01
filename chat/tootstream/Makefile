@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/07/01 08:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/01 23:20:38 wiz Exp $
 
 DISTNAME=	tootstream-0.3.8.1
 PKGREVISION=	4
@@ -24,7 +24,7 @@ USE_PKG_RESOURCES=	yes
 
 # strange locale errors on earlier versions of python 3, related
 # to py-click.
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

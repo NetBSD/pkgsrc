@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 10:59:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:55 wiz Exp $
 
 DISTNAME=	nbclassic-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 .for bin in jupyter-nbclassic jupyter-nbclassic-bundlerextension \

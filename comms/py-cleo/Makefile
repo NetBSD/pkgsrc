@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/01 08:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:39 wiz Exp $
 
 DISTNAME=	cleo-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-rapidfuzz>=2.2.0:../../textproc/py-rapidfuzz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
