@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4694 2023/08/01 11:17:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4695 2023/08/01 12:15:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6603,3 +6603,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/starship to 1.16.0 [pin 2023-08-01]
 	Updated sysutils/coreutils to 9.3 [adam 2023-08-01]
 	Updated devel/blosc2 to 2.10.1 [adam 2023-08-01]
+	Updated www/php-nextcloud to 26.0.4 [ryoon 2023-08-01]
