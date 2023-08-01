@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4698 2023/08/01 21:18:54 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.4699 2023/08/01 21:20:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6611,3 +6611,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-uwsgi to 2.0.22 [adam 2023-08-01]
 	Updated security/py-pip-audit to 2.6.1 [adam 2023-08-01]
 	Updated net/dbip-asn-lite to 2023.08 [fcambus 2023-08-01]
+	Updated net/dbip-city-lite to 2023.08 [fcambus 2023-08-01]
