@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/01/25 13:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/01 12:10:32 adam Exp $
 
-DISTNAME=	cytoolz-0.12.1
+DISTNAME=	cytoolz-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cytoolz/}
