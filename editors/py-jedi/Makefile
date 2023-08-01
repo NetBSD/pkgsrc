@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/04/21 10:34:25 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/01 12:17:41 adam Exp $
 
-DISTNAME=	jedi-0.18.2
+DISTNAME=	jedi-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jedi/}
@@ -12,15 +12,16 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar
 
-DEPENDS+=	${PYPKGPREFIX}-parso>=0.8.0:../../lang/py-parso
+DEPENDS+=	${PYPKGPREFIX}-parso>=0.8.3:../../lang/py-parso
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+TEST_DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 TEST_DEPENDS+=	${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-parso
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
