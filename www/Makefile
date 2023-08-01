@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1730 2023/07/13 20:43:20 pin Exp $
+# $NetBSD: Makefile,v 1.1731 2023/08/01 08:07:37 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -199,7 +199,6 @@ SUBDIR+=	kimagemapeditor
 SUBDIR+=	kjs
 SUBDIR+=	kjsembed
 SUBDIR+=	kore
-SUBDIR+=	lariza
 SUBDIR+=	lhs
 SUBDIR+=	libcurl-gnutls
 SUBDIR+=	libecap
