@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/07/03 20:42:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/01 23:20:50 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -14,7 +14,7 @@ COMMENT=	Install complete tryton client/server platform
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/06/26 16:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	ansible-lint-6.17.2
 CATEGORIES=	sysutils python
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-yamllint>=1.30.0:../../textproc/py-yamllint
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38 # ansible
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # ansible
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

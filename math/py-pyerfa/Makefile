@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/01 08:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/01 23:20:48 wiz Exp $
 
 DISTNAME=	pyerfa-2.0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ MAKE_ENV+=	PYERFA_USE_SYSTEM_LIBERFA=1
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

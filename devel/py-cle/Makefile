@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/11 07:19:09 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/01 23:20:40 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-minidump-[0-9]*:../../devel/py-minidump
 DEPENDS+=	${PYPKGPREFIX}-xbe>=0.0.2:../../devel/py-xbe
 TEST_DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover

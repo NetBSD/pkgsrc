@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/01 08:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:44 wiz Exp $
 
 DISTNAME=	contourpy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++11
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests

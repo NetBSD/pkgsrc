@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/28 08:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/01 23:20:52 wiz Exp $
 
 DISTNAME=	keyring-24.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 

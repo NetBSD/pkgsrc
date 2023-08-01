@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/07/01 08:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/01 23:20:43 wiz Exp $
 
 DISTNAME=	obspy-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ USE_TOOLS+=	bash:run
 
 REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

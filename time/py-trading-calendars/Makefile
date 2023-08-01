@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/07/01 08:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:55 wiz Exp $
 
 DISTNAME=	trading_calendars-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

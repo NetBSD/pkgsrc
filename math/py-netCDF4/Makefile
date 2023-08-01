@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/07/01 08:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/01 23:20:47 wiz Exp $
 
 DISTNAME=	netCDF4-1.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE+=	27 38
 
 USE_PKG_RESOURCES=	yes
 
