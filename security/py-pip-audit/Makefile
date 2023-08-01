@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/07/19 13:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/01 12:36:49 adam Exp $
 
-DISTNAME=	pip_audit-2.6.0
+DISTNAME=	pip_audit-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 # pypi file does not include tests
