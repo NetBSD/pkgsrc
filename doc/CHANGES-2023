@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4691 2023/08/01 08:03:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4692 2023/08/01 08:04:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6599,3 +6599,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numpy to 1.25.2 [adam 2023-07-31]
 	Updated textproc/py-markups to 4.0.0 [gutteridge 2023-07-31]
 	Updated textproc/csvlens to 0.3.0 [pin 2023-08-01]
+	Updated shells/nushell to 0.83.1 [pin 2023-08-01]
