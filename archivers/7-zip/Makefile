@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/30 07:55:48 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/02 16:00:49 nia Exp $
 
 DISTNAME=	7z2301-src
 PKGNAME=	7-zip-23.01
@@ -37,6 +37,7 @@ SUBST_STAGE.crlf=	post-extract
 SUBST_FILES.crlf=	CPP/7zip/Common/*
 SUBST_FILES.crlf+=	CPP/7zip/UI/Common/*
 SUBST_FILES.crlf+=	CPP/Windows/*
+SUBST_FILES.crlf+=	C/*
 SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
 
 do-install:
