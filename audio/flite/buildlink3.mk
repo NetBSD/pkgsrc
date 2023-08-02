@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/07/22 09:32:28 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/02 16:24:28 nia Exp $
 
 BUILDLINK_TREE+=	flite
 
@@ -7,6 +7,7 @@ FLITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flite+=	flite>=1.3nb3
 BUILDLINK_PKGSRCDIR.flite?=	../../audio/flite
+BUILDLINK_DEPMETHOD.flite?=	build
 
 .include "../../mk/bsd.fast.prefs.mk"
 
