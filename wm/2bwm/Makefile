@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/11 05:37:06 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/02 16:17:19 nia Exp $
 
 DISTNAME=	2bwm-0.3
 CATEGORIES=	wm
@@ -11,7 +11,7 @@ COMMENT=	Fast floating WM written over the XCB library and derived from mcwm
 LICENSE=	isc
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
