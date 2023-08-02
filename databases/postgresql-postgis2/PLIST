@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2023/05/31 13:30:12 gdt Exp $
+@comment $NetBSD: PLIST,v 1.34 2023/08/02 01:00:46 gdt Exp $
 bin/pgsql2shp
 bin/pgtopo_export
 bin/pgtopo_import
@@ -119,6 +119,7 @@ share/postgresql/extension/address_standardizer--3.2.5--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/address_standardizer--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/address_standardizer--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer--${PKGVERSION}next--${PKGVERSION}.sql
@@ -213,6 +214,7 @@ share/postgresql/extension/address_standardizer_data_us--3.2.5--${PKGVERSION}.sq
 share/postgresql/extension/address_standardizer_data_us--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer_data_us--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer_data_us--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/address_standardizer_data_us--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}.sql
 share/postgresql/extension/address_standardizer_data_us--${PKGVERSION}next--${PKGVERSION}.sql
@@ -307,6 +309,7 @@ share/postgresql/extension/postgis--3.2.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis--${PKGVERSION}.sql
 share/postgresql/extension/postgis--${PKGVERSION}next--${PKGVERSION}.sql
@@ -403,6 +406,7 @@ share/postgresql/extension/postgis_raster--3.2.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_raster--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}.sql
 share/postgresql/extension/postgis_raster--${PKGVERSION}next--${PKGVERSION}.sql
@@ -499,6 +503,7 @@ share/postgresql/extension/postgis_tiger_geocoder--3.2.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_tiger_geocoder--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}.sql
 share/postgresql/extension/postgis_tiger_geocoder--${PKGVERSION}next--${PKGVERSION}.sql
@@ -594,6 +599,7 @@ share/postgresql/extension/postgis_topology--3.2.5--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.3.0--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.3.1--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--3.3.2--${PKGVERSION}.sql
+share/postgresql/extension/postgis_topology--3.3.3--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}--${PKGVERSION}next.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}.sql
 share/postgresql/extension/postgis_topology--${PKGVERSION}next--${PKGVERSION}.sql
