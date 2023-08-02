@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2023/03/15 20:22:51 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.2 2023/08/02 11:54:19 schmonz Exp $
 
 GO_MODULE_FILES+=	github.com/blang/semver/@v/v3.5.1+incompatible.mod
 GO_MODULE_FILES+=	github.com/blang/semver/@v/v3.5.1+incompatible.zip
@@ -38,8 +38,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.1.4.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.1.4.zip
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20170726083632-f5079bd7f6f7.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20170726083632-f5079bd7f6f7.zip
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20170803140359-d8f5ea21b929.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20170803140359-d8f5ea21b929.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201202213521-69691e467435.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201202213521-69691e467435.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.0.0-20170730040918-3bd178b88a81.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.0.0-20170730040918-3bd178b88a81.zip
 GO_MODULE_FILES+=	gopkg.in/yaml.v2/@v/v2.0.0-20170721122051-25c4ec802a7d.mod
