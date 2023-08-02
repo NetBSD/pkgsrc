@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/01/29 21:16:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2023/08/02 19:21:54 nia Exp $
 
 DISTNAME=	novel-pinyin-0.2.5
 PKGREVISION=	40
@@ -11,12 +11,15 @@ COMMENT=	HMM-based sentence pinyin input method for Chinese
 LICENSE=	gnu-gpl-v2
 
 BDB_ACCEPTED=		db4 db5
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		intltool pkg-config msgfmt msgmerge xgettext
 GNU_CONFIGURE=		yes
 
 USE_SCIM_GTKUTILS=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../devel/gettext-lib/buildlink3.mk"

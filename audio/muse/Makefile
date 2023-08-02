@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/05/06 19:09:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2023/08/02 19:20:17 nia Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -14,7 +14,7 @@ COMMENT=	Multiple Streaming Engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
@@ -24,6 +24,9 @@ CONFIGURE_ARGS+=	--enable-gtk2
 LIBS+=			${LIBOSSAUDIO}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_FLAGS+=		docsdir=${PREFIX:Q}/share/doc/MuSE
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 LIBS.SunOS+=		-lsocket -lnsl
 

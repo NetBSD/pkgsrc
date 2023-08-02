@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/04/30 19:32:30 nikita Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/02 19:21:54 nia Exp $
 #
 
 DISTNAME=	gambit-${GAMBC_DIST_VERSION:S,.,_,}
@@ -17,7 +17,7 @@ LICENSE=	apache-2.0 AND gnu-lgpl-v2.1
 CONFLICTS+=	scheme48>=1.2
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-single-host
@@ -36,6 +36,9 @@ BUILD_TARGET+=		bootstrap
 TEST_TARGET=		check
 
 WRKSRC=			${WRKDIR}/gambit-${PKGVERSION_NOREV}
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 CHECK_PORTABILITY_SKIP=		prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/18 00:06:21 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/02 19:21:55 nia Exp $
 #
 
 DISTNAME=		mapm-4.9.5a
@@ -13,7 +13,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-/_/}
 
 DOCS=	README algorithms.used function.ref article.pdf
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 INSTALLATION_DIRS=	bin include lib share/doc/mapm
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/05/06 19:09:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2023/08/02 19:20:17 nia Exp $
 
 DISTNAME=	terminatorX-4.0.1
 PKGNAME=	${DISTNAME:S/X/x/1}
@@ -16,10 +16,13 @@ DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-gtktest
 CONFIGURE_ARGS+=	--disable-scheduler
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 .include "../../mk/oss.buildlink3.mk"
 

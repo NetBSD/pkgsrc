@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/06/28 11:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/08/02 19:21:57 nia Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -17,13 +17,16 @@ COMMENT=	Japanese enhancement of GNU groff
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake perl:run yacc
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 #CONFIGURE_ENV+=	CXXFLAGS="-fno-rtti -fno-exceptions -O"
 MAKE_FLAGS+=		manroot=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
 			datadir=${DESTDIR}${PREFIX}/share
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 REPLACE_PERL=	grog/grog.pl
 REPLACE_PERL+=	afmtodit/afmtodit.pl
