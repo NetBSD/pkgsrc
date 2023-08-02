@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2023/01/24 18:36:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2023/08/02 22:19:22 tnn Exp $
 # used by math/blas/Makefile
 # used by math/cblas/Makefile
 # used by math/lapacke/Makefile
@@ -50,6 +50,8 @@ CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
 		-DBUILD_STATIC_LIBS=ON \
 		-DCMAKE_INSTALL_INCLUDEDIR=${PREFIX}/include/${HEADERDIR} \
 		${LAPACK_COMPONENT_CMAKE_ARGS}
+
+FFLAGS+=	-fPIC
 
 # The cmake files are not ready for prime time.
 post-install:
