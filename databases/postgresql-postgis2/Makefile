@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.130 2023/06/06 12:40:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.131 2023/08/02 01:00:46 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
 MAJOR=		3.3
-DISTNAME=	postgis-${MAJOR}.3
+DISTNAME=	postgis-${MAJOR}.4
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	databases geography
