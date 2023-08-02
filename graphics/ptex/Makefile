@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/03 20:17:57 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/02 19:27:31 nia Exp $
 
 DISTNAME=	ptex-2.1.28
 CATEGORIES=	graphics
@@ -13,11 +13,12 @@ LICENSE=	modified-bsd # with slightly changes spelling
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-BUILDLINK_TRANSFORM+=	opt:-std=c++98:-std=gnu++98 # alloca(3)
-
 TEST_TARGET=	test
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src/ptex/
+
+# Uses alloca, cannot use standard C++ on NetBSD.
+FORCE_CXX_STD=	gnu++03
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
