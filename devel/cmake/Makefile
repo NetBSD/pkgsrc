@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2023/07/26 10:54:51 adam Exp $
+# $NetBSD: Makefile,v 1.210 2023/08/02 15:25:21 adam Exp $
 
 .include "Makefile.common"
 
@@ -54,6 +54,16 @@ SUBST_MESSAGE.cmake=	Fixing LOCALBASE and X11 paths.
 SUBST_FILES.cmake+=	Modules/FindX11.cmake
 SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
 SUBST_VARS.cmake=	LOCALBASE X11BASE
+
+# Use custom shell for Makefiles. For most platforms this is a no-op.
+# On Darwin, system /bin/sh is restricted, so DYLD_LIBRARY_PATH can't be used.
+# This is needed for packages that execute binaries linked with not-yet
+# installed shared libraries, like qt6-qtbase.
+SUBST_CLASSES+=		shell
+SUBST_STAGE.shell=	pre-configure
+SUBST_MESSAGE.shell=	Set custom SHELL in generated Makefiles.
+SUBST_FILES.shell+=	Source/cmLocalUnixMakefileGenerator3.cxx
+SUBST_SED.shell=	-e 's,/bin/sh,${SH},g'
 
 pre-configure:
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cbegin.cxx ${WRKSRC}/Source/Checks/cm_cxx_cbegin.cxx
