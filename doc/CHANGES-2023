@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4711 2023/08/02 17:35:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4712 2023/08/02 18:22:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6627,3 +6627,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/openldap to 2.6.6 [adam 2023-08-02]
 	Updated finance/rex to 0.1.12 [pin 2023-08-02]
 	Updated x11/xterm to 384 [pin 2023-08-02]
+	Updated net/gping to 1.14.0 [pin 2023-08-02]
