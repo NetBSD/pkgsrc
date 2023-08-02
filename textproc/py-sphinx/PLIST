@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2023/05/04 09:42:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2023/08/02 07:16:15 adam Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -228,9 +228,15 @@ ${PYSITELIB}/sphinx/locale/da/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/de_DE/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/de_DE/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/de_DE/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/el/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/el/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/el/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/en_DE/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/en_DE/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/en_DE/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/en_FR/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/en_FR/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/en_FR/LC_MESSAGES/sphinx.po
@@ -246,6 +252,9 @@ ${PYSITELIB}/sphinx/locale/eo/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/es_CO/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/es_CO/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/es_CO/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/et/LC_MESSAGES/sphinx.po
@@ -291,6 +300,9 @@ ${PYSITELIB}/sphinx/locale/it/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/ka/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/ka/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/ka/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ko/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ko/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ko/LC_MESSAGES/sphinx.po
