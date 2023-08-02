@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4708 2023/08/02 14:32:59 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4709 2023/08/02 17:06:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6623,3 +6623,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/exercism to 3.2.0 [schmonz 2023-08-02]
 	Updated databases/p5-App-Sqitch to 1.4.0 [schmonz 2023-08-02]
 	Updated print/mupdf to 1.22.2nb1 [ryoon 2023-08-02]
+	Updated games/scummvm to 2.7.1 [adam 2023-08-02]
+	Updated databases/openldap to 2.6.6 [adam 2023-08-02]
