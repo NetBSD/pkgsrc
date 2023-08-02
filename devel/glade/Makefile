@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2023/07/09 14:17:53 nia Exp $
+# $NetBSD: Makefile,v 1.116 2023/08/02 16:17:16 nia Exp $
 
 DISTNAME=		glade-3.40.0
 PKGREVISION=		4
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_TOOLS+=		itstool msgfmt pkg-config
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=		c99
+FORCE_C_STD=		c99
 
 PKGCONFIG_OVERRIDE+=	data/gladeui-2.0.pc.in
 

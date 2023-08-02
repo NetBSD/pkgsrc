@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2023/07/06 12:06:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.187 2023/08/02 16:17:19 nia Exp $
 
 DISTNAME=	gtk+-3.24.38
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -14,11 +14,13 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	gettext-tools>=0.19.4nb1:../../devel/gettext-tools
 TOOL_DEPENDS+=	gtk-doc>=1.32:../../textproc/gtk-doc
 
-# "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash gdbus-codegen ggrep msgmerge perl pkg-config xgettext
 PTHREAD_AUTO_VARS=	yes
+
+# "error: 'for' loop initial declarations are only allowed in C99 mode"
+FORCE_C_STD=	c99
 
 MESON_ARGS+=	-Dgtk_doc=true
 MESON_ARGS+=	-Dman=true

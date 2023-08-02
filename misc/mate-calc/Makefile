@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/07/01 14:20:56 nia Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/02 16:17:17 nia Exp $
 
 PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -9,7 +9,7 @@ CATEGORIES=	misc
 COMMENT=	Calculator for MATE Desktop
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

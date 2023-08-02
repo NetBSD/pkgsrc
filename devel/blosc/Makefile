@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/05/16 15:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/02 16:17:16 nia Exp $
 
 DISTNAME=	blosc-1.21.4
 CATEGORIES=	devel
@@ -12,8 +12,7 @@ COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
-# error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/blosc
 # For Darwin
@@ -24,6 +23,9 @@ CMAKE_ARGS+=	-DPREFER_EXTERNAL_LZ4=ON
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_SNAPPY=ON
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_ZLIB=ON
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_ZSTD=ON
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD=	c99
 
 # Needed to use posix_memalign, see tests/test_common.h
 CFLAGS+=	-D_POSIX_C_SOURCE=200112

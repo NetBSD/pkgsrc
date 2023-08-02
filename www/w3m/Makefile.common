@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2023/07/01 14:04:32 nia Exp $
+# $NetBSD: Makefile.common,v 1.79 2023/08/02 16:17:19 nia Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -16,11 +16,13 @@ HOMEPAGE=	http://w3m.sourceforge.net/
 WRKSRC=		${WRKDIR}/w3m-${W3M_VERS:S/+/-/}
 
 GNU_CONFIGURE=		yes
-# error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake	# Needed for some combinations of options...
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	yes
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD=	c99
 
 W3M_VERS=	0.5.3+git20230121
 W3M_PKGVERS=	${W3M_VERS:S/+git/.0./}

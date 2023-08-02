@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/06 19:09:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/02 16:17:15 nia Exp $
 
 DISTNAME=	pt2-clone-1.49
 PKGREVISION=	3
@@ -14,8 +14,10 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 
+USE_LANGUAGES=	c c++
+
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=	c99 c++
+FORCE_C_STD=	c99
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
