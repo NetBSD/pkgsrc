@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.258 2023/07/29 17:55:47 nia Exp $
+# $NetBSD: gcc.mk,v 1.259 2023/08/02 15:58:07 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -226,7 +226,12 @@ GCC_REQD+=	5
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mfilesystem)
-GCC_REQD+=	8
+# GCC 7 supports filesystem under an experimental header, this is not
+# part of GCC 7 as shipped with NetBSD 9.
+#
+# GCC 8 supports filesystem with explicit linking to the libstdc++fs
+# library, which many packages do not do.
+GCC_REQD+=	10
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mparallelism_ts)
