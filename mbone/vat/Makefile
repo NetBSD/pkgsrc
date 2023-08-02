@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/29 21:17:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/08/02 19:21:56 nia Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -17,13 +17,16 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${PREFIX:Q} --with-tk=${PREFIX:Q}
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 
 CPPFLAGS+=		-I${LOCALBASE}/include -I${LOCALBASE}/include/gsm
 
 INSTALL_TARGET=		install install-man
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

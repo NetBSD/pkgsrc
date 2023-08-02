@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/07/17 22:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.69 2023/08/02 19:20:18 nia Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -14,11 +14,14 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE:Q}
 LIBS+=			${LDFLAGS}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 REPLACE_PERL=		misc/cimextracthistory.pl
 REPLACE_PERL+=		misc/cimconv

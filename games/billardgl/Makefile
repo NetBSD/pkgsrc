@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/08/11 05:08:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/02 19:21:51 nia Exp $
 #
 
 DISTNAME=	BillardGL-1.75
@@ -12,10 +12,13 @@ MAINTAINER=	wojtek@3miasto.net
 COMMENT=	3D Billard using OpenGL hardware acceleration
 
 BUILD_DIRS=	src
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake imake pax
 MAKE_ENV+=	PAX=${PAX:Q}
 LDFLAGS+=	${X11_LDFLAGS}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 SUBST_CLASSES+=			billardgl
 SUBST_STAGE.billardgl=		do-configure

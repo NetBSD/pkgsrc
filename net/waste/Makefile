@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/07/18 00:06:23 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/02 19:21:57 nia Exp $
 #
 
 DISTNAME=	waste-source
@@ -24,7 +24,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 LDFLAGS.DragonFly+=	-lmd
 

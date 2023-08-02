@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:16:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/02 19:21:54 nia Exp $
 #
 
 DISTNAME=	mandelbulber1.13-1
@@ -13,10 +13,13 @@ COMMENT=	3D fractal explorer
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake pax pkg-config
-USE_LANGUAGES=	c++03
+USE_LANGUAGES=	c c++
 
 BUILD_DIRS=	makefiles
 MAKE_FILE=	makefile
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	pre-configure

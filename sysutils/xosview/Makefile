@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2021/12/03 13:06:57 micha Exp $
+# $NetBSD: Makefile,v 1.80 2023/08/02 19:21:57 nia Exp $
 
 DISTNAME=	xosview-1.23
 CATEGORIES=	sysutils x11
@@ -10,9 +10,12 @@ COMMENT=	X11 graphical display of OS statistics
 LICENSE=	gnu-gpl-v2 AND original-bsd
 
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c gnu++03
+USE_LANGUAGES=	c c++
 
 AUTO_MKDIRS=	yes
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	gnu++03
 
 .include "../../mk/bsd.prefs.mk"
 

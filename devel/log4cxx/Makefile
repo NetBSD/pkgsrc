@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 21:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/02 19:20:19 nia Exp $
 
 DISTNAME=	apache-log4cxx-0.10.0
 PKGNAME=	${DISTNAME:S/apache-//}
@@ -14,7 +14,10 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 # c for configure
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 CONFIGURE_ARGS+=	--disable-doxygen --disable-html-docs
 

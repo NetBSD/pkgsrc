@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/02 12:02:05 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/02 19:21:51 nia Exp $
 #
 
 DISTNAME=	fuse-sparsebundlefs-20160928
@@ -12,8 +12,11 @@ HOMEPAGE=	https://github.com/torarnv/sparsebundlefs
 COMMENT=	FUSE filesystem for reading Mac OS sparse-bundle disk images
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 INSTALLATION_DIRS=	bin
 

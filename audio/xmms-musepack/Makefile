@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/12/08 16:03:22 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/08/02 19:20:17 nia Exp $
 #
 
 DISTNAME=	xmms-musepack-1.1
@@ -12,10 +12,13 @@ HOMEPAGE=	https://www.musepack.net/
 COMMENT=	XMMS plugin for musepack (mpc) files
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../audio/libmusepack/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"

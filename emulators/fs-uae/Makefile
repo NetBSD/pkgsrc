@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/05/06 19:09:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/02 19:21:51 nia Exp $
 
 DISTNAME=	fs-uae-3.1.66
 PKGREVISION=	2
@@ -11,10 +11,13 @@ HOMEPAGE=	https://fs-uae.net/
 COMMENT=	Amiga emulator
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c gnu++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config zip
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libmpeg2
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		gnu++03
 
 .include "../../mk/bsd.prefs.mk"
 

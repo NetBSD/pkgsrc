@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/08/11 05:09:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2023/08/02 19:21:58 nia Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -10,11 +10,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.daionet.gr.jp/~masa/glclock/
 COMMENT=		OpenGL-based pocket watch
 
-USE_LANGUAGES=		c++03
+USE_LANGUAGES=		c c++
 
 MAKE_FILE=		makefile
 BUILD_TARGET=		glclock
 
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 .include "../../mk/bsd.prefs.mk"
 

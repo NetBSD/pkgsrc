@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/02 16:25:20 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/02 19:21:55 nia Exp $
 #
 
 VERSION=	6.45
@@ -17,9 +17,12 @@ PKG_SYSCONFSUBDIR?=	dnsbl-milter
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKG_SYSCONFSUBDIR}
 CONFIGURE_ARGS+=	ac_cv_path_BASH=${SH}
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=		c c++
 
 RCD_SCRIPTS=		dnsbl-milter
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure

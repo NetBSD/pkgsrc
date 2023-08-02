@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/02 19:20:20 nia Exp $
 #
 
 DISTNAME=		aliados-0.2.0
@@ -12,10 +12,13 @@ HOMEPAGE=		http://www.arrakis.es/~ninsesabe/aliados/
 COMMENT=		CP/M 80 emulator
 
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_NCURSES=		yes # tigetstr tparm setupterm
 
 INSTALLATION_DIRS=	bin share/doc/aliados
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aliados ${DESTDIR}${PREFIX}/bin

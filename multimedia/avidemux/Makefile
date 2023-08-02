@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2023/07/17 22:00:24 nia Exp $
+# $NetBSD: Makefile,v 1.138 2023/08/02 19:21:56 nia Exp $
 
 DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -13,13 +13,16 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_build
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 CMAKE_ARGS+=		-DNO_ARTS=1
 CMAKE_ARGS+=		-DUSE_SYSTEM_SPIDERMONKEY=1

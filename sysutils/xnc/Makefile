@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/01/03 17:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/02 19:21:57 nia Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -14,10 +14,13 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt
 GNU_CONFIGURE=	yes
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 # editor.cxx: In member function 'char Editor::trans(int, char)':
 # editor.cxx:624:15: error: array subscript has type 'char' [-Werror=char-subscripts]

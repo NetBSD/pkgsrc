@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/07/18 00:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2023/08/02 19:20:17 nia Exp $
 #
 
 DISTNAME=	xanalyser-1.32
@@ -11,8 +11,11 @@ HOMEPAGE=	http://arvin.schnell-web.net/xanalyser/
 COMMENT=	Frequency spectrum analyser for X
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

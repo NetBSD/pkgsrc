@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/07/18 00:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2023/08/02 19:21:51 nia Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
@@ -14,7 +14,10 @@ COMMENT=		Full color 320x200 arcade quality platform shooter
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LDFLAGS=${X11_LDFLAGS:Q}
 USE_TOOLS+=		gmake gtar
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 BROKEN_ON_PLATFORM=	NetBSD-*-arm32
 

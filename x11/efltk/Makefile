@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/01/29 21:15:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/02 19:21:58 nia Exp $
 #
 
 DISTNAME=	efltk-2.0.5
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2 # or later
 
 WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--disable-unixODBC
 CONFIGURE_ARGS+=	--disable-shared
 
 INSTALL_MAKE_FLAGS+=	INSTALL_PREFIX=${DESTDIR:Q}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 .include "options.mk"
 
