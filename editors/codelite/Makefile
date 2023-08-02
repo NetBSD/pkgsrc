@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/06/07 10:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/08/02 19:27:30 nia Exp $
 
 DISTNAME=	codelite-16.0
 PKGREVISION=	5
@@ -17,6 +17,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config bash
 
 CMAKE_ARGS+=		-DPREFIX:STRING=${PREFIX}
+
+# Uses alloca, cannot use standard C++ on NetBSD.
+FORCE_CXX_STD=		gnu++11
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,8 +68,6 @@ REPLACE_PYTHON+=	Runtime/codelite-remote
 REPLACE_PYTHON+=	codelite_open_helper.py
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
-
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--disable-new-dtags
 
