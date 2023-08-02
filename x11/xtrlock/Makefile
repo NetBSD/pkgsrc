@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/02 15:29:41 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/02 16:17:20 nia Exp $
 
 DISTNAME=	xtrlock-2.15
 PKGREVISION=	1
@@ -11,12 +11,11 @@ MAINTAINER=	vins@NetBSD.org
 COMMENT=	Simple X11 screen lock tool
 LICENSE=	gnu-gpl-v3
 
-# support 'for' loop initial declarations
-USE_LANGUAGES=	c99
 USE_IMAKE=	yes
 
 # mitigate CVE-2016-10894
-CFLAGS+=	-std=c99 -DMULTITOUCH
+CFLAGS+=	-DMULTITOUCH
+FORCE_C_STD=	c99
 LDFLAGS+=	-lXi
 
 .include "../../mk/bsd.prefs.mk"

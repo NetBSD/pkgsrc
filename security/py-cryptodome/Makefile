@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/05/21 17:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2023/08/02 16:17:18 nia Exp $
 
 DISTNAME=	pycryptodome-3.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -11,10 +11,10 @@ COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 # XXX is this needed?
-CFLAGS.SunOS+=	-std=c99 -D_XOPEN_SOURCE=600
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 CHECK_PORTABILITY_SKIP=	appveyor/get_wheels.sh
 
