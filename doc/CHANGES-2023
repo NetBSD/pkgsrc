@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4704 2023/08/02 07:16:39 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4705 2023/08/02 07:39:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6618,3 +6618,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-chardet to 5.2.0 [adam 2023-08-02]
 	Updated comms/py-rich to 13.5.2 [adam 2023-08-02]
 	Updated textproc/py-sphinx to 7.1.2 [adam 2023-08-02]
+	Updated security/py-cryptography to 41.0.3 [adam 2023-08-02]
+	Updated security/py-cryptography_vectors to 41.0.3 [adam 2023-08-02]
