@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/07/18 18:47:53 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/02 19:36:51 nia Exp $
 
 DISTNAME=		enchant-2.5.0
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
@@ -13,8 +13,7 @@ COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
 USE_TOOLS+=		autoconf groff pkg-config
-USE_LANGUAGES=		c c++11
-USE_CXX_FEATURES+=	c++11
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
@@ -23,6 +22,10 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 INSTALLATION_DIRS+=	share/examples
 MAKE_DIRS+=		${PREFIX}/share/enchant
 CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/enchant.ordering
+
+# Mostly needed due to hunspell headers making c++98 default unacceptable.
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 # unsupported in pkgsrc - other dictionaries can be used instead
 # avoid PLIST problems
