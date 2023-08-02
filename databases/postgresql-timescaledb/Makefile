@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/04/28 07:34:42 adam Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/02 06:38:30 adam Exp $
 
-DISTNAME=	timescaledb-2.10.3
+DISTNAME=	timescaledb-2.11.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
@@ -13,7 +13,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-USE_CMAKE=	yes
 CMAKE_ARGS+=	-DUSE_OPENSSL=ON
 CMAKE_ARGS+=	-DREGRESS_CHECKS=OFF
 
@@ -39,5 +38,6 @@ PLIST.tsl=		yes
 CMAKE_ARGS+=		-DAPACHE_ONLY=ON
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
