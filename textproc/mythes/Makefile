@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/02 19:36:51 nia Exp $
 
 DISTNAME=	mythes-1.2.4
 PKGREVISION=	3
@@ -17,6 +17,10 @@ USE_TOOLS+=	pkg-config perl:run
 GNU_CONFIGURE=	yes
 
 REPLACE_PERL=	th_gen_idx.pl
+
+# Mostly needed due to hunspell headers making c++98 default unacceptable.
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 PKGCONFIG_OVERRIDE=	mythes.pc.in
 
