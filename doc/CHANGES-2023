@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4705 2023/08/02 07:39:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4706 2023/08/02 11:54:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6620,3 +6620,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx to 7.1.2 [adam 2023-08-02]
 	Updated security/py-cryptography to 41.0.3 [adam 2023-08-02]
 	Updated security/py-cryptography_vectors to 41.0.3 [adam 2023-08-02]
+	Updated misc/exercism to 3.2.0 [schmonz 2023-08-02]
