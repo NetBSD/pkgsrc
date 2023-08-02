@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/07/02 19:49:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/08/02 17:33:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
@@ -6,7 +6,7 @@ CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	base64-0.13.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
-CARGO_CRATE_DEPENDS+=	bitflags-2.1.0
+CARGO_CRATE_DEPENDS+=	bitflags-2.3.3
 CARGO_CRATE_DEPENDS+=	bumpalo-3.11.0
 CARGO_CRATE_DEPENDS+=	bytes-1.2.1
 CARGO_CRATE_DEPENDS+=	cassowary-0.3.0

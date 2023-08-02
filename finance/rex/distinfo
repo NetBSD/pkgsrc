@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/07/02 19:49:21 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/08/02 17:33:50 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -18,9 +18,9 @@ Size (base64-0.13.0.crate) = 62070 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (bitflags-2.1.0.crate) = 50f5f72973766df276c34af1de54459950a19992f2593f08b4a0bf8128442f84
-SHA512 (bitflags-2.1.0.crate) = 25912118fc08125a3520d2aeaacc5d35f9876ff4bc23b551da6c9e23ad05fd1d6ecddf188f1343aebd1d3b4d7b24b3081af27e5c98a4ce6bcc8bda73d5370ea3
-Size (bitflags-2.1.0.crate) = 33325 bytes
+BLAKE2s (bitflags-2.3.3.crate) = 73a893533c2cbefba1dad7a80c0547660d9c04bcbf27bc5fa6234286412a3c95
+SHA512 (bitflags-2.3.3.crate) = 8f063ba2bc3f638ca9200722e1c4370102589fb07aef25efcf63993fbf283cc86d554d11d24719f728ecabe540a47a90ce4113d8719f8e773f2344a66d21ff78
+Size (bitflags-2.3.3.crate) = 34320 bytes
 BLAKE2s (bumpalo-3.11.0.crate) = 64eaa4f2ffceff89b4cdf8ccbffed33bc8a0e9b10e2aa6bf0cd51271105f4d54
 SHA512 (bumpalo-3.11.0.crate) = f747b5743bd2825c62c363ec49f1eccc492d7cf8cca8101aa9733f32489685c1777344dc6183f83c772f1067f9648b953d3ae1034976a14295f252f1ee7788fa
 Size (bumpalo-3.11.0.crate) = 80945 bytes
@@ -273,9 +273,9 @@ Size (remove_dir_all-0.5.3.crate) = 9184 bytes
 BLAKE2s (reqwest-0.11.12.crate) = 0c9187ab7c0892bfea454c613a6a54cb5fd369ec7341c178c4bcb5bf9fbd4e83
 SHA512 (reqwest-0.11.12.crate) = 7ce5e08b580beb3f514c913e3f931242cb6be27a3520285003d054e6ca2efd31eeb469aecd049569e46b7e12c6ee884f5cbcd9665c1e868a83d9bfa4c77e5d03
 Size (reqwest-0.11.12.crate) = 143820 bytes
-BLAKE2s (rex-0.1.11.tar.gz) = 7fdc5c8096325284e3f15d0beed9dac63e3550a3e92641c4ad5c286e65637cfa
-SHA512 (rex-0.1.11.tar.gz) = 48685b6d076f0056f645dbc0f7f503a3f4f747d2eb5666c2bdd731ea73cce99c485bcb2900fe3853ab357ea0a0d545e9266e79daf0d849ad0ba422f4329bba72
-Size (rex-0.1.11.tar.gz) = 80199 bytes
+BLAKE2s (rex-0.1.12.tar.gz) = 1dc754638130da76017e78b1f9a05c46c1207a94d5d550c919dad515045f18e0
+SHA512 (rex-0.1.12.tar.gz) = 4e8ab17046df5c8d6bb7e12568821c5f39e812b124b0d051917b093794ffe105ebb9db03c8bca7950da9bad780f930990afe374731bc707b6455dc1027dc4943
+Size (rex-0.1.12.tar.gz) = 1344458 bytes
 BLAKE2s (rusqlite-0.29.0.crate) = 479600ed01058ad787ba71774a71f9e972bbe89dc145ed4921973fc49018021c
 SHA512 (rusqlite-0.29.0.crate) = 63e5722f7391a335773d2fe554ebf285f388ecdce7279f767f9c3293bc776abedd15badfaa29c4abaa356707667ffda11dd14bf50fb4bae670df0e102283e055
 Size (rusqlite-0.29.0.crate) = 137156 bytes
