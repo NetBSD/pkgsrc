@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/12/05 08:35:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/08/02 06:45:12 adam Exp $
 bin/chardetect-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -11,6 +11,8 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/chardet/__init__.py
 ${PYSITELIB}/chardet/__init__.pyc
+${PYSITELIB}/chardet/__main__.py
+${PYSITELIB}/chardet/__main__.pyc
 ${PYSITELIB}/chardet/big5freq.py
 ${PYSITELIB}/chardet/big5freq.pyc
 ${PYSITELIB}/chardet/big5prober.py

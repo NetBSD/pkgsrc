@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2022/12/05 08:35:47 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/02 06:45:12 adam Exp $
 
-DISTNAME=	chardet-5.1.0
+DISTNAME=	chardet-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chardet/}
@@ -24,10 +24,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} chardetect chardetect-${PYVERSSUFFIX} || ${TRUE}
 
-# as of 5.0.0
-# 1 failed, 375 passed, 6 xfailed, 1 xpassed
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
