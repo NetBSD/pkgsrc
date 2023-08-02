@@ -1,4 +1,4 @@
-$NetBSD: patch-Makelists,v 1.1 2021/10/23 15:22:07 leot Exp $
+$NetBSD: patch-Makelists,v 1.2 2023/08/02 14:32:46 ryoon Exp $
 
 Avoid to unconditionally pass -DHAVE_* flags: this breaks lcms2 that
 gets recognized as lcms2mt.
@@ -14,12 +14,3 @@ gets recognized as lcms2mt.
  
  JPEGXR_BUILD_CFLAGS += -Wno-tautological-compare
  
-@@ -186,7 +186,7 @@ LIBJPEG_SRC += thirdparty/libjpeg/jutils
- # --- LCMS2 (multi-threaded fork) ---
- 
- LCMS2_CFLAGS += -Ithirdparty/lcms2/include
--LCMS2_CFLAGS += -DHAVE_LCMS2MT
-+#LCMS2_CFLAGS += -DHAVE_LCMS2MT
- 
- LCMS2_SRC += thirdparty/lcms2/src/cmsalpha.c
- LCMS2_SRC += thirdparty/lcms2/src/cmscam02.c
