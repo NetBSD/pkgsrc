@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2023/06/28 08:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2023/08/02 14:32:46 ryoon Exp $
 
 DISTNAME=	mupdf-1.22.2-source
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -28,7 +29,7 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .include "options.mk"
 
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
-post-extract:
+ppost-extract:
 	${RM} -fr \
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freeglut \
@@ -37,7 +38,6 @@ post-extract:
 	    ${WRKSRC}/thirdparty/harfbuzz \
 	    ${WRKSRC}/thirdparty/jbig2dec \
 	    ${WRKSRC}/thirdparty/leptonica \
-	    ${WRKSRC}/thirdparty/lcms2 \
 	    ${WRKSRC}/thirdparty/libjpeg \
 	    ${WRKSRC}/thirdparty/mujs \
 	    ${WRKSRC}/thirdparty/openjpeg \
