@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/01/29 21:15:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/02 19:20:17 nia Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -15,13 +15,16 @@ LICENSE=		gnu-gpl-v2
 # only runs correctly on little-endian machines
 BROKEN_EXCEPT_ON_PLATFORM=	${LITTLEENDIANPLATFORMS}
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:Q}
 CXXFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CXXFLAGS+=		-DFLTK_1_0_COMPAT
 CXXFLAGS.SunOS+=	-DSOUND_PCM_WRITE_CHANNELS=SNDCTL_DSP_CHANNELS
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 INSTALLATION_DIRS=	bin
 

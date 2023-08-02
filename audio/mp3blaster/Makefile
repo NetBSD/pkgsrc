@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/20 11:57:22 nia Exp $
+# $NetBSD: Makefile,v 1.44 2023/08/02 19:20:16 nia Exp $
 
 DISTNAME=	mp3blaster-3.2.6
 PKGREVISION=	1
@@ -13,10 +13,13 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=		splay-[0-9]*
 
 PTHREAD_OPTS+=	require
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 GNU_CONFIGURE=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 LIBS.SunOS+=		-lsocket -lnsl

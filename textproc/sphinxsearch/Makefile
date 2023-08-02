@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/08/09 12:08:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/02 19:21:57 nia Exp $
 #
 
 DISTNAME=	sphinx-2.2.11-release
@@ -13,10 +13,13 @@ COMMENT=	Sphinx Full-Text Search Engine
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 BUILD_DEFS+=	VARBASE
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../mk/bsd.prefs.mk"
 

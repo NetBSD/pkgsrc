@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/01/29 21:16:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2023/08/02 19:21:52 nia Exp $
 
 DISTNAME=	crimson-0.5.3
 PKGNAME=	${DISTNAME:S/crimson/crimsonfields/}
@@ -11,9 +11,12 @@ HOMEPAGE=	http://crimson.seul.org/
 COMMENT=	Tactical war game in the tradition of Battle Isle
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 CONFIGURE_ARGS+=	--enable-bi2cf
 CONFIGURE_ARGS+=	--enable-cf2bmp

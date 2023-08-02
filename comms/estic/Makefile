@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/08/10 18:01:41 he Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/02 19:20:18 nia Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	2
@@ -16,7 +16,7 @@ EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
 
 WRKSRC=		${WRKDIR}
 
-USE_LANGUAGES=	c gnu++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	patch unzip
 
 BUILD_TARGET=	depend all
@@ -24,6 +24,9 @@ ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
 MAKE_FILE=	make/freebsd-x.mak
 
 BUILD_DIRS=	${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	gnu++03
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"

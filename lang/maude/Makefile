@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:20 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/02 19:21:54 nia Exp $
 #
 
 DISTNAME=	Maude-2.6
@@ -16,9 +16,12 @@ MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/${PKGBASE}
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex bison
 TEST_TARGET=	check
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 post-install:
 	cd ${WRKSRC}/src/Main && ${INSTALL_DATA} *.maude \

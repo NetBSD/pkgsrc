@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/03/20 11:57:42 nia Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/02 19:21:52 nia Exp $
 #
 
 DISTNAME=		ivan-0.50
@@ -15,7 +15,10 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/share
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 REQD_DIRS+=		share/ivan
 OWN_DIRS_PERMS+=	share/ivan/Bones ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}

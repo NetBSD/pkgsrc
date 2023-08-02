@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:34:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/02 19:21:55 nia Exp $
 
 DISTNAME=	ppl-1.2
 PKGREVISION=	4
@@ -14,8 +14,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake gmake perl
 DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
-USE_LANGUAGES=	c gnu++03
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		gnu++03
 
 MAKE_ENV+=		lt_cv_path_SED=${PREFIX}/bin/gsed
 #CONFIGURE_ARGS+=	--enable-interfaces=c,cxx

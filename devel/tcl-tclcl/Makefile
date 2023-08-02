@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/01/29 21:14:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/02 19:20:19 nia Exp $
 
 DISTNAME=	tclcl-src-1.20
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -11,9 +11,12 @@ HOMEPAGE=	http://otcl-tclcl.sourceforge.net/tclcl/
 COMMENT=	Tcl/C++ interface used by ns and nam
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}

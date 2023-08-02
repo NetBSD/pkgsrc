@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/04/19 08:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/08/02 19:21:53 nia Exp $
 
 DISTNAME=	warmux-11.04.1
 PKGREVISION=	9
@@ -14,13 +14,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Battle game
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fribidi
 CONFIGURE_ARGS+=	--enable-servers
 WRKSRC=			${WRKDIR}/warmux-11.04
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 
