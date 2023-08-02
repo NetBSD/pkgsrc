@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/07/17 22:00:23 nia Exp $
+# $NetBSD: Makefile,v 1.57 2023/08/02 19:30:56 nia Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -11,12 +11,15 @@ HOMEPAGE=	http://gpsim.sourceforge.net/
 COMMENT=	PIC emulator with X interface
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bison gmake lex pkg-config
 USE_LIBTOOL=	YES
 
 CONFLICTS=	eXdbm-[0-9]* gpsim-[0-9]*
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../devel/popt/buildlink3.mk"
 # rl_callback_read_char, rl_copy_text,

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/28 11:35:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/02 19:30:57 nia Exp $
 
 DISTNAME=	sleuthkit-4.1.3
 PKGREVISION=	10
@@ -13,9 +13,12 @@ LICENSE=	cpl-1.0 AND gnu-gpl-v2
 DEPENDS+=	p5-DateTime-TimeZone>=0:../../time/p5-DateTime-TimeZone
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake file perl:run
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../devel/libewf/buildlink3.mk"
