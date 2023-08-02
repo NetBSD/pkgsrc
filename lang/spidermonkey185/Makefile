@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/06/28 11:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/02 19:30:57 nia Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -15,7 +15,7 @@ LICENSE=	mpl-1.1
 WRKSRC=		${WRKDIR}/js-1.8.5/js/src
 
 USE_TOOLS+=	gmake pkg-config perl:build zip:build
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=		yes
@@ -38,6 +38,9 @@ CHECK_PORTABILITY_SKIP+=	configure.in
 
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 PKGCONFIG_OVERRIDE+=	mozjs185.pc.in
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 .include "../../mk/bsd.prefs.mk"
 

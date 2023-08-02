@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/24 18:10:03 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/08/02 19:30:57 nia Exp $
 #
 
 DISTNAME=	powder118_src
@@ -11,8 +11,11 @@ HOMEPAGE=	http://www.zincland.com/powder/index.php?pagename=about
 COMMENT=	Multiplatform roguelike game with graphics
 LICENSE=	powder-license
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 INSTALLATION_DIRS=	bin share/doc/powder
 INSTALLATION_DIRS+=	share/applications
