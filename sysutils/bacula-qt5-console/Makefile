@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/05/22 21:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/02 19:35:46 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-qt5-console-/}
 PKGREVISION=	5
@@ -11,7 +11,8 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-client-only
 CONFIGURE_ARGS+=	--enable-bat
 
-BUILDLINK_TRANSFORM+=	opt:-std=c++98:-std=gnu++98 # typeof
+# Uses typeof, cannot use standard C++03
+FORCE_CXX_STD=		gnu++03
 
 BUILD_DIRS=		src/qt-console
 
