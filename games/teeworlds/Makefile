@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/07/09 22:21:52 nia Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/02 16:17:16 nia Exp $
 
 DISTNAME=	teeworlds-0.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -12,8 +12,7 @@ HOMEPAGE=	https://www.teeworlds.com/
 COMMENT=	Fast-paced retro multiplayer shooter
 LICENSE=	zlib AND 2-clause-bsd AND modified-bsd AND cc-by-sa-v3.0
 
-# error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=	c99 c++03
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
@@ -22,6 +21,12 @@ CMAKE_ARGS+=	-Wno-dev
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD=		c99
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications

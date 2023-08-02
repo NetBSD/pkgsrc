@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/07/31 18:36:01 adam Exp $
+# $NetBSD: Makefile,v 1.109 2023/08/02 16:17:17 nia Exp $
 
 DISTNAME=	numpy-1.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
+USE_LANGUAGES=		c c++ fortran
+
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=		c99 c++ fortran
+FORCE_C_STD=		c99
 
 USE_CXX_FEATURES+=	c++17
 

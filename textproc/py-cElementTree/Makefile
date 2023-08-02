@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/10/09 10:54:06 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/02 16:17:19 nia Exp $
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -8,7 +8,7 @@ HOMEPAGE=	https://www.effbot.org/zone/celementtree.htm
 COMMENT=	C implementation of Python ElementTree API
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 USE_GCC_RUNTIME=	yes
 
