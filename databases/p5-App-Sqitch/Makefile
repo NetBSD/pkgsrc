@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/07/06 09:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/02 12:06:16 schmonz Exp $
 
-DISTNAME=		App-Sqitch-v1.3.1
+DISTNAME=		App-Sqitch-v1.4.0
 PKGNAME=		p5-${DISTNAME:S/-v/-/}
-PKGREVISION=		1
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -15,7 +14,7 @@ DEPENDS+=		p5-Algorithm-Backoff>=0.006:../../devel/p5-Algorithm-Backoff
 DEPENDS+=		p5-Class-XSAccessor>=1.18:../../devel/p5-Class-XSAccessor
 DEPENDS+=		p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=		p5-Config-GitLike>=1.15:../../devel/p5-Config-GitLike
-DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
+DEPENDS+=		p5-DBI>=1.631:../../databases/p5-DBI
 DEPENDS+=		p5-DateTime>=1.04:../../time/p5-DateTime
 DEPENDS+=		p5-Devel-StackTrace>=1.30:../../devel/p5-Devel-StackTrace
 DEPENDS+=		p5-Encode-Locale-[0-9]*:../../textproc/p5-Encode-Locale
