@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/07/18 18:39:06 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/02 19:27:31 nia Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -20,11 +20,12 @@ USE_TOOLS+=		perl pkg-config
 
 USE_CXX_FEATURES+=	c++14
 
+# Uses alloca, cannot use standard C++ on NetBSD.
+FORCE_CXX_STD=		gnu++14
+
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DOPENMP_ENABLE_LIBOMPTARGET=OFF
 CMAKE_ARGS+=	-DOPENMP_ENABLE_OMPT_TOOLS=OFF
-
-BUILDLINK_TRANSFORM.NetBSD+=	opt:-std=c++14:-std=gnu++14 # alloca
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build

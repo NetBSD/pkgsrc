@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/06 19:09:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/02 19:27:31 nia Exp $
 
 PKGREVISION= 6
 .include "Makefile.common"
@@ -18,10 +18,10 @@ BUILD_DIRS=	platforms/bsd
 MAKE_FLAGS+=	CXX=${CXX}
 MAKE_FLAGS+=	GIT_VERSION="pkgsrc"
 
-.include "../../mk/bsd.prefs.mk"
+# Uses alloca, cannot use standard C++ on NetBSD.
+FORCE_CXX_STD=	gnu++11
 
-# alloca
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
+.include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS+=	bin share/applications share/pixmaps
 
