@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/04/19 08:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.72 2023/08/02 19:27:32 nia Exp $
 
 DISTNAME=	snownews-1.9
 PKGREVISION=	5
@@ -16,10 +16,12 @@ HAS_CONFIGURE=	yes
 FAKE_NCURSES=	yes
 USE_CURSES=	wide
 
+# PATH_MAX not visible with strict C11
+FORCE_C_STD=	gnu11
+
 LDFLAGS+=		${BUILDLINK_LDADD.curses}
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
-BUILDLINK_TRANSFORM+=	opt:-std=c11:-std=gnu11 # PATH_MAX not visible with strict C11
 
 USE_PKGLOCALEDIR=	yes
 

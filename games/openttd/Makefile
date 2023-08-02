@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2023/07/18 18:13:44 nia Exp $
+# $NetBSD: Makefile,v 1.115 2023/08/02 19:27:31 nia Exp $
 
 DISTNAME=	openttd-13.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -16,9 +16,12 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-USE_CXX_FEATURES+=	charconv
+USE_CXX_FEATURES+=	c++17 charconv
 
 BUILD_DEFS+=	VARBASE
+
+# Uses alloca, cannot use standard C++ on NetBSD
+FORCE_CXX_STD=		gnu++17
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,9 +35,6 @@ CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Allegro=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Grfcodec=ON
 CMAKE_ARGS+=	-DOPTION_INSTALL_FHS=ON
-
-BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17 # alloca
-BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z # alloca
 
 PLIST_VARS=	unix
 .if ${OPSYS} != "Darwin"

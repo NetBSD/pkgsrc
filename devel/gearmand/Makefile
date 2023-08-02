@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/04/23 14:26:08 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/08/02 19:27:30 nia Exp $
 
 DISTNAME=	gearmand-1.1.19.1
 PKGREVISION=	14
@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
+FORCE_CXX_STD=	gnu++11
+
 CONFIGURE_ARGS+=	--enable-jobserver=no
 CONFIGURE_ARGS+=	--disable-libdrizzle
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
@@ -27,8 +29,6 @@ CONFIGURE_ENV.SunOS+=	ax_cv_check_cxxflags__Werror__pie=no
 .include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	support/gearmand.pc.in
-
-BUILDLINK_TRANSFORM+=	opt:-std=c++0x:-std=gnu++0x
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2023/07/29 19:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2023/08/02 19:27:31 nia Exp $
 
 DISTNAME=	mame-0.257
 CATEGORIES=	emulators
@@ -25,6 +25,9 @@ USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize virtualsize
 MAKE_FILE=		makefile
 
+# Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
+FORCE_CXX_STD=		gnu++17
+
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_FLAGS+=		PRECOMPILE=0
@@ -38,9 +41,6 @@ MAKE_FLAGS+=		FORCE_DRC_C_BACKEND=1
 BUILDLINK_TRANSFORM+=	rm:-m32
 BUILDLINK_TRANSFORM+=	rm:-m64
 .endif
-
-# Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
-BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 
 # -Werror is problematic
 MAKE_ENV+=	NOWERROR=1

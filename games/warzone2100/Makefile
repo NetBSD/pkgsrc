@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/05/22 21:00:29 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/02 19:27:31 nia Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-4.3.5
@@ -20,6 +20,9 @@ USE_TOOLS+=	gmake pkg-config zip
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+# Needs gnu standard variant to get alloca builtin.
+FORCE_CXX_STD=	gnu++11
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,9 +48,6 @@ CFLAGS.Darwin+=		-fobjc-arc
 LDFLAGS.DragonFly+=	-lX11 -lintl
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
-
-# Needs gnu standard variant to get alloca builtin.
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11
 
 SUBST_CLASSES+=		rpath
 SUBST_MESSAGE.rpath=	Fixing linker arguments.
