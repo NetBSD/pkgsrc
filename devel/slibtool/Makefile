@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/16 19:17:02 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/02 16:30:56 nia Exp $
 
 DISTNAME=	slibtool-0.5.34
 CATEGORIES=	devel
@@ -14,5 +14,6 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 CFLAGS.SunOS+=	-D__EXTENSIONS__
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 .include "../../mk/bsd.pkg.mk"
