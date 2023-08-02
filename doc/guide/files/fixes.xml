@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.190 2023/07/26 22:41:02 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.191 2023/08/02 15:59:57 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1433,19 +1433,12 @@ MESON_ARGS+=	-Dx11=false
     the <varname>USE_LANGUAGES</varname> variable. Allowed values
     currently are:
 <programlisting>
-c99, c++, c++03, gnu++03, c++0x, gnu++0x, c++11, gnu++11,
-c++14, gnu++14, c++17, gnu++17, c++20, gnu++20, fortran,
-fortran77, java, objc, obj-c++, and ada.
+c, c++, fortran, fortran77, java, objc, obj-c++, and ada.
 </programlisting>
     (and any combination).  The default is
     <quote>c</quote>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
     phase.
-    Language variants like <literal>c++11</literal>
-    can be specified if the package does not explicitly set
-    <literal>-std=...</literal> when compiling (i.e. the package
-    assumes the compiler defaults to C++11 or some other standard).
-    This is a common bug in upstream build systems.</para>
 
     <para>To declare which features a package requies from the
     compiler, set either <varname>USE_CC_FEATURES</varname>
@@ -1461,6 +1454,28 @@ c++11, c++14, c++17, c++20, has_include, regex, filesystem,
 charconv, parallelism_ts, unique_ptr, put_time,
 is_trivially_copy_constructible
 </programlisting>
+    </para>
+
+    <para>Language variants like <literal>gnu99</literal> and
+    <literal>c++11</literal> can be specified in <varname>FORCE_C_STD</varname>
+    and <varname>FORCE_CXX_STD</varname> if the package does not explicitly set
+    <literal>-std=...</literal> when compiling (i.e. the package
+    assumes the compiler defaults to C++11 or some other standard).
+    This is a common bug in upstream build systems.</para>
+
+    <para>Allowed values for <varname>FORCE_C_STD</varname> are
+    currently:
+<programlisting>
+c90, c99, c11, gnu90, gnu99, gnu11
+</programlisting></para>
+    </para>
+
+    <para>Allowed values for <varname>USE_CXX_FEATURES</varname> are
+    currently:
+<programlisting>
+c++03, c++11, c++14, c++17, c++20,
+gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
+</programlisting></para>
     </para>
   </sect2>
 
