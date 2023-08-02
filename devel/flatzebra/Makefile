@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/02 19:30:56 nia Exp $
 
 DISTNAME=	flatzebra-0.1.7
 CATEGORIES=	devel
@@ -12,7 +12,10 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 CONFIGURE_ARGS+=	--disable-sdltest
 
