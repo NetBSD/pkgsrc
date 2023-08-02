@@ -1,4 +1,4 @@
-# $NetBSD: gcc-style-args.mk,v 1.2 2023/07/30 18:57:44 nia Exp $
+# $NetBSD: gcc-style-args.mk,v 1.3 2023/08/02 15:59:58 nia Exp $
 
 #
 # Some compilers (e.g. clang) share command line argument formats with GCC.
@@ -15,6 +15,38 @@ _CTF_CFLAGS=		-gdwarf-2
 # ready.
 _WRAP_EXTRA_ARGS.cc+=	-fcommon
 CWRAPPERS_PREPEND.cc+=	-fcommon
+
+
+#
+# Language dialects
+#
+
+_GCC_C_DIALECTS=	c89 c90 c99 c9x c11 c1x c17 c18 c2x
+
+_GCC_C_DIALECTS+=	gnu89 gnu90 gnu99 gnu9x gnu11 gnu1x gnu17 gnu18 \
+			gnu2x
+
+_GCC_CXX_DIALECTS=	c++98 c++03 c++0x c++11 c++1y c++14 \
+			c++1z c++17 c++2a c++20
+
+_GCC_CXX_DIALECTS+=	gnu++98 gnu++03 gnu++0x gnu++11 gnu++1y gnu++14 \
+			gnu++1z gnu++17 gnu++2a gnu++20
+
+.if !empty(FORCE_C_STD)
+.  for std in ${_GCC_C_DIALECTS}
+.    if !empty(FORCE_C_STD:M${std})
+CWRAPPERS_APPEND.cc+=	-std=${std}
+.    endif
+.  endfor
+.endif
+
+.if !empty(FORCE_CXX_STD)
+.  for std in ${_GCC_CXX_DIALECTS}
+.    if !empty(FORCE_CXX_STD:M${std})
+CWRAPPERS_APPEND.cxx+=	-std=${std}
+.    endif
+.  endfor
+.endif
 
 #
 # Hardening features

@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.106 2023/07/30 21:47:44 ryoon Exp $
+# $NetBSD: compiler.mk,v 1.107 2023/08/02 15:59:58 nia Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -83,6 +83,29 @@
 #	Valid values are: c++11, c++14, c++17, c++20, has_include,
 #	regex, filesystem, unique_ptr, charconv, parallelism_ts,
 #	put_time, is_trivially_copy_constructible.
+#
+# FORCE_C_STD
+#
+#	Overrides the compiler's default C dialect to ensure that a
+#	specific language variant is used.  This is useful if a package
+#	uses features from a later or earlier C standard but doesn't set
+#	-std=cXX, since the default dialect choice of different compiler
+#	versions is not consistent.  It is also useful if a package
+#	wants to use GNU language extensions without setting -std=gnuXX.
+#
+#	Valid values are: c90, c99, c11, gnu90, gnu99, gnu11
+#
+# FORCE_CXX_STD
+#
+#	Overrides the compiler's default C++ dialect to ensure that a
+#	specific language variant is used.  This is useful if a package
+#	uses features from a later or earlier C++ standard but doesn't set
+#	-std=c++XX, since the default dialect choice of different compiler
+#	versions is not consistent.  It is also useful if a package
+#	wants to use GNU language extensions without setting -std=gnu++XX.
+#
+#	Valid values are: c++03, c++11, c++14, c++17, c++20, gnu++03,
+#	gnu++11, gnu++17, gnu++20
 #
 # The following variables are defined, and available for testing in
 # package Makefiles:
