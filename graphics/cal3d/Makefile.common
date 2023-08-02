@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2021/01/30 08:57:02 mef Exp $
+# $NetBSD: Makefile.common,v 1.17 2023/08/02 19:21:53 nia Exp $
 #
 # used by graphics/cal3d/Makefile
 # used by graphics/cal3d-examples/Makefile
@@ -13,7 +13,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cal3d.sourceforge.net/
 COMMENT=	Skeletal based 3d character animation library in C++
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake
 GNU_CONFIGURE=		yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03

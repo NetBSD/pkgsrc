@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/01/29 21:17:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/02 19:21:58 nia Exp $
 
 DISTNAME=	icewm-1.3.8
 PKGREVISION=	9
@@ -15,8 +15,10 @@ CONFLICTS+=	icewm-imlib-[0-9]*
 FILESDIR=	${.CURDIR}/../../wm/icewm/files
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config
+
+FORCE_CXX_STD=	c++03
 
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar

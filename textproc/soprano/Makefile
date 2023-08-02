@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/04/23 14:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/08/02 19:21:57 nia Exp $
 
 DISTNAME=	soprano-2.9.4
 PKGREVISION=	41
@@ -11,11 +11,14 @@ HOMEPAGE=	http://soprano.sourceforge.net/
 COMMENT=	QT based RDF framework
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DSOPRANO_DISABLE_SESAME2_BACKEND:BOOL=ON
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 PKGCONFIG_OVERRIDE+=	soprano.pc.cmake
 

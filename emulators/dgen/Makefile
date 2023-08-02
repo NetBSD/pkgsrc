@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/06/13 10:29:48 nia Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/02 19:21:50 nia Exp $
 #
 
 DISTNAME=	dgen-sdl-1.33
@@ -20,9 +20,12 @@ TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+=	--without-cyclone
 .endif
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 BUILDLINK_TRANSFORM+=	rm:-mpentium
 BUILDLINK_TRANSFORM+=	rm:-march=pentium

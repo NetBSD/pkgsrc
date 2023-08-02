@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/01/03 17:36:42 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2023/08/02 19:20:16 nia Exp $
 
 DISTNAME=	dap-2.1.5
 PKGREVISION=	5
@@ -13,10 +13,13 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 INSTALLATION_DIRS+=	bin share/doc/dap
 MAKE_FILE=		Makefile.netbsd
 MAKE_ENV+=		OTHER_INCLUDE_DIR=.
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main/DAP ${DESTDIR}${PREFIX}/bin/dap

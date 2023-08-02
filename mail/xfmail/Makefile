@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/01/03 17:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/08/02 19:21:55 nia Exp $
 
 DISTNAME=		xfmail-1.5.5
 PKGREVISION=		9
@@ -13,11 +13,14 @@ COMMENT=		Xforms based mail application for Unix operating systems
 # A few files are.
 #LICENSE+=		mit-license
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		YES
 
 INSTALLATION_DIRS+=	share/doc/xfmail
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright ${DESTDIR}${PREFIX}/share/doc/xfmail

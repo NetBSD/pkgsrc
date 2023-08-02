@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/07/06 09:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/02 19:21:56 nia Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -17,7 +17,10 @@ RESTRICTED=		Under APSL (see http://www.opensource.apple.com/apsl/).
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 # 5.5.5 does this in StrPtrLen.cpp, function StrPtrLen::NumEqualIgnoreCase.
 # Fixed in 6.0.3

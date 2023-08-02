@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/01/09 05:01:18 sekiya Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/02 19:21:57 nia Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		7
@@ -11,10 +11,13 @@ COMMENT=		Hides data (steganography) in audio or graphics files
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

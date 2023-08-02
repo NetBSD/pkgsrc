@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/06/30 11:18:16 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/02 19:20:19 nia Exp $
 #
 
 DISTNAME=		ncc-2.8
@@ -13,7 +13,10 @@ COMMENT=		Compiler that produces program analysis information
 BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
