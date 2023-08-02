@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/06/06 12:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.56 2023/08/02 19:30:57 nia Exp $
 
 DISTNAME=		Sablot-1.0.2
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -14,9 +14,12 @@ TOOL_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/sablotron
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 # sablotron needs iconv but assumes it is in libc, so add what
 # buildlink3 finds.

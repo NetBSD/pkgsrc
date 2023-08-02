@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/03 19:28:49 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/02 19:30:57 nia Exp $
 
 DISTNAME=	xkobo-1.11
 PKGREVISION=	5
@@ -19,8 +19,11 @@ OWN_DIRS_PERMS+=	${VARBASE}/games/xkobo ${GAMES_USER} ${GAMES_GROUP} \
 MAKE_ENV+=	VARBASE=${VARBASE}
 
 USE_IMAKE=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 BUILD_TARGET+=	xkobo all
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
