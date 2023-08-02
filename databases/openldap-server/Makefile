@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/07/11 21:12:48 adam Exp $
+# $NetBSD: Makefile,v 1.70 2023/08/02 16:17:15 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Lightweight Directory Access Protocol server suite
@@ -8,7 +8,7 @@ CONFLICTS+=	openldap<2.3.23nb1
 DEPENDS+=	openldap-client>=2.3.27nb1:../../databases/openldap-client
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 CFLAGS.FreeBSD+=	-DMDB_DSYNC=O_SYNC
 CFLAGS.DragonFly+=	-DMDB_DSYNC=O_SYNC -DMDB_FDATASYNC=fsync

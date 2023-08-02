@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/01/29 09:20:23 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/02 16:17:16 nia Exp $
 
 DISTNAME=	libretro-cap32-20200508
 CATEGORIES=	emulators
@@ -11,7 +11,7 @@ COMMENT=	Libretro core based on the Caprice32 Amstrad CPC emulator
 LICENSE=	gnu-gpl-v2
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=	c99
+FORCE_C_STD=	c99
 
 LIBRETRO_CORE=	cap32
 

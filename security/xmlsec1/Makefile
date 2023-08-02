@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/07/19 14:55:06 nia Exp $
+# $NetBSD: Makefile,v 1.44 2023/08/02 16:17:18 nia Exp $
 #
 
 DISTNAME=		xmlsec1-1.2.33
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_LANGUAGES=		c99
+FORCE_C_STD=		c99
 
 PKGCONFIG_OVERRIDE+=	xmlsec-gcrypt.pc.in
 PKGCONFIG_OVERRIDE+=	xmlsec-gnutls.pc.in
