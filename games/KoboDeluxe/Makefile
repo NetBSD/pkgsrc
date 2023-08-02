@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:15 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/02 19:21:51 nia Exp $
 #
 
 DISTNAME=	KoboDeluxe-0.5.1
@@ -13,10 +13,13 @@ COMMENT=	Multi-way scrolling shoot 'em up game for X
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}/games
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/04/21 15:36:27 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/02 19:21:52 nia Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -22,7 +22,7 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 LDFLAGS.SunOS+=		-lsocket -lnsl
 LIBS.SunOS+=		-lsocket -lnsl
@@ -31,6 +31,8 @@ MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${BUILDLINK_PREFIX.libXpm}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
 MAKE_ENV+=		GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
 MAKE_ENV+=		VARBASE=${VARBASE}
+
+FORCE_CXX_STD=		c++03
 
 USE_GAMESGROUP=		yes
 SCOREDIR=		${VARBASE}/games

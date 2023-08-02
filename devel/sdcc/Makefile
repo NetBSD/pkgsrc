@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/06/28 11:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/08/02 19:20:19 nia Exp $
 
 DISTNAME=	sdcc-src-2.8.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -16,7 +16,7 @@ DEPENDS+=	gputils-[0-9]*:../../devel/gputils
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 
 # XXX - This HACK circumvent a problem with the use of yacc that breaks the
 # XXX - building process of sdcc.  Use of bison fixes this problem for now.
@@ -24,6 +24,9 @@ USE_LANGUAGES=	c c++03
 USE_TOOLS+=	bison
 
 BUILD_TARGET=	dep all
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 WRKSRC=			${WRKDIR}/sdcc/
 GNU_CONFIGURE=		YES

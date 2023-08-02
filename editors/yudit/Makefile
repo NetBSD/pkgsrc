@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/26 17:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2023/08/02 19:20:19 nia Exp $
 
 DISTNAME=	yudit-2.9.2
 CATEGORIES=	editors
@@ -12,10 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgmerge
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-x
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 BUILDLINK_DEPMETHOD.libXt=	build
 

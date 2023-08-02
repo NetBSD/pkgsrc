@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/04/19 08:09:09 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/08/02 19:20:17 nia Exp $
 #
 
 DISTNAME=		mpdas-0.4.5
@@ -12,7 +12,7 @@ COMMENT=		AudioScrobbler client for MPD written in C++
 LICENSE=		modified-bsd
 
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c++03
+USE_LANGUAGES=		c c++
 
 MAKE_FLAGS+=		MANPREFIX="${PREFIX}/${PKGMANDIR}/man1"
 
@@ -20,6 +20,9 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 RCD_SCRIPTS=		mpdas
 DOCDIR=			share/doc/mpdas
 EGDIR=			share/examples/mpdas
+
+# Fails with C++14 default language
+FORCE_CXX_STD=		c++03
 
 CONF_FILES+=		${EGDIR}/mpdasrc.example \
 				${PKG_SYSCONFDIR}/mpdasrc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/02 19:20:18 nia Exp $
 
 GCC_DIST_VERSION=	4.9.2
 GCC_PKGNAME=		gcc-mips-${GCC_DIST_VERSION}
@@ -23,7 +23,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 CHECK_PORTABILITY_SKIP=	contrib/*
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed:run perl
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}
@@ -31,6 +31,9 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 INFO_FILES=		yes
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize

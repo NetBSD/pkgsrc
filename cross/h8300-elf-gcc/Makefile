@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/02 19:20:18 nia Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -18,6 +18,9 @@ SITES.newlib-${NEWLIBVER}.tar.gz=	https://www.sourceware.org/pub/newlib/
 
 DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
+
 .include "../../mk/bsd.prefs.mk"
 # To avoid an internal compiler error of a library for h8300h
 #  on NetBSD/amd64 7.99.39 (GCC 5.4)
@@ -25,7 +28,7 @@ DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 GCC_REQD+=		6
 .endif
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 
 H8300_PREFIX=		${PREFIX}/cross-h8300-elf
 OBJDIR=			../build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/02 19:21:52 nia Exp $
 #
 
 DISTNAME=	blokus-1.1
@@ -17,10 +17,13 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 # XXX: For some reason, the other libraries are hidden when this is
 # specified.
 #LIBS.SunOS+=	-lGLU
+
+# Fails with C++14 default language
+FORCE_CXX_STD=	c++03
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

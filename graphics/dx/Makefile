@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2023/06/06 08:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2023/08/02 19:21:53 nia Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	82
@@ -11,11 +11,14 @@ COMMENT=	Open Visualization Data Explorer
 
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake lex yacc sh
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx
 CONFIGURE_ENV+=		bsh_path=${TOOLS_SH}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/07/18 00:06:10 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/02 19:20:17 nia Exp $
 
 DISTNAME=	mp3check-0.8.7
 CATEGORIES=	audio
@@ -11,10 +11,13 @@ COMMENT=	Check MP3 files for consistency
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 BUILD_TARGET=	mp3check
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

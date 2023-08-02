@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/06/06 12:41:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.87 2023/08/02 19:21:53 nia Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	36
@@ -17,12 +17,15 @@ TOOL_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 TOOL_DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
 TOOL_DEPENDS+=		p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake gmake gs:run makeinfo perl
 GNU_CONFIGURE=		yes
 REPLACE_PERL+=		src/gri_merge src/gri_unpage
 INFO_FILES=		yes
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} PKGINFODIR=${PKGINFODIR}
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=		c++03
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i

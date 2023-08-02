@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/30 15:33:18 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/02 19:21:51 nia Exp $
 
 DISTNAME=	libretro-vba-next-20200106
 CATEGORIES=	emulators
@@ -11,7 +11,10 @@ HOMEPAGE=	https://docs.libretro.com/library/vba_next/
 COMMENT=	Libretro core based on the VBA Next Game Boy Advance emulator
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
+
+# Fails with C++14 default language.
+FORCE_CXX_STD=	c++03
 
 LIBRETRO_CORE=	vba_next
 
