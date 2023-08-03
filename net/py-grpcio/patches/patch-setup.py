@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.14 2022/07/06 15:18:17 adam Exp $
+$NetBSD: patch-setup.py,v 1.15 2023/08/03 18:58:48 adam Exp $
 
 Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2022-06-21 21:07:50.000000000 +0000
+--- setup.py.orig	2023-08-01 19:15:12.000000000 +0000
 +++ setup.py
-@@ -316,32 +316,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
+@@ -315,32 +315,7 @@ EXTENSION_INCLUDE_DIRECTORIES = ((PYTHON
                                   UPBDEFS_GRPC_GENERATED_INCLUDE +
                                   XXHASH_INCLUDE + ZLIB_INCLUDE)
  
@@ -39,7 +39,7 @@ Use dependencies in pkgsrc.
  
  DEFINE_MACROS = (('_WIN32_WINNT', 0x600),)
  asm_files = []
-@@ -442,7 +417,7 @@ def cython_extensions_and_necessity():
+@@ -443,7 +418,7 @@ def cython_extensions_and_necessity():
      ]
      config = os.environ.get('CONFIG', 'opt')
      prefix = 'libs/' + config + '/'
@@ -48,7 +48,7 @@ Use dependencies in pkgsrc.
          extra_objects = [
              prefix + 'libares.a', prefix + 'libboringssl.a',
              prefix + 'libgpr.a', prefix + 'libgrpc.a'
-@@ -454,8 +429,7 @@ def cython_extensions_and_necessity():
+@@ -455,8 +430,7 @@ def cython_extensions_and_necessity():
      extensions = [
          _extension.Extension(
              name=module_name,
