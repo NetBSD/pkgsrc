@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/06/30 22:50:12 bacon Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/03 20:01:29 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
@@ -57,7 +56,7 @@ USE_TOOLS+=		bash:run
 CONFIGURE_ARGS+=	-fontconfig
 QMAKE_CONF=		qmake.conf
 .  if ${OPSYS} != "SunOS" && \
-      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
+      (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	-reduce-relocations
 .  endif
 .else
@@ -65,7 +64,7 @@ CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
 
-PLIST_VARS+=		egl
+PLIST_VARS+=	egl x11
 
 .include "../../mk/compiler.mk"
 
@@ -106,7 +105,7 @@ LDFLAGS.FreeBSD+=		-lutil
 PLIST_VARS+=	inotify
 .  if exists(/usr/include/sys/inotify.h)
 PLIST.inotify=	yes
-.  endif 
+.  endif
 .endif
 
 REPLACE_PERL+=		libexec/syncqt.pl
@@ -182,18 +181,21 @@ pre-configure:
 		-e 's:@QMAKE_EXTRA@:${QMAKE_EXTRA:Q}:g' \
 		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
-			cp ${WRKSRC}/qmake.conf $${dir}; \
-			rm -f $${dir}/*.orig; \
-		done
+		${CP} ${WRKSRC}/qmake.conf $${dir}; \
+		${RM} -f $${dir}/*.orig; \
+	done
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_pre.prf
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_post.prf
 
 .include "options.mk"
 
-.if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-- -DQT_DISABLE_RPATH:BOOL=ON
+.if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
+.else
+CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=OFF
+CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
 .endif
 
 TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet
@@ -229,6 +231,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Xml.pc
 .include "../../textproc/md4c/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
+PLIST.x11=	yes
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .  if !empty(MESALIB_SUPPORTS_EGL:Myes)

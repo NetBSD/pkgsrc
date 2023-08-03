@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/10 09:46:34 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/03 20:01:31 adam Exp $
 lib/pkgconfig/Qt6Location.pc
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
@@ -203,8 +203,8 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationTargets.cmake
 qt6/lib/libQt6Location.prl
 qt6/lib/libQt6Location.so
-qt6/lib/libQt6Location.so.6
 qt6/lib/libQt6Location.so.${PKGVERSION}
+qt6/lib/libQt6Location.so.6
 qt6/lib/pkgconfig/Qt6Location.pc
 qt6/metatypes/qt6location_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_location.pri

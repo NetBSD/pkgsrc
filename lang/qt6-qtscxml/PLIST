@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:04 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:32 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -172,20 +172,20 @@ qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessTargets.cmake
 qt6/lib/libQt6Scxml.prl
 qt6/lib/libQt6Scxml.so
-qt6/lib/libQt6Scxml.so.6
 qt6/lib/libQt6Scxml.so.${PKGVERSION}
+qt6/lib/libQt6Scxml.so.6
 qt6/lib/libQt6ScxmlQml.prl
 qt6/lib/libQt6ScxmlQml.so
-qt6/lib/libQt6ScxmlQml.so.6
 qt6/lib/libQt6ScxmlQml.so.${PKGVERSION}
+qt6/lib/libQt6ScxmlQml.so.6
 qt6/lib/libQt6StateMachine.prl
 qt6/lib/libQt6StateMachine.so
-qt6/lib/libQt6StateMachine.so.6
 qt6/lib/libQt6StateMachine.so.${PKGVERSION}
+qt6/lib/libQt6StateMachine.so.6
 qt6/lib/libQt6StateMachineQml.prl
 qt6/lib/libQt6StateMachineQml.so
-qt6/lib/libQt6StateMachineQml.so.6
 qt6/lib/libQt6StateMachineQml.so.${PKGVERSION}
+qt6/lib/libQt6StateMachineQml.so.6
 qt6/lib/pkgconfig/Qt6Scxml.pc
 qt6/lib/pkgconfig/Qt6ScxmlQml.pc
 qt6/lib/pkgconfig/Qt6StateMachine.pc
