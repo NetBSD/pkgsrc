@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:30 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:15:53 markd Exp $
 
-BLAKE2s (kollision-22.08.1.tar.xz) = 1a7247a663f3080ab470e51dcea6bc143d9b4bba219f142d15f495c96f467b31
-SHA512 (kollision-22.08.1.tar.xz) = 3c6de7a4725d94b3f6b317332c0486269a2952c915638708c366e8ca572871ae6d170ee7f1941e1cd84dfd1c0a4ef9dff1d1ceef1b53d8cf67010bf1a6ed8a80
-Size (kollision-22.08.1.tar.xz) = 303084 bytes
+BLAKE2s (kollision-23.04.3.tar.xz) = 3a761ba31f884840de291f1df363e14df9e649321e18e9859c2824d1e3bea4ba
+SHA512 (kollision-23.04.3.tar.xz) = 7a4af264296a94808d02d5eaf110632635529d146bec4b1e194e36a47f731692a5ab63bb7655853b55fcf78eb0b99feb4dc663e56043fc8e84ae87233fe36be3
+Size (kollision-23.04.3.tar.xz) = 306796 bytes
