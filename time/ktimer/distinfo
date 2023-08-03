@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 01:21:25 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 05:00:07 markd Exp $
 
-BLAKE2s (ktimer-22.08.1.tar.xz) = 4eac8689e535f2f209f392ad445fd79360e6b6521a646b17756bcdaf79d0c1db
-SHA512 (ktimer-22.08.1.tar.xz) = 647d617f2f5d3dd9ca7c791d0a9c78a0cfda3091571b4d88946fd3a259bd7f66d4ce9cb61a3df664d64ec3f28e8aa19d007f6386113a56bd9335dffb3c77cc0d
-Size (ktimer-22.08.1.tar.xz) = 395168 bytes
+BLAKE2s (ktimer-23.04.3.tar.xz) = c003d0574c3bec70333f147c5a27d9d0de30fcf17ae07ec9ad5b96f7b0682507
+SHA512 (ktimer-23.04.3.tar.xz) = f3d13e469113d2d999821c11a910ec3ce37862a555e8d3982198d6a01ceb247d9e14aea0a4c95e68e201afd93c5edb3363b8f8bc39ae5c9d929cf8514df3c687
+Size (ktimer-23.04.3.tar.xz) = 404448 bytes
