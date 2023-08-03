@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/07 12:28:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/03 02:30:32 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/c++-copy-class-and-file
 bin/c++-rename-class-and-file
 bin/cheatmake
+bin/clean-forward-declaration.sh
+bin/clean-includes.sh
 bin/colorsvn
 bin/create_cvsignore
 bin/create_makefile
@@ -234,6 +236,22 @@ man/pt_BR/man1/fixincludes.1
 man/pt_BR/man1/pruneemptydirs.1
 man/pt_BR/man1/qtdoc.1
 man/pt_BR/man1/zonetab2pot.py.1
+man/ru/man1/adddebug.1
+man/ru/man1/cheatmake.1
+man/ru/man1/create_cvsignore.1
+man/ru/man1/create_makefile.1
+man/ru/man1/create_makefiles.1
+man/ru/man1/cvscheck.1
+man/ru/man1/cvslastchange.1
+man/ru/man1/cvslastlog.1
+man/ru/man1/cvsrevertlast.1
+man/ru/man1/cxxmetric.1
+man/ru/man1/extend_dmalloc.1
+man/ru/man1/extractrc.1
+man/ru/man1/fixincludes.1
+man/ru/man1/pruneemptydirs.1
+man/ru/man1/qtdoc.1
+man/ru/man1/zonetab2pot.py.1
 man/sv/man1/adddebug.1
 man/sv/man1/cheatmake.1
 man/sv/man1/create_cvsignore.1
