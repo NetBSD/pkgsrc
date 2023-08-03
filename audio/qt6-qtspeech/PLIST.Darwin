@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2023/08/03 20:04:47 adam Exp $
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfig.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginTargets-release.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechDarwinPluginTargets.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginConfig.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginTargets-release.cmake
+qt6/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMacOSPluginTargets.cmake
+qt6/plugins/texttospeech/libqtexttospeech_speech_macos.so
+qt6/plugins/texttospeech/libqtexttospeech_speechdarwin.so
