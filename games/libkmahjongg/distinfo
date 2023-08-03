@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:32 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:30:27 markd Exp $
 
-BLAKE2s (libkmahjongg-22.08.1.tar.xz) = 8c8d0966994e8a285ebec2ef03fb7babb825ec9869deefc14478a3ef1a9566a0
-SHA512 (libkmahjongg-22.08.1.tar.xz) = 63987a6ab9d2791ed5f1d636faa3a8506aa822cfebf8a9e8368af7323b2ef42bf331a1be2265a40132a6526eb8b38c003d47b8a7f3ccd995cd2e2f6d63cf7a0d
-Size (libkmahjongg-22.08.1.tar.xz) = 1685720 bytes
+BLAKE2s (libkmahjongg-23.04.3.tar.xz) = e1a6e46dd038252e8a4f66b0fba4273e54a8519799d4ac009fbeea5f4e5de353
+SHA512 (libkmahjongg-23.04.3.tar.xz) = c74aead26188a8b91329287bbac42d1c6c301ddbc26397931c5dea677430217d94e458d70c4c52f2c7367d1dd03362da9d243df6903a3a9e2bb6c57e52c0d83d
+Size (libkmahjongg-23.04.3.tar.xz) = 1686896 bytes
