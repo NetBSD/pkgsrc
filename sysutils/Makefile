@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1061 2023/07/08 22:17:44 vins Exp $
+# $NetBSD: Makefile,v 1.1062 2023/08/03 18:25:47 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -421,6 +421,7 @@ SUBDIR+=	libtree
 SUBDIR+=	libudev
 SUBDIR+=	libvirt
 SUBDIR+=	lilo
+SUBDIR+=	lla
 SUBDIR+=	lnav
 SUBDIR+=	lockf
 SUBDIR+=	logfinder
