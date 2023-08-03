@@ -1,0 +1,1 @@
+bin/pyspnego-parse @PREFIX@/bin/pyspnego-parse-@PYVERSSUFFIX@
