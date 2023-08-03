@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.26 2023/08/02 14:32:46 ryoon Exp $
+$NetBSD: patch-ab,v 1.27 2023/08/03 03:57:28 ryoon Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -9,10 +9,6 @@ $NetBSD: patch-ab,v 1.26 2023/08/02 14:32:46 ryoon Exp $
   (also for other fonts)).  This needs to be investigated further.
 - Avoid internal version of freeglut and try to pick it up via pkg-config and
   set SYS_GLUT_{CFLAGS,LIBS} accordingly.
-#- Avoid internal version of lcms2 and try to pick it up via pkg-config and
-#  set SYS_LCMS2_{CFLAGS,LIBS} accordingly.
-#  If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
-#  CFLAGS.
 
 --- Makerules.orig	2022-06-14 12:19:22.000000000 +0000
 +++ Makerules
