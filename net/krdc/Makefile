@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/06/06 12:42:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.68 2023/08/03 04:43:54 markd Exp $
 
 DISTNAME=	krdc-${KAPPSVER}
-PKGREVISION=	7
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/krdc/
@@ -24,5 +23,6 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
