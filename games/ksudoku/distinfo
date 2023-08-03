@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:31 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:25:38 markd Exp $
 
-BLAKE2s (ksudoku-22.08.1.tar.xz) = ad619a98371a144248894bf76ff7bc20414dc639a627fa67fbee453690851249
-SHA512 (ksudoku-22.08.1.tar.xz) = 67fc71c7a2ecb6ec051e226abe2a4c10802c1f30704b22b3923307322f1d3b6432511b73ce46be0f9e920e1bab1369dbff1c02e1ffd60ccc44e7f966c4215a49
-Size (ksudoku-22.08.1.tar.xz) = 1689752 bytes
+BLAKE2s (ksudoku-23.04.3.tar.xz) = 2f8801b72139d1ce134f775a939b01657090d72cebe9f66fde8eb2b8a04565b4
+SHA512 (ksudoku-23.04.3.tar.xz) = b75901752494bbc1a093b851a360bcafc6bb875532c876869c2596860d808f3a68acde6a9c6ec96aec590773efb58d5050146991cbe9380799286418196c40ca
+Size (ksudoku-23.04.3.tar.xz) = 1702380 bytes
 SHA1 (patch-src_gui_views_ArcBall.h) = e1c70135d1cd01aa1ffd9b9994f0c15a60b3a53b
