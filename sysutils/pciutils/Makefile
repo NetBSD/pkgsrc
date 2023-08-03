@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/08/02 16:17:18 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/08/03 12:27:04 nia Exp $
 
 DISTNAME=	pciutils-3.10.0
 CATEGORIES=	sysutils
@@ -29,7 +29,8 @@ REPLACE_SH=		*.sh
 PKGCONFIG_OVERRIDE=	lib/libpci.pc.in
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-FORCE_C_STD=		c99
+# cannot be standard c99, uses symbol versions
+FORCE_C_STD=		gnu99
 
 .include "../../sysutils/pciutils/libname.mk"
 
