@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/29 01:16:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/03 04:48:25 markd Exp $
 bin/baloo_filemetadata_temp_extractor
 include/KF5/BalooWidgets/Baloo/FileMetaDataConfigWidget
 include/KF5/BalooWidgets/Baloo/FileMetaDataWidget
@@ -17,7 +17,6 @@ lib/libKF5BalooWidgets.so.5
 qt5/plugins/kf5/kfileitemaction/tagsfileitemaction.so
 qt5/plugins/kf5/propertiesdialog/baloofilepropertiesplugin.so
 share/locale/ar/LC_MESSAGES/baloowidgets5.mo
-share/locale/ast/LC_MESSAGES/baloowidgets5.mo
 share/locale/az/LC_MESSAGES/baloowidgets5.mo
 share/locale/bg/LC_MESSAGES/baloowidgets5.mo
 share/locale/bs/LC_MESSAGES/baloowidgets5.mo
@@ -41,6 +40,7 @@ share/locale/ia/LC_MESSAGES/baloowidgets5.mo
 share/locale/id/LC_MESSAGES/baloowidgets5.mo
 share/locale/it/LC_MESSAGES/baloowidgets5.mo
 share/locale/ja/LC_MESSAGES/baloowidgets5.mo
+share/locale/ka/LC_MESSAGES/baloowidgets5.mo
 share/locale/kk/LC_MESSAGES/baloowidgets5.mo
 share/locale/ko/LC_MESSAGES/baloowidgets5.mo
 share/locale/lt/LC_MESSAGES/baloowidgets5.mo
@@ -59,6 +59,9 @@ share/locale/ru/LC_MESSAGES/baloowidgets5.mo
 share/locale/sk/LC_MESSAGES/baloowidgets5.mo
 share/locale/sl/LC_MESSAGES/baloowidgets5.mo
 share/locale/sr/LC_MESSAGES/baloowidgets5.mo
+share/locale/sr@ijekavian/LC_MESSAGES/baloowidgets5.mo
+share/locale/sr@ijekavianlatin/LC_MESSAGES/baloowidgets5.mo
+share/locale/sr@latin/LC_MESSAGES/baloowidgets5.mo
 share/locale/sv/LC_MESSAGES/baloowidgets5.mo
 share/locale/ta/LC_MESSAGES/baloowidgets5.mo
 share/locale/tr/LC_MESSAGES/baloowidgets5.mo
