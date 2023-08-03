@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.22 2023/07/25 10:08:26 pin Exp $
+# $NetBSD: go-modules.mk,v 1.23 2023/08/03 19:41:57 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -132,8 +132,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.6.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.6.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.7.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.7.zip
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.mod
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.zip
 GO_MODULE_FILES+=	github.com/shoenig/test/@v/v0.6.4.mod
@@ -178,8 +178,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20210921155107-089bfa567519.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.3.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.8.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.8.0.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.9.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.9.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.10.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.10.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.12.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.12.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.6.0-dev.0.20220419223038-86c51ed26bb4.mod
@@ -209,7 +209,6 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.10.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.2.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.5.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.9.0.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.2.0.mod
