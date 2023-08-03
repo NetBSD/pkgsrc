@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/09/29 00:47:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/08/03 02:49:55 markd Exp $
 bin/kajongg
 bin/kajonggserver
 share/applications/org.kde.kajongg.desktop
@@ -569,9 +569,11 @@ share/locale/hu/LC_MESSAGES/kajongg.mo
 share/locale/is/LC_MESSAGES/kajongg.mo
 share/locale/it/LC_MESSAGES/kajongg.mo
 share/locale/ja/LC_MESSAGES/kajongg.mo
+share/locale/ka/LC_MESSAGES/kajongg.mo
 share/locale/kk/LC_MESSAGES/kajongg.mo
 share/locale/km/LC_MESSAGES/kajongg.mo
 share/locale/lt/LC_MESSAGES/kajongg.mo
+share/locale/mai/LC_MESSAGES/kajongg.mo
 share/locale/ml/LC_MESSAGES/kajongg.mo
 share/locale/mr/LC_MESSAGES/kajongg.mo
 share/locale/nb/LC_MESSAGES/kajongg.mo
@@ -586,6 +588,9 @@ share/locale/ru/LC_MESSAGES/kajongg.mo
 share/locale/sk/LC_MESSAGES/kajongg.mo
 share/locale/sl/LC_MESSAGES/kajongg.mo
 share/locale/sr/LC_MESSAGES/kajongg.mo
+share/locale/sr@ijekavian/LC_MESSAGES/kajongg.mo
+share/locale/sr@ijekavianlatin/LC_MESSAGES/kajongg.mo
+share/locale/sr@latin/LC_MESSAGES/kajongg.mo
 share/locale/sv/LC_MESSAGES/kajongg.mo
 share/locale/tr/LC_MESSAGES/kajongg.mo
 share/locale/ug/LC_MESSAGES/kajongg.mo
