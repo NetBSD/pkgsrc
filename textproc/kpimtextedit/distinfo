@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/29 01:19:25 markd Exp $
+$NetBSD: distinfo,v 1.8 2023/08/03 04:57:41 markd Exp $
 
-BLAKE2s (kpimtextedit-22.08.1.tar.xz) = eb5fd8f1454c1ebcbf8dbcd54bdb4cb898760d3760579a29ed92382f60a063ca
-SHA512 (kpimtextedit-22.08.1.tar.xz) = efa5f10f75792c7fcd2122c95d056fe046ca6e6258c1c31d088be1bdc2dce55bac2ae5eb6c7e9d8021e5e50975ae565bd88375ee14c58fd29d8c20321043cf4b
-Size (kpimtextedit-22.08.1.tar.xz) = 216188 bytes
+BLAKE2s (kpimtextedit-23.04.3.tar.xz) = 5db1dca891b672033d73004807bb1dbbd44c4a73ad581e910a9db4a68ab32e64
+SHA512 (kpimtextedit-23.04.3.tar.xz) = 45a3b8b334c49304f961a0859c8fad792fdd75fccf83013ac019335ecac879c1d697835cf13de157e18cc1e3c806087984fc867910bb363afa160d87ae8008f4
+Size (kpimtextedit-23.04.3.tar.xz) = 218960 bytes
