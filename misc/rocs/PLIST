@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/09/29 01:03:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/08/03 04:31:25 markd Exp $
 bin/rocs
 include/rocs/edge.h
 include/rocs/graphdocument.h
@@ -142,6 +142,8 @@ share/locale/it/LC_MESSAGES/libgraphtheory.mo
 share/locale/it/LC_MESSAGES/rocs.mo
 share/locale/ja/LC_MESSAGES/libgraphtheory.mo
 share/locale/ja/LC_MESSAGES/rocs.mo
+share/locale/ka/LC_MESSAGES/libgraphtheory.mo
+share/locale/ka/LC_MESSAGES/rocs.mo
 share/locale/kk/LC_MESSAGES/libgraphtheory.mo
 share/locale/kk/LC_MESSAGES/rocs.mo
 share/locale/ko/LC_MESSAGES/libgraphtheory.mo
@@ -180,6 +182,8 @@ share/locale/sl/LC_MESSAGES/libgraphtheory.mo
 share/locale/sl/LC_MESSAGES/rocs.mo
 share/locale/sv/LC_MESSAGES/libgraphtheory.mo
 share/locale/sv/LC_MESSAGES/rocs.mo
+share/locale/th/LC_MESSAGES/libgraphtheory.mo
+share/locale/th/LC_MESSAGES/rocs.mo
 share/locale/tr/LC_MESSAGES/libgraphtheory.mo
 share/locale/tr/LC_MESSAGES/rocs.mo
 share/locale/ug/LC_MESSAGES/libgraphtheory.mo
