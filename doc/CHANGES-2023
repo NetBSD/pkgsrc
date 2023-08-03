@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4721 2023/08/03 11:54:17 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4722 2023/08/03 11:58:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6771,3 +6771,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed security/py-urllib2-kerberos [adam 2023-08-03]
 	Removed security/py-kerberos [adam 2023-08-03]
 	Added devel/p5-Test-Future-IO-Impl version 0.14 [wen 2023-08-03]
+	Updated devel/p5-Future-IO to 0.14 [wen 2023-08-03]
