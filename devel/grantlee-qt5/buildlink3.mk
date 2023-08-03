@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2023/05/22 20:59:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2023/08/03 02:07:42 markd Exp $
 
 BUILDLINK_TREE+=	grantlee-qt5
 
@@ -6,10 +6,10 @@ BUILDLINK_TREE+=	grantlee-qt5
 GRANTLEE_QT5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grantlee-qt5+=	grantlee-qt5>=5.1.0
-BUILDLINK_ABI_DEPENDS.grantlee-qt5?=	grantlee-qt5>=5.2.0nb19
+BUILDLINK_ABI_DEPENDS.grantlee-qt5?=	grantlee-qt5>=5.3.0
 BUILDLINK_PKGSRCDIR.grantlee-qt5?=	../../devel/grantlee-qt5
 
-BUILDLINK_FILES.grantlee-qt5+=		lib/grantlee/5.2/*.so
+BUILDLINK_FILES.grantlee-qt5+=		lib/grantlee/5.3/*.so
 
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .endif	# GRANTLEE_QT5_BUILDLINK3_MK
