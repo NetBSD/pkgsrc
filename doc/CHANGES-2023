@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4715 2023/08/03 07:09:46 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4716 2023/08/03 07:14:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6758,3 +6758,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/konsole to 23.04.3 [markd 2023-08-03]
 	Added textproc/ktextaddons version 1.3.2 [markd 2023-08-03]
 	Updated devel/p5-Moose to 2.2206 [wen 2023-08-03]
+	Updated devel/p5-Perl-Tidy to 20230701 [wen 2023-08-03]
