@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4728 2023/08/03 13:37:53 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4729 2023/08/03 18:23:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6778,3 +6778,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Log-Any to 1.716 [wen 2023-08-03]
 	Updated devel/p5-Log-Dispatchouli to 3.005 [wen 2023-08-03]
 	Updated devel/p5-Log-Log4perl to 1.57 [wen 2023-08-03]
+	Updated net/piratebay to 0.1.6 [pin 2023-08-03]
