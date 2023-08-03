@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/04/25 11:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/03 08:00:23 adam Exp $
 
-DISTNAME=	debugpy-1.6.7
+DISTNAME=	debugpy-1.6.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/microsoft/debugpy
 COMMENT=	Implementation of the Debug Adapter Protocol for Python
 LICENSE=	mit
-
-USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
