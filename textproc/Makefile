@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1412 2023/07/23 11:29:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.1413 2023/08/03 05:32:04 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -473,6 +473,7 @@ SUBDIR+=	kbanner
 SUBDIR+=	kcodecs
 SUBDIR+=	kcompletion
 SUBDIR+=	kpimtextedit
+SUBDIR+=	ktextaddons
 SUBDIR+=	latex2html
 SUBDIR+=	libclucene
 SUBDIR+=	libcroco
