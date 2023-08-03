@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/09 10:03:18 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/03 20:01:30 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6Protobuf.pc
 qt6/include/QtGrpc/${PKGVERSION}/QtGrpc/private/qabstractgrpcchannel_p.h
@@ -107,12 +107,12 @@ qt6/lib/cmake/Qt6ProtobufTools/Qt6ProtobufToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ProtobufTools/QtProtocCommandWrapper.cmake
 qt6/lib/libQt6Grpc.prl
 qt6/lib/libQt6Grpc.so
-qt6/lib/libQt6Grpc.so.6
 qt6/lib/libQt6Grpc.so.${PKGVERSION}
+qt6/lib/libQt6Grpc.so.6
 qt6/lib/libQt6Protobuf.prl
 qt6/lib/libQt6Protobuf.so
-qt6/lib/libQt6Protobuf.so.6
 qt6/lib/libQt6Protobuf.so.${PKGVERSION}
+qt6/lib/libQt6Protobuf.so.6
 qt6/lib/pkgconfig/Qt6Grpc.pc
 qt6/lib/pkgconfig/Qt6Protobuf.pc
 qt6/libexec/qtgrpcgen

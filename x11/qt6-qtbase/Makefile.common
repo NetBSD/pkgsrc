@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2023/04/10 09:46:34 nros Exp $
-# used by x11/qt6-qtserialport/Makefile
+# $NetBSD: Makefile.common,v 1.33 2023/08/03 20:01:29 adam Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
@@ -27,6 +26,7 @@
 # used by www/qt6-qthttpserver/Makefile
 # used by www/qt6-qtwebchannel/Makefile
 # used by x11/qt6-qtbase/Makefile
+# used by x11/qt6-qtserialport/Makefile
 
 .include "../../meta-pkgs/qt6/Makefile.common"
 
@@ -61,10 +61,6 @@ CXXFLAGS.SunOS+=	-D_Noreturn=""
 BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		notdarwin
-.if ${OPSYS} != "Darwin"
-PLIST.notdarwin=	yes
-.endif
 
 # pkgsrc does not set rpath during build
 # but qdbuscpp2xml and qdbuscpp2xml are
@@ -73,11 +69,10 @@ PLIST.notdarwin=	yes
 # this is needed by some ld:s to not
 # cause linking errors.
 .if ${OPSYS} == "Darwin"
-MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/lib
 .else
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
 .endif
-
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
@@ -85,7 +80,10 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 .if "${PKGPATH}" != "x11/qt6-qtbase"
 #CONFIGURE_ARGS+=	-cmake-use-default-generator
 .  if ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=TRUE
+CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=ON
+.  else
+CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=OFF
+CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
 .  endif
 QTCONFDIR?=		.
 do-configure:
@@ -93,28 +91,18 @@ do-configure:
 .endif
 
 #do-build:
-#	cd ${WRKSRC}/${QTCONFDIR} && ${SETENV} ${MAKE_ENV} ninja
+#	cd ${WRKSRC}/${QTCONFDIR} && ${SETENV} ${MAKE_ENV} ninja ${BUILD_TARGET}
 
+#do-install:
+#	cd ${WRKSRC}/${QTCONFDIR} && ${SETENV} ${INSTALL_ENV} ninja ${INSTALL_TARGET}
 
-.if ${OPSYS} == "Darwin"
-.PHONY: fix-darwin-install-name
-post-install: fix-darwin-install-name
-fix-darwin-install-name:
-	${FIND} ${DESTDIR}${PREFIX} -name "*.dylib" -print |		\
-		while read lib; do					\
-		libname=`basename $${lib}`;				\
-		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\
-		install_name_tool -id $${libdir}/$${libname} $${lib};	\
-	done
-.endif
-
+INSTALLATION_DIRS+=		lib/pkgconfig
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 .PHONY: pkgconfig-link
 post-install: pkgconfig-link
 pkgconfig-link:
 	${RUN}	if ${TEST} -d ${DESTDIR}${QTPREFIX}/lib/pkgconfig; then			\
 		${ECHO} -- Linking pkg-config files to pkgconfig dir in prefix;		\
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig;			\
 		${FIND} ${DESTDIR}${QTPREFIX}/lib/pkgconfig -name "*.pc" -print |	\
 			while read pcpath; do						\
 			pcfile=`basename $${pcpath}`;					\

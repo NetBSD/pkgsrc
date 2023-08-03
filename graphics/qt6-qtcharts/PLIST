@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:30 adam Exp $
 lib/pkgconfig/Qt6Charts.pc
 lib/pkgconfig/Qt6ChartsQml.pc
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractbarchartitem_p.h
@@ -315,12 +315,12 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake
 qt6/lib/libQt6Charts.prl
 qt6/lib/libQt6Charts.so
-qt6/lib/libQt6Charts.so.6
 qt6/lib/libQt6Charts.so.${PKGVERSION}
+qt6/lib/libQt6Charts.so.6
 qt6/lib/libQt6ChartsQml.prl
 qt6/lib/libQt6ChartsQml.so
-qt6/lib/libQt6ChartsQml.so.6
 qt6/lib/libQt6ChartsQml.so.${PKGVERSION}
+qt6/lib/libQt6ChartsQml.so.6
 qt6/lib/pkgconfig/Qt6Charts.pc
 qt6/lib/pkgconfig/Qt6ChartsQml.pc
 qt6/metatypes/qt6charts_release_metatypes.json
