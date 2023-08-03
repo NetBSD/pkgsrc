@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2022/09/29 00:06:48 markd Exp $
+$NetBSD: distinfo,v 1.16 2023/08/03 02:03:16 markd Exp $
 
-BLAKE2s (mlt-7.8.0.tar.gz) = b5b1b20d1db2e52afccad244bb9f6d41b558ca127f84b48777e586f83b29ea9e
-SHA512 (mlt-7.8.0.tar.gz) = da24e59a8fab719eb5352fd3583578938e7f2161f022747e476fe817746ea4c44b8e4319d1b7fefcf075087c255664efdbed1ce81dd22904b68335b5b218f7b2
-Size (mlt-7.8.0.tar.gz) = 1221406 bytes
-SHA1 (patch-src_framework_mlt__properties.c) = 5e8b30cdabb90ed96a122a2654dc254f74a87374
-SHA1 (patch-src_framework_mlt__property.h) = d477cd70b6fecba00f26a5c8f155c9bab73aea03
+BLAKE2s (mlt-7.18.0.tar.gz) = 76a8fe593fd64a42bd35668f8dcbfaf0abb1da40861c5799821d912c6e50fd74
+SHA512 (mlt-7.18.0.tar.gz) = ad2b17df520a636319d6b5e54f1cc3bfd2196329fa45a36310986e3f3563e2b160ca5b9f393f5f3e62e6d4d275856e68b1ba8614e3712624c127ce37834d9b78
+Size (mlt-7.18.0.tar.gz) = 1317235 bytes
+SHA1 (patch-src_framework_mlt__properties.c) = b6488d86d8411e5754c034e85f55776e66b66f55
+SHA1 (patch-src_framework_mlt__property.h) = 1303179e736e42d458991b8e128bbbcfafac2118
