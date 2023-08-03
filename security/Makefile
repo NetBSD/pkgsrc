@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.907 2023/08/03 08:15:16 adam Exp $
+# $NetBSD: Makefile,v 1.908 2023/08/03 08:30:50 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -486,7 +486,6 @@ SUBDIR+=	py-mcrypt
 SUBDIR+=	py-mohawk
 SUBDIR+=	py-nacl
 SUBDIR+=	py-ndg_httpsclient
-SUBDIR+=	py-ntlm-auth
 SUBDIR+=	py-oath
 SUBDIR+=	py-oauth2client
 SUBDIR+=	py-oauthlib
