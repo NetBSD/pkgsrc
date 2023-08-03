@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:29 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:08:54 markd Exp $
 
-BLAKE2s (klickety-22.08.1.tar.xz) = ab100f8787160fa0f16ea654058b96e87afe76e61f3e9600f71cedd4af84c2e2
-SHA512 (klickety-22.08.1.tar.xz) = 2cac57842727a4a6e8a4a6ab9ae6b7557540d0550e3acf7fc82421c8d6284daaa47e0ccec76026e58e68e8657244dd8729592ab545652a52b970a62bc57dfa47
-Size (klickety-22.08.1.tar.xz) = 1496096 bytes
+BLAKE2s (klickety-23.04.3.tar.xz) = 30f81509adcb3a8f603c3df37682f93f4a218200b3f9c3fb914f3c08f25f3fcb
+SHA512 (klickety-23.04.3.tar.xz) = 0b7d2d4080bc6886a02e731f4cda0659fef2ae4f2eaec6cc8ede93bd4b92cccbfc80a3f1e61567b683ce5b12cfea9513383d6e3d2d9ed8d7041c82200cde7b55
+Size (klickety-23.04.3.tar.xz) = 1500048 bytes
