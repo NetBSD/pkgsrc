@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/09/29 00:53:12 markd Exp $
+$NetBSD: distinfo,v 1.26 2023/08/03 03:50:54 markd Exp $
 
-BLAKE2s (libkipi-22.08.1.tar.xz) = ec468f07cb85eb4abafd081c4da6736cc15aaa1d9f2a38e145937929d9b715d3
-SHA512 (libkipi-22.08.1.tar.xz) = 1710d98bc558368012e3a0d1398d45946902eba7d1e34ff80872d0abe34d1e76903cfa99ef8b12dfc7a264c355d045777f5d6e673a4ac747031b9587d55e8c8e
-Size (libkipi-22.08.1.tar.xz) = 88536 bytes
+BLAKE2s (libkipi-23.04.3.tar.xz) = 525779156081d514798ba2ee9523f0bc2ec2e5a5e59e863cbd6b67ec0a6babe4
+SHA512 (libkipi-23.04.3.tar.xz) = d882c3525bf3d7e929fb99e107840f0acf0567ddbbb110443efdd639d4f4d9636585196fffa090901f7133935a8613d62b58f77236077ebf805be77209e94c19
+Size (libkipi-23.04.3.tar.xz) = 88508 bytes
