@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:05 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:31 adam Exp $
 lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth2_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth_p.h
@@ -39,8 +39,8 @@ qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessTargets.cmake
 qt6/lib/libQt6NetworkAuth.prl
 qt6/lib/libQt6NetworkAuth.so
-qt6/lib/libQt6NetworkAuth.so.6
 qt6/lib/libQt6NetworkAuth.so.${PKGVERSION}
+qt6/lib/libQt6NetworkAuth.so.6
 qt6/lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/metatypes/qt6networkauth_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_networkauth.pri

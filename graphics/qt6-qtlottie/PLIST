@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:31 adam Exp $
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/beziereasing_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbase_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbasictransform_p.h
@@ -48,8 +48,8 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6lottieqtpluginTargets.cmake
 qt6/lib/libQt6Bodymovin.prl
 qt6/lib/libQt6Bodymovin.so
-qt6/lib/libQt6Bodymovin.so.6
 qt6/lib/libQt6Bodymovin.so.${PKGVERSION}
+qt6/lib/libQt6Bodymovin.so.6
 qt6/metatypes/qt6bodymovinprivate_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_bodymovin_private.pri
 qt6/modules/BodymovinPrivate.json

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/09 06:13:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/03 20:01:31 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -29,6 +29,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediarecord
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformscreencapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosource_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiomediadevices_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosink_p.h
@@ -247,24 +248,24 @@ qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 qt6/lib/libQt6BundledResonanceAudio.a
 qt6/lib/libQt6Multimedia.prl
 qt6/lib/libQt6Multimedia.so
-qt6/lib/libQt6Multimedia.so.6
 qt6/lib/libQt6Multimedia.so.${PKGVERSION}
+qt6/lib/libQt6Multimedia.so.6
 qt6/lib/libQt6MultimediaQuick.prl
 qt6/lib/libQt6MultimediaQuick.so
-qt6/lib/libQt6MultimediaQuick.so.6
 qt6/lib/libQt6MultimediaQuick.so.${PKGVERSION}
+qt6/lib/libQt6MultimediaQuick.so.6
 qt6/lib/libQt6MultimediaWidgets.prl
 qt6/lib/libQt6MultimediaWidgets.so
-qt6/lib/libQt6MultimediaWidgets.so.6
 qt6/lib/libQt6MultimediaWidgets.so.${PKGVERSION}
+qt6/lib/libQt6MultimediaWidgets.so.6
 qt6/lib/libQt6Quick3DSpatialAudio.prl
 qt6/lib/libQt6Quick3DSpatialAudio.so
-qt6/lib/libQt6Quick3DSpatialAudio.so.6
 qt6/lib/libQt6Quick3DSpatialAudio.so.${PKGVERSION}
+qt6/lib/libQt6Quick3DSpatialAudio.so.6
 qt6/lib/libQt6SpatialAudio.prl
 qt6/lib/libQt6SpatialAudio.so
-qt6/lib/libQt6SpatialAudio.so.6
 qt6/lib/libQt6SpatialAudio.so.${PKGVERSION}
+qt6/lib/libQt6SpatialAudio.so.6
 qt6/lib/pkgconfig/Qt6Multimedia.pc
 qt6/lib/pkgconfig/Qt6MultimediaWidgets.pc
 qt6/lib/pkgconfig/Qt6SpatialAudio.pc

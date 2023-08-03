@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/03 20:01:30 adam Exp $
+
+Allow symbolic links in paths.
+
+--- CMakeLists.txt.orig	2023-07-06 10:02:03.000000000 +0000
++++ CMakeLists.txt
+@@ -62,7 +62,6 @@ function(qt_internal_check_if_path_has_s
+         endif()
+     endif()
+ endfunction()
+-qt_internal_check_if_path_has_symlinks("${CMAKE_BINARY_DIR}")
+ 
+ # Run auto detection routines, but not when doing standalone tests. In that case, the detection
+ # results are taken from either QtBuildInternals or the qt.toolchain.cmake file. Also, inhibit

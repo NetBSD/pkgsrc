@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/05/22 21:00:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/03 20:01:29 adam Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	Qt6 3d
 CATEGORIES=	graphics
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
@@ -24,6 +23,12 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickInput.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickRender.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickScene2D.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DRender.pc
+
+PLIST_VARS+=	amd64
+
+.if ${MACHINE_ARCH} == "amd64"
+PLIST.amd64=	yes
+.endif
 
 .include "../../graphics/qt6-qtshadertools/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
