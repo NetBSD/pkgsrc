@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/08/03 08:23:31 adam Exp $
 
-BLAKE2s (requests_ntlm-1.1.0.tar.gz) = 798a19f147ee321976a287b2520b3cd33451d6914b1cc1b8dde42e8618cbd194
-SHA512 (requests_ntlm-1.1.0.tar.gz) = 9a74ecd6e4ed5c5e4381d2ee3fb9ff233352b49baa5fae4e0ecc30aaad12fc7a5c1b9dd936f35d4a3815ae7f6ec5bb8581e84128d63ff0e961181408daddb807
-Size (requests_ntlm-1.1.0.tar.gz) = 5183 bytes
+BLAKE2s (requests_ntlm-1.2.0.tar.gz) = 56345a251d0c817976cd2cb3176d67d4b1f61d1c23de4a1f93c91b5ea16646d5
+SHA512 (requests_ntlm-1.2.0.tar.gz) = 557f4a4625dc74fc4023a8d74b480cfd61a64b88f6003f381bd0a5f160f4c8337b53a575b720f930cd8fe5c375c1508bbe36cff60e31df00bb9a7e3b19196678
+Size (requests_ntlm-1.2.0.tar.gz) = 6851 bytes
