@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4035 2023/07/30 15:36:34 adam Exp $
+# $NetBSD: Makefile,v 1.4036 2023/08/03 11:50:55 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -2113,6 +2113,7 @@ SUBDIR+=	p5-Test-File
 SUBDIR+=	p5-Test-File-Contents
 SUBDIR+=	p5-Test-File-ShareDir
 SUBDIR+=	p5-Test-Fixture-DBIC-Schema
+SUBDIR+=	p5-Test-Future-IO-Impl
 SUBDIR+=	p5-Test-HTTP-LocalServer
 SUBDIR+=	p5-Test-HexDifferences
 SUBDIR+=	p5-Test-HexString
