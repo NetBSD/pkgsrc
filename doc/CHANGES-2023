@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4718 2023/08/03 08:15:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4719 2023/08/03 08:23:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6765,3 +6765,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.itertools to 6.4.1 [adam 2023-08-03]
 	Added security/py-krb5 version 0.5.0 [adam 2023-08-03]
 	Added security/py-pyspnego version 0.9.1 [adam 2023-08-03]
+	Updated security/py-requests-kerberos to 0.14.0 [adam 2023-08-03]
+	Updated security/py-requests-ntlm to 1.2.0 [adam 2023-08-03]
