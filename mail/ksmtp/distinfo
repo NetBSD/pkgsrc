@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/29 00:56:14 markd Exp $
+$NetBSD: distinfo,v 1.8 2023/08/03 03:58:04 markd Exp $
 
-BLAKE2s (ksmtp-22.08.1.tar.xz) = cded00513a37831765655cdd510d170d8b39d9235c83733aba21c8b0dc880c71
-SHA512 (ksmtp-22.08.1.tar.xz) = 7a6c4e5372ff8dcd474612113922e59f4b8cdb8b704fa287f720e7573b76713fb26ce78f5ec76d8a75dae3d421688cce0b4b54c2a5fb72f2b87eca3207c1a357
-Size (ksmtp-22.08.1.tar.xz) = 49092 bytes
+BLAKE2s (ksmtp-23.04.3.tar.xz) = dd5d26bba027868b3e7de2ebd37501b6637c09f6d5fd0337ac0e0b1d01bfa6e3
+SHA512 (ksmtp-23.04.3.tar.xz) = a722b08a8e3ba0c98d2c00aea7cb39a7866a820092e8ca201fb43a70725a323be4acc97657ae0f53e58517a0dca330902105e1fc91733fedecde8b2d04f6398b
+Size (ksmtp-23.04.3.tar.xz) = 50512 bytes
