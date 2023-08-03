@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.906 2023/07/16 18:36:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.907 2023/08/03 08:15:16 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -478,6 +478,7 @@ SUBDIR+=	py-josepy
 SUBDIR+=	py-kerberos
 SUBDIR+=	py-keyring
 SUBDIR+=	py-keyrings.alt
+SUBDIR+=	py-krb5
 SUBDIR+=	py-lasso
 SUBDIR+=	py-libnacl
 SUBDIR+=	py-libtaxii
@@ -497,6 +498,7 @@ SUBDIR+=	py-passlib
 SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-pip-audit
 SUBDIR+=	py-pydeep
+SUBDIR+=	py-pyspnego
 SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-ntlm
