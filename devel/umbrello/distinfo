@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/09/29 00:38:17 markd Exp $
+$NetBSD: distinfo,v 1.18 2023/08/03 02:41:49 markd Exp $
 
-BLAKE2s (umbrello-22.08.1.tar.xz) = 4f9802343014e755872044b0d1b32ce1288f5f1042620c314dc8867415e420e2
-SHA512 (umbrello-22.08.1.tar.xz) = 46fbf584f3f7491745b9acffb97dd26300f03262537685238011ed9de020f39f83b225db60c0fb8aad044391705f70df717e1ff4a9a5241cb58b59ca3084f5a0
-Size (umbrello-22.08.1.tar.xz) = 5687228 bytes
+BLAKE2s (umbrello-23.04.3.tar.xz) = c2be08d5095c49b6bb4cdc3536499ad7d434e4e01655a634d376a8472953ad95
+SHA512 (umbrello-23.04.3.tar.xz) = 01a4c10405b813ffcb67cbefdb0fb4d3f523148ee8fd5058755d3e8a90199e94d8b781a2e88541b6d607c2b44d42dc7af73377055c06bc26bbbd9fc0a35a36fc
+Size (umbrello-23.04.3.tar.xz) = 5773852 bytes
