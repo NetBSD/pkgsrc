@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:47:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/03 02:48:22 markd Exp $
 bin/granatier
 share/applications/org.kde.granatier.desktop
 share/config.kcfg/granatier.kcfg
@@ -208,13 +208,16 @@ share/locale/id/LC_MESSAGES/granatier.mo
 share/locale/is/LC_MESSAGES/granatier.mo
 share/locale/it/LC_MESSAGES/granatier.mo
 share/locale/ja/LC_MESSAGES/granatier.mo
+share/locale/ka/LC_MESSAGES/granatier.mo
 share/locale/kk/LC_MESSAGES/granatier.mo
 share/locale/km/LC_MESSAGES/granatier.mo
 share/locale/ko/LC_MESSAGES/granatier.mo
 share/locale/lt/LC_MESSAGES/granatier.mo
 share/locale/lv/LC_MESSAGES/granatier.mo
+share/locale/mai/LC_MESSAGES/granatier.mo
 share/locale/ml/LC_MESSAGES/granatier.mo
 share/locale/mr/LC_MESSAGES/granatier.mo
+share/locale/ms/LC_MESSAGES/granatier.mo
 share/locale/nb/LC_MESSAGES/granatier.mo
 share/locale/nds/LC_MESSAGES/granatier.mo
 share/locale/nl/LC_MESSAGES/granatier.mo
@@ -227,7 +230,11 @@ share/locale/ru/LC_MESSAGES/granatier.mo
 share/locale/sk/LC_MESSAGES/granatier.mo
 share/locale/sl/LC_MESSAGES/granatier.mo
 share/locale/sr/LC_MESSAGES/granatier.mo
+share/locale/sr@ijekavian/LC_MESSAGES/granatier.mo
+share/locale/sr@ijekavianlatin/LC_MESSAGES/granatier.mo
+share/locale/sr@latin/LC_MESSAGES/granatier.mo
 share/locale/sv/LC_MESSAGES/granatier.mo
+share/locale/th/LC_MESSAGES/granatier.mo
 share/locale/tr/LC_MESSAGES/granatier.mo
 share/locale/ug/LC_MESSAGES/granatier.mo
 share/locale/uk/LC_MESSAGES/granatier.mo
