@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/03 11:57:50 wen Exp $
 
-DISTNAME=	Future-IO-0.11
+DISTNAME=	Future-IO-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 
@@ -14,7 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS=	p5-Future>=0:../../devel/p5-Future \
 		p5-Struct-Dumb>=0:../../devel/p5-Struct-Dumb
 
-TEST_DEPENDS+=	p5-Test-Identity-[0-9]*:../../devel/p5-Test-Identity
+TEST_DEPENDS+=	p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite \
+		p5-Test-Future-IO-Impl-[0-9]*:../../devel/p5-Test-Future-IO-Impl
 
 USE_LANGUAGES=		#empty
 PERL5_MODULE_TYPE=	Module::Build
