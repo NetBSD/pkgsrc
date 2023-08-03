@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 01:03:53 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 04:26:06 markd Exp $
 
-BLAKE2s (kturtle-22.08.1.tar.xz) = ffbb400c086303a5d0fcf5e62db9ef616e1762f386e55cb3b69f761dad315399
-SHA512 (kturtle-22.08.1.tar.xz) = 27a0de326095d2af70653713b285662060496890e77f209ccd73d931727aa1518a3bbfde8b251f295a7a7dfe5844f8318ed1126b7223c4a81f9a4d588107b00a
-Size (kturtle-22.08.1.tar.xz) = 1967652 bytes
+BLAKE2s (kturtle-23.04.3.tar.xz) = 33099bfd8b5e59f545aede3c8b32f80c1d9c373d6003df9b6db467fad51088bc
+SHA512 (kturtle-23.04.3.tar.xz) = 64563c53d0ff7b741f4477a2d7f6a968b60ec17cad925b0ac87d43d463a1332cf22ab98d74963317c55dc49aefa88dbed8d55daaa082f5fd32c368dd1ed51257
+Size (kturtle-23.04.3.tar.xz) = 2001336 bytes
