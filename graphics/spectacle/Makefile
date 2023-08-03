@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/06/06 12:41:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/03 02:13:45 markd Exp $
 
 DISTNAME=	spectacle-${KAPPSVER}
 PKGREVISION=	6
@@ -8,6 +8,7 @@ HOMEPAGE=	https://kde.org/applications/graphics/kruler/
 COMMENT=	KDE screenshot capture utility
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
+KAPPSVER=	22.08.1
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
