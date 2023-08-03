@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:29 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:03:43 markd Exp $
 
-BLAKE2s (kigo-22.08.1.tar.xz) = aa40af480b21b70d09d842038623e5ef2b43ff57e021b02448dd10fdea6909fa
-SHA512 (kigo-22.08.1.tar.xz) = 43a1e065322671fbf0dd305a9976e45fd7a3f28af52febe8f813cd51bb12f31c0f52f422a08ce1a42fedaee1d5e8aa527f3164b67e43e7e5133d7369bd20f2fe
-Size (kigo-22.08.1.tar.xz) = 5256188 bytes
+BLAKE2s (kigo-23.04.3.tar.xz) = 5afe369d69dcd41c3ab67b3893a3b0b5ebaca1e5231fc17933e10a3786abf55f
+SHA512 (kigo-23.04.3.tar.xz) = a77f8d190179d913f78d0ec968dc6c8cc9a4aa18232a7d6ed80f37969364652724bed3c51b0de3e2ffd836204fedf2198a48e4a96524df3b72d67eacea2237a3
+Size (kigo-23.04.3.tar.xz) = 5264656 bytes
