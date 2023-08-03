@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.259 2023/08/02 15:58:07 nia Exp $
+# $NetBSD: gcc.mk,v 1.260 2023/08/03 06:06:18 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -528,6 +528,13 @@ _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .elif ${_PKGSRC_USE_STACK_CHECK} == "stack-clash"
 _STACK_CHECK_CFLAGS=	-fstack-clash-protection
 _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
+.endif
+
+.if ${_PKGSRC_MKPIE} == "yes"
+_MKPIE_FCFLAGS=		-fPIC		
+.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"		
+_GCC_FCFLAGS+=		${_MKPIE_FCFLAGS}
+.  endif
 .endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line
