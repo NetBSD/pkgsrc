@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4734 2023/08/03 20:07:18 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4735 2023/08/03 22:02:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6814,3 +6814,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/qt6-qttools to 6.5.2 [adam 2023-08-03]
 	Updated www/qt6-qtwebchannel to 6.5.2 [adam 2023-08-03]
 	Updated net/qt6-qtwebsockets to 6.5.2 [adam 2023-08-03]
+	Updated www/firefox to 116.0 [ryoon 2023-08-03]
