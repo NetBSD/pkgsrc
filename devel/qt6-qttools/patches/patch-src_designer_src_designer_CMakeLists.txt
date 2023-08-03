@@ -1,0 +1,24 @@
+$NetBSD: patch-src_designer_src_designer_CMakeLists.txt,v 1.1 2023/08/03 20:01:32 adam Exp $
+
+On Darwin, do not build application bundle.
+
+--- src/designer/src/designer/CMakeLists.txt.orig	2023-07-07 12:29:26.000000000 +0000
++++ src/designer/src/designer/CMakeLists.txt
+@@ -112,7 +112,7 @@ if(UNIX)
+     )
+ endif()
+ 
+-if(APPLE)
++if(FALSE)
+     set_target_properties(designer PROPERTIES
+         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info_mac.plist"
+         MACOSX_BUNDLE TRUE
+@@ -139,7 +139,7 @@ endif()
+ # FILETYPES.path = "Contents/Resources"
+ # QMAKE_BUNDLE_DATA = "FILETYPES"
+ 
+-qt_internal_extend_target(designer CONDITION UNIX AND NOT HAIKU AND NOT MACOS
++qt_internal_extend_target(designer CONDITION UNIX AND NOT HAIKU
+     PUBLIC_LIBRARIES
+         m
+ )

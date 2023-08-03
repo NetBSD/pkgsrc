@@ -1,0 +1,24 @@
+$NetBSD: patch-src_linguist_linguist_CMakeLists.txt,v 1.1 2023/08/03 20:01:32 adam Exp $
+
+On Darwin, do not build application bundle.
+
+--- src/linguist/linguist/CMakeLists.txt.orig	2023-07-07 12:29:26.000000000 +0000
++++ src/linguist/linguist/CMakeLists.txt
+@@ -156,7 +156,7 @@ if(UNIX)
+     )
+ endif()
+ 
+-if(APPLE)
++if(FALSE)
+     set_target_properties(linguist PROPERTIES
+         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info_mac.plist"
+         MACOSX_BUNDLE TRUE
+@@ -169,7 +169,7 @@ if(APPLE)
+     target_sources(linguist PRIVATE
+         linguist.icns
+     )
+-else()
++elif(NOT APPLE)
+     set_property(SOURCE main.cpp PROPERTY SKIP_AUTOMOC ON)
+ endif()
+ qt_internal_add_docs(linguist

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:02 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:29 adam Exp $
 lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonarray_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonobject_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonvalue_p.h
+qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qcodecmacros_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qicucodec_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qisciicodec_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qlatincodec_p.h
@@ -75,8 +76,8 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets-release.cmak
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets.cmake
 qt6/lib/libQt6Core5Compat.prl
 qt6/lib/libQt6Core5Compat.so
-qt6/lib/libQt6Core5Compat.so.6
 qt6/lib/libQt6Core5Compat.so.${PKGVERSION}
+qt6/lib/libQt6Core5Compat.so.6
 qt6/lib/pkgconfig/Qt6Core5Compat.pc
 qt6/metatypes/qt6core5compat_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_core5compat.pri

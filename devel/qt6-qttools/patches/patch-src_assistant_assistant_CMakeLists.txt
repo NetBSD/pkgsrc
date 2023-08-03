@@ -1,0 +1,15 @@
+$NetBSD: patch-src_assistant_assistant_CMakeLists.txt,v 1.1 2023/08/03 20:01:32 adam Exp $
+
+On Darwin, do not build application bundle.
+
+--- src/assistant/assistant/CMakeLists.txt.orig	2023-08-03 11:47:09.000000000 +0000
++++ src/assistant/assistant/CMakeLists.txt
+@@ -154,7 +154,7 @@ qt_internal_extend_target(assistant COND
+         stdinlistener.cpp stdinlistener.h
+ )
+ 
+-if(APPLE)
++if(FALSE)
+     set_target_properties(assistant PROPERTIES
+         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info_mac.plist"
+         MACOSX_BUNDLE TRUE

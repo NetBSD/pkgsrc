@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:03 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:30 adam Exp $
 lib/pkgconfig/Qt6DataVisualization.pc
 lib/pkgconfig/Qt6DataVisualizationQml.pc
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstract3dcontroller_p.h
@@ -200,12 +200,12 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginTargets-release.cma
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginTargets.cmake
 qt6/lib/libQt6DataVisualization.prl
 qt6/lib/libQt6DataVisualization.so
-qt6/lib/libQt6DataVisualization.so.6
 qt6/lib/libQt6DataVisualization.so.${PKGVERSION}
+qt6/lib/libQt6DataVisualization.so.6
 qt6/lib/libQt6DataVisualizationQml.prl
 qt6/lib/libQt6DataVisualizationQml.so
-qt6/lib/libQt6DataVisualizationQml.so.6
 qt6/lib/libQt6DataVisualizationQml.so.${PKGVERSION}
+qt6/lib/libQt6DataVisualizationQml.so.6
 qt6/lib/pkgconfig/Qt6DataVisualization.pc
 qt6/lib/pkgconfig/Qt6DataVisualizationQml.pc
 qt6/metatypes/qt6datavisualization_release_metatypes.json

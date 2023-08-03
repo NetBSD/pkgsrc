@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/10 09:35:10 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/03 20:01:31 adam Exp $
 lib/pkgconfig/Qt6Positioning.pc
 lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
@@ -131,12 +131,12 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets.cmake
 qt6/lib/libQt6Positioning.prl
 qt6/lib/libQt6Positioning.so
-qt6/lib/libQt6Positioning.so.6
 qt6/lib/libQt6Positioning.so.${PKGVERSION}
+qt6/lib/libQt6Positioning.so.6
 qt6/lib/libQt6PositioningQuick.prl
 qt6/lib/libQt6PositioningQuick.so
-qt6/lib/libQt6PositioningQuick.so.6
 qt6/lib/libQt6PositioningQuick.so.${PKGVERSION}
+qt6/lib/libQt6PositioningQuick.so.6
 qt6/lib/pkgconfig/Qt6Positioning.pc
 qt6/lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/metatypes/qt6positioning_release_metatypes.json

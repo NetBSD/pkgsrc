@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/07 18:28:04 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:30 adam Exp $
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qhttpmessagestreamparser_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p_p.h
@@ -44,12 +44,12 @@ qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateTargets.cmake
 qt6/lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateVersionlessTargets.cmake
 qt6/lib/libQt6JsonRpc.prl
 qt6/lib/libQt6JsonRpc.so
-qt6/lib/libQt6JsonRpc.so.6
 qt6/lib/libQt6JsonRpc.so.${PKGVERSION}
+qt6/lib/libQt6JsonRpc.so.6
 qt6/lib/libQt6LanguageServer.prl
 qt6/lib/libQt6LanguageServer.so
-qt6/lib/libQt6LanguageServer.so.6
 qt6/lib/libQt6LanguageServer.so.${PKGVERSION}
+qt6/lib/libQt6LanguageServer.so.6
 qt6/metatypes/qt6jsonrpcprivate_release_metatypes.json
 qt6/metatypes/qt6languageserverprivate_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_jsonrpc_private.pri

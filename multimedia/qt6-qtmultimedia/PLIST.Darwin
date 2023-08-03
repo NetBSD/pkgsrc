@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2023/04/07 18:28:04 nros Exp $
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcoreaudiosessionmanager_p.h
+@comment $NetBSD: PLIST.Darwin,v 1.2 2023/08/03 20:01:31 adam Exp $
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcoreaudioutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosource_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinmediadevices_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmacosaudiodatautils_p.h
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfig.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginTargets.cmake
+qt6/plugins/multimedia/libdarwinmediaplugin.dylib
