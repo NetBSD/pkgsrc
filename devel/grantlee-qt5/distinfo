@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/08/03 02:07:42 markd Exp $
 
-BLAKE2s (grantlee-5.2.0.tar.gz) = 06d133f6ad2a8bd3ef1fc028a4613e8085fc4726f84b7b16646414b167662e94
-SHA512 (grantlee-5.2.0.tar.gz) = 94b53d103aa775e6d45357d44d5634a5214d12ea7178d251fda30c5a88ddc2682ae44501ee8b7dc475793b84fa0998eb0bc13eea3f2e10ab29b1489db6ea60bd
-Size (grantlee-5.2.0.tar.gz) = 1166467 bytes
+BLAKE2s (grantlee-5.3.1.tar.gz) = e3bcb07843decdfd5fb0d393d9e9a15f35ea9d4523013227ba799a9832b960c9
+SHA512 (grantlee-5.3.1.tar.gz) = dc7192fe0553954fffc3e2c584e4fdd80fc1f22d25846cacc5f2dcd1db2673ca62464c8492a4ed3bfc9dfc3e62ef13322809dd29bd56fa4a3a153a8d373ddde5
+Size (grantlee-5.3.1.tar.gz) = 1176012 bytes
