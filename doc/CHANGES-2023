@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4719 2023/08/03 08:23:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4720 2023/08/03 08:37:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6767,3 +6767,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/py-pyspnego version 0.9.1 [adam 2023-08-03]
 	Updated security/py-requests-kerberos to 0.14.0 [adam 2023-08-03]
 	Updated security/py-requests-ntlm to 1.2.0 [adam 2023-08-03]
+	Removed security/py-ntlm-auth [adam 2023-08-03]
+	Removed security/py-urllib2-kerberos [adam 2023-08-03]
+	Removed security/py-kerberos [adam 2023-08-03]
