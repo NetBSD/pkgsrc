@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/29 00:53:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/03 03:53:52 markd Exp $
 qt5/plugins/kf5/parts/svgpart.so
 share/kservices5/svgpart.desktop
 share/locale/ar/LC_MESSAGES/svgpart.mo
@@ -25,14 +25,18 @@ share/locale/hr/LC_MESSAGES/svgpart.mo
 share/locale/hu/LC_MESSAGES/svgpart.mo
 share/locale/ia/LC_MESSAGES/svgpart.mo
 share/locale/id/LC_MESSAGES/svgpart.mo
+share/locale/ie/LC_MESSAGES/svgpart.mo
 share/locale/is/LC_MESSAGES/svgpart.mo
 share/locale/it/LC_MESSAGES/svgpart.mo
 share/locale/ja/LC_MESSAGES/svgpart.mo
+share/locale/ka/LC_MESSAGES/svgpart.mo
 share/locale/kk/LC_MESSAGES/svgpart.mo
 share/locale/km/LC_MESSAGES/svgpart.mo
 share/locale/ko/LC_MESSAGES/svgpart.mo
+share/locale/ku/LC_MESSAGES/svgpart.mo
 share/locale/lt/LC_MESSAGES/svgpart.mo
 share/locale/lv/LC_MESSAGES/svgpart.mo
+share/locale/mk/LC_MESSAGES/svgpart.mo
 share/locale/ml/LC_MESSAGES/svgpart.mo
 share/locale/mr/LC_MESSAGES/svgpart.mo
 share/locale/nb/LC_MESSAGES/svgpart.mo
@@ -45,11 +49,13 @@ share/locale/pt/LC_MESSAGES/svgpart.mo
 share/locale/pt_BR/LC_MESSAGES/svgpart.mo
 share/locale/ro/LC_MESSAGES/svgpart.mo
 share/locale/ru/LC_MESSAGES/svgpart.mo
+share/locale/si/LC_MESSAGES/svgpart.mo
 share/locale/sk/LC_MESSAGES/svgpart.mo
 share/locale/sl/LC_MESSAGES/svgpart.mo
 share/locale/sq/LC_MESSAGES/svgpart.mo
 share/locale/sv/LC_MESSAGES/svgpart.mo
 share/locale/ta/LC_MESSAGES/svgpart.mo
+share/locale/th/LC_MESSAGES/svgpart.mo
 share/locale/tr/LC_MESSAGES/svgpart.mo
 share/locale/ug/LC_MESSAGES/svgpart.mo
 share/locale/uk/LC_MESSAGES/svgpart.mo
