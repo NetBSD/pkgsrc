@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 00:38:15 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 02:24:35 markd Exp $
 
-BLAKE2s (cervisia-22.08.1.tar.xz) = da1731a022b245b23b63b90154a2034b3ad574ef32a2f115b48fd7c51d6db53a
-SHA512 (cervisia-22.08.1.tar.xz) = fedc8049a89c76cdf131e62ceb475e4d2bced9b1ce1a08ba30c19a146ebdc4e15261139d7ddea259f224e363586d5541a601847f3f439a4c2dd74ad2855ec953
-Size (cervisia-22.08.1.tar.xz) = 1913940 bytes
+BLAKE2s (cervisia-23.04.3.tar.xz) = db203bc16c77aa956b4aefddce78c2d9e1b79c608e8a9c2af74c4827d6a0ae53
+SHA512 (cervisia-23.04.3.tar.xz) = 42d3c24524eddefd96013f601c164331d3339104de923f1fe46473613c646c980a3cc452435e1ae2dbb05d22a797b1ce47806e2c9381a1717928a02a01f2e723
+Size (cervisia-23.04.3.tar.xz) = 1944528 bytes
