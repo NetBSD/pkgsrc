@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:16:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/08/03 12:07:25 wen Exp $
 
-BLAKE2s (Getopt-Euclid-0.4.5.tar.gz) = 409a9ad972136d7c33e8da5a7ee7c54d6bc404c53cfb08a1b6914b727f8d3a92
-SHA512 (Getopt-Euclid-0.4.5.tar.gz) = 4a359aa53103c429bb1724f14961998cc879643573d955e935af9bb757fdbbe40f1276f3a15515011602e56eaf538fa7f30185e3050eb1f83948018b0806bbd4
-Size (Getopt-Euclid-0.4.5.tar.gz) = 75005 bytes
+BLAKE2s (Getopt-Euclid-0.4.6.tar.gz) = 97c75ed64f2adec2ecfff9e1a43037e0c38cef2a82b5534c5fd6f11cf9821e81
+SHA512 (Getopt-Euclid-0.4.6.tar.gz) = bff7fdd899c48d2471eced9e7fa779657f1ea34aa2d97f90bbb1598833212db5975c4d0b596f197a73986ed805417ede926f458769438ed0ce1b252cbd307dd3
+Size (Getopt-Euclid-0.4.6.tar.gz) = 64873 bytes
