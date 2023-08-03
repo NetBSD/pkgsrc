@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/06/06 12:41:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.63 2023/08/03 03:08:54 markd Exp $
 
 DISTNAME=	klickety-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/klickety/
