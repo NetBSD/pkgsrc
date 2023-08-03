@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 00:47:27 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 02:45:01 markd Exp $
 
-BLAKE2s (blinken-22.08.1.tar.xz) = ec28350941a32bc2e72354823f573a5526b06d3d8932f4f67c9ea464b65bbcf5
-SHA512 (blinken-22.08.1.tar.xz) = c9f17b44ae211e98301344e2554605b979e0ad23f0f6dc772e064627c9eecf52321561e686e22bbc43cd9860ed9fd0ac2574e101bb85e50d3414779d37cfa2e5
-Size (blinken-22.08.1.tar.xz) = 2715984 bytes
+BLAKE2s (blinken-23.04.3.tar.xz) = 8725082cb57791c4b15fc71826017d87c2e6b4b863072ffe9a922de0333cd39a
+SHA512 (blinken-23.04.3.tar.xz) = b5a9678352a2ba57c0cbdb51ffbd2d947ea10e897e262125678b7b3dd91d300615a67d03eede6d6da4ef9b8c9e4ff704161620c160802d27c7552ab3a112c2c2
+Size (blinken-23.04.3.tar.xz) = 2723768 bytes
