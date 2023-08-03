@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4725 2023/08/03 13:15:40 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4726 2023/08/03 13:19:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6775,3 +6775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Getopt-Euclid to 0.4.6 [wen 2023-08-03]
 	Updated devel/p5-Getopt-Long-Descriptive to 0.111 [wen 2023-08-03]
 	Updated devel/p5-Git-CPAN-Patch to 2.5.0 [wen 2023-08-03]
+	Updated devel/p5-Log-Any to 1.716 [wen 2023-08-03]
