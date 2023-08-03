@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/06/06 12:42:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.66 2023/08/03 02:17:34 markd Exp $
 
 DISTNAME=	krfb-${KAPPSVER}
 PKGREVISION=	7
@@ -8,6 +8,7 @@ HOMEPAGE=	https://apps.kde.org/krfb/
 COMMENT=	KDE desktop sharing
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
+KAPPSVER=	22.08.1
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
