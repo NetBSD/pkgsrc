@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:29 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:10:50 markd Exp $
 
-BLAKE2s (kmahjongg-22.08.1.tar.xz) = 9e79375b112caadd2c9dc9028e864cf4db8e72776ffcb70d9c8928e93b8d5530
-SHA512 (kmahjongg-22.08.1.tar.xz) = d44932dc95c7fe06bfe7c560838cfe82078ea34a1889c320e9bfdf2d4fd2f91779d1c2dfcf68b292bdc60711e3e8d245bf65217f9c2935b400fa3569802b1a40
-Size (kmahjongg-22.08.1.tar.xz) = 4072636 bytes
+BLAKE2s (kmahjongg-23.04.3.tar.xz) = 33b497cbe7f82525e1481851e8e37b3da7760dc4facf9603b28a0c6b27fe4724
+SHA512 (kmahjongg-23.04.3.tar.xz) = 96751b96d46e951e5b2234dcbe6c9685b617083d19e104b6f182759abb7220490141b9a3e56696782c4e420262cc2008b52829d31cbba89839307cb2af1a5080
+Size (kmahjongg-23.04.3.tar.xz) = 4096548 bytes
