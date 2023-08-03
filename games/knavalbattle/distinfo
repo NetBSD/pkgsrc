@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:30 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:12:47 markd Exp $
 
-BLAKE2s (knavalbattle-22.08.1.tar.xz) = 0067e062880ecd7ea5553cabf8a1d14abdc899094fcfa33b641d2dc0371b100c
-SHA512 (knavalbattle-22.08.1.tar.xz) = 2e20e6010a75892eb290519f435a0321b6f1a960f07930e3f4094a8a171b8a12b85ef8df92abaae4282d5e9fd7fe57fe0b5f5f14b3a530e3790482dc3d1c7765
-Size (knavalbattle-22.08.1.tar.xz) = 1380608 bytes
+BLAKE2s (knavalbattle-23.04.3.tar.xz) = 37cc7a983579b677f6e9c021c5959e65a956e988be47c348b2415dd3ffe9976d
+SHA512 (knavalbattle-23.04.3.tar.xz) = 7bd5805421f3745697a2f6f76329c08715a4899754d8a966a01c00bec2b9a01809d91172cbc3cb6b4449a4f6c5ed0cde59ac6159ebd69950e61377edc4444cb7
+Size (knavalbattle-23.04.3.tar.xz) = 1401164 bytes
