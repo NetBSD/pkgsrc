@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:16:41 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/08/03 13:13:39 wen Exp $
 
-BLAKE2s (Git-CPAN-Patch-2.3.4.tar.gz) = 14c96a7b30a05b7c0dcb3a15a98babc05646629679cdb8c029b0c4a28edb75a2
-SHA512 (Git-CPAN-Patch-2.3.4.tar.gz) = 901b421220a5d63b34d4398381bf3146c4ebf2c3fb771a198c928df667328cd3e934a28c0b1e4fd5e0743eb07d06f21c75c31f852630bc799f7ebf69ce92ccb7
-Size (Git-CPAN-Patch-2.3.4.tar.gz) = 60925 bytes
+BLAKE2s (Git-CPAN-Patch-2.5.0.tar.gz) = 2f55a6250e9a042111c59700f7718b48411f29477ce3da3cb36ea79c29b6be9a
+SHA512 (Git-CPAN-Patch-2.5.0.tar.gz) = fa4526cbacaf834aca767760d1f0a33670c3226cbe013f41495119ff9676fee4b3826db0aeb39eb2623a6c34475d9e1650de783feadd532fa7b338c8d0f2cbd6
+Size (Git-CPAN-Patch-2.5.0.tar.gz) = 62318 bytes
