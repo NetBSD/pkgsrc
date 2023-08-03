@@ -1,7 +1,6 @@
-$NetBSD: patch-Makelists,v 1.2 2023/08/02 14:32:46 ryoon Exp $
+$NetBSD: patch-Makelists,v 1.3 2023/08/03 03:57:28 ryoon Exp $
 
-Avoid to unconditionally pass -DHAVE_* flags: this breaks lcms2 that
-gets recognized as lcms2mt.
+* Disable JPEX XR support.
 
 --- Makelists.orig	2021-10-05 10:44:43.000000000 +0000
 +++ Makelists
