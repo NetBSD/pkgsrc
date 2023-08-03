@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/29 01:03:51 markd Exp $
+$NetBSD: distinfo,v 1.8 2023/08/03 04:10:31 markd Exp $
 
-BLAKE2s (khelpcenter-22.08.1.tar.xz) = 695a414b7293b25f512394dcd7a39263287fde63329438ce3483a16ea5cc3ec2
-SHA512 (khelpcenter-22.08.1.tar.xz) = de3d82e5f7a7a9e1da51e50b0f0f237f85b58260310f2349bc26cf6835c27c7174279105cdf3f81b40ee79fcf3b9be386e7f11f3212ad4f258781e9f64ee8073
-Size (khelpcenter-22.08.1.tar.xz) = 4310428 bytes
+BLAKE2s (khelpcenter-23.04.3.tar.xz) = be5bf91e2024df4ea768e1a38ae055efe6b2b0f3e2a548a16093c18e89639240
+SHA512 (khelpcenter-23.04.3.tar.xz) = 14cd545000de0eda4c3294da9f263bd56bf38d351baa830911795527a557964ff06ad382c21ff00d5d04427bd7d866f21369ee5375088006fc86292b0e4572a5
+Size (khelpcenter-23.04.3.tar.xz) = 4369080 bytes
