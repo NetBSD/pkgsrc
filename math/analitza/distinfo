@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 00:57:54 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 04:00:01 markd Exp $
 
-BLAKE2s (analitza-22.08.1.tar.xz) = c16d7490a85dabf96979f67c442ab84910ab6a03198575ee7d0d55b8629f5b9b
-SHA512 (analitza-22.08.1.tar.xz) = c6485679319bcd339181316322d371d6fccc834fdb2fdb26478290d61e1eae8f3f7df2a7bef996023d8fbf3948460aa9fd3c9f72d1c0d64c29f8bd05b23acf3a
-Size (analitza-22.08.1.tar.xz) = 349192 bytes
+BLAKE2s (analitza-23.04.3.tar.xz) = 8374798b9218226f1760b8766c2d084e35aa0bc33eb1506fdef7127081fd175f
+SHA512 (analitza-23.04.3.tar.xz) = e58f94f83703928a31a5c59dc073a8e04145e824ef3bc9651811f8b80b5057fbd4fd605fc5abce905f4f57ab2a7fe6b31bee01d4241e91bfed1de2d2d6ba0c2d
+Size (analitza-23.04.3.tar.xz) = 353156 bytes
