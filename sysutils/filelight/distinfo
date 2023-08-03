@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/09/29 01:16:44 markd Exp $
+$NetBSD: distinfo,v 1.20 2023/08/03 04:50:51 markd Exp $
 
-BLAKE2s (filelight-22.08.1.tar.xz) = a8cf89cef88a3f09e43f40c6976a99f50e4bca683b63dbce1e64386e27d9e710
-SHA512 (filelight-22.08.1.tar.xz) = 379e83a4749890b2c5106f6802a3cdd524e2f9f7756331d1d4b6abef806ef9d9845f37b2d9db55c02aecc48ebbb633f0ce72ed880e84bd1b7e886c0811ae7f53
-Size (filelight-22.08.1.tar.xz) = 698364 bytes
+BLAKE2s (filelight-23.04.3.tar.xz) = d093ebb724debca317ef29eff1d3b775996f797ed5bb770474913e9dda17d47b
+SHA512 (filelight-23.04.3.tar.xz) = ff1661c986a2c5d061ee6cfab41c99e06438b21562456de82dbc7fe72f717f20d883e4e9cd8db7d4f6e41aa5f81c6f27b50658db3d5b14b19b6f66c86ba0407a
+Size (filelight-23.04.3.tar.xz) = 697160 bytes
