@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/09/29 01:03:52 markd Exp $
+$NetBSD: distinfo,v 1.19 2023/08/03 04:18:49 markd Exp $
 
-BLAKE2s (kmousetool-22.08.1.tar.xz) = e0d5f921937f994aad57e65f8245e1f10cf669c13896046fb0b819a722df2286
-SHA512 (kmousetool-22.08.1.tar.xz) = 35c7119873092489f76091039afc22d49edc235e678387d223bc611170e75fc611db716bd81d52e8a49c354b3c999a2c4ba40d0e318ebe1404f1479ccec5226b
-Size (kmousetool-22.08.1.tar.xz) = 122192 bytes
+BLAKE2s (kmousetool-23.04.3.tar.xz) = efbfb91d0c5a02d041ac8f9f7ff813301dcb23386019dbcf2d2dd4719df1a5af
+SHA512 (kmousetool-23.04.3.tar.xz) = 9725ab1552c037a4c53e46e3ae4e817d1943c7a5ae92c09f07c028e07d8bd9cfa940ad04c8dfed2629f193c568535c5ec236a537f0a9025a8369eecc42f63c24
+Size (kmousetool-23.04.3.tar.xz) = 129436 bytes
