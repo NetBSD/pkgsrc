@@ -1,0 +1,23 @@
+xt is a cross-format translator for JSON, YAML, TOML, and MessagePack.
+
+xt is built to do one thing well, and tries to maintain a minimal interface and
+feature set.
+The most common options are -t to specify an output format other than JSON, and
+one or more files to read from rather than standard input.
+
+Some of xt's notable features include:
+ - Automatic Format Detection
+   When the input format is not specified with the -f option, xt can detect it
+   automatically by file extension, or by examining the content of the input
+   stream itself.
+ - Multi-Document Support
+   With most output formats, xt can translate multiple input files, each
+   containing one or more independent documents, to a single output stream.
+   For example, a set of YAML files with documents separated by --- markers can
+   translate to a single stream of newline-delimited JSON objects. With format
+   detection enabled, xt can even translate input files in different formats to
+   a single output.
+ - Streaming Translation
+   xt can translate multi-document inputs from unbounded sources like shell
+   pipes with minimal buffering, while still supporting features like automatic
+   format detection. Streaming is enabled automatically whenever it's required.
