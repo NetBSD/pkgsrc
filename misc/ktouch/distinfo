@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2022/09/29 01:03:52 markd Exp $
+$NetBSD: distinfo,v 1.17 2023/08/03 04:25:08 markd Exp $
 
-BLAKE2s (ktouch-22.08.1.tar.xz) = 367097139485f6401f17c50f02d886fc0f11d9b74c67fe2dfc4664d9a972ca74
-SHA512 (ktouch-22.08.1.tar.xz) = 5503c02a30ca4cbfe82b11da9ad3858e0afee9a9334f7c98f047e1ef248f1dda7651ddfa16e5632037eadc86d82ea3c7c32e833ba329bfa743d3e80c5b94aa4f
-Size (ktouch-22.08.1.tar.xz) = 4990320 bytes
+BLAKE2s (ktouch-23.04.3.tar.xz) = 03144c0b42a9fa2876ab5a7f5d9a2a6b540ac6b8f8dcc3effb6d170ef189e5a3
+SHA512 (ktouch-23.04.3.tar.xz) = e2b25a8c170a8ff5ab2b2cced565c7ae548d9ffbfff0afc69d23691ecd37392bedfea74e0b3d3c0561078cab1112334b6c4c04b69f5c4c2ef6d0b7ff9c6aafeb
+Size (ktouch-23.04.3.tar.xz) = 5034240 bytes
