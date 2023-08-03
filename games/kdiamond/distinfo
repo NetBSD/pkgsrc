@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:28 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 02:58:38 markd Exp $
 
-BLAKE2s (kdiamond-22.08.1.tar.xz) = 4aaf22a76ab3afaf78eed75c9ba6bbcd02c4e8435069b670f8c380d8a13f48b3
-SHA512 (kdiamond-22.08.1.tar.xz) = 66ce1a527e74edfb767b80c289ad6dbfe90fa525da2404d76b96f193f15a79da9d42c5e28a49c63e5859cb72a9d52244803b595fa393536c4d21a49fc6f4ef64
-Size (kdiamond-22.08.1.tar.xz) = 4703488 bytes
+BLAKE2s (kdiamond-23.04.3.tar.xz) = df50dbffccace9b6b825bb0b9a6f4bee22424549b0b8907a29de2745851ff44d
+SHA512 (kdiamond-23.04.3.tar.xz) = 6e7d37888bda201b542c51c1739a9af9e3186f613bdc0429b712cbead240c4f389257369b8943eae828eb729633a034fbde7342a6f7aae7c48e4de97c669c34a
+Size (kdiamond-23.04.3.tar.xz) = 4708496 bytes
