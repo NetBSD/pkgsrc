@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:38:16 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 02:29:07 markd Exp $
 
-BLAKE2s (kcachegrind-22.08.1.tar.xz) = f99b24961099b8511eadab045e42d7ead89d61b34e6a1100a0d432d4fba19253
-SHA512 (kcachegrind-22.08.1.tar.xz) = 14e58799b72c7e68b4d9d6482543d7ae628604abddb0987921c40c2357b7a13454036947df249462db943fd969279b3411825adda6d027723904458b2964082c
-Size (kcachegrind-22.08.1.tar.xz) = 879428 bytes
+BLAKE2s (kcachegrind-23.04.3.tar.xz) = 778cd8f186334512ceddf77b3c2e05c843e7e1f4c2bc6e5b0803b28c36ce3952
+SHA512 (kcachegrind-23.04.3.tar.xz) = 191edbcc5ff6f10d4f5668b0c3cdfef97aca440ad79c0e0c0fb8e34a80dff1b2eac4662070ae5f445eaf20836dc74f1ed877284b645fa0383cd5b95ebcbef5c7
+Size (kcachegrind-23.04.3.tar.xz) = 920056 bytes
