@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/09/29 00:57:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/03 04:00:59 markd Exp $
 bin/cantor
 bin/cantor_pythonserver
 bin/cantor_scripteditor
@@ -70,7 +70,6 @@ share/cantor/octave/graphic_packages.xml
 share/cantor/octavebackend/cantor_eigenvectors.m
 share/cantor/octavebackend/cantor_plot2d.m
 share/cantor/octavebackend/cantor_plot3d.m
-share/cantor/octavebackend/cantor_print.m
 share/cantor/python/graphic_packages.xml
 share/cantor/sagebackend/cantor-execsage
 share/cantor/xslt/latex.xsl
@@ -212,6 +211,7 @@ share/locale/hu/LC_MESSAGES/cantor.mo
 share/locale/ia/LC_MESSAGES/cantor.mo
 share/locale/it/LC_MESSAGES/cantor.mo
 share/locale/ja/LC_MESSAGES/cantor.mo
+share/locale/ka/LC_MESSAGES/cantor.mo
 share/locale/kk/LC_MESSAGES/cantor.mo
 share/locale/ko/LC_MESSAGES/cantor.mo
 share/locale/lt/LC_MESSAGES/cantor.mo
@@ -231,6 +231,8 @@ share/locale/ru/LC_MESSAGES/cantor.mo
 share/locale/sk/LC_MESSAGES/cantor.mo
 share/locale/sl/LC_MESSAGES/cantor.mo
 share/locale/sv/LC_MESSAGES/cantor.mo
+share/locale/ta/LC_MESSAGES/cantor.mo
+share/locale/th/LC_MESSAGES/cantor.mo
 share/locale/tr/LC_MESSAGES/cantor.mo
 share/locale/ug/LC_MESSAGES/cantor.mo
 share/locale/uk/LC_MESSAGES/cantor.mo
