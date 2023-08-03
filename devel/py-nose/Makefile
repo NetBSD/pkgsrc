@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/03/29 09:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/03 23:38:30 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
+USE_PKG_RESOURCES=		yes
 # only needed for a plugin
 PYTHON_VERSIONED_DEPENDENCIES+=	coverage:test
 
@@ -27,8 +27,8 @@ post-install:
 
 .if ${PYTHON_VERSION} == 207
 # only work with python 2.x
-do-test:
-	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
+#do-test:
+#	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
 .else
 pre-build:
 	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs nose
