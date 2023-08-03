@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:39:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/03 08:20:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requests_kerberos/__init__.py
 ${PYSITELIB}/requests_kerberos/__init__.pyc
 ${PYSITELIB}/requests_kerberos/__init__.pyo
-${PYSITELIB}/requests_kerberos/compat.py
-${PYSITELIB}/requests_kerberos/compat.pyc
-${PYSITELIB}/requests_kerberos/compat.pyo
 ${PYSITELIB}/requests_kerberos/exceptions.py
 ${PYSITELIB}/requests_kerberos/exceptions.pyc
 ${PYSITELIB}/requests_kerberos/exceptions.pyo
