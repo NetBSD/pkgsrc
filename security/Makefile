@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.909 2023/08/03 08:33:17 adam Exp $
+# $NetBSD: Makefile,v 1.910 2023/08/03 08:36:48 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -475,7 +475,6 @@ SUBDIR+=	py-hkdf
 SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-josepy
-SUBDIR+=	py-kerberos
 SUBDIR+=	py-keyring
 SUBDIR+=	py-keyrings.alt
 SUBDIR+=	py-krb5
