@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:51 nia Exp $
-
-BLAKE2s (urllib2_kerberos-0.1.6.tar.gz) = 48cbdff06394dacc70ec1cf205cbd91fd253856a5bc5a1acf4c2b099dc232229
-SHA512 (urllib2_kerberos-0.1.6.tar.gz) = 81bdb1c419354617e308500210e31a67bcd68a48e7644259e7ed896d7d72389a9ecc9368a71b6b3f3ba08814b85412f327216ba54400d9075f95a626862d2f01
-Size (urllib2_kerberos-0.1.6.tar.gz) = 3257 bytes
