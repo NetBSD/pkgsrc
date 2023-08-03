@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/06/06 12:41:29 riastradh Exp $
+# $NetBSD: Makefile,v 1.63 2023/08/03 03:31:35 markd Exp $
 
 DISTNAME=	lskat-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/lskat/
