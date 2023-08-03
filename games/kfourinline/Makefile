@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/06/06 12:41:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.63 2023/08/03 02:59:37 markd Exp $
 
 DISTNAME=	kfourinline-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kfourinline/
