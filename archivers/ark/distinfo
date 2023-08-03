@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/09/29 00:24:54 markd Exp $
+$NetBSD: distinfo,v 1.18 2023/08/03 02:21:01 markd Exp $
 
-BLAKE2s (ark-22.08.1.tar.xz) = 9382d9502de357a747b95540191f6a7941fd4c74c4c74aae0758acc7eb77be4c
-SHA512 (ark-22.08.1.tar.xz) = 8d18b5ec805502c26f31f4993db52dddf6f6c61ed23fd7b69402a9ac0fcbc9d38e178d6d9c053b19b33805716ddba49cbc8f7974e0fe0e3c55f12a5dc104fb22
-Size (ark-22.08.1.tar.xz) = 2784252 bytes
+BLAKE2s (ark-23.04.3.tar.xz) = 4bbfa4b59e952b6856b8882d1b75224afaeb2289ea545449b1833a8bc9938120
+SHA512 (ark-23.04.3.tar.xz) = 6ca740fef459232cf7ff19d76b2ddcb080b8c9b34a0c718dae0875253417a6f3f8f9c4a7bd2bc5002ae06bb41eef7f958a40f0d54896680e82879ef0f1cbed10
+Size (ark-23.04.3.tar.xz) = 3010636 bytes
