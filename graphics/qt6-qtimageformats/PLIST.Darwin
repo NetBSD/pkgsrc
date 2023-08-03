@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2023/08/03 20:04:47 adam Exp $
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets-release.cmake
+qt6/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets.cmake
+qt6/plugins/imageformats/libqmacheif.so
