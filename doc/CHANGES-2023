@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4716 2023/08/03 07:14:07 wen Exp $
+$NetBSD: CHANGES-2023,v 1.4717 2023/08/03 08:10:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6759,3 +6759,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/ktextaddons version 1.3.2 [markd 2023-08-03]
 	Updated devel/p5-Moose to 2.2206 [wen 2023-08-03]
 	Updated devel/p5-Perl-Tidy to 20230701 [wen 2023-08-03]
+	Updated devel/py-debugpy to 1.6.8 [adam 2023-08-03]
+	Updated devel/py-packageurl to 0.11.2 [adam 2023-08-03]
+	Updated net/py-comm to 0.1.4 [adam 2023-08-03]
+	Updated devel/py-jaraco.itertools to 6.4.1 [adam 2023-08-03]
