@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 01:07:05 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 04:33:35 markd Exp $
 
-BLAKE2s (audiocd-kio-22.08.1.tar.xz) = 1d198ff28221d22b5c4c6f3046e6df049f875a1a9080915c03bb639685b9ade4
-SHA512 (audiocd-kio-22.08.1.tar.xz) = f9d42492e321448a5255a3e968e7b7a67556e0637266383a0fd89d9808a699ee3bd3aba1d9350204ff3436ec95ba50119135a5ac9f6ca7169ec1eac79cce36bf
-Size (audiocd-kio-22.08.1.tar.xz) = 526656 bytes
+BLAKE2s (audiocd-kio-23.04.3.tar.xz) = ea85f27848d9da9c5c5e43c721e3f8be86cb71ffc3878efccd742a76e1a870f6
+SHA512 (audiocd-kio-23.04.3.tar.xz) = a10315c4ec5a529421adbab64a3f8fe02cf0e13bb5b501a4b57bd2d58522be0118d80fef8853d8dc178e75e04572b584f487aafb6f991068149159dbb6391ab7
+Size (audiocd-kio-23.04.3.tar.xz) = 562340 bytes
