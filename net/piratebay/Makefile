@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/08/31 20:26:47 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/03 18:22:55 pin Exp $
 
-DISTNAME=	piratebay-0.1.5
+DISTNAME=	piratebay-0.1.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsirysndr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,14 +14,8 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
 
-INSTALLATION_DIRS=	bin
-
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/piratebay \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
