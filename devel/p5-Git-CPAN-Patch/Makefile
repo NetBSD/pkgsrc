@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/07/06 09:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/03 13:13:39 wen Exp $
 
-DISTNAME=	Git-CPAN-Patch-2.3.4
+DISTNAME=	Git-CPAN-Patch-2.5.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
@@ -17,7 +16,6 @@ DEPENDS+=	p5-Archive-Any-[0-9]*:../../archivers/p5-Archive-Any
 DEPENDS+=	p5-BackPAN-Index>=0.39:../../devel/p5-BackPAN-Index
 DEPENDS+=	p5-CPANPLUS-[0-9]*:../../devel/p5-CPANPLUS
 DEPENDS+=	p5-CPAN-ParseDistribution-[0-9]*:../../devel/p5-CPAN-ParseDistribution
-DEPENDS+=	p5-CLASS-[0-9]*:../../devel/p5-CLASS
 DEPENDS+=	p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
 DEPENDS+=	p5-File-chdir-[0-9]*:../../devel/p5-File-chdir
 DEPENDS+=	p5-File-chmod-[0-9]*:../../sysutils/p5-File-chmod
