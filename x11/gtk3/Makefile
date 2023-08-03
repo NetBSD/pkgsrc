@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2023/08/02 16:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.188 2023/08/03 21:06:46 nia Exp $
 
 DISTNAME=	gtk+-3.24.38
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -20,7 +20,8 @@ USE_TOOLS+=		bash gdbus-codegen ggrep msgmerge perl pkg-config xgettext
 PTHREAD_AUTO_VARS=	yes
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-FORCE_C_STD=	c99
+# tests need M_PI, ISO C unacceptable on illumos
+FORCE_C_STD=	gnu99
 
 MESON_ARGS+=	-Dgtk_doc=true
 MESON_ARGS+=	-Dman=true
