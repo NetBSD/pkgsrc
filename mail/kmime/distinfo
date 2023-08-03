@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/09/29 00:56:13 markd Exp $
+$NetBSD: distinfo,v 1.8 2023/08/03 03:57:05 markd Exp $
 
-BLAKE2s (kmime-22.08.1.tar.xz) = 17907bfa379729de5ce33c0aa8bf20fbc8c8e7dc6543f74d03e5873286b0f7b6
-SHA512 (kmime-22.08.1.tar.xz) = ba467a2e5448fb3fed1692766aa672ba1d7d9f89050298f490becd4d7bf50432bcb06b6dba2527704493da8f7e73352c1b875c8d6ee7170e2db391d6223654e0
-Size (kmime-22.08.1.tar.xz) = 156412 bytes
+BLAKE2s (kmime-23.04.3.tar.xz) = b1cb89cfee377d704e4e404a9863d17a4b706b20e3773e5674bb9bd0ab32c06e
+SHA512 (kmime-23.04.3.tar.xz) = 36fcf4b084988603b6dc191060f3b12a485dd9fcaae84010cfbba1b3c2ee36d01ab0a560312ca139f7c87075c375177d58cd0c8914caacecafdbbb1ae6b074e4
+Size (kmime-23.04.3.tar.xz) = 162372 bytes
