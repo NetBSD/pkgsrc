@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2023/06/06 12:41:59 riastradh Exp $
+# $NetBSD: Makefile,v 1.64 2023/08/03 04:35:07 markd Exp $
 
 DISTNAME=	dragon-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://apps.kde.org/dragonplayer/
@@ -18,7 +17,7 @@ SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
 SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	misc/CMakeLists.txt
-SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/dragonplayerrc \
