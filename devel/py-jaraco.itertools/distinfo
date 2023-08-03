@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/11/06 18:43:30 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/08/03 08:09:48 adam Exp $
 
-BLAKE2s (jaraco.itertools-6.2.1.tar.gz) = 137a6a9a9a91018462d255a1340bf66771dc8e8305f0d02ea03ba0b757932baa
-SHA512 (jaraco.itertools-6.2.1.tar.gz) = 7b4c27143848d899472a9ce207819062719adbef2cf038754c9236fee7da39f62238b85f8d83bdc41bf5a37e8d102e79dd4afbc6efa46c2d7c7ca04c032c67d3
-Size (jaraco.itertools-6.2.1.tar.gz) = 16813 bytes
+BLAKE2s (jaraco.itertools-6.4.1.tar.gz) = 866ef8aabda1d32833bbdf0aa73177369aac82e1380e908c02127512daa569b5
+SHA512 (jaraco.itertools-6.4.1.tar.gz) = 57c3ce37d1fb39c7140fc0581bbeacd75479ae1c375af4041144d41bf184299898069418e046f21872c290708ccb44728d1111cb3cfffac4a1d703f1cb86a70a
+Size (jaraco.itertools-6.4.1.tar.gz) = 18202 bytes
