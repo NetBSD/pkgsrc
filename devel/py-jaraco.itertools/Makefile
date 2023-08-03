@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/11/16 22:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/03 08:09:48 adam Exp $
 
-DISTNAME=	jaraco.itertools-6.2.1
+DISTNAME=	jaraco.itertools-6.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.itertools/}
