@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2023/06/06 12:42:35 riastradh Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/03 05:00:07 markd Exp $
 
 DISTNAME=	ktimer-${KAPPSVER}
-PKGREVISION=	6
 CATEGORIES=	time
 
 HOMEPAGE=	https://kde.org/applications/utilities/ktimer/
