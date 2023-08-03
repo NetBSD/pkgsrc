@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/09/29 00:47:29 markd Exp $
+$NetBSD: distinfo,v 1.14 2023/08/03 03:05:02 markd Exp $
 
-BLAKE2s (killbots-22.08.1.tar.xz) = 247f5432ad3031c2d7f0ddc33807922fbc8e59bb4aa6e6defff146e582209cec
-SHA512 (killbots-22.08.1.tar.xz) = 838b29810fda66ff13d85e8c5dd2384f5107251f6468d2e2ac64ee0e592220ac2e21535868b4297e4de7ce2c78dff3f0818a3c979c07bcaebe3c3143a9cde6f3
-Size (killbots-22.08.1.tar.xz) = 1197928 bytes
+BLAKE2s (killbots-23.04.3.tar.xz) = 524ee0d805aea44479b68d2de99528694a334c058e5865047d6e5f1d45ec984a
+SHA512 (killbots-23.04.3.tar.xz) = 5bf884bdd1a6248a74d919f01fce9aae5e9e0e5ac462a44e55ea50d916a788fc5928c71f1ea929a706825664366b6a8f55e6e91144a66ec3431d22cb0865ae65
+Size (killbots-23.04.3.tar.xz) = 1202264 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/09/29 00:47:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/03 03:05:02 markd Exp $
 bin/killbots
 share/applications/org.kde.killbots.desktop
 share/config.kcfg/killbots.kcfg
@@ -85,11 +85,13 @@ share/locale/id/LC_MESSAGES/killbots.mo
 share/locale/is/LC_MESSAGES/killbots.mo
 share/locale/it/LC_MESSAGES/killbots.mo
 share/locale/ja/LC_MESSAGES/killbots.mo
+share/locale/ka/LC_MESSAGES/killbots.mo
 share/locale/kk/LC_MESSAGES/killbots.mo
 share/locale/km/LC_MESSAGES/killbots.mo
 share/locale/ko/LC_MESSAGES/killbots.mo
 share/locale/lt/LC_MESSAGES/killbots.mo
 share/locale/lv/LC_MESSAGES/killbots.mo
+share/locale/mai/LC_MESSAGES/killbots.mo
 share/locale/ml/LC_MESSAGES/killbots.mo
 share/locale/mr/LC_MESSAGES/killbots.mo
 share/locale/nb/LC_MESSAGES/killbots.mo
@@ -104,6 +106,9 @@ share/locale/ru/LC_MESSAGES/killbots.mo
 share/locale/sk/LC_MESSAGES/killbots.mo
 share/locale/sl/LC_MESSAGES/killbots.mo
 share/locale/sr/LC_MESSAGES/killbots.mo
+share/locale/sr@ijekavian/LC_MESSAGES/killbots.mo
+share/locale/sr@ijekavianlatin/LC_MESSAGES/killbots.mo
+share/locale/sr@latin/LC_MESSAGES/killbots.mo
 share/locale/sv/LC_MESSAGES/killbots.mo
 share/locale/tr/LC_MESSAGES/killbots.mo
 share/locale/ug/LC_MESSAGES/killbots.mo
