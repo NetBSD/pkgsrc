@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/08/02 14:32:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.107 2023/08/03 14:16:22 ryoon Exp $
 
 DISTNAME=	mupdf-1.22.2-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -29,6 +29,9 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 .include "options.mk"
 
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
+# thirdparty/lcms2 is not removed intentionally because ICC support requires
+# the internal lcms2 library. ICC support is essential to display some PDF
+# files with proper colors.
 ppost-extract:
 	${RM} -fr \
 	    ${WRKSRC}/thirdparty/curl \
