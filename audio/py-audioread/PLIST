@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/12/03 18:15:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/04 08:30:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/audioread/__init__.py
 ${PYSITELIB}/audioread/__init__.pyc
 ${PYSITELIB}/audioread/__init__.pyo
+${PYSITELIB}/audioread/base.py
+${PYSITELIB}/audioread/base.pyc
+${PYSITELIB}/audioread/base.pyo
 ${PYSITELIB}/audioread/exceptions.py
 ${PYSITELIB}/audioread/exceptions.pyc
 ${PYSITELIB}/audioread/exceptions.pyo
