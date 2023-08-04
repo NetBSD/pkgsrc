@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/04 09:33:44 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_mypy_plugins/__init__.py
+${PYSITELIB}/pytest_mypy_plugins/__init__.pyc
+${PYSITELIB}/pytest_mypy_plugins/__init__.pyo
+${PYSITELIB}/pytest_mypy_plugins/collect.py
+${PYSITELIB}/pytest_mypy_plugins/collect.pyc
+${PYSITELIB}/pytest_mypy_plugins/collect.pyo
+${PYSITELIB}/pytest_mypy_plugins/configs.py
+${PYSITELIB}/pytest_mypy_plugins/configs.pyc
+${PYSITELIB}/pytest_mypy_plugins/configs.pyo
+${PYSITELIB}/pytest_mypy_plugins/item.py
+${PYSITELIB}/pytest_mypy_plugins/item.pyc
+${PYSITELIB}/pytest_mypy_plugins/item.pyo
+${PYSITELIB}/pytest_mypy_plugins/py.typed
+${PYSITELIB}/pytest_mypy_plugins/utils.py
+${PYSITELIB}/pytest_mypy_plugins/utils.pyc
+${PYSITELIB}/pytest_mypy_plugins/utils.pyo
