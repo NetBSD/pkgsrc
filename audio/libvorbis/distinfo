@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 09:59:10 nia Exp $
+$NetBSD: distinfo,v 1.31 2023/08/04 07:00:57 adam Exp $
 
 BLAKE2s (libvorbis-1.3.7.tar.xz) = dd92a6ac2fb16b8f03120cc9c96d102a32a93cca50e867c030ee41411f0149f7
 SHA512 (libvorbis-1.3.7.tar.xz) = bbf5f11f623d959b3ba98d6b52806521b0b918b59b867f0658c153ea1013293364eead4987e9e71f8798021379310860a2e548fcf89d10caf23d45e41aba45cd
 Size (libvorbis-1.3.7.tar.xz) = 1203792 bytes
+SHA1 (patch-configure) = 2b22bad31bbd20b521eff833bba96df3e881cf10
