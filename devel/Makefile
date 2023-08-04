@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4037 2023/08/04 09:33:43 adam Exp $
+# $NetBSD: Makefile,v 1.4038 2023/08/04 19:24:22 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3104,6 +3104,7 @@ SUBDIR+=	qjson
 SUBDIR+=	qore-uuid-module
 SUBDIR+=	qt6-qt5compat
 SUBDIR+=	qt6-qttools
+SUBDIR+=	qt6-qtwayland
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	radamsa
