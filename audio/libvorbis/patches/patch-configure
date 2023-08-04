@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2023/08/04 07:00:58 adam Exp $
+
+-force_cpusubtype_ALL is not supported on Darwin with ARM CPU.
+
+--- configure.orig	2023-08-04 05:28:06.000000000 +0000
++++ configure
+@@ -12840,9 +12840,9 @@ rm -f core conftest.err conftest.$ac_obj
+ 		CFLAGS="-O3 -Wall -Wextra -ffast-math -D__NO_MATH_INLINES -fsigned-char $sparc_cpu"
+ 		PROFILE="-pg -g -O3 -D__NO_MATH_INLINES -fsigned-char $sparc_cpu" ;;
+ 	*-*-darwin*)
+-		DEBUG="-DDARWIN -fno-common -force_cpusubtype_ALL -Wall -g -O0 -fsigned-char"
+-		CFLAGS="-DDARWIN -fno-common -force_cpusubtype_ALL -Wall -g -O3 -ffast-math -fsigned-char"
+-		PROFILE="-DDARWIN -fno-common -force_cpusubtype_ALL -Wall -g -pg -O3 -ffast-math -fsigned-char";;
++		DEBUG="-DDARWIN -fno-common -Wall -g -O0 -fsigned-char"
++		CFLAGS="-DDARWIN -fno-common -Wall -g -O3 -ffast-math -fsigned-char"
++		PROFILE="-DDARWIN -fno-common -Wall -g -pg -O3 -ffast-math -fsigned-char";;
+ 	*-*-os2*)
+ 		# Use -W instead of -Wextra because gcc on OS/2 is an old version.
+ 		DEBUG="-g -Wall -W -D_REENTRANT -D__NO_MATH_INLINES -fsigned-char"
