@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/10/31 21:59:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/04 05:18:06 adam Exp $
 
-DISTNAME=	pyaml-21.10.1
+DISTNAME=	pyaml-23.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyaml/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-Unidecode
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
