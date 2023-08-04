@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/25 11:12:32 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/08/04 09:52:31 adam Exp $
 
-BLAKE2s (loguru-0.6.0.tar.gz) = bb3ce29dbbaab45db804616cf3a924f9e9e5d52a7ce6ec45b2bf6a1b5519ef84
-SHA512 (loguru-0.6.0.tar.gz) = 81b300cd612e5949b6cdb478664cad1b94246c16f9de6a3a733d6250649c366f7d3905f5633fa8b747feafc8906ef9422d13e5e2f8317e14d6e021decefa6ed9
-Size (loguru-0.6.0.tar.gz) = 123158 bytes
+BLAKE2s (loguru-0.7.0.tar.gz) = a95961d78d01585b41e2af181d5a1717b0461cec05c4f77a1596b3a5b182a8b1
+SHA512 (loguru-0.7.0.tar.gz) = 9644645174c492cebfb9397d901a589684da467eedfc45f77eee7b0323bb0e98b1c4f40c99d259553b0bd11853ae1b5679d9874515a65aec87792b332e062e20
+Size (loguru-0.7.0.tar.gz) = 131961 bytes
