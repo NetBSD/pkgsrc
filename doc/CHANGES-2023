@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4741 2023/08/04 07:08:30 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4742 2023/08/04 08:21:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6824,3 +6824,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django3 to 3.2.20 [adam 2023-08-04]
 	Updated devel/py-configargparse to 1.7 [adam 2023-08-04]
 	Updated shells/oh-my-posh to 18.2.2 [pin 2023-08-04]
+	Updated net/py-responses to 0.23.3 [adam 2023-08-04]
+	Updated devel/py-test-checkdocs to 2.10.1 [adam 2023-08-04]
+	Updated net/py-pypiserver to 1.5.2 [adam 2023-08-04]
+	Updated textproc/py-fastjsonschema to 2.18.0 [adam 2023-08-04]
