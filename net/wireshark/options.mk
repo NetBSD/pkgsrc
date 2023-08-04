@@ -1,17 +1,10 @@
-# $NetBSD: options.mk,v 1.32 2023/02/27 11:14:11 wiz Exp $
+# $NetBSD: options.mk,v 1.33 2023/08/04 05:26:59 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		http2 lua spandsp
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		qt5 qt6
-PKG_SUGGESTED_OPTIONS=		http2 lua
-
-.if ${OPSYS} == "Darwin"
-# problems building qt6 on Darwin as of 2023/01/30
-PKG_SUGGESTED_OPTIONS+=	qt5
-.else
-PKG_SUGGESTED_OPTIONS+=	qt6
-.endif
+PKG_SUGGESTED_OPTIONS=		http2 lua qt6
 
 .include "../../mk/bsd.options.mk"
 
