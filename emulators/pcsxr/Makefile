@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/08/02 16:17:16 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/04 17:06:48 nia Exp $
 
 DISTNAME=	pcsxr-1.9.95.20190306
 PKGREVISION=	8
@@ -18,7 +18,8 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=	c99
+# uses typeof, needs GNU extensions
+FORCE_C_STD=	gnu99
 
 .include "../../mk/bsd.prefs.mk"
 
