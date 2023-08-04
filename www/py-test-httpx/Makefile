@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/17 09:59:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/04 05:10:22 adam Exp $
 
-DISTNAME=	pytest_httpx-0.22.0
+DISTNAME=	pytest_httpx-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpx/}
@@ -12,10 +12,15 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.24:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-test>=6.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.21:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
