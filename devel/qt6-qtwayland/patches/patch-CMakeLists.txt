@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/04 19:16:47 adam Exp $
+
+Support all UNIX platforms.
+
+--- CMakeLists.txt.orig	2023-07-07 12:29:08.000000000 +0000
++++ CMakeLists.txt
+@@ -18,7 +18,7 @@ find_package(Qt6 ${PROJECT_VERSION} CONF
+ )
+ qt_internal_project_setup()
+ 
+-if(NOT MACOS AND NOT QNX AND (ANDROID OR NOT LINUX))
++if(NOT UNIX)
+     message(NOTICE "Skipping the build as the condition \"LINUX OR MACOS OR QNX\" is not met.")
+     return()
+ endif()
