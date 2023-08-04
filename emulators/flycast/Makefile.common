@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2023/07/18 18:02:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2023/08/04 14:27:56 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
@@ -16,6 +16,11 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# Theoretically older versions are fine, but internal compiler
+# error with GCC 7...
+# core/hw/sh4/sh4_interrupts.cpp:250:1: internal compiler error: in gen_reg_rtx, at emit-rtl.c:1058
+GCC_REQD+=	10
 
 CMAKE_ARGS+=	-DUSE_HOST_LIBZIP=ON
 CMAKE_ARGS+=	-DUSE_VULKAN=OFF
