@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4750 2023/08/04 20:38:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4751 2023/08/04 22:52:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6843,3 +6843,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.42.0 [adam 2023-08-04]
 	Updated textproc/ugrep to 3.12.5 [adam 2023-08-04]
 	Updated archivers/unrar to 6.2.10 [adam 2023-08-04]
+	Updated www/py-klein to 23.5.0 [adam 2023-08-04]
+	Updated www/py-landslide to 2.0.0 [adam 2023-08-04]
