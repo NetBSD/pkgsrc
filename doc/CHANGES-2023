@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4736 2023/08/03 22:03:29 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4737 2023/08/04 00:35:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6816,3 +6816,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/qt6-qtwebsockets to 6.5.2 [adam 2023-08-03]
 	Updated www/firefox to 116.0 [ryoon 2023-08-03]
 	Updated www/firefox-l10n to 116.0 [ryoon 2023-08-03]
+	Updated meta-pkgs/qt6 to 6.5.2 [gutteridge 2023-08-04]
