@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.48 2023/07/19 11:04:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2023/08/04 20:06:28 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -819,6 +825,9 @@ ${PYSITELIB}/fontTools/varLib/__init__.pyo
 ${PYSITELIB}/fontTools/varLib/__main__.py
 ${PYSITELIB}/fontTools/varLib/__main__.pyc
 ${PYSITELIB}/fontTools/varLib/__main__.pyo
+${PYSITELIB}/fontTools/varLib/avarPlanner.py
+${PYSITELIB}/fontTools/varLib/avarPlanner.pyc
+${PYSITELIB}/fontTools/varLib/avarPlanner.pyo
 ${PYSITELIB}/fontTools/varLib/builder.py
 ${PYSITELIB}/fontTools/varLib/builder.pyc
 ${PYSITELIB}/fontTools/varLib/builder.pyo
@@ -896,10 +905,4 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
