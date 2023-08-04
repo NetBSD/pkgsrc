@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/12/11 18:20:42 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/08/04 22:30:09 adam Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -797,9 +797,9 @@ ${PYSITELIB}/PyQt5/bindings/QtWidgets/qwhatsthis.sip
 ${PYSITELIB}/PyQt5/bindings/QtWidgets/qwidget.sip
 ${PYSITELIB}/PyQt5/bindings/QtWidgets/qwidgetaction.sip
 ${PYSITELIB}/PyQt5/bindings/QtWidgets/qwizard.sip
-${PYSITELIB}/PyQt5/bindings/QtX11Extras/QtX11Extras.toml
-${PYSITELIB}/PyQt5/bindings/QtX11Extras/QtX11Extrasmod.sip
-${PYSITELIB}/PyQt5/bindings/QtX11Extras/qx11info_x11.sip
+${PLIST.x11}${PYSITELIB}/PyQt5/bindings/QtX11Extras/QtX11Extras.toml
+${PLIST.x11}${PYSITELIB}/PyQt5/bindings/QtX11Extras/QtX11Extrasmod.sip
+${PLIST.x11}${PYSITELIB}/PyQt5/bindings/QtX11Extras/qx11info_x11.sip
 ${PYSITELIB}/PyQt5/bindings/QtXml/QtXml.toml
 ${PYSITELIB}/PyQt5/bindings/QtXml/QtXmlmod.sip
 ${PYSITELIB}/PyQt5/bindings/QtXml/qdom.sip

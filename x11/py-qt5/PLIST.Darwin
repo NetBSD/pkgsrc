@@ -1,2 +1,8 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2022/12/02 15:31:37 wiz Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2023/08/04 22:30:09 adam Exp $
 ${PYSITELIB}/PyQt5/QtMacExtras.abi3.so
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/QtMacExtras.toml
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/QtMacExtrasmod.sip
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/qmacpasteboardmime.sip
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/qmactoolbar.sip
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/qmactoolbaritem.sip
+${PYSITELIB}/PyQt5/bindings/QtMacExtras/qtmac.sip
