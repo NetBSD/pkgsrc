@@ -1,0 +1,2 @@
+Qt6 module providing the ability to Qt6 apps on wayland and for writing
+custom display servers based on the wayland protocol using QML and C++ APIs.
