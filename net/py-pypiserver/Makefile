@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/06/06 12:42:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/04 08:17:36 adam Exp $
 
-DISTNAME=	pypiserver-1.5.1
+DISTNAME=	pypiserver-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
+DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-watchdog-[0-9]*:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip

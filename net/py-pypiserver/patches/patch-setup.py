@@ -1,15 +1,15 @@
-$NetBSD: patch-setup.py,v 1.3 2022/05/11 11:01:39 adam Exp $
+$NetBSD: patch-setup.py,v 1.4 2023/08/04 08:17:36 adam Exp $
 
 Do not require setuptools-git for building.
 
---- setup.py.orig	2022-05-01 18:53:34.000000000 +0000
+--- setup.py.orig	2023-07-30 19:33:20.000000000 +0000
 +++ setup.py
-@@ -14,7 +14,7 @@ tests_require = [
+@@ -13,7 +13,7 @@ tests_require = [
      "webtest",
  ]
  
 -setup_requires = ["setuptools", "setuptools-git >= 0.3", "wheel >= 0.25.0"]
 +setup_requires = ["setuptools", "wheel >= 0.25.0"]
+ install_requires = ["pip>=7"]
  
  
- def read_file(rel_path: str):

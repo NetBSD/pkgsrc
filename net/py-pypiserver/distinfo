@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/10/21 08:00:16 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/08/04 08:17:36 adam Exp $
 
-BLAKE2s (pypiserver-1.5.1.zip) = 9e44448e5b061ac58a3277dbc74cce249ba6440d6035b90c2ce7996f7fd29e8f
-SHA512 (pypiserver-1.5.1.zip) = 95c9cd6b22123349fc51b1a5fa97564b852e84d5fa507cca0f0c22f84a92cf5b2023adedeb151ee2dc60967d0232d13735ce190280585745615c8e2664167cfc
-Size (pypiserver-1.5.1.zip) = 197212 bytes
-SHA1 (patch-setup.py) = bb5ab96568ded55d450e564d3adae57f59282ad1
+BLAKE2s (pypiserver-1.5.2.zip) = f91bc70463677363a07251e9cf49423b255277e994324a15dcae84579d8f7e27
+SHA512 (pypiserver-1.5.2.zip) = 0e5e437f7fe7ef5e538d568ac7fc3ac56e7c0c4a6e709c032c531a00fbbe5462e93461494f60e64993fc62622db56f069427cbf9409f345f2a477dde373a2f11
+Size (pypiserver-1.5.2.zip) = 201367 bytes
+SHA1 (patch-setup.py) = 8a9e4de725f3df7beb44e6036abebafc6cedd7b8
