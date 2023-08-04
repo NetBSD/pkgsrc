@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2023/05/13 11:55:55 gdt Exp $
+$NetBSD: distinfo,v 1.41 2023/08/04 13:11:24 gdt Exp $
 
 BLAKE2s (ufraw-0.22.tar.gz) = 37f6aa87db1a0ccb0497364a8bf40eaf17cf0082b617b8603b74a8e7bc791cf2
 SHA512 (ufraw-0.22.tar.gz) = a42eff5052c18afec90245cf97ceeade78e3f288186cf697ac4abf2e8290d4081db8ac4de3ae47b3774f30a6cb4cbda392099e6fd2125fe751abb40d9b065ad2
@@ -6,4 +6,5 @@ Size (ufraw-0.22.tar.gz) = 1103554 bytes
 SHA1 (patch-dcraw.cc) = 5e9ff01930802b2f92ce28030313c60ef24e1897
 SHA1 (patch-dcraw__api.cc) = 96220c6cca793684122839310883c5d5754916f4
 SHA1 (patch-dcraw__indi.c) = 48415d0d0e00f6652cb745e4f7a86ce71ed82739
-SHA1 (patch-ufraw__exiv2.cc) = c6f3c6bd9ec8cdc3dee1801f9b1972bbe827cd8d
+SHA1 (patch-uf__glib.h) = 522210acde32e1b363f5049628db80f97ff02f7a
+SHA1 (patch-ufraw__exiv2.cc) = cd0d6bd55672393650ecc327566ad27259b58197
