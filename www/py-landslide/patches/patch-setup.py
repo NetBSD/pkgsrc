@@ -1,25 +1,23 @@
-$NetBSD: patch-setup.py,v 1.3 2022/10/25 15:56:21 adam Exp $
+$NetBSD: patch-setup.py,v 1.4 2023/08/04 22:50:55 adam Exp $
 
 Relax dependencies.
 
---- setup.py.orig	2022-06-12 03:45:27.000000000 +0000
+--- setup.py.orig	2023-03-24 03:22:12.000000000 +0000
 +++ setup.py
-@@ -23,12 +23,12 @@ setup(
+@@ -23,11 +23,11 @@ setup(
          'textile'
      ],
      install_requires=[
--        'MarkupSafe==1.1.1',
--        'Jinja2==2.10.1',
--        'Markdown==2.6.11',
--        'Pygments==2.2.0',
--        'docutils==0.14',
--        'six==1.11.0'
-+        'MarkupSafe>=1.1.1',
-+        'Jinja2>=2.10.1',
-+        'Markdown>=2.6.11',
-+        'Pygments>=2.2.0',
-+        'docutils>=0.14',
-+        'six>=1.11.0'
+-        'MarkupSafe==2.1.2',
+-        'Jinja2==3.1.2',
+-        'Markdown==3.4.1',
+-        'Pygments==2.14.0',
+-        'docutils==0.19'
++        'MarkupSafe>=2.1.2',
++        'Jinja2>=3.1.2',
++        'Markdown>=3.4.1',
++        'Pygments>=2.14.0',
++        'docutils>=0.19'
      ],
      classifiers=[
          'Programming Language :: Python',
