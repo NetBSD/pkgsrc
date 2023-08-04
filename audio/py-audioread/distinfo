@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:59:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/08/04 08:30:19 adam Exp $
 
-BLAKE2s (audioread-2.1.9.tar.gz) = 0b0263b9595e9647750e733343cd69e4f54ad66add7f12a83e60466328fe6697
-SHA512 (audioread-2.1.9.tar.gz) = ad2260b6931cfeebb815d48221366a2a5d8095965ff18e94c5eb0809d9a1b02e650a62ad5e895b7f1e003771fa3babf56f59ce4538aca78b678566fd28327290
-Size (audioread-2.1.9.tar.gz) = 377500 bytes
+BLAKE2s (audioread-3.0.0.tar.gz) = 9a97d6894b4f0cb5ec1a9a0d20c50c18588eba387e62c7114a417cd041348fd9
+SHA512 (audioread-3.0.0.tar.gz) = c9f1e5206df998ad9d112dd4b75ae41cde01271485eed27f62feed89c5ca36d4bbce7a888498d3c20d85e8b50de6ef263f795eec164c4bd348d83535b66c38ae
+Size (audioread-3.0.0.tar.gz) = 377038 bytes
