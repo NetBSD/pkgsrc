@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2020/07/06 15:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.64 2023/08/04 07:00:57 adam Exp $
 
 DISTNAME=	libvorbis-1.3.7
-CATEGORIES=	devel audio
+CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
 EXTRACT_SUFX=	.tar.xz
 
