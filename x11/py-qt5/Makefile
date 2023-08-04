@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/05/22 21:00:48 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2023/08/04 22:30:09 adam Exp $
 
 DISTNAME=	PyQt5-5.15.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
@@ -49,10 +49,10 @@ PLIST.x11=	yes
 .endif
 
 post-install:
+.for bin in pylupdate5 pyrcc5 pyuic5
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} pylupdate5 pylupdate5-${PYVERSSUFFIX} && \
-	${MV} pyrcc5 pyrcc5-${PYVERSSUFFIX} && \
-	${MV} pyuic5 pyuic5-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "options.mk"
 
