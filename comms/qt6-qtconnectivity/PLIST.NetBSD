@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2023/08/04 19:37:01 adam Exp $
+qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/dummy_helper_p.h
+qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qbluetoothsocket_dummy_p.h
+qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/qlowenergycontroller_dummy_p.h
+qt6/include/QtNfc/${PKGVERSION}/QtNfc/private/qnearfieldmanager_generic_p.h
