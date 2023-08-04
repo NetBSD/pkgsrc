@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/04 09:33:44 adam Exp $
+
+BLAKE2s (pytest-mypy-plugins-3.0.0.tar.gz) = b62b0d06c18e8a4f16f666d5abae8eff516ad75610051efdcb470f7604dfab11
+SHA512 (pytest-mypy-plugins-3.0.0.tar.gz) = 2d57ab834bd934a5ea037f2e2db73e7dfc6f7cac0e45a7ea48369afb9d509e34997eed1c98d92fe11a2c09e4d9a743cfc0593a74ead1375472dc5756b7a9a9d4
+Size (pytest-mypy-plugins-3.0.0.tar.gz) = 31524 bytes
