@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.33 2023/08/03 20:01:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.34 2023/08/04 19:44:00 adam Exp $
 # used by audio/qt6-qtspeech/Makefile
+# used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
 # used by databases/qt6-psql/Makefile
 # used by devel/qt6-qt5compat/Makefile
 # used by devel/qt6-qttools/Makefile
+# used by devel/qt6-qtwayland/Makefile
 # used by geography/qt6-qtlocation/Makefile
 # used by geography/qt6-qtpositioning/Makefile
 # used by graphics/qt6-qt3d/Makefile
@@ -15,9 +17,11 @@
 # used by graphics/qt6-qtquicktimeline/Makefile
 # used by graphics/qt6-qtshadertools/Makefile
 # used by graphics/qt6-qtsvg/Makefile
+# used by inputmethod/qt6-qtvirtualkeyboard/Makefile
 # used by lang/qt6-qtdeclarative/Makefile
 # used by lang/qt6-qtlanguageserver/Makefile
 # used by lang/qt6-qtscxml/Makefile
+# used by misc/qt6-qtsensors/Makefile
 # used by multimedia/qt6-qtmultimedia/Makefile
 # used by net/qt6-qtgrpc/Makefile
 # used by net/qt6-qtremoteobjects/Makefile
