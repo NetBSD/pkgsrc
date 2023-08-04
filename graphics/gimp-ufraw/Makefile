@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.138 2023/07/01 22:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2023/08/04 13:11:24 gdt Exp $
 
-# Note that upstream has replaced tarballs without changing the
-# version number (e.g., 0.19.2 had two different tarballs).
-# Therefore, it is suggested to wait a week after a release before
-# updating pkgsrc.
 DISTNAME=		ufraw-0.22
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		34
+PKGREVISION=		35
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -22,7 +18,12 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_TOOLS+=		perl:run pod2man
-USE_LANGUAGES=		c99 c++03
+USE_LANGUAGES=		c99 c++
+
+# exiv2 is declared to need filesystem, but as of 2023-08 it fails if
+# called with --std=c++03.  We avoid forcing std.  (pkgsrc lacks a
+# mechanism to declare which --stds are acceptable and thus exiv2
+# doesn't declare this.)
 
 CONFIGURE_ARGS+=	--enable-mime
 
