@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2022/09/09 08:46:31 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2023/08/04 09:03:56 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	atty-0.2.13
@@ -14,7 +14,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.8
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.70
-CARGO_CRATE_DEPENDS+=	memoffset-0.6.1
+CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
 CARGO_CRATE_DEPENDS+=	same-file-1.0.5
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
