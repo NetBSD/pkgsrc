@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:28 nia Exp $
-
-BLAKE2s (args_parser-0.2.0.gem) = 9e3a2c2f1a8f30458c9d39f1fb051b8a4a530c834a353fa2e8e1c5c8a0163cef
-SHA512 (args_parser-0.2.0.gem) = 3fac591b321a5774e6bedb41620838973d83fcbaee1c368894fbca8566ee8582380929858a1d69a19f1521b7cbfe8fbacf01f04edb33a331ac3e41327b4c710f
-Size (args_parser-0.2.0.gem) = 10752 bytes
