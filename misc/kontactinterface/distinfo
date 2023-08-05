@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/05 06:05:13 markd Exp $
+
+BLAKE2s (kontactinterface-23.04.3.tar.xz) = d741e81d2508d1c3562346ff4d84b8ecae75b2d727a05240a42bf498d406a704
+SHA512 (kontactinterface-23.04.3.tar.xz) = 24b29fd1b7542e2dee53799aa739ac01c916dd714027345181a056cee556cb2fe76cb1ddf9776ab9d88cb8daf0e038354f14fc863193f66c0d5331e427792397
+Size (kontactinterface-23.04.3.tar.xz) = 40456 bytes
