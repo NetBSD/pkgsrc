@@ -1,0 +1,37 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2023/08/05 08:00:39 adam Exp $
+
+CARGO_CRATE_DEPENDS+=	archery-0.5.0
+CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
+CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
+CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
+CARGO_CRATE_DEPENDS+=	indoc-1.0.9
+CARGO_CRATE_DEPENDS+=	libc-0.2.147
+CARGO_CRATE_DEPENDS+=	lock_api-0.4.10
+CARGO_CRATE_DEPENDS+=	memoffset-0.9.0
+CARGO_CRATE_DEPENDS+=	once_cell-1.18.0
+CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
+CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.8
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.66
+CARGO_CRATE_DEPENDS+=	pyo3-0.19.1
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.19.1
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.19.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.19.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.19.1
+CARGO_CRATE_DEPENDS+=	quote-1.0.31
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
+CARGO_CRATE_DEPENDS+=	rpds-0.13.0
+CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
+CARGO_CRATE_DEPENDS+=	smallvec-1.11.0
+CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
+CARGO_CRATE_DEPENDS+=	syn-1.0.109
+CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.9
+CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.11
+CARGO_CRATE_DEPENDS+=	unindent-0.1.11
+CARGO_CRATE_DEPENDS+=	windows-targets-0.48.1
+CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.48.0
+CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.0
