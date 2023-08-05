@@ -1,4 +1,4 @@
-The verboselogs package extends Pythonâs logging module to add the log
+The verboselogs package extends Python's logging module to add the log
 levels NOTICE, SPAM, SUCCESS and VERBOSE:
 
     The NOTICE level sits between the predefined WARNING and INFO
