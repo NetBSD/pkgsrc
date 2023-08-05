@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:34 nia Exp $
-
-BLAKE2s (idn-ruby-0.1.0.gem) = f2d803aed1f09e2dd8d7cd2274583febb61b21b81a8d895c875375cbc0ba011c
-SHA512 (idn-ruby-0.1.0.gem) = 5356266daefabfc5213f91c419ee1beb91972510bb016e7beac9719c501c643f9c35335ea8a46da1c1905a30d02d4b1cbec0f0ebb080ce2683faf8f29422295c
-Size (idn-ruby-0.1.0.gem) = 17408 bytes
