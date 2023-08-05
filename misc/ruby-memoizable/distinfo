@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:30 nia Exp $
-
-BLAKE2s (memoizable-0.4.2.gem) = b978bbd7e64f4ccd7f1c379314a32ae397c3f7e315929e6b3933ffbb81c47573
-SHA512 (memoizable-0.4.2.gem) = 6fa80eea7922bf93f9e2fcf88c0d0890e658820e8fdf9fc6bf7becf822435fbb95332a1d7b51aebb85018e787d87500899eb4d95f7467b6b2eb7c391c0e9583c
-Size (memoizable-0.4.2.gem) = 13312 bytes
