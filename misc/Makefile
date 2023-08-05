@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2023/08/05 17:42:47 tsutsui Exp $
+# $NetBSD: Makefile,v 1.602 2023/08/05 17:45:24 tsutsui Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -332,7 +332,6 @@ SUBDIR+=	ruby-columnize
 SUBDIR+=	ruby-commander
 SUBDIR+=	ruby-configuration
 SUBDIR+=	ruby-daemons
-SUBDIR+=	ruby-equalizer
 SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
