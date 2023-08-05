@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2023/03/11 08:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/05 07:38:57 adam Exp $
 
-DISTNAME=	pyotp-2.8.0
+DISTNAME=	pyotp-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyotp/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	https://github.com/pyotp/pyotp
+HOMEPAGE=	https://github.com/pyauth/pyotp
 COMMENT=	Python One-Time Password Library
 LICENSE=	mit
 
