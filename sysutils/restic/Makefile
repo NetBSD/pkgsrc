@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/07/15 10:53:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/05 00:13:31 iquiw Exp $
 
-DISTNAME=	restic-0.15.2
-PKGREVISION=	2
+DISTNAME=	restic-0.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -43,8 +42,10 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-migrate.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-mount.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-prune.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-rebuild-index.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-recover.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-repair-index.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-repair-snapshots.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-repair.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-restore.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-rewrite.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/restic-self-update.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

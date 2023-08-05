@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/04 06:09:36 iquiw Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/05 00:13:31 iquiw Exp $
 bin/restic
 man/man1/restic-backup.1
 man/man1/restic-cache.1
@@ -17,8 +17,10 @@ man/man1/restic-ls.1
 man/man1/restic-migrate.1
 man/man1/restic-mount.1
 man/man1/restic-prune.1
-man/man1/restic-rebuild-index.1
 man/man1/restic-recover.1
+man/man1/restic-repair-index.1
+man/man1/restic-repair-snapshots.1
+man/man1/restic-repair.1
 man/man1/restic-restore.1
 man/man1/restic-rewrite.1
 man/man1/restic-self-update.1
