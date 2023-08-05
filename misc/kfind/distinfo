@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/05 05:55:04 markd Exp $
+
+BLAKE2s (kfind-23.04.3.tar.xz) = 6cce0f62d4efa853c1b070fefdb6354dbfea40b65e5ea6929e7cf64f2d47e3eb
+SHA512 (kfind-23.04.3.tar.xz) = ef2534a5a7d1f6059fa42137e1a708a23554759ba518c6497525211d5373aaddc8305135b3127f24d9587ed0930f911a75e18258d24cf57f1da3dcde17eb44a6
+Size (kfind-23.04.3.tar.xz) = 343040 bytes
