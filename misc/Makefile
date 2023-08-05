@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.603 2023/08/05 18:29:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.604 2023/08/05 19:47:21 tsutsui Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -325,7 +325,6 @@ SUBDIR+=	routeplanner-cli
 SUBDIR+=	rox-memo
 SUBDIR+=	rpm
 SUBDIR+=	ruby-ansi
-SUBDIR+=	ruby-args_parser
 SUBDIR+=	ruby-colorator
 SUBDIR+=	ruby-colorize
 SUBDIR+=	ruby-columnize
