@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.910 2023/08/03 08:36:48 adam Exp $
+# $NetBSD: Makefile,v 1.911 2023/08/05 00:29:38 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -183,6 +183,7 @@ SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
 SUBDIR+=	libidea
 SUBDIR+=	libident
+SUBDIR+=	libkleo
 SUBDIR+=	libksba
 SUBDIR+=	libmcrypt
 SUBDIR+=	libmerkletree
