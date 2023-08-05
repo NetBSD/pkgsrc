@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4761 2023/08/05 08:51:48 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4762 2023/08/05 08:56:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6872,3 +6872,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php81 to 8.1.22 [taca 2023-08-05]
 	Updated lang/php82 to 8.2.9 [taca 2023-08-05]
 	Updated databases/ruby-sequel to 5.71.0 [taca 2023-08-05]
+	Updated devel/ruby-console to 1.20.0 [taca 2023-08-05]
