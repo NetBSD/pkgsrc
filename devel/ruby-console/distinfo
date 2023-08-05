@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/07/23 12:12:44 taca Exp $
+$NetBSD: distinfo,v 1.5 2023/08/05 08:55:36 taca Exp $
 
-BLAKE2s (console-1.18.0.gem) = 3b927af18d053c53ef9f33a843baffd3d76b7a28dffcd888afd008ee419a0bd8
-SHA512 (console-1.18.0.gem) = 3f7490cab73e4bd2d428439eb8142237b8e3e6816ff8b56f3159d6f8e7ac4b2a9870d28463784abd949fe2160d83540e97c53e9aede18c1396c26b2f261d5fe7
-Size (console-1.18.0.gem) = 19456 bytes
+BLAKE2s (console-1.20.0.gem) = 4ce8e51d698808a7ecf29f9becf09c442edada35eeab15ef029112426d8e36e9
+SHA512 (console-1.20.0.gem) = 1608b77ab7178cd957fcac129a34e7a2c3f1daa74f2533cb200503710f0318a4322b47b4f5005753dbfd00b001312f4b4f39337266cd6c21b2853f911ecaf2c0
+Size (console-1.20.0.gem) = 19968 bytes
