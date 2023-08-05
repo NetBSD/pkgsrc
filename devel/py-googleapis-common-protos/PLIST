@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/03/06 12:29:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/05 06:22:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -101,6 +101,10 @@ ${PYSITELIB}/google/api/monitoring.proto
 ${PYSITELIB}/google/api/monitoring_pb2.py
 ${PYSITELIB}/google/api/monitoring_pb2.pyc
 ${PYSITELIB}/google/api/monitoring_pb2.pyo
+${PYSITELIB}/google/api/policy.proto
+${PYSITELIB}/google/api/policy_pb2.py
+${PYSITELIB}/google/api/policy_pb2.pyc
+${PYSITELIB}/google/api/policy_pb2.pyo
 ${PYSITELIB}/google/api/quota.proto
 ${PYSITELIB}/google/api/quota_pb2.py
 ${PYSITELIB}/google/api/quota_pb2.pyc
