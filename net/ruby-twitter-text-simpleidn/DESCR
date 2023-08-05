@@ -1,3 +1,0 @@
-Twitter-text-simpleidn gem is a forked version of Twitter-text gem
-to avoid annoying dependency on idn-ruby gem which requires C bindings.
-This allows JRuby support and makes installation of dependencies easier.
