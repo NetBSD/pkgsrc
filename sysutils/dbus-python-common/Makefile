@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/05 06:08:47 adam Exp $
 
-DISTNAME=	dbus-python-1.2.18
+DISTNAME=	dbus-python-1.3.2
 PKGNAME=	${DISTNAME:S/python/python-common/}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
@@ -14,8 +13,7 @@ LICENSE=	mit
 CONFLICTS+=	py[0-9]*-dbus<1.1.1
 
 PYTHON_FOR_BUILD_ONLY=		yes
-#TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
-#DEPENDS+=			${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
@@ -33,8 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/dbus-python.pc \
 		${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../lang/python/application.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.0
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
