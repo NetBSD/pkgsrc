@@ -1,2 +1,7 @@
-A fast, safe, extensible parser for CommonMark.  This wraps the
-official libcmark library.
+CommonMarker
+
+Ruby wrapper for libcmark-gfm, GitHub's fork of the reference parser for
+CommonMark.  It passes all of the C tests, and is therefore spec-complete.
+It also includes extensions to the CommonMark spec as documented in the
+[itHub Flavored Markdown spec, such as support for tables, strikethroughs,
+and autolinking.
