@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2023/07/03 12:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/05 07:19:08 adam Exp $
 
-DISTNAME=	click-default-group-1.2.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	click_default_group-1.2.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-default-group/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sublee/click-default-group/
+HOMEPAGE=	https://github.com/sublee/click-default-group
 COMMENT=	Extends click.Group to invoke a command without explicit subcommand name
 LICENSE=	modified-bsd
 
-# no tests included in pypi distfile
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+TOOLS_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	click
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
