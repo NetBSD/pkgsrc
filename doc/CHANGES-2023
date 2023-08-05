@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4778 2023/08/05 17:06:28 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4779 2023/08/05 17:10:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6889,3 +6889,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/ruby-tw [tsutsui 2023-08-05]
 	Removed devel/ruby-simpleidn [tsutsui 2023-08-05]
 	Removed net/ruby-twitter-text [tsutsui 2023-08-05]
+	Removed net/ruby-twitter [tsutsui 2023-08-05]
