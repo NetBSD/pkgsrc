@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2022/07/21 10:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/08/05 07:08:26 adam Exp $
 
-DISTNAME=	gmp-6.2.1
-PKGREVISION=	3
+DISTNAME=	gmp-6.3.0
 CATEGORIES=	devel math
 MASTER_SITES=	https://gmplib.org/download/gmp/
 MASTER_SITES+=	${MASTER_SITE_GNU:=gmp/}
@@ -24,13 +23,11 @@ TEST_TARGET=		check
 PKGCONFIG_OVERRIDE+=	gmp.pc.in
 PKGCONFIG_OVERRIDE+=	gmpxx.pc.in
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
-
 PLIST_VARS+=		cxx
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
@@ -39,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-cxx
 PLIST.cxx=		yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MIRIX-5.*) && !empty(ABI)
+.if ${MACHINE_PLATFORM:MIRIX-5.*} && !empty(ABI)
 ABI=			o32
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2020/11/16 13:12:41 wiz Exp $
+# $NetBSD: builtin.mk,v 1.12 2023/08/05 07:08:26 adam Exp $
 
 BUILTIN_PKG:=	gmp
 
@@ -31,7 +31,7 @@ MAKEVARS+=	IS_BUILTIN.gmp
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.gmp) && \
-    !empty(IS_BUILTIN.gmp:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.gmp:tl} == yes && \
     empty(H_GMP:M__nonexistent__)
 BUILTIN_VERSION.gmp!=	${BUILTIN_VERSION_SCRIPT.gmp} ${H_GMP}
 BUILTIN_PKG.gmp=	gmp-${BUILTIN_VERSION.gmp}
@@ -47,12 +47,12 @@ MAKEVARS+=		BUILTIN_PKG.gmp
 USE_BUILTIN.gmp=	no
 .  else
 USE_BUILTIN.gmp=	${IS_BUILTIN.gmp}
-.    if defined(BUILTIN_PKG.gmp) && !empty(IS_BUILTIN.gmp:M[yY][eE][sS])
+.    if defined(BUILTIN_PKG.gmp) && ${IS_BUILTIN.gmp:tl} == yes
 USE_BUILTIN.gmp=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gmp}
-.        if !empty(USE_BUILTIN.gmp:M[yY][eE][sS])
+.        if ${USE_BUILTIN.gmp:tl} == yes
 USE_BUILTIN.gmp!=	\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gmp}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -65,8 +65,8 @@ USE_BUILTIN.gmp!=	\
 MAKEVARS+=		USE_BUILTIN.gmp
 
 CHECK_BUILTIN.gmp?=	no
-.if !empty(CHECK_BUILTIN.gmp:M[Nn][Oo])
-.  if !empty(USE_BUILTIN.gmp:M[Yy][Ee][Ss])
+.if ${CHECK_BUILTIN.gmp:tl} == no
+.  if ${USE_BUILTIN.gmp:tl} == yes
 GMP_INCLUDE=		${H_GMP:H}
 BUILDLINK_INCDIRS.gmp=	${GMP_INCLUDE}
 BUILDLINK_LIBDIRS.gmp=	lib${LIBABISUFFIX}
