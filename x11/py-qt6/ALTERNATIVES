@@ -1,0 +1,2 @@
+bin/pylupdate6 @PREFIX@/bin/pylupdate6-@PYVERSSUFFIX@
+bin/pyuic6 @PREFIX@/bin/pyuic6-@PYVERSSUFFIX@
