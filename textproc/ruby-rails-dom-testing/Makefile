@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/07/09 02:47:18 taca Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/05 12:19:03 taca Exp $
 
-DISTNAME=	rails-dom-testing-2.1.1
+DISTNAME=	rails-dom-testing-2.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.6.0:../../textproc/ruby-nokogiri
+
+USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	# empty
 
