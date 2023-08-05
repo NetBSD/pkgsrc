@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:29 nia Exp $
-
-BLAKE2s (equalizer-0.0.11.gem) = 7dd2b64668a0c4da38908ec70b206a77243ef643427bf10ca0d505d5a337e327
-SHA512 (equalizer-0.0.11.gem) = 01273a8e83124178f5b7d7eed08a4ca6286772c26202e028fa957f3e9d655869c51a7710312a52bb654672c7cbaee5de15fa2eee01c5413f2589cf05e02700a9
-Size (equalizer-0.0.11.gem) = 12800 bytes
