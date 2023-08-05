@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/05/06 19:09:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2023/08/05 07:37:28 nia Exp $
 
 DISTNAME=	allegro-4.4.3.1
 PKGREVISION=	7
@@ -32,8 +32,9 @@ SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
 SUBST_CLASSES.NetBSD+=	ossmidi
+SUBST_CLASSES.SunOS+=	ossmidi
 SUBST_STAGE.ossmidi=	pre-configure
-SUBST_MESSAGE.ossmidi=	NetBSD OSS midi emulation is non-existent.
+SUBST_MESSAGE.ossmidi=	OS does not have full OSS MIDI support.
 SUBST_FILES.ossmidi=	CMakeLists.txt
 SUBST_SED.ossmidi=	-e 's/ALLEGRO_WITH_OSSMIDI 1/ALLEGRO_WITH_OSSMIDI 0/'
 
