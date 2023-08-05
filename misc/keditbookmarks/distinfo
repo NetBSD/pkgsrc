@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/05 05:50:16 markd Exp $
+
+BLAKE2s (keditbookmarks-23.04.3.tar.xz) = 6333f01a515723db2e5ad65a85664189d654e041b1fc5569d559800b46fd062f
+SHA512 (keditbookmarks-23.04.3.tar.xz) = 4920b05148e3d6163d401557b79a51930377f7b562f786b714fe959f9d547ac4091cdf0c4deca1cc52344a5f01e7e77c5cded8eb8ebd242a2b6a6d8e33c544f1
+Size (keditbookmarks-23.04.3.tar.xz) = 238776 bytes
