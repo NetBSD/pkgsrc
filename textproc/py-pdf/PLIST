@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/05 22:02:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/05 07:29:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -22,6 +22,16 @@ ${PYSITELIB}/pypdf/_codecs/symbol.py
 ${PYSITELIB}/pypdf/_codecs/symbol.pyc
 ${PYSITELIB}/pypdf/_codecs/zapfding.py
 ${PYSITELIB}/pypdf/_codecs/zapfding.pyc
+${PYSITELIB}/pypdf/_crypt_providers/__init__.py
+${PYSITELIB}/pypdf/_crypt_providers/__init__.pyc
+${PYSITELIB}/pypdf/_crypt_providers/_base.py
+${PYSITELIB}/pypdf/_crypt_providers/_base.pyc
+${PYSITELIB}/pypdf/_crypt_providers/_cryptography.py
+${PYSITELIB}/pypdf/_crypt_providers/_cryptography.pyc
+${PYSITELIB}/pypdf/_crypt_providers/_fallback.py
+${PYSITELIB}/pypdf/_crypt_providers/_fallback.pyc
+${PYSITELIB}/pypdf/_crypt_providers/_pycryptodome.py
+${PYSITELIB}/pypdf/_crypt_providers/_pycryptodome.pyc
 ${PYSITELIB}/pypdf/_encryption.py
 ${PYSITELIB}/pypdf/_encryption.pyc
 ${PYSITELIB}/pypdf/_merger.py
@@ -42,6 +52,14 @@ ${PYSITELIB}/pypdf/_version.py
 ${PYSITELIB}/pypdf/_version.pyc
 ${PYSITELIB}/pypdf/_writer.py
 ${PYSITELIB}/pypdf/_writer.pyc
+${PYSITELIB}/pypdf/annotations/__init__.py
+${PYSITELIB}/pypdf/annotations/__init__.pyc
+${PYSITELIB}/pypdf/annotations/_base.py
+${PYSITELIB}/pypdf/annotations/_base.pyc
+${PYSITELIB}/pypdf/annotations/_markup_annotations.py
+${PYSITELIB}/pypdf/annotations/_markup_annotations.pyc
+${PYSITELIB}/pypdf/annotations/_non_markup_annotations.py
+${PYSITELIB}/pypdf/annotations/_non_markup_annotations.pyc
 ${PYSITELIB}/pypdf/constants.py
 ${PYSITELIB}/pypdf/constants.pyc
 ${PYSITELIB}/pypdf/errors.py
@@ -50,8 +68,6 @@ ${PYSITELIB}/pypdf/filters.py
 ${PYSITELIB}/pypdf/filters.pyc
 ${PYSITELIB}/pypdf/generic/__init__.py
 ${PYSITELIB}/pypdf/generic/__init__.pyc
-${PYSITELIB}/pypdf/generic/_annotations.py
-${PYSITELIB}/pypdf/generic/_annotations.pyc
 ${PYSITELIB}/pypdf/generic/_base.py
 ${PYSITELIB}/pypdf/generic/_base.pyc
 ${PYSITELIB}/pypdf/generic/_data_structures.py
