@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/08/04 22:40:45 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/05 20:29:52 riastradh Exp $
 
 DISTNAME=	verboselogs-1.7
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/verboselogs/}
