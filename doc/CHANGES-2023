@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4754 2023/08/05 06:15:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4755 2023/08/05 06:23:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6857,3 +6857,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-s3cmd to 2.3.0 [adam 2023-08-05]
 	Updated sysutils/dbus-python-common to 1.3.2 [adam 2023-08-05]
 	Updated sysutils/py-dbus to 1.3.2 [adam 2023-08-05]
+	Updated www/py-djangorestframework to 3.14.0 [adam 2023-08-05]
+	Updated devel/py-googleapis-common-protos to 1.60.0 [adam 2023-08-05]
