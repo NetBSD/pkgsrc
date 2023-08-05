@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/27 23:04:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/05 08:55:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/console.rb
 ${GEM_LIBDIR}/lib/console.rb
+${GEM_LIBDIR}/lib/console/adapter.rb
 ${GEM_LIBDIR}/lib/console/buffer.rb
 ${GEM_LIBDIR}/lib/console/capture.rb
 ${GEM_LIBDIR}/lib/console/clock.rb
@@ -15,6 +16,7 @@ ${GEM_LIBDIR}/lib/console/filter.rb
 ${GEM_LIBDIR}/lib/console/logger.rb
 ${GEM_LIBDIR}/lib/console/output.rb
 ${GEM_LIBDIR}/lib/console/output/default.rb
+${GEM_LIBDIR}/lib/console/output/encoder.rb
 ${GEM_LIBDIR}/lib/console/output/json.rb
 ${GEM_LIBDIR}/lib/console/output/null.rb
 ${GEM_LIBDIR}/lib/console/output/sensitive.rb
