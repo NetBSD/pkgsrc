@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:21 nia Exp $
-
-BLAKE2s (buftok-0.2.0.gem) = 990f2d955a1c7aeaaf39bcff298dbf009adb465c228866593b98e791f5ed77b5
-SHA512 (buftok-0.2.0.gem) = 2be11c56b49254f16cadfd8abc7c414a16a54b32ec416402a4c87be72c2ce9c524aaa17ede9bb3535555191f2a7b1d7d863199db5b4af8874880bcd16d3c3b45
-Size (buftok-0.2.0.gem) = 8192 bytes
