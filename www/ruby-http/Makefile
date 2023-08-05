@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2020/06/07 15:24:20 taca Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/05 19:33:00 tsutsui Exp $
 #
 
 DISTNAME=	http-4.4.1
 CATEGORIES=	www
 
-MAINTAINER=	tsutsui@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/httprb/http
 COMMENT=	Simple Ruby DSL for making HTTP requests
 LICENSE=	mit
