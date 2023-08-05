@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:06:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/08/05 06:06:07 adam Exp $
 
-BLAKE2s (s3cmd-1.0.1.tar.gz) = 95e46ef38c4e078a62908cf98352e75e3e8fe6b95e923eef020bc9eaabbb0861
-SHA512 (s3cmd-1.0.1.tar.gz) = daddb6c49a22cb2c9196d69116abddc639ab117b8a21413068e33e76f67dff5a21d6dca9a9d385113651fa996ace2359684709b2a3be33f4404ad79ed3d44814
-Size (s3cmd-1.0.1.tar.gz) = 57594 bytes
+BLAKE2s (s3cmd-2.3.0.tar.gz) = 8238c022e6e6cb794ae99e15ec87a3cb6b6ee5a4d1729e2aef7d8702cdb65f9c
+SHA512 (s3cmd-2.3.0.tar.gz) = 3507fb8b597617a384508149cb30bdfa8bc8a7b3705782fbf9a943c4be413dc5b7cfb3572b632e8bebbb644ab31f418428ccca996c0d2ba840ad88df1f5a406a
+Size (s3cmd-2.3.0.tar.gz) = 136754 bytes
