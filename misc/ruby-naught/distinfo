@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:30 nia Exp $
-
-BLAKE2s (naught-1.1.0.gem) = dd06bd6b7b0998ab68671c5fd8536e4b57ffb8d0371dac7a03d33520269eb5cc
-SHA512 (naught-1.1.0.gem) = 0a25825df0234f15a53dc7a8dff546846c605fde9b1e3ce0b3e88f6e1753117bd48586b450dcd08c45a0d4877a04ac19feb98fd70d929f9da3ccba8478e46a57
-Size (naught-1.1.0.gem) = 19456 bytes
