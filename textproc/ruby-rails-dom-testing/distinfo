@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/07/09 02:47:18 taca Exp $
+$NetBSD: distinfo,v 1.7 2023/08/05 12:19:03 taca Exp $
 
-BLAKE2s (rails-dom-testing-2.1.1.gem) = 0bed77a98f5a325b93c1b2eb1a03682a8249063f772ed316e96b945cabe447aa
-SHA512 (rails-dom-testing-2.1.1.gem) = c820925858b0ea1c4f978743f0f1c2cb9104f66f82fb2b75ec1219d8d68d5766a3e3e571950e2a436d951d183877f5eed4c6d4d9039cee298ee15e568bea43fc
-Size (rails-dom-testing-2.1.1.gem) = 14848 bytes
+BLAKE2s (rails-dom-testing-2.2.0.gem) = c071de1a8a12af707a88813683d008fb69d96228c54573aa65b6336bc9f59b7d
+SHA512 (rails-dom-testing-2.2.0.gem) = 90607b42d0239933f34aac803e090802ea823fd6c980149395860d50e8361428d6c5a4a3e9fedd5c7870c896864d3e797d5180b9796c9132ed2755d21e55de98
+Size (rails-dom-testing-2.2.0.gem) = 16896 bytes
