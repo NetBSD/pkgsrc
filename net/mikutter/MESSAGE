@@ -1,10 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2020/02/21 02:53:19 tsutsui Exp $
+$NetBSD: MESSAGE,v 1.3 2023/08/05 16:15:27 tsutsui Exp $
 
 After mikutter 4.0.0, twitter plugins are no longer included and
 only Mastodon plugins are included by default.
-
-To use mikutter as a Twitter client as before, you have to install
-Twitter plugins for mikutter using pkgsrc/net/mikutter-plugins-twitter
-package.
 ===========================================================================
