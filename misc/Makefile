@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.595 2023/08/04 19:40:42 adam Exp $
+# $NetBSD: Makefile,v 1.596 2023/08/05 00:38:53 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -96,6 +96,7 @@ SUBDIR+=	goffice0.10
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	granulate
+SUBDIR+=	grantleetheme
 SUBDIR+=	gwaei
 SUBDIR+=	hanzim
 SUBDIR+=	heirloom-banner
