@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1415 2023/08/05 08:08:47 adam Exp $
+# $NetBSD: Makefile,v 1.1416 2023/08/05 17:39:57 tsutsui Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1230,7 +1230,6 @@ SUBDIR+=	ruby-albino
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-asciidoctor
 SUBDIR+=	ruby-bluecloth
-SUBDIR+=	ruby-buftok
 SUBDIR+=	ruby-builder
 SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-classifier-reborn
