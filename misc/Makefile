@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.600 2023/08/05 06:05:13 markd Exp $
+# $NetBSD: Makefile,v 1.601 2023/08/05 17:42:47 tsutsui Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -339,7 +339,6 @@ SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-license-acceptance
 SUBDIR+=	ruby-lolcat
 SUBDIR+=	ruby-manpages
-SUBDIR+=	ruby-memoizable
 SUBDIR+=	ruby-method_source
 SUBDIR+=	ruby-mini_portile2
 SUBDIR+=	ruby-naught
