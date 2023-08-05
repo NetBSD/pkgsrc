@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/05 06:01:12 markd Exp $
+
+BLAKE2s (konqueror-23.04.3.tar.xz) = d59d61e3488958e9fb8a7076495acfc98425928a398bda9e5a18ae67a9016c4c
+SHA512 (konqueror-23.04.3.tar.xz) = 112b89ba29a234adbc62ac949e4c4982c6e5ba5d15189c3e6317bc83456e556d0f97625738cca125248ba84f20491abae85f3dee039df2625ea059c4a8cf66e0
+Size (konqueror-23.04.3.tar.xz) = 8492396 bytes
