@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1414 2023/08/03 18:41:24 pin Exp $
+# $NetBSD: Makefile,v 1.1415 2023/08/05 08:08:47 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1134,6 +1134,7 @@ SUBDIR+=	py-rapidjson
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-readme_renderer
 SUBDIR+=	py-rebulk
+SUBDIR+=	py-referencing
 SUBDIR+=	py-regex
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-rst2pdf
