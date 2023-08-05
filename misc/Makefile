@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.596 2023/08/05 00:38:53 markd Exp $
+# $NetBSD: Makefile,v 1.597 2023/08/05 05:45:58 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -142,6 +142,7 @@ SUBDIR+=	kdepim-runtime4
 SUBDIR+=	kdepim4
 SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
+SUBDIR+=	kdialog
 SUBDIR+=	kdrill
 SUBDIR+=	kemoticons
 SUBDIR+=	kgeography
