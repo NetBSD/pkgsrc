@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4784 2023/08/05 17:43:27 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4785 2023/08/05 17:46:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6895,3 +6895,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.7.0 [pin 2023-08-05]
 	Removed textproc/ruby-buftok [tsutsui 2023-08-05]
 	Removed misc/ruby-memoizable [tsutsui 2023-08-05]
+	Removed misc/ruby-equalizer [tsutsui 2023-08-05]
