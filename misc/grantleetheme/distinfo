@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/05 00:38:53 markd Exp $
+
+BLAKE2s (grantleetheme-23.04.3.tar.xz) = bca712e943c55c2532e931d0bf94e15f2dd3e0abd019777cf1b2891c1ae1949f
+SHA512 (grantleetheme-23.04.3.tar.xz) = 4402eaddb77e2167c12fc42f49820720ea0ce5b0438eb9b3f0513ea33bd9b575ee49c8f440a6f2d5a398f124e63eb2e2ae2a057ae81b56353c5bbbd5396f34d8
+Size (grantleetheme-23.04.3.tar.xz) = 62980 bytes
