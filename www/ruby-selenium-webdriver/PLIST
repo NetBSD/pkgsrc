@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/04/30 14:40:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/08/05 12:26:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -38,7 +38,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/chromium/driver.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chromium/features.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chromium/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chromium/profile.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/chromium/service.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/alert.rb
