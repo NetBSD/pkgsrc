@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:06:53 nia Exp $
-
-BLAKE2s (twitter-text-3.1.0.gem) = 748cb8009bd177e366568616ef260c21c836f98a042b7901df0af7fd1cae8ac1
-SHA512 (twitter-text-3.1.0.gem) = b0d5a876bd9c1d4788378ebd5029bed51db6a0c3a7cd2c97433eab3ec3655d7bc427c3873364a368c0a10216871c7373e762cfd57c4bdd69800adc95869aa03a
-Size (twitter-text-3.1.0.gem) = 59392 bytes
