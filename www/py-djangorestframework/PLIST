@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/01/20 10:57:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/08/05 06:19:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -209,8 +209,10 @@ ${PYSITELIB}/rest_framework/settings.py
 ${PYSITELIB}/rest_framework/settings.pyc
 ${PYSITELIB}/rest_framework/settings.pyo
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-theme.min.css
+${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-theme.min.css.map
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-tweaks.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.min.css
+${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.min.css.map
 ${PYSITELIB}/rest_framework/static/rest_framework/css/default.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/font-awesome-4.0.3.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/prettify.css
