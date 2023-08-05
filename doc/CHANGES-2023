@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4768 2023/08/05 12:22:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4769 2023/08/05 12:24:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6879,3 +6879,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-commonmarker to 0.23.10 [taca 2023-08-05]
 	Updated textproc/ruby-rails-dom-testing to 2.2.0 [taca 2023-08-05]
 	Updated www/ruby-aws-partitions to 1.798.0 [taca 2023-08-05]
+	Updated www/ruby-aws-sdk-core to 3.180.1 [taca 2023-08-05]
