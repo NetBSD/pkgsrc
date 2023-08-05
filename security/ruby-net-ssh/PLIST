@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.17 2023/03/19 08:22:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/08/05 08:59:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
+${GEM_LIBDIR}/.github/FUNDING.yml
 ${GEM_LIBDIR}/.github/config/rubocop_linter_action.yml
 ${GEM_LIBDIR}/.github/workflows/ci-with-docker.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
@@ -9,10 +10,12 @@ ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/DEVELOPMENT.md
 ${GEM_LIBDIR}/Dockerfile
 ${GEM_LIBDIR}/Dockerfile.openssl3
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Gemfile.noed25519
+${GEM_LIBDIR}/Gemfile.norbnacl
 ${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
@@ -71,6 +74,8 @@ ${GEM_LIBDIR}/lib/net/ssh/test/remote_packet.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/script.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/socket.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/algorithms.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/chacha20_poly1305_cipher.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/chacha20_poly1305_cipher_loader.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/cipher_factory.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/constants.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/ctr.rb
@@ -104,6 +109,7 @@ ${GEM_LIBDIR}/lib/net/ssh/transport/kex/ecdh_sha2_nistp384.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/kex/ecdh_sha2_nistp521.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/key_expander.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/openssl.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/openssl_cipher_extensions.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/packet_stream.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/server_version.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/session.rb
@@ -113,6 +119,7 @@ ${GEM_LIBDIR}/lib/net/ssh/verifiers/accept_new_or_local_tunnel.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/always.rb
 ${GEM_LIBDIR}/lib/net/ssh/verifiers/never.rb
 ${GEM_LIBDIR}/lib/net/ssh/version.rb
+${GEM_LIBDIR}/lib/net/ssh/version.rb.old
 ${GEM_LIBDIR}/net-ssh-public_cert.pem
 ${GEM_LIBDIR}/net-ssh.gemspec
 ${GEM_LIBDIR}/support/ssh_tunnel_bug.rb
