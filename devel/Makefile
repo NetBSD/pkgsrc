@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4038 2023/08/04 19:24:22 adam Exp $
+# $NetBSD: Makefile,v 1.4039 2023/08/05 05:40:27 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -802,6 +802,7 @@ SUBDIR+=	kcoreaddons
 SUBDIR+=	kcrash
 SUBDIR+=	kde-dev-scripts
 SUBDIR+=	kde-dev-utils
+SUBDIR+=	kdebugsettings
 SUBDIR+=	kdeclarative
 SUBDIR+=	kdesdk-kioslaves
 SUBDIR+=	kdesdk-strigi-analyzers
