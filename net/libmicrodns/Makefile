@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/02 16:17:18 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/05 07:29:38 nia Exp $
 
 DISTNAME=	microdns-0.2.0
 PKGNAME=	${DISTNAME:S/microdns/libmicrodns/}
@@ -14,7 +14,8 @@ COMMENT=	Minimal mDNS resolver (and announcer) cross-platform library
 LICENSE=	gnu-lgpl-v2.1
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=	c99
+# strict ISO C mode unsuitable for illumos; strerror_r...
+FORCE_C_STD=	gnu99
 
 LDFLAGS.SunOS+=	-lsocket
 
