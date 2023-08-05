@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4766 2023/08/05 12:15:21 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4767 2023/08/05 12:19:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6877,3 +6877,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-net-ssh to 7.2.0 [taca 2023-08-05]
 	Updated textproc/cmark-gfm to 0.29.0.gfm.13 [taca 2023-08-05]
 	Updated textproc/ruby-commonmarker to 0.23.10 [taca 2023-08-05]
+	Updated textproc/ruby-rails-dom-testing to 2.2.0 [taca 2023-08-05]
