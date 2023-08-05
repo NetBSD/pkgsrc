@@ -1,0 +1,5 @@
+PyQt is a set of Python bindings for the Qt toolkit. PyQt brings
+together the Qt C++ cross-platform toolkit and the cross-platform
+interpreted language Python.
+
+This package is for Qt6.
