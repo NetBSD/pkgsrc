@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4773 2023/08/05 16:15:44 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4774 2023/08/05 16:23:33 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6884,3 +6884,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/rabbit to 3.0.3 [taca 2023-08-05]
 	Updated multimedia/nostt to 1.3 [sjmulder 2023-08-05]
 	Updated net/mikutter to 5.0.5 [tsutsui 2023-08-05]
+	Removed net/mikutter-plugins-twitter [tsutsui 2023-08-05]
