@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/04/15 10:15:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/05 06:14:04 adam Exp $
 ${PYSITELIB}/_dbus_bindings.la
 ${PYSITELIB}/_dbus_glib_bindings.la
 ${PYSITELIB}/dbus/__init__.py
@@ -31,9 +31,6 @@ ${PYSITELIB}/dbus/gi_service.pyo
 ${PYSITELIB}/dbus/glib.py
 ${PYSITELIB}/dbus/glib.pyc
 ${PYSITELIB}/dbus/glib.pyo
-${PLIST.py2x}${PYSITELIB}/dbus/gobject_service.py
-${PLIST.py2x}${PYSITELIB}/dbus/gobject_service.pyc
-${PLIST.py2x}${PYSITELIB}/dbus/gobject_service.pyo
 ${PYSITELIB}/dbus/lowlevel.py
 ${PYSITELIB}/dbus/lowlevel.pyc
 ${PYSITELIB}/dbus/lowlevel.pyo

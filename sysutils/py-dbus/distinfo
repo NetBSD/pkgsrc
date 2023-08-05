@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:20:03 nia Exp $
+$NetBSD: distinfo,v 1.23 2023/08/05 06:14:04 adam Exp $
 
-BLAKE2s (dbus-python-1.2.18.tar.gz) = 94087041962f002abf5be7cdbcbf540e0d1fd128b59aa068d978191eb49e3b6e
-SHA512 (dbus-python-1.2.18.tar.gz) = 72f422c59637392bd78b741b66dff2afadcc706452c3e82fdc14b1dc052a0c5cb8a85e2758d18c5cbdc08004419a0b3c16b67b99688d96307084403e72585900
-Size (dbus-python-1.2.18.tar.gz) = 578204 bytes
-SHA1 (patch-aa) = bcbcabf858eca13948dc874316d18da4ef36b6de
+BLAKE2s (dbus-python-1.3.2.tar.gz) = d799ceb27c924bc1ae15cc4c8586202c04ccccd2643d7353279d00545d6e7d64
+SHA512 (dbus-python-1.3.2.tar.gz) = 9b2885c9c2914142c72487f766b1cdd28a255d9f5a87eaf8f4eb420c6e096a77f210ac5a4fac9843c6531974872880cc28b7e45940e198856e984dcc0715519a
+Size (dbus-python-1.3.2.tar.gz) = 605495 bytes
+SHA1 (patch-Makefile.in) = bcbcabf858eca13948dc874316d18da4ef36b6de
