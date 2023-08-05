@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2021/12/08 16:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.43 2023/08/05 06:14:04 adam Exp $
 
-DISTNAME=	dbus-python-1.2.18
+DISTNAME=	dbus-python-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
@@ -15,7 +14,8 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN}
 
-PY_PATCHPLIST=			YES
+PY_PATCHPLIST=			yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # py-expat is only needed at runtime
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
