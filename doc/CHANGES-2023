@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4752 2023/08/05 00:14:05 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.4753 2023/08/05 06:13:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6846,3 +6846,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-klein to 23.5.0 [adam 2023-08-04]
 	Updated www/py-landslide to 2.0.0 [adam 2023-08-04]
 	Updated sysutils/restic to 0.16.0 [iquiw 2023-08-05]
+	Added security/libkleo version 23.04.3 [markd 2023-08-05]
+	Added misc/grantleetheme version 23.04.3 [markd 2023-08-05]
+	Added devel/kdebugsettings version 23.04.3 [markd 2023-08-05]
+	Added misc/kdialog version 23.04.3 [markd 2023-08-05]
+	Added misc/keditbookmarks version 23.04.3 [markd 2023-08-05]
+	Added misc/kfind version 23.04.3 [markd 2023-08-05]
+	Added www/konqueror version 23.04.3 [markd 2023-08-05]
+	Added misc/kontactinterface version 23.04.3 [markd 2023-08-05]
