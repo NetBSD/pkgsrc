@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4756 2023/08/05 07:19:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4757 2023/08/05 07:39:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6863,3 +6863,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/easy-rsa to 3.1.5 [adam 2023-08-05]
 	Updated devel/googletest to 1.14.0 [adam 2023-08-05]
 	Updated devel/py-click-default-group to 1.2.4 [adam 2023-08-05]
+	Added x11/py-qt6 version 6.5.2 [adam 2023-08-05]
+	Updated textproc/py-pdf to 3.14.0 [adam 2023-08-05]
+	Updated print/py-pspdfutils to 3.0.8 [adam 2023-08-05]
+	Updated security/py-otp to 2.9.0 [adam 2023-08-05]
