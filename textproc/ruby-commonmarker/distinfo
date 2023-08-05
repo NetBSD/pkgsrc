@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/30 13:31:32 taca Exp $
+$NetBSD: distinfo,v 1.6 2023/08/05 12:14:54 taca Exp $
 
-BLAKE2s (commonmarker-0.23.9.gem) = 4d3c77d592994ed215887bce8e803c6f6bfe72e50895dbc69b896c4c4e633846
-SHA512 (commonmarker-0.23.9.gem) = 7d90e0790faed14287d130d2b0abbe306b94e9b3fdc87c7aafcebc699c8309d493da716f76d6df9c5c1c8c94fd69e79af01fa8cbbd84de3ce7a1ca8815ef4005
-Size (commonmarker-0.23.9.gem) = 152064 bytes
+BLAKE2s (commonmarker-0.23.10.gem) = cc1430323b1bc6af5367eff42ef1d3a1ae85c403a16334a394684c5f4f55ae68
+SHA512 (commonmarker-0.23.10.gem) = 0464972eacde73684e167425a7f24d88ca6529d8c449dfe63f703144796a243f3c80f22634f7c7939ddbc79f59af189e7878dc9faa734e8c1628f19c94266fef
+Size (commonmarker-0.23.10.gem) = 152576 bytes
