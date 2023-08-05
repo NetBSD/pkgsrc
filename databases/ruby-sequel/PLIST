@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.109 2023/07/02 04:54:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.110 2023/08/05 08:51:11 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -96,6 +96,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.68.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.69.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.70.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.71.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
@@ -347,9 +348,11 @@ ${GEM_LIBDIR}/lib/sequel/plugins/modification_detection.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/mssql_optimistic_locking.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/nested_attributes.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking.rb
+${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking_base.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_array_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_auto_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_row.rb
+${GEM_LIBDIR}/lib/sequel/plugins/pg_xmin_optimistic_locking.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements_safe.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/primary_key_lookup_check_values.rb
