@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4782 2023/08/05 17:32:49 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4783 2023/08/05 17:41:02 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6893,3 +6893,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-idn [tsutsui 2023-08-05]
 	Updated shells/oh-my-posh to 18.2.3 [pin 2023-08-05]
 	Updated sysutils/felix to 2.7.0 [pin 2023-08-05]
+	Removed textproc/ruby-buftok [tsutsui 2023-08-05]
