@@ -1,0 +1,2 @@
+This library provides the glue necessary for application "Parts"
+to be embedded as a Kontact component (or plugin).
