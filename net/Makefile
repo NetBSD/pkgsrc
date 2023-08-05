@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1528 2023/08/05 17:05:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1529 2023/08/05 17:09:37 tsutsui Exp $
 #
 
 COMMENT=	Networking tools
@@ -873,7 +873,6 @@ SUBDIR+=	ruby-stompserver
 SUBDIR+=	ruby-train-core
 SUBDIR+=	ruby-train-rest
 SUBDIR+=	ruby-train-winrm
-SUBDIR+=	ruby-twitter
 SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	ruby-winrm
 SUBDIR+=	ruby-winrm-elevated
