@@ -13,7 +13,7 @@ QMAKE_INCREMENTAL_STYLE = sublib
 QMAKE_COMPILER_DEFINES += TARGET_OS_MAC
 
 include(../common/gcc-base-mac.conf)
-include(../common/g++-unix.conf)
+include(../common/clang.conf)
 include(../common/bsd/bsd.conf)
 
 QMAKE_COMPILER		= @CC@
