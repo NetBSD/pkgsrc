@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.142 2023/07/20 19:28:12 ryoon Exp $
+$NetBSD: distinfo,v 1.143 2023/08/06 10:41:42 nia Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -176,11 +176,11 @@ SHA1 (patch-configure.ac) = 39a63232345290d6fcab76d98df7e22a121a2384
 SHA1 (patch-desktop_scripts_soffice.sh) = e6342e08781ca8dac72a1f28407517d79155577c
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 0a682ef486310474684ccd279e864f96259a3087
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = c8a82ce0c3d293108daa41f81d9cee376ca50a82
-SHA1 (patch-external_pdfium_Library__pdfium.mk) = f7c6d5da07cd3d7b2ee327a0df0581e7fe441621
+SHA1 (patch-external_pdfium_Library__pdfium.mk) = 8dc7315e8a09234cbb3994443ac8f0b14e549770
 SHA1 (patch-external_pdfium_UnpackedTarball__pdfium.mk) = 223c12d350fd2ed6e779079d9cc4e776d8108c84
 SHA1 (patch-external_pdfium_pkgsrc.patch.1) = f6cc11970f4999d653f5609c7cdf83946a01bf46
 SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 545a10100e439b996e3f235a8a5dff682fd48879
-SHA1 (patch-external_skia_Library__skia.mk) = bf97a0724bd8cb5e249b63e60e85e2e7217cfdad
+SHA1 (patch-external_skia_Library__skia.mk) = 86d8519f5d5e0a5e4778e38ebbcde948db1332b2
 SHA1 (patch-external_skia_UnpackedTarball__skia.mk) = d575ac3be7c2882721f1a104be814dcb6c1d3fe5
 SHA1 (patch-external_skia_netbsd.patch.0) = 7852da3030ce31cd089cba99c7949eda57ffaf8f
 SHA1 (patch-i18nutil_source_utility_unicode.cxx) = d60f5b5089c4358f4081648466662753393e4990
