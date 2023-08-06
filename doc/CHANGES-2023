@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4808 2023/08/06 17:32:31 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4809 2023/08/06 17:57:25 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6925,3 +6925,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.3.0 [pin 2023-08-06]
 	Updated www/wiki-tui to 0.8.1 [pin 2023-08-06]
 	Updated devel/lazygit to 0.40.0 [pin 2023-08-06]
+	Updated sysutils/zabbix60-server to 6.0.20 [otis 2023-08-06]
