@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4793 2023/08/06 04:29:27 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4794 2023/08/06 05:22:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6904,3 +6904,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-public_suffix to 5.0.3 [tsutsui 2023-08-06]
 	Updated textproc/ruby-nokogiri to 1.15.3 [tsutsui 2023-08-06]
 	Updated lang/php80 to 8.0.30 [taca 2023-08-06]
+	Updated audio/spotify-player to 0.15.0 [pin 2023-08-06]
