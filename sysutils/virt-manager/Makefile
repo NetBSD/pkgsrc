@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2023/04/19 08:11:35 adam Exp $
+# $NetBSD: Makefile,v 1.58 2023/08/06 07:44:14 adam Exp $
 
 DISTNAME=	virt-manager-0.9.4
-PKGREVISION=	42
+PKGREVISION=	43
 CATEGORIES=	sysutils
 MASTER_SITES=	http://virt-manager.org/download/sources/virt-manager/
 
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.24:../../x11/py-gtk2
 DEPENDS+=	virtinst>=0.600.3:../../sysutils/virtinst
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.8.0:../../textproc/py-libxml2
 DEPENDS+=	urlgrabber>=3.1.0:../../www/urlgrabber
-DEPENDS+=	${PYPKGPREFIX}-dbus>=1.1.1:../../sysutils/py-dbus
+DEPENDS+=	${PYPKGPREFIX}-dbus>=1.1.1:../../sysutils/py27-dbus
 DEPENDS+=	gtk-vnc>=0.5.1:../../net/gtk-vnc
 
 GNU_CONFIGURE=		yes
