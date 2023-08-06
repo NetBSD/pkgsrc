@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/08/02 16:17:15 nia Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/06 09:49:27 nia Exp $
 
 DISTNAME=	pt2-clone-1.49
 PKGREVISION=	3
@@ -17,7 +17,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=	c99
+# gnu99 needed to get PATH_MAX definition on certain platforms
+FORCE_C_STD=	gnu99
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
