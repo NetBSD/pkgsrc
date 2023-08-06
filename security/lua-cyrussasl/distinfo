@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/05/09 00:37:58 khorben Exp $
+$NetBSD: distinfo,v 1.2 2023/08/06 10:14:50 nia Exp $
 
 BLAKE2s (lua-cyrussasl-1.1.0.tar.gz) = a2ced3c0ea7bef8afd61592ea7b8ab1b91c3460811cf094d256d46b99ef3030b
 SHA512 (lua-cyrussasl-1.1.0.tar.gz) = 2262dd1e403bd0825b714253dc03844aad20525b206d8fb16196b2647b642a45d137b18bdd89920d95c168b99c5e6b36d73b7cdaa6ec91d3ad2673360307e0ee
 Size (lua-cyrussasl-1.1.0.tar.gz) = 14325 bytes
-SHA1 (patch-Makefile) = 8dc1f2bbe6b507dd4c792a14925692e5d008404d
+SHA1 (patch-Makefile) = b35c5a19d0c66afa25eeb4a1e5b069e402f02e87
