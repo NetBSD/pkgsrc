@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4795 2023/08/06 05:26:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4796 2023/08/06 07:07:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6906,3 +6906,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php80 to 8.0.30 [taca 2023-08-06]
 	Updated audio/spotify-player to 0.15.0 [pin 2023-08-06]
 	Added graphics/matugen version 0.8.4 [pin 2023-08-06]
+	Updated lang/vala to 0.56.10 [adam 2023-08-06]
+	Updated devel/py-wheel to 0.41.1 [adam 2023-08-06]
