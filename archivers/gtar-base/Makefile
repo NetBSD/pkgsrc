@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.96 2023/03/26 09:18:48 spz Exp $
+# $NetBSD: Makefile,v 1.97 2023/08/06 07:23:07 adam Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/tar/gtar-base/}
-COMMENT=	The GNU tape archiver with remote magnetic tape support
-LICENSE=	gnu-gpl-v3
-
-PKGREVISION=	1
 
 CONFLICTS=	gcpio-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}libexec
@@ -35,8 +32,6 @@ LDFLAGS.SCO_SV+=	-lsocket
 .endif
 
 PLIST_VARS+=		rmt
-
-TEST_TARGET=		check
 
 # don't include rmt if gtar won't build it
 .if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5" && ${OPSYS} != "AIX"
