@@ -1,22 +1,22 @@
-$NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.3 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-external_pdfium_Library__pdfium.mk,v 1.4 2023/08/06 10:41:42 nia Exp $
 
-* Do not conflict with external freetype2 on NetBSD etc.
+We also want to link against librt on Solaris and BSD.
 
---- external/pdfium/Library_pdfium.mk.orig	2021-08-16 19:56:28.000000000 +0000
+--- external/pdfium/Library_pdfium.mk.orig	2023-07-12 17:23:19.000000000 +0000
 +++ external/pdfium/Library_pdfium.mk
-@@ -566,9 +566,9 @@ $(eval $(call gb_Library_use_externals,p
-     icuuc \
- ))
- 
--ifneq (,$(filter LINUX ANDROID,$(OS)))
-+ifeq ($(OS), $(filter LINUX %BSD SOLARIS ANDROID, $(OS)))
+@@ -587,6 +587,11 @@ $(eval $(call gb_Library_use_externals,p
+ ifneq (,$(filter LINUX ANDROID,$(OS)))
  $(eval $(call gb_Library_add_libs,pdfium,\
--    -ldl \
-+    $(DLOPEN_LIBS) \
+     -ldl \
++))
++endif
++
++ifeq ($(OS), $(filter LINUX %BSD SOLARIS ANDROID, $(OS)))
++$(eval $(call gb_Library_add_libs,pdfium,\
      -lrt \
  ))
  
-@@ -685,7 +685,7 @@ $(eval $(call gb_Library_add_generated_e
+@@ -719,7 +724,7 @@ $(eval $(call gb_Library_add_generated_e
  ))
  endif
  
