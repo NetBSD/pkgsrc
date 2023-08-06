@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/05/13 18:24:12 tsutsui Exp $
+$NetBSD: distinfo,v 1.27 2023/08/06 02:18:38 tsutsui Exp $
 
-BLAKE2s (addressable-2.8.4.gem) = aa1832143590a958859160610b61b007e2967bbe98aa6da2484e37066e74bf25
-SHA512 (addressable-2.8.4.gem) = 45324e96fb4415b745eb26bd0c3e042102efbdfca879177a70288303c96a4889ff59f794ed0010ea8a95c5d6907b76b0e8c66cce0a5478832c9df465a01e3fcb
-Size (addressable-2.8.4.gem) = 105984 bytes
+BLAKE2s (addressable-2.8.5.gem) = 07c2b4d54a966f5568849bd00630a6c3336805af06a07199ba0cb3de90da4736
+SHA512 (addressable-2.8.5.gem) = cc35437d91dfb95f49eeba60b153b89d9f1475fd0770056c22865913629f3bf0a3545585a457bc5a42d97f2e6e81362308e9eb91fd3b2b8a571b997ba53796eb
+Size (addressable-2.8.5.gem) = 106496 bytes
