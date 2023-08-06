@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.49 2023/06/11 14:31:28 taca Exp $
-
-BLAKE2s (test-unit-3.6.0.gem) = 24b16cb3698f7aacf87d063fd262d3edc4459c1e88cf25ec3afdfd23bdfc3efb
-SHA512 (test-unit-3.6.0.gem) = d0a35d2138d0364e392dd30b4401288129fd6427089c1cd31dcf3e4f6f0f2a3eb8ff534b800c1a2800e01ef36e4a10f0bdae7a7eed5141f76a00315173007b9d
-Size (test-unit-3.6.0.gem) = 93696 bytes
