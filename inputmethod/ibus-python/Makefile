@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2022/06/30 11:18:31 nia Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/06 07:41:33 adam Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../inputmethod/ibus/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ibus/ibus-python/}
 
 COMMENT=	Python library for Intelligent Input Bus
-LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -32,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-unicode-dict
 CONFIGURE_ARGS+=	--disable-systemd-services
 
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.1.[0-9]*)
+.if ${CC_VERSION:Mgcc-4.1.[0-9]*}
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
@@ -48,7 +47,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.83.0
-.include "../../sysutils/py-dbus/buildlink3.mk"
+.include "../../sysutils/py27-dbus/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
