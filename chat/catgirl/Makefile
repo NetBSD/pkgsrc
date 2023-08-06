@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/03/04 10:09:15 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/06 09:52:00 nia Exp $
 
 DISTNAME=	catgirl-2.1
 CATEGORIES=	chat
@@ -14,6 +14,8 @@ USE_TOOLS+=	pkg-config
 HAS_CONFIGURE=	yes
 
 MAKE_FLAGS=	MANDIR=${PREFIX}/${PKGMANDIR}
+
+USE_CC_FEATURES+=	c11
 
 SUBST_CLASSES+=		ssl
 SUBST_STAGE.ssl=	pre-configure
