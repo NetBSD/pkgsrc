@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/07/10 19:40:25 pin Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/06 15:06:30 pin Exp $
 
-DISTNAME=	wiki-tui-0.8.0
+DISTNAME=	wiki-tui-0.8.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
-INSTALLATION_DIRS=	bin share/applications
+INSTALLATION_DIRS=	share/applications
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
