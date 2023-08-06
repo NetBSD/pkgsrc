@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2023/07/01 22:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2023/08/06 11:14:57 adam Exp $
 
 DISTNAME=	hugin-2022.0.0
 PKGREVISION=	10
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hugin.sourceforge.net/
+HOMEPAGE=	https://hugin.sourceforge.io/
 COMMENT=	Panorama photo stitcher
 LICENSE=	gnu-gpl-v2
 
@@ -15,12 +15,9 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
-CONFIGURE_DIRS=		${WRKDIR}/build
-CMAKE_ARG_PATH=		${WRKSRC}
 
 CMAKE_ARGS+=		-DBUILD_HSI=ON
 
@@ -39,9 +36,6 @@ SUBST_FILES.apple+=	src/hugin1/ptbatcher/CMakeLists.txt
 SUBST_FILES.apple+=	src/hugin1/stitch_project/CMakeLists.txt
 SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 
-post-extract:
-	${MKDIR} ${WRKDIR}/build
-
 # Doesn't define the ZLIB::ZLIB target needed by OpenEXR 3
 post-patch:
 	rm ${WRKSRC}/CMakeModules/FindZLIB.cmake
@@ -51,6 +45,7 @@ post-patch:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/swig3/buildlink3.mk"
 .include "../../devel/tclap/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
