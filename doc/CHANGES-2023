@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4789 2023/08/06 02:19:00 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4790 2023/08/06 02:24:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6900,3 +6900,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed misc/ruby-args_parser [tsutsui 2023-08-05]
 	Removed net/nicovideo-dl [tsutsui 2023-08-06]
 	Updated net/ruby-addressable to 2.8.5 [tsutsui 2023-08-06]
+	Updated misc/ruby-mini_portile2 to 2.8.4 [tsutsui 2023-08-06]
