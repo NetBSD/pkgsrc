@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4805 2023/08/06 12:00:03 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.4806 2023/08/06 15:05:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6922,3 +6922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/py27-dbus version 1.2.18 [adam 2023-08-06]
 	Updated x11/qwt6-qt5 to 6.1.6 [adam 2023-08-06]
 	Updated editors/xournalpp to 1.2.0 [yhardy 2023-08-06]
+	Updated shells/oh-my-posh to 18.3.0 [pin 2023-08-06]
