@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/04/17 06:59:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/08/06 20:23:35 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -136,6 +136,8 @@ ${PYSITELIB}/pygments/lexers/asc.py
 ${PYSITELIB}/pygments/lexers/asc.pyc
 ${PYSITELIB}/pygments/lexers/asm.py
 ${PYSITELIB}/pygments/lexers/asm.pyc
+${PYSITELIB}/pygments/lexers/asn1.py
+${PYSITELIB}/pygments/lexers/asn1.pyc
 ${PYSITELIB}/pygments/lexers/automation.py
 ${PYSITELIB}/pygments/lexers/automation.pyc
 ${PYSITELIB}/pygments/lexers/bare.py
@@ -148,8 +150,12 @@ ${PYSITELIB}/pygments/lexers/berry.py
 ${PYSITELIB}/pygments/lexers/berry.pyc
 ${PYSITELIB}/pygments/lexers/bibtex.py
 ${PYSITELIB}/pygments/lexers/bibtex.pyc
+${PYSITELIB}/pygments/lexers/blueprint.py
+${PYSITELIB}/pygments/lexers/blueprint.pyc
 ${PYSITELIB}/pygments/lexers/boa.py
 ${PYSITELIB}/pygments/lexers/boa.pyc
+${PYSITELIB}/pygments/lexers/bqn.py
+${PYSITELIB}/pygments/lexers/bqn.pyc
 ${PYSITELIB}/pygments/lexers/business.py
 ${PYSITELIB}/pygments/lexers/business.pyc
 ${PYSITELIB}/pygments/lexers/c_cpp.py
@@ -194,6 +200,8 @@ ${PYSITELIB}/pygments/lexers/devicetree.py
 ${PYSITELIB}/pygments/lexers/devicetree.pyc
 ${PYSITELIB}/pygments/lexers/diff.py
 ${PYSITELIB}/pygments/lexers/diff.pyc
+${PYSITELIB}/pygments/lexers/dns.py
+${PYSITELIB}/pygments/lexers/dns.pyc
 ${PYSITELIB}/pygments/lexers/dotnet.py
 ${PYSITELIB}/pygments/lexers/dotnet.pyc
 ${PYSITELIB}/pygments/lexers/dsls.py
@@ -252,6 +260,8 @@ ${PYSITELIB}/pygments/lexers/graph.py
 ${PYSITELIB}/pygments/lexers/graph.pyc
 ${PYSITELIB}/pygments/lexers/graphics.py
 ${PYSITELIB}/pygments/lexers/graphics.pyc
+${PYSITELIB}/pygments/lexers/graphql.py
+${PYSITELIB}/pygments/lexers/graphql.pyc
 ${PYSITELIB}/pygments/lexers/graphviz.py
 ${PYSITELIB}/pygments/lexers/graphviz.pyc
 ${PYSITELIB}/pygments/lexers/gsql.py
@@ -342,6 +352,8 @@ ${PYSITELIB}/pygments/lexers/objective.py
 ${PYSITELIB}/pygments/lexers/objective.pyc
 ${PYSITELIB}/pygments/lexers/ooc.py
 ${PYSITELIB}/pygments/lexers/ooc.pyc
+${PYSITELIB}/pygments/lexers/openscad.py
+${PYSITELIB}/pygments/lexers/openscad.pyc
 ${PYSITELIB}/pygments/lexers/other.py
 ${PYSITELIB}/pygments/lexers/other.pyc
 ${PYSITELIB}/pygments/lexers/parasail.py
@@ -370,6 +382,8 @@ ${PYSITELIB}/pygments/lexers/prolog.py
 ${PYSITELIB}/pygments/lexers/prolog.pyc
 ${PYSITELIB}/pygments/lexers/promql.py
 ${PYSITELIB}/pygments/lexers/promql.pyc
+${PYSITELIB}/pygments/lexers/ptx.py
+${PYSITELIB}/pygments/lexers/ptx.pyc
 ${PYSITELIB}/pygments/lexers/python.py
 ${PYSITELIB}/pygments/lexers/python.pyc
 ${PYSITELIB}/pygments/lexers/q.py
@@ -464,6 +478,8 @@ ${PYSITELIB}/pygments/lexers/thingsdb.py
 ${PYSITELIB}/pygments/lexers/thingsdb.pyc
 ${PYSITELIB}/pygments/lexers/tlb.py
 ${PYSITELIB}/pygments/lexers/tlb.pyc
+${PYSITELIB}/pygments/lexers/tls.py
+${PYSITELIB}/pygments/lexers/tls.pyc
 ${PYSITELIB}/pygments/lexers/tnt.py
 ${PYSITELIB}/pygments/lexers/tnt.pyc
 ${PYSITELIB}/pygments/lexers/trafficscript.py
@@ -482,6 +498,8 @@ ${PYSITELIB}/pygments/lexers/varnish.py
 ${PYSITELIB}/pygments/lexers/varnish.pyc
 ${PYSITELIB}/pygments/lexers/verification.py
 ${PYSITELIB}/pygments/lexers/verification.pyc
+${PYSITELIB}/pygments/lexers/verifpal.py
+${PYSITELIB}/pygments/lexers/verifpal.pyc
 ${PYSITELIB}/pygments/lexers/web.py
 ${PYSITELIB}/pygments/lexers/web.pyc
 ${PYSITELIB}/pygments/lexers/webassembly.py
@@ -504,6 +522,8 @@ ${PYSITELIB}/pygments/lexers/xorg.py
 ${PYSITELIB}/pygments/lexers/xorg.pyc
 ${PYSITELIB}/pygments/lexers/yang.py
 ${PYSITELIB}/pygments/lexers/yang.pyc
+${PYSITELIB}/pygments/lexers/yara.py
+${PYSITELIB}/pygments/lexers/yara.pyc
 ${PYSITELIB}/pygments/lexers/zig.py
 ${PYSITELIB}/pygments/lexers/zig.pyc
 ${PYSITELIB}/pygments/modeline.py
@@ -556,6 +576,8 @@ ${PYSITELIB}/pygments/styles/igor.py
 ${PYSITELIB}/pygments/styles/igor.pyc
 ${PYSITELIB}/pygments/styles/inkpot.py
 ${PYSITELIB}/pygments/styles/inkpot.pyc
+${PYSITELIB}/pygments/styles/lightbulb.py
+${PYSITELIB}/pygments/styles/lightbulb.pyc
 ${PYSITELIB}/pygments/styles/lilypond.py
 ${PYSITELIB}/pygments/styles/lilypond.pyc
 ${PYSITELIB}/pygments/styles/lovelace.py
