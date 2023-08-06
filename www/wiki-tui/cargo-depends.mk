@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/07/10 19:40:25 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/08/06 15:06:30 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -40,6 +40,7 @@ CARGO_CRATE_DEPENDS+=	derivative-2.2.0
 CARGO_CRATE_DEPENDS+=	destructure_traitobject-0.2.0
 CARGO_CRATE_DEPENDS+=	dirs-3.0.2
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
+CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.32
 CARGO_CRATE_DEPENDS+=	enum-map-2.6.0
 CARGO_CRATE_DEPENDS+=	enum-map-derive-0.12.0
@@ -64,6 +65,7 @@ CARGO_CRATE_DEPENDS+=	gimli-0.27.3
 CARGO_CRATE_DEPENDS+=	h2-0.3.20
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	heck-0.3.3
+CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.2
 CARGO_CRATE_DEPENDS+=	html5ever-0.26.0
@@ -168,6 +170,8 @@ CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.10
 CARGO_CRATE_DEPENDS+=	slab-0.4.8
 CARGO_CRATE_DEPENDS+=	smallvec-1.11.0
+CARGO_CRATE_DEPENDS+=	snafu-0.7.5
+CARGO_CRATE_DEPENDS+=	snafu-derive-0.7.5
 CARGO_CRATE_DEPENDS+=	socket2-0.4.9
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
 CARGO_CRATE_DEPENDS+=	string_cache-0.8.7
