@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:06:08 nia Exp $
-
-BLAKE2s (nicovideo-dl-0.0.20190126.tar.gz) = 2bed4434342c7e81acba571ff866eeeae6a67daa453c2d8564bc9fd4b0023b2f
-SHA512 (nicovideo-dl-0.0.20190126.tar.gz) = 8b7764a87dbafa2ebb735ed78c52514d205a22536dc0af2d12d393d48238ed9bcf7ca311af79f8a5faf791209287cd426c1ce23ee58adbc0dd5ae594687604e1
-Size (nicovideo-dl-0.0.20190126.tar.gz) = 6868 bytes
-SHA1 (patch-nicovideo-dl) = a738ec485bbb80b5d1a859a3db7daff00adea784
