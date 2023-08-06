@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4797 2023/08/06 07:17:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4798 2023/08/06 07:30:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6912,3 +6912,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-psycopg2 to 2.9.7 [adam 2023-08-06]
 	Updated textproc/py-referencing to 0.30.2 [adam 2023-08-06]
 	Updated devel/py-hypothesis to 6.82.1 [adam 2023-08-06]
+	Updated archivers/gtar to 1.35 [adam 2023-08-06]
+	Updated textproc/py-colored to 2.2.3 [adam 2023-08-06]
