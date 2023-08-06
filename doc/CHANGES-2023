@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4787 2023/08/05 19:48:34 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4788 2023/08/06 01:33:44 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6898,3 +6898,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed misc/ruby-equalizer [tsutsui 2023-08-05]
 	Removed misc/ruby-naught [tsutsui 2023-08-05]
 	Removed misc/ruby-args_parser [tsutsui 2023-08-05]
+	Removed net/nicovideo-dl [tsutsui 2023-08-06]
