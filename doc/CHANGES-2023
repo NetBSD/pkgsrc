@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4800 2023/08/06 07:46:31 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4801 2023/08/06 07:53:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6916,3 +6916,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-colored to 2.2.3 [adam 2023-08-06]
 	Removed misc/ruby-colorize [taca 2023-08-06]
 	Updated devel/ruby-minitest to 5.19.0 [taca 2023-08-06]
+	Removed devel/ruby-minitest [taca 2023-08-06]
