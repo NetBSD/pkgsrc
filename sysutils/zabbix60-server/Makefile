@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/24 08:51:51 otis Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/06 17:46:47 otis Exp $
 # used by sysutils/zabbix60-proxy/Makefile
 # used by sysutils/zabbix60-agent/Makefile
 #
@@ -62,7 +62,7 @@ SUBST_SED.fix-popcount+=	-e 's,popcount,zbx_popcount,g'
 
 PLIST_SUBST+=			PKGBASE=${PKGBASE}
 
-CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1
+CFLAGS.SunOS+=			-DDUK_USE_BYTEORDER=1 -D__EXTENSIONS__
 
 REPLACE_BASH+=			misc/snmptrap/snmptrap.sh \
 				misc/images/png_to_xml.sh
