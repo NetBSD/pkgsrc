@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4813 2023/08/06 17:58:45 otis Exp $
+$NetBSD: CHANGES-2023,v 1.4814 2023/08/06 19:14:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6930,3 +6930,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix60-agent to 6.0.20 [otis 2023-08-06]
 	Updated sysutils/zabbix60-frontend to 6.0.20 [otis 2023-08-06]
 	Updated sysutils/zabbix60-java to 6.0.20 [otis 2023-08-06]
+	Updated devel/breezy-qbrz to 0.4.1.0.1652 [adam 2023-08-06]
+	Updated textproc/py-phonenumbers to 8.13.18 [adam 2023-08-06]
