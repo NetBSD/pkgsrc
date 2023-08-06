@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/05/06 19:09:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/06 10:58:09 adam Exp $
 
 DISTNAME=	wxWidgets-3.2.2.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -133,6 +133,7 @@ post-install:
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 PLIST_SRC+=	PLIST.gtk3
@@ -145,7 +146,6 @@ PLIST_SRC+=	PLIST.gtk3
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
