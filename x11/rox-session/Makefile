@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/04/19 08:11:59 adam Exp $
+# $NetBSD: Makefile,v 1.78 2023/08/06 08:02:01 adam Exp $
 
 DISTNAME=	rox-session-0.28
-PKGREVISION=	51
+PKGREVISION=	52
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -41,9 +41,9 @@ pre-install:
 	${RM} -f ${WRKSRC}/setup.py.orig
 
 do-install:
-	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/rox/ROX-Session
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/rox/ROX-Session
 
 .include "../../lang/python/application.mk"
-.include "../../sysutils/py-dbus/buildlink3.mk"
+.include "../../sysutils/py27-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
