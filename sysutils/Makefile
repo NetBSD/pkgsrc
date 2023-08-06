@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1062 2023/08/03 18:25:47 pin Exp $
+# $NetBSD: Makefile,v 1.1063 2023/08/06 07:39:59 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -607,6 +607,7 @@ SUBDIR+=	py-supervisor
 SUBDIR+=	py-syslog-ng
 SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
+SUBDIR+=	py27-dbus
 SUBDIR+=	qdirstat
 SUBDIR+=	qlogtools
 SUBDIR+=	qmail-dovecot-checkpassword
