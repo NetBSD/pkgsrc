@@ -1,6 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2022/05/09 00:37:59 khorben Exp $
+$NetBSD: patch-Makefile,v 1.2 2023/08/06 10:14:50 nia Exp $
 
 Allow using the right compilation flags and installation path
+
+Do not invoke git.
 
 --- Makefile.orig	2015-08-21 22:24:54.000000000 +0000
 +++ Makefile
@@ -29,3 +31,9 @@ Allow using the right compilation flags and installation path
  	cp $(TARGET) $(CPATH)
  
  clean:
+@@ -67,5 +68,4 @@ context.c: context.h
+ version:
+ 	@if ! test -f $(BUILD_VERSION); then echo 0 > $(BUILD_VERSION); fi
+ 	@echo $$(($$(cat $(BUILD_VERSION)) + 1)) > $(BUILD_VERSION)
+-	@if ! test -f $(BRANCH_VERSION); then git log --pretty=oneline -1|cut -c1-8 > $(BRANCH_VERSION); fi
+ 
