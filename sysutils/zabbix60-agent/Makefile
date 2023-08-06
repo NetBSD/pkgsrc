@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/05/24 08:51:50 otis Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/06 17:46:47 otis Exp $
 
 .include "../../sysutils/zabbix60-server/Makefile.common"
 
@@ -48,6 +48,8 @@ SUBST_FILES.fix-popcount+=	src/zabbix_server/lld/lld_host.c
 SUBST_SED.fix-popcount+=	-e 's,popcount,zbx_popcount,g'
 
 PLIST_SUBST+=			PKGBASE=${PKGBASE}
+
+CFLAGS.SunOS+=			-D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 
