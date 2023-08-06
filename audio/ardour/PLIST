@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/09/11 16:33:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/06 10:08:32 nia Exp $
 bin/ardour6
 bin/ardour6-copy-mixer
 bin/ardour6-export
@@ -42,6 +42,9 @@ lib/ardour6/h${PKGNAME}
 lib/ardour6/libardour.so
 lib/ardour6/libardour.so.3
 lib/ardour6/libardour.so.3.0.0
+${PLIST.alsa}lib/ardour6/libardouralsautil.so
+${PLIST.alsa}lib/ardour6/libardouralsautil.so.0
+${PLIST.alsa}lib/ardour6/libardouralsautil.so.0.0.1
 lib/ardour6/libardourcp.so
 lib/ardour6/libaudiographer.so
 lib/ardour6/libaudiographer.so.0
