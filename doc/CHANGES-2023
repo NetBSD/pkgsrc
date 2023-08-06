@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4803 2023/08/06 08:58:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4804 2023/08/06 10:18:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6919,3 +6919,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-minitest [taca 2023-08-06]
 	Removed devel/ruby-test-unit [taca 2023-08-06]
 	Updated shells/oh-my-posh to 18.2.5 [pin 2023-08-06]
+	Added sysutils/py27-dbus version 1.2.18 [adam 2023-08-06]
+	Updated x11/qwt6-qt5 to 6.1.6 [adam 2023-08-06]
