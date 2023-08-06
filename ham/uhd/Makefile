@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/04/23 14:26:24 adam Exp $
+# $NetBSD: Makefile,v 1.75 2023/08/06 19:58:53 adam Exp $
 
 DISTNAME=	uhd-4.4.0.0
 PKGREVISION=	1
@@ -39,7 +39,6 @@ CMAKE_ARGS+=	-DENABLE_PYTHON3=ON
 # ticket filed because #236 resulted in in-ticket clarification only
 # (and not a doc edit), and having experimented no clarification is
 # needed.
-USE_CMAKE=		yes
 USE_LANGUAGES=		c gnu++14
 USE_TOOLS+=		pkg-config
 GCC_REQD+=		4.8
@@ -94,6 +93,7 @@ PLIST_SRC+=	PLIST.x4xx
 .endif
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../lang/python/application.mk"
