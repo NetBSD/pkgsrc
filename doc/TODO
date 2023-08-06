@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23250 2023/08/05 07:39:31 adam Exp $
+$NetBSD: TODO,v 1.23251 2023/08/06 07:30:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.22.5
-	o gtar-base-1.35
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
