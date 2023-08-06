@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4796 2023/08/06 07:07:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4797 2023/08/06 07:17:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6908,3 +6908,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/matugen version 0.8.4 [pin 2023-08-06]
 	Updated lang/vala to 0.56.10 [adam 2023-08-06]
 	Updated devel/py-wheel to 0.41.1 [adam 2023-08-06]
+	Updated devel/py-jaraco.functools to 3.8.1 [adam 2023-08-06]
+	Updated databases/py-psycopg2 to 2.9.7 [adam 2023-08-06]
+	Updated textproc/py-referencing to 0.30.2 [adam 2023-08-06]
+	Updated devel/py-hypothesis to 6.82.1 [adam 2023-08-06]
