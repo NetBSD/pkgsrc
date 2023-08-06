@@ -1,0 +1,5 @@
+Matugen is a cross-platform tool that generates a colorscheme either from an
+image or a color, and exports it to a file from a template.
+It can also set the wallpaper if one was provided.
+
+Note: Support changing the wallpaper on X11 requires graphics/feh.
