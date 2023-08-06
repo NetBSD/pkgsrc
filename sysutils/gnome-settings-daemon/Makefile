@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2023/05/06 19:09:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2023/08/06 10:16:37 nia Exp $
 
 DISTNAME=	gnome-settings-daemon-3.38.1
 PKGREVISION=	22
@@ -27,7 +27,6 @@ MESON_ARGS+=		-Dsystemd=false
 MESON_ARGS+=		-Dwayland=false
 MESON_ARGS+=		-Dsmartcard=false
 MESON_ARGS+=		-Dwwan=false
-MESON_ARGS+=		-Dalsa=false
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gnome-settings-daemon.pc
@@ -72,6 +71,12 @@ CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/org.gnome.SettingsDaemon.XSe
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} != "Linux"
+MESON_ARGS+=		-Dalsa=false
+.else
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
