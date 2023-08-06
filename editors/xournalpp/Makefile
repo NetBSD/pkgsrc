@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2023/07/18 14:13:24 nia Exp $
+# $NetBSD: Makefile,v 1.54 2023/08/06 11:59:42 yhardy Exp $
 
-DISTNAME=	xournalpp-1.1.3
-PKGREVISION=	5
+DISTNAME=	xournalpp-1.2.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +15,7 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	translations xournalpp
+CMAKE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
 
 USE_CXX_FEATURES+=	c++17 filesystem
 
