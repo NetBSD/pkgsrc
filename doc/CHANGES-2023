@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4802 2023/08/06 08:09:23 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4803 2023/08/06 08:58:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6918,3 +6918,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-minitest to 5.19.0 [taca 2023-08-06]
 	Removed devel/ruby-minitest [taca 2023-08-06]
 	Removed devel/ruby-test-unit [taca 2023-08-06]
+	Updated shells/oh-my-posh to 18.2.5 [pin 2023-08-06]
