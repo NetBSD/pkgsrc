@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/05/22 21:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2023/08/06 10:19:37 nia Exp $
 
 DISTNAME=	cantata-2.5.0
 PKGREVISION=	4
@@ -40,6 +40,9 @@ PLIST.notdarwin=	yes
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../sysutils/libudev/buildlink3.mk"
+.endif
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.11
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
