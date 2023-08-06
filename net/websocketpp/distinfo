@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:07:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/08/06 20:20:18 adam Exp $
 
-BLAKE2s (websocketpp-0.7.0.tar.gz) = ac998ee5546aac3b55a8b8d020a7f6faaefe73847701c1ebbe1e4b0b5f56bfde
-SHA512 (websocketpp-0.7.0.tar.gz) = 91a86d4f5120db3f474169bb146f865f82167b1e9eedabec8793b31005e4ce3d22083283bc1b9f9e37fa0da835addcb2b68260a27c753852c06b3b1bb2f3c12e
-Size (websocketpp-0.7.0.tar.gz) = 682271 bytes
+BLAKE2s (websocketpp-0.8.2.tar.gz) = 21287db3aadaf0dd63bbb4b937dc8f373fe053a5bdf73beb509b19a100a9315c
+SHA512 (websocketpp-0.8.2.tar.gz) = b2afc63edb69ce81a3a6c06b3d857b3e8820f0e22300ac32bb20ab30ff07bd58bd5ada3e526ed8ab52de934e0e3a26cad2118b0e68ecf3e5e9e8d7101348fd06
+Size (websocketpp-0.8.2.tar.gz) = 701364 bytes
