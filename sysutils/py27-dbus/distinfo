@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/06 07:40:00 adam Exp $
+
+BLAKE2s (dbus-python-1.2.18.tar.gz) = 94087041962f002abf5be7cdbcbf540e0d1fd128b59aa068d978191eb49e3b6e
+SHA512 (dbus-python-1.2.18.tar.gz) = 72f422c59637392bd78b741b66dff2afadcc706452c3e82fdc14b1dc052a0c5cb8a85e2758d18c5cbdc08004419a0b3c16b67b99688d96307084403e72585900
+Size (dbus-python-1.2.18.tar.gz) = 578204 bytes
