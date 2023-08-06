@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2023/02/04 02:07:05 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/08/06 03:07:59 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -174,5 +174,7 @@ ${GEM_LIBDIR}/patches/libxml2/0001-Remove-script-macro-support.patch
 ${GEM_LIBDIR}/patches/libxml2/0002-Update-entities-to-remove-handling-of-ssi.patch
 ${GEM_LIBDIR}/patches/libxml2/0003-libxml2.la-is-in-top_builddir.patch
 ${GEM_LIBDIR}/patches/libxml2/0009-allow-wildcard-namespaces.patch
-${GEM_LIBDIR}/patches/libxslt/0001-update-automake-files-for-arm64.patch
+${GEM_LIBDIR}/patches/libxml2/0010-update-config.guess-and-config.sub-for-libxml2.patch
+${GEM_LIBDIR}/patches/libxml2/0011-rip-out-libxml2-s-libc_single_threaded-support.patch
+${GEM_LIBDIR}/patches/libxslt/0001-update-config.guess-and-config.sub-for-libxslt.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
