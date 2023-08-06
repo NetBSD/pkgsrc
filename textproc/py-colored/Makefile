@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/11/17 17:32:56 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/06 07:30:24 adam Exp $
 
-DISTNAME=	colored-1.4.4
+DISTNAME=	colored-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colored/}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://gitlab.com/dslackw/colored
 COMMENT=	Python library for coloring terminal text
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2.0:../../devel/py-flit_core
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
