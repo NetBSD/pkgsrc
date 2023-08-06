@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/06/07 11:27:32 micha Exp $
+# $NetBSD: Makefile,v 1.97 2023/08/06 06:38:26 adam Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -64,7 +64,7 @@ CONF_FILES+=		${PREFIX}/share/examples/ibus/dconf/profile/ibus \
 			${PKG_SYSCONFDIR}/dconf/profile/ibus
 
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.1.[0-9]*)
+.if ${CC_VERSION:Mgcc-4.1.[0-9]*}
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
 
@@ -85,7 +85,6 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.46.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala+=	build
 .include "../../lang/vala/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../sysutils/dbus/buildlink3.mk"
@@ -99,6 +98,5 @@ BUILDLINK_API_DEPENDS.gtk3+=		gtk3+>=3.12.0
 .include "../../x11/gtk3/modules.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
