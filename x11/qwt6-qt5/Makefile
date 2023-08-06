@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2023/05/22 21:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/06 10:18:07 adam Exp $
 
-DISTNAME=	qwt-6.1.5
-PKGNAME=	qwt6-qt5-6.1.5
-PKGREVISION=	19
+DISTNAME=	qwt-6.1.6
+PKGNAME=	qwt6-qt5-6.1.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/qwt/
+HOMEPAGE=	https://qwt.sourceforge.io/
 COMMENT=	Qt widget library for technical purposes
 LICENSE=	gnu-lgpl-v2
 
@@ -16,11 +15,9 @@ EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+AUTO_MKDIRS=	yes
 
-AUTO_MKDIRS=		yes
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
-
-PLIST_SUBST+=	VERSION=${PKGVERSION_NOREV}
 
 # remove tex temp files that should not be installed
 post-extract:
@@ -44,7 +41,7 @@ post-install:
 	  ${DESTDIR}${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib
 .endif
 
-.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
