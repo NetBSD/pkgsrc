@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/05/22 20:59:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/06 06:08:39 adam Exp $
 
 DISTNAME=	telepathy-qt-0.9.8
 PKGNAME=	${DISTNAME:S/qt/qt5/g}
@@ -19,7 +19,8 @@ PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQt.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQtService.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/Farstream/TelepathyQtFarstream.pc.in
 
-PYTHON_FOR_BUILD_ONLY= yes
+PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-dbus
 .include "../../chat/telepathy-farstream/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
