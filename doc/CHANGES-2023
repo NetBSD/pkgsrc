@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4816 2023/08/07 05:33:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4817 2023/08/07 13:39:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6940,3 +6940,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numexpr to 2.8.5 [adam 2023-08-07]
 	Updated devel/py-bitarray to 2.8.1 [adam 2023-08-07]
 	Updated devel/py-maturin to 1.2.0 [adam 2023-08-07]
+	Updated time/py-vdirsyncer to 0.19.2 [adam 2023-08-07]
+	Updated misc/py-asciinema to 2.3.0 [adam 2023-08-07]
