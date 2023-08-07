@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/03 13:56:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/08/07 05:26:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,10 +13,11 @@ ${PYSITELIB}/bitarray/_util.so
 ${PYSITELIB}/bitarray/bitarray.h
 ${PYSITELIB}/bitarray/py.typed
 ${PYSITELIB}/bitarray/pythoncapi_compat.h
+${PYSITELIB}/bitarray/test_150.pickle
+${PYSITELIB}/bitarray/test_281.pickle
 ${PYSITELIB}/bitarray/test_bitarray.py
 ${PYSITELIB}/bitarray/test_bitarray.pyc
 ${PYSITELIB}/bitarray/test_bitarray.pyo
-${PYSITELIB}/bitarray/test_data.pickle
 ${PYSITELIB}/bitarray/test_util.py
 ${PYSITELIB}/bitarray/test_util.pyc
 ${PYSITELIB}/bitarray/test_util.pyo
