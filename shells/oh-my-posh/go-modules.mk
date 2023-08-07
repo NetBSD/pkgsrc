@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.23 2023/08/03 19:41:57 pin Exp $
+# $NetBSD: go-modules.mk,v 1.24 2023/08/07 13:44:55 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
