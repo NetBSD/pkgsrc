@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/07/22 09:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.47 2023/08/07 06:43:13 nia Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -21,6 +21,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
+
+# "error: sorry, unimplemented: non-trivial designated initializers not supported"
+# apparently gcc 8 should work.
+USE_CXX_FEATURES+=	c++20
 
 # Needs linux joystick support.
 CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
