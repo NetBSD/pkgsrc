@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4817 2023/08/07 13:39:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4818 2023/08/07 13:45:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6942,3 +6942,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-maturin to 1.2.0 [adam 2023-08-07]
 	Updated time/py-vdirsyncer to 0.19.2 [adam 2023-08-07]
 	Updated misc/py-asciinema to 2.3.0 [adam 2023-08-07]
+	Updated shells/oh-my-posh to 18.3.1 [pin 2023-08-07]
