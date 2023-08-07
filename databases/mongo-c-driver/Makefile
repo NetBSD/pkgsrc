@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/07/29 11:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.59 2023/08/07 07:19:33 nia Exp $
 
 DISTNAME=	mongo-c-driver-1.24.2
 CATEGORIES=	databases
@@ -16,6 +16,9 @@ NOT_FOR_PLATFORM+=	OpenBSD-*-*
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 TEST_TARGET=	check
+
+# u_int for sys/sysctl.h
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 CMAKE_ARGS+=	-DENABLE_ICU=ON
 CMAKE_ARGS+=	-DENABLE_SNAPPY=ON
