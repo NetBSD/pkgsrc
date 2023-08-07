@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2023/08/07 13:37:17 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/08/07 18:16:15 adam Exp $
 
-DISTNAME=	vdirsyncer-0.19.2
+DISTNAME=	vdirsyncer-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
@@ -14,8 +15,6 @@ EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.8.0:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-aiostream>=0.4.3:../../devel/py-aiostream
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.3.0:../../devel/py-click-log
@@ -24,13 +23,10 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-TEST_DEPENDS+=	${PYPKGPREFIX}-aioresponses-[0-9]*:../../net/py-aioresponses
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.0.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
 
 USE_LANGUAGES=		# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE} ${PKGMANDIR}/man1
