@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2023/07/18 12:58:53 nia Exp $
+# $NetBSD: Makefile,v 1.81 2023/08/07 06:38:46 nia Exp $
 #
 
 V=		7.0.5
@@ -54,6 +54,7 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
