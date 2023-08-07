@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4815 2023/08/06 20:23:55 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4816 2023/08/07 05:33:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6934,3 +6934,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-phonenumbers to 8.13.18 [adam 2023-08-06]
 	Updated net/websocketpp to 0.8.2 [adam 2023-08-06]
 	Updated textproc/py-pygments to 2.16.1 [adam 2023-08-06]
+	Downgraded devel/py-debugpy to 1.6.7 [adam 2023-08-07]
+	Updated devel/py-importlib-resources to 6.0.1 [adam 2023-08-07]
+	Updated devel/py-hypothesis to 6.82.2 [adam 2023-08-07]
+	Updated math/py-numexpr to 2.8.5 [adam 2023-08-07]
+	Updated devel/py-bitarray to 2.8.1 [adam 2023-08-07]
+	Updated devel/py-maturin to 1.2.0 [adam 2023-08-07]
