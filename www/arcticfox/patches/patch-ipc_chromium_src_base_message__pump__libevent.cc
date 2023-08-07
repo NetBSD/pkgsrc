@@ -1,12 +1,12 @@
-$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.1 2022/02/05 20:51:07 nia Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__pump__libevent.cc,v 1.2 2023/08/07 19:25:44 abs Exp $
 
 Avoid compilation failure caused by slightly-incompatible libevent
 headers.
 
---- ipc/chromium/src/base/message_pump_libevent.cc.orig	2021-12-03 05:22:04.000000000 +0000
+--- ipc/chromium/src/base/message_pump_libevent.cc.orig	2023-07-18 16:18:58.000000000 +0000
 +++ ipc/chromium/src/base/message_pump_libevent.cc
 @@ -22,19 +22,6 @@
- #include "third_party/libevent/event.h"
+ #include "event.h"
  #include "mozilla/UniquePtr.h"
  
 -// This macro checks that the _EVENT_SIZEOF_* constants defined in
