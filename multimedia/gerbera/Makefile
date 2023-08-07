@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/07/18 18:34:30 nia Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/07 10:05:20 adam Exp $
 
 DISTNAME=	gerbera-1.12.1
 PKGREVISION=	4
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/gerbera/gerbera
 COMMENT=	UPnP Media Server
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	filesystem
@@ -71,6 +70,7 @@ post-install:
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .if !empty(PKGSRC_COMPILER:M*gcc*)
 .  include "../../devel/libatomic/buildlink3.mk"
 .endif
