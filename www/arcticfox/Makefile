@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2023/08/07 19:23:01 abs Exp $
+# $NetBSD: Makefile,v 1.32 2023/08/07 19:25:44 abs Exp $
 
-DISTNAME=	arcticfox-41.0
-PKGREVISION=	2
+DISTNAME=	arcticfox-42.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DIST_SUBDIR=	arctic-fox
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/wicknix/Arctic-Fox
@@ -26,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-eme
 CONFIGURE_ARGS+=	--disable-gamepad
+CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-mozril-geoloc
