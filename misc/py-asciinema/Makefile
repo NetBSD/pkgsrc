@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/07 13:39:29 adam Exp $
 
-DISTNAME=	asciinema-2.2.0
+DISTNAME=	asciinema-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciinema/}
