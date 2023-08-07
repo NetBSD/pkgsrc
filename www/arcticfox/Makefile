@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/07/22 10:31:38 nia Exp $
+# $NetBSD: Makefile,v 1.31 2023/08/07 19:23:01 abs Exp $
 
 DISTNAME=	arcticfox-41.0
 PKGREVISION=	2
@@ -23,22 +23,22 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	# yes
 OVERRIDE_DIRDEPTH=		5
 
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-gstreamer
-CONFIGURE_ARGS+=	--disable-updater
-CONFIGURE_ARGS+=	--disable-mozril-geoloc
-CONFIGURE_ARGS+=	--disable-webrtc
-CONFIGURE_ARGS+=	--disable-safe-browsing
-CONFIGURE_ARGS+=	--disable-parental-controls
-CONFIGURE_ARGS+=	--enable-release
-CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-eme
 CONFIGURE_ARGS+=	--disable-gamepad
 CONFIGURE_ARGS+=	--disable-gio
-CONFIGURE_ARGS+=	--enable-strip
-CONFIGURE_ARGS+=	--enable-install-strip
+CONFIGURE_ARGS+=	--disable-gstreamer
+CONFIGURE_ARGS+=	--disable-mozril-geoloc
+CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-parental-controls
+CONFIGURE_ARGS+=	--disable-safe-browsing
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-updater
+CONFIGURE_ARGS+=	--disable-webrtc
 CONFIGURE_ARGS+=	--enable-application=browser
+CONFIGURE_ARGS+=	--enable-install-strip
+CONFIGURE_ARGS+=	--enable-release
+CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--with-branding=browser/branding/arcticfox
 
 # Necessary for PaX safety on NetBSD.
