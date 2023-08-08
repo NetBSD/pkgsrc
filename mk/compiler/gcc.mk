@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.260 2023/08/03 06:06:18 nia Exp $
+# $NetBSD: gcc.mk,v 1.261 2023/08/08 13:33:39 tnn Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -531,8 +531,8 @@ _GCC_CFLAGS+=		${_STACK_CHECK_CFLAGS}
 .endif
 
 .if ${_PKGSRC_MKPIE} == "yes"
-_MKPIE_FCFLAGS=		-fPIC		
-.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"		
+_MKPIE_FCFLAGS=		-fPIC
+.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
 _GCC_FCFLAGS+=		${_MKPIE_FCFLAGS}
 .  endif
 .endif
