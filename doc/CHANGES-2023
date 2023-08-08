@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4826 2023/08/08 15:47:36 nia Exp $
+$NetBSD: CHANGES-2023,v 1.4827 2023/08/08 19:31:51 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6956,3 +6956,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-admin-rangefilter to 0.10.0 [adam 2023-08-08]
 	Updated www/firefox102-l10n to 102.14.0 [nia 2023-08-08]
 	Updated www/firefox102 to 102.14.0 [nia 2023-08-08]
+	Updated lang/qore to 1.17.0 [nros 2023-08-08]
