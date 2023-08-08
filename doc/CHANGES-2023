@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4823 2023/08/08 12:05:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4824 2023/08/08 12:13:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6950,3 +6950,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-lexicon to 3.13.0 [adam 2023-08-08]
 	Updated textproc/ugrep to 3.12.6 [adam 2023-08-08]
 	Updated devel/py-faker to 19.3.0 [adam 2023-08-08]
+	Updated www/py-django-js-asset to 2.1.0 [adam 2023-08-08]
+	Updated www/py-django-mptt to 0.14.0 [adam 2023-08-08]
