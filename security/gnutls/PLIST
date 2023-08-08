@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2023/02/14 16:45:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.79 2023/08/08 09:33:54 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -632,6 +632,7 @@ man/man3/gnutls_protocol_set_enabled.3
 man/man3/gnutls_psk_allocate_client_credentials.3
 man/man3/gnutls_psk_allocate_server_credentials.3
 man/man3/gnutls_psk_client_get_hint.3
+man/man3/gnutls_psk_format_imported_identity.3
 man/man3/gnutls_psk_free_client_credentials.3
 man/man3/gnutls_psk_free_server_credentials.3
 man/man3/gnutls_psk_server_get_username.3
@@ -640,10 +641,12 @@ man/man3/gnutls_psk_set_client_credentials.3
 man/man3/gnutls_psk_set_client_credentials2.3
 man/man3/gnutls_psk_set_client_credentials_function.3
 man/man3/gnutls_psk_set_client_credentials_function2.3
+man/man3/gnutls_psk_set_client_credentials_function3.3
 man/man3/gnutls_psk_set_params_function.3
 man/man3/gnutls_psk_set_server_credentials_file.3
 man/man3/gnutls_psk_set_server_credentials_function.3
 man/man3/gnutls_psk_set_server_credentials_function2.3
+man/man3/gnutls_psk_set_server_credentials_function3.3
 man/man3/gnutls_psk_set_server_credentials_hint.3
 man/man3/gnutls_psk_set_server_dh_params.3
 man/man3/gnutls_psk_set_server_known_dh_params.3
