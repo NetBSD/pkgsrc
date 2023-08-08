@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4824 2023/08/08 12:13:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4825 2023/08/08 12:20:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6952,3 +6952,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 19.3.0 [adam 2023-08-08]
 	Updated www/py-django-js-asset to 2.1.0 [adam 2023-08-08]
 	Updated www/py-django-mptt to 0.14.0 [adam 2023-08-08]
+	Updated www/py-django-formtools to 2.4.1 [adam 2023-08-08]
+	Updated www/py-django-admin-rangefilter to 0.10.0 [adam 2023-08-08]
