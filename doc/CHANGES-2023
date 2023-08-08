@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4825 2023/08/08 12:20:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4826 2023/08/08 15:47:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6954,3 +6954,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-mptt to 0.14.0 [adam 2023-08-08]
 	Updated www/py-django-formtools to 2.4.1 [adam 2023-08-08]
 	Updated www/py-django-admin-rangefilter to 0.10.0 [adam 2023-08-08]
+	Updated www/firefox102-l10n to 102.14.0 [nia 2023-08-08]
+	Updated www/firefox102 to 102.14.0 [nia 2023-08-08]
