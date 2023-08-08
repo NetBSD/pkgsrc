@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4044 2023/08/06 08:08:48 taca Exp $
+# $NetBSD: Makefile,v 1.4045 2023/08/08 00:35:53 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3349,6 +3349,7 @@ SUBDIR+=	ruby-shoulda-matchers
 SUBDIR+=	ruby-simple_uuid
 SUBDIR+=	ruby-simplecov
 SUBDIR+=	ruby-simplecov-html
+SUBDIR+=	ruby-simpleidn
 SUBDIR+=	ruby-spruz
 SUBDIR+=	ruby-stomp
 SUBDIR+=	ruby-stream
