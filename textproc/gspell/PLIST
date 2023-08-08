@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/27 10:49:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/08/08 08:31:55 adam Exp $
 bin/gspell-app1
 include/gspell-1/gspell/gspell-checker-dialog.h
 include/gspell-1/gspell/gspell-checker.h
@@ -15,10 +15,10 @@ include/gspell-1/gspell/gspell-text-buffer.h
 include/gspell-1/gspell/gspell-text-view.h
 include/gspell-1/gspell/gspell-version.h
 include/gspell-1/gspell/gspell.h
-lib/girepository-1.0/Gspell-1.typelib
+${PLIST.gir}lib/girepository-1.0/Gspell-1.typelib
 lib/libgspell-1.la
 lib/pkgconfig/gspell-1.pc
-share/gir-1.0/Gspell-1.gir
+${PLIST.gir}share/gir-1.0/Gspell-1.gir
 share/gtk-doc/html/gspell-1.0/GspellChecker.html
 share/gtk-doc/html/gspell-1.0/GspellCheckerDialog.html
 share/gtk-doc/html/gspell-1.0/GspellEntry.html
@@ -58,6 +58,7 @@ share/gtk-doc/html/gspell-1.0/up.png
 share/locale/ar/LC_MESSAGES/gspell-1.mo
 share/locale/ca/LC_MESSAGES/gspell-1.mo
 share/locale/ca@valencia/LC_MESSAGES/gspell-1.mo
+share/locale/ckb/LC_MESSAGES/gspell-1.mo
 share/locale/cs/LC_MESSAGES/gspell-1.mo
 share/locale/da/LC_MESSAGES/gspell-1.mo
 share/locale/de/LC_MESSAGES/gspell-1.mo
@@ -78,6 +79,7 @@ share/locale/id/LC_MESSAGES/gspell-1.mo
 share/locale/is/LC_MESSAGES/gspell-1.mo
 share/locale/it/LC_MESSAGES/gspell-1.mo
 share/locale/ja/LC_MESSAGES/gspell-1.mo
+share/locale/kk/LC_MESSAGES/gspell-1.mo
 share/locale/ko/LC_MESSAGES/gspell-1.mo
 share/locale/lt/LC_MESSAGES/gspell-1.mo
 share/locale/lv/LC_MESSAGES/gspell-1.mo
@@ -104,5 +106,5 @@ share/locale/uk/LC_MESSAGES/gspell-1.mo
 share/locale/vi/LC_MESSAGES/gspell-1.mo
 share/locale/zh_CN/LC_MESSAGES/gspell-1.mo
 share/locale/zh_TW/LC_MESSAGES/gspell-1.mo
-share/vala/vapi/gspell-1.deps
-share/vala/vapi/gspell-1.vapi
+${PLIST.gir}share/vala/vapi/gspell-1.deps
+${PLIST.gir}share/vala/vapi/gspell-1.vapi
