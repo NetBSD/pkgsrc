@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4833 2023/08/08 20:02:20 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4834 2023/08/08 21:41:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6963,3 +6963,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.3.2 [pin 2023-08-08]
 	Updated net/sniffnet to 1.2.2 [pin 2023-08-08]
 	Updated sysutils/xplr to 0.21.3 [pin 2023-08-08]
+	Updated devel/meson to 1.2.1 [adam 2023-08-08]
+	Updated textproc/py-regex to 2023.8.8 [adam 2023-08-08]
