@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/04/20 12:48:28 nros Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/08 19:31:04 nros Exp $
 
-DISTNAME=	qore-1.14.2
+DISTNAME=	qore-1.17.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	bash bison flex gmake pax
 USE_LANGUAGES=	c c99 c++
 PTHREAD_OPTS+=	native
-FLEX_REQD=	2.5.31
+FLEX_REQD+=	2.5.31
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 REPLACE_QORE=		bin/qdbg bin/qdbg-remote bin/qdbg-server
