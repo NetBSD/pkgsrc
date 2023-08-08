@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4819 2023/08/07 18:20:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4820 2023/08/08 00:37:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6887,7 +6887,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/mikutter-plugins-twitter [tsutsui 2023-08-05]
 	Removed net/ruby-twitter-text-simpleidn [tsutsui 2023-08-05]
 	Removed net/ruby-tw [tsutsui 2023-08-05]
-	Removed devel/ruby-simpleidn [tsutsui 2023-08-05]
 	Removed net/ruby-twitter-text [tsutsui 2023-08-05]
 	Removed net/ruby-twitter [tsutsui 2023-08-05]
 	Removed devel/ruby-idn [tsutsui 2023-08-05]
