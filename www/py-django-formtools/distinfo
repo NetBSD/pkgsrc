@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/05/10 09:02:47 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/08/08 12:16:08 adam Exp $
 
-BLAKE2s (django-formtools-2.4.tar.gz) = da77914b50ce6dd24ca25125c332ebccf2619e1a562a4b5cf4e0ccb8f1b4c920
-SHA512 (django-formtools-2.4.tar.gz) = e01191e5f321e9e4c8ba2bde0e059736e413af47df61199069f15994de63f33b841dad28b722aa3d078fe9f29de889f2465eded983903bbbc8aa70dd70d86980
-Size (django-formtools-2.4.tar.gz) = 86770 bytes
+BLAKE2s (django-formtools-2.4.1.tar.gz) = c91bac5ab65ab1b8d90197c75382863c509a301c2ba7d2ccdf794becfd17c9f6
+SHA512 (django-formtools-2.4.1.tar.gz) = 713d138186b9b213de508d82c0981d78c2be4143dc0c3885e9ec56590a6940e089713638e6fbb05a4a9366dc9544ae83c338c380d2840099823d35f09debbd9d
+Size (django-formtools-2.4.1.tar.gz) = 87172 bytes
