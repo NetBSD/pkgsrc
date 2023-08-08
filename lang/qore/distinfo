@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2023/04/20 12:48:28 nros Exp $
+$NetBSD: distinfo,v 1.19 2023/08/08 19:31:04 nros Exp $
 
-BLAKE2s (qore-1.14.2.tar.bz2) = ecdc5ddf43b29b30f2a81d3246f76f7c78ec0c6c5e3ec880ecc28aa7232700bb
-SHA512 (qore-1.14.2.tar.bz2) = 5fe73a4d443040063fa9acb009ff2292e58fa385e9087478060e717e7a3fe45cf5c79670584a30e9fe16cc97c45b5122bfd31477859dd3805dc84a52ec33004c
-Size (qore-1.14.2.tar.bz2) = 43587233 bytes
-SHA1 (patch-include_qore_macros.h) = dc7ff931346ace880de3dc9ca6be4ce80b842929
+BLAKE2s (qore-1.17.0.tar.bz2) = 67ec5c84ae1977223d9a69ee56bbc7232c1942944a1941bf751795b92dcf2a12
+SHA512 (qore-1.17.0.tar.bz2) = fa6e2df66fb9945735a6d4973036a6e0807bd9d025c63c8ab44037678b200ea64721e532fe946cbd552ca59b031604ad2207d23364353a34a08f31a33b640dbc
+Size (qore-1.17.0.tar.bz2) = 44981778 bytes
+SHA1 (patch-lib_QoreEllipsesNode.cpp) = 526f37ea885102c4aa0476dff3a66effd62e0ad2
 SHA1 (patch-lib_ql__lib.qpp) = a94737d5ed7c930ddc667c5e8be45cd1095d5a4a
