@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2020/02/19 09:56:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/08/08 12:13:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mptt/__init__.py
@@ -72,9 +73,12 @@ ${PYSITELIB}/mptt/settings.pyo
 ${PYSITELIB}/mptt/signals.py
 ${PYSITELIB}/mptt/signals.pyc
 ${PYSITELIB}/mptt/signals.pyo
-${PYSITELIB}/mptt/static/mptt/arrow-move.png
-${PYSITELIB}/mptt/static/mptt/disclosure-down.png
-${PYSITELIB}/mptt/static/mptt/disclosure-right.png
+${PYSITELIB}/mptt/static/mptt/arrow-move-black.png
+${PYSITELIB}/mptt/static/mptt/arrow-move-white.png
+${PYSITELIB}/mptt/static/mptt/disclosure-down-black.png
+${PYSITELIB}/mptt/static/mptt/disclosure-down-white.png
+${PYSITELIB}/mptt/static/mptt/disclosure-right-black.png
+${PYSITELIB}/mptt/static/mptt/disclosure-right-white.png
 ${PYSITELIB}/mptt/static/mptt/draggable-admin.css
 ${PYSITELIB}/mptt/static/mptt/draggable-admin.js
 ${PYSITELIB}/mptt/templates/admin/grappelli_mptt_change_list.html
