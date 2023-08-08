@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.241 2023/06/06 12:42:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.242 2023/08/08 09:33:54 adam Exp $
 
-DISTNAME=	gnutls-3.8.0
-PKGREVISION=	3
+DISTNAME=	gnutls-3.8.1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -84,7 +83,7 @@ CONFIGURE_ARGS+=	--disable-hardware-acceleration
 .  endif
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 # don't assume GNU as(1) here
 BUILDLINK_TRANSFORM+=	rm:-Wa,-march=all
 .endif
