@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.140 2023/07/17 22:00:25 nia Exp $
+# $NetBSD: Makefile,v 1.141 2023/08/09 17:46:26 adam Exp $
 
-DISTNAME=	WindowMaker-0.95.9
+DISTNAME=	WindowMaker-0.96.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	9
 CATEGORIES=	wm windowmaker
-MASTER_SITES=	https://windowmaker.org/pub/source/release/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=window-maker/}
+GITHUB_PROJECT=	wmaker
+GITHUB_RELEASE=	wmaker-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.windowmaker.org/
@@ -15,14 +16,14 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt perl:run pkg-config xgettext
+USE_TOOLS+=		gmake msgfmt perl:run pkg-config xgettext
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-magick
 CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-usermenu
 CONFIGURE_ARGS+=	--enable-xinerama
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--with-defsdatadir=${PREFIX}/share/examples/WindowMaker
+CONFIGURE_ARGS+=	--with-pkgconfdir=${PREFIX}/share/examples/WindowMaker
 CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX}/share/GNUstep
 CONFIGURE_ENV+=		LINGUAS="bg ca cs cz da de el es et fi fr gl he hr hu it ja ko nl ms no pl pt ro ru se sk sl sv tr zh_CN zh_TW"
 CONFIGURE_ENV+=		CPP_PATH=${CPP:Q}
@@ -40,7 +41,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/compiler.mk"
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
+.if ${MACHINE_PLATFORM:MSunOS-5.11-*}
 CONFIGURE_ENV+=		ac_cv_lib_Xext_XineramaGetInfo=no
 .endif
 
