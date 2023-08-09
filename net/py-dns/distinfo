@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/07/27 06:48:15 adam Exp $
+$NetBSD: distinfo,v 1.24 2023/08/09 20:19:09 adam Exp $
 
-BLAKE2s (dnspython-2.4.1.tar.gz) = 1906f54d7beabb9a97ce35cb2f187a6c50dce9041abc4f3d2aca3b772b3d2161
-SHA512 (dnspython-2.4.1.tar.gz) = 45d2e9c77e10b5ced952ccd5807c31287a25c33fb51827ff1e4b81ed0afd8a2db482fa8e8a1ce7ce43a4396d3a1d5259dc2b6eb19b5668a9b57d1eb5b931f217
-Size (dnspython-2.4.1.tar.gz) = 327929 bytes
+BLAKE2s (dnspython-2.4.2.tar.gz) = 73a3da94c33ac2eb3d53f9558dfa919923e5b90b1a892794ae08aaa10f5305a2
+SHA512 (dnspython-2.4.2.tar.gz) = a64cf8f02f7c223d5b9a4ab77dd933d766909b04e7ee5bfa6f2e882448dc7c543d869d8e4bce27b5f10ef3c006d54150904767d9c22c4219fdc7db5bc6da26c9
+Size (dnspython-2.4.2.tar.gz) = 328126 bytes
