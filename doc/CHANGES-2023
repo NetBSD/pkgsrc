@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4843 2023/08/09 20:19:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4844 2023/08/09 20:20:44 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6979,3 +6979,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ripdrag to 0.4.0 [pin 2023-08-09]
 	Updated devel/py-aiofiles to 23.2.1 [adam 2023-08-09]
 	Updated net/py-dns to 2.4.2 [adam 2023-08-09]
+	Updated converters/help2man to 1.49.3 [sjmulder 2023-08-09]
