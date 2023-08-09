@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4838 2023/08/09 13:19:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4839 2023/08/09 17:51:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6972,3 +6972,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-aiofiles to 23.2.0 [adam 2023-08-09]
 	Updated mail/py-postfix-mta-sts-resolver to 1.4.0 [adam 2023-08-09]
 	Updated sysutils/py-sh to 2.0.5 [adam 2023-08-09]
+	Updated wm/windowmaker to 0.96.0 [adam 2023-08-09]
+	Updated net/haproxy to 2.8.2 [adam 2023-08-09]
