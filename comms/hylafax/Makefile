@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2023/01/05 14:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2023/08/09 08:27:22 nia Exp $
 
 DISTNAME=	hylafax-6.0.7
 PKGREVISION=	2
@@ -30,6 +30,9 @@ CONFIGURE_ENV+=		OPTIMIZER=${CFLAGS:Q}
 CONFIGURE_ENV+=		VARBASE=${VARBASE}
 CHECK_PORTABILITY_SKIP=	rpm/jobcontrol.sh
 MANCOMPRESSED=		yes
+
+# Relocations result in a linker error
+MKPIE_SUPPORTED=	no
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
