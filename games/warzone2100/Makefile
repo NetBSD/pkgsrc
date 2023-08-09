@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/08/02 19:27:31 nia Exp $
+# $NetBSD: Makefile,v 1.74 2023/08/09 09:02:07 nia Exp $
 
 DISTNAME=	warzone2100_src
 PKGNAME=	warzone2100-4.3.5
@@ -22,7 +22,9 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 # Needs gnu standard variant to get alloca builtin.
-FORCE_CXX_STD=	gnu++11
+FORCE_CXX_STD=	gnu++14
+
+USE_CXX_FEATURES+=	unique_ptr
 
 .include "../../mk/bsd.prefs.mk"
 
