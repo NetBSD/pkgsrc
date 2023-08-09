@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2023/03/19 16:00:48 js Exp $
+# $NetBSD: Makefile.common,v 1.13 2023/08/09 08:24:39 nia Exp $
 #
 # used by cross/mingw-w64-i686-gcc/Makefile
 # used by cross/mingw-w64-x86_64-gcc/Makefile
@@ -17,7 +17,10 @@ DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:build
 
-PKGSRC_USE_FORTIFY=	no # Avoid "undefined reference to `__strcpy_chk'"
+FORTIFY_SUPPORTED=	no # Avoid "undefined reference to `__strcpy_chk'"
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 GNU_CONFIGURE=		yes
 OBJDIR=			../build
