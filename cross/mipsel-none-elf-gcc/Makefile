@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/28 11:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/09 08:24:39 nia Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-mipsel-none-elf-${DISTNAME}
@@ -16,6 +16,9 @@ HOMEPAGE=		# none
 COMMENT=		GCC for bare metal MIPS 32-bit little-endian ELF
 
 EXTRACT_USING=		bsdtar
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
 # use makeinfo from pkgsrc/devel/gtexinfo.
