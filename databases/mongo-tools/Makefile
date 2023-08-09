@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/07/29 11:52:55 adam Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/09 08:30:04 nia Exp $
 
 DISTNAME=	mongo-tools-100.7.4
 CATEGORIES=	databases
@@ -14,6 +14,10 @@ TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
 
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
+
+# Include this first so the proper flags get set for a go program before 
+# anything from mk/ checking the details of the toolchain is included.
+.include "../../lang/go/go-vars.mk"
 
 CHECK_PORTABILITY_SKIP=	vendor/go.mongodb.org/mongo-driver/etc/add-license.sh
 
