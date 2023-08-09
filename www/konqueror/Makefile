@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/05 06:01:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/09 20:51:39 markd Exp $
 
 DISTNAME=	konqueror-${KAPPSVER}
 CATEGORIES=	www
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge
 
