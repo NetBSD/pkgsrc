@@ -1,8 +1,8 @@
-$NetBSD: patch-util_Makefile.in,v 1.1 2015/10/16 10:42:23 adam Exp $
+$NetBSD: patch-util_Makefile.in,v 1.2 2023/08/09 17:46:26 adam Exp $
 
---- util/Makefile.in.orig	2015-08-11 18:52:20.000000000 +0000
+--- util/Makefile.in.orig	2023-08-07 12:52:47.000000000 +0000
 +++ util/Makefile.in
-@@ -482,21 +482,21 @@ AM_CPPFLAGS = \
+@@ -515,21 +515,21 @@ AM_CPPFLAGS = \
  	-DETCDIR=\"sysconfdir\" -DDATADIR=\"pkgdatadir\"
  
  liblist = @LIBRARY_SEARCH_PATH@ @INTLIBS@
@@ -10,7 +10,7 @@ $NetBSD: patch-util_Makefile.in,v 1.1 2015/10/16 10:42:23 adam Exp $
 -wdread_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 +wdwrite_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
 +wdread_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
- wxcopy_LDADD = @XLFLAGS@ @XLIBS@ 
+ wxcopy_LDADD = @XLFLAGS@ @XLIBS@
  wxpaste_LDADD = @XLFLAGS@ @XLIBS@
 -getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
 +getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
