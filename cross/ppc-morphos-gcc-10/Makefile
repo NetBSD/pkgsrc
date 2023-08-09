@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 11:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/09 08:24:40 nia Exp $
 
 DISTNAME=	sdk-source-20210211
 PKGNAME=	ppc-morphos-gcc-10-10.2.0
@@ -37,6 +37,9 @@ CONFIGURE_ARGS+=	--disable-bootstrap
 CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
 # Used by a sub-configure, therefore needs to be passed via MAKE_ENV.
 MAKE_ENV+=		gcc_cv_have_tls=no
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	libgo/mksysinfo.sh
