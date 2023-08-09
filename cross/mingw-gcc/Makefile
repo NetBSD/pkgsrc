@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/09 08:24:39 nia Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
@@ -23,6 +23,9 @@ WRKSRC=			${WRKDIR}/gcc-${DIST_VERSION}
 
 GCC_VERSION=		3.4.5
 DIST_VERSION=		${GCC_VERSION}-20060117-2
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS}
