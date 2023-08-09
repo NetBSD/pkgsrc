@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/08/02 19:20:18 nia Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/09 08:24:39 nia Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -20,6 +20,9 @@ DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
 
 # Fails with C++14 default language.
 FORCE_CXX_STD=		c++03
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 # To avoid an internal compiler error of a library for h8300h

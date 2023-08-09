@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/06/28 11:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/09 08:24:40 nia Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-powerpc-none-elf-${DISTNAME}
@@ -48,6 +48,9 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 INFO_FILES=		yes
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/12/22 13:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/09 08:24:39 nia Exp $
 
 DISTNAME=		gcc-11.2.0
 PKGNAME=		cross-i586-pc-msdosdjgpp-${DISTNAME}
@@ -30,6 +30,9 @@ USE_TOOLS+=			bash gmake gsed makeinfo perl
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_STRICT=		no # has sub-configures
 CHECK_PORTABILITY_SKIP+=	contrib/* gcc/config/nvptx/gen-opt.sh
+
+# Relocations result in a linker error.
+MKPIE_SUPPORTED=	no
 
 GNU_CONFIGURE_PREFIX=	${DJGPP_PREFIX}
 
