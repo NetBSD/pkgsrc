@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2023/08/03 05:02:34 markd Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/09 20:58:26 markd Exp $
 
 DISTNAME=	konsole-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	http://kde.org/applications/system/konsole/
@@ -13,6 +14,16 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 DEPENDS+=	kinit>=5.68.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	data/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/konsolerc \
+		${PKG_SYSCONFDIR}/xdg/konsolerc
 
 .include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
