@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/08/09 12:43:46 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/08/09 20:15:49 adam Exp $
 
-BLAKE2s (aiofiles-23.2.0.tar.gz) = 95aa9a30ee08c027a76374bb70b1329ce4db4ba99fec7087072bb17b9a945cdd
-SHA512 (aiofiles-23.2.0.tar.gz) = d7b50cd687283841ab1e3f28bd2e8fd08f2ae561d66451c6cf20e55efe3688d6d75079c6bfcff10a07d2ef0c846cbf45d85ae216ef2f1a6fbeadc9529c161284
-Size (aiofiles-23.2.0.tar.gz) = 31812 bytes
+BLAKE2s (aiofiles-23.2.1.tar.gz) = 26428a1e03d1975416ef25de549c4b723ffe65ce8ddcf1542ff1b8c4d3d14190
+SHA512 (aiofiles-23.2.1.tar.gz) = defc9d1ff5351c1812432db1849233b1f0aa661f6420c79a6eb17d84c0622ee4dd5102d50e9ef920c91adcc48914a39cd62701b340b01806a83773bf05900b6f
+Size (aiofiles-23.2.1.tar.gz) = 32072 bytes
