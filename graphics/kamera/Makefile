@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2023/08/03 03:37:23 markd Exp $
+# $NetBSD: Makefile,v 1.76 2023/08/09 20:43:17 markd Exp $
 
 DISTNAME=	kamera-${KAPPSVER}
 CATEGORIES=	graphics
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 USE_TOOLS+=	msgmerge pkg-config
 
 .include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
