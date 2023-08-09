@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4841 2023/08/09 17:59:15 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4842 2023/08/09 18:00:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6976,3 +6976,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.8.2 [adam 2023-08-09]
 	Updated devel/cargo-c to 0.9.23 [pin 2023-08-09]
 	Updated shells/oh-my-posh to 18.3.3 [pin 2023-08-09]
+	Updated sysutils/ripdrag to 0.4.0 [pin 2023-08-09]
