@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/08/09 12:43:46 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/09 20:15:49 adam Exp $
 
-DISTNAME=	aiofiles-23.2.0
+DISTNAME=	aiofiles-23.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiofiles/}
