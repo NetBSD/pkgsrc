@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.210 2023/08/02 15:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.211 2023/08/09 06:45:06 tnn Exp $
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 COMMENT=	Cross platform make
 
@@ -69,7 +70,7 @@ pre-configure:
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cbegin.cxx ${WRKSRC}/Source/Checks/cm_cxx_cbegin.cxx
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cend.cxx ${WRKSRC}/Source/Checks/cm_cxx_cend.cxx
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_size_t.cxx ${WRKSRC}/Source/Checks/cm_cxx_size_t.cxx
-	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Compiler/*.orig ${WRKSRC}/Modules/Platform/*.orig ${WRKSRC}/Modules/FindPython/*.orig
+	${FIND} ${WRKSRC}/Modules -type f -a -name "*.orig" -print | ${XARGS} ${RM}
 	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 .for lang in C CXX Fortran
 	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
