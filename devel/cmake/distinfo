@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.213 2023/07/26 08:46:53 adam Exp $
+$NetBSD: distinfo,v 1.214 2023/08/09 06:45:06 tnn Exp $
 
 BLAKE2s (cmake-3.27.1.tar.gz) = 62f93b37fa71ed78684719f0f7afb08027112065152596aa5467adaefcf5a129
 SHA512 (cmake-3.27.1.tar.gz) = d8831105fed3772bcb821a2b184fe0ffbff15795a5b0a89f2ad1cb0372a40c8f22f2bab72c671a6d17464521b7337067df929a5c3ece99f84848cc3a2fe6716f
@@ -12,6 +12,7 @@ SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cc
 SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
 SHA1 (patch-Modules_FindPython_Support.cmake) = aaec7767cad795dd269c851bd110ccefbfc87eb3
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
+SHA1 (patch-Modules_FortranCInterface_CMakeLists.txt) = 9782cba399e47770efc51a254267d6013fce9b50
 SHA1 (patch-Modules_Platform_Darwin.cmake) = 7629f034111ff64b144ff41316299d5edcfe081a
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 911271546d3ac52be0e8000857bdb236ac50ec1c
 SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 88b6eb834ce7f186f2ebf63a5c40355d0ace9cd9
