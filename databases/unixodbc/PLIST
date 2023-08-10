@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/05/09 11:16:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/08/10 07:44:52 adam Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -13,7 +13,6 @@ include/sqlext.h
 include/sqlspi.h
 include/sqltypes.h
 include/sqlucode.h
-include/unixODBC/config.h
 include/unixODBC/unixodbc_conf.h
 include/unixodbc.h
 include/uodbc_extras.h
