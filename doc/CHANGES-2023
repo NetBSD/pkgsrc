@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4849 2023/08/10 12:35:43 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4850 2023/08/10 14:10:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6987,3 +6987,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-curtsies to 0.4.2 [adam 2023-08-10]
 	Updated net/py-zeroconf to 0.74.0 [adam 2023-08-10]
 	Updated devel/py-pdm_backend to 2.1.5 [adam 2023-08-10]
+	Updated editors/retext to 8.0.1 [gutteridge 2023-08-10]
