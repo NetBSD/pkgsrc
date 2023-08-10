@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/06/06 12:42:53 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/10 14:11:37 pin Exp $
 
-DISTNAME=	jolly-0.2.0
+DISTNAME=	jolly-0.3.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apgoetz/}
 
@@ -30,9 +30,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/icon/jolly.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
