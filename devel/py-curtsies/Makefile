@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/07/30 15:32:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/10 12:02:46 adam Exp $
 
-DISTNAME=	curtsies-0.4.1
+DISTNAME=	curtsies-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
