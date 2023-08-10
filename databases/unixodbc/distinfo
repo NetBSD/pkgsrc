@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2022/05/09 11:16:27 adam Exp $
+$NetBSD: distinfo,v 1.23 2023/08/10 07:44:52 adam Exp $
 
-BLAKE2s (unixODBC-2.3.11.tar.gz) = 4c160a5ab37682d38fbc960da239c952b552abc55fe5ff227f5673726c518e6d
-SHA512 (unixODBC-2.3.11.tar.gz) = dddc32f90a7962e6988e1130a8093c6fb8b9ff532cad270d572250324aecbc739f45f9d8021d217313910bab25b08e69009b4f87456575535e93be1f46f5f13d
-Size (unixODBC-2.3.11.tar.gz) = 1752585 bytes
+BLAKE2s (unixODBC-2.3.12.tar.gz) = aff316a61bfab36b9efc8fd6d8636bc157ecd41133fd006ac56ce5c82a1ad14d
+SHA512 (unixODBC-2.3.12.tar.gz) = ca9d8db943195679a44db1fc09391dc6662ab1721112c93d448f04011e98502462ffe14b8364eb03707d851db456eced20eb61a22370392ca88d917038d45b56
+Size (unixODBC-2.3.12.tar.gz) = 1753915 bytes
 SHA1 (patch-Makefile.in) = 807eb24caff7e01493bb6d60f3b253d9f34fa2fc
