@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4045 2023/08/08 00:35:53 taca Exp $
+# $NetBSD: Makefile,v 1.4046 2023/08/10 21:45:56 leot Exp $
 #
 
 COMMENT=	Development utilities
@@ -3128,6 +3128,7 @@ SUBDIR+=	rebar21
 SUBDIR+=	rebar3
 SUBDIR+=	refinecvs
 SUBDIR+=	reftools
+SUBDIR+=	regal
 SUBDIR+=	remake
 SUBDIR+=	reposurgeon
 SUBDIR+=	retrie
