@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:14:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/08/10 15:39:36 nia Exp $
 
-BLAKE2s (asm.8051.Z) = bd3c82f67dc2f0ef86952ac9bdae3b4544588c05f7c2de0f8e09dd84591a32df
-SHA512 (asm.8051.Z) = 823ade1b2974756cdf259dec0f0e7d4eec2dfd8d534c3cc45d46d4d05374aa24d6555e53e9c6f443af708d09402c510a4b3a12394be5d090465e27c9cdc9d955
-Size (asm.8051.Z) = 36129 bytes
-SHA1 (patch-aa) = 12a8027db77748bace255e7af660363eb372110a
-SHA1 (patch-as31.y) = 368697a67d843f927e19c0ea2eb35ece6c28720b
-SHA1 (patch-lexer.c) = 43633848e2089b7cc8023dd5963ec9bb591bbffc
-SHA1 (patch-main.c) = fbeffe01a15cdaed650870415a2d20dc8cd1177f
-SHA1 (patch-symbol.c) = 0be031d5b075517e34b6327f70cc93c3a6ee3daa
+BLAKE2s (as31_2.3.1.orig.tar.gz) = 61e5218b02d46c68125b83696ff115b1e340b4d0c2c57a4b8072d3a8e7aae52a
+SHA512 (as31_2.3.1.orig.tar.gz) = e53e9aba2ceb63abdc08a2ec0e5c9b82b22bc5f93b613ed969242b6a5ae56efb774c3d75647e1776cee848d7fdb3123b19b53749c9683cc84fb09ae7a86b4353
+Size (as31_2.3.1.orig.tar.gz) = 154589 bytes
