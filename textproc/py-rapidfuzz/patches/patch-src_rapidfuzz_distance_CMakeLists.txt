@@ -1,0 +1,15 @@
+$NetBSD: patch-src_rapidfuzz_distance_CMakeLists.txt,v 1.1 2023/08/10 12:00:55 adam Exp $
+
+Avoid SOABI in module name, so PLIST is constant across platforms.
+
+--- src/rapidfuzz/distance/CMakeLists.txt.orig	2023-08-06 11:44:02.000000000 +0000
++++ src/rapidfuzz/distance/CMakeLists.txt
+@@ -28,7 +28,7 @@ function(rf_add_library name)
+     endif()
+     set_property(TARGET ${name} PROPERTY SUFFIX ".${Python_SOABI}${suffix}")
+   else()
+-    python_add_library(${name} MODULE WITH_SOABI ${ARGV})
++    python_add_library(${name} MODULE ${ARGV})
+   endif()
+ endfunction(rf_add_library)
+ 
