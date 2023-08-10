@@ -1,3 +1,3 @@
-This packages contains a sip extension module, intended for use by
+This package contains a sip extension module, intended for use by
 x11/py-qt6.  (The sip module is used at runtime, rather than only at
 build time like sip.)
