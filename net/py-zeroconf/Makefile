@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/06/11 15:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2023/08/10 12:31:59 adam Exp $
 
-DISTNAME=	zeroconf-0.47.3
+DISTNAME=	zeroconf-0.74.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
 
@@ -13,16 +12,22 @@ LICENSE=	gnu-lgpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-ifaddr>=0.1.7:../../net/py-ifaddr
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.1:../../devel/py-async-timeout
 .endif
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
