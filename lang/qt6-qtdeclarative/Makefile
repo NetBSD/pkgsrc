@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/03 20:01:30 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/10 15:16:53 tnn Exp $
 
 DISTNAME=	qtdeclarative-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtdeclarative-${QTVERSION}
@@ -34,7 +34,13 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6QuickWidgets.pc
 
 PLIST_VARS+=	jit
 
-.if empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+# jit-enabled platforms per src/qml/configure.cmake.
+# NetBSD-*-aarch64 could be added, but I/D cache flushing in ARM64Assembler.h is missing.
+.if	\
+	  !empty(MACHINE_PLATFORM:M*-*-i386) ||			\
+	  !empty(MACHINE_PLATFORM:M*-*-x86_64) ||		\
+	  !empty(MACHINE_PLATFORM:MLinux-*-*arm*) ||		\
+	  !empty(MACHINE_PLATFORM:MLinux-*-aarch64*)
 PLIST.jit=	yes
 .endif
 
