@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.130 2023/07/19 08:11:35 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.131 2023/08/10 16:45:28 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -106,6 +106,10 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 .  if !defined(OSX_SDK_PATH)
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${MACOSX_DEPLOYMENT_TARGET} \
 		    --show-sdk-path 2>/dev/null || echo /nonexistent
+.  endif
+.  if !exists(${OSX_SDK_PATH})
+PKG_FAIL_REASON+=	"Unable to find macOS SDK at ${OSX_SDK_PATH}"
+PKG_FAIL_REASON+=	"Check MACOSX_DEPLOYMENT_TARGET points to a valid SDK"
 .  endif
 ALL_ENV+=		MACOSX_DEPLOYMENT_TARGET=${MACOSX_DEPLOYMENT_TARGET}
 MAKEFLAGS+=		OSX_SDK_PATH=${OSX_SDK_PATH:Q}
