@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/08/26 10:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/10 05:17:48 adam Exp $
 
-DISTNAME=	dnsdiag-2.0.2
+DISTNAME=	dnsdiag-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
@@ -11,8 +11,8 @@ COMMENT=	DNS Diagnostics and Performance Measurement Tools
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cymruwhois>=1.6:../../net/py-cymruwhois
-DEPENDS+=	${PYPKGPREFIX}-dns>=1.16.0:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-dns>=2.3.0:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.28.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
 
 USE_LANGUAGES=	# none
