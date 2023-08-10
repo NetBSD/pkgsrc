@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/08/02 16:17:17 nia Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/10 11:49:55 sjmulder Exp $
 
 DISTNAME=	sc-im-0.8.3
 CATEGORIES=	math
@@ -25,6 +25,8 @@ REPLACE_BASH+=	src/scopen
 
 # gnuplot is invoked through the shell, no need to check at compile time
 CFLAGS+=	-DGNUPLOT
+# needed for PATH_MAX due to std=c99 set above (at least on Illumos)
+CFLAGS+=	-D_XOPEN_SOURCE
 
 MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.ncursesw:Q}
 MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.ncursesw:Q}
