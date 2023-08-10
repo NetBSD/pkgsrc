@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.45 2022/05/13 06:45:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/10 07:44:52 adam Exp $
 
-DISTNAME=	unixODBC-2.3.11
+DISTNAME=	unixODBC-2.3.12
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.unixodbc.org/pub/unixODBC/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.unixodbc.org/
+HOMEPAGE=	https://www.unixodbc.org/
 COMMENT=	ODBC 2.x/3.x driver manager
 LICENSE=	gnu-lgpl-v2.1
 
