@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/09/11 17:52:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/11 13:01:29 adam Exp $
 bin/pydoctor
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -60,6 +60,9 @@ ${PYSITELIB}/pydoctor/epydoc/markup/plaintext.pyo
 ${PYSITELIB}/pydoctor/epydoc/markup/restructuredtext.py
 ${PYSITELIB}/pydoctor/epydoc/markup/restructuredtext.pyc
 ${PYSITELIB}/pydoctor/epydoc/markup/restructuredtext.pyo
+${PYSITELIB}/pydoctor/epydoc/sre_constants36.py
+${PYSITELIB}/pydoctor/epydoc/sre_constants36.pyc
+${PYSITELIB}/pydoctor/epydoc/sre_constants36.pyo
 ${PYSITELIB}/pydoctor/epydoc/sre_parse36.py
 ${PYSITELIB}/pydoctor/epydoc/sre_parse36.pyc
 ${PYSITELIB}/pydoctor/epydoc/sre_parse36.pyo
