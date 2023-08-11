@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4860 2023/08/11 05:23:58 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4861 2023/08/11 05:56:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6998,3 +6998,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-sp to 2.0.0 [mef 2023-08-11]
 	Updated math/R-rstudioapi to 0.15.0 [mef 2023-08-11]
 	Updated math/R-robustbase to 0.99.0 [mef 2023-08-11]
+	Updated lang/nodejs to 20.5.1 [adam 2023-08-11]
+	Updated lang/nodejs18 to 18.17.1 [adam 2023-08-11]
+	Updated lang/nodejs16 to 16.20.2 [adam 2023-08-11]
+	Updated textproc/py-pallets-sphinx-themes to 2.1.1 [adam 2023-08-11]
