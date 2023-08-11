@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.502 2023/08/03 22:02:33 ryoon Exp $
+$NetBSD: distinfo,v 1.503 2023/08/11 14:00:03 tnn Exp $
 
 BLAKE2s (firefox-116.0.source.tar.xz) = 4c4470859eb0d87391a31c9a004d3309d218b2b385768369b1078d2c9e515498
 SHA512 (firefox-116.0.source.tar.xz) = 4370c65a99bf8796524aca11ea8e99fa4f875176a5805ad49f35ae149080eb54be42e7eae84627e87e17b88b262649e48f3b30b317170ac7c208960200d1005d
@@ -40,5 +40,6 @@ SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b75306
 SHA1 (patch-toolkit_moz.configure) = c183f8b1566ffed0df17bf856f693b3a288affeb
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 706635b76a7b525794aba95e95544f09e18bb662
 SHA1 (patch-toolkit_xre_glxtest.cpp) = adcd5b05fcbd7b41c01a2aa66f3e8f05ed230444
+SHA1 (patch-widget_gtk_v4l2test_v4l2test.cpp) = a9ed8692a703d3b31bdbc8d0582a60540922a1dd
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 81d43a046fcef6bf6717d52485686ba8e8738254
