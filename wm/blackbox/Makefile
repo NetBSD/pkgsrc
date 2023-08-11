@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/01/29 21:15:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/08/11 22:17:57 gutteridge Exp $
 
 DISTNAME=	blackbox-0.77
 PKGREVISION=	3
@@ -18,10 +18,12 @@ CONFLICTS+=	blackbox70-[0-9]*
 SUPERSEDES+=	blackbox70-[0-9]*
 PREV_PKGPATH=	wm/blackbox70
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
+
+FORCE_CXX_STD=	c++03
 
 REPLACE_SH=	util/bsetbg
 
