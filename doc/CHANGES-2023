@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4858 2023/08/11 01:52:26 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4859 2023/08/11 02:21:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -6996,3 +6996,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/regal version 0.6.0 [leot 2023-08-10]
 	Added geography/R-terra version 1.7.39 [mef 2023-08-11]
 	Updated math/R-sp to 2.0.0 [mef 2023-08-11]
+	Updated math/R-rstudioapi to 0.15.0 [mef 2023-08-11]
