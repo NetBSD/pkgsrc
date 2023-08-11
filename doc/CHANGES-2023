@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4869 2023/08/11 10:59:59 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4870 2023/08/11 11:03:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7011,3 +7011,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-nloptr to 2.0.3 [mef 2023-08-11]
 	Updated math/R-DEoptimR to 1.1.1 [mef 2023-08-11]
 	Updated mail/ruby-mime-types-data to 3.2023.0808 [taca 2023-08-11]
+	Updated mail/ruby-mime-types to 3.5.0 [taca 2023-08-11]
