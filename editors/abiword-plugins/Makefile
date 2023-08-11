@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2023/06/06 12:41:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.140 2023/08/11 08:44:34 nia Exp $
 
 PKGREVISION=	14
 .include	"../../editors/abiword/Makefile.common"
@@ -127,5 +127,5 @@ BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 .include "../../textproc/rasqal/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../www/tidy/buildlink3.mk"
-
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
