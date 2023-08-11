@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2023/07/21 09:35:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.21 2023/08/11 08:49:13 nia Exp $
 # used by emulators/sameboy/Makefile
 # used by emulators/libretro-sameboy/Makefile
 
@@ -25,3 +25,5 @@ FORTIFY_SUPPORTED=	no
 
 # sh: /tmp/emulators/libretro-sameboy/work/SameBoy-0.13.2/build/pb12: text busy
 MAKE_JOBS_SAFE=	no
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
