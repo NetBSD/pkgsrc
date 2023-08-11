@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/11 12:40:16 adam Exp $
+
+BLAKE2s (html5tagger-1.3.0.tar.gz) = f359ef227903955904eaa9179595a533af30eb373859b3342dcac77104ec4685
+SHA512 (html5tagger-1.3.0.tar.gz) = cd908a1a5ce36588a40daeec9b2a456fd6c71c84371614d393f73d89d8782e8ca002c6976c694614238e6b0e7ff18dab8845d285dc7077d4e08ae97d645fa7cc
+Size (html5tagger-1.3.0.tar.gz) = 14196 bytes
