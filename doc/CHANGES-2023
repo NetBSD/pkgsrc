@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4879 2023/08/11 13:05:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4880 2023/08/11 13:40:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7024,3 +7024,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-sanic to 23.6.0 [adam 2023-08-11]
 	Updated devel/py-doctor to 23.4.1 [adam 2023-08-11]
 	Updated textproc/py-validators to 0.21.2 [adam 2023-08-11]
+	Updated www/ruby-rack-protection to 3.1.0 [taca 2023-08-11]
+	Updated www/ruby-sinatra to 3.1.0 [taca 2023-08-11]
+	Updated www/ruby-sinatra-contrib to 3.1.0 [taca 2023-08-11]
