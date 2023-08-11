@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/04/30 15:23:02 taca Exp $
+$NetBSD: distinfo,v 1.27 2023/08/11 13:38:58 taca Exp $
 
-BLAKE2s (sinatra-3.0.6.gem) = 18251939c90546624f928b5f8360714d02b16190dcbc222aad6249c0a12427ad
-SHA512 (sinatra-3.0.6.gem) = 3eabaca09d7528fada3c24200014de67678b01a7d1bfe1141f0bad977ebd22eb0e57d286b1e445c2b2d657bcf4b9ff7d2dd06ad3d3b7376c30043dc9961f2856
-Size (sinatra-3.0.6.gem) = 133120 bytes
+BLAKE2s (sinatra-3.1.0.gem) = e3471862cd9130aeb1cfba4aa278dd19778799578cb2f3b2bea9c2dd8043add2
+SHA512 (sinatra-3.1.0.gem) = e2b1f72f6ac57ce56006b6c39c72bec8135a448b2b235d6fd061fe3d02bd32b6bd8521c8083975e2ec758b8ba9634d6bc2e90b0f5ffae954437ffb26f808b50b
+Size (sinatra-3.1.0.gem) = 135168 bytes
