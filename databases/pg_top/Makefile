@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/27 05:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/11 09:09:09 nia Exp $
 
 DISTNAME=	pg_top-4.0.0
 CATEGORIES=	databases
@@ -12,5 +12,9 @@ COMMENT=	top-like monitoring program for PostgreSQL
 NOT_FOR_PLATFORM=	NetBSD-*-*
 
 .include "../../devel/cmake/build.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../devel/libbsd/buildlink3.mk"
+.endif
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
