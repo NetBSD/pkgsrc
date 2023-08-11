@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2023/08/11 22:01:43 gutteridge Exp $
+bin/retext-py
