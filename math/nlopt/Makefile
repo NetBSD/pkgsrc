@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/09/18 05:06:06 mef Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/11 08:31:20 mef Exp $
 
-VERSION=		2.6.2
+VERSION=		2.7.1
 DISTNAME=		nlopt-${VERSION}
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=stevengj/}
