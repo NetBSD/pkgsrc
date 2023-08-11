@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.156 2023/07/18 18:34:31 nia Exp $
+# $NetBSD: Makefile,v 1.157 2023/08/11 08:52:23 nia Exp $
 
 DISTNAME=	mpv-0.35.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -26,6 +26,9 @@ WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
 WAF_CONFIGURE_ARGS+=	--enable-libmpv-shared
+
+# Support Wayland via SDL2, wayland support in mpv is too fast-moving.
+WAF_CONFIGURE_ARGS+=	--disable-wayland
 
 PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2023/06/06 12:42:02 riastradh Exp $
+# $NetBSD: options.mk,v 1.33 2023/08/11 08:52:23 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -40,11 +40,6 @@ PKG_SUGGESTED_OPTIONS+=		vaapi
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=		vdpau
 PKG_SUGGESTED_OPTIONS+=		vdpau
-.endif
-
-.if ${OPSYS} == "Linux"
-PKG_SUPPORTED_OPTIONS+=		wayland
-PKG_SUGGESTED_OPTIONS+=		wayland
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -178,18 +173,6 @@ SUBST_STAGE.vc=		pre-configure
 SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
 SUBST_FILES.vc=		waftools/checks/custom.py
 SUBST_SED.vc+=		-e 's;opt/vc;${PREFIX};g'
-.endif
-
-###
-### Wayland support (video output)
-###
-.if !empty(PKG_OPTIONS:Mwayland)
-WAF_CONFIGURE_ARGS+=	--enable-wayland
-.include "../../devel/wayland/buildlink3.mk"
-.include "../../devel/wayland-protocols/buildlink3.mk"
-.include "../../x11/libxkbcommon/buildlink3.mk"
-.else
-WAF_CONFIGURE_ARGS+=	--disable-wayland
 .endif
 
 ###
