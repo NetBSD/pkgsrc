@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1416 2023/08/05 17:39:57 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1417 2023/08/11 12:40:16 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1043,6 +1043,7 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-guessit
 SUBDIR+=	py-html-sanitizer
+SUBDIR+=	py-html5tagger
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html2text-2019.8.11
 SUBDIR+=	py-html5-parser
