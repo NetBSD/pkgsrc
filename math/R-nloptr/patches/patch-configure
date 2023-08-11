@@ -1,30 +1,15 @@
-$NetBSD: patch-configure,v 1.3 2021/09/20 01:16:44 mef Exp $
+$NetBSD: patch-configure,v 1.4 2023/08/11 08:41:09 mef Exp $
 
-=> Checking for portability problems in extracted files
 ERROR: [check-portability.awk] => Found test ... == ...:
-ERROR: [check-portability.awk] configure:2974: if test x"${nlopt_libs}" == x""; then
-ERROR: [check-portability.awk] configure:2975:     if test x"${PKGCONFIG}" == x"yes"; then
-ERROR: [check-portability.awk] configure:3272:     if test x"${PKGCONFIG}" == x"yes"; then
 
---- configure.orig	2020-07-03 02:30:38.000000000 +0900
-+++ configure	2021-09-18 13:38:30.459037943 +0900
-@@ -2971,8 +2971,8 @@ nlopt_libs=""
+--- configure.orig	2022-05-26 23:40:24.000000000 +0900
++++ configure	2023-08-11 16:48:17.053659088 +0900
+@@ -3320,7 +3320,7 @@ printf "%s\n" "no" >&6; }
+ fi
  
- ## also use pkg-config to check for NLopt
- ##
--if test x"${nlopt_libs}" == x""; then
--    if test x"${PKGCONFIG}" == x"yes"; then
-+if test x"${nlopt_libs}" = x""; then
-+    if test x"${PKGCONFIG}" = x"yes"; then
-         ## check via pkg-config for nlopt
-         if pkg-config --exists nlopt; then
-             ## obtain cflags and obtain libs
-@@ -3269,7 +3269,7 @@ fi
- if test x"${nlopt_good}" = x"yes"; then
-     { $as_echo "$as_me:${as_lineno-$LINENO}: Now testing for NLopt version 2.4.0 or greater." >&5
- $as_echo "$as_me: Now testing for NLopt version 2.4.0 or greater." >&6;}
--    if test x"${PKGCONFIG}" == x"yes"; then
-+    if test x"${PKGCONFIG}" = x"yes"; then
-         ## check via pkg-config for version number of nlopt
-         if pkg-config --exists nlopt; then
-             ## obtain version number
+ 
+-    if test x"${have_cmake}" == x"no"; then
++    if test x"${have_cmake}" = x"no"; then
+        . src/scripts/cmake_config.sh
+        if test -z "${CMAKE_BIN}"; then
+           ## also error to end configure here
