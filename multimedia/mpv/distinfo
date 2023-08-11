@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2023/03/08 17:39:19 snj Exp $
+$NetBSD: distinfo,v 1.79 2023/08/11 09:31:32 nia Exp $
 
 BLAKE2s (mpv-0.35.1.tar.gz) = 9b4b4d1688fa472980417077495470b1d72f135504e341190d847252de87468e
 SHA512 (mpv-0.35.1.tar.gz) = 42f3564a9ed4d972d14b2c697b0163f06a8bb68a0606a86c34935181247c783e3cb62286b445799998def0919fb13fce8b8f6453f82652d5bfaea5929119127a
@@ -8,6 +8,5 @@ SHA1 (patch-etc_mpv.conf) = 9e41b2f4bf59c3bfc5ad84af05538661981ed111
 SHA1 (patch-player-lua-ytdl__hook.lua) = ea5ad528f7d779c7e5fc7c672c74cc2a3e39f221
 SHA1 (patch-stream_stream__libarchive.c) = 2025f994b7f82cc868608ab7e8df0ae89b549922
 SHA1 (patch-video_out_drm__common.c) = 70eb8884f63e9456c0ffe592289cfd81e208955b
-SHA1 (patch-video_out_wayland__common.c) = abed416d258ebf0b595ea897daf3013dd81189e8
 SHA1 (patch-wscript) = 16cd1c2ecd6b860d4dc0d826742d31952811c3f7
 SHA1 (patch-wscript__build.py) = afd5e66032e5ec50c7f12988480340eca0b82bf9
