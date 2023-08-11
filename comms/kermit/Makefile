@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/05/23 03:18:45 dholland Exp $
+# $NetBSD: Makefile,v 1.98 2023/08/11 09:16:10 nia Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
@@ -71,4 +71,5 @@ BUILD_TARGET_OPSYS=	netbsd
 
 BUILD_TARGET=	${BUILD_TARGET_OPSYS}${BUILD_TARGET_OPTIONS:ts}
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
