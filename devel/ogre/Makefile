@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/07/21 08:30:48 nia Exp $
+# $NetBSD: Makefile,v 1.52 2023/08/11 09:02:05 nia Exp $
 
 DISTNAME=	ogre-1.12.11
 PKGREVISION=	1
@@ -42,6 +42,12 @@ CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Softimage=ON
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SWIG=ON
 
 PKGCONFIG_OVERRIDE+=	CMake/Templates/*.pc.in
+
+PLIST_VARS+=	glesv2
+.include "../../graphics/MesaLib/features.mk"
+.if ${MESALIB_SUPPORTS_GLESv2:tl} != "no"
+PLIST.glesv2=	yes
+.endif
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
