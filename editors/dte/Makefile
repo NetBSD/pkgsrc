@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/15 12:00:29 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/11 08:44:16 nia Exp $
 
 DISTNAME=	dte-1.9.1
 CATEGORIES=	editors
@@ -18,4 +18,6 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
