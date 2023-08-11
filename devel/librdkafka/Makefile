@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/27 19:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/11 09:05:24 nia Exp $
 
 DISTNAME=	librdkafka-1.3.0
 CATEGORIES=	devel
@@ -31,6 +31,8 @@ PKGCONFIG_OVERRIDE+=	src/rdkafka-static.pc
 PKGCONFIG_OVERRIDE+=	src/rdkafka.pc
 
 PYTHON_FOR_BUILD_ONLY=	yes
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
