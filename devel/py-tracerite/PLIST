@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/11 12:41:47 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/tracerite/__init__.py
+${PYSITELIB}/tracerite/__init__.pyc
+${PYSITELIB}/tracerite/__init__.pyo
+${PYSITELIB}/tracerite/html.py
+${PYSITELIB}/tracerite/html.pyc
+${PYSITELIB}/tracerite/html.pyo
+${PYSITELIB}/tracerite/inspector.py
+${PYSITELIB}/tracerite/inspector.pyc
+${PYSITELIB}/tracerite/inspector.pyo
+${PYSITELIB}/tracerite/logging.py
+${PYSITELIB}/tracerite/logging.pyc
+${PYSITELIB}/tracerite/logging.pyo
+${PYSITELIB}/tracerite/notebook.py
+${PYSITELIB}/tracerite/notebook.pyc
+${PYSITELIB}/tracerite/notebook.pyo
+${PYSITELIB}/tracerite/style.css
+${PYSITELIB}/tracerite/trace.py
+${PYSITELIB}/tracerite/trace.pyc
+${PYSITELIB}/tracerite/trace.pyo

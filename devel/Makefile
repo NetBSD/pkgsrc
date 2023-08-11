@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4046 2023/08/10 21:45:56 leot Exp $
+# $NetBSD: Makefile,v 1.4047 2023/08/11 12:41:47 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3033,6 +3033,7 @@ SUBDIR+=	py-toolz
 SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-tox
 SUBDIR+=	py-traceback2
+SUBDIR+=	py-tracerite
 SUBDIR+=	py-traitlets
 SUBDIR+=	py-transitions
 SUBDIR+=	py-treq
