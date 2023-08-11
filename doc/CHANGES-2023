@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4861 2023/08/11 05:56:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4862 2023/08/11 06:24:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7002,3 +7002,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs18 to 18.17.1 [adam 2023-08-11]
 	Updated lang/nodejs16 to 16.20.2 [adam 2023-08-11]
 	Updated textproc/py-pallets-sphinx-themes to 2.1.1 [adam 2023-08-11]
+	Updated math/R-quantreg to 5.96 [mef 2023-08-11]
