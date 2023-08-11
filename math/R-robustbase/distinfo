@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/08 23:06:14 mef Exp $
+$NetBSD: distinfo,v 1.7 2023/08/11 05:23:11 mef Exp $
 
-BLAKE2s (R/robustbase_0.95-1.tar.gz) = 60103af124c3e8270a7d8a9de9db35775a92048b224e24fcdc56eca7150c0507
-SHA512 (R/robustbase_0.95-1.tar.gz) = 18e855f6cb7c08b9c1417df0b610f0d0029093d756f5bb6a472d94788651e4b450f6e4f000e02f0e029c6f4e5d23519368783c4c0b21f8e50ca33444113c4dc3
-Size (R/robustbase_0.95-1.tar.gz) = 2280387 bytes
+BLAKE2s (R/robustbase_0.99-0.tar.gz) = fbdfc23f4b020e62c7ac3d2d1a08f45b46254ef815124bf93c19ced112feed5c
+SHA512 (R/robustbase_0.99-0.tar.gz) = a272e497ca7c2f7ebcd13fbb0bf77a7ce47f13e7d80e75704b8c7bf55e97b9e868c355b0ae7998ad930573eb96e066f8fe7812d16b312c5e59e5e04bca5a76b3
+Size (R/robustbase_0.99-0.tar.gz) = 2291216 bytes
