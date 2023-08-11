@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/05 08:55:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/11 13:51:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/console.rb
 ${GEM_LIBDIR}/lib/console.rb
@@ -13,10 +13,11 @@ ${GEM_LIBDIR}/lib/console/event/generic.rb
 ${GEM_LIBDIR}/lib/console/event/progress.rb
 ${GEM_LIBDIR}/lib/console/event/spawn.rb
 ${GEM_LIBDIR}/lib/console/filter.rb
+${GEM_LIBDIR}/lib/console/format.rb
+${GEM_LIBDIR}/lib/console/format/safe.rb
 ${GEM_LIBDIR}/lib/console/logger.rb
 ${GEM_LIBDIR}/lib/console/output.rb
 ${GEM_LIBDIR}/lib/console/output/default.rb
-${GEM_LIBDIR}/lib/console/output/encoder.rb
 ${GEM_LIBDIR}/lib/console/output/json.rb
 ${GEM_LIBDIR}/lib/console/output/null.rb
 ${GEM_LIBDIR}/lib/console/output/sensitive.rb
