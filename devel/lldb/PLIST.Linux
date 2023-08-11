@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2021/05/15 08:22:06 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2023/08/11 09:04:35 nia Exp $
 lib/liblldbIntelFeatures.so
-lib/liblldbIntelFeatures.so.10
+lib/liblldbIntelFeatures.so.15
