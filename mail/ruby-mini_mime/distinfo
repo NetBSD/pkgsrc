@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/12/19 14:07:59 taca Exp $
+$NetBSD: distinfo,v 1.9 2023/08/11 11:06:11 taca Exp $
 
-BLAKE2s (mini_mime-1.1.2.gem) = 1fe2f3dbfe036be1e8053bf4deb981555048f1590dec5d972181777191105907
-SHA512 (mini_mime-1.1.2.gem) = 277243f1cc7bb4616cfbfdcdbd3202b42aeed41792792133e490f2f7a87229693d21cdac1f23bf9e58a36d36410abf5708baba9782883204fa1279ee7f051cb7
-Size (mini_mime-1.1.2.gem) = 34816 bytes
+BLAKE2s (mini_mime-1.1.5.gem) = 59f853b8364a559199a1f38acaf34ec88fa23ae2178af72d7a7bdce8ccad6f3c
+SHA512 (mini_mime-1.1.5.gem) = 036d657910f34385f23fd78110716ee01f2139847fac8fb06a4f505285dea1f1024e2adc4c4895f2c1248047bf9c333bbae3decb9d5351816a79d69ebf7a15c2
+Size (mini_mime-1.1.5.gem) = 35328 bytes
