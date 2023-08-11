@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/08/11 08:12:53 nia Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/11 16:24:45 nia Exp $
 
 DISTNAME=	lxqt-panel-1.3.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,16 +19,15 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+# Requires libsensors, unavailable in pkgsrc
+CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
+
+# Requires sysstat-qt5, unavailable in pkgsrc
 CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
+# Appear non-functional on NetBSD currently.
 CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
 CMAKE_ARGS+=	-DMOUNT_PLUGIN=No
-CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
-CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
-CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
-.endif
 
 MENU_CONF=		share/examples/menus
 AUTOSTART_CONF=		share/examples/autostart
@@ -66,14 +65,15 @@ TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "options.mk"
 .include "../../devel/libdbusmenu-qt5/buildlink3.mk"
+.include "../../devel/libstatgrab/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
+.include "../../sysutils/solid/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
 .include "../../x11/kguiaddons/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/lxqt-globalkeys/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../sysutils/menu-cache/buildlink3.mk"
-.include "../../sysutils/solid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
