@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2023/08/10 14:10:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/11 22:01:43 gutteridge Exp $
 
 DISTNAME=	ReText-8.0.1
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/ReText/}
 
@@ -21,6 +22,16 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # py-markups
 
 USE_PKG_RESOURCES=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# Workaround for PR#57445/50277 for netbsd-9 & netbsd-10 pre 2023-08-05
+post-install:
+.if ${OPSYS} == "NetBSD"
+	${MV} ${DESTDIR}${PREFIX}/bin/retext ${DESTDIR}${PREFIX}/bin/retext-py
+	${INSTALL_SCRIPT} ${FILESDIR}/retext.sh ${DESTDIR}${PREFIX}/bin/retext
+	${SED} -i -e 's|@PREFIX@|${PREFIX}|g' ${DESTDIR}${PREFIX}/bin/retext
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/egg.mk"
