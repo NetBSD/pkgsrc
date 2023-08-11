@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4871 2023/08/11 11:06:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4872 2023/08/11 11:08:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7013,3 +7013,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/ruby-mime-types-data to 3.2023.0808 [taca 2023-08-11]
 	Updated mail/ruby-mime-types to 3.5.0 [taca 2023-08-11]
 	Updated mail/ruby-mini_mime to 1.1.5 [taca 2023-08-11]
+	Updated security/ruby-airbrussh to 1.4.2 [taca 2023-08-11]
