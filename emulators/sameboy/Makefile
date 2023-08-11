@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/07/21 09:35:46 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/11 08:49:13 nia Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -11,8 +11,6 @@ BUILD_TARGET=	sdl
 
 MAKE_FLAGS+=	DATA_DIR=${PREFIX}/share/sameboy/
 MAKE_FLAGS+=	FREEDESKTOP=true
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
