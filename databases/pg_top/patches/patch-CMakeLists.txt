@@ -1,0 +1,27 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/11 09:14:17 nia Exp $
+
+Honour the platform's preferred man page directory.
+
+--- CMakeLists.txt.orig	2020-10-08 19:05:41.000000000 +0000
++++ CMakeLists.txt
+@@ -165,6 +165,7 @@ if(EXISTS "${CMAKE_SOURCE_DIR}/machine/m
+     file(APPEND ${CMAKE_BINARY_DIR}/pg_top.1.rst "${MANUAL_SUPPLIMENT}")
+ endif(EXISTS "${CMAKE_SOURCE_DIR}/machine/m_${MACHINE}.man.rst")
+ file(APPEND ${CMAKE_BINARY_DIR}/pg_top.1 "${MANUAL_SUPPLIMENT}")
++
+ execute_process(
+     COMMAND rst2man.py ${CMAKE_BINARY_DIR}/pg_top.1.rst
+     OUTPUT_FILE ${CMAKE_BINARY_DIR}/pg_top.1
+@@ -288,10 +289,11 @@ install(
+     ${CMAKE_BINARY_DIR}/${PROJECT_NAME}
+     DESTINATION "bin"
+ )
++include(GNUInstallDirs)
+ install(
+     FILES
+     ${CMAKE_BINARY_DIR}/pg_top.1
+-    DESTINATION "share/man/man1"
++    DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+ )
+ 
+ # CPack rules for creating distribution files.
