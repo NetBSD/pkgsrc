@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/07/30 15:32:50 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/11 05:55:42 adam Exp $
 
-DISTNAME=	Pallets-Sphinx-Themes-2.0.2
+DISTNAME=	Pallets-Sphinx-Themes-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pallets-Sphinx-Themes/}
@@ -11,7 +11,7 @@ COMMENT=	Sphinx themes for Pallets and related projects
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=3:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
