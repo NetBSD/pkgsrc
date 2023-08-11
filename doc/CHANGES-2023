@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4867 2023/08/11 08:41:22 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4868 2023/08/11 08:54:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7009,3 +7009,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/R-poweRlaw to 0.70.6 [mef 2023-08-11]
 	Updated math/nlopt to 2.7.1 [mef 2023-08-11]
 	Updated math/R-nloptr to 2.0.3 [mef 2023-08-11]
+	Updated math/R-DEoptimR to 1.1.1 [mef 2023-08-11]
