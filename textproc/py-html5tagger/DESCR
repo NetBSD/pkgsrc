@@ -1,0 +1,9 @@
+If you're looking for a more efficient and streamlined way to generate HTML5,
+look no further than html5tagger! This module provides a simplified HTML5
+syntax, so you can create your entire document template using only Python. Say
+goodbye to the clunky and error-prone process of manually writing HTML tags.
+
+With html5tagger, you can safely and quickly generate HTML5 without any
+dependencies, making it the perfect solution for developers who value speed and
+simplicity. And with its pure Python implementation, you'll never have to worry
+about compatibility issues or adding extra libraries to your project.
