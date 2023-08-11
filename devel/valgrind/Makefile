@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/03/07 18:53:40 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/11 08:45:47 nia Exp $
 
 DISTNAME=	valgrind-3.20.0
 CATEGORIES=	devel
@@ -27,6 +27,9 @@ TEST_TARGET=		regtest
 SSP_SUPPORTED=		no
 REPLACE_PERL+=		callgrind/callgrind_annotate.in
 REPLACE_PERL+=		callgrind/callgrind_control.in
+
+# XXX needs investigation on a supported platform
+RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
