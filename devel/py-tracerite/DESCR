@@ -1,0 +1,5 @@
+TraceRite hides the irrelevant IPython/notebook internals and concisely shows
+what happened (the program was interrupted) and where that happened. This could
+further be improved by converting the KeyboardInterrupt message into something
+more suitable, like "You stopped the program", but what you see above is just
+the default handling that never considered this particular error.
