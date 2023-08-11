@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/11 12:40:16 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/html5tagger/__init__.py
+${PYSITELIB}/html5tagger/__init__.pyc
+${PYSITELIB}/html5tagger/__init__.pyo
+${PYSITELIB}/html5tagger/builder.py
+${PYSITELIB}/html5tagger/builder.pyc
+${PYSITELIB}/html5tagger/builder.pyo
+${PYSITELIB}/html5tagger/document.py
+${PYSITELIB}/html5tagger/document.pyc
+${PYSITELIB}/html5tagger/document.pyo
+${PYSITELIB}/html5tagger/html5.py
+${PYSITELIB}/html5tagger/html5.pyc
+${PYSITELIB}/html5tagger/html5.pyo
+${PYSITELIB}/html5tagger/makebuilder.py
+${PYSITELIB}/html5tagger/makebuilder.pyc
+${PYSITELIB}/html5tagger/makebuilder.pyo
+${PYSITELIB}/html5tagger/util.py
+${PYSITELIB}/html5tagger/util.pyc
+${PYSITELIB}/html5tagger/util.pyo
