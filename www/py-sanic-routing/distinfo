@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/14 08:29:37 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/08/11 12:52:47 adam Exp $
 
-BLAKE2s (sanic-routing-22.8.0.tar.gz) = 4842c3066af4c647037509b364354e4c033c3664aad2d8a061bf11f94ee46004
-SHA512 (sanic-routing-22.8.0.tar.gz) = 3f41adf5e6c9b6edab9ab348c364ff187727345b9ab18b3a0a8a5529e98b551632e16f1b0bf0ec210496cb33c4d07f5916782a4150d813a83967b9af49ddc04f
-Size (sanic-routing-22.8.0.tar.gz) = 23424 bytes
+BLAKE2s (sanic-routing-23.6.0.tar.gz) = 2d7161639e5c5cadbba53801c4d78504b701a2677b8d2a8828c9c3c7705a5282
+SHA512 (sanic-routing-23.6.0.tar.gz) = 90e2e869cfaa08dfc70d9e93f2ed66922ac7708572b6171e5eb3574c41c76ea9f36adb2bb13a7a89fcb100355db159bc140bdfaf0142a4692197208e42c7946a
+Size (sanic-routing-23.6.0.tar.gz) = 28898 bytes
