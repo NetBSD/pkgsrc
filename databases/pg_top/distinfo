@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/04/19 13:31:58 joerg Exp $
+$NetBSD: distinfo,v 1.2 2023/08/11 09:14:17 nia Exp $
 
 BLAKE2s (pg_top-4.0.0.tar.xz) = 34b5c59e5c8eefdc1da100b879781cc481b754e35c740591360872c880814494
 SHA512 (pg_top-4.0.0.tar.xz) = b7a016137495ceecdcf0ac0e95c73b7eca20b57264f7b63b0a38c3f31db742c704ed0094e07f6df051bce9bc26214f5a8f66ced1e923bb66e0c86fff1e2ffc19
 Size (pg_top-4.0.0.tar.xz) = 117920 bytes
+SHA1 (patch-CMakeLists.txt) = 39ae5826e2d312de1af99941124cb99ed7672961
