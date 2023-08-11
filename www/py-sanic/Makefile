@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/03/03 09:01:36 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/08/11 12:54:02 adam Exp $
 
-DISTNAME=	sanic-22.12.0
+DISTNAME=	sanic-23.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -11,9 +11,12 @@ COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
+DEPENDS+=	${PYPKGPREFIX}-html5tagger>=1.2.1:../../textproc/py-html5tagger
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=22.8.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=23.6.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-tracerite>=1.0.0:../../devel/py-tracerite
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.0:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-websockets>=10.0:../../www/py-websockets
@@ -24,11 +27,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-chardet>=3.0.0:../../converters/py-chardet
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=5.0.0:../../devel/py-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.901:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-#TEST_DEPENDS+=	${PYPKGPREFIX}-sanic-testing>=22.9.0b2:../../www/py-sanic-testing
+#TEST_DEPENDS+=	${PYPKGPREFIX}-sanic-testing>=23.6.0:../../www/py-sanic-testing
 #TEST_DEPENDS+=	${PYPKGPREFIX}-slotscheck>=0.8.0:../../??/py-slotscheck
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
