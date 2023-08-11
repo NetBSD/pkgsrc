@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2023/08/02 19:27:31 nia Exp $
+# $NetBSD: Makefile,v 1.176 2023/08/11 08:38:42 nia Exp $
 
 DISTNAME=	mame-0.257
 CATEGORIES=	emulators
@@ -33,6 +33,8 @@ FORCE_CXX_STD=		gnu++17
 MAKE_FLAGS+=		PRECOMPILE=0
 # TODO: set differently when debugging?
 MAKE_FLAGS+=		OPTIMIZE=2
+MAKE_FLAGS+=		NO_USE_PORTAUDIO=1
+MAKE_FLAGS+=		NO_USE_PULSEAUDIO=1
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 # \todo Arch detection for aarch64 fails, investigate why
