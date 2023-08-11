@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4881 2023/08/11 13:52:14 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4882 2023/08/11 14:17:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7028,3 +7028,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-sinatra to 3.1.0 [taca 2023-08-11]
 	Updated www/ruby-sinatra-contrib to 3.1.0 [taca 2023-08-11]
 	Updated devel/ruby-console to 1.23.1 [taca 2023-08-11]
+	Updated devel/ruby-activesupport70 to 7.0.7 [taca 2023-08-11]
+	Updated devel/ruby-activemodel70 to 7.0.7 [taca 2023-08-11]
+	Updated devel/ruby-activejob70 to 7.0.7 [taca 2023-08-11]
+	Updated www/ruby-actionview70 to 7.0.7 [taca 2023-08-11]
+	Updated www/ruby-actionpack70 to 7.0.7 [taca 2023-08-11]
+	Updated databases/ruby-activerecord70 to 7.0.7 [taca 2023-08-11]
+	Updated devel/ruby-activestorage70 to 7.0.7 [taca 2023-08-11]
+	Updated mail/ruby-actionmailer70 to 7.0.7 [taca 2023-08-11]
+	Updated mail/ruby-actionmailbox70 to 7.0.7 [taca 2023-08-11]
+	Updated www/ruby-actioncable70 to 7.0.7 [taca 2023-08-11]
+	Updated devel/ruby-railties70 to 7.0.7 [taca 2023-08-11]
+	Updated textproc/ruby-actiontext70 to 7.0.7 [taca 2023-08-11]
+	Updated www/ruby-rails70 to 7.0.7 [taca 2023-08-11]
