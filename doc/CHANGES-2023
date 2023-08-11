@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4877 2023/08/11 12:42:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4878 2023/08/11 12:54:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7020,3 +7020,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.132.1 [taca 2023-08-11]
 	Added textproc/py-html5tagger version 1.3.0 [adam 2023-08-11]
 	Added devel/py-tracerite version 1.1.0 [adam 2023-08-11]
+	Updated www/py-sanic-routing to 23.6.0 [adam 2023-08-11]
+	Updated www/py-sanic to 23.6.0 [adam 2023-08-11]
