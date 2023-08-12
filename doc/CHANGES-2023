@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4884 2023/08/12 03:21:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4885 2023/08/12 07:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails70 to 7.0.7 [taca 2023-08-11]
 	Updated editors/retext to 8.0.1nb1 [gutteridge 2023-08-11]
 	Updated editors/emacs29 to 29.1nb1 [wiz 2023-08-12]
+	Updated security/mozilla-rootcerts to 1.0.20230720 [wiz 2023-08-12]
