@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4890 2023/08/12 12:44:13 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4891 2023/08/12 13:00:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7065,3 +7065,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-nokogiri to 1.15.4 [tsutsui 2023-08-12]
 	Updated ham/gnuradio-core to 3.10.7.0 [mef 2023-08-12]
 	Updated ham/py-soapy-sdr to 0.8.1 [mef 2023-08-12]
+	Updated devel/cmake to 3.27.2 [adam 2023-08-12]
+	Updated devel/cmake-gui to 3.27.2 [adam 2023-08-12]
+	Updated devel/py-virtualenv to 20.24.3 [adam 2023-08-12]
+	Updated www/py-tornado to 6.3.3 [adam 2023-08-12]
