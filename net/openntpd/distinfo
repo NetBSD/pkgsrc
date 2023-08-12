@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:06:12 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/08/12 17:04:45 pin Exp $
 
-BLAKE2s (openntpd-6.0p1.tar.gz) = 41b483263fccef867d123e7946d30ca88a18f47ea44db16f515367d4b207f166
-SHA512 (openntpd-6.0p1.tar.gz) = a71c516dbe7596cbcb3a385112a59a82185b7e3d93a52eda695cea5a0a599ba7fbf58daa81da55d608255cb6950398123fa7d71663604a4c3bcbee949711296d
-Size (openntpd-6.0p1.tar.gz) = 432696 bytes
+BLAKE2s (openntpd-6.8p1.tar.gz) = e747f977ef2bd4ae24260b413234e479befba77eaa769d1e6ec92842f9fdc06b
+SHA512 (openntpd-6.8p1.tar.gz) = 200056bedb9c757aae1ce5d3f6655175ec058cb479429fe4704955f3a3fa15e8a9cb578ae4898ddb4cfc08c9742bbab6a7c92b5e569f06a148e40c448360b58f
+Size (openntpd-6.8p1.tar.gz) = 443997 bytes
