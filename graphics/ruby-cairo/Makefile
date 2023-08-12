@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/07/15 03:33:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/12 08:37:20 tsutsui Exp $
 
 DISTNAME=		cairo-1.17.12
 CATEGORIES=		graphics
@@ -20,5 +20,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
+BUILDLINK_API_DEPENDS.freetype2= freetype2>=2.10.4
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

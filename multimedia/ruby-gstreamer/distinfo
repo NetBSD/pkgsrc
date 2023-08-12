@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/06/02 16:43:30 tsutsui Exp $
+$NetBSD: distinfo,v 1.19 2023/08/12 08:37:21 tsutsui Exp $
 
-BLAKE2s (gstreamer-4.1.7.gem) = abd7595d187a7e7c17a5c6cb26a998aec239601218fbe6881ebc754984e727f4
-SHA512 (gstreamer-4.1.7.gem) = a227bfd5ffd3ff27da9a7ffeec4819a8e3d0dacab015a866bd7be1549b85190e046f8544e9b0ffde45558183e1663697287d82a36d5f1ed563012492bdd9d5b3
-Size (gstreamer-4.1.7.gem) = 29696 bytes
+BLAKE2s (gstreamer-4.1.9.gem) = 6ae4259687fc20e460835a3690912467859f2dd4d21a3fe8e99eb6a9c81e4b38
+SHA512 (gstreamer-4.1.9.gem) = cd24cea07a12ccbe2c621103ad413b869772c6937f9e4433d503f8c9cba376517a32b241507851c0ce5b128153b676140259d171863b30db510e8aed1791e643
+Size (gstreamer-4.1.9.gem) = 29696 bytes
