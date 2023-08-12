@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/06/17 14:57:40 bacon Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/08/12 14:46:26 bacon Exp $
 include/xtend/common.h
 include/xtend/ctype.h
 include/xtend/dsv-accessors.h
@@ -27,16 +27,15 @@ man/man3/digits.3
 man/man3/double_cmp.3
 man/man3/dsv_line_copy.3
 man/man3/dsv_line_free.3
-man/man3/dsv_line_get_array_size.3
 man/man3/dsv_line_get_delims.3
 man/man3/dsv_line_get_delims_ae.3
 man/man3/dsv_line_get_fields.3
 man/man3/dsv_line_get_fields_ae.3
 man/man3/dsv_line_get_num_fields.3
+man/man3/dsv_line_get_num_fields_array_size.3
 man/man3/dsv_line_init.3
 man/man3/dsv_line_new.3
 man/man3/dsv_line_read.3
-man/man3/dsv_line_set_array_size.3
 man/man3/dsv_line_set_delims.3
 man/man3/dsv_line_set_delims_ae.3
 man/man3/dsv_line_set_delims_cpy.3
@@ -44,6 +43,7 @@ man/man3/dsv_line_set_fields.3
 man/man3/dsv_line_set_fields_ae.3
 man/man3/dsv_line_set_fields_cpy.3
 man/man3/dsv_line_set_num_fields.3
+man/man3/dsv_line_set_num_fields_array_size.3
 man/man3/dsv_line_write.3
 man/man3/dsv_read_field.3
 man/man3/dsv_read_field_malloc.3
