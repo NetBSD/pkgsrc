@@ -1,12 +1,12 @@
-$NetBSD: patch-src_openrct2_platform_Platform2.h,v 1.3 2023/07/22 10:55:16 triaxx Exp $
+$NetBSD: patch-src_openrct2_platform_Platform2.h,v 1.4 2023/08/12 15:13:07 triaxx Exp $
 
 Support NetBSD.
 
---- src/openrct2/platform/Platform2.h.orig	2020-08-15 19:13:50.000000000 +0000
+--- src/openrct2/platform/Platform2.h.orig	2020-11-01 19:00:01.000000000 +0000
 +++ src/openrct2/platform/Platform2.h
-@@ -37,7 +37,7 @@ namespace Platform
-     rct2_time GetTimeLocal();
-     rct2_date GetDateLocal();
+@@ -40,7 +40,7 @@ namespace Platform
+     bool FindApp(const std::string& app, std::string* output);
+     int32_t Execute(const std::string& command, std::string* output = nullptr);
  
 -#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__)) || defined(__FreeBSD__)
 +#if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__)) || defined(__FreeBSD__) || defined(__NetBSD__)
