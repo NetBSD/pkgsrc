@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/08/06 15:06:30 pin Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/12 17:01:09 pin Exp $
 
-DISTNAME=	wiki-tui-0.8.1
+DISTNAME=	wiki-tui-0.8.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
-INSTALLATION_DIRS=	share/applications
+INSTALLATION_DIRS=	share/applications share/icons/hicolor/scalable/apps
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -24,8 +24,11 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/wiki-tui.desktop \
 		${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/icons/hicolor/scalable/apps/wiki-tui.svg \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
