@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/08/11 13:01:29 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/12 00:31:02 gutteridge Exp $
 
 DISTNAME=	pydoctor-23.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -26,12 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} == 308
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
