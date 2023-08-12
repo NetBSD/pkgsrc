@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/04/11 11:20:52 mef Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/08/12 12:33:40 mef Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -22,6 +22,9 @@ ${PYSITELIB}/gnuradio/uhd/__init__.pyo
 ${PYSITELIB}/gnuradio/uhd/msgq_runner.py
 ${PYSITELIB}/gnuradio/uhd/msgq_runner.pyc
 ${PYSITELIB}/gnuradio/uhd/msgq_runner.pyo
+${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.py
+${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.pyc
+${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.pyo
 ${PYSITELIB}/gnuradio/uhd/uhd_app.py
 ${PYSITELIB}/gnuradio/uhd/uhd_app.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_app.pyo
@@ -30,10 +33,20 @@ ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.py
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyc
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyo
 share/doc/gnuradio-${PKGVERSION}/README.uhd
+share/gnuradio/examples/uhd/rfnoc_addsub.grc
+share/gnuradio/examples/uhd/rfnoc_duc_radio.grc
+share/gnuradio/examples/uhd/rfnoc_duc_radio_multichan.grc
 share/gnuradio/examples/uhd/rfnoc_fir_filter.grc
 share/gnuradio/examples/uhd/rfnoc_keep1.grc
+share/gnuradio/examples/uhd/rfnoc_logpwr_split.grc
+share/gnuradio/examples/uhd/rfnoc_moving_average.grc
 share/gnuradio/examples/uhd/rfnoc_radio_ddc.grc
+share/gnuradio/examples/uhd/rfnoc_radio_ddc_multichan.grc
+share/gnuradio/examples/uhd/rfnoc_replay.grc
 share/gnuradio/examples/uhd/rfnoc_siggen.grc
+share/gnuradio/examples/uhd/rfnoc_split_stream.grc
+share/gnuradio/examples/uhd/rfnoc_switchboard.grc
+share/gnuradio/examples/uhd/rfnoc_vector_iir_split.grc
 share/gnuradio/examples/uhd/rfnoc_window.grc
 share/gnuradio/examples/uhd/tags_demo
 share/gnuradio/examples/uhd/uhd_const_wave.grc
@@ -45,13 +58,13 @@ share/gnuradio/examples/uhd/uhd_two_tone_loopback.grc
 share/gnuradio/examples/uhd/uhd_wbfm_receive.grc
 share/gnuradio/grc/blocks/uhd.tree.yml
 share/gnuradio/grc/blocks/uhd_amsg_source.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_ddc.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_duc.block.yml
 share/gnuradio/grc/blocks/uhd_rfnoc_fir_filter.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_replay.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_rx_radio.block.yml
 share/gnuradio/grc/blocks/uhd_rfnoc_siggen.block.yml
+share/gnuradio/grc/blocks/uhd_rfnoc_tx_radio.block.yml
 share/gnuradio/grc/blocks/uhd_rfnoc_window.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_sink.block.yml
 share/gnuradio/grc/blocks/uhd_usrp_source.block.yml
-share/gnuradio/grc/blocks/uhd_rfnoc_ddc.block.yml
-share/gnuradio/grc/blocks/uhd_rfnoc_duc.block.yml
-share/gnuradio/grc/blocks/uhd_rfnoc_rx_radio.block.yml
-share/gnuradio/grc/blocks/uhd_rfnoc_tx_radio.block.yml
-
