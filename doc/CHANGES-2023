@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4886 2023/08/12 07:06:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4887 2023/08/12 08:39:37 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7045,3 +7045,20 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/emacs29 to 29.1nb1 [wiz 2023-08-12]
 	Updated security/mozilla-rootcerts to 1.0.20230720 [wiz 2023-08-12]
 	Updated security/mozilla-rootcerts-openssl to 2.12 [wiz 2023-08-12]
+	Updated devel/ruby-atk to 4.1.9 [tsutsui 2023-08-12]
+	Updated devel/ruby-gio2 to 4.1.9 [tsutsui 2023-08-12]
+	Updated devel/ruby-glib2 to 4.1.9 [tsutsui 2023-08-12]
+	Updated devel/ruby-gobject-introspection to 4.1.9 [tsutsui 2023-08-12]
+	Updated devel/ruby-pango to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-cairo-gobject to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-clutter to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-clutter-gdk to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-clutter-gtk to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-gdk3 to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.1.9 [tsutsui 2023-08-12]
+	Updated graphics/ruby-rsvg2 to 4.1.9 [tsutsui 2023-08-12]
+	Updated multimedia/ruby-clutter-gstreamer to 4.1.9 [tsutsui 2023-08-12]
+	Updated multimedia/ruby-gstreamer to 4.1.9 [tsutsui 2023-08-12]
+	Updated print/ruby-poppler to 4.1.9 [tsutsui 2023-08-12]
+	Updated x11/ruby-gtk3 to 4.1.9 [tsutsui 2023-08-12]
+	Updated x11/ruby-gtksourceview3 to 4.1.9 [tsutsui 2023-08-12]
