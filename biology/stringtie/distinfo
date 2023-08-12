@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/08/12 14:58:35 bacon Exp $
+
+BLAKE2s (stringtie-2.1.1.tar.gz) = b774942714f8798edf59c508c6e2375692676ef36ddfcb3d91468ccd057880b8
+SHA512 (stringtie-2.1.1.tar.gz) = 96f8d6bba0dd76f8f83fad71936c72f87e0004d82977b914e97d012b979bd61cf6900ff63a0f514204f56628751c7e752076978df12e019dd43b3495ab172081
+Size (stringtie-2.1.1.tar.gz) = 1969917 bytes
+SHA1 (patch-Makefile) = 36eaf391e0d856fe2be59fb34a8f06dbe400a8ef
+SHA1 (patch-samtools-0.1.18_Makefile) = 62cd4a780dd99bd8c55ff727ca6a7759c2bf379d
