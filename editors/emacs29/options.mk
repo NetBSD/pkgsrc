@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2023/07/31 15:03:33 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2023/08/12 03:20:58 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
-PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson svg xaw3d xml
+PKG_SUPPORTED_OPTIONS=			dbus gnutls imagemagick jansson libgccjit libotf libwebp svg tree-sitter xaw3d xml
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -11,9 +11,9 @@ PKG_OPTIONS_GROUP.window-system=	x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+=		toolkit
 PKG_SUGGESTED_OPTIONS.Darwin=		nextstep
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk2,
-#                          gtk3, xaw or lucid or athena, motif, no)
-# gtk in next line implies gtk2, xaw = athena = lucid
-PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw
+#                          gtk3, xaw, no)
+# gtk in next line implies gtk2, xaw
+PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # gtk2 and gtk has the same effect
 # gtk3 is default in the logic below (even not included in SUGGESTED_=)
 # gtk* will be ignored for nextstep even shown as selected.
@@ -21,7 +21,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson xml x11
+PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -42,6 +42,35 @@ CONFIGURE_ARGS+=	--without-dbus
 .  include "../../textproc/jansson/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-json
+.endif
+
+###
+### Support libgccjit
+###
+.if !empty(PKG_OPTIONS:Mlibgccjit)
+CONFIGURE_ARGS+=	--with-native-compilation
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc13-libjit}/gcc13/lib
+GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
+        ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
+.  include "../../lang/gcc13-libjit/buildlink3.mk"
+.endif
+
+###
+### Support OTF
+###
+.if !empty(PKG_OPTIONS:Mlibotf)
+.  include "../../graphics/libotf/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-libotf
+.endif
+
+###
+### Support WEBP
+###
+.if !empty(PKG_OPTIONS:Mlibwebp)
+.  include "../../graphics/libwebp/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-webp
 .endif
 
 ###
@@ -77,7 +106,6 @@ CONFIGURE_ARGS+=	--without-gnutls
 ### platforms.
 ###
 CONFIGURE_ARGS+=	--without-ns
-
 ###
 ### Support SVG
 ###
@@ -111,8 +139,7 @@ CONFIGURE_ARGS+=	--without-xaw3d
 ###
 .  if (empty(PKG_OPTIONS:Mxaw) && \
        empty(PKG_OPTIONS:Mgtk) && \
-       empty(PKG_OPTIONS:Mgtk2) && \
-       empty(PKG_OPTIONS:Mmotif))
+       empty(PKG_OPTIONS:Mgtk2))
 # defaults to gtk3
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk3/buildlink3.mk"
@@ -124,9 +151,6 @@ CONFIGURE_ARGS+=	--with-x-toolkit=gtk2
 .  elif !empty(PKG_OPTIONS:Mxaw)
 .include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
-.  elif !empty(PKG_OPTIONS:Mmotif)
-.include "../../mk/motif.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .  endif
 
 ###
@@ -140,7 +164,6 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-
 
 ###
 ### Support using NextStep (Cocoa or GNUstep) windowing system
@@ -181,6 +204,31 @@ CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-gif
 CONFIGURE_ARGS+=	--without-png
+.endif
+
+.if !empty(PKG_OPTIONS:Mtree-sitter)
+DEPENDS+=	tree-sitter-bash-[0-9]*:../../textproc/tree-sitter-bash
+DEPENDS+=	tree-sitter-c-[0-9]*:../../textproc/tree-sitter-c
+DEPENDS+=	tree-sitter-c-sharp-[0-9]*:../../textproc/tree-sitter-c-sharp
+DEPENDS+=	tree-sitter-cmake-[0-9]*:../../textproc/tree-sitter-cmake
+DEPENDS+=	tree-sitter-cpp-[0-9]*:../../textproc/tree-sitter-cpp
+DEPENDS+=	tree-sitter-css-[0-9]*:../../textproc/tree-sitter-css
+DEPENDS+=	tree-sitter-dockerfile-[0-9]*:../../textproc/tree-sitter-dockerfile
+DEPENDS+=	tree-sitter-elixir-[0-9]*:../../textproc/tree-sitter-elixir
+DEPENDS+=	tree-sitter-go-[0-9]*:../../textproc/tree-sitter-go
+DEPENDS+=	tree-sitter-go-mod-[0-9]*:../../textproc/tree-sitter-go-mod
+DEPENDS+=	tree-sitter-heex-[0-9]*:../../textproc/tree-sitter-heex
+DEPENDS+=	tree-sitter-html-[0-9]*:../../textproc/tree-sitter-html
+DEPENDS+=	tree-sitter-java-[0-9]*:../../textproc/tree-sitter-java
+DEPENDS+=	tree-sitter-json-[0-9]*:../../textproc/tree-sitter-json
+DEPENDS+=	tree-sitter-python-[0-9]*:../../textproc/tree-sitter-python
+DEPENDS+=	tree-sitter-ruby-[0-9]*:../../textproc/tree-sitter-ruby
+DEPENDS+=	tree-sitter-rust-[0-9]*:../../textproc/tree-sitter-rust
+DEPENDS+=	tree-sitter-toml-[0-9]*:../../textproc/tree-sitter-toml
+DEPENDS+=	tree-sitter-tsx-[0-9]*:../../textproc/tree-sitter-tsx
+DEPENDS+=	tree-sitter-typescript-[0-9]*:../../textproc/tree-sitter-typescript
+DEPENDS+=	tree-sitter-yaml-[0-9]*:../../textproc/tree-sitter-yaml
+.include "../../textproc/tree-sitter/buildlink3.mk"
 .endif
 
 # Local Variables:
