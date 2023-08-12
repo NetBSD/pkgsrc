@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4900 2023/08/12 17:02:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4901 2023/08/12 17:03:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7078,3 +7078,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.3.2 [triaxx 2023-08-12]
 	Updated www/wiki-tui to 0.8.2 [pin 2023-08-12]
 	Updated graphics/wallust to 2.6.1 [pin 2023-08-12]
+	Updated graphics/simp to 3.4.0 [pin 2023-08-12]
