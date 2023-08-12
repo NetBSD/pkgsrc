@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4899 2023/08/12 17:01:31 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4900 2023/08/12 17:02:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7077,3 +7077,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/fasda to 0.1.4 [bacon 2023-08-12]
 	Updated games/openrct2 to 0.3.2 [triaxx 2023-08-12]
 	Updated www/wiki-tui to 0.8.2 [pin 2023-08-12]
+	Updated graphics/wallust to 2.6.1 [pin 2023-08-12]
