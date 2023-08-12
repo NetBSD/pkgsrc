@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/12 12:44:00 mef Exp $
 
-DISTNAME=	soapy-sdr-0.7.2
+DISTNAME=	soapy-sdr-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pothosware/}
