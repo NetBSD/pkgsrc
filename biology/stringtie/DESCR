@@ -1,0 +1,4 @@
+StringTie is a fast and highly efficient assembler of RNA-seq alignments into
+potential transcripts. The input can be the alignments of raw reads as usual;
+it also accepts longer assembled sequences. The output can be processed by
+downstream software including Ballgown, Cuffdiff, etc.
