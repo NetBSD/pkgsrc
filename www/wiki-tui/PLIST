@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/01 20:49:41 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/12 17:01:09 pin Exp $
 bin/wiki-tui
 share/applications/wiki-tui.desktop
+share/icons/hicolor/scalable/apps/wiki-tui.svg
