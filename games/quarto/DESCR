@@ -1,0 +1,12 @@
+The game is played on a 4x4 board with 16 pieces. Each piece has four distinct
+characteristics: size, color, shape and fill.
+On your turn, you choose one of the 16 pieces and give it to your opponent.
+Your opponent then places that piece on any empty space on the board.
+
+The first player to create a row of four pieces with at least one matching
+characteristic wins the game. Matching characteristics can be in any direction,
+horizontally, vertically, or diagonally.
+
+In the harder square mode, (-q), a square of 4 is also considered a win.
+
+If all 16 pieces have been placed and there is no winner, the game is a tie.

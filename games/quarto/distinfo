@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/12 17:07:22 pin Exp $
+
+BLAKE2s (quarto-0.2.0.crate) = acef9062886ffdf73ed4acc5f8ccabcfad84423678173ff0425e8dd02e113842
+SHA512 (quarto-0.2.0.crate) = 5a70d0ce896a788cbd7e53cf27060217700dd875804cebeaac6b5cd5caeda6bea8deac7753db001d6780962c61bb98b1583d27d612d3046a9eef4e4c8047cc1b
+Size (quarto-0.2.0.crate) = 111862 bytes
