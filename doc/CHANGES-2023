@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4896 2023/08/12 14:58:41 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.4897 2023/08/12 15:02:07 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7074,3 +7074,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/biolibc-tools to 0.1.4.9 [bacon 2023-08-12]
 	Updated biology/peak-classifier to 0.1.4.11 [bacon 2023-08-12]
 	Added biology/stringtie version 2.1.1 [bacon 2023-08-12]
+	Updated biology/fasda to 0.1.4 [bacon 2023-08-12]
