@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/06/14 18:43:33 bacon Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/08/12 14:51:02 bacon Exp $
 bin/blt
 libexec/biolibc-tools/chrom-lens
 libexec/biolibc-tools/deromanize
@@ -10,7 +10,7 @@ libexec/biolibc-tools/fastx-derep
 libexec/biolibc-tools/fastx-stats
 libexec/biolibc-tools/fastx2tsv
 libexec/biolibc-tools/find-orfs
-libexec/biolibc-tools/gff2bed
+libexec/biolibc-tools/gff3-to-bed
 libexec/biolibc-tools/uniq-seqs.awk
 libexec/biolibc-tools/vcf-downsample
 libexec/biolibc-tools/vcf-search
@@ -24,7 +24,7 @@ man/man1/blt-fastx-derep.1
 man/man1/blt-fastx-stats.1
 man/man1/blt-fastx2tsv.1
 man/man1/blt-find-orfs.1
-man/man1/blt-gff2bed.1
+man/man1/blt-gff3-to-bed.1
 man/man1/blt-vcf-downsample.1
 man/man1/blt-vcf-search.1
 man/man1/blt.1
