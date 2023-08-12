@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 20:01:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/12 13:23:09 tnn Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1637,7 +1637,7 @@ qt6/include/QtGui/qvector4d.h
 qt6/include/QtGui/qvectornd.h
 qt6/include/QtGui/qwindow.h
 qt6/include/QtGui/qwindowdefs.h
-${PLIST.x11}qt6/include/QtGui/socket_interface.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/socket_interface.h
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupport
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupportDepends
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupportVersion
