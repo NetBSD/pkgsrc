@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/05/08 13:55:19 thor Exp $
+# $NetBSD: options.mk,v 1.2 2023/08/12 13:34:02 tnn Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vtk
 
 PKG_SUPPORTED_OPTIONS=	qt
@@ -12,6 +12,7 @@ CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_GUISupportQt=YES
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_GUISupportQtSQL=NO
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_RenderingQt=YES
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_ViewsQt=YES
+CMAKE_ARGS+=	-DVTK_QT_VERSION=5
 PLIST.qt=	yes
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .else
