@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/07/24 08:42:53 triaxx Exp $
+# $NetBSD: Makefile,v 1.35 2023/08/12 15:13:06 triaxx Exp $
 
-DISTNAME=	openrct2-0.3.1
+DISTNAME=	openrct2-0.3.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2
@@ -19,7 +19,6 @@ USE_LANGUAGES=	c c++17
 GCC_REQD+=	9
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
-CMAKE_ARGS+=	-DENABLE_SCRIPTING=OFF
 
 CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 
@@ -57,6 +56,7 @@ pre-configure:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/libduktape/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
