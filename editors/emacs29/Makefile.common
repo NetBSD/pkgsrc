@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2023/07/31 15:03:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/08/12 03:20:58 wiz Exp $
 #
 # used by editors/emacs29/Makefile
 # used by editors/emacs29-nox11/Makefile
@@ -19,7 +19,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
 
 # use makeinfo from pkgsrc/deve/gtexinfo
-TEXINFO_REQD=	4.13
+TEXINFO_REQD+=	4.13
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
@@ -84,4 +84,3 @@ post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../textproc/tree-sitter/buildlink3.mk"
