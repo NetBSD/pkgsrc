@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/06/14 18:45:12 bacon Exp $
+$NetBSD: distinfo,v 1.4 2023/08/12 15:02:00 bacon Exp $
 
-BLAKE2s (fasda-0.1.3.tar.gz) = 18a2608788bea222ae0830df8d4a8579dc3082cda6d6b7c6f7a24e68734721fd
-SHA512 (fasda-0.1.3.tar.gz) = 7a14f7ee37f75a37c822db806df5cc994e30514cf18f398e3e6c763981590ba2bcc3451689224345f79ceace99b9a0b6f123c535f976c633e991c86a787b7b1b
-Size (fasda-0.1.3.tar.gz) = 59513 bytes
+BLAKE2s (fasda-0.1.4.tar.gz) = ad32eaef6ed1c5f74812f7af62d5cbb0d665013b1a0221a8bf7236f73a80c0c6
+SHA512 (fasda-0.1.4.tar.gz) = 96837c99035692dc67d23eda814363cd8bdd38bc8924ebec7b63a4b0d30333d77ff822d365ee27c92f598242a73c3ee019948c18eb4a16aee627c2f666a5d467
+Size (fasda-0.1.4.tar.gz) = 65254 bytes
