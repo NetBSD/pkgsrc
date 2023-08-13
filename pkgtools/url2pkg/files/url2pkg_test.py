@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.44 2023/08/13 21:11:31 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.45 2023/08/13 21:19:02 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -788,7 +788,7 @@ def test_Adjuster_read_dependencies():
 
     adjuster = Adjuster(g, '', Lines())
     adjuster.makefile_lines.add('# url2pkg-marker')
-    adjuster.read_dependencies(cmd, env, '.', '', '')
+    adjuster.read_dependencies(cmd, env, '.')
 
     assert os.getenv('URL2PKG_DEPENDENCIES') is None
     assert adjuster.depends == ['package>=112.0:../../pkgtools/pkglint']
@@ -815,7 +815,7 @@ def test_Adjuster_read_dependencies():
     ]
 
 
-def test_Adjuster_read_dependencies__lookup_with_prefix():
+def test_Adjuster_read_dependencies__lookup_python():
     child_process_output = [
         'DEPENDS\tpyobjc-framework-Quartz>=0',
         # begin from py-slixmpp
@@ -829,12 +829,12 @@ def test_Adjuster_read_dependencies__lookup_with_prefix():
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
 
     adjuster = Adjuster(g, '', Lines())
-    adjuster.read_dependencies(cmd, env, '.', 'py-', '${PYPKGPREFIX}-')
+    adjuster.read_dependencies(cmd, env, '.', python=True)
 
     assert adjuster.depends == [
         '${PYPKGPREFIX}-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
-        '# TODO: pyasn1>=0',
-        '# TODO: pyasn1_modules>=0',
+        '${PYPKGPREFIX}-asn1>=0:../../security/py-asn1',
+        '${PYPKGPREFIX}-asn1-modules>=0:../../security/py-asn1-modules',
         '# TODO: typing_extensions;python_version<"3.8.0">=0',
     ]
 
