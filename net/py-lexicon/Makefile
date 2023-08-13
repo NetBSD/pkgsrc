@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2023/08/08 09:37:35 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/08/13 10:36:31 adam Exp $
 
-DISTNAME=	dns_lexicon-3.13.0
+DISTNAME=	dns_lexicon-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -16,21 +16,16 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=2:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.26.1:../../devel/py-test-xdist
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} lexicon lexicon-${PYVERSSUFFIX} || ${TRUE}
-
-# Do not test providers
-do-test:
-	cd ${WRKSRC}/lexicon && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/test_*
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
