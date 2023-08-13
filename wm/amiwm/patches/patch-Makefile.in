@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.3 2023/07/07 08:11:21 nia Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2023/08/13 19:05:53 pin Exp $
 
 Honour LDFLAGS.
 
---- Makefile.in.orig	2010-07-19 16:07:34.000000000 +0000
+--- Makefile.in.orig	2023-04-16 16:11:41.000000000 +0000
 +++ Makefile.in
-@@ -129,25 +129,25 @@ cde-install : Xresources.amiwm Amilogo.b
+@@ -130,28 +130,28 @@ cde-install : Xresources.amiwm Amilogo.b
  
  
  amiwm : $(OBJS) $(LIBAMI)
@@ -27,13 +27,17 @@ Honour LDFLAGS.
 -	$(CC) -o Keyboard kbdmodule.o kbdlexer.o $(LIBS)
 +	$(CC) $(LDFLAGS) -o Keyboard kbdmodule.o kbdlexer.o $(LIBS)
  
+ Launcher : launchermodule.o $(LIBAMI)
+-	$(CC) -o Launcher launchermodule.o $(LIBS)
++	$(CC) $(LDFLAGS) -o Launcher launchermodule.o $(LIBS)
+ 
  ppmtoinfo : ppmtoinfo.o
 -	$(CC) -o ppmtoinfo ppmtoinfo.o -lm
 +	$(CC) $(LDFLAGS) -o ppmtoinfo ppmtoinfo.o -lm
  
  localetest : localetest.o $(LIBAMI)
 -	$(CC) -o localetest localetest.o $(LIBS)
-+	$(CC) $(LDFLAGS) -o localetest localetest.o $(LIBS)
++	$(RM) core $(PROGS) $(LIBAMI) Keyboard *.o libami/*.o
  
  clean :
- 	$(RM) core $(PROGS) $(LIBAMI) Keyboard *.o libami/*.o
+ 	$(RM) core $(PROGS) $(LIBAMI) Keyboard Launcher *.o libami/*.o
