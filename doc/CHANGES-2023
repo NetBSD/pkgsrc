@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4915 2023/08/13 19:06:14 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4916 2023/08/13 19:07:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7094,3 +7094,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-partitions to 1.803.0 [taca 2023-08-13]
 	Updated finance/p5-Finance-Quote to 1.58 [gutteridge 2023-08-13]
 	Updated wm/amiwm to 0.22pl2 [pin 2023-08-13]
+	Updated games/minetest to 5.7.0 [pin 2023-08-13]
