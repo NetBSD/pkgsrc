@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4913 2023/08/13 15:06:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.4914 2023/08/13 17:56:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7092,3 +7092,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ruby-puppet-resource_api to 1.9.0 [taca 2023-08-13]
 	Updated textproc/ruby-haml to 6.1.2 [taca 2023-08-13]
 	Updated www/ruby-aws-partitions to 1.803.0 [taca 2023-08-13]
+	Updated finance/p5-Finance-Quote to 1.58 [gutteridge 2023-08-13]
