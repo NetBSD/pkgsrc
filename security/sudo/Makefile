@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.197 2023/03/17 14:03:47 taca Exp $
+# $NetBSD: Makefile,v 1.198 2023/08/13 14:14:37 taca Exp $
 
-DISTNAME=	sudo-1.9.13p3
+DISTNAME=	sudo-1.9.14p3
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -44,7 +44,7 @@ PLIST.noexec=		yes
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 070000
 CFLAGS+=	-D_OPENBSD_SOURCE=1
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*)
+.if ${MACHINE_PLATFORM:MNetBSD-[5-6].*-*}
 CFLAGS+=	-D_INCOMPLETE_XOPEN_C063=1
 .endif
 
