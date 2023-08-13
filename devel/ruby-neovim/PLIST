@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/02 04:46:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/13 14:18:52 taca Exp $
 bin/neovim-ruby-host${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/docs.yml
@@ -6,11 +6,12 @@ ${GEM_LIBDIR}/.github/workflows/tests.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/Flavorfile
+${GEM_LIBDIR}/Flavorfile.lock
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VimFlavor
 ${GEM_LIBDIR}/exe/neovim-ruby-host
 ${GEM_LIBDIR}/lib/neovim.rb
 ${GEM_LIBDIR}/lib/neovim/api.rb
