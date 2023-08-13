@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeScripts_DefineDependsandFlags.cmake,v 1.4 2021/08/20 11:40:15 nia Exp $
+$NetBSD: patch-CMakeScripts_DefineDependsandFlags.cmake,v 1.5 2023/08/13 14:13:23 ryoon Exp $
 
 NetBSD 9 has gcc7 without -lstdc++fs.
 
---- CMakeScripts/DefineDependsandFlags.cmake.orig	2021-05-17 19:26:40.000000000 +0000
+--- CMakeScripts/DefineDependsandFlags.cmake.orig	2023-03-26 17:06:46.000000000 +0000
 +++ CMakeScripts/DefineDependsandFlags.cmake
-@@ -298,9 +298,11 @@ endif()
+@@ -320,9 +320,11 @@ set(CMAKE_ENABLE_EXPORTS ON)
  
- find_package(Boost 1.19.0 REQUIRED COMPONENTS filesystem)
+ 
  
 +if (NOT (${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD"))
  if (CMAKE_COMPILER_IS_GNUCC AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER 7 AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 9)
