@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
+$NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * When specified "--with-kerb5" option, test existence of several functions
@@ -6,9 +6,9 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2023-02-16 18:43:30.000000000 +0000
+--- configure.orig	2023-07-24 20:25:13.000000000 +0000
 +++ configure
-@@ -935,6 +935,7 @@ with_incpath
+@@ -937,6 +937,7 @@ with_incpath
  with_libpath
  with_libraries
  with_csops
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
  with_passwd
  with_skey
  with_opie
-@@ -1673,7 +1674,7 @@ Fine tuning of the installation director
+@@ -1676,7 +1677,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
-@@ -1802,6 +1803,7 @@ Optional Packages:
+@@ -1808,6 +1809,7 @@ Optional Packages:
    --with-libpath          additional places to look for libraries
    --with-libraries        additional libraries to link with
    --with-csops            add CSOps standard options
@@ -33,7 +33,7 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -5290,6 +5292,23 @@ fi
+@@ -5329,6 +5331,23 @@ fi
  
  
  
@@ -57,7 +57,7 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
  # Check whether --with-passwd was given.
  if test ${with_passwd+y}
  then :
-@@ -18196,7 +18215,7 @@ fi
+@@ -18263,7 +18282,7 @@ fi
  		: ${mansectform='4'}
  		: ${mansectmisc='5'}
  		;;
@@ -66,7 +66,7 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_MODE_FILTER in linux/seccomp.h
-@@ -29486,6 +29505,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -29669,6 +29688,8 @@ rm -f core conftest.err conftest.$ac_obj
       ;;
  esac
  fi
@@ -75,11 +75,11 @@ $NetBSD: patch-configure,v 1.10 2023/02/20 13:36:42 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      ac_fn_c_check_func "$LINENO" "krb5_verify_user" "ac_cv_func_krb5_verify_user"
-@@ -35492,7 +35513,6 @@ test "$docdir" = '${datarootdir}/doc/${P
- test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
- test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
- test "$runstatedir" = '${localstatedir}/run' && runstatedir='$(localstatedir)/run'
--test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+@@ -35634,7 +35655,6 @@ test X"$localedir" = X'${datarootdir}/lo
+ test X"$localstatedir" = X'${prefix}/var' && localstatedir='$(prefix)/var'
+ test X"$runstatedir" = X'${localstatedir}/run' && runstatedir='$(localstatedir)/run'
+ test X"$adminconfdir" = X'${prefix}/etc' && adminconfdir='$(prefix)/etc'
+-test X"$sysconfdir" = X'${prefix}/etc' && sysconfdir='/etc'
  
- if test X"$INIT_SCRIPT" != X""
- then :
+ # The configuration file search path is to check adminconfdir first and
+ # fall back to sysconfdir.  This can support systems with read-only
