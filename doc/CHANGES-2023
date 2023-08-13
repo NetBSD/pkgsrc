@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4905 2023/08/13 04:06:59 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.4906 2023/08/13 10:32:51 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7083,3 +7083,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added games/quarto version 0.2.0 [pin 2023-08-12]
 	Updated graphics/webp-pixbuf-loader to 0.2.4nb2 [tsutsui 2023-08-13]
 	Updated x11/xfce4-clipman-plugin to 1.6.4 [gutteridge 2023-08-13]
+	Updated lang/qore to 1.18.0 [nros 2023-08-13]
