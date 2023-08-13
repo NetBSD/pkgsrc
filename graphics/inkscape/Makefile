@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.269 2023/08/01 23:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.270 2023/08/13 14:13:23 ryoon Exp $
 
-DISTNAME=	inkscape-1.2.2
-PKGREVISION=	3
+DISTNAME=	inkscape-1.3
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,10 @@ DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 
-WRKSRC=		${WRKDIR}/inkscape-1.2.2_2022-12-01_b0a8486541
+WRKSRC=		${WRKDIR}/inkscape-1.3_2023-07-21_0e150ed6c4
+
+CPPFLAGS.NetBSD+=	-Urounddown
+CPPFLAGS.NetBSD+=	-Uroundup
 
 # This should be resolved in CMakeLists.txt.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
@@ -30,6 +32,8 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+# GNU make (gmake) is required for handling whitespace in filename.
+USE_TOOLS+=		gmake
 USE_TOOLS+=		msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
