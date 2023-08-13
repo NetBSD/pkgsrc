@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2023/07/07 08:11:21 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/08/13 19:05:53 pin Exp $
 
-BLAKE2s (amiwm0.21pl2.tar.gz) = da7608c2a30b604f729598f1562757d7996e86689039ad11e82f53013dd3a58d
-SHA512 (amiwm0.21pl2.tar.gz) = 6504a4fd4c30a571b0c501b46fdc442fcc993c27b4595753f7bfa12a38c0b997a01d939c7a35e6c499aa0f8972bc0fda7cc88a9fe77091f363f8cd5a9e8d50de
-Size (amiwm0.21pl2.tar.gz) = 195128 bytes
-SHA1 (patch-Makefile.in) = fd3f8bc59455cab84420a93f697fbbccab0ef89b
+BLAKE2s (amiwm0.22pl2.tar.gz) = 3b3a2a7b846566920c1f568ac73dede24ad496e699f61271402343139975bf83
+SHA512 (amiwm0.22pl2.tar.gz) = 612715d8b736c5c2a1ae9f108056ce9062e1b1b5d717a31a48f643905bcbacbe3e7652b96828462ef8af8da2ed9ac27343243a4dec1388121b348ba8fb84f0d0
+Size (amiwm0.22pl2.tar.gz) = 193340 bytes
+SHA1 (patch-Makefile.in) = 0167bd00ca77cae4f2ad0014cdf7bfbdf83b2f84
