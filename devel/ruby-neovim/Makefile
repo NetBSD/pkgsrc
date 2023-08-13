@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/01 22:11:42 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/13 14:18:52 taca Exp $
 
-DISTNAME=	neovim-0.9.0
+DISTNAME=	neovim-0.9.1
 CATEGORIES=	devel editors
 
 HOMEPAGE=	https://github.com/neovim/neovim-ruby
