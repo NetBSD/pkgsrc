@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23262 2023/08/13 11:03:36 adam Exp $
+$NetBSD: TODO,v 1.23263 2023/08/13 14:15:48 taca Exp $
 
 Suggested new packages
 ======================
@@ -1349,7 +1349,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o stunnel-5.70
-	o sudo-1.9.14p2
 	o sup-0.4
 	o superlu-5.2.2
 	o swapd-1.0.5
