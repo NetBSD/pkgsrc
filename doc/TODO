@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23264 2023/08/13 15:01:10 wiz Exp $
+$NetBSD: TODO,v 1.23265 2023/08/13 18:35:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-1.1.6
+	o arti-1.1.7
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -531,7 +531,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clamav-1.1
+	o clamav-1.2
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clawsker-0.7.13
@@ -760,6 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.22.5
+	o gtk4-4.12
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -1429,7 +1430,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.5.1
+	o tor-browser-12.5.2
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
