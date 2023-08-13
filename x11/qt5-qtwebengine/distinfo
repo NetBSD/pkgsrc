@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2023/06/10 18:23:06 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/08/13 18:35:14 wiz Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 0801cd15847412f2316affd5a7cd4efe628abfb0e3251a9069184dde1b42ad5b
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = e35d0cab5f66a148420206616b3517e62b8320572beac53650096c0db58db8b4942d52a3abf4f0d6db1450de27befeb92f8b632c1277b0939464c1407a904b1b
@@ -668,7 +668,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c) = 16bc356b
 SHA1 (patch-src_3rdparty_chromium_third__party_libxslt_BUILD.gn) = 9b5a87f7997f57cfefcf32e06b0ba171cc915821
 SHA1 (patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn) = 896dba64969d78f6f968bdbfc0bef2f42893f999
 SHA1 (patch-src_3rdparty_chromium_third__party_minigbm_BUILD.gn) = 6eebeab3d0fa62752c54435658610149e406ef18
-SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 91d1feb0cc92cb3d8cdc398256418e64afd01562
+SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 16f3a397c6d4309b1838ae4723737d44ebefd94d
 SHA1 (patch-src_3rdparty_chromium_third__party_node_node.py) = 84be875a18bf81b721c9b723c44ef0cbec2afb8c
 SHA1 (patch-src_3rdparty_chromium_third__party_openh264_BUILD.gn) = e53826fcc69d735c2e8425db24e2358c208d8ded
 SHA1 (patch-src_3rdparty_chromium_third__party_openscreen_src_build_config_BUILD.gn) = a54b14e264a6b82b9e68c1c0a746b53bbd4db8da
