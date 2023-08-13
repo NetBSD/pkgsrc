@@ -1,10 +1,22 @@
-$NetBSD: patch-Makefile.in,v 1.1 2022/09/15 11:02:14 leot Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2023/08/13 19:41:47 leot Exp $
 
 Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 
---- Makefile.in.orig	2022-07-22 19:26:24.000000000 +0000
+--- Makefile.in.orig	2023-07-20 22:43:20.000000000 +0000
 +++ Makefile.in
-@@ -52,9 +52,9 @@ OBJ = \
+@@ -16,9 +16,9 @@ LDFLAGS = @LDFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+ EXEEXT = @EXEEXT@
+ O=o
+-ifneq ($(strip $(LESSTEST)),)
++.ifdef LESSTEST
+ CPPFLAGS += -DLESSTEST
+-endif
++.endif
+ 
+ LIBS = @LIBS@
+ 
+@@ -55,9 +55,9 @@ OBJ = \
  	output.${O} pattern.${O} position.${O} prompt.${O} search.${O} signal.${O} \
  	tags.${O} ttyin.${O} version.${O} xbuf.${O}  @REGEX_O@
  
