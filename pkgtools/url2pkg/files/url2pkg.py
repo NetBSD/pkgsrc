@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.48 2023/06/11 07:42:16 wiz Exp $
+# $NetBSD: url2pkg.py,v 1.49 2023/08/13 21:19:02 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -789,8 +789,7 @@ class Adjuster:
             self.todos.append(f'dependency {kind} {value}')
 
     def read_dependencies(self, cmd: str, env: Dict[str, str],
-                          cwd: Union[Path, Any], pkgdir_prefix: str,
-                          pkgname_prefix: str) -> None:
+                          cwd: Union[Path, Any], python: bool = False) -> None:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
@@ -832,19 +831,26 @@ class Adjuster:
                 self.g.debug('unknown dependency line: {0}', line)
 
         self.set_license(license_name, license_default)
-        self.add_dependencies(pkgdir_prefix, pkgname_prefix, dep_lines)
+        self.add_dependencies(dep_lines, python)
 
-    def add_dependencies(self, pkgdir_prefix: str, pkgname_prefix: str,
-                         dep_lines: List[Tuple[str, str, str, str]]):
+    def add_dependencies(self, dep_lines: List[Tuple[str, str, str, str]],
+                         python: bool):
         for dep_line in dep_lines:
             kind, pkgbase, constraint, dep_dir = dep_line
 
-            if dep_dir == '' and pkgdir_prefix != '':
-                dep_dir = self.g.find_package(pkgdir_prefix + pkgbase)
-                if dep_dir != '':
-                    pkgbase = pkgname_prefix + pkgbase
             if dep_dir == '':
                 dep_dir = self.g.find_package(pkgbase)
+            if dep_dir == '' and python:
+                for candidate in list(dict.fromkeys((
+                        pkgbase,
+                        pkgbase.replace('_', '-'),
+                        re.sub('^py', '', pkgbase),
+                        re.sub('^py', '', pkgbase).replace('_', '-')
+                ))):
+                    dep_dir = self.g.find_package('py-' + candidate)
+                    if dep_dir != '':
+                        pkgbase = '${PYPKGPREFIX}-' + candidate
+                        break
 
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
 
@@ -959,7 +965,7 @@ class Adjuster:
         # devel/p5-Algorithm-CheckDigits
 
         cmd = f'{self.g.perl5} -I{self.g.libdir} -I. Build.PL'
-        self.read_dependencies(cmd, {}, self.abs_wrksrc, '', '')
+        self.read_dependencies(cmd, {}, self.abs_wrksrc)
         self.build_vars.append(Var('PERL5_MODULE_TYPE', '=', 'Module::Build'))
 
     def adjust_perl_module_Makefile_PL(self):
@@ -974,7 +980,7 @@ class Adjuster:
         subprocess.call(cmd1, shell=True, cwd=self.abs_wrksrc)
 
         cmd2 = f'{self.g.perl5} -I{self.g.libdir} -I. Makefile.PL'
-        self.read_dependencies(cmd2, {}, self.abs_wrksrc, '', '')
+        self.read_dependencies(cmd2, {}, self.abs_wrksrc)
 
     def adjust_perl_module_homepage(self):
         if '${MASTER_SITE_PERL_CPAN:' \
@@ -1027,7 +1033,7 @@ class Adjuster:
             'PYTHONDONTWRITEBYTECODE': 'x',
             'PYTHONPATH': f'{self.g.libdir}/python'
         }
-        self.read_dependencies(cmd, env, self.abs_wrksrc, 'py-', '${PYPKGPREFIX}-')
+        self.read_dependencies(cmd, env, self.abs_wrksrc, python=True)
 
         self.pkgname_prefix = '${PYPKGPREFIX}-'
         self.categories.append('python')
