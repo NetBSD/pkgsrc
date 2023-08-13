@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.93 2023/02/02 15:26:55 tnn Exp $
+$NetBSD: distinfo,v 1.94 2023/08/13 14:13:23 ryoon Exp $
 
-BLAKE2s (inkscape-1.2.2.tar.xz) = cabd3b9f4fe5d8aabfc47053f4a6197a82d55e83710c666ef88f31c7b6fc7145
-SHA512 (inkscape-1.2.2.tar.xz) = b3e95f7d45612140b38c95fd758b051c27b0ed55bac7e7980c0491d3ba94c62edd7f0b27034314388bf74faf2046d829f36d2f6745cb4a54fb43b8b684df235f
-Size (inkscape-1.2.2.tar.xz) = 39392040 bytes
-SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 26351c300629e28f6523fe2167a2eed5802435cf
-SHA1 (patch-src_actions_actions-edit.cpp) = 8f18d7889ba2d1d8e39b9ee6c87e0d3df905807d
+BLAKE2s (inkscape-1.3.tar.xz) = 54ecf8edffd743085bc67502b9af1886f0f593ac5343716c04152b03a2d5ad19
+SHA512 (inkscape-1.3.tar.xz) = 1eb488105586bf98a51c7109ab2e23292f039e5f0e66de4d3684a73f0ab408d89ee55560517d3185370ad3f32b31cf03d149df02ba5c895fe386dd1581fcb2e8
+Size (inkscape-1.3.tar.xz) = 85764028 bytes
+SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 6638a97615ca37bcdc20463b37cd859d723f66d6
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
-SHA1 (patch-src_object_algorithms_graphlayout.cpp) = db2aa4d4a8ecece0b62ca335d03308c56a7d1591
+SHA1 (patch-src_helper_mathfns.h) = 37977a9c767dd409088e552135c512ff76f675a4
