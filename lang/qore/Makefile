@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/08/08 19:31:04 nros Exp $
+# $NetBSD: Makefile,v 1.25 2023/08/13 10:31:52 nros Exp $
 
-DISTNAME=	qore-1.17.0
+DISTNAME=	qore-1.18.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +26,11 @@ REPLACE_QORE+=		bin/rest bin/saprest bin/schema-reverse
 REPLACE_QORE+=		bin/sfrest bin/sqlutil doxygen/qdx doxygen/qjar
 
 CONFIGURE_ARGS+=	--with-libsuffix="" --disable-single-compilation-unit
+
+post-patch:
+	${RMDIR} ${WRKSRC}/docs/modules/MssqlSqlUtilBase/html
+	${RMDIR} ${WRKSRC}/docs/modules/MssqlSqlUtilBase
+
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
