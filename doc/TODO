@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23263 2023/08/13 14:15:48 taca Exp $
+$NetBSD: TODO,v 1.23264 2023/08/13 15:01:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -504,6 +504,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o boolean-7.1
 	o bos-2.5
 	o botan-3.0.0
+	o botan3-3.1.1
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
@@ -512,7 +513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-6.23.0 [requires py-qt6/py-qt6-webengine]
+	o calibre-6.24.0 [requires py-qt6/py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o carbons-purple-0.2.3
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fmtlib-10.1.0
 	o fop-2.6
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
@@ -753,7 +755,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.56.0
+	o grpc-1.57.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
@@ -806,6 +808,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
+	o inih-57
 	o input-pad-1.4.2
 	o ipe-7.2.24
 	o ipopt-3.12.12
@@ -982,6 +985,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mpcomplex-1.3.1
+	o mpv-0.36.0
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
@@ -1170,6 +1174,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profit-2.5.3
 	o proj-9.2.0
 	o protobuf-23.4 [make sure net/grpc supports this version]
+	o protobuf-24.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1182,8 +1187,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-async-timeout-4.0.3
 	o py-barman-3.0.1
-	o py-bumpver-2023.1125
+	o py-bumpver-2023.1126
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cython-3.0
@@ -1196,26 +1202,30 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.95.0
-	o py-grpcio-1.56.2
+	o py-google-api-python-client-2.96.0
+	o py-grpcio-1.57.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-jsonschema-4.18.4 [needs wip/py-referencing]
-	o py-jsonschema-4.18.6
+	o py-jsonschema-4.19.0
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
+	o py-mercurial-6.5.1
 	o py-mock-5.0.2
 	o py-more-itertools-10.1.0
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
+	o py-pdf-3.15.0
 	o py-pdf-parser-0.7.4
+	o py-pillow_heif-0.13.0
 	o py-postgresql-5.1.2
-	o py-protobuf-4.23.4
+	o py-protobuf-4.24.0
+	o py-pspdfutils-3.0.9
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-qtgraph-qt5-0.12.1
@@ -1224,11 +1234,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-scgi-2.0
 	o py-simpletal-5.1
 	o py-sphinx-autodoc-typehints-1.24.0
+	o py-sphinxcontrib-applehelp-1.0.6
+	o py-sphinxcontrib-devhelp-1.0.4
+	o py-sphinxcontrib-htmlhelp-2.0.3
+	o py-sphinxcontrib-qthelp-1.0.5
+	o py-sphinxcontrib-serializinghtml-1.1.7
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-test-django-4.5.2
 	o py-tokyocabinet-0.6
+	o py-tortoisehg-6.5.1
+	o py-tox-4.8.0
+	o py-tqdm-4.66.1
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
@@ -1242,6 +1260,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qcad-3.28.1.0
 	o qconf-2.5
 	o qdirstat-1.8.1
+	o qemu-8.0.4
 	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
@@ -1263,6 +1282,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restish-0.18.0
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1275,6 +1295,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.6
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1392,7 +1413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
 	o tevent-0.15.0
-	o texlab-5.9.0
+	o texlab-5.9.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o thunderbird-115
@@ -1412,12 +1433,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
+	o tree-sitter-c-0.20.5
 	o tree-sitter-go-0.20.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ttftot42-0.4.1
 	o turba-4.2.12
+	o typst-0.7.0
 	o tyrquake-0.66
 	o uae-0.8.29
 	o ubs-0.20
@@ -1454,6 +1477,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
 	o wMosaic-3.8.22
+	o waf-2.0.26
 	o wandio-4.2.3
 	o wap-utils-1.4.1
 	o wbm-virtual-server-6.16
