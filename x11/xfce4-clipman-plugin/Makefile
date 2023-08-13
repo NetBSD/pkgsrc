@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2023/03/20 22:45:11 gutteridge Exp $
+# $NetBSD: Makefile,v 1.68 2023/08/13 04:06:24 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.6.3
+VERSION=	1.6.4
 DISTNAME=	xfce4-clipman-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/${VERSION:R}/
