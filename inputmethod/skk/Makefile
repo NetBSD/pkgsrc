@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/07/04 14:40:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/08/13 14:04:54 ryoon Exp $
 
 DISTNAME=	ddskk-ddskk-17.1_Neppu
 PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-17.1
@@ -18,7 +18,8 @@ CONFLICTS=	ddskk-[0-9]*
 EMACS_MODULES+=		base leim
 EMACS_BUILDLINK=	YES
 
-EMACS_VERSIONS_ACCEPTED=	emacs28 emacs28nox
+EMACS_VERSIONS_ACCEPTED=	emacs29 emacs29nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
 EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
 EMACS_VERSIONS_ACCEPTED+=	emacs25 emacs25nox
