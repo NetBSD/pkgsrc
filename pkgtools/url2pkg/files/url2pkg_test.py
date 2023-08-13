@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.43 2023/08/13 20:46:35 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.44 2023/08/13 21:11:31 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -818,7 +818,12 @@ def test_Adjuster_read_dependencies():
 def test_Adjuster_read_dependencies__lookup_with_prefix():
     child_process_output = [
         'DEPENDS\tpyobjc-framework-Quartz>=0',
-        ''
+        # begin from py-slixmpp
+        'DEPENDS\tpyasn1>=0',
+        'DEPENDS\tpyasn1_modules>=0',
+        'DEPENDS\ttyping_extensions;python_version<"3.8.0">=0',
+        # end from py-slixmpp
+        '',
     ]
     env = {'URL2PKG_DEPENDENCIES': '\n'.join(child_process_output)}
     cmd = "printf '%s\n' \"$URL2PKG_DEPENDENCIES\""
@@ -828,6 +833,9 @@ def test_Adjuster_read_dependencies__lookup_with_prefix():
 
     assert adjuster.depends == [
         '${PYPKGPREFIX}-pyobjc-framework-Quartz>=0:../../devel/py-pyobjc-framework-Quartz',
+        '# TODO: pyasn1>=0',
+        '# TODO: pyasn1_modules>=0',
+        '# TODO: typing_extensions;python_version<"3.8.0">=0',
     ]
 
 
