@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/07/16 10:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/08/14 05:12:15 wiz Exp $
 
-PKGNAME=		revbump-3.4
+PKGNAME=		revbump-3.5
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
