@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/12 03:20:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/14 05:13:31 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1628,10 +1628,12 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-print.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.elc
+${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.el.gz
+${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.elc
+${PLIST.nonative}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp-cstr.el
+${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.el.gz
+${PLIST.native}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.elc
+${PLIST.nonative}share/emacs/${PKGVERSION}/lisp/emacs-lisp/comp.el
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/copyright.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/crm.el.gz
