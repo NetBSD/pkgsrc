@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/14 07:38:37 nros Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 13:21:07 nros Exp $
 
 DISTNAME=	czmq-4.2.1
 CATEGORIES=	net
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE+=	src/libczmq.pc.in
 
 CONFIGURE_ARGS+=	--with-libsystemd=no
 CONFIGURE_ARGS+=	--with-docs=no
+CONFIGURE_ARGS+=	--enable-drafts=yes
 
 TEST_TARGET=	check
 
