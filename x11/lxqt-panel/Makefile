@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/08/11 16:24:45 nia Exp $
+# $NetBSD: Makefile,v 1.39 2023/08/14 18:19:09 nia Exp $
 
 DISTNAME=	lxqt-panel-1.3.0
 PKGREVISION=	4
@@ -74,6 +74,7 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 .include "../../x11/kguiaddons/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/lxqt-globalkeys/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
