@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/11 09:14:17 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 19:24:10 nia Exp $
 
 DISTNAME=	pg_top-4.0.0
 CATEGORIES=	databases
@@ -16,5 +16,6 @@ NOT_FOR_PLATFORM=	NetBSD-*-*
 .if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
