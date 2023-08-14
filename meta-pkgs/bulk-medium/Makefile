@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2023/08/14 18:34:51 nia Exp $
 
-DISTNAME=	bulk-medium-20230701
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20230814
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -40,6 +39,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # Someone please let me know what the most useful/popular things
 # there are.
 #
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # 1. Applications
@@ -106,13 +107,15 @@ DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-DEPENDS+=	xpdf>=4:../../print/xpdf4
+DEPENDS+=	mupdf-[0-9]*:../../print/mupdf
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
 DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
 DEPENDS+=	xenkernel413-[0-9]*:../../sysutils/xenkernel413
 DEPENDS+=	xentools413-[0-9]*:../../sysutils/xentools413
+.endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 DEPENDS+=	seamonkey-[0-9]*:../../www/seamonkey
 DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
@@ -159,7 +162,9 @@ DEPENDS+=	pango-[0-9]*:../../devel/pango
 DEPENDS+=	pcre-[0-9]*:../../devel/pcre
 DEPENDS+=	popt-[0-9]*:../../devel/popt
 DEPENDS+=	fuse-[0-9]*:../../filesystems/fuse
+.if ${OPSYS} == "NetBSD"
 DEPENDS+=	perfuse-[0-9]*:../../filesystems/perfuse
+.endif
 DEPENDS+=	SDL2_image-[0-9]*:../../graphics/SDL2_image
 DEPENDS+=	cairo-[0-9]*:../../graphics/cairo
 DEPENDS+=	gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
@@ -193,7 +198,9 @@ DEPENDS+=	tk-[0-9]*:../../x11/tk
 #
 # 4. Linux compat packages
 #
+.if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
+.endif
 
 #
 # 5. Desktop infrastructure and support services
