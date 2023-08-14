@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4923 2023/08/14 07:40:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4924 2023/08/14 21:39:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7102,3 +7102,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/revbump to 3.5 [wiz 2023-08-14]
 	Updated security/qore-ssh2-module to 1.4.2 [nros 2023-08-14]
 	Updated www/ap2-python to 3.5.0nb5 [wiz 2023-08-14]
+	Updated textproc/R-jsonlite to 1.8.7 [mef 2023-08-14]
