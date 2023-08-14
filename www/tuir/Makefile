@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/06/30 11:18:59 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:25:31 wiz Exp $
 
 DISTNAME=	tuir-1.29.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tuir/}
 

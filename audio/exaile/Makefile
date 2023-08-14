@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2023/01/29 21:15:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2023/08/14 05:23:46 wiz Exp $
 
 DISTNAME=	exaile-4.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=exaile/}
 GITHUB_PROJECT=	exaile

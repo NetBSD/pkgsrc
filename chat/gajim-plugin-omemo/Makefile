@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:05 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/14 05:23:53 wiz Exp $
 
 #
 # Don't update this package without testing the plugin with Gajim.
@@ -10,7 +10,7 @@
 # marked "available" in the Gajim plugins menu.
 #
 PKGNAME=	gajim-plugin-omemo-2.7.14
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	omemo_${PKGVERSION_NOREV}
 CATEGORIES=	chat security python
 MASTER_SITES=	https://ftp.gajim.org/plugins_releases/

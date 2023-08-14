@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/02/11 14:43:32 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:25:01 wiz Exp $
 
 BUILDLINK_TREE+=	libmicrodns
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libmicrodns
 LIBMICRODNS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmicrodns+=	libmicrodns>=0.2.0
+BUILDLINK_ABI_DEPENDS.libmicrodns?=	libmicrodns>=0.2.0nb1
 BUILDLINK_PKGSRCDIR.libmicrodns?=	../../net/libmicrodns
 .endif	# LIBMICRODNS_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2017/08/01 17:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/14 05:25:09 wiz Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://dl.packetstormsecurity.net/Crackers/crack/
 

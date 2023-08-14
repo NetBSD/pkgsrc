@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2023/03/30 07:10:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/14 05:24:09 wiz Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
 VERSION=	2018.3.5
 DISTNAME=	ideaIU-${VERSION:S/.0.0//}-no-jdk
 PKGNAME=	intellij-ue-bin-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://download.jetbrains.com/idea/
 

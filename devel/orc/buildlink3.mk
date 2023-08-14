@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/07/18 12:22:25 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:24:13 wiz Exp $
 
 BUILDLINK_TREE+=	orc
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	orc
 ORC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.orc+=	orc>=0.4.6
+BUILDLINK_ABI_DEPENDS.orc?=	orc>=0.4.34nb1
 BUILDLINK_PKGSRCDIR.orc?=	../../devel/orc
 .endif	# ORC_BUILDLINK3_MK
 

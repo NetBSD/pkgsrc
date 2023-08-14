@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/06/30 11:18:36 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:50 wiz Exp $
 
 DISTNAME=	libsvm-3.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	https://www.csie.ntu.edu.tw/~cjlin/libsvm/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/06/06 12:40:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/14 05:24:06 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-pump-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Accelerated remote compilation with distcc
 
 .include "../../devel/distcc/Makefile.common"

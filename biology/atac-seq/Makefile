@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/07/28 16:45:50 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/14 05:23:50 wiz Exp $
 #
 
 DISTNAME=	atac-seq-1.2.1
+PKGREVISION=	1
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 

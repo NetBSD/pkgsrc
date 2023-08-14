@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/11/12 09:10:24 nikita Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/14 05:25:02 wiz Exp $
 
 DISTNAME=	mimms-3.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net multimedia
 MASTER_SITES=	https://download.savannah.gnu.org/releases/mimms/
 EXTRACT_SUFX=	.tar.bz2

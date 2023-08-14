@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/06/30 11:18:35 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/14 05:24:48 wiz Exp $
 #
 
 DISTNAME=		queue-repair-0.9.0
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 

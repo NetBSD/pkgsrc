@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/09 18:46:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:14 wiz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20150326
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ser/}
 GITHUB_PROJECT=		checkpassword-phpbb

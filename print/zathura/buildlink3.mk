@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2023/01/29 21:14:56 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/08/14 05:25:07 wiz Exp $
 
 BUILDLINK_TREE+=	zathura
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	zathura
 ZATHURA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.zathura+=	zathura>=0.2.1
-BUILDLINK_ABI_DEPENDS.zathura+=	zathura>=0.4.9nb5
+BUILDLINK_ABI_DEPENDS.zathura+=	zathura>=0.4.9nb7
 BUILDLINK_PKGSRCDIR.zathura?=	../../print/zathura
 
 .include "../../graphics/cairo/buildlink3.mk"

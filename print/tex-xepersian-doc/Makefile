@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/04/01 22:49:59 markd Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:07 wiz Exp $
 
 DISTNAME=	xepersian.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-24.8
+PKGREVISION=	1
 TEXLIVE_REV=	64872
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

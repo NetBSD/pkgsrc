@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/07/06 09:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/14 05:25:14 wiz Exp $
 
 DISTNAME=	collectd-web-0.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 GITHUB_PROJECT=	collectd-web
 MASTER_SITES=	${MASTER_SITE_GITHUB:=httpdss/}

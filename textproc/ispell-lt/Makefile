@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/06/30 11:18:54 nia Exp $
+# $NetBSD: Makefile,v 1.16 2023/08/14 05:25:22 wiz Exp $
 
 DISTNAME=	ispell-lt-1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 #MASTER_SITES=	ftp://ftp.akl.lt/ispell-lt/
 

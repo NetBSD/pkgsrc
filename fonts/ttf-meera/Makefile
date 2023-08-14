@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:25 wiz Exp $
 
 DISTNAME=	meera-${GITLAB_TAG}
 PKGNAME=	ttf-meera-7.0.3.20191223
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITLAB:=smc/fonts/}
 GITLAB_PROJECT=	meera

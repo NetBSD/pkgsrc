@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/26 17:21:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:23:51 wiz Exp $
 
 DISTNAME=	bedtools-2.30.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arq5x/}
 GITHUB_PROJECT=	bedtools2

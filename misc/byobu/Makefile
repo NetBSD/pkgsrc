@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2022/06/30 11:18:37 nia Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/14 05:24:52 wiz Exp $
 
 BYOBUVER=	5.111
 DISTNAME=	byobu_${BYOBUVER}.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	misc
 MASTER_SITES=	https://launchpad.net/byobu/trunk/${BYOBUVER}/+download/
 

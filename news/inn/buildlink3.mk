@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2022/06/28 11:35:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/08/14 05:25:04 wiz Exp $
 
 BUILDLINK_TREE+=	inn
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	inn
 INN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.inn+=	inn>=2.3.4
-BUILDLINK_ABI_DEPENDS.inn?=	inn>=2.6.5nb1
+BUILDLINK_ABI_DEPENDS.inn?=	inn>=2.7.1nb2
 BUILDLINK_PKGSRCDIR.inn?=	../../news/inn
 .endif # INN_BUILDLINK3_MK
 

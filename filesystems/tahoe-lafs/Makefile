@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2023/06/18 05:39:38 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/08/14 05:24:23 wiz Exp $
 
 VERSION_BASE=	1.18.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 

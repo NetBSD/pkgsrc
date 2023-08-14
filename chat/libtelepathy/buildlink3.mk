@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2021/12/08 16:01:45 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/08/14 05:23:54 wiz Exp $
 
 BUILDLINK_TREE+=	libtelepathy
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtelepathy
 LIBTELEPATHY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtelepathy+=	libtelepathy>=0.3.3
-BUILDLINK_ABI_DEPENDS.libtelepathy+=	libtelepathy>=0.3.3nb15
+BUILDLINK_ABI_DEPENDS.libtelepathy+=	libtelepathy>=0.3.3nb21
 BUILDLINK_PKGSRCDIR.libtelepathy?=	../../chat/libtelepathy
 
 .include "../../chat/telepathy-glib/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2022/06/30 11:18:52 nia Exp $
+# $NetBSD: Makefile,v 1.30 2023/08/14 05:25:19 wiz Exp $
 #
 
 DISTNAME=	tdir-1.71
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.tundraware.com/Software/tdir/
 

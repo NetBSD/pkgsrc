@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/06/30 11:18:51 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/14 05:25:18 wiz Exp $
 #
 
 DISTNAME=	openstack_init-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none

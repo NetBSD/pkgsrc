@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/04/30 17:44:57 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/08/14 05:24:35 wiz Exp $
 
 BUILDLINK_TREE+=	libepoxy
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libepoxy
 LIBEPOXY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libepoxy+=	libepoxy>=1.2
+BUILDLINK_ABI_DEPENDS.libepoxy?=		libepoxy>=1.5.10nb1
 BUILDLINK_PKGSRCDIR.libepoxy?=		../../graphics/libepoxy
 
 pkgbase:=		libepoxy

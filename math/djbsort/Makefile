@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/06/30 11:18:36 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/08/14 05:24:49 wiz Exp $
 
 DISTNAME=		djbsort-20190516
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		${HOMEPAGE}
 
