@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/08/14 05:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/14 19:30:15 nia Exp $
 
 DISTNAME=	teeworlds-0.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -23,10 +23,10 @@ TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=		c99
+FORCE_C_STD=		gnu99
 
 # Fails with C++14 default language
-FORCE_CXX_STD=		c++03
+FORCE_CXX_STD=		gnu++03
 
 INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications
