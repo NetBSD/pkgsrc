@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/08/12 03:20:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/08/14 05:13:31 wiz Exp $
 #
 # used by editors/emacs29/Makefile
 # used by editors/emacs29-nox11/Makefile
@@ -43,6 +43,7 @@ PLIST_SRC+=		../../editors/emacs29/PLIST
 BUILD_TARGET=		bootstrap
 EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
 PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
+PLIST_VARS+=		native nonative
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
