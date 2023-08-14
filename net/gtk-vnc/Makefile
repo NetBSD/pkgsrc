@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2023/05/06 19:09:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2023/08/14 05:25:00 wiz Exp $
 #
 
 DISTNAME=	gtk-vnc-0.5.2
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-vnc/0.5/}
 EXTRACT_SUFX=	.tar.xz

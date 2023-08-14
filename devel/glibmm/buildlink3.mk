@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2023/07/18 14:11:15 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2023/08/14 05:24:08 wiz Exp $
 
 BUILDLINK_TREE+=	glibmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	glibmm
 GLIBMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.24.2
-BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.66.2nb2
+BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.66.6nb1
 BUILDLINK_PKGSRCDIR.glibmm?=	../../devel/glibmm
 
 USE_CXX_FEATURES+=	regex c++11

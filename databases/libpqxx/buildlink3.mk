@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/09/15 09:48:26 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/08/14 05:23:59 wiz Exp $
 
 BUILDLINK_TREE+=	libpqxx
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libpqxx
 LIBPQXX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpqxx+=	libpqxx>=7.1.2
+BUILDLINK_ABI_DEPENDS.libpqxx?=	libpqxx>=7.7.4nb1
 BUILDLINK_PKGSRCDIR.libpqxx?=	../../databases/libpqxx
 .endif # LIBPQXX_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2020/11/07 09:27:38 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/08/14 05:25:29 wiz Exp $
 
 BUILDLINK_TREE+=	libpsl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpsl
 LIBPSL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpsl+=	libpsl>=0.20.2
-BUILDLINK_ABI_DEPENDS.libpsl+=	libpsl>=0.21.1nb1
+BUILDLINK_ABI_DEPENDS.libpsl+=	libpsl>=0.21.2nb1
 BUILDLINK_PKGSRCDIR.libpsl?=	../../www/libpsl
 .endif	# LIBPSL_BUILDLINK3_MK
 

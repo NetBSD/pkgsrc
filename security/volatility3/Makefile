@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/11/29 05:59:16 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:12 wiz Exp $
 
 DISTNAME=	volatility3-2.0.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=volatilityfoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

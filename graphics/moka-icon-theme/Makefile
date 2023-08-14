@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:24:35 wiz Exp $
 
 DISTNAME=	moka-icon-theme-5.4.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=snwh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

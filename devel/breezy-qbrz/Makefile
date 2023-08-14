@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/08/06 19:11:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:24:04 wiz Exp $
 
 EGG_NAME=	qbrz-0.4.1
 DISTNAME=	breezy-qbrz-0.4.1.0.${VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 VER=		1652	# 0.4.1+
 SITES.${DISTNAME}.tar.gz= \

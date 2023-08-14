@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2022/11/09 13:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/14 05:24:58 wiz Exp $
 
 DISTNAME=	coursera-dl-0.8.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coursera-dl/}
 GITHUB_TAG=	0.8.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

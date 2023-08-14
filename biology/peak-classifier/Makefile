@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/08/12 14:52:46 bacon Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/14 05:23:52 wiz Exp $
 
 DISTNAME=	peak-classifier-0.1.4.11
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	394f61cb00eadcd07b0d7d2df4631502c0aa46d4

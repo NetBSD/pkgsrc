@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/06/28 11:34:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/08/14 05:24:43 wiz Exp $
 
 BUILDLINK_TREE+=	gcc8
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcc8
 GCC8_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc8+=	gcc8>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc8+=	gcc8>=8.4.0nb6
+BUILDLINK_ABI_DEPENDS.gcc8+=	gcc8>=8.5.0nb1
 BUILDLINK_PKGSRCDIR.gcc8=	../../lang/gcc8
 BUILDLINK_DEPMETHOD.gcc8?=	build
 

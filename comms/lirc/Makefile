@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/06/24 19:01:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/14 05:23:57 wiz Exp $
 #
 
 DISTNAME=	lirc-0.9.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lirc/}
 EXTRACT_SUFX=	.tar.bz2

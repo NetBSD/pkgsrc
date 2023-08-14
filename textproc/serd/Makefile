@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/06/11 12:08:21 nia Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/14 05:25:24 wiz Exp $
 
 DISTNAME=	serd-0.30.12
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2

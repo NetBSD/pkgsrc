@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2023/05/16 21:20:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2023/08/14 05:24:38 wiz Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnuradio-core
 GNURADIO_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.10.2
-BUILDLINK_ABI_DEPENDS.gnuradio-core?=	gnuradio-core>=3.10.6.0nb4
+BUILDLINK_ABI_DEPENDS.gnuradio-core?=	gnuradio-core>=3.10.7.0nb1
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 
 .include "../../devel/gmp/buildlink3.mk"

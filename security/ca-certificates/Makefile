@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/07/05 18:13:22 kim Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/14 05:25:09 wiz Exp $
 
 PKGNAME=	ca-certificates-20230311
 DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
 EXTRACT_SUFX=	.tar.xz

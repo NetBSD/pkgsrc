@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/09 10:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:13 wiz Exp $
 
 DISTNAME=	bracket-2.18
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.gson.org/netbsd/bracket/download/
 

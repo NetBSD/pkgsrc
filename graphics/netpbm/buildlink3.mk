@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2023/01/03 17:36:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2023/08/14 05:24:36 wiz Exp $
 
 BUILDLINK_TREE+=	netpbm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	netpbm
 NETPBM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.netpbm+=	netpbm>=10.11.6
-BUILDLINK_ABI_DEPENDS.netpbm+=	netpbm>=10.86.34nb2
+BUILDLINK_ABI_DEPENDS.netpbm+=	netpbm>=10.86.34nb5
 BUILDLINK_PKGSRCDIR.netpbm?=	../../graphics/netpbm
 
 .include "../../graphics/png/buildlink3.mk"

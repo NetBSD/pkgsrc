@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/06/28 11:33:54 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2023/08/14 05:24:24 wiz Exp $
 
 DISTNAME=		terminus-font-4.49.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=terminus-font/}
 

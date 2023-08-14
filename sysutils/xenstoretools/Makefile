@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/06/06 12:42:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/14 05:25:20 wiz Exp $
 #
 
 # VERSION is set in xentool415/version.mk
+PKGREVISION=		1
 .include		"../../sysutils/xentools415/version.mk"
 
 PKGNAME=		xenstoretools-${VERSION}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/06/16 15:05:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/14 05:24:08 wiz Exp $
 
 DISTNAME=	git-filter-repo-2.38.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=newren/}
 EXTRACT_SUFX=	.tar.xz

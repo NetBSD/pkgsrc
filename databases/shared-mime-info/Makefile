@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/04/19 08:09:35 adam Exp $
+# $NetBSD: Makefile,v 1.79 2023/08/14 05:24:02 wiz Exp $
 
 DISTNAME=	shared-mime-info-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

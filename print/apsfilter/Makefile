@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/08/01 23:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/14 05:25:06 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 #MASTER_SITES=	http://www.apsfilter.org/download/
 

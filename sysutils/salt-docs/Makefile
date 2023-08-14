@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/06/06 12:42:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.32 2023/08/14 05:25:18 wiz Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/salt/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-docs-/}

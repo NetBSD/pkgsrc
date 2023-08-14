@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2022/07/15 06:16:34 adam Exp $
+# $NetBSD: Makefile,v 1.59 2023/08/14 05:25:15 wiz Exp $
 
 DISTNAME=	fabric-2.7.1
+PKGREVISION=	1
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Fabric/}
 

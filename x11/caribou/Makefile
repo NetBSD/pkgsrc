@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/04/19 08:11:52 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/14 05:25:32 wiz Exp $
 
 DISTNAME=	caribou-0.4.21
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/caribou/0.4/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2010/09/01 15:52:58 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:25:03 wiz Exp $
 
 BUILDLINK_TREE+=	omniORB
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	omniORB
 OMNIORB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.omniORB+=	omniORB>=4.1.2
+BUILDLINK_ABI_DEPENDS.omniORB?=	omniORB>=4.1.7nb5
 BUILDLINK_PKGSRCDIR.omniORB?=	../../net/omniORB
 .endif # OMNIORB_BUILDLINK3_MK
 

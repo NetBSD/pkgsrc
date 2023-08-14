@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/06/30 11:18:44 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/14 05:25:04 wiz Exp $
 #
 
 DISTNAME=		tinydyndns-run-20201030
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
