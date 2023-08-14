@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2022/06/30 11:18:57 nia Exp $
+# $NetBSD: Makefile,v 1.40 2023/08/14 05:25:28 wiz Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www python
 MASTER_SITES=	http://dist.modpython.org/dist/
 EXTRACT_SUFX=	.tgz

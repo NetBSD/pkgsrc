@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/09/09 15:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/14 05:24:33 wiz Exp $
 
 DISTNAME=	graphene-1.10.8
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ebassi/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

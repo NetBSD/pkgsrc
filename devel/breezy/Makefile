@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/08/06 16:15:37 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/08/14 05:24:04 wiz Exp $
 
 DISTNAME=	breezy-3.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 

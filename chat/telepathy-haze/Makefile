@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/06/06 12:40:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/14 05:23:55 wiz Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-haze/
 

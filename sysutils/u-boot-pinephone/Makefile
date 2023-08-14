@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/08/12 07:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:19 wiz Exp $
 
 UBOOT_VERSION=		2021.01-rc3
 UBOOT_TARGET=		pinephone
@@ -29,6 +29,7 @@ CHECK_PORTABILITY_SKIP+=	tools/imx_cntr_image.sh
 post-extract:
 	${CP} ${PREFIX}/share/arm-trusted-firmware/sun50i_a64/bl31.bin ${WRKSRC}
 
+PKGREVISION= 1
 .include "../../sysutils/arm-trusted-firmware-sun50i_a64/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
 .include "../../mk/bsd.pkg.mk"

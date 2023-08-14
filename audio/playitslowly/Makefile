@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/06/30 11:18:02 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/14 05:23:48 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	https://29a.ch/playitslowly/
 

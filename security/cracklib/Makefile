@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/11/22 11:36:31 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:09 wiz Exp $
 
 DISTNAME=	cracklib-2.9.7
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cracklib/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/06/28 11:34:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/08/14 05:24:43 wiz Exp $
 
 BUILDLINK_TREE+=	gcc6
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gcc6
 GCC6_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc6+=	gcc6>=${_GCC_REQD}
-BUILDLINK_ABI_DEPENDS.gcc6+=	gcc6>=6.5.0nb8
+BUILDLINK_ABI_DEPENDS.gcc6+=	gcc6>=6.5.0nb9
 BUILDLINK_PKGSRCDIR.gcc6=	../../lang/gcc6
 BUILDLINK_DEPMETHOD.gcc6?=	build
 

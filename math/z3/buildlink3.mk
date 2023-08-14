@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/12/18 06:46:39 kamil Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:24:50 wiz Exp $
 
 BUILDLINK_TREE+=	z3
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	z3
 Z3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.z3+=	z3>=4.8.3
+BUILDLINK_ABI_DEPENDS.z3?=	z3>=4.12.2nb1
 BUILDLINK_PKGSRCDIR.z3?=	../../math/z3
 
 .endif  # Z3_BUILDLINK3_MK

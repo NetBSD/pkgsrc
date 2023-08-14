@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/05/29 00:39:47 rodent Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/08/14 05:25:34 wiz Exp $
 
 BUILDLINK_TREE+=	libxcb
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxcb
 LIBXCB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.6
-BUILDLINK_ABI_DEPENDS.libxcb+=	libxcb>=1.6
+BUILDLINK_ABI_DEPENDS.libxcb+=	libxcb>=1.15nb2
 BUILDLINK_PKGSRCDIR.libxcb?=	../../x11/libxcb
 
 .include "../../mk/bsd.fast.prefs.mk"

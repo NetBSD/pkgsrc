@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:25 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:24:56 wiz Exp $
 
 #
 # For linking use LDFLAGS.vdpau variable
@@ -14,6 +14,7 @@ BUILDLINK_TREE+=	libvdpau
 LIBVDPAU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvdpau+=	libvdpau>=0.3
+BUILDLINK_ABI_DEPENDS.libvdpau?=		libvdpau>=1.4nb1
 BUILDLINK_PKGSRCDIR.libvdpau?=		../../multimedia/libvdpau
 
 .include "../../x11/libX11/buildlink3.mk"

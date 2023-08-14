@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:15 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/08/14 05:24:35 wiz Exp $
 #
 
 BUILDLINK_TREE+=	libsixel
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libsixel
 LIBSIXEL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsixel+=	libsixel>=1.7.0
-BUILDLINK_ABI_DEPENDS.libsixel+=	libsixel>=1.7.0
+BUILDLINK_ABI_DEPENDS.libsixel+=	libsixel>=1.8.6nb14
 BUILDLINK_PKGSRCDIR.libsixel?=		../../graphics/libsixel
 .endif	# LIBSIXEL_BUILDLINK3_MK
 
