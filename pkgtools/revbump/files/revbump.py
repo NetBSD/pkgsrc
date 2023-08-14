@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.4 2023/07/16 10:12:22 wiz Exp $
+# $NetBSD: revbump.py,v 1.5 2023/08/14 05:12:15 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -185,6 +185,8 @@ parser.add_argument('-p', dest='pkgsrcdir', default='/usr/pkgsrc',
                     help='path to the pkgsrc root directory', action='store')
 parser.add_argument('-w', dest='wip', default=False,
                     help='include wip in search', action='store_true')
+parser.add_argument('-x', dest='recursive', default=True,
+                    help='do not recurse packages to bump', action='store_false')
 args = parser.parse_args()
 
 if not pathlib.Path(args.pkgsrcdir).exists() or \
@@ -192,6 +194,13 @@ if not pathlib.Path(args.pkgsrcdir).exists() or \
    not pathlib.Path(args.pkgsrcdir + '/mk').exists():
     print(f'invalid pkgsrc directory "{args.pkgsrcdir}"')
     sys.exit(1)
+
+if not args.recursive:
+    revbump(args.package)
+    if pathlib.Path(args.pkgsrcdir + '/' +
+                    args.package + '/buildlink3.mk').exists():
+        bl3bump(args.package)
+    sys.exit(0)
 
 if args.package == 'lang/go':
     searchlist = ['lang/go/version.mk']
