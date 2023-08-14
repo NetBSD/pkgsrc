@@ -7,4 +7,4 @@ if [ -f /usr/X11R7/lib/libEGL.so ] && [ -z "$LD_PRELOAD" ] && \
     echo "Applying libEGL LD_PRELOAD workaround for NetBSD" >&2
     export LD_PRELOAD=/usr/X11R7/lib/libEGL.so
 fi
-exec /usr/pkg/libexec/szyszka/szyszka "$@"
+exec @PREFIX@/libexec/szyszka/szyszka "$@"

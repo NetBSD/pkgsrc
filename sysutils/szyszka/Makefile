@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/09 19:44:13 abs Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 08:41:06 abs Exp $
 
 DISTNAME=	szyszka-3.0.0
 PKGREVISION=	1
@@ -18,16 +18,24 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk4}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.MesaLib}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.MesaLib}/lib
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	../szyszka.sh
+SUBST_VARS.paths=	PREFIX
+
 INSTALLATION_DIRS=	bin libexec/szyszka
 
 .include "../../mk/bsd.prefs.mk"
+
+post-extract:
+	${CP} ${FILESDIR}/szyszka.sh ${WRKDIR}/szyszka.sh
 
 # This is a workaround for PR#57445. When resolved this do-install and wrapper
 # should # be removed and the binary just installed into PREFIX/bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/szyszka ${DESTDIR}${PREFIX}/libexec/szyszka
 .if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
-	${INSTALL_SCRIPT} ${FILESDIR}/szyszka.sh ${DESTDIR}${PREFIX}/bin/szyszka
+	${INSTALL_SCRIPT} ${WRKDIR}/szyszka.sh ${DESTDIR}${PREFIX}/bin/szyszka
 .else
 	${ECHO} '#!/bin/sh' > ${DESTDIR}${PREFIX}/bin/szyszka
 	${ECHO} '${PREFIX}/libexec/szyszka/szyszka "$$@"' >> \
