@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/08/14 07:38:37 nros Exp $
+
+BLAKE2s (czmq-4.2.1.tar.gz) = 49c24af9028f5cdb9814c78dbd81d96667df0a31ad9325c8d5f257b869720eab
+SHA512 (czmq-4.2.1.tar.gz) = 776c524ffeba3dbe2534351f91623a6f9db31268aa2e794e29b7eca99c9fd0a726de0f7fba4376a5b3d7321b1033314e86644efaa5a9c7226fc1f06805f7aa9f
+Size (czmq-4.2.1.tar.gz) = 1617066 bytes
+SHA1 (patch-configure) = 581427a74176d2bd64b2fa65fc7c96446f8791ae
