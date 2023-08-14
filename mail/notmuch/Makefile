@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2023/01/28 13:09:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2023/08/14 05:24:47 wiz Exp $
 
+PKGREVISION= 1
 .include "../../mail/notmuch/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-emacs

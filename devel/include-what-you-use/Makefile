@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/07/18 14:11:15 nia Exp $
+# $NetBSD: Makefile,v 1.36 2023/08/14 05:24:09 wiz Exp $
 
 DISTNAME=	include-what-you-use-0.19
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=include-what-you-use/}
 

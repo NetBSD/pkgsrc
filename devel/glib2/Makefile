@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.293 2023/06/26 19:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.294 2023/08/14 05:24:08 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 CATEGORIES=	devel gnome

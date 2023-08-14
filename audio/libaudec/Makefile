@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/05/06 19:08:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:23:47 wiz Exp $
 
 V=		0.3.4
 PKGNAME=	libaudec-${V}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 DISTFILES+=	libaudec-${V}.tar.gz
 

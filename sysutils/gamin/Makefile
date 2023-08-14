@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/12/08 16:06:28 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/08/14 05:25:15 wiz Exp $
 
 .include "../../sysutils/gamin/Makefile.common"
 
-PKGREVISION=		8
+PKGREVISION=		9
 CONFIGURE_ARGS+=	--enable-server
 
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2023/05/22 21:00:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2023/08/14 05:24:53 wiz Exp $
 
 BUILDLINK_TREE+=	kunitconversion
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kunitconversion
 KUNITCONVERSION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kunitconversion+=	kunitconversion>=5.19.0
-BUILDLINK_ABI_DEPENDS.kunitconversion?=	kunitconversion>=5.98.0nb5
+BUILDLINK_ABI_DEPENDS.kunitconversion?=	kunitconversion>=5.108.0nb1
 BUILDLINK_PKGSRCDIR.kunitconversion?=	../../misc/kunitconversion
 
 .include "../../devel/ki18n/buildlink3.mk"

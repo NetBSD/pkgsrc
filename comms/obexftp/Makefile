@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2023/06/06 12:40:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/14 05:23:57 wiz Exp $
 #
 
 DISTNAME=	obexftp-0.24-Source
 PKGNAME=	obexftp-0.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 

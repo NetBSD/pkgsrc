@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/02/08 15:51:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:09 wiz Exp $
 
 DISTNAME=		gng-1.0.4
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gdubw/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

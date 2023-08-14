@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/06/30 11:18:33 nia Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/14 05:24:44 wiz Exp $
 #
 
 VER=		0.1
 DISTNAME=	likepython_${VER}
 PKGNAME=	likepython-${VER}
-PKGREVISION=	5
+PKGREVISION=	6
 
 CATEGORIES=	lang
 MASTER_SITES=	http://www.staringispolite.com/likepython/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/11/01 21:29:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:49 wiz Exp $
 
 DISTNAME=	flann-1.9.2
 PKGNAME=	${DISTNAME:S/-/-lib-/}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mariusmuja/}
 GITHUB_PROJECT=	flann

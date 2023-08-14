@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/06/30 11:18:46 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/14 05:25:06 wiz Exp $
 
 DISTNAME=	pdf-redact-tools-0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=firstlook/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

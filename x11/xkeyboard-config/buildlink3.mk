@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/10/17 07:45:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:25:36 wiz Exp $
 
 BUILDLINK_TREE+=				xkeyboard-config
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=				xkeyboard-config
 XKEYBOARD_CONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xkeyboard-config+=	xkeyboard-config>=1.9
-BUILDLINK_ABI_DEPENDS.xkeyboard-config?=	xkeyboard-config>=2.34nb1
+BUILDLINK_ABI_DEPENDS.xkeyboard-config?=	xkeyboard-config>=2.39nb1
 BUILDLINK_PKGSRCDIR.xkeyboard-config?=		../../x11/xkeyboard-config
 BUILDLINK_DEPMETHOD.xkeyboard-config?=		build
 

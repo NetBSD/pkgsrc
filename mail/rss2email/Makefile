@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2022/08/27 04:40:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.59 2023/08/14 05:24:48 wiz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-3.14
+PKGREVISION=		1
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rss2email/}
 GITHUB_PROJECT=		rss2email

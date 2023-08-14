@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/01/07 13:04:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:39 wiz Exp $
 
 BUILDLINK_TREE+=	hackrf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hackrf
 HACKRF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hackrf+=	hackrf>=0.1
-BUILDLINK_ABI_DEPENDS.hackrf+=	hackrf>=0.1
+BUILDLINK_ABI_DEPENDS.hackrf+=	hackrf>=2023.01.1nb1
 BUILDLINK_PKGSRCDIR.hackrf?=	../../ham/hackrf
 .endif # HACKRF_BUILDLINK3_MK
 

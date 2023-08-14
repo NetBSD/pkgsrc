@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2022/10/11 14:38:47 taca Exp $
+# $NetBSD: Makefile,v 1.50 2023/08/14 05:25:17 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/munin/munin-node/}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	System monitoring tool, client version
 
 .include "../../sysutils/munin-common/Makefile.common"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/06/06 12:41:15 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2023/08/14 05:24:15 wiz Exp $
 
 DISTNAME=	reposurgeon-3.41
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.catb.org/~esr/reposurgeon/
 EXTRACT_SUFX=	.tar.xz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/02/10 13:53:47 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/08/14 05:23:57 wiz Exp $
 
 BUILDLINK_TREE+=	obexftp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	obexftp
 OBEXFTP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.obexftp+=	obexftp>=0.24
+BUILDLINK_ABI_DEPENDS.obexftp?=	obexftp>=0.24nb2
 BUILDLINK_PKGSRCDIR.obexftp?=	../../comms/obexftp
 
 .include "../../comms/openobex/buildlink3.mk"

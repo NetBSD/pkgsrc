@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/12/02 01:27:16 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:23:57 wiz Exp $
 
 # Check whether LIRC is available on this platform
 .include "available.mk"
@@ -10,6 +10,7 @@ BUILDLINK_TREE+=	lirc
 LIRC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lirc+=	lirc>=0.9.0
+BUILDLINK_ABI_DEPENDS.lirc?=	lirc>=0.9.0nb5
 BUILDLINK_PKGSRCDIR.lirc?=	../../comms/lirc
 .  endif # LIRC_BUILDLINK3_MK
 

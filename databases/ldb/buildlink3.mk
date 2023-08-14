@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/03/10 10:19:32 thor Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/08/14 05:23:59 wiz Exp $
 
 BUILDLINK_TREE+=	ldb
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ldb
 LDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.4.0
+BUILDLINK_ABI_DEPENDS.ldb?=	ldb>=2.7.2nb1
 BUILDLINK_PKGSRCDIR.ldb?=	../../databases/ldb
 
 .include "../../converters/libiconv/buildlink3.mk"

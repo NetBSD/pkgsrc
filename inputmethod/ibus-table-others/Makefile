@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:33:01 maya Exp $
+# $NetBSD: Makefile,v 1.16 2023/08/14 05:24:40 wiz Exp $
 #
 
 DISTNAME=	ibus-table-others-1.3.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/moebiuscurve/ibus-table-others/releases/download/${PKGVERSION_NOREV}/
 

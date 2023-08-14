@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/06/27 10:28:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/14 05:25:34 wiz Exp $
 
 DISTNAME=	libxcb-1.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.xz

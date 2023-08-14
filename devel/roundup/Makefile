@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/06/30 11:18:18 nia Exp $
+# $NetBSD: Makefile,v 1.64 2023/08/14 05:24:15 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roundup/}
 

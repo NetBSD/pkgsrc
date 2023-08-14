@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2023/02/01 03:15:00 khorben Exp $
+# $NetBSD: Makefile,v 1.61 2023/08/14 05:24:32 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.10
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

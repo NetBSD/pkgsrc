@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/06/06 12:40:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/14 05:24:03 wiz Exp $
 
 DISTNAME=	redo-0.42d
 PKGNAME=	apenwarr-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apenwarr/}
 GITHUB_PROJECT=	redo

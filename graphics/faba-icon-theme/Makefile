@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/10/20 15:25:18 nia Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:24:31 wiz Exp $
 
 DISTNAME=	faba-icon-theme-4.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=snwh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
