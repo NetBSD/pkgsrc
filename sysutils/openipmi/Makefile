@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/07/06 09:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/14 05:25:17 wiz Exp $
 
 DISTNAME=	OpenIPMI-2.0.32
 PKGNAME=	${DISTNAME:S/OpenIPMI/openipmi/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://sourceforge.net/projects/openipmi/files/OpenIPMI%202.0%20Library/
 

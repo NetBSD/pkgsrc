@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2022/06/28 11:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2023/08/14 05:24:50 wiz Exp $
 
 DISTNAME=		maxima-5.44.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/04/25 21:42:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:25:10 wiz Exp $
 
 BUILDLINK_TREE+=	mbedtls3
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mbedtls3
 MBEDTLS3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mbedtls3+=	mbedtls3>=3.4.0
+BUILDLINK_ABI_DEPENDS.mbedtls3?=		mbedtls3>=3.4.0nb1
 BUILDLINK_PKGSRCDIR.mbedtls3?=		../../security/mbedtls3
 
 .endif	# MBEDTLS3_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/07/30 09:58:02 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/08/14 05:25:00 wiz Exp $
 
 BUILDLINK_TREE+=	grpc
 
@@ -8,7 +8,7 @@ GRPC_BUILDLINK3_MK:=
 USE_CXX_FEATURES+=	c++14
 
 BUILDLINK_API_DEPENDS.grpc+=	grpc>=1.11.0
-BUILDLINK_ABI_DEPENDS.grpc+=	grpc>=1.54.2nb1
+BUILDLINK_ABI_DEPENDS.grpc+=	grpc>=1.54.3nb1
 BUILDLINK_PKGSRCDIR.grpc?=	../../net/grpc
 
 BUILDLINK_FILES.grpc+=	bin/grpc_cpp_plugin

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/06/30 11:18:30 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/08/14 05:24:39 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	https://github.com/ibus/ibus-anthy/releases/download/${PKGVERSION_NOREV}/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/06/27 10:42:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/14 05:25:36 wiz Exp $
 
 DISTNAME=	xcb-util-errors-1.0.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.xz

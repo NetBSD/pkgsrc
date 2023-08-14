@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/12/14 00:27:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:24:12 wiz Exp $
 
 BUILDLINK_TREE+=	libuuid
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libuuid
 LIBUUID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libuuid+=	libuuid>=2.18
+BUILDLINK_ABI_DEPENDS.libuuid?=	libuuid>=2.32.1nb2
 BUILDLINK_PKGSRCDIR.libuuid?=	../../devel/libuuid
 .endif	# LIBUUID_BUILDLINK3_MK
 

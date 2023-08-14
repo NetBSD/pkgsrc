@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/06/30 11:18:36 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/14 05:24:50 wiz Exp $
 
 DISTNAME=	units-2.01
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=units/}
 

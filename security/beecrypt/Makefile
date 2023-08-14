@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2017/08/16 20:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/14 05:25:08 wiz Exp $
 
 DISTNAME=	beecrypt-4.1.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beecrypt/}
 

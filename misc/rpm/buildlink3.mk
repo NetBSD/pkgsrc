@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2022/06/28 11:34:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/08/14 05:24:54 wiz Exp $
 
 BUILDLINK_TREE+=	rpm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rpm
 RPM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rpm+=	rpm>=2.5.4nb4
-BUILDLINK_ABI_DEPENDS.rpm+=	rpm>=4.13.0.1nb10
+BUILDLINK_ABI_DEPENDS.rpm+=	rpm>=4.13.0.1nb11
 BUILDLINK_PKGSRCDIR.rpm?=	../../misc/rpm
 BUILDLINK_DEPMETHOD.rpm?=	build
 

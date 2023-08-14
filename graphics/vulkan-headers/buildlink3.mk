@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/01/29 22:07:27 triaxx Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:38 wiz Exp $
 
 BUILDLINK_TREE+=	vulkan-headers
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	vulkan-headers
 VULKAN_HEADERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vulkan-headers+=	vulkan-headers>=1.1.126.0
+BUILDLINK_ABI_DEPENDS.vulkan-headers?=	vulkan-headers>=1.3.224nb1
 BUILDLINK_PKGSRCDIR.vulkan-headers?=	../../graphics/vulkan-headers
 
 .include "../../x11/libXrandr/buildlink3.mk"

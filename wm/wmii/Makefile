@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2023/06/26 08:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2023/08/14 05:25:27 wiz Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		wm
 MASTER_SITES=		http://dl.suckless.org/wmii/
 EXTRACT_SUFX=		.tbz

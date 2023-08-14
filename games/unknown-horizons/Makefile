@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/04/17 19:41:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/08/14 05:24:28 wiz Exp $
 
 DISTNAME=	unknown-horizons-2019.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unknown-horizons/}
 

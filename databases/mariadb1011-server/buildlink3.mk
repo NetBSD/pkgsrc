@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/07/10 22:55:50 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:23:59 wiz Exp $
 
 BUILDLINK_TREE+=	mysql-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mysql-server
 MYSQL_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mysql-server+=	mariadb-server>=10.11.0<10.12.0
-BUILDLINK_ABI_DEPENDS.mysql-server+=	mariadb-server>=10.11.0
+BUILDLINK_ABI_DEPENDS.mysql-server+=	mariadb-server>=10.11.4nb1
 BUILDLINK_PKGSRCDIR.mysql-server?=	../../databases/mariadb1011-server
 BUILDLINK_LIBDIRS.mysql-server+=	lib
 

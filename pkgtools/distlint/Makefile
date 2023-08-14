@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/09/04 21:38:47 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:05 wiz Exp $
 
 PKGNAME=	distlint-22.09.04
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

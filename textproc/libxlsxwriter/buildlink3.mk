@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2021/11/19 22:13:32 sjmulder Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/08/14 05:25:23 wiz Exp $
 
 BUILDLINK_TREE+=	libxlsxwriter
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libxlsxwriter
 LIBXLSXWRITER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxlsxwriter+=	libxlsxwriter>=1.1.4
+BUILDLINK_ABI_DEPENDS.libxlsxwriter?=	libxlsxwriter>=1.1.5nb1
 BUILDLINK_PKGSRCDIR.libxlsxwriter?=	../../textproc/libxlsxwriter
 
 .include "../../archivers/minizip/buildlink3.mk"

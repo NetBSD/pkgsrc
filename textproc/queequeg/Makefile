@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/06/06 12:42:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/14 05:25:24 wiz Exp $
 
 DISTNAME=	queequeg-0.91
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=queequeg/}
 

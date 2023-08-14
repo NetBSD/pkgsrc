@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/08/01 23:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/14 05:23:51 wiz Exp $
 
 DISTNAME=	chip-seq-1.1
+PKGREVISION=	1
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 

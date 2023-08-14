@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/07/25 00:26:30 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:09 wiz Exp $
 
 BUILDLINK_TREE+=	hyperscan
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	hyperscan
 HYPERSCAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hyperscan+=	hyperscan>=5.0.0
+BUILDLINK_ABI_DEPENDS.hyperscan?=		hyperscan>=5.0.0nb7
 BUILDLINK_PKGSRCDIR.hyperscan?=		../../devel/hyperscan
 
 .endif	# HYPERSCAN_BUILDLINK3_MK

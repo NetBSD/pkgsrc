@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/07/18 18:19:23 nia Exp $
+# $NetBSD: Makefile,v 1.19 2023/08/14 05:24:33 wiz Exp $
 
 DISTNAME=	graphite2-1.3.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 EXTRACT_SUFX=	.tgz

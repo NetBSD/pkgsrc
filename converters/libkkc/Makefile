@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2023/06/06 12:40:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/14 05:23:57 wiz Exp $
 
 GITHUB_PROJECT=	libkkc
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 DISTNAME=	libkkc-0.3.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters textproc japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ueno/}
 

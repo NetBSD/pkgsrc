@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2023/08/01 23:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/08/14 05:25:07 wiz Exp $
 
 DISTNAME=	psutils-3.0.3
+PKGREVISION=	1
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

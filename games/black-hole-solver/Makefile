@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:25 wiz Exp $
 
 DISTNAME=	black-hole-solver-1.10.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://fc-solve.shlomifish.org/downloads/fc-solve/
 EXTRACT_SUFX=	.tar.xz

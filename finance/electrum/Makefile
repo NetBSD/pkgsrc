@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2022/12/02 23:11:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/14 05:24:23 wiz Exp $
 
 VERSION=	4.1.5
 DISTNAME=	Electrum-${VERSION}
 PKGNAME=	electrum-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	finance
 MASTER_SITES=	https://download.electrum.org/${VERSION}/
 

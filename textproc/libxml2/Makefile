@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.170 2023/04/19 08:08:46 adam Exp $
+# $NetBSD: Makefile,v 1.171 2023/08/14 05:25:23 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../textproc/libxml2/Makefile.common"
 
 COMMENT=	XML parser library from the GNOME project

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2023/04/19 08:08:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2023/08/14 05:25:24 wiz Exp $
 
 BUILDLINK_TREE+=	libxslt
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxslt
 LIBXSLT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.8
-BUILDLINK_ABI_DEPENDS.libxslt+=	libxslt>=1.1.37nb2
+BUILDLINK_ABI_DEPENDS.libxslt+=	libxslt>=1.1.38nb1
 BUILDLINK_PKGSRCDIR.libxslt?=	../../textproc/libxslt
 
 .include "../../security/libgcrypt/buildlink3.mk"

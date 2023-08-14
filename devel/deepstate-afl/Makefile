@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/11/14 14:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:06 wiz Exp $
 
 PKGNAME=	deepstate-afl-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes

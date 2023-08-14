@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/04/19 08:08:46 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/08/14 05:25:23 wiz Exp $
 
 BUILDLINK_TREE+=	libxmlpp5.0
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxmlpp5.0
 LIBXMLPP5.0_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxmlpp5.0+=	libxml++>=5.0.1
-BUILDLINK_ABI_DEPENDS.libxmlpp5.0?=	libxml++5.0>=5.0.1nb5
+BUILDLINK_ABI_DEPENDS.libxmlpp5.0?=	libxml++5.0>=5.0.1nb6
 BUILDLINK_PKGSRCDIR.libxmlpp5.0?=	../../textproc/libxml++5.0
 
 .include "../../devel/glibmm2.68/buildlink3.mk"

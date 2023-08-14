@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/06/10 06:00:53 markd Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/14 05:25:29 wiz Exp $
 
 DISTNAME=	mailman-web-0.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman-web/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2023/06/26 19:46:40 adam Exp $
+# $NetBSD: Makefile,v 1.87 2023/08/14 05:24:09 wiz Exp $
 
 DISTNAME=	gobject-introspection-1.76.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2023/04/19 08:10:32 adam Exp $
+# $NetBSD: Makefile,v 1.55 2023/08/14 05:24:40 wiz Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.5.0
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 

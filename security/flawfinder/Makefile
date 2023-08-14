@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/02/06 11:23:50 nros Exp $
+# $NetBSD: Makefile,v 1.31 2023/08/14 05:25:09 wiz Exp $
 
 DISTNAME=	flawfinder-2.0.19
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.dwheeler.com/flawfinder/
 

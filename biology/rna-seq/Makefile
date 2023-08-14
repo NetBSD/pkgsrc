@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/07/31 14:38:36 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/14 05:23:52 wiz Exp $
 #
 
 DISTNAME=	rna-seq-1.2.2
+PKGREVISION=	1
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 

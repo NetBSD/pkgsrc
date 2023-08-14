@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/05/07 08:33:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:24:30 wiz Exp $
 
 BUILDLINK_TREE+=	babl
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	babl
 BABL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.10
+BUILDLINK_ABI_DEPENDS.babl?=	babl>=0.1.106nb1
 BUILDLINK_PKGSRCDIR.babl?=	../../graphics/babl
 
 .include "../../mk/dlopen.buildlink3.mk"

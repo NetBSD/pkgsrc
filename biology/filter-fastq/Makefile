@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/06/30 11:18:04 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:23:51 wiz Exp $
 
 PKGNAME=	filter-fastq-0.0.0.20210527
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_PROJECT=	filter-fastq
 GITHUB_TAG=	d2c9218
 DISTNAME=	filter-fastq

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/14 05:24:04 wiz Exp $
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
@@ -6,6 +6,7 @@ BOOST_CONFIG=		no
 
 USE_TOOLS+=	pax
 
+PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 SUBST_CLASSES+=		confdir

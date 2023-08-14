@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/03/30 09:20:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:55 wiz Exp $
 
 BUILDLINK_TREE+=	dav1d
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dav1d
 DAV1D_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dav1d+=	dav1d>=0.8.1
-BUILDLINK_ABI_DEPENDS.dav1d?=	dav1d>=1.0.0
+BUILDLINK_ABI_DEPENDS.dav1d?=	dav1d>=1.2.1nb1
 BUILDLINK_PKGSRCDIR.dav1d?=	../../multimedia/dav1d
 .endif	# DAV1D_BUILDLINK3_MK
 

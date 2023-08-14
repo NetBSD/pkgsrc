@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/06/30 11:18:22 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:20 wiz Exp $
 
 DISTNAME=	gns3-gui-2.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gns3-gui/}
 

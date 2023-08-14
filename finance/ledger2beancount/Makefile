@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/01/23 01:50:59 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/14 05:24:23 wiz Exp $
 
 DISTNAME=	ledger2beancount-2.7
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=beancount/}
 GITHUB_PROJECT=	ledger2beancount

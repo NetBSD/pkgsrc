@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2014/02/03 16:17:12 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:25:34 wiz Exp $
 
 BUILDLINK_TREE+=	libxkbcommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libxkbcommon
 LIBXKBCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libxkbcommon+=	libxkbcommon>=0.4.0
-BUILDLINK_ABI_DEPENDS.libxkbcommon?=	libxkbcommon>=0.4.0nb1
+BUILDLINK_ABI_DEPENDS.libxkbcommon?=	libxkbcommon>=1.5.0nb2
 BUILDLINK_PKGSRCDIR.libxkbcommon?=	../../x11/libxkbcommon
 .endif	# LIBXKBCOMMON_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/06/27 10:33:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.47 2023/08/14 05:24:44 wiz Exp $
 
 DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project

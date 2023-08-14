@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/06/20 10:43:43 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:38 wiz Exp $
 
 BUILDLINK_TREE+=	zbar
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	zbar
 ZBAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.zbar+=	zbar>=0.23
+BUILDLINK_ABI_DEPENDS.zbar?=	zbar>=0.23.90nb19
 BUILDLINK_PKGSRCDIR.zbar?=	../../graphics/zbar
 
 pkgbase:=	zbar

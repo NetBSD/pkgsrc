@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2023/08/02 19:30:57 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/14 05:24:46 wiz Exp $
 #
 
 DISTNAME=	js185-1.0.0
 PKGNAME=	spidermonkey185-1.8.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
 

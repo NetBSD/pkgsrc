@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/12/16 21:08:08 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/08/14 05:24:55 wiz Exp $
 
 BUILDLINK_TREE+=	gst-plugins1-editing-services
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins1-editing-services
 GST_PLUGINS1_EDITING_SERVICES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins1-editing-services+=	gst-plugins1-editing-services>=1.16.0
-BUILDLINK_ABI_DEPENDS.gst-plugins1-editing-services+=	gst-plugins1-editing-services>=1.18.5
+BUILDLINK_ABI_DEPENDS.gst-plugins1-editing-services+=	gst-plugins1-editing-services>=1.22.4nb2
 BUILDLINK_PKGSRCDIR.gst-plugins1-editing-services?=	../../multimedia/gst-plugins1-editing-services
 
 .include "../../multimedia/gstreamer1/buildlink3.mk"

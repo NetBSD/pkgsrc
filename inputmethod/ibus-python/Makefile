@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/08/06 07:41:33 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/14 05:24:40 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../inputmethod/ibus/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ibus/ibus-python/}

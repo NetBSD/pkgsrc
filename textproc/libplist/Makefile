@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/04/19 08:08:46 adam Exp $
+# $NetBSD: Makefile,v 1.37 2023/08/14 05:25:23 wiz Exp $
 
 DISTNAME=	libplist-2.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

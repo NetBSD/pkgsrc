@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2023/06/07 11:27:30 micha Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/14 05:24:29 wiz Exp $
 
 DISTNAME=	geoclue-2.5.7
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography
 MASTER_SITES=	https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/${PKGVERSION_NOREV}/
 

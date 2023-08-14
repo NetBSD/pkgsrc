@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/04/12 13:11:45 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/14 05:24:56 wiz Exp $
 
 DISTNAME=	libvdpau-1.4
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

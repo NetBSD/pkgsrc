@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2023/07/24 18:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/08/14 05:24:16 wiz Exp $
 
 DISTNAME=	scons-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 

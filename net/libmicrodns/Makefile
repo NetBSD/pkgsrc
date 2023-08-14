@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/08/05 07:29:38 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/14 05:25:01 wiz Exp $
 
 DISTNAME=	microdns-0.2.0
 PKGNAME=	${DISTNAME:S/microdns/libmicrodns/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=videolabs/}
 EXTRACT_SUFX=	.tar.xz

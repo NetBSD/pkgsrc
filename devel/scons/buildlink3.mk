@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/07/24 18:47:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/08/14 05:24:16 wiz Exp $
 
 # Note that while scons is a build tool, it requires running a python
 # program on the host that uses the scons library.  Currently, the
@@ -23,6 +23,7 @@ SCONS_BUILDLINK3_MK:=
 
 BUILDLINK_DEPMETHOD.scons?=	build
 BUILDLINK_API_DEPENDS.scons+=	${PYPKGPREFIX}-scons>=3.0.2<4
+BUILDLINK_ABI_DEPENDS.scons?=	${PYPKGPREFIX}-scons>=3.1.2nb7
 BUILDLINK_PKGSRCDIR.scons?=	../../devel/scons
 .endif	# SCONS_BUILDLINK3_MK
 

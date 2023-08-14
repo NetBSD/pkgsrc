@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2023/06/06 12:42:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.66 2023/08/14 05:25:22 wiz Exp $
 
 DISTNAME=	iso-codes-v4.11.0
 PKGNAME=	${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2

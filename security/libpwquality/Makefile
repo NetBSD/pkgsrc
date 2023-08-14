@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/05/14 11:54:10 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:10 wiz Exp $
 
 DISTNAME=	libpwquality-1.4.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libpwquality/}
 GITHUB_RELEASE=	${DISTNAME}

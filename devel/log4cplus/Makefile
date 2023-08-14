@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/08/09 12:08:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:12 wiz Exp $
 #
 
 DISTNAME=	log4cplus-2.0.3
+PKGREVISION=	1
 CATEGORIES=	devel
 GITHUB_RELEASE=	REL_2_0_3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=log4cplus/}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 15:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:24 wiz Exp $
 
 DISTNAME=	pl196x
 PKGNAME=	nltk_data-pl196x-20211124
+PKGREVISION=	1
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2022/10/27 12:52:36 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2023/08/14 05:25:18 wiz Exp $
 
 # Current stable is 2.0.5 (which supports python3)
 DISTNAME=	rdiff-backup-1.2.8
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	sysutils net
 # Now https://github.com/rdiff-backup/rdiff-backup
 MASTER_SITES=	http://savannah.nongnu.org/download/rdiff-backup/

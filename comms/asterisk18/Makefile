@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2023/04/19 08:09:21 adam Exp $
+# $NetBSD: Makefile,v 1.149 2023/08/14 05:23:57 wiz Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -7,7 +7,7 @@
 
 DISTNAME=	asterisk-18.9.0
 #PKGREVISION=	24
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
