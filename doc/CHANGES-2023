@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4920 2023/08/13 21:19:12 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.4921 2023/08/14 05:12:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7099,3 +7099,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/matugen to 0.9.0nb1 [pin 2023-08-13]
 	Updated misc/less to 643 [leot 2023-08-13]
 	Updated pkgtools/url2pkg to 23.2.0 [rillig 2023-08-13]
+	Updated pkgtools/revbump to 3.5 [wiz 2023-08-14]
