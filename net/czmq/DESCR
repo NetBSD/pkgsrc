@@ -1,0 +1,4 @@
+High-level C binding for ZeroMQ. czmq is trying to create shorter and
+more readable applications by wrapping the ZeroMQ core API in better
+semantics. It also tries to hide the differences between versions of
+ZeroMQ as far as possible.
