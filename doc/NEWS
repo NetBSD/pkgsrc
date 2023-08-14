@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.28 2023/07/18 12:49:46 nia Exp $
+# $NetBSD: NEWS,v 1.29 2023/08/14 05:28:23 wiz Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,10 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Default versions bumped [wiz 2023-08-14]
+
+	PYTHON_VERSION_DEFAULT is now 311.
 
 Support for USE_CC_FEATURES and USE_CXX_FEAUTRES [nia 2023-07-18]
 
