@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/06/05 02:43:33 mef Exp $
+# $NetBSD: Makefile,v 1.35 2023/08/14 18:32:03 nia Exp $
 
 DISTNAME=	emacs-packages-0.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,7 +33,9 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib-[0-9]*:../../devel/elib
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elscreen-[0-9]*:../../misc/elscreen
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-dict-client-[0-9]*:../../textproc/emacs-dict-client
+.if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-ilisp-[0-9]*:../../devel/emacs-ilisp
+.endif
 .if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m-[0-9]*:../../www/emacs-w3m
 .else
@@ -73,7 +75,9 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}skk-[0-9]*:../../inputmethod/skk
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}sml-mode-[0-9]*:../../devel/sml-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar-[0-9]*:../../editors/speedbar
+.if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tamago-[0-9]*:../../editors/tamago
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}tc-[0-9]*:../../inputmethod/tc
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode-[0-9]*:../../cad/verilog-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
