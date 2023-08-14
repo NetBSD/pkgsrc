@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/08/13 10:38:02 nros Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/14 07:25:10 nros Exp $
 
-DISTNAME=	qore-ssh2-module-1.4.1
-PKGREVISION=	4
+DISTNAME=	qore-ssh2-module-1.4.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,13 +12,11 @@ COMMENT=	SSH2 module for Qore
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++11
-USE_TOOLS+=	gmake pax
+USE_TOOLS+=	gmake pax pkg-config
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=	--with-libsuffix=""
+CMAKE_USE_GNU_INSTALL_DIRS=	no
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
@@ -29,13 +26,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.MIT \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	cd ${WRKSRC}/docs/ssh2 && ${PAX} -wr * \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.include "options.mk"
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../lang/qore/buildlink3.mk"
