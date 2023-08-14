@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:25:28 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/14 07:40:41 wiz Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www python
 MASTER_SITES=	http://dist.modpython.org/dist/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +11,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.modpython.org/
 COMMENT=	Apache module that embeds the Python interpreter
 LICENSE=	apache-2.0
+
+# HACK: This is not needed, but if it's installed, the PLIST differs
+# so just depend on it to make it consistently install the same files.
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 MAKE_JOBS_SAFE=		no
 
