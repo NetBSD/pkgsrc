@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2023/08/14 07:38:37 nros Exp $
+
+* Fix compatibility problems
+
+--- configure.orig	2023-08-13 19:55:20.890973372 +0000
++++ configure
+@@ -13094,7 +13094,7 @@ if test "${with_gcov+set}" = set; then :
+ fi
+ 
+ 
+-if test "x${CZMQ_GCOV}" == "xyes"; then
++if test "x${CZMQ_GCOV}" = "xyes"; then
+     CFLAGS="-O0 -g -fprofile-arcs -ftest-coverage"
+ 
+     if test "x${CZMQ_ORIG_CFLAGS}" != "xnone"; then
+@@ -13132,7 +13132,7 @@ if test "${enable_address_sanitizer+set}
+ fi
+ 
+ 
+-if test "x${CZMQ_ASAN}" == "xyes"; then
++if test "x${CZMQ_ASAN}" = "xyes"; then
+     CFLAGS="${CFLAGS} -fsanitize=address"
+     CXXFLAGS="${CXXFLAGS} -fsanitize=address"
+ 
+@@ -13171,7 +13171,7 @@ else
+ fi
+ 
+ 
+-if test "x$ZPROJECT_BINDINGS_PYTHON" == "xyes"; then
++if test "x$ZPROJECT_BINDINGS_PYTHON" = "xyes"; then
+      if true; then
+   ENABLE_BINDINGS_PYTHON_TRUE=
+   ENABLE_BINDINGS_PYTHON_FALSE='#'

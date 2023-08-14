@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1530 2023/08/06 01:32:39 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1531 2023/08/14 07:38:36 nros Exp $
 #
 
 COMMENT=	Networking tools
@@ -87,6 +87,7 @@ SUBDIR+=	cppzmq
 SUBDIR+=	croc
 SUBDIR+=	csup
 SUBDIR+=	czds
+SUBDIR+=	czmq
 SUBDIR+=	dante
 SUBDIR+=	daq
 SUBDIR+=	darkstat
