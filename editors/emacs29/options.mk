@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/08/12 03:20:58 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2023/08/14 05:13:31 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -53,6 +53,9 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc13-libjit}/gcc13/lib
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
         ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
 .  include "../../lang/gcc13-libjit/buildlink3.mk"
+PLIST.native=		yes
+.else
+PLIST.nonative=		yes
 .endif
 
 ###
