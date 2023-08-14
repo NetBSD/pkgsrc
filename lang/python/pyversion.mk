@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.154 2023/07/30 14:43:25 adam Exp $
+# $NetBSD: pyversion.mk,v 1.155 2023/08/14 05:23:09 wiz Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -12,7 +12,7 @@
 #	The preferred Python version to use.
 #
 #	Possible values: 27 38 39 310 311
-#	Default: 310
+#	Default: 311
 #
 # === Infrastructure variables ===
 #
@@ -61,19 +61,19 @@
 #	Version of python that will be used in this build, as
 #	a three-digit number of major_version * 100 + minor_version.
 #
-#	Examples: 207, 309, 310
+#	Examples: 207, 309, 310, 311
 #
 # PYPKGPREFIX
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py310
+#	Example: py311
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 3.10
+#	Example: 3.11
 #
 # Keywords: python
 #
@@ -102,7 +102,7 @@ PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
-PYTHON_VERSION_DEFAULT?=		310
+PYTHON_VERSION_DEFAULT?=		311
 PYTHON_VERSIONS_ACCEPTED?=		311 310 39 38 27
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
