@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/22 21:34:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/14 19:03:44 nia Exp $
 
-DISTNAME=	aspell-languages-20220122
+DISTNAME=	aspell-languages-20230814
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,6 +9,15 @@ MAINTAINER=	bsiegert@NetBSD.org
 COMMENT=	Meta package for aspell language packs
 
 META_PACKAGE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+.if ${PKG_FORMAT} != "pkg" || ${OPSYS} != "Linux"
+# Non-ASCII PLISTs and thus problem with libarchive on glibc systems.
+DEPENDS+=	aspell-csb-[0-9]*:../../textproc/aspell-csb
+DEPENDS+=	aspell-fo-[0-9]*:../../textproc/aspell-fo
+DEPENDS+=	aspell-is-[0-9]*:../../textproc/aspell-is
+DEPENDS+=	aspell-nb-[0-9]*:../../textproc/aspell-nb
+.endif
 
 DEPENDS+=	aspell-af-[0-9]*:../../textproc/aspell-af
 DEPENDS+=	aspell-am-[0-9]*:../../textproc/aspell-am
@@ -21,7 +30,6 @@ DEPENDS+=	aspell-bn-[0-9]*:../../textproc/aspell-bn
 DEPENDS+=	aspell-br-[0-9]*:../../textproc/aspell-br
 DEPENDS+=	aspell-ca-[0-9]*:../../textproc/aspell-ca
 DEPENDS+=	aspell-cs-[0-9]*:../../textproc/aspell-cs
-DEPENDS+=	aspell-csb-[0-9]*:../../textproc/aspell-csb
 DEPENDS+=	aspell-cy-[0-9]*:../../textproc/aspell-cy
 DEPENDS+=	aspell-da-[0-9]*:../../textproc/aspell-da
 DEPENDS+=	aspell-de-[0-9]*:../../textproc/aspell-de
@@ -33,7 +41,6 @@ DEPENDS+=	aspell-es-[0-9]*:../../textproc/aspell-es
 DEPENDS+=	aspell-et-[0-9]*:../../textproc/aspell-et
 DEPENDS+=	aspell-fa-[0-9]*:../../textproc/aspell-fa
 DEPENDS+=	aspell-fi-[0-9]*:../../textproc/aspell-fi
-DEPENDS+=	aspell-fo-[0-9]*:../../textproc/aspell-fo
 DEPENDS+=	aspell-fr-[0-9]*:../../textproc/aspell-fr
 DEPENDS+=	aspell-fy-[0-9]*:../../textproc/aspell-fy
 DEPENDS+=	aspell-ga-[0-9]*:../../textproc/aspell-ga
@@ -52,7 +59,6 @@ DEPENDS+=	aspell-hus-[0-9]*:../../textproc/aspell-hus
 DEPENDS+=	aspell-hy-[0-9]*:../../textproc/aspell-hy
 DEPENDS+=	aspell-ia-[0-9]*:../../textproc/aspell-ia
 DEPENDS+=	aspell-id-[0-9]*:../../textproc/aspell-id
-DEPENDS+=	aspell-is-[0-9]*:../../textproc/aspell-is
 DEPENDS+=	aspell-it-[0-9]*:../../textproc/aspell-it
 DEPENDS+=	aspell-kn-[0-9]*:../../textproc/aspell-kn
 DEPENDS+=	aspell-ku-[0-9]*:../../textproc/aspell-ku
@@ -68,7 +74,6 @@ DEPENDS+=	aspell-mn-[0-9]*:../../textproc/aspell-mn
 #DEPENDS+=	aspell-mr-[0-9]*:../../textproc/aspell-mr
 DEPENDS+=	aspell-ms-[0-9]*:../../textproc/aspell-ms
 DEPENDS+=	aspell-mt-[0-9]*:../../textproc/aspell-mt
-DEPENDS+=	aspell-nb-[0-9]*:../../textproc/aspell-nb
 DEPENDS+=	aspell-nds-[0-9]*:../../textproc/aspell-nds
 DEPENDS+=	aspell-nl-[0-9]*:../../textproc/aspell-nl
 DEPENDS+=	aspell-nn-[0-9]*:../../textproc/aspell-nn
