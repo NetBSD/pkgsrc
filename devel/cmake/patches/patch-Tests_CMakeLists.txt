@@ -1,0 +1,23 @@
+$NetBSD: patch-Tests_CMakeLists.txt,v 1.1 2023/08/15 20:40:44 tnn Exp $
+
+Don't build Qt test suite. Picks up qt6-qtbase if installed.
+
+--- Tests/CMakeLists.txt.orig	2023-08-10 15:30:44.000000000 +0000
++++ Tests/CMakeLists.txt
+@@ -263,14 +263,14 @@ if(BUILD_TESTING)
+   # Add tests below here.
+ 
+   if(NOT DEFINED CMake_TEST_Qt6)
+-    set(CMake_TEST_Qt6 1)
++    set(CMake_TEST_Qt6 0)
+   endif()
+   if(CMake_TEST_Qt6)
+     find_package(Qt6 COMPONENTS Core Widgets QUIET NO_MODULE)
+   endif()
+ 
+   if(NOT DEFINED CMake_TEST_Qt5)
+-    set(CMake_TEST_Qt5 1)
++    set(CMake_TEST_Qt5 0)
+   endif()
+   if(CMake_TEST_Qt5)
+     find_package(Qt5Widgets QUIET NO_MODULE)
