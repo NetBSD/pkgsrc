@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/08/14 05:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/15 13:49:17 tnn Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -93,9 +93,10 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
+EXTRACT_ONLY+=	${ISL14}.tar.bz2
+
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL14}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL14} ${WRKSRC}/isl
+	${MV} ${WRKDIR}/${ISL14} ${WRKSRC}/isl
 .endif
 
 ## For target librarys and libjava programs.
