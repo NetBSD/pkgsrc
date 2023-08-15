@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4927 2023/08/15 05:45:16 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4928 2023/08/15 05:50:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7107,3 +7107,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/R-processx to 3.8.2 [mef 2023-08-15]
 	Added print/p5-TeXLive-TLConfig version 0.66420 [mef 2023-08-15]
 	Added print/p5-TeXLive-TLUtils version 0.66420 [mef 2023-08-15]
+	Updated devel/R-testthat to 3.1.10 [mef 2023-08-15]
