@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.31 2022/05/14 21:57:01 dholland Exp $
+# $NetBSD: modules.mk,v 1.32 2023/08/15 10:58:20 tnn Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -42,7 +42,7 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs28, emacs28nox,
+#			emacs29, emacs29nox, emacs28, emacs28nox,
 #			emacs27, emacs27nox, emacs26, emacs26nox,
 #			emacs25, emacs25nox, emacs21, emacs21nox,
 #			emacs20, xemacs215, xemacs215nox,
@@ -65,7 +65,7 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs28, emacs28nox,
+#			emacs29, emacs29nox, emacs28, emacs28nox,
 #			emacs27, emacs27nox, emacs26, emacs26nox,
 #			emacs25, emacs25nox, emacs21, emacs21nox,
 #			emacs20, xemacs215, xemacs215nox,
@@ -184,10 +184,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs28,emacs28nox,emacs27,emacs27nox,emacs26,eemacs26nox,macs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,eemacs26nox,macs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
@@ -235,8 +235,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs25 emacs25nox emacs26 emacs26nox \
-	emacs27 emacs27nox \
-	emacs28 emacs28nox \
+	emacs27 emacs27nox emacs28 emacs28nox emacs29 emacs29nox  \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -251,6 +250,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs27nox@../../editors/emacs27-nox11 \
 	emacs28@../../editors/emacs28 \
 	emacs28nox@../../editors/emacs28-nox11 \
+	emacs29@../../editors/emacs29 \
+	emacs29nox@../../editors/emacs29-nox11 \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
