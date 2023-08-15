@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.79 2023/08/11 09:31:32 nia Exp $
+$NetBSD: distinfo,v 1.80 2023/08/15 19:17:10 leot Exp $
 
-BLAKE2s (mpv-0.35.1.tar.gz) = 9b4b4d1688fa472980417077495470b1d72f135504e341190d847252de87468e
-SHA512 (mpv-0.35.1.tar.gz) = 42f3564a9ed4d972d14b2c697b0163f06a8bb68a0606a86c34935181247c783e3cb62286b445799998def0919fb13fce8b8f6453f82652d5bfaea5929119127a
-Size (mpv-0.35.1.tar.gz) = 3367913 bytes
+BLAKE2s (mpv-0.36.0.tar.gz) = 8d0935c3b9daf9e8fe88e1413407e7194f34d688ffb00d46ab0dc68e750e5ade
+SHA512 (mpv-0.36.0.tar.gz) = 51f455a425ea5aac47acb3582d0f958a34248a2290a8d6887d22bcb9385fe8d1ab5d7f09d5408cfecfb73c1ec85d1b8ec8958e45a4941d3f711a2e580187472f
+Size (mpv-0.36.0.tar.gz) = 3409178 bytes
 SHA1 (patch-audio_out_ao__alsa.c) = c4661d0d22550d6e4eb2b7a42dd04dbcc58123b0
 SHA1 (patch-etc_mpv.conf) = 9e41b2f4bf59c3bfc5ad84af05538661981ed111
-SHA1 (patch-player-lua-ytdl__hook.lua) = ea5ad528f7d779c7e5fc7c672c74cc2a3e39f221
+SHA1 (patch-meson.build) = 1f534e05b5d87958a03be35027e7d4e03f772dcb
+SHA1 (patch-osdep_threads.c) = ac9d45ae77893104eb4185f8b399fcc90960cf77
 SHA1 (patch-stream_stream__libarchive.c) = 2025f994b7f82cc868608ab7e8df0ae89b549922
 SHA1 (patch-video_out_drm__common.c) = 70eb8884f63e9456c0ffe592289cfd81e208955b
-SHA1 (patch-wscript) = 16cd1c2ecd6b860d4dc0d826742d31952811c3f7
-SHA1 (patch-wscript__build.py) = afd5e66032e5ec50c7f12988480340eca0b82bf9

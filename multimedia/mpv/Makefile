@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.158 2023/08/14 05:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2023/08/15 19:17:10 leot Exp $
 
-DISTNAME=	mpv-0.35.1
-PKGREVISION=	6
+DISTNAME=	mpv-0.36.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,21 +16,14 @@ NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 # Requires support for c11 atomics.
 USE_CC_FEATURES+=	c11
 
+# Needed for rst2man
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
-# ${WRKSRC}/bootstrap.py mentions needed version
-TOOL_DEPENDS+=	waf>=2.0.9:../../devel/waf
 
-WAF_REPLACE_EXECUTABLE=	yes
-WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
-WAF_CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-WAF_CONFIGURE_ARGS+=	--enable-dvdnav
-WAF_CONFIGURE_ARGS+=	--enable-libmpv-shared
+MESON_ARGS+=	-Ddvdnav=enabled
+MESON_ARGS+=	-Dlibmpv=true
 
 # Support Wayland via SDL2, wayland support in mpv is too fast-moving.
-WAF_CONFIGURE_ARGS+=	--disable-wayland
-
-PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+MESON_ARGS+=	-Dwayland=disabled
 
 USE_TOOLS+=	perl pkg-config
 
@@ -45,11 +37,11 @@ CONF_FILES+=		share/examples/mpv/mpv.conf \
 PKGCONFIG_OVERRIDE+=	libmpv/mpv.pc.in
 
 SUBST_CLASSES+=		python
-SUBST_SED.python+=	-e "s,python,python${PYVERSSUFFIX},"
-SUBST_SED.python+=	-e "s,rst2man,rst2man-${PYVERSSUFFIX},"
-SUBST_FILES.python+=	wscript wscript_build.py
+SUBST_SED.python+=	-e "s,python3,python${PYVERSSUFFIX},"
+SUBST_SED.python+=	-e "s,'rst2man','rst2man-${PYVERSSUFFIX}',"
+SUBST_FILES.python+=	meson.build
 SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fix Python command names.
+SUBST_MESSAGE.python=	Fix python and rst2man command names.
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-version-script rm:-Wl,mpv.def
 
@@ -80,12 +72,14 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/examples/mpv/mpv.conf
 
 .include "options.mk"
+
+.include "../../devel/meson/build.mk"
+
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
