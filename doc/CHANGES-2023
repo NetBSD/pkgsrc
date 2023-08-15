@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4930 2023/08/15 16:21:28 charlotte Exp $
+$NetBSD: CHANGES-2023,v 1.4931 2023/08/15 17:32:34 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7110,3 +7110,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/R-testthat to 3.1.10 [mef 2023-08-15]
 	Updated games/ironwail to 0.7.0 [charlotte 2023-08-15]
 	Updated lang/janet to 1.30.0 [charlotte 2023-08-15]
+	Updated devel/mold to 2.1.0 [fcambus 2023-08-15]
