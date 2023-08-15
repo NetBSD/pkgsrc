@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/06/18 14:17:58 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/15 01:21:16 mef Exp $
 
 R_PKGNAME=	pak
 R_PKGVER=	0.5.1
@@ -23,7 +23,7 @@ DEPENDS+=	R-rprojroot>=1.3.2:../../devel/R-rprojroot
 DEPENDS+=	R-pkgcache-[0-9]*:../../devel/R-pkgcache
 DEPENDS+=	R-prettyunits>=1.0.2:../../math/R-prettyunits
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
-DEPENDS+=	R-processx>=3.2.1:../../sysutils/R-processx
+DEPENDS+=	R-processx>=3.8.2:../../sysutils/R-processx
 DEPENDS+=	R-ps>=1.3.0:../../sysutils/R-ps
 DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-curl>=3.2:../../www/R-curl
