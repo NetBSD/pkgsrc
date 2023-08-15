@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/07/30 13:37:16 mef Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/15 05:50:27 mef Exp $
 
 R_PKGNAME=	testthat
-R_PKGVER=	3.1.9
+R_PKGVER=	3.1.10
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,6 +36,9 @@ TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
 TEST_DEPENDS+=	R-desc-[0-9]*:../../devel/R-desc
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
+TEST_DEPENDS+=	R-processx>=3.8.2:../../sysutils/R-processx
+TEST_DEPENDS+=	p5-TeXLive-TLUtils-[0-9]*:../../wip/p5-TeXLive-TLUtils
+TEST_DEPENDS+=	p5-TeXLive-TLConfig-[0-9]*:../../wip/p5-TeXLive-TLConfig
 
 USE_LANGUAGES=	c c++
 
