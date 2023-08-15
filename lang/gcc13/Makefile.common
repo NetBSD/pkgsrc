@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/06/03 13:22:43 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/08/15 13:49:17 tnn Exp $
 # used by lang/gcc13-libjit/Makefile
 
 GCC_PKGNAME=		gcc13
@@ -62,9 +62,10 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
+EXTRACT_ONLY+=	${ISL24}.tar.xz
+
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL24}.tar.xz -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL24} ${WRKSRC}/isl
+	${MV} ${WRKDIR}/${ISL24} ${WRKSRC}/isl
 .endif
 
 CONFIGURE_ARGS+=	--enable-long-long

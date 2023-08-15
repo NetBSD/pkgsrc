@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/06 12:41:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/15 13:49:17 tnn Exp $
 
 GCC_PKGNAME=		gcc10-aux
 PKGREVISION=		1
@@ -91,9 +91,10 @@ CXX=	${PREFIX}/gcc6-aux/bin/g++
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
+EXTRACT_ONLY+=	${ISL16}.tar.bz2
+
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
+	${MV} ${WRKDIR}/${ISL16} ${WRKSRC}/isl
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
