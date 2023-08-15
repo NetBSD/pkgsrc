@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/06/29 01:32:17 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2023/08/15 14:39:08 schmonz Exp $
 
 .include "dist.mk"
 
@@ -215,6 +215,9 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.if ${USE_BUILTIN.gettext:U:tl} == no
+CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
+.endif
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
