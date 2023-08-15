@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2023/08/14 07:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/15 18:33:13 gdt Exp $
 
+# Upstream has a policy against actually having releases, so one
+# cannot believe the tags section of their site, or repology.
+#   https://github.com/grisha/mod_python/issues/126
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
 PKGREVISION=	5
