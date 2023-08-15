@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/08/14 05:13:31 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2023/08/15 10:52:08 tnn Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -21,7 +21,11 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # imagemagick is disabled because of stability/security
 # svg is omitted because it is rarely needed and heavyweight due to the rust dependency
 # xaw3d is omitted because it is only valid with xaw
-PKG_SUGGESTED_OPTIONS=	dbus libgccjit gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
+
+.if empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+PKG_SUGGESTED_OPTIONS+=	libgccjit
+.endif
 
 .include "../../mk/bsd.options.mk"
 
