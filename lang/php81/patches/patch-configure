@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2021/11/27 07:24:43 taca Exp $
+$NetBSD: patch-configure,v 1.1.14.1 2023/08/15 18:42:53 bsiegert Exp $
 
 * Do not include "PKG_CONFIG*" in CONFIGURE_OPTIONS.
 * Don't automatically add libgcc on SunOS. Reported upstream as #75941.
 * Don't autodetect maintainer-zts.
 * The meta_ccld removal reported upstream as #75940.
 
---- configure.orig	2021-10-27 00:20:44.000000000 +0000
+--- configure.orig	2023-08-01 16:16:09.000000000 +0000
 +++ configure
-@@ -4319,6 +4319,10 @@ EOF
+@@ -4324,6 +4324,10 @@ EOF
     else
      break
     fi
@@ -15,10 +15,10 @@ $NetBSD: patch-configure,v 1.1 2021/11/27 07:24:43 taca Exp $
 +       \'PKG_CONFIG\=*)	CURRENT_ARG="'PKG_CONFIG=@TOOLS_PATH.pkg-config@'";;
 +       \'PKG_CONFIG_LIBDIR\=*)	CURRENT_ARG="'PKG_CONFIG_LIBDIR=@PHP_PKGCONFIG_PATH@'";;
 +   esac
-    $as_echo "$CURRENT_ARG \\" >>config.nice
+    printf "%s\n" "$CURRENT_ARG \\" >>config.nice
     CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS $CURRENT_ARG"
    done
-@@ -7540,30 +7544,6 @@ EOF
+@@ -7548,30 +7552,6 @@ EOF
      ;;
    esac
  
@@ -49,7 +49,7 @@ $NetBSD: patch-configure,v 1.1 2021/11/27 07:24:43 taca Exp $
    PHP_VAR_SUBST="$PHP_VAR_SUBST APXS"
  
  else
-@@ -79589,7 +79569,7 @@ printf "%s\n" "#define HAVE_TIDYBUFFIO_H
+@@ -80278,7 +80258,7 @@ printf "%s\n" "#define HAVE_TIDYBUFFIO_H
    fi
  
    TIDY_LIBDIR=$TIDY_DIR/$PHP_LIBDIR
