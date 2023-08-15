@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4931 2023/08/15 17:32:34 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.4932 2023/08/15 19:17:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7111,3 +7111,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/ironwail to 0.7.0 [charlotte 2023-08-15]
 	Updated lang/janet to 1.30.0 [charlotte 2023-08-15]
 	Updated devel/mold to 2.1.0 [fcambus 2023-08-15]
+	Updated multimedia/mpv to 0.36.0 [leot 2023-08-15]
