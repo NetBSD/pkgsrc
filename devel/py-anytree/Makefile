@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/07/05 20:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/08/15 16:21:57 wiz Exp $
 
 DISTNAME=	anytree-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_SELF_CONFLICT=		yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
