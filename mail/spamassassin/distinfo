@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2022/12/17 14:29:33 gdt Exp $
+$NetBSD: distinfo,v 1.82 2023/08/15 10:20:00 abs Exp $
 
 BLAKE2s (Mail-SpamAssassin-4.0.0.tar.gz) = fdcc278214de88b9796e678b5902ded5100e2c30dbb5725c4b5aea027980e340
 SHA512 (Mail-SpamAssassin-4.0.0.tar.gz) = db8e5d0249d9fabfa89bc4c7309a7eafd103ae07617ed9bd32e6b35473c5efc05b1a913b4a3d4bb0ff19093400e3510ae602bf9e96290c63e7946a1d0df6de47
@@ -12,6 +12,6 @@ Size (Mail-SpamAssassin-rules-4.0.0.r1905950.tgz.asc) = 833 bytes
 SHA1 (patch-Makefile.PL) = f190b064069506aa9afb1b6ecd8affea78104699
 SHA1 (patch-README) = 5d2aaecc4791e4f76df1078c17036cc23a39a8d0
 SHA1 (patch-ae) = e6e83c1de1002b8db647779d17740e67103b69d8
-SHA1 (patch-sa-update) = 0cac6f2315db8f80cd313473e8d141b49edb791f
+SHA1 (patch-sa-update) = bf19da673a44c1016692e8978b612067c9c071eb
 SHA1 (patch-spamc_libspamc.c) = 6e634b5e4e795bd1e2bddbe4b192e2826de8ba5a
 SHA1 (patch-spamd_netbsd-rc-script.sh) = 192fc1876ee30a4475c0efd9be6340e87d9fa2f4
