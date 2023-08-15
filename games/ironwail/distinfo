@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/03/02 03:13:53 charlotte Exp $
+$NetBSD: distinfo,v 1.3 2023/08/15 07:18:18 charlotte Exp $
 
-BLAKE2s (ironwail-0.6.0.tar.gz) = 4499d02b4ae3b94d05bef07d17028dba6a139f6d5833acfaeacb73d8ffe7c222
-SHA512 (ironwail-0.6.0.tar.gz) = 05d963496259d6acade8314962f6b141b5ccb9e784ca70ace6f8c57cf06f0ae7f57a6a42f57fe55d9e9be3796c669e40ab9917a9abcabaacff1fdf5ea70d2ad8
-Size (ironwail-0.6.0.tar.gz) = 5634065 bytes
-SHA1 (patch-Quake_Makefile) = 894947fba3fbc1f91dff381266f178accce08461
-SHA1 (patch-Quake_main_sdl.c) = ea3e9741d0fcabbaa02d00bc4f7f5be7e74b5f35
+BLAKE2s (ironwail-0.7.0.tar.gz) = e50edcdfa6b51db972ffb900b11d13197b27eb1b36c5df055b061593ba580f2e
+SHA512 (ironwail-0.7.0.tar.gz) = d83e580f62f81d7d4236148cfd8c05a531eace6a3c4ba9a63ffa3fbaac3efe1226d364b55142a12c6ea4dd56a83975bf0e786eb1456f26e3878dfea9d630f424
+Size (ironwail-0.7.0.tar.gz) = 8786640 bytes
+SHA1 (patch-Quake_Makefile) = 712ddd16205419c47c77efa21573e2a2e3652599
