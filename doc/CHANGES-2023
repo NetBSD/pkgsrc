@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4928 2023/08/15 05:50:41 mef Exp $
+$NetBSD: CHANGES-2023,v 1.4929 2023/08/15 14:59:26 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7108,3 +7108,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/p5-TeXLive-TLConfig version 0.66420 [mef 2023-08-15]
 	Added print/p5-TeXLive-TLUtils version 0.66420 [mef 2023-08-15]
 	Updated devel/R-testthat to 3.1.10 [mef 2023-08-15]
+	Updated games/ironwail to 0.7.0 [charlotte 2023-08-15]
