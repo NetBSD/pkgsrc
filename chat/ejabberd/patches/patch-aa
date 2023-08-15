@@ -1,19 +1,23 @@
-$NetBSD: patch-aa,v 1.17 2022/10/15 18:20:40 triaxx Exp $
+$NetBSD: patch-aa,v 1.17.6.1 2023/08/15 19:12:24 bsiegert Exp $
 
 Fix locations; don't mess with ownership.
 
---- Makefile.in.orig	2022-05-06 13:12:22.000000000 +0000
-+++ Makefile.in
-@@ -10,7 +10,7 @@ exec_prefix = @exec_prefix@
+--- Makefile.in.orig	2022-05-06 15:12:22.000000000 +0200
++++ Makefile.in	2023-08-11 09:08:52.337637204 +0200
+@@ -9,9 +9,10 @@
+ 
  DESTDIR =
  
  # /etc/ejabberd/
 -ETCDIR = $(DESTDIR)@sysconfdir@/ejabberd
 +ETCDIR = $(DESTDIR)@prefix@/share/examples/ejabberd
++SYSCONFDIR_ETCDIR = $(DESTDIR)@sysconfdir@/ejabberd
  
  # /bin/
  BINDIR = $(DESTDIR)@bindir@
-@@ -22,7 +22,7 @@ SBINDIR = $(DESTDIR)@sbindir@
+ 
+@@ -21,9 +22,9 @@
+ # /lib/
  LIBDIR =  $(DESTDIR)@libdir@
  
  # /lib/ejabberd/
@@ -22,7 +26,9 @@ Fix locations; don't mess with ownership.
  
  # /share/doc/ejabberd
  PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -66,31 +66,18 @@ SQLDIR = $(PRIVDIR)/sql
+ datarootdir = @datarootdir@
+@@ -65,33 +66,20 @@
+ # /usr/lib/ejabberd/priv/lua
  LUADIR = $(PRIVDIR)/lua
  
  # /var/lib/ejabberd/
@@ -56,3 +62,31 @@ Fix locations; don't mess with ownership.
  
  ifeq "$(MIX)" "mix"
  REBAR_VER:=6
+ REBAR_VER_318:=0
+@@ -293,21 +281,21 @@
+ 		-e "s*{{bindir}}/iex*$(iexpath)*g" \
+ 		-e "s*{{bindir}}*@bindir@*g" \
+ 		-e "s*{{libdir}}*${relivelibdir}*g" \
+ 		-e "s*{{erl}}*@ERL@*g" \
+-		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template \
+-		> ejabberdctl.relive
++		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template | \
++	$(SED)  -e "s*\${DESTDIR}**g" > ejabberdctl.relive
+ 
+ ejabberdctl.example: vars.config
+ 	$(SED)  -e "s*{{installuser}}*@INSTALLUSER@*g" \
+-		-e "s*{{config_dir}}*${ETCDIR}*g" \
++		-e "s*{{config_dir}}*${SYSCONFDIR_ETCDIR}*g" \
+ 		-e "s*{{logs_dir}}*${LOGDIR}*g" \
+ 		-e "s*{{spool_dir}}*${SPOOLDIR}*g" \
+ 		-e "s*{{bindir}}*@bindir@*g" \
+ 		-e "s*{{libdir}}*@libdir@*g" \
+ 		-e "s*{{erl}}*@ERL@*g" \
+-		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template \
+-		> ejabberdctl.example
++		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template | \
++	$(SED)  -e "s*\${DESTDIR}**g" > ejabberdctl.example
+ 
+ install: copy-files ejabberdctl.example
+ 	#
+ 	# Configuration files
