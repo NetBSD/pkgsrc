@@ -1,0 +1,74 @@
+$NetBSD: patch-meson.build,v 1.1 2023/08/15 19:17:10 leot Exp $
+
+- Instruct about NetBSD pthread_setname_np(3).
+  Maybe pthread_setname_np(3) should be checked in order to distinguish
+  based on the argument supported instead of special-casing based on the
+  platform... workaround that for the moment in the simplest way.
+- Enable support for DRM on NetBSD.
+- Also check for SNDCTL_DSP_HALT. NetBSD ossaudio(3) has
+  SNDCTL_DSP_SETPLAYVOL but not SNDCTL_DSP_HALT. Consistent with the
+  same check that is present in wscript.
+- Install configuration files to examples, per pkgsrc conventions.
+
+--- meson.build.orig	2023-07-23 17:10:36.000000000 +0000
++++ meson.build
+@@ -293,6 +293,7 @@ if cc.get_id() == 'clang'
+ endif
+ 
+ darwin = host_machine.system() == 'darwin'
++netbsd = host_machine.system() == 'netbsd'
+ win32 = host_machine.system() == 'cygwin' or host_machine.system() == 'windows'
+ posix = not win32
+ 
+@@ -521,17 +522,22 @@ features += {'vt.h': cc.has_header_symbo
+ 
+ features += {'consio.h': not features['vt.h'] and cc.has_header_symbol('sys/consio.h', 'VT_GETMODE')}
+ 
++features += {'wsdisplay_usl_io.h': not features['vt.h'] and not features['consio.h'] and cc.has_header_symbol('dev/wscons/wsdisplay_usl_io.h', 'VT_GETMODE')}
++
+ # macOS's pthread_setname_np is a special snowflake and differs from literally every other platform.
+ features += {'osx-thread-name': darwin}
+ 
++# NetBSD pthread_setname_np differs from macOS and Linux
++features += {'netbsd-thread-name': netbsd}
++
+ features += {'glibc-thread-name': false}
+-if not features['osx-thread-name']
++if not features['osx-thread-name'] and not features['netbsd-thread-name']
+     features += {'glibc-thread-name': posix and cc.has_function('pthread_setname_np', args: '-D_GNU_SOURCE',
+                                                                 dependencies: pthreads, prefix: '#include <pthread.h>')}
+ endif
+ 
+ features += {'bsd-thread-name': false}
+-if not features['osx-thread-name'] and not features['glibc-thread-name']
++if not features['osx-thread-name'] and not features['glibc-thread-name'] and not features['netbsd-thread-name']
+     features += {'bsd-thread-name': posix and cc.has_function('pthread_set_name_np', dependencies: pthreads,
+                                                               prefix: '#include <pthread.h>\n#include <pthread_np.h>')}
+ endif
+@@ -827,6 +833,8 @@ oss_opt = get_option('oss-audio').requir
+     error_message: 'the build is not GPL!',
+ )
+ features += {'oss-audio': cc.has_header_symbol('sys/soundcard.h', 'SNDCTL_DSP_SETPLAYVOL',
++                                               required: oss_opt) and
++                          cc.has_header_symbol('sys/soundcard.h', 'SNDCTL_DSP_HALT',
+                                                required: oss_opt)}
+ if features['oss-audio']
+     sources += files('audio/out/ao_oss.c')
+@@ -894,7 +902,7 @@ if features['direct3d']
+ endif
+ 
+ drm = dependency('libdrm', version: '>= 2.4.75', required: get_option('drm'))
+-features += {'drm': drm.found() and (features['vt.h'] or features['consio.h'])}
++features += {'drm': drm.found() and (features['vt.h'] or features['consio.h'] or features['wsdisplay_usl_io.h'])}
+ if features['drm']
+     dependencies += drm
+     sources += files('video/drmprime.c',
+@@ -1744,7 +1752,7 @@ if get_option('cplayer')
+ 
+     install_data('etc/mpv.desktop', install_dir: join_paths(datadir, 'applications'))
+     install_data('etc/mpv.metainfo.xml', install_dir: join_paths(datadir, 'metainfo'))
+-    install_data('etc/encoding-profiles.conf', install_dir: join_paths(confdir, 'mpv'))
++    install_data('etc/encoding-profiles.conf', install_dir: join_paths(datadir, 'examples/mpv'))
+ 
+     foreach size: ['16x16', '32x32', '64x64', '128x128']
+         icon_dir = join_paths(datadir, 'icons', 'hicolor', size, 'apps')
