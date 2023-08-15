@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.45 2023/08/13 21:19:02 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.46 2023/08/15 21:20:03 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -1649,6 +1649,8 @@ def test_main__valid_URL():
     assert g.err.written() == [
         f'url2pkg: running bmake (\'clean\', \'distinfo\', \'extract\') in \'{g.pkgdir}\'',
         'url2pkg: Adjusting the Makefile',
+        f'url2pkg: running bmake (\'clean\',) in \'{g.pkgdir}\'',
+        f'url2pkg: running bmake (\'extract\',) in \'{g.pkgdir}\'',
     ]
 
     g.verbose = False
