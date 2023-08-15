@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.49 2023/08/13 21:19:02 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.50 2023/08/15 21:20:03 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1295,6 +1295,8 @@ def main(argv: List[str], g: Globals):
 
     initial_lines = Generator(url).generate_package(g)
     Adjuster(g, url, initial_lines).adjust()
+    g.bmake('clean')
+    g.bmake('extract')
 
     g.out.write('\n')
     g.out.write('Remember to run pkglint when you\'re done.\n')
