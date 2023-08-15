@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/11 10:54:27 mef Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/15 01:19:39 mef Exp $
 
 R_PKGNAME=	processx
-R_PKGVER=	3.8.1
+R_PKGVER=	3.8.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
