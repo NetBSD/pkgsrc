@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/08/14 05:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/08/15 13:49:17 tnn Exp $
 
 GCC_PKGNAME=		gcc8
 PKGREVISION=		1
@@ -87,9 +87,10 @@ SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
 ## For graphite support.
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 
+EXTRACT_ONLY+=	${ISL16}.tar.bz2
+
 post-extract:
-	${TAR} -jxf ${DISTDIR}/${ISL16}.tar.bz2 -C ${WRKSRC}
-	${MV} ${WRKSRC}/${ISL16} ${WRKSRC}/isl
+	${MV} ${WRKDIR}/${ISL16} ${WRKSRC}/isl
 .endif
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-*}
