@@ -1,0 +1,3 @@
+Qore module that provides functions that can start child process,
+communicate with them trough standard io, wait for processes to exit,
+terminate processes, get process resource usage and more.
