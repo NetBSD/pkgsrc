@@ -1,0 +1,14 @@
+KAlarm is a personal alarm message, audio, command and email scheduler.
+
+KAlarm provides a graphical interface to schedule personal timed events -
+pop-up alarm messages, playing audio files, command execution and the sending
+of emails. It has a wide range of options, including:
+
+ * Configuring alarms to recur on an hours/minutes, daily, weekly, monthly or
+   annual basis, or setting them to trigger every time you log in.
+
+ * Choice of whether or not an alarm should be cancelled if it can't be
+   triggered at its scheduled time. An alarm can only be triggered while you
+   are logged in and running a graphical environment. If you choose not to
+   cancel the alarm if it can't be triggered at the correct time, it will be
+   triggered when you eventually log in.
