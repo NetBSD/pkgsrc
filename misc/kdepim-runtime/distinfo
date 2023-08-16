@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 06:05:39 markd Exp $
+
+BLAKE2s (kdepim-runtime-23.04.3.tar.xz) = ae46ae3ff5aae0daad681137e232e22dffc8f0f62c50b4b3589d163ad006b00c
+SHA512 (kdepim-runtime-23.04.3.tar.xz) = 5a0373a0da38adf8c7d860727f943536f5b4796b49550947cc11d24919ad00d8af5bad5a3b709434c9415412f027c10a5b1b9cf6c1d3a878140ad246f9cf4b2d
+Size (kdepim-runtime-23.04.3.tar.xz) = 1864368 bytes
