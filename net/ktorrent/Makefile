@@ -1,37 +1,32 @@
-# $NetBSD: Makefile,v 1.120 2023/06/06 12:42:05 riastradh Exp $
+# $NetBSD: Makefile,v 1.121 2023/08/16 21:22:25 markd Exp $
 
-DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	44
-CATEGORIES=	net kde
-#MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=	ktorrent-${KAPPSVER}
+CATEGORIES=	net
 
-TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
-
-.include "../../net/libktorrent/Makefile.version"
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://ktorrent.pwsp.net/
-COMMENT=	Graphical BitTorrent client for KDE4
+HOMEPAGE=	https://apps.kde.org/ktorrent/
+COMMENT=	Graphical BitTorrent client for KDE
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt pkg-config perl
-USE_CMAKE=		yes
+.include "../../meta-pkgs/kde/applications.mk"
 
-DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-CFLAGS+=		-DENABLE_KIO_MAGNET=1
-SCRDIR=			share/kde/apps/ktorrent/scripts
+USE_TOOLS+=	msgmerge pkg-config
 
-CHECK_INTERPRETER_SKIP=	${SCRDIR}/auto_remove/auto_remove.py \
-			${SCRDIR}/auto_resume/auto_resume.py \
-			${SCRDIR}/email_notifications/email_notifications.py \
-			${SCRDIR}/tracker_groups/tracker_groups.py
+# disable until plasma-workspace is available
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
 
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../net/libktorrent/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/kparts/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/kplotting/buildlink3.mk"
+.include "../../multimedia/phonon-qt5/buildlink3.mk"
+.include "../../net/kdnssd/buildlink3.mk"
+.include "../../wip/libktorrent/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kde-workspace4/buildlink3.mk"
+.include "../../www/syndication/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
