@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:19 nia Exp $
-
-BLAKE2s (libtelepathy-0.3.3.tar.gz) = 5213263a6919084115512ec5e86e1acdcc5c848cda2538cf064a79271e56712a
-SHA512 (libtelepathy-0.3.3.tar.gz) = b658405f589a8e686b860ba90f49d76c560c4ef8e2f9bf74bbdc84acd06ace3b4e296ed484c91f8b2dcbbf13896003e5187a639d95deb1d4853ca02e7bbcacde
-Size (libtelepathy-0.3.3.tar.gz) = 439764 bytes
