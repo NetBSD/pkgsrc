@@ -1,14 +1,19 @@
-$NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
+$NetBSD: patch-xvwebp.c,v 1.2 2023/08/16 17:02:20 tsutsui Exp $
 
 - add webp support from forked upstream
   https://gitlab.com/DavidGriffith/xv/-/commit/5682a07e
  - the default quality value is changed to 75 as the original libwebp
  - the default "page" of quality qDial is changed to 5.0 as jpeg
  - fix a bug of wrong quality value (almost 0) passed to WebPEncodeRGB()
+ - minimum support for loading animation webp (decode only the first frame)
+ - handle RGBA images properly (libwebp APIs don't convert RGBA to RGB)
+   https://bugs.chromium.org/p/webp/issues/detail?id=616
+ - plug several resouce leaks
+ - use snprintf(3) rather than sprintf(3)
 
---- xvwebp.c.orig	2023-07-30 06:56:45.683695531 +0000
+--- xvwebp.c.orig	2023-08-16 16:22:28.293425514 +0000
 +++ xvwebp.c
-@@ -0,0 +1,420 @@
+@@ -0,0 +1,525 @@
 +/*
 + * xvwebp.c - load routine for 'webp' format pictures
 + *
@@ -27,6 +32,7 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +#include <webp/types.h>
 +#include <webp/encode.h>
 +#include <webp/decode.h>
++#include <webp/demux.h>
 +
 +static char *filename;
 +static const char *bname;
@@ -34,6 +40,8 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +static void drawWEBPD   PARM((int, int, int, int));
 +static void clickWEBPD  PARM((int, int));
 +static void doCmd       PARM((int));
++static void convertRGBA PARM((const byte * const, byte * const,
++                                    int, int, int, int));
 +static void writeWEBP   PARM((void));
 +static int  WriteWEBP   PARM((FILE *, byte *, int, int, int,
 +                                    byte *, byte *, byte *));
@@ -44,6 +52,10 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +#define WEBPHIGH 185
 +
 +#define QUALITY   75     /* default quality */
++
++#define RGBATORGB(rgb, bg, alpha) \
++	(((rgb) * (alpha) / 255) + ((bg) * (255 - (alpha)) / 255))
++#define TRANSBG   0xE1   /* default background color to convert alpha channel */
 +
 +#define DWIDE    86
 +#define DHIGH    104
@@ -201,7 +213,7 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +
 +  DrawString(webpW,       15,  6+ASCENT,                          title);
 +
-+  sprintf(ctitle1, "Default = %d", QUALITY);
++  snprintf(ctitle1, 20, "Default = %d", QUALITY);
 +  DrawString(webpW,      110,  6+qDial.y+ASCENT,            ctitle1);
 +  DrawString(webpW,      110,  6+qDial.y+ASCENT+LINEHIGH,   ctitle2);
 +  DrawString(webpW,      110,  6+qDial.y+ASCENT+2*LINEHIGH, ctitle3);
@@ -277,6 +289,32 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +}
 +
 +/*******************************************/
++static void convertRGBA(rgba, rgb, width, height, stride, bgcolor)
++     const byte * const rgba; /* input loaded RGBA buffer */
++     byte * const rgb;  /* output xv pic RGB buffer */
++     int width;         /* image width */
++     int height;        /* image height */
++     int stride;        /* input image stride */
++     int bgcolor;       /* background color for alpha channel conversion */
++{
++  const byte *rgbap;
++  byte *rgbp;
++  int x, y;
++
++  rgbp = rgb;
++  for (y = 0; y < height; y++) {
++    rgbap = rgba + y * stride;
++    for (x = 0; x < width; x++) {
++      int alpha = rgbap[3];
++      *rgbp++ = RGBATORGB(rgbap[0], bgcolor, alpha); /* convert R */
++      *rgbp++ = RGBATORGB(rgbap[1], bgcolor, alpha); /* convert G */
++      *rgbp++ = RGBATORGB(rgbap[2], bgcolor, alpha); /* convert B */
++      rgbap += 4; /* skip A */
++    }
++  }
++}
++
++/*******************************************/
 +int LoadWEBP(fname, pinfo)
 +     char    *fname;
 +     PICINFO *pinfo;
@@ -285,9 +323,11 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +  /* returns '1' on success */
 +
 +  FILE  *fp;
-+  int   c, w, h;
-+  size_t filesize;
++  int   c, w, h, stride;
++  size_t filesize, picsize;
 +  byte  *filebuf, *pic24;
++  WebPDecoderConfig config;
++  VP8StatusCode status;
 +
 +  bname = BaseName(fname);
 +
@@ -316,16 +356,84 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +  filebuf = (byte *) calloc((size_t) filesize, (size_t) 1);
 +  if (!filebuf) FatalError("couldn't malloc 'file buffer'");
 +  c = fread(filebuf, (size_t) 1, (size_t) filesize, fp);
++  fclose(fp);
 +  if (c != filesize) {
 +    SetISTR(ISTR_WARNING,"%s:  %s", bname, "file read error");
++    free(filebuf);
++    return 0;
 +  }
-+  fclose(fp);
-+  pic24 = WebPDecodeRGB(filebuf, (size_t)filesize, &w, &h);
++
++  WebPInitDecoderConfig(&config);
++  if (WebPGetFeatures(filebuf, filesize, &config.input) != VP8_STATUS_OK) {
++    SetISTR(ISTR_WARNING,"%s:  %s", bname, "WebP get features failed");
++    free(filebuf);
++    return 0;
++  }
++  w = config.input.width;
++  h = config.input.height;
++  stride = w * 3;
++  picsize = stride * h;
++  pic24 = calloc((size_t)picsize, (size_t)1);
++  if (!pic24) FatalError("couldn't malloc 'image buffer'");
++
++  if (config.input.has_animation != 0) {
++    /* decode the first frame of animation webp */
++    WebPAnimDecoderOptions opts;
++    WebPData webpdata;
++    WebPAnimDecoder* dec;
++    WebPAnimInfo ainfo;
++    int timestamp, x, y, astride;
++    byte *rgbabuf;
++
++    WebPAnimDecoderOptionsInit(&opts);
++    opts.color_mode = MODE_RGBA;
++    webpdata.bytes = filebuf;
++    webpdata.size = filesize;
++    dec = WebPAnimDecoderNew(&webpdata, &opts);
++    if (dec == NULL) {
++      SetISTR(ISTR_WARNING,"%s:  %s", bname, "WebPAnimDecoderNew failed");
++      free(pic24);
++      free(filebuf);
++      return 0;
++    }
++    if (WebPAnimDecoderGetInfo(dec, &ainfo) &&
++        WebPAnimDecoderHasMoreFrames(dec) &&
++        WebPAnimDecoderGetNext(dec, &rgbabuf, &timestamp)) {
++      astride = w * 4;
++      convertRGBA(rgbabuf, pic24, w, h, astride, TRANSBG);
++    } else {
++      SetISTR(ISTR_WARNING,"%s:  %s", bname, "WebPAnimDecoder failed");
++      WebPAnimDecoderDelete(dec);
++      free(pic24);
++      free(filebuf);
++      return 0;
++    }
++    WebPAnimDecoderDelete(dec);
++  } else {
++    /* decode RGBA image and convert it to RGB with TRANSBG background */
++    int x, y, rgbasize, astride;
++    byte *rgbabuf;
++    astride = w * 4;
++    rgbasize = astride * h;
++    rgbabuf = calloc((size_t)rgbasize, (size_t)1);
++    config.output.colorspace = MODE_RGBA;
++    config.output.is_external_memory = 1;
++    config.output.u.RGBA.rgba = rgbabuf;
++    config.output.u.RGBA.size = rgbasize;
++    config.output.u.RGBA.stride = astride;
++    status = WebPDecode(filebuf, (size_t)filesize, &config);
++    if (status != VP8_STATUS_OK) {
++      SetISTR(ISTR_WARNING,"%s:  %s", bname, "WebPDecode failed");
++      free(pic24);
++      free(rgbabuf);
++      free(filebuf);
++      return 0;
++    }
++    convertRGBA(rgbabuf, pic24, w, h, astride, TRANSBG);
++    free(rgbabuf);
++    WebPFreeDecBuffer(&config.output);
++  }
 +  free(filebuf);
-+  if (pic24 == NULL) {
-+     SetISTR(ISTR_WARNING,"%s:  %s", bname, "WebP decode failed");
-+     return 0;
-+  }
 +
 +  pinfo->pic     = pic24;
 +  pinfo->type    = PIC24;
@@ -333,8 +441,10 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +  pinfo->h       = h;
 +  pinfo->normw = pinfo->w;   pinfo->normh = pinfo->h;
 +  pinfo->frmType = F_WEBP;
-+  sprintf(pinfo->fullInfo,"WEBP, RGB. (%ld bytes)", filesize);
-+  sprintf(pinfo->shrtInfo,"%dx%d WEBP.", w,h);
++  snprintf(pinfo->fullInfo, 128, "WEBP%s, RGB%s. (%ld bytes)",
++    config.input.has_animation != 0 ? " (with animation)" : "",
++    config.input.has_alpha != 0 ? "A" : "", filesize);
++  snprintf(pinfo->shrtInfo, 128, "%dx%d WEBP.", w,h);
 +  pinfo->colType = F_FULLCOLOR;
 +
 +  return 1;
@@ -408,12 +518,12 @@ $NetBSD: patch-xvwebp.c,v 1.1 2023/07/30 07:55:45 tsutsui Exp $
 +  }
 +  if (pfree == 1) { free(pic); }
 +  if (outsize <= 0) {
-+    free(xpic);
++    WebPFree(xpic);
 +    return -1;
 +  }
 +  fwrite(xpic, outsize, 1, fp);
 +  SetCursors(-1);
-+  free(xpic);
++  WebPFree(xpic);
 +  if (ferror(fp)) return -1;
 +  return 0;
 +}
