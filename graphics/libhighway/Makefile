@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/11/21 18:20:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/16 15:20:49 nia Exp $
 
 DISTNAME=	highway-1.0.1
 PKGNAME=	lib${DISTNAME}
@@ -30,6 +30,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/hwy/hwy.version
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
 
-BUILDLINK_API_DEPENDS.googletest+=	googletest>=1.10.0nb1
-.include "../../devel/googletest/buildlink3.mk"
+.include "options.mk"
+.include "../../devel/libatomic/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
