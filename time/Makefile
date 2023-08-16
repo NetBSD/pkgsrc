@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2023/08/16 06:11:01 markd Exp $
+# $NetBSD: Makefile,v 1.255 2023/08/16 07:43:14 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -57,6 +57,7 @@ SUBDIR+=	kcalendarcore
 SUBDIR+=	kcalutils
 SUBDIR+=	khal
 SUBDIR+=	kholidays
+SUBDIR+=	korganizer
 SUBDIR+=	kronolith
 SUBDIR+=	ktimer
 SUBDIR+=	leapsunpack
