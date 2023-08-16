@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1531 2023/08/14 07:38:36 nros Exp $
+# $NetBSD: Makefile,v 1.1532 2023/08/16 05:11:52 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -379,6 +379,7 @@ SUBDIR+=	mbrowse
 SUBDIR+=	mcast-tools
 SUBDIR+=	md-whois
 SUBDIR+=	megatools
+SUBDIR+=	messagelib
 SUBDIR+=	mikutter
 SUBDIR+=	mimms
 SUBDIR+=	minitube
