@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2023/07/29 11:51:15 adam Exp $
+# $NetBSD: Makefile,v 1.682 2023/08/16 09:03:51 nros Exp $
 
 COMMENT=	Databases
 
@@ -417,6 +417,7 @@ SUBDIR+=	qdbm
 SUBDIR+=	qdbm-cgi
 SUBDIR+=	qdbm-plus
 SUBDIR+=	qore-freetds-module
+SUBDIR+=	qore-odbc-module
 SUBDIR+=	qore-mysql-module
 SUBDIR+=	qore-openldap-module
 SUBDIR+=	qore-pgsql-module
