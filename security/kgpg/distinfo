@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:17:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2023/08/16 09:43:51 markd Exp $
 
-BLAKE2s (kgpg-16.08.0.tar.xz) = 42c266741ac871cc03e15983665b5b55649a6f49beb3cf4bd1cf79547ef9865c
-SHA512 (kgpg-16.08.0.tar.xz) = e4ab993d37ad789de2c4306b529f9d13a0c18e457a47c99e02b3165dd2de55978aff7d77b5bbd5d42f978bb833e6f2744a2862e8d996e4281af9ec36c8950d51
-Size (kgpg-16.08.0.tar.xz) = 810116 bytes
+BLAKE2s (kgpg-23.04.3.tar.xz) = cb76160645ef68b218832590a871dd0313f35a109a1bc7e6feef4b75d4b1dcad
+SHA512 (kgpg-23.04.3.tar.xz) = c7621d4e562a345e3af080e6ccb714b97dae549c5836afb569a3ec36bf88a0bc2db282d223e3a5885286e0da669d3b7630a874dfeb22544b45e5f2cd4365275c
+Size (kgpg-23.04.3.tar.xz) = 3044264 bytes
