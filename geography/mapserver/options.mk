@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2016/07/07 08:57:06 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2023/08/16 14:43:50 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
 PKG_SUPPORTED_OPTIONS=	fastcgi pgsql mysql x11
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--with-fastcgi
 # PostgreSQL/PostGIS support
 #
 .if !empty(PKG_OPTIONS:Mpgsql)
+# \todo Explain why this is bl3 rather than DEPENDS.  It doesn't make
+# sense, given how postgis works.
 .include "../../databases/postgresql-postgis2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-postgis
 .endif
