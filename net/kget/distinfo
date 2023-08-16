@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:50 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/08/16 09:37:35 markd Exp $
 
-BLAKE2s (kget-15.12.0.tar.xz) = 4da53f23961c8926e54e614c2a0d83d3de57e0c56336bff56554c711c6b9fc91
-SHA512 (kget-15.12.0.tar.xz) = 72af1444783329edfa919ccd56600b9ba0633879591d19d9c870a5c4f3211d856fb0217234f6cbe5e70a3de56734d1f6b5ecc8fdfd83e74d6cbdfafcd2a5e250
-Size (kget-15.12.0.tar.xz) = 1081868 bytes
-SHA1 (patch-CMakeLists.txt) = 73333adb9bb17ae97c3431f237e1b6807c61985f
+BLAKE2s (kget-23.04.3.tar.xz) = 34edfb31b5fc4e9269d296fe9472d888807dd3fdc45abbe80f05233319f29094
+SHA512 (kget-23.04.3.tar.xz) = de9eec4a93567baf58dad01e4aa12dd4618f86b1ca887128b179574dde4ce46b189baa60310bd21f226a84ee34e7974eacfc2b7f6cbf2f8fad65c45d0aa62fa6
+Size (kget-23.04.3.tar.xz) = 5561060 bytes
