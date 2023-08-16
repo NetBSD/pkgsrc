@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.604 2023/06/04 03:32:47 markd Exp $
+# $NetBSD: Makefile,v 1.605 2023/08/16 03:27:05 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -8,6 +8,7 @@ SUBDIR+=	OSBF-lua
 SUBDIR+=	Pantomime
 SUBDIR+=	R-mime
 SUBDIR+=	akonadi
+SUBDIR+=	akonadi-mime
 SUBDIR+=	alpine
 SUBDIR+=	amavisd-milter
 SUBDIR+=	amavisd-new
