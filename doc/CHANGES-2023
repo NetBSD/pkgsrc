@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4934 2023/08/16 07:28:58 nros Exp $
+$NetBSD: CHANGES-2023,v 1.4935 2023/08/16 09:04:34 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7114,3 +7114,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mold to 2.1.0 [fcambus 2023-08-15]
 	Updated multimedia/mpv to 0.36.0 [leot 2023-08-15]
 	Added net/qore-zmq-module version 1.0.2 [nros 2023-08-16]
+	Added databases/qore-odbc-module version 1.2.0 [nros 2023-08-16]
