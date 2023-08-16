@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/16 19:02:35 nros Exp $
+${QORE_MODULE_DIR}/process-api-${QORE_LATEST_MODULE_API}.qmod
