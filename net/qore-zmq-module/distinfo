@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 07:22:44 nros Exp $
+
+BLAKE2s (qore-zmq-module-1.0.2.tar.bz2) = 77e9b964f32ca58a8484cce9e0823b1b6ad29b35027934aada0d4d33f4b56f39
+SHA512 (qore-zmq-module-1.0.2.tar.bz2) = dc589a3cc4a3d6a37577c3f3e46914d7e9b818196f679ec9da05e81f7baddce003b4d83f371c0d808b76ba1327a291379128cd6376a8ffdf9bdaa2526eced684
+Size (qore-zmq-module-1.0.2.tar.bz2) = 45734 bytes
