@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2023/08/16 05:19:27 markd Exp $
+# $NetBSD: Makefile,v 1.614 2023/08/16 05:23:51 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -99,6 +99,7 @@ SUBDIR+=	gnuls
 SUBDIR+=	goffice0.10
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
+SUBDIR+=	grantlee-editor
 SUBDIR+=	grantleetheme
 SUBDIR+=	granulate
 SUBDIR+=	gwaei
