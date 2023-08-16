@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-send-file-0.9.0.tar.bz2) = 10176251937580f386218716dcc7652189e061df042b2511d4cb1394cb8888cb
-SHA512 (ktp-send-file-0.9.0.tar.bz2) = ff6cad1831a4851c00f11a27e1302bf051d2cc72f6e8bc90bd838329a681202e213fb4f3f9accb56522601f9623c061b29e14bb380d66764237d15eef3eece04
-Size (ktp-send-file-0.9.0.tar.bz2) = 29739 bytes

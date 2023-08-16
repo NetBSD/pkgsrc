@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:17 nia Exp $
-
-BLAKE2s (ktp-common-internals-0.9.0.tar.bz2) = c57e0ef7661959277db7438afad41685d5d65000d8635f8921c1012d474c840b
-SHA512 (ktp-common-internals-0.9.0.tar.bz2) = 65ee4330d05ff91183935767069927978ff973152428ccaa88fd1a77cdef8ad1d6cb939276061b63fcfbecc9b051e83a603f07c327248dc2c28dbfa674fb226b
-Size (ktp-common-internals-0.9.0.tar.bz2) = 439404 bytes
