@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.12 2022/05/17 13:35:47 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2023/08/16 12:17:01 markd Exp $
 
-BLAKE2s (kopete-16.12.0.tar.xz) = cf65ecdc77eb48f9dff44582d7e2db8f220244fa66add7924aaaf05dcacad0ff
-SHA512 (kopete-16.12.0.tar.xz) = 7ea765ebb8652773734b98d9287b9a81452d390b86f80b1c34e166491762791666593e68204100cf18b2245f42a4aabcf4c433c02280d116ec814b93613885fe
-Size (kopete-16.12.0.tar.xz) = 6340832 bytes
-SHA1 (patch-libkopete_avdevice_videodevice.h) = 724477ec12ce567e6974edb1e1b637c822948bf3
-SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 3bb68fd63bbd98ac106402a1c647f23556e6cea8
-SHA1 (patch-protocols_oscar_liboscar_tasks_chatnavservicetask.cpp) = 053ecfecca073c8ebecec602bc378eb45251f962
+BLAKE2s (kopete-23.04.3.tar.xz) = d74f99aacd677bf71570cd5d8bf5e0e26385e319cb9593e904438f22dc41718f
+SHA512 (kopete-23.04.3.tar.xz) = 74d773e841308d1aa3ad337ae5fa8753574fb8e66c9651e70607b481b24cc8d6008983c7eca5fdda91271c8738a0d06e157ea884af6795d9db2afba261e4df9f
+Size (kopete-23.04.3.tar.xz) = 10145676 bytes
 SHA1 (patch-protocols_winpopup_winpopup-install) = 538f1f079439d3c86454583f2863dbbcb3a63b95
-SHA1 (patch-protocols_wlm_CMakeLists.txt) = 4f0c6ebdf51f15c0759a8489ddbb43fe4052281c
