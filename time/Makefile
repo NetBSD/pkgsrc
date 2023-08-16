@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2023/07/17 16:08:31 adam Exp $
+# $NetBSD: Makefile,v 1.251 2023/08/16 04:18:23 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -10,6 +10,7 @@ SUBDIR+=	R-timeDate
 SUBDIR+=	R-timechange
 SUBDIR+=	R-tzdb
 SUBDIR+=	abclock
+SUBDIR+=	akonadi-calendar
 SUBDIR+=	anacron
 SUBDIR+=	asclock
 SUBDIR+=	asclock-gtk
