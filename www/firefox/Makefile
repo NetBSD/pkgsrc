@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2023/08/14 05:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.566 2023/08/16 10:41:35 abs Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		116.0
@@ -88,6 +88,11 @@ SUBST_MESSAGE.dfly_malloc_h=	Dont include malloc.h on dragonflybsd
 SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__DragonFly__),g'
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
 
+SUBST_CLASSES+=			paths
+SUBST_STAGE.paths=		pre-configure
+SUBST_FILES.paths=		../firefox.sh
+SUBST_VARS.paths=		PREFIX MOZILLA
+
 .include "mozilla-common.mk"
 .include "options.mk"
 
@@ -166,9 +171,12 @@ post-build:
 
 INSTALLATION_DIRS+=	share/applications
 
+post-extract:
+	${CP} ${FILESDIR}/firefox.sh ${WRKDIR}/firefox.sh
+
 post-install:
 .if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
-	${INSTALL_SCRIPT} ${FILESDIR}/firefox.sh ${DESTDIR}${PREFIX}/bin/${MOZILLA}
+	${INSTALL_SCRIPT} ${WRKDIR}/firefox.sh ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 .else
 	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
 	${ECHO} '${PREFIX}/lib/${MOZILLA}/${MOZILLA} "$$@"' >> \
