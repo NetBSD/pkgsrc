@@ -1,27 +1,22 @@
-# $NetBSD: Makefile,v 1.43 2023/06/06 12:40:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.44 2023/08/16 03:58:59 markd Exp $
 
-DISTNAME=	libkgapi-2.2.0
-PKGREVISION=	39
+DISTNAME=	libkgapi-${KAPPSVER}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_KDE:=libkgapi/2.2.0/src/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.kde.org/
-COMMENT=	KDE-based library for accessing various Google services
-LICENSE=	gnu-gpl-v2
+COMMENT=	KDE-based library to access various Google services
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-TOOL_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
-TOOLS_BROKEN+=	perl
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
+USE_TOOLS+=	msgmerge
 
-.include "../../meta-pkgs/kde4/kde4.mk"
-
-.include "../../devel/qjson/buildlink3.mk"
-.include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../devel/kio/buildlink3.mk"
+.include "../../misc/kcontacts/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../time/kcalendarcore/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
