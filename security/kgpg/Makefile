@@ -1,18 +1,32 @@
-# $NetBSD: Makefile,v 1.72 2023/04/23 14:26:30 adam Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/16 09:43:51 markd Exp $
 
-DISTNAME=	kgpg-16.08.0
-PKGREVISION=	31
+DISTNAME=	kgpg-${KAPPSVER}
 CATEGORIES=	security
+
+HOMEPAGE=	https://kde.org/applications/utilities/kgpg/
 COMMENT=	KDE encryption tool
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
+LICENSE=	gnu-gpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.kgpg.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/org.kde.kgpg.desktop
+
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../misc/akonadi-contacts/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../security/gpgme/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
