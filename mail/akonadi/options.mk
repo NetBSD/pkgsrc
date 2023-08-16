@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/05/23 13:08:51 nia Exp $
+# $NetBSD: options.mk,v 1.7 2023/08/16 03:14:33 markd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.akonadi
 
@@ -10,40 +10,14 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 .include "../../mk/bsd.options.mk"
 
 ###
-### Use mysql backend
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-MYSQL_VERSIONS_ACCEPTED=	56
-.include "../../mk/mysql.buildlink3.mk"
-DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
-CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE=off
-.  if ${_MYSQL_VERSION} == "56"
-.    include "../../databases/mysql56-server/buildlink3.mk"
-.  else
-PKG_FAIL_REASON+=	"Unknown MySQL version: ${_MYSQL_VERSION}"
-.  endif
-SUBST_CLASSES+=		mysql
-SUBST_STAGE.mysql=	pre-configure
-SUBST_MESSAGE.mysql=	Fix mysqld path.
-SUBST_FILES.mysql=	server/CMakeLists.txt
-SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
-.endif
-
-###
-### Use postgresql backend
-###
-.if !empty(PKG_OPTIONS:Mpgsql)
-.	include "../../mk/pgsql.buildlink3.mk"
-# XXX Not yet tested in pkgsrc
-.endif
-
-###
 ### Use sqlite backend
 ###
 PLIST_VARS+=	sqlite
 .if !empty(PKG_OPTIONS:Msqlite)
-.	include "../../databases/sqlite3/buildlink3.mk"
+.  include "../../databases/sqlite3/buildlink3.mk"
+CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE:BOOL=ON
 CMAKE_ARGS+=	-DDATABASE_BACKEND=SQLITE
-CMAKE_ARGS+=	-DINSTALL_QSQLITE_IN_QT_PREFIX=true
+CMAKE_ARGS+=	-DSQLITE_INCLUDE_DIR=${BUILDLINK_PREFIX.sqlite3}/include
+CMAKE_ARGS+=	-DSQLITE_LIBRARIES=${BUILDLINK_PREFIX.sqlite3}/lib/libsqlite3.so
 PLIST.sqlite=	yes
 .endif
