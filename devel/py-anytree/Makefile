@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/08/15 16:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/16 07:40:30 nia Exp $
 
 DISTNAME=	anytree-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anytree/}
 
@@ -16,7 +17,11 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_SELF_CONFLICT=		yes
+
+.include "../../lang/python/pyversion.mk"
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/ebt ${DESTDIR}${PREFIX}/bin/ebt-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
