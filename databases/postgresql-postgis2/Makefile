@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.132 2023/08/02 01:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2023/08/16 14:36:39 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
-MAJOR=		3.3
-DISTNAME=	postgis-${MAJOR}.4
+MAJOR=		3.4
+DISTNAME=	postgis-${MAJOR}.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
@@ -36,12 +36,11 @@ MAKE_JOBS_SAFE=		no
 USE_GCC_RUNTIME=		yes
 USE_LANGUAGES=			c c++ c99
 USE_LIBTOOL=			yes
-USE_TOOLS+=			gmake lex pax perl pkg-config
+USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
-# Documented requirement is pgsql >= 11
-PGSQL_VERSIONS_ACCEPTED=	14 13 12 11
+PGSQL_VERSIONS_ACCEPTED=	15 14 13 12
 
 # This isn't an option, but could be.
 CONFIGURE_ARGS+=	--with-address-standardizer
@@ -61,6 +60,7 @@ PRINT_PLIST_AWK+=	{ gsub(/topology-${MAJOR:S|/|\\/|g}/, "topology-$${MAJOR}") }
 # \todo Remove or file bugs upstream
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
+REPLACE_PERL+=		loader/postgis.pl
 REPLACE_PERL+=		utils/postgis_restore.pl.in
 REPLACE_PERL+=		utils/create_spatial_ref_sys_config_dump.pl
 #MAKE_ENV+=		PERL5=${PERL5:Q}
@@ -98,7 +98,9 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 # NORMAL DEPENDS
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.geos+=	geos>=3.6
 .include "../../geography/geos/buildlink3.mk"
+BUILDLINK_API_DEPENDS.proj+=	proj>=6.1
 .include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
