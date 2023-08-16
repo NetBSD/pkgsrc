@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/16 12:11:07 nros Exp $
+${QORE_MODULE_DIR}/msgpack-api-${QORE_LATEST_MODULE_API}.qmod
