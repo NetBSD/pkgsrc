@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.615 2023/08/16 05:50:04 markd Exp $
+# $NetBSD: Makefile,v 1.616 2023/08/16 06:05:38 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -143,6 +143,7 @@ SUBDIR+=	kdav
 SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeartwork4
 SUBDIR+=	kdeedu-data
+SUBDIR+=	kdepim-runtime
 SUBDIR+=	kdepim-runtime4
 SUBDIR+=	kdepim4
 SUBDIR+=	kdepimlibs4
