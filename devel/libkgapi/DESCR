@@ -1,2 +1,10 @@
-LibKGAPI is a KDE-based library for accessing various Google services
-via their public API.
+LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs for
+various Google services.
+
+Currently supported APIs:
+ * Calendar API v3 (https://developers.google.com/google-apps/calendar)
+ * Contacts API v3 (https://developers.google.com/google-apps/contacts/v3/)
+ * Tasks API v1 (https://developers.google.com/google-apps/tasks)
+ * Static Google Maps API v2 (https://developers.google.com/maps/documentation/staticmaps/)
+ * Drive API v2 (https://developers.google.com/drive/v2/reference)
+ * Blogger API v3 (https://developers.google.com/blogger/docs/3.0/reference/)
