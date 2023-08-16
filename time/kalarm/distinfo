@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 06:11:01 markd Exp $
+
+BLAKE2s (kalarm-23.04.3.tar.xz) = a2434d55292370fb0d578da392f51abd5b17e11aec7dc4fc796f0a21384028c0
+SHA512 (kalarm-23.04.3.tar.xz) = 2c1a785b3bc2af8e256fa63ff07b6680160af231b0f94aeca38ea14d47e97a5e0980fcc3db98a48545a959a9c79c087d493d92a4a553bafc76699967042d1dcd
+Size (kalarm-23.04.3.tar.xz) = 2586284 bytes
