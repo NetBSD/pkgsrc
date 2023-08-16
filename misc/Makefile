@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.620 2023/08/16 07:51:34 markd Exp $
+# $NetBSD: Makefile,v 1.621 2023/08/16 07:56:04 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -132,6 +132,7 @@ SUBDIR+=	ja-less
 SUBDIR+=	ja-man
 SUBDIR+=	jhd
 SUBDIR+=	kaccessible
+SUBDIR+=	kaddressbook
 SUBDIR+=	kalzium
 SUBDIR+=	kanjidic
 SUBDIR+=	kanjidic2
