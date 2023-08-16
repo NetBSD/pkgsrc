@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/08/16 09:46:35 markd Exp $
+# $NetBSD: Makefile,v 1.69 2023/08/16 09:58:54 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	29
@@ -23,7 +23,6 @@ DEPENDS+=	kmouth>=4.14.3:../../misc/kmouth
 DEPENDS+=	kmousetool>=16.12.0:../../misc/kmousetool
 DEPENDS+=	ksystemlog>=4.14.3:../../sysutils/ksystemlog
 DEPENDS+=	kcron-4.14.3{,nb[0-9]*}:../../sysutils/kcron
-#DEPENDS+=	kuser-16.08.0{,nb[0-9]*}:../../sysutils/kuser
 DEPENDS+=	kdeartwork4-15.08.3{,nb[0-9]*}:../../misc/kdeartwork4
 DEPENDS+=	marble>=4.14.3:../../misc/marble
 DEPENDS+=	blinken>=4.14.3:../../games/blinken
