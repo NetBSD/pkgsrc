@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4942 2023/08/16 19:03:06 nros Exp $
+$NetBSD: CHANGES-2023,v 1.4943 2023/08/16 22:25:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7166,3 +7166,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/xv to 3.10anb28 [tsutsui 2023-08-16]
 	Updated pkgtools/pkgin to 23.8.0 [jperkin 2023-08-16]
 	Added devel/qore-process-module version 1.0.5 [nros 2023-08-16]
+	Removed chat/libtelepathy [wiz 2023-08-16]
