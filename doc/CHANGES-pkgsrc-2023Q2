@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.7 2023/07/23 08:35:20 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.8 2023/08/16 18:59:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -46,4 +46,35 @@ www/firefox102-l10n: dependent update
 
 Pullup ticket #6776 - requested by bsiegert
 print/ghostscript-agpl: security update
+
+Pullup ticket #6783 - requested by leot
+www/firefox102: Enable WebRTC X11 desktop capture
+
+Pullup ticket #6788 - requested by nia
+www/firefox102: security fix
+
+Pullup ticket #6781 - requested by taca
+textproc/ruby-sanitize: security fix (CVE-2023-36823)
+
+Pullup ticket #6782 - requested by taca
+net/samba4: security fix
+
+Pullup ticket #6785 - requested by taca
+lang/php80: security fix (CVE-2023-3823, CVE-2024-3824)
+
+Pullup ticket #6786 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6787 - requested by taca
+lang/php82: security fix
+
+Pullup ticket #6784 - requested by ryoon
+www/php-nextcloud: update to latest,
+required for migrating to version 27 in the next branch
+
+Pullup ticket #6789 - requested by gdt
+chat/ejabberd: functionality fix
+
+Pullup ticket #6790 - requested by gdt
+net/mosquitto: security fix
 
