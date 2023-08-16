@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1063 2023/08/06 07:39:59 adam Exp $
+# $NetBSD: Makefile,v 1.1064 2023/08/16 10:01:53 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -393,7 +393,6 @@ SUBDIR+=	kfilemetadata5
 SUBDIR+=	kfloppy
 SUBDIR+=	krusader
 SUBDIR+=	ksystemlog
-SUBDIR+=	kuser
 SUBDIR+=	lambd
 SUBDIR+=	lastfss
 SUBDIR+=	lavaps
