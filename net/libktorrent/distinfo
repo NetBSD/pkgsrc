@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/08/16 21:16:14 markd Exp $
 
-BLAKE2s (libktorrent-1.3.1.tar.bz2) = 44f451601e924e4241423f3bacde92189c7d8b4236562aa67f85879a1212ecfd
-SHA512 (libktorrent-1.3.1.tar.bz2) = 63dd4a642da4808cfe414bf4767185daf3233def5259c3f9ab899be58f263c16362eaa5e01383bf9acd78a381bc3915a84965d17f1bd10054cf94851294b622b
-Size (libktorrent-1.3.1.tar.bz2) = 863105 bytes
-SHA1 (patch-examples_ktcli_main.cpp) = 6ed9db8aa7701402d8784cb5209be9b433dc9680
-SHA1 (patch-src_diskio_chunkmanager.cpp) = 39e20760275ecd21d5769fc48200a6d317c5073f
-SHA1 (patch-src_net_address.h) = 0689a5efc34062868ffb6e0ebbfe3b00ffdc8c20
-SHA1 (patch-src_utp_connection.h) = c9a8f549fe053f6ebe31a2c0d620898f9b12b20e
-SHA1 (patch-src_utp_delaywindow.h) = 34854d352993b42836726d3db326661aa78c4aa7
+BLAKE2s (libktorrent-23.04.3.tar.xz) = e325ca0d2cf13ffd0005651d3aab4570aa958498cce44502386be7aaf54f2159
+SHA512 (libktorrent-23.04.3.tar.xz) = 5eb26785c29846290ed3d16809d618d3ce8027fa7a6f03d07b2ecf7c5b541dec8dc4a98f749a8716fbcedc8ea1181bdda53338c6fffb8acccdd39dabde5087df
+Size (libktorrent-23.04.3.tar.xz) = 604076 bytes
