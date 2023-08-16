@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1732 2023/08/05 06:01:12 markd Exp $
+# $NetBSD: Makefile,v 1.1733 2023/08/16 05:58:59 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -28,6 +28,7 @@ SUBDIR+=	R-webshot
 SUBDIR+=	SOGo
 SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
+SUBDIR+=	akregator
 SUBDIR+=	album
 SUBDIR+=	album_themes
 SUBDIR+=	analog
