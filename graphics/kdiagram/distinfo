@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 07:32:15 markd Exp $
+
+BLAKE2s (kdiagram-2.8.0.tar.xz) = 7d65b20e44ca230f7538edd570f678a7f5170d4e33619b6374df1f3f1132a8fd
+SHA512 (kdiagram-2.8.0.tar.xz) = d981bce4feeb65038772125e5af1c096537ec87991fdb93d9a91dd5c9f089b1001647c8a63b209683a67b2d7b3aadeb7dd6279261eefaf6b6e046d0ab72723ec
+Size (kdiagram-2.8.0.tar.xz) = 691044 bytes
