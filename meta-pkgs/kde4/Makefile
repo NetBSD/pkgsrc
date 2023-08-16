@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/08/16 08:17:55 markd Exp $
+# $NetBSD: Makefile,v 1.65 2023/08/16 08:44:34 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	29
@@ -119,7 +119,6 @@ DEPENDS+=	kmail>=23.04.3:../../mail/kmail
 DEPENDS+=	knotes>=23.04.3:../../misc/knotes
 DEPENDS+=	kontact>=23.04.3:../../misc/kontact
 DEPENDS+=	korganizer>=23.04.3:../../misc/korganizer
-DEPENDS+=	kdepim-runtime4-4.14.10{,nb[0-9]*}:../../misc/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.14.3{,nb[0-9]*}:../../misc/kdeplasma-addons4
 DEPENDS+=	cervisia>=16.04.0:../../devel/cervisia
 DEPENDS+=	kde-dev-scripts>=4.14.3:../../devel/kde-dev-scripts
