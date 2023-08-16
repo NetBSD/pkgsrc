@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2023/08/16 06:05:38 markd Exp $
+# $NetBSD: Makefile,v 1.617 2023/08/16 07:36:56 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -78,6 +78,7 @@ SUBDIR+=	emacs-wiki
 SUBDIR+=	epm
 SUBDIR+=	erlang-p1_utils
 SUBDIR+=	esniper
+SUBDIR+=	eventviews
 SUBDIR+=	exercism
 SUBDIR+=	fbreader
 SUBDIR+=	fd

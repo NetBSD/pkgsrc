@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 07:36:56 markd Exp $
+
+BLAKE2s (eventviews-23.04.3.tar.xz) = c8d9222bced091491568b9d6154f5b01b04b65e14a2e0be454a6222fe4838374
+SHA512 (eventviews-23.04.3.tar.xz) = 6d9ec804602b05f761d669f52e0902736ca2fe1b37ad688acad0e22fe1d225f6a5c8cd52117ac84bf91357fedc61f95005ee6eed00836d6aa03b94577a43383d
+Size (eventviews-23.04.3.tar.xz) = 464268 bytes
