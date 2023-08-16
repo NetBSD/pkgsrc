@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2023/08/16 04:41:52 markd Exp $
+# $NetBSD: Makefile,v 1.612 2023/08/16 05:01:24 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -180,6 +180,7 @@ SUBDIR+=	libcdio
 SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libdivecomputer
+SUBDIR+=	libgravatar
 SUBDIR+=	libkdeedu
 SUBDIR+=	libkdepim
 SUBDIR+=	libkeduvocdocument
