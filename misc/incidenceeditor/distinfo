@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 07:40:12 markd Exp $
+
+BLAKE2s (incidenceeditor-23.04.3.tar.xz) = fdfb602d28768576d4fd107c064a361984ba50bad45dfdeb9dc08628ccb7c4fb
+SHA512 (incidenceeditor-23.04.3.tar.xz) = 99b1e6fda3e194083c53ebd2966be6454f2813a14d5e4a61ff567034cc79433508bf045fc38bb66553297c1a12b693c8689428f2d214e6ec30650f13a1a86fa5
+Size (incidenceeditor-23.04.3.tar.xz) = 570204 bytes
