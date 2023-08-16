@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4047 2023/08/11 12:41:47 adam Exp $
+# $NetBSD: Makefile,v 1.4048 2023/08/16 10:27:02 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -326,6 +326,7 @@ SUBDIR+=	dolphin-plugins
 SUBDIR+=	dotconf
 SUBDIR+=	doxygen
 SUBDIR+=	doxymacs
+SUBDIR+=	drkonqi
 SUBDIR+=	dumpet
 SUBDIR+=	easygit
 SUBDIR+=	ecb
