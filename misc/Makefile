@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2023/08/16 07:36:56 markd Exp $
+# $NetBSD: Makefile,v 1.618 2023/08/16 07:40:12 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -124,6 +124,7 @@ SUBDIR+=	howm
 SUBDIR+=	hs-cabal-install-solver
 SUBDIR+=	hs-extra
 SUBDIR+=	ibutton-pdkit
+SUBDIR+=	incidenceeditor
 SUBDIR+=	ipbt
 SUBDIR+=	iselect
 SUBDIR+=	iwatch
