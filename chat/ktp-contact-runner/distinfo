@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-contact-runner-0.9.0.tar.bz2) = 26ef685152f6c5d80447c7af59ce6064ee2445006a67ec76ef9dbe500a1949cb
-SHA512 (ktp-contact-runner-0.9.0.tar.bz2) = af6582780d4f195ef011b4674b98b00892d9306a5b6a20bd6be721f455ee52478931e3b1a70fc99dae6e395b3f5b28d0e8d91b24c840a23cd06c0341ca53d5de
-Size (ktp-contact-runner-0.9.0.tar.bz2) = 42207 bytes

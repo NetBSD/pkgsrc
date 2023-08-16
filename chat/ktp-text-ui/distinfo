@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-text-ui-0.9.0.tar.bz2) = ba21d13e2ea7b5ce33808d1ec45b9175f6483da55e632d5a92ac0a7013bd50f2
-SHA512 (ktp-text-ui-0.9.0.tar.bz2) = 8ff0cd400cf7bafc228f8769a9688b17a60d10b5f012e4718130d7dc98f77e2f08bad1cce2ee089096de0da1d55c57b7c7cbeff163decf60e564c381d56b10bd
-Size (ktp-text-ui-0.9.0.tar.bz2) = 471280 bytes

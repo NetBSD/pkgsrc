@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-filetransfer-handler-0.9.0.tar.bz2) = 3a3c3b947189de9ea31769bc22de2ed82c12a74ad11e709ba575e78256006cb3
-SHA512 (ktp-filetransfer-handler-0.9.0.tar.bz2) = 6051225eda7c1f95f862837f4c75e695bf7b3d38a21e9427cb403e7ca0c547baeba549869815a1471509a5eddb686d5d8d7270a73adeba2b2b31b3f4f3050cac
-Size (ktp-filetransfer-handler-0.9.0.tar.bz2) = 48041 bytes
