@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2021/10/26 09:58:50 nia Exp $
+$NetBSD: distinfo,v 1.41 2023/08/16 01:01:35 gutteridge Exp $
 
 BLAKE2s (cdparanoia-III-10.2.src.tgz) = 92c07211785581ef3d30338272f4d8642f94c26add7be8a8e4dbb913b0102257
 SHA512 (cdparanoia-III-10.2.src.tgz) = 4ab0a0f5ef44d56c1af72d1fc1035566a1a89c4eeddb9e8baea675fe51c06138d913342afc8bed167d9fa55672fa25a2763ce21f7e24c1232e4739aff20733a7
@@ -20,5 +20,5 @@ SHA1 (patch-ch) = 607f57828094ada2799b84723cc01ae333887d2f
 SHA1 (patch-ci) = 783a8cdf88aa9a0f7be3bb2c865b6609237291fc
 SHA1 (patch-cj) = 99bdcf970d9b74154ee205e9465e67dbfed773b0
 SHA1 (patch-ck) = 968a7191d10f16e298853175543c8f533659acc2
-SHA1 (patch-cn) = 62a2e329b8bec1c74e53e72a478576c484e67b56
+SHA1 (patch-cn) = ca76d679feddb0056654eb4927e7760d82158dd0
 SHA1 (patch-paranoia_overlap.c) = 3c46bbf406214d30b09e88cd10a3bc3946c77396

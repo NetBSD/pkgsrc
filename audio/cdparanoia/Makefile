@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2020/01/07 13:40:50 kim Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/16 01:01:35 gutteridge Exp $
 
 DISTNAME=	cdparanoia-III-10.2
 PKGNAME=	cdparanoia-3.0.10.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/cdparanoia/
 EXTRACT_SUFX=	.src.tgz
