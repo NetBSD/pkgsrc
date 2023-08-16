@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2023/08/16 05:27:33 markd Exp $
+# $NetBSD: Makefile,v 1.254 2023/08/16 06:11:01 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -52,6 +52,7 @@ SUBDIR+=	hs-unix-time
 SUBDIR+=	ical
 SUBDIR+=	ical2rem
 SUBDIR+=	jday
+SUBDIR+=	kalarm
 SUBDIR+=	kcalendarcore
 SUBDIR+=	kcalutils
 SUBDIR+=	khal
