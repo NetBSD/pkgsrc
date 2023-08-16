@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 05:36:01 markd Exp $
+
+BLAKE2s (mailcommon-23.04.3.tar.xz) = be2f9db11b825f16b31c36fdcb46433897be485c3bf7a8a0e2fec9569236de14
+SHA512 (mailcommon-23.04.3.tar.xz) = 7095af13f822a5b8ff4df4ced6be504d19ac7d655703ad0ce43d993ecb34ee19e0b397ac2e0a30adf41ee7e85392eb58fe81c6610e52ca714c47a097f25ac2d1
+Size (mailcommon-23.04.3.tar.xz) = 758016 bytes
