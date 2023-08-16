@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/05/08 00:05:21 nikita Exp $
+$NetBSD: distinfo,v 1.27 2023/08/16 03:14:33 markd Exp $
 
-BLAKE2s (akonadi-1.13.0.tar.bz2) = bd77dc782e2c525405387b139562107f6c58eddc63652098c3a37ba549ff138d
-SHA512 (akonadi-1.13.0.tar.bz2) = 4bf2026c3807b5493c9f63d0c2bff2e6db00fbe97a4e2c2f707aaa3bf4a848b70dd9657d8fa1743690e8eeefd967de4895c1329c6bb817a1d023fe398285222f
-Size (akonadi-1.13.0.tar.bz2) = 294198 bytes
-SHA1 (patch-agentserver_CMakeLists.txt) = 01249fd521e23a8cb8c7119ad9c8cd9877338c54
-SHA1 (patch-cmake_modules_FindSqlite.cmake) = 3deefae90ec3485affeda4de283d4166d85c41fc
-SHA1 (patch-git_21465191) = 735e05bfa08c113ec196049dcea035f889cd7b6d
-SHA1 (patch-libs_xdgbasedirs.cpp) = eccf2de9445ea63eb09529e077d36f43303bd0ee
-SHA1 (patch-server_src_storage_dbconfigmysql.cpp) = 1c33f20c9f3a8f616aff66f0a6d39f5c80308709
-SHA1 (patch-server_src_storage_partstreamer.cpp) = c8de60299129673d5cfb699c8c73a9275088fd61
-SHA1 (patch-server_tests_unittest_partstreamertest.cpp) = 1068831b3abeb855f759941d5e38bd86ef89cf0a
+BLAKE2s (akonadi-23.04.3.tar.xz) = 1d155123217e725738402d9a08994c5c725350000d8e77a49ef051da34246ed8
+SHA512 (akonadi-23.04.3.tar.xz) = fc9729451ac8e39c4455748a5fd9fd1efd82573c21731d60dbad59bc02e75e3653bae6469b2d04b68c360fd5f23bc49914d07d849a71a71e1349bd76ae6c8dbc
+Size (akonadi-23.04.3.tar.xz) = 1668012 bytes
