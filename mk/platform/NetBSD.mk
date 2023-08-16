@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.76 2023/07/30 21:49:13 ryoon Exp $
+# $NetBSD: NetBSD.mk,v 1.77 2023/08/16 08:07:01 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -144,6 +144,12 @@ OPSYS_HAS_TIMERFD=	# defined
 # check for epoll(2) support, added in NetBSD-10.99.x
 .if exists(${_CROSS_DESTDIR:U}/usr/include/sys/epoll.h)
 OPSYS_HAS_EPOLL=	# defined
+.endif
+
+# CIRCLEQ support was removed in NetBSD 10 - some packages still
+# require it and need a shipped header.
+.if ${OPSYS_VERSION} < 099973
+OPSYS_HAS_CIRCLEQ=	# defined
 .endif
 
 # Register support for FORTIFY (with GCC)
