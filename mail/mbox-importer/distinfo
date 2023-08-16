@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 05:46:52 markd Exp $
+
+BLAKE2s (mbox-importer-23.04.3.tar.xz) = fe798abee40722a482933c455c9ac0fbff198671bb8c5ec9bf7413b4e81c71d5
+SHA512 (mbox-importer-23.04.3.tar.xz) = 334ffdc1ad70d674f11474fa02c317087739fcc28a879881fa5ae47863524fdc2b40c90b0a041a94513f01c4e493101c4e6f4f04b70688e858fbbe380f98cbb3
+Size (mbox-importer-23.04.3.tar.xz) = 30044 bytes
