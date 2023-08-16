@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:05:51 nia Exp $
+$NetBSD: distinfo,v 1.21 2023/08/16 21:22:25 markd Exp $
 
-BLAKE2s (ktorrent-4.3.1.tar.bz2) = 1d0923e61cec902b1c3816a3126fce17faeb3ad21ae36dccabfb478d44765dd8
-SHA512 (ktorrent-4.3.1.tar.bz2) = bf1fa144295cb00fccce3a511afe845bc7bf42d77d70205f5893686e7b1fa78c5799c46c7e4e04435ab6fdd4bc9b3b4a25bffb2c5538a25af36302c60742900e
-Size (ktorrent-4.3.1.tar.bz2) = 2943708 bytes
-SHA1 (patch-plugins_webinterface_httpresponseheader.cpp) = e9a32ad9af676a329079fb6cff3510baffacbf5e
-SHA1 (patch-plugins_webinterface_httpresponseheader.h) = f89ff3151b0153cf6bc58d379aa3a2981e760d9b
+BLAKE2s (ktorrent-23.04.3.tar.xz) = b813a21f17168ecb6a83222920f43448b30f8de83a38e95412c627e24081f55b
+SHA512 (ktorrent-23.04.3.tar.xz) = a803ed8963184f15029e034de4e6e25945d26bd3903afe838eaf0f0f74b3ccb53f1b7732694bda443b8d6bae5ca91f27622334fc628a41002eed7f8e3459c0e5
+Size (ktorrent-23.04.3.tar.xz) = 2150912 bytes
