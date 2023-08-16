@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/08/24 06:00:47 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/16 07:58:14 nia Exp $
 #
 
 DISTNAME=	generate-2.8
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
 
-OWNER=		darcy@NetBSD.org
+#OWNER=		darcy@NetBSD.org
 HOMEPAGE=	http://darcy.druid.net/readme-generate.html
 COMMENT=	Simple text pre-processor
 
@@ -20,6 +20,8 @@ LIBS.SunOS=	-lsocket -lnsl
 LIBS.QNX=	-lsocket
 
 DIST_SUBDIR=	generate-20151222
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/generate ${DESTDIR}${PREFIX}/bin
