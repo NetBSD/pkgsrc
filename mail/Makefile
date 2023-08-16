@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2023/08/16 05:43:10 markd Exp $
+# $NetBSD: Makefile,v 1.611 2023/08/16 05:46:52 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -162,6 +162,7 @@ SUBDIR+=	mairix
 SUBDIR+=	majordomo
 SUBDIR+=	mb2md
 SUBDIR+=	mblaze
+SUBDIR+=	mbox-importer
 SUBDIR+=	mdfrm
 SUBDIR+=	meli
 SUBDIR+=	mess822
