@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/11/23 21:06:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2023/08/16 10:08:22 markd Exp $
 bin/lancelot
 include/KDE/Lancelot/ActionListModel
 include/KDE/Lancelot/ActionListView
@@ -99,11 +99,9 @@ lib/kde4/kcm_krunner_audioplayercontrol.so
 lib/kde4/kcm_krunner_charrunner.so
 lib/kde4/kcm_krunner_dictionary.so
 lib/kde4/kcm_krunner_spellcheck.so
-lib/kde4/kcm_plasma_runner_events.so
 lib/kde4/krunner_audioplayercontrol.so
 lib/kde4/krunner_browserhistory.so
 lib/kde4/krunner_charrunner.so
-lib/kde4/krunner_contacts.so
 lib/kde4/krunner_converter.so
 lib/kde4/krunner_dictionary.so
 lib/kde4/krunner_katesessions.so
@@ -181,7 +179,6 @@ lib/kde4/plasma_potd_natgeoprovider.so
 lib/kde4/plasma_potd_oseiprovider.so
 lib/kde4/plasma_potd_wcpotdprovider.so
 lib/kde4/plasma_runner_datetime.so
-lib/kde4/plasma_runner_events.so
 lib/kde4/plasma_wallpaper_mandelbrot.so
 lib/kde4/plasma_wallpaper_pattern.so
 lib/kde4/plasma_wallpaper_potd.so
@@ -578,13 +575,10 @@ share/kde4/services/plasma-notes-default.desktop
 share/kde4/services/plasma-packagestructure-comic.desktop
 share/kde4/services/plasma-runner-audioplayercontrol.desktop
 share/kde4/services/plasma-runner-audioplayercontrol_config.desktop
-share/kde4/services/plasma-runner-contacts.desktop
 share/kde4/services/plasma-runner-converter.desktop
 share/kde4/services/plasma-runner-datetime.desktop
 share/kde4/services/plasma-runner-dictionary.desktop
 share/kde4/services/plasma-runner-dictionary_config.desktop
-share/kde4/services/plasma-runner-events.desktop
-share/kde4/services/plasma-runner-events_config.desktop
 share/kde4/services/plasma-runner-kopete.desktop
 share/kde4/services/plasma-runner-spellchecker.desktop
 share/kde4/services/plasma-runner-spellchecker_config.desktop
