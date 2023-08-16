@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/07/11 20:53:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/08/16 10:20:27 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -165,7 +165,6 @@ lib/kde4/kio_trash.so
 lib/kde4/kshorturifilter.so
 lib/kde4/kuriikwsfilter.so
 lib/kde4/kurisearchfilter.so
-lib/kde4/libexec/drkonqi
 lib/kde4/libexec/kcmremotewidgetshelper
 lib/kde4/libexec/kdeeject
 lib/kde4/libexec/kdesu
@@ -749,13 +748,6 @@ share/kde/apps/desktoptheme/oxygen/widgets/toolbox.svgz
 share/kde/apps/desktoptheme/oxygen/widgets/tooltip.svgz
 share/kde/apps/desktoptheme/oxygen/widgets/translucentbackground.svgz
 share/kde/apps/desktoptheme/oxygen/widgets/viewitem.svgz
-share/kde/apps/drkonqi/debuggers/external/gdbrc
-share/kde/apps/drkonqi/debuggers/external/kdbgrc
-share/kde/apps/drkonqi/debuggers/internal/dbxrc
-share/kde/apps/drkonqi/debuggers/internal/gdbrc
-share/kde/apps/drkonqi/debuggers/internal/kdbgwinrc
-share/kde/apps/drkonqi/mappings
-share/kde/apps/drkonqi/pics/crash.png
 share/kde/apps/hardwarenotifications/hardwarenotifications.notifyrc
 share/kde/apps/kcm_componentchooser/kcm_browser.desktop
 share/kde/apps/kcm_componentchooser/kcm_filemanager.desktop
@@ -765,7 +757,6 @@ share/kde/apps/kcm_componentchooser/kcm_wm.desktop
 share/kde/apps/kcm_phonon/listview-background.png
 share/kde/apps/kcmlocale/pics/background.png
 share/kde/apps/kconf_update/devicepreference.upd
-share/kde/apps/kconf_update/drkonqi-rename-config-section.upd
 share/kde/apps/kconf_update/kuriikwsfilter.upd
 share/kde/apps/kconf_update/kwallet-4.13.upd
 share/kde/apps/kde/kde.notifyrc

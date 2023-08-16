@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/16 10:20:27 markd Exp $
+
+Don't build drkonqi
+
+--- CMakeLists.txt.orig	2021-02-25 05:28:06.355694442 +0000
++++ CMakeLists.txt
+@@ -107,7 +107,7 @@ add_subdirectory(kimgio)
+ macro_optional_add_subdirectory(renamedlgplugins)
+ 
+ # UI Helper applications
+-add_subdirectory(drkonqi)
++#add_subdirectory(drkonqi)
+ add_subdirectory(kcmshell)
+ add_subdirectory(kdebugdialog)
+ macro_optional_add_subdirectory(khelpcenter)
