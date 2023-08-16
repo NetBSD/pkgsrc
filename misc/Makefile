@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2023/08/16 08:48:49 markd Exp $
+# $NetBSD: Makefile,v 1.624 2023/08/16 22:35:08 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -147,7 +147,6 @@ SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeartwork4
 SUBDIR+=	kdeedu-data
 SUBDIR+=	kdepim-runtime
-SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdialog
 SUBDIR+=	kdrill
