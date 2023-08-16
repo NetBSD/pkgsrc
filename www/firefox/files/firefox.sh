@@ -11,4 +11,4 @@ if [ -f /usr/X11R7/lib/libEGL.so ] && [ -z "$LD_PRELOAD" ] && \
     # by default, but it's not even worth looking at that on a system without
     # the fixed libGL
 fi
-exec /usr/pkg/lib/firefox/firefox "$@"
+exec @PREFIX@/lib/@MOZILLA@/@MOZILLA@ "$@"
