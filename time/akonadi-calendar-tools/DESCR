@@ -1,0 +1,9 @@
+CLI tools to manage akonadi calendars including calendarjanitor and
+konsolekalendar.
+
+konsolekalendar is a command line interface to calendars.
+It lets you view, insert, remove, or modify calendar events by way of
+the command line or from a scripting language.
+Additionally, konsolekalendar can create a new calendar,
+export a calendar to a variety of other formats, and
+import another calendar.
