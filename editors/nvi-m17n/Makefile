@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/06/28 11:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/08/16 08:07:41 nia Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040608
@@ -55,10 +55,9 @@ CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .endif
 
 post-patch:
-# DragonFly has no CIRCLEQ_* so it wants the provided <sys/queue.h>
-.if ${OPSYS} == "NetBSD" || \
-    ${OPSYS} == "FreeBSD" || \
-    ${OPSYS} == "OpenBSD"
+# want the provided legacy CIRCLEQ code on newer NetBSD versions,
+# don't want to obscure the system header on older versions
+.if ${OPSYS} == "NetBSD" && defined(OPSYS_HAS_CIRCLEQ)
 	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
