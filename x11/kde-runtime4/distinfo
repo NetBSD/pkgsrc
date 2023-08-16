@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:33:55 nia Exp $
+$NetBSD: distinfo,v 1.17 2023/08/16 10:20:27 markd Exp $
 
 BLAKE2s (kde-runtime-15.12.0.tar.xz) = 5089d35093c9a46c61f4af511a7f2fbb346f8cd638f9a3581d76a5294a4e0a58
 SHA512 (kde-runtime-15.12.0.tar.xz) = 453f0538147bb3ea95d4d9e6c503f128f30a383ebe139dcf6df411688d9c245779e931c609e38ca7b94b58907e496af3299646654f53518bf2cb7aa22c8f9137
 Size (kde-runtime-15.12.0.tar.xz) = 7903824 bytes
+SHA1 (patch-CMakeLists.txt) = dc15af452f774f3726573b21b3e9e5fbf328a5c5
 SHA1 (patch-ab) = f6af1c3e2502a91add9ceaa5375e76aee1e8c20c
 SHA1 (patch-ac) = fadc0c0d3b7c8f893a9249724f26e2fc2c7f0f1e
 SHA1 (patch-ad) = 285fbd72b3be665776acc61a55f3d65f35e338c4

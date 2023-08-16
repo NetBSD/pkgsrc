@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.150 2023/08/14 05:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2023/08/16 10:20:27 markd Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	82
+PKGREVISION=	83
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
@@ -12,6 +12,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 CMAKE_ARGS+=	-DWITH_LibSSH:BOOL=OFF
 CMAKE_ARGS+=	-DBUILD_khelpcenter=OFF
+CMAKE_ARGS+=	-DBUILD_drkonqi=OFF
 
 .include "../../mk/bsd.prefs.mk"
 CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
@@ -80,7 +81,9 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 # not the libssh the package wants
 #.include "../../security/libssh/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
-.include "../../misc/kdepimlibs4/buildlink3.mk"
+#.include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
