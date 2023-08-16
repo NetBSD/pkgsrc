@@ -1,0 +1,7 @@
+The libraries available in this KDE module are:
+
+- KChart.
+  A library for creating business charts.
+
+- KGantt.
+  A library for creating Gantt diagrams.
