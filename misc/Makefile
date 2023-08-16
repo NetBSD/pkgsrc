@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2023/08/16 05:23:51 markd Exp $
+# $NetBSD: Makefile,v 1.615 2023/08/16 05:50:04 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -262,6 +262,7 @@ SUBDIR+=	pciids
 SUBDIR+=	pdmenu
 SUBDIR+=	php-orangehrm
 SUBDIR+=	pick
+SUBDIR+=	pim-data-exporter
 SUBDIR+=	pimcommon
 SUBDIR+=	pinfo
 SUBDIR+=	pixd
