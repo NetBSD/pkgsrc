@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/05 07:29:15 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/16 00:38:05 gutteridge Exp $
 
 DISTNAME=	pypdf-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/py-pdf/pypdf
 COMMENT=	Pure-python PDF library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.9:../../devel/py-flit_core
 # full
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
