@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4943 2023/08/16 22:25:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4944 2023/08/16 22:43:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7167,3 +7167,19 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/pkgin to 23.8.0 [jperkin 2023-08-16]
 	Added devel/qore-process-module version 1.0.5 [nros 2023-08-16]
 	Removed chat/libtelepathy [wiz 2023-08-16]
+	Updated net/libktorrent to 23.04.3 [markd 2023-08-16]
+	Updated net/ktorrent to 23.04.3 [markd 2023-08-16]
+	Updated chat/konversation to 23.04.3 [markd 2023-08-16]
+	Removed meta-pkgs/kde-telepathy [markd 2023-08-16]
+	Removed chat/ktp-accounts-kcm [markd 2023-08-16]
+	Removed chat/ktp-approver [markd 2023-08-16]
+	Removed chat/ktp-auth-handler [markd 2023-08-16]
+	Removed chat/ktp-common-internals [markd 2023-08-16]
+	Removed chat/ktp-contact-list [markd 2023-08-16]
+	Removed chat/ktp-contact-runner [markd 2023-08-16]
+	Removed chat/ktp-desktop-applets [markd 2023-08-16]
+	Removed chat/ktp-filetransfer-handler [markd 2023-08-16]
+	Removed chat/ktp-kded-integration-module [markd 2023-08-16]
+	Removed chat/ktp-send-file [markd 2023-08-16]
+	Removed chat/ktp-text-ui [markd 2023-08-16]
+	Removed misc/kdepimlibs4 [markd 2023-08-16]
