@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/05/09 13:46:59 mef Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/16 07:52:04 nia Exp $
 
 DISTNAME=	flatbuffers-1.9.0
 CATEGORIES=	devel
@@ -11,10 +11,14 @@ COMMENT=	Memory efficient serialization library
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DFLATBUFFERS_BUILD_SHAREDLIB=ON
+
+USE_CXX_FEATURES+=	c++11
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/include/flatbuffers/flatbuffers.h.orig
