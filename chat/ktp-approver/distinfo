@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:17 nia Exp $
-
-BLAKE2s (ktp-approver-0.9.0.tar.bz2) = 548fdfea173a4a569d4d38a737305d97b36d11f2155433ac353634ba66e7c72b
-SHA512 (ktp-approver-0.9.0.tar.bz2) = 9b00d9ad2d962190f9c2e234976abccd275256356faea4c37768aeb1682694bc299cc057e25fd523f32a592611280f51003ec0e6a5a795a197cd9d8df2b6c58f
-Size (ktp-approver-0.9.0.tar.bz2) = 36866 bytes
