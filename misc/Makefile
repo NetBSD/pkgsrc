@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2023/08/16 03:40:23 markd Exp $
+# $NetBSD: Makefile,v 1.609 2023/08/16 04:31:06 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -13,6 +13,7 @@ SUBDIR+=	R-praise
 SUBDIR+=	abduco
 SUBDIR+=	akonadi-contacts
 SUBDIR+=	akonadi-notes
+SUBDIR+=	akonadi-search
 SUBDIR+=	ansiweather
 SUBDIR+=	aschord
 SUBDIR+=	ascii
