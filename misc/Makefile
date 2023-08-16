@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.619 2023/08/16 07:46:12 markd Exp $
+# $NetBSD: Makefile,v 1.620 2023/08/16 07:51:34 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -166,6 +166,7 @@ SUBDIR+=	kmag
 SUBDIR+=	kmousetool
 SUBDIR+=	kmouth
 SUBDIR+=	knotes
+SUBDIR+=	kontact
 SUBDIR+=	kontactinterface
 SUBDIR+=	kp
 SUBDIR+=	kquickcharts
