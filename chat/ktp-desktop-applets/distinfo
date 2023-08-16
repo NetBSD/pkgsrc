@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-desktop-applets-0.9.0.tar.bz2) = c22463ba6a30f579ec523f94c49e6e387f3a71513a913a55d05b06d7623b9fc2
-SHA512 (ktp-desktop-applets-0.9.0.tar.bz2) = 45e8e61b975bc64187352a4133e66c7c0b061873619017c4faf96dc05da8362748fb1f8193e495d998a0ffa03631f91887d4ddd0e2d50b57a3971b6cc8a8fc7b
-Size (ktp-desktop-applets-0.9.0.tar.bz2) = 64913 bytes

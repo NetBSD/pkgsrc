@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-kded-integration-module-0.9.0.tar.bz2) = c069e47787cd16122977be04a7b208960ba4aba10cd8978c6c7ff5633b578c0a
-SHA512 (ktp-kded-integration-module-0.9.0.tar.bz2) = eb597de2691ea4df29e85f720d4ead4d8ec03c86570eca19953b9410b9fc45a578ce87bbc1ae52f5d4c0601ca66dc5ca2cad65beb648dd9c93297b70f227cebe
-Size (ktp-kded-integration-module-0.9.0.tar.bz2) = 79387 bytes
