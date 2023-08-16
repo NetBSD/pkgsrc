@@ -1,0 +1,10 @@
+akonadiimportwizard allows to import emails, settings, addressbook and
+calendar data detected in your user account from the following mailers:
+
+Trojit, Evolution 1.x - 3.x, OS X Mail, Opera, Sylpheed,
+Thunderbird/Mozilla, The Bat!, Outlook Express, Balsa, Pegasus-Mail,
+and Claws Mail.
+
+Additionally you can use the manual import for KMail Archive,
+mbox (Unix, Evolution), kmail Maildirs, Icedove, Lotus Notes,
+Plain Text and Mailman Archives.
