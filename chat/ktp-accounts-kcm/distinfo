@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:17 nia Exp $
-
-BLAKE2s (ktp-accounts-kcm-0.9.0.tar.bz2) = 56ad4b64bfcd57fa4f6b7d7eb505c29cd2d822256c8ae95bbf60ef487780cce4
-SHA512 (ktp-accounts-kcm-0.9.0.tar.bz2) = fadc424be1a462d3f84e1845e02467880214345a6f47b79036cce48ac60454abf3c449026e4b830628848d8e7744d628e61877817dfe7ac9f1f80b6913823bc8
-Size (ktp-accounts-kcm-0.9.0.tar.bz2) = 264892 bytes

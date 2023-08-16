@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:18 nia Exp $
-
-BLAKE2s (ktp-contact-list-0.9.0.tar.bz2) = 5a9a6968ac81dc816c534c635dba999bc1c1a5f3c4b7de60faace64e30ffe73f
-SHA512 (ktp-contact-list-0.9.0.tar.bz2) = 32f61f01d36a8e3d18a4696c6f8f520287f61a2161f4e5323870194c97867a4e73b77c8cf90cb47fc86de238c0bad8c45e1851a198d5e84ccfc7750d5c5f7e46
-Size (ktp-contact-list-0.9.0.tar.bz2) = 140159 bytes
