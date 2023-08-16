@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/06/28 11:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2023/08/16 08:17:55 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -111,7 +111,14 @@ DEPENDS+=	krfb>=4.14.3:../../net/krfb
 DEPENDS+=	zeroconf-ioslave-4.14.3{,nb[0-9]*}:../../net/zeroconf-ioslave
 DEPENDS+=	kdenetwork-filesharing-4.14.3{,nb[0-9]*}:../../net/kdenetwork-filesharing
 DEPENDS+=	kdenetwork-strigi-analyzers-16.04.0{,nb[0-9]*}:../../net/kdenetwork-strigi-analyzers
-DEPENDS+=	kdepim4-4.14.10{,nb[0-9]*}:../../misc/kdepim4
+DEPENDS+=	akonadiconsole>=23.04.3:../../misc/akonadiconsole
+DEPENDS+=	akregator>=23.04.3:../../www/akregator
+DEPENDS+=	kaddressbook>=23.04.3:../../misc/kaddressbook
+DEPENDS+=	kalarm>=23.04.3:../../time/kalarm
+DEPENDS+=	kmail>=23.04.3:../../mail/kmail
+DEPENDS+=	knotes>=23.04.3:../../misc/knotes
+DEPENDS+=	kontact>=23.04.3:../../misc/kontact
+DEPENDS+=	korganizer>=23.04.3:../../misc/korganizer
 DEPENDS+=	kdepim-runtime4-4.14.10{,nb[0-9]*}:../../misc/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.14.3{,nb[0-9]*}:../../misc/kdeplasma-addons4
 DEPENDS+=	cervisia>=16.04.0:../../devel/cervisia
