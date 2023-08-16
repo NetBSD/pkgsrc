@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2023/08/16 05:52:47 markd Exp $
+# $NetBSD: Makefile,v 1.613 2023/08/16 06:18:59 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -127,6 +127,7 @@ SUBDIR+=	isync
 SUBDIR+=	ja-mh
 SUBDIR+=	jchkmail
 SUBDIR+=	kimap
+SUBDIR+=	kmail-account-wizard
 SUBDIR+=	kmailtransport
 SUBDIR+=	kmbox
 SUBDIR+=	kmime
