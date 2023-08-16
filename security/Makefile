@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.911 2023/08/05 00:29:38 markd Exp $
+# $NetBSD: Makefile,v 1.912 2023/08/16 08:34:41 markd Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -160,6 +160,7 @@ SUBDIR+=	kdesu
 SUBDIR+=	keepassxc
 SUBDIR+=	keychain
 SUBDIR+=	kgpg
+SUBDIR+=	kleopatra
 SUBDIR+=	knc
 SUBDIR+=	kpcli
 SUBDIR+=	kstart
