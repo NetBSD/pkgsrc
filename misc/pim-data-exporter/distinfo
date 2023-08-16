@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 05:50:04 markd Exp $
+
+BLAKE2s (pim-data-exporter-23.04.3.tar.xz) = 5cb1d54f9ced922b20e53a436d8f6084b68110663138312ae2c9fb3ed15edda2
+SHA512 (pim-data-exporter-23.04.3.tar.xz) = 03244e2a4bbea3bed4cca739cfd19345bf8107cb2f350d6789aefdef426fde2f2d3adc569cd9b70fb64789eb14c54568b5303d433d8a0c86e9c4f524b7941621
+Size (pim-data-exporter-23.04.3.tar.xz) = 425216 bytes
