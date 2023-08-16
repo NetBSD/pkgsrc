@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/16 05:23:52 markd Exp $
+
+BLAKE2s (grantlee-editor-23.04.3.tar.xz) = d8b8f1e2678ed1fa873dba0adf6fc6b913cfb04f49d1f3cc9b379a979180d94d
+SHA512 (grantlee-editor-23.04.3.tar.xz) = 4c1ecf77259741296c081387c53d42e28c1a34bcf959e0810e4bef3b5c561fe6d3c05f95b7305cf787ba7d3612e52afc00130e1bf577ae6967c299e00225a5d9
+Size (grantlee-editor-23.04.3.tar.xz) = 117560 bytes
