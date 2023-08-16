@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1021 2023/08/06 05:25:47 pin Exp $
+# $NetBSD: Makefile,v 1.1022 2023/08/16 07:32:15 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -297,6 +297,7 @@ SUBDIR+=	kde-base-artwork
 SUBDIR+=	kdegraphics-mobipocket
 SUBDIR+=	kdegraphics-strigi-analyzer
 SUBDIR+=	kdegraphics-thumbnailers
+SUBDIR+=	kdiagram
 SUBDIR+=	kgamma
 SUBDIR+=	kiconthemes
 SUBDIR+=	kimageannotator
