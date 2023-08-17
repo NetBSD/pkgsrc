@@ -1,8 +1,7 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.14 2022/08/22 19:08:22 tnn Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.15 2023/08/17 02:15:53 gutteridge Exp $
 #
 # used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
-# used by sysutils/u-boot-rockpro64-ayufan/Makefile
 # used by sysutils/u-boot-pinebook-pro/Makefile
 
 # Common makefile fragment for rockchip based u-boot targets.
