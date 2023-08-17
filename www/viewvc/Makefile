@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2023/08/17 19:59:00 hauke Exp $
+# $NetBSD: Makefile,v 1.43 2023/08/17 21:26:49 hauke Exp $
 
 DISTNAME=	viewvc-1.2.3
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewvc/}
 
@@ -35,7 +36,8 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Fixing configuration files.
 SUBST_FILES.conf=	conf/viewvc.conf.dist
-SUBST_VARS.conf=	VIEWVCDIR PREFIX PHP_OPT CVSGRAPH_OPT
+SUBST_VARS.conf=	PREFIX PKG_SYSCONFDIR
+SUBST_VARS.conf+=	VIEWVCDIR PHP_OPT CVSGRAPH_OPT
 .if defined(RCS_PKG) && ${RCS_PKG} == "YES"
 SUBST_SED.conf+=	-e "s|@RCS_PREFIX@|${PREFIX}|g"
 .else
