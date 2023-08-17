@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2023/07/28 20:47:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2023/08/17 02:43:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
@@ -15,7 +15,7 @@ CARGO_CRATE_DEPENDS+=	clap-3.1.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.2.0
 CARGO_CRATE_DEPENDS+=	const_format-0.2.23
 CARGO_CRATE_DEPENDS+=	const_format_proc_macros-0.2.22
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.4
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.8
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.8
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.8
@@ -36,11 +36,13 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
 CARGO_CRATE_DEPENDS+=	hashbrown-0.12.3
 CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
+CARGO_CRATE_DEPENDS+=	humansize-2.1.3
 CARGO_CRATE_DEPENDS+=	humantime-1.3.0
 CARGO_CRATE_DEPENDS+=	indexmap-1.7.0
 CARGO_CRATE_DEPENDS+=	itertools-0.10.3
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.139
+CARGO_CRATE_DEPENDS+=	libm-0.2.7
 CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.24
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.9
 CARGO_CRATE_DEPENDS+=	log-0.4.17
@@ -69,8 +71,8 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.66
 CARGO_CRATE_DEPENDS+=	quick-error-1.2.3
 CARGO_CRATE_DEPENDS+=	quote-1.0.32
 CARGO_CRATE_DEPENDS+=	radix-heap-0.4.2
-CARGO_CRATE_DEPENDS+=	rayon-1.6.1
-CARGO_CRATE_DEPENDS+=	rayon-core-1.10.1
+CARGO_CRATE_DEPENDS+=	rayon-1.7.0
+CARGO_CRATE_DEPENDS+=	rayon-core-1.11.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	regex-1.7.3
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
