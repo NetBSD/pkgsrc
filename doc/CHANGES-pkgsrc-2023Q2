@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.8 2023/08/16 18:59:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.9 2023/08/17 20:07:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -77,4 +77,7 @@ chat/ejabberd: functionality fix
 
 Pullup ticket #6790 - requested by gdt
 net/mosquitto: security fix
+
+Pullup ticket #6791 - requested by manu
+security/opensc: fix regression
 
