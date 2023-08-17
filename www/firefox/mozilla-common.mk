@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.260 2023/08/11 14:00:03 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.261 2023/08/17 20:43:43 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -226,7 +226,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 # In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
 CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 
-.include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
