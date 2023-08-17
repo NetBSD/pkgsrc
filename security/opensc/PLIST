@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/02/21 17:23:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.14.4.1 2023/08/17 20:06:53 bsiegert Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
@@ -11,7 +11,7 @@ bin/netkey-tool
 bin/openpgp-tool
 bin/opensc-asn1
 bin/opensc-explorer
-bin/opensc-notify
+${NOTIFY}bin/opensc-notify
 bin/opensc-tool
 bin/piv-tool
 bin/pkcs11-register

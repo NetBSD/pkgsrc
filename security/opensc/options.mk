@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/02/21 17:23:07 adam Exp $
+# $NetBSD: options.mk,v 1.6.4.1 2023/08/17 20:06:53 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
 
@@ -6,6 +6,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
 # that exactly one be chosen.
 PKG_OPTIONS_REQUIRED_GROUPS=	cardreader
 PKG_OPTIONS_GROUP.cardreader=	pcsc-lite openct
+
+# The notify option will cause programs not linked with libpthread
+# to abort when loading the opensc-pkcs11.so module. The most notable
+# example of such a program is ssh(1).
+PKG_SUPPORTED_OPTIONS=		notify
 PKG_SUGGESTED_OPTIONS=		pcsc-lite
 
 .include "../../mk/bsd.options.mk"
@@ -37,4 +42,13 @@ CONFIGURE_ARGS+=	--disable-pcsc
 CONFIGURE_ARGS+=	--enable-openct
 .else
 CONFIGURE_ARGS+=	--disable-openct
+.endif
+
+.if !empty(PKG_OPTIONS:Mnotify)
+.include "../../devel/glib2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-notify
+PLIST_SUBST+=		NOTIFY=""
+.else
+CONFIGURE_ARGS+=	--disable-notify
+PLIST_SUBST+=		NOTIFY="@comment "
 .endif
