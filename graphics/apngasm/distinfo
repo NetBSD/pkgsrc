@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/17 20:48:44 tsutsui Exp $
+
+BLAKE2s (apngasm-3.1.10.tar.gz) = 3a0c37422e74267832c3523022af45e675dba78726b664ed5ed8f0d1dab35e7e
+SHA512 (apngasm-3.1.10.tar.gz) = 670d75251ddc771f9b2b4a1f401066f2012a6814bec781b918f1d9e8960835654c66c3d19b4c8920d5186d85af12cdc4bba8b61c8f3d349b4fc70513d8ecb34e
+Size (apngasm-3.1.10.tar.gz) = 620031 bytes
