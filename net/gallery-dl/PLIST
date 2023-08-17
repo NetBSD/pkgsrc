@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2023/03/19 11:56:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.64 2023/08/17 21:41:45 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -57,12 +57,12 @@ ${PYSITELIB}/gallery_dl/extractor/35photo.pyo
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.py
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/3dbooru.pyo
-${PYSITELIB}/gallery_dl/extractor/420chan.py
-${PYSITELIB}/gallery_dl/extractor/420chan.pyc
-${PYSITELIB}/gallery_dl/extractor/420chan.pyo
 ${PYSITELIB}/gallery_dl/extractor/4chan.py
 ${PYSITELIB}/gallery_dl/extractor/4chan.pyc
 ${PYSITELIB}/gallery_dl/extractor/4chan.pyo
+${PYSITELIB}/gallery_dl/extractor/4chanarchives.py
+${PYSITELIB}/gallery_dl/extractor/4chanarchives.pyc
+${PYSITELIB}/gallery_dl/extractor/4chanarchives.pyo
 ${PYSITELIB}/gallery_dl/extractor/500px.py
 ${PYSITELIB}/gallery_dl/extractor/500px.pyc
 ${PYSITELIB}/gallery_dl/extractor/500px.pyo
@@ -90,9 +90,6 @@ ${PYSITELIB}/gallery_dl/extractor/aryion.pyo
 ${PYSITELIB}/gallery_dl/extractor/bbc.py
 ${PYSITELIB}/gallery_dl/extractor/bbc.pyc
 ${PYSITELIB}/gallery_dl/extractor/bbc.pyo
-${PYSITELIB}/gallery_dl/extractor/bcy.py
-${PYSITELIB}/gallery_dl/extractor/bcy.pyc
-${PYSITELIB}/gallery_dl/extractor/bcy.pyo
 ${PYSITELIB}/gallery_dl/extractor/behance.py
 ${PYSITELIB}/gallery_dl/extractor/behance.pyc
 ${PYSITELIB}/gallery_dl/extractor/behance.pyo
@@ -261,6 +258,15 @@ ${PYSITELIB}/gallery_dl/extractor/issuu.pyo
 ${PYSITELIB}/gallery_dl/extractor/itaku.py
 ${PYSITELIB}/gallery_dl/extractor/itaku.pyc
 ${PYSITELIB}/gallery_dl/extractor/itaku.pyo
+${PYSITELIB}/gallery_dl/extractor/itchio.py
+${PYSITELIB}/gallery_dl/extractor/itchio.pyc
+${PYSITELIB}/gallery_dl/extractor/itchio.pyo
+${PYSITELIB}/gallery_dl/extractor/jpgfish.py
+${PYSITELIB}/gallery_dl/extractor/jpgfish.pyc
+${PYSITELIB}/gallery_dl/extractor/jpgfish.pyo
+${PYSITELIB}/gallery_dl/extractor/jschan.py
+${PYSITELIB}/gallery_dl/extractor/jschan.pyc
+${PYSITELIB}/gallery_dl/extractor/jschan.pyo
 ${PYSITELIB}/gallery_dl/extractor/kabeuchi.py
 ${PYSITELIB}/gallery_dl/extractor/kabeuchi.pyc
 ${PYSITELIB}/gallery_dl/extractor/kabeuchi.pyo
@@ -276,15 +282,15 @@ ${PYSITELIB}/gallery_dl/extractor/khinsider.pyo
 ${PYSITELIB}/gallery_dl/extractor/komikcast.py
 ${PYSITELIB}/gallery_dl/extractor/komikcast.pyc
 ${PYSITELIB}/gallery_dl/extractor/komikcast.pyo
+${PYSITELIB}/gallery_dl/extractor/lensdump.py
+${PYSITELIB}/gallery_dl/extractor/lensdump.pyc
+${PYSITELIB}/gallery_dl/extractor/lensdump.pyo
 ${PYSITELIB}/gallery_dl/extractor/lexica.py
 ${PYSITELIB}/gallery_dl/extractor/lexica.pyc
 ${PYSITELIB}/gallery_dl/extractor/lexica.pyo
 ${PYSITELIB}/gallery_dl/extractor/lightroom.py
 ${PYSITELIB}/gallery_dl/extractor/lightroom.pyc
 ${PYSITELIB}/gallery_dl/extractor/lightroom.pyo
-${PYSITELIB}/gallery_dl/extractor/lineblog.py
-${PYSITELIB}/gallery_dl/extractor/lineblog.pyc
-${PYSITELIB}/gallery_dl/extractor/lineblog.pyo
 ${PYSITELIB}/gallery_dl/extractor/livedoor.py
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyc
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyo
@@ -315,6 +321,9 @@ ${PYSITELIB}/gallery_dl/extractor/manganelo.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangapark.py
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangapark.pyo
+${PYSITELIB}/gallery_dl/extractor/mangaread.py
+${PYSITELIB}/gallery_dl/extractor/mangaread.pyc
+${PYSITELIB}/gallery_dl/extractor/mangaread.pyo
 ${PYSITELIB}/gallery_dl/extractor/mangasee.py
 ${PYSITELIB}/gallery_dl/extractor/mangasee.pyc
 ${PYSITELIB}/gallery_dl/extractor/mangasee.pyo
@@ -342,9 +351,6 @@ ${PYSITELIB}/gallery_dl/extractor/myhentaigallery.pyo
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.py
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyc
 ${PYSITELIB}/gallery_dl/extractor/myportfolio.pyo
-${PYSITELIB}/gallery_dl/extractor/nana.py
-${PYSITELIB}/gallery_dl/extractor/nana.pyc
-${PYSITELIB}/gallery_dl/extractor/nana.pyo
 ${PYSITELIB}/gallery_dl/extractor/naver.py
 ${PYSITELIB}/gallery_dl/extractor/naver.pyc
 ${PYSITELIB}/gallery_dl/extractor/naver.pyo
@@ -456,6 +462,9 @@ ${PYSITELIB}/gallery_dl/extractor/senmanga.pyo
 ${PYSITELIB}/gallery_dl/extractor/sexcom.py
 ${PYSITELIB}/gallery_dl/extractor/sexcom.pyc
 ${PYSITELIB}/gallery_dl/extractor/sexcom.pyo
+${PYSITELIB}/gallery_dl/extractor/shimmie2.py
+${PYSITELIB}/gallery_dl/extractor/shimmie2.pyc
+${PYSITELIB}/gallery_dl/extractor/shimmie2.pyo
 ${PYSITELIB}/gallery_dl/extractor/shopify.py
 ${PYSITELIB}/gallery_dl/extractor/shopify.pyc
 ${PYSITELIB}/gallery_dl/extractor/shopify.pyo
@@ -522,12 +531,18 @@ ${PYSITELIB}/gallery_dl/extractor/unsplash.pyo
 ${PYSITELIB}/gallery_dl/extractor/uploadir.py
 ${PYSITELIB}/gallery_dl/extractor/uploadir.pyc
 ${PYSITELIB}/gallery_dl/extractor/uploadir.pyo
+${PYSITELIB}/gallery_dl/extractor/urlshortener.py
+${PYSITELIB}/gallery_dl/extractor/urlshortener.pyc
+${PYSITELIB}/gallery_dl/extractor/urlshortener.pyo
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.py
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyc
 ${PYSITELIB}/gallery_dl/extractor/vanillarock.pyo
 ${PYSITELIB}/gallery_dl/extractor/vichan.py
 ${PYSITELIB}/gallery_dl/extractor/vichan.pyc
 ${PYSITELIB}/gallery_dl/extractor/vichan.pyo
+${PYSITELIB}/gallery_dl/extractor/vipergirls.py
+${PYSITELIB}/gallery_dl/extractor/vipergirls.pyc
+${PYSITELIB}/gallery_dl/extractor/vipergirls.pyo
 ${PYSITELIB}/gallery_dl/extractor/vk.py
 ${PYSITELIB}/gallery_dl/extractor/vk.pyc
 ${PYSITELIB}/gallery_dl/extractor/vk.pyo
