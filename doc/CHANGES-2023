@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4949 2023/08/17 06:40:50 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4950 2023/08/17 06:41:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7188,3 +7188,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.10 [pin 2023-08-17]
 	Updated textproc/typst to 0.7.0 [pin 2023-08-17]
 	Updated sysutils/lla to 0.1.4 [pin 2023-08-17]
+	Updated misc/tui-journal to 0.3.1 [pin 2023-08-17]
