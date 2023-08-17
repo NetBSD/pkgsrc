@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/08/14 05:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2023/08/17 14:42:44 wiz Exp $
 
 DISTNAME=	mypaint-2.0.0
 PKGREVISION=	14
@@ -19,6 +19,9 @@ TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 EGG_NAME=	MyPaint-${PKGVERSION_NOREV}a0
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+# might be fixed by:
+# https://github.com/mypaint/mypaint/commit/032a155b72f2b021f66a994050d83f07342d04af
+PYTHON_VERSIONS_INCOMPATIBLE+=	311
 
 USE_LANGUAGES=	c c++
 
