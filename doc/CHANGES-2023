@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4958 2023/08/17 21:47:38 leot Exp $
+$NetBSD: CHANGES-2023,v 1.4959 2023/08/17 21:55:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7197,3 +7197,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gh to 2.32.1 [leot 2023-08-17]
 	Updated net/gallery-dl to 1.25.8 [leot 2023-08-17]
 	Updated misc/rlwrap to 0.46.1 [leot 2023-08-17]
+	Updated net/socat to 1.7.4.4 [leot 2023-08-17]
