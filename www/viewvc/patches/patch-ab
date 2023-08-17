@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2020/03/17 22:14:15 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2023/08/17 21:26:49 hauke Exp $
 
---- conf/viewvc.conf.dist.orig	2020-03-17 18:04:41.000000000 +0000
+Make paths adaptable for pkgsrc installation.
+
+--- conf/viewvc.conf.dist.orig	2023-01-04 14:48:34.000000000 +0000
 +++ conf/viewvc.conf.dist
-@@ -219,6 +219,7 @@
+@@ -218,7 +218,8 @@
+ ##                    /etc/mime.types,
  ##                    /usr/local/apache2/conf/mime.types
  ##
- #mime_types_files = mimetypes.conf
-+#mime_types_file = @PREFIX@/etc/httpd/mime.types
+-#mime_types_files = mimetypes.conf
++#mime_types_files = mimetypes.conf,
++#                   @PKG_SYSCONFDIR@/httpd/mime.types
  
  ## address: The address of the local repository maintainer.  (This
  ## option is provided only as a convenience for ViewVC installations
