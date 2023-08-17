@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/08/03 18:25:05 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/17 06:40:24 pin Exp $
 
-DISTNAME=	lla-0.1.3
+DISTNAME=	lla-0.1.4
 CATEGORIES=	sysutils
-MASTER_SITES=	https://static.crates.io/crates/lla/
-EXTRACT_SUFX=	.crate
+MASTER_SITES=	${MASTER_SITE_GITHUB:=triyanox/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/triyanox/lla/

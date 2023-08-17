@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/08/03 18:25:05 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/08/17 06:40:24 pin Exp $
 
 BLAKE2s (android-tzdata-0.1.1.crate) = fbf2ed4b7b8c2d0aac069c9d638b0010da9da1cd5dec9a2495a3b396966e55fd
 SHA512 (android-tzdata-0.1.1.crate) = 4294024c21ddd0090c42c8eedf708d40d917f55ad5a4cb7aa3e64cfb6551b6df60f2e36bc08620c1d2fc8c7ba7207411518ee5c8635f60ed8ad9efdd458a2077
@@ -57,9 +57,9 @@ Size (js-sys-0.3.64.crate) = 80313 bytes
 BLAKE2s (libc-0.2.147.crate) = 84b4227ac3264ec16af0072f1783c1a0bba74399caaa382bc03ae681dbc0fc82
 SHA512 (libc-0.2.147.crate) = bfb3c230b59d623b98726f92b7c3f897b47ba3d22fe9834c15f5b4c1b662289aba35a0ae3acfc704ad74696db8c691ee007b9cc6fa03ae65a18eb6bedc81931e
 Size (libc-0.2.147.crate) = 686772 bytes
-BLAKE2s (lla-0.1.3.crate) = 915141f36988249ced54411990fd5ad8048033289748d30a16fda6906e8310d6
-SHA512 (lla-0.1.3.crate) = baecfd32f4332dc3b1822906f37eb8af82b91f989ad4f12e219fff9a549e399ee58a7b33b3def68d7442c91de1ac853fda3ec93ec1d656d4e42c574c69a37304
-Size (lla-0.1.3.crate) = 12000 bytes
+BLAKE2s (lla-0.1.4.tar.gz) = b1ad1865762dfbcedaed3be0e310c0aa1fbc13491c95327f6fed98dda405f8c0
+SHA512 (lla-0.1.4.tar.gz) = 4b4e1e23bfc906a3d925d551251314204376582f6d6cf56341dbbbd864134867565abcbecafbf987b8edf0507ba1d7502af5fa5b839cd0484da01a70a7db8bbf
+Size (lla-0.1.4.tar.gz) = 6698907 bytes
 BLAKE2s (log-0.4.19.crate) = 5a7ef8dfdbca92bfaff68a8daf39c8b50e960a67cbcd58f3369ba40f2c750259
 SHA512 (log-0.4.19.crate) = 8f11ca6f5a99b61a5f3baeb7a23b7a879b3a5bed666337936bd1d8794864d14a6c4f0747d03505831783f15d8c14ebcf507267915481dfb1b32188b8ab36a038
 Size (log-0.4.19.crate) = 38073 bytes
