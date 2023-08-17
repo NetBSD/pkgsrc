@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/17 14:45:17 wiz Exp $
 
 DISTNAME=	libime-1.0.4
+PKGREVISION=	8
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/libime/
 EXTRACT_SUFX=	.tar.xz
-PKGREVISION=	8
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/fcitx/libime
 COMMENT=	Generic inputmethod implementation library
 LICENSE=	gnu-lgpl-v2.1
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 DICTDISTFILES+=	lm_sc.3gm.arpa-20140820.tar.bz2
 #ICTDISTFILES+=	dict.utf8-20200715.tar.xz
@@ -25,10 +26,11 @@ DISTFILES+=	${f}
 SITES.${f}=	https://download.fcitx-im.org/data/
 .endfor
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+# possibly fixed in 1.0.17?
+PYTHON_VERSIONS_INCOMPATIBLE+=	311
 
 post-extract:
 .for f in ${DICTDISTFILES}
