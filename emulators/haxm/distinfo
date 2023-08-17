@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2022/02/05 03:25:56 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2023/08/17 21:36:20 gutteridge Exp $
 
 BLAKE2s (haxm-7.7.0.tar.gz) = 333ceb5de11037552de8b330ed90500ec0a8e96d48acd11d84ba2354b888ca79
 SHA512 (haxm-7.7.0.tar.gz) = 195bd0deb1b0c83ffbcff87a9f5f88029cf0169ef2bcb86219c4f1f4fa34ef4297b1b65376ffd44627f23794231a914d5c059acd17068554591ccd0c7aa0d74e
 Size (haxm-7.7.0.tar.gz) = 367425 bytes
 SHA1 (patch-include_netbsd_hax__netbsd.h) = d1210e10e0f425ea7fb08f9aa8485128bc55c64b
+SHA1 (patch-platforms_netbsd_hax__entry.c) = 7ce2042644a11c7aaabf51fec2e582db63053df1
