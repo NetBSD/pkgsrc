@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/17 20:48:44 tsutsui Exp $
+bin/apngasm
+include/apngasm-conf.h
+include/apngasm-version.h
+include/apngasm.h
+include/apngframe.h
+lib/libapngasm.a
+lib/libapngasm.so
+lib/pkgconfig/libapngasm.pc
+man/man1/apngasm.1
