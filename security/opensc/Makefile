@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/06/06 12:42:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2023/08/17 20:06:53 bsiegert Exp $
 
 DISTNAME=	opensc-0.23.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 
@@ -20,7 +20,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-autostart-items
 CONFIGURE_ARGS+=	--disable-cmocka
 CONFIGURE_ARGS+=	--disable-strict  # avoid -Werror
-CONFIGURE_ARGS+=	--enable-notify
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # The stylesheets are not found without this.
 CONFIGURE_ARGS+=	--with-xsl-stylesheetsdir=${PREFIX}/share/xsl/docbook
@@ -37,7 +36,6 @@ INSTALLATION_DIRS=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/opensc.conf.example ${DESTDIR}${EGDIR}/opensc.conf
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 # build tools for doc; should be TOOLS
