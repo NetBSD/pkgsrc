@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/08/14 05:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/17 14:38:06 wiz Exp $
 
 DISTNAME=	profanity-0.12.1
 PKGREVISION=	7
@@ -17,6 +17,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 USE_CURSES=	wide
+
+# probably fixed in 0.14.0
+PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
