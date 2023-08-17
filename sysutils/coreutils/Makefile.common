@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2023/08/01 11:13:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.29 2023/08/17 10:05:00 jperkin Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -50,6 +50,11 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
 # Identify Solaris vs illumos where appropriate
 .if ${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris"
 CONFIGURE_ENV+=		gl_cv_host_operating_system=illumos
+.endif
+
+# Ignore required y2038 support
+.if ${MACHINE_PLATFORM:MSunOS-*-i386}
+CONFIGURE_ENV+=		ac_cv_sys_year2038_opts="none needed"
 .endif
 
 .if ${MACHINE_PLATFORM:MDarwin-[9].*-*}
