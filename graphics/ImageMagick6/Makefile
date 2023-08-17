@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/07/22 10:09:06 adam Exp $
+# $NetBSD: Makefile,v 1.58 2023/08/17 08:33:47 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -28,6 +28,8 @@ PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 PKGCONFIG_OVERRIDE+=	magick/MagickCore.pc.in
 PKGCONFIG_OVERRIDE+=	wand/MagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	wand/Wand.pc.in
+
+LDFLAGS.SunOS+=		-lsendfile
 
 SUBST_CLASSES+=		pkgcfg
 SUBST_FILES.pkgcfg=	${PKGCONFIG_OVERRIDE} Magick++/bin/Magick++-config.in
