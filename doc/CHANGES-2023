@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4952 2023/08/17 20:44:05 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.4953 2023/08/17 20:44:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7191,3 +7191,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/tui-journal to 0.3.1 [pin 2023-08-17]
 	Updated www/viewvc to 1.2.3 [hauke 2023-08-17]
 	Updated www/firefox to 116.0.3 [ryoon 2023-08-17]
+	Updated www/firefox-l10n to 116.0.3 [ryoon 2023-08-17]
