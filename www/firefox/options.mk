@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.74 2023/07/22 09:00:24 nia Exp $
+# $NetBSD: options.mk,v 1.75 2023/08/17 20:43:43 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
-PKG_SUPPORTED_OPTIONS+=	dbus
+PKG_SUPPORTED_OPTIONS+=	dbus speechd
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio sunaudio jack
 
 .if ${OPSYS} == "Linux"
@@ -91,6 +91,13 @@ AUDIO_BACKENDS+=	jack
 CONFIGURE_ARGS+=	--enable-webrtc
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
+.endif
+
+.if !empty(PKG_OPTIONS:Mspeechd)
+.include "../../audio/speech-dispatcher/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-synth-speechd
+.else
+CONFIGURE_ARGS+=	--disable-synth-speechd
 .endif
 
 CONFIGURE_ARGS+=	--audio-backends=${AUDIO_BACKENDS:ts,}
