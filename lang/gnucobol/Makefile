@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/07/31 16:43:09 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/17 09:36:18 fcambus Exp $
 #
 
 DISTNAME=	gnucobol-3.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnucobol/}
 
@@ -33,6 +34,8 @@ SUBST_SED.bdb=		-e 's,db-$$COB_BDB_HEADER,${BDB_TYPE},g'
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
