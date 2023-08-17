@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/01/29 21:18:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2023/08/17 14:48:24 wiz Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		24
@@ -14,7 +14,8 @@ USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-LDFLAGS.DragonFly=	-lintl -lfontconfig
+LDFLAGS+=		-lintl
+LDFLAGS.DragonFly=	-lfontconfig
 LDFLAGS.SunOS+=		-lresolv
 
 CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
@@ -60,6 +61,7 @@ INSTALLATION_DIRS+=	share/pixmaps/wdm share/examples/wdm
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
