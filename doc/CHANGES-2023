@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4961 2023/08/18 09:15:19 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.4962 2023/08/18 09:59:11 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/socat to 1.7.4.4 [leot 2023-08-17]
 	Updated emulators/nono to 0.6.2 [jun 2023-08-18]
 	Updated emulators/PC6001VX to 4.1.4 [tsutsui 2023-08-18]
+	Added devel/qore-magic-module version 1.0.1 [nros 2023-08-18]
