@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2023/08/14 05:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2023/08/18 13:08:40 gdt Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -12,7 +12,7 @@
 # update to 20.
 DISTNAME=	nextcloud-26.0.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -45,7 +45,10 @@ USE_TOOLS+=	bash:run pax perl:run
 NC_DIR=		share/nextcloud
 INSTALLATION_DIRS=	${NC_DIR}
 
-PHP_VERSIONS_INCOMPATIBLE=	56 # php-sodium
+# Nextcloud "documents" in lib/versioncheck.php that:
+#   nextcloud requires at least PHP 8.0
+#   nextcloud it not compatible with PHP 8.3 or higher
+PHP_VERSIONS_INCOMPATIBLE=	56 74
 
 # for php interpreter
 CHECK_INTERPRETER_SKIP+=	${NC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
