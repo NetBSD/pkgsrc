@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2023/08/17 21:26:49 hauke Exp $
+$NetBSD: patch-conf_viewvc.conf.dist,v 1.1 2023/08/18 22:20:49 hauke Exp $
 
 Make paths adaptable for pkgsrc installation.
 
@@ -9,48 +9,60 @@ Make paths adaptable for pkgsrc installation.
  ##                    /usr/local/apache2/conf/mime.types
  ##
 -#mime_types_files = mimetypes.conf
-+#mime_types_files = mimetypes.conf,
-+#                   @PKG_SYSCONFDIR@/httpd/mime.types
++#mime_types_files = @PKG_SYSCONFDIR@/mimetypes.conf,
++#                   @PKG_SYSCONFBASE@/httpd/mime.types
  
  ## address: The address of the local repository maintainer.  (This
  ## option is provided only as a convenience for ViewVC installations
-@@ -313,6 +314,7 @@
+@@ -312,7 +313,7 @@
+ ## Example:
  ## rcs_dir = /usr/bin/
  ##
- #rcs_dir =
-+rcs_dir = @RCS_PREFIX@/bin/
+-#rcs_dir =
++rcs_dir = @RCSPATH@/
  
  ## cvsnt: Location of cvsnt program.  ViewVC can use CVSNT (www.cvsnt.org)
  ## instead of the RCS utilities to retrieve information from CVS
-@@ -335,6 +337,7 @@
+@@ -334,7 +335,7 @@
+ ## Example:
  ## diff = /usr/bin/diff
  ##
- #diff = 
-+svn = @PREFIX@/bin/
+-#diff = 
++diff = @DIFF@
  
  ## cvsgraph: Location of the CvsGraph program, a graphical CVS version
  ## graph generator (see options.use_cvsgraph).
-@@ -342,7 +345,7 @@
+@@ -342,7 +343,7 @@
  ## Example:
  ## cvsgraph = /usr/local/bin/cvsgraph
  ##
 -#cvsgraph =
-+cvsgraph = @PREFIX@/bin/
++cvsgraph = @PREFIX@/bin/cvsgraph
  
  
  ##---------------------------------------------------------------------------
-@@ -754,12 +757,14 @@
+@@ -662,7 +663,7 @@
+ ## template_dir = templates/default
+ ## template_dir = /opt/custom-viewvc-templates/templates
+ #
+-#template_dir = templates/default
++template_dir = @PREFIX@/@VIEWVCDIR@/templates/default
+ 
+ ## docroot: Web path to a directory that contains ViewVC static files
+ ## (stylesheets, images, etc.)  If set, static files will get
+@@ -753,13 +754,13 @@
+ 
  ## use_cvsgraph: Use CvsGraph to offer visual graphs of CVS revision history.
  ##
- #use_cvsgraph = 0
+-#use_cvsgraph = 0
 +use_cvsgraph = @CVSGRAPH_OPT@
  
  ## cvsgraph_conf: Location of the customized cvsgraph configuration file.
  ## May be specified as an absolute path or as a path relative to this
  ## configuration file.
  ##
- #cvsgraph_conf = cvsgraph.conf
-+cvsgraph_conf = @PREFIX@/@VIEWVCDIR@/cvsgraph.conf
+-#cvsgraph_conf = cvsgraph.conf
++cvsgraph_conf = @PKG_SYSCONFDIR@/cvsgraph.conf
  
  ## allowed_cvsgraph_useropts: A list of settings used for cvsgraph's
  ## user-modifiable behavior which can be changed in the graph display.

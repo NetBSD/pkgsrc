@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2023/08/17 21:26:49 hauke Exp $
+$NetBSD: distinfo,v 1.23 2023/08/18 22:20:49 hauke Exp $
 
 BLAKE2s (viewvc-1.2.3.tar.gz) = 4efe844e1fedca51c40245d61c96e951b30db0fb9081e54230459a508be19144
 SHA512 (viewvc-1.2.3.tar.gz) = dd5fd1d01629e7e6894e3bd244579a3581883ffb18f66e4ca44b911a5bc41810fcdd1176bfdbf0b88c943780b61c1af2a35c4dd8d757b9e10ff00d560eee0a0f
 Size (viewvc-1.2.3.tar.gz) = 361272 bytes
-SHA1 (patch-aa) = ff0a6e52ea66c838ba3ab7b1d055c27bf561a376
-SHA1 (patch-ab) = 5be3c5eb60e58341510a96c5a2cab230beec956e
+SHA1 (patch-conf_viewvc.conf.dist) = 44d16cc79e02bac4639a61235b6685ab8c56c26d
+SHA1 (patch-lib_viewvc.py) = d6ba030b22b4284d36edec3f482394b97f30c19a
+SHA1 (patch-viewvc-install) = e05fa7219d8a55b0359336b2f08cef20c4bf6cfa
