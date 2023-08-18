@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1533 2023/08/16 07:22:44 nros Exp $
+# $NetBSD: Makefile,v 1.1534 2023/08/18 10:54:54 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -966,6 +966,7 @@ SUBDIR+=	tinydyndns
 SUBDIR+=	tinydyndns-run
 SUBDIR+=	tinyfugue
 SUBDIR+=	tkined
+SUBDIR+=	tlrc
 SUBDIR+=	tn5250
 SUBDIR+=	tnftp
 SUBDIR+=	tnftpd
