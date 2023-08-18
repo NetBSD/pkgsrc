@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/17 22:14:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/08/18 22:20:49 hauke Exp $
+share/doc/viewvc/CHANGES
+share/doc/viewvc/INSTALL
+share/doc/viewvc/template-authoring-guide.html
+share/doc/viewvc/upgrading-howto.html
+share/doc/viewvc/url-reference.html
 share/examples/viewvc/cvsgraph.conf
+share/examples/viewvc/mimetypes.conf
 share/examples/viewvc/viewvc.conf
 ${VIEWVCDIR}/bin/cgi/viewvc.cgi
 ${VIEWVCDIR}/bin/cvsdbadmin

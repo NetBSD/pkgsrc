@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2011/11/01 21:08:55 scottr Exp $
+$NetBSD: patch-viewvc-install,v 1.1 2023/08/18 22:20:49 hauke Exp $
 
---- viewvc-install.orig	2010-09-07 14:20:22.000000000 -0500
-+++ viewvc-install	2011-10-17 14:52:40.000000000 -0500
-@@ -62,12 +62,6 @@
+Let pkgsrc machinery take care of config files 
+
+--- viewvc-install.orig	2023-01-04 14:48:34.000000000 +0000
++++ viewvc-install
+@@ -56,12 +56,6 @@ FILE_INFO_LIST = [
      ("bin/cvsdbadmin",            "bin/cvsdbadmin",            0755, 1, 0, 0),
      ("bin/svndbadmin",            "bin/svndbadmin",            0755, 1, 0, 0),
      ("bin/make-database",         "bin/make-database",         0755, 1, 0, 0),
@@ -15,3 +17,12 @@ $NetBSD: patch-aa,v 1.5 2011/11/01 21:08:55 scottr Exp $
      ]
  if sys.platform == "win32":
    FILE_INFO_LIST.extend([
+@@ -128,7 +122,7 @@ def replace_paths(contents):
+         shbang = '#!' + sys.executable
+         contents = re.sub('^#![^\n]*', _escape(shbang), contents)
+     contents = replace_var(contents, 'LIBRARY_DIR', 'lib')
+-    contents = replace_var(contents, 'CONF_PATHNAME', 'viewvc.conf')
++    contents = replace_var(contents, 'CONF_PATHNAME', '@PKG_SYSCONFDIR@/viewvc.conf')
+     return contents
+ 
+ 
