@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/08/18 10:42:08 nia Exp $
 
-DISTNAME=	bulk-large-20230703
-PKGREVISION=	1
+DISTNAME=	bulk-large-20230818
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -127,11 +126,14 @@ DEPENDS+=	netbsd-www-[0-9]*:../../meta-pkgs/netbsd-www
 DEPENDS+=	pkg_developer-[0-9]*:../../meta-pkgs/pkg_developer
 DEPENDS+=	pkgsrc-guide-tools-[0-9]*:../../meta-pkgs/pkgsrc-guide-tools
 
+.include "../../mk/bsd.prefs.mk"
+
 #
 # 7. Complete X.org
 #
+.if ${X11_TYPE} != "native"
 DEPENDS+=	modular-xorg-[0-9]*:../../meta-pkgs/modular-xorg
-
+.endif
 
 #
 # Note that (unlike in bulk-small) we make no effort to list or track
