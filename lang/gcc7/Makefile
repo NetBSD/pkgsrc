@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2023/06/03 13:22:43 riastradh Exp $
+# $NetBSD: Makefile,v 1.49 2023/08/18 10:57:58 nia Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -27,7 +27,7 @@ CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
 NOT_FOR_PLATFORM=	Interix-*-* Darwin-*-aarch64
 
-USE_LANGUAGES=		c99 c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo perl sed tar:build
 USE_TOOLS.NetBSD+=	gsed
 
@@ -42,6 +42,10 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_CC_FEATURES+=	c99
+FORCE_C_STD=		gnu99
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
