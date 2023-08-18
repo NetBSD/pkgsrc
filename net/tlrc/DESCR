@@ -1,0 +1,6 @@
+A tldr client written in Rust.
+
+tlrc can be customized with a toml configuration file.
+To generate a default config file, run:
+
+tldr --gen-config > $(tldr --config-path)
