@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/17 06:40:24 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/18 20:31:23 pin Exp $
 
-DISTNAME=	lla-0.1.4
+DISTNAME=	lla-0.1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=triyanox/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
