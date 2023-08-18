@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/08/14 05:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/18 10:57:58 nia Exp $
 
 GCC_PKGNAME=	gcc9
 PKGREVISION= 1
@@ -42,6 +42,10 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 UNLIMIT_RESOURCES=	datasize stacksize
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+USE_CC_FEATURES+=	c99
+FORCE_C_STD=		gnu99
 
 CHECK_PORTABILITY_SKIP+=	contrib/* # not needed during the build
 
