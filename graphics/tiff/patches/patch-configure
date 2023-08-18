@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.6.2.2 2023/08/18 18:13:39 bsiegert Exp $
+
+NetBSD versions before 10.0 do not include liblzma.pc as part
+of the base system, so avoid problems compiling external packages
+by referring to a .pc file that doesn't exist.
+
+The dependency is still expressed through tiff_libs_private.
+
+--- configure.orig	2023-06-09 13:27:09.000000000 +0000
++++ configure
+@@ -19181,7 +19181,6 @@ $as_echo "#define LZMA_SUPPORT 1" >>conf
+ 
+   LIBS="-llzma $LIBS"
+   tiff_libs_private="-llzma ${tiff_libs_private}"
+-  tiff_requires_private="liblzma ${tiff_requires_private}"
+ 
+   if test "$HAVE_RPATH" = "yes" -a "x$with_lzma_lib_dir" != "x" ; then
+     LIBDIR="-R $with_lzma_lib_dir $LIBDIR"
