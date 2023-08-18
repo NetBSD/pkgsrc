@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/04/25 07:51:25 mrg Exp $
+# $NetBSD: Makefile,v 1.54 2023/08/18 05:19:23 mlelstv Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	5
@@ -33,7 +33,7 @@ SFILE.*=	s-netbsd.h
 MFILE=	m-i80386.h
 .elif ${MACHINE_ARCH} == "mipseb"
 MFILE=	m-mipsel.h
-.elif ${MACHINE_CPU} == "aarch64"
+.elif ${MACHINE_CPU} == "aarch64" || ${MACHINE_CPU} == "arm"
 MFILE=	m-arm.h
 .else
 MFILE=	m-${MACHINE_ARCH}.h
