@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4967 2023/08/18 19:21:06 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.4968 2023/08/18 20:31:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7206,3 +7206,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/tlrc version 1.5.1 [pin 2023-08-18]
 	Updated mail/mutt to 2.2.11 [tron 2023-08-18]
 	Updated devel/gopls to 0.13.2 [bsiegert 2023-08-18]
+	Updated sysutils/lla to 0.1.5 [pin 2023-08-18]
