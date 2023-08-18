@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4050 2023/08/16 19:02:35 nros Exp $
+# $NetBSD: Makefile,v 1.4051 2023/08/18 09:58:38 nros Exp $
 #
 
 COMMENT=	Development utilities
@@ -3105,6 +3105,7 @@ SUBDIR+=	pynvim
 SUBDIR+=	pythontidy
 SUBDIR+=	qconf
 SUBDIR+=	qjson
+SUBDIR+=	qore-magic-module
 SUBDIR+=	qore-msgpack-module
 SUBDIR+=	qore-process-module
 SUBDIR+=	qore-uuid-module

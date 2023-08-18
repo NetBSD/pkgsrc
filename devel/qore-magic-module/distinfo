@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/18 09:58:38 nros Exp $
+
+BLAKE2s (qore-magic-module-1.0.1.tar.bz2) = f491afc22952da8fa35c92392d104fa4c93eb0ac598181e90b22664895a2f354
+SHA512 (qore-magic-module-1.0.1.tar.bz2) = 6fe3417662a046ff08d227acab048ed7f130d3c275d1050b8bfe8fb2f8152adb5541ce91c38f14f28fe27c874ccfc8244d67ee9c6c536549d76b6a4e15ef91c3
+Size (qore-magic-module-1.0.1.tar.bz2) = 43529 bytes
