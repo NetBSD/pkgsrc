@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2023/08/02 16:17:18 nia Exp $
+# $NetBSD: Makefile.common,v 1.47 2023/08/18 10:59:05 nia Exp $
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -39,7 +39,7 @@ MESON_ARGS+=	-Dexamples=disabled
 MESON_ARGS+=	-Dorc=disabled
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
-FORCE_C_STD=	c99
+FORCE_C_STD=	gnu99
 
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
