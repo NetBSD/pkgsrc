@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2023/08/14 18:34:51 nia Exp $
+# $NetBSD: Makefile,v 1.86 2023/08/18 08:29:32 nia Exp $
 
-DISTNAME=	bulk-medium-20230814
+DISTNAME=	bulk-medium-20230818
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -117,7 +117,7 @@ DEPENDS+=	xenkernel413-[0-9]*:../../sysutils/xenkernel413
 DEPENDS+=	xentools413-[0-9]*:../../sysutils/xentools413
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
-DEPENDS+=	seamonkey-[0-9]*:../../www/seamonkey
+DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
 #
