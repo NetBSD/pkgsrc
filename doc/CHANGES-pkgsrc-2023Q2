@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.9 2023/08/17 20:07:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q2,v 1.1.2.10 2023/08/18 18:14:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2023Q2 branch:
 
@@ -80,4 +80,7 @@ net/mosquitto: security fix
 
 Pullup ticket #6791 - requested by manu
 security/opensc: fix regression
+
+Pullup ticket #6793 - requested by nia
+graphics/tiff: build fix
 
