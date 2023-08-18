@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/08/18 08:29:32 nia Exp $
+# $NetBSD: Makefile,v 1.87 2023/08/18 10:31:58 nia Exp $
 
 DISTNAME=	bulk-medium-20230818
 CATEGORIES=	meta-pkgs
@@ -102,7 +102,7 @@ DEPENDS+=	samba>=4.2:../../net/samba4
 DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
 DEPENDS+=	xymon-[0-9]*:../../net/xymon
 DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
-DEPENDS+=	youtube-dl-[0-9]*:../../net/youtube-dl
+DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
 DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
