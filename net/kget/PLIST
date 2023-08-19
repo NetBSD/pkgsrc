@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/16 09:37:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/19 23:27:54 markd Exp $
 bin/kget
 lib/libkgetcore.so
 lib/libkgetcore.so.5
 lib/libkgetcore.so.5.0.0
+qt5/plugins/kget/kget_bittorrent.so
 qt5/plugins/kget/kget_checksumsearchfactory.so
 qt5/plugins/kget/kget_kio.so
 qt5/plugins/kget/kget_metalinkfactory.so
 qt5/plugins/kget/kget_mirrorsearchfactory.so
 qt5/plugins/kget/kget_mmsfactory.so
 qt5/plugins/kget/kget_multisegkiofactory.so
+qt5/plugins/kget_kcms/kcm_kget_bittorrentfactory.so
 qt5/plugins/kget_kcms/kcm_kget_checksumsearchfactory.so
 qt5/plugins/kget_kcms/kcm_kget_metalinkfactory.so
 qt5/plugins/kget_kcms/kcm_kget_mirrorsearchfactory.so
