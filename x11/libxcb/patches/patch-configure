@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.2 2022/05/04 04:39:09 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2023/08/19 07:32:40 wiz Exp $
 
---- configure.orig	2022-05-03 22:15:58.000000000 +0000
+--- configure.orig	2023-08-16 20:18:36.000000000 +0000
 +++ configure
-@@ -20661,10 +20661,6 @@ printf "%s\n" "yes" >&6; }
+@@ -20825,10 +20825,6 @@ printf "%s\n" "yes" >&6; }
  
  fi
  NEEDED="xau >= 0.99.2"
 -case $host_os in
--linux*) ;;
+-linux*|darwin*|solaris*|dragonfly*|freebsd*) ;;
 -     *) NEEDED="$NEEDED pthread-stubs" ;;
 -esac
  
