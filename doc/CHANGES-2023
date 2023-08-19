@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4968 2023/08/18 20:31:46 pin Exp $
+$NetBSD: CHANGES-2023,v 1.4969 2023/08/19 07:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7207,3 +7207,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mutt to 2.2.11 [tron 2023-08-18]
 	Updated devel/gopls to 0.13.2 [bsiegert 2023-08-18]
 	Updated sysutils/lla to 0.1.5 [pin 2023-08-18]
+	Updated x11/xcb-proto to 1.16.0 [wiz 2023-08-19]
