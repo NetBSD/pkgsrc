@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4971 2023/08/19 07:32:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.4972 2023/08/19 10:43:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7210,3 +7210,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xcb-proto to 1.16.0 [wiz 2023-08-19]
 	Updated x11/py-xcbgen to 1.16.0 [wiz 2023-08-19]
 	Updated x11/libxcb to 1.16 [wiz 2023-08-19]
+	Updated shells/oh-my-posh to 18.3.5 [pin 2023-08-19]
