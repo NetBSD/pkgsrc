@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2022/06/17 16:43:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/08/19 07:32:40 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
+include/xcb/dbe.h
 include/xcb/dpms.h
 include/xcb/dri2.h
 include/xcb/dri3.h
@@ -33,6 +34,7 @@ include/xcb/xv.h
 include/xcb/xvmc.h
 lib/libxcb-composite.la
 lib/libxcb-damage.la
+lib/libxcb-dbe.la
 lib/libxcb-dpms.la
 lib/libxcb-dri2.la
 lib/libxcb-dri3.la
@@ -57,6 +59,7 @@ lib/libxcb-xvmc.la
 lib/libxcb.la
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
+lib/pkgconfig/xcb-dbe.pc
 lib/pkgconfig/xcb-dpms.pc
 lib/pkgconfig/xcb-dri2.pc
 lib/pkgconfig/xcb-dri3.pc
@@ -196,6 +199,27 @@ man/man3/xcb_damage_query_version_reply.3
 man/man3/xcb_damage_query_version_unchecked.3
 man/man3/xcb_damage_subtract.3
 man/man3/xcb_damage_subtract_checked.3
+man/man3/xcb_dbe_allocate_back_buffer.3
+man/man3/xcb_dbe_allocate_back_buffer_checked.3
+man/man3/xcb_dbe_begin_idiom.3
+man/man3/xcb_dbe_begin_idiom_checked.3
+man/man3/xcb_dbe_deallocate_back_buffer.3
+man/man3/xcb_dbe_deallocate_back_buffer_checked.3
+man/man3/xcb_dbe_end_idiom.3
+man/man3/xcb_dbe_end_idiom_checked.3
+man/man3/xcb_dbe_get_back_buffer_attributes.3
+man/man3/xcb_dbe_get_back_buffer_attributes_reply.3
+man/man3/xcb_dbe_get_back_buffer_attributes_unchecked.3
+man/man3/xcb_dbe_get_visual_info.3
+man/man3/xcb_dbe_get_visual_info_reply.3
+man/man3/xcb_dbe_get_visual_info_supported_visuals_iterator.3
+man/man3/xcb_dbe_get_visual_info_supported_visuals_length.3
+man/man3/xcb_dbe_get_visual_info_unchecked.3
+man/man3/xcb_dbe_query_version.3
+man/man3/xcb_dbe_query_version_reply.3
+man/man3/xcb_dbe_query_version_unchecked.3
+man/man3/xcb_dbe_swap_buffers.3
+man/man3/xcb_dbe_swap_buffers_checked.3
 man/man3/xcb_delete_property.3
 man/man3/xcb_delete_property_checked.3
 man/man3/xcb_destroy_notify_event_t.3
@@ -219,8 +243,11 @@ man/man3/xcb_dpms_get_version.3
 man/man3/xcb_dpms_get_version_reply.3
 man/man3/xcb_dpms_get_version_unchecked.3
 man/man3/xcb_dpms_info.3
+man/man3/xcb_dpms_info_notify_event_t.3
 man/man3/xcb_dpms_info_reply.3
 man/man3/xcb_dpms_info_unchecked.3
+man/man3/xcb_dpms_select_input.3
+man/man3/xcb_dpms_select_input_checked.3
 man/man3/xcb_dpms_set_timeouts.3
 man/man3/xcb_dpms_set_timeouts_checked.3
 man/man3/xcb_dri2_authenticate.3
