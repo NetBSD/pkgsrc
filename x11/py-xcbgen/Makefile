@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/06/18 08:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/19 07:31:05 wiz Exp $
 #
 # When updating this, also update x11/xcb-proto
 
-DISTNAME=	xcb-proto-1.15.2
+DISTNAME=	xcb-proto-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/xcb-proto/xcbgen/}
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
