@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4051 2023/08/18 09:58:38 nros Exp $
+# $NetBSD: Makefile,v 1.4052 2023/08/19 10:45:30 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -787,6 +787,7 @@ SUBDIR+=	jemalloc
 SUBDIR+=	jenkins
 SUBDIR+=	jenkins-lts
 SUBDIR+=	jflex
+SUBDIR+=	jj
 SUBDIR+=	jq
 SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
