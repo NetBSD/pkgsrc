@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2023/08/16 09:37:35 markd Exp $
+# $NetBSD: Makefile,v 1.67 2023/08/19 23:27:54 markd Exp $
 
 DISTNAME=	kget-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/kget/
@@ -23,6 +24,7 @@ REPLACE_PERL+=	conf/kget_sensitive.pl conf/kget_limitdownloads.pl
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/libktorrent/buildlink3.mk"
 .include "../../net/libmms/buildlink3.mk"
 .include "../../security/qgpgme/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
