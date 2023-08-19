@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/08/14 05:25:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/19 07:32:40 wiz Exp $
 
-DISTNAME=	libxcb-1.15
-PKGREVISION=	2
+DISTNAME=	libxcb-1.16
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +11,7 @@ COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
 TOOL_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.15.1:../../x11/py-xcbgen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.16.0:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -44,6 +43,7 @@ SUBST_SED.xcbproto+=	\
 # Adds -Wl,-R to pkgconfig files automatically
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-damage.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-dbe.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-dri3.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-dpms.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-glx.pc.in
