@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:01:01 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/08/20 02:33:37 markd Exp $
 
-BLAKE2s (ffmpegthumbs-4.14.3.tar.xz) = 676d94557c99f7cb266fd2c77cfc90acde3a317bc50f29ab8b2468ba8f560905
-SHA512 (ffmpegthumbs-4.14.3.tar.xz) = d127bfbbb6ac507e0fa7378894ace878bb74c0642c2858520c27f22757764973f6c22450f593879b34c93fe2297a830eb569ec1edeaf232394367ca6d729be93
-Size (ffmpegthumbs-4.14.3.tar.xz) = 20228 bytes
+BLAKE2s (ffmpegthumbs-23.04.3.tar.xz) = 899265b854366f273ad1affb335aaf22ff06edf7d10f154b7bdbd9c2d2b7532d
+SHA512 (ffmpegthumbs-23.04.3.tar.xz) = 9b1d78c1ae8f8338abcb0afdfad3b25419a8c39ee4722251bd12db022c681b5bacdbdedc351fb4405e518177f15f9497182b6de1cc9f4f80793d6bfc3991c08f
+Size (ffmpegthumbs-23.04.3.tar.xz) = 32632 bytes
