@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4975 2023/08/19 23:25:16 osa Exp $
+$NetBSD: CHANGES-2023,v 1.4976 2023/08/20 03:20:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7214,3 +7214,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/jj version 0.8.0 [pin 2023-08-19]
 	Updated sysutils/broot to 1.25.0 [pin 2023-08-19]
 	Updated www/nginx-devel to 1.25.2 [osa 2023-08-19]
+	Updated multimedia/ffmpegthumbs to 23.04.3 [markd 2023-08-20]
