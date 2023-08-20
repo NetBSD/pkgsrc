@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 11:13:08 markd Exp $
-lib/kde4/ffmpegthumbs.so
-share/kde4/services/ffmpegthumbs.desktop
+@comment $NetBSD: PLIST,v 1.2 2023/08/20 02:33:37 markd Exp $
+qt5/plugins/ffmpegthumbs.so
+share/config.kcfg/ffmpegthumbnailersettings5.kcfg
+share/kservices5/ffmpegthumbs.desktop
+share/metainfo/org.kde.ffmpegthumbs.metainfo.xml
+share/qlogging-categories5/ffmpegthumbs.categories
