@@ -1,15 +1,16 @@
-$NetBSD: patch-configure,v 1.3 2023/08/19 07:32:40 wiz Exp $
+$NetBSD: patch-configure,v 1.4 2023/08/20 18:20:49 wiz Exp $
+
+Avoid using pthread-stubs where not necessary.
+Merged upstream.
 
 --- configure.orig	2023-08-16 20:18:36.000000000 +0000
 +++ configure
-@@ -20825,10 +20825,6 @@ printf "%s\n" "yes" >&6; }
- 
+@@ -20826,7 +20826,7 @@ printf "%s\n" "yes" >&6; }
  fi
  NEEDED="xau >= 0.99.2"
--case $host_os in
+ case $host_os in
 -linux*|darwin*|solaris*|dragonfly*|freebsd*) ;;
--     *) NEEDED="$NEEDED pthread-stubs" ;;
--esac
++linux*|darwin*|solaris*|dragonfly*|freebsd*|netbsd*) ;;
+      *) NEEDED="$NEEDED pthread-stubs" ;;
+ esac
  
- pkg_failed=no
- { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for NEEDED" >&5
