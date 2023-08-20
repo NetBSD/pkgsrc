@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4977 2023/08/20 04:07:45 markd Exp $
+$NetBSD: CHANGES-2023,v 1.4978 2023/08/20 04:40:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7216,3 +7216,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx-devel to 1.25.2 [osa 2023-08-19]
 	Updated multimedia/ffmpegthumbs to 23.04.3 [markd 2023-08-20]
 	Added sysutils/milou version 5.24.6 [markd 2023-08-20]
+	Updated sysutils/krusader to 2.8.0 [markd 2023-08-20]
