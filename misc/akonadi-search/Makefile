@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/16 04:31:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/20 00:02:27 markd Exp $
 
 DISTNAME=	akonadi-search-${KAPPSVER}
 CATEGORIES=	misc
@@ -9,7 +9,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	msgmerge pkg-config
 
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
