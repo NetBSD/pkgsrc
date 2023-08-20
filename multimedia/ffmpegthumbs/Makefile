@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.59 2023/04/23 14:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/08/20 02:33:37 markd Exp $
 
-DISTNAME=	ffmpegthumbs-${_KDE_VERSION}
-PKGREVISION=	41
+DISTNAME=	ffmpegthumbs-${KAPPSVER}
 CATEGORIES=	multimedia
+
+HOMEPAGE=	https://kde.org/applications/multimedia/
 COMMENT=	FFmpeg-based thumbnail creator for video files
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	pkg-config
 
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
