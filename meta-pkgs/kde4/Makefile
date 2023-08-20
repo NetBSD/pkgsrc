@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2023/08/17 00:36:55 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2023/08/20 02:36:10 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -96,7 +96,7 @@ DEPENDS+=	kdegraphics-thumbnailers>=4.14.3:../../graphics/kdegraphics-thumbnaile
 DEPENDS+=	svgpart>=16.08.0:../../graphics/svgpart
 #DEPENDS+=	audiocd-kio-16.08.0{,nb[0-9]*}:../../multimedia/audiocd-kio
 DEPENDS+=	dragon>=4.14.3:../../multimedia/dragon
-DEPENDS+=	ffmpegthumbs-4.14.3{,nb[0-9]*}:../../multimedia/ffmpegthumbs
+DEPENDS+=	ffmpegthumbs>=4.14.3:../../multimedia/ffmpegthumbs
 DEPENDS+=	juk>=4.14.3:../../multimedia/juk
 DEPENDS+=	kmix>=4.14.3:../../multimedia/kmix
 DEPENDS+=	kscd-4.14.3{,nb[0-9]*}:../../multimedia/kscd
