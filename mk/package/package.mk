@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.28 2022/11/23 13:30:38 jperkin Exp $
+# $NetBSD: package.mk,v 1.29 2023/08/20 16:50:12 tnn Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -105,13 +105,21 @@ package-create:
 # Displays warnings about the binary package.
 #
 _package-warnings: .PHONY
-.if defined(NO_BIN_ON_CDROM)
-	@${WARNING_MSG} "${PKGNAME} may not be put on a CD-ROM:"
+.if defined(NO_BIN_ON_CDROM) && defined(NO_BIN_ON_FTP)
+	@${WARNING_MSG} "${PKGNAME} may not be shared electronically:"
 	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
-.endif
-.if defined(NO_BIN_ON_FTP)
-	@${WARNING_MSG} "${PKGNAME} may not be made available through FTP:"
+.  if ${NO_BIN_ON_FTP} != ${NO_BIN_ON_CDROM}
 	@${WARNING_MSG} ${NO_BIN_ON_FTP:Q}
+.  endif
+.else
+.  if defined(NO_BIN_ON_CDROM)
+	@${WARNING_MSG} "${PKGNAME} may not be shared on physical media:"
+	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
+.  endif
+.  if defined(NO_BIN_ON_FTP)
+	@${WARNING_MSG} "${PKGNAME} may not be shared on public networks:"
+	@${WARNING_MSG} ${NO_BIN_ON_FTP:Q}
+.  endif
 .endif
 .if defined(ABI_DEPENDS) && !empty(USE_ABI_DEPENDS:M[Nn][Oo])
 	@${WARNING_MSG} "ABI dependency recommendations are being ignored!"
