@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4978 2023/08/20 04:40:05 markd Exp $
+$NetBSD: CHANGES-2023,v 1.4979 2023/08/20 04:55:44 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7217,3 +7217,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/ffmpegthumbs to 23.04.3 [markd 2023-08-20]
 	Added sysutils/milou version 5.24.6 [markd 2023-08-20]
 	Updated sysutils/krusader to 2.8.0 [markd 2023-08-20]
+	Updated time/rsibreak to 0.12.15 [markd 2023-08-20]
