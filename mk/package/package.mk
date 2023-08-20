@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.29 2023/08/20 16:50:12 tnn Exp $
+# $NetBSD: package.mk,v 1.30 2023/08/20 18:38:37 tnn Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -106,18 +106,18 @@ package-create:
 #
 _package-warnings: .PHONY
 .if defined(NO_BIN_ON_CDROM) && defined(NO_BIN_ON_FTP)
-	@${WARNING_MSG} "${PKGNAME} may not be shared electronically:"
+	@${WARNING_MSG} "${PKGNAME} may not be distributed electronically:"
 	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
 .  if ${NO_BIN_ON_FTP} != ${NO_BIN_ON_CDROM}
 	@${WARNING_MSG} ${NO_BIN_ON_FTP:Q}
 .  endif
 .else
 .  if defined(NO_BIN_ON_CDROM)
-	@${WARNING_MSG} "${PKGNAME} may not be shared on physical media:"
+	@${WARNING_MSG} "${PKGNAME} may not be distributed on physical media:"
 	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if defined(NO_BIN_ON_FTP)
-	@${WARNING_MSG} "${PKGNAME} may not be shared on public networks:"
+	@${WARNING_MSG} "${PKGNAME} may not be distributed via public networks:"
 	@${WARNING_MSG} ${NO_BIN_ON_FTP:Q}
 .  endif
 .endif
