@@ -1,26 +1,29 @@
-$NetBSD: patch-src_openrct2_platform_Platform.macOS.mm,v 1.1 2023/07/23 21:15:43 triaxx Exp $
+$NetBSD: patch-src_openrct2_platform_Platform.macOS.mm,v 1.2 2023/08/20 20:02:49 triaxx Exp $
 
 Support pkgsrc.
 
---- src/openrct2/platform/Platform.macOS.mm.orig	2020-08-15 19:13:50.000000000 +0000
+--- src/openrct2/platform/Platform.macOS.mm.orig	2021-03-13 11:17:05.000000000 +0000
 +++ src/openrct2/platform/Platform.macOS.mm
-@@ -73,18 +73,7 @@ namespace Platform
-         }
-         else
-         {
--            auto exePath = GetCurrentExecutablePath();
--            auto exeDirectory = Path::GetDirectory(exePath);
--            path = Path::Combine(exeDirectory, "data");
--            NSString* nsPath = [NSString stringWithUTF8String:path.c_str()];
--            if (![[NSFileManager defaultManager] fileExistsAtPath:nsPath])
--            {
--                path = GetBundlePath();
--                if (path.empty())
--                {
--                    path = "/";
+@@ -89,21 +89,7 @@ namespace Platform
+             }
+             else
+             {
+-                // this is not in an app bundle
+-                auto exePath = GetCurrentExecutablePath();
+-                auto exeDirectory = Path::GetDirectory(exePath);
+-
+-                // check build and install paths
+-                NSArray *dataSearchLocations = @[@"data", @"../share/openrct2"];
+-
+-                for (NSString *searchLocation in dataSearchLocations) {
+-                    path = Path::Combine(exeDirectory, [searchLocation UTF8String]);
+-                    NSString* nsPath = [NSString stringWithUTF8String:path.c_str()];
+-                    if ([[NSFileManager defaultManager] fileExistsAtPath:nsPath])
+-                    {
+-                        return path;
+-                    }
 -                }
--            }
-+            path = "@PREFIX@/share/openrct2";
++                return "@PREFIX@/share/openrct2";
+             }
          }
-         return path;
-     }
+         return "/";

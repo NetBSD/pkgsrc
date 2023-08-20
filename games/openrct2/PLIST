@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/12 15:13:06 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/08/20 20:02:49 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -61,7 +61,6 @@ share/openrct2/object/official/scenery_small/official.xxbbbr01.parkobj
 share/openrct2/object/official/scenery_small/rct2.dlc.bigpanda.parkobj
 share/openrct2/object/official/scenery_small/rct2.dlc.pandagr.parkobj
 share/openrct2/object/official/station/openrct2.station.noentrance.json
-share/openrct2/object/official/station/openrct2.station.noplatformnoentrance.json
 share/openrct2/object/official/terrain/openrct2.terrain.void.parkobj
 share/openrct2/object/official/wall/official.mg-prar.parkobj
 share/openrct2/object/official/water/rct2.dlc.wtrpink.json
