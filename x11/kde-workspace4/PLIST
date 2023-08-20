@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/06/20 07:38:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/08/20 20:46:26 markd Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -281,10 +281,8 @@ lib/kde4/plasma_containmentactions_switchactivity.so
 lib/kde4/plasma_containmentactions_switchdesktop.so
 lib/kde4/plasma_containmentactions_switchwindow.so
 lib/kde4/plasma_engine_activities.so
-lib/kde4/plasma_engine_akonadi.so
 lib/kde4/plasma_engine_applicationjobs.so
 lib/kde4/plasma_engine_apps.so
-lib/kde4/plasma_engine_calendar.so
 lib/kde4/plasma_engine_devicenotifications.so
 lib/kde4/plasma_engine_dict.so
 lib/kde4/plasma_engine_executable.so
@@ -299,7 +297,6 @@ lib/kde4/plasma_engine_notifications.so
 lib/kde4/plasma_engine_nowplaying.so
 lib/kde4/plasma_engine_places.so
 lib/kde4/plasma_engine_powermanagement.so
-lib/kde4/plasma_engine_rss.so
 lib/kde4/plasma_engine_searchlaunch.so
 lib/kde4/plasma_engine_share.so
 lib/kde4/plasma_engine_soliddevice.so
@@ -1987,7 +1984,6 @@ share/kde4/services/plasma-containmentactions-switchdesktop.desktop
 share/kde4/services/plasma-containmentactions-switchwindow.desktop
 share/kde4/services/plasma-dataengine-applicationjobs.desktop
 share/kde4/services/plasma-dataengine-apps.desktop
-share/kde4/services/plasma-dataengine-calendar.desktop
 share/kde4/services/plasma-dataengine-devicenotifications.desktop
 share/kde4/services/plasma-dataengine-dict.desktop
 share/kde4/services/plasma-dataengine-executable.desktop
@@ -2002,7 +1998,6 @@ share/kde4/services/plasma-dataengine-notifications.desktop
 share/kde4/services/plasma-dataengine-nowplaying.desktop
 share/kde4/services/plasma-dataengine-places.desktop
 share/kde4/services/plasma-dataengine-powermanagement.desktop
-share/kde4/services/plasma-dataengine-rss.desktop
 share/kde4/services/plasma-dataengine-share-addon-im9.desktop
 share/kde4/services/plasma-dataengine-share-addon-imgsusepasteorg.desktop
 share/kde4/services/plasma-dataengine-share-addon-imgur.desktop
@@ -2021,7 +2016,6 @@ share/kde4/services/plasma-dataengine-tasks.desktop
 share/kde4/services/plasma-dataengine-time.desktop
 share/kde4/services/plasma-dataengine-weather.desktop
 share/kde4/services/plasma-engine-activities.desktop
-share/kde4/services/plasma-engine-akonadi.desktop
 share/kde4/services/plasma-engine-searchlaunch.desktop
 share/kde4/services/plasma-geolocation-ip.desktop
 share/kde4/services/plasma-layout-org.kde.plasma-desktop.SaL.desktop
