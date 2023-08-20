@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:24:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/08/20 04:53:58 markd Exp $
 
-BLAKE2s (rsibreak-0.12.13.tar.xz) = 37ea09bc7d130621f15a0ddf8497133764cf73ebd5b8c6dd49b8155abf2d6f1a
-SHA512 (rsibreak-0.12.13.tar.xz) = dc1411221828afab1c8f3ee89238be44d9fd3784cb5cce4f5a50ce063e14d1683257bffa1b24509d7009e74d0be16f1c788754690b503490fb8be1bedc9657fd
-Size (rsibreak-0.12.13.tar.xz) = 550544 bytes
+BLAKE2s (rsibreak-0.12.15.tar.xz) = bcd1745fef42b908af846c25a1231a0e9812da62af9e4c75bca3fd02d7f3e0e1
+SHA512 (rsibreak-0.12.15.tar.xz) = 8178387716b9d611a33ce72070bae1c3d55ad098100a701fcae9f40a8db4bb29eda364a799223a6fea5671e44e0a5a41aa2b6dff2fb50a832221e468c17de87b
+Size (rsibreak-0.12.15.tar.xz) = 591600 bytes
