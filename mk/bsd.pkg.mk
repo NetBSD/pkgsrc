@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2052 2023/08/20 16:50:12 tnn Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2053 2023/08/20 18:38:37 tnn Exp $
 #
 # This file is in the public domain.
 #
@@ -470,12 +470,12 @@ X11BASE:=		/usr
 .if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} may not be shared on physical media in binary form:" \
+	"${PKGNAME} may not be distributed on physical media in binary form:" \
          "    "${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} may not be shared on physical media in source form:" \
+	"${PKGNAME} may not be distributed on physical media in source form:" \
          "    "${NO_SRC_ON_CDROM:Q}
 .  endif
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
