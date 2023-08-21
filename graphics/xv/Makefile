@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/08/16 17:02:19 tsutsui Exp $
+# $NetBSD: Makefile,v 1.100 2023/08/21 19:16:00 tsutsui Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	28
@@ -69,4 +69,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
