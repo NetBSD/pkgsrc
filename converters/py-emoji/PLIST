@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/25 11:56:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/21 01:41:19 khorben Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,10 +7,23 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/emoji/__init__.py
 ${PYSITELIB}/emoji/__init__.pyc
+${PYSITELIB}/emoji/__init__.pyi
 ${PYSITELIB}/emoji/__init__.pyo
 ${PYSITELIB}/emoji/core.py
 ${PYSITELIB}/emoji/core.pyc
+${PYSITELIB}/emoji/core.pyi
 ${PYSITELIB}/emoji/core.pyo
-${PYSITELIB}/emoji/unicode_codes.py
-${PYSITELIB}/emoji/unicode_codes.pyc
-${PYSITELIB}/emoji/unicode_codes.pyo
+${PYSITELIB}/emoji/py.typed
+${PYSITELIB}/emoji/tokenizer.py
+${PYSITELIB}/emoji/tokenizer.pyc
+${PYSITELIB}/emoji/tokenizer.pyi
+${PYSITELIB}/emoji/tokenizer.pyo
+${PYSITELIB}/emoji/unicode_codes/__init__.py
+${PYSITELIB}/emoji/unicode_codes/__init__.pyc
+${PYSITELIB}/emoji/unicode_codes/__init__.pyi
+${PYSITELIB}/emoji/unicode_codes/__init__.pyo
+${PYSITELIB}/emoji/unicode_codes/data_dict.py
+${PYSITELIB}/emoji/unicode_codes/data_dict.pyc
+${PYSITELIB}/emoji/unicode_codes/data_dict.pyi
+${PYSITELIB}/emoji/unicode_codes/data_dict.pyo
+${PYSITELIB}/emoji/unicode_codes/py.typed
