@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23276 2023/08/20 20:43:47 khorben Exp $
+$NetBSD: TODO,v 1.23277 2023/08/21 12:11:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1274,7 +1274,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qcad-3.28.1.0
 	o qconf-2.5
 	o qdirstat-1.8.1
-	o qemu-8.0.4
 	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
