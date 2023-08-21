@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4987 2023/08/21 13:07:21 leot Exp $
+$NetBSD: CHANGES-2023,v 1.4988 2023/08/21 13:14:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7227,3 +7227,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/shoutrrr to 0.8.0 [leot 2023-08-21]
 	Updated emulators/qemu to 8.0.4 [adam 2023-08-21]
 	Updated news/sfeed to 1.9 [leot 2023-08-21]
+	Updated devel/shfmt to 3.7.0 [leot 2023-08-21]
