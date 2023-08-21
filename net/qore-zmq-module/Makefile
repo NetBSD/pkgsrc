@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/08/16 07:22:44 nros Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/21 19:31:21 nros Exp $
 
 DISTNAME=	qore-zmq-module-1.0.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/module-zmq/releases/download/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
