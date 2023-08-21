@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2023/08/14 05:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.382 2023/08/21 10:46:30 nia Exp $
 
 DISTNAME=	gimp-2.10.34
 PKGREVISION=	1
@@ -71,7 +71,7 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.78
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.36
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.38
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
