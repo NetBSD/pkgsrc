@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/08/16 19:02:35 nros Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/21 19:31:21 nros Exp $
 
 DISTNAME=	qore-process-module-1.0.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/module-process/releases/download/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
