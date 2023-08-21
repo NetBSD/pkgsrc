@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4989 2023/08/21 14:54:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4990 2023/08/21 19:28:57 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7230,3 +7230,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/shfmt to 3.7.0 [leot 2023-08-21]
 	Updated devel/abseil to 20230802.0 [adam 2023-08-21]
 	Updated devel/re2 to 20230801 [adam 2023-08-21]
+	Updated lang/qore to 1.18.1 [nros 2023-08-21]
