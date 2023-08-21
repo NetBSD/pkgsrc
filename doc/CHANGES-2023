@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4982 2023/08/20 20:43:47 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.4983 2023/08/21 03:42:22 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7222,3 +7222,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake-gui to 3.27.3 [adam 2023-08-20]
 	Updated games/openrct2 to 0.3.3 [triaxx 2023-08-20]
 	Updated textproc/fmtlib to 10.1.0 [khorben 2023-08-20]
+	Added archivers/py-zipstream-ng version 1.6.0 [khorben 2023-08-21]
