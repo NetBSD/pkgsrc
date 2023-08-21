@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/04/28 13:42:00 leot Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/21 13:07:14 leot Exp $
 
-DISTNAME=	sfeed-1.8
+DISTNAME=	sfeed-1.9
 CATEGORIES=	news
 MASTER_SITES=	https://codemadness.org/releases/sfeed/
 
@@ -16,6 +16,9 @@ MAKE_FLAGS+=		MANPREFIX=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_FLAGS+=		CC=${CC:Q}
 
 REPLACE_SH+=		sfeed_markread sfeed_opml_export sfeed_update
+
+# Needed for cur_term
+LDFLAGS.NetBSD+=	-lterminfo
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
