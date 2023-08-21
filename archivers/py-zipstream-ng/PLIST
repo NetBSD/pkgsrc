@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/21 03:41:33 khorben Exp $
+bin/zipserver
+${PYSITELIB}/zipstream/__init__.py
+${PYSITELIB}/zipstream/__init__.pyc
+${PYSITELIB}/zipstream/__init__.pyo
+${PYSITELIB}/zipstream/ng.py
+${PYSITELIB}/zipstream/ng.pyc
+${PYSITELIB}/zipstream/ng.pyo
+${PYSITELIB}/zipstream/server.py
+${PYSITELIB}/zipstream/server.pyc
+${PYSITELIB}/zipstream/server.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
