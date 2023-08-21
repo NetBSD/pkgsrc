@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4986 2023/08/21 12:11:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.4987 2023/08/21 13:07:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7226,3 +7226,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/stern version 1.26.0 [leot 2023-08-21]
 	Updated www/shoutrrr to 0.8.0 [leot 2023-08-21]
 	Updated emulators/qemu to 8.0.4 [adam 2023-08-21]
+	Updated news/sfeed to 1.9 [leot 2023-08-21]
