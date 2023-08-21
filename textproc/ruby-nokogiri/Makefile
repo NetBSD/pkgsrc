@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2023/08/12 08:43:14 tsutsui Exp $
+# $NetBSD: Makefile,v 1.83 2023/08/21 18:38:16 schmonz Exp $
 
 DISTNAME=	nokogiri-1.15.4
 CATEGORIES=	textproc
@@ -16,6 +16,8 @@ MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.11.5.tar.gz= \
 			ports/archives/libxslt-1.1.38.tar.gz=
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
 
 # XXX: work around bug in bootstrap-mk-files, remove when fixed
 MAKE_ENV.SunOS+=	ARFLAGS=rcv
