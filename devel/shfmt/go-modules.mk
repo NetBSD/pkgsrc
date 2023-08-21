@@ -1,10 +1,10 @@
-# $NetBSD: go-modules.mk,v 1.1 2023/01/15 18:32:50 nikita Exp $
+# $NetBSD: go-modules.mk,v 1.2 2023/08/21 13:14:17 leot Exp $
 
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.18.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.18.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.9.mod
-GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.14.4.mod
-GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.14.4.zip
+GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.14.5.mod
+GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.14.5.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.9.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.9.zip
 GO_MODULE_FILES+=	github.com/google/renameio/v2/@v/v2.0.0.mod
@@ -15,13 +15,16 @@ GO_MODULE_FILES+=	github.com/kr/text/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/kr/text/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/pkg/diff/@v/v0.0.0-20210226163009-20ebb0f2a09e.mod
 GO_MODULE_FILES+=	github.com/pkg/diff/@v/v0.0.0-20210226163009-20ebb0f2a09e.zip
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.10.1-0.20230524175051-ec119421bb97.mod
+GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.10.1-0.20230524175051-ec119421bb97.zip
 GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.9.0.mod
-GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.9.0.zip
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.zip
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.3.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.3.0.zip
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.3.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.3.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.2.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.2.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.8.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.8.0.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.12.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.12.zip
 GO_MODULE_FILES+=	mvdan.cc/editorconfig/@v/v0.2.0.mod
 GO_MODULE_FILES+=	mvdan.cc/editorconfig/@v/v0.2.0.zip
