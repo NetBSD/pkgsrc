@@ -1,0 +1,18 @@
+$NetBSD: patch-src_libproxy_meson.build,v 1.1 2023/08/22 17:45:20 schmonz Exp $
+
+Generate .gir using the built libraries, even if an earlier version is
+already installed. Fixes update builds on macOS when e.g. new symbols
+are introduced.
+
+--- src/libproxy/meson.build.orig	2023-07-07 16:27:52.000000000 +0000
++++ src/libproxy/meson.build
+@@ -75,6 +75,9 @@ if get_option('introspection')
+     install: true,
+     install_dir_gir: girdir,
+     install_dir_typelib: typelibdir,
++    env: {
++      'DYLD_LIBRARY_PATH': meson.project_build_root() + '/src/libproxy'
++    },
+     extra_args: libproxy_gir_extra_args,
+   )
+ 
