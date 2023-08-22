@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/08/22 20:32:22 adam Exp $
+
+Install example configuration into examples/.
+
+--- Makefile.in.orig	2023-08-21 13:18:32.000000000 +0000
++++ Makefile.in
+@@ -1634,18 +1634,18 @@ uninstall-man1:
+ 	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(sysconf_DATA)'; test -n "$(datarootdir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(datarootdir)/examples/dnsdist'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(datarootdir)/examples/dnsdist" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datarootdir)/examples/dnsdist'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datarootdir)/examples/dnsdist" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconfDATA:
