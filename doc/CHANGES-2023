@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4992 2023/08/22 07:14:29 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.4993 2023/08/22 10:45:43 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7236,3 +7236,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask to 2.3.3 [adam 2023-08-22]
 	Updated textproc/py-validate-pyproject to 0.14 [adam 2023-08-22]
 	Updated pkgtools/pkgin to 23.8.1 [jperkin 2023-08-22]
+	Updated textproc/cjose to 0.6.2.2 [bouyer 2023-08-22]
