@@ -1,0 +1,18 @@
+$NetBSD: patch-src_meson.build,v 1.1 2023/08/22 16:33:48 schmonz Exp $
+
+Generate .gir using the built libraries, even if an earlier version is
+already installed. Fixes update builds on macOS when e.g. new symbols
+are introduced.
+
+--- src/meson.build.orig	2023-07-12 05:28:28.000000000 +0000
++++ src/meson.build
+@@ -879,6 +879,9 @@ if have_gobject
+       export_packages: ['harfbuzz-gobject', 'harfbuzz'],
+       header: 'hb-gobject.h',
+       install: true,
++      env: {
++        'DYLD_LIBRARY_PATH': meson.project_build_root() + '/src'
++      },
+       extra_args:  ['--cflags-begin',
+                     '-DHB_NO_SINGLE_HEADER_ERROR',
+                     '-DHAVE_GOBJECT',
