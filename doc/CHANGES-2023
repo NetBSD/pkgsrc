@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.4996 2023/08/22 17:27:46 js Exp $
+$NetBSD: CHANGES-2023,v 1.4997 2023/08/22 20:17:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7240,3 +7240,10 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.7.2 [pin 2023-08-22]
 	Added print/tex-gensymb version 1.0.2 [manu 2023-08-22]
 	Updated chat/element-web to 1.11.39 [js 2023-08-22]
+	Updated devel/boost-build to 1.83.0 [adam 2023-08-22]
+	Updated devel/boost-docs to 1.83.0 [adam 2023-08-22]
+	Updated devel/boost-headers to 1.83.0 [adam 2023-08-22]
+	Updated devel/boost-jam to 1.83.0 [adam 2023-08-22]
+	Updated devel/boost-libs to 1.83.0 [adam 2023-08-22]
+	Updated devel/boost-mpi to 1.83.0 [adam 2023-08-22]
+	Updated meta-pkgs/boost to 1.83.0 [adam 2023-08-22]
