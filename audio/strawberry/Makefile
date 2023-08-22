@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2023/07/18 12:56:06 nia Exp $
+# $NetBSD: Makefile,v 1.53 2023/08/22 20:26:29 adam Exp $
 
-DISTNAME=	strawberry-1.0.14
-PKGREVISION=	5
+DISTNAME=	strawberry-1.0.18
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,14 +11,12 @@ HOMEPAGE=	https://www.strawberrymusicplayer.org/
 COMMENT=	Music player and music collection organizer (based on Clementine)
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DBUILD_WITH_QT5=ON
 CMAKE_ARGS+=	-DBUILD_WITH_QT6=OFF
+CMAKE_ARGS+=	-DUSE_BUNDLE=OFF
 
 DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
 DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
@@ -43,7 +40,7 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PREFER.sqlite3=	pkgsrc # fts5
+PREFER.sqlite3=		pkgsrc # fts5
 # This package will link against libstdc++.so from the pkgsrc GCC when the
 # base OS GCC doesn't meet the minimum requirement. Thus we do this so the
 # appropriate gcc-libs package will be captured as a dependency, otherwise
@@ -60,13 +57,14 @@ CHECK_PORTABILITY_SKIP+=	dist/macos/macversion.sh
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 | ${TRUE}
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
 .include "options.mk"
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
@@ -79,11 +77,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/libxcb/buildlink3.mk"
-.  include "../../x11/qt5-qtx11extras/buildlink3.mk"
-.else
-.  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

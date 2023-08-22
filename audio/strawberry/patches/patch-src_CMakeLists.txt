@@ -1,0 +1,23 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2023/08/22 20:26:30 adam Exp $
+
+Don't install as bundle on Darwin.
+
+--- src/CMakeLists.txt.orig	2023-08-21 18:52:06.000000000 +0000
++++ src/CMakeLists.txt
+@@ -1231,7 +1231,6 @@ if(WIN32)
+ endif()
+ 
+ add_executable(strawberry
+-  MACOSX_BUNDLE
+   ${STRAWBERRY-WIN32-FLAG}
+   ${STRAWBERRY-WIN32-RESOURCES}
+   main.cpp
+@@ -1246,7 +1245,7 @@ target_link_libraries(strawberry PRIVATE
+ # macdeploy.py relies on the blob being built first.
+ add_dependencies(strawberry strawberry-tagreader)
+ 
+-if(NOT APPLE)
++if(TRUE)
+   install(TARGETS strawberry RUNTIME DESTINATION bin)
+ endif()
+ 
