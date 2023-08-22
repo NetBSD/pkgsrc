@@ -1,0 +1,15 @@
+$NetBSD: patch-ext_strawberry-tagreader_CMakeLists.txt,v 1.1 2023/08/22 20:26:30 adam Exp $
+
+Don't install as bundle on Darwin.
+
+--- ext/strawberry-tagreader/CMakeLists.txt.orig	2023-08-21 19:03:18.000000000 +0000
++++ ext/strawberry-tagreader/CMakeLists.txt
+@@ -57,7 +57,7 @@ if(APPLE)
+   target_link_libraries(strawberry-tagreader PRIVATE /System/Library/Frameworks/Foundation.framework)
+ endif()
+ 
+-if(APPLE)
++if(FALSE)
+   install(TARGETS strawberry-tagreader DESTINATION ${CMAKE_BINARY_DIR}/strawberry.app/Contents/PlugIns)
+ else()
+   install(TARGETS strawberry-tagreader RUNTIME DESTINATION bin)
