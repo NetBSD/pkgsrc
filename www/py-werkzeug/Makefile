@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/08/01 23:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/08/22 07:03:53 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -6,8 +6,7 @@ COMMENT=	Python WSGI Utility Library
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
 # optional
 #DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
