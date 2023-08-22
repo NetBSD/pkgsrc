@@ -1,0 +1,36 @@
+$NetBSD: patch-dist_CMakeLists.txt,v 1.1 2023/08/22 20:26:30 adam Exp $
+
+Don't install as bundle on Darwin.
+
+--- dist/CMakeLists.txt.orig	2023-08-21 18:56:57.000000000 +0000
++++ dist/CMakeLists.txt
+@@ -3,24 +3,24 @@ if(RPM_DISTRO AND RPM_DATE)
+   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/unix/strawberry.spec.in ${CMAKE_CURRENT_SOURCE_DIR}/unix/strawberry.spec @ONLY)
+ endif(RPM_DISTRO AND RPM_DATE)
+ 
+-if(APPLE)
++if(FALSE)
+   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/macos/Info.plist.in ${CMAKE_CURRENT_SOURCE_DIR}/macos/Info.plist)
+-endif(APPLE)
++endif(FALSE)
+ 
+ if(WIN32)
+   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/windows/strawberry.nsi.in ${CMAKE_CURRENT_SOURCE_DIR}/windows/strawberry.nsi @ONLY)
+ endif(WIN32)
+ 
+-if(UNIX AND NOT APPLE)
++if(UNIX)
+   install(FILES ../data/icons/48x48/strawberry.png DESTINATION share/icons/hicolor/48x48/apps/)
+   install(FILES ../data/icons/64x64/strawberry.png DESTINATION share/icons/hicolor/64x64/apps/)
+   install(FILES ../data/icons/128x128/strawberry.png DESTINATION share/icons/hicolor/128x128/apps/)
+   install(FILES unix/org.strawberrymusicplayer.strawberry.desktop DESTINATION share/applications)
+   install(FILES unix/org.strawberrymusicplayer.strawberry.appdata.xml DESTINATION share/metainfo)
+   install(FILES unix/strawberry.1 unix/strawberry-tagreader.1 DESTINATION share/man/man1)
+-endif(UNIX AND NOT APPLE)
++endif(UNIX)
+ 
+-if(APPLE)
++if(FALSE)
+   install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/macos/Info.plist" DESTINATION "${CMAKE_BINARY_DIR}/strawberry.app/Contents")
+   install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/macos/strawberry.icns" DESTINATION "${CMAKE_BINARY_DIR}/strawberry.app/Contents/Resources")
+ endif()
