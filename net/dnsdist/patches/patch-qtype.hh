@@ -1,11 +1,11 @@
-$NetBSD: patch-qtype.hh,v 1.2 2022/10/24 11:08:15 jperkin Exp $
+$NetBSD: patch-qtype.hh,v 1.3 2023/08/22 20:31:36 adam Exp $
 
 Avoid symbol pollution on SunOS.
 
---- qtype.hh.orig	2022-06-10 13:48:12.000000000 +0000
+--- qtype.hh.orig	2023-03-28 11:06:46.000000000 +0000
 +++ qtype.hh
-@@ -22,6 +22,10 @@
- #pragma once
+@@ -26,6 +26,10 @@
+ 
  #include "namespaces.hh"
  
 +#if defined(__sun) && defined(DS)
