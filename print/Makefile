@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.914 2023/08/17 07:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.915 2023/08/22 14:31:31 manu Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -821,6 +821,7 @@ SUBDIR+=	tex-gckanbun-doc
 SUBDIR+=	tex-gentle-doc
 SUBDIR+=	tex-gentombow
 SUBDIR+=	tex-gentombow-doc
+SUBDIR+=	tex-gensymb
 SUBDIR+=	tex-geometry
 SUBDIR+=	tex-geometry-de-doc
 SUBDIR+=	tex-geometry-doc
