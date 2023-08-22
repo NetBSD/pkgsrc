@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2023/04/23 14:03:08 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/08/22 20:16:10 adam Exp $
 
 BUILDLINK_TREE+=	boost-mpi
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	boost-mpi
 BOOST_MPI_BUILDLINK3_MK:=
 
 # Use a dependency pattern that guarantees the proper ABI.
-BUILDLINK_API_DEPENDS.boost-mpi+=	boost-mpi-1.82.*
-BUILDLINK_ABI_DEPENDS.boost-mpi+=	boost-mpi-1.82.*
+BUILDLINK_API_DEPENDS.boost-mpi+=	boost-mpi-1.83.*
+BUILDLINK_ABI_DEPENDS.boost-mpi+=	boost-mpi-1.83.*
 BUILDLINK_PKGSRCDIR.boost-mpi?=		../../devel/boost-mpi
 
 .include "../../devel/boost-libs/buildlink3.mk"
