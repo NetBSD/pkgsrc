@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/25 12:43:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/22 07:09:19 adam Exp $
 bin/validate-pyproject-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -14,6 +14,8 @@ ${PYSITELIB}/validate_pyproject/__init__.py
 ${PYSITELIB}/validate_pyproject/__init__.pyc
 ${PYSITELIB}/validate_pyproject/__main__.py
 ${PYSITELIB}/validate_pyproject/__main__.pyc
+${PYSITELIB}/validate_pyproject/_tomllib.py
+${PYSITELIB}/validate_pyproject/_tomllib.pyc
 ${PYSITELIB}/validate_pyproject/api.py
 ${PYSITELIB}/validate_pyproject/api.pyc
 ${PYSITELIB}/validate_pyproject/cli.py
@@ -43,6 +45,8 @@ ${PYSITELIB}/validate_pyproject/pre_compile/main_file.template
 ${PYSITELIB}/validate_pyproject/project_metadata.schema.json
 ${PYSITELIB}/validate_pyproject/py.typed
 ${PYSITELIB}/validate_pyproject/pyproject_toml.schema.json
+${PYSITELIB}/validate_pyproject/repo_review.py
+${PYSITELIB}/validate_pyproject/repo_review.pyc
 ${PYSITELIB}/validate_pyproject/types.py
 ${PYSITELIB}/validate_pyproject/types.pyc
 ${PYSITELIB}/validate_pyproject/vendoring/__init__.py
