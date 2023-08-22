@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/06/06 10:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/22 20:31:36 adam Exp $
 
-DISTNAME=	dnsdist-1.7.2
-PKGREVISION=	2
+DISTNAME=	dnsdist-1.8.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,9 +10,9 @@ HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,20 +41,19 @@ CONFIGURE_ARGS+=	--without-net-snmp
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
 
-INSTALLATION_DIRS+=	share/examples/dnsdist
 RCD_SCRIPTS+=		dnsdist
 
 post-install:
-	${INSTALL_DATA} ${.CURDIR}/files/dnsdist.conf \
-		${DESTDIR}${PREFIX}/share/examples/dnsdist
+	cd ${DESTDIR}${PREFIX} && \
+	${MV} share/examples/dnsdist/dnsdist.conf-dist share/examples/dnsdist/dnsdist.conf || ${TRUE}
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../mk/atomic64.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../net/fstrm/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/nghttp2/buildlink3.mk"
+.include "../../mk/atomic64.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
