@@ -1,0 +1,20 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/08/22 20:26:30 adam Exp $
+
+We don't need another packaging system.
+
+--- CMakeLists.txt.orig	2023-06-29 17:49:42.000000000 +0000
++++ CMakeLists.txt
+@@ -28,13 +28,6 @@ if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+   set(OPENBSD ON)
+ endif()
+ 
+-if(LINUX)
+-  include(cmake/Rpm.cmake)
+-  include(cmake/Deb.cmake)
+-endif()
+-if(APPLE)
+-  include(cmake/Dmg.cmake)
+-endif()
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+ 
