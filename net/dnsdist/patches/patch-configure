@@ -1,0 +1,65 @@
+$NetBSD: patch-configure,v 1.1 2023/08/22 20:32:22 adam Exp $
+
+Portability fixes.
+
+--- configure.orig	2023-08-21 07:08:41.000000000 +0000
++++ configure
+@@ -23832,11 +23832,11 @@ fi
+   if test "x$enable_fortify_source" != "xno"; then :
+ 
+ 
+-        if test "x$enable_fortify_source" == "xauto"; then :
++        if test "x$enable_fortify_source" = "xauto"; then :
+   enable_fortify_source=3
+ fi
+ 
+-        if test "x$enable_fortify_source" == "x3"; then :
++        if test "x$enable_fortify_source" = "x3"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=3" >&5
+ $as_echo_n "checking whether C++ compiler handles -D_FORTIFY_SOURCE=3... " >&6; }
+@@ -23881,7 +23881,7 @@ fi
+ 
+ fi
+ 
+-        if test "x$enable_fortify_source" == "x2"; then :
++        if test "x$enable_fortify_source" = "x2"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=2" >&5
+ $as_echo_n "checking whether C++ compiler handles -D_FORTIFY_SOURCE=2... " >&6; }
+@@ -23926,7 +23926,7 @@ fi
+ 
+ fi
+ 
+-    if test "x$enable_fortify_source" == "x1"; then :
++    if test "x$enable_fortify_source" = "x1"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=1" >&5
+ $as_echo_n "checking whether C++ compiler handles -D_FORTIFY_SOURCE=1... " >&6; }
+@@ -24586,7 +24586,7 @@ fi
+   if test "x$enable_lto" != "xno"; then :
+ 
+ 
+-        if test "x$enable_lto" == "xthin"; then :
++        if test "x$enable_lto" = "xthin"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto=thin" >&5
+ $as_echo_n "checking whether C++ compiler handles -flto=thin... " >&6; }
+@@ -24632,7 +24632,7 @@ fi
+ 
+ fi
+ 
+-        if test "x$enable_lto" == "xauto"; then :
++        if test "x$enable_lto" = "xauto"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto=auto" >&5
+ $as_echo_n "checking whether C++ compiler handles -flto=auto... " >&6; }
+@@ -24678,7 +24678,7 @@ fi
+ 
+ fi
+ 
+-    if test "x$enable_lto" == "xyes"; then :
++    if test "x$enable_lto" = "xyes"; then :
+ 
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto" >&5
+ $as_echo_n "checking whether C++ compiler handles -flto... " >&6; }
