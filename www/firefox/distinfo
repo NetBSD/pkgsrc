@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.506 2023/08/20 21:41:54 tnn Exp $
+$NetBSD: distinfo,v 1.507 2023/08/22 13:48:16 tnn Exp $
 
 BLAKE2s (firefox-116.0.3.source.tar.xz) = 22e0a147eaeab2c65516f3bd7277ba7ff45e232d7f2ba56179f6f5a6c88bd6c0
 SHA512 (firefox-116.0.3.source.tar.xz) = 194c50e9ba5a918c37fbef8cd72ffb98e5e9f51955d8172b6666a758b5f20777ca0a7f79dff0328305fb6dafefb102ab002e326f47d0965a4dc6d3e9287c42b9
@@ -38,7 +38,7 @@ SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62d
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 2303b753066298305ccae80d72765dbc4da5e0dc
-SHA1 (patch-toolkit_moz.configure) = c183f8b1566ffed0df17bf856f693b3a288affeb
+SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 706635b76a7b525794aba95e95544f09e18bb662
 SHA1 (patch-toolkit_xre_glxtest.cpp) = adcd5b05fcbd7b41c01a2aa66f3e8f05ed230444
 SHA1 (patch-widget_gtk_v4l2test_v4l2test.cpp) = a9ed8692a703d3b31bdbc8d0582a60540922a1dd
