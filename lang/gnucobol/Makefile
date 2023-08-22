@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/08/17 09:36:18 fcambus Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/22 21:14:03 fcambus Exp $
 #
 
 DISTNAME=	gnucobol-3.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnucobol/}
 
-MAINTAINER=	rodo@bloerp.de
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gnucobol.sourceforge.io/
 COMMENT=	Open-source COBOL compiler
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
