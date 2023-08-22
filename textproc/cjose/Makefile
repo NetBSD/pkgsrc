@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/08/22 10:50:00 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/22 11:50:02 wiz Exp $
 
 DISTNAME=	cjose-0.6.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenIDC/}
-GITHUB_PROJECT= cjose
-GITHUB_TAG=     v0.6.2.2
-
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cisco/cjose/
