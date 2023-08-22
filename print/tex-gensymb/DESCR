@@ -1,0 +1,11 @@
+Provides generic commands \degree, \celsius, \perthousand, \micro
+and \ohm which work both in text and maths mode. Various means are
+provided to fake the symbols or take them from particular symbol
+fonts, if they are not available in the default fonts used in the
+document. This should be perfectly transparent at user level, so
+that one can apply the same notation for units of measurement in
+text and math mode and with arbitrary typefaces. Note that the
+package has been designed to work in conjunction with units.sty.
+
+This package used to be part of the was bundle, but has now become
+a package in its own right.
