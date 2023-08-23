@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/23 07:22:06 adam Exp $
 
-DISTNAME=	ansible-core-2.15.2
-PKGREVISION=	1
+DISTNAME=	ansible-core-2.15.3
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
 
@@ -27,9 +26,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
 .endif
 
-PKG_SYSCONFSUBDIR=	ansible
-EGDIR=			${PREFIX}/share/examples/ansible
-
 REPLACE_PYTHON=		test/lib/ansible_test/_data/*.py
 REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*.py
 REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*/*.py
@@ -41,7 +37,6 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_test/_data/sanity/validate-modules
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths+=	examples/hosts
 SUBST_FILES.paths+=	lib/ansible/config/base.yml
 SUBST_FILES.paths+=	lib/ansible/module_utils/urls.py
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
@@ -51,16 +46,8 @@ SUBST_SED.paths+=	-e "s,/etc/ansible,${PKG_SYSCONFDIR},g"
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 OWN_DIRS=		${PREFIX}/share/ansible
 
-CONF_FILES=		${EGDIR}/ansible.cfg ${PKG_SYSCONFDIR}/ansible.cfg
-CONF_FILES+=		${EGDIR}/hosts ${PKG_SYSCONFDIR}/hosts
-
 # Contains hardcoded paths to expected locations of package managers.
 CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
-
-post-install:
-.for f in ansible.cfg hosts
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}/${EGDIR}
-.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
