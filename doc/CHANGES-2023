@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5002 2023/08/23 07:23:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5003 2023/08/23 08:05:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7261,3 +7261,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-check to 2.2.1 [adam 2023-08-23]
 	Updated sysutils/ansible-core to 2.15.3 [adam 2023-08-23]
 	Updated sysutils/ansible to 8.3.0 [adam 2023-08-23]
+	Updated games/wesnoth to 1.16.10 [adam 2023-08-23]
+	Updated textproc/yaml-cpp to 0.8.0 [adam 2023-08-23]
