@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.33 2023/08/23 13:15:36 tsutsui Exp $
+# $NetBSD: modules.mk,v 1.34 2023/08/23 13:16:21 tsutsui Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -187,7 +187,7 @@
 #	FOR_{emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,emacs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,eemacs26nox,macs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs29,emacs29nox,emacs28,emacs28nox,emacs27,emacs27nox,emacs26,emacs26nox,macs25,emacs25nox,emacs21,emacs21nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
