@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2023/08/14 05:24:34 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2023/08/23 13:48:34 pho Exp $
 
 DISTNAME=	inkscape-1.3
 PKGREVISION=	1
@@ -33,6 +33,14 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+# GCC 7 is not good enough. It chokes on ${WRKSRC}/src/object/sp-factory.cpp:
+# > static Func constexpr null = [] () -> SPObject* { return nullptr; };
+# by emitting duplicate definitions for the same static data member. This
+# is because its C++17 support is incomplete and does not treat constexpr
+# data members as inline symbols. GCC 8 is also not good enough because it
+# fails to infer the type of std::uniform_real_distribution() used in
+# ${WRKSRC}/src/ui/tools/booleans-subitems.cpp.
+GCC_REQD+=		9
 # GNU make (gmake) is required for handling whitespace in filename.
 USE_TOOLS+=		gmake
 USE_TOOLS+=		msgfmt msgmerge perl pkg-config
