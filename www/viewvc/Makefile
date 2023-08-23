@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.44 2023/08/18 22:20:49 hauke Exp $
+# $NetBSD: Makefile,v 1.45 2023/08/23 00:33:46 gutteridge Exp $
 
 DISTNAME=	viewvc-1.2.3
 PKGREVISION=	2
-CATEGORIES=	devel www
+CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=viewvc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.viewvc.org/
-COMMENT=	Viewing the content of CVS/SVN repositories with a Webbrowser
+COMMENT=	View the content of CVS/SVN repositories with a web browser
 LICENSE=	2-clause-bsd
 
 REPLACE_PYTHON=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
