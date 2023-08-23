@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23279 2023/08/22 07:09:42 adam Exp $
+$NetBSD: TODO,v 1.23280 2023/08/23 06:04:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -694,6 +694,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-ru-2.10.0
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
+	o git-2.42
 	o gjs-1.70.1
 	o gkrellm-2.3.11
 	o gkrellm-multiping-2.0.13
@@ -915,6 +916,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
+	o libreoffice-7.6
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
