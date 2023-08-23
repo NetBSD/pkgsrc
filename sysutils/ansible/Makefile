@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/08/23 07:22:51 adam Exp $
 
-DISTNAME=	ansible-8.2.0
-PKGREVISION=	1
+DISTNAME=	ansible-8.3.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
