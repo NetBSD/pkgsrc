@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23282 2023/08/23 15:29:16 adam Exp $
+$NetBSD: TODO,v 1.23283 2023/08/23 15:40:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -920,7 +920,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
-	o libsndfile-1.2.2
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16

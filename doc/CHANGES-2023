@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5005 2023/08/23 15:29:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5006 2023/08/23 15:40:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7268,3 +7268,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.42.1 [adam 2023-08-23]
 	Updated sysutils/py-ansible-compat to 4.1.7 [adam 2023-08-23]
 	Updated sysutils/ansible-lint to 6.18.0 [adam 2023-08-23]
+	Updated audio/libsndfile to 1.2.2 [adam 2023-08-23]
+	Updated databases/postgresql-timescaledb to 2.11.2 [adam 2023-08-23]
