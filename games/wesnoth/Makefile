@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.201 2023/08/14 05:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2023/08/23 08:01:06 adam Exp $
 
-DISTNAME=	wesnoth-1.16.9
-PKGREVISION=	2
+DISTNAME=	wesnoth-1.16.10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_CMAKE=		yes
-# XXX check this, uses c++17 features
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash msgfmt perl:run pkg-config
 # detects history.h, but does not link against libhistory
@@ -69,6 +66,7 @@ LDFLAGS.SunOS+=		-lsocket
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../devel/pango/buildlink3.mk"
