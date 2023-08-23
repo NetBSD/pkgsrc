@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5001 2023/08/23 05:33:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5002 2023/08/23 07:23:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7259,3 +7259,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 4.0.2 [adam 2023-08-23]
 	Updated devel/py-setuptools-rust to 1.7.0 [adam 2023-08-23]
 	Updated devel/py-test-check to 2.2.1 [adam 2023-08-23]
+	Updated sysutils/ansible-core to 2.15.3 [adam 2023-08-23]
+	Updated sysutils/ansible to 8.3.0 [adam 2023-08-23]
