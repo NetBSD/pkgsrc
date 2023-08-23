@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.320 2023/08/21 12:10:59 adam Exp $
+# $NetBSD: Makefile,v 1.321 2023/08/23 15:19:02 adam Exp $
 
-DISTNAME=	qemu-8.0.4
+DISTNAME=	qemu-8.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +10,10 @@ HOMEPAGE=	https://www.qemu.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
+TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -22,10 +25,6 @@ HAS_CONFIGURE=		yes
 GCC_REQD+=		7
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
-CONFIGURE_ARGS+=	--sphinx-build=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 .include "options.mk"
 
