@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2022/12/13 13:12:10 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2023/08/23 06:29:53 pho Exp $
 
 BLAKE2s (gkrellsun-1.0.0.tar.gz) = 29aebc2c39df47ce9b06a27882f2ba2b0853fa5c1504c01d3e735ba267a33e03
 SHA512 (gkrellsun-1.0.0.tar.gz) = 1a34812e94f16d19311c23d44a0353dade50b802dd3ab115738959b9322c3bc6a28daa2bcea889700e6cc2ff8eb9400b989bf02c6f138bb878b94118ffd6e27a
 Size (gkrellsun-1.0.0.tar.gz) = 96970 bytes
+SHA1 (patch-Makefile) = 91f8ff32ca4084a7c78ce72800f3effd88415aee
 SHA1 (patch-src20_Makefile) = aa82b3842f704ced762830bf65de5b69e368c78d
-SHA1 (patch-src20_gkrellsun.c) = 5361ecc6e27ca9407d7cfa02ab186554df7ba9c6
+SHA1 (patch-src20_gkrellsun.c) = d8b64f27b04c616c707d3683cc66265736136e96
