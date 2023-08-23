@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2023/05/06 19:22:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.86 2023/08/23 15:19:02 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -127,7 +127,9 @@ share/doc/qemu/devel/modules.html
 share/doc/qemu/devel/multi-process.html
 share/doc/qemu/devel/multi-thread-tcg.html
 share/doc/qemu/devel/qapi-code-gen.html
+share/doc/qemu/devel/qdev-api.html
 share/doc/qemu/devel/qgraph.html
+share/doc/qemu/devel/qom-api.html
 share/doc/qemu/devel/qom.html
 share/doc/qemu/devel/qtest.html
 share/doc/qemu/devel/replay.html
@@ -149,6 +151,7 @@ share/doc/qemu/devel/ui.html
 share/doc/qemu/devel/vfio-migration.html
 share/doc/qemu/devel/virtio-backends.html
 share/doc/qemu/devel/writing-monitor-commands.html
+share/doc/qemu/devel/zoned-storage.html
 share/doc/qemu/genindex.html
 share/doc/qemu/index.html
 share/doc/qemu/interop/barrier.html
@@ -163,6 +166,7 @@ share/doc/qemu/interop/qemu-ga-ref.html
 share/doc/qemu/interop/qemu-ga.html
 share/doc/qemu/interop/qemu-qmp-ref.html
 share/doc/qemu/interop/qemu-storage-daemon-qmp-ref.html
+share/doc/qemu/interop/qmp-spec.html
 share/doc/qemu/interop/vhost-user-gpu.html
 share/doc/qemu/interop/vhost-user.html
 share/doc/qemu/interop/vhost-vdpa.html
@@ -180,6 +184,9 @@ share/doc/qemu/specs/acpi_nvdimm.html
 share/doc/qemu/specs/acpi_pci_hotplug.html
 share/doc/qemu/specs/fw_cfg.html
 share/doc/qemu/specs/index.html
+share/doc/qemu/specs/pci-ids.html
+share/doc/qemu/specs/pci-serial.html
+share/doc/qemu/specs/pci-testdev.html
 share/doc/qemu/specs/ppc-spapr-hcalls.html
 share/doc/qemu/specs/ppc-spapr-hotplug.html
 share/doc/qemu/specs/ppc-spapr-numa.html
@@ -189,6 +196,7 @@ share/doc/qemu/specs/ppc-xive.html
 share/doc/qemu/specs/sev-guest-firmware.html
 share/doc/qemu/specs/tpm.html
 share/doc/qemu/system/arm/aspeed.html
+share/doc/qemu/system/arm/bananapi_m2u.html
 share/doc/qemu/system/arm/collie.html
 share/doc/qemu/system/arm/cpu-features.html
 share/doc/qemu/system/arm/cubieboard.html
@@ -219,6 +227,7 @@ share/doc/qemu/system/arm/sx1.html
 share/doc/qemu/system/arm/versatile.html
 share/doc/qemu/system/arm/vexpress.html
 share/doc/qemu/system/arm/virt.html
+share/doc/qemu/system/arm/xenpvh.html
 share/doc/qemu/system/arm/xlnx-versal-virt.html
 share/doc/qemu/system/arm/xscale.html
 share/doc/qemu/system/authz.html
@@ -233,8 +242,10 @@ share/doc/qemu/system/devices/ccid.html
 share/doc/qemu/system/devices/cxl.html
 share/doc/qemu/system/devices/igb.html
 share/doc/qemu/system/devices/ivshmem.html
+share/doc/qemu/system/devices/keyboard.html
 share/doc/qemu/system/devices/net.html
 share/doc/qemu/system/devices/nvme.html
+share/doc/qemu/system/devices/usb-u2f.html
 share/doc/qemu/system/devices/usb.html
 share/doc/qemu/system/devices/vhost-user-rng.html
 share/doc/qemu/system/devices/vhost-user.html
