@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/07 05:13:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/23 15:49:49 adam Exp $
 
 DISTNAME=	debugpy-1.6.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,15 @@ COMMENT=	Implementation of the Debug Adapter Protocol for Python
 LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+PLIST_VARS+=	frame_eval
+.include "../../lang/python/pyversion.mk"
+
+# pydevd_frame_evaluator is not available for Python 3.11
+# see src/debugpy/_vendored/pydevd/setup_pydevd_cython.py
+.if ${PYTHON_VERSION} < 311
+PLIST.frame_eval=	yes
+.endif
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} +
