@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 08:00:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/23 15:49:49 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -338,6 +338,7 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_eval_main.
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.c
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.pxd
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.pyx
+${PLIST.frame_eval}${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.so
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.template.pyx
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_tracing.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_tracing.pyc
