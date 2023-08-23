@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2023/07/16 14:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2023/08/23 21:20:15 jym Exp $
 
-DISTNAME=		stunnel-5.69
+DISTNAME=		stunnel-5.70
 CATEGORIES=		security
 MASTER_SITES=		https://www.stunnel.org/archive/5.x/
 
@@ -9,11 +9,11 @@ HOMEPAGE=		https://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 LICENSE=		gnu-gpl-v2
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 
 .include "../../mk/bsd.prefs.mk"
