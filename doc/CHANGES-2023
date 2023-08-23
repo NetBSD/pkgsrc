@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5004 2023/08/23 14:33:25 he Exp $
+$NetBSD: CHANGES-2023,v 1.5005 2023/08/23 15:29:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7264,3 +7264,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/wesnoth to 1.16.10 [adam 2023-08-23]
 	Updated textproc/yaml-cpp to 0.8.0 [adam 2023-08-23]
 	Updated lang/rust-bin to 1.70.0 [he 2023-08-23]
+	Updated emulators/qemu to 8.1.0 [adam 2023-08-23]
+	Updated fonts/py-fonttools to 4.42.1 [adam 2023-08-23]
+	Updated sysutils/py-ansible-compat to 4.1.7 [adam 2023-08-23]
+	Updated sysutils/ansible-lint to 6.18.0 [adam 2023-08-23]
