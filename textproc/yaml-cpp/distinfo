@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/07/18 18:34:53 ryoon Exp $
+$NetBSD: distinfo,v 1.12 2023/08/23 08:05:02 adam Exp $
 
-BLAKE2s (yaml-cpp-0.7.0.tar.gz) = 6cbb49a1522f46626f0302c74efdfea57a316bf0cdf3b730620b6e17308d8fb5
-SHA512 (yaml-cpp-0.7.0.tar.gz) = 2de0f0ec8f003cd3c498d571cda7a796bf220517bad2dc02cba70c522dddde398f33cf1ad20da251adaacb2a07b77844111f297e99d45a7c46ebc01706bbafb5
-Size (yaml-cpp-0.7.0.tar.gz) = 1033237 bytes
-SHA1 (patch-CMakeLists.txt) = 5b5ae236ae00fd04fe5a371b1a0aefffb7474632
+BLAKE2s (yaml-cpp-0.8.0.tar.gz) = cc80f79c5c4368a03088504a1a3e72d5742d07376d60ebab474621edb63c7880
+SHA512 (yaml-cpp-0.8.0.tar.gz) = aae9d618f906117d620d63173e95572c738db518f4ff1901a06de2117d8deeb8045f554102ca0ba4735ac0c4d060153a938ef78da3e0da3406d27b8298e5f38e
+Size (yaml-cpp-0.8.0.tar.gz) = 1017151 bytes
