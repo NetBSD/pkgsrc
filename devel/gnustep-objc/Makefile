@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2023/06/06 12:40:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.39 2023/08/23 11:57:05 pho Exp $
 
 DISTNAME=	libobjc2-2.1.0
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
 GITHUB_PROJECT=	libobjc2
@@ -17,8 +18,6 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 USE_LANGUAGES=			objc c++11
 USE_TOOLS+=			gmake cmake pax
 USE_CMAKE=			yes
-CMAKE_ARGS+=			-DCMAKE_C_COMPILER=${CLANGBASE:Q}/bin/clang
-CMAKE_ARGS+=			-DCMAKE_CXX_COMPILER=${CLANGBASE:Q}/bin/clang++
 LDFLAGS+=			-lm -lunwind -lstdc++
 MAKE_FILE=			Makefile
 MAKE_ENV+=			ADDITIONAL_LDFLAGS="-lpthread"
