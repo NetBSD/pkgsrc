@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.20 2023/05/06 19:22:37 ryoon Exp $
+# $NetBSD: options.mk,v 1.21 2023/08/23 15:19:02 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl spice
-PKG_SUGGESTED_OPTIONS+=	iscsi spice
+PKG_SUGGESTED_OPTIONS+=	iscsi sdl spice
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -16,9 +16,7 @@ PKG_SUPPORTED_OPTIONS+=	virtfs-proxy-helper
 .  include "../../graphics/MesaLib/features.mk"
 .  if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
 PKG_SUPPORTED_OPTIONS+=	opengl
-PKG_SUGGESTED_OPTIONS+=	opengl sdl
-.  else
-PKG_SUGGESTED_OPTIONS+=	sdl
+PKG_SUGGESTED_OPTIONS+=	opengl
 .  endif
 .endif
 

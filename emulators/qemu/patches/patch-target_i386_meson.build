@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_meson.build,v 1.4 2022/06/12 13:49:28 leot Exp $
+$NetBSD: patch-target_i386_meson.build,v 1.5 2023/08/23 15:19:02 adam Exp $
 
 Permit to use `-cpu host' with NVMM.
 
---- target/i386/meson.build.orig	2022-04-19 19:10:27.000000000 +0000
+--- target/i386/meson.build.orig	2023-08-22 15:34:02.000000000 +0000
 +++ target/i386/meson.build
 @@ -11,6 +11,7 @@ i386_ss.add(when: 'CONFIG_SEV', if_true:
  # x86 cpu type
@@ -10,5 +10,5 @@ Permit to use `-cpu host' with NVMM.
  i386_ss.add(when: 'CONFIG_HVF', if_true: files('host-cpu.c'))
 +i386_ss.add(when: 'CONFIG_NVMM', if_true: files('host-cpu.c'))
  
- i386_softmmu_ss = ss.source_set()
- i386_softmmu_ss.add(files(
+ i386_system_ss = ss.source_set()
+ i386_system_ss.add(files(
