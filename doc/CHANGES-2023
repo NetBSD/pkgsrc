@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5006 2023/08/23 15:40:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5007 2023/08/23 21:21:37 jym Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7270,3 +7270,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.18.0 [adam 2023-08-23]
 	Updated audio/libsndfile to 1.2.2 [adam 2023-08-23]
 	Updated databases/postgresql-timescaledb to 2.11.2 [adam 2023-08-23]
+	Updated security/stunnel to 5.70 [jym 2023-08-23]
