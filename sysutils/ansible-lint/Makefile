@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/08/23 15:28:25 adam Exp $
 
-DISTNAME=	ansible-lint-6.17.2
-PKGREVISION=	1
+DISTNAME=	ansible-lint-6.18.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -18,7 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-black>=22.8.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.10.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.3:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.31.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.0.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.17.31:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee>=0.4.1:../../sysutils/py-subprocess-tee
@@ -28,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-yamllint>=1.30.0:../../textproc/py-yamllint
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # ansible
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
