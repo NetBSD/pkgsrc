@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2023/05/04 18:08:18 he Exp $
+# $NetBSD: Makefile,v 1.53 2023/08/23 14:32:45 he Exp $
 
-DISTNAME=	rust-1.69.0
+DISTNAME=	rust-1.70.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -31,6 +31,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
 ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
+ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
 
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
@@ -179,6 +180,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-riscv64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	riscv64gc-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
@@ -229,10 +238,11 @@ fix-darwin-install-name:
 .else
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
-# The llvm utilities need a specific libstdc++ version from compat80
+# The llvm utilities may need a specific libstdc++ version from compat80
 .  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
 .    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
-        ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf"
+        ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "earmv6hf" && \
+        ${MACHINE_ARCH} != "riscv64"
 DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
 RUST_LLVM_RPATH=	${PREFIX}/emul/netbsd/usr/lib:${PREFIX}/lib
 FORCE_RPATH=
