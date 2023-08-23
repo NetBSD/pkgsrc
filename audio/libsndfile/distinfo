@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2023/01/11 18:58:23 adam Exp $
+$NetBSD: distinfo,v 1.56 2023/08/23 15:37:39 adam Exp $
 
-BLAKE2s (libsndfile-1.2.0.tar.xz) = 9d0db6d63d22af51ffcf63c1610d7319745cedf9c0cc1bebef890345fcc08e2d
-SHA512 (libsndfile-1.2.0.tar.xz) = c0dee6b33cd3c619aa13ec2854a5480e826640ca98a438758346194e83752af576a39f9de118824f0d0c61288632d87b489dc5793c025296e0f15564d87ca12a
-Size (libsndfile-1.2.0.tar.xz) = 730268 bytes
+BLAKE2s (libsndfile-1.2.2.tar.xz) = c8008ba1286ccbc30bdef26ab0776c7382ffdbbdf0c6866d95648a46e3483179
+SHA512 (libsndfile-1.2.2.tar.xz) = a6e3ea3ac5d91befaa99f6a31a3fac44e7b7c11f1de4698167317a461d5a19a2651d47486a920b34400f18367b4f6173bf0c1c9ba80eb682cece1b5beee352a0
+Size (libsndfile-1.2.2.tar.xz) = 730760 bytes
