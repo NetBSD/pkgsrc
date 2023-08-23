@@ -1,12 +1,12 @@
-$NetBSD: patch-meson.build,v 1.11 2022/05/19 16:10:15 ryoon Exp $
+$NetBSD: patch-meson.build,v 1.12 2023/08/23 15:19:02 adam Exp $
 
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
 * Detect curses (non-ncurses{,w} too)
 
---- meson.build.orig	2022-04-19 19:10:27.000000000 +0000
+--- meson.build.orig	2023-08-22 15:34:02.000000000 +0000
 +++ meson.build
-@@ -768,7 +768,7 @@ if have_system and get_option('curses').
+@@ -1184,7 +1184,7 @@ if have_system and get_option('curses').
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -14,8 +14,8 @@ $NetBSD: patch-meson.build,v 1.11 2022/05/19 16:10:15 ryoon Exp $
 +      curses_libname_list = (targetos == 'windows' ? ['pdcurses'] : ['ncursesw', 'cursesw', 'curses'])
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
-                                     required: false,
-@@ -786,7 +786,7 @@ if have_system and get_option('curses').
+                                     required: false)
+@@ -1201,7 +1201,7 @@ if have_system and get_option('curses').
      endif
    endif
    if get_option('iconv').allowed()
