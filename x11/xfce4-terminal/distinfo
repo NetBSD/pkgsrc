@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/06/04 00:18:34 gutteridge Exp $
+$NetBSD: distinfo,v 1.23 2023/08/23 21:27:30 gutteridge Exp $
 
-BLAKE2s (xfce4-terminal-1.0.4.tar.bz2) = 8d11ab3d1c65d83334ce775e75ecd12d4e2eb220f51e72a0f81f519009f44bd4
-SHA512 (xfce4-terminal-1.0.4.tar.bz2) = 76ea8f296fe1c128dc70d8aabf23447300ba83405d52e844abec89049968bac51fe47fd7545a76e4a421275c6a2f230f326ed3a25083bf536f17fc3218b05fce
-Size (xfce4-terminal-1.0.4.tar.bz2) = 1009367 bytes
+BLAKE2s (xfce4-terminal-1.1.0.tar.bz2) = fffef159bddf9c4be283014b0ea66c13e288dd0f6dcf380abaea3dad6fcbd5f0
+SHA512 (xfce4-terminal-1.1.0.tar.bz2) = c01f0e7a293c4e55b4ee151eb8beb5ff9634a8134b545452c87ee9fa9928507e73bda1a63634900f669a58353877c2cb3f48e7b95cf236bdc857ca311c73c86f
+Size (xfce4-terminal-1.1.0.tar.bz2) = 1021840 bytes
