@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5007 2023/08/23 21:21:37 jym Exp $
+$NetBSD: CHANGES-2023,v 1.5008 2023/08/23 21:27:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7271,3 +7271,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/libsndfile to 1.2.2 [adam 2023-08-23]
 	Updated databases/postgresql-timescaledb to 2.11.2 [adam 2023-08-23]
 	Updated security/stunnel to 5.70 [jym 2023-08-23]
+	Updated x11/xfce4-terminal to 1.1.0 [gutteridge 2023-08-23]
