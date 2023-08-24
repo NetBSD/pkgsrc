@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5043 2023/08/24 19:44:44 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5044 2023/08/24 19:46:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7310,3 +7310,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bumpver to 2023.1126 [wiz 2023-08-24]
 	Updated devel/py-async-timeout to 4.0.3 [wiz 2023-08-24]
 	Updated devel/py-async-timeout to 4.0.3 [wiz 2023-08-24]
+	Updated devel/py-click to 8.1.7 [wiz 2023-08-24]
