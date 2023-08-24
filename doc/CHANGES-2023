@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5052 2023/08/24 20:15:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5053 2023/08/24 20:23:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7318,3 +7318,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-project-api to 1.5.4 [wiz 2023-08-24]
 	Updated print/py-pspdfutils to 3.1.1 [wiz 2023-08-24]
 	Updated textproc/py-readme_renderer to 41.0 [wiz 2023-08-24]
+	Updated devel/py-setuptools to 68.1.2 [wiz 2023-08-24]
