@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2023/08/21 01:58:02 mef Exp $
+# $NetBSD: Makefile.common,v 1.50 2023/08/24 03:17:42 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -40,7 +40,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake perl pkg-config
 
-GCC_REQD+=	10
+USE_CXX_FEATURES+=	c++20
 
 .include "../../mk/bsd.prefs.mk"
 
