@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.nowrap,v 1.1 2023/08/24 15:26:40 vins Exp $
+sbin/mailq
+sbin/makemap
+sbin/newaliases
+sbin/sendmail
