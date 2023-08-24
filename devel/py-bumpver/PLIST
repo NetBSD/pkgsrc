@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/11 09:01:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/24 19:42:13 wiz Exp $
 bin/bumpver-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -19,9 +19,15 @@ ${PYSITELIB}/bumpver/cli.pyo
 ${PYSITELIB}/bumpver/config.py
 ${PYSITELIB}/bumpver/config.pyc
 ${PYSITELIB}/bumpver/config.pyo
+${PYSITELIB}/bumpver/hooks.py
+${PYSITELIB}/bumpver/hooks.pyc
+${PYSITELIB}/bumpver/hooks.pyo
 ${PYSITELIB}/bumpver/parse.py
 ${PYSITELIB}/bumpver/parse.pyc
 ${PYSITELIB}/bumpver/parse.pyo
+${PYSITELIB}/bumpver/pathlib.py
+${PYSITELIB}/bumpver/pathlib.pyc
+${PYSITELIB}/bumpver/pathlib.pyo
 ${PYSITELIB}/bumpver/patterns.py
 ${PYSITELIB}/bumpver/patterns.pyc
 ${PYSITELIB}/bumpver/patterns.pyo
