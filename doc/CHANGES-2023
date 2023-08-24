@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5029 2023/08/24 09:39:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5030 2023/08/24 10:28:21 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7294,3 +7294,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/json-c to 0.17 [wiz 2023-08-24]
 	Updated devel/git to 2.42.0 [adam 2023-08-24]
 	Updated www/restish to 0.18.0 [wiz 2023-08-24]
+	Updated sysutils/xenkernel415 to 4.15.5 [bouyer 2023-08-24]
+	Updated sysutils/xentools415 to 4.15.5 [bouyer 2023-08-24]
+	Updated sysutils/xenstoretools to 4.15.5 [bouyer 2023-08-24]
