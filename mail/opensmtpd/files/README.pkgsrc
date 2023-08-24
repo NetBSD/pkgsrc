@@ -8,7 +8,7 @@ to set up OpenSMTPD for local and outbound delivery on your system:
 * Replace /etc/mailer.conf with @PREFIX@/share/examples/opensmtpd/mailer.conf.
 * Prepend @PREFIX@/man to the MANPATH environment to avoid conflicting
   names for man pages with sendmail-compatible mail servers.
-* Check the smptd.conf and aliases files in @PKG_SYSCONFDIR@/smtpd. See 
+* Check the smtpd.conf and aliases files in @PKG_SYSCONFDIR@/smtpd. See 
   the relevant man pages.
 * Set opensmtpd=YES in /etc/rc.conf.  
 * Run `@RCD_SCRIPTS_DIR@/opensmtpd start' to start OpenSMTPD.
