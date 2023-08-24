@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5035 2023/08/24 12:03:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5036 2023/08/24 12:25:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7302,3 +7302,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/glu to 9.0.3 [wiz 2023-08-24]
 	Updated fonts/harfbuzz to 8.1.1 [wiz 2023-08-24]
 	Updated fonts/harfbuzz-icu to 8.1.1 [wiz 2023-08-24]
+	Updated devel/re2c to 3.1 [wiz 2023-08-24]
