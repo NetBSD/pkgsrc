@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5039 2023/08/24 18:56:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5040 2023/08/24 19:38:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/opensmtpd version 7.3.0p1 [vins 2023-08-24]
 	Updated shells/oksh to 7.3 [schmonz 2023-08-24]
 	Updated net/tor to 0.4.8.4 [wiz 2023-08-24]
+	Updated mail/rspamd to 3.6 [wiz 2023-08-24]
