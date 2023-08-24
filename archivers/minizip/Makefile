@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/10/24 14:15:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/24 06:36:49 wiz Exp $
 
-DISTNAME=	zlib-1.2.13
+DISTNAME=	zlib-1.3
 PKGNAME=	${DISTNAME:S/zlib-/minizip-/1}
 CATEGORIES=	archivers
 MASTER_SITES=	http://zlib.net/
