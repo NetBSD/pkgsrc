@@ -558,6 +558,7 @@ m68060-optimized	Optimize for m68060 (only).
 mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 magick			Use ImageMagick as the image processing backend.
+mailwrapper		Use mailwrapper to handle MTA software aliases.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
 manual			Include manual.
 marble			Enable marble (virtual globe) support.
