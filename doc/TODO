@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23300 2023/08/24 09:39:28 wiz Exp $
+$NetBSD: TODO,v 1.23301 2023/08/24 11:35:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -704,7 +704,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gliv-1.9.7
 	o global-6.6.5
 	o glom-1.14.2
-	o glu-9.0.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-44.1
