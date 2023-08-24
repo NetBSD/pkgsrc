@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/02 20:55:54 vins Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/24 20:51:45 vins Exp $
 bin/toot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/toot/__init__.py
 ${PYSITELIB}/toot/__init__.pyc
 ${PYSITELIB}/toot/__init__.pyo
+${PYSITELIB}/toot/__main__.py
+${PYSITELIB}/toot/__main__.pyc
+${PYSITELIB}/toot/__main__.pyo
 ${PYSITELIB}/toot/api.py
 ${PYSITELIB}/toot/api.pyc
 ${PYSITELIB}/toot/api.pyo
@@ -39,6 +42,9 @@ ${PYSITELIB}/toot/logging.pyo
 ${PYSITELIB}/toot/output.py
 ${PYSITELIB}/toot/output.pyc
 ${PYSITELIB}/toot/output.pyo
+${PYSITELIB}/toot/settings.py
+${PYSITELIB}/toot/settings.pyc
+${PYSITELIB}/toot/settings.pyo
 ${PYSITELIB}/toot/tui/__init__.py
 ${PYSITELIB}/toot/tui/__init__.pyc
 ${PYSITELIB}/toot/tui/__init__.pyo
@@ -78,6 +84,9 @@ ${PYSITELIB}/toot/typing_compat.pyo
 ${PYSITELIB}/toot/utils/__init__.py
 ${PYSITELIB}/toot/utils/__init__.pyc
 ${PYSITELIB}/toot/utils/__init__.pyo
+${PYSITELIB}/toot/utils/datetime.py
+${PYSITELIB}/toot/utils/datetime.pyc
+${PYSITELIB}/toot/utils/datetime.pyo
 ${PYSITELIB}/toot/utils/language.py
 ${PYSITELIB}/toot/utils/language.pyc
 ${PYSITELIB}/toot/utils/language.pyo
