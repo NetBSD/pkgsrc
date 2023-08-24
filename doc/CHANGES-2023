@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5009 2023/08/24 00:27:14 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5010 2023/08/24 01:17:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7273,3 +7273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/stunnel to 5.70 [jym 2023-08-23]
 	Updated x11/xfce4-terminal to 1.1.0 [gutteridge 2023-08-23]
 	Updated meta-pkgs/xfce4 to 4.18.0nb9 [gutteridge 2023-08-24]
+	Updated net/mosquitto to 2.0.17 [gdt 2023-08-24]
