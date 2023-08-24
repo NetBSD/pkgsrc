@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/18 13:20:44 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/08/24 06:24:37 wiz Exp $
 
-BLAKE2s (tree-sitter-rust-0.20.3.tar.gz) = 36b4d37fdfa148cad126f29d9cf922486fe96d200ec2bafbc17dddaefe2ac46b
-SHA512 (tree-sitter-rust-0.20.3.tar.gz) = 9732a6e9782538c1a7f7a265e185aece659e164284eac61f65f3d174845aafc697ec2758d6dddb52c8a6ee3856be67493339d680f963ee383894f1d3789d96d5
-Size (tree-sitter-rust-0.20.3.tar.gz) = 325621 bytes
+BLAKE2s (tree-sitter-rust-0.20.4.tar.gz) = e82baf89cc7677c5ad4cbaf075eeb5657cfed39d2d07a0b598d3a5e825e1c229
+SHA512 (tree-sitter-rust-0.20.4.tar.gz) = f1b2e9537286921056eda4e96faa9f61131b9ca5684e7ab8aa7bd07e46d91e5eab18e6e292cfad7cdcb7ba195e80f7f1e35f04992cb8011bbd29dd2d95116f9d
+Size (tree-sitter-rust-0.20.4.tar.gz) = 358924 bytes
