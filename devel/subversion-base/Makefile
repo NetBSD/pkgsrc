@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2023/05/11 22:23:19 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2023/08/24 18:27:33 schmonz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/subversion/Makefile.common"
 
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		msgfmt msgmerge xgettext pkg-config
 TOOLS_BROKEN+=		perl
 
 CONFIGURE_ARGS+=	--without-apxs
