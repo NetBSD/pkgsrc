@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/08/24 09:09:56 wiz Exp $
 
-BLAKE2s (inih-r53.tar.gz) = c33e1f871c4eed71a920354fd873c715f70245e794836670a18ba26167c27212
-SHA512 (inih-r53.tar.gz) = 99bc40c294b521e9973184bfb30d60c129735991f33b387b3d023827a34672b0489eadf91e38895ea725168dbc7b27bb02c1975debe7573b4b209d0e947b2100
-Size (inih-r53.tar.gz) = 16984 bytes
+BLAKE2s (inih-r57.tar.gz) = 141de82a0b35b9c14687a923ee3e579c8c922f6fcd514bc6dfeda24e0d5b17c5
+SHA512 (inih-r57.tar.gz) = 9f758df876df54ed7e228fd82044f184eefbe47e806cd1e6d62e1b0ea28e2c08e67fa743042d73b4baef0b882480e6afe2e72878b175822eb2bdbb6d89c0e411
+Size (inih-r57.tar.gz) = 18954 bytes
