@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5033 2023/08/24 11:35:58 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5034 2023/08/24 12:03:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7300,3 +7300,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.7.3 [pin 2023-08-24]
 	Updated shells/nushell to 0.84.0 [pin 2023-08-24]
 	Updated graphics/glu to 9.0.3 [wiz 2023-08-24]
+	Updated fonts/harfbuzz to 8.1.1 [wiz 2023-08-24]
