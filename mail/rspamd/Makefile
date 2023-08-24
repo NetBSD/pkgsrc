@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2023/07/18 18:27:34 nia Exp $
+# $NetBSD: Makefile,v 1.91 2023/08/24 19:38:09 wiz Exp $
 
-DISTNAME=	rspamd-3.5
+DISTNAME=	rspamd-3.6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
@@ -45,6 +45,8 @@ RUNDIR=		${VARBASE}/run/rspamd
 
 FILES_SUBST+=	RSPAMD_USER=${RSPAMD_USER}
 FILES_SUBST+=	RSPAMD_GROUP=${RSPAMD_GROUP}
+
+INSTALLATION_DIRS+=	share/examples
 
 RCD_SCRIPTS=	rspamd
 SMF_METHODS=	rspamd
@@ -95,6 +97,9 @@ cfgfiles:
 post-extract:
 	${FIND} ${WRKSRC}/conf -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${WRKSRC}/conf -type f -exec ${CHMOD} ${DOCMODE} {} \;
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/etc/rspamd ${DESTDIR}${PREFIX}/share/examples/rspamd
 
 .include "../../devel/cmake/build.mk"
 .include "../../databases/hiredis/buildlink3.mk"
