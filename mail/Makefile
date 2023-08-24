@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2023/08/16 06:24:41 markd Exp $
+# $NetBSD: Makefile,v 1.615 2023/08/24 15:31:11 vins Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -203,6 +203,7 @@ SUBDIR+=	offlineimap
 SUBDIR+=	openarc
 SUBDIR+=	opendkim
 SUBDIR+=	opendmarc
+SUBDIR+=	opensmtpd
 SUBDIR+=	p5-App-Siesh
 SUBDIR+=	p5-Catalyst-View-Email
 SUBDIR+=	p5-Email-Abstract
