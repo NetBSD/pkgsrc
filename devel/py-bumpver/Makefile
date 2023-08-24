@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/06/11 09:01:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/24 19:42:13 wiz Exp $
 
-DISTNAME=	bumpver-2023.1124
+DISTNAME=	bumpver-2023.1126
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bumpver/}
