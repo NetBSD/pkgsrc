@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5058 2023/08/24 20:57:34 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5059 2023/08/24 21:38:53 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7324,3 +7324,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typeguard to 4.1.2 [wiz 2023-08-24]
 	Updated devel/py-tox to 4.10.0 [wiz 2023-08-24]
 	Updated chat/toot to 0.38.1 [vins 2023-08-24]
+	Updated shells/yash to 2.55 [vins 2023-08-24]
