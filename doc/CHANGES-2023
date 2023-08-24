@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5055 2023/08/24 20:28:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5056 2023/08/24 20:31:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7321,3 +7321,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 68.1.2 [wiz 2023-08-24]
 	Updated misc/py-shellingham to 1.5.3 [wiz 2023-08-24]
 	Updated misc/py-tqdm to 4.66.1 [wiz 2023-08-24]
+	Updated devel/py-typeguard to 4.1.2 [wiz 2023-08-24]
