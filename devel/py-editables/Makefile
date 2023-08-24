@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/11/18 18:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/24 19:51:30 wiz Exp $
 
-DISTNAME=	editables-0.3
+DISTNAME=	editables-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/editables/}
@@ -10,9 +10,16 @@ HOMEPAGE=	https://github.com/pfmoore/editables
 COMMENT=	Editable installations
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+# needs 'make install'
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
