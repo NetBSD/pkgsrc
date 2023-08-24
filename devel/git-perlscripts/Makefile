@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/24 09:33:30 adam Exp $
 
-PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-perlscripts-${GIT_VERSION}
@@ -14,8 +13,7 @@ DEPENDS+=	p5-MailTools>=2.11:../../mail/p5-MailTools
 DEPENDS+=	p5-Net-SMTP-SSL>=1.01:../../mail/p5-Net-SMTP-SSL
 DEPENDS+=	p5-Authen-SASL>=1.0:../../security/p5-Authen-SASL
 
-USE_TOOLS+=	pax
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 
 REPLACE_PERL+=		*.perl */*.perl */*/*.perl
 REPLACE_PERL+=		contrib/hooks/update-paranoid
@@ -27,16 +25,16 @@ BUILD_TARGET+=		git-instaweb git-request-pull # sh scripts call perl
 INSTALL_TARGET=		install-perl-script
 
 MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
-MAKE_ENV+=		PERLLIBDIR=${PERL5_INSTALLVENDORLIB:Q}
+MAKE_ENV+=		PERLLIBDIR=${PERL5_INSTALLVENDORLIB}
 
 INSTALLATION_DIRS+=	libexec/git-core
 INSTALLATION_DIRS+=	${PERL5_INSTALLVENDORLIB}
 
 post-install:
-	${INSTALL:Q} ${WRKSRC:Q}/git-instaweb ${DESTDIR:Q}${PREFIX:Q}/libexec/git-core
-	${INSTALL:Q} ${WRKSRC:Q}/git-request-pull ${DESTDIR:Q}${PREFIX:Q}/libexec/git-core
-	cd ${WRKSRC:Q}/perl/build/lib && \
-	${PAX} -rw -pp . ${DESTDIR:Q}${PERL5_INSTALLVENDORLIB:Q}
+	${INSTALL} ${WRKSRC}/git-instaweb ${DESTDIR}${PREFIX}/libexec/git-core
+	${INSTALL} ${WRKSRC}/git-request-pull ${DESTDIR}${PREFIX}/libexec/git-core
+	cd ${WRKSRC}/perl/build/lib && \
+	${PAX} -rw -pp . ${DESTDIR}${PERL5_INSTALLVENDORLIB}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/perl5/vars.mk"
