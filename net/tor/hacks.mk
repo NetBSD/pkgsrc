@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2020/09/19 18:22:01 leot Exp $
+# $NetBSD: hacks.mk,v 1.2 2023/08/24 18:56:42 wiz Exp $
 
 .if !defined(TOR_HACKS_MK)
 TOR_HACKS_MK=	defined
@@ -9,7 +9,7 @@ TOR_HACKS_MK=	defined
 # To reproduce with Tor, after removing this hack, calling
 # `tor --version' should ends up in the Tor process hanging forever
 # (instead printing the version to the stdout).
-.if !empty(MACHINE_PLATFORM:MNetBSD-9.*-*arm*)
+.if ${MACHINE_PLATFORM:MNetBSD-9.*-*arm*}
 PKG_HACKS+=		disable-backtrace
 CONFIGURE_ENV+=		ac_cv_search_backtrace=no
 .endif
