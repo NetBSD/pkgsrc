@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5012 2023/08/24 06:14:28 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5013 2023/08/24 06:15:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7276,3 +7276,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/mosquitto to 2.0.17 [gdt 2023-08-24]
 	Updated x11/libdrm to 2.4.116 [wiz 2023-08-24]
 	Updated textproc/tree-sitter-bash to 0.20.0 [wiz 2023-08-24]
+	Updated textproc/tree-sitter-c to 0.20.5 [wiz 2023-08-24]
