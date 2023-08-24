@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5011 2023/08/24 06:09:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5012 2023/08/24 06:14:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7275,3 +7275,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4 to 4.18.0nb9 [gutteridge 2023-08-24]
 	Updated net/mosquitto to 2.0.17 [gdt 2023-08-24]
 	Updated x11/libdrm to 2.4.116 [wiz 2023-08-24]
+	Updated textproc/tree-sitter-bash to 0.20.0 [wiz 2023-08-24]
