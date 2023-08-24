@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:46:13 nia Exp $
+$NetBSD: distinfo,v 1.23 2023/08/24 11:35:49 wiz Exp $
 
-BLAKE2s (glu-9.0.2.tar.xz) = 04783d71960be5197293373ad6764f2a4903157cb5a448c5a8c11b2c5c18e639
-SHA512 (glu-9.0.2.tar.xz) = 2517d7406bb643d12c017a95dcb5d8716f307344332638bcbdf274a90752a7c22165d34745f1b082ed916bb07d40e62d1d1d67d96426225be63166f3480d6f64
-Size (glu-9.0.2.tar.xz) = 436176 bytes
+BLAKE2s (glu-9.0.3.tar.xz) = a864f6053e957d968ab8e3b90041686eb14e1972a6f52f871a845f8a4d288084
+SHA512 (glu-9.0.3.tar.xz) = b2781059c0e176192c3fc0d7244645020937a463311171efddb9f35fb94ee43faabcf627fa7f429d48fceaf6dd9c5adb69c86c7a21ec4ea490f4ab143d52e3ba
+Size (glu-9.0.3.tar.xz) = 218968 bytes
+SHA1 (patch-meson.build) = 128ffd78e850fbf846d640e0ebcc8c46d9bc9ecd
 SHA1 (patch-src_libtess_sweep.c) = b7f9ca4e1a83e0081b3cfa418f378e33392f7f65
