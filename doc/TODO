@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23291 2023/08/24 06:24:53 wiz Exp $
+$NetBSD: TODO,v 1.23292 2023/08/24 06:33:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -506,7 +506,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o boolean-7.1
 	o bos-2.5
 	o botan-3.0.0
-	o botan3-3.1.1
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
