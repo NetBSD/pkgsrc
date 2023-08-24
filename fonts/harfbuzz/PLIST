@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2023/07/19 15:48:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.72 2023/08/24 12:02:49 wiz Exp $
 bin/hb-info
 bin/hb-ot-shape-closure
 bin/hb-shape
@@ -131,6 +131,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-7-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-0-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-8-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-full.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/apple-advanced-typography-api.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/buffers-language-script-and-direction.html
