@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23287 2023/08/24 06:16:40 wiz Exp $
+$NetBSD: TODO,v 1.23288 2023/08/24 06:19:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1446,7 +1446,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
-	o tree-sitter-cpp-0.20.3
 	o tree-sitter-go-0.20.0
 	o tree-sitter-python-0.20.4
 	o tree-sitter-rust-0.20.4
