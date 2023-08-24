@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5041 2023/08/24 19:42:23 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5042 2023/08/24 19:44:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7308,3 +7308,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/tor to 0.4.8.4 [wiz 2023-08-24]
 	Updated mail/rspamd to 3.6 [wiz 2023-08-24]
 	Updated devel/py-bumpver to 2023.1126 [wiz 2023-08-24]
+	Updated devel/py-async-timeout to 4.0.3 [wiz 2023-08-24]
