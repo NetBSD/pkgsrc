@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5032 2023/08/24 11:32:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5033 2023/08/24 11:35:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7299,3 +7299,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xenstoretools to 4.15.5 [bouyer 2023-08-24]
 	Updated graphics/oculante to 0.7.3 [pin 2023-08-24]
 	Updated shells/nushell to 0.84.0 [pin 2023-08-24]
+	Updated graphics/glu to 9.0.3 [wiz 2023-08-24]
