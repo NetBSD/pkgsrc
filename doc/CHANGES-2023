@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5025 2023/08/24 09:14:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5026 2023/08/24 09:21:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7290,3 +7290,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/inih to 57 [wiz 2023-08-24]
 	Updated devel/py-jaraco.collections to 4.3.0 [adam 2023-08-24]
 	Updated misc/py-immutables to 0.20 [adam 2023-08-24]
+	Updated x11/gtk4 to 4.12.0 [wiz 2023-08-24]
