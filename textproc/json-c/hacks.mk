@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2014/07/17 09:18:27 obache Exp $
+# $NetBSD: hacks.mk,v 1.2 2023/08/24 09:23:14 wiz Exp $
 
 .if !defined(JSON_C_HACKS_MK)
 JSON_C_HACKS_MK=	# defined
@@ -7,7 +7,7 @@ JSON_C_HACKS_MK=	# defined
 # later with GCC.
 #
 .include "../../mk/compiler.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-i386) && !empty(CC_VERSION:Mgcc-*)
+.if ${MACHINE_PLATFORM:MNetBSD-[0-5].*-i386} && ${CC_VERSION:Mgcc-*}
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
