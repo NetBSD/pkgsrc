@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.180 2022/06/28 11:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2023/08/24 18:56:42 wiz Exp $
 
-DISTNAME=	tor-0.4.7.8
-PKGREVISION=	1
+DISTNAME=	tor-0.4.8.4
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -24,17 +23,17 @@ CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 # netbsd-9 amd64.
 BUILD_TARGET=		micro-revision.i all
 
+# https://gitlab.torproject.org/tpo/core/tor/-/issues/40844
 #============================================================================
-#Testsuite summary for tor 0.4.6.6
+#Testsuite summary for tor 0.4.8.4
 #============================================================================
-## TOTAL: 33
-## PASS:  29
-## SKIP:  4
+## TOTAL: 26
+## PASS:  22
+## SKIP:  2
 ## XFAIL: 0
-## FAIL:  0
+## FAIL:  2
 ## XPASS: 0
 ## ERROR: 0
-#============================================================================
 TEST_TARGET=		check
 
 TOR_USER?=		tor
