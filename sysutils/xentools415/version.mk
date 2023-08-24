@@ -1,8 +1,8 @@
-# $NetBSD: version.mk,v 1.3 2022/12/15 13:24:44 bouyer Exp $
+# $NetBSD: version.mk,v 1.4 2023/08/24 10:27:09 bouyer Exp $
 #
 # Version number is used by xentools415 and xenstoretools
 
-VERSION=	4.15.4
+VERSION=	4.15.5
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}
@@ -14,7 +14,7 @@ IPXE_DIST=		ipxe-${IPXE_VERSION}.tar.gz
 DISTFILES+=		${IPXE_DIST}
 SITES.${IPXE_DIST}=	-https://github.com/ipxe/ipxe/archive/${IPXE_VERSION}.tar.gz
 
-SEABIOS_VERSION=	1.14.0
+SEABIOS_VERSION=	1.16.0
 SEABIOS_DIST=		seabios-${SEABIOS_VERSION}.tar.gz
 DISTFILES+=		${SEABIOS_DIST}
 SITES.${SEABIOS_DIST}=	-http://xenbits.xen.org/gitweb/?p=seabios.git;a=snapshot;h=refs/tags/rel-${SEABIOS_VERSION};sf=tgz
