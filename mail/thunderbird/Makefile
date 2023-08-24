@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2023/08/14 05:24:48 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2023/08/24 13:07:51 gdt Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -12,6 +12,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.thunderbird.net/en-US/
 COMMENT=	Organize, secure and customize your mail
 LICENSE=	mpl-1.1
+
+# As of 2023-08 on netbsd-10 amd64, this package required 22G of space
+# in WRKDIR (noted because it is egregiously and unexpectedly large,
+# overflowing even a biggish tmpfs).
 
 USE_TOOLS+=	unzip pax
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
