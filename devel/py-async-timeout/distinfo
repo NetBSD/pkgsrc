@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/01/08 10:37:28 wiz Exp $
+$NetBSD: distinfo,v 1.12 2023/08/24 19:44:16 wiz Exp $
 
-BLAKE2s (async-timeout-4.0.2.tar.gz) = cae823ec54df7dcf1c6f2dee6df14463fef5fcb23c5aa0dd39b660808782f57c
-SHA512 (async-timeout-4.0.2.tar.gz) = e9884a525b99bc1a3a15c958a1dbb25a92cb286bb7360b03b0be3198e61685970628c8fef6dc478beba3f031e0ff6f03b1fcc3c2c34032d7fea6f8b65850ac38
-Size (async-timeout-4.0.2.tar.gz) = 8221 bytes
+BLAKE2s (async-timeout-4.0.3.tar.gz) = 149e301772c3bd84d98b0ba2b879a8c6d42796be8156ab599fae50db324c1cd0
+SHA512 (async-timeout-4.0.3.tar.gz) = d7628370c47587a64170e067a5341bba17658da10900fb8ddf4426aa3f4facc55d63b28febb4b65abe12a9ff5be759319f49fc723c82a5a6cc27377c5e33a5a0
+Size (async-timeout-4.0.3.tar.gz) = 8345 bytes
