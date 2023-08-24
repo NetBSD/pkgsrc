@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2019/11/02 22:37:58 rillig Exp $
+# $NetBSD: builtin.mk,v 1.18 2023/08/24 11:35:49 wiz Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -28,7 +28,7 @@ MAKEVARS+=	IS_BUILTIN.glu
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.glu) && \
-    !empty(IS_BUILTIN.glu:M[yY][eE][sS])
+    ${IS_BUILTIN.glu:tl} == yes
 .  if empty(PC_GLU:M__nonexistent__)
 BUILTIN_VERSION.Mesa!= ${SED} -n -e 's/Version: //p' ${PC_GLU}
 .  elif empty(H_GLU:M__nonexistent__)
@@ -51,10 +51,10 @@ USE_BUILTIN.glu=	no
 .  else
 USE_BUILTIN.glu=	${IS_BUILTIN.glu}
 .    if defined(BUILTIN_PKG.glu) && \
-        !empty(IS_BUILTIN.glu:M[yY][eE][sS])
+        ${IS_BUILTIN.glu:tl} == yes
 USE_BUILTIN.glu=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.glu}
-.        if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
+.        if ${USE_BUILTIN.glu:tl} == yes
 USE_BUILTIN.glu!=							\
 	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.glu}; then	\
 		${ECHO} yes;						\
@@ -76,9 +76,9 @@ MAKEVARS+=		USE_BUILTIN.glu
 .include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.glu?=	no
-.if !empty(CHECK_BUILTIN.glu:M[nN][oO])
+.if ${CHECK_BUILTIN.glu:tl} == no
 
-.  if !empty(USE_BUILTIN.glu:M[nN][oO])
+.  if ${USE_BUILTIN.glu:tl} == no
 BUILDLINK_API_DEPENDS.glu+=	glu>=6.0
 .  endif
 
