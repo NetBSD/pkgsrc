@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/08/24 09:09:56 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/08/24 11:35:15 tnn Exp $
 
 BLAKE2s (inih-r57.tar.gz) = 141de82a0b35b9c14687a923ee3e579c8c922f6fcd514bc6dfeda24e0d5b17c5
 SHA512 (inih-r57.tar.gz) = 9f758df876df54ed7e228fd82044f184eefbe47e806cd1e6d62e1b0ea28e2c08e67fa743042d73b4baef0b882480e6afe2e72878b175822eb2bdbb6d89c0e411
 Size (inih-r57.tar.gz) = 18954 bytes
+SHA1 (patch-meson.build) = bfaaed50a21b8ed1a02f61f6f599bd6c81a299f3
