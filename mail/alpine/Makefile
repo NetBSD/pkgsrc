@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/03/02 16:58:08 vins Exp $
+# $NetBSD: Makefile,v 1.57 2023/08/24 15:38:15 vins Exp $
 
 DISTNAME=	alpine-2.26
 PKGREVISION=	2
@@ -23,7 +23,7 @@ PATCHFILES+=		WrtAcc.patch.gz
 PATCHFILES+=		compose.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://alpineapp.email/
 COMMENT=	Program for Internet News and E-mail
 LICENSE=	apache-2.0
