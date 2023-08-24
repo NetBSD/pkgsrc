@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/05 16:41:14 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/24 21:37:56 vins Exp $
 bin/yash
 man/ja/man1/yash.1
 man/man1/yash.1
@@ -111,6 +111,7 @@ share/yash/completion/git-stash
 share/yash/completion/git-status
 share/yash/completion/git-submodule
 share/yash/completion/git-svn
+share/yash/completion/git-switch
 share/yash/completion/git-tag
 share/yash/completion/git-whatchanged
 share/yash/completion/git-worktree
@@ -152,6 +153,7 @@ share/yash/completion/nice
 share/yash/completion/nl
 share/yash/completion/nohup
 share/yash/completion/od
+share/yash/completion/pass
 share/yash/completion/passwd
 share/yash/completion/paste
 share/yash/completion/patch
