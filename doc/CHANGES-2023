@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5046 2023/08/24 20:02:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5047 2023/08/24 20:04:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7312,3 +7312,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-click to 8.1.7 [wiz 2023-08-24]
 	Updated devel/py-editables to 0.5 [wiz 2023-08-24]
 	Updated textproc/py-humanize to 4.8.0 [wiz 2023-08-24]
+	Updated devel/py-more-itertools to 10.1.0 [wiz 2023-08-24]
