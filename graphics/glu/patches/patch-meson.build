@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2023/08/24 11:35:49 wiz Exp $
+
+pkg-config file provided by MesaLib is called 'gl' not 'opengl'.
+
+--- meson.build.orig	2023-07-21 18:24:19.000000000 +0000
++++ meson.build
+@@ -16,7 +16,7 @@ endif
+ 
+ gl_provider = get_option('gl_provider')
+ if gl_provider == 'glvnd'
+-  gl_provider = 'opengl'
++  gl_provider = 'gl'
+ endif
+ dep_gl = dependency(gl_provider)
+ 
