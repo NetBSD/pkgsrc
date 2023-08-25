@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5083 2023/08/25 15:30:29 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5084 2023/08/25 16:07:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7369,3 +7369,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-peewee to 3.16.3 [adam 2023-08-25]
 	Updated net/py-lexicon to 3.14.1 [adam 2023-08-25]
 	Updated www/py-pystache to 0.6.4 [adam 2023-08-25]
+	Updated math/py-jplephem to 2.18 [adam 2023-08-25]
+	Updated www/py-nbclient to 0.8.0 [adam 2023-08-25]
