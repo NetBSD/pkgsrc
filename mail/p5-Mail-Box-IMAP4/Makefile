@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/07/06 09:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/25 07:12:26 wen Exp $
 
-DISTNAME=	Mail-Box-IMAP4-3.007
+DISTNAME=	Mail-Box-IMAP4-3.008
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -12,7 +11,7 @@ COMMENT=	Handle IMAP4 folders as client
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
-DEPENDS+=	p5-Mail-Message>=3.008:../../mail/p5-Mail-Message
+DEPENDS+=	p5-Mail-Message>=3.013:../../mail/p5-Mail-Message
 DEPENDS+=	p5-Mail-Box>=3:../../mail/p5-Mail-Box
 DEPENDS+=	p5-Mail-Transport>=3:../../mail/p5-Mail-Transport
 DEPENDS+=	p5-Mail-IMAPClient>=0:../../mail/p5-Mail-IMAPClient
