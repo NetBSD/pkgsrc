@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/24 07:01:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/25 22:14:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -85,6 +85,14 @@ ${PYSITELIB}/fsspec/registry.py
 ${PYSITELIB}/fsspec/registry.pyc
 ${PYSITELIB}/fsspec/spec.py
 ${PYSITELIB}/fsspec/spec.pyc
+${PYSITELIB}/fsspec/tests/abstract/__init__.py
+${PYSITELIB}/fsspec/tests/abstract/__init__.pyc
+${PYSITELIB}/fsspec/tests/abstract/copy.py
+${PYSITELIB}/fsspec/tests/abstract/copy.pyc
+${PYSITELIB}/fsspec/tests/abstract/get.py
+${PYSITELIB}/fsspec/tests/abstract/get.pyc
+${PYSITELIB}/fsspec/tests/abstract/put.py
+${PYSITELIB}/fsspec/tests/abstract/put.pyc
 ${PYSITELIB}/fsspec/transaction.py
 ${PYSITELIB}/fsspec/transaction.pyc
 ${PYSITELIB}/fsspec/utils.py
