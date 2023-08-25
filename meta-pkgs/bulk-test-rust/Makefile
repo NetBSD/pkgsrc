@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/25 18:43:33 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/25 18:45:02 wiz Exp $
 
 DISTNAME=	bulk-test-rust-20230825.0
 CATEGORIES=	meta-pkgs
@@ -21,6 +21,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # upstream are acceptable.)  (This package is about catching
 # regressions, and not about pressuring programs that have not
 # recently and usually been healthy.)
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
