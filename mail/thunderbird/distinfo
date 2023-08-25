@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.256 2023/02/16 18:11:40 he Exp $
+$NetBSD: distinfo,v 1.257 2023/08/25 10:15:01 pho Exp $
 
-BLAKE2s (thunderbird-102.8.0.source.tar.xz) = 5d6de22c7e4aadb9937982915322f646913f7a1deb73492b68fdf6beeb56fa70
-SHA512 (thunderbird-102.8.0.source.tar.xz) = 2431eb8799184b261609c96bed3c9368bec9035a831aa5f744fa89e48aedb130385b268dd90f03bbddfec449dc3e5fad1b5f8727fe9e11e1d1f123a81b97ddf8
-Size (thunderbird-102.8.0.source.tar.xz) = 506030440 bytes
+BLAKE2s (thunderbird-115.1.1.source.tar.xz) = ae8e48e38a72304058fddbfb19288555b1db557b164128b79bad6de288d2492c
+SHA512 (thunderbird-115.1.1.source.tar.xz) = 26f69dded43bd24ffce9acb0de204bef8c10c8df3cb82b33594d035e41179cb7450cb7c10470bfc92a933c1d801fb968049ea8a17d838d16de9973f5dddff9fc
+Size (thunderbird-115.1.1.source.tar.xz) = 532757140 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = d53fae5544563888d030af7483f00283a712235c
 SHA1 (patch-build_moz.configure_rust.configure) = 72c5fa2e9d1022325d038832cca2e35f7213116d
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
@@ -19,19 +19,18 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = fa503231403a18e4ca6947fcd9985d
 SHA1 (patch-js_src_jsfriendapi.h) = e013337469254e2a9e598bd070528f0f654acccb
 SHA1 (patch-js_src_util_NativeStack.cpp) = 338fdf6aa34101f6a41d07b303d4a8426c483d5b
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = 5a7ad4d38165d49d44862ade846cb79de026867e
-SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 99e881e557430c1ef26060109f4b40c30d3b201c
 SHA1 (patch-media_libcubeb_src_cubeb__sun.c) = 789312b0511f2667ab7ee581f066b6ecc129ad4f
-SHA1 (patch-media_libcubeb_src_moz.build) = bd3275f1acb6e439dee98b1673eeb65ec7797974
 SHA1 (patch-media_libpng_pngpriv.h) = 5c49119b0e555c9daca64799ff03f3fa8fa05ded
 SHA1 (patch-media_libtheora_lib_info.c) = 96f3d3824459186476102a4598d07cf6f6a704ef
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 20b208c5ab4bfea5d49d79c19fc610867da0c4c7
 SHA1 (patch-old-configure.in) = d59d276124e1f95d9e144b8f7099abcf6de0489a
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 0cbf185955c77c9438ced0c294fbc8e4824797bf
-SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc) = 4b6b78b899b3ac4176aeba58b3d2af6d66c05a77
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8848fb05c1e8b45234f74db71602a8a84c0404a4
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = e9378a3868ddb628213c3a37e2177257c2344bc3
+SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = f80a0844ca37dda91a8cf38d6a542f152657901a
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = d718759e59910228cc3729e359f328b47aff5eb4
-SHA1 (patch-toolkit_moz.configure) = b8907d57570bfd87708c5630e44c919710be0b9c
+SHA1 (patch-toolkit_moz.configure) = b6a367c34b0187ac2e731b3d6265eb145b82e2ca
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 407fe861dd9b82a88a6f5c0ed1e519a3c0e67251
-SHA1 (patch-widget_gtk_DMABufSurface.cpp) = aea8998364945f0a435ad63860ab50d56d5c0895
+SHA1 (patch-widget_gtk_DMABufSurface.cpp) = 719924359f9c25db2f7c8e9da1040197b3aae37e
 SHA1 (patch-xpcom_base_nscore.h) = 6e6f2d564d8d6121c178c2567cce8ac2ebe8610b
