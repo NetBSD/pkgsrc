@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2023/07/08 22:15:42 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/25 14:49:58 vins Exp $
 bin/hw-probe
+share/doc/hw-probe/README
