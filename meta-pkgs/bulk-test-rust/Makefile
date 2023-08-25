@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/25 17:14:07 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/25 18:43:33 gdt Exp $
 
 DISTNAME=	bulk-test-rust-20230825.0
 CATEGORIES=	meta-pkgs
@@ -22,6 +22,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # regressions, and not about pressuring programs that have not
 # recently and usually been healthy.)
 
+.include "../../lang/python/pyversion.mk"
+
 # enormous programs
 DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
@@ -34,6 +36,6 @@ DEPENDS+=	arti-[0-9]*:../../net/arti
 # libraries
 DEPENDS+=	libimagequant-[0-9]*:../../graphics/libimagequant
 DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
-DEPENDS+=	py-cryptography-[0-9]*:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 .include "../../mk/bsd.pkg.mk"
