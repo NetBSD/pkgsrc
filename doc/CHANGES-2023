@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5090 2023/08/25 22:17:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5091 2023/08/25 22:29:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7382,3 +7382,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbformat to 5.9.2 [adam 2023-08-25]
 	Updated sysutils/py-fsspec to 2023.6.0 [adam 2023-08-25]
 	Updated www/py-nbconvert to 7.7.4 [adam 2023-08-25]
+	Updated devel/py-maturin to 1.2.3 [adam 2023-08-25]
+	Updated devel/py-types-setuptools to 68.1.0.0 [adam 2023-08-25]
