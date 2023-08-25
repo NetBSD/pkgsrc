@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/12/08 09:01:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/08/25 13:46:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,33 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/redis/__init__.py
 ${PYSITELIB}/redis/__init__.pyc
 ${PYSITELIB}/redis/__init__.pyo
+${PYSITELIB}/redis/_parsers/__init__.py
+${PYSITELIB}/redis/_parsers/__init__.pyc
+${PYSITELIB}/redis/_parsers/__init__.pyo
+${PYSITELIB}/redis/_parsers/base.py
+${PYSITELIB}/redis/_parsers/base.pyc
+${PYSITELIB}/redis/_parsers/base.pyo
+${PYSITELIB}/redis/_parsers/commands.py
+${PYSITELIB}/redis/_parsers/commands.pyc
+${PYSITELIB}/redis/_parsers/commands.pyo
+${PYSITELIB}/redis/_parsers/encoders.py
+${PYSITELIB}/redis/_parsers/encoders.pyc
+${PYSITELIB}/redis/_parsers/encoders.pyo
+${PYSITELIB}/redis/_parsers/helpers.py
+${PYSITELIB}/redis/_parsers/helpers.pyc
+${PYSITELIB}/redis/_parsers/helpers.pyo
+${PYSITELIB}/redis/_parsers/hiredis.py
+${PYSITELIB}/redis/_parsers/hiredis.pyc
+${PYSITELIB}/redis/_parsers/hiredis.pyo
+${PYSITELIB}/redis/_parsers/resp2.py
+${PYSITELIB}/redis/_parsers/resp2.pyc
+${PYSITELIB}/redis/_parsers/resp2.pyo
+${PYSITELIB}/redis/_parsers/resp3.py
+${PYSITELIB}/redis/_parsers/resp3.pyc
+${PYSITELIB}/redis/_parsers/resp3.pyo
+${PYSITELIB}/redis/_parsers/socket.py
+${PYSITELIB}/redis/_parsers/socket.pyc
+${PYSITELIB}/redis/_parsers/socket.pyo
 ${PYSITELIB}/redis/asyncio/__init__.py
 ${PYSITELIB}/redis/asyncio/__init__.pyc
 ${PYSITELIB}/redis/asyncio/__init__.pyo
@@ -22,9 +49,6 @@ ${PYSITELIB}/redis/asyncio/connection.pyo
 ${PYSITELIB}/redis/asyncio/lock.py
 ${PYSITELIB}/redis/asyncio/lock.pyc
 ${PYSITELIB}/redis/asyncio/lock.pyo
-${PYSITELIB}/redis/asyncio/parser.py
-${PYSITELIB}/redis/asyncio/parser.pyc
-${PYSITELIB}/redis/asyncio/parser.pyo
 ${PYSITELIB}/redis/asyncio/retry.py
 ${PYSITELIB}/redis/asyncio/retry.pyc
 ${PYSITELIB}/redis/asyncio/retry.pyo
@@ -103,9 +127,6 @@ ${PYSITELIB}/redis/commands/json/decoders.pyo
 ${PYSITELIB}/redis/commands/json/path.py
 ${PYSITELIB}/redis/commands/json/path.pyc
 ${PYSITELIB}/redis/commands/json/path.pyo
-${PYSITELIB}/redis/commands/parser.py
-${PYSITELIB}/redis/commands/parser.pyc
-${PYSITELIB}/redis/commands/parser.pyo
 ${PYSITELIB}/redis/commands/redismodules.py
 ${PYSITELIB}/redis/commands/redismodules.pyc
 ${PYSITELIB}/redis/commands/redismodules.pyo
