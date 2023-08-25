@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/12/16 19:22:18 otis Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/08/25 16:38:42 adam Exp $
 bin/pprof
 bin/pprof-symbolize
 include/google/heap-checker.h
@@ -34,18 +34,15 @@ lib/pkgconfig/libtcmalloc_minimal_debug.pc
 man/man1/pprof.1
 share/doc/gperftools/AUTHORS
 share/doc/gperftools/COPYING
-share/doc/gperftools/ChangeLog
 share/doc/gperftools/ChangeLog.old
 share/doc/gperftools/INSTALL
 share/doc/gperftools/NEWS
 share/doc/gperftools/README
 share/doc/gperftools/README_windows.txt
-share/doc/gperftools/TODO
 share/doc/gperftools/cpuprofile-fileformat.html
 share/doc/gperftools/cpuprofile.html
 share/doc/gperftools/designstyle.css
 share/doc/gperftools/heap-example1.png
-share/doc/gperftools/heap_checker.html
 share/doc/gperftools/heapprofile.html
 share/doc/gperftools/index.html
 share/doc/gperftools/overview.dot

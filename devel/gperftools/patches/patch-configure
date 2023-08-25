@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2021/01/20 15:12:56 adam Exp $
+$NetBSD: patch-configure,v 1.3 2023/08/25 16:38:42 adam Exp $
 
 Add support for NetBSD arm.
 
---- configure.orig	2015-01-10 20:20:33.000000000 +0000
+--- configure.orig	2023-08-24 18:55:19.000000000 +0000
 +++ configure
-@@ -17334,6 +17334,7 @@ $as_echo_n "checking how to access the p
-    pc_fields="$pc_fields uc_mcontext.mc_rip"           # FreeBSD (x86_64 [untested])
+@@ -18458,6 +18458,7 @@ printf %s "checking how to access the pr
+    pc_fields="$pc_fields uc_mcontext.mc_rip"           # FreeBSD (x86_64)
     pc_fields="$pc_fields uc_mcontext.__gregs[_REG_EIP]"  # NetBSD (i386)
     pc_fields="$pc_fields uc_mcontext.__gregs[_REG_RIP]"  # NetBSD (x86_64)
 +   pc_fields="$pc_fields uc_mcontext.__gregs[_REG_PC]"   # NetBSD (arm)
