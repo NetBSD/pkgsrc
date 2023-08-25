@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5078 2023/08/25 13:49:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5079 2023/08/25 14:54:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7362,3 +7362,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-minio to 7.1.16 [adam 2023-08-25]
 	Updated databases/py-redis to 5.0.0 [adam 2023-08-25]
 	Updated graphics/py-tifffile to 2023.8.12 [adam 2023-08-25]
+	Updated sysutils/hw-probe to 1.6.5_20230812 [vins 2023-08-25]
