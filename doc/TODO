@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23322 2023/08/25 13:49:48 adam Exp $
+$NetBSD: TODO,v 1.23323 2023/08/25 15:20:18 pho Exp $
 
 Suggested new packages
 ======================
@@ -1398,7 +1398,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o texlab-5.9.2
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
-	o thunderbird-115
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tio-2.6 [pkg/57589]
