@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2022/05/29 01:28:56 wen Exp $
+$NetBSD: distinfo,v 1.38 2023/08/25 06:46:22 wen Exp $
 
-BLAKE2s (PPIx-Regexp-0.085.tar.gz) = c6b2befe8c90c5909e8bd9ca12f4988354d27fe43c4dbb3e566d7582c70d5668
-SHA512 (PPIx-Regexp-0.085.tar.gz) = d5c29e4127b803267e81f1cf6dde522850a3efb85de8421bfd2c5e144c36c3cfa5ec51e13342c6f2a104325748c5d59891b19de02d69b8e7a3243356e0bcf4ff
-Size (PPIx-Regexp-0.085.tar.gz) = 241867 bytes
+BLAKE2s (PPIx-Regexp-0.088.tar.gz) = 115869f5faeb025b60d3b4b5abaf78045efb2f4485943923d0cc58fbe08c6b16
+SHA512 (PPIx-Regexp-0.088.tar.gz) = a787c34c936f4b26f50a7dabd5212b2d7d4ba34e16753e740768bd354072cb6e45ebfe880658d2c9e3799ee6e99c7f2b208f128d76421750f38bd63abe2bba3c
+Size (PPIx-Regexp-0.088.tar.gz) = 255295 bytes
