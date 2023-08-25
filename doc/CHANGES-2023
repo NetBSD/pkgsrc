@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5067 2023/08/25 07:40:26 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5068 2023/08/25 08:06:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7336,3 +7336,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Mail-Box-IMAP4 to 3.008 [wen 2023-08-25]
 	Updated mail/p5-Mail-Box to 3.010 [wen 2023-08-25]
 	Updated mail/p5-Mail-DKIM to 1.20230630 [wen 2023-08-25]
+	Updated devel/cmake to 3.27.4 [adam 2023-08-25]
+	Updated devel/cmake-gui to 3.27.4 [adam 2023-08-25]
