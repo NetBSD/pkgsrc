@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5062 2023/08/25 06:47:23 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5063 2023/08/25 06:48:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7328,3 +7328,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/poke to 3.3 [fcambus 2023-08-24]
 	Updated databases/p5-SQL-Translator to 1.63 [wen 2023-08-25]
 	Updated devel/p5-PPIx-Regexp to 0.088 [wen 2023-08-25]
+	Updated databases/sqlite3 to 3.43.0 [adam 2023-08-25]
+	Updated databases/sqlite3-docs to 3.43.0 [adam 2023-08-25]
+	Updated databases/sqlite3-tcl to 3.43.0 [adam 2023-08-25]
+	Updated devel/lemon to 1.0.3.43.0 [adam 2023-08-25]
