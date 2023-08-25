@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/05/05 09:14:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/08/25 22:16:40 adam Exp $
 bin/jupyter-dejavu-${PYVERSSUFFIX}
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -79,8 +79,6 @@ ${PYSITELIB}/nbconvert/filters/pandoc.py
 ${PYSITELIB}/nbconvert/filters/pandoc.pyc
 ${PYSITELIB}/nbconvert/filters/strings.py
 ${PYSITELIB}/nbconvert/filters/strings.pyc
-${PYSITELIB}/nbconvert/filters/svg_constants.py
-${PYSITELIB}/nbconvert/filters/svg_constants.pyc
 ${PYSITELIB}/nbconvert/filters/widgetsdatatypefilter.py
 ${PYSITELIB}/nbconvert/filters/widgetsdatatypefilter.pyc
 ${PYSITELIB}/nbconvert/nbconvertapp.py
@@ -107,6 +105,8 @@ ${PYSITELIB}/nbconvert/preprocessors/csshtmlheader.py
 ${PYSITELIB}/nbconvert/preprocessors/csshtmlheader.pyc
 ${PYSITELIB}/nbconvert/preprocessors/execute.py
 ${PYSITELIB}/nbconvert/preprocessors/execute.pyc
+${PYSITELIB}/nbconvert/preprocessors/extractattachments.py
+${PYSITELIB}/nbconvert/preprocessors/extractattachments.pyc
 ${PYSITELIB}/nbconvert/preprocessors/extractoutput.py
 ${PYSITELIB}/nbconvert/preprocessors/extractoutput.pyc
 ${PYSITELIB}/nbconvert/preprocessors/highlightmagics.py
@@ -137,6 +137,8 @@ ${PYSITELIB}/nbconvert/utils/exceptions.py
 ${PYSITELIB}/nbconvert/utils/exceptions.pyc
 ${PYSITELIB}/nbconvert/utils/io.py
 ${PYSITELIB}/nbconvert/utils/io.pyc
+${PYSITELIB}/nbconvert/utils/iso639_1.py
+${PYSITELIB}/nbconvert/utils/iso639_1.pyc
 ${PYSITELIB}/nbconvert/utils/lexers.py
 ${PYSITELIB}/nbconvert/utils/lexers.pyc
 ${PYSITELIB}/nbconvert/utils/pandoc.py
@@ -174,6 +176,7 @@ share/jupyter/nbconvert/templates/compatibility/full.tpl
 share/jupyter/nbconvert/templates/lab/base.html.j2
 share/jupyter/nbconvert/templates/lab/conf.json
 share/jupyter/nbconvert/templates/lab/index.html.j2
+share/jupyter/nbconvert/templates/lab/mermaidjs.html.j2
 share/jupyter/nbconvert/templates/lab/static/index.css
 share/jupyter/nbconvert/templates/lab/static/theme-dark.css
 share/jupyter/nbconvert/templates/lab/static/theme-light.css
