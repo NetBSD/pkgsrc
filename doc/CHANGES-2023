@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5080 2023/08/25 15:20:02 pho Exp $
+$NetBSD: CHANGES-2023,v 1.5081 2023/08/25 15:20:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7364,3 +7364,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-tifffile to 2023.8.12 [adam 2023-08-25]
 	Updated sysutils/hw-probe to 1.6.5_20230812 [vins 2023-08-25]
 	Updated mail/thunderbird-l10n to 115.1.1 [pho 2023-08-25]
+	Updated mail/thunderbird to 115.1.1 [pho 2023-08-25]
