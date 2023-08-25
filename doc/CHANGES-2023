@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5060 2023/08/24 22:22:41 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.5061 2023/08/25 06:34:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7326,3 +7326,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/toot to 0.38.1 [vins 2023-08-24]
 	Updated shells/yash to 2.55 [vins 2023-08-24]
 	Updated editors/poke to 3.3 [fcambus 2023-08-24]
+	Updated databases/p5-SQL-Translator to 1.63 [wen 2023-08-25]
