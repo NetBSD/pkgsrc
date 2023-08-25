@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2023/08/14 05:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/08/25 13:41:30 adam Exp $
 
 DISTNAME=	meson-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -26,6 +26,12 @@ SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 SUBST_FILES.man+=	setup.py
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
+
+SUBST_CLASSES+=		cython
+SUBST_STAGE.cython=	pre-configure
+SUBST_MESSAGE.cython=	Fixing cython binary name.
+SUBST_FILES.cython=	mesonbuild/compilers/detect.py
+SUBST_SED.cython=	-e "s,'cython3','cython-${PYVERSSUFFIX}',"
 
 REPLACE_PYTHON+=	ghwt.py
 REPLACE_PYTHON+=	meson.py
