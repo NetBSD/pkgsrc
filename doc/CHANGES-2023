@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5072 2023/08/25 09:27:24 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5073 2023/08/25 10:36:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7349,3 +7349,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/diesel-cli to 2.1.1 [pin 2023-08-25]
 	Updated sysutils/felix to 2.8.1 [pin 2023-08-25]
 	Updated editors/tp-note to 1.21.12 [pin 2023-08-25]
+	Updated geography/qgis to 3.28.10 [gdt 2023-08-25]
