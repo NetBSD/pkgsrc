@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5084 2023/08/25 16:07:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5085 2023/08/25 16:40:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7371,3 +7371,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-pystache to 0.6.4 [adam 2023-08-25]
 	Updated math/py-jplephem to 2.18 [adam 2023-08-25]
 	Updated www/py-nbclient to 0.8.0 [adam 2023-08-25]
+	Updated devel/gperftools to 2.12 [adam 2023-08-25]
+	Updated databases/mongo-c-driver to 1.24.3 [adam 2023-08-25]
