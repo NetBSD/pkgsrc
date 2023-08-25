@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5088 2023/08/25 18:55:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5089 2023/08/25 21:58:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7376,3 +7376,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added meta-pkgs/bulk-test-rust version 20230825.0 [gdt 2023-08-25]
 	Updated lang/go120 to 1.20.7 [bsiegert 2023-08-25]
 	Updated lang/gcc13 to 13.2.0 [wiz 2023-08-25]
+	Added textproc/py-jsonschema-specifications version 2023.7.1 [adam 2023-08-25]
+	Updated textproc/py-jsonschema to 4.19.0 [adam 2023-08-25]
+	Added misc/py-pep440 version 0.1.2 [adam 2023-08-25]
+	Updated www/py-nbformat to 5.9.2 [adam 2023-08-25]
