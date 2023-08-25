@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2023/07/26 10:54:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.77 2023/08/25 08:05:17 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -7,6 +7,7 @@ share/aclocal/cmake.m4
 share/bash-completion/completions/cmake
 share/bash-completion/completions/cpack
 share/bash-completion/completions/ctest
+share/cmake-${CMAKE_API}/Help/command/DEPRECATED_POLICY_VERSIONS.txt
 share/cmake-${CMAKE_API}/Help/command/DEVICE_LINK_OPTIONS.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX.txt
 share/cmake-${CMAKE_API}/Help/command/FIND_XXX_ORDER.txt
