@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5068 2023/08/25 08:06:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5069 2023/08/25 08:29:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7338,3 +7338,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/p5-Mail-DKIM to 1.20230630 [wen 2023-08-25]
 	Updated devel/cmake to 3.27.4 [adam 2023-08-25]
 	Updated devel/cmake-gui to 3.27.4 [adam 2023-08-25]
+	Updated lang/python38 to 3.8.18 [adam 2023-08-25]
+	Updated lang/python39 to 3.9.18 [adam 2023-08-25]
+	Updated lang/python310 to 3.10.13 [adam 2023-08-25]
+	Updated lang/python311 to 3.11.5 [adam 2023-08-25]
+	Updated lang/py38-html-docs to 3.8.18 [adam 2023-08-25]
+	Updated lang/py39-html-docs to 3.9.18 [adam 2023-08-25]
+	Updated lang/py310-html-docs to 3.10.13 [adam 2023-08-25]
+	Updated lang/py311-html-docs to 3.11.5 [adam 2023-08-25]
