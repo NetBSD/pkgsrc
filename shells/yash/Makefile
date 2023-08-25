@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/08/25 15:52:52 vins Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/25 16:16:08 vins Exp $
 
 DISTNAME=	yash-2.55
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://osdn.dl.osdn.net/yash/79124/
 EXTRACT_SUFX=	.tar.xz
@@ -12,8 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 FORCE_C_STD=		c99
 
-USE_TOOLS+=	msgfmt msgmerge
-USE_TOOLS+=	intltool xgettext
+USE_TOOLS+=		msgfmt msgmerge
+USE_TOOLS+=		intltool xgettext
+USE_PKGLOCALEDIR=	yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
