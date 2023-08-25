@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5089 2023/08/25 21:58:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5090 2023/08/25 22:17:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7380,3 +7380,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-jsonschema to 4.19.0 [adam 2023-08-25]
 	Added misc/py-pep440 version 0.1.2 [adam 2023-08-25]
 	Updated www/py-nbformat to 5.9.2 [adam 2023-08-25]
+	Updated sysutils/py-fsspec to 2023.6.0 [adam 2023-08-25]
+	Updated www/py-nbconvert to 7.7.4 [adam 2023-08-25]
