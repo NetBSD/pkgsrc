@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/25 21:32:35 adam Exp $
+
+BLAKE2s (jsonschema_specifications-2023.7.1.tar.gz) = 942ab1a8549029127042da9c7cdfd94b78e4f5d542fb2df51960fab37adb1c86
+SHA512 (jsonschema_specifications-2023.7.1.tar.gz) = 78275fe6595151c611baeeebc17f08287f50a3636c3de515abfe8dc45075136874740dfa169aa3ebda004b5ead66ba93bc22b963ded14e4aa906e4b454356f7c
+Size (jsonschema_specifications-2023.7.1.tar.gz) = 12689 bytes
