@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/25 21:55:53 adam Exp $
+
+BLAKE2s (pep440-0.1.2.tar.gz) = 7c6b4d29d6f110686a8d4ee3cab9f9d14aba05957d8be530235ca439c9edc48f
+SHA512 (pep440-0.1.2.tar.gz) = df1ed3ec28e32337489a4fa3e2e0493ca1022a2f693a25c7e56146349877cba1fb780e365d310ff3cf1c9b881a13ebf077303829525b49a62fb2461849b18eac
+Size (pep440-0.1.2.tar.gz) = 4378 bytes
