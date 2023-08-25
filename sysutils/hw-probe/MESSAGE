@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/08/25 14:52:08 vins Exp $
+
+Hardware probe requires root privileges.
+To run the program as root while preserving the standard user environment,
+you can use security/sudo or security/opendoas.
+
+For example, to probe your computer and upload the results to the hardware
+database, you may alternatively run:
+
+	$ sudo -E hw-probe -all -upload
+	$ doas hw-probe -all -upload	# use 'keepenv' option in doas.conf
+
+See also ${PREFIX}/${DOCDIR}/README.
+===========================================================================
