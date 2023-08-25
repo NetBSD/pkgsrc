@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2022/11/22 13:24:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/25 15:30:10 adam Exp $
 
-DISTNAME=	pystache-0.6.0
+DISTNAME=	pystache-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pystache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/defunkt/pystache
+HOMEPAGE=	https://github.com/PennyDreadfulMTG/pystache
 COMMENT=	Mustache for Python
 LICENSE=	mit
 
@@ -17,7 +17,7 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_pystache.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
