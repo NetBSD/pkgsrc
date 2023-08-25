@@ -1,0 +1,8 @@
+Meta-package to help in testing rust updates.  It intends to depend on
+all maintained packages that use rust, if those packages going missing
+would be considered serious.
+
+Note that this package can test rust or rust-bin, depending on one's
+RUST_TYPE.
+
+This package does not attempt to test crossbuilding rust itself.
