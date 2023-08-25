@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/08/24 07:12:34 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/08/25 07:12:41 adam Exp $
 
 DISTNAME=		libzip-1.10.1
 CATEGORIES=		archivers devel
@@ -18,6 +18,8 @@ TEST_TARGET=		test
 # for tests
 CMAKE_ARGS+=		-DNIHTEST=${PREFIX}/bin/nihtest-${PYVERSSUFFIX}
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# for Darwin
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
