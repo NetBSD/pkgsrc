@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/08/24 22:22:28 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/25 13:52:03 fcambus Exp $
 
 DISTNAME=	poke-3.3
 CATEGORIES=	editors
 MASTER_SITES=	https://ftp.gnu.org/gnu/poke/
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	https://ftp.gnu.org/gnu/poke/
+HOMEPAGE=	https://www.jemarch.net/poke
 COMMENT=	Extensible editor for structured binary data
 LICENSE=	gnu-gpl-v3
 
