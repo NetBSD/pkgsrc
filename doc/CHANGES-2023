@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5065 2023/08/25 07:13:15 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5066 2023/08/25 07:22:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7334,3 +7334,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lemon to 1.0.3.43.0 [adam 2023-08-25]
 	Updated mail/p5-Mail-Message to 3.013 [wen 2023-08-25]
 	Updated mail/p5-Mail-Box-IMAP4 to 3.008 [wen 2023-08-25]
+	Updated mail/p5-Mail-Box to 3.010 [wen 2023-08-25]
