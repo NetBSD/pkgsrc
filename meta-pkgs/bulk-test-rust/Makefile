@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/08/25 18:45:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/25 18:55:51 gdt Exp $
 
-DISTNAME=	bulk-test-rust-20230825.0
+DISTNAME=	bulk-test-rust-20230825.1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,8 +22,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # regressions, and not about pressuring programs that have not
 # recently and usually been healthy.)
 
+# Limit to one python version; we only care if rust can build the rust
+# files within the package.
+PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT}
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../lang/python/pyversion.mk"
 
 # enormous programs
