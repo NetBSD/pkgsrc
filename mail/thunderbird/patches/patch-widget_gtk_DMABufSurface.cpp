@@ -1,8 +1,8 @@
-$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.1 2023/02/10 10:04:54 pho Exp $
+$NetBSD: patch-widget_gtk_DMABufSurface.cpp,v 1.2 2023/08/25 10:15:01 pho Exp $
 
 No eventfd on NetBSD 9 and older, fix build
 
---- widget/gtk/DMABufSurface.cpp.orig	2021-04-08 21:20:12.000000000 +0000
+--- widget/gtk/DMABufSurface.cpp.orig	2023-08-14 18:20:04.000000000 +0000
 +++ widget/gtk/DMABufSurface.cpp
 @@ -18,7 +18,9 @@
  #include <sys/time.h>
@@ -14,15 +14,17 @@ No eventfd on NetBSD 9 and older, fix build
  #include <poll.h>
  #include <sys/ioctl.h>
  
-@@ -97,6 +99,7 @@ void DMABufSurface::GlobalRefAdd() {
+@@ -147,6 +149,9 @@ void DMABufSurface::GlobalRefAdd() {
  }
  
  void DMABufSurface::GlobalRefCountCreate() {
-+#ifndef __NetBSD__
-   MOZ_ASSERT(!mGlobalRefCountFd);
-   mGlobalRefCountFd = eventfd(0, EFD_CLOEXEC | EFD_NONBLOCK | EFD_SEMAPHORE);
-   if (mGlobalRefCountFd < 0) {
-@@ -106,6 +109,7 @@ void DMABufSurface::GlobalRefCountCreate
++#ifdef __NetBSD__
++  mGlobalRefCountFd = 0;
++#else
+   LOGDMABUFREF(("DMABufSurface::GlobalRefCountCreate UID %d", mUID));
+   MOZ_DIAGNOSTIC_ASSERT(!mGlobalRefCountFd);
+   // Create global ref count initialized to 0,
+@@ -159,6 +164,7 @@ void DMABufSurface::GlobalRefCountCreate
      mGlobalRefCountFd = 0;
      return;
    }
