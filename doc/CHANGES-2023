@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5075 2023/08/25 11:13:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5076 2023/08/25 12:00:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7356,3 +7356,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-coverage to 7.3.0 [adam 2023-08-25]
 	Updated devel/py-hypothesis to 6.82.6 [adam 2023-08-25]
 	Updated lang/py-mypy to 1.5.1 [adam 2023-08-25]
+	Updated misc/py-stdnum to 1.19 [adam 2023-08-25]
+	Updated devel/py-utils to 3.7.0 [adam 2023-08-25]
