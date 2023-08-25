@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5077 2023/08/25 12:22:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5078 2023/08/25 13:49:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7360,3 +7360,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-utils to 3.7.0 [adam 2023-08-25]
 	Updated devel/py-tenacity to 8.2.3 [adam 2023-08-25]
 	Updated net/py-minio to 7.1.16 [adam 2023-08-25]
+	Updated databases/py-redis to 5.0.0 [adam 2023-08-25]
+	Updated graphics/py-tifffile to 2023.8.12 [adam 2023-08-25]
