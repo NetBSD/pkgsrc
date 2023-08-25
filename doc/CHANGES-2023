@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5085 2023/08/25 16:40:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5086 2023/08/25 17:14:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7373,3 +7373,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbclient to 0.8.0 [adam 2023-08-25]
 	Updated devel/gperftools to 2.12 [adam 2023-08-25]
 	Updated databases/mongo-c-driver to 1.24.3 [adam 2023-08-25]
+	Added meta-pkgs/bulk-test-rust version 20230825.0 [gdt 2023-08-25]
