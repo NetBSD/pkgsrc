@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2023/05/05 09:19:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/25 16:07:15 adam Exp $
 
-DISTNAME=	nbclient-0.7.4
+DISTNAME=	nbclient-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://jupyter.org/
+HOMEPAGE=	https://github.com/jupyter/nbclient
 COMMENT=	Client library for executing notebooks
 LICENSE=	modified-bsd
 
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.12:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.1:../../www/py-nbformat
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets-[0-9]*:../../www/py-ipywidgets
