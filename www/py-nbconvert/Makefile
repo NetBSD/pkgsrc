@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/08/01 23:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/08/25 22:16:40 adam Exp $
 
-DISTNAME=	nbconvert-7.3.1
+DISTNAME=	nbconvert-7.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
@@ -10,7 +10,10 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	Converting Jupyter Notebooks
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.25:../../devel/py-hatchling
+# TODO: currently this package requires internet connection to build.
+# Examine hatch_build.py to find out which files get downloaded.
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-bleach-[0-9]*:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
@@ -20,17 +23,17 @@ DEPENDS+=	${PYPKGPREFIX}-jupyterlab-pygments-[0-9]*:../../textproc/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.0:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-mistune>=2.0.3:../../textproc/py-mistune
 DEPENDS+=	${PYPKGPREFIX}-nbclient>=0.5.0:../../www/py-nbclient
-DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.1:../../www/py-nbformat
+DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.7:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandocfilters>=1.4.1:../../textproc/py-pandocfilters
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-tinycss2-[0-9]*:../../textproc/py-tinycss2
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.0:../../devel/py-traitlets
-# marked as extra, but required
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1:../../devel/py-traitlets
+# serve
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
-TEST_DEPENDS+=	${PYPKGPREFIX}-pebble-[0-9]*:../../devel/py-pebble
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
