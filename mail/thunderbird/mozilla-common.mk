@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2023/07/09 19:02:07 abs Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2023/08/25 10:15:01 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -18,8 +18,8 @@ UNLIMIT_RESOURCES+=	datasize virtualsize
 
 USE_LANGUAGES+=		c c++
 
-# ERROR: Only GCC 7.1 or newer is supported (found version 5.5.0).
-GCC_REQD+=		7
+# ERROR: Only GCC 8.1 or newer is supported (found version 7.5.0).
+GCC_REQD+=		8
 
 TOOL_DEPENDS+=		cbindgen>=0.24.0:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
@@ -30,6 +30,9 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+# malloc_usable_size()
+LDFLAGS.NetBSD+=	-ljemalloc
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
@@ -121,8 +124,8 @@ CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
-SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
+SUBST_FILES.fix-paths+=		${MOZILLA_DIR}toolkit/xre/nsXREDirProvider.cpp
+SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla,${PREFIX}/lib/mozilla,g'
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
