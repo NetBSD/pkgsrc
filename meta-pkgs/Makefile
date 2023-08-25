@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2023/08/16 22:17:55 markd Exp $
+# $NetBSD: Makefile,v 1.126 2023/08/25 17:14:07 gdt Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -12,6 +12,7 @@ SUBDIR+=	bulk-test-boost
 SUBDIR+=	bulk-test-essential
 SUBDIR+=	bulk-test-go
 SUBDIR+=	bulk-test-llvm
+SUBDIR+=	bulk-test-rust
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	deforaos-desktop
