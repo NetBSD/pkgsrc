@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5069 2023/08/25 08:29:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5070 2023/08/25 09:24:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7346,3 +7346,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py39-html-docs to 3.9.18 [adam 2023-08-25]
 	Updated lang/py310-html-docs to 3.10.13 [adam 2023-08-25]
 	Updated lang/py311-html-docs to 3.11.5 [adam 2023-08-25]
+	Updated databases/diesel-cli to 2.1.1 [pin 2023-08-25]
