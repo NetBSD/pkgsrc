@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/04/25 11:39:57 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/08/25 21:58:01 adam Exp $
 
-BLAKE2s (nbformat-5.8.0.tar.gz) = dff87bc289d411a9da1e47b5c064ba2de424c275707c964d4dc160aa8963e739
-SHA512 (nbformat-5.8.0.tar.gz) = f000db59701eec2fed8adba6c1b521bdfaf942bcd0dba2d8d6d79a7d28b078f4a29df05ca3f393c1651f3ddc6b3690f536928d6fff5937982cc52dd013bc6498
-Size (nbformat-5.8.0.tar.gz) = 140655 bytes
+BLAKE2s (nbformat-5.9.2.tar.gz) = bc6a52d19b028a534c941eb9b846b432c8fdefcda880cb52fb595a315724839a
+SHA512 (nbformat-5.9.2.tar.gz) = 886a03cf95b39cdca48ae46d4946cee0f3dc1f5fa0e9dac7c6184b4c3e326adb739bd9da28032868a973577aa949feb5ae95a84017755948610ef7f208ebc5db
+Size (nbformat-5.9.2.tar.gz) = 141264 bytes

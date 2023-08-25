@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/04/25 11:39:57 adam Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/25 21:58:01 adam Exp $
 
-DISTNAME=	nbformat-5.8.0
+DISTNAME=	nbformat-5.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-fastjsonschema-[0-9]*:../../textproc/py-fastjsonschema
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.6:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core-[0-9]*:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1:../../devel/py-traitlets
+TEST_DEPENDS+=	${PYPKGPREFIX}-pep440-[0-9]*:../../misc/py-pep440
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
@@ -29,7 +29,7 @@ post-install:
 	${MV} jupyter-trust jupyter-trust-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
