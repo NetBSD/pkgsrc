@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2023/07/06 10:08:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2023/08/25 11:13:08 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -124,6 +124,9 @@ ${PYSITELIB}/mypy/gclogger.pyo
 ${PYSITELIB}/mypy/git.py
 ${PYSITELIB}/mypy/git.pyc
 ${PYSITELIB}/mypy/git.pyo
+${PYSITELIB}/mypy/graph_utils.py
+${PYSITELIB}/mypy/graph_utils.pyc
+${PYSITELIB}/mypy/graph_utils.pyo
 ${PYSITELIB}/mypy/indirection.py
 ${PYSITELIB}/mypy/indirection.pyc
 ${PYSITELIB}/mypy/indirection.pyo
@@ -365,6 +368,15 @@ ${PYSITELIB}/mypy/test/data.pyo
 ${PYSITELIB}/mypy/test/helpers.py
 ${PYSITELIB}/mypy/test/helpers.pyc
 ${PYSITELIB}/mypy/test/helpers.pyo
+${PYSITELIB}/mypy/test/meta/__init__.py
+${PYSITELIB}/mypy/test/meta/__init__.pyc
+${PYSITELIB}/mypy/test/meta/__init__.pyo
+${PYSITELIB}/mypy/test/meta/test_parse_data.py
+${PYSITELIB}/mypy/test/meta/test_parse_data.pyc
+${PYSITELIB}/mypy/test/meta/test_parse_data.pyo
+${PYSITELIB}/mypy/test/meta/test_update_data.py
+${PYSITELIB}/mypy/test/meta/test_update_data.pyc
+${PYSITELIB}/mypy/test/meta/test_update_data.pyo
 ${PYSITELIB}/mypy/test/test_find_sources.py
 ${PYSITELIB}/mypy/test/test_find_sources.pyc
 ${PYSITELIB}/mypy/test/test_find_sources.pyo
@@ -467,9 +479,6 @@ ${PYSITELIB}/mypy/test/testtypegen.pyo
 ${PYSITELIB}/mypy/test/testtypes.py
 ${PYSITELIB}/mypy/test/testtypes.pyc
 ${PYSITELIB}/mypy/test/testtypes.pyo
-${PYSITELIB}/mypy/test/testupdatedata.py
-${PYSITELIB}/mypy/test/testupdatedata.pyc
-${PYSITELIB}/mypy/test/testupdatedata.pyo
 ${PYSITELIB}/mypy/test/testutil.py
 ${PYSITELIB}/mypy/test/testutil.pyc
 ${PYSITELIB}/mypy/test/testutil.pyo
@@ -1418,6 +1427,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-dunders.test
 ${PYSITELIB}/mypyc/test-data/irbuild-float.test
 ${PYSITELIB}/mypyc/test-data/irbuild-generics.test
 ${PYSITELIB}/mypyc/test-data/irbuild-glue-methods.test
+${PYSITELIB}/mypyc/test-data/irbuild-i16.test
 ${PYSITELIB}/mypyc/test-data/irbuild-i32.test
 ${PYSITELIB}/mypyc/test-data/irbuild-i64.test
 ${PYSITELIB}/mypyc/test-data/irbuild-int.test
@@ -1434,6 +1444,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-str.test
 ${PYSITELIB}/mypyc/test-data/irbuild-strip-asserts.test
 ${PYSITELIB}/mypyc/test-data/irbuild-try.test
 ${PYSITELIB}/mypyc/test-data/irbuild-tuple.test
+${PYSITELIB}/mypyc/test-data/irbuild-u8.test
 ${PYSITELIB}/mypyc/test-data/irbuild-unreachable.test
 ${PYSITELIB}/mypyc/test-data/irbuild-vectorcall.test
 ${PYSITELIB}/mypyc/test-data/refcount.test
@@ -1449,6 +1460,7 @@ ${PYSITELIB}/mypyc/test-data/run-exceptions.test
 ${PYSITELIB}/mypyc/test-data/run-floats.test
 ${PYSITELIB}/mypyc/test-data/run-functions.test
 ${PYSITELIB}/mypyc/test-data/run-generators.test
+${PYSITELIB}/mypyc/test-data/run-i16.test
 ${PYSITELIB}/mypyc/test-data/run-i32.test
 ${PYSITELIB}/mypyc/test-data/run-i64.test
 ${PYSITELIB}/mypyc/test-data/run-imports.test
@@ -1468,6 +1480,7 @@ ${PYSITELIB}/mypyc/test-data/run-singledispatch.test
 ${PYSITELIB}/mypyc/test-data/run-strings.test
 ${PYSITELIB}/mypyc/test-data/run-traits.test
 ${PYSITELIB}/mypyc/test-data/run-tuples.test
+${PYSITELIB}/mypyc/test-data/run-u8.test
 ${PYSITELIB}/mypyc/test/__init__.py
 ${PYSITELIB}/mypyc/test/__init__.pyc
 ${PYSITELIB}/mypyc/test/__init__.pyo
