@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.181 2023/08/14 05:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2023/08/25 10:36:48 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
-DISTNAME=	qgis-3.28.7
-PKGREVISION=	2
+DISTNAME=	qgis-3.28.10
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -63,6 +62,7 @@ SUBST_SED.pyqt+=		-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
+#CMAKE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
