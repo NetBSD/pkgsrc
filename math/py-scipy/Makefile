@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2023/07/12 16:26:29 adam Exp $
+# $NetBSD: Makefile,v 1.68 2023/08/25 15:19:19 adam Exp $
 
-DISTNAME=	scipy-1.11.1
+DISTNAME=	scipy-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://www.scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
-DEPENDS+=	${PYPKGPREFIX}-pythran>=0.9.11:../../math/py-pythran
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.35:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.10.4:../../devel/py-pybind11
+DEPENDS+=	${PYPKGPREFIX}-pythran>=0.12.0:../../math/py-pythran
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pooch-[0-9]*:../../devel/py-pooch
@@ -21,9 +24,16 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES+=	c99 c++11 fortran
+USE_TOOLS+=	pkg-config
 MAKE_ENV+=	ATLAS=None
 GCC_REQD+=	8
 EGG_NAME=	${DISTNAME:S/scipy/SciPy/}
+
+SUBST_CLASSES+=		pythran
+SUBST_STAGE.pythran=	pre-configure
+SUBST_MESSAGE.pythran=	Fixing pythran binary name.
+SUBST_FILES.pythran=	meson.build
+SUBST_SED.pythran=	-e "s,'pythran','pythran-${PYVERSSUFFIX}',"
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
@@ -65,8 +75,9 @@ do-test:
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/fftw/buildlink3.mk"
+.include "../../math/openblas/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.21.6
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
