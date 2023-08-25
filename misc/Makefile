@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2023/08/16 22:35:08 markd Exp $
+# $NetBSD: Makefile,v 1.625 2023/08/25 21:55:53 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -284,6 +284,7 @@ SUBDIR+=	py-icecream
 SUBDIR+=	py-immutables
 SUBDIR+=	py-installer
 SUBDIR+=	py-lazy_loader
+SUBDIR+=	py-pep440
 SUBDIR+=	py-platformdirs
 SUBDIR+=	py-shellingham
 SUBDIR+=	py-sniffio
