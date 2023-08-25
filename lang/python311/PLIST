@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/22 18:27:45 js Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/25 08:28:22 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1448,7 +1448,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-23.1.2-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-23.2.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-65.5.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
@@ -2729,7 +2729,6 @@ lib/python${PY_VER_SUFFIX}/test/_test_multiprocessing.pyo
 lib/python${PY_VER_SUFFIX}/test/_test_venv_multiprocessing.py
 lib/python${PY_VER_SUFFIX}/test/_test_venv_multiprocessing.pyc
 lib/python${PY_VER_SUFFIX}/test/_test_venv_multiprocessing.pyo
-lib/python${PY_VER_SUFFIX}/test/_testcppext.cpp
 lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.py
 lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/_typed_dict_helper.pyo
@@ -2785,15 +2784,6 @@ lib/python${PY_VER_SUFFIX}/test/autotest.pyc
 lib/python${PY_VER_SUFFIX}/test/autotest.pyo
 lib/python${PY_VER_SUFFIX}/test/bad_coding.py
 lib/python${PY_VER_SUFFIX}/test/bad_coding2.py
-lib/python${PY_VER_SUFFIX}/test/bad_getattr.py
-lib/python${PY_VER_SUFFIX}/test/bad_getattr.pyc
-lib/python${PY_VER_SUFFIX}/test/bad_getattr.pyo
-lib/python${PY_VER_SUFFIX}/test/bad_getattr2.py
-lib/python${PY_VER_SUFFIX}/test/bad_getattr2.pyc
-lib/python${PY_VER_SUFFIX}/test/bad_getattr2.pyo
-lib/python${PY_VER_SUFFIX}/test/bad_getattr3.py
-lib/python${PY_VER_SUFFIX}/test/bad_getattr3.pyc
-lib/python${PY_VER_SUFFIX}/test/bad_getattr3.pyo
 lib/python${PY_VER_SUFFIX}/test/badcert.pem
 lib/python${PY_VER_SUFFIX}/test/badkey.pem
 lib/python${PY_VER_SUFFIX}/test/badsyntax_3131.py
@@ -2848,7 +2838,7 @@ lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213.txt
-lib/python${PY_VER_SUFFIX}/test/clinic.test
+lib/python${PY_VER_SUFFIX}/test/clinic.test.c
 lib/python${PY_VER_SUFFIX}/test/cmath_testcases.txt
 lib/python${PY_VER_SUFFIX}/test/coding20731.py
 lib/python${PY_VER_SUFFIX}/test/coding20731.pyc
@@ -3108,9 +3098,6 @@ lib/python${PY_VER_SUFFIX}/test/future_test2.pyo
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.py
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.pyc
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.pyo
-lib/python${PY_VER_SUFFIX}/test/good_getattr.py
-lib/python${PY_VER_SUFFIX}/test/good_getattr.pyc
-lib/python${PY_VER_SUFFIX}/test/good_getattr.pyo
 lib/python${PY_VER_SUFFIX}/test/idnsans.pem
 lib/python${PY_VER_SUFFIX}/test/ieee754.txt
 lib/python${PY_VER_SUFFIX}/test/imghdrdata/python-raw.jpg
@@ -3283,9 +3270,6 @@ lib/python${PY_VER_SUFFIX}/test/selfsigned_pythontestdotnet.pem
 lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
-lib/python${PY_VER_SUFFIX}/test/setup_testcppext.py
-lib/python${PY_VER_SUFFIX}/test/setup_testcppext.pyc
-lib/python${PY_VER_SUFFIX}/test/setup_testcppext.pyo
 lib/python${PY_VER_SUFFIX}/test/sgml_input.html
 lib/python${PY_VER_SUFFIX}/test/signalinterproctester.py
 lib/python${PY_VER_SUFFIX}/test/signalinterproctester.pyc
@@ -3591,6 +3575,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/__main__.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/__main__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/__main__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_codecs.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_codecs.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_codecs.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.pyo
@@ -3729,9 +3716,13 @@ lib/python${PY_VER_SUFFIX}/test/test_copyreg.pyo
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.py
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.pyc
 lib/python${PY_VER_SUFFIX}/test/test_coroutines.pyo
-lib/python${PY_VER_SUFFIX}/test/test_cppext.py
-lib/python${PY_VER_SUFFIX}/test/test_cppext.pyc
-lib/python${PY_VER_SUFFIX}/test/test_cppext.pyo
+lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_cppext/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_cppext/extension.cpp
+lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.py
+lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.pyc
+lib/python${PY_VER_SUFFIX}/test/test_cppext/setup.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cprofile.py
 lib/python${PY_VER_SUFFIX}/test/test_cprofile.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cprofile.pyo
@@ -3889,6 +3880,7 @@ lib/python${PY_VER_SUFFIX}/test/test_email/data/msg_43.txt
 lib/python${PY_VER_SUFFIX}/test/test_email/data/msg_44.txt
 lib/python${PY_VER_SUFFIX}/test/test_email/data/msg_45.txt
 lib/python${PY_VER_SUFFIX}/test/test_email/data/msg_46.txt
+lib/python${PY_VER_SUFFIX}/test/test_email/data/msg_47.txt
 lib/python${PY_VER_SUFFIX}/test/test_email/data/python.bmp
 lib/python${PY_VER_SUFFIX}/test/test_email/data/python.exr
 lib/python${PY_VER_SUFFIX}/test/test_email/data/python.gif
@@ -4684,9 +4676,21 @@ lib/python${PY_VER_SUFFIX}/test/test_minidom.pyo
 lib/python${PY_VER_SUFFIX}/test/test_mmap.py
 lib/python${PY_VER_SUFFIX}/test/test_mmap.pyc
 lib/python${PY_VER_SUFFIX}/test/test_mmap.pyo
-lib/python${PY_VER_SUFFIX}/test/test_module.py
-lib/python${PY_VER_SUFFIX}/test/test_module.pyc
-lib/python${PY_VER_SUFFIX}/test/test_module.pyo
+lib/python${PY_VER_SUFFIX}/test/test_module/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_module/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_module/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr.py
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr.pyc
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr.pyo
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr2.py
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr2.pyc
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr2.pyo
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr3.py
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr3.pyc
+lib/python${PY_VER_SUFFIX}/test/test_module/bad_getattr3.pyo
+lib/python${PY_VER_SUFFIX}/test/test_module/good_getattr.py
+lib/python${PY_VER_SUFFIX}/test/test_module/good_getattr.pyc
+lib/python${PY_VER_SUFFIX}/test/test_module/good_getattr.pyo
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.py
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.pyc
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.pyo
