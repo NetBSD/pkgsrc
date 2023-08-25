@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5081 2023/08/25 15:20:18 pho Exp $
+$NetBSD: CHANGES-2023,v 1.5082 2023/08/25 15:22:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7365,3 +7365,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hw-probe to 1.6.5_20230812 [vins 2023-08-25]
 	Updated mail/thunderbird-l10n to 115.1.1 [pho 2023-08-25]
 	Updated mail/thunderbird to 115.1.1 [pho 2023-08-25]
+	Updated math/py-scipy to 1.11.2 [adam 2023-08-25]
+	Updated databases/py-peewee to 3.16.3 [adam 2023-08-25]
