@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5096 2023/08/26 08:35:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5097 2023/08/26 09:02:01 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7391,3 +7391,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/octave to 8.3.0 [adam 2023-08-26]
 	Updated graphics/py-tifffile to 2023.8.25 [adam 2023-08-26]
 	Updated textproc/py-tinycss2 to 1.2.1 [adam 2023-08-26]
+	Updated misc/lr to 1.6 [vins 2023-08-26]
