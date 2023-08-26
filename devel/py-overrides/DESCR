@@ -1,0 +1,3 @@
+A decorator @override that verifies that a method that should override an
+inherited method actually does it. Copies the docstring of the inherited
+method to the overridden method.
