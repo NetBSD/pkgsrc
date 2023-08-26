@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5134 2023/08/26 17:16:24 he Exp $
+$NetBSD: CHANGES-2023,v 1.5135 2023/08/26 18:08:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7462,3 +7462,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ruby-network_interface to 0.0.4 [taca 2023-08-26]
 	Added lang/go121 version 1.21.0 [bsiegert 2023-08-26]
 	Updated sysutils/onefetch to 2.18.1nb1 [he 2023-08-26]
+	Updated devel/golangci-lint to 1.54.2 [bsiegert 2023-08-26]
