@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2023/03/29 10:11:12 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/26 15:18:57 rhialto Exp $
 bin/a68g
 include/algol68g/a68g-common.h
-include/algol68g/a68g-compiler.h
 include/algol68g/a68g-config.h
 include/algol68g/a68g-config.win32.h
 include/algol68g/a68g-defines.h
@@ -18,6 +17,7 @@ include/algol68g/a68g-lib.h
 include/algol68g/a68g-listing.h
 include/algol68g/a68g-masks.h
 include/algol68g/a68g-math.h
+include/algol68g/a68g-moids.h
 include/algol68g/a68g-mp.h
 include/algol68g/a68g-nil.h
 include/algol68g/a68g-numbers.h
@@ -26,6 +26,7 @@ include/algol68g/a68g-options.h
 include/algol68g/a68g-parser.h
 include/algol68g/a68g-physics.h
 include/algol68g/a68g-platform.h
+include/algol68g/a68g-plugin.h
 include/algol68g/a68g-postulates.h
 include/algol68g/a68g-prelude-gsl.h
 include/algol68g/a68g-prelude-mathlib.h

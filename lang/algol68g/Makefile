@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2023/03/29 10:11:12 rhialto Exp $
+# $NetBSD: Makefile,v 1.25 2023/08/26 15:18:57 rhialto Exp $
 
-DISTNAME=	algol68g-3.1.4
+DISTNAME=	algol68g-3.3.5
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
 
