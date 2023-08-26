@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5095 2023/08/26 08:31:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5096 2023/08/26 08:35:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7389,3 +7389,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/php-pecl-zip to 1.22.2 [taca 2023-08-26]
 	Updated graphics/gnuplot to 5.4.8 [adam 2023-08-26]
 	Updated math/octave to 8.3.0 [adam 2023-08-26]
+	Updated graphics/py-tifffile to 2023.8.25 [adam 2023-08-26]
+	Updated textproc/py-tinycss2 to 1.2.1 [adam 2023-08-26]
