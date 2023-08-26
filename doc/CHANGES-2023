@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5100 2023/08/26 10:05:29 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5101 2023/08/26 10:59:24 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7397,3 +7397,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_events to 0.7.0 [adam 2023-08-26]
 	Added devel/py-overrides version 7.4.0 [adam 2023-08-26]
 	Updated security/keepassxc to 2.7.6 [wiz 2023-08-26]
+	Added misc/nq version 0.5 [vins 2023-08-26]
