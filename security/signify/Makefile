@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2022/12/06 14:41:38 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/26 11:27:42 vins Exp $
 
 DISTNAME=	outils-0.12
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
-GITHUB_PROJECT=	outils
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://git.vuxu.org/outils/snapshot/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://flak.tedunangst.com/post/signify
@@ -13,9 +12,16 @@ COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain
 
 USE_TOOLS+=	gmake
-MAKE_FLAGS+=	ALL=src/usr.bin/signify/signify
-MAKE_FLAGS+=	LIBS=${LIBS:Q}
+
 LIBS+=		-lm
+LIBS.SunOS+=	-lresolv -lrt
+
+MAKE_FLAGS+=	ALL=src/usr.bin/signify/signify
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	LIBS=${LIBS:Q}
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
@@ -40,10 +46,6 @@ SUBST_FILES.ints+=	${LIBSRCDIR}/*.c
 SUBST_FILES.ints+=	${LIBSRCDIR}/include/*.h
 SUBST_SED.ints=		-e 's|u_int|uint|g'
 .endif
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
-
-LIBS.SunOS+=	-lresolv -lrt
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
