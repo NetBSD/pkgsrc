@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5120 2023/08/26 14:45:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5121 2023/08/26 14:55:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7424,3 +7424,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-poetry-plugin-export to 1.5.0 [adam 2023-08-26]
 	Updated devel/py-poetry to 1.6.1 [adam 2023-08-26]
 	Updated textproc/py-jsonschema-spec to 0.2.4 [adam 2023-08-26]
+	Updated www/ruby-aws-partitions to 1.812.0 [taca 2023-08-26]
