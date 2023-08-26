@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/06/27 13:35:18 taca Exp $
+$NetBSD: distinfo,v 1.20 2023/08/26 15:23:29 taca Exp $
 
-BLAKE2s (actionmailbox-6.1.7.4.gem) = 918bc242b67c96a357396a3467b115e6e62ede6d61bfeaaa1ef2d879d0d25b05
-SHA512 (actionmailbox-6.1.7.4.gem) = dde7c86546fbbdc4a93d1691b4b160e03f53af8bae2df4bea80fd170898c159b0fdd5d8f4e7587b11b354616395169d6438b1d9f107bcaf6a27df611f42529fd
-Size (actionmailbox-6.1.7.4.gem) = 22528 bytes
+BLAKE2s (actionmailbox-6.1.7.6.gem) = c10e3b7df92e92bd6a619b981c623b45961edc118a66dc6b2cc389104c0156ff
+SHA512 (actionmailbox-6.1.7.6.gem) = 8dc3c0fdd5be1b5f7b44ae41d14bdf6a12c57594d381d2de888f21f32c54a95d9a72aa725eab32a76fcfa5dc2f6bfb5160e7244b488400cdb5aa2af4fbb1da03
+Size (actionmailbox-6.1.7.6.gem) = 22528 bytes
