@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1735 2023/08/26 11:00:25 adam Exp $
+# $NetBSD: Makefile,v 1.1736 2023/08/26 11:54:46 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -818,6 +818,7 @@ SUBDIR+=	py-idna
 SUBDIR+=	py-ipywidgets
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-jupyter_server
+SUBDIR+=	py-jupyterlab-server
 SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-klein
 SUBDIR+=	py-landslide
