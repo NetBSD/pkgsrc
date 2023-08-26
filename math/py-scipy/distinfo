@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2023/08/25 15:19:19 adam Exp $
+$NetBSD: distinfo,v 1.48 2023/08/26 19:50:01 tnn Exp $
 
 BLAKE2s (scipy-1.11.2.tar.gz) = b1b604d63b97d0cf5fb551d227761214b88881f9e3be2195c0f69f5902eb96be
 SHA512 (scipy-1.11.2.tar.gz) = f6902d48617827d01f69c057f3c4790c7388bc58df0791ade96e073740253bc0529475f9fc22d00c23c0b649acaeb820792528d3805d0ac68588c329aa87b3f2
@@ -8,4 +8,4 @@ SHA1 (patch-scipy_spatial_ckdtree_src_ckdtree__decl.h) = c5684427731eef00c012b1e
 SHA1 (patch-scipy_special_Faddeeva.hh) = 9f6c0bb808fc9be0a1c1b7e65395d29f13821233
 SHA1 (patch-scipy_special_sf__error.c) = 416489193a6ff90caaa95f489a452f23f0a27bbe
 SHA1 (patch-scipy_special_wright.hh) = 56d65f9ed4bec96f0b927bbe42edd30fc6546454
-SHA1 (patch-scipy_stats__unuran_setup.py) = ea6651d6e07781a5a600f33e5f0d251213e6c614
+SHA1 (patch-scipy_stats___unuran_meson.build) = afa31bf66c9599c8ffc102f2013694305c7e8d03

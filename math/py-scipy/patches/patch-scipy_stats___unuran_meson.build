@@ -1,0 +1,16 @@
+$NetBSD: patch-scipy_stats___unuran_meson.build,v 1.1 2023/08/26 19:50:01 tnn Exp $
+
+On NetBSD/powerpc and evbarm, you can't build with _ISOC99_SOURCE defined,
+the include of <ieeefp.h> deep down in the python headers will fail
+with undefined types.
+
+--- scipy/stats/_unuran/meson.build.orig	1970-01-01 00:00:00.000000000 +0000
++++ scipy/stats/_unuran/meson.build
+@@ -204,7 +204,6 @@ unuran_defines = [
+   '-DUNUR_ENABLE_INFO=1',
+   '-DVERSION=' + unuran_version,
+   '-DHAVE_CONFIG_H=1',
+-  '-D_ISOC99_SOURCE=1',
+   '-DHAVE_DECL_HYPOT=1'
+ ]
+ 
