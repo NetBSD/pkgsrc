@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2023/07/15 10:52:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2023/08/26 16:31:23 bsiegert Exp $
 
 DISTNAME=	coyim-0.3.11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coyim/}
-PKGREVISION=	54
+PKGREVISION=	55
 CATEGORIES=	chat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar

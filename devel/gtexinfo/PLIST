@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/11/24 12:16:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/08/26 16:31:28 bsiegert Exp $
 bin/info
 bin/install-info
 bin/makeinfo
@@ -13,7 +13,6 @@ info/texi2any_api.info
 info/texi2any_internals.info
 info/texinfo.info
 lib/texinfo/MiscXS.la
-lib/texinfo/Parsetexi.la
 lib/texinfo/XSParagraph.la
 man/man1/info.1
 man/man1/install-info.1

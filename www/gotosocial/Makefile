@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/07/30 20:52:52 nikita Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/26 16:31:40 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.10.0-source-code
 PKGNAME=	${DISTNAME:S/-source-code//}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	gotosocial
