@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/26 11:08:10 adam Exp $
 
-DISTNAME=	jupyter_server-2.5.0
+DISTNAME=	jupyter_server-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server/}
@@ -18,22 +18,23 @@ DEPENDS+=	${PYPKGPREFIX}-argon2-cffi-[0-9]*:../../security/py-argon2-cffi
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=7.4.4:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
-DEPENDS+=	${PYPKGPREFIX}-jupyter_events>=0.4.0:../../devel/py-jupyter_events
+DEPENDS+=	${PYPKGPREFIX}-jupyter_events>=0.6.0:../../devel/py-jupyter_events
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server_terminals-[0-9]*:../../comms/py-jupyter_server_terminals
 DEPENDS+=	${PYPKGPREFIX}-nbconvert>=6.4.4:../../www/py-nbconvert
-DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.3.0:../../www/py-nbformat
+DEPENDS+=	${PYPKGPREFIX}-overrides-[0-9]*:../../devel/py-overrides
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
-DEPENDS+=	${PYPKGPREFIX}-zmq>=24:../../net/py-zmq
 DEPENDS+=	${PYPKGPREFIX}-terminado>=0.8.3:../../www/py-terminado
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.6.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-websocket-client-[0-9]*:../../www/py-websocket-client
-# TODO: py-test_jupyter
+DEPENDS+=	${PYPKGPREFIX}-zmq>=24:../../net/py-zmq
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-console-scripts
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-jupyter>=0.4:../../www/py-test-jupyter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
