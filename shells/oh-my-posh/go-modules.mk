@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.25 2023/08/08 19:58:10 pin Exp $
+# $NetBSD: go-modules.mk,v 1.26 2023/08/26 13:58:28 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -31,8 +31,8 @@ GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.16.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.16.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.2.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.24.2.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.7.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.7.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.8.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.8.0.zip
 GO_MODULE_FILES+=	github.com/containerd/console/@v/v1.0.4-0.20230313162750-1ae8d489ac81.mod
 GO_MODULE_FILES+=	github.com/containerd/console/@v/v1.0.4-0.20230313162750-1ae8d489ac81.zip
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
@@ -116,8 +116,8 @@ GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.zip
 GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.zip
-GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.1.mod
-GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.1.zip
+GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.mod
+GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.zip
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20210106213030-5aafc221ea8c.mod
