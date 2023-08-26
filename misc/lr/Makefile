@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/01/27 10:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/26 09:00:38 vins Exp $
 
-DISTNAME=	lr-1.5.1
+DISTNAME=	lr-1.6
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
-GITHUB_PROJECT=	lr
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://git.vuxu.org/lr/snapshot/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/leahneukirchen/lr
+HOMEPAGE=	https://git.vuxu.org/lr/about/
 COMMENT=	List files, recursively
 LICENSE=	mit
 
