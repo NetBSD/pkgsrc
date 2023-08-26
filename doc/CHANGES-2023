@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5117 2023/08/26 14:21:52 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5118 2023/08/26 14:41:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7418,3 +7418,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-async-lru version 2.0.4 [adam 2023-08-26]
 	Added www/py-jupyterlab version 4.0.5 [adam 2023-08-26]
 	Updated net/openvpn to 2.6.6 [gdt 2023-08-26]
+	Updated sysutils/ruby-facter to 4.4.3 [taca 2023-08-26]
