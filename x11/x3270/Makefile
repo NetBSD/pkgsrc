@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2023/03/29 13:27:16 rhialto Exp $
+# $NetBSD: Makefile,v 1.52 2023/08/26 13:23:37 rhialto Exp $
 
-DISTNAME=	suite3270-4.2ga9-src
-PKGNAME=	x3270-4.2ga6
+DISTNAME=	suite3270-${VER}-src
+PKGNAME=	x3270-${VER}
+VER=		4.2ga10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
