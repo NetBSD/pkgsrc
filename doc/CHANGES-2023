@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5128 2023/08/26 15:19:08 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.5129 2023/08/26 15:25:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7432,3 +7432,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-html-proofer to 5.0.8 [taca 2023-08-26]
 	Updated www/ruby-puma to 6.3.1 [taca 2023-08-26]
 	Updated lang/algol68g to 3.3.5 [rhialto 2023-08-26]
+	Updated devel/ruby-activesupport61 to 6.1.7.6 [taca 2023-08-26]
+	Updated devel/ruby-activemodel61 to 6.1.7.6 [taca 2023-08-26]
+	Updated devel/ruby-activejob61 to 6.1.7.6 [taca 2023-08-26]
+	Updated www/ruby-actionview61 to 6.1.7.6 [taca 2023-08-26]
+	Updated www/ruby-actionpack61 to 6.1.7.6 [taca 2023-08-26]
+	Updated databases/ruby-activerecord61 to 6.1.7.6 [taca 2023-08-26]
+	Updated devel/ruby-activestorage61 to 6.1.7.6 [taca 2023-08-26]
+	Updated mail/ruby-actionmailer61 to 6.1.7.6 [taca 2023-08-26]
+	Updated mail/ruby-actionmailbox61 to 6.1.7.6 [taca 2023-08-26]
+	Updated www/ruby-actioncable61 to 6.1.7.6 [taca 2023-08-26]
+	Updated devel/ruby-railties61 to 6.1.7.6 [taca 2023-08-26]
+	Updated textproc/ruby-actiontext61 to 6.1.7.6 [taca 2023-08-26]
+	Updated www/ruby-rails61 to 6.1.7.6 [taca 2023-08-26]
