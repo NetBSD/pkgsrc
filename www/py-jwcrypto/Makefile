@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/05/29 08:51:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/26 11:56:43 adam Exp $
 
-DISTNAME=	jwcrypto-1.4.2
+DISTNAME=	jwcrypto-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jwcrypto/}
