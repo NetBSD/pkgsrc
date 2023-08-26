@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.182 2023/08/25 10:36:48 gdt Exp $
+# $NetBSD: Makefile,v 1.183 2023/08/26 00:09:54 gdt Exp $
 
 # This is intentionally 3.28 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
-# versions.
+# versions, or to only track the most recent branch.
 DISTNAME=	qgis-3.28.10
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	brook@nmsu.edu
-#MAINTAINER+=	bouyer@NetBSD.orrg
+#MAINTAINER+=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.qgis.org/
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
@@ -62,7 +63,11 @@ SUBST_SED.pyqt+=		-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
-#CMAKE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
+
+# Server support is WIP; it has merely been tested that regular use
+# has not been broken.
+CMAKE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
+CMAKE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
