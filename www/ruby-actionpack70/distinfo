@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/08/11 14:14:43 taca Exp $
+$NetBSD: distinfo,v 1.16 2023/08/26 15:29:21 taca Exp $
 
-BLAKE2s (actionpack-7.0.7.gem) = 5cfdab231fc2117239ac9c2f50bed15bfaa26f530f487a5a871a89e485bc17b0
-SHA512 (actionpack-7.0.7.gem) = f7cc041c8498aca24ecc1bf3417baed43939e48a1729ec2d94b521dffcd55f5e2ae73b12c014a6def71142d6c6a390f4fce7843567a68513a0fd0fb79fb1692a
-Size (actionpack-7.0.7.gem) = 233472 bytes
+BLAKE2s (actionpack-7.0.7.2.gem) = 78f7e8a85e3a27c60d4ca41dd0a4213d9c2cd4d549e9f2e9dab46906bab8d0b6
+SHA512 (actionpack-7.0.7.2.gem) = a4f7016448d2f85d42fa083a7be7a48161be1281a3f354ef8a96ed0e6bbeea00825b5955943629cf99a68f17829ae0379d666ef3d48bc3b557c8850fcd898e8b
+Size (actionpack-7.0.7.2.gem) = 233472 bytes
