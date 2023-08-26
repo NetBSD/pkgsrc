@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.24 2023/08/25 10:36:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/08/26 00:09:54 gdt Exp $
 bin/qgis
 bin/qgis_bench
+bin/qgis_mapserver
 bin/qgis_process
 include/qgis/Bezier3D.h
 include/qgis/CloughTocherInterpolator.h
@@ -1699,6 +1700,8 @@ lib/libqgis_gui.so
 lib/libqgis_gui.so.${PKGVERSION}
 lib/libqgis_native.so
 lib/libqgis_native.so.${PKGVERSION}
+lib/libqgis_server.so
+lib/libqgis_server.so.${PKGVERSION}
 lib/libqgispython.so
 lib/libqgispython.so.${PKGVERSION}
 lib/qgis/crssync
@@ -1729,6 +1732,14 @@ lib/qgis/plugins/libprovider_wcs.so
 lib/qgis/plugins/libprovider_wfs.so
 lib/qgis/plugins/libprovider_wms.so
 lib/qgis/qgiscrashhandler
+lib/qgis/server/libdummy.so
+lib/qgis/server/liblandingpage.so
+lib/qgis/server/libwcs.so
+lib/qgis/server/libwfs.so
+lib/qgis/server/libwfs3.so
+lib/qgis/server/libwms.so
+lib/qgis/server/libwmts.so
+libexec/cgi-bin/qgis_mapserv.fcgi
 man/man1/qgis.1
 share/applications/org.qgis.qgis.desktop
 share/icons/hicolor/128x128/apps/qgis.png
@@ -3223,6 +3234,8 @@ share/qgis/python/qgis/_core.pyi
 share/qgis/python/qgis/_core.so
 share/qgis/python/qgis/_gui.pyi
 share/qgis/python/qgis/_gui.so
+share/qgis/python/qgis/_server.pyi
+share/qgis/python/qgis/_server.so
 share/qgis/python/qgis/analysis/__init__.py
 share/qgis/python/qgis/core/__init__.py
 share/qgis/python/qgis/core/additions/__init__.py
@@ -3246,6 +3259,7 @@ share/qgis/python/qgis/core/contextmanagers.py
 share/qgis/python/qgis/gui/__init__.py
 share/qgis/python/qgis/processing/__init__.py
 share/qgis/python/qgis/processing/algfactory.py
+share/qgis/python/qgis/server/__init__.py
 share/qgis/python/qgis/testing/__init__.py
 share/qgis/python/qgis/testing/mocked.py
 share/qgis/python/qgis/user.py
@@ -8781,6 +8795,50 @@ share/qgis/resources/metadata-ISO/mime.csv
 share/qgis/resources/palettes/new_layer_colors.gpl
 share/qgis/resources/qgis.db
 share/qgis/resources/qgis_global_settings.ini
+share/qgis/resources/server/api/ogc/schema.json
+share/qgis/resources/server/api/ogc/static/jsonFormatter/LICENSE
+share/qgis/resources/server/api/ogc/static/jsonFormatter/jsonFormatter.css
+share/qgis/resources/server/api/ogc/static/jsonFormatter/jsonFormatter.js
+share/qgis/resources/server/api/ogc/static/jsonFormatter/jsonFormatter.min.css
+share/qgis/resources/server/api/ogc/static/jsonFormatter/jsonFormatter.min.js
+share/qgis/resources/server/api/ogc/static/style.css
+share/qgis/resources/server/api/ogc/templates/wfs3/describeCollection.html
+share/qgis/resources/server/api/ogc/templates/wfs3/describeCollections.html
+share/qgis/resources/server/api/ogc/templates/wfs3/footer.html
+share/qgis/resources/server/api/ogc/templates/wfs3/getApiDescription.html
+share/qgis/resources/server/api/ogc/templates/wfs3/getFeature.html
+share/qgis/resources/server/api/ogc/templates/wfs3/getFeatures.html
+share/qgis/resources/server/api/ogc/templates/wfs3/getLandingPage.html
+share/qgis/resources/server/api/ogc/templates/wfs3/getRequirementClasses.html
+share/qgis/resources/server/api/ogc/templates/wfs3/header.html
+share/qgis/resources/server/api/ogc/templates/wfs3/leaflet_map.html
+share/qgis/resources/server/api/ogc/templates/wfs3/links.html
+share/qgis/resources/server/schemaExtension.xsd
+share/qgis/resources/server/src/landingpage/README.md
+share/qgis/resources/server/src/landingpage/babel.config.js
+share/qgis/resources/server/src/landingpage/package.json
+share/qgis/resources/server/src/landingpage/public/README
+share/qgis/resources/server/src/landingpage/public/favicon.ico
+share/qgis/resources/server/src/landingpage/public/index.html
+share/qgis/resources/server/src/landingpage/src/App.vue
+share/qgis/resources/server/src/landingpage/src/components/AttributeTable.vue
+share/qgis/resources/server/src/landingpage/src/components/Error.vue
+share/qgis/resources/server/src/landingpage/src/components/IdentifyResults.vue
+share/qgis/resources/server/src/landingpage/src/components/LayerTree.vue
+share/qgis/resources/server/src/landingpage/src/components/LayerTreeNode.vue
+share/qgis/resources/server/src/landingpage/src/components/LeftSidebar.vue
+share/qgis/resources/server/src/landingpage/src/components/MapFooter.vue
+share/qgis/resources/server/src/landingpage/src/components/MapToolbar.vue
+share/qgis/resources/server/src/landingpage/src/components/Metadata.vue
+share/qgis/resources/server/src/landingpage/src/js/Utils.js
+share/qgis/resources/server/src/landingpage/src/js/WmsSource.js
+share/qgis/resources/server/src/landingpage/src/main.js
+share/qgis/resources/server/src/landingpage/src/plugins/vuetify.js
+share/qgis/resources/server/src/landingpage/src/store.js
+share/qgis/resources/server/src/landingpage/src/views/Catalog.vue
+share/qgis/resources/server/src/landingpage/src/views/WebGis.vue
+share/qgis/resources/server/src/landingpage/vue.config.js
+share/qgis/resources/server/src/landingpage/yarn.lock
 share/qgis/resources/spatialite.db
 share/qgis/resources/srs.db
 share/qgis/resources/symbology-style.xml
@@ -8832,6 +8890,8 @@ share/qgis/resources/themes/Night Mapping/palette.txt
 share/qgis/resources/themes/Night Mapping/qscintilla.ini
 share/qgis/resources/themes/Night Mapping/style.qss
 share/qgis/resources/themes/Night Mapping/variables.qss
+share/qgis/server/admin.sld
+share/qgis/server/wms_metadata.xml
 share/qgis/svg/accommodation/accommodation_alpinehut.svg
 share/qgis/svg/accommodation/accommodation_bed_and_breakfast.svg
 share/qgis/svg/accommodation/accommodation_camping.svg

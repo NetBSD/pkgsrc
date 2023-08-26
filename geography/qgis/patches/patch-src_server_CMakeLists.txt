@@ -1,0 +1,20 @@
+$NetBSD: patch-src_server_CMakeLists.txt,v 1.1 2023/08/26 00:09:54 gdt Exp $
+
+Upstream installs data files for a webroot into the cgi dir.  Fix
+that.
+
+\todo File upstream properly, but see                                                                                                                                                                                                                       
+
+https://github.com/qgis/QGIS-Documentation/issues/8475
+
+--- src/server/CMakeLists.txt.orig	2023-08-25 12:02:24.861949784 +0000
++++ src/server/CMakeLists.txt
+@@ -187,7 +187,7 @@ install(TARGETS
+ install(FILES
+   admin.sld
+   wms_metadata.xml
+-  DESTINATION ${QGIS_CGIBIN_DIR}
++  DESTINATION ${QGIS_DATA_DIR}/server
+ )
+ add_custom_target(qgis_server_full
+   DEPENDS qgis_mapserv.fcgi wms wfs wcs wfs3 wmts qgis_server landingpage
