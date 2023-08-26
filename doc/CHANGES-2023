@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5103 2023/08/26 11:51:24 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5104 2023/08/26 11:57:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7402,3 +7402,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-jupyter_server to 2.7.2 [adam 2023-08-26]
 	Updated devel/py-test-flake8 to 1.1.1 [adam 2023-08-26]
 	Added textproc/py-json5 version 0.9.14 [adam 2023-08-26]
+	Added www/py-jupyterlab-server version 2.24.0 [adam 2023-08-26]
+	Updated www/py-jwcrypto to 1.5.0 [adam 2023-08-26]
