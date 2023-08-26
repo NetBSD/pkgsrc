@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5091 2023/08/25 22:29:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5092 2023/08/26 00:07:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7384,3 +7384,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbconvert to 7.7.4 [adam 2023-08-25]
 	Updated devel/py-maturin to 1.2.3 [adam 2023-08-25]
 	Updated devel/py-types-setuptools to 68.1.0.0 [adam 2023-08-25]
+	Updated geography/geos to 3.12.0 [gdt 2023-08-26]
