@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/26 09:03:10 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rfc3987.py
+${PYSITELIB}/rfc3987.pyc
+${PYSITELIB}/rfc3987.pyo
