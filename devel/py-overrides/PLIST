@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/26 09:30:00 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/overrides/__init__.py
+${PYSITELIB}/overrides/__init__.pyc
+${PYSITELIB}/overrides/__init__.pyo
+${PYSITELIB}/overrides/enforce.py
+${PYSITELIB}/overrides/enforce.pyc
+${PYSITELIB}/overrides/enforce.pyo
+${PYSITELIB}/overrides/final.py
+${PYSITELIB}/overrides/final.pyc
+${PYSITELIB}/overrides/final.pyo
+${PYSITELIB}/overrides/overrides.py
+${PYSITELIB}/overrides/overrides.pyc
+${PYSITELIB}/overrides/overrides.pyo
+${PYSITELIB}/overrides/py.typed
+${PYSITELIB}/overrides/signature.py
+${PYSITELIB}/overrides/signature.pyc
+${PYSITELIB}/overrides/signature.pyo
+${PYSITELIB}/overrides/typing_utils.py
+${PYSITELIB}/overrides/typing_utils.pyc
+${PYSITELIB}/overrides/typing_utils.pyo
