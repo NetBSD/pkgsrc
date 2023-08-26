@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2023/08/17 02:43:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2023/08/26 13:57:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
@@ -9,7 +9,7 @@ CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
 CARGO_CRATE_DEPENDS+=	bumpalo-3.11.1
 CARGO_CRATE_DEPENDS+=	bytecount-0.6.2
-CARGO_CRATE_DEPENDS+=	cc-1.0.78
+CARGO_CRATE_DEPENDS+=	cc-1.0.83
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.1.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.2.0
@@ -40,6 +40,8 @@ CARGO_CRATE_DEPENDS+=	humansize-2.1.3
 CARGO_CRATE_DEPENDS+=	humantime-1.3.0
 CARGO_CRATE_DEPENDS+=	indexmap-1.7.0
 CARGO_CRATE_DEPENDS+=	itertools-0.10.3
+CARGO_CRATE_DEPENDS+=	itertools-0.11.0
+CARGO_CRATE_DEPENDS+=	itoa-1.0.9
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.139
 CARGO_CRATE_DEPENDS+=	libm-0.2.7
@@ -79,8 +81,12 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
 CARGO_CRATE_DEPENDS+=	rustc-hash-1.1.0
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.12
+CARGO_CRATE_DEPENDS+=	ryu-1.0.15
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
+CARGO_CRATE_DEPENDS+=	serde-1.0.176
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.176
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.104
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.14
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.3
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.0
@@ -96,7 +102,7 @@ CARGO_CRATE_DEPENDS+=	termtree-0.2.4
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.20.9
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.0.3
-CARGO_CRATE_DEPENDS+=	typed-arena-2.0.1
+CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.9
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.3
