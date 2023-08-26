@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.261 2023/08/08 13:33:39 tnn Exp $
+# $NetBSD: gcc.mk,v 1.262 2023/08/26 09:49:55 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -456,6 +456,8 @@ _NEED_GCC10=	yes
 _NEED_GCC12?=	no
 .for _pattern_ in ${_GCC12_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
 .    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
 PKG_FAIL_REASON+=	"Package requires at least gcc 12 to build"
 .    endif
@@ -465,6 +467,8 @@ _NEED_GCC12=	yes
 _NEED_GCC13?=	no
 .for _pattern_ in ${_GCC13_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
 .    if ${ALLOW_NEWER_COMPILER:tl} != "yes"
 PKG_FAIL_REASON+=	"Package requires at least gcc 13 to build"
 .    endif
