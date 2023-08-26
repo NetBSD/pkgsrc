@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5125 2023/08/26 15:02:36 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.5126 2023/08/26 15:04:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7429,3 +7429,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.134.0 [taca 2023-08-26]
 	Updated www/ruby-excon to 0.102.0 [taca 2023-08-26]
 	Updated games/nethack-lib to 3.6.7 [rhialto 2023-08-26]
+	Updated www/ruby-html-proofer to 5.0.8 [taca 2023-08-26]
