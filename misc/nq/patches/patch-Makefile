@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2023/08/26 10:54:11 vins Exp $
+
+* Do not override CFLAGS.
+* Provide a pkgsrc-compliant install target.
+
+--- Makefile.orig	2022-03-26 14:57:40.000000000 +0000
++++ Makefile
+@@ -1,25 +1,26 @@
+-ALL=nq fq tq
++ALL=nq fq
++MAN=nq fq tq
+ 
+-CFLAGS=-g -Wall -O2
++CFLAGS=-Wall
+ 
+ DESTDIR=
+ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/share/man
+ 
+-INSTALL=install
+-
+ all: $(ALL)
+ 
+ clean: FRC
+-	rm -f nq fq
++	rm -f $(ALL) 
+ 
+ check: FRC all
+ 	prove -v ./tests
+ 
+ install: FRC all
+-	mkdir -p $(DESTDIR)$(BINDIR) $(DESTDIR)$(MANDIR)/man1
+-	$(INSTALL) -m0755 $(ALL) $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m0644 $(ALL:=.1) $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(ALL) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) tq $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR)  $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_MAN) $(MAN) $(DESTDIR)$(MANDIR)/man1
+ 
+ FRC:

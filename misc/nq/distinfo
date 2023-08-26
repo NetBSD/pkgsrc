@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/08/26 10:54:11 vins Exp $
+
+BLAKE2s (nq-0.5.tar.gz) = 2e677c13154b3bd0026795a172dcb9fb00f33cd667592b3a8edc0246eac372e0
+SHA512 (nq-0.5.tar.gz) = 784031971df0585c38c8e47b37d1a5ce73c35c71ab6c9abb7c3df6450eb26a53ad0e649f86a40a742201125ef88e246db34781491935e709ae8fc66afcdf6c0e
+Size (nq-0.5.tar.gz) = 12229 bytes
+SHA1 (patch-Makefile) = f21ad79a4ec3862f61c0f8152c67bd3b1c78ed6e

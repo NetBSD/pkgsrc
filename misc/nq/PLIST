@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/26 10:54:11 vins Exp $
+bin/fq
+bin/nq
+bin/tq
+man/man1/fq
+man/man1/nq
+man/man1/tq
