@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/07/15 10:53:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/26 16:31:32 bsiegert Exp $
 
 DISTNAME=	ipget-0.9.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ipfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

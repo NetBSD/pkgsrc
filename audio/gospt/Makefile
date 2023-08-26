@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/07/15 10:52:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/26 16:31:22 bsiegert Exp $
 
 DISTNAME=	gospt-0.0.50
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	-https://git.asdf.cafe/abs3nt/gospt/archive/v${PKGVERSION_NOREV}.tar.gz
 
