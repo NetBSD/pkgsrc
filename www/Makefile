@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1733 2023/08/16 05:58:59 markd Exp $
+# $NetBSD: Makefile,v 1.1734 2023/08/26 09:03:10 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -858,6 +858,8 @@ SUBDIR+=	py-recaptcha
 SUBDIR+=	py-requests-wsgi-adapter
 SUBDIR+=	py-respx
 SUBDIR+=	py-rfc3986
+SUBDIR+=	py-rfc3986-validator
+SUBDIR+=	py-rfc3987
 SUBDIR+=	py-rjsmin
 SUBDIR+=	py-robobrowser
 SUBDIR+=	py-robot-detection
