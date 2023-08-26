@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/11/11 13:37:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/26 13:33:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/IO_Event.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,10 +8,12 @@ ${GEM_LIBDIR}/ext/io/event/event.c
 ${GEM_LIBDIR}/ext/io/event/event.h
 ${GEM_LIBDIR}/ext/io/event/interrupt.c
 ${GEM_LIBDIR}/ext/io/event/interrupt.h
+${GEM_LIBDIR}/ext/io/event/selector/array.h
 ${GEM_LIBDIR}/ext/io/event/selector/epoll.c
 ${GEM_LIBDIR}/ext/io/event/selector/epoll.h
 ${GEM_LIBDIR}/ext/io/event/selector/kqueue.c
 ${GEM_LIBDIR}/ext/io/event/selector/kqueue.h
+${GEM_LIBDIR}/ext/io/event/selector/list.h
 ${GEM_LIBDIR}/ext/io/event/selector/pidfd.c
 ${GEM_LIBDIR}/ext/io/event/selector/selector.c
 ${GEM_LIBDIR}/ext/io/event/selector/selector.h
