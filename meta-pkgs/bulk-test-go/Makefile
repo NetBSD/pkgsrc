@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/07/01 14:19:45 nia Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/26 18:17:15 bsiegert Exp $
 
 DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
@@ -26,7 +26,6 @@ DEPENDS+=	promscale-[0-9]*:../../databases/promscale
 DEPENDS+=	timescaledb-tune-[0-9]*:../../databases/timescaledb-tune
 DEPENDS+=	asmfmt-[0-9]*:../../devel/asmfmt
 DEPENDS+=	go-tools-[0-9]*:../../devel/go-tools
-DEPENDS+=	go-flags-svent-[0-9]*:../../devel/go-flags-svent
 DEPENDS+=	go-nbreader-[0-9]*:../../devel/go-nbreader
 DEPENDS+=	golint-[0-9]*:../../devel/golint
 DEPENDS+=	go-review-[0-9]*:../../devel/go-review
