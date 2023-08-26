@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5131 2023/08/26 15:41:43 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5132 2023/08/26 15:46:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ruby-actiontext70 to 7.0.7.2 [taca 2023-08-26]
 	Updated www/ruby-rails70 to 7.0.7.2 [taca 2023-08-26]
 	Updated devel/ruby-pycall to 1.5.0 [taca 2023-08-26]
+	Updated net/ruby-network_interface to 0.0.4 [taca 2023-08-26]
