@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2023/07/15 10:52:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.49 2023/08/26 16:31:24 bsiegert Exp $
 
 DISTNAME=	promscale-0.17.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
