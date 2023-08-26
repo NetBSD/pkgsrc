@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/15 09:54:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/26 14:41:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -152,8 +152,6 @@ ${PYSITELIB}/poetry/core/_vendor/lark/parsers/lalr_interactive_parser.py
 ${PYSITELIB}/poetry/core/_vendor/lark/parsers/lalr_interactive_parser.pyc
 ${PYSITELIB}/poetry/core/_vendor/lark/parsers/lalr_parser.py
 ${PYSITELIB}/poetry/core/_vendor/lark/parsers/lalr_parser.pyc
-${PYSITELIB}/poetry/core/_vendor/lark/parsers/resolve_ambig.py
-${PYSITELIB}/poetry/core/_vendor/lark/parsers/resolve_ambig.pyc
 ${PYSITELIB}/poetry/core/_vendor/lark/parsers/xearley.py
 ${PYSITELIB}/poetry/core/_vendor/lark/parsers/xearley.pyc
 ${PYSITELIB}/poetry/core/_vendor/lark/py.typed
@@ -253,9 +251,6 @@ ${PYSITELIB}/poetry/core/_vendor/tomli/_re.pyc
 ${PYSITELIB}/poetry/core/_vendor/tomli/_types.py
 ${PYSITELIB}/poetry/core/_vendor/tomli/_types.pyc
 ${PYSITELIB}/poetry/core/_vendor/tomli/py.typed
-${PYSITELIB}/poetry/core/_vendor/typing_extensions.LICENSE
-${PYSITELIB}/poetry/core/_vendor/typing_extensions.py
-${PYSITELIB}/poetry/core/_vendor/typing_extensions.pyc
 ${PYSITELIB}/poetry/core/_vendor/vendor.txt
 ${PYSITELIB}/poetry/core/constraints/__init__.py
 ${PYSITELIB}/poetry/core/constraints/__init__.pyc
@@ -334,8 +329,6 @@ ${PYSITELIB}/poetry/core/masonry/utils/package_include.py
 ${PYSITELIB}/poetry/core/masonry/utils/package_include.pyc
 ${PYSITELIB}/poetry/core/packages/__init__.py
 ${PYSITELIB}/poetry/core/packages/__init__.pyc
-${PYSITELIB}/poetry/core/packages/constraints/__init__.py
-${PYSITELIB}/poetry/core/packages/constraints/__init__.pyc
 ${PYSITELIB}/poetry/core/packages/dependency.py
 ${PYSITELIB}/poetry/core/packages/dependency.pyc
 ${PYSITELIB}/poetry/core/packages/dependency_group.py
@@ -373,28 +366,6 @@ ${PYSITELIB}/poetry/core/pyproject/tables.py
 ${PYSITELIB}/poetry/core/pyproject/tables.pyc
 ${PYSITELIB}/poetry/core/pyproject/toml.py
 ${PYSITELIB}/poetry/core/pyproject/toml.pyc
-${PYSITELIB}/poetry/core/semver/__init__.py
-${PYSITELIB}/poetry/core/semver/__init__.pyc
-${PYSITELIB}/poetry/core/semver/empty_constraint.py
-${PYSITELIB}/poetry/core/semver/empty_constraint.pyc
-${PYSITELIB}/poetry/core/semver/exceptions.py
-${PYSITELIB}/poetry/core/semver/exceptions.pyc
-${PYSITELIB}/poetry/core/semver/helpers.py
-${PYSITELIB}/poetry/core/semver/helpers.pyc
-${PYSITELIB}/poetry/core/semver/patterns.py
-${PYSITELIB}/poetry/core/semver/patterns.pyc
-${PYSITELIB}/poetry/core/semver/util.py
-${PYSITELIB}/poetry/core/semver/util.pyc
-${PYSITELIB}/poetry/core/semver/version.py
-${PYSITELIB}/poetry/core/semver/version.pyc
-${PYSITELIB}/poetry/core/semver/version_constraint.py
-${PYSITELIB}/poetry/core/semver/version_constraint.pyc
-${PYSITELIB}/poetry/core/semver/version_range.py
-${PYSITELIB}/poetry/core/semver/version_range.pyc
-${PYSITELIB}/poetry/core/semver/version_range_constraint.py
-${PYSITELIB}/poetry/core/semver/version_range_constraint.pyc
-${PYSITELIB}/poetry/core/semver/version_union.py
-${PYSITELIB}/poetry/core/semver/version_union.pyc
 ${PYSITELIB}/poetry/core/spdx/__init__.py
 ${PYSITELIB}/poetry/core/spdx/__init__.pyc
 ${PYSITELIB}/poetry/core/spdx/data/licenses.json
