@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.135 2023/07/19 14:40:50 wiz Exp $
+$NetBSD: distinfo,v 1.136 2023/08/26 13:20:07 wiz Exp $
 
-BLAKE2s (mercurial-6.5.tar.gz) = b5a407cbbb599c2412c6af6cdde91346648ee81fc47b098ffb4238ddc47e6893
-SHA512 (mercurial-6.5.tar.gz) = 34f61b3f6a7d488afeffbaed7a35ab2da682f18171b07f78e405e89b7871dd7e7cbc1e92ef30b3bf82e35e2185d44c7e5379fecba4fafbe9ae8de194e92c12f3
-Size (mercurial-6.5.tar.gz) = 8231320 bytes
+BLAKE2s (mercurial-6.5.1.tar.gz) = 10899a8744d43a09106eab35060d82b62ff0dd1588e84522aaca9b63655bfe2f
+SHA512 (mercurial-6.5.1.tar.gz) = 344305e9b1690f062ffc3d3f9dd99e0e4a63cede749def49c1975aa0a293b8c46777692274f83002ce136800a3a692ce1a916c254aea6d93aa749b2a30141303
+Size (mercurial-6.5.1.tar.gz) = 8231803 bytes
 SHA1 (patch-setup.py) = 5d5fb792b3f6c714ad11d6ff21d7b40f8182d1a6
-SHA1 (patch-tests_test-bundle-phase-internal.t) = 44939b7492a3112ba47007ec58ef0e5b4e10e920
-SHA1 (patch-tests_test-revlog-delta-find.t) = 4af19d6ece17d0aa12ce504fcdd1662812d993cb
