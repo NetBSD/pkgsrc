@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:06:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/08/26 15:45:46 taca Exp $
 
-BLAKE2s (network_interface-0.0.2.gem) = b07f37239e551b65524ea4d932813a65e0703dfb9b042b19462bb14b1024f0db
-SHA512 (network_interface-0.0.2.gem) = 8850325e7e0c5ab51b060270220099c2c00cf7031083a511ae9f8dd6d1b9219b37169fa7620e9648eb071784a840e14ce965f8d1cf5d475ff82691bfba25a202
-Size (network_interface-0.0.2.gem) = 16896 bytes
+BLAKE2s (network_interface-0.0.4.gem) = 51f96e97b175f7c97e905eb75ff78313d01b13b60782f65c2fa3fb095c490684
+SHA512 (network_interface-0.0.4.gem) = 829af221aeaa39d3025b7df52aa3c1a70dbe308f64da65ed551bee4b5c53d3c3071e8470c9493eb67c7d82d9a5b458760d2b82a63767b4e7fc97a62491ab8dce
+Size (network_interface-0.0.4.gem) = 23040 bytes
