@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5122 2023/08/26 14:57:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5123 2023/08/26 14:58:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7426,3 +7426,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-jsonschema-spec to 0.2.4 [adam 2023-08-26]
 	Updated www/ruby-aws-partitions to 1.812.0 [taca 2023-08-26]
 	Updated www/ruby-aws-sdk-core to 3.181.0 [taca 2023-08-26]
+	Updated www/ruby-aws-sdk-s3 to 1.134.0 [taca 2023-08-26]
