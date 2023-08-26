@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/07/15 10:53:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/26 16:31:36 bsiegert Exp $
 
 DISTNAME=	oauth2c-1.1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cloudentity/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
