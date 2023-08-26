@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/25 16:16:08 vins Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/26 19:05:31 vins Exp $
 
 DISTNAME=	yash-2.55
 PKGREVISION=	1
@@ -15,11 +15,12 @@ FORCE_C_STD=		c99
 
 USE_TOOLS+=		msgfmt msgmerge
 USE_TOOLS+=		intltool xgettext
-USE_PKGLOCALEDIR=	yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+
+USE_PKGLOCALEDIR=	yes
 
 PKG_SHELL=	bin/yash
 
