@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/26 09:03:10 adam Exp $
+
+BLAKE2s (rfc3987-1.3.8.tar.gz) = 768a9b98ea45a95fbf8ca4852a734460dc2e25efc447b97a3ebd6c2a8fc764a1
+SHA512 (rfc3987-1.3.8.tar.gz) = 0e81b8dbc8c410f08b1efa7ee1c90174ed6e70bf7622d3748f598d383583b439908e1b5da1e1a1eb22af4f214ae08680a29f00b253f37808034bae8a1808c32c
+Size (rfc3987-1.3.8.tar.gz) = 20700 bytes
