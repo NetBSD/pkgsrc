@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/08/26 11:00:25 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/26 11:02:59 adam Exp $
 
 DISTNAME=	pytest_jupyter-0.7.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py-//:S/_/-/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-jupyter/}
 
