@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/21 18:45:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/26 14:43:01 adam Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -296,6 +296,12 @@ ${PYSITELIB}/poetry/repositories/link_sources/json.py
 ${PYSITELIB}/poetry/repositories/link_sources/json.pyc
 ${PYSITELIB}/poetry/repositories/lockfile_repository.py
 ${PYSITELIB}/poetry/repositories/lockfile_repository.pyc
+${PYSITELIB}/poetry/repositories/parsers/__init__.py
+${PYSITELIB}/poetry/repositories/parsers/__init__.pyc
+${PYSITELIB}/poetry/repositories/parsers/html_page_parser.py
+${PYSITELIB}/poetry/repositories/parsers/html_page_parser.pyc
+${PYSITELIB}/poetry/repositories/parsers/pypi_search_parser.py
+${PYSITELIB}/poetry/repositories/parsers/pypi_search_parser.pyc
 ${PYSITELIB}/poetry/repositories/pypi_repository.py
 ${PYSITELIB}/poetry/repositories/pypi_repository.pyc
 ${PYSITELIB}/poetry/repositories/repository.py
@@ -322,8 +328,28 @@ ${PYSITELIB}/poetry/utils/constants.py
 ${PYSITELIB}/poetry/utils/constants.pyc
 ${PYSITELIB}/poetry/utils/dependency_specification.py
 ${PYSITELIB}/poetry/utils/dependency_specification.pyc
-${PYSITELIB}/poetry/utils/env.py
-${PYSITELIB}/poetry/utils/env.pyc
+${PYSITELIB}/poetry/utils/env/__init__.py
+${PYSITELIB}/poetry/utils/env/__init__.pyc
+${PYSITELIB}/poetry/utils/env/base_env.py
+${PYSITELIB}/poetry/utils/env/base_env.pyc
+${PYSITELIB}/poetry/utils/env/env_manager.py
+${PYSITELIB}/poetry/utils/env/env_manager.pyc
+${PYSITELIB}/poetry/utils/env/exceptions.py
+${PYSITELIB}/poetry/utils/env/exceptions.pyc
+${PYSITELIB}/poetry/utils/env/generic_env.py
+${PYSITELIB}/poetry/utils/env/generic_env.pyc
+${PYSITELIB}/poetry/utils/env/mock_env.py
+${PYSITELIB}/poetry/utils/env/mock_env.pyc
+${PYSITELIB}/poetry/utils/env/null_env.py
+${PYSITELIB}/poetry/utils/env/null_env.pyc
+${PYSITELIB}/poetry/utils/env/script_strings.py
+${PYSITELIB}/poetry/utils/env/script_strings.pyc
+${PYSITELIB}/poetry/utils/env/site_packages.py
+${PYSITELIB}/poetry/utils/env/site_packages.pyc
+${PYSITELIB}/poetry/utils/env/system_env.py
+${PYSITELIB}/poetry/utils/env/system_env.pyc
+${PYSITELIB}/poetry/utils/env/virtual_env.py
+${PYSITELIB}/poetry/utils/env/virtual_env.pyc
 ${PYSITELIB}/poetry/utils/extras.py
 ${PYSITELIB}/poetry/utils/extras.pyc
 ${PYSITELIB}/poetry/utils/helpers.py
