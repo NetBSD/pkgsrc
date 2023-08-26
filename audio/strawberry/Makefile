@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/08/22 20:26:29 adam Exp $
+# $NetBSD: Makefile,v 1.54 2023/08/26 08:42:31 nia Exp $
 
 DISTNAME=	strawberry-1.0.18
 CATEGORIES=	audio
@@ -41,14 +41,6 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 
 .if ${OPSYS} == "NetBSD"
 PREFER.sqlite3=		pkgsrc # fts5
-# This package will link against libstdc++.so from the pkgsrc GCC when the
-# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
-# appropriate gcc-libs package will be captured as a dependency, otherwise
-# binary packages will be broken.
-.  if ${OPSYS_VERSION} < 090000
-USE_PKGSRC_GCC=		yes
-USE_PKGSRC_GCC_RUNTIME=	yes
-.  endif
 .endif
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
