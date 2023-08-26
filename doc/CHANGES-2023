@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5116 2023/08/26 14:12:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5117 2023/08/26 14:21:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7417,3 +7417,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ripdrag to 0.4.3 [pin 2023-08-26]
 	Added devel/py-async-lru version 2.0.4 [adam 2023-08-26]
 	Added www/py-jupyterlab version 4.0.5 [adam 2023-08-26]
+	Updated net/openvpn to 2.6.6 [gdt 2023-08-26]
