@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2023/08/25 21:55:53 adam Exp $
+# $NetBSD: Makefile,v 1.626 2023/08/26 10:57:52 vins Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -222,6 +222,7 @@ SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	multitail
 SUBDIR+=	nora
+SUBDIR+=	nq
 SUBDIR+=	nxtvepg
 SUBDIR+=	nyancat
 SUBDIR+=	ocaml-cudf
