@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5108 2023/08/26 13:23:51 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.5109 2023/08/26 13:30:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-mercurial to 6.5.1 [wiz 2023-08-26]
 	Updated devel/ruby-async to 2.6.4 [taca 2023-08-26]
 	Updated x11/x3270 to 4.2ga10 [rhialto 2023-08-26]
+	Updated devel/ruby-flexmock to 2.3.8 [taca 2023-08-26]
