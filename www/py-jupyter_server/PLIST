@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/05 10:39:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/26 11:08:10 adam Exp $
 bin/jupyter-server-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -38,6 +38,8 @@ ${PYSITELIB}/jupyter_server/auth/utils.py
 ${PYSITELIB}/jupyter_server/auth/utils.pyc
 ${PYSITELIB}/jupyter_server/base/__init__.py
 ${PYSITELIB}/jupyter_server/base/__init__.pyc
+${PYSITELIB}/jupyter_server/base/call_context.py
+${PYSITELIB}/jupyter_server/base/call_context.pyc
 ${PYSITELIB}/jupyter_server/base/handlers.py
 ${PYSITELIB}/jupyter_server/base/handlers.pyc
 ${PYSITELIB}/jupyter_server/base/websocket.py
@@ -47,6 +49,8 @@ ${PYSITELIB}/jupyter_server/base/zmqhandlers.pyc
 ${PYSITELIB}/jupyter_server/config_manager.py
 ${PYSITELIB}/jupyter_server/config_manager.pyc
 ${PYSITELIB}/jupyter_server/event_schemas/contents_service/v1.yaml
+${PYSITELIB}/jupyter_server/event_schemas/gateway_client/v1.yaml
+${PYSITELIB}/jupyter_server/event_schemas/kernel_actions/v1.yaml
 ${PYSITELIB}/jupyter_server/extension/__init__.py
 ${PYSITELIB}/jupyter_server/extension/__init__.pyc
 ${PYSITELIB}/jupyter_server/extension/application.py
@@ -67,6 +71,8 @@ ${PYSITELIB}/jupyter_server/files/handlers.py
 ${PYSITELIB}/jupyter_server/files/handlers.pyc
 ${PYSITELIB}/jupyter_server/gateway/__init__.py
 ${PYSITELIB}/jupyter_server/gateway/__init__.pyc
+${PYSITELIB}/jupyter_server/gateway/connections.py
+${PYSITELIB}/jupyter_server/gateway/connections.pyc
 ${PYSITELIB}/jupyter_server/gateway/gateway_client.py
 ${PYSITELIB}/jupyter_server/gateway/gateway_client.pyc
 ${PYSITELIB}/jupyter_server/gateway/handlers.py
