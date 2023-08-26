@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1419 2023/08/25 21:32:35 adam Exp $
+# $NetBSD: Makefile,v 1.1420 2023/08/26 11:50:44 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1063,6 +1063,7 @@ SUBDIR+=	py-jinja2
 SUBDIR+=	py-jmespath
 SUBDIR+=	py-jsbeautifier
 SUBDIR+=	py-json-logger
+SUBDIR+=	py-json5
 SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-jsonpickle
 SUBDIR+=	py-jsonref
