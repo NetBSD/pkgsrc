@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2023/08/25 22:27:48 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/08/26 18:20:32 tnn Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -871,3 +871,4 @@ BLAKE2s (zip-0.6.6.crate) = 15924ef38e254a34cdd26b50150f93b39672575b8644389c6a19
 SHA512 (zip-0.6.6.crate) = affd46c17ceaa0545a155250dfd16756f8706dda43bae8a322ec0481dbfb41e4cf3166bf9662fc139ef9d0ab3b0f9f158535b21d2a61b21d38b8b2407813eeef
 Size (zip-0.6.6.crate) = 65789 bytes
 SHA1 (patch-maturin_____init____.py) = 6e6dc8976125b25e3bfefda0542139e87989ccf2
+SHA1 (patch-src_build__context.rs) = c85ba6c62a66064bdafa3e2234d903581749faf9
