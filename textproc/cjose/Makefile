@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 21:48:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.3.28.1 2023/08/26 14:57:22 bsiegert Exp $
 
-DISTNAME=	cjose-0.6.1
-PKGREVISION=	1
+DISTNAME=	cjose-0.6.2.2
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=cisco/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenIDC/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cisco/cjose/
