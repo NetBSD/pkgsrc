@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/08/26 09:00:38 vins Exp $
+$NetBSD: distinfo,v 1.7 2023/08/26 10:45:27 vins Exp $
 
 BLAKE2s (lr-1.6.tar.gz) = 014567f20c580425a45a004a9faf99607f36fbb64f0eb9ca71d48a2b8de64f57
 SHA512 (lr-1.6.tar.gz) = 64ac199d660caba0c1ce774f6b0a0ce5c7d41c2eb0bbe2b21bcd87a2928aad47e9129ececc55a96e5cd3f5c83ec7705d8931273c5f4f783ca21648911c4672f7
 Size (lr-1.6.tar.gz) = 37992 bytes
-SHA1 (patch-Makefile) = 704ecbd0f9eb25a839d5deaa15c3af242b3f6b1e
+SHA1 (patch-Makefile) = 341f88a0d79b91c25341f2994a00ce7b266a5bef
