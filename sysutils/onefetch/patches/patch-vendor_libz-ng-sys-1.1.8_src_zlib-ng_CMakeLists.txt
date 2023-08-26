@@ -1,0 +1,17 @@
+$NetBSD: patch-vendor_libz-ng-sys-1.1.8_src_zlib-ng_CMakeLists.txt,v 1.1 2023/08/26 17:15:24 he Exp $
+
+Don't try to enable the POWER8 or POWER9 options on PPC.
+
+--- ../vendor/libz-ng-sys-1.1.8/src/zlib-ng/CMakeLists.txt.orig	1973-11-29 21:33:09.000000000 +0000
++++ ../vendor/libz-ng-sys-1.1.8/src/zlib-ng/CMakeLists.txt
+@@ -104,8 +104,8 @@ if(BASEARCH_ARM_FOUND)
+     option(WITH_NEON "Build with NEON intrinsics" ON)
+ elseif(BASEARCH_PPC_FOUND)
+     option(WITH_ALTIVEC "Build with AltiVec (VMX) optimisations for PowerPC" ON)
+-    option(WITH_POWER8 "Build with optimisations for POWER8" ON)
+-    option(WITH_POWER9 "Build with optimisations for POWER9" ON)
++#    option(WITH_POWER8 "Build with optimisations for POWER8" ON)
++#    option(WITH_POWER9 "Build with optimisations for POWER9" ON)
+ elseif(BASEARCH_S360_FOUND)
+     option(WITH_DFLTCC_DEFLATE "Build with DFLTCC intrinsics for compression on IBM Z" OFF)
+     option(WITH_DFLTCC_INFLATE "Build with DFLTCC intrinsics for decompression on IBM Z" OFF)
