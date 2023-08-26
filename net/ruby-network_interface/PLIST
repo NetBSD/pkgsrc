@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/02 18:16:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/26 15:45:46 taca Exp $
 bin/list_interfaces.rb
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/network_interface_ext.${RUBY_DLEXT}
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/Gemfile
@@ -19,5 +19,4 @@ ${GEM_LIBDIR}/lib/network_interface.rb
 ${GEM_LIBDIR}/lib/network_interface/version.rb
 ${GEM_LIBDIR}/lib/network_interface_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/network_interface.gemspec
-${GEM_LIBDIR}/spec/netiface_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
