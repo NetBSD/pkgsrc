@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5135 2023/08/26 18:08:52 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5136 2023/08/27 02:58:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7463,3 +7463,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/go121 version 1.21.0 [bsiegert 2023-08-26]
 	Updated sysutils/onefetch to 2.18.1nb1 [he 2023-08-26]
 	Updated devel/golangci-lint to 1.54.2 [bsiegert 2023-08-26]
+	Updated devel/py-autopep8 to 2.0.4 [adam 2023-08-27]
+	Updated devel/py-typeguard to 4.1.3 [adam 2023-08-27]
+	Updated devel/py-pluggy to 1.3.0 [adam 2023-08-27]
+	Updated textproc/py-pdf to 3.15.3 [adam 2023-08-27]
