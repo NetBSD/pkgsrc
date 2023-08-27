@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.15 2023/08/17 02:15:53 gutteridge Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.16 2023/08/27 20:58:15 gutteridge Exp $
 #
 # used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -30,7 +30,7 @@ post-build:
 	dd if=${WRKSRC}/u-boot.itb seek=448 conv=notrunc of=${WRKSRC}/rksd_loader.img
 .if defined(UBOOT_MKIMAGE_RKSPI)
 	 ${WRKSRC}/tools/mkimage \
-		-n rk3399 \
+		-n ${UBOOT_IMAGE_TYPE} \
 		-T rkspi \
 		-d ${WRKSRC}/tpl/u-boot-tpl.bin:${WRKSRC}/spl/u-boot-spl.bin \
 		${WRKSRC}/rkspi_loader.img
