@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/08/27 21:05:36 khorben Exp $
 
-BLAKE2s (sentry-sdk-1.1.0.tar.gz) = 7df2fdc08d830f246ef749bd214f6bf9365861a4464c44f36572c82d93f8d184
-SHA512 (sentry-sdk-1.1.0.tar.gz) = ecb0f35776142dc0ee413fe6ffa49ea1c2f7a19e73d718c8b8f53841dcc5e719259125dbe8880d282bdce5fd91a37eaeff4ae6d5b917ded153447aa6a1a16a33
-Size (sentry-sdk-1.1.0.tar.gz) = 100168 bytes
+BLAKE2s (sentry-sdk-1.29.2.tar.gz) = 0b46680bb20820063c3ed76e4d23443f19c4ff6fdd76253127d5a0e451474564
+SHA512 (sentry-sdk-1.29.2.tar.gz) = 2fd96aaad33aad2595da5faf35de40c563947ffa17fa2b97a799a755aab32ac2481e744d2230c621da5368a3a6c799de953681a56780e77dbb55e561b4b519f8
+Size (sentry-sdk-1.29.2.tar.gz) = 193400 bytes
