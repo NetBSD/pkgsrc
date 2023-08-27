@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5141 2023/08/27 13:20:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5142 2023/08/27 13:37:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7476,3 +7476,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/grafana to 10.1.0 [tnn 2023-08-27]
 	Updated databases/mongodb4 to 4.4.24 [adam 2023-08-27]
 	Updated databases/mongodb to 6.0.9 [adam 2023-08-27]
+	Updated textproc/py-openapi-schema-validator to 0.6.0 [adam 2023-08-27]
+	Updated textproc/py-openapi-spec-validator to 0.6.0 [adam 2023-08-27]
+	Updated textproc/py-openapi-core to 0.18.0 [adam 2023-08-27]
+	Updated devel/py-test-env to 1.0.1 [adam 2023-08-27]
