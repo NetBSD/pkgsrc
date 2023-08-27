@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/11 06:30:41 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/08/27 03:38:59 adam Exp $
 
-BLAKE2s (Willow-1.5.tar.gz) = 6a74398e73cca0ad3863d1692867ac3c87f5b20c9091c406bbb85557e2179599
-SHA512 (Willow-1.5.tar.gz) = 729d50084c991bd6c815da3b1aeb425e7ce75dabc83890f642fe715ca7ea817453fdcbd2661509fdf126e3c54c1d0a57b40dd6f02a4337ca95bcfcaf305428d6
-Size (Willow-1.5.tar.gz) = 119748 bytes
+BLAKE2s (willow-1.6.1.tar.gz) = 997054dc4e0fa0e62722b3dc14d566f2617dc9eec978d4390fc71ce0beb22510
+SHA512 (willow-1.6.1.tar.gz) = f203eac1aaaf47e5d4cb4f1d900b3893d81855931cf2df142e2cdd8746d6db04bc613c0602fa26e1e5e006ba4b691740344d9727e14d97100d0f2a1d2500811d
+Size (willow-1.6.1.tar.gz) = 112146 bytes
