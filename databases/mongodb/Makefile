@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2023/08/14 05:24:00 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/08/27 13:19:58 adam Exp $
 
-DISTNAME=	mongodb-src-r6.0.8
+DISTNAME=	mongodb-src-r6.0.9
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
