@@ -1,21 +1,21 @@
-$NetBSD: patch-go.mod,v 1.4 2023/03/05 21:22:45 triaxx Exp $
+$NetBSD: patch-go.mod,v 1.5 2023/08/27 12:09:56 tnn Exp $
 
 Use bluge fork to support illumos.
 https://github.com/blugelabs/bluge/pull/139
 
---- go.mod.orig	2023-03-01 22:08:07.000000000 +0000
+--- go.mod.orig	2023-08-23 17:05:28.000000000 +0000
 +++ go.mod
-@@ -289,6 +289,7 @@ require (
- 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
- 	github.com/Masterminds/goutils v1.1.1 // indirect
+@@ -298,6 +298,7 @@ require (
+ 	github.com/apapsch/go-jsonmerge/v2 v2.0.0 // indirect
  	github.com/armon/go-metrics v0.4.1 // indirect
+ 	github.com/blang/semver/v4 v4.0.0 // indirect
 +	github.com/blugelabs/ice/v2 v2.0.1 // indirect
  	github.com/bmatcuk/doublestar v1.1.1 // indirect
  	github.com/buildkite/yaml v2.1.0+incompatible // indirect
- 	github.com/containerd/containerd v1.6.8 // indirect
-@@ -430,3 +431,5 @@ replace github.com/prometheus/alertmanag
- replace google.golang.org/grpc => google.golang.org/grpc v1.45.0
+ 	github.com/bwmarrin/snowflake v0.3.0 // indirect
+@@ -491,3 +492,5 @@ replace google.golang.org/grpc => google
+ replace github.com/lib/pq => github.com/lib/pq v1.10.6
  
- replace google.golang.org/genproto => google.golang.org/genproto v0.0.0-20220421151946-72621c1f0bd3
+ exclude github.com/mattn/go-sqlite3 v2.0.3+incompatible
 +
 +replace github.com/blugelabs/bluge => github.com/jperkin/bluge v0.0.0-20221115155924-ffd91b43c395
