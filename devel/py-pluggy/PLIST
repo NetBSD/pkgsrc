@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/10/11 13:14:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/08/27 02:55:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,3 +25,4 @@ ${PYSITELIB}/pluggy/_tracing.pyo
 ${PYSITELIB}/pluggy/_version.py
 ${PYSITELIB}/pluggy/_version.pyc
 ${PYSITELIB}/pluggy/_version.pyo
+${PYSITELIB}/pluggy/py.typed
