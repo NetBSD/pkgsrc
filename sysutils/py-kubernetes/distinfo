@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/05/19 10:43:03 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/08/27 03:28:28 adam Exp $
 
-BLAKE2s (kubernetes-26.1.0.tar.gz) = c04c566df877ad690ba4d53f2a704d8090ccb92e17b293aa68705c6f34ff814a
-SHA512 (kubernetes-26.1.0.tar.gz) = 4a03e245ffbec78b86790f2c9eb4d82c380f399b5bafd518c841be792e9aa6e91a593bc1202df0a716eccc9655c890dac169a04770ba0cbb6b256a252d26f94f
-Size (kubernetes-26.1.0.tar.gz) = 736370 bytes
+BLAKE2s (kubernetes-27.2.0.tar.gz) = e1921d301041f3ae22df90f0b2df271dcf4ba896acaf03d1c8264da71cec8e02
+SHA512 (kubernetes-27.2.0.tar.gz) = afd25d623d1916a56af5eea36bf83bf121160d3d2326307c50f3bb8cbb08085ada0a5f21e328b384cdcb153d30585b49401ec8c3e1d57ad9703e18c8d8a85375
+Size (kubernetes-27.2.0.tar.gz) = 781963 bytes
