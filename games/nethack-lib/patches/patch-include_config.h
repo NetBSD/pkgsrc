@@ -1,15 +1,18 @@
-$NetBSD: patch-include_config.h,v 1.1 2019/10/24 11:51:23 pho Exp $
+$NetBSD: patch-include_config.h,v 1.2 2023/08/27 15:59:19 rhialto Exp $
 
-Make configurable.
+Make window system configurable.
 
---- include/config.h.orig	2019-05-08 07:00:15.000000000 +0000
+--- include/config.h.orig	2023-02-15 21:52:57.000000000 +0000
 +++ include/config.h
-@@ -42,6 +42,16 @@
+@@ -42,6 +42,19 @@
   * Define all of those you want supported in your binary.
   * Some combinations make no sense.  See the installation document.
   */
 +#if   defined(GTYPE_TTY)
 +#  define DEFAULT_WINDOW_SYS "tty"
++#elif   defined(GTYPE_CURSES)
++#  define CURSES_GRAPHICS
++#  define DEFAULT_WINDOW_SYS "curses"
 +#elif defined(GTYPE_X11)
 +#  define X11_GRAPHICS
 +#  define DEFAULT_WINDOW_SYS "X11"
@@ -21,7 +24,7 @@ Make configurable.
  #if !defined(NOTTYGRAPHICS)
  #define TTY_GRAPHICS /* good old tty based graphics */
  #endif
-@@ -134,7 +144,7 @@
+@@ -134,7 +147,7 @@
   * would allow:
   *  xpmtoppm <x11tiles.xpm | pnmscale 1.25 | ppmquant 90 >x11tiles_big.xpm
   */
@@ -30,7 +33,7 @@ Make configurable.
  #ifdef USE_XPM
  #define GRAPHIC_TOMBSTONE /* Use graphical tombstone (rip.xpm) */
  #endif
-@@ -263,11 +273,8 @@
+@@ -263,11 +276,8 @@
  
  #if defined(UNIX) && !defined(ZLIB_COMP) && !defined(COMPRESS)
  /* path and file name extension for compression program */
@@ -44,7 +47,7 @@ Make configurable.
  #endif
  
  #ifndef COMPRESS
-@@ -352,7 +359,7 @@
+@@ -352,7 +362,7 @@
   * otherwise it will be the current directory.
   */
  #ifndef HACKDIR
@@ -53,7 +56,7 @@ Make configurable.
  #endif
  
  /*
-@@ -442,7 +449,7 @@ typedef unsigned char uchar;
+@@ -442,7 +452,7 @@ typedef unsigned char uchar;
   * functions that have been macroized.
   */
  
