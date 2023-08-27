@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/05/15 20:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/27 13:27:28 adam Exp $
 
-DISTNAME=	openapi_spec_validator-0.5.6
+DISTNAME=	openapi_spec_validator-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-spec-validator/}
@@ -11,10 +11,10 @@ COMMENT=	OpenAPI 2.0 (aka Swagger) and OpenAPI 3.0 spec validator
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.0.0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-spec>=0.1.1:../../textproc/py-jsonschema-spec
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema-spec>=0.2.3:../../textproc/py-jsonschema-spec
 DEPENDS+=	${PYPKGPREFIX}-lazy-object-proxy>=1.7.1:../../devel/py-lazy-object-proxy
-DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.4.2:../../textproc/py-openapi-schema-validator
+DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.6.0:../../textproc/py-openapi-schema-validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
