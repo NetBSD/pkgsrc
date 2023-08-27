@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/27 23:12:52 gutteridge Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
@@ -54,6 +54,7 @@ DEPENDS+=	u-boot-nanopi-neo-plus2-[0-9]*:../../sysutils/u-boot-nanopi-neo-plus2
 DEPENDS+=	u-boot-nanopi-neo-[0-9]*:../../sysutils/u-boot-nanopi-neo
 DEPENDS+=	u-boot-nanopi-neo2-[0-9]*:../../sysutils/u-boot-nanopi-neo2
 DEPENDS+=	u-boot-nanopi-r1-[0-9]*:../../sysutils/u-boot-nanopi-r1
+DEPENDS+=	u-boot-nanopi-r2s-[0-9]*:../../sysutils/u-boot-nanopi-r2s
 .if !empty(PKG_OPTIONS:Mamlogic-meson)
 DEPENDS+=	u-boot-odroid-c2-[0-9]*:../../sysutils/u-boot-odroid-c2
 .endif
