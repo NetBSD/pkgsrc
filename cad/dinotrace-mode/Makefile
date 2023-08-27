@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2023/08/27 10:36:40 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/27 10:37:44 tnn Exp $
 #
 
 VERSION=	9.4f
 DISTNAME=	dinotrace-${VERSION}
+PKGREVISION=	2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-${VERSION}
 CATEGORIES=	cad editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veripool/}
