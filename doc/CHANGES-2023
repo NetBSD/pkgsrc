@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5139 2023/08/27 04:03:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5140 2023/08/27 12:13:31 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7473,3 +7473,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-mongo to 4.5.0 [adam 2023-08-27]
 	Updated security/gpgme to 1.22.0 [adam 2023-08-27]
 	Updated textproc/ugrep to 4.0.4 [adam 2023-08-27]
+	Updated www/grafana to 10.1.0 [tnn 2023-08-27]
