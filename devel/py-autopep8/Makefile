@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/04/30 14:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/08/27 02:44:53 adam Exp $
 
-DISTNAME=	autopep8-2.0.2
+DISTNAME=	autopep8-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autopep8/}
@@ -11,13 +11,17 @@ COMMENT=	Automatic formatter of Python code to conform to PEP 8
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.10.0:../../devel/py-codestyle
-DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
 
+USE_PKG_RESOURCES=	yes
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
