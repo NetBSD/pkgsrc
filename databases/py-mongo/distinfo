@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/07/29 11:42:36 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/08/27 03:42:27 adam Exp $
 
-BLAKE2s (pymongo-4.4.1.tar.gz) = 808ad3976d87072fb5cb9b97d75b678ecffb56ac767515f7687e6332d0da9e06
-SHA512 (pymongo-4.4.1.tar.gz) = 0acde06319e9b629bc36e7fa1074516f9e5e7cc9bd46a8aeb334d887b3c36b2c10c8c9596d243ce09301363f0154fc7de0c885e53da6229cc134b4dbc456e5d1
-Size (pymongo-4.4.1.tar.gz) = 828735 bytes
+BLAKE2s (pymongo-4.5.0.tar.gz) = 86be217d797dfa9eaf194c9ac45d7d1808c3e402df6fd8581bed048501f7dc48
+SHA512 (pymongo-4.5.0.tar.gz) = 14b980dd5cc02f90c4aa67b6088e265a7ecde16c5a1b59ae59d3c337994db4066c2c9f1c74cd204ad14479f02d83e930100547568d0fa2bccdea2aeae9ff72b7
+Size (pymongo-4.5.0.tar.gz) = 848707 bytes
