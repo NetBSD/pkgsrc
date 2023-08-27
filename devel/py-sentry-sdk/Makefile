@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/09/11 17:12:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/27 21:05:36 khorben Exp $
 
-DISTNAME=	sentry-sdk-1.1.0
+DISTNAME=	sentry-sdk-1.29.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sentry-sdk/}
 
