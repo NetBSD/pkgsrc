@@ -1,4 +1,4 @@
-$NetBSD: patch-sys_unix_nethack.sh,v 1.1 2019/10/24 11:51:23 pho Exp $
+$NetBSD: patch-sys_unix_nethack.sh,v 1.2 2023/08/27 15:59:19 rhialto Exp $
 
 Modify the wrapper script so users can choose the UI type on the
 command line.
@@ -16,7 +16,7 @@ command line.
  export HACKDIR
 -HACK=$HACKDIR/nethack
 +
-+UILIST="tty x11 qt" 
++UILIST="tty curses x11 qt" 
 +findbin ()
 +{
 +	for x in $UILIST; do
