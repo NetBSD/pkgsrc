@@ -1,5 +1,6 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.17 2023/08/27 21:04:18 gutteridge Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.18 2023/08/27 23:12:52 gutteridge Exp $
 #
+# used by sysutils/u-boot-nanopi-r2s/Makefile
 # used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
 # used by sysutils/u-boot-pinebook-pro/Makefile
