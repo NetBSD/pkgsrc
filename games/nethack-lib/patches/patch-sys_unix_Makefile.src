@@ -1,8 +1,8 @@
-$NetBSD: patch-sys_unix_Makefile.src,v 1.3 2019/10/24 11:51:23 pho Exp $
+$NetBSD: patch-sys_unix_Makefile.src,v 1.4 2023/08/27 15:59:19 rhialto Exp $
 
-Make configurable.
+Make window system configurable.
 
---- sys/unix/Makefile.src.orig	2019-05-08 07:00:16.000000000 +0000
+--- sys/unix/Makefile.src.orig	2023-02-15 21:52:57.000000000 +0000
 +++ sys/unix/Makefile.src
 @@ -41,7 +41,11 @@ SHELL=/bin/sh
  # SHELL=E:/GEMINI2/MUPFEL.TTP
@@ -17,7 +17,7 @@ Make configurable.
  
  # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
  # system.
-@@ -170,9 +174,22 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
+@@ -170,9 +174,24 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
  # flags for debugging:
  # CFLAGS = -g -I../include
  
@@ -32,6 +32,8 @@ Make configurable.
 +
 +.if "${GTYPE}" == "-tty"
 +CFLAGS += -DGTYPE_TTY
++.elif "${GTYPE}" == "-curses"
++CFLAGS += -DGTYPE_CURSES
 +.elif "${GTYPE}" == "-x11"
 +CFLAGS += -DGTYPE_X11
 +.elif "${GTYPE}" == "-qt"
@@ -41,7 +43,7 @@ Make configurable.
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
  # the C++ libraries linked in.
-@@ -267,13 +284,22 @@ WINBEOBJ =
+@@ -267,13 +286,25 @@ WINBEOBJ =
  #WINBEOBJ = winbe.o NHWindow.o NHMenuWindow.o NHMapWindow.o tile.o
  #
  #
@@ -56,6 +58,9 @@ Make configurable.
 -#
 +
 +.if "${GTYPE}" == "-tty"
++.elif "${GTYPE}" == "-curses"
++WINSRC += $(WINCURSESSRC)
++WINOBJ += $(WINCURSESOBJ)
 +.elif "${GTYPE}" == "-x11"
 +WINSRC += $(WINX11SRC)
 +WINOBJ += $(WINX11OBJ)
@@ -67,7 +72,7 @@ Make configurable.
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
  # Sysatt uses shared library in lieu of this option
-@@ -292,14 +318,14 @@ WINBEOBJ =
+@@ -292,14 +323,14 @@ WINBEOBJ =
  #
  # libraries for X11
  # If USE_XPM is defined in config.h, you will also need -lXpm here.
@@ -84,7 +89,16 @@ Make configurable.
  #
  # libraries for Qt 4
  WINQT4LIB = `pkg-config QtGui --libs`
-@@ -327,11 +353,18 @@ WINCURSESLIB = -lncurses
+@@ -320,18 +351,27 @@ WINGEMLIB = -le_gem -lgem
+ WINBELIB = -lbe
+ #
+ # libraries for curses port
+-# link with ncurses
+-WINCURSESLIB = -lncurses
++# link with (n)curses
++WINCURSESLIB = -lcurses # or -L${PREFIX}/lib -Wl,-R,${PREFIX}/lib -lncurses
+ # link with pdcurses for SDL, installed in a separate directory
+ #WINCURSESLIB = -L/usr/local/lib/pdcurses -lpdcurses -lSDL
  # same as above, for XCurses
  #WINCURSESLIB = -L/usr/local/lib/pdcurses -lXCurses -lXawM -lXmu -lXext -lXt -lX11
  #
@@ -96,6 +110,8 @@ Make configurable.
 -#
 +
 +.if "${GTYPE}" == "-tty"
++.elif "${GTYPE}" == "-curses"
++WINLIB += $(WINCURSESLIB)
 +.elif "${GTYPE}" == "-x11"
 +WINLIB += $(WINX11LIB)
 +.elif "${GTYPE}" == "-qt"
