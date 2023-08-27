@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/05/19 10:43:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/27 03:28:28 adam Exp $
 
-DISTNAME=	kubernetes-26.1.0
+DISTNAME=	kubernetes-27.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kubernetes/}
@@ -13,6 +13,7 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-certifi>=14.05.14:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.0.1:../../security/py-google-auth
+DEPENDS+=	${PYPKGPREFIX}-oauthlib>=3.2.2:../../security/py-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
