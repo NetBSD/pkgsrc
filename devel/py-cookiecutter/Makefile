@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/07/25 13:17:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/27 20:13:12 adam Exp $
 
-DISTNAME=	cookiecutter-2.2.3
+DISTNAME=	cookiecutter-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-binaryornot>=0.4.4:../../devel/py-binaryornot
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.23.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-slugify>=4.0.0:../../devel/py-slugify
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/07/25 13:17:03 adam Exp $
+$NetBSD: distinfo,v 1.11 2023/08/27 20:13:12 adam Exp $
 
-BLAKE2s (cookiecutter-2.2.3.tar.gz) = 1d16ef289ea84dfd1a6ac06c4b2c2736232ba21a643a8d5ff7d3f8863972393a
-SHA512 (cookiecutter-2.2.3.tar.gz) = 79cd2e7a92dd7902a3e24504f91d2481b50ab7ff326436065d178dbb7ead9a8ab157f09d1b4806d0405046dfde410f1d69562499b2f7238e16554c4e23911b87
-Size (cookiecutter-2.2.3.tar.gz) = 155719 bytes
+BLAKE2s (cookiecutter-2.3.0.tar.gz) = 86ee7f63be236b8a101270ba76c9c4c22b9f4940cb65847b771285ba4401e177
+SHA512 (cookiecutter-2.3.0.tar.gz) = b6053211f942073ac80f460b049de37e57320c129756b9057b4b63694df53a7f4cb46d2b8725f08d43dd2438fdd4f42ee7f37508e9f93802005f06b92d02dad6
+Size (cookiecutter-2.3.0.tar.gz) = 157130 bytes
