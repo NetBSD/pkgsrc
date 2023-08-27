@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/07 12:45:25 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/27 10:54:22 vins Exp $
 
 DISTNAME=	xmdiary-3.0.3
 PKGNAME=	${DISTNAME:S/m//}
@@ -27,6 +27,8 @@ SUBST_FILES.malloc=	tools/LstLinked.c tools/System.c \
 			xtools/xitClipboard.c xtools/xitInfoFile.c
 SUBST_MESSAGE.malloc=	Replacing malloc.h
 SUBST_SED.malloc=	-e 's|<malloc.h>|<stdlib.h>|g'
+
+CONFIGURE_ENV+=	IMAKEINCLUDE="-I${X11BASE}/lib/X11/config"
 
 MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
