@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/07/24 18:51:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/27 20:19:50 adam Exp $
 
-DISTNAME=	pytest_randomly-3.13.0
+DISTNAME=	pytest_randomly-3.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-randomly/}
@@ -18,7 +18,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
 .endif
