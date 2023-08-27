@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/12/15 13:58:02 vins Exp $
+# $NetBSD: options.mk,v 1.2 2023/08/27 11:56:26 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mailutils
 
@@ -64,9 +64,9 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=       --with-gssapi==${KRB5BASE:Q}
+GSSIMPL.heimdal=	Heimdal
+GSSIMPL.mit-krb5=	MIT
 CONFIGURE_ENV+=		GSSAPI_IMPL=${GSSIMPL.${KRB5_TYPE}}
-GSSIMPL.heimdal=	heimdal
-GSSIMPL.mit-krb5=	mit
 .else
 CONFIGURE_ARGS+=       --without-gssapi
 .endif
