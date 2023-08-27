@@ -1,0 +1,14 @@
+$NetBSD: patch-configs_nanopi-r2s-rk3328_defconfig,v 1.1 2023/08/27 23:12:52 gutteridge Exp $
+
+Load u-boot from 256KB.
+
+--- nanopi-r2s-rk3328_defconfig.orig	2022-01-10 13:46:34.000000000 -0500
++++ nanopi-r2s-rk3328_defconfig
+@@ -1,6 +1,7 @@
+ CONFIG_ARM=y
+ CONFIG_SKIP_LOWLEVEL_INIT=y
+ CONFIG_ARCH_ROCKCHIP=y
++CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_SECTOR=0x200
+ CONFIG_SYS_TEXT_BASE=0x00200000
+ CONFIG_SPL_GPIO=y
+ CONFIG_NR_DRAM_BANKS=1

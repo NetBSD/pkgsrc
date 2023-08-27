@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/27 23:12:52 gutteridge Exp $
+share/u-boot/nanopi-r2s/idbloader.img
+share/u-boot/nanopi-r2s/installboot.plist
+share/u-boot/nanopi-r2s/rksd_loader.img
+share/u-boot/nanopi-r2s/rkspi_loader.img
+share/u-boot/nanopi-r2s/u-boot.itb
