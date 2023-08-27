@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/15 20:33:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/27 13:33:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -22,6 +22,12 @@ ${PYSITELIB}/openapi_core/casting/schemas/factories.py
 ${PYSITELIB}/openapi_core/casting/schemas/factories.pyc
 ${PYSITELIB}/openapi_core/contrib/__init__.py
 ${PYSITELIB}/openapi_core/contrib/__init__.pyc
+${PYSITELIB}/openapi_core/contrib/aiohttp/__init__.py
+${PYSITELIB}/openapi_core/contrib/aiohttp/__init__.pyc
+${PYSITELIB}/openapi_core/contrib/aiohttp/requests.py
+${PYSITELIB}/openapi_core/contrib/aiohttp/requests.pyc
+${PYSITELIB}/openapi_core/contrib/aiohttp/responses.py
+${PYSITELIB}/openapi_core/contrib/aiohttp/responses.pyc
 ${PYSITELIB}/openapi_core/contrib/django/__init__.py
 ${PYSITELIB}/openapi_core/contrib/django/__init__.pyc
 ${PYSITELIB}/openapi_core/contrib/django/handlers.py
@@ -149,8 +155,6 @@ ${PYSITELIB}/openapi_core/spec/__init__.py
 ${PYSITELIB}/openapi_core/spec/__init__.pyc
 ${PYSITELIB}/openapi_core/spec/paths.py
 ${PYSITELIB}/openapi_core/spec/paths.pyc
-${PYSITELIB}/openapi_core/spec/shortcuts.py
-${PYSITELIB}/openapi_core/spec/shortcuts.pyc
 ${PYSITELIB}/openapi_core/templating/__init__.py
 ${PYSITELIB}/openapi_core/templating/__init__.pyc
 ${PYSITELIB}/openapi_core/templating/datatypes.py
@@ -205,8 +209,6 @@ ${PYSITELIB}/openapi_core/unmarshalling/request/datatypes.py
 ${PYSITELIB}/openapi_core/unmarshalling/request/datatypes.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/request/protocols.py
 ${PYSITELIB}/openapi_core/unmarshalling/request/protocols.pyc
-${PYSITELIB}/openapi_core/unmarshalling/request/proxies.py
-${PYSITELIB}/openapi_core/unmarshalling/request/proxies.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/request/types.py
 ${PYSITELIB}/openapi_core/unmarshalling/request/types.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/request/unmarshallers.py
@@ -217,8 +219,6 @@ ${PYSITELIB}/openapi_core/unmarshalling/response/datatypes.py
 ${PYSITELIB}/openapi_core/unmarshalling/response/datatypes.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/response/protocols.py
 ${PYSITELIB}/openapi_core/unmarshalling/response/protocols.pyc
-${PYSITELIB}/openapi_core/unmarshalling/response/proxies.py
-${PYSITELIB}/openapi_core/unmarshalling/response/proxies.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/response/types.py
 ${PYSITELIB}/openapi_core/unmarshalling/response/types.pyc
 ${PYSITELIB}/openapi_core/unmarshalling/response/unmarshallers.py
@@ -277,8 +277,6 @@ ${PYSITELIB}/openapi_core/validation/schemas/exceptions.py
 ${PYSITELIB}/openapi_core/validation/schemas/exceptions.pyc
 ${PYSITELIB}/openapi_core/validation/schemas/factories.py
 ${PYSITELIB}/openapi_core/validation/schemas/factories.pyc
-${PYSITELIB}/openapi_core/validation/schemas/formatters.py
-${PYSITELIB}/openapi_core/validation/schemas/formatters.pyc
 ${PYSITELIB}/openapi_core/validation/schemas/validators.py
 ${PYSITELIB}/openapi_core/validation/schemas/validators.pyc
 ${PYSITELIB}/openapi_core/validation/validators.py
