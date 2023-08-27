@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.16 2023/08/27 20:58:15 gutteridge Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.17 2023/08/27 21:04:18 gutteridge Exp $
 #
 # used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -23,9 +23,9 @@ UBOOT_RK_SPI_OFF?=	1024
 MAKE_ENV+=		BL31=${PREFIX}/share/${TFA}/${UBOOT_IMAGE_TYPE}/bl31.elf
 
 post-build:
-# wrap everything up into a single file that can be written to an SD card.
-# note that the SD image starts at sector 64, and 64 + 448 = 512, so the
-# u-boot.itb is loaded at 256KiB on the card iteslf.
+# Wrap everything up into a single file that can be written to an SD card.
+# Note that the SD image starts at sector 64, and 64 + 448 = 512, so the
+# u-boot.itb is loaded at 256KiB on the card itself.
 	cp ${WRKSRC}/idbloader.img ${WRKSRC}/rksd_loader.img
 	dd if=${WRKSRC}/u-boot.itb seek=448 conv=notrunc of=${WRKSRC}/rksd_loader.img
 .if defined(UBOOT_MKIMAGE_RKSPI)
@@ -35,7 +35,7 @@ post-build:
 		-d ${WRKSRC}/tpl/u-boot-tpl.bin:${WRKSRC}/spl/u-boot-spl.bin \
 		${WRKSRC}/rkspi_loader.img
 .else
-# build SPI NOR flash image. See dev-ayufan/build.mk.
+# Build SPI NOR flash image. See u-boot-rock64.
 	set -e; b=0; while [ "$$b" != 128 ]; do \
 		dd bs=2k count=1; \
 		dd if=/dev/zero bs=2k count=1; \
