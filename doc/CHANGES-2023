@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5148 2023/08/27 21:05:50 khorben Exp $
+$NetBSD: CHANGES-2023,v 1.5149 2023/08/27 23:13:44 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7487,3 +7487,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cookiecutter to 2.3.0 [adam 2023-08-27]
 	Updated devel/py-test-randomly to 3.15.0 [adam 2023-08-27]
 	Updated devel/py-sentry-sdk to 1.29.2 [khorben 2023-08-27]
+	Added sysutils/u-boot-nanopi-r2s version 2022.01 [gutteridge 2023-08-27]
