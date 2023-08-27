@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/08/27 15:12:33 taca Exp $
 
-BLAKE2s (sshkey-2.0.0.gem) = 43ed733d14c41e199c141ea2496ea9627035b070f91abd1a0eaee9708a93c80f
-SHA512 (sshkey-2.0.0.gem) = dfd56a8b3b4f6abe785f37b5e1a4a61799c704a864821c35beaa6ddcec51b2f9f0111ef945fdacac685cbe6141e7ce2ad0c9bae8fa4cf8a8d48354701a0e5d05
-Size (sshkey-2.0.0.gem) = 26112 bytes
+BLAKE2s (sshkey-3.0.0.gem) = e1ecdb16f586d0d842a2773c14e5acab9934f978a4dc54691354ae3d7f3ef148
+SHA512 (sshkey-3.0.0.gem) = 5d72a6e6e30de68ecd81176d4d50e74d34c89f63efeb6df374ac5226f19c47254158a7d9f909661839b3a0188d88fe4521bfdaca8b20ee3aa4db72996b7519ec
+Size (sshkey-3.0.0.gem) = 31232 bytes

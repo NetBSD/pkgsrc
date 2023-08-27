@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/06/21 15:52:12 taca Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/27 15:12:33 taca Exp $
 
-DISTNAME=	sshkey-2.0.0
+DISTNAME=	sshkey-3.0.0
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
