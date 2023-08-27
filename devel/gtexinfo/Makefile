@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2023/07/06 09:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2023/08/27 14:52:47 pho Exp $
 
 DISTNAME=		texinfo-7.0.3
 PKGNAME=		g${DISTNAME}
@@ -46,6 +46,7 @@ REPLACE_SH+=		util/texi2dvi
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"	 # for EXTERN.h in XSParagraph
 .include "../../mk/termcap.buildlink3.mk"
