@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5137 2023/08/27 03:28:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5138 2023/08/27 03:42:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7469,3 +7469,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-pdf to 3.15.3 [adam 2023-08-27]
 	Removed devel/py-singledispatch [adam 2023-08-27]
 	Updated sysutils/py-kubernetes to 27.2.0 [adam 2023-08-27]
+	Updated graphics/py-Willow to 1.6.1 [adam 2023-08-27]
+	Updated databases/py-mongo to 4.5.0 [adam 2023-08-27]
