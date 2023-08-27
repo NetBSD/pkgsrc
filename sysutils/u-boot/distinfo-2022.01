@@ -1,4 +1,4 @@
-$NetBSD: distinfo-2022.01,v 1.3 2023/08/27 23:12:52 gutteridge Exp $
+$NetBSD: distinfo-2022.01,v 1.4 2023/08/27 23:38:07 gutteridge Exp $
 
 BLAKE2s (u-boot-2022.01.tar.bz2) = 54855aa008e78886dd48a25042eebedb1aee301571e578325131ed93d248c329
 SHA512 (u-boot-2022.01.tar.bz2) = d83c62bd8f0f51664d2aca329a3ce1379cfd1dfff439dccd6cfc2cb33cfef89a2b01855c97716f591b5550bfdf99e2f3aef7efa33f2e7834c820648f9eef3825
@@ -6,7 +6,7 @@ Size (u-boot-2022.01.tar.bz2) = 17449627 bytes
 SHA1 (patch-arch_arm_lib_interrupts__64.c) = 708be481a01b84c6c69d88465adf898b659dbeab
 SHA1 (patch-arch_arm_mach-rockchip_rk3399_rk3399.c) = caa4068c635eaef5997501e154ec5cb11dcbf490
 SHA1 (patch-board_pine64_pinebook-pro-rk3399_pinebook-pro-rk3399.c) = 49954716240e93b33e13288f92b14f527ba15bdf
-SHA1 (patch-configs_nanopi-r2s-rk3328_defconfig) = 928b198eaa983d36e46e26baec442b88f25a1359
+SHA1 (patch-configs_nanopi-r2s-rk3328_defconfig) = 1f75f77420919e834bbf32fc8ef2ac20f0757f2b
 SHA1 (patch-configs_pinebook-pro-rk3399_defconfig) = dceca39a9574e3491f835232b398c739d35e5e95
 SHA1 (patch-configs_rock64-rk3328_defconfig) = 44c0131d36fbc0bad769104ce07bdab9ae605bbd
 SHA1 (patch-configs_rockpro64-rk3399_defconfig) = d42aba165cb4aca635e514177f43bffacfa8ace5
