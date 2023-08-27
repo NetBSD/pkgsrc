@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/05/18 14:03:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2023/08/27 15:08:17 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,7 +8,9 @@ ${GEM_LIBDIR}/API_CHANGES.md
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/ChangeLog.cvs
+${GEM_LIBDIR}/FAQ.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/INSTALLATION.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/LICENSE-DEPENDENCIES
 ${GEM_LIBDIR}/README.md
@@ -26,9 +28,6 @@ ${GEM_LIBDIR}/ext/sqlite3/sqlite3.c
 ${GEM_LIBDIR}/ext/sqlite3/sqlite3_ruby.h
 ${GEM_LIBDIR}/ext/sqlite3/statement.c
 ${GEM_LIBDIR}/ext/sqlite3/statement.h
-${GEM_LIBDIR}/faq/faq.md
-${GEM_LIBDIR}/faq/faq.rb
-${GEM_LIBDIR}/faq/faq.yml
 ${GEM_LIBDIR}/lib/sqlite3.rb
 ${GEM_LIBDIR}/lib/sqlite3/constants.rb
 ${GEM_LIBDIR}/lib/sqlite3/database.rb
@@ -40,7 +39,7 @@ ${GEM_LIBDIR}/lib/sqlite3/statement.rb
 ${GEM_LIBDIR}/lib/sqlite3/translator.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
-${GEM_LIBDIR}/ports/archives/sqlite-autoconf-3420000.tar.gz
+${GEM_LIBDIR}/ports/archives/sqlite-autoconf-3430000.tar.gz
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_backup.rb
 ${GEM_LIBDIR}/test/test_collation.rb
