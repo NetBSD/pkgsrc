@@ -1,3 +1,0 @@
-Expose a mechanism in the functools standard library module from
-Python 3.4 to provides a simple form of generic programming known
-as single-dispatch generic functions.
