@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2023/08/26 15:02:25 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.46 2023/08/27 15:59:19 rhialto Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -21,6 +21,7 @@ NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
 NETHACK_SAVEVER=	3.6.0
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		https://www.nethack.org/download/${NETHACK_BASEVER}/
 EXTRACT_SUFX=		.tgz
