@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2023/07/19 17:10:33 gdt Exp $
+# $NetBSD: Makefile,v 1.63 2023/08/27 20:18:52 gdt Exp $
 #
 
-DISTNAME=	gama-2.24
-PKGREVISION=	2
+DISTNAME=	gama-2.25
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNU:=gama/}
 
@@ -11,18 +10,17 @@ HOMEPAGE=	https://www.gnu.org/s/gama/
 COMMENT=	Geodetic network adjustment (surveying)
 LICENSE=	gnu-gpl-v2 # or later
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++14
 
 # Not documented, but apparent.
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
-INFO_FILES=	yes
+INFO_FILES=		yes
 
-TEST_TARGET=	check
+TEST_TARGET=		check
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
