@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:05 nia Exp $
-
-BLAKE2s (singledispatch-3.6.2.tar.gz) = d22bfaff74b43745e1c289bfe1f7a58b7b570784b06a244e5a826e9b9bab5d40
-SHA512 (singledispatch-3.6.2.tar.gz) = 57e21bd0136af0f4cd87d3f9ad5a6c6cf7585e829024532a6b724ad7f84127299267b18a57b58be5cd16a8d1e7c1cfe21359eb750546c691bdb41d37f9e37e00
-Size (singledispatch-3.6.2.tar.gz) = 15972 bytes
