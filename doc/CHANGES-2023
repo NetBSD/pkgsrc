@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5138 2023/08/27 03:42:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5139 2023/08/27 04:03:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7471,3 +7471,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-kubernetes to 27.2.0 [adam 2023-08-27]
 	Updated graphics/py-Willow to 1.6.1 [adam 2023-08-27]
 	Updated databases/py-mongo to 4.5.0 [adam 2023-08-27]
+	Updated security/gpgme to 1.22.0 [adam 2023-08-27]
+	Updated textproc/ugrep to 4.0.4 [adam 2023-08-27]
