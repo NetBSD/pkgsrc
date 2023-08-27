@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/08/24 20:31:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/27 02:50:34 adam Exp $
 
-DISTNAME=	typeguard-4.1.2
+DISTNAME=	typeguard-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
@@ -29,7 +29,7 @@ do-test:
 .if ${PYTHON_VERSION} < 310
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 .endif
-.if ${PYTHON_VERSION} < 311
+.if ${PYTHON_VERSION} < 312
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.7.0:../../devel/py-typing-extensions
 .endif
 
