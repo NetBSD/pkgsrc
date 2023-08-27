@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5144 2023/08/27 15:11:23 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5145 2023/08/27 15:12:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7482,3 +7482,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test-env to 1.0.1 [adam 2023-08-27]
 	Updated databases/ruby-sqlite3 to 1.6.4 [taca 2023-08-27]
 	Updated net/ruby-recog to 3.1.2 [taca 2023-08-27]
+	Updated security/ruby-sshkey to 3.0.0 [taca 2023-08-27]
