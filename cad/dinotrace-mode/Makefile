@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:32 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2023/08/27 10:36:40 tnn Exp $
 #
 
 VERSION=	9.4f
 DISTNAME=	dinotrace-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	cad editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veripool/}
 GITHUB_PROJECT=	dinotrace
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.veripool.org/dinotrace/
+HOMEPAGE=	https://github.com/veripool/dinotrace/blob/master/README.rst
 COMMENT=	Emacs major mode for dinotrace
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode>=3.13:../../cad/verilog-mode
+
+# failed to build with emacs28; needs athena widgets which are not enabled by default
+EMACS_VERSIONS_ACCEPTED=	emacs26
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../editors/emacs/modules.mk"
