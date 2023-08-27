@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2023/08/26 16:31:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.104 2023/08/27 12:09:56 tnn Exp $
 
-DISTNAME=	grafana-9.4.7
-PKGREVISION=	3
+DISTNAME=	grafana-10.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
 
 TOOL_DEPENDS+=			go-wire-[0-9]*:../../devel/go-wire
 
-CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
+CHECK_PORTABILITY_SKIP=		docs/* packaging/* devenv/*
 CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
 
 USE_TOOLS+=			pax
