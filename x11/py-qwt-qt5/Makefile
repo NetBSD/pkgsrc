@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/06 12:42:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/27 02:54:37 adam Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
@@ -16,13 +16,11 @@ LICENSE=	gnu-lgpl-v2.1 # with exception (Qwt License)
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
-# TODO: check if this is correct or should this be a full DEPENDS
-TOOL_DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
+DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
-PLIST_SUBST+=	PYVER=${PYVERSSUFFIX:S/.//g}
 
 USE_LANGUAGES=	c++
 
@@ -32,11 +30,9 @@ pre-configure:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-# clang: error: invalid argument '-bundle' not allowed with '-dynamiclib'
-BUILDLINK_TRANSFORM+=	rm:-bundle
 post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so	\
-	  ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.abi3.so \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.abi3.so
 .endif
 
 .include "../../lang/python/wheel.mk"
