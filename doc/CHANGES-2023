@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5161 2023/08/28 09:40:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5162 2023/08/28 09:47:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7506,3 +7506,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/py-flasgger version 0.9.7.1 [adam 2023-08-28]
 	Updated www/py-httpbin to 0.10.0 [adam 2023-08-28]
 	Updated devel/py-factory_boy to 3.3.0 [adam 2023-08-28]
+	Updated www/ap2-python to 3.5.0.1 [gdt 2023-08-28]
