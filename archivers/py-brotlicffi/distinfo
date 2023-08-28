@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/28 09:27:05 adam Exp $
+
+BLAKE2s (brotlicffi-1.0.9.2.tar.gz) = c9158df21565ad049a456eb9aefcd616f730c7bab2dfe5685d731abafe0ac974
+SHA512 (brotlicffi-1.0.9.2.tar.gz) = bcab05a46999f43d735a4733de1d7203976e0269f536712bf848f3f8569c1107ae3bcca7fb1efa07290b6e9b706c28b47506501db13c4c5f62f20c5f3347bd40
+Size (brotlicffi-1.0.9.2.tar.gz) = 440077 bytes
