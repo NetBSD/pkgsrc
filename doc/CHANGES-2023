@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5165 2023/08/28 10:33:34 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5166 2023/08/28 10:36:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7513,3 +7513,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/py-tzdata to 2023.3 [adam 2023-08-28]
 	Updated sysutils/lsd to 1.0.0 [pin 2023-08-28]
 	Added textproc/py-yattag version 1.15.1 [gdt 2023-08-28]
+	Updated math/py-pandas to 2.0.3 [adam 2023-08-28]
+	Updated databases/py-apsw to 3.43.0.0 [adam 2023-08-28]
