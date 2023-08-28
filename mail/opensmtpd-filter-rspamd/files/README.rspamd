@@ -7,12 +7,13 @@ configuration.
 
 Edit the @PKG_SYSCONFDIR@/smtpd/smtpd.conf file to declare the filter:
 
-  filter "rspamd" proc-exec "filter-rspamd"
+  filter "rspamd" \
+  	 proc-exec "@PREFIX@/libexec/opensmtpd/filter-rspamd"
 
 Then add the filter to each listener that should be filtered:
 
   listen on socket filter "rspamd"
-  listen on all filter "rspamd"
+  listen on $ipv4 [...] filter "rspamd"
 
 The filter itself doesn't have a configuration and depends upon 
 the Rspamd daemon configuration. 
