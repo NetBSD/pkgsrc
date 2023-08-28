@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2022/10/28 09:34:16 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/08/28 09:22:19 adam Exp $
 
-BLAKE2s (openapi3-1.6.6.tar.gz) = 3599e8974cd1b9288bdd30d16fa740de4682b2b88a568db505e62d79b222fbba
-SHA512 (openapi3-1.6.6.tar.gz) = 772c3012630ffbefcabb2750d1a8515e1c5674f16769f05fe138996bb6ddb05e46dffc441a105ef7bf84573a61accb21b592b05384accf5756680e66fe88c6e5
-Size (openapi3-1.6.6.tar.gz) = 22284 bytes
+BLAKE2s (openapi3-1.8.1.tar.gz) = 83b314259aa915c200b43d8804e4c1f7ef21b1f91247da881ea5a3028d534924
+SHA512 (openapi3-1.8.1.tar.gz) = de111c56c9f8b3c6539f8ae5498b2d42ae127ec3d3746cf2c3b7d7e0945157039c17d393ee5bb16add1e4a1948cc7a521fa7de08161cfa9e4816ab5fe7890900
+Size (openapi3-1.8.1.tar.gz) = 23192 bytes
