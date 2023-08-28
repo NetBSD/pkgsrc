@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/16 20:00:45 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/28 12:49:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/jsonrpclib/history.pyo
 ${PYSITELIB}/jsonrpclib/jsonclass.py
 ${PYSITELIB}/jsonrpclib/jsonclass.pyc
 ${PYSITELIB}/jsonrpclib/jsonclass.pyo
+${PYSITELIB}/jsonrpclib/jsonlib.py
+${PYSITELIB}/jsonrpclib/jsonlib.pyc
+${PYSITELIB}/jsonrpclib/jsonlib.pyo
 ${PYSITELIB}/jsonrpclib/jsonrpc.py
 ${PYSITELIB}/jsonrpclib/jsonrpc.pyc
 ${PYSITELIB}/jsonrpclib/jsonrpc.pyo
