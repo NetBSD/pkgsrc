@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.18 2022/12/07 14:02:20 gdt Exp $
-bin/chirpw
-bin/rpttool
-${PYSITELIB}/${EGG_INFODIR}
+@comment $NetBSD: PLIST,v 1.19 2023/08/28 10:37:40 gdt Exp $
+bin/chirp
+bin/chirpc
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/chirp/__init__.py
 ${PYSITELIB}/chirp/__init__.pyc
 ${PYSITELIB}/chirp/__init__.pyo
@@ -32,15 +37,18 @@ ${PYSITELIB}/chirp/bitwise_grammar.pyo
 ${PYSITELIB}/chirp/chirp_common.py
 ${PYSITELIB}/chirp/chirp_common.pyc
 ${PYSITELIB}/chirp/chirp_common.pyo
+${PYSITELIB}/chirp/cli/__init__.py
+${PYSITELIB}/chirp/cli/__init__.pyc
+${PYSITELIB}/chirp/cli/__init__.pyo
+${PYSITELIB}/chirp/cli/main.py
+${PYSITELIB}/chirp/cli/main.pyc
+${PYSITELIB}/chirp/cli/main.pyo
 ${PYSITELIB}/chirp/detect.py
 ${PYSITELIB}/chirp/detect.pyc
 ${PYSITELIB}/chirp/detect.pyo
 ${PYSITELIB}/chirp/directory.py
 ${PYSITELIB}/chirp/directory.pyc
 ${PYSITELIB}/chirp/directory.pyo
-${PYSITELIB}/chirp/dmrmarc.py
-${PYSITELIB}/chirp/dmrmarc.pyc
-${PYSITELIB}/chirp/dmrmarc.pyo
 ${PYSITELIB}/chirp/drivers/__init__.py
 ${PYSITELIB}/chirp/drivers/__init__.pyc
 ${PYSITELIB}/chirp/drivers/__init__.pyo
@@ -89,6 +97,9 @@ ${PYSITELIB}/chirp/drivers/boblov_x3plus.pyo
 ${PYSITELIB}/chirp/drivers/btech.py
 ${PYSITELIB}/chirp/drivers/btech.pyc
 ${PYSITELIB}/chirp/drivers/btech.pyo
+${PYSITELIB}/chirp/drivers/fake.py
+${PYSITELIB}/chirp/drivers/fake.pyc
+${PYSITELIB}/chirp/drivers/fake.pyo
 ${PYSITELIB}/chirp/drivers/fd268.py
 ${PYSITELIB}/chirp/drivers/fd268.pyc
 ${PYSITELIB}/chirp/drivers/fd268.pyo
@@ -176,6 +187,9 @@ ${PYSITELIB}/chirp/drivers/gmrsv2.pyo
 ${PYSITELIB}/chirp/drivers/h777.py
 ${PYSITELIB}/chirp/drivers/h777.pyc
 ${PYSITELIB}/chirp/drivers/h777.pyo
+${PYSITELIB}/chirp/drivers/hf90.py
+${PYSITELIB}/chirp/drivers/hf90.pyc
+${PYSITELIB}/chirp/drivers/hf90.pyo
 ${PYSITELIB}/chirp/drivers/hg_uv98.py
 ${PYSITELIB}/chirp/drivers/hg_uv98.pyc
 ${PYSITELIB}/chirp/drivers/hg_uv98.pyo
@@ -236,6 +250,9 @@ ${PYSITELIB}/chirp/drivers/ict7h.pyo
 ${PYSITELIB}/chirp/drivers/ict8.py
 ${PYSITELIB}/chirp/drivers/ict8.pyc
 ${PYSITELIB}/chirp/drivers/ict8.pyo
+${PYSITELIB}/chirp/drivers/icv80.py
+${PYSITELIB}/chirp/drivers/icv80.pyc
+${PYSITELIB}/chirp/drivers/icv80.pyo
 ${PYSITELIB}/chirp/drivers/icv86.py
 ${PYSITELIB}/chirp/drivers/icv86.pyc
 ${PYSITELIB}/chirp/drivers/icv86.pyo
@@ -245,9 +262,6 @@ ${PYSITELIB}/chirp/drivers/icw32.pyo
 ${PYSITELIB}/chirp/drivers/icx8x.py
 ${PYSITELIB}/chirp/drivers/icx8x.pyc
 ${PYSITELIB}/chirp/drivers/icx8x.pyo
-${PYSITELIB}/chirp/drivers/icx8x_ll.py
-${PYSITELIB}/chirp/drivers/icx8x_ll.pyc
-${PYSITELIB}/chirp/drivers/icx8x_ll.pyo
 ${PYSITELIB}/chirp/drivers/icx90.py
 ${PYSITELIB}/chirp/drivers/icx90.pyc
 ${PYSITELIB}/chirp/drivers/icx90.pyo
@@ -275,6 +289,12 @@ ${PYSITELIB}/chirp/drivers/idrp.pyo
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.py
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyc
 ${PYSITELIB}/chirp/drivers/iradio_uv_5118.pyo
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.py
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyc
+${PYSITELIB}/chirp/drivers/iradio_uv_5118plus.pyo
+${PYSITELIB}/chirp/drivers/kenwood_d7.py
+${PYSITELIB}/chirp/drivers/kenwood_d7.pyc
+${PYSITELIB}/chirp/drivers/kenwood_d7.pyo
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.py
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyc
 ${PYSITELIB}/chirp/drivers/kenwood_hmk.pyo
@@ -299,6 +319,9 @@ ${PYSITELIB}/chirp/drivers/kguv8e.pyo
 ${PYSITELIB}/chirp/drivers/kguv920pa.py
 ${PYSITELIB}/chirp/drivers/kguv920pa.pyc
 ${PYSITELIB}/chirp/drivers/kguv920pa.pyo
+${PYSITELIB}/chirp/drivers/kguv980p.py
+${PYSITELIB}/chirp/drivers/kguv980p.pyc
+${PYSITELIB}/chirp/drivers/kguv980p.pyo
 ${PYSITELIB}/chirp/drivers/kguv9dplus.py
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyc
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyo
@@ -314,6 +337,9 @@ ${PYSITELIB}/chirp/drivers/leixen.pyo
 ${PYSITELIB}/chirp/drivers/lt725uv.py
 ${PYSITELIB}/chirp/drivers/lt725uv.pyc
 ${PYSITELIB}/chirp/drivers/lt725uv.pyo
+${PYSITELIB}/chirp/drivers/mml_jc8810.py
+${PYSITELIB}/chirp/drivers/mml_jc8810.pyc
+${PYSITELIB}/chirp/drivers/mml_jc8810.pyo
 ${PYSITELIB}/chirp/drivers/mursv1.py
 ${PYSITELIB}/chirp/drivers/mursv1.pyc
 ${PYSITELIB}/chirp/drivers/mursv1.pyo
@@ -329,15 +355,15 @@ ${PYSITELIB}/chirp/drivers/radioddity_r2.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
-${PYSITELIB}/chirp/drivers/repeaterbook.py
-${PYSITELIB}/chirp/drivers/repeaterbook.pyc
-${PYSITELIB}/chirp/drivers/repeaterbook.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rb15.py
 ${PYSITELIB}/chirp/drivers/retevis_rb15.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rb15.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.py
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rb17p.pyo
+${PYSITELIB}/chirp/drivers/retevis_rb28.py
+${PYSITELIB}/chirp/drivers/retevis_rb28.pyc
+${PYSITELIB}/chirp/drivers/retevis_rb28.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt1.py
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyo
@@ -362,12 +388,12 @@ ${PYSITELIB}/chirp/drivers/retevis_rt87.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt98.py
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt98.pyo
-${PYSITELIB}/chirp/drivers/rfinder.py
-${PYSITELIB}/chirp/drivers/rfinder.pyc
-${PYSITELIB}/chirp/drivers/rfinder.pyo
 ${PYSITELIB}/chirp/drivers/rh5r_v2.py
 ${PYSITELIB}/chirp/drivers/rh5r_v2.pyc
 ${PYSITELIB}/chirp/drivers/rh5r_v2.pyo
+${PYSITELIB}/chirp/drivers/tdh8.py
+${PYSITELIB}/chirp/drivers/tdh8.pyc
+${PYSITELIB}/chirp/drivers/tdh8.pyo
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.py
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.pyc
 ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.pyo
@@ -416,6 +442,9 @@ ${PYSITELIB}/chirp/drivers/thuv1f.pyo
 ${PYSITELIB}/chirp/drivers/tk270.py
 ${PYSITELIB}/chirp/drivers/tk270.pyc
 ${PYSITELIB}/chirp/drivers/tk270.pyo
+${PYSITELIB}/chirp/drivers/tk3140.py
+${PYSITELIB}/chirp/drivers/tk3140.pyc
+${PYSITELIB}/chirp/drivers/tk3140.pyo
 ${PYSITELIB}/chirp/drivers/tk760.py
 ${PYSITELIB}/chirp/drivers/tk760.pyc
 ${PYSITELIB}/chirp/drivers/tk760.pyo
@@ -425,6 +454,9 @@ ${PYSITELIB}/chirp/drivers/tk760g.pyo
 ${PYSITELIB}/chirp/drivers/tk8102.py
 ${PYSITELIB}/chirp/drivers/tk8102.pyc
 ${PYSITELIB}/chirp/drivers/tk8102.pyo
+${PYSITELIB}/chirp/drivers/tk8160.py
+${PYSITELIB}/chirp/drivers/tk8160.pyc
+${PYSITELIB}/chirp/drivers/tk8160.pyo
 ${PYSITELIB}/chirp/drivers/tk8180.py
 ${PYSITELIB}/chirp/drivers/tk8180.pyc
 ${PYSITELIB}/chirp/drivers/tk8180.pyo
@@ -461,6 +493,9 @@ ${PYSITELIB}/chirp/drivers/uv6r.pyo
 ${PYSITELIB}/chirp/drivers/uvb5.py
 ${PYSITELIB}/chirp/drivers/uvb5.pyc
 ${PYSITELIB}/chirp/drivers/uvb5.pyo
+${PYSITELIB}/chirp/drivers/uvk5.py
+${PYSITELIB}/chirp/drivers/uvk5.pyc
+${PYSITELIB}/chirp/drivers/uvk5.pyo
 ${PYSITELIB}/chirp/drivers/vgc.py
 ${PYSITELIB}/chirp/drivers/vgc.pyc
 ${PYSITELIB}/chirp/drivers/vgc.pyo
@@ -500,15 +535,26 @@ ${PYSITELIB}/chirp/drivers/wouxun_common.pyo
 ${PYSITELIB}/chirp/drivers/yaesu_clone.py
 ${PYSITELIB}/chirp/drivers/yaesu_clone.pyc
 ${PYSITELIB}/chirp/drivers/yaesu_clone.pyo
-${PYSITELIB}/chirp/elib_intl.py
-${PYSITELIB}/chirp/elib_intl.pyc
-${PYSITELIB}/chirp/elib_intl.pyo
 ${PYSITELIB}/chirp/errors.py
 ${PYSITELIB}/chirp/errors.pyc
 ${PYSITELIB}/chirp/errors.pyo
 ${PYSITELIB}/chirp/import_logic.py
 ${PYSITELIB}/chirp/import_logic.pyc
 ${PYSITELIB}/chirp/import_logic.pyo
+${PYSITELIB}/chirp/locale/de/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/el/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/es/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/fr/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/hu/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/it/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/tr_TR/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/zh_CN/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/logger.py
 ${PYSITELIB}/chirp/logger.pyc
 ${PYSITELIB}/chirp/logger.pyo
@@ -521,104 +567,98 @@ ${PYSITELIB}/chirp/platform.pyo
 ${PYSITELIB}/chirp/pyPEG.py
 ${PYSITELIB}/chirp/pyPEG.pyc
 ${PYSITELIB}/chirp/pyPEG.pyo
-${PYSITELIB}/chirp/radioreference.py
-${PYSITELIB}/chirp/radioreference.pyc
-${PYSITELIB}/chirp/radioreference.pyo
 ${PYSITELIB}/chirp/settings.py
 ${PYSITELIB}/chirp/settings.pyc
 ${PYSITELIB}/chirp/settings.pyo
-${PYSITELIB}/chirp/ui/__init__.py
-${PYSITELIB}/chirp/ui/__init__.pyc
-${PYSITELIB}/chirp/ui/__init__.pyo
-${PYSITELIB}/chirp/ui/bandplans.py
-${PYSITELIB}/chirp/ui/bandplans.pyc
-${PYSITELIB}/chirp/ui/bandplans.pyo
-${PYSITELIB}/chirp/ui/bankedit.py
-${PYSITELIB}/chirp/ui/bankedit.pyc
-${PYSITELIB}/chirp/ui/bankedit.pyo
-${PYSITELIB}/chirp/ui/clone.py
-${PYSITELIB}/chirp/ui/clone.pyc
-${PYSITELIB}/chirp/ui/clone.pyo
-${PYSITELIB}/chirp/ui/cloneprog.py
-${PYSITELIB}/chirp/ui/cloneprog.pyc
-${PYSITELIB}/chirp/ui/cloneprog.pyo
-${PYSITELIB}/chirp/ui/common.py
-${PYSITELIB}/chirp/ui/common.pyc
-${PYSITELIB}/chirp/ui/common.pyo
-${PYSITELIB}/chirp/ui/config.py
-${PYSITELIB}/chirp/ui/config.pyc
-${PYSITELIB}/chirp/ui/config.pyo
-${PYSITELIB}/chirp/ui/dstaredit.py
-${PYSITELIB}/chirp/ui/dstaredit.pyc
-${PYSITELIB}/chirp/ui/dstaredit.pyo
-${PYSITELIB}/chirp/ui/editorset.py
-${PYSITELIB}/chirp/ui/editorset.pyc
-${PYSITELIB}/chirp/ui/editorset.pyo
-${PYSITELIB}/chirp/ui/fips.py
-${PYSITELIB}/chirp/ui/fips.pyc
-${PYSITELIB}/chirp/ui/fips.pyo
-${PYSITELIB}/chirp/ui/importdialog.py
-${PYSITELIB}/chirp/ui/importdialog.pyc
-${PYSITELIB}/chirp/ui/importdialog.pyo
-${PYSITELIB}/chirp/ui/inputdialog.py
-${PYSITELIB}/chirp/ui/inputdialog.pyc
-${PYSITELIB}/chirp/ui/inputdialog.pyo
-${PYSITELIB}/chirp/ui/mainapp.py
-${PYSITELIB}/chirp/ui/mainapp.pyc
-${PYSITELIB}/chirp/ui/mainapp.pyo
-${PYSITELIB}/chirp/ui/memdetail.py
-${PYSITELIB}/chirp/ui/memdetail.pyc
-${PYSITELIB}/chirp/ui/memdetail.pyo
-${PYSITELIB}/chirp/ui/memedit.py
-${PYSITELIB}/chirp/ui/memedit.pyc
-${PYSITELIB}/chirp/ui/memedit.pyo
-${PYSITELIB}/chirp/ui/miscwidgets.py
-${PYSITELIB}/chirp/ui/miscwidgets.pyc
-${PYSITELIB}/chirp/ui/miscwidgets.pyo
-${PYSITELIB}/chirp/ui/radiobrowser.py
-${PYSITELIB}/chirp/ui/radiobrowser.pyc
-${PYSITELIB}/chirp/ui/radiobrowser.pyo
-${PYSITELIB}/chirp/ui/reporting.py
-${PYSITELIB}/chirp/ui/reporting.pyc
-${PYSITELIB}/chirp/ui/reporting.pyo
-${PYSITELIB}/chirp/ui/settingsedit.py
-${PYSITELIB}/chirp/ui/settingsedit.pyc
-${PYSITELIB}/chirp/ui/settingsedit.pyo
-${PYSITELIB}/chirp/ui/shiftdialog.py
-${PYSITELIB}/chirp/ui/shiftdialog.pyc
-${PYSITELIB}/chirp/ui/shiftdialog.pyo
+${PYSITELIB}/chirp/share/chirp.desktop
+${PYSITELIB}/chirp/share/chirp.ico
+${PYSITELIB}/chirp/share/chirp.png
+${PYSITELIB}/chirp/share/chirp.svg
+${PYSITELIB}/chirp/share/chirpw.1
+${PYSITELIB}/chirp/share/plus-icon.png
+${PYSITELIB}/chirp/share/welcome_screen.png
+${PYSITELIB}/chirp/sources/__init__.py
+${PYSITELIB}/chirp/sources/__init__.pyc
+${PYSITELIB}/chirp/sources/__init__.pyo
+${PYSITELIB}/chirp/sources/base.py
+${PYSITELIB}/chirp/sources/base.pyc
+${PYSITELIB}/chirp/sources/base.pyo
+${PYSITELIB}/chirp/sources/dmrmarc.py
+${PYSITELIB}/chirp/sources/dmrmarc.pyc
+${PYSITELIB}/chirp/sources/dmrmarc.pyo
+${PYSITELIB}/chirp/sources/przemienniki.py
+${PYSITELIB}/chirp/sources/przemienniki.pyc
+${PYSITELIB}/chirp/sources/przemienniki.pyo
+${PYSITELIB}/chirp/sources/radioreference.py
+${PYSITELIB}/chirp/sources/radioreference.pyc
+${PYSITELIB}/chirp/sources/radioreference.pyo
+${PYSITELIB}/chirp/sources/repeaterbook.py
+${PYSITELIB}/chirp/sources/repeaterbook.pyc
+${PYSITELIB}/chirp/sources/repeaterbook.pyo
+${PYSITELIB}/chirp/stock_configs/AU NZ UHF Citizens Band.csv
+${PYSITELIB}/chirp/stock_configs/DE Freenet Frequencies.csv
+${PYSITELIB}/chirp/stock_configs/EU LPD and PMR Channels.csv
+${PYSITELIB}/chirp/stock_configs/FR Marine VHF Channels.csv
+${PYSITELIB}/chirp/stock_configs/PL Calling Frequencies and Simplex.csv
+${PYSITELIB}/chirp/stock_configs/SE Jaktradio 155MHz.csv
+${PYSITELIB}/chirp/stock_configs/SE NO KDR444.csv
+${PYSITELIB}/chirp/stock_configs/UK Business Radio Simple Light Frequencies.csv
+${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Center).csv
+${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Dial).csv
+${PYSITELIB}/chirp/stock_configs/US CA Railroad Channels.csv
+${PYSITELIB}/chirp/stock_configs/US Calling Frequencies.csv
+${PYSITELIB}/chirp/stock_configs/US FRS and GMRS Channels.csv
+${PYSITELIB}/chirp/stock_configs/US MURS Channels.csv
+${PYSITELIB}/chirp/stock_configs/US Marine VHF Channels.csv
+${PYSITELIB}/chirp/stock_configs/US NOAA Weather Alert.csv
 ${PYSITELIB}/chirp/util.py
 ${PYSITELIB}/chirp/util.pyc
 ${PYSITELIB}/chirp/util.pyo
-man/man1/chirpw.1
-share/applications/chirp.desktop
-share/chirp/locale/de/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/es_ES/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/fr/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/hu/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/it/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/tr_TR/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
-share/chirp/locale/zh_CN/LC_MESSAGES/CHIRP.mo
-share/chirp/stock_configs/DE Freenet Frequencies.csv
-share/chirp/stock_configs/EU LPD and PMR Channels.csv
-share/chirp/stock_configs/FR Marine VHF Channels.csv
-share/chirp/stock_configs/KDR444.csv
-share/chirp/stock_configs/NOAA Weather Alert.csv
-share/chirp/stock_configs/SE Jaktradio 155MHz.csv
-share/chirp/stock_configs/UK Business Radio Simple Light Frequencies.csv
-share/chirp/stock_configs/US 60 meter channels (Center).csv
-share/chirp/stock_configs/US 60 meter channels (Dial).csv
-share/chirp/stock_configs/US CA Railroad Channels.csv
-share/chirp/stock_configs/US Calling Frequencies.csv
-share/chirp/stock_configs/US FRS and GMRS Channels.csv
-share/chirp/stock_configs/US MURS Channels.csv
-share/chirp/stock_configs/US Marine VHF Channels.csv
-share/doc/chirp/COPYING
-share/pixmaps/chirp.png
-
+${PYSITELIB}/chirp/wxui/__init__.py
+${PYSITELIB}/chirp/wxui/__init__.pyc
+${PYSITELIB}/chirp/wxui/__init__.pyo
+${PYSITELIB}/chirp/wxui/__main__.py
+${PYSITELIB}/chirp/wxui/__main__.pyc
+${PYSITELIB}/chirp/wxui/__main__.pyo
+${PYSITELIB}/chirp/wxui/bankedit.py
+${PYSITELIB}/chirp/wxui/bankedit.pyc
+${PYSITELIB}/chirp/wxui/bankedit.pyo
+${PYSITELIB}/chirp/wxui/clone.py
+${PYSITELIB}/chirp/wxui/clone.pyc
+${PYSITELIB}/chirp/wxui/clone.pyo
+${PYSITELIB}/chirp/wxui/common.py
+${PYSITELIB}/chirp/wxui/common.pyc
+${PYSITELIB}/chirp/wxui/common.pyo
+${PYSITELIB}/chirp/wxui/config.py
+${PYSITELIB}/chirp/wxui/config.pyc
+${PYSITELIB}/chirp/wxui/config.pyo
+${PYSITELIB}/chirp/wxui/developer.py
+${PYSITELIB}/chirp/wxui/developer.pyc
+${PYSITELIB}/chirp/wxui/developer.pyo
+${PYSITELIB}/chirp/wxui/fips.py
+${PYSITELIB}/chirp/wxui/fips.pyc
+${PYSITELIB}/chirp/wxui/fips.pyo
+${PYSITELIB}/chirp/wxui/main.py
+${PYSITELIB}/chirp/wxui/main.pyc
+${PYSITELIB}/chirp/wxui/main.pyo
+${PYSITELIB}/chirp/wxui/memedit.py
+${PYSITELIB}/chirp/wxui/memedit.pyc
+${PYSITELIB}/chirp/wxui/memedit.pyo
+${PYSITELIB}/chirp/wxui/printing.py
+${PYSITELIB}/chirp/wxui/printing.pyc
+${PYSITELIB}/chirp/wxui/printing.pyo
+${PYSITELIB}/chirp/wxui/query_sources.py
+${PYSITELIB}/chirp/wxui/query_sources.pyc
+${PYSITELIB}/chirp/wxui/query_sources.pyo
+${PYSITELIB}/chirp/wxui/radioinfo.py
+${PYSITELIB}/chirp/wxui/radioinfo.pyc
+${PYSITELIB}/chirp/wxui/radioinfo.pyo
+${PYSITELIB}/chirp/wxui/radiothread.py
+${PYSITELIB}/chirp/wxui/radiothread.pyc
+${PYSITELIB}/chirp/wxui/radiothread.pyo
+${PYSITELIB}/chirp/wxui/report.py
+${PYSITELIB}/chirp/wxui/report.pyc
+${PYSITELIB}/chirp/wxui/report.pyo
+${PYSITELIB}/chirp/wxui/settingsedit.py
+${PYSITELIB}/chirp/wxui/settingsedit.pyc
+${PYSITELIB}/chirp/wxui/settingsedit.pyo
