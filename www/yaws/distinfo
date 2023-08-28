@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2022/10/15 18:29:21 triaxx Exp $
+$NetBSD: distinfo,v 1.11 2023/08/28 07:52:26 nia Exp $
 
 BLAKE2s (yaws-2.1.1.tar.gz) = c2f1669e4ab545fdc975f63565080a44de860af4b3be2cce1671efb006b5f0a4
 SHA512 (yaws-2.1.1.tar.gz) = 71a8f6ef19b6bf84e9628be5b4891ba19eb3d64fab19d2af8ba9218b760f81cc31575015f977fc21bf35a592c4c4a247388a57ab4d7571eb65c4185b0bdf9bce
 Size (yaws-2.1.1.tar.gz) = 1231176 bytes
 SHA1 (patch-ai) = 097339fc81ab7421f90f337b11094b655e7a9bee
+SHA1 (patch-configure.ac) = 1e47eaa4edec3f34dde90df4062b2fab65219708
 SHA1 (patch-scripts_yaws.template) = a7941269c33a345916b05845c11312ca3d47c066
