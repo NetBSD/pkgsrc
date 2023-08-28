@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/28 13:58:48 gdt Exp $
 share/fonts/X11/OTF/Okuda Bold Italic.otf
 share/fonts/X11/OTF/Okuda Bold.otf
 share/fonts/X11/OTF/Okuda Italic.otf
@@ -9,10 +9,12 @@ share/fonts/X11/OTF/Probert Bold Italic.otf
 share/fonts/X11/OTF/Probert Bold.otf
 share/fonts/X11/OTF/Probert Italic.otf
 share/fonts/X11/OTF/Probert.otf
+share/fonts/X11/TTF/Betazed.ttf
 share/fonts/X11/TTF/Fontana Bold Italic.ttf
 share/fonts/X11/TTF/Fontana Bold.ttf
 share/fonts/X11/TTF/Fontana Italic.ttf
 share/fonts/X11/TTF/Fontana.ttf
+share/fonts/X11/TTF/Graalen.ttf
 share/fonts/X11/TTF/Jefferies Bold Italic.ttf
 share/fonts/X11/TTF/Jefferies Bold.ttf
 share/fonts/X11/TTF/Jefferies Italic.ttf
@@ -23,6 +25,9 @@ share/fonts/X11/TTF/Montalban Italic.ttf
 share/fonts/X11/TTF/Montalban.ttf
 share/fonts/X11/TTF/Roddenberry Italic.ttf
 share/fonts/X11/TTF/Roddenberry.ttf
+share/fonts/X11/TTF/Schnaubelt Bold.ttf
+share/fonts/X11/TTF/Schnaubelt Italic.ttf
+share/fonts/X11/TTF/Schnaubelt.ttf
 share/fonts/X11/TTF/Sternbach Italic.ttf
 share/fonts/X11/TTF/Sternbach Outline Italic.ttf
 share/fonts/X11/TTF/Sternbach Outline.ttf
