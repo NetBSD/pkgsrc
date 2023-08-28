@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/28 09:31:13 adam Exp $
+
+BLAKE2s (flasgger-0.9.7.1.tar.gz) = a48b5def13e7ed3dc0a41b62d30d7c1186d9f0b901e2535a2cb4997fcc5040e0
+SHA512 (flasgger-0.9.7.1.tar.gz) = fe1feb5ebadc6c3cde8e9e70726c86efc8d88392c5eb44ddaa6135fa96fbaada975d2042187bd4cebe08d843d21dc8e89dea5f2935b6c65863b36e4a6a39d121
+Size (flasgger-0.9.7.1.tar.gz) = 3979409 bytes
