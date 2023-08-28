@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:29:19 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/08/28 09:47:46 gdt Exp $
 
-BLAKE2s (mod_python-3.5.0.tgz) = 4936e86111e8b39cd50fad193ce35ee650b287df68175819c8a187e4ab9154df
-SHA512 (mod_python-3.5.0.tgz) = a8838c807db36bd316e44c43c1b1db6d6565a30d1823664f3d44667f5843274ff5f77a849fcfa226fcfb6d399ef2dd983939ff0f6db8849a3e7d25ceafe0c765
-Size (mod_python-3.5.0.tgz) = 571403 bytes
+BLAKE2s (mod_python-3.5.0.1.tar.gz) = c33c2b09c107accba9c629b70d242e007a3974fd43e276692df7b275543fee22
+SHA512 (mod_python-3.5.0.1.tar.gz) = 596c2927775f399338f563f56237ab34f940c33ea36082f52cba804dc12d1ca858b148e6a9ea13e2d83adcfdbf16fac7cf19fc5fdfe6dcf2aab36d73d60ee3f2
+Size (mod_python-3.5.0.1.tar.gz) = 313340 bytes
 SHA1 (patch-configure) = 721dc5200205889106c502247a4b4a4a6995b4e2
 SHA1 (patch-configure.in) = 1c77f43224f3c9ae555f91ac4479c60121ad950b
-SHA1 (patch-dist_version.sh) = 9f3dbf596238aa106e06ec1c8b27a90619ef4978
-SHA1 (patch-src___apachemodule.c) = 3f9bfe10c48a2f64e5528e77205d9bdbeaaded07
+SHA1 (patch-dist_version.sh) = d0e3ab6b37b7d8220731c81a7a7068bd798aeac4
