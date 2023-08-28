@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2023/08/28 13:56:21 wiz Exp $
 
 DISTNAME=		meld-3.22.0
 PKGREVISION=		7
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://meldmerge.org/
 COMMENT=		Visual diff and merge tool
 LICENSE=		gnu-gpl-v2
