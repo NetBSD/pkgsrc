@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5172 2023/08/28 13:51:29 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.5173 2023/08/28 16:38:32 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7525,3 +7525,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-faker to 19.3.1 [adam 2023-08-28]
 	Updated textproc/py-eradicate to 2.3.0 [adam 2023-08-28]
 	Updated net/czds to 1.2.14 [fcambus 2023-08-28]
+	Updated mail/opensmtpd-filter-rspamd to 0.1.8 [vins 2023-08-28]
