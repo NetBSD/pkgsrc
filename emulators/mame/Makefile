@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2023/08/14 05:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2023/08/28 07:42:37 nia Exp $
 
 DISTNAME=	mame-0.257
 PKGREVISION=	1
@@ -23,7 +23,7 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 USE_LANGUAGES=		c99 c++
 USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake pkg-config
-UNLIMIT_RESOURCES+=	datasize virtualsize
+UNLIMIT_RESOURCES+=	cputime datasize memorysize virtualsize
 MAKE_FILE=		makefile
 
 # Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
