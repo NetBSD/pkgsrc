@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/02 10:45:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/08/28 09:37:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/httpbin/VERSION
 ${PYSITELIB}/httpbin/__init__.py
 ${PYSITELIB}/httpbin/__init__.pyc
 ${PYSITELIB}/httpbin/__init__.pyo
@@ -16,10 +17,13 @@ ${PYSITELIB}/httpbin/filters.pyo
 ${PYSITELIB}/httpbin/helpers.py
 ${PYSITELIB}/httpbin/helpers.pyc
 ${PYSITELIB}/httpbin/helpers.pyo
+${PYSITELIB}/httpbin/static/favicon.ico
 ${PYSITELIB}/httpbin/structures.py
 ${PYSITELIB}/httpbin/structures.pyc
 ${PYSITELIB}/httpbin/structures.pyo
 ${PYSITELIB}/httpbin/templates/UTF-8-demo.txt
+${PYSITELIB}/httpbin/templates/flasgger/index.html
+${PYSITELIB}/httpbin/templates/footer.html
 ${PYSITELIB}/httpbin/templates/forms-post.html
 ${PYSITELIB}/httpbin/templates/httpbin.1.html
 ${PYSITELIB}/httpbin/templates/images/jackal.jpg
@@ -33,3 +37,9 @@ ${PYSITELIB}/httpbin/templates/trackingscripts.html
 ${PYSITELIB}/httpbin/utils.py
 ${PYSITELIB}/httpbin/utils.pyc
 ${PYSITELIB}/httpbin/utils.pyo
+${PYSITELIB}/tests/__init__.py
+${PYSITELIB}/tests/__init__.pyc
+${PYSITELIB}/tests/__init__.pyo
+${PYSITELIB}/tests/test_httpbin.py
+${PYSITELIB}/tests/test_httpbin.pyc
+${PYSITELIB}/tests/test_httpbin.pyo
