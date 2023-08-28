@@ -1,4 +1,4 @@
-$NetBSD: patch-pandas___libs_window_aggregations.pyx,v 1.2 2023/01/28 19:47:55 he Exp $
+$NetBSD: patch-pandas___libs_window_aggregations.pyx,v 1.3 2023/08/28 10:34:02 adam Exp $
 
 On NetBSD, signbit and sqrt cannot be imported from "libc", because
 even though <math.h> is included, Python.h later includes
@@ -9,23 +9,21 @@ functions.  So ... re-do how we import signbit() and sqrt().
 Submitted upstream:
 https://github.com/pandas-dev/pandas/pull/51049
 
---- pandas/_libs/window/aggregations.pyx.orig   2023-01-19 03:22:10.000000000 +0000
+--- pandas/_libs/window/aggregations.pyx.orig	2023-03-16 14:52:19.000000000 +0000
 +++ pandas/_libs/window/aggregations.pyx
-@@ -1,11 +1,8 @@
+@@ -1,10 +1,6 @@
  # cython: boundscheck=False, wraparound=False, cdivision=True
  
- cimport cython
 -from libc.math cimport (
 -    round,
 -    signbit,
 -    sqrt,
 -)
 +from libc.math cimport round
-+
  from libcpp.deque cimport deque
  
  from pandas._libs.algos cimport TiebreakEnumType
-@@ -20,6 +17,10 @@ from numpy cimport (
+@@ -19,6 +15,10 @@ from numpy cimport (
      ndarray,
  )
  
@@ -35,4 +33,4 @@ https://github.com/pandas-dev/pandas/pull/51049
 +
  cnp.import_array()
  
- from pandas._libs.algos import is_monotonic
+ import cython
