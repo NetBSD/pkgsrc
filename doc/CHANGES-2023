@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5169 2023/08/28 12:06:19 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5170 2023/08/28 12:50:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7520,3 +7520,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/node_exporter to 1.6.1 [bsiegert 2023-08-28]
 	Updated textproc/py-prettytable to 3.8.0 [adam 2023-08-28]
 	Updated www/py-pystache to 0.6.5 [adam 2023-08-28]
+	Updated math/py-kiwisolver to 1.4.5 [adam 2023-08-28]
+	Updated textproc/py-jsonrpclib-pelix to 0.4.3.2 [adam 2023-08-28]
