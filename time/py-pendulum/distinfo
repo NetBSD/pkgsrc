@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:24:34 nia Exp $
-
-BLAKE2s (pendulum-2.1.0.tar.gz) = 865e59884ca3978c24f2b9722d4930ac2db84fc3f7398f4679c4bf497a1d7259
-SHA512 (pendulum-2.1.0.tar.gz) = b7821bf09deb37627e40ed48dead656da8afb3e81908e9e65a89f1533fcd06b5bbcde8604d9d8bf3cf77a6716880daa526e5a23933068f8976bdfb08aceeb670
-Size (pendulum-2.1.0.tar.gz) = 80595 bytes
