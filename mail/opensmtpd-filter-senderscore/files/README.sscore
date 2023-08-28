@@ -1,0 +1,30 @@
++-----------------------------------------------------------------------
+| filter-senderscore setup 
++-----------------------------------------------------------------------
+
+To use the SenderScore filter, you must declare it first in your
+OpemSMTPD configuration. 
+
+Edit the @PKG_SYSCONFDIR@/smtpd/smtpd.conf file to declare the filter:
+
+  filter "senderscore" \
+  	 proc-exec "@PREFIX@/libexec/opesmtpd/filter-senderscore [...]"
+
+The following options may be passed to filter-senderscore:
+
+-blockBelow 10
+block at banner sessions score below 10
+
+-junkBelow 70
+add X-Spam header to sessions below 70
+
+-slowFactor 1000
+delay by up to 1000 ms (proportionally to reputation) each reply
+
+See filter-senderscore(8) man page.
+
+Then add the filter to each listener that should be filtered:
+
+  listen on socket filter "senderscore"
+  listen on $ipv4 [...] filter "senderscore"
+

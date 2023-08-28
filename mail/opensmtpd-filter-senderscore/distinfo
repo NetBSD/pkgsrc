@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/08/28 20:19:30 vins Exp $
+
+BLAKE2s (filter-senderscore-0.1.2.tar.gz) = 231449cc0cc7479fb975925b35476e14f5bd1af01a303f54637bdb759488086f
+SHA512 (filter-senderscore-0.1.2.tar.gz) = 92c5e87eb3cd5fdcd1e54e46887ba14e331f665d4edbefc27ce6f0c93f58a60b1e525b696653274cfdd14eaaff4d1e034f92368d5e4a27ecec28ddd951882867
+Size (filter-senderscore-0.1.2.tar.gz) = 7416 bytes
