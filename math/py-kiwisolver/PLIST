@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/06/16 21:28:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/28 12:47:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,4 +9,7 @@ ${PYSITELIB}/kiwisolver/__init__.pyc
 ${PYSITELIB}/kiwisolver/__init__.pyo
 ${PYSITELIB}/kiwisolver/_cext.pyi
 ${PYSITELIB}/kiwisolver/_cext.so
+${PYSITELIB}/kiwisolver/exceptions.py
+${PYSITELIB}/kiwisolver/exceptions.pyc
+${PYSITELIB}/kiwisolver/exceptions.pyo
 ${PYSITELIB}/kiwisolver/py.typed
