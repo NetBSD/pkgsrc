@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5162 2023/08/28 09:47:53 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5163 2023/08/28 09:56:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7507,3 +7507,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpbin to 0.10.0 [adam 2023-08-28]
 	Updated devel/py-factory_boy to 3.3.0 [adam 2023-08-28]
 	Updated www/ap2-python to 3.5.0.1 [gdt 2023-08-28]
+	Removed www/py-flask-common [adam 2023-08-28]
+	Removed time/py-maya [adam 2023-08-28]
+	Removed time/py-pendulum [adam 2023-08-28]
+	Updated time/py-tzdata to 2023.3 [adam 2023-08-28]
