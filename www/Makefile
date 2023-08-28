@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1738 2023/08/28 07:13:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1739 2023/08/28 09:31:13 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -756,6 +756,7 @@ SUBDIR+=	py-easy-thumbnails
 SUBDIR+=	py-feedgen
 SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-filebrowser_safe
+SUBDIR+=	py-flasgger
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
 SUBDIR+=	py-flask-api
