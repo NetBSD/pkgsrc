@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/11/27 09:26:40 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/08/28 08:52:41 adam Exp $
 
-DISTNAME=	python-sql-1.4.0
+DISTNAME=	python-sql-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-sql/}
