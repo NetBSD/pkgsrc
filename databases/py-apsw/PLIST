@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/28 09:18:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/08/28 10:34:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/apsw/__init__.so
 ${PYSITELIB}/apsw/__main__.py
 ${PYSITELIB}/apsw/__main__.pyc
 ${PYSITELIB}/apsw/__main__.pyo
+${PYSITELIB}/apsw/bestpractice.py
+${PYSITELIB}/apsw/bestpractice.pyc
+${PYSITELIB}/apsw/bestpractice.pyo
 ${PYSITELIB}/apsw/ext.py
 ${PYSITELIB}/apsw/ext.pyc
 ${PYSITELIB}/apsw/ext.pyo
