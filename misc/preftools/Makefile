@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2022/08/17 13:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/28 13:57:59 wiz Exp $
 
 DISTNAME=	preftools-v0.9
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.public-software-group.org/pub/projects/preftools/v0.9/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.public-software-group.org/preftools
 COMMENT=	Command line utilities for ballot counting
 LICENSE=	mit
