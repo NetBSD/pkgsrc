@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/25 15:30:10 adam Exp $
-bin/pystache
-bin/pystache-test
+@comment $NetBSD: PLIST,v 1.4 2023/08/28 12:05:26 adam Exp $
+bin/pystache-${PYVERSSUFFIX}
+bin/pystache-test-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pystache/__init__.py
 ${PYSITELIB}/pystache/__init__.pyc
 ${PYSITELIB}/pystache/__init__.pyo
@@ -110,6 +109,7 @@ ${PYSITELIB}/pystache/tests/examples/escaped.mustache
 ${PYSITELIB}/pystache/tests/examples/escaped.py
 ${PYSITELIB}/pystache/tests/examples/escaped.pyc
 ${PYSITELIB}/pystache/tests/examples/escaped.pyo
+${PYSITELIB}/pystache/tests/examples/extensionless
 ${PYSITELIB}/pystache/tests/examples/inner_partial.mustache
 ${PYSITELIB}/pystache/tests/examples/inner_partial.txt
 ${PYSITELIB}/pystache/tests/examples/inverted.mustache

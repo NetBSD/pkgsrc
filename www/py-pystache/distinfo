@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/08/25 15:30:10 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/08/28 12:05:26 adam Exp $
 
-BLAKE2s (pystache-0.6.4.tar.gz) = 86579907d197dca4918f3b496d232b7309c7411109a4e9988196d778d3ef3a2a
-SHA512 (pystache-0.6.4.tar.gz) = 96f829cf7b8ee29f9d8fb720b283afd95e7336bb10fb6c54d7df019f2e5e397e0e8c35553b1fc935d324e5e0c5a833f15d2dd6d5fb62425115fbc41b07e0e1f8
-Size (pystache-0.6.4.tar.gz) = 90660 bytes
+BLAKE2s (pystache-0.6.5.tar.gz) = bd5124059b5ae917acab9c5f7ee2e2b178ba7371f7fc1a5bd19ff808e29696b7
+SHA512 (pystache-0.6.5.tar.gz) = 56b6e5ce6bc95aa2d5d77172d75d3fa2a37cf0927259f9136d77d9a73ce26384d72b3dd158577d247e1cbbe887916d7bc7982b6d8df2d1c0411dc33c93be6e1c
+Size (pystache-0.6.5.tar.gz) = 100731 bytes
