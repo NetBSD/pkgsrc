@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5168 2023/08/28 11:58:51 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5169 2023/08/28 12:06:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7518,3 +7518,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-apsw to 3.43.0.0 [adam 2023-08-28]
 	Updated ham/chirp to 20230823 [gdt 2023-08-28]
 	Updated sysutils/node_exporter to 1.6.1 [bsiegert 2023-08-28]
+	Updated textproc/py-prettytable to 3.8.0 [adam 2023-08-28]
+	Updated www/py-pystache to 0.6.5 [adam 2023-08-28]
