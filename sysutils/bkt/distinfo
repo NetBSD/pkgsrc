@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/04/13 18:07:04 pin Exp $
+$NetBSD: distinfo,v 1.7 2023/08/28 08:18:51 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -12,9 +12,9 @@ Size (bincode-1.3.3.crate) = 28958 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (bkt-0.6.1.tar.gz) = a6ed113863f6199cf27ebcab91dda18d8f3b19c59a96aef968ea819232a67856
-SHA512 (bkt-0.6.1.tar.gz) = cada3b4c252a7236e9055c5bbdc9f2b9c0fa8f2fe9f41efce2a06bf50de25fdf48f49db08302024c966cb2f3ebc140e1bb8a5777220ca2ec0271a41cc2a38d9a
-Size (bkt-0.6.1.tar.gz) = 33287 bytes
+BLAKE2s (bkt-0.7.0.tar.gz) = 71f017989758a5fc21806a520b0812eeac61c1228d18a6da011498c22e2b2dc1
+SHA512 (bkt-0.7.0.tar.gz) = 9ce8fda455c61891d6ebcbc3e64d0327ae247876fd38fc87b8717ba38eb06b2c3345f31ab8e45ec704ebe0874449a097b9c4be8040463bd961422be5db144e3d
+Size (bkt-0.7.0.tar.gz) = 36002 bytes
 BLAKE2s (cc-1.0.79.crate) = 17938b742da494c871322dd29eb6948f35a47beac2b647ef27ec595a33b8de91
 SHA512 (cc-1.0.79.crate) = cbf0a25f3a23fc540e9d638fabc23f761f1c240ebb4814e761e90437d71fc559cd155768ab9e78fc192220d8a605c66c3af342ed736b719181656170b98d7bf5
 Size (cc-1.0.79.crate) = 62624 bytes
