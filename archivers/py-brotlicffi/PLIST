@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/28 09:27:05 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/brotlicffi/__init__.py
+${PYSITELIB}/brotlicffi/__init__.pyc
+${PYSITELIB}/brotlicffi/__init__.pyo
+${PYSITELIB}/brotlicffi/_api.py
+${PYSITELIB}/brotlicffi/_api.pyc
+${PYSITELIB}/brotlicffi/_api.pyo
+${PYSITELIB}/brotlicffi/_brotlicffi.abi3.so
+${PYSITELIB}/brotlicffi/_build.py
+${PYSITELIB}/brotlicffi/_build.pyc
+${PYSITELIB}/brotlicffi/_build.pyo
