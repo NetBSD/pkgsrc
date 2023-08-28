@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/01/31 07:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/28 13:57:42 wiz Exp $
 
 DISTNAME=	baikal-0.9.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	baikal
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sabre.io/baikal/
 COMMENT=	Lightweight CalDAV+CardDAV server
 LICENSE=	gnu-gpl-v3
