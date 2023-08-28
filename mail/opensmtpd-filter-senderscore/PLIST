@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/28 20:19:30 vins Exp $
+libexec/opensmtpd/filter-senderscore
+man/man8/filter-senderscore.8
+share/doc/opensmtpd/filters/README.sscore
