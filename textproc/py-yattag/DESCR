@@ -1,0 +1,10 @@
+Yattag is a Python library for generating HTML or XML in a pythonic
+way.  With Yattag,
+ - you don't have to worry about closing HTML tags
+ - your HTML templates are Python code. Not a weird template
+   language. Just Python.
+ - you can easily render HTML forms, with defaults values and error
+   messages.
+
+It's actually easier and more readable to generate dynamic HTML with
+Yattag than to write static HTML.
