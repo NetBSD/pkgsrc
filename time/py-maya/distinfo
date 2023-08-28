@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:24:34 nia Exp $
-
-BLAKE2s (maya-0.6.1.tar.gz) = d353240f1a3a4ffb7797f519175d9c56c8a9489261d426c16310da9672e6d7ce
-SHA512 (maya-0.6.1.tar.gz) = 11d721de6d63cfed3980fc3fdd0c857d981f5286ee4cdb02cd464e69684f4461fae9d23e1b957855071d6408ef0fbb4f55c39914750c939af77a2b38a30cbfee
-Size (maya-0.6.1.tar.gz) = 14387 bytes
