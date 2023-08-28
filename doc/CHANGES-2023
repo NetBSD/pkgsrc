@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5153 2023/08/28 08:20:40 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5154 2023/08/28 08:22:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7494,3 +7494,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.functools to 3.9.0 [adam 2023-08-28]
 	Updated sysutils/bkt to 0.7.0 [pin 2023-08-28]
 	Updated devel/cargo-c to 0.9.24 [pin 2023-08-28]
+	Updated textproc/csvlens to 0.3.1 [pin 2023-08-28]
