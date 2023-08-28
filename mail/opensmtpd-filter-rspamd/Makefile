@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/28 18:08:42 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/28 19:13:29 vins Exp $
 
 DISTNAME=	filter-rspamd-0.1.8
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	libexec/opensmtpd ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/doc/opensmtpd/filters
 
 post-extract:
-	cp ${FILESDIR}/README.rspamd ${WRKSRC}
+	${RUN}${CP} ${FILESDIR}/README.rspamd ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${GOPATH}/bin/filter-rspamd		\
