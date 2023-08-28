@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2019/07/15 14:08:03 nia Exp $
+# $NetBSD: Makefile,v 1.97 2023/08/28 13:55:59 wiz Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 LICENSE=	info-zip
