@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5170 2023/08/28 12:50:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5171 2023/08/28 13:19:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7522,3 +7522,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-pystache to 0.6.5 [adam 2023-08-28]
 	Updated math/py-kiwisolver to 1.4.5 [adam 2023-08-28]
 	Updated textproc/py-jsonrpclib-pelix to 0.4.3.2 [adam 2023-08-28]
+	Updated devel/py-faker to 19.3.1 [adam 2023-08-28]
+	Updated textproc/py-eradicate to 2.3.0 [adam 2023-08-28]
