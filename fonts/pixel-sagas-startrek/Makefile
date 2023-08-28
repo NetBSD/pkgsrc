@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/11/02 22:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/28 13:58:48 gdt Exp $
 
 DISTNAME=	pixels-sagas-startrek-201404
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.pixelsagas.com/files/
 DISTFILES+=	PS_Font_Fontana.zip
@@ -14,9 +14,13 @@ DISTFILES+=	PS_Font_Sternbach.zip
 DISTFILES+=	PS_Font_Tellarite.zip
 DISTFILES+=	PS_Font_Trek_Arrowcaps.zip
 DISTFILES+=	PS_Font_Trek_Arrowheads.zip
+DISTFILES+=	PS_Font_Betazed.zip
+DISTFILES+=	PS_Font_Graalen.zip
+DISTFILES+=	PS_Font_Schnaubelt.zip
 
+# pinged 20230827
 MAINTAINER=	christtrekker@users.sourceforge.net
-#HOMEPAGE=	http://www.pixelsagas.com/fonts.php
+HOMEPAGE=	http://www.pixelsagas.com/
 COMMENT=	Star Trek fonts from Pixel Sagas (Neale Davidson)
 LICENSE=	pixel-sagas-shareware-license
 
