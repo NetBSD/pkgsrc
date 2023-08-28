@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5164 2023/08/28 10:18:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5165 2023/08/28 10:33:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7512,3 +7512,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed time/py-pendulum [adam 2023-08-28]
 	Updated time/py-tzdata to 2023.3 [adam 2023-08-28]
 	Updated sysutils/lsd to 1.0.0 [pin 2023-08-28]
+	Added textproc/py-yattag version 1.15.1 [gdt 2023-08-28]
