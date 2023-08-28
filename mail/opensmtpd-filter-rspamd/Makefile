@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/28 16:26:10 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/28 18:08:42 vins Exp $
 
 DISTNAME=	filter-rspamd-0.1.8
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
@@ -15,11 +15,11 @@ LICENSE=	isc
 DEPENDS+=	opensmtpd-[0-9]*:../../mail/opensmtpd
 DEPENDS+=	rspamd-[0-9]*:../../mail/rspamd
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	README.rspamd
-SUBST_VARS.conf=	PKG_SYSCONFDIR
-SUBST_MESSAGE.conf=	Replacing pkgsrc placeholders.
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	README.rspamd
+SUBST_VARS.prefix=	PKG_SYSCONFDIR PREFIX
+SUBST_MESSAGE.prefix=	Replacing pkgsrc placeholders.
 
 GOPATH=	${WRKDIR}/.gopath
 
