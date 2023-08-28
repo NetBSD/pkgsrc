@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5167 2023/08/28 10:37:54 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5168 2023/08/28 11:58:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7463,6 +7463,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/go121 version 1.21.0 [bsiegert 2023-08-26]
 	Updated sysutils/onefetch to 2.18.1nb1 [he 2023-08-26]
 	Updated devel/golangci-lint to 1.54.2 [bsiegert 2023-08-26]
+	Removed devel/go-flags-svent [bsiegert 2023-08-26]
 	Updated devel/py-autopep8 to 2.0.4 [adam 2023-08-27]
 	Updated devel/py-typeguard to 4.1.3 [adam 2023-08-27]
 	Updated devel/py-pluggy to 1.3.0 [adam 2023-08-27]
@@ -7516,3 +7517,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pandas to 2.0.3 [adam 2023-08-28]
 	Updated databases/py-apsw to 3.43.0.0 [adam 2023-08-28]
 	Updated ham/chirp to 20230823 [gdt 2023-08-28]
+	Updated sysutils/node_exporter to 1.6.1 [bsiegert 2023-08-28]
