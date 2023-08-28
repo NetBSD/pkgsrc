@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2023/08/15 17:32:22 fcambus Exp $
+# $NetBSD: Makefile,v 1.35 2023/08/28 15:09:33 fcambus Exp $
 
 DISTNAME=	mold-2.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rui314/mold/
 COMMENT=	High performance drop-in replacement for existing Unix linkers
 LICENSE=	mit
