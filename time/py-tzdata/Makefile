@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/28 09:55:49 adam Exp $
 
-DISTNAME=	pytzdata-2020.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+DISTNAME=	tzdata-2023.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytzdata/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzdata/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/sdispater/pytzdata
-COMMENT=	Timezone database for Python
-LICENSE=	mit
+HOMEPAGE=	https://github.com/python/tzdata
+COMMENT=	Provider of IANA time zone data
+LICENSE=	apache-2.0
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
