@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/28 09:39:51 adam Exp $
 
-DISTNAME=	factory_boy-3.2.1
+DISTNAME=	factory_boy-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/factory_boy/}
 
@@ -15,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-faker>=0.7.0:../../devel/py-faker
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
