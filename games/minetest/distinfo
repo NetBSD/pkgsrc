@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2023/08/13 19:07:10 pin Exp $
+$NetBSD: distinfo,v 1.10 2023/08/28 07:01:28 nia Exp $
 
 BLAKE2s (minetest-5.7.0/irrlicht.tar.gz) = e68f98b5b1e24e21919eab7fed281cac3a5b935c6b4c93db7cdcd428ddc7f15a
 SHA512 (minetest-5.7.0/irrlicht.tar.gz) = 216221b5073d2b234b2d19658b30517c3abb2677c16e3a9b7fd31c15431bd2ffc047a68851c5bebf94aeb178d6b761a80c2f5744a7498cdac1d7b65fed139cc0
@@ -11,3 +11,4 @@ SHA512 (minetest-5.7.0/minetest.tar.gz) = 6a934db5fd2c7c14fcfa87fb306662fa1ccf20
 Size (minetest-5.7.0/minetest.tar.gz) = 10115973 bytes
 SHA1 (patch-lib_irrlichtmt_source_Irrlicht_CIrrDeviceLinux.cpp) = 22099c0803dcdb74055d69bb810e54b9832f2d3e
 SHA1 (patch-lib_irrlichtmt_source_Irrlicht_os.cpp) = c7f2c8529874f76029641f0281d7cda0f3797971
+SHA1 (patch-src_util_string.cpp) = f240efd440fa540c1f767735892b9177089a8f30
