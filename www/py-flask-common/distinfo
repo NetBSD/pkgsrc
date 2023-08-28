@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:37 nia Exp $
-
-BLAKE2s (Flask-Common-0.3.0.tar.gz) = 277e391047b73365e38fad40a13673636733a1783d1ed700d74e53c0371af289
-SHA512 (Flask-Common-0.3.0.tar.gz) = 15dda3ade4140278617c14eb3004d848a0b44ccaf59bf94859177ae5284e453c9bd928817a7636bd437f374e53828b03fac2f2bf5d033284f3119e1595cca53f
-Size (Flask-Common-0.3.0.tar.gz) = 3560 bytes
