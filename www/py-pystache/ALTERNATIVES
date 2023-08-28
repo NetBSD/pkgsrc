@@ -1,0 +1,2 @@
+bin/pystache @PREFIX@/bin/pystache-@PYVERSSUFFIX@
+bin/pystache-test @PREFIX@/bin/pystache-test-@PYVERSSUFFIX@
