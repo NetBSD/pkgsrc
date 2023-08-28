@@ -1,55 +1,52 @@
-# $NetBSD: Makefile,v 1.59 2023/08/14 05:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2023/08/28 10:37:40 gdt Exp $
 
-DISTNAME=	chirp-daily-20221217
-PKGNAME=	${DISTNAME:S/-daily//}
-PKGREVISION=	4
+VERSION=	20230823
+DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
-MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
+MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
 # Chirp does not have what would normally called releasees.  They have
 # "daily builds" which are like releases except that:
-#   they are called chirp-daily instead of chirp
+#   they are called chirp-next instead of chirp
 #   they have YYYYMMDD version numbers
 #   they don't have the usual release testing
+# They do have a history of stability.
 # Upstream says
 #    they will not go back to regular version numbers
-#    the preferred name is chirp, not chirp-daily
+#    the preferred name is chirp, not chirp-next or chipr-daily
 # via
 #   https://chirp.danplanet.com/issues/8067
 #   https://chirp.danplanet.com/news/15
+#   discussions on their mailinglist
 
-MAINTAINER=	dbj@NetBSD.org
-#MAINTAINER+=	gdt@NetBSD.org
-HOMEPAGE=	https://chirp.danplanet.com/projects/chirp/wiki/Home
+MAINTAINER=	gdt@NetBSD.org
+#MAINTAINER+=	dbj@NetBSD.org
+HOMEPAGE=	https://chirp.danplanet.com/
 COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	#none
-REPLACE_PYTHON=	*.py chirp/*.py chirp/ui/*.py
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+
+# setup.py:install_requires
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-resources
+.endif
+DEPENDS+=	${PYPKGPREFIX}-yattag>=1.15.1:../../textproc/py-yattag
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
-EGG_NAME=	chirp-daily_${PKGVERSION_NOREV}
+# setup.py:extras_require
+DEPENDS+=	${PYPKGPREFIX}-wxPython>=4:../../x11/py-wxPython
 
 .include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=			fix-manpaths
-SUBST_STAGE.fix-manpaths=	pre-configure
-SUBST_MESSAGE.fix-manpaths=	Fixing man paths
-SUBST_FILES.fix-manpaths=	setup.py
-SUBST_SED.fix-manpaths=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
-
-SUBST_CLASSES+=			fix-sharepaths
-SUBST_STAGE.fix-sharepaths=	pre-configure
-SUBST_MESSAGE.fix-sharepaths=	Fixing /usr/share paths
-SUBST_FILES.fix-sharepaths=	chirp/platform.py
-SUBST_SED.fix-sharepaths=	-e 's,/usr/share,${PREFIX}/share,g'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/py-libxml2/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
