@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.112 2023/07/31 14:08:34 fcambus Exp $
+# $NetBSD: Makefile,v 1.113 2023/08/28 15:09:33 fcambus Exp $
 
 DISTNAME=	binutils-2.41
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/binutils/
 COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
