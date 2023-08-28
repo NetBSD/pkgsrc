@@ -1,9 +1,0 @@
-Datetimes are very frustrating to work with in Python, especially when
-dealing with different locales on different systems. This library exists
-to make the simple things much easier, while admitting that time is an
-illusion (timezones doubly so).
-
-Datetimes should be interacted with via an API written for humans.
-
-Maya is mostly built around the headaches and use-cases around parsing
-datetime data from websites.
