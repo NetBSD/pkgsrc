@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/06/28 08:27:04 fcambus Exp $
+$NetBSD: distinfo,v 1.4 2023/08/28 13:51:18 fcambus Exp $
 
-BLAKE2s (czds-1.2.12.tar.gz) = eb70c7fae016918ba628e257f8a753e2a685f12bbc2be0a8e144d6dce0d0dde7
-SHA512 (czds-1.2.12.tar.gz) = 797a6677122c482d503939c3c478741f5d72a03c9a87c3c6008fc4244380a2add11267692cf60715c569857a6590500fe8e98513ec272d3e335e7fd851c98919
-Size (czds-1.2.12.tar.gz) = 31812 bytes
+BLAKE2s (czds-1.2.14.tar.gz) = 2aea403eee6b03620f65e61e7ebc10ab1b13df470b8313ac18edef37e2673554
+SHA512 (czds-1.2.14.tar.gz) = 18bf408bf23b809d24e30287de17bb58d3c47a7efa2a81d7a7c3516acc717b38df7ebdc122cff91921de6dc9262f3e06e10c89e74d7a52ee7f992455d046c55c
+Size (czds-1.2.14.tar.gz) = 35081 bytes
