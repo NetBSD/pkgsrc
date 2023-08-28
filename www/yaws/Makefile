@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/08/14 05:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/28 07:52:26 nia Exp $
 #
 
 DISTNAME=		yaws-2.1.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=erlyaws/}
 GITHUB_TAG=		${DISTNAME}
@@ -21,6 +21,9 @@ USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl tar
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	yaws
+
+# Disable warnings as errors for more portable builds.
+MAKE_FLAGS+=		WARNINGS_AS_ERRORS=
 
 .include "../../mk/bsd.prefs.mk"
 

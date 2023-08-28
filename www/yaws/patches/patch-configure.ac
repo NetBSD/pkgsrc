@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2023/08/28 07:52:26 nia Exp $
+
+Disable warnings as errors and default -O3 for more portable builds.
+
+--- configure.ac.orig	2022-02-04 12:16:44.000000000 +0000
++++ configure.ac
+@@ -42,8 +42,6 @@ AM_DISABLE_STATIC
+ AM_ENABLE_SHARED
+ AM_PROG_LIBTOOL
+ 
+-CFLAGS="-Werror -Wall -O3 $old_cflags"
+-
+ 
+ dnl ------------------------------------------------------------------
+ dnl Handle configure options.
