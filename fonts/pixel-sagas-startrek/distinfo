@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/08/28 13:58:48 gdt Exp $
 
+BLAKE2s (PS_Font_Betazed.zip) = 3888286edc338fddaca06e3a539913f9d84459d1897b0ed944cd77fcf72035ea
+SHA512 (PS_Font_Betazed.zip) = d57815c2089945a0554df80da24d238fe4f79dec8b8423c0bcd29070f4d00d0147b32b6bf66a03f75dacc994d01be76e7b7d774cc770fd48f79e1af2fedf5c60
+Size (PS_Font_Betazed.zip) = 8383 bytes
 BLAKE2s (PS_Font_Fontana.zip) = 22e252d09eac8922167368364ccbfaa277ee15e5c144a3caa186e2616253c45b
 SHA512 (PS_Font_Fontana.zip) = 05d8e916e982f00351ed0fc45d1f6a416e30f48f876ddff191458677a295302999929cb01019e95211bd06a3e7f9103c732f622a99d2e4e007d3370a4a91c5a3
 Size (PS_Font_Fontana.zip) = 43295 bytes
+BLAKE2s (PS_Font_Graalen.zip) = 67fcccf084f3bbbdb35fcabb0ec3dd0a32a9e9a46687334c2fc73abb3cfc0696
+SHA512 (PS_Font_Graalen.zip) = ffcb57eef4c7edc65b64b0806b848f9c1c4ff0f2689c4da3da6a63f2e0833ca8ebfba05886d30e6f1c92a93c9deda2135051066f38bba60f529ab328ec1d1b59
+Size (PS_Font_Graalen.zip) = 8622 bytes
 BLAKE2s (PS_Font_Jefferies.zip) = 3e6110b85cfbab7f3162542680964ea31fb9b56302bce3e25a6022d3f43ed936
 SHA512 (PS_Font_Jefferies.zip) = d68f9f50b9b4c8afa61c8e4f8dba159fa569f0199976da4e7b8fd0e03d00a71870a176c5c58ad5f59036ce23cb366ae0c7c0024f9651a34e3f4973c6df900a2b
 Size (PS_Font_Jefferies.zip) = 38705 bytes
@@ -18,6 +24,9 @@ Size (PS_Font_Probert.zip) = 74185 bytes
 BLAKE2s (PS_Font_Roddenberry.zip) = 71b2a1721ddb556c6ed1cd0c5138aa8fa2f6e81a49d5c00d7b8ebe13a28ae1f4
 SHA512 (PS_Font_Roddenberry.zip) = 4d39db241f93ac1b3d9168426b30fbf20f01837ff7117f8507b49a56a29b9880db82633e1cc82e06610b13cac2c14bc66d69b5c2456bd5a4d28c75dcc199988e
 Size (PS_Font_Roddenberry.zip) = 22965 bytes
+BLAKE2s (PS_Font_Schnaubelt.zip) = 4386231d7bb8d6c724df7b48556c67c0e990ebd3efef13da5e4fc195656cee34
+SHA512 (PS_Font_Schnaubelt.zip) = fbd4348ab8038855a1dd5a4351b62c8c9670dee29906d42fc123f5f6da7c3a09d7245849c269ce0997c985067135f74540cc56a8bd4d1cc3e0479cdf0169a05c
+Size (PS_Font_Schnaubelt.zip) = 37565 bytes
 BLAKE2s (PS_Font_Sternbach.zip) = e8f51fd7a0599599e3b3992c345a09a8e56c8279d17add617cc818e1a7c2f87c
 SHA512 (PS_Font_Sternbach.zip) = ceaf7ea1723598c5694ea91a9ec6f2a0ef19868e9bfe22be8d6df86d331d5ec5ab34b4d7b2906d5656a773cf8871062cd78be21d86491768b95340e2dc1678a6
 Size (PS_Font_Sternbach.zip) = 55095 bytes
