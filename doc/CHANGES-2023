@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5163 2023/08/28 09:56:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5164 2023/08/28 10:18:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7511,3 +7511,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed time/py-maya [adam 2023-08-28]
 	Removed time/py-pendulum [adam 2023-08-28]
 	Updated time/py-tzdata to 2023.3 [adam 2023-08-28]
+	Updated sysutils/lsd to 1.0.0 [pin 2023-08-28]
