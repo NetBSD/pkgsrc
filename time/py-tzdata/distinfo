@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:24:36 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/08/28 09:55:49 adam Exp $
 
-BLAKE2s (pytzdata-2020.1.tar.gz) = 74b052f0047bc6b69b53d32c3dbf1bee1bffa22ce85dfed6d9a5cc40584c831e
-SHA512 (pytzdata-2020.1.tar.gz) = 4ca1eccc92cf116754b1d7635f2643143c46fa839ab16c7673855d270ae94ba83e31a4e0904e4792c1f35eb99c2d07b06aaf15b3e3dc32dc603f8837d631ee0c
-Size (pytzdata-2020.1.tar.gz) = 281719 bytes
+BLAKE2s (tzdata-2023.3.tar.gz) = be52c9be3fb9bd13c10dec4e2a626453dbfe857ad5c5cb69d3e216f5c52a5a99
+SHA512 (tzdata-2023.3.tar.gz) = d19878d83dec768297ceab69fdadb3dd11f5304726e1796e494b17ff9e8b6b5ac86646a2ae3bad47794872392c28eedd0db3c799e8bc9d37b8f223f969ee25bf
+Size (tzdata-2023.3.tar.gz) = 187483 bytes
