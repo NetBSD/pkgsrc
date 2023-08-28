@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/28 16:26:10 vins Exp $
+libexec/opensmtpd/filter-rspamd
+man/man8/filter-rspamd.8
+share/doc/opensmtpd/filters/README.rspamd

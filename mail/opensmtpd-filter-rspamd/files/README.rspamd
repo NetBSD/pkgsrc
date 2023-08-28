@@ -1,0 +1,18 @@
++-----------------------------------------------------------------------
+| filter-rspamd setup
++-----------------------------------------------------------------------
+
+To use the rspamd filter, you must declare it first in your OpenSMTPD 
+configuration.
+
+Edit the @PKG_SYSCONFDIR@/smtpd/smtpd.conf file to declare the filter:
+
+  filter "rspamd" proc-exec "filter-rspamd"
+
+Then add the filter to each listener that should be filtered:
+
+  listen on socket filter "rspamd"
+  listen on all filter "rspamd"
+
+The filter itself doesn't have a configuration and depends upon 
+the Rspamd daemon configuration. 
