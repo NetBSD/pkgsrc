@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.88 2023/04/19 08:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.89 2023/08/29 14:43:01 taca Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
@@ -40,7 +39,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/clamscan
 NOT_PAX_MPROTECT_SAFE+=	bin/freshclam
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
+.if ${PKGSRC_COMPILER:Mclang} || ${CC_VERSION:Mgcc-[6-9]*} || ${CC_VERSION:Mgcc-1[0-9].*}
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
 .endif
 
@@ -91,7 +90,6 @@ post-install:
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../mail/libmilter/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
