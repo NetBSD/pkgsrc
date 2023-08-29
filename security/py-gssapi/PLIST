@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/07 07:16:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/29 06:16:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,7 +32,7 @@ ${PYSITELIB}/gssapi/raw/__init__.pyo
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.py
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyc
 ${PYSITELIB}/gssapi/raw/_enum_extensions/__init__.pyo
-${PLIST.posix}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_dce.so
+${PYSITELIB}/gssapi/raw/_enum_extensions/ext_dce.so
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/_enum_extensions/ext_iov_mic.so
 ${PYSITELIB}/gssapi/raw/chan_bindings.pyi
 ${PYSITELIB}/gssapi/raw/chan_bindings.so
@@ -46,7 +46,7 @@ ${PYSITELIB}/gssapi/raw/ext_cred_imp_exp.so
 ${PYSITELIB}/gssapi/raw/ext_cred_store.pyi
 ${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_cred_store.so
 ${PYSITELIB}/gssapi/raw/ext_dce.pyi
-${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_dce.so
+${PYSITELIB}/gssapi/raw/ext_dce.so
 ${PYSITELIB}/gssapi/raw/ext_dce_aead.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_dce_aead.so
 ${PYSITELIB}/gssapi/raw/ext_ggf.pyi
