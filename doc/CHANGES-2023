@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5194 2023/08/29 17:31:31 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5195 2023/08/29 19:25:02 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7557,3 +7557,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/samba4 to 4.18.6 [taca 2023-08-29]
 	Updated x11/xforms to 1.2.5pre2 [vins 2023-08-29]
 	Updated devel/objfw to 1.0 [js 2023-08-29]
+	Updated pkgtools/pkglint to 23.2.1 [rillig 2023-08-29]
