@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5190 2023/08/29 14:47:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5191 2023/08/29 14:51:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7554,3 +7554,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/clamav-doc to 0.103.10 [taca 2023-08-29]
 	Updated net/bind916 to 9.16.43 [taca 2023-08-29]
 	Updated net/bind918 to 9.18.18 [taca 2023-08-29]
+	Updated net/samba4 to 4.18.6 [taca 2023-08-29]
