@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.56 2023/06/07 11:27:32 micha Exp $
+# $NetBSD: Makefile,v 1.57 2023/08/29 20:01:53 adam Exp $
 
-DISTNAME=	gupnp-av-0.12.7
-PKGREVISION=	29
+DISTNAME=	gupnp-av-0.14.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-av/0.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-av/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gupnp.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
 COMMENT=	Helpers for audio/video applications using GUPnP
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	gupnp-av-1.0.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-av-1.0.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
