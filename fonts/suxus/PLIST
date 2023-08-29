@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/29 05:58:08 vins Exp $
+share/fonts/X11/suxus/fonts.alias
+share/fonts/X11/suxus/suxus-iso-8859-1.pcf.gz
+share/fonts/X11/suxus/suxus-iso-8859-15.pcf.gz
