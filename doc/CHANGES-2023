@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5181 2023/08/29 07:10:00 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5182 2023/08/29 07:38:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7541,3 +7541,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/py-pydyf to 0.7.0 [adam 2023-08-29]
 	Updated time/py-relativetimebuilder to 3.0.0 [adam 2023-08-29]
 	Updated textproc/fmtlib to 10.1.1 [adam 2023-08-29]
+	Updated devel/py-decorator to 5.1.1 [adam 2023-08-29]
+	Updated devel/py-limits to 3.5.0 [adam 2023-08-29]
