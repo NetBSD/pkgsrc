@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2023/08/18 10:57:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2023/08/29 09:48:46 nia Exp $
 # used by lang/gcc13-libjit/Makefile
 
 GCC_PKGNAME=		gcc13
@@ -134,6 +134,11 @@ BUILDLINK_DEPMETHOD.binutils=	full
 .    include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
+.endif
+
+.if ${OPSYS} == "Linux"
+# glibc limitations, needs at least -O1
+FORTIFY_SUPPORTED=	no
 .endif
 
 .if ${OS_VARIANT} == "SmartOS"
