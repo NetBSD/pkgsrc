@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/29 07:29:24 adam Exp $
 
-DISTNAME=	decorator-4.4.2
+DISTNAME=	decorator-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/decorator/}
 
@@ -12,6 +11,8 @@ COMMENT=	Generic Python decorator utilities
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
