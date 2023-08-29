@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/07/31 14:34:18 bacon Exp $
+$NetBSD: distinfo,v 1.2 2023/08/29 21:49:56 bacon Exp $
 
 BLAKE2s (STAR-2.7.10b.tar.gz) = ae5b1c236c1b5975d60277dbd5634661a4598e6f3f906f3d6b582b403edb58d3
 SHA512 (STAR-2.7.10b.tar.gz) = c4e94fd19f2a8145c38d59b39d91af16b53af63da2d77275445b9aeadfd287e3d2749829352a034e45e4352c64884275fa5b7b2ed28b95bf47cac3183b0d74aa
@@ -8,3 +8,4 @@ SHA1 (patch-SharedMemory.cpp) = e4b97d68ddeb7ed2c7da66378f253ff4cd42abee
 SHA1 (patch-SoloBarcode.cpp) = a939a97cadd05b1ec6b6dfcddb469acd5072b0e8
 SHA1 (patch-SuffixArrayFuns.cpp) = b7c623c02277fdfc2bd9d6fa8068afafeb46b1cf
 SHA1 (patch-bamSortByCoordinate.cpp) = e91a4ac9f04beb29c95c7bfbb5d89c5bf41aca41
+SHA1 (patch-opal_opal.cpp) = e41a9981fbaf43d18264fc4ac13163501aac93bb

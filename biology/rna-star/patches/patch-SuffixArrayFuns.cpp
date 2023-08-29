@@ -1,4 +1,4 @@
-$NetBSD: patch-SuffixArrayFuns.cpp,v 1.1 2023/07/31 14:34:18 bacon Exp $
+$NetBSD: patch-SuffixArrayFuns.cpp,v 1.2 2023/08/29 21:49:57 bacon Exp $
 
 # Drop obsolete modifier for c++17 compat
 

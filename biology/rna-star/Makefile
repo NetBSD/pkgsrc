@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/07/31 14:34:18 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/29 21:49:56 bacon Exp $
 
 DISTNAME=	STAR-2.7.10b
 PKGNAME=	rna-star-2.7.10b
