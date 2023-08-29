@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:34:48 nia Exp $
+$NetBSD: distinfo,v 1.25 2023/08/29 15:05:39 vins Exp $
 
-BLAKE2s (xforms-1.0.tar.gz) = 52f8ab136ecaa04eca32fcbcd0c84938aca7f9c1bca8179fe9ae8a5159ec6013
-SHA512 (xforms-1.0.tar.gz) = 5ac45dc8dd906269e593adead5c04084ffbeacb9a3c49228203bffe6c4c541e4a5cffa0d4ec61a80d45843a0dbae14492947ad481c8449759699ce9bd8577223
-Size (xforms-1.0.tar.gz) = 1012878 bytes
-SHA1 (patch-aa) = d33ccbf03d2896c0a0495b0a806a7e258ab010a3
-SHA1 (patch-ab) = fec198a109b9c7af16e3297a7f6048a501495723
-SHA1 (patch-ac) = 74484a9710f64f1ba7c30785a5b7007cc53538a4
-SHA1 (patch-ad) = 6a25db72dc39471b2b437c006f8d1186d4b4aaab
-SHA1 (patch-ae) = c77dce8a896ac89915c64fcc9700d4079ed81117
-SHA1 (patch-af) = ff655f2daf11da78f85faad4aad0fcfcc250569c
-SHA1 (patch-ag) = 7364316d275b0da50c9f2749cf462c21aa34b029
-SHA1 (patch-ah) = 636f09a48385762d5bee82c4addbe180a2e95a6b
-SHA1 (patch-lib_local.h) = f5d519c72447235e69d48af65c0d2699153d8310
+BLAKE2s (xforms-2c1a9f151baf50887a517280645ec23379fb96f8.tar.gz) = c57363d804df5aa666bda0cf7182ff1642010ff89f547e32367cc36e102da215
+SHA512 (xforms-2c1a9f151baf50887a517280645ec23379fb96f8.tar.gz) = 2ee6d0a9e5336508dbe5e439abc9e4b30308fb99baad49d520e479f480e2e24c65fc92aacab8da82dd2e7392d4a1e305326df9781a697c14e87e6c420dc67be6
+Size (xforms-2c1a9f151baf50887a517280645ec23379fb96f8.tar.gz) = 1446680 bytes
+SHA1 (patch-ag) = 06fbdbe5a6ea9b7af578b96d6e11d031aea0b461
+SHA1 (patch-ah) = b34c15a582c2b343c0cba5e472cce6dbd0691aa9
