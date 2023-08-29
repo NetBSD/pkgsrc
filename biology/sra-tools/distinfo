@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2023/08/29 00:00:24 bacon Exp $
+
+BLAKE2s (outpaddling-ncbi-vdb-38972fc.tar.gz) = 600ac8ff4f2fbea9d2f06edc0277087e1559636226756eae415826dfbdb1fb5a
+SHA512 (outpaddling-ncbi-vdb-38972fc.tar.gz) = 0cda01bf2faf59aa16c4a402bcc132d4a2fc948240f6e13b2f1d3d93c4f900a837ebf8c24ee8089e88ed4de90a8ab441a4176f8193052fd7b538e27384bcb118
+Size (outpaddling-ncbi-vdb-38972fc.tar.gz) = 18978410 bytes
+BLAKE2s (sra-tools-3.0.6-984f1493e8612cd59a269569bf8c06e25e4e604c.tar.gz) = 2a13546011d4ea0a000a7e1e5fdfdf1d915b6adbac8fd818967ebf4c1670dba5
+SHA512 (sra-tools-3.0.6-984f1493e8612cd59a269569bf8c06e25e4e604c.tar.gz) = 9b1e671c92ba1006392160258c5b6fba85ba7dba59a23e9ed8b534ca31b46ed9e6cf2c92ea69dc2897f5a4aa9da31f5c8981cebb442236d11bcef76b854dbec9
+Size (sra-tools-3.0.6-984f1493e8612cd59a269569bf8c06e25e4e604c.tar.gz) = 44961381 bytes
+SHA1 (patch-build_env.cmake) = 14add56e66e5578fd0d51ce55329285e0981ac4e
+SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
+SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
+SHA1 (patch-tools_external_driver-tool_sratools.cpp) = c490d83f03471e6e8e34b8e88534469ed45b2886
