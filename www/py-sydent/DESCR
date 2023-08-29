@@ -1,0 +1,4 @@
+Sydent is an identity server for the Matrix communications protocol.
+It allows Matrix users to prove that they own an email address or
+phone number, and allows _other_ Matrix users to look them up using
+that email address or phone number.
