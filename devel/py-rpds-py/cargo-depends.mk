@@ -1,6 +1,6 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/08/05 08:00:39 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/08/29 06:53:56 adam Exp $
 
-CARGO_CRATE_DEPENDS+=	archery-0.5.0
+CARGO_CRATE_DEPENDS+=	archery-1.0.0
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
@@ -12,14 +12,14 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.18.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.8
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.66
-CARGO_CRATE_DEPENDS+=	pyo3-0.19.1
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.19.1
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.19.1
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.19.1
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.19.1
+CARGO_CRATE_DEPENDS+=	pyo3-0.19.2
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.19.2
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.19.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.19.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.19.2
 CARGO_CRATE_DEPENDS+=	quote-1.0.31
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.3.5
-CARGO_CRATE_DEPENDS+=	rpds-0.13.0
+CARGO_CRATE_DEPENDS+=	rpds-1.0.0
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.11.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
