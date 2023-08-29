@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5185 2023/08/29 12:43:33 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5186 2023/08/29 14:05:54 manu Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7548,3 +7548,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/libtirpc version 1.3.3 [vins 2023-08-29]
 	Updated devel/py-zope.testrunner to 6.1 [adam 2023-08-29]
 	Updated devel/py-pdm_backend to 2.1.6 [adam 2023-08-29]
+	Added www/py-pysqml2 version 7.1.2 [manu 2023-08-29]
