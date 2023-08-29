@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/18 12:00:13 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/08/29 12:41:17 adam Exp $
 
-BLAKE2s (zope.testrunner-6.0.tar.gz) = ac2f3189c1281a0b0dec8c8f6f935b2244fc6cd9e9660abe389d9f0f2e6344fe
-SHA512 (zope.testrunner-6.0.tar.gz) = d6306e6980f4df93c8149695b363450341ff0ea3b3945edce6512fff116d90c6380b5ab9363541fbe7e81bf0424ac24e624f2044a77a7b55cc87ebf50cfd51d8
-Size (zope.testrunner-6.0.tar.gz) = 149368 bytes
+BLAKE2s (zope.testrunner-6.1.tar.gz) = 4ead419119e14f07883718398bcd07cad8dd54b6b1c1d8fe97b906ccebeb3b8b
+SHA512 (zope.testrunner-6.1.tar.gz) = 6f23bcc7a27b0c5ab8b59ad0ea03a5482b4e7e924b8df41e5c78e86c402971761c875070c5b8553d3d90f772d04422a07bde675b8e2cb160fe5326031226fde3
+Size (zope.testrunner-6.1.tar.gz) = 154261 bytes
