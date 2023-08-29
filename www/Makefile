@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1741 2023/08/29 14:04:47 manu Exp $
+# $NetBSD: Makefile,v 1.1742 2023/08/29 14:15:33 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -876,6 +876,7 @@ SUBDIR+=	py-soupsieve
 SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-swiftclient
 SUBDIR+=	py-swish-e
+SUBDIR+=	py-sydent
 SUBDIR+=	py-telepath
 SUBDIR+=	py-terminado
 SUBDIR+=	py-test-django
