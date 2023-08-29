@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1740 2023/08/28 09:46:23 adam Exp $
+# $NetBSD: Makefile,v 1.1741 2023/08/29 14:04:47 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -864,6 +864,7 @@ SUBDIR+=	py-rjsmin
 SUBDIR+=	py-robobrowser
 SUBDIR+=	py-robot-detection
 SUBDIR+=	py-rss2gen
+SUBDIR+=	py-pysaml2
 SUBDIR+=	py-sanic
 SUBDIR+=	py-sanic-routing
 SUBDIR+=	py-scgi
