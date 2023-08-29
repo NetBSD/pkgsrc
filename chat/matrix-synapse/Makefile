@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/08/14 05:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2023/08/29 14:09:08 manu Exp $
 
 DISTNAME=	matrix-synapse-1.86.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -70,6 +70,7 @@ PKG_SYSCONFSUBDIR=	${HUMAN_PKGNAME}
 DOCDIR=			${PREFIX}/share/doc/${HUMAN_PKGNAME}
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 SYNAPSE_USER?=	synapse
 SYNAPSE_GROUP?=	${SYNAPSE_USER}
