@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2023/02/20 13:41:19 taca Exp $
+# $NetBSD: options.mk,v 1.9 2023/08/29 14:43:01 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	clamav-milter clamav-experimental clamav-unit-test
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-experimental
 .endif
 
 # Enable unit test
-.if ${PKG_OPTIONS:Munit-test}
+.if ${PKG_OPTIONS:Mclamav-unit-test}
 CONFIGURE_ARGS+=		--enable-check
 TEST_TARGET=			check
 # unit test's Makefile depends on gmake.
