@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/16 21:16:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/29 07:08:09 adam Exp $
 include/fmt/args.h
 include/fmt/chrono.h
 include/fmt/color.h
@@ -17,6 +17,6 @@ lib/cmake/fmt/fmt-config.cmake
 lib/cmake/fmt/fmt-targets-release.cmake
 lib/cmake/fmt/fmt-targets.cmake
 lib/libfmt.so
-lib/libfmt.so.${PKGVERSION}
 lib/libfmt.so.10
+lib/libfmt.so.10.1.0
 lib/pkgconfig/fmt.pc
