@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/07/03 10:56:55 vins Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/29 16:25:59 vins Exp $
 
 DISTNAME=	libbsd-0.11.7
 PKGREVISION=	1
@@ -22,11 +22,10 @@ USE_TOOLS+=	pkg-config autoconf automake autoreconf
 
 CFLAGS+=	-ffat-lto-objects
 
+TEST_TARGET=	check
+
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fiv
-
-do-test:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${MAKE} check
 
 PKGCONFIG_OVERRIDE+=	src/libbsd-ctor.pc.in
 PKGCONFIG_OVERRIDE+=	src/libbsd-overlay.pc.in
