@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:41 nia Exp $
-
-BLAKE2s (gssdp-1.2.2.tar.xz) = a58056a0634e44525938497509dbcc2c327372519f9217d7ddb49eba858f89f3
-SHA512 (gssdp-1.2.2.tar.xz) = 3d962ac5a633492979d49c722bbbbeec88385fdbd063d3b68f6b82edbc62c9e78c556d48a904460dd04328bf7a79668dcf3ee33bf61a271ac926e01e2e645f68
-Size (gssdp-1.2.2.tar.xz) = 61444 bytes
