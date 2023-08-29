@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5180 2023/08/29 06:33:09 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5181 2023/08/29 07:10:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7536,3 +7536,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-filelock to 3.12.3 [adam 2023-08-29]
 	Updated sysutils/bkt to 0.7.1 [pin 2023-08-29]
 	Added fonts/cmvnd-fonts version 20211030 [vins 2023-08-29]
+	Updated www/py-httpbin to 0.10.1 [adam 2023-08-29]
+	Updated devel/py-rpds-py to 0.10.0 [adam 2023-08-29]
+	Updated print/py-pydyf to 0.7.0 [adam 2023-08-29]
+	Updated time/py-relativetimebuilder to 3.0.0 [adam 2023-08-29]
+	Updated textproc/fmtlib to 10.1.1 [adam 2023-08-29]
