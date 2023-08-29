@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2023/08/29 19:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.85 2023/08/29 19:55:02 adam Exp $
 
 DISTNAME=	gupnp-1.6.5
 CATEGORIES=	net
@@ -6,8 +6,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gupnp.org/
-COMMENT=	Framework for UPnP devices (1.2 branch)
+HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
+COMMENT=	Framework for UPnP devices
 LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config
