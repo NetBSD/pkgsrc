@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/08/18 10:57:58 nia Exp $
+# $NetBSD: Makefile,v 1.47 2023/08/29 09:48:47 nia Exp $
 
 GCC_PKGNAME=	gcc9
 PKGREVISION= 1
@@ -176,6 +176,11 @@ CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 DEPENDS+=		binutils-[0-9]*:../../devel/binutils
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
+.endif
+
+.if ${OPSYS} == "Linux"
+# glibc limitations, needs at least -O
+FORTIFY_SUPPORTED=	no
 .endif
 
 .if ${OS_VARIANT} == SmartOS
