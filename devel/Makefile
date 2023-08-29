@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4056 2023/08/27 03:05:46 adam Exp $
+# $NetBSD: Makefile,v 1.4057 2023/08/29 11:33:44 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -986,6 +986,7 @@ SUBDIR+=	libthai
 SUBDIR+=	libthreadar
 SUBDIR+=	libthrift
 SUBDIR+=	libthrift_c_glib
+SUBDIR+=	libtirpc
 SUBDIR+=	libtool
 SUBDIR+=	libtool-base
 SUBDIR+=	libtool-fortran
