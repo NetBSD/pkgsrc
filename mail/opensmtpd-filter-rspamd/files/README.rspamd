@@ -15,5 +15,7 @@ Then add the filter to each listener that should be filtered:
   listen on socket filter "rspamd"
   listen on $ipv4 [...] filter "rspamd"
 
+See filer-rspamd(8) man page.
+
 The filter itself doesn't have a configuration and depends upon 
-the Rspamd daemon configuration. 
+the Rspamd daemon configuration.
