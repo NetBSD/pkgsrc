@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:05:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/08/29 20:06:53 adam Exp $
 
-BLAKE2s (gupnp-dlna-0.10.3.tar.xz) = f0a4d3a12fc153155756e23533777d33e8bf13ed77025bc3c01670e4a11e9c22
-SHA512 (gupnp-dlna-0.10.3.tar.xz) = 751969c117a21534a8137e3b89268518ee93a086e70a3d985656a14719c19abdae5c604195bbe68c114725be8ef3f56960b6288f82be59cb13b2e2ff27809f35
-Size (gupnp-dlna-0.10.3.tar.xz) = 328376 bytes
+BLAKE2s (gupnp-dlna-0.12.0.tar.xz) = a98e15e294484d6104706d750e5a1f95309bdbbd3084587127a00b154c0ab132
+SHA512 (gupnp-dlna-0.12.0.tar.xz) = a626fe77426b607325bb8cacb6af5c434d451c1aa550272f0cbe59f84103f7ec8d2be5ebc79a9ea4e56b755ad9cadabdcbd059c49b1c0df143ba15a52fcd0ce0
+Size (gupnp-dlna-0.12.0.tar.xz) = 89480 bytes
