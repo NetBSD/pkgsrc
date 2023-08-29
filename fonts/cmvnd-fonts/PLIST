@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/29 06:27:08 vins Exp $
+share/fonts/X11/cmvnd/antidote.pcf.gz
+share/fonts/X11/cmvnd/berry.pcf.gz
+share/fonts/X11/cmvnd/berryBold.pcf.gz
+share/fonts/X11/cmvnd/lemon.pcf.gz
+share/fonts/X11/cmvnd/limey.pcf.gz
+share/fonts/X11/cmvnd/uushi.pcf.gz
