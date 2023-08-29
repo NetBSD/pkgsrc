@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5193 2023/08/29 16:14:06 js Exp $
+$NetBSD: CHANGES-2023,v 1.5194 2023/08/29 17:31:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7548,7 +7548,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/libtirpc version 1.3.3 [vins 2023-08-29]
 	Updated devel/py-zope.testrunner to 6.1 [adam 2023-08-29]
 	Updated devel/py-pdm_backend to 2.1.6 [adam 2023-08-29]
-	Added www/py-pysqml2 version 7.1.2 [manu 2023-08-29]
+	Added www/py-pysaml2 version 7.1.2 [manu 2023-08-29]
 	Added www/py-sydent version 2.5.6 [manu 2023-08-29]
 	Updated security/clamav to 0.103.10 [taca 2023-08-29]
 	Updated security/clamav-doc to 0.103.10 [taca 2023-08-29]
