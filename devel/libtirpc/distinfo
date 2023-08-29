@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/08/29 11:28:40 vins Exp $
+
+BLAKE2s (libtirpc-1.3.3.tar.bz2) = 0e04d88695974121081c792bc227f87c305f63c182727d4c0855e30104a3b82a
+SHA512 (libtirpc-1.3.3.tar.bz2) = df0781a74ff9ded2d3c4f5eb7e05496b9f58eac8060c02c68331dc14c4a00304dcd19f46836f5756fe0d9d27095fd463d42dd696fcdff891516711b7d63deabe
+Size (libtirpc-1.3.3.tar.bz2) = 562812 bytes
+SHA1 (patch-doc-Makefile.am) = 641ce7aac7651486cf93049d494f016b72644865
+SHA1 (patch-src_svc__auth__gss.c) = 4cb968ac90d26302813ec6c8a36e9c673825a9ab
