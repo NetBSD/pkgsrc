@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1535 2023/08/21 08:34:02 leot Exp $
+# $NetBSD: Makefile,v 1.1536 2023/08/29 20:57:59 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -217,7 +217,6 @@ SUBDIR+=	grive2
 SUBDIR+=	grpc
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
-SUBDIR+=	gssdp12
 SUBDIR+=	gst-plugins1-adaptivedemux2
 SUBDIR+=	gst-plugins1-libnice
 SUBDIR+=	gst-plugins1-rtmp
@@ -234,7 +233,6 @@ SUBDIR+=	gupnp-av
 SUBDIR+=	gupnp-dlna
 SUBDIR+=	gupnp-igd
 SUBDIR+=	gupnp-tools
-SUBDIR+=	gupnp12
 SUBDIR+=	gvproxy
 SUBDIR+=	haproxy
 SUBDIR+=	hdl-dump

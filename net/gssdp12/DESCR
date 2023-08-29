@@ -1,5 +1,0 @@
-A GObject-based API for handling resource discovery and announcement
-over SSDP (Simple Service Discovery Protocol). This package also
-provides a GTK-based device sniffer.
-
-This package contains the 1.2 branch.
