@@ -1,26 +1,39 @@
-# $NetBSD: Makefile,v 1.104 2023/06/07 11:27:32 micha Exp $
+# $NetBSD: Makefile,v 1.105 2023/08/29 19:28:14 adam Exp $
 
-DISTNAME=	gssdp-1.0.3
-PKGREVISION=	26
+DISTNAME=	gssdp-1.6.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
-COMMENT=	Simple Service Discovery Protocol library and device sniffer (1.0 branch)
+COMMENT=	Simple Service Discovery Protocol library and device sniffer
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-gtk
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
+# needs pandoc
+MESON_ARGS+=	-Dmanpages=false
+# needs GTK3+
+MESON_ARGS+=	-Dsniffer=false
 
+LDFLAGS.SunOS+=	-lsocket
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
+PKGCONFIG_OVERRIDE+=		output/meson-private/gssdp-1.2.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libgssdp
+# for Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/libgssdp
+
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.54.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/py-gi-docgen/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
