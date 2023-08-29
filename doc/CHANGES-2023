@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5176 2023/08/29 00:00:34 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.5177 2023/08/29 06:05:45 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7528,3 +7528,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/opensmtpd-filter-rspamd version 0.1.8 [vins 2023-08-28]
 	Added mail/opensmtpd-filter-senderscore version 0.1.2 [vins 2023-08-28]
 	Added biology/sra-tools version 3.0.6 [bacon 2023-08-28]
+	Added fonts/suxus version 1.5 [vins 2023-08-29]
