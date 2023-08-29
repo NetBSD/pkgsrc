@@ -1,32 +1,29 @@
-# $NetBSD: Makefile,v 1.83 2023/08/14 05:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2023/08/29 19:51:59 adam Exp $
 
-DISTNAME=	gupnp-1.0.3
-PKGREVISION=	24
+DISTNAME=	gupnp-1.6.5
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gupnp.org/
-COMMENT=	Framework for UPnP devices (1.0 branch)
+COMMENT=	Framework for UPnP devices (1.2 branch)
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	gupnp-1.0.pc.in
-REPLACE_PYTHON=		tools/gupnp-binding-tool
+REPLACE_PYTHON=	tools/gupnp-binding-tool
 
-TEST_TARGET=		check
-#CFLAGS=		-O0 -g
-#CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
-#CONFIGURE_ARGS+=	--disable-shared
-#CONFIGURE_ARGS+=	--enable-static
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-1.6.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libgupnp
+# for Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/libgupnp
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
+.if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 pre-configure:
 	cp ${FILESDIR}/uuid.pc ${BUILDLINK_DIR}/lib/pkgconfig/
 .else
@@ -34,14 +31,14 @@ pre-configure:
 .endif
 
 .include "../../archivers/xz/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.90
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/py-gi-docgen/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../net/libsoup/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gssdp+=	gssdp>=0.14.15
-.include "../../net/gssdp/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
+.include "../../net/gssdp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
