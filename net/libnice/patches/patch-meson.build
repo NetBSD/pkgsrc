@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2023/08/29 20:54:07 adam Exp $
+
+Build with gupnp-igd-1.6.
+
+--- meson.build.orig	2023-08-29 07:44:40.000000000 +0000
++++ meson.build
+@@ -278,7 +278,7 @@ gst_dep = dependency('gstreamer-base-1.0
+ cdata.set('HAVE_GSTREAMER', gst_dep.found(), description: 'Build GStreamer plugin')
+ 
+ # GUPnP IGD
+-gupnp_igd_dep = dependency('gupnp-igd-1.0', version: gupnp_igd_req, required: get_option('gupnp'))
++gupnp_igd_dep = dependency('gupnp-igd-1.6', version: gupnp_igd_req, required: get_option('gupnp'))
+ cdata.set('HAVE_GUPNP', gupnp_igd_dep.found(), description: 'Use the GUPnP IGD library')
+ 
+ libm = cc.find_library('m', required: false)
