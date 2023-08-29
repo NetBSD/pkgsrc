@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5184 2023/08/29 11:36:14 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5185 2023/08/29 12:43:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7546,3 +7546,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/gtksourceview4 to 4.8.4 [adam 2023-08-29]
 	Updated devel/py-zconfig to 4.0 [adam 2023-08-29]
 	Added devel/libtirpc version 1.3.3 [vins 2023-08-29]
+	Updated devel/py-zope.testrunner to 6.1 [adam 2023-08-29]
+	Updated devel/py-pdm_backend to 2.1.6 [adam 2023-08-29]
