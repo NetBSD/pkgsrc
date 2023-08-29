@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.72 2023/04/19 08:08:36 adam Exp $
+# $NetBSD: Makefile,v 1.73 2023/08/29 20:54:07 adam Exp $
 
-PKGREVISION= 15
 .include "Makefile.common"
 
-# introspection Makefile uses GNUisms
-USE_TOOLS+=		gmake
-CONFIGURE_ARGS+=	--without-gstreamer
+PKGCONFIG_OVERRIDE+=		output/meson-private/nice.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-PKGCONFIG_OVERRIDE+=	nice/nice.pc.in
+MESON_ARGS+=	-Dgupnp=enabled
+MESON_ARGS+=	-Dgstreamer=disabled
 
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
