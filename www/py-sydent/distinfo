@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2023/08/29 14:15:01 manu Exp $
+
+BLAKE2s (py-sydent-2.5.6-3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe.tar.gz) = 443ea0d26ff9dc97fa87b7a97c2fbec6c3899656fe86be0311d6fa9b899e8eeb
+SHA512 (py-sydent-2.5.6-3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe.tar.gz) = 85ffd69123915cc6ac2c65f0c9dc881671eab8f94e2e6befd1e71aa4d6be6b8d64673ca35d6a5afd4b1ce364b40cfd65f97aeeb6533bd80cc00b0480007d396a
+Size (py-sydent-2.5.6-3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe.tar.gz) = 33392 bytes
+SHA1 (patch-sydent_http_httpclient.py) = 88d1868ed2e01a1acbcbe645c71f47bfe8828c77
+SHA1 (patch-sydent_http_httpsclient.py) = f03f4a4979378471aef26cbc60959210fd973f3c
+SHA1 (patch-sydent_http_httpserver.py) = d48078dfe78c6f73d1f333614eae5dad2a2a80a7
+SHA1 (patch-sydent_sydent.py) = 750d37fe7d8c9c83ba848a5aca86b437aa7a4b17
+SHA1 (patch-sydent_threepid_bind.py) = af10434734d82a8af3e5904868d8a3f3aa892d11
