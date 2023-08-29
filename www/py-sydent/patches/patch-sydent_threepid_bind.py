@@ -1,4 +1,6 @@
-$NetBSD: patch-sydent_threepid_bind.py,v 1.1 2023/08/29 14:15:01 manu Exp $
+$NetBSD: patch-sydent_threepid_bind.py,v 1.2 2023/08/29 14:21:18 wiz Exp $
+
+
 --- sydent/threepid/bind.py.orig
 +++ sydent/threepid/bind.py
 @@ -30,9 +30,9 @@
