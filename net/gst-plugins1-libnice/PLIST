@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/26 20:29:02 wiz Exp $
-lib/gstreamer-1.0/libgstnice.la
+@comment $NetBSD: PLIST,v 1.2 2023/08/29 20:54:08 adam Exp $
+lib/gstreamer-1.0/libgstnice.so
