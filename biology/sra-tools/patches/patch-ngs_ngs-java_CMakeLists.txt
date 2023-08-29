@@ -1,0 +1,15 @@
+$NetBSD: patch-ngs_ngs-java_CMakeLists.txt,v 1.1 2023/08/29 00:00:25 bacon Exp $
+
+# Disable java
+
+--- ngs/ngs-java/CMakeLists.txt.orig	2023-08-13 21:46:05.343038455 +0000
++++ ngs/ngs-java/CMakeLists.txt
+@@ -99,7 +99,7 @@ if ( Java_FOUND )
+         gov/nih/nlm/ncbi/ngs/error/cause/UnsupportedArchCause.java
+     )
+ 
+-    find_package(JNI)
++    # find_package(JNI)
+ 
+     if ( JNI_FOUND )
+         add_jar( ngs-java
