@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/12/12 07:53:33 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/08/29 07:38:04 adam Exp $
 
-DISTNAME=	limits-2.7.2
+DISTNAME=	limits-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/limits/}
@@ -11,6 +11,7 @@ COMMENT=	Rate limiting utilities
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2:../../devel/py-deprecated
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
