@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23333 2023/08/29 15:06:55 vins Exp $
+$NetBSD: TODO,v 1.23334 2023/08/29 19:27:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -639,6 +639,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
+	o firefox-117.0
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -1360,6 +1361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o streamtuner-2.2.0
 	o sup-0.4
 	o superlu-5.2.2
+	o svt-av1-1.7
 	o swapd-1.0.5
 	o swi-prolog-8.3.22
 	o swi-prolog-jpl-8.3.22
