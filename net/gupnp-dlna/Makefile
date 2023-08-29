@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.45 2023/07/21 12:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2023/08/29 20:06:53 adam Exp $
 
-DISTNAME=	gupnp-dlna-0.10.3
-PKGREVISION=	28
+DISTNAME=	gupnp-dlna-0.12.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-dlna/0.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp-dlna/${PKGVERSION_NOREV:R}//}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gupnp.org/
-COMMENT=	GUPnP DLNA is a small DLNA-related utility library
+HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
+COMMENT=	Small DLNA-related utility library
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	gupnp-dlna-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gupnp-dlna-gst-2.0.pc.in
-#PKGCONFIG_OVERRIDE+=	gupnp-dlna-metadata-2.0.pc.in
-
-BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-dlna-2.0.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-dlna-gst-2.0.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/gupnp-dlna-metadata-2.0.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/gupnp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
