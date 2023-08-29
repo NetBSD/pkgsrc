@@ -1,0 +1,13 @@
+$NetBSD: patch-doc-Makefile.am,v 1.1 2023/08/29 11:28:40 vins Exp $
+
+Move config files /etc and into share/examples
+(use CONF_FILES instead).
+
+--- doc/Makefile.am.orig	2023-03-16 21:19:58.827408077 +0100
++++ doc/Makefile.am	2023-03-16 21:20:56.494030533 +0100
+@@ -1,4 +1,4 @@
+-dist_sysconf_DATA	= netconfig bindresvport.blacklist 
++dist_data_DATA	= netconfig bindresvport.blacklist 
+ 
+ CLEANFILES	       = cscope.* *~
+ DISTCLEANFILES	       = Makefile.in
