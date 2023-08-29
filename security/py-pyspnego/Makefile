@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/08/03 08:15:16 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/29 06:18:33 adam Exp $
 
-DISTNAME=	pyspnego-0.9.1
+DISTNAME=	pyspnego-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspnego/}
