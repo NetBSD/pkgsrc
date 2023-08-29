@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5175 2023/08/28 21:50:43 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5176 2023/08/29 00:00:34 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7527,3 +7527,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/czds to 1.2.14 [fcambus 2023-08-28]
 	Added mail/opensmtpd-filter-rspamd version 0.1.8 [vins 2023-08-28]
 	Added mail/opensmtpd-filter-senderscore version 0.1.2 [vins 2023-08-28]
+	Added biology/sra-tools version 3.0.6 [bacon 2023-08-28]
