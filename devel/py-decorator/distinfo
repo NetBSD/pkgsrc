@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:18:22 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/08/29 07:29:24 adam Exp $
 
-BLAKE2s (decorator-4.4.2.tar.gz) = 657e07bf4dd5decc51101b0eac77a76c7d278f85254f89311e28585fab8c62df
-SHA512 (decorator-4.4.2.tar.gz) = c068efd4e70764ac447b772c9c29625c2180dad256b2b4e46a50a8479fc1d7de09b114c2ba11bb37dd58774ed9460d2e0ea9fa76061833a2d3c2676ac91a0db1
-Size (decorator-4.4.2.tar.gz) = 33629 bytes
+BLAKE2s (decorator-5.1.1.tar.gz) = 74062f095310a8eb327d030cc63194407c048b9177de2e531469e2b1441960f2
+SHA512 (decorator-5.1.1.tar.gz) = 584857ffb0c3e52344b473ceb9e28adfd7d789d480a528471f8ab37be055ebe5feb170f41077010e25350e1c311189d45b90773cf12f0043de98ea8ebcde20ab
+Size (decorator-5.1.1.tar.gz) = 35016 bytes
