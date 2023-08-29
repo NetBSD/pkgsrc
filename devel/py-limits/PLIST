@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/21 07:55:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/08/29 07:38:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,6 +20,9 @@ ${PYSITELIB}/limits/aio/storage/__init__.pyo
 ${PYSITELIB}/limits/aio/storage/base.py
 ${PYSITELIB}/limits/aio/storage/base.pyc
 ${PYSITELIB}/limits/aio/storage/base.pyo
+${PYSITELIB}/limits/aio/storage/etcd.py
+${PYSITELIB}/limits/aio/storage/etcd.pyc
+${PYSITELIB}/limits/aio/storage/etcd.pyo
 ${PYSITELIB}/limits/aio/storage/memcached.py
 ${PYSITELIB}/limits/aio/storage/memcached.pyc
 ${PYSITELIB}/limits/aio/storage/memcached.pyo
@@ -44,7 +47,6 @@ ${PYSITELIB}/limits/limits.pyo
 ${PYSITELIB}/limits/py.typed
 ${PYSITELIB}/limits/resources/redis/lua_scripts/acquire_moving_window.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/clear_keys.lua
-${PYSITELIB}/limits/resources/redis/lua_scripts/gcra_consume.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/incr_expire.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/moving_window.lua
 ${PYSITELIB}/limits/storage/__init__.py
@@ -53,9 +55,9 @@ ${PYSITELIB}/limits/storage/__init__.pyo
 ${PYSITELIB}/limits/storage/base.py
 ${PYSITELIB}/limits/storage/base.pyc
 ${PYSITELIB}/limits/storage/base.pyo
-${PYSITELIB}/limits/storage/gae_memcached.py
-${PYSITELIB}/limits/storage/gae_memcached.pyc
-${PYSITELIB}/limits/storage/gae_memcached.pyo
+${PYSITELIB}/limits/storage/etcd.py
+${PYSITELIB}/limits/storage/etcd.pyc
+${PYSITELIB}/limits/storage/etcd.pyo
 ${PYSITELIB}/limits/storage/memcached.py
 ${PYSITELIB}/limits/storage/memcached.pyc
 ${PYSITELIB}/limits/storage/memcached.pyo
