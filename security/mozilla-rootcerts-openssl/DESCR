@@ -13,7 +13,7 @@ progams in pkgsrc can use these CA certs in validation.  Modification
 of /etc is very irregular as pkgsrc should not write anything outside
 of ${PREFIX}.
 
-See also the mozilla-rootcerts package (which this one depends on) for
-placing the Mozilla CA list in the filesystem but not configuring it
-into OpenSSL, as well as a script to aid in manual configuration of
-trust anchors.
+See also the mozilla-rootcerts package (which this one depends on as a
+built-time tool) for placing the Mozilla CA list in the filesystem but
+not configuring it into OpenSSL, as well as a script to aid in manual
+configuration of trust anchors.
