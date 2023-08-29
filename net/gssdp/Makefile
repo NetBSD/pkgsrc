@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2023/08/29 19:28:14 adam Exp $
+# $NetBSD: Makefile,v 1.106 2023/08/29 19:45:41 adam Exp $
 
 DISTNAME=	gssdp-1.6.2
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gupnp.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
 COMMENT=	Simple Service Discovery Protocol library and device sniffer
 LICENSE=	gnu-lgpl-v2
 
@@ -21,7 +21,7 @@ LDFLAGS.SunOS+=	-lsocket
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-PKGCONFIG_OVERRIDE+=		output/meson-private/gssdp-1.2.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/gssdp-1.6.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libgssdp
