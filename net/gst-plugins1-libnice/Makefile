@@ -1,15 +1,34 @@
-# $NetBSD: Makefile,v 1.50 2023/04/19 08:11:06 adam Exp $
+# $NetBSD: Makefile,v 1.51 2023/08/29 20:54:08 adam Exp $
 
 PKGNAME=	gst-plugins1-${DISTNAME}
-PKGREVISION=	14
 COMMENT+=	(gstreamer plugin)
 
-CONFIGURE_ARGS+=	--with-gstreamer
+INSTALL_DIRS=	# disable meson install
 
 .include "../../net/libnice/Makefile.common"
 
-BUILD_DIRS=	gst
-INSTALL_DIRS=	gst
+MESON_ARGS+=	-Dgstreamer=enabled
+MESON_ARGS+=	-Dexamples=disabled
+MESON_ARGS+=	-Dintrospection=disabled
+MESON_ARGS+=	-Dtests=disabled
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+SOEXT=	dylib
+.else
+SOEXT=	so
+.endif
+
+INSTALLATION_DIRS+=	lib/gstreamer-1.0
+
+do-install:
+	${INSTALL_LIB} ${WRKSRC}/output/gst/libgstnice.${SOEXT} \
+		${DESTDIR}${PREFIX}/lib/gstreamer-1.0
+.if ${OPSYS} == "Darwin"
+	cd ${DESTDIR}${PREFIX}/lib/gstreamer-1.0 && \
+	install_name_tool -change @rpath/libnice.10.dylib ${PREFIX}/lib/libnice.10.dylib \
+		-id ${PREFIX}/lib/gstreamer-1.0/libgstnice.dylib libgstnice.dylib
+.endif
 
 .include "../../net/libnice/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
