@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:05:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/08/29 20:25:16 adam Exp $
 
 BLAKE2s (farstream-0.2.9.tar.gz) = 9a24ad66367640eb32610d1925f323f29b5e30458f5a42a8e55d5848090c9d92
 SHA512 (farstream-0.2.9.tar.gz) = 8840725d2f1de59bebc8c49cf68a6712822a4e7b6ba9078713f80e3c35a39135565a1a885edab43a562f895e11b8f5d8d666d57d9b3814dabb661f46498515bd
 Size (farstream-0.2.9.tar.gz) = 1334833 bytes
 SHA1 (patch-common-modified_gst-glib-gen.mak) = c263dcc05f309be5d7495e286f842dd21acaa80a
-SHA1 (patch-configure.ac) = 476db129a8a425e44cd0eacdaeacf4855996a518
+SHA1 (patch-configure.ac) = 7ac783b06b8adb6ac9052626fcf86fdac6ce912c
