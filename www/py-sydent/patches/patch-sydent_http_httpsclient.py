@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-sydent_http_httpsclient.py,v 1.2 2023/08/29 14:21:18 wiz Exp $
 
 --- sydent/http/httpsclient.py.orig
 +++ sydent/http/httpsclient.py

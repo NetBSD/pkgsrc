@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/29 14:15:01 manu Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/29 14:21:18 wiz Exp $
 
 DISTNAME=	py-sydent-2.5.6
 EGG_NAME=	SynapseIdentityServer-0.1
@@ -10,10 +10,11 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_TAG=	3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/matrix-org/
+HOMEPAGE=	https://github.com/matrix-org/sydent
 COMMENT=	Matrix Identity Servers
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.4.7:../../devel/py-daemonize
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers-[0-9]*:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
@@ -25,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-libnacl-[0-9]*:../../security/py-libnacl
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 WRKSRC=		${WRKDIR}/sydent-3d3ac5ab802ad91bbecfc0cd6a50bdd31875c1fe
 #USE_LANGUAGES=	# none
@@ -57,7 +58,7 @@ FILES_SUBST+=	SYDENT_USER=${SYDENT_USER:Q}
 FILES_SUBST+=	SYDENT_GROUP=${SYDENT_GROUP:Q}
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
-EGDIR=		${PREFIX}/share/examples/${HUMAN_PKGNAME}
+EGDIR=			${PREFIX}/share/examples/${HUMAN_PKGNAME}
 CONF_FILES_PERMS+=	${EGDIR}/sydent.conf ${PKG_SYSCONFDIR}/sydent.conf \
 			${SYDENT_USER} ${SYDENT_GROUP} 0755
 INSTALLATION_DIRS+=	${EGDIR}
@@ -71,5 +72,4 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
