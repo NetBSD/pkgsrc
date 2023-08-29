@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5195 2023/08/29 19:25:02 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.5196 2023/08/29 20:20:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7558,3 +7558,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xforms to 1.2.5pre2 [vins 2023-08-29]
 	Updated devel/objfw to 1.0 [js 2023-08-29]
 	Updated pkgtools/pkglint to 23.2.1 [rillig 2023-08-29]
+	Updated net/gssdp to 1.6.2 [adam 2023-08-29]
+	Updated net/gupnp to 1.6.5 [adam 2023-08-29]
+	Updated net/gupnp-av to 0.14.1 [adam 2023-08-29]
+	Updated net/gupnp-dlna to 0.12.0 [adam 2023-08-29]
+	Updated net/gupnp-igd to 1.6.0 [adam 2023-08-29]
+	Updated net/gupnp-tools to 0.12.1 [adam 2023-08-29]
