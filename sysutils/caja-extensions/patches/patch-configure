@@ -1,0 +1,50 @@
+$NetBSD: patch-configure,v 1.1 2023/08/29 20:24:15 adam Exp $
+
+Build with gupnp-1.6.
+
+--- configure.orig	2023-08-29 10:31:18.878560816 +0000
++++ configure
+@@ -15072,12 +15072,12 @@ if test -n "$UPNP_CFLAGS"; then
+     pkg_cv_UPNP_CFLAGS="$UPNP_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gupnp-1.2 >= \$GUPNP_REQUIRED\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gupnp-1.2 >= $GUPNP_REQUIRED") 2>&5
++    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gupnp-1.6 >= \$GUPNP_REQUIRED\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gupnp-1.6 >= $GUPNP_REQUIRED") 2>&5
+   ac_status=$?
+   printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_UPNP_CFLAGS=`$PKG_CONFIG --cflags "gupnp-1.2 >= $GUPNP_REQUIRED" 2>/dev/null`
++  pkg_cv_UPNP_CFLAGS=`$PKG_CONFIG --cflags "gupnp-1.6 >= $GUPNP_REQUIRED" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15089,12 +15089,12 @@ if test -n "$UPNP_LIBS"; then
+     pkg_cv_UPNP_LIBS="$UPNP_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gupnp-1.2 >= \$GUPNP_REQUIRED\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gupnp-1.2 >= $GUPNP_REQUIRED") 2>&5
++    { { printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gupnp-1.6 >= \$GUPNP_REQUIRED\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gupnp-1.6 >= $GUPNP_REQUIRED") 2>&5
+   ac_status=$?
+   printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_UPNP_LIBS=`$PKG_CONFIG --libs "gupnp-1.2 >= $GUPNP_REQUIRED" 2>/dev/null`
++  pkg_cv_UPNP_LIBS=`$PKG_CONFIG --libs "gupnp-1.6 >= $GUPNP_REQUIRED" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15115,9 +15115,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        UPNP_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gupnp-1.2 >= $GUPNP_REQUIRED" 2>&1`
++	        UPNP_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gupnp-1.6 >= $GUPNP_REQUIRED" 2>&1`
+         else
+-	        UPNP_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gupnp-1.2 >= $GUPNP_REQUIRED" 2>&1`
++	        UPNP_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gupnp-1.6 >= $GUPNP_REQUIRED" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$UPNP_PKG_ERRORS" >&5
