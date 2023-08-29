@@ -1,0 +1,15 @@
+This package includes a set of bitmap fonts derived from the
+artwiz-fonts collection. These fonts are rather small and make
+a good fit for old CRTs and lower display resolutions.
+
+Included fonts are:
+
+* lime: improved version of artwiz-lime with better kerning, distinct
+  characters, extended unicode support, Powerline compatibility, and
+  in-built icon characters.
+* antidote: artwiz-cure mod with lemon-like characters.
+* uushi: monaco mod.
+* limey: artwiz-lime mod by @spectrum that served as the basis for
+  lemon.
+* berry: monaco mod by @spectrum, with the addition of a Bold variant. 
+
