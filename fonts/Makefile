@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.412 2023/07/17 13:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.413 2023/08/29 06:04:46 vins Exp $
 #
 
 COMMENT=	Fonts
@@ -251,6 +251,7 @@ SUBDIR+=	sourcehansans-fonts
 SUBDIR+=	sourcesans-fonts
 SUBDIR+=	spleen
 SUBDIR+=	stixfonts
+SUBDIR+=	suxus
 SUBDIR+=	symbola-ttf
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
