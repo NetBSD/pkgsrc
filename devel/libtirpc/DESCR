@@ -1,0 +1,10 @@
+This package contains SunLib's implementation of transport-independent
+RPC (TI-RPC) documentation.  This library forms a piece of the base of
+Open Network Computing (ONC), and is derived directly from the Solaris
+2.3 source.
+
+TI-RPC is an enhanced version of TS-RPC that requires the UNIX System V
+Transport Layer Interface (TLI) or an equivalent X/Open Transport Interface
+(XTI).  TI-RPC is on-the-wire compatible with the TS-RPC, which is supported
+by almost 70 vendors on all major operating systems.  TS-RPC source code
+(RPCSRC 4.0) remains available from several internet sites.
