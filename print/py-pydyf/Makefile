@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/06/30 07:54:06 kleink Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/29 06:58:04 adam Exp $
 
-DISTNAME=	pydyf-0.6.0
+DISTNAME=	pydyf-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydyf/}
@@ -10,14 +10,12 @@ HOMEPAGE=	https://www.courtbouillon.org/pydyf
 COMMENT=	Low-level PDF generator
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 TEST_DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-isort-[0-9]*:../../devel/py-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
 
