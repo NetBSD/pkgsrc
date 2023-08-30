@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/16 09:27:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/08/30 14:36:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -58,6 +58,12 @@ ${PYSITELIB}/polymorphic/formsets/models.pyo
 ${PYSITELIB}/polymorphic/formsets/utils.py
 ${PYSITELIB}/polymorphic/formsets/utils.pyc
 ${PYSITELIB}/polymorphic/formsets/utils.pyo
+${PYSITELIB}/polymorphic/locale/en/LC_MESSAGES/django.mo
+${PYSITELIB}/polymorphic/locale/en/LC_MESSAGES/django.po
+${PYSITELIB}/polymorphic/locale/es/LC_MESSAGES/django.mo
+${PYSITELIB}/polymorphic/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/polymorphic/locale/fr/LC_MESSAGES/django.mo
+${PYSITELIB}/polymorphic/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/polymorphic/managers.py
 ${PYSITELIB}/polymorphic/managers.pyc
 ${PYSITELIB}/polymorphic/managers.pyo
@@ -89,12 +95,6 @@ ${PYSITELIB}/polymorphic/templatetags/polymorphic_admin_tags.pyo
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.py
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.pyc
 ${PYSITELIB}/polymorphic/templatetags/polymorphic_formset_tags.pyo
-${PYSITELIB}/polymorphic/tests/migrations/0001_initial.py
-${PYSITELIB}/polymorphic/tests/migrations/0001_initial.pyc
-${PYSITELIB}/polymorphic/tests/migrations/0001_initial.pyo
-${PYSITELIB}/polymorphic/tests/migrations/__init__.py
-${PYSITELIB}/polymorphic/tests/migrations/__init__.pyc
-${PYSITELIB}/polymorphic/tests/migrations/__init__.pyo
 ${PYSITELIB}/polymorphic/utils.py
 ${PYSITELIB}/polymorphic/utils.pyc
 ${PYSITELIB}/polymorphic/utils.pyo
