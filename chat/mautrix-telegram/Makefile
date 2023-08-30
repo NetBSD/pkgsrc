@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:23:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/08/30 21:46:32 js Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/mautrix/telegram
 COMMENT=	Matrix-Telegram hybrid puppeting/relaybot bridge
 LICENSE=	gnu-agpl-v3

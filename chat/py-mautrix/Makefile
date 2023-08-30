@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/08/01 23:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2023/08/30 21:46:33 js Exp $
 
 DISTNAME=	python-0.16.3
 PKGNAME=	${PYPKGPREFIX}-mautrix-${DISTNAME:S/python-//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
 GITHUB_PROJECT=	python
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/tulir/mautrix-python
 COMMENT=	Python 3 asyncio Matrix framework
 LICENSE=	mpl-2.0
