@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/30 17:06:37 pin Exp $
 
-DISTNAME=	alpha-0.7.2
-PKGNAME=	meli-0.7.2
-PKGREVISION=	5
+DISTNAME=	v0.8.0
+PKGNAME=	meli-0.8.0
 CATEGORIES=	mail
 MASTER_SITES=	https://git.meli.delivery/meli/meli/archive/
 
@@ -24,7 +23,7 @@ USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man7
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -36,9 +35,11 @@ RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/meli ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/meli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/meli.1
-	${INSTALL_MAN} ${WRKSRC}/docs/meli-themes.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli-themes.5
-	${INSTALL_MAN} ${WRKSRC}/docs/meli.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli.conf.5
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/managesieve-client ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/meli.1
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli-themes.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli-themes.5
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli.conf.5
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/meli.7
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
