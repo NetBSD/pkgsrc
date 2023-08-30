@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/08/30 12:49:52 js Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/30 13:02:21 js Exp $
 
 DISTNAME=	objfw-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	OBJC=clang	# Clang has much better ObjC support
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
-BUILD_DEPENDS+=		clang-[0-9]*:../../lang/clang
+PKGSRC_COMPILER=	clang
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,5 +38,6 @@ PLIST_SRC+=	PLIST.ddp
 PLIST_SRC+=	PLIST.ipx
 .endif
 
+.include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
