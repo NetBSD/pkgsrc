@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5202 2023/08/30 13:51:06 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5203 2023/08/30 14:04:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7576,3 +7576,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbconvert to 7.8.0 [adam 2023-08-30]
 	Updated devel/py-jupyter_client to 8.3.1 [adam 2023-08-30]
 	Updated chat/matrix-synapse to 1.91.0 [gdt 2023-08-30]
+	Updated www/py-django-cors-headers to 4.2.0 [adam 2023-08-30]
+	Updated www/py-django-contrib-comments to 2.2.0 [adam 2023-08-30]
+	Updated www/py-django-allauth to 0.55.0 [adam 2023-08-30]
+	Updated www/py-django-admin-rangefilter to 0.11.0 [adam 2023-08-30]
