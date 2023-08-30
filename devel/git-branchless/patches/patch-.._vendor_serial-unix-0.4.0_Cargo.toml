@@ -1,0 +1,14 @@
+$NetBSD: patch-.._vendor_serial-unix-0.4.0_Cargo.toml,v 1.1 2023/08/30 08:30:17 pin Exp $
+
+Add bsiegert@ unmerged pull request
+https://github.com/dcuddeback/serial-rs/pull/63
+
+--- ../vendor/serial-unix-0.4.0/Cargo.toml.orig	2017-07-02 01:20:06.000000000 +0000
++++ ../vendor/serial-unix-0.4.0/Cargo.toml
+@@ -14,5 +14,5 @@ categories = ["hardware-support", "os", 
+ [dependencies]
+ serial-core = { version = "0.4", path = "../serial-core" }
+ libc = "0.2.1"
+-termios = "0.2.2"
++termios = "0.3.3"
+ ioctl-rs = "0.1.5"
