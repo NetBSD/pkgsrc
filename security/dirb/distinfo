@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/08/30 18:21:56 hubertf Exp $
 
-BLAKE2s (dirb19.tar.gz) = d8dc55c9e32336e324b0c4218ef97703f67b8ed2019dcdbdfbe86112a0bba63b
-SHA512 (dirb19.tar.gz) = 99016684d5f0043e9e85025933f3773de4c367d2ce1ebaa83705c08d220303f94a7ca764c90bbd38aba82b30fcc44b5efd56773e9790504a27a007185b9db41a
-Size (dirb19.tar.gz) = 223149 bytes
-SHA1 (patch-aa) = 90a54b6c81278e58220616759a05504f33e3af5b
+BLAKE2s (dirb220.tar.gz) = 1dcea7efadb7ee9f48b8f05bbdb5b5a81581a5adaae66632c26dab31b71555bc
+SHA512 (dirb220.tar.gz) = 7d3f46521ccdc4513fc729fcfd0c702eca8f7bed1815919f85005108be6aee63ed19f5ef48426b0af911bd2a3842f8e69fb34e81948ee92db8d68e29d5e892f8
+Size (dirb220.tar.gz) = 2036456 bytes
