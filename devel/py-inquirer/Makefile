@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/30 21:46:33 js Exp $
 
 DISTNAME=	PyInquirer-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-inquirer-1.0.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyInquirer/}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/CITGuru/PyInquirer/
 COMMENT=	Collection of common interactive command line user interfaces
 LICENSE=	mit
