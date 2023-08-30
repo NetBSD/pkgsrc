@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/08 12:20:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/30 13:53:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -62,6 +62,7 @@ ${PYSITELIB}/rangefilter/static/rangefilter/iife.js
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_1_8.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/date_filter_csp.html
+${PYSITELIB}/rangefilter/templates/rangefilter/date_range_quick_select_list_filter.html
 ${PYSITELIB}/rangefilter/templates/rangefilter/numeric_filter.html
 ${PYSITELIB}/rangefilter/templatetags/__init__.py
 ${PYSITELIB}/rangefilter/templatetags/__init__.pyc
