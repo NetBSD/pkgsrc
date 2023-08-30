@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/12/28 12:04:09 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/08/30 14:34:36 adam Exp $
 
-BLAKE2s (nanomsg-1.1.5.tar.gz) = 4aee7ed15ba7e05b194c54e879003627c5693b5c5090ded58532fb9463bd4f72
-SHA512 (nanomsg-1.1.5.tar.gz) = 773b8e169a7accac21414c63972423a249164f5b843c6c65c1b03a2eb90d21da788a98debdeb396dab795e52d30605696bc2cf65e5e05687bf115438d5b22717
-Size (nanomsg-1.1.5.tar.gz) = 310739 bytes
+BLAKE2s (nanomsg-1.2.tar.gz) = d87ce01775b6312d7952551c0a8a25f41465b13a3c91c727f22695328c479267
+SHA512 (nanomsg-1.2.tar.gz) = 377b3a0b4be6d6decd2711ff84ac1855ae0a298e7557dbe4b7d881c2a76f4e521671b47987b924c434afdad7ff1dfebb50982c8c0afca9b44682c898510d4c92
+Size (nanomsg-1.2.tar.gz) = 311041 bytes
+SHA1 (patch-src_aio_poller__kqueue.inc) = 455ec08d811757e0b09cc7d6e4b9961fb9e1b6a6
