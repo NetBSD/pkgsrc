@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/08/01 23:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/30 20:04:46 adam Exp $
 
-DISTNAME=	asdf-2.11.0
+DISTNAME=	asdf-2.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
@@ -10,28 +10,26 @@ HOMEPAGE=	https://github.com/asdf-format/asdf
 COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.0.1:../../math/py-asdf-standard
+DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.3:../../math/py-asdf-transform-schemas
+DEPENDS+=	${PYPKGPREFIX}-asdf-unit-schemas>=0.1:../../math/py-asdf-unit-schemas
+DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0":../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.2:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.10.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging>=16.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.8:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-packaging>=19:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-USE_PKG_RESOURCES=	yes
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3:../../devel/py-importlib-resources
-.endif
-
-REPLACE_PYTHON+=	asdf-standard/reference_files/generate/generate
+REPLACE_PYTHON+=	asdf/_jsonschema/json/bin/jsonschema_suite
 REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
 
 post-install:
@@ -39,5 +37,5 @@ post-install:
 	${MV} asdftool asdftool-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
