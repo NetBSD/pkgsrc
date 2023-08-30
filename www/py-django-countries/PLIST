@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/05/14 18:58:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/08/30 14:41:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,6 +48,8 @@ ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/el/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/en@test/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/en@test/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/eo/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/es/LC_MESSAGES/django.mo
@@ -122,6 +124,8 @@ ${PYSITELIB}/django_countries/locale/zh_CN/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/zh_CN/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/zh_Hans/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/zh_Hant/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/zh_Hant/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/makesprite.py
 ${PYSITELIB}/django_countries/makesprite.pyc
 ${PYSITELIB}/django_countries/makesprite.pyo
@@ -430,6 +434,9 @@ ${PYSITELIB}/django_countries/tests/models.pyo
 ${PYSITELIB}/django_countries/tests/settings.py
 ${PYSITELIB}/django_countries/tests/settings.pyc
 ${PYSITELIB}/django_countries/tests/settings.pyo
+${PYSITELIB}/django_countries/tests/settings_noi18n.py
+${PYSITELIB}/django_countries/tests/settings_noi18n.pyc
+${PYSITELIB}/django_countries/tests/settings_noi18n.pyo
 ${PYSITELIB}/django_countries/tests/test_admin_filters.py
 ${PYSITELIB}/django_countries/tests/test_admin_filters.pyc
 ${PYSITELIB}/django_countries/tests/test_admin_filters.pyo
