@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/12/28 12:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/30 14:34:36 adam Exp $
 
-DISTNAME=	nanomsg-1.1.5
+DISTNAME=	nanomsg-1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nanomsg/}
 
@@ -9,11 +9,14 @@ HOMEPAGE=	https://nanomsg.org/
 COMMENT=	Scalability protocols library
 LICENSE=	x11
 
-USE_CMAKE=	yes
-TEST_TARGET=	test
+USE_LANGUAGES=	c
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
-TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
+TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	src/pkgconfig.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
