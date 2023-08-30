@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2023/02/13 13:32:43 taca Exp $
+# $NetBSD: Makefile,v 1.104 2023/08/30 20:25:30 gdt Exp $
 
 DISTNAME=	mew-6.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -21,7 +21,6 @@ INFO_FILES=	yes
 GNU_CONFIGURE=	yes
 
 EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
-EMACS_VERSIONS_ACCEPTED+=	emacs25 emacs25nox
 EMACS_VERSIONS_ACCEPTED+=	emacs21 emacs21nox
 EMACS_MODULES+=			base
 
