@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:30:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/08/30 13:47:41 adam Exp $
 
-BLAKE2s (django-contrib-comments-2.1.0.tar.gz) = 2300c02066200956d6f5974e5e13302ba9e40d88d2384007b85fba0620bdcb69
-SHA512 (django-contrib-comments-2.1.0.tar.gz) = c17c9372b47395a54e8dca656a2c12c0962751cd9e05819c3f44368e62048399693e1291d7bcbb460f6aabf02a8af100f088758ba0f5037eb9902fe526687396
-Size (django-contrib-comments-2.1.0.tar.gz) = 189916 bytes
+BLAKE2s (django-contrib-comments-2.2.0.tar.gz) = 76395a54e5db0d295bff3c289b73a55ae5de2f2a7568338d32291472aed33573
+SHA512 (django-contrib-comments-2.2.0.tar.gz) = 02d12e045325d79677d6e6f51e7d392bf354cfa13748469e735cee999687f016932b24917d95f738f7e656b690a8991a7dee3878f97cf87e976fceb116a7f3cd
+Size (django-contrib-comments-2.2.0.tar.gz) = 870169 bytes
