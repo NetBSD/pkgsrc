@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.58 2023/08/08 12:54:14 tnn Exp $
+$NetBSD: distinfo,v 1.59 2023/08/30 13:01:12 adam Exp $
 
-BLAKE2s (ccache-4.8.2.tar.gz) = b0e28bf5bd36057423106825946be4707fa30cee7ed4b92bfeef915753aa4458
-SHA512 (ccache-4.8.2.tar.gz) = 61841b2ae307d99aeae2a21be66f56fa58f72b56a51c830f686218c03e04314757b7d38af4ac501a8280c9a67b0ca0f95ffc53b19543957d103223f990b97d4c
-Size (ccache-4.8.2.tar.gz) = 761497 bytes
-SHA1 (patch-src_storage_local_LocalStorage.cpp) = b16120f177f0ecd7b5b7c48fe265139629a4dd4f
+BLAKE2s (ccache-4.8.3.tar.gz) = 00a2d0d9a9dca6ab2362372011ae031d0bde487caf7e384d2e2952efdc9335c3
+SHA512 (ccache-4.8.3.tar.gz) = 65c870c25dff1a88c92b99e697312fcc2d61f6718fc1f20203ac2bc16975ff376d943bdb4462716a5b2d84081502fb18a93caac7739f75f37f3acc66fa468498
+Size (ccache-4.8.3.tar.gz) = 774216 bytes
