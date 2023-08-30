@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/08/30 12:42:05 manu Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/30 23:42:28 manu Exp $
 
 DISTNAME=	py-sydent-2.5.6
 EGG_NAME=	SynapseIdentityServer-0.1
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	www
 GITHUB_PROJECT=	sydent
@@ -10,10 +10,11 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/matrix-org/
+HOMEPAGE=	https://github.com/matrix-org/sydent
 COMMENT=	Matrix Identity Servers
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.4.7:../../devel/py-daemonize
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers-[0-9]*:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
@@ -24,8 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-libnacl-[0-9]*:../../security/py-libnacl
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
-
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -73,5 +72,4 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
