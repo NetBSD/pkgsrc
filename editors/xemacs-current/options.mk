@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2021/10/03 17:53:11 hauke Exp $
+# $NetBSD: options.mk,v 1.21 2023/08/30 15:02:22 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS+=		ldap canna debug
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS+=		ldap canna debug
 .include "../../mk/bsd.options.mk"
 
 # Option "xft" implies "x11".
-.if  empty(PKG_OPTIONS:Mx11) && !empty(PKG_OPTIONS:Mxft)
+.if  empty(PKG_OPTIONS:Mx11) && !empty(PKG_OPTIONS:Mxft2)
 PKG_OPTIONS+=		x11
 .endif
 
@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	--with-ldap
 CONFIGURE_ARGS+=	--without-ldap
 .endif
 
-.if !empty(PKG_OPTIONS:Mxft)
+.if !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--with-xft=emacs,tabs,menubars,gauges
 .  include "../../fonts/fontconfig/buildlink3.mk"
 .  include "../../graphics/freetype2/buildlink3.mk"
