@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.569 2023/07/20 14:16:44 bacon Exp $
+# $NetBSD: Makefile,v 1.570 2023/08/30 20:04:46 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -380,6 +380,9 @@ SUBDIR+=	py-abcpmc
 SUBDIR+=	py-almost
 SUBDIR+=	py-arviz
 SUBDIR+=	py-asdf
+SUBDIR+=	py-asdf-standard
+SUBDIR+=	py-asdf-transform-schemas
+SUBDIR+=	py-asdf-unit-schemas
 SUBDIR+=	py-asteval
 SUBDIR+=	py-astroML
 SUBDIR+=	py-astropy
