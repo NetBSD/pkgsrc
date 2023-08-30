@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5203 2023/08/30 14:04:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5204 2023/08/30 14:42:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7580,3 +7580,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-contrib-comments to 2.2.0 [adam 2023-08-30]
 	Updated www/py-django-allauth to 0.55.0 [adam 2023-08-30]
 	Updated www/py-django-admin-rangefilter to 0.11.0 [adam 2023-08-30]
+	Updated net/nanomsg to 1.2 [adam 2023-08-30]
+	Updated www/py-django-polymorphic to 3.1.0 [adam 2023-08-30]
+	Updated www/py-django-treebeard to 4.7 [adam 2023-08-30]
+	Updated www/py-django-countries to 7.5.1 [adam 2023-08-30]
