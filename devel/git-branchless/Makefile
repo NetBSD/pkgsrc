@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/30 08:30:17 pin Exp $
 
-DISTNAME=	git-branchless-0.7.1
-PKGREVISION=	1
+DISTNAME=	git-branchless-0.8.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arxanas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +20,9 @@ INSTALLATION_DIRS=	bin
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
+
+post-patch:
+	${CP} ${FILESDIR}/netbsd.rs ${WRKDIR}/vendor/ioctl-rs-0.1.6/src/os/
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/git-branchless \
