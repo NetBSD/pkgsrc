@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5211 2023/08/30 20:19:32 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5212 2023/08/30 21:52:16 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7596,3 +7596,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gitui to 0.24.1 [pin 2023-08-30]
 	Removed editors/emacs25 [gdt 2023-08-30]
 	Removed editors/emacs25-nox11 [gdt 2023-08-30]
+	Updated chat/element-web to 1.11.40 [js 2023-08-30]
