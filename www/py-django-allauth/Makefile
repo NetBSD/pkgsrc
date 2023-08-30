@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/06/04 02:29:21 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/30 13:52:00 adam Exp $
 
-DISTNAME=	django-allauth-0.54.0
+DISTNAME=	django-allauth-0.55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-allauth/}
@@ -10,15 +10,15 @@ HOMEPAGE=	https://github.com/pennersr/django-allauth/
 COMMENT=	Authentication, registration, account mgmt and 3rd party account auth
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-JWT>=1.7:../../textproc/py-JWT
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-openid>=3.0.8:../../security/py-openid
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oauthlib
+
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
-DEPENDS+=	${PYPKGPREFIX}-openid>=3.0.8:../../security/py-openid
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oauthlib
-DEPENDS+=	${PYPKGPREFIX}-JWT>=1.7:../../textproc/py-JWT
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
