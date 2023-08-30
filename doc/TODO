@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23334 2023/08/29 19:27:36 wiz Exp $
+$NetBSD: TODO,v 1.23335 2023/08/30 22:25:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,6 +549,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o coreutils-9.4
 	o courier-0.77.0
 	o courier-imap-4.16.1
 	o courier-mta-0.74.2
@@ -1419,7 +1420,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-12.5.2
+	o tor-browser-12.5.3
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4

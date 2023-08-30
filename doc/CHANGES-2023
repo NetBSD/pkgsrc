@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5212 2023/08/30 21:52:16 js Exp $
+$NetBSD: CHANGES-2023,v 1.5213 2023/08/30 22:25:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7597,3 +7597,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed editors/emacs25 [gdt 2023-08-30]
 	Removed editors/emacs25-nox11 [gdt 2023-08-30]
 	Updated chat/element-web to 1.11.40 [js 2023-08-30]
+	Updated devel/nss to 3.93 [wiz 2023-08-30]
