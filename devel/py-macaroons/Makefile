@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/10/25 11:34:12 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/30 21:46:34 js Exp $
 
 DISTNAME=	pymacaroons-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymacaroons/}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/
 COMMENT=	Python implementation of Macaroons
 LICENSE=	mit
