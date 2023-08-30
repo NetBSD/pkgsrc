@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/08/16 04:18:23 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/08/30 20:37:13 markd Exp $
 
 DISTNAME=	akonadi-calendar-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -10,6 +11,16 @@ LICENSE=	gnu-lgpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	reminder-daemon/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_AUTOSTARTDIR}:{KDE_INSTALL_AUTOSTARTEXDIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/autostart/org.kde.kalendarac.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/org.kde.kalendarac.desktop
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mail/kmailtransport/buildlink3.mk"
