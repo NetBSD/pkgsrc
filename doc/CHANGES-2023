@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5200 2023/08/30 13:06:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5201 2023/08/30 13:40:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7573,3 +7573,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/doxygen to 1.9.8 [adam 2023-08-30]
 	Updated devel/ccache to 4.8.3 [adam 2023-08-30]
 	Updated finance/py-braintree to 4.22.0 [adam 2023-08-30]
+	Updated www/py-nbconvert to 7.8.0 [adam 2023-08-30]
+	Updated devel/py-jupyter_client to 8.3.1 [adam 2023-08-30]
