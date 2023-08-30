@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/05/14 22:25:34 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/30 20:25:30 gdt Exp $
 
 DISTNAME=	js2-20080406
 PKGREVISION=	3
@@ -15,7 +15,6 @@ USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 
 # no xemacs at all; emacs21 doesn't support full functionality
-EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox
 EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
 
 do-build:
