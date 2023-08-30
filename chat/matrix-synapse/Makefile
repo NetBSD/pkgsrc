@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2023/08/29 14:09:08 manu Exp $
+# $NetBSD: Makefile,v 1.80 2023/08/30 13:50:59 gdt Exp $
 
-DISTNAME=	matrix-synapse-1.86.0
-PKGREVISION=	2
+DISTNAME=	matrix-synapse-1.91.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -21,7 +20,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-r
 # \todo Go over poetry.lock
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.0.7:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.9:../../security/py-asn1
-DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1<2:../../devel/py-pydantic
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
