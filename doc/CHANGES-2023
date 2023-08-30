@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5197 2023/08/29 20:59:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5198 2023/08/30 08:30:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7568,3 +7568,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gst-plugins1-libnice to 0.1.21 [adam 2023-08-29]
 	Removed net/gssdp12 [adam 2023-08-29]
 	Removed net/gupnp12 [adam 2023-08-29]
+	Updated devel/git-branchless to 0.8.0 [pin 2023-08-30]
