@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.gnustep,v 1.1 2016/09/18 13:36:18 ryoon Exp $
-share/GNUstep/Local/Applications/Emacs.app/Emacs
-share/GNUstep/Local/Applications/Emacs.app/Resources/Emacs.desktop
-share/GNUstep/Local/Applications/Emacs.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/Emacs.app/Resources/emacstiff
-share/GNUstep/Local/Applications/Emacs.app/library_paths.openapp
