@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/09 08:24:40 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/30 21:46:33 js Exp $
 
 DISTNAME=	sdk-source-20220309
 PKGNAME=	ppc-morphos-gcc-11-11.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://www.morphos-team.net/
 COMMENT=	GCC 11 for ppc-morphos
 LICENSE=	gnu-gpl-v3
