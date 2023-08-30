@@ -774,6 +774,7 @@ rust			Enable Rust support.
 rust-cargo-static	Build cargo semi-statically with built-in curl+openssl
 rust-internal-llvm	Use Rust internal LLVM in builds.
 samba			Enable Samba file and print services support.
+saml2			Enable SAML2 Single Sign-On support.
 samplerate		Enable libsamplerate support.
 sane			Enable support for SANE scanners.
 sane-backends-hp3900	Include HP3900 driver.
