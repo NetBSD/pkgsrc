@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2023/08/30 17:06:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2023/08/30 19:56:21 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	abnf-core-0.6.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -49,6 +49,7 @@ CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.8
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.16
 CARGO_CRATE_DEPENDS+=	curl-0.4.44
 CARGO_CRATE_DEPENDS+=	curl-sys-0.4.65+curl-8.2.1
+SITES.curl-sys-0.4.65+curl-8.2.1.crate+= ${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.65+curl-8.2.1/download}
 CARGO_CRATE_DEPENDS+=	data-encoding-2.4.0
 CARGO_CRATE_DEPENDS+=	dbus-0.9.7
 CARGO_CRATE_DEPENDS+=	deranged-0.3.8
