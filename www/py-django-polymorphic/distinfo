@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/08/30 14:36:56 adam Exp $
 
-BLAKE2s (django-polymorphic-3.0.0.tar.gz) = 859440599534f504983e85f4bccc42d322b11a610c09c06498e5242bf6fe5808
-SHA512 (django-polymorphic-3.0.0.tar.gz) = 31470ebd2ff86479d07ee6063a9e67a606369e31c62ba6b16a92464eb2fffd9e92eefe7a86636f4a7f82e1373b4ffceebc03bbcf99060bfa20be3d09a725f733
-Size (django-polymorphic-3.0.0.tar.gz) = 51140 bytes
+BLAKE2s (django-polymorphic-3.1.0.tar.gz) = 5fa953397a04cd53c411e3f63734e82a6d08998730f87049a62b4a5e5872d97d
+SHA512 (django-polymorphic-3.1.0.tar.gz) = a12468b86c4816b9fffd619f13b00f454cdf1d84359ddc9697cd9b3b43b5ef6bdc9e0ea8a0022b13c7eb7a053f9c0abe6973fd67769ca05e4351c649ec6f729d
+Size (django-polymorphic-3.1.0.tar.gz) = 50106 bytes
