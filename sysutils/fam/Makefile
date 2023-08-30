@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/01/25 10:41:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2023/08/30 17:56:20 vins Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
@@ -52,6 +52,13 @@ SUBST_SED.kqueue+=	-e 's,@LIBS@,@LIBS@ -lpthread,g'
 MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 
 .include "../../mk/pthread.buildlink3.mk"
+.endif
+
+.if ${OPSYS} == "Linux"
+CPPFLAGS+=		-I${PREFIX}/include/tirpc
+MAKEFLAGS+=		LDFLAGS="${LDFLAGS} -ltirpc"
+
+.include "../../devel/libtirpc/buildlink3.mk"
 .endif
 
 CPPFLAGS.Darwin+=	-DNDEBUG
