@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5209 2023/08/30 20:07:09 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5210 2023/08/30 20:08:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7593,3 +7593,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/py-asdf-transform-schemas version 0.3.0 [adam 2023-08-30]
 	Added math/py-asdf-unit-schemas version 0.1.0 [adam 2023-08-30]
 	Updated math/py-asdf to 2.15.1 [adam 2023-08-30]
+	Updated devel/gitui to 0.24.1 [pin 2023-08-30]
