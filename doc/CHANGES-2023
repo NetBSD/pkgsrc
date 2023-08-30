@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5199 2023/08/30 12:36:15 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5200 2023/08/30 13:06:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7571,3 +7571,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-branchless to 0.8.0 [pin 2023-08-30]
 	Updated graphics/freetype2 to 2.13.2 [adam 2023-08-30]
 	Updated devel/doxygen to 1.9.8 [adam 2023-08-30]
+	Updated devel/ccache to 4.8.3 [adam 2023-08-30]
+	Updated finance/py-braintree to 4.22.0 [adam 2023-08-30]
