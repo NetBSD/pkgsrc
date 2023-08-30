@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/14 22:25:40 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/30 20:25:30 gdt Exp $
 
 DISTNAME=		bbdb-3.2.2a
 PKGREVISION=		2
@@ -13,8 +13,9 @@ LICENSE=		gnu-gpl-v3
 
 # bbdb is included in xemacs-packages
 # emacs 24 or newer
-EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs26 emacs26nox
-EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox emacs28 emacs28nox
+EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
+EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 
 CONFLICTS+=		xemacs-packages-[0-9]*
 
