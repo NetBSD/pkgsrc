@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/06/28 11:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/08/30 21:46:33 js Exp $
 
 PKGNAME=	ppc-morphos-${DISTNAME}
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/
 EXTRACT_SUFX=	.lha
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://www.morphos-team.net/
 COMMENT=	SDK for ppc-morphos-gcc
 LICENSE=	morphos-sdk-license

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/08/30 21:46:34 js Exp $
 
 DISTNAME=	release_${PKGVERSION_NOREV}
 PKGNAME=	sickgear-0.23.14
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	SickGear
 GITHUB_TAG=	release_${PKGVERSION_NOREV}
 DIST_SUBDIR=	SickGear
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/SickGear/SickGear
 COMMENT=	Management of TV shows and/or Anime
 LICENSE=	gnu-gpl-v3

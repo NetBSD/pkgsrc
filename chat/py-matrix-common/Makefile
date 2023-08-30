@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/06/06 12:40:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/30 21:46:32 js Exp $
 
 DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-matrix-common-1.3.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	matrix-python-common
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/matrix-python-common
 COMMENT=	Common utilities for Synapse, Sydent and Sygnal
 LICENSE=	apache-2.0

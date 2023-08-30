@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2023/06/25 22:51:36 js Exp $
+# $NetBSD: Makefile,v 1.13 2023/08/30 21:46:33 js Exp $
 
 DISTNAME=	canonicaljson-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canonicaljson/}
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/python-canonicaljson
 COMMENT=	Encodes objects and arrays as RFC 7159 JSON
 LICENSE=	apache-2.0

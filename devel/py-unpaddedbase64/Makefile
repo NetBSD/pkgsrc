@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/25 13:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/08/30 21:46:34 js Exp $
 
 DISTNAME=	unpaddedbase64-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	python-unpaddedbase64
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	js@pkgsrc.org
+MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/python-unpaddedbase64
 COMMENT=	Encode and decode Base64 without "=" padding
 LICENSE=	apache-2.0
