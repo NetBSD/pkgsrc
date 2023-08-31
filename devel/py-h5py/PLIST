@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/06/07 11:57:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/08/31 11:58:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -138,6 +138,9 @@ ${PYSITELIB}/h5py/tests/test_file.pyo
 ${PYSITELIB}/h5py/tests/test_file2.py
 ${PYSITELIB}/h5py/tests/test_file2.pyc
 ${PYSITELIB}/h5py/tests/test_file2.pyo
+${PYSITELIB}/h5py/tests/test_file_alignment.py
+${PYSITELIB}/h5py/tests/test_file_alignment.pyc
+${PYSITELIB}/h5py/tests/test_file_alignment.pyo
 ${PYSITELIB}/h5py/tests/test_file_image.py
 ${PYSITELIB}/h5py/tests/test_file_image.pyc
 ${PYSITELIB}/h5py/tests/test_file_image.pyo
@@ -168,9 +171,15 @@ ${PYSITELIB}/h5py/tests/test_h5pl.pyo
 ${PYSITELIB}/h5py/tests/test_h5t.py
 ${PYSITELIB}/h5py/tests/test_h5t.pyc
 ${PYSITELIB}/h5py/tests/test_h5t.pyo
+${PYSITELIB}/h5py/tests/test_h5z.py
+${PYSITELIB}/h5py/tests/test_h5z.pyc
+${PYSITELIB}/h5py/tests/test_h5z.pyo
 ${PYSITELIB}/h5py/tests/test_objects.py
 ${PYSITELIB}/h5py/tests/test_objects.pyc
 ${PYSITELIB}/h5py/tests/test_objects.pyo
+${PYSITELIB}/h5py/tests/test_ros3.py
+${PYSITELIB}/h5py/tests/test_ros3.pyc
+${PYSITELIB}/h5py/tests/test_ros3.pyo
 ${PYSITELIB}/h5py/tests/test_selections.py
 ${PYSITELIB}/h5py/tests/test_selections.pyc
 ${PYSITELIB}/h5py/tests/test_selections.pyo
