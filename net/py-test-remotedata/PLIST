@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/08/31 13:56:46 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_remotedata/__init__.py
+${PYSITELIB}/pytest_remotedata/__init__.pyc
+${PYSITELIB}/pytest_remotedata/__init__.pyo
+${PYSITELIB}/pytest_remotedata/disable_internet.py
+${PYSITELIB}/pytest_remotedata/disable_internet.pyc
+${PYSITELIB}/pytest_remotedata/disable_internet.pyo
+${PYSITELIB}/pytest_remotedata/plugin.py
+${PYSITELIB}/pytest_remotedata/plugin.pyc
+${PYSITELIB}/pytest_remotedata/plugin.pyo
+${PYSITELIB}/pytest_remotedata/version.py
+${PYSITELIB}/pytest_remotedata/version.pyc
+${PYSITELIB}/pytest_remotedata/version.pyo
