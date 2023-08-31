@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/03/22 13:04:11 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2023/08/31 19:13:47 vins Exp $
 #
 
 DISTNAME=	perfuse-20190222
@@ -16,6 +16,8 @@ BUILDLINK_TRANSFORM=	rm:-Werror
 CPPFLAGS+=		-DPERFUSE_DEBUG -D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
 CPPFLAGS+=		-D_KERNTYPES
 CFLAGS+=		-g # ???
+
+RELRO_SUPPORTED=	no
 
 INSTALLATION_DIRS=	include lib sbin
 
