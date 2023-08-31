@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/08/31 21:05:39 rjs Exp $
+# $NetBSD: Makefile,v 1.100 2023/08/31 22:29:43 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-2.3.8
@@ -22,9 +22,9 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-.include "../../mk/bsd.prefs.mk"
-
 MKPIE_SUPPORTED=no
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # Bootstrap section.
