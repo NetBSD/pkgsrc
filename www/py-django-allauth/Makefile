@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/30 13:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/08/31 17:36:13 adam Exp $
 
-DISTNAME=	django-allauth-0.55.0
+DISTNAME=	django-allauth-0.55.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-allauth/}
