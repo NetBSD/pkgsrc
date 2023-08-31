@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/08/31 11:59:35 pin Exp $
+# $NetBSD: Makefile,v 1.28 2023/08/31 12:59:53 pin Exp $
 
-DISTNAME=	git-cliff-1.2.0
-# Do not update until after Q3-freeze is over.
-# Reuires libgit2-1.7.1 which breaks a large number of Rust packages.
+DISTNAME=	git-cliff-1.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,7 +22,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/git-cliff \
 		${DESTDIR}${PREFIX}/bin
 
-# for libgit2-sys crate
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
