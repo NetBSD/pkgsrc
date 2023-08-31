@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5225 2023/08/31 14:08:06 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5226 2023/08/31 14:15:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7617,3 +7617,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-admin-rangefilter to 0.11.1 [adam 2023-08-31]
 	Updated devel/py-virtualenv to 20.24.4 [adam 2023-08-31]
 	Updated graphics/py-tifffile to 2023.8.30 [adam 2023-08-31]
+	Updated devel/matio to 1.5.23 [adam 2023-08-31]
+	Updated textproc/ugrep to 4.0.5 [adam 2023-08-31]
