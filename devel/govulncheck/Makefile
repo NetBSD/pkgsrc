@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/08/26 16:31:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/31 18:39:13 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	vuln
-DISTNAME=	vuln-1.0.0
-PKGNAME=	govulncheck-1.0.0
-PKGREVISION=	1
+DISTNAME=	vuln-1.0.1
+PKGNAME=	govulncheck-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
 
