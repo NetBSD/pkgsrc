@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/12/08 02:56:22 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2023/08/31 19:50:54 vins Exp $
 #
 
 DISTNAME=	bsdav-1.4
@@ -11,6 +11,8 @@ HOMEPAGE=	http://jakemsr.trancell.org/
 COMMENT=	BSD Audio/Video library and tools
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
+
+RELRO_SUPPORTED=	no
 
 USE_BSD_MAKEFILE=	yes
 NO_CONFIGURE=		yes
