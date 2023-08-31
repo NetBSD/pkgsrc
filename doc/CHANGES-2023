@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5239 2023/08/31 21:19:08 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5240 2023/08/31 23:07:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7642,3 +7642,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.3.4.1 [triaxx 2023-08-31]
 	Updated lang/sbcl to 2.3.8 [rjs 2023-08-31]
 	Updated wm/fvwm-themes to 0.7.0nb18 [vins 2023-08-31]
+	Updated devel/p5-Log-Any to 1.717 [wen 2023-08-31]
