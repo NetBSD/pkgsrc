@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/08/24 20:08:40 wiz Exp $
+$NetBSD: distinfo,v 1.5 2023/08/31 17:42:35 adam Exp $
 
-BLAKE2s (pyproject_api-1.5.4.tar.gz) = efcd42e8c17f717717aa22ef32584818b4dc5dde3c6a13be00066988181d7b5a
-SHA512 (pyproject_api-1.5.4.tar.gz) = e97305faa1420afa39274098e3d367ced49be8db4a87fda3f7c81b54e3a4b79eca80cf9b7eeb9b11af580535d758a750be8fb070e343355f43f93ee8a979357c
-Size (pyproject_api-1.5.4.tar.gz) = 22002 bytes
+BLAKE2s (pyproject_api-1.6.1.tar.gz) = 882de3683a8fd27e85ed197626bc7109a14ed7ef50f3aff53881802ec3753b0f
+SHA512 (pyproject_api-1.6.1.tar.gz) = a2c1d19dc47a1deb2e3f4d65243e41310434c739a70960ae5a18d8caab11d36fe232b173db253392ff5c3432024b5c494728950d1495d6b9d5c4acf6ad0a2e90
+Size (pyproject_api-1.6.1.tar.gz) = 22507 bytes
