@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/05/03 23:32:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.51 2023/08/31 01:11:16 gutteridge Exp $
 
-VERSION=	2.7.3
+VERSION=	2.8.0
 DISTNAME=	xfce4-whiskermenu-plugin-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/${VERSION:R}/
@@ -15,12 +15,18 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl intltool
 
-BUILDLINK_TRANSFORM.SunOS+=     rm:-Wl,--as-needed
-BUILDLINK_TRANSFORM.SunOS+=     rm:-Wl,-O1
+# AccountsService is an optional dependency; the version in pkgsrc is too old
+# at present.
+CMAKE_ARGS+=	-DENABLE_ACCOUNTS_SERVICE=No
+# Wayland support not relevant yet.
+CMAKE_ARGS+=	-DENABLE_GTK_LAYER_SHELL=No
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
