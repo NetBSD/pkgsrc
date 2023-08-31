@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2022/10/26 09:59:26 nros Exp $
+$NetBSD: distinfo,v 1.7 2023/08/31 14:13:42 adam Exp $
 
-BLAKE2s (matio-1.5.21.tar.gz) = 436f7155f889be58d38a53b8c1c7ffcf5ef933b89003ad92bdf24b3abd5de134
-SHA512 (matio-1.5.21.tar.gz) = b00bcad807e6a7e10afa656eb77a0e3e9fb08d9cecc3e94ba41ef91ce60367d6686e6d387a874bbb83eb2f895d4a97caac554a70e7f5f6f5cb750052702d411c
-Size (matio-1.5.21.tar.gz) = 10110430 bytes
+BLAKE2s (matio-1.5.23.tar.gz) = 1cc1e3035dd7e8243cd38b09c290dfcef32152eae0bee63ca9185625fd22a151
+SHA512 (matio-1.5.23.tar.gz) = e125278dcb25695affb7c576d0e2a86c0eff4225aa866b81536c9e4d7b2aea2c554f5389e96d534a8b559f5554b6cbecff4b44fe8915173cd64b2da6d1dc2629
+Size (matio-1.5.23.tar.gz) = 10115808 bytes
 SHA1 (patch-configure) = 884d581f2a03582553f352110130fba6cb5acc0d
 SHA1 (patch-documentation_Makefile.in) = 0f31d828464a09d061e24482e432422f4e5003df
