@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5244 2023/08/31 23:29:35 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5245 2023/08/31 23:35:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7647,3 +7647,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Log-Dispatchouli to 3.006 [wen 2023-08-31]
 	Updated devel/p5-Log-Report to 1.34 [wen 2023-08-31]
 	Updated devel/p5-Modern-Perl to 1.20230106 [wen 2023-08-31]
+	Updated devel/p5-Module-Build-Tiny to 0.046 [wen 2023-08-31]
