@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2023/07/16 20:50:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.102 2023/08/31 01:13:09 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION=	12
+PKGREVISION=	13
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -39,7 +39,7 @@ DEPENDS+=	xfce4-time-out-plugin>=1.1.3:../../misc/xfce4-time-out-plugin
 DEPENDS+=	xfce4-timer-plugin>=1.7.2:../../time/xfce4-timer-plugin
 DEPENDS+=	xfce4-verve-plugin>=2.0.3:../../sysutils/xfce4-verve-plugin
 DEPENDS+=	xfce4-weather-plugin>=0.11.1:../../misc/xfce4-weather-plugin
-DEPENDS+=	xfce4-whiskermenu-plugin>=2.7.3:../../x11/xfce4-whiskermenu-plugin
+DEPENDS+=	xfce4-whiskermenu-plugin>=2.8.0:../../x11/xfce4-whiskermenu-plugin
 DEPENDS+=	xfce4-xkb-plugin>=0.8.3:../../sysutils/xfce4-xkb-plugin
 
 # File Manager Plugins
