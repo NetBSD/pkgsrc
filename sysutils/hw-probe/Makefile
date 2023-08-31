@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/08/25 14:49:58 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/31 12:36:31 vins Exp $
 
 PKGVER=		1.6.5_20230812
 DISTNAME=	hw-probe-${PKGVER}
+PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxhw/}
 GITHUB_TAG=	b895b77b7e03f4b1b0a5fb177118373ee0328a25
@@ -17,7 +18,6 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-* Linux-*-*
 
 USE_TOOLS+=	perl:run
 
-DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	usbutil-[0-9]*:../../sysutils/usbutil
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 DEPENDS+=	smartmontools-[0-9]*:../../sysutils/smartmontools
@@ -53,4 +53,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md		\
 		${DESTDIR}${PREFIX}/${DOCDIR}/README
 
+.include "../../sysutils/pciutils/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
