@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5234 2023/08/31 18:55:29 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5235 2023/08/31 19:39:49 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7635,3 +7635,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/mongo-tools to 100.7.5 [adam 2023-08-31]
 	Updated devel/govulncheck to 1.0.1 [bsiegert 2023-08-31]
 	Updated textproc/hfstospell to 0.5.3 [bsiegert 2023-08-31]
+	Updated devel/got-portable to 0.92 [vins 2023-08-31]
