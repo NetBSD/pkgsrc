@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2023/08/29 20:24:14 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/08/31 06:05:38 wiz Exp $
 
 BLAKE2s (caja-extensions-1.26.1.tar.xz) = 75fde86a51f539ab468d59efc7641efe7acdf226915881a3f1b3a8359bb00b39
 SHA512 (caja-extensions-1.26.1.tar.xz) = 0b4df2b141f1a5b2e06b9c426f9605b900e9ed61c8725930165465265938740725f3e49f27788cb41728ab6d559245fc1ce6e44ef97b229d1456b191892c1ef0
 Size (caja-extensions-1.26.1.tar.xz) = 573240 bytes
-SHA1 (patch-configure) = 5c6dc506d50def3a7d3afec3f2eb977254b7b7a9
+SHA1 (patch-configure) = d355197ca493715b2ec5889fe64d08448d2eddec
