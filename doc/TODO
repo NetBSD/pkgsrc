@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23335 2023/08/30 22:25:32 wiz Exp $
+$NetBSD: TODO,v 1.23336 2023/08/31 11:56:39 pin Exp $
 
 Suggested new packages
 ======================
@@ -889,7 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libflash-0.4.13
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
-	o libgit2-1.7.1
+	o libgit2-1.7.1 [Do not update before end of Q3-freeze. Breaks all Rust package depending on git2-0.17.0/libgit2-sys-0.15.1+1.6.4 crates]
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
 	o libime-1.0.17
