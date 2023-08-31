@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5241 2023/08/31 23:11:06 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5242 2023/08/31 23:15:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7644,3 +7644,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/fvwm-themes to 0.7.0nb18 [vins 2023-08-31]
 	Updated devel/p5-Log-Any to 1.717 [wen 2023-08-31]
 	Updated devel/p5-Sub-Exporter to 0.990 [wen 2023-08-31]
+	Updated devel/p5-Log-Dispatchouli to 3.006 [wen 2023-08-31]
