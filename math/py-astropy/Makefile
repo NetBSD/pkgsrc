@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/08/31 14:01:37 adam Exp $
 
-DISTNAME=	astropy-5.0.4
+DISTNAME=	astropy-5.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
@@ -10,33 +10,18 @@ HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
 
-DEPENDS+=	libxml2>=2.9.10:../../textproc/libxml2
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.3:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-h5py>=2.9.0:../../devel/py-h5py
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.9.3:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
-DEPENDS+=	${PYPKGPREFIX}-bleach>=3.2.1:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.14:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.2.2:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.4:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.4.1:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=50.3.2:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-mpmath>=1.1.0:../../math/py-mpmath
-DEPENDS+=	${PYPKGPREFIX}-bottleneck>=1.3.2:../../math/py-bottleneck
-DEPENDS+=	${PYPKGPREFIX}-asdf>=2.9.2:../../math/py-asdf
-DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=0.1:../../devel/py-extension-helpers
-DEPENDS+=	${PYPKGPREFIX}-jplephem>=2.15:../../math/py-jplephem
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-colorlog>=6.6.0:../../devel/py-colorlog
+# recommended
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.5.3:../../graphics/py-matplotlib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+USE_LANGUAGES=	c c++
 
 USE_PKG_RESOURCES=	yes
 
-USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
