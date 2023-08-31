@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5213 2023/08/30 22:25:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5214 2023/08/31 01:11:33 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7598,3 +7598,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed editors/emacs25-nox11 [gdt 2023-08-30]
 	Updated chat/element-web to 1.11.40 [js 2023-08-30]
 	Updated devel/nss to 3.93 [wiz 2023-08-30]
+	Updated x11/xfce4-whiskermenu-plugin to 2.8.0 [gutteridge 2023-08-31]
