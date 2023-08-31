@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/09/11 14:24:23 wen Exp $
+$NetBSD: distinfo,v 1.23 2023/08/31 13:22:19 wen Exp $
 
-BLAKE2s (Text-CSV-2.02.tar.gz) = 4b51f2e0d853e2438fa803b8b6fb358800652c889dfcc5e19b5e87b3d64dddb4
-SHA512 (Text-CSV-2.02.tar.gz) = 0efb9396f5f02c3fc478f5d88a13bdfd1c615dde4ff3b671bc95e380e107b497634dc17e282dbfe3956a98a0d28f8156fe5d851483595c21d29674d535fcdaf6
-Size (Text-CSV-2.02.tar.gz) = 136346 bytes
+BLAKE2s (Text-CSV-2.03.tar.gz) = 41e308047abec7830f4a1b3cee1d8a41ba060d494193473e6919169f37a37beb
+SHA512 (Text-CSV-2.03.tar.gz) = afd9e81cd2ca9ca9a2c2575c4e540ad09243c1d8b6710dc2b1da472397f99024c768da5ef456948ebd4e06f71b3e5085ef52f191f62c06c6f4a697f70c855769
+Size (Text-CSV-2.03.tar.gz) = 140735 bytes
