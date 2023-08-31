@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1742 2023/08/29 14:15:33 manu Exp $
+# $NetBSD: Makefile,v 1.1743 2023/08/31 06:06:21 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -848,6 +848,7 @@ SUBDIR+=	py-protego
 SUBDIR+=	py-publicsuffix2
 SUBDIR+=	py-purl
 SUBDIR+=	py-pylint-django
+SUBDIR+=	py-pysaml2
 SUBDIR+=	py-pystache
 SUBDIR+=	py-python-mimeparse
 SUBDIR+=	py-python-multipart
@@ -864,7 +865,6 @@ SUBDIR+=	py-rjsmin
 SUBDIR+=	py-robobrowser
 SUBDIR+=	py-robot-detection
 SUBDIR+=	py-rss2gen
-SUBDIR+=	py-pysaml2
 SUBDIR+=	py-sanic
 SUBDIR+=	py-sanic-routing
 SUBDIR+=	py-scgi
