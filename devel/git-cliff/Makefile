@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/04/30 19:53:24 pin Exp $
+# $NetBSD: Makefile,v 1.27 2023/08/31 11:59:35 pin Exp $
 
 DISTNAME=	git-cliff-1.2.0
+# Do not update until after Q3-freeze is over.
+# Reuires libgit2-1.7.1 which breaks a large number of Rust packages.
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
