@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2023/08/14 05:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2023/08/31 12:00:09 pin Exp $
 
 DISTNAME=	libgit2-1.6.4
+# Do not update before Q3-freeze end.
+# It breaks all Rust packages depending on git2-0.17.0/libgit2-sys-0.15.1+1.6.4 crates
 PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
