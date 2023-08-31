@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/08/13 19:33:57 pin Exp $
+# $NetBSD: Makefile,v 1.4 2023/08/31 10:14:24 pin Exp $
 
-DISTNAME=	matugen-0.9.0
-PKGREVISION=	1
+DISTNAME=	matugen-0.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=InioX/}
-GITHUB_PROJECT=	Matugen
-#GITHUB_TAG=	matugen-v${PKGVERSION_NOREV}
-GITHUB_TAG=	8aeb6bbad7d3a240c3d24cabbe885448ec16a9e5
+GITHUB_TAG=	matugen-v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/InioX/Matugen/
