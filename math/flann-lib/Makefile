@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/08/31 10:22:29 adam Exp $
 
 DISTNAME=	flann-1.9.2
 PKGNAME=	${DISTNAME:S/-/-lib-/}
@@ -12,7 +12,6 @@ HOMEPAGE=	https://github.com/mariusmuja/flann
 COMMENT=	Fast Library for Approximate Nearest Neighbors
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -27,5 +26,6 @@ CMAKE_ARGS+=	-DBUILD_CUDA_LIB=OFF
 PKGCONFIG_OVERRIDE+=	cmake/flann.pc.in
 
 .include "../../archivers/lz4/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/hdf5-c++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
