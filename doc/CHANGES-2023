@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5237 2023/08/31 21:00:34 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5238 2023/08/31 21:10:07 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -4879,6 +4879,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gh to 2.30.0 [bsiegert 2023-06-03]
 	Updated databases/py-sqlalchemy-utils to 0.41.1 [markd 2023-06-03]
 	Updated www/py-flask-babel to 3.1.0 [markd 2023-06-03]
+	Updated lang/sbcl to 2.3.5 [rjs 2023-06-03]
 	Added www/py-flask-security-too version 5.2.0 [markd 2023-06-04]
 	Updated filesystems/glusterfs to 10.4 [gutteridge 2023-06-04]
 	Updated www/R-shinyjs to 2.1.0 [mef 2023-06-04]
@@ -5931,6 +5932,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/tsm8 to 8.1.19.0 [hauke 2023-07-04]
 	Updated x11/xterm to 383 [pin 2023-07-04]
 	Added time/uair version 0.6.1 [pin 2023-07-04]
+	Updated lang/sbcl to 2.3.6 [rjs 2023-07-04]
 	Updated graphics/py-objgraph to 3.6.0 [adam 2023-07-05]
 	Updated devel/py-prompt_toolkit to 3.0.39 [adam 2023-07-05]
 	Updated devel/py-types-setuptools to 68.0.0.1 [adam 2023-07-05]
@@ -7638,3 +7640,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/got-portable to 0.92 [vins 2023-08-31]
 	Updated games/openrct2 to 0.3.4 [triaxx 2023-08-31]
 	Updated games/openrct2 to 0.3.4.1 [triaxx 2023-08-31]
+	Updated lang/sbcl to 2.3.8 [rjs 2023-08-31]
