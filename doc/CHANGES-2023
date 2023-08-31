@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5228 2023/08/31 14:54:15 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5229 2023/08/31 16:09:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7622,3 +7622,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/gtk4 to 4.12.1 [adam 2023-08-31]
 	Updated devel/libadwaita to 1.2.5 [adam 2023-08-31]
 	Updated sysutils/py-borgbackup to 1.2.5 [bsiegert 2023-08-31]
+	Updated shells/oh-my-posh to 18.6.1 [pin 2023-08-31]
