@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/08/03 13:19:09 wen Exp $
+# $NetBSD: Makefile,v 1.42 2023/08/31 23:06:41 wen Exp $
 
-DISTNAME=	Log-Any-1.716
+DISTNAME=	Log-Any-1.717
 # 1.708 -> 1.70.8
 PKGNAME=	p5-${DISTNAME:C/-([0-9])\.([0-9])([0-9])([0-9])/-\1.\2\3.\4/}
 CATEGORIES=	devel perl5
