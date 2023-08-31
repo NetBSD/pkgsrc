@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5216 2023/08/31 03:10:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5217 2023/08/31 07:04:12 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7601,3 +7601,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.0 [gutteridge 2023-08-31]
 	Updated meta-pkgs/xfce4-extras to 4.18.0nb13 [gutteridge 2023-08-31]
 	Updated shells/oh-my-posh to 18.6.0 [pin 2023-08-31]
+	Updated www/gotosocial to 0.11.1 [nikita 2023-08-31]
