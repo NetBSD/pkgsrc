@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/18 18:04:48 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/08/31 10:09:02 wiz Exp $
 
 DISTNAME=	QuantLib-1.12.1
 PKGREVISION=	12
@@ -15,6 +15,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
+
+CXXFLAGS+=	-DBOOST_TIMER_ENABLE_DEPRECATED
 
 TOOLS_DEPENDS.cmake=	cmake>=3.0:../../devel/cmake
 
