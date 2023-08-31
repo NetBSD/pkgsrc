@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/08/03 13:30:42 wen Exp $
+$NetBSD: distinfo,v 1.14 2023/08/31 23:14:47 wen Exp $
 
-BLAKE2s (Log-Dispatchouli-3.005.tar.gz) = a42584f657744db9234c5b3078a443116579a390116df312193ee47ec70ad449
-SHA512 (Log-Dispatchouli-3.005.tar.gz) = 5e0895c1c27a59732d04456ca3621b6464b9cab386eaf6a760e658fd807ff3ac2cbe86f3b9a03c55e2d5a10754d593d820188b7a71fd00fc8b339ecef4c58b48
-Size (Log-Dispatchouli-3.005.tar.gz) = 39452 bytes
+BLAKE2s (Log-Dispatchouli-3.006.tar.gz) = 9a3c3fdf3935bae753ee6a0bd3832edecab1de30d8bf1e4f8b45f632975ba564
+SHA512 (Log-Dispatchouli-3.006.tar.gz) = 6e1a24d7dc659daa91fa5d4a984ca065ed11f6784c82a7420fe5e739542a3c9561c01fcc6b84abce187e19271e1b158086e47e0649ee155eaf10eaf114bff5b0
+Size (Log-Dispatchouli-3.006.tar.gz) = 39984 bytes
