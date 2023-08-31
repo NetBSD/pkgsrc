@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5232 2023/08/31 18:16:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5233 2023/08/31 18:39:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7633,3 +7633,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-tox to 4.11.0 [adam 2023-08-31]
 	Updated net/qbittorrent to 4.5.5 [adam 2023-08-31]
 	Updated databases/mongo-tools to 100.7.5 [adam 2023-08-31]
+	Updated devel/govulncheck to 1.0.1 [bsiegert 2023-08-31]
