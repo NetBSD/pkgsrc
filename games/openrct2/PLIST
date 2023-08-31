@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/20 20:02:49 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/08/31 20:39:51 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -47,6 +47,7 @@ share/openrct2/language/pt-BR.txt
 share/openrct2/language/ru-RU.txt
 share/openrct2/language/sv-SE.txt
 share/openrct2/language/tr-TR.txt
+share/openrct2/language/vi-VN.txt
 share/openrct2/language/zh-CN.txt
 share/openrct2/language/zh-TW.txt
 share/openrct2/object/official/footpath_item/rct2.dlc.litterpa.parkobj
@@ -2193,11 +2194,13 @@ share/openrct2/object/rct2ww/scenery_wall/rct2.ww.wwind03.json
 share/openrct2/object/rct2ww/scenery_wall/rct2.ww.wwind04.json
 share/openrct2/object/rct2ww/scenery_wall/rct2.ww.wwind05.json
 share/openrct2/object/rct2ww/scenery_wall/rct2.ww.wwind06.json
+share/openrct2/object/zipversion
 share/openrct2/sequence/openrct2.parkseq
 share/openrct2/sequence/rct1.parkseq
 share/openrct2/sequence/rct1aa.parkseq
 share/openrct2/sequence/rct1aall.parkseq
 share/openrct2/sequence/rct2.parkseq
+share/openrct2/sequence/zipversion
 share/openrct2/shaders/applypalette.frag
 share/openrct2/shaders/applypalette.vert
 share/openrct2/shaders/applytransparency.frag
