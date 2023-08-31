@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/07/30 20:52:52 nikita Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/08/31 07:03:59 nikita Exp $
 bin/gotosocial
 share/examples/gotosocial/config.yaml
 share/examples/gotosocial/docker-compose.yaml
@@ -24,6 +24,7 @@ share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon4.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon5.png
 share/examples/gotosocial/web/assets/default_avatars/GoToSocial_icon6.png
 share/examples/gotosocial/web/assets/default_header.png
+share/examples/gotosocial/web/assets/feditext.svg
 share/examples/gotosocial/web/assets/fonts/OFL.txt
 share/examples/gotosocial/web/assets/fonts/noto-sans-v27-latin-700.woff
 share/examples/gotosocial/web/assets/fonts/noto-sans-v27-latin-700.woff2
@@ -44,6 +45,7 @@ share/examples/gotosocial/web/source/css/base.css
 share/examples/gotosocial/web/source/css/index.css
 share/examples/gotosocial/web/source/css/profile.css
 share/examples/gotosocial/web/source/css/status.css
+share/examples/gotosocial/web/source/css/tag.css
 share/examples/gotosocial/web/source/frontend/index.js
 share/examples/gotosocial/web/source/index.js
 share/examples/gotosocial/web/source/package.json
@@ -134,4 +136,5 @@ share/examples/gotosocial/web/template/oob.tmpl
 share/examples/gotosocial/web/template/profile.tmpl
 share/examples/gotosocial/web/template/sign-in.tmpl
 share/examples/gotosocial/web/template/status.tmpl
+share/examples/gotosocial/web/template/tag.tmpl
 share/examples/gotosocial/web/template/thread.tmpl
