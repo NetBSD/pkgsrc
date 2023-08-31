@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/08/26 11:08:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2023/08/31 17:37:48 adam Exp $
 
-BLAKE2s (jupyter_server-2.7.2.tar.gz) = 73dee0f6669ab7cc03087b70e0c49f5ff633cc987a38e5f302a7994c993ddb5a
-SHA512 (jupyter_server-2.7.2.tar.gz) = ea3b968a742c47e90451e4d701801895ec16304705d65d48609a803934a77143ccff21de697aef061c1e0b9829c122ace0d1d9bdd5889bebbb58a9e6cda35e1f
-Size (jupyter_server-2.7.2.tar.gz) = 705360 bytes
+BLAKE2s (jupyter_server-2.7.3.tar.gz) = 519259acc84ee0b7aad35e28359404fbc23176c060e7d5488aaad88dbdf9302d
+SHA512 (jupyter_server-2.7.3.tar.gz) = ad9be38208ef4196417561355a62889e34d657f3114b710f13f974f4b453b465b7d473ced46eba873ee980d631d2648e0d4b29267011ed444247a33325f959e9
+Size (jupyter_server-2.7.3.tar.gz) = 705798 bytes
