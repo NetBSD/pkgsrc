@@ -1,0 +1,64 @@
++----------------------------------------------------------------------
+| INTRO to meli
++----------------------------------------------------------------------
+
+meli aims for configurability, extensibility with sane defaults, and
+modern practices. It is a mail client for both casual and power users of
+the terminal.
+
+A variety of email workflows and software stacks should be usable with
+meli.  Integrate e-mail storage, sync, tagging system, SMTP client,
+contact management and editor of your choice to replace the defaults.
+
+
+E-mail backends
+---------------
+
+               +-----------------+
+               | Support         |
++--------------+-----------------+
+| IMAP         | full            |
+| Maildir      | full            |
+| notmuch      | full*           |
+| mbox         | read-only       |
+| JMAP         | functional      |
+| NNTP / Usenet| functional      |
++--------------+-----------------+
+
+* there's no support for searching through all email directly, you'd
+  have to create a mailbox with a notmuch query that returns everything
+  and search inside that mailbox.
+
+E-mail Submission backends
+--------------------------
+
+- SMTP                   
+- Pipe to shell script   
+- Server-side submission 
+
+
+Non-exhaustive List of Features
+-------------------------------
+
+- TLS
+- email threading support
+- multithreaded, async operation
+- optionally run your editor of choice inside meli, with an embedded
+  xterm-compatible terminal emulator
+- plain text configuration in TOML
+- ability to open emails in UI tabs and switch to them
+- optional sqlite3 index search
+- override almost any setting per mailbox, per account
+- contact list (+read-only vCard and mutt alias file support)
+- forced UTF-8 (other encodings are read-only)
+- configurable shortcuts
+- theming
+- NO_COLOR support
+- ascii-only drawing characters option
+- view text/html attachments through an html filter command 
+  (w3m by default)
+- pipe attachments/mail to stuff
+- use external attachment file picker instead of typing in an 
+  attachment's full path
+- GPG signing, encryption, signing + encryption
+- GPG signature verification

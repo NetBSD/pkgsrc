@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/30 19:56:21 vins Exp $
+# $NetBSD: Makefile,v 1.11 2023/08/31 15:55:38 vins Exp $
 
 DISTNAME=	v0.8.0
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S|^v|meli-|}
 CATEGORIES=	mail
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -11,30 +12,39 @@ HOMEPAGE=	https://meli.delivery/
 COMMENT=	Terminal mail client
 LICENSE=	gnu-gpl-v3
 
-# Possibly working on other 64-bit processors but, not tested
-ONLY_FOR_PLATFORM=	*-*-x86_64
+# ring-v0.16.20 does not support these archs
+BROKEN_ON_PLATFORM=	*-*-powerpc64 *-*-sparc64
+# error[E0308]: mismatched types
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+USE_TOOLS+=	pax pkg-config
 
-.include "cargo-depends.mk"
-
-WRKSRC=		${WRKDIR}/meli
-
-USE_TOOLS+=			pkg-config
+TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/man7
+CARGO_NO_DEFAULT_FEATURES=	yes
+CARGO_FEATURES=			cli-docs jmap regexp smtp
+
+.include "options.mk"
+.include "cargo-depends.mk"
+
+PKG_DOCS=	meli/docs/external-tools.md meli/docs/mail.vim
+DOCDIR=		share/doc/${PKGBASE}
+
+WRKSRC=	${WRKDIR}/meli
 
 MAKE_ENV+=	OPENSSL_DIR=${SSLBASE:Q}
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.dbus}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pcre2}/lib
-RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.pcre2}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
+RUSTFLAGS+=	-C link-arg=-L${SSLBASE}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${X11BASE}/lib
+RUSTFLAGS+=	-C link-arg=-L${X11BASE}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
+RUSTFLAGS+=	-C link-arg=-L${PREFIX}/lib
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${DOCDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/managesieve-client \
@@ -50,13 +60,19 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.conf.5		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli.conf.5
 
-.include "../../lang/rust/cargo.mk"
-.include "../../lang/python/tool.mk"
+post-install:
+	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}		\
+		${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc		\
+		${DESTDIR}${PREFIX}/${DOCDIR}
+	${RUN}cd ${WRKSRC}/meli/docs &&				\
+		${PAX} -rw -pm samples ${DESTDIR}${PREFIX}/${DOCDIR}
+
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
-.include "../../mail/notmuch/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/rust/cargo.mk"
+
 .include "../../mk/bsd.pkg.mk"
