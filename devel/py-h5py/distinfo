@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:32 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/08/31 11:58:40 adam Exp $
 
-BLAKE2s (h5py-3.2.1.tar.gz) = 288eb4507abc49edc179e806b3f960cccf87adc576644e314f1e50bda0e32d5d
-SHA512 (h5py-3.2.1.tar.gz) = c98f935f800f340239fdd5132534a3b79995dc952250521f0bd6972a60c34c21bb56d7ca3f1c655ad9d1e47fc5792f434f88a0919ae75bc9102e659bf4f1c284
-Size (h5py-3.2.1.tar.gz) = 368170 bytes
-SHA1 (patch-setup.py) = a1a2643b899224500368ec403d86089822ee6cda
+BLAKE2s (h5py-3.9.0.tar.gz) = 32e67c2ac8c5c4d97abb295d8d1e8653d4f1cfbfd7e08d79af44a455124c8a3c
+SHA512 (h5py-3.9.0.tar.gz) = f87cb36ba874e86b179776031c3345ad83bc7b5eff2f3ee54acb6b0997cc7925c17dc478957103ab6bb07d8aaa8593af1d51c3547021a205e9d01c0e36d833a9
+Size (h5py-3.9.0.tar.gz) = 402856 bytes
