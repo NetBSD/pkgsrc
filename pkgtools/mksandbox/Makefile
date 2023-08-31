@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/01/22 11:59:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2023/08/31 20:14:35 triaxx Exp $
 
 PKGNAME=	mksandbox-1.10
 CATEGORIES=	pkgtools
@@ -7,6 +7,8 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://www.NetBSD.org/docs/pkgsrc/bulk.html#setting-up-a-sandbox
 COMMENT=	Tool for creating sandboxes
 LICENSE=	2-clause-bsd
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
