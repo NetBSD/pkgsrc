@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5221 2023/08/31 12:00:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5222 2023/08/31 13:00:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7608,3 +7608,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hdf5 to 1.12.2 [adam 2023-08-31]
 	Updated devel/hdf5-c++ to 1.12.2 [adam 2023-08-31]
 	Updated devel/py-h5py to 3.9.0 [adam 2023-08-31]
+	Updated devel/git-cliff to 1.3.0 [pin 2023-08-31]
