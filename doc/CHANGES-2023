@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5227 2023/08/31 14:42:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5228 2023/08/31 14:54:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7621,3 +7621,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 4.0.5 [adam 2023-08-31]
 	Updated x11/gtk4 to 4.12.1 [adam 2023-08-31]
 	Updated devel/libadwaita to 1.2.5 [adam 2023-08-31]
+	Updated sysutils/py-borgbackup to 1.2.5 [bsiegert 2023-08-31]
