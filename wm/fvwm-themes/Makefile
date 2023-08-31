@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/06/28 11:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/08/31 21:18:10 vins Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -16,9 +16,10 @@ COMMENT=	Configuration framework for fvwm2 with samples
 
 DEPENDS+=	{fvwm,fvwm2}>=2.4.8:../../wm/fvwm
 
-THEM_VER=	0.6.2
+THEM_VER=	0.7.0
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+USE_TOOLS+=	aclocal automake autoconf autoreconf
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	YES
 
@@ -49,7 +50,7 @@ SUBST_FILES.fvwm-menuapp=	bin/fvwm-themes-menuapp-destdir.in
 # -my $ftDir = "@FT_DATADIR@"
 # +my $ftDir = "${DESTDIR}@FT_DATADIR@"
 SUBST_SED.fvwm-menuapp=		-e 's|$$userDir, $$ftDataDir|$$userDir, \"${DESTDIR}\".$$ftDataDir|'
-SUBST_SED.fvwm-menuapp=		-e 's|my $$ftDir = "@FT_DATADIR@"|my $$ftDir = \"${DESTDIR}@FT_DATADIR@\"|'
+SUBST_SED.fvwm-menuapp+=	-e 's|my $$ftDir = "@FT_DATADIR@"|my $$ftDir = \"${DESTDIR}@FT_DATADIR@\"|'
 SUBST_STAGE.fvwm-menuapp=	pre-configure
 SUBST_MESSAGE.fvwm-menuapp=	Fixing FT_DATADIR (fvwm-themes-datadir)
 

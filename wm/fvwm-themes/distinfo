@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/08/31 21:18:10 vins Exp $
 
-BLAKE2s (fvwm-themes-0.6.2.tar.bz2) = 598d86a0ab9d44e94fd0902c411f5d47de6e65c96f75a73404b5408f608948c6
-SHA512 (fvwm-themes-0.6.2.tar.bz2) = d2786ac95417019911382f9cc51d836dd932e291dcf8a111036587b61cb570a642db085dd22f1ca4ffb67aa25df4e61dc7d8806d59162ceb7e67c8948926a522
-Size (fvwm-themes-0.6.2.tar.bz2) = 592419 bytes
-BLAKE2s (fvwm-themes-extra-0.6.2.tar.bz2) = cc088fbfbf5937ecc7d07459d0c51dcb96f1ac9906408efeda969053fd4de3c7
-SHA512 (fvwm-themes-extra-0.6.2.tar.bz2) = 514c09f618848993fc8cef844b2fa4a2da620f72e8151dba32a181bd7661c5b3dde6bc44038eeae3073244341d218ae1d6df6ce7182e9d140c9d2361ea9c7ae4
-Size (fvwm-themes-extra-0.6.2.tar.bz2) = 378884 bytes
+BLAKE2s (fvwm-themes-0.7.0.tar.bz2) = 559976c539951b8bc6f54773c66e4ee3a3af187cbdb1872d74cd3e21e1652e5d
+SHA512 (fvwm-themes-0.7.0.tar.bz2) = 38b14412bf3b9b59f8a001b628c384687daa8c26c8aaff258a0fcedde7fd8c5bb3fbd7cfb083dfa46b7ff1ae2ace652727a1faf96815bc5074d8134cd073e608
+Size (fvwm-themes-0.7.0.tar.bz2) = 921517 bytes
+BLAKE2s (fvwm-themes-extra-0.7.0.tar.bz2) = b8a0819400a1c7fac4651a37c3f5dc52f42a3a4baf32109c9e7126a45a93d397
+SHA512 (fvwm-themes-extra-0.7.0.tar.bz2) = 1328ffc798dae65afba180bdf08718881d28fb9bd135951d43ee4d59b0bcf5cb9200c50a3f87b81505a715a44491ffb9aa23f397424a76393c2952059f94beb0
+Size (fvwm-themes-extra-0.7.0.tar.bz2) = 1141727 bytes
 SHA1 (patch-Makefile.am) = 78d472478f75e84fdec3f921051ffb0fd52f75f3
 SHA1 (patch-Makefile.in) = 5b4c4a82d76b3a253c21bf96007f31a4c8133f4c
-SHA1 (patch-bin_Makefile.in) = 374482a3e72ebd312bbacd2e39e51e3460511c04
+SHA1 (patch-bin_Makefile.in) = 045dcce7a0bf4e6a22d18623b02e3869c81a481d
 SHA1 (patch-bin_fvwm-themes-config-destdir.in) = 07913ca78721c6d3c53a7caad2e9834e6bd3cd05
