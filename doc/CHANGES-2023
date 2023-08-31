@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5214 2023/08/31 01:11:33 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5215 2023/08/31 01:13:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7599,3 +7599,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/element-web to 1.11.40 [js 2023-08-30]
 	Updated devel/nss to 3.93 [wiz 2023-08-30]
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.0 [gutteridge 2023-08-31]
+	Updated meta-pkgs/xfce4-extras to 4.18.0nb13 [gutteridge 2023-08-31]
