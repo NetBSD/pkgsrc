@@ -1,21 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/27 12:38:19 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/08/31 17:23:31 adam Exp $
 bin/brotli
 include/brotli/decode.h
 include/brotli/encode.h
 include/brotli/port.h
+include/brotli/shared_dictionary.h
 include/brotli/types.h
-lib/libbrotlicommon-static.a
 lib/libbrotlicommon.so
-lib/libbrotlicommon.so.1
 lib/libbrotlicommon.so.${PKGVERSION}
-lib/libbrotlidec-static.a
+lib/libbrotlicommon.so.1
 lib/libbrotlidec.so
-lib/libbrotlidec.so.1
 lib/libbrotlidec.so.${PKGVERSION}
-lib/libbrotlienc-static.a
+lib/libbrotlidec.so.1
 lib/libbrotlienc.so
-lib/libbrotlienc.so.1
 lib/libbrotlienc.so.${PKGVERSION}
+lib/libbrotlienc.so.1
 lib/pkgconfig/libbrotlicommon.pc
 lib/pkgconfig/libbrotlidec.pc
 lib/pkgconfig/libbrotlienc.pc
