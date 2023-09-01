@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/06/08 13:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/01 10:06:35 nia Exp $
 
 DISTNAME=	HElib-1.0.1
 CATEGORIES=	security
@@ -13,7 +13,10 @@ LICENSE=	apache-2.0
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USE_CMAKE=	yes
-USE_LANGUAGES+=	c++
+USE_LANGUAGES+=	c c++
+
+FORCE_CXX_STD+=		c++14
+USE_CXX_FEATURES+=	c++14
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/ntl/buildlink3.mk"
