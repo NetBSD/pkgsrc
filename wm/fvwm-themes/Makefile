@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/09/01 05:57:21 vins Exp $
+# $NetBSD: Makefile,v 1.26 2023/09/01 06:03:29 vins Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -14,7 +14,7 @@ HOMEPAGE=	http://fvwm-themes.sourceforge.net/
 COMMENT=	Configuration framework for fvwm2 with samples
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	{fvwm,fvwm2}>=2.4.8:../../wm/fvwm
+DEPENDS+=	fvwm>=2.5.8:../../wm/fvwm
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 THEM_VER=	0.7.0
