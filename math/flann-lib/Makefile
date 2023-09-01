@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/08/31 10:22:29 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/01 11:34:59 nia Exp $
 
 DISTNAME=	flann-1.9.2
 PKGNAME=	${DISTNAME:S/-/-lib-/}
@@ -22,6 +22,9 @@ CMAKE_ARGS+=	-DBUILD_MATLAB_BINDINGS=OFF
 # MPI needs parallel HDF5.
 CMAKE_ARGS+=	-DUSE_MPI=OFF
 CMAKE_ARGS+=	-DBUILD_CUDA_LIB=OFF
+
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 PKGCONFIG_OVERRIDE+=	cmake/flann.pc.in
 
