@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:17:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/09/01 01:59:03 wen Exp $
 
-BLAKE2s (Proc-Pidfile-1.09.tar.gz) = 564a8b544187b7ce9711513449985279a876576c99d5233d4a548931195f1072
-SHA512 (Proc-Pidfile-1.09.tar.gz) = 320c731348f57bbd3f5b9c9a316657b10c112f5a46305f7cf4ed138bfeb35445df26e8fd287261ec5c014b588e132a6555b48b8673aa377c36c82d21007d7270
-Size (Proc-Pidfile-1.09.tar.gz) = 14153 bytes
+BLAKE2s (Proc-Pidfile-1.10.tar.gz) = 8fd0054fcc1181aab274a27a9ac672fb9227c5fdfbe66d19b80e9008511c817e
+SHA512 (Proc-Pidfile-1.10.tar.gz) = 82014511680726e79a694a2e3a0ab1ee616224cc47482ebfa63f32575a81b33fed844cd8314e11b85d8ce65dec06e5f321fe0b3b3abbc424e018df557b5bef0f
+Size (Proc-Pidfile-1.10.tar.gz) = 14468 bytes
