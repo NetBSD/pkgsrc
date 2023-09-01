@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5268 2023/09/01 20:22:27 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.5269 2023/09/01 20:29:41 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7676,3 +7676,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-ruby to 1.31.0 [osa 2023-09-01]
 	Updated games/openrct2 to 0.3.5.1 [triaxx 2023-09-01]
 	Updated lang/racket to 8.10 [riastradh 2023-09-01]
+	Updated lang/racket-textual to 8.10 [riastradh 2023-09-01]
