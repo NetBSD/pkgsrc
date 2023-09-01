@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5253 2023/09/01 02:02:59 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5254 2023/09/01 02:49:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7656,3 +7656,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Proc-Background to 1.32 [wen 2023-09-01]
 	Updated devel/p5-Proc-Pidfile to 1.10 [wen 2023-09-01]
 	Updated devel/p5-Proc-ProcessTable to 0.636 [wen 2023-09-01]
+	Updated devel/p5-Role-HasMessage to 0.007 [wen 2023-09-01]
