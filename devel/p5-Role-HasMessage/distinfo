@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:17:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/09/01 02:48:43 wen Exp $
 
-BLAKE2s (Role-HasMessage-0.006.tar.gz) = d3c60a03317588f1a337f094682a0289330f7d05ad2622c55a45981763d7b3fa
-SHA512 (Role-HasMessage-0.006.tar.gz) = 2bb8b19fe2c113c0c92a5e16180f53879ad92fbcb63a5b3af4ead167a4c8b3dcd460c9307d3c8e24ab5070e6c58f378d9e6854ed82da0ea231e456d5786b5398
-Size (Role-HasMessage-0.006.tar.gz) = 13518 bytes
+BLAKE2s (Role-HasMessage-0.007.tar.gz) = 7a4bd7884868388dd96e76832679ca2ed5d9063fc4b9471749f19b9437949f30
+SHA512 (Role-HasMessage-0.007.tar.gz) = 855f3ca7f60eb956c6fc9dfe5b7f91af86ed66602f65eff1f14dcc66c453a8582e2339d53832f8595f39935ef40f7c8806f4bd74d4a0a8ed576a0402737d901e
+Size (Role-HasMessage-0.007.tar.gz) = 16702 bytes
