@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/04/30 22:09:38 martin Exp $
+# $NetBSD: Makefile,v 1.69 2023/09/01 10:05:56 nia Exp $
 
 PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -12,6 +12,9 @@ HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugi
 COMMENT=	Xfce system load plugin
 
 USE_LANGUAGES=	c c++
+
+FORCE_CXX_STD+=		c++11
+USE_CXX_FEATURES+=	c++11
 
 MAKE_ENV.DragonFly+=	OS_LIBS=-lkinfo
 
