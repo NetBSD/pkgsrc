@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/12 12:44:00 mef Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/01 10:51:52 nia Exp $
 
 DISTNAME=	soapy-sdr-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,9 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN:Q}
 CMAKE_ARGS+=	-DPYTHON_CONFIG_EXECUTABLE=${PYTHONBIN:Q}-config
 CMAKE_ARGS+=	-DSWIG_EXECUTABLE=${PREFIX:Q}/bin/swig3.0
 WRKSRC=		${WRKDIR}/SoapySDR-${DISTNAME}/python
+
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
