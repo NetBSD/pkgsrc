@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/05/13 15:58:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/09/01 04:02:29 wen Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/tagging/migrations/0001_initial.pyo
 ${PYSITELIB}/tagging/migrations/0002_on_delete.py
 ${PYSITELIB}/tagging/migrations/0002_on_delete.pyc
 ${PYSITELIB}/tagging/migrations/0002_on_delete.pyo
+${PYSITELIB}/tagging/migrations/0003_adapt_max_tag_length.py
+${PYSITELIB}/tagging/migrations/0003_adapt_max_tag_length.pyc
+${PYSITELIB}/tagging/migrations/0003_adapt_max_tag_length.pyo
 ${PYSITELIB}/tagging/migrations/__init__.py
 ${PYSITELIB}/tagging/migrations/__init__.pyc
 ${PYSITELIB}/tagging/migrations/__init__.pyo
@@ -74,3 +77,4 @@ ${PYSITELIB}/tagging/utils.pyo
 ${PYSITELIB}/tagging/views.py
 ${PYSITELIB}/tagging/views.pyc
 ${PYSITELIB}/tagging/views.pyo
+@pkgdir share/doc/py-django-tagging
