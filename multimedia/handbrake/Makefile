@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/09/01 08:20:30 nia Exp $
+# $NetBSD: Makefile,v 1.98 2023/09/01 08:51:58 nia Exp $
 
 DISTNAME=	HandBrake-1.6.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -25,9 +25,7 @@ SITES.${LIBJPEG_TURBO}=	https://github.com/HandBrake/HandBrake-contribs/releases
 
 RESTRICTED=		Unresolved patent issues
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
