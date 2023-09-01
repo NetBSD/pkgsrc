@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.24 2023/08/31 21:18:10 vins Exp $
+# $NetBSD: Makefile,v 1.25 2023/09/01 05:57:21 vins Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
-PKGREVISION=	18
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fvwm-themes/}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}	\
 		fvwm-themes-extra-${THEM_VER}.tar.bz2
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://fvwm-themes.sourceforge.net/
 COMMENT=	Configuration framework for fvwm2 with samples
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	{fvwm,fvwm2}>=2.4.8:../../wm/fvwm
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 THEM_VER=	0.7.0
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	aclocal automake autoconf autoreconf
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	bsdtar bzip2 gzip lex perl:run yacc
 GNU_CONFIGURE=	YES
 
+CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ARGS+=	--with-ft-datadir=${PREFIX}/share/fvwm2
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include --x-libraries=${X11BASE}/lib
 
 REPLACE_PERL+=	themes/cde/modules/create-buttonbar-config
+REPLACE_PERL+=	themes/redmondxp/modules/FvwmThemesPanelManager
 
 #### 1 ####
 SUBST_CLASSES+=			Makefile
@@ -92,5 +95,5 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX}/share/fvwm2/sounds -name \*au  -exec ${CHMOD} -x,g-w '{}' \;
 	${FIND} ${DESTDIR}${PREFIX}/share/fvwm2/sounds -type d     -exec ${CHMOD}    g-w '{}' \;
 
-DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
