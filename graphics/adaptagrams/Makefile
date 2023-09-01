@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/10 07:31:50 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/09/01 10:20:32 nia Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
@@ -22,7 +22,8 @@ USE_LIBTOOL=	yes
 
 # Does not set -std=c++XX, but sigc++ (via cairomm) uses C++11 features in
 # its headers.
-USE_LANGUAGES=	c c++11
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 GNU_CONFIGURE=	yes
 
