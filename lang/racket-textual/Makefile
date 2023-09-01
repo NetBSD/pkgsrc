@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/09/01 19:48:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.38 2023/09/01 20:21:16 riastradh Exp $
 
 DISTNAME=		racket-minimal-8.10-src
-PKGNAME=		${DISTNAME:S/^racket-minimal/racket-textual/:S/-src$//}
+PKGNAME=		${DISTNAME:S/-src$//}
 CATEGORIES=		lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	http://www.eecs.northwestern.edu/racket/${PKGVERSION_NOREV}/
