@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5261 2023/09/01 13:10:08 hauke Exp $
+$NetBSD: CHANGES-2023,v 1.5262 2023/09/01 14:03:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7664,3 +7664,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/py-jupyter-lsp version 2.2.0 [adam 2023-09-01]
 	Updated www/py-django-admin-sortable2 to 1.0.4 [adam 2023-09-01]
 	Updated net/netatalk22 to 2.2.10 [hauke 2023-09-01]
+	Updated security/lua-ossl to 20220711 [nia 2023-09-01]
