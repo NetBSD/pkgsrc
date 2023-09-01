@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/05/20 06:35:46 wiz Exp $
+$NetBSD: distinfo,v 1.18 2023/09/01 02:01:52 wen Exp $
 
-BLAKE2s (Proc-ProcessTable-0.635.tar.gz) = b1215bfe8720d092ffb0caa5277e7e62391f6d8592dda6c63bdbedaf22498523
-SHA512 (Proc-ProcessTable-0.635.tar.gz) = 9f8d5ba79432e8ddb4e0138d351b6706f233131104bcc5cd1848dbad6156f447eb6fc98a87faee811a4acfc547a7e2f765e263c01670e118c8037d8fc4f08123
-Size (Proc-ProcessTable-0.635.tar.gz) = 95534 bytes
+BLAKE2s (Proc-ProcessTable-0.636.tar.gz) = 26ed10483d407dd719804b627cbd9b425a1a3c2d861236584c503cc03a74ec9c
+SHA512 (Proc-ProcessTable-0.636.tar.gz) = 9678c9bd4bf70c4188265824fbc79e2f951f9e3722733172838fe20748b6938babd5a4db44bb1b6c8c59b7718ade634b3f25a462a82291dc2edaa620baa436cd
+Size (Proc-ProcessTable-0.636.tar.gz) = 95667 bytes
