@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/07/18 18:02:46 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/09/01 07:25:41 nia Exp $
 
 DISTNAME=	melonDS-0.8.3
 PKGNAME=	${DISTNAME:S/DS/ds/}
@@ -26,6 +26,9 @@ INSTALLATION_DIRS+=	share/applications
 .for s in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${s}x${s}/apps
 .endfor
+
+# Wants to build with -fno-pic for whatever reason
+MKPIE_SUPPORTED=	no
 
 .include "../../graphics/MesaLib/features.mk"
 .if ${MESALIB_SUPPORTS_EGL:tl} == "no"
