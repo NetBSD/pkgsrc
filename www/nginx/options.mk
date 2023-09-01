@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.96 2023/07/20 15:02:52 osa Exp $
+# $NetBSD: options.mk,v 1.97 2023/09/01 16:54:27 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -147,14 +147,14 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.24
+LUA_VERSION=		0.10.25
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
-DEPENDS+=		lua-resty-core>=0.1.26:../../www/lua-resty-core
+DEPENDS+=		lua-resty-core>=0.1.27:../../www/lua-resty-core
 DEPENDS+=		lua-resty-lrucache>=0.13:../../www/lua-resty-lrucache
 CONFIGURE_ENV+=		LUAJIT_LIB=${PREFIX}/lib
 CONFIGURE_ENV+=		LUAJIT_INC=${PREFIX}/include/luajit-2.0
