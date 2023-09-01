@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/09/01 10:49:07 nia Exp $
 
 DISTNAME=		libpqxx-7.7.4
 PKGREVISION=		1
@@ -11,11 +11,13 @@ HOMEPAGE=		http://pqxx.org/development/libpqxx/
 COMMENT=		C++ interface to postgresql-lib
 LICENSE=		modified-bsd
 
-USE_LANGUAGES=		c++17
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+
+USE_CXX_FEATURES+=	c++17
 
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+=	tools/m4esc.py
