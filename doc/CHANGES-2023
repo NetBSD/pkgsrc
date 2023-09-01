@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5248 2023/09/01 01:33:20 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5249 2023/09/01 01:35:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7651,3 +7651,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9917 [wen 2023-08-31]
 	Updated devel/p5-Perl4-CoreLibs to 0.005 [wen 2023-09-01]
 	Updated devel/p5-PerlIO-eol to 0.19 [wen 2023-09-01]
+	Updated devel/p5-PerlIO-utf8_strict to 0.010 [wen 2023-09-01]
