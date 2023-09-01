@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.93 2023/09/01 19:48:28 riastradh Exp $
 
-PKGNAME=		racket-6.12
-PKGREVISION=		16
-DISTNAME=		${PKGNAME_NOREV}-src
+DISTNAME=		racket-8.10-src
+PKGNAME=		${DISTNAME:S/-src$//}
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -16,7 +15,7 @@ MASTER_SITES_PLT+=	https://racket.infogroep.be/${PKGVERSION_NOREV}/
 MASTER_SITES=		${MASTER_SITES_PLT}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	asau@inbox.ru
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://racket-lang.org/
 COMMENT=	Scheme-based dialect of Lisp
 LICENSE=	gnu-lgpl-v2
@@ -32,21 +31,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
 USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config gmake
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS.NetBSD+=	paxctl
 UNLIMIT_RESOURCES=	virtualsize datasize cputime
-MAKE_ENV+=		"PAXCTL=${TOOLS_PLATFORM.paxctl}"
+CONFIGURE_ENV.NetBSD+=	PAXCTL=${TOOLS_PLATFORM.paxctl:Q}
+PLIST_SUBST+=		PREFIX=${PREFIX:Q}
 
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.DragonFly+=	-rdynamic
-
-CHECK_INTERPRETER_SKIP=	collects/meta/build/sitemap/setup.py \
-			collects/meta/build/sitemap/test_sitemap_gen.py
-
-CHECK_INTERPRETER_SKIP=	lib/racket/collects/meta/build/sitemap/setup.py \
-			lib/racket/collects/meta/build/sitemap/sitemap_gen.py \
-			lib/racket/collects/meta/build/sitemap/test_sitemap_gen.py
-
-CHECK_INTERPRETER_SKIP+=	lib/racket/collects/tests/jpr/mon-script.ss
 
 CHECK_RELRO_SKIP=	bin/mred bin/mzscheme
 
@@ -56,10 +48,21 @@ REPLACE_RACKET+=	share/pkgs/racket-doc/ffi/examples/${f}
 
 REPLACE_INTERPRETER+=	racket
 REPLACE.racket.old=	.*racket
-REPLACE.racket.new=	${LOCALBASE}/bin/racket
+REPLACE.racket.new=	${PREFIX}/bin/racket
 REPLACE_FILES.racket=	${REPLACE_RACKET}
 
+EGDIR=			share/examples/racket
+INSTALLATION_DIRS+=	${EGDIR}
+OWN_DIRS+=		${PKG_SYSCONFDIR}/etc/racket
+CONF_FILES+=		${EGDIR}/config.rktd \
+			${PKG_SYSCONFDIR}/etc/racket/config.rktd
+
+post-install:
+	${MV} -f ${DESTDIR:Q}${PREFIX:Q}/etc/racket/config.rktd \
+		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
+
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,0 +1,31 @@
+$NetBSD: patch-src_ChezScheme_configure,v 1.1 2023/09/01 19:48:28 riastradh Exp $
+
+Don't link against libiconv_std.a.
+https://github.com/racket/racket/issues/4736
+
+Link against ncurses with -lncurses, not by hard-coding the static
+library path out of /usr/pkg.  Omit spurious -I paths.
+https://github.com/racket/racket/issues/4734
+
+--- src/ChezScheme/configure.orig	2023-07-18 00:36:32.000000000 +0000
++++ src/ChezScheme/configure
+@@ -762,10 +762,7 @@ if [ "$addflags" = "yes" ] ; then
+         LIBS="${LIBS} ${iconvLib} -lm ${ncursesLib}"
+         ;;
+     *nb)
+-        if [ "$disableiconv" = "no" ]; then
+-            iconvLib="/usr/lib/i18n/libiconv_std.a"
+-        fi
+-        LIBS="${LIBS} ${iconvLib} -lm /usr/pkg/lib/libncurses.a"
++        LIBS="${LIBS} ${iconvLib} -lm -lncurses"
+         ;;
+     *s2)
+         LIBS="${LIBS} -lnsl -ldl -lm ${cursesLib} -lrt"
+@@ -811,7 +808,6 @@ case "${flagsmuni}" in
+         ;;
+     *nb)
+         mdcflags="-fPIC -shared"
+-        mdinclude="-I/usr/X11R7/include -I/usr/pkg/include -I/usr/pkg/include/ncurses -I/usr/X11R6/include"
+         ;;
+     *nt)
+         mdcflags="-shared"
