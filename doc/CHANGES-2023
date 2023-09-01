@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5260 2023/09/01 05:59:24 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5261 2023/09/01 13:10:08 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7663,3 +7663,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-tagging to 0.5.0 [wen 2023-09-01]
 	Added www/py-jupyter-lsp version 2.2.0 [adam 2023-09-01]
 	Updated www/py-django-admin-sortable2 to 1.0.4 [adam 2023-09-01]
+	Updated net/netatalk22 to 2.2.10 [hauke 2023-09-01]
