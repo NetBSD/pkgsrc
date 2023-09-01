@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/08/18 10:31:58 nia Exp $
+# $NetBSD: Makefile,v 1.88 2023/09/01 07:18:24 jperkin Exp $
 
 DISTNAME=	bulk-medium-20230818
 CATEGORIES=	meta-pkgs
@@ -63,7 +63,7 @@ DEPENDS+=	git-[0-9]*:../../devel/git
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
-DEPENDS+=	emacs25>=25<26:../../editors/emacs25
+DEPENDS+=	emacs26>=26<27:../../editors/emacs26
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk3-[0-9]*:../../editors/vim-gtk3
