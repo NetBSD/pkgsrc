@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5269 2023/09/01 20:29:41 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.5270 2023/09/01 23:44:51 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7677,3 +7677,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.3.5.1 [triaxx 2023-09-01]
 	Updated lang/racket to 8.10 [riastradh 2023-09-01]
 	Updated lang/racket-textual to 8.10 [riastradh 2023-09-01]
+	Updated pkgtools/pkglint to 23.2.2 [rillig 2023-09-01]
