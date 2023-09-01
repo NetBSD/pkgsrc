@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 10:51:52 nia Exp $
+$NetBSD: distinfo,v 1.27 2023/09/01 19:48:28 riastradh Exp $
 
-BLAKE2s (racket-6.12-src.tgz) = 4a9a2f1a177f1d729e6dadf6dc92c86b6ad7ca41ada03b9ff7cfbd3366afcd8f
-SHA512 (racket-6.12-src.tgz) = e373cc1dd94f98d84dd2a105dad1cc2f2068118777b455af3f30ea3d190e6d601392bf17337652eeb84fa86d9c60aaa17563599b1772dc312211a8ac6e2c7060
-Size (racket-6.12-src.tgz) = 22271046 bytes
-SHA1 (patch-src_gracket_Makefile.in) = c069d6e68f8d0ea5f8cf958c10ffefd8d13edfe4
-SHA1 (patch-src_gracket_gc2_Makefile.in) = 42c848a77fdeaf855da10b56b896da3c3d1cd752
-SHA1 (patch-src_racket_Makefile.in) = d4ce90b5b810393261568f6b3a91b3c012af3658
-SHA1 (patch-src_rktio_rktio__network.c) = 9fc0d489649555fa116f631e97b2a5b18f5eaef9
+BLAKE2s (racket-8.10-src.tgz) = 75ead0b8bd75edebf7743eaeba1465ac99d4559fdb97df7f485713331a6022f4
+SHA512 (racket-8.10-src.tgz) = 75df87b1322ebe10e9d3de3661a64ae4aea41f68af2a4941570fbe53c7047e67b74f126e532fba244e2593eaeef740ded3736e3b6eab77b9a4f1b8a0ee850894
+Size (racket-8.10-src.tgz) = 33960563 bytes
+SHA1 (patch-src_ChezScheme_configure) = 2ca8a7f3de569ccfdc4296916774fd9a2276275d
+SHA1 (patch-src_bc_configure) = 4d4c75686c3170617ba216438f5815d238f44ff8
+SHA1 (patch-src_bc_configure.ac) = 8f86d669f203ecde18c5cce1c544718f1c5938e4
+SHA1 (patch-src_cs_c_configure) = 0c0a087da9e21aacbad64cf00a6a877ab161b7b7
+SHA1 (patch-src_cs_c_configure.ac) = f9d24bb3c829aecc1a33864d9d7a5e0268fbc6af
