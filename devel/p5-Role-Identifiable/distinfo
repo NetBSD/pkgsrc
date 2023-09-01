@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:17:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/09/01 02:53:39 wen Exp $
 
-BLAKE2s (Role-Identifiable-0.007.tar.gz) = ef3732dff19076da8ddc3a54d10c24aaafac227e23ce409791ad44d6474ab21d
-SHA512 (Role-Identifiable-0.007.tar.gz) = 811c81e3fbf8499269c4db3a45d60b35ae6ff8a8d5a93308607f37c97c2f52ad4ee6db28d15497d4d1f8cb59c67f03f479632d1a2d440034e8cd711b2a5349df
-Size (Role-Identifiable-0.007.tar.gz) = 13429 bytes
+BLAKE2s (Role-Identifiable-0.009.tar.gz) = 337a842871df5b601ab2aabeb88d6d96dca26736374eff685efa50f4778f8277
+SHA512 (Role-Identifiable-0.009.tar.gz) = adc94f63c128dca80ef204eaf4b71752227b0cedca3bc2d32ffebdabfc5804009ebe15bfab2d522c23cf92090ed49c1a00c9f237c52abe9de69cf5145605eb33
+Size (Role-Identifiable-0.009.tar.gz) = 16678 bytes
