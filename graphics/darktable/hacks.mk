@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2022/06/23 09:32:57 nia Exp $
+# $NetBSD: hacks.mk,v 1.3 2023/09/01 16:23:09 nia Exp $
 
 .if !defined(DARKTABLE_HACKS_MK)
 DARKTABLE_HACKS_MK:=
@@ -15,7 +15,7 @@ SUBST_MESSAGE.opt=	Disabling excessive forced optimizations.
 SUBST_STAGE.opt+=	pre-configure
 SUBST_SED.opt+=		-e "s,pragma GCC optimize,pragma GCC nooptimize,g"
 SUBST_FILES.opt+=	src/iop/*.c
-SUBST_FILES.opt+=	src/iop/*.h
+SUBST_FILES.opt+=	src/iop/demosaicing/*.c
 SUBST_FILES.opt+=	src/develop/blends/*.c
 SUBST_FILES.opt+=	src/common/*.c
 SUBST_FILES.opt+=	src/common/*.h
