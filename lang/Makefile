@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.694 2023/08/31 06:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.695 2023/09/01 14:59:58 bacon Exp $
 #
 
 COMMENT=	Programming languages
@@ -141,6 +141,7 @@ SUBDIR+=	japhar
 SUBDIR+=	jasmin
 SUBDIR+=	jikes
 SUBDIR+=	jimtcl
+SUBDIR+=	joker
 SUBDIR+=	joos
 SUBDIR+=	jpm
 SUBDIR+=	js
