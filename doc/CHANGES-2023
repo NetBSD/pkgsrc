@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5265 2023/09/01 16:55:47 osa Exp $
+$NetBSD: CHANGES-2023,v 1.5266 2023/09/01 17:30:40 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7668,3 +7668,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/joker version 1.3.0 [bacon 2023-09-01]
 	Updated graphics/darktable to 4.4.2 [nia 2023-09-01]
 	Updated www/nginx to 1.24.0nb10 [osa 2023-09-01]
+	Updated devel/libunit to 1.31.0 [osa 2023-09-01]
+	Updated www/unit to 1.31.0 [osa 2023-09-01]
+	Updated www/unit-perl to 1.31.0 [osa 2023-09-01]
+	Updated www/unit-php to 1.31.0 [osa 2023-09-01]
+	Updated www/unit-python to 1.31.0 [osa 2023-09-01]
+	Updated www/unit-ruby to 1.31.0 [osa 2023-09-01]
