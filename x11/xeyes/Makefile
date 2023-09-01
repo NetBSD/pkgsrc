@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/14 06:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/01 09:39:02 nia Exp $
 
 DISTNAME=	xeyes-1.3.0
 CATEGORIES=	x11
@@ -15,6 +15,7 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
