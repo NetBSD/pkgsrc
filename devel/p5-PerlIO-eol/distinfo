@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:17:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/09/01 01:31:46 wen Exp $
 
-BLAKE2s (PerlIO-eol-0.17.tar.gz) = 7665ccc5a0848784afe6bc2edfca9d5ffd61b9ba4b67e48569ceeeae327340ce
-SHA512 (PerlIO-eol-0.17.tar.gz) = 3be4ced8c173fd0dee327264b6ddd586231fb8c8acc3ee92dce4332db97f8a9649f2af07690e9083767f17c7ac21282a300aef89234048e43851be2b61db9da3
-Size (PerlIO-eol-0.17.tar.gz) = 16555 bytes
+BLAKE2s (PerlIO-eol-0.19.tar.gz) = dd2fdcf93db1669100dcadf03b07ec4a34b13fdc3de7a23e3a4a4b8a7ddbf40a
+SHA512 (PerlIO-eol-0.19.tar.gz) = b7aef61292e6721281dc32e0a08de5725bd9a0d7740be9bf8d5b26f7ba445e3eefc7129eae679e9d7cb9ac9b5119a98a5fdfd069855fed73931adff5fce0b154
+Size (PerlIO-eol-0.19.tar.gz) = 16817 bytes
