@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/06 19:09:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/01 10:50:49 nia Exp $
 
 DISTNAME=	amnesia-tdd-0.3.2
 PKGREVISION=	2
@@ -19,6 +19,9 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DSYSTEMWIDE_RESOURCES=ON
 CMAKE_ARGS+=	-DSYSTEMWIDE_RESOURCES_LOCATION="${PREFIX}/share/amnesia-tdd"
 CMAKE_ARGS+=	./amnesia/src
+
+USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=		c++11
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
