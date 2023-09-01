@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/06/30 20:49:44 osa Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/01 17:28:29 osa Exp $
 
 PKGNAME=	unit-${LANG}${RUBY_VER}-${UNIT_VERSION}
-PKGREVISION=	1
 COMMENT=	Ruby module for NGINX Unit
 
 LANG=		ruby
