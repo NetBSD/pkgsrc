@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/07/06 09:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/09/01 09:49:28 nia Exp $
 
 DISTNAME=	Text-Hunspell-2.16
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,10 @@ LICENSE=	${PERL5_LICENSE}
 TOOL_DEPENDS+=	p5-Alien-Hunspell-[0-9]*:../../textproc/p5-Alien-Hunspell
 
 USE_LANGUAGES=		c c++
+
+# Mostly needed due to hunspell headers making c++98 default unacceptable.
+FORCE_CXX_STD=		c++11
+USE_CXX_FEATURES+=	c++11
 
 PERL5_PACKLIST=	auto/Text/Hunspell/.packlist
 
