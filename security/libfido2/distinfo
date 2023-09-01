@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2023/03/15 14:38:13 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/09/01 09:56:56 nia Exp $
 
 BLAKE2s (libfido2-1.13.0.tar.gz) = bb230689076829bf6d298811c1b4c1d6b6715795747482b4c2b6a8695a0939e3
 SHA512 (libfido2-1.13.0.tar.gz) = 90f8452cee4c9cc72241478e697c5c692ccff5ab27752f2f296c3623ee297d1f80a85a359b4d0656c67790084c116aac921894e762eb52d3a79056e5014c03e7
 Size (libfido2-1.13.0.tar.gz) = 652777 bytes
+SHA1 (patch-CMakeLists.txt) = 7b1f8653d6d6cdd542e866754fd6eaf556277ab3
