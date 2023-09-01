@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:17:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/09/01 01:40:01 wen Exp $
 
-BLAKE2s (PerlX-Maybe-1.201.tar.gz) = 7304dcc02e7ab8135338f3612a471efd10db1713d5ffac1b5e685b48ba31efee
-SHA512 (PerlX-Maybe-1.201.tar.gz) = e98059e7be69ca0893cc0e48af616be940808b9574a57691c0661a21a35010f46a7c45b202e57495360d3bf4d29c29d9430fb8a91cc4f963ff48d37c6087c2d3
-Size (PerlX-Maybe-1.201.tar.gz) = 18147 bytes
+BLAKE2s (PerlX-Maybe-1.202.tar.gz) = 3d41cc7cf79d6c169659f61ad99b54deccdd86ee6d6178091d60069e7416e079
+SHA512 (PerlX-Maybe-1.202.tar.gz) = 82a873c672ee6e663f92bbbf420d305251097b28d55cdf6b4c17bed0fa8d7a308b3d622e9529a2f3e3760304f9a9ff3c09b8fb721881a785b5e58cab11f6864f
+Size (PerlX-Maybe-1.202.tar.gz) = 18346 bytes
