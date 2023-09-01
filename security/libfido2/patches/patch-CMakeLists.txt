@@ -1,0 +1,43 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/09/01 09:56:56 nia Exp $
+
+Remove overzealous compiler options and let pkgsrc define the
+stack protection to use.
+
+--- CMakeLists.txt.orig	2023-02-20 08:21:28.000000000 +0000
++++ CMakeLists.txt
+@@ -90,7 +90,6 @@ if(NOT MSVC)
+ endif()
+ 
+ check_c_compiler_flag("-Wshorten-64-to-32" HAVE_SHORTEN_64_TO_32)
+-check_c_compiler_flag("-Werror -fstack-protector-all" HAVE_STACK_PROTECTOR_ALL)
+ 
+ check_include_files(cbor.h HAVE_CBOR_H)
+ check_include_files(endian.h HAVE_ENDIAN_H)
+@@ -123,7 +122,7 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC
+ try_compile(HAVE_POSIX_IOCTL
+     "${CMAKE_CURRENT_BINARY_DIR}/posix_ioctl_check.o"
+     "${CMAKE_CURRENT_SOURCE_DIR}/openbsd-compat/posix_ioctl_check.c"
+-    COMPILE_DEFINITIONS "-Werror -Woverflow -Wsign-conversion")
++    COMPILE_DEFINITIONS "-Woverflow -Wsign-conversion")
+ 
+ list(APPEND CHECK_VARIABLES
+ 	HAVE_ARC4RANDOM_BUF
+@@ -295,7 +294,6 @@ else()
+ 
+ 	add_compile_options(-Wall)
+ 	add_compile_options(-Wextra)
+-	add_compile_options(-Werror)
+ 	add_compile_options(-Wshadow)
+ 	add_compile_options(-Wcast-qual)
+ 	add_compile_options(-Wwrite-strings)
+@@ -316,10 +314,6 @@ else()
+ 		add_compile_options(-Wshorten-64-to-32)
+ 	endif()
+ 
+-	if(HAVE_STACK_PROTECTOR_ALL)
+-		add_compile_options(-fstack-protector-all)
+-	endif()
+-
+ 	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g2")
+ 	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -fno-omit-frame-pointer")
+ 	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -D_FORTIFY_SOURCE=2")
