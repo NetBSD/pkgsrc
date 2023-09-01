@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/18 18:34:30 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/01 10:08:46 nia Exp $
 
 GITHUB_PROJECT=	atomicparsley
 GITHUB_TAG=	refs/tags/20221229.172126.d813aa6
@@ -16,7 +16,8 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/atomicparsley-20221229.172126.d813aa6
 USE_LANGUAGES=	c c++
 
-# Uses nullptr in the code.
+# Uses nullptr in the code without setting -std=XX.
+FORCE_CXX_STD+=		c++11
 USE_CXX_FEATURES+=	c++11
 
 INSTALLATION_DIRS=	share/doc/atomicparsley
