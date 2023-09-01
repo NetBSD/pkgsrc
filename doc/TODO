@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23338 2023/09/01 16:23:22 nia Exp $
+$NetBSD: TODO,v 1.23339 2023/09/01 20:22:27 riastradh Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
-	o racket-8.7
 	o radiance-5.3
 	o rails-6.1.0
 	o raine-0.64.9
