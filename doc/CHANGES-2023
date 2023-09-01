@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5255 2023/09/01 02:56:15 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5256 2023/09/01 03:25:35 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7658,3 +7658,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Proc-ProcessTable to 0.636 [wen 2023-09-01]
 	Updated devel/p5-Role-HasMessage to 0.007 [wen 2023-09-01]
 	Updated devel/p5-Role-Identifiable to 0.009 [wen 2023-09-01]
+	Updated games/openrct2 to 0.3.5 [triaxx 2023-09-01]
