@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/07/09 09:29:34 tsutsui Exp $
+# $NetBSD: Makefile,v 1.45 2023/09/01 10:07:00 nia Exp $
 
 DISTNAME=	sayaka-3.6.5
 CATEGORIES=	net
@@ -12,9 +12,11 @@ COMMENT=	Terminal specific Twitter client
 LICENSE=	modified-bsd AND mit
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c99 c++17
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 BUILD_TARGET=		sayaka
+
+USE_CXX_FEATURES+=	c++17
 
 INSTALLATION_DIRS+=	bin
 
