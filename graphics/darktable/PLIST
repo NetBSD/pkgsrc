@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/06/23 20:05:11 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/09/01 16:23:09 nia Exp $
 bin/darktable
 bin/darktable-chart
 bin/darktable-cli
@@ -15,6 +15,7 @@ lib/darktable/plugins/imageio/format/libpfm.so
 lib/darktable/plugins/imageio/format/libpng.so
 lib/darktable/plugins/imageio/format/libppm.so
 lib/darktable/plugins/imageio/format/libtiff.so
+lib/darktable/plugins/imageio/format/libwebp.so
 lib/darktable/plugins/imageio/format/libxcf.so
 lib/darktable/plugins/imageio/storage/libdisk.so
 lib/darktable/plugins/imageio/storage/libemail.so
@@ -28,6 +29,7 @@ lib/darktable/plugins/libbasicadj.so
 lib/darktable/plugins/libbilat.so
 lib/darktable/plugins/libbilateral.so
 lib/darktable/plugins/libbloom.so
+lib/darktable/plugins/libblurs.so
 lib/darktable/plugins/libborders.so
 lib/darktable/plugins/libcacorrect.so
 lib/darktable/plugins/libcacorrectrgb.so
@@ -53,6 +55,7 @@ lib/darktable/plugins/libcrop.so
 lib/darktable/plugins/libdefringe.so
 lib/darktable/plugins/libdemosaic.so
 lib/darktable/plugins/libdenoiseprofile.so
+lib/darktable/plugins/libdiffuse.so
 lib/darktable/plugins/libdither.so
 lib/darktable/plugins/libequalizer.so
 lib/darktable/plugins/libexposure.so
@@ -92,6 +95,7 @@ lib/darktable/plugins/librotatepixels.so
 lib/darktable/plugins/libscalepixels.so
 lib/darktable/plugins/libshadhi.so
 lib/darktable/plugins/libsharpen.so
+lib/darktable/plugins/libsigmoid.so
 lib/darktable/plugins/libsoften.so
 lib/darktable/plugins/libsplittoning.so
 lib/darktable/plugins/libspots.so
@@ -115,6 +119,8 @@ lib/darktable/plugins/lighttable/libduplicate.so
 lib/darktable/plugins/lighttable/libexport.so
 lib/darktable/plugins/lighttable/libfilmstrip.so
 lib/darktable/plugins/lighttable/libfilter.so
+lib/darktable/plugins/lighttable/libfiltering.so
+lib/darktable/plugins/lighttable/libgamepad.so
 lib/darktable/plugins/lighttable/libgeotagging.so
 lib/darktable/plugins/lighttable/libglobal_toolbox.so
 lib/darktable/plugins/lighttable/libhinter.so
@@ -154,7 +160,7 @@ man/man1/darktable-cltest.1
 man/man1/darktable-cmstest.1
 man/man1/darktable-generate-cache.1
 man/man1/darktable.1
-share/applications/darktable.desktop
+share/applications/org.darktable.darktable.desktop
 share/darktable/darktable.bash
 share/darktable/darktablerc
 share/darktable/gdb_commands
@@ -322,14 +328,17 @@ share/darktable/tools/purge_from_cache.sh
 share/darktable/tools/purge_non_existing_images.sh
 share/darktable/tools/purge_unused_tags.sh
 share/darktable/watermarks/darktable.svg
+share/darktable/watermarks/fixed-size-text.svg
 share/darktable/watermarks/hasselblad.svg
+share/darktable/watermarks/metadata-template.svg
 share/darktable/watermarks/promo.svg
+share/darktable/watermarks/simple-text-shadow.svg
 share/darktable/watermarks/simple-text.svg
+share/darktable/wb_presets.json
 share/doc/darktable/AUTHORS
 share/doc/darktable/LICENSE
 share/doc/darktable/README.md
 share/doc/darktable/TRANSLATORS.md
-share/doc/darktable/darktablerc.html
 share/icons/hicolor/16x16/apps/darktable.png
 share/icons/hicolor/22x22/apps/darktable.png
 share/icons/hicolor/24x24/apps/darktable.png
@@ -341,17 +350,21 @@ share/icons/hicolor/scalable/apps/darktable-1.svg
 share/icons/hicolor/scalable/apps/darktable-2.svg
 share/icons/hicolor/scalable/apps/darktable-3.svg
 share/icons/hicolor/scalable/apps/darktable.svg
-share/locale/af/LC_MESSAGES/darktable.mo
 share/locale/de/LC_MESSAGES/darktable.mo
-share/locale/eo/LC_MESSAGES/darktable.mo
+share/locale/en@truecase/LC_MESSAGES/darktable.mo
 share/locale/es/LC_MESSAGES/darktable.mo
+share/locale/fi/LC_MESSAGES/darktable.mo
 share/locale/fr/LC_MESSAGES/darktable.mo
 share/locale/he/LC_MESSAGES/darktable.mo
 share/locale/hu/LC_MESSAGES/darktable.mo
-share/locale/it/LC_MESSAGES/darktable.mo
-share/locale/nl/LC_MESSAGES/darktable.mo
+share/locale/ja/LC_MESSAGES/darktable.mo
+share/locale/pl/LC_MESSAGES/darktable.mo
 share/locale/pt_BR/LC_MESSAGES/darktable.mo
 share/locale/ru/LC_MESSAGES/darktable.mo
 share/locale/sl/LC_MESSAGES/darktable.mo
+share/locale/sq/LC_MESSAGES/darktable.mo
+share/locale/tr/LC_MESSAGES/darktable.mo
 share/locale/uk/LC_MESSAGES/darktable.mo
-share/metainfo/darktable.appdata.xml
+share/locale/zh_CN/LC_MESSAGES/darktable.mo
+share/locale/zh_TW/LC_MESSAGES/darktable.mo
+share/metainfo/org.darktable.darktable.appdata.xml
