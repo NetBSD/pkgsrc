@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:17:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/09/01 00:50:44 wen Exp $
 
-BLAKE2s (Perl4-CoreLibs-0.004.tar.gz) = 4b08cdafaec51b472c9144f026ef6d94a4f026be153cb351ddaf7d7c4a1e4004
-SHA512 (Perl4-CoreLibs-0.004.tar.gz) = 71083f1640e95559ee4bc5a7f1bbe6beacec048a073e211ab7f6ee4de26463f6ae3d87e99e00a41ea8f2f93a5e96367bafe907ef3367e400de35123c22eb7b88
-Size (Perl4-CoreLibs-0.004.tar.gz) = 53219 bytes
+BLAKE2s (Perl4-CoreLibs-0.005.tar.gz) = b50f3b1167512bcdfbf255c5f6dd2e36639c862d912c1394f7bfa6d0bcbbe3e5
+SHA512 (Perl4-CoreLibs-0.005.tar.gz) = 87e4c153f2fead9eae9ea338b965294d8a2a1b0b5c6a25c7a4b18cab049526c26efaa7bb99f264e025d4a2893165b5960a6bff83c18f50af2106174b5b344981
+Size (Perl4-CoreLibs-0.005.tar.gz) = 55441 bytes
