@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2023/08/28 07:42:37 nia Exp $
+# $NetBSD: Makefile,v 1.179 2023/09/01 07:32:22 nia Exp $
 
 DISTNAME=	mame-0.257
 PKGREVISION=	1
@@ -28,6 +28,14 @@ MAKE_FILE=		makefile
 
 # Need to use gnu++ instead of c++ to get __builtin_alloca() (!)
 FORCE_CXX_STD=		gnu++17
+
+#
+# Earliest version known to succeed: gcc8 from Rocky Linux 8:
+#
+# ../../../../../3rdparty/bx/include/bx/inline/typetraits.inl:227:30: error: expected primary-expression before ',' token
+#   return !!__is_assignable(Ty, FromT);
+#
+GCC_REQD+=		8
 
 .include "../../mk/bsd.prefs.mk"
 
