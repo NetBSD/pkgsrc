@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/07/12 21:26:14 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/09/01 14:29:43 nia Exp $
 #
 
 DISTNAME=	pam_p11-0.3.1
@@ -20,6 +20,8 @@ USE_TOOLS+=		gmake pkg-config autoconf automake autopoint
 USE_TOOLS+=		msgfmt msgmerge xgettext
 
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 pre-configure:
