@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/07/12 21:05:30 nia Exp $
+# $NetBSD: Makefile,v 1.44 2023/09/01 10:06:16 nia Exp $
 
 DISTNAME=	podofo-0.9.8
 PKGREVISION=	1
@@ -10,9 +10,7 @@ HOMEPAGE=	http://podofo.sourceforge.net/
 COMMENT=	Library to work with the PDF file format
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-# Podofo uses thread_local, which is a C++11 feature, but does not
-# appropriately set -std=c++11.
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	pkg-config
 
@@ -25,6 +23,11 @@ CMAKE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
 # Avoid building unit tests.
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_CppUnit=TRUE
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LUA=TRUE
+
+# Podofo uses thread_local, which is a C++11 feature, but does not
+# appropriately set -std=c++11.
+USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD+=		c++11
 
 .include "options.mk"
 
