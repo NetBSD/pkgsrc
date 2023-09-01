@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/19 21:42:29 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/01 10:17:26 nia Exp $
 
 DISTNAME=	gappa-1.3.5
 CATEGORIES=	math
@@ -11,6 +11,9 @@ LICENSE=	cecill-2.0 OR gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
+
+FORCE_CXX_STD+=		c++11
+USE_CXX_FEATURES+=	c++11
 
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./remake -j${_MAKE_JOBS_N}
