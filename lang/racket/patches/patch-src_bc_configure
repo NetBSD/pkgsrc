@@ -1,0 +1,22 @@
+$NetBSD: patch-src_bc_configure,v 1.1 2023/09/01 19:48:28 riastradh Exp $
+
+Link against ncurses with -lncurses, not by hard-coding the static
+library path out of /usr/pkg.
+https://github.com/racket/racket/issues/4734
+
+Allow CONFIGURE_ENV to set PAXCTL so user need not have /usr/sbin in
+PATH.
+
+--- src/bc/configure.orig	2023-07-18 00:36:36.000000000 +0000
++++ src/bc/configure
+@@ -5017,8 +5017,8 @@ case "$host_os" in
+   netbsd*)
+     LIBS="$LIBS -rdynamic"
+     skip_curses_check=yes
+-    add_curses_lib="/usr/pkg/lib/libncurses.a"
+-    default_post_linker="paxctl +m"
++    add_curses_lib="-lncurses"
++    default_post_linker="${PAXCTL:-paxctl} +m"
+     ;;
+   irix*)
+     enable_cgcdefault="yes"
