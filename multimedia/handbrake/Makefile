@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/08/14 05:24:56 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2023/09/01 08:20:30 nia Exp $
 
 DISTNAME=	HandBrake-1.6.1-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -93,6 +93,7 @@ post-build:
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/zimg/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
