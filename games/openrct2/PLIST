@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/09/02 07:30:35 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/09/02 08:01:11 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -55,6 +55,8 @@ share/openrct2/object/official/footpath_item/rct2dlc.footpath_item.litterpa.park
 share/openrct2/object/official/footpath_railings/openrct2.footpath_railings.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.queue_invisible.json
+share/openrct2/object/official/ride/openrct2.ride.hybrid_coaster.parkobj
+share/openrct2/object/official/ride/openrct2.ride.single_rail_coaster.parkobj
 share/openrct2/object/official/ride/rct2dlc.ride.zpanda.parkobj
 share/openrct2/object/official/scenery_group/rct2dlc.scenery_group.scgpanda.parkobj
 share/openrct2/object/official/scenery_small/rct2dlc.scenery_small.bigpanda.parkobj
@@ -71,6 +73,7 @@ share/openrct2/object/official/station/openrct2.station.noplatformnoentrance.jso
 share/openrct2/object/official/terrain_edge/official.terrain_edge.void.parkobj
 share/openrct2/object/official/terrain_surface/openrct2.terrain_surface.void.parkobj
 share/openrct2/object/official/water/rct2dlc.water.wtrpink.json
+share/openrct2/object/rct1/audio/rct1.audio.title.json
 share/openrct2/object/rct1/footpath_railings/rct1ll.footpath_railings.bamboo.parkobj
 share/openrct2/object/rct1/footpath_railings/rct1ll.footpath_railings.space.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1.footpath_surface.crazy_paving.parkobj
@@ -88,6 +91,9 @@ share/openrct2/object/rct1/footpath_surface/rct1aa.footpath_surface.tarmac_red.p
 share/openrct2/object/rct1/footpath_surface/rct1aa.footpath_surface.tiles_grey.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1ll.footpath_surface.tiles_green.parkobj
 share/openrct2/object/rct1/footpath_surface/rct1ll.footpath_surface.tiles_red.parkobj
+share/openrct2/object/rct1/ride/rct1.ride.ladybird_trains.parkobj
+share/openrct2/object/rct1/ride/rct1.ride.log_trains.parkobj
+share/openrct2/object/rct1/ride/rct1.ride.rocket_cars.parkobj
 share/openrct2/object/rct1/ride/rct1.ride.toilets.parkobj
 share/openrct2/object/rct1/scenery_wall/rct1.scenery_wall.wooden_fence_red.json
 share/openrct2/object/rct1/terrain_edge/rct1.terrain_edge.brick.parkobj
@@ -105,6 +111,9 @@ share/openrct2/object/rct1/terrain_surface/rct1aa.terrain_surface.roof_red.parko
 share/openrct2/object/rct1/terrain_surface/rct1ll.terrain_surface.roof_grey.parkobj
 share/openrct2/object/rct1/terrain_surface/rct1ll.terrain_surface.rust.parkobj
 share/openrct2/object/rct1/terrain_surface/rct1ll.terrain_surface.wood.parkobj
+share/openrct2/object/rct2/audio/rct2.audio.base.json
+share/openrct2/object/rct2/audio/rct2.audio.circus.json
+share/openrct2/object/rct2/audio/rct2.audio.title.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn1.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn2.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn3.json
@@ -281,7 +290,7 @@ share/openrct2/object/rct2/ride/rct2.ride.ptct2.json
 share/openrct2/object/rct2/ride/rct2.ride.ptct2r.json
 share/openrct2/object/rct2/ride/rct2.ride.rapboat.json
 share/openrct2/object/rct2/ride/rct2.ride.rboat.json
-share/openrct2/object/rct2/ride/rct2.ride.rckc.parkobj
+share/openrct2/object/rct2/ride/rct2.ride.rckc.json
 share/openrct2/object/rct2/ride/rct2.ride.rcr.json
 share/openrct2/object/rct2/ride/rct2.ride.revcar.json
 share/openrct2/object/rct2/ride/rct2.ride.revf1.json
