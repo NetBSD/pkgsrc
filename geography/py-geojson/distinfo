@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:45:14 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/09/02 13:47:00 kleink Exp $
 
-BLAKE2s (geojson-2.5.0.tar.gz) = 82720c99fa5cd5140d96fc93546278f9f0a128715d20b141f91a5d7aa79c8a3e
-SHA512 (geojson-2.5.0.tar.gz) = 68d59a6c7d796549dba4e4e71219901c2d939c7f8f5794c1e6be7cadffb006ad99ac658e0159977b3ecc88cf5ef4f908d3837dddc54c70261291f8fa7b8ffbae
-Size (geojson-2.5.0.tar.gz) = 23086 bytes
+BLAKE2s (geojson-3.0.1.tar.gz) = 0d75fbfbb73d301eaed339508f25eab069259dedaa4a98e671eda7fdf0bff887
+SHA512 (geojson-3.0.1.tar.gz) = 11163cee56c441674db679fd03d9e1d69f069916f8adf58736ccef0677fec033d2677c246a73deb5cb1293a57ada50a0e8e572a71b92b69ec761e1f5a377bdb5
+Size (geojson-3.0.1.tar.gz) = 24258 bytes
