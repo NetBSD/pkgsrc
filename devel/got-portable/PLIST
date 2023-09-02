@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/19 17:42:06 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/02 15:48:12 vins Exp $
 bin/got
 bin/gotadmin
 bin/tog
@@ -14,6 +14,7 @@ libexec/got-read-patch
 libexec/got-read-tag
 libexec/got-read-tree
 libexec/got-send-pack
+man/man1/cvg.1
 man/man1/got.1
 man/man1/gotadmin.1
 man/man1/tog.1
@@ -22,4 +23,5 @@ man/man5/got-worktree.5
 man/man5/got.conf.5
 man/man5/gotwebd.conf.5
 man/man8/gotwebd.8
+sbin/cvg
 sbin/gotwebd
