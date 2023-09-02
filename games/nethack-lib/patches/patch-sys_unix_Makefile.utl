@@ -1,6 +1,6 @@
-$NetBSD: patch-sys_unix_Makefile.utl,v 1.4 2023/08/27 15:59:19 rhialto Exp $
+$NetBSD: patch-sys_unix_Makefile.utl,v 1.5 2023/09/02 13:45:14 rhialto Exp $
 
-Make window system configurable.
+Make included UI types configurable.
 
 --- sys/unix/Makefile.utl.orig	2023-02-15 21:52:57.000000000 +0000
 +++ sys/unix/Makefile.utl
@@ -9,24 +9,7 @@ Make window system configurable.
  # CFLAGS = -g -I../include
  
 -#CFLAGS = -O -I../include
-+CFLAGS = -I../include
++CFLAGS += -I../include
  #LFLAGS =
  
  # we specify C preprocessor flags via CFLAGS; files built with default rules
-@@ -104,6 +104,16 @@ CPPFLAGS =
- 
- LIBS =
- 
-+.if "${GTYPE}" == "-tty"
-+CFLAGS += -DGTYPE_TTY
-+.elif "${GTYPE}" == "-curses"
-+CFLAGS += -DGTYPE_CURSES
-+.elif "${GTYPE}" == "-x11"
-+CFLAGS += -DGTYPE_X11
-+.elif "${GTYPE}" == "-qt"
-+CFLAGS += -DGTYPE_QT
-+.endif
-+
- # If you are cross-compiling, you must use this:
- #OBJDIR = .
- # otherwise, you can save a little bit of disk space with this:

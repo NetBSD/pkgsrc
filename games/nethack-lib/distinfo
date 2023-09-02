@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.31 2023/08/27 15:59:19 rhialto Exp $
+$NetBSD: distinfo,v 1.32 2023/09/02 13:45:14 rhialto Exp $
 
 BLAKE2s (nethack-367-src.tgz) = 56c447099ddfdbd1c2dcb0d85b859031057c76fa6a885d9a0fcaae87d47cd371
 SHA512 (nethack-367-src.tgz) = 7890d17e087f4344d30e9a908fa1f24d7c72bc714c4a6415ed59800902cc0aa6b3ce94c5d73857b0222349b96b1fdc8bf3f93b3ac1153477ad1419af7b0d3fb5
 Size (nethack-367-src.tgz) = 5577415 bytes
 SHA1 (patch-ai) = 73c5b2ea1227531089474705f2f18bc411366365
-SHA1 (patch-include_config.h) = c48f9a5a758ddffb4825d7959e8ecaf30ea12b91
+SHA1 (patch-include_config.h) = 963b9b6e580cbdf5516207a485a0baa6b0b7909f
 SHA1 (patch-include_system.h) = b1b53f513c3f6983e0e56eace74c71875b5df3f2
 SHA1 (patch-include_unixconf.h) = 6846c72526f3bda7fe3eccbce641e5feee14d901
 SHA1 (patch-src_mail.c) = 5b2a67e0b4d0fc9c715573d1bad6bcafa67b469e
 SHA1 (patch-sys_unix_Makefile.doc) = 6219620c50dc7eac6601f87d4a295cb10f02e141
-SHA1 (patch-sys_unix_Makefile.src) = 639f33146101e91d5fabed47f9e9703b957e48d1
+SHA1 (patch-sys_unix_Makefile.src) = 36c4adc70551b5a460ebeb86eeb34fb188e5b420
 SHA1 (patch-sys_unix_Makefile.top) = 0736aafda67dec45657f9f15338ce2f89add9747
-SHA1 (patch-sys_unix_Makefile.utl) = 55da562baa7240d811eb7597e77a8beaf58d7d81
-SHA1 (patch-sys_unix_nethack.sh) = 0a0178e3bdc3e78f004bd0112938f3c9e49faf40
+SHA1 (patch-sys_unix_Makefile.utl) = b36a85ffa0bd561c2d77776cdf68e6a89273d5c9
+SHA1 (patch-sys_unix_nethack.sh) = 0f400835ea9505e5429cc51eccdb7b2e48799777
 SHA1 (patch-util_recover.c) = 60e5ec35313a97cf788ff1ed4a4772bbcf24bc48
+SHA1 (patch-win_curses_cursmain.c) = f7c51305c65c08686b00ba92a128f9c995dcf1dc
+SHA1 (patch-win_curses_curswins.c) = b65ae0f74477cf7c1dbc2ff1f802841270dae7d4

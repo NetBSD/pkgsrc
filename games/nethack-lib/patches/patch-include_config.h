@@ -1,6 +1,6 @@
-$NetBSD: patch-include_config.h,v 1.2 2023/08/27 15:59:19 rhialto Exp $
+$NetBSD: patch-include_config.h,v 1.3 2023/09/02 13:45:14 rhialto Exp $
 
-Make window system configurable.
+Make included UI types configurable.
 
 --- include/config.h.orig	2023-02-15 21:52:57.000000000 +0000
 +++ include/config.h
