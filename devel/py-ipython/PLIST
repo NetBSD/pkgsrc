@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/03/02 12:47:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/09/02 05:39:24 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -128,6 +128,9 @@ ${PYSITELIB}/IPython/core/magic_arguments.pyo
 ${PYSITELIB}/IPython/core/magics/__init__.py
 ${PYSITELIB}/IPython/core/magics/__init__.pyc
 ${PYSITELIB}/IPython/core/magics/__init__.pyo
+${PYSITELIB}/IPython/core/magics/ast_mod.py
+${PYSITELIB}/IPython/core/magics/ast_mod.pyc
+${PYSITELIB}/IPython/core/magics/ast_mod.pyo
 ${PYSITELIB}/IPython/core/magics/auto.py
 ${PYSITELIB}/IPython/core/magics/auto.pyc
 ${PYSITELIB}/IPython/core/magics/auto.pyo
@@ -269,6 +272,9 @@ ${PYSITELIB}/IPython/core/tests/test_displayhook.pyo
 ${PYSITELIB}/IPython/core/tests/test_events.py
 ${PYSITELIB}/IPython/core/tests/test_events.pyc
 ${PYSITELIB}/IPython/core/tests/test_events.pyo
+${PYSITELIB}/IPython/core/tests/test_exceptiongroup_tb.py
+${PYSITELIB}/IPython/core/tests/test_exceptiongroup_tb.pyc
+${PYSITELIB}/IPython/core/tests/test_exceptiongroup_tb.pyo
 ${PYSITELIB}/IPython/core/tests/test_extension.py
 ${PYSITELIB}/IPython/core/tests/test_extension.pyc
 ${PYSITELIB}/IPython/core/tests/test_extension.pyo
