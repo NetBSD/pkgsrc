@@ -1,0 +1,14 @@
++----------------------------------------------------------------------
+| GTK+2 initegration plugin for Qt6
++----------------------------------------------------------------------
+
+To enable the qt6gtk2 plugin, set the QT_QPA_PLATFORMTHEME environmental
+variable as follows:
+
+export QT_QPA_PLATFORMTHEME=gtk2
+
+Place this inside your ~/.profile and re-login for changes to take
+effect. 
+
+NOTE: Environment variable QT_STYLE_OVERRIDE should be removed before
+usage. 
