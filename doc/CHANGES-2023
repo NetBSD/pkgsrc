@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5272 2023/09/02 07:22:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5273 2023/09/02 07:34:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7682,3 +7682,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.15.0 [adam 2023-09-02]
 	Updated math/py-pandas to 2.1.0 [adam 2023-09-02]
 	Updated textproc/py-wcmatch to 8.5 [adam 2023-09-02]
+	Updated games/openrct2 to 0.4.0 [triaxx 2023-09-02]
