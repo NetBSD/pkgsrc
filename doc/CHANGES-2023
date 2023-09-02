@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5276 2023/09/02 13:47:20 kleink Exp $
+$NetBSD: CHANGES-2023,v 1.5277 2023/09/02 13:54:13 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7686,3 +7686,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.4.1 [triaxx 2023-09-02]
 	Added x11/qt6ct version 0.8 [vins 2023-09-02]
 	Updated geography/py-geojson to 3.0.1 [kleink 2023-09-02]
+	Updated games/nethack-lib to 3.6.7nb2 [rhialto 2023-09-02]
