@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5279 2023/09/02 14:50:23 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5280 2023/09/02 15:01:51 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7689,3 +7689,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/nethack-lib to 3.6.7nb2 [rhialto 2023-09-02]
 	Updated lang/php82 to 8.2.10 [taca 2023-09-02]
 	Updated lang/php81 to 8.1.23 [taca 2023-09-02]
+	Added misc/qt6gtk2 version 0.2 [vins 2023-09-02]
