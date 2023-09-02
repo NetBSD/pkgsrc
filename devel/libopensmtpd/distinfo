@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/09/02 21:32:11 vins Exp $
+
+BLAKE2s (libopensmtpd-0.7.tar.gz) = e2bb3ad31fe2e99aa45cb97aeaad8eef39974a3f40cb4db942017a462ffc9ad3
+SHA512 (libopensmtpd-0.7.tar.gz) = 53153eea5ed85309434316fa9bbba032aba9cac30744a6c228892b5fdf67f9df7e05c25832f16845c603892a255dfcf67d432e2a43ec6228f3103cf92ba2394f
+Size (libopensmtpd-0.7.tar.gz) = 34942 bytes
+SHA1 (patch-Makefile.gnu) = 409a47e7bfa4de69e82ab21fead576a47c981a8d
+SHA1 (patch-ioev.h) = bad26669e2968098a69f99bc24027204d96c9fee
+SHA1 (patch-openbsd-compat_explicit__bzero.c) = 77f4725a1bf4b8fc7f4040755e9f0b61db6b19e6

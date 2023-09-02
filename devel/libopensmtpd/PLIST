@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/02 21:32:11 vins Exp $
+include/opensmtpd.h
+lib/libopensmtpd.so
+lib/libopensmtpd.so.0
+lib/libopensmtpd.so.0.1.0
+man/man3/osmtpd_run.3
