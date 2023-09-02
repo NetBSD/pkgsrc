@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5270 2023/09/01 23:44:51 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.5271 2023/09/02 05:39:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7678,3 +7678,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/racket to 8.10 [riastradh 2023-09-01]
 	Updated lang/racket-textual to 8.10 [riastradh 2023-09-01]
 	Updated pkgtools/pkglint to 23.2.2 [rillig 2023-09-01]
+	Updated www/py-notebook to 7.0.3 [adam 2023-09-02]
+	Updated devel/py-ipython to 8.15.0 [adam 2023-09-02]
