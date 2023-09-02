@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/05/05 11:08:50 adam Exp $
+$NetBSD: distinfo,v 1.20 2023/09/02 05:36:30 adam Exp $
 
-BLAKE2s (notebook-6.5.4.tar.gz) = fcc21fcd2bd2dce5dcf3ef6220c31a114d1b3c8967eadf886970c2a14e51bf1e
-SHA512 (notebook-6.5.4.tar.gz) = 72bf4efa4d553a6265c72e188ad0ee085accbbc05b0af182531c892303149d83f38f6d410f1bcb2c835071f713cb4267d58324b982b4087caabf9b46b8d77cfa
-Size (notebook-6.5.4.tar.gz) = 5785832 bytes
+BLAKE2s (notebook-7.0.3.tar.gz) = c9ba9cb389be5c2b55815d2e213799465a74af32c927d94dbc0f31c703f14054
+SHA512 (notebook-7.0.3.tar.gz) = 141acc5b46b7c3023c5aab3cdcfaa287225c627bde053f8958bdce5bdfd600ba2bfa5f119ce8b026cf1889cd7acb265a4c13eae6b0afdd1ed2a4fcfb3264976f
+Size (notebook-7.0.3.tar.gz) = 3934398 bytes
