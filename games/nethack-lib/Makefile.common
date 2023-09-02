@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2023/08/27 15:59:19 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.47 2023/09/02 13:45:14 rhialto Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -21,7 +21,7 @@ NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
 NETHACK_SAVEVER=	3.6.0
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		https://www.nethack.org/download/${NETHACK_BASEVER}/
 EXTRACT_SUFX=		.tgz
@@ -30,6 +30,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.nethack.org/
 LICENSE=		nethack-license
 
+# sh: ../util/makedefs: permission denied
 MAKE_JOBS_SAFE=		no
 
 .if !defined(META_PACKAGE)
@@ -38,9 +39,20 @@ WRKSRC=			${WRKDIR}/NetHack-${NETHACK_BASEVER}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 USE_TOOLS+=		gzip yacc lex awk
+USE_LANGUAGES+=		c c++
+
+# NetBSD's curses doesn't put the cursor where the game wants it
+# but leaves it in some random position. The playability of the game
+# depends on it, though. Therefore we prefer ncurses.
+USE_NCURSES=		yes
 
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
+
+# If we link ncurses, it has termcap/terminfo built in;
+# we should not link with the native version.
+.  if "${CURSES_TYPE}" != "ncurses"
+.    include "../../mk/termcap.buildlink3.mk"
+.  endif
 
 OPSYSVARS+=		NETHACK_OS
 NETHACK_OS.Linux=	SYSV
@@ -74,14 +86,23 @@ MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 
+.  if "${CURSES_TYPE}" == "ncurses"
+WINTTYLIB=		# no separate termcap/terminfo needed
+.  else
 WINTTYLIB=		-L${BUILDLINK_PREFIX.termcap}/lib \
 			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib \
-			-l${BUILDLINK_LIBNAME.termcap}
+			${BUILDLINK_LDADD.termcap}
+.  endif
 MAKE_ENV+=		WINTTYLIB=${WINTTYLIB:Q}
+
+WINCURSESLIB=		-L${BUILDLINK_PREFIX.curses}/lib \
+			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curses}/lib \
+			${BUILDLINK_LDADD.curses}
+MAKE_ENV+=		WINCURSESLIB=${WINCURSESLIB:Q}
 
 CHECK_PORTABILITY_SKIP+=	sys/unix/hints/macosx.sh
 
-pre-configure:
+post-extract:
 	${RUN}${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
 
 # Substitute NETHACK_DIR in PLIST.
