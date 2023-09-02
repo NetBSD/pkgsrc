@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/02 13:28:54 vins Exp $
+bin/qt6ct
+lib/libqt6ct-common.so
+lib/libqt6ct-common.so.${PKGVERSION}
+qt6/plugins/platformthemes/libqt6ct.so
+qt6/plugins/styles/libqt6ct-style.so
+share/applications/qt6ct.desktop
+share/doc/qt6ct/README
+share/qt6ct/colors/airy.conf
+share/qt6ct/colors/darker.conf
+share/qt6ct/colors/dusk.conf
+share/qt6ct/colors/ia_ora.conf
+share/qt6ct/colors/sand.conf
+share/qt6ct/colors/simple.conf
+share/qt6ct/colors/waves.conf
+share/qt6ct/qss/fusion-fixes.qss
+share/qt6ct/qss/scrollbar-simple.qss
+share/qt6ct/qss/sliders-simple.qss
+share/qt6ct/qss/tooltip-simple.qss
+share/qt6ct/qss/traynotification-simple.qss
