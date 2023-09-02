@@ -1,6 +1,6 @@
-$NetBSD: patch-sys_unix_Makefile.src,v 1.4 2023/08/27 15:59:19 rhialto Exp $
+$NetBSD: patch-sys_unix_Makefile.src,v 1.5 2023/09/02 13:45:14 rhialto Exp $
 
-Make window system configurable.
+Make included UI types configurable.
 
 --- sys/unix/Makefile.src.orig	2023-02-15 21:52:57.000000000 +0000
 +++ sys/unix/Makefile.src
@@ -9,7 +9,7 @@ Make window system configurable.
  
  # Usually, the C compiler driver is used for linking:
 -#LINK=$(CC)
-+.if "${GTYPE}" == "-qt"
++.if "${QT_GRAPHICS}" != ""
 +LINK=$(CXX)
 +.else
 +LINK=$(CC)
@@ -17,33 +17,26 @@ Make window system configurable.
  
  # Pick the SYSSRC and SYSOBJ lines corresponding to your desired operating
  # system.
-@@ -170,9 +174,24 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
+@@ -169,10 +173,17 @@ GNOMEINC=-I/usr/lib/glib/include -I/usr/
+ 
  # flags for debugging:
  # CFLAGS = -g -I../include
++#CFLAGS += -ggdb
++#LFLAGS += -ggdb
  
 -#CFLAGS = -O -I../include
 +CFLAGS += -I../include
  #LFLAGS = 
  
-+.if "${GTYPE}" == "-x11" || "${GTYPE}" == "-qt"
++.if "${X11_GRAPHICS}" != "" || "${QT_GRAPHICS}" != ""
 +CFLAGS += -I${X11BASE}/include
 +LFLAGS += ${LDFLAGS}
-+.endif
-+
-+.if "${GTYPE}" == "-tty"
-+CFLAGS += -DGTYPE_TTY
-+.elif "${GTYPE}" == "-curses"
-+CFLAGS += -DGTYPE_CURSES
-+.elif "${GTYPE}" == "-x11"
-+CFLAGS += -DGTYPE_X11
-+.elif "${GTYPE}" == "-qt"
-+CFLAGS += -DGTYPE_QT
 +.endif
 +
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
  # the C++ libraries linked in.
-@@ -267,13 +286,25 @@ WINBEOBJ =
+@@ -267,13 +278,26 @@ WINBEOBJ =
  #WINBEOBJ = winbe.o NHWindow.o NHMenuWindow.o NHMapWindow.o tile.o
  #
  #
@@ -57,14 +50,15 @@ Make window system configurable.
  #WINOBJ = $(WINCURSESOBJ)
 -#
 +
-+.if "${GTYPE}" == "-tty"
-+.elif "${GTYPE}" == "-curses"
++.if "${CURSES_GRAPHICS}" != ""
 +WINSRC += $(WINCURSESSRC)
 +WINOBJ += $(WINCURSESOBJ)
-+.elif "${GTYPE}" == "-x11"
++.endif
++.if "${X11_GRAPHICS}" != ""
 +WINSRC += $(WINX11SRC)
 +WINOBJ += $(WINX11OBJ)
-+.elif "$(GTYPE)" == "-qt"
++.endif
++.if "${QT_GRAPHICS}" != ""
 +WINSRC += $(WINQT4SRC)
 +WINOBJ += $(WINQT4OBJ)
 +.endif
@@ -72,7 +66,7 @@ Make window system configurable.
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
  # Sysatt uses shared library in lieu of this option
-@@ -292,14 +323,14 @@ WINBEOBJ =
+@@ -292,14 +316,14 @@ WINBEOBJ =
  #
  # libraries for X11
  # If USE_XPM is defined in config.h, you will also need -lXpm here.
@@ -89,14 +83,12 @@ Make window system configurable.
  #
  # libraries for Qt 4
  WINQT4LIB = `pkg-config QtGui --libs`
-@@ -320,18 +351,27 @@ WINGEMLIB = -le_gem -lgem
- WINBELIB = -lbe
+@@ -321,17 +345,28 @@ WINBELIB = -lbe
  #
  # libraries for curses port
--# link with ncurses
+ # link with ncurses
 -WINCURSESLIB = -lncurses
-+# link with (n)curses
-+WINCURSESLIB = -lcurses # or -L${PREFIX}/lib -Wl,-R,${PREFIX}/lib -lncurses
++#WINCURSESLIB = -lncurses	# Set from the pkg Makefile instead
  # link with pdcurses for SDL, installed in a separate directory
  #WINCURSESLIB = -L/usr/local/lib/pdcurses -lpdcurses -lSDL
  # same as above, for XCurses
@@ -107,14 +99,15 @@ Make window system configurable.
  #
  # For Curses
  #WINLIB = $(WINCURSESLIB)
--#
+ #
 +
-+.if "${GTYPE}" == "-tty"
-+.elif "${GTYPE}" == "-curses"
++.if "${CURSES_GRAPHICS}" != ""
 +WINLIB += $(WINCURSESLIB)
-+.elif "${GTYPE}" == "-x11"
++.endif
++.if "${X11_GRAPHICS}" != ""
 +WINLIB += $(WINX11LIB)
-+.elif "${GTYPE}" == "-qt"
++.endif
++.if "$(QT_GRAPHICS)" != ""
 +WINLIB += $(WINQTLIB)
 +.endif
 +

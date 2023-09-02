@@ -1,10 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2019/12/07 13:27:08 rhialto Exp $
+$NetBSD: MESSAGE,v 1.8 2023/09/02 13:45:14 rhialto Exp $
 
-You can run the X11 NetHack by typing "nethack x11".
+You can run the X11 NetHack by typing "nethack".
+Select the windowing type with "OPTIONS=windowtype:x11" in your
+$HOME/.nethackrc. Other possible values are "curses" and "tty".
 
-Two fonts were installed for NetHack.  You must add
-${PREFIX}/share/fonts/X11/misc to fontpath and set one of
+Two fonts were installed for NetHack.  The nethack wrapper script
+adds ${PREFIX}/share/fonts/X11/misc to fontpath. You can set one of
 
 NetHack*map*font: nh10
 NetHack*map*font: -misc-fixed-medium-r-normal-ibmpc-14-120-75-75-c-80-iso8859-1
@@ -21,7 +23,6 @@ find its app-defaults file:
 
 XFILESEARCHPATH=%D:/usr/pkg/lib/X11/%T/%N%C:/usr/pkg/lib/X11/%T/%N
 
-To fall back to tty mode, use "NETHACKOPTIONS=windowtype:tty nethack"
-or set that option in your .nethackrc file.
+but the nethack wrapper script sets XUSERFILESEARCHPATH for you.
 
 ===========================================================================
