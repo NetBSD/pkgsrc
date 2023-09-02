@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/08/30 17:56:20 vins Exp $
+# $NetBSD: Makefile,v 1.46 2023/09/02 15:26:58 vins Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
@@ -55,9 +55,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 .endif
 
 .if ${OPSYS} == "Linux"
-CPPFLAGS+=		-I${PREFIX}/include/tirpc
-MAKEFLAGS+=		LDFLAGS="${LDFLAGS} -ltirpc"
-
+# glibc lacks RPC support. 
 .include "../../devel/libtirpc/buildlink3.mk"
 .endif
 
