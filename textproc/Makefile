@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1421 2023/08/28 10:33:08 gdt Exp $
+# $NetBSD: Makefile,v 1.1422 2023/09/02 18:16:57 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -667,6 +667,7 @@ SUBDIR+=	nltk_data-wordnet31
 SUBDIR+=	nltk_data-wordnet_ic
 SUBDIR+=	nltk_data-words
 SUBDIR+=	nltk_data-ycoe
+SUBDIR+=	nuspell
 SUBDIR+=	nxml-mode
 SUBDIR+=	o3read
 SUBDIR+=	ocaml-csv
