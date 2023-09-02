@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/02 18:16:57 bsiegert Exp $
+bin/nuspell
+include/nuspell/aff_data.hxx
+include/nuspell/checker.hxx
+include/nuspell/defines.hxx
+include/nuspell/dictionary.hxx
+include/nuspell/finder.hxx
+include/nuspell/nuspell_export.h
+include/nuspell/structures.hxx
+include/nuspell/suggester.hxx
+include/nuspell/unicode.hxx
+lib/cmake/nuspell/NuspellConfig.cmake
+lib/cmake/nuspell/NuspellConfigVersion.cmake
+lib/cmake/nuspell/NuspellTargets-release.cmake
+lib/cmake/nuspell/NuspellTargets.cmake
+lib/libnuspell.so
+lib/libnuspell.so.5
+lib/libnuspell.so.${PKGVERSION}
+lib/pkgconfig/nuspell.pc
+share/doc/nuspell/README.md
