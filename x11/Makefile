@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.995 2023/08/05 07:23:35 adam Exp $
+# $NetBSD: Makefile,v 1.996 2023/09/02 13:30:54 vins Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -399,6 +399,7 @@ SUBDIR+=	qt5-qtx11extras
 SUBDIR+=	qt5-qtxmlpatterns
 SUBDIR+=	qt5-styleplugins
 SUBDIR+=	qt5ct
+SUBDIR+=	qt6ct
 SUBDIR+=	qt6-qtbase
 SUBDIR+=	qt6-qtserialport
 SUBDIR+=	qterminal
