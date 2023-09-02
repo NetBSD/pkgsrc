@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5283 2023/09/02 20:45:36 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5284 2023/09/02 21:37:01 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7693,3 +7693,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.6.2 [pin 2023-09-02]
 	Updated games/openrct2 to 0.4.2 [triaxx 2023-09-02]
 	Updated games/openrct2 to 0.4.3 [triaxx 2023-09-02]
+	Added devel/libopensmtpd version 0.7 [vins 2023-09-02]
