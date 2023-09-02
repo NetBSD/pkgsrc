@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/09/02 13:28:54 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/02 14:02:26 vins Exp $
 
 DISTNAME=	qt6ct-0.8
 CATEGORIES=	x11
@@ -26,11 +26,12 @@ INSTALLATION_DIRS+=	${DOCDIR}
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV}	\
-		${QTDIR}/bin/qmake qt6ct.pro ${QMAKE_ARGS}
+	${RUN}cd ${WRKSRC} &&			\
+		${SETENV} ${CONFIGURE_ENV}	\
+		${QTDIR}/bin/qmake ${QMAKE_ARGS}
 
 post-install:
-	${INSTALL_DATA}	${WRKSRC}/README		\
+	${INSTALL_DATA}	${WRKSRC}/README	\
 		${DESTDIR}${PREFIX}/${DOCDIR}/README
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
