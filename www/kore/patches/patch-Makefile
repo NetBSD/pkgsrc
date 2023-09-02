@@ -1,10 +1,21 @@
-$NetBSD: patch-Makefile,v 1.4 2022/03/19 08:51:46 fcambus Exp $
+$NetBSD: patch-Makefile,v 1.5 2023/09/02 07:10:27 nia Exp $
 
 Remove hardcoded optimizations.
 
---- Makefile.orig	2022-03-18 20:06:33.000000000 +0000
+-Werror makes it impossible to compile with OpenSSL 3.
+
+--- Makefile.orig	2022-08-22 11:18:44.000000000 +0000
 +++ Makefile
-@@ -67,8 +67,6 @@ endif
+@@ -31,7 +31,7 @@ S_SRC+= src/tls_$(TLS_BACKEND).c
+ FEATURES=
+ FEATURES_INC=
+ 
+-CFLAGS+=-Wall -Werror -Wstrict-prototypes -Wmissing-prototypes
++CFLAGS+=-Wall -Wstrict-prototypes -Wmissing-prototypes
+ CFLAGS+=-Wmissing-declarations -Wshadow -Wpointer-arith -Wcast-qual
+ CFLAGS+=-Wsign-compare -Iinclude/kore -I$(OBJDIR) -std=c99 -pedantic
+ CFLAGS+=-Wtype-limits -fno-common
+@@ -68,8 +68,6 @@ endif
  
  ifneq ("$(NOOPT)", "")
  	CFLAGS+=-O0
