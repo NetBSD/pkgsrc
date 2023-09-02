@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/10/24 11:51:23 pho Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/09/02 13:45:14 rhialto Exp $
 bin/nethack
 bin/recover
 man/man6/dgn_comp.6
@@ -137,6 +137,7 @@ share/${NETHACK_DIR}/soko3-2.lev
 share/${NETHACK_DIR}/soko4-1.lev
 share/${NETHACK_DIR}/soko4-2.lev
 share/${NETHACK_DIR}/symbols
+share/${NETHACK_DIR}/sysconf.example
 share/${NETHACK_DIR}/tower1.lev
 share/${NETHACK_DIR}/tower2.lev
 share/${NETHACK_DIR}/tower3.lev

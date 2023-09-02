@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/28 21:11:30 rhialto Exp $
+# $NetBSD: Makefile,v 1.35 2023/09/02 13:45:14 rhialto Exp $
 #
 
 .include		"../../games/nethack-lib/Makefile.common"
@@ -34,7 +34,8 @@ CONF_FILES_PERMS+=	/dev/null ${VARDIR}/record \
 			${NETHACK_USER} ${NETHACK_GROUP} 664
 CONF_FILES_PERMS+=	/dev/null ${VARDIR}/xlogfile \
 			${NETHACK_USER} ${NETHACK_GROUP} 664
-CONF_FILES+=		/dev/null ${HACKDIR}/sysconf
+CONF_FILES_PERMS+=	${HACKDIR}/sysconf.example ${HACKDIR}/sysconf   \
+			${NETHACK_USER} ${NETHACK_GROUP} 644
 
 REQD_DIRS_PERMS+=	${VARDIR}					\
 			${NETHACK_USER} ${NETHACK_GROUP} 775
@@ -49,7 +50,10 @@ CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
 
 # Like bin/nethack-*, bin/recover also has to operate on save files
 # owned by ${NETHACK_USER}:${NETHACK_GROUP}. This means bin/recover
-# can only work when it's setuid'ed to that user/group.
+# can only work when it's setuid'ed to that user:group.
 SPECIAL_PERMS+=		${PREFIX}/bin/recover ${GAMEPERM}
+
+post-install:
+	cd ${WRKSRC} && ${INSTALL_DATA} sys/unix/sysconf ${DESTDIR}${HACKDIR}/sysconf.example
 
 .include "../../mk/bsd.pkg.mk"
