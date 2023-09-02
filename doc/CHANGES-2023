@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5271 2023/09/02 05:39:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5272 2023/09/02 07:22:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7680,3 +7680,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated pkgtools/pkglint to 23.2.2 [rillig 2023-09-01]
 	Updated www/py-notebook to 7.0.3 [adam 2023-09-02]
 	Updated devel/py-ipython to 8.15.0 [adam 2023-09-02]
+	Updated math/py-pandas to 2.1.0 [adam 2023-09-02]
+	Updated textproc/py-wcmatch to 8.5 [adam 2023-09-02]
