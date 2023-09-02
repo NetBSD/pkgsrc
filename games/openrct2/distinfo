@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2023/09/02 19:59:49 triaxx Exp $
+$NetBSD: distinfo,v 1.21 2023/09/02 20:45:06 triaxx Exp $
 
-BLAKE2s (openrct2-0.4.2.tar.gz) = 2329aab01cf2e5ef1bdfe3825ee7ce5e103badc41ab6e4a89c03220ae700d96d
-SHA512 (openrct2-0.4.2.tar.gz) = b047c4cfa4eb5e6257a9836bc85a1aab66504591c7a8f698b893290132d43d7e187a077d29b9f6fb712bfc62b9fcd063a70e7b5d36e2fc7dd61f3af0aff0163f
-Size (openrct2-0.4.2.tar.gz) = 16476190 bytes
+BLAKE2s (openrct2-0.4.3.tar.gz) = 2d3dbe35ea337dcb9af6a45dbd00ac2a39078903714d327aab3e9bcd6dbef689
+SHA512 (openrct2-0.4.3.tar.gz) = 2c194e3d63340c61fd8caaf975e3b99a3a9f10aeb5f9ff0ca4f5556f07b2d4765583b0c63d1c77117cc003fcfb8403e8ee025758ff39027e9bd0992931eaa46c
+Size (openrct2-0.4.3.tar.gz) = 16507904 bytes
 SHA1 (patch-src_openrct2-ui_title_TitleSequencePlayer.cpp) = 35a4ee2a47fe6f5bfd536e199a369361cb1b12fa
 SHA1 (patch-src_openrct2_CMakeLists.txt) = be08c09024889c1cc52ef7e53c911f6746171370
 SHA1 (patch-src_openrct2_common.h) = 31923f772feb3ec9cd0678e3f7cae27abd62cf6e
