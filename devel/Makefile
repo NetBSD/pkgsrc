@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4057 2023/08/29 11:33:44 vins Exp $
+# $NetBSD: Makefile,v 1.4058 2023/09/02 21:35:38 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -951,6 +951,7 @@ SUBDIR+=	libnjs
 SUBDIR+=	libntlm
 SUBDIR+=	liboil
 SUBDIR+=	liboop
+SUBDIR+=	libopensmtpd
 SUBDIR+=	libosip
 SUBDIR+=	libowfat
 SUBDIR+=	libpeas
