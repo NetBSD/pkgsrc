@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/09/02 19:59:49 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/09/02 20:45:06 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -55,6 +55,7 @@ share/openrct2/object/official/footpath_item/rct2dlc.footpath_item.litterpa.park
 share/openrct2/object/official/footpath_railings/openrct2.footpath_railings.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.queue_invisible.json
+share/openrct2/object/official/ride/openrct2.ride.alpine_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.hybrid_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.single_rail_coaster.parkobj
 share/openrct2/object/official/ride/rct2dlc.ride.zpanda.parkobj
@@ -74,7 +75,16 @@ share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrftl03.p
 share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrftl04.parkobj
 share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrftl07.parkobj
 share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrftl08.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd01.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd02.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd03.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd04.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd06.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd07.parkobj
+share/openrct2/object/official/scenery_small/toontowner.scenery_small.ttrfwd08.parkobj
 share/openrct2/object/official/scenery_small/toontowner.scenery_small.xxbbbr01.parkobj
+share/openrct2/object/official/scenery_wall/couger.scenery_wall.acww33.parkobj
+share/openrct2/object/official/scenery_wall/couger.scenery_wall.acwwf32.parkobj
 share/openrct2/object/official/scenery_wall/mamabear.scenery_wall.mg-prar.parkobj
 share/openrct2/object/official/station/openrct2.station.noentrance.json
 share/openrct2/object/official/station/openrct2.station.noplatformnoentrance.json
