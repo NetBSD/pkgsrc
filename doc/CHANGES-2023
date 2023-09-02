@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5277 2023/09/02 13:54:13 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.5278 2023/09/02 14:48:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7687,3 +7687,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added x11/qt6ct version 0.8 [vins 2023-09-02]
 	Updated geography/py-geojson to 3.0.1 [kleink 2023-09-02]
 	Updated games/nethack-lib to 3.6.7nb2 [rhialto 2023-09-02]
+	Updated lang/php82 to 8.2.10 [taca 2023-09-02]
