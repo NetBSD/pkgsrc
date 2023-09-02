@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/02 07:22:19 adam Exp $
 
-DISTNAME=	wcmatch-8.4.1
+DISTNAME=	wcmatch-8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcmatch/}
