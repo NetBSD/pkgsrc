@@ -1,11 +1,11 @@
-$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.6 2023/08/20 20:02:49 triaxx Exp $
+$NetBSD: patch-src_openrct2_CMakeLists.txt,v 1.7 2023/09/02 07:30:35 triaxx Exp $
 
 GCC 9 does not require linking with -lstdc++fs to use types and functions in
 <filesystem> now (https://gcc.gnu.org/gcc-9/changes.html).
 
 --- src/openrct2/CMakeLists.txt.orig	2020-09-27 20:57:34.000000000 +0000
 +++ src/openrct2/CMakeLists.txt
-@@ -25,13 +25,6 @@ add_library(${PROJECT_NAME} ${OPENRCT2_C
+@@ -37,13 +37,6 @@ add_library(${PROJECT_NAME} ${OPENRCT2_C
  set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
  SET_CHECK_CXX_FLAGS(${PROJECT_NAME})
  
