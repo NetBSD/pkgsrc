@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/02 14:58:37 vins Exp $
+qt6/plugins/platformthemes/libqt6gtk2.so
+qt6/plugins/styles/libqt6gtk2-style.so
+share/doc/qt6gtk2/README
