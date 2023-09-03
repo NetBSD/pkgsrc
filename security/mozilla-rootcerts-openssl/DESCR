@@ -1,6 +1,7 @@
 This package configures the Mozilla rootcerts bundle CAs as trust
 anchors in OpenSSL, so that programs using OpenSSL will be able to use
-them to validate SSL certificates.
+them to validate SSL certificates.  It is for manual installation by
+the system administrator only.
 
 For pkgsrc-provided OpenSSL, this package modifies
 ${PREFIX}/etc/ssl/certs, which belongs to another package.  This is
@@ -17,3 +18,7 @@ See also the mozilla-rootcerts package (which this one depends on as a
 built-time tool) for placing the Mozilla CA list in the filesystem but
 not configuring it into OpenSSL, as well as a script to aid in manual
 configuration of trust anchors.
+
+It is policy that no other package may depend on
+mozilla-rootcerts-openssl, because any such dependency would modify
+system configuration as a side effect of that other package.
