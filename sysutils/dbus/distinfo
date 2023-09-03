@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.102 2023/08/24 06:35:03 wiz Exp $
+$NetBSD: distinfo,v 1.103 2023/09/03 18:31:52 pin Exp $
 
-BLAKE2s (dbus-1.14.8.tar.xz) = d136fe66df812c1b1703bfd4e29f4edbea0aa96227d12465deded2995828a8b3
-SHA512 (dbus-1.14.8.tar.xz) = f3dfc73da28cbe20449d15bbe4166c3574f0e551dfd15fca7cce2b8c71e778360ed2dd391ee5c414a7a47ff4b958727b26ef4cabfee70564f8d0a34bf5ad2386
-Size (dbus-1.14.8.tar.xz) = 1371236 bytes
+BLAKE2s (dbus-1.14.10.tar.xz) = 10c2d40a506db80cd7852f671156641ef608da7a17ac250502038148f098fb92
+SHA512 (dbus-1.14.10.tar.xz) = 775b708326059692937acb69d4ce1a89e69878501166655b5d1b1628ac31b50dd53d979d93c84e57f95e90b15e25aa33893e51a7421d3537e9c2f02b1b91bfae
+Size (dbus-1.14.10.tar.xz) = 1372328 bytes
 SHA1 (patch-configure) = 9dee6306aa07b60449a0f9f0f1ea3dccbc70dcb4
 SHA1 (patch-dbus_dbus-sysdeps-unix.c) = 3dfc60eba7ab9d5a29d2a842ce0baa1b109df716
 SHA1 (patch-dbus_dbus-sysdeps-util-unix.c) = 537bb8a30bd0bde8ac208a7ce9a4e1903246b443
