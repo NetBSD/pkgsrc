@@ -1,0 +1,19 @@
+TUI feed reader for RSS, Atom, and (eventually) Podcasts. VIM keybindings.
+Ranger-inspired interface. Configurable.
+
+On first boot, Moccasin will create both a database and a config file in your
+default config directory, which varies depending on your platform.
+
+The moccasin.toml file can be edited to customize app behavior, add feeds in
+bulk, change the color scheme, etc. Most of these properties can be changed
+from within the application as well, which will write to this file.
+
+To create a custom color scheme, the color_scheme field can be declared as a
+table in which the keys are interface elements and the values are either a
+built-in ANSI color (which will inherit from your terminal emulator),
+a HEX color, or in InlineTable with fg and bg properties of the same type.
+
+The application uses VIM-style keybinds, but arrow keys can also be used for
+navigation. At the moment, the app has a NORMAL mode and a COMMAND mode.
+In future, you should also be able to tag and group feeds and items in GROUP
+mode.
