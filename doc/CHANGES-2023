@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5313 2023/09/03 20:25:33 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5314 2023/09/03 23:43:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7760,3 +7760,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gitui to 0.24.2 [pin 2023-09-03]
 	Updated sysutils/xfce4-thunar to 4.18.7 [gutteridge 2023-09-03]
 	Updated meta-pkgs/xfce4 to 4.18.0nb10 [gutteridge 2023-09-03]
+	Updated meta-pkgs/bulk-large to 20230903 [taca 2023-09-03]
