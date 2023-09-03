@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/08/29 19:55:02 adam Exp $
+# $NetBSD: Makefile,v 1.86 2023/09/03 11:58:54 adam Exp $
 
 DISTNAME=	gupnp-1.6.5
 CATEGORIES=	net
@@ -41,4 +41,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.58.0
 .include "../../net/libsoup3/buildlink3.mk"
 .include "../../net/gssdp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libxslt=	build # for xsltproc
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
