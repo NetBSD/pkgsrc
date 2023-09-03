@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/09/05 15:37:39 taca Exp $
-
-BLAKE2s (actionpack-xml_parser-2.0.1.gem) = 19cba53f35ac4c01b395c500bc699278905bb4220206f29edd5416485922ec01
-SHA512 (actionpack-xml_parser-2.0.1.gem) = f29f2dbcf0cfc5aaccaa417afed3ea3b4c935d2bf3168524a50338cc3574c0c05e4ceee43ef3ea8b135a2d9d3063f8dfb365fad0df666e9e700a919554466d14
-Size (actionpack-xml_parser-2.0.1.gem) = 6144 bytes
