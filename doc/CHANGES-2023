@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5296 2023/09/03 15:27:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5297 2023/09/03 15:32:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7722,3 +7722,14 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/opensmtpd-filter-dkimsign version 0.6 [vins 2023-09-03]
 	Updated graphics/oculante to 0.7.4 [pin 2023-09-03]
 	Updated shells/oh-my-posh to 18.6.3 [pin 2023-09-03]
+	Removed www/ruby-rails52 to 5.2.8.1 [taca 2023-09-03]
+	Removed devel/ruby-railties52 to 5.2.8.1 [taca 2023-09-03]
+	Removed mail/ruby-actionmailer52 to 5.2.8.1 [taca 2023-09-03]
+	Removed devel/ruby-activestorage52 to 5.2.8.1 [taca 2023-09-03]
+	Removed databases/ruby-activerecord52 to 5.2.8.1 [taca 2023-09-03]
+	Removed www/ruby-actioncable52 to 5.2.8.1 [taca 2023-09-03]
+	Removed www/ruby-actionpack52 to 5.2.8.1nb1 [taca 2023-09-03]
+	Removed www/ruby-actionview52 to 5.2.8.1 [taca 2023-09-03]
+	Removed devel/ruby-activejob52 to 5.2.8.1 [taca 2023-09-03]
+	Removed devel/ruby-activemodel52 to 5.2.8.1 [taca 2023-09-03]
+	Removed devel/ruby-activesupport52 to 5.2.8.1nb2 [taca 2023-09-03]
