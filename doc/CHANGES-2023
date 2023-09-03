@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5291 2023/09/03 10:23:12 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5292 2023/09/03 10:56:42 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7717,3 +7717,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/ruby-poppler to 4.2.0 [tsutsui 2023-09-03]
 	Updated x11/ruby-gtk3 to 4.2.0 [tsutsui 2023-09-03]
 	Updated x11/ruby-gtksourceview3 to 4.2.0 [tsutsui 2023-09-03]
+	Updated geography/py-googlemaps to 4.10.0 [kleink 2023-09-03]
