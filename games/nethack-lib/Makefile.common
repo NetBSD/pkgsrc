@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2023/09/02 13:45:14 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.48 2023/09/03 12:12:03 rhialto Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -21,7 +21,7 @@ NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
 NETHACK_SAVEVER=	3.6.0
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		https://www.nethack.org/download/${NETHACK_BASEVER}/
 EXTRACT_SUFX=		.tgz
@@ -44,7 +44,7 @@ USE_LANGUAGES+=		c c++
 # NetBSD's curses doesn't put the cursor where the game wants it
 # but leaves it in some random position. The playability of the game
 # depends on it, though. Therefore we prefer ncurses.
-USE_NCURSES=		yes
+PREFER.curses=		pkgsrc
 
 .include "../../mk/curses.buildlink3.mk"
 
