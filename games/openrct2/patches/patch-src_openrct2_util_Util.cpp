@@ -1,10 +1,10 @@
-$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.5 2023/09/02 07:30:35 triaxx Exp $
+$NetBSD: patch-src_openrct2_util_Util.cpp,v 1.6 2023/09/03 07:05:36 triaxx Exp $
 
 Support NetBSD.
 
---- src/openrct2/util/Util.cpp.orig	2020-05-27 23:27:33.350998119 +0000
+--- src/openrct2/util/Util.cpp.orig	2023-03-28 15:48:53.000000000 +0000
 +++ src/openrct2/util/Util.cpp
-@@ -95,7 +95,7 @@ int32_t bitscanforward(int32_t source)
+@@ -95,7 +95,7 @@ int32_t UtilBitScanForward(int64_t sourc
  #endif
  }
  
@@ -13,9 +13,9 @@ Support NetBSD.
  #    include <cpuid.h>
  #    define OpenRCT2_CPUID_GNUC_X86
  #elif defined(_MSC_VER) && (_MSC_VER >= 1500) && (defined(_M_X64) || defined(_M_IX86)) // VS2008
-@@ -134,7 +134,7 @@ bool sse41_available()
+@@ -134,7 +134,7 @@ bool SSE41Available()
  
- bool avx2_available()
+ bool AVX2Available()
  {
 -#ifdef OPENRCT2_X86
 +#if defined(OPENRCT2_X86) && !defined(__clang__)
