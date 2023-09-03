@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5290 2023/09/03 08:18:30 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5291 2023/09/03 10:23:12 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7700,3 +7700,20 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/simp to 3.4.1 [pin 2023-09-03]
 	Added news/moccasin version 0.1.2 [pin 2023-09-03]
 	Removed textproc/ruby-actionpack52-xml_parser [taca 2023-09-03]
+	Updated devel/ruby-atk to 4.2.0 [tsutsui 2023-09-03]
+	Updated devel/ruby-gio2 to 4.2.0 [tsutsui 2023-09-03]
+	Updated devel/ruby-glib2 to 4.2.0 [tsutsui 2023-09-03]
+	Updated devel/ruby-gobject-introspection to 4.2.0 [tsutsui 2023-09-03]
+	Updated devel/ruby-pango to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-cairo-gobject to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-clutter to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-clutter-gdk to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-clutter-gtk to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-gdk3 to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.2.0 [tsutsui 2023-09-03]
+	Updated graphics/ruby-rsvg2 to 4.2.0 [tsutsui 2023-09-03]
+	Updated multimedia/ruby-clutter-gstreamer to 4.2.0 [tsutsui 2023-09-03]
+	Updated multimedia/ruby-gstreamer to 4.2.0 [tsutsui 2023-09-03]
+	Updated print/ruby-poppler to 4.2.0 [tsutsui 2023-09-03]
+	Updated x11/ruby-gtk3 to 4.2.0 [tsutsui 2023-09-03]
+	Updated x11/ruby-gtksourceview3 to 4.2.0 [tsutsui 2023-09-03]
