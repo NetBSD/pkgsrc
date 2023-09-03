@@ -1,0 +1,387 @@
+$NetBSD: patch-mime-en.texi,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+ flim-1_14-wl branch at 2023-08-08
+
+--- /tmp/W/devel/flim/work/flim-1.14.9/mime-en.texi	2023-09-02 12:45:03.629296047 +0900
++++ ./mime-en.texi	2023-08-31 08:29:38.606447201 +0900
+@@ -1,26 +1,30 @@
+-\input texinfo.tex
++\input texinfo-ja @c -*-texinfo -*- coding: utf-8 -*-
+ @c Generated automatically from mime-en.sgml by sinfo 3.7.
+ @setfilename mime-en.info
+-@settitle{FLIM 1.14 Reference Manual about MIME Features}
++@settitle FLIM-LB 1.14 Reference Manual about MIME Features
++@documentencoding utf-8
++@documentlanguage en
++@dircategory GNU Emacs Lisp
++@direntry
++* FLIM-LB (en): (mime-en).         Internet message library.
++@end direntry
+ @titlepage
+-@title FLIM 1.14 Reference Manual about MIME Features
++@title FLIM-LB 1.14 Reference Manual about MIME Features
+ @author MORIOKA Tomohiko <morioka@@jaist.ac.jp>
+-@subtitle 1999-01-27
++@author Kazuhiro Ito
++@subtitle 2020-09-17
+ @end titlepage
+ @node Top, Introduction, (dir), (dir)
+-@top FLIM 1.14 Reference Manual about MIME Features
++@top FLIM-LB 1.14 Reference Manual about MIME Features
+ 
+ @ifinfo
+-@direntry
+-* FLIM: (mime-en).     FLIM, a fundamental library to process Internet Messages for GNU Emacsen.
+-@end direntry
+ 
+-This file documents MIME features of FLIM, a fundamental library to
++This file documents MIME features of FLIM-LB, a fundamental library to
+ process Internet Messages for GNU Emacsen.
+ @end ifinfo
+ 
+ @menu
+-* Introduction::                What is FLIM?
++* Introduction::                What is FLIM-LB?
+ * How to use::                  How to use MIME features
+ * Entity::                      Message and Entity
+ * Content-Type::                Information of Content-Type field
+@@ -35,10 +39,11 @@
+ @end menu
+ 
+ @node Introduction, How to use, Top, Top
+-@chapter What is FLIM?
++@chapter What is FLIM-LB?
+ 
+ FLIM is a library to provide basic features about message
+-representation or encoding.
++representation or encoding.  FLIM-LB is a variant of FLIM, which
++features supports to latest Emacs.
+ 
+ 
+ @node How to use, Entity, Introduction, Top
+@@ -462,7 +467,7 @@
+ representations for their purposes.@refill
+ 
+ Each entity has @strong{representation-type}.  It must be specified when
+-an entity is created. (cf. @ref{Entity Creation}) @refill
++an entity is created. (cf. @ref{Entity creation}) @refill
+ 
+ Functions about entity are implemented by request processing to the
+ entity.  Each entity knows its representation-type.  Each entity calls
+@@ -1053,7 +1058,7 @@
+ @menu
+ * Glossary::                    
+ * Bug report::                  How to report bugs
+-* CVS::                         CVS based development
++* GitHub::                      GitHub based development
+ * History::                     History of FLIM
+ @end menu
+ 
+@@ -1104,7 +1109,7 @@
+ Base64 (@ref{Base64}) for 7bit data.@refill
+ 
+ However if there are too long lines, it can not translate by 7bit MTA
+-even if it is 7bit data.  RFC 821 (@ref{RFC 821}) and RFC 2045 (@ref{RFC 2045}) require lines in 7bit data must be less than 998 bytes.  So if a
++even if it is 7bit data.  RFC 822 (@ref{RFC 822}) and RFC 2045 (@ref{RFC 2045}) require lines in 7bit data must be less than 998 bytes.  So if a
+ ``7bit data'' has a line more than 999 bytes, it is regarded as binary
+ (@ref{binary}).  For example, Postscript file should be encoded by
+ Quoted-Printable.
+@@ -1124,7 +1129,7 @@
+ 128 .. 159, and space represented by 32, and graphic characters between
+ 33 .. 236 and 160 .. 255 are called @strong{8bit (textual) string}.@refill
+ 
+-For example, iso-8859-1 (@ref{iso-8859-1}) or euc-kr (@ref{euc-kr}) are
++For example, iso-8859-1 or euc-kr are
+ coded-character-set represented by 8bit textual string.@refill
+ 
+ Traditional Internet MTA (@ref{MTA}) can translate only 7bit
+@@ -1149,7 +1154,7 @@
+ 
+ @strong{ASCII} is a 94-character set contains primary latin characters
+ (A-Z, a-z), numbers and some characters.  It is a standard of the United
+-States of America.  It is a variant of ISO 646 (@ref{ISO 646}).
++States of America.  It is a variant of ISO 646.
+ 
+ 
+ @noindent
+@@ -1215,7 +1220,7 @@
+ @cindex media-type
+ 
+ @strong{media-type} specifies the nature of the data in the body of MIME
+-(@ref{MIME}) entity (@ref{entity}).  It consists of @strong{type} and
++(@ref{MIME}) entity (@ref{Entity}).  It consists of @strong{type} and
+ @strong{subtype}.  It is defined in RFC 2046 (@ref{RFC 2046}).@refill
+ 
+ Currently there are following standard primary-types:
+@@ -1232,15 +1237,15 @@
+ @item
+ @strong{application}
+ @item
+-@strong{multipart} (@ref{multipart})
++@strong{multipart}
+ @item
+ @strong{message}
+ @end itemize
+ 
+ 
+ And there are various subtypes, for example, application/octet-stream,
+-audio/basic, image/jpeg, multipart/mixed (@ref{multipart/mixed}),
+-text/plain (@ref{text/plain}), video/mpeg...  @refill
++audio/basic, image/jpeg, multipart/mixed,
++text/plain, video/mpeg...  @refill
+ 
+ You can refer registered media types at MEDIA TYPES
+ (ftp://ftp.isi.edu/in-notes/iana/assignments/media-types).@refill
+@@ -1302,9 +1307,9 @@
+ 
+ It is defined in RFC 2045 (@ref{RFC 2045}).@refill
+ 
+-iso-2022-jp (@ref{iso-2022-jp}) or euc-kr (@ref{euc-kr}) are kinds of
++iso-2022-jp or euc-kr are kinds of
+ it.  (In this document, MIME charsets are written by small letters to
+-distinguish graphic character set (@ref{graphic character set}).  For
++distinguish graphic character set.  For
+ example, ISO 8859-1 is a graphic character set, and iso-8859-1 is a MIME
+ charset)
+ 
+@@ -1461,7 +1466,7 @@
+ @subsection plain text
+ 
+ A textual data represented by only coded character set (@ref{coded character set}).  It does not have information about font or
+-typesetting.  (cf. @ref{text/plain})
++typesetting.
+ 
+ 
+ 
+@@ -1474,8 +1479,8 @@
+ written by English or other languages.@refill
+ 
+ It is a 7bit coded character set (@ref{coded character set}) based on
+-ISO 2022 (@ref{ISO 2022}), it contains only ASCII (@ref{ASCII}) and code
+-extension (@ref{code extension}) is not allowed.@refill
++ISO 2022, it contains only ASCII (@ref{ASCII}) and code
++extension is not allowed.@refill
+ 
+ It is standard coded character set of Internet mail.  If MIME charset is
+ not specified, @strong{us-ascii} is used as default.@refill
+@@ -1484,132 +1489,123 @@
+ interpreted as us-ascii.
+ 
+ 
+-@node Bug report, CVS, Glossary, Appendix
++@node Bug report, GitHub, Glossary, Appendix
+ @section How to report bugs
+ @cindex good bug report
+ 
+-If you write bug-reports and/or suggestions for improvement, please
+-send them to the EMACS-MIME Mailing List:
++Topics related to FLIM-LB are discussed in following mailing lists.
++The latest version is also announced there.
+ 
+-@itemize @bullet
+-@item
+- English <emacs-mime-en@@m17n.org>
+-@item
+- Japanese <emacs-mime-ja@@m17n.org>
+-@end itemize
++@display
++Wanderlust Mailing List @t{<wl@@ml.gentei.org>}
++@end display
++
++In this list Japanese is mainly used for discussion. We also have a list
++for discussion in English:
++
++@display
++Wanderlust List in English @t{<wl-en@@ml.gentei.org>}
++@end display
++(Messages posted to this list are also forwarded to the former one.)
++
++A guide can be obtained automatically by sending mail to
++@t{wl-ctl@@ml.gentei.org} (or to @t{wl-en-ctl@@ml.gentei.org} for
++the English one) with the body
++
++@example
++# guide
++@end example
+ 
++Please send bug reports or patches to one of those lists.  You have to
++subscribe the mailing list to post a message.
+ 
+ Notice that, we do not welcome bug reports about too old version.  Bugs
+ in old version might be fixed.  So please try latest version at
+ first.@refill
+ 
+ You should write @strong{good bug report}.  If you write only ``FLIM
+-does not work'', we can not find such situations.  At least, you should
+-write name, type, variants and version of OS, emacs, APEL, FLIM, SEMI
+-and MUA, and setting.  In addition, if error occurs, to send backtrace
+-is very important. (cf. @ref{(emacs)Bugs}) @refill
++does not work'', we can not find such situations.  At least, you
++should write name, type, variants and version of OS, emacs, APEL,
++FLIM, SEMI and MUA, and setting.  In addition, if error occurs, to
++send backtrace is very important. (cf. @ref{Bugs,Reporting Bugs
++,Reporting Bugs, emacs, GNU Emacs Manual}) @refill
+ 
+ Bug may not appear only your environment, but also in a lot of
+ environment (otherwise it might not bug).  Therefor if you send mail
+ to author directly, we must write a lot of mails.  So please send mail
+ to address for EMACS-MIME Mailing List instead of author.
+ 
+-Via the EMACS-MIME ML, you can report FLIM bugs, obtain the latest
+-release of FLIM, and discuss future enhancements to FLIM.  To join the
+-EMACS-MIME ML, send an empty e-mail to:
+-
+-@itemize @bullet
+-@item
+- English  <emacs-mime-en-ctl@@m17n.org>
+-@item
+- Japanese <emacs-mime-ja-ctl@@m17n.org>
+-@end itemize
+-
+-
+ 
+-@node CVS, History, Bug report, Appendix
+-@section CVS based development
++@node GitHub, History, Bug report, Appendix
++@section GitHub based development
+ 
+-Files in FLIM are managed under CVS. Therefore you can obtain the
+-newest FLIM by the following method.
++FLIM-LB's repository is published in GitHub.
+ 
+ @example
+-(0) cvs login
+-
+-    % cvs -d :pserver:anonymous@@cvs.m17n.org:/cvs/root login
+-
+-    CVS password: [CR] # NULL string
+-
+-(1) checkout
+-
+-    % cvs -d :pserver:anonymous@@cvs.m17n.org:/cvs/root checkout
+-	checkout [-r TAG] flim
++@uref{https://github.com/wanderlust/flim}
+ @end example
+ 
++If you send a pull request, please embed unindented @file{ChangeLog}
++entries in commit message like Emacs's.  See @cite{Commit messages}
++section of Emacs's CONTRIBUTE file
++@footnote{@uref{https://git.savannah.gnu.org/cgit/emacs.git/plain/CONTRIBUTE}}.
+ 
+-If you would like to join CVS based development, please send mail to
+-
+-@itemize @bullet
+-@item
+- <cvs@@cvs.m17n.org>
+-@end itemize
+-
+-@noindent
+-with your account name and your public key for ssh.
+-cvsroot is :ext:cvs@@cvs.m17n.org:/cvs/root.
++If you send a bug report, please attach Backtrace with it.
++@footnote{@uref{http://www.jpl.org/elips/BUGS-ja.html} describes how to
++in Japanese.}
+ 
+ 
+-@node History,  , CVS, Appendix
++@node History,  , GitHub, Appendix
+ @section History of FLIM
+ 
+-FLIM $B$N(B code $B$N:G8E$NItJ,$O(B $B1]JB(B $B;LCR(B $B;a$,=q$$$?(B @file{mime.el} $B$K5/8;$7(B
+-$B$^$9!#$3$N>.$5$J(B program $B$O(B Nemacs $B$GF0:n$9$k(B iso-2022-jp $B$N(B B-encoding 
+-$B@lMQ$N(B encoded-word $B$NI|9f2=%W%m%0%i%`$G$7$?!#(B@refill
+-
+-$B$=$N8e!"<i2,(B $BCNI'(B $B$O(B @file{mime.el} $B$r85$K(B@file{tiny-mime.el} $B$H$$$&%W%m(B
+-$B%0%i%`$r=q$-$^$9!#$3$l$O!"(BNemacs $B$H(B Mule $B$GF0:n$9$k(B encoded-word $B$NId9f(B
+-$B2=!&I|9f2=%W%m%0%i%`$G$7$?!#(B@file{tiny-mime.el} $B$O(B B-encoding $B$@$1$G$J$/(B 
+-Q-encoding $B$b(Bsupport $B$7!"$^$?!"(BMULE $B$G07$&$3$H$,$G$-$k$5$^$6$^$J(B MIME
+-charset (@ref{MIME charset}) $B$rF1;~$K;H$&$3$H$,$G$-$^$7$?!#$3$N;~!"(B
+-Nemacs $B$H(B Mule $B$NAPJ}$r(B support $B$9$k$?$a$KMQ$$$i$l$?%F%/%K%C%/$O8e$K(B emu
+-package $B$K$^$H$a$i$l$^$9!#(B@refill
+-
+-$B$3$N:"!"<i2,(B $BCNI'(B $B$O(B @file{tiny-mime.el} $B$r$5$^$6$^$J(B MUA $B$G;H$&$?$a$N@_(B
+-$BDj=8$bG[I[$7$F$$$^$7$?$,!"$=$l$i$O8e$K(B@file{tiny-mime.el} $B$H$H$b$K#1$D$N(B 
+-package $B$K$^$H$a$i$l!"(Btm $B$H$$$&L>A0$GG[I[$5$l$^$9!#(B@refill
+-
+-$B<i2,(B $BCNI'(B $B$O$d$,$F!"(BMIME message $B$r1\Mw$9$k$?$a$N%W%m%0%i%`$G$"$k(B
+-@file{tm-body.el} $B$r=q$-$^$9!#$3$l$O!"$9$0$K(B@file{tm-view.el} $B$H$$$&L>A0(B
+-$B$KJQ$o$j$^$7$?$,!"$d$,$F!"$3$l$,(B@file{tiny-mime.el} $B$KBe$o$C$F!"(Btm $B$NCf(B
+-$B3K$H$J$j$^$9!#(B@refill
+-
+-@file{tm-view.el} $B$OEvA3!"(BContent-Transfer-Encoding $B$r07$&I,MW$,$"$j$^$9!#(B
+-$B$3$NL\E*$N$?$a$K!"(BMEL $B$,@0Hw$5$l$O$8$a$^$7$?!#(BBase64 $B$K4X$7$F$O(B 
+-@file{tiny-mime.el} $B$N(B code $B$,0\$5$l!"$^$?!"?7$?$K(BQuoted-Printable $B$N(B 
+-code $B$,DI2C$5$l$^$7$?!#$3$l$i$,(B@file{mel-b.el} $B$H(B @file{mel-q.el} $B$K$J$j(B
+-$B$^$7$?!#(B@refill
+-
+-$B$^$?!"8e$K!"<i2,(B $BCNI'(B $B$K$h$C$F(B uuencode $BMQ$N(B @file{mel-u.el} $B$,DI2C$5$l!"(B
+-$B$=$N8e$K!">.NS(B $B=$J?(B $B;a$K$h$C$F(B x-gzip64 $BMQ$N(B@file{mel-g.el} $B$,DI2C$5$l$^(B
+-$B$7$?!#(B@refill
+-
+-tm $B$G$O8e$K!"<i2,(B $BCNI'(B $B$K$h$C$F(B @file{tiny-mime.el} $B$N:F<BAu$,9T$o$l!"$3(B
+-$B$N2aDx$G!"(BSTD 11 $B$N(B parser $B$,=q$+$l$^$7$?!#$3$l$O!"8=:_$N(B 
+-@file{std11.el} $B$KEv$?$j$^$9!#$^$?!"$3$N2aDx$G(B @file{tiny-mime.el} $B$OI|(B
+-$B9f2=$r9T$&(B @file{tm-ew-d.el} $B$HId9f2=$r9T$&(B @file{tm-ew-e.el} $B$KJ,$1$i$l(B
+-$B$^$7$?!#$3$NN><T$,8=:_$N(B @file{eword-decode.el} $B$H(B 
+-@file{eword-encode.el} $B$N@hAD$KEv$?$j$^$9!#(B@refill
+-
+-$B8e$K!"<i2,(B $BCNI'(B $B$i$K$h$C$F(B tm $B$NA4LL=q$-49$(:n6H$,9T$o$l!"$3$N2aDx$G!"(Btm 
+-$B$O(B APEL, MEL, SEMI, EMH, RMAIL-MIME, Gnus-MIME $B$J$I$KJ,$1$i$l$^$7$?!#$3(B
+-$B$N$&$A$N(B MEL $B$,(B FLIM $B$ND>@\$N@hAD$KEv$?$j$^$9!#(B@refill
+-
+-$B8e$K!"(BAPEL $B$+$i(B @file{std11.el} $B$,0\$5$l!"$^$?!"(B@file{mailcap.el},
+-@file{eword-decode.el} $B$*$h$S(B @file{eword-encode.el} $B$,(B SEMI $B$+$i0\$5$l!"(B
+-package $B$NL>A0$,(B FLIM $B$H$J$j$^$9!#(B@refill
++FLIM の code の最古の部分は 榎並 嗣智 氏が書いた @file{mime.el} に起源し
++ます。この小さな program は Nemacs で動作する iso-2022-jp の B-encoding 
++専用の encoded-word の復号化プログラムでした。@refill
++
++その後、守岡 知彦 は @file{mime.el} を元に@file{tiny-mime.el} というプロ
++グラムを書きます。これは、Nemacs と Mule で動作する encoded-word の符号
++化・復号化プログラムでした。@file{tiny-mime.el} は B-encoding だけでなく 
++Q-encoding もsupport し、また、MULE で扱うことができるさまざまな MIME
++charset (@ref{MIME charset}) を同時に使うことができました。この時、
++Nemacs と Mule の双方を support するために用いられたテクニックは後に emu
++package にまとめられます。@refill
++
++この頃、守岡 知彦 は @file{tiny-mime.el} をさまざまな MUA で使うための設
++定集も配布していましたが、それらは後に@file{tiny-mime.el} とともに１つの 
++package にまとめられ、tm という名前で配布されます。@refill
++
++守岡 知彦 はやがて、MIME message を閲覧するためのプログラムである
++@file{tm-body.el} を書きます。これは、すぐに@file{tm-view.el} という名前
++に変わりましたが、やがて、これが@file{tiny-mime.el} に代わって、tm の中
++核となります。@refill
++
++@file{tm-view.el} は当然、Content-Transfer-Encoding を扱う必要があります。
++この目的のために、MEL が整備されはじめました。Base64 に関しては 
++@file{tiny-mime.el} の code が移され、また、新たにQuoted-Printable の 
++code が追加されました。これらが@file{mel-b.el} と @file{mel-q.el} になり
++ました。@refill
++
++また、後に、守岡 知彦 によって uuencode 用の @file{mel-u.el} が追加され、
++その後に、小林 修平 氏によって x-gzip64 用の@file{mel-g.el} が追加されま
++した。@refill
++
++tm では後に、守岡 知彦 によって @file{tiny-mime.el} の再実装が行われ、こ
++の過程で、STD 11 の parser が書かれました。これは、現在の 
++@file{std11.el} に当たります。また、この過程で @file{tiny-mime.el} は復
++号化を行う @file{tm-ew-d.el} と符号化を行う @file{tm-ew-e.el} に分けられ
++ました。この両者が現在の @file{eword-decode.el} と 
++@file{eword-encode.el} の先祖に当たります。@refill
++
++後に、守岡 知彦 らによって tm の全面書き換え作業が行われ、この過程で、tm 
++は APEL, MEL, SEMI, EMH, RMAIL-MIME, Gnus-MIME などに分けられました。こ
++のうちの MEL が FLIM の直接の先祖に当たります。@refill
++
++後に、APEL から @file{std11.el} が移され、また、@file{mailcap.el},
++@file{eword-decode.el} および @file{eword-encode.el} が SEMI から移され、
++package の名前が FLIM となります。@refill
+ 
+-$B$3$ND>A0$+$iEDCf(B $BE/(B $B;a$,$h$j(B RFC $B$KCi<B$J<BAu$r=q$-;O$a!"$3$l$O!"8=:_!"(B
+-FLIM $B$N;^$G$"$k(B ``FLIM-FLAM'' $B$H$J$C$F$$$^$9!#(B
++この直前から田中 哲 氏がより RFC に忠実な実装を書き始め、これは、現在、
++FLIM の枝である ``FLIM-FLAM'' となっています。
+ 
+ 
+ @node Concept Index, Function Index, Appendix, Top

@@ -1,0 +1,23 @@
+$NetBSD: patch-FLIM-CFG,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+ flim-1_14-wl branch at 2023-08-08
+
+--- /tmp/W/devel/flim/work/flim-1.14.9/FLIM-CFG	2006-12-21 02:40:42.000000000 +0900
++++ ./FLIM-CFG	2023-08-31 08:29:38.576546360 +0900
+@@ -13,11 +13,16 @@
+     (progn
+       (add-to-list 'default-load-path LISPDIR)
+       (add-to-list 'load-path LISPDIR)
++      (add-to-list 'load-path (expand-file-name "emu" LISPDIR))
+       (add-to-list 'load-path (expand-file-name "apel" LISPDIR))))
+ 
+ (if (boundp 'VERSION_SPECIFIC_LISPDIR)
+     (add-to-list 'load-path VERSION_SPECIFIC_LISPDIR))
+ 
++(if (boundp 'PACKAGE_LISPDIR)
++    (let ((default-directory PACKAGE_LISPDIR))
++      (normal-top-level-add-subdirs-to-load-path)))
++
+ (require 'install)
+ 
+ (add-latest-path "custom")
