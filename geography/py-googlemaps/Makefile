@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/11/25 10:47:05 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/09/03 10:56:24 kleink Exp $
 
-DISTNAME=	googlemaps-4.7.3
+DISTNAME=	googlemaps-4.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googlemaps/}
