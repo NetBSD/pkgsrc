@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2023/06/06 12:40:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.44 2023/09/03 14:58:38 mef Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/flim/flim-1.14/
 
@@ -33,13 +33,18 @@ MAKEFLAGS.xemacs+=	XEMACS=${EMACS_BIN} \
 			PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 EMACS_MODULES=		base
-EMACS_BUILDLINK=	# defined
+EMACS_BUILDLINK=	# empty
+
+post-patch:
+	${RM} -f ${WRKSRC}/hmac-def.el
+	${RM} -f ${WRKSRC}/hex-utile.el
+
+pre-configure:
+	${MKDIR} -p ${WRKDIR}/.home/.emacs.d/elpa
+	find ${WRKSRC} -name \*orig | xargs rm
 
 post-build:
-	@cd ${WRKSRC}; for i in mime-en mime-ja; do			\
-		${RM} -f $${i}.info*;					\
-		${CP} $${i}.texi $${i}.texi.orig;			\
-		${LOCALBASE}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
+	cd ${WRKSRC}; for i in mime-en mime-ja; do			\
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 
@@ -61,7 +66,7 @@ post-install:
 .include "../../editors/emacs/modules.mk"
 
 .if (${EMACS_FLAVOR} != "xemacs")
-BUILDLINK_API_DEPENDS.apel+=	apel>=10.7
+BUILDLINK_API_DEPENDS.apel+=	apel>=10.8
 .include "../../devel/apel/buildlink3.mk"
 .endif
 
