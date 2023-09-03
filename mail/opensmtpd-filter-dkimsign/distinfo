@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/09/03 13:00:42 vins Exp $
+
+BLAKE2s (filter-dkimsign-0.6.tar.gz) = 3cd58fa566252d49330a500c7a81af9a4e479faa083fb09fd972326df588aaab
+SHA512 (filter-dkimsign-0.6.tar.gz) = 1efab386a020c6a3cbf6059ce0feea539fa62be0990fd8538c4b152fa0c302d7bfffa7c7bb74643c25e47c20250f600f1371d2725dc3178ad103ce585530c0ce
+Size (filter-dkimsign-0.6.tar.gz) = 24163 bytes
+SHA1 (patch-Makefile.gnu) = aafeedae76d938ed769442059d16848bfa0c4de5
+SHA1 (patch-openbsd-compat_explicit__bzero.c) = 77f4725a1bf4b8fc7f4040755e9f0b61db6b19e6
