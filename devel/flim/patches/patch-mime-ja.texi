@@ -1,0 +1,2072 @@
+$NetBSD: patch-mime-ja.texi,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+ flim-1_14-wl branch at 2023-08-08
+
+--- /tmp/W/devel/flim/work/flim-1.14.9/mime-ja.texi	2023-09-02 12:45:03.657092847 +0900
++++ ./mime-ja.texi	2023-08-31 08:29:38.608621034 +0900
+@@ -1,510 +1,516 @@
+-\input texinfo.tex
++\input texinfo-ja @c -*-texinfo -*- coding: utf-8 -*-
+ @c Generated automatically from mime-ja.sgml by sinfo 3.7.
+ @setfilename mime-ja.info
+-@settitle{FLIM 1.14 MIME $B5!G=@bL@=q(B}
++@documentlanguage ja
++@documentencoding utf-8
++@settitle FLIM-LB 1.14 MIME 機能説明書
++@dircategory GNU Emacs Lisp
++@direntry
++* FLIM-LB (ja): (mime-ja).         Internet message library.
++@end direntry
+ @titlepage
+-@title FLIM 1.14 MIME $B5!G=@bL@=q(B
+-@author $B<i2,(B $BCNI'(B <morioka@@jaist.ac.jp>
+-@subtitle 1999-01-27
++@title FLIM-LB 1.14 MIME 機能説明書
++@author 守岡 知彦 <morioka@@jaist.ac.jp>
++@author 伊藤 和博
++@subtitle 2020-09-17
+ @end titlepage
+ @node Top, Introduction, (dir), (dir)
+-@top FLIM 1.14 MIME $B5!G=@bL@=q(B
++@top FLIM-LB 1.14 MIME 機能説明書
+ 
+ @ifinfo
+-@direntry
+-* FLIM-ja: (mime-ja).     FLIM, a fundamental library to process Internet Messages for GNU Emacsen.
+-@end direntry
+ 
+-This file documents MIME features of FLIM, a fundamental library to
++This file documents MIME features of FLIM-LB, a fundamental library to
+ process Internet Messages for GNU Emacsen.@refill
+ 
+-GNU Emacsen $BMQ$N(B Internet Message $B=hM}$N$?$a$N4pAC(B library $B$G$"$k(B FLIM 
+-$B$N(B MIME $B5!G=$K4X$7$F@bL@$7$^$9!#(B
++GNU Emacsen 用の Internet Message 処理のための基礎 library である FLIM-LB
++の MIME 機能に関して説明します。
+ @end ifinfo
+ 
+ @menu
+-* Introduction::                FLIM $B$C$F2?!)(B
+-* How to use::                  FLIM $B$N(B MIME $B5!G=$N;H$$J}(B
+-* Entity::                      Message $B$H(B Entity
+-* Content-Type::                Content-Type $BMs$N>pJs(B
+-* Content-Disposition::         Content-Disposition $BMs$N>pJs(B
+-* Content-Transfer-Encoding::   $BId9f2=K!(B
+-* encoded-word::                Header $B$N(B network $BI=8=(B
+-* custom::                      $B0lHL@_Dj(B
+-* Appendix::                    $BIUO?(B
+-* Concept Index::               $B35G0:w0z(B
+-* Function Index::              $B4X?t:w0z(B
+-* Variable Index::              $BJQ?t:w0z(B
++* Introduction::                FLIM-LB って何？
++* How to use::                  FLIM の MIME 機能の使い方
++* Entity::                      Message と Entity
++* Content-Type::                Content-Type 欄の情報
++* Content-Disposition::         Content-Disposition 欄の情報
++* Content-Transfer-Encoding::   符号化法
++* encoded-word::                Header の network 表現
++* custom::                      一般設定
++* Appendix::                    付録
++* Concept Index::               概念索引
++* Function Index::              関数索引
++* Variable Index::              変数索引
+ @end menu
+ 
+ @node Introduction, How to use, Top, Top
+-@chapter FLIM $B$C$F2?!)(B
++@chapter FLIM-LB って何？
+ 
+-FLIM $B$O(B Internet Message $B$NI=8=$dId9f2=$K4X$9$k4pACE*$J5!G=$rDs6!$9$k(B
+-$B$?$a$N(B library $B$G$9!#(B
++FLIM は Internet Message の表現や符号化に関する基礎的な機能を提供する
++ための library です。
++FLIM-LB は FLIM のバリアントの一つで、
++最新バージョンの Emacs への対応などを特徴とします。
+ 
+ 
+ @node How to use, Entity, Introduction, Top
+-@chapter FLIM $B$N(B MIME $B5!G=$N;H$$J}(B
++@chapter FLIM の MIME 機能の使い方
+ 
+-FLIM $B$NDs6!$9$k(B MIME $B5!G=$r;H$&$?$a$K$O(B
++FLIM の提供する MIME 機能を使うためには
+ 
+ @lisp
+ (require 'mime)
+ @end lisp
+ 
+ @noindent
+-$B$rI>2A$7$F$/$@$5$$!#(B
++を評価してください。
+ 
+ 
+ @node Entity, Content-Type, How to use, Top
+-@chapter Message $B$H(B Entity
++@chapter Message と Entity
+ @cindex mime-entity
+ @cindex entity
+ 
+-RFC 2045 (@ref{RFC 2045}) $B$K$h$l$P!"!V(BEntity $B$H$$$&8l$O!"(Bmessage, $B$b$7$/(B
+-$B$O!"(Bmultipart entity $B$N(B body $BCf$N#1$D$NItJ,$N!"(BMIME $B$GDj5A$5$l$?(B header
+-field $B$HFbMF$r;X$9!W$H$J$C$F$$$^$9!#$3$3$G$O!"(BMIME $B$GDj5A$5$l$?(B header
+-field $B0J30$NA4$F$N(B header $B$H(B body $B$r;X$98l$H$7$F(B @strong{entity}$B$rMQ$$$k(B
+-$B$3$H$K$7$^$9!#(B@refill
++RFC 2045 (@ref{RFC 2045}) によれば、「Entity という語は、message, もしく
++は、multipart entity の body 中の１つの部分の、MIME で定義された header
++field と内容を指す」となっています。ここでは、MIME で定義された header
++field 以外の全ての header と body を指す語として @strong{entity}を用いる
++ことにします。@refill
+ 
+-RFC 2045 $B$NDj5A$O!"(BMIME message $B$,(B entity $B$r@a$H$9$kLZ9=B$$G$"$k$3$H$r<((B
+-$B$7$F$$$^$9!#$D$^$j!"(BMIME $B$O(B message $B$rLZ9=B$$K3HD%$7$?Lu$G$9!#(B@refill
++RFC 2045 の定義は、MIME message が entity を節とする木構造であることを示
++しています。つまり、MIME は message を木構造に拡張した訳です。@refill
+ 
+-FLIM $B$O(B entity $B$N>pJs$rI=8=$9$k$?$a$K(B@strong{mime-entity} $B9=(B
+-$BB$BN$rMQ$$$^$9!#0J2<$G$OC1$K(B mime-entity $B$H8F$V$3$H$K$7$^$9!#(B
++FLIM は entity の情報を表現するために@strong{mime-entity} 構
++造体を用います。以下では単に mime-entity と呼ぶことにします。
+ 
+ 
+ @menu
+-* Entity creation::             Entity $B$N@8@.(B
+-* Entity hierarchy::            Entity $B3,AX(B
+-* Entity Search::               Entity $B$N8!:w(B
+-* Entity Attributes::           Entity $B$NB0@-(B
+-* Entity-header::               Entity header $B$N>pJs(B
+-* entity formatting::           Entity $B$NJ8;zI=8=(B
+-* Entity-content::              Entity $B$NFbMF(B
+-* Entity-network-representation::  Entity $B$N%M%C%H%o!<%/I=8=(B
+-* Entity buffer::               Entity $B$N(B buffer $B$K$h$kI=8=(B
+-* mm-backend::                  Entity $B$NI=8=$H<B8=(B
++* Entity creation::             Entity の生成
++* Entity hierarchy::            Entity 階層
++* Entity Search::               Entity の検索
++* Entity Attributes::           Entity の属性
++* Entity-header::               Entity header の情報
++* entity formatting::           Entity の文字表現
++* Entity-content::              Entity の内容
++* Entity-network-representation::  Entity のネットワーク表現
++* Entity buffer::               Entity の buffer による表現
++* mm-backend::                  Entity の表現と実現
+ @end menu
+ 
+ @node Entity creation, Entity hierarchy, Entity, Entity
+-@section Entity $B$N@8@.(B
++@section Entity の生成
+ 
+ @defun mime-open-entity type location
+ 
+-Entity $B$r3+$$$F!"$=$l$rJV$7$^$9!#(B@refill
++Entity を開いて、それを返します。@refill
+ 
+-@var{type} $B$O(B representation-type $B$G$9!#(B(cf. @ref{mm-backend}) @refill
++@var{type} は representation-type です。(cf. @ref{mm-backend}) @refill
+ 
+-@var{location} $B$O(B entity $B$N0LCV$G$9!#;XDjJ}K!$O(B
+-representation-type $B$K0M$C$FJQ$o$j$^$9!#(B
++@var{location} は entity の位置です。指定方法は
++representation-type に依って変わります。
+ @end defun
+ 
+ 
+ @defun mime-parse-buffer &optional  buffer type
+ 
+-@var{buffer} $B$r(B message $B$H$7$F9=J82r@O$7!"$=$N7k2L$N(B mime-entity $B$r(B 
+-@var{buffer} $B$N(B@code{mime-message-structure} $B$K3JG<$9$k!#(B@refill
++@var{buffer} を message として構文解析し、その結果の mime-entity を 
++@var{buffer} の@code{mime-message-structure} に格納する。@refill
+ 
+-@var{buffer} $B$,>JN,$5$l$?>l9g!"8=:_$N(B buffer $B$r9=J82r@O$9$k!#(B@refill
++@var{buffer} が省略された場合、現在の buffer を構文解析する。@refill
+ 
+-@var{type} $B$,;XDj$5$l$?>l9g!"$=$NCM$r@8@.$5$l$k(B mime-entity $B$NI=>]7?$H$7(B
+-$B$FMQ$$$k!#>JN,$5$l$?>l9g$O(B @var{buffer} $B$H$J$k!#(B(cf. @ref{mm-backend})
++@var{type} が指定された場合、その値を生成される mime-entity の表象型とし
++て用いる。省略された場合は @var{buffer} となる。(cf. @ref{mm-backend})
+ @end defun
+ 
+ 
+ 
+ @node Entity hierarchy, Entity Search, Entity creation, Entity
+-@section Entity $B3,AX(B
++@section Entity 階層
+ @cindex node-id
+ @cindex entity-number
+ @cindex message
+ @cindex root-entity
+ 
+-MIME message $B$O(B entity $B$rC10L$H$9$kLZ9=B$$K$J$C$F$$$^$9!#(B@refill
++MIME message は entity を単位とする木構造になっています。@refill
+ 
+-$B$3$NLZ$K$*$$$F:,$H$J$k@a$O(B message $BA4BN$rI=$9(B entity $B$G$9!#$3$3$G$O!"$3(B
+-$B$l$r(B @strong{root-entity} $B$b$7$/$O(B@strong{message} $B$H8F$S$^$9!#(B@refill
++この木において根となる節は message 全体を表す entity です。ここでは、こ
++れを @strong{root-entity} もしくは@strong{message} と呼びます。@refill
+ 
+-root-entity $B0J30$N(B entity $B$O?F$r;}$A$^$9!#$^$?!"(Bentity $B$O;R6!$r;}$D$+$b(B
+-$BCN$l$^$;$s!#$3$N?F;R4X78$r9M$($k$3$H$G(B entity $B$NAjBP4X78$r07$&$3$H$,$G$-(B
+-$B$^$9!#(B@refill
++root-entity 以外の entity は親を持ちます。また、entity は子供を持つかも
++知れません。この親子関係を考えることで entity の相対関係を扱うことができ
++ます。@refill
+ 
+-$B0lJ}!"(Bentity $B$N(B message $B$K$*$1$k0LCV$r9M$($k$3$H$b$G$-$^$9!#(B@refill
++一方、entity の message における位置を考えることもできます。@refill
+ 
+-entity $B$O$3$NLZ$K$*$1$k@a$H$J$j$^$9$,!"$3$NLZ$K$O?<$5$HF1$8?<$5$NCf$N(B
+-$B=gHV$K=>$C$FHV9f$,IU$1$k$3$H$,$G$-$^$9!#B($A!"(B
++entity はこの木における節となりますが、この木には深さと同じ深さの中の
++順番に従って番号が付けることができます。即ち、
+ @example
+ 
+-                              $B(#(!(!(!($(B
+-                              $B("(B  nil $B("(B
+-                              $B(&(!(((!(%(B
+-              $B(#(!(!(!(!(!(!(!(!(!(+(!(!(!(!(!(!(!(!(!($(B
+-            $B(#(*($(B              $B(#(*($(B              $B(#(*($(B
+-            $B("#0("(B              $B("#1("(B              $B("#2("(B
+-            $B(&(((%(B              $B(&(((%(B              $B(&(((%(B
+-              $B("(B        $B(#(!(!(!(!(+(!(!(!(!($(B        $B("(B
+-          $B(#(!(*(!($(#(!(*(!($(#(!(*(!($(#(!(*(!($(#(!(*(!($(B
+-          $B("(B $B#0(B.$B#0("("(B $B#1(B.$B#0("("(B $B#1(B.$B#1("("(B $B#1(B.$B#2("("(B $B#2(B.$B#0("(B
+-          $B(&(!(!(!(%(&(!(!(!(%(&(!(!(!(%(&(!(!(!(%(&(!(!(!(%(B
++                              ┌───┐
++                              │  nil │
++                              └─┬─┘
++              ┌─────────┼─────────┐
++            ┌┴┐              ┌┴┐              ┌┴┐
++            │０│              │１│              │２│
++            └┬┘              └┬┘              └┬┘
++              │        ┌────┼────┐        │
++          ┌─┴─┐┌─┴─┐┌─┴─┐┌─┴─┐┌─┴─┐
++          │ ０.０││ １.０││ １.１││ １.２││ ２.０│
++          └───┘└───┘└───┘└───┘└───┘
+ @end example
+ 
+ @noindent
+-$B$N$h$&$K?<$5(B n $B$N@a$K$OD9$5(B n $B$N@0?tNs$N@aHV9f$,?6$l$^$9!#$3$l(B
+-$B$r(B @strong{entity-number} $B$H8F$S$^$9!#(Bentity-number $B$O(B S $B<0$H(B
+-$B$7$F$O(B @code{(1 2 3)} $B$N$h$&$J@0?t$N%j%9%H$H$7$FI=8=$5$l$^$9!#(B
+-
+-mime-entity $B$G$O!"$3$l$HF1MM$N(B @strong{node-id} $B$rMQ$$$^$9!#(Bnode-id $B$O$A$g(B
+-$B$&$I(B entity-number $B$r5U$K$7$?%j%9%H$G!"(Bentity-number 1.2.3 $B$KBP1~$9$k(B 
+-node-id $B$O(B @code{(3 2 1)} $B$G$9!#(B@refill
+-
+-$BA0=R$N$h$&$K!"(BMIME message $B$O(B entity $B$rC10L$H$7$?LZ9=B$$K$J$C$F$$$k$N$G!"(B
+-$B$3$N:,$G$"$k(B message $BA4BN$b(B mime-entity $B$GI=8=$9$k$3$H$,$G$-!"(Bbuffer
+-local $BJQ?t(B @code{mime-message-structure} $B$K3JG<$9$k$3$H$K$7$^$9!#(B@refill
++のように深さ n の節には長さ n の整数列の節番号が振れます。これ
++を @strong{entity-number} と呼びます。entity-number は S 式と
++しては @code{(1 2 3)} のような整数のリストとして表現されます。
++
++mime-entity では、これと同様の @strong{node-id} を用います。node-id はちょ
++うど entity-number を逆にしたリストで、entity-number 1.2.3 に対応する 
++node-id は @code{(3 2 1)} です。@refill
++
++前述のように、MIME message は entity を単位とした木構造になっているので、
++この根である message 全体も mime-entity で表現することができ、buffer
++local 変数 @code{mime-message-structure} に格納することにします。@refill
+ 
+-@code{mime-message-structure} $B$r5/E@$K(B entity-number $B$d(B node-id 
+-$B$G<($5$l$k(B entity $B$r<h$j=P$9$3$H$,$G$-$^$9!#(B
++@code{mime-message-structure} を起点に entity-number や node-id 
++で示される entity を取り出すことができます。
+ 
+ @defvar mime-message-structure
+ 
+-$B8=:_$N(B buffer $B$K$*$1$k(B message $BA4BN$N(B mime-entity $B9=B$BN$r3JG<$9$k(Bbuffer
+-local $BJQ?t!#(B
++現在の buffer における message 全体の mime-entity 構造体を格納するbuffer
++local 変数。
+ @end defvar
+ 
+ 
+ @defun mime-entity-children entity
+ 
+-@var{entity} $B$K4^$^$l$k(B entity $B$N(B list $B$rJV$9!#(B
++@var{entity} に含まれる entity の list を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-parent entity  &optional  message
+ 
+-@var{entity} $B$N?F$N(B entity $B$rJV$9!#(B@refill
++@var{entity} の親の entity を返す。@refill
+ 
+-@var{message} $B$,;XDj$5$l$?>l9g!"$3$l$r:,$H8+Jo$9!#(B
++@var{message} が指定された場合、これを根と見倣す。
+ @end defun
+ 
+ 
+ @defun mime-root-entity-p entity
+ 
+-@var{entity} $B$,:,!JB($A!"(Bmessage $BA4BN!K$G$"$k>l9g$K!"Hs(B-@code{nil} $B$rJV(B
+-$B$9!#(B
++@var{entity} が根（即ち、message 全体）である場合に、非-@code{nil} を返
++す。
+ @end defun
+ 
+ 
+ @defun mime-entity-node-id entity
+ 
+-@var{entity} $B$N(B node-id $B$rJV$9!#(B
++@var{entity} の node-id を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-number entity
+ 
+-@var{entity} $B$N(B entity-number $B$rJV$9!#(B
++@var{entity} の entity-number を返す。
+ @end defun
+ 
+ 
+ 
+ @node Entity Search, Entity Attributes, Entity hierarchy, Entity
+-@section Entity $B$N8!:w(B
++@section Entity の検索
+ 
+ @defun mime-find-entity-from-number entity-number  &optional  message
+ 
+-@var{message} $B$+$i!"(B@var{enity-number} $B$N(B entity $B$rJV$7$^$9!#(B@refill
++@var{message} から、@var{enity-number} の entity を返します。@refill
+ 
+-@var{message} $B$,;XDj$5$l$F$$$J$$>l9g$O!"(B
+-@code{mime-message-structrue} $B$,;H$o$l$^$9!#(B
++@var{message} が指定されていない場合は、
++@code{mime-message-structrue} が使われます。
+ @end defun
+ 
+ 
+ @defun mime-find-entity-from-node-id entity-node-id  &optional  message
+ 
+-@var{message} $B$+$i!"(B@var{entity-node-id} $B$N(B entity $B$rJV$7$^$9!#(B@refill
++@var{message} から、@var{entity-node-id} の entity を返します。@refill
+ 
+-@var{message} $B$,;XDj$5$l$F$$$J$$>l9g$O!"(B
+-@code{mime-message-structure} $B$,;H$o$l$^$9!#(B
++@var{message} が指定されていない場合は、
++@code{mime-message-structure} が使われます。
+ @end defun
+ 
+ 
+ @defun mime-find-entity-from-content-id cid  &optional  message
+ 
+-@var{message} $B$+$i!"(B@var{cid} $B$N(B entity $B$rJV$7$^$9!#(B@refill
++@var{message} から、@var{cid} の entity を返します。@refill
+ 
+-@var{message} $B$,;XDj$5$l$F$$$J$$>l9g$O!"(B
+-@code{mime-message-structure} $B$,;H$o$l$^$9!#(B
++@var{message} が指定されていない場合は、
++@code{mime-message-structure} が使われます。
+ @end defun
+ 
+ 
+ 
+ @node Entity Attributes, Entity-header, Entity Search, Entity
+-@section Entity $B$NB0@-(B
++@section Entity の属性
+ 
+ @defun mime-entity-content-type entity
+ 
+-@var{entity} $B$N(B content-type $B$rJV$9!#(B(cf. @ref{mime-content-type})
++@var{entity} の content-type を返す。(cf. @ref{mime-content-type})
+ @end defun
+ 
+ 
+ @defun mime-entity-content-disposition entity
+ 
+-@var{entity} $B$N(B content-disposition $B$rJV$9!#(B
++@var{entity} の content-disposition を返す。
+ (cf. @ref{mime-content-disposition})
+ @end defun
+ 
+ 
+ @defun mime-entity-filename entity
+ 
+-@var{entity} $B$N(B file $BL>$rJV$9!#(B
++@var{entity} の file 名を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-encoding entity  &optional  default-encoding
+ 
+-@var{entity} $B$N(B content-transfer-encoding $B$rJV$9!#(B
++@var{entity} の content-transfer-encoding を返す。
+ (cf. @ref{Content-Transfer-Encoding}) @refill
+ 
+-$B$b$7!"(B@var{entity} $B$K(B Content-Transfer-Encoding $BMs$,B8:_$7$J$$>l9g$O!"(B
+-@var{default-encoding} $B$rJV$9!#$3$l$,;XDj$5$l$J$$>l9g$O!"(B@code{"7bit"} 
+-$B$rMQ$$$k!#(B
++もし、@var{entity} に Content-Transfer-Encoding 欄が存在しない場合は、
++@var{default-encoding} を返す。これが指定されない場合は、@code{"7bit"} 
++を用いる。
+ @end defun
+ 
+ 
+ @defun mime-entity-cooked-p entity
+ 
+-@var{entity} $B$NFbMF$,4{$K%3!<%IJQ49$5$l$F$$$k>l9g$O(B nil $B$GL5$$CM(B
+-$B$rJV$9!#(B
++@var{entity} の内容が既にコード変換されている場合は nil で無い値
++を返す。
+ @end defun
+ 
+ 
+ 
+ @node Entity-header, entity formatting, Entity Attributes, Entity
+-@section Entity header $B$N>pJs(B
++@section Entity header の情報
+ 
+ @defun mime-fetch-field field-name  &optional  entity
+ 
+-@var{entity} $B$N(B header $BCf$N(B @var{field-name} $BMs$N(B body $B$rJV$9!#(B@refill
++@var{entity} の header 中の @var{field-name} 欄の body を返す。@refill
+ 
+-$B7k2L$NJ8;zNs$O(B network $BI=8=$N$^$^$G$"$k!#(B@refill
++結果の文字列は network 表現のままである。@refill
+ 
+-@var{entity} $B$,>JN,$5$l$?>l9g$O!"(B@code{mime-message-structure} $B$NCM$rMQ(B
+-$B$$$k!#(B@refill
++@var{entity} が省略された場合は、@code{mime-message-structure} の値を用
++いる。@refill
+ 
+-@var{field-name} $BMs$,B8:_$7$J$$>l9g$O(B @code{nil} $B$rJV$9!#(B
++@var{field-name} 欄が存在しない場合は @code{nil} を返す。
+ @end defun
+ 
+ 
+ @defun mime-read-field field-name  &optional  entity
+ 
+-@var{entity} $B$N(B header $BCf$N(B @var{field-name} $BMs$r9=J82r@O$7$?7k2L$rJV$9!#(B
++@var{entity} の header 中の @var{field-name} 欄を構文解析した結果を返す。
+ @refill
+ 
+-$B7k2L$N7A<0$OMsKh$K0[$J$k!#Hs9=B$2=Ms$N>l9g$OJ8;zNs$rJV$7!"9=B$2=Ms$N>l9g(B
+-$B$O$=$N7A<0$K=>$C$?(B list $B$rJV$9!#(B@refill
++結果の形式は欄毎に異なる。非構造化欄の場合は文字列を返し、構造化欄の場合
++はその形式に従った list を返す。@refill
+ 
+-$B7k2LCf$NJ8;zNs$O(B Emacs $B$NFbItI=8=$KJQ49$5$l$k!#(B@refill
++結果中の文字列は Emacs の内部表現に変換される。@refill
+ 
+-@var{entity} $B$,>JN,$5$l$?>l9g$O!"(B@code{mime-message-structure} $B$NCM$rMQ(B
+-$B$$$k!#(B@refill
++@var{entity} が省略された場合は、@code{mime-message-structure} の値を用
++いる。@refill
+ 
+-@var{field-name} $BMs$,B8:_$7$J$$>l9g$O(B nil $B$rJV$9!#(B
++@var{field-name} 欄が存在しない場合は nil を返す。
+ @end defun
+ 
+ 
+ 
+ @node entity formatting, Entity-content, Entity-header, Entity
+-@section Entity $B$NJ8;zI=8=(B
++@section Entity の文字表現
+ 
+ @defun mime-insert-header entity  &optional  invisible-fields visible-fields
+ 
+-$B8=:_0LCV$K(B @var{entity} $B$NI|9f$7$?(B header $B$rA^F~$9$k!#(B@refill
++現在位置に @var{entity} の復号した header を挿入する。@refill
+ 
+-@var{invisible-fields} $B$H(B @var{visible-fields} $B$O@55,I=8=$N(Blist $B$G!"$=$l(B
+-$B$>$l!"I=<($7$?$/$J$$(B field $BL>$HI=<($7$?$$MsL>$rI=8=$7$?$b$N$G$"$k!#(B
++@var{invisible-fields} と @var{visible-fields} は正規表現のlist で、それ
++ぞれ、表示したくない field 名と表示したい欄名を表現したものである。
+ @refill
+ 
+-@var{invisible-fields} $B$NMWAG$N$I$l$+$K(B match $B$7!"$+$D!"(B
+-@var{visible-fields} $B$NMWAG$N$I$l$K$b(B match $B$7$J$$Ms$OI=<($5$l$J$$!#(B
++@var{invisible-fields} の要素のどれかに match し、かつ、
++@var{visible-fields} の要素のどれにも match しない欄は表示されない。
+ @refill
+ 
+-encoded-word (@ref{encoded-word}) $B$OI|9f$5$l$k!#!X@8$NHs(B us-ascii $BJ8;z!Y(B
+-$B$O(B @code{default-mime-charset} $B$H$7$F2r<a$5$l$k!#(B
++encoded-word (@ref{encoded-word}) は復号される。『生の非 us-ascii 文字』
++は @code{default-mime-charset} として解釈される。
+ @end defun
+ 
+ 
+ @defun mime-insert-text-content entity
+ 
+-point $B$NA0$K(B @var{entity} $B$r(B text entity $B$H$7$FA^F~$7$^$9!#(B@refill
++point の前に @var{entity} を text entity として挿入します。@refill
+ 
+-@var{entity} $B$NFbMF$O(B @ref{MIME charset} $B$H$7$FI|9f2=$5$l(B
+-$B$^$9!#(B@var{entity} $B$N(B Content-Type field $B$K(B charset paramter $B$,L5(B
+-$B$$$H!"(B@code{default-mime-charset} $B$,=i4|CM$H$7$F;H$o$l$^$9!#(B
++@var{entity} の内容は @ref{MIME charset} として復号化され
++ます。@var{entity} の Content-Type field に charset paramter が無
++いと、@code{default-mime-charset} が初期値として使われます。
+ @end defun
+ 
+ 
+ @defvar default-mime-charset
+ 
+-$BE,@Z$J(B MIME charset (@ref{MIME charset}) $B$,8+$D$+$i$J$+$C$?>l9g$KMQ$$$i(B
+-$B$l$k(BMIME charset.@refill
++適切な MIME charset (@ref{MIME charset}) が見つからなかった場合に用いら
++れるMIME charset.@refill
+ 
+-$BK\Mh$O(B APEL $B$NJQ?t$G$"$k!#(B
++本来は APEL の変数である。
+ @end defvar
+ 
+ 
+ 
+ @node Entity-content, Entity-network-representation, entity formatting, Entity
+-@section Entity $B$NFbMF(B
++@section Entity の内容
+ 
+ @defun mime-entity-content entity
+ 
+-@var{entity} $B$NFbMF$N(B byte $BNs$rJV$9!#(B
++@var{entity} の内容の byte 列を返す。
+ @end defun
+ 
+ 
+ @defun mime-insert-entity-content entity
+ 
+-point $B$N0LCV$K(B @var{entity} $B$NFbMF$rA^F~$7$^$9!#(B
++point の位置に @var{entity} の内容を挿入します。
+ @end defun
+ 
+ 
+ @defun mime-write-entity-content entity filename
+ 
+-@var{entity} $B$NFbMF$r(B @var{filename} $B$K=q$-9~$_$^$9!#(B
++@var{entity} の内容を @var{filename} に書き込みます。
+ @end defun
+ 
+ 
+ 
+ @node Entity-network-representation, Entity buffer, Entity-content, Entity
+-@section Entity $B$N%M%C%H%o!<%/I=8=(B
++@section Entity のネットワーク表現
+ 
+ @defun mime-insert-entity entity
+ 
+-@var{entity} $B$N(B header $B$H(B body $B$r(B point $B$N$H$3$m$KA^F~$7$^$9!#(B
++@var{entity} の header と body を point のところに挿入します。
+ @end defun
+ 
+ 
+ @defun mime-write-entity entity filename
+ 
+-@var{entity} $B$NI=8=$r(B @var{filename} $B$K=q$-9~$_$^$9!#(B
++@var{entity} の表現を @var{filename} に書き込みます。
+ @end defun
+ 
+ 
+ @defun mime-write-entity-body entity filename
+ 
+-@var{entity} $B$N(B body $B$r(B @var{filename} $B$K=q$-9~$_$^$9!#(B
++@var{entity} の body を @var{filename} に書き込みます。
+ @end defun
+ 
+ 
+ 
+ @node Entity buffer, mm-backend, Entity-network-representation, Entity
+-@section Entity $B$N(B buffer $B$K$h$kI=8=(B
++@section Entity の buffer による表現
+ 
+ @defun mime-entity-buffer entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$rJV$9!#(B
++@var{entity} が存在する buffer を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-point-min entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(B@var{entity} $B$,@j$a$kNN0h$N@hF,(B
+-$B0LCV$rJV$9!#(B
++@var{entity} が存在する buffer における、@var{entity} が占める領域の先頭
++位置を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-point-max entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(B@var{entity} $B$,@j$a$kNN0h$NKvHx(B
+-$B0LCV$rJV$9!#(B
++@var{entity} が存在する buffer における、@var{entity} が占める領域の末尾
++位置を返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-header-start entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(Bheader $B$,@j$a$kNN0h$N@hF,0LCV$r(B
+-$BJV$9!#(B
++@var{entity} が存在する buffer における、header が占める領域の先頭位置を
++返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-header-end entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(Bheader $B$,@j$a$kNN0h$NKvHx0LCV$r(B
+-$BJV$9!#(B
++@var{entity} が存在する buffer における、header が占める領域の末尾位置を
++返す。
+ @end defun
+ 
+ 
+ @defun mime-entity-body-start entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(Bbody $B$,@j$a$kNN0h$N@hF,0LCV$rJV(B
+-$B$9!#(B
++@var{entity} が存在する buffer における、body が占める領域の先頭位置を返
++す。
+ @end defun
+ 
+ 
+ @defun mime-entity-body-end entity
+ 
+-@var{entity} $B$,B8:_$9$k(B buffer $B$K$*$1$k!"(Bbody $B$,@j$a$kNN0h$NKvHx0LCV$rJV(B
+-$B$9!#(B
++@var{entity} が存在する buffer における、body が占める領域の末尾位置を返
++す。
+ @end defun
+ 
+ 
+ 
+ @node mm-backend,  , Entity buffer, Entity
+-@section Entity $B$NI=8=$H<B8=(B
++@section Entity の表現と実現
+ @cindex mm-backend
+-@cindex entity $B=hM}(B method
++@cindex entity 処理 method
+ @cindex representation-type
+ 
+-Entity $B$OCj>]2=$5$l$?%G!<%?I=8=$G!"<B:]$N%G!<%?I=8=$H$7$F$OMQES$K1~$8$F(B
+-$B$5$^$6$^$J$b$N$,MxMQ$G$-$k$h$&$K@_7W$5$l$F$$$^$9!#(B@refill
++Entity は抽象化されたデータ表現で、実際のデータ表現としては用途に応じて
++さまざまなものが利用できるように設計されています。@refill
+ 
+-$B$3$3$G!"(Bentity $B$,$I$&$$$&<oN`$NI=8=$r9T$C$F$$$k$+$r<($9$N$,(B
+-@strong{representation-type} $B$G!"(Bentity $B$r@8@.$9$k;~$K$O$3$l$r;XDj$7$^$9!#(B
+-(cf. @ref{Entity Creation}) @refill
+-
+-$BA0@a$^$G$K=R$Y$FMh$?(B entity $B$KBP$9$k=hM}$O!"(Bentity $B$KBP$7$F$=$N=hM}$r0M(B
+-$BMj$9$k$3$H$K$h$C$F<B8=$5$l$F$$$^$9!#(BEntity $B$O<+J,$N(B representation-type 
+-$B$rCN$C$F$*$j!"$=$N(B representation-type $B$K1~$8$F<B:]$N=hM}$r9T$&4X?t$r8F(B
+-$B$S=P$7$^$9!#$3$N$h$&$J4X?t$r(B @strong{entity $B=hM}(Bmethod} $B$H8F$S$^$9!#$^$?!"(B
+-representation-type $BKh$K$3$N$h$&$J4X?t$r$^$H$a$?$b$N$r(B 
+-@strong{mm-backend} $B$H8F$S$^$9!#(B@refill
+-
+-mm-backend $B$O(B representation-type $B$NL>A0$N@hF,$K(B @code{mm} $B$H$$$&(B
+-$B@\F,<-$rIU$1$?4X?tL>$+$i$J$k(B module $B$G!"$=$N(B module $BL>$OF1MM$K(B
+-representation-type $B$NL>A0$N@hF,$K(B @code{mm} $B$rIU$1$?$b$N$K$J$C$F(B
+-$B$$$^$9!#$3$N(B module $B$O(B representation-type $B$N(B entity $B$,:G=i$K@8@.$5$l$k(B
+-$B;~$K<+F0E*$K(B require $B$5$l$^$9!#(B
++ここで、entity がどういう種類の表現を行っているかを示すのが
++@strong{representation-type} で、entity を生成する時にはこれを指定します。
++(cf. @ref{Entity creation}) @refill
++
++前節までに述べて来た entity に対する処理は、entity に対してその処理を依
++頼することによって実現されています。Entity は自分の representation-type 
++を知っており、その representation-type に応じて実際の処理を行う関数を呼
++び出します。このような関数を @strong{entity 処理method} と呼びます。また、
++representation-type 毎にこのような関数をまとめたものを 
++@strong{mm-backend} と呼びます。@refill
++
++mm-backend は representation-type の名前の先頭に @code{mm} という
++接頭辞を付けた関数名からなる module で、その module 名は同様に
++representation-type の名前の先頭に @code{mm} を付けたものになって
++います。この module は representation-type の entity が最初に生成される
++時に自動的に require されます。
+ 
+ 
+ @menu
+-* Request for entity::          Entity $B$X$NJX$j(B
+-* mm-backend module::           mm-backend $B$N:n$jJ}(B
++* Request for entity::          Entity への便り
++* mm-backend module::           mm-backend の作り方
+ @end menu
+ 
+ @node Request for entity, mm-backend module, mm-backend, mm-backend
+-@subsection Entity $B$X$NJX$j(B
++@subsection Entity への便り
+ 
+ @defun mime-entity-send entity message  &rest  args
+ 
+-@var{entity} $B$K(B @var{message} $B$rAw$k!#(B@refill
++@var{entity} に @var{message} を送る。@refill
+ 
+-@var{args} $B$O(B @var{message} $B$N0z?t$G$"$k!#(B
++@var{args} は @var{message} の引数である。
+ @end defun
+ 
+ 
+ 
+ @node mm-backend module,  , Request for entity, mm-backend
+-@subsection mm-backend $B$N:n$jJ}(B
++@subsection mm-backend の作り方
+ 
+ @defmac mm-define-backend type &optional  parents
+ 
+-@var{type} $B$r(B mm-backend $B$H$7$FDj5A$7$^$9!#(B@refill
++@var{type} を mm-backend として定義します。@refill
+ 
+-@var{PARENTS} $B$,;XDj$5$l$F$$$k>l9g$O!"(B@var{type} $B$O(B prents
+-$B$r7Q>5$7$^$9!#$=$l$>$l$N(B parent $B$O(B representation-type $B$G$"$kI,MW$,$"(B
+-$B$j$^$9!#(B
++@var{PARENTS} が指定されている場合は、@var{type} は prents
++を継承します。それぞれの parent は representation-type である必要があ
++ります。
+ 
+-$BNc(B:@refill
++例:@refill
+ 
+ @lisp
+ (mm-define-backend chao (generic))
+@@ -514,15 +520,15 @@
+ 
+ @defmac mm-define-method name args  &rest  body
+ 
+-@var{name} $B$r(B (nth 1 (car @var{args})) backend $B$N(B method $B4X(B
+-$B?t$H$7$FDj5A$7$^$9!#(B@refill
++@var{name} を (nth 1 (car @var{args})) backend の method 関
++数として定義します。@refill
+ 
+-@var{args} $B$O(B lambda $B$N0z?t%j%9%H$N$h$&$J$b$N$G$9$,!"(B(car
+-@var{args}) $B$O;XDj$5$l$?(B parameter $B$G$"$kI,MW$,$"$j$^$9!#(B(car
+-(car @var{args})) $B$OJQ?t$NL>A0$G!"(B(nth 1 (car @var{args}))
+-$B$O(B backend $B$NL>A0(B (representation-type) $B$G$9!#(B@refill
++@var{args} は lambda の引数リストのようなものですが、(car
++@var{args}) は指定された parameter である必要があります。(car
++(car @var{args})) は変数の名前で、(nth 1 (car @var{args}))
++は backend の名前 (representation-type) です。@refill
+ 
+-$BNc(B:@refill
++例:@refill
+ 
+ @lisp
+ (mm-define-method entity-cooked-p ((entity chao)) nil)
+@@ -532,49 +538,49 @@
+ 
+ 
+ @node Content-Type, Content-Disposition, Entity, Top
+-@chapter Content-Type $BMs$N>pJs(B
++@chapter Content-Type 欄の情報
+ @cindex mime-content-type
+-@cindex Content-Type $BMs(B
++@cindex Content-Type 欄
+ 
+-@strong{Content-Type $BMs(B} $B$O(B media-type (@ref{media-type}) $B$d(B MIME
+-charset $B$H$$$C$?(B entity (@ref{entity}) $B$NFbMF$N<oN`$dI=8=7A<0$J$I$r5-=R(B
+-$B$9$k$?$a$N$b$N$G!"(BRFC 2045 (@ref{RFC 2045}) $B$GDj5A$5$l$F$$$^$9!#(B
++@strong{Content-Type 欄} は media-type (@ref{media-type}) や MIME
++charset といった entity (@ref{Entity}) の内容の種類や表現形式などを記述
++するためのもので、RFC 2045 (@ref{RFC 2045}) で定義されています。
+ 
+ @noindent
+ @strong{[Memo]}
+ @quotation
+ 
+-$BNr;KE*$K$O(B RFC 1049 $B$G(B Content-Type $BMs$,Ds0F$5$l$F$$$k!#C"$7!"(BMIME $B$N(B
+-media-type $B$N$h$&$J(B type $B$H(B subtype $B$N6hJL$O$J$/!"(BMIME charset $B$N$h$&$J(B
+-$BJ8;zId9f$N<oN`$rI=8=$9$k$3$H$b$G$-$J$$!#(B
++歴史的には RFC 1049 で Content-Type 欄が提案されている。但し、MIME の
++media-type のような type と subtype の区別はなく、MIME charset のような
++文字符号の種類を表現することもできない。
+ @end quotation
+ 
+ 
+-FLIM $B$O(B Content-Type $BMs$r9=J82r@O$9$k4X?t$H(B Content-Type $BMs$N2r@O7k2L$r(B
+-$B3JG<$9$k9=B$BN(B @strong{mime-content-type} $B$rDs6!$7$^$9!#(B
++FLIM は Content-Type 欄を構文解析する関数と Content-Type 欄の解析結果を
++格納する構造体 @strong{mime-content-type} を提供します。
+ 
+ 
+ @menu
+-* Content-Type field::          Content-Type $BMs$N7A<0(B
+-* mime-content-type::           mime-content-type $B9=B$BN(B
+-* Content-Type parser::         Content-Type $BMs$N2r@O4o(B
+-* Content-Type utility::        Content-Type $B$K4X$9$kM-MQ$J4X?t(B
++* Content-Type field::          Content-Type 欄の形式
++* mime-content-type::           mime-content-type 構造体
++* Content-Type parser::         Content-Type 欄の解析器
++* Content-Type utility::        Content-Type に関する有用な関数
+ @end menu
+ 
+ @node Content-Type field, mime-content-type, Content-Type, Content-Type
+-@section Content-Type $BMs$N7A<0(B
++@section Content-Type 欄の形式
+ @cindex parameter
+ @cindex subtype
+ @cindex type
+ 
+-Content-Type $BMs$N7A<0$O0J2<$N$h$&$KDj5A$5$l$F$$$^$9!'(B
++Content-Type 欄の形式は以下のように定義されています：
+ 
+ @quotation
+ ``Content-Type'' ``:'' @strong{type} ``/''
+ @strong{subtype} *( ``;'' @strong{parameter} )
+ @end quotation
+ 
+-$BNc$($P!"(B
++例えば、
+ 
+ @quotation
+ @example
+@@ -583,7 +589,7 @@
+ @end quotation
+ 
+ @noindent
+-$B$d(B
++や
+ 
+ @quotation
+ @example
+@@ -592,17 +598,17 @@
+ @end quotation
+ 
+ @noindent
+-$B$J$I$N$h$&$KMQ$$$i$l$^$9!#(B
++などのように用いられます。
+ 
+-$B$3$3$G!"(B`type' $B$H(B `subtype' $B$O(B entity $B$N7A<0$r<($9$b$N$G!"N><T$rAm>N$7(B
+-$B$F!"(B`media-type' $B$H8F$V$3$H$K$7$^$9!#>e5-$NNc$K$*$1$k(B `image/jpeg' $B$d(B
+-`text/plain' $B$O(B media-type $B$N#1$D$G$9!#(B
++ここで、`type' と `subtype' は entity の形式を示すもので、両者を総称し
++て、`media-type' と呼ぶことにします。上記の例における `image/jpeg' や
++`text/plain' は media-type の１つです。
+ 
+ @noindent
+ @strong{[Memo]}
+ @quotation
+ 
+-Content-Type $BMs$N$J$$(B entity $B$O(B
++Content-Type 欄のない entity は
+ 
+ @quotation
+ @example
+@@ -611,32 +617,32 @@
+ @end quotation
+ 
+ @noindent
+-$B$H$7$F2r<a$5$l$k!#(B(cf. @ref{us-ascii})
++として解釈される。(cf. @ref{us-ascii})
+ @end quotation
+ 
+ 
+ 
+ @node mime-content-type, Content-Type parser, Content-Type field, Content-Type
+-@section mime-content-type $B9=B$BN(B
++@section mime-content-type 構造体
+ 
+ @deffn{Structure} mime-content-type
+ 
+-Content-Type $BMs$N>pJs$r3JG<$9$k$?$a$N9=B$BN!#(B@refill
++Content-Type 欄の情報を格納するための構造体。@refill
+ 
+-$B$3$N9=B$BN$r;2>H$9$k$K$O(B @code{mime-content-type-$BMWAGL>(B} $B$H$$$&L>A0$N;2(B
+-$B>H4X?t$rMQ$$$k!#(B@refill
++この構造体を参照するには @code{mime-content-type-要素名} という名前の参
++照関数を用いる。@refill
+ 
+-$B$3$N9=B$BN$NMWAG$O0J2<$NDL$j$G$"$k!'(B
++この構造体の要素は以下の通りである：
+ 
+ @table @var
+ @item primary-type
+-media-type $B$N<g7?(B (symbol).
++media-type の主型 (symbol).
+ 
+ @item subtype
+-media-type $B$NI{7?(B (symbol).
++media-type の副型 (symbol).
+ 
+ @item parameters
+-Content-Type $BMs$N(B parameter ($BO"A[(B list).
++Content-Type 欄の parameter (連想 list).
+ 
+ @end table
+ @end deffn
+@@ -645,54 +651,54 @@
+ @defun make-mime-content-type type subtype
+ 	   &optional  parameters
+ 
+-content-type $B$N@8@.;R!#(B
++content-type の生成子。
+ @end defun
+ 
+ 
+ @defun mime-content-type-parameter content-type parameter
+ 
+-@var{content-type} $B$N(B @var{parameter} $B$NCM$rJV$9!#(B
++@var{content-type} の @var{parameter} の値を返す。
+ @end defun
+ 
+ 
+ 
+ @node Content-Type parser, Content-Type utility, mime-content-type, Content-Type
+-@section Content-Type $BMs$N2r@O4o(B
++@section Content-Type 欄の解析器
+ 
+ @defun mime-parse-Content-Type string
+ 
+-@var{string} $B$r(B content-type $B$H$7$F2r@O$7$?7k2L$rJV$9!#(B
++@var{string} を content-type として解析した結果を返す。
+ @end defun
+ 
+ 
+ @defun mime-read-Content-Type
+ 
+-$B8=:_$N(B buffer $B$N(B Content-Type $BMs$rFI$_<h$j!"2r@O$7$?7k2L$rJV$9!#(B@refill
++現在の buffer の Content-Type 欄を読み取り、解析した結果を返す。@refill
+ 
+-Content-Type $BMs$,B8:_$7$J$$>l9g$O(B nil $B$rJV$9!#(B
++Content-Type 欄が存在しない場合は nil を返す。
+ @end defun
+ 
+ 
+ 
+ @node Content-Type utility,  , Content-Type parser, Content-Type
+-@section Content-Type $B$K4X$9$kM-MQ$J4X?t(B
++@section Content-Type に関する有用な関数
+ 
+ @defun mime-type/subtype-string type  &optional  subtype
+ 
+-@var{type} $B$H(B @var{subtype} $B$+$i(B type/subtype $B7A<0$NJ8;zNs$rJV$9!#(B
++@var{type} と @var{subtype} から type/subtype 形式の文字列を返す。
+ @end defun
+ 
+ 
+ 
+ @node Content-Disposition, Content-Transfer-Encoding, Content-Type, Top
+-@chapter Content-Disposition $BMs$N>pJs(B
++@chapter Content-Disposition 欄の情報
+ @cindex mime-content-disposition
+ @cindex RFC 2183
+ @cindex Standards Track
+-@cindex Content-Disposition $BMs(B
++@cindex Content-Disposition 欄
+ 
+-@strong{Content-Disposition $BMs(B} $B$O(B entity $B$NI=<($d(B file $BL>$J$I(B
+-$B$NB0@-$K$J$I$K4X$9$k>pJs$r5-=R$9$k$?$a$N$b$N$G$9!#(B
++@strong{Content-Disposition 欄} は entity の表示や file 名など
++の属性になどに関する情報を記述するためのものです。
+ 
+ 
+ @noindent
+@@ -703,34 +709,34 @@
+ August 1997, Standards Track.
+ @end quotation
+ 
+-FLIM $B$O(B Content-Disposition $BMs$r9=J82r@O$9$k4X?t$H(B Content-Disposition 
+-$BMs$N2r@O7k2L$r3JG<$9$k9=B$BN(B 
+-@strong{mime-content-disposition} $B$rDs6!$7$^$9!#(B
++FLIM は Content-Disposition 欄を構文解析する関数と Content-Disposition 
++欄の解析結果を格納する構造体 
++@strong{mime-content-disposition} を提供します。
+ 
+ 
+ @menu
+-* mime-content-disposition::    mime-content-disposition $B9=B$BN(B
+-* Content-Disposition parser::  Content-Disposition $BMs$N2r@O4o(B
++* mime-content-disposition::    mime-content-disposition 構造体
++* Content-Disposition parser::  Content-Disposition 欄の解析器
+ @end menu
+ 
+ @node mime-content-disposition, Content-Disposition parser, Content-Disposition, Content-Disposition
+-@section mime-content-disposition $B9=B$BN(B
++@section mime-content-disposition 構造体
+ 
+ @deffn{Structure} mime-content-disposition
+ 
+-Content-Disposition $BMs$N2r@O7k2L$r<}$a$k$?$a$N9=B$BN!#(B@refill
++Content-Disposition 欄の解析結果を収めるための構造体。@refill
+ 
+-$B$3$N9=B$BN$r;2>H$9$k$K$O(B @code{mime-content-disposition-$BMWAGL>(B} $B$H$$$&L>(B
+-$BA0$N;2>H4X?t$rMQ$$$k!#(B@refill
++この構造体を参照するには @code{mime-content-disposition-要素名} という名
++前の参照関数を用いる。@refill
+ 
+-$B$3$N9=B$BN$NMWAG$O0J2<$NDL$j$G$"$k!'(B
++この構造体の要素は以下の通りである：
+ 
+ @table @var
+ @item disposition-type
+ disposition-type (symbol).
+ 
+ @item parameters
+-Content-Disposition $BMs$N(B parameter ($BO"A[(B list).
++Content-Disposition 欄の parameter (連想 list).
+ 
+ @end table
+ @end deffn
+@@ -738,117 +744,117 @@
+ 
+ @defun mime-content-disposition-parameter content-disposition parameter
+ 
+-@var{content-disposition} $B$N(B @var{parameter} $B$NCM$rJV$9!#(B
++@var{content-disposition} の @var{parameter} の値を返す。
+ @end defun
+ 
+ 
+ @defun mime-content-disposition-filename content-disposition
+ 
+-@var{content-disposition} $B$N(B filename $B$NCM$rJV$9!#(B
++@var{content-disposition} の filename の値を返す。
+ @end defun
+ 
+ 
+ 
+ @node Content-Disposition parser,  , mime-content-disposition, Content-Disposition
+-@section Content-Disposition $BMs$N2r@O4o(B
++@section Content-Disposition 欄の解析器
+ 
+ @defun mime-parse-Content-Disposition string
+ 
+-@var{string} $B$r(B content-disposition $B$H$7$F2r@O$7$?7k2L$rJV$9!#(B
++@var{string} を content-disposition として解析した結果を返す。
+ @end defun
+ 
+ 
+ @defun mime-read-Content-Disposition
+ 
+-$B8=:_$N(B buffer $B$N(B Content-Disposition $BMs$rFI$_<h$j!"2r@O$7$?7k2L$rJV$9!#(B
++現在の buffer の Content-Disposition 欄を読み取り、解析した結果を返す。
+ @refill
+ 
+-Content-Disposition $BMs$,B8:_$7$J$$>l9g$O(B nil $B$rJV$9!#(B
++Content-Disposition 欄が存在しない場合は nil を返す。
+ @end defun
+ 
+ 
+ 
+ @node Content-Transfer-Encoding, encoded-word, Content-Disposition, Top
+-@chapter $BId9f2=K!(B
+-@cindex Content-Transfer-Encoding $BMs(B
++@chapter 符号化法
++@cindex Content-Transfer-Encoding 欄
+ 
+-@strong{Content-Transfer-Encoding $BMs(B} $B$O(B entity $B$NId9f2=K!$r5-=R$9$k$?$a(B
+-$B$N$b$N$G$9!#(B@refill
++@strong{Content-Transfer-Encoding 欄} は entity の符号化法を記述するため
++のものです。@refill
+ 
+-FLIM $B$G$O(B Content-Transfer-Encoding $BMs$r9=J82r@O$9$k4X?t$rDs6!$7$^$9!#$3(B
+-$B$l$i$N4X?t$O(B Content-Transfer-Encoding $BMs$N>pJs$OJ8;zNs$GI=8=$7$^$9!#(B
++FLIM では Content-Transfer-Encoding 欄を構文解析する関数を提供します。こ
++れらの関数は Content-Transfer-Encoding 欄の情報は文字列で表現します。
+ @refill
+ 
+-$B$^$?!"(BContent-Transfer-Encoding $B$K4p$E$$$FId9f2=!&I|9f2=$r9T$&4X?t$bDs(B
+-$B6!$5$l$^$9!#(B
++また、Content-Transfer-Encoding に基づいて符号化・復号化を行う関数も提
++供されます。
+ 
+ 
+ @menu
+-* Content-Transfer-Encoding parser::  Content-Transfer-Encoding $BMs$N2r@O4o(B
+-* encoder/decoder::             $BId9f2=!&I|9f2=(B
++* Content-Transfer-Encoding parser::  Content-Transfer-Encoding 欄の解析器
++* encoder/decoder::             符号化・復号化
+ * Encoding information::        Other utilities
+ * mel-backend::                 How to write encoder/decoder module
+ * generic function for mel-backend::  How to add encoding/decoding service
+ @end menu
+ 
+ @node Content-Transfer-Encoding parser, encoder/decoder, Content-Transfer-Encoding, Content-Transfer-Encoding
+-@section Content-Transfer-Encoding $BMs$N2r@O4o(B
++@section Content-Transfer-Encoding 欄の解析器
+ 
+ @defun mime-parse-Content-Transfer-Encoding string
+ 
+-@var{string} $B$r(B content-transfer-encoding $B$H$7$F2r@O$7$?7k2L$rJV$9!#(B
++@var{string} を content-transfer-encoding として解析した結果を返す。
+ @end defun
+ 
+ 
+ @defun mime-read-Content-Transfer-Encoding &optional default-encoding
+ 
+-$B8=:_$N(B buffer $B$N(B Content-Transfer-Encoding $BMs$rFI$_<h$j!"2r@O$7$?7k2L$r(B
+-$BJV$9!#(B@refill
++現在の buffer の Content-Transfer-Encoding 欄を読み取り、解析した結果を
++返す。@refill
+ 
+-Content-Transfer-Encoding $BMs$,B8:_$7$J$$>l9g$O(B@var{default-encoding} $B$r(B
+-$BJV$9!#(B
++Content-Transfer-Encoding 欄が存在しない場合は@var{default-encoding} を
++返す。
+ @end defun
+ 
+ 
+ 
+ @node encoder/decoder, Encoding information, Content-Transfer-Encoding parser, Content-Transfer-Encoding
+-@section $BId9f2=!&I|9f2=(B
++@section 符号化・復号化
+ 
+ @defun mime-encode-region start end encoding
+ 
+-$B8=:_$N(B buffer $B$N(B @var{start} $B$+$i(B @var{end} $B$^$G$N(B region $B$r(B
+-@var{encoding} $B$r;H$C$FId9f2=$7$^$9!#(B
++現在の buffer の @var{start} から @var{end} までの region を
++@var{encoding} を使って符号化します。
+ @end defun
+ 
+ 
+ @defun mime-decode-region start end encoding
+ 
+-$B8=:_$N(B buffer $B$N(B @var{start} $B$+$i(B @var{end} $B$^$G$N(B region $B$r(B
+-@var{encoding} $B$r;H$C$FI|9f2=$7$^$9!#(B
++現在の buffer の @var{start} から @var{end} までの region を
++@var{encoding} を使って復号化します。
+ @end defun
+ 
+ 
+ 
+ @defun mime-decode-string string encoding
+ 
+-@var{string} $B$r(B @var{encoding} $B$H$7$FI|9f$7$?7k2L$rJV$9!#(B
++@var{string} を @var{encoding} として復号した結果を返す。
+ @end defun
+ 
+ 
+ 
+ @defun mime-insert-encoded-file filename encoding
+ 
+-@var{ENCODING} format $B$GId9f2=$5$l$?(B file @var{FILENAME} $B$r(B
+-$BA^F~$9$k!#(B
++@var{ENCODING} format で符号化された file @var{FILENAME} を
++挿入する。
+ @end defun
+ 
+ 
+ @defun mime-write-decoded-region start end filename encoding
+ 
+-@var{encoding} $B$GId9f2=$5$l$?8=:_$N(B region $B$rI|9f2=$7$F(B
+-@var{filename}$B$K=q$-9~$_$^$9!#(B
++@var{encoding} で符号化された現在の region を復号化して
++@var{filename}に書き込みます。
+ 
+-<var>start<var> $B$H(B @var{end} $B$O(B buffer $B$N0LCV$G$9!#(B
++<var>start<var> と @var{end} は buffer の位置です。
+ @end defun
+ 
+ 
+@@ -858,19 +864,19 @@
+ 
+ @defun mime-encoding-list &optional  SERVICE
+ 
+-Content-Transfer-Encoding $B$N(B list $B$rJV$7$^$9!#(B@refill
++Content-Transfer-Encoding の list を返します。@refill
+ 
+-@var{service} $B$,;XDj$5$l$F$$$k$H!"$=$l$KBP$9$k(B
+-Content-Transfer-Encoding $B$rJV$7$^$9!#(B
++@var{service} が指定されていると、それに対する
++Content-Transfer-Encoding を返します。
+ @end defun
+ 
+ 
+ @defun mime-encoding-alist &optional  SERVICE
+ 
+-$BJd40$N$?$a$N(B Content-Transfer-Encoding $B$NI=$rJV$7$^$9!#(B@refill
++補完のための Content-Transfer-Encoding の表を返します。@refill
+ 
+-@var{service} $B$,;XDj$5$l$F$$$k>l9g$O$=$l$KBP$9$k(B
+-Content-Transfer-Encoding $B$N(B list $B$rJV$7$^$9!#(B
++@var{service} が指定されている場合はそれに対する
++Content-Transfer-Encoding の list を返します。
+ @end defun
+ 
+ 
+@@ -880,15 +886,15 @@
+ 
+ @defmac mel-define-method name args  &rest  body
+ 
+-@var{name} $B$r(B (nth 1 (car (last @var{args}))) backend $B$N(B
+-method $B4X?t$H$7$FDj5A$7$^$9!#(B
++@var{name} を (nth 1 (car (last @var{args}))) backend の
++method 関数として定義します。
+ 
+-@var{args} $B$O(B lambda $B$N0z?t(B list $B$H;w$F$$$^$9$,!"(B(car (last
+-@var{args})) $B$O;XDj$5$l$?(B parameter $B$G$"$kI,MW$,$"$j$^$9!#(B(car
+-(car (last @var{args}))) $B$OJQ?t$NL>A0$G!"(B(nth 1 (car (last
+-@var{args}))) $B$O(B backend $B$NL>A0(B (encoding) $B$G$9!#(B@refill
++@var{args} は lambda の引数 list と似ていますが、(car (last
++@var{args})) は指定された parameter である必要があります。(car
++(car (last @var{args}))) は変数の名前で、(nth 1 (car (last
++@var{args}))) は backend の名前 (encoding) です。@refill
+ 
+-$BNc(B:@refill
++例:@refill
+ 
+ @lisp
+ (mel-define-method mime-write-decoded-region (start end filename
+@@ -909,16 +915,16 @@
+ 
+ @defmac mel-define-method-function spec function
+ 
+-@var{spec} $B$N4X?tDj5A$r(B @var{function} $B$K@_Dj$7$^$9!#(B@refill
++@var{spec} の関数定義を @var{function} に設定します。@refill
+ 
+-@var{spec} $B$N:G=i$NMWAG$O(B service $B$G$9!#(B@refill
++@var{spec} の最初の要素は service です。@refill
+ 
+-@var{args} $B$N;D$j$O(B lambda $B$N0z?t(B list $B;w$F$$$^$9$,!"(B(car (last
+-@var{args})) $B$O;XDj$5$l$?(B parameter $B$G$"$kI,MW$,$"$j$^$9!#(B(car
+-(car (last @var{args}))) $B$OJQ?t$NL>A0$G!"(B(nth 1 (car (last
+-@var{args}))) $B$O(B backend $B$NL>A0(B (encoding) $B$G$9!#(B@refill
++@var{args} の残りは lambda の引数 list 似ていますが、(car (last
++@var{args})) は指定された parameter である必要があります。(car
++(car (last @var{args}))) は変数の名前で、(nth 1 (car (last
++@var{args}))) は backend の名前 (encoding) です。@refill
+ 
+-$BNc(B:@refill
++例:@refill
+ 
+ @lisp
+ (mel-define-method-function (mime-encode-string string (nil "base64"))
+@@ -929,17 +935,17 @@
+ 
+ 
+ @node generic function for mel-backend,  , mel-backend, Content-Transfer-Encoding
+-@section $BId9f2=(B/$BI|9f2=(B service $B$rDI2C$9$kJ}K!(B
++@section 符号化/復号化 service を追加する方法
+ 
+ @defmac mel-define-service name &optional  args doc-string
+ 
+-@var{name} $B$r(B Content-Transfer-Encoding $B$N(B service $B$H$7$FDj5A$7$^(B
+-$B$9!#(B@refill
++@var{name} を Content-Transfer-Encoding の service として定義しま
++す。@refill
+ 
+-@var{args} $B$,;XDj$5$l$F$$$k$H!"(B@var{name} $B$O(B service $B$N(B
+-generic function $B$H$7$FDj5A$5$l$^$9!#(B@refill
++@var{args} が指定されていると、@var{name} は service の
++generic function として定義されます。@refill
+ 
+-$BNc(B:@refill
++例:@refill
+ 
+ @lisp
+ (mel-define-service encoded-text-encode-string (string encoding)
+@@ -951,13 +957,13 @@
+ 
+ 
+ @node encoded-word, custom, Content-Transfer-Encoding, Top
+-@chapter Header $B$N(B network $BI=8=(B
++@chapter Header の network 表現
+ @cindex RFC 2047
+ @cindex Standards Track
+ @cindex RFC 2047
+ 
+-encoded-word $B$O(B header $B$GHs(B ASCII (@ref{ASCII}) $BJ8;z$rI=8=$9$k$?$a$N7A<0(B
+-$B$G!"(B@strong{RFC 2047} $B$GDj5A$5$l$F$$$^$9!#(B@refill
++encoded-word は header で非 ASCII (@ref{ASCII}) 文字を表現するための形式
++で、@strong{RFC 2047} で定義されています。@refill
+ 
+ 
+ @noindent
+@@ -968,86 +974,86 @@
+ Track (obsolete RFC 1521,1522,1590).
+ @end quotation
+ 
+-$B$^$?!"9T57$N0-$$$3$H$@$H8@$($^$9$,!"(Bencoded-word $B$rMQ$$$:$KHs(B ASCII
+-(@ref{ASCII}) $BJ8;z$r(B header $B$KF~$l$?5-;v$bB8:_$7$^$9!#(B@refill
++また、行儀の悪いことだと言えますが、encoded-word を用いずに非 ASCII
++(@ref{ASCII}) 文字を header に入れた記事も存在します。@refill
+ 
+-FLIM $B$O$3$l$i$rId9f2=!&I|9f2=$9$k5!G=$rDs6!$7$^$9!#(B
++FLIM はこれらを符号化・復号化する機能を提供します。
+ 
+ 
+ @menu
+-* Header encoder/decoder::      Header $B$NId9f2=!&I|9f2=(B
++* Header encoder/decoder::      Header の符号化・復号化
+ @end menu
+ 
+ @node Header encoder/decoder,  , encoded-word, encoded-word
+-@section Header $B$NId9f2=!&I|9f2=(B
++@section Header の符号化・復号化
+ 
+ @defun eword-decode-header &optional  code-conversion separator
+ 
+-Header $BCf$N(B encoded-word $B$rI|9f$9$k!#(B@refill
++Header 中の encoded-word を復号する。@refill
+ 
+-$B$b$7(B @var{code-conversion} $B$,(B @code{nil} $B$J$i!"(Bencoded-word $B$@$1$,I|9f$5(B
+-$B$l$k!#$b$7!"(B@var{code-conversion} $B$,(B MIME charset (@ref{MIME charset}) 
+-$B$J$i!"Hs(B ASCII bit patterns $B$O$=$N(B MIME charset $B$H$7$FI|9f$5$l$k!#$3$l0J(B
+-$B30$N>l9g!"Hs(B ASCII bit patterns $B$O(B@code{default-mime-charset}. $B$H$7$FI|(B
+-$B9f$5$l$k!#(B(cf. @ref{entity formatting}) @refill
++もし @var{code-conversion} が @code{nil} なら、encoded-word だけが復号さ
++れる。もし、@var{code-conversion} が MIME charset (@ref{MIME charset}) 
++なら、非 ASCII bit patterns はその MIME charset として復号される。これ以
++外の場合、非 ASCII bit patterns は@code{default-mime-charset}. として復
++号される。(cf. @ref{entity formatting}) @refill
+ 
+-$B$b$7(B @var{separator} $B$,(B @code{nil} $B$G$J$1$l$P!"$=$NCM$,(Bheader separator 
+-$B$H$7$FMQ$$$i$l$k!#(B
++もし @var{separator} が @code{nil} でなければ、その値がheader separator 
++として用いられる。
+ @end defun
+ 
+ 
+ @defun eword-encode-header &optional  code-conversion
+ 
+-Header $B$r(B network $BI=8=$KId9f2=$9$k!#(B@refill
++Header を network 表現に符号化する。@refill
+ 
+-$B3F(B field $B$O(B @code{mime-field-encoding-method-alist} $B$G;XDj$5$l$?J}<0$G(B
+-$BId9f2=$5$l$k!#(B
++各 field は @code{mime-field-encoding-method-alist} で指定された方式で
++符号化される。
+ @end defun
+ 
+ 
+ @defvar mime-field-encoding-method-alist
+ 
+-Field $B$rId9f2=$9$kJ}K!$r;XDj$9$kO"A[(B list$B!#3F(B element $B$O(B (FIELD
+-. METHOD) $B$NMM$K$J$C$F$$$k!#(B@refill
++Field を符号化する方法を指定する連想 list。各 element は (FIELD
++. METHOD) の様になっている。@refill
+ 
+-METHOD $B$,(B @code{mime} $B$G$"$l$P!"(BFIELD $B$O(B MIME format $B$KId9f2=$5(B
+-$B$l$k(B (encoded-word)$B!#(B
++METHOD が @code{mime} であれば、FIELD は MIME format に符号化さ
++れる (encoded-word)。
+ 
+-METHOD $B$,(B @code{nil} $B$G$"$l$P!"(BFIELD $B$OId9f2=$5$l$J$$!#(B
++METHOD が @code{nil} であれば、FIELD は符号化されない。
+ 
+-METHOD $B$,(B MIME charset $B$G$"$l$P!"(BFIELD $B$O%M%C%H%o!<%/%3!<%I$KJQ49$7$J(B
+-$B$1$l$P$J$i$J$$$H$-$K(B charset $B$KId9f2=$5$l$k!#(B@refill
++METHOD が MIME charset であれば、FIELD はネットワークコードに変換しな
++ければならないときに charset に符号化される。@refill
+ 
+-$B$=$&$G$J$1$l$P!"(BFIELD $B$O%M%C%H%o!<%/%3!<%I$KJQ49$7$J$1$l$P$J$i$J$$$H$-(B
+-$B$K(B $BJQ?t(B @code{default-mime-charset} $B$GId9f2=$5$l$k(B
++そうでなければ、FIELD はネットワークコードに変換しなければならないとき
++に 変数 @code{default-mime-charset} で符号化される
+ @end defvar
+ 
+ 
+ 
+ @node custom, Appendix, encoded-word, Top
+-@chapter $B0lHL@_Dj(B
++@chapter 一般設定
+ 
+ @deffn{group} mime
+ 
+-MIME $B4XO"5!G=$K4X$9$k(B group.@refill
++MIME 関連機能に関する group.@refill
+ 
+-@code{mail} $B$H(B @code{news} $B$KB0$9$k!#(B
++@code{mail} と @code{news} に属する。
+ @end deffn
+ 
+ 
+ @node Appendix, Concept Index, custom, Top
+-@chapter $BIUO?(B
++@chapter 付録
+ 
+ 
+ @menu
+-* Glossary::                    $BMQ8l(B
+-* Bug report::                  bug $BJs9p$N;EJ}(B
+-* CVS::                         CVS $B$K$h$k3+H/(B
+-* History::                     $BNr;K(B
++* Glossary::                    用語
++* Bug report::                  bug 報告の仕方
++* GitHub::                      GitHub による開発
++* History::                     歴史
+ @end menu
+ 
+ @node Glossary, Bug report, Appendix, Appendix
+-@section $BMQ8l(B
++@section 用語
+ 
+ 
+ @menu
+@@ -1056,7 +1062,7 @@
+ * ASCII::                       
+ * Base64::                      
+ * binary::                      
+-* Coded character set::         Coded character set$B!JId9f2=J8;z=89g!K(B, Character code$B!JJ8;zId9f!K(B
++* Coded character set::         Coded character set（符号化文字集合）, Character code（文字符号）
+ * media-type::                  
+ * message::                     
+ * MIME::                        
+@@ -1077,64 +1083,64 @@
+ @node 7bit, 8bit, Glossary, Glossary
+ @subsection 7bit
+ 
+-$B$3$3$G$O(B 0 $B$+$i(B 127 $B$N@0?t$r;X$9!#(B@refill
++ここでは 0 から 127 の整数を指す。@refill
+ 
+-0 $B$+$i(B 127 $B$N@0?t$NNs$GI=8=$G$-$k$h$&$J(B data $B$r(B ``7bit $B$N(B data'' $B$H8F$V!#(B
++0 から 127 の整数の列で表現できるような data を ``7bit の data'' と呼ぶ。
+ @refill
+ 
+-$B$^$?!"(B0 $B$+$i(B 31 $B$*$h$S(B 127 $B$GI=8=$5$l$k@)8fJ8;z$H(B 32 $B$GI=8=$5$l$k6uGr$H(B 
+-33 $B$+$i(B 126 $B$GI=8=$5$l$k?^7AJ8;z$+$i$J$kJ8;zNs$N$3$H$r(B ``7bit $B$NJ8;zNs(B'' 
+-$B$H8F$V!J$3$l$O(B ISO 2022 (@ref{ISO 2022}) $B$N!V(B7 $BC10L7O!W$HF1MM!K!#(B
+-
+-$BEAE}E*$J(B Internet $B$N(B MTA (@ref{MTA}) $B$O(B 7bit $B$N(B data $B$rE>Aw$G$-$k$N$G!"(B
+-7bit $B$N(B data $B$O(B Quoted-Printable (@ref{Quoted-Printable}) $B$d(B Base64
+-(@ref{Base64}) $B$H$$$C$?JQ49$r9T$o$J$/$F$b$=$N$^$^E>Aw$G$-$k!#(B@refill
+-
+-$B$7$+$7!"(B7bit $B$G$"$l$P$I$s$J(B data $B$G$bNI$$$H$O$$$($J$$!#$J$<$J$i!"#19T$N(B
+-$BD9$5$,$"$^$j$KD9$$$H!"(BMTA $B$O$=$N(B message $B$rE>Aw$9$k$3$H$,$G$-$J$$$+$i$G(B
+-$B$"$k!#$A$J$_$K!"(BRFC 821 (@ref{RFC 821}) $B$O#19T$O2~9TJ8;z$r=|$$$F(B 998
+-byte $B0JFb$G$"$k$3$H$r5a$a$F$$$k!#$h$C$F!"$3$l0J>e$N9T$,4^$^$l$k2DG=@-$N(B
+-$B$"$k(B data, $BNc$($P!"(BPostscript $B$N(B data $B$J$I$O(B Quoted-Printable $BEy$G(B 
+-encode$B$9$kI,MQ$,$"$k!#(B
++また、0 から 31 および 127 で表現される制御文字と 32 で表現される空白と 
++33 から 126 で表現される図形文字からなる文字列のことを ``7bit の文字列'' 
++と呼ぶ（これは ISO 2022 の「7 単位系」と同様）。
++
++伝統的な Internet の MTA (@ref{MTA}) は 7bit の data を転送できるので、
++7bit の data は Quoted-Printable (@ref{Quoted-Printable}) や Base64
++(@ref{Base64}) といった変換を行わなくてもそのまま転送できる。@refill
++
++しかし、7bit であればどんな data でも良いとはいえない。なぜなら、１行の
++長さがあまりに長いと、MTA はその message を転送することができないからで
++ある。ちなみに、RFC 822 (@ref{RFC 822}) は１行は改行文字を除いて 998
++byte 以内であることを求めている。よって、これ以上の行が含まれる可能性の
++ある data, 例えば、Postscript の data などは Quoted-Printable 等で 
++encodeする必用がある。
+ 
+ 
+ @node 8bit, ASCII, 7bit, Glossary
+ @subsection 8bit
+ @cindex binary
+ 
+-$B$3$3$G$O(B 0 $B$+$i(B 255 $B$N@0?t$r;X$9!#(B@refill
++ここでは 0 から 255 の整数を指す。@refill
+ 
+-0 $B$+$i(B 255 $B$N@0?t$NNs$GI=8=$G$-$k$h$&$J(B data $B$r(B ``8bit $B$N(B data'' $B$H8F$V!#(B
++0 から 255 の整数の列で表現できるような data を ``8bit の data'' と呼ぶ。
+ @refill
+ 
+-$B$^$?!"(B0 $B$+$i(B 31, 127 $B$*$h$S(B 128 $B$+$i(B 159 $B$GI=8=$5$l$k@)8fJ8;z$H(B 32 $B$GI=(B
+-$B8=$5$l$k6uGr$H(B 33 $B$+$i(B 126 $B$H(B 160 $B$+$i(B 255 $B$GI=8=$5$l$k?^7AJ8;z$+$i$J$k(B
+-$BJ8;zNs$N$3$H$r(B ``8bit $B$NJ8;zNs(B'' $B$H8F$V!J$3$l$O(B ISO 2022 (@ref{ISO 2022}) $B$N!V(B8 $BC10L7O!W$HF1MM!K!#(B@refill
+-
+-iso-8859-1 (@ref{iso-8859-1}) $B$d(B euc-kr (@ref{euc-kr}) $B$H$$$C$?Id9f2=J8(B
+-$B;z=89g$O(B 8bit $B$NJ8;zNs$G$"$k!#(B@refill
+-
+-$BEAE}E*$J(B Internet $B$N(B MTA (@ref{MTA}) $B$O(B 7bit (@ref{7bit}) $B$N(B data $B$7$+E>(B
+-$BAw$G$-$J$$$N$G!"$=$&$7$?(B MTA $B$r7PM3$9$k>l9g!"(BQuoted-Printable
+-(@ref{Quoted-Printable}) $B$d(B Base64 (@ref{Base64}) $B$H$$$C$?JQ49$r9T$o$J$/(B
+-$B$F$O$J$i$J$$!#(B@refill
+-
+-$B$7$+$7!":G6a$G$O(B 8bit $B$NJ8;zNs$r$=$N$^$^DL$9$3$H$,$G$-$k(B MTA $B$bEP>l$7$F(B
+-$B$-$?$N$G!"$=$N$^$^Aw$k$3$H$,$G$-$k>l9g$bA}$($F$-$?!#(B@refill
+-
+-$B$7$+$7!"(B8bit $B$G$"$l$P$I$s$J(B data $B$G$bNI$$$H$O$$$($J$$!#$J$<$J$i!"#19T$N(B
+-$BD9$5$,$"$^$j$KD9$$$H!"(BMTA $B$O$=$N(B message $B$rE>Aw$9$k$3$H$,$G$-$J$$$+$i$G(B
+-$B$"$k!#$A$J$_$K!"(BRFC 821 (@ref{RFC 821}) $B$O#19T$O2~9TJ8;z$r=|$$$F(B 998
+-byte $B0JFb$G$"$k$3$H$r5a$a$F$$$k!#$h$C$F!"$3$l0J>e$N9T$,4^$^$l$k2DG=@-$N(B
+-$B$"$k(B data, $BNc$($P!"(BPostscript $B$N(B data $B$J$I$O(B Quoted-Printable $BEy$G(B 
+-encode$B$9$kI,MQ$,$"$k!#(B@refill
+-
+-$B$^$?!"$3$&$7$?M}M3$+$i!"#19T$,(B 999 byte $B0J>e$N9T$,B8:_$9$k2DG=@-$N$"$k(B
+-data $B$O(B @strong{binary} (@ref{binary}) $B$H8F$V$3$H$K$9$k!#(B@refill
+-
+-$B$A$J$_$K!"(B7bit $B$GI=8=$G$-$k(B data $B$O(B 8bit $B$G$bI=8=$G$-$k!#$h$C$F!"(B
+-``8bit'' $B$H8@$C$?>l9g!"#19T$,(B 998 byte $B0J2<$NG$0U$N(B data $B$r;X$9$3$H$,(B
+-$B$"$k!#(B
++また、0 から 31, 127 および 128 から 159 で表現される制御文字と 32 で表
++現される空白と 33 から 126 と 160 から 255 で表現される図形文字からなる
++文字列のことを ``8bit の文字列'' と呼ぶ（これは ISO 2022 の「8 単位系」と同様）。@refill
++
++iso-8859-1 や euc-kr といった符号化文
++字集合は 8bit の文字列である。@refill
++
++伝統的な Internet の MTA (@ref{MTA}) は 7bit (@ref{7bit}) の data しか転
++送できないので、そうした MTA を経由する場合、Quoted-Printable
++(@ref{Quoted-Printable}) や Base64 (@ref{Base64}) といった変換を行わなく
++てはならない。@refill
++
++しかし、最近では 8bit の文字列をそのまま通すことができる MTA も登場して
++きたので、そのまま送ることができる場合も増えてきた。@refill
++
++しかし、8bit であればどんな data でも良いとはいえない。なぜなら、１行の
++長さがあまりに長いと、MTA はその message を転送することができないからで
++ある。ちなみに、RFC 822 (@ref{RFC 822}) は１行は改行文字を除いて 998
++byte 以内であることを求めている。よって、これ以上の行が含まれる可能性の
++ある data, 例えば、Postscript の data などは Quoted-Printable 等で 
++encodeする必用がある。@refill
++
++また、こうした理由から、１行が 999 byte 以上の行が存在する可能性のある
++data は @strong{binary} (@ref{binary}) と呼ぶことにする。@refill
++
++ちなみに、7bit で表現できる data は 8bit でも表現できる。よって、
++``8bit'' と言った場合、１行が 998 byte 以下の任意の data を指すことが
++ある。
+ 
+ 
+ @node ASCII, Base64, 8bit, Glossary
+@@ -1142,8 +1148,8 @@
+ @cindex ANSI X3.4:1986
+ @cindex ASCII
+ 
+-$B%"%a%j%+O"K.$G;H$o$l$kJ8;z$rId9f2=$7$?Id9f2=J8;z=89g(B (@ref{$BId9f2=J8;z=8(B $B9g(B})$B!#(BA-Z, a-z $B$N(B Latin $BJ8;z$H?t;z!"4v$D$+$N5-9f$+$i$J$k!#(BISO 646 $B$N0l$D(B
+-$B$G!"8=:_$O9q:]4p=`HG(B (IRV) $B$K$J$C$F$$$k!#(B
++アメリカ連邦で使われる文字を符号化した符号化文字集合 (@ref{Coded character set})。A-Z, a-z の Latin 文字と数字、幾つかの記号からなる。ISO 646 の一つ
++で、現在は国際基準版 (IRV) になっている。
+ 
+ 
+ @noindent
+@@ -1159,16 +1165,16 @@
+ @subsection Base64
+ @cindex pad
+ 
+-RFC 2045 (@ref{RFC 2045}) $B$GDj5A$5$l$F$$$k(B MIME (@ref{MIME}) $B$K$*$1$k(B 
+-binary data (@ref{binary}) $B$N(B network $B$G$NJQ49K!$N#1$D!#(B@refill
++RFC 2045 (@ref{RFC 2045}) で定義されている MIME (@ref{MIME}) における 
++binary data (@ref{binary}) の network での変換法の１つ。@refill
+ 
+-$B!X(B64 $B?J?t!Y$H$$$&0UL#$G!"(B3 byte $B$N(B data $B$r(B 0 $B$+$i(B 63 $B$N?t$rI=$9(B ASCII
+-(@ref{ASCII}) 4 $BJ8;z$KJQ49$9$kJ}K!!#!J$b$7!"(B4 $BJ8;z$K$J$i$J$1$l$P(B 
+-@strong{pad} $B$H8F$P$l$k5M$aJ*$r$7$FD9$5$rD4@0$9$k!K(B@refill
+-
+-$B$3$N(B 65 $B<oN`$NJ8;z$O(B ASCII $B$H(B EBCDIC $B$N6&DLItJ,$+$iA*$P$l$F$*$j!"(B
+-Internet $B0J30$N(B network $B$r7PM3$9$k>l9g$G$b0BA4$KE>Aw$G$-$k$h$&$K@_7W$5(B
+-$B$l$F$$$k!#(B
++『64 進数』という意味で、3 byte の data を 0 から 63 の数を表す ASCII
++(@ref{ASCII}) 4 文字に変換する方法。（もし、4 文字にならなければ 
++@strong{pad} と呼ばれる詰め物をして長さを調整する）@refill
++
++この 65 種類の文字は ASCII と EBCDIC の共通部分から選ばれており、
++Internet 以外の network を経由する場合でも安全に転送できるように設計さ
++れている。
+ 
+ 
+ @node binary, Coded character set, Base64, Glossary
+@@ -1176,22 +1182,22 @@
+ @cindex binary data
+ @cindex binary
+ 
+-$BG$0U$N(B byte $BNs$r(B @strong{binary} $B$H8F$V!#(B@refill
++任意の byte 列を @strong{binary} と呼ぶ。@refill
+ 
+-8bit (@ref{8bit}) $B$H0[$J$k$N$O(B data $B$K9T$N9=B$$r2>Dj$7$J$$$3$H$G$"$k!#(B
++8bit (@ref{8bit}) と異なるのは data に行の構造を仮定しないことである。
+ 
+-$B$^$?!"9T$N9=B$$,$"$C$F$b!"(B999 byte $B0J>e$+$i$J$k9T$,$"$k>l9g$b(B binary $B$H(B
+-$B8F$V$3$H$K$9$k!#(B@refill
++また、行の構造があっても、999 byte 以上からなる行がある場合も binary と
++呼ぶことにする。@refill
+ 
+-$B$A$J$_$K!"(B7bit (@ref{7bit}) $B$d(B 8bit $B$GI=8=$G$-$k(B data $B$O(B binary $B$G$bI=8=(B
+-$B$G$-$k!#$h$C$F!"(B@strong{binary data} $B$H8@$C$?>l9g!"G$0U$N(B data $B$r;X$9$3(B
+-$B$H$,$"$k!#(B
++ちなみに、7bit (@ref{7bit}) や 8bit で表現できる data は binary でも表現
++できる。よって、@strong{binary data} と言った場合、任意の data を指すこ
++とがある。
+ 
+ 
+ @node Coded character set, media-type, binary, Glossary
+-@subsection Coded character set$B!JId9f2=J8;z=89g!K(B, Character code$B!JJ8;zId9f!K(B
++@subsection Coded character set（符号化文字集合）, Character code（文字符号）
+ 
+-$BJ8;z$H(B byte $BNs$H#1BP#1$KBP1~IU$1$k[#Kf$G$J$$5,B'$N=89g!#(B
++文字と byte 列と１対１に対応付ける曖昧でない規則の集合。
+ 
+ 
+ @node media-type, message, Coded character set, Glossary
+@@ -1208,10 +1214,10 @@
+ @cindex subtype
+ @cindex primary-type
+ 
+-MIME (@ref{MIME}) $B$K$*$1$k(B entity (@ref{entity}) $B$N<oN`!#(B
+-@strong{primary-type} $B$H(B @strong{subtype} $B$+$i$J$k!#(BRFC 2046 (@ref{RFC 2046}) $B$GDj5A$5$l$F$$$k!#(B@refill
++MIME (@ref{MIME}) における entity (@ref{Entity}) の種類。
++@strong{primary-type} と @strong{subtype} からなる。RFC 2046 (@ref{RFC 2046}) で定義されている。@refill
+ 
+-primary-type $B$OI8=`$G$O(B
++primary-type は標準では
+ 
+ @itemize @bullet
+ @item
+@@ -1225,33 +1231,33 @@
+ @item
+ @strong{application}
+ @item
+-@strong{multipart} (@ref{multipart})
++@strong{multipart}
+ @item
+ @strong{message}
+ @end itemize
+ 
+ @noindent
+-$B$,Dj5A$5$l!"$=$l$>$l$K$O(B application/octet-stream, audio/basic,
+-image/jpeg, multipart/mixed (@ref{multipart/mixed}), text/plain
+-(@ref{text/plain}), video/mpeg $B$J$I$N$5$^$6$^$J(B subtype $B$,Dj5A$5$l$F$$$k!#(B
++が定義され、それぞれには application/octet-stream, audio/basic,
++image/jpeg, multipart/mixed, text/plain, video/mpeg などの
++さまざまな subtype が定義されている。
+ 
+ @noindent
+-@strong{[$BCm0U(B]}
++@strong{[注意]}
+ @quotation
+ 
+-$B$3$3$G$O!"(Btext/plain $B$J$I$N(B type/subtype $B$NAH$r$7$P$7$P(B 
+-@strong{primary-type/subtype} $B$H=q$/!#(B
++ここでは、text/plain などの type/subtype の組をしばしば 
++@strong{primary-type/subtype} と書く。
+ @end quotation
+ 
+ 
+-media-type $B$O!"(BRFC 2046 $B$GDj5A$5$l$F$$$k$b$N$K2C$($F!"EPO?$9$k$3$H$b$G$-(B
+-$B$k!#8=:_!"EPO?$5$l$F$$$k$b$N$O(B MEDIA TYPES
+-(ftp://ftp.isi.edu/in-notes/iana/assignments/media-types) $B$G;2>H$G$-$k!#(B
+-
+-$B$^$?!"(Btype $B$b$7$/$O(B subtype $B$K!"A0$K(B `x-' $B$rIU$1$?(B @strong{x-token} $B$rMQ(B
+-$B$$$k$3$H$K$h$j!"EPO?$5$l$F$$$J$$$b$N$r;dE*$KMQ$$$k$3$H$b$G$-$k!#$7$+$7!"(B
+-$BEvA3$N$3$H$J$,$i!"$3$&$7$?;dE*$J(B media-type $B$ONJ2r$rF@$?<T$N4V$G$7$+2r<a(B
+-$B$G$-$J$$$N$GMxMQ$K$OCm0U$9$k$3$H!#(B@refill
++media-type は、RFC 2046 で定義されているものに加えて、登録することもでき
++る。現在、登録されているものは MEDIA TYPES
++(ftp://ftp.isi.edu/in-notes/iana/assignments/media-types) で参照できる。
++
++また、type もしくは subtype に、前に `x-' を付けた @strong{x-token} を用
++いることにより、登録されていないものを私的に用いることもできる。しかし、
++当然のことながら、こうした私的な media-type は諒解を得た者の間でしか解釈
++できないので利用には注意すること。@refill
+ 
+ (cf. @ref{Content-Type})
+ 
+@@ -1260,59 +1266,59 @@
+ @node message, MIME, media-type, Glossary
+ @subsection message
+ 
+-$B$3$3$G$O(B mail $B$H(B news $B5-;v$NAm>N$H$7$FMQ$$$k!#(B
++ここでは mail と news 記事の総称として用いる。
+ 
+ 
+ @node MIME, MIME charset, message, Glossary
+ @subsection MIME
+ @cindex Multipurpose Internet Mail Extensions
+ 
+-@strong{Multipurpose Internet Mail Extensions} $B$NN,$G!"(BInternet $B$N(B mail 
+-$B$d(B news $B$G(B us-ascii plain text (@ref{us-ascii}) $B0J30$NJ8;z$r;H$&$?$a$N(B 
+-RFC 822 (@ref{RFC 822}) $B$KBP$9$k3HD%!#(B@refill
+-
+-RFC 2045 $B$OKAF,$G<!$N$h$&$K=R$Y$F$$$k!'(B@refill
+-
+-STD 11, RFC 822 $B$O!"(BUS-ASCII message header $B$K4X$7$FHs>o$K>\:Y$K5,Dj$7(B
+-$B$?(B message $BI=8=(B protocol $B$rDj5A$7$F$$$k!#$7$+$7!"$=$l$OC1$K(B flat $B$J(B 
+-US-ASCII text $B$N$_$KN1$^$j!"(Bmessage $B$NFbMF$d(B message body $B$K4X$9$k5,Dj(B
+-$B$O$J$5$l$F$$$J$$!#(BMultipurpose Internet Mail Extensions, $B$"$k$$$O(B MIME 
+-$B$HAm>N$5$l$k!"$3$N0lO"$NJ8=q$O!"0J2<$N;v$r2DG=$H$9$k$?$a$K(B message $B$N(B
+-$B7A<0$r:FDj5A$7$?!'(B
++@strong{Multipurpose Internet Mail Extensions} の略で、Internet の mail 
++や news で us-ascii plain text (@ref{us-ascii}) 以外の文字を使うための 
++RFC 822 (@ref{RFC 822}) に対する拡張。@refill
++
++RFC 2045 は冒頭で次のように述べている：@refill
++
++STD 11, RFC 822 は、US-ASCII message header に関して非常に詳細に規定し
++た message 表現 protocol を定義している。しかし、それは単に flat な 
++US-ASCII text のみに留まり、message の内容や message body に関する規定
++はなされていない。Multipurpose Internet Mail Extensions, あるいは MIME 
++と総称される、この一連の文書は、以下の事を可能とするために message の
++形式を再定義した：
+ 
+ @enumerate
+ @item
+-$BJ8=q(B message body $B$K$*$1$k(B US-ASCII $B0J30$NJ8;z=89g(B
++文書 message body における US-ASCII 以外の文字集合
+ @item
+-$BHsJ8=q(B message body
++非文書 message body
+ @item
+-$BJ#?t$NItJ,$+$i$J$k(B message body
++複数の部分からなる message body
+ @item
+-US-ASCII $B0J30$NJ8;z=89g$+$i$J$kJ8=q(B header $B>pJs(B
++US-ASCII 以外の文字集合からなる文書 header 情報
+ @end enumerate
+ 
+ 
+ RFC 2045 (@ref{RFC 2045}), RFC 2046 (@ref{RFC 2046}), RFC 2047
+-(@ref{encoded-word}), RFC 2048 (@ref{RFC 2048}), RFC 2049 (@ref{RFC 2049}) $B$GDj5A$5$l$F$$$k!#(B
++(@ref{encoded-word}), RFC 2048 (@ref{RFC 2048}), RFC 2049 (@ref{RFC 2049}) で定義されている。
+ 
+ 
+ @node MIME charset, MTA, MIME, Glossary
+ @subsection MIME charset
+ 
+-Content-Type (@ref{Content-Type}) $BMs$d(B encoded-word (@ref{encoded-word}) 
+-$B$N(B charset parameter $B$GMQ$$$i$l$kEPO?$5$l$?Id9f2=J8;z=89g(B(@ref{Coded character set})$B!#(B@refill
++Content-Type (@ref{Content-Type}) 欄や encoded-word (@ref{encoded-word}) 
++の charset parameter で用いられる登録された符号化文字集合(@ref{Coded character set})。@refill
+ 
+-RFC 2045 (@ref{RFC 2045}) $B$GDj5A$5$l$F$$$k!#(B@refill
++RFC 2045 (@ref{RFC 2045}) で定義されている。@refill
+ 
+-iso-2022-jp $B$d(B euc-kr $B$O$=$N#1$D!#(B
++iso-2022-jp や euc-kr はその１つ。
+ 
+ 
+ @node MTA, MUA, MIME charset, Glossary
+ @subsection MTA
+ @cindex Message Transfer Agent
+ 
+-@strong{Message Transfer Agent} $B$NN,$G!"(Bqmail $B$d(B sendmail $B$J$I$N(B mail $BG[(B
+-$BAw(B program $B$H(B inn $B$J$I$N(B news server $B$NAm>N!#(B@refill
++@strong{Message Transfer Agent} の略で、qmail や sendmail などの mail 配
++送 program と inn などの news server の総称。@refill
+ 
+ (cf. @ref{MUA})
+ 
+@@ -1322,7 +1328,7 @@
+ @subsection MUA
+ @cindex Message User Agent
+ 
+-@strong{Message User Agent} $B$NN,$G!"(Bmail reader $B$H(B news reader $B$NAm>N!#(B
++@strong{Message User Agent} の略で、mail reader と news reader の総称。
+ @refill
+ 
+ (cf. @ref{MTA})
+@@ -1332,16 +1338,16 @@
+ @node Quoted-Printable, RFC 822, MUA, Glossary
+ @subsection Quoted-Printable
+ 
+-RFC 2045 (@ref{RFC 2045}) $B$GDj5A$5$l$F$$$k(B MIME (@ref{MIME}) $B$K$*$1$k(B 
+-binary data (@ref{binary data}) $B$N(B network $B$G$NJQ49K!$N#1$D!#(B@refill
++RFC 2045 (@ref{RFC 2045}) で定義されている MIME (@ref{MIME}) における 
++binary data の network での変換法の１つ。@refill
+ 
+-`=' $B$d@)8fJ8;z$d(B 128 $B0J>e$NJ8;z$J$I$O(B `=AF' $B$N$h$&$K(B `=' $B$N8e$KB3$/(B 16 
+-$B?J?t$GI=8=$9$k!#$3$N$?$a!"(BASCII (@ref{ASCII}) $BJ8;zCf?4$N(B data $B$G$O(B 
+-Base64 (@ref{Base64}) $B$KHf$Y$k$H2DFI@-$,9b$/$J$k2DG=@-$,$"$k!#(B@refill
+-
+-$B$7$+$7$J$,$i!"(BEBCDIC $B$K$OB8:_$7$J$$J8;z$rMxMQ$9$k>l9g!"(BEBCDIC $B$rMxMQ$7(B
+-$B$F$$$k(B network $B$G$O0BA4$KE>Aw$9$k$3$H$,$G$-$:!"(BBase64 $B$KHf$Y$F0BA4@-$O(B
+-$BDc$$!#(B
++`=' や制御文字や 128 以上の文字などは `=AF' のように `=' の後に続く 16 
++進数で表現する。このため、ASCII (@ref{ASCII}) 文字中心の data では 
++Base64 (@ref{Base64}) に比べると可読性が高くなる可能性がある。@refill
++
++しかしながら、EBCDIC には存在しない文字を利用する場合、EBCDIC を利用し
++ている network では安全に転送することができず、Base64 に比べて安全性は
++低い。
+ 
+ 
+ @node RFC 822, RFC 1036, Quoted-Printable, Glossary
+@@ -1352,15 +1358,15 @@
+ @cindex Internet mail
+ @cindex message header
+ 
+-Internet mail $B$N<g$K(B @strong{message header} $B$K4X$9$k7A<0$K(B
+-$B4X$9$kI8=`$rDj$a$F$$$k(B RFC.
++Internet mail の主に @strong{message header} に関する形式に
++関する標準を定めている RFC.
+ 
+ @noindent
+ @strong{[Memo]}
+ @quotation
+ 
+-news message $B$b$3$l$K=`$8$F$$$k$N$G!"(B@strong{Internet mail} $B$H=q$/$h$j$b!"(B
+-@strong{Internet message} $B$H=q$$$?J}$,NI$$$+$b$7$l$J$$!#(B
++news message もこれに準じているので、@strong{Internet mail} と書くよりも、
++@strong{Internet message} と書いた方が良いかもしれない。
+ @end quotation
+ 
+ 
+@@ -1379,9 +1385,9 @@
+ @cindex RFC 1036
+ @cindex USENET
+ 
+-USENET $B$G$N(B message $B$N7A<0$rDj$a$?(B RFC.  RFC 822 (@ref{RFC 822}) $B$N(B 
+-subset $B$K$J$C$F$$$k!#(BInternet $B$NI8=`$G$O$J$$$,!"(BUSENET $B0J30$N(B netnews $B$G(B
+-$B$b$3$l$K=`$8$F$$$k$b$N$,B?$$!#(B
++USENET での message の形式を定めた RFC.  RFC 822 (@ref{RFC 822}) の 
++subset になっている。Internet の標準ではないが、USENET 以外の netnews で
++もこれに準じているものが多い。
+ 
+ 
+ @noindent
+@@ -1460,8 +1466,8 @@
+ @node plain text, us-ascii, RFC 2049, Glossary
+ @subsection plain text
+ 
+-$B=qBN$dAHHG$K4X$9$k>pJs$r;}$?$J$$J8;zId9f(B(@ref{Coded character set})$B$N$_(B
+-$B$GI=8=$5$l$k(B text $B>pJs!#(B(cf. @ref{text/plain})
++書体や組版に関する情報を持たない文字符号 (@ref{Coded character set}) のみ
++で表現される text 情報。
+ 
+ 
+ 
+@@ -1470,156 +1476,151 @@
+ @cindex ASCII
+ @cindex us-ascii
+ 
+-$B%"%a%j%+O"K.$J$I$G;H$o$l$k1Q8l$J$I$rI=8=$9$k$?$a$N(B MIME charset
+-(@ref{MIME charset}) $B$N#1$D!#(B@refill
++アメリカ連邦などで使われる英語などを表現するための MIME charset
++(@ref{MIME charset}) の１つ。@refill
+ 
+-ASCII (@ref{ASCII}) $B$N$_$+$i$J$j(B ISO 2022 $B$K$h$kId9f3HD%$O5v$5$l$J$$!#(B
++ASCII (@ref{ASCII}) のみからなり ISO 2022 による符号拡張は許されない。
+ 
+-Internet message $B$K$*$1$kI8=`$NId9f2=J8;z=89g(B(@ref{Coded character set}) 
+-$B$G$"$j!"L@<(E*$K(B MIME charset $B$,<($5$l$J$$>l9g$O86B'$H$7$F(B 
+-@strong{us-ascii} $B$,;H$o$l$k!#(B@refill
++Internet message における標準の符号化文字集合 (@ref{Coded character set})
++であり、明示的に MIME charset が示されない場合は原則として 
++@strong{us-ascii} が使われる。@refill
+ 
+-$B$^$?!"(BRFC 822 (@ref{RFC 822}) $B$K$*$1$k(B @strong{ASCII} $B$O(B us-ascii $B$G$"$k!#(B
++また、RFC 822 (@ref{RFC 822}) における @strong{ASCII} は us-ascii である。
+ 
+ 
+-@node Bug report, CVS, Glossary, Appendix
+-@section bug $BJs9p$N;EJ}(B
++@node Bug report, GitHub, Glossary, Appendix
++@section bug 報告の仕方
+ 
+-FLIM $B$N%P%0$r8+$D$1$?$i!"0J2<$N(B address $B$K(B mail $B$rAw$C$F$/$@$5$$!'(B
++FLIM-LB に関する議論は以下のメーリングリストで行われます。
++最新バージョンのアナウンスもこちらに流れます。
+ 
+-@itemize @bullet
+-@item
+- $B1Q8l(B <emacs-mime-en@@m17n.org>
+-@item
+- $BF|K\8l(B <emacs-mime-ja@@m17n.org>
+-@end itemize
++@display
++Wanderlust Mailing List @t{<wl@@ml.gentei.org>}
++@end display
+ 
++ここでは主に日本語での議論が行われています。また、英語専用のリストとして
+ 
+-$BC"$7!"$"$^$j$K$b8E$$HG$K4X$9$kJs9p$O4?7^$5$l$^$;$s!#8E$$HG$N(B bug $B$O!"?7(B
+-$B$7$$HG$G$O<#$C$F$$$k$+$b$7$l$^$;$s!#$^$:!":G?7HG$G3NG'$7$F$_$^$7$g$&!#(B
+-@refill
++@display
++Wanderlust List in English @t{<wl-en@@ml.gentei.org>}
++@end display
+ 
+-$B$=$l$+$i!"E,@Z$JJs9p$r$7$^$7$g$&!#C1$K!V$&$^$/F0$+$J$$!W$H8@$o$l$F$b$I$&(B
+-$B$$$&>u67$J$N$+$O$5$C$Q$jH=$j$^$;$s!#:GDc8B!"(BOS, emacs, APEL, FLIM, SEMI, 
+-$B;H$C$F$$$k(B MUA $B$N<oN`$*$h$SHG!"@_Dj$r=q$/I,MW$,$"$j$^$9!#$^$?!"(Berror $B$,(B
+-$B5/$C$F$$$k>l9g$O(B backtrace $B$rAw$k$3$H$b=EMW$G$9!#(B(cf. @ref{(emacs)Bugs})
+-
+-$B$^$?!"(Bbug $B$OBgDqJ#?t$N?M$,Ax6x$9$k$b$N$G$9!J$=$&$G$J$1$l$P!"(Bbug $B$G$O$J(B
+-$B$$2DG=@-$,$"$j$^$9!K!#$@$+$i!":n<T$KD>@\(B mail $B$rAw$k$H:n<T$OF1$8(B mail
+-$B$r2?DL$b=q$/1)L\$K$J$j$^$9!#$@$+$i!"I,$:(B bug $BJs9p$O>e5-$N(B address $B$KAw$C(B
+-$B$F$/$@$5$$!#(B
++もあります(こちらに投稿されたメッセージは前者にも配送されます)。
+ 
+-EMACS-MIME ML $B$G$O(B FLIM $B$N%P%0>pJs$N8r49$d:G?7HG$NG[I[!"(BFLIM $B$N2~NI$K(B
+-$B4X$9$k5DO@$r9T$J$C$F$$$^$9!#(BEMACS-MIME ML $B$K;22C$7$?$$J}$O(B
++これらのメーリングリストのガイドを得るには、@t{wl-ctl@@ml.gentei.org} 宛
++(英語の方は @t{wl-en-ctl@@ml.gentei.org} 宛) で、本文に
+ 
+-@itemize @bullet
+-@item
+- $B1Q8l(B <emacs-mime-en-ctl@@m17n.org>
+-@item
+- $BF|K\8l(B <emacs-mime-ja-ctl@@m17n.org>
+-@end itemize
++@example
++# guide
++@end example
+ 
+ @noindent
+-$B$K6u$N(B mail $B$rAw$C$F2<$5$$!#(B
++と書いたメールを送って下さい。
+ 
++バグ報告やパッチの送付もこれらのメーリングリストへ送ってください。メーリ
++ングリストへの送信はメンバになる必要があります。
+ 
+-@node CVS, History, Bug report, Appendix
+-@section CVS $B$K$h$k3+H/(B
+-
+-FLIM $B$N(B file $B$O(B CVS $B$r;H$C$F4IM}$5$l$F$$$^$9!#$3$N$?$a!"0J2<$NJ}K!$G:G(B
+-$B?7$N(B FLIM $B$rF~<j$9$k$3$H$,$G$-$^$9!'(B
++但し、あまりにも古い版に関する報告は歓迎されません。古い版の bug は、新
++しい版では治っているかもしれません。まず、最新版で確認してみましょう。
++@refill
+ 
+-@example
+-(0) cvs login
++それから、適切な報告をしましょう。単に「うまく動かない」と言われてもど
++ういう状況なのかはさっぱり判りません。最低限、OS, emacs, APEL, FLIM,
++SEMI, 使っている MUA の種類および版、設定を書く必要があります。また、
++error が起っている場合は backtrace を送ることも重要です。
++(cf. @ref{Bugs,Reporting Bugs ,Reporting Bugs, emacs, GNU Emacs
++Manual})
++
++また、bug は大抵複数の人が遭遇するものです（そうでなければ、bug ではな
++い可能性があります）。だから、作者に直接 mail を送ると作者は同じ mail
++を何通も書く羽目になります。だから、必ず bug 報告は上記の address に送っ
++てください。
+ 
+-    % cvs -d :pserver:anonymous@@cvs.m17n.org:/cvs/root login
+ 
+-    CVS password: [CR] # NULL string
++@node GitHub, History, Bug report, Appendix
++@section GitHub による開発
+ 
+-(1) checkout
++FLIM-LB のリポジトリは GitHub で公開されています。
+ 
+-    % cvs -d :pserver:anonymous@@cvs.m17n.org:/cvs/root checkout
+-	checkout [-r TAG] flim
++@example
++@uref{https://github.com/wanderlust/flim}
+ @end example
+ 
++プルリクエストを送る場合は、Emacs の様に、コミットメッセージに従来の
++@file{ChangeLog} エントリに相当する内容をインデントせずに入力して下さい。
++Emacs の @file{CONTRIBUTE} ファイル
++@footnote{@uref{https://git.savannah.gnu.org/cgit/emacs.git/plain/CONTRIBUTE}}
++にある @cite{Commit messages} セクションを参照して下さい。
++
++また、バグ報告の場合はバックトレースを取って添付すると原因究明しやすくな
++ります。 @footnote{バックトレースの取り方は
++@uref{http://www.jpl.org/elips/BUGS-ja.html}が参考になります。}
++
++
++@node History,  , GitHub, Appendix
++@section 歴史
++
++FLIM の code の最古の部分は 榎並 嗣智 氏が書いた @file{mime.el} に起源し
++ます。この小さな program は Nemacs で動作する iso-2022-jp の B-encoding 
++専用の encoded-word の復号化プログラムでした。@refill
++
++その後、守岡 知彦 は @file{mime.el} を元に@file{tiny-mime.el} というプロ
++グラムを書きます。これは、Nemacs と Mule で動作する encoded-word の符号
++化・復号化プログラムでした。@file{tiny-mime.el} は B-encoding だけでなく 
++Q-encoding もsupport し、また、MULE で扱うことができるさまざまな MIME
++charset (@ref{MIME charset}) を同時に使うことができました。この時、
++Nemacs と Mule の双方を support するために用いられたテクニックは後に emu
++package にまとめられます。@refill
++
++この頃、守岡 知彦 は @file{tiny-mime.el} をさまざまな MUA で使うための設
++定集も配布していましたが、それらは後に@file{tiny-mime.el} とともに１つの 
++package にまとめられ、tm という名前で配布されます。@refill
++
++守岡 知彦 はやがて、MIME message を閲覧するためのプログラムである
++@file{tm-body.el} を書きます。これは、すぐに@file{tm-view.el} という名前
++に変わりましたが、やがて、これが@file{tiny-mime.el} に代わって、tm の中
++核となります。@refill
++
++@file{tm-view.el} は当然、Content-Transfer-Encoding を扱う必要があります。
++この目的のために、MEL が整備されはじめました。Base64 に関しては 
++@file{tiny-mime.el} の code が移され、また、新たにQuoted-Printable の 
++code が追加されました。これらが@file{mel-b.el} と @file{mel-q.el} になり
++ました。@refill
++
++また、後に、守岡 知彦 によって uuencode 用の @file{mel-u.el} が追加され、
++その後に、小林 修平 氏によって x-gzip64 用の@file{mel-g.el} が追加されま
++した。@refill
++
++tm では後に、守岡 知彦 によって @file{tiny-mime.el} の再実装が行われ、こ
++の過程で、STD 11 の parser が書かれました。これは、現在の 
++@file{std11.el} に当たります。また、この過程で @file{tiny-mime.el} は復
++号化を行う @file{tm-ew-d.el} と符号化を行う @file{tm-ew-e.el} に分けられ
++ました。この両者が現在の @file{eword-decode.el} と 
++@file{eword-encode.el} の先祖に当たります。@refill
++
++後に、守岡 知彦 らによって tm の全面書き換え作業が行われ、この過程で、tm 
++は APEL, MEL, SEMI, EMH, RMAIL-MIME, Gnus-MIME などに分けられました。こ
++のうちの MEL が FLIM の直接の先祖に当たります。@refill
++
++後に、APEL から @file{std11.el} が移され、また、@file{mailcap.el},
++@file{eword-decode.el} および @file{eword-encode.el} が SEMI から移され、
++package の名前が FLIM となります。@refill
+ 
+-CVS $B$rMQ$$$?3+H/$K;22C$7$?$$J}$O(B
+-
+-@itemize @bullet
+-@item
+- <cvs@@cvs.m17n.org>
+-@end itemize
+-
+-@noindent
+-$B$^$G!"%"%+%&%s%HL>$H(B ssh $B$N8x3+80$rAw$C$F$/$@$5$$!#(Bssh $B7PM3$G$O!"(B
+-cvsroot $B$O(B :ext:cvs@@cvs.m17n.org:/cvs/root $B$H$J$j$^$9!#(B
+-
+-
+-@node History,  , CVS, Appendix
+-@section $BNr;K(B
+-
+-FLIM $B$N(B code $B$N:G8E$NItJ,$O(B $B1]JB(B $B;LCR(B $B;a$,=q$$$?(B @file{mime.el} $B$K5/8;$7(B
+-$B$^$9!#$3$N>.$5$J(B program $B$O(B Nemacs $B$GF0:n$9$k(B iso-2022-jp $B$N(B B-encoding 
+-$B@lMQ$N(B encoded-word $B$NI|9f2=%W%m%0%i%`$G$7$?!#(B@refill
+-
+-$B$=$N8e!"<i2,(B $BCNI'(B $B$O(B @file{mime.el} $B$r85$K(B@file{tiny-mime.el} $B$H$$$&%W%m(B
+-$B%0%i%`$r=q$-$^$9!#$3$l$O!"(BNemacs $B$H(B Mule $B$GF0:n$9$k(B encoded-word $B$NId9f(B
+-$B2=!&I|9f2=%W%m%0%i%`$G$7$?!#(B@file{tiny-mime.el} $B$O(B B-encoding $B$@$1$G$J$/(B 
+-Q-encoding $B$b(Bsupport $B$7!"$^$?!"(BMULE $B$G07$&$3$H$,$G$-$k$5$^$6$^$J(B MIME
+-charset (@ref{MIME charset}) $B$rF1;~$K;H$&$3$H$,$G$-$^$7$?!#$3$N;~!"(B
+-Nemacs $B$H(B Mule $B$NAPJ}$r(B support $B$9$k$?$a$KMQ$$$i$l$?%F%/%K%C%/$O8e$K(B emu
+-package $B$K$^$H$a$i$l$^$9!#(B@refill
+-
+-$B$3$N:"!"<i2,(B $BCNI'(B $B$O(B @file{tiny-mime.el} $B$r$5$^$6$^$J(B MUA $B$G;H$&$?$a$N@_(B
+-$BDj=8$bG[I[$7$F$$$^$7$?$,!"$=$l$i$O8e$K(B@file{tiny-mime.el} $B$H$H$b$K#1$D$N(B 
+-package $B$K$^$H$a$i$l!"(Btm $B$H$$$&L>A0$GG[I[$5$l$^$9!#(B@refill
+-
+-$B<i2,(B $BCNI'(B $B$O$d$,$F!"(BMIME message $B$r1\Mw$9$k$?$a$N%W%m%0%i%`$G$"$k(B
+-@file{tm-body.el} $B$r=q$-$^$9!#$3$l$O!"$9$0$K(B@file{tm-view.el} $B$H$$$&L>A0(B
+-$B$KJQ$o$j$^$7$?$,!"$d$,$F!"$3$l$,(B@file{tiny-mime.el} $B$KBe$o$C$F!"(Btm $B$NCf(B
+-$B3K$H$J$j$^$9!#(B@refill
+-
+-@file{tm-view.el} $B$OEvA3!"(BContent-Transfer-Encoding $B$r07$&I,MW$,$"$j$^$9!#(B
+-$B$3$NL\E*$N$?$a$K!"(BMEL $B$,@0Hw$5$l$O$8$a$^$7$?!#(BBase64 $B$K4X$7$F$O(B 
+-@file{tiny-mime.el} $B$N(B code $B$,0\$5$l!"$^$?!"?7$?$K(BQuoted-Printable $B$N(B 
+-code $B$,DI2C$5$l$^$7$?!#$3$l$i$,(B@file{mel-b.el} $B$H(B @file{mel-q.el} $B$K$J$j(B
+-$B$^$7$?!#(B@refill
+-
+-$B$^$?!"8e$K!"<i2,(B $BCNI'(B $B$K$h$C$F(B uuencode $BMQ$N(B @file{mel-u.el} $B$,DI2C$5$l!"(B
+-$B$=$N8e$K!">.NS(B $B=$J?(B $B;a$K$h$C$F(B x-gzip64 $BMQ$N(B@file{mel-g.el} $B$,DI2C$5$l$^(B
+-$B$7$?!#(B@refill
+-
+-tm $B$G$O8e$K!"<i2,(B $BCNI'(B $B$K$h$C$F(B @file{tiny-mime.el} $B$N:F<BAu$,9T$o$l!"$3(B
+-$B$N2aDx$G!"(BSTD 11 $B$N(B parser $B$,=q$+$l$^$7$?!#$3$l$O!"8=:_$N(B 
+-@file{std11.el} $B$KEv$?$j$^$9!#$^$?!"$3$N2aDx$G(B @file{tiny-mime.el} $B$OI|(B
+-$B9f2=$r9T$&(B @file{tm-ew-d.el} $B$HId9f2=$r9T$&(B @file{tm-ew-e.el} $B$KJ,$1$i$l(B
+-$B$^$7$?!#$3$NN><T$,8=:_$N(B @file{eword-decode.el} $B$H(B 
+-@file{eword-encode.el} $B$N@hAD$KEv$?$j$^$9!#(B@refill
+-
+-$B8e$K!"<i2,(B $BCNI'(B $B$i$K$h$C$F(B tm $B$NA4LL=q$-49$(:n6H$,9T$o$l!"$3$N2aDx$G!"(Btm 
+-$B$O(B APEL, MEL, SEMI, EMH, RMAIL-MIME, Gnus-MIME $B$J$I$KJ,$1$i$l$^$7$?!#$3(B
+-$B$N$&$A$N(B MEL $B$,(B FLIM $B$ND>@\$N@hAD$KEv$?$j$^$9!#(B@refill
+-
+-$B8e$K!"(BAPEL $B$+$i(B @file{std11.el} $B$,0\$5$l!"$^$?!"(B@file{mailcap.el},
+-@file{eword-decode.el} $B$*$h$S(B @file{eword-encode.el} $B$,(B SEMI $B$+$i0\$5$l!"(B
+-package $B$NL>A0$,(B FLIM $B$H$J$j$^$9!#(B@refill
+-
+-$B$3$ND>A0$+$iEDCf(B $BE/(B $B;a$,$h$j(B RFC $B$KCi<B$J<BAu$r=q$-;O$a!"$3$l$O!"8=:_!"(B
+-FLIM $B$N;^$G$"$k(B ``FLIM-FLAM'' $B$H$J$C$F$$$^$9!#(B
++この直前から田中 哲 氏がより RFC に忠実な実装を書き始め、これは、現在、
++FLIM の枝である ``FLIM-FLAM'' となっています。
+ 
+ 
+ @node Concept Index, Function Index, Appendix, Top
+-@chapter $B35G0:w0z(B
++@chapter 概念索引
+ 
+ @printindex cp
+ 
+ @node Function Index, Variable Index, Concept Index, Top
+-@chapter $B4X?t:w0z(B
++@chapter 関数索引
+ 
+ @printindex fn
+ 
+ @node Variable Index,  , Function Index, Top
+-@chapter $BJQ?t:w0z(B
++@chapter 変数索引
+ 
+ @printindex vr
+ @bye

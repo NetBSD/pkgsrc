@@ -1,0 +1,1018 @@
+$NetBSD: patch-ChangeLog,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+sync to  lexical-binding
+
+--- /tmp/wip/flim/work/flim-1.14.9/./ChangeLog	2007-11-28 18:13:25.000000000 +0900
++++ ././ChangeLog	2020-09-05 16:02:47.286943577 +0900
+@@ -1,6 +1,821 @@
++2020-08-24  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-def.el: Change product name to 'FLIM-LB'.
++
++2020-08-19  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Change non-ASCII text files's coding-system to UTF-8
++
++	* ChangeLog:  Likewise.
++
++	* README.ja: Likewise.
++
++	* mime-ja.texi: Likewize.  Assume LuaTex for typesetting.
++
++	* mime-en.texi: Likewise.  Assume LuaTex for typesetting, because
++	this file is partially written in Japanese.
++
++2020-08-05  Naoya Yamashita  <conao3@gmail.com>
++
++	Fix closing parens position (cosmetic change only).
++	Cf. https://github.com/wanderlust/flim/pull/11
++
++2020-08-03  Naoya Yamashita  <conao3@gmail.com>
++
++	Use ?\s instead of ?(whitespace).
++	Cf. https://github.com/wanderlust/flim/pull/10
++
++	* eword-decode.el (eword-decode-encoded-words): Likewise.
++
++	* eword-encode.el (eword-encode-rword-list, ew-encode-rword-1)
++	(tm-eword::string-to-ruled-words): Likewise.
++
++	* mel-q-ccl.el (mel-ccl-decode-quoted-printable-generic)
++	(mel-ccl-encode-quoted-printable-generic, mel-ccl-decode-q):
++	Likewise.
++
++	* mel-q.el (quoted-printable-internal-encode-region): Likewise.
++
++	* mel.el (Q-encoded-text-length): Likewise.
++
++	* mime-conf.el (mime-mailcap-look-at-schar): Likewise
++
++	* smtp.el (smtp-deduce-address-list): Likewise.
++
++	* std11.el (std11-space-char-list): Likewise.
++
++2020-06-26  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* std11.el (std11-addr-to-string): Fix typo.
++	Cf. https://github.com/wanderlust/wanderlust/issues/175
++
++2020-06-14  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Minor refactorings.
++
++	* eword-decode.el (eword-decode-encoded-words)
++	(eword-analyze-comment, eword-decode-token): Reduce use of concat
++	function.
++
++	* sasl.el (sasl-unique-id-number-base36): Replace char-to-string
++	by list for concat function's arguments.
++
++	* smtp.el (smtp-send-data): Minor refactoring.
++
++	* std11.el (std11-header-string, std11-header-string-except)
++	(std11-fill-msg-id-list-string): Reduce use of concat function.
++	(std11-parse-group, std11-addr-to-string): Minor refactorings.
++
++2020-06-05  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* FLIM-MK: Assume Emacs 24 or later.
++
++2020-06-03  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Use following-char and preceding-char instead of char-after and
++	char-before for the current point.
++
++	* mel-q.el (quoted-printable-internal-encode-region)
++	(quoted-printable-internal-decode-region): Likewise.
++
++	* mime-conf.el (mime-mailcap-skip-comment)
++	(mime-mailcap-look-at-type-field, mime-mailcap-look-at-schar)
++	(mime-mailcap-look-at-qchar): Likewise.
++
++	* mime-parse.el (mime-decode-parameter-encode-segment)
++	(mime-divide-extended-parameter, mime-encode-extended-parameter)
++	(mime-divide-regular-parameter, mime-encode-regular-parameter):
++	Likewise.
++
++2020-06-02  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Strip use of function wrapping lambda.
++
++	* eword-encode.el
++	(eword-encode-Content-Disposition-field-body-broken-mime)
++	(eword-encode-Content-Type-field-body-broken-mime)
++	(eword-encode-Content-Disposition-field-body)
++	(eword-encode-Content-Type-field-body): Likewise.
++
++	* mel-q.el (q-encoding-decode-string, q-encoding-encode-string):
++	Likewise.
++
++	* std11.el (std11-full-name-string, std11-addr-to-string):
++	Likewise.
++
++2020-05-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-decode.el (eword-decode-encoded-words): Fix cl
++	dependencies.
++
++	* eword-encode.el: Adjust dependencies.
++
++	* mel-q.el: Adjust dependencies.
++	(quoted-printable-internal-decode-region): Use string-to-list
++	instead of string-to-char-list.
++
++	* mel.el: Adjust dependencies.
++
++	* mime-parse.el: Adjust dependencies.
++
++	* std11.el: Adjust dependencies.
++
++2020-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Use lexical binding.
++
++	* eword-decode.el: Likewise.
++
++	* eword-encode.el: Likewise.
++
++	* hmac-md5.el: Likewise.
++
++	* hmac-sha1.el: Likewise.
++
++	* luna.el: Likewise.
++
++	* lunit.el: Likewise.
++
++	* md5.el: Likewise.
++
++	* mel-g.el: Likewise.
++
++	* mel-q-ccl.el: Likewise.
++
++	* mel-q.el: Likewise.
++
++	* mel-u.el: Likewise.
++
++	* mel.el: Likewise.
++
++	* mime-conf.el: Likewise.
++
++	* mime-def.el: Likewise.
++
++	* mime-parse.el: Likewise.
++
++	* mime.el: Likewise.
++
++	* mmbuffer.el: Likewise.
++
++	* mmcooked.el: Likewise.
++
++	* mmexternal.el: Likewise.
++
++	* mmgeneric.el: Likewise.
++
++	* qmtp.el: Likewise.
++
++	* sasl-cram.el: Likewise.
++
++	* sasl-digest.el: Likewise.
++
++	* sasl-scram.el: Likewise.
++
++	* sasl-xoauth2.el: Likewise.
++
++	* sasl.el: Likewise.
++
++	* sha1.el: Likewise.
++
++	* smtp.el: Likewise.
++
++	* std11.el: Likewise.
++
++2020-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Support additional SASL mechanism libraries.
++
++	* sasl.el (sasl-additional-mechanism-alist): New variable.
++	(sasl-mechanism-alist): Include entries for additional libraries.
++	(sasl-mechanisms): Calculate from sasl-mechanism-alist.
++
++2020-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Rmove some files which are inluded in Emacs.
++
++	* hmac-def.el: Removed.
++
++	* hex-utils.el: Removed.
++
++	* sasl-ntlm.el: Removed.
++
++	* FLIM-ELS (flim-modules, hmac-modules): Remove removed files.
++
++2020-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Suppress byte-compiler's warnings.
++
++	* eword-decode.el (eword-decode-header): Add obsolete date.
++
++	* eword-encode.el: Fix dependency.
++	(eword-encode-header, eword-in-subject-p)
++	(eword-encode-field-body): Add obsolete date.
++
++	* mime-def.el: Remove dependecy on static.el.
++	(eval-when-compile): Assume Emacs24 or later.
++	(mime-message-structure): Add obsolete date.
++
++	* mime-parse.el: Fix dependency.
++	(mime-parse-parameters-from-list): Add obsolete date.
++
++	* qmtp.el (qmtp-via-qmtp): Add obsolete date.
++
++	* smtp.el (smtp-via-smtp): Add obsolete date.
++
++	* std11.el (std11-parse-in-reply-to): Add obsolete date.
++
++2020-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Drop old platforms support, dependency on cl.el.  Now supported
++	Emacsen are version 24 and later.
++
++	* FLIM-ELS: Assume Emacs version 24 or later.
++
++	* eword-encode.el: Likewise.
++
++	* md5.el: Likewise.
++
++	* mel-q-ccl.el: Likewise.
++
++	* mel-q.el: Likewise.
++
++	* mel.el: Likewise.
++
++	* sha1.el: Likewise.
++
++	* eword-decode.el: Use cl-lib instead of cl.
++
++	* md5-dl.el: Removed.
++
++	* md5-el.el: Removed.
++
++	* mel-b-ccl.el: Removed.
++
++	* mel-b-dl.el: Removed.
++
++	* mel-b-el.el: Removed.
++
++	* sha1-el.el: Removed.
++
++	* sha1-dl.el: Removed.
++
++	* md4.el: Removed.  Included in Emacs.
++
++	* ntlm.el: Removed.  Included in Emacs.
++
++	* smtpmail.el: Removed.  Included in Emacs.
++
++2020-03-03  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* sasl-xoauth2.el (sasl-xoauth2-response): Fix typo in variable name.
++
++2020-02-28  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* sasl.el (sasl-mechanism-alist, sasl-mechanisms): Add OAUTHBEARER
++	as alias for XOAUTH2.
++
++2019-05-26  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-decode.el (eword-decode-token): Escape characters which
++	cause warning from byte compiler.
++
++2018-03-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Fix EHLO command is sent twice after STARTTLS command when
++	built-in GnuTLS library is used.
++
++	* smtp.el (smtp-open-gnutls-starttls-stream): Abolished.
++	(smtp-open-connection): Do not use smtp-open-gnutls-starttls-stream.
++	(smtp-primitive-starttls): Use gnutls-negotiate when built-in
++	GnuTLS is used for STARTTLS connection.
++
++2018-01-18  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	XOAUTH2 authentication support is introduced (experimental).
++
++	* FLIM-ELS: Install sasl-xoauth2.el when oauth2.el is installed.
++
++	* sasl.el (sasl-mechanisms, sasl-mechanism-alist): Add entry for
++	XOAUTH2.
++
++	* sasl-xoauth2.el: New file.
++
++2016-12-06  Piotr Trojanek  <piotr.trojanek@gmail.com>
++
++	* luna.el (luna-class-find-member)
++	(luna-class-find-or-make-member): do not modify input argument.
++
++2016-11-30  Piotr Trojanek  <piotr.trojanek@gmail.com>
++
++	* luna.el (luna-define-class-function): simplify iteration with
++	dolist.
++
++2016-10-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* std11.el (std11-full-name-string): Refactored.
++
++2016-10-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-decode.el (eword-decode-structured-field-body)
++	(eword-decode-and-unfold-structured-field-body)
++	(eword-decode-and-fold-structured-field-body): Decrease number of
++	times for calling concat function.
++
++	* std11.el (std11-wrap-as-quoted-pairs, std11-strip-quoted-pair)
++	(std11-comment-value-to-string): Likewise.
++
++2016-10-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* smtp.el (smtp-send-buffer, smtp-send-buffer-by-myself): Call
++	kill-buffer with nil.  Only Emacs 23 and later support omitting an
++	argument for kill-buffer.  Reported By Tatsuya Kinoshita
++	<tats@vega.ocn.ne.jp>.  Cf. [wl:14662]
++
++2016-08-31  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-decode.el (eword-analyze-encoded-word): Fix the check for
++	non-atom special chars to permit space chars.
++
++2016-08-14  Erik Hetzner  <egh@e6h.org>
++
++	* mime-en.texi: Add dir entry
++
++	* mime-ja.texi: Likewise
++
++2016-08-13  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-decode.el (eword-analyze-encoded-word): Quote decoded word
++	when it contains non-atom special chars and not quoted.
++	Cf. https://github.com/wanderlust/wanderlust/issues/126
++
++2016-03-12  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel.el (mel-prompt-for-encoding): New function.
++	(mime-encode-region, mime-decode-region)
++	(mime-insert-encoded-file, mime-write-decoded-region): Use it.
++
++2015-12-13  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* smtp.el (smtp-send-buffer, smtp-send-buffer-by-myself): Kill
++	trace buffer after sending when smtp-debug is nil and network
++	stream is disconnected.  Suggested by Herbert J. Skuhra
++	<herbert@oslo.ath.cx>
++
++2015-07-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* smtp.el (smtp-primitive-auth): Fix the case that server returns
++	human readable string for AUTH command.
++
++2015-05-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* smtp.el (smtp-make-fqdn): Show more informative message for
++	invalid FQDN.
++	Cf. https://github.com/wanderlust/wanderlust/issues/96
++
++2015-05-02  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el: Require poem.el for non-mule.
++
++2015-04-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-default-ccl-lexical-analyzer)
++	(mime-ccl-lexical-analyzer): Fix for CCL unusable environments.
++
++	* std11.el (std11-default-ccl-lexical-analyzer)
++	(std11-ccl-lexical-analyzer): Likeswise.
++
++2015-04-27  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-default-ccl-lexical-analyzer): Fix wrong
++	program is build on XEmacs.
++
++	Cf. https://github.com/wanderlust/flim/commit/488a4d70fb4ae57bdd30dc75c2d75579894e28a2
++
++	* std11.el (std11-default-ccl-lexical-analyzer): Likewise.
++
++2015-03-10  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-default-ccl-lexical-analyzer): Fix the case
++	input is terminated with space characters or non-closing comment.
++
++2014-12-21  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* std11.el (std11-ignored-token-p): Simplified.
++
++2014-12-16  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	CCL base lexical analyzers are available.  They are much faster.
++	If you modify `std11-lexical-analyzer' or `mime-lexical-analyzer',
++	you also need to modify `std11-ccl-lexical-analyzer' or
++	`mime-ccl-lexical-analyzer', respectively.
++
++	* mime-parse.el (mime-default-ccl-lexical-analyzer): New CCL program.
++	(mime-ccl-lexical-analyzer): New customizable variable.
++	(mime-lexical-analyze): Use CCL based lexical analyzer if
++	mime-ccl-lexical-analyzer is non-nil.
++
++	* std11.el (std11-default-ccl-lexical-analyzer): New CCL program.
++	(std11-ccl-lexical-analyzer): New customizable variable.
++	(std11-lexical-analyze): Use CCL based lexical analyzer if
++	std11-ccl-lexical-analyzer is non-nil.
++
++2014-11-09  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-en.texi (7bit): Fix typo.
++
++	* mime-ja.texi: Fix missing cross-references.
++
++2014-11-09  Erik Hetzner <egh@e6h.org>
++
++	* flim-pkg.el: New file.
++
++2014-11-09  Erik Hetzner <egh@e6h.org>
++
++	* mime-en.texi: Fix headers and missing cross-references.
++
++	* mime-ja.texi: Fix headers.
++
++	* mime-en.sgml: Removed.
++
++	* mime-ja.sgml: Removed.
++
++2014-09-15  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-conf.el (mime-format-mailcap-command): Minor refactoring.
++
++2014-09-13  Erik Hetzner <egh@e6h.org>
++
++	* mime-conf.el (mime-format-mailcap-command): Add quotes for
++	quoted file name to unquote.
++	Cf. https://github.com/wanderlust/flim/pull/3
++
++2014-08-31  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-decode-parameter-value)
++	(mime-decode-parameters): Use string-to-number instead of
++	string-to-int.
++
++2014-08-31  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el (eword-encode-char-type): Defined as macro.
++
++2014-08-31  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* lunit.el (lunit-generate-template): Use `with-current-buffer'
++	rather than save-excursion+set-buffer.
++
++	* mmbuffer.el (initialize-instance, mime-write-entity)
++	(mime-entity-body, mime-write-entity-body, mime-entity-content)
++	(mime-write-entity-content, mime-entity-fetch-field): Likewise.
++
++	* mmcooked.el (write-entity-content, write-entity)
++	(write-entity-body): Likewise.
++
++	* mmgeneric.el (mime-insert-header-from-buffer): Likewise.
++
++	* qmtp.el (qmtp-send-buffer): Likewise.
++
++	* smtp.el (smtp-package-buffer-internal-size, smtp-send-buffer)
++	(smtp-send-buffer-by-myself, smtp-primitive-data)
++	(smtp-process-filter, smtp-send-command)
++	(smtp-deduce-address-list): Likewise.
++
++2014-06-20  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Un-encoded garbage handling is available when built-in base64
++	decoder is used.
++
++	* mel.el (mel-b-builtin-garbage-strategy): New customizable
++	variable.
++	(mel-b-builtin-encoded-line-regexp): New variable.
++	(mel-b-builtin-decode-string, mel-b-builtin-decode-region): New
++	functions.
++	(mime-decode-string, mime-decode-region)
++	(mime-write-decoded-region): (mel-b-builtin) Use them.
++
++2014-05-31  Juliusz Chroboczek  <jch@pps.univ-paris-diderot.fr>
++
++	* mel.el (mime-insert-encoded-file): Avoid going through an
++	intermediary string, work inline.
++	(mime-write-decoded-region): likewise.
++
++2014-04-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* FLIM-ELS: Check whether secure-hash function is defined.
++	Cf. https://github.com/ikazuhiro/flim/commit/85bbe382c4812fd041207aa727acba8ece2e7a39#commitcomment-6082738
++
++	* hmac-md5.el: Likewise.
++
++	* hmac-sha1.el: Likewise.
++
++	* sha1.el (TOP, sha1-dl-module): Likewise.
++
++2014-04-15  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* FLIM-ELS: Install sha1-el.el when dynamic-link is available and
++	built-in sha1 library is not available.
++
++2014-04-05  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* std11.el (std11-narrow-to-header)
++	(std11-field-bodies): Minor refactoring.
++
++2014-03-30  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* sasl-cram.el: Require hex-util.el.
++
++	* sasl-digest.el: Require hex-util.el.
++
++	* hmac-md5.el: Do not require hex-util.el.  Define autoload for
++	decode-hex-string only when needed.
++	(md5-binary): Use built-in functionality if available.
++
++	* hmac-sha1.el: Linkewise.
++	(sha1-binary): Use built-in functionality if available.
++
++2014-03-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* FLIM-ELS: Do not install sha1-el.el when built-in SHA1 library
++	is available.
++
++	* sha1.el: Do not require sha1-el.el in the above case.
++	(sha1-dl-module): set to nil in the above case.
++
++2014-02-22  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (quoted-printable-ccl-insert-encoded-file): Call
++	insert-file-contents-literally directly.
++
++2013-07-05  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el: Fix the previous change for really checking.
++
++2013-07-04  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el: Check whether the mule-vesion variable is defined.
++
++2013-06-26  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mailcap.el: Removed to resolve compatibility problem when run in
++	expanded place.
++
++2013-03-23  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Many encoder/decoder functions now always encode/decode regardless
++	buffer's multibyteness.
++	* mime-def.el (mime-charset-decode-string)
++	(mime-charset-encode-string): New functions.
++
++	* mime-parse.el (mime-decode-parameter-value)
++	(mime-encode-extended-parameter): Use them.
++
++	* eword-decode.el (eword-decode-unstructured-field-body)
++	(eword-decode-and-unfold-unstructured-field-body)
++	(eword-decode-unfolded-unstructured-field-body)
++	(eword-decode-encoded-words, eword-analyze-quoted-string)
++	(eword-analyze-comment, eword-analyze-atom): Use
++	mime-charset-decode-string instead of decode-mime-charset-string.
++
++	* eword-encode.el (tm-eword::encoded-word-length)
++	(tm-eword::encoded-word-length): Use mime-charset-encode-string
++	instead of encode-mime-charset-string.
++
++2012-08-14  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* std11.el (std11-unfold-strip-leading-tab): New variable.
++	(std11-unfold-string): Use it.  Workaround for incorrect folding.
++
++2012-08-10  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (q-encoding-ccl-decode-string): Remove duplicate
++	definition for Emacs 23.1.
++
++2012-07-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el (ew-find-string-rule): Define own function for
++	Emacs23 which has APEL with detect-mime-charset-string for it.
++	(ew-find-charset-rule): Define only when needed.
++
++2012-07-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el (ew-find-string-rule): New function.
++	(eword-encode-phrase-to-rword-list): Use it.
++
++2012-07-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el (tm-eword::string-to-ruled-words): Define own
++	function for Emacs23 which has APEL with
++	detect-mime-charset-string for it.
++	(eword-encode-char-type, eword-encode-divide-into-charset-words)
++	(eword-encode-charset-words-to-words): Define only when needed.
++
++2012-07-29  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* eword-encode.el (tm-eword::string-to-ruled-words): New function.
++	(eword-encode-split-string, eword-encode-phrase-to-rword-list):
++	Use it.
++
++2012-04-28  MORIOKA Tomohiko  <tomo.git@chise.org>
++
++	* README.ja, README.en (Bug reports): Use "Emacs-MIME" instead of
++	"EMACS-MIME".
++
++2001-02-27  Martin Buchholz  <martin@xemacs.org>
++
++	* mime-en.sgml: Typo fix.
++
++2012-04-28  MORIOKA Tomohiko  <tomo@zinbun.kyoto-u.ac.jp>
++
++	* README.ja, README.en (Bug reports): Modify for
++	emacs-mime-{en|ja}@lists.chise.org.
++
++2012-04-20  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-parse-message): Use mime-read-Content-Type
++	instead of mime-parse-Content-Type.
++
++2012-04-07  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* smtp.el (smtp-open-connection): Raise error when open connection
++	function failed.
++
++2012-03-20  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Support built-in GnuTLS for STARTTLS connection.
++	* smtp.el (smtp-use-gnutls): New cutomizable variable.
++	(smtp-open-gnutls-starttls-stream): New function.
++	(smtp-submit-package): Respect smtp-use-gnutls's value.
++	(smtp-send-buffer, smtp-send-buffer-by-myself): Do not
++	decide smtp-open-connection-function's value here.
++	(smtp-open-connection): Decide which open-connection-function is
++	called here.  Respect smtp-use-gnutls's value.
++
++2011-06-27  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q.el (quoted-printable-num-to-raw-byte-char): Enclose with
++	eval-and-compile().
++
++2011-06-24  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-encode-parameters-broken-mime): New function.
++
++	* eword-encode.el (eword-encode-Content-Type-field-body-broken-mime)
++	(eword-encode-Content-Disposition-field-body-broken-mime): New
++	functions.  If you want to use them, modify
++	`mime-header-encode-method-alist'.
++
++2011-06-19  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Revert the change of 2004-02-17.
++	* smtp.el (smtp-starttls-program, smtp-starttls-extra-args):
++	Abolished.
++	(smtp-send-buffer): Likewise.
++
++2011-06-09  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime.el (mime-entity-filename): When a result is got from entity
++	header, decode it.
++
++2011-06-07  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	Merged from rfc2231-encoder branch.
++	* eword-encode.el (eword-encode-Content-Type-field-body)
++	(eword-encode-Content-Disposition-field-body): New functions.
++
++	* mime-def.el (mime-attribute-char-regexp): Update for RFC2231.
++	(mime-non-attribute-char-regexp): New constant.
++
++	* mime-parse.el (mime-divide-extended-parameter)
++	(mime-encode-extended-parameter, mime-divide-regular-parameter)
++	(mime-encode-regular-parameter, mime-encode-parameters): New
++	functions.
++
++2011-05-16  David Maus  <dmaus@ictsoc.de>
++
++	* md4.el (md4-make-step): Use new style backqoutes. Slipped
++	through 2010-11-14.
++
++2010-11-14  HAMANO Kiyoto  <khiker.mail@gmail.com>
++
++	* sha1-el.el (sha1-F0, sha1-F1, sha1-F2, sha1-F3, sha1-S1)
++	(sha1-S5, sha1-S30, sha1-OP, sha1-add-to-H): Use new style
++	backquotes.
++
++	* md5-el.el: Dto.
++
++	* md4.el (md4-make-step): Dto.
++
++	* hmac-def.el (define-hmac-function): Dto.
++
++	* hex-util.el (hex-char-to-num, hex-char-to-char): Dto.
++
++	* eword-encode.el (make-ew-rword, ew-rword-text)
++	(ew-rword-charset, ew-rword-encoding, ew-rword-type): Dto.
++
++2010-11-13  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mime-parse.el (mime-uri-parse-cid): Respect
++	mime-field-parser-alist's value.
++
++2010-08-05  Tetsurou Okazaki  <okazaki@be.to>
++
++	* smtp.el (smtp-submit-package): Handle the case that
++	`smtp-find-connection' returns nil in unwind forms.
++
++2010-06-21  Katsumi Yamaoka  <yamaoka@jpl.org>
++
++	* FLIM-CFG: Add emu subdirectory to load-path when LISPDIR is
++	specified.  Suggested by Kazuhiro NISHIYAMA <zn@mbf.nifty.com>.
++
++2010-03-10  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (quoted-printable-ccl-decode-string)
++	(q-encoding-ccl-decode-string): Use ccl-execute-on-string() when
++	encoder for CCL coding system is broken.
++	(quoted-printable-ccl-decode-region)
++	(quoted-printable-ccl-write-decoded-region): Use
++	quoted-printable-ccl-decode-string in the above environment.
++	(TOP): Check facility for them.  Another check for decoder for ccl
++	coding system is added.
++
++	* mel-q.el (quoted-printable-num-to-raw-byte-char): New inline
++	function.
++	(quoted-printable-internal-decode-region)
++	(q-encoding-decode-string): Use it.
++
++2010-02-20  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (quoted-printable-ccl-encode-string)
++	(quoted-printable-ccl-insert-encoded-file)
++	(q-encoding-ccl-encode-string): Change branches to facility based.
++	(TOP): Check facility for them.
++
++2010-02-18  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (quoted-printable-ccl-encode-string)
++	(quoted-printable-ccl-insert-encoded-file)
++	(q-encoding-ccl-encode-string): Make new vector instead of use of
++	the one that is hard-coded in the program.
++
++2010-02-14  Tetsurou Okazaki  <okazaki@be.to>
++
++	* smtp.el (smtp-primitive-mailfrom): Fixed two spaces may be used
++	as a separator before "BODY=8BITMIME".
++
++2010-02-09  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (quoted-printable-ccl-encode-string)
++	(quoted-printable-ccl-insert-encoded-file)
++	(q-encoding-ccl-encode-string): Use ccl-execute-on-string() on
++	Emacs 23.1.
++	(quoted-printable-ccl-encode-region): Use
++	quoted-printable-ccl-encode-string() on Emacs 23.1.
++
++2010-01-25  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel-q-ccl.el (mel-ccl-encode-quoted-printable-generic): Output
++	invalid character as is.
++
++2010-01-24  Kazuhiro Ito  <kzhr@d1.dion.ne.jp>
++
++	* mel.el (8bit-write-decoded-region): Use no-conversion coding
++	system for writing.
++
++	* mel-q.el (quoted-printable-quote-char)
++	(quoted-printable-internal-encode-region): Support Emacs 23
++	raw-byte characters in multibyte string.
++
++	* mel-q-ccl.el (mel-ccl-decode-q)
++	(mel-ccl-encode-q-generic)
++	(mel-ccl-encode-quoted-printable-generic): Ditto.
++	(quoted-printable-ccl-write-decoded-region): Use LF eol coding
++	system explicitly.
++
++2008-11-25  Katsumi Yamaoka  <yamaoka@jpl.org>
++
++	* eword-decode.el (eword-decode-string, eword-decode-region):
++	Mention language info in doc string.
++
++2008-11-25  Katsumi Yamaoka  <yamaoka@jpl.org>
++
++	* eword-decode.el (eword-decode-string, eword-decode-region)
++	(eword-analyze-encoded-word): Express the language portion of an
++	encoded word as a symbol.
++
++	* tests/test-rfc2231.el (test-rfc2231-encoded-word-1)
++	(test-rfc2231-encoded-word-2, test-rfc2231-encoded-word-3): Use
++	eword-decode-string instead of eword-decode-encoded-word.
++
++2008-09-20  Yoichi NAKAYAMA  <yoichi@geiin.org>
++
++	* mel-q-ccl.el (mel-ccl-256-to-16-table): Accept (illegal) lower
++	case representation for decoding.
++
++
+ 2007-11-28  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+-	* FLIM: Version 1.14.9 (Goj-DÚ) released.-A
++	* FLIM: Version 1.14.9 (Goj≈ç) released.
+ 
+ 2006-12-20  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+@@ -86,7 +901,7 @@
+ 
+ 2005-12-25  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+-	* FLIM: Version 1.14.8 (Shij-DÚ) released.-A
++	* FLIM: Version 1.14.8 (Shij≈ç) released.
+ 
+ 2005-12-25  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+@@ -111,7 +926,7 @@
+ 
+ 2004-10-01  MORIOKA Tomohiko  <tomo@mousai.as.wakwak.ne.jp>
+ 
+-	* FLIM: Version 1.14.7 (Sanj-DÚ) released.-A
++	* FLIM: Version 1.14.7 (Sanj≈ç) released.
+ 
+ 2004-10-01  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+@@ -399,7 +1214,7 @@
+ 
+ 2002-06-03  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+-	* FLIM: Version 1.14.4 (Kashiharajing-D˛-mae) released.-A
++	* FLIM: Version 1.14.4 (Kashiharajing≈´-mae) released.
+ 
+ 2002-01-16  Hiroya Murata     <lapis-lazuli@pop06.odn.ne.jp>
+ 
+@@ -450,7 +1265,7 @@
+ 
+ 2001-06-01  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+-	* FLIM: Version 1.14.3 (Unebigory-DÚmae) released.-A
++	* FLIM: Version 1.14.3 (Unebigory≈çmae) released.
+ 
+ 2001-06-01  Katsumi Yamaoka   <yamaoka@jpl.org>
+ 
+@@ -1512,7 +2327,7 @@
+ 
+ 2000-07-12  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+-	* FLIM-Chao: Version 1.14.1 (Rokujiz-DÚ) released.-A
++	* FLIM-Chao: Version 1.14.1 (Rokujiz≈ç) released.
+ 
+ 2000-07-10  MORIOKA Tomohiko  <tomo@kanji.zinbun.kyoto-u.ac.jp>
+ 
+@@ -2130,7 +2945,7 @@
+ 
+ 1999-05-31  MORIOKA Tomohiko  <tomo@m17n.org>
+ 
+-	* FLIM: Version 1.12.7 (Y-D˛zaki) released.-A
++	* FLIM: Version 1.12.7 (Y≈´zaki) released.
+ 
+ 1999-05-31  MORIOKA Tomohiko  <tomo@m17n.org>
+ 
+@@ -2305,7 +3120,7 @@
+ 
+ 1999-05-11  MORIOKA Tomohiko  <tomo@m17n.org>
+ 
+-	* FLIM: Version 1.12.6 (Family-K-DÚenmae) released.-A
++	* FLIM: Version 1.12.6 (Family-K≈çenmae) released.
+ 
+ 1999-04-27  Shuhei KOBAYASHI  <shuhei@aqua.ocn.ne.jp>
+ 
+@@ -2422,7 +3237,7 @@
+ 
+ 1999-01-23  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.12.3 (Kintetsu-K-DÚriyama) released.-A
++	* FLIM: Version 1.12.3 (Kintetsu-K≈çriyama) released.
+ 
+ 1999-01-23  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -2465,7 +3280,7 @@
+ 
+ 1999-01-21  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.12.2 (Kuj-DÚ) released.-A
++	* FLIM: Version 1.12.2 (Kuj≈ç) released.
+ 
+ 1999-01-16  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -2651,7 +3466,7 @@
+ 
+ 1998-12-02  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.12.1 (Nishinoky-DÚ) released.-A
++	* FLIM: Version 1.12.1 (Nishinoky≈ç) released.
+ 
+ 1998-11-30  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -2869,7 +3684,7 @@
+ 
+ 1998-10-26  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.11.2 (Heij-DÚ) was released.-A
++	* FLIM: Version 1.11.2 (Heij≈ç) was released.
+ 
+ 	* NEWS (Abolish variable `mime-temp-directory'): New subsection.
+ 
+@@ -3149,7 +3964,7 @@
+ 
+ 1998-10-12  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.10.4 (Shin-H-DÚsono) was released.-A
++	* FLIM: Version 1.10.4 (Shin-H≈çsono) was released.
+ 
+ 1998-10-12  Katsumi Yamaoka   <yamaoka@jpl.org>
+ 
+@@ -3334,7 +4149,7 @@
+ 
+ 1998-09-29  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.10.0 (K-DÚdo) was released.-A
++	* FLIM: Version 1.10.0 (K≈çdo) was released.
+ 
+ 	* README.en (What's FLIM): Add mel-ccl.el.
+ 
+@@ -3621,7 +4436,7 @@
+ 
+ 1998-08-31  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.9.1 (Tonosh-DÚ) was released.-A
++	* FLIM: Version 1.9.1 (Tonosh≈ç) was released.
+ 
+ 	* mime-en.sgml (mm-backend): Translate a little.
+ 
+@@ -3764,7 +4579,7 @@
+ 
+ 1998-07-07  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM-Chao: Version 1.8.0 (Shij-DÚ) was released.-A
++	* FLIM-Chao: Version 1.8.0 (Shij≈ç) was released.
+ 
+ 1998-07-07  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -3876,7 +4691,7 @@
+ 
+ 1998-07-01  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.8.0 (-D“kubo) was released.-A
++	* FLIM: Version 1.8.0 (≈åkubo) was released.
+ 
+ 	* README.en: Delete `How to use'.
+ 
+@@ -4001,7 +4816,7 @@
+ 
+ 1998-06-28  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM-Chao: Version 1.7.0 (Goj-DÚ) was released.-A
++	* FLIM-Chao: Version 1.7.0 (Goj≈ç) was released.
+ 
+ 1998-06-26  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -4260,7 +5075,7 @@
+ 
+ 1998-06-19  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.4.1 (Momoyama-Gory-DÚmae) was released.-A
++	* FLIM: Version 1.4.1 (Momoyama-Gory≈çmae) was released.
+ 
+ 1998-06-18  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -4380,7 +5195,7 @@
+ 
+ 1998-05-06  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.2.0 (J-D˛jÚ) was released.-A
++	* FLIM: Version 1.2.0 (J≈´j≈ç) was released.
+ 
+ 	* README.en (What's FLIM): Delete description about
+  	std11-parse.el; add description about mailcap.el.
+@@ -4431,7 +5246,7 @@
+ 
+ 1998-05-05  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.1.0 (T-DÚji) was released.-A
++	* FLIM: Version 1.1.0 (T≈çji) was released.
+ 
+ 1998-05-04  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+@@ -4467,7 +5282,7 @@
+ 
+ 1998-04-17  MORIOKA Tomohiko  <morioka@jaist.ac.jp>
+ 
+-	* FLIM: Version 1.0.1 (Ky-DÚto) was released.-A
++	* FLIM: Version 1.0.1 (Ky≈çto) was released.
+ 
+ 	* mime-def.el (mime-spadework-module-version-string): New
+  	constant.
