@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2003/04/13 04:16:18 uebayasi Exp $
+$NetBSD: patch-ab,v 1.2 2023/09/03 14:58:38 mef Exp $
+
+Add direntry
 
 --- mime-en.texi.orig	Wed Oct  9 00:50:05 2002
 +++ mime-en.texi

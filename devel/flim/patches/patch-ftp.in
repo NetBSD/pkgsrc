@@ -1,0 +1,22 @@
+$NetBSD: patch-ftp.in,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+sync to  lexical-binding
+
+--- /tmp/wip/flim/work/flim-1.14.9/./ftp.in	1970-01-01 09:00:00.000000000 +0900
++++ ././ftp.in	2018-07-29 22:48:22.274798660 +0900
+@@ -0,0 +1,15 @@
++--<<alternative>>-{
++
++  It is available from
++
++    http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/lemi/dist/flim/flim-API/
++
++--[[message/external-body; access-type=URL;
++	URL*0="http://";
++	URL*1="www.kanji.zinbun.kyoto-u.ac.jp/~tomo/";
++	URL*2="lemi/dist/";
++	URL*3="flim/flim-API/";
++	URL*4="PACKAGE-VERSION.tar.gz"]]
++Content-Type: application/octet-stream
++Content-Disposition: attachment; filename="PACKAGE-VERSION.tar.gz"
++--}-<<alternative>>

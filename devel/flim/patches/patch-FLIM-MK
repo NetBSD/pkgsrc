@@ -1,0 +1,70 @@
+$NetBSD: patch-FLIM-MK,v 1.1 2023/09/03 14:58:38 mef Exp $
+
+ flim-1_14-wl branch at 2023-08-08
+
+--- /tmp/W/devel/flim/work/flim-1.14.9/FLIM-MK	2006-12-12 17:21:00.000000000 +0900
++++ ./FLIM-MK	2023-08-31 08:29:38.579192058 +0900
+@@ -21,6 +21,16 @@
+ 	       (princ (format "VERSION_SPECIFIC_LISPDIR=%s\n"
+ 			      VERSION_SPECIFIC_LISPDIR)))))
+     (setq command-line-args-left (cdr command-line-args-left))
++    (and (setq package-lisp-dir (car command-line-args-left))
++	 (or (string-equal "NONE" package-lisp-dir)
++	     (progn
++	       (defvar PACKAGE_LISPDIR
++		 (if (boundp (intern package-lisp-dir))
++		     (symbol-value (intern package-lisp-dir))
++		   package-lisp-dir))
++	       (princ (format "PACKAGE_LISPDIR=%s\n"
++			      PACKAGE_LISPDIR)))))
++    (setq command-line-args-left (cdr command-line-args-left))
+     (load-file "FLIM-CFG")
+     (load-file "FLIM-ELS")
+     (princ (format "PREFIX=%s
+@@ -54,46 +64,4 @@
+       (setq files (cdr files)))
+     (lunit suite)))
+ 
+-(defun config-flim-package ()
+-  (let (package-dir)
+-    (and (setq package-dir (car command-line-args-left))
+-	 (or (string= "NONE" package-dir)
+-	     (defvar PACKAGEDIR package-dir)))
+-    (setq command-line-args-left (cdr command-line-args-left))
+-    (load-file "FLIM-CFG")
+-    (load-file "FLIM-ELS")
+-    (setq flim-modules (append flim-modules
+-			       '(auto-autoloads custom-load)))
+-    (princ (format "PACKAGEDIR=%s\n" PACKAGEDIR))))
+-
+-(defun compile-flim-package ()
+-  (config-flim-package)
+-
+-  (if (fboundp 'batch-update-directory-autoloads)
+-      ;; XEmacs 21.5.19 and newer.
+-      (progn
+-	(add-to-list 'command-line-args-left ".")
+-	(add-to-list 'command-line-args-left "flim")
+-	(batch-update-directory-autoloads))
+-    (setq autoload-package-name "flim")
+-    (add-to-list 'command-line-args-left ".")
+-    (batch-update-directory))
+-
+-  (add-to-list 'command-line-args-left ".")
+-  (Custom-make-dependencies)
+-
+-  (compile-elisp-modules flim-version-specific-modules ".")
+-  (compile-elisp-modules flim-modules "."))
+-
+-(defun install-flim-package ()
+-  (config-flim-package)
+-  (install-elisp-modules (append flim-version-specific-modules
+-				 flim-modules)
+-			 "./"
+-			 (expand-file-name FLIM_PREFIX
+-					   (expand-file-name "lisp"
+-							     PACKAGEDIR)))
+-  (delete-file "./auto-autoloads.el")
+-  (delete-file "./custom-load.el"))
+-
+ ;;; FLIM-MK ends here
