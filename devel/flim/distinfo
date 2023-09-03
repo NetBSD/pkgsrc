@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2023/09/03 14:58:38 mef Exp $
+$NetBSD: distinfo,v 1.16 2023/09/03 15:05:29 mef Exp $
 
 BLAKE2s (flim-1.14.9.tar.gz) = a21dfc084bedd6ba75f20988d5e1e5fae0d758dd5e0f977527c165ebedc77375
 SHA512 (flim-1.14.9.tar.gz) = a272a30f27cea24f537b9bf3a6dbb25113deff0ab8e1c03bd802e4d32d673d567d282297ed9e4d35217f069699a1fc25bfdde09778171a188dfa46f49e9bb7dd
@@ -31,7 +31,6 @@ SHA1 (patch-mime-def.el) = d2402e3e87f56119dd6376806d80bcba146ca226
 SHA1 (patch-mime-en.texi) = 7aec003da716e020b2bcf1b7871704cf998f7fe1
 SHA1 (patch-mime-ja.texi) = 93b1b11ac75058b3dadb72103477845487ee1e39
 SHA1 (patch-mime-parse.el) = b836b35e2ee55205f0043660e6f9695a8492e8d6
-SHA1 (patch-mime-parse.el-00) = 557e8bb815cf361acc1f7c6b0d6867aa6a2dad64
 SHA1 (patch-mime.el) = b8eb7d1884a0198baa03931daf0f033e57aee622
 SHA1 (patch-mmbuffer.el) = 637507580af8ff1709e776db2d9faffb71684d17
 SHA1 (patch-mmcooked.el) = f922bcc9d8e37dc0a145d747c89e24f1ce988f94
