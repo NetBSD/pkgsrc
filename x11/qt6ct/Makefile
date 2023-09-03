@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/09/02 14:02:26 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/03 05:23:18 vins Exp $
 
 DISTNAME=	qt6ct-0.8
 CATEGORIES=	x11
@@ -39,6 +39,5 @@ post-install:
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.pkg.mk"
