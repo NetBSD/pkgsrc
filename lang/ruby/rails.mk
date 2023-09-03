@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.152 2023/09/03 15:33:42 taca Exp $
+# $NetBSD: rails.mk,v 1.153 2023/09/03 15:56:57 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 52 60 61 70
+#	Possible values: 61 70
 #	Default: 61
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 52 60 61 70
+#	Possible values: 61 70
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,23 +41,21 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 52 60 61 70
+#	Possible values: 61 70
 #
 
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS52_VERSION?=	5.2.8.1
-RUBY_RAILS60_VERSION?=	6.0.6.1
 RUBY_RAILS61_VERSION?=	6.1.7.6
 RUBY_RAILS70_VERSION?=	7.0.7.2
 
 RUBY_RAILS_ACCEPTED?=	# empty
-RUBY_RAILS_DEFAULT?=	52
+RUBY_RAILS_DEFAULT?=	61
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	52 60 61 70
+RUBY_RAILS_SUPPORTED=	61 70
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .  error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -94,10 +92,6 @@ RUBY_RAILS_REQD?=	${RUBY_RAILS}
 RAILS_VERSION:=	${RUBY_RAILS70_VERSION}
 .elif ${RUBY_RAILS} == "61"
 RAILS_VERSION:=	${RUBY_RAILS61_VERSION}
-.elif ${RUBY_RAILS} == "60"
-RAILS_VERSION:=	${RUBY_RAILS60_VERSION}
-.elif ${RUBY_RAILS} == "52"
-RAILS_VERSION:=	${RUBY_RAILS52_VERSION}
 .endif
 
 #
@@ -153,11 +147,9 @@ RUBY_ACTIONCABLE_DEPENDS= \
 	${RUBY_PKGPREFIX}-actioncable${_RAILS_DEP}:../../www/ruby-actioncable${RUBY_RAILS}
 RUBY_ACTIVESTORAGE_DEPENDS= \
 	${RUBY_PKGPREFIX}-activestorage${_RAILS_DEP}:../../devel/ruby-activestorage${RUBY_RAILS}
-.if ${RUBY_RAILS} >= 60
 RUBY_ACTIONMAILBOX_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionmailbox${_RAILS_DEP}:../../mail/ruby-actionmailbox${RUBY_RAILS}
 RUBY_ACTIONTEXT_DEPENDS= \
 	${RUBY_PKGPREFIX}-actiontext${_RAILS_DEP}:../../textproc/ruby-actiontext${RUBY_RAILS}
-.endif
 
 .endif
