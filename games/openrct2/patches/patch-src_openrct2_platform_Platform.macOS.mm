@@ -1,10 +1,10 @@
-$NetBSD: patch-src_openrct2_platform_Platform.macOS.mm,v 1.3 2023/09/02 07:30:35 triaxx Exp $
+$NetBSD: patch-src_openrct2_platform_Platform.macOS.mm,v 1.4 2023/09/03 12:14:30 triaxx Exp $
 
 Support pkgsrc.
 
 --- src/openrct2/platform/Platform.macOS.mm.orig	2021-03-13 11:17:05.000000000 +0000
 +++ src/openrct2/platform/Platform.macOS.mm
-@@ -94,21 +94,7 @@ namespace Platform
+@@ -96,21 +96,7 @@ namespace Platform
              }
              else
              {

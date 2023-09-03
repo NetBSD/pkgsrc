@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/09/03 07:05:36 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/09/03 12:14:30 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -26,6 +26,7 @@ share/icons/hicolor/scalable/apps/openrct2.svg
 share/metainfo/openrct2.appdata.xml
 share/mime/packages/openrct2.xml
 share/openrct2/assetpack/openrct2.music.alternative.parkap
+share/openrct2/assetpack/openrct2.music.cover.parkap
 share/openrct2/assetpack/openrct2.sound.parkap
 share/openrct2/g2.dat
 share/openrct2/language/ar-EG.txt
@@ -64,7 +65,10 @@ share/openrct2/object/official/music/openrct2.music.acid.parkobj
 share/openrct2/object/official/music/openrct2.music.blizzard.parkobj
 share/openrct2/object/official/music/openrct2.music.dodgems.parkobj
 share/openrct2/object/official/music/openrct2.music.extraterrestrial.parkobj
+share/openrct2/object/official/music/openrct2.music.fairground2.parkobj
 share/openrct2/object/official/music/openrct2.music.galaxy.parkobj
+share/openrct2/object/official/music/openrct2.music.prehistoric.parkobj
+share/openrct2/object/official/music/openrct2.music.ragtime2.parkobj
 share/openrct2/object/official/ride/openrct2.ride.alpine_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.hybrid_coaster.parkobj
 share/openrct2/object/official/ride/openrct2.ride.single_rail_coaster.parkobj
