@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.21 2023/01/19 14:27:26 taca Exp $
-
-BLAKE2s (rails-6.0.6.1.gem) = 23cd7dbc0a386e37c3a42374713621a2f44af2b474e5da645e1202f38f0044ce
-SHA512 (rails-6.0.6.1.gem) = 7a656dae2490b9195f88db997f08ef70bec7df579b849acde017e58552f7dd30f71f69cfa5676d703f921a7f0fc5ba31e96586850ace33b5d9e5db9830b6f807
-Size (rails-6.0.6.1.gem) = 6656 bytes
