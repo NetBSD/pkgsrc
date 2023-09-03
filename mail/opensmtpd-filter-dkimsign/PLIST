@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/03 13:00:42 vins Exp $
+libexec/opensmtpd/filter-dkimsign
+man/man8/filter-dkimsign.8
+share/doc/opensmtpd/filters/README.dkim
