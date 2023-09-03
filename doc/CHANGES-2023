@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5297 2023/09/03 15:32:45 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5298 2023/09/03 15:51:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7733,3 +7733,16 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-activejob52 to 5.2.8.1 [taca 2023-09-03]
 	Removed devel/ruby-activemodel52 to 5.2.8.1 [taca 2023-09-03]
 	Removed devel/ruby-activesupport52 to 5.2.8.1nb2 [taca 2023-09-03]
+	Removed www/ruby-rails60 [taca 2023-09-03]
+	Removed textproc/ruby-actiontext60 [taca 2023-09-03]
+	Removed devel/ruby-railties60 [taca 2023-09-03]
+	Removed www/ruby-actioncable60 [taca 2023-09-03]
+	Removed mail/ruby-actionmailbox60 [taca 2023-09-03]
+	Removed devel/ruby-activestorage60 [taca 2023-09-03]
+	Removed mail/ruby-actionmailer60 [taca 2023-09-03]
+	Removed databases/ruby-activerecord60 [taca 2023-09-03]
+	Removed www/ruby-actionpack60 [taca 2023-09-03]
+	Removed www/ruby-actionview60 [taca 2023-09-03]
+	Removed devel/ruby-activejob60 [taca 2023-09-03]
+	Removed devel/ruby-activemodel60 [taca 2023-09-03]
+	Removed devel/ruby-activesupport60 [taca 2023-09-03]
