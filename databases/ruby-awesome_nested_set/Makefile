@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/02/12 07:15:46 taca Exp $
+# $NetBSD: Makefile,v 1.19 2023/09/03 15:42:31 taca Exp $
 
 DISTNAME=	awesome_nested_set-3.5.0
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
