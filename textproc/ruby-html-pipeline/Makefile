@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/04 15:58:33 taca Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/03 15:42:32 taca Exp $
 
 DISTNAME=	html-pipeline-2.14.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
