@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5284 2023/09/02 21:37:01 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5285 2023/09/03 01:40:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7694,3 +7694,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.4.2 [triaxx 2023-09-02]
 	Updated games/openrct2 to 0.4.3 [triaxx 2023-09-02]
 	Added devel/libopensmtpd version 0.7 [vins 2023-09-02]
+	Updated databases/ruby-pg to 1.5.4 [taca 2023-09-03]
