@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5293 2023/09/03 12:14:50 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5294 2023/09/03 13:07:20 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7719,3 +7719,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/ruby-gtksourceview3 to 4.2.0 [tsutsui 2023-09-03]
 	Updated geography/py-googlemaps to 4.10.0 [kleink 2023-09-03]
 	Updated games/openrct2 to 0.4.5 [triaxx 2023-09-03]
+	Added mail/opensmtpd-filter-dkimsign version 0.6 [vins 2023-09-03]
