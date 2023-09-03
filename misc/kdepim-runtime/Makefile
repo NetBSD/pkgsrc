@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/16 06:05:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/03 11:27:13 markd Exp $
 
 DISTNAME=	kdepim-runtime-${KAPPSVER}
 CATEGORIES=	misc
@@ -25,6 +25,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../textproc/libkolabxml/buildlink3.mk"
 .include "../../time/akonadi-calendar/buildlink3.mk"
+.include "../../time/kholidays/buildlink3.mk"
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
