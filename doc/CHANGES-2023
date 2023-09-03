@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5306 2023/09/03 16:11:47 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5307 2023/09/03 16:13:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7753,3 +7753,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rotp to 6.3.0 [taca 2023-09-03]
 	Updated sysutils/ruby-serverspec to 2.42.3 [taca 2023-09-03]
 	Updated www/ruby-aws-partitions to 1.816.0 [taca 2023-09-03]
+	Updated www/ruby-css-parser to 1.16.0 [taca 2023-09-03]
