@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5299 2023/09/03 15:53:16 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5300 2023/09/03 15:55:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7746,3 +7746,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/ruby-activejob60 [taca 2023-09-03]
 	Removed devel/ruby-activemodel60 [taca 2023-09-03]
 	Removed devel/ruby-activesupport60 [taca 2023-09-03]
+	Updated devel/ruby-globalid to 1.2.0 [taca 2023-09-03]
