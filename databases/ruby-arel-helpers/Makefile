@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/12/19 06:31:44 taca Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/03 15:42:31 taca Exp $
 
 DISTNAME=	arel-helpers-2.14.0
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	minskim@NetBSD.org

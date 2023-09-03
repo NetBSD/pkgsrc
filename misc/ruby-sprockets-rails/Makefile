@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/12/13 15:00:47 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/03 15:42:32 taca Exp $
 
 DISTNAME=	sprockets-rails-3.4.2
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
