@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2023/09/01 20:21:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.39 2023/09/03 22:46:58 riastradh Exp $
 
 DISTNAME=		racket-minimal-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	http://www.eecs.northwestern.edu/racket/${PKGVERSION_NOREV}/
@@ -46,12 +47,12 @@ LDFLAGS.DragonFly+=	-rdynamic
 
 EGDIR=			share/examples/racket
 INSTALLATION_DIRS+=	${EGDIR}
-OWN_DIRS+=		${PKG_SYSCONFDIR}/etc/racket
+OWN_DIRS+=		${PKG_SYSCONFDIR}/racket
 CONF_FILES+=		${EGDIR}/config.rktd \
-			${PKG_SYSCONFDIR}/etc/racket/config.rktd
+			${PKG_SYSCONFDIR}/racket/config.rktd
 
 post-install:
-	${MV} -f ${DESTDIR:Q}${PREFIX:Q}/etc/racket/config.rktd \
+	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
 
 .include "../../devel/ncurses/buildlink3.mk"
