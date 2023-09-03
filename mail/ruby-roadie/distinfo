@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/12/18 15:02:56 taca Exp $
+$NetBSD: distinfo,v 1.6 2023/09/03 16:06:01 taca Exp $
 
-BLAKE2s (roadie-5.1.0.gem) = 1a7621904d118751d82eb9888a42c521c20da21562eb3cf5fc8906bfc917d98e
-SHA512 (roadie-5.1.0.gem) = 3c6ec789e5d5d3963976579f4a7d7f15550f1f910b538b1794a23a2032cf911483ac2ed84b45563bf84ef7e1cede3e0fa685beef176a673d603573933185a3cc
-Size (roadie-5.1.0.gem) = 54784 bytes
+BLAKE2s (roadie-5.2.0.gem) = a34ddd3cd186427d0d722287a3155fe9b9e8c0cb2b1c139c983282ecd836cb8c
+SHA512 (roadie-5.2.0.gem) = 36a6f1b1d09533d5974a37b59bbf97bbde53a45b40e10c4356ea9646110d15e03fe401e9e03e912d36498dace3c87cd5d8a2f4d5dbd0e89efd99a4a481ccb3e3
+Size (roadie-5.2.0.gem) = 54784 bytes
