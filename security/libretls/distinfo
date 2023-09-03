@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2023/01/16 22:00:53 schmonz Exp $
+$NetBSD: distinfo,v 1.11 2023/09/03 06:23:41 vins Exp $
 
 BLAKE2s (libretls-3.7.0.tar.gz) = a41162dc3ed4515da87d053d745e5b35468357dd7f64bbaca2cec0eba17c585f
 SHA512 (libretls-3.7.0.tar.gz) = 18987d09ee804883e2c3cfae1209494b7020d976cc7137ba39540c18e0dc23d25034a46c6c64955201b425ca981e03cbe629f9ff979fd4a72d3dcfbd51efdf84
 Size (libretls-3.7.0.tar.gz) = 427980 bytes
+SHA1 (patch-tls.c) = 9ec66891d3a16fcfccb365b77ee0cc711ea4a067
