@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4058 2023/09/02 21:35:38 vins Exp $
+# $NetBSD: Makefile,v 1.4059 2023/09/03 15:29:48 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3157,19 +3157,15 @@ SUBDIR+=	rt5
 SUBDIR+=	rttr
 SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
-SUBDIR+=	ruby-activejob52
 SUBDIR+=	ruby-activejob60
 SUBDIR+=	ruby-activejob61
 SUBDIR+=	ruby-activejob70
-SUBDIR+=	ruby-activemodel52
 SUBDIR+=	ruby-activemodel60
 SUBDIR+=	ruby-activemodel61
 SUBDIR+=	ruby-activemodel70
-SUBDIR+=	ruby-activestorage52
 SUBDIR+=	ruby-activestorage60
 SUBDIR+=	ruby-activestorage61
 SUBDIR+=	ruby-activestorage70
-SUBDIR+=	ruby-activesupport52
 SUBDIR+=	ruby-activesupport60
 SUBDIR+=	ruby-activesupport61
 SUBDIR+=	ruby-activesupport70
@@ -3307,7 +3303,6 @@ SUBDIR+=	ruby-posix-spawn
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-protobuf-cucumber
 SUBDIR+=	ruby-pycall
-SUBDIR+=	ruby-railties52
 SUBDIR+=	ruby-railties60
 SUBDIR+=	ruby-railties61
 SUBDIR+=	ruby-railties70
