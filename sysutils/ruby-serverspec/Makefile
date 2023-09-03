@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/02/23 15:19:38 taca Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/03 16:09:34 taca Exp $
 
-DISTNAME=	serverspec-2.42.2
+DISTNAME=	serverspec-2.42.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
