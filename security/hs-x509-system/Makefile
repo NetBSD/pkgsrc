@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/02/07 01:41:05 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/03 00:15:22 riastradh Exp $
 
 DISTNAME=	x509-system-1.6.7
 PKGREVISION=	5
@@ -8,10 +8,6 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Handle per-operating-system X.509 accessors and storage
 LICENSE=	modified-bsd
 
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
-.endif
 SYSCONFDIR=	/etc
 
 SUBST_CLASSES+=		certs
