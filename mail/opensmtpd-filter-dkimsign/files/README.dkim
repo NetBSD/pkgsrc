@@ -1,0 +1,50 @@
++-----------------------------------------------------------------------
+| DKIM filter setup
++-----------------------------------------------------------------------
+
+To use filter-dkimsign, you must first generate a private key:
+
+  doas -u _dkimsign openssl genrsa -out @PKG_SYSCONFDIR@/smtpd/dkim/private.rsa.key 2048
+
+To generate the public key ready for dns:
+
+  openssl rsa -in @PKG_SYSCONFDIR@/smtpd/dkim/private.rsa.key -pubout | \
+    sed '1s/.*/v=DKIM1;p=/;:nl;${s/-----.*//;q;};N;s/\n//g;b nl;'
+
+This value needs to be placed in a DNS txt record with the following syntax:
+   <selector>._domainkey.<domain>
+
+Edit the @PKG_SYSCONFDIR@/smtpd.conf file to declare the filter:
+
+  filter "dkimsign_rsa" \
+	proc-exec "@PREFIX@/libexec/opensmtpd/filter-dkimsign -d <domain> -s <selector> \
+	-k @PKG_SYSCONFDIR@/smtpd/dkim/private.rsa.key" user _dkimsign group _dkimsign
+
+Then add the filter to each listener that should be signed:
+
+  listen on all filter dkimsign_rsa
+
+-----------------------------------------------------------------------
+
+To use Ed25519 similar steps must be taken.
+
+To generate the private key:
+
+  doas -u _dkimsign openssl genpkey -algorithm ed25519 -outform PEM -out @PKG_SYSCONFDIR@/smtpd/dkim/private.ed25519.key
+
+To generate the public key ready for dns:
+
+  printf "v=DKIM1;k=ed25519;p=%s\n" "$(doas -u _dkimsign openssl pkey -outform DER -pubout -in @PKG_SYSCONFDIR@/smtpd/dkim/private.ed25519.key | tail -c +13 | openssl base64)"
+
+Edit the @PKG_SYSCONFDIR@/smtpd/smtpd.conf file to declare the filter:
+
+  filter "dkimsign_ed25519" \
+	proc-exec "@PREFIX@/libexec/opensmtpd/filter-dkimsign -a ed25519-sha256 -d <domain> -s <selector> \
+	-k @PKG_SYSCONFDIR@/smtpd/dkim/private.ed25519.key" user _dkimsign group _dkimsign
+
+To add both filters to each listener that should be signed:
+
+  filter dkimsign chain { dkimsign_rsa, dkimsign_ed25519 }
+  listen on all filter dkimsign
+
+For a full list of options see filter-dkimsign(8).
