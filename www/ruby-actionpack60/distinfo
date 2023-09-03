@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.22 2023/06/29 16:03:34 taca Exp $
-
-BLAKE2s (actionpack-6.0.6.1.gem) = 00f6f3cfdcb407dc89f20fb9cd83e74bb8a6cfed3b4a091435cea31a038a4905
-SHA512 (actionpack-6.0.6.1.gem) = 56bfa53909b22fd94d9065503ab250a7a6fa2535037d1f8e1a5065d947ce5e140530b52f2948163d6a43f2b31c01f65ad29cf0f1d007c0941eef6d7fdc6e1cf2
-Size (actionpack-6.0.6.1.gem) = 218624 bytes
-SHA1 (patch-lib_action__controller_metal_redirecting.rb) = b30440c1ed272d9cddf7a997240224f75f800577
