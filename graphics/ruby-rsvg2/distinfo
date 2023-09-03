@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/08/12 08:37:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.20 2023/09/03 10:22:13 tsutsui Exp $
 
-BLAKE2s (rsvg2-4.1.9.gem) = 6b271ba14ab6c5abca1a9fa6ba9d40eec56b8828fd41afdce016a518885bdf5f
-SHA512 (rsvg2-4.1.9.gem) = 8ae73cc3b4f44f6187a0e669d886ce3471161b27ff305a654fadab5ada9258f2bbfb705f178f9f0a24bc43e8f93ca688ef8eae0a4d9c442ed2f7d5b726652140
-Size (rsvg2-4.1.9.gem) = 29696 bytes
+BLAKE2s (rsvg2-4.2.0.gem) = 0b861becb4dfa8f3dd1bd43c902e1269c908640118ac085a1d5bf6f60b05789a
+SHA512 (rsvg2-4.2.0.gem) = 13a36a7c9df80596c1bdf653aca924e81676ee14efcb0b8d454634c34496f20025d68435b9686f893d1f8b4e1c407891b037e3ddc7f1a834ba1c0d6225f0d614
+Size (rsvg2-4.2.0.gem) = 29696 bytes
