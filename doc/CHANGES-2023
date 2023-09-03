@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5303 2023/09/03 16:06:23 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5304 2023/09/03 16:07:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7750,3 +7750,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-pkg-config to 1.5.3 [taca 2023-09-03]
 	Updated finance/ruby-braintree to 4.13.0 [taca 2023-09-03]
 	Updated mail/ruby-roadie to 5.2.0 [taca 2023-09-03]
+	Updated security/ruby-rotp to 6.3.0 [taca 2023-09-03]
