@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5295 2023/09/03 14:37:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5296 2023/09/03 15:27:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7721,3 +7721,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openrct2 to 0.4.5 [triaxx 2023-09-03]
 	Added mail/opensmtpd-filter-dkimsign version 0.6 [vins 2023-09-03]
 	Updated graphics/oculante to 0.7.4 [pin 2023-09-03]
+	Updated shells/oh-my-posh to 18.6.3 [pin 2023-09-03]
