@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.110 2023/08/05 08:51:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.111 2023/09/03 01:42:32 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -97,6 +97,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.69.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.70.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.71.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.72.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
@@ -239,6 +240,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize_in_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_enum.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_date_support.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_integer_support.rb
