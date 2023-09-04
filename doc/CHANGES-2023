@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5328 2023/09/04 19:51:28 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.5329 2023/09/04 22:27:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7776,3 +7776,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/daemontools to 0.76nb5 [schmonz 2023-09-04]
 	Updated sysutils/daemontools-run to 20230904 [schmonz 2023-09-04]
 	Updated pkgtools/libnbcompat to 20230904 [jperkin 2023-09-04]
+	Updated sysutils/xfce4-appfinder to 4.18.1 [gutteridge 2023-09-04]
