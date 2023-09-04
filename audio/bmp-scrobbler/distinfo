@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:58:49 nia Exp $
-
-BLAKE2s (xmms-scrobbler-0.4.0.tar.bz2) = 987d7d2c151c593ef9ac83a4f49c1606bca6ed2ff092605e01c3cdc17641aae3
-SHA512 (xmms-scrobbler-0.4.0.tar.bz2) = 7d9ab56676a822680b25a01c76e8cf49b3828ee8d0a7ce586f1942a32298e9cc0e09325092bddbeca15726803e8788cac190afd867602d892b4f794abe443558
-Size (xmms-scrobbler-0.4.0.tar.bz2) = 270712 bytes
