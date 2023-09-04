@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5327 2023/09/04 17:51:16 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5328 2023/09/04 19:51:28 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7775,3 +7775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added converters/dvisvgm version 2.1.3 [wiz 2023-09-04]
 	Updated sysutils/daemontools to 0.76nb5 [schmonz 2023-09-04]
 	Updated sysutils/daemontools-run to 20230904 [schmonz 2023-09-04]
+	Updated pkgtools/libnbcompat to 20230904 [jperkin 2023-09-04]
