@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2023/01/29 21:14:22 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2023/09/04 13:51:00 wiz Exp $
 
 BUILDLINK_TREE+=	libcanberra
 
@@ -12,10 +12,10 @@ BUILDLINK_PKGSRCDIR.libcanberra?=	../../audio/libcanberra
 pkgbase := libcanberra
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libcanberra:Mgtk)
+.if ${PKG_BUILD_OPTIONS.libcanberra:Mgtk}
 .include "../../x11/gtk2/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.libcanberra:Mgtk3)
+.if ${PKG_BUILD_OPTIONS.libcanberra:Mgtk3}
 .include "../../x11/gtk3/buildlink3.mk"
 .endif
 .include "../../audio/libvorbis/buildlink3.mk"
