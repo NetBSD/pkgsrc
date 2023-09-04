@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/04 10:32:47 vins Exp $
+bin/filter-dnsbl
+man/man8/filter-dnsbl.8
+share/doc/opensmtpd/filters/README.dnsbl
+@pkgdir libexec/opensmtpd
