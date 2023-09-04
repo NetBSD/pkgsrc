@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/08/02 06:45:12 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/09/04 09:42:18 wiz Exp $
 
 DISTNAME=	chardet-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,10 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup-[0-9]*:../../devel/py-exceptiongroup
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
