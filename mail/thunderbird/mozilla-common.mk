@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2023/08/25 10:15:01 pho Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2023/09/04 11:42:38 prlw1 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -29,6 +29,7 @@ TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+TOOL_DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 # malloc_usable_size()
