@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/04 14:16:29 wiz Exp $
+bin/dvisvgm
+man/man1/dvisvgm.1
