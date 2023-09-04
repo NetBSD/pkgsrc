@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.674 2023/09/04 09:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.675 2023/09/04 09:36:38 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -42,7 +42,6 @@ SUBDIR+=	bmp-crossfade
 SUBDIR+=	bmp-mac
 SUBDIR+=	bmp-musepack
 SUBDIR+=	bmp-pulse
-SUBDIR+=	bmp-scrobbler
 SUBDIR+=	buzztrax
 SUBDIR+=	cam
 SUBDIR+=	cantata
