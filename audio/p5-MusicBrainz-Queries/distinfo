@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:59:21 nia Exp $
-
-BLAKE2s (MusicBrainz-Queries-0.11.tar.gz) = 9971aa1009f2c8ed9c1d6f54ce23b60d2d80931c58786fd3fd9f9a11b070c283
-SHA512 (MusicBrainz-Queries-0.11.tar.gz) = ddbd3838d01bb59a3c9e9553566b529fb961f0114713fc90baa1220a0b712d72476f377382c18e262ba0667b982749df819e76421b0fbe237050eba82a946584
-Size (MusicBrainz-Queries-0.11.tar.gz) = 19080 bytes
