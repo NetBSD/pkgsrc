@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2023/08/25 17:14:07 gdt Exp $
+# $NetBSD: Makefile,v 1.127 2023/09/04 11:20:11 vins Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -39,6 +39,7 @@ SUBDIR+=	nagios
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
+SUBDIR+=	opensmtpd-filters
 SUBDIR+=	php56-extensions
 SUBDIR+=	php74-extensions
 SUBDIR+=	php80-extensions
