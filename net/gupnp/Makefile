@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/09/03 11:58:54 adam Exp $
+# $NetBSD: Makefile,v 1.87 2023/09/04 12:17:55 wiz Exp $
 
 DISTNAME=	gupnp-1.6.5
 CATEGORIES=	net
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/GUPnP
 COMMENT=	Framework for UPnP devices
 LICENSE=	gnu-lgpl-v2
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	pkg-config
 
@@ -41,6 +44,4 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.58.0
 .include "../../net/libsoup3/buildlink3.mk"
 .include "../../net/gssdp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libxslt=	build # for xsltproc
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
