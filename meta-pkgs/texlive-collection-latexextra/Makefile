@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2023/08/14 05:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2023/09/04 20:42:12 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre4
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2023pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	67376
@@ -585,7 +584,7 @@ DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
 # depend gcite
 # depend gender
 # depend genmpage
-# depend gensymb
+DEPENDS+=	tex-gensymb-[0-9]*:../../print/tex-gensymb
 # depend getfiledate
 # depend getitems
 # depend gindex
