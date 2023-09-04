@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2023/05/02 17:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.207 2023/09/04 14:16:53 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -25,6 +25,7 @@ SUBDIR+=	docx2txt
 SUBDIR+=	dos2unix
 SUBDIR+=	dsk2rom
 SUBDIR+=	dvi2tty
+SUBDIR+=	dvisvgm
 SUBDIR+=	enriched2html
 SUBDIR+=	erlang-iconv
 SUBDIR+=	fondu
