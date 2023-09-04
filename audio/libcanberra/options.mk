@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2018/11/29 11:20:18 prlw1 Exp $
+# $NetBSD: options.mk,v 1.4 2023/09/04 13:50:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libcanberra
 PKG_SUPPORTED_OPTIONS=	gtk gtk3
-PKG_SUGGESTED_OPTIONS=	gtk gtk3
+PKG_SUGGESTED_OPTIONS=	gtk3
 
 .include "../../mk/bsd.options.mk"
 
