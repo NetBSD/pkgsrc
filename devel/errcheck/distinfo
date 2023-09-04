@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2022/09/17 10:18:28 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2023/09/04 08:19:49 bsiegert Exp $
 
-BLAKE2s (errcheck-1.6.2.tar.gz) = 2ad1de2647af6a6aeac5f66e31e0d67f25e6010102219d9fc13604873b126a2f
-SHA512 (errcheck-1.6.2.tar.gz) = 2b3f238fc4411b6b853895993333f3bab338285aea3939b8ec4286719047d02d2ee5b1c45f2c0dca973dcd1db8c7e228f416ecfa4990d5e6923a5e125bd0ca67
-Size (errcheck-1.6.2.tar.gz) = 21453 bytes
+BLAKE2s (errcheck-1.6.3.tar.gz) = 3a3221f06fd3d29d85c7dc609b973e565e0e517727571cf71ce27f2dadcba407
+SHA512 (errcheck-1.6.3.tar.gz) = bb7e04be5579fb203fb8bf4445f857c1ccbbab42288fe4b318f38730cd96d0253840baa398fd96371b5f8433e132c84fc3f89afa02d8a189178379c6b735925f
+Size (errcheck-1.6.3.tar.gz) = 21801 bytes
 BLAKE2s (github.com_yuin_goldmark_@v_v1.4.1.mod) = 8cd9565cec9006d9acaaa1272611bb4f570a7f94e866ff05987335c06ca21aee
 SHA512 (github.com_yuin_goldmark_@v_v1.4.1.mod) = a6233a0864081261d4b9cda2d73cf37b236acada8f5fbc85b7b7978ccfbc3bd2949632f2fb67a7ba9db6eb43b41796df54460728379e0172082922820d6143a7
 Size (github.com_yuin_goldmark_@v_v1.4.1.mod) = 41 bytes
