@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: svscan.sh,v 1.5 2017/08/05 15:20:03 schmonz Exp $
+# $NetBSD: svscan.sh,v 1.6 2023/09/04 17:51:11 schmonz Exp $
 #
 # @PKGNAME@ script to control svscan (service supervisor).
 #
@@ -14,7 +14,7 @@ name="svscan"
 # User-settable rc.conf variables and their default values:
 : ${svscan_postenv:="PATH=@PREFIX@/sbin:@PREFIX@/bin:$PATH"}
 : ${svscan_datalimit:="3000000"}
-: ${svscan_servicedir:="@VARBASE@/service"}
+: ${svscan_servicedir:="/service"}
 : ${svscan_log:="YES"}
 : ${svscan_logcmd:="logger -t nb${name} -p daemon.info"}
 : ${svscan_nologcmd:="@PREFIX@/bin/multilog -*"}
