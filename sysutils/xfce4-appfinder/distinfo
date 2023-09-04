@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/12/30 17:32:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.25 2023/09/04 22:26:42 gutteridge Exp $
 
-BLAKE2s (xfce4-appfinder-4.18.0.tar.bz2) = 0c4e8d8232a8836a1cfbd53a984baabc4e441851b4affcd775b59ff73758cee7
-SHA512 (xfce4-appfinder-4.18.0.tar.bz2) = e33144910bb4391beb6ca88e312c592593ce50a40e10487c5b72eca492dd2f7c3ab7324ce62413ad6f3df0025de29ece96b5d0a566eecbc87bd1d0e62c9156ad
-Size (xfce4-appfinder-4.18.0.tar.bz2) = 562219 bytes
+BLAKE2s (xfce4-appfinder-4.18.1.tar.bz2) = 5e3b9a92e9757ad0f6b4e20019a21286fe7cf092676c77ade10848edef6fcaad
+SHA512 (xfce4-appfinder-4.18.1.tar.bz2) = 3ebdf1e189e3c7d8b738d9be502124ac5e05664713e53d9e9c2f758717c409d0dc50506cd488383ba7c96aa981050a5623a957e961b9da8f486e3c189899a378
+Size (xfce4-appfinder-4.18.1.tar.bz2) = 564600 bytes
