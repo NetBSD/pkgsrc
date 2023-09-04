@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2023/07/24 17:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.673 2023/09/04 08:11:05 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -464,7 +464,6 @@ SUBDIR+=	tracker
 SUBDIR+=	traverso
 SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
-SUBDIR+=	trm
 SUBDIR+=	twolame
 SUBDIR+=	ubs
 SUBDIR+=	vamp-plugin-sdk
