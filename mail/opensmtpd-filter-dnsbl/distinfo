@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/09/04 10:32:47 vins Exp $
+
+BLAKE2s (filter-dnsbl-0.3.tar.gz) = e8bc9b2b504ee74122fd3854548792b9050440b9a3a5d02722af6de670447268
+SHA512 (filter-dnsbl-0.3.tar.gz) = c7b805b05ea7629c87c90146be3a9f375b68542a7b6b781e37ffb842e33b67aca53633a7f4cd6f8befda71cc6e30e9330624f95ee3ce0c84b128c4b1483fee59
+Size (filter-dnsbl-0.3.tar.gz) = 3413 bytes
+SHA1 (patch-Makefile) = 1a262a5860642f965cf6d62c4efddb7515fd121e
+SHA1 (patch-main.c) = b5c7edc0022bfa69268e896df6cf57c48e6484d7
