@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5316 2023/09/04 06:38:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5317 2023/09/04 08:11:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7763,3 +7763,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/bulk-large to 20230903 [taca 2023-09-03]
 	Updated sysutils/broot to 1.25.1 [pin 2023-09-04]
 	Updated www/hackernews-tui to 0.13.3 [pin 2023-09-04]
+	Removed audio/trm [wiz 2023-09-04]
