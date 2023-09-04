@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5321 2023/09/04 09:37:47 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5322 2023/09/04 10:35:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7769,3 +7769,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed audio/p5-MusicBrainz-Queries [wiz 2023-09-04]
 	Removed audio/bmp-scrobbler [wiz 2023-09-04]
 	Removed audio/musicbrainz [wiz 2023-09-04]
+	Added mail/opensmtpd-filter-dnsbl version 0.3 [vins 2023-09-04]
