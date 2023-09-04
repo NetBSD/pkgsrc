@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.124 2023/09/03 20:25:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.125 2023/09/04 23:00:32 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
-PKGREVISION=	10
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for the Xfce desktop environment
 
 DEPENDS+=	xfce4-tumbler>=4.18.1:../../x11/xfce4-tumbler
-DEPENDS+=	xfce4-appfinder>=4.18.0:../../sysutils/xfce4-appfinder
+DEPENDS+=	xfce4-appfinder>=4.18.1:../../sysutils/xfce4-appfinder
 DEPENDS+=	xfce4-desktop>=4.18.1:../../x11/xfce4-desktop
 DEPENDS+=	xfce4-mousepad>=0.6.0:../../editors/xfce4-mousepad
 DEPENDS+=	xfce4-panel>=4.18.4:../../x11/xfce4-panel
