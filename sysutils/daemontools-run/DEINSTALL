@@ -1,0 +1,10 @@
+# $NetBSD: DEINSTALL,v 1.1 2023/09/04 17:51:10 schmonz Exp $
+
+case "${STAGE}" in
+
+DEINSTALL)
+	${RM} -f /service
+
+	;;
+
+esac

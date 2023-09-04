@@ -1,0 +1,12 @@
+# $NetBSD: INSTALL,v 1.1 2023/09/04 17:51:10 schmonz Exp $
+
+VARBASE=@VARBASE@
+
+case "${STAGE}" in
+
+POST-INSTALL)
+	${LN} -s ${VARBASE}/service		/service
+
+	;;
+
+esac
