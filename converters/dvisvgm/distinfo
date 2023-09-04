@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/09/04 14:16:29 wiz Exp $
+
+BLAKE2s (dvisvgm-2.1.3.tar.gz) = 533c42eaf36c6be4c3249ca9291d0af4d0f4026447e82935c9031a7097652cae
+SHA512 (dvisvgm-2.1.3.tar.gz) = dfd6e94b28dcdf2d1be236f3f29eaf4e3e5b7bb34544cdd55ae09de612b02561dd782b693a9a94eea07420c795d31ef210eba34cb663d7de98f438c089369ff2
+Size (dvisvgm-2.1.3.tar.gz) = 2802278 bytes
