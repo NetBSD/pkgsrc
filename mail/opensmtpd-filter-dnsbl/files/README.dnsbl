@@ -1,0 +1,26 @@
++-----------------------------------------------------------------------
+| DNSBL-list filter setup
++-----------------------------------------------------------------------
+
+filter-dnsbl looks up the IP address of the sender at the blacklist
+(a domain name) and by default drops the connection if it is found.
+
+To use the DNSBL-list filter, you must declare it first in your OpenSMTPD 
+configuration.
+
+Edit the @PKG_SYSCONFDIR@/smtpd/smtpd.conf file to declare the filter:
+
+  filter "dnsbl" \
+  	 proc-exec "@PREFIX@/libexec/opensmtpd/filter-dnsbl [options] <blacklist>"
+
+The following options may be passed to filter-dnsbl:
+
+-m  allows the message to continue, but it will be
+    marked with an X-Spam and X-Spam-DNSBL header.
+
+-v  more verbose logging. 
+
+Then add the filter to each listener that should be filtered:
+
+  listen on socket filter "dnsbl"
+  listen on $ipv4 [...] filter "dnsbl"

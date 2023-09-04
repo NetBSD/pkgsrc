@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2023/09/04 10:32:47 vins Exp $
+
+* DESTDIR support. 
+* Link against libasr. 
+
+--- Makefile.orig	2019-10-22 10:52:02.000000000 +0000
++++ Makefile
+@@ -2,8 +2,8 @@ LOCALBASE?= /usr/local/
+ 
+ PROG=	filter-dnsbl
+ MAN=	filter-dnsbl.8
+-BINDIR=	${LOCALBASE}/libexec/smtpd/
+-MANDIR=	${LOCALBASE}/man/man
++BINDIR?=	${LOCALBASE}/libexec/smtpd/
++MANDIR?=	${LOCALBASE}/man/man
+ 
+ SRCS+=	main.c
+ 
+@@ -14,7 +14,7 @@ CFLAGS+=-Wmissing-declarations
+ CFLAGS+=-Wshadow -Wpointer-arith -Wcast-qual
+ CFLAGS+=-Wsign-compare
+ LDFLAGS+=-L${LOCALBASE}/lib
+-LDADD+=	-levent -lopensmtpd
++LDADD+=	-lasr -levent -lopensmtpd
+ DPADD=	${LIBEVENT}
+ 
+ bindir:
