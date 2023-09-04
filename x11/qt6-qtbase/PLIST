@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/12 13:23:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/09/04 10:54:07 nros Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -1944,7 +1944,7 @@ qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qabstractprintdi
 ${PLIST.cups}qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qcups_p.h
 ${PLIST.cups}qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qcupsjobwidget_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpagesetupdialog_p.h
-${PLIST.cups}qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpagesetupdialog_unix_p.h
+${PLIST.x11}qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpagesetupdialog_unix_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpaintengine_alpha_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpaintengine_preview_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qprint_p.h
@@ -3049,7 +3049,7 @@ qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake
-${PLIST.x11}qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake
+${PLIST.cups}qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-release.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake
 qt6/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessTargets.cmake
