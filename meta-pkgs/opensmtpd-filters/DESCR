@@ -1,0 +1,13 @@
+This meta-package provides all the available filter integrations for the
+OpenSMTPD mail transfer agent. Included filters are:
+
+* filter-dkimsign
+* filter-dnsbl
+* filter-rspamd
+* filter-senderscore
+
+This package does not contain anything by itself -- it is a
+"meta-package" that depends on other packages.  Its sole purpose is
+to require dependencies so users can install this package only and
+have all the other packages pulled in by the package dependency
+mechanism.
