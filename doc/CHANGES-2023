@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5318 2023/09/04 08:20:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5319 2023/09/04 09:34:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7765,3 +7765,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hackernews-tui to 0.13.3 [pin 2023-09-04]
 	Removed audio/trm [wiz 2023-09-04]
 	Updated devel/errcheck to 1.6.3 [bsiegert 2023-09-04]
+	Removed audio/p5-MusicBrainz-Client [wiz 2023-09-04]
+	Removed audio/p5-MusicBrainz-Queries [wiz 2023-09-04]
