@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2023/07/08 11:11:10 otis Exp $
+# $NetBSD: Makefile,v 1.51 2023/09/04 17:50:48 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://cr.yp.to/daemontools/ ftp://cr.yp.to/daemontools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -19,7 +19,7 @@ CONFLICTS+=		daemontools-encore-[0-9]*
 WRKSRC=			${WRKDIR}/admin/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 TEST_TARGET=		rts
-TEST_DIRS=		${WRKSRC}/compile
+TEST_DIRS=		compile
 
 CMDDIR=			${WRKSRC}/command
 
@@ -35,8 +35,6 @@ SUBST_SED.paths=	-e 's|/usr/local/sbin:/bin|/usr/local/sbin:${PREFIX}/bin:${PREF
 SUBST_SED.paths+=	-e 's|/command/svc |${PREFIX}/bin/svc |g'
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
-
-SMF_NAME=		svscanboot
 
 .include "options.mk"
 
