@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/09/03 13:00:42 vins Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/04 05:46:29 vins Exp $
 
 DISTNAME=	filter-dkimsign-0.6
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	https://imperialat.at/releases/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://imperialat.at/releases/
+HOMEPAGE=	http://imperialat.at/dev/filter-dkimsign/
 COMMENT=	OpenSMTPD filter integration for signing mail with DKIM
 LICENSE=	isc
 
