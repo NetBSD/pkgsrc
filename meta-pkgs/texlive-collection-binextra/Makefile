@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/09/04 20:44:04 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2023pre2
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	66381
@@ -47,7 +46,7 @@ DEPENDS+=	dviljk-[0-9]*:../../print/dviljk
 # depend dviout-util
 DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend dvipos
-# depend dvisvgm
+DEPENDS+=	dvisvgm-[0-9]*:../../converters/dvisvgm
 # depend findhyph
 # depend fragmaster
 # depend git-latexdiff
