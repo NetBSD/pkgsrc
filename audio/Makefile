@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2023/09/04 09:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.676 2023/09/04 09:37:47 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -323,7 +323,6 @@ SUBDIR+=	mt-daapd
 SUBDIR+=	muse
 SUBDIR+=	musepack
 SUBDIR+=	musescore
-SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
 SUBDIR+=	nas
 SUBDIR+=	nas-auscope
