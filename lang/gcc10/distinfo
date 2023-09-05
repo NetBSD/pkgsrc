@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2023/07/11 13:42:07 wiz Exp $
+$NetBSD: distinfo,v 1.16 2023/09/05 16:54:19 vins Exp $
 
 BLAKE2s (gcc-10.5.0.tar.xz) = af4a8b262d9d4e534e8e1c311897e68e7d64f147ad1eed42e77f9674da188bf3
 SHA512 (gcc-10.5.0.tar.xz) = d86dbc18b978771531f4039465e7eb7c19845bf607dc513c97abf8e45ffe1086a99d98f83dfb7b37204af22431574186de9d5ff80c8c3c3a98dbe3983195bffd
@@ -23,6 +23,7 @@ SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
+SHA1 (patch-gcc_plugin.c) = 7a7ebc6650fe327fa7be1f7a4d26e8edc7597fcf
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
