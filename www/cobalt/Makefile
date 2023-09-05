@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/11/09 13:32:49 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/05 11:21:18 wiz Exp $
 
-DISTNAME=	cobalt-0.18.3
+DISTNAME=	cobalt-0.19.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cobalt-org/}
 GITHUB_PROJECT=	cobalt.rs
@@ -18,13 +18,11 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
-
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsass}/lib
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/cobalt ${DESTDIR}${PREFIX}/bin
+# Switch off sass feature by default due to libsass and sass-rs deprecation
+# See, https://github.com/cobalt-org/cobalt.rs/issues/1050
+# and https://github.com/cobalt-org/cobalt.rs/pull/1090
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		syntax-highlight serve html-minifier
 
 .include "../../lang/rust/cargo.mk"
-.include "../../www/libsass/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
