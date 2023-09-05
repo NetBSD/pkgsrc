@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2023/09/04 09:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.677 2023/09/05 06:45:16 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -241,7 +241,6 @@ SUBDIR+=	libmpd
 SUBDIR+=	libmpdclient
 SUBDIR+=	libmtag
 SUBDIR+=	libmusepack
-SUBDIR+=	libmusicbrainz
 SUBDIR+=	libmusicbrainz5
 SUBDIR+=	libmysofa
 SUBDIR+=	libofa

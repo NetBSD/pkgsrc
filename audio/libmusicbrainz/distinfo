@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:07 nia Exp $
-
-BLAKE2s (libmusicbrainz-3.0.3.tar.gz) = 28c01c1aeb7ee407e6a71fc9f2b69671b4fa3594b18ae52fc36b734a527bd215
-SHA512 (libmusicbrainz-3.0.3.tar.gz) = b4c76a0c056480c74eec36c4419f7f696f945b5a4b29dd0a5c61ab3a8b076f48b803ca7af60fb9cfa5eb5344f9ae5d566aaafea6e8eae498ed6aed2169f70480
-Size (libmusicbrainz-3.0.3.tar.gz) = 105837 bytes
-SHA1 (patch-aa) = 5724c7f260ecf08ac73c96da959756de6fc7aa90
