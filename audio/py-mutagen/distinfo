@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/10/13 09:10:13 adam Exp $
+$NetBSD: distinfo,v 1.21 2023/09/05 18:51:12 adam Exp $
 
-BLAKE2s (mutagen-1.46.0.tar.gz) = ed9bb9109b54b9804ff7a8c6be7dcffcb27c0ecafb3e2e847b9eb664fa94b783
-SHA512 (mutagen-1.46.0.tar.gz) = 52ab7408af46e54e79f1d157a3f6114e2606c6a55eb46fdd314dff82d6d586c2c22294b181a432581230dee566c79554456a9435a8e1188a91f4ae000644ae71
-Size (mutagen-1.46.0.tar.gz) = 1268561 bytes
+BLAKE2s (mutagen-1.47.0.tar.gz) = a20918620a60d636f0354cf7c8283d7b7ef8237134f0d91fdec80c0f75b5a5c5
+SHA512 (mutagen-1.47.0.tar.gz) = 40f9a8a898c9fdae00fd0bdd38eb91a6fb813cf8319f888590bdfd4b5efcb614aa5322c0b9e017f49c3f5155ccf82d5cae80aad79df285c50b5ef270c09f4c9d
+Size (mutagen-1.47.0.tar.gz) = 1274186 bytes
