@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5335 2023/09/05 06:45:16 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5336 2023/09/05 11:21:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7784,3 +7784,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.7.0 [pin 2023-09-05]
 	Removed multimedia/kscd [wiz 2023-09-05]
 	Removed audio/libmusicbrainz successor audio/libmusicbrainz5 [wiz 2023-09-05]
+	Updated www/cobalt to 0.19.0 [wiz 2023-09-05]
