@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5343 2023/09/05 18:58:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5344 2023/09/05 20:32:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7795,3 +7795,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-aiohttp-socks to 0.8.2 [adam 2023-09-05]
 	Updated devel/py-tox to 4.11.1 [adam 2023-09-05]
 	Updated devel/py-test to 7.4.1 [adam 2023-09-05]
+	Updated editors/feathernotes to 1.1.0nb5 [pin 2023-09-05]
