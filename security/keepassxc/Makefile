@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/08/26 10:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/09/05 13:44:13 wiz Exp $
 
 DISTNAME=	keepassxc-2.7.6-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -42,6 +42,8 @@ qmake-bin-add:
 .include "../../security/argon2/buildlink3.mk"
 .include "../../security/botan3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+# no qt6 support yet
+# https://github.com/keepassxreboot/keepassxc/issues/7774
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
