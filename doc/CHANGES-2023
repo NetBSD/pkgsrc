@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5340 2023/09/05 14:09:58 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5341 2023/09/05 14:31:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7789,3 +7789,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/featherpad to 1.4.1nb1 [pin 2023-09-05]
 	Updated www/firefox to 117.0 [ryoon 2023-09-05]
 	Updated www/firefox-l10n to 117.0 [ryoon 2023-09-05]
+	Updated graphics/sane-backends to 1.2.1 [ryoon 2023-09-05]
