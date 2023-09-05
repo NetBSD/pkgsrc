@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/08/14 05:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/09/05 13:14:25 wiz Exp $
 
 DISTNAME=	gnome-shell-40.2
 PKGREVISION=	18
@@ -19,7 +19,6 @@ MESON_ARGS+=	-Dextensions_app=false
 MESON_ARGS+=	-Dextensions_tool=false
 MESON_ARGS+=	-Dman=true
 
-TOOL_DEPENDS+=	sassc>=3.6:../../www/sassc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 DEPENDS+=	libgdm>=40.0:../../x11/libgdm
