@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/05/16 15:41:00 nikita Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/05 07:23:00 wiz Exp $
 
 DISTNAME=	zola-0.17.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getzola/}
 GITHUB_PROJECT=	zola
@@ -21,10 +22,8 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libsass}/lib
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../www/libsass/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
