@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/09/04 05:46:29 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/05 13:25:17 vins Exp $
 
 DISTNAME=	filter-dkimsign-0.6
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
@@ -56,7 +56,8 @@ MAKE_ENV.Darwin+=	NEED_STRTONUM=1
 MAKE_ENV.Linux+=	NEED_STRLCAT=1
 MAKE_ENV.Linux+=	NEED_STRLCPY=1
 MAKE_ENV.Linux+=	NEED_STRTONUM=1
-
+MAKE_ENV.Linux+=	NEED_EXPLICIT_BZERO=1
+MAKE_ENV.Linux+=	NEED_REALLOCARRAY=1
 
 INSTALL_ENV=		INSTALL=${INSTALL:Q}
 INSTALLATION_DIRS+=	libexec/opensmtpd ${PKGMANDIR}/man8
