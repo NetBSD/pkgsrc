@@ -1,11 +1,11 @@
-$NetBSD: patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build,v 1.1 2023/08/03 22:02:33 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build,v 1.2 2023/09/05 14:08:39 ryoon Exp $
 
 * Disable Wayland desktop capture for non-Linux platforms.
   Fix segfault under X11.
 
---- third_party/libwebrtc/modules/desktop_capture/desktop_capture_gn/moz.build.orig	2023-07-27 19:00:30.752092736 +0000
+--- third_party/libwebrtc/modules/desktop_capture/desktop_capture_gn/moz.build.orig	2023-08-19 22:56:46.029204839 +0000
 +++ third_party/libwebrtc/modules/desktop_capture/desktop_capture_gn/moz.build
-@@ -239,7 +239,7 @@ if CONFIG["CPU_ARCH"] == "aarch64":
+@@ -236,7 +236,7 @@ if CONFIG["CPU_ARCH"] == "aarch64":
      DEFINES["WEBRTC_ARCH_ARM64"] = True
      DEFINES["WEBRTC_HAS_NEON"] = True
  
@@ -14,16 +14,16 @@ $NetBSD: patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture_
  
      CXXFLAGS += [
          "-mfpu=neon"
-@@ -350,7 +350,7 @@ if CONFIG["MOZ_DEBUG"] == "1" and CONFIG
+@@ -414,7 +414,7 @@ if CONFIG["MOZ_DEBUG"] == "1" and CONFIG
  
      DEFINES["_HAS_ITERATOR_DEBUGGING"] = "0"
  
 -if CONFIG["CPU_ARCH"] == "aarch64" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
 +if CONFIG["CPU_ARCH"] == "aarch64" and CONFIG['MOZ_WAYLAND'] == "1" and CONFIG["OS_TARGET"] == "Linux":
  
-     DEFINES["WEBRTC_ENABLE_AVX2"] = True
      DEFINES["WEBRTC_USE_PIPEWIRE"] = True
-@@ -380,7 +380,7 @@ if CONFIG["CPU_ARCH"] == "aarch64" and (
+     DEFINES["_GNU_SOURCE"] = True
+@@ -443,7 +443,7 @@ if CONFIG["CPU_ARCH"] == "aarch64" and (
          "/third_party/libwebrtc/modules/desktop_capture/linux/wayland/shared_screencast_stream.cc"
      ]
  
@@ -32,12 +32,12 @@ $NetBSD: patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture_
  
      CXXFLAGS += [
          "-msse2"
-@@ -414,7 +414,7 @@ if CONFIG["CPU_ARCH"] == "x86" and (CONF
+@@ -476,7 +476,7 @@ if CONFIG["CPU_ARCH"] == "x86" and (CONF
          "/third_party/libwebrtc/modules/desktop_capture/linux/wayland/shared_screencast_stream.cc"
      ]
  
 -if CONFIG["CPU_ARCH"] == "x86_64" and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD"):
 +if CONFIG["CPU_ARCH"] == "x86_64" and CONFIG['MOZ_WAYLAND'] == "1" and CONFIG["OS_TARGET"] == "Linux":
  
-     DEFINES["WEBRTC_ENABLE_AVX2"] = True
      DEFINES["WEBRTC_USE_PIPEWIRE"] = True
+     DEFINES["_GNU_SOURCE"] = True
