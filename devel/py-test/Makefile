@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2023/06/26 16:03:50 adam Exp $
+# $NetBSD: Makefile,v 1.117 2023/09/05 18:58:32 adam Exp $
 
-DISTNAME=	pytest-7.4.0
+DISTNAME=	pytest-7.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -34,7 +34,6 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
