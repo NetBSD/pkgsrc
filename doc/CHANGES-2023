@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5332 2023/09/05 04:38:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5333 2023/09/05 06:04:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7781,3 +7781,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4-extras to 4.18.1 [gutteridge 2023-09-04]
 	Updated devel/py-ipykernel to 6.25.2 [adam 2023-09-05]
 	Updated www/py-aiohttp-socks to 0.8.1 [adam 2023-09-05]
+	Updated shells/oh-my-posh to 18.7.0 [pin 2023-09-05]
