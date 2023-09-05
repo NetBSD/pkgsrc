@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/09/05 13:43:15 pin Exp $
+# $NetBSD: Makefile,v 1.42 2023/09/05 16:33:23 pin Exp $
 
 VERSION=	1.4.1
 DISTNAME=	FeatherPad-V${VERSION}
@@ -10,7 +10,7 @@ GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/FeatherPad/
-COMMENT=	Lightweight Qt5 plain-text editor
+COMMENT=	Lightweight Qt5/Qt6 plain-text editor
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/FeatherPad-${VERSION}
