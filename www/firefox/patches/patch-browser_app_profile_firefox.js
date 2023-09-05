@@ -1,24 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.19 2023/06/04 09:26:35 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.20 2023/09/05 14:08:39 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2023-05-22 16:53:55.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2023-08-17 21:21:27.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2120,7 +2120,11 @@ pref("reader.pocket.ctaVersion", "");
- 
- pref("view_source.tab", true);
- 
--pref("dom.serviceWorkers.enabled", true);
-+// On NetBSD, many web applications (e.g. Telegram, Mastodon, Twitter)
-+// will freeze until the service worker is restarted in about:serviceworkers.
-+// This is a workaround that makes most of these sites function.
-+// The root cause of this should be investigated.
-+pref("dom.serviceWorkers.enabled", false);
- 
- // Enable Push API.
- pref("dom.push.enabled", true);
-@@ -2329,6 +2333,30 @@ pref("app.normandy.onsync_skew_sec", 600
+@@ -2340,6 +2340,36 @@ pref("app.normandy.onsync_skew_sec", 600
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -44,7 +31,13 @@ each one.
 +pref("media.navigator.permission.disabled", true);
 +
 +// DIsable WebGL for NetBSD systems
-+pref("webgl.disabled", true);
++pref("Webgl.disabled", true);
++
++// On NetBSD, many web applications (e.g. Telegram, Mastodon, Twitter)
++// will freeze until the service worker is restarted in about:serviceworkers.
++// This is a workaround that makes most of these sites function.
++// The root cause of this should be investigated.
++pref("dom.serviceWorkers.enabled", false);
 +
  // Discovery prefs
  pref("browser.discovery.enabled", true);
