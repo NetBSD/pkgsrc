@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/10 07:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/05 13:32:55 wiz Exp $
 
 DISTNAME=	HyperKitty-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=H/HyperKitty/}
 
@@ -27,7 +28,6 @@ DEPENDS+=	${PYPKGPREFIX}-django-extensions>=1.3.7:../../www/py-django-extensions
 DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=4.0:../../devel/py-flufl.lock
 DEPENDS+=	${PYPKGPREFIX}-django-q>=1.0.0:../../www/py-django-q
 DEPENDS+=	${PYPKGPREFIX}-Whoosh-[0-9]*:../../textproc/py-Whoosh
-DEPENDS+=	sassc-[0-9]*:../../www/sassc
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-django-debug-toolbar-[0-9]*:../../www/py-django-debug-toolbar
