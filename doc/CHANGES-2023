@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5334 2023/09/05 06:41:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5335 2023/09/05 06:45:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7768,7 +7768,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed audio/p5-MusicBrainz-Client [wiz 2023-09-04]
 	Removed audio/p5-MusicBrainz-Queries [wiz 2023-09-04]
 	Removed audio/bmp-scrobbler [wiz 2023-09-04]
-	Removed audio/musicbrainz [wiz 2023-09-04]
+	Removed audio/musicbrainz successor audio/libmusicbrainz5 [wiz 2023-09-04]
 	Added mail/opensmtpd-filter-dnsbl version 0.3 [vins 2023-09-04]
 	Added meta-pkgs/opensmtpd-filters version 1.0 [vins 2023-09-04]
 	Updated audio/libcanberra to 0.30nb10 [wiz 2023-09-04]
@@ -7783,3 +7783,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-aiohttp-socks to 0.8.1 [adam 2023-09-05]
 	Updated shells/oh-my-posh to 18.7.0 [pin 2023-09-05]
 	Removed multimedia/kscd [wiz 2023-09-05]
+	Removed audio/libmusicbrainz successor audio/libmusicbrainz5 [wiz 2023-09-05]
