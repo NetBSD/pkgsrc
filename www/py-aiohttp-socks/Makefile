@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/08/30 21:46:34 js Exp $
+# $NetBSD: Makefile,v 1.17 2023/09/05 04:38:35 adam Exp $
 
-DISTNAME=	aiohttp_socks-0.8.0
+DISTNAME=	aiohttp_socks-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp-socks/}
