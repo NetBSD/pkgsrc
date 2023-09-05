@@ -1,13 +1,13 @@
-$NetBSD: patch-airscan-netif.c,v 1.1 2020/12/09 12:05:58 ryoon Exp $
+$NetBSD: patch-airscan-netif.c,v 1.2 2023/09/05 14:42:18 ryoon Exp $
 
 * Support NetBSD.
 
---- airscan-netif.c.orig	2020-11-23 19:47:02.000000000 +0000
+--- airscan-netif.c.orig	2021-10-04 18:36:05.000000000 +0000
 +++ airscan-netif.c
-@@ -578,9 +578,14 @@ netif_init (void)
-         return SANE_STATUS_IO_ERROR;
+@@ -589,9 +589,14 @@ netif_init (void)
      }
  
+ #ifdef ROUTE_MSGFILTER
 +#if defined(__NetBSD__)
 +    unsigned char rtfilter[] = { RTM_NEWADDR, RTM_DELADDR };
 +    if (setsockopt(netif_rtnetlink_sock, AF_ROUTE, RO_MSGFILTER,
@@ -17,5 +17,5 @@ $NetBSD: patch-airscan-netif.c,v 1.1 2020/12/09 12:05:58 ryoon Exp $
      if (setsockopt(netif_rtnetlink_sock, AF_ROUTE, ROUTE_MSGFILTER,
 +#endif
                     &rtfilter, sizeof(rtfilter)) < 0) {
-         log_debug(NULL, "can't set ROUTE_MSGFILTER: %s", strerror(errno));
-         return SANE_STATUS_IO_ERROR;
+         /* Note, this error is not fatal for us, it is enough to
+          * log it and continue
