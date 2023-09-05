@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.148 2023/08/03 04:52:22 markd Exp $
+# $NetBSD: Makefile,v 1.149 2023/09/05 17:06:04 wiz Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b
@@ -48,7 +49,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 #.include "../../audio/musepack/buildlink3.mk"
-.include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
