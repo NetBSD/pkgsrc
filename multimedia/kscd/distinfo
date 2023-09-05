@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:01:06 nia Exp $
-
-BLAKE2s (kscd-4.14.3.tar.xz) = 084e7e516a4521b5b567583dc42ec322015df61249aa4aeb6efa9ec259a02921
-SHA512 (kscd-4.14.3.tar.xz) = 24f868772fb6aacb7dee32dbe75f09b6850aa41ac12a058ea7ff39fe70dad020bfd3e00bd1ed0e1673274e647c1ca5d7636aa476e7e693d898e8268ff41084fd
-Size (kscd-4.14.3.tar.xz) = 92428 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2023/06/26 12:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.337 2023/09/05 06:41:46 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -93,7 +93,6 @@ SUBDIR+=	kdenlive
 SUBDIR+=	kmediaplayer
 SUBDIR+=	kmix
 SUBDIR+=	kmplayer
-SUBDIR+=	kscd
 SUBDIR+=	libaacs
 SUBDIR+=	libaom
 SUBDIR+=	libass
