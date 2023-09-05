@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.134 2023/07/29 19:42:10 wiz Exp $
+$NetBSD: distinfo,v 1.135 2023/09/05 12:15:57 nia Exp $
 
 BLAKE2s (mame-0.257.tar.gz) = eddc9c682c29bd3d02bf2a1092482eebcf93307bd8c34e70ebbcd1fd70cedecb
 SHA512 (mame-0.257.tar.gz) = c180a01b3938acda2148676c21b8845f29fadafb35b7d4c9fc1ec1c6259d820dcedf9c42a6483be0405c76accc379ef222a5771c4e45266a97683bc2a22718b5
@@ -6,4 +6,5 @@ Size (mame-0.257.tar.gz) = 204721575 bytes
 SHA1 (patch-3rdparty_bx_src_thread.cpp) = 91d7aa74dbe5e8e73594580ce0c16846f4a0d7b1
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = 343fac4d165438a26e2e8077216db1c6c46a5d1e
+SHA1 (patch-scripts_src_3rdparty.lua) = 1306dbb633315478468a273daa526341a96eca87
 SHA1 (patch-scripts_toolchain.lua) = df383dab4787f58348d62e1c5f25ddaa45eb8199
