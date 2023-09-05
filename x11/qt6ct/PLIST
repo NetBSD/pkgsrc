@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/02 13:28:54 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/05 09:44:44 vins Exp $
 bin/qt6ct
-lib/libqt6ct-common.so
-lib/libqt6ct-common.so.${PKGVERSION}
+qt6/lib/libqt6ct-common.so
+qt6/lib/libqt6ct-common.so.0
+qt6/lib/libqt6ct-common.so.${PKGVERSION}
+qt6/lib/libqt6ct-common.so.${PKGVERSION}.0
 qt6/plugins/platformthemes/libqt6ct.so
 qt6/plugins/styles/libqt6ct-style.so
 share/applications/qt6ct.desktop
