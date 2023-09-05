@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/09/03 10:07:33 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/05 13:22:43 vins Exp $
 
 DISTNAME=	libopensmtpd-0.7
 CATEGORIES=	devel mail
@@ -20,6 +20,14 @@ MAKE_ENV+=		MANFORMAT=man
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Linux"
+SUBST_CLASSES+=		defs
+SUBST_STAGE.defs=	post-configure
+SUBST_FILES.defs+=	iobuf.c ioev.c
+SUBST_SED.defs=		-e 's|_BSD_SOURCE|_DEFAULT_SOURCE|'
+SUBST_MESSAGE.defs=	Replacing deprecated preprocessor-defined macros.
+.endif
+
 .if ${OPSYS} != "OpenBSD"
 .  if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} >= 051100
 MAKE_ENV+=	NEED_RECALLOCARRAY=0
@@ -33,6 +41,8 @@ MAKE_ENV.Darwin+=	NEED_STRTONUM=1
 MAKE_ENV.Linux+=	NEED_STRLCAT=1
 MAKE_ENV.Linux+=	NEED_STRLCPY=1
 MAKE_ENV.Linux+=	NEED_STRTONUM=1
+MAKE_ENV.Linux+=	NEED_EXPLICIT_BZERO=1
+MAKE_ENV.Linux+=	NEED_REALLOCARRAY=1
 
 INSTALL_ENV=		INSTALL=${INSTALL:Q} LINK=${LN:Q}
 INSTALLATION_DIRS+=	include lib ${PKGMANDIR}/man3
