@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5348 2023/09/06 07:21:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5349 2023/09/06 07:28:13 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7798,3 +7798,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/feathernotes to 1.1.0nb5 [pin 2023-09-05]
 	Updated www/py-flask-static-digest to 0.4.0 [kleink 2023-09-06]
 	Updated sysutils/py-borgbackup to 1.2.6 [wiz 2023-09-06]
+	Updated www/py-flask-cors to 4.0.0 [kleink 2023-09-06]
