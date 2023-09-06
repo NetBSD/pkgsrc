@@ -1,24 +1,29 @@
-$NetBSD: patch-ac,v 1.3 2000/08/02 17:33:45 thorpej Exp $
+$NetBSD: patch-ac,v 1.4 2023/09/06 18:34:24 bouyer Exp $
 
 Make this compile on Solaris.
 
 Fix a bug where rtty would loop forever if its parent process
 (such as a shell) were to die and close rtty's standard input.
 
---- rtty.c.orig	Fri Aug 23 15:25:28 1996
-+++ rtty.c	Wed Aug  2 10:25:30 2000
-@@ -35,6 +35,10 @@
+Fix a bug where rtty would exit with messages like
+serv_input: read@3 need 468 got 396
+when a read on the unix socket returns a partial read.
+
+--- rtty.c.orig	2023-09-06 18:23:56.430905709 +0200
++++ rtty.c	2023-09-06 18:24:21.275470294 +0200
+@@ -34,6 +34,11 @@
+ #include <string.h>
  #include <pwd.h>
  #include <termios.h>
- 
++#include <poll.h>
++
 +#if (defined(__sun__) && defined(__svr4__))
 +#include <fcntl.h>
 +#endif
-+
+ 
  #include "rtty.h"
  #ifdef NEED_BITYPES_H
- # include "bitypes.h"
-@@ -266,13 +270,16 @@
+@@ -266,13 +271,16 @@
  static void
  tty_input(fd) {
  	static enum {base, need_cr, tilde} state = base;
@@ -36,7 +41,7 @@ Fix a bug where rtty would loop forever if its parent process
  
  		switch (state) {
  		case base:
-@@ -346,6 +353,14 @@
+@@ -346,6 +354,14 @@
  			write(Log, buf, 1);
  		}
  	}
@@ -51,3 +56,55 @@ Fix a bug where rtty would loop forever if its parent process
  #if 0
  	fcntl(Tty, F_SETFL, fcntl(Tty, F_GETFL, 0)&~O_NONBLOCK);
  #endif
+@@ -502,6 +518,33 @@
+ 	}
+ }
+ 
++static ssize_t
++read_exact(int fd, void *buf, size_t nbytes)
++{
++	struct pollfd pfd;
++	ssize_t ret = 0, r;
++
++	while (nbytes > 0) {
++		pfd.fd = fd;
++		pfd.events = POLLRDNORM;
++		pfd.revents = 0;
++
++		switch (poll(&pfd, 1, 1000)) {
++		case -1:
++			return -1;
++		case 0:
++			return ret;
++		default:
++			r = read(fd, buf, nbytes);
++			if (r < 0)
++				return r;
++			ret += r;
++			nbytes -= r;
++			break;
++		}
++	}
++}
++
+ static void
+ serv_input(fd) {
+ 	char passwd[TP_MAXVAR], s[3], *c, *crypt();
+@@ -521,7 +564,7 @@
+ 	switch (t) {
+ 	case TP_DATA:	/* FALLTHROUGH */
+ 	case TP_NOTICE:
+-		if (i != (nchars = read(fd, T.c, i))) {
++		if (i != (nchars = read_exact(fd, T.c, i))) {
+ 			fprintf(stderr, "serv_input: read@%d need %d got %d\n",
+ 				fd, i, nchars);
+ 			server_died();
+@@ -563,7 +606,7 @@
+ 		break;
+ 	case TP_PARITY:
+ 		if (o & TP_QUERY) {
+-			if (i != (nchars = read(fd, T.c, i))) {
++			if (i != (nchars = read_exact(fd, T.c, i))) {
+ 				server_died();
+ 			}
+ 			T.c[i] = '\0';
