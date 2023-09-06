@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23346 2023/09/06 07:21:31 wiz Exp $
+$NetBSD: TODO,v 1.23347 2023/09/06 14:56:59 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-labeling-0.4.2
 	o R-mapproj-3
 	o R-ncdf-1.6.9
-	o SDL2-2.28.3
 	o SOGo5-5.8.4 [wip]
 	o SOPE5-5.8.4 [wip]
 	o SQLiteCpp-2.5.0
