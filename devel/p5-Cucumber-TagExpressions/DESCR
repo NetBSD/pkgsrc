@@ -1,0 +1,4 @@
+Cucumber tag expressions allow users to define the subset of Gherkin
+scenarios they want to run. This library parses the expression and
+returns an evaluator object which can be used to test the tags specified
+on a scenario against the filter expression.
