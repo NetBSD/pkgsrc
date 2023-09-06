@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/05/15 08:17:11 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/06 11:48:15 wiz Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua54-${LUA_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang lua
 MASTER_SITES=	https://www.lua.org/ftp/
 
@@ -77,8 +78,8 @@ do-install:
 	    ${INSTALL_LIB} ${WRKSRC}/src/liblua5.4.la ${DESTDIR}${PREFIX}/lib
 	cd ${WRKSRC}/src && ${INSTALL_DATA} lua.h luaconf.h lualib.h lauxlib.h lua.hpp \
 	    ${DESTDIR}${PREFIX}/include/lua-5.4
-	cd ${WRKSRC}/doc && ${INSTALL_MAN} lua.1 luac.1 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/lua.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/lua5.4.1
+	${INSTALL_MAN} ${WRKSRC}/doc/luac.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/luac5.4.1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.[a-z][a-z][a-z] \
 	    ${WRKSRC}/doc/*.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/lua.pc \
