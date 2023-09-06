@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5368 2023/09/06 18:35:38 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.5369 2023/09/06 18:53:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7821,3 +7821,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp3 to 0.15.0 [adam 2023-09-06]
 	Updated net/ngtcp2 to 0.19.1 [adam 2023-09-06]
 	Updated sysutils/rtty to 3.2nb4 [bouyer 2023-09-06]
+	Added devel/p5-Cucumber-TagExpressions version 5.0.6 [schmonz 2023-09-06]
