@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5363 2023/09/06 14:56:59 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5364 2023/09/06 16:01:46 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7813,3 +7813,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/wget2 to 2.1.0 [ryoon 2023-09-06]
 	Updated multimedia/libaom to 3.7.0 [ryoon 2023-09-06]
 	Updated devel/SDL2 to 2.28.3 [ryoon 2023-09-06]
+	Updated misc/screen to 4.9.1 [vins 2023-09-06]
