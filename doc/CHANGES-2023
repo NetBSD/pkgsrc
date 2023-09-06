@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5358 2023/09/06 11:48:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5359 2023/09/06 12:01:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7808,3 +7808,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/focuswriter to 1.8.5 [pin 2023-09-06]
 	Updated editors/tp-note to 1.21.14 [pin 2023-09-06]
 	Updated lang/lua54 to 5.4.6nb1 [wiz 2023-09-06]
+	Updated www/py-sydent to 2.5.6nb3 [wiz 2023-09-06]
