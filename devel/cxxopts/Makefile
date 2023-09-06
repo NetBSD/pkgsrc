@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/12/31 17:23:19 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/06 17:57:00 bsiegert Exp $
 #
 
-DISTNAME=	cxxopts-3.0.0
+DISTNAME=	cxxopts-3.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarro2783/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
