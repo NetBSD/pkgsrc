@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2012/10/06 14:25:10 asau Exp $
+# $NetBSD: Makefile,v 1.18 2023/09/06 01:50:50 msaitoh Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
+PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	taya@NetBSD.org
