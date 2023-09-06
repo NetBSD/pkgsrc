@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5350 2023/09/06 09:24:56 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5351 2023/09/06 09:34:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7800,3 +7800,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-borgbackup to 1.2.6 [wiz 2023-09-06]
 	Updated www/py-flask-cors to 4.0.0 [kleink 2023-09-06]
 	Updated devel/opa to 0.56.0 [leot 2023-09-06]
+	Updated devel/conftest to 0.45.0 [leot 2023-09-06]
