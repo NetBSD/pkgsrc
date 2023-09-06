@@ -1,29 +1,22 @@
-# $NetBSD: Makefile,v 1.27 2023/05/22 21:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/09/06 11:21:59 pin Exp $
 
 DISTNAME=	Arqiver-0.11.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/Arqiver/
-COMMENT=	Simple Qt5 archive manager
+COMMENT=	Simple Qt5/Qt6 archive manager
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
-
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
@@ -37,14 +30,13 @@ SUBST_SED.prefix+=	-e 's,"7z","${TOOLS_PATH.7za}",g'
 # character sequences following the command references.)
 SUBST_SED.prefix+=	-e 's,"xdg-open,"${PREFIX}/bin/xdg-open,g'
 
+.include "options.mk"
+
 # Either needs misc/xdg-utils for xdg-open or devel/glib2 for gio.
 # Upstream prefers glib2, but xdg-utils is a lot smaller, so use
 # that for now.
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
