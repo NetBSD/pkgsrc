@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/06 08:28:38 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/06 11:23:36 pin Exp $
 bin/focuswriter
 man/man1/focuswriter.1
 share/applications/focuswriter.desktop
@@ -270,7 +270,7 @@ share/focuswriter/icons/hicolor/64/window-new.png
 share/focuswriter/icons/hicolor/index.theme
 share/focuswriter/sounds/keyany.wav
 share/focuswriter/sounds/keyenter.wav
-share/focuswriter/symbols1000.dat
+share/focuswriter/symbols1500.dat
 share/focuswriter/themes/bitterskies.theme
 share/focuswriter/themes/enchantment.theme
 share/focuswriter/themes/gentleblues.theme
@@ -298,6 +298,7 @@ share/focuswriter/translations/focuswriter_en_GB.qm
 share/focuswriter/translations/focuswriter_eo.qm
 share/focuswriter/translations/focuswriter_es.qm
 share/focuswriter/translations/focuswriter_es_MX.qm
+share/focuswriter/translations/focuswriter_et.qm
 share/focuswriter/translations/focuswriter_fi.qm
 share/focuswriter/translations/focuswriter_fr.qm
 share/focuswriter/translations/focuswriter_fur.qm
@@ -309,8 +310,11 @@ share/focuswriter/translations/focuswriter_id.qm
 share/focuswriter/translations/focuswriter_ig.qm
 share/focuswriter/translations/focuswriter_it.qm
 share/focuswriter/translations/focuswriter_ja.qm
+share/focuswriter/translations/focuswriter_ka.qm
 share/focuswriter/translations/focuswriter_ko.qm
 share/focuswriter/translations/focuswriter_lt.qm
+share/focuswriter/translations/focuswriter_nb.qm
+share/focuswriter/translations/focuswriter_nb_NO.qm
 share/focuswriter/translations/focuswriter_nl.qm
 share/focuswriter/translations/focuswriter_pl.qm
 share/focuswriter/translations/focuswriter_pt.qm
@@ -338,4 +342,3 @@ share/icons/hicolor/512x512/apps/focuswriter.png
 share/icons/hicolor/64x64/apps/focuswriter.png
 share/icons/hicolor/scalable/apps/focuswriter.svg
 share/metainfo/focuswriter.appdata.xml
-share/pixmaps/focuswriter.xpm

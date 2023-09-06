@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:21:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/09/06 11:23:36 pin Exp $
 
-BLAKE2s (focuswriter-1.7.6.tar.gz) = 5e9cdafdc267f2f1602b6a36f4d58167ceaaca963a9c46c6841516124b8fb3c8
-SHA512 (focuswriter-1.7.6.tar.gz) = 6c4e4f5f68ee9006f84b71fbd3200d8fcfc3a72a1b834d046a7fa38873debdfbd3f314de1fb5b96dd77c9b2bc32f39e35436c459debedad6aea9bfba7337ef72
-Size (focuswriter-1.7.6.tar.gz) = 10513715 bytes
-SHA1 (patch-focuswriter.pro) = 23764285b604fc533c28b67d25e62d5498d5f7b0
+BLAKE2s (focuswriter-1.8.5.tar.gz) = d53a7cc040e88bbaadbe5a746ce37f5e29cd02f324ce3d798b79cf764a44d30a
+SHA512 (focuswriter-1.8.5.tar.gz) = 862c0e82657cfcb0d0c5feb014ac3d8f3c557f735bf7145cbda8a35df3abc1029ca57b5a21fe63996563c9af4c8132cdd6640c733665da7df19a001b6d997d1b
+Size (focuswriter-1.8.5.tar.gz) = 11149590 bytes
