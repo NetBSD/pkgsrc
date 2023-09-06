@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5346 2023/09/06 03:30:08 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5347 2023/09/06 06:48:53 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7796,3 +7796,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-tox to 4.11.1 [adam 2023-09-05]
 	Updated devel/py-test to 7.4.1 [adam 2023-09-05]
 	Updated editors/feathernotes to 1.1.0nb5 [pin 2023-09-05]
+	Updated www/py-flask-static-digest to 0.4.0 [kleink 2023-09-06]
