@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4060 2023/09/03 15:49:51 taca Exp $
+# $NetBSD: Makefile,v 1.4061 2023/09/06 18:53:52 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1440,6 +1440,7 @@ SUBDIR+=	p5-Context-Preserve
 SUBDIR+=	p5-Contextual-Return
 SUBDIR+=	p5-Convert-Binary-C
 SUBDIR+=	p5-Coro
+SUBDIR+=	p5-Cucumber-TagExpressions
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Curses-UI-POE
