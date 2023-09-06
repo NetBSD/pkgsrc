@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/03 17:04:27 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2023/09/06 16:00:15 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.screen
 
@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS=		# undef
 .include "../../mk/bsd.options.mk"
 
 ###
-### Override the default curses implemenation
+### Override the default curses implementation
 ###
 .if !empty(PKG_OPTIONS:Mcurses)
 CURSES_DEFAULT=	curses
