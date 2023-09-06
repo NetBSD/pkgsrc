@@ -1,9 +1,9 @@
-$NetBSD: patch-setup.py,v 1.1 2023/08/30 12:42:05 manu Exp $
+$NetBSD: patch-setup.py,v 1.2 2023/09/06 12:01:11 wiz Exp $
 
 setup.py from earlier upstream release
 
---- setup.py.orig	2023-08-30 08:07:57.248878277 +0000
-+++ setup.py	2017-04-25 15:29:32.000000000 +0000
+--- setup.py.orig	2023-09-06 11:53:14.307678741 +0000
++++ setup.py
 @@ -0,0 +1,50 @@
 +# -*- coding: utf-8 -*-
 +
@@ -38,8 +38,8 @@ setup.py from earlier upstream release
 +    packages=find_packages(exclude=["tests"]),
 +    description="Reference Synapse Identity Verification and Lookup Server",
 +    install_requires=[
-+        "signedjson==1.0.0",
-+        "unpaddedbase64==1.1.0",
++        "signedjson>=1.0.0",
++        "unpaddedbase64>=1.1.0",
 +        "Twisted>=14.0.0",
 +        "service_identity>=1.0.0",
 +        "pyasn1",
