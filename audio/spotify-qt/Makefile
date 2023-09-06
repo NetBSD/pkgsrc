@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/05/22 21:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/06 12:25:21 pin Exp $
 
 DISTNAME=	spotify-qt-3.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kraxarn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,21 +11,15 @@ HOMEPAGE=	https://github.com/kraxarn/spotify-qt/
 COMMENT=	Lightweight Spotify client using Qt
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
 DEPENDS+=	librespot-[0-9]*:../../audio/librespot
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "options.mk"
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
