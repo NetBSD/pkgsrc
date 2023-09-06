@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/06/21 10:49:20 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/06 13:22:43 nros Exp $
 
 DISTNAME=	qhull-2020-src-${LIBVERSION}
 PKGNAME=	qhull-2020.2
@@ -23,6 +23,8 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
 
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PREFIX}/${PKGMANDIR}/man1
+
+PKGCONFIG_OVERRIDE=	build/qhull.pc.in
 
 # Remove non-portable file not used in build or test.
 post-extract:
