@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5372 2023/09/06 19:35:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5373 2023/09/06 20:08:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7826,3 +7826,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xe to 1.0 [schmonz 2023-09-06]
 	Updated lang/nodejs to 20.6.0 [adam 2023-09-06]
 	Updated databases/mongo-c-driver to 1.24.4 [adam 2023-09-06]
+	Updated www/py-test-httpx to 0.24.0 [adam 2023-09-06]
+	Updated biology/py-pydicom to 2.4.3 [adam 2023-09-06]
