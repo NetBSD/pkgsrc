@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:20:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/09/06 18:34:24 bouyer Exp $
 
 BLAKE2s (rtty-3.2.tar.gz) = da5c9c2d6b19bdb70e87b13e795693d3f746736903451d0235bdd4f433c1b097
 SHA512 (rtty-3.2.tar.gz) = 11d1fa82ddce97320c1aa44f726a2b05e49c7dd67fc9a902a29531e934f7f16b3ad193f9e4f247d8d03fc61bd0337c165faa08e1585374820b8f306b1b5315a4
 Size (rtty-3.2.tar.gz) = 23445 bytes
 SHA1 (patch-aa) = 11cf781b562bfe35c1003db6f3ac94653c1f8e06
 SHA1 (patch-ab) = 32644f9383ef43b45421fc100382509e2e6b2e34
-SHA1 (patch-ac) = 8b1b1be9eb471f68d62b4454f9bd74dddb471d75
+SHA1 (patch-ac) = a300e46abdf5971b05580382b6ecfc95152c9abc
 SHA1 (patch-ad) = dee546ca499fa4fb534f137d58fcbbb800b244d3
 SHA1 (patch-agelogs.sh) = 50754d303652d7c2ee3bce55101b3b0dbe60b044
