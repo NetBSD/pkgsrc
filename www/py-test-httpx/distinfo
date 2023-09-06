@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/08/04 05:10:22 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/09/06 20:05:12 adam Exp $
 
-BLAKE2s (pytest_httpx-0.23.1.tar.gz) = bb64fc132a9cd9242d58b9e4d8c55eef5068e4bd459ac91e827b30e50720886c
-SHA512 (pytest_httpx-0.23.1.tar.gz) = 4490c716c341d782ebf02c29475b7618c0717bbaa736b0a0eefee8a7c8498d3474dd28d487469fe5806ba0018a07b538d2f583406f561c451de6f8a688d57901
-Size (pytest_httpx-0.23.1.tar.gz) = 29462 bytes
+BLAKE2s (pytest_httpx-0.24.0.tar.gz) = ee73df2092857304e0e397bbd65b99c3ab1e32c74d430881941baba402f31643
+SHA512 (pytest_httpx-0.24.0.tar.gz) = b84b7fa80bcc80c8e1ef7324bd3e559d020b993bafa8835ea40bd33d6fc97208e391d86807ee2c7959eda01f615e1001876f346e67fb9dc645ad00a1feea9e64
+Size (pytest_httpx-0.24.0.tar.gz) = 31665 bytes
