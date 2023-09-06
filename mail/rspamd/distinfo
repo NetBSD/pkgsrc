@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.48 2023/08/24 19:38:09 wiz Exp $
+$NetBSD: distinfo,v 1.49 2023/09/06 03:22:52 schmonz Exp $
 
 BLAKE2s (rspamd-3.6.tar.gz) = 1481638675a661812d45dddb806fada9dbc4f39e51653f7fa4485ccd759c0d68
 SHA512 (rspamd-3.6.tar.gz) = d99e2a60eec94eb39902454a8041eeb76f673c9f784849128766323a218d6c419755e0f8819e2a6921ca08c6a7d63660dc87bc911f808fb4a67d29e8fbfc571b
 Size (rspamd-3.6.tar.gz) = 5843907 bytes
+SHA1 (patch-CMakeLists.txt) = 1c91cf53edeb12e1a469cd02421e1eaee5061ab7
 SHA1 (patch-cmake_Toolset.cmake) = fbc4027fedb4261ce913701ebbb32d8395bc7783
 SHA1 (patch-contrib_doctest_doctest_doctest.h) = 5238cb9f837e1d8f402023ddc2f7d02dda3f67ab
 SHA1 (patch-contrib_fpconv_fpconv.c) = b1ec2b07570674458e69020ccbf25f0374d894f6
