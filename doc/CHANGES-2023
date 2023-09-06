@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5362 2023/09/06 14:48:17 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5363 2023/09/06 14:56:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7812,3 +7812,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-qt to 3.10nb4 [pin 2023-09-06]
 	Updated net/wget2 to 2.1.0 [ryoon 2023-09-06]
 	Updated multimedia/libaom to 3.7.0 [ryoon 2023-09-06]
+	Updated devel/SDL2 to 2.28.3 [ryoon 2023-09-06]
