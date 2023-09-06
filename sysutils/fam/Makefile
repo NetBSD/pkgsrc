@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/09/02 15:26:58 vins Exp $
+# $NetBSD: Makefile,v 1.47 2023/09/06 10:50:28 vins Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
@@ -51,7 +51,6 @@ SUBST_SED.kqueue+=	-e 's,@LIBS@,@LIBS@ -lpthread,g'
 
 MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 
-.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 .if ${OPSYS} == "Linux"
@@ -95,4 +94,6 @@ post-extract:
 	${CP} ${FILESDIR}/IMonKQueue.c++ ${WRKSRC}/src
 	${CP} ${FILESDIR}/imon-compat.h ${WRKSRC}/src
 
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
