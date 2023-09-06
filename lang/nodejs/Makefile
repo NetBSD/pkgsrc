@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.270 2023/08/14 05:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.271 2023/09/06 19:28:20 adam Exp $
 
-DISTNAME=	node-v20.5.1
+DISTNAME=	node-v20.6.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
@@ -9,7 +9,6 @@ USE_CXX_FEATURES+=	c++17 charconv
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
-PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 # XXX: figure out a way to add rpaths to torque
