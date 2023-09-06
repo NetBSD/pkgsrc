@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5352 2023/09/06 09:43:21 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5353 2023/09/06 10:41:49 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7802,3 +7802,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/opa to 0.56.0 [leot 2023-09-06]
 	Updated devel/conftest to 0.45.0 [leot 2023-09-06]
 	Updated devel/regal to 0.8.0 [leot 2023-09-06]
+	Added mail/thunderbird102 version 102.15.0 [hauke 2023-09-06]
