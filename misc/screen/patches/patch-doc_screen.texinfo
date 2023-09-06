@@ -1,0 +1,14 @@
+$NetBSD: patch-doc_screen.texinfo,v 1.3 2023/09/06 16:00:15 vins Exp $
+
+Fix: Node `Window Settings' lacks menu item for `Mousetrack'
+
+--- doc/screen.texinfo.orig	2023-08-16 00:29:26.000000000 +0000
++++ doc/screen.texinfo
+@@ -2414,6 +2414,7 @@ terminal emulation itself.
+ * Login::                       Control @file{/etc/utmp} logging
+ * Mode::                        Control the file mode of the pty
+ * Monitor::                     Watch for activity or inactivity in a window
++* Mousetrack::			Set whether screen should track mouse events
+ * Windows::			List the active windows
+ * Hardstatus::			Set a window's hardstatus line
+ @end menu
