@@ -1,12 +1,12 @@
-$NetBSD: patch-src_gui-qt_highlight.pro,v 1.5 2023/05/24 15:53:35 schmonz Exp $
+$NetBSD: patch-src_gui-qt_highlight.pro,v 1.6 2023/09/06 18:06:23 schmonz Exp $
 
 Restore non-.app macOS build settings from 3.59.
 
---- src/gui-qt/highlight.pro.orig	2023-05-19 11:27:59.000000000 +0000
+--- src/gui-qt/highlight.pro.orig	2023-08-28 20:06:54.000000000 +0000
 +++ src/gui-qt/highlight.pro
-@@ -82,8 +82,11 @@ macx-clang|macx-clang-arm64  {
+@@ -89,8 +89,11 @@ macx-clang|macx-clang-arm64  {
      INCLUDEPATH += ../../include
-     INCLUDEPATH+=/usr/local/Cellar/boost/1.81.0_1/include
+     INCLUDEPATH+=/usr/local/Cellar/boost/1.82.0_1/include
  
 -    QMAKE_MACOSX_DEPLOYMENT_TARGET=13.0
 -    CONFIG += app_bundle
