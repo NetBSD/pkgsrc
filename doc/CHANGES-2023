@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5351 2023/09/06 09:34:09 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5352 2023/09/06 09:43:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7801,3 +7801,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-flask-cors to 4.0.0 [kleink 2023-09-06]
 	Updated devel/opa to 0.56.0 [leot 2023-09-06]
 	Updated devel/conftest to 0.45.0 [leot 2023-09-06]
+	Updated devel/regal to 0.8.0 [leot 2023-09-06]
