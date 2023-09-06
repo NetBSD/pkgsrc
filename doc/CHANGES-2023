@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5374 2023/09/06 20:18:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5375 2023/09/06 23:45:37 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7830,3 +7830,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/py-pydicom to 2.4.3 [adam 2023-09-06]
 	Updated security/easy-rsa to 3.1.6 [adam 2023-09-06]
 	Updated www/py-test-django to 4.5.2 [adam 2023-09-06]
+	Updated www/gitea to 1.18.5 [khorben 2023-09-06]
