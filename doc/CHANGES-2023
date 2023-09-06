@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5365 2023/09/06 17:57:32 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5366 2023/09/06 18:06:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7815,3 +7815,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/SDL2 to 2.28.3 [ryoon 2023-09-06]
 	Updated misc/screen to 4.9.1 [vins 2023-09-06]
 	Updated devel/cxxopts to 3.1.1 [bsiegert 2023-09-06]
+	Updated textproc/libhighlight to 4.8 [schmonz 2023-09-06]
