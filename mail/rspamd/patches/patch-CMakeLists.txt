@@ -1,0 +1,42 @@
+$NetBSD: patch-CMakeLists.txt,v 1.11 2023/09/06 03:22:52 schmonz Exp $
+
+Let pkg-config find pkgsrc-provided lua.
+
+--- CMakeLists.txt.orig	2023-08-03 13:56:19.000000000 +0000
++++ CMakeLists.txt
+@@ -157,7 +157,7 @@ ELSE (ENABLE_LUAJIT MATCHES "ON")
+             "include/lua53"
+             "include/lua"
+             ROOT ${LUA_ROOT}
+-            MODULES lua53
++            MODULES lua-5.3
+             OPTIONAL)
+ 
+     IF (NOT WITH_LIBLUA)
+@@ -170,7 +170,7 @@ ELSE (ENABLE_LUAJIT MATCHES "ON")
+                 "include/lua54"
+                 "include/lua"
+                 ROOT ${LUA_ROOT}
+-                MODULES lua54
++                MODULES lua-5.4
+                 OPTIONAL)
+         IF (NOT WITH_LIBLUA)
+             ProcessPackage(LIBLUA LIBRARY "lua"
+@@ -182,7 +182,7 @@ ELSE (ENABLE_LUAJIT MATCHES "ON")
+                     "include/lua52"
+                     "include/lua"
+                     ROOT ${LUA_ROOT}
+-                    MODULES lua52
++                    MODULES lua-5.2
+                     OPTIONAL)
+ 
+             IF (NOT WITH_LIBLUA)
+@@ -194,7 +194,7 @@ ELSE (ENABLE_LUAJIT MATCHES "ON")
+                         "include/lua51"
+                         "include/lua"
+                         ROOT ${LUA_ROOT}
+-                        MODULES lua51)
++                        MODULES lua-5.1)
+             ENDIF ()
+         ENDIF ()
+     ENDIF ()
