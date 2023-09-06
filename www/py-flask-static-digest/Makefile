@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/06 06:48:36 kleink Exp $
 
-DISTNAME=	Flask-Static-Digest-0.2.1
+DISTNAME=	Flask-Static-Digest-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Static-Digest/}
 
@@ -16,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=1.0:../../www/py-flask
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "options.mk"
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
