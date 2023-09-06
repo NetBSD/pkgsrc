@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5371 2023/09/06 18:59:44 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5372 2023/09/06 19:35:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7824,3 +7824,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/p5-Cucumber-TagExpressions version 5.0.6 [schmonz 2023-09-06]
 	Updated devel/p5-Test-BDD-Cucumber to 0.86 [schmonz 2023-09-06]
 	Updated sysutils/xe to 1.0 [schmonz 2023-09-06]
+	Updated lang/nodejs to 20.6.0 [adam 2023-09-06]
+	Updated databases/mongo-c-driver to 1.24.4 [adam 2023-09-06]
