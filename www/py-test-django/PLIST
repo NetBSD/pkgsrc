@@ -1,19 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/14 16:05:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/09/06 20:17:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_django/__init__.py
 ${PYSITELIB}/pytest_django/__init__.pyc
 ${PYSITELIB}/pytest_django/__init__.pyo
+${PYSITELIB}/pytest_django/_version.py
+${PYSITELIB}/pytest_django/_version.pyc
+${PYSITELIB}/pytest_django/_version.pyo
 ${PYSITELIB}/pytest_django/asserts.py
 ${PYSITELIB}/pytest_django/asserts.pyc
 ${PYSITELIB}/pytest_django/asserts.pyo
-${PYSITELIB}/pytest_django/compat.py
-${PYSITELIB}/pytest_django/compat.pyc
-${PYSITELIB}/pytest_django/compat.pyo
 ${PYSITELIB}/pytest_django/django_compat.py
 ${PYSITELIB}/pytest_django/django_compat.pyc
 ${PYSITELIB}/pytest_django/django_compat.pyo
@@ -26,9 +27,7 @@ ${PYSITELIB}/pytest_django/lazy_django.pyo
 ${PYSITELIB}/pytest_django/live_server_helper.py
 ${PYSITELIB}/pytest_django/live_server_helper.pyc
 ${PYSITELIB}/pytest_django/live_server_helper.pyo
-${PYSITELIB}/pytest_django/migrations.py
-${PYSITELIB}/pytest_django/migrations.pyc
-${PYSITELIB}/pytest_django/migrations.pyo
 ${PYSITELIB}/pytest_django/plugin.py
 ${PYSITELIB}/pytest_django/plugin.pyc
 ${PYSITELIB}/pytest_django/plugin.pyo
+${PYSITELIB}/pytest_django/py.typed
