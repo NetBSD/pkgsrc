@@ -1,36 +1,27 @@
-$NetBSD: patch-aj,v 1.10 2017/07/18 23:02:18 kim Exp $
+$NetBSD: patch-aj,v 1.11 2023/09/06 16:00:15 vins Exp $
 
 Include curses header when testing tgetent in order to prevent
 crash on 64-bit architectures.
 
 Detect getutent correctly on NetBSD with utmpx.
 
---- configure.ac.orig	2017-07-10 19:26:25.000000000 +0000
-+++ configure.ac	2017-07-18 22:50:46.000000000 +0000
-@@ -661,6 +661,8 @@
- AC_MSG_ERROR(!!! no tgetent - no screen)))))))))
- 
- AC_TRY_RUN([
-+#include <curses.h>
-+
- main()
- {
-  exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
-@@ -812,9 +814,16 @@
+--- configure.ac.orig	2023-08-16 00:29:26.000000000 +0000
++++ configure.ac
+@@ -904,9 +904,16 @@ AC_CHECKING(getutent)
  AC_TRY_LINK([
- #include <time.h> /* to get time_t on SCO */
- #include <sys/types.h>
+     #include <time.h> /* to get time_t on SCO */
+     #include <sys/types.h>
 -#if defined(SVR4) && !defined(DGUX)
-+#include <sys/param.h>
++    #include <sys/param.h>
 +#if (defined(SVR4) && !defined(DGUX)) \
-+ || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000)) \
-+ || (defined(__DragonFly__) && (__DragonFly_version >= 200902))
- #include <utmpx.h>
++    || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000)) \
++    || (defined(__DragonFly__) && (__DragonFly_version >= 200902))
+     #include <utmpx.h>
  #define utmp utmpx
 +# if defined(__NetBSD__) || defined(__DragonFly__)
 +#  define pututline pututxline
 +#  define getutent  getutxent
 +# endif
  #else
- #include <utmp.h>
+     #include <utmp.h>
  #endif

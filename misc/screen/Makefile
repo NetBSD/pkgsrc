@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2022/03/06 13:04:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.123 2023/09/06 16:00:15 vins Exp $
 
-DISTNAME=	screen-4.9.0
+DISTNAME=	screen-4.9.1
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-colors256
 
 PKG_SHELL=		bin/screen
 
-USE_TOOLS+=		automake makeinfo
+USE_TOOLS+=		automake autoconf autoreconf makeinfo
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -45,7 +45,7 @@ PLIST_VARS+=		terminfo
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
-.  if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9]*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
+.  if !empty(PKGSRC_COMPILER:Mclang) || ${CC_VERSION:Mgcc-[6-9]*} || ${CC_VERSION:Mgcc-1[0-9].*}
 CPPFLAGS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .  else
 CPPFLAGS+=	-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
@@ -59,7 +59,7 @@ post-install: screen-terminfo
 
 INSTALLATION_DIRS+=	share/examples/screen
 
-.if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+.if ${UNPRIVILEGED:U:tl} != yes
 SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
 .endif
 
@@ -71,7 +71,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/screen/etcscreenrc
 	${INSTALL_DATA} ${WRKSRC}/etc/screenrc				\
 		${DESTDIR}${PREFIX}/share/examples/screen/screenrc
-.if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+.if ${UNPRIVILEGED:U:tl} == yes
 	chmod -s ${DESTDIR}${PREFIX}/bin/${DISTNAME}
 .endif
 

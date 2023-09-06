@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: patch-aa,v 1.14 2023/09/06 16:00:15 vins Exp $
+
+Portability fixes for NetBSD pty(4).
 
 --- pty.c.orig	2014-04-26 10:58:35.000000000 +0000
 +++ pty.c

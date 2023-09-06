@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.8 2020/08/02 10:59:13 kim Exp $
+$NetBSD: patch-al,v 1.9 2023/09/06 16:00:15 vins Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
@@ -8,7 +8,7 @@ Do not truncate hostnames that have two colons (:) as they
 are likely IPv6 addresses. Wrap them in brackets ([])
 unless already wrapped (e.g. from $DISPLAY).
 
---- utmp.c.orig	2016-06-19 19:41:03.000000000 +0000
+--- utmp.c.orig	2023-08-16 00:29:26.000000000 +0000
 +++ utmp.c
 @@ -48,6 +48,12 @@ extern char *LoginName;
  extern int real_uid, eff_uid;
@@ -42,7 +42,7 @@ unless already wrapped (e.g. from $DISPLAY).
 +#endif
    if (utmpok && D_loginslot != (slot_t)0 && D_loginslot != (slot_t)-1)
      {
-       debug1(" logging you in again (slot %#x)\n", (int)D_loginslot);
+       debug1(" logging you in again (slot %#lx)\n", (long)D_loginslot);
 @@ -410,7 +422,7 @@ struct win *wi;
    struct utmp u;
    int saved_ut;
