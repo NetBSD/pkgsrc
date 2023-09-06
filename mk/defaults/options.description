@@ -699,6 +699,7 @@ pcre			Enable Perl-compatible regular expressions.
 pcre2			Use Perl Compatible Regular Expressions, API version 2.
 pcre2-jit		Enable JIT (just-in-time) support in pcre2.
 pcsc			Enable PC/SC support.
+pdcurses		Enable pdcurses support.
 pdf			Enable PDF support.
 perl			Enable Perl support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
