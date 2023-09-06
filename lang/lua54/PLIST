@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/30 13:16:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/06 11:48:15 wiz Exp $
 bin/lua5.4
 bin/luac5.4
 include/lua-5.4/lauxlib.h
@@ -8,8 +8,8 @@ include/lua-5.4/luaconf.h
 include/lua-5.4/lualib.h
 lib/liblua5.4.la
 lib/pkgconfig/lua-5.4.pc
-man/man1/lua.1
-man/man1/luac.1
+man/man1/lua5.4.1
+man/man1/luac5.4.1
 share/doc/lua-5.4/contents.html
 share/doc/lua-5.4/index.css
 share/doc/lua-5.4/logo.gif
