@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2023/01/06 17:42:00 jperkin Exp $
+# $NetBSD: go-modules.mk,v 1.4 2023/09/06 23:45:20 khorben Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20180421153158-65cc252bf669.mod
 GO_MODULE_FILES+=	bitbucket.org/creachadair/shell/@v/v0.0.6.mod
@@ -1138,6 +1138,10 @@ GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.4.3.mod
 GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/op/go-logging/@v/v0.0.0-20160315200505-970db520ece7.mod
+GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v1.0.0.mod
+GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/opencontainers/image-spec/@v/v1.1.0-rc2.mod
+GO_MODULE_FILES+=	github.com/opencontainers/image-spec/@v/v1.1.0-rc2.zip
 GO_MODULE_FILES+=	github.com/opentracing-contrib/go-observer/@v/v0.0.0-20170622124052-a52f23424492.mod
 GO_MODULE_FILES+=	github.com/opentracing/basictracer-go/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/opentracing/opentracing-go/@v/v1.0.2.mod
@@ -1442,8 +1446,8 @@ GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.4.15.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.5.2.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.5.2.zip
 GO_MODULE_FILES+=	github.com/zenazn/goji/@v/v0.9.0.mod
-GO_MODULE_FILES+=	github.com/zeripath/zapx/v15/@v/v15.3.6-alignment-fix.mod
-GO_MODULE_FILES+=	github.com/zeripath/zapx/v15/@v/v15.3.6-alignment-fix.zip
+GO_MODULE_FILES+=	github.com/zeripath/zapx/v15/@v/v15.3.6-alignment-fix-2.mod
+GO_MODULE_FILES+=	github.com/zeripath/zapx/v15/@v/v15.3.6-alignment-fix-2.zip
 GO_MODULE_FILES+=	github.com/ziutek/mymysql/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/zmap/rc2/@v/v0.0.0-20131011165748-24b9757f5521.mod
 GO_MODULE_FILES+=	github.com/zmap/zcertificate/@v/v0.0.0-20180516150559-0e3d58b1bac4.mod
@@ -1718,6 +1722,8 @@ GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20201020160332-67f06af15bc9.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20201207232520-09787c993a3a.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20210220032951-036812b2e83c.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220601150217-0de741cfad7f.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220819030929-7fc1605a5dde.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20220819030929-7fc1605a5dde.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20180823144017-11551d06cbcc.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20180830151530-49385e6e1522.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20180905080454-ebe1bf3edb33.mod
