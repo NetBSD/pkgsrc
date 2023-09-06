@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5366 2023/09/06 18:06:30 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5367 2023/09/06 18:13:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7816,3 +7816,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/screen to 4.9.1 [vins 2023-09-06]
 	Updated devel/cxxopts to 3.1.1 [bsiegert 2023-09-06]
 	Updated textproc/libhighlight to 4.8 [schmonz 2023-09-06]
+	Updated www/nghttp2 to 1.56.0 [adam 2023-09-06]
+	Updated www/nghttp2-tools to 1.56.0 [adam 2023-09-06]
+	Updated www/nghttp3 to 0.15.0 [adam 2023-09-06]
+	Updated net/ngtcp2 to 0.19.1 [adam 2023-09-06]
