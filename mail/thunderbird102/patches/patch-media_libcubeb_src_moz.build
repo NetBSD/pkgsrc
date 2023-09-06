@@ -1,0 +1,17 @@
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2023/09/06 10:40:30 hauke Exp $
+
+--- media/libcubeb/src/moz.build.orig	2022-12-20 00:49:56.000000000 +0000
++++ media/libcubeb/src/moz.build
+@@ -22,6 +22,12 @@ if CONFIG['MOZ_ALSA']:
+     ]
+     DEFINES['USE_ALSA'] = True
+ 
++if CONFIG['MOZ_SUNAUDIO']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
+ if (
+     CONFIG["MOZ_PULSEAUDIO"]
+     or CONFIG["MOZ_JACK"]
