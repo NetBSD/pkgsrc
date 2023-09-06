@@ -1,0 +1,24 @@
+$NetBSD: patch-old-configure.in,v 1.1 2023/09/06 10:40:30 hauke Exp $
+
+--- old-configure.in.orig	2020-08-28 21:33:19.000000000 +0000
++++ old-configure.in
+@@ -681,6 +681,19 @@ fi
+ 
+ AC_CHECK_LIB(socket, socket)
+ 
++dnl ==================================
++dnl = Check sunaudio availability
++dnl ==================================
++
++dnl If using Solaris or NetBSD, ensure that sunaudio is available
++case "$OS_TARGET" in
++SunOS|NetBSD)
++    MOZ_SUNAUDIO=1
++    ;;
++esac
++
++AC_SUBST(MOZ_SUNAUDIO)
++
+ dnl ========================================================
+ dnl = pthread support
+ dnl = Start by checking whether the system support pthreads
