@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/08/29 06:48:32 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/06 11:50:01 wiz Exp $
 
 DISTNAME=	httpbin-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/psf/httpbin
 COMMENT=	HTTP Request and Response Service
 LICENSE=	mit
 
-TOOLDEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOLDEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-brotlicffi-[0-9]*:../../archivers/py-brotlicffi
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
