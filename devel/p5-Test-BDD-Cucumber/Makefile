@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/07/25 20:16:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.60 2023/09/06 18:56:06 schmonz Exp $
 
-DISTNAME=		Test-BDD-Cucumber-0.84
+DISTNAME=		Test-BDD-Cucumber-0.86
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
@@ -10,6 +10,7 @@ HOMEPAGE=		https://metacpan.org/release/Test-BDD-Cucumber
 COMMENT=		Feature-complete Cucumber-style testing in Perl
 LICENSE=		${PERL5_LICENSE}
 
+DEPENDS+=		p5-Cucumber-TagExpressions>=5.0.5:../../devel/p5-Cucumber-TagExpressions
 DEPENDS+=		p5-File-Find-Rule-[0-9]*:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-JSON-MaybeXS>=1.001000:../../converters/p5-JSON-MaybeXS
 DEPENDS+=		p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
