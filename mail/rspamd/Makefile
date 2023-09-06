@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/08/24 19:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2023/09/06 03:22:52 schmonz Exp $
 
 DISTNAME=	rspamd-3.6
 CATEGORIES=	mail
@@ -99,7 +99,7 @@ post-extract:
 	${FIND} ${WRKSRC}/conf -type f -exec ${CHMOD} ${DOCMODE} {} \;
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/rspamd ${DESTDIR}${PREFIX}/share/examples/rspamd
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
 
 .include "../../devel/cmake/build.mk"
 .include "../../databases/hiredis/buildlink3.mk"
