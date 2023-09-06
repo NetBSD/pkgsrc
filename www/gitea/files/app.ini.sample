@@ -17,7 +17,7 @@
 # localhost.
 #
 # If you'd rather use the web-based installer, remove this conf/app.ini file
-# and make @PKG_SYSCONFDIR@/gitea/conf writeable to the @GITEA_USER@ user.
+# and make @PKG_SYSCONFDIR@/conf writeable to the @GITEA_USER@ user.
 
 APP_NAME = Gitea: Git with a cup of tea
 RUN_USER = @GITEA_USER@
