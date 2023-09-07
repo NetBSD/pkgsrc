@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2023/09/07 19:38:14 vins Exp $
+@comment $NetBSD: PLIST.Linux,v 1.4 2023/09/07 20:56:05 vins Exp $
 bin/fusermount
 bin/ulockmgr_server
 man/man1/fusermount.1
 man/man1/ulockmgr_server.1
 man/man8/mount.fuse.8
+sbin/mount.fuse
+share/examples/fuse/99-fuse.rules
+share/examples/fuse/init.d.fuse

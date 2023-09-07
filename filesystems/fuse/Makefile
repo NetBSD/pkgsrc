@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/09/07 19:38:14 vins Exp $
+# $NetBSD: Makefile,v 1.14 2023/09/07 20:56:05 vins Exp $
 #
 
 DISTNAME=	fuse-2.9.9
@@ -28,11 +28,24 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ENV+=	MOUNT_FUSE_PATH=${PREFIX}/sbin
+CONFIGURE_ENV+=	UDEV_RULES_PATH=${PREFIX}/${EGDIR}
+CONFIGURE_ENV+=	INIT_D_PATH=${PREFIX}/${EGDIR}
+.endif
+
 PKG_DOCS=	doc/how-fuse-works doc/kernel.txt
 DOCDIR=		share/doc/${PKGBASE}
+EGDIR=		share/examples/${PKGBASE}
 
 INSTALL_TARGET=		install-strip
 INSTALLATION_DIRS+=	${DOCDIR}
+
+.if ${OPSYS} == "Linux"
+INSTALLATION_DIRS+=	sbin ${EGDIR}
+.endif
 
 WRKSRC=	${WRKDIR}/libfuse-${DISTNAME}
 
@@ -46,6 +59,10 @@ post-install:
 		${DESTDIR}${PREFIX}/include/fuse
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}	\
 		${DESTDIR}${PREFIX}/${DOCDIR}
+
+.if ${OPSYS} == "Linux"
+	${RUN}${CHMOD} -w	${DESTDIR}${PREFIX}/bin/fusermount
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"
