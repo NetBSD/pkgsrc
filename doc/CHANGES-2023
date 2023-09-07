@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5376 2023/09/07 01:53:13 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5377 2023/09/07 12:09:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7832,3 +7832,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-test-django to 4.5.2 [adam 2023-09-06]
 	Updated www/gitea to 1.18.5 [khorben 2023-09-06]
 	Updated wm/obconf-qt to 0.16.3 [gutteridge 2023-09-07]
+	Updated devel/py-build to 1.0.3 [adam 2023-09-07]
+	Updated textproc/py-pdf to 3.15.5 [adam 2023-09-07]
