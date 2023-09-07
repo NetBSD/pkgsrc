@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/06/06 12:40:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/07 15:46:23 adam Exp $
 
-DISTNAME=	sqlparse-0.3.1
+DISTNAME=	sqlparse-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlparse/}
 
@@ -11,19 +10,23 @@ HOMEPAGE=	https://github.com/andialbrecht/sqlparse
 COMMENT=	Non-validating SQL parser
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
+REPLACE_PYTHON+=	sqlparse/cli.py
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
-
-PYSETUPTESTTARGET=	pytest
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} sqlformat sqlformat-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
