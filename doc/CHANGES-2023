@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5380 2023/09/07 14:38:04 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5381 2023/09/07 15:46:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7837,3 +7837,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/lilypond to 2.24.2 [schmonz 2023-09-07]
 	Updated devel/py-empty-files to 0.0.9 [schmonz 2023-09-07]
 	Updated print/mupdf to 1.23.3 [vins 2023-09-07]
+	Updated devel/py-meson_python to 0.14.0 [adam 2023-09-07]
+	Updated databases/py-sqlparse to 0.4.4 [adam 2023-09-07]
