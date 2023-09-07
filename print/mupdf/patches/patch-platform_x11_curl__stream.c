@@ -1,6 +1,6 @@
-$NetBSD: patch-platform_x11_curl__stream.c,v 1.1 2023/09/07 14:36:54 vins Exp $
+$NetBSD: patch-platform_x11_curl__stream.c,v 1.2 2023/09/07 14:52:50 vins Exp $
 
-offset is ia 64-bit integer.
+offset is a 64-bit integer.
 
 --- platform/x11/curl_stream.c.orig	2023-09-05 11:51:19.000000000 +0000
 +++ platform/x11/curl_stream.c
