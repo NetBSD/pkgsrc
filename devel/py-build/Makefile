@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/09/07 12:07:18 adam Exp $
 
-DISTNAME=	build-0.10.0
+DISTNAME=	build-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks-[0-9]*:../../devel/py-pyproject_hooks
-DEPENDS+=	${PYPKGPREFIX}-pep517>=0.9.1:../../devel/py-pep517
 
 USE_LANGUAGES=	# none
 
@@ -21,7 +20,9 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
+.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif
