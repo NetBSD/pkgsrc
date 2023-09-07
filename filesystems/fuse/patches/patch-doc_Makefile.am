@@ -1,0 +1,14 @@
+$NetBSD: patch-doc_Makefile.am,v 1.1 2023/09/07 19:38:15 vins Exp $
+
+Do not install manuals for Linux only binaries on *BSD.
+
+--- doc/Makefile.am.orig	2019-01-04 13:38:34.000000000 +0000
++++ doc/Makefile.am
+@@ -1,5 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
++if LINUX
+ dist_man_MANS = fusermount.1 mount.fuse.8 ulockmgr_server.1
++endif
+ 
+ EXTRA_DIST = how-fuse-works kernel.txt Doxyfile html
