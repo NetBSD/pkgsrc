@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2023/06/26 16:31:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/07 13:42:57 schmonz Exp $
 
-DISTNAME=	empty-files-0.0.4
+DISTNAME=	empty-files-0.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/empty-files/}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://github.com/approvals/${GITHUB_PROJECT}
+HOMEPAGE=	https://github.com/approvals/EmptyFiles.Python
 COMMENT=	Null Object pattern for files
 LICENSE=	apache-2.0
 
