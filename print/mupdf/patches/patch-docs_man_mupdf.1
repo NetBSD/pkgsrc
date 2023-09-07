@@ -1,0 +1,16 @@
+$NetBSD: patch-docs_man_mupdf.1,v 1.1 2023/09/07 14:36:54 vins Exp $
+
+Document fine-grained zoom function.
+
+--- docs/man/mupdf.1.orig	2023-09-05 11:51:19.000000000 +0000
++++ docs/man/mupdf.1
+@@ -94,6 +94,9 @@ Pan page left or right.
+ .TP
+ .B Control + Scroll wheel
+ Zoom in or out.
++.TP
++.B Shift + Control + Scroll wheel
++Fine grained Zoom in or out.
+ 
+ .SH KEY BINDINGS
+ 
