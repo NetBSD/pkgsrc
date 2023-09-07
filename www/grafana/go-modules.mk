@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.27 2023/08/27 12:09:56 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.28 2023/09/07 14:58:16 jperkin Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	buf.build/gen/go/grpc-ecosystem/grpc-gateway/protocolbuffers/go/@v/v1.28.1-20221127060915-a1ecdc58eccd.4.mod
@@ -790,11 +790,8 @@ GO_MODULE_FILES+=	github.com/blevesearch/snowballstem/@v/v0.9.0.zip
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.5.mod
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.7.mod
 GO_MODULE_FILES+=	github.com/blevesearch/vellum/@v/v1.0.7.zip
-GO_MODULE_FILES+=	github.com/blugelabs/bluge/@v/v0.1.9.mod
-GO_MODULE_FILES+=	github.com/blugelabs/bluge/@v/v0.1.9.zip
 GO_MODULE_FILES+=	github.com/blugelabs/bluge_segment_api/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/bluge_segment_api/@v/v0.2.0.zip
-GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/blugelabs/ice/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/blugelabs/ice/v2/@v/v2.0.1.mod
@@ -1979,6 +1976,8 @@ GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.4.0.mod
 GO_MODULE_FILES+=	github.com/jonboulle/clockwork/@v/v0.4.0.zip
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/josharian/intern/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/jperkin/apiserver/@v/v0.0.0-20230907131324-edf907a81faa.mod
+GO_MODULE_FILES+=	github.com/jperkin/apiserver/@v/v0.0.0-20230907131324-edf907a81faa.zip
 GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.mod
 GO_MODULE_FILES+=	github.com/jperkin/bluge/@v/v0.0.0-20221115155924-ffd91b43c395.zip
 GO_MODULE_FILES+=	github.com/jpillora/backoff/@v/v1.0.0.mod
@@ -3921,8 +3920,6 @@ GO_MODULE_FILES+=	k8s.io/api/@v/v0.27.1.zip
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.26.2.mod
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.27.1.mod
 GO_MODULE_FILES+=	k8s.io/apimachinery/@v/v0.27.1.zip
-GO_MODULE_FILES+=	k8s.io/apiserver/@v/v0.27.1.mod
-GO_MODULE_FILES+=	k8s.io/apiserver/@v/v0.27.1.zip
 GO_MODULE_FILES+=	k8s.io/client-go/@v/v0.26.2.mod
 GO_MODULE_FILES+=	k8s.io/client-go/@v/v0.27.1.mod
 GO_MODULE_FILES+=	k8s.io/client-go/@v/v0.27.1.zip
