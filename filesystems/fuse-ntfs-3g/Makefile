@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/09/25 05:50:15 nia Exp $
+# $NetBSD: Makefile,v 1.23 2023/09/07 19:42:47 vins Exp $
 
+PKGREVISION= 1
 .include "../../filesystems/libntfs/Makefile.common"
 
 PKGNAME=	fuse-${DISTNAME:S/_ntfsprogs//}
