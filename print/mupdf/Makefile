@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2023/08/03 14:16:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2023/09/07 14:36:54 vins Exp $
 
-DISTNAME=	mupdf-1.22.2-source
+DISTNAME=	mupdf-1.23.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://mupdf.com/downloads/archive/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://mupdf.com/
 COMMENT=	Lightweight PDF, XPS and E-book viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	pkg-config gmake
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
@@ -20,6 +19,7 @@ INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=		XLIBS=${LIBS:Q}
 MAKE_FLAGS+=		build=release
 MAKE_FLAGS+=		USE_SYSTEM_LIBS=yes
 MAKE_FLAGS+=		USE_SYSTEM_MUJS=yes
@@ -28,12 +28,19 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 .include "options.mk"
 
+REPLACE_INTERPRETER+=	shell
+REPLACE.shell.old=	.*/bin/bash
+REPLACE.shell.new=	${SH}
+REPLACE_FILES.shell+=	scripts/hexdump.sh
+
+INSTALLATION_DIRS+=	share/pixmaps share/applications
+
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
 # thirdparty/lcms2 is not removed intentionally because ICC support requires
 # the internal lcms2 library. ICC support is essential to display some PDF
 # files with proper colors.
-ppost-extract:
-	${RM} -fr \
+post-extract:
+	${RUN}${RM} -fr \
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freeglut \
 	    ${WRKSRC}/thirdparty/freetype \
@@ -48,13 +55,20 @@ ppost-extract:
 	    ${WRKSRC}/thirdparty/zlib
 
 post-build:
-	sed -e "s,@PREFIX@,${PREFIX}," -e "s,@VERSION@,${PKGVERSION_NOREV}," \
+	${RUN}${SED} -e "s,@PREFIX@,${PREFIX}," -e "s,@VERSION@,${PKGVERSION_NOREV}," \
 	     ${FILESDIR}/mupdf.pc > ${WRKSRC}/mupdf.pc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mupdf.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${FILESDIR}/mupdf.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/mupdf.xpm ${DESTDIR}${PREFIX}/share/pixmaps
 	${MV} ${DESTDIR}${PREFIX}/bin/mupdf-x11 ${DESTDIR}${PREFIX}/bin/mupdf
+# do not toggle executable bit on static libs.
+.for i in libmupdf libmupdf-third
+	${RUN}${CHMOD} -x ${DESTDIR}${PREFIX}/lib/${i}.a
+.endfor
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.7
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"

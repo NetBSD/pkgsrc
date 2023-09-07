@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2023/07/19 14:46:38 vins Exp $
+# $NetBSD: options.mk,v 1.13 2023/09/07 14:36:54 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
 PKG_SUPPORTED_OPTIONS=	curl opengl
@@ -18,6 +18,7 @@ PLIST_VARS+=		curl opengl
 #
 .if !empty(PKG_OPTIONS:Mcurl)
 PLIST.curl=	yes
+.include "../../security/openssl/buildlink3.mk"	#-lcrypto
 .include "../../www/curl/buildlink3.mk"
 .endif
 
