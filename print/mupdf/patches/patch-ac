@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.30 2023/04/29 08:17:53 wiz Exp $
+$NetBSD: patch-ac,v 1.31 2023/09/07 14:36:54 vins Exp $
 
 - Install target cleanup
 - Also install muthreads and mupkcs7 libraries (needed by various tools)
 - Use sh instead of bash
 
---- Makefile.orig	2022-06-14 12:19:22.000000000 +0000
+--- Makefile.orig	2023-09-05 11:51:19.000000000 +0000
 +++ Makefile
-@@ -181,19 +181,19 @@ FONT_BIN += $(sort $(wildcard resources/
+@@ -214,10 +214,10 @@ endif
  
  FONT_GEN := $(FONT_BIN:%=generated/%.c)
  
@@ -21,16 +21,7 @@ $NetBSD: patch-ac,v 1.30 2023/04/29 08:17:53 wiz Exp $
  
  ifeq ($(HAVE_OBJCOPY),yes)
    MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
-   $(OUT)/%.cff.o : %.cff ; $(OBJCOPY_CMD)
-   $(OUT)/%.otf.o : %.otf ; $(OBJCOPY_CMD)
-   $(OUT)/%.ttf.o : %.ttf ; $(OBJCOPY_CMD)
-   $(OUT)/%.ttc.o : %.ttc ; $(OBJCOPY_CMD)
- else
-   MUPDF_OBJ += $(FONT_GEN:%.c=$(OUT)/%.o)
- endif
- 
- generate: $(FONT_GEN)
-@@ -402,30 +402,34 @@ tools: $(TOOL_APPS)
+@@ -440,29 +440,35 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
  install-libs: libs
@@ -53,6 +44,7 @@ $NetBSD: patch-ac,v 1.30 2023/04/29 08:17:53 wiz Exp $
 +	for f in $(LIBS_TO_INSTALL_IN_LIB); do \
 +		${BSD_INSTALL_LIB} $$f $(DESTDIR)$(libdir); \
 +	done
++
  endif
  
  install-apps: apps
@@ -68,17 +60,16 @@ $NetBSD: patch-ac,v 1.30 2023/04/29 08:17:53 wiz Exp $
 -	install -m 644 docs/man/*.1 $(DESTDIR)$(mandir)/man1
 +	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(mandir)/man1
 +	${BSD_INSTALL_MAN} docs/man/*.1 $(DESTDIR)$(mandir)/man1
++
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
++	${BSD_INSTALL_DATA} README COPYING CHANGES $(DESTDIR)$(docdir)
++	${BSD_INSTALL_DATA} docs/examples/* $(DESTDIR)$(docdir)/examples
  
 -	install -d $(DESTDIR)$(docdir)
 -	install -d $(DESTDIR)$(docdir)/examples
 -	install -m 644 README COPYING CHANGES $(DESTDIR)$(docdir)
--	install -m 644 docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
 -	install -m 644 docs/examples/* $(DESTDIR)$(docdir)/examples
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/examples
-+	${BSD_INSTALL_DATA} README COPYING CHANGES $(DESTDIR)$(docdir)
-+	${BSD_INSTALL_DATA} docs/*.html docs/*.css docs/*.png $(DESTDIR)$(docdir)
-+	${BSD_INSTALL_DATA} docs/examples/* $(DESTDIR)$(docdir)/examples
  
  install: install-libs install-apps install-docs
  
