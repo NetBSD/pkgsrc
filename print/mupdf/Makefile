@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/09/07 14:36:54 vins Exp $
+# $NetBSD: Makefile,v 1.109 2023/09/07 15:02:03 vins Exp $
 
 DISTNAME=	mupdf-1.23.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -13,10 +13,9 @@ LICENSE=	gnu-agpl-v3
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	pkg-config gmake
 
-INSTALLATION_DIRS+=	bin include lib/pkgconfig
-INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
-INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
+
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		XLIBS=${LIBS:Q}
@@ -24,16 +23,18 @@ MAKE_FLAGS+=		build=release
 MAKE_FLAGS+=		USE_SYSTEM_LIBS=yes
 MAKE_FLAGS+=		USE_SYSTEM_MUJS=yes
 
-CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
+INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
+INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
+
+INSTALLATION_DIRS+=	bin include lib/pkgconfig
+INSTALLATION_DIRS+=	share/pixmaps share/applications
 
 REPLACE_INTERPRETER+=	shell
 REPLACE.shell.old=	.*/bin/bash
 REPLACE.shell.new=	${SH}
 REPLACE_FILES.shell+=	scripts/hexdump.sh
-
-INSTALLATION_DIRS+=	share/pixmaps share/applications
 
 # Remove thirdparty directory in order to use the libraries provided by pkgsrc
 # thirdparty/lcms2 is not removed intentionally because ICC support requires
