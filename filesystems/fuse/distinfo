@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2023/09/07 19:38:14 vins Exp $
+$NetBSD: distinfo,v 1.9 2023/09/07 20:56:05 vins Exp $
 
 BLAKE2s (fuse-2.9.9.tar.gz) = 5b851aa97441a9e13a4718a0775e01cbfff8020d7f4a0656adfca439f8d42d95
 SHA512 (fuse-2.9.9.tar.gz) = 1acd51a647ec3dbf9eaafb80cec92bd8542bcbb2cf4510fc8b079b4f8aaa8f4b301e469ddefe4f1cc4ae2bf941e028077601c20d97f187cc618cea8710cbe331
@@ -6,5 +6,5 @@ Size (fuse-2.9.9.tar.gz) = 212017 bytes
 SHA1 (patch-configure.ac) = 1e8d0081c8dc48e126d1cde856178c39f358ee37
 SHA1 (patch-doc_Makefile.am) = ffe16fc87e03772ca2e1124549177e999806dbd9
 SHA1 (patch-lib_mount__bsd.c) = 6b00d0950e0146321a575a2f90c83d8aa7d3cc07
-SHA1 (patch-util_Makefile.am) = 9c1361a489203dc7a7cd09289b2a15189a82c030
+SHA1 (patch-util_Makefile.am) = b3c79ad1e7390ba313476efb5ba3b67a214a8006
 SHA1 (patch-util_ulockmgr__server.c) = 2ec86dc8eca5e24952738171eb0937d822b8c657
