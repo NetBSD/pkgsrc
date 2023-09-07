@@ -1,15 +1,16 @@
-$NetBSD: patch-util_Makefile.am,v 1.1 2023/09/07 19:38:15 vins Exp $
+$NetBSD: patch-util_Makefile.am,v 1.2 2023/09/07 20:56:05 vins Exp $
 
-mount.fuse is a script, not a binary.
+Rename the init.d fuse script before installing it 
+in the example directory. 
 
 --- util/Makefile.am.orig	2019-01-04 13:38:34.000000000 +0000
 +++ util/Makefile.am
-@@ -36,7 +36,7 @@ INIT_D_PATH = @INIT_D_PATH@
- 
- install-exec-local:
+@@ -38,7 +38,7 @@ install-exec-local:
  	$(MKDIR_P) $(DESTDIR)$(MOUNT_FUSE_PATH)
--	$(INSTALL_PROGRAM) $(builddir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
-+	$(INSTALL_SCRIPT) $(builddir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
+ 	$(INSTALL_PROGRAM) $(builddir)/mount.fuse $(DESTDIR)$(MOUNT_FUSE_PATH)/mount.fuse
  	$(MKDIR_P) $(DESTDIR)$(INIT_D_PATH)
- 	$(INSTALL_SCRIPT) $(srcdir)/init_script $(DESTDIR)$(INIT_D_PATH)/fuse
+-	$(INSTALL_SCRIPT) $(srcdir)/init_script $(DESTDIR)$(INIT_D_PATH)/fuse
++	$(INSTALL_SCRIPT) $(srcdir)/init_script $(DESTDIR)$(INIT_D_PATH)/init.d.fuse
  	@if test -x /usr/sbin/update-rc.d; then \
+ 		echo "/usr/sbin/update-rc.d fuse start 34 S . start 41 0 6 . || true"; \
+ 		/usr/sbin/update-rc.d fuse start 34 S . start 41 0 6 . || true; \
