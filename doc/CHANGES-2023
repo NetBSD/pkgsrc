@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5378 2023/09/07 13:26:22 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5379 2023/09/07 13:43:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7835,3 +7835,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-build to 1.0.3 [adam 2023-09-07]
 	Updated textproc/py-pdf to 3.15.5 [adam 2023-09-07]
 	Updated print/lilypond to 2.24.2 [schmonz 2023-09-07]
+	Updated devel/py-empty-files to 0.0.9 [schmonz 2023-09-07]
