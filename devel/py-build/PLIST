@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/18 11:28:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/09/07 12:07:18 adam Exp $
 bin/pyproject-build-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,15 @@ ${PYSITELIB}/build/__init__.pyo
 ${PYSITELIB}/build/__main__.py
 ${PYSITELIB}/build/__main__.pyc
 ${PYSITELIB}/build/__main__.pyo
+${PYSITELIB}/build/_exceptions.py
+${PYSITELIB}/build/_exceptions.pyc
+${PYSITELIB}/build/_exceptions.pyo
+${PYSITELIB}/build/_importlib.py
+${PYSITELIB}/build/_importlib.pyc
+${PYSITELIB}/build/_importlib.pyo
+${PYSITELIB}/build/_util.py
+${PYSITELIB}/build/_util.pyc
+${PYSITELIB}/build/_util.pyo
 ${PYSITELIB}/build/env.py
 ${PYSITELIB}/build/env.pyc
 ${PYSITELIB}/build/env.pyo
