@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2023/08/27 12:09:56 tnn Exp $
+$NetBSD: distinfo,v 1.42 2023/09/07 14:58:16 jperkin Exp $
 
 BLAKE2s (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = ff8095283662ae2d2a1968bf429516c54586b1a6c4dc744657162e6781aa8ece
 SHA512 (bazil.org_fuse_@v_v0.0.0-20160811212531-371fbbdaa898.mod) = 7b3ef87f98485bb9ec325680f57d43a9bd76e90bdcfb1e798458f28f7d3addf91dbb6a07b654749468860981413ad2267df2d5f3535c85579e9f79d9328d355c
@@ -12033,7 +12033,7 @@ Size (xorm.io_core_@v_v0.7.3.mod) = 193 bytes
 BLAKE2s (xorm.io_core_@v_v0.7.3.zip) = 5c41003b538f900e8fe8e018035ea37178453012f64c422a91dcfe20f71683ba
 SHA512 (xorm.io_core_@v_v0.7.3.zip) = 55a07d5a03f8eff5b6dc735c31516070fcea93039d541907a7254e89c57b68f43196afc64df924b7ec26bd74de7983b145f6466b8b5005e8fd52cc8f696bf48e
 Size (xorm.io_core_@v_v0.7.3.zip) = 31222 bytes
-SHA1 (patch-go.mod) = aa59d39ba619a1997b3a84ffd103f76c876636d7
-SHA1 (patch-go.sum) = 2a5e94c5e41cbe321e21091231f32bbe57ed3906
+SHA1 (patch-go.mod) = 8f94b85e8f846b517a2eea3fc32cde3e8bcbcf66
+SHA1 (patch-go.sum) = bef3ccec2f3e3a78cc4d31023c7dc252af342605
 SHA1 (patch-pkg_build_cmd.go) = 6d550f8413fb3752c558d46f691f8f7d862cd7fa
 SHA1 (patch-pkg_cmd_grafana-server_commands_cli.go) = 0dce3a76ad509aade343c6f5bae9b3590198f2c3
