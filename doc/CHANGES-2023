@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5382 2023/09/07 17:43:17 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.5383 2023/09/07 19:44:11 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7840,3 +7840,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-meson_python to 0.14.0 [adam 2023-09-07]
 	Updated databases/py-sqlparse to 0.4.4 [adam 2023-09-07]
 	Updated pkgtools/pkglint to 23.2.3 [rillig 2023-09-07]
+	Updated filesystems/fuse to 2.9.9 [vins 2023-09-07]
