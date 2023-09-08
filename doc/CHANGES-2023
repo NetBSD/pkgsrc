@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5399 2023/09/08 18:40:46 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5400 2023/09/08 18:50:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7859,3 +7859,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/fuse-sshfs to 3.7.3.0.20230311 [wiz 2023-09-08]
 	Updated emulators/PC6001VX to 4.2.0 [tsutsui 2023-09-08]
 	Updated parallel/parallel to 20230822 [vins 2023-09-08]
+	Updated lang/go120 to 1.20.8 [bsiegert 2023-09-08]
