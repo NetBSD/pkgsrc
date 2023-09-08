@@ -1,0 +1,12 @@
+Truststore is a library which exposes native system certificate stores (ie
+"trust stores") through an ssl.SSLContext-like API. This means that Python
+applications no longer need to rely on certifi as a root certificate store.
+Native system certificate stores have many helpful features compared to a
+static certificate bundle like certifi:
+
+* Automatically update certificates as new CAs are created and removed
+* Fetch missing intermediate certificates
+* Check certificates against certificate revocation lists (CRLs) to avoid
+  monster-in-the-middle (MITM) attacks
+* Managed per-system rather than per-application by a operations/IT team
+* PyPI is no longer a CA distribution channel
