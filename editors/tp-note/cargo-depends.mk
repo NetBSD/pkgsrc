@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.37 2023/09/06 11:25:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.38 2023/09/08 11:45:53 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -40,7 +40,7 @@ CARGO_CRATE_DEPENDS+=	bstr-1.6.2
 CARGO_CRATE_DEPENDS+=	bumpalo-3.13.0
 CARGO_CRATE_DEPENDS+=	bytecount-0.6.3
 CARGO_CRATE_DEPENDS+=	byteorder-1.4.3
-CARGO_CRATE_DEPENDS+=	bytes-1.4.0
+CARGO_CRATE_DEPENDS+=	bytes-1.5.0
 CARGO_CRATE_DEPENDS+=	cairo-rs-0.15.12
 CARGO_CRATE_DEPENDS+=	cairo-sys-rs-0.15.1
 CARGO_CRATE_DEPENDS+=	castaway-0.2.2
@@ -48,7 +48,7 @@ CARGO_CRATE_DEPENDS+=	cc-1.0.83
 CARGO_CRATE_DEPENDS+=	cesu8-1.1.0
 CARGO_CRATE_DEPENDS+=	cfg-expr-0.15.4
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	chrono-0.4.28
+CARGO_CRATE_DEPENDS+=	chrono-0.4.30
 CARGO_CRATE_DEPENDS+=	chrono-tz-0.8.3
 CARGO_CRATE_DEPENDS+=	chrono-tz-build-0.2.0
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
@@ -391,10 +391,10 @@ CARGO_CRATE_DEPENDS+=	time-macros-0.2.14
 CARGO_CRATE_DEPENDS+=	tiny-keccak-2.0.2
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-CARGO_CRATE_DEPENDS+=	toml-0.7.6
+CARGO_CRATE_DEPENDS+=	toml-0.7.7
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.3
-CARGO_CRATE_DEPENDS+=	toml_edit-0.19.14
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.22.5
+CARGO_CRATE_DEPENDS+=	toml_edit-0.19.15
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.22.8
 CARGO_CRATE_DEPENDS+=	tracing-0.1.37
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.26
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.31
@@ -422,7 +422,7 @@ CARGO_CRATE_DEPENDS+=	vec_map-0.8.2
 CARGO_CRATE_DEPENDS+=	version-compare-0.1.1
 CARGO_CRATE_DEPENDS+=	version_check-0.9.4
 CARGO_CRATE_DEPENDS+=	waker-fn-1.1.0
-CARGO_CRATE_DEPENDS+=	walkdir-2.3.3
+CARGO_CRATE_DEPENDS+=	walkdir-2.4.0
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.87
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.87
