@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5395 2023/09/08 13:41:20 nros Exp $
+$NetBSD: CHANGES-2023,v 1.5396 2023/09/08 14:05:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7855,3 +7855,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.9.1 [adam 2023-09-08]
 	Updated editors/xnedit to 1.5.1 [micha 2023-09-08]
 	Updated editors/texmaker to 5.1.4 [nros 2023-09-08]
+	Added www/mycorrhiza version 1.14.0 [wiz 2023-09-08]
