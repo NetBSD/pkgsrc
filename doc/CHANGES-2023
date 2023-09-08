@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5393 2023/09/08 12:02:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5394 2023/09/08 12:33:28 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7853,3 +7853,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/wallust to 2.6.2 [pin 2023-09-08]
 	Added security/py-truststore version 0.8.0 [adam 2023-09-08]
 	Updated devel/py-pdm to 2.9.1 [adam 2023-09-08]
+	Updated editors/xnedit to 1.5.1 [micha 2023-09-08]
