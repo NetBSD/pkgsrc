@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/04/18 17:53:29 abs Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/09/08 19:12:52 vins Exp $
 bin/g[
 bin/gb2sum
 bin/gbase32
@@ -499,6 +499,8 @@ share/locale/sr/LC_MESSAGES/coreutils.mo
 share/locale/sr/LC_TIME/coreutils.mo
 share/locale/sv/LC_MESSAGES/coreutils.mo
 share/locale/sv/LC_TIME/coreutils.mo
+share/locale/ta/LC_MESSAGES/coreutils.mo
+share/locale/ta/LC_TIME/coreutils.mo
 share/locale/tr/LC_MESSAGES/coreutils.mo
 share/locale/tr/LC_TIME/coreutils.mo
 share/locale/uk/LC_MESSAGES/coreutils.mo
