@@ -1,0 +1,85 @@
+$NetBSD: patch-libntfs-3g_mft.c,v 1.1 2023/09/08 10:23:07 vins Exp $
+
+Rip off mkntfs_get_page_size() from mkntfs.c, to avoid
+a build error on archs where PAGE_SIZE is unusable.
+From OpenBSD ports/sysutils/ntfs-3g.
+
+--- libntfs-3g/mft.c.orig	2022-10-20 15:33:44.000000000 +0000
++++ libntfs-3g/mft.c
+@@ -27,6 +27,9 @@
+ #include "config.h"
+ #endif
+ 
++#ifdef  HAVE_UNISTD_H
++#include <unistd.h>
++#endif
+ #ifdef HAVE_STDLIB_H
+ #include <stdlib.h>
+ #endif
+@@ -522,9 +525,28 @@ static int ntfs_is_mft(ntfs_inode *ni)
+ 	return 0;
+ }
+ 
+-#ifndef PAGE_SIZE
+-#define PAGE_SIZE 4096
++/**
++ * mkntfs_get_page_size - detect the system's memory page size.
++ */
++static long mkntfs_get_page_size(void)
++{
++	long page_size;
++#ifdef _SC_PAGESIZE
++	page_size = sysconf(_SC_PAGESIZE);
++	if (page_size < 0)
+ #endif
++#ifdef _SC_PAGE_SIZE
++		page_size = sysconf(_SC_PAGE_SIZE);
++	if (page_size < 0)
++#endif
++	{
++		ntfs_log_warning("Failed to determine system page size.  "
++				"Assuming safe default of 4096 bytes.\n");
++		return 4096;
++	}
++	ntfs_log_debug("System page size is %li bytes.\n", page_size);
++	return page_size;
++}
+ 
+ #define RESERVED_MFT_RECORDS   64
+ 
+@@ -550,6 +572,7 @@ static int ntfs_mft_bitmap_find_free_rec
+ 	s64 pass_end, ll, data_pos, pass_start, ofs, bit;
+ 	ntfs_attr *mftbmp_na;
+ 	u8 *buf, *byte;
++	long page_size;
+ 	unsigned int size;
+ 	u8 pass, b;
+ 	int ret = -1;
+@@ -561,7 +584,8 @@ static int ntfs_mft_bitmap_find_free_rec
+ 	 * Set the end of the pass making sure we do not overflow the mft
+ 	 * bitmap.
+ 	 */
+-	size = PAGE_SIZE;
++	page_size = mkntfs_get_page_size();
++	size = page_size;
+ 	pass_end = vol->mft_na->allocated_size >> vol->mft_record_size_bits;
+ 	ll = mftbmp_na->initialized_size << 3;
+ 	if (pass_end > ll)
+@@ -587,7 +611,7 @@ static int ntfs_mft_bitmap_find_free_rec
+ 		pass = 2;
+ 	}
+ 	pass_start = data_pos;
+-	buf = ntfs_malloc(PAGE_SIZE);
++	buf = ntfs_malloc(page_size);
+ 	if (!buf)
+ 		goto leave;
+ 	
+@@ -600,7 +624,7 @@ static int ntfs_mft_bitmap_find_free_rec
+ 	b = 0;
+ #endif
+ 	/* Loop until a free mft record is found. */
+-	for (; pass <= 2; size = PAGE_SIZE) {
++	for (; pass <= 2; size = page_size) {
+ 		/* Cap size to pass_end. */
+ 		ofs = data_pos >> 3;
+ 		ll = ((pass_end + 7) >> 3) - ofs;
