@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1746 2023/09/03 15:49:51 taca Exp $
+# $NetBSD: Makefile,v 1.1747 2023/09/08 14:05:01 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -245,6 +245,7 @@ SUBDIR+=	monolith
 SUBDIR+=	moodle
 SUBDIR+=	motyl
 SUBDIR+=	mserv-php
+SUBDIR+=	mycorrhiza
 SUBDIR+=	nanoblogger
 SUBDIR+=	nanoblogger-extra
 SUBDIR+=	neon
