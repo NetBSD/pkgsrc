@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/11/15 17:35:42 wiz Exp $
+$NetBSD: distinfo,v 1.22 2023/09/08 13:40:58 nros Exp $
 
-BLAKE2s (texmaker-5.1.2.tar.bz2) = f7608dee4871a4024a4e9be2489384bdde0b058734bfa15ea54be15eaca4003b
-SHA512 (texmaker-5.1.2.tar.bz2) = a9625bad6401a36b0a9db90d59aa8e4a2e8f692d4937cbe1c159c46360d2b6257a14f6b5df760acfa7969944c93767d463da395dd5486bf619f6f3db31af7885
-Size (texmaker-5.1.2.tar.bz2) = 15199358 bytes
+BLAKE2s (texmaker-5.1.4.tar.bz2) = 0b9facc6622b7f247241ebf4491ee6c71f23bf8161b6020db8f350181f083c56
+SHA512 (texmaker-5.1.4.tar.bz2) = 6ae4be7ae9be98e494480d4574e783a5568f0dcc9c631ccbc9bf00cca9f69dc672ba72060c064748a4446d20302af89e3bc6f14e8977d1f1ddbd20458fcf6d4e
+Size (texmaker-5.1.4.tar.bz2) = 15277027 bytes
 SHA1 (patch-latexeditor.h) = 2168a70e6911aff17e10997948fbc555d18cd567
 SHA1 (patch-latexeditorview.h) = b1a474fb47af2fd78b468328d7582ac79f4e81bb
 SHA1 (patch-latexhighlighter.h) = 0268fc657fae4071a5c8392df270f3666621457e
