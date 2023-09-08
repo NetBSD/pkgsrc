@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/09/07 20:56:05 vins Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/08 06:01:04 vins Exp $
 #
 
 DISTNAME=	fuse-2.9.9
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libfuse/}
 GITHUB_PROJECT=	libfuse
