@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:12 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2023/09/08 22:08:18 mef Exp $
 #
 
 BUILDLINK_TREE+=	elib
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	elib
 ELIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.elib+=	${EMACS_PKGNAME_PREFIX}elib>=1
+BUILDLINK_ABI_DEPENDS.elib?=	elib>=1.0nb8
 BUILDLINK_PKGSRCDIR.elib?=	../../devel/elib
 
 BUILDLINK_CONTENTS_FILTER.elib=	${EGREP} '.*\.el$$|.*\.elc$$'

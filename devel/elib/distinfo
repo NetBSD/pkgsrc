@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:14:36 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/09/08 22:08:18 mef Exp $
 
 BLAKE2s (elib-1.0.tar.gz) = e89970ec564a5caaa16bffc478a965af913ae46de3448177646b4fcceb1db0c7
 SHA512 (elib-1.0.tar.gz) = ca5d6e0861f3d8d049911a9e4455169263bd781992103baacadae560fce0fedddb734617338cb5fac51420fcb2035622042836fa7198fe7bec312a0015da266d
 Size (elib-1.0.tar.gz) = 58335 bytes
-SHA1 (patch-aa) = d78586bf11e732fbbcf6512ad415fd4cf7b3f78a
+SHA1 (patch-aa) = 40e88d3b7a005cdf7e1b105acd25d3e5482120ef
 SHA1 (patch-ab) = 3b96be6ac7b48166da5b9cd662aa1f481037d072
+SHA1 (patch-avltree.el) = cf9978dd48c2d9223c481a9452add3764711f24b
+SHA1 (patch-bintree.el) = 6fed2c3a33dcbce46fc7a80d932b3d10bff6a39f
+SHA1 (patch-cookie.el) = 0337b7a2b851025204602c04562cadcd4b4f92c5
+SHA1 (patch-dll-debug.el) = 3ecbbcc385d7dcabfc9c9c9332ae6dc6f27f01a7
+SHA1 (patch-dll.el) = be2d0241e25cf2562e7515db8c3b31fb94f8bd27
+SHA1 (patch-elib-node.el) = 0e21fb3d93cf87246b2f9e019abf42427dff6e79
