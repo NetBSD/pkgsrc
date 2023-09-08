@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5401 2023/09/08 19:02:30 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5402 2023/09/08 19:14:05 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7861,3 +7861,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated parallel/parallel to 20230822 [vins 2023-09-08]
 	Updated lang/go120 to 1.20.8 [bsiegert 2023-09-08]
 	Updated lang/go119 to 1.19.13 [bsiegert 2023-09-08]
+	Updated sysutils/coreutils to 9.4 [vins 2023-09-08]
