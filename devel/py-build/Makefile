@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/09/07 12:07:18 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/08 11:47:22 wiz Exp $
 
 DISTNAME=	build-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,9 +20,7 @@ USE_PKG_RESOURCES=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
-.endif
+
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif
