@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5403 2023/09/08 20:32:32 js Exp $
+$NetBSD: CHANGES-2023,v 1.5404 2023/09/08 20:54:14 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7863,3 +7863,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/go119 to 1.19.13 [bsiegert 2023-09-08]
 	Updated sysutils/coreutils to 9.4 [vins 2023-09-08]
 	Updated chat/matrix-synapse to 1.91.2 [js 2023-09-08]
+	Updated net/libasr to 1.0.4 [vins 2023-09-08]
