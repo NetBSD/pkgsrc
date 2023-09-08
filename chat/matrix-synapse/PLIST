@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2023/08/30 13:50:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.44 2023/09/08 20:32:00 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -162,8 +162,6 @@ ${PYSITELIB}/synapse/config/modules.py
 ${PYSITELIB}/synapse/config/modules.pyc
 ${PYSITELIB}/synapse/config/oembed.py
 ${PYSITELIB}/synapse/config/oembed.pyc
-${PYSITELIB}/synapse/config/oidc.py
-${PYSITELIB}/synapse/config/oidc.pyc
 ${PYSITELIB}/synapse/config/password_auth_providers.py
 ${PYSITELIB}/synapse/config/password_auth_providers.pyc
 ${PYSITELIB}/synapse/config/push.py
