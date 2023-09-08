@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/07/12 13:22:10 micha Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/08 12:32:02 micha Exp $
 
-DISTNAME=	xnedit-1.5.0
+DISTNAME=	xnedit-1.5.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c99
 USE_TOOLS=	perl pkg-config yacc
 
-# Redefinition of macros bcopy and bzero (at leat on NetBSD 9.3)
+# Redefinition of macros bcopy and bzero (at least on NetBSD 9.3)
 FORTIFY_SUPPORTED=	no
 
 WRKSRC=			${WRKDIR}/xnedit
