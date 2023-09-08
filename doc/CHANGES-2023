@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5404 2023/09/08 20:54:14 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5405 2023/09/08 22:00:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7864,3 +7864,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/coreutils to 9.4 [vins 2023-09-08]
 	Updated chat/matrix-synapse to 1.91.2 [js 2023-09-08]
 	Updated net/libasr to 1.0.4 [vins 2023-09-08]
+	Updated shells/oh-my-posh to 18.8.0 [pin 2023-09-08]
