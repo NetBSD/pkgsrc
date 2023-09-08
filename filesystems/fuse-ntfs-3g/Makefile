@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.23 2023/09/07 19:42:47 vins Exp $
+# $NetBSD: Makefile,v 1.24 2023/09/08 10:23:07 vins Exp $
 
-PKGREVISION= 1
 .include "../../filesystems/libntfs/Makefile.common"
 
 PKGNAME=	fuse-${DISTNAME:S/_ntfsprogs//}
@@ -8,6 +7,7 @@ CATEGORIES=	filesystems
 
 COMMENT=	NTFS driver with read and write support
 
+CONFIGURE_ARGS+=	--with-fuse=external
 CONFIGURE_ARGS+=	--disable-ldconfig
 CONFIGURE_ARGS+=	--disable-ntfsprogs
 CONFIGURE_ARGS+=	--enable-mount-helper
@@ -26,7 +26,7 @@ USE_TOOLS+=	pkg-config
 # than open-coding the changing of which bl3 line is used.
 .include "../../filesystems/fuse/buildlink3.mk"
 .else
-# Find this platform's preferred FUSE implementation (normal approach). 
+# Find this platform's preferred FUSE implementation (normal approach).
 .include "../../mk/fuse.buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
