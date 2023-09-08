@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/09/05 13:42:32 vins Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/08 21:05:37 vins Exp $
 
 DISTNAME=	filter-dnsbl-0.3
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://imperialat.at/releases/
 
@@ -14,7 +15,7 @@ DEPENDS+=	opensmtpd-[0-9]*:../../mail/opensmtpd
 
 USE_BSD_MAKEFILE=	yes
 
-CFLAGS.Linux+=		-D_GNU_SOURCE #strcasestr() 
+CFLAGS.Linux+=		-D_GNU_SOURCE #strcasestr()
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
