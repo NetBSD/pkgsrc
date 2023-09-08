@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2023/05/22 21:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2023/09/08 13:40:58 nros Exp $
 
-DISTNAME=	texmaker-5.1.2
-PKGREVISION=	8
+DISTNAME=	texmaker-5.1.4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,13 +23,24 @@ do-configure:
 		ICONDIR=${PREFIX}/share/pixmaps \
 		METAINFODIR=${PREFIX}/share/appdata
 
-pre-configure:
+post-extract:
 	${CP} ${FILESDIR}/fxge_pkgsrcfonts.inc ${WRKSRC}/pdfium/core/fxge
 	${CP} ${FILESDIR}/fxge_x11fonts.inc ${WRKSRC}/pdfium/core/fxge
 	${CP} ${FILESDIR}/fgas_stdfontmgr_pkgsrcfonts.inc \
 		${WRKSRC}/pdfium/xfa/fgas/font
 	${CP} ${FILESDIR}/fgas_stdfontmgr_x11fonts.inc \
 		${WRKSRC}/pdfium/xfa/fgas/font
+
+SUBST_CLASSES+=		fonts
+SUBST_STAGE.fonts=	pre-configure
+SUBST_FILES.fonts+=	pdfium/core/fxge/fxge_pkgsrcfonts.inc
+SUBST_FILES.fonts+=	pdfium/core/fxge/fxge_x11fonts.inc
+SUBST_FILES.fonts+=	pdfium/xfa/fgas/font/fgas_stdfontmgr_pkgsrcfonts.inc
+SUBST_FILES.fonts+=	pdfium/xfa/fgas/font/fgas_stdfontmgr_x11fonts.inc
+SUBST_VARS.fonts+=	PREFIX
+SUBST_VARS.fonts+=	X11BASE
+
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
