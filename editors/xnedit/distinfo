@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2023/07/12 13:22:10 micha Exp $
+$NetBSD: distinfo,v 1.4 2023/09/08 12:32:02 micha Exp $
 
-BLAKE2s (xnedit-1.5.0.tar.gz) = 8e65d105db8dbac23aaedce52435cc5c877b42367467113196cfe3edefc5ebd5
-SHA512 (xnedit-1.5.0.tar.gz) = 89dd847aed649bc31a1f9d5eca8ace42e189bb5038f1fdd58526eeb7167dfa179bd8f51901d585f565b483d40eb15c0f8807308805c42afecc918ed9c38d6264
-Size (xnedit-1.5.0.tar.gz) = 1519422 bytes
+BLAKE2s (xnedit-1.5.1.tar.gz) = 9b0256718abfb2eedb92a3ca35966d332263a0c6fd1a1d0139f866c9adcb57b8
+SHA512 (xnedit-1.5.1.tar.gz) = e5a40947a8fcc4995e2debbe46710e5aa9e7d3e01fe925c81e457dff6a401695f1a3839f8c8e106a0c3d20b6d099abc2fc09f8df53cd09d8a685355b4a98f6df
+Size (xnedit-1.5.1.tar.gz) = 1524612 bytes
 SHA1 (patch-Makefile) = 065037b9d82dd35f33253899869f3e85db17834b
