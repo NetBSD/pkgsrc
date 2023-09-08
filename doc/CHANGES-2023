@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5384 2023/09/08 06:30:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5385 2023/09/08 08:52:47 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7843,3 +7843,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/fuse to 2.9.9 [vins 2023-09-07]
 	Updated devel/py-test to 7.4.2 [adam 2023-09-08]
 	Updated devel/py-faker to 19.4.0 [adam 2023-09-08]
+	Updated games/openrct2 to 0.4.6 [triaxx 2023-09-08]
