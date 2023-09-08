@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/26 16:35:29 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/08 13:06:29 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -225,9 +225,9 @@ go121/src/clean.rc
 go121/src/cmd/README.vendor
 go121/src/cmd/addr2line/addr2line_test.go
 go121/src/cmd/addr2line/main.go
-go121/src/cmd/api/api.go
 go121/src/cmd/api/api_test.go
 go121/src/cmd/api/boring_test.go
+go121/src/cmd/api/main_test.go
 go121/src/cmd/api/testdata/src/issue21181/dep/p.go
 go121/src/cmd/api/testdata/src/issue21181/dep/p_amd64.go
 go121/src/cmd/api/testdata/src/issue21181/indirect/p.go
@@ -538,7 +538,6 @@ go121/src/cmd/cgo/internal/testplugin/plugin_test.go
 go121/src/cmd/cgo/internal/testplugin/testdata/checkdwarf/main.go
 go121/src/cmd/cgo/internal/testplugin/testdata/common/common.go
 go121/src/cmd/cgo/internal/testplugin/testdata/forkexec/main.go
-go121/src/cmd/cgo/internal/testplugin/testdata/generic/plugin.go
 go121/src/cmd/cgo/internal/testplugin/testdata/host/host.go
 go121/src/cmd/cgo/internal/testplugin/testdata/iface/main.go
 go121/src/cmd/cgo/internal/testplugin/testdata/iface_a/a.go
@@ -573,6 +572,7 @@ go121/src/cmd/cgo/internal/testplugin/testdata/issue52937/main.go
 go121/src/cmd/cgo/internal/testplugin/testdata/issue53989/main.go
 go121/src/cmd/cgo/internal/testplugin/testdata/issue53989/p/p.go
 go121/src/cmd/cgo/internal/testplugin/testdata/issue53989/plugin.go
+go121/src/cmd/cgo/internal/testplugin/testdata/mangle/plugin.go
 go121/src/cmd/cgo/internal/testplugin/testdata/method/main.go
 go121/src/cmd/cgo/internal/testplugin/testdata/method/plugin.go
 go121/src/cmd/cgo/internal/testplugin/testdata/method2/main.go
@@ -1683,6 +1683,8 @@ go121/src/cmd/go/internal/test/genflags.go
 go121/src/cmd/go/internal/test/internal/genflags/testflag.go
 go121/src/cmd/go/internal/test/internal/genflags/vetflag.go
 go121/src/cmd/go/internal/test/test.go
+go121/src/cmd/go/internal/test/test_nonunix.go
+go121/src/cmd/go/internal/test/test_unix.go
 go121/src/cmd/go/internal/test/testflag.go
 go121/src/cmd/go/internal/tool/tool.go
 go121/src/cmd/go/internal/toolchain/exec.go
@@ -2188,6 +2190,7 @@ go121/src/cmd/go/testdata/script/gopath_paths.txt
 go121/src/cmd/go/testdata/script/gopath_std_vendor.txt
 go121/src/cmd/go/testdata/script/gopath_vendor_dup_err.txt
 go121/src/cmd/go/testdata/script/goroot_executable.txt
+go121/src/cmd/go/testdata/script/goroot_executable_trimpath.txt
 go121/src/cmd/go/testdata/script/gotoolchain_local.txt
 go121/src/cmd/go/testdata/script/gotoolchain_loop.txt
 go121/src/cmd/go/testdata/script/gotoolchain_modcmds.txt
@@ -2361,6 +2364,7 @@ go121/src/cmd/go/testdata/script/mod_get_go_file.txt
 go121/src/cmd/go/testdata/script/mod_get_hash.txt
 go121/src/cmd/go/testdata/script/mod_get_incompatible.txt
 go121/src/cmd/go/testdata/script/mod_get_indirect.txt
+go121/src/cmd/go/testdata/script/mod_get_insecure_redirect.txt
 go121/src/cmd/go/testdata/script/mod_get_issue37438.txt
 go121/src/cmd/go/testdata/script/mod_get_issue47979.txt
 go121/src/cmd/go/testdata/script/mod_get_issue48511.txt
@@ -2575,6 +2579,7 @@ go121/src/cmd/go/testdata/script/mod_tidy_temp.txt
 go121/src/cmd/go/testdata/script/mod_tidy_version.txt
 go121/src/cmd/go/testdata/script/mod_tidy_version_tooold.txt
 go121/src/cmd/go/testdata/script/mod_toolchain.txt
+go121/src/cmd/go/testdata/script/mod_toolchain_slash.txt
 go121/src/cmd/go/testdata/script/mod_update_sum_readonly.txt
 go121/src/cmd/go/testdata/script/mod_upgrade_patch.txt
 go121/src/cmd/go/testdata/script/mod_vcs_missing.txt
@@ -6453,6 +6458,9 @@ go121/src/internal/types/testdata/fixedbugs/issue60906.go
 go121/src/internal/types/testdata/fixedbugs/issue60933.go
 go121/src/internal/types/testdata/fixedbugs/issue60946.go
 go121/src/internal/types/testdata/fixedbugs/issue61486.go
+go121/src/internal/types/testdata/fixedbugs/issue61879.go
+go121/src/internal/types/testdata/fixedbugs/issue61903.go
+go121/src/internal/types/testdata/fixedbugs/issue62157.go
 go121/src/internal/types/testdata/fixedbugs/issue6977.go
 go121/src/internal/types/testdata/spec/assignability.go
 go121/src/internal/types/testdata/spec/comparable.go
@@ -11558,6 +11566,10 @@ go121/test/fixedbugs/issue61127.go
 go121/test/fixedbugs/issue61187.go
 go121/test/fixedbugs/issue6131.go
 go121/test/fixedbugs/issue6140.go
+go121/test/fixedbugs/issue61778.go
+go121/test/fixedbugs/issue61908.go
+go121/test/fixedbugs/issue61992.go
+go121/test/fixedbugs/issue62203.go
 go121/test/fixedbugs/issue6247.go
 go121/test/fixedbugs/issue6269.go
 go121/test/fixedbugs/issue6295.dir/p0.go
