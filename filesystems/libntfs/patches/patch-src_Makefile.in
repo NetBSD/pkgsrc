@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile.in,v 1.3 2018/04/02 13:14:08 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.4 2023/09/08 10:23:07 vins Exp $
 
 Link against already built and installed libntfs.
 Install binaries into PREFIX, not the root directory.
 
---- src/Makefile.in.orig	2017-03-23 09:43:00.000000000 +0000
+--- src/Makefile.in.orig	2022-10-20 15:35:12.000000000 +0000
 +++ src/Makefile.in
-@@ -110,8 +110,7 @@ am__DEPENDENCIES_1 =
+@@ -118,8 +118,7 @@ am__DEPENDENCIES_1 =
  @FUSE_INTERNAL_FALSE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
  @FUSE_INTERNAL_TRUE@am__DEPENDENCIES_2 = $(top_builddir)/libfuse-lite/libfuse-lite.la
  @ENABLE_NTFS_3G_TRUE@lowntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_1) \
@@ -15,7 +15,7 @@ Install binaries into PREFIX, not the root directory.
  AM_V_lt = $(am__v_lt_@AM_V@)
  am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
  am__v_lt_0 = --silent
-@@ -124,8 +123,7 @@ am__ntfs_3g_SOURCES_DIST = ntfs-3g.c ntf
+@@ -132,8 +131,7 @@ am__ntfs_3g_SOURCES_DIST = ntfs-3g.c ntf
  @ENABLE_NTFS_3G_TRUE@	ntfs_3g-ntfs-3g_common.$(OBJEXT)
  ntfs_3g_OBJECTS = $(am_ntfs_3g_OBJECTS)
  @ENABLE_NTFS_3G_TRUE@ntfs_3g_DEPENDENCIES = $(am__DEPENDENCIES_1) \
@@ -25,7 +25,7 @@ Install binaries into PREFIX, not the root directory.
  ntfs_3g_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntfs_3g_CFLAGS) \
  	$(CFLAGS) $(ntfs_3g_LDFLAGS) $(LDFLAGS) -o $@
-@@ -133,8 +131,7 @@ am__ntfs_3g_probe_SOURCES_DIST = ntfs-3g
+@@ -141,8 +139,7 @@ am__ntfs_3g_probe_SOURCES_DIST = ntfs-3g
  @ENABLE_NTFS_3G_TRUE@am_ntfs_3g_probe_OBJECTS =  \
  @ENABLE_NTFS_3G_TRUE@	ntfs_3g_probe-ntfs-3g.probe.$(OBJEXT)
  ntfs_3g_probe_OBJECTS = $(am_ntfs_3g_probe_OBJECTS)
@@ -35,7 +35,7 @@ Install binaries into PREFIX, not the root directory.
  ntfs_3g_probe_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(ntfs_3g_probe_CFLAGS) \
  	$(CFLAGS) $(ntfs_3g_probe_LDFLAGS) $(LDFLAGS) -o $@
-@@ -366,9 +363,9 @@ pkgconfigdir = @pkgconfigdir@
+@@ -382,9 +379,9 @@ pkgconfigdir = @pkgconfigdir@
  prefix = @prefix@
  program_transform_name = @program_transform_name@
  psdir = @psdir@
@@ -45,10 +45,10 @@ Install binaries into PREFIX, not the root directory.
 +rootbindir = @bindir@
 +rootlibdir = @libdir@
 +rootsbindir = @sbindir@
+ runstatedir = @runstatedir@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
- srcdir = @srcdir@
-@@ -391,7 +388,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+@@ -408,7 +405,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
  @DISABLE_PLUGINS_FALSE@PLUGIN_CFLAGS = -DPLUGIN_DIR=\"$(plugindir)\"
  @ENABLE_NTFS_3G_TRUE@rootsbin_DATA = #Create directory
  @ENABLE_NTFS_3G_TRUE@man_MANS = ntfs-3g.8 ntfs-3g.probe.8
@@ -57,7 +57,7 @@ Install binaries into PREFIX, not the root directory.
  @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_LDFLAGS = $(AM_LDFLAGS) -all-static
  @ENABLE_NTFS_3G_TRUE@ntfs_3g_CFLAGS = \
  @ENABLE_NTFS_3G_TRUE@	$(AM_CFLAGS) 			\
-@@ -401,7 +398,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+@@ -418,7 +415,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
  @ENABLE_NTFS_3G_TRUE@	$(PLUGIN_CFLAGS)
  
  @ENABLE_NTFS_3G_TRUE@ntfs_3g_SOURCES = ntfs-3g.c ntfs-3g_common.c
@@ -66,7 +66,7 @@ Install binaries into PREFIX, not the root directory.
  @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@lowntfs_3g_LDFLAGS = $(AM_LDFLAGS) -all-static
  @ENABLE_NTFS_3G_TRUE@lowntfs_3g_CFLAGS = \
  @ENABLE_NTFS_3G_TRUE@	$(AM_CFLAGS) 			\
-@@ -411,7 +408,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
+@@ -428,7 +425,7 @@ MAINTAINERCLEANFILES = $(srcdir)/Makefil
  @ENABLE_NTFS_3G_TRUE@	$(PLUGIN_CFLAGS)
  
  @ENABLE_NTFS_3G_TRUE@lowntfs_3g_SOURCES = lowntfs-3g.c ntfs-3g_common.c
@@ -75,7 +75,7 @@ Install binaries into PREFIX, not the root directory.
  @ENABLE_NTFS_3G_TRUE@@REALLYSTATIC_TRUE@ntfs_3g_probe_LDFLAGS = $(AM_LDFLAGS) -all-static
  @ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_CFLAGS = $(AM_CFLAGS) -I$(top_srcdir)/include/ntfs-3g
  @ENABLE_NTFS_3G_TRUE@ntfs_3g_probe_SOURCES = ntfs-3g.probe.c
-@@ -969,9 +966,9 @@ uninstall-man: uninstall-man8
+@@ -1003,9 +1000,9 @@ uninstall-man: uninstall-man8
  @DISABLE_PLUGINS_FALSE@@ENABLE_NTFS_3G_TRUE@	$(MKDIR_P) $(DESTDIR)/$(plugindir)
  
  @ENABLE_MOUNT_HELPER_TRUE@@ENABLE_NTFS_3G_TRUE@install-exec-local:	install-rootbinPROGRAMS
