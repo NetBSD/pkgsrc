@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5392 2023/09/08 11:53:39 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5393 2023/09/08 12:02:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7851,3 +7851,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/lok to 0.2.4 [pin 2023-09-08]
 	Updated sysutils/ripdrag to 0.4.4 [pin 2023-09-08]
 	Updated graphics/wallust to 2.6.2 [pin 2023-09-08]
+	Added security/py-truststore version 0.8.0 [adam 2023-09-08]
+	Updated devel/py-pdm to 2.9.1 [adam 2023-09-08]
