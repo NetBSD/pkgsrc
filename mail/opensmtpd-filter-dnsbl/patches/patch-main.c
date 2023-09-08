@@ -1,6 +1,6 @@
-$NetBSD: patch-main.c,v 1.1 2023/09/04 10:32:47 vins Exp $
+$NetBSD: patch-main.c,v 1.2 2023/09/08 21:05:37 vins Exp $
 
-* Provide an inline definition of pledge().
+* Provide an implementation of recallocarray().
 * Provide compatibility functions for OpenBSD's libevent
   (pulled from OpenSMTD/openbsd-compat).
 
@@ -13,14 +13,45 @@ $NetBSD: patch-main.c,v 1.1 2023/09/04 10:32:47 vins Exp $
   *
   * Permission to use, copy, modify, and distribute this software for any
   * purpose with or without fee is hereby granted, provided that the above
-@@ -31,6 +32,76 @@
+@@ -30,6 +31,104 @@
+ #include <asr.h>
  
  #include "opensmtpd.h"
- 
-+static inline int  
-+pledge(const char *promises, const char *execpromises)
++#include "compat.h"
++
++void *recallocarray(void *ptr, size_t om, size_t m, size_t n)
 +{
-+        return 0;
++	void *newptr;
++	size_t old_size, new_size;
++
++	if (n && m > -1 / n) {
++		errno = ENOMEM;
++		return 0;
++	}
++	new_size = m * n;
++
++	if (n && om > -1 / n) {
++		errno = EINVAL;
++		return 0;
++	}
++	old_size = om * n;
++
++	newptr = calloc(m, n);
++	if (!newptr)
++		return ptr;
++
++	if (new_size <= old_size) {
++		memcpy((char *) newptr, ptr, new_size);
++	}
++	else {
++		memcpy((char *) newptr, ptr, old_size);
++		memset((char *) newptr + old_size, 0, new_size - old_size);
++	}
++
++	memset(ptr, 0, old_size);
++	free(ptr);
++
++	return newptr;
 +}
 +
 +struct event_asr {
@@ -84,9 +115,6 @@ $NetBSD: patch-main.c,v 1.1 2023/09/04 10:32:47 vins Exp $
 +	event_del(&eva->ev);
 +	free(eva);
 +}
-+
-+struct asr_query *gethostbyname_async(const char *, void *);
-+
+ 
  struct dnsbl_session;
  
- struct dnsbl_query {
