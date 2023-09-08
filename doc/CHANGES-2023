@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5397 2023/09/08 14:10:01 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5398 2023/09/08 18:32:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7857,3 +7857,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/texmaker to 5.1.4 [nros 2023-09-08]
 	Added www/mycorrhiza version 1.14.0 [wiz 2023-09-08]
 	Updated filesystems/fuse-sshfs to 3.7.3.0.20230311 [wiz 2023-09-08]
+	Updated emulators/PC6001VX to 4.2.0 [tsutsui 2023-09-08]
