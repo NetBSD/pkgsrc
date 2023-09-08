@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/09/03 12:14:30 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/09/08 08:52:16 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -61,6 +61,7 @@ share/openrct2/object/official/footpath_item/rct2dlc.footpath_item.litterpa.park
 share/openrct2/object/official/footpath_railings/openrct2.footpath_railings.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.invisible.json
 share/openrct2/object/official/footpath_surface/openrct2.footpath_surface.queue_invisible.json
+share/openrct2/object/official/music/openrct2.audio.title.parkobj
 share/openrct2/object/official/music/openrct2.music.acid.parkobj
 share/openrct2/object/official/music/openrct2.music.blizzard.parkobj
 share/openrct2/object/official/music/openrct2.music.dodgems.parkobj
