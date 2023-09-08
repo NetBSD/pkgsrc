@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/07/31 16:53:39 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/08 12:01:53 adam Exp $
 
-DISTNAME=	pdm-2.8.2
+DISTNAME=	pdm-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm/}
@@ -45,6 +45,9 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metada
 .endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
+.endif
+.if ${PYTHON_VERSION} >= 310
+DEPENDS+=	${PYPKGPREFIX}-truststore-[0-9]*:../../security/py-truststore
 .endif
 
 post-install:
