@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5385 2023/09/08 08:52:47 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5386 2023/09/08 10:24:43 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7844,3 +7844,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-test to 7.4.2 [adam 2023-09-08]
 	Updated devel/py-faker to 19.4.0 [adam 2023-09-08]
 	Updated games/openrct2 to 0.4.6 [triaxx 2023-09-08]
+	Updated filesystems/libntfs to 2022.10.3 [vins 2023-09-08]
