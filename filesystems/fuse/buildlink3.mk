@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/09/07 19:38:14 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/09/08 06:01:04 vins Exp $
 
 BUILDLINK_TREE+=	fuse
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fuse
 FUSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fuse+=	fuse>=2.5.2
-BUILDLINK_ABI_DEPENDS.fuse+=	fuse>=2.9.9
+BUILDLINK_ABI_DEPENDS.fuse+=	fuse>=2.9.9nb1
 BUILDLINK_PKGSRCDIR.fuse?=	../../filesystems/fuse
 
 .include "../../mk/bsd.fast.prefs.mk"
