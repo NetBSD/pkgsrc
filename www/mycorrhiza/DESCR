@@ -1,0 +1,17 @@
+Mycorrhiza Wiki is a lightweight file-system wiki engine that uses
+Git for keeping history.
+
+Features:
+
+* No database required.
+* Everything is hyphae.
+* Hyphae are authored in Mycomarkup, a markup language that's
+  designed to be unambigious yet easy to use.
+* Categories let you organize hyphae without any hierarchy
+  restrictions, with all the benefits of a category system.
+* Nesting of hyphae is also supported if you like hierarchies.
+* History of changes for textual parts of hyphae.
+* Keyboard-driven navigation.
+* Support for authorization.
+* Open Graph support.
+* Interwiki support.
