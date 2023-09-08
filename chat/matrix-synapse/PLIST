@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2023/09/08 20:32:00 js Exp $
+@comment $NetBSD: PLIST,v 1.45 2023/09/08 20:33:34 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -300,8 +300,6 @@ ${PYSITELIB}/synapse/handlers/jwt.py
 ${PYSITELIB}/synapse/handlers/jwt.pyc
 ${PYSITELIB}/synapse/handlers/message.py
 ${PYSITELIB}/synapse/handlers/message.pyc
-${PYSITELIB}/synapse/handlers/oidc.py
-${PYSITELIB}/synapse/handlers/oidc.pyc
 ${PYSITELIB}/synapse/handlers/pagination.py
 ${PYSITELIB}/synapse/handlers/pagination.pyc
 ${PYSITELIB}/synapse/handlers/password_policy.py
