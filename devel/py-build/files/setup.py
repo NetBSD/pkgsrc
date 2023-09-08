@@ -16,7 +16,6 @@ install_requires = \
 
 extras_require = \
 {':os_name == "nt"': ['colorama'],
- ':python_version < "3.10"': ['importlib-metadata >= 4.6'],
  ':python_version < "3.11"': ['tomli >= 1.1.0'],
  'docs': ['furo >= 2023.08.17',
           'sphinx ~= 7.0',
