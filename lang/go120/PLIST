@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/07/15 10:40:37 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/09/08 18:49:45 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -607,9 +607,9 @@ go120/src/clean.rc
 go120/src/cmd/README.vendor
 go120/src/cmd/addr2line/addr2line_test.go
 go120/src/cmd/addr2line/main.go
-go120/src/cmd/api/api.go
 go120/src/cmd/api/api_test.go
 go120/src/cmd/api/boring_test.go
+go120/src/cmd/api/main_test.go
 go120/src/cmd/api/testdata/src/issue21181/dep/p.go
 go120/src/cmd/api/testdata/src/issue21181/dep/p_amd64.go
 go120/src/cmd/api/testdata/src/issue21181/indirect/p.go
@@ -1899,6 +1899,7 @@ go120/src/cmd/go/testdata/script/build_dash_x.txt
 go120/src/cmd/go/testdata/script/build_exe.txt
 go120/src/cmd/go/testdata/script/build_gcflags.txt
 go120/src/cmd/go/testdata/script/build_gcflags_order.txt
+go120/src/cmd/go/testdata/script/build_go122.txt
 go120/src/cmd/go/testdata/script/build_gopath_order.txt
 go120/src/cmd/go/testdata/script/build_ignore_leading_bom.txt
 go120/src/cmd/go/testdata/script/build_import_comment.txt
@@ -11042,6 +11043,7 @@ go120/test/fixedbugs/issue6055.go
 go120/test/fixedbugs/issue60601.go
 go120/test/fixedbugs/issue6131.go
 go120/test/fixedbugs/issue6140.go
+go120/test/fixedbugs/issue61992.go
 go120/test/fixedbugs/issue6247.go
 go120/test/fixedbugs/issue6269.go
 go120/test/fixedbugs/issue6295.dir/p0.go
