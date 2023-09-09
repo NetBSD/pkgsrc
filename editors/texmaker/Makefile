@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.131 2023/09/08 13:40:58 nros Exp $
+# $NetBSD: Makefile,v 1.132 2023/09/09 09:49:56 nros Exp $
 
 DISTNAME=	texmaker-5.1.4
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +43,8 @@ SUBST_VARS.fonts+=	X11BASE
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
