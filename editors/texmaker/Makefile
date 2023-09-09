@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2023/09/09 11:11:09 nros Exp $
+# $NetBSD: Makefile,v 1.134 2023/09/09 11:13:55 nros Exp $
 
 DISTNAME=	texmaker-5.1.4
 PKGREVISION=	1
@@ -44,10 +44,9 @@ SUBST_VARS.fonts+=	X11BASE
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
