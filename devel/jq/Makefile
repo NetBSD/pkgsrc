@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.18 2022/04/23 21:05:18 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2023/09/09 19:52:53 wiz Exp $
 
-DISTNAME=	jq-1.6
-PKGREVISION=	1
-DIST_SUBDIR=	${DISTNAME}	# remove on next update
+DISTNAME=	jq-1.7
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=stedolan/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jqlang/}
 GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://github.com/stedolan/jq/
+HOMEPAGE=	https://github.com/jqlang/jq
 COMMENT=	Command-line JSON processor
 LICENSE=	mit
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoreconf autoconf automake bison flex gmake
+USE_TOOLS+=	bison flex gmake
 GNU_CONFIGURE=	yes
 
-TEST_TARGET=	check
+USE_CC_FEATURES=	c99
+PKGCONFIG_OVERRIDE=	libjq.pc.in
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
+TEST_TARGET=	check
 
 .include "options.mk"
 
