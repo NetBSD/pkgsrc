@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/15 12:29:19 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/09 14:56:28 vins Exp $
 bin/xmbdfed
 man/man1/xmbdfed.1
+share/applications/xmbdfed.desktop
+share/examples/xmbdfed/xmbdfedrc
+share/pixmaps/xmbdfed.png
