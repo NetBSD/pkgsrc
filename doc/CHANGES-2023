@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5423 2023/09/09 20:05:07 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5424 2023/09/09 20:12:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7883,3 +7883,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/dunst to 1.9.2nb1 [wiz 2023-09-09]
 	Updated devel/jq to 1.7 [wiz 2023-09-09]
 	Updated emulators/mame to 0.258 [wiz 2023-09-09]
+	Updated math/nickle to 2.93 [wiz 2023-09-09]
