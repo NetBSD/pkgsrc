@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:21:29 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/09/09 22:58:51 mef Exp $
 
 BLAKE2s (gnuserv-3.12.7.tar.gz) = e3651b82781a0fee741570e6d20a7e2dcf833323affb99ee58b5c9f18f1c245b
 SHA512 (gnuserv-3.12.7.tar.gz) = 3d5f64358a6c0d9d05eabf5aeb345400f8fcc53bc91ffde6ab17c6cffbe58aaa463111d426e7fda4e1757e0e25a10b9dd9e935d5d7a4829cb6bea0d700032c51
 Size (gnuserv-3.12.7.tar.gz) = 93709 bytes
 SHA1 (patch-aa) = f10c267b84290265df2a757454b0548bf8383889
 SHA1 (patch-ab) = 05df71e2531d13f801a0d0ab2a9acb8faa2742ea
+SHA1 (patch-gnuserv-compat.el) = da60d701fccf4556b9e58478310ec0bb42eb54a5
+SHA1 (patch-gnuserv.el) = 3bbc27f14c20ea9e25e775154de465c1473b0094
