@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/26 10:48:26 obache Exp $
-${EMACS_INFOPREFIX}/jabber.info
+@comment $NetBSD: PLIST,v 1.2 2023/09/09 10:27:20 mef Exp $
+info/jabber.info
 libexec/emacs-jabber-uri-handler
 ${EMACS_LISPPREFIX}/fsm.el
 ${EMACS_LISPPREFIX}/fsm.elc
+${EMACS_LISPPREFIX}/hexrgb.el
+${EMACS_LISPPREFIX}/hexrgb.elc
 ${EMACS_LISPPREFIX}/jabber-activity.el
 ${EMACS_LISPPREFIX}/jabber-activity.elc
 ${EMACS_LISPPREFIX}/jabber-ahc-presence.el
@@ -32,6 +34,8 @@ ${EMACS_LISPPREFIX}/jabber-compose.el
 ${EMACS_LISPPREFIX}/jabber-compose.elc
 ${EMACS_LISPPREFIX}/jabber-conn.el
 ${EMACS_LISPPREFIX}/jabber-conn.elc
+${EMACS_LISPPREFIX}/jabber-console.el
+${EMACS_LISPPREFIX}/jabber-console.elc
 ${EMACS_LISPPREFIX}/jabber-core.el
 ${EMACS_LISPPREFIX}/jabber-core.elc
 ${EMACS_LISPPREFIX}/jabber-disco.el
@@ -60,12 +64,16 @@ ${EMACS_LISPPREFIX}/jabber-keepalive.el
 ${EMACS_LISPPREFIX}/jabber-keepalive.elc
 ${EMACS_LISPPREFIX}/jabber-keymap.el
 ${EMACS_LISPPREFIX}/jabber-keymap.elc
+${EMACS_LISPPREFIX}/jabber-libnotify.el
+${EMACS_LISPPREFIX}/jabber-libnotify.elc
 ${EMACS_LISPPREFIX}/jabber-logon.el
 ${EMACS_LISPPREFIX}/jabber-logon.elc
 ${EMACS_LISPPREFIX}/jabber-menu.el
 ${EMACS_LISPPREFIX}/jabber-menu.elc
 ${EMACS_LISPPREFIX}/jabber-modeline.el
 ${EMACS_LISPPREFIX}/jabber-modeline.elc
+${EMACS_LISPPREFIX}/jabber-muc-nick-coloring.el
+${EMACS_LISPPREFIX}/jabber-muc-nick-coloring.elc
 ${EMACS_LISPPREFIX}/jabber-muc-nick-completion.el
 ${EMACS_LISPPREFIX}/jabber-muc-nick-completion.elc
 ${EMACS_LISPPREFIX}/jabber-muc.el
@@ -76,6 +84,8 @@ ${EMACS_LISPPREFIX}/jabber-osd.el
 ${EMACS_LISPPREFIX}/jabber-osd.elc
 ${EMACS_LISPPREFIX}/jabber-ourversion.el
 ${EMACS_LISPPREFIX}/jabber-ourversion.elc
+${EMACS_LISPPREFIX}/jabber-ping.el
+${EMACS_LISPPREFIX}/jabber-ping.elc
 ${EMACS_LISPPREFIX}/jabber-presence.el
 ${EMACS_LISPPREFIX}/jabber-presence.elc
 ${EMACS_LISPPREFIX}/jabber-private.el
@@ -104,6 +114,8 @@ ${EMACS_LISPPREFIX}/jabber-socks5.el
 ${EMACS_LISPPREFIX}/jabber-socks5.elc
 ${EMACS_LISPPREFIX}/jabber-time.el
 ${EMACS_LISPPREFIX}/jabber-time.elc
+${EMACS_LISPPREFIX}/jabber-tmux.el
+${EMACS_LISPPREFIX}/jabber-tmux.elc
 ${EMACS_LISPPREFIX}/jabber-truncate.el
 ${EMACS_LISPPREFIX}/jabber-truncate.elc
 ${EMACS_LISPPREFIX}/jabber-util.el
