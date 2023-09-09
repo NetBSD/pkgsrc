@@ -1,0 +1,73 @@
+.nh
+.TH Name
+.PP
+eza_colors-explanation — more details on customizing eza colors
+
+
+.SH Eza Color Explanation
+.PP
+eza provides its own built-in set of file extension mappings that cover a large range of common file extensions, including documents, archives, media, and temporary files.
+
+.PP
+Any mappings in the environment variables will override this default set: running eza with \fB\fCLS_COLORS="*.zip=32"\fR will turn zip files green but leave the colours of other compressed files alone.
+
+.PP
+You can also disable this built-in set entirely by including a
+\fB\fCreset\fR entry at the beginning of \fB\fCEXA_COLORS\fR\&.
+So setting \fB\fCEXA_COLORS="reset:*.txt=31"\fR will highlight only text
+files; setting \fB\fCEXA_COLORS="reset"\fR will highlight nothing.
+
+.SH Examples
+.RS
+.IP \(bu 2
+Disable the "current user" highlighting: \fB\fCEXA_COLORS="uu=0:gu=0"\fR
+.IP \(bu 2
+Turn the date column green: \fB\fCEXA_COLORS="da=32"\fR
+.IP \(bu 2
+Highlight Vagrantfiles: \fB\fCEXA_COLORS="Vagrantfile=1;4;33"\fR
+.IP \(bu 2
+Override the existing zip colour: \fB\fCEXA_COLORS="*.zip=38;5;125"\fR
+.IP \(bu 2
+Markdown files a shade of green, log files a shade of grey:
+\fB\fCEXA_COLORS="*.md=38;5;121:*.log=38;5;248"\fR
+
+.RE
+
+.SH BUILT-IN EXTENSIONS
+.PP
+"Immediate" files are the files you should look at when downloading and building a project for the first time: READMEs, Makefiles, Cargo.toml, and others.
+They are highlighted in \fIyellow\fP and \fIunderlined\fP\&.
+
+.RS
+.IP \(bu 2
+Images (png, jpeg, gif) are purple.
+.IP \(bu 2
+Videos (mp4, ogv, m2ts) are a slightly purpler purple.
+.IP \(bu 2
+Music (mp3, m4a, ogg) is a deeper purple.
+.IP \(bu 2
+Lossless music (flac, alac, wav) is deeper than \fIthat\fP purple. In general, most media files are some shade of purple.
+.IP \(bu 2
+Cryptographic files (asc, enc, p12) are a faint blue.
+.IP \(bu 2
+Documents (pdf, doc, dvi) are a less faint blue.
+.IP \(bu 2
+Compressed files (zip, tgz, Z) are red.
+.IP \(bu 2
+Temporary files (tmp, swp, ~) are grey.
+.IP \(bu 2
+Compiled files (class, o, pyc) are faint orange. A file is also counted as compiled if it uses a common extension and is
+in the same directory as one of its source files: styles.css will count as compiled when next to styles.less or styles.sass, and scripts.js when next to scripts.ts or scripts.coffee.
+
+.RE
+
+.SH See also
+.RS
+.IP \(bu 2
+eza.1.md
+\[la]eza.1.md\[ra]
+.IP \(bu 2
+eza_colors.5.md
+\[la]eza_colors.5.md\[ra]
+
+.RE
