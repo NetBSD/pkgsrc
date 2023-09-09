@@ -1,36 +1,47 @@
-$NetBSD: patch-aa,v 1.4 2015/07/04 16:18:34 joerg Exp $
+$NetBSD: patch-Makefile,v 1.1 2023/09/09 14:56:28 vins Exp $
 
---- Makefile.orig	Fri Mar 17 05:08:49 2000
-+++ Makefile	Wed Mar 20 00:37:53 2002
+Portability adjustments for pkgsrc. 
+
+--- Makefile.orig	2004-02-17 15:24:06.000000000 +0000
++++ Makefile
 @@ -24,4 +24,4 @@
  #
 -CC = gcc
 -CFLAGS = -g -Wall
 +#CC = gcc
-+#CFLAGS = -g -Wall
++#CFLAGS+ = -g -Wall
  
-@@ -48,5 +48,5 @@
+@@ -48,5 +48,5 @@ OBJS = FGrid.o GEdit.o GEditTB.o GTest.o
  #
 -#FTYPE_INCS = -I/usr/local/include
--#FTYPE_LIBS = -L/user/local/lib -lttf
+-#FTYPE_LIBS = -L/usr/local/lib -lfreetype
 -#FTYPE_DEFS = -DHAVE_FREETYPE
 +FTYPE_INCS = -I${X11BASE}/include/freetype
-+FTYPE_LIBS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lttf
++FTYPE_LIBS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lfreetype
 +FTYPE_DEFS = -DHAVE_FREETYPE
  
-@@ -66,3 +66,3 @@
+@@ -56,5 +56,5 @@ OBJS = FGrid.o GEdit.o GEditTB.o GTest.o
+ #
+-#HBF_HDRS = hbf.h
+-#HBF_OBJS = hbf.o
+-#HBF_DEFS = -DHAVE_HBF
++HBF_HDRS = hbf.h
++HBF_OBJS = hbf.o
++HBF_DEFS = -DHAVE_HBF
+ 
+@@ -66,3 +66,3 @@ OBJS = FGrid.o GEdit.o GEditTB.o GTest.o
  #
 -HBFDEFS = -Dunix -DIN_MEMORY -DGUNZIP_CMD="\"/usr/local/bin/gunzip -c\""
-+#HBFDEFS = -Dunix -DIN_MEMORY -DGUNZIP_CMD="\"${PREFIX}/bin/gunzip -c\""
++HBFDEFS = -Dunix -DIN_MEMORY -DGUNZIP_CMD="\"${GZIP} -c\""
  
-@@ -73,2 +73,6 @@
+@@ -73,2 +73,6 @@ DEFS = -DHAVE_XLIB $(FTYPE_DEFS) $(HBF_D
  
 +INCS = -I${X11BASE}/include -I${PREFIX}/include ${FTYPE_INCS}
 +LIBS = -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib \
-+       -lXm -lXmu -lXt -lXext -lX11 ${FTYPE_LIBS}
++		-lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE ${FTYPE_LIBS}
 +
  #
-@@ -84,5 +88,5 @@
+@@ -84,5 +88,5 @@ DEFS = -DHAVE_XLIB $(FTYPE_DEFS) $(HBF_D
  #
 -INCS = -I/usr/openwin/include -I/usr/dt/include $(FTYPE_INCS)
 -LIBS = -R/usr/openwin/lib -R/usr/dt/lib -L/usr/dt/lib -lXm \

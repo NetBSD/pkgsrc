@@ -1,0 +1,11 @@
+[Desktop Entry]
+Exec=xmbdfed
+Icon=xmbdfed
+Terminal=false
+Name=XmBDFEditor
+GenericName=Bitmap Font Editor
+Comment=Bitmap Font Editor
+Type=Application
+Categories=Graphics;
+StartupNotify=true
+X-Desktop-File-Install-Version=0.10

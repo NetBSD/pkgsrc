@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/06/17 19:42:59 minskim Exp $
+$NetBSD: patch-xmbdfed.h,v 1.1 2023/09/09 14:56:28 vins Exp $
+
+Variable already declared as static.
 
 --- xmbdfed.h.orig	2001-11-09 14:01:52.000000000 -0800
 +++ xmbdfed.h
