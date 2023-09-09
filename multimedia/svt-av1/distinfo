@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2023/08/19 15:03:38 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2023/09/09 20:19:00 wiz Exp $
 
-BLAKE2s (svt-av1-1.5.0.tar.bz2) = efa954996cc42b0ad05c8b2b91604625fcd3f92c4f22db14bb4d4cccc08fa371
-SHA512 (svt-av1-1.5.0.tar.bz2) = d5aa7679aeaa1e19f21906a36a7214c72cdaee77e1b5c1946ded43f8381ec2d705e671130589207b65b920a4fcaa9ca1d0037f88ef8d2303125d7f7aa54e3a2e
-Size (svt-av1-1.5.0.tar.bz2) = 9490521 bytes
+BLAKE2s (svt-av1-1.7.0.tar.bz2) = c1da1f23940b167faa0fddd83d85f70ccc98541065cfd0c5d8975e4385207ad6
+SHA512 (svt-av1-1.7.0.tar.bz2) = edb3fbc7e4e689249824cf0addb47b4ed3665c3d279b5358fca585776c3560e4e9b89c8424c633ae703fadba211495578154ed2c8c01bdca105dc4cdcf527f8a
+Size (svt-av1-1.7.0.tar.bz2) = 9532750 bytes
 SHA1 (patch-CMakeLists.txt) = c9bf8c9628c51b63f9455706400e348faebd6ba0
 SHA1 (patch-Source_App_EncApp_EbAppConfig.c) = 0efc0dad54c9f3625764468010522b3486433a86
 SHA1 (patch-Source_App_EncApp_EbAppConfig.h) = c7a5d2e2ad6324ba1c89ec85843359d51cba6cce
