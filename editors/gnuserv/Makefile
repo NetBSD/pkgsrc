@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2022/05/14 22:25:36 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2023/09/09 22:58:51 mef Exp $
 
 DISTNAME=	gnuserv-3.12.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
 #MASTER_SITES=	${HOMEPAGE}/src/
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://meltin.net/hacks/emacs/
