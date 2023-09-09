@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:28:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/09/09 14:56:28 vins Exp $
 
-BLAKE2s (xmbdfed-4.5.tar.gz) = fd0e481ef0ea8f206e9b2edeab01270da7e3b636d712ec4b1eb5139fa2a39fb2
-SHA512 (xmbdfed-4.5.tar.gz) = 6d4ff1e7947c087bc654760d730ca56ec476fd8eefed6ed17f6c099968f3484ccc7bde1343bafe6332717494dfd5ab39d2d20dea636741ddcffce0b6e6b5962b
-Size (xmbdfed-4.5.tar.gz) = 282055 bytes
-SHA1 (patch-aa) = 55740a6f3bf01bf149bc953078a0cf75eea4dc11
-SHA1 (patch-ab) = 2ddd129850dfc53e46ba0df8d62239ffb5fac0eb
-SHA1 (patch-ac) = c62140d171ea96418d48ee4b236cde8bb87b545d
+BLAKE2s (xmbdfed-4.7.tar.bz2) = 220aa04d36486a1f59f3c73a8b71d1196cdc3d40acc35a6e2c1d4884f7a98886
+SHA512 (xmbdfed-4.7.tar.bz2) = 82dd996be82e51c1d3a0bdaeb9b293d9f367babb52d20f26a2c7a24d960cf40d45fd151f628c18b7f3154f0d1bd4add1d431a0fd809ce6bdc4a711d7c88e9d23
+Size (xmbdfed-4.7.tar.bz2) = 208877 bytes
+SHA1 (patch-FGrid.c) = 296402658c9eb5d34e2466ced450ec5c3f9616bc
+SHA1 (patch-Makefile) = 6e1ef52cf8cbd4a3ebf144b29ff569f980242d1a
+SHA1 (patch-bdf.c) = 2c8a807780bb96bdbf19f65f8223b586c3bbfe38
+SHA1 (patch-bdfgname.c) = adc637ccec8ad771cce9ab770eb0c8d97ef3ac84
+SHA1 (patch-color.c) = 0802994e424fb2425d5b92ae7d10673b0a667540
+SHA1 (patch-fntin.c) = ea58e41bd5b1e2a2ec5e87521a7bb22d51c55772
+SHA1 (patch-setup.c) = dcd87bdcbd390dc90255740061ae0a193b70b609
+SHA1 (patch-xmbdfed.c) = 968d705648ec92fa4e2c176189a0052557cbd17c
+SHA1 (patch-xmbdfed.h) = c7545f370fce890533fee9daadcdc11d50846b8e
