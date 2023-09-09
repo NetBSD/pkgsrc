@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5416 2023/09/09 14:34:06 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5417 2023/09/09 14:39:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7876,3 +7876,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed lang/ruby30-base [taca 2023-09-09]
 	Added databases/ruby-gdbm version 2.1.0 [taca 2023-09-09]
 	Removed databases/ruby-gdbm-gem [taca 2023-09-09]
+	Updated textproc/ruby-csv to 3.2.7 [taca 2023-09-09]
