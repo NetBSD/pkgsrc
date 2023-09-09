@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2023/08/27 10:37:44 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2023/09/09 09:11:36 mef Exp $
 #
 
 VERSION=	9.4f
 DISTNAME=	dinotrace-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}dinotrace-mode-${VERSION}
 CATEGORIES=	cad editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veripool/}
@@ -29,11 +29,15 @@ EMACS=	emacs
 EMACS=	xemacs
 .endif
 
-SRCS=	dinotrace.el sim-log.el
+SRCS=	dinotrace.el sim-log.el lucid.el
+
+pre-build:
+	${CP} ${PKGDIR}/files/lucid.el ${WRKSRC}/lisp/
 
 do-build:
 	for f in ${SRCS}; do						\
 		${EMACS} --no-init-file --no-site-file -batch		\
+	        --directory ${WRKSRC}/lisp/      \
 		-f batch-byte-compile ${WRKSRC}/lisp/$$f;		\
 	done
 
