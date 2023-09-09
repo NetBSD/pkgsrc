@@ -1,13 +1,15 @@
-# $NetBSD: Makefile.common,v 1.10 2017/08/16 20:45:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2023/09/09 15:36:52 vins Exp $
 #
 # used by devel/emacs20-elib/Makefile
 
 DISTNAME=	elib-1.0
 CATEGORIES=	devel
-#MASTER_SITES=	http://jdee.sunsite.dk/
+MASTER_SITES=	ftp://ftp.gnu.org/old-gnu/emacs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.gnu.org/software/elib/
 COMMENT=	Library of utility functions for Emacs
+LICENSE=	gnu-gpl-v2
 
 .include "../../editors/emacs/modules.mk"
 
