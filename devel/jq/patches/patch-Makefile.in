@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile.in,v 1.3 2023/09/09 19:52:53 wiz Exp $
+
+Do dynamic linking of libtool libraries too (otherwise bin/jq can
+end up being statically linked).
+
+--- Makefile.in.orig	2023-09-06 20:00:52.000000000 +0000
++++ Makefile.in
+@@ -761,7 +761,7 @@ generate_ver = ver="`{ $(srcdir)/scripts
+ CLEANFILES = src/version.h .remake-version-h src/builtin.inc \
+ 	src/config_opts.inc jq.1
+ jq_SOURCES = src/main.c src/version.h
+-jq_LDFLAGS = -static-libtool-libs $(am__append_9)
++jq_LDFLAGS = $(am__append_9)
+ jq_LDADD = libjq.la -lm $(am__append_8)
+ 
+ ### Tests (make check)
