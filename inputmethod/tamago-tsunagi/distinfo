@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:49:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/09/09 13:04:29 mef Exp $
 
 BLAKE2s (tamago-tsunagi-5.0.7.1.tar.gz) = 390d83c45785cd37cf363e83123f9ae5600e5761c0f352df9da6682d8935a2f9
 SHA512 (tamago-tsunagi-5.0.7.1.tar.gz) = dc830a9e7a7c53743c3e51807d9966bb2c0cb20c39a347bd6a3c2015a74fc5015eb9ddb8c9d0d357390e87d8b85122186299a391b6fa484916bbfc7025ec1ea7
 Size (tamago-tsunagi-5.0.7.1.tar.gz) = 314153 bytes
 SHA1 (patch-Makefile.in) = 8cb77ab851229d9b4173451ba9ca46bdfff940b9
+SHA1 (patch-egg-com.el) = 2c54082b0970d4d206d1ea3ec2ccf87faf77b5b0
+SHA1 (patch-egg-x0213.el) = 8fc19a1cc4804b774048c96b469dc4c75b65bdd5
