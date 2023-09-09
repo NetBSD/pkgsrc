@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/19 15:51:07 taca Exp $
+# $NetBSD: Makefile,v 1.9 2023/09/09 13:55:45 taca Exp $
 
 DISTNAME=	classifier-reborn-2.3.0
 CATEGORIES=	textproc
@@ -12,11 +12,7 @@ DEPENDS=	${RUBY_PKGPREFIX}-fast-stemmer>=1.0<2:../../textproc/ruby-fast-stemmer
 
 RUBYGEM_OPTIONS+=	--format-executable
 
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} < 31
-DEPENDS+=	${RUBY_PKGPREFIX}-matrix>=0.4:../../math/ruby-matrix
-.endif
+RUBY_VERSIONS_ACCEPTED=	31 32
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
