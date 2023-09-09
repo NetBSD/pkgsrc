@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5409 2023/09/09 14:01:55 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5410 2023/09/09 14:05:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7869,3 +7869,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/mutt to 2.2.12 [tron 2023-09-09]
 	Removed math/ruby-matrix [taca 2023-09-09]
 	Removed net/ruby-net-imap [taca 2023-09-09]
+	Removed net/ruby-net-smtp [taca 2023-09-09]
