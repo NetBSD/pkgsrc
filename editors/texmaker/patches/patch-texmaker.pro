@@ -1,20 +1,21 @@
-$NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
+$NetBSD: patch-texmaker.pro,v 1.3 2023/09/09 09:49:56 nros Exp $
 
-* use pkgsrc (system) freetype2, hunspell, libjpeg and libpng
+* use pkgsrc (system) freetype2, hunspell, lcms2, libjpeg, libpng
+  and zlib
 
---- texmaker.pro.orig	2021-09-02 18:08:25.000000000 +0000
+--- texmaker.pro.orig	2023-04-30 12:59:36.000000000 +0000
 +++ texmaker.pro
 @@ -31,6 +31,9 @@ QT += webenginewidgets
  CONFIG	+= qt hide_symbols warn_off rtti_off exceptions_off c++11 release
  CONFIG -= precompile_header
  
 +CONFIG += link_pkgconfig
-+PKGCONFIG = freetype2 hunspell libjpeg libpng16
++PKGCONFIG = freetype2 hunspell lcms2 libjpeg libpng16 zlib
 +
  gcc {
      QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-parameter
  }
-@@ -45,15 +48,13 @@ DEFINES += \
+@@ -45,17 +48,14 @@ DEFINES += \
      PNG_USE_READ_MACROS \
      V8_DEPRECATION_WARNINGS \
      NOMINMAX \
@@ -29,9 +30,11 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
 -    pdfium/third_party/freetype/include \
 -    pdfium/third_party/freetype/include/freetype \
      pdfium/fpdfsdk \
-     pdfium/third_party/zlib_v128
+-    pdfium/third_party/zlib_v128
  
-@@ -127,24 +128,6 @@ HEADERS	+= texmaker.h \
+ ###############################
+ 
+@@ -127,24 +127,6 @@ HEADERS	+= texmaker.h \
  	x11fontdialog.h \
  	quickbeamerdialog.h \
  	cmdparser.h \
@@ -56,7 +59,7 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
  	singleapp/qtlocalpeer.h \
  	singleapp/qtlockedfile.h \
  	singleapp/qtsingleapplication.h \
-@@ -190,20 +173,6 @@ HEADERS	+= texmaker.h \
+@@ -190,22 +172,6 @@ HEADERS	+= texmaker.h \
      pdfium/third_party/base/numerics/safe_math.h \
      pdfium/third_party/base/numerics/safe_math_impl.h \
      pdfium/third_party/base/stl_util.h \
@@ -74,10 +77,12 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
 -    pdfium/third_party/libjpeg/jpeglib.h \
 -    pdfium/third_party/libjpeg/jversion.h \
 -    pdfium/third_party/libjpeg/transupp.h \
-     pdfium/third_party/lcms/include/lcms2.h \
-     pdfium/third_party/lcms/include/lcms2_plugin.h \
+-    pdfium/third_party/lcms/include/lcms2.h \
+-    pdfium/third_party/lcms/include/lcms2_plugin.h \
      pdfium/third_party/agg23/agg_basics.h \
-@@ -216,18 +185,6 @@ HEADERS	+= texmaker.h \
+     pdfium/third_party/agg23/agg_clip_liang_barsky.h \
+     pdfium/third_party/agg23/agg_conv_dash.h \
+@@ -216,18 +182,6 @@ HEADERS	+= texmaker.h \
      pdfium/third_party/agg23/agg_renderer_scanline.h \
      pdfium/third_party/agg23/agg_rendering_buffer.h \
      pdfium/third_party/agg23/agg_scanline_u.h \
@@ -96,7 +101,7 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
      pdfium/fpdfsdk/cba_annotiterator.h \
      pdfium/fpdfsdk/cfx_systemhandler.h \
      pdfium/fpdfsdk/cpdfsdk_annot.h \
-@@ -567,16 +524,6 @@ SOURCES	+= main.cpp \
+@@ -567,16 +521,6 @@ SOURCES	+= main.cpp \
  	svnhelper.cpp \
  	x11fontdialog.cpp \
  	cmdparser.cpp \
@@ -113,7 +118,7 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
  	singleapp/qtlocalpeer.cpp \
  	singleapp/qtlockedfile.cpp \
  	singleapp/qtsingleapplication.cpp \
-@@ -616,46 +563,6 @@ SOURCES	+= main.cpp \
+@@ -616,72 +560,6 @@ SOURCES	+= main.cpp \
      pdfium/third_party/bigint/BigIntegerUtils.cc \
      pdfium/third_party/bigint/BigUnsigned.cc \
      pdfium/third_party/bigint/BigUnsignedInABase.cc \
@@ -157,10 +162,56 @@ $NetBSD: patch-texmaker.pro,v 1.2 2021/10/26 17:56:54 nros Exp $
 -    pdfium/third_party/libjpeg/fpdfapi_jmemmgr.c \
 -    pdfium/third_party/libjpeg/fpdfapi_jmemnobs.c \
 -    pdfium/third_party/libjpeg/fpdfapi_jutils.c \
-     pdfium/third_party/lcms/src/cmsalpha.c \
-     pdfium/third_party/lcms/src/cmscam02.c \
-     pdfium/third_party/lcms/src/cmscgats.c \
-@@ -721,23 +628,6 @@ SOURCES	+= main.cpp \
+-    pdfium/third_party/lcms/src/cmsalpha.c \
+-    pdfium/third_party/lcms/src/cmscam02.c \
+-    pdfium/third_party/lcms/src/cmscgats.c \
+-    pdfium/third_party/lcms/src/cmscnvrt.c \
+-    pdfium/third_party/lcms/src/cmserr.c \
+-    pdfium/third_party/lcms/src/cmsgamma.c \
+-    pdfium/third_party/lcms/src/cmsgmt.c \
+-    pdfium/third_party/lcms/src/cmshalf.c \
+-    pdfium/third_party/lcms/src/cmsintrp.c \
+-    pdfium/third_party/lcms/src/cmsio0.c \
+-    pdfium/third_party/lcms/src/cmsio1.c \
+-    pdfium/third_party/lcms/src/cmslut.c \
+-    pdfium/third_party/lcms/src/cmsmd5.c \
+-    pdfium/third_party/lcms/src/cmsmtrx.c \
+-    pdfium/third_party/lcms/src/cmsnamed.c \
+-    pdfium/third_party/lcms/src/cmsopt.c \
+-    pdfium/third_party/lcms/src/cmspack.c \
+-    pdfium/third_party/lcms/src/cmspcs.c \
+-    pdfium/third_party/lcms/src/cmsplugin.c \
+-    pdfium/third_party/lcms/src/cmsps2.c \
+-    pdfium/third_party/lcms/src/cmssamp.c \
+-    pdfium/third_party/lcms/src/cmssm.c \
+-    pdfium/third_party/lcms/src/cmstypes.c \
+-    pdfium/third_party/lcms/src/cmsvirt.c \
+-    pdfium/third_party/lcms/src/cmswtpnt.c \
+-    pdfium/third_party/lcms/src/cmsxform.c \
+     pdfium/third_party/libopenjpeg20/bio.c \
+     pdfium/third_party/libopenjpeg20/cio.c \
+     pdfium/third_party/libopenjpeg20/dwt.c \
+@@ -701,43 +579,11 @@ SOURCES	+= main.cpp \
+     pdfium/third_party/libopenjpeg20/t2.c \
+     pdfium/third_party/libopenjpeg20/tcd.c \
+     pdfium/third_party/libopenjpeg20/tgt.c \
+-    pdfium/third_party/zlib_v128/adler32.c \
+-    pdfium/third_party/zlib_v128/compress.c \
+-    pdfium/third_party/zlib_v128/crc32.c \
+-    pdfium/third_party/zlib_v128/deflate.c \
+-    pdfium/third_party/zlib_v128/gzclose.c \
+-    pdfium/third_party/zlib_v128/gzlib.c \
+-    pdfium/third_party/zlib_v128/gzread.c \
+-    pdfium/third_party/zlib_v128/gzwrite.c \
+-    pdfium/third_party/zlib_v128/infback.c \
+-    pdfium/third_party/zlib_v128/inffast.c \
+-    pdfium/third_party/zlib_v128/inflate.c \
+-    pdfium/third_party/zlib_v128/inftrees.c \
+-    pdfium/third_party/zlib_v128/trees.c \
+-    pdfium/third_party/zlib_v128/uncompr.c \
+-    pdfium/third_party/zlib_v128/zutil.c \
+     pdfium/third_party/agg23/agg_curves.cpp \
+     pdfium/third_party/agg23/agg_path_storage.cpp \
      pdfium/third_party/agg23/agg_rasterizer_scanline_aa.cpp \
      pdfium/third_party/agg23/agg_vcgen_dash.cpp \
      pdfium/third_party/agg23/agg_vcgen_stroke.cpp \
