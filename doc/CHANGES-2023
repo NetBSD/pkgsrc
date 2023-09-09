@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5421 2023/09/09 18:20:20 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5422 2023/09/09 19:53:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7881,3 +7881,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mob to 4.4.6 [schmonz 2023-09-09]
 	Added sysutils/eza version 0.11.0 [wiz 2023-09-09]
 	Updated x11/dunst to 1.9.2nb1 [wiz 2023-09-09]
+	Updated devel/jq to 1.7 [wiz 2023-09-09]
