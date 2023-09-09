@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5411 2023/09/09 14:08:19 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5412 2023/09/09 14:13:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7871,3 +7871,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/ruby-net-imap [taca 2023-09-09]
 	Removed net/ruby-net-smtp [taca 2023-09-09]
 	Updated meta-pkgs/bulk-medium to 20230909 [taca 2023-09-09]
+	Removed lang/ruby30 [taca 2023-09-09]
