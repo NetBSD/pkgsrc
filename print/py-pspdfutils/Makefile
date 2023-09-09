@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/08/24 20:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/09 21:32:34 wiz Exp $
 
-DISTNAME=	pspdfutils-3.1.1
+DISTNAME=	pspdfutils-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
@@ -29,7 +29,6 @@ post-install:
 .if ${PKGMANDIR} != "share/man"
 	cd ${DESTDIR}${PREFIX}/share/man && ${MV} * ${DESTDIR}${PREFIX}/${PKGMANDIR}
 .endif
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/pspdfutils-3.1.1.dist-info/.bak.0.SOURCES.txt
 
 # still needs 'make install'
 # most tests don't pass, should be investigated
