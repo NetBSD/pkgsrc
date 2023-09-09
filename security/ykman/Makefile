@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/09 21:37:49 wiz Exp $
 
-PKGREVISION= 1
 .include "../../security/ykman/version.mk"
 
 PKGNAME=	ykman-${VERSION}
