@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5433 2023/09/09 21:02:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5434 2023/09/09 21:11:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7893,3 +7893,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/re2 to 20230901 [wiz 2023-09-09]
 	Updated security/py-cyclonedx-python-lib to 4.1.0 [wiz 2023-09-09]
 	Updated devel/py-dulwich to 0.21.6 [wiz 2023-09-09]
+	Updated devel/py-gitpython to 3.1.35 [wiz 2023-09-09]
