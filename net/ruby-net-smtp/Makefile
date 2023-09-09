@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/05/30 15:10:17 taca Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/09 14:03:07 taca Exp $
 
 DISTNAME=	net-smtp-0.3.3
 CATEGORIES=	net mail
@@ -11,7 +11,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 USE_LANGUAGES=	# none
 
 # This package is mainly for redmine50 on Ruby and 3.0.
-# (Ruby 3.1 and later have required net-pop gem as standard gem.)
+# (Ruby 3.1 and later have required net-smtp gem as standard gem.)
 RUBY_VERSIONS_ACCEPTED=	30
 
 .include "../../lang/ruby/rubyversion.mk"
