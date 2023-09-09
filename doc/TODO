@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23357 2023/09/08 20:54:14 vins Exp $
+$NetBSD: TODO,v 1.23358 2023/09/09 14:48:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -465,7 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
-	o arti-1.1.7
+	o arti-1.1.8
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -834,6 +834,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jetty9-9.3.7
 	o jools-1.0
 	o jpilot-syncmal-0.81
+	o jq-1.7
 	o jrep-1.1.1
 	o kactivities-5.81.0
 	o kaffe-1.1.9
