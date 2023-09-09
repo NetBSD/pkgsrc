@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2023/08/24 06:33:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/09/09 16:30:44 wiz Exp $
 # used by security/py-botan3/Makefile
 
 DISTNAME=	Botan-3.1.1
@@ -10,5 +10,5 @@ MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	https://botan.randombit.net/
 LICENSE=	2-clause-bsd
 
-DISTINFO_FILE=	../../security/botan3/distinfo
-PATCHDIR=	../../security/botan3/patches
+DISTINFO_FILE=	${.CURDIR}/../../security/botan3/distinfo
+PATCHDIR=	${.CURDIR}/../../security/botan3/patches
