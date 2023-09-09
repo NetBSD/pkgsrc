@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.268 2023/06/29 15:42:07 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.269 2023/09/09 14:21:31 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferred Ruby version to use.
 #
-#		Possible values: 30 31 32
+#		Possible values: 31 32
 #		Default: 31
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 30 31 32
-#		Default: 31 30 32
+#		Possible values: 31 32
+#		Default: 31 32
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 30 31 32
+#		Possible values: 31 32
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 30 31 32
+#		Possible values: 31 32
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with Ruby-related packages since you can supply
 #	different binary packages for each version of Ruby.
 #
-#		Possible values: ruby30 ruby31 ruby32
+#		Possible values: ruby31 ruby32
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 30 31 32
+#		Possible values: 31 32
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -213,12 +213,10 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY30_VERSION=		3.0.6
 RUBY31_VERSION=		3.1.4
 RUBY32_VERSION=		3.2.2
 
 # current API compatible version; used for version of shared library
-RUBY30_API_VERSION=	3.0.0
 RUBY31_API_VERSION=	3.1.0
 RUBY32_API_VERSION=	3.2.0
 
@@ -226,9 +224,9 @@ RUBY32_API_VERSION=	3.2.0
 RUBY_VERSION_DEFAULT?=	31
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	30 31 32
+RUBY_VERSIONS_SUPPORTED=	31 32
 
-RUBY_VERSIONS_ACCEPTED?=	31 30 32
+RUBY_VERSIONS_ACCEPTED?=	31 32
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -267,102 +265,7 @@ RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
 
 RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
-.if ${RUBY_VER} == 30
-RUBY_VERSION=		${RUBY30_VERSION}
-RUBY_ABI_VERSION=	${RUBY_VERSION}
-RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
-
-# default gems
-RUBY_ABBREV_VER=		0.1.0
-RUBY_BASE64_VER=		0.1.0
-RUBY_BENCHMARK_VER=		0.1.1
-RUBY_BIGDECIMAL_VER=		3.0.0
-RUBY_BUNDLER_VER=		2.2.33
-RUBY_CGI_VER=			0.2.2
-RUBY_CSV_VER=			3.1.9
-RUBY_DATE_VER=			3.1.3
-RUBY_DBM_VER=			1.1.0
-RUBY_DEBUG_VER=			0.2.1
-RUBY_DELEGATE_VER=		0.2.0
-RUBY_DID_YOU_MEAN_VER=		1.5.0
-RUBY_DIGEST_VER=		3.0.0
-RUBY_DRB_VER=			2.0.5
-RUBY_ENGLISH_VER=		0.7.1
-RUBY_ERB_VER=			2.2.0
-RUBY_ETC_VER=			1.3.0
-RUBY_FCNTL_VER=			1.0.1
-RUBY_FIDDLE_VER=		1.0.8
-RUBY_FILEUTILS_VER=		1.5.0
-RUBY_FIND_VER=			0.1.0
-RUBY_FORWARDABLE_VER=		1.3.2
-RUBY_GDBM_VER=			2.1.0
-RUBY_GETOPTLONG_VER=		0.1.1
-RUBY_IO_CONSOLE_VER=		0.5.7
-RUBY_IO_NONBLOCK_VER=		0.1.0
-RUBY_IO_WAIT_VER=		0.2.0
-RUBY_IPADDR_VER=		1.2.2
-RUBY_IRB_VER=			1.3.5
-RUBY_JSON_VER=			2.5.1
-RUBY_LOGGER_VER=		1.4.3
-RUBY_MATRIX_VER=		0.3.1
-RUBY_MUTEX_M_VER=		0.1.1
-RUBY_NET_FTP_VER=		0.1.2
-RUBY_NET_HTTP_VER=		0.1.1
-RUBY_NET_IMAP_VER=		0.1.1
-RUBY_NET_POP_VER=		0.1.1
-RUBY_NET_PROTOCOL_VER=		0.1.1
-RUBY_NET_SMTP_VER=		0.2.1
-RUBY_NKF_VER=			0.1.0
-RUBY_OBSERVER_VER=		0.1.1
-RUBY_OPEN3_VER=			0.1.1
-RUBY_OPENSSL_VER=		2.2.2
-RUBY_OPEN_URI_VER=		0.1.0
-RUBY_OPTPARSE_VER=		0.1.1
-RUBY_OSTRUCT_VER=		0.3.1
-RUBY_PATHNAME_VER=		0.1.0
-RUBY_PP_VER=			0.2.1
-RUBY_PRETTYPRINT_VER=		0.1.1
-RUBY_PRIME_VER=			0.1.2
-RUBY_PSTORE_VER=		0.1.1
-RUBY_PSYCH_VER=			3.3.2
-RUBY_RACC_VER=			1.5.2
-RUBY_RDOC_VER=			6.3.3
-RUBY_READLINE_VER=		0.0.2
-RUBY_RELINE_VER=		0.2.5
-RUBY_RESOLV_VER=		0.2.1
-RUBY_RESOLV_REPLACE_VER=	0.1.0
-RUBY_RINDA_VER=			0.1.1
-RUBY_RUBYGEMS_VER=		3.2.32
-RUBY_SECURERANDOM_VER=		0.1.0
-RUBY_SET_VER=			1.0.1
-RUBY_SHELLWORDS_VER=		0.1.0
-RUBY_SINGLETON_VER=		0.1.1
-RUBY_STRINGIO_VER=		3.0.1
-RUBY_STRSCAN_VER=		3.0.1
-RUBY_SYSLOG_VER=		0.1.0
-RUBY_TEMPFILE_VER=		0.1.1
-RUBY_TIME_VER=			0.1.1
-RUBY_TIMEOUT_VER=		0.1.1
-RUBY_TMPDIR_VER=		0.1.2
-RUBY_TRACER_VER=		0.1.1
-RUBY_TSORT_VER=			0.1.0
-RUBY_UN_VER=			0.1.0
-RUBY_URI_VER=			0.10.3
-RUBY_WEAKREF_VER=		0.1.1
-RUBY_YAML_VER=			0.1.1
-RUBY_ZLIB_VER=			2.0.0
-
-# bundled gems
-RUBY_MINITEST_VER=		5.14.2
-RUBY_POWER_ASSERT_VER=		1.2.0
-RUBY_RAKE_VER=			13.0.3
-RUBY_RBS_VER=			1.4.0
-RUBY_REXML_VER=			3.2.5
-RUBY_RSS_VER=			0.2.9
-RUBY_TEST_UNIT_VER=		3.3.7
-RUBY_TYPEPROF_VER=		0.15.2
-
-.elif ${RUBY_VER} == 31
+.if ${RUBY_VER} == 31
 RUBY_VERSION=		${RUBY31_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
@@ -569,7 +472,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name begins
-#	with ${RUBY_NAME}; "ruby30", "ruby31" and so on.
+#	with ${RUBY_NAME}; "ruby31", "ruby32" and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
