@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/09/01 14:42:37 taca Exp $
-
-BLAKE2s (matrix-0.4.2.gem) = f00d7a659ef0d62ff6aeddef186334718a99cbabd6b60fc4ff8480ac7bc6b112
-SHA512 (matrix-0.4.2.gem) = 3e91257b315b8bb38f89bb537a0f04cbf9c892206ebab55c44350eeb87e84969f83a256e690198490aa663a502d119c1629cf292e1508241f21f89bd6a5edfaa
-Size (matrix-0.4.2.gem) = 27136 bytes
