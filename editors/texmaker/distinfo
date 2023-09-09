@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2023/09/09 09:49:56 nros Exp $
+$NetBSD: distinfo,v 1.24 2023/09/09 11:11:09 nros Exp $
 
 BLAKE2s (texmaker-5.1.4.tar.bz2) = 0b9facc6622b7f247241ebf4491ee6c71f23bf8161b6020db8f350181f083c56
 SHA512 (texmaker-5.1.4.tar.bz2) = 6ae4be7ae9be98e494480d4574e783a5568f0dcc9c631ccbc9bf00cca9f69dc672ba72060c064748a4446d20302af89e3bc6f14e8977d1f1ddbd20458fcf6d4e
@@ -14,10 +14,7 @@ SHA1 (patch-pdfium_core_fxcrt_fx__system.h) = d79065ef0ef64748f99cd04774f137aaf3
 SHA1 (patch-pdfium_core_fxge_apple_fx__mac__imp.cpp) = eb21c8516bae912ab2ddcbbe15fb570ac5dc9984
 SHA1 (patch-pdfium_core_fxge_ge_fx__ge__linux.cpp) = a332a849a4a0966abb0cc6c8e14442a5b9d917c7
 SHA1 (patch-pdfium_third__party_libopenjpeg20_opj__malloc.h) = b782865712ce4fc695fcc0803dd3d051c2952a9e
-SHA1 (patch-pdfium_third__party_libtiff_tif__pixarlog.c) = bb9ee479566f36bfdd3b463928694473260f767b
-SHA1 (patch-pdfium_third__party_libtiff_tif__zip.c) = 27d57959c8687a54c1e533837fb25dae5c3c17f3
 SHA1 (patch-pdfium_xfa_fgas_font_cfgas__fontmgr.cpp) = 50b4b262a75582810ddb62a360f71311cb3f442c
 SHA1 (patch-spellerdialog.h) = 89487a11158f43a4e2a2bab898817d23e4ad8b68
-SHA1 (patch-texmaker.cpp) = 23bd4e079d69666a558002a0c1597e66dee085a8
 SHA1 (patch-texmaker.h) = 34f14f84325d175af63a18c0825ecf622164e936
 SHA1 (patch-texmaker.pro) = 3f136f3c73e042da75e123e89780cc67b2892de1
