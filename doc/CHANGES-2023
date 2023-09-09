@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5418 2023/09/09 14:57:22 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5419 2023/09/09 17:02:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7878,3 +7878,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed databases/ruby-gdbm-gem [taca 2023-09-09]
 	Updated textproc/ruby-csv to 3.2.7 [taca 2023-09-09]
 	Updated fonts/xmbdfed to 4.7 [vins 2023-09-09]
+	Updated devel/mob to 4.4.6 [schmonz 2023-09-09]
