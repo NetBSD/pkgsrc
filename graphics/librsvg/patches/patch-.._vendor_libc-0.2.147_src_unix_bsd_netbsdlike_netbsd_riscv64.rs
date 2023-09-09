@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_libc-0.2.140_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2023/07/23 08:56:07 he Exp $
+$NetBSD: patch-.._vendor_libc-0.2.147_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2023/09/09 20:43:42 wiz Exp $
 
 Add support for NetBSD/riscv64.
 
---- ../vendor/libc-0.2.140/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-14 09:12:33.579150305 +0000
-+++ ../vendor/libc-0.2.140/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
+--- ../vendor/libc-0.2.147/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-14 09:12:33.579150305 +0000
++++ ../vendor/libc-0.2.147/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
 @@ -0,0 +1,22 @@
 +use PT_FIRSTMACH;
 +
