@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/09/09 09:11:36 mef Exp $
 ${EMACS_LISPPREFIX}/${PKGBASE}/dinotrace.el
 ${EMACS_LISPPREFIX}/${PKGBASE}/dinotrace.elc
+${EMACS_LISPPREFIX}/${PKGBASE}/lucid.el
+${EMACS_LISPPREFIX}/${PKGBASE}/lucid.elc
 ${EMACS_LISPPREFIX}/${PKGBASE}/sim-log.el
 ${EMACS_LISPPREFIX}/${PKGBASE}/sim-log.elc
