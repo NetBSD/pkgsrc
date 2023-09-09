@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/09/09 14:56:28 vins Exp $
+
+A sample configuration can be found at ${PREFIX}/share/examples/${PKGBASE}
+You should copy it to ~/.xmbdfedrc (mode = 644)
+
+Sometimes the binaries are unable to find the KeySyms needed for Motif.
+This will cause a large number of warning messages.  In that event, you
+should set the XKEYSYMDB environment variable to point to the XKeysymDB
+file in your X11 installation. For example:
+
+  $ export XKEYSYMDB=${X11BASE}/lib/X11/XKeysymDB
+
+===========================================================================

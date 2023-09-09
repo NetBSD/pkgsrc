@@ -1,22 +1,40 @@
-# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/09 14:56:28 vins Exp $
 
-DISTNAME=	xmbdfed-4.5
-PKGREVISION=	5
+DISTNAME=	xmbdfed-4.7
 CATEGORIES=	fonts graphics x11
-MASTER_SITES=	# ftp://crl.nmsu.edu/CLR/multiling/General/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://crl.nmsu.edu/~mleisher/xmbdfed.html
+HOMEPAGE=	https://web.archive.org/web/20090227090450/http://crl.nmsu.edu/~mleisher/xmbdfed.html
 COMMENT=	Motif-based BDF font editor with lots of features
+LICENSE=	mit AND public-domain
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+USE_TOOLS+=	gzip
+
+MAKE_ENV+=	GZIP=${GUNZIP_CMD:Q}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	share/pixmaps share/applications
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xmbdfed ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xmbdfed.man \
+	${INSTALL_PROGRAM} ${WRKSRC}/xmbdfed		\
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xmbdfed.man		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xmbdfed.1
+	${INSTALL_DATA} ${WRKSRC}/xmbdfedrc		\
+		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
-.include "../../graphics/freetype-lib/buildlink3.mk"
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/xmbdfed.desktop	\
+		${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/xmbdfed.png		\
+		${DESTDIR}${PREFIX}/share/pixmaps
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
