@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5408 2023/09/09 13:58:00 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5409 2023/09/09 14:01:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7868,3 +7868,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated chat/emacs-jabber to 0.8.92 [mef 2023-09-09]
 	Updated mail/mutt to 2.2.12 [tron 2023-09-09]
 	Removed math/ruby-matrix [taca 2023-09-09]
+	Removed net/ruby-net-imap [taca 2023-09-09]
