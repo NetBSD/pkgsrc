@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/09/09 17:28:00 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/09/09 20:16:41 pin Exp $
 
 BLAKE2s (ansi_term-0.12.1.crate) = 9d7961fca7b2680f17660048cf2d6171faa0def807ea66b5b5b9110f0623a12f
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
@@ -213,4 +213,4 @@ Size (windows_x86_64_msvc-0.48.5.crate) = 798412 bytes
 BLAKE2s (zoneinfo_compiled-0.5.1.crate) = ed95de48af02f72050d6ad665729a4385475666612f6443eb652811fbc47d993
 SHA512 (zoneinfo_compiled-0.5.1.crate) = 4ad46983742ed37246f3ba5538fdf3a4dfc444ec635ffaa51d5daffa70c14e1876e703cd0a1f077e6b324e0d44d4b5e1e710b3543636fa9f33d509fa8bce333c
 Size (zoneinfo_compiled-0.5.1.crate) = 8837 bytes
-SHA1 (patch-.._vendor_openssl-src-111.26.0+1.1.1u_src_lib.rs) = 903e6e939d59db5bcd10f7d2c92fc36b6fa51a44
+SHA1 (patch-vendor_openssl-src-111.26.0+1.1.1u_src_lib.rs) = 903e6e939d59db5bcd10f7d2c92fc36b6fa51a44
