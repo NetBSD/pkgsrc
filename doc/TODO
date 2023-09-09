@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23372 2023/09/09 21:15:07 wiz Exp $
+$NetBSD: TODO,v 1.23373 2023/09/09 21:29:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
-	o py-magic-wormhole-0.13.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
