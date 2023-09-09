@@ -1,0 +1,346 @@
+.nh
+.TH eza(1) v0.9.0
+
+.SH NAME
+.PP
+eza — a modern replacement for ls
+
+
+.SH SYNOPSIS
+.PP
+\fB\fCeza [options] [files...]\fR
+
+.PP
+\fBeza\fP is a modern replacement for \fB\fCls\fR\&.
+It uses colours for information by default, helping you distinguish between many types of files, such as whether you are the owner, or in the owning group.
+
+.PP
+It also has extra features not present in the original \fB\fCls\fR, such as viewing the Git status for a directory, or recursing into directories with a tree view.
+
+
+.SH EXAMPLES
+.TP
+\fB\fCeza\fR
+Lists the contents of the current directory in a grid.
+
+.TP
+\fB\fCeza --oneline --reverse --sort=size\fR
+Displays a list of files with the largest at the top.
+
+.TP
+\fB\fCeza --long --header --inode --git\fR
+Displays a table of files with a header, showing each file’s metadata, inode, and Git status.
+
+.TP
+\fB\fCeza --long --tree --level=3\fR
+Displays a tree of files, three levels deep, as well as each file’s metadata.
+
+
+.SH DISPLAY OPTIONS
+.TP
+\fB\fC-1\fR, \fB\fC--oneline\fR
+Display one entry per line.
+
+.TP
+\fB\fC-F\fR, \fB\fC--classify\fR
+Display file kind indicators next to file names.
+
+.TP
+\fB\fC-G\fR, \fB\fC--grid\fR
+Display entries as a grid (default).
+
+.TP
+\fB\fC-l\fR, \fB\fC--long\fR
+Display extended file metadata as a table.
+
+.TP
+\fB\fC-R\fR, \fB\fC--recurse\fR
+Recurse into directories.
+
+.TP
+\fB\fC-T\fR, \fB\fC--tree\fR
+Recurse into directories as a tree.
+
+.TP
+\fB\fC-x\fR, \fB\fC--across\fR
+Sort the grid across, rather than downwards.
+
+.TP
+\fB\fC--color\fR, \fB\fC--colour=WHEN\fR
+When to use terminal colours.
+Valid settings are ‘\fB\fCalways\fR’, ‘\fB\fCautomatic\fR’, and ‘\fB\fCnever\fR’.
+
+.TP
+\fB\fC--color-scale\fR, \fB\fC--colour-scale\fR
+Colour file sizes on a scale.
+
+.TP
+\fB\fC--icons\fR
+Display icons next to file names.
+
+.TP
+\fB\fC--no-icons\fR
+Don't display icons. (Always overrides --icons)
+
+.TP
+\fB\fC--hyperlink\fR
+Display entries as hyperlinks
+
+.TP
+\fB\fC-w\fR, \fB\fC--width=COLS\fR
+Set screen width in columns.
+
+
+.SH FILTERING AND SORTING OPTIONS
+.TP
+\fB\fC-a\fR, \fB\fC--all\fR
+Show hidden and “dot” files.
+Use this twice to also show the ‘\fB\fC\&.\fR’ and ‘\fB\fC\&..\fR’ directories.
+
+.TP
+\fB\fC-d\fR, \fB\fC--list-dirs\fR
+List directories as regular files, rather than recursing and listing their contents.
+
+.TP
+\fB\fC-L\fR, \fB\fC--level=DEPTH\fR
+Limit the depth of recursion.
+
+.TP
+\fB\fC-r\fR, \fB\fC--reverse\fR
+Reverse the sort order.
+
+.TP
+\fB\fC-s\fR, \fB\fC--sort=SORT_FIELD\fR
+Which field to sort by.
+
+.PP
+Valid sort fields are ‘\fB\fCname\fR’, ‘\fB\fCName\fR’, ‘\fB\fCextension\fR’, ‘\fB\fCExtension\fR’, ‘\fB\fCsize\fR’, ‘\fB\fCmodified\fR’, ‘\fB\fCchanged\fR’, ‘\fB\fCaccessed\fR’, ‘\fB\fCcreated\fR’, ‘\fB\fCinode\fR’, ‘\fB\fCtype\fR’, and ‘\fB\fCnone\fR’.
+
+.PP
+The \fB\fCmodified\fR sort field has the aliases ‘\fB\fCdate\fR’, ‘\fB\fCtime\fR’, and ‘\fB\fCnewest\fR’, and its reverse order has the aliases ‘\fB\fCage\fR’ and ‘\fB\fColdest\fR’.
+
+.PP
+Sort fields starting with a capital letter will sort uppercase before lowercase: ‘A’ then ‘B’ then ‘a’ then ‘b’. Fields starting with a lowercase letter will mix them: ‘A’ then ‘a’ then ‘B’ then ‘b’.
+
+.TP
+\fB\fC-I\fR, \fB\fC--ignore-glob=GLOBS\fR
+Glob patterns, pipe-separated, of files to ignore.
+
+.TP
+\fB\fC--git-ignore\fR [if eza was built with git support]
+Do not list files that are ignored by Git.
+
+.TP
+\fB\fC--group-directories-first\fR
+List directories before other files.
+
+.TP
+\fB\fC-D\fR, \fB\fC--only-dirs\fR
+List only directories, not files.
+
+
+.SH LONG VIEW OPTIONS
+.PP
+These options are available when running with \fB\fC--long\fR (\fB\fC-l\fR):
+
+.TP
+\fB\fC-b\fR, \fB\fC--binary\fR
+List file sizes with binary prefixes.
+
+.TP
+\fB\fC-B\fR, \fB\fC--bytes\fR
+List file sizes in bytes, without any prefixes.
+
+.TP
+\fB\fC--changed\fR
+Use the changed timestamp field.
+
+.TP
+\fB\fC-g\fR, \fB\fC--group\fR
+List each file’s group.
+
+.TP
+\fB\fC-h\fR, \fB\fC--header\fR
+Add a header row to each column.
+
+.TP
+\fB\fC-H\fR, \fB\fC--links\fR
+List each file’s number of hard links.
+
+.TP
+\fB\fC-i\fR, \fB\fC--inode\fR
+List each file’s inode number.
+
+.TP
+\fB\fC-m\fR, \fB\fC--modified\fR
+Use the modified timestamp field.
+
+.TP
+\fB\fC-M\fR, \fB\fC--mounts\fR
+Show mount details (Linux only)
+
+.TP
+\fB\fC-n\fR, \fB\fC--numeric\fR
+List numeric user and group IDs.
+
+.TP
+\fB\fC-S\fR, \fB\fC--blocksize\fR
+List each file’s size of allocated file system blocks.
+
+.TP
+\fB\fC-t\fR, \fB\fC--time=WORD\fR
+Which timestamp field to list.
+
+Valid timestamp fields are ‘\fB\fCmodified\fR’, ‘\fB\fCchanged\fR’, ‘\fB\fCaccessed\fR’, and ‘\fB\fCcreated\fR’.
+
+.TP
+\fB\fC--time-style=STYLE\fR
+How to format timestamps.
+
+Valid timestamp styles are ‘\fB\fCdefault\fR’, ‘\fB\fCiso\fR’, ‘\fB\fClong-iso\fR’, ‘\fB\fCfull-iso\fR’, and ‘\fB\fCrelative\fR’.
+
+.TP
+\fB\fC-u\fR, \fB\fC--accessed\fR
+Use the accessed timestamp field.
+
+.TP
+\fB\fC-U\fR, \fB\fC--created\fR
+Use the created timestamp field.
+
+.TP
+\fB\fC--no-permissions\fR
+Suppress the permissions field.
+
+.TP
+\fB\fC-o\fR, \fB\fC--octal-permissions\fR
+List each file's permissions in octal format.
+
+.TP
+\fB\fC--no-filesize\fR
+Suppress the file size field.
+
+.TP
+\fB\fC--no-user\fR
+Suppress the user field.
+
+.TP
+\fB\fC--no-time\fR
+Suppress the time field.
+
+.TP
+\fB\fC-@\fR, \fB\fC--extended\fR
+List each file’s extended attributes and sizes.
+
+.TP
+\fB\fC-Z\fR, \fB\fC--context\fR
+List each file's security context.
+
+.TP
+\fB\fC--git\fR  [if eza was built with git support]
+List each file’s Git status, if tracked.
+
+.PP
+This adds a two-character column indicating the staged and unstaged statuses respectively. The status character can be ‘\fB\fC-\fR’ for not modified, ‘\fB\fCM\fR’ for a modified file, ‘\fB\fCN\fR’ for a new file, ‘\fB\fCD\fR’ for deleted, ‘\fB\fCR\fR’ for renamed, ‘\fB\fCT\fR’ for type-change, ‘\fB\fCI\fR’ for ignored, and ‘\fB\fCU\fR’ for conflicted.
+
+.PP
+Directories will be shown to have the status of their contents, which is how ‘deleted’ is possible: if a directory contains a file that has a certain status, it will be shown to have that status.
+
+.TP
+\fB\fC--no-git\fR
+Don't show Git status (always overrides \fB\fC--git\fR, \fB\fC--git-repos\fR, \fB\fC--git-repos-no-status\fR)
+
+
+.SH ENVIRONMENT VARIABLES
+.PP
+eza responds to the following environment variables:
+
+.SH \fB\fCCOLUMNS\fR
+.PP
+Overrides the width of the terminal, in characters, however, \fB\fC-w\fR takes precedence.
+
+.PP
+For example, ‘\fB\fCCOLUMNS=80 eza\fR’ will show a grid view with a maximum width of 80 characters.
+
+.PP
+This option won’t do anything when eza’s output doesn’t wrap, such as when using the \fB\fC--long\fR view.
+
+.SH \fB\fCEXA_STRICT\fR
+.PP
+Enables \fIstrict mode\fP, which will make eza error when two command-line options are incompatible.
+
+.PP
+Usually, options can override each other going right-to-left on the command line, so that eza can be given aliases: creating an alias ‘\fB\fCeza=eza --sort=ext\fR’ then running ‘\fB\fCeza --sort=size\fR’ with that alias will run ‘\fB\fCeza --sort=ext --sort=size\fR’, and the sorting specified by the user will override the sorting specified by the alias.
+
+.PP
+In strict mode, the two options will not co-operate, and eza will error.
+
+.PP
+This option is intended for use with automated scripts and other situations where you want to be certain you’re typing in the right command.
+
+.SH \fB\fCEXA_GRID_ROWS\fR
+.PP
+Limits the grid-details view (‘\fB\fCeza --grid --long\fR’) so it’s only activated when at least the given number of rows of output would be generated.
+
+.PP
+With widescreen displays, it’s possible for the grid to look very wide and sparse, on just one or two lines with none of the columns lining up.
+By specifying a minimum number of rows, you can only use the view if it’s going to be worth using.
+
+.SH \fB\fCEXA_ICON_SPACING\fR
+.PP
+Specifies the number of spaces to print between an icon (see the ‘\fB\fC--icons\fR’ option) and its file name.
+
+.PP
+Different terminals display icons differently, as they usually take up more than one character width on screen, so there’s no “standard” number of spaces that eza can use to separate an icon from text. One space may place the icon too close to the text, and two spaces may place it too far away. So the choice is left up to the user to configure depending on their terminal emulator.
+
+.SH \fB\fCNO_COLOR\fR
+.PP
+Disables colours in the output (regardless of its value). Can be overridden by \fB\fC--color\fR option.
+
+.PP
+See \fB\fChttps://no-color.org/\fR for details.
+
+.SH \fB\fCLS_COLORS\fR, \fB\fCEXA_COLORS\fR
+.PP
+Specifies the colour scheme used to highlight files based on their name and kind, as well as highlighting metadata and parts of the UI.
+
+.PP
+For more information on the format of these environment variables, see the eza_colors.5.md
+\[la]eza_colors.5.md\[ra] manual page.
+
+
+.SH EXIT STATUSES
+.TP
+0
+If everything goes OK.
+
+.TP
+1
+If there was an I/O error during operation.
+
+.TP
+3
+If there was a problem with the command-line arguments.
+
+
+.SH AUTHOR
+.PP
+eza is maintained by Christina Sørensen and many other contributors.
+
+.PP
+\fBSource code:\fP \fB\fChttps://github.com/eza-community/eza\fR \\
+\fBContributors:\fP \fB\fChttps://github.com/eza-community/eza/graphs/contributors\fR
+
+.PP
+Our infinite thanks to Benjamin ‘ogham’ Sago and all the other contributors of exa, from which eza was forked.
+
+
+.SH SEE ALSO
+.RS
+.IP \(bu 2
+eza_colors.5.md
+\[la]eza_colors.5.md\[ra]
+.IP \(bu 2
+eza_colors-explanation.5.md
+\[la]eza_colors-explanation.5.md\[ra]
+
+.RE

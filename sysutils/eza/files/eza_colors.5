@@ -1,0 +1,371 @@
+.nh
+.TH eza_colors(5) v0.9.0
+
+.SH NAME
+.PP
+eza_colors — customising the file and UI colours of eza
+
+
+.SH SYNOPSIS
+.PP
+The \fB\fCEXA_COLORS\fR environment variable can be used to customise the colours that \fB\fCeza\fR uses to highlight file names, file metadata, and parts of the UI.
+
+.PP
+You can use the \fB\fCdircolors\fR program to generate a script that sets the variable from an input file, or if you don’t mind editing long strings of text, you can just type it out directly. These variables have the following structure:
+
+.RS
+.IP \(bu 2
+A list of key-value pairs separated by ‘\fB\fC=\fR’, such as ‘\fB\fC*.txt=32\fR’.
+.IP \(bu 2
+Multiple ANSI formatting codes are separated by ‘\fB\fC;\fR’, such as ‘\fB\fC*.txt=32;1;4\fR’.
+.IP \(bu 2
+Finally, multiple pairs are separated by ‘\fB\fC:\fR’, such as ‘\fB\fC*.txt=32:*.mp3=1;35\fR’.
+
+.RE
+
+.PP
+The key half of the pair can either be a two-letter code or a file glob, and anything that’s not a valid code will be treated as a glob, including keys that happen to be two letters long.
+
+
+.SH EXAMPLES
+.TP
+\fB\fCEXA_COLORS="uu=0:gu=0"\fR
+Disable the “current user” highlighting
+
+.TP
+\fB\fCEXA_COLORS="da=32"\fR
+Turn the date column green
+
+.TP
+\fB\fCEXA_COLORS="Vagrantfile=1;4;33"\fR
+Highlight Vagrantfiles
+
+.TP
+\fB\fCEXA_COLORS="*.zip=38;5;125"\fR
+Override the existing zip colour
+
+.TP
+\fB\fCEXA_COLORS="*.md=38;5;121:*.log=38;5;248"\fR
+Markdown files a shade of green, log files a shade of grey
+
+
+.SH LIST OF CODES
+.PP
+\fB\fCLS_COLORS\fR can use these ten codes:
+
+.TP
+\fB\fCdi\fR
+directories
+
+.TP
+\fB\fCex\fR
+executable files
+
+.TP
+\fB\fCfi\fR
+regular files
+
+.TP
+\fB\fCpi\fR
+named pipes
+
+.TP
+\fB\fCso\fR
+sockets
+
+.TP
+\fB\fCbd\fR
+block devices
+
+.TP
+\fB\fCcd\fR
+character devices
+
+.TP
+\fB\fCln\fR
+symlinks
+
+.TP
+\fB\fCor\fR
+symlinks with no target
+
+.PP
+\fB\fCEXA_COLORS\fR can use many more:
+
+.TP
+\fB\fCur\fR
+the user-read permission bit
+
+.TP
+\fB\fCuw\fR
+the user-write permission bit
+
+.TP
+\fB\fCux\fR
+the user-execute permission bit for regular files
+
+.TP
+\fB\fCue\fR
+the user-execute for other file kinds
+
+.TP
+\fB\fCgr\fR
+the group-read permission bit
+
+.TP
+\fB\fCgw\fR
+the group-write permission bit
+
+.TP
+\fB\fCgx\fR
+the group-execute permission bit
+
+.TP
+\fB\fCtr\fR
+the others-read permission bit
+
+.TP
+\fB\fCtw\fR
+the others-write permission bit
+
+.TP
+\fB\fCtx\fR
+the others-execute permission bit
+
+.TP
+\fB\fCsu\fR
+setuid, setgid, and sticky permission bits for files
+
+.TP
+\fB\fCsf\fR
+setuid, setgid, and sticky for other file kinds
+
+.TP
+\fB\fCxa\fR
+the extended attribute indicator
+
+.TP
+\fB\fCsn\fR
+the numbers of a file’s size (sets \fB\fCnb\fR, \fB\fCnk\fR, \fB\fCnm\fR, \fB\fCng\fR and \fB\fCnh\fR)
+
+.TP
+\fB\fCnb\fR
+the numbers of a file’s size if it is lower than 1 KB/Kib
+
+.TP
+\fB\fCnk\fR
+the numbers of a file’s size if it is between 1 KB/KiB and 1 MB/MiB
+
+.TP
+\fB\fCnm\fR
+the numbers of a file’s size if it is between 1 MB/MiB and 1 GB/GiB
+
+.TP
+\fB\fCng\fR
+the numbers of a file’s size if it is between 1 GB/GiB and 1 TB/TiB
+
+.TP
+\fB\fCnt\fR
+the numbers of a file’s size if it is 1 TB/TiB or higher
+
+.TP
+\fB\fCsb\fR
+the units of a file’s size (sets \fB\fCub\fR, \fB\fCuk\fR, \fB\fCum\fR, \fB\fCug\fR and \fB\fCuh\fR)
+
+.TP
+\fB\fCub\fR
+the units of a file’s size if it is lower than 1 KB/Kib
+
+.TP
+\fB\fCuk\fR
+the units of a file’s size if it is between 1 KB/KiB and 1 MB/MiB
+
+.TP
+\fB\fCum\fR
+the units of a file’s size if it is between 1 MB/MiB and 1 GB/GiB
+
+.TP
+\fB\fCug\fR
+the units of a file’s size if it is between 1 GB/GiB and 1 TB/TiB
+
+.TP
+\fB\fCut\fR
+the units of a file’s size if it is 1 TB/TiB or higher
+
+.TP
+\fB\fCdf\fR
+a device’s major ID
+
+.TP
+\fB\fCds\fR
+a device’s minor ID
+
+.TP
+\fB\fCuu\fR
+a user that’s you
+
+.TP
+\fB\fCun\fR
+a user that’s someone else
+
+.TP
+\fB\fCgu\fR
+a group that you belong to
+
+.TP
+\fB\fCgn\fR
+a group you aren’t a member of
+
+.TP
+\fB\fClc\fR
+a number of hard links
+
+.TP
+\fB\fClm\fR
+a number of hard links for a regular file with at least two
+
+.TP
+\fB\fCga\fR
+a new flag in Git
+
+.TP
+\fB\fCgm\fR
+a modified flag in Git
+
+.TP
+\fB\fCgd\fR
+a deleted flag in Git
+
+.TP
+\fB\fCgv\fR
+a renamed flag in Git
+
+.TP
+\fB\fCgt\fR
+a modified metadata flag in Git
+
+.TP
+\fB\fCgi\fR
+an ignored flag in Git
+
+.TP
+\fB\fCxx\fR
+“punctuation”, including many background UI elements
+
+.TP
+\fB\fCda\fR
+a file’s date
+
+.TP
+\fB\fCin\fR
+a file’s inode number
+
+.TP
+\fB\fCbl\fR
+a file’s number of blocks
+
+.TP
+\fB\fChd\fR
+the header row of a table
+
+.TP
+\fB\fClp\fR
+the path of a symlink
+
+.TP
+\fB\fCcc\fR
+an escaped character in a filename
+
+.TP
+\fB\fCbO\fR
+the overlay style for broken symlink paths
+
+.TP
+\fB\fCmp\fR
+a mount point
+
+.PP
+Values in \fB\fCEXA_COLORS\fR override those given in \fB\fCLS_COLORS\fR, so you don’t need to re-write an existing \fB\fCLS_COLORS\fR variable with proprietary extensions.
+
+
+.SH LIST OF STYLES
+.PP
+Unlike some versions of \fB\fCls\fR, the given ANSI values must be valid colour codes: eza won’t just print out whichever characters are given.
+
+.PP
+The codes accepted by eza are:
+
+.TP
+\fB\fC1\fR
+for bold
+
+.TP
+\fB\fC4\fR
+for underline
+
+.TP
+\fB\fC31\fR
+for red text
+
+.TP
+\fB\fC32\fR
+for green text
+
+.TP
+\fB\fC33\fR
+for yellow text
+
+.TP
+\fB\fC34\fR
+for blue text
+
+.TP
+\fB\fC35\fR
+for purple text
+
+.TP
+\fB\fC36\fR
+for cyan text
+
+.TP
+\fB\fC37\fR
+for white text
+
+.TP
+\fB\fC38;5;nnn\fR
+for a colour from 0 to 255 (replace the \fB\fCnnn\fR part)
+
+.PP
+Many terminals will treat bolded text as a different colour, or at least provide the option to.
+
+.PP
+eza provides its own built-in set of file extension mappings that cover a large range of common file extensions, including documents, archives, media, and temporary files.
+Any mappings in the environment variables will override this default set: running eza with \fB\fCLS_COLORS="*.zip=32"\fR will turn zip files green but leave the colours of other compressed files alone.
+
+.PP
+You can also disable this built-in set entirely by including a \fB\fCreset\fR entry at the beginning of \fB\fCEXA_COLORS\fR\&.
+So setting \fB\fCEXA_COLORS="reset:*.txt=31"\fR will highlight only text files; setting \fB\fCEXA_COLORS="reset"\fR will highlight nothing.
+
+
+.SH AUTHOR
+.PP
+eza is maintained by Christina Sørensen and many other contributors.
+
+.PP
+\fBSource code:\fP \fB\fChttps://github.com/eza-community/eza\fR \\
+\fBContributors:\fP \fB\fChttps://github.com/eza-community/eza/graphs/contributors\fR
+
+.PP
+Our infinite thanks to Benjamin ‘ogham’ Sago and all the other contributors of exa, from which eza was forked.
+
+
+.SH SEE ALSO
+.RS
+.IP \(bu 2
+eza.1.md
+\[la]eza.1.md\[ra]
+.IP \(bu 2
+eza_colors-explanation.5.md
+\[la]eza_colors-explanation.5.md\[ra]
+
+.RE

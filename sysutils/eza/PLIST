@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/09 17:28:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/09 20:16:41 pin Exp $
 bin/eza
+man/man1/eza.1
+man/man5/eza_colors-explanation.5
+man/man5/eza_colors.5
