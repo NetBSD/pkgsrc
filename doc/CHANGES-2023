@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5430 2023/09/09 20:43:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5431 2023/09/09 20:51:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7890,3 +7890,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/svt-av1 to 1.7.0 [wiz 2023-09-09]
 	Updated editors/xournalpp to 1.2.1 [wiz 2023-09-09]
 	Updated graphics/librsvg to 2.56.3 [wiz 2023-09-09]
+	Updated devel/re2 to 20230901 [wiz 2023-09-09]
