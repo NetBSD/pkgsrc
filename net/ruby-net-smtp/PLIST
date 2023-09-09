@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/28 04:16:30 taca Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE.txt
-${GEM_LIBDIR}/lib/net/smtp.rb
-${GEM_LIBDIR}/net-smtp.gemspec
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
