@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23358 2023/09/09 14:48:19 wiz Exp $
+$NetBSD: TODO,v 1.23359 2023/09/09 14:57:23 vins Exp $
 
 Suggested new packages
 ======================
@@ -1508,7 +1508,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xkbset-0.6
 	o xli-2006.11.10
 	o xmake-2.0.5
-	o xmbdfed-4.6
 	o xmcd-3.3.2
 	o xml2-0.5
 	o xmltoman-0.6
