@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/03/19 13:35:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/09/09 21:29:18 wiz Exp $
 bin/wormhole-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -123,6 +123,9 @@ ${PYSITELIB}/wormhole/errors.pyo
 ${PYSITELIB}/wormhole/eventual.py
 ${PYSITELIB}/wormhole/eventual.pyc
 ${PYSITELIB}/wormhole/eventual.pyo
+${PYSITELIB}/wormhole/foo.py
+${PYSITELIB}/wormhole/foo.pyc
+${PYSITELIB}/wormhole/foo.pyo
 ${PYSITELIB}/wormhole/ipaddrs.py
 ${PYSITELIB}/wormhole/ipaddrs.pyc
 ${PYSITELIB}/wormhole/ipaddrs.pyo
