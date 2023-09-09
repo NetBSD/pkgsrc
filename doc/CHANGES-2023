@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5407 2023/09/09 12:03:40 tron Exp $
+$NetBSD: CHANGES-2023,v 1.5408 2023/09/09 13:58:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7867,3 +7867,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.8.0 [pin 2023-09-08]
 	Updated chat/emacs-jabber to 0.8.92 [mef 2023-09-09]
 	Updated mail/mutt to 2.2.12 [tron 2023-09-09]
+	Removed math/ruby-matrix [taca 2023-09-09]
