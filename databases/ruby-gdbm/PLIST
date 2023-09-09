@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/19 14:36:28 taca Exp $
-${RUBY_VENDORARCHLIB}/gdbm.${RUBY_DLEXT}
