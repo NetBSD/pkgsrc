@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5427 2023/09/09 20:17:01 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5428 2023/09/09 20:19:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7887,3 +7887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/go-md2man to 2.0.2 [pin 2023-09-09]
 	Updated math/mpfr to 4.2.1 [wiz 2023-09-09]
 	Updated sysutils/eza to 0.11.0nb1 [pin 2023-09-09]
+	Updated multimedia/svt-av1 to 1.7.0 [wiz 2023-09-09]

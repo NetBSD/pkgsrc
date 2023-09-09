@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23363 2023/09/09 20:16:18 wiz Exp $
+$NetBSD: TODO,v 1.23364 2023/09/09 20:19:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1361,7 +1361,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o streamtuner-2.2.0
 	o sup-0.4
 	o superlu-5.2.2
-	o svt-av1-1.7
 	o swapd-1.0.5
 	o swi-prolog-8.3.22
 	o swi-prolog-jpl-8.3.22
