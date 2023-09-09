@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/09/08 06:01:04 vins Exp $
+# $NetBSD: Makefile,v 1.16 2023/09/09 10:23:00 vins Exp $
 #
 
 DISTNAME=	fuse-2.9.9
@@ -22,9 +22,11 @@ ONLY_FOR_PLATFORM=	Linux-*-* FreeBSD-*-* NetBSD-*-*
 # implementation is not needed. This FUSE implementation can also be
 # used with the perfuse package on NetBSD.
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config gettext
 USE_TOOLS+=	autoconf automake autoreconf
 USE_LIBTOOL=	yes
+
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
@@ -71,4 +73,5 @@ post-install:
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
