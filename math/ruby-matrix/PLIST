@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/01 14:42:37 taca Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE.txt
-${GEM_LIBDIR}/lib/matrix.rb
-${GEM_LIBDIR}/lib/matrix/eigenvalue_decomposition.rb
-${GEM_LIBDIR}/lib/matrix/lup_decomposition.rb
-${GEM_LIBDIR}/lib/matrix/version.rb
-${GEM_LIBDIR}/matrix.gemspec
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
