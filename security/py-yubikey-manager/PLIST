@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/02 07:37:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/09/09 21:37:49 wiz Exp $
 bin/ykman-${PYVERSSUFFIX}
 ${PYSITELIB}/ykman/__init__.py
 ${PYSITELIB}/ykman/__init__.pyc
@@ -14,6 +14,8 @@ ${PYSITELIB}/ykman/_cli/config.py
 ${PYSITELIB}/ykman/_cli/config.pyc
 ${PYSITELIB}/ykman/_cli/fido.py
 ${PYSITELIB}/ykman/_cli/fido.pyc
+${PYSITELIB}/ykman/_cli/hsmauth.py
+${PYSITELIB}/ykman/_cli/hsmauth.pyc
 ${PYSITELIB}/ykman/_cli/info.py
 ${PYSITELIB}/ykman/_cli/info.pyc
 ${PYSITELIB}/ykman/_cli/oath.py
@@ -48,6 +50,8 @@ ${PYSITELIB}/ykman/hid/macos.py
 ${PYSITELIB}/ykman/hid/macos.pyc
 ${PYSITELIB}/ykman/hid/windows.py
 ${PYSITELIB}/ykman/hid/windows.pyc
+${PYSITELIB}/ykman/hsmauth.py
+${PYSITELIB}/ykman/hsmauth.pyc
 ${PYSITELIB}/ykman/logging.py
 ${PYSITELIB}/ykman/logging.pyc
 ${PYSITELIB}/ykman/logging_setup.py
@@ -105,6 +109,8 @@ ${PYSITELIB}/yubikit/core/otp.py
 ${PYSITELIB}/yubikit/core/otp.pyc
 ${PYSITELIB}/yubikit/core/smartcard.py
 ${PYSITELIB}/yubikit/core/smartcard.pyc
+${PYSITELIB}/yubikit/hsmauth.py
+${PYSITELIB}/yubikit/hsmauth.pyc
 ${PYSITELIB}/yubikit/logging.py
 ${PYSITELIB}/yubikit/logging.pyc
 ${PYSITELIB}/yubikit/management.py
