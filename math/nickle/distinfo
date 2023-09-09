@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/06/19 20:31:02 tnn Exp $
+$NetBSD: distinfo,v 1.24 2023/09/09 20:12:39 wiz Exp $
 
-BLAKE2s (nickle-2.92.tar.gz) = 21da50baef14a9f35e911d013f48f7217a00b7eb0b80add63fd1056f1b34f68a
-SHA512 (nickle-2.92.tar.gz) = 27c8607740bba0c034ac2f8aef823c1eeaf7670bf72c983212ad41522fc321bda45478515e9f1e67350fecf1ebe4b9bb29429edeb357e5e1691af9e1720322f6
-Size (nickle-2.92.tar.gz) = 2548373 bytes
-SHA1 (patch-lex.c) = daae8884b02f8de2fa4dbc9050973dbaebcda7a4
+BLAKE2s (nickle-2.93.tar.gz) = 87a6d2eb2c0523987ac31e214cbe1f737e649865bedb3bb3ab6643c4cff7a2cc
+SHA512 (nickle-2.93.tar.gz) = 0908c12060c66ea8bce1c05e931f555c1fcf0e43637cc5692029e3d4b4cc3a36ac6d367b768598d4e21b7e204dc5247ff3ad80965521a9284d63dd0027790928
+Size (nickle-2.93.tar.gz) = 2550308 bytes
