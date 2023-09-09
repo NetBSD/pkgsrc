@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5406 2023/09/09 10:34:34 mef Exp $
+$NetBSD: CHANGES-2023,v 1.5407 2023/09/09 12:03:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libasr to 1.0.4 [vins 2023-09-08]
 	Updated shells/oh-my-posh to 18.8.0 [pin 2023-09-08]
 	Updated chat/emacs-jabber to 0.8.92 [mef 2023-09-09]
+	Updated mail/mutt to 2.2.12 [tron 2023-09-09]
