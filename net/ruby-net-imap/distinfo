@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/08/28 04:09:37 taca Exp $
-
-BLAKE2s (net-imap-0.2.3.gem) = 6f8f9eedc61e503766978a6bcdc7aa254d57b0aff942b0c567a92cdc1d16732f
-SHA512 (net-imap-0.2.3.gem) = fdf98fc6b601f6ef2c70a40bbcad59abe27fe79b3d71c535ab8e6c1cc58d0aa6c4c291a022f81b811c8bc2da37a37a649a07a2bc471bc4643c59b21072f68b61
-Size (net-imap-0.2.3.gem) = 39936 bytes
