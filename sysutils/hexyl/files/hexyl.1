@@ -1,0 +1,186 @@
+.nh
+.TH HEXYL(1) hexyl 0.12.0 | General Commands Manual
+%
+2022-12-05
+
+.SH NAME
+.PP
+hexyl - a command-line hex viewer
+
+
+.SH SYNOPSIS
+.PP
+\fBhexyl\fP [\fIOPTIONS\fP] [\fIFILE\fP]
+
+
+.SH DESCRIPTION
+.PP
+\fBhexyl\fP is a simple hex viewer for the terminal.
+It uses a colored output to distinguish different categories of bytes (NULL
+bytes, printable ASCII characters, ASCII whitespace characters, other ASCII
+characters and non-ASCII).
+
+
+.SH POSITIONAL ARGUMENTS
+.TP
+\fIFILE\fP
+The file to display.
+If no \fIFILE\fP argument is given, read from STDIN.
+
+
+.SH OPTIONS
+.TP
+\fB-n\fP, \fB--length\fP \fIN\fP
+Only read \fIN\fP bytes from the input.
+The \fIN\fP argument can also include a unit with a decimal prefix (kB, MB, ..)
+or binary prefix (kiB, MiB, ..), or can be specified using a hex number.Examples:
+Read the first 64 bytes:
+$ \fBhexyl --length=64\fP
+
+.TP
+Read the first 4 kibibytes:
+$ \fBhexyl --length=4KiB\fP
+
+.TP
+Read the first 255 bytes (specified using a hex number):
+$ \fBhexyl --length=0xff\fP
+
+
+
+.TP
+\fB-c\fP, \fB--bytes\fP \fIN\fP
+An alias for \fB-n\fP/\fB--length\fP\&.
+
+.TP
+\fB-l\fP \fIN\fP
+Yet another alias for \fB-n\fP/\fB--length\fP\&.
+
+.TP
+\fB-s\fP, \fB--skip\fP \fIN\fP
+Skip the first \fIN\fP bytes of the input.
+The \fIN\fP argument can also include a unit (see \fB--length\fP for details).
+A negative value is valid and will seek from the end of the file.
+
+.TP
+\fB--block-size\fP \fISIZE\fP
+Sets the size of the block unit to \fISIZE\fP (default is 512).Examples:
+Sets the block size to 1024 bytes:
+$ \fBhexyl --block-size=1024 --length=5block\fP
+
+.TP
+Sets the block size to 4 kilobytes:
+$ \fBhexyl --block-size=4kB --length=2block\fP
+
+
+
+.TP
+\fB-v\fP, \fB--no-squeezing\fP
+Displays all input data.
+Otherwise any number of groups of output lines which would be identical to
+the preceding group of lines, are replaced with a line comprised of a
+single asterisk.
+
+.TP
+\fB--color\fP \fIWHEN\fP
+When to use colors.
+The auto-mode only displays colors if the output goes to an interactive
+terminal.Possible values:
+- \fBalways\fP (default)
+.RS
+.IP \(bu 2
+\fBauto\fP
+.IP \(bu 2
+\fBnever\fP
+
+.RE
+
+
+
+.TP
+\fB--border\fP \fISTYLE\fP
+Whether to draw a border with Unicode characters, ASCII characters, or none
+at all.Possible values:
+- \fBunicode\fP (default)
+.RS
+.IP \(bu 2
+\fBascii\fP
+.IP \(bu 2
+\fBnone\fP
+
+.RE
+
+
+
+.TP
+\fB-o\fP, \fB--display-offset\fP \fIN\fP
+Add \fIN\fP bytes to the displayed file position.
+The \fIN\fP argument can also include a unit (see \fB--length\fP for details).
+A negative value is valid and calculates an offset relative to the end of
+the file.
+
+.TP
+\fB-h\fP, \fB--help\fP
+Prints help information.
+
+.TP
+\fB-V\fP, \fB--version\fP
+Prints version information.
+
+
+.SH NOTES
+.TP
+Source repository:
+https://github.com/sharkdp/hexyl
+\[la]https://github.com/sharkdp/hexyl\[ra]
+
+
+.SH EXAMPLES
+.TP
+Print a given file:
+$ \fBhexyl small.png\fP
+
+.TP
+Print and view a given file in the terminal pager:
+$ \fBhexyl big.png | less -r\fP
+
+.TP
+Print the first 256 bytes of a given special file:
+$ \fBhexyl -n 256 /dev/urandom\fP
+
+
+.SH AUTHORS
+.PP
+\fBhexyl\fP was written by David Peter mail@david-peter.de
+\[la]mailto:mail@david-peter.de\[ra]\&.
+
+
+.SH REPORTING BUGS
+.TP
+Bugs can be reported on GitHub at:
+https://github.com/sharkdp/hexyl/issues
+\[la]https://github.com/sharkdp/hexyl/issues\[ra]
+
+
+.SH COPYRIGHT
+.TP
+\fBhexyl\fP is dual-licensed under:
+
+.RS
+.IP \(bu 2
+Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0
+\[la]https://www.apache.org/licenses/LICENSE-2.0\[ra])
+
+.RE
+
+.RS
+.IP \(bu 2
+MIT License (https://opensource.org/licenses/MIT
+\[la]https://opensource.org/licenses/MIT\[ra])
+
+.RE
+
+
+
+.SH SEE ALSO
+.PP
+\fBhexdump\fP(1), \fBxxd\fP(1)
