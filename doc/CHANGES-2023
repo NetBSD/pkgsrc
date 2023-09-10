@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5460 2023/09/10 18:32:45 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5461 2023/09/10 18:34:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7933,3 +7933,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox102 to 102.15.0 [nia 2023-09-10]
 	Updated devel/objfw to 1.0.1 [js 2023-09-10]
 	Updated security/gpg-tui to 0.10.0 [pin 2023-09-10]
+	Updated sysutils/hexyl to 0.13.1nb1 [pin 2023-09-10]
