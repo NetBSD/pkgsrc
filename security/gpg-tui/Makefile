@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/08/14 05:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/09/10 18:32:22 pin Exp $
 
-DISTNAME=	gpg-tui-0.9.6
-PKGREVISION=	1
+DISTNAME=	gpg-tui-0.10.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,7 +20,7 @@ TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.1 \
