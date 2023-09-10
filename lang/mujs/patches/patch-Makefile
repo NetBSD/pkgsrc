@@ -1,0 +1,86 @@
+$NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
+
+- Build shared objects at build-time rather than install-time.
+- Honour CFLAGS and LDFLAGS.
+- Libtoolize.
+
+--- Makefile.orig	2023-01-10 11:11:11.000000000 +0000
++++ Makefile
+@@ -2,11 +2,9 @@
+ #
+ # Useful targets are: release, install, uninstall.
+ 
+-default: build/debug/mujs build/debug/mujs-pp
++default: build/release/mujs build/release/mujs-pp build/release/libmujs.la
+ 
+-CFLAGS = -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
+-
+-OPTIM = -O3
++CFLAGS += -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
+ 
+ prefix = /usr/local
+ bindir = $(prefix)/bin
+@@ -19,11 +17,7 @@ else
+   VERSION = $(patsubst mujs-%,%,$(notdir $(CURDIR)))
+ endif
+ 
+-ifeq ($(shell uname),Darwin)
+-  SO = dylib
+-else
+-  SO = so
+-endif
++SO = la
+ 
+ ifeq ($(shell uname),FreeBSD)
+   CFLAGS += -I/usr/local/include -L/usr/local/lib
+@@ -90,18 +84,22 @@ build/debug/mujs: main.c build/debug/lib
+ build/debug/mujs-pp: pp.c build/debug/libmujs.o
+ 	$(CC) $(CFLAGS) -g -o $@ $^ -lm
+ 
+-build/release/libmujs.$(SO): one.c $(SRCS) $(HDRS)
++build/release/libmujs.$(SO): build/release/one.lo $(SRCS) $(HDRS)
+ 	@mkdir -p $(@D)
+-	$(CC) $(CFLAGS) $(OPTIM) -fPIC -shared -o $@ one.c -lm
+-build/release/libmujs.o: one.c $(SRCS) $(HDRS)
++	$(LIBTOOL) --mode=link --tag=CC --quiet $(CC) $(LDFLAGS) -rpath $(PREFIX)/lib -o $@ build/release/one.lo -lm
++build/release/one.lo: one.c $(SRCS) $(HDRS)
+ 	@mkdir -p $(@D)
+-	$(CC) $(CFLAGS) $(OPTIM) -c -o $@ one.c
+-build/release/libmujs.a: build/release/libmujs.o
+-	$(AR) cr $@ $^
+-build/release/mujs: main.c build/release/libmujs.o
+-	$(CC) $(CFLAGS) $(OPTIM) -o $@ $^ -lm -DHAVE_READLINE -lreadline
+-build/release/mujs-pp: pp.c build/release/libmujs.o
+-	$(CC) $(CFLAGS) $(OPTIM) -o $@ $^ -lm
++	$(LIBTOOL) --mode=compile --tag=CC --quiet $(CC) $(CFLAGS) -c -o $@ one.c
++build/release/main.lo: main.c $(SRCS) $(HDRS)
++	@mkdir -p $(@D)
++	$(LIBTOOL) --mode=compile --tag=CC --quiet $(CC) $(CFLAGS) -c -o $@ main.c
++build/release/pp.lo: pp.c $(SRCS) $(HDRS)
++	@mkdir -p $(@D)
++	$(LIBTOOL) --mode=compile --tag=CC --quiet $(CC) $(CFLAGS) -c -o $@ pp.c
++build/release/mujs: build/release/main.lo build/release/one.lo
++	$(LIBTOOL) --mode=link --tag=CC --quiet $(CC) $(LDFLAGS) -o $@ $^ -lm -DHAVE_READLINE -lreadline
++build/release/mujs-pp: build/release/pp.lo build/release/one.lo
++	$(LIBTOOL) --mode=link --tag=CC --quiet $(CC) $(LDFLAGS) -o $@ $^ -lm
+ 
+ build/release/mujs.pc:
+ 	@mkdir -p $(@D)
+@@ -119,14 +117,14 @@ install-common: build/release/mujs build
+ 	install -d $(DESTDIR)$(bindir)
+ 	install -m 644 mujs.h $(DESTDIR)$(incdir)
+ 	install -m 644 build/release/mujs.pc $(DESTDIR)$(libdir)/pkgconfig
+-	install -m 755 build/release/mujs $(DESTDIR)$(bindir)
+-	install -m 755 build/release/mujs-pp $(DESTDIR)$(bindir)
++	$(LIBTOOL) --mode=install --tag=CC --quiet install -m 755 build/release/mujs $(DESTDIR)$(bindir)
++	$(LIBTOOL) --mode=install --tag=CC --quiet install -m 755 build/release/mujs-pp $(DESTDIR)$(bindir)
+ 
+ install-static: install-common build/release/libmujs.a
+ 	install -m 644 build/release/libmujs.a $(DESTDIR)$(libdir)
+ 
+ install-shared: install-common build/release/libmujs.$(SO)
+-	install -m 755 build/release/libmujs.$(SO) $(DESTDIR)$(libdir)
++	$(LIBTOOL) --mode=install --tag=CC --quiet install -m 755 build/release/libmujs.$(SO) $(DESTDIR)$(libdir)
+ 
+ install: install-static
+ 
