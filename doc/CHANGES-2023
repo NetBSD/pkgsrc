@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5442 2023/09/10 06:28:41 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.5443 2023/09/10 09:21:59 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7902,3 +7902,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-yubikey-manager to 5.2.0 [wiz 2023-09-09]
 	Updated security/ykman to 5.2.0 [wiz 2023-09-09]
 	Updated lang/ecl to 23.9.9 [yhardy 2023-09-10]
+	Updated games/gemrb to 0.9.2 [yhardy 2023-09-10]
