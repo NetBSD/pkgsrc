@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/09/10 09:36:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/09/10 09:57:36 nia Exp $
 
 BLAKE2s (mujs-1.3.3.tar.gz) = b91373ed586938084ceaa6b90545fa580ea6f7efd9fecbd84ab50189b6fca943
 SHA512 (mujs-1.3.3.tar.gz) = 74288484185473a813c55e08dcc2fefba46f87651d3a1fcea6ac843bb09a4150e13e0d46b348a34380a0defdeaa388cc93b6f7f569a7886091a34b4951b9461b
 Size (mujs-1.3.3.tar.gz) = 128097 bytes
-SHA1 (patch-Makefile) = 6fb39d0ae1a3dd510e846bf29bbb4a6ffa44cf84
+SHA1 (patch-Makefile) = 158e5ce3da4202b81ef2483ce594697660ae4263
