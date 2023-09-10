@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/09/10 08:40:51 nia Exp $
 
 BLAKE2s (lua-stringy-0.7.0.tar.gz) = a6b28c801c59ebdea6a7e9b3a9552f9150388c9b7beddeec510df97a88d05e21
 SHA512 (lua-stringy-0.7.0.tar.gz) = e23ea0f04bd4c1db8fe3fdda2d8fb4a18e78b82aadc12edf1114b29b18b68d981f7d304ccd1823711e7cc6dc586694f0d902faba41a91387319a1ceefc29e116
 Size (lua-stringy-0.7.0.tar.gz) = 6213 bytes
-SHA1 (patch-stringy_Makefile) = de1abbb4e5c5a4b805caea58bd88b1ed4eeff0ae
+SHA1 (patch-stringy_Makefile) = ce1c43843c0cd828f01ba9b1e66dcd33be7927f6
 SHA1 (patch-stringy_stringy.c) = a984b24ec331fc0188b95a119c923f443e08b8a3
