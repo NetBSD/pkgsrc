@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2023/06/06 12:42:39 riastradh Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2023/09/10 14:42:28 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -97,6 +97,7 @@ CONFIGURE_ARGS+=	--with-system-libevent
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--enable-chrome-format=omni
 CONFIGURE_ARGS+=	--with-system-webp
+CONFIGURE_ARGS+=	--enable-forkserver
 
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf

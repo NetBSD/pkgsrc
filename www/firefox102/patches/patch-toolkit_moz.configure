@@ -1,9 +1,10 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.1 2022/07/21 23:56:39 nia Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.2 2023/09/10 14:42:29 nia Exp $
 
 * Add Sun audio support and enable for NetBSD and SunOS by default.
 * Enable ALSA for NetBSD too.
+* Support --enable-forkserver on NetBSD.
 
---- toolkit/moz.configure.orig	2022-04-28 23:01:47.000000000 +0000
+--- toolkit/moz.configure.orig	2023-08-22 15:44:52.000000000 +0000
 +++ toolkit/moz.configure
 @@ -198,6 +198,10 @@ def audio_backends_default(target):
          return ("sndio",)
@@ -55,3 +56,11 @@ $NetBSD: patch-toolkit_moz.configure,v 1.1 2022/07/21 23:56:39 nia Exp $
  set_config("MOZ_WASAPI", imply_wasapi, when="--enable-audio-backends")
  
  # ALSA cubeb backend
+@@ -2630,6 +2645,7 @@ def forkserver_default(target, build_pro
+         (target.os == "GNU" and target.kernel == "Linux")
+         or target.os == "FreeBSD"
+         or target.os == "OpenBSD"
++        or target.os == "NetBSD"
+     )
+ 
+ 
