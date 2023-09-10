@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/13 14:13:59 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/10 18:34:07 pin Exp $
 bin/hexyl
+man/man1/hexyl.1

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/07/26 19:37:47 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/10 18:34:07 pin Exp $
 
 DISTNAME=	hexyl-0.13.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,11 +13,13 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${PKGBASE} \
-		${DESTDIR}${PREFIX}/bin
+post-build:
+	${CP} ${FILESDIR}/hexyl.1 ${WRKDIR}/hexyl.1
+
+post-install:
+	${INSTALL_MAN} ${WRKDIR}/hexyl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
