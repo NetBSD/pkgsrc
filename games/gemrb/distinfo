@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/27 18:50:59 yhardy Exp $
+$NetBSD: distinfo,v 1.10 2023/09/10 09:21:39 yhardy Exp $
 
-BLAKE2s (gemrb-0.9.1.tar.gz) = 5c31d86713090cb0bf52e6a00818b5af6a00a3e339e4bb62988f2aa633dcb727
-SHA512 (gemrb-0.9.1.tar.gz) = 20129c5a8a55eb9812709cec23e0286462c2b4853acc6226d76f96c9e0b98301d11877cc9cd2aadc6852245df87f8a92cd35ca55bd38748521e73fcfc84bbf96
-Size (gemrb-0.9.1.tar.gz) = 13057232 bytes
-SHA1 (patch-gemrb_core_Strings_StringConversion.cpp) = a92c4f48d61804c20ba511ca688600e5f5999d06
-SHA1 (patch-gemrb_plugins_TTFImporter_TTFFont.cpp) = 070312d1d4bd127eac1ade3d823911c105e4395e
+BLAKE2s (gemrb-0.9.2.tar.gz) = 1ca150a79f78839227012fa5a9d4f6982a8a3f83d33fb4c0ebbe8125a4cbdefd
+SHA512 (gemrb-0.9.2.tar.gz) = cc26f56de19f603645a36533b3ad6abb345809570d69d84c2defc6f2af7a08f6dad3a3db0f89f749ff5df4888fd32a8eb6a1b253e0efbf11ec3ebf3bc5a3ec91
+Size (gemrb-0.9.2.tar.gz) = 14327547 bytes
