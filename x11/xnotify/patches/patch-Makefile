@@ -1,0 +1,47 @@
+$NetBSD: patch-Makefile,v 1.1 2023/09/10 11:37:29 vins Exp $
+
+Portability fixes for pkgsrc.
+
+--- Makefile.orig	2023-01-13 20:28:28.000000000 +0000
++++ Makefile
+@@ -2,15 +2,16 @@ PROG = xnotify
+ OBJS = ${PROG:=.o}
+ SRCS = ${OBJS:.o=.c}
+ 
+-PREFIX ?= /usr/local
+-MANPREFIX ?= ${PREFIX}/share/man
++PREFIX ?= ${PREFIX} 
++MANPREFIX ?= ${PREFIX}/${PKGMANDIR}
+ LOCALINC ?= /usr/local/include
+ LOCALLIB ?= /usr/local/lib
+ X11INC ?= /usr/X11R6/include
+ X11LIB ?= /usr/X11R6/lib
+ 
+-INCS = -I${LOCALINC} -I${X11INC} -I/usr/include/freetype2 -I${X11INC}/freetype2
+-LIBS = -L${LOCALLIB} -L${X11LIB} -lfontconfig -lXft -lX11 -lXinerama -lImlib2
++# Do not override defaults. 
++#INCS = -I${LOCALINC} -I${X11INC} -I/usr/include/freetype2 -I${X11INC}/freetype2
++LIBS = -lfreetype -lfontconfig -lXft -lX11 -lXinerama -lImlib2
+ 
+ all: ${PROG}
+ 
+@@ -29,13 +30,13 @@ clean:
+ 	rm -f ${OBJS} ${PROG} ${PROG:=.core} tags
+ 
+ install: all
+-	mkdir -p ${DESTDIR}${PREFIX}/bin
+-	install -m 755 ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
+-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
+-	install -m 644 ${PROG:=.1} ${DESTDIR}${MANPREFIX}/man1/${PROG:=.1}
++	${BSD_INSTALL_PROGRAM_DIR} -p ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
++	${BSD_INSTALL_MAN} ${PROG:=.1} ${DESTDIR}${MANPREFIX}/man1/${PROG:=.1}
+ 
+ uninstall:
+-	rm ${DESTDIR}${PREFIX}/bin/${PROG}
+-	rm ${DESTDIR}${MANPREFIX}/man1/${PROG:=.1}
++	${RM} ${DESTDIR}${PREFIX}/bin/${PROG}
++	${RM} ${DESTDIR}${MANPREFIX}/man1/${PROG:=.1}
+ 
+ .PHONY: all tags clean install uninstall
