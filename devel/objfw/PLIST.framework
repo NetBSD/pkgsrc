@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.1 2023/08/29 16:13:57 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.2 2023/09/10 15:56:43 js Exp $
 Library/Frameworks/ObjFW.framework/Headers/OFAcceptSocketFailedException.h
 Library/Frameworks/ObjFW.framework/Headers/OFAllocFailedException.h
 Library/Frameworks/ObjFW.framework/Headers/OFAlreadyOpenException.h
@@ -216,7 +216,3 @@ Library/Frameworks/ObjFW.framework/Info.plist
 Library/Frameworks/ObjFW.framework/Modules/module.modulemap
 Library/Frameworks/ObjFW.framework/ObjFW
 Library/Frameworks/ObjFW.framework/_CodeSignature/CodeResources
-Library/Frameworks/ObjFWTLS.framework/Headers/ObjFWTLS.h
-Library/Frameworks/ObjFWTLS.framework/Info.plist
-Library/Frameworks/ObjFWTLS.framework/ObjFWTLS
-Library/Frameworks/ObjFWTLS.framework/_CodeSignature/CodeResources
