@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/02/12 06:27:26 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/09/10 10:27:10 vins Exp $
 bin/FvwmCommand
 bin/fvwm-convert-2.6
 bin/fvwm-menu-desktop
@@ -157,3 +157,4 @@ share/fvwm3/perllib/FVWM/Tracker/Scheduler.pm
 share/fvwm3/perllib/FVWM/Tracker/WindowList.pm
 share/fvwm3/perllib/General/FileSystem.pm
 share/fvwm3/perllib/General/Parse.pm
+share/xsessions/fvwm3.desktop

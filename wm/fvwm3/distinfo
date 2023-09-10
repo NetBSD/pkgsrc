@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/07/16 23:21:56 vins Exp $
+$NetBSD: distinfo,v 1.10 2023/09/10 10:27:10 vins Exp $
 
-BLAKE2s (fvwm3-1.0.7.tar.gz) = 1ecc4f09aff41de362bc3e52481ec896d7859a28c8a6b443a7fd058ababcea04
-SHA512 (fvwm3-1.0.7.tar.gz) = 91973abb7b3f79cec4fba28d9aa071923aa975eae3f3e00257e8633e2d376732cd5db7e42a4330bc849f807fc149abfbeef6100fe2ca6c05c847b61ee48236ed
-Size (fvwm3-1.0.7.tar.gz) = 4512128 bytes
+BLAKE2s (fvwm3-1.0.8.tar.gz) = 08089874c531f8ae2f4b58df073b6196063693bea85a193aee9401d2a1b1264a
+SHA512 (fvwm3-1.0.8.tar.gz) = fef69b6d97b3533e6722b48336aa8904b399c42437c4adcab756edf55cf839126002255dfa268bf7159d3bb9caf4d44c43a9217c9df5dc6224cef8461ecf2c34
+Size (fvwm3-1.0.8.tar.gz) = 5644021 bytes
