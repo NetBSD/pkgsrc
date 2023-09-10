@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5452 2023/09/10 13:36:48 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5453 2023/09/10 13:42:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7912,3 +7912,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/ruby-sqlite3 to 1.6.5 [taca 2023-09-10]
 	Updated devel/ruby-pkg-config to 1.5.5 [taca 2023-09-10]
 	Updated misc/ruby-sprockets to 4.2.1 [taca 2023-09-10]
+	Updated security/ruby-rex-socket to 0.1.53 [taca 2023-09-10]
