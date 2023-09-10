@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5446 2023/09/10 10:19:02 yhardy Exp $
+$NetBSD: CHANGES-2023,v 1.5447 2023/09/10 10:28:02 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7906,3 +7906,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/REminiscence to 0.5.1 [yhardy 2023-09-10]
 	Updated shells/oh-my-posh to 18.8.1 [pin 2023-09-10]
 	Updated games/yquake2 to 8.20 [yhardy 2023-09-10]
+	Updated wm/fvwm3 to 1.0.8 [vins 2023-09-10]
