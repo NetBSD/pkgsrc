@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2023/09/09 14:56:28 vins Exp $
+$NetBSD: distinfo,v 1.13 2023/09/10 10:51:36 vins Exp $
 
 BLAKE2s (xmbdfed-4.7.tar.bz2) = 220aa04d36486a1f59f3c73a8b71d1196cdc3d40acc35a6e2c1d4884f7a98886
 SHA512 (xmbdfed-4.7.tar.bz2) = 82dd996be82e51c1d3a0bdaeb9b293d9f367babb52d20f26a2c7a24d960cf40d45fd151f628c18b7f3154f0d1bd4add1d431a0fd809ce6bdc4a711d7c88e9d23
 Size (xmbdfed-4.7.tar.bz2) = 208877 bytes
 SHA1 (patch-FGrid.c) = 296402658c9eb5d34e2466ced450ec5c3f9616bc
-SHA1 (patch-Makefile) = 6e1ef52cf8cbd4a3ebf144b29ff569f980242d1a
+SHA1 (patch-Makefile) = 62097b4008cf5a4c10de54a1421672d2a796525a
 SHA1 (patch-bdf.c) = 2c8a807780bb96bdbf19f65f8223b586c3bbfe38
 SHA1 (patch-bdfgname.c) = adc637ccec8ad771cce9ab770eb0c8d97ef3ac84
 SHA1 (patch-color.c) = 0802994e424fb2425d5b92ae7d10673b0a667540
