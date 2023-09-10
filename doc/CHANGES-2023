@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5448 2023/09/10 11:38:25 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5449 2023/09/10 13:06:34 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7908,3 +7908,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/yquake2 to 8.20 [yhardy 2023-09-10]
 	Updated wm/fvwm3 to 1.0.8 [vins 2023-09-10]
 	Updated x11/xnotify to 0.9.3 [vins 2023-09-10]
+	Updated textproc/miller to 6.9.0 [yhardy 2023-09-10]
