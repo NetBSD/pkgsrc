@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.12 2023/08/23 15:19:02 adam Exp $
+$NetBSD: patch-meson.build,v 1.13 2023/09/10 16:16:14 jperkin Exp $
 
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
@@ -6,6 +6,15 @@ $NetBSD: patch-meson.build,v 1.12 2023/08/23 15:19:02 adam Exp $
 
 --- meson.build.orig	2023-08-22 15:34:02.000000000 +0000
 +++ meson.build
+@@ -225,7 +225,7 @@ if targetos == 'darwin'
+   # Disable attempts to use ObjectiveC features in os/object.h since they
+   # won't work when we're compiling with gcc as a C compiler.
+   qemu_common_flags += '-DOS_OBJECT_USE_OBJC=0'
+-elif targetos == 'solaris'
++elif targetos == 'sunos'
+   # needed for CMSG_ macros in sys/socket.h
+   qemu_common_flags += '-D_XOPEN_SOURCE=600'
+   # needed for TIOCWIN* defines in termios.h
 @@ -1184,7 +1184,7 @@ if have_system and get_option('curses').
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
@@ -24,3 +33,12 @@ $NetBSD: patch-meson.build,v 1.12 2023/08/23 15:19:02 adam Exp $
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
        # We need to use libiconv if available because mixing libiconv's headers with
        # the system libc does not work.
+@@ -2056,7 +2056,7 @@ have_slirp_smbd = get_option('slirp_smbd
+ if have_slirp_smbd
+   smbd_path = get_option('smbd')
+   if smbd_path == ''
+-    smbd_path = (targetos == 'solaris' ? '/usr/sfw/sbin/smbd' : '/usr/sbin/smbd')
++    smbd_path = (targetos == 'sunos' ? '/usr/sfw/sbin/smbd' : '/usr/sbin/smbd')
+   endif
+   config_host_data.set_quoted('CONFIG_SMBD_COMMAND', smbd_path)
+ endif
