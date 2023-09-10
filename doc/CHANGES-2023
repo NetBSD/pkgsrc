@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5441 2023/09/09 21:38:14 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5442 2023/09/10 06:28:41 yhardy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7901,3 +7901,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-soupsieve to 2.5 [wiz 2023-09-09]
 	Updated security/py-yubikey-manager to 5.2.0 [wiz 2023-09-09]
 	Updated security/ykman to 5.2.0 [wiz 2023-09-09]
+	Updated lang/ecl to 23.9.9 [yhardy 2023-09-10]
