@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5455 2023/09/10 13:59:25 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5456 2023/09/10 14:17:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7915,3 +7915,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-rex-socket to 0.1.53 [taca 2023-09-10]
 	Updated textproc/ruby-deckar01-task_list to 2.3.3 [taca 2023-09-10]
 	Updated www/ruby-aws-partitions to 1.820.0 [taca 2023-09-10]
+	Updated devel/ruby-activestorage61 to 6.1.7.6nb1 [taca 2023-09-10]
