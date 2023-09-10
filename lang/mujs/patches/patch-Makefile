@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
+$NetBSD: patch-Makefile,v 1.6 2023/09/10 09:57:36 nia Exp $
 
 - Build shared objects at build-time rather than install-time.
 - Honour CFLAGS and LDFLAGS.
@@ -6,12 +6,12 @@ $NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
 
 --- Makefile.orig	2023-01-10 11:11:11.000000000 +0000
 +++ Makefile
-@@ -2,11 +2,9 @@
+@@ -2,28 +2,18 @@
  #
  # Useful targets are: release, install, uninstall.
  
 -default: build/debug/mujs build/debug/mujs-pp
-+default: build/release/mujs build/release/mujs-pp build/release/libmujs.la
++default: build/release/mujs build/release/mujs-pp build/release/libmujs.la build/release/mujs.pc
  
 -CFLAGS = -std=c99 -pedantic -Wall -Wextra -Wno-unused-parameter
 -
@@ -20,9 +20,15 @@ $NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
  
  prefix = /usr/local
  bindir = $(prefix)/bin
-@@ -19,11 +17,7 @@ else
-   VERSION = $(patsubst mujs-%,%,$(notdir $(CURDIR)))
- endif
+ incdir = $(prefix)/include
+ libdir = $(prefix)/lib
+ 
+-ifeq ($(wildcard .git),.git)
+-  VERSION = $(shell git describe --tags --always)
+-else
+-  VERSION = $(patsubst mujs-%,%,$(notdir $(CURDIR)))
+-endif
++VERSION = $(patsubst mujs-%,%,$(notdir $(CURDIR)))
  
 -ifeq ($(shell uname),Darwin)
 -  SO = dylib
@@ -33,7 +39,7 @@ $NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
  
  ifeq ($(shell uname),FreeBSD)
    CFLAGS += -I/usr/local/include -L/usr/local/lib
-@@ -90,18 +84,22 @@ build/debug/mujs: main.c build/debug/lib
+@@ -90,18 +80,22 @@ build/debug/mujs: main.c build/debug/lib
  build/debug/mujs-pp: pp.c build/debug/libmujs.o
  	$(CC) $(CFLAGS) -g -o $@ $^ -lm
  
@@ -66,7 +72,7 @@ $NetBSD: patch-Makefile,v 1.5 2023/09/10 09:36:38 nia Exp $
  
  build/release/mujs.pc:
  	@mkdir -p $(@D)
-@@ -119,14 +117,14 @@ install-common: build/release/mujs build
+@@ -119,14 +113,14 @@ install-common: build/release/mujs build
  	install -d $(DESTDIR)$(bindir)
  	install -m 644 mujs.h $(DESTDIR)$(incdir)
  	install -m 644 build/release/mujs.pc $(DESTDIR)$(libdir)/pkgconfig
