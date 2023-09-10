@@ -1,11 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.2 2022/12/21 10:10:37 nia Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.3 2023/09/10 14:42:28 nia Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
 
---- browser/app/profile/firefox.js.orig	2022-11-07 21:06:43.000000000 +0000
+--- browser/app/profile/firefox.js.orig	2023-08-22 15:44:32.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -2049,7 +2049,11 @@ pref("reader.pocket.ctaVersion", "");
+@@ -2050,7 +2050,11 @@ pref("reader.pocket.ctaVersion", "");
  
  pref("view_source.tab", true);
  
@@ -18,7 +18,7 @@ each one.
  
  // Enable Push API.
  pref("dom.push.enabled", true);
-@@ -2225,6 +2229,20 @@ pref("fission.frontend.simulate-messages
+@@ -2226,6 +2230,20 @@ pref("fission.frontend.simulate-messages
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
