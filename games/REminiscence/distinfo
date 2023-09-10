@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:43:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/09/10 09:54:43 yhardy Exp $
 
-BLAKE2s (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = 633b156f73576de3a3054a46b69abe8e71339a2e55971cafd4d268f805a0a76d
-SHA512 (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = b30b34ef21e68c1cb2b87998ad33bad84e6bd919e91ff954cbe220797f2028f3d0ff581d5549c7a8c0c0d06ecfbeee572cdc9101fbc220de705ff274f8ba3576
-Size (REminiscence-0.4.9/REminiscence-0.4.9.tar.bz2) = 159531 bytes
-BLAKE2s (REminiscence-0.4.9/stb_vorbis.c) = 53181653cd536f0eae2e2605cbcbbb935c0e217c621a342cf53529501572dd48
-SHA512 (REminiscence-0.4.9/stb_vorbis.c) = 860d87b37bfc9624544d62e72e3c28075db18a24e81d7cadf622b726bd9b94e5f3485afe0d8ac223a976a2d65cd5ee527a3c4831aae9947168a25cf19bf78c88
-Size (REminiscence-0.4.9/stb_vorbis.c) = 192790 bytes
+BLAKE2s (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 45259683a0c68df785f7944d3e331b0fa29858572c58167f37e47e9b73c546ac
+SHA512 (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 2fbc72a6b3f476cb4b854019117bcce6f502ee9234c57b007d8e69fa3b9d84f9591558fe8b4fbc6eefdc2a579ae80f289cf9e853b46cc722850bdcac7e142e05
+Size (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 167717 bytes
+BLAKE2s (REminiscence-0.5.1/stb_vorbis.c) = 53181653cd536f0eae2e2605cbcbbb935c0e217c621a342cf53529501572dd48
+SHA512 (REminiscence-0.5.1/stb_vorbis.c) = 860d87b37bfc9624544d62e72e3c28075db18a24e81d7cadf622b726bd9b94e5f3485afe0d8ac223a976a2d65cd5ee527a3c4831aae9947168a25cf19bf78c88
+Size (REminiscence-0.5.1/stb_vorbis.c) = 192790 bytes
