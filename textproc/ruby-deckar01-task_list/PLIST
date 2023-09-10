@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/29 12:49:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/10 13:56:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.gitlab-ci.yml
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/app/assets/javascripts/task_list.coffee
 ${GEM_LIBDIR}/app/assets/stylesheets/task_list.scss
 ${GEM_LIBDIR}/bower.json
+${GEM_LIBDIR}/build.mjs
 ${GEM_LIBDIR}/config.ru
 ${GEM_LIBDIR}/dist/.gitignore
 ${GEM_LIBDIR}/dist/.npmignore
@@ -17,6 +18,7 @@ ${GEM_LIBDIR}/lib/task_list/filter.rb
 ${GEM_LIBDIR}/lib/task_list/railtie.rb
 ${GEM_LIBDIR}/lib/task_list/summary.rb
 ${GEM_LIBDIR}/lib/task_list/version.rb
+${GEM_LIBDIR}/package-lock.json
 ${GEM_LIBDIR}/package.json
 ${GEM_LIBDIR}/script/bootstrap
 ${GEM_LIBDIR}/script/cibuild
@@ -27,8 +29,7 @@ ${GEM_LIBDIR}/test/task_list/filter_test.rb
 ${GEM_LIBDIR}/test/task_list/summary_test.rb
 ${GEM_LIBDIR}/test/task_list_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/unit/config.js
 ${GEM_LIBDIR}/test/unit/test_events.coffee
 ${GEM_LIBDIR}/test/unit/test_updates.coffee
-${GEM_LIBDIR}/webpack.config.js
+${GEM_LIBDIR}/web-test-runner.config.mjs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
