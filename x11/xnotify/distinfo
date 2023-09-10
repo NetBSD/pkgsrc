@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/09/10 11:37:28 vins Exp $
 
-BLAKE2s (xnotify-0.8.1.tar.gz) = cf8674d741b1c163ec915967d45530a7d8dbd51405e0cd8e84e4b8ddf7487c0f
-SHA512 (xnotify-0.8.1.tar.gz) = 74fbd81e674313d688e4e288bb4e7a0bf095caed6db467e0b5cf0b3ea96fd1edc4336bad1c83bd80fa6c550385eb95ffd6011f2151649472d02d17f27ff60147
-Size (xnotify-0.8.1.tar.gz) = 15189 bytes
+BLAKE2s (xnotify-0.9.3.tar.gz) = db49a68d8798c7071ef6f30e8fb217083d75a4e972769b865007fe8f30790971
+SHA512 (xnotify-0.9.3.tar.gz) = 0d441d2ded313c1072ec614457769c33c1ea7f90906ea519242b2e9cddf2c23b465291782d82c4f2b4b602e443e0f0db097cd34043c675e79d3a7bd8575c66e5
+Size (xnotify-0.9.3.tar.gz) = 16864 bytes
+SHA1 (patch-Makefile) = bff8413741a2855fa0e40ca4a9aaca0303ed751e
