@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/06/29 15:42:07 taca Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/10 08:54:09 nia Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--enable-shared --enable-install-static-library
 MAKE_ENV+=		XDG_DATA_HOME=${WRKDIR}
 WRKSRC=			${RUBY_WRKSRC}
 FILES_SUBST+=		PKGMANDIR=${PKGMANDIR:Q}
+
+# Needs _Thread_local support in gcc.
+USE_CC_FEATURES+=	c11
 
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
