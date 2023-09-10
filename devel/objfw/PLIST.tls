@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.tls,v 1.1 2023/09/10 15:56:43 js Exp $
+include/ObjFWTLS/ObjFWTLS.h
+lib/libobjfwtls.so
+lib/libobjfwtls.so.1
+lib/libobjfwtls.so.1.0.0
