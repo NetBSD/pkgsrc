@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5458 2023/09/10 14:43:02 nia Exp $
+$NetBSD: CHANGES-2023,v 1.5459 2023/09/10 16:07:47 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7931,3 +7931,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-rails70 to 7.0.8 [taca 2023-09-10]
 	Updated www/firefox102-l10n to 102.15.0 [nia 2023-09-10]
 	Updated www/firefox102 to 102.15.0 [nia 2023-09-10]
+	Updated devel/objfw to 1.0.1 [js 2023-09-10]
