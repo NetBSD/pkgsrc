@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/08/18 13:08:40 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2023/09/11 13:28:30 ryoon Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -10,9 +10,8 @@
 # contained 18.0.2, then during April to June it is ok to update to
 # later 18.x.y, to 19.0.0, and to later 19.x.y, but it is not ok to
 # update to 20.
-DISTNAME=	nextcloud-26.0.4
+DISTNAME=	nextcloud-27.0.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,16 +21,18 @@ HOMEPAGE=	https://nextcloud.com/
 COMMENT=	File sharing web service server
 LICENSE=	gnu-agpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.4.0:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-posix>=5.4.0:../../devel/php-posix
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=5.4.0:../../security/php-sodium
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=8.0.0:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.0.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.0.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.0.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=8.0.0:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-posix>=8.0.0:../../devel/php-posix
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.0.0:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.0.0:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=8.0.0:../../security/php-sodium
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=8.0.0:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=8.0.0:../../devel/php-sysvsem
 
 .include "options.mk"
 
