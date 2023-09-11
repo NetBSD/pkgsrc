@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5465 2023/09/11 08:02:27 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5466 2023/09/11 09:30:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7938,3 +7938,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/objfw to 1.0.2 [js 2023-09-11]
 	Updated devel/libinotify to 0.0.20211018 [ffaubert 2023-09-11]
 	Updated devel/flip-link to 0.1.7 [pin 2023-09-11]
+	Updated textproc/py-black to 23.9.1 [adam 2023-09-11]
+	Updated devel/py-typeguard to 4.1.4 [adam 2023-09-11]
