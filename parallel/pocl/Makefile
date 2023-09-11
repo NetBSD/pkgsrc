@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2023/07/18 18:39:06 nia Exp $
+# $NetBSD: Makefile,v 1.13 2023/09/11 14:29:33 nia Exp $
 
-DISTNAME=	pocl-1.8
-PKGREVISION=	4
+DISTNAME=	pocl-4.0
 CATEGORIES=	parallel
-MASTER_SITES=	http://portablecl.org/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://portablecl.org/
 COMMENT=	Portable implementation of the OpenCL standard
 LICENSE=	mit
-
-BROKEN=		"version 1.8 does not support llvm 14, please update this to 3.0"
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
