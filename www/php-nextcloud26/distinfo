@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/09/11 13:15:34 ryoon Exp $
+
+BLAKE2s (nextcloud-26.0.5.tar.bz2) = 5a05e7ccac513089de9b9f727b8c4abd4480ab5996ebdd646ecebb4216ff0c51
+SHA512 (nextcloud-26.0.5.tar.bz2) = 834766360073eebdb1f0371d7c07827ad5ce30afa5329efb144289dbee3fe83812fb852e9e147803fb7f7ac91d4b7d985f15505fe67f444b1cc8e8b640b7da89
+Size (nextcloud-26.0.5.tar.bz2) = 155878651 bytes
