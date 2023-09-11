@@ -1,0 +1,20 @@
+ How to get started with gnuserv
+---------------------------------------------
+
+In order to start the server automatically, place the following lines
+in your .emacs:
+   
+   (load "gnuserv-compat")
+   (gnuserv-start)
+
+--
+
+The gnuserv package also distributes a script named "dtemacs" which
+will run check for an already running instance of emacs, and start one
+if non is found.
+
+--
+
+More information about gnuserv can be found at:
+
+     http://www.emacswiki.org/cgi-bin/wiki/GnuClient
