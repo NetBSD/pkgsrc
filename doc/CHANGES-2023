@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5463 2023/09/11 00:30:50 js Exp $
+$NetBSD: CHANGES-2023,v 1.5464 2023/09/11 07:52:59 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7936,3 +7936,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hexyl to 0.13.1nb1 [pin 2023-09-10]
 	Updated pkgtools/pkglint to 23.2.4 [rillig 2023-09-10]
 	Updated devel/objfw to 1.0.2 [js 2023-09-11]
+	Updated devel/libinotify to 0.0.20211018 [ffaubert 2023-09-11]
