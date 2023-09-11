@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST.tlsframework,v 1.2 2023/09/10 16:07:36 js Exp $
+@comment $NetBSD: PLIST.tlsframework,v 1.3 2023/09/11 00:30:33 js Exp $
 Library/Frameworks/ObjFWTLS.framework/Headers
-Library/Frameworks/ObjFWTLS.framework/Info.plist
 Library/Frameworks/ObjFWTLS.framework/ObjFWTLS
+Library/Frameworks/ObjFWTLS.framework/Resources
 Library/Frameworks/ObjFWTLS.framework/Versions/1/Headers/ObjFWTLS.h
 Library/Frameworks/ObjFWTLS.framework/Versions/1/ObjFWTLS
+Library/Frameworks/ObjFWTLS.framework/Versions/1/Resources/Info.plist
 Library/Frameworks/ObjFWTLS.framework/Versions/Current
