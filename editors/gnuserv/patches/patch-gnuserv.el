@@ -1,9 +1,11 @@
-$NetBSD: patch-gnuserv.el,v 1.1 2023/09/09 22:58:51 mef Exp $
+$NetBSD: patch-gnuserv.el,v 1.2 2023/09/11 21:18:49 vins Exp $
 
-For emacs28, (define-obsolete-variable-alias) needs when argument
+* For emacs28, (define-obsolete-variable-alias) needs when argument
+* Function process-kill-without-query is obsolete since 22.1
+  and no longer exists in 27.
 
---- gnuserv.el.orig	2004-10-19 17:50:01.000000000 +0900
-+++ gnuserv.el	2023-09-10 07:50:00.863815888 +0900
+--- gnuserv.el.orig	2004-10-19 08:50:01.000000000 +0000
++++ gnuserv.el
 @@ -103,25 +103,25 @@ Set this to nil if you don't want a mode
  ;; new forms.  This ugly crock must be before the variable
  ;; declaration, or the scheme fails.
@@ -40,3 +42,12 @@ For emacs28, (define-obsolete-variable-alias) needs when argument
  
  ;;;###autoload
  (defcustom gnuserv-frame nil
+@@ -738,7 +738,7 @@ All the clients will be disposed of via 
+ 	    (start-process "gnuserv" nil gnuserv-program)))
+     (set-process-sentinel gnuserv-process 'gnuserv-sentinel)
+     (set-process-filter gnuserv-process 'gnuserv-process-filter)
+-    (process-kill-without-query gnuserv-process)
++    (set-process-query-on-exit-flag gnuserv-process nil)
+     (setq allow-deletion-of-last-visible-frame t)
+     (run-hooks 'gnuserv-init-hook)))
+ 

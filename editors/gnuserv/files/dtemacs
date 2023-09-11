@@ -1,0 +1,33 @@
+#!/bin/sh
+ 
+# $Id: dtemacs,v 1.1 2023/09/11 21:18:49 vins Exp $
+
+# Try to contact Emacs with gnuclient, starting Emacs if no answer.
+# Pass all options to gnuclient.  This version is standalone and doesn't
+# need any fancy elisp.
+
+GNUCLIENT=gnuclient
+GNUCLIENTPINGOPTIONS="-batch -eval t"
+EMACS=emacs
+TIMEOUT=20
+
+# If Emacs doesn't seem to be running then make it so.
+if ${GNUCLIENT} ${GNUCLIENTPINGOPTIONS} >/dev/null 2>&1 ; then
+    :
+else
+    ${EMACS} -iconic -eval "(setq gnuserv-kill-quietly t)" -f gnuserv-start 2>&1 >/dev/null &
+fi
+ 
+# Try for TIMEOUT seconds to talk to the Emacs process.
+ 
+count=0
+until ${GNUCLIENT} ${GNUCLIENTPINGOPTIONS} >/dev/null 2>&1 ; do
+    if [ ${count} -gt ${TIMEOUT} ] ; then
+        echo "dtemacs: error starting Emacs" 1>&2
+        exit 1
+    fi
+    sleep 1
+    count=`expr ${count} + 1`
+done
+ 
+exec ${GNUCLIENT} ${1+"$@"}

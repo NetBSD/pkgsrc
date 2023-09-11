@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.9 2023/09/09 22:58:51 mef Exp $
+$NetBSD: distinfo,v 1.10 2023/09/11 21:18:49 vins Exp $
 
-BLAKE2s (gnuserv-3.12.7.tar.gz) = e3651b82781a0fee741570e6d20a7e2dcf833323affb99ee58b5c9f18f1c245b
-SHA512 (gnuserv-3.12.7.tar.gz) = 3d5f64358a6c0d9d05eabf5aeb345400f8fcc53bc91ffde6ab17c6cffbe58aaa463111d426e7fda4e1757e0e25a10b9dd9e935d5d7a4829cb6bea0d700032c51
-Size (gnuserv-3.12.7.tar.gz) = 93709 bytes
-SHA1 (patch-aa) = f10c267b84290265df2a757454b0548bf8383889
+BLAKE2s (gnuserv-3.12.8.tar.gz) = f62316989bf819d02651bbbaa4b4ca34e68644d13d5577fa45841ee044c1b29b
+SHA512 (gnuserv-3.12.8.tar.gz) = e8f387a554c22fb2eb166d388085b9d68a0d865ae56ab71f3ffe09ff46bef04a4ba5b05ca51a1110e1dff67ae2cd6acc8b18a0fb9df9299dbbf4a001f0924f31
+Size (gnuserv-3.12.8.tar.gz) = 124070 bytes
+SHA1 (patch-aa) = c7dcbc654199c20d2c63f5bcf05754028d2dc8f4
 SHA1 (patch-ab) = 05df71e2531d13f801a0d0ab2a9acb8faa2742ea
 SHA1 (patch-gnuserv-compat.el) = da60d701fccf4556b9e58478310ec0bb42eb54a5
-SHA1 (patch-gnuserv.el) = 3bbc27f14c20ea9e25e775154de465c1473b0094
+SHA1 (patch-gnuserv.1) = 3dfb5c2399dfa9bfc34d3620d50feb7c64795e69
+SHA1 (patch-gnuserv.el) = 7b2b93ef28c7aa421d988bd87ba50f4ded87495d
+SHA1 (patch-sysfile.h) = c52db231b302f5bcd9e183dbdd0853b927dab2d8
