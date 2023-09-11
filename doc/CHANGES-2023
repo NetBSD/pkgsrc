@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5478 2023/09/11 16:29:47 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5479 2023/09/11 20:06:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7952,3 +7952,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated parallel/pocl to 4.0 [nia 2023-09-11]
 	Updated sysutils/eza to 0.11.1 [pin 2023-09-11]
 	Updated editors/tp-note to 1.21.16 [pin 2023-09-11]
+	Updated www/p5-Mojolicious to 9.34 [schmonz 2023-09-11]
