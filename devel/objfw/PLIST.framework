@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.4 2023/09/11 00:30:33 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.5 2023/09/11 00:46:53 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -219,4 +219,5 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/platform/x86/OFAtomic.h
 Library/Frameworks/ObjFW.framework/Versions/1/Modules/module.modulemap
 Library/Frameworks/ObjFW.framework/Versions/1/ObjFW
 Library/Frameworks/ObjFW.framework/Versions/1/Resources/Info.plist
+Library/Frameworks/ObjFW.framework/Versions/1/_CodeSignature/CodeResources
 Library/Frameworks/ObjFW.framework/Versions/Current
