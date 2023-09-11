@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/11/20 20:05:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/09/11 14:29:33 nia Exp $
 
-BLAKE2s (pocl-1.8.tar.gz) = 98983933cf43c9010352ecc48a539bc068bc5d1fd6a2a0f37b2973d384a1e3e0
-SHA512 (pocl-1.8.tar.gz) = bcbb3fa3d2234d4c5b0c17863eba0bc4c8f13f863cc58cfd1de49e21fa7bf0aec82b81aec143c81885e3a39274c8ae783b2f03b9a12846e024204d6ed0e59a9d
-Size (pocl-1.8.tar.gz) = 1614545 bytes
-SHA1 (patch-lib_CL_devices_devices.c) = 59824f5f30083651cff47340be0895148836aee3
+BLAKE2s (pocl-4.0.tar.gz) = 22d5266690023cf30a24f66b8c4bed621d6c2043dd0911bd9ebfc6b9093bfd3a
+SHA512 (pocl-4.0.tar.gz) = 3835a9e8fc8562d50a91a11b807cf87a096891f5c27675127b66412eacff2e541b6143b49b4155f43a09f4e53faa062ec20f3b20badeca206ece9f45ad50f26a
+Size (pocl-4.0.tar.gz) = 2140919 bytes
