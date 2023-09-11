@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/08/24 20:51:45 vins Exp $
+# $NetBSD: Makefile,v 1.12 2023/09/11 11:32:43 vins Exp $
 
 DISTNAME=	toot-0.38.1
 CATEGORIES=	chat net
@@ -14,6 +14,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-tomlkit-[0-9]*:../../textproc/py-tomlkit
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
