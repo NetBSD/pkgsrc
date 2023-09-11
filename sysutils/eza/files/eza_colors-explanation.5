@@ -7,8 +7,6 @@ eza_colors-explanation — more details on customizing eza colors
 .SH Eza Color Explanation
 .PP
 eza provides its own built-in set of file extension mappings that cover a large range of common file extensions, including documents, archives, media, and temporary files.
-
-.PP
 Any mappings in the environment variables will override this default set: running eza with \fB\fCLS_COLORS="*.zip=32"\fR will turn zip files green but leave the colours of other compressed files alone.
 
 .PP
@@ -34,6 +32,12 @@ Markdown files a shade of green, log files a shade of grey:
 .RE
 
 .SH BUILT-IN EXTENSIONS
+.RS
+.IP \(bu 2
+eza now supports bright colours! As supported by most modern 256-colour terminals, you can now choose from \fB\fCbright\fR colour codes when selecting your custom colours in your \fB\fC#EXA_COLORS\fR environment variable.
+
+.RE
+
 .PP
 "Immediate" files are the files you should look at when downloading and building a project for the first time: READMEs, Makefiles, Cargo.toml, and others.
 They are highlighted in \fIyellow\fP and \fIunderlined\fP\&.
