@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2023/09/09 14:07:53 taca Exp $
+# $NetBSD: Makefile,v 1.90 2023/09/11 13:00:57 nia Exp $
 
-DISTNAME=	bulk-medium-20230909
+DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -112,8 +112,8 @@ DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
 DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-DEPENDS+=	xenkernel413-[0-9]*:../../sysutils/xenkernel413
-DEPENDS+=	xentools413-[0-9]*:../../sysutils/xentools413
+DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
+DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
