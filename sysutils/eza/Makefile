@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/09/09 20:16:41 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/11 12:26:10 fox Exp $
 
 DISTNAME=	eza-0.11.0
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eza-community/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+SUPERSEDES=	exa-[0-9]*
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/eza-community/eza/
@@ -15,9 +16,14 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	bin \
+			${PKGMANDIR}/man1 \
+			${PKGMANDIR}/man5 \
+			share/bash-completion/completions \
+			share/fish/vendor_completions.d \
+			share/zsh/site-functions
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 post-build:
@@ -29,6 +35,12 @@ post-install:
 	${INSTALL_MAN} ${WRKDIR}/eza.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKDIR}/eza_colors-explanation.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKDIR}/eza_colors.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/completions/bash/eza \
+			${DESTDIR}${PREFIX}/share/bash-completion/completions
+	${INSTALL_DATA} ${WRKSRC}/completions/fish/eza.fish \
+			${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
+	${INSTALL_DATA} ${WRKSRC}/completions/zsh/_eza \
+			${DESTDIR}${PREFIX}/share/zsh/site-functions
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
