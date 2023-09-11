@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2023/07/14 12:36:12 hauke Exp $
+$NetBSD: distinfo,v 1.7 2023/09/11 13:48:19 ryoon Exp $
 
-BLAKE2s (pycharm-community-2022.1.4.tar.gz) = 65cea0cfb503e0aadc92112460856961ca03b4091085e9d34d5424f50e09d653
-SHA512 (pycharm-community-2022.1.4.tar.gz) = 715b17638cf816738b9f5c8ee0c416929e46b60ba2eca0bb4cebffb7879816bb0786e7ab740eb460c6640dce774d1d48823632ed38df431912df9d05458d0e5e
-Size (pycharm-community-2022.1.4.tar.gz) = 540366810 bytes
-SHA1 (patch-bin_pycharm.sh) = 94a54d4f4c9de9fba6a655061616c20c68653212
-SHA1 (patch-bin_pycharm64.vmoptions) = ea200bdb8c97f27538eb638357b136e11cbdc85f
+BLAKE2s (pycharm-community-2023.2.1.tar.gz) = 0175604414e72cb8c2c47e7d08355cdce6f48b778b4711a41249bf12f62835f5
+SHA512 (pycharm-community-2023.2.1.tar.gz) = 243dcba743fd2e379692da977217e4914d922cb334db317ec5ecff3bde65e6816e1e57d1c810a9030844d15d24a99f99882547269c39aaa261456e49c543e63c
+Size (pycharm-community-2023.2.1.tar.gz) = 588203470 bytes
+SHA1 (patch-bin_pycharm.sh) = e618f9f8a94b0b95a8b23506673c0c6542881246
+SHA1 (patch-bin_pycharm64.vmoptions) = 501c0bb4c095f70e6446ce7b1042728ceccda185
