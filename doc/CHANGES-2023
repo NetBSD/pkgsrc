@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5468 2023/09/11 12:35:52 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5469 2023/09/11 12:37:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7942,3 +7942,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typeguard to 4.1.4 [adam 2023-09-11]
 	Removed Removed sysutils/exa successor sysutils/eza [fox 2023-09-11]
 	Added www/firefox115 version 115.2.0 [ryoon 2023-09-11]
+	Added www/firefox115-l10n version 115.2.0 [ryoon 2023-09-11]
