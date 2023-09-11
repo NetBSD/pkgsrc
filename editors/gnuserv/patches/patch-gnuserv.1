@@ -1,0 +1,88 @@
+$NetBSD: patch-gnuserv.1,v 1.1 2023/09/11 21:18:49 vins Exp $
+
+gnuserv targets GNU Emacs not XEmacs.
+
+--- gnuserv.1.orig	2002-09-13 12:18:01.000000000 +0000
++++ gnuserv.1
+@@ -1,7 +1,7 @@
+ .TH GNUSERV 1 "" "XEmacs Server"
+ .UC 4
+ .SH NAME
+-gnuserv, gnuclient \- Server and Clients for XEmacs
++gnuserv, gnuclient \- Server and Clients for Emacs and XEmacs
+ .SH SYNOPSIS
+ .B gnuclient
+ [-nw] [-display display] [-q] [-v] [-l library] [-batch] [-f function] [-eval form] 
+@@ -17,19 +17,19 @@ Removed as of gnuserv 3.x
+ .SH DESCRIPTION
+ 
+ .PP
+-\fIgnuclient\fP allows the user to request a running XEmacs process to
+-edit the named files or directories and/or evaluate lisp forms.
+-Depending on your environment, it can be an X frame or a TTY frame.
+-One typical use for this is with a dialup connection to a machine on
+-which an XEmacs process is currently running.
++\fIgnuclient\fP allows the user to request a running Emacs or XEmacs process to
++edit the named files or directories and/or evaluate lisp forms.  Depending on
++your environment, it can be an X frame or a TTY frame.  One typical use for
++this is with a dialup connection to a machine on which an Emacs or XEmacs
++process is currently running.
+ .PP
+ \fIgnudoit\fP is a shell script frontend to ``gnuclient -batch -eval form''.
+ Its use is deprecated. Try to get used to calling gnuclient directly.
+ .PP
+-\fIgnuserv\fP is the server program that is set running by XEmacs to
+-handle all incoming and outgoing requests. It is not usually invoked
+-directly, but is started from XEmacs by loading the \fIgnuserv\fP
+-package and evaluating the Lisp form (gnuserv-start).
++\fIgnuserv\fP is the server program that is set running by Emacs or XEmacs to
++handle all incoming and outgoing requests. It is not usually invoked directly,
++but is started from Emacs or XEmacs by loading the \fIgnuserv\fP package and
++evaluating the Lisp form (gnuserv-start).
+ .PP
+ \fIgnuattach\fP no longer exists. Its functionality has been replaced by
+ \fIgnuclient -nw\fP.
+@@ -51,7 +51,7 @@ environment variable is not set.
+ .TP 8
+ .BI \-display " display, " \--display " display" 
+ If this option is given or the `DISPLAY' environment variable is set
+-then gnuclient will tell XEmacs to edit files in a frame on the
++then gnuclient will tell Emacs to edit files in a frame on the
+ specified X device.
+ .TP 8
+ .BI \-q
+@@ -118,7 +118,7 @@ it will have to be specified via one of 
+ .TP 8
+ .BI \-r " pathname"
+ Used only with Internet-domain sockets, the pathname argument may be
+-needed to inform XEmacs how to reach the root directory of a remote
++needed to inform Emacs how to reach the root directory of a remote
+ machine.  \fIgnuclient\fP prepends this string to each path argument
+ given.  For example, if you were trying to edit a file on a client
+ machine called otter, whose root directory was accessible from the
+@@ -254,6 +254,11 @@ to "kali,"  the `xauth list' output shou
+ KALI.FTM.CS.CMU.EDU:999  MIT-MAGIC-COOKIE-1  1234
+ .RE
+ .PP
++To create the cookie, you can use a command like 
++.RS 4
++xauth add `hostname`:999 MIT-MAGIC-COOKIE-1 `head -c512 /dev/urandom|md5sum`
++.RE
++.PP
+ For more information on authorization files, take a look at the
+ xauth(1X11) man page, or invoke xauth interactively (without any
+ arguments) and type "help" at the prompt. Remember that case in the
+@@ -279,11 +284,11 @@ Default X device to put edit frame.
+ (unix domain sockets only)
+ .TP 8
+ .B ~/.emacs
+-XEmacs customization file, see xemacs(1).
++Emacs customization file, see emacs(1) and xemacs(1).
+ .SH SEE ALSO
+ .PP
+ .TP 8
+-xauth(1X11), Xsecurity(1X11), gnuserv.el
++dtemacs(1), xauth(1X11), Xsecurity(1X11), gnuserv.el
+ .SH BUGS
+ .PP 
+ NULs occurring in result strings don't get passed back to gnudoit properly.

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=gnuclient
+GenericName=gnuclient
+Comment=Client for the GNU Emacs Text Editor
+Exec=/usr/bin/gnuclient.emacs %F
+TryExec=gnuclient
+Terminal=false
+Type=Application
+Categories=Application;Utility;TextEditor;
+MimeType=text/plain
