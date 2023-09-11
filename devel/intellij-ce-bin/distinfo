@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/02/15 21:21:24 rillig Exp $
+$NetBSD: distinfo,v 1.6 2023/09/11 13:47:12 ryoon Exp $
 
-BLAKE2s (ideaIC-2021.3.2-no-jbr.tar.gz) = 6de3af49fff000c6ba2de1ec0da8af7b6dc03f0bd478c69ac5b688a65f161134
-SHA512 (ideaIC-2021.3.2-no-jbr.tar.gz) = 77f0816ca94b03b60ea414d4d645ba2f7bafe632f2add47eab28ff578718b173fb18cfdac6004741f921b4c2cee16c2dc0a6e4861320a38319ceb223c0d846d9
-Size (ideaIC-2021.3.2-no-jbr.tar.gz) = 636932173 bytes
-SHA1 (patch-bin_idea.sh) = 060bfc1bfe100b4ade56e8c68ccc725fa98e7e04
+BLAKE2s (ideaIC-2023.2.1.tar.gz) = 3f8a7cf2ba8407609a265f526da0ca2567a3fb502f2dfab58457d336d4045dae
+SHA512 (ideaIC-2023.2.1.tar.gz) = 20d442a4368b772336038b75194f0d5fbba7bc34cfaa5bb3bb5b69fe804ff6d677cd5d980b778220172b137dee6297e697b554a8833d040a1bd556de2f9da7f6
+Size (ideaIC-2023.2.1.tar.gz) = 973050563 bytes
+SHA1 (patch-bin_idea.sh) = 27a02b294fa6b0def96039c99d95bda1290844b8
