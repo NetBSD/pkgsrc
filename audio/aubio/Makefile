@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/08/14 05:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/09/11 13:04:34 nia Exp $
 
 DISTNAME=	aubio-0.4.9
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	https://aubio.org/pub/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,6 @@ COMMENT=	Extracting annotations from audio signals
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
-TOOL_DEPENDS+=	doxygen>=1.9.7:../../devel/doxygen
 
 USE_TOOLS+=	pkg-config
 
