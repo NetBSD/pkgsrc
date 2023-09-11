@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5480 2023/09/11 20:19:26 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5481 2023/09/11 21:19:57 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7954,3 +7954,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.21.16 [pin 2023-09-11]
 	Updated www/p5-Mojolicious to 9.34 [schmonz 2023-09-11]
 	Updated devel/asdf to 0.13.0 [schmonz 2023-09-11]
+	Updated editors/gnuserv to 3.12.8 [vins 2023-09-11]
