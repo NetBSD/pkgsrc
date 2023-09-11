@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2023/09/11 12:33:25 ryoon Exp $
+lib/firefox/libmozsandbox.so
