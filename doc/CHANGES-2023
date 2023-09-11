@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5475 2023/09/11 14:01:46 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.5476 2023/09/11 14:29:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7949,3 +7949,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/pycharm-bin to 2023.2.1 [ryoon 2023-09-11]
 	Updated sysutils/intellij-fsnotifier to 0.0.20190228nb2 [ryoon 2023-09-11]
 	Added sysutils/runas version 0.1.1 [bacon 2023-09-11]
+	Updated parallel/pocl to 4.0 [nia 2023-09-11]
