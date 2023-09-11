@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5469 2023/09/11 12:37:41 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5470 2023/09/11 13:16:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7943,3 +7943,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed Removed sysutils/exa successor sysutils/eza [fox 2023-09-11]
 	Added www/firefox115 version 115.2.0 [ryoon 2023-09-11]
 	Added www/firefox115-l10n version 115.2.0 [ryoon 2023-09-11]
+	Added www/php-nextcloud26 version 26.0.5 [ryoon 2023-09-11]
