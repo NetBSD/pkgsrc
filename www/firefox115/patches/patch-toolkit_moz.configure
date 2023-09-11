@@ -1,0 +1,14 @@
+$NetBSD: patch-toolkit_moz.configure,v 1.1 2023/09/11 12:33:25 ryoon Exp $
+
+* Enable ALSA for NetBSD too.
+
+--- toolkit/moz.configure.orig	2023-03-02 21:15:57.000000000 +0000
++++ toolkit/moz.configure
+@@ -243,6 +243,7 @@ def imply_alsa(values, target):
+         any("alsa" in value for value in values)
+         and target.kernel != "Linux"
+         and target.os != "FreeBSD"
++        and target.os != "NetBSD"
+     ):
+         die("Cannot enable ALSA on %s", target.os)
+     return any("alsa" in value for value in values) or None
