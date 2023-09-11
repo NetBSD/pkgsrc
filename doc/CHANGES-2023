@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5462 2023/09/10 20:13:05 rillig Exp $
+$NetBSD: CHANGES-2023,v 1.5463 2023/09/11 00:30:50 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7935,3 +7935,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gpg-tui to 0.10.0 [pin 2023-09-10]
 	Updated sysutils/hexyl to 0.13.1nb1 [pin 2023-09-10]
 	Updated pkgtools/pkglint to 23.2.4 [rillig 2023-09-10]
+	Updated devel/objfw to 1.0.2 [js 2023-09-11]
