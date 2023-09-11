@@ -1,0 +1,15 @@
+$NetBSD: patch-third__party_sqlite3_src_moz.build,v 1.1 2023/09/11 12:33:25 ryoon Exp $
+
+* Fix segfault under NetBSD/i386 9 and pkgsrc/lang/gcc8-8.5.0
+  For NetBSD/i386 9, @SQLITE3OPTFLAG@ will be replaced with "'-O0',".
+
+--- third_party/sqlite3/src/moz.build.orig	2023-06-22 21:19:22.000000000 +0000
++++ third_party/sqlite3/src/moz.build
+@@ -108,6 +108,7 @@ if CONFIG['CC_TYPE'] in ('clang', 'gcc')
+     CFLAGS += [
+         '-Wno-sign-compare',
+         '-Wno-type-limits',
++        @SQLITE3OPTFLAG@
+     ]
+ 
+ # Set a default journal size limit. Note an hot journal can grow over this
