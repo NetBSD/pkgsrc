@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST.bridge,v 1.5 2023/09/10 16:07:36 js Exp $
+@comment $NetBSD: PLIST.bridge,v 1.6 2023/09/11 00:46:53 js Exp $
 Library/Frameworks/ObjFWBridge.framework/Headers
-Library/Frameworks/ObjFWBridge.framework/Info.plist
 Library/Frameworks/ObjFWBridge.framework/Modules
 Library/Frameworks/ObjFWBridge.framework/ObjFWBridge
+Library/Frameworks/ObjFWBridge.framework/Resources
 Library/Frameworks/ObjFWBridge.framework/Versions/1/Headers/NSArray+OFObject.h
 Library/Frameworks/ObjFWBridge.framework/Versions/1/Headers/NSBridging.h
 Library/Frameworks/ObjFWBridge.framework/Versions/1/Headers/NSDictionary+OFObject.h
@@ -21,6 +21,8 @@ Library/Frameworks/ObjFWBridge.framework/Versions/1/Headers/OFString+NSObject.h
 Library/Frameworks/ObjFWBridge.framework/Versions/1/Headers/ObjFWBridge.h
 Library/Frameworks/ObjFWBridge.framework/Versions/1/Modules/module.modulemap
 Library/Frameworks/ObjFWBridge.framework/Versions/1/ObjFWBridge
+Library/Frameworks/ObjFWBridge.framework/Versions/1/Resources/Info.plist
+Library/Frameworks/ObjFWBridge.framework/Versions/1/_CodeSignature/CodeResources
 Library/Frameworks/ObjFWBridge.framework/Versions/Current
 include/ObjFWBridge/NSArray+OFObject.h
 include/ObjFWBridge/NSBridging.h
