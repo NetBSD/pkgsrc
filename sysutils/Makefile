@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1069 2023/09/09 17:28:27 wiz Exp $
+# $NetBSD: Makefile,v 1.1070 2023/09/11 12:20:22 fox Exp $
 #
 
 COMMENT=	System utilities
@@ -219,7 +219,6 @@ SUBDIR+=	etckeeper
 SUBDIR+=	etcmanage
 SUBDIR+=	etcutils
 SUBDIR+=	eventlog
-SUBDIR+=	exa
 SUBDIR+=	extipl
 SUBDIR+=	eza
 SUBDIR+=	f3
