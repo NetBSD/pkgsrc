@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5471 2023/09/11 13:29:06 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5472 2023/09/11 13:47:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7945,3 +7945,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/firefox115-l10n version 115.2.0 [ryoon 2023-09-11]
 	Added www/php-nextcloud26 version 26.0.5 [ryoon 2023-09-11]
 	Updated www/php-nextcloud to 27.0.2 [ryoon 2023-09-11]
+	Updated devel/intellij-ce-bin to 2023.2.1 [ryoon 2023-09-11]
