@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/07 11:38:11 fox Exp $
-bin/exa
-man/man1/exa.1
-man/man5/exa_colors.5
-share/bash-completion/completions/exa
-share/fish/vendor_completions.d/exa.fish
-share/zsh/site-functions/_exa
