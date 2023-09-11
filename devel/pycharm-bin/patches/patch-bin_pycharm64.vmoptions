@@ -1,14 +1,14 @@
-$NetBSD: patch-bin_pycharm64.vmoptions,v 1.2 2023/07/14 12:36:13 hauke Exp $
+$NetBSD: patch-bin_pycharm64.vmoptions,v 1.3 2023/09/11 13:48:19 ryoon Exp $
 
 Add JVM options for a typical NetBSD setup.
 
---- bin/pycharm64.vmoptions.orig	2022-07-20 20:50:22.000000000 +0000
+--- bin/pycharm64.vmoptions.orig	2023-08-16 22:17:10.710608919 +0000
 +++ bin/pycharm64.vmoptions
 @@ -1,5 +1,7 @@
- -Xms128m
- -Xmx750m
+ -Xms256m
+ -Xmx1500m
 +-XX:-UseCompressedClassPointers
 +-XX:-UseCompressedOops
  -XX:ReservedCodeCacheSize=512m
- -XX:+IgnoreUnrecognizedVMOptions
  -XX:+UseG1GC
+ -XX:SoftRefLRUPolicyMSPerMB=50
