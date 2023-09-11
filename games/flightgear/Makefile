@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.156 2023/08/09 08:49:32 nia Exp $
+# $NetBSD: Makefile,v 1.157 2023/09/11 12:51:48 nia Exp $
 
 DISTNAME=	flightgear-2020.3.11
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,15 +22,14 @@ CMAKE_ARG_PATH=		..
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DFG_BUILD_TYPE=Release
 
-CMAKE_ARGS+=		-DFLITE_INCLUDE_DIR=${BUILDLINK_DIR}/include/flite
+CMAKE_ARGS+=		-DSYSTEM_FLITE=OFF
+CMAKE_ARGS+=		-DSYSTEM_HTS_ENGINE=OFF
 
 # The cmake script warns against building in the source directory.
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} fgbuild
 
-.include "../../audio/flite/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
-.include "../../audio/hts_engine/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
