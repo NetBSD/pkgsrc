@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/08 05:46:34 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/11 21:18:49 vins Exp $
+bin/dtemacs
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/gnuserv
+man/man1/dtemacs.1
 man/man1/gnuattach.1
 man/man1/gnuclient.1
 man/man1/gnudoit.1
 man/man1/gnuserv.1
+share/applications/gnuserv.desktop
+share/doc/gnuserv/README
+share/doc/gnuserv/README.pkgsrc
 ${EMACS_LISPPREFIX}/devices.el
 ${EMACS_LISPPREFIX}/devices.elc
 ${EMACS_LISPPREFIX}/gnuserv-compat.el

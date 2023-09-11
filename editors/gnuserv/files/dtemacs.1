@@ -1,0 +1,24 @@
+.TH dtemacs 1
+.SH NAME
+dtemacs \- contact Emacs with gnuclient, starting Emacs if no answer.
+.SH SYNOPSIS
+.B dtemacs
+.SH DESCRIPTION
+.I dtemacs
+tries to contact Emacs with gnuclient, starting Emacs if no answer.
+Pass all options to gnuclient.  This version is standalone and doesn't
+need any fancy elisp.
+.SH "BUGS"
+
+.I dtemacs
+will not work (or behave unpredicably) if your .emacs startup file
+calls the function gnuserv-start.
+
+.SH "SEE ALSO"
+.IR emacs (1),
+.IR gnuserv (1).
+.SH "AUTHOR" 
+.PP 
+This manual page was written by Benjamin Drieu <benj@@debian.org> for
+the \fBDebian\fP system (but may be used by others).  It is placed
+under public domain.
