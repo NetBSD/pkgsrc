@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5487 2023/09/12 19:18:22 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5488 2023/09/12 19:28:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7959,3 +7959,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/din to 57 [fox 2023-09-12]
 	Updated audio/fasttracker2 to 1.69 [fox 2023-09-12]
 	Updated lang/nawk to 20230911 [vins 2023-09-12]
+	Updated databases/sqlite3 to 3.43.1 [adam 2023-09-12]
+	Updated databases/sqlite3-docs to 3.43.1 [adam 2023-09-12]
+	Updated databases/sqlite3-tcl to 3.43.1 [adam 2023-09-12]
+	Updated devel/lemon to 1.0.3.43.1 [adam 2023-09-12]
