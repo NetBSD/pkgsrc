@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2023/09/09 20:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2023/09/12 08:07:40 jperkin Exp $
 
 DISTNAME=	librsvg-2.56.3
 CATEGORIES=	graphics gnome
@@ -25,6 +25,8 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo-gobject}/lib
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
