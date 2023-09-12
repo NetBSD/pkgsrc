@@ -1,2 +1,6 @@
 Terminal widget with improved font, internationalization and
-accessibility support for the GNOME 3 desktop.
+accessibility support for GTK3 applications.
+
+Note this is a now EOL version that has been retained for
+compatibility with lxterminal only. vte3 is the current
+version of this software.
