@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5485 2023/09/12 07:55:41 fox Exp $
+$NetBSD: CHANGES-2023,v 1.5486 2023/09/12 08:02:01 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7957,3 +7957,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/gnuserv to 3.12.8 [vins 2023-09-11]
 	Updated devel/cbindgen to 0.25.0 [pin 2023-09-12]
 	Updated audio/din to 57 [fox 2023-09-12]
+	Updated audio/fasttracker2 to 1.69 [fox 2023-09-12]
