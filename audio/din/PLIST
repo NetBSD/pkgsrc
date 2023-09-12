@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/05/07 07:26:41 fox Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/09/12 07:55:11 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -12,6 +12,7 @@ share/din/factory/attack.crv
 share/din/factory/attack.ed
 share/din/factory/attack.lib
 share/din/factory/audio_prefs
+share/din/factory/bd.ins
 share/din/factory/binaural-drone.help.tcl
 share/din/factory/binaural-drones-waveform.crv
 share/din/factory/binaural-drones-waveform.ed
@@ -370,6 +371,7 @@ share/din/factory/inner.crv
 share/din/factory/inner_space.crv
 share/din/factory/jag.fnt
 share/din/factory/just-intonation.tuning
+share/din/factory/kbkb.ins
 share/din/factory/key.help.tcl
 share/din/factory/keyboard-keyboard-waveform.crv
 share/din/factory/keyboard-keyboard-waveform.ed
@@ -388,6 +390,7 @@ share/din/factory/microtonal-keyboard-waveform.crv
 share/din/factory/microtonal-keyboard-waveform.ed
 share/din/factory/midimap.help.tcl
 share/din/factory/midimap.patch.tcl
+share/din/factory/mkb.ins
 share/din/factory/modulation.ed
 share/din/factory/modv.crv
 share/din/factory/modv.ed
