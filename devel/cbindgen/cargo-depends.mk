@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/06/01 07:55:08 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/09/12 03:05:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
@@ -20,7 +20,7 @@ CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	os_str_bytes-6.5.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.11.2
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.8.6
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.58
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.66
 CARGO_CRATE_DEPENDS+=	quote-1.0.27
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.16
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
