@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2023/07/05 20:33:42 he Exp $
+$NetBSD: distinfo,v 1.30 2023/09/12 03:05:19 pin Exp $
 
 BLAKE2s (atty-0.2.14.crate) = 8a58145c7b668aa6caf8d749e37857ff202211e1bfa9e441f130ff02feb68405
 SHA512 (atty-0.2.14.crate) = d7b6c4b9a0f898d91ddbc41a5ee45bbf45d1d269508c8cc87ee3e3990500e41e0ec387afb1f3bc7db55bedac396dd86c6509f4bf9e5148d809c3802edcc5e1d9
@@ -9,9 +9,9 @@ Size (autocfg-1.1.0.crate) = 13272 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
-BLAKE2s (cbindgen-0.24.6.tar.gz) = 22363dbe06542cc02f76bace1f38965739b50f2b1f02f684f806c21b21b50c2d
-SHA512 (cbindgen-0.24.6.tar.gz) = aaf79697d721afe93ce8ea6ba563a9679e1e2a77506e82db8a34df77fe6df6510d4f6742cf09840d3442466a379a1354e274513dd0c1e2c9cb71cd74fec1b268
-Size (cbindgen-0.24.6.tar.gz) = 213729 bytes
+BLAKE2s (cbindgen-0.25.0.tar.gz) = f4c84846f44dc68425d0f5366cac765be914e7755ab1e4f8a0216be97e63ee38
+SHA512 (cbindgen-0.25.0.tar.gz) = b5148dfe392dc9b0b44afa8a8ac522fee596176084e1186fd46806d8f6b87f3cfce2402bd2a0a060b2cc088788d80a6225f3eead930ab3600c4087e26391a023
+Size (cbindgen-0.25.0.tar.gz) = 214117 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
@@ -63,9 +63,9 @@ Size (parking_lot-0.11.2.crate) = 39869 bytes
 BLAKE2s (parking_lot_core-0.8.6.crate) = 06c376bf4708a4d5454f015f26138c9956c72ace00af138e1f1fb7cbd48c5bba
 SHA512 (parking_lot_core-0.8.6.crate) = 906241f8e2d71784d572fb78978c9550b19af9c4e32fe3b2da751287806d0faeba61f5bd36f7aab026970b2bffaaa1f62ddc10c64dc348eae61bf7b51297ef80
 Size (parking_lot_core-0.8.6.crate) = 32567 bytes
-BLAKE2s (proc-macro2-1.0.58.crate) = bc3ff3d07bc59b64093050495ccb2fc98c22c6dfb1631493527706832422bd5d
-SHA512 (proc-macro2-1.0.58.crate) = 5c1505b847944098d85c30b8d0fc7f059526170d51adff39493e9701fc8479829d4ca4a7f728c35d11478b9dbd718e521da0699af3b70aba8a3a3df2c60881ad
-Size (proc-macro2-1.0.58.crate) = 44519 bytes
+BLAKE2s (proc-macro2-1.0.66.crate) = 89c02b08f9a6b151209c95690301a2b872494c9de9c80f18e43780468117a1dc
+SHA512 (proc-macro2-1.0.66.crate) = 85f5a762f9411142e5ac28144bd380f07f0633ed2e44d8a2545be9fb8f42abaca6b5d45631b4be83b8e8b9beca7438bc52f25615c3a410a3a1249474b1aca407
+Size (proc-macro2-1.0.66.crate) = 43575 bytes
 BLAKE2s (quote-1.0.27.crate) = ce2163ea7998a75c751342055e096020085506f1500c6689676bdb895ff0d3e3
 SHA512 (quote-1.0.27.crate) = 5fb5802aa667c60d1a721766081b01bfd6cd929db7a5d71cb74627c2325f7108740752e514db73fb3612c163840e60ef2d4bde31c41978f3d77605418bdf2b4a
 Size (quote-1.0.27.crate) = 28416 bytes
