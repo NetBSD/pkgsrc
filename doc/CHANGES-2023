@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5482 2023/09/12 01:23:51 fox Exp $
+$NetBSD: CHANGES-2023,v 1.5483 2023/09/12 03:05:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7956,3 +7956,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/asdf to 0.13.0 [schmonz 2023-09-11]
 	Updated editors/gnuserv to 3.12.8 [vins 2023-09-11]
 	Updated sysutils/eza to 0.11.1 [fox 2023-09-12]
+	Updated devel/cbindgen to 0.25.0 [pin 2023-09-12]
