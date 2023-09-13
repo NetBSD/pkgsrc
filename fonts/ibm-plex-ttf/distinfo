@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/12/16 15:46:08 nikita Exp $
+$NetBSD: distinfo,v 1.8 2023/09/13 12:06:04 nikita Exp $
 
-BLAKE2s (ibm-plex-ttf-6.0.0/TrueType.zip) = 3df49242fb27857a00cbe91d5f02a6ee3470fbc12f91d926b9931e66f913d98e
-SHA512 (ibm-plex-ttf-6.0.0/TrueType.zip) = fc091e11ce30a3cd872b546b3b93dc5279d5bebc1e4f2e13b5aa29cc48f0e3787d768ea10f08b54a2d984c021ef815d1c3c68819eb3601882f81cc1bcc7d6fe4
-Size (ibm-plex-ttf-6.0.0/TrueType.zip) = 46866762 bytes
+BLAKE2s (ibm-plex-ttf-6.3.0/TrueType.zip) = e0ba454c1b29437d6ac77f751b0192a71f2eba60172b251194095206baf025f9
+SHA512 (ibm-plex-ttf-6.3.0/TrueType.zip) = 47d90443b1ec2994c16e26efad7141c395db4edaafc70b132bddfacdc0ed90b22a1769f87631161fa030e3e378ec946c3b179942d7338af113c8a3b06dc800cc
+Size (ibm-plex-ttf-6.3.0/TrueType.zip) = 47309206 bytes
