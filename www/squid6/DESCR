@@ -1,0 +1,16 @@
+Squid is a fully-featured HTTP/1.0 proxy with partial HTTP/1.1 support
+The 6 series brings many new features and upgrades to the basic
+networking protocols. A short list of the major new features is:
+
+Squid 6 represents a new feature release, the most important of these
+new features are:
+
+* TLS ServerHello
+* Log TLS Communication Secrets
+* Ban ACL key changes in ACLs
+* Block to-local Traffic
+* RFC 9211: HTTP Cache-Status support
+* RFC 9111: Stop treating Warning specially
+* ext_kerberos_ldap_group_acl: Support -b with -D
+* Remove Gopher Protocol Support
+* Removed Outdated Tools
