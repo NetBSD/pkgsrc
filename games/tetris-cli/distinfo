@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/06/07 16:25:28 pin Exp $
+$NetBSD: distinfo,v 1.3 2023/09/13 20:36:10 pin Exp $
 
 BLAKE2s (big_num-0.1.0.crate) = 30bec4dd190ccfa4c71df9c2d9f10875a92a2fbc0b67b998d48c009a167274fe
 SHA512 (big_num-0.1.0.crate) = 19199292fe11ead6238b0d70c650f55b8caa7f33efd9ef1ab48b34de2c2eb645d93da17542a68bd4f5c4059ed622675816d4de65ebb8f99ecf5a042a30747228
@@ -93,9 +93,9 @@ Size (syn-1.0.91.crate) = 235996 bytes
 BLAKE2s (termion-1.5.6.crate) = b6d92242706c4be97dcded5161758bc66939a05349c99c250006e940f3c4f626
 SHA512 (termion-1.5.6.crate) = 228b6fa7e2f280d6bfc7cef77e7a1d0d8f597178e66af0bde1b1fb6553857b511ba8a6786165815aac6d8a082fd37191f4ea35a47f1e1182f7f2c6086eb34a8c
 Size (termion-1.5.6.crate) = 22677 bytes
-BLAKE2s (tetris-cli-22.67.2.tar.gz) = e654ac523473428a90c8e42a86bea01d85d6d84820c59cdec38552c77bf615a6
-SHA512 (tetris-cli-22.67.2.tar.gz) = fca40eabbe518c659535ee08d6334520c8f9352ca363bfa59012a5fa92f7de0a8b6e50fdfbf23348e3b2d8f5776955de02414593d9d7dcb78721d9a69740a277
-Size (tetris-cli-22.67.2.tar.gz) = 23935 bytes
+BLAKE2s (tetris-cli-23.96.1.tar.gz) = d17de1eb24da738ddc11902a4eef154ded61d53d6274e642e8c7d8a0b7b9b5e6
+SHA512 (tetris-cli-23.96.1.tar.gz) = db095938a164eeec1423fcca504a5b73a6dba325a64efa6ee2c4dfa627db407d2382dd26bcef28c6d49a0f1f8be68f9f58351f7a9b96f481a493696d2236ce2d
+Size (tetris-cli-23.96.1.tar.gz) = 24149 bytes
 BLAKE2s (thiserror-1.0.30.crate) = 52d184c1b1a81282219400464415f7569ccf54615ea265db94d1860110a4715e
 SHA512 (thiserror-1.0.30.crate) = 0e6cbc160ee1b6236a9073dec225a4290e7a82632ee7cec00bf02797b04851adb2d3071fa268b54f7fa9fe22eeada55a83d44fbddf824520023608eda8ea2e99
 Size (thiserror-1.0.30.crate) = 17748 bytes
