@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5493 2023/09/13 08:15:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5494 2023/09/13 09:58:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7970,3 +7970,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hexyl to 0.13.1nb2 [pin 2023-09-13]
 	Updated www/curl to 8.3.0 [adam 2023-09-13]
 	Updated www/libcurl-gnutls to 8.3.0 [adam 2023-09-13]
+	Updated lang/nodejs to 20.6.1 [adam 2023-09-13]
+	Updated www/py-django3 to 3.2.21 [adam 2023-09-13]
