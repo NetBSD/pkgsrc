@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5492 2023/09/13 08:11:03 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5493 2023/09/13 08:15:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7968,3 +7968,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/squid6 version 6.3 [taca 2023-09-13]
 	Updated shells/oh-my-posh to 18.9.0 [pin 2023-09-13]
 	Updated sysutils/hexyl to 0.13.1nb2 [pin 2023-09-13]
+	Updated www/curl to 8.3.0 [adam 2023-09-13]
+	Updated www/libcurl-gnutls to 8.3.0 [adam 2023-09-13]
