@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5489 2023/09/13 07:26:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5490 2023/09/13 07:37:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7965,3 +7965,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/lemon to 1.0.3.43.1 [adam 2023-09-12]
 	Updated www/py-httpcore to 0.18.0 [adam 2023-09-13]
 	Updated www/py-httpx to 0.25.0 [adam 2023-09-13]
+	Added www/squid6 version 6.3 [taca 2023-09-13]
