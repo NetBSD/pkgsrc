@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.159 2023/08/17 10:20:39 nia Exp $
+# $NetBSD: Makefile,v 1.160 2023/09/13 11:13:42 gdt Exp $
 
+# Please do not update to 4.6.0 before the branch; it withdraws a lot!
 VERSION_BASE=	4.5.1
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc3
