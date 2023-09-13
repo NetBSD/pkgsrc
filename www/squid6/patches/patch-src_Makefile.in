@@ -1,0 +1,23 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2023/09/13 07:36:45 taca Exp $
+
+Don't install squid.conf.
+
+--- src/Makefile.in.orig	2018-07-02 03:32:02.000000000 +0000
++++ src/Makefile.in
+@@ -7535,14 +7535,14 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-dataDATA install-man
++install-data-am: install-dataDATA install-man
+ 
+ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
+ 
+ install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
+-	install-sbinPROGRAMS install-sysconfDATA
++	install-sbinPROGRAMS
+ 
+ install-html: install-html-recursive
+ 
