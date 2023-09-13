@@ -1,12 +1,12 @@
-$NetBSD: patch-platform_battery_battery__windows__nix.go,v 1.1 2023/04/11 15:22:10 schmonz Exp $
+$NetBSD: patch-platform_battery_battery__windows__nix.go,v 1.2 2023/09/13 08:08:38 pin Exp $
 
 Compile on Solaris.
 
---- platform/battery/battery_windows_nix.go.orig	2023-04-09 17:14:17.000000000 +0000
+--- platform/battery/battery_windows_nix.go.orig	2023-09-12 18:50:00.000000000 +0000
 +++ platform/battery/battery_windows_nix.go
 @@ -1,4 +1,4 @@
--//go:build !darwin && !netbsd
-+//go:build !darwin && !netbsd && !solaris
+-//go:build !darwin && !netbsd && !openbsd
++//go:build !darwin && !netbsd && !openbsd && !solaris
  
  package battery
  
