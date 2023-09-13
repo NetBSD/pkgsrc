@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.271 2023/09/06 19:28:20 adam Exp $
+# $NetBSD: Makefile,v 1.272 2023/09/13 09:55:45 adam Exp $
 
-DISTNAME=	node-v20.6.0
+DISTNAME=	node-v20.6.1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
