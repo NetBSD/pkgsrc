@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2023/09/03 23:43:27 taca Exp $
+# $NetBSD: Makefile,v 1.62 2023/09/13 21:44:13 dholland Exp $
 
 DISTNAME=	bulk-large-20230903
 CATEGORIES=	meta-pkgs
@@ -27,6 +27,16 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # Please discuss additions/removals on tech-pkg to avoid unnecessary
 # churn.
 #
+
+#
+# 0. By design bulk-large is supposed to be a superset of both
+# bulk-medium and bulk-small. Depend on them rather than duplicating
+# their listings. (Note that while bulk-medium is also supposed to be a
+# superset of bulk-small, depend on both to avoid needing to think
+# about that in detail.)
+#
+DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
+DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 #
 # 1. Packages used by a lot of other packages
@@ -140,10 +150,6 @@ DEPENDS+=	modular-xorg-[0-9]*:../../meta-pkgs/modular-xorg
 # intentionally chosen to bring in other things that we more or less
 # want in here.
 #
-
-# We are supposed to be a superset of bulk-medium and bulk-small.
-DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
-DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
