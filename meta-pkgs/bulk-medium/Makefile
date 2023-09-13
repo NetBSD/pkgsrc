@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2023/09/11 13:00:57 nia Exp $
+# $NetBSD: Makefile,v 1.91 2023/09/13 21:44:13 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -41,6 +41,12 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 #
 
 .include "../../mk/bsd.prefs.mk"
+
+#
+# 0. By design bulk-medium is supposed to be a superset of bulk-small.
+# Depend on it rather than duplicating its listings.
+#
+DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 #
 # 1. Applications
@@ -221,9 +227,6 @@ DEPENDS+=	${LUA_PKGPREFIX}-stdlib-[0-9]*:../../devel/lua-stdlib
 # remains roughly what we want, the exact list of depends doesn't
 # matter too much.
 #
-
-# We are supposed to be a superset of bulk-small.
-DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
