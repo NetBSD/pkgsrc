@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5494 2023/09/13 09:58:48 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5495 2023/09/13 12:06:20 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7972,3 +7972,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/libcurl-gnutls to 8.3.0 [adam 2023-09-13]
 	Updated lang/nodejs to 20.6.1 [adam 2023-09-13]
 	Updated www/py-django3 to 3.2.21 [adam 2023-09-13]
+	Updated fonts/ibm-plex-ttf to 6.3.0 [nikita 2023-09-13]
