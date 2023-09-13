@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23378 2023/09/13 07:38:23 taca Exp $
+$NetBSD: TODO,v 1.23379 2023/09/13 09:41:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ImageMagick-7.1.1.15
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-23.1.6
+	o MesaLib-23.1.7
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.0.0
@@ -428,7 +428,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o akonadi-16.08.1
 	o album-4.17
 	o alevt-1.6.2
-	o alsa-lib-1.2.9
+	o alsa-lib-1.2.10
 	o alsa-plugins-1.1.0
 	o amanda-3.5.2
 	o amavis-perl-0.3.12 [called just amavis]
@@ -750,7 +750,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.57.0
+	o grpc-1.58.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
@@ -831,6 +831,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.9.0 [needs rust 1.71]
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -926,6 +927,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lohit-fonts-2.4.2
 	o lq-sp-1.3.4.14
 	o lsh-2.1
+	o ltm-1.2.1
 	o lua-cov-0.15.0
 	o lua-keybinder-0.3.2
 	o lua-language-server-3.7.0
@@ -1001,6 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
+	o nodejs-20.6.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1148,7 +1151,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-23.08.0
+	o poppler-23.09.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgresql-pljava-1.6.4
@@ -1178,7 +1181,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-argparse-manpage-4.4
 	o py-barman-3.0.1
+	o py-brotli-1.1.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cyclonedx-python-lib-4.2.1
@@ -1190,8 +1195,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.97.0
-	o py-grpcio-1.57.0
+	o py-google-api-python-client-2.98.0
+	o py-grpcio-1.58.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
@@ -1199,6 +1204,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
+	o py-lsp-jsonrpc-1.1.1
+	o py-lsp-server-1.8.0
+	o py-mercurial-6.5.2
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1206,13 +1214,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
-	o py-protobuf-4.24.2
+	o py-protobuf-4.24.3
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
+	o py-pytz-2023.3.post1
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-readme_renderer-42.0
+	o py-rpds-py-0.10.2
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-68.2.0
 	o py-simpletal-5.1
 	o py-sphinx-7.2.5
 	o py-sphinx-autodoc-typehints-1.24.0
@@ -1226,10 +1238,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-tox-4.11.3
 	o py-twisted-23.8.0
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
+	o py-virtualenv-20.24.5
 	o py-yubiauth-0.3.10
+	o py-zopfli-0.2.3
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
@@ -1278,7 +1293,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvm-1.20
 	o sabayon-2.30.1
 	o sablecc-3.7
-	o samba4-4.18.6
+	o samba4-4.19.0
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.3.5
@@ -1336,6 +1351,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o squidclamav-7.2
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
+	o ssh-audit-3.0.0
 	o stalin-0.11
 	o stan-math-2.26.1
 	o statist-1.3.0
