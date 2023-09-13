@@ -1,10 +1,10 @@
-# $NetBSD: hacks.mk,v 1.4 2017/05/05 17:38:00 joerg Exp $
+# $NetBSD: hacks.mk,v 1.5 2023/09/13 20:07:53 triaxx Exp $
 
 ### [Wed Aug  3 12:18:16 UTC 2011 : tron]
 ### If "qmake" is build with "-O2" or better with "g++" under Mac OS X the
 ### resulting binary will crash. This fixes PR pkg/44716 by Richard Hansen.
 .if ${OPSYS} == "Darwin"
-.  if !empty(CC_VERSION:Mgcc*)
+.  if ${CC_VERSION:Mgcc*}
 PKG_HACKS+=		macosx-codegen
 BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O1
 .  endif
@@ -15,7 +15,7 @@ BUILDLINK_TRANSFORM+=	opt:-O[0-9]*:-O1
 ### when building gui/painting/qdrawhelper_mmx.cpp.
 ### Building with -O1 instead of -O2 seems to work around the problem.
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-.  if !empty(CC_VERSION:Mgcc-4.5.*)
+.  if ${CC_VERSION:Mgcc-4.5.*}
 PKG_HACKS+=		pr46978
 SUBST_CLASSES+=		pr46978
 SUBST_STAGE.pr46978=	post-configure
