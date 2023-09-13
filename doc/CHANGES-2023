@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5502 2023/09/13 19:39:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5503 2023/09/13 20:36:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7985,3 +7985,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-virtualenv to 20.24.5 [adam 2023-09-13]
 	Updated www/py-aiohttp-socks to 0.8.3 [adam 2023-09-13]
 	Updated archivers/py-brotli to 1.1.0 [adam 2023-09-13]
+	Updated games/tetris-cli to 23.96.1 [pin 2023-09-13]
