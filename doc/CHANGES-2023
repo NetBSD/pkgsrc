@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5488 2023/09/12 19:28:47 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5489 2023/09/13 07:26:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7963,3 +7963,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-docs to 3.43.1 [adam 2023-09-12]
 	Updated databases/sqlite3-tcl to 3.43.1 [adam 2023-09-12]
 	Updated devel/lemon to 1.0.3.43.1 [adam 2023-09-12]
+	Updated www/py-httpcore to 0.18.0 [adam 2023-09-13]
+	Updated www/py-httpx to 0.25.0 [adam 2023-09-13]
