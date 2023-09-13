@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/07/06 08:01:30 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/09/13 07:24:33 adam Exp $
 
-DISTNAME=	httpcore-0.17.3
+DISTNAME=	httpcore-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpcore/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/encode/httpcore
 COMMENT=	Minimal low-level HTTP client
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0:../../devel/py-anyio
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.13:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=3.0:../../www/py-h2
@@ -20,5 +22,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
