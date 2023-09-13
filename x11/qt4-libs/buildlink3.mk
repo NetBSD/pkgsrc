@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2023/01/29 21:15:14 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2023/09/13 20:07:53 triaxx Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -39,7 +39,7 @@ PTHREAD_OPTS+=	require
 
 pkgbase := qt4-libs
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.qt4-libs:Mgtk2)
+.if ${PKG_BUILD_OPTIONS.qt4-libs:Mgtk2}
 .  include "../../devel/glib2/buildlink3.mk"
 #.  include "../../x11/gtk2/buildlink3.mk"
 .endif

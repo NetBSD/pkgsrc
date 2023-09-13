@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2022/11/21 18:20:46 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.55 2023/09/13 20:07:53 triaxx Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -18,6 +18,8 @@ EXTRACT_USING=	bsdtar
 DISTINFO_FILE=	${.CURDIR}/../../x11/qt4-libs/distinfo
 FILESDIR=	${.CURDIR}/../../x11/qt4-libs/files
 PATCHDIR=	${.CURDIR}/../../x11/qt4-libs/patches
+
+NOT_FOR_PLATFORM=	Darwin-*-aarch64
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -72,7 +74,7 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 #
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
-.  if empty(MACHINE_PLATFORM:MDarwin-*-*)
+.  if !${MACHINE_PLATFORM:MDarwin-*-*}
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .  endif
 .elif !empty(PKGSRC_COMPILER:Mgcc)
@@ -144,7 +146,7 @@ SUBST_SED.lt+=		-e 's,$$$${first(QMAKE_EXT_OBJ)},.lo,'
 # and 3.0.5 for older toolchains. Removing inline for newer toolchains
 # produces smaller code. Removing inline for older toolchains prod-
 # uces buggy code.
-.if !empty(CC_VERSION:Mgcc-2.8*)
+.if ${CC_VERSION:Mgcc-2.8*}
 CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 .endif
 
