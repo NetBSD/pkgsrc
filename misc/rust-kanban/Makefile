@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1 2023/09/13 20:39:49 pin Exp $
+
+DISTNAME=	rust-kanban-0.8.0
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=yashs662/}
+GITHUB_PROJECT=	rust_kanban
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/yashs662/rust_kanban/
+COMMENT=	Kanban board for the terminal
+LICENSE=	mit
+
+.include "cargo-depends.mk"
+
+USE_TOOLS+=	pkg-config
+
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+
+.include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
