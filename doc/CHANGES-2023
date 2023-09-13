@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5496 2023/09/13 12:06:34 nikita Exp $
+$NetBSD: CHANGES-2023,v 1.5497 2023/09/13 15:42:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7974,3 +7974,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django3 to 3.2.21 [adam 2023-09-13]
 	Updated fonts/ibm-plex-ttf to 6.3.0 [nikita 2023-09-13]
 	Updated fonts/ibm-plex-otf to 6.3.0 [nikita 2023-09-13]
+	Updated devel/asdf to 0.13.1 [schmonz 2023-09-13]
