@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23377 2023/09/11 14:29:47 nia Exp $
+$NetBSD: TODO,v 1.23378 2023/09/13 07:38:23 taca Exp $
 
 Suggested new packages
 ======================
@@ -1333,7 +1333,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
-	o squid-6.1
 	o squidclamav-7.2
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
