@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2023/08/04 05:22:05 adam Exp $
+$NetBSD: distinfo,v 1.33 2023/09/13 09:58:30 adam Exp $
 
-BLAKE2s (Django-3.2.20.tar.gz) = a19b03c9d8b4a7ff7cb2af8618f6efb5cd6a1df0634dbd14bbd16d3757190de4
-SHA512 (Django-3.2.20.tar.gz) = 32555552e3929718c998ecb7ca2f39b94bbce378cd3c2b633d497fdf58e435fc7a0a89e22bdfdfcb8e5e6884d909103c0f4b545ee0c01fe58a0ba9dd6eed992b
-Size (Django-3.2.20.tar.gz) = 9831078 bytes
+BLAKE2s (Django-3.2.21.tar.gz) = b9fcdd3ee2f9bd00fab0f9de79e6117db0698bbd20ab1d2f18297d2e1d7406df
+SHA512 (Django-3.2.21.tar.gz) = 614d5e79c323f43d893ca235d81f1cb06287ead56aa5b7baf9930b9a99446d77ec111c65675a864cbf7cf2b9dfceaa0ffab389855da9d7a5c6e36067ab42e5dd
+Size (Django-3.2.21.tar.gz) = 9836824 bytes
