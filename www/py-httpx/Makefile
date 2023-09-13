@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/05/19 08:19:51 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/09/13 07:25:55 adam Exp $
 
-DISTNAME=	httpx-0.24.1
+DISTNAME=	httpx-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.15.0:../../www/py-httpcore
+DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.18.0:../../www/py-httpcore
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
 
