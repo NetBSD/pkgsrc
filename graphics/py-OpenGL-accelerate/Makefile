@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/01 23:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/13 17:18:24 adam Exp $
 
-DISTNAME=	PyOpenGL-accelerate-3.1.5
+DISTNAME=	PyOpenGL-accelerate-3.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
-PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL-accelerate/}
 
@@ -12,9 +11,11 @@ COMMENT=	Acceleration code for PyOpenGL
 # There are many similar licenses, see license.txt
 LICENSE=	modified-bsd AND mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-pre-build:
+zz-pre-build:
 	cd ${WRKSRC}/src && for i in *.pyx; do cython-${PYVERSSUFFIX} $$i; done
 
 .include "../../lang/python/egg.mk"
