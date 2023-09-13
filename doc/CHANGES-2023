@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5491 2023/09/13 08:09:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5492 2023/09/13 08:11:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7967,3 +7967,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-httpx to 0.25.0 [adam 2023-09-13]
 	Added www/squid6 version 6.3 [taca 2023-09-13]
 	Updated shells/oh-my-posh to 18.9.0 [pin 2023-09-13]
+	Updated sysutils/hexyl to 0.13.1nb2 [pin 2023-09-13]
