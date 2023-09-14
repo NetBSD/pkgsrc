@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5505 2023/09/14 00:39:27 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.5506 2023/09/14 04:05:35 snj Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7988,3 +7988,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/tetris-cli to 23.96.1 [pin 2023-09-13]
 	Added misc/rust-kanban version 0.8.0 [pin 2023-09-13]
 	Updated biology/ncbi-blast+ to 2.14.1 [bacon 2023-09-14]
+	Updated audio/flac123 to 2.1.1 [snj 2023-09-14]
