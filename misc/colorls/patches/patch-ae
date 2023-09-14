@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.5 2015/07/09 11:44:09 jperkin Exp $
+$NetBSD: patch-ae,v 1.6 2023/09/14 00:48:31 charlotte Exp $
 
-Use nbcompat.
+Use nbcompat, and fix mangled datetime formatting.
 
---- print.c.orig	1996-12-21 23:40:58.000000000 +0000
-+++ print.c
+--- print.c.orig	1996-12-21 15:40:58.000000000 -0800
++++ print.c	2023-09-13 17:30:15.209912546 -0700
 @@ -43,9 +43,15 @@ static char const sccsid[] = "@(#)print.
  #include <sys/param.h>
  #include <sys/stat.h>
@@ -67,7 +67,7 @@ Use nbcompat.
  		if (S_ISCHR(sp->st_mode) || S_ISBLK(sp->st_mode))
  			if (minor(sp->st_rdev) > 255)
  				(void)printf("%3d, 0x%08x ",
-@@ -114,20 +142,24 @@ printlong(dp)
+@@ -114,19 +142,23 @@ printlong(dp)
  				(void)printf("%3d, %3d ",
  				    major(sp->st_rdev), minor(sp->st_rdev));
  		else if (dp->bcfile)
@@ -89,21 +89,16 @@ Use nbcompat.
  		(void)printf("%s", p->fts_name);
  		if (f_type)
  			(void)printtype(sp->st_mode);
--		if (S_ISLNK(sp->st_mode))
 +		if (f_color)
 +			(void)printf("\033[m");
-+	if (S_ISLNK(sp->st_mode))
+ 		if (S_ISLNK(sp->st_mode))
  			printlink(p);
  		(void)putchar('\n');
- 	}
-@@ -190,10 +222,22 @@ printcol(dp)
+@@ -190,7 +222,19 @@ printcol(dp)
  			    dp->s_block);
  			if ((base += numrows) >= num)
  				break;
 -			while ((cnt = ((chcnt + TAB) & ~(TAB - 1))) <= endcol){
--				(void)putchar('\t');
--				chcnt = cnt;
--			}
 +
 +			/*
 +			 * some terminals get confused if we mix tabs
@@ -117,12 +112,9 @@ Use nbcompat.
 +			else
 +				while ((cnt = ((chcnt + TAB) & ~(TAB - 1)))
 +				       <= endcol) {
-+					(void)putchar('\t');
-+					chcnt = cnt;
-+				}
- 			endcol += colwidth;
- 		}
- 		(void)putchar('\n');
+ 				(void)putchar('\t');
+ 				chcnt = cnt;
+ 			}
 @@ -217,11 +261,15 @@ printaname(p, inodefield, sizefield)
  	if (f_inode)
  		chcnt += printf("%*lu ", (int)inodefield, (u_long)sp->st_ino);
@@ -140,6 +132,15 @@ Use nbcompat.
 +		printf("\033[m");
  	return (chcnt);
  }
+ 
+@@ -232,7 +280,7 @@ printtime(ftime)
+ 	int i;
+ 	char longstring[80];
+ 
+-	strftime(longstring, sizeof(longstring), "%c", localtime(&ftime));
++	snprintf(longstring, sizeof(longstring), "%s", ctime(&ftime));
+ 	for (i = 4; i < 11; ++i)
+ 		(void)putchar(longstring[i]);
  
 @@ -281,6 +329,96 @@ printtype(mode)
  	return (0);
