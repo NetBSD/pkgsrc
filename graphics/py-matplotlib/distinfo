@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.56 2023/07/23 14:43:02 bacon Exp $
+$NetBSD: distinfo,v 1.57 2023/09/14 12:40:09 adam Exp $
 
-BLAKE2s (matplotlib-3.7.2.tar.gz) = 64843ae84c2d9270682380569fef63795b56178e695e74b845c37ebd654bcd30
-SHA512 (matplotlib-3.7.2.tar.gz) = 3ddb223c869c01cf71ab65a628a3c996eed1ff8b2375c02e3158a5750652a5d8277a55706e50890c15c14c7a104db01f01b01ca8964f85b6ffec104fc273872d
-Size (matplotlib-3.7.2.tar.gz) = 38095843 bytes
-SHA1 (patch-environment.yml) = ee90f3806410c05d4396f8ab6e2ce2f07385f41e
-SHA1 (patch-lib_matplotlib.egg-info_requires.txt) = 444dc332ccba024b7320334cf237773ff0ab2a97
+BLAKE2s (matplotlib-3.7.3.tar.gz) = 5a457cea669045732f462ff294afa069bb9699783e935f74f365f05cd0c4911b
+SHA512 (matplotlib-3.7.3.tar.gz) = 034b81ef4811089e845855eb339155b18b1221ffd325ea73c83e83bb433374dfa4e650e29bbae5ad63a84090eb4b013d0f106ff37c30fd661b4d071004745caa
+Size (matplotlib-3.7.3.tar.gz) = 38097222 bytes
 SHA1 (patch-mplsetup.cfg) = 06bf93f112ab4ed4604179c1cc7fd2bdee62b56d
-SHA1 (patch-setup.py) = f8c1b72e7ac1acefb324b53bb60b2f7de4aae3e8
