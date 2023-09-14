@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/06/06 12:42:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/14 12:43:43 adam Exp $
 
-DISTNAME=	tldextract-3.4.4
+DISTNAME=	tldextract-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/john-kurkowski/tldextract
 COMMENT=	Accurately separate the TLD from the registered domain and subdomains
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.8:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
@@ -23,8 +24,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} tldextract tldextract-${PYVERSSUFFIX} || ${TRUE}
@@ -32,5 +31,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
