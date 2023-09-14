@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2018/12/29 08:54:01 triaxx Exp $
+# $NetBSD: Makefile,v 1.33 2023/09/14 00:48:31 charlotte Exp $
 
 DISTNAME=	ls
 PKGNAME=	colorls-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
