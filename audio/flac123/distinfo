@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:58:57 nia Exp $
+$NetBSD: distinfo,v 1.11 2023/09/14 04:04:52 snj Exp $
 
-BLAKE2s (flac123-0.0.12-release.tar.gz) = 8d1b2daaeae7f49419aa3a7e9061802b0dad098c18eccb13b0c9bb174dbc3cdc
-SHA512 (flac123-0.0.12-release.tar.gz) = 4bfabecae86cf11a13bd45025d7fbdee189918e0cd4eee0128856897710b44afd19df5675cae9426d30e9d8cd09b358333438cd05701fa0a7a00a8493a77e1f7
-Size (flac123-0.0.12-release.tar.gz) = 129795 bytes
+BLAKE2s (flac123-2.1.1.tar.gz) = 4e1878cda4e459540e6f2c21c6397dfb387064172a7708e1e804c54125c24c08
+SHA512 (flac123-2.1.1.tar.gz) = bdcf6ce573535b9282a87f17b9f0e8221303800444dbf430d980232fd0419680d83c74c7c3d8a4c1ce764f5a4752dca7483802d48a38bdb3ef50520e901cc2e5
+Size (flac123-2.1.1.tar.gz) = 132039 bytes
