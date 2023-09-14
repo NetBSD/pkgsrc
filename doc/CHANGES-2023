@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5507 2023/09/14 08:44:30 he Exp $
+$NetBSD: CHANGES-2023,v 1.5508 2023/09/14 09:13:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7990,3 +7990,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/ncbi-blast+ to 2.14.1 [bacon 2023-09-14]
 	Updated audio/flac123 to 2.1.1 [snj 2023-09-14]
 	Updated net/routinator to 0.12.2 [he 2023-09-14]
+	Updated net/py-botocore to 1.31.47 [adam 2023-09-14]
+	Updated net/py-s3transfer to 0.6.2 [adam 2023-09-14]
+	Updated net/py-boto3 to 1.28.47 [adam 2023-09-14]
+	Updated net/py-awscli to 1.29.47 [adam 2023-09-14]
