@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2023/08/01 23:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/09/14 12:40:09 adam Exp $
 
-DISTNAME=	matplotlib-3.7.2
+DISTNAME=	matplotlib-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
 
@@ -21,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.22.0:../../fonts/py-fonttools
 DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.1:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.3.1:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c c++
@@ -30,9 +29,6 @@ USE_TOOLS+=	pkg-config
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
-post-patch:
-	${RM} ${WRKSRC}/lib/matplotlib.egg-info/requires.txt.orig
 
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

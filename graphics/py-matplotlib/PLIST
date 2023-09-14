@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/03/05 07:18:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2023/09/14 12:40:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -658,6 +658,9 @@ ${PYSITELIB}/matplotlib/tests/test_artist.pyo
 ${PYSITELIB}/matplotlib/tests/test_axes.py
 ${PYSITELIB}/matplotlib/tests/test_axes.pyc
 ${PYSITELIB}/matplotlib/tests/test_axes.pyo
+${PYSITELIB}/matplotlib/tests/test_axis.py
+${PYSITELIB}/matplotlib/tests/test_axis.pyc
+${PYSITELIB}/matplotlib/tests/test_axis.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_bases.py
 ${PYSITELIB}/matplotlib/tests/test_backend_bases.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_bases.pyo
