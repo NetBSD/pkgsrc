@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5509 2023/09/14 09:31:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5510 2023/09/14 11:57:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7996,3 +7996,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-awscli to 1.29.47 [adam 2023-09-14]
 	Updated www/py-test-httpx to 0.25.0 [adam 2023-09-14]
 	Updated lang/py-findpython to 0.4.0 [adam 2023-09-14]
+	Updated devel/gitui to 0.24.3 [pin 2023-09-14]
