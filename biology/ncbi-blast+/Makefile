@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2023/08/14 05:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2023/09/14 00:39:17 bacon Exp $
 
-DISTNAME=	ncbi-blast-2.14.0+-src
+DISTNAME=	ncbi-blast-2.14.1+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -12,7 +11,7 @@ HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
 LICENSE=	public-domain
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
 
 # Nobody does bioinformatics on 32-bit processors anymore
 ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
@@ -42,6 +41,7 @@ MKPIE_SUPPORTED=	no	# Temporary fix
 # Resolve a conflict with libproj by moving libs to a subdir
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
+# pkglint warning, but build fails on NetBSD without it
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
 WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 
@@ -69,6 +69,7 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX} -name '\.git*' -exec rm -rf '{}' \;
 .if ${OPSYS} != Darwin
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
+	${RM} -rf ${WRKDIR}/.home
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"

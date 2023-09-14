@@ -1,15 +1,15 @@
-$NetBSD: patch-compilers_xcode30__prj_configure,v 1.1 2018/04/27 20:28:28 bacon Exp $
+$NetBSD: patch-compilers_xcode30__prj_configure,v 1.2 2023/09/14 00:39:17 bacon Exp $
 
 # Nonportable extension
 
---- compilers/xcode30_prj/configure.orig	2018-04-27 14:19:43.000000000 +0000
+--- compilers/xcode30_prj/configure.orig	2023-08-26 13:06:39.313163201 +0000
 +++ compilers/xcode30_prj/configure
-@@ -280,7 +280,7 @@ arch=`arch`
- platform=`xcodebuild -version 2>/dev/null | grep 'Xcode [0-9][0-9]*' | sed -e 's/[ .]//g'`
- 
+@@ -284,7 +284,7 @@ platform=`xcodebuild -version 2>/dev/nul
  # ------- target architecture
--if test "$use_64" == "yes"; then
-+if test "$use_64" = "yes"; then
-   use_arch="x86_64"
- else
-   use_arch="i386"
+ if test -n "$use_arch"; then
+   :
+-elif test "$use_64" == "yes"; then
++elif test "$use_64" = "yes"; then
+   case "`uname -m`" in
+     arm* ) use_arch=arm64  ;;
+     *86* ) use_arch=x86_64 ;;
