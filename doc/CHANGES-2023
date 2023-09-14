@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5511 2023/09/14 12:44:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5512 2023/09/14 19:29:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7999,3 +7999,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gitui to 0.24.3 [pin 2023-09-14]
 	Updated graphics/py-matplotlib to 3.7.3 [adam 2023-09-14]
 	Updated net/py-tldextract to 3.5.0 [adam 2023-09-14]
+	Updated devel/objfw to 1.0.3 [js 2023-09-14]
