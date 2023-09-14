@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5504 2023/09/13 20:41:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5505 2023/09/14 00:39:27 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -7987,3 +7987,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/py-brotli to 1.1.0 [adam 2023-09-13]
 	Updated games/tetris-cli to 23.96.1 [pin 2023-09-13]
 	Added misc/rust-kanban version 0.8.0 [pin 2023-09-13]
+	Updated biology/ncbi-blast+ to 2.14.1 [bacon 2023-09-14]
