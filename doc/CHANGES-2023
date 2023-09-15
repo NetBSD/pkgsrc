@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5515 2023/09/15 06:29:51 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5516 2023/09/15 06:33:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8003,3 +8003,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/eza to 0.12.0 [fox 2023-09-15]
 	Updated mail/himalaya to 0.9.0 [pin 2023-09-15]
 	Added devel/gitnr version 0.1.3 [pin 2023-09-15]
+	Added games/tetris-tui version 0.1.5 [pin 2023-09-15]
