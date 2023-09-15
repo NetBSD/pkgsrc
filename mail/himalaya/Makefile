@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/09/15 06:26:14 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/15 13:46:12 schmonz Exp $
 
 DISTNAME=	himalaya-0.9.0
 CATEGORIES=	mail
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=soywod/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pimalaya.org/himalaya/docs/index.html
+HOMEPAGE=	https://pimalaya.org/himalaya/
 COMMENT=	Command-line interface for email management
 LICENSE=	mit
 
