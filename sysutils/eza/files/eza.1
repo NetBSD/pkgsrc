@@ -212,7 +212,6 @@ List each file\[cq]s security context.
 .TP
 \f[V]--git\f[R] [if eza was built with git support]
 List each file\[cq]s Git status, if tracked.
-.PP
 This adds a two-character column indicating the staged and unstaged
 statuses respectively.
 The status character can be `\f[V]-\f[R]' for not modified,
@@ -220,10 +219,19 @@ The status character can be `\f[V]-\f[R]' for not modified,
 `\f[V]D\f[R]' for deleted, `\f[V]R\f[R]' for renamed, `\f[V]T\f[R]' for
 type-change, `\f[V]I\f[R]' for ignored, and `\f[V]U\f[R]' for
 conflicted.
-.PP
-Directories will be shown to have the status of their contents, which is
-how `deleted' is possible: if a directory contains a file that has a
+:Directories will be shown to have the status of their contents, which
+is how `deleted' is possible if a directory contains a file that has a
 certain status, it will be shown to have that status.
+.TP
+\f[V]--git-repos\f[R] [if eza was built with git support]
+List each directory\[cq]s Git status, if tracked.
+Symbols shown are \f[V]|\f[R]= clean, \f[V]+\f[R]= dirty, and
+\f[V]\[ti]\f[R]= for unknown.
+.TP
+\f[V]--git-repos-no-status\f[R] [if eza was built with git support]
+List if a directory is a Git repository, but not its status.
+All Git repository directories will be shown as (themed) \f[V]-\f[R]
+without status indicated.
 .TP
 \f[V]--no-git\f[R]
 Don\[cq]t show Git status (always overrides \f[V]--git\f[R],
