@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/03/08 23:45:10 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/15 06:26:14 pin Exp $
 
-DISTNAME=	himalaya-0.7.1
+DISTNAME=	himalaya-0.9.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soywod/}
-GITHUB_PROJECT=	himalaya
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
