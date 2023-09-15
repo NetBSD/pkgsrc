@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/08/14 18:32:03 nia Exp $
+# $NetBSD: Makefile,v 1.36 2023/09/15 23:22:40 dholland Exp $
 
 DISTNAME=	emacs-packages-0.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +17,9 @@ META_PACKAGE=	yes
 # XXX
 # Please update the version of this package (emacs-package) when you
 # add a new emacs lisp package below!
+.if ${EMACS_VERSION_MAJOR} > 21
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel-[0-9]*:../../devel/apel
+.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}artist-[0-9]*:../../graphics/artist
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}auctex-[0-9]*:../../print/auctex
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb2-[0-9]*:../../misc/bbdb2
@@ -84,11 +86,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}vm-[0-9]*:../../mail/vm
 .if ${EMACS_VERSION_MAJOR} < 22
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 .endif
-.if ${EMACS_VERSION_MAJOR} < 23
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl
-.else
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl-snapshot
-.endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenicb-[0-9]*:../../chat/zenicb
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenirc-[0-9]*:../../chat/zenirc
 
