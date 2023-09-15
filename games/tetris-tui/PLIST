@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/15 06:32:00 pin Exp $
+bin/tetris-tui
