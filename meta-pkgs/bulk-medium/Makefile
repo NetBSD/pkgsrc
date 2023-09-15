@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/09/13 21:44:13 dholland Exp $
+# $NetBSD: Makefile,v 1.92 2023/09/15 22:38:46 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -91,7 +91,6 @@ DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-DEPENDS+=	python310-[0-9]*:../../lang/python310
 DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
