@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/09/15 22:48:00 charlotte Exp $
 
 BLAKE2s (redeclipse_2.0.0_nix.tar.bz2) = ebba628502e6db7d0859fcaa5ec03bd185b10c071f75f1b03e922e86fae18b48
 SHA512 (redeclipse_2.0.0_nix.tar.bz2) = 179a8177ddafefb09de38629c7cc15e8843cd49ad3580093c9f4243dd0d2d2fe095e8df770c2a8f3996d4e273822d6bc955acca73f8191266adb95a34beaf6dd
 Size (redeclipse_2.0.0_nix.tar.bz2) = 948705751 bytes
+SHA1 (patch-src_system-install.mk) = 126d5f089e6d230597d97594621ec7e406987034
