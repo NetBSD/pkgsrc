@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/05/06 19:09:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/15 22:48:00 charlotte Exp $
 
 DISTNAME=	redeclipse_2.0.0_nix
 PKGNAME=	redeclipse-2.0.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redeclipse/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,8 @@ LICENSE=	zlib AND cc-by-sa-v3.0
 
 WRKSRC=		${WRKDIR}/redeclipse-${PKGVERSION_NOREV}
 
+TOOL_DEPENDS+=	ed>0:../../editors/ed
+
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c c++
@@ -25,6 +27,7 @@ INSTALL_TARGET=	system-install
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	ED=ged
 
 # GCC precompiled headers...
 RELRO_SUPPORTED=	no
