@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5513 2023/09/15 05:56:10 fox Exp $
+$NetBSD: CHANGES-2023,v 1.5514 2023/09/15 06:26:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8001,3 +8001,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-tldextract to 3.5.0 [adam 2023-09-14]
 	Updated devel/objfw to 1.0.3 [js 2023-09-14]
 	Updated sysutils/eza to 0.12.0 [fox 2023-09-15]
+	Updated mail/himalaya to 0.9.0 [pin 2023-09-15]
