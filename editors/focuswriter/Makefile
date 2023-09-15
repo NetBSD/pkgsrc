@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/09/13 20:37:23 pin Exp $
+# $NetBSD: Makefile,v 1.27 2023/09/15 16:45:01 nros Exp $
 
 DISTNAME=	focuswriter-1.8.5
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	Simple, distraction-free writing environment
 LICENSE=	gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}

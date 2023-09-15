@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/09/15 16:45:01 nros Exp $
+
+* Make iconv test work in NetBSD 9
+
+--- CMakeLists.txt.orig	2023-06-27 13:32:39.000000000 +0000
++++ CMakeLists.txt
+@@ -5,7 +5,7 @@
+ cmake_minimum_required(VERSION 3.16)
+ 
+ # Configure project
+-project(focuswriter VERSION 1.8.5 LANGUAGES CXX)
++project(focuswriter VERSION 1.8.5 LANGUAGES C CXX)
+ 
+ set(project_copyright "2008-2023 Graeme Gott")
+ 
