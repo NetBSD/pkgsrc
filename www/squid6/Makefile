@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/09/13 07:36:44 taca Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/15 07:40:05 sborrill Exp $
 
 DISTNAME=	squid-6.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v6/
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +11,12 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++11
+# GCC 7 fails even with c++17
+# src/ipc/TypedMsgHdr.h fails with
+# static_assert(std::is_trivially_copyable<Pod>::value, "getPod() used for a POD")
+USE_LANGUAGES=		c c++17
+GCC_REQD+=		8
+
 USE_TOOLS+=		perl:run gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configure in libltdl
