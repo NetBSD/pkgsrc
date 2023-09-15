@@ -1,10 +1,10 @@
-$NetBSD: patch-.._.._pkg_transport_listen__netbsd.go,v 1.2 2022/04/18 18:24:26 bsiegert Exp $
+$NetBSD: patch-.._.._pkg_transport_listen__netbsd.go,v 1.3 2023/09/15 17:56:09 tnn Exp $
 
 Port to NetBSD
 
---- /dev/null	2021-09-04 13:19:08.635043216 +0000
+--- pkg/transport/listen_netbsd.go.orig	2023-09-15 15:16:45.071862574 +0000
 +++ pkg/transport/listen_netbsd.go
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,55 @@
 +package transport
 +
 +import (
@@ -45,4 +45,18 @@ Port to NetBSD
 +	default:
 +		return nil, errors.New("unexpected scheme")
 +	}
++}
++
++func ListenUnixgram(endpoint string) (*net.UnixConn, error) {
++	parsed, err := url.Parse(endpoint)
++	if err != nil {
++		return nil, err
++	}
++	if parsed.Scheme != "unixgram" {
++		return nil, errors.New("unexpected scheme")
++	}
++	return net.ListenUnixgram("unixgram", &net.UnixAddr{
++		Name: parsed.Path,
++		Net:  "unixgram",
++	})
 +}
