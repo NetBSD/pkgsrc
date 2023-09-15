@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2023/08/12 17:08:16 pin Exp $
+# $NetBSD: Makefile,v 1.535 2023/09/15 06:32:43 pin Exp $
 #
 
 COMMENT=	Games
@@ -409,6 +409,7 @@ SUBDIR+=	teg
 SUBDIR+=	termatrix
 SUBDIR+=	tetrinetx
 SUBDIR+=	tetris-cli
+SUBDIR+=	tetris-tui
 SUBDIR+=	thew
 SUBDIR+=	tileworld
 SUBDIR+=	toppler
