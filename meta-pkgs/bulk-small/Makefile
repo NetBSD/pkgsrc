@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/09/15 22:21:37 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2023/09/15 22:38:46 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -94,7 +94,7 @@ DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 # numbers of other packages depend on.
 #
 DEPENDS+=	perl>=5:../../lang/perl5
-DEPENDS+=	python38-[0-9]*:../../lang/python38
+DEPENDS+=	python311-[0-9]*:../../lang/python311
 
 #
 # 3. Archivers and build tools.
