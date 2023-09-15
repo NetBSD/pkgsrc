@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4061 2023/09/06 18:53:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.4062 2023/09/15 06:29:21 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -405,6 +405,7 @@ SUBDIR+=	gflib
 SUBDIR+=	giblib
 SUBDIR+=	gindent
 SUBDIR+=	git
+SUBDIR+=	gitnr
 SUBDIR+=	git-base
 SUBDIR+=	git-branchless
 SUBDIR+=	git-cinnabar
