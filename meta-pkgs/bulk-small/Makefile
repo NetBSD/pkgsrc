@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/09/15 22:21:37 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -144,7 +144,7 @@ DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
 
 #
-# 5. Depends.
+# 5. Transitive depends.
 #
 # These additional packages are required by the ones above and are
 # listed here for completeness. They might not by themselves really
@@ -155,20 +155,25 @@ DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
 # out for native X11; it will of course work for pkgsrc X11 also but
 # take somewhat longer.
 #
-DEPENDS+=	lzo-[0-9]*:../../archivers/lzo		# required by gnutls
-DEPENDS+=	gmp-[0-9]*:../../devel/gmp		# required by nettle
-DEPENDS+=	libcfg+-[0-9]*:../../devel/libcfg+	# required by gnutls
-DEPENDS+=	libffi-[0-9]*:../../devel/libffi	# required by python
-DEPENDS+=	libidn-[0-9]*:../../devel/libidn	# required by curl
-DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
+TRANSITIVE+=	lzo-[0-9]*:../../archivers/lzo		# required by gnutls
+TRANSITIVE+=	gmp-[0-9]*:../../devel/gmp		# required by nettle
+TRANSITIVE+=	libcfg+-[0-9]*:../../devel/libcfg+	# required by gnutls
+TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi	# required by python
+TRANSITIVE+=	libidn-[0-9]*:../../devel/libidn	# required by curl
+TRANSITIVE+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 							# req'd by ghostscript
-DEPENDS+=	f2c-[0-9]*:../../lang/f2c		# req'd by libtool-base
-DEPENDS+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
-DEPENDS+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
-DEPENDS+=	libgpg-error-[0-9]*:../../security/libgpg-error
+TRANSITIVE+=	f2c-[0-9]*:../../lang/f2c		# req'd by libtool-base
+TRANSITIVE+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
+TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
+TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error
 							# required by libgcrypt
-DEPENDS+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
-DEPENDS+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
+TRANSITIVE+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
+TRANSITIVE+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
+
+# Provide a way to hide these when doing dependency analysis.
+.if !defined(SUPPRESS_TRANSITIVE)
+DEPENDS+=	${TRANSITIVE}
+.endif
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
