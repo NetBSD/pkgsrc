@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/07/23 17:02:03 tsutsui Exp $
+$NetBSD: distinfo,v 1.27 2023/09/15 12:49:01 bsiegert Exp $
 
-BLAKE2s (libwebp-1.3.1.tar.gz) = ac3af8f1cb489e84017754a88ee9aef472a91b5afdb54f27b0da30e5690d0e05
-SHA512 (libwebp-1.3.1.tar.gz) = f2c5e4fbbb5adf63d4a36bad88de23881c296da6f3ec73baded5e80fd55abef6cbeb90c271fd40766a76e170e5499c2983670d91e01064027ede22965d2b1d90
-Size (libwebp-1.3.1.tar.gz) = 4161782 bytes
+BLAKE2s (libwebp-1.3.2.tar.gz) = 74ae98e9b38a88769d3c37a80a7a39158f9fb7d36a51f51b1568b7b6d49b5a99
+SHA512 (libwebp-1.3.2.tar.gz) = 2b624d2ecfbff6b4db2719e38f146722638ae262acd96327073a04451dd05fb27ef70c5681187821d251df728a6be7e89209c861c561a13bfb786495a830bc20
+Size (libwebp-1.3.2.tar.gz) = 4162949 bytes
