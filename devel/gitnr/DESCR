@@ -1,0 +1,9 @@
+Cross-platform CLI utility to create .gitignore files using templates.
+
+ - Use templates from the GitHub & TopTal collections
+ - Use local files and remote URLs as templates
+ - Filter out duplicate ignore lines when using multiple templates
+ - Interactive mode to search and select templates
+
+There are 3 commands available:
+ - gitnr create, search and help
