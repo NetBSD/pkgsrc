@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:23:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/09/15 16:11:13 reinoud Exp $
 
-BLAKE2s (B-emv2.2Linux.tar.gz) = 1c30c7302c813fd3f240cb2269d89cbad839e1e3d3c78b21db17abe851211d91
-SHA512 (B-emv2.2Linux.tar.gz) = 44a9e63906e890ff6c3b9356218be42866d18f435a8772213f384b9dc8b8212bb05638ca4bfd64e07c07b126102bc13036749abb64faf136734acb20a15d96e0
-Size (B-emv2.2Linux.tar.gz) = 4855775 bytes
-SHA1 (patch-src-fdi2raw.c) = 98a00eb3059c92b0c2e8009275e5b4a7dfee9b0c
-SHA1 (patch-src-linux.c) = c0188ea8d3bb466dcbaf7a6929577f249e6ef0f1
-SHA1 (patch-src-makefile.in) = 2b3cb4d2b7d41dd534e625fcfb573e2108062ea7
-SHA1 (patch-src-resources.h) = f719dc8cb308b7d79f1cd381bf1d2ba0cf5b8a5f
-SHA1 (patch-src-win.c) = b3d6a6a7071ef25decc2c7874f120966ffc4be57
+BLAKE2s (b-em-2.2-464bb82239e31862e87b39b257d63086861b99e5.zip) = 162cfd95df8caf633f38915e227ce69909d4fbf8e97cca9d4acbac893c88429a
+SHA512 (b-em-2.2-464bb82239e31862e87b39b257d63086861b99e5.zip) = 358450f2447f8160db12f0792362fa4980d5cfed6255c0db932923689dd296cb96babd6c32ebe7925e98138658758a118981e7d3b61ca4c700df5629b8419b09
+Size (b-em-2.2-464bb82239e31862e87b39b257d63086861b99e5.zip) = 7449861 bytes
+SHA1 (patch-src-b-em.h) = a14fca14e4b04b4e926ff5bde82e62396ff96b5f
