@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5512 2023/09/14 19:29:58 js Exp $
+$NetBSD: CHANGES-2023,v 1.5513 2023/09/15 05:56:10 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8000,3 +8000,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-matplotlib to 3.7.3 [adam 2023-09-14]
 	Updated net/py-tldextract to 3.5.0 [adam 2023-09-14]
 	Updated devel/objfw to 1.0.3 [js 2023-09-14]
+	Updated sysutils/eza to 0.12.0 [fox 2023-09-15]
