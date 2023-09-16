@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/09/16 00:38:36 dholland Exp $
+# $NetBSD: Makefile,v 1.65 2023/09/16 00:40:11 dholland Exp $
 
 DISTNAME=	bulk-large-20230903
 CATEGORIES=	meta-pkgs
@@ -70,7 +70,7 @@ DEPENDS+=	mariadb-server>=10.5<10.6:../../databases/mariadb105-server
 DEPENDS+=	mariadb-server>=10.6<10.7:../../databases/mariadb106-server
 DEPENDS+=	postgresql13-[0-9]*:../../databases/postgresql13
 DEPENDS+=	abiword-[0-9]*:../../editors/abiword
-DEPENDS+=	emacs26>=26<27:../../editors/emacs26
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
@@ -112,7 +112,7 @@ DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5
 #
 DEPENDS+=	gd-[0-9]*:../../graphics/gd
 DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
-DEPENDS+=	emacs26>=26<27:../../editors/emacs26
+DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
