@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/09/16 01:14:40 dholland Exp $
+# $NetBSD: Makefile,v 1.95 2023/09/16 01:16:28 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -105,8 +105,7 @@ DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
 DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
 DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
-DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
-DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
+DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	mupdf-[0-9]*:../../print/mupdf
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
