@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/09/15 22:38:46 dholland Exp $
+# $NetBSD: Makefile,v 1.42 2023/09/16 00:35:22 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -76,7 +76,6 @@ DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 DEPENDS+=	enscript-[0-9]*:../../print/enscript
 DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
-DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 DEPENDS+=	sudo-[0-9]*:../../security/sudo
 DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 DEPENDS+=	bash-[0-9]*:../../shells/bash
@@ -131,7 +130,6 @@ DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 DEPENDS+=	gettext-lib-[0-9]*:../../devel/gettext-lib
 DEPENDS+=	readline-[0-9]*:../../devel/readline
 DEPENDS+=	zlib-[0-9]*:../../devel/zlib
-DEPENDS+=	gd-[0-9]*:../../graphics/gd
 DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_DEPMETHOD.${JPEG_DEFAULT}=	build

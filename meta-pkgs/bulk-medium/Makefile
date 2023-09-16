@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/09/15 22:38:46 dholland Exp $
+# $NetBSD: Makefile,v 1.93 2023/09/16 00:35:22 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -69,19 +69,14 @@ DEPENDS+=	git-[0-9]*:../../devel/git
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
-DEPENDS+=	emacs26>=26<27:../../editors/emacs26
-DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk3-[0-9]*:../../editors/vim-gtk3
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
-DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
 DEPENDS+=	wine-[0-9]*:../../emulators/wine
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	php>=7.4<7.5:../../lang/php74
 DEPENDS+=	php>=8.0<8.1:../../lang/php80
@@ -177,18 +172,12 @@ DEPENDS+=	openjpeg-[0-9]*:../../graphics/openjpeg
 DEPENDS+=	lcms-[0-9]*:../../graphics/lcms
 DEPENDS+=	lcms2-[0-9]*:../../graphics/lcms2
 .include "../../graphics/librsvg/available.mk"
-.if ${LIBRSVG_TYPE} == "rust"
-DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
-.else
-DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg-c
-.endif
 DEPENDS+=	blas-[0-9]*:../../math/blas
 DEPENDS+=	lapack-[0-9]*:../../math/lapack
 DEPENDS+=	boost-[0-9]*:../../meta-pkgs/boost
 DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
 DEPENDS+=	libogg-[0-9]*:../../multimedia/libogg
 DEPENDS+=	libpcap-[0-9]*:../../net/libpcap
-DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 DEPENDS+=	poppler-[0-9]*:../../print/poppler
 DEPENDS+=	poppler-includes-[0-9]*:../../print/poppler-includes
 DEPENDS+=	cyrus-sasl-[0-9]*:../../security/cyrus-sasl
