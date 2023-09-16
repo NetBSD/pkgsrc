@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2023/01/08 11:22:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/09/16 03:21:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/traitlets/__init__.py
 ${PYSITELIB}/traitlets/__init__.pyc
 ${PYSITELIB}/traitlets/_version.py
@@ -45,6 +45,8 @@ ${PYSITELIB}/traitlets/tests/test_traitlets.py
 ${PYSITELIB}/traitlets/tests/test_traitlets.pyc
 ${PYSITELIB}/traitlets/tests/test_traitlets_enum.py
 ${PYSITELIB}/traitlets/tests/test_traitlets_enum.pyc
+${PYSITELIB}/traitlets/tests/test_typing.py
+${PYSITELIB}/traitlets/tests/test_typing.pyc
 ${PYSITELIB}/traitlets/tests/utils.py
 ${PYSITELIB}/traitlets/tests/utils.pyc
 ${PYSITELIB}/traitlets/traitlets.py
@@ -75,3 +77,5 @@ ${PYSITELIB}/traitlets/utils/tests/test_importstring.py
 ${PYSITELIB}/traitlets/utils/tests/test_importstring.pyc
 ${PYSITELIB}/traitlets/utils/text.py
 ${PYSITELIB}/traitlets/utils/text.pyc
+${PYSITELIB}/traitlets/utils/warnings.py
+${PYSITELIB}/traitlets/utils/warnings.pyc
