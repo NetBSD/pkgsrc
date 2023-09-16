@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/09/16 00:35:22 dholland Exp $
+# $NetBSD: Makefile,v 1.94 2023/09/16 01:14:40 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -61,6 +61,7 @@ DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=	jabberd>=2:../../chat/jabberd2
 DEPENDS+=	sirc-[0-9]*:../../chat/sirc
 DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
+DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
 DEPENDS+=	mariadb-client>=10.5<10.6:../../databases/mariadb105-client
 DEPENDS+=	mariadb-client>=10.6<10.7:../../databases/mariadb106-client
@@ -105,6 +106,7 @@ DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
 DEPENDS+=	lintpkgsrc-[0-9]*:../../pkgtools/lintpkgsrc
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 DEPENDS+=	ghostscript-agpl-[0-9]*:../../print/ghostscript-agpl
+DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	mupdf-[0-9]*:../../print/mupdf
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
@@ -116,6 +118,9 @@ DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
 DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
+DEPENDS+=	icewm>=1.2<1.3:../../wm/icewm
+DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
+DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
