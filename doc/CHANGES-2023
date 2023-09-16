@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5529 2023/09/16 08:07:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5530 2023/09/16 09:54:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8027,3 +8027,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-rapidjson to 1.11 [adam 2023-09-16]
 	Updated devel/cbindgen to 0.26.0 [adam 2023-09-16]
 	Updated devel/blosc to 1.21.5 [adam 2023-09-16]
+	Updated comms/tio to 2.6 [bsiegert 2023-09-16]
