@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.192 2023/08/03 02:20:35 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.193 2023/09/16 18:20:12 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1438,7 +1438,7 @@ c, c++, fortran, fortran77, java, objc, obj-c++, and ada.
     (and any combination).  The default is
     <quote>c</quote>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
-    phase.
+    phase.</para>
 
     <para>To declare which features a package requies from the
     compiler, set either <varname>USE_CC_FEATURES</varname>
@@ -1467,7 +1467,7 @@ is_trivially_copy_constructible
     currently:
 <programlisting>
 c90, c99, c11, gnu90, gnu99, gnu11
-</programlisting></para>
+</programlisting>
     </para>
 
     <para>Allowed values for <varname>FORCE_CXX_STD</varname> are
@@ -1475,7 +1475,7 @@ c90, c99, c11, gnu90, gnu99, gnu11
 <programlisting>
 c++03, c++11, c++14, c++17, c++20,
 gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
-</programlisting></para>
+</programlisting>
     </para>
   </sect2>
 
