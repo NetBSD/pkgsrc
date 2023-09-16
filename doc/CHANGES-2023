@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5533 2023/09/16 12:46:15 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.5534 2023/09/16 21:39:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8031,3 +8031,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/wl-snapshot to 2.15.9.2023.08.18 [mef 2023-09-16]
 	Updated editors/vim to 9.0.1900 [rhialto 2023-09-16]
 	Removed editors/vim-xaw [rhialto 2023-09-16]
+	Removed x11/vte029 [gutteridge 2023-09-16]
