@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5526 2023/09/16 03:38:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5527 2023/09/16 04:28:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8021,3 +8021,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-traitlets to 5.10.0 [adam 2023-09-16]
 	Updated devel/py-gitpython to 3.1.36 [adam 2023-09-16]
 	Updated net/py-python-socks to 2.4.2 [adam 2023-09-16]
+	Updated math/py-astropy to 5.3.3 [adam 2023-09-16]
+	Updated devel/py-tox to 4.11.3 [adam 2023-09-16]
