@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2023/09/16 00:40:11 dholland Exp $
+# $NetBSD: Makefile,v 1.66 2023/09/16 01:32:32 dholland Exp $
 
 DISTNAME=	bulk-large-20230903
 CATEGORIES=	meta-pkgs
@@ -72,7 +72,6 @@ DEPENDS+=	postgresql13-[0-9]*:../../databases/postgresql13
 DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
-DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
 DEPENDS+=	glusterfs-[0-9]*:../../filesystems/glusterfs
 DEPENDS+=	tahoe-lafs-[0-9]*:../../filesystems/tahoe-lafs
@@ -112,8 +111,6 @@ DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5
 #
 DEPENDS+=	gd-[0-9]*:../../graphics/gd
 DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
