@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/09/16 01:16:28 dholland Exp $
+# $NetBSD: Makefile,v 1.96 2023/09/16 01:32:32 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -72,6 +72,9 @@ DEPENDS+=	git-docs-[0-9]*:../../devel/git-docs
 DEPENDS+=	mercurial-[0-9]*:../../devel/mercurial
 DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk3-[0-9]*:../../editors/vim-gtk3
+# emacs with x11 also brings in rust, which doesn't fit in this package
+DEPENDS+=	emacs-nox11-[0-9]*:../../editors/emacs-nox11
+DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
