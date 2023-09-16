@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/09/16 00:44:25 dholland Exp $
+# $NetBSD: Makefile,v 1.44 2023/09/16 01:14:40 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -58,7 +58,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	irssi-[0-9]*:../../chat/irssi
 DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
-DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
 DEPENDS+=	emacs21>=21<22:../../editors/emacs21
@@ -74,16 +73,12 @@ DEPENDS+=	pkg_chk-[0-9]*:../../pkgtools/pkg_chk
 DEPENDS+=	pkg_rolling-replace-[0-9]*:../../pkgtools/pkg_rolling-replace
 DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
 DEPENDS+=	enscript-[0-9]*:../../print/enscript
-DEPENDS+=	ghostscript-gpl-[0-9]*:../../print/ghostscript-gpl
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 DEPENDS+=	sudo-[0-9]*:../../security/sudo
 DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
-DEPENDS+=	icewm>=1.2<1.3:../../wm/icewm
-DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
-DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
