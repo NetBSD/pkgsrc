@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2023/09/16 01:32:32 dholland Exp $
+# $NetBSD: Makefile,v 1.67 2023/09/16 04:08:17 dholland Exp $
 
-DISTNAME=	bulk-large-20230903
+DISTNAME=	bulk-large-20230915
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
