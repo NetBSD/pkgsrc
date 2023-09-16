@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5527 2023/09/16 04:28:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5528 2023/09/16 07:57:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8023,3 +8023,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-python-socks to 2.4.2 [adam 2023-09-16]
 	Updated math/py-astropy to 5.3.3 [adam 2023-09-16]
 	Updated devel/py-tox to 4.11.3 [adam 2023-09-16]
+	Updated www/py-websocket-client to 1.6.3 [adam 2023-09-16]
+	Updated textproc/py-rapidjson to 1.11 [adam 2023-09-16]
