@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23383 2023/09/16 04:28:21 adam Exp $
+$NetBSD: TODO,v 1.23384 2023/09/16 09:54:20 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1403,7 +1403,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tfmxplay-1.1.6
 	o tightvnc-2.7.10
 	o tile-0.7.4
-	o tio-2.6 [pkg/57589]
 	o tkcon-2.7.3
 	o tkhylafax-3.2
 	o tkinfo-2.11
