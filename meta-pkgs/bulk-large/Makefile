@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2023/09/13 21:44:13 dholland Exp $
+# $NetBSD: Makefile,v 1.63 2023/09/16 00:35:22 dholland Exp $
 
 DISTNAME=	bulk-large-20230903
 CATEGORIES=	meta-pkgs
@@ -103,6 +103,24 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rails70>=7.0.7:../../www/ruby-rails70
 DEPENDS+=	db5-[0-9]*:../../databases/db5
 DEPENDS+=	heimdal-[0-9]*:../../security/heimdal
 DEPENDS+=	mit-krb5-[0-9]*:../../security/mit-krb5
+
+#
+# 3A. Stuff that uses Rust that might otherwise be in bulk-medium or bulk-small
+# (and used to be)
+#
+DEPENDS+=	gd-[0-9]*:../../graphics/gd
+DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
+DEPENDS+=	emacs26>=26<27:../../editors/emacs26
+DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
+DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
+DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+.if ${LIBRSVG_TYPE} == "rust"
+DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
+.else
+DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg-c
+.endif
+DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 
 #
 # 4. TeX
