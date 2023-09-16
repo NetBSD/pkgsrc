@@ -6,5 +6,5 @@ If you are building the package from source you may want to enable some
 features such as a perl or python interpreter which are not enabled by
 default.
 
-This version does not contain a gui. If you want one, look at vim-xaw, vim-gtk,
-vim-gtk2 or vim-motif.
+This version does not contain a gui. If you want one, look at vim-gtk2,
+vim-gtk3 or vim-motif.
