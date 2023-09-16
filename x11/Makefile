@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2023/09/07 03:26:52 jnemeth Exp $
+# $NetBSD: Makefile,v 1.998 2023/09/16 21:34:16 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -453,7 +453,6 @@ SUBDIR+=	unibar
 SUBDIR+=	unicode-screensaver
 SUBDIR+=	viewres
 SUBDIR+=	vte
-SUBDIR+=	vte029
 SUBDIR+=	vte3
 SUBDIR+=	wdm
 SUBDIR+=	wired-notify
