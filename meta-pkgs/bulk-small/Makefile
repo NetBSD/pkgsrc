@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/09/16 00:35:22 dholland Exp $
+# $NetBSD: Makefile,v 1.43 2023/09/16 00:44:25 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -160,7 +160,6 @@ TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi	# required by python
 TRANSITIVE+=	libidn-[0-9]*:../../devel/libidn	# required by curl
 TRANSITIVE+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 							# req'd by ghostscript
-TRANSITIVE+=	f2c-[0-9]*:../../lang/f2c		# req'd by libtool-base
 TRANSITIVE+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
 TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
 TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error
