@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/09/16 01:14:40 dholland Exp $
+# $NetBSD: Makefile,v 1.45 2023/09/16 01:52:12 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -106,6 +106,8 @@ DEPENDS+=	flex-[0-9]*:../../devel/flex
 DEPENDS+=	gmake-[0-9]*:../../devel/gmake
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=	m4-[0-9]*:../../devel/m4
+DEPENDS+=	meson-[0-9]*:../../devel/meson
+DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 #DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 
