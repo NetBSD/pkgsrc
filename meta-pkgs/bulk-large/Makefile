@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/09/16 00:35:22 dholland Exp $
+# $NetBSD: Makefile,v 1.64 2023/09/16 00:38:36 dholland Exp $
 
 DISTNAME=	bulk-large-20230903
 CATEGORIES=	meta-pkgs
@@ -27,6 +27,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # Please discuss additions/removals on tech-pkg to avoid unnecessary
 # churn.
 #
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # 0. By design bulk-large is supposed to be a superset of both
@@ -152,8 +154,6 @@ DEPENDS+=	netbsd-doc-print-[0-9]*:../../meta-pkgs/netbsd-doc-print
 DEPENDS+=	netbsd-www-[0-9]*:../../meta-pkgs/netbsd-www
 DEPENDS+=	pkg_developer-[0-9]*:../../meta-pkgs/pkg_developer
 DEPENDS+=	pkgsrc-guide-tools-[0-9]*:../../meta-pkgs/pkgsrc-guide-tools
-
-.include "../../mk/bsd.prefs.mk"
 
 #
 # 7. Complete X.org
