@@ -1,10 +1,10 @@
-$NetBSD: patch-auto_configure,v 1.8 2023/06/02 15:30:10 wiz Exp $
+$NetBSD: patch-auto_configure,v 1.9 2023/09/16 12:21:19 rhialto Exp $
 
 Buildlink takes care of include files.
 
---- src/auto/configure.orig	2023-06-01 19:26:55.000000000 +0000
+--- src/auto/configure.orig	2023-09-15 18:22:02.000000000 +0000
 +++ src/auto/configure
-@@ -10164,7 +10164,7 @@ fi
+@@ -10639,7 +10639,7 @@ fi
  
  
  if test -z "$SKIP_MOTIF"; then
@@ -12,4 +12,4 @@ Buildlink takes care of include files.
 +  gui_XXX="${MOTIFBASE}/include"
      GUI_INC_LOC="`echo $GUI_INC_LOC|sed 's%-I%%g'`"
  
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for location of Motif GUI includes" >&5
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for location of Motif GUI includes" >&5
