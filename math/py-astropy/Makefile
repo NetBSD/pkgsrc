@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/08/31 14:01:37 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/16 04:24:31 adam Exp $
 
-DISTNAME=	astropy-5.3.2
+DISTNAME=	astropy-5.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
