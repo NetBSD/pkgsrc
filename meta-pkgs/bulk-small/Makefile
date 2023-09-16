@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/09/16 01:52:12 dholland Exp $
+# $NetBSD: Makefile,v 1.46 2023/09/16 04:07:06 dholland Exp $
 
 DISTNAME=	bulk-small-20230601
 PKGREVISION=	1
@@ -99,8 +99,6 @@ DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	xz-[0-9]*:../../archivers/xz
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
-DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
-DEPENDS+=	automake-[0-9]*:../../devel/automake
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	flex-[0-9]*:../../devel/flex
 DEPENDS+=	gmake-[0-9]*:../../devel/gmake
@@ -108,6 +106,10 @@ DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=	m4-[0-9]*:../../devel/m4
 DEPENDS+=	meson-[0-9]*:../../devel/meson
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
+# osabi should really be listed explicitly, but its actual PKGNAME varies
+# and picking up the right one is not worth the trouble, since x11-links
+# pulls it in.
 #DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 
@@ -125,9 +127,12 @@ DEPENDS+=	db4-[0-9]*:../../databases/db4
 DEPENDS+=	gdbm-[0-9]*:../../databases/gdbm
 DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 DEPENDS+=	gettext-lib-[0-9]*:../../devel/gettext-lib
+DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 DEPENDS+=	readline-[0-9]*:../../devel/readline
 DEPENDS+=	zlib-[0-9]*:../../devel/zlib
 DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
+# Note that if you set JPEG_TYPE to libjpeg-turbo you'll also
+# end up building cmake.
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_DEPMETHOD.${JPEG_DEFAULT}=	build
 DEPENDS+=	png-[0-9]*:../../graphics/png
@@ -150,19 +155,124 @@ DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
 # out for native X11; it will of course work for pkgsrc X11 also but
 # take somewhat longer.
 #
-TRANSITIVE+=	lzo-[0-9]*:../../archivers/lzo		# required by gnutls
-TRANSITIVE+=	gmp-[0-9]*:../../devel/gmp		# required by nettle
-TRANSITIVE+=	libcfg+-[0-9]*:../../devel/libcfg+	# required by gnutls
-TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi	# required by python
-TRANSITIVE+=	libidn-[0-9]*:../../devel/libidn	# required by curl
-TRANSITIVE+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
-							# req'd by ghostscript
-TRANSITIVE+=	libpaper-[0-9]*:../../print/libpaper	# req'd by ghostscript
-TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt # required by libxslt
+# (Note that it is not necessarily worth spending a lot of effort
+# maintaining these lists; however, it is worth keeping at least
+# occasional track of what's being pulled in and whether it's
+# excessively expensive.)
+#
+
+# required by chat/irssi and chat/irssi-icb
+TRANSITIVE+=	libotr-[0-9]*:../../chat/libotr
+TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt	# via libotr
+TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error	# via libotr
+TRANSITIVE+=	glib2-tools-[0-9]*:../../devel/glib2-tools
+
+# required by editors/emacs21
+TRANSITIVE+=	tradcpp-[0-9]*:../../devel/tradcpp
+TRANSITIVE+=	imake-[0-9]*:../../devel/imake
+TRANSITIVE+=	xorg-cf-files-[0-9]*:../../x11/xorg-cf-files	# via imake
+
+# required by mail/mutt
+TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man	# via autoconf
+TRANSITIVE+=	db4-[0-9]*:../../databases/db4
+TRANSITIVE+=	autoconf-[0-9]*:../../devel/autoconf		# via ?
+TRANSITIVE+=	libusb1-[0-9]*:../../devel/libusb1		# via gnupg2
+TRANSITIVE+=	npth-[0-9]*:../../devel/npth			# via gnupg2
+TRANSITIVE+=	p5-gettext-[0-9]*:../../devel/p5-gettext	# via help2man
+TRANSITIVE+=	mime-types-[0-9]*:../../misc/mime-types
+TRANSITIVE+=	cyrus-sasl-[0-9]*:../../security/cyrus-sasl
+TRANSITIVE+=	gpgme-[0-9]*:../../security/gpgme
+TRANSITIVE+=	gnupg2-[0-9]*:../../security/gnupg2
+TRANSITIVE+=	libassuan>=2:../../security/libassuan2		# via gnupg2
+TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt	# via gnupg2
+TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error	# via gnupg2
+TRANSITIVE+=	pinentry-[0-9]*:../../security/pinentry		# via gnupg2
+TRANSITIVE+=	libksba-[0-9]*:../../security/libksba		# via gnupg2
+TRANSITIVE+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TRANSITIVE+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TRANSITIVE+=	lynx-[0-9]*:../../www/lynx
+
+# required by misc/screen
+TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man	# via autoconf
+TRANSITIVE+=	autoconf-[0-9]*:../../devel/autoconf
+TRANSITIVE+=	automake-[0-9]*:../../devel/automake
+TRANSITIVE+=	p5-gettext-[0-9]*:../../devel/p5-gettext	# via autoconf
+
+# required by net/rsync
+TRANSITIVE+=	lz4-[0-9]*:../../archivers/lz4
+TRANSITIVE+=	zstd-[0-9]*:../../archivers/zstd
+TRANSITIVE+=	popt-[0-9]*:../../devel/popt
+TRANSITIVE+=	xxhash-[0-9]*:../../devel/xxhash
+
+# required by net/wget
+TRANSITIVE+=	lzip-[0-9]*:../../archivers/lzip		# via libpsl
+TRANSITIVE+=	libidn2-[0-9]*:../../textproc/libidn2
+TRANSITIVE+=	libunistring-[0-9]*:../../textproc/libunistring	# via libidn2
+TRANSITIVE+=	libpsl-[0-9]*:../../textproc/libpsl
+
+# required by pkgtools/pkgin
+TRANSITIVE+=	libfetch-[0-9]*:../../net/libfetch
+
+# required by www/bozohttpd
+TRANSITIVE+=	lua54-[0-9]*:../../lang/lua54
+
+# required by www/curl
+TRANSITIVE+=	libidn2-[0-9]*:../../textproc/libidn2
+TRANSITIVE+=	libunistring-[0-9]*:../../textproc/libunistring	# via libidn2
+TRANSITIVE+=	nghttp2-[0-9]*:../../www/nghttp2
+
+# required by x11/xlockmore-lite
+TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man	# via autoconf
+TRANSITIVE+=	autoconf-[0-9]*:../../devel/autoconf
+TRANSITIVE+=	p5-gettext-[0-9]*:../../devel/p5-gettext	# via autoconf
+TRANSITIVE+=	tradcpp-[0-9]*:../../devel/tradcpp		# via imake
+TRANSITIVE+=	imake-[0-9]*:../../devel/imake
+TRANSITIVE+=	xorg-cf-files-[0-9]*:../../x11/xorg-cf-files	# via imake
+
+# required by lang/python*
+TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi
+TRANSITIVE+=	libuuid-[0-9]*:../../devel/libuuid
+
+# required by devel/bison
+TRANSITIVE+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+
+# required by devel/flex
+TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man
+TRANSITIVE+=	p5-gettext-[0-9]*:../../devel/p5-gettext
+
+# required by devel/meson
+TRANSITIVE+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../textproc/py-setuptools
+TRANSITIVE+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+# required by devel/ninja-build
+TRANSITIVE+=	re2c-[0-9]*:../../devel/re2c
+
+# required by devel/glib2
+TRANSITIVE+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi
+TRANSITIVE+=	pcre2-[0-9]*:../../devel/pcre2
+
+# required by graphics/tiff
+TRANSITIVE+=	jbigkit-[0-9]*:../../graphics/jbigkit
+
+# required by security/gnutls
+TRANSITIVE+=	autoconf-[0-9]*:../../devel/autoconf		# via ?
+TRANSITIVE+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+TRANSITIVE+=	libcfg+-[0-9]*:../../devel/libcfg+
+TRANSITIVE+=	gmp-[0-9]*:../../devel/gmp
+TRANSITIVE+=	libffi-[0-9]*:../../devel/libffi		# via p11-kit
+TRANSITIVE+=	libtasn1-[0-9]*:../../security/libtasn1
+TRANSITIVE+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+TRANSITIVE+=	nettle-[0-9]*:../../security/nettle
+TRANSITIVE+=	p11-kit-[0-9]*:../../security/p11-kit
+TRANSITIVE+=	gsed-[0-9]*:../../textproc/gsed
+TRANSITIVE+=	libunistring-[0-9]*:../../textproc/libunistring
+
+# required by textproc/libxslt
+TRANSITIVE+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+TRANSITIVE+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt
 TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error
-							# required by libgcrypt
-TRANSITIVE+=	libtasn1-[0-9]*:../../security/libtasn1	# required by gnutls
-TRANSITIVE+=	nettle-[0-9]*:../../security/nettle	# required by gnutls
 
 # Provide a way to hide these when doing dependency analysis.
 .if !defined(SUPPRESS_TRANSITIVE)
