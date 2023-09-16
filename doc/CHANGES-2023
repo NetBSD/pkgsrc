@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5525 2023/09/16 03:21:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5526 2023/09/16 03:38:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8019,3 +8019,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gdbus-codegen to 2.76.5 [adam 2023-09-16]
 	Updated www/py-httpx-socks to 0.7.8 [adam 2023-09-16]
 	Updated devel/py-traitlets to 5.10.0 [adam 2023-09-16]
+	Updated devel/py-gitpython to 3.1.36 [adam 2023-09-16]
+	Updated net/py-python-socks to 2.4.2 [adam 2023-09-16]
