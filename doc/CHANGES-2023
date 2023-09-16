@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5522 2023/09/15 17:58:03 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.5523 2023/09/16 02:31:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8011,3 +8011,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typeguard to 4.1.5 [adam 2023-09-15]
 	Updated emulators/b-em to 20230915 snapshot [reinoud 2023-09-15]
 	Updated net/gvproxy to 0.7.0 [tnn 2023-09-15]
+	Updated devel/cmake to 3.27.5 [adam 2023-09-16]
+	Updated devel/cmake-gui to 3.27.5 [adam 2023-09-16]
