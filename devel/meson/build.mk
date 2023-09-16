@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.18 2023/06/27 10:41:25 riastradh Exp $
+# $NetBSD: build.mk,v 1.19 2023/09/16 13:21:23 tnn Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -16,6 +16,10 @@ TEST_DIRS?=		${CONFIGURE_DIRS}
 .if !empty(LLVM_CONFIG_PATH)
 MAKE_ENV+=	LLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 .endif
+
+# Prevent use of "response files" that break pkgsrc wrappers.
+# The default threshold of 64k is too low for pkgsrc.
+MAKE_ENV+=	MESON_RSP_THRESHOLD=262144
 
 .if !defined(USE_CMAKE)
 MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
