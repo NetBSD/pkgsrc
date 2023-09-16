@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.14 2022/06/05 02:36:41 mef Exp $
+# $NetBSD: Makefile,v 1.15 2023/09/16 11:24:17 mef Exp $
 
-DISTNAME=	wl-beta_2.15.9+0.20190919
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//}
-PKGREVISION=	2
+DATE=		2023.08.18
+DISTNAME=	wanderlust
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust/wl-2.15.9.${DATE}/}
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
-EXTRACT_SUFX=	.orig.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
+GITHUB_PROJECT=	wanderlust
+GITHUB_TAG=	1389dcec6e3242948682eb3e3ce8ead8be2772d8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	patch
-WRKSRC=		${WRKDIR}/wanderlust-wanderlust-7a919e4
+WRKSRC=		${WRKDIR}/wanderlust-${GITHUB_TAG}
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info
@@ -23,11 +23,11 @@ MAKE_FLAGS+=	EMACS=${EMACS_BIN}
 MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR}${PREFIX}/share/wl
 INFO_FILES=	yes
 
-SUBST_CLASSES+=			icon_directory
-SUBST_STAGE.icon_directory=	pre-configure
-SUBST_MESSAGE.icon_directory=	Fixing wl-icon-directory default value (defvar)
-SUBST_FILES.icon_directory=	${WRKSRC}/wl/wl-vars.el
-SUBST_SED.icon_directory=	-e 's|%%PREFIX%%|${PREFIX}|'
+#UBST_CLASSES+=			icon_directory
+#SUBST_STAGE.icon_directory=	pre-configure
+#SUBST_MESSAGE.icon_directory=	Fixing wl-icon-directory default value (defvar)
+#SUBST_FILES.icon_directory=	${WRKSRC}/wl/wl-vars.el
+#SUBST_SED.icon_directory=	-e 's|%%PREFIX%%|${PREFIX}|'
 
 DOCDIR=			${PREFIX}/share/doc/wl
 EXAMPLESDIR=		${PREFIX}/share/examples/wl
@@ -42,8 +42,12 @@ EMACS_BUILDLINK=	# empty
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
 .include "../../editors/emacs/modules.mk"
-.include "../../misc/bbdb2/buildlink3.mk"
+.include "../../misc/bbdb3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+
+pre-configure:
+	${MKDIR} -p ${WRKDIR}/.home/.emacs.d/elpa
+	find ${WRKSRC} -name \*orig | xargs rm
 
 post-install:
 	set -e; \
@@ -53,7 +57,7 @@ post-install:
 	done
 	for f in README; do \
 		${INSTALL_DATA} ${WRKSRC}/"$$f".md ${DESTDIR}${DOCDIR}/en; \
-		${INSTALL_DATA} ${WRKSRC}/"$$f".ja ${DESTDIR}${DOCDIR}/ja; \
+		${INSTALL_DATA} ${WRKSRC}/"$$f".ja.md ${DESTDIR}${DOCDIR}/ja; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/samples/en/dot.* ${DESTDIR}${EXAMPLESDIR}/en
 	${INSTALL_DATA} ${WRKSRC}/samples/ja/dot.* ${DESTDIR}${EXAMPLESDIR}/ja
