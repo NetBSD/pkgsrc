@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2023/09/16 01:32:32 dholland Exp $
+# $NetBSD: Makefile,v 1.97 2023/09/16 01:42:08 dholland Exp $
 
 DISTNAME=	bulk-medium-20230911
 CATEGORIES=	meta-pkgs
@@ -176,7 +176,6 @@ DEPENDS+=	cairo-[0-9]*:../../graphics/cairo
 DEPENDS+=	gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
 DEPENDS+=	glew-[0-9]*:../../graphics/glew
 DEPENDS+=	openjpeg-[0-9]*:../../graphics/openjpeg
-DEPENDS+=	lcms-[0-9]*:../../graphics/lcms
 DEPENDS+=	lcms2-[0-9]*:../../graphics/lcms2
 .include "../../graphics/librsvg/available.mk"
 DEPENDS+=	blas-[0-9]*:../../math/blas
