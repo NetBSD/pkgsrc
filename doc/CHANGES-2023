@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5523 2023/09/16 02:31:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5524 2023/09/16 03:09:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8013,3 +8013,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/gvproxy to 0.7.0 [tnn 2023-09-15]
 	Updated devel/cmake to 3.27.5 [adam 2023-09-16]
 	Updated devel/cmake-gui to 3.27.5 [adam 2023-09-16]
+	Updated security/openssl to 1.1.1w [adam 2023-09-16]
+	Updated devel/glib2 to 2.76.5 [adam 2023-09-16]
+	Updated devel/glib2-tools to 2.76.5 [adam 2023-09-16]
+	Updated devel/gdbus-codegen to 2.76.5 [adam 2023-09-16]
