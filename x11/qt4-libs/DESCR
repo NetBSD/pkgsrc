@@ -9,4 +9,4 @@ This package contains version 4 of Qt, which is EOL; it remains
 because some unmaintained useful software still uses it.
 
 NB: This package installs the library substantially into ${PREFIX}/qt4
-(except for pkgconfigfiles) in order to avoid collisions.
+(except for pkgconfig files) in order to avoid collisions.
