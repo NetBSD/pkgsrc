@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5548 2023/09/17 14:51:41 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5549 2023/09/17 17:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8060,3 +8060,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-cinnabar to 0.6.2 [bsiegert 2023-09-17]
 	Updated security/nuclei to 2.9.15 [leot 2023-09-17]
 	Updated textproc/translate-shell to 0.9.7.1 [leot 2023-09-17]
+	Updated devel/py-nest-asyncio to 1.5.8 [adam 2023-09-17]
+	Updated comms/py-rich to 13.5.3 [adam 2023-09-17]
