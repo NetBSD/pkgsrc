@@ -1,21 +1,20 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:55:50 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/09/17 08:56:18 adam Exp $
 
-BLAKE2s (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = 45b51a75dee57612fc8d92b15eea54bb4197608ac0b6613e495c5553135ca90b
-SHA512 (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = c07964ead5ffe9cf088364697bfe5cb409170663e420bdcd08a6366a028625d2a3c23ee4ddbaf0e625860a9fd08cbbb39f97eb985c366c052696d6f8598a844f
-Size (openblas-0.3.15/OpenBLAS-0.3.15.tar.gz) = 12498434 bytes
-BLAKE2s (openblas-0.3.15/large.tgz) = 68489cf503f8671e9228831d96cc514172b93f5c2e0f2c72038651a5a219cb2f
-SHA512 (openblas-0.3.15/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
-Size (openblas-0.3.15/large.tgz) = 2595 bytes
-BLAKE2s (openblas-0.3.15/timing.tgz) = dc47df7bd85a88f9f7f31741ed2a4630511f9105075290c3d5df4aeeaf6f45b8
-SHA512 (openblas-0.3.15/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
-Size (openblas-0.3.15/timing.tgz) = 1059485 bytes
+BLAKE2s (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = 38e4cee9b05aaa4d2f90682c609f3d93a802a594920240fefa808bf3323f593c
+SHA512 (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = fe66e3a258ca1720764ed243f6d61017d6ef14bd33b76f20b19b34754096ec2be9fbeb1a78743f38ee71381746d6af9a1c16a8f3982e423afec422fcb50852d0
+Size (openblas-0.3.24/OpenBLAS-0.3.24.tar.gz) = 24263037 bytes
+BLAKE2s (openblas-0.3.24/large.tgz) = 68489cf503f8671e9228831d96cc514172b93f5c2e0f2c72038651a5a219cb2f
+SHA512 (openblas-0.3.24/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
+Size (openblas-0.3.24/large.tgz) = 2595 bytes
+BLAKE2s (openblas-0.3.24/timing.tgz) = dc47df7bd85a88f9f7f31741ed2a4630511f9105075290c3d5df4aeeaf6f45b8
+SHA512 (openblas-0.3.24/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
+Size (openblas-0.3.24/timing.tgz) = 1059485 bytes
 SHA1 (patch-Makefile) = 6b1db300b5487fca53e7c41c27b64017658e6375
-SHA1 (patch-Makefile.install) = c4245692ca4b17d49048feb083a500a33b809ab2
+SHA1 (patch-Makefile.install) = b4e12a4727a3599f1d63fc134a5db02948136259
 SHA1 (patch-Makefile.rule) = 45b6b4576fb521fa093252c63b899d4178a516b6
 SHA1 (patch-Makefile.system) = 6dc9fd85731ca88cb1fdb9063ba3baa31edbcfb8
 SHA1 (patch-common__arm.h) = f08ec61bee8317daac267e90a79f46097b3431c9
 SHA1 (patch-cpuid__arm.c) = 20f95cede90cbe548c0cd09ed2e3d37d1d4aeabd
 SHA1 (patch-cpuid_ia64.c) = 39649319b8c0a37b8d494e3c03b1ddb6fb616603
-SHA1 (patch-f_check) = 9181958ddd7dca16f28b1144ce7f400b5ab36301
-SHA1 (patch-getarch.c) = 0cf098b7203586206df95b24d1e95b0b5b9fd500
+SHA1 (patch-f_check) = 11f22d0dded9f7b64fb8028693f64fc24f2016a3
 SHA1 (patch-interface__ztrmv.c) = 6038946f8fb9542e680178ece2bd0d0d5853baad

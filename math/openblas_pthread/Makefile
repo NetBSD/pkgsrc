@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/06/15 04:41:53 thor Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/17 08:56:19 adam Exp $
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
-PKGREVISION=	1
 
 OPENBLAS_VARIANT= openblas_pthread
 .include "../../math/openblas/Makefile.common"
