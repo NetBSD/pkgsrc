@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/01/03 09:19:03 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/09/17 17:58:49 adam Exp $
 
-BLAKE2s (smmap-5.0.0.tar.gz) = 743d20fc60aea9309e78262c82eea45a425fe53712300ba9cd64904192e77839
-SHA512 (smmap-5.0.0.tar.gz) = 03ae478bc83d02416f57bb3f6afc9c80bcb2d4249f3169390ac139b88be94258463dee7744fdf0fd54a7cfe109795a110c43f2b81ffd8546601de274667d353d
-Size (smmap-5.0.0.tar.gz) = 22437 bytes
+BLAKE2s (smmap-5.0.1.tar.gz) = 901f5809a5513f14e6b70a4a4b5d33a3fb45972745ad957d0a4b12ea0fc048d4
+SHA512 (smmap-5.0.1.tar.gz) = e40e802a8810a4eb6ec093739e6296bf600220315dffed191f780bd355c83ae8ef0b2c60a9032aa4813bcfdc22aa4241b73213eac9112b8e2209eacdd60baa85
+Size (smmap-5.0.1.tar.gz) = 22291 bytes
