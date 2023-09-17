@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.193 2023/09/16 18:20:12 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.194 2023/09/17 23:40:06 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1608,7 +1608,7 @@ gnu++03, gnu++11, gnu++14, gnu++17, gnu++20
     <filename>mk/configure/replace-interpreter.mk</filename>. Other
     languages define the actions of these variables within their own
     dedicated part of the tree, e.g., <varname>REPLACE_PHP</varname> is
-    actioned in <filename>lang/php/phpversion.mk</filename>, and
+    actioned in <filename>lang/php/replace.mk</filename>, and
     <varname>REPLACE_PYTHON</varname> is actioned in
     <filename>lang/python/application.mk</filename>. For other languages,
     consult the mk files found within their specific directories (the
