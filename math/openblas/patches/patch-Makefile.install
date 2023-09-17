@@ -1,31 +1,23 @@
-$NetBSD: patch-Makefile.install,v 1.4 2021/06/07 15:52:04 adam Exp $
+$NetBSD: patch-Makefile.install,v 1.5 2023/09/17 08:56:19 adam Exp $
 
 Second part of removing the special library names.
 Separate options for "install" (needed at least on Darwin).
 
---- Makefile.install.orig	2021-05-02 21:50:22.000000000 +0000
+--- Makefile.install.orig	2023-09-03 20:58:32.000000000 +0000
 +++ Makefile.install
-@@ -74,40 +74,46 @@ endif
- ifneq ($(OSNAME), AIX)
- ifndef NO_LAPACKE
- 	@echo Copying LAPACKE header files to $(DESTDIR)$(OPENBLAS_INCLUDE_DIR)
--	@-install -pm644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapack.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapack.h"
--	@-install -pm644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke.h"
--	@-install -pm644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_config.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_config.h"
--	@-install -pm644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_mangling_with_flags.h.in "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_mangling.h"
--	@-install -pm644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_utils.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_utils.h"
-+	@-install -p -m 644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapack.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapack.h"
-+	@-install -p -m 644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke.h"
-+	@-install -p -m 644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_config.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_config.h"
-+	@-install -p -m 644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_mangling_with_flags.h.in "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_mangling.h"
-+	@-install -p -m 644 $(NETLIB_LAPACK_DIR)/LAPACKE/include/lapacke_utils.h "$(DESTDIR)$(OPENBLAS_INCLUDE_DIR)/lapacke_utils.h"
+@@ -17,7 +17,7 @@ PKG_EXTRALIB := $(EXTRALIB)
+ ifeq ($(INTERFACE64),1)
+ 	SUFFIX64=64
  endif
+-PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE)$(SUFFIX64).pc"
++PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
  
- #for install static library
+ ifeq ($(USE_OPENMP), 1)
+   ifeq ($(C_COMPILER), PGI)
+@@ -90,29 +90,37 @@ endif
  ifneq ($(NO_STATIC),1)
  	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
--	@install -pm644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
-+	@install -p -m 644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
+ 	@install -m644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
 +ifneq ($(LIBNAME), $(LIBPREFIX).$(LIBSUFFIX))
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
  	ln -fs $(LIBNAME) $(LIBPREFIX).$(LIBSUFFIX)
@@ -35,7 +27,7 @@ Separate options for "install" (needed at least on Darwin).
  ifneq ($(NO_SHARED),1)
  	@echo Copying the shared library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  ifeq ($(OSNAME), $(filter $(OSNAME),Linux SunOS Android Haiku FreeBSD DragonFly))
- 	@install -pm755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
+ 	@install -m755 $(LIBSONAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
 -	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; \
 -	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION)
@@ -56,12 +48,13 @@ Separate options for "install" (needed at least on Darwin).
  	@-cp $(LIBDYNNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
  	@-install_name_tool -id "$(OPENBLAS_LIBRARY_DIR)/$(LIBPREFIX).$(MAJOR_VERSION).dylib" "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)/$(LIBDYNNAME)"
  	@cd "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)" ; \
--	ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib ; \
-+	if ! test $(LIBDYNNAME) = $(LIBPREFIX).dylib; then ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib; fi ; \
++	if ! test $(LIBDYNNAME) = $(LIBPREFIX).dylib; then \
+ 	ln -fs $(LIBDYNNAME) $(LIBPREFIX).dylib ; \
++	fi ; \
  	ln -fs $(LIBDYNNAME) $(LIBPREFIX).$(MAJOR_VERSION).dylib
  endif
  ifeq ($(OSNAME), WINNT)
-@@ -135,28 +141,32 @@ endif
+@@ -140,16 +148,20 @@ endif
  ifneq ($(NO_STATIC),1)
  	@echo Copying the static library to $(DESTDIR)$(OPENBLAS_LIBRARY_DIR)
  	@installbsd -c -m 644 $(LIBNAME) "$(DESTDIR)$(OPENBLAS_LIBRARY_DIR)"
@@ -80,25 +73,25 @@ Separate options for "install" (needed at least on Darwin).
 +	if ! test $(LIBSONAME) = $(LIBPREFIX).so; then \
 +	ln -fs $(LIBSONAME) $(LIBPREFIX).so ; fi ; \
 +	if ! test $(LIBSONAME) = $(LIBPREFIX).so.$(MAJOR_VERSION); then \
-+	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION) ; fi
++	ln -fs $(LIBSONAME) $(LIBPREFIX).so.$(MAJOR_VERSION); fi
  endif
  
  endif
+@@ -158,7 +170,7 @@ endif
+ ifeq ($(INTERFACE64),1)
+ 	SUFFIX64=64
+ endif
+-	PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE)$(SUFFIX64).pc"
++	PKGFILE="$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
  
- #Generating openblas.pc
- 	@echo Generating $(LIBSONAMEBASE).pc in "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)"
--	@echo 'libdir='$(OPENBLAS_LIBRARY_DIR) > "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
--	@echo 'includedir='$(OPENBLAS_INCLUDE_DIR) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
--	@echo 'openblas_config= USE_64BITINT='$(USE_64BITINT) 'DYNAMIC_ARCH='$(DYNAMIC_ARCH) 'DYNAMIC_OLDER='$(DYNAMIC_OLDER) 'NO_CBLAS='$(NO_CBLAS) 'NO_LAPACK='$(NO_LAPACK) 'NO_LAPACKE='$(NO_LAPACKE) 'NO_AFFINITY='$(NO_AFFINITY) 'USE_OPENMP='$(USE_OPENMP) $(CORE) 'MAX_THREADS='$(NUM_THREADS)>> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
--	@echo 'version='$(VERSION) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
--	@echo 'extralib='$(PKG_EXTRALIB) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
--	@cat openblas.pc.in >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBSONAMEBASE).pc"
-+	@echo 'libdir='$(OPENBLAS_LIBRARY_DIR) > "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
-+	@echo 'includedir='$(OPENBLAS_INCLUDE_DIR) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
-+	@echo 'openblas_config= USE_64BITINT='$(USE_64BITINT) 'DYNAMIC_ARCH='$(DYNAMIC_ARCH) 'DYNAMIC_OLDER='$(DYNAMIC_OLDER) 'NO_CBLAS='$(NO_CBLAS) 'NO_LAPACK='$(NO_LAPACK) 'NO_LAPACKE='$(NO_LAPACKE) 'NO_AFFINITY='$(NO_AFFINITY) 'USE_OPENMP='$(USE_OPENMP) $(CORE) 'MAX_THREADS='$(NUM_THREADS)>> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
-+	@echo 'version='$(VERSION) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
-+	@echo 'extralib='$(PKG_EXTRALIB) >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
-+	@cat openblas.pc.in | sed -e 's,-lopenblas$$,-l$(LIBNAMEBASE),' >> "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)/$(LIBNAMEBASE).pc"
+ 	@echo Generating $(LIBSONAMEBASE)$(SUFFIX64).pc in "$(DESTDIR)$(OPENBLAS_PKGCONFIG_DIR)"
+ 	@echo 'libdir='$(OPENBLAS_LIBRARY_DIR) > "$(PKGFILE)"
+@@ -167,7 +179,7 @@ endif
+ 	@echo 'openblas_config= USE_64BITINT='$(INTERFACE64) 'DYNAMIC_ARCH='$(DYNAMIC_ARCH) 'DYNAMIC_OLDER='$(DYNAMIC_OLDER) 'NO_CBLAS='$(NO_CBLAS) 'NO_LAPACK='$(NO_LAPACK) 'NO_LAPACKE='$(NO_LAPACKE) 'NO_AFFINITY='$(NO_AFFINITY) 'USE_OPENMP='$(USE_OPENMP) $(CORE) 'MAX_THREADS='$(NUM_THREADS)>> "$(PKGFILE)"
+ 	@echo 'version='$(VERSION) >> "$(PKGFILE)"
+ 	@echo 'extralib='$(PKG_EXTRALIB) >> "$(PKGFILE)"
+-	@cat openblas.pc.in >> "$(PKGFILE)"
++	@cat openblas.pc.in | sed -e 's,-lopenblas$$,-l$(LIBNAMEBASE),' >> "$(PKGFILE)"
  
  
  #Generating OpenBLASConfig.cmake

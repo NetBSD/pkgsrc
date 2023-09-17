@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.3 2021/05/29 19:57:21 thor Exp $
+# $NetBSD: version.mk,v 1.4 2023/09/17 08:56:18 adam Exp $
 
-OPENBLAS_VERSION=	0.3.15
+OPENBLAS_VERSION=	0.3.24
