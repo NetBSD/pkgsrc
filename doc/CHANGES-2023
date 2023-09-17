@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5544 2023/09/17 10:51:12 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5545 2023/09/17 10:57:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8056,3 +8056,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nawk to 20230909 [vins 2023-09-17]
 	Updated security/httpx to 1.3.5 [leot 2023-09-17]
 	Updated security/subfinder to 2.6.3 [leot 2023-09-17]
+	Updated security/tlsx to 1.1.4 [leot 2023-09-17]
