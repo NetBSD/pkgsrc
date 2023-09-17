@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/09/09 09:11:36 mef Exp $
+# $NetBSD: Makefile,v 1.19 2023/09/17 04:16:43 mef Exp $
 #
 
 VERSION=	9.4f
@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode>=3.13:../../cad/verilog-mode
 
 # failed to build with emacs28; needs athena widgets which are not enabled by default
-EMACS_VERSIONS_ACCEPTED=	emacs26
+EMACS_VERSIONS_ACCEPTED=	emacs26 emacs28
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../editors/emacs/modules.mk"
