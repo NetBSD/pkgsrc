@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/05/04 14:58:16 hauke Exp $
+# $NetBSD: Makefile,v 1.34 2023/09/17 02:16:40 mef Exp $
 #
 
 DISTNAME=	riece-9.0.0
@@ -17,6 +17,7 @@ INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/riece \
 
 EMACS_VERSIONS_ACCEPTED= \
 		emacs27 emacs26 emacs26nox emacs25 emacs25nox emacs21 emacs21nox \
+		emacs28 emacs28nox \
 		xemacs215 xemacs215nox xemacs214 xemacs214nox
 EMACS_MODULES=	base
 
