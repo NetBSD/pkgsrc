@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5534 2023/09/16 21:39:19 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5535 2023/09/17 06:32:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8032,3 +8032,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/vim to 9.0.1900 [rhialto 2023-09-16]
 	Removed editors/vim-xaw [rhialto 2023-09-16]
 	Removed x11/vte029 [gutteridge 2023-09-16]
+	Updated www/firefox to 117.0.1 [ryoon 2023-09-17]
