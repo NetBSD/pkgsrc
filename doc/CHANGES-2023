@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5536 2023/09/17 06:33:28 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5537 2023/09/17 06:49:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8034,3 +8034,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/vte029 [gutteridge 2023-09-16]
 	Updated www/firefox to 117.0.1 [ryoon 2023-09-17]
 	Updated www/firefox-l10n to 117.0.1 [ryoon 2023-09-17]
+	Updated www/emacs-w3m to 1.4.5 [mef 2023-09-17]
