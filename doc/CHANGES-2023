@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5549 2023/09/17 17:54:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5550 2023/09/17 18:03:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8062,3 +8062,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/translate-shell to 0.9.7.1 [leot 2023-09-17]
 	Updated devel/py-nest-asyncio to 1.5.8 [adam 2023-09-17]
 	Updated comms/py-rich to 13.5.3 [adam 2023-09-17]
+	Updated devel/py-smmap to 5.0.1 [adam 2023-09-17]
+	Updated net/py-subunit to 1.4.3 [adam 2023-09-17]
