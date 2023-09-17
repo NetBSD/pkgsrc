@@ -6969,7 +6969,7 @@ packages containing awk scripts, and REPLACE_R for R. These two, like the
 others noted above, have their actions defined centrally in mk/configure/
 replace-interpreter.mk. Other languages define the actions of these variables
 within their own dedicated part of the tree, e.g., REPLACE_PHP is actioned in
-lang/php/phpversion.mk, and REPLACE_PYTHON is actioned in lang/python/
+lang/php/replace.mk, and REPLACE_PYTHON is actioned in lang/python/
 application.mk. For other languages, consult the mk files found within their
 specific directories (the naming convention varies), or check the list found in
 Appendix E, Help topics.
