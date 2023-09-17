@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5539 2023/09/17 08:57:05 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5540 2023/09/17 09:01:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8049,3 +8049,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/openblas64 to 0.3.24 [adam 2023-09-17]
 	Updated math/openblas64_openmp to 0.3.24 [adam 2023-09-17]
 	Updated math/openblas64_pthread to 0.3.24 [adam 2023-09-17]
+	Updated devel/py-pdm to 2.9.2 [adam 2023-09-17]
+	Updated math/py-jplephem to 2.19 [adam 2023-09-17]
