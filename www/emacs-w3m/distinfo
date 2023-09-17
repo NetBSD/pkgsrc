@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:29:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/09/17 06:47:12 mef Exp $
 
-BLAKE2s (emacs-w3m-1.4.4.tar.gz) = e3876bd65516e166f4c1ef9572a4c1f5a333561c9d65dfdb49560fd515820cca
-SHA512 (emacs-w3m-1.4.4.tar.gz) = 473e16db6e12082d87b808b5bfe52403c570b7be24d9eb6a693d3494516d2b56309e6749428d70b76f789ef6e3dd4e90abf024512b22e21f394b2964aec70647
-Size (emacs-w3m-1.4.4.tar.gz) = 796123 bytes
-SHA1 (patch-aa) = bdbee77c09c115f46384380cc9932a26b3437d17
+BLAKE2s (emacs-w3m-1.4.5-329cfcfc0448a45a0779ded7b51332a343d02a18.tar.gz) = d9b637a1ccd60b8ccf9c1f3422a5959fcc5b7e5b7abdf7f7f32c7df5cea0a80f
+SHA512 (emacs-w3m-1.4.5-329cfcfc0448a45a0779ded7b51332a343d02a18.tar.gz) = 2551e4b0a1be1b1fdedc2182e2e3d8c7c5aafaba4e86e7f285997e7e6b0350acbdc54fdeec514a693513abd329d8164d026e2e8c7656a5940f81e56c7cd36ae1
+Size (emacs-w3m-1.4.5-329cfcfc0448a45a0779ded7b51332a343d02a18.tar.gz) = 1080822 bytes
