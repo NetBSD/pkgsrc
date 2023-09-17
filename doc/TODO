@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23385 2023/09/17 08:57:05 adam Exp $
+$NetBSD: TODO,v 1.23386 2023/09/17 18:54:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -581,6 +581,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
+	o dovecot2-pigeonhole-0.5.21
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
@@ -824,6 +825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o java-db3-3.87
+	o jbig2dec-0.20
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
 	o jdbc-mysql5-5.1.36
@@ -881,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdbusmenu-gtk3-16.04.0
 	o libdbusmenu-jsonloader-16.04.0
 	o libdbusmenu-tools-16.04.0
+	o libdeflate-1.19
 	o libdevq-0.0.4
 	o libdsk-1.5.15
 	o libflash-0.4.13
@@ -889,6 +892,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgit2-1.7.1 [Do not update before end of Q3-freeze. Breaks all Rust package depending on git2-0.17.0/libgit2-sys-0.15.1+1.6.4 crates]
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libimagequant-4.2.1
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -910,9 +914,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
+	o libsodium-1.0.19
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libuninameslist-20230916
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -1003,6 +1009,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
+	o notmuch-0.38
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1183,7 +1190,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cyclonedx-python-lib-4.2.1
+	o py-contourpy-1.1.1
+	o py-cryptodome-3.19.0
+	o py-cyclonedx-python-lib-4.2.2
 	o py-cython-3.0.2
 	o py-diffoscope-242
 	o py-django-4.2.5
@@ -1192,7 +1201,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.98.0
+	o py-google-api-python-client-2.99.0
+	o py-google-auth-2.23.0
+	o py-google-auth-httplib2-0.1.1
 	o py-grpcio-1.58.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
@@ -1203,27 +1214,32 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-llvmlite-0.39.0
 	o py-lsp-jsonrpc-1.1.1
 	o py-lsp-server-1.8.0
+	o py-matplotlib-3.8.0
 	o py-mercurial-6.5.2
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
+	o py-numpy-1.26.0
 	o py-omniORBpy-3.7
+	o py-pdf-3.16.0
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-protobuf-4.24.3
+	o py-pspdfutils-3.3.1
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-pytz-2023.3.post1
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-rapidfuzz-3.3.0
 	o py-readme_renderer-42.0
-	o py-rpds-py-0.10.2
+	o py-rpds-py-0.10.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
-	o py-setuptools-68.2.0
+	o py-setuptools-68.2.2
 	o py-simpletal-5.1
-	o py-sphinx-7.2.5
+	o py-sphinx-7.2.6
 	o py-sphinx-autodoc-typehints-1.24.0
 	o py-sphinx-rtd-theme-1.3.0
 	o py-sphinxcontrib-applehelp-1.0.7
@@ -1400,6 +1416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o texlab-5.9.2
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
+	o tiff-4.6.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tkcon-2.7.3
@@ -1422,6 +1439,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trojita-0.6
 	o ttftot42-0.4.1
 	o turba-4.2.12
+	o typst-0.8.0
 	o tyrquake-0.66
 	o uae-0.8.29
 	o ubs-0.20
@@ -1464,7 +1482,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.38.5 [wip]
-	o webkit-gtk-2.40.5
+	o webkit-gtk-2.42.0
 	o webmin-2.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
