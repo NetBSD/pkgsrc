@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5541 2023/09/17 09:04:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5542 2023/09/17 10:33:24 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8053,3 +8053,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-jplephem to 2.19 [adam 2023-09-17]
 	Updated textproc/py-openapi-core to 0.18.1 [adam 2023-09-17]
 	Updated math/py-numexpr to 2.8.6 [adam 2023-09-17]
+	Updated lang/nawk to 20230909 [vins 2023-09-17]
