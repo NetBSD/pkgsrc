@@ -1,0 +1,152 @@
+# $NetBSD: Makefile.common,v 1.1 2023/09/17 08:53:21 adam Exp $
+#
+# This Makefile fragment is included by all PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution except jdbc-postgresql.
+#
+# The PostgreSQL package naming scheme, aside from the obvious piecewise
+# packages, is as follows:
+#	<lang>-postgresql	client-side interface to PostgreSQL
+#	postgresql-<lang>	server-side module for PostgreSQL backend
+#
+# used by databases/postgresql16-client/Makefile
+# used by databases/postgresql16-contrib/Makefile
+# used by databases/postgresql16-docs/Makefile
+# used by databases/postgresql16-plperl/Makefile
+# used by databases/postgresql16-plpython/Makefile
+# used by databases/postgresql16-pltcl/Makefile
+# used by databases/postgresql16-server/Makefile
+
+DISTNAME=	postgresql-16.0
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER?=	adam@NetBSD.org
+HOMEPAGE=	https://www.postgresql.org/
+LICENSE=	postgresql-license
+
+CONFLICTS+=	postgresql-[0-9]*
+CONFLICTS+=	postgresql[2-9][0-9]-[0-9]*
+
+.if !empty(PKGNAME:M*-*-*)
+module=		${PKGNAME:C/-[0-9].*$//:C/^.*-//}
+CONFLICTS+=	postgresql[2-9][0-9]-${module}-[0-9]*
+.endif
+
+DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql16/distinfo
+PATCHDIR?=		${.CURDIR}/../../databases/postgresql16/patches
+
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		bison gmake lex
+PKG_SYSCONFSUBDIR=	postgresql
+
+.include "../../mk/bsd.prefs.mk"
+
+PG_TEMPLATE.SunOS=	solaris
+PG_TEMPLATE.IRIX=	irix5
+PG_TEMPLATE.MirBSD=	openbsd
+PG_TEMPLATE.DragonFly=	freebsd
+.if !defined(PG_TEMPLATE.${OPSYS})
+PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
+.endif
+
+PG_DATA_DIR=		${PREFIX}/share/postgresql
+PG_DOC_DIR=		${PREFIX}/share/doc/postgresql
+PG_LOCALE_DIR=		${PREFIX}/${PKGLOCALEDIR}/locale
+PG_ETC_DIR=		${PKG_SYSCONFDIR}
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
+CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
+CONFIGURE_ARGS+=	--docdir=${PG_DOC_DIR}
+CONFIGURE_ARGS+=	--localedir=${PG_LOCALE_DIR}
+CONFIGURE_ARGS+=	--with-template=${PG_TEMPLATE.${OPSYS}}
+
+CONFIGURE_ARGS+=	--with-libxml
+CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-tcl
+
+# Work around a bug in autoconf, that thinks almost all mkdir
+# implementations are deficient, and a bug someplace between postgis
+# and pgxs, that causes topology/Makefile.in to run pgxs's install-sh
+# but without a path.
+CONFIGURE_ENV+=		ac_cv_path_mkdir="mkdir"
+
+# avoid pointing to a wrapper
+CONFIGURE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt}
+
+# Avoid picking up a random zstd in PATH.  zstd support is currently disabled.
+CONFIGURE_ENV+=		ac_cv_path_ZSTD=
+
+# sys/ucred.h shouldn't be included on Solaris, causes conflicts between
+# procfs and largefile.
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
+
+# pkgsrc silently filters the --as-needed linker arg, but that makes
+# it leak into the pgxs Makefiles and compromises manual building
+# against PostgreSQL files installed. Disable it here to prevent
+# that from happening.
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
+.endif
+
+# Postgres on Alpha has no spinlock or memory barrier implementation
+# and is "unlikely to work correctly".
+# https://www.postgresql.org/message-id/E1X0yaj-000753-N6%40gemulon.postgresql.org
+BROKEN_ON_PLATFORM+=	*-*-alpha
+
+.if ${MACHINE_ARCH} == "sparc"
+CFLAGS.NetBSD+=		-D__sparc_v8__
+.endif
+
+# configure fails on OpenBSD and MirBSD if thread safety is enabled.
+CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
+CONFIGURE_ARGS.OpenBSD+=	--disable-thread-safety
+
+# PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
+# This also limits the size of a tuple.  The valid values are powers
+# of 2 up to 32768, and the default size is 8196.  Please don't change
+# this value unless you know what you are doing.
+BUILD_DEFS+=		PGSQL_BLCKSZ
+.if defined(PGSQL_BLCKSZ)
+CONFIGURE_ARGS+=	--with-blocksize=${PGSQL_BLCKSZ}
+.endif
+
+# UUID support for contrib/uuid-ossp
+# It has to be defined here, because it affects Makefile.global
+.if ${OPSYS:M*BSD}
+CONFIGURE_ARGS+=	--with-uuid=bsd
+.elif ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-uuid=e2fs
+.include "../../devel/libuuid/buildlink3.mk"
+.elif ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-uuid=ossp
+.include "../../devel/ossp-uuid/buildlink3.mk"
+.endif
+
+# PostgreSQL explicitly forbids any use of -ffast-math
+BUILDLINK_TRANSFORM+=	rm:-ffast-math
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
+.include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-libedit-preferred
+.endif
+
+OPSYSVARS+=	SOEXT
+SOEXT.Darwin=	dylib
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+.if !defined(META_PACKAGE)
+post-extract:
+	${TOUCH} ${WRKSRC}/src/template/dragonfly
+	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
+		${WRKSRC}/src/makefiles/Makefile.dragonfly
+.endif
+
+.include "../../databases/postgresql16/options.mk"
