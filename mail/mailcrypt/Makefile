@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/08/30 20:25:30 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2023/09/17 02:07:20 mef Exp $
 
 DISTNAME=	mailcrypt-3.5.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,6 +14,7 @@ COMMENT=	Emacs frontend for PGP and GPG
 EMACS_VERSIONS_ACCEPTED=	emacs20
 EMACS_VERSIONS_ACCEPTED+=	emacs21 emacs21nox
 EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf makeinfo
