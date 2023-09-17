@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5537 2023/09/17 06:49:34 mef Exp $
+$NetBSD: CHANGES-2023,v 1.5538 2023/09/17 08:54:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8035,3 +8035,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox to 117.0.1 [ryoon 2023-09-17]
 	Updated www/firefox-l10n to 117.0.1 [ryoon 2023-09-17]
 	Updated www/emacs-w3m to 1.4.5 [mef 2023-09-17]
+	Added databases/postgresql16 version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-client version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-contrib version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-docs version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-plperl version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-plpython version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-pltcl version 16.0 [adam 2023-09-17]
+	Added databases/postgresql16-server version 16.0 [adam 2023-09-17]
