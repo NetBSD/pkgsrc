@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.322 2023/09/16 13:20:51 tnn Exp $
+# $NetBSD: Makefile,v 1.323 2023/09/17 12:14:47 tnn Exp $
 
 DISTNAME=	qemu-8.1.0
 CATEGORIES=	emulators
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
-CONFIGURE_ENV+=		MESON_RSP_THRESHOLD=262144
+ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
 .if defined(PKGSRC_USE_SSP)
 # do not add flags to everything
