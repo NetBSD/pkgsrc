@@ -25,27 +25,6 @@ THIS SOFTWARE.
 This file lists all bug fixes, changes, etc., made since the AWK book
 was sent to the printers in August 1987.
 
-Sep 11, 2023:
-	Added --csv option to enable processing of comma-separated
-	values inputs.  When --csv is enabled, fields are separated
-	by commas, fields may be quoted with " double quotes, fields
-	may contain embedded newlines.
-
-	If no explicit separator argument is provided, split() uses
-	the setting of --csv to determine how fields are split.
-
-	Strings may now contain UTF-8 code points (not necessarily
-	characters).  Functions that operate on characters, like
-	length, substr, index, match, etc., use UTF-8, so the length
-	of a string of 3 emojis is 3, not 12 as it would be if bytes
-	were counted.
-
-	Regular expressions are processes as UTF-8.
-
-	Unicode literals can be written as \u followed by one
-	to eight hexadecimal digits.  These may appear in strings and
-	regular expressions.
-
 Sep 06, 2023:
 	Fix edge case where FS is changed on commandline. Thanks to 
 	Gordon Shephard and Miguel Pineiro Jr.
