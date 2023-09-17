@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2022/02/03 19:28:19 bacon Exp $
+# $NetBSD: Makefile.common,v 1.8 2023/09/17 08:56:18 adam Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -107,7 +107,6 @@ PLIST_SRC=	${.CURDIR}/../../math/openblas/PLIST
 PLIST_SUBST+=	OPENBLAS_VARIANT=${OPENBLAS_VARIANT}
 
 post-extract:
-	rm ${WRKSRC}/relapack/src/lapack_wrappers.c.orig
 	(cd ${DISTDIR}/${DIST_SUBDIR} && \
 		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC})
 
