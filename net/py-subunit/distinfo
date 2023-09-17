@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/11/17 14:37:13 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/09/17 18:01:23 adam Exp $
 
-BLAKE2s (python-subunit-1.4.2.tar.gz) = 7e694c492bca95f8c48a38fce099b93833b1df9d5831f03ce5a9b2c6a3e01000
-SHA512 (python-subunit-1.4.2.tar.gz) = 605b8f2886cf4bf253564f153aefe887b2da2a6cdc5bf41eddfd36886d0471b32efd4c014e17f6356a1bd7f7765b3327c86ad06465e78b3f97215a35d266572c
-Size (python-subunit-1.4.2.tar.gz) = 101101 bytes
+BLAKE2s (python-subunit-1.4.3.tar.gz) = 6f1ac9ead28ea6763376691e45d536cf991a918ba2725d990df8be7b5f8a017e
+SHA512 (python-subunit-1.4.3.tar.gz) = a0813ca8c5c47fb42e7061c8b8dfeddecf9892334a398e64e79a061d1e2a832a09abfeebb7f6fbdc7d8b62790094eb7c5784c2b1ccc79f87bb9d87f13791d42a
+Size (python-subunit-1.4.3.tar.gz) = 95855 bytes
