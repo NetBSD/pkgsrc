@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5542 2023/09/17 10:33:24 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5543 2023/09/17 10:40:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8054,3 +8054,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-openapi-core to 0.18.1 [adam 2023-09-17]
 	Updated math/py-numexpr to 2.8.6 [adam 2023-09-17]
 	Updated lang/nawk to 20230909 [vins 2023-09-17]
+	Updated security/httpx to 1.3.5 [leot 2023-09-17]
