@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/09/16 04:08:17 dholland Exp $
+# $NetBSD: Makefile,v 1.68 2023/09/17 21:43:48 gutteridge Exp $
 
 DISTNAME=	bulk-large-20230915
 CATEGORIES=	meta-pkgs
@@ -114,6 +114,7 @@ DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
+.include "../../graphics/librsvg/available.mk"
 .if ${LIBRSVG_TYPE} == "rust"
 DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
 .else
