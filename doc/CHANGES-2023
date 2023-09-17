@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5538 2023/09/17 08:54:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5539 2023/09/17 08:57:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8043,3 +8043,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Added databases/postgresql16-plpython version 16.0 [adam 2023-09-17]
 	Added databases/postgresql16-pltcl version 16.0 [adam 2023-09-17]
 	Added databases/postgresql16-server version 16.0 [adam 2023-09-17]
+	Updated math/openblas to 0.3.24 [adam 2023-09-17]
+	Updated math/openblas_openmp to 0.3.24 [adam 2023-09-17]
+	Updated math/openblas_pthread to 0.3.24 [adam 2023-09-17]
+	Updated math/openblas64 to 0.3.24 [adam 2023-09-17]
+	Updated math/openblas64_openmp to 0.3.24 [adam 2023-09-17]
+	Updated math/openblas64_pthread to 0.3.24 [adam 2023-09-17]
