@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5546 2023/09/17 11:09:09 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5547 2023/09/17 12:13:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8058,3 +8058,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/subfinder to 2.6.3 [leot 2023-09-17]
 	Updated security/tlsx to 1.1.4 [leot 2023-09-17]
 	Updated devel/git-cinnabar to 0.6.2 [bsiegert 2023-09-17]
+	Updated security/nuclei to 2.9.15 [leot 2023-09-17]
