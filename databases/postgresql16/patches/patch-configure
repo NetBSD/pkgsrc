@@ -1,0 +1,45 @@
+$NetBSD: patch-configure,v 1.1 2023/09/17 08:53:21 adam Exp $
+
+Do not store CONFIGURE_ARGS, as these may contain working directory references.
+Finally, native solaris uses -lgss for gssapi on mit-krb5.
+
+--- configure.orig	2023-09-11 20:25:06.000000000 +0000
++++ configure
+@@ -2825,7 +2825,7 @@ ac_configure="$SHELL $ac_aux_dir/configu
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define CONFIGURE_ARGS "$ac_configure_args"
++#define CONFIGURE_ARGS ""
+ _ACEOF
+ 
+ 
+@@ -2989,7 +2989,7 @@ case $host_os in
+      aix*) template=aix ;;
+   cygwin*|msys*) template=cygwin ;;
+   darwin*) template=darwin ;;
+-dragonfly*) template=netbsd ;;
++dragonfly*) template=dragonfly ;;
+  freebsd*) template=freebsd ;;
+  linux*|gnu*|k*bsd*-gnu)
+            template=linux ;;
+@@ -10456,9 +10456,7 @@ if test "$PORTNAME" = "win32" ; then
+ 		fi
+ 	fi
+ else
+-	pgac_tmp1=`$PERL -MExtUtils::Embed -e ldopts`
+-	pgac_tmp2=`$PERL -MConfig -e 'print "$Config{ccdlflags} $Config{ldflags}"'`
+-	perl_embed_ldflags=`echo X"$pgac_tmp1" | sed -e "s/^X//" -e "s%$pgac_tmp2%%"`
++	perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
+ fi
+ if test -z "$perl_embed_ldflags" ; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+@@ -12647,7 +12645,7 @@ return gss_store_cred_into ();
+   return 0;
+ }
+ _ACEOF
+-for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto'; do
++for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto' 'gss -lkrb5 lcrypto'; do
+   if test -z "$ac_lib"; then
+     ac_res="none required"
+   else
