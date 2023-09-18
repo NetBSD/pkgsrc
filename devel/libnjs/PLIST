@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/17 16:44:51 osa Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/18 17:49:31 osa Exp $
 include/njs.h
 include/njs_addr2line.h
 include/njs_arr.h
@@ -20,6 +20,7 @@ include/njs_encoding.h
 include/njs_error.h
 include/njs_event.h
 include/njs_file.h
+include/njs_flathsh.h
 include/njs_function.h
 include/njs_generator.h
 include/njs_iterator.h
