@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2023/05/02 06:05:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/09/18 14:41:01 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
-${PYSITELIB}/omp/__init__.py
-${PYSITELIB}/omp/__init__.pyc
-${PYSITELIB}/omp/__init__.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/omp/__init__.py
+${PYSITELIB}/omp/__init__.pyc
+${PYSITELIB}/omp/__init__.pyo
 ${PYSITELIB}/pythran/__init__.py
 ${PYSITELIB}/pythran/__init__.pyc
 ${PYSITELIB}/pythran/__init__.pyo
@@ -2526,6 +2526,7 @@ ${PYSITELIB}/pythran/pythonic/builtins/str/lstrip.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/replace.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/rstrip.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/split.hpp
+${PYSITELIB}/pythran/pythonic/builtins/str/splitlines.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/startswith.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/strip.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/str/upper.hpp
@@ -2734,6 +2735,7 @@ ${PYSITELIB}/pythran/pythonic/include/builtins/str/lstrip.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/replace.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/rstrip.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/split.hpp
+${PYSITELIB}/pythran/pythonic/include/builtins/str/splitlines.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/startswith.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/strip.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/str/upper.hpp
@@ -3070,6 +3072,7 @@ ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/sort.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tofile.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/tostring.hpp
+${PYSITELIB}/pythran/pythonic/include/numpy/ndarray/view.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndenumerate.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndim.hpp
 ${PYSITELIB}/pythran/pythonic/include/numpy/ndindex.hpp
@@ -3355,6 +3358,7 @@ ${PYSITELIB}/pythran/pythonic/include/types/assignable.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/attr.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/bool.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/cfun.hpp
+${PYSITELIB}/pythran/pythonic/include/types/clongdouble.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/combined.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/complex.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/complex128.hpp
@@ -3381,6 +3385,7 @@ ${PYSITELIB}/pythran/pythonic/include/types/intc.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/intp.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/lazy.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/list.hpp
+${PYSITELIB}/pythran/pythonic/include/types/longdouble.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/ndarray.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/nditerator.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/numpy_binary_op.hpp
@@ -3735,6 +3740,7 @@ ${PYSITELIB}/pythran/pythonic/numpy/ndarray/sort.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tofile.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndarray/tostring.hpp
+${PYSITELIB}/pythran/pythonic/numpy/ndarray/view.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndenumerate.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndim.hpp
 ${PYSITELIB}/pythran/pythonic/numpy/ndindex.hpp
@@ -4024,6 +4030,7 @@ ${PYSITELIB}/pythran/pythonic/types/assignable.hpp
 ${PYSITELIB}/pythran/pythonic/types/attr.hpp
 ${PYSITELIB}/pythran/pythonic/types/bool.hpp
 ${PYSITELIB}/pythran/pythonic/types/cfun.hpp
+${PYSITELIB}/pythran/pythonic/types/clongdouble.hpp
 ${PYSITELIB}/pythran/pythonic/types/combined.hpp
 ${PYSITELIB}/pythran/pythonic/types/complex.hpp
 ${PYSITELIB}/pythran/pythonic/types/complex128.hpp
@@ -4048,6 +4055,7 @@ ${PYSITELIB}/pythran/pythonic/types/int8.hpp
 ${PYSITELIB}/pythran/pythonic/types/intc.hpp
 ${PYSITELIB}/pythran/pythonic/types/intp.hpp
 ${PYSITELIB}/pythran/pythonic/types/list.hpp
+${PYSITELIB}/pythran/pythonic/types/longdouble.hpp
 ${PYSITELIB}/pythran/pythonic/types/ndarray.hpp
 ${PYSITELIB}/pythran/pythonic/types/nditerator.hpp
 ${PYSITELIB}/pythran/pythonic/types/numpy_binary_op.hpp
