@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5560 2023/09/18 14:42:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5561 2023/09/18 17:23:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8083,3 +8083,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/ksh93 to 1.0.7 [vins 2023-09-18]
 	Updated math/py-pythran to 0.14.0 [adam 2023-09-18]
 	Updated multimedia/py-m3u8 to 3.6.0 [adam 2023-09-18]
+	Updated databases/ruby-sqlite3 to 1.6.6 [taca 2023-09-18]
