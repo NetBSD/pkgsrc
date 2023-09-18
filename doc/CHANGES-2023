@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5558 2023/09/18 12:56:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5559 2023/09/18 14:12:34 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8080,3 +8080,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libimagequant to 4.2.1 [adam 2023-09-18]
 	Updated textproc/yq to 3.2.3 [adam 2023-09-18]
 	Updated devel/py-faker to 19.6.1 [adam 2023-09-18]
+	Updated shells/ksh93 to 1.0.7 [vins 2023-09-18]
