@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2023/07/27 08:18:00 abs Exp $
+@comment $NetBSD: PLIST,v 1.55 2023/09/18 03:39:02 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -1921,6 +1921,9 @@ share/roundcube/program/localization/tr_TR/messages.inc
 share/roundcube/program/localization/tr_TR/timezones.inc
 share/roundcube/program/localization/tzl/labels.inc
 share/roundcube/program/localization/tzl/messages.inc
+share/roundcube/program/localization/ug/labels.inc
+share/roundcube/program/localization/ug/messages.inc
+share/roundcube/program/localization/ug/timezones.inc
 share/roundcube/program/localization/uk_UA/labels.inc
 share/roundcube/program/localization/uk_UA/messages.inc
 share/roundcube/program/localization/ur_PK/labels.inc
@@ -2183,9 +2186,6 @@ share/roundcube/vendor/guzzlehttp/promises/src/RejectionException.php
 share/roundcube/vendor/guzzlehttp/promises/src/TaskQueue.php
 share/roundcube/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 share/roundcube/vendor/guzzlehttp/promises/src/Utils.php
-share/roundcube/vendor/guzzlehttp/promises/vendor-bin/php-cs-fixer/composer.json
-share/roundcube/vendor/guzzlehttp/promises/vendor-bin/phpstan/composer.json
-share/roundcube/vendor/guzzlehttp/promises/vendor-bin/psalm/composer.json
 share/roundcube/vendor/guzzlehttp/psr7/CHANGELOG.md
 share/roundcube/vendor/guzzlehttp/psr7/LICENSE
 share/roundcube/vendor/guzzlehttp/psr7/README.md
