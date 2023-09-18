@@ -1,46 +1,37 @@
-# $NetBSD: Makefile,v 1.8 2023/07/03 10:44:08 vins Exp $
+# $NetBSD: Makefile,v 1.9 2023/09/18 14:11:41 vins Exp $
 
-DISTNAME=	ksh93-1.0.6
+DISTNAME=	ksh93-1.0.7
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
 GITHUB_TAG=	v${PKGVERSION:S/beta/-beta/}
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://github.com/ksh93/ksh/
+HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Actively developed fork of AT&T KornShell 93u+
 LICENSE=	epl-v1.0
 
 CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
+USE_TOOLS+=		ksh
+USE_CC_FEATURES=	c11
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+
 FORTIFY_SUPPORTED=	no
 
-KSH=	${TOOLS_PATH.ksh:Q}
+MAKE_ENV+=		SHELL=${KSH}
+MAKE_ENV+=		CCFLAGS=${CFLAGS:M*:Q}
 
-MAKEFLAGS+=		CC=${CC:Q} SHELL=${KSH}
-MAKEFLAGS+=		CCFLAGS=${CFLAGS:M*:Q}
-
-CFLAGS.SunOS+=	-std=c11 -D__EXTENSIONS__
-
-PKG_SHELL=		bin/ksh93
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+TEST_TARGET=	test
+PKG_SHELL=	bin/ksh93
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 				\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 		\
 		${KSH} ./bin/package make ${MAKEFLAGS}
 
 do-install:
-	set -e;								\
-	arch=`${WRKSRC}/bin/package host`;                              \
-	${INSTALL_PROGRAM} ${WRKSRC}/arch/"$${arch}"/bin/ksh 		\
-		${DESTDIR}${PREFIX}/bin/ksh93
-
-	${INSTALL_MAN} ${WRKSRC}/src/cmd/ksh93/sh.1 			\
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ksh93.1
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} SHELL=${KSH}				\
-		${KSH} ./bin/package test
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV}	\
+		${KSH} ./bin/package install ${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
