@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2023/08/23 07:22:51 adam Exp $
+# $NetBSD: Makefile,v 1.66 2023/09/18 12:33:25 adam Exp $
 
-DISTNAME=	ansible-8.3.0
+DISTNAME=	ansible-8.4.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 PREV_PKGPATH=	sysutils/ansible2
 
-DEPENDS+=	ansible-core>=2.15.1:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.15.4:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
