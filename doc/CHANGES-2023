@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5554 2023/09/18 08:02:17 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5555 2023/09/18 12:33:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8073,3 +8073,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox to 117.0.1nb1 [ryoon 2023-09-18]
 	Updated devel/py-hatch-nodejs-version to 0.3.2 [adam 2023-09-18]
 	Updated devel/py-typing-extensions to 4.8.0 [adam 2023-09-18]
+	Updated sysutils/ansible-core to 2.15.4 [adam 2023-09-18]
+	Updated sysutils/ansible to 8.4.0 [adam 2023-09-18]
