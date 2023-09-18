@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5569 2023/09/18 17:47:12 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5570 2023/09/18 17:53:25 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8092,3 +8092,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-core to 3.181.1 [taca 2023-09-18]
 	Updated www/ruby-excon to 0.103.0 [taca 2023-09-18]
 	Updated www/ruby-faraday to 2.7.11 [taca 2023-09-18]
+	Updated devel/libnjs to 0.8.1 [osa 2023-09-18]
+	Updated lang/njs to 0.8.1 [osa 2023-09-18]
+	Updated www/nginx to 1.24.0nb11 [osa 2023-09-18]
+	Updated www/nginx-devel to 1.25.2nb1 [osa 2023-09-18]
+	Updated www/unit to 1.31.0nb1 [osa 2023-09-18]
