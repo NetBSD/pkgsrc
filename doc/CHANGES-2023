@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5555 2023/09/18 12:33:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5556 2023/09/18 12:39:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8075,3 +8075,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-typing-extensions to 4.8.0 [adam 2023-09-18]
 	Updated sysutils/ansible-core to 2.15.4 [adam 2023-09-18]
 	Updated sysutils/ansible to 8.4.0 [adam 2023-09-18]
+	Updated graphics/matugen to 0.10.1 [pin 2023-09-18]
