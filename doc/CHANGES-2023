@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5553 2023/09/18 06:13:01 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5554 2023/09/18 08:02:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8071,3 +8071,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/haproxy to 2.8.3 [adam 2023-09-18]
 	Updated devel/py-hypothesis to 6.86.1 [adam 2023-09-18]
 	Updated www/firefox to 117.0.1nb1 [ryoon 2023-09-18]
+	Updated devel/py-hatch-nodejs-version to 0.3.2 [adam 2023-09-18]
+	Updated devel/py-typing-extensions to 4.8.0 [adam 2023-09-18]
