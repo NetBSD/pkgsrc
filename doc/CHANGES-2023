@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5550 2023/09/17 18:03:08 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5551 2023/09/18 03:40:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8064,3 +8064,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/py-rich to 13.5.3 [adam 2023-09-17]
 	Updated devel/py-smmap to 5.0.1 [adam 2023-09-17]
 	Updated net/py-subunit to 1.4.3 [adam 2023-09-17]
+	Updated mail/roundcube to 1.6.3 [taca 2023-09-18]
+	Updated mail/roundcube-plugin-enigma to 1.6.3 [taca 2023-09-18]
+	Updated mail/roundcube-plugin-password to 1.6.3 [taca 2023-09-18]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.3 [taca 2023-09-18]
