@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/09/18 12:53:57 adam Exp $
 
-DISTNAME=	yq-3.2.2
-PKGREVISION=	1
+DISTNAME=	yq-3.2.3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yq/}
 
