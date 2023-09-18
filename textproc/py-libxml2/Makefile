@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2023/06/06 12:42:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.88 2023/09/18 13:21:40 gdt Exp $
 
 PKGREVISION= 1
 .include "../../textproc/libxml2/Makefile.common"
@@ -14,6 +14,22 @@ PYSETUPSUBDIR=	python
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
+# python/setup.py looks in various places for libxml2 and libiconv,
+# including (usually incorrectly) in /usr/include, /usr/local/include
+# and /opt/include, and finally (usually correctly) in
+# $prefix/include.  This can result in finding an old system libxml2,
+# which is problematic in general, but can result in enabling legacy
+# functions e.g. xmlCleanupPredefinedEntities which will then fail at
+# import time.
+#
+# The following attempts to patch around this, but it is not good
+# enough with pkgsrc xml2 and native iconv because the iconv include
+# path is first.  This can happen on old macOS.
+# 
+# \todo Patch setup.py.in to have @LIBXML2_PREFIX@ and @ICONV_PREFIX@
+# (in order) and then substite those, or at least ensure that the
+# iconv prefix is afterwwards.
+#
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
