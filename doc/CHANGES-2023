@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5551 2023/09/18 03:40:34 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5552 2023/09/18 05:56:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8068,3 +8068,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/roundcube-plugin-enigma to 1.6.3 [taca 2023-09-18]
 	Updated mail/roundcube-plugin-password to 1.6.3 [taca 2023-09-18]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.3 [taca 2023-09-18]
+	Updated net/haproxy to 2.8.3 [adam 2023-09-18]
+	Updated devel/py-hypothesis to 6.86.1 [adam 2023-09-18]
