@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.7 2021/05/30 09:26:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/09/18 17:31:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/execjs.rb
 ${GEM_LIBDIR}/lib/execjs/disabled_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/duktape_runtime.rb
-${GEM_LIBDIR}/lib/execjs/encoding.rb
 ${GEM_LIBDIR}/lib/execjs/external_runtime.rb
+${GEM_LIBDIR}/lib/execjs/graaljs_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/mini_racer_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/module.rb
 ${GEM_LIBDIR}/lib/execjs/ruby_rhino_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/runtime.rb
 ${GEM_LIBDIR}/lib/execjs/runtimes.rb
+${GEM_LIBDIR}/lib/execjs/support/bun_runner.js
 ${GEM_LIBDIR}/lib/execjs/support/jsc_runner.js
 ${GEM_LIBDIR}/lib/execjs/support/jscript_runner.js
 ${GEM_LIBDIR}/lib/execjs/support/json2.js
