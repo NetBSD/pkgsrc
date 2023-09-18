@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/05/04 17:36:05 adam Exp $
+$NetBSD: distinfo,v 1.11 2023/09/18 14:41:01 adam Exp $
 
-BLAKE2s (pythran-0.13.1.tar.gz) = 8e2c3c23347bfae95ff406aa45f183041d5755887be19a094b9effcbfedad0cb
-SHA512 (pythran-0.13.1.tar.gz) = 4a0cc4621dda1cefdd1a77182e9cf2d5226f4eb36d6d82803f6d0a202148c64612e4c3bbbe3af77201cdd0536cfa700a7129ac0e7f8919478d685db043bcac87
-Size (pythran-0.13.1.tar.gz) = 4010788 bytes
+BLAKE2s (pythran-0.14.0.tar.gz) = ac2170441fe3a789fe5852a3f0f95ad16e618dc4dfcddc016b37ea2c60a2938f
+SHA512 (pythran-0.14.0.tar.gz) = 48f76605175f89d27d5d5878cd76c5d7f3096d002c5ca163b556c5b12b7cfac0f9dc4f839e85273000c299944ced13923797826e5983252e7bf53d8511e3ae91
+Size (pythran-0.14.0.tar.gz) = 4015360 bytes
