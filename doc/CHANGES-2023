@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5566 2023/09/18 17:40:42 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5567 2023/09/18 17:42:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8089,3 +8089,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/ruby-vault to 0.18.1 [taca 2023-09-18]
 	Updated textproc/ruby-sanitize to 6.1.0 [taca 2023-09-18]
 	Updated www/ruby-aws-partitions to 1.824.0 [taca 2023-09-18]
+	Updated www/ruby-aws-sdk-core to 3.181.1 [taca 2023-09-18]
