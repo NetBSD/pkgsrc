@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/03 20:57:38 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/18 14:11:41 vins Exp $
 bin/ksh93
+bin/shcomp
+libexec/ksh93/autocd
+libexec/ksh93/cd
+libexec/ksh93/dirs
+libexec/ksh93/man
+libexec/ksh93/mcd
+libexec/ksh93/popd
+libexec/ksh93/pushd
 man/man1/ksh93.1
+man/man1/shcomp.1
