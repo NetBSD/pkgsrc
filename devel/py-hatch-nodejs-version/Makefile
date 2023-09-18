@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/02/09 12:49:42 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/18 08:00:07 adam Exp $
 
-DISTNAME=	hatch_nodejs_version-0.3.1
+DISTNAME=	hatch_nodejs_version-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-nodejs-version/}
