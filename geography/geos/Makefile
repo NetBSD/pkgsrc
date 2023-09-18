@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/08/26 00:07:41 gdt Exp $
+# $NetBSD: Makefile,v 1.48 2023/09/18 00:16:25 gdt Exp $
 
 VERSION_BASE=	3.12.0
 # Accomodate testing unreleased versions.
@@ -35,7 +35,9 @@ HOMEPAGE=	https://trac.osgeo.org/geos
 COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+
+USE_CXX_FEATURES+=	c++14
 
 USE_CMAKE=		yes
 #PKG_DEBUG_LEVEL?=	1
