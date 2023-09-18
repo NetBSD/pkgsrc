@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5557 2023/09/18 12:47:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5558 2023/09/18 12:56:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8078,3 +8078,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/matugen to 0.10.1 [pin 2023-09-18]
 	Updated security/libsodium to 1.0.19 [adam 2023-09-18]
 	Updated graphics/libimagequant to 4.2.1 [adam 2023-09-18]
+	Updated textproc/yq to 3.2.3 [adam 2023-09-18]
+	Updated devel/py-faker to 19.6.1 [adam 2023-09-18]
