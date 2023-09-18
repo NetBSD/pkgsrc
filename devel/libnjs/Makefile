@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/07/20 15:02:51 osa Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/18 17:49:31 osa Exp $
 
-DISTNAME=	njs-0.8.0
-PKGNAME=	libnjs-0.8.0
+DISTNAME=	njs-0.8.1
+PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
+MASTER_SITES=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/0.8.1.tar.gz}
 
 MAINTAINER=	osa@NetBSD.org
 HOMEPAGE=	https://nginx.org/en/docs/njs/
