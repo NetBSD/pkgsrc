@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5571 2023/09/18 22:10:34 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5572 2023/09/19 00:42:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8098,3 +8098,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx-devel to 1.25.2nb1 [osa 2023-09-18]
 	Updated www/unit to 1.31.0nb1 [osa 2023-09-18]
 	Updated net/mosquitto to 2.0.18 [gdt 2023-09-18]
+	Updated net/libsoup3 to 3.4.3 [gutteridge 2023-09-19]
