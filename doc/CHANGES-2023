@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5572 2023/09/19 00:42:13 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5573 2023/09/19 01:58:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8099,3 +8099,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit to 1.31.0nb1 [osa 2023-09-18]
 	Updated net/mosquitto to 2.0.18 [gdt 2023-09-18]
 	Updated net/libsoup3 to 3.4.3 [gutteridge 2023-09-19]
+	Updated x11/xfce4-notifyd to 0.9.0 [gutteridge 2023-09-19]
