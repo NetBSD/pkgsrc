@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2023/03/05 02:10:43 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/09/19 01:58:46 gutteridge Exp $
 bin/xfce4-notifyd-config
 lib/xfce4/notifyd/xfce4-notifyd
 lib/xfce4/panel/plugins/libnotification-plugin.la
 man/man1/xfce4-notifyd-config.1
 share/applications/xfce4-notifyd-config.desktop
+share/dbus-1/services/org.xfce.xfce4-notifyd.Notifications.service
+share/dbus-1/services/org.xfce.xfce4-notifyd.Notifyd.service
 share/examples/xfce4-notifyd/xfce4-notifyd.desktop
 share/icons/hicolor/16x16/apps/org.xfce.notification.png
 share/icons/hicolor/48x48/apps/org.xfce.notification.png
@@ -11,6 +13,7 @@ share/icons/hicolor/scalable/apps/org.xfce.notification.svg
 share/icons/hicolor/scalable/status/notification-disabled-symbolic.svg
 share/icons/hicolor/scalable/status/notification-symbolic.svg
 share/icons/hicolor/scalable/status/org.xfce.notification.unread-emblem-symbolic.svg
+share/locale/ar/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/ast/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/be/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/bg/LC_MESSAGES/xfce4-notifyd.mo
