@@ -1,4 +1,6 @@
-BIND, the Berkeley Internet Name Daemon.  This package contains the BIND
-9.18 release.
+BIND, the Berkeley Internet Name Daemon.
 
 Release notes are available via https://bind9.readthedocs.io/en/
+
+This package contains the BIND 9.18 release.  Upstream labels it
+as supported.
