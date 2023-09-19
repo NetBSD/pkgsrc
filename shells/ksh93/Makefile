@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/09/18 14:11:41 vins Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/19 22:18:02 vins Exp $
 
 DISTNAME=	ksh93-1.0.7
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
@@ -13,25 +14,27 @@ LICENSE=	epl-v1.0
 
 CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
 
-USE_TOOLS+=		ksh
 USE_CC_FEATURES=	c11
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 FORTIFY_SUPPORTED=	no
 
-MAKE_ENV+=		SHELL=${KSH}
-MAKE_ENV+=		CCFLAGS=${CFLAGS:M*:Q}
+MAKE_FLAGS+=		SHELL=${SH:Q} CC=${CC:Q} \
+			CCFLAGS=${CFLAGS:M*:Q}
 
-TEST_TARGET=	test
 PKG_SHELL=	bin/ksh93
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 		\
-		${KSH} ./bin/package make ${MAKEFLAGS}
+		${SH} ./bin/package make ${MAKE_FLAGS}
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV}	\
-		${KSH} ./bin/package install ${DESTDIR}${PREFIX}
+		${SH} ./bin/package install ${DESTDIR}${PREFIX}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV}		\
+		${SH} ./bin/package test
 
 .include "../../mk/bsd.pkg.mk"
