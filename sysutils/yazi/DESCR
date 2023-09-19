@@ -1,0 +1,6 @@
+Blazing Fast Terminal File Manager.
+
+Yazi (duck in Chinese) is a terminal file manager written in Rust, based on
+non-blocking async I/O.
+It aims to provide an efficient, user-friendly, and customizable file
+management experience.
