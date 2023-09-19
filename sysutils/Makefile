@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1071 2023/09/11 14:02:05 bacon Exp $
+# $NetBSD: Makefile,v 1.1072 2023/09/19 07:07:07 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -946,6 +946,7 @@ SUBDIR+=	xps
 SUBDIR+=	xuvmstat
 SUBDIR+=	yadm
 SUBDIR+=	yank
+SUBDIR+=	yazi
 SUBDIR+=	ytree
 SUBDIR+=	zabbix
 SUBDIR+=	zabbix-frontend
