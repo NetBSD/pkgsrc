@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5574 2023/09/19 07:07:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5575 2023/09/19 12:46:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8101,3 +8101,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libsoup3 to 3.4.3 [gutteridge 2023-09-19]
 	Updated x11/xfce4-notifyd to 0.9.0 [gutteridge 2023-09-19]
 	Added sysutils/yazi version 0.1.4 [pin 2023-09-19]
+	Updated meta-pkgs/xfce4-extras to 4.18.1nb1 [gutteridge 2023-09-19]
