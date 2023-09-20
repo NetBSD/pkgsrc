@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5578 2023/09/20 07:32:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5579 2023/09/20 07:35:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8106,3 +8106,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated cad/klayout to 0.28.12 [mef 2023-09-19]
 	Updated net/py-netaddr to 0.9.0 [adam 2023-09-20]
 	Updated net/py-tldextract to 3.6.0 [adam 2023-09-20]
+	Updated security/py-cryptography to 41.0.4 [adam 2023-09-20]
+	Updated security/py-cryptography_vectors to 41.0.4 [adam 2023-09-20]
