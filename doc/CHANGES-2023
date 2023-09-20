@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5582 2023/09/20 12:13:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5583 2023/09/20 12:15:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8112,3 +8112,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs to 20.7.0 [adam 2023-09-20]
 	Updated lang/nodejs18 to 18.18.0 [adam 2023-09-20]
 	Updated games/tetris-tui to 0.1.6 [pin 2023-09-20]
+	Updated sysutils/broot to 1.25.2 [pin 2023-09-20]
