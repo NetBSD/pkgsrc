@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5585 2023/09/20 13:36:29 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5586 2023/09/20 13:37:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8115,3 +8115,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.25.2 [pin 2023-09-20]
 	Updated net/bind916 to 9.16.44 [taca 2023-09-20]
 	Updated ham/chirp to 20230917 [gdt 2023-09-20]
+	Updated net/bind918 to 9.18.19 [taca 2023-09-20]
