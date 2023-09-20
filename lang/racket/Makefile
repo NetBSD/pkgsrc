@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2023/09/20 16:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/09/20 22:37:39 vins Exp $
 
 DISTNAME=		racket-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -64,7 +64,6 @@ post-install:
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -76,4 +75,6 @@ post-install:
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
