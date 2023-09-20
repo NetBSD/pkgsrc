@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.27 2023/09/01 19:48:28 riastradh Exp $
+$NetBSD: distinfo,v 1.28 2023/09/20 22:37:40 vins Exp $
 
 BLAKE2s (racket-8.10-src.tgz) = 75ead0b8bd75edebf7743eaeba1465ac99d4559fdb97df7f485713331a6022f4
 SHA512 (racket-8.10-src.tgz) = 75df87b1322ebe10e9d3de3661a64ae4aea41f68af2a4941570fbe53c7047e67b74f126e532fba244e2593eaeef740ded3736e3b6eab77b9a4f1b8a0ee850894
 Size (racket-8.10-src.tgz) = 33960563 bytes
-SHA1 (patch-src_ChezScheme_configure) = 2ca8a7f3de569ccfdc4296916774fd9a2276275d
-SHA1 (patch-src_bc_configure) = 4d4c75686c3170617ba216438f5815d238f44ff8
-SHA1 (patch-src_bc_configure.ac) = 8f86d669f203ecde18c5cce1c544718f1c5938e4
-SHA1 (patch-src_cs_c_configure) = 0c0a087da9e21aacbad64cf00a6a877ab161b7b7
-SHA1 (patch-src_cs_c_configure.ac) = f9d24bb3c829aecc1a33864d9d7a5e0268fbc6af
+SHA1 (patch-src_ChezScheme_c_expeditor.c) = b31d795ec9202762d56a0add7c2cd010bdcf6817
+SHA1 (patch-src_ChezScheme_configure) = c0e0e3a9f68bbae18693d26c45a401f2add8a408
+SHA1 (patch-src_bc_configure) = de3b834b7528a41f07f52602b7c3ab0f8700a538
+SHA1 (patch-src_bc_configure.ac) = cf8f61e2268c7a206c8c17fe32dc96d548672009
+SHA1 (patch-src_cs_c_configure) = 103c94e23fa81c8da786b9e6a345c06a0d3f6919
+SHA1 (patch-src_cs_c_configure.ac) = 999bd30c818efe83e9f53eff8498646fe477ca67
