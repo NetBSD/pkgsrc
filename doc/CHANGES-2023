@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5588 2023/09/20 13:44:50 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5589 2023/09/20 16:46:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8118,3 +8118,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bind918 to 9.18.19 [taca 2023-09-20]
 	Updated textproc/ruby-tilt to 2.3.0 [taca 2023-09-20]
 	Updated security/ruby-metasploit-payloads to 2.0.150 [taca 2023-09-20]
+	Updated www/py-urllib3 to 2.0.5 [adam 2023-09-20]
+	Updated textproc/py-jsonschema to 4.19.1 [adam 2023-09-20]
