@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.104 2023/08/04 20:37:46 adam Exp $
+$NetBSD: distinfo,v 1.105 2023/09/20 17:07:59 adam Exp $
 
-BLAKE2s (unrarsrc-6.2.10.tar.gz) = e4100808c03364d78959aa1407491023fb514816e0ffbd1d92c99ab2d10ba9e2
-SHA512 (unrarsrc-6.2.10.tar.gz) = 26e7febc4e62bcace7aa36e05d5341ab57813cc0c224c6a924ca909828879b0172d2cea9ab6cfdfe4bc3b51d49feb48f46df3874fa6f070f6062a15e1020271d
-Size (unrarsrc-6.2.10.tar.gz) = 246383 bytes
+BLAKE2s (unrarsrc-6.2.11.tar.gz) = f22aa90b999f400f35cd57b69d571f24697b1fe388578c14c66c09a123f8acdc
+SHA512 (unrarsrc-6.2.11.tar.gz) = 07504d5a08ae12190b43c6898e11cebc868ae373eae756ebb8a446c5c5a42ef456652e86a81dc855a23edae43144be3bf55e57768e7b4fa188ab4368cfa0657e
+Size (unrarsrc-6.2.11.tar.gz) = 246682 bytes
