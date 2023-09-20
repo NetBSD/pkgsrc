@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2023/08/13 18:35:14 wiz Exp $
+$NetBSD: distinfo,v 1.16 2023/09/20 02:10:54 mrg Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 0801cd15847412f2316affd5a7cd4efe628abfb0e3251a9069184dde1b42ad5b
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = e35d0cab5f66a148420206616b3517e62b8320572beac53650096c0db58db8b4942d52a3abf4f0d6db1450de27befeb92f8b632c1277b0939464c1407a904b1b
@@ -788,6 +788,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn) = cf10aa3e5
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_webrtc.gni) = 501ac49f4dd406057089ac65196a7c0eff2560c4
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = e841d76dc7417676844f5f089893275c906acbbf
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_cpu__features.c) = 2ae5c09b935a94fc50c052f199a945875d3d9127
+SHA1 (patch-src_3rdparty_chromium_third_party_skia_src_utils_SkParseColor.cpp) = 09e2a2144d6819e4ff4649dac3b4b198c3033f46
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_BUILD.gn) = 1952774426515651e3f2797a296be102e9ef55b2
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_libsupersize_caspian_BUILD.gn) = d5db9eae64c975ce7770b9e1f2b5578c7c4883b6
 SHA1 (patch-src_3rdparty_chromium_tools_grit_BUILD.gn) = 85172e974e874b8e2ab9f47619faa2578f84bdc4
