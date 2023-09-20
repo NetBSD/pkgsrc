@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5587 2023/09/20 13:40:35 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5588 2023/09/20 13:44:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8117,3 +8117,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/chirp to 20230917 [gdt 2023-09-20]
 	Updated net/bind918 to 9.18.19 [taca 2023-09-20]
 	Updated textproc/ruby-tilt to 2.3.0 [taca 2023-09-20]
+	Updated security/ruby-metasploit-payloads to 2.0.150 [taca 2023-09-20]
