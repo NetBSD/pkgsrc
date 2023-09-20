@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/07/12 09:15:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/09/20 07:29:14 adam Exp $
 
-DISTNAME=	netaddr-0.8.0
+DISTNAME=	netaddr-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netaddr/}
 
