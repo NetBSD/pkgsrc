@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.62 2023/09/04 06:36:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.63 2023/09/20 12:14:38 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
@@ -65,7 +65,7 @@ CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	csv2svg-0.1.9
 CARGO_CRATE_DEPENDS+=	custom_error-1.9.2
 CARGO_CRATE_DEPENDS+=	data-url-0.2.0
-CARGO_CRATE_DEPENDS+=	deser-hjson-2.1.0
+CARGO_CRATE_DEPENDS+=	deser-hjson-2.2.0
 CARGO_CRATE_DEPENDS+=	directories-4.0.1
 CARGO_CRATE_DEPENDS+=	directories-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.7
