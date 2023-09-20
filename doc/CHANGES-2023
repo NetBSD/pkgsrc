@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5584 2023/09/20 13:35:53 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5585 2023/09/20 13:36:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8114,3 +8114,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/tetris-tui to 0.1.6 [pin 2023-09-20]
 	Updated sysutils/broot to 1.25.2 [pin 2023-09-20]
 	Updated net/bind916 to 9.16.44 [taca 2023-09-20]
+	Updated ham/chirp to 20230917 [gdt 2023-09-20]
