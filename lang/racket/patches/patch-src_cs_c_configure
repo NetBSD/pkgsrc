@@ -1,10 +1,10 @@
-$NetBSD: patch-src_cs_c_configure,v 1.1 2023/09/01 19:48:28 riastradh Exp $
+$NetBSD: patch-src_cs_c_configure,v 1.2 2023/09/20 22:37:40 vins Exp $
 
 Don't link against libiconv_std.a.
 https://github.com/racket/racket/issues/4736
 
-Link against ncurses with -lncurses, not by hard-coding the static
-library path out of /usr/pkg.
+Directly link against ncurses and terminfo libraries, not by
+hard-coding the static library path out of /usr/pkg.
 https://github.com/racket/racket/issues/4734
 
 Allow CONFIGURE_ENV to set PAXCTL so user need not have /usr/sbin in
@@ -20,7 +20,7 @@ PATH.
      skip_curses_check=yes
 -    add_curses_lib="/usr/pkg/lib/libncurses.a"
 -    default_post_linker="paxctl +m"
-+    add_curses_lib="-lncurses"
++    add_curses_lib="-lcurses -lterminfo"
 +    default_post_linker="${PAXCTL:-paxctl} +m"
      ;;
    irix*)

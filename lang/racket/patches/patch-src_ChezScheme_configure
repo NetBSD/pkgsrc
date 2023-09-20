@@ -1,10 +1,11 @@
-$NetBSD: patch-src_ChezScheme_configure,v 1.1 2023/09/01 19:48:28 riastradh Exp $
+$NetBSD: patch-src_ChezScheme_configure,v 1.2 2023/09/20 22:37:40 vins Exp $
 
 Don't link against libiconv_std.a.
 https://github.com/racket/racket/issues/4736
 
-Link against ncurses with -lncurses, not by hard-coding the static
-library path out of /usr/pkg.  Omit spurious -I paths.
+Directly link against netbsd curses and terminfo libraries, not by
+hard-coding the static library path out of /usr/pkg.
+Omit spurious -I paths. 
 https://github.com/racket/racket/issues/4734
 
 --- src/ChezScheme/configure.orig	2023-07-18 00:36:32.000000000 +0000
@@ -17,7 +18,7 @@ https://github.com/racket/racket/issues/4734
 -            iconvLib="/usr/lib/i18n/libiconv_std.a"
 -        fi
 -        LIBS="${LIBS} ${iconvLib} -lm /usr/pkg/lib/libncurses.a"
-+        LIBS="${LIBS} ${iconvLib} -lm -lncurses"
++        LIBS="${LIBS} ${iconvLib} -lm ${cursesLib} -lterminfo"
          ;;
      *s2)
          LIBS="${LIBS} -lnsl -ldl -lm ${cursesLib} -lrt"
