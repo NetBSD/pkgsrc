@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5591 2023/09/20 17:52:35 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5592 2023/09/20 18:32:27 otis Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8123,3 +8123,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/iperf3 to 3.15 [adam 2023-09-20]
 	Updated archivers/unrar to 6.2.11 [adam 2023-09-20]
 	Updated geography/qgis to 3.28.11 [gdt 2023-09-20]
+	Updated mail/dovecot2 to 2.3.21 [otis 2023-09-20]
