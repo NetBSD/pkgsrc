@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/09/03 22:46:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.95 2023/09/20 16:27:37 wiz Exp $
 
 DISTNAME=		racket-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
@@ -42,6 +42,7 @@ CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.DragonFly+=	-rdynamic
 
 CHECK_RELRO_SKIP=	bin/mred bin/mzscheme
+CHECK_PORTABILITY_SKIP=	src/ChezScheme/rpm/Makefile
 
 .for f in use-c-printf.rkt use-crypt.rkt use-esd.rkt use-magick.rkt use-sndfile.rkt use-tcl.rkt use-xmmsctrl.rkt use-xosd.rkt
 REPLACE_RACKET+=	share/pkgs/racket-doc/ffi/examples/${f}
