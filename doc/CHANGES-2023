@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5590 2023/09/20 17:08:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5591 2023/09/20 17:52:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8122,3 +8122,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-jsonschema to 4.19.1 [adam 2023-09-20]
 	Updated net/iperf3 to 3.15 [adam 2023-09-20]
 	Updated archivers/unrar to 6.2.11 [adam 2023-09-20]
+	Updated geography/qgis to 3.28.11 [gdt 2023-09-20]
