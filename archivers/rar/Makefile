@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2023/01/25 21:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2023/09/20 20:15:52 vins Exp $
 
 DISTNAME=	rarlinux${EMUL_PLATFORM:S|linux-x86_64|-x64|:S|linux-i386|-x32|}-${PKGVER:S/.//}
 PKGNAME=	rar-${PKGVER}
-PKGVER=		6.20
+PKGVER=		6.23
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlabs.com/rar/
 
