@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/09/15 06:32:00 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/09/20 12:13:37 pin Exp $
 
 BLAKE2s (ahash-0.8.3.crate) = 463c4e49539eb24c885915c860ed4fc060bc31e8d50069c2a3539c755ebc3f51
 SHA512 (ahash-0.8.3.crate) = cf2d2f1201ac0969cf4e2a0c47090bee971b2287ac44b5e091c90a9eced03cf6ff56d7900cc0f529d4acedc30bd400261c15e50efabdd1731f79951b449af53e
@@ -126,9 +126,9 @@ Size (smallvec-1.11.0.crate) = 34680 bytes
 BLAKE2s (syn-2.0.32.crate) = 5238be914623ca82400c7da8c6433d347f4fd7c42af46b84c9a628aa02d6017c
 SHA512 (syn-2.0.32.crate) = 609f125f8138d17b1185760b1a63f3713079f5214fb56c23012229a56d10ac1c12654466c9ad1ecd6b2aff1126d125abfb0a42bd7f669635e5024b962b0cb0af
 Size (syn-2.0.32.crate) = 242504 bytes
-BLAKE2s (tetris-tui-0.1.5.crate) = 003ac320d821bbc85e14f49176b8784e9920a4a5b0eb48f54b37f8fcb0f83e34
-SHA512 (tetris-tui-0.1.5.crate) = a7dbeef9ae012c6842cf911119e8da1571d4afdfe91b3d86e7a73372015367c11c32c25f31697202d3adcc0bb6945e58c52791c244874d42a2e4f995df1a9dbe
-Size (tetris-tui-0.1.5.crate) = 212271 bytes
+BLAKE2s (tetris-tui-0.1.6.crate) = aca08bfa31690d3f97cd84ba7387be03cfc4b1461ba8f74e2526c7e3e59eaf08
+SHA512 (tetris-tui-0.1.6.crate) = 24a16f7ff18192a8b8d87e2fbf80bf4682ed72a84868fa41e6d0df904095774274e81444aaac46074f860f69f1594cde651f44a81aad1f469a39a348e3229a1d
+Size (tetris-tui-0.1.6.crate) = 212467 bytes
 BLAKE2s (thiserror-1.0.48.crate) = fc2be18ebc84a6647a9592dfe3270c55bfbc9113c2337d281941cdd6aa579411
 SHA512 (thiserror-1.0.48.crate) = 078427d19a28f59aaca27f508795cfb06c024b5a34dfc83360c3bec2b8f7abe474706a41fb68732998f154507921beb03dd033f0a6d1dcfcee03b1f2adb8a0b2
 Size (thiserror-1.0.48.crate) = 18862 bytes
