@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5580 2023/09/20 08:54:46 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5581 2023/09/20 11:35:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8109,3 +8109,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-cryptography to 41.0.4 [adam 2023-09-20]
 	Updated security/py-cryptography_vectors to 41.0.4 [adam 2023-09-20]
 	Updated shells/nushell to 0.85.0 [pin 2023-09-20]
+	Updated lang/nodejs to 20.7.0 [adam 2023-09-20]
+	Updated lang/nodejs18 to 18.18.0 [adam 2023-09-20]
