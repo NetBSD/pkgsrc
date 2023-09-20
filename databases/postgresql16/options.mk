@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2023/09/17 08:53:21 adam Exp $
+# $NetBSD: options.mk,v 1.2 2023/09/20 11:39:40 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql16
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam lz4
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace llvm gssapi ldap nls pam lz4
 PKG_SUGGESTED_OPTIONS=	gssapi nls lz4
 
 PLIST_VARS+=		gssapi llvm nls
@@ -20,13 +20,6 @@ LIBS+=			-ldns_sd
 # Dtrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--enable-dtrace
-.endif
-
-# ICU collatium support
-.if !empty(PKG_OPTIONS:Micu)
-USE_TOOLS+=		pkg-config
-CONFIGURE_ARGS+=	--with-icu
-.  include "../../textproc/icu/buildlink3.mk"
 .endif
 
 # GSSAPI (Kerberos5) authentication for the PostgreSQL backend
