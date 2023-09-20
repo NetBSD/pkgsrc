@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2022/05/11 09:26:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.77 2023/09/20 18:32:14 otis Exp $
 bin/doveadm
 bin/doveconf
 bin/dovecot-sysreport
@@ -447,6 +447,7 @@ include/dovecot/ostream-dot.h
 include/dovecot/ostream-encrypt.h
 include/dovecot/ostream-failure-at.h
 include/dovecot/ostream-file-private.h
+include/dovecot/ostream-final-trickle.h
 include/dovecot/ostream-hash.h
 include/dovecot/ostream-metawrap.h
 include/dovecot/ostream-multiplex.h
