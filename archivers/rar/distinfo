@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/01/25 16:59:31 vins Exp $
+$NetBSD: distinfo,v 1.10 2023/09/20 20:15:52 vins Exp $
 
-BLAKE2s (rarlinux-x64-620.tar.gz) = a6bffb009350ceb5850b158d552a604e4b39b1fef505e83ca309abe35c73a653
-SHA512 (rarlinux-x64-620.tar.gz) = f9cd780c77241bbe75711d82b7180178c2f647a062b31401e65dd5be7a98ab4ed48577b9b471e8636cb32c62b3c4cfab798e9687ba191819e1b674747ce59574
-Size (rarlinux-x64-620.tar.gz) = 614188 bytes
+BLAKE2s (rarlinux-x64-623.tar.gz) = 9a34812a0a78ce4b5ba059b8d5caf4c2a8aa346aaa722d7e5d7e4d532ec74764
+SHA512 (rarlinux-x64-623.tar.gz) = 0aa3e9c6b08e12343b1637929a3ce807196205ecfc5f6c98c464f8d8f40c544ec594a3be514a02d0e3a86c0a5d5e68208c993ab9d94d847249547fbb713fcfe2
+Size (rarlinux-x64-623.tar.gz) = 614350 bytes
