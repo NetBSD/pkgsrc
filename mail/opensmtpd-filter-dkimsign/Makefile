@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/09/21 12:22:52 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/21 12:48:45 vins Exp $
 
 DISTNAME=	filter-dkimsign-0.6
 PKGREVISION=	1
@@ -25,7 +25,7 @@ LDFLAGS+=	-L${BUILDLINK_PREFIX.libopensmtpd}/lib ${LD_ADD}
 PKG_GROUPS=		_dkimsign
 PKG_USERS=		_dkimsign:_dkimsign
 PKG_GECOS._smtpd=	OpenSMTPD DKIM signer
-PKG_HOME._smtpd=	${SMTPD_HOME}
+PKG_HOME._smtpd=	${PKG_SYSCONFDIR}/smtpd/dkim
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/smtpd/dkim
 
