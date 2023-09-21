@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/09/05 13:22:43 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/21 10:57:39 vins Exp $
 
 DISTNAME=	libopensmtpd-0.7
+PKGREVISION=	1
 CATEGORIES=	devel mail
 MASTER_SITES=	https://distfiles.sigtrap.nl/
 
@@ -17,6 +18,8 @@ MAKE_FILE=		Makefile.gnu
 MAKE_ENV+=		LOCALBASE=${PREFIX:Q}
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man3
 MAKE_ENV+=		MANFORMAT=man
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=Symbols.map
 
 .include "../../mk/bsd.prefs.mk"
 
