@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/23 14:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/09/21 11:31:19 nros Exp $
 
 DISTNAME=	libcutl-1.10.0
 PKGREVISION=	5
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++11
 
 CONFIGURE_ARGS+=	--with-external-boost
 CONFIGURE_ARGS+=	--with-external-expat
