@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.27 2020/01/26 17:32:01 rillig Exp $
+# $NetBSD: Makefile.common,v 1.28 2023/09/21 14:44:08 vins Exp $
 #
 # used by print/pdflib/Makefile
 # used by print/tcl-pdflib/Makefile
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_BACKUP}
+MASTER_SITES=		https://anonftp.sys.kth.se/pub/mpkg/distfiles/pdflib/4.0.3/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.pdflib.com/
