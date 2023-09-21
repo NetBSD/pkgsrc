@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5596 2023/09/21 00:24:17 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5597 2023/09/21 08:12:58 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8128,3 +8128,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated archivers/rar to 6.23 [vins 2023-09-20]
 	Updated devel/got-portable to 0.93 [vins 2023-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q3 branch [gdt 2023-09-21]
+	Updated games/pysolfc to 2.14.1nb4 [dholland 2023-09-21]
