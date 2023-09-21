@@ -1,6 +1,0 @@
-There's a regression in LibreTLS 3.7.0 (latest) when used with
-OpenSSL 3+. OpenSMTPD bundled libtls library implemented a fix in 7.3.0.
-
-If wip/openssl3 is imported in the main tree and LibreTLS isn't updated
-in the meantime, the package will most likely need to be built with
-bundled libtls. See: https://github.com/OpenSMTPD/OpenSMTPD/pull/1208
