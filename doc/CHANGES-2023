@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5598 2023/09/21 10:40:48 bouyer Exp $
+$NetBSD: CHANGES-2023,v 1.5599 2023/09/21 11:27:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8130,3 +8130,4 @@ Changes to the packages collection and infrastructure in 2023:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q3 branch [gdt 2023-09-21]
 	Updated games/pysolfc to 2.14.1nb4 [dholland 2023-09-21]
 	Updated sysutils/xenkernel415 to 4.15.5nb1 [bouyer 2023-09-21]
+	Updated math/four-bar-rs to 5.1.0 [pin 2023-09-21]
