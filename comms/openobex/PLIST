@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/05/24 07:22:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/09/21 14:49:14 vins Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -45,6 +45,8 @@ share/doc/openobex/html/index.html
 share/doc/openobex/html/jquery.js
 share/doc/openobex/html/menu.js
 share/doc/openobex/html/menudata.js
+share/doc/openobex/html/minus.svg
+share/doc/openobex/html/minusd.svg
 share/doc/openobex/html/nav_f.png
 share/doc/openobex/html/nav_fd.png
 share/doc/openobex/html/nav_g.png
@@ -54,6 +56,8 @@ share/doc/openobex/html/obex_8h.html
 share/doc/openobex/html/obex__const_8h.html
 share/doc/openobex/html/open.png
 share/doc/openobex/html/openobex_8coverpage.html
+share/doc/openobex/html/plus.svg
+share/doc/openobex/html/plusd.svg
 share/doc/openobex/html/splitbar.png
 share/doc/openobex/html/splitbard.png
 share/doc/openobex/html/structobex__ctrans__t.html
@@ -73,3 +77,5 @@ share/doc/openobex/html/tab_sd.png
 share/doc/openobex/html/tabs.css
 share/doc/openobex/html/unionobex__headerdata__t.html
 share/doc/openobex/html/unionobex__interface__t.html
+@pkgdir man/man1
+@pkgdir bin
