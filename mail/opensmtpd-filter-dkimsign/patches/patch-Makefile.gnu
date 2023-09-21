@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.gnu,v 1.1 2023/09/03 13:00:43 vins Exp $
+$NetBSD: patch-Makefile.gnu,v 1.2 2023/09/21 12:22:52 vins Exp $
 
-Portability fixes for pkgsc.
+Portability fixes for pkgsrc.
 
 --- Makefile.gnu.orig	2021-06-02 10:12:42.000000000 +0000
 +++ Makefile.gnu
