@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/09/05 09:33:14 vins Exp $
+# $NetBSD: Makefile,v 1.6 2023/09/21 09:23:56 vins Exp $
 
 DISTNAME=	xosview2-2.3.3
 PKGREVISION=	1
@@ -12,9 +12,10 @@ LICENSE=	gnu-gpl-v2 AND original-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	awk
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17
+FORCE_CXX_STD=		c++17
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
