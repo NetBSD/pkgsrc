@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5600 2023/09/21 11:28:19 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5601 2023/09/21 13:54:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8132,3 +8132,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xenkernel415 to 4.15.5nb1 [bouyer 2023-09-21]
 	Updated math/four-bar-rs to 5.1.0 [pin 2023-09-21]
 	Updated graphics/oculante to 0.7.6 [pin 2023-09-21]
+	Updated devel/cmake to 3.27.6 [gdt 2023-09-21]
