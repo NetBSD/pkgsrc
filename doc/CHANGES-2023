@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5595 2023/09/20 21:26:21 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5596 2023/09/21 00:24:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8127,3 +8127,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/dovecot2-pigeonhole to 0.5.21 [otis 2023-09-20]
 	Updated archivers/rar to 6.23 [vins 2023-09-20]
 	Updated devel/got-portable to 0.93 [vins 2023-09-20]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2023Q3 branch [gdt 2023-09-21]
