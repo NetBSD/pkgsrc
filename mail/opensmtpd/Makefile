@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/09/08 20:58:37 vins Exp $
+# $NetBSD: Makefile,v 1.20 2023/09/21 12:51:06 vins Exp $
 
 VERSION=	7.3.0p1
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -12,6 +12,7 @@ COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
 BUILD_DEFS+=	VARBASE
+SMTPD_HOME=	${VARBASE}/chroot/smtpd
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	awk pkg-config yacc
@@ -45,7 +46,6 @@ CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/spool/mail
 CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/mail
 .endif
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
-#CONFIGURE_ARGS+=	--with-bundled-libtls	# required for OpenSSL 3+
 CONFIGURE_ARGS+=	--with-table-db
 CONFIGURE_ARGS+=	--with-pie
 
@@ -56,7 +56,7 @@ DOCDIR=		${PREFIX}/share/doc/opensmtpd
 CONF_FILES+=	${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd/smtpd.conf
 CONF_FILES+=	${EGDIR}/aliases ${PKG_SYSCONFDIR}/smtpd/aliases
 
-OWN_DIRS+=	${VARBASE}/chroot/smtpd
+OWN_DIRS+=	${SMTPD_HOME}
 OWN_DIRS+=	${PKG_SYSCONFDIR}/smtpd
 MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
@@ -112,7 +112,6 @@ doc-install:
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libasr/buildlink3.mk"
-#.include "../../security/openssl/buildlink3.mk"
 .include "../../security/libretls/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
