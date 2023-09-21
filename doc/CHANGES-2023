@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5603 2023/09/21 13:55:44 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5604 2023/09/21 17:54:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8135,3 +8135,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake to 3.27.6 [gdt 2023-09-21]
 	Updated devel/cmake-gui to 3.27.6 [gdt 2023-09-21]
 	Updated devel/cmake-mode to 3.27.6 [gdt 2023-09-21]
+	Updated net/routinator to 0.13.0 [he 2023-09-21]
