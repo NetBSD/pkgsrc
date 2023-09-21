@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2023/09/03 22:46:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.40 2023/09/21 09:57:29 vins Exp $
 
 DISTNAME=		racket-minimal-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	http://www.eecs.northwestern.edu/racket/${PKGVERSION_NOREV}/
@@ -55,8 +55,8 @@ post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
 
-.include "../../devel/ncurses/buildlink3.mk"
-
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
