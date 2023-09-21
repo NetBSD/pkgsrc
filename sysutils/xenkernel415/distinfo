@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.9 2023/08/24 10:27:09 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2023/09/21 10:39:45 bouyer Exp $
 
 BLAKE2s (xen415/xen-4.15.5.tar.gz) = 85bef27c99fd9fd3037ec6df5e514289b650f2f073bcc543d13d5997c03332d4
 SHA512 (xen415/xen-4.15.5.tar.gz) = 790f3d75df78f63f5b2ce3b99c1f2287f75ef5571d1b7a9bb9bac470bd28ccbd4816d07a1af8320eee4107626c75be029bd6dad1d99d58f3816906ed98d206d9
 Size (xen415/xen-4.15.5.tar.gz) = 40835793 bytes
 SHA1 (patch-Config.mk) = 9372a09efd05c9fbdbc06f8121e411fcb7c7ba65
+SHA1 (patch-XSA438) = a8288bbbe8ffe799cebbf6bb184b1a2b59b59089
 SHA1 (patch-xen_Makefile) = 465388d80de414ca3bb84faefa0f52d817e423a6
 SHA1 (patch-xen_Rules.mk) = c743dc63f51fc280d529a7d9e08650292c171dac
 SHA1 (patch-xen_arch_x86_Kconfig) = df14bfa09b9a0008ca59d53c938d43a644822dd9
