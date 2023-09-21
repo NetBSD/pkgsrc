@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5602 2023/09/21 13:55:02 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5603 2023/09/21 13:55:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8134,3 +8134,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/oculante to 0.7.6 [pin 2023-09-21]
 	Updated devel/cmake to 3.27.6 [gdt 2023-09-21]
 	Updated devel/cmake-gui to 3.27.6 [gdt 2023-09-21]
+	Updated devel/cmake-mode to 3.27.6 [gdt 2023-09-21]
