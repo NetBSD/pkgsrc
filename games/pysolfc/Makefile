@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2023/08/14 05:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/09/21 08:12:35 dholland Exp $
 
 DISTNAME=	PySolFC-2.14.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,6 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-kivy-[0-9]*:../../devel/py-kivy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pycotap-[0-9]*:../../devel/py-pycotap
 # not listed in setup.py, but needed
+DEPENDS+=       ${PYPKGPREFIX}-Pillow>=9.4:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
