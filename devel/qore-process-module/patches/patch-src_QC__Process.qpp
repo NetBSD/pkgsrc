@@ -1,0 +1,22 @@
+$NetBSD: patch-src_QC__Process.qpp,v 1.1 2023/09/22 08:20:03 nros Exp $
+
+* getloadavg is in sys/loadavg.h on Illumos
+
+--- src/QC_Process.qpp.orig	2022-12-09 07:49:02.000000000 +0000
++++ src/QC_Process.qpp
+@@ -27,9 +27,15 @@
+ #include <qore/Qore.h>
+ 
+ #include "processpriv.h"
++#include "unix-config.h"
+ 
+ #include <cstdlib>
+ 
++#if defined(HAVE_SYS_LOADAVG_H)
++#include <sys/types.h>
++#include <sys/loadavg.h>
++#endif
++
+ #if defined(__linux__) || (defined(__APPLE__) && defined(__MACH__))
+ #define HAVE_PROCESS_GETMEMORYINFO 1
+ #define HAVE_PROCESS_CHECKPID 1
