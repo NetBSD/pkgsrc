@@ -1,0 +1,3 @@
+Lua grammar for tree-sitter.
+
+Supports Lua 5.x and LuaJIT 2.x.
