@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/28 09:47:46 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/09/22 18:32:55 wiz Exp $
 bin/mod_python
 lib/httpd/mod_python.so
-${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PLIST.py3x}${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PLIST.py2x}${PYSITELIB}/mod_python-3.5.0-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/mod_python/Cookie.py
 ${PYSITELIB}/mod_python/Cookie.pyc
 ${PYSITELIB}/mod_python/Cookie.pyo
