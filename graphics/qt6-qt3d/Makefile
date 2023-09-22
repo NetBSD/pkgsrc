@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/09/22 08:49:44 vins Exp $
+# $NetBSD: Makefile,v 1.9 2023/09/22 08:51:28 vins Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
+PKGREVISION=	1
 PKGNAME=	qt6-qt3d-${QTVERSION}
 COMMENT=	Qt6 3d
 CATEGORIES=	graphics
