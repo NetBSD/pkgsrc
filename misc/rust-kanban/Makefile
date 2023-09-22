@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2023/09/13 20:39:49 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/22 18:52:47 pin Exp $
 
-DISTNAME=	rust-kanban-0.8.0
+DISTNAME=	rust-kanban-0.8.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yashs662/}
 GITHUB_PROJECT=	rust_kanban
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/yashs662/rust_kanban/
 COMMENT=	Kanban board for the terminal
 LICENSE=	mit
