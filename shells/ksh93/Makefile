@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2023/09/19 22:18:02 vins Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/22 18:44:16 wiz Exp $
 
 DISTNAME=	ksh93-1.0.7
 PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
-GITHUB_TAG=	v${PKGVERSION:S/beta/-beta/}
+GITHUB_TAG=	v${PKGVERSION_NOREV:S/beta/-beta/}
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	http://www.kornshell.com/
