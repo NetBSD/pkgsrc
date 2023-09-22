@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/09/22 08:20:03 nros Exp $
+
+* getloadavg is in sys/loadavg.h on Illumos
+
+--- CMakeLists.txt.orig	2022-12-19 17:46:51.000000000 +0000
++++ CMakeLists.txt
+@@ -37,6 +37,9 @@ endif()
+ include(CheckCXXSymbolExists)
+ check_cxx_symbol_exists(kill signal.h HAVE_KILL)
+ 
++include(CheckIncludeFiles)
++check_include_files("sys/types.h;sys/loadavg.h" HAVE_SYS_LOADAVG_H LANGUAGE CXX)
++
+ set(CPP_SRC
+     src/processpriv.cpp
+ )
