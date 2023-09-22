@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.21 2023/08/21 19:28:06 nros Exp $
+$NetBSD: distinfo,v 1.22 2023/09/22 07:10:07 nros Exp $
 
 BLAKE2s (qore-1.18.1.tar.bz2) = df879b00581b6458f607482001c8fa30cc46e77f06d3c800b57c3181f25b86b6
 SHA512 (qore-1.18.1.tar.bz2) = 2c52cd36ae12a1789fdf4561656e1223dac9a205a515ae67bd30696dccc20eb087ffdbfe8a02b5139b31f26155590de85e11567207125643d287e8e66d093331
 Size (qore-1.18.1.tar.bz2) = 47894977 bytes
+SHA1 (patch-cmake_QoreMacros.cmake) = 7d76b551dee8d978f28a0b25897836f1f9346295
 SHA1 (patch-lib_ql__lib.qpp) = a94737d5ed7c930ddc667c5e8be45cd1095d5a4a
