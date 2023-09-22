@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/09/16 04:08:16 dholland Exp $
+# $NetBSD: Makefile,v 1.48 2023/09/22 21:42:24 gutteridge Exp $
 
 DISTNAME=	bulk-small-20230915
 CATEGORIES=	meta-pkgs
@@ -205,7 +205,7 @@ TRANSITIVE+=	xxhash-[0-9]*:../../devel/xxhash
 
 # required by net/wget
 TRANSITIVE+=	lzip-[0-9]*:../../archivers/lzip		# via libpsl
-TRANSITIVE+=	libidn2-[0-9]*:../../textproc/libidn2
+TRANSITIVE+=	libidn2-[0-9]*:../../devel/libidn2
 TRANSITIVE+=	libunistring-[0-9]*:../../textproc/libunistring	# via libidn2
 TRANSITIVE+=	libpsl-[0-9]*:../../textproc/libpsl
 
@@ -216,7 +216,7 @@ TRANSITIVE+=	libfetch-[0-9]*:../../net/libfetch
 TRANSITIVE+=	lua54-[0-9]*:../../lang/lua54
 
 # required by www/curl
-TRANSITIVE+=	libidn2-[0-9]*:../../textproc/libidn2
+TRANSITIVE+=	libidn2-[0-9]*:../../devel/libidn2
 TRANSITIVE+=	libunistring-[0-9]*:../../textproc/libunistring	# via libidn2
 TRANSITIVE+=	nghttp2-[0-9]*:../../www/nghttp2
 
