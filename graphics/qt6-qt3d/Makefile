@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/08/07 05:19:27 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/22 08:49:44 vins Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
@@ -9,6 +9,7 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3
 CONFIGURE_ARGS+=	-system-qt3d-assimp
 CONFIGURE_ARGS+=	-no-fbxsdk
 
+.include "options.mk"
 .include "../../x11/qt6-qtbase/Makefile.common"
 
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DAnimation.pc
@@ -24,14 +25,17 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickRender.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickScene2D.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DRender.pc
 
-PLIST_VARS+=	x86_64
+PLIST_VARS+=	simd
 
-.if ${MACHINE_ARCH} == "x86_64"
-PLIST.x86_64=	yes
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
+PLIST.simd=		yes
+.else
+CONFIGURE_ARGS+=	-qt3d-simd no
 .endif
 
 .include "../../graphics/qt6-qtshadertools/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../multimedia/assimp/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
