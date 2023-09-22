@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/08/16 09:03:51 nros Exp $
+$NetBSD: distinfo,v 1.2 2023/09/22 09:18:21 nros Exp $
 
 BLAKE2s (qore-odbc-module-1.2.0.tar.bz2) = edb1c85f6d22b7482623e5666b14137d9371bab7b581de1b4f5be756f0e68ead
 SHA512 (qore-odbc-module-1.2.0.tar.bz2) = 502e4f39c31e7e2c0f3472301f41baa196238c9797cd1b1774b9ec4fa8f12b18d22d573473de35b06cee7db35f85765b9d42577ba581e608a7981e2e84aa5d2d
 Size (qore-odbc-module-1.2.0.tar.bz2) = 45368 bytes
+SHA1 (patch-src_ODBCStatement.h) = 47b80c8d95563ff62b7f68b10a37bffeac3ddd55
