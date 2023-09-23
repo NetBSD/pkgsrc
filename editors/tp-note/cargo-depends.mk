@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.40 2023/09/22 18:53:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.41 2023/09/23 15:07:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -54,7 +54,7 @@ CARGO_CRATE_DEPENDS+=	chrono-tz-build-0.2.0
 CARGO_CRATE_DEPENDS+=	clap-2.34.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-4.5.0
 CARGO_CRATE_DEPENDS+=	cocoa-0.24.1
-CARGO_CRATE_DEPENDS+=	cocoa-foundation-0.1.1
+CARGO_CRATE_DEPENDS+=	cocoa-foundation-0.1.2
 CARGO_CRATE_DEPENDS+=	combine-4.6.6
 CARGO_CRATE_DEPENDS+=	compact_str-0.7.1
 CARGO_CRATE_DEPENDS+=	concurrent-queue-2.2.0
@@ -345,7 +345,7 @@ CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	sanitize-filename-reader-friendly-2.2.1
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	self_cell-1.0.1
-CARGO_CRATE_DEPENDS+=	semver-1.0.18
+CARGO_CRATE_DEPENDS+=	semver-1.0.19
 CARGO_CRATE_DEPENDS+=	serde-1.0.188
 CARGO_CRATE_DEPENDS+=	serde-wasm-bindgen-0.5.0
 CARGO_CRATE_DEPENDS+=	serde-xml-rs-0.3.1
@@ -391,9 +391,11 @@ CARGO_CRATE_DEPENDS+=	tiny-keccak-2.0.2
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	toml-0.7.8
+CARGO_CRATE_DEPENDS+=	toml-0.8.0
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.3
 CARGO_CRATE_DEPENDS+=	toml_edit-0.19.15
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.23.0
+CARGO_CRATE_DEPENDS+=	toml_edit-0.20.0
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.23.1
 CARGO_CRATE_DEPENDS+=	tracing-0.1.37
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.26
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.31
@@ -472,7 +474,7 @@ CARGO_CRATE_DEPENDS+=	wl-clipboard-rs-0.7.0
 CARGO_CRATE_DEPENDS+=	x11rb-0.10.1
 CARGO_CRATE_DEPENDS+=	x11rb-protocol-0.10.0
 CARGO_CRATE_DEPENDS+=	xdg-home-1.0.0
-CARGO_CRATE_DEPENDS+=	xml-rs-0.8.18
+CARGO_CRATE_DEPENDS+=	xml-rs-0.8.19
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
 CARGO_CRATE_DEPENDS+=	zbus-3.14.1
 CARGO_CRATE_DEPENDS+=	zbus_macros-3.14.1
