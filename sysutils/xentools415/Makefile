@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/06/06 12:42:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2023/09/23 17:55:51 bsiegert Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include        "version.mk"
