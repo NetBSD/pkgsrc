@@ -1,4 +1,4 @@
-# $NetBSD: available.mk,v 1.11 2017/03/17 09:10:14 maya Exp $
+# $NetBSD: available.mk,v 1.11.52.1 2023/09/23 18:11:40 bsiegert Exp $
 
 
 .include "../../mk/bsd.prefs.mk"
@@ -15,7 +15,10 @@ VAAPI_AVAILABLE=	yes
 .elif ${OPSYS} == "FreeBSD"
 VAAPI_AVAILABLE=	yes
 .elif ${OPSYS} == "NetBSD"
+# Requires xcb/dri3.h, not shipped with NetBSD 8
+.  if ${OPSYS_VERSION} > 090000 || ${X11_TYPE} == "modular"
 VAAPI_AVAILABLE=	yes
+.  endif
 .elif ${OPSYS} == "Linux"
 VAAPI_AVAILABLE=	yes
 .endif
