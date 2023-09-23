@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5608 2023/09/23 13:47:17 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5609 2023/09/23 15:07:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8140,3 +8140,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/rust-kanban to 0.8.1 [pin 2023-09-22]
 	Updated editors/tp-note to 1.22.0 [pin 2023-09-22]
 	Updated emulators/PC6001VX to 4.2.1 [tsutsui 2023-09-23]
+	Updated editors/tp-note to 1.22.1 [pin 2023-09-23]
