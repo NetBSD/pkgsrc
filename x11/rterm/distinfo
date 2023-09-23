@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2023/05/25 13:50:05 he Exp $
+$NetBSD: distinfo,v 1.10 2023/09/23 18:25:57 vins Exp $
 
 BLAKE2s (anyhow-1.0.68.crate) = 79593a6a8f5559833825e9341680bb8b1dafe01e70c99d0f014175fbe2828e71
 SHA512 (anyhow-1.0.68.crate) = b8cfc132ebeac823edf18cba7e335d1939fcbb095ed4ea859f4dc4cde5b1ff35fd68f0743577c69085f74f019768a3359936bf6dc1b2aceb7e2b28ace7f74a0f
@@ -171,5 +171,6 @@ Size (windows_x86_64_msvc-0.42.0.crate) = 659377 bytes
 BLAKE2s (x11-2.20.1.crate) = f0e3d02e7e99d2fb1b4a8956cce94c57c4c7cda3fe92bc5c4333d4344ef4decf
 SHA512 (x11-2.20.1.crate) = abb62057138ba21386122205affd5c712a2ee589fc3eb13496fc17719328beb47d4739eadf8a8b5934d5072c04fee67bfa2f34266917cae8d14ddb5c02e3d020
 Size (x11-2.20.1.crate) = 67811 bytes
-SHA1 (patch-src_win.rs) = 50d129acead752e7881fd4359e55243e40bfcf8e
+SHA1 (patch-src_glyph.rs) = 256a0df3c63250bfc3da0eefdab99c2e4ea83204
+SHA1 (patch-src_win.rs) = b361b2a2bb50ddf188dc391178a43aed72b070a9
 SHA1 (patch-src_x11__wrapper.rs) = 7f91cd4eb8ae5c606520751e087802a9033bcc3c
