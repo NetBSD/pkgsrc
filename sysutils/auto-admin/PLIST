@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/07/12 13:03:30 bacon Exp $
+@comment $NetBSD: PLIST,v 1.16 2023/09/24 11:54:20 bacon Exp $
 bin/auto-append-line
 bin/auto-ask
 bin/auto-backup-file
