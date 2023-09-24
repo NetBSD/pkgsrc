@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23388 2023/09/18 12:47:11 adam Exp $
+$NetBSD: TODO,v 1.23389 2023/09/24 22:28:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,10 +388,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
-	o ImageMagick-7.1.1.15
+	o ImageMagick-7.1.1.18
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-23.1.7
+	o MesaLib-23.1.8
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.0.0
@@ -469,6 +469,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o assimp-5.3.0
 	o asunder-2.9.7
 	o attr-2.5.1 [wip, https://savannah.nongnu.org/bugs/index.php?63920]
 	o audacity-3.1.3
@@ -513,6 +514,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o c4-1.10
 	o cacti-1.2.19
 	o cacti-spine-1.2.16
+	o cairo-1.18.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-6.25.0 [requires py-qt6/py-qt6-webengine]
@@ -600,7 +602,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elixir-1.15.5
+	o elixir-1.15.6
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
@@ -611,7 +613,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epiphany-extensions-3.2.0
 	o epubcheck-4.0.2
 	o eric5-5.4.6
-	o erlang-26.0.2
+	o erlang-26.1
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -679,7 +681,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o genius-1.0.26
 	o gens-2.15.5
+	o gettext-lib-0.22.2
 	o gfract-0.33
+	o ghostscript-agpl-10.02.0
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
@@ -728,6 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
+	o gnucash-5.4
 	o gnutime-1.9
 	o go-ffuf-1.3.0
 	o go-fsnotify-1.4.9
@@ -751,11 +756,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.58.0
+	o grpc-1.58,1
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
-	o gstreamer1-1.22.5
+	o gstreamer1-1.22.6
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -773,6 +778,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-8.2.1
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -926,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lirc-0.9.3
 	o litehtml-0.8 [wip, https://github.com/litehtml/litehtml/issues/266]
 	o llvm-16.0.6 [wip]
+	o llvm-17.0.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1172,6 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profit-2.5.3
 	o proj-9.2.0
 	o protobuf-24.2 [make sure net/grpc supports this version]
+	o protobuf-24.3
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1184,7 +1192,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
-	o py-argparse-manpage-4.4
+	o py-argparse-manpage-4.5
+	o py-astroid-2.15.7
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
@@ -1199,33 +1208,39 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.99.0
+	o py-gitpython-3.1.37
+	o py-google-api-python-client-2.100.0
 	o py-google-auth-2.23.0
 	o py-google-auth-httplib2-0.1.1
 	o py-grpcio-1.58.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-icalendar-5.0.8
+	o py-importlib-resources-6.1.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
-	o py-lsp-jsonrpc-1.1.1
+	o py-lsp-jsonrpc-1.1.2
 	o py-lsp-server-1.8.0
+	o py-lsprotocol-2023.0.0b1
 	o py-matplotlib-3.8.0
 	o py-mercurial-6.5.2
 	o py-mock-5.0.2
+	o py-msgpack-1.0.6
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-numpy-1.26.0
 	o py-omniORBpy-3.7
-	o py-pdf-3.16.0
+	o py-pdf-3.16.1
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-protobuf-4.24.3
-	o py-pspdfutils-3.3.1
+	o py-pspdfutils-3.3.2
 	o py-ptt-1.10.2
+	o py-pykka-4.0.0
 	o py-pymc3-3.8
 	o py-pytz-2023.3.post1
 	o py-qtgraph-qt5-0.12.1
@@ -1236,6 +1251,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-setuptools-68.2.2
+	o py-setuptools_scm-8.0.3
 	o py-simpletal-5.1
 	o py-sphinx-7.2.6
 	o py-sphinx-autodoc-typehints-1.24.0
@@ -1249,10 +1265,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-trove-classifiers-2023.9.19
 	o py-twisted-23.8.0
 	o py-uliweb-0.6
+	o py-urwid-2.2.1
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
+	o py-yapf-0.40.2
 	o py-yubiauth-0.3.10
+	o py-zipp-3.17.0
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
@@ -1263,6 +1283,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qcad-3.28.1.0
 	o qconf-2.5
 	o qdirstat-1.8.1
+	o qemu-8.1.1
 	o qtcreator-10.0
 	o quazip-1.1
 	o qutebrowser-2.2.0
@@ -1548,6 +1569,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-2.14.3
 	o yorick-2.1.05
+	o yt-dlp-2023.9.24
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
