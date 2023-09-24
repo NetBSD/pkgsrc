@@ -132,7 +132,7 @@ the extended attribute indicator
 .TP
 \f[V]sn\f[R]
 the numbers of a file\[cq]s size (sets \f[V]nb\f[R], \f[V]nk\f[R],
-\f[V]nm\f[R], \f[V]ng\f[R] and \f[V]nh\f[R])
+\f[V]nm\f[R], \f[V]ng\f[R] and \f[V]nt\f[R])
 .TP
 \f[V]nb\f[R]
 the numbers of a file\[cq]s size if it is lower than 1 KB/Kib
@@ -151,7 +151,7 @@ the numbers of a file\[cq]s size if it is 1 TB/TiB or higher
 .TP
 \f[V]sb\f[R]
 the units of a file\[cq]s size (sets \f[V]ub\f[R], \f[V]uk\f[R],
-\f[V]um\f[R], \f[V]ug\f[R] and \f[V]uh\f[R])
+\f[V]um\f[R], \f[V]ug\f[R] and \f[V]ut\f[R])
 .TP
 \f[V]ub\f[R]
 the units of a file\[cq]s size if it is lower than 1 KB/Kib
@@ -236,6 +236,36 @@ the overlay style for broken symlink paths
 .TP
 \f[V]mp\f[R]
 a mount point
+.TP
+\f[V]im\f[R]
+a regular file that is an image
+.TP
+\f[V]vi\f[R]
+a regular file that is a video
+.TP
+\f[V]mu\f[R]
+a regular file that is lossy music
+.TP
+\f[V]lo\f[R]
+a regular file that is lossless music
+.TP
+\f[V]cr\f[R]
+a regular file that is related to cryptography (ex: key or certificate)
+.TP
+\f[V]do\f[R]
+a regular file that is a document (ex: office suite document or PDF)
+.TP
+\f[V]co\f[R]
+a regular file this is compressed
+.TP
+\f[V]tm\f[R]
+a regular file that is temporary (ex: a text editor\[cq]s backup file)
+.TP
+\f[V]cm\f[R]
+a regular file that is a compilation artifact (ex: Java class file)
+.TP
+\f[V]bu\f[R]
+a regular file that is used to build a project (ex: Makefile)
 .PP
 Values in \f[V]EXA_COLORS\f[R] override those given in
 \f[V]LS_COLORS\f[R], so you don\[cq]t need to re-write an existing
@@ -250,6 +280,12 @@ The codes accepted by eza are:
 .TP
 \f[V]1\f[R]
 for bold
+.TP
+\f[V]2\f[R]
+for dimmed
+.TP
+\f[V]3\f[R]
+for italic
 .TP
 \f[V]4\f[R]
 for underline
