@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5614 2023/09/24 14:23:39 fox Exp $
+$NetBSD: CHANGES-2023,v 1.5615 2023/09/24 18:55:00 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8146,3 +8146,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/gipfel to 0.4.1 [wiz 2023-09-24]
 	Updated sysutils/auto-admin to 0.7.18.8 [bacon 2023-09-24]
 	Updated sysutils/eza to 0.13.0 [fox 2023-09-24]
+	Updated devel/meson to 1.2.1nb3 [gutteridge 2023-09-24]
