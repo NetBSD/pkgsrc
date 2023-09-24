@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/08/02 19:27:32 nia Exp $
+# $NetBSD: Makefile,v 1.25 2023/09/24 21:15:21 nros Exp $
 
 PKGNAME=	${DISTNAME:S/-/-tray-monitor-qt5-/}
 PKGREVISION=	5
@@ -11,8 +11,8 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-client-only
 CONFIGURE_ARGS+=	--enable-bat
 
-# Uses typeof, cannot use standard C++03
-FORCE_CXX_STD=		gnu++03
+# Uses typeof, cannot use standard C++11
+FORCE_CXX_STD=		gnu++11
 
 BUILD_DIRS=		src/qt-console/tray-monitor
 
