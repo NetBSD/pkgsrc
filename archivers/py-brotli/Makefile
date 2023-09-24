@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/09/13 19:38:48 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/24 23:39:18 wiz Exp $
 
 DISTNAME=	Brotli-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,6 +11,8 @@ COMMENT=	Generic-purpose lossless compression algorithm (Python module)
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
