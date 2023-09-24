@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5610 2023/09/24 01:16:32 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5611 2023/09/24 08:36:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8142,3 +8142,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/PC6001VX to 4.2.1 [tsutsui 2023-09-23]
 	Updated editors/tp-note to 1.22.1 [pin 2023-09-23]
 	Updated devel/goredo to 1.31.0 [schmonz 2023-09-24]
+	Updated shells/oh-my-posh to 18.10.1 [pin 2023-09-24]
