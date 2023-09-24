@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2023/07/12 13:03:30 bacon Exp $
+# $NetBSD: Makefile,v 1.17 2023/09/24 11:54:20 bacon Exp $
 
-DISTNAME=	auto-admin-0.7.18
+DISTNAME=	auto-admin-0.7.18.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
+GITHUB_TAG=	d9c08f3783445b4ec8fdb9dab62c80a497d4d7bf
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/auto-admin
