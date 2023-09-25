@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5619 2023/09/25 12:53:07 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5620 2023/09/25 13:52:18 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8151,3 +8151,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gifski to 1.12.2 [pin 2023-09-25]
 	Updated graphics/wallust to 2.7.1 [pin 2023-09-25]
 	Updated mail/qsmtp to 0.39 [schmonz 2023-09-25]
+	Updated security/sqlmap to 1.7.8 [hubertf 2023-09-25]
