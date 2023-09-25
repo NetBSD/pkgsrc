@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/06 22:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/09/25 12:12:02 gdt Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs28/:S/-/-nox11-/}
 CONFLICTS+=	emacs28-[0-9]*
@@ -10,6 +10,10 @@ DISTINFO_FILE=	${.CURDIR}/../../editors/emacs28/distinfo
 
 # minimal emacs without X
 CONFIGURE_ARGS+=	--without-all --without-x
+# on macOS, nextstep (cocoa) is probed for, even if --without-all is
+# given.  Pass it unconditionally, as forcing it off won't hurt on
+# not-mac
+CONFIGURE_ARGS+=	--without-ns
 # but we want to gzip installed files
 CONFIGURE_ARGS+=	--with-compress-install
 
