@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/05/01 15:11:23 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/25 08:28:57 wiz Exp $
 
 DISTNAME=	gifski-1.11.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
@@ -20,5 +21,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
