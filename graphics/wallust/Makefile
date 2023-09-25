@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2023/09/08 11:52:23 pin Exp $
+# $NetBSD: Makefile,v 1.14 2023/09/25 09:43:31 pin Exp $
 
-DISTNAME=	wallust-2.6.2
+DISTNAME=	wallust-2.7.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://static.crates.io/crates/wallust/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://codeberg.org/explosion-mental/wallust
 COMMENT=	Generate colors from an image
 LICENSE=	mit
