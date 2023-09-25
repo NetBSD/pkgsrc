@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2023/09/20 22:37:39 vins Exp $
+# $NetBSD: Makefile,v 1.97 2023/09/25 12:06:35 vins Exp $
 
 DISTNAME=		racket-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -31,6 +31,9 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
+CONFIGURE_ARGS+=	--enable-curses
+CONFIGURE_ARGS+=	--enable-iconv
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS.NetBSD+=	paxctl
@@ -63,11 +66,14 @@ post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
