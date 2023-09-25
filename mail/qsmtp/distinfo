@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:54:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/09/25 12:52:52 schmonz Exp $
 
-BLAKE2s (Qsmtp-0.38.tar.xz) = 4e7e09f7e95ca107100c76ba21c11b39345fa8300958f6864de7ec194fc0ef0a
-SHA512 (Qsmtp-0.38.tar.xz) = b1e5d3806eeb47488d91fff3dc60c88420bfa9edf77d2d68f51cdfea913c5c0298d13b9dd66a69100c9a9d1d4b7b1abadac11b253192b029329a13e77f895296
-Size (Qsmtp-0.38.tar.xz) = 252632 bytes
+BLAKE2s (Qsmtp-0.39.tar.xz) = b924f9c73c38921002fcbb0ce6861b833b844b654e003239a6f6dc92b0b35ca7
+SHA512 (Qsmtp-0.39.tar.xz) = 7ed59f7d56505fc3d90fd85b70c111547ce9e19c811b586ab0884c53dbc50e5783af70a1e2bd331a802b61fac9528efa7982dd198c0c95dbdf72232d5c94b4a0
+Size (Qsmtp-0.39.tar.xz) = 271272 bytes
+SHA1 (patch-tools_CMakeLists.txt) = 2c6d1a4a16a7a9e562741b50485d3a46c75b1613

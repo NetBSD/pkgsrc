@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/10 10:01:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/09/25 12:52:52 schmonz Exp $
 bin/Qremote
 bin/Qsmtpd
 bin/Qsurvey
 bin/addipbl
 bin/clearpass
+bin/dumpipbl
 bin/qpencode
 bin/sendremote
-bin/testspf
 man/man5/filterconf.5
 man/man8/Qremote.8
 man/man8/Qsmtpd.8
