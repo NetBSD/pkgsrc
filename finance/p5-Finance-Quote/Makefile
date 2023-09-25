@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2023/08/13 17:56:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.48 2023/09/25 07:29:28 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.58
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 
@@ -30,6 +31,7 @@ DEPENDS+=	p5-HTTP-Cookies-[0-9]*:../../www/p5-HTTP-Cookies
 # HTTP::Status - part of HTTP-Message
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 # IO::Handle - part of perl
+DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 # IO::Uncompress::Unzip - part of perl
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
