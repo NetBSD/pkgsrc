@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2023/09/21 09:57:29 vins Exp $
+# $NetBSD: Makefile,v 1.41 2023/09/25 12:06:35 vins Exp $
 
 DISTNAME=		racket-minimal-8.10-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	http://www.eecs.northwestern.edu/racket/${PKGVERSION_NOREV}/
@@ -28,6 +28,9 @@ WRKSRC=		${WRKDIR}/racket-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
+CONFIGURE_ARGS+=	--enable-curses
+CONFIGURE_ARGS+=	--enable-iconv
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gmake
 USE_TOOLS.NetBSD+=	paxctl
@@ -54,6 +57,9 @@ CONF_FILES+=		${EGDIR}/config.rktd \
 post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
