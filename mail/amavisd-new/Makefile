@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2022/09/17 09:26:12 spz Exp $
+# $NetBSD: Makefile,v 1.33 2023/09/25 19:33:33 jperkin Exp $
 
 # pkgname kept as amavisd-new even though that migrated to be amavis again
 PKGNAME=	amavisd-new-${VERSION}
 DISTNAME=	amavis-${GITLAB_TAG}
 VERSION=	2.12.2
+PKGREVISION=	1
 
 CATEGORIES=	mail security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=amavis/}
@@ -19,6 +20,7 @@ DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib>=1.05:../../converters/p5-Convert-UUlib
+DEPENDS+=	p5-CryptX-[0-9]*:../../security/p5-CryptX
 DEPENDS+=	p5-File-LibMagic>=1.0:../../devel/p5-File-LibMagic
 DEPENDS+=	p5-Mail-DKIM>=0.31:../../mail/p5-Mail-DKIM
 DEPENDS+=	p5-MIME-tools>=5.417:../../mail/p5-MIME-tools
@@ -73,7 +75,7 @@ RCD_SCRIPTS=	amavisd
 SMF_NAME=	amavisd
 CONF_FILES=	${EGDIR}/amavisd.conf-minimal ${PKG_SYSCONFDIR}/amavisd.conf
 
-USE_LANGUAGES=		# none, not even C
+USE_LANGUAGES=	# none, not even C
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		amavisd
