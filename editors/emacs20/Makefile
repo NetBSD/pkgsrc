@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/06/28 11:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2023/09/25 20:08:32 gdt Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -30,6 +30,7 @@ MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
+# configure: error: Emacs hasn't been ported to `x86_64-apple-darwin17' systems.
 BROKEN_ON_PLATFORM=	Darwin-*-* DragonFly-*-*
 
 CONFLICTS=	mule-[0-9]*
