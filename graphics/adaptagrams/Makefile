@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/09/01 10:20:32 nia Exp $
+# $NetBSD: Makefile,v 1.10 2023/09/25 07:14:03 nros Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/adaptagrams-${GITHUB_TAG}/cola
 
 USE_TOOLS+=	aclocal autoconf autoheader automake autoreconf pkg-config
 USE_LIBTOOL=	yes
-
+USE_LANGUAGES=	c c++
 # Does not set -std=c++XX, but sigc++ (via cairomm) uses C++11 features in
 # its headers.
 FORCE_CXX_STD=		c++11
