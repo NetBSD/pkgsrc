@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/08/14 05:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/09/25 13:52:05 hubertf Exp $
 
-DISTNAME=	sqlmap-1.5.4
-PKGREVISION=	6
+DISTNAME=	sqlmap-1.7.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -37,6 +36,7 @@ USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
