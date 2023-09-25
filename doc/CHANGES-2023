@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5617 2023/09/25 09:42:54 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5618 2023/09/25 09:43:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8149,3 +8149,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/meson to 1.2.1nb3 [gutteridge 2023-09-24]
 	Updated geography/gama to 2.25.1 [gdt 2023-09-25]
 	Updated graphics/gifski to 1.12.2 [pin 2023-09-25]
+	Updated graphics/wallust to 2.7.1 [pin 2023-09-25]
