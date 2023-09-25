@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/09/25 08:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/09/25 09:42:34 pin Exp $
 
-DISTNAME=	gifski-1.11.0
-PKGREVISION=	1
+DISTNAME=	gifski-1.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
@@ -13,12 +12,6 @@ LICENSE=	gnu-agpl-v3
 .include "cargo-depends.mk"
 
 USE_TOOLS+=	pkg-config
-
-INSTALLATION_DIRS=	bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gifski \
-		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
