@@ -1,0 +1,32 @@
+$NetBSD: patch-tools_CMakeLists.txt,v 1.1 2023/09/25 12:52:52 schmonz Exp $
+
+Omit testspf (doesn't link on macOS and is a development-only tool).
+
+--- tools/CMakeLists.txt.orig	2023-08-28 10:08:55.000000000 +0000
++++ tools/CMakeLists.txt
+@@ -21,11 +21,11 @@ install(TARGETS
+ 	COMPONENT tools
+ )
+ 
+-add_executable(testspf testspf.c ${CMAKE_SOURCE_DIR}/qsmtpd/spf.c ${CMAKE_SOURCE_DIR}/qsmtpd/antispam.c)
+-target_link_libraries(testspf
+-	qsmtp_lib
+-	qsmtp_io_lib
+-)
++#add_executable(testspf testspf.c ${CMAKE_SOURCE_DIR}/qsmtpd/spf.c ${CMAKE_SOURCE_DIR}/qsmtpd/antispam.c)
++#target_link_libraries(testspf
++#	qsmtp_lib
++#	qsmtp_io_lib
++#)
+ 
+ add_executable(spfquery spfquery.c ${CMAKE_SOURCE_DIR}/qsmtpd/spf.c ${CMAKE_SOURCE_DIR}/qsmtpd/antispam.c)
+ target_link_libraries(spfquery
+@@ -63,7 +63,7 @@ include_directories(
+ )
+ 
+ install(TARGETS
+-		testspf
++#		testspf
+ 		qpencode
+ 		clearpass
+ 		addipbl
