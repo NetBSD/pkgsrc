@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/03/04 10:18:50 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/09/25 13:52:05 hubertf Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -7,7 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlmap/.pylintrc
-${PYSITELIB}/sqlmap/COMMITMENT
 ${PYSITELIB}/sqlmap/LICENSE
 ${PYSITELIB}/sqlmap/README.md
 ${PYSITELIB}/sqlmap/__init__.py
@@ -113,10 +112,14 @@ ${PYSITELIB}/sqlmap/doc/translations/README-hr-HR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-id-ID.md
 ${PYSITELIB}/sqlmap/doc/translations/README-it-IT.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ja-JP.md
+${PYSITELIB}/sqlmap/doc/translations/README-ka-GE.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ko-KR.md
+${PYSITELIB}/sqlmap/doc/translations/README-nl-NL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pl-PL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pt-BR.md
+${PYSITELIB}/sqlmap/doc/translations/README-rs-RS.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ru-RUS.md
+${PYSITELIB}/sqlmap/doc/translations/README-sk-SK.md
 ${PYSITELIB}/sqlmap/doc/translations/README-tr-TR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-uk-UA.md
 ${PYSITELIB}/sqlmap/doc/translations/README-vi-VN.md
@@ -569,6 +572,27 @@ ${PYSITELIB}/sqlmap/plugins/dbms/cache/syntax.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/cache/takeover.py
 ${PYSITELIB}/sqlmap/plugins/dbms/cache/takeover.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/cache/takeover.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/__init__.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/__init__.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/__init__.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/connector.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/connector.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/connector.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/enumeration.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/enumeration.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/enumeration.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/filesystem.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/filesystem.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/filesystem.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/fingerprint.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/fingerprint.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/fingerprint.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/syntax.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/syntax.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/syntax.pyo
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/takeover.py
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/takeover.pyc
+${PYSITELIB}/sqlmap/plugins/dbms/clickhouse/takeover.pyo
 ${PYSITELIB}/sqlmap/plugins/dbms/cratedb/__init__.py
 ${PYSITELIB}/sqlmap/plugins/dbms/cratedb/__init__.pyc
 ${PYSITELIB}/sqlmap/plugins/dbms/cratedb/__init__.pyo
@@ -1119,6 +1143,7 @@ ${PYSITELIB}/sqlmap/sqlmap.pyo
 ${PYSITELIB}/sqlmap/sqlmapapi.py
 ${PYSITELIB}/sqlmap/sqlmapapi.pyc
 ${PYSITELIB}/sqlmap/sqlmapapi.pyo
+${PYSITELIB}/sqlmap/sqlmapapi.yaml
 ${PYSITELIB}/sqlmap/tamper/0eunion.py
 ${PYSITELIB}/sqlmap/tamper/0eunion.pyc
 ${PYSITELIB}/sqlmap/tamper/0eunion.pyo
@@ -1170,6 +1195,9 @@ ${PYSITELIB}/sqlmap/tamper/commentbeforeparentheses.pyo
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.py
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyc
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyo
+${PYSITELIB}/sqlmap/tamper/decentities.py
+${PYSITELIB}/sqlmap/tamper/decentities.pyc
+${PYSITELIB}/sqlmap/tamper/decentities.pyo
 ${PYSITELIB}/sqlmap/tamper/dunion.py
 ${PYSITELIB}/sqlmap/tamper/dunion.pyc
 ${PYSITELIB}/sqlmap/tamper/dunion.pyo
@@ -1191,9 +1219,15 @@ ${PYSITELIB}/sqlmap/tamper/halfversionedmorekeywords.pyo
 ${PYSITELIB}/sqlmap/tamper/hex2char.py
 ${PYSITELIB}/sqlmap/tamper/hex2char.pyc
 ${PYSITELIB}/sqlmap/tamper/hex2char.pyo
+${PYSITELIB}/sqlmap/tamper/hexentities.py
+${PYSITELIB}/sqlmap/tamper/hexentities.pyc
+${PYSITELIB}/sqlmap/tamper/hexentities.pyo
 ${PYSITELIB}/sqlmap/tamper/htmlencode.py
 ${PYSITELIB}/sqlmap/tamper/htmlencode.pyc
 ${PYSITELIB}/sqlmap/tamper/htmlencode.pyo
+${PYSITELIB}/sqlmap/tamper/if2case.py
+${PYSITELIB}/sqlmap/tamper/if2case.pyc
+${PYSITELIB}/sqlmap/tamper/if2case.pyo
 ${PYSITELIB}/sqlmap/tamper/ifnull2casewhenisnull.py
 ${PYSITELIB}/sqlmap/tamper/ifnull2casewhenisnull.pyc
 ${PYSITELIB}/sqlmap/tamper/ifnull2casewhenisnull.pyo
@@ -1224,6 +1258,9 @@ ${PYSITELIB}/sqlmap/tamper/modsecurityzeroversioned.pyo
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.py
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyc
 ${PYSITELIB}/sqlmap/tamper/multiplespaces.pyo
+${PYSITELIB}/sqlmap/tamper/ord2ascii.py
+${PYSITELIB}/sqlmap/tamper/ord2ascii.pyc
+${PYSITELIB}/sqlmap/tamper/ord2ascii.pyo
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.py
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyc
 ${PYSITELIB}/sqlmap/tamper/overlongutf8.pyo
@@ -1248,6 +1285,9 @@ ${PYSITELIB}/sqlmap/tamper/randomcomments.pyo
 ${PYSITELIB}/sqlmap/tamper/schemasplit.py
 ${PYSITELIB}/sqlmap/tamper/schemasplit.pyc
 ${PYSITELIB}/sqlmap/tamper/schemasplit.pyo
+${PYSITELIB}/sqlmap/tamper/scientific.py
+${PYSITELIB}/sqlmap/tamper/scientific.pyc
+${PYSITELIB}/sqlmap/tamper/scientific.pyo
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.py
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyc
 ${PYSITELIB}/sqlmap/tamper/sleep2getlock.pyo
@@ -1344,9 +1384,6 @@ ${PYSITELIB}/sqlmap/thirdparty/chardet/big5freq.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/big5prober.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/big5prober.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/big5prober.pyo
-${PYSITELIB}/sqlmap/thirdparty/chardet/chardetect.py
-${PYSITELIB}/sqlmap/thirdparty/chardet/chardetect.pyc
-${PYSITELIB}/sqlmap/thirdparty/chardet/chardetect.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/chardistribution.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/chardistribution.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/chardistribution.pyo
@@ -1362,12 +1399,12 @@ ${PYSITELIB}/sqlmap/thirdparty/chardet/codingstatemachine.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/compat.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/compat.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/compat.pyo
-${PYSITELIB}/sqlmap/thirdparty/chardet/constants.py
-${PYSITELIB}/sqlmap/thirdparty/chardet/constants.pyc
-${PYSITELIB}/sqlmap/thirdparty/chardet/constants.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/cp949prober.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/cp949prober.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/cp949prober.pyo
+${PYSITELIB}/sqlmap/thirdparty/chardet/enums.py
+${PYSITELIB}/sqlmap/thirdparty/chardet/enums.pyc
+${PYSITELIB}/sqlmap/thirdparty/chardet/enums.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/escprober.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/escprober.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/escprober.pyo
@@ -1422,6 +1459,9 @@ ${PYSITELIB}/sqlmap/thirdparty/chardet/langhungarianmodel.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/langthaimodel.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/langthaimodel.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/langthaimodel.pyo
+${PYSITELIB}/sqlmap/thirdparty/chardet/langturkishmodel.py
+${PYSITELIB}/sqlmap/thirdparty/chardet/langturkishmodel.pyc
+${PYSITELIB}/sqlmap/thirdparty/chardet/langturkishmodel.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/latin1prober.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/latin1prober.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/latin1prober.pyo
@@ -1449,6 +1489,9 @@ ${PYSITELIB}/sqlmap/thirdparty/chardet/universaldetector.pyo
 ${PYSITELIB}/sqlmap/thirdparty/chardet/utf8prober.py
 ${PYSITELIB}/sqlmap/thirdparty/chardet/utf8prober.pyc
 ${PYSITELIB}/sqlmap/thirdparty/chardet/utf8prober.pyo
+${PYSITELIB}/sqlmap/thirdparty/chardet/version.py
+${PYSITELIB}/sqlmap/thirdparty/chardet/version.pyc
+${PYSITELIB}/sqlmap/thirdparty/chardet/version.pyo
 ${PYSITELIB}/sqlmap/thirdparty/clientform/__init__.py
 ${PYSITELIB}/sqlmap/thirdparty/clientform/__init__.pyc
 ${PYSITELIB}/sqlmap/thirdparty/clientform/__init__.pyo
