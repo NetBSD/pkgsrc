@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/09/26 21:20:32 wiz Exp $
+bin/64tass
+man/man1/64tass.1
+share/doc/64tass/README
+share/doc/64tass/README.html
