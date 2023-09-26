@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/09/19 01:58:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.47 2023/09/26 23:16:17 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.9.0
+VERSION=	0.9.2
 DISTNAME=	xfce4-notifyd-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-notifyd/${VERSION:R}/
@@ -12,6 +12,7 @@ COMMENT=	Xfce Notify daemon
 
 USE_TOOLS+=	gdbus-codegen
 
+CONFIGURE_ARGS+=	--disable-systemd
 CONFIGURE_ARGS+=	--enable-xdg-autostart
 
 DESKTOP_FILE=	xfce4-notifyd.desktop

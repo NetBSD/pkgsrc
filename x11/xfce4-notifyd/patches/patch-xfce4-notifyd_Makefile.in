@@ -1,13 +1,13 @@
-$NetBSD: patch-xfce4-notifyd_Makefile.in,v 1.2 2023/09/19 02:01:36 gutteridge Exp $
+$NetBSD: patch-xfce4-notifyd_Makefile.in,v 1.3 2023/09/26 23:16:17 gutteridge Exp $
 
 Adjust to pkgsrc norms for placing configuration files.
 
---- xfce4-notifyd/Makefile.in.orig	2023-09-18 20:51:44.000000000 +0000
+--- xfce4-notifyd/Makefile.in.orig	2023-09-20 00:02:18.000000000 +0000
 +++ xfce4-notifyd/Makefile.in
-@@ -524,7 +524,7 @@ dist_noinst_DATA = \
- @USE_DBUS_START_DAEMON_TRUE@service_DATA = $(service_in_files:.service.in=.service)
- @USE_SYSTEMD_TRUE@systemd_userdir = $(SYSTEMD_USER_SERVICE_DIR)
- @USE_SYSTEMD_TRUE@systemd_user_DATA = $(systemd_user_in_files:.service.in=.service)
+@@ -528,7 +528,7 @@ dist_noinst_DATA = \
+ @USE_SYSTEMD_TRUE@systemd_service = SystemdService=xfce4-notifyd.service
+ @USE_SYSTEMD_FALSE@xdg_autostart_exec = $(xfce4_notifyddir)/xfce4-notifyd
+ @USE_SYSTEMD_TRUE@xdg_autostart_exec = sh -c "systemctl --user start xfce4-notifyd.service 2>/dev/null || exec $(xfce4_notifyddir)/xfce4-notifyd"
 -@USE_XDG_AUTOSTART_TRUE@autostartdir = $(sysconfdir)/xdg/autostart
 +@USE_XDG_AUTOSTART_TRUE@autostartdir = $(datadir)/examples/xfce4-notifyd
  @USE_XDG_AUTOSTART_TRUE@autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
