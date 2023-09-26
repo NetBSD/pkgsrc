@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2023/07/21 22:46:50 mef Exp $
+# $NetBSD: Makefile,v 1.242 2023/09/26 20:37:17 bacon Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -103,6 +103,14 @@ CONFIGURE_ENV+=		LIBnn=lib
 SHAREMODE=		644
 
 CONFIGURE_ARGS.Darwin+=	--disable-openmp
+
+# Temporary fix for deprecated function ATSFontFindFromName() in R 4.2.0
+# Newer R versions should eliminate this function and obsolete this hack
+# https://trac.macports.org/ticket/66095
+# Darwin 21 corresponds to macOS 12
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} > 21
+MAKE_ENV.Darwin+= MACOSX_DEPLOYMENT_TARGET="12.0"
+.endif
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
 .if defined(PAPERSIZE)
