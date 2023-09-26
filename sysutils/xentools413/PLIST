@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/08/17 17:40:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/09/26 08:37:32 wiz Exp $
 bin/pygrub
 bin/qemu-img-xen
 bin/xen-cpuid
@@ -255,14 +255,14 @@ ${PYSITELIB}/grub/LiloConf.py
 ${PYSITELIB}/grub/LiloConf.pyc
 ${PYSITELIB}/grub/__init__.py
 ${PYSITELIB}/grub/__init__.pyc
-${PYSITELIB}/pygrub-0.6-py3.10.egg-info/PKG-INFO
-${PYSITELIB}/pygrub-0.6-py3.10.egg-info/SOURCES.txt
-${PYSITELIB}/pygrub-0.6-py3.10.egg-info/dependency_links.txt
-${PYSITELIB}/pygrub-0.6-py3.10.egg-info/top_level.txt
-${PYSITELIB}/xen-3.0-py3.10.egg-info/PKG-INFO
-${PYSITELIB}/xen-3.0-py3.10.egg-info/SOURCES.txt
-${PYSITELIB}/xen-3.0-py3.10.egg-info/dependency_links.txt
-${PYSITELIB}/xen-3.0-py3.10.egg-info/top_level.txt
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/xen/__init__.py
 ${PYSITELIB}/xen/__init__.pyc
 ${PYSITELIB}/xen/lowlevel/__init__.py
