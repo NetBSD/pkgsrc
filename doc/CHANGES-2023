@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5626 2023/09/26 21:20:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5627 2023/09/26 21:21:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8154,3 +8154,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/goredo to 1.32.0 [schmonz 2023-09-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2023Q3 branch [gdt 2022-09-26]
 	Added cross/64tass version 1.59.3120 [wiz 2023-09-26]
+	Updated audio/chromaprint to 1.5.1nb5 [wiz 2023-09-26]
