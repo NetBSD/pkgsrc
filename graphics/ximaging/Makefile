@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/03/02 09:31:52 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/26 10:16:36 vins Exp $
 
 DISTNAME=	ximaging-src-1.7
 PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
@@ -11,13 +12,20 @@ HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Image browser and viewer for Unix - X/Motif
 LICENSE=	mit
 
+# Enable support for OpenMP, Xinerama and various image formats.
+CFLAGS+=	-fopenmp -DENABLE_JPEG -DENABLE_PNG -DENABLE_OMP \
+		-DENABLE_PNG -DENABLE_TIFF -DENABLE_XINERAMA
+LDFLAGS+=	-fopenmp
+
+PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
+BUILDLINK_TRANSFORM+=	rm:-pthread
+
 MAKE_FLAGS+=	CC?=${CC:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	CFLAGS+="-fopenmp -DENABLE_OMP"
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS+="-fopenmp -pthread"
 MAKE_FLAGS+=	PNG_LIBS=-lpng16
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	APPLRESDIR=${PREFIX}/lib/X11/app-defaults
 
@@ -40,5 +48,4 @@ post-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
