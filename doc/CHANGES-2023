@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5621 2023/09/25 19:33:45 jperkin Exp $
+$NetBSD: CHANGES-2023,v 1.5622 2023/09/26 01:26:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8153,3 +8153,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/qsmtp to 0.39 [schmonz 2023-09-25]
 	Updated security/sqlmap to 1.7.8 [hubertf 2023-09-25]
 	Updated mail/amavisd-new to 2.12.2nb1 [jperkin 2023-09-25]
+	Updated devel/goredo to 1.32.0 [schmonz 2023-09-26]
