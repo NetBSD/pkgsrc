@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.111 2023/06/26 11:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/09/26 21:20:42 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
 
+SUBDIR+=	64tass
 SUBDIR+=	GenFw
 SUBDIR+=	aarch64-none-elf-binutils
 SUBDIR+=	aarch64-none-elf-gcc
