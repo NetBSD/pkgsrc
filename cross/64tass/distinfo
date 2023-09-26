@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/09/26 21:20:32 wiz Exp $
+
+BLAKE2s (64tass-1.59.3120-src.zip) = b17809b396ef429bf1c948643aacb2db70fcd07c52723ddadca3943c0f0109f2
+SHA512 (64tass-1.59.3120-src.zip) = 4cbccdcd05397937e410a00c6459b3c5df131e15b9e2ce78d493cf2eb3859c1ad6a6b56be05736f1f0d376a357c308b85e54f69973f4083c9e6e6c2b0326a2ac
+Size (64tass-1.59.3120-src.zip) = 752572 bytes
