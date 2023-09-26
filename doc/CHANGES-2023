@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5628 2023/09/26 21:22:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5629 2023/09/26 23:16:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8156,3 +8156,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added cross/64tass version 1.59.3120 [wiz 2023-09-26]
 	Updated audio/chromaprint to 1.5.1nb5 [wiz 2023-09-26]
 	Updated graphics/digikam to 8.1.0 [wiz 2023-09-26]
+	Updated x11/xfce4-notifyd to 0.9.2 [gutteridge 2023-09-26]
