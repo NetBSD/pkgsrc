@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/09/17 11:08:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/26 07:38:58 wiz Exp $
 
-DISTNAME=	git-cinnabar-0.6.2
+DISTNAME=	git-cinnabar-0.6.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
@@ -13,7 +13,7 @@ LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-GITHUB_SUBMODULES=	git-for-windows git v2.41.0.windows.1 git-core
+GITHUB_SUBMODULES=	git-for-windows git v2.40.0.windows.1 git-core
 
 USE_TOOLS+=	gmake pkg-config
 
