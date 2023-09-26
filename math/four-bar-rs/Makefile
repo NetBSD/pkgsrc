@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2023/09/21 11:26:30 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/26 07:09:52 pin Exp $
 
-DISTNAME=	four-bar-rs-5.1.0
+# Do not update. Newer version require Rust > 1.70
+DISTNAME=	four-bar-rs-4.0.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
 LICENSE=	gnu-agpl-v3
