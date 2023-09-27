@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/07/07 07:22:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/09/27 09:21:30 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/yt_dlp/compat/imghdr.pyo
 ${PYSITELIB}/yt_dlp/compat/shutil.py
 ${PYSITELIB}/yt_dlp/compat/shutil.pyc
 ${PYSITELIB}/yt_dlp/compat/shutil.pyo
+${PYSITELIB}/yt_dlp/compat/types.py
+${PYSITELIB}/yt_dlp/compat/types.pyc
+${PYSITELIB}/yt_dlp/compat/types.pyo
 ${PYSITELIB}/yt_dlp/compat/urllib/__init__.py
 ${PYSITELIB}/yt_dlp/compat/urllib/__init__.pyc
 ${PYSITELIB}/yt_dlp/compat/urllib/__init__.pyo
@@ -219,9 +222,9 @@ ${PYSITELIB}/yt_dlp/extractor/anchorfm.pyo
 ${PYSITELIB}/yt_dlp/extractor/angel.py
 ${PYSITELIB}/yt_dlp/extractor/angel.pyc
 ${PYSITELIB}/yt_dlp/extractor/angel.pyo
-${PYSITELIB}/yt_dlp/extractor/ant1newsgr.py
-${PYSITELIB}/yt_dlp/extractor/ant1newsgr.pyc
-${PYSITELIB}/yt_dlp/extractor/ant1newsgr.pyo
+${PYSITELIB}/yt_dlp/extractor/antenna.py
+${PYSITELIB}/yt_dlp/extractor/antenna.pyc
+${PYSITELIB}/yt_dlp/extractor/antenna.pyo
 ${PYSITELIB}/yt_dlp/extractor/anvato.py
 ${PYSITELIB}/yt_dlp/extractor/anvato.pyc
 ${PYSITELIB}/yt_dlp/extractor/anvato.pyo
@@ -261,9 +264,6 @@ ${PYSITELIB}/yt_dlp/extractor/arnes.pyo
 ${PYSITELIB}/yt_dlp/extractor/arte.py
 ${PYSITELIB}/yt_dlp/extractor/arte.pyc
 ${PYSITELIB}/yt_dlp/extractor/arte.pyo
-${PYSITELIB}/yt_dlp/extractor/asiancrush.py
-${PYSITELIB}/yt_dlp/extractor/asiancrush.pyc
-${PYSITELIB}/yt_dlp/extractor/asiancrush.pyo
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.py
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.pyc
 ${PYSITELIB}/yt_dlp/extractor/atresplayer.pyo
@@ -297,6 +297,9 @@ ${PYSITELIB}/yt_dlp/extractor/awaan.pyo
 ${PYSITELIB}/yt_dlp/extractor/aws.py
 ${PYSITELIB}/yt_dlp/extractor/aws.pyc
 ${PYSITELIB}/yt_dlp/extractor/aws.pyo
+${PYSITELIB}/yt_dlp/extractor/axs.py
+${PYSITELIB}/yt_dlp/extractor/axs.pyc
+${PYSITELIB}/yt_dlp/extractor/axs.pyo
 ${PYSITELIB}/yt_dlp/extractor/azmedien.py
 ${PYSITELIB}/yt_dlp/extractor/azmedien.pyc
 ${PYSITELIB}/yt_dlp/extractor/azmedien.pyo
@@ -423,6 +426,9 @@ ${PYSITELIB}/yt_dlp/extractor/breitbart.pyo
 ${PYSITELIB}/yt_dlp/extractor/brightcove.py
 ${PYSITELIB}/yt_dlp/extractor/brightcove.pyc
 ${PYSITELIB}/yt_dlp/extractor/brightcove.pyo
+${PYSITELIB}/yt_dlp/extractor/brilliantpala.py
+${PYSITELIB}/yt_dlp/extractor/brilliantpala.pyc
+${PYSITELIB}/yt_dlp/extractor/brilliantpala.pyo
 ${PYSITELIB}/yt_dlp/extractor/bundesliga.py
 ${PYSITELIB}/yt_dlp/extractor/bundesliga.pyc
 ${PYSITELIB}/yt_dlp/extractor/bundesliga.pyo
@@ -468,6 +474,9 @@ ${PYSITELIB}/yt_dlp/extractor/camtasia.pyo
 ${PYSITELIB}/yt_dlp/extractor/camwithher.py
 ${PYSITELIB}/yt_dlp/extractor/camwithher.pyc
 ${PYSITELIB}/yt_dlp/extractor/camwithher.pyo
+${PYSITELIB}/yt_dlp/extractor/canal1.py
+${PYSITELIB}/yt_dlp/extractor/canal1.pyc
+${PYSITELIB}/yt_dlp/extractor/canal1.pyo
 ${PYSITELIB}/yt_dlp/extractor/canalalpha.py
 ${PYSITELIB}/yt_dlp/extractor/canalalpha.pyc
 ${PYSITELIB}/yt_dlp/extractor/canalalpha.pyo
@@ -477,6 +486,9 @@ ${PYSITELIB}/yt_dlp/extractor/canalc2.pyo
 ${PYSITELIB}/yt_dlp/extractor/canalplus.py
 ${PYSITELIB}/yt_dlp/extractor/canalplus.pyc
 ${PYSITELIB}/yt_dlp/extractor/canalplus.pyo
+${PYSITELIB}/yt_dlp/extractor/caracoltv.py
+${PYSITELIB}/yt_dlp/extractor/caracoltv.pyc
+${PYSITELIB}/yt_dlp/extractor/caracoltv.pyo
 ${PYSITELIB}/yt_dlp/extractor/carambatv.py
 ${PYSITELIB}/yt_dlp/extractor/carambatv.pyc
 ${PYSITELIB}/yt_dlp/extractor/carambatv.pyo
@@ -546,6 +558,9 @@ ${PYSITELIB}/yt_dlp/extractor/cinemax.pyo
 ${PYSITELIB}/yt_dlp/extractor/cinetecamilano.py
 ${PYSITELIB}/yt_dlp/extractor/cinetecamilano.pyc
 ${PYSITELIB}/yt_dlp/extractor/cinetecamilano.pyo
+${PYSITELIB}/yt_dlp/extractor/cineverse.py
+${PYSITELIB}/yt_dlp/extractor/cineverse.pyc
+${PYSITELIB}/yt_dlp/extractor/cineverse.pyo
 ${PYSITELIB}/yt_dlp/extractor/ciscolive.py
 ${PYSITELIB}/yt_dlp/extractor/ciscolive.pyc
 ${PYSITELIB}/yt_dlp/extractor/ciscolive.pyo
@@ -843,6 +858,9 @@ ${PYSITELIB}/yt_dlp/extractor/engadget.pyo
 ${PYSITELIB}/yt_dlp/extractor/epicon.py
 ${PYSITELIB}/yt_dlp/extractor/epicon.pyc
 ${PYSITELIB}/yt_dlp/extractor/epicon.pyo
+${PYSITELIB}/yt_dlp/extractor/eplus.py
+${PYSITELIB}/yt_dlp/extractor/eplus.pyc
+${PYSITELIB}/yt_dlp/extractor/eplus.pyo
 ${PYSITELIB}/yt_dlp/extractor/epoch.py
 ${PYSITELIB}/yt_dlp/extractor/epoch.pyc
 ${PYSITELIB}/yt_dlp/extractor/epoch.pyo
@@ -1479,6 +1497,9 @@ ${PYSITELIB}/yt_dlp/extractor/lynda.pyo
 ${PYSITELIB}/yt_dlp/extractor/m6.py
 ${PYSITELIB}/yt_dlp/extractor/m6.pyc
 ${PYSITELIB}/yt_dlp/extractor/m6.pyo
+${PYSITELIB}/yt_dlp/extractor/magellantv.py
+${PYSITELIB}/yt_dlp/extractor/magellantv.pyc
+${PYSITELIB}/yt_dlp/extractor/magellantv.pyo
 ${PYSITELIB}/yt_dlp/extractor/magentamusik360.py
 ${PYSITELIB}/yt_dlp/extractor/magentamusik360.pyc
 ${PYSITELIB}/yt_dlp/extractor/magentamusik360.pyo
@@ -1638,6 +1659,9 @@ ${PYSITELIB}/yt_dlp/extractor/mofosex.pyo
 ${PYSITELIB}/yt_dlp/extractor/mojvideo.py
 ${PYSITELIB}/yt_dlp/extractor/mojvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/mojvideo.pyo
+${PYSITELIB}/yt_dlp/extractor/monstercat.py
+${PYSITELIB}/yt_dlp/extractor/monstercat.pyc
+${PYSITELIB}/yt_dlp/extractor/monstercat.pyo
 ${PYSITELIB}/yt_dlp/extractor/morningstar.py
 ${PYSITELIB}/yt_dlp/extractor/morningstar.pyc
 ${PYSITELIB}/yt_dlp/extractor/morningstar.pyo
@@ -1674,6 +1698,9 @@ ${PYSITELIB}/yt_dlp/extractor/muenchentv.pyo
 ${PYSITELIB}/yt_dlp/extractor/murrtube.py
 ${PYSITELIB}/yt_dlp/extractor/murrtube.pyc
 ${PYSITELIB}/yt_dlp/extractor/murrtube.pyo
+${PYSITELIB}/yt_dlp/extractor/museai.py
+${PYSITELIB}/yt_dlp/extractor/museai.pyc
+${PYSITELIB}/yt_dlp/extractor/museai.pyo
 ${PYSITELIB}/yt_dlp/extractor/musescore.py
 ${PYSITELIB}/yt_dlp/extractor/musescore.pyc
 ${PYSITELIB}/yt_dlp/extractor/musescore.pyo
@@ -1788,6 +1815,9 @@ ${PYSITELIB}/yt_dlp/extractor/nick.pyo
 ${PYSITELIB}/yt_dlp/extractor/niconico.py
 ${PYSITELIB}/yt_dlp/extractor/niconico.pyc
 ${PYSITELIB}/yt_dlp/extractor/niconico.pyo
+${PYSITELIB}/yt_dlp/extractor/niconicochannelplus.py
+${PYSITELIB}/yt_dlp/extractor/niconicochannelplus.pyc
+${PYSITELIB}/yt_dlp/extractor/niconicochannelplus.pyo
 ${PYSITELIB}/yt_dlp/extractor/ninecninemedia.py
 ${PYSITELIB}/yt_dlp/extractor/ninecninemedia.pyc
 ${PYSITELIB}/yt_dlp/extractor/ninecninemedia.pyo
@@ -2016,6 +2046,9 @@ ${PYSITELIB}/yt_dlp/extractor/photobucket.pyo
 ${PYSITELIB}/yt_dlp/extractor/piapro.py
 ${PYSITELIB}/yt_dlp/extractor/piapro.pyc
 ${PYSITELIB}/yt_dlp/extractor/piapro.pyo
+${PYSITELIB}/yt_dlp/extractor/piaulizaportal.py
+${PYSITELIB}/yt_dlp/extractor/piaulizaportal.pyc
+${PYSITELIB}/yt_dlp/extractor/piaulizaportal.pyo
 ${PYSITELIB}/yt_dlp/extractor/picarto.py
 ${PYSITELIB}/yt_dlp/extractor/picarto.pyc
 ${PYSITELIB}/yt_dlp/extractor/picarto.pyo
@@ -2100,6 +2133,9 @@ ${PYSITELIB}/yt_dlp/extractor/popcorntv.pyo
 ${PYSITELIB}/yt_dlp/extractor/porn91.py
 ${PYSITELIB}/yt_dlp/extractor/porn91.pyc
 ${PYSITELIB}/yt_dlp/extractor/porn91.pyo
+${PYSITELIB}/yt_dlp/extractor/pornbox.py
+${PYSITELIB}/yt_dlp/extractor/pornbox.pyc
+${PYSITELIB}/yt_dlp/extractor/pornbox.pyo
 ${PYSITELIB}/yt_dlp/extractor/porncom.py
 ${PYSITELIB}/yt_dlp/extractor/porncom.pyc
 ${PYSITELIB}/yt_dlp/extractor/porncom.pyo
@@ -2328,6 +2364,9 @@ ${PYSITELIB}/yt_dlp/extractor/ruutu.pyo
 ${PYSITELIB}/yt_dlp/extractor/ruv.py
 ${PYSITELIB}/yt_dlp/extractor/ruv.pyc
 ${PYSITELIB}/yt_dlp/extractor/ruv.pyo
+${PYSITELIB}/yt_dlp/extractor/s4c.py
+${PYSITELIB}/yt_dlp/extractor/s4c.pyc
+${PYSITELIB}/yt_dlp/extractor/s4c.pyo
 ${PYSITELIB}/yt_dlp/extractor/safari.py
 ${PYSITELIB}/yt_dlp/extractor/safari.pyc
 ${PYSITELIB}/yt_dlp/extractor/safari.pyo
@@ -2535,9 +2574,6 @@ ${PYSITELIB}/yt_dlp/extractor/storyfire.pyo
 ${PYSITELIB}/yt_dlp/extractor/streamable.py
 ${PYSITELIB}/yt_dlp/extractor/streamable.pyc
 ${PYSITELIB}/yt_dlp/extractor/streamable.pyo
-${PYSITELIB}/yt_dlp/extractor/streamanity.py
-${PYSITELIB}/yt_dlp/extractor/streamanity.pyc
-${PYSITELIB}/yt_dlp/extractor/streamanity.pyo
 ${PYSITELIB}/yt_dlp/extractor/streamcloud.py
 ${PYSITELIB}/yt_dlp/extractor/streamcloud.pyc
 ${PYSITELIB}/yt_dlp/extractor/streamcloud.pyo
@@ -2595,6 +2631,9 @@ ${PYSITELIB}/yt_dlp/extractor/tass.pyo
 ${PYSITELIB}/yt_dlp/extractor/tbs.py
 ${PYSITELIB}/yt_dlp/extractor/tbs.pyc
 ${PYSITELIB}/yt_dlp/extractor/tbs.pyo
+${PYSITELIB}/yt_dlp/extractor/tbsjp.py
+${PYSITELIB}/yt_dlp/extractor/tbsjp.pyc
+${PYSITELIB}/yt_dlp/extractor/tbsjp.pyo
 ${PYSITELIB}/yt_dlp/extractor/tdslifeway.py
 ${PYSITELIB}/yt_dlp/extractor/tdslifeway.pyc
 ${PYSITELIB}/yt_dlp/extractor/tdslifeway.pyo
@@ -3156,6 +3195,9 @@ ${PYSITELIB}/yt_dlp/extractor/wikimedia.pyo
 ${PYSITELIB}/yt_dlp/extractor/willow.py
 ${PYSITELIB}/yt_dlp/extractor/willow.pyc
 ${PYSITELIB}/yt_dlp/extractor/willow.pyo
+${PYSITELIB}/yt_dlp/extractor/wimbledon.py
+${PYSITELIB}/yt_dlp/extractor/wimbledon.pyc
+${PYSITELIB}/yt_dlp/extractor/wimbledon.pyo
 ${PYSITELIB}/yt_dlp/extractor/wimtv.py
 ${PYSITELIB}/yt_dlp/extractor/wimtv.pyc
 ${PYSITELIB}/yt_dlp/extractor/wimtv.pyo
@@ -3312,6 +3354,21 @@ ${PYSITELIB}/yt_dlp/jsinterp.pyo
 ${PYSITELIB}/yt_dlp/minicurses.py
 ${PYSITELIB}/yt_dlp/minicurses.pyc
 ${PYSITELIB}/yt_dlp/minicurses.pyo
+${PYSITELIB}/yt_dlp/networking/__init__.py
+${PYSITELIB}/yt_dlp/networking/__init__.pyc
+${PYSITELIB}/yt_dlp/networking/__init__.pyo
+${PYSITELIB}/yt_dlp/networking/_helper.py
+${PYSITELIB}/yt_dlp/networking/_helper.pyc
+${PYSITELIB}/yt_dlp/networking/_helper.pyo
+${PYSITELIB}/yt_dlp/networking/_urllib.py
+${PYSITELIB}/yt_dlp/networking/_urllib.pyc
+${PYSITELIB}/yt_dlp/networking/_urllib.pyo
+${PYSITELIB}/yt_dlp/networking/common.py
+${PYSITELIB}/yt_dlp/networking/common.pyc
+${PYSITELIB}/yt_dlp/networking/common.pyo
+${PYSITELIB}/yt_dlp/networking/exceptions.py
+${PYSITELIB}/yt_dlp/networking/exceptions.pyc
+${PYSITELIB}/yt_dlp/networking/exceptions.pyo
 ${PYSITELIB}/yt_dlp/options.py
 ${PYSITELIB}/yt_dlp/options.pyc
 ${PYSITELIB}/yt_dlp/options.pyo
@@ -3369,6 +3426,9 @@ ${PYSITELIB}/yt_dlp/utils/_legacy.pyo
 ${PYSITELIB}/yt_dlp/utils/_utils.py
 ${PYSITELIB}/yt_dlp/utils/_utils.pyc
 ${PYSITELIB}/yt_dlp/utils/_utils.pyo
+${PYSITELIB}/yt_dlp/utils/networking.py
+${PYSITELIB}/yt_dlp/utils/networking.pyc
+${PYSITELIB}/yt_dlp/utils/networking.pyo
 ${PYSITELIB}/yt_dlp/utils/traversal.py
 ${PYSITELIB}/yt_dlp/utils/traversal.pyc
 ${PYSITELIB}/yt_dlp/utils/traversal.pyo
