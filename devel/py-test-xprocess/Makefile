@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/01/24 20:10:28 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/09/27 15:23:59 adam Exp $
 
-DISTNAME=	pytest-xprocess-0.22.2
+DISTNAME=	pytest-xprocess-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-xprocess/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 
 USE_LANGUAGES=	# none
