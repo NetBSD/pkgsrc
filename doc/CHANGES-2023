@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5641 2023/09/27 15:14:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5642 2023/09/27 15:24:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8184,3 +8184,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-prettytable to 3.9.0 [adam 2023-09-27]
 	Updated devel/py-fasteners to 0.19 [adam 2023-09-27]
 	Updated www/py-test-httpx to 0.26.0 [adam 2023-09-27]
+	Updated databases/py-apsw to 3.43.1.0 [adam 2023-09-27]
+	Updated devel/py-pdm to 2.9.3 [adam 2023-09-27]
+	Updated net/py-python-socks to 2.4.3 [adam 2023-09-27]
+	Updated devel/py-test-xprocess to 0.23.0 [adam 2023-09-27]
