@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5634 2023/09/27 09:45:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5635 2023/09/27 10:03:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8168,3 +8168,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-yapf to 0.40.2 [adam 2023-09-27]
 	Updated textproc/utf8-cpp to 3.2.5 [adam 2023-09-27]
 	Updated devel/py-utils to 3.8.1 [adam 2023-09-27]
+	Updated archivers/py-zipp to 3.17.0 [adam 2023-09-27]
+	Updated devel/py-urwid to 2.2.2 [adam 2023-09-27]
