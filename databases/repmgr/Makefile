@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/04/19 08:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.25 2023/09/27 09:01:26 adam Exp $
 
-DISTNAME=	repmgr-5.3.3
+DISTNAME=	repmgr-5.4.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	https://repmgr.org/download/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-USE_TOOLS+=		gmake flex gsed
+USE_TOOLS+=		flex gmake gsed
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	postgresql
 
@@ -40,11 +39,16 @@ PLIST_VARS+=	llvm
 .if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mllvm)
 PLIST.llvm=	yes
 .endif
-#.if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mlz4)
-#.include "../../archivers/lz4/buildlink3.mk"
-#.endif
+
+OPSYSVARS+=	SOEXT
+.if ${PGSQL_VERSION} == 16
+SOEXT.Darwin=	dylib
+.endif
+SOEXT.*=	so
+PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
