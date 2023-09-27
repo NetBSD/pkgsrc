@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.323 2023/09/17 12:14:47 tnn Exp $
+# $NetBSD: Makefile,v 1.324 2023/09/27 08:24:04 adam Exp $
 
-DISTNAME=	qemu-8.1.0
+DISTNAME=	qemu-8.1.1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
