@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5635 2023/09/27 10:03:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5636 2023/09/27 10:58:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8170,3 +8170,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-utils to 3.8.1 [adam 2023-09-27]
 	Updated archivers/py-zipp to 3.17.0 [adam 2023-09-27]
 	Updated devel/py-urwid to 2.2.2 [adam 2023-09-27]
+	Updated math/py-scikit-learn to 1.3.1 [adam 2023-09-27]
+	Updated devel/py-test-check to 2.2.2 [adam 2023-09-27]
