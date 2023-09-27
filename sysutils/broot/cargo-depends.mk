@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.63 2023/09/20 12:14:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.64 2023/09/27 20:01:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.7
@@ -122,7 +122,7 @@ CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.3.0
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
 CARGO_CRATE_DEPENDS+=	kurbo-0.9.5
 CARGO_CRATE_DEPENDS+=	lazy-regex-2.5.0
-CARGO_CRATE_DEPENDS+=	lazy-regex-3.0.1
+CARGO_CRATE_DEPENDS+=	lazy-regex-3.0.2
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-2.4.1
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.0.1
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
