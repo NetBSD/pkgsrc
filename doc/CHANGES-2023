@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5643 2023/09/27 15:36:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5644 2023/09/27 16:21:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8192,3 +8192,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-unearth to 0.11.0 [adam 2023-09-27]
 	Updated archivers/py-brotlicffi to 1.1.0.0 [adam 2023-09-27]
 	Updated security/py-cryptodome to 3.19.0 [adam 2023-09-27]
+	Updated devel/py-jupyter_core to 5.3.2 [adam 2023-09-27]
+	Updated www/py-jupyterlab-server to 2.25.0 [adam 2023-09-27]
+	Updated www/py-jupyterlab to 4.0.6 [adam 2023-09-27]
+	Updated www/py-notebook to 7.0.4 [adam 2023-09-27]
