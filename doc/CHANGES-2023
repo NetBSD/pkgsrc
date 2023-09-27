@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5640 2023/09/27 12:49:20 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5641 2023/09/27 15:14:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8180,3 +8180,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/blosc2 to 2.10.4 [adam 2023-09-27]
 	Updated devel/py-rpds-py to 0.10.3 [adam 2023-09-27]
 	Updated devel/py-maturin to 1.2.3nb2 [wiz 2023-09-27]
+	Updated devel/py-msgpack to 1.0.6 [adam 2023-09-27]
+	Updated textproc/py-prettytable to 3.9.0 [adam 2023-09-27]
+	Updated devel/py-fasteners to 0.19 [adam 2023-09-27]
+	Updated www/py-test-httpx to 0.26.0 [adam 2023-09-27]
