@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5645 2023/09/27 16:51:21 vins Exp $
+$NetBSD: CHANGES-2023,v 1.5646 2023/09/27 16:57:32 vins Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8197,3 +8197,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-jupyterlab to 4.0.6 [adam 2023-09-27]
 	Updated www/py-notebook to 7.0.4 [adam 2023-09-27]
 	Updated mail/meli to 0.8.2 [vins 2023-09-27]
+	Updated www/libreddit to 0.30.1_20230714 [vins 2023-09-27]
