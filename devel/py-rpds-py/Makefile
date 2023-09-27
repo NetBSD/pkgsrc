@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/29 06:53:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/27 12:25:33 adam Exp $
 
-DISTNAME=	rpds_py-0.10.0
+DISTNAME=	rpds_py-0.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpds-py/}
