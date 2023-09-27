@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2023/08/31 15:55:38 vins Exp $
+# $NetBSD: Makefile,v 1.12 2023/09/27 16:49:37 vins Exp $
 
-DISTNAME=	v0.8.0
-PKGREVISION=	1
+DISTNAME=	v0.8.2
 PKGNAME=	${DISTNAME:S|^v|meli-|}
-CATEGORIES=	mail
+CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://git.meli.delivery/meli/meli/archive/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://meli.delivery/
 COMMENT=	Terminal mail client
 LICENSE=	gnu-gpl-v3
@@ -24,7 +23,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 CARGO_NO_DEFAULT_FEATURES=	yes
-CARGO_FEATURES=			cli-docs jmap regexp smtp
+CARGO_FEATURES=			cli-docs jmap regexp smtp text-processing
 
 .include "options.mk"
 .include "cargo-depends.mk"
