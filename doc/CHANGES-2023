@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5638 2023/09/27 12:15:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5639 2023/09/27 12:25:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8177,3 +8177,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-redis to 5.0.1 [adam 2023-09-27]
 	Updated graphics/py-tifffile to 2023.9.26 [adam 2023-09-27]
 	Updated devel/py-gitpython to 3.1.37 [adam 2023-09-27]
+	Updated devel/blosc2 to 2.10.4 [adam 2023-09-27]
+	Updated devel/py-rpds-py to 0.10.3 [adam 2023-09-27]
