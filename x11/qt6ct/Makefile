@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/09/03 05:23:18 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/27 17:18:00 vins Exp $
 
-DISTNAME=	qt6ct-0.8
+DISTNAME=	qt6ct-0.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trialuser02/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 QMAKE_ARGS+=	qt6ct.pro
 QMAKE_ARGS+=	QMAKE_CXXFLAGS=${CXXFLAGS:Q}
-QMAKE_ARGS+=	PREFIX=${PREFIX}
+QMAKE_ARGS+=	PREFIX=${PREFIX} PLUGINDIR=${QTDIR}/plugins
 
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
