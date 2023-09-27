@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2023/08/30 19:56:21 vins Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2023/09/27 16:49:37 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	abnf-core-0.6.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -47,9 +47,11 @@ CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.3
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.15
 CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.8
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.16
+CARGO_CRATE_DEPENDS+=	csv-1.2.2
+CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	curl-0.4.44
 CARGO_CRATE_DEPENDS+=	curl-sys-0.4.65+curl-8.2.1
-SITES.curl-sys-0.4.65+curl-8.2.1.crate+= ${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.65+curl-8.2.1/download}
+SITES.curl-sys-0.4.65+curl-8.2.1.crate+=${MASTER_SITE_CRATESIO:S,^,-,:=curl-sys/0.4.65+curl-8.2.1/download}
 CARGO_CRATE_DEPENDS+=	data-encoding-2.4.0
 CARGO_CRATE_DEPENDS+=	dbus-0.9.7
 CARGO_CRATE_DEPENDS+=	deranged-0.3.8
@@ -156,6 +158,7 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.18.0
 CARGO_CRATE_DEPENDS+=	openssl-0.10.57
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
+CARGO_CRATE_DEPENDS+=	openssl-src-111.27.0+1.1.1v
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.92
 CARGO_CRATE_DEPENDS+=	parking-2.1.0
 CARGO_CRATE_DEPENDS+=	pcre2-0.2.4
@@ -223,6 +226,7 @@ CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.47
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.7
 CARGO_CRATE_DEPENDS+=	time-0.3.28
 CARGO_CRATE_DEPENDS+=	time-core-0.1.1
+CARGO_CRATE_DEPENDS+=	time-macros-0.2.14
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	toml-0.5.11
@@ -274,4 +278,3 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.39.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
 CARGO_CRATE_DEPENDS+=	xdg-2.5.2
-CARGO_CRATE_DEPENDS+=	xdg-utils-0.4.0
