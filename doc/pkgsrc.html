@@ -1026,7 +1026,7 @@ and dashes.</p>
 	quarterly basis from the current branch and only gets modified
 	for security updates. The names of the stable branches are built
 	from the year and the quarter, for example
-	<code class="literal">2021Q4</code>.</p>
+	<code class="literal">2023Q3</code>.</p>
 <p>The second step is to decide <span class="emphasis"><em>how</em></span> you
 	want to download pkgsrc. You can get it as a tar file or via CVS.
 	Both ways are described here.</p>
@@ -1052,11 +1052,11 @@ and dashes.</p>
 	respectively.
 	</p>
 <p>You can fetch the same files using FTP.</p>
-<p>The tar file for the stable branch 2021Q4 is in the
-	directory <code class="filename">pkgsrc-2021Q4</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2021Q4/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
+<p>The tar file for the stable branch 2023Q3 is in the
+	directory <code class="filename">pkgsrc-2023Q3</code> and is also called <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/pkgsrc-2023Q3/pkgsrc.tar.gz" target="_top"><code class="filename">pkgsrc.tar.gz</code></a>.</p>
 <p>To download the latest pkgsrc stable tarball, run:</p>
 <pre class="screen">
-<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2021Q4/pkgsrc.tar.gz</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2023Q3/pkgsrc.tar.gz</code></strong></pre>
 <p>If you prefer, you can also fetch it using "wget", "curl",
 	or your web browser.</p>
 <p>Then, extract it with:</p>
@@ -1071,7 +1071,7 @@ and dashes.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="getting-via-cvs"></a>3.1.2. Via anonymous CVS</h3></div></div></div>
 <p>To fetch a specific pkgsrc stable branch, run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2021Q4 -P pkgsrc</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr &amp;&amp; cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2023Q3 -P pkgsrc</code></strong>
 </pre>
 <p>This will create the directory <code class="filename">pkgsrc/</code> 
 	in your <code class="filename">/usr/</code> directory and all the package source 
@@ -1156,7 +1156,7 @@ release -d
 	by adding the option <span class="quote">&#8220;<span class="quote">-A</span>&#8221;</span> after the
 	<span class="quote">&#8220;<span class="quote">update</span>&#8221;</span> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<span class="quote">&#8220;<span class="quote">-rpkgsrc-2021Q4</span>&#8221;</span> option.</p>
+	<span class="quote">&#8220;<span class="quote">-rpkgsrc-2023Q3</span>&#8221;</span> option.</p>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
@@ -1409,7 +1409,7 @@ nginx-1.18.0nb8      Lightweight HTTP server and mail proxy server
       <a class="ulink" href="https://cdn.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
-      to the root users <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/crontab.5"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
+      to the root users <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/crontab.5"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
       </p>
 <pre class="screen">
 # Download vulnerabilities file
@@ -1438,7 +1438,7 @@ fetch_pkg_vulnerabilities=YES
 check_pkg_vulnerabilities=YES
       </pre>
 <p>
-      see <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/daily.conf.5"><span class="citerefentry"><span class="refentrytitle">daily.conf</span>(5)</span></a> and <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/security.conf.5"><span class="citerefentry"><span class="refentrytitle">security.conf</span>(5)</span></a> for more details.
+      see <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/daily.conf.5"><span class="citerefentry"><span class="refentrytitle">daily.conf</span>(5)</span></a> and <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/security.conf.5"><span class="citerefentry"><span class="refentrytitle">security.conf</span>(5)</span></a> for more details.
     </p>
 </div>
 <div class="sect2">
@@ -1626,7 +1626,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     help with this.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p>If you invoke the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with
+<p>If you invoke the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with
 	<code class="varname">PKG_DEBUG_LEVEL=2</code>, then a huge amount of
 	information will be displayed. For example,</p>
 <pre class="screen"><strong class="userinput"><code>make patch PKG_DEBUG_LEVEL=2</code></strong></pre>
@@ -1634,10 +1634,10 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 	including the <span class="quote">&#8220;<span class="quote">patch</span>&#8221;</span> stage.</p>
 </li>
 <li class="listitem">
-<p>If you want to know the value of a certain <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+<p>If you want to know the value of a certain <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
 	definition, then the <code class="varname">VARNAME</code> definition
 	should be used, in conjunction with the show-var
-	target. e.g. to show the expansion of the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+	target. e.g. to show the expansion of the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
 	variable <code class="varname">LOCALBASE</code>:</p>
 <pre class="screen">
 <code class="prompt">%</code> <strong class="userinput"><code>make show-var VARNAME=LOCALBASE</code></strong>
@@ -1650,11 +1650,11 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     created yourself (see next section), that you put into
     pkgsrc/packages manually or that is located on a remote FTP
     server, you can use the "bin-install" target. This target will
-    install a binary package - if available - via <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>,
+    install a binary package - if available - via <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>,
     else do a <span class="command"><strong>make package</strong></span>.  The list of remote FTP
     sites searched is kept in the variable
     <code class="varname">BINPKG_SITES</code>, which defaults to
-    ftp.NetBSD.org. Any flags that should be added to <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>
+    ftp.NetBSD.org. Any flags that should be added to <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>
     can be put into <code class="varname">BIN_INSTALL_FLAGS</code>.  See
     <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for more
     details.</p>
@@ -1694,7 +1694,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <a name="mk.conf"></a><p>The whole pkgsrc system is configured in a single file, usually
 called <code class="filename">mk.conf</code>. In which directory pkgsrc looks for
 that file depends on the installation. On NetBSD, when you use
-<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
+<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
 <code class="filename">/etc/</code>. In all other cases the default location is
 <code class="literal">${PREFIX}/etc/</code>, depending on where you told the
 bootstrap program to install the binary packages.</p>
@@ -1905,7 +1905,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 <p>
 
     For the following command, you must be able to gain root
-    privileges using <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/su.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a>
+    privileges using <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/su.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a>
 
 </p>
 <pre class="programlisting">
@@ -2147,7 +2147,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 <a name="building-a-single-binary-package"></a>7.1. Building a single binary package</h2></div></div></div>
 <p>Once you have built and installed a package, you can create
     a <span class="emphasis"><em>binary package</em></span> which can be installed on
-    another system with <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. This saves having to build
+    another system with <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. This saves having to build
     the same package on a group of hosts and wasting CPU time. It also
     provides a simple means for others to install your package, should
     you distribute it.</p>
@@ -3004,7 +3004,7 @@ but downloading the entire directory may not be appropriate.</p>
 <p>The answer here is to do a <span class="command"><strong>make fetch-list</strong></span> in
 <code class="filename">/usr/pkgsrc</code> or one of its subdirectories, carry the
 resulting list to your machine at work/school and use it there.  If you
-don't have a NetBSD-compatible <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/ftp.1"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> (like tnftp) at work, don't
+don't have a NetBSD-compatible <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/ftp.1"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> (like tnftp) at work, don't
 forget to set <code class="varname">FETCH_CMD</code> to something that fetches a
 URL:</p>
 <p>At home:</p>
@@ -3056,7 +3056,7 @@ the one that corresponds to your release (determine via <span class="command"><s
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-sudo-with-pkgsrc"></a>10.12. Using 'sudo' or `priv` with pkgsrc</h2></div></div></div>
 <p>When installing packages as non-root user and using the just-in-time
-<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/su.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
+<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/su.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install <span class="command"><strong>sudo</strong></span> or
@@ -3132,7 +3132,7 @@ perform a security check before building any package.</p>
 	<code class="varname">CFLAGS</code> variable in your
 	<a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, these flags are passed in
 	environment variables to the <code class="filename">./configure</code>
-	scripts and to <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>. Some package authors ignore the
+	scripts and to <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>. Some package authors ignore the
 	<code class="varname">CFLAGS</code> from the environment variable by
 	overriding them in the <code class="filename">Makefile</code>s of their
 	package.</p>
@@ -3586,7 +3586,7 @@ converters    games         mbone         print         x11
     Primary location(s) for distribution patch files (see
     <code class="varname">PATCHFILES</code> above) if not found locally.</p></li>
 <li class="listitem"><p><code class="varname">PATCH_DIST_STRIP</code>:
-    an argument to <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> that sets the pathname strip count to
+    an argument to <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> that sets the pathname strip count to
     help find the correct files to patch. It defaults to
     <span class="command"><strong>-p0</strong></span>.</p></li>
 </ul></div>
@@ -3596,7 +3596,7 @@ converters    games         mbone         print         x11
 <li class="listitem"><p><code class="varname">MAINTAINER</code> is the email
     address of the person who feels responsible for this package,
     and who is most likely to look at problems or questions regarding
-    this package which have been reported with <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>.
+    this package which have been reported with <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>.
     Other developers may contact the <code class="varname">MAINTAINER</code>
     before making changes to the package, but are not required to
     do so. When packaging a new program, set <code class="varname">MAINTAINER</code>
@@ -3956,13 +3956,13 @@ monitor_file(...)
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="filename">INSTALL</code></span></dt>
 <dd>
-<p>This shell script is invoked twice by <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
+<p>This shell script is invoked twice by <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
 	    First time after package extraction and before files are
 	    moved in place, the second time after the files to install
 	    are moved in place. This can be used to do any custom
 	    procedures not possible with @exec commands in
-	    <code class="filename">PLIST</code>. See <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> and
-	    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="20.1. Files and directories outside the installation prefix">Section 20.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.
+	    <code class="filename">PLIST</code>. See <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> and
+	    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="20.1. Files and directories outside the installation prefix">Section 20.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.
 	    Please note that you can modify variables in it easily by using
 	    <code class="varname">FILES_SUBST</code> in the package's
 	    <code class="filename">Makefile</code>:</p>
@@ -3982,8 +3982,8 @@ FILES_SUBST+=  SOMEVAR="somevalue"
 	    this script's responsibility to clean up any additional messy details
 	    around the package's installation, since all pkg_delete knows is how to
 	    delete the files created in the original distribution.
-	    See <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
-	    and <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.
+	    See <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
+	    and <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.
 	    The same methods to replace variables can be used as for
 	    the <code class="filename">INSTALL</code> file.</p></dd>
 <dt><span class="term"><code class="filename">MESSAGE</code></span></dt>
@@ -4212,7 +4212,7 @@ FILESDIR=       ../../editors/xemacs/files
 	<code class="varname">USE_IMAKE</code> to be installed correctly under
 	<code class="varname">LOCALBASE</code>.</p></li>
 <li class="listitem"><p>Within <code class="filename">${PREFIX}</code>, packages should
-	install files according to <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/hier.7"><span class="citerefentry"><span class="refentrytitle">hier</span>(7)</span></a>, with the exception that
+	install files according to <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/hier.7"><span class="citerefentry"><span class="refentrytitle">hier</span>(7)</span></a>, with the exception that
 	manual pages go into <code class="filename">${PREFIX}/man</code>, not
 	<code class="filename">${PREFIX}/share/man</code>.</p></li>
 </ul></div>
@@ -4547,9 +4547,9 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <code class="filename">.gz</code> are uncompressed before they are
     applied, files ending in <code class="filename">.orig</code> or
     <code class="filename">.rej</code> are ignored. Any special options to
-    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
+    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
     <code class="varname">PATCH_DIST_ARGS</code>.  See <a class="xref" href="#components.patches" title="12.3. patches/*">Section 12.3, &#8220;<code class="filename">patches/*</code>&#8221;</a> for more details.</p>
-<p>By default <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special arguments to make it
+<p>By default <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/patch.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special arguments to make it
     fail if the expected text from the patch context is not found in the
     patched file. If that happens, fix the patch file by comparing it
     with the actual text in the file to be patched.</p>
@@ -4733,7 +4733,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     defined.</p>
 <p>In the <span class="emphasis"><em>install</em></span> phase, the following
     variables are useful. They are all variations of the
-    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/install.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
+    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/install.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
     permissions preset. <code class="varname">INSTALL</code> is the plain
     install command. The specialized variants, together with their
     intended use, are:</p>
@@ -4779,7 +4779,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <p>Some other variables are:</p>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">INSTALL_UNSTRIPPED</code></span></dt>
-<dd><p>If set to <code class="literal">yes</code>, do not run <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/strip.1"><span class="citerefentry"><span class="refentrytitle">strip</span>(1)</span></a>
+<dd><p>If set to <code class="literal">yes</code>, do not run <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/strip.1"><span class="citerefentry"><span class="refentrytitle">strip</span>(1)</span></a>
       when installing binaries. Any debugging sections and symbols present in
       binaries will be preserved.
       </p></dd>
@@ -4867,13 +4867,13 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 </dd>
 <dt><span class="term">deinstall</span></dt>
 <dd>
-<p>This target does a <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the
+<p>This target does a <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the
 	  current directory, effectively de-installing the
 	  package. The following variables can be used to tune the
 	  behaviour:</p>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">PKG_VERBOSE</code></span></dt>
-<dd><p>Add a "-v" to the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command.</p></dd>
+<dd><p>Add a "-v" to the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command.</p></dd>
 <dt><span class="term"><code class="varname">DEINSTALLDEPENDS</code></span></dt>
 <dd><p>Remove all packages that require (depend on)
 		the given package.  This can be used to remove any
@@ -4882,7 +4882,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 		DEINSTALLDEPENDS=1</strong></span> is done in
 		<code class="filename">pkgsrc/x11/kde</code>, this is
 		likely to remove whole KDE. Works by adding
-		<span class="quote">&#8220;<span class="quote">-R</span>&#8221;</span> to the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
+		<span class="quote">&#8220;<span class="quote">-R</span>&#8221;</span> to the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
 		command line.</p></dd>
 </dl></div>
 </dd>
@@ -5034,7 +5034,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  recommended for advanced users.</p>
 </dd>
 <dt><span class="term">info</span></dt>
-<dd><p>This target invokes <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_info.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a> for the current
+<dd><p>This target invokes <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_info.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a> for the current
 	  package. You can use this to check which version of a
 	  package is installed.</p></dd>
 <dt><span class="term">index</span></dt>
@@ -5150,7 +5150,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <code class="filename">PLIST</code>. On upgrades, it's useful to
 	  diff the output of this command against an already
 	  existing <code class="filename">PLIST</code> file.</p>
-<p>If the package installs files via <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/tar.1"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or
+<p>If the package installs files via <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/tar.1"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or
 	  other methods that don't update file access times, be
 	  sure to add these files manually to your
 	  <code class="filename">PLIST</code>, as the <span class="quote">&#8220;<span class="quote">find
@@ -5656,13 +5656,13 @@ everything worked.</p>
 </div>
 <p>Pkgsrc consists of many <code class="filename">Makefile</code> fragments,
   each of which forms a well-defined part of the pkgsrc system. Using
-  the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> system as a programming language for a big system
+  the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> system as a programming language for a big system
   like pkgsrc requires some discipline to keep the code correct and
   understandable.</p>
 <p>The basic ingredients for <code class="filename">Makefile</code>
   programming are variables and shell
   commands. Among these shell commands may even be more complex ones
-  like <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/awk.1"><span class="citerefentry"><span class="refentrytitle">awk</span>(1)</span></a> programs. To make sure that every shell command runs
+  like <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/awk.1"><span class="citerefentry"><span class="refentrytitle">awk</span>(1)</span></a> programs. To make sure that every shell command runs
   as intended it is necessary to quote all variables correctly when they
   are used.</p>
 <p>This chapter describes some patterns that appear quite often in
@@ -5676,7 +5676,7 @@ everything worked.</p>
     target of a rule, always write the data to a temporary file first
     and finally rename that file. Otherwise there might occur an error
     in the middle of generating the file, and when the user runs
-    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
+    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
     regenerated properly. Example:</p>
 <pre class="programlisting">
 wrong:
@@ -5694,11 +5694,11 @@ correct:
     <code class="filename">wrong</code> will exist, although there was an error
     message in the first run. On the other hand, running <span class="command"><strong>make
     correct</strong></span> gives an error message twice, as expected.</p>
-<p>You might remember that <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> sometimes removes
+<p>You might remember that <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> sometimes removes
     <code class="literal">${.TARGET}</code> in case of error, but this only
     happens when it is interrupted, for example by pressing
     <code class="literal">Ctrl+C</code>. This does <span class="emphasis"><em>not</em></span> happen
-    when one of the commands fails (like <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/false.1"><span class="citerefentry"><span class="refentrytitle">false</span>(1)</span></a> above).</p>
+    when one of the commands fails (like <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/false.1"><span class="citerefentry"><span class="refentrytitle">false</span>(1)</span></a> above).</p>
 </li></ul></div>
 </div>
 <div class="sect1">
@@ -5707,7 +5707,7 @@ correct:
 <p><code class="filename">Makefile</code> variables contain strings that
     can be processed using the five operators <code class="code">=</code>,
     <code class="code">+=</code>, <code class="code">?=</code>, <code class="code">:=</code> and
-    <code class="code">!=</code>, which are described in the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man
+    <code class="code">!=</code>, which are described in the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man
     page.</p>
 <p>When a variable's value is parsed from a
     <code class="filename">Makefile</code>, the hash character <code class="code">#</code> and
@@ -5725,7 +5725,7 @@ correct:
 <p>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When a
     string is split into words, double quotes and single quotes are
-    interpreted as delimiters, just like in <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/sh.1"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
+    interpreted as delimiters, just like in <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/sh.1"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="makefile.variables.names"></a>15.2.1. Naming conventions</h3></div></div></div>
@@ -5782,11 +5782,11 @@ are just copied.</p>
 <p>Example 2 quotes the string so that the shell interprets it
 correctly. But the echo command may additionally interpret strings with a
 leading dash or those containing backslashes.</p>
-<p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/printf.1"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
+<p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/printf.1"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
 interprets the format string, but not the next argument. The trailing
 single quotes handle the case when the string is empty. In that case, the
 :Q modifier would result in an empty string too, which would then be
-skipped by the shell. For <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/printf.1"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> this doesn't make a difference,
+skipped by the shell. For <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/printf.1"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> this doesn't make a difference,
 but other programs may care.</p>
 <p>In example 4, the <code class="varname">EXAMPLE_ENV</code> does not
 need to be quoted because the quoting has already been done
@@ -5830,7 +5830,7 @@ install-examples:   # produces a syntax error in the shell
         done
 </pre>
 <p>The shell only sees the text <code class="code">for egfile in ; do</code>, since
-<code class="code">${EGFILES}</code> is replaced with an empty string by <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.
+<code class="code">${EGFILES}</code> is replaced with an empty string by <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.
 To fix this syntax error, use one of the snippets below.</p>
 <pre class="programlisting">
 EGFILES=        # empty
@@ -5991,7 +5991,7 @@ options are supported by the package, and any default options settings
 if needed.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem"><p><code class="varname">PKG_OPTIONS_VAR</code> is the name of the
-<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable that the user can set to override the default
+<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable that the user can set to override the default
 options.  It should be set to
 PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em>. Do not set it to
 PKG_OPTIONS.${PKGBASE}, since <code class="varname">PKGBASE</code> is not defined
@@ -6686,7 +6686,7 @@ CHECK_BUILTIN.foo?=     no
   <span class="quote">&#8220;<span class="quote">packing list</span>&#8221;</span>, i.e. a list of files that belong to
   the package (relative to the <code class="filename">${PREFIX}</code>
   directory it's been installed in) plus some additional statements
-  - see the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> man page for a full list.
+  - see the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_create.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> man page for a full list.
   This chapter addresses some issues that need attention when
   dealing with the <code class="filename">PLIST</code> file (or files, see
   below!).</p>
@@ -6835,7 +6835,7 @@ adding the RCS ID the space should be omitted.</p>
 <p>To use one or more files as source for the <code class="filename">PLIST</code> used
     in generating the binary package, set the variable
     <code class="varname">PLIST_SRC</code> to the names of that file(s).
-    The files are later concatenated using <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/cat.1"><span class="citerefentry"><span class="refentrytitle">cat</span>(1)</span></a>, and the order of things is
+    The files are later concatenated using <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/cat.1"><span class="citerefentry"><span class="refentrytitle">cat</span>(1)</span></a>, and the order of things is
     important. The default for <code class="varname">PLIST_SRC</code> is
     <code class="filename">${PKGDIR}/PLIST</code>.</p>
 </div>
@@ -7452,7 +7452,7 @@ environment variable to <code class="literal">NO</code>.</p>
     variables in the file pointed to by <code class="varname">MAKECONF</code>,
     which is <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> by default. When you
     want to use those variables in the preprocessor directives of
-    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
+    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
     <code class="literal">.for</code>), you need to include the file
     <code class="filename">../../mk/bsd.prefs.mk</code> before, which in turn
     loads the user preferences.</p>
@@ -7708,7 +7708,7 @@ ACCEPTABLE_LICENSES+=xv-license
 </pre>
 <p>Please note that the <span class="quote">&#8220;<span class="quote">pre-req-package-name</span>&#8221;</span>
     may include any of the wildcard version numbers recognized by
-    <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_info.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a>.</p>
+    <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_info.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a>.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
 <p>If your package needs another package's binaries or
@@ -7820,7 +7820,7 @@ CONFLICTS=      Xaw-Xpm-[0-9]*
 <pre class="programlisting">
 CONFLICTS=      libXaw3d-[0-9]*
 </pre>
-<p><a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> is able to detect attempts to install packages
+<p><a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_add.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> is able to detect attempts to install packages
     that conflict with existing packages and abort. However, in many
     situations this is too late in the process. Binary package managers
     will not know about the conflict until they attempt to install the
@@ -7831,7 +7831,7 @@ CONFLICTS=      libXaw3d-[0-9]*
 <p>To avoid these issues <code class="varname">CONFLICTS</code> entries
     should be added in all cases where it is known that packages conflict
     with each other.  These <code class="varname">CONFLICTS</code> entries are
-    exported in <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_summary.5"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> files and consumed by binary package
+    exported in <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_summary.5"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> files and consumed by binary package
     managers to inform users that packages cannot be installed onto
     the target system.</p>
 </div>
@@ -7882,7 +7882,7 @@ CONFLICTS=      libXaw3d-[0-9]*
     be set in the package Makefile. This will be carried into any
     binary package that is made from this pkgsrc entry. A
     <span class="quote">&#8220;<span class="quote">preserved</span>&#8221;</span> package will
-    not be deleted using <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> unless the
+    not be deleted using <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_delete.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> unless the
     <span class="quote">&#8220;<span class="quote">-f</span>&#8221;</span> option is used.</p>
 </div>
 <div class="sect2">
@@ -8165,7 +8165,7 @@ command to generate the list of filename patterns often need to set
 <div class="titlepage"><div><div><h4 class="title">
 <a name="fixes.subst.what"></a>21.1.11.3. Choosing what to substitute</h4></div></div></div>
 <p>In most cases, the substitutions are given using one or more
-<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/sed.1"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> commands, like this:</p>
+<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/sed.1"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> commands, like this:</p>
 <pre class="programlisting">
 SUBST_SED.path=         -e 's|/usr/local|${PREFIX}|g'
 </pre>
@@ -8440,7 +8440,7 @@ dynamic linker chooses the library with the greater REVISION number.
 </li>
 <li class="listitem">
 <p>When linking shared object (<code class="filename">.so</code>)
-	files, i.e. files that are loaded via <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/dlopen.3"><span class="citerefentry"><span class="refentrytitle">dlopen</span>(3)</span></a>, NOT
+	files, i.e. files that are loaded via <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/dlopen.3"><span class="citerefentry"><span class="refentrytitle">dlopen</span>(3)</span></a>, NOT
 	shared libraries, use <span class="quote">&#8220;<span class="quote">-module
 	-avoid-version</span>&#8221;</span> to prevent them getting version
 	tacked on.</p>
@@ -8450,7 +8450,7 @@ dynamic linker chooses the library with the greater REVISION number.
 <li class="listitem">
 <p>When linking programs that depend on these libraries
 	<span class="emphasis"><em>before</em></span> they are installed, preface
-	the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/cc.1"><span class="citerefentry"><span class="refentrytitle">cc</span>(1)</span></a> or <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/ld.1"><span class="citerefentry"><span class="refentrytitle">ld</span>(1)</span></a> line with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
+	the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/cc.1"><span class="citerefentry"><span class="refentrytitle">cc</span>(1)</span></a> or <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/ld.1"><span class="citerefentry"><span class="refentrytitle">ld</span>(1)</span></a> line with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
 	--mode=link</span>&#8221;</span>, and it will find the correct
 	libraries (static or shared), but please be aware that
 	libtool will not allow you to specify a relative path in
@@ -8467,8 +8467,8 @@ ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></e
 <p>and it will do the right thing with the libraries.</p>
 </li>
 <li class="listitem">
-<p>When installing libraries, preface the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/install.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a>
-	or <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/cp.1"><span class="citerefentry"><span class="refentrytitle">cp</span>(1)</span></a> command with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
+<p>When installing libraries, preface the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/install.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a>
+	or <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/cp.1"><span class="citerefentry"><span class="refentrytitle">cp</span>(1)</span></a> command with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
 	--mode=install</span>&#8221;</span>, and change the library name to
 	<code class="filename">.la</code>. e.g.</p>
 <pre class="programlisting">
@@ -8476,7 +8476,7 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 </pre>
 <p>This will install the static <code class="filename">.a</code>,
 	shared library, any needed symlinks, and run
-	<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/ldconfig.8"><span class="citerefentry"><span class="refentrytitle">ldconfig</span>(8)</span></a>.</p>
+	<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/ldconfig.8"><span class="citerefentry"><span class="refentrytitle">ldconfig</span>(8)</span></a>.</p>
 </li>
 <li class="listitem"><p>In your <code class="filename">PLIST</code>, include only
 	the <code class="filename">.la</code>
@@ -9933,7 +9933,7 @@ builds)</i></a>.</p>
 	document. Run the <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/index.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>
 	tool and fix any errors that appear.</p>
 <p>Finally, send a report to the pkgsrc bug tracking system,
-	either with the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> command, or if you don't have
+	either with the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> command, or if you don't have
 	that, go to the web page
 	<a class="ulink" href="https://www.NetBSD.org/support/send-pr.html" target="_top">https://www.NetBSD.org/support/send-pr.html</a>,
 	which contains some instructions and a link to a form where you
@@ -10128,7 +10128,7 @@ instead of <span class="quote">&#8220;<span class="quote">../../category/package
 <code class="varname">PREV_PKGPATH</code> to the previous category/package
 pathname.  The <code class="varname">PREV_PKGPATH</code> can be used by tools
 for doing an update using pkgsrc building; for example, it can
-search the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/pkg_summary.5"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> database for <code class="varname">PREV_PKGPATH</code>
+search the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/pkg_summary.5"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> database for <code class="varname">PREV_PKGPATH</code>
 (if no <code class="varname">SUPERSEDES</code>) and then use the corresponding
 new <code class="varname">PKGPATH</code> for that moved package.  Note that
 it may have multiple matches, so the tool should also check on the
@@ -10214,7 +10214,7 @@ What shall I do?</a>
 <td align="left" valign="top"></td>
 <td align="left" valign="top">
 <p><code class="varname">MAKEFLAGS</code> are the flags passed
-	to the pkgsrc-internal invocations of <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.</p>
+	to the pkgsrc-internal invocations of <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.</p>
 <p><code class="varname">MAKE_FLAGS</code> are the flags that are
 	passed to the <code class="varname">MAKE_PROGRAM</code> when building the
 	package.</p>
@@ -10235,7 +10235,7 @@ What shall I do?</a>
 <td align="left" valign="top"></td>
 <td align="left" valign="top">
 <p><code class="varname">MAKE</code> is the path to the
-	<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
+	<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
 	infrastructure.</p>
 <p><code class="varname">GMAKE</code> is the path to GNU Make, but you
 	need to say <code class="varname">USE_TOOLS+=gmake</code> to use
@@ -10297,7 +10297,7 @@ What shall I do?</a>
 	assignment operator, even though it may look like one.
 	Instead, it is a degenerate form of
 	<code class="code">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
-	which is documented in the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
+	which is documented in the <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
 	commonly used in the form <code class="code">${SRCS:.c=.o}</code>. In the
 	case of <code class="varname">MASTER_SITE_*</code>,
 	<em class="replaceable"><code>old_string</code></em> is the empty string and
@@ -10326,7 +10326,7 @@ What shall I do?</a>
 	etc.</p></dd>
 <dt><span class="term"><a class="ulink" href="https://www.NetBSD.org/mailinglists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a></span></dt>
 <dd><p>All bug reports in category "pkg" sent with
-	<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
+	<a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/send-pr.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
 	directly; use one of the other mailing
 	lists.</p></dd>
 </dl></div></td>
@@ -10944,7 +10944,7 @@ INFO_FILES=     yes
 <a name="example-descr"></a>A.1.2. DESCR</h3></div></div></div>
 <pre class="programlisting">
 GNU version of yacc.  Can make re-entrant parsers, and numerous other
-improvements.  Why you would want this when Berkeley <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/yacc.1"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
+improvements.  Why you would want this when Berkeley <a class="citerefentry" href="//man.NetBSD.org/NetBSD-9.3/yacc.1"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
 of the NetBSD source tree is beyond me.
 </pre>
 </div>
@@ -11925,115 +11925,119 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>ALL_ENV</td>
+<td>ALSA_PC</td>
+</tr>
+<tr>
 <td>ALTERNATIVES_SRC</td>
-</tr>
-<tr>
 <td>AMANDA_TMP</td>
+</tr>
+<tr>
 <td>AMANDA_USER</td>
-</tr>
-<tr>
 <td>AMANDA_VAR</td>
+</tr>
+<tr>
 <td>APACHE_GROUP</td>
-</tr>
-<tr>
 <td>APACHE_MODULE_NAME</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_SRC</td>
-</tr>
-<tr>
 <td>APACHE_MODULE_SRCDIR</td>
+</tr>
+<tr>
 <td>APACHE_PKG_PREFIX</td>
-</tr>
-<tr>
 <td>APACHE_SUEXEC_CONFIGURE_ARGS</td>
+</tr>
+<tr>
 <td>APACHE_SUEXEC_DOCROOT</td>
-</tr>
-<tr>
 <td>APACHE_USER</td>
+</tr>
+<tr>
 <td>APPEND_ABI</td>
-</tr>
-<tr>
 <td>APPEND_ELF</td>
+</tr>
+<tr>
 <td>ARLA_CACHE</td>
-</tr>
-<tr>
 <td>AUDIT_PACKAGES_FLAGS</td>
+</tr>
+<tr>
 <td>AUTOCONF_REQD</td>
-</tr>
-<tr>
 <td>AUTOMAKE_OVERRIDE</td>
+</tr>
+<tr>
 <td>AUTOMAKE_REQD</td>
-</tr>
-<tr>
 <td>AUTO_MKDIRS</td>
+</tr>
+<tr>
 <td>BDB185_DEFAULT</td>
-</tr>
-<tr>
 <td>BDBBASE</td>
+</tr>
+<tr>
 <td>BDB_ACCEPTED</td>
-</tr>
-<tr>
 <td>BDB_DEFAULT</td>
+</tr>
+<tr>
 <td>BDB_LIBS</td>
-</tr>
-<tr>
 <td>BDB_TYPE</td>
+</tr>
+<tr>
 <td>BINCIMAP_GROUP</td>
-</tr>
-<tr>
 <td>BINCIMAP_USER</td>
+</tr>
+<tr>
 <td>BIND_DIR</td>
-</tr>
-<tr>
 <td>BIND_GROUP</td>
+</tr>
+<tr>
 <td>BIND_USER</td>
-</tr>
-<tr>
 <td>BINOWN</td>
+</tr>
+<tr>
 <td>BINPKG_SITES</td>
-</tr>
-<tr>
 <td>BIN_INSTALL_FLAGS</td>
+</tr>
+<tr>
 <td>BISON_PKGDATADIR</td>
-</tr>
-<tr>
 <td>BLAS</td>
+</tr>
+<tr>
 <td>BLAS_ACCEPTED</td>
-</tr>
-<tr>
 <td>BLAS_C_INTERFACE</td>
+</tr>
+<tr>
 <td>BLAS_INCLUDES</td>
-</tr>
-<tr>
 <td>BLAS_INDEX64</td>
+</tr>
+<tr>
 <td>BLAS_LIBS</td>
-</tr>
-<tr>
 <td>BLAS_PC</td>
+</tr>
+<tr>
 <td>BLAS_TYPE</td>
-</tr>
-<tr>
 <td>BOOTSTRAP_DEPENDS</td>
+</tr>
+<tr>
 <td>BROKEN</td>
-</tr>
-<tr>
 <td>BROKEN_EXCEPT_ON_PLATFORM</td>
+</tr>
+<tr>
 <td>BROKEN_ON_PLATFORM</td>
-</tr>
-<tr>
 <td>BSDSRCDIR</td>
+</tr>
+<tr>
 <td>BSDXSRCDIR</td>
-</tr>
-<tr>
 <td>BSD_MAKE_ENV</td>
+</tr>
+<tr>
 <td>BUILDLINK_AUTO_DIRS</td>
-</tr>
-<tr>
 <td>BUILDLINK_AUTO_VARS</td>
-<td>BUILDLINK_CFLAGS</td>
 </tr>
 <tr>
+<td>BUILDLINK_CFLAGS</td>
 <td>BUILDLINK_CONTENTS_FILTER</td>
+</tr>
+<tr>
 <td>BUILDLINK_CPPFLAGS</td>
+<td>BUILDLINK_DEPMETHOD</td>
 </tr>
 <tr>
 <td>BUILDLINK_FILES</td>
@@ -12129,95 +12133,107 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>CHANGES</td>
+<td>CHECKOUT_DATE</td>
+</tr>
+<tr>
 <td>CHECK_COMPILER</td>
-</tr>
-<tr>
 <td>CHECK_FAKEHOME</td>
+</tr>
+<tr>
 <td>CHECK_FILES</td>
-</tr>
-<tr>
 <td>CHECK_FILES_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_FILES_STRICT</td>
-</tr>
-<tr>
 <td>CHECK_HEADERS</td>
+</tr>
+<tr>
 <td>CHECK_HEADERS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_INTERPRETER</td>
+</tr>
+<tr>
 <td>CHECK_INTERPRETER_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PERMS</td>
+</tr>
+<tr>
 <td>CHECK_PERMS_AUTOFIX</td>
-</tr>
-<tr>
 <td>CHECK_PERMS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PIE</td>
-</tr>
-<tr>
 <td>CHECK_PIE_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PIE_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY_EXPERIMENTAL</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_RELRO</td>
-</tr>
-<tr>
 <td>CHECK_RELRO_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_RELRO_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_TOXIC</td>
-</tr>
-<tr>
 <td>CHECK_SSP</td>
+</tr>
+<tr>
 <td>CHECK_SSP_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_SSP_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_STRIPPED</td>
-</tr>
-<tr>
 <td>CHECK_STRIPPED_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF_EXTRA_DIRS</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF_SKIP</td>
-</tr>
-<tr>
 <td>CLAMAV_DBDIR</td>
+</tr>
+<tr>
 <td>CLAMAV_GROUP</td>
-</tr>
-<tr>
 <td>CLAMAV_USER</td>
+</tr>
+<tr>
 <td>CLANGBASE</td>
-</tr>
-<tr>
 <td>CLEANDEPENDS</td>
+</tr>
+<tr>
 <td>CMAKE_DEPENDENCIES_REWRITE</td>
-</tr>
-<tr>
 <td>CMAKE_INSTALL_NAME_DIR</td>
+</tr>
+<tr>
 <td>CMAKE_INSTALL_PREFIX</td>
-</tr>
-<tr>
 <td>CMAKE_MODULE_PATH_OVERRIDE</td>
-<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 </tr>
 <tr>
+<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 <td>CMAKE_PREFIX_PATH</td>
+</tr>
+<tr>
 <td>CMAKE_USE_GNU_INSTALL_DIRS</td>
+<td>COMMON_LISP_DOCFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_EXAMPLES</td>
+<td>COMMON_LISP_EXTRAFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_PACKAGES</td>
+<td>COMMON_LISP_SYSTEM</td>
 </tr>
 <tr>
 <td>COMPILER_RPATH_FLAG</td>
@@ -12305,227 +12321,247 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>CURSES_TYPE</td>
+<td>CVS_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>CVS_MODULE</td>
+<td>CVS_PROJECT</td>
+</tr>
+<tr>
+<td>CVS_REPOSITORIES</td>
+<td>CVS_ROOT</td>
+</tr>
+<tr>
+<td>CVS_ROOT_GNU</td>
+<td>CVS_ROOT_NONGNU</td>
+</tr>
+<tr>
+<td>CVS_ROOT_SOURCEFORGE</td>
+<td>CVS_TAG</td>
+</tr>
+<tr>
 <td>CXX</td>
-</tr>
-<tr>
 <td>CYRUS_GROUP</td>
+</tr>
+<tr>
 <td>CYRUS_IDLE</td>
-</tr>
-<tr>
 <td>CYRUS_USER</td>
+</tr>
+<tr>
 <td>DAEMONTOOLS_GROUP</td>
-</tr>
-<tr>
 <td>DAEMONTOOLS_LOG_USER</td>
+</tr>
+<tr>
 <td>DARWIN_NO_SYSTEM_LIBS</td>
-</tr>
-<tr>
 <td>DARWIN_REQUIRES_FILTER</td>
+</tr>
+<tr>
 <td>DBUS_GROUP</td>
-</tr>
-<tr>
 <td>DBUS_USER</td>
+</tr>
+<tr>
 <td>DEFANG_GROUP</td>
-</tr>
-<tr>
 <td>DEFANG_USER</td>
+</tr>
+<tr>
 <td>DEFAULT_ACCEPTABLE_LICENSES</td>
-</tr>
-<tr>
 <td>DEFAULT_DISTFILES</td>
+</tr>
+<tr>
 <td>DEFAULT_IRC_SERVER</td>
-</tr>
-<tr>
 <td>DEFAULT_SERIAL_DEVICE</td>
+</tr>
+<tr>
 <td>DEF_UMASK</td>
-</tr>
-<tr>
 <td>DEINSTALLDEPENDS</td>
+</tr>
+<tr>
 <td>DEINSTALL_SRC</td>
-</tr>
-<tr>
 <td>DEINSTALL_TEMPLATES</td>
+</tr>
+<tr>
 <td>DELAYED_ERROR_MSG</td>
-</tr>
-<tr>
 <td>DELAYED_WARNING_MSG</td>
+</tr>
+<tr>
 <td>DEPENDS</td>
-</tr>
-<tr>
 <td>DEPENDS_TARGET</td>
+</tr>
+<tr>
 <td>DEPENDS_TYPE</td>
-</tr>
-<tr>
 <td>DESTDIR</td>
+</tr>
+<tr>
 <td>DESTDIR_VARNAME</td>
-</tr>
-<tr>
 <td>DIALER_GROUP</td>
+</tr>
+<tr>
 <td>DIGEST_REQD</td>
-</tr>
-<tr>
 <td>DISTDIR</td>
+</tr>
+<tr>
 <td>DISTFILES</td>
-</tr>
-<tr>
 <td>DISTINFO_FILE</td>
+</tr>
+<tr>
 <td>DISTNAME</td>
-</tr>
-<tr>
 <td>DIST_PATH</td>
+</tr>
+<tr>
 <td>DIST_SUBDIR</td>
-</tr>
-<tr>
 <td>DJBDNS_AXFR_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_CACHE_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_DJBDNS_GROUP</td>
+</tr>
+<tr>
 <td>DJBDNS_LOG_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_RBL_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_TINY_USER</td>
-</tr>
-<tr>
 <td>DLOPEN_REQUIRE_PTHREADS</td>
+</tr>
+<tr>
 <td>DL_AUTO_VARS</td>
-</tr>
-<tr>
 <td>DL_CFLAGS</td>
+</tr>
+<tr>
 <td>DL_LDFLAGS</td>
-</tr>
-<tr>
 <td>DL_LIBS</td>
+</tr>
+<tr>
 <td>DNS</td>
-</tr>
-<tr>
 <td>DOCOWN</td>
+</tr>
+<tr>
 <td>DOWNLOADED_DISTFILE</td>
-</tr>
-<tr>
 <td>DQCACHE_GROUP</td>
+</tr>
+<tr>
 <td>DQCACHE_USER</td>
-</tr>
-<tr>
 <td>DT_LAYOUT</td>
+</tr>
+<tr>
 <td>DYNAMIC_SITES_CMD</td>
-</tr>
-<tr>
 <td>DYNAMIC_SITES_SCRIPT</td>
+</tr>
+<tr>
 <td>ECHO</td>
-</tr>
-<tr>
 <td>ECHO_N</td>
+</tr>
+<tr>
 <td>ELK_GUI</td>
-</tr>
-<tr>
 <td>EMACS_TYPE</td>
+</tr>
+<tr>
 <td>EMULDIR</td>
-</tr>
-<tr>
 <td>EMULSUBDIR</td>
+</tr>
+<tr>
 <td>EMULSUBDIRSLASH</td>
-</tr>
-<tr>
 <td>EMUL_ARCH</td>
+</tr>
+<tr>
 <td>EMUL_DISTRO</td>
-</tr>
-<tr>
 <td>EMUL_EXEC_FMT</td>
+</tr>
+<tr>
 <td>EMUL_IS_NATIVE</td>
-</tr>
-<tr>
 <td>EMUL_MODULES</td>
+</tr>
+<tr>
 <td>EMUL_OPSYS</td>
-</tr>
-<tr>
 <td>EMUL_PKG_FMT</td>
+</tr>
+<tr>
 <td>EMUL_PLATFORM</td>
-</tr>
-<tr>
 <td>EMUL_PLATFORMS</td>
+</tr>
+<tr>
 <td>EMUL_PREFER</td>
-</tr>
-<tr>
 <td>EMUL_REQD</td>
+</tr>
+<tr>
 <td>EMUL_TYPE</td>
-</tr>
-<tr>
 <td>ERROR_MSG</td>
+</tr>
+<tr>
 <td>EXIM_GROUP</td>
-</tr>
-<tr>
 <td>EXIM_USER</td>
+</tr>
+<tr>
 <td>EXPORT_SYMBOLS_LDFLAGS</td>
-</tr>
-<tr>
 <td>EXTRACTOR</td>
+</tr>
+<tr>
 <td>EXTRACT_CMD</td>
-</tr>
-<tr>
 <td>EXTRACT_CMD_DEFAULT</td>
+</tr>
+<tr>
 <td>EXTRACT_DIR</td>
-</tr>
-<tr>
 <td>EXTRACT_ELEMENTS</td>
+</tr>
+<tr>
 <td>EXTRACT_ENV</td>
-</tr>
-<tr>
 <td>EXTRACT_ONLY</td>
+</tr>
+<tr>
 <td>EXTRACT_OPTS</td>
-</tr>
-<tr>
 <td>EXTRACT_SUFX</td>
+</tr>
+<tr>
 <td>EXTRACT_USING</td>
-</tr>
-<tr>
 <td>FAIL</td>
+</tr>
+<tr>
 <td>FAILOVER_FETCH</td>
-</tr>
-<tr>
 <td>FAIL_MSG</td>
+</tr>
+<tr>
 <td>FAKE_NCURSES</td>
-</tr>
-<tr>
 <td>FAM</td>
+</tr>
+<tr>
 <td>FAM_ACCEPTED</td>
-</tr>
-<tr>
 <td>FAM_DEFAULT</td>
+</tr>
+<tr>
 <td>FAM_SERVER</td>
-</tr>
-<tr>
 <td>FCPATH</td>
+</tr>
+<tr>
 <td>FEATURE_CPPFLAGS</td>
-</tr>
-<tr>
 <td>FEATURE_LDFLAGS</td>
+</tr>
+<tr>
 <td>FEATURE_LIBS</td>
-</tr>
-<tr>
 <td>FETCH_AFTER_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_BEFORE_ARGS</td>
-</tr>
-<tr>
 <td>FETCH_CMD</td>
+</tr>
+<tr>
 <td>FETCH_OUTPUT_ARGS</td>
-</tr>
-<tr>
 <td>FETCH_PROXY</td>
+</tr>
+<tr>
 <td>FETCH_RESUME_ARGS</td>
-</tr>
-<tr>
 <td>FETCH_TIMEOUT</td>
+</tr>
+<tr>
 <td>FETCH_USE_IPV4_ONLY</td>
-</tr>
-<tr>
 <td>FETCH_USING</td>
-<td>FILES_SUBST</td>
 </tr>
 <tr>
+<td>FILES_SUBST</td>
 <td>FILES_SUBST_SED</td>
+</tr>
+<tr>
 <td>FIX_SYSTEM_HEADERS</td>
+<td>FONTDIR</td>
 </tr>
 <tr>
 <td>FONTS_DIRS</td>
@@ -12537,6 +12573,14 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>FORCE_C_STD</td>
+<td>FOSSIL_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>FOSSIL_REPO</td>
+<td>FOSSIL_REPOSITORIES</td>
+</tr>
+<tr>
+<td>FOSSIL_VERSION</td>
 <td>FOX_USE_XUNICODE</td>
 </tr>
 <tr>
@@ -12624,40 +12668,56 @@ source packages</h2></div></div></div>
 <td>GITLAB_TYPE</td>
 </tr>
 <tr>
+<td>GIT_BRANCH</td>
+<td>GIT_ENV</td>
+</tr>
+<tr>
+<td>GIT_EXTRACTDIR</td>
+<td>GIT_REPO</td>
+</tr>
+<tr>
+<td>GIT_REPOSITORIES</td>
+<td>GIT_REVISION</td>
+</tr>
+<tr>
+<td>GIT_TAG</td>
 <td>GNU</td>
+</tr>
+<tr>
 <td>GNU_CONFIGURE</td>
-</tr>
-<tr>
 <td>GNU_CONFIGURE_INFODIR</td>
+</tr>
+<tr>
 <td>GNU_CONFIGURE_MANDIR</td>
-</tr>
-<tr>
 <td>GNU_CONFIGURE_QUIET</td>
+</tr>
+<tr>
 <td>GNU_CONFIGURE_STRICT</td>
-</tr>
-<tr>
 <td>GODEP_REDIRECTS</td>
+</tr>
+<tr>
 <td>GO_BUILD_PATTERN</td>
-</tr>
-<tr>
 <td>GO_DEPS</td>
+</tr>
+<tr>
 <td>GO_DIST_BASE</td>
-</tr>
-<tr>
 <td>GO_EXTRA_MOD_DIRS</td>
+</tr>
+<tr>
 <td>GO_MODULE_FILES</td>
-</tr>
-<tr>
 <td>GO_SRCPATH</td>
+</tr>
+<tr>
 <td>GROUP_SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>GRUB_NETWORK_CARDS</td>
-<td>GRUB_PRESET_COMMAND</td>
 </tr>
 <tr>
+<td>GRUB_PRESET_COMMAND</td>
 <td>GRUB_SCAN_ARGS</td>
+</tr>
+<tr>
 <td>GZIP</td>
+<td>HASKELL_COMPILER</td>
 </tr>
 <tr>
 <td>HASKELL_ENABLE_DYNAMIC_EXECUTABLE</td>
@@ -12677,178 +12737,194 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>HEADER_TEMPLATES</td>
+<td>HG_REPO</td>
+</tr>
+<tr>
+<td>HG_REPOSITORIES</td>
+<td>HG_TAG</td>
+</tr>
+<tr>
 <td>HOMEPAGE</td>
-</tr>
-<tr>
 <td>HOST_PKGTOOLS_ARGS</td>
+</tr>
+<tr>
 <td>HOST_SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>HOWL_GROUP</td>
+</tr>
+<tr>
 <td>HOWL_USER</td>
-</tr>
-<tr>
 <td>ICCBASE</td>
+</tr>
+<tr>
 <td>ICECAST_CHROOTDIR</td>
-</tr>
-<tr>
 <td>ICON_THEMES</td>
+</tr>
+<tr>
 <td>IDOBASE</td>
-</tr>
-<tr>
 <td>IGNORE_CCACHE</td>
+</tr>
+<tr>
 <td>IGNORE_INFO_DIRS</td>
-</tr>
-<tr>
 <td>IGNORE_INTERACTIVE_FETCH</td>
+</tr>
+<tr>
 <td>IMAKE</td>
-</tr>
-<tr>
 <td>IMAKEOPTS</td>
+</tr>
+<tr>
 <td>IMAKE_MAKE</td>
-</tr>
-<tr>
 <td>IMAKE_MANINSTALL</td>
+</tr>
+<tr>
 <td>IMAP_UW_CCLIENT_MBOX_FMT</td>
-</tr>
-<tr>
 <td>IMDICTDIR</td>
+</tr>
+<tr>
 <td>INCOMPAT_CURSES</td>
-</tr>
-<tr>
 <td>INFO_DIR</td>
+</tr>
+<tr>
 <td>INFO_FILES</td>
-</tr>
-<tr>
 <td>INFO_MSG</td>
+</tr>
+<tr>
 <td>INIT_SYSTEM</td>
-</tr>
-<tr>
 <td>INN_DATA_DIR</td>
+</tr>
+<tr>
 <td>INN_GROUP</td>
-</tr>
-<tr>
 <td>INN_USER</td>
+</tr>
+<tr>
 <td>INSTALLATION_DIRS</td>
-</tr>
-<tr>
 <td>INSTALLATION_DIRS_FROM_PLIST</td>
+</tr>
+<tr>
 <td>INSTALL_ENV</td>
-</tr>
-<tr>
 <td>INSTALL_SH_OVERRIDE</td>
+</tr>
+<tr>
 <td>INSTALL_SRC</td>
-</tr>
-<tr>
 <td>INSTALL_TEMPLATES</td>
+</tr>
+<tr>
 <td>INSTALL_UNSTRIPPED</td>
-</tr>
-<tr>
 <td>IRCD_HYBRID_IRC_GROUP</td>
+</tr>
+<tr>
 <td>IRCD_HYBRID_IRC_USER</td>
-</tr>
-<tr>
 <td>IRCD_HYBRID_MAXCONN</td>
+</tr>
+<tr>
 <td>IRCD_HYBRID_NICLEN</td>
-</tr>
-<tr>
 <td>IRCD_HYBRID_SYSLOG_EVENTS</td>
+</tr>
+<tr>
 <td>IRCD_HYBRID_SYSLOG_FACILITY</td>
-</tr>
-<tr>
 <td>IRCD_HYBRID_TOPICLEN</td>
+</tr>
+<tr>
 <td>IRIX</td>
-</tr>
-<tr>
 <td>IRRD_USE_PGP</td>
+</tr>
+<tr>
 <td>JABBERD_GROUP</td>
-</tr>
-<tr>
 <td>JABBERD_LOGDIR</td>
+</tr>
+<tr>
 <td>JABBERD_PIDDIR</td>
-</tr>
-<tr>
 <td>JABBERD_SPOOLDIR</td>
+</tr>
+<tr>
 <td>JABBERD_USER</td>
+<td>JAVA_APP_PATH</td>
 </tr>
 <tr>
+<td>JAVA_APP_TARGETS</td>
 <td>JAVA_BINPREFIX</td>
+</tr>
+<tr>
 <td>JAVA_CLASSPATH</td>
-</tr>
-<tr>
 <td>JAVA_HOME</td>
+</tr>
+<tr>
 <td>JAVA_LD_LIBRARY_PATH</td>
-</tr>
-<tr>
 <td>JAVA_NAME</td>
+</tr>
+<tr>
 <td>JAVA_UNLIMIT</td>
-</tr>
-<tr>
 <td>JAVA_WRAPPERS</td>
+</tr>
+<tr>
 <td>JPEG_ACCEPTED</td>
-</tr>
-<tr>
 <td>JPEG_DEFAULT</td>
+</tr>
+<tr>
 <td>KERBEROS</td>
-</tr>
-<tr>
 <td>KERMIT_SUID_UUCP</td>
+</tr>
+<tr>
 <td>KJS_USE_PCRE</td>
-</tr>
-<tr>
 <td>KNEWS_DOMAIN_FILE</td>
+</tr>
+<tr>
 <td>KNEWS_DOMAIN_NAME</td>
-</tr>
-<tr>
 <td>KRB5_ACCEPTED</td>
+</tr>
+<tr>
 <td>KRB5_DEFAULT</td>
-</tr>
-<tr>
 <td>LANGUAGES</td>
+</tr>
+<tr>
 <td>LAPACKE_LIBS</td>
-</tr>
-<tr>
 <td>LAPACKE_PC</td>
+</tr>
+<tr>
 <td>LAPACK_LIBS</td>
-</tr>
-<tr>
 <td>LAPACK_PC</td>
+</tr>
+<tr>
 <td>LATEX2HTML_ICONPATH</td>
-</tr>
-<tr>
 <td>LDCONFIG_ADD_CMD</td>
+</tr>
+<tr>
 <td>LDCONFIG_REMOVE_CMD</td>
-</tr>
-<tr>
 <td>LDD</td>
+</tr>
+<tr>
 <td>LEAFNODE_DATA_DIR</td>
-</tr>
-<tr>
 <td>LEAFNODE_GROUP</td>
+</tr>
+<tr>
 <td>LEAFNODE_USER</td>
-</tr>
-<tr>
 <td>LIBDVDCSS_HOMEPAGE</td>
+</tr>
+<tr>
 <td>LIBDVDCSS_MASTER_SITES</td>
-</tr>
-<tr>
 <td>LIBIMAGEQUANT_TYPE</td>
+</tr>
+<tr>
 <td>LIBRSVG_TYPE</td>
-</tr>
-<tr>
 <td>LIBTOOL</td>
+</tr>
+<tr>
 <td>LIBTOOLIZE_PLIST</td>
-</tr>
-<tr>
 <td>LIBTOOL_M4_OVERRIDE</td>
+</tr>
+<tr>
 <td>LIBUSB_TYPE</td>
-</tr>
-<tr>
 <td>LICENSE</td>
-<td>LINKER_RPATH_FLAG</td>
 </tr>
 <tr>
+<td>LINKER_RPATH_FLAG</td>
 <td>LINK_RPATH_FLAG</td>
+</tr>
+<tr>
+<td>LINUX_BASE_NODEPS</td>
+<td>LINUX_BASE_PREFERRED</td>
+</tr>
+<tr>
+<td>LINUX_BASE_REQUIRED</td>
 <td>LINUX_LOCALES</td>
 </tr>
 <tr>
@@ -12913,91 +12989,95 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>MAJORDOMO_HOMEDIR</td>
+<td>MAJOR_OS_VERSION</td>
+</tr>
+<tr>
 <td>MAKEINFO_ARGS</td>
-</tr>
-<tr>
 <td>MAKE_DIRS</td>
+</tr>
+<tr>
 <td>MAKE_DIRS_PERMS</td>
-</tr>
-<tr>
 <td>MAKE_ENV</td>
+</tr>
+<tr>
 <td>MAKE_FILE</td>
-</tr>
-<tr>
 <td>MAKE_FLAGS</td>
+</tr>
+<tr>
 <td>MAKE_JOBS</td>
-</tr>
-<tr>
 <td>MAKE_JOBS_SAFE</td>
+</tr>
+<tr>
 <td>MAKE_PROGRAM</td>
-</tr>
-<tr>
 <td>MANCOMPRESSED_IF_MANZ</td>
+</tr>
+<tr>
 <td>MANINSTALL</td>
-</tr>
-<tr>
 <td>MANZ</td>
+</tr>
+<tr>
 <td>MARIADB_VERSIONS_ALL</td>
-</tr>
-<tr>
 <td>MASTER_SITES</td>
+</tr>
+<tr>
 <td>MASTER_SITE_BACKUP</td>
-</tr>
-<tr>
 <td>MASTER_SITE_LOCAL</td>
+</tr>
+<tr>
 <td>MASTER_SITE_MOZILLA</td>
-</tr>
-<tr>
 <td>MASTER_SITE_OVERRIDE</td>
+</tr>
+<tr>
 <td>MASTER_SITE_PERL_CPAN</td>
-</tr>
-<tr>
 <td>MASTER_SORT</td>
+</tr>
+<tr>
 <td>MASTER_SORT_RANDOM</td>
-</tr>
-<tr>
 <td>MASTER_SORT_REGEX</td>
+</tr>
+<tr>
 <td>MECAB_CHARSET</td>
-</tr>
-<tr>
 <td>MEDIATOMB_GROUP</td>
+</tr>
+<tr>
 <td>MEDIATOMB_USER</td>
-</tr>
-<tr>
 <td>MIPSPROBASE</td>
+</tr>
+<tr>
 <td>MIREDO_GROUP</td>
-</tr>
-<tr>
 <td>MIREDO_USER</td>
+</tr>
+<tr>
 <td>MISSING_FEATURES</td>
-</tr>
-<tr>
 <td>MKDIR</td>
+</tr>
+<tr>
 <td>MKPIE_SUPPORTED</td>
-</tr>
-<tr>
 <td>MLDONKEY_GROUP</td>
+</tr>
+<tr>
 <td>MLDONKEY_HOME</td>
-</tr>
-<tr>
 <td>MLDONKEY_USER</td>
+</tr>
+<tr>
 <td>MONOTONE_GROUP</td>
-</tr>
-<tr>
 <td>MONOTONE_USER</td>
+</tr>
+<tr>
 <td>MOTIFBASE</td>
-</tr>
-<tr>
 <td>MOTIF_TYPE</td>
+</tr>
+<tr>
 <td>MOTIF_TYPE_DEFAULT</td>
-</tr>
-<tr>
 <td>MPI_TYPE</td>
-<td>MSGFMT_STRIP_MSGCTXT</td>
 </tr>
 <tr>
+<td>MSGFMT_STRIP_MSGCTXT</td>
 <td>MSGFMT_STRIP_MSGID_PLURAL</td>
+</tr>
+<tr>
 <td>MTOOLS_ENABLE_FLOPPYD</td>
+<td>MUST</td>
 </tr>
 <tr>
 <td>MV</td>
@@ -13113,6 +13193,10 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>OSX</td>
+<td>OS_HAVE_ALSA</td>
+</tr>
+<tr>
+<td>OS_HAVE_RCD</td>
 <td>OS_VARIANT</td>
 </tr>
 <tr>
@@ -13125,462 +13209,478 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>OVERRIDE_GNU_CONFIG_SCRIPTS</td>
+<td>OVERRIDE_ROCKSPEC</td>
+</tr>
+<tr>
 <td>OWN_DIRS</td>
-</tr>
-<tr>
 <td>OWN_DIRS_PERMS</td>
+</tr>
+<tr>
 <td>P4GROUP</td>
-</tr>
-<tr>
 <td>P4PORT</td>
+</tr>
+<tr>
 <td>P4ROOT</td>
-</tr>
-<tr>
 <td>P4USER</td>
+</tr>
+<tr>
 <td>PACKAGES</td>
-</tr>
-<tr>
 <td>PALMOS_DEFAULT_SDK</td>
+</tr>
+<tr>
 <td>PAMBASE</td>
-</tr>
-<tr>
 <td>PAM_DEFAULT</td>
+</tr>
+<tr>
 <td>PAPERSIZE</td>
-</tr>
-<tr>
 <td>PASSIVE_FETCH</td>
+</tr>
+<tr>
 <td>PATCHDIR</td>
-</tr>
-<tr>
 <td>PATCHFILES</td>
+</tr>
+<tr>
 <td>PATCH_ARGS</td>
-</tr>
-<tr>
 <td>PATCH_DEBUG</td>
+</tr>
+<tr>
 <td>PATCH_DIST_ARGS</td>
-</tr>
-<tr>
 <td>PATCH_DIST_CAT</td>
+</tr>
+<tr>
 <td>PATCH_DIST_STRIP</td>
-</tr>
-<tr>
 <td>PATCH_FUZZ_FACTOR</td>
+</tr>
+<tr>
 <td>PATCH_STRIP</td>
-</tr>
-<tr>
 <td>PATH</td>
+</tr>
+<tr>
 <td>PCCBASE</td>
+<td>PEAR</td>
 </tr>
 <tr>
+<td>PEAR_CHANNEL</td>
+<td>PEAR_CHANNEL_ALIAS</td>
+</tr>
+<tr>
+<td>PEAR_CHANNEL_VERSION</td>
 <td>PEAR_CMD</td>
+</tr>
+<tr>
 <td>PEAR_LIB</td>
-</tr>
-<tr>
 <td>PEAR_PACKAGE_XML</td>
+</tr>
+<tr>
 <td>PERL5</td>
-</tr>
-<tr>
 <td>PERL5_CONFIGURE</td>
+</tr>
+<tr>
 <td>PERL5_CONFIGURE_DIRS</td>
-</tr>
-<tr>
 <td>PERL5_LDFLAGS</td>
+</tr>
+<tr>
 <td>PERL5_LICENSE</td>
-</tr>
-<tr>
 <td>PERL5_MODULE_TYPE</td>
+</tr>
+<tr>
 <td>PERL5_PACKLIST</td>
-</tr>
-<tr>
 <td>PERL5_PACKLIST_DIR</td>
+</tr>
+<tr>
 <td>PERL5_PERLBASE</td>
-</tr>
-<tr>
 <td>PERL5_SITEBASE</td>
+</tr>
+<tr>
 <td>PERL5_USE_PACKLIST</td>
-</tr>
-<tr>
 <td>PERL5_VENDORBASE</td>
+</tr>
+<tr>
 <td>PFCTL</td>
-</tr>
-<tr>
 <td>PFVAR_H</td>
+</tr>
+<tr>
 <td>PF_VERSION</td>
-</tr>
-<tr>
 <td>PGGROUP</td>
+</tr>
+<tr>
 <td>PGHOME</td>
-</tr>
-<tr>
 <td>PGPKGSRCDIR</td>
+</tr>
+<tr>
 <td>PGSQL_TYPE</td>
-</tr>
-<tr>
 <td>PGSQL_VERSION</td>
+</tr>
+<tr>
 <td>PGSQL_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>PGSQL_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>PGUSER</td>
-</tr>
-<tr>
 <td>PG_LIB_EXT</td>
+</tr>
+<tr>
 <td>PHP</td>
-</tr>
-<tr>
 <td>PHPCOMMON_MK</td>
+</tr>
+<tr>
 <td>PHPPKGSRCDIR</td>
-</tr>
-<tr>
 <td>PHP_BASE_VERS</td>
+</tr>
+<tr>
 <td>PHP_CHECK_INSTALLED</td>
-</tr>
-<tr>
 <td>PHP_EXTENSION_DIR</td>
+</tr>
+<tr>
 <td>PHP_INITIAL_TEENY</td>
-</tr>
-<tr>
 <td>PHP_PKG_PREFIX</td>
+</tr>
+<tr>
 <td>PHP_VERSION</td>
-</tr>
-<tr>
 <td>PHP_VERSIONS_ACCEPTED</td>
+</tr>
+<tr>
 <td>PHP_VERSIONS_INCOMPATIBLE</td>
-</tr>
-<tr>
 <td>PHP_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>PHP_VERSION_REQD</td>
-</tr>
-<tr>
 <td>PILRC_USE_GTK</td>
+</tr>
+<tr>
 <td>PKGCONFIG_BASE</td>
-</tr>
-<tr>
 <td>PKGCONFIG_FILE</td>
+</tr>
+<tr>
 <td>PKGCONFIG_OVERRIDE</td>
-</tr>
-<tr>
 <td>PKGCONFIG_OVERRIDE_STAGE</td>
+</tr>
+<tr>
 <td>PKGDIR</td>
-</tr>
-<tr>
 <td>PKGGNUDIR</td>
+</tr>
+<tr>
 <td>PKGINFODIR</td>
-</tr>
-<tr>
 <td>PKGLOCALEDIR</td>
+</tr>
+<tr>
 <td>PKGMANDIR</td>
-</tr>
-<tr>
 <td>PKGNAME</td>
+</tr>
+<tr>
 <td>PKGNAME_REQD</td>
-</tr>
-<tr>
 <td>PKGPATH</td>
+</tr>
+<tr>
 <td>PKGREVISION</td>
-</tr>
-<tr>
 <td>PKGSRC_BLAS_TYPES</td>
+</tr>
+<tr>
 <td>PKGSRC_CHANGES</td>
-</tr>
-<tr>
 <td>PKGSRC_COMPILER</td>
+</tr>
+<tr>
 <td>PKGSRC_KEEP_BIN_PKGS</td>
-</tr>
-<tr>
 <td>PKGSRC_LOCKTYPE</td>
+</tr>
+<tr>
 <td>PKGSRC_MAKE_ENV</td>
-</tr>
-<tr>
 <td>PKGSRC_MESSAGE_RECIPIENTS</td>
+</tr>
+<tr>
 <td>PKGSRC_MKPIE</td>
-</tr>
-<tr>
 <td>PKGSRC_MKREPRO</td>
+</tr>
+<tr>
 <td>PKGSRC_OVERRIDE_MKPIE</td>
-</tr>
-<tr>
 <td>PKGSRC_RUN_TEST</td>
+</tr>
+<tr>
 <td>PKGSRC_SETENV</td>
-</tr>
-<tr>
 <td>PKGSRC_SLEEPSECS</td>
+</tr>
+<tr>
 <td>PKGSRC_TODO</td>
-</tr>
-<tr>
 <td>PKGSRC_USE_CTF</td>
+</tr>
+<tr>
 <td>PKGSRC_USE_FORTIFY</td>
-</tr>
-<tr>
 <td>PKGSRC_USE_MKTOOLS</td>
+</tr>
+<tr>
 <td>PKGSRC_USE_RELRO</td>
-</tr>
-<tr>
 <td>PKGSRC_USE_SSP</td>
+</tr>
+<tr>
 <td>PKGSRC_USE_STACK_CHECK</td>
-</tr>
-<tr>
 <td>PKGTASKS_DATAFILE</td>
+</tr>
+<tr>
 <td>PKGTOOLS_ARGS</td>
-</tr>
-<tr>
 <td>PKGTOOLS_ENV</td>
+</tr>
+<tr>
 <td>PKG_ALTERNATIVES</td>
-</tr>
-<tr>
 <td>PKG_APACHE</td>
+</tr>
+<tr>
 <td>PKG_APACHE_ACCEPTED</td>
-</tr>
-<tr>
 <td>PKG_APACHE_DEFAULT</td>
+</tr>
+<tr>
 <td>PKG_BEST_EXISTS</td>
-</tr>
-<tr>
 <td>PKG_BUILD_OPTIONS</td>
+</tr>
+<tr>
 <td>PKG_COMPRESSION</td>
-</tr>
-<tr>
 <td>PKG_CONFIG</td>
+</tr>
+<tr>
 <td>PKG_CONFIG_PERMS</td>
-</tr>
-<tr>
 <td>PKG_CREATE_USERGROUP</td>
+</tr>
+<tr>
 <td>PKG_DB_TMPDIR</td>
-</tr>
-<tr>
 <td>PKG_DEBUG_LEVEL</td>
+</tr>
+<tr>
 <td>PKG_DEFAULT_OPTIONS</td>
-</tr>
-<tr>
 <td>PKG_DESTDIR_SUPPORT</td>
+</tr>
+<tr>
 <td>PKG_DEVELOPER</td>
-</tr>
-<tr>
 <td>PKG_DISABLED_OPTIONS</td>
+</tr>
+<tr>
 <td>PKG_FATAL_ERRORS</td>
-</tr>
-<tr>
 <td>PKG_FC</td>
+</tr>
+<tr>
 <td>PKG_FILELIST_CMD</td>
-</tr>
-<tr>
 <td>PKG_GECOS</td>
+</tr>
+<tr>
 <td>PKG_GID</td>
-</tr>
-<tr>
 <td>PKG_GROUPS</td>
+</tr>
+<tr>
 <td>PKG_GROUPS_VARS</td>
-</tr>
-<tr>
 <td>PKG_HOME</td>
+</tr>
+<tr>
 <td>PKG_INIT_SCRIPTS</td>
-</tr>
-<tr>
 <td>PKG_JAVA_HOME</td>
+</tr>
+<tr>
 <td>PKG_JVM</td>
-</tr>
-<tr>
 <td>PKG_JVMS_ACCEPTED</td>
+</tr>
+<tr>
 <td>PKG_JVM_DEFAULT</td>
-</tr>
-<tr>
 <td>PKG_LEGACY_OPTIONS</td>
+</tr>
+<tr>
 <td>PKG_LIBTOOL</td>
-</tr>
-<tr>
 <td>PKG_MKSYMLINKS</td>
+</tr>
+<tr>
 <td>PKG_OPTIONS</td>
-</tr>
-<tr>
 <td>PKG_OPTIONS_DEPRECATED_WARNINGS</td>
+</tr>
+<tr>
 <td>PKG_OPTIONS_LEGACY_OPTS</td>
-</tr>
-<tr>
 <td>PKG_OPTIONS_LEGACY_VARS</td>
+</tr>
+<tr>
 <td>PKG_OPTIONS_NONEMPTY_SETS</td>
-</tr>
-<tr>
 <td>PKG_OPTIONS_OPTIONAL_GROUPS</td>
+</tr>
+<tr>
 <td>PKG_OPTIONS_REQUIRED_GROUPS</td>
-</tr>
-<tr>
 <td>PKG_OPTIONS_VAR</td>
+</tr>
+<tr>
 <td>PKG_PHP</td>
-</tr>
-<tr>
 <td>PKG_PHP_MAJOR_VERS</td>
+</tr>
+<tr>
 <td>PKG_PHP_VERSION</td>
-</tr>
-<tr>
 <td>PKG_RCD_SCRIPTS</td>
+</tr>
+<tr>
 <td>PKG_REFCOUNT_DBDIR</td>
-</tr>
-<tr>
 <td>PKG_REGISTER_SHELLS</td>
+</tr>
+<tr>
 <td>PKG_RESUME_TRANSFERS</td>
-</tr>
-<tr>
 <td>PKG_SHELL</td>
+</tr>
+<tr>
 <td>PKG_SUGGESTED_OPTIONS</td>
-</tr>
-<tr>
 <td>PKG_SUPPORTED_OPTIONS</td>
+</tr>
+<tr>
 <td>PKG_SYSCONFBASE</td>
-</tr>
-<tr>
 <td>PKG_SYSCONFBASEDIR</td>
+</tr>
+<tr>
 <td>PKG_SYSCONFDIR</td>
-</tr>
-<tr>
 <td>PKG_SYSCONFDIR_PERMS</td>
+</tr>
+<tr>
 <td>PKG_SYSCONFSUBDIR</td>
-</tr>
-<tr>
 <td>PKG_SYSCONFVAR</td>
+</tr>
+<tr>
 <td>PKG_TOOLS_BIN</td>
-</tr>
-<tr>
 <td>PKG_UID</td>
+</tr>
+<tr>
 <td>PKG_UPDATE_FONTS_DB</td>
-</tr>
-<tr>
 <td>PKG_USERS</td>
+</tr>
+<tr>
 <td>PKG_USERS_VARS</td>
-</tr>
-<tr>
 <td>PKG_VERBOSE</td>
+</tr>
+<tr>
 <td>PLEASE</td>
-</tr>
-<tr>
 <td>PLIST</td>
+</tr>
+<tr>
 <td>PLIST_AWK</td>
-</tr>
-<tr>
 <td>PLIST_AWK_ENV</td>
+</tr>
+<tr>
 <td>PLIST_SRC</td>
-</tr>
-<tr>
 <td>PLIST_SUBST</td>
+</tr>
+<tr>
 <td>PLIST_TYPE</td>
-</tr>
-<tr>
 <td>PLIST_VARS</td>
+</tr>
+<tr>
 <td>POPTOP_USE_MPPE</td>
-</tr>
-<tr>
 <td>POSSIBLE_GFORTRAN_VERSION</td>
+</tr>
+<tr>
 <td>POST_FETCH_HOOK</td>
-</tr>
-<tr>
 <td>PREFER</td>
+</tr>
+<tr>
 <td>PREFER_NATIVE</td>
-</tr>
-<tr>
 <td>PREFER_NATIVE_PTHREADS</td>
+</tr>
+<tr>
 <td>PREFER_PKGSRC</td>
-</tr>
-<tr>
 <td>PREFIX</td>
+</tr>
+<tr>
 <td>PREPEND_PATH</td>
-</tr>
-<tr>
 <td>PRE_ROOT_CMD</td>
+</tr>
+<tr>
 <td>PRIVILEGED_STAGES</td>
-</tr>
-<tr>
 <td>PS</td>
+</tr>
+<tr>
 <td>PTHREAD_AUTO_VARS</td>
-</tr>
-<tr>
 <td>PTHREAD_CFLAGS</td>
+</tr>
+<tr>
 <td>PTHREAD_LDFLAGS</td>
-</tr>
-<tr>
 <td>PTHREAD_LIBS</td>
+</tr>
+<tr>
 <td>PTHREAD_OPTS</td>
-</tr>
-<tr>
 <td>PTHREAD_TYPE</td>
+</tr>
+<tr>
 <td>PVM_SSH</td>
-</tr>
-<tr>
 <td>PYPKGPREFIX</td>
+</tr>
+<tr>
 <td>PYTHON_FOR_BUILD_ONLY</td>
-</tr>
-<tr>
 <td>PYTHON_SELF_CONFLICT</td>
+</tr>
+<tr>
 <td>PYTHON_VERSION</td>
-</tr>
-<tr>
 <td>PYTHON_VERSIONED_DEPENDENCIES</td>
+</tr>
+<tr>
 <td>PYTHON_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>PYTHON_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>PYTHON_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>PYTHON_VERSION_REQD</td>
+</tr>
+<tr>
 <td>PYVERSSUFFIX</td>
-</tr>
-<tr>
 <td>QMAILDIR</td>
+</tr>
+<tr>
 <td>QMAIL_ALIAS_USER</td>
-</tr>
-<tr>
 <td>QMAIL_DAEMON_USER</td>
+</tr>
+<tr>
 <td>QMAIL_LOG_USER</td>
-</tr>
-<tr>
 <td>QMAIL_NOFILES_GROUP</td>
+</tr>
+<tr>
 <td>QMAIL_PASSWD_USER</td>
-</tr>
-<tr>
 <td>QMAIL_QMAIL_GROUP</td>
+</tr>
+<tr>
 <td>QMAIL_QUEUE_DIR</td>
-</tr>
-<tr>
 <td>QMAIL_QUEUE_EXTRA</td>
+</tr>
+<tr>
 <td>QMAIL_QUEUE_USER</td>
-</tr>
-<tr>
 <td>QMAIL_REMOTE_USER</td>
+</tr>
+<tr>
 <td>QMAIL_ROOT_USER</td>
-</tr>
-<tr>
 <td>QMAIL_SEND_USER</td>
+</tr>
+<tr>
 <td>QORE_LATEST_MODULE_API</td>
-</tr>
-<tr>
 <td>QORE_MODULE_API</td>
+</tr>
+<tr>
 <td>QORE_MODULE_DIR</td>
-</tr>
-<tr>
 <td>QORE_USER_MODULE_DIR</td>
+</tr>
+<tr>
 <td>QORE_VERSION</td>
-</tr>
-<tr>
 <td>QPOPPER_FAC</td>
+</tr>
+<tr>
 <td>QPOPPER_SPOOL_DIR</td>
-</tr>
-<tr>
 <td>QPOPPER_USER</td>
+</tr>
+<tr>
 <td>RAKE_NAME</td>
-</tr>
-<tr>
 <td>RASMOL_DEPTH</td>
+</tr>
+<tr>
+<td>RCD_DIR</td>
+<td>RCD_ORDER</td>
+</tr>
+<tr>
 <td>RCD_SCRIPTS</td>
-</tr>
-<tr>
 <td>RCD_SCRIPTS_DIR</td>
+</tr>
+<tr>
 <td>RCD_SCRIPTS_EXAMPLEDIR</td>
-</tr>
-<tr>
 <td>RCD_SCRIPTS_MODE</td>
-<td>RCD_SCRIPTS_SHELL</td>
 </tr>
 <tr>
+<td>RCD_SCRIPTS_SHELL</td>
 <td>RCD_SCRIPT_SRC</td>
+</tr>
+<tr>
+<td>RCD_SUBR</td>
 <td>RDOC</td>
 </tr>
 <tr>
@@ -13653,6 +13753,10 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>RM</td>
+<td>ROCKSPEC_NAME</td>
+</tr>
+<tr>
+<td>ROCKSPEC_SPECFILE</td>
 <td>ROOT_CMD</td>
 </tr>
 <tr>
@@ -13853,175 +13957,187 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>SHLIB</td>
+<td>SHORTNAME</td>
+</tr>
+<tr>
 <td>SIGN_PACKAGES</td>
-</tr>
-<tr>
 <td>SILC_CLIENT_WITH_PERL</td>
+</tr>
+<tr>
 <td>SITE_SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>SKIP_DEPENDS</td>
+</tr>
+<tr>
 <td>SMF_INSTANCES</td>
-</tr>
-<tr>
 <td>SMF_MANIFEST</td>
+</tr>
+<tr>
 <td>SMF_METHODS</td>
-</tr>
-<tr>
 <td>SMF_METHOD_SHELL</td>
+</tr>
+<tr>
 <td>SMF_METHOD_SRC</td>
-</tr>
-<tr>
 <td>SMF_NAME</td>
+</tr>
+<tr>
 <td>SMF_PREFIX</td>
-</tr>
-<tr>
 <td>SMF_SRCDIR</td>
+</tr>
+<tr>
 <td>SNIPROXY_GROUP</td>
-</tr>
-<tr>
 <td>SNIPROXY_USER</td>
+</tr>
+<tr>
 <td>SOURCE_BUFFSIZE</td>
-</tr>
-<tr>
 <td>SPECIAL_PERMS</td>
+</tr>
+<tr>
 <td>SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>SSH_SUID</td>
+</tr>
+<tr>
 <td>SSP_SUPPORTED</td>
-</tr>
-<tr>
 <td>SSYNC_PAWD</td>
+</tr>
+<tr>
 <td>STEP_MSG</td>
-</tr>
-<tr>
 <td>STRIP</td>
+</tr>
+<tr>
 <td>STRIP_DBG</td>
-</tr>
-<tr>
 <td>STRIP_DEBUG</td>
+</tr>
+<tr>
 <td>STRIP_DEBUG_SUPPORTED</td>
-</tr>
-<tr>
 <td>STRIP_FILES_SKIP</td>
+</tr>
+<tr>
 <td>SU</td>
-</tr>
-<tr>
 <td>SUBDIR</td>
+</tr>
+<tr>
 <td>SUBST</td>
-</tr>
-<tr>
 <td>SUBST_CLASSES</td>
+</tr>
+<tr>
 <td>SUBST_FILES</td>
-</tr>
-<tr>
 <td>SUBST_FILTER_CMD</td>
+</tr>
+<tr>
 <td>SUBST_MESSAGE</td>
-</tr>
-<tr>
 <td>SUBST_NOOP_OK</td>
+</tr>
+<tr>
 <td>SUBST_SED</td>
-</tr>
-<tr>
 <td>SUBST_SHOW_DIFF</td>
+</tr>
+<tr>
 <td>SUBST_SKIP_TEXT_CHECK</td>
-</tr>
-<tr>
 <td>SUBST_STAGE</td>
+</tr>
+<tr>
 <td>SUBST_VARS</td>
-</tr>
-<tr>
 <td>SUNWSPROBASE</td>
+</tr>
+<tr>
 <td>SUSE_PREFER</td>
-</tr>
-<tr>
 <td>SU_CMD</td>
+</tr>
+<tr>
+<td>SVN_EXTRACTDIR</td>
+<td>SVN_REPO</td>
+</tr>
+<tr>
+<td>SVN_REPOSITORIES</td>
+<td>SVN_REVISION</td>
+</tr>
+<tr>
 <td>SYSCONFBASE</td>
-</tr>
-<tr>
 <td>TARGET_ARCH</td>
+</tr>
+<tr>
 <td>TBL</td>
-</tr>
-<tr>
 <td>TERMCAP_TYPE</td>
+</tr>
+<tr>
 <td>TERMINFO_DEFAULT</td>
-</tr>
-<tr>
 <td>TERMINFO_TYPE</td>
+</tr>
+<tr>
 <td>TEST</td>
-</tr>
-<tr>
 <td>TEST_DEPENDS</td>
+</tr>
+<tr>
 <td>TEST_DIRS</td>
-</tr>
-<tr>
 <td>TEST_ENV</td>
+</tr>
+<tr>
 <td>TEST_ENV_SHELL</td>
-</tr>
-<tr>
 <td>TEST_MAKE_CMD</td>
+</tr>
+<tr>
 <td>TEST_MAKE_FLAGS</td>
-</tr>
-<tr>
 <td>TEST_TARGET</td>
+</tr>
+<tr>
 <td>TEXLIVE_IGNORE_PATTERNS</td>
-</tr>
-<tr>
 <td>TEXLIVE_REV</td>
+</tr>
+<tr>
 <td>TEXLIVE_UNVERSIONED</td>
-</tr>
-<tr>
 <td>TEXMFSITE</td>
+</tr>
+<tr>
 <td>TEX_FORMATS</td>
-</tr>
-<tr>
 <td>TEX_HYPHEN_DAT</td>
+</tr>
+<tr>
 <td>TEX_HYPHEN_DEF</td>
-</tr>
-<tr>
 <td>TEX_TEXMF_DIRS</td>
+</tr>
+<tr>
 <td>THTTPD_LOG_FACILITY</td>
-</tr>
-<tr>
 <td>TINYDYN_USER</td>
+</tr>
+<tr>
 <td>TLSWRAPPER_CHROOT</td>
-</tr>
-<tr>
 <td>TO</td>
+</tr>
+<tr>
 <td>TOOLS_ALIASES</td>
-</tr>
-<tr>
 <td>TOOLS_ALWAYS_WRAP</td>
+</tr>
+<tr>
 <td>TOOLS_ARGS</td>
-</tr>
-<tr>
 <td>TOOLS_BROKEN</td>
+</tr>
+<tr>
 <td>TOOLS_CMD</td>
-</tr>
-<tr>
 <td>TOOLS_CMDLINE_SED</td>
+</tr>
+<tr>
 <td>TOOLS_CREATE</td>
-</tr>
-<tr>
 <td>TOOLS_CROSS_DESTDIR</td>
+</tr>
+<tr>
 <td>TOOLS_DIR</td>
-</tr>
-<tr>
 <td>TOOLS_FAIL</td>
+</tr>
+<tr>
 <td>TOOLS_GNU_MISSING</td>
-</tr>
-<tr>
 <td>TOOLS_LDCONFIG</td>
+</tr>
+<tr>
 <td>TOOLS_NOOP</td>
-</tr>
-<tr>
 <td>TOOLS_PATH</td>
-<td>TOOLS_SCRIPT</td>
 </tr>
 <tr>
+<td>TOOLS_SCRIPT</td>
 <td>TOOLS_USE_CROSS_COMPILE</td>
+</tr>
+<tr>
 <td>TOOL_DEPENDS</td>
+<td>TTF_FONTDIR</td>
 </tr>
 <tr>
 <td>TTF_FONTS_DIR</td>
@@ -14180,152 +14296,156 @@ source packages</h2></div></div></div>
 <td>XXX</td>
 </tr>
 <tr>
+<td>XXXX</td>
 <td>YES</td>
+</tr>
+<tr>
 <td>ZSH_STATIC</td>
-</tr>
-<tr>
 <td>__stdc__</td>
+</tr>
+<tr>
 <td>_vargroups</td>
-</tr>
-<tr>
 <td>accept</td>
+</tr>
+<tr>
 <td>acquire-localbase-lock</td>
-</tr>
-<tr>
 <td>acquire-lock</td>
+</tr>
+<tr>
 <td>add</td>
-</tr>
-<tr>
 <td>added</td>
+</tr>
+<tr>
 <td>administrator</td>
-</tr>
-<tr>
 <td>alloca</td>
+</tr>
+<tr>
 <td>alternatives</td>
-</tr>
-<tr>
 <td>aslr</td>
+</tr>
+<tr>
 <td>asprintf</td>
-</tr>
-<tr>
 <td>atlas</td>
+</tr>
+<tr>
 <td>autoconf</td>
-</tr>
-<tr>
 <td>automake</td>
+</tr>
+<tr>
 <td>autoreconf</td>
-</tr>
-<tr>
 <td>awk</td>
+</tr>
+<tr>
 <td>bash</td>
-</tr>
-<tr>
 <td>big-endian</td>
+</tr>
+<tr>
 <td>bin-install</td>
-</tr>
-<tr>
 <td>bind</td>
+</tr>
+<tr>
 <td>binpkg-list</td>
-</tr>
-<tr>
 <td>blas</td>
+</tr>
+<tr>
 <td>bootstrap-depends</td>
-</tr>
-<tr>
 <td>broken</td>
+</tr>
+<tr>
 <td>broken_on_platform</td>
-</tr>
-<tr>
 <td>bsd</td>
+</tr>
+<tr>
 <td>bsd.prog.mk</td>
-</tr>
-<tr>
 <td>build</td>
+</tr>
+<tr>
 <td>build-env</td>
-</tr>
-<tr>
 <td>buildlink-directories</td>
+</tr>
+<tr>
 <td>buildlink-oss-soundcard-h</td>
-</tr>
-<tr>
 <td>built-in</td>
+</tr>
+<tr>
 <td>builtin</td>
-</tr>
-<tr>
 <td>c</td>
+</tr>
+<tr>
 <td>c++</td>
-</tr>
-<tr>
 <td>ccache</td>
+</tr>
+<tr>
 <td>cce</td>
-</tr>
-<tr>
 <td>cdefs</td>
+</tr>
+<tr>
 <td>ceil</td>
-</tr>
-<tr>
 <td>changes</td>
+</tr>
+<tr>
 <td>changes-entry</td>
-</tr>
-<tr>
 <td>changes-entry-noupdate</td>
+</tr>
+<tr>
 <td>check</td>
-</tr>
-<tr>
 <td>check-clean</td>
+</tr>
+<tr>
 <td>check-files</td>
-</tr>
-<tr>
 <td>check-files-clean</td>
+</tr>
+<tr>
 <td>check-vulnerable</td>
-</tr>
-<tr>
 <td>checksum</td>
+</tr>
+<tr>
 <td>checksum-phase</td>
-</tr>
-<tr>
 <td>clean</td>
+</tr>
+<tr>
 <td>clean-depends</td>
-</tr>
-<tr>
 <td>cleandir</td>
+</tr>
+<tr>
 <td>commit</td>
-</tr>
-<tr>
 <td>commit-changes-entry</td>
+</tr>
+<tr>
 <td>compact</td>
-</tr>
-<tr>
 <td>compiler</td>
+</tr>
+<tr>
 <td>conf</td>
-</tr>
-<tr>
 <td>config.guess</td>
+</tr>
+<tr>
 <td>config.sub</td>
-</tr>
-<tr>
 <td>configuration</td>
+</tr>
+<tr>
 <td>configure</td>
-</tr>
-<tr>
 <td>configure-env</td>
+</tr>
+<tr>
 <td>configure-help</td>
-</tr>
-<tr>
 <td>configure_args</td>
+</tr>
+<tr>
 <td>connect</td>
-</tr>
-<tr>
 <td>cos</td>
+</tr>
+<tr>
 <td>cpe</td>
-</tr>
-<tr>
 <td>cputime</td>
-<td>create-usergroup</td>
 </tr>
 <tr>
+<td>create-usergroup</td>
 <td>csh</td>
+</tr>
+<tr>
 <td>ctf</td>
+<td>cvs</td>
 </tr>
 <tr>
 <td>debug</td>
@@ -14389,42 +14509,46 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>endian</td>
+<td>endif</td>
+</tr>
+<tr>
 <td>enomem</td>
-</tr>
-<tr>
 <td>ensurepip</td>
+</tr>
+<tr>
 <td>err</td>
-</tr>
-<tr>
 <td>errx</td>
+</tr>
+<tr>
 <td>etc</td>
-</tr>
-<tr>
 <td>exp</td>
+</tr>
+<tr>
 <td>extract-rpm</td>
-</tr>
-<tr>
 <td>fabs</td>
+</tr>
+<tr>
 <td>feature</td>
-</tr>
-<tr>
 <td>features</td>
+</tr>
+<tr>
 <td>fetch</td>
-</tr>
-<tr>
 <td>fetch-list</td>
+</tr>
+<tr>
 <td>follows</td>
-</tr>
-<tr>
 <td>forbids</td>
+</tr>
+<tr>
 <td>form</td>
-</tr>
-<tr>
 <td>format</td>
-<td>fortify</td>
 </tr>
 <tr>
+<td>fortify</td>
 <td>fortify_source</td>
+</tr>
+<tr>
+<td>fossil</td>
 <td>friend</td>
 </tr>
 <tr>
@@ -14457,30 +14581,34 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>gettext</td>
+<td>git</td>
+</tr>
+<tr>
 <td>github</td>
-</tr>
-<tr>
 <td>gitlab</td>
+</tr>
+<tr>
 <td>glob</td>
-</tr>
-<tr>
 <td>gnu</td>
+</tr>
+<tr>
 <td>gnu_configure_strict</td>
-</tr>
-<tr>
 <td>go</td>
+</tr>
+<tr>
 <td>go-deps</td>
-</tr>
-<tr>
 <td>golang</td>
+</tr>
+<tr>
 <td>guess-license</td>
-</tr>
-<tr>
 <td>hashbang</td>
-<td>heimdal</td>
 </tr>
 <tr>
+<td>heimdal</td>
 <td>help</td>
+</tr>
+<tr>
+<td>hg</td>
 <td>imake</td>
 </tr>
 <tr>
@@ -14553,235 +14681,239 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>memory</td>
+<td>mercurial</td>
+</tr>
+<tr>
 <td>meta</td>
-</tr>
-<tr>
 <td>meta-package</td>
+</tr>
+<tr>
 <td>meta_package</td>
-</tr>
-<tr>
 <td>mit-krb5</td>
+</tr>
+<tr>
 <td>mk.conf</td>
-</tr>
-<tr>
 <td>mkl</td>
+</tr>
+<tr>
 <td>mount</td>
-</tr>
-<tr>
 <td>move</td>
+</tr>
+<tr>
 <td>moved</td>
-</tr>
-<tr>
 <td>mprotect</td>
+</tr>
+<tr>
 <td>mremap</td>
-</tr>
-<tr>
 <td>native</td>
+</tr>
+<tr>
 <td>nb</td>
-</tr>
-<tr>
 <td>nbcompat</td>
+</tr>
+<tr>
 <td>netlib</td>
-</tr>
-<tr>
 <td>node</td>
+</tr>
+<tr>
 <td>node.js</td>
-</tr>
-<tr>
 <td>nodejs</td>
+</tr>
+<tr>
 <td>obstack</td>
-</tr>
-<tr>
 <td>obstack_ptr_grow</td>
+</tr>
+<tr>
 <td>occurs</td>
-</tr>
-<tr>
 <td>only</td>
+</tr>
+<tr>
 <td>openblas</td>
-</tr>
-<tr>
 <td>options</td>
+</tr>
+<tr>
 <td>options.mk</td>
-</tr>
-<tr>
 <td>order</td>
+</tr>
+<tr>
 <td>override</td>
-</tr>
-<tr>
 <td>override-intltool</td>
+</tr>
+<tr>
 <td>override-message-intltool</td>
-</tr>
-<tr>
 <td>package</td>
+</tr>
+<tr>
 <td>parallel</td>
-</tr>
-<tr>
 <td>path</td>
+</tr>
+<tr>
 <td>pax</td>
-</tr>
-<tr>
 <td>paxctl</td>
+</tr>
+<tr>
 <td>pbulk-index</td>
-</tr>
-<tr>
 <td>pc</td>
+</tr>
+<tr>
 <td>perl</td>
-</tr>
-<tr>
 <td>perl5</td>
+</tr>
+<tr>
 <td>perms</td>
-</tr>
-<tr>
 <td>php</td>
+</tr>
+<tr>
 <td>pkg-build-options</td>
-</tr>
-<tr>
 <td>pkg-config</td>
+</tr>
+<tr>
 <td>pkg_build_options</td>
-</tr>
-<tr>
 <td>pkgsrc</td>
+</tr>
+<tr>
 <td>platform</td>
-</tr>
-<tr>
 <td>plist</td>
+</tr>
+<tr>
 <td>post-extract</td>
-</tr>
-<tr>
 <td>post-fetch</td>
+</tr>
+<tr>
 <td>post-wrapper</td>
-</tr>
-<tr>
 <td>pre-build-checks-hook</td>
+</tr>
+<tr>
 <td>pre-configure-checks-hook</td>
-</tr>
-<tr>
 <td>pre-extract</td>
+</tr>
+<tr>
 <td>pre-fetch</td>
-</tr>
-<tr>
 <td>print-go-deps</td>
+</tr>
+<tr>
 <td>print-plist</td>
-</tr>
-<tr>
 <td>print-summary-data</td>
+</tr>
+<tr>
 <td>privileged-install-hook</td>
-</tr>
-<tr>
 <td>pypi</td>
+</tr>
+<tr>
 <td>python</td>
-</tr>
-<tr>
 <td>r</td>
+</tr>
+<tr>
 <td>readme-all</td>
-</tr>
-<tr>
 <td>recursive</td>
+</tr>
+<tr>
 <td>recv</td>
-</tr>
-<tr>
 <td>recvfrom</td>
+</tr>
+<tr>
 <td>regcomp</td>
-</tr>
-<tr>
 <td>release-localbase-lock</td>
+</tr>
+<tr>
 <td>release-lock</td>
-</tr>
-<tr>
 <td>relro</td>
+</tr>
+<tr>
 <td>remove</td>
-</tr>
-<tr>
 <td>removed</td>
+</tr>
+<tr>
 <td>rename</td>
-</tr>
-<tr>
 <td>renamed</td>
+</tr>
+<tr>
 <td>reorder</td>
-</tr>
-<tr>
 <td>replace</td>
+</tr>
+<tr>
 <td>replace_interpreter</td>
-</tr>
-<tr>
 <td>reproducible</td>
+</tr>
+<tr>
 <td>resolv</td>
-</tr>
-<tr>
 <td>root</td>
+</tr>
+<tr>
 <td>ruby</td>
-</tr>
-<tr>
 <td>send</td>
+</tr>
+<tr>
 <td>sendfile</td>
-</tr>
-<tr>
 <td>sendto</td>
+</tr>
+<tr>
 <td>setenv</td>
-</tr>
-<tr>
 <td>setgid</td>
+</tr>
+<tr>
 <td>setprogname</td>
-</tr>
-<tr>
 <td>setuid</td>
+</tr>
+<tr>
 <td>sh</td>
-</tr>
-<tr>
 <td>shebang</td>
+</tr>
+<tr>
 <td>show</td>
-</tr>
-<tr>
 <td>show-all</td>
+</tr>
+<tr>
 <td>show-build-defs</td>
-</tr>
-<tr>
 <td>show-depends</td>
+</tr>
+<tr>
 <td>show-depends-dirs</td>
-</tr>
-<tr>
 <td>show-depends-pkgpaths</td>
+</tr>
+<tr>
 <td>show-depends-recursive</td>
-</tr>
-<tr>
 <td>show-deps</td>
+</tr>
+<tr>
 <td>show-distfiles</td>
-</tr>
-<tr>
 <td>show-downlevel</td>
+</tr>
+<tr>
 <td>show-subdir-var</td>
-</tr>
-<tr>
 <td>show-tools</td>
+</tr>
+<tr>
 <td>show-var</td>
-</tr>
-<tr>
 <td>show-vars</td>
+</tr>
+<tr>
 <td>snprintf</td>
-</tr>
-<tr>
 <td>socket</td>
+</tr>
+<tr>
 <td>ssp</td>
-</tr>
-<tr>
 <td>st_mode</td>
+</tr>
+<tr>
 <td>stage-install</td>
-</tr>
-<tr>
 <td>strcasestr</td>
+</tr>
+<tr>
 <td>strict</td>
-</tr>
-<tr>
 <td>strip</td>
+</tr>
+<tr>
 <td>strndup</td>
-</tr>
-<tr>
 <td>strnlen</td>
-<td>strsep</td>
 </tr>
 <tr>
+<td>strsep</td>
 <td>subst</td>
+</tr>
+<tr>
 <td>substitutions</td>
+<td>subversion</td>
 </tr>
 <tr>
 <td>sun</td>
@@ -14789,83 +14921,83 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>sunwspro</td>
+<td>svn</td>
+</tr>
+<tr>
 <td>symlink</td>
-</tr>
-<tr>
 <td>test</td>
+</tr>
+<tr>
 <td>test-env</td>
-</tr>
-<tr>
 <td>tex</td>
+</tr>
+<tr>
 <td>texlive</td>
-</tr>
-<tr>
 <td>tmp</td>
+</tr>
+<tr>
 <td>todo</td>
-</tr>
-<tr>
 <td>tool</td>
+</tr>
+<tr>
 <td>tools</td>
-</tr>
-<tr>
 <td>tools-libtool-m4-override</td>
+</tr>
+<tr>
 <td>transitive</td>
-</tr>
-<tr>
 <td>type</td>
+</tr>
+<tr>
 <td>ulimit</td>
-</tr>
-<tr>
 <td>undefined</td>
+</tr>
+<tr>
 <td>undo-replace</td>
-</tr>
-<tr>
 <td>unlimit</td>
+</tr>
+<tr>
 <td>unprivileged</td>
-</tr>
-<tr>
 <td>unprivileged-install-hook</td>
+</tr>
+<tr>
 <td>unstripped</td>
-</tr>
-<tr>
 <td>update</td>
+</tr>
+<tr>
 <td>updated</td>
-</tr>
-<tr>
 <td>upload</td>
+</tr>
+<tr>
 <td>upload-distfiles</td>
-</tr>
-<tr>
 <td>use_tools</td>
+</tr>
+<tr>
 <td>user</td>
-</tr>
-<tr>
 <td>utimes</td>
+</tr>
+<tr>
 <td>vasprintf</td>
-</tr>
-<tr>
 <td>verbose</td>
+</tr>
+<tr>
 <td>vsnprintf</td>
-</tr>
-<tr>
 <td>warn</td>
+</tr>
+<tr>
 <td>warning</td>
-</tr>
-<tr>
 <td>warnings</td>
+</tr>
+<tr>
 <td>warnx</td>
-</tr>
-<tr>
 <td>wattr_off</td>
+</tr>
+<tr>
 <td>wattr_on</td>
-</tr>
-<tr>
 <td>work</td>
-<td>wrapper</td>
 </tr>
 <tr>
+<td>wrapper</td>
 <td>wrkdir</td>
-<td> </td>
 </tr>
 </table>
 </div>
