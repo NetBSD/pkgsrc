@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2023/04/08 12:13:50 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/27 16:57:15 vins Exp $
 
-DISTNAME=	libreddit-0.30.1
+DISTNAME=	libreddit-0.30.1_20230714
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libreddit/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	2815dc5209465295c93ada3656f17da63ad0f5b5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libreddit/libreddit/
