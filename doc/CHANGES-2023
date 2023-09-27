@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5639 2023/09/27 12:25:52 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5640 2023/09/27 12:49:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8179,3 +8179,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-gitpython to 3.1.37 [adam 2023-09-27]
 	Updated devel/blosc2 to 2.10.4 [adam 2023-09-27]
 	Updated devel/py-rpds-py to 0.10.3 [adam 2023-09-27]
+	Updated devel/py-maturin to 1.2.3nb2 [wiz 2023-09-27]
