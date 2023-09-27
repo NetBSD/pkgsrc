@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5642 2023/09/27 15:24:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5643 2023/09/27 15:36:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8188,3 +8188,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm to 2.9.3 [adam 2023-09-27]
 	Updated net/py-python-socks to 2.4.3 [adam 2023-09-27]
 	Updated devel/py-test-xprocess to 0.23.0 [adam 2023-09-27]
+	Updated misc/py-trove-classifiers to 2023.9.19 [adam 2023-09-27]
+	Updated net/py-unearth to 0.11.0 [adam 2023-09-27]
+	Updated archivers/py-brotlicffi to 1.1.0.0 [adam 2023-09-27]
+	Updated security/py-cryptodome to 3.19.0 [adam 2023-09-27]
