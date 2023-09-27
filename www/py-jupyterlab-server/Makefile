@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/08/27 02:26:47 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/27 16:14:11 adam Exp $
 
-DISTNAME=	jupyterlab_server-2.24.0
+DISTNAME=	jupyterlab_server-2.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab_server/}
@@ -14,10 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.10:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-json5>=0.9.0:../../textproc/py-json5
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.17.3:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.21:../../www/py-jupyter_server
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.28:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.31:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-console-scripts
