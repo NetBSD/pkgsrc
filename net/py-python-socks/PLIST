@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/09/16 03:38:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/09/27 15:21:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/python_socks/__init__.pyo
 ${PYSITELIB}/python_socks/_abc.py
 ${PYSITELIB}/python_socks/_abc.pyc
 ${PYSITELIB}/python_socks/_abc.pyo
-${PYSITELIB}/python_socks/_basic_auth.py
-${PYSITELIB}/python_socks/_basic_auth.pyc
-${PYSITELIB}/python_socks/_basic_auth.pyo
 ${PYSITELIB}/python_socks/_connectors/__init__.py
 ${PYSITELIB}/python_socks/_connectors/__init__.pyc
 ${PYSITELIB}/python_socks/_connectors/__init__.pyo
