@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/07/17 19:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/27 10:57:33 adam Exp $
 
-DISTNAME=	scikit-learn-1.3.0
+DISTNAME=	scikit-learn-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
