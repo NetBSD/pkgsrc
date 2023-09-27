@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5631 2023/09/27 09:03:31 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5632 2023/09/27 09:21:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8162,3 +8162,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/repmgr to 5.4.1 [adam 2023-09-27]
 	Updated textproc/py-Unidecode to 1.3.7 [adam 2023-09-27]
 	Updated devel/py-traitlets to 5.10.1 [adam 2023-09-27]
+	Updated audio/fluidsynth to 2.3.4 [adam 2023-09-27]
+	Updated net/yt-dlp to 2023.9.24 [adam 2023-09-27]
