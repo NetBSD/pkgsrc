@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5649 2023/09/27 20:01:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5650 2023/09/27 20:03:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8201,3 +8201,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/opensmtpd to 7.3.0p2 [vins 2023-09-27]
 	Updated lang/rust-bin to 1.70.0nb1 [he 2023-09-27]
 	Updated sysutils/broot to 1.26.0 [pin 2023-09-27]
+	Updated shells/oh-my-posh to 18.10.2 [pin 2023-09-27]
