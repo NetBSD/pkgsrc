@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2022/07/06 18:50:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2023/09/27 15:36:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -303,6 +303,10 @@ ${PYSITELIB}/Crypto/Math/__init__.py
 ${PYSITELIB}/Crypto/Math/__init__.pyc
 ${PYSITELIB}/Crypto/Math/__init__.pyo
 ${PYSITELIB}/Crypto/Math/_modexp.${SOEXT}
+${PYSITELIB}/Crypto/Protocol/DH.py
+${PYSITELIB}/Crypto/Protocol/DH.pyc
+${PYSITELIB}/Crypto/Protocol/DH.pyi
+${PYSITELIB}/Crypto/Protocol/DH.pyo
 ${PYSITELIB}/Crypto/Protocol/KDF.py
 ${PYSITELIB}/Crypto/Protocol/KDF.pyc
 ${PYSITELIB}/Crypto/Protocol/KDF.pyi
@@ -532,6 +536,9 @@ ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_SecretSharing.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_SecretSharing.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_SecretSharing.pyo
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_ecdh.py
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_ecdh.pyc
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_ecdh.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_rfc1751.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_rfc1751.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_rfc1751.pyo
