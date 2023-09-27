@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2023/08/23 14:32:45 he Exp $
+$NetBSD: distinfo,v 1.28 2023/09/27 17:19:24 he Exp $
 
 BLAKE2s (rust-bin-1.70.0/rust-1.70.0-aarch64-apple-darwin.tar.gz) = dd134e5775fd9bfdbf4d0a1b9ef76c5e01f113efb25654ec0ece397e6fafb433
 SHA512 (rust-bin-1.70.0/rust-1.70.0-aarch64-apple-darwin.tar.gz) = 22466cd67b1835f369cb92a754f8a108b062453b9a3ee05cca8078595a7af98a0cac41e19ba7ea0c6f5ce0593ed215eaf7c2e6ddfdb56a672486367bc934ac59
@@ -21,9 +21,9 @@ Size (rust-bin-1.70.0/rust-1.70.0-armv6-unknown-netbsd-eabihf.tar.xz) = 16994203
 BLAKE2s (rust-bin-1.70.0/rust-1.70.0-armv7-unknown-netbsd-eabihf.tar.xz) = 3a039556bc0ea52a510b29d83e9f957bba182eb83d0e18eb8c52852bd9024b58
 SHA512 (rust-bin-1.70.0/rust-1.70.0-armv7-unknown-netbsd-eabihf.tar.xz) = 2ed4587bf48ec525e1235af14855333fa8c629edf2d48dc1c4ae6db52adb557d635fe35ee1d0bbc184336e68c55605863cbecfa83628df707df6afd21c5299a7
 Size (rust-bin-1.70.0/rust-1.70.0-armv7-unknown-netbsd-eabihf.tar.xz) = 171353556 bytes
-BLAKE2s (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = d985b5e9adc30e11c5d98d2ca07424f2f425efcf6136db6b0cc1e68d70ae78a8
-SHA512 (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = 34301c54ad5d4d1e9374c36a56c5bb7978a2e8674ae91bb5fd01b7a1a16132470af3b73ba0d897ebe3f57db92beb73bda7ad7e412b975f3c6d5895fe2833a3b2
-Size (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = 90330264 bytes
+BLAKE2s (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = 5502097ccd2f27f752bc6335e26235956c7245675774bbef87c22ce97e2960c0
+SHA512 (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = ec85e4f4a246e6ee5a11d60b9ed85ca99b1c7bdcf81e8d60a10ae92556f40e1dd00efa474a7a7bc4d354947c0ecfb3a169deaf57a1aa450a319fcbaca1accf44
+Size (rust-bin-1.70.0/rust-1.70.0-i586-unknown-netbsd.tar.xz) = 212770616 bytes
 BLAKE2s (rust-bin-1.70.0/rust-1.70.0-i686-unknown-linux-gnu.tar.gz) = 1fb19ed2f04cdb05d17e23392a39492d2d06441f12613483ae92938efe8a2665
 SHA512 (rust-bin-1.70.0/rust-1.70.0-i686-unknown-linux-gnu.tar.gz) = cce9e4ba58ae05e3b861aa70a32b2ce67f2115640cd869f4cc1d5cce8f24f5edbca2a863eff3e736937aa777d8b590a1a232b6fa226aee752c5d9d3adf7ee188
 Size (rust-bin-1.70.0/rust-1.70.0-i686-unknown-linux-gnu.tar.gz) = 401968147 bytes
