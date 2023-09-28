@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5653 2023/09/28 06:57:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5654 2023/09/28 08:33:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8205,3 +8205,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/janet to 1.31.0 [charlotte 2023-09-27]
 	Updated sysutils/py-ansible-compat to 4.1.10 [adam 2023-09-28]
 	Updated sysutils/ansible-lint to 6.20.0 [adam 2023-09-28]
+	Updated devel/fq to 0.8.0 [wiz 2023-09-28]
