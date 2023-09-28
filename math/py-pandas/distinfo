@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2023/09/02 07:19:56 adam Exp $
+$NetBSD: distinfo,v 1.35 2023/09/28 16:01:24 adam Exp $
 
-BLAKE2s (pandas-2.1.0.tar.gz) = 654f5feb29a81cde5ae9257e02bd3bb2d68b941ad739b3e7dd21f5f7005dd43a
-SHA512 (pandas-2.1.0.tar.gz) = 85a64ef7abffdb3a78547942dabfe621d7c8e2cf0da5285e64a9018865fadb037e030d5077a1790acecc1616200f50a777c6ab775b888a72d7fc36cd8855a704
-Size (pandas-2.1.0.tar.gz) = 4263970 bytes
+BLAKE2s (pandas-2.1.1.tar.gz) = 63d634ada35028456eccece8396c951ca1a631a3f64e717c055a7822995137eb
+SHA512 (pandas-2.1.1.tar.gz) = 346e13e06805948c569712028c9b8d756c67ca2fab040999a51a4e759206d50d8ee25be38ac3c7cb3d2e692a02d85c1ec198841311fe43cb04b64f2741627a4e
+Size (pandas-2.1.1.tar.gz) = 4266250 bytes
 SHA1 (patch-pandas___libs_window_aggregations.pyx) = 65e3ec2b165de00b23550a989c5eb77c81c759f3
