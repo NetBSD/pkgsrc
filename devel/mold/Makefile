@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2023/08/28 15:09:33 fcambus Exp $
+# $NetBSD: Makefile,v 1.36 2023/09/28 14:47:59 fcambus Exp $
 
-DISTNAME=	mold-2.1.0
+DISTNAME=	mold-2.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -36,7 +36,6 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
