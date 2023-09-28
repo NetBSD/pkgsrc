@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2023/05/17 15:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2023/09/28 22:12:12 joerg Exp $
 
 DISTNAME=	docbook-xsl-nons-1.79.2
 PKGNAME=	${DISTNAME:S/-nons//}
@@ -60,6 +60,7 @@ CHECK_INTERPRETER_SKIP+=	share/xsl/docbook/epub/bin/dbtoepub
 
 post-extract:
 	${RM} -f ${${FIND} ${WRKSRC} -type d:L:sh:=/.gitignore}
+	chmod -R g-w ${WRKSRC}
 
 do-install:
 	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm * ${DESTDIR}${EGDIR}

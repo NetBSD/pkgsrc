@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/04/30 18:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/28 22:12:46 joerg Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,9 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	setup.py
 SUBST_VARS.man=		PKGMANDIR
+
+post-extract:
+	chmod -R g-w ${WRKSRC}
 
 post-install:
 .for bin in csv2ods mailodf odf2mht odf2xhtml odf2xml odfimgimport \
