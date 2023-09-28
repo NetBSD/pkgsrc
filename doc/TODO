@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23399 2023/09/27 15:36:40 adam Exp $
+$NetBSD: TODO,v 1.23400 2023/09/28 16:01:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -1194,7 +1194,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-argparse-manpage-4.5
-	o py-astroid-2.15.7
 	o py-barman-3.0.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
