@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5652 2023/09/28 05:16:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5653 2023/09/28 06:57:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8203,3 +8203,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/broot to 1.26.0 [pin 2023-09-27]
 	Updated shells/oh-my-posh to 18.10.2 [pin 2023-09-27]
 	Updated lang/janet to 1.31.0 [charlotte 2023-09-27]
+	Updated sysutils/py-ansible-compat to 4.1.10 [adam 2023-09-28]
+	Updated sysutils/ansible-lint to 6.20.0 [adam 2023-09-28]
