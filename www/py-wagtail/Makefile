@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/09/01 07:20:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/28 22:26:33 joerg Exp $
 
 DISTNAME=	wagtail-4.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wagtail.io/
 COMMENT=	Django-based Content Management System
 LICENSE=	modified-bsd
+
+EXTRACT_USING=	bsdtar
 
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-django-filter>=2.2.0:../../www/py-django-filter
