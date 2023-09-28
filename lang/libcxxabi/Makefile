@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2022/11/14 18:44:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2023/09/28 21:32:13 joerg Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	libcxxabi-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -48,5 +49,4 @@ post-extract:
 	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
 .include "../../lang/libunwind/buildlink3.mk"
-.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
