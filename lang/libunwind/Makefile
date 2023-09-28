@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/01/24 18:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/09/28 21:33:10 joerg Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -34,6 +34,4 @@ post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 .include "../../devel/cmake/build.mk"
-BUILDLINK_DEPMETHOD.llvm=	build
-.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
