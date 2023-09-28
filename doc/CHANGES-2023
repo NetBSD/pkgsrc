@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5654 2023/09/28 08:33:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5655 2023/09/28 08:51:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8206,3 +8206,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-ansible-compat to 4.1.10 [adam 2023-09-28]
 	Updated sysutils/ansible-lint to 6.20.0 [adam 2023-09-28]
 	Updated devel/fq to 0.8.0 [wiz 2023-09-28]
+	Updated x11/xf86-video-siliconmotion to 1.7.10 [wiz 2023-09-28]
