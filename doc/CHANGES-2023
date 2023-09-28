@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5657 2023/09/28 13:06:24 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5658 2023/09/28 14:48:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8209,3 +8209,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xf86-video-siliconmotion to 1.7.10 [wiz 2023-09-28]
 	Updated net/syncthing to 1.24.0 [ffaubert 2023-09-28]
 	Updated audio/gospt to 0.0.52 [pin 2023-09-28]
+	Updated devel/mold to 2.2.0 [fcambus 2023-09-28]
