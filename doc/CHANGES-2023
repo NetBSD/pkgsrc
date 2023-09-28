@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5658 2023/09/28 14:48:18 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.5659 2023/09/28 15:50:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8210,3 +8210,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/syncthing to 1.24.0 [ffaubert 2023-09-28]
 	Updated audio/gospt to 0.0.52 [pin 2023-09-28]
 	Updated devel/mold to 2.2.0 [fcambus 2023-09-28]
+	Updated math/py-scipy to 1.11.3 [adam 2023-09-28]
+	Updated devel/py-msgpack to 1.0.7 [adam 2023-09-28]
+	Updated databases/py-psycopg2 to 2.9.8 [adam 2023-09-28]
+	Updated devel/py-ruamel-yaml to 0.17.33 [adam 2023-09-28]
