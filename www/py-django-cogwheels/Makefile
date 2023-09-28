@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/13 10:03:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/09/28 22:31:07 joerg Exp $
 
 DISTNAME=	django-cogwheels-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+post-extract:
+	chmod -R g-w ${WRKSRC}
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} ./runtests.py
