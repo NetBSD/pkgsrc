@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2023/09/02 07:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/09/28 16:01:24 adam Exp $
 
-DISTNAME=	pandas-2.1.0
+DISTNAME=	pandas-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -26,12 +26,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 USE_CXX_FEATURES=	c++11
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fixing python binary name.
-SUBST_FILES.python=	meson.build
-SUBST_SED.python=	-e "s,\['python',\['python${PYVERSSUFFIX}',"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
