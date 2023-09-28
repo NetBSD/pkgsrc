@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/08/14 05:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/09/28 21:29:25 joerg Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -118,6 +118,7 @@ MAKE_FLAGS+=		DEBUG=
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
 BUILDLINK_TRANSFORM+=	rm:-march=i386
 .endif
+BUILDLINK_TRANSFORM+=	rm:-march=native
 
 PLIST_VARS+=	kqueue
 .if defined(OPSYS_HAS_KQUEUE)
