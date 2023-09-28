@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1072 2023/09/19 07:07:07 pin Exp $
+# $NetBSD: Makefile,v 1.1073 2023/09/28 22:03:33 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -621,6 +621,7 @@ SUBDIR+=	refi
 SUBDIR+=	rename
 SUBDIR+=	renameutils
 SUBDIR+=	restic
+SUBDIR+=	restic-rest-server
 SUBDIR+=	rfstool
 SUBDIR+=	riemann-client
 SUBDIR+=	ripdrag
