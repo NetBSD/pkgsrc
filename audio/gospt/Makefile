@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/09/08 19:05:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2023/09/28 13:05:58 pin Exp $
 
-DISTNAME=	gospt-0.0.50
-PKGREVISION=	3
+DISTNAME=	gospt-0.0.52
 CATEGORIES=	audio
 MASTER_SITES=	-https://git.asdf.cafe/abs3nt/gospt/archive/v${PKGVERSION_NOREV}.tar.gz
 
@@ -11,8 +10,8 @@ COMMENT=	Spotify TUI and CLI
 LICENSE=	mit
 
 # gospt is not really a Spotify client but, more of a client controller.
-# You will need a client like 'librespot' running in the backgroud and to set
-# that as device in gospt.
+# You will need a client like 'librespot' or, 'spotifyd' running in the
+# backgroud and to set that as device in gospt.
 
 WRKSRC=	${WRKDIR}/${PKGBASE}
 
