@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5661 2023/09/28 16:09:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5662 2023/09/28 19:41:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8220,3 +8220,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pandas to 2.1.1 [adam 2023-09-28]
 	Updated devel/py-coverage to 7.3.1 [adam 2023-09-28]
 	Updated devel/py-faker to 19.6.2 [adam 2023-09-28]
+	Updated devel/opa to 0.57.0 [leot 2023-09-28]
