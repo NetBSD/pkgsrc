@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2023/08/14 05:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/09/28 21:33:54 joerg Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -148,6 +148,7 @@ post-extract:
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
