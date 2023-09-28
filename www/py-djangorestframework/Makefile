@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2023/08/05 06:19:18 adam Exp $
+# $NetBSD: Makefile,v 1.37 2023/09/28 22:26:33 joerg Exp $
 
 DISTNAME=	djangorestframework-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-pytz>0:../../time/py-pytz
+
+EXTRACT_USING=	bsdtar
 
 USE_LANGUAGES=	# none
 
