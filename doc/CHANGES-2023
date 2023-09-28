@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5656 2023/09/28 12:35:51 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5657 2023/09/28 13:06:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8208,3 +8208,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/fq to 0.8.0 [wiz 2023-09-28]
 	Updated x11/xf86-video-siliconmotion to 1.7.10 [wiz 2023-09-28]
 	Updated net/syncthing to 1.24.0 [ffaubert 2023-09-28]
+	Updated audio/gospt to 0.0.52 [pin 2023-09-28]
