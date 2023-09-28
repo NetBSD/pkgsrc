@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2023/09/01 09:55:26 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/09/28 21:39:51 joerg Exp $
 
-DISTNAME=	qpdf-11.4.0
+DISTNAME=	qpdf-11.6.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qpdf/}
 
@@ -9,11 +9,13 @@ HOMEPAGE=	https://qpdf.sourceforge.io/
 COMMENT=	Structural, content-preserving transformations on PDF files
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=		c c++
+CMAKE_CONFIGURE_ARGS+=	-DUSE_IMPLICIT_CRYPTO=off -DREQUIRE_CRYPTO_OPENSSL=on
+
+USE_LANGUAGES=		c c++17
+USE_CXX_FEATURES+=	c++17
+
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	libqpdf.pc.in
-
-USE_CXX_FEATURES+=	c++17
 
 CMAKE_ARGS+=		-DUSE_IMPLICIT_CRYPTO=OFF
 CMAKE_ARGS+=		-DREQUIRE_CRYPTO_GNUTLS=OFF
