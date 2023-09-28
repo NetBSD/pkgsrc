@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/08/23 15:24:27 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/09/28 06:52:02 adam Exp $
 
-DISTNAME=	ansible-compat-4.1.7
+DISTNAME=	ansible-compat-4.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ansible-community/ansible-compat
 COMMENT=	Ansible compatibility goodies
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.12:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.6.0:../../textproc/py-jsonschema
