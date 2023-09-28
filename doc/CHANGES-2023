@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5660 2023/09/28 16:01:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5661 2023/09/28 16:09:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8218,3 +8218,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-astroid to 2.15.8 [adam 2023-09-28]
 	Updated devel/py-pylint to 2.17.6 [adam 2023-09-28]
 	Updated math/py-pandas to 2.1.1 [adam 2023-09-28]
+	Updated devel/py-coverage to 7.3.1 [adam 2023-09-28]
+	Updated devel/py-faker to 19.6.2 [adam 2023-09-28]
