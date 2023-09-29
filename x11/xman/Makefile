@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2022/11/09 13:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2023/09/29 07:49:23 wiz Exp $
 
-DISTNAME=		xman-1.1.5
+DISTNAME=		xman-1.1.6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
