@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5671 2023/09/29 15:09:05 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5672 2023/09/29 15:11:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8232,3 +8232,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.16.0 [adam 2023-09-29]
 	Updated devel/py-macholib to 1.16.3 [adam 2023-09-29]
 	Updated lang/php82 to 8.2.11 [taca 2023-09-29]
+	Updated lang/php81 to 8.1.24 [taca 2023-09-29]
