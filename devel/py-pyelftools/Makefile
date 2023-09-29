@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/10/13 08:46:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/09/29 09:18:37 adam Exp $
 
-DISTNAME=	pyelftools-0.29
+DISTNAME=	pyelftools-0.30
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyelftools/}
