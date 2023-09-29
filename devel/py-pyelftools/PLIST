@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/10/13 08:46:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/09/29 09:18:37 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/elftools/common/construct_utils.pyo
 ${PYSITELIB}/elftools/common/exceptions.py
 ${PYSITELIB}/elftools/common/exceptions.pyc
 ${PYSITELIB}/elftools/common/exceptions.pyo
-${PYSITELIB}/elftools/common/py3compat.py
-${PYSITELIB}/elftools/common/py3compat.pyc
-${PYSITELIB}/elftools/common/py3compat.pyo
 ${PYSITELIB}/elftools/common/utils.py
 ${PYSITELIB}/elftools/common/utils.pyc
 ${PYSITELIB}/elftools/common/utils.pyo
