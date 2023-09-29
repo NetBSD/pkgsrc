@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/09/04 10:54:07 nros Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/09/29 21:12:15 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -148,6 +148,7 @@ qt6/doc/global/template/style/offline-dark.css
 qt6/doc/global/template/style/offline-simple.css
 qt6/doc/global/template/style/offline.css
 qt6/doc/global/template/style/online.css
+qt6/doc/global/template/style/tech_preview.svg
 qt6/doc/global/template/style/theqtcompany.png
 qt6/include/QtConcurrent/QtConcurrent
 qt6/include/QtConcurrent/QtConcurrentDepends
@@ -1016,6 +1017,7 @@ ${PLIST.dbus}qt6/include/QtDBus/qdbuscontext.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbuserror.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusextratypes.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusinterface.h
+${PLIST.dbus}qt6/include/QtDBus/qdbusmacros.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusmessage.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbusmetatype.h
 ${PLIST.dbus}qt6/include/QtDBus/qdbuspendingcall.h
@@ -1077,8 +1079,6 @@ qt6/include/QtFbSupport/QtFbSupport
 qt6/include/QtFbSupport/QtFbSupportDepends
 qt6/include/QtFbSupport/QtFbSupportVersion
 qt6/include/QtFbSupport/qtfbsupportversion.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/atspiadaptor_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/dbusconnection_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractfileiconengine_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractfileiconprovider_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractlayoutstyleinfo_p.h
@@ -1107,14 +1107,14 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcssparser_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcssutil_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcursor_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdatabuffer_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuadaptor_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenubar_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuconnection_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuregistrarproxy_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenutypes_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusplatformmenu_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustrayicon_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustraytypes_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuadaptor_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenubar_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuconnection_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenuregistrarproxy_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusmenutypes_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbusplatformmenu_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustrayicon_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdbustraytypes_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdistancefield_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdnd_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qdrawhelper_neon_p.h
@@ -1225,14 +1225,9 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qshapedpixmapdndwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qshortcut_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qshortcutmap_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qsimpledrag_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qspi_constant_mappings_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qspi_struct_marshallers_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qspiaccessiblebridge_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qspiapplicationadaptor_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qspidbuscache_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstandarditemmodel_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstatictext_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstatusnotifieritemadaptor_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstatusnotifieritemadaptor_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstroker_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qstylehints_p.h
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qt_egl_p.h
@@ -1263,7 +1258,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qunixeventdispatcher_qpa_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qvectorpath_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qwindow_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxbmhandler_p.h
-${PLIST.dbus}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
+${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxdgnotificationproxy_p.h
 ${PLIST.x11}qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxkbcommon_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qxpmhandler_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qzipreader_p.h
@@ -1523,9 +1518,6 @@ qt6/include/QtGui/QtEvents
 qt6/include/QtGui/QtGui
 qt6/include/QtGui/QtGuiDepends
 qt6/include/QtGui/QtGuiVersion
-${PLIST.dbus}qt6/include/QtGui/bus_interface.h
-${PLIST.dbus}qt6/include/QtGui/cache_adaptor.h
-${PLIST.dbus}qt6/include/QtGui/deviceeventcontroller_adaptor.h
 qt6/include/QtGui/qabstractfileiconprovider.h
 qt6/include/QtGui/qabstracttextdocumentlayout.h
 qt6/include/QtGui/qaccessible.h
@@ -1637,7 +1629,6 @@ qt6/include/QtGui/qvector4d.h
 qt6/include/QtGui/qvectornd.h
 qt6/include/QtGui/qwindow.h
 qt6/include/QtGui/qwindowdefs.h
-${PLIST.dbus}${PLIST.x11}qt6/include/QtGui/socket_interface.h
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupport
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupportDepends
 ${PLIST.x11}qt6/include/QtInputSupport/QtInputSupportVersion
@@ -2008,6 +1999,7 @@ qt6/include/QtSql/QSqlTableModel
 qt6/include/QtSql/QtSql
 qt6/include/QtSql/QtSqlDepends
 qt6/include/QtSql/QtSqlVersion
+qt6/include/QtSql/qsql.h
 qt6/include/QtSql/qsqldatabase.h
 qt6/include/QtSql/qsqldriver.h
 qt6/include/QtSql/qsqldriverplugin.h
@@ -2079,6 +2071,7 @@ qt6/include/QtTest/qbenchmark.h
 qt6/include/QtTest/qbenchmarkmetric.h
 qt6/include/QtTest/qsignalspy.h
 qt6/include/QtTest/qtest.h
+qt6/include/QtTest/qtest_global.h
 qt6/include/QtTest/qtest_gui.h
 qt6/include/QtTest/qtest_network.h
 qt6/include/QtTest/qtest_widgets.h
@@ -2120,6 +2113,7 @@ qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcommonstylepixmaps_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qcompleter_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qdatetimeedit_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qdialog_p.h
+qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qdialogbuttonbox_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qdockarealayout_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qdockwidget_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qeffects_p.h
@@ -2910,12 +2904,12 @@ qt6/lib/cmake/Qt6Gui/Qt6QICOPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QICOPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfigVersion.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfigVersionImpl.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-release.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfigVersion.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfigVersionImpl.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-release.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QJpegPluginConfigVersion.cmake
@@ -2970,12 +2964,12 @@ ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfigVersion.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfigVersionImpl.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets-release.cmake
 ${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfigVersion.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfigVersionImpl.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-release.cmake
-${PLIST.dbus}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfigVersion.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfigVersionImpl.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-release.cmake
+${PLIST.dbus}${PLIST.x11}qt6/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake
 qt6/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake
 qt6/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake
