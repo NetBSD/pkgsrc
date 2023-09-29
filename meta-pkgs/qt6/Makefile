@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/08/04 23:52:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2023/09/29 21:12:18 adam Exp $
 
 DISTNAME=	qt6-${QTVERSION}
-PKGREVISION=	1
 
 COMMENT=	"meta-package" for version 6 of the QT GUI C++ toolkit
 

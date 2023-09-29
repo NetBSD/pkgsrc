@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_QtBaseGlobalTargets.cmake,v 1.1 2022/11/24 11:11:38 nros Exp $
+$NetBSD: patch-cmake_QtBaseGlobalTargets.cmake,v 1.2 2023/09/29 21:12:15 adam Exp $
 
 * Only install non-generated files, this is needed since use in source build
 * Don't install files bat.in files as thay are set to executable but not used
@@ -25,25 +25,3 @@ $NetBSD: patch-cmake_QtBaseGlobalTargets.cmake,v 1.1 2022/11/24 11:11:38 nros Ex
  )
  qt_copy_or_install(PROGRAMS
      ${__qt_internal_strip_wrappers}
-@@ -365,6 +365,10 @@ qt_copy_or_install(DIRECTORY cmake/
-     FILES_MATCHING PATTERN "Find*.cmake"
-     PATTERN "tests" EXCLUDE
-     PATTERN "3rdparty" EXCLUDE
-+    PATTERN "ios" EXCLUDE
-+    PATTERN "macos" EXCLUDE
-+    PATTERN "platforms" EXCLUDE
-+    PATTERN "QtBuildInternals" EXCLUDE
- )
- 
- # In prefix builds we also need to copy the files into the build config directory, so that the
-@@ -375,6 +379,10 @@ if(QT_WILL_INSTALL)
-         FILES_MATCHING PATTERN "Find*.cmake"
-         PATTERN "tests" EXCLUDE
-         PATTERN "3rdparty" EXCLUDE
-+        PATTERN "ios" EXCLUDE
-+        PATTERN "macos" EXCLUDE
-+        PATTERN "platforms" EXCLUDE
-+        PATTERN "QtBuildInternals" EXCLUDE
-     )
- endif()
- 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/09/29 21:12:16 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -6,6 +6,8 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
@@ -26,7 +28,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaintegr
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaplugin_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediarecorder_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformscreencapture_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformsurfacecapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosource_p.h
@@ -96,6 +98,7 @@ qt6/include/QtMultimedia/qmediatimerange.h
 qt6/include/QtMultimedia/qscreencapture.h
 qt6/include/QtMultimedia/qsoundeffect.h
 qt6/include/QtMultimedia/qtmultimedia-config.h
+qt6/include/QtMultimedia/qtmultimediadefs.h
 qt6/include/QtMultimedia/qtmultimediaexports.h
 qt6/include/QtMultimedia/qtmultimediaglobal.h
 qt6/include/QtMultimedia/qtmultimediaversion.h
@@ -125,6 +128,7 @@ qt6/include/QtMultimediaWidgets/QtMultimediaWidgets
 qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsDepends
 qt6/include/QtMultimediaWidgets/QtMultimediaWidgetsVersion
 qt6/include/QtMultimediaWidgets/qgraphicsvideoitem.h
+qt6/include/QtMultimediaWidgets/qtmultimediawidgetdefs.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsexports.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsversion.h
