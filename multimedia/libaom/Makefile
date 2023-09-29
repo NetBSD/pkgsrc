@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/09/06 14:48:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2023/09/29 10:24:00 tnn Exp $
 
 DISTNAME=	libaom-3.7.0
 CATEGORIES=	multimedia
@@ -57,6 +57,11 @@ CMAKE_ARGS+=	-DAOM_TARGET_CPU="generic"
 .if ${MACHINE_ARCH} == x86_64 || ${MACHINE_ARCH} == i386
 CMAKE_ARGS+=	-DENABLE_NASM:BOOL=ON
 TOOL_DEPENDS+=	nasm>=2.13:../../devel/nasm
+.endif
+
+# Work around as(1) hangs on stdin on macOS during cmake configure
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=		opt:-Wl,--help:--dummy-error
 .endif
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
