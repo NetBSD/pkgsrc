@@ -1,12 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2023/09/22 08:49:44 vins Exp $
+# $NetBSD: options.mk,v 1.2 2023/09/29 21:12:14 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt6-qt3d
-
-PLIST_VARS+=	avx
-
-.if ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	avx
-.endif
 
 .include "../../mk/bsd.options.mk"
 
