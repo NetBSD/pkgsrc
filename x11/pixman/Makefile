@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/11/03 08:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2023/09/29 09:27:07 adam Exp $
 
 DISTNAME=	pixman-0.42.2
 CATEGORIES=	x11
@@ -22,7 +22,7 @@ USE_TOOLS+=	perl
 CONFIGURE_ARGS+=	--disable-sse2
 .endif
 
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+.if ${PKGSRC_COMPILER:Mclang} && ${MACHINE_ARCH} == "aarch64"
 # NEON macros depend on GNU as, but Xcode ships llvm-as
 CONFIGURE_ARGS+=	--disable-arm-a64-neon
 .endif
