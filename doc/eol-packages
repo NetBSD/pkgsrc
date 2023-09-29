@@ -1,0 +1,1089 @@
+# $NetBSD: eol-packages,v 1.1 2023/09/29 09:13:27 wiz Exp $
+#
+#FORMAT 1.0.0
+#
+
+# This file is designed to allow for a description of any end-of-life
+# (eol) packages in the pkgsrc collection.  eol means that there is no
+# longer an upstream that is producing maintenance releases, and thus
+# that one cannot expect that security bugs will be fixed.
+#
+# When a package has reached eol an entry should be added to
+# pkg-vulnerabilities in the standard format but with a custom "type
+# of exploit" and "URL" fields e.g.:
+#
+#
+# foo-[0-9]*	eol	ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+#
+# When `pkg_admin audit' is run it will display a warning in the form of:
+#
+# Package foo has reached end-of-life (eol), see ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+#
+# Entries in this file have the following fields:
+#
+#  - Package: package(s) declared EOL/unmaintained by upstream
+#  - eol date: if upstream makes an announcement that they are no
+#      longer maintaining the software, then either the day after
+#      support ends, or the announcement date if no date is given.  If
+#      pkgsrc decides (in hindsight) that maintenance has stopped
+#      because it has been excessively long since a release, the date
+#      should be the date that the entry is added.
+#  - URL: reference to EOL announcement by upstream, or announcement
+#      by a third party of a fork due to non-support by upstream, or
+#      other affirmative data that upstream is no longer maintaining
+#      this package.  In cases where there is merely a lack of a new
+#      release, leave this field blank.
+#  - Description: Short description/rationale of EOL entry and
+#      possible information about current supported versions or
+#      packages that can be used as replacements for the EOL package.
+#      The primary purpose of this file is to record that an upstream
+#      is no longer maintaining a package; there is no need to give
+#      advice about what users should do.
+#
+# If you have comments/additions/corrections, please contact
+# pkgsrc-security@NetBSD.org.
+#
+Package: acroread
+eol date: ca. August 2002
+URL: http://www.adobe.com/products/reader/
+Description: Old version of Acrobat Reader, a newer version is in pkgsrc
+	as print/acroread7.
+
+Package: acroread5
+eol date: ca. December 2004
+URL: http://www.adobe.com/products/reader/
+Description: Old version of Acrobat Reader, a newer version is in pkgsrc
+	as print/acroread7.
+
+Package: gaim
+eol date: April 6, 2007
+URL: http://pidgin.im/~elb/cgi-bin/pyblosxom.cgi/going_public.html
+Description: Replaced by chat/pidgin.
+
+Package: WMMail
+eol date: ca. August 2000
+Description: Old unmaintained WindowMaker mail notify program, use
+	"mail/wmbiff" instead.
+
+Package: mozilla
+eol date: ca. July 2005
+URL: http://developer.mozilla.org/devnews/index.php/2006/04/12/sunset-announcement-for-fxtb-10x-and-mozilla-suite-17x/
+Description: Officially replaced by Firefox (www/firefox) and Thunderbird
+	(mail/thunderbird), but there is also the community-driven Seamonkey
+	Project (www/seamonkey) which continues to develop the suite.
+
+Package: ethereal
+eol date: June 7, 2006
+URL: http://www.wireshark.org/news/20060607.html
+Description: Renamed to net/wireshark.
+
+Package: bind8
+eol date: 27 August 2007
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Update to BIND 9.x
+
+Package: micq
+eol date: November 28, 2007
+Description: Project renamed to climm, see chat/climm.
+
+Package: mysql (3.23.x)
+eol date: July 31, 2006
+Description: Upgrade to a newer version.
+
+Package: mysql (4.0.x)
+eol date: September 30, 2006
+Description: Upgrade to a newer version.
+
+Package: mysql (4.1.x)
+eol date: December 31, 2006
+Description: Upgrade to a newer version.
+
+Package: python15
+eol date: April 1999
+Description: Upgrade to a newer version.
+
+Package: python20
+eol date: June 2001
+Description: Upgrade to a newer version.
+
+Package: python21
+eol date: April 8, 2002
+Description: Upgrade to a newer version.
+
+Package: python22
+eol date: May 30, 2003
+Description: Upgrade to a newer version.
+
+Package: PHP (4.x)
+eol date: December 31, 2007
+URL: http://www.php.net/downloads.php#v4
+Description: Upgrade to PHP 5.x
+
+Package: sqlitemanager
+eol date: August 20, 2008
+URL: http://sourceforge.net/project/stats/detail.php?group_id=95526&ugn=sqlitemanager&type=cvs
+Description: Package unmaintained upstream
+
+Package: firefox (2.0.x)
+eol date: December 2008
+URL: http://www.mozilla.com/en-US/firefox/all-older.html
+Description: Upgrade to www/firefox3
+
+Package: firefox-gtk1 (2.0.x)
+eol date: December 2008
+URL: http://www.mozilla.com/en-US/firefox/all-older.html
+Description: Upgrade to www/firefox3
+
+Package: NetSaint
+eol date: November 25, 2002
+URL: http://marc.info/?l=netsaint-announce&m=101503609823404&w=2
+Description: Upgrade to Nagios
+
+Package: squid26
+eol date: February 4, 2009
+Description: Upgrade to www/squid27 (or www/squid30).
+
+Package: jakarta-tomcat5
+eol date: Octover 23, 2007
+URL: http://mail-archives.apache.org/mod_mbox/tomcat-users/200710.mbox/%3c471D4096.5010104@apache.org%3e
+Description: Upgrade to www/apache-tomcat55 (or www/apache-tomcat6).
+
+Package: samba (3.0.x)
+eol date: August 5, 2009
+URL: https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.0
+Description: Upgrade to net/samba35 (or newer).
+
+Package: cogito
+eol date: November 2006
+URL: http://git.or.cz/cogito/
+Description: Use devel/scmgit directly.
+
+Package: fprot-workstation-bin
+eol date: January 7, 2009
+Description: Virus information won't provided any more for this version, F-PROT Antivirus version 4.x for UNIX based platform.  Use security/f-prot-antivirus6-ws-bin.
+
+Package: firefox3
+eol date: October, 2009
+Description: Not yet eol by mozilla, but package has been removed. Update to firefox 3.5.
+
+Package: sun-jre14
+eol date: October 30, 2008
+URL: http://java.sun.com/products/archive/eol.policy.html
+Description: Upgrade to lang/sun-jre6 (or newer)
+
+Package: sun-jdk14
+eol date: October 30, 2008
+URL: http://java.sun.com/products/archive/eol.policy.html
+Description: Upgrade to lang/sun-jdk6 (or newer)
+
+Package: sun-jre15
+eol date: November 3, 2009
+URL: http://java.sun.com/products/archive/eol.policy.html
+Description: Upgrade to lang/sun-jre6 (or newer)
+
+Package: sun-jdk15
+eol date: November 3, 2009
+URL: http://java.sun.com/products/archive/eol.policy.html
+Description: Upgrade to lang/sun-jdk6 (or newer)
+
+Package: vmware-2.x
+eol date: May 20, 2003
+URL: http://www.vmware.com/support/policies/lifecycle/general/
+Description: Package unmaintained upstream
+
+Package: vmware-3.x
+eol date: Octover 7, 2004
+URL: http://www.vmware.com/support/policies/lifecycle/general/
+Description: Package unmaintained upstream
+
+Package: acroread7
+eol date: December 28, 2009
+URL: http://www.adobe.com/support/products/enterprise/eol/eol_matrix.html#86
+Description: Old version of Adobe Reader, unmaintained upstream
+
+Package: acroread8
+eol date: January, 2010
+URL: http://www.adobe.com/support/products/enterprise/eol/eol_matrix.html#86
+Description: Old version of Adobe Reader, unmaintained upstream
+
+Package: apache-1.3.x
+eol date: January, 2010
+URL: http://archive.apache.org/dist/httpd/Announcement1.3.html
+Description: Upgrade to www/apache24 (or newer)
+
+Package: bugzilla-2.22.x
+eol date: July 28, 2009
+URL: http://bugzillaupdate.wordpress.com/2009/07/28/release-3-4/
+Description: Upgrade to devel/bugzilla3 (or newer)
+
+Package: openoffice2
+eol date: December 22, 2009
+URL: http://development.openoffice.org/releases/eol.html
+Descripion: Update to openoffice3
+
+Package: spice
+eol date: ca. July 1993
+URL: http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
+Description: The version of SPICE distributed by Berkeley has not been updated in well over 15
+	years.  In the intervening time, the ng-spice project (http://ng-spice.sourceforge.net) 
+	has taken the last released code from Berkeley and maintained and improved it.  Users
+	of the spice-3f5.1 package should migrate to the cad/ng-spice package.
+
+Package: seamonkey-1.x
+eol date: March 16, 2010
+URL: http://www.seamonkey-project.org/releases/seamonkey1.1.19/README
+Description: Upgrade to a seamonkey-2.x (or newer version).
+
+Package: ctorrent
+eol date: June 7, 2006
+URL: http://ctorrent.sourceforge.net/
+Description: Discontinuled.  Use net/dtorrent, Enhanced CTorrent.
+
+Package: irrtoolset-nox11
+eol date: June 27, 2010
+URL: http://www.isc.org/index.pl?/sw/IRRToolSet/
+Description: Update to net/irrtoolset5.
+
+Package: suse (10.0)
+eol date: November 30, 2007
+URL: http://en.opensuse.org/Lifetime
+Description: The situation is difficult as newer versions may not yet be supported
+	if using linux emulation (depending upon your OS and version.)  If native
+	versions are available switch to those.  If this is not an option, you need
+	to be aware that this software is no longer maintained nor reliably
+	monitored for security vulnerabilities.
+
+Package: suse (<11.1)
+eol date: June 30, 2010
+URL: http://en.opensuse.org/Lifetime
+Description: SUSE versions 10.1 - 11.1 have not been in pkgsrc, but should be
+	pointed out as end-of-life to assure that whatever replaces the SUSE 10.0
+	packages is supported.
+
+Package: postgresql80
+eol date: March, 2008
+Description: eol October 2010 by vendor, but package has been removed. Update to newer version.
+
+Package: postgresql81
+eol date: August, 2009
+Description: eol November 2010 by vendor, but package has been removed. Update to newer version.
+
+Package: ruby < 1.8
+eol date: October, 2005
+URL: http://www.ruby-lang.org/en/news/2005/
+Description: Packages have been removed. Update to newer version.
+
+Package: ruby (1.8.7)
+eol date: June 30, 2013
+URL: http://www.ruby-lang.org/en/news/2013/06/30/we-retire-1-8-7/
+Description: Packages have been removed. Update to newer version.
+
+Package: ruby (1.9.2)
+eol date: September, 2012
+Description: Not eol by upstream, but packages have been removed. Update to newer version.
+
+Package: postgresql82
+eol date: August, 2010
+Description: eol December 2011 by vendor, but package has been removed. Update to newer version.
+
+Package: postgresql83
+eol date: February, 2013
+URL: http://www.postgresql.org/support/versioning/
+Description: Update to newer version.
+
+Package: bind95
+eol date: May, 2010
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: PHP (5.2)
+eol date: July, 2010
+URL: http://www.php.net/archive/2010.php#id2010-07-22-1
+Description: Upgrade to PHP 5.3 or newer.
+
+Package: asterisk 1.2.X
+eol date: November 21, 2010
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (see comms/asterisk16 & comms/asterisk18)
+
+Package: asterisk 1.6.0.X
+eol date: October 1, 2010
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (see comms/asterisk16 & comms/asterisk18)
+
+Package: asterisk 1.6.1.X
+eol date: April 27, 2011
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (see comms/asterisk16 & comms/asterisk18)
+
+Package: asterisk 10.X
+eol date: December 15, 2013
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (see comms/asterisk18 & comms/asterisk)
+
+Package: python23
+eol date: March 11, 2008
+Description: Upgrade to a newer version.
+
+Package: python24
+eol date: Dec 19, 2008
+Description: Upgrade to a newer version.
+
+Package: jakarta-tomcat4
+eol date: June 25, 2009
+URL: http://mail-archives.apache.org/mod_mbox/tomcat-announce/200906.mbox/%3c4A43F757.2000401@apache.org%3e
+Description: Upgrade to www/apache-tomcat6 (or newer).
+
+Package: drupal 5.x
+eol date: January 6, 2011
+URL: http://drupal.org/node/1027214
+Description: Update to newer version.  (see www/drupal6)
+
+Package: ns-flash 9.x
+eol date: February 8, 2011
+URL: http://kb2.adobe.com/cps/406/kb406791.html
+Description: Update to newer version.  (see multimedia/adobe-flash-plugin)
+
+Package: phpmyadmin 2.11.x
+eol date: July 12, 2011
+URL: http://sourceforge.net/news/?group_id=23067&id=301992
+Description: Update to newer version.
+
+Package: bugzilla 3.2
+eol date: February 15, 2011
+URL: http://www.bugzilla.org/news/#release40
+Description: Someone needs to upgrade devel/bugzilla3 to a supported version if you are reading this, maybe that someone is you?
+
+Package: RealPlayerGold
+eol date: April, 2008
+URL: http://www.real.com/realplayer/download
+Description: RealPlayer for Linux has been discontinued and is no longer supported.
+
+Package: python25
+eol date: October, 2011
+URL: http://www.python.org/download/releases/2.5.6/
+Description: Upgrade to a newer version.
+
+Package: mysql (5.0.x)
+eol date: January 9, 2011
+Description: Upgrade to a newer version.
+
+Package: suse (11.3)
+eol date: January 20, 2012
+URL: http://en.opensuse.org/Lifetime
+Description: The situation is difficult as newer versions may not yet be supported
+	if using linux emulation (depending upon your OS and version.)  If native
+	versions are available switch to those.  If this is not an option, you need
+	to be aware that this software is no longer maintained nor reliably
+	monitored for security vulnerabilities.
+
+Package: Rails (2.x)
+eol date: August 16, 2011
+URL: http://weblog.rubyonrails.org/2011/8/16/ann-rails-2-3-14
+Description: Upgrade to a newer version.
+
+Package: jdbc-postgresql80
+eol date: October 2010
+URL: http://www.postgresql.org/support/versioning/
+Description: Upgrade to a newer version.
+
+Package: jdbc-postgresql81
+eol date: November 2010
+URL: http://www.postgresql.org/support/versioning/
+Description: Upgrade to a newer version.
+
+Package: jdbc-postgresql82
+eol date: December 2011
+URL: http://www.postgresql.org/support/versioning/
+Description: Upgrade to a newer version.
+
+Package: gcc
+eol date: Unknown, but a long time ago
+URL: http://gcc.gnu.org/
+Description: Upgrade to a newer version.
+
+Package: gcc3
+eol date: Unknown, but a long time ago
+URL: http://gcc.gnu.org/
+Description: Upgrade to a newer version.
+
+Package: gcc34
+eol date: Unknown, but a long time ago
+URL: http://gcc.gnu.org/
+Description: Upgrade to a newer version.
+
+Package: gcc44
+eol date: March 2012
+URL: http://gcc.gnu.org/
+Description: Upgrade to a newer version.
+
+Package: firefox36
+eol date: April 24, 2012
+URL: http://www.mozilla.org/firefox/organizations/
+Description: Update to firefox10, new Extended Support Release.
+
+Package: xulrunner192
+eol date: April 24, 2012
+URL: http://www.mozilla.org/firefox/organizations/
+Description: Update to xulrunner10, new Extended Support Release.
+
+Package: asterisk 1.6.2.X
+eol date: April 21, 2012
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (see comms/asterisk18 & comms/asterisk10)
+
+Package: apache-tomcat55
+eol date: September 30, 2012
+URL: http://tomcat.apache.org/tomcat-55-eol.html
+Description: Upgrade to www/apache-tomcat6 (or www/apache-tomcat7).
+
+Package: horde-3.x, imp-4.x turba-2.x, ingo-1.x, kronolith-2.x
+eol date: November 27, 2012
+URL: http://dev.horde.org/h/jonah/stories/view.php?channel_id=1&id=255
+Description: Someone needs to upgrade www/horde and its applications to a supported version.
+
+Package: bind97
+eol date: November, 2012
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: samba (3.3.x)
+eol date: August 9, 2011
+URL: https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.3
+Description: Upgrade to net/samba36 (or newer).
+
+Package: sun-jre6
+eol date: February 2013
+URL: http://www.oracle.com/technetwork/java/eol-135779.html
+Description: Upgrade to lang/sun-jre7 (or newer)
+
+Package: sun-jdk6
+eol date: February 2013
+URL: http://www.oracle.com/technetwork/java/eol-135779.html
+Description: Upgrade to lang/sun-jdk7 (or newer)
+
+Package: firefox10
+eol date: February 19, 2013
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Update to firefox17, new Extended Support Release.
+
+Package: thunderbird10
+eol date: February 19, 2013
+URL: http://www.mozilla.org/thunderbird/organizations/faq/
+Description: Update to thunderbird17, new Extended Support Release.
+
+Package: xulrunner10
+eol date: February 19, 2013
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Update to xulrunner17, new Extended Support Release.
+
+Package: suse (12.1)
+eol date: May 15, 2013
+URL: http://en.opensuse.org/Lifetime
+Description: The situation is difficult as newer versions may not yet be supported
+	if using linux emulation (depending upon your OS and version.)  If native
+	versions are available switch to those.  If this is not an option, you need
+	to be aware that this software is no longer maintained nor reliably
+	monitored for security vulnerabilities.
+
+Package: acroread9
+eol date: June 26, 2013
+URL: http://www.adobe.com/support/products/enterprise/eol/eol_matrix.html#86
+Description: Old version of Adobe Reader, unmaintained upstream
+
+Package: gallery-1
+eol date: November 21, 2008
+URL: http://galleryproject.org/last_official_G1_releases
+Description: Old version of Gallery, unmaintained upstream
+
+Package: subversion16
+eol date: June 18, 2013
+URL: http://subversion.apache.org/docs/release-notes/1.8.html#svn-1.6-deprecation
+Description: Old version of Subversion, no longer supported by upstream.
+
+Package: adobe-flash-plugin-10.x
+eol date: July 9, 2013
+URL: http://blogs.adobe.com/flashplayer/2013/05/extended-support-release-updated-to-flash-player-11-7.html
+Description: Old extended support of Adove Flash Player, unmaintained upstream.
+
+Package: apache-2.0.x
+eol date: July 9, 2013
+URL: http://www.apache.org/dist/httpd/Announcement2.0.html
+Description: Upgrade to www/apache24 (or newer)
+
+Package: python26
+eol date: October 29, 2013
+URL: http://www.python.org/download/releases/2.6.9/
+Description: Upgrade to a newer version.
+
+Package: xulrunner17
+eol date: December 3rd, 2013
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: No alternative currently available (as of 12/12/13)
+
+Package: contao29
+eol date: Apr, 2012
+Description: End of support by release of Contao 2.10.0.
+
+Package: contao210
+eol date: Jun, 2012
+Description: End of support by release of Contao 2.11.0.
+
+Package: contao30
+eol date: Sep, 2013
+Description: End of support by release of Contao 3.1.0.
+
+Package: contao31
+eol date: Dec, 2013
+Description: End of support by release of Contao 3.2.0.
+
+Package: contao211
+eol date: Jun, 2014
+Description: not eol by vendor, but package has been removed. Update to newer version.
+
+Package: contao33
+eol date: Nov 25, 2014
+Description: End of support by release of Contao 3.4.0.
+
+Package: contao34
+eol date: Jun 5, 2015
+Description: End of support by release of Contao 3.5.0.
+
+Package: python31
+eol date: Jan, 2014
+Description: not eol by vendor, but package has been removed. Update to newer version.
+
+Package: samba (3.5.x)
+eol date: Octover 11, 2013
+URL: https://wiki.samba.org/index.php/Release_Planning_for_Samba_3.5
+Description: Upgrade to net/samba 3.6.x (or newer).
+
+Package: python32
+eol date: Apr, 2014
+Description: not eol by vendor, but package has been removed. Update to newer version.
+
+Package: mysql (5.1.x)
+eol date: December 4, 2013
+Description: Upgrade to 5.6 (or newer version).
+
+Package: PHP (5.3)
+eol date: Aug 14, 2014
+URL: http://php.net/archive/2014.php#id2014-08-14-1
+Description: Upgrade to PHP 5.4 or newer.
+
+Package: TYPO3 (6.0)
+eol date: May 31, 2014
+URL: http://typo3.org/news/article/typo3-cms-60-end-of-life-announcement/
+Description: Upgrade to TYPO3 6.2 or newer.
+
+Package: TYPO3 (4.7)
+eol date: Oct, 2014
+URL: http://typo3.org/news/article/announcing-the-discontinuation-of-typo3-cms-47-and-typo3-cms-61/
+Description: Upgrade to TYPO3 6.2 or newer.
+
+Package: TYPO3 (6.1)
+eol date: Oct, 2014
+URL: http://typo3.org/news/article/announcing-the-discontinuation-of-typo3-cms-47-and-typo3-cms-61/
+Description: Upgrade to TYPO3 6.2 or newer.
+
+Package: bind96
+eol date: Feb, 2014
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: bind98
+eol date: Sep, 2014
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: openjdk7-bin
+eol date: Apr, 2015
+URL: http://www.oracle.com/technetwork/java/eol-135779.html
+Description: Binary package phased out in favor of openjdk7 and openjdk8 source-based packages.
+
+Package: ruby (1.9.3)
+eol date: Feb 23, 2015
+URL: https://www.ruby-lang.org/en/news/2014/01/10/ruby-1-9-3-will-end-on-2015/
+Description: Upgrade to Ruby 2.0.0 or later.
+
+Package: firefox17
+eol date: Oct 29, 2013
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Upgrade to firefox31, new Extended Support Release.
+
+Package: firefox24
+eol date: Sept 24, 2014
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Upgrade to firefox31, new Extended Support Release.
+
+Package: thunderbird24
+URL: https://www.mozilla.org/en-US/thunderbird/31.0/releasenotes/
+Description: Upgrade to a current release offered by www/thunderbird
+
+Package: TYPO3 (4.5)
+eol date: Mar, 2015
+URL: https://typo3.org/news/article/announcing-typo3-45-lts-regular-end-of-life-eol/
+Description: Upgrade to TYPO3 6.2 or newer.
+
+Package: firefox31
+eol date: July 2, 2015
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Upgrade to firefox38, new Extended Support Release.
+
+Package: thunderbird31
+eol date: July 17, 2015
+URL: https://www.mozilla.org/en-US/thunderbird/38.0/releasenotes/
+Description: Upgrade to a current release offered by www/thunderbird
+
+Package: xulrunner31
+eol date: July 2, 2015
+URL: http://www.mozilla.org/firefox/organizations/faq/
+Description: Upgrade to xulrunner38, new Extended Support Release.
+
+Package: postgresql84
+eol date: October, 2015
+URL: http://www.postgresql.org/support/versioning/
+Description: eol July 2014 by vendor
+
+Package: postgresql90
+eol date: October, 2015
+URL: http://www.postgresql.org/support/versioning/
+Description: eol September 2015 by vendor
+
+Package: openjdk7, sun-jdk7, sun-jre7
+eol date: October, 2015
+Description Java 7 eol April 2015 by vendor
+URL: https://www.java.com/en/download/faq/java_7.xml
+Description: Java 7 eol April 2015 by vendor
+
+Package: asterisk 1.8.X
+eol date: October 21, 2015
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (comms/asterisk)
+
+Package: PHP (5.4)
+eol date: September 14, 2015
+URL: http://php.net/eol.php
+Description: Upgrade to PHP 5.5 or newer.
+
+Package: old versions (pre 4.5) of XEN
+eol date: December 22, 2015
+URL: http://www.xenproject.org/downloads/xen-archives.html
+Description: Desupported by vendor. Update to xen 4.5 or newer.
+
+Package: drupal 6.x
+eol date: February 24, 2016
+URL: https://www.drupal.org/drupal-6-eol
+Description: Update to newer version.  (see www/drupal7)
+
+Package: ruby (2.0.0)
+eol date: February 24, 2016
+URL: https://www.ruby-lang.org/en/news/2016/02/24/support-plan-of-ruby-2-0-0-and-2-1/
+Description: Update to Ruby 2.1 or later.
+
+Package: postfix (2.9)
+eol date: February 25, 2016
+URL: http://www.postfix.org/announcements/postfix-3.1.0.html
+Description: Update to Postfix 3.0 or later.
+
+Package: contao41
+eol date: July 17, 2016
+Description: End of support by release of Contao 4.2.0.
+
+Package: PHP (5.5)
+eol date: July 21, 2016
+URL: http://php.net/eol.php
+Description: Upgrade to PHP 5.6 or newer.
+
+Package: Wireshark (1.x)
+eol date: July 31, 2016
+URL: https://www.wireshark.org/lists/wireshark-users/201607/msg00020.html
+Description: Upgrade to Wireshark 2.x or newer.
+
+Package: ap-modsecurity
+URL: https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-Migration-Matrix
+Description: No EoL notice from vendor but development ceased, package has been removed. Use security/ap-modsecurity2
+
+Package: contao42
+eol date: October 31, 2016
+Description: End of support by release of Contao 4.3.0.
+
+Package: adobe-flash-plugin-11.x
+eol date: December 13, 2016
+Description: Old extended support of Adove Flash Player, unmaintained upstream.
+
+Package: rt3
+eol date: December 31, 2017
+Description: unmaintained upstream, upgrade to rt4.
+
+Package: dovecot (1.2, 2.0, 2.1)
+eol date: May 11, 2011, June 12, 2012, June 26, 2013
+Description: Unmaintained upstream.  Upgrade to 2.2.x.
+
+Package: ruby (2.1)
+eol date: March 31, 2017
+URL: http://www.ruby-lang.org/en/news/2017/04/01/support-of-ruby-2-1-has-ended/
+Description: Update to Ruby 2.2 or later.
+
+Package: contao43
+eol date: June 15, 2017
+Description: End of support by release of Contao 4.4.0.
+
+Package: mrxvt
+eol date: November 27, 2017
+Description: Unmaintained upstream.
+
+Package: rxvt
+eol date: November 27, 2017
+Description: Unmaintained upstream.
+
+Package: webkit24-gtk
+eol date: February 1, 2016
+URL: https://blogs.gnome.org/mcatanzaro/2016/02/01/on-webkit-security-updates/
+Description: Unmaintained upstream. Upgrade to webkit-gtk.
+
+Package: webkit24-gtk3
+eol date: February 1, 2016
+URL: https://blogs.gnome.org/mcatanzaro/2016/02/01/on-webkit-security-updates/
+Description: Unmaintained upstream. Upgrade to webkit-gtk.
+
+Package: apache-2.2.x
+eol date: June, 2017
+URL: https://www.apache.org/dist/httpd/Announcement2.2.html
+Description: Upgrade to www/apache24 (or newer)
+
+Package: asterisk 11.X
+eol date: October 25, 2017
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (comms/asterisk13)
+
+Package: contao45
+eol date: August 28, 2018
+Description: End of support by release of Contao 4.6.0.
+
+Package: firefox45
+eol date: June 13, 2017
+URL: http://www.mozilla.org/firefox/organizations/
+Description: Update to firefox60, new Extended Support Release.
+
+Package: firefox52
+eol date: September 5, 2018
+URL: http://www.mozilla.org/firefox/organizations/
+Description: Update to firefox60, new Extended Support Release.
+
+Package: spidermonkey52
+eol date: September 5, 2018
+URL: http://www.mozilla.org/firefox/organizations/
+Description: Update to firefox60, new Extended Support Release.
+
+Package: py-crypto
+eol date: August 29, 2017
+URL: https://github.com/dlitz/pycrypto/issues/238
+Description: py-crypto is unmaintained, py-cryptodome is a replacement.
+
+Package: webkit1-gtk
+eol date: February 1, 2016
+URL: https://blogs.gnome.org/mcatanzaro/2016/02/01/on-webkit-security-updates/
+Description: Unmaintained upstream. Upgrade to webkit-gtk.
+
+Package: webkit1-gtk3
+eol date: February 1, 2016
+URL: https://blogs.gnome.org/mcatanzaro/2016/02/01/on-webkit-security-updates/
+Description: Unmaintained upstream. Upgrade to webkit-gtk.
+
+Package: PHP (7.0)
+eol date: December 3, 2018
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 7.1 or newer.
+
+Package: PHP (5.6)
+eol date: December 31, 2018
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 7.1 or newer.
+
+Package: mbedtls1
+eol date: February 3, 2018
+URL: https://tls.mbed.org/download-archive
+Description: Upgrade to mbedtls.
+
+Package: xchat
+eol date: March 2, 2018
+URL: https://blog.tingping.se/2018/03/02/when-distros-get-it-wrong.html
+Description: XChat continues development under the name Hexchat.
+
+Package: Django 1.4 LTS
+eol date: October 1, 2015
+URL: https://www.djangoproject.com/download/#supported-versions
+Description: Upgrade to newer Django.
+
+Package: Django 1.8 LTS
+eol date: April 1, 2018
+URL: https://www.djangoproject.com/download/#supported-versions
+Description: Upgrade to newer Django.
+
+Package: rssh
+eol date: January 23, 2019
+URL: https://sourceforge.net/p/rssh/mailman/message/36525645/
+Description: Unmaintained upstream.
+
+Package: ghostscript-gpl
+eol date: February 14, 2013
+URL: https://www.ghostscript.com/doc/current/History9.htm#Version9.07
+Description: License change to AGPL, see ghostscript-agpl.
+
+Package: old versions (pre 4.7) of XEN
+eol date: October 1, 2018
+URL: http://www.xenproject.org/downloads/xen-archives.html
+Description: Desupported by vendor. Update to xen 4.8 or newer.
+
+Package: jetty 7.x
+eol date: October 1, 2014
+URL: https://www.eclipse.org/lists/jetty-announce/msg00069.html
+Description: Desupported by vendor. Update to jetty 9.x.
+
+Package: ruby (2.2)
+eol date: March 31, 2018
+URL: https://www.ruby-lang.org/en/news/2018/06/20/support-of-ruby-2-2-has-ended/
+Description: Update to Ruby 2.3 or later.
+
+Package: ruby (2.3)
+eol date: March 31, 2019
+URL: https://www.ruby-lang.org/en/news/2019/03/31/support-of-ruby-2-3-has-ended/
+Description: Update to Ruby 2.4 or later.
+
+Package: bind99
+eol date: July, 2018
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: bind910
+eol date: July, 2018
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: postgresql91
+eol date: October, 2016
+URL: http://www.postgresql.org/support/versioning/
+Description: eol October 2016 by vendor
+
+Package: postgresql92
+eol date: November, 2017
+URL: http://www.postgresql.org/support/versioning/
+Description: eol November 2017 by vendor
+
+Package: postgresql93
+eol date: November, 2018
+URL: http://www.postgresql.org/support/versioning/
+Description: eol November 2018 by vendor
+
+Package: python34
+eol date: March, 2019
+URL: https://www.python.org/downloads/release/python-3410/
+Description: eol March 2019 by vendor.  Update to newer version.
+
+Package: bind912
+eol date: May, 2019
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: jabberd14
+eol date: July, 2019
+URL: none
+Description: Upstream's last release was in 2007.
+
+Package: nodejs6
+eol date: April 31, 2019
+URL: https://nodejs.org/en/about/releases/
+Description: eol April 31 2019 by vendor.  Update to newer versions.
+
+Package: contao35
+eol date: May 31, 2019
+Description: End of support of LTS version.
+
+Package: asterisk 14.X
+eol date: September 26, 2018
+URL: https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+Description: Update to newer version.  (comms/asterisk17)
+
+Package: t1lib
+eol date: October 28, 2019
+Description: No maintenance since 2011, local patches for security bugs. Should not be used for parsing untrusted fonts, but probably safe for parsing system fonts (e.g. DVI documents that rely on just system fonts)
+
+Package: PHP (7.1)
+eol date: December 1, 2019
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 7.2 or newer.
+
+Package: TYPO3 (6.2)
+eol date: Apr, 2017
+URL: https://typo3.org/article/new-typo3-maintenance-releases-last-typo3-cms-62-release/
+Description: Upgrade to newer version of TYPO3.
+
+Package: apache-tomcat6
+eol date: December 31, 2016
+URL: http://tomcat.apache.org/tomcat-60-eol.html
+Description: Upgrade to www/apache-tomcat7 or newer.
+
+Package: apache-tomcat8
+eol date: June 30, 2018
+URL: http://tomcat.apache.org/tomcat-80-eol.html
+Description: Upgrade to www/apache-tomcat85 or newer.
+
+Package: nodejs8
+eol date: December 31, 2019
+URL: https://nodejs.org/en/about/releases/
+Description: eol December 31 2019 by vendor.  Update to newer versions.
+
+Package: postgresql94
+eol date: February 13, 2020
+URL: http://www.postgresql.org/support/versioning/
+Description: eol February 13, 2020 by vendor
+
+Package: ruby (2.4)
+eol date: March 31, 2020
+URL: https://www.ruby-lang.org/en/news/2020/04/05/support-of-ruby-2-4-has-ended/
+Description: Update to Ruby 2.5 or later.
+
+Package: old versions (pre 4.9) of XEN
+eol date: December 2019
+URL: https://wiki.xenproject.org/wiki/Xen_Project_Release_Features
+Description: Security support for 4.8 ended December 2019. Update to xen 4.9 or newer.
+
+Package: magento 1.x
+eol date: June 30, 2020
+URL: https://magento.com/blog/magento-news/support-magento-1-software-ends-june-30-2020
+Description: eol June 30, 2020 by vendor
+
+Package: python27
+eol date: January 1, 2020
+URL: https://www.python.org/doc/sunset-python-2/
+Description: eol January 1, 2020 by vendor.  Update to supported 3.x versions if possible.
+
+Package: bind914
+eol date: May, 2020
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
+
+Package: python35
+eol date: September 30, 2020
+URL: https://devguide.python.org/versions/#versions
+Description: eol September 2020 by vendor.  Update to newer version.
+
+Package: cliqz
+eol date: April 29, 2020
+URL: https://cliqz.com/announcement.html
+Description: eol per announcement. 
+
+Package: PHP (7.2)
+eol date: December 1, 2020
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 7.3 or newer.
+
+Package: PHP (7.3)
+eol date: December 6, 2021
+URL: http://php.net/supported-versions.php
+Description: Upgrade to PHP 7.4 or newer.
+
+Package: drupal 8.x
+eol date: November 17, 2021
+URL: https://www.drupal.org/psa-2021-11-30
+Description: Update to newer version.
+
+Package: gtk+-1.x
+eol date: 2011?
+Description: Upgrade to a newer version.
+
+Package: gtk2+-2.x
+eol date: December 16, 2020
+URL: https://blog.gtk.org/2020/12/16/gtk-4-0/
+Description: Upgrade to a newer version.
+
+Package: qt4-libs
+eol date: December 19, 2015
+URL: https://www.qt.io/blog/2014/11/27/qt-4-8-x-support-to-be-extended-for-another-year
+Description: Upgrade to a newer version.
+
+Package: ruby (2.5)
+eol date: April 5, 2021
+URL: https://www.ruby-lang.org/en/downloads/branches/
+Description: Update to Ruby 2.6 or later.
+
+Package: ruby (2.6)
+eol date: April 22, 2022
+URL: https://www.ruby-lang.org/en/downloads/branches/
+Description: Update to Ruby 2.7 or later.
+
+Package: net/isc-dhcp4
+eol date: October 5, 2022
+URL: https://www.isc.org/blogs/isc-dhcp-eol/
+Description: Switch to different software.
+
+Package: net/isc-dhcpd4
+eol date: October 5, 2022
+URL: https://www.isc.org/blogs/isc-dhcp-eol/
+Description: Switch to different software.
+
+Package: net/isc-dhclient4
+eol date: October 5, 2022
+URL: https://www.isc.org/blogs/isc-dhcp-eol/
+Description: Switch to different software.
+
+Package: net/isc-dhcrelay4
+eol date: October 5, 2022
+URL: https://www.isc.org/blogs/isc-dhcp-eol/
+Description: Switch to different software.
+
+Package: postgresql10
+eol date: November 10, 2022
+URL: https://www.postgresql.org/support/versioning/
+Description: Update to newer version.
+
+Package: py-sip v4
+eol date: February 26, 2021
+URL: https://www.riverbankcomputing.com/software/sip/download
+Description: Update to newer version.
+
+Package: TYPO3 (6.2)
+eol date: Feb, 2021
+URL: https://get.typo3.org/version/6.2
+Description: Upgrade to TYPO3 8 or newer.
+
+Package: security/ykclient
+eol date: April 15, 2021
+URL: https://status.yubico.com/2021/04/15/one-api-yubico-com-one-http-get/
+Description: Switch to different software.
+
+Package: textproc/pcre
+eol date: June 2021
+URL: https://www.openwall.com/lists/oss-security/2023/04/11/1
+Description: Update to PCRE2.
+
+Package: python36
+eol date: December 31, 2021
+URL: https://devguide.python.org/versions/#versions
+Description: eol December 2021 by vendor.  Update to newer version.
+
+Package: python37
+eol date: June 27, 2023
+URL: https://devguide.python.org/versions/#versions
+Description: eol June 2023 by vendor.  Update to newer version.
+
+Package: Django < 3.2
+eol date: Before 2023
+URL: https://www.djangoproject.com/download/#supported-versions
+Description: Upgrade to newer Django.
+
+Package: samba (3.x)
+eol date: March 4, 2015
+URL: https://wiki.samba.org/index.php/Samba_Release_Planning
+Description: Upgrade to net/samba 4.x (or newer).
+
+Package: Rails (5.2)
+eol date: June 1, 2022
+URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
+
+Package: Rails (6.0)
+eol date: June 1, 2022
+URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
