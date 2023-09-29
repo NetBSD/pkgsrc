@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/22 17:36:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/29 18:29:29 nros Exp $
 include/libpgf/PGFimage.h
 include/libpgf/PGFplatform.h
 include/libpgf/PGFstream.h
@@ -26,6 +26,7 @@ ${PLIST.doc}man/man3/PGFMagicVersion.3
 ${PLIST.doc}man/man3/PGFPostHeader.3
 ${PLIST.doc}man/man3/PGFPreHeader.3
 ${PLIST.doc}man/man3/PGFRect.3
+${PLIST.doc}man/man3/PGFVersionNumber.3
 ${PLIST.doc}man/man3/PGFimage.cpp.3
 ${PLIST.doc}man/man3/PGFimage.h.3
 ${PLIST.doc}man/man3/PGFplatform.h.3
@@ -70,7 +71,10 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/WaveletTransform_8cpp_source.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/WaveletTransform_8h.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/WaveletTransform_8h_source.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/annotated.html
+${PLIST.doc}share/doc/${PKGNAME}/html/arrowdown.png
+${PLIST.doc}share/doc/${PKGNAME}/html/arrowright.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/bc_s.png
+${PLIST.doc}share/doc/${PKGNAME}/html/bc_sd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/bdwn.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/classCDecoder-members.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/classCDecoder.html
@@ -101,21 +105,13 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/config_8h.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/config_8h_source.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/dir_000000.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/dir_000001.html
+${PLIST.doc}share/doc/${PKGNAME}/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html
+${PLIST.doc}share/doc/${PKGNAME}/html/dir_d44c64559bbebec7f509842c48db8b23.html
+${PLIST.doc}share/doc/${PKGNAME}/html/doc.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/doxygen.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/files.html
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2blank.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2doc.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2folderclosed.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2folderopen.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2lastnode.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2link.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2mlastnode.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2mnode.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2node.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2plastnode.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2pnode.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2splitbar.png
-${PLIST.doc}share/doc/${PKGNAME}/html/ftv2vertline.png
+${PLIST.doc}share/doc/${PKGNAME}/html/folderclosed.png
+${PLIST.doc}share/doc/${PKGNAME}/html/folderopen.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_b.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_c.html
@@ -140,6 +136,7 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/functions_u.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_v.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_vars.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_w.html
+${PLIST.doc}share/doc/${PKGNAME}/html/functions_y.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/functions_~.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/globals.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/globals_defs.html
@@ -151,9 +148,13 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/globals_vars.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/hierarchy.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/nav_f.png
+${PLIST.doc}share/doc/${PKGNAME}/html/nav_fd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/nav_g.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/nav_h.png
+${PLIST.doc}share/doc/${PKGNAME}/html/nav_hd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/open.png
+${PLIST.doc}share/doc/${PKGNAME}/html/splitbar.png
+${PLIST.doc}share/doc/${PKGNAME}/html/splitbard.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/structIOException-members.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structIOException.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structPGFHeader-members.html
@@ -168,13 +169,19 @@ ${PLIST.doc}share/doc/${PKGNAME}/html/structPGFPreHeader.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structPGFPreHeader.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/structPGFRect-members.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structPGFRect.html
+${PLIST.doc}share/doc/${PKGNAME}/html/structPGFVersionNumber-members.html
+${PLIST.doc}share/doc/${PKGNAME}/html/structPGFVersionNumber.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structROIBlockHeader_1_1RBH-members.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/structROIBlockHeader_1_1RBH.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/sync_off.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/sync_on.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/tab_a.png
+${PLIST.doc}share/doc/${PKGNAME}/html/tab_ad.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/tab_b.png
+${PLIST.doc}share/doc/${PKGNAME}/html/tab_bd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/tab_h.png
+${PLIST.doc}share/doc/${PKGNAME}/html/tab_hd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/tab_s.png
+${PLIST.doc}share/doc/${PKGNAME}/html/tab_sd.png
 ${PLIST.doc}share/doc/${PKGNAME}/html/unionROIBlockHeader-members.html
 ${PLIST.doc}share/doc/${PKGNAME}/html/unionROIBlockHeader.html
