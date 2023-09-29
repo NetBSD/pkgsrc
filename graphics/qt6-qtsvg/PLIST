@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/09/29 21:12:17 adam Exp $
 lib/pkgconfig/Qt6Svg.pc
 lib/pkgconfig/Qt6SvgWidgets.pc
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
@@ -9,6 +9,7 @@ qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgexports_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgglobal_p.h
 qt6/include/QtSvg/QSvgGenerator
 qt6/include/QtSvg/QSvgRenderer
 qt6/include/QtSvg/QtSvg

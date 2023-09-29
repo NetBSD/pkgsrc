@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/08/03 20:01:33 adam Exp $
+$NetBSD: distinfo,v 1.4 2023/09/29 21:12:17 adam Exp $
 
-BLAKE2s (qtwebsockets-everywhere-src-6.5.2.tar.xz) = 83487c529a4094b9b647d710bb1e8b9f48dd5d1f3a75f72073cf47dcdf2e4f21
-SHA512 (qtwebsockets-everywhere-src-6.5.2.tar.xz) = 0ede50ef09ec92cc9ff73ac8287d93c82eddaaefb8df05687f24fa1b9fcafe0e34cdef324ad81c89353ea9e21509243efce63bb42b640050309c61d100d354a7
-Size (qtwebsockets-everywhere-src-6.5.2.tar.xz) = 459540 bytes
+BLAKE2s (qtwebsockets-everywhere-src-6.5.3.tar.xz) = 36d6122a9e847c3be9cbf1b717d1a04624430c80c166d6c73b840dc2c1ae139a
+SHA512 (qtwebsockets-everywhere-src-6.5.3.tar.xz) = 0121865827101a73aa2957efa322fcd81bf80d9d9e92c2022fa5bdf94c782fb9997392e6da7523e65b51cfd38c255ee7eb87e2de0069016fc93c1383bd116345
+Size (qtwebsockets-everywhere-src-6.5.3.tar.xz) = 459696 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/09/29 21:12:16 adam Exp $
 lib/pkgconfig/Qt6Location.pc
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
@@ -41,6 +41,7 @@ qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeocodingmanagerengine_
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeofiletilecache_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeojson_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomaneuver_p.h
+qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomaneuverderived_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomap_p_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qgeomapitemgeometry_p.h
