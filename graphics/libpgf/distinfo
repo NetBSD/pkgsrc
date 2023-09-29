@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/09/29 18:29:29 nros Exp $
 
-BLAKE2s (libpgf-src-6.14.12.tar.gz) = 5aae267435c464f9fd86e0284fb3a1d1f8bba9efa7790b8c0332893dbe656909
-SHA512 (libpgf-src-6.14.12.tar.gz) = 1fb2377deb86cea65ab28704a5c438a6e8586c37fb73a208800341214c0b09c9ae61c30a70e839b0238223b31da9825db2aeb2275e06c7a3ff6ff5b43cf72972
-Size (libpgf-src-6.14.12.tar.gz) = 91154 bytes
-SHA1 (patch-configure.ac) = a3965803c80bf6160eca1b9c0562620fdd8f213f
-SHA1 (patch-doc_Makefile.am) = 28e0ebf8d83bd15ac6456967c572322943262f34
+BLAKE2s (libpgf-7.21.7/libpgf.zip) = 39fe793416adad3a962d4f976374cf7a3e5a0a592642aee166d474f779280e4f
+SHA512 (libpgf-7.21.7/libpgf.zip) = dbc17d9dce1afbeffb272df0d573059914d2ac79d652d1d43e67c49509fd6e643be8594bbd1a3058a5aa3a9d30db100c6dcf641051345049cf8f9375d49e2799
+Size (libpgf-7.21.7/libpgf.zip) = 2075722 bytes
+SHA1 (patch-configure.ac) = 4281c5d85931f6cff577f419e11f6cbed3967d99
+SHA1 (patch-include_PGFplatform.h) = 1ef19ef4570bc8e5b1b11de769eb8e84c595004c
+SHA1 (patch-libpgf.pc.in) = 3709fe3393b536cb84cda03fd00bb6bf26914b8d

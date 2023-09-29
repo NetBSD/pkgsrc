@@ -1,0 +1,15 @@
+$NetBSD: patch-libpgf.pc.in,v 1.1 2023/09/29 18:29:29 nros Exp $
+
+* don't hardcode includedir but depend on ${prefix}
+
+--- libpgf.pc.in.orig	2021-02-12 19:54:36.000000000 +0000
++++ libpgf.pc.in
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+-includedir=@prefix@/include/@PACKAGE@
++includedir=@includedir@/@PACKAGE@
+ 
+ Name: @PACKAGE@
+ Description: libpgf - Progressive Graphics File (PGF) library
