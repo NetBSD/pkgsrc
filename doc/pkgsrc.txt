@@ -6267,8 +6267,8 @@ option is used.
 
 21.1.9. Handling packages with security problems
 
-When a vulnerability is found, this should be noted in localsrc/security/
-advisories/pkg-vulnerabilities. Entries in that file consist of three parts:
+When a vulnerability is found, this should be noted in pkgsrc/doc/
+pkg-vulnerabilities. Entries in that file consist of three parts:
 
   * package version pattern
 
