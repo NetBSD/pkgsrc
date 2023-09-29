@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5665 2023/09/29 07:49:39 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5666 2023/09/29 08:10:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8224,3 +8224,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/restic-rest-server version 0.12.0 [joerg 2023-09-28]
 	Updated print/qpdf to 11.6.1 [joerg 2023-09-28]
 	Updated x11/xman to 1.1.6 [wiz 2023-09-29]
+	Updated sysutils/py-borgbackup to 1.2.6nb1 [wiz 2023-09-29]
