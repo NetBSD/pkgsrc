@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2023/09/29 09:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/09/29 09:43:37 wiz Exp $
 
 DISTNAME=	libvpx-1.13.0
 PKGREVISION=	1
@@ -90,7 +90,7 @@ CONFIGURE_ARGS+=	--target=mips32-linux-gcc
 CONFIGURE_ARGS+=	--target=generic-gnu
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) || !empty(MACHINE_PLATFORM:MNetBSD-*-*aarch64*)
+.if ${MACHINE_PLATFORM:MNetBSD-*-*arm*} || ${MACHINE_PLATFORM:MNetBSD-*-*aarch64*}
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .endif
 
@@ -102,7 +102,7 @@ CONFIGURE_ENV.MirBSD+=		RTCD_OPTIONS='--disable-sse2 --disable-sse3 --disable-ss
 CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
-.if !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
+.if ${MACHINE_PLATFORM:MSunOS-5.10-*}
 TOOL_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
 TOOLS_PLATFORM.tr=	${PREFIX}/bin/gtr
 .endif
@@ -116,9 +116,9 @@ PKGCONFIG_OVERRIDE+=		vpx.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 # PR pkg/48508: newer gas from binutils is required to compile ssse3 code.
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || \
-	!empty(MACHINE_PLATFORM:MSunOS-5.10-*) || \
-	!empty(MACHINE_PLATFORM:MOpenBSD-5.*)
+.if ${MACHINE_PLATFORM:MNetBSD-5.*} || \
+	${MACHINE_PLATFORM:MSunOS-5.10-*} || \
+	${MACHINE_PLATFORM:MOpenBSD-5.*}
 .include "../../devel/binutils/buildlink3.mk"
 .include "../../devel/binutils/override-as.mk"
 .endif
