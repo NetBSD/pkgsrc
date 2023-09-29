@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.194 2023/09/17 23:40:06 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.195 2023/09/29 09:24:33 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -567,7 +567,7 @@ CONFLICTS=      libXaw3d-[0-9]*
     <title>Handling packages with security problems</title>
 
     <para>When a vulnerability is found, this should be noted in
-    <filename>localsrc/security/advisories/pkg-vulnerabilities</filename>.
+    <filename>pkgsrc/doc/pkg-vulnerabilities</filename>.
     Entries in that file consist of three parts:</para>
     <itemizedlist>
       <listitem><para>package version pattern</para></listitem>
