@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5667 2023/09/29 09:18:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5668 2023/09/29 09:29:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8227,3 +8227,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-borgbackup to 1.2.6nb1 [wiz 2023-09-29]
 	Updated devel/py-wcwidth to 0.2.7 [adam 2023-09-29]
 	Updated devel/py-pyelftools to 0.30 [adam 2023-09-29]
+	mk/bsd.pkg.mk: moved pkg-vulnerabilities and eol-packages to doc/ [wiz 2023-09-29]
