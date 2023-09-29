@@ -1,30 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:41:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2023/09/29 18:29:29 nros Exp $
 
-DISTNAME=	libpgf-src-6.14.12
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	libpgf
+PKGNAME=	libpgf-7.21.7
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpgf/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpgf/libpgf/${PKGVERSION_NOREV}/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libpgf.org/
 COMMENT=	Progressive Graphics File (PGF) library
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/libpgf
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	aclocal autoconf automake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-# https://sourceforge.net/p/libpgf/bugs/7/
-TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
-
-pre-patch:
-	${CP} ${WRKSRC}/configure.ac ${WRKSRC}/configure.ac.orig
-	${CAT} ${WRKSRC}/configure.ac.orig | dos2unix >${WRKSRC}/configure.ac 
-
 pre-configure:
-	${RUN} cd ${WRKSRC} && ./autogen.sh
+	${RUN} cd ${WRKSRC} && ${TOUCH} README && ${SH} autogen.sh
 
 PKGCONFIG_OVERRIDE+=	libpgf.pc.in
 
