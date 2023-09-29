@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2023/08/03 20:01:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/09/29 21:12:15 adam Exp $
 
-BLAKE2s (qtbase-everywhere-src-6.5.2.tar.xz) = cf09a507891795efc5114849c647cae7ce252c6400d87843f89e3b99f780769f
-SHA512 (qtbase-everywhere-src-6.5.2.tar.xz) = 8d97029aae5b73a3e03624c9a8495dbf2fe54a4f5e992071c06f3d93935e64c80f2121b33eeb60a92d96ceb288cb25d74906a5bf47b45bb018d859d4a2d13f20
-Size (qtbase-everywhere-src-6.5.2.tar.xz) = 48410716 bytes
+BLAKE2s (qtbase-everywhere-src-6.5.3.tar.xz) = a5017281c4536fade24f3f0d3e276b830ff602cbab18d24137546421b0158462
+SHA512 (qtbase-everywhere-src-6.5.3.tar.xz) = 31c6c01d466f1e01f18d6dcee593360c08ee83ad0a6be495a8eba023faad628cf07ce7285426fabfd247db306319e9a64da329682c99a712a282e32f7493cdb9
+Size (qtbase-everywhere-src-6.5.3.tar.xz) = 47142456 bytes
 SHA1 (patch-CMakeLists.txt) = a85cd78bacbbdadf38c8b8451b48383067b6ad0f
-SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = c0fc89e5ea4c2ef88bbb8fbd3ef5231520d6d54f
+SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = 9d50a3c06c1d35415736593daa4e3dab8e9491ce
 SHA1 (patch-cmake_QtBuildInternals_QtBuildInternalsConfig.cmake) = f58e8e445c73444d7f0c015dd8fda64a5a662ef7
 SHA1 (patch-cmake_QtFeature.cmake) = a8e83d33467205ce39fb6df70d6dd5fcd4172d89
 SHA1 (patch-cmake_QtProcessConfigureArgs.cmake) = 98fc5a3fd184accddbc39ef5fac04eb6f56f3a8a
