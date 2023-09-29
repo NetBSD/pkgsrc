@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.1 2023/09/29 09:13:27 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.2 2023/09/29 09:37:31 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25293,3 +25293,10 @@ ntp<4.2.8p16	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26553
 ntp<4.2.8p16	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26552
 ntp<4.2.8p16	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26551
 ntpsec<1.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4012
+webkit-gtk<2.42.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-39928
+webkit-gtk<2.40.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-35074
+webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-39434
+webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-40451
+webkit-gtk<2.42.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-41074
+webkit-gtk<2.42.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-41993
+libvpx<1.13.1		heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-5217
