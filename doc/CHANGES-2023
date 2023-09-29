@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5669 2023/09/29 09:43:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5670 2023/09/29 13:41:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8229,3 +8229,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pyelftools to 0.30 [adam 2023-09-29]
 	mk/bsd.pkg.mk: moved pkg-vulnerabilities and eol-packages to doc/ [wiz 2023-09-29]
 	Updated multimedia/libvpx to 1.13.0nb1 [wiz 2023-09-29]
+	Updated devel/py-ipython to 8.16.0 [adam 2023-09-29]
+	Updated devel/py-macholib to 1.16.3 [adam 2023-09-29]
