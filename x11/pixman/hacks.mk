@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.14 2022/05/24 09:55:02 nia Exp $
+# $NetBSD: hacks.mk,v 1.15 2023/09/29 09:27:07 adam Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
@@ -8,11 +8,11 @@ PIXMAN_HACKS_MK=	# empty
 ### XXX SSE2 intrinsics require gcc-4.2+ to build.
 ### XXX Need to disable SSSE3 explicitly, too.
 ###
-.if empty(CC_VERSION:Mgcc-4.[2-9]*) && \
-    empty(CC_VERSION:Mgcc-[5-9].*) && \
-    empty(CC_VERSION:Mgcc-[1-9][0-9]*)
+.  if !${CC_VERSION:Mgcc-4.[2-9]*} && \
+    !${CC_VERSION:Mgcc-[5-9].*} && \
+    !${CC_VERSION:Mgcc-[1-9][0-9]*}
 CONFIGURE_ARGS+=	--disable-sse2 --disable-ssse3
-.endif
+.  endif
 .endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
