@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/10/10 10:09:46 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/09/29 13:41:41 adam Exp $
 
-DISTNAME=	macholib-1.16.2
+DISTNAME=	macholib-1.16.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
