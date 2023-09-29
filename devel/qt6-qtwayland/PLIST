@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/04 19:16:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/29 21:16:24 adam Exp $
 lib/pkgconfig/Qt6WaylandClient.pc
 lib/pkgconfig/Qt6WaylandCompositor.pc
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qtwaylandclient-config_p.h
@@ -98,6 +98,7 @@ qt6/include/QtWaylandClient/qtwaylandclient-config.h
 qt6/include/QtWaylandClient/qtwaylandclientexports.h
 qt6/include/QtWaylandClient/qtwaylandclientglobal.h
 qt6/include/QtWaylandClient/qtwaylandclientversion.h
+qt6/include/QtWaylandClient/qwaylandclientexport.h
 qt6/include/QtWaylandClient/qwaylandclientextension.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qtwaylandcompositor-config_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qtwaylandcompositorglobal_p.h
@@ -261,6 +262,7 @@ qt6/include/QtWaylandCompositor/qwaylandcompositor.h
 qt6/include/QtWaylandCompositor/qwaylandcompositorextension.h
 qt6/include/QtWaylandCompositor/qwaylanddestroylistener.h
 qt6/include/QtWaylandCompositor/qwaylanddrag.h
+qt6/include/QtWaylandCompositor/qwaylandexport.h
 qt6/include/QtWaylandCompositor/qwaylandidleinhibitv1.h
 qt6/include/QtWaylandCompositor/qwaylandinputmethodcontrol.h
 qt6/include/QtWaylandCompositor/qwaylandiviapplication.h
