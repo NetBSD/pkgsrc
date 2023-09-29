@@ -1,14 +1,15 @@
-$NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
+$NetBSD: patch-configure,v 1.17 2023/09/29 10:45:04 tnn Exp $
 
 - Builtin krb5-config in platforms such as solaris do not support
   the gssapi option, and need an explicit -lgss
 - On Darwin, do not append custom CFLAGS.
 - Do not strip debug flags.
 - Support Minix.
+- macOS 14 libcurl fix: https://github.com/curl/curl/commit/6ab7e1990bd548059f08c471d20537bca13c67b6
 
---- configure.orig	2022-04-25 07:31:45.000000000 +0000
+--- configure.orig	2023-09-13 06:18:50.000000000 +0000
 +++ configure
-@@ -4246,6 +4246,7 @@ printf "%s\n" "$as_me: $xc_bad_var_msg l
+@@ -4284,6 +4284,7 @@ printf "%s\n" "$as_me: $xc_bad_var_msg l
          ;;
      esac
    done
@@ -16,7 +17,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
    if test $xc_bad_var_cflags = yes; then
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  printf "%s\n" "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -8648,7 +8649,7 @@ else $as_nop
+@@ -9169,7 +9170,7 @@ else $as_nop
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -25,7 +26,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -9236,12 +9237,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -9757,12 +9758,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -40,7 +41,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
    ;;
  
  newos6*)
-@@ -13520,14 +13517,13 @@ _LT_EOF
+@@ -14012,14 +14009,13 @@ _LT_EOF
        fi
        ;;
  
@@ -62,7 +63,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
        ;;
  
      solaris*)
-@@ -14218,15 +14214,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
+@@ -14710,15 +14706,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
        esac
        ;;
  
@@ -83,7 +84,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
        ;;
  
      newsos6)
-@@ -15337,6 +15331,18 @@ fi
+@@ -15829,6 +15823,18 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -102,7 +103,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
  netbsdelf*-gnu)
    version_type=linux
    need_lib_prefix=no
-@@ -17794,7 +17800,7 @@ squeeze() {
+@@ -18467,7 +18473,7 @@ squeeze() {
  
  
        #
@@ -111,7 +112,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
      #
      tmp_save_CPPFLAGS="$CPPFLAGS"
      tmp_save_CFLAGS="$CFLAGS"
-@@ -18087,13 +18093,6 @@ printf %s "checking if compiler accepts 
+@@ -18762,13 +18768,6 @@ printf %s "checking if compiler accepts
        tmp_options="$flags_dbg_yes"
      fi
      #
@@ -125,7 +126,7 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
      squeeze CPPFLAGS
      squeeze CFLAGS
    fi
-@@ -20853,7 +20852,7 @@ printf "%s\n" "no" >&6; }
+@@ -21585,7 +21584,7 @@ printf "%s\n" "no" >&6; }
    tst_cflags="no"
    case $host_os in
      darwin*)
@@ -134,7 +135,16 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
        ;;
    esac
  
-@@ -25252,7 +25251,7 @@ printf "%s\n" "found" >&6; }
+@@ -21661,7 +21660,7 @@ rm -f core conftest.err conftest.$ac_obj
+     if test "x$build_for_macos" != xno; then
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ printf "%s\n" "yes" >&6; }
+-      LDFLAGS="$LDFLAGS -framework CoreFoundation -framework SystemConfiguration"
++      LDFLAGS="$LDFLAGS -framework CoreFoundation -framework CoreServices -framework SystemConfiguration"
+     else
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ printf "%s\n" "no" >&6; }
+@@ -26029,7 +26028,7 @@ printf "%s\n" "found" >&6; }
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -143,3 +153,12 @@ $NetBSD: patch-configure,v 1.16 2022/04/27 07:51:20 wiz Exp $
          ;;
       esac
    fi
+@@ -26170,7 +26169,7 @@ printf "%s\n" "#define USE_SECTRANSP 1"
+     ssl_msg="Secure Transport"
+     test secure-transport != "$DEFAULT_SSL_BACKEND" || VALID_DEFAULT_SSL_BACKEND=yes
+     SECURETRANSPORT_ENABLED=1
+-    LDFLAGS="$LDFLAGS -framework CoreFoundation -framework Security"
++    LDFLAGS="$LDFLAGS -framework CoreFoundation -framework CoreServices -framework Security"
+   else
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ printf "%s\n" "no" >&6; }
