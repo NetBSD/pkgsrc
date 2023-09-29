@@ -1,11 +1,28 @@
-$NetBSD: patch-configure.ac,v 1.1 2014/07/22 17:36:49 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2023/09/29 18:29:29 nros Exp $
+
+* Use newer autoconf macros
+
+* set right version number
 
 * add --enable-doc option
 https://sourceforge.net/p/libpgf/patches/8/
 
---- configure.ac.orig	2014-06-18 08:16:27.000000000 +0000
+--- configure.ac.orig	2021-02-12 19:54:36.000000000 +0000
 +++ configure.ac
-@@ -30,8 +30,11 @@ AC_CONFIG_HEADERS( config.h )
+@@ -1,4 +1,4 @@
+-AC_INIT([libpgf], [7.15.32])
++AC_INIT([libpgf],[7.21.7])
+ AC_CONFIG_SRCDIR([src/PGFimage.cpp])
+ 
+ 
+@@ -27,22 +27,26 @@ PACKAGE_RELEASE=2
+ AC_SUBST(PACKAGE_RELEASE)
+ 
+ AM_INIT_AUTOMAKE
+-AC_PROG_LIBTOOL
++LT_INIT
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_HEADERS( [config.h] )
  AC_PROG_CXX
  
  dnl Check for doxygen support
@@ -17,3 +34,14 @@ https://sourceforge.net/p/libpgf/patches/8/
  AM_CONDITIONAL(HAS_DOXYGEN, test $DOXYGEN && $DOT)
  
  # Generate output
+-AC_OUTPUT(Makefile
++AC_CONFIG_FILES([Makefile
+     src/Makefile
+     include/Makefile
+     doc/Makefile
+     doc/Doxyfile
+     libpgf.spec
+     libpgf.pc
+-)
++])
++AC_OUTPUT
