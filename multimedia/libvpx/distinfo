@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2023/02/14 16:23:56 wiz Exp $
+$NetBSD: distinfo,v 1.48 2023/09/29 09:43:15 wiz Exp $
 
 BLAKE2s (libvpx-1.13.0.tar.gz) = 113b3e2e9720e26e42753402baf198fce615b424cf8d11663c3807fd9da42cba
 SHA512 (libvpx-1.13.0.tar.gz) = 686cb526b46d5a054d35263b24f54e977149a244e97c95bcdd9aba2d75e045b2d51be2b7f9754302826b4c5450ee2f177f440b41c04c83b8b1661f1c14301c60
@@ -8,3 +8,4 @@ SHA1 (patch-build_make_configure.sh) = 018bb2333f1de509a81ae4c7b390076043f18118
 SHA1 (patch-configure) = aeb5bfd9d58b06b4f2fdbdb8c73b03339de313e7
 SHA1 (patch-examples.mk) = 17410f43ff9952d616be3211ca697f37c107610a
 SHA1 (patch-libs.mk) = 9ddc9cb6c09c9eefce59072c2a657bc5b7e1d295
+SHA1 (patch-vp8_encoder_onyx__if.c) = d56000956d4301f7f2b392ae9eb18451e2e07581
