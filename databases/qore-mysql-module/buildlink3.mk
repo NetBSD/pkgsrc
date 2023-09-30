@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/08/21 19:31:20 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/09/30 11:06:54 nros Exp $
 #
 
 BUILDLINK_TREE+=	qore-mysql-module
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	qore-mysql-module
 QORE_MYSQL_MODULE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qore-mysql-module+=	qore-mysql-module>=2.0.1
-BUILDLINK_ABI_DEPENDS.qore-mysql-module?=	qore-mysql-module>=2.1nb5
+BUILDLINK_ABI_DEPENDS.qore-mysql-module?=	qore-mysql-module>=2.1nb6
 BUILDLINK_PKGSRCDIR.qore-mysql-module?=		../../databases/qore-mysql-module
 
 .include "../../lang/qore/buildlink3.mk"
