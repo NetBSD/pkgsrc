@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2023/09/17 17:53:23 adam Exp $
+$NetBSD: distinfo,v 1.36 2023/09/30 17:18:34 adam Exp $
 
-BLAKE2s (rich-13.5.3.tar.gz) = 91636dc6f3658899f7424a6dd2ae40aeabe68fcf73f9f31a9584a04540133ab8
-SHA512 (rich-13.5.3.tar.gz) = 6076e9c2c29eaa0e15bc5b77d80101f9bb631166a0c5248d6756fe3bbc8a4e0d6004da8193e6034f8501e5a91a6beffb48bbac05083e1fbcab44401f28795bb9
-Size (rich-13.5.3.tar.gz) = 220323 bytes
+BLAKE2s (rich-13.6.0.tar.gz) = e652e0fa3370e24d614ff8ddacae97c477a3380cf4c4f72927628d4c113ef7d0
+SHA512 (rich-13.6.0.tar.gz) = adf60691457a862fc49f7d6ae26003a63166b744b8625696fc3a7080b995144f901ab1a1313ed3c2c66baece7898c3a5cf06691b3e116cfbb739749bb58e74c8
+Size (rich-13.6.0.tar.gz) = 220315 bytes
