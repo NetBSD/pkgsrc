@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5676 2023/09/29 21:17:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5677 2023/09/30 10:35:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8269,3 +8269,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated inputmethod/qt6-qtvirtualkeyboard to 6.5.3 [adam 2023-09-29]
 	Updated misc/qt6-qtsensors to 6.5.3 [adam 2023-09-29]
 	Updated comms/qt6-qtconnectivity to 6.5.3 [adam 2023-09-29]
+	Updated devel/py-wcwidth to 0.2.8 [adam 2023-09-30]
+	Updated math/py-numexpr to 2.8.7 [adam 2023-09-30]
