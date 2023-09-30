@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/08/21 19:31:21 nros Exp $
+# $NetBSD: Makefile,v 1.3 2023/09/30 11:06:54 nros Exp $
 
 DISTNAME=	qore-magic-module-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/module-magic/releases/download/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
