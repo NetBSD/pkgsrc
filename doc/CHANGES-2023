@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5679 2023/09/30 16:17:12 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5680 2023/09/30 17:00:47 js Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8273,3 +8273,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-numexpr to 2.8.7 [adam 2023-09-30]
 	Updated lang/qore to 1.19.1 [nros 2023-09-30]
 	Updated games/onscripter to 20230825 [tsutsui 2023-09-30]
+	Updated chat/element-web to 1.11.45 [js 2023-09-30]
