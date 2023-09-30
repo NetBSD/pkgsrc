@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5677 2023/09/30 10:35:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5678 2023/09/30 11:02:41 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8271,3 +8271,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated comms/qt6-qtconnectivity to 6.5.3 [adam 2023-09-29]
 	Updated devel/py-wcwidth to 0.2.8 [adam 2023-09-30]
 	Updated math/py-numexpr to 2.8.7 [adam 2023-09-30]
+	Updated lang/qore to 1.19.1 [nros 2023-09-30]
