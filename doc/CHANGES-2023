@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5680 2023/09/30 17:00:47 js Exp $
+$NetBSD: CHANGES-2023,v 1.5681 2023/09/30 17:20:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8274,3 +8274,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/qore to 1.19.1 [nros 2023-09-30]
 	Updated games/onscripter to 20230825 [tsutsui 2023-09-30]
 	Updated chat/element-web to 1.11.45 [js 2023-09-30]
+	Updated misc/stellarium to 23.3 [adam 2023-09-30]
+	Updated converters/py-charset-normalizer to 3.3.0 [adam 2023-09-30]
+	Updated comms/py-rich to 13.6.0 [adam 2023-09-30]
+	Updated sysutils/py-stack-data to 0.6.3 [adam 2023-09-30]
