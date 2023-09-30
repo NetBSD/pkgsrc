@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/21 19:28:06 nros Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/09/30 11:02:07 nros Exp $
 bin/qdbg
 bin/qdbg-remote
 bin/qdbg-server
@@ -124,6 +124,7 @@ share/qore-modules/${PKGVERSION}/AwsRestClient.qm
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientCallDataProvider.qc
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientDataProvider.qc
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientDataProvider.qm
+share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientDeleteDataProvider.qc
 share/qore-modules/${PKGVERSION}/AwsRestClientDataProvider/AwsRestClientGetDataProvider.qc
@@ -141,6 +142,7 @@ share/qore-modules/${PKGVERSION}/CdsRestClient.qm
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsEntityDataProvider.qc
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestDataProvider.qc
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestDataProvider.qm
+share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestDataProviderDefs.qc
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/CdsRestDataProvider/CdsRestRecordIterator.qc
@@ -154,6 +156,7 @@ share/qore-modules/${PKGVERSION}/ConnectionProvider/HttpBasedConnection.qc
 share/qore-modules/${PKGVERSION}/ConnectionProvider/HttpConnection.qc
 share/qore-modules/${PKGVERSION}/ConnectionProvider/InvalidConnection.qc
 share/qore-modules/${PKGVERSION}/ConnectionProvider/PollingConnectionMonitor.qc
+share/qore-modules/${PKGVERSION}/ConnectionProvider/UpdateOptionsInterface.qc
 share/qore-modules/${PKGVERSION}/CsvUtil/AbstractCsvIterator.qc
 share/qore-modules/${PKGVERSION}/CsvUtil/AbstractCsvWriter.qc
 share/qore-modules/${PKGVERSION}/CsvUtil/CsvDataIterator.qc
@@ -272,6 +275,7 @@ share/qore-modules/${PKGVERSION}/Diff.qm
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchAcknowledgedDataType.qc
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDataProvider.qc
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDataProvider.qm
+share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDocumentCreateDataProvider.qc
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchDocumentDataProvider.qc
@@ -297,6 +301,7 @@ share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchPipeline
 share/qore-modules/${PKGVERSION}/ElasticSearchDataProvider/ElasticSearchRecordIterator.qc
 share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingDataProvider.qc
 share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingDataProvider.qm
+share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingMeasurementsCreateDataProvider.qc
 share/qore-modules/${PKGVERSION}/EmpathicBuildingDataProvider/EmpathicBuildingMeasurementsDataProvider.qc
@@ -366,6 +371,33 @@ share/qore-modules/${PKGVERSION}/FtpClientDataProvider/FtpClientStatDataProvider
 share/qore-modules/${PKGVERSION}/FtpClientDataProvider/FtpClientStatResponseDataType.qc
 share/qore-modules/${PKGVERSION}/FtpPoller.qm
 share/qore-modules/${PKGVERSION}/FtpPollerUtil.qm
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarBaseDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarDeleteDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsDeleteDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsGetDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsInsertDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsInstancesDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsListDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsPatchDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsQuickAddDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarEventsUpdateDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarFreeBusyDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarGetDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarInsertDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarListDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarListElementType.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarListListDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarPatchDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarType.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarUpdateDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleCalendarsDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleDataProvider.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleDataProvider.qm
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleDataProviderBase.qc
+share/qore-modules/${PKGVERSION}/GoogleDataProvider/GoogleDataProviderFactory.qc
+share/qore-modules/${PKGVERSION}/GoogleRestClient.qm
 share/qore-modules/${PKGVERSION}/HttpClientDataProvider/HttpClientCallDataProvider.qc
 share/qore-modules/${PKGVERSION}/HttpClientDataProvider/HttpClientCallRequestDataType.qc
 share/qore-modules/${PKGVERSION}/HttpClientDataProvider/HttpClientCallResponseDataType.qc
@@ -383,6 +415,7 @@ share/qore-modules/${PKGVERSION}/HttpClientDataProvider/HttpClientPostDataProvid
 share/qore-modules/${PKGVERSION}/HttpClientDataProvider/HttpClientPutDataProvider.qc
 share/qore-modules/${PKGVERSION}/HttpServer.qm
 share/qore-modules/${PKGVERSION}/HttpServerUtil.qm
+share/qore-modules/${PKGVERSION}/HueRestClient.qm
 share/qore-modules/${PKGVERSION}/JdbcFirebirdSqlUtil.qm
 share/qore-modules/${PKGVERSION}/JdbcMicrosoftSqlUtil.qm
 share/qore-modules/${PKGVERSION}/JdbcOracleSqlUtil.qm
@@ -411,6 +444,7 @@ share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientCallWithMethod
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientCallWithoutBodyRequestDataType.qc
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientDataProvider.qc
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientDataProvider.qm
+share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientDeleteDataProvider.qc
 share/qore-modules/${PKGVERSION}/RestClientDataProvider/RestClientGetDataProvider.qc
@@ -424,6 +458,7 @@ share/qore-modules/${PKGVERSION}/RestSchemaValidator.qm
 share/qore-modules/${PKGVERSION}/SalesforceRestClient.qm
 share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestDataProvider.qc
 share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestDataProvider.qm
+share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestDataProviderDefs.qc
 share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/SalesforceRestDataProvider/SalesforceRestObjectDataProvider.qc
@@ -434,6 +469,7 @@ share/qore-modules/${PKGVERSION}/SchemaReverse.qm
 share/qore-modules/${PKGVERSION}/ServiceNowRestClient.qm
 share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestDataProvider.qc
 share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestDataProvider.qm
+share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestDataProviderBase.qc
 share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestDataProviderDefs.qc
 share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/ServiceNowRestDataProvider/ServiceNowRestRecordIterator.qc
@@ -463,6 +499,7 @@ share/qore-modules/${PKGVERSION}/Swagger.qm
 share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerDataProvider.qc
 share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerDataProvider.qm
 share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerDataProviderBase.qc
+share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerDataProviderCommon.qc
 share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerDataProviderFactory.qc
 share/qore-modules/${PKGVERSION}/SwaggerDataProvider/SwaggerRequestDataProvider.qc
 share/qore-modules/${PKGVERSION}/TableMapper.qm
