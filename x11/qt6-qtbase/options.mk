@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2023/09/29 21:12:15 adam Exp $
+# $NetBSD: options.mk,v 1.5 2023/09/30 08:05:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt6-qtbase
 PKG_SUPPORTED_OPTIONS+=	dbus gtk3
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	-no-cups
 .if !empty(PKG_OPTIONS:Mdbus)
 # Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
 USE_DBUS-ARCH-DEPS_H=	yes
-#.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	-dbus-linked
 PLIST.dbus=		yes
