@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23400 2023/09/28 16:01:53 adam Exp $
+$NetBSD: TODO,v 1.23401 2023/09/30 16:17:12 tsutsui Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
 	o olvwm-4.5
-	o onscripter-20200722
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o open-vm-tools-12.3.0 [security fix: CVE-2023-20900]
