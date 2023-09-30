@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/30 04:14:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/09/30 17:16:30 adam Exp $
 bin/normalizer-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,21 +9,21 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/charset_normalizer/__init__.py
 ${PYSITELIB}/charset_normalizer/__init__.pyc
 ${PYSITELIB}/charset_normalizer/__init__.pyo
+${PYSITELIB}/charset_normalizer/__main__.py
+${PYSITELIB}/charset_normalizer/__main__.pyc
+${PYSITELIB}/charset_normalizer/__main__.pyo
 ${PYSITELIB}/charset_normalizer/api.py
 ${PYSITELIB}/charset_normalizer/api.pyc
 ${PYSITELIB}/charset_normalizer/api.pyo
-${PYSITELIB}/charset_normalizer/assets/__init__.py
-${PYSITELIB}/charset_normalizer/assets/__init__.pyc
-${PYSITELIB}/charset_normalizer/assets/__init__.pyo
 ${PYSITELIB}/charset_normalizer/cd.py
 ${PYSITELIB}/charset_normalizer/cd.pyc
 ${PYSITELIB}/charset_normalizer/cd.pyo
 ${PYSITELIB}/charset_normalizer/cli/__init__.py
 ${PYSITELIB}/charset_normalizer/cli/__init__.pyc
 ${PYSITELIB}/charset_normalizer/cli/__init__.pyo
-${PYSITELIB}/charset_normalizer/cli/normalizer.py
-${PYSITELIB}/charset_normalizer/cli/normalizer.pyc
-${PYSITELIB}/charset_normalizer/cli/normalizer.pyo
+${PYSITELIB}/charset_normalizer/cli/__main__.py
+${PYSITELIB}/charset_normalizer/cli/__main__.pyc
+${PYSITELIB}/charset_normalizer/cli/__main__.pyo
 ${PYSITELIB}/charset_normalizer/constant.py
 ${PYSITELIB}/charset_normalizer/constant.pyc
 ${PYSITELIB}/charset_normalizer/constant.pyo
