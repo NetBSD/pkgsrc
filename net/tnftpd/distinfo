@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:07:03 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/10/01 08:06:37 wiz Exp $
 
-BLAKE2s (tnftpd-20200704.tar.gz) = 9c561d5433c377ea3e8df7b2644b35e1befc9748baef9fc6e7011a1b2df607ee
-SHA512 (tnftpd-20200704.tar.gz) = 431cd0afd23ca9bdb883bac798d4750569038a7cd89febec4d8d5fd6b649eb30927c58f1dbc6323321d9c6ccaa640a698607a580224b43d7c01d93da70f60238
-Size (tnftpd-20200704.tar.gz) = 529105 bytes
+BLAKE2s (tnftpd-20231001.tar.gz) = 37aa8b51e06afe163b580e6d7eb0d399f505dbe2dddb273e6b644dbd4e97e2eb
+SHA512 (tnftpd-20231001.tar.gz) = 50027fde97f59622afbf91426bfbd32d42e2e9e43bd404aa4cc55984d0b6aa414061172b73fb0be341894c80495e1d911d0f0b3ebf441d7a635871f703328d9c
+Size (tnftpd-20231001.tar.gz) = 536802 bytes
