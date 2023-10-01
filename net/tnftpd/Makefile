@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/01/25 11:18:45 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/01 08:06:37 wiz Exp $
 
-DISTNAME=		tnftpd-20200704
+DISTNAME=		tnftpd-20231001
 CATEGORIES=		net
 MASTER_SITES=		https://cdn.NetBSD.org/pub/NetBSD/misc/tnftp/
 
