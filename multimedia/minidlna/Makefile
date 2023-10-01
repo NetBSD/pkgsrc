@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2023/06/06 12:42:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.55 2023/10/01 22:33:14 mrg Exp $
 
 DISTNAME=	minidlna-1.3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}
 
@@ -27,7 +27,7 @@ pre-install:
 
 TOOL_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
