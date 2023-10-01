@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2023/08/06 17:46:47 otis Exp $
+# $NetBSD: Makefile.common,v 1.9 2023/10/01 09:12:20 otis Exp $
 # used by sysutils/zabbix60-agent/Makefile
 # used by sysutils/zabbix60-proxy/Makefile
 # used by sysutils/zabbix60-server/Makefile
 # used by sysutils/zabbix60-frontend/Makefile
 # used by sysutils/zabbix60-java/Makefile
 
-DISTNAME=	zabbix-6.0.20
+DISTNAME=	zabbix-6.0.22
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PKGVERSION_NOREV:R}/
 
