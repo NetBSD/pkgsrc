@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2023/07/10 11:24:08 otis Exp $
+# $NetBSD: Makefile.common,v 1.9 2023/10/01 09:02:37 otis Exp $
 # used by sysutils/zabbix50-agent/Makefile
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile
 # used by sysutils/zabbix50-frontend/Makefile
 # used by sysutils/zabbix50-java/Makefile
 
-DISTNAME=	zabbix-5.0.36
+DISTNAME=	zabbix-5.0.38
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PKGVERSION_NOREV:R}/
 
@@ -29,5 +29,3 @@ FILES_SUBST+=			ZABBIX_GROUP=${ZABBIX_GROUP}
 
 OWN_DIRS_PERMS+=		${ZABBIX_HOMEDIR} ${ZABBIX_USER} ${ZABBIX_GROUP} 0755
 
-# workaround for https://github.com/curl/curl/issues/10148
-CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
