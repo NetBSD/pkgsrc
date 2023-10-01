@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5681 2023/09/30 17:20:44 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5682 2023/10/01 08:06:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8278,3 +8278,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-charset-normalizer to 3.3.0 [adam 2023-09-30]
 	Updated comms/py-rich to 13.6.0 [adam 2023-09-30]
 	Updated sysutils/py-stack-data to 0.6.3 [adam 2023-09-30]
+	Updated net/tnftpd to 20231001 [wiz 2023-10-01]
