@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5694 2023/10/01 16:24:20 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5695 2023/10/01 17:04:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8298,3 +8298,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-test-remotedata to 0.4.1 [adam 2023-10-01]
 	Updated lang/py-asttokens to 2.4.0 [adam 2023-10-01]
 	Updated lang/py-executing to 2.0.0 [adam 2023-10-01]
+	Updated textproc/pugixml to 1.14 [adam 2023-10-01]
+	Updated security/sqlmap to 1.7.9 [adam 2023-10-01]
+	Updated sysutils/ansible-lint to 6.20.2 [adam 2023-10-01]
+	Updated devel/pkgconf to 2.0.3 [adam 2023-10-01]
