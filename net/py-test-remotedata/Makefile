@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/09/06 11:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/01 16:17:00 adam Exp $
 
-DISTNAME=	pytest-remotedata-0.4.0
+DISTNAME=	pytest-remotedata-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-remotedata/}
