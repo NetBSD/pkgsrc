@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5693 2023/10/01 16:13:59 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5694 2023/10/01 16:24:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8294,3 +8294,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-modulegraph to 0.19.6 [adam 2023-10-01]
 	Updated security/py-asyncssh to 2.14.0 [adam 2023-10-01]
 	Updated audio/py-audioread to 3.0.1 [adam 2023-10-01]
+	Updated textproc/py-xmlschema to 2.5.0 [adam 2023-10-01]
+	Updated net/py-test-remotedata to 0.4.1 [adam 2023-10-01]
+	Updated lang/py-asttokens to 2.4.0 [adam 2023-10-01]
+	Updated lang/py-executing to 2.0.0 [adam 2023-10-01]
