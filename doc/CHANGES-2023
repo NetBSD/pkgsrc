@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5695 2023/10/01 17:04:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5696 2023/10/01 18:49:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8302,3 +8302,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/sqlmap to 1.7.9 [adam 2023-10-01]
 	Updated sysutils/ansible-lint to 6.20.2 [adam 2023-10-01]
 	Updated devel/pkgconf to 2.0.3 [adam 2023-10-01]
+	Updated editors/tp-note to 1.22.5 [pin 2023-10-01]
