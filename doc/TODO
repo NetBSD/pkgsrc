@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23402 2023/10/01 12:00:07 wiz Exp $
+$NetBSD: TODO,v 1.23403 2023/10/01 16:05:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -980,7 +980,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memached-1.5.6
 	o memtestplus-6.20
 	o merkaator-0.18.3
-	o meson-1.2.2
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -1021,7 +1020,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
-	o nodejs-20.8.0
 	o notmuch-0.38
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
