@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/08/31 13:56:46 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/10/01 16:17:00 adam Exp $
 
-BLAKE2s (pytest-remotedata-0.4.0.tar.gz) = d490ddfb3ae9da6e99d4f0c15d8ccbeae612fe7a896d68b328648bc9e77cc180
-SHA512 (pytest-remotedata-0.4.0.tar.gz) = 3a1a2e20099638b3ef9088b4ad80305113e0ae1957eda11d193c219554694f6c09423a06d3d2477b4f33b9e601125503fc00a83c3fac62102a45d3cdb6257080
-Size (pytest-remotedata-0.4.0.tar.gz) = 13227 bytes
+BLAKE2s (pytest-remotedata-0.4.1.tar.gz) = 1a7b68a3952a7787f7db9d494961819348761098d925796d29900682d99bfca4
+SHA512 (pytest-remotedata-0.4.1.tar.gz) = 84b22004eb3e40d7579e9ec1f721782d97b3e89a64595d7e20ff693f838ae99fac0a0827b61ea5e3f3af9927476edfb0324efb445cd841ee21ea6a2799f7e997
+Size (pytest-remotedata-0.4.1.tar.gz) = 13279 bytes
