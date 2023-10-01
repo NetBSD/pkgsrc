@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/03/29 09:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/01 16:20:51 adam Exp $
 
-DISTNAME=	asttokens-2.2.1
+DISTNAME=	asttokens-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asttokens/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/gristlabs/asttokens
 COMMENT=	Annotate AST trees with source code positions
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-astroid-[0-9]*:../../devel/py-astroid
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
