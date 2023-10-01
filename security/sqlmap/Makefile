@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2023/09/25 13:52:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2023/10/01 16:59:37 adam Exp $
 
-DISTNAME=	sqlmap-1.7.8
+DISTNAME=	sqlmap-1.7.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://sqlmap.org/
+HOMEPAGE=	https://sqlmap.org/
 COMMENT=	Automatic SQL injection and database takeover tool
 LICENSE=	gnu-gpl-v2
 
