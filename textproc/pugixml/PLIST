@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/11/08 12:56:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/10/01 16:57:45 adam Exp $
 include/pugiconfig.hpp
 include/pugixml.hpp
 lib/cmake/pugixml/pugixml-config-version.cmake
@@ -6,6 +6,6 @@ lib/cmake/pugixml/pugixml-config.cmake
 lib/cmake/pugixml/pugixml-targets-noconfig.cmake
 lib/cmake/pugixml/pugixml-targets.cmake
 lib/libpugixml.so
+lib/libpugixml.so.${PKGVERSION}
 lib/libpugixml.so.1
-lib/libpugixml.so.1.13
 lib/pkgconfig/pugixml.pc
