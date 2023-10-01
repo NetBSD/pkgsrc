@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.18 2022/12/23 12:34:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2023/10/01 08:23:52 otis Exp $
 # used by sysutils/zabbix/Makefile
 # used by sysutils/zabbix-frontend/Makefile
 
-DISTNAME=	zabbix-4.0.24
+DISTNAME=	zabbix-4.0.49
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/4.0/
 
@@ -14,4 +14,4 @@ DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/zabbix/patches
 
 # workaround for https://github.com/curl/curl/issues/10148
-CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
+# CPPFLAGS+=	-DCURL_DISABLE_TYPECHECK
