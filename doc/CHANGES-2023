@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5692 2023/10/01 16:05:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5693 2023/10/01 16:13:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8290,3 +8290,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Added fonts/leahfonts version 20170708 [vins 2023-10-01]
 	Updated lang/nodejs to 20.8.0 [adam 2023-10-01]
 	Updated devel/meson to 1.2.2 [adam 2023-10-01]
+	Updated graphics/py-altgraph to 0.17.4 [adam 2023-10-01]
+	Updated devel/py-modulegraph to 0.19.6 [adam 2023-10-01]
+	Updated security/py-asyncssh to 2.14.0 [adam 2023-10-01]
+	Updated audio/py-audioread to 3.0.1 [adam 2023-10-01]
