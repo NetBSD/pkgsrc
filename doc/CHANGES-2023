@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5687 2023/10/01 09:57:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5688 2023/10/01 09:58:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8284,3 +8284,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/zabbix50-server to 5.0.38 [otis 2023-10-01]
 	Updated sysutils/zabbix60-server to 6.0.22 [otis 2023-10-01]
 	Updated net/bandsnatch to 0.3.0 [pin 2023-10-01]
+	Updated sysutils/broot to 1.26.1 [pin 2023-10-01]
