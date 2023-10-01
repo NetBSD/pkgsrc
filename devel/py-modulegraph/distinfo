@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/15 10:45:12 adam Exp $
+$NetBSD: distinfo,v 1.15 2023/10/01 16:09:38 adam Exp $
 
-BLAKE2s (modulegraph-0.19.5.tar.gz) = d06ecd5156384381c9719a98f3e724200fa8c77cb38f67ed11d0b573fae024e1
-SHA512 (modulegraph-0.19.5.tar.gz) = 875c1abfb8349d6377ea7b941181e6ddef8c29ae6f9a415fdcd635786b21fcb23967a8ce1202abe2dbe955fe3650b7d0b77ea193cf975b65141134332a9199d2
-Size (modulegraph-0.19.5.tar.gz) = 87015 bytes
+BLAKE2s (modulegraph-0.19.6.tar.gz) = 819fdca607d9fd850f2932a13f9e3414ad950b27a611e57552f80ddb572057b9
+SHA512 (modulegraph-0.19.6.tar.gz) = ab8596f1ebedf691c132338d11b9fe08b09cb6714241af0e569718b0e283ac816b6bc50f5f49a90809661282ace4d3cb6d49fe9c863f4cb4073c471e353c9239
+Size (modulegraph-0.19.6.tar.gz) = 88145 bytes
