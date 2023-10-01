@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2023/10/01 13:57:49 vins Exp $
+
+BLAKE2s (leahfonts-20170708/5x13-master.tar.xz) = 41443c90a806e85a6fcefb6ea23cb82db7c0bc252580fd211885cfba216f8701
+SHA512 (leahfonts-20170708/5x13-master.tar.xz) = 4e4d1e0e9f4a42704ec5cfb9676b32d6865bee68dcd18902640e3bc40763c94ba43300996e18a3c0b4e0266a008c651cfde4757dfb71b614250815ba3e2ec2d2
+Size (leahfonts-20170708/5x13-master.tar.xz) = 3464 bytes
+BLAKE2s (leahfonts-20170708/smalltalk10.bdf) = b50f424ba5536d33c3b13080fa808c18a8ebf03f85e1fc59ab0fe5ca0fec5469
+SHA512 (leahfonts-20170708/smalltalk10.bdf) = 12efdb9fbb9722b2e3aeb562a39eb834b986ff93eade45bfc2569788d89c4b0adc62a02fa4cbd5624b222b3cf9dfd394d37094decf1cd9c4403b125a2c6d6e11
+Size (leahfonts-20170708/smalltalk10.bdf) = 10261 bytes
+BLAKE2s (leahfonts-20170708/sq-master.tar.xz) = c94a6229fbd1f2564cbfa4beb87f7bb1afe90ff474ede69c3d3166014781864d
+SHA512 (leahfonts-20170708/sq-master.tar.xz) = 3a187adf3d8a7af2acd7f3e0bf17bf0a57fe1cf543cd2822c5b2d750ab74dc67fda8fc47c00b84fa1c0b1faa9d6881d2663a980791326c4298ecc4dda4f810f0
+Size (leahfonts-20170708/sq-master.tar.xz) = 119068 bytes

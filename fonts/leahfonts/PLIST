@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/01 13:57:49 vins Exp $
+share/fonts/X11/leahfonts/5x13.pcf.gz
+share/fonts/X11/leahfonts/fonts.alias
+share/fonts/X11/leahfonts/smalltalk10.pcf.gz
+share/fonts/X11/leahfonts/sq.pcf.gz
+share/fonts/X11/leahfonts/sqb.pcf.gz
