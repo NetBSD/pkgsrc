@@ -1,0 +1,14 @@
+Leah Fonts is a collection of bitmap fonts designed by Leah Neukirchen,
+for those who still prefer a crispier look over TrueType.
+
+Included fonts are:
+* sq - 7x15 pixel font inspired by Codec and Quadraat Sans Mono.
+  Public domain, 2012. Covers full Latin-1 range. Normal and bold.
+* 5x13 - condensed pixel font built on 6x13. A well readable font that
+  is only five pixels wide, such that you can fit four 80-chars wide
+  shells next to each other on a 1600x1200 display. Partial Latin-1
+  support (German subset). Normal only.
+* smalltalk10 - the font of the Smalltalk 80 system. A pixel perfect
+  restauration of the Smalltalk 80 variable width font "sans-serif 10" as
+  provided in the image tape by Mario Wolczko, using the emulator by Dan
+  Banay. Covers only printable 7-bit ASCII. Normal shape only.

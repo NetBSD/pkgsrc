@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2023/10/01 13:57:49 vins Exp $
+
+To make new fonts available on an existing X session, you will have to
+update the X fonts path, by executing:
+
+	$ xset +fp ${PREFIX}/${FONTDIR}
+	$ xset fp rehash
+
+To make the effect permanent for future X sessions, you can add the above
+command to your ~/.xinitrc script.
+
+In alternative, you may wish to add the ${PKGBASE} directory path to your
+Xorg configuration:
+
+        FontPath        "${PREFIX}/${FONTDIR}/"
+
+===========================================================================
