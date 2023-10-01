@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2023/03/26 11:58:58 he Exp $
+$NetBSD: distinfo,v 1.24 2023/10/01 08:23:52 otis Exp $
 
-BLAKE2s (zabbix-4.0.24.tar.gz) = 99cbad42171b86b62636b6d498ba344c99762ea98ecff80c47497f6ef49f7c61
-SHA512 (zabbix-4.0.24.tar.gz) = ec4d4bbfc3ce1ea10a4e6cf96c10e4495ce2ea154dc297544ae107d4cb7451e3fc76e25d7822f40a809a87a268c54abb8a9d49869942f2009c0a7f92ff6abaf3
-Size (zabbix-4.0.24.tar.gz) = 17404177 bytes
+BLAKE2s (zabbix-4.0.49.tar.gz) = 11ffc4537b21cd8c8ce4382d6374474c8f75434e8ebc6de454a41e61b8603371
+SHA512 (zabbix-4.0.49.tar.gz) = 630480875d4b0bf2666cc8717ad59001d6f01940488e7cd0c1e0cf44ca6bf9fa7d73dfcf80a3a0158d445c0118c1c3f09fb69bb4bfb471118f9d87b1f8743ba1
+Size (zabbix-4.0.49.tar.gz) = 17902486 bytes
 SHA1 (patch-frontends_php_locale_add__new__language.sh) = 71be94363ee58490d2ee3ef4bc6b800cfc99e90a
 SHA1 (patch-frontends_php_locale_make__mo.sh) = 5b0f25dfe1aa8befb5eeda79e1aa002bd0adddf7
 SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = 7d3d35b2f0e7b06cb0b371279e4b9d959adbe51e
