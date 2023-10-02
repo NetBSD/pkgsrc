@@ -1,0 +1,71 @@
+$NetBSD: patch-configure,v 1.1 2023/10/02 20:07:15 adam Exp $
+
+Fix linking on Darwin; don't use -stack_size.
+Changes for consistency across pkgsrc platforms.
+Simplify _sysconfigdata to include only platform name.
+Disable barrier to cross-compilation.
+
+--- configure.orig	2023-08-05 12:11:26.000000000 +0000
++++ configure
+@@ -3686,7 +3686,7 @@ fi
+     fi
+         ac_cv_prog_PYTHON_FOR_REGEN=$with_build_python
+     PYTHON_FOR_FREEZE="$with_build_python"
+-    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) '$with_build_python
++    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) '$with_build_python
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $with_build_python" >&5
+ printf "%s\n" "$with_build_python" >&6; }
+ 
+@@ -4309,7 +4309,7 @@ fi
+ printf "%s\n" "\"$MACHDEP\"" >&6; }
+ 
+ 
+-if test "$cross_compiling" = yes; then
++if false && test "$cross_compiling" = yes; then
+ 	case "$host" in
+ 	*-*-linux*)
+ 		case "$host_cpu" in
+@@ -9480,7 +9480,7 @@ fi
+ 
+ case $GCC in
+ yes)
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c11"
++    CFLAGS_NODIST="$CFLAGS_NODIST -std=gnu11"
+ 
+ 
+ 
+@@ -23488,10 +23488,10 @@ if ac_fn_c_try_compile "$LINENO"
+ then :
+ 
+ 
+-if grep noonsees conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
+   ax_cv_c_float_words_bigendian=yes
+ fi
+-if grep seesnoon conftest.$ac_objext >/dev/null ; then
++if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
+   if test "$ax_cv_c_float_words_bigendian" = unknown; then
+     ax_cv_c_float_words_bigendian=no
+   else
+@@ -24352,7 +24352,7 @@ printf "%s\n" "#define ALT_SOABI \"${ALT
+ fi
+ 
+ 
+-EXT_SUFFIX=.${SOABI}${SHLIB_SUFFIX}
++EXT_SUFFIX=${SHLIB_SUFFIX}
+ 
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
+ printf %s "checking LDVERSION... " >&6; }
+@@ -24406,11 +24406,7 @@ fi
+ 
+ 
+ 
+-if test x$PLATFORM_TRIPLET = x; then
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+-else
+-  LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}-${PLATFORM_TRIPLET}"
+-fi
++LIBPL='$(prefix)'"/${PLATLIBDIR}/python${VERSION}/config-${LDVERSION}"
+ 
+ 
+ # Check for --with-wheel-pkg-dir=PATH
