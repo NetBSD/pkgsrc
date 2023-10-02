@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/08/06 05:21:41 pin Exp $
+# $NetBSD: Makefile,v 1.33 2023/10/02 10:38:10 pin Exp $
 
-DISTNAME=	spotify-player-0.15.0
+DISTNAME=	spotify-player-0.15.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
