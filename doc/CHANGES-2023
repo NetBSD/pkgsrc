@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5710 2023/10/02 20:35:13 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5711 2023/10/02 20:37:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8327,3 +8327,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/python312 version 3.12.0 [adam 2023-10-02]
 	Added lang/py312-html-docs version 3.12.0 [adam 2023-10-02]
 	Updated devel/mercurial to 6.5.2 [triaxx 2023-10-02]
+	Updated devel/py-mercurial to 6.5.2 [triaxx 2023-10-02]
