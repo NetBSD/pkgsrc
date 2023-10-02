@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/14 09:54:20 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/10/02 08:10:10 adam Exp $
 
-BLAKE2s (pyftpdlib-1.5.7.tar.gz) = 0508e72670a971921bab8e2cc4dba832d4efd4ee1002a104f3c731a30eae1ac5
-SHA512 (pyftpdlib-1.5.7.tar.gz) = 66ad5a1ab8fde26233250351f553cdc411303616d717c416cdce059f93c64e6ef64c7707103644583249b6aba22a9841994b38e731edc7997e95e266dbdbdc22
-Size (pyftpdlib-1.5.7.tar.gz) = 196076 bytes
+BLAKE2s (pyftpdlib-1.5.8.tar.gz) = 3557c8460cc8536983196389dca6dabed5be13a61bc71d97ba6ed105854402ab
+SHA512 (pyftpdlib-1.5.8.tar.gz) = 2d4c4beb40d604d41eeed51f690b805377e84e594bdbb5d67135f50e5696824ba24aa9ae53aecced9f6c1b7eb3ec7727d31b883f9bbb0d2c43802277b2ef2aa6
+Size (pyftpdlib-1.5.8.tar.gz) = 201963 bytes
