@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5702 2023/10/02 09:12:23 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5703 2023/10/02 10:32:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8312,3 +8312,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-validators to 0.22.0 [adam 2023-10-02]
 	Updated net/py-minio to 7.1.17 [adam 2023-10-02]
 	Updated textproc/py-mistune to 3.0.2 [adam 2023-10-02]
+	Updated databases/mysql57-client to 5.7.43 [adam 2023-10-02]
+	Updated databases/mysql57-server to 5.7.43 [adam 2023-10-02]
