@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/02 00:25:58 schmonz Exp $
+
+BLAKE2s (Net-OAuth2-0.67.tar.gz) = df88273fa4dd9ffff0cef46d9f4a3323b65617442776a59dadb286b0b37a1faf
+SHA512 (Net-OAuth2-0.67.tar.gz) = 28e1db3707878ccf4ffde1097fa3058c0242303c63ac4920ad6c1884d309987bf6975e983acc7c16411ad9102d1a02b3c5d97d2ffabbed72e1f39cb21a2ee607
+Size (Net-OAuth2-0.67.tar.gz) = 22450 bytes
