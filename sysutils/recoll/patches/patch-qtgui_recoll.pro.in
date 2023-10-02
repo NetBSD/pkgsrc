@@ -1,0 +1,16 @@
+$NetBSD: patch-qtgui_recoll.pro.in,v 1.1 2023/10/02 06:05:12 wiz Exp $
+
+ld: ../.libs/librecoll.a(mh_xslt.o): undefined reference to symbol 'xmlFreeDoc@@LIBXML2_2.4.30'
+ld: /usr/pkg/lib/libxml2.so.2: error adding symbols: DSO missing from command line
+
+--- qtgui/recoll.pro.in.orig	2023-05-12 08:19:26.000000000 +0000
++++ qtgui/recoll.pro.in
+@@ -417,7 +417,7 @@ VPATH = @srcdir@
+   LIBS += -Wl,-rpath=@libdir@/recoll
+ 
+   LIBS +=  @XAPIAN_LIBS@ \
+-       @LIBICONV@ $(BDYNAMIC) @LIBQZEITGEIST@ -lz
++       @LIBICONV@ $(BDYNAMIC) @LIBQZEITGEIST@ -lz -lxml2 -lxslt
+ 
+   INCLUDEPATH += ../common @srcdir@/../common @srcdir@/../index \
+               @srcdir@/../internfile @srcdir@/../query @srcdir@/../unac \
