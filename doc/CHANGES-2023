@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5707 2023/10/02 19:03:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5708 2023/10/02 20:03:41 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8321,3 +8321,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-platformdirs to 3.11.0 [adam 2023-10-02]
 	Updated www/py-urllib3 to 2.0.6 [adam 2023-10-02]
 	Updated devel/py-coverage to 7.3.2 [adam 2023-10-02]
+	Updated graphics/charls to 2.4.2 [nros 2023-10-02]
