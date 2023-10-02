@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/25 11:07:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2023/10/02 19:03:13 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -41,8 +41,6 @@ ${PYSITELIB}/coverage/execfile.py
 ${PYSITELIB}/coverage/execfile.pyc
 ${PYSITELIB}/coverage/files.py
 ${PYSITELIB}/coverage/files.pyc
-${PYSITELIB}/coverage/fullcoverage/encodings.py
-${PYSITELIB}/coverage/fullcoverage/encodings.pyc
 ${PYSITELIB}/coverage/html.py
 ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
