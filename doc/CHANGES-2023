@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5696 2023/10/01 18:49:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5697 2023/10/02 00:26:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8303,3 +8303,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/ansible-lint to 6.20.2 [adam 2023-10-01]
 	Updated devel/pkgconf to 2.0.3 [adam 2023-10-01]
 	Updated editors/tp-note to 1.22.5 [pin 2023-10-01]
+	Added net/p5-Net-OAuth2 version 0.67 [schmonz 2023-10-02]
