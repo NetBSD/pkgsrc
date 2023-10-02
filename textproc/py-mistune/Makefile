@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/08/28 09:20:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/02 09:12:05 adam Exp $
 
-DISTNAME=	mistune-3.0.1
+DISTNAME=	mistune-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mistune/}
