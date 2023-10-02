@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5706 2023/10/02 18:53:54 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5707 2023/10/02 19:03:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8317,3 +8317,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/spotify-player to 0.15.2 [pin 2023-10-02]
 	Added math/fitme version 1.1.0 [pin 2023-10-02]
 	Updated devel/conftest to 0.46.0 [leot 2023-10-02]
+	Updated devel/py-ipython to 8.16.1 [adam 2023-10-02]
+	Updated misc/py-platformdirs to 3.11.0 [adam 2023-10-02]
+	Updated www/py-urllib3 to 2.0.6 [adam 2023-10-02]
+	Updated devel/py-coverage to 7.3.2 [adam 2023-10-02]
