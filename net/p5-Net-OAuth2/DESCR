@@ -1,0 +1,10 @@
+OAuth version 2.0 is a follow-up on OAuth 1.0, which is not supported by
+this module. The specification for version 2.0 can be found in
+
+- RFC6749, Authorization framework: http://tools.ietf.org/html/rfc6749
+- RFC6750, Bearer token usage: http://tools.ietf.org/html/rfc6750
+
+Start with one these modules:
+
+- Net::OAuth2::Profile::WebServer
+- Net::OAuth2::Profile::Password
