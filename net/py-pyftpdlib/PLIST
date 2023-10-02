@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/17 11:41:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/02 08:10:10 adam Exp $
 bin/ftpbench-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -11,6 +11,12 @@ ${PYSITELIB}/pyftpdlib/__init__.pyo
 ${PYSITELIB}/pyftpdlib/__main__.py
 ${PYSITELIB}/pyftpdlib/__main__.pyc
 ${PYSITELIB}/pyftpdlib/__main__.pyo
+${PYSITELIB}/pyftpdlib/_asynchat.py
+${PYSITELIB}/pyftpdlib/_asynchat.pyc
+${PYSITELIB}/pyftpdlib/_asynchat.pyo
+${PYSITELIB}/pyftpdlib/_asyncore.py
+${PYSITELIB}/pyftpdlib/_asyncore.pyc
+${PYSITELIB}/pyftpdlib/_asyncore.pyo
 ${PYSITELIB}/pyftpdlib/_compat.py
 ${PYSITELIB}/pyftpdlib/_compat.pyc
 ${PYSITELIB}/pyftpdlib/_compat.pyo
@@ -39,9 +45,6 @@ ${PYSITELIB}/pyftpdlib/test/README
 ${PYSITELIB}/pyftpdlib/test/__init__.py
 ${PYSITELIB}/pyftpdlib/test/__init__.pyc
 ${PYSITELIB}/pyftpdlib/test/__init__.pyo
-${PYSITELIB}/pyftpdlib/test/__main__.py
-${PYSITELIB}/pyftpdlib/test/__main__.pyc
-${PYSITELIB}/pyftpdlib/test/__main__.pyo
 ${PYSITELIB}/pyftpdlib/test/keycert.pem
 ${PYSITELIB}/pyftpdlib/test/runner.py
 ${PYSITELIB}/pyftpdlib/test/runner.pyc
