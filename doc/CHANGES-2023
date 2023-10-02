@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5699 2023/10/02 06:21:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5700 2023/10/02 08:12:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8306,3 +8306,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/p5-Net-OAuth2 version 0.67 [schmonz 2023-10-02]
 	Added sysutils/recoll version 1.35.0 [wiz 2023-10-02]
 	Added time/saturn-cli version 0.4.2 [pin 2023-10-02]
+	Updated net/py-pyftpdlib to 1.5.8 [adam 2023-10-02]
+	Updated print/py-pydyf to 0.8.0 [adam 2023-10-02]
