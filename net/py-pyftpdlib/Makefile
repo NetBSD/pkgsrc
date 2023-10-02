@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/10/19 14:25:19 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/02 08:10:10 adam Exp $
 
-DISTNAME=	pyftpdlib-1.5.7
+DISTNAME=	pyftpdlib-1.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyftpdlib/}
