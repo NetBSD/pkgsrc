@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2021/05/10 09:25:10 rin Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/02 11:19:26 rhialto Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
 PKGNAME=	${DISTNAME:S/-unix2-/-utils-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/
 
@@ -59,10 +59,13 @@ CFLAGS+=	-Wno-error=format-truncation
 CFLAGS+=	-Wno-error=format-overflow \
 		-Wno-error=stringop-truncation
 .endif
-.if !empty(CC_VERSION:Mgcc-10*)
+.if !empty(CC_VERSION:Mgcc-1[02]*)
 CFLAGS+=	-Wno-error=format-overflow \
 		-Wno-error=format-truncation \
 		-Wno-error=stringop-truncation
+.endif
+.if !empty(CC_VERSION:Mgcc-12*)
+CFLAGS+=	-Wno-error=dangling-pointer
 .endif
 
 .include "../../mk/bsd.pkg.mk"
