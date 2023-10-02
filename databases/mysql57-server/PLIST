@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2023/05/25 09:06:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2023/10/02 10:31:59 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -776,6 +776,7 @@ share/mysql/test/include/only_mts_slave_parallel_type_database.inc
 share/mysql/test/include/only_mts_slave_parallel_type_logical_clock.inc
 share/mysql/test/include/only_mts_slave_parallel_workers.inc
 share/mysql/test/include/only_with_option.inc
+share/mysql/test/include/openssl3_legacy_tls.cnf
 share/mysql/test/include/openssl_cert_generation_debug_test.inc
 share/mysql/test/include/order_by.inc
 share/mysql/test/include/parser-big.inc
@@ -2442,7 +2443,9 @@ share/mysql/test/suite/auth_sec/t/ssl_auto_detect.test
 share/mysql/test/suite/auth_sec/t/ssl_auto_detect_openssl-master.opt
 share/mysql/test/suite/auth_sec/t/ssl_auto_detect_openssl.test
 share/mysql/test/suite/auth_sec/t/ssl_mode.test
+share/mysql/test/suite/auth_sec/t/tls.cnf
 share/mysql/test/suite/auth_sec/t/tls.test
+share/mysql/test/suite/auth_sec/t/tls12_tls1.cnf
 share/mysql/test/suite/auth_sec/t/tls12_tls1.test
 share/mysql/test/suite/auth_sec/t/wrong_keyring_file_data-master.opt
 share/mysql/test/suite/auth_sec/t/wrong_keyring_file_data.test
@@ -11261,6 +11264,7 @@ share/mysql/test/suite/rpl/t/rpl_sql_thread_error.test
 share/mysql/test/suite/rpl/t/rpl_sql_thread_killed_waiting_commit_lock-slave.opt
 share/mysql/test/suite/rpl/t/rpl_sql_thread_killed_waiting_commit_lock.test
 share/mysql/test/suite/rpl/t/rpl_ssl.test
+share/mysql/test/suite/rpl/t/rpl_ssl1.cnf
 share/mysql/test/suite/rpl/t/rpl_ssl1.test
 share/mysql/test/suite/rpl/t/rpl_ssl_semisync-master.opt
 share/mysql/test/suite/rpl/t/rpl_ssl_semisync-slave.opt
@@ -13455,12 +13459,14 @@ share/mysql/test/suite/x/t/connection.test
 share/mysql/test/suite/x/t/connection_default_schema.test
 share/mysql/test/suite/x/t/connection_expire.test
 share/mysql/test/suite/x/t/connection_expired_certs-master.opt
+share/mysql/test/suite/x/t/connection_expired_certs.cnf
 share/mysql/test/suite/x/t/connection_expired_certs.test
 share/mysql/test/suite/x/t/connection_ipv6-master.opt
 share/mysql/test/suite/x/t/connection_ipv6.test
 share/mysql/test/suite/x/t/connection_nonssl-master.opt
 share/mysql/test/suite/x/t/connection_nonssl.test
 share/mysql/test/suite/x/t/connection_openssl-master.opt
+share/mysql/test/suite/x/t/connection_openssl.cnf
 share/mysql/test/suite/x/t/connection_openssl.test
 share/mysql/test/suite/x/t/connection_require_secure_transport.test
 share/mysql/test/suite/x/t/connection_reset_by_peer.test
@@ -13470,6 +13476,7 @@ share/mysql/test/suite/x/t/connection_skip_networking_win-master.opt
 share/mysql/test/suite/x/t/connection_skip_networking_win.test
 share/mysql/test/suite/x/t/connection_timeout.test
 share/mysql/test/suite/x/t/connection_tls_version-master.opt
+share/mysql/test/suite/x/t/connection_tls_version.cnf
 share/mysql/test/suite/x/t/connection_tls_version.test
 share/mysql/test/suite/x/t/connection_unixsocket.test
 share/mysql/test/suite/x/t/connection_unixsocket_invalid.test
@@ -14613,6 +14620,7 @@ share/mysql/test/t/ssl_crl_clients_valid.test
 share/mysql/test/t/ssl_crl_crlpath-master.opt
 share/mysql/test/t/ssl_crl_crlpath.test
 share/mysql/test/t/ssl_deprecated_tls_versions-master.opt
+share/mysql/test/t/ssl_deprecated_tls_versions.cnf
 share/mysql/test/t/ssl_deprecated_tls_versions.test
 share/mysql/test/t/ssl_verify_identity-master.opt
 share/mysql/test/t/ssl_verify_identity.test
