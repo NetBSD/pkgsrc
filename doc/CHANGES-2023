@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5701 2023/10/02 08:55:04 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5702 2023/10/02 09:12:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8310,3 +8310,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/py-pydyf to 0.8.0 [adam 2023-10-02]
 	Updated textproc/py-xlsxwriter to 3.1.6 [adam 2023-10-02]
 	Updated textproc/py-validators to 0.22.0 [adam 2023-10-02]
+	Updated net/py-minio to 7.1.17 [adam 2023-10-02]
+	Updated textproc/py-mistune to 3.0.2 [adam 2023-10-02]
