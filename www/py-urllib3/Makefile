@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2023/09/20 16:44:42 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/10/02 19:01:57 adam Exp $
 
-DISTNAME=	urllib3-2.0.5
+DISTNAME=	urllib3-2.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
