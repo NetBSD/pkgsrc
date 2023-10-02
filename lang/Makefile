@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.697 2023/09/09 14:18:01 taca Exp $
+# $NetBSD: Makefile,v 1.698 2023/10/02 20:07:14 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -261,11 +261,13 @@ SUBDIR+=	py-uncompyle6
 SUBDIR+=	py27-html-docs
 SUBDIR+=	py310-html-docs
 SUBDIR+=	py311-html-docs
+SUBDIR+=	py312-html-docs
 SUBDIR+=	py38-html-docs
 SUBDIR+=	py39-html-docs
 SUBDIR+=	python27
 SUBDIR+=	python310
 SUBDIR+=	python311
+SUBDIR+=	python312
 SUBDIR+=	python38
 SUBDIR+=	python39
 SUBDIR+=	qbe
