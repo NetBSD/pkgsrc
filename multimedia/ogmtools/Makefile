@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2020/05/22 12:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/02 10:58:33 rhialto Exp $
 #
 
 DISTNAME=	ogmtools-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	https://www.bunkus.org/videotools/ogmtools/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.bunkus.org/videotools/ogmtools/
 COMMENT=	Ogg Media files manipulation tools
 
 USE_LANGUAGES=	c c++
+FORCE_CXX_STD=	c++11
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_DIR:Q}
