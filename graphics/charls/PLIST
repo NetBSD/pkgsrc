@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/11/12 18:59:20 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/02 20:03:25 nros Exp $
 include/charls/annotations.h
 include/charls/api_abi.h
 include/charls/charls.h
@@ -6,6 +6,7 @@ include/charls/charls_jpegls_decoder.h
 include/charls/charls_jpegls_encoder.h
 include/charls/jpegls_error.h
 include/charls/public_types.h
+include/charls/validate_spiff_header.h
 include/charls/version.h
 lib/cmake/charls/charlsConfig-release.cmake
 lib/cmake/charls/charlsConfig.cmake
