@@ -1,0 +1,11 @@
+Saturn provides you with a CLI interface to calendaring much in the way
+taskwarrior does with tasks. It also provides you with several methods to
+query and notify yourself of important appointments.
+
+It can act standalone or integrate fully with Google Calendar.
+
+Saturn provides also a TUI as a separate program, sui will present a calendar
+in a terminal window and allow you to interact with it in similar ways to
+saturn.
+
+This package contains both the CLI and TUI tools.
