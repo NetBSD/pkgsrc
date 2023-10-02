@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5698 2023/10/02 06:05:33 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5699 2023/10/02 06:21:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8305,3 +8305,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.22.5 [pin 2023-10-01]
 	Added net/p5-Net-OAuth2 version 0.67 [schmonz 2023-10-02]
 	Added sysutils/recoll version 1.35.0 [wiz 2023-10-02]
+	Added time/saturn-cli version 0.4.2 [pin 2023-10-02]
