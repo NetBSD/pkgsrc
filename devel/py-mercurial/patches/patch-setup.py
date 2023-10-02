@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2023/06/14 11:07:26 riastradh Exp $
+$NetBSD: patch-setup.py,v 1.2 2023/10/02 20:37:22 triaxx Exp $
 
 Skip existence check for Python.h so this can be cross-compiled.
 
@@ -7,7 +7,7 @@ The pkgsrc toolchain wrapper will interpose a sysroot to resolve the
 
 --- setup.py.orig	2023-05-04 12:17:18.000000000 +0000
 +++ setup.py
-@@ -639,13 +639,6 @@ class hgbuildpy(build_py):
+@@ -658,13 +658,6 @@ class hgbuildpy(build_py):
  
                  exts.append(osutilbuild.ffi.distutils_extension())
              self.distribution.ext_modules = exts
