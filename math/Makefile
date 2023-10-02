@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2023/09/09 13:57:13 taca Exp $
+# $NetBSD: Makefile,v 1.572 2023/10/02 10:41:32 pin Exp $
 
 COMMENT=	Mathematics
 
@@ -185,6 +185,7 @@ SUBDIR+=	fftw-long
 SUBDIR+=	fftw-quad
 SUBDIR+=	fftw2
 SUBDIR+=	fgmp
+SUBDIR+=	fitme
 SUBDIR+=	fityk
 SUBDIR+=	flann-lib
 SUBDIR+=	four-bar-rs
