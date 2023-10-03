@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/10/03 21:54:06 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	5
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -17,7 +16,7 @@ DEPENDS+=	caja-extensions>=${VERSION:R}.1:../../sysutils/caja-extensions
 DEPENDS+=	engrampa>=${VERSION:R}.1:../../archivers/engrampa
 DEPENDS+=	eom>=${VERSION:R}.1:../../graphics/eom
 DEPENDS+=	libmatekbd>=${VERSION:R}.1:../../x11/libmatekbd
-DEPENDS+=	libmatemixer>=${VERSION}:../../audio/libmatemixer
+DEPENDS+=	libmatemixer>=${VERSION:R}.1:../../audio/libmatemixer
 DEPENDS+=	libmateweather>=${VERSION:R}.1:../../misc/libmateweather
 DEPENDS+=	marco>=${VERSION:R}.2:../../wm/marco
 DEPENDS+=	mate-applets>=${VERSION:R}.1:../../x11/mate-applets
@@ -25,7 +24,7 @@ DEPENDS+=	mate-backgrounds>=${VERSION}:../../graphics/mate-backgrounds
 DEPENDS+=	mate-calc>=${VERSION}:../../misc/mate-calc
 DEPENDS+=	mate-common>=${VERSION}:../../devel/mate-common
 DEPENDS+=	mate-control-center>=${VERSION:R}.1:../../x11/mate-control-center
-DEPENDS+=	mate-desktop>=${VERSION:R}.1:../../x11/mate-desktop
+DEPENDS+=	mate-desktop>=${VERSION:R}.2:../../x11/mate-desktop
 DEPENDS+=	mate-icon-theme>=${VERSION}:../../graphics/mate-icon-theme
 DEPENDS+=	mate-icon-theme-faenza>=1.20.0:../../graphics/mate-icon-theme-faenza
 DEPENDS+=	mate-indicator-applet>=${VERSION}:../../x11/mate-indicator-applet
