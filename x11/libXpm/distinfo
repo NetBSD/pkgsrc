@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2023/04/17 21:09:49 wiz Exp $
+$NetBSD: distinfo,v 1.15 2023/10/03 20:28:15 wiz Exp $
 
-BLAKE2s (libXpm-3.5.16.tar.xz) = 557ac1f86292738c632171c21cacb2bfb2b31f2f6bd9517438101cab10c673d9
-SHA512 (libXpm-3.5.16.tar.xz) = ee564311f8c1c9c08ed1035d55c287ecf7c20c6fee09ad448acfab59f38fd1ef381d4a24b4af2b581f3033730eebc7c690918e52ba706de689d1ef11085edac2
-Size (libXpm-3.5.16.tar.xz) = 469020 bytes
+BLAKE2s (libXpm-3.5.17.tar.xz) = 14caba27e1fa0990cd26017971b57b7c3ab9433314d0b9a565e0f576b803b874
+SHA512 (libXpm-3.5.17.tar.xz) = 52f9d2664a47a26c1a6ad65d18867de870b66947b0b0d99cca3512756a0aaa6ce2a245c0b49f20b70c3ce48bf04c47c333e8119a147465c277bca727f6ab017e
+Size (libXpm-3.5.17.tar.xz) = 468964 bytes
 SHA1 (patch-aa) = 4cfa0ddc7f802916363901226f3c60e7f686b616
 SHA1 (patch-ab) = faaefb61693805272bd4cccc1301c6e3edd14919
 SHA1 (patch-ac) = 9226dce77b0a7d9c792d9465727423581db7f01e
