@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/18 12:22:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/10/03 21:47:10 gutteridge Exp $
 include/mate-mixer/libmatemixer/matemixer-app-info.h
 include/mate-mixer/libmatemixer/matemixer-context.h
 include/mate-mixer/libmatemixer/matemixer-device-switch.h
@@ -68,6 +68,7 @@ share/locale/el/LC_MESSAGES/libmatemixer.mo
 share/locale/en_AU/LC_MESSAGES/libmatemixer.mo
 share/locale/en_CA/LC_MESSAGES/libmatemixer.mo
 share/locale/en_GB/LC_MESSAGES/libmatemixer.mo
+share/locale/en_US/LC_MESSAGES/libmatemixer.mo
 share/locale/eo/LC_MESSAGES/libmatemixer.mo
 share/locale/es/LC_MESSAGES/libmatemixer.mo
 share/locale/es_CL/LC_MESSAGES/libmatemixer.mo
