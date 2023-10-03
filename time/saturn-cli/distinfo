@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/10/02 06:19:59 pin Exp $
+$NetBSD: distinfo,v 1.2 2023/10/03 06:35:34 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -531,9 +531,9 @@ Size (regex-automata-0.3.9.crate) = 610489 bytes
 BLAKE2s (regex-syntax-0.7.5.crate) = 5119a5eebce120fd28155f42907d81786841400ec6fa53a34facd0c2cdcd760e
 SHA512 (regex-syntax-0.7.5.crate) = 6388dbf68c8c86d8a5bd8cfb13a86e9ab2da1a339fd607c1a16848f85dd21c85d744d694c7b918954ea27eeefc90b589926c9da464343fb78ab639a5e2925efd
 Size (regex-syntax-0.7.5.crate) = 343366 bytes
-BLAKE2s (reqwest-0.11.20.crate) = 50e2fce782588c4178e6a4af784f87bacb397c76f9a1fe780bfac06701492419
-SHA512 (reqwest-0.11.20.crate) = 0cd5fcaf8f3997683f39aec422c3cd5f37a5f0b3b7ffacae7d97008b0de93e21ab7318fba9a9eebbb677a5bc4289610d5153e8ac1e8fe94aac9da2c2ede94c6d
-Size (reqwest-0.11.20.crate) = 155122 bytes
+BLAKE2s (reqwest-0.11.21.crate) = a4c4d72ae6feb2c0196b6db7c92556601b3489e1a21c6dc3e0f33398f2550a55
+SHA512 (reqwest-0.11.21.crate) = cd0d2d7ecc3e035f14a29c68a0e5a5aaa0e3afc517427e03f88d66c746d03f514120deec13b34f5dba20c1084a32a8135ddf675c2f5acb360c7bebaf85d5f270
+Size (reqwest-0.11.21.crate) = 156914 bytes
 BLAKE2s (rustc-demangle-0.1.23.crate) = 69a47a17841599868ba5e4e12607e52d81df244530c2b07551e10809a522f273
 SHA512 (rustc-demangle-0.1.23.crate) = 8cd29800254b1305ad50f1fc008838c52d9659f97a51a68e9f2bd6d0a60126f3ebdd1c79760f96445b3bf998d0773526ddf663b174acca81babdc0b423247247
 Size (rustc-demangle-0.1.23.crate) = 28970 bytes
@@ -549,9 +549,9 @@ Size (rustversion-1.0.14.crate) = 17261 bytes
 BLAKE2s (ryu-1.0.15.crate) = 9cd8b57860ba906eaae35b47878818e4e574fb5463963cb95a0134a0acae6eee
 SHA512 (ryu-1.0.15.crate) = 4655b5647f919082a9b84b889539ae7fb23a1201057cf280efe79c58cb5f040864efb7812cda5021bf6d34838a15d173ac8bdb0fb9fa2dba85173d3efa5a826b
 Size (ryu-1.0.15.crate) = 46906 bytes
-BLAKE2s (saturn-0.4.2.tar.gz) = 29c598c29d92b6450381649b3ffa006329947b68252ede074984674efcc79d1c
-SHA512 (saturn-0.4.2.tar.gz) = abb3ec410005448c4380ff368ac06c46a12f3226325e383cef397a44c8b66325e7fd236c3c81529c590c9e2df46582cfb0af6cf3bd7c68ecd8a9509f065fb835
-Size (saturn-0.4.2.tar.gz) = 208186 bytes
+BLAKE2s (saturn-0.4.3.tar.gz) = a7a119c40357dee2e94bcce9a6ae14bd58b2386b3b7c3246ab904a0cc9994a26
+SHA512 (saturn-0.4.3.tar.gz) = 8494469f1f9183b70873c78fdd995c5021999c7a7522b36a12f4fbeb12278340d04c15ba75d10814a34dcaea98d447ae39f7d2bda5f01e3cb1ee87bb602bf300
+Size (saturn-0.4.3.tar.gz) = 208450 bytes
 BLAKE2s (schannel-0.1.22.crate) = 2b6d519d2c6f7c1b4b0af8936741a8a8f181f00818015eb2abece1b5f4eb9f5d
 SHA512 (schannel-0.1.22.crate) = 6ec962cbd25f25dcee5e31b5012e61d38b97a7e8651a5439ab4cbc8ab33a0e2ce04fa22e06a82ef8750001c6659937ffd8dccb0cbd6971f68b0c354d0075aaa0
 Size (schannel-0.1.22.crate) = 41642 bytes
@@ -627,6 +627,12 @@ Size (syn-1.0.109.crate) = 237611 bytes
 BLAKE2s (syn-2.0.37.crate) = e161907af1ea43051b8c139a88dd24da12a4d0f93cf0652971f707e02d736d03
 SHA512 (syn-2.0.37.crate) = 5cc8f2a17f891477a9b2078580bcb4c5dec0b540fdc4d2c0b8dd51972c734ff4519e891166c1c5f6d35b73bfb564ac747836f7487481a2ea26fb7d8405835023
 Size (syn-2.0.37.crate) = 243250 bytes
+BLAKE2s (system-configuration-0.5.1.crate) = aba0348451214457d6b5f14f5cb35b1dd4a37c41c99cfe837139759602e218d6
+SHA512 (system-configuration-0.5.1.crate) = af77ed5be890e826b9b8f975bd2e63f3905adb24a597069a887ff2a861820f1ed40582b918f35c3d4eb063800e179b93e5acd7d5b48b147e9b16e3cf4c12840f
+Size (system-configuration-0.5.1.crate) = 12618 bytes
+BLAKE2s (system-configuration-sys-0.5.0.crate) = 43ed83781f52862de282e6942fe43a21bf4a2e43c2f029b20957e56dbde4ffb6
+SHA512 (system-configuration-sys-0.5.0.crate) = 764168ee5efe1ba82e847ed74a14d1f5f1892735e98657c3ecaafcb4b405d4f779592dfaade252f6a577ca2cfd5cd5e467c0b6326bbdcfa573c3ab01cdc8fc34
+Size (system-configuration-sys-0.5.0.crate) = 6730 bytes
 BLAKE2s (tauri-winrt-notification-0.1.2.crate) = bf32a584827adc8bc77268ea70e2a9742b8dd2be47ba4f6eef43740a56ac16f3
 SHA512 (tauri-winrt-notification-0.1.2.crate) = 2eb80c6cc80bc919a509ed5fccf11761955c67cbbbbd2bd17ae751ccb6d87429553ad451bc544aeb10917c886c23f0bc19295b21d05244400d92cb8b41a8fa97
 Size (tauri-winrt-notification-0.1.2.crate) = 42234 bytes
