@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.1 2021/12/18 01:01:33 he Exp $
+# $NetBSD: emulator.mk,v 1.2 2023/10/03 14:53:52 abs Exp $
 #
 # This file is included by netbsd-compat.mk in the emulator framework.
 #
@@ -18,7 +18,7 @@
 #	A table that maps "modules" to NetBSD package dependencies.
 #
 
-EMUL_DISTRO=		netbsd-9.99.82
+EMUL_DISTRO=		netbsd-10.0_BETA
 
 EMUL_EXEC_FMT=		ELF
 EMULSUBDIR=		emul/netbsd
