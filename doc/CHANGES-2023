@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5721 2023/10/03 20:28:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5722 2023/10/03 20:29:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8338,3 +8338,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/squashfs to 4.6.1 [scole 2023-10-03]
 	Updated devel/regal to 0.10.0 [leot 2023-10-03]
 	Updated x11/libXpm to 3.5.17 [wiz 2023-10-03]
+	Updated x11/libX11 to 1.8.7 [wiz 2023-10-03]
