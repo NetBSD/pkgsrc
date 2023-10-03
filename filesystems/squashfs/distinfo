@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:25:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/10/03 19:26:20 scole Exp $
 
-BLAKE2s (squashfs-tools-4.4.tar.gz) = 2a2f1f342699557b6fb2a8fa7d44acbecf645a94122699c1b2941618ac98ded4
-SHA512 (squashfs-tools-4.4.tar.gz) = 133ce437fb8c929933d52cff710b61dd9181f6f8be58250b0d6a59a7bb79a2b350f68f456b06a0e17c469409a71272d586802d570248273ddcd5dad088c00308
-Size (squashfs-tools-4.4.tar.gz) = 241842 bytes
-SHA1 (patch-Makefile) = ee53cb3c16983cb3767df2ccdcf4636bd646fc3c
-SHA1 (patch-action.c) = 35200e6cafd0846fb05fac50862ba3ceb4777935
-SHA1 (patch-mksquashfs.c) = 723e9250e0ce821825de916671ac51251dce9432
-SHA1 (patch-unsquashfs.c) = 167ee4ec1aea744dac6e13d837f1ae19a0f2472a
+BLAKE2s (squashfs-tools-4.6.1.tar.gz) = f6cba60eaefba487281909c44a55265dc5869fc7d36026a98b72a9f083805312
+SHA512 (squashfs-tools-4.6.1.tar.gz) = 10e8a4b1e2327e062aef4f85860e76ebcd7a29e4c19e152ff7edec4a38316982b5bcfde4ab69da6bcb931258d264c2b6cb40cb5f635f9e6f6eba1ed5976267cb
+Size (squashfs-tools-4.6.1.tar.gz) = 286848 bytes
+SHA1 (patch-Makefile) = 501a17abded8e066327f08a8c8b0773c897972f8
