@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/07/27 03:12:00 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/03 21:41:27 gutteridge Exp $
 bin/mate-about
 bin/mate-color-select
 include/mate-desktop-2.0/libmate-desktop/mate-bg-crossfade.h
@@ -105,6 +105,7 @@ share/locale/el/LC_MESSAGES/mate-desktop.mo
 share/locale/en_AU/LC_MESSAGES/mate-desktop.mo
 share/locale/en_CA/LC_MESSAGES/mate-desktop.mo
 share/locale/en_GB/LC_MESSAGES/mate-desktop.mo
+share/locale/en_US/LC_MESSAGES/mate-desktop.mo
 share/locale/eo/LC_MESSAGES/mate-desktop.mo
 share/locale/es/LC_MESSAGES/mate-desktop.mo
 share/locale/es_AR/LC_MESSAGES/mate-desktop.mo
@@ -198,3 +199,4 @@ share/locale/zh_HK/LC_MESSAGES/mate-desktop.mo
 share/locale/zh_TW/LC_MESSAGES/mate-desktop.mo
 share/locale/zu/LC_MESSAGES/mate-desktop.mo
 share/mate-about/mate-version.xml
+share/xdg-desktop-portal/mate-portals.conf
