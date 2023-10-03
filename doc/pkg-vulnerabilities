@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.5 2023/09/29 22:09:50 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.6 2023/10/03 21:46:00 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25309,3 +25309,8 @@ exim-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40474
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40475
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40476
+libX11<1.8.7	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-43785
+libX11<1.8.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-43786
+libX11<1.8.7	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43787
+libXpm<3.5.17		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-43788
+libXpm<3.5.17		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-43789
