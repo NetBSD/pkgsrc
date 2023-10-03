@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.27 2023/09/24 08:35:50 pin Exp $
+# $NetBSD: go-modules.mk,v 1.28 2023/10/03 06:34:21 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -134,8 +134,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.1.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.8.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.8.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.9.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.23.9.zip
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.mod
 GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.zip
 GO_MODULE_FILES+=	github.com/shoenig/test/@v/v0.6.4.mod
