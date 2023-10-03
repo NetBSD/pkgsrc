@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5718 2023/10/03 08:43:02 prlw1 Exp $
+$NetBSD: CHANGES-2023,v 1.5719 2023/10/03 19:30:48 scole Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8335,3 +8335,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/tui-journal to 0.3.2 [pin 2023-10-03]
 	Updated devel/nss to 3.94 [wiz 2023-10-03]
 	Updated mail/exim to 4.96.1 [prlw1 2023-10-03]
+	Updated filesystems/squashfs to 4.6.1 [scole 2023-10-03]
