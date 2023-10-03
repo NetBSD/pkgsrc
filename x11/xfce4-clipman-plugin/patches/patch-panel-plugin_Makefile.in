@@ -1,10 +1,10 @@
-$NetBSD: patch-panel-plugin_Makefile.in,v 1.2 2016/06/12 11:23:12 youri Exp $
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.3 2023/10/03 23:09:57 gutteridge Exp $
 
 Adjust config path
 
---- panel-plugin/Makefile.in.orig	2014-05-31 17:03:00.000000000 +0000
+--- panel-plugin/Makefile.in.orig	2023-09-29 11:07:44.000000000 +0000
 +++ panel-plugin/Makefile.in
-@@ -565,7 +565,7 @@ libclipman_la_LIBADD = \
+@@ -714,7 +714,7 @@ libclipman_la_LIBADD = \
  #
  # XML Actions File
  #
@@ -13,12 +13,12 @@ Adjust config path
  actions_in_files = xfce4-clipman-actions.xml.in
  actions_DATA = $(actions_in_files:.xml.in=.xml)
  
-@@ -582,7 +582,7 @@ apps_DATA = $(apps_in_files:.desktop.in=
+@@ -731,7 +731,7 @@ apps_DATA = $(apps_in_files:.desktop.in=
  #
  # Autostart File
  #
--autostartdir = $(sysconfdir)/xdg/autostart
-+autostartdir = $(datadir)/examples/xfce4/autostart
- autostart_in_files = xfce4-clipman-plugin-autostart.desktop.in
- autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+-@HAVE_LIBX11_TRUE@autostartdir = $(sysconfdir)/xdg/autostart
++@HAVE_LIBX11_TRUE@autostartdir = $(datadir)/examples/xfce4/autostart
+ @HAVE_LIBX11_TRUE@autostart_in_files = xfce4-clipman-plugin-autostart.desktop.in
+ @HAVE_LIBX11_TRUE@autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
  
