@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.68 2023/08/13 04:06:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.69 2023/10/03 23:09:57 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.6.4
+VERSION=	1.6.5
 DISTNAME=	xfce4-clipman-plugin-${VERSION}
-CATEGORIES=	sysutils
+CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin
 COMMENT=	Xfce clipboard plugin
 
 PKG_SYSCONFSUBDIR=	xdg
-CONF_FILES=		${XFCE4_EGBASE}/autostart/xfce4-clipman-plugin-autostart.desktop	\
-			${PKG_SYSCONFDIR}/autostart/xfce4-clipman-plugin-autostart.desktop	\
-			${XFCE4_EGBASE}/panel/xfce4-clipman-actions.xml	\
+CONF_FILES=		${XFCE4_EGBASE}/autostart/xfce4-clipman-plugin-autostart.desktop \
+			${PKG_SYSCONFDIR}/autostart/xfce4-clipman-plugin-autostart.desktop \
+			${XFCE4_EGBASE}/panel/xfce4-clipman-actions.xml \
 			${PKG_SYSCONFDIR}/xfce4/panel/xfce4-clipman-actions.xml
 
 MAKE_DIRS+=	${XFCE4_EGBASE}/autostart \
