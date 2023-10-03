@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/10/02 06:19:59 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2023/10/03 06:35:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -177,7 +177,7 @@ CARGO_CRATE_DEPENDS+=	redox_users-0.4.3
 CARGO_CRATE_DEPENDS+=	regex-1.9.6
 CARGO_CRATE_DEPENDS+=	regex-automata-0.3.9
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.7.5
-CARGO_CRATE_DEPENDS+=	reqwest-0.11.20
+CARGO_CRATE_DEPENDS+=	reqwest-0.11.21
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.23
 CARGO_CRATE_DEPENDS+=	rustix-0.37.24
 CARGO_CRATE_DEPENDS+=	rustix-0.38.15
@@ -208,6 +208,8 @@ CARGO_CRATE_DEPENDS+=	strum-0.25.0
 CARGO_CRATE_DEPENDS+=	strum_macros-0.25.2
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.37
+CARGO_CRATE_DEPENDS+=	system-configuration-0.5.1
+CARGO_CRATE_DEPENDS+=	system-configuration-sys-0.5.0
 CARGO_CRATE_DEPENDS+=	tauri-winrt-notification-0.1.2
 CARGO_CRATE_DEPENDS+=	tempfile-3.8.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.49
