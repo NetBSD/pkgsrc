@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/11/27 04:50:27 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2023/10/03 21:47:10 gutteridge Exp $
 
-BLAKE2s (libmatemixer-1.26.0.tar.xz) = 1614d2ed362e9590d9ff8b09fec28b864950870c3d44498af8e305272e0b92f0
-SHA512 (libmatemixer-1.26.0.tar.xz) = 6e97594f9a43f4e66c31e466d8a46ea5d77cb5b5ead26df6461b1529a3b6f1448768a981e7a527a4c07dda0e4cba7470e1fff8b316731da293cfdc0f18aacc73
-Size (libmatemixer-1.26.0.tar.xz) = 489092 bytes
+BLAKE2s (libmatemixer-1.26.1.tar.xz) = 3f978747038f5fb6a30146837ffd7514d411d758b8a6a2556692710232dd1afa
+SHA512 (libmatemixer-1.26.1.tar.xz) = a67a63bbf76b69ba78a537f7690230f45c5875b4358991e73604aacf001baa40ee994101d486218be8000be43be6561b6f25f4f38ae00310c5a08affb6dafbdb
+Size (libmatemixer-1.26.1.tar.xz) = 497560 bytes
