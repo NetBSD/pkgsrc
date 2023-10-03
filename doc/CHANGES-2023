@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5714 2023/10/03 06:35:55 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5715 2023/10/03 06:36:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8331,3 +8331,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated geography/gama to 2.26 [gdt 2023-10-02]
 	Updated shells/oh-my-posh to 18.11.0 [pin 2023-10-03]
 	Updated time/saturn-cli to 0.4.3 [pin 2023-10-03]
+	Updated net/termscp to 0.12.2 [pin 2023-10-03]
