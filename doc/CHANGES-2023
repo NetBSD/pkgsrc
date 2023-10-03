@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5724 2023/10/03 21:47:19 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5725 2023/10/03 21:54:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8341,3 +8341,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libX11 to 1.8.7 [wiz 2023-10-03]
 	Updated x11/mate-desktop to 1.26.2 [gutteridge 2023-10-03]
 	Updated audio/libmatemixer to 1.26.1 [gutteridge 2023-10-03]
+	Updated meta-pkgs/mate to 1.26.1 [gutteridge 2023-10-03]
