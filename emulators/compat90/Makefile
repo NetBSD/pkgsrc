@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/02 16:35:12 he Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/03 14:53:52 abs Exp $
 
 COMPAT_PKG=		compat90	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		9.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 HOMEPAGE=		https://www.NetBSD.org/releases/formal-9/index.html
 COMMENT=		Shared libraries for NetBSD 9.0 compatibility
@@ -11,7 +11,7 @@ LICENSE=		2-clause-bsd AND modified-bsd AND isc AND mit AND zlib \
 			AND gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-gpl-v2 \
 			AND gnu-lgpl-v3 AND gnu-gpl-v3
 
-DIST_SUBDIR=		20211116
+DIST_SUBDIR=		compat20231003
 
 EMUL_PLATFORMS=		netbsd-aarch64 \
 			netbsd-alpha \
@@ -34,6 +34,7 @@ ONLY_FOR_PLATFORM=	NetBSD-9.99.*-* NetBSD-[1-9][0-9].*-*
 CHECK_RELRO_SKIP=	*
 
 .include "../../emulators/compat_netbsd/Makefile.common"
+EXTRACT_SUFX=		.tar.xz
 
 DISTNAME=		compat90-${EMUL_ARCH}-${COMPAT_VERSION}
 COMPAT_VERSION=		9.0

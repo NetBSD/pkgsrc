@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.ELF,v 1.3 2022/01/02 16:15:55 he Exp $
+# $NetBSD: INSTALL.ELF,v 1.4 2023/10/03 14:53:52 abs Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -27,9 +27,11 @@ UNPACK,|UNPACK,+ROOT_ACTIONS)
 
 CAT="@CAT@"
 CHMOD="@CHMOD@"
+DIRNAME="@DIRNAME@"
 ECHO="@ECHO@"
 ID="@ID@"
 LN="@LN@"
+MKDIR="@MKDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
 SED="@SED@"
@@ -64,6 +66,8 @@ ADD,0)
 
 		if ${TEST} ! -f "$dst"; then
 			${ECHO} "${PKGNAME}: linking $dst -> $src"
+                        # Could be needed for /usr/lib/lua/5.3/foo.so
+                        ${MKDIR} -p "$(${DIRNAME} "$dst")"
 			${LN} -fs "$src" "$dst"
 		else
 			${ECHO} "${PKGNAME}: $dst already exists"
