@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5725 2023/10/03 21:54:16 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5726 2023/10/03 22:18:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8342,3 +8342,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/mate-desktop to 1.26.2 [gutteridge 2023-10-03]
 	Updated audio/libmatemixer to 1.26.1 [gutteridge 2023-10-03]
 	Updated meta-pkgs/mate to 1.26.1 [gutteridge 2023-10-03]
+	Updated sysutils/xfce4-taskmanager to 1.5.6 [gutteridge 2023-10-03]
