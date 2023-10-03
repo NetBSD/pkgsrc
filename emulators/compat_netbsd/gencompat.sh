@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $
+# $NetBSD: gencompat.sh,v 1.6 2023/10/03 14:52:17 abs Exp $
 #
 # This script generates the distfiles and PLISTs for the NetBSD compat*
 # packages.
@@ -12,8 +12,9 @@
 compat_version=9.0
 compat_version_name=90
 
-compat_base=/x/NetBSD/$compat_version
-cur_base=/x/NetBSD/10.0_preALPHA
+: "${setbase:=/x/NetBSD}"
+compat_base=$setbase/$compat_version
+cur_base=$setbase/10.0_BETA
 setdir=binary/sets
 
 BASESET="base.tgz"
@@ -139,19 +140,19 @@ for arch in $archlist; do
 		[ -d $compat_extras_pkgdir ] || mkdir -p $compat_extras_pkgdir
 
 		# Generate PLISTs and distfiles.
-		( echo '@comment $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.6 2023/10/03 14:52:17 abs Exp $'
 		  find $compat_dir \! -type d | sort |
 		  sed 's,'$compat_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_pkgdir/PLIST.$arch
 		tar cf $compat_pkgdir/$compat_dir.tar $compat_dir
-		bzip2 -f -9 $compat_pkgdir/$compat_dir.tar
+		xz -f -9 $compat_pkgdir/$compat_dir.tar
 
-		( echo '@comment $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.6 2023/10/03 14:52:17 abs Exp $'
 		  find $compat_extras_dir \! -type d | sort |
 		  sed 's,'$compat_extras_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_extras_pkgdir/PLIST.$arch
 		tar cf $compat_extras_pkgdir/$compat_extras_dir.tar $compat_extras_dir
-		bzip2 -f -9 $compat_extras_pkgdir/$compat_extras_dir.tar
+		xz -f -9 $compat_extras_pkgdir/$compat_extras_dir.tar
 
 		# Cleanup.
 		rm -rf $cur_dir $compat_dir $compat_extras_dir
