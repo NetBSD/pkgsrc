@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5712 2023/10/02 22:20:42 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.5713 2023/10/03 06:34:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8329,3 +8329,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/mercurial to 6.5.2 [triaxx 2023-10-02]
 	Updated devel/py-mercurial to 6.5.2 [triaxx 2023-10-02]
 	Updated geography/gama to 2.26 [gdt 2023-10-02]
+	Updated shells/oh-my-posh to 18.11.0 [pin 2023-10-03]
