@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5716 2023/10/03 06:38:08 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5717 2023/10/03 07:59:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8333,3 +8333,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/saturn-cli to 0.4.3 [pin 2023-10-03]
 	Updated net/termscp to 0.12.2 [pin 2023-10-03]
 	Updated misc/tui-journal to 0.3.2 [pin 2023-10-03]
+	Updated devel/nss to 3.94 [wiz 2023-10-03]
