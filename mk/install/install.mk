@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.84 2023/09/20 13:45:42 jperkin Exp $
+# $NetBSD: install.mk,v 1.85 2023/10/04 11:39:59 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -351,7 +351,7 @@ _DEBUG_SKIP_PATTERNS+=	${PKGMANDIR}/* ${PKGLOCALEDIR}/locale/*
 _DEBUG_SKIP_PATTERNS+=	*.css *.html *.js *.json *.md *.rst *.txt *.xml *.yaml
 _DEBUG_SKIP_PATTERNS+=	*.php *.pl *.pm *.py *.pyc *.pyi *.pyo *.rb *.ri
 _DEBUG_SKIP_PATTERNS+=	*.gif *.gz *.mo *.png *.po *.svg
-_DEBUG_SKIP_PATTERNS+=	*.a *.c *.h *.hpp *.la *.pc
+_DEBUG_SKIP_PATTERNS+=	*.a *.c *.h *.hpp *.la *.pc *.rlib
 _DEBUG_SKIP_PATTERNS+=	*.dyn_hi *.hi *.p_hi
 
 ######################################################################
