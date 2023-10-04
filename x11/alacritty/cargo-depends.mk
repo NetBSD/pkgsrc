@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2023/07/01 20:39:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2023/10/04 11:46:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	android-activity-0.4.0
@@ -160,7 +160,7 @@ CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.0
 CARGO_CRATE_DEPENDS+=	slab-0.4.7
 CARGO_CRATE_DEPENDS+=	slotmap-1.0.6
 CARGO_CRATE_DEPENDS+=	smallvec-1.9.0
-CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.16.0
+CARGO_CRATE_DEPENDS+=	smithay-client-toolkit-0.16.1
 CARGO_CRATE_DEPENDS+=	smithay-clipboard-0.6.6
 CARGO_CRATE_DEPENDS+=	spsc-buffer-0.1.1
 CARGO_CRATE_DEPENDS+=	strict-num-0.1.0
@@ -220,7 +220,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.42.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.42.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.36.1
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.1
-CARGO_CRATE_DEPENDS+=	winit-0.28.6
+CARGO_CRATE_DEPENDS+=	winit-0.28.7
 CARGO_CRATE_DEPENDS+=	winreg-0.10.1
 CARGO_CRATE_DEPENDS+=	wio-0.2.2
 CARGO_CRATE_DEPENDS+=	ws2_32-sys-0.2.1
