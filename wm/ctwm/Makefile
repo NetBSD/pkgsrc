@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2023/07/07 08:05:21 nia Exp $
+# $NetBSD: Makefile,v 1.43 2023/10/04 16:58:57 rhialto Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
-CATEGORIES=	x11 wm
+PKGREVISION=	1
+CATEGORIES=	wm x11
 MASTER_SITES=	http://ctwm.org/dist/
 EXTRACT_SUFX=	.tar.xz
 
@@ -59,6 +60,8 @@ CMAKE_ARGS+=		-DASCIIDOC=
 CMAKE_ARGS+=		-DA2X=
 CMAKE_ARGS+=		-DXMLTO=
 CMAKE_ARGS+=		-DDBLATEX=
+# disable upstream use of ctfconvert due to gcc12
+CMAKE_ARGS+=		-DCTFCONVERT=0
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
