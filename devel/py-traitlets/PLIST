@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/09/16 03:21:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/04 08:21:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,29 +24,13 @@ ${PYSITELIB}/traitlets/config/manager.py
 ${PYSITELIB}/traitlets/config/manager.pyc
 ${PYSITELIB}/traitlets/config/sphinxdoc.py
 ${PYSITELIB}/traitlets/config/sphinxdoc.pyc
-${PYSITELIB}/traitlets/config/tests/__init__.py
-${PYSITELIB}/traitlets/config/tests/__init__.pyc
-${PYSITELIB}/traitlets/config/tests/test_application.py
-${PYSITELIB}/traitlets/config/tests/test_application.pyc
-${PYSITELIB}/traitlets/config/tests/test_argcomplete.py
-${PYSITELIB}/traitlets/config/tests/test_argcomplete.pyc
-${PYSITELIB}/traitlets/config/tests/test_configurable.py
-${PYSITELIB}/traitlets/config/tests/test_configurable.pyc
-${PYSITELIB}/traitlets/config/tests/test_loader.py
-${PYSITELIB}/traitlets/config/tests/test_loader.pyc
 ${PYSITELIB}/traitlets/log.py
 ${PYSITELIB}/traitlets/log.pyc
 ${PYSITELIB}/traitlets/py.typed
 ${PYSITELIB}/traitlets/tests/__init__.py
 ${PYSITELIB}/traitlets/tests/__init__.pyc
-${PYSITELIB}/traitlets/tests/_warnings.py
-${PYSITELIB}/traitlets/tests/_warnings.pyc
 ${PYSITELIB}/traitlets/tests/test_traitlets.py
 ${PYSITELIB}/traitlets/tests/test_traitlets.pyc
-${PYSITELIB}/traitlets/tests/test_traitlets_enum.py
-${PYSITELIB}/traitlets/tests/test_traitlets_enum.pyc
-${PYSITELIB}/traitlets/tests/test_typing.py
-${PYSITELIB}/traitlets/tests/test_typing.pyc
 ${PYSITELIB}/traitlets/tests/utils.py
 ${PYSITELIB}/traitlets/tests/utils.pyc
 ${PYSITELIB}/traitlets/traitlets.py
@@ -67,14 +51,6 @@ ${PYSITELIB}/traitlets/utils/nested_update.py
 ${PYSITELIB}/traitlets/utils/nested_update.pyc
 ${PYSITELIB}/traitlets/utils/sentinel.py
 ${PYSITELIB}/traitlets/utils/sentinel.pyc
-${PYSITELIB}/traitlets/utils/tests/__init__.py
-${PYSITELIB}/traitlets/utils/tests/__init__.pyc
-${PYSITELIB}/traitlets/utils/tests/test_bunch.py
-${PYSITELIB}/traitlets/utils/tests/test_bunch.pyc
-${PYSITELIB}/traitlets/utils/tests/test_decorators.py
-${PYSITELIB}/traitlets/utils/tests/test_decorators.pyc
-${PYSITELIB}/traitlets/utils/tests/test_importstring.py
-${PYSITELIB}/traitlets/utils/tests/test_importstring.pyc
 ${PYSITELIB}/traitlets/utils/text.py
 ${PYSITELIB}/traitlets/utils/text.pyc
 ${PYSITELIB}/traitlets/utils/warnings.py
