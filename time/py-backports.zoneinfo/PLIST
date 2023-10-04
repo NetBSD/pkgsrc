@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/04 21:01:58 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/backports/__init__.py
+${PYSITELIB}/backports/__init__.pyc
+${PYSITELIB}/backports/__init__.pyo
+${PYSITELIB}/backports/zoneinfo/__init__.py
+${PYSITELIB}/backports/zoneinfo/__init__.pyc
+${PYSITELIB}/backports/zoneinfo/__init__.pyi
+${PYSITELIB}/backports/zoneinfo/__init__.pyo
+${PYSITELIB}/backports/zoneinfo/_common.py
+${PYSITELIB}/backports/zoneinfo/_common.pyc
+${PYSITELIB}/backports/zoneinfo/_common.pyo
+${PYSITELIB}/backports/zoneinfo/_czoneinfo.so
+${PYSITELIB}/backports/zoneinfo/_tzpath.py
+${PYSITELIB}/backports/zoneinfo/_tzpath.pyc
+${PYSITELIB}/backports/zoneinfo/_tzpath.pyo
+${PYSITELIB}/backports/zoneinfo/_version.py
+${PYSITELIB}/backports/zoneinfo/_version.pyc
+${PYSITELIB}/backports/zoneinfo/_version.pyo
+${PYSITELIB}/backports/zoneinfo/_zoneinfo.py
+${PYSITELIB}/backports/zoneinfo/_zoneinfo.pyc
+${PYSITELIB}/backports/zoneinfo/_zoneinfo.pyo
+${PYSITELIB}/backports/zoneinfo/py.typed
