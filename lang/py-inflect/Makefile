@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/05/15 20:52:47 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/04 21:17:43 adam Exp $
 
-DISTNAME=	inflect-6.0.4
+DISTNAME=	inflect-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
@@ -13,9 +13,9 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.1:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
