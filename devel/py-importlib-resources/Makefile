@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/08/07 05:21:12 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/04 21:44:03 adam Exp $
 
-DISTNAME=	importlib_resources-6.0.1
+DISTNAME=	importlib_resources-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
