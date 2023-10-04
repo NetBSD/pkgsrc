@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/05/05 08:33:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/04 20:38:54 adam Exp $
 
-DISTNAME=	argon2-cffi-21.3.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	argon2_cffi-23.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argon2-cffi/}
 
@@ -10,7 +10,9 @@ HOMEPAGE=	https://argon2-cffi.readthedocs.io/
 COMMENT=	Secure Argon2 password hashing algorithm
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.4:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-argon2-cffi-bindings-[0-9]*:../../security/py-argon2-cffi-bindings
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
