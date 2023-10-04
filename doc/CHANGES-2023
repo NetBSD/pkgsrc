@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5737 2023/10/04 12:14:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5738 2023/10/04 16:10:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8360,3 +8360,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/alacritty to 0.12.3 [pin 2023-10-04]
 	Updated www/py-aiohttp-socks to 0.8.4 [adam 2023-10-04]
 	Updated net/py-lexicon to 3.15.0 [adam 2023-10-04]
+	Updated textproc/py-openapi-schema-validator to 0.6.1 [adam 2023-10-04]
+	Updated security/py-google-auth-httplib2 to 0.1.1 [adam 2023-10-04]
+	Updated security/py-google-auth to 2.23.2 [adam 2023-10-04]
+	Updated security/py-google-auth-oauthlib to 1.1.0 [adam 2023-10-04]
