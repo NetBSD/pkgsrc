@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1751 2023/09/13 07:37:17 taca Exp $
+# $NetBSD: Makefile,v 1.1752 2023/10/04 21:37:14 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -690,6 +690,7 @@ SUBDIR+=	py-clearsilver
 SUBDIR+=	py-cookies
 SUBDIR+=	py-curl
 SUBDIR+=	py-daphne
+SUBDIR+=	py-django
 SUBDIR+=	py-django-admin-rangefilter
 SUBDIR+=	py-django-admin-sortable2
 SUBDIR+=	py-django-allauth
