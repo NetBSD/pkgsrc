@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5743 2023/10/04 21:11:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5744 2023/10/04 21:30:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8375,3 +8375,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-hypothesis to 6.87.1 [adam 2023-10-04]
 	Added time/py-backports.zoneinfo version 0.2.1 [adam 2023-10-04]
 	Updated time/py-tzlocal to 5.1 [adam 2023-10-04]
+	Updated lang/py-inflect to 7.0.0 [adam 2023-10-04]
+	Updated lang/py-lsprotocol to 2023.0.0b1 [adam 2023-10-04]
+	Updated lang/py-pygls to 1.1.0 [adam 2023-10-04]
+	Updated www/py-django-admin-rangefilter to 0.11.2 [adam 2023-10-04]
