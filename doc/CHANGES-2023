@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5739 2023/10/04 17:06:37 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5740 2023/10/04 17:14:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8365,3 +8365,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-google-auth to 2.23.2 [adam 2023-10-04]
 	Updated security/py-google-auth-oauthlib to 1.1.0 [adam 2023-10-04]
 	Updated fonts/vlgothic-ttf to 20230918 [tsutsui 2023-10-04]
+	Updated devel/SDL2 to 2.28.4 [adam 2023-10-04]
+	Updated devel/py-packaging to 23.2 [adam 2023-10-04]
