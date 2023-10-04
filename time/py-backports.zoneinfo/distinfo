@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/04 21:01:58 adam Exp $
+
+BLAKE2s (backports.zoneinfo-0.2.1.tar.gz) = dec53b6db3bdcd0d1be58469d6a28d6f906a9834982320162fb9c3488e80cf00
+SHA512 (backports.zoneinfo-0.2.1.tar.gz) = 0197f86a3eaba41cc37006e7bad5ffb3a39afc2d681820f3a405788164b3347df02169405766cfc2b84a5d77915fc034c4acad0c2eb3eeb925869ac6e1035c4b
+Size (backports.zoneinfo-0.2.1.tar.gz) = 74098 bytes
