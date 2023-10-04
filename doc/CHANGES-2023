@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5732 2023/10/04 05:15:23 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5733 2023/10/04 08:21:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8349,3 +8349,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/ttf-tlwg to 0.7.3 [scole 2023-10-04]
 	Updated graphics/feh to 3.10.1 [pin 2023-10-04]
 	Updated x11/xterm to 385 [pin 2023-10-04]
+	Updated lang/vala to 0.56.13 [adam 2023-10-04]
+	Updated textproc/py-regex to 2023.10.3 [adam 2023-10-04]
+	Updated databases/py-psycopg2 to 2.9.9 [adam 2023-10-04]
+	Updated devel/py-traitlets to 5.11.2 [adam 2023-10-04]
