@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/01/29 21:15:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/04 15:17:00 gutteridge Exp $
 
 PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-common-${VERSION}
+DISTNAME=	mate-common-${VERSION:R}.0
 CATEGORIES=	devel
 
 COMMENT=	Sample files for MATE Application development
