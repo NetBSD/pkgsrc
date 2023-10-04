@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/07/08 04:42:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/04 21:44:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -68,13 +68,7 @@ ${PYSITELIB}/importlib_resources/tests/test_reader.py
 ${PYSITELIB}/importlib_resources/tests/test_reader.pyc
 ${PYSITELIB}/importlib_resources/tests/test_resource.py
 ${PYSITELIB}/importlib_resources/tests/test_resource.pyc
-${PYSITELIB}/importlib_resources/tests/update-zips.py
-${PYSITELIB}/importlib_resources/tests/update-zips.pyc
 ${PYSITELIB}/importlib_resources/tests/util.py
 ${PYSITELIB}/importlib_resources/tests/util.pyc
-${PYSITELIB}/importlib_resources/tests/zipdata01/__init__.py
-${PYSITELIB}/importlib_resources/tests/zipdata01/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/zipdata01/ziptestdata.zip
-${PYSITELIB}/importlib_resources/tests/zipdata02/__init__.py
-${PYSITELIB}/importlib_resources/tests/zipdata02/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/zipdata02/ziptestdata.zip
+${PYSITELIB}/importlib_resources/tests/zip.py
+${PYSITELIB}/importlib_resources/tests/zip.pyc
