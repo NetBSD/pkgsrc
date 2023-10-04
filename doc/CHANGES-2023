@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5728 2023/10/03 23:15:11 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5729 2023/10/04 00:14:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8345,3 +8345,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/xfce4-taskmanager to 1.5.6 [gutteridge 2023-10-03]
 	Updated x11/xfce4-clipman-plugin to 1.6.5 [gutteridge 2023-10-03]
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb3 [gutteridge 2023-10-03]
+	Updated devel/swagger-codegen to 3.0.47 [schmonz 2023-10-04]
