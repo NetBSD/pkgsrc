@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/12 19:13:38 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2023/10/04 00:14:23 schmonz Exp $
 
-BLAKE2s (swagger-codegen-cli-3.0.46.jar) = 39a4e2a8c46fef07e25e55a9a86d35da562aa64318351db59f93f9dd17bd7fff
-SHA512 (swagger-codegen-cli-3.0.46.jar) = dba0746a5038e3e839814be67f8cbe6dbd6af0d8578111afd90647bf517c435c3e755ac1b48ecbc4c0c1333bbfdbd01bca8f9d237308b519bd2e56dc4e6bd7d5
-Size (swagger-codegen-cli-3.0.46.jar) = 22297055 bytes
+BLAKE2s (swagger-codegen-cli-3.0.47.jar) = 8110c234aba19e3073e52798493c3aade66c80adef9b9e1040b16c39f6b9fe5b
+SHA512 (swagger-codegen-cli-3.0.47.jar) = 0cd8e1a90339cdea4d9de99b1407a0acd9a4eab4cee44e6d1e2120e1b0af23b22d81cac67d6ec3631684dd11a5f581823cf2abd2fa20a02629a2944bd4d26c46
+Size (swagger-codegen-cli-3.0.47.jar) = 22343923 bytes
