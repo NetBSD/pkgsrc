@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.16 2023/07/01 20:39:15 pin Exp $
+$NetBSD: distinfo,v 1.17 2023/10/04 11:46:35 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
 Size (adler-1.0.2.crate) = 12778 bytes
-BLAKE2s (alacritty-0.12.2.tar.gz) = 0fe881508e16b673ccbe14db11602352f7aeae7da45b9d208304715e4265d2a5
-SHA512 (alacritty-0.12.2.tar.gz) = 7d0866aed0228feb5ca17d631e28c4f0558acac27d64542f0c4e141ad34e2c7ad229dabd8917f479df2dafc29dcc215b49d2cfabcb974f6f58f73b61c0007110
-Size (alacritty-0.12.2.tar.gz) = 1494051 bytes
+BLAKE2s (alacritty-0.12.3.tar.gz) = 55741ceb60cd4a276ae2f3924ef07e98376a7ea187d3b167b7f19122f7026b4c
+SHA512 (alacritty-0.12.3.tar.gz) = 9e3b35d0df0b357ef33ba49a918d6a6e0885a82bfec3a1d5b57784ab0102fa97fcdee5a79f6cf0e9fc3278a4bee5d9ee44a595625c0caf8b76491261eaa4561e
+Size (alacritty-0.12.3.tar.gz) = 1494086 bytes
 BLAKE2s (android-activity-0.4.0.crate) = bda1c24a434b8606284b0ee29c321e5c67c5f00e66012d45aafe77314e2bd843
 SHA512 (android-activity-0.4.0.crate) = 50beaa5353ccece025d913898a070122e7680f8f50e7cc3ee7e23ab972244a0f7623ca34639dad8313f4b62e530c1e2b00ae65a7f84ff5a14e619975339fcca1
 Size (android-activity-0.4.0.crate) = 235580 bytes
@@ -483,9 +483,9 @@ Size (slotmap-1.0.6.crate) = 58954 bytes
 BLAKE2s (smallvec-1.9.0.crate) = 6e8e99380278d160cdfab23047654630418866982e6909c5e84d7024ca27ec6b
 SHA512 (smallvec-1.9.0.crate) = e7158393d4257564eeb8fa53a630fdfc13edb33f3c555e41606edcfdbe9189e5c59c25d255dd21d02d4abad1ab2931e21744ec6c2f91ad4db66f87e748a45e56
 Size (smallvec-1.9.0.crate) = 28396 bytes
-BLAKE2s (smithay-client-toolkit-0.16.0.crate) = 5ea4eac71187f154f4d63e74bd0d036d0cc08890d0914e24d3c4bf52b8042a82
-SHA512 (smithay-client-toolkit-0.16.0.crate) = 448c122ca20dce7017ab2ffdd8af51fe0314ceee987e0b0f151623876f43403cb0b4a18ef54cabf78cf9ad6adaeda3c5c10dc62dfbbb339e74e816ce8b10eb38
-Size (smithay-client-toolkit-0.16.0.crate) = 132020 bytes
+BLAKE2s (smithay-client-toolkit-0.16.1.crate) = 24aea24749ff4692312ffe86607de34f91ec44233531faa606621395f83915a8
+SHA512 (smithay-client-toolkit-0.16.1.crate) = cdaa60f377e087ea7c450b662bc348e53b2eb9f08f44ef0637f462dc4090bb44d7244269ffc184776b206dfd4299d0576c88ee9d33b095494c61165f86e118eb
+Size (smithay-client-toolkit-0.16.1.crate) = 131081 bytes
 BLAKE2s (smithay-clipboard-0.6.6.crate) = ec594b1313605af1b4e865094048feea2a01c0fd69fecaf1ef98b4b2a543d80e
 SHA512 (smithay-clipboard-0.6.6.crate) = d6380f0b94bcfdb825dc11e061143149c7b90fe31cd257736c8d28dac8e45337f187b4cc7932e852ec9cc67cee3569ddc95d2eee04adf61f1c4060205a0a350c
 Size (smithay-clipboard-0.6.6.crate) = 16797 bytes
@@ -663,9 +663,9 @@ Size (windows_x86_64_msvc-0.36.1.crate) = 661999 bytes
 BLAKE2s (windows_x86_64_msvc-0.42.1.crate) = 743e9ff88ae09d71b37775d3ec7b407548829c19507f2d4ab668044026c0a704
 SHA512 (windows_x86_64_msvc-0.42.1.crate) = a651b1a34f101125f929c1d1f5e933691c7a5c19d0bb0c501fb6812236d2771805428e3bd5e05be7d72715595f5fc9e7978dd7934e5d92e9b78a41c2ece695b2
 Size (windows_x86_64_msvc-0.42.1.crate) = 664606 bytes
-BLAKE2s (winit-0.28.6.crate) = ea85a33545134e22652624c74fbe2825482754ef7d972be4d9e95fd8366a5465
-SHA512 (winit-0.28.6.crate) = d7e3690aed7a1f7c29b33cfcc6802b5119b266a6128d1323c6dc47a3338fd5f8a2b9aa8e804458b6118a235fda684f0b1377e3a595846031d721d7f3a82c4f05
-Size (winit-0.28.6.crate) = 407165 bytes
+BLAKE2s (winit-0.28.7.crate) = 64d9ecefd85e8f1b1393f1023863acb420026898ae662ce2767a04a29710b98c
+SHA512 (winit-0.28.7.crate) = 4879d3676efd3be8523456be54277684fee8d804482eba6c6e6ba1ac00606da9424f352a8d8ed79a80f61938d442f5fbcd32ee1fad8ae7927b5d96e55a2e7ebb
+Size (winit-0.28.7.crate) = 407921 bytes
 BLAKE2s (winreg-0.10.1.crate) = 6932ce51a190f71d7f3d28a5e2e11f3406b5e22f5933ec4e490783ffb67cccd5
 SHA512 (winreg-0.10.1.crate) = 09f2d18f62c3c427ebed40d667b672bb778629502ad3c39541f324b2d5ac41f0822c98b7e5320314144130580da46f1e8e51928941850e7d4af28455a564360c
 Size (winreg-0.10.1.crate) = 25725 bytes
