@@ -1,0 +1,3 @@
+This package was originally the reference implementation for PEP 615, which
+proposes support for the IANA time zone database in the standard library, and
+now serves as a backport to Python 3.6+ (including PyPy).
