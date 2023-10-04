@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/04 16:04:56 adam Exp $
 
-DISTNAME=	google-auth-httplib2-0.1.0
+DISTNAME=	google-auth-httplib2-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth-httplib2/}
 
@@ -12,8 +11,7 @@ COMMENT=	Google Authentication Library: httplib2 transport
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-google-auth-[0-9]*:../../security/py-google-auth
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.15.0:../../www/py-httplib2
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.19.0:../../www/py-httplib2
 
 USE_LANGUAGES=	# none
 
