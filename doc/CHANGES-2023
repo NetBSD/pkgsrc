@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5740 2023/10/04 17:14:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5741 2023/10/04 20:25:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8367,3 +8367,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/vlgothic-ttf to 20230918 [tsutsui 2023-10-04]
 	Updated devel/SDL2 to 2.28.4 [adam 2023-10-04]
 	Updated devel/py-packaging to 23.2 [adam 2023-10-04]
+	Updated www/py-django3 to 3.2.22 [adam 2023-10-04]
+	Updated math/py-asdf to 2.15.2 [adam 2023-10-04]
+	Updated devel/py-rope to 1.10.0 [adam 2023-10-04]
+	Updated time/py-iso8601 to 2.1.0 [adam 2023-10-04]
