@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5742 2023/10/04 20:43:57 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5743 2023/10/04 21:11:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8373,3 +8373,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/py-iso8601 to 2.1.0 [adam 2023-10-04]
 	Updated security/py-argon2-cffi to 23.1.0 [adam 2023-10-04]
 	Updated devel/py-hypothesis to 6.87.1 [adam 2023-10-04]
+	Added time/py-backports.zoneinfo version 0.2.1 [adam 2023-10-04]
+	Updated time/py-tzlocal to 5.1 [adam 2023-10-04]
