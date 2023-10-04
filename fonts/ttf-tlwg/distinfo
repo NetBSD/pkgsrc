@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:28:38 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/10/04 01:37:09 scole Exp $
 
-BLAKE2s (ttf-tlwg-0.7.2.tar.xz) = 285f1503f9c9b86fdf5d8efb0026f0c000702d9701017716e5655f41a9622376
-SHA512 (ttf-tlwg-0.7.2.tar.xz) = dd5865da81bbb10665c561ae188197a3bb0831162bf69795298f80f8aff1a210fce8e3d961476a878851376d15d95dd7d36144d53e8123a309ea883ced1a7e58
-Size (ttf-tlwg-0.7.2.tar.xz) = 1958780 bytes
+BLAKE2s (ttf-tlwg-0.7.3.tar.xz) = f42cc09ea1bdb71fcd18a173f9e74e40d9063436b5f3de4282a88b89be60557b
+SHA512 (ttf-tlwg-0.7.3.tar.xz) = 38fa68858c29353840a5f6fd1dc68a35bff91b92fddaf1ce8fff004933bac076967721b01bfa03063e6ca8bb1baccd136520212326785bbfaab88dc110c13ce3
+Size (ttf-tlwg-0.7.3.tar.xz) = 1958888 bytes
