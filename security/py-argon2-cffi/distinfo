@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/05/05 08:33:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/10/04 20:38:54 adam Exp $
 
-BLAKE2s (argon2-cffi-21.3.0.tar.gz) = 9ae1325128fde5f58fabaef6b02ea8071c787e21961ab1fbe75ddace6794d4f9
-SHA512 (argon2-cffi-21.3.0.tar.gz) = 6cb2a075f3bb7040ee7f552d082bfa2f3df0854649d9c84fdfdb42bb4bee2133b8a35a20be2b3c887931efda12fbbb00815d8d88170b7e20b3ca19c86f97057e
-Size (argon2-cffi-21.3.0.tar.gz) = 38446 bytes
+BLAKE2s (argon2_cffi-23.1.0.tar.gz) = 136e1502932a0ac6f7f9c9d3dabc51d625707be7f7dd8e7fbf87f7e3fae5652c
+SHA512 (argon2_cffi-23.1.0.tar.gz) = 7c7730451f5ef9bb40bb5e1bbfa6e69c9718968168f3fa9b54e1020a4f805f98fba6260039bda804241717db2338479d640c7652dc26ce1a6ade076660133383
+Size (argon2_cffi-23.1.0.tar.gz) = 42798 bytes
