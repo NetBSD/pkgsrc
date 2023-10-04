@@ -1,25 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2023/09/09 21:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/04 21:24:42 adam Exp $
 # Changes:
 # https://github.com/microsoft/lsprotocol/releases
 
-DISTNAME=	lsprotocol-2023.0.0a3
+DISTNAME=	lsprotocol-2023.0.0b1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	lang
+CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lsprotocol/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/lsprotocol/
+HOMEPAGE=	https://github.com/microsoft/lsprotocol
 COMMENT=	Python implementation of the Language Server Protocol
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
-# from https://github.com/microsoft/lsprotocol/blob/main/requirements.in
-DEPENDS+=	${PYPKGPREFIX}-attrs>=0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-cattrs>=0:../../devel/py-cattrs
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=0:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=0:../../devel/py-importlib-resources
-DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-hamcrest>=0:../../devel/py-hamcrest
+DEPENDS+=	${PYPKGPREFIX}-attrs>=21.3.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-cattrs-[0-9]*:../../devel/py-cattrs
 
 USE_LANGUAGES=	# none
 
