@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2023/06/16 21:20:39 wiz Exp $
+$NetBSD: distinfo,v 1.16 2023/10/04 20:24:47 adam Exp $
 
-BLAKE2s (iso8601-2.0.0.tar.gz) = e9a7c8c51826ddedefc07650f3883b68b1d8141e17d59e2e0bdf7090ed3a0ca6
-SHA512 (iso8601-2.0.0.tar.gz) = 786bd2604cedeba8bfaa3ca0077057540fc898d9f942627958955406705f104c2109f20c84dfc79674178dfaf4bd0936b4e7759024c7f4b8ed130e40bbfc3c07
-Size (iso8601-2.0.0.tar.gz) = 6497 bytes
+BLAKE2s (iso8601-2.1.0.tar.gz) = 2b8c45cee489b7fcb133ed09f014d86a4d1ea88ad924a90fac4c7a98480009c6
+SHA512 (iso8601-2.1.0.tar.gz) = db57ab2a25ef91e3bc479c8539d27e853cf1fbf60986820b8999ae15d7e566425a1e0cfba47d0f3b23aa703db0576db368e6c110ba2a2f46c9a34e8ee3611fb7
+Size (iso8601-2.1.0.tar.gz) = 6522 bytes
