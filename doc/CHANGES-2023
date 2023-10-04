@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5741 2023/10/04 20:25:30 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5742 2023/10/04 20:43:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8371,3 +8371,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-asdf to 2.15.2 [adam 2023-10-04]
 	Updated devel/py-rope to 1.10.0 [adam 2023-10-04]
 	Updated time/py-iso8601 to 2.1.0 [adam 2023-10-04]
+	Updated security/py-argon2-cffi to 23.1.0 [adam 2023-10-04]
+	Updated devel/py-hypothesis to 6.87.1 [adam 2023-10-04]
