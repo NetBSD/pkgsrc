@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/09/13 19:33:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/04 12:09:05 adam Exp $
 
-DISTNAME=	aiohttp_socks-0.8.3
+DISTNAME=	aiohttp_socks-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp-socks/}
@@ -11,7 +11,7 @@ COMMENT=	SOCKS proxy connector for aiohttp
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=2.3.2:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-python-socks>=2.0.0:../../net/py-python-socks
+DEPENDS+=	${PYPKGPREFIX}-python-socks>=2.4.3:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
 
