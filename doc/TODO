@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23411 2023/10/04 21:45:11 gutteridge Exp $
+$NetBSD: TODO,v 1.23412 2023/10/04 21:52:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1203,7 +1203,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-barman-3.0.1
 	o py-cairo-1.25.0
 	o py-cassa-1.11.0
-	o py-cffi-1.16.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-contourpy-1.1.1
 	o py-cycler-0.12.0
@@ -1224,7 +1223,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-icalendar-5.0.10
-	o py-importlib-resources-6.1.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
