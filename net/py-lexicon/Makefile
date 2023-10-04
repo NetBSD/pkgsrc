@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2023/08/25 15:25:44 adam Exp $
+# $NetBSD: Makefile,v 1.87 2023/10/04 12:13:58 adam Exp $
 
-DISTNAME=	dns_lexicon-3.14.1
+DISTNAME=	dns_lexicon-3.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-otp>=2:../../security/py-otp
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tldextract>=2:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
@@ -20,6 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
+.endif
 
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
