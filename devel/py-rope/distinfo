@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2023/07/04 13:15:37 adam Exp $
+$NetBSD: distinfo,v 1.25 2023/10/04 20:21:18 adam Exp $
 
-BLAKE2s (rope-1.9.0.tar.gz) = 644bff1c6e6077a2ae7b7c8fc9afa2725ea217b307df44837777711148a357a3
-SHA512 (rope-1.9.0.tar.gz) = fd8cc75c70814afc427fbccbe8a1389773737ee664a42a43bb2fb7e7ff667fac4680d233c751ee15b03e41b60ba270b3cf48b1a766420468e4a7c974e4c0158c
-Size (rope-1.9.0.tar.gz) = 298227 bytes
+BLAKE2s (rope-1.10.0.tar.gz) = fa98744eda92e221cf5e7a0566d7c7d305ed6f5bc642212cac91b7304f08bcb7
+SHA512 (rope-1.10.0.tar.gz) = 3a8c31a89f14a78f9a0931e87e21b0a617891382e879b50a6fa846ad576ad6bf62f81ccd8c00bd237b77807832a760120256655ac4d6a73626c0b0f1b5c61100
+Size (rope-1.10.0.tar.gz) = 299732 bytes
