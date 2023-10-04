@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/06/17 10:06:28 markd Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/04 19:50:49 markd Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2023.67039
+PKGREVISION=	1
 TEXLIVE_REV=	67039
 
 MAINTAINER=	minskim@NetBSD.org
@@ -24,7 +25,6 @@ CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/context/ruby/*.rb
 REPLACE_TEXLUA=		bin/mtxrun
 
 TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.mkii\\ncont-en xetex cont-usr.tex -8bit *cont-en.mkii\\n"
-TEX_MAP_FILES+=		original-context-symbol.map
 
 INSTALLATION_DIRS+=	bin
 
