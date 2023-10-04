@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/05/21 18:47:56 wiz Exp $
+$NetBSD: distinfo,v 1.12 2023/10/04 21:27:48 adam Exp $
 
-BLAKE2s (pygls-1.0.2.tar.gz) = 9c135b5e594fb61f9e474e15ae8a2672d191354f00aaf9be895c2d4e018d5689
-SHA512 (pygls-1.0.2.tar.gz) = 68b6e643d95456aa10d33bb2ae77c714e9edd26af0aa3e8e913d746b61d88f37e642af32774b4f21befa76078a7574fc5bd149454ce29da5201b60dc0efd8af3
-Size (pygls-1.0.2.tar.gz) = 674931 bytes
+BLAKE2s (pygls-1.1.0.tar.gz) = b7a633fba301f499a3fc996d3a74a8064be39784ab44d2bd90521b976c68c281
+SHA512 (pygls-1.1.0.tar.gz) = f20a9f35eb6165ae372adb2f9d291932a283dfef75d2117f8c3399d78a2fe6a1fdf47c75f6bce884003f2ba60c0e921fc7d6138710f11247fd9b2200b0b2d71a
+Size (pygls-1.1.0.tar.gz) = 45589 bytes
