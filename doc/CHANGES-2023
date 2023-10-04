@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5731 2023/10/04 05:14:01 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5732 2023/10/04 05:15:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8348,3 +8348,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.47 [schmonz 2023-10-04]
 	Updated fonts/ttf-tlwg to 0.7.3 [scole 2023-10-04]
 	Updated graphics/feh to 3.10.1 [pin 2023-10-04]
+	Updated x11/xterm to 385 [pin 2023-10-04]
