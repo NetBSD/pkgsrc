@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2023/10/05 04:46:05 gutteridge Exp $
+
+Allow for differences between meson's idea of the path to Python and the
+version that's actually the target. (meson is not py-versioned.)
+
+--- meson.build.orig	1970-01-01 00:00:00.000000000 +0000
++++ meson.build
+@@ -2,7 +2,7 @@
+ project(
+     'pandas',
+     'c', 'cpp', 'cython',
+-    version: run_command(['generate_version.py', '--print'], check: true).stdout().strip(),
++    version: run_command(['@TOOL_PYTHONBIN@', 'generate_version.py', '--print'], check: true).stdout().strip(),
+     license: 'BSD-3',
+     meson_version: '>=1.2.1',
+     default_options: [
