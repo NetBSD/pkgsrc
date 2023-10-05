@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5746 2023/10/04 21:52:32 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5747 2023/10/05 20:12:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8383,3 +8383,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-codespell to 2.2.6 [adam 2023-10-04]
 	Updated devel/py-importlib-resources to 6.1.0 [adam 2023-10-04]
 	Updated devel/py-cffi to 1.16.0 [adam 2023-10-04]
+	Updated wm/pekwm to 0.3.0 [pin 2023-10-05]
