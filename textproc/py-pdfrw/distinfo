@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/10/05 22:13:32 wiz Exp $
 
 BLAKE2s (pdfrw-0.4.tar.gz) = 9f875b3a0a6433eed64d1c24a4ef140f6d4d5c6118f15110c858c5f8b4bd81aa
 SHA512 (pdfrw-0.4.tar.gz) = 6c0b629e837f9bd479a288bcd040952b98920da345113bf90167becbdf2f90a9d6c082c5e7988c68118bd62a2a5a0d22f98523407996531bb5d3031e847e10b0
 Size (pdfrw-0.4.tar.gz) = 95402 bytes
+SHA1 (patch-pdfrw_pdfreader.py) = 100dbfdfae74d83673a6aec6349695abb592c89b
