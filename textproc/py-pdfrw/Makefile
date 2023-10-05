@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/09/28 22:19:36 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/05 22:13:32 wiz Exp $
 
 DISTNAME=	pdfrw-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdfrw/}
 
