@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.77 2023/08/16 08:07:01 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.78 2023/10/05 16:31:51 rhialto Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -209,6 +209,9 @@ PKG_DBDIR_ERROR=	Compatibility pkgdb location exists, but PKG_DBDIR not specifie
 			PKG_DBDIR=/var/db/pkg to /etc/mk.conf.
 .endif
 
+.if exists(/usr/bin/ctfconvert)
+_OPSYS_SUPPORTS_CTF=		yes # Compact Type Format conversion.
+.endif
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
 _OPSYS_SUPPORTS_MKTOOLS=	yes
 
