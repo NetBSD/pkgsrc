@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.12 2023/10/05 18:53:36 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.13 2023/10/05 19:06:44 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25396,3 +25396,13 @@ freerdp2<2.11.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-393
 freerdp2<2.11.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-39352
 freerdp2<2.11.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39350
 freerdp2<2.11.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-39351
+gnupg2-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3219
+libmicrohttpd<0.9.76	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-27371
+libde265<1.0.11	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-25221
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24758
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24757
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24756
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24754
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24755
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24752
+libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24751
