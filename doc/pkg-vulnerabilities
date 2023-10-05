@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.9 2023/10/05 13:48:21 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.10 2023/10/05 14:13:03 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25341,3 +25341,16 @@ zabbix<4.0.47	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-29456
 zabbix<4.0.46	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-29457
 zabbix<4.0.46	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-29455
 zabbix<4.0.46	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-29454
+freeimage<1.18.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-40266
+freeimage<1.18.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-40265
+freeimage<1.18.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-40264
+freeimage<1.18.0	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-40262
+freeimage-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-40263
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-24295
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-24293
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-24294
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-24292
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-22524
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21428
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21426
+freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21427
