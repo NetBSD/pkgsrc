@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.10 2023/10/05 14:13:03 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.11 2023/10/05 18:34:29 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25354,3 +25354,26 @@ freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-22524
 freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21428
 freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21426
 freeimage-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-21427
+wireshark<4.0.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1161
+wireshark<4.0.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1992
+wireshark<4.0.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1994
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2879
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2858
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2857
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2856
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2855
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2854
+wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2952
+wireshark<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0667
+wireshark>=4<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0666
+wireshark<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0668
+wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3649
+wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3648
+wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4513
+wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4512
+wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4511
+wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-5371
+w3m-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
+w3m-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38253
+vsftpd-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-30047
+vorbis-tools-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43361
