@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/09/28 16:01:24 adam Exp $
+# $NetBSD: Makefile,v 1.50 2023/10/05 04:46:05 gutteridge Exp $
 
 DISTNAME=	pandas-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.33:../../devel/py-cython
+TOOL_DEPENDS+=	meson>=1.2.1:../../devel/meson  # Directly expresses meson minimum
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13.1:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
@@ -26,6 +27,12 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 USE_CXX_FEATURES=	c++11
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_MESSAGE.python=	Fixing python binary name.
+SUBST_FILES.python=	meson.build
+SUBST_VARS.python=	TOOL_PYTHONBIN
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
