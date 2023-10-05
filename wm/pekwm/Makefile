@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2023/01/29 21:18:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2023/10/05 20:12:15 pin Exp $
 
-DISTNAME=	pekwm-0.2.1
-PKGREVISION=	1
+DISTNAME=	pekwm-0.3.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pekdon/}
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
@@ -11,7 +10,6 @@ HOMEPAGE=	https://www.pekwm.se/
 COMMENT=	Light, unobtrusive, and configurable window manager
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -35,4 +33,9 @@ pre-configure:
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo-gobject/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
