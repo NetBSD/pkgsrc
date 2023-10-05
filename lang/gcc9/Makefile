@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2023/08/29 09:48:47 nia Exp $
+# $NetBSD: Makefile,v 1.48 2023/10/05 05:20:10 gutteridge Exp $
 
 GCC_PKGNAME=	gcc9
-PKGREVISION= 1
 .include "version.mk"
 
 DISTNAME=	gcc-${GCC9_DIST_VERSION}
@@ -10,6 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC9_DIST_VERSION}
 ## lang/gcc9-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
 CATEGORIES=	lang
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC9_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
