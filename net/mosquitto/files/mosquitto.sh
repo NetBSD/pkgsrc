@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mosquitto.sh,v 1.5 2021/02/01 20:50:01 triaxx Exp $
+# $NetBSD: mosquitto.sh,v 1.6 2023/10/06 07:50:54 triaxx Exp $
 #
 # PROVIDE: mosquitto
 # REQUIRE: DAEMON
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="mosquitto"
 rcvar=$name
