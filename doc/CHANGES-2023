@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5763 2023/10/06 18:39:42 leot Exp $
+$NetBSD: CHANGES-2023,v 1.5764 2023/10/06 19:20:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8423,3 +8423,18 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated multimedia/assimp to 5.3.1 [adam 2023-10-06]
 	Updated devel/gperftools to 2.13 [adam 2023-10-06]
 	Updated devel/regal to 0.10.1 [leot 2023-10-06]
+	Updated devel/lld to 16.0.6 [adam 2023-10-06]
+	Updated devel/lldb to 16.0.6 [adam 2023-10-06]
+	Updated devel/polly to 16.0.6 [adam 2023-10-06]
+	Updated lang/clang to 16.0.6 [adam 2023-10-06]
+	Updated lang/clang-tools-extra to 16.0.6 [adam 2023-10-06]
+	Updated lang/compiler-rt to 16.0.6 [adam 2023-10-06]
+	Updated lang/libcxx to 16.0.6 [adam 2023-10-06]
+	Updated lang/libcxxabi to 16.0.6 [adam 2023-10-06]
+	Updated lang/libunwind to 16.0.6 [adam 2023-10-06]
+	Updated lang/llvm to 16.0.6 [adam 2023-10-06]
+	Updated lang/wasi-compiler-rt to 16.0.6 [adam 2023-10-06]
+	Updated lang/wasi-libcxx to 16.0.6 [adam 2023-10-06]
+	Updated parallel/openmp to 16.0.6 [adam 2023-10-06]
+	Added lang/mlir version 16.0.6 [adam 2023-10-06]
+	Added lang/flang version 16.0.6 [adam 2023-10-06]
