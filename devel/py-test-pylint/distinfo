@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/13 16:21:21 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/10/06 12:43:24 adam Exp $
 
-BLAKE2s (pytest-pylint-0.19.0.tar.gz) = d0a92b1eddb52eda298e4c2f8b299898606d8184f43f8d689fbd29812baf6202
-SHA512 (pytest-pylint-0.19.0.tar.gz) = 4d6d18ef3f93561d39759124e9d8f01759a6e5fbd82ede470cae84fbabba55a627f0e05d109eadee6ebabaacc2fd65618104db7e2cb3d165d1ca2014a57938c4
-Size (pytest-pylint-0.19.0.tar.gz) = 13801 bytes
+BLAKE2s (pytest-pylint-0.21.0.tar.gz) = 5fadfd4d1c7631133a6f63d7580f778742ab857e4d29a59c806a8f103eb0329c
+SHA512 (pytest-pylint-0.21.0.tar.gz) = 5c7c7fc8ffd5fa9a3f216339db9ec965bb81d14efe6c70cff74a782e1cd092ca762a6bba1cf517decf97ff903338cf20045ec80580fd30d7f676c1e4c47fe96f
+Size (pytest-pylint-0.21.0.tar.gz) = 14250 bytes
