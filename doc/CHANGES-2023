@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5760 2023/10/06 12:43:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5761 2023/10/06 13:48:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8418,3 +8418,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/ugrep to 4.2.0 [adam 2023-10-06]
 	Updated net/wireshark to 4.0.10 [adam 2023-10-06]
 	Updated devel/py-test-pylint to 0.21.0 [adam 2023-10-06]
+	Updated sysutils/ansible-lint to 6.20.3 [adam 2023-10-06]
+	Updated devel/blosc2 to 2.10.5 [adam 2023-10-06]
