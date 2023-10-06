@@ -1,10 +1,10 @@
-$NetBSD: patch-src_object.c,v 1.3 2015/04/13 11:33:35 fhajny Exp $
+$NetBSD: patch-src_object.c,v 1.4 2023/10/06 07:27:44 triaxx Exp $
 
 Add MirBSD support.
 
 --- src/object.c.orig	2015-04-01 14:01:44.000000000 +0000
 +++ src/object.c
-@@ -32,7 +32,7 @@
+@@ -34,7 +34,7 @@
  #include <math.h>
  #include <ctype.h>
  

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2023/09/13 17:24:37 adam Exp $
+# $NetBSD: Makefile,v 1.84 2023/10/06 07:27:43 triaxx Exp $
 
 DISTNAME=	redis-7.2.1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -11,10 +12,11 @@ LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	tcl>=8.5:../../lang/tcl
 
-USE_LANGUAGES=	c99
-USE_TOOLS+=	gmake pkg-config
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
+USE_TOOLS+=		gmake pkg-config
 # Don't let LTO kick in as it is not supported on all platforms.
-MAKE_ENV+=	OPTIMIZATION=${DBG:U-O2:Q}
+MAKE_ENV+=		OPTIMIZATION=${DBG:U-O2:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
