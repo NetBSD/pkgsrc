@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23412 2023/10/04 21:52:32 adam Exp $
+$NetBSD: TODO,v 1.23413 2023/10/06 10:20:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -1216,8 +1216,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-fonttools-4.43.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-core-2.12.0
-	o py-google-api-python-client-2.101.0
 	o py-grpcio-1.59.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
