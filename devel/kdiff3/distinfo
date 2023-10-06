@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/07/11 00:13:07 gutteridge Exp $
+$NetBSD: distinfo,v 1.23 2023/10/06 03:23:17 gutteridge Exp $
 
-BLAKE2s (kdiff3-1.10.5.tar.xz) = e9603612686cfae390c167bf8da55e313346984430f2438f5782167387baa9f2
-SHA512 (kdiff3-1.10.5.tar.xz) = 567feae45f622fe07c33435949da2418b74a986afad72b25a53f1bf9d628e4a5dc2b2e915caec9ddeb02a57e0309ecde6554af100e38af3143f7601f9a8a12f2
-Size (kdiff3-1.10.5.tar.xz) = 1119712 bytes
+BLAKE2s (kdiff3-1.10.6.tar.xz) = 7b8e3110ab047684f398792e940c3c87ba8b3818f476a9bc51a1ea12d958ce55
+SHA512 (kdiff3-1.10.6.tar.xz) = 86b6274acddd58ff80d6d1c83aa884987af05df1b820732394d52197c43adfb13258336de38ffa87203ed8700dd1b9725c96a8be67c48e1189ea776216152e7f
+Size (kdiff3-1.10.6.tar.xz) = 1122552 bytes
