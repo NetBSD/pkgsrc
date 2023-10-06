@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2023/10/06 10:19:56 riastradh Exp $
+$NetBSD: distinfo,v 1.5 2023/10/06 10:20:18 riastradh Exp $
 
 BLAKE2s (addr2line-0.20.0.crate) = 325dbd01710a578526165bf191bc3df1e1b7afa6492f90662ecb33b2c2643d2d
 SHA512 (addr2line-0.20.0.crate) = f9794772a31dd01096b168b4b4ffe311d4850c69fd77dd72c1e532a94ef7b23c31cccb9033848822521510f1fcc2ad0fdd824cf7efb9ed43828dc0165165b319
@@ -330,3 +330,4 @@ Size (zstd-safe-6.0.5+zstd.1.5.4.crate) = 20863 bytes
 BLAKE2s (zstd-sys-2.0.8+zstd.1.5.5.crate) = 6b0ec4a18acadf02653ceb28a5d25cac6314c8b457f722c5ff8d8df17bf171ec
 SHA512 (zstd-sys-2.0.8+zstd.1.5.5.crate) = acfbf6c464678438bcab289c8be2e67a2bdfb910143d77363bf1ad5227dffc4b60e224388b7e59186fd4d1e017b63fef49734e99e383cbda19b82b4ed382fcd8
 Size (zstd-sys-2.0.8+zstd.1.5.5.crate) = 736270 bytes
+SHA1 (patch-src_cinnabar-fast-import.c) = deff3f60be790748c64708c637c8a23119765e01
