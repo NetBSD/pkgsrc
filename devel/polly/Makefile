@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.22 2023/10/06 19:15:19 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -13,19 +13,14 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 
-CONFIGURE_DIRS=		${WRKDIR}/build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-USE_LANGUAGES=		c c++14
-USE_CXX_FEATURES+=	c++14
-USE_CMAKE=		yes
+USE_CXX_FEATURES+=	c++17
+USE_LANGUAGES=		c c++
+GCC_REQD+=		4.8
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
-post-extract:
-	${MKDIR} ${WRKDIR}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

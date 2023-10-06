@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2023/10/06 19:15:21 adam Exp $
+
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (flang-16.0.6.src.tar.xz) = e6c603ee4fa9243e99ec39c5924b8ea5cca868e1830d7b58e4ee7399cd368c39
+SHA512 (flang-16.0.6.src.tar.xz) = 42c1d978946fae320cd4d91e766f1bc5b83ffe0ba676e245b287f5460ffaee25e77f5a1c118e94c0329922dfb9c10f06fb7d76c63481108ba0bd3ae4a0d7937e
+Size (flang-16.0.6.src.tar.xz) = 2369292 bytes

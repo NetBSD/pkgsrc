@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2022/11/14 18:44:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/10/06 19:15:20 adam Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
+bin/clang-include-cleaner
 bin/clang-include-fixer
 bin/clang-move
 bin/clang-pseudo
@@ -107,6 +108,7 @@ include/clang-tidy/bugprone/SizeofContainerCheck.h
 include/clang-tidy/bugprone/SizeofExpressionCheck.h
 include/clang-tidy/bugprone/SmartPtrArrayMismatchCheck.h
 include/clang-tidy/bugprone/SpuriouslyWakeUpFunctionsCheck.h
+include/clang-tidy/bugprone/StandaloneEmptyCheck.h
 include/clang-tidy/bugprone/StringConstructorCheck.h
 include/clang-tidy/bugprone/StringIntegerAssignmentCheck.h
 include/clang-tidy/bugprone/StringLiteralWithEmbeddedNulCheck.h
@@ -116,6 +118,7 @@ include/clang-tidy/bugprone/SuspiciousIncludeCheck.h
 include/clang-tidy/bugprone/SuspiciousMemoryComparisonCheck.h
 include/clang-tidy/bugprone/SuspiciousMemsetUsageCheck.h
 include/clang-tidy/bugprone/SuspiciousMissingCommaCheck.h
+include/clang-tidy/bugprone/SuspiciousReallocUsageCheck.h
 include/clang-tidy/bugprone/SuspiciousSemicolonCheck.h
 include/clang-tidy/bugprone/SuspiciousStringCompareCheck.h
 include/clang-tidy/bugprone/SwappedArgumentsCheck.h
@@ -147,8 +150,11 @@ include/clang-tidy/cert/ThrownExceptionTypeCheck.h
 include/clang-tidy/cert/VariadicFunctionDefCheck.h
 include/clang-tidy/concurrency/MtUnsafeCheck.h
 include/clang-tidy/concurrency/ThreadCanceltypeAsynchronousCheck.h
+include/clang-tidy/cppcoreguidelines/AvoidConstOrRefDataMembersCheck.h
+include/clang-tidy/cppcoreguidelines/AvoidDoWhileCheck.h
 include/clang-tidy/cppcoreguidelines/AvoidGotoCheck.h
 include/clang-tidy/cppcoreguidelines/AvoidNonConstGlobalVariablesCheck.h
+include/clang-tidy/cppcoreguidelines/AvoidReferenceCoroutineParametersCheck.h
 include/clang-tidy/cppcoreguidelines/InitVariablesCheck.h
 include/clang-tidy/cppcoreguidelines/InterfacesGlobalInitCheck.h
 include/clang-tidy/cppcoreguidelines/MacroUsageCheck.h
@@ -225,6 +231,7 @@ include/clang-tidy/misc/UniqueptrResetReleaseCheck.h
 include/clang-tidy/misc/UnusedAliasDeclsCheck.h
 include/clang-tidy/misc/UnusedParametersCheck.h
 include/clang-tidy/misc/UnusedUsingDeclsCheck.h
+include/clang-tidy/misc/UseAnonymousNamespaceCheck.h
 include/clang-tidy/modernize/AvoidBindCheck.h
 include/clang-tidy/modernize/AvoidCArraysCheck.h
 include/clang-tidy/modernize/ConcatNestedNamespacesCheck.h
@@ -267,6 +274,7 @@ include/clang-tidy/objc/AvoidNSErrorInitCheck.h
 include/clang-tidy/objc/DeallocInCategoryCheck.h
 include/clang-tidy/objc/ForbiddenSubclassingCheck.h
 include/clang-tidy/objc/MissingHashCheck.h
+include/clang-tidy/objc/NSDateFormatterCheck.h
 include/clang-tidy/objc/NSInvocationArgumentLifetimeCheck.h
 include/clang-tidy/objc/PropertyDeclarationCheck.h
 include/clang-tidy/objc/SuperSelfCheck.h

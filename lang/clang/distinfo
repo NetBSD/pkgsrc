@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.80 2023/01/12 19:32:53 adam Exp $
+$NetBSD: distinfo,v 1.81 2023/10/06 19:15:20 adam Exp $
 
-BLAKE2s (clang-15.0.7.src.tar.xz) = b88c92b2a839ac5eecedc5ba3d08d1ade419f418cc65adcec4de9e4e48ef1177
-SHA512 (clang-15.0.7.src.tar.xz) = 9fd2736a9f5993ddbb5b3c507fe497234a6def64f6f418f379d1ca56c9c361ad1ae9a5445ab938230fbc1671ec00b4f802a412b048569023863c20dc6bb46a1f
-Size (clang-15.0.7.src.tar.xz) = 18540648 bytes
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
+BLAKE2s (clang-16.0.6.src.tar.xz) = 528647ba7c3b87280ceb8c4a46eecf514600bad27cd1b71ee5ab32a28f8c5069
+SHA512 (clang-16.0.6.src.tar.xz) = 92c65b882e1504f4a9b8a3f6b8a24061505987aaacc8bb835115b4e4d74ac3a8c98343a308567b07c6b42bb99877c300bce3c4a5a25ada77abe65606aa25188d
+Size (clang-16.0.6.src.tar.xz) = 20356652 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 02533d1de2c92a431d9c5d4567f348deff056b99
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
-SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = ad22a65fb75c266e4f56e3004844f084f92a988f
+SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 39d72a7f6cb9d0780c9fb79de6d032f320cccce3
 SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 22d1ddef34b8df3cc29c4632108d45904797aff3
 SHA1 (patch-lib_Interpreter_IncrementalParser.cpp) = c5ace959ce566478316447b1621e9bfd9a537cc5
-SHA1 (patch-lib_Lex_InitHeaderSearch.cpp) = 6f8e3d21efbaf3b90bf6c9859ca703d50fa35a46
+SHA1 (patch-lib_Lex_InitHeaderSearch.cpp) = 4f0164da57d66f42c86a812e9b6703712ef7391c
 SHA1 (patch-tools_clang-shlib_CMakeLists.txt) = 2dce9cfc1e114a79fab457211eea1ee93c2198f4
 SHA1 (patch-tools_libclang_CMakeLists.txt) = 7e5655fc753ef20c8b08d1de438b26dcd3434525

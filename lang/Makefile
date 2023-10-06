@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2023/10/02 20:07:14 adam Exp $
+# $NetBSD: Makefile,v 1.699 2023/10/06 19:15:19 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -58,6 +58,7 @@ SUBDIR+=	execline
 SUBDIR+=	f2c
 SUBDIR+=	fennel
 SUBDIR+=	ficl
+SUBDIR+=	flang
 SUBDIR+=	focal
 SUBDIR+=	fort77
 SUBDIR+=	forth-retro
@@ -174,6 +175,7 @@ SUBDIR+=	mercury
 SUBDIR+=	micropython
 SUBDIR+=	minischeme
 SUBDIR+=	mit-scheme-bin
+SUBDIR+=	mlir
 SUBDIR+=	mono
 SUBDIR+=	mono-basic
 SUBDIR+=	moscow_ml

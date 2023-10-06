@@ -1,0 +1,11 @@
+$NetBSD: patch-utils_llvm-lit_CMakeLists.txt,v 1.1 2023/10/06 19:15:20 adam Exp $
+
+Install llvm-lit; needed for flang.
+
+--- utils/llvm-lit/CMakeLists.txt.orig	2023-06-04 19:54:04.000000000 +0000
++++ utils/llvm-lit/CMakeLists.txt
+@@ -43,3 +43,4 @@ else()
+     ${LIT_BASE_DIR}/${LIT_FILE_NAME}
+     )
+ endif()
++install(PROGRAMS ${LIT_BASE_DIR}/${LIT_FILE_NAME} DESTINATION bin)

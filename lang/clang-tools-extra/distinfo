@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.17 2023/01/12 19:32:53 adam Exp $
+$NetBSD: distinfo,v 1.18 2023/10/06 19:15:20 adam Exp $
 
-BLAKE2s (clang-15.0.7.src.tar.xz) = b88c92b2a839ac5eecedc5ba3d08d1ade419f418cc65adcec4de9e4e48ef1177
-SHA512 (clang-15.0.7.src.tar.xz) = 9fd2736a9f5993ddbb5b3c507fe497234a6def64f6f418f379d1ca56c9c361ad1ae9a5445ab938230fbc1671ec00b4f802a412b048569023863c20dc6bb46a1f
-Size (clang-15.0.7.src.tar.xz) = 18540648 bytes
-BLAKE2s (clang-tools-extra-15.0.7.src.tar.xz) = 88d3679d9e8164a5c438e657b7e9ef14d7d8dbcf7175ffe3fa7b3d06da9b81a6
-SHA512 (clang-tools-extra-15.0.7.src.tar.xz) = dd95d261d3a1618967b698e97ac0b41204d872d7479c0c832fcf5a91fe447af6a97fa794de07b3e271285867b30b905688f090e98f516b9df4cdfb3bad9defc6
-Size (clang-tools-extra-15.0.7.src.tar.xz) = 3075708 bytes
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
+BLAKE2s (clang-16.0.6.src.tar.xz) = 528647ba7c3b87280ceb8c4a46eecf514600bad27cd1b71ee5ab32a28f8c5069
+SHA512 (clang-16.0.6.src.tar.xz) = 92c65b882e1504f4a9b8a3f6b8a24061505987aaacc8bb835115b4e4d74ac3a8c98343a308567b07c6b42bb99877c300bce3c4a5a25ada77abe65606aa25188d
+Size (clang-16.0.6.src.tar.xz) = 20356652 bytes
+BLAKE2s (clang-tools-extra-16.0.6.src.tar.xz) = f819493b015d8fc14400d723827c823c364f560854fb67295dc0920169929884
+SHA512 (clang-tools-extra-16.0.6.src.tar.xz) = ec1a0834f223e393d24c11586b744167a41cea6c39d1bb18c433d2fb736501950fdff42f1eb0caa13c75bcb8ef9ac309eb0687644307698ec0420ff8a769c710
+Size (clang-tools-extra-16.0.6.src.tar.xz) = 3151928 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
