@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/20 08:20:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/06 19:40:25 adam Exp $
 
-DISTNAME=	argparse-manpage-4.3
+DISTNAME=	argparse-manpage-4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argparse-manpage/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +15,14 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
+USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+.endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
@@ -27,12 +34,6 @@ post-install:
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
