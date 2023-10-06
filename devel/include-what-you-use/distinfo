@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/11/14 18:53:25 adam Exp $
+$NetBSD: distinfo,v 1.20 2023/10/06 19:25:48 adam Exp $
 
-BLAKE2s (include-what-you-use-0.19.tar.gz) = 3bf3b2d77d827c1e11d4ee5ed5eed39e2014be24b30620b4c32bfda1b36113be
-SHA512 (include-what-you-use-0.19.tar.gz) = 0847ae898696b51540ab9f5715e69bae67db42409d60205227d543ba6597b12cc2ea5bf68a3315c31f22e7186e05c06a86f5ae5b893c23bfe4cd9ef6f06ccddc
-Size (include-what-you-use-0.19.tar.gz) = 757761 bytes
+BLAKE2s (include-what-you-use-0.20.tar.gz) = e9b4ce706a4be37a2e78df9be04c2c94de1bedc622da27bcb7a4d93c82dcb46e
+SHA512 (include-what-you-use-0.20.tar.gz) = 77195dc36338a37d3397c78701d81e52fc1c6a3441979fa016f154b0fc860598959e6430e78a51bbf9049f6b2bb62956e50f5531ac5c94c6554e2383ace540f5
+Size (include-what-you-use-0.20.tar.gz) = 766208 bytes
