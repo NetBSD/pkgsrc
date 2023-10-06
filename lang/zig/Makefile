@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/05/02 06:44:21 nikita Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/06 19:21:35 adam Exp $
 
-DISTNAME=	zig-0.10.1
-PKGREVISION=	2
+DISTNAME=	zig-0.11.0
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,19 +10,16 @@ HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_TOOLS+=	bash:run
-USE_LANGUAGES=	c c++14
+USE_CXX_FEATURES+=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:run
 
-DEPENDS+=	llvm>=15<16:../../lang/llvm
-DEPENDS+=	lld>=15<16:../../devel/lld
-DEPENDS+=	clang>=15<16:../../lang/clang
-
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DDESTDIR=${DESTDIR}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DZIG_SHARED_LLVM=ON
+CMAKE_CONFIGURE_ARGS+=	-DDESTDIR=${DESTDIR}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
-CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline
+CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
@@ -45,6 +41,7 @@ do-test:
 		--cache-dir ${WRKDIR}/cache --global-cache-dir ${WRKDIR}/cache \
 		--zig-lib-dir ${WRKSRC}/lib
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/lld/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
