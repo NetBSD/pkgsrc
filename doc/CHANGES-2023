@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5751 2023/10/06 07:02:26 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5752 2023/10/06 07:28:01 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8388,3 +8388,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/libXrandr to 1.5.4 [wiz 2023-10-05]
 	Updated devel/kdiff3 to 1.10.6 [gutteridge 2023-10-06]
 	Updated devel/libstatgrab to 0.92.1 [pin 2023-10-06]
+	Updated databases/redis to 7.2.1nb1 [ffaubert 2023-10-06]
