@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23415 2023/10/06 19:20:12 adam Exp $
+$NetBSD: TODO,v 1.23416 2023/10/06 19:42:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
-	o py-argparse-manpage-4.5
 	o py-astroid-3.0.0
 	o py-barman-3.0.1
 	o py-cairo-1.25.0
