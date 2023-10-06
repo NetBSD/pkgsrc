@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:41:15 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/06 12:43:24 adam Exp $
 
-DISTNAME=	pytest-pylint-0.19.0
+DISTNAME=	pytest-pylint-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-pylint/}
@@ -10,14 +10,18 @@ HOMEPAGE=	https://github.com/carsongee/pytest-pylint
 COMMENT=	Pytest plugin to check source code with Pylint
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-pylint>=2.3.0:../../devel/py-pylint
-DEPENDS+=	${PYPKGPREFIX}-test>=5.4:../../devel/py-test
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.7.1:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-pylint>=2.15.0:../../devel/py-pylint
+DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
+.endif
 
 # test are not included
 do-test:
