@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/03/14 11:25:56 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/06 19:15:19 adam Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld
@@ -19,6 +19,7 @@ include/lld/Common/TargetOptionsCommandFlags.h
 include/lld/Common/Timer.h
 include/lld/Common/Version.h
 lib/cmake/lld/LLDConfig.cmake
+lib/cmake/lld/LLDConfigVersion.cmake
 lib/cmake/lld/LLDTargets-release.cmake
 lib/cmake/lld/LLDTargets.cmake
 lib/liblldCOFF.a

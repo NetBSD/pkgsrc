@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.25 2023/01/12 19:32:54 adam Exp $
+$NetBSD: distinfo,v 1.26 2023/10/06 19:15:21 adam Exp $
 
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
-BLAKE2s (libcxx-15.0.7.src.tar.xz) = 952e9a57fd17139b2e298fdaa6ff893458b52d576495c47b734becc3d9d809fe
-SHA512 (libcxx-15.0.7.src.tar.xz) = 2c47cb93867e137a9bc8dd273335bb153e2353eb308635c2264be962fa421ddc10eb3ec8b5800204fc1f8ee51abbe0c526665300cb7e94e9f8b7e9891b5c5b64
-Size (libcxx-15.0.7.src.tar.xz) = 3337404 bytes
-BLAKE2s (libcxxabi-15.0.7.src.tar.xz) = 6757adcf553b335f75547484fa69799afd75b6933ce5d4dffafe97c14557ddbd
-SHA512 (libcxxabi-15.0.7.src.tar.xz) = 415417b1e5addfa6047f9a4e49b1ccd6ae7fa8c6138e61f3d1e57321c8723aaf133cf2673a6f8756f6ecbc1ca7d2b962406969d47b12b3d9e5a1f63f1353a2e5
-Size (libcxxabi-15.0.7.src.tar.xz) = 568764 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (libcxx-16.0.6.src.tar.xz) = 4ad216b6f725c6b3207f76a0b1bcdb2ef46bfcf9cef8cbe289b3c89632fcbf3d
+SHA512 (libcxx-16.0.6.src.tar.xz) = d5ccadcceb67815ad0537ec82d40fd52b0ac5e5b37acba8951d92d2f16f7e19adf517d7249f0fca448c9f60a740c63ddfe23630e519148e8d8f37693614830db
+Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
+BLAKE2s (libcxxabi-16.0.6.src.tar.xz) = 62b0fea4aa05c44ecf34f188f8aec8fc1a41bc34ff42fdc3831eb515c31a282c
+SHA512 (libcxxabi-16.0.6.src.tar.xz) = 5f49ad34d5d00a3cd5ca92c8570b0cd77123a818456fe30a3fab7c14a2fe134ada5215466f729c9e1da12a38a9e2b2254b80775bda2986c505a2cad5af5cb70e
+Size (libcxxabi-16.0.6.src.tar.xz) = 573564 bytes
 SHA1 (patch-include_____locale) = 2eafcf7f70f67df907593fe8cc0cc1ec1c0e0552
 SHA1 (patch-include_____support_solaris_xlocale.h) = c6a969ed48b4df78401fea76c7a936c258cf869f
 SHA1 (patch-src_charconv.cpp) = b8569ae77df4a5a7b627b3a9cb6691be73699dca

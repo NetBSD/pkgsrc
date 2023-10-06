@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2023/09/28 21:32:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/06 19:15:21 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	libcxxabi-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,13 +21,10 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
-
-USE_LANGUAGES=	c c++17
-USE_CMAKE=	yes
-SSP_SUPPORTED=	no
-GCC_REQD+=	10	# must be in sync with libcxx
+USE_CXX_FEATURES+=	c++17
+USE_LANGUAGES=		c c++
+SSP_SUPPORTED=		no
+GCC_REQD+=		12	# must be in sync with libcxx
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
@@ -37,16 +33,17 @@ CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-[0-9].*) || !empty(CC_VERSION:Mgcc-10.*)
+.if ${CC_VERSION:Mgcc-[0-9].*} || ${CC_VERSION:Mgcc-10.*}
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
-CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
+CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
 post-extract:
-	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 # TODO: not sure what should create this and with which contents
 	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/libunwind/buildlink3.mk"
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

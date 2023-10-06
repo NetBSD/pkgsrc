@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.8 2022/11/14 18:44:05 adam Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.9 2023/10/06 19:15:20 adam Exp $
 
 Use the Linux style linking everywhere except Darwin and SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2022-09-20 06:05:50.000000000 +0000
-+++ tools/llvm-shlib/CMakeLists.txt
-@@ -33,13 +33,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
+---  tools/llvm-shlib/CMakeLists.txt.orig	2023-04-05 05:36:38.000000000 +0200
++++  tools/llvm-shlib/CMakeLists.txt	2023-04-28 19:16:41.144011867 +0200
+@@ -33,14 +33,11 @@
    add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${INSTALL_WITH_TOOLCHAIN} ${SOURCES})
  
    list(REMOVE_DUPLICATES LIB_NAMES)
@@ -14,8 +14,9 @@ Use the Linux style linking everywhere except Darwin and SunOS.
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "OpenBSD")
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "DragonFly")
+-     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Android")
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")) # FIXME: It should be "GNU ld for elf"
-+  if("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
++  if ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
 +    set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
 +  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
 +    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
@@ -23,7 +24,7 @@ Use the Linux style linking everywhere except Darwin and SunOS.
      configure_file(
      ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
      ${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map)
-@@ -57,8 +55,6 @@ if(LLVM_BUILD_LLVM_DYLIB)
+@@ -58,8 +55,6 @@
        # inside and outside libLLVM.so.
        target_link_options(LLVM PRIVATE LINKER:-Bsymbolic-functions)
      endif()

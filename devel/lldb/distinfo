@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.35 2023/01/12 19:32:53 adam Exp $
+$NetBSD: distinfo,v 1.36 2023/10/06 19:15:19 adam Exp $
 
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
-BLAKE2s (lldb-15.0.7.src.tar.xz) = 5f5b9adb4e31117b109d3229ee2c7b947eb604796beb3961d5325fdfb37f0a0c
-SHA512 (lldb-15.0.7.src.tar.xz) = 27f94fd87827d08959a572038c22fd558e1776f94e1678e900d6e28517ae6fe2d89cbc719d9c65cd2879fc6bd97d291f90c4b8e6fe283f02fdf210ed138c80fa
-Size (lldb-15.0.7.src.tar.xz) = 10254276 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (lldb-16.0.6.src.tar.xz) = d518f96053246530b3af6e3bcbabc17bca2df261b6ca40ff313da7f7eca735c5
+SHA512 (lldb-16.0.6.src.tar.xz) = 85c611c362d96b302df9b981bb9c8bd754938d0b55c5e24220f333300b48ac9bd3b7eb708be1f3ba9dcfbebe621e6562841b38d8458110452e5cc06c714e8d10
+Size (lldb-16.0.6.src.tar.xz) = 10378280 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
 SHA1 (patch-source_API_CMakeLists.txt) = 23a7b24632f937a4541863aff6a7591255cafe40
+SHA1 (patch-source_Host_common_Editline.cpp) = 40d78016a3932b77f7176628bfa60b3c96b80c6a
 SHA1 (patch-source_Host_netbsd_HostNetBSD.cpp) = 8c19657d90ffea176b1297331fd23a8b565c6f1d
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = 15c6d8399198de567b4e901533e1b1f77d9e348f
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.h) = 26a7298b835b97b89257975f7e87f0f8225e5f99
+SHA1 (patch-source_Plugins_Process_NetBSD_NativeRegisterContextNetBSD__x86__64.cpp) = 23ff593c187501dc91c3f2f49fd341176e75a264
