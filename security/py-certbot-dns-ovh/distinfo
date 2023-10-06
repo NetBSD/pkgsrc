@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.52 2023/05/12 09:17:15 adam Exp $
+$NetBSD: distinfo,v 1.53 2023/10/06 10:26:23 adam Exp $
 
-BLAKE2s (certbot-dns-ovh-2.6.0.tar.gz) = e1832c52ac0853f80b9006089399ea0d2263977f7a5274fcaea089ac98fe15f5
-SHA512 (certbot-dns-ovh-2.6.0.tar.gz) = 0385d945023ed4dfe19266253554666aa877977fc58111f254d21d3db20fb10ebeb81427bb8947908f666d61395fa4faab9b6f62ee1785f2ba2fced5f1563da4
-Size (certbot-dns-ovh-2.6.0.tar.gz) = 13311 bytes
+BLAKE2s (certbot-dns-ovh-2.7.0.tar.gz) = 6b583a0d454307d4a9b8b0d45efaefcfeda5b499a18fa00f2353aebaa7eeee86
+SHA512 (certbot-dns-ovh-2.7.0.tar.gz) = 2e796d5b53d3c170846e8c2851d425a5506ac622aff7b96ca6f322347d3e3a89e2a49cc54456bd6a95c3cf536da860ef400b1518507be7884fd50f97e7440177
+Size (certbot-dns-ovh-2.7.0.tar.gz) = 12228 bytes
