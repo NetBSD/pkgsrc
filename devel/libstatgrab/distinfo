@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:15:28 nia Exp $
+$NetBSD: distinfo,v 1.19 2023/10/06 07:02:05 pin Exp $
 
-BLAKE2s (libstatgrab-0.92.tar.gz) = c406310617010c6bece444e979f0aba1920700aee4fbb16ba0a970c2a9b7ee2b
-SHA512 (libstatgrab-0.92.tar.gz) = a99c6be56d930779d0d8f6f81e64e2f31e19423009c39e925b39116a42aa2c6037651992ac2168c43a5c6ecadf3e4a58486ab6148cf96118c429b04fdcf65192
-Size (libstatgrab-0.92.tar.gz) = 815262 bytes
+BLAKE2s (libstatgrab-0.92.1.tar.gz) = 1b66a738846bb983bc635e5abc8ffb81e72dfd318fb730a3e7eaf34a2aadffaa
+SHA512 (libstatgrab-0.92.1.tar.gz) = e1f14df8abbb044d02b0ecebc23fbe9effaa0bac6738686e661de015564df5a4d872edef6d07fd150db25764b449d47ef54beecbe12c51987a679b07edc53c97
+Size (libstatgrab-0.92.1.tar.gz) = 817531 bytes
 SHA1 (patch-config.h.in) = dbb85d6a2ccfb6af8d3c104d6597868d7f9502f1
 SHA1 (patch-configure) = 1c1afc172f876893f793c55ceac0ab48ce577042
 SHA1 (patch-configure.ac) = 804bb49b775af9fc953a77d0ef34abb3f0874f57
