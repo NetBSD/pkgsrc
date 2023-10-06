@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/17 18:03:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/10/06 10:46:21 adam Exp $
 
-BLAKE2s (zope.interface-6.0.tar.gz) = e93c2a3fe9f18cdcc0e3d52114e28023ac4433a07bd314d7f779b783e391b312
-SHA512 (zope.interface-6.0.tar.gz) = ed6bc98a61c91c34cfd8e24a8545e462fdffab13bc77a8144714a9cdd3bc7f4b873a50597a64f50b3c811f57218e1f2c78ceb267e52ae0ab5c136f082caa0612
-Size (zope.interface-6.0.tar.gz) = 246297 bytes
+BLAKE2s (zope.interface-6.1.tar.gz) = 1a2bf82172f48d81988b0c9515642432600ed638681330f97eb4bdfd1b17a9df
+SHA512 (zope.interface-6.1.tar.gz) = 04305eaf98fb40269d417c6894a6e154340669b66033c50e130d58bf6166cabc0a8979e1ba80dda47cb2bc508dde01ea2175628f89cbfd44cc2f59ac3cdce2c0
+Size (zope.interface-6.1.tar.gz) = 293914 bytes
