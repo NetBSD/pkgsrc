@@ -1,14 +1,12 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: redis.sh,v 1.5 2022/12/02 05:51:26 triaxx Exp $
+# $NetBSD: redis.sh,v 1.6 2023/10/06 07:27:43 triaxx Exp $
 #
 # PROVIDE: redis
 # REQUIRE: DAEMON NETWORKING
 # KEYWORD: shutdown
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="redis"
 rcvar=$name
@@ -16,7 +14,7 @@ command="@PREFIX@/bin/redis-server"
 redis_user="@REDIS_USER@"
 redis_flags="@PKG_SYSCONFDIR@/redis.conf"
 
-if [ -f /etc/rc.subr ]; then
+if [ -f @SYSCONFBASE@/rc.subr ]; then
         load_rc_config $name
 	run_rc_command "$1"
 else
