@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5754 2023/10/06 09:39:05 micha Exp $
+$NetBSD: CHANGES-2023,v 1.5755 2023/10/06 10:20:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8391,3 +8391,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/redis to 7.2.1nb1 [ffaubert 2023-10-06]
 	Updated net/dhcpcd to 10.0.3 [roy 2023-10-06]
 	Updated editors/xnedit to 1.5.2 [micha 2023-10-06]
+	Updated www/py-google-api-python-client to 2.102.0 [adam 2023-10-06]
+	Updated devel/py-google-api-core to 2.12.0 [adam 2023-10-06]
