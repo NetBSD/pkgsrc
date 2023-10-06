@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.167 2023/08/25 10:57:40 adam Exp $
+$NetBSD: distinfo,v 1.168 2023/10/06 12:39:03 adam Exp $
 
-BLAKE2s (wireshark-4.0.8.tar.xz) = 41c23b5e21f1d7f043521157aedfe5e5a0c3ad62004bf1969159c6dbdcb1ea5f
-SHA512 (wireshark-4.0.8.tar.xz) = f6de0f86bb1eac82f7ed2d98d7f4fe3189107b1f0da441abd9077593f8e624989c33aaf8b4ef4b3c460fe787c64c4b8fdb3168de9f5661802fed6b06d71c5c65
-Size (wireshark-4.0.8.tar.xz) = 43123664 bytes
+BLAKE2s (wireshark-4.0.10.tar.xz) = dee2ad1a0b7e9e54ccc4650adce957338a679703969e71fe2f42e545fb0ea40a
+SHA512 (wireshark-4.0.10.tar.xz) = 695a5617100195aad92ecc38a29c3b765018fee49913dd6025b2e19d1ec5c5c4ed4195a79b5caa9cf0e8476db237e74bb602e56e9d2989ae852298767eaffbe5
+Size (wireshark-4.0.10.tar.xz) = 43124192 bytes
 SHA1 (patch-CMakeLists.txt) = bfb0e748ce1f6577a758b650d1bed2b6d66dc026
