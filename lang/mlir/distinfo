@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2023/10/06 19:15:21 adam Exp $
+
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (mlir-16.0.6.src.tar.xz) = 296bc315f0a73cacf168539a0f1fed67edc928aed20cdf9eff2227e37dace2fc
+SHA512 (mlir-16.0.6.src.tar.xz) = 93a34061a6939aff0009883a14627cf8391530aa86740cf2341b73c63db394fde4b7066de84afb49a7adf79d1dc4d0c35f6dbc261fccc5ffc645109facd7802d
+Size (mlir-16.0.6.src.tar.xz) = 4555584 bytes
+SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 528ffcd98d35b22c168b228daca28af319a47c5c
+SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 668c55c4a056badf43add0bce3fadc07837336d9

@@ -1,0 +1,9 @@
+Flang is a Fortran language front-end designed for integration with LLVM and
+the LLVM optimizer.
+
+Flang+LLVM is a production-quality Fortran solution designed to be co-installed
+and is fully interoperable with Clang C++.
+
+Flang single-core and OpenMP performance is now on par with GNU Fortran. Flang
+has implemented Fortran 2003 and has a near full implementation of OpenMP
+through version 4.5 targeting multicore CPUs.

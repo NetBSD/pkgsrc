@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/06 19:15:20 adam Exp $
 
-PKGREVISION= 2
+INSTALL_DIRS=	build/tools/extra
+
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/clang/clang-tools-extra/:S/.src//}
@@ -17,7 +18,6 @@ SITES.${CLANG_TOOLS_EXTRA}${EXTRACT_SUFX}= \
 BUILD_TARGET=	clang-change-namespace clang-apply-replacements clang-doc
 BUILD_TARGET+=	clang-include-fixer clang-move clang-query clang-reorder-fields
 BUILD_TARGET+=	clang-tidy clangd modularize pp-trace tool-template
-INSTALL_DIRS=	build/tools/extra
 
 REPLACE_PYTHON+=	tools/extra/clang-include-fixer/find-all-symbols/tool/run-find-all-symbols.py
 REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/clang-tidy-diff.py
