@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5752 2023/10/06 07:28:01 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5753 2023/10/06 09:01:56 roy Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8389,3 +8389,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/kdiff3 to 1.10.6 [gutteridge 2023-10-06]
 	Updated devel/libstatgrab to 0.92.1 [pin 2023-10-06]
 	Updated databases/redis to 7.2.1nb1 [ffaubert 2023-10-06]
+	Updated net/dhcpcd to 10.0.3 [roy 2023-10-06]
