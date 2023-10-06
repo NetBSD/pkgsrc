@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/11/14 18:44:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/10/06 19:15:19 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
@@ -61,6 +61,7 @@ include/lldb/API/SBThread.h
 include/lldb/API/SBThreadCollection.h
 include/lldb/API/SBThreadPlan.h
 include/lldb/API/SBTrace.h
+include/lldb/API/SBTraceCursor.h
 include/lldb/API/SBType.h
 include/lldb/API/SBTypeCategory.h
 include/lldb/API/SBTypeEnumMember.h
@@ -143,6 +144,7 @@ include/lldb/Core/StructuredDataImpl.h
 include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
 include/lldb/Core/ThreadSafeValue.h
+include/lldb/Core/ThreadedCommunication.h
 include/lldb/Core/UniqueCStringMap.h
 include/lldb/Core/UserSettingsController.h
 include/lldb/Core/Value.h
@@ -259,11 +261,11 @@ include/lldb/Host/netbsd/HostInfoNetBSD.h
 include/lldb/Host/openbsd/HostInfoOpenBSD.h
 include/lldb/Host/posix/ConnectionFileDescriptorPosix.h
 include/lldb/Host/posix/DomainSocket.h
-include/lldb/Host/posix/Fcntl.h
 include/lldb/Host/posix/HostInfoPosix.h
 include/lldb/Host/posix/HostProcessPosix.h
 include/lldb/Host/posix/HostThreadPosix.h
 include/lldb/Host/posix/LockFilePosix.h
+include/lldb/Host/posix/MainLoopPosix.h
 include/lldb/Host/posix/PipePosix.h
 include/lldb/Host/posix/ProcessLauncherPosixFork.h
 include/lldb/Host/windows/AutoHandle.h
@@ -272,6 +274,7 @@ include/lldb/Host/windows/HostInfoWindows.h
 include/lldb/Host/windows/HostProcessWindows.h
 include/lldb/Host/windows/HostThreadWindows.h
 include/lldb/Host/windows/LockFileWindows.h
+include/lldb/Host/windows/MainLoopWindows.h
 include/lldb/Host/windows/PipeWindows.h
 include/lldb/Host/windows/PosixApi.h
 include/lldb/Host/windows/ProcessLauncherWindows.h
@@ -329,6 +332,8 @@ include/lldb/Interpreter/Options.h
 include/lldb/Interpreter/Property.h
 include/lldb/Interpreter/ScriptInterpreter.h
 include/lldb/Interpreter/ScriptedInterface.h
+include/lldb/Interpreter/ScriptedMetadata.h
+include/lldb/Interpreter/ScriptedPlatformInterface.h
 include/lldb/Interpreter/ScriptedProcessInterface.h
 include/lldb/Symbol/ArmUnwindInfo.h
 include/lldb/Symbol/Block.h
@@ -458,6 +463,7 @@ include/lldb/Utility/DataBufferHeap.h
 include/lldb/Utility/DataBufferLLVM.h
 include/lldb/Utility/DataEncoder.h
 include/lldb/Utility/DataExtractor.h
+include/lldb/Utility/Diagnostics.h
 include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
 include/lldb/Utility/Event.h
@@ -478,8 +484,6 @@ include/lldb/Utility/ProcessInfo.h
 include/lldb/Utility/RangeMap.h
 include/lldb/Utility/RegisterValue.h
 include/lldb/Utility/RegularExpression.h
-include/lldb/Utility/Reproducer.h
-include/lldb/Utility/ReproducerProvider.h
 include/lldb/Utility/Scalar.h
 include/lldb/Utility/SelectHelper.h
 include/lldb/Utility/SharedCluster.h
@@ -510,7 +514,6 @@ include/lldb/Version/Version.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
 include/lldb/lldb-forward.h
-include/lldb/lldb-private-defines.h
 include/lldb/lldb-private-enumerations.h
 include/lldb/lldb-private-forward.h
 include/lldb/lldb-private-interfaces.h
@@ -521,7 +524,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-lib/liblldb.so.15
+lib/liblldb.so.${LLVM_MAJOR_VERSION}
 lib/lua/5.3/lldb.so
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
@@ -537,6 +540,7 @@ ${PYSITELIB}/lldb/formatters/metrics.py
 ${PYSITELIB}/lldb/formatters/synth.py
 ${PYSITELIB}/lldb/lldb-argdumper
 ${PYSITELIB}/lldb/plugins/__init__.py
+${PYSITELIB}/lldb/plugins/scripted_platform.py
 ${PYSITELIB}/lldb/plugins/scripted_process.py
 ${PYSITELIB}/lldb/utils/__init__.py
 ${PYSITELIB}/lldb/utils/in_call_stack.py

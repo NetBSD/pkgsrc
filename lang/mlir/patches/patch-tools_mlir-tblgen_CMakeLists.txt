@@ -1,0 +1,13 @@
+$NetBSD: patch-tools_mlir-tblgen_CMakeLists.txt,v 1.1 2023/10/06 19:15:21 adam Exp $
+
+Install mlir-tblgen.
+
+--- tools/mlir-tblgen/CMakeLists.txt.orig	2023-06-04 18:58:02.000000000 +0000
++++ tools/mlir-tblgen/CMakeLists.txt
+@@ -35,5 +35,6 @@ target_link_libraries(mlir-tblgen
+   PRIVATE
+   MLIRSupportIndentedOstream
+   MLIRTblgenLib)
++install(TARGETS mlir-tblgen DESTINATION bin)
+ 
+ mlir_check_all_link_libraries(mlir-tblgen)
