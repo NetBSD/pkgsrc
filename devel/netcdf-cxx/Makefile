@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/06/03 03:38:52 mef Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/06 13:40:47 adam Exp $
 
 DISTNAME=	netcdf-cxx4-4.3.1
 PKGNAME=	${DISTNAME:S/cxx4/cxx/}
 CATEGORIES=	devel
-MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-cxx/4.3.1/
+MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-cxx/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.unidata.ucar.edu/software/netcdf/index.html
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
