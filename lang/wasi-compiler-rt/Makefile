@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.21 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/10/06 19:18:15 adam Exp $
 
-PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
@@ -17,15 +16,11 @@ DISTINFO_FILE=	${.CURDIR}/../../lang/compiler-rt/distinfo
 
 NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	ggrep
 
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}/lib/builtins
 
 BUILDLINK_TRANSFORM+=	rm:-I/usr/include
 BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
@@ -54,13 +49,10 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 CMAKE_ARGS+=	-DCOMPILER_RT_ENABLE_IOS=OFF
 
-CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
+CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
-
-post-extract:
-	${MKDIR} ${WRKSRC}/build
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,7 +62,7 @@ post-extract:
 .if ${OPSYS} != "Darwin"
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/lib/clang/${PKGVERSION_NOREV}/lib/wasi/libclang_rt.builtins-wasm32.a
+	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_MAJOR_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
 .endif
 
 ABI=			# 32
@@ -78,6 +70,7 @@ CFLAGS=			-O2
 CXXFLAGS=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
+.include "../../devel/cmake/build.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
