@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2023/10/03 20:27:11 leot Exp $
+$NetBSD: distinfo,v 1.5 2023/10/06 18:39:25 leot Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.0.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.0.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -363,9 +363,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (regal-0.10.0.tar.gz) = 53df01b619904961966ae73b157e3f1e749f55923c9c8a30466557227d4d6cad
-SHA512 (regal-0.10.0.tar.gz) = e3ca8632ee9b5170ef7a4119a84ed5a7429f6683e3f8bee8c8c411ea4d26a0b46170287e44c2a6ca62bc9e8683c344b3f901c77585125c42dc3617c992878828
-Size (regal-0.10.0.tar.gz) = 835342 bytes
+BLAKE2s (regal-0.10.1.tar.gz) = 4e502eb5aca59eec50441a3380d54fc3bd19418318c66e38123ec88e2aeb635c
+SHA512 (regal-0.10.1.tar.gz) = e3dd22d078518728b2d773af9bce6dcf4c969aea3cd954f59b0bea680974d0ee44dce36b147f048d90fd5f8c458cb5aa68816ead67e12d2dcd77163d12b62a97
+Size (regal-0.10.1.tar.gz) = 855152 bytes
 BLAKE2s (sigs.k8s.io_yaml_@v_v1.3.0.mod) = aa0c3388e6785a71e2976185852f7f1ce47bfacefb57d3f19a31598b57eac39d
 SHA512 (sigs.k8s.io_yaml_@v_v1.3.0.mod) = b855d3080f64a72df53099560050601007d3f62c8108c6f7e948d6e7e9e681761c1433824653092f06f2f23c74a6933088a421d647c6d445ed8628b762960020
 Size (sigs.k8s.io_yaml_@v_v1.3.0.mod) = 106 bytes
