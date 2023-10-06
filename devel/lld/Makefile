@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/06 19:15:19 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lld-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,8 +11,9 @@ HOMEPAGE=	https://lld.llvm.org/
 COMMENT=	The LLVM Linker
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++14
-GCC_REQD+=	7
+USE_CXX_FEATURES+=	c++14
+USE_LANGUAGES=		c c++
+GCC_REQD+=		7
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}

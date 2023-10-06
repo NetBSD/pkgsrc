@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.32 2023/01/12 22:47:25 wiz Exp $
+$NetBSD: distinfo,v 1.33 2023/10/06 19:15:21 adam Exp $
 
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
-BLAKE2s (libcxx-15.0.7.src.tar.xz) = 952e9a57fd17139b2e298fdaa6ff893458b52d576495c47b734becc3d9d809fe
-SHA512 (libcxx-15.0.7.src.tar.xz) = 2c47cb93867e137a9bc8dd273335bb153e2353eb308635c2264be962fa421ddc10eb3ec8b5800204fc1f8ee51abbe0c526665300cb7e94e9f8b7e9891b5c5b64
-Size (libcxx-15.0.7.src.tar.xz) = 3337404 bytes
-BLAKE2s (libunwind-15.0.7.src.tar.xz) = b27b37c8706e744572afde839995cd42baf5b4d8d6e70d8003418dffdc71e731
-SHA512 (libunwind-15.0.7.src.tar.xz) = ebc73a5c68615a4462f4d05040a68a28e92b144d8c66d3fb2271cf6fff60a0adb1b913c8e520717ac2f6bd9e4b44c16d9461ef70502975975d1779e2b27a9392
-Size (libunwind-15.0.7.src.tar.xz) = 113368 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (libcxx-16.0.6.src.tar.xz) = 4ad216b6f725c6b3207f76a0b1bcdb2ef46bfcf9cef8cbe289b3c89632fcbf3d
+SHA512 (libcxx-16.0.6.src.tar.xz) = d5ccadcceb67815ad0537ec82d40fd52b0ac5e5b37acba8951d92d2f16f7e19adf517d7249f0fca448c9f60a740c63ddfe23630e519148e8d8f37693614830db
+Size (libcxx-16.0.6.src.tar.xz) = 3655520 bytes
+BLAKE2s (libunwind-16.0.6.src.tar.xz) = a34c9ff82a3d889c4b9278bca3a96429f285dd38961d49309570bc60600e5fb6
+SHA512 (libunwind-16.0.6.src.tar.xz) = abc1463bbebd771832c5da34aeb1dfe4c168b90c8257abfcfda573f495359b5968a2169f528dbf8276ed0b9bc1c42f27f4b4383d335d6e6416b6a536074b3f3f
+Size (libunwind-16.0.6.src.tar.xz) = 115032 bytes
 SHA1 (patch-src_CMakeLists.txt) = a8ac316fddf0d71c75d7f64695335a6f4842fead

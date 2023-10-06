@@ -1,15 +1,16 @@
-$NetBSD: distinfo,v 1.41 2023/03/05 17:26:09 he Exp $
+$NetBSD: distinfo,v 1.42 2023/10/06 19:15:20 adam Exp $
 
-BLAKE2s (cmake-15.0.7.src.tar.xz) = 2c299f2c58800bcb0c5930562d24baed0e94806df8b8d5295c0866ffeaaf233f
-SHA512 (cmake-15.0.7.src.tar.xz) = 85097a6eaee0df004567905f7e5ce8ca02e3b46c6fc66fa552fe99734642e6ee61685de4e5e6e8b505963334d7b91d98ecd9c5870e6bdd3f0018ee5b963ffa96
-Size (cmake-15.0.7.src.tar.xz) = 6972 bytes
-BLAKE2s (llvm-15.0.7.src.tar.xz) = 91fb100f185d9636bc75eaf9c737a51f58646a7c66e9bc2109939e24dca3c56c
-SHA512 (llvm-15.0.7.src.tar.xz) = ed8d565515b1bc6164e4ff06d3388ba92e332850305496fd65db9adf1ec87bd9dd1bfde49dd41be5d5216289efc72bfd287cd7392f2bba80b740d4c314c749e5
-Size (llvm-15.0.7.src.tar.xz) = 52935892 bytes
+BLAKE2s (cmake-16.0.6.src.tar.xz) = a967225f31bcd98484d632a2d530c498131b0035f18b15e27915663b915dc6ba
+SHA512 (cmake-16.0.6.src.tar.xz) = 52ecd941d2d85a5b668caa5d0d40480cb6a97b3bf1174e634c2a93e9ef6d03670ca7e96abb0a60cb33ba537b93d5788754dab1f2f45c1f623f788162717d088b
+Size (cmake-16.0.6.src.tar.xz) = 9008 bytes
+BLAKE2s (llvm-16.0.6.src.tar.xz) = d6cf8733dc52995c2ca88b2a12fcaafa2fc9f578429f205340c634e9502cb128
+SHA512 (llvm-16.0.6.src.tar.xz) = 8d4cdadc9a1ad249fbf9248c8e56f3bcafab73a473a0b0ca73499ed8825c62e27668aac4f1d03341631e5ad93701621e834e9e196ca32eac3ef805cf1c860083
+Size (llvm-16.0.6.src.tar.xz) = 56149540 bytes
 SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
 SHA1 (patch-lib_Support_BLAKE3-blake3__impl.h) = 29624dc764c747b247dbde19e9d186a853b59134
-SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = be0f3fd2a020f634a5f8ec972275e52dc92d36a5
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = a83f0bc8a188bcf4e70ccc6b253637ce0af8345d
+SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = 8b18659fe7189c9077b0409e123d41c01e8c8610

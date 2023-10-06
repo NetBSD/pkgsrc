@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.47 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/10/06 19:15:19 adam Exp $
 
-PKGREVISION= 2
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lldb-${LLVM_VERSION}.src
@@ -17,15 +16,12 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 DEPENDS+=	swig3>=3.0:../../devel/swig3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
-
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++14
+USE_CXX_FEATURES+=	c++14
+USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PY_PATCHPLIST=		yes
 
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
@@ -38,13 +34,7 @@ CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 LUA_VERSIONS_ACCEPTED=	53
 
-REPLACE_PERL+=		*.pl
 REPLACE_PERL+=		*/*.pl
-REPLACE_PERL+=		*/*/*.pl
-REPLACE_PERL+=		*/*/*/*.pl
-REPLACE_PERL+=		*/*/*/*/*.pl
-REPLACE_PERL+=		*/*/*/*/*/*.pl
-REPLACE_PERL+=		scripts/sed-sources
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	*/*.py
@@ -54,7 +44,6 @@ REPLACE_PYTHON+=	*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*/*.py
 REPLACE_PYTHON+=	*/*/*/*/*/*/*/*.py
-REPLACE_PYTHON+=	scripts/shush
 
 TEST_TARGET=		check-lldb
 #TEST_TARGET=		check-lldb-unit # doesn't work in standalone build
@@ -64,13 +53,11 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/panel.h)
-CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=FALSE
-.  else
-CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
-.  endif
+PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
 
+.include "options.mk"
+
+.if ${OPSYS} == "NetBSD"
 .  if ${OPSYS_VERSION} < 99922
 # lacks ptrace(2) PT_STOP
 PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
@@ -80,11 +67,9 @@ PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
 # Not yet ported, so avoid wasting time trying...
 NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
 
-post-extract:
-	${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
-.include "../../mk/atomic64.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
@@ -93,6 +78,7 @@ post-extract:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/atomic64.mk"
+# TODO: sync the readline option with other llvm packages
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

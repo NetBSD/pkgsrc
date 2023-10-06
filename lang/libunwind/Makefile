@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/09/28 21:33:10 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/06 19:15:21 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,7 +18,8 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES+=	c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
 GCC_REQD+=		10	# must be in sync with libcxx
@@ -34,4 +35,6 @@ post-install:
 	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include
 
 .include "../../devel/cmake/build.mk"
+BUILDLINK_DEPMETHOD.llvm=	build
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

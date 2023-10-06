@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/12/07 10:40:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/06 19:15:21 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -21,13 +21,10 @@ EXTRA_DIST+=	${LIBCXXABI}${EXTRACT_SUFX}
 SITES.${LIBCXXABI}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
-
-USE_LANGUAGES=	c c++20
-USE_CMAKE=	yes
-SSP_SUPPORTED=	no
-GCC_REQD+=	10
+USE_CXX_FEATURES+=	c++20
+USE_LANGUAGES=		c c++
+SSP_SUPPORTED=		no
+GCC_REQD+=		12
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
@@ -42,15 +39,15 @@ CXXFLAGS.SunOS+=	-D_LIBCPP_NO_ABI_TAG=1
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-[0-9].*) || !empty(CC_VERSION:Mgcc-10.*)
+.if ${CC_VERSION:Mgcc-[0-9].*} || ${CC_VERSION:Mgcc-10.*}
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
 CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
 post-extract:
-	${MKDIR} ${WRKSRC}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXXABI} ${WRKDIR}/libcxxabi
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/libcxxabi/buildlink3.mk"
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2022/08/24 14:38:56 ryoon Exp $
+# $NetBSD: options.mk,v 1.17 2023/10/06 19:15:20 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -12,7 +12,7 @@ PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVM${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 PRINT_PLIST_AWK+=		{if ($$0 ~ /libLLVMExegesis${tgt}/) {$$0 = "$${PLIST.${tgt}}" $$0;}}
 .endfor
 
-PKG_SUPPORTED_OPTIONS+=		terminfo z3
+PKG_SUPPORTED_OPTIONS+=		terminfo z3 tests debug
 
 # Terminfo is used for colour output, only enable it by default if terminfo
 # is builtin to avoid unnecessary dependencies which could cause bootstrap
@@ -20,7 +20,7 @@ PKG_SUPPORTED_OPTIONS+=		terminfo z3
 CHECK_BUILTIN.terminfo:=	yes
 .include "../../mk/terminfo.builtin.mk"
 CHECK_BUILTIN.terminfo:=	no
-.if ${USE_BUILTIN.terminfo:M[yY][eE][sS]}
+.if ${USE_BUILTIN.terminfo:tl} == yes
 PKG_SUGGESTED_OPTIONS+=		terminfo
 .endif
 
@@ -30,9 +30,6 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
 .elif ${MACHINE_ARCH:Mpowerpc*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
-.elif ${MACHINE_ARCH} == aarch64
-PKG_SUGGESTED_OPTIONS+=	llvm-target-aarch64
-PKG_SUGGESTED_OPTIONS+=	llvm-target-webassembly
 .elif ${MACHINE_ARCH:Mearm*}
 PKG_SUGGESTED_OPTIONS+=	llvm-target-arm
 .elif ${MACHINE_ARCH:M*mips*}
@@ -72,6 +69,21 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 .if !empty(PKG_OPTIONS:Mz3)
 .include "../../math/z3/buildlink3.mk"
 CMAKE_ARGS+=	-DLLVM_ENABLE_Z3_SOLVER=ON
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+RELEASE_TYPE?=	debug
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+.else
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+RELEASE_TYPE?=	release
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
+# requires "unittes" ?
+CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=ON
+.else
+CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 .endif
 
 CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="${LLVM_TARGETS_TO_BUILD:ts;}"
