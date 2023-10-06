@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2023/10/06 13:40:47 adam Exp $
+
+Link against libnetcdf.
+
+--- cxx4/Makefile.in.orig	2023-10-06 13:23:06.487803070 +0000
++++ cxx4/Makefile.in
+@@ -137,7 +137,7 @@ am__uninstall_files_from_dir = { \
+   }
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(includedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libnetcdf_c__4_la_LIBADD =
++libnetcdf_c__4_la_LIBADD = -lnetcdf
+ am_libnetcdf_c__4_la_OBJECTS = ncAtt.lo ncCheck.lo ncCompoundType.lo \
+ 	ncDim.lo ncEnumType.lo ncException.lo ncFile.lo ncGroup.lo \
+ 	ncGroupAtt.lo ncOpaqueType.lo ncType.lo ncVar.lo ncVarAtt.lo \
