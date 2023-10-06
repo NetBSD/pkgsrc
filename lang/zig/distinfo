@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/01/19 12:32:18 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/10/06 19:21:35 adam Exp $
 
-BLAKE2s (zig-0.10.1.tar.xz) = 66abb974fba761acf1b1ed1dd90eb5364e103c63904a9de390eba49d637c81d6
-SHA512 (zig-0.10.1.tar.xz) = d443adf61556bc95470537c6b0371a0ac99d19a06b15635cf1e5055ae7849039680c9006105e06e1bd6ba0fc12da14c54c1d28ac597c7dee17ee3a5cd9cf79f8
-Size (zig-0.10.1.tar.xz) = 15143112 bytes
+BLAKE2s (zig-0.11.0.tar.xz) = 31a769b75ca26f9bc669567b2b015b074f4f98d1eef6f303dfee10bc15307f0d
+SHA512 (zig-0.11.0.tar.xz) = c19a8ae6d440a16dd5e77941fc77c036d1f284f1784376625e63b65f30b4acad62f9f4217bc818c401f88c2c33f8722f26fc467c3e23c29a89178c4b1882d1c4
+Size (zig-0.11.0.tar.xz) = 15275316 bytes
