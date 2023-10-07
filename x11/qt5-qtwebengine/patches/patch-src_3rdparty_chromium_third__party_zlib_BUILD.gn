@@ -1,7 +1,16 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.3 2023/10/07 20:00:35 adam Exp $
 
---- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
+--- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2021-08-24 12:21:04.000000000 +0000
 +++ src/3rdparty/chromium/third_party/zlib/BUILD.gn
+@@ -115,7 +115,7 @@ if (use_arm_neon_optimizations) {
+     # Disabled for iPhone, as described in DDI0487C_a_armv8_arm:
+     #  "All implementations of the ARMv8.1 architecture are required to
+     #   implement the CRC32* instructions. These are optional in ARMv8.0."
+-    if (!is_ios) {
++    if (!is_ios && !is_netbsd) {
+       defines = [ "CRC32_ARMV8_CRC32" ]
+       if (is_android) {
+         defines += [ "ARMV8_OS_ANDROID" ]
 @@ -438,7 +438,7 @@ static_library("bundled_minizip") {
      ]
    }
