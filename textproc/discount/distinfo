@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2022/11/15 11:37:56 schmonz Exp $
+$NetBSD: distinfo,v 1.16 2023/10/07 19:50:24 schmonz Exp $
 
-BLAKE2s (discount-2.2.7b.tar.gz) = 0b15bade0498744be856b981893f9b71d09177edfd1973b05deddc58343b04df
-SHA512 (discount-2.2.7b.tar.gz) = 80b7435da385ba91c8cf3112db2f1f8dcc64ec3455c19d25a0303fbb5ddbd3ff0afade509a48b2e538296f4b7b8645dac4c2c5e30c70ebc433ee49842bf31e16
-Size (discount-2.2.7b.tar.gz) = 129219 bytes
+BLAKE2s (discount-2.2.7d.tar.gz) = 57f5465f1b921b1561377c6e4e862ad210f2a100b6527f8909c21f665c434569
+SHA512 (discount-2.2.7d.tar.gz) = d7e652a2687bc31605a9fcb4d95133627778d13e84c0a663ebb848d6b356f4892cc14648540627280590c8d422a9d91b6503bf223be1e7f98c9900d084dfc3b5
+Size (discount-2.2.7d.tar.gz) = 133382 bytes
 SHA1 (patch-Makefile.in) = 7919a26def7f5aceb7fa0570824fd183ac0bb856
-SHA1 (patch-generate.c) = ca870b8ecf485bd14e9b3302c90fc4a97d73c2f7
+SHA1 (patch-generate.c) = 41a6d7e1dea9c52b24df5853ed0db5b17030b51e
