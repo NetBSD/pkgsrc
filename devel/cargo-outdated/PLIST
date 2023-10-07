@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/07 21:21:26 pin Exp $
+bin/cargo-outdated
