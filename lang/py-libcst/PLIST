@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/30 09:28:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/07 20:14:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -203,6 +203,9 @@ ${PYSITELIB}/libcst/_nodes/tests/test_try.pyo
 ${PYSITELIB}/libcst/_nodes/tests/test_tuple.py
 ${PYSITELIB}/libcst/_nodes/tests/test_tuple.pyc
 ${PYSITELIB}/libcst/_nodes/tests/test_tuple.pyo
+${PYSITELIB}/libcst/_nodes/tests/test_type_alias.py
+${PYSITELIB}/libcst/_nodes/tests/test_type_alias.pyc
+${PYSITELIB}/libcst/_nodes/tests/test_type_alias.pyo
 ${PYSITELIB}/libcst/_nodes/tests/test_unary_op.py
 ${PYSITELIB}/libcst/_nodes/tests/test_unary_op.pyc
 ${PYSITELIB}/libcst/_nodes/tests/test_unary_op.pyo
