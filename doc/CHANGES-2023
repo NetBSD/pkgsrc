@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5770 2023/10/07 15:22:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5771 2023/10/07 18:10:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8449,3 +8449,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/recoll to 1.35.0nb1 [wiz 2023-10-07]
 	Updated converters/py-zfec to 1.5.7.3 [gdt 2023-10-07]
 	Updated net/bandsnatch to 0.3.1 [pin 2023-10-07]
+	Updated lang/go120 to 1.20.9 [bsiegert 2023-10-07]
