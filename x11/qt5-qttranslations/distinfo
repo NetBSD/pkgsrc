@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2023/06/10 18:23:06 adam Exp $
+$NetBSD: distinfo,v 1.31 2023/10/07 20:00:35 adam Exp $
 
-BLAKE2s (qttranslations-everywhere-opensource-src-5.15.10.tar.xz) = 9646106881f9143e9c06b6b3df63b0ddf82f13a39a8fa9cc45a2dccea30b9fe3
-SHA512 (qttranslations-everywhere-opensource-src-5.15.10.tar.xz) = 94f22857cf9f14f13f774ee5632bfd0fc367ca5fb745cbfb3997fee8651961d9547f0a629afc54c35b2e4493244da9b94214777e20340c2b203c538bc1c84a22
-Size (qttranslations-everywhere-opensource-src-5.15.10.tar.xz) = 1635736 bytes
+BLAKE2s (qttranslations-everywhere-opensource-src-5.15.11.tar.xz) = eb7828c97d0c0158b0504e0a7f34721e6ab3a35c232a68be2874128dc9b1d910
+SHA512 (qttranslations-everywhere-opensource-src-5.15.11.tar.xz) = bb1d5c353932566b3daccc8b4d9ad957d3c4ea130e67eb933c0a7e49b99d2f9cac2860201a12e37ea51e46ae772a75a4be80d71e3a8afa59f5e14d3e02dd1ce2
+Size (qttranslations-everywhere-opensource-src-5.15.11.tar.xz) = 1635932 bytes

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2023/09/20 02:10:54 mrg Exp $
+$NetBSD: distinfo,v 1.17 2023/10/07 20:00:35 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 0801cd15847412f2316affd5a7cd4efe628abfb0e3251a9069184dde1b42ad5b
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = e35d0cab5f66a148420206616b3517e62b8320572beac53650096c0db58db8b4942d52a3abf4f0d6db1450de27befeb92f8b632c1277b0939464c1407a904b1b
-Size (qtwebengine-everywhere-opensource-src-5.15.10.tar.xz) = 316141752 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = 513fe5101f2f1946e1f6ef727aba187ccd5fccd603fafb9998396de7fb507a6c
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = cebda17b9023348c85e9397fce5ad0f8ee16cfe821b8e79cea7ce92f7bb00e7fe59594107ac9f9411df1bb2e675eb6ecbfe3366df67a05b45fe12ead97cdc76c
+Size (qtwebengine-everywhere-opensource-src-5.15.11.tar.xz) = 316078212 bytes
 SHA1 (patch-configure.pri) = e9d971f18d0a7a8a58d635eb6688193fb92020f3
 SHA1 (patch-mkspecs_features_functions.prf) = 6bf237521df3d60649b603b7cb7d21f793df1386
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 228416b6472c48727df1a6c86ac97814fd5cb3b5
@@ -75,7 +75,7 @@ SHA1 (patch-src_3rdparty_chromium_base_security__unittest.cc) = b4fe266a5804bba1
 SHA1 (patch-src_3rdparty_chromium_base_syslog__logging.cc) = bebb700ef5c40d490f3be04d1a5d5ddb16d5e4f0
 SHA1 (patch-src_3rdparty_chromium_base_system_sys__info.h) = 7487be6109399e235032e263ed2b12b0107271e7
 SHA1 (patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc) = c086070ed60af6999a804cd7b51a70b566ecab72
-SHA1 (patch-src_3rdparty_chromium_base_system_sys__info__posix.cc) = b7c4cc6a5c04741c448771812eb0ca7f428d2a72
+SHA1 (patch-src_3rdparty_chromium_base_system_sys__info__posix.cc) = acea65bb3b665d252a99815754a798c71b4a2d1a
 SHA1 (patch-src_3rdparty_chromium_base_task_thread__pool_environment__config__unittest.cc) = 6cd6d2ff44aa7d6ef778c73a218f6e566346528d
 SHA1 (patch-src_3rdparty_chromium_base_test_BUILD.gn) = 955b7077afff6c72d7c4a28c61504d1de9150736
 SHA1 (patch-src_3rdparty_chromium_base_third__party_libevent_BUILD.gn) = cc598e28a342503766630307759052d695bc72c3
@@ -616,7 +616,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_graphics_
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_scheduler_BUILD.gn) = 4101c0912e7ab69f8be9bad78eca84f5b11e973a
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_wtf_container__annotations.h) = 9f90644f4a49e734aec9fa769763f4008505e609
 SHA1 (patch-src_3rdparty_chromium_third__party_blink_renderer_platform_wtf_stack__util.cc) = 5fc857bab34f5a711616a9694370989b7eca5faa
-SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn) = 460d75640c0e899979577bffe3bcc90692ba100f
+SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn) = 56e189bbcefa0b6e40548a2f86b3f058f47f7501
 SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_src_crypto_bio_socket__helper.c) = 9ccd6db4564963967e8492621c74dcd8c8177ae8
 SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_src_crypto_ex__data.c) = b11c8dd5e604d0798a953b74e7e848ebd013f248
 SHA1 (patch-src_3rdparty_chromium_third__party_boringssl_src_include_openssl_thread.h) = 6ee38cef264aeacafc251133e027eb4b9f6b9c16
@@ -634,7 +634,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_crashpad_crashpad_util_posix_clos
 SHA1 (patch-src_3rdparty_chromium_third__party_crashpad_crashpad_util_posix_drop__privileges.cc) = d2b1d0f6d855413827b0f7483e650b9def987f69
 SHA1 (patch-src_3rdparty_chromium_third__party_crashpad_crashpad_util_posix_signals.cc) = d87581f94d2995d7f9d5496fd9beb1192ed29770
 SHA1 (patch-src_3rdparty_chromium_third__party_crashpad_crashpad_util_posix_symbolic__constants__posix.cc) = 1bb6d34f2c5b4a0c0e3e30c0ee2c464e6fa3fbf1
-SHA1 (patch-src_3rdparty_chromium_third__party_crc32c_BUILD.gn) = 80e5c5054294e73624d6b884f3cae04f3735fdaf
+SHA1 (patch-src_3rdparty_chromium_third__party_crc32c_BUILD.gn) = 612e8070e4ba133a1ef578d58fa87fe85756b79e
 SHA1 (patch-src_3rdparty_chromium_third__party_dav1d_BUILD.gn) = f65f1a7ab8ad5b4ad2ff3ef92618b7d8aa390aad
 SHA1 (patch-src_3rdparty_chromium_third__party_dawn_generator_generator__lib.py) = 0505d63a7c70961e2d15820d5d378880abb664b0
 SHA1 (patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__component.gni) = ee356269df97eb28b1f87ce2dab507000ec5249c
@@ -786,7 +786,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_BUILD.gn)
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_source_cpu__info.cc) = 34c8f11a2211fc64fae3bec08bf9bebcb25e960b
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn) = cf10aa3e5135639a9cbb09c8a74ef409519528ee
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_webrtc.gni) = 501ac49f4dd406057089ac65196a7c0eff2560c4
-SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = e841d76dc7417676844f5f089893275c906acbbf
+SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = 62aaf06c068908a61ad4cc484eeacce5f68386a6
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_cpu__features.c) = 2ae5c09b935a94fc50c052f199a945875d3d9127
 SHA1 (patch-src_3rdparty_chromium_third_party_skia_src_utils_SkParseColor.cpp) = 09e2a2144d6819e4ff4649dac3b4b198c3033f46
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_BUILD.gn) = 1952774426515651e3f2797a296be102e9ef55b2
@@ -915,6 +915,7 @@ SHA1 (patch-src_3rdparty_gn_tools_gn_c_tool.cc) = f14c525273c2448b88f38d961ac6e7
 SHA1 (patch-src_3rdparty_gn_tools_gn_ninja_binary_target_writer.cc) = 81dc567ec158c4fd9cfd31c855b637201c822d24
 SHA1 (patch-src_3rdparty_gn_tools_gn_qmake_link_writer.cc) = f05536612a16c52c1cbcfc176aaf849285f8a2fe
 SHA1 (patch-src_3rdparty_gn_tools_gn_tool.h) = 9bf6c5101981dde11e89d5efb29add5092c47654
+SHA1 (patch-src_3rdparty_gn_util_sys__info.cc) = c99b378334e80342f2e33e1ca76b30a6744d0069
 SHA1 (patch-src_buildtools_buildtools.pro) = 95d6195a43e14eb246d97787ffb39c45d16729f5
 SHA1 (patch-src_buildtools_config_linking.pri) = c8b58ecc15e0ee3115745eb5abbbe187c832026a
 SHA1 (patch-src_buildtools_config_support.pri) = c40b66756fe4bdf9436949c071e2f1eae843370f
