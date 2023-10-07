@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5776 2023/10/07 20:12:14 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5777 2023/10/07 20:16:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8456,3 +8456,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/yt-dlp to 2023.10.7 [adam 2023-10-07]
 	Updated converters/py-simplejson to 3.19.2 [adam 2023-10-07]
 	Updated mail/libspf2 to 1.2.11nb2 [schmonz 2023-10-07]
+	Updated lang/py-libcst to 1.1.0 [adam 2023-10-07]
+	Updated textproc/py-openapi-schema-validator to 0.6.2 [adam 2023-10-07]
