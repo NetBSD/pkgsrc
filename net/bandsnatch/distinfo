@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2023/10/01 09:56:54 pin Exp $
+$NetBSD: distinfo,v 1.5 2023/10/07 15:22:28 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -45,9 +45,9 @@ Size (autocfg-1.1.0.crate) = 13272 bytes
 BLAKE2s (backtrace-0.3.69.crate) = 93267e787c6e48433353a2dab3ee5a6684b7cceca509527526dd67b88d7974f0
 SHA512 (backtrace-0.3.69.crate) = 6e86de53e1c5003ef68b6a85479cde1e70bf416bdc50e6e32ead9f9f070fa30ad46de22574041c844ddfeabd5d15de01ef746f19f8cb7f257c491ef0bf071244
 Size (backtrace-0.3.69.crate) = 77299 bytes
-BLAKE2s (bandsnatch-0.3.0.tar.gz) = 4baa840a414395b89da757e8228c5d285e0e4c174ac866e00b6fab074133036d
-SHA512 (bandsnatch-0.3.0.tar.gz) = 152f1738e15dd86050ef0a062832013e47053fdbf4c9b6b35f8f9ded5a9f8461d473b23cc6c92e94c24df6f32753db587295df213a2fec150d8aa2cc5eb905a2
-Size (bandsnatch-0.3.0.tar.gz) = 33338 bytes
+BLAKE2s (bandsnatch-0.3.1.tar.gz) = 870b2a7b9c3ef84b402a27ae51ee8c067635877ac0cd9a00ad6337107b95e6af
+SHA512 (bandsnatch-0.3.1.tar.gz) = 9022f474e0533c5f3832194ef21b7f568f0b6c8b699868fe27b06589afcbb8aa947bb8b952ea426f330810d939b600795580affd5f5079b83041e4c0c3bb711a
+Size (bandsnatch-0.3.1.tar.gz) = 33383 bytes
 BLAKE2s (base64-0.21.4.crate) = 89c7a519d4d91fecfd553b74203230faac0e77ba160d67720db091a75068fc0a
 SHA512 (base64-0.21.4.crate) = 33fba19be1e7c3e74b57ae0487fda904258f31457c005467caf2e44eb55e271e0d2e3f2d4b80b667b05fc625878e0b136a07984dc88335a2099278672b3c4b0f
 Size (base64-0.21.4.crate) = 77029 bytes
