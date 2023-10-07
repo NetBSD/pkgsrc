@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5772 2023/10/07 18:45:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5773 2023/10/07 19:50:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8451,3 +8451,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/bandsnatch to 0.3.1 [pin 2023-10-07]
 	Updated lang/go120 to 1.20.9 [bsiegert 2023-10-07]
 	Updated textproc/typst to 0.8.0 [pin 2023-10-07]
+	Updated textproc/discount to 2.2.7d [schmonz 2023-10-07]
