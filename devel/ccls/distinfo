@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/04 17:25:07 nikita Exp $
+$NetBSD: distinfo,v 1.2 2023/10/07 04:06:26 adam Exp $
 
-BLAKE2s (ccls-0.20220729.tar.gz) = 51306948f0df4f1ba93e114ad69d0fc064de01b42ec470e1366e7aa0accaec7b
-SHA512 (ccls-0.20220729.tar.gz) = 63cb4eace1700118f9c8c4d2f4be40aac948f9c658485c8e3f49dcc863ce7bdd8b6de810b95ec8f46c943b65c8aa5fa643b110a6b981a2e43f57569d897d36c1
-Size (ccls-0.20220729.tar.gz) = 160861 bytes
+BLAKE2s (ccls-0.20230717.tar.gz) = eb8c64574dec387ef6b138f37de297a0889697daf069a64cfb9aad20972a1bf5
+SHA512 (ccls-0.20230717.tar.gz) = f0fe31877151b76cabc17aa2ef8d3d87038805fbe43ca807e2e0824e90d952b1f5767f151788480aedf58e2ff569b72978fceeaca6b741b00c643d73f6afb445
+Size (ccls-0.20230717.tar.gz) = 161869 bytes
