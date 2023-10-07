@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/09/08 18:49:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/10/07 18:09:35 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go120/CONTRIBUTING.md
@@ -52,6 +52,7 @@ go120/misc/cgo/errors/ptr_test.go
 go120/misc/cgo/errors/testdata/err1.go
 go120/misc/cgo/errors/testdata/err2.go
 go120/misc/cgo/errors/testdata/err4.go
+go120/misc/cgo/errors/testdata/err5.go
 go120/misc/cgo/errors/testdata/issue11097a.go
 go120/misc/cgo/errors/testdata/issue11097b.go
 go120/misc/cgo/errors/testdata/issue14669.go
