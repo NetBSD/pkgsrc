@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5766 2023/10/06 19:42:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5767 2023/10/07 04:13:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8444,3 +8444,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/include-what-you-use to 0.20 [adam 2023-10-06]
 	Updated devel/py-argparse-manpage to 4.5 [adam 2023-10-06]
 	Updated devel/py-bitarray to 2.8.2 [adam 2023-10-06]
+	Updated devel/ccls to 0.20230717 [adam 2023-10-07]
+	Updated devel/py-babel to 2.13.0 [adam 2023-10-07]
