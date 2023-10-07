@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2023/09/27 09:21:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2023/10/07 20:09:16 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -867,6 +867,9 @@ ${PYSITELIB}/yt_dlp/extractor/epoch.pyo
 ${PYSITELIB}/yt_dlp/extractor/eporner.py
 ${PYSITELIB}/yt_dlp/extractor/eporner.pyc
 ${PYSITELIB}/yt_dlp/extractor/eporner.pyo
+${PYSITELIB}/yt_dlp/extractor/erocast.py
+${PYSITELIB}/yt_dlp/extractor/erocast.pyc
+${PYSITELIB}/yt_dlp/extractor/erocast.pyo
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.py
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.pyc
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.pyo
@@ -2730,9 +2733,6 @@ ${PYSITELIB}/yt_dlp/extractor/thestar.pyo
 ${PYSITELIB}/yt_dlp/extractor/thesun.py
 ${PYSITELIB}/yt_dlp/extractor/thesun.pyc
 ${PYSITELIB}/yt_dlp/extractor/thesun.pyo
-${PYSITELIB}/yt_dlp/extractor/theta.py
-${PYSITELIB}/yt_dlp/extractor/theta.pyc
-${PYSITELIB}/yt_dlp/extractor/theta.pyo
 ${PYSITELIB}/yt_dlp/extractor/theweatherchannel.py
 ${PYSITELIB}/yt_dlp/extractor/theweatherchannel.pyc
 ${PYSITELIB}/yt_dlp/extractor/theweatherchannel.pyo
