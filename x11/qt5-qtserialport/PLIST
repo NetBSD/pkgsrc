@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2020/06/02 06:41:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/07 20:00:34 adam Exp $
 lib/pkgconfig/Qt5SerialPort.pc
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
-qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtntdll_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtserialport-config_p.h
 qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qtudev_p.h
+qt5/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qwinoverlappedionotifier_p.h
 qt5/include/QtSerialPort/QSerialPort
 qt5/include/QtSerialPort/QSerialPortInfo
 qt5/include/QtSerialPort/QtSerialPort
