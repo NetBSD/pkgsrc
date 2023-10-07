@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5775 2023/10/07 20:10:50 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5776 2023/10/07 20:12:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8455,3 +8455,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/qt5 to 5.15.11 [adam 2023-10-07]
 	Updated net/yt-dlp to 2023.10.7 [adam 2023-10-07]
 	Updated converters/py-simplejson to 3.19.2 [adam 2023-10-07]
+	Updated mail/libspf2 to 1.2.11nb2 [schmonz 2023-10-07]
