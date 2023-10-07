@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5777 2023/10/07 20:16:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5778 2023/10/07 21:22:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8458,3 +8458,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/libspf2 to 1.2.11nb2 [schmonz 2023-10-07]
 	Updated lang/py-libcst to 1.1.0 [adam 2023-10-07]
 	Updated textproc/py-openapi-schema-validator to 0.6.2 [adam 2023-10-07]
+	Added devel/cargo-outdated version 0.13.1 [pin 2023-10-07]
