@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/06/02 15:58:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/07 20:12:08 schmonz Exp $
 
 DISTNAME=		libspf2-1.2.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
