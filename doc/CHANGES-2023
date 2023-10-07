@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5771 2023/10/07 18:10:04 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5772 2023/10/07 18:45:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8450,3 +8450,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-zfec to 1.5.7.3 [gdt 2023-10-07]
 	Updated net/bandsnatch to 0.3.1 [pin 2023-10-07]
 	Updated lang/go120 to 1.20.9 [bsiegert 2023-10-07]
+	Updated textproc/typst to 0.8.0 [pin 2023-10-07]
