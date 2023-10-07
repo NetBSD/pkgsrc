@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2023/06/02 15:57:57 schmonz Exp $
+$NetBSD: distinfo,v 1.16 2023/10/07 20:12:08 schmonz Exp $
 
 BLAKE2s (libspf2-1.2.11.tar.gz) = 47156637170752c1f614769befe9c2e384fca3d6d410b3a9f52d437dd1811af3
 SHA512 (libspf2-1.2.11.tar.gz) = 6a9505e68bd0f8b24acc98e8fd3a6815329a367c9a9cd3ec59d69eb6f9d1153fb2d1297f793828340050663a458a9bdb244d77a58253bfa7a3fbf74aadb01dfc
@@ -8,6 +8,7 @@ SHA1 (patch-configure.ac) = 825bf95570cfd8be8b7da3711fe2c0dc549d16a1
 SHA1 (patch-src_include_spf__dns.h) = f51a66f5b22c24ba7c95f3aa427e41cc215581e0
 SHA1 (patch-src_include_spf__log.h) = fdf6fe3447f465b364ddaa9f2d78f36458ba0266
 SHA1 (patch-src_libspf2_Makefile.in) = a7e989902af90d65adc9693159aae73c07df8dcc
+SHA1 (patch-src_libspf2_spf__compile.c) = 06b17348aaf7eb3eaa864587ff4a775c8c5ab79f
 SHA1 (patch-src_libspf2_spf__dns__resolv.c) = b704c82f6627154470b07763d2233923bf0f6b10
 SHA1 (patch-src_libspf2_spf__utils.c) = be60c232a45689ec4ba88b0e9e87d899890eaed2
 SHA1 (patch-src_spfquery_spfquery.c) = 3878362c6ab9e4badc2809bbb3a106378244f078
