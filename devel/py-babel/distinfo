@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/04/30 15:06:26 wiz Exp $
+$NetBSD: distinfo,v 1.20 2023/10/07 04:12:48 adam Exp $
 
-BLAKE2s (Babel-2.12.1.tar.gz) = df0e3aa836c843f988f27594afd002d3e17dd8f143528ed664d4eb239c4a8977
-SHA512 (Babel-2.12.1.tar.gz) = 93c4bf343d99a1f47f43f8b828eb79098cb429bac1034d58b5aa49adff68116e458067f3784d997f34515828a7432fd18f7abbaeee59b47a4ee8ea744908b33b
-Size (Babel-2.12.1.tar.gz) = 9906735 bytes
+BLAKE2s (Babel-2.13.0.tar.gz) = dd63145af7fcce5c9043000be63d14e391fc17f82377fe0aefe566086fe726cb
+SHA512 (Babel-2.13.0.tar.gz) = 43f4b5fdd8653639111a767c4b082333d89695507e92c3fca88262f23ee7531d4600ec794e908e78a64da1ec54020c7127df3deaf979e15c4e1067cdb839aa47
+Size (Babel-2.13.0.tar.gz) = 9909829 bytes
