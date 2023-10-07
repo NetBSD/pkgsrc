@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23416 2023/10/06 19:42:50 adam Exp $
+$NetBSD: TODO,v 1.23417 2023/10/07 07:50:27 kim Exp $
 
 Suggested new packages
 ======================
@@ -1442,7 +1442,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tob-0.26
 	o tomboy-1.10.2
 	o top-3.8beta1
-	o topgit-0.8
+	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
 	o tor-browser-12.5.3
 	o torrentzip-2.1.0
