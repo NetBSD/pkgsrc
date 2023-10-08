@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.15 2023/10/08 17:58:17 schmonz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.16 2023/10/08 19:58:41 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25406,3 +25406,17 @@ libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-20
 libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24755
 libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24752
 libde265<1.0.11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-24751
+nasm<2.16	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-44370
+nasm-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-44369
+nasm-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-44368
+nasm-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31722
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38668
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38667
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38665
+nasm<2.15.05	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29654
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21687
+nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21686
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21685
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21528
+nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18780
+puppet<7.11.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1894
