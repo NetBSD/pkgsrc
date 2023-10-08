@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5781 2023/10/08 12:10:04 js Exp $
+$NetBSD: CHANGES-2023,v 1.5782 2023/10/08 15:41:54 thor Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8462,3 +8462,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-actionpack61 to 6.1.7.6nb1 [taca 2023-10-08]
 	Updated www/ruby-actionpack70 to 7.0.8nb1 [taca 2023-10-08]
 	Updated devel/objfw to 1.0.4 [js 2023-10-08]
+	Updated math/openblas to 0.3.24nb1 [thor 2023-10-08]
