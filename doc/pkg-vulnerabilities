@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.14 2023/10/06 08:38:32 prlw1 Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.15 2023/10/08 17:58:17 schmonz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25304,7 +25304,7 @@ exim<4.96.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 exim<4.96.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42115
 exim<4.96.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42116
 exim-[0-9]*	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42117
-libspf2-[0-9]*	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42118
+libspf2<1.2.11nb2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42118
 exim-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-42119
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40474
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40475
