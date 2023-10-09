@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/03/09 09:47:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/10/09 17:38:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/CONTRIBUTORS.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -16,8 +16,6 @@ ${PYSITELIB}/astroid/_ast.py
 ${PYSITELIB}/astroid/_ast.pyc
 ${PYSITELIB}/astroid/_backport_stdlib_names.py
 ${PYSITELIB}/astroid/_backport_stdlib_names.pyc
-${PYSITELIB}/astroid/_cache.py
-${PYSITELIB}/astroid/_cache.pyc
 ${PYSITELIB}/astroid/arguments.py
 ${PYSITELIB}/astroid/arguments.pyc
 ${PYSITELIB}/astroid/astroid_manager.py
@@ -44,6 +42,8 @@ ${PYSITELIB}/astroid/brain/brain_curses.py
 ${PYSITELIB}/astroid/brain/brain_curses.pyc
 ${PYSITELIB}/astroid/brain/brain_dataclasses.py
 ${PYSITELIB}/astroid/brain/brain_dataclasses.pyc
+${PYSITELIB}/astroid/brain/brain_datetime.py
+${PYSITELIB}/astroid/brain/brain_datetime.pyc
 ${PYSITELIB}/astroid/brain/brain_dateutil.py
 ${PYSITELIB}/astroid/brain/brain_dateutil.pyc
 ${PYSITELIB}/astroid/brain/brain_fstrings.py
@@ -146,8 +146,6 @@ ${PYSITELIB}/astroid/filter_statements.py
 ${PYSITELIB}/astroid/filter_statements.pyc
 ${PYSITELIB}/astroid/helpers.py
 ${PYSITELIB}/astroid/helpers.pyc
-${PYSITELIB}/astroid/inference.py
-${PYSITELIB}/astroid/inference.pyc
 ${PYSITELIB}/astroid/inference_tip.py
 ${PYSITELIB}/astroid/inference_tip.pyc
 ${PYSITELIB}/astroid/interpreter/__init__.py
@@ -164,12 +162,8 @@ ${PYSITELIB}/astroid/interpreter/objectmodel.py
 ${PYSITELIB}/astroid/interpreter/objectmodel.pyc
 ${PYSITELIB}/astroid/manager.py
 ${PYSITELIB}/astroid/manager.pyc
-${PYSITELIB}/astroid/mixins.py
-${PYSITELIB}/astroid/mixins.pyc
 ${PYSITELIB}/astroid/modutils.py
 ${PYSITELIB}/astroid/modutils.pyc
-${PYSITELIB}/astroid/node_classes.py
-${PYSITELIB}/astroid/node_classes.pyc
 ${PYSITELIB}/astroid/nodes/__init__.py
 ${PYSITELIB}/astroid/nodes/__init__.pyc
 ${PYSITELIB}/astroid/nodes/_base_nodes.py
@@ -200,8 +194,6 @@ ${PYSITELIB}/astroid/raw_building.py
 ${PYSITELIB}/astroid/raw_building.pyc
 ${PYSITELIB}/astroid/rebuilder.py
 ${PYSITELIB}/astroid/rebuilder.pyc
-${PYSITELIB}/astroid/scoped_nodes.py
-${PYSITELIB}/astroid/scoped_nodes.pyc
 ${PYSITELIB}/astroid/test_utils.py
 ${PYSITELIB}/astroid/test_utils.pyc
 ${PYSITELIB}/astroid/transforms.py
