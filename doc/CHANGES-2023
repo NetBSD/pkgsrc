@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5790 2023/10/09 06:05:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5791 2023/10/09 08:08:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8472,3 +8472,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/ghc94 to 9.4.7 [pho 2023-10-09]
 	Updated www/py-rjsmin to 1.2.2 [adam 2023-10-09]
 	Updated www/py-rcssmin to 1.1.2 [adam 2023-10-09]
+	Updated devel/difftastic to 0.52.0 [pin 2023-10-09]
