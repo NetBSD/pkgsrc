@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/04/19 08:08:10 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/10/09 04:54:05 pho Exp $
 
 BUILDLINK_TREE+=	haskell-language-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	haskell-language-server
 HASKELL_LANGUAGE_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.haskell-language-server+=	haskell-language-server>=1.9.0
-BUILDLINK_ABI_DEPENDS.haskell-language-server+=	haskell-language-server>=1.9.0.0nb2
+BUILDLINK_ABI_DEPENDS.haskell-language-server+=	haskell-language-server>=1.9.0.0nb3
 BUILDLINK_PKGSRCDIR.haskell-language-server?=	../../devel/haskell-language-server
 
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"

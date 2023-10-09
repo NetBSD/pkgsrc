@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/02/07 01:41:10 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:51 pho Exp $
 
 DISTNAME=	haddock-library-1.11.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

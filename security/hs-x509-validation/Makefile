@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/02/07 01:41:05 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:45 pho Exp $
 
 DISTNAME=	x509-validation-1.6.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

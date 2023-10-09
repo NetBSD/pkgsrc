@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/02/07 01:40:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2023/10/09 04:54:08 pho Exp $
 
 BUILDLINK_TREE+=	hs-blaze-builder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-blaze-builder
 HS_BLAZE_BUILDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-blaze-builder+=	hs-blaze-builder>=0.4.2
-BUILDLINK_ABI_DEPENDS.hs-blaze-builder+=	hs-blaze-builder>=0.4.2.2nb3
+BUILDLINK_ABI_DEPENDS.hs-blaze-builder+=	hs-blaze-builder>=0.4.2.2nb4
 BUILDLINK_PKGSRCDIR.hs-blaze-builder?=		../../devel/hs-blaze-builder
 .endif	# HS_BLAZE_BUILDER_BUILDLINK3_MK
 
