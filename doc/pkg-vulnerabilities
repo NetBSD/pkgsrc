@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.19 2023/10/09 19:09:42 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.20 2023/10/09 21:26:19 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25442,3 +25442,10 @@ grpc>=1.53.0<1.55.0	expected-behavior-violation	https://nvd.nist.gov/vuln/detail
 grpc>=1.51.0<1.53.0	expected-behavior-violation	https://nvd.nist.gov/vuln/detail/CVE-2023-1428
 grpc<1.55.3	expected-behavior-violation	https://nvd.nist.gov/vuln/detail/CVE-2023-4785
 podman-[0-9]*	unknown-impact	https://nvd.nist.gov/vuln/detail/CVE-2023-0778
+opensc-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2977
+opensc<0.23.0	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-34193
+jhead<3.08	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-28550
+jhead<3.04	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-28840
+monit<5.31.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-26563
+tiff<4.5.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-4645
+tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-1916
