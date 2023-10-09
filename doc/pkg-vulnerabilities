@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.21 2023/10/09 21:34:03 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.22 2023/10/09 21:46:58 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25457,3 +25457,9 @@ vim<9.0.1402	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-
 vim<9.0.1499	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-2426
 vim<9.0.1531	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-2609
 vim<9.0.1532	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2610
+optipng-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43907
+png-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3857
+jpegoptim<1.5.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-27781
+phppgadmin<7.14.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-40619
+phppgadmin<7.7	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-5002
+phppgadmin<6.19	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-0241
