@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.54 2023/02/01 03:37:21 pho Exp $
+# $NetBSD: haskell.mk,v 1.55 2023/10/09 05:30:01 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -227,7 +227,7 @@ CONFIGURE_ARGS+=	--disable-library-profiling
 .endif
 
 PLIST_VARS+=		doc
-PRINT_PLIST_AWK+=	/\/doc\// { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/doc\// && /\/html\// { $$0 = "$${PLIST.doc}" $$0 }
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION:tl} == "yes"
 CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 PLIST.doc=		yes
