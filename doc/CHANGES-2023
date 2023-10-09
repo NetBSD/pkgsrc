@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5801 2023/10/09 12:45:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5802 2023/10/09 13:05:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8488,3 +8488,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-elastic-transport to 8.4.1 [adam 2023-10-09]
 	Updated textproc/py-rapidjson to 1.12 [adam 2023-10-09]
 	Updated www/py-aiohttp to 3.8.6 [adam 2023-10-09]
+	Updated security/p5-Crypt-URandom to 0.39 [wen 2023-10-09]
