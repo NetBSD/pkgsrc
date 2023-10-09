@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.39 2023/08/14 05:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/09 09:39:29 adam Exp $
 
-DISTNAME=	vigra-1.11.1-src
+DISTNAME=	vigra-1.11.2-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ukoethe/}
+GITHUB_TAG=	Version-${PKGVERSION_NOREV:S/./-/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ukoethe.github.io/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
 
-GITHUB_PROJECT=	vigra
-GITHUB_RELEASE=	Version-1-11-1
 EXTRACT_USING=	bsdtar
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/vigra-${GITHUB_TAG}
 
-USE_CMAKE=		yes
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
-CMAKE_ARGS+=	-D DOCINSTALL:PATH=${PREFIX}/share/doc
-CMAKE_ARGS+=	-D WITH_OPENEXR=YES
-CMAKE_ARGS+=	-D WITH_VIGRANUMPY=NO
+CMAKE_CONFIGURE_ARGS+=	-DDOCINSTALL:PATH=${PREFIX}/share/doc
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENEXR=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_VIGRANUMPY=OFF
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
@@ -42,6 +41,8 @@ CHECK_PORTABILITY_SKIP+=	config/update-gh-pages.sh.in
 pre-install:
 	${RM} -f ${WRKSRC}/include/vigra/*.orig
 
+.include "../../devel/cmake/build.mk"
+.include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
