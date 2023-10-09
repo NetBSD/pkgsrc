@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2022/04/06 22:40:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2023/10/09 17:09:01 jperkin Exp $
 #
 # used by editors/emacs28/Makefile
 # used by editors/emacs28-nox11/Makefile
@@ -31,6 +31,12 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-autodepend
 CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
+
+# Erroneously tries to enable inotify by default.
+.if ${OPSYS} == "SunOS"
+.  include "../../devel/glib2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-file-notification=gfile
+.endif
 
 USE_GAMESGROUP=		yes
 
