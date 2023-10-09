@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5803 2023/10/09 17:20:42 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5804 2023/10/09 17:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8491,3 +8491,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p5-Crypt-URandom to 0.39 [wen 2023-10-09]
 	Updated devel/cmake to 3.27.7 [adam 2023-10-09]
 	Updated archivers/unrar to 6.2.12 [adam 2023-10-09]
+	Updated textproc/libcue to 2.2.1nb1 [wiz 2023-10-09]
