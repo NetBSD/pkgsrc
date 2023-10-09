@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2023/09/26 20:37:17 bacon Exp $
+# $NetBSD: Makefile,v 1.243 2023/10/09 16:45:36 jperkin Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -35,11 +35,14 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
-CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CONFIGURE_ARGS+=	--enable-long-double=no
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if ${OPSYS} != "Linux"
