@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/02/07 01:40:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/09 04:54:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-zip-archive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-zip-archive
 HS_ZIP_ARCHIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-zip-archive+=	hs-zip-archive>=0.4.2
-BUILDLINK_ABI_DEPENDS.hs-zip-archive+=	hs-zip-archive>=0.4.2.2nb1
+BUILDLINK_ABI_DEPENDS.hs-zip-archive+=	hs-zip-archive>=0.4.2.2nb2
 BUILDLINK_PKGSRCDIR.hs-zip-archive?=	../../archivers/hs-zip-archive
 
 .include "../../security/hs-digest/buildlink3.mk"

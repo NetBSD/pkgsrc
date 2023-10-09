@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/02/07 01:40:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/09 04:54:17 pho Exp $
 
 BUILDLINK_TREE+=	hs-hie-bios
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hie-bios
 HS_HIE_BIOS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hie-bios+=	hs-hie-bios>=0.11.0
-BUILDLINK_ABI_DEPENDS.hs-hie-bios+=	hs-hie-bios>=0.11.0nb1
+BUILDLINK_ABI_DEPENDS.hs-hie-bios+=	hs-hie-bios>=0.11.0nb2
 BUILDLINK_PKGSRCDIR.hs-hie-bios?=	../../devel/hs-hie-bios
 
 .include "../../converters/hs-aeson/buildlink3.mk"

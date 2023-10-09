@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:41:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/10/09 04:54:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-semigroupoids
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-semigroupoids
 HS_SEMIGROUPOIDS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-semigroupoids+=	hs-semigroupoids>=5.3.7
-BUILDLINK_ABI_DEPENDS.hs-semigroupoids+=	hs-semigroupoids>=5.3.7nb3
+BUILDLINK_ABI_DEPENDS.hs-semigroupoids+=	hs-semigroupoids>=5.3.7nb4
 BUILDLINK_PKGSRCDIR.hs-semigroupoids?=		../../math/hs-semigroupoids
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

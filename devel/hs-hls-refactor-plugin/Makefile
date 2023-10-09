@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/04/19 08:08:13 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:20 pho Exp $
 
 DISTNAME=	hls-refactor-plugin-1.1.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

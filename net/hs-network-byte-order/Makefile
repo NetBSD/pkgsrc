@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/07 01:41:02 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:42 pho Exp $
 
 DISTNAME=	network-byte-order-0.1.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
