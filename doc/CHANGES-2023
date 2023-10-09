@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5799 2023/10/09 12:17:18 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5800 2023/10/09 12:26:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8483,3 +8483,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p5-Crypt-JWT to 0.035 [wen 2023-10-09]
 	Updated security/p5-Crypt-OpenSSL-AES to 0.15 [wen 2023-10-09]
 	Added devel/cargo-upgrades version 2.0.0 [pin 2023-10-09]
+	Added time/py-types-python-dateutil version 2.8.19.14 [adam 2023-10-09]
+	Updated time/py-arrow to 1.3.0 [adam 2023-10-09]
