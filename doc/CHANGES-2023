@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5797 2023/10/09 11:59:05 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5798 2023/10/09 12:02:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8481,3 +8481,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pdm_backend to 2.1.7 [adam 2023-10-09]
 	Updated security/p5-Crypt-Curve25519 to 0.07 [wen 2023-10-09]
 	Updated security/p5-Crypt-JWT to 0.035 [wen 2023-10-09]
+	Updated security/p5-Crypt-OpenSSL-AES to 0.15 [wen 2023-10-09]
