@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5789 2023/10/09 03:52:22 pho Exp $
+$NetBSD: CHANGES-2023,v 1.5790 2023/10/09 06:05:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8470,3 +8470,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-s3 to 1.136.0 [taca 2023-10-08]
 	Updated www/lighttpd to 1.4.72 [schmonz 2023-10-08]
 	Updated lang/ghc94 to 9.4.7 [pho 2023-10-09]
+	Updated www/py-rjsmin to 1.2.2 [adam 2023-10-09]
+	Updated www/py-rcssmin to 1.1.2 [adam 2023-10-09]
