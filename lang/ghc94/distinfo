@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2023/02/07 10:42:17 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2023/10/09 02:49:52 pho Exp $
 
 BLAKE2s (ghc-9.0.1-boot-hadrian.tar.gz) = fff7259676e3d0281c7e15e684b65dc04313c9bcb4d6161962325c3fcee08c7b
 SHA512 (ghc-9.0.1-boot-hadrian.tar.gz) = 02047ca0718a240ce702aeac16c2194b6bf73119dacb59816c1e9a631667e420e44c6ef6d5b83f225af3bd31e3ec3fc8f28e9a3cb22e86f63089110429759878
@@ -24,9 +24,9 @@ Size (ghc-9.2.1-boot-x86_64-unknown-netbsd.tar.xz) = 53193220 bytes
 BLAKE2s (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 1d70d79ad765f0222e27f0a98915231d75dcb61b1ba4fb044ab531bc9930dc5f
 SHA512 (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 7e55f4a002808aa1ae3c6053b129f0f0c0ac2d9f6b9ad5e4fc7c0fa9a09defeea2ed46a7e8d4c5a81213b631aacfa4cdd92b3bc724a6ee4de8b9d201840f3185
 Size (ghc-9.2.1-boot-x86_64-unknown-solaris2.tar.xz) = 69490428 bytes
-BLAKE2s (ghc-9.4.4-src.tar.xz) = d77e26d73dfd2c96130a17c89c9fa361d71493d228eab8e919e2b79ee1783f3f
-SHA512 (ghc-9.4.4-src.tar.xz) = 6c9df7279a30b546bbd30a330905b3bdec31531e1343aa24bad721792235472857153e7f5d8d79e109ed63a314a1a4a647b66510e91eba4627c6806ae5c1fca2
-Size (ghc-9.4.4-src.tar.xz) = 28564104 bytes
+BLAKE2s (ghc-9.4.7-src.tar.xz) = e6afd6da016256bfa07a83cde66a006f6f77ebdc81231872f1c574dd24158bd4
+SHA512 (ghc-9.4.7-src.tar.xz) = 0fa2b864e90e6b76fa5a12b7ab417c0b945653707cdbc4942fbba58f93baee43b6160bb23aa0aa1282907022956275fa5469875059a743f181987d1b067f30e2
+Size (ghc-9.4.7-src.tar.xz) = 28618472 bytes
 BLAKE2s (netbsd-9.0-amd64-libterminfo.tar.gz) = cf57e942d3331df269d8668bc09c59e8a81fbdfa5bb6c671d758d367a23c84ce
 SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
 Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
@@ -48,9 +48,9 @@ SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d540
 SHA1 (patch-libraries_base_System_Environment_ExecutablePath.hsc) = 30baa7f76f20d449feea0f634ca6b90e04d9481e
 SHA1 (patch-libraries_base_configure) = 4e02082cdfde8d927d12f3d2f3d98ace6d4ee116
 SHA1 (patch-libraries_ghc-boot_GHC_BaseDir.hs) = 6885d0426eb4c09462b6628924a0801fe6c83a2f
-SHA1 (patch-libraries_process_cbits_posix_fork__exec.c) = 7c460239c76ee1a05ae364752f7216973597075a
+SHA1 (patch-libraries_process_cbits_posix_fork__exec.c) = 8bc8aa1a3cfe8101257f77da98e5f877c59a36b0
 SHA1 (patch-libraries_terminfo_configure.ac) = f9b1fbf3b7204af0ec2c2c21b1edab9592ff032d
-SHA1 (patch-libraries_text_text.cabal) = 5cfa19359cbdca7c836abae60302addd5e3e4218
+SHA1 (patch-libraries_text_text.cabal) = 2c7302c6854509fe7fd4955f02e5f066d060501e
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimespec.hsc) = 588270767f8a9cbde0648fc99807891fef65d721
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_Internal_CTimeval.hs) = 68914d012a98cc4a4a245efeabcb9143dba0246a
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
