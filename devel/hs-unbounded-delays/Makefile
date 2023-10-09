@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/02/07 01:40:53 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:33 pho Exp $
 
 DISTNAME=	unbounded-delays-0.1.1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/02/08 08:38:00 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/09 04:54:12 pho Exp $
 
 DISTNAME=	deepseq-generics-0.2.0.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

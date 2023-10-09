@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/04/19 08:08:11 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-code-range-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-code-range-plugin
 HS_HLS_CODE_RANGE_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=1.1.0
-BUILDLINK_ABI_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=1.1.0.0nb2
+BUILDLINK_ABI_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=1.1.0.0nb3
 BUILDLINK_PKGSRCDIR.hs-hls-code-range-plugin?=		../../devel/hs-hls-code-range-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/02/07 01:40:41 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:21 pho Exp $
 
 DISTNAME=	indexed-traversable-instances-0.1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

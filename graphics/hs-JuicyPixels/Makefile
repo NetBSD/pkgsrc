@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/02/07 01:40:56 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:36 pho Exp $
 
 DISTNAME=	JuicyPixels-3.3.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/02/07 01:41:17 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:58 pho Exp $
 
 DISTNAME=	bsb-http-chunked-0.0.0.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

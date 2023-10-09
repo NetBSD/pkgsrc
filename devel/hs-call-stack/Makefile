@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/02/07 01:40:29 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:09 pho Exp $
 
 DISTNAME=	call-stack-0.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

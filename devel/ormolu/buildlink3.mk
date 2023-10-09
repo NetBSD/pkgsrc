@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:40:55 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:36 pho Exp $
 
 BUILDLINK_TREE+=	ormolu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ormolu
 ORMOLU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ormolu+=	ormolu>=0.5.2
-BUILDLINK_ABI_DEPENDS.ormolu+=	ormolu>=0.5.2.0nb1
+BUILDLINK_ABI_DEPENDS.ormolu+=	ormolu>=0.5.2.0nb2
 BUILDLINK_PKGSRCDIR.ormolu?=	../../devel/ormolu
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"

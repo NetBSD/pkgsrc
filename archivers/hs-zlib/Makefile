@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/02/07 01:40:22 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/09 04:54:02 pho Exp $
 
 DISTNAME=	zlib-0.6.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 
 MAINTAINER=	pho@cielonegro.org

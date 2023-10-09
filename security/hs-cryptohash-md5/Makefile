@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/02/07 01:41:03 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:43 pho Exp $
 
 DISTNAME=	cryptohash-md5-0.11.101.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

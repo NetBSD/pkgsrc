@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/02/07 01:40:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/09 04:54:37 pho Exp $
 
 BUILDLINK_TREE+=	dhall
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dhall
 DHALL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dhall+=	dhall>=1.41.2
-BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.41.2nb1
+BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.41.2nb2
 BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 
 .include "../../converters/hs-aeson/buildlink3.mk"

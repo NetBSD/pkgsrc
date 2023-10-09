@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/02/07 01:40:22 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:02 pho Exp $
 
 DISTNAME=	aeson-better-errors-0.9.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
