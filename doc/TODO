@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23419 2023/10/09 14:21:31 wiz Exp $
+$NetBSD: TODO,v 1.23420 2023/10/09 17:20:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o classpath-gui-0.99
 	o clawsker-0.7.13
 	o clusterssh-4.16
-	o cmake-3.27.7
 	o coccigrep-1.20
 	o colord-1.4.5
 	o colortail-0.3.3
@@ -1484,7 +1483,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o unicode-screensaver-0.5.2
 	o unifont-15.0.05
 	o units-2.21
-	o unrar-6.2.12
 	o upower-0.99.20 [switches to build with meson]
 	o uriparser-0.9.7
 	o urlgrabber-3.10.2
