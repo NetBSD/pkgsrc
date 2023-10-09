@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.20 2023/10/09 21:26:19 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.21 2023/10/09 21:34:03 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25449,3 +25449,11 @@ jhead<3.04	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-28
 monit<5.31.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-26563
 tiff<4.5.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-4645
 tiff<4.5.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-1916
+vim<9.0.1367	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-1127
+vim<9.0.1376	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-1170
+vim<9.0.1378	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-1175
+vim<9.0.1392	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-1264
+vim<9.0.1402	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-1355
+vim<9.0.1499	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-2426
+vim<9.0.1531	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-2609
+vim<9.0.1532	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-2610
