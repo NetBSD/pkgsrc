@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2023/08/26 13:57:19 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2023/10/09 08:08:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.20
@@ -46,6 +46,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.139
 CARGO_CRATE_DEPENDS+=	libm-0.2.7
 CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.24
+CARGO_CRATE_DEPENDS+=	line-numbers-0.2.2
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.9
 CARGO_CRATE_DEPENDS+=	log-0.4.17
 CARGO_CRATE_DEPENDS+=	memchr-2.5.0

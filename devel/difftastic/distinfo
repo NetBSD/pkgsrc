@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2023/08/26 13:57:19 pin Exp $
+$NetBSD: distinfo,v 1.26 2023/10/09 08:08:21 pin Exp $
 
 BLAKE2s (ahash-0.7.6.crate) = 5a260485860dccfc4af4ad41b107d11c1a1a0fadb036ef801484ecc98d4a6bc8
 SHA512 (ahash-0.7.6.crate) = 61354688b6fb096359faefb6f34be958cd2215d56b88c22c737d24183eaad433f811bc9e64f927e4852c87d2799c22fda82b55cfbef2ed6357ff74f0c4ffec68
@@ -72,9 +72,9 @@ Size (diff-0.1.12.crate) = 10223 bytes
 BLAKE2s (difflib-0.4.0.crate) = 9dedf118200e28f553a5eac255f0d880196f1e55fb258011866d9f8421cb0122
 SHA512 (difflib-0.4.0.crate) = fcb57859424fea6958a4407061c421599fbca111357b1fe72faa65d8fb0b74425c993a24484e8414f475fa146cd8368c4f82e1ceb4e8dd9f95741149345b37a9
 Size (difflib-0.4.0.crate) = 7638 bytes
-BLAKE2s (difftastic-0.51.1.tar.gz) = ab547a715b5309ee50a3128466c0a77f3c946e7b5416eafd501f0980a982e5d9
-SHA512 (difftastic-0.51.1.tar.gz) = d3ff7268d018a46c04fcf8f196095df0c35807a33dd3199e2ebd3c795ff68bb2d1ad97f58e3ec2ae2b900d5613ee1fd14cce0abfb29fa7d49ac77931fd9b85a9
-Size (difftastic-0.51.1.tar.gz) = 57440531 bytes
+BLAKE2s (difftastic-0.52.0.tar.gz) = 01b572f4f591069722a0234f4eed777c874df453c94c7167594e38e8115ff20f
+SHA512 (difftastic-0.52.0.tar.gz) = 2604662f2c7d3d16c9223c68b2aabb84978fbbb4eee5ad631a361ad8fcbccf720316a980dad1f07b3bad94c3fe9a23a25c8c712d4c8da241e1af61be9598fcc6
+Size (difftastic-0.52.0.tar.gz) = 57517066 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
@@ -141,6 +141,9 @@ Size (libm-0.2.7.crate) = 115688 bytes
 BLAKE2s (libmimalloc-sys-0.1.24.crate) = c1f16a20d0f97972ca58c58bbde2979856d9a12ef3c28f9c0a79d483dd320cde
 SHA512 (libmimalloc-sys-0.1.24.crate) = b35b72948581ec3505f569af21a1e55cab9024d3f2fe543972863e74e2c1620fc295a3632122e5548b01dbafc6230a1e2a39456070cbc9d3aadafa10fe166900
 Size (libmimalloc-sys-0.1.24.crate) = 1119801 bytes
+BLAKE2s (line-numbers-0.2.2.crate) = 034f8740acfcb2a3ce9c26ded85ec09ae731d9699cd43019cc336a2dd209bda4
+SHA512 (line-numbers-0.2.2.crate) = 69654a74ceaf327c6eadfa3713522d9dd1ab9c8849fb44dca53df0dce6800b2e6ea862fa067300d24a722ffc1f64672139915a4ea742ca655388d4ec2cb76f5d
+Size (line-numbers-0.2.2.crate) = 5106 bytes
 BLAKE2s (lock_api-0.4.9.crate) = 9f025296f88561802dc51dd84b4fceeaf7365c404db7e4b404d194cfd825a0f8
 SHA512 (lock_api-0.4.9.crate) = 9215381d9bb6b80d217c73a900db43df043b3e939b5bd7a292a02e9ab911cf0eacd8f883d35bdf72b3a0e78df8f1bc3e843ca4c775294c7a7a03091dc1a74990
 Size (lock_api-0.4.9.crate) = 25685 bytes
