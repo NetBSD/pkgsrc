@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2023/10/04 21:01:58 adam Exp $
+# $NetBSD: Makefile,v 1.260 2023/10/09 12:24:17 adam Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -185,6 +185,7 @@ SUBDIR+=	py-trading-calendars
 SUBDIR+=	py-trytond-company-work-time
 SUBDIR+=	py-trytond-timesheet
 SUBDIR+=	py-trytond-timesheet-cost
+SUBDIR+=	py-types-python-dateutil
 SUBDIR+=	py-tzdata
 SUBDIR+=	py-tzlocal
 SUBDIR+=	py-vdirsyncer
