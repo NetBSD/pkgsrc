@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5794 2023/10/09 09:40:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5795 2023/10/09 10:39:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8477,3 +8477,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/tui-journal to 0.3.3 [pin 2023-10-09]
 	Updated graphics/vigra to 1.11.2 [adam 2023-10-09]
 	Updated graphics/tesseract to 5.3.3 [adam 2023-10-09]
+	Updated security/sqlmap to 1.7.10 [adam 2023-10-09]
+	Updated devel/py-pdm_backend to 2.1.7 [adam 2023-10-09]
