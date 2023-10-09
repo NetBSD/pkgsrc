@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/03/09 09:50:19 adam Exp $
-bin/epylint-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.31 2023/10/09 17:39:16 adam Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -52,6 +51,8 @@ ${PYSITELIB}/pylint/checkers/classes/class_checker.py
 ${PYSITELIB}/pylint/checkers/classes/class_checker.pyc
 ${PYSITELIB}/pylint/checkers/classes/special_methods_checker.py
 ${PYSITELIB}/pylint/checkers/classes/special_methods_checker.pyc
+${PYSITELIB}/pylint/checkers/dataclass_checker.py
+${PYSITELIB}/pylint/checkers/dataclass_checker.pyc
 ${PYSITELIB}/pylint/checkers/deprecated.py
 ${PYSITELIB}/pylint/checkers/deprecated.pyc
 ${PYSITELIB}/pylint/checkers/design_analysis.py
@@ -70,8 +71,6 @@ ${PYSITELIB}/pylint/checkers/lambda_expressions.py
 ${PYSITELIB}/pylint/checkers/lambda_expressions.pyc
 ${PYSITELIB}/pylint/checkers/logging.py
 ${PYSITELIB}/pylint/checkers/logging.pyc
-${PYSITELIB}/pylint/checkers/mapreduce_checker.py
-${PYSITELIB}/pylint/checkers/mapreduce_checker.pyc
 ${PYSITELIB}/pylint/checkers/method_args.py
 ${PYSITELIB}/pylint/checkers/method_args.pyc
 ${PYSITELIB}/pylint/checkers/misc.py
@@ -142,32 +141,18 @@ ${PYSITELIB}/pylint/config/config_file_parser.py
 ${PYSITELIB}/pylint/config/config_file_parser.pyc
 ${PYSITELIB}/pylint/config/config_initialization.py
 ${PYSITELIB}/pylint/config/config_initialization.pyc
-${PYSITELIB}/pylint/config/configuration_mixin.py
-${PYSITELIB}/pylint/config/configuration_mixin.pyc
 ${PYSITELIB}/pylint/config/deprecation_actions.py
 ${PYSITELIB}/pylint/config/deprecation_actions.pyc
-${PYSITELIB}/pylint/config/environment_variable.py
-${PYSITELIB}/pylint/config/environment_variable.pyc
 ${PYSITELIB}/pylint/config/exceptions.py
 ${PYSITELIB}/pylint/config/exceptions.pyc
 ${PYSITELIB}/pylint/config/find_default_config_files.py
 ${PYSITELIB}/pylint/config/find_default_config_files.pyc
 ${PYSITELIB}/pylint/config/help_formatter.py
 ${PYSITELIB}/pylint/config/help_formatter.pyc
-${PYSITELIB}/pylint/config/option.py
-${PYSITELIB}/pylint/config/option.pyc
-${PYSITELIB}/pylint/config/option_manager_mixin.py
-${PYSITELIB}/pylint/config/option_manager_mixin.pyc
-${PYSITELIB}/pylint/config/option_parser.py
-${PYSITELIB}/pylint/config/option_parser.pyc
-${PYSITELIB}/pylint/config/options_provider_mixin.py
-${PYSITELIB}/pylint/config/options_provider_mixin.pyc
 ${PYSITELIB}/pylint/config/utils.py
 ${PYSITELIB}/pylint/config/utils.pyc
 ${PYSITELIB}/pylint/constants.py
 ${PYSITELIB}/pylint/constants.pyc
-${PYSITELIB}/pylint/epylint.py
-${PYSITELIB}/pylint/epylint.pyc
 ${PYSITELIB}/pylint/exceptions.py
 ${PYSITELIB}/pylint/exceptions.pyc
 ${PYSITELIB}/pylint/extensions/__init__.py
@@ -182,8 +167,6 @@ ${PYSITELIB}/pylint/extensions/check_elif.py
 ${PYSITELIB}/pylint/extensions/check_elif.pyc
 ${PYSITELIB}/pylint/extensions/code_style.py
 ${PYSITELIB}/pylint/extensions/code_style.pyc
-${PYSITELIB}/pylint/extensions/comparetozero.py
-${PYSITELIB}/pylint/extensions/comparetozero.pyc
 ${PYSITELIB}/pylint/extensions/comparison_placement.py
 ${PYSITELIB}/pylint/extensions/comparison_placement.pyc
 ${PYSITELIB}/pylint/extensions/confusing_elif.py
@@ -202,8 +185,6 @@ ${PYSITELIB}/pylint/extensions/dunder.py
 ${PYSITELIB}/pylint/extensions/dunder.pyc
 ${PYSITELIB}/pylint/extensions/empty_comment.py
 ${PYSITELIB}/pylint/extensions/empty_comment.pyc
-${PYSITELIB}/pylint/extensions/emptystring.py
-${PYSITELIB}/pylint/extensions/emptystring.pyc
 ${PYSITELIB}/pylint/extensions/eq_without_hash.py
 ${PYSITELIB}/pylint/extensions/eq_without_hash.pyc
 ${PYSITELIB}/pylint/extensions/for_any_all.py
@@ -264,6 +245,7 @@ ${PYSITELIB}/pylint/message/message_definition_store.py
 ${PYSITELIB}/pylint/message/message_definition_store.pyc
 ${PYSITELIB}/pylint/message/message_id_store.py
 ${PYSITELIB}/pylint/message/message_id_store.pyc
+${PYSITELIB}/pylint/py.typed
 ${PYSITELIB}/pylint/pyreverse/__init__.py
 ${PYSITELIB}/pylint/pyreverse/__init__.pyc
 ${PYSITELIB}/pylint/pyreverse/diadefslib.py
@@ -286,8 +268,6 @@ ${PYSITELIB}/pylint/pyreverse/printer_factory.py
 ${PYSITELIB}/pylint/pyreverse/printer_factory.pyc
 ${PYSITELIB}/pylint/pyreverse/utils.py
 ${PYSITELIB}/pylint/pyreverse/utils.pyc
-${PYSITELIB}/pylint/pyreverse/vcg_printer.py
-${PYSITELIB}/pylint/pyreverse/vcg_printer.pyc
 ${PYSITELIB}/pylint/pyreverse/writer.py
 ${PYSITELIB}/pylint/pyreverse/writer.pyc
 ${PYSITELIB}/pylint/reporters/__init__.py
@@ -346,8 +326,6 @@ ${PYSITELIB}/pylint/testutils/functional/lint_module_output_update.py
 ${PYSITELIB}/pylint/testutils/functional/lint_module_output_update.pyc
 ${PYSITELIB}/pylint/testutils/functional/test_file.py
 ${PYSITELIB}/pylint/testutils/functional/test_file.pyc
-${PYSITELIB}/pylint/testutils/functional_test_file.py
-${PYSITELIB}/pylint/testutils/functional_test_file.pyc
 ${PYSITELIB}/pylint/testutils/get_test_info.py
 ${PYSITELIB}/pylint/testutils/get_test_info.pyc
 ${PYSITELIB}/pylint/testutils/global_test_linter.py
