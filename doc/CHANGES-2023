@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5798 2023/10/09 12:02:10 wen Exp $
+$NetBSD: CHANGES-2023,v 1.5799 2023/10/09 12:17:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8482,3 +8482,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/p5-Crypt-Curve25519 to 0.07 [wen 2023-10-09]
 	Updated security/p5-Crypt-JWT to 0.035 [wen 2023-10-09]
 	Updated security/p5-Crypt-OpenSSL-AES to 0.15 [wen 2023-10-09]
+	Added devel/cargo-upgrades version 2.0.0 [pin 2023-10-09]
