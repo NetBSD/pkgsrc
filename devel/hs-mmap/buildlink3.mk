@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/02/07 01:40:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-mmap
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mmap
 HS_MMAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mmap+=	hs-mmap>=0.5.9
-BUILDLINK_ABI_DEPENDS.hs-mmap+=	hs-mmap>=0.5.9nb4
+BUILDLINK_ABI_DEPENDS.hs-mmap+=	hs-mmap>=0.5.9nb5
 BUILDLINK_PKGSRCDIR.hs-mmap?=	../../devel/hs-mmap
 .endif	# HS_MMAP_BUILDLINK3_MK
 

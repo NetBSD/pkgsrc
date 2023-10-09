@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/07 01:41:18 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:59 pho Exp $
 
 DISTNAME=	js-flot-0.8.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

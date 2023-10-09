@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/02/07 01:40:50 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/09 04:54:31 pho Exp $
 
 BUILDLINK_TREE+=	hs-strict
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-strict
 HS_STRICT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-strict+=	hs-strict>=0.4.0
-BUILDLINK_ABI_DEPENDS.hs-strict+=	hs-strict>=0.4.0.1nb5
+BUILDLINK_ABI_DEPENDS.hs-strict+=	hs-strict>=0.4.0.1nb6
 BUILDLINK_PKGSRCDIR.hs-strict?=		../../devel/hs-strict
 
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/02/07 01:40:35 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:14 pho Exp $
 
 DISTNAME=	generic-deriving-1.14.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

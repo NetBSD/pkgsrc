@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/02/07 01:40:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/09 04:54:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-cborg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cborg
 HS_CBORG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cborg+=	hs-cborg>=0.2.8
-BUILDLINK_ABI_DEPENDS.hs-cborg+=	hs-cborg>=0.2.8.0nb1
+BUILDLINK_ABI_DEPENDS.hs-cborg+=	hs-cborg>=0.2.8.0nb2
 BUILDLINK_PKGSRCDIR.hs-cborg?=		../../devel/hs-cborg
 
 .include "../../devel/hs-half/buildlink3.mk"

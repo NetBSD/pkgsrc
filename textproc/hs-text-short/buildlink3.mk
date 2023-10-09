@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/02/07 01:41:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/10/09 04:54:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-text-short
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-text-short
 HS_TEXT_SHORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-text-short+=	hs-text-short>=0.1.5
-BUILDLINK_ABI_DEPENDS.hs-text-short+=	hs-text-short>=0.1.5nb3
+BUILDLINK_ABI_DEPENDS.hs-text-short+=	hs-text-short>=0.1.5nb4
 BUILDLINK_PKGSRCDIR.hs-text-short?=	../../textproc/hs-text-short
 
 .include "../../devel/hs-hashable/buildlink3.mk"
