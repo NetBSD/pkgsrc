@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23420 2023/10/09 17:20:42 adam Exp $
+$NetBSD: TODO,v 1.23421 2023/10/09 17:39:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-aiodns-3.1.0
-	o py-astroid-3.0.0
 	o py-barman-3.0.1
 	o py-bleach-6.1.0
 	o py-blinker-1.6.3
@@ -1250,7 +1249,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ptt-1.10.2
 	o py-pygls-1.1.1
 	o py-pykka-4.0.0
-	o py-pylint-3.0.1
 	o py-pymc3-3.8
 	o py-pytz-2023.3.post1
 	o py-qtgraph-qt5-0.12.1
