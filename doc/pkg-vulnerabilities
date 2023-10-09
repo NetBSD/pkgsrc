@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.17 2023/10/08 20:05:45 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.18 2023/10/09 17:36:25 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25426,3 +25426,10 @@ catdoc-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31979
 catdoc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-41633
 geeklog-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-37787
 geeklog-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-37786
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38469
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38470
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38471
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38472
+avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38473
+libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-45322
+libcue<2.2.1nb1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-43641
