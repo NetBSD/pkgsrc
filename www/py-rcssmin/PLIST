@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/10 22:45:58 markd Exp $
-${PYSITELIB}/_rcssmin.so
+@comment $NetBSD: PLIST,v 1.2 2023/10/09 06:05:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_rcssmin.so
 ${PYSITELIB}/rcssmin.py
 ${PYSITELIB}/rcssmin.pyc
 ${PYSITELIB}/rcssmin.pyo
