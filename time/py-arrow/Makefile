@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/03/29 09:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/09 12:25:59 adam Exp $
 
-DISTNAME=	arrow-1.2.3
+DISTNAME=	arrow-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arrow/}
@@ -11,7 +11,8 @@ COMMENT=	Better dates and times for Python
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
-TEST_DEPENDS+=	${PYPKGPREFIX}-dateparser-[0-9]*:../../time/py-dateparser
+DEPENDS+=	${PYPKGPREFIX}-types-python-dateutil>=2.8.10:../../time/py-types-python-dateutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-dateparser>=1.0.0:../../time/py-dateparser
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>=2021.1:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.0.0:../../converters/py-simplejson
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -24,12 +25,6 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 308
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
