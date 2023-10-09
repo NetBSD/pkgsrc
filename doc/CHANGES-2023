@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5792 2023/10/09 08:10:01 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5793 2023/10/09 08:11:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8474,3 +8474,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-rcssmin to 1.1.2 [adam 2023-10-09]
 	Updated devel/difftastic to 0.52.0 [pin 2023-10-09]
 	Updated graphics/oculante to 0.7.7 [pin 2023-10-09]
+	Updated misc/tui-journal to 0.3.3 [pin 2023-10-09]
