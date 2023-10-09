@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.18 2023/10/09 17:36:25 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.19 2023/10/09 19:09:42 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25433,3 +25433,12 @@ avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38472
 avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38473
 libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-45322
 libcue<2.2.1nb1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-43641
+mutt<2.2.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-4874
+mutt<2.2.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-4875
+djvulibre-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46312
+djvulibre-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46310
+grpc<1.53.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-32732
+grpc>=1.53.0<1.55.0	expected-behavior-violation	https://nvd.nist.gov/vuln/detail/CVE-2023-32731
+grpc>=1.51.0<1.53.0	expected-behavior-violation	https://nvd.nist.gov/vuln/detail/CVE-2023-1428
+grpc<1.55.3	expected-behavior-violation	https://nvd.nist.gov/vuln/detail/CVE-2023-4785
+podman-[0-9]*	unknown-impact	https://nvd.nist.gov/vuln/detail/CVE-2023-0778
