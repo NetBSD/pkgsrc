@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5804 2023/10/09 17:35:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5805 2023/10/09 17:39:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8492,3 +8492,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cmake to 3.27.7 [adam 2023-10-09]
 	Updated archivers/unrar to 6.2.12 [adam 2023-10-09]
 	Updated textproc/libcue to 2.2.1nb1 [wiz 2023-10-09]
+	Updated devel/py-astroid to 3.0.0 [adam 2023-10-09]
+	Updated devel/py-pylint to 3.0.1 [adam 2023-10-09]
