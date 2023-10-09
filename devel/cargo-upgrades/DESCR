@@ -1,0 +1,4 @@
+Shows which dependencies in Cargo.toml can be upgraded to a newer version.
+It's similar to cargo-outdated, but has a simpler implementation, so it won't
+complain about path dependencies or potential version conflicts.
+Simply checks whether there is a newer (stable) version for each dependency.
