@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/02/07 01:41:01 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:41 pho Exp $
 
 DISTNAME=	cabal-install-solver-3.8.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

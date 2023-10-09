@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/02/07 01:41:06 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:47 pho Exp $
 
 DISTNAME=	temporary-1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	szptvlfn@NetBSD.org

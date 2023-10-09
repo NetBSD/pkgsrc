@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/02/07 01:41:08 pho Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/09 04:54:48 pho Exp $
 
 DISTNAME=	blaze-html-0.9.1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

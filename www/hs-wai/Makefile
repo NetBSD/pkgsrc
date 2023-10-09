@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/07 01:41:19 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/09 04:55:00 pho Exp $
 
 DISTNAME=	wai-3.2.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

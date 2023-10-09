@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/02/07 01:41:01 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:42 pho Exp $
 
 DISTNAME=	connection-0.3.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
