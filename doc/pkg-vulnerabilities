@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.24 2023/10/10 09:24:03 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.25 2023/10/10 09:27:28 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24948,7 +24948,10 @@ mariadb-server>=10.5<10.5.17	denial-of-service	https://nvd.nist.gov/vuln/detail/
 mariadb-server>=10.6<10.6.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38791
 mariadb-server>=10.7<10.7.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38791
 mariadb-server>=10.8<10.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38791
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47015
+mariadb-server>=10.11<10.11.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47015
+mariadb-server>=10.6<10.6.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47015
+mariadb-server>=10.5<10.5.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47015
+mariadb-server>=10.4<10.4.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47015
 mit-krb5>=1.8<1.19.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-42898
 modular-xorg-xquartz-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3553
 ImageMagick<7.0.10.57	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-20224
