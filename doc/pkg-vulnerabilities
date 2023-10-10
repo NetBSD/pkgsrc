@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.37 2023/10/10 18:53:57 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.38 2023/10/10 19:14:01 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25638,3 +25638,21 @@ grub2>=2.00<2.06.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE
 grub2>=2.00<2.06.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-28735
 grub2>=2.00<2.06.3	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-28733
 grub2>=2.00<2.06.3	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2022-28734
+mp4v2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1451
+mp4v2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1450
+mp4v2-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-29584
+mp4v2-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-29578
+mp4v2-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33720
+mp4v2-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33718
+mp4v2-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33716
+mp4v2-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33719
+mp4v2-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33717
+njs<0.3.4	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-19695
+njs<0.3.4	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-19692
+njs<0.7.11	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-27730
+njs<0.7.11	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-27729
+njs<0.7.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-27728
+njs<0.7.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-27727
+nats-server>=2.2.0<2.8.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-28357
+qpdf<10.1.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25786
+gawk<5.1.1	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-4156
