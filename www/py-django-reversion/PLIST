@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/06/03 15:27:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2023/10/10 17:05:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/reversion/__init__.pyo
 ${PYSITELIB}/reversion/admin.py
 ${PYSITELIB}/reversion/admin.pyc
 ${PYSITELIB}/reversion/admin.pyo
+${PYSITELIB}/reversion/apps.py
+${PYSITELIB}/reversion/apps.pyc
+${PYSITELIB}/reversion/apps.pyo
 ${PYSITELIB}/reversion/errors.py
 ${PYSITELIB}/reversion/errors.pyc
 ${PYSITELIB}/reversion/errors.pyo
@@ -72,6 +75,9 @@ ${PYSITELIB}/reversion/middleware.pyo
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.py
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.pyc
 ${PYSITELIB}/reversion/migrations/0001_squashed_0004_auto_20160611_1202.pyo
+${PYSITELIB}/reversion/migrations/0002_add_index_on_version_for_content_type_and_db.py
+${PYSITELIB}/reversion/migrations/0002_add_index_on_version_for_content_type_and_db.pyc
+${PYSITELIB}/reversion/migrations/0002_add_index_on_version_for_content_type_and_db.pyo
 ${PYSITELIB}/reversion/migrations/__init__.py
 ${PYSITELIB}/reversion/migrations/__init__.pyc
 ${PYSITELIB}/reversion/migrations/__init__.pyo
