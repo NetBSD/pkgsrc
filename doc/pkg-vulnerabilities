@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.39 2023/10/10 19:25:06 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.40 2023/10/10 19:32:44 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25670,3 +25670,9 @@ bitcoin<24.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-33297
 bitcoin-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-37192
 gnuplot-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-25969
 screen<4.9.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24626
+terraform>=1.0.8<1.5.7	overwrite-arbitrary-files	https://nvd.nist.gov/vuln/detail/CVE-2023-4782
+sniproxy<0.6.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25076
+spice-server-[0-9]*	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-23793
+routinator<0.12.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39915
+routinator>=0.9.0<0.12.2	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-39916
+sofia-sip<1.13.15	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-32307
