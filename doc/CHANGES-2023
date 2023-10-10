@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5808 2023/10/10 12:10:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5809 2023/10/10 12:11:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8497,3 +8497,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/goredo to 2.1.0 [schmonz 2023-10-10]
 	Updated sysutils/yazi to 0.1.4nb1 [pin 2023-10-10]
 	Updated devel/cargo-c to 0.9.26 [pin 2023-10-10]
+	Updated time/rsclock to 0.1.10 [pin 2023-10-10]
