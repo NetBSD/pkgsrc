@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5821 2023/10/10 16:45:56 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5822 2023/10/10 16:53:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8523,3 +8523,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-djangocms-admin-style to 3.2.6 [adam 2023-10-10]
 	Updated www/py-django-cms to 3.11.4 [adam 2023-10-10]
 	Updated www/py-djangocms-attributes-field to 3.0.0 [adam 2023-10-10]
+	Updated www/py-djangocms-audio to 2.1.1 [adam 2023-10-10]
+	Updated www/py-djangocms-column to 2.0.0 [adam 2023-10-10]
+	Updated www/py-djangocms-file to 3.0.1 [adam 2023-10-10]
+	Updated www/py-djangocms-googlemap to 2.1.1 [adam 2023-10-10]
