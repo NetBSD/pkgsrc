@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/16 14:04:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/10 16:47:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,9 @@ ${PYSITELIB}/djangocms_audio/migrations/0001_initial.pyo
 ${PYSITELIB}/djangocms_audio/migrations/0002_auto_20160825_1821.py
 ${PYSITELIB}/djangocms_audio/migrations/0002_auto_20160825_1821.pyc
 ${PYSITELIB}/djangocms_audio/migrations/0002_auto_20160825_1821.pyo
+${PYSITELIB}/djangocms_audio/migrations/0003_alter_audiofile_cmsplugin_ptr_and_more.py
+${PYSITELIB}/djangocms_audio/migrations/0003_alter_audiofile_cmsplugin_ptr_and_more.pyc
+${PYSITELIB}/djangocms_audio/migrations/0003_alter_audiofile_cmsplugin_ptr_and_more.pyo
 ${PYSITELIB}/djangocms_audio/migrations/__init__.py
 ${PYSITELIB}/djangocms_audio/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_audio/migrations/__init__.pyo
