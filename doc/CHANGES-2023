@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5812 2023/10/10 14:21:13 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5813 2023/10/10 14:22:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8501,3 +8501,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/rust to 1.71.1 [pin 2023-10-10]
 	Updated math/four-bar-rs to 5.1.0 [pin 2023-10-10]
 	Updated net/sayaka to 3.7.1 [tsutsui 2023-10-10]
+	Updated graphics/raleigh-reloaded to 1.6 [tsutsui 2023-10-10]
