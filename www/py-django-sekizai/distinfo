@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:30:33 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/10/10 16:24:44 adam Exp $
 
-BLAKE2s (django-sekizai-2.0.0.tar.gz) = c99b7425686acd2b82ff956bbff580eb8525e56325c17f9bbad565ab9fd642dc
-SHA512 (django-sekizai-2.0.0.tar.gz) = e225150b6d6c84e8ca66765aafa110f17c51bce84be183867200d6ddfd81b0e6b3290d517480044a4f94818a2ca36557ee19e1de3d05800be54f4f7fecb99854
-Size (django-sekizai-2.0.0.tar.gz) = 10409 bytes
+BLAKE2s (django-sekizai-4.1.0.tar.gz) = bb7b49d54b22be51c11e695c826967e1b7da48132c9a1fcedc1bcefeaf5eadfe
+SHA512 (django-sekizai-4.1.0.tar.gz) = cc4a3523d9be4d72c6ead38f62f7792c465ff22d784aca6241b297f67907aa6eec82d1195242404598aefd177fd630d694ebf8fd792d5218e5dda2bc2de86dab
+Size (django-sekizai-4.1.0.tar.gz) = 14591 bytes
 SHA1 (patch-setup.py) = 72b759dd6a16883c119741479d2db5f861c82fec
