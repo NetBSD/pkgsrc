@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-sys_build_main.rs,v 1.2 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-vendor_openssl-sys_build_main.rs,v 1.3 2023/10/10 13:12:33 pin Exp $
 
 Patterned after Linux and Android, on 32-bit NetBSD ports
 include -latomic.  Parts of this inspired by

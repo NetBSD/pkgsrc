@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_llvm.rs,v 1.1 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-src_bootstrap_llvm.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
 
 Add NetBSD to the list of riscv's which don't need -latomic.
 

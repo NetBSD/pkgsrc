@@ -1,23 +1,22 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.18 2023/05/03 22:39:09 he Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.19 2023/10/10 13:12:33 pin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv[67]hf for NetBSD.
 
---- src/bootstrap/bootstrap.py.orig	2022-09-19 14:07:21.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2023-07-12 03:32:40.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -245,6 +245,11 @@ def default_build_triple(verbose):
+@@ -268,6 +268,10 @@ def default_build_triple(verbose):
+         'NetBSD': 'unknown-netbsd',
          'OpenBSD': 'unknown-openbsd'
      }
- 
 +    # For NetBSD, use `uname -p`, as there it is reliable & sensible
-+    if ostype == 'NetBSD':
++    if kernel == 'NetBSD':
 +        cputype = subprocess.check_output(
 +            ['uname', '-p']).strip().decode(default_encoding)
-+
+ 
      # Consider the direct transformation first and then the special cases
-     if ostype in ostype_mapper:
-         ostype = ostype_mapper[ostype]
-@@ -298,6 +303,7 @@ def default_build_triple(verbose):
+     if kernel in kerneltype_mapper:
+@@ -323,6 +327,7 @@ def default_build_triple(verbose):
      cputype_mapper = {
          'BePC': 'i686',
          'aarch64': 'aarch64',
@@ -25,21 +24,21 @@ Handle earmv[67]hf for NetBSD.
          'amd64': 'x86_64',
          'arm64': 'aarch64',
          'i386': 'i686',
-@@ -336,10 +342,16 @@ def default_build_triple(verbose):
-             ostype = 'linux-androideabi'
+@@ -361,10 +366,16 @@ def default_build_triple(verbose):
+             kernel = 'linux-androideabi'
          else:
-             ostype += 'eabihf'
+             kernel += 'eabihf'
 -    elif cputype in {'armv7l', 'armv8l'}:
 +    elif cputype in {'armv6hf', 'earmv6hf'}:
 +        cputype = 'armv6'
-+        if ostype == 'unknown-netbsd':
-+            ostype += '-eabihf'
-+    elif cputype in {'armv7l', 'armv8l', 'earmv7hf'}:
++        if kernel == 'unknown-netbsd':
++            kernel += '-eabihf'
++    elif cputype in {'armv7l', 'earmv7hf', 'armv8l'}:
          cputype = 'armv7'
-         if ostype == 'linux-android':
-             ostype = 'linux-androideabi'
-+        elif ostype == 'unknown-netbsd':
-+            ostype += '-eabihf'
+         if kernel == 'linux-android':
+             kernel = 'linux-androideabi'
++        elif kernel == 'unknown-netbsd':
++            kernel += '-eabihf'
          else:
-             ostype += 'eabihf'
+             kernel += 'eabihf'
      elif cputype == 'mips':
