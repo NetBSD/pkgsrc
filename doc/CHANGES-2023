@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5810 2023/10/10 13:12:59 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5811 2023/10/10 13:17:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8499,3 +8499,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/cargo-c to 0.9.26 [pin 2023-10-10]
 	Updated time/rsclock to 0.1.10 [pin 2023-10-10]
 	Updated lang/rust to 1.71.1 [pin 2023-10-10]
+	Updated math/four-bar-rs to 5.1.0 [pin 2023-10-10]
