@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/08/18 15:49:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/10 14:22:25 tsutsui Exp $
 
-DISTNAME=	raleigh-reloaded-1.5
+DISTNAME=	raleigh-reloaded-1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vlastavesely/}
 GITHUB_PROJECT=	${PKGBASE}
