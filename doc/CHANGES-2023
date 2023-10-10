@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5819 2023/10/10 16:28:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5820 2023/10/10 16:38:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8517,3 +8517,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-classy-tags to 4.1.0 [adam 2023-10-10]
 	Updated www/py-django-sekizai to 4.1.0 [adam 2023-10-10]
 	Updated wm/marswm to 0.5.1 [pin 2023-10-10]
+	Updated www/py-django-mptt to 0.15.0 [adam 2023-10-10]
+	Updated www/py-easy-thumbnails to 2.8.5 [adam 2023-10-10]
