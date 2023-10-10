@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.34 2023/10/10 17:33:56 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.35 2023/10/10 17:55:00 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25617,3 +25617,9 @@ haproxy<2.8.2	request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2023-40225
 py{27,37,38,39,310,311,312}-MechanicalSoup<1.3.0	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2023-34457
 p7zip-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-47069
 p7zip-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-1576
+wordpress<6.1.2	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-2745
+webkit-gtk-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-2203
+vault>=0.10.0<1.13.0	permission-problem	https://nvd.nist.gov/vuln/detail/CVE-2023-5077
+vim<8.1.2136	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-20703
+vim<9.0.1664	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-3896
+vim<8.2.2354	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3236
