@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.22 2023/10/09 21:46:58 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.23 2023/10/10 09:20:06 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24959,11 +24959,12 @@ ImageMagick<7.1.0.47	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-20
 ImageMagick6<6.9.12.62	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3213
 ImageMagick-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
 ImageMagick6-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
-ImageMagick-[0-9]*	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2022-44268
+ImageMagick<7.1.0.52	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44268
+ImageMagick6<6.9.12.67	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44268
 SDL2>=2.0.4<2.26.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-4743
 alpine<2.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46853
 amanda-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-37703
-GraphicsMagick-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1270
+GraphicsMagick<1.3.38	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1270
 ap{22,24}-auth-openidc<2.4.12.2	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2022-23527
 postgresql-server>=10<10.22	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-2625
 postgresql-server>=11<11.17	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-2625
@@ -25283,10 +25284,10 @@ podofo<0.10.1	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-20
 podofo<0.10.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-31566
 podofo<0.10.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-31555
 podofo<0.10.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-31556
-openimageio-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24472
-openimageio-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-24473
-openimageio-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-22845
-openimageio-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36183
+openimageio<2.4.8.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24472
+openimageio<2.4.8.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-24473
+openimageio<2.4.8.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-22845
+openimageio<2.4.13.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36183
 ntp<4.2.8p17	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26554
 ntp<4.2.8p16	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26555
 ntp<4.2.8p16	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-26553
