@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/16 09:24:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/10/10 16:42:22 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/djangocms_admin_style/__init__.py
 ${PYSITELIB}/djangocms_admin_style/__init__.pyc
@@ -64,6 +65,7 @@ ${PYSITELIB}/djangocms_admin_style/sass/mixins/_zindex.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_all.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_cms.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_custom.scss
+${PYSITELIB}/djangocms_admin_style/sass/settings/_reset-django-dark-mode.scss
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/icon-no.gif
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/icon-unknown.gif
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/icon-yes.gif
@@ -114,6 +116,7 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/deskto
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/envelope-square.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/envelope.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/exclamation-triangle.svg
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/eye.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/file-text.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/file.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/src/files-o.svg
@@ -192,6 +195,7 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/base-admin.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/dist/bundle.adminstyle.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/jquery.min.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/js.cookie-2.1.2.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/dark-mode.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/datetimefields.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/drag-touch-support.js
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/form-submit.js
