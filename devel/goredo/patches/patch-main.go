@@ -1,10 +1,10 @@
-$NetBSD: patch-main.go,v 1.3 2023/01/17 19:30:41 schmonz Exp $
+$NetBSD: patch-main.go,v 1.4 2023/10/10 00:21:47 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
 
---- main.go.orig	2023-01-17 09:05:55.000000000 +0000
+--- main.go.orig	2023-10-09 20:09:32.000000000 +0000
 +++ main.go
-@@ -40,22 +40,21 @@ import (
+@@ -39,23 +39,22 @@ import (
  )
  
  const (
@@ -13,36 +13,56 @@ Avoid CONFLICTS with other redo implementations.
 -	CmdNameRedoAffects  = "redo-affects"
 -	CmdNameRedoAlways   = "redo-always"
 -	CmdNameRedoCleanup  = "redo-cleanup"
+-	CmdNameRedoDep2Rec  = "redo-dep2rec"
+-	CmdNameRedoDepFix   = "redo-depfix"
 -	CmdNameRedoDot      = "redo-dot"
 -	CmdNameRedoIfchange = "redo-ifchange"
 -	CmdNameRedoIfcreate = "redo-ifcreate"
+-	CmdNameRedoInode    = "redo-inode"
 -	CmdNameRedoLog      = "redo-log"
 -	CmdNameRedoOOD      = "redo-ood"
 -	CmdNameRedoSources  = "redo-sources"
 -	CmdNameRedoStamp    = "redo-stamp"
 -	CmdNameRedoTargets  = "redo-targets"
 -	CmdNameRedoWhichdo  = "redo-whichdo"
--	CmdNameRedoDepFix   = "redo-depfix"
--	CmdNameRedoInode    = "redo-inode"
 +	CmdNameRedo         = "goredo"
 +	CmdNameRedoAffects  = "goredo-affects"
 +	CmdNameRedoAlways   = "goredo-always"
 +	CmdNameRedoCleanup  = "goredo-cleanup"
++	CmdNameRedoDep2Rec  = "goredo-dep2rec"
++	CmdNameRedoDepFix   = "goredo-depfix"
 +	CmdNameRedoDot      = "goredo-dot"
 +	CmdNameRedoIfchange = "goredo-ifchange"
 +	CmdNameRedoIfcreate = "goredo-ifcreate"
++	CmdNameRedoInode    = "goredo-inode"
 +	CmdNameRedoLog      = "goredo-log"
 +	CmdNameRedoOOD      = "goredo-ood"
 +	CmdNameRedoSources  = "goredo-sources"
 +	CmdNameRedoStamp    = "goredo-stamp"
 +	CmdNameRedoTargets  = "goredo-targets"
 +	CmdNameRedoWhichdo  = "goredo-whichdo"
-+	CmdNameRedoDepFix   = "goredo-depfix"
-+	CmdNameRedoInode    = "goredo-inode"
  )
  
  var (
-@@ -107,10 +106,9 @@ func main() {
+@@ -84,7 +83,7 @@ func mustParseFd(v, name string) *os.Fil
+ }
+ 
+ func CmdName() string {
+-	return path.Base(os.Args[0])
++	return path.Base(CmdNameRedo)
+ }
+ 
+ func main() {
+@@ -97,7 +96,7 @@ func main() {
+ 		symlinks = flag.Bool("symlinks", false, "create necessary symlinks in current directory")
+ 	}
+ 
+-	flag.Usage = func() { usage(os.Args[0]) }
++	flag.Usage = func() { usage(CmdNameRedo) }
+ 
+ 	BuildUUIDStr := os.Getenv(EnvBuildUUID)
+ 	IsTopRedo = BuildUUIDStr == ""
+@@ -118,10 +117,9 @@ func main() {
  		fmt.Println("goredo", Version, "built with", runtime.Version())
  		return
  	}
@@ -54,7 +74,7 @@ Avoid CONFLICTS with other redo implementations.
  			CmdNameRedoAffects,
  			CmdNameRedoAlways,
  			CmdNameRedoCleanup,
-@@ -125,8 +123,8 @@ func main() {
+@@ -138,8 +136,8 @@ func main() {
  			CmdNameRedoTargets,
  			CmdNameRedoWhichdo,
  		} {
@@ -63,5 +83,5 @@ Avoid CONFLICTS with other redo implementations.
 +			fmt.Println(CmdNameRedo, "<-", cmdName)
 +			if err := os.Symlink(CmdNameRedo, cmdName); err != nil {
  				rc = 1
- 				log.Println(err)
+ 				log.Print(err)
  			}
