@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.33 2023/10/10 17:24:50 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.34 2023/10/10 17:33:56 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25600,3 +25600,20 @@ asn1c-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-
 yajl-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33460
 zziplib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18770
 xterm<380	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40359
+vim<9.0.1847	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-4735
+vim<9.0.1846	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-4734
+vim<9.0.1833	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-4736
+vim<9.0.1848	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-4738
+vim<9.0.1331	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-4751
+vim<9.0.1858	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-4752
+vim<9.0.1840	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-4733
+vim<9.0.1857	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-4750
+vim<9.0.1873	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-4781
+tightvnc<2.8.75	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-27830
+unrar<6.2.3	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-48579
+haproxy<2.7.1	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-0836
+haproxy<2.7.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-25950
+haproxy<2.8.2	request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2023-40225
+py{27,37,38,39,310,311,312}-MechanicalSoup<1.3.0	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2023-34457
+p7zip-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-47069
+p7zip-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-1576
