@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/06/06 08:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/10 08:35:57 jperkin Exp $
 
 CONFLICTS+=	emacs28-nox11-[0-9]*
 
@@ -6,6 +6,12 @@ PKGREVISION= 9
 .include "../../editors/emacs28/Makefile.common"
 
 .include "options.mk"
+
+# Erroneously tries to enable inotify by default.
+.if ${OPSYS} == "SunOS"
+.  include "../../devel/glib2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-file-notification=gfile
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
