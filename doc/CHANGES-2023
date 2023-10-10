@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5825 2023/10/10 17:19:19 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5826 2023/10/10 20:20:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8533,3 +8533,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django-reversion to 5.0.6 [adam 2023-10-10]
 	Updated www/py-selenium to 4.14.0 [ffaubert 2023-10-10]
 	Updated www/py-scrapy to 2.11.0 [ffaubert 2023-10-10]
+	Updated lang/rust-bin to 1.71.1 [pin 2023-10-10]
