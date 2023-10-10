@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/11/15 09:12:11 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/10/10 16:02:51 adam Exp $
 
-BLAKE2s (cwcwidth-0.1.8.tar.gz) = 0eb2425725487f744cc22687c99e2dcf7a027c5850e3a48cd4bd4590b3627f46
-SHA512 (cwcwidth-0.1.8.tar.gz) = 8906194fe7c414000b4ec84c140c35193e71e40bc4a50ba3cfa01a17e739a6afda826442a170269a4bc650868369522d27571bb019c3f4b68bdf51f6686e60f7
-Size (cwcwidth-0.1.8.tar.gz) = 38178 bytes
+BLAKE2s (cwcwidth-0.1.9.tar.gz) = 74ff8e21be3b7f09e6c96c803a49748034c7bc93b5603d20c188bf3515dd2731
+SHA512 (cwcwidth-0.1.9.tar.gz) = bec3a0b249255df5f0d195d5f91fa28c83a2fa2edd6a56a2c1a334126ab618452515ad230cac5386e69358d7a049df2b6e17ce85b4188f92cfdb1135d07188b0
+Size (cwcwidth-0.1.9.tar.gz) = 57892 bytes
