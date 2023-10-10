@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_lzma-sys_config.h,v 1.6 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-vendor_lzma-sys_config.h,v 1.7 2023/10/10 13:12:33 pin Exp $
 
 Fix SunOS builds with newer compilers.
 

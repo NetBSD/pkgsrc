@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_riscv64gc__unknown__netbsd.rs,v 1.1 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_riscv64gc__unknown__netbsd.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
 
 Target spec for NetBSD/riscv64.
 
