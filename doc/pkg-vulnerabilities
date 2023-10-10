@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.23 2023/10/10 09:20:06 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.24 2023/10/10 09:24:03 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24957,8 +24957,8 @@ ImageMagick<7.0.11.8	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2021-3574
 ImageMagick6<6.9.12.8	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2021-3574
 ImageMagick<7.1.0.47	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3213
 ImageMagick6<6.9.12.62	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3213
-ImageMagick-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
-ImageMagick6-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
+ImageMagick<7.1.0.62	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
+ImageMagick6<6.9.12.76	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44267
 ImageMagick<7.1.0.52	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44268
 ImageMagick6<6.9.12.67	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-44268
 SDL2>=2.0.4<2.26.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-4743
