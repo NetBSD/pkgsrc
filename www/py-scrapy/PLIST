@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/27 09:33:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/10 17:18:23 triaxx Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/scrapy/__init__.pyo
 ${PYSITELIB}/scrapy/__main__.py
 ${PYSITELIB}/scrapy/__main__.pyc
 ${PYSITELIB}/scrapy/__main__.pyo
+${PYSITELIB}/scrapy/addons.py
+${PYSITELIB}/scrapy/addons.pyc
+${PYSITELIB}/scrapy/addons.pyo
 ${PYSITELIB}/scrapy/cmdline.py
 ${PYSITELIB}/scrapy/cmdline.pyc
 ${PYSITELIB}/scrapy/cmdline.pyo
@@ -224,6 +227,9 @@ ${PYSITELIB}/scrapy/extensions/memdebug.pyo
 ${PYSITELIB}/scrapy/extensions/memusage.py
 ${PYSITELIB}/scrapy/extensions/memusage.pyc
 ${PYSITELIB}/scrapy/extensions/memusage.pyo
+${PYSITELIB}/scrapy/extensions/periodic_log.py
+${PYSITELIB}/scrapy/extensions/periodic_log.pyc
+${PYSITELIB}/scrapy/extensions/periodic_log.pyo
 ${PYSITELIB}/scrapy/extensions/postprocessing.py
 ${PYSITELIB}/scrapy/extensions/postprocessing.pyc
 ${PYSITELIB}/scrapy/extensions/postprocessing.pyo
@@ -483,9 +489,6 @@ ${PYSITELIB}/scrapy/utils/python.pyo
 ${PYSITELIB}/scrapy/utils/reactor.py
 ${PYSITELIB}/scrapy/utils/reactor.pyc
 ${PYSITELIB}/scrapy/utils/reactor.pyo
-${PYSITELIB}/scrapy/utils/reqser.py
-${PYSITELIB}/scrapy/utils/reqser.pyc
-${PYSITELIB}/scrapy/utils/reqser.pyo
 ${PYSITELIB}/scrapy/utils/request.py
 ${PYSITELIB}/scrapy/utils/request.pyc
 ${PYSITELIB}/scrapy/utils/request.pyo
