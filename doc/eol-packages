@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.1 2023/09/29 09:13:27 wiz Exp $
+# $NetBSD: eol-packages,v 1.2 2023/10/10 19:46:32 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1086,4 +1086,9 @@ Description: Upgrade to a newer version.
 Package: Rails (6.0)
 eol date: June 1, 2022
 URL: https://guides.rubyonrails.org/maintenance_policy.html
+Description: Upgrade to a newer version.
+
+Package: Apache Tomcat versions before 8.5
+eol date: March 2, 2020
+URL: https://tomcat.apache.org/whichversion.html
 Description: Upgrade to a newer version.
