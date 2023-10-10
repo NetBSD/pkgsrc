@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/10/10 16:45:25 adam Exp $
 
-BLAKE2s (djangocms-attributes-field-2.0.0.tar.gz) = 2b4a80b58811457188211bf3f9d504755363981d70d67e6e27fc9d43513da34b
-SHA512 (djangocms-attributes-field-2.0.0.tar.gz) = 7c52eee79b0bac11919f66bc805f81be21af822fff6a0d6dfc587f307e100839dbb788bf1333d79383eb3acebfcb7f260c682fee031ebc7490568dd5d1099bc9
-Size (djangocms-attributes-field-2.0.0.tar.gz) = 14989 bytes
+BLAKE2s (djangocms-attributes-field-3.0.0.tar.gz) = 38f0a56b0ca77a442bbb59e0bcfa7c59a645e120e3e1f5589d6739b8abef0e75
+SHA512 (djangocms-attributes-field-3.0.0.tar.gz) = c0171c4e3fb32b99207c88620d6d593563951337b95eaa8138cf89d4aae0f9e5c533a9fd7d6dfaf6edb649a478eb8f078603f544d36d2a8c2d0bc5a7f7c5c5d2
+Size (djangocms-attributes-field-3.0.0.tar.gz) = 16209 bytes
 SHA1 (patch-setup.py) = 2bec87237bc27548a8ce699b2ad687b1d7d04f99
