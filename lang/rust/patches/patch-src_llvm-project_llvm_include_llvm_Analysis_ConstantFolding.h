@@ -1,4 +1,4 @@
-$NetBSD: patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h,v 1.7 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_include_llvm_Analysis_ConstantFolding.h,v 1.8 2023/10/10 13:12:33 pin Exp $
 
 Fix SunOS CS conflict not handled by include/llvm-c/DataTypes.h
 

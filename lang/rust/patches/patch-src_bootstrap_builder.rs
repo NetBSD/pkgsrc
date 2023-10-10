@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_builder.rs,v 1.25 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-src_bootstrap_builder.rs,v 1.26 2023/10/10 13:12:33 pin Exp $
 
 Use @PREFIX@, not $ORIGIN in rpath.
 
