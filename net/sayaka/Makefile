@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2023/09/01 10:07:00 nia Exp $
+# $NetBSD: Makefile,v 1.46 2023/10/10 14:20:53 tsutsui Exp $
 
-DISTNAME=	sayaka-3.6.5
+DISTNAME=	sayaka-3.7.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=isaki68k/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 BUILD_TARGET=		sayaka
+MAKE_FLAGS+=		-DRELEASE
 
 USE_CXX_FEATURES+=	c++17
 
@@ -29,5 +30,7 @@ do-install:
 .if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../security/mbedtls/buildlink3.mk"
+.include "../../www/wslay/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
