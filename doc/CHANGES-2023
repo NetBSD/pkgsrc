@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5805 2023/10/09 17:39:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5806 2023/10/10 00:21:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8494,3 +8494,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libcue to 2.2.1nb1 [wiz 2023-10-09]
 	Updated devel/py-astroid to 3.0.0 [adam 2023-10-09]
 	Updated devel/py-pylint to 3.0.1 [adam 2023-10-09]
+	Updated devel/goredo to 2.1.0 [schmonz 2023-10-10]
