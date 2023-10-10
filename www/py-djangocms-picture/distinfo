@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:30:35 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/10/10 16:55:55 adam Exp $
 
-BLAKE2s (djangocms-picture-3.0.0.tar.gz) = 6102a48ee11841cb91b25c271ea10e809d13f52d7324cdcc6ef87f7eafc8c7fb
-SHA512 (djangocms-picture-3.0.0.tar.gz) = a78ed53b7b126a397b40cf5337a1059c62937ec90ddc0ea25d08f2a05e19cc62fc8be0bf8fc212c4fb4ed70134a42feecf8cc76ff3ab7e228d2be3d5d9bd93b2
-Size (djangocms-picture-3.0.0.tar.gz) = 47782 bytes
+BLAKE2s (djangocms-picture-4.0.0.tar.gz) = 49b9642b8210071504408ce02e557b7f5382b77cf372fa4bcede242f5094f55c
+SHA512 (djangocms-picture-4.0.0.tar.gz) = 4a5c11fbf1f73869a85794b0e22e2ef82ef13417b746c9c38f685f32e878868b40a6d9e431ed4f0dec8caa108af7057749eaf2e51fed2927f5bfeebbec70a0f1
+Size (djangocms-picture-4.0.0.tar.gz) = 47554 bytes
 SHA1 (patch-setup.py) = 29fd976b8784b8f8bca1573d84a8ddf8b7052a9a
