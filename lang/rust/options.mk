@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2023/04/08 18:18:11 he Exp $
+# $NetBSD: options.mk,v 1.32 2023/10/10 13:12:33 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 .if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 # There may be compatibility issues with the base LLVM on e.g. NetBSD.
-.  if !empty(HAVE_LLVM) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.  if !empty(HAVE_LLVM) || ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
 .endif
@@ -21,7 +21,7 @@ PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 
 # (NetBSD)/sparc64 systems fail to build libunwind,
 # a dependency of pkgsrc llvm, so use the internal one instead
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64}
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .endif
 

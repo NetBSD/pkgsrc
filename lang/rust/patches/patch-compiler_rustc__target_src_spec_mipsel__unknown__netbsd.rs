@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_mipsel__unknown__netbsd.rs,v 1.2 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_mipsel__unknown__netbsd.rs,v 1.3 2023/10/10 13:12:33 pin Exp $
 
 Add target spec for NetBSD/mipsel.
 This one uses mips32 (mips1 llvm fails), so this one is not universally

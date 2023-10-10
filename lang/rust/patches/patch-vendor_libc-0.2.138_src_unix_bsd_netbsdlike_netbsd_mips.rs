@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2023/05/03 22:39:09 he Exp $
+$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
 
 Add file for NetBSD/mips in mips32 variant.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.13 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.14 2023/10/10 13:12:33 pin Exp $
 
 Add i586(pentium), aarch64_be, mipsel and riscv64gc NetBSD targets.
 

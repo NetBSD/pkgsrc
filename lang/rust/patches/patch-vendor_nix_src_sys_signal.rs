@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_nix_src_sys_signal.rs,v 1.2 2023/05/03 22:39:09 he Exp $
+$NetBSD: patch-vendor_nix_src_sys_signal.rs,v 1.3 2023/10/10 13:12:33 pin Exp $
 
 Narrow the conditional on mips to only apply to Linux.
 

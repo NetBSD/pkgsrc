@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_target-lexicon_src_targets.rs,v 1.10 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-vendor_target-lexicon_src_targets.rs,v 1.11 2023/10/10 13:12:33 pin Exp $
 
 Add aarch64_eb, mipsel and riscv64gc for NetBSD.
 

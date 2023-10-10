@@ -1,4 +1,4 @@
-$NetBSD: patch-library_core_src_ffi_mod.rs,v 1.1 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-library_core_src_ffi_mod.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
 
 NetBSD/riscv64 also has unsigned chars.
 
