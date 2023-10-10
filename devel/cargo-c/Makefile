@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/28 08:20:15 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/10 12:09:50 pin Exp $
 
-DISTNAME=	cargo-c-0.9.24
+DISTNAME=	cargo-c-0.9.26
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/lu-zero/cargo-c
 COMMENT=	Build and install C-compatible libraries from Rust lang
 LICENSE=	2-clause-bsd
 
-SITES.curl-sys-0.4.65+curl-8.2.1.crate=	https://static.crates.io/crates/curl-sys/
+SITES.curl-sys-0.4.67+curl-8.3.0.crate=	https://static.crates.io/crates/curl-sys/
 
 USE_TOOLS+=	pkg-config
 
