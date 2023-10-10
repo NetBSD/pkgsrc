@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.26 2023/10/10 09:58:01 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.27 2023/10/10 10:11:13 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22799,13 +22799,27 @@ py{27,36,37,38,39,310}-django>=4.0<4.0.2	cross-site-scripting	https://nvd.nist.g
 py{27,36,37,38,39,310}-ipython>=6.0.0<7.16.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
 py{27,36,37,38,39,310}-ipython>=7.17.0<7.31.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
 py{27,36,37,38,39,310}-ipython>=8.0.0<8.0.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21699
-mariadb-server-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-46669
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46668
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46665
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46664
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46662
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46663
-mariadb-server-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46661
+mariadb-server>=10.6<10.6.8	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-46669
+mariadb-server>=10.5<10.5.16	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-46669
+mariadb-server>=10.4<10.4.25	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-46669
+mariadb-server>=10.6<10.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46668
+mariadb-server>=10.5<10.5.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46668
+mariadb-server>=10.4<10.4.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46668
+mariadb-server>=10.6<10.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46665
+mariadb-server>=10.5<10.5.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46665
+mariadb-server>=10.4<10.4.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46665
+mariadb-server>=10.6<10.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46664
+mariadb-server>=10.5<10.5.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46664
+mariadb-server>=10.4<10.4.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46664
+mariadb-server>=10.6<10.6.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46662
+mariadb-server>=10.5<10.5.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46662
+mariadb-server>=10.4<10.4.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46662
+mariadb-server>=10.6<10.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46663
+mariadb-server>=10.5<10.5.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46663
+mariadb-server>=10.4<10.4.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46663
+mariadb-server>=10.6<10.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46661
+mariadb-server>=10.5<10.5.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46661
+mariadb-server>=10.4<10.4.24	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46661
 openssl>=1.1.1<1.1.1m	unknown-impact	https://nvd.nist.gov/vuln/detail/CVE-2021-4160
 mariadb-server<10.4.22	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-46667
 mariadb-server>=10.5.0<10.5.13	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-46667
