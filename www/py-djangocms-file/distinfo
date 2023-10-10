@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:30:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/10/10 16:50:55 adam Exp $
 
-BLAKE2s (djangocms-file-3.0.0.tar.gz) = 7c69e00c4df929dc19a6c89a3e0711039106c06d2bdd0de1511709736a4006fa
-SHA512 (djangocms-file-3.0.0.tar.gz) = 9af3b9602bf6f6d3fb3eaa278f7ff6c0b2f13e3e6b9682e615aaba1c25fca8661503ba9aa381f3b19165f530e611923fb7af737fcf935579c3f8b6215516b3a1
-Size (djangocms-file-3.0.0.tar.gz) = 30881 bytes
-SHA1 (patch-setup.py) = 5fe0db32de938f522da173bdde8d416f0c28eff2
+BLAKE2s (djangocms-file-3.0.1.tar.gz) = db9f29f0aa29c83046d8421f87df0b2affe1476f4d401e4072b19a188c2d5750
+SHA512 (djangocms-file-3.0.1.tar.gz) = 9fde8f15f5618ee50b373817046f4b417f618540f6d23655b82c2dba48de60ffa5e2e81030d87df192864e8ed356dcfddcb777da0cbc3e21e293c5ea4a9fdf80
+Size (djangocms-file-3.0.1.tar.gz) = 31143 bytes
+SHA1 (patch-setup.py) = c76f92c3f874a7d3fbcd31eabc1338fed9e08884
