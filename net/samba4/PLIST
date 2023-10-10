@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2023/04/29 08:01:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2023/10/10 16:05:01 taca Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -874,7 +874,6 @@ libexec/samba/rpcd_epmapper
 libexec/samba/rpcd_fsrvp
 libexec/samba/rpcd_lsad
 libexec/samba/rpcd_mdssvc
-libexec/samba/rpcd_rpcecho
 libexec/samba/rpcd_spoolss
 libexec/samba/rpcd_winreg
 libexec/samba/samba-bgqd
