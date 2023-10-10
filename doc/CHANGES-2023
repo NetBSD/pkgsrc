@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5813 2023/10/10 14:22:45 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5814 2023/10/10 15:25:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8502,3 +8502,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/four-bar-rs to 5.1.0 [pin 2023-10-10]
 	Updated net/sayaka to 3.7.1 [tsutsui 2023-10-10]
 	Updated graphics/raleigh-reloaded to 1.6 [tsutsui 2023-10-10]
+	Updated net/zeromq to 4.3.5 [adam 2023-10-10]
+	Updated www/nghttp2 to 1.57.0 [adam 2023-10-10]
+	Updated www/nghttp2-tools to 1.57.0 [adam 2023-10-10]
