@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.35 2023/10/10 17:55:00 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.36 2023/10/10 18:47:32 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25623,3 +25623,13 @@ vault>=0.10.0<1.13.0	permission-problem	https://nvd.nist.gov/vuln/detail/CVE-202
 vim<8.1.2136	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-20703
 vim<9.0.1664	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2023-3896
 vim<8.2.2354	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3236
+poppler<23.06.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-34872
+poppler<21.01.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-36024
+poppler<21.01.0	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2020-36023
+poppler<21.01.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-38349
+poppler<22.08.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37052
+poppler<22.08.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-37050
+poppler<0.76.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-18839
+poppler<20.08.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-23804
+protobuf-c<1.4.1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-48468
+advancecomp<2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2961
