@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2021/11/14 20:15:45 adam Exp $
-bin/curve_keygen
+@comment $NetBSD: PLIST,v 1.12 2023/10/10 15:16:01 adam Exp $
+@comment bin/curve_keygen
 include/zmq.h
 include/zmq_utils.h
 lib/libzmq.la
@@ -44,6 +44,7 @@ man/man3/zmq_msg_set_routing_id.3
 man/man3/zmq_msg_size.3
 man/man3/zmq_poll.3
 man/man3/zmq_poller.3
+man/man3/zmq_ppoll.3
 man/man3/zmq_proxy.3
 man/man3/zmq_proxy_steerable.3
 man/man3/zmq_recv.3
