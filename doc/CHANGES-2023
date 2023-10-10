@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5823 2023/10/10 17:05:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5824 2023/10/10 17:10:32 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8531,3 +8531,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-djangocms-picture to 4.0.0 [adam 2023-10-10]
 	Updated www/py-djangocms-text-ckeditor to 5.1.4 [adam 2023-10-10]
 	Updated www/py-django-reversion to 5.0.6 [adam 2023-10-10]
+	Updated www/py-selenium to 4.14.0 [ffaubert 2023-10-10]
