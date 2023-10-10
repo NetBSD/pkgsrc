@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/08/06 07:23:07 adam Exp $
+# $NetBSD: Makefile,v 1.98 2023/10/10 10:27:21 pho Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
@@ -29,6 +29,15 @@ CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 CONFIGURE_ENV+=		gl_cv_have_raw_decl_strtoimax=no
 CONFIGURE_ENV+=		ac_cv_have_decl_strtoimax=no
 LDFLAGS.SCO_SV+=	-lsocket
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+.  for p in ${LP32PLATFORMS}
+.    if !empty(MACHINE_PLATFORM:M${p})
+# Required on platforms where time_t is signed 32-bit.
+CONFIGURE_ARGS+=	--disable-year2038
+.    endif
+.  endfor
 .endif
 
 PLIST_VARS+=		rmt
