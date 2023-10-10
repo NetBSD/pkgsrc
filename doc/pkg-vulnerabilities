@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.38 2023/10/10 19:14:01 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.39 2023/10/10 19:25:06 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25656,3 +25656,17 @@ njs<0.7.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-27727
 nats-server>=2.2.0<2.8.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-28357
 qpdf<10.1.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25786
 gawk<5.1.1	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-4156
+tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2731
+tiff-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-26965
+tiff>=3.9.0<4.5.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-3316
+tiff<4.5.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-3618
+tiff<4.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-40090
+consul>=1.15.0<1.15.3	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-2816
+consul>=1.13.0<1.15.3	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-1297
+consul<1.16.1	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-3518
+faad2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38858
+faad2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38857
+bitcoin<24.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-33297
+bitcoin-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-37192
+gnuplot-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-25969
+screen<4.9.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24626
