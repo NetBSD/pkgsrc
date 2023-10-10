@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.32 2023/10/10 14:32:06 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.33 2023/10/10 17:24:50 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25595,3 +25595,8 @@ php{56,73,74,80,81,82}-concrete5-[0-9]*	cross-site-scripting	https://nvd.nist.go
 gradle<7.6.3	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2023-42445
 py{27,37,38,39,310,311,312}-octoprint<1.9.3	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-41047
 php{56,73,74,80,81,82}-piwigo-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-44393
+asn1c-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-23910
+asn1c-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-23911
+yajl-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-33460
+zziplib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18770
+xterm<380	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40359
