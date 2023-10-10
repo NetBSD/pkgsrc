@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5814 2023/10/10 15:25:03 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5815 2023/10/10 16:05:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8505,3 +8505,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/zeromq to 4.3.5 [adam 2023-10-10]
 	Updated www/nghttp2 to 1.57.0 [adam 2023-10-10]
 	Updated www/nghttp2-tools to 1.57.0 [adam 2023-10-10]
+	Updated net/samba4 to 4.18.8 [taca 2023-10-10]
