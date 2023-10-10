@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.27 2023/10/10 10:11:13 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.28 2023/10/10 10:17:47 tm Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25529,3 +25529,19 @@ jpegoptim<1.5.3	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-27781
 phppgadmin<7.14.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-40619
 phppgadmin<7.7	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-5002
 phppgadmin<6.19	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-0241
+webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25363
+webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25362
+webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25361
+webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25360
+webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25358
+libde265-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-47664
+libcares<1.19.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-4904
+webkit-gtk<2.26.0	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2019-8720
+qemu>=7.2.0<7.2.3	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-0330
+emacs>=28.1<28.3	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-27986
+emacs>=28.1<28.3	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-27985
+consul<1.14.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-0845
+liferea<1.14.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2023-1350
+opendoas-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-28339
+stellarium<23.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-28371
+dnsmasq<2.90	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-28450
