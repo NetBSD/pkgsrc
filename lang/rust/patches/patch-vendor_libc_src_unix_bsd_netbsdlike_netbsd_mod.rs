@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.6 2023/07/10 12:01:24 he Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.7 2023/10/10 13:12:33 pin Exp $
 
 Copy execinfo function definitions from openbsd's mod.rs.
 Add entries for NetBSD/mipsel and NetBSD/riscv64.

@@ -1,4 +1,4 @@
-$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.12 2023/04/08 18:18:11 he Exp $
+$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.13 2023/10/10 13:12:33 pin Exp $
 
 Fix stack-clash on SunOS.
 

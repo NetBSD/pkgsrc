@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.7 2023/01/23 18:49:04 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.8 2023/10/10 13:12:33 pin Exp $
 
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
