@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.161 2023/10/10 13:12:33 pin Exp $
+$NetBSD: distinfo,v 1.162 2023/10/11 15:52:51 jperkin Exp $
 
-BLAKE2s (rust-1.69.0-x86_64-unknown-illumos.tar.gz) = e750d02582f4bca4eef0a7776e844263a9fc859858604d913cfc6d5abbfbcc9a
-SHA512 (rust-1.69.0-x86_64-unknown-illumos.tar.gz) = eb36e97d9fd8a1b3797f0702177f47666b98c852257094c779fad82426463ad5f8775a987e85ddff6abc8c3a22810dcb4267dedf77b3272bb05b8775ead18c51
-Size (rust-1.69.0-x86_64-unknown-illumos.tar.gz) = 214951989 bytes
 BLAKE2s (rust-1.70.0-aarch64-apple-darwin.tar.gz) = dd134e5775fd9bfdbf4d0a1b9ef76c5e01f113efb25654ec0ece397e6fafb433
 SHA512 (rust-1.70.0-aarch64-apple-darwin.tar.gz) = 22466cd67b1835f369cb92a754f8a108b062453b9a3ee05cca8078595a7af98a0cac41e19ba7ea0c6f5ce0593ed215eaf7c2e6ddfdb56a672486367bc934ac59
 Size (rust-1.70.0-aarch64-apple-darwin.tar.gz) = 239190822 bytes
@@ -54,6 +51,9 @@ Size (rust-1.70.0-x86_64-apple-darwin.tar.gz) = 324054910 bytes
 BLAKE2s (rust-1.70.0-x86_64-unknown-freebsd.tar.gz) = 377a9e54374d903902d11c3252d0b87f9cf09869b8e18ab5f6a242aab9198403
 SHA512 (rust-1.70.0-x86_64-unknown-freebsd.tar.gz) = f01bfb2f9f952bcd05bd15436377b668ff0a06e5e880e6f7e1605ee18a99109c4be365cc68ce2305c949c800813922263fd5b0e27f927fe3f17c8c25281c1711
 Size (rust-1.70.0-x86_64-unknown-freebsd.tar.gz) = 307948458 bytes
+BLAKE2s (rust-1.70.0-x86_64-unknown-illumos.tar.gz) = 661ed9f931f54cf20d90c15d2bf52c3a5109859c8850f58fb8ce5f7522fc772e
+SHA512 (rust-1.70.0-x86_64-unknown-illumos.tar.gz) = 181912a213b37e82e984881d28403e269321c7d29f51ba5c6344d31218cc61b10d55de49accde190b2bd0999a9567d30fab1dbb020b950e2681ce4af5a0d277f
+Size (rust-1.70.0-x86_64-unknown-illumos.tar.gz) = 217363531 bytes
 BLAKE2s (rust-1.70.0-x86_64-unknown-linux-gnu.tar.gz) = adce2784cc26732d23d4aa13814c962f026a6537c03c5a77017335126d2bc1dd
 SHA512 (rust-1.70.0-x86_64-unknown-linux-gnu.tar.gz) = 468a668dec119c9034df568d4a3ff0c7898e11b7dd2767d6b3358d6011915998e1683c8c444a3350bc559e55c739335b9553e7caca0b5c594ddfc31ef6190cad
 Size (rust-1.70.0-x86_64-unknown-linux-gnu.tar.gz) = 347192982 bytes
