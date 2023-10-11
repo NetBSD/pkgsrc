@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2023/09/20 08:54:24 pin Exp $
+$NetBSD: distinfo,v 1.33 2023/10/11 11:42:14 pin Exp $
 
 BLAKE2s (Inflector-0.11.4.crate) = 2f8b4a805230be3b58267c7fb6b9c26c2ec966378d195673d1128a851cca515d
 SHA512 (Inflector-0.11.4.crate) = f1f6463e033b6d3c16c51dc1e1a3f5569954308b95b59058294b7f9310919bbda797e99e6a07529071bb83f0688867a243997d33795a7136b0af73977004296e
@@ -1749,4 +1749,6 @@ Size (zstd-safe-6.0.5+zstd.1.5.4.crate) = 20863 bytes
 BLAKE2s (zstd-sys-2.0.8+zstd.1.5.5.crate) = 6b0ec4a18acadf02653ceb28a5d25cac6314c8b457f722c5ff8d8df17bf171ec
 SHA512 (zstd-sys-2.0.8+zstd.1.5.5.crate) = acfbf6c464678438bcab289c8be2e67a2bdfb910143d77363bf1ad5227dffc4b60e224388b7e59186fd4d1e017b63fef49734e99e383cbda19b82b4ed382fcd8
 Size (zstd-sys-2.0.8+zstd.1.5.5.crate) = 736270 bytes
+SHA1 (patch-.._vendor_libc-0.2.147_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 4d9bd38b3a8458805bac7e86878d5ee7aa8c64e9
+SHA1 (patch-.._vendor_trash-3.0.6_src_freedesktop.rs) = be103555ff292d8303caa7f2fc1d1a198ed416f3
 SHA1 (patch-.._vendor_uucore-0.0.21_src_lib_features_fs.rs) = 139e7b3a8991e72448ec41f87530b2fd97c1c033
