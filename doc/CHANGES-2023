@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5837 2023/10/11 15:11:48 micha Exp $
+$NetBSD: CHANGES-2023,v 1.5838 2023/10/11 18:27:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8551,3 +8551,19 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/wxmathplot version 0.2.0 [bouyer 2023-10-11]
 	Updated devel/smake to 1.7nb3 [micha 2023-10-11]
 	Updated sysutils/cdrtools to 3.02a10nb4 [micha 2023-10-11]
+	Updated security/py-acme to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-apache to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-digitalocean to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-dnsimple to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-dnsmadeeasy to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-gehirn to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-google to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-linode to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-luadns to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-nsone to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-ovh to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-rfc2136 to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-route53 to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-dns-sakuracloud to 2.7.1 [adam 2023-10-11]
+	Updated security/py-certbot-nginx to 2.7.1 [adam 2023-10-11]
