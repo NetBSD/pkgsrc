@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/09/20 08:54:24 pin Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/11 11:42:14 pin Exp $
 
 DISTNAME=	nushell-0.85.0
+PKGREVISION=    1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -19,13 +20,6 @@ MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
-
-# The 'trash-support' feature is default but, does not build on NetBSD.
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
-CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		plugin which-support sqlite
-.endif
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
