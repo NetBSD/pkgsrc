@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2023/08/04 20:06:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2023/10/11 09:02:17 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -825,6 +825,9 @@ ${PYSITELIB}/fontTools/varLib/__init__.pyo
 ${PYSITELIB}/fontTools/varLib/__main__.py
 ${PYSITELIB}/fontTools/varLib/__main__.pyc
 ${PYSITELIB}/fontTools/varLib/__main__.pyo
+${PYSITELIB}/fontTools/varLib/avar.py
+${PYSITELIB}/fontTools/varLib/avar.pyc
+${PYSITELIB}/fontTools/varLib/avar.pyo
 ${PYSITELIB}/fontTools/varLib/avarPlanner.py
 ${PYSITELIB}/fontTools/varLib/avarPlanner.pyc
 ${PYSITELIB}/fontTools/varLib/avarPlanner.pyo
