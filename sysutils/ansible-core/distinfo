@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2023/09/18 12:32:23 adam Exp $
+$NetBSD: distinfo,v 1.20 2023/10/11 08:25:32 adam Exp $
 
-BLAKE2s (ansible-core-2.15.4.tar.gz) = e1fd5538b3240eaf10a1ad1882c60e91a50e8c2e27e302bfc1e6c000d5cdc154
-SHA512 (ansible-core-2.15.4.tar.gz) = 2db03dca53ff7ce99068afba97150f00e4b1c3a7b80e34b90f515baa3b745342d8e483849265e7fcf3dfee31de7a24352a1320c64ce719d31f43be96030b663c
-Size (ansible-core-2.15.4.tar.gz) = 3148213 bytes
+BLAKE2s (ansible-core-2.15.5.tar.gz) = 6293ecd2ec68b6c22ca44e65d5c27b4d9324818455748222b75a1eb69e053b8c
+SHA512 (ansible-core-2.15.5.tar.gz) = 820c455d4e9703fc0edebdc917325b7dc5a47c29fbaaac701e3b4d975cd17ebcdffefeec178c57b15f11ccdc57cbd649cd070031fd927c1f35819d4955e19cc0
+Size (ansible-core-2.15.5.tar.gz) = 3154868 bytes
 SHA1 (patch-lib_ansible_module__utils_facts_hardware_netbsd.py) = cdc41b104bffab7badd00446a9d0cdecba32cca2

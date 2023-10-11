@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/09/18 12:32:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/11 08:25:32 adam Exp $
 
-DISTNAME=	ansible-core-2.15.4
+DISTNAME=	ansible-core-2.15.5
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
 
