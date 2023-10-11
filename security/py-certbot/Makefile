@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/04/17 09:22:04 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/11 18:27:03 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 COMMENT=	Client for the Let's Encrypt CA
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
-DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
+DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.5.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=1.13.0:../../security/py-josepy
