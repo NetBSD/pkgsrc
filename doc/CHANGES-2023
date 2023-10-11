@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5829 2023/10/11 08:32:38 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5830 2023/10/11 08:44:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8539,3 +8539,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/libcurl-gnutls to 8.4.0 [adam 2023-10-11]
 	Updated sysutils/ansible-core to 2.15.5 [adam 2023-10-11]
 	Updated net/py-zmq to 25.1.1 [adam 2023-10-11]
+	Updated databases/py-apsw to 3.43.1.1 [adam 2023-10-11]
+	Updated net/py-unearth to 0.11.1 [adam 2023-10-11]
