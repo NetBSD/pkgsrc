@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5833 2023/10/11 11:42:38 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5834 2023/10/11 11:44:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8545,3 +8545,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/py-fonttools to 4.43.1 [adam 2023-10-11]
 	Updated graphics/simp to 3.4.1nb1 [pin 2023-10-11]
 	Updated shells/nushell to 0.85.0nb1 [pin 2023-10-11]
+	Updated sysutils/dua-cli to 2.20.1nb1 [pin 2023-10-11]
