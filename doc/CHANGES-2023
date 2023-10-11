@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5828 2023/10/11 07:16:23 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5829 2023/10/11 08:32:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8537,3 +8537,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/wasi-libc to 0.0.0pre20231007 [ryoon 2023-10-11]
 	Updated www/curl to 8.4.0 [adam 2023-10-11]
 	Updated www/libcurl-gnutls to 8.4.0 [adam 2023-10-11]
+	Updated sysutils/ansible-core to 2.15.5 [adam 2023-10-11]
+	Updated net/py-zmq to 25.1.1 [adam 2023-10-11]
