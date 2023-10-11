@@ -9,7 +9,3 @@ TAO, DAO, and human-readable error messages.
 This package also provides tools for retrieving audio tracks,
 reading and writing CDs, DVDs, and Blu-ray discs, creating
 ISO9660/JOLIET/HFS filesystems, and verifying ISO9660 images.
-
-Note:
-This package is based on the final Schily Tools release 2021-09-18,
-not a dedicated cdrtools release.
