@@ -1,0 +1,10 @@
+wxMathPlot is an add-on library for wxWidgets which provides a framework for
+easy plotting of mathematical functions, sampled data and generic 2D plots.
+Features:
+    Re implementation of scrollers (by ngpaton)
+    Multi-platform (runs static or dynamic on Windows, Linux, MacOSX)
+    Full control on axis formatting and positioning
+    Colour themes (eg. white on black)
+    Movable legend and mouse coordinate display in overlay
+    Functions for printing and taking screenshots
+    Completely mouse-driven view control: pan, zoom, scroll, box positioning.

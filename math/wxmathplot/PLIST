@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/11 13:32:37 bouyer Exp $
+include/mathplot.h
+lib/libmathplot.a
+share/examples/wxMathPlot/samples/sample1/CMakeLists.txt
+share/examples/wxMathPlot/samples/sample1/mp1.cpp
+share/examples/wxMathPlot/samples/sample2/CMakeLists.txt
+share/examples/wxMathPlot/samples/sample2/mp2.cpp
+share/examples/wxMathPlot/samples/sample3/CMakeLists.txt
+share/examples/wxMathPlot/samples/sample3/gridmap.png
+share/examples/wxMathPlot/samples/sample3/sample3.cpp
