@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5836 2023/10/11 14:19:52 micha Exp $
+$NetBSD: CHANGES-2023,v 1.5837 2023/10/11 15:11:48 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8550,3 +8550,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added x11/swt version 4.21 [bouyer 2023-10-11]
 	Added math/wxmathplot version 0.2.0 [bouyer 2023-10-11]
 	Updated devel/smake to 1.7nb3 [micha 2023-10-11]
+	Updated sysutils/cdrtools to 3.02a10nb4 [micha 2023-10-11]
