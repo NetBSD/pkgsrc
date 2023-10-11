@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/11 13:20:04 bouyer Exp $
+lib/java/ant/junit.jar
+lib/java/ant/junit4.jar
