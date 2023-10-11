@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/10/10 15:16:01 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/11 05:43:08 adam Exp $
 
 DISTNAME=	zeromq-4.3.5
 CATEGORIES=	net devel
@@ -11,11 +11,10 @@ HOMEPAGE=	https://zeromq.org/
 COMMENT=	The ZeroMQ messaging library
 LICENSE=	mpl-2.0
 
-USE_LANGUAGES=		c c99 gnu++11
+USE_LANGUAGES=		c99 gnu++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--disable-curve
 CONFIGURE_ARGS+=	--with-libsodium=${BUILDLINK_PREFIX.libsodium}
 PKGCONFIG_OVERRIDE+=	src/libzmq.pc.in
 TEST_TARGET=		check
