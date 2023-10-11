@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/09/03 07:08:19 pin Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/11 11:39:56 pin Exp $
 
 DISTNAME=	simp-3.4.1
+PKGREVISION=    1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,11 +20,6 @@ USE_TOOLS+=	pkg-config
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} != "Linux"
-CARGO_NO_DEFAULT_FEATURES=	YES
-.endif
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/gtk3/buildlink3.mk"
