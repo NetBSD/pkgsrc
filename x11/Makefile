@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.998 2023/09/16 21:34:16 gutteridge Exp $
+# $NetBSD: Makefile,v 1.999 2023/10/11 13:29:53 bouyer Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -436,6 +436,7 @@ SUBDIR+=	ssystem
 SUBDIR+=	st-term
 SUBDIR+=	stalonetray
 SUBDIR+=	startup-notification
+SUBDIR+=	swt
 SUBDIR+=	sxhkd
 SUBDIR+=	tabbed
 SUBDIR+=	tile
