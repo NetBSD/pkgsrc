@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/09/03 07:08:19 pin Exp $
+$NetBSD: distinfo,v 1.6 2023/10/11 11:39:56 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.21.crate) = 344769fee6be378bf37182a61c129bfba96f4f7debb038a5e2af881b6ecb5e6d
 SHA512 (ab_glyph-0.2.21.crate) = 3766c240f8acce486de23c661da7c708c56a5dff04e17fd9dc37f7fcab22d4db6905080ce7a6707c2b8f85cfcf224e068af2c51e53440818b8d021ac8d3b8457
@@ -1272,3 +1272,5 @@ Size (yaml-rust-0.4.5.crate) = 47783 bytes
 BLAKE2s (zune-inflate-0.2.54.crate) = c10d8be1628f8a0b68a2d35a2cc3ab5ca45461685e4d61623f4ef14b872fcb04
 SHA512 (zune-inflate-0.2.54.crate) = 0de30f310121c1fed42612b7bcb50631d699195a77c7ce4094729f502e63d1ae38034d6054d95b6825e7e9a2afb7bb614ff123e12736163fee04a46ef1dc56bd
 Size (zune-inflate-0.2.54.crate) = 37973 bytes
+SHA1 (patch-.._vendor_libc-0.2.147_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 4d9bd38b3a8458805bac7e86878d5ee7aa8c64e9
+SHA1 (patch-.._vendor_trash-3.0.6_src_freedesktop.rs) = be103555ff292d8303caa7f2fc1d1a198ed416f3
