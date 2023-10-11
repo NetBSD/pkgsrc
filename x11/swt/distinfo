@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2023/10/11 13:29:17 bouyer Exp $
+
+BLAKE2s (swt-4.21-gtk-linux-x86_64.zip) = cd33abf5c5239282e212fb63e5adaff8e4c17bdbe0c4a22735ff968bae8b1d02
+SHA512 (swt-4.21-gtk-linux-x86_64.zip) = b9a4eeecb48803e255e7d986579a9fc3a3465ceb91c3f525a764a8cf99fe250bf9e17565acb5aa8f8f65a153a70f67d2f523d3dc187751770271c6a0832698b7
+Size (swt-4.21-gtk-linux-x86_64.zip) = 3851041 bytes
+SHA1 (patch-build.sh) = 1ed9ce4c5dc931388b4d7ed3cbc387d1e37115a3
+SHA1 (patch-make_netbsd.mak) = 12a33149add387f77ce1b85ed405641f2ab9216e
+SHA1 (patch-org_eclipse_swt_browser_WebKit.java) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-org_eclipse_swt_internal_Library.java) = 8930e4fdf5544c4f6bb8ed90460c428e483b0b65
+SHA1 (patch-org_eclipse_swt_internal_gtk_OS.java) = 86242aa719673791616657e06e0b05d0d120f2dc
+SHA1 (patch-org_eclipse_swt_widgets_Shell.java) = c5db524b36425cfecab456573214a789f7943e99
+SHA1 (patch-os.c) = abc312d7abd27254ba8b914d7f47b116fe211b7a
