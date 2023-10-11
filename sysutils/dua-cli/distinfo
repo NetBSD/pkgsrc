@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2023/05/05 21:57:11 pin Exp $
+$NetBSD: distinfo,v 1.23 2023/10/11 11:44:22 pin Exp $
 
 BLAKE2s (anstream-0.3.1.crate) = 14a51d426b6b7acde27062c42619ce22cf87b47ecaba6037fb50a6c6476d367c
 SHA512 (anstream-0.3.1.crate) = 0eaad41de20fcb8207eecd810e47c833c59bea43cffd7e11450fc74617dcf3adb8d2ae1b5a61f8827dd3ef86ecf3ff7503d6b55c489aefab5f62c8bc746c2e8d
@@ -372,3 +372,5 @@ Size (windows_x86_64_msvc-0.48.0.crate) = 671422 bytes
 BLAKE2s (yansi-0.5.1.crate) = 320911635584dafa034235f47c39057166574bad71fa932fb689f67e63e8ee14
 SHA512 (yansi-0.5.1.crate) = 7b33005a066cc612408a65df6533e8718d1de43efc0fd57416a19dc2b811497570e6e18f100fb26073565e395e711518c27de7d644ae64777713f1a102eb16d2
 Size (yansi-0.5.1.crate) = 16525 bytes
+SHA1 (patch-.._vendor_libc-0.2.142_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c228483db86847ef4c4cc9bc2ebc9fbf7c96bd02
+SHA1 (patch-.._vendor_trash-3.0.1_src_freedesktop.rs) = e2d87ac1e9add8b083a9d1c8031fbff501c71850
