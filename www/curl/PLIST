@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2023/09/13 08:15:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.96 2023/10/11 07:16:03 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -26,6 +26,7 @@ man/man3/CURLINFO_CERTINFO.3
 man/man3/CURLINFO_CONDITION_UNMET.3
 man/man3/CURLINFO_CONNECT_TIME.3
 man/man3/CURLINFO_CONNECT_TIME_T.3
+man/man3/CURLINFO_CONN_ID.3
 man/man3/CURLINFO_CONTENT_LENGTH_DOWNLOAD.3
 man/man3/CURLINFO_CONTENT_LENGTH_DOWNLOAD_T.3
 man/man3/CURLINFO_CONTENT_LENGTH_UPLOAD.3
@@ -86,6 +87,7 @@ man/man3/CURLINFO_TLS_SESSION.3
 man/man3/CURLINFO_TLS_SSL_PTR.3
 man/man3/CURLINFO_TOTAL_TIME.3
 man/man3/CURLINFO_TOTAL_TIME_T.3
+man/man3/CURLINFO_XFER_ID.3
 man/man3/CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE.3
 man/man3/CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE.3
 man/man3/CURLMOPT_MAXCONNECTS.3
@@ -297,6 +299,7 @@ man/man3/CURLOPT_PROXY_TLSAUTH_TYPE.3
 man/man3/CURLOPT_PROXY_TLSAUTH_USERNAME.3
 man/man3/CURLOPT_PROXY_TRANSFER_MODE.3
 man/man3/CURLOPT_PUT.3
+man/man3/CURLOPT_QUICK_EXIT.3
 man/man3/CURLOPT_QUOTE.3
 man/man3/CURLOPT_RANDOM_FILE.3
 man/man3/CURLOPT_RANGE.3
@@ -331,6 +334,8 @@ man/man3/CURLOPT_SOCKS5_GSSAPI_NEC.3
 man/man3/CURLOPT_SOCKS5_GSSAPI_SERVICE.3
 man/man3/CURLOPT_SSH_AUTH_TYPES.3
 man/man3/CURLOPT_SSH_COMPRESSION.3
+man/man3/CURLOPT_SSH_HOSTKEYDATA.3
+man/man3/CURLOPT_SSH_HOSTKEYFUNCTION.3
 man/man3/CURLOPT_SSH_HOST_PUBLIC_KEY_MD5.3
 man/man3/CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256.3
 man/man3/CURLOPT_SSH_KEYDATA.3
@@ -456,6 +461,7 @@ man/man3/curl_multi_add_handle.3
 man/man3/curl_multi_assign.3
 man/man3/curl_multi_cleanup.3
 man/man3/curl_multi_fdset.3
+man/man3/curl_multi_get_handles.3
 man/man3/curl_multi_info_read.3
 man/man3/curl_multi_init.3
 man/man3/curl_multi_perform.3
@@ -492,6 +498,7 @@ man/man3/curl_ws_meta.3
 man/man3/curl_ws_recv.3
 man/man3/curl_ws_send.3
 man/man3/libcurl-easy.3
+man/man3/libcurl-env-dbg.3
 man/man3/libcurl-env.3
 man/man3/libcurl-errors.3
 man/man3/libcurl-multi.3
