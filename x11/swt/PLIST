@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/11 13:29:17 bouyer Exp $
+
+lib/libswt-atk-gtk-${SWT_VERSION}.so
+lib/libswt-awt-gtk-${SWT_VERSION}.so
+lib/libswt-cairo-gtk-${SWT_VERSION}.so
+lib/libswt-glx-gtk-${SWT_VERSION}.so
+lib/libswt-gtk-${SWT_VERSION}.so
+lib/libswt-pi3-gtk-${SWT_VERSION}.so
+lib/libswt-webkit-gtk-${SWT_VERSION}.so
+lib/java/swt.jar
