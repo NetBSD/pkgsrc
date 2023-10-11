@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.572 2023/10/02 10:41:32 pin Exp $
+# $NetBSD: Makefile,v 1.573 2023/10/11 13:33:03 bouyer Exp $
 
 COMMENT=	Mathematics
 
@@ -499,6 +499,7 @@ SUBDIR+=	units
 SUBDIR+=	vista
 SUBDIR+=	volk
 SUBDIR+=	vowpal_wabbit
+SUBDIR+=	wxmathplot
 SUBDIR+=	wxmaxima
 SUBDIR+=	xeukleides10
 SUBDIR+=	xfractint
