@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.65 2023/10/02 08:52:00 adam Exp $
+$NetBSD: distinfo,v 1.66 2023/10/11 08:58:09 adam Exp $
 
-BLAKE2s (XlsxWriter-3.1.6.tar.gz) = 67b181b1ba3b9709f5d8ff26a9d86e4d11228cca19c19ff97d649f47e64e1b28
-SHA512 (XlsxWriter-3.1.6.tar.gz) = 09809bdad7af598d0e055cac6915e1a6f9bebfb7894e92dd7b21708e5a731696f24f3d5b8606cbb0bb8de3d973525a5fa71acfec33e4e6208e528bfe2ff0e23d
-Size (XlsxWriter-3.1.6.tar.gz) = 271593 bytes
+BLAKE2s (XlsxWriter-3.1.7.tar.gz) = 7e031748d5ca72b6c69fd5f3c04675c26e8748adfc9f32a3e0b7301b16c3683c
+SHA512 (XlsxWriter-3.1.7.tar.gz) = c3880b752b5be14988f1d2d30a1ef1bf8371ce727e31d65647e101f0fd084cb0a38042bb761bd76ab4e04558f8349a419e7d9e9f710f2fa57a25cfb408b05398
+Size (XlsxWriter-3.1.7.tar.gz) = 272001 bytes
