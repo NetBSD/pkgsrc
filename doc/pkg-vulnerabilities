@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.45 2023/10/10 20:17:44 tm Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.46 2023/10/11 11:16:45 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25732,3 +25732,5 @@ kilo-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20335
 h2o-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-30847
 atasm-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-34123
 KeePass>=2.00<2.54	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-32784
+curl>=7.69.0<8.4.0	heap-based-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38545
+curl>=7.9.1<8.4.0	external-control-of-file-name-or-path	https://nvd.nist.gov/vuln/detail/CVE-2023-38546
