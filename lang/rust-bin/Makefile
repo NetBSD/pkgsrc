@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2023/10/10 20:20:10 pin Exp $
+# $NetBSD: Makefile,v 1.57 2023/10/11 23:37:41 gutteridge Exp $
 
 DISTNAME=	rust-1.71.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rust-lang.org/
@@ -273,7 +274,7 @@ fix-relative-rpath:
 .  if ${OPSYS} == "Linux"
 .    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
-	   rust-lld
+	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 	   ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .    endfor
