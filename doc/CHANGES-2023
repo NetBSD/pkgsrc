@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5826 2023/10/10 20:20:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5827 2023/10/11 03:41:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8534,3 +8534,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-selenium to 4.14.0 [ffaubert 2023-10-10]
 	Updated www/py-scrapy to 2.11.0 [ffaubert 2023-10-10]
 	Updated lang/rust-bin to 1.71.1 [pin 2023-10-10]
+	Updated lang/wasi-libc to 0.0.0pre20231007 [ryoon 2023-10-11]
