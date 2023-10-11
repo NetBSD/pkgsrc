@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/10/11 13:20:04 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/11 13:27:08 bouyer Exp $
 
 VERSION=	4.13.2
 DISTNAME=       junit-${VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=   .jar
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       https://www.junit.org/
 COMMENT=        Regression testing utility for use with the Java(TM) Language
-LICENSE=        eclipse-v2.0
+LICENSE=        epl-v2.0
 
 USE_JAVA=       run
 USE_JAVA2=      7
