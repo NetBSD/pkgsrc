@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5827 2023/10/11 03:41:13 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5828 2023/10/11 07:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8535,3 +8535,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-scrapy to 2.11.0 [ffaubert 2023-10-10]
 	Updated lang/rust-bin to 1.71.1 [pin 2023-10-10]
 	Updated lang/wasi-libc to 0.0.0pre20231007 [ryoon 2023-10-11]
+	Updated www/curl to 8.4.0 [adam 2023-10-11]
+	Updated www/libcurl-gnutls to 8.4.0 [adam 2023-10-11]
