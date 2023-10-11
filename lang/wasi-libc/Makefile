@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2023/04/19 08:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/11 03:41:00 ryoon Exp $
 
 GITHUB_PROJECT=	wasi-libc
-GITHUB_TAG=	079adff840032c3455eb1cb34dc9ceaa0b2bfc0c
-DISTNAME=	wasi-libc-0.0.0pre20220311
-PKGREVISION=	3
+GITHUB_TAG=	4db5398e65c7dd343315db7e13f3dcae056466ba
+DISTNAME=	wasi-libc-0.0.0pre20231007
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 
-GITHUB_SUBMODULES+=	WebAssembly WASI 3423c9c83c7219095d6e67faaf62598ad370064c wasi/tools/wasi-headers/WASI
+GITHUB_SUBMODULES+=	WebAssembly WASI 59cbe140561db52fc505555e859de884e0ee7f00 wasi/tools/wasi-headers/WASI
 EXTRACT_USING=		bsdtar
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -32,9 +31,9 @@ USE_TOOLS+=	gmake
 # Do not crush clang-13
 BUILDLINK_TRANSFORM+=	rm:-fcommon
 
-MAKE_FLAGS+=	WASM_CC=clang
-MAKE_FLAGS+=	WASM_AR=${PREFIX}/bin/llvm-ar
-MAKE_FLAGS+=	WASM_NM=${PREFIX}/bin/llvm-nm
+MAKE_FLAGS+=	CC=clang
+MAKE_FLAGS+=	AR=${PREFIX}/bin/llvm-ar
+MAKE_FLAGS+=	NM=${PREFIX}/bin/llvm-nm
 MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
 BUILD_TARGET=	finish
 
