@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.6 2023/06/06 12:41:44 riastradh Exp $
+# $NetBSD: bootstrap.mk,v 1.7 2023/10/11 03:07:31 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -290,6 +290,26 @@ ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
 
 	@${PHASE_MSG} "Building Hadrian for ${BOOT_GHC_VERSION}"
 	${CP} -f ${FILESDIR}/UserSettings.hs ${WRKSRC}/hadrian/
+# ${HADRIAN_BOOT_SOURCE} often contains libraries older than what we have
+# in pkgsrc. When that happens bootstrap.py tries to build Hadrian with
+# pkgsrc-installed libraries and fails because they aren't buildlinked. So
+# we must temporarily disable wrappers while building it.
+	saved_IFS="$$IFS"; \
+	IFS=":"; \
+	set -- $$PATH; \
+	IFS="$$saved_IFS"; \
+	pruned_path=; \
+	while ${TEST} "$$#" -gt 0; do \
+		if ${TEST} "$$1" != "${WRAPPER_BINDIR}"; then \
+			if ${TEST} "$$pruned_path" = ""; then \
+				pruned_path="$$1"; \
+			else \
+				pruned_path="$$pruned_path:$$1"; \
+			fi; \
+		fi; \
+		shift; \
+	done; \
+	PATH="$$pruned_path"; \
 	cd ${WRKSRC}/hadrian/bootstrap && \
 		python bootstrap.py -s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
 
