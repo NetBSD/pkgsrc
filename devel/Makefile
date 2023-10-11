@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4065 2023/10/09 12:16:50 pin Exp $
+# $NetBSD: Makefile,v 1.4066 2023/10/11 13:20:50 bouyer Exp $
 #
 
 COMMENT=	Development utilities
@@ -795,6 +795,7 @@ SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
 SUBDIR+=	js_of_ocaml-ocamlbuild
 SUBDIR+=	jsonnet
+SUBDIR+=	junit
 SUBDIR+=	kafka
 SUBDIR+=	kapptemplate
 SUBDIR+=	kbookmarks
