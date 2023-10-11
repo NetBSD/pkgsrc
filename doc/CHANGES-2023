@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5831 2023/10/11 09:02:35 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5832 2023/10/11 11:40:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8543,3 +8543,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-unearth to 0.11.1 [adam 2023-10-11]
 	Updated textproc/py-xlsxwriter to 3.1.7 [adam 2023-10-11]
 	Updated fonts/py-fonttools to 4.43.1 [adam 2023-10-11]
+	Updated graphics/simp to 3.4.1nb1 [pin 2023-10-11]
