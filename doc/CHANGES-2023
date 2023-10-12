@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5839 2023/10/11 18:33:12 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5840 2023/10/12 05:38:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8569,3 +8569,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-nginx to 2.7.1 [adam 2023-10-11]
 	Updated graphics/oxipng to 9.0.0 [adam 2023-10-11]
 	Updated textproc/ugrep to 4.3.0 [adam 2023-10-11]
+	Updated devel/cargo-c to 0.9.27 [adam 2023-10-12]
+	Updated devel/py-anytree to 2.10.0 [adam 2023-10-12]
