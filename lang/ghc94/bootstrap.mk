@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2023/10/11 03:07:31 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2023/10/12 07:51:09 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -234,7 +234,7 @@ bootstrap: pre-bootstrap .WAIT ${WRKDIR}/stamp-dist-boot .WAIT post-bootstrap
 # build our bootkit so that the resulting executables link with the static
 # one.
 CONFIGURE_ARGS.boot=	${CONFIGURE_ARGS.common}
-CONFIGURE_ARGS.boot+=	--with-bindist-prefix="ghc-boot-" --with-system-libffi
+CONFIGURE_ARGS.boot+=	--with-system-libffi
 
 # Hadrian arguments to use while building a bootkit.
 HADRIAN_ARGS.boot=	${HADRIAN_ARGS.common}
@@ -309,9 +309,9 @@ ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
 		fi; \
 		shift; \
 	done; \
-	PATH="$$pruned_path"; \
 	cd ${WRKSRC}/hadrian/bootstrap && \
-		python bootstrap.py -s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
+		${PKGSRC_SET_ENV} ${ALL_ENV} PATH="$$pruned_path" \
+			python bootstrap.py -s ${DISTDIR}/${DIST_SUBDIR}/${HADRIAN_BOOT_SOURCE}
 
 	@${PHASE_MSG} "Building bootstrapping compiler ${PKGNAME_NOREV}"
 	for f in ${BUILDLINK_DIR:Q}/lib/libffi.*; do \
