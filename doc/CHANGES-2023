@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5846 2023/10/12 11:38:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5847 2023/10/12 15:33:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8578,3 +8578,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/cargo-modules version 0.9.4 [pin 2023-10-12]
 	Updated lang/nodejs18 to 18.18.1 [adam 2023-10-12]
 	Removed lang/nodejs14 [adam 2023-10-12]
+	Updated security/py-google-auth to 2.23.3 [adam 2023-10-12]
+	Updated finance/py-braintree to 4.23.0 [adam 2023-10-12]
