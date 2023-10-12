@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2023/09/25 07:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2023/10/12 14:54:23 bsiegert Exp $
 
 DISTNAME=	Finance-Quote-1.58
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 
@@ -24,6 +24,7 @@ DEPENDS+=	p5-HTML-TokeParser-Simple-[0-9]*:../../www/p5-HTML-TokeParser-Simple
 # HTML::TreeBuilder - part of p5-HTML-Tree
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-TreeBuilder-XPath-[0-9]*:../../www/p5-HTML-TreeBuilder-XPath
+DEPENDS+=	p5-HTTP-CookieJar-[0-9]*:../../www/p5-HTTP-CookieJar
 DEPENDS+=	p5-HTTP-Cookies-[0-9]*:../../www/p5-HTTP-Cookies
 # HTTP::Headers - part of HTTP-Message
 # HTTP::Request - part of HTTP-Message
@@ -33,7 +34,9 @@ DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 # IO::Handle - part of perl
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 # IO::Uncompress::Unzip - part of perl
+DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+DEPENDS+=	p5-JSON-Parse-[0-9]*:../../converters/p5-JSON-Parse
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 # Module::Load - part of perl
 DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
