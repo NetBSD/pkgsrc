@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/16 07:40:30 nia Exp $
-bin/ebt-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.7 2023/10/12 05:38:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -7,11 +6,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/anytree/__init__.py
 ${PYSITELIB}/anytree/__init__.pyc
 ${PYSITELIB}/anytree/cachedsearch.py
 ${PYSITELIB}/anytree/cachedsearch.pyc
+${PYSITELIB}/anytree/config.py
+${PYSITELIB}/anytree/config.pyc
 ${PYSITELIB}/anytree/dotexport.py
 ${PYSITELIB}/anytree/dotexport.pyc
 ${PYSITELIB}/anytree/exporter/__init__.py
