@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4066 2023/10/11 13:20:50 bouyer Exp $
+# $NetBSD: Makefile,v 1.4067 2023/10/12 10:55:36 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -206,6 +206,7 @@ SUBDIR+=	capstone
 SUBDIR+=	cargo-binutils
 SUBDIR+=	cargo-bloat
 SUBDIR+=	cargo-c
+SUBDIR+=	cargo-modules
 SUBDIR+=	cargo-outdated
 SUBDIR+=	cargo-upgrades
 SUBDIR+=	catch
