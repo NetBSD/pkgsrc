@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.34 2022/11/23 11:17:51 jperkin Exp $
+# $NetBSD: metadata.mk,v 1.35 2023/10/12 13:31:10 riastradh Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -407,7 +407,7 @@ ${_DEPENDS_PLIST}: ${PLIST}
 	${RUN} { \
 	${ECHO} "@name ${PKGNAME}"; \
 	${AWK} '$$1 == "full" { printf "@blddep %s\n@pkgdep %s\n", $$3, $$2; }' < ${_RDEPENDS_FILE}; \
-	${AWK} '$$1 == "bootstrap" || $$1 == "build" { printf "@blddep %s\n", $$3; }' < ${_RDEPENDS_FILE}; \
+	${AWK} '$$1 == "bootstrap" || $$1 == "build" || $$1 == "tool" { printf "@blddep %s\n", $$3; }' < ${_RDEPENDS_FILE}; \
 	${CAT} ${PLIST}; } > ${.TARGET}
 
 _PKG_CREATE_ARGS+=				-l -U
