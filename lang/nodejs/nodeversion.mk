@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.14 2023/07/13 09:01:40 wiz Exp $
+# $NetBSD: nodeversion.mk,v 1.15 2023/10/12 11:37:44 adam Exp $
 
 # This file determines which nodejs version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # NODE_VERSION_DEFAULT
 #	The preferred node version to use.
 #
-#	Possible values: 14 16 18 20
+#	Possible values: 16 18 20
 #	Default: 16
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	is significant; those listed earlier are preferred over those
 #	listed later.
 #
-#	Possible values: 14 16 18 20
-#	Default: 14 16 18 20
+#	Possible values: 16 18 20
+#	Default: 16 18 20
 #
 # NODE_VERSIONS_INCOMPATIBLE
 #	The node versions that the package *cannot* build against.
 #
-#	Possible values: 14 16 18 20
+#	Possible values: 16 18 20
 #	Default: <empty>
 #
 # Keywords: node
@@ -58,7 +58,7 @@ BUILD_DEFS+=		NODE_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	NODE_PACKAGE
 
 NODE_VERSION_DEFAULT?=		16
-NODE_VERSIONS_ACCEPTED?=	14 16 18 20
+NODE_VERSIONS_ACCEPTED?=	16 18 20
 NODE_VERSIONS_INCOMPATIBLE?=	# empty
 
 # Resolve NODE_VERSIONS_INCOMPATIBLE and generate the _OK vars.
@@ -88,9 +88,7 @@ _NODE_VERSION?=		${v}
 # In case nothing matched
 _NODE_VERSION?=		none
 
-.if ${_NODE_VERSION} == "14"
-.include "../../lang/nodejs14/buildlink3.mk"
-.elif ${_NODE_VERSION} == "16"
+.if ${_NODE_VERSION} == "16"
 .include "../../lang/nodejs16/buildlink3.mk"
 .elif ${_NODE_VERSION} == "18"
 .include "../../lang/nodejs18/buildlink3.mk"
