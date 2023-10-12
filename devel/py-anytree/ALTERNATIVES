@@ -1,1 +1,0 @@
-bin/ebt @PREFIX@/bin/ebt-@PYVERSSUFFIX@
