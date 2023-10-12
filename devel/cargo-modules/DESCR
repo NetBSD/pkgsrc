@@ -1,0 +1,13 @@
+A cargo plugin for showing an overview of a crate's modules.
+
+With time, as your Rust projects grow bigger and bigger, it gets more and more
+important to properly structure your code.
+Fortunately Rust provides us with a quite sophisticated module system, allowing
+us to neatly split up our crates into arbitrarily small sub-modules of types
+and functions.
+
+While this helps to avoid monolithic and unstructured chunks of code, it can
+also make it hard at times to still mentally stay on top of the over-all
+high-level structure of the project at hand.
+
+This is where cargo-modules comes into play.
