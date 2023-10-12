@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2023/10/10 12:09:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2023/10/12 05:35:13 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.3
@@ -52,7 +52,7 @@ CARGO_CRATE_DEPENDS+=	crypto-bigint-0.5.3
 CARGO_CRATE_DEPENDS+=	crypto-common-0.1.6
 CARGO_CRATE_DEPENDS+=	ct-codecs-1.1.1
 CARGO_CRATE_DEPENDS+=	curl-0.4.44
-CARGO_CRATE_DEPENDS+=	curl-sys-0.4.67+curl-8.3.0
+CARGO_CRATE_DEPENDS+=	curl-sys-0.4.68+curl-8.4.0
 CARGO_CRATE_DEPENDS+=	der-0.7.8
 CARGO_CRATE_DEPENDS+=	deranged-0.3.8
 CARGO_CRATE_DEPENDS+=	digest-0.10.7
@@ -144,7 +144,7 @@ CARGO_CRATE_DEPENDS+=	io-close-0.3.7
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itertools-0.11.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.9
-CARGO_CRATE_DEPENDS+=	jobserver-0.1.26
+CARGO_CRATE_DEPENDS+=	jobserver-0.1.27
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
 CARGO_CRATE_DEPENDS+=	kstring-2.0.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
@@ -177,7 +177,7 @@ CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
 CARGO_CRATE_DEPENDS+=	openssl-src-300.1.5+3.1.3
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.93
-CARGO_CRATE_DEPENDS+=	ordered-float-2.10.0
+CARGO_CRATE_DEPENDS+=	ordered-float-2.10.1
 CARGO_CRATE_DEPENDS+=	orion-0.17.6
 CARGO_CRATE_DEPENDS+=	os_info-3.7.0
 CARGO_CRATE_DEPENDS+=	overload-0.1.1
@@ -206,7 +206,7 @@ CARGO_CRATE_DEPENDS+=	regex-1.10.0
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.1
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
-CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.0
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.1
 CARGO_CRATE_DEPENDS+=	rfc6979-0.4.0
 CARGO_CRATE_DEPENDS+=	rustfix-0.6.1
 CARGO_CRATE_DEPENDS+=	rustix-0.38.18
