@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5845 2023/10/12 10:59:09 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5846 2023/10/12 11:38:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8576,3 +8576,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.22.6 [pin 2023-10-12]
 	Updated devel/jj to 0.10.0 [pin 2023-10-12]
 	Added devel/cargo-modules version 0.9.4 [pin 2023-10-12]
+	Updated lang/nodejs18 to 18.18.1 [adam 2023-10-12]
+	Removed lang/nodejs14 [adam 2023-10-12]
