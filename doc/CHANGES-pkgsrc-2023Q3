@@ -1,4 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.1 2023/09/26 23:02:25 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.2 2023/10/12 15:59:43 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
+
+Pullup ticket #6803 / #6804 - requested by he
+lang/rust-bin: build fix
+
+Pullup ticket #6805 - requested by gutteridge
+finance/p5-Finance-Quote: build fix
+
+Pullup ticket #6806 - requested by prlw1
+mail/exim: security fix
+
+Pullup ticket #6807 - requested by abs
+emulators/compat90: NetBSD 10 compatibility fix
+
+Pullup ticket #6808 - requested by taca
+net/samba4: security fix
 
