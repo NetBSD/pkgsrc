@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2023/10/12 05:35:13 adam Exp $
+$NetBSD: distinfo,v 1.11 2023/10/13 07:03:24 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -906,3 +906,4 @@ Size (winnow-0.5.16.crate) = 145939 bytes
 BLAKE2s (zeroize-1.6.0.crate) = f2055440b7c90a2a0ebd0997466b65fc1f83ae7af9f346740346de90c914e36a
 SHA512 (zeroize-1.6.0.crate) = 9ebc81c10516440476b5c198dd4ff0d284a0a37cee11a2cdfb5a1995f95b72d05beb827483b16e8b764f720fbcf30a5e5d8b1517cfbbf572bcb27c2efb18393b
 Size (zeroize-1.6.0.crate) = 19049 bytes
+SHA1 (patch-.._vendor_faster-hex-0.8.1_src_lib.rs) = 3b704f45c574b503595ddd9745f291b39424e6f8
