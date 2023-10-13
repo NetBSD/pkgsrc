@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/09/06 18:53:49 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2023/10/13 18:29:50 schmonz Exp $
 
-BLAKE2s (Cucumber-TagExpressions-5.0.6.tar.gz) = 40c3da4c509af89ea8a3c8dbfebe41a3b32c10b9df0728525a705ce53e115ae8
-SHA512 (Cucumber-TagExpressions-5.0.6.tar.gz) = 2526d42268c040c84a21da7556a1b32950aedcf06e8fb63dc04ca7d9a37fa95b3c15fcf14a0bb2bf4e8e90d83a8c1effe7382436314e396311a3071055820883
-Size (Cucumber-TagExpressions-5.0.6.tar.gz) = 8407 bytes
+BLAKE2s (Cucumber-TagExpressions-6.0.0.tar.gz) = a7d7b51b00ecddab46814361266bc6c25f836bd4218139e52b7923344eca3970
+SHA512 (Cucumber-TagExpressions-6.0.0.tar.gz) = 830b2d2af84840489e4f1373716dbfe56c73645d7b891c501437ec639535f11df11f34de4fbbf3382a27b3a8fb1dff47515ec5dfd62ca75e604d01eda0c1f66a
+Size (Cucumber-TagExpressions-6.0.0.tar.gz) = 9988 bytes
