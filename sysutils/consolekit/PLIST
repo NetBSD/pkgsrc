@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2021/07/13 08:54:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/13 12:34:00 pin Exp $
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions
 include/ConsoleKit/ck-connector/ck-connector.h
 include/ConsoleKit/libconsolekit.h
+include/ConsoleKit/sd-login.h
 lib/ConsoleKit/scripts/ck-system-hibernate
 lib/ConsoleKit/scripts/ck-system-hybridsleep
 lib/ConsoleKit/scripts/ck-system-restart
