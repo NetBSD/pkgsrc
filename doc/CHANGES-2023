@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5851 2023/10/13 09:57:53 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5852 2023/10/13 10:19:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8585,3 +8585,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/libimagequant to 4.2.1nb1 [wiz 2023-10-13]
 	Updated shells/oh-my-posh to 18.12.0 [pin 2023-10-13]
 	Updated devel/jj to 0.10.0nb1 [pin 2023-10-13]
+	Updated textproc/py-rapidfuzz to 3.4.0 [adam 2023-10-13]
+	Updated devel/py-rpds-py to 0.10.6 [adam 2023-10-13]
