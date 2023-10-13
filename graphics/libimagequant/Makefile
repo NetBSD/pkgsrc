@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/09/18 12:46:51 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/13 06:18:01 wiz Exp $
 
 DISTNAME=	libimagequant-4.2.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ImageOptim/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pngquant.org/lib/
 COMMENT=	High-quality conversion of RGBA images to 8-bit indexed-color
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	cargo-c>=0.9.19:../../devel/cargo-c
+TOOL_DEPENDS+=	cargo-c>=0.9.27:../../devel/cargo-c
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/imagequant-sys
 
