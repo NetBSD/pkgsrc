@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.2 2023/10/12 15:59:43 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.3 2023/10/13 09:39:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -16,4 +16,7 @@ emulators/compat90: NetBSD 10 compatibility fix
 
 Pullup ticket #6808 - requested by taca
 net/samba4: security fix
+
+Pullup ticket #6809 - requested by leot
+www/curl: security fix
 
