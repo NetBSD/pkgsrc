@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/19 10:44:49 pin Exp $
-bin/fake-diff-editor
-bin/fake-editor
+@comment $NetBSD: PLIST,v 1.2 2023/10/13 09:57:34 pin Exp $
 bin/jj
