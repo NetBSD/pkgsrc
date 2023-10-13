@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/12 10:50:49 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/13 09:57:34 pin Exp $
 
 DISTNAME=	jj-0.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=martinvonz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,11 +13,17 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
+INSTALLATION_DIRS=	bin
+
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jj \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../devel/libgit2/buildlink3.mk"
