@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5854 2023/10/13 12:33:13 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5855 2023/10/13 12:34:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8589,3 +8589,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-rpds-py to 0.10.6 [adam 2023-10-13]
 	Updated textproc/go-md2man to 2.0.3 [pin 2023-10-13]
 	Updated sysutils/eza to 0.14.2 [pin 2023-10-13]
+	Updated sysutils/consolekit to 1.2.6 [pin 2023-10-13]
