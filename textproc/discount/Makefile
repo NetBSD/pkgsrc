@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2023/10/07 19:50:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/13 15:50:20 schmonz Exp $
 
 DISTNAME=		discount-2.2.7d
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Orc/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		zecrazytux@zecrazytux.net
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=		Markdown C implementation
 LICENSE=		modified-bsd
