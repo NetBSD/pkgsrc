@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:19:26 nia Exp $
+$NetBSD: distinfo,v 1.22 2023/10/13 12:34:00 pin Exp $
 
-BLAKE2s (ConsoleKit2-1.2.4.tar.gz) = ae1de5e2fa785683739d1e07b29f43dc507b75a1da140cbfcaeed23db3e22e98
-SHA512 (ConsoleKit2-1.2.4.tar.gz) = ac92391d6b171158f55d9974b56bf5d81b9c6c1e8aa3961e9d0f77475e9b99fa2d291bfb243686288a9a060ff2d8cb96751310e55fdd4299f4c003eefc146ae8
-Size (ConsoleKit2-1.2.4.tar.gz) = 256924 bytes
+BLAKE2s (ConsoleKit2-1.2.6.tar.gz) = 5d8f55b94b47031b3e76376680120b06d15717365bb2028baa51b44fdc889558
+SHA512 (ConsoleKit2-1.2.6.tar.gz) = 2bb529d93e13bb9a5d3577e3299d1f108b8f4c38434e09aafffd55d843bc569d5490632dd9c0c6e746721b1cc049d40b4d8f05663b4c418647cf91dc7c0a817a
+Size (ConsoleKit2-1.2.6.tar.gz) = 258252 bytes
