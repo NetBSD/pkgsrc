@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/07/21 16:03:38 hauke Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/10/13 06:18:01 wiz Exp $
 
 BUILDLINK_TREE+=	libimagequant
 
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.libimagequant?=	../../graphics/libimagequant
 BUILDLINK_API_DEPENDS.libimagequant+=	libimagequant>=2.17.0<3.0.0
 BUILDLINK_PKGSRCDIR.libimagequant?=	../../graphics/libimagequant-c
 .else
-PKG_FAIL_REASON+=	"[graphics/libimagequant/buildlink3.mk] Invalid value ${LIBIMAGEQUANT_TYPE} for LIBIMAGEQUANT_TYPE."
+PKG_FAIL_REASON+=			"[graphics/libimagequant/buildlink3.mk] Invalid value ${LIBIMAGEQUANT_TYPE} for LIBIMAGEQUANT_TYPE."
 .endif
 
 .endif	# LIBIMAGEQUANT_BUILDLINK3_MK

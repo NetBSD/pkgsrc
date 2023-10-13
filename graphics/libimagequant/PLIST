@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/22 11:37:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/13 06:18:01 wiz Exp $
 include/libimagequant.h
 lib/libimagequant.a
 lib/libimagequant.so
-lib/libimagequant.so.0
 lib/libimagequant.so.0.0.0
 lib/pkgconfig/imagequant.pc
