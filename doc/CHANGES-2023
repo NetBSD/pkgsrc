@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5848 2023/10/13 05:47:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5849 2023/10/13 06:18:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8582,3 +8582,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/py-braintree to 4.23.0 [adam 2023-10-12]
 	Updated net/py-zeroconf to 0.116.0 [adam 2023-10-13]
 	Updated devel/py-codestyle to 2.11.1 [adam 2023-10-13]
+	Updated graphics/libimagequant to 4.2.1nb1 [wiz 2023-10-13]
