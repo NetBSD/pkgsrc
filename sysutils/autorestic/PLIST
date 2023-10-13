@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/13 15:50:29 wiz Exp $
+bin/autorestic
