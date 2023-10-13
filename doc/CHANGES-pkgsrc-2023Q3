@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.3 2023/10/13 09:39:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.4 2023/10/13 09:42:41 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -19,4 +19,7 @@ net/samba4: security fix
 
 Pullup ticket #6809 - requested by leot
 www/curl: security fix
+
+Pullup ticket #6810 - requested by gutteridge
+www/webkit-gtk: aarch64 build fix
 
