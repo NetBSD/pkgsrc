@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1074 2023/10/02 06:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.1075 2023/10/13 15:50:41 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -45,6 +45,7 @@ SUBDIR+=	atitvout
 SUBDIR+=	attr
 SUBDIR+=	augeas
 SUBDIR+=	auto-admin
+SUBDIR+=	autorestic
 SUBDIR+=	b2sum
 SUBDIR+=	backuppc
 SUBDIR+=	bacula
