@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/08/10 12:00:55 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/13 10:14:58 adam Exp $
 
-DISTNAME=	rapidfuzz-3.2.0
+DISTNAME=	rapidfuzz-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
@@ -27,8 +27,9 @@ PLIST_VARS+=	avx2
 PLIST.avx2=	yes
 .endif
 
-USE_LANGUAGES=	c c++17
-GCC_REQD+=	10
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+GCC_REQD+=		10
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fno-fat-lto-objects
 
