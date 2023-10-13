@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5855 2023/10/13 12:34:21 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5856 2023/10/13 15:50:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8590,3 +8590,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/go-md2man to 2.0.3 [pin 2023-10-13]
 	Updated sysutils/eza to 0.14.2 [pin 2023-10-13]
 	Updated sysutils/consolekit to 1.2.6 [pin 2023-10-13]
+	Added sysutils/autorestic version 1.7.9 [wiz 2023-10-13]
