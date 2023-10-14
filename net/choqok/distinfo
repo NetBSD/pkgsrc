@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:05:27 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/10/14 11:31:59 markd Exp $
 
-BLAKE2s (choqok-1.5.tar.xz) = 3625929cd4981e56822fbf558dc3893ecf5f19ce43496de3625ac87435c4994d
-SHA512 (choqok-1.5.tar.xz) = fbb31abedd07ea1c674a7d59b4a18808ca03812ac37c60ea67d2d641668be4a9137e9f4573eda1e19425123601e9536971170e3948c1e5098b220991571a2cf3
-Size (choqok-1.5.tar.xz) = 1068516 bytes
+BLAKE2s (choqok-1.7.0.tar.xz) = ad08978fbdad1f5d55c72669732d7f95f63bcafea7db5d7832725a37324374e0
+SHA512 (choqok-1.7.0.tar.xz) = 6f5998078e555f7b4a40270ad0a4defa2d15bb8440b810320fc4cfc38d78cb34bb9b2f6a38eb33eb3217b51a78a7fbc7f79224cd0ddb0fcbf8c9035d8e600e96
+Size (choqok-1.7.0.tar.xz) = 1202092 bytes
