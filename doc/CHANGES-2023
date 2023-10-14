@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5857 2023/10/13 18:29:56 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.5858 2023/10/14 08:02:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8592,3 +8592,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/consolekit to 1.2.6 [pin 2023-10-13]
 	Added sysutils/autorestic version 1.7.9 [wiz 2023-10-13]
 	Updated devel/p5-Cucumber-TagExpressions to 6.0.0 [schmonz 2023-10-13]
+	Updated textproc/py-sphinx-autoapi to 3.0.0 [wiz 2023-10-14]
