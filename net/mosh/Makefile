@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/08/18 18:12:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2023/10/14 01:19:33 agc Exp $
 
 DISTNAME=	mosh-1.3.2
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://mosh.org/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://mosh.mit.edu/
+HOMEPAGE=	https://mosh.org/
 COMMENT=	Remote terminal application which allows roaming
 LICENSE=	gnu-gpl-v3
 
