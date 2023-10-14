@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1075 2023/10/13 15:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.1076 2023/10/14 03:37:58 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -408,6 +408,7 @@ SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
+SUBDIR+=	libksysguard
 SUBDIR+=	liblogging
 SUBDIR+=	liblognorm
 SUBDIR+=	libnotify

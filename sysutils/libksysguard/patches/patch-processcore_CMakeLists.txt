@@ -1,0 +1,22 @@
+$NetBSD: patch-processcore_CMakeLists.txt,v 1.1 2023/10/14 03:37:59 markd Exp $
+
+--- processcore/CMakeLists.txt.orig	2022-07-11 10:53:39.000000000 +0000
++++ processcore/CMakeLists.txt
+@@ -40,7 +40,7 @@ target_link_libraries(processcore
+ 
+ if( ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD" )
+   message(STATUS "Adding kvm library on NetBSD")
+-  target_link_libraries(processcore kvm)
++  target_link_libraries(processcore PRIVATE kvm ${RT_LIB_SCHED})
+ endif()
+ 
+ if(NOT HAVE_CLOCK_GETTIME_C)
+@@ -91,7 +91,7 @@ if(ENABLE_KAUTH_HELPER)
+     )
+ 
+     add_executable(ksysguardprocesslist_helper ${ksysguardprocesslist_helper_srcs})
+-    target_link_libraries(ksysguardprocesslist_helper Qt::Core KF5::AuthCore KF5::I18n)
++    target_link_libraries(ksysguardprocesslist_helper Qt::Core KF5::AuthCore KF5::I18n ${KVM_LIB})
+     install(TARGETS ksysguardprocesslist_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+ 
+     kauth_install_helper_files(ksysguardprocesslist_helper org.kde.ksysguard.processlisthelper root)
