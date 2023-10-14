@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:33:56 nia Exp $
-
-BLAKE2s (kde-l10n-de-4.14.3.tar.xz) = adb99d885a8f55452d9abf45f333e63c12c8c206639f6efa6ab1b5c71634131f
-SHA512 (kde-l10n-de-4.14.3.tar.xz) = 195b26c3eca39638219ae974ef3da3a09e69cdeb36bae25bfbc388574b67fb614300fe987f6476569bf965c5add3e01daf00167589d9f0e07ba9bc4dc291bce5
-Size (kde-l10n-de-4.14.3.tar.xz) = 36591300 bytes
