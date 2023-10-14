@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5860 2023/10/14 11:38:13 markd Exp $
+$NetBSD: CHANGES-2023,v 1.5861 2023/10/14 14:51:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8601,3 +8601,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/kdevelop4 successor devel/kdevelop [markd 2023-10-14]
 	Removed devel/kdevplatform [markd 2023-10-14]
 	Updated net/choqok to 1.7.0 [markd 2023-10-14]
+	Updated shells/oh-my-posh to 18.13.0 [pin 2023-10-14]
