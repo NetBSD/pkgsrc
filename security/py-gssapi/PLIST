@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/08/29 06:16:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/14 01:00:43 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -60,6 +60,7 @@ ${PYSITELIB}/gssapi/raw/ext_password.so
 ${PYSITELIB}/gssapi/raw/ext_password_add.pyi
 ${PLIST.posix}${PYSITELIB}/gssapi/raw/ext_password_add.so
 ${PYSITELIB}/gssapi/raw/ext_rfc4178.pyi
+${PLIST.mitkrb}${PYSITELIB}/gssapi/raw/ext_rfc4178.so
 ${PYSITELIB}/gssapi/raw/ext_rfc5587.pyi
 ${PYSITELIB}/gssapi/raw/ext_rfc5587.so
 ${PYSITELIB}/gssapi/raw/ext_rfc5588.pyi
