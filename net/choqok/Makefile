@@ -1,32 +1,33 @@
-# $NetBSD: Makefile,v 1.71 2023/06/06 12:42:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.72 2023/10/14 11:31:59 markd Exp $
 #
 
-DISTNAME=	choqok-1.5
-PKGREVISION=	39
+DISTNAME=	choqok-1.7.0
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=choqok/}Choqok/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_KDE:=choqok/1.7/src/}
 
 MAINTAINER=	jaapb@NetBSD.org
-#HOMEPAGE=	http://choqok.gnufolks.org/
+HOMEPAGE=	https://choqok.kde.org/
 COMMENT=	Twitter and StatusNet client for KDE
 LICENSE=	gnu-gpl-v2
 
-# /data/scratch/net/choqok/work/choqok-1.4/plugins/shorteners/bit_ly/bit_ly_settings.h:64:5: error: unterminated /* comment
-MAKE_JOBS_SAFE=	no
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_LANGUAGES=	c c++
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+
 USE_TOOLS+=	perl msgfmt pkg-config
 
-TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
-DEPENDS=	qca2-ossl-[0-9]*:../../security/qca2-ossl
+DEPENDS=	qca2-qt5-ossl-[0-9]*:../../security/qca2-qt5-ossl
 
-.include "../../meta-pkgs/kde4/kde4.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../devel/qjson/buildlink3.mk"
-.include "../../security/qca2/buildlink3.mk"
-.include "../../security/qoauth/buildlink3.mk"
-.include "../../misc/attica/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/purpose/buildlink3.mk"
+.include "../../security/qca2-qt5/buildlink3.mk"
+.include "../../misc/attica-qt5/buildlink3.mk"
+.include "../../misc/kemoticons/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../www/kdewebkit/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
