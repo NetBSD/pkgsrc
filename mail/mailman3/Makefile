@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/14 01:20:18 markd Exp $
 
 DISTNAME=	mailman-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.2:../../databases/py-alembic
@@ -24,7 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-falcon>=3.0.0:../../devel/py-falcon
 DEPENDS+=	${PYPKGPREFIX}-flufl.bounce>=4.0:../../mail/py-flufl.bounce
 DEPENDS+=	${PYPKGPREFIX}-flufl.i18n>=3.2:../../devel/py-flufl.i18n
 DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=5.1:../../devel/py-flufl.lock
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.1.0:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 DEPENDS+=	${PYPKGPREFIX}-lazr.config-[0-9]*:../../devel/py-lazr.config
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
