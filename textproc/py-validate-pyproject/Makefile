@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/08/22 07:09:19 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/14 17:22:50 adam Exp $
 
-DISTNAME=	validate-pyproject-0.14
+DISTNAME=	validate-pyproject-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-pyproject/}
