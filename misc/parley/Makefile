@@ -1,17 +1,25 @@
-# $NetBSD: Makefile,v 1.62 2023/04/23 14:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.63 2023/10/14 23:48:55 markd Exp $
 
-DISTNAME=	parley-${_KDE_VERSION}
-PKGREVISION=	36
+DISTNAME=	parley-${KAPPSVER}
 CATEGORIES=	misc
+
+HOMEPAGE=	https://kde.org/applications/education/parley/
 COMMENT=	KDE vocabulary trainer
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+DEPENDS+=	translate-shell-[0-9]*:../../textproc/translate-shell
 
+USE_TOOLS+=	msgmerge pkg-config
+
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../misc/libkeduvocdocument/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../misc/libkdeedu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
