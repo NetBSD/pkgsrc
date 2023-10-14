@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/10/14 03:39:54 markd Exp $
 
-BLAKE2s (okteta-4.14.3.tar.xz) = 9c2a7b5ae22714cb3881d7c3f1ff0ab1ea0550eeb605b8c2d1a10d947dde7870
-SHA512 (okteta-4.14.3.tar.xz) = aa2dcddb43279a97a62477b5ed1db140856c0bf9feb9f3526fbb51f65af5b4ad4d06dfa7b4b965f6fbeb4c7de7a8430646e0659663c1fc4bc0de64acbf01254e
-Size (okteta-4.14.3.tar.xz) = 500424 bytes
+BLAKE2s (okteta-0.26.13.tar.xz) = da3c8c2189eef8899a862fa7ea27cbb816172bd55d3c6372680095bc0b6637fb
+SHA512 (okteta-0.26.13.tar.xz) = 1f7d099acda1d39382b9d36fc75e301588a4f026e46a363f0ac15f3025a37c2edd2fac20c8097761469f4259adc20874d90acae5fa7b378f2d88e88521952fd8
+Size (okteta-0.26.13.tar.xz) = 1080884 bytes
