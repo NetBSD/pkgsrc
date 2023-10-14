@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:20:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/10/14 16:09:33 tnn Exp $
 
-BLAKE2s (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = 80d5917172cc1e0168b47f5ce8bdf6f69c1b301ae604946a7979b5314af3c5f8
-SHA512 (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = cba3f9540b4fecbe3288a10c37294ddddcdb6572bed8085e4cf98328c0a4c651062399595cf92a3422268504d36835d52cac56f5e24a4eeb0639423372020ae4
-Size (rkdeveloptool-1.3-081d237ad5bf8f03170c9d60bd94ceefa0352aaf.tar.gz) = 57003 bytes
-SHA1 (patch-main.cpp) = 4cf466f12853a6158f5f299a7a0bdf593e7c0502
+BLAKE2s (rkdeveloptool-1.32-46bb4c073624226c3f05b37b9ecc50bbcf543f5a.tar.gz) = 2e09ec70d4d39839f1857d4acb7d263a67d6fb7835dbafe22c5dc9095f666b41
+SHA512 (rkdeveloptool-1.32-46bb4c073624226c3f05b37b9ecc50bbcf543f5a.tar.gz) = dc8f141cc8aaf79f9f1b4749c73c22fdadc9881483cd243b3e5449a7b7f3eaec9b63f7684445b2aff8a5a607d77f8a76c7acd36348fce84e527a723b9b35fb45
+Size (rkdeveloptool-1.32-46bb4c073624226c3f05b37b9ecc50bbcf543f5a.tar.gz) = 58523 bytes
