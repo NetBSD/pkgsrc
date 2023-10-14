@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5864 2023/10/14 16:10:24 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.5865 2023/10/14 17:23:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8605,3 +8605,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/tp-note to 1.22.7 [pin 2023-10-14]
 	Updated misc/tui-journal to 0.4.0 [pin 2023-10-14]
 	Updated sysutils/rkdeveloptool to 1.32 [tnn 2023-10-14]
+	Updated net/py-softlayer to 6.1.9 [adam 2023-10-14]
+	Updated textproc/py-validate-pyproject to 0.15 [adam 2023-10-14]
