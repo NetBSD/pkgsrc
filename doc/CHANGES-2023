@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5862 2023/10/14 14:52:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5863 2023/10/14 14:53:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8603,3 +8603,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/choqok to 1.7.0 [markd 2023-10-14]
 	Updated shells/oh-my-posh to 18.13.0 [pin 2023-10-14]
 	Updated editors/tp-note to 1.22.7 [pin 2023-10-14]
+	Updated misc/tui-journal to 0.4.0 [pin 2023-10-14]
