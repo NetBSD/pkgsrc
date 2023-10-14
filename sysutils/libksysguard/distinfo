@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2023/10/14 03:37:59 markd Exp $
+
+BLAKE2s (libksysguard-5.24.6.tar.xz) = 1f84d33e533f6613217d8b73d1712e094839c03f6f0330f6de3e3f03a3868e08
+SHA512 (libksysguard-5.24.6.tar.xz) = 9bc810e74821bd11fc4083d61452cd728daf00a2c2d8baa79869c2da4aca07f0db8ca3d7fbfe800110c1498bb9c94550c56dd8e82099a919b61bc76a15a8580c
+Size (libksysguard-5.24.6.tar.xz) = 768148 bytes
+SHA1 (patch-ksgrd_SensorManager.cpp) = 8bb7a2649728782c9a06c626295d8e11b2b89224
+SHA1 (patch-processcore_CMakeLists.txt) = ab2fe1886ac0b95ddc2d49bb9b31cae99449fc4b
+SHA1 (patch-processcore_processes.cpp) = c101e0a0c43d64cc91a998c4ff171d384eadaa32
+SHA1 (patch-processcore_processes__netbsd__p.cpp) = 6b355a592a383c62303c0bcfbcf4f3ac159ebc63
