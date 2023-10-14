@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5863 2023/10/14 14:53:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5864 2023/10/14 16:10:24 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8604,3 +8604,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.13.0 [pin 2023-10-14]
 	Updated editors/tp-note to 1.22.7 [pin 2023-10-14]
 	Updated misc/tui-journal to 0.4.0 [pin 2023-10-14]
+	Updated sysutils/rkdeveloptool to 1.32 [tnn 2023-10-14]
