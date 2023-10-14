@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/06/18 12:37:21 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/14 08:01:49 wiz Exp $
 
-DISTNAME=	sphinx-autoapi-2.1.1
+DISTNAME=	sphinx-autoapi-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autoapi/}
