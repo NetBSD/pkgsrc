@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2023/10/13 06:44:16 pin Exp $
+$NetBSD: distinfo,v 1.73 2023/10/14 14:50:46 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -99,12 +99,12 @@ Size (github.com_charmbracelet_bubbletea_@v_v0.24.2.mod) = 774 bytes
 BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.24.2.zip) = 01609276062b1589654654badf83daa0b82386d70bc3b5d9cfa62d28108231ec
 SHA512 (github.com_charmbracelet_bubbletea_@v_v0.24.2.zip) = 73a48a1a59e9374a4e482310e486f17c952bd51bc2b1610d7ec57030f54bd943adb43272cb752a56d52cb2dc3a0340f2b983b9c6fed2b49fdd4dbc3961c2aa21
 Size (github.com_charmbracelet_bubbletea_@v_v0.24.2.zip) = 58636 bytes
-BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.9.0.mod) = aa216bf02a2b7ac8ad252b9a9e11f04a60291fdffd2ef138e15edf40f479d60b
-SHA512 (github.com_charmbracelet_lipgloss_@v_v0.9.0.mod) = 82fef53d15dd58c01b151bbe58ceab46c97955ba5d133f4edf89e9b7a6c97c50f5c5c5ca3eed2fc8e098916d439390b9428c8f6e4363b3e96199afd02a3d9af4
-Size (github.com_charmbracelet_lipgloss_@v_v0.9.0.mod) = 552 bytes
-BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.9.0.zip) = 8f4c714129e1ad79407b782600e465de0921a23d816f75edf9a0c993015fa070
-SHA512 (github.com_charmbracelet_lipgloss_@v_v0.9.0.zip) = bb405b174af50025379354b1b34b09af00d6fe12a7d85e621f9db4274f87f3db18285d9045d522fc5438f01bdfd48249d76e40d314e8d650d2f1326e2a74f638
-Size (github.com_charmbracelet_lipgloss_@v_v0.9.0.zip) = 53171 bytes
+BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.9.1.mod) = 7c5396536dbf8bc8884c4eb163512fe7b39aa4a1c356cfe728f656f2fb5c2e67
+SHA512 (github.com_charmbracelet_lipgloss_@v_v0.9.1.mod) = db05914bd0f7f951285f4ac0e6622ab34e50cd2146889743dc1eabaa2495f78c5bdf00ba7ae39e902ebad5e0076592b699c9e549650bd50c086feeee5a638a97
+Size (github.com_charmbracelet_lipgloss_@v_v0.9.1.mod) = 499 bytes
+BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.9.1.zip) = 4824bdeac83494579ae36753689a8787a15e9bff0b75dfc67367ea0b817e45b7
+SHA512 (github.com_charmbracelet_lipgloss_@v_v0.9.1.zip) = 9f00328a689688860729afa6678467bddc1f3920242638506a1a2a588fdaa7a427d21180682cb006ef8dca9c5539ca9bc87ab5c1e130657409b898947cd218c3
+Size (github.com_charmbracelet_lipgloss_@v_v0.9.1.zip) = 53268 bytes
 BLAKE2s (github.com_containerd_console_@v_v1.0.4-0.20230313162750-1ae8d489ac81.mod) = 4b6c253f1b63fb887e5c7f13cd84bf8e052818dd4123487a00f14c2dd6de9141
 SHA512 (github.com_containerd_console_@v_v1.0.4-0.20230313162750-1ae8d489ac81.mod) = e79b10ec0b5c81eb3c78a1edaee9d24b52fedf986f56a84fa7d82f5227fc3bebb0f1e07e8073ee8351ba14cd8961ad4a1e9f090fbfebcaca80f675d2e75e925a
 Size (github.com_containerd_console_@v_v1.0.4-0.20230313162750-1ae8d489ac81.mod) = 79 bytes
@@ -717,8 +717,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-18.12.0.tar.gz) = 73bfabf0ca5ca8c38a8ef60fe1ded4c5924310ba4e2e818d85b0a3f9f261e1a6
-SHA512 (oh-my-posh-18.12.0.tar.gz) = 4ad07a6552fd103134bc32541642e4e590aea6cd26cd37ed8f8991dceab9e12c10fab6198a8c38a9871173ac2c4c254daeddc6a9960e93cc9921aa253ebdf053
-Size (oh-my-posh-18.12.0.tar.gz) = 2722291 bytes
+BLAKE2s (oh-my-posh-18.13.0.tar.gz) = 6c23fcb859e0f9e64c4e342f8fa97ab20ee7004d9d6470218deb8ac1a0e50d72
+SHA512 (oh-my-posh-18.13.0.tar.gz) = 244236a9d6bcd86119e3e386fda27d8da0d97e42f954a4038d719ac6964c32256db7787eb2e0d1e0d2a884743c39be71f872d341b4a21eb84917484353a3983c
+Size (oh-my-posh-18.13.0.tar.gz) = 2720337 bytes
 SHA1 (patch-platform_battery_battery__solaris.go) = f767c40f20c79820f02965ad29b9d765edbbff71
 SHA1 (patch-platform_battery_battery__windows__nix.go) = 41c2223c3f688aef0ba8840911dd40dddc0e1719
