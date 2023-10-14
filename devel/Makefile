@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4067 2023/10/12 10:55:36 pin Exp $
+# $NetBSD: Makefile,v 1.4068 2023/10/14 03:47:13 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -813,6 +813,7 @@ SUBDIR+=	kdeclarative
 SUBDIR+=	kdesdk-kioslaves
 SUBDIR+=	kdesdk-strigi-analyzers
 SUBDIR+=	kdesdk-thumbnailers
+SUBDIR+=	kdevelop
 SUBDIR+=	kdevelop4
 SUBDIR+=	kdevplatform
 SUBDIR+=	kdiff3
