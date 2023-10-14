@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.80 2023/06/28 09:10:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.81 2023/10/14 10:47:56 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -135,15 +141,12 @@ ${PYSITELIB}/pkg_resources/_vendor/zipp.pyo
 ${PYSITELIB}/pkg_resources/extern/__init__.py
 ${PYSITELIB}/pkg_resources/extern/__init__.pyc
 ${PYSITELIB}/pkg_resources/extern/__init__.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
+${PYSITELIB}/setuptools/_core_metadata.py
+${PYSITELIB}/setuptools/_core_metadata.pyc
+${PYSITELIB}/setuptools/_core_metadata.pyo
 ${PYSITELIB}/setuptools/_distutils/__init__.py
 ${PYSITELIB}/setuptools/_distutils/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/__init__.pyo
@@ -490,6 +493,9 @@ ${PYSITELIB}/setuptools/cli.exe
 ${PYSITELIB}/setuptools/command/__init__.py
 ${PYSITELIB}/setuptools/command/__init__.pyc
 ${PYSITELIB}/setuptools/command/__init__.pyo
+${PYSITELIB}/setuptools/command/_requirestxt.py
+${PYSITELIB}/setuptools/command/_requirestxt.pyc
+${PYSITELIB}/setuptools/command/_requirestxt.pyo
 ${PYSITELIB}/setuptools/command/alias.py
 ${PYSITELIB}/setuptools/command/alias.pyc
 ${PYSITELIB}/setuptools/command/alias.pyo
