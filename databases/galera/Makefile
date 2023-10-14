@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/04/23 14:26:14 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/14 17:33:50 he Exp $
 
 DISTNAME=	galera-26.4.13
 PKGREVISION=	2
@@ -31,4 +31,5 @@ post-extract:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/check/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
