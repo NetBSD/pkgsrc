@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2020/11/19 08:11:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/14 16:52:54 schmonz Exp $
 #
 
 DISTNAME=		service-config-0.51
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://web.archive.org/web/20090302170825/http://www.superscript.com/service-config/intro.html
 COMMENT=		Utility to create and configure svscan service directories
 LICENSE=		djb-nonlicense
