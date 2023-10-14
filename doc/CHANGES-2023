@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5859 2023/10/14 10:49:21 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5860 2023/10/14 11:38:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8595,3 +8595,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-sphinx-autoapi to 3.0.0 [wiz 2023-10-14]
 	Updated devel/py-setuptools to 68.2.2 [adam 2023-10-14]
 	Updated net/py-lexicon to 3.15.1 [adam 2023-10-14]
+	Added sysutils/libksysguard version 5.24.6 [markd 2023-10-14]
+	Updated devel/okteta to 0.26.13 [markd 2023-10-14]
+	Added devel/kdevelop version 23.04.3 [markd 2023-10-14]
+	Removed devel/kdevelop4 successor devel/kdevelop [markd 2023-10-14]
+	Removed devel/kdevplatform [markd 2023-10-14]
+	Updated net/choqok to 1.7.0 [markd 2023-10-14]
