@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/03 08:13:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/14 01:05:48 markd Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,7 @@ ${PYSITELIB}/krb5/_ccache.so
 ${PYSITELIB}/krb5/_ccache_match.pyi
 ${PYSITELIB}/krb5/_ccache_match.so
 ${PYSITELIB}/krb5/_ccache_mit.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_ccache_mit.so
 ${PYSITELIB}/krb5/_ccache_support_switch.pyi
 ${PYSITELIB}/krb5/_ccache_support_switch.so
 ${PYSITELIB}/krb5/_cccol.pyi
@@ -18,14 +19,17 @@ ${PYSITELIB}/krb5/_cccol.so
 ${PYSITELIB}/krb5/_context.pyi
 ${PYSITELIB}/krb5/_context.so
 ${PYSITELIB}/krb5/_context_mit.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_context_mit.so
 ${PYSITELIB}/krb5/_creds.pyi
 ${PYSITELIB}/krb5/_creds.so
 ${PYSITELIB}/krb5/_creds_opt.pyi
 ${PYSITELIB}/krb5/_creds_opt.so
 ${PYSITELIB}/krb5/_creds_opt_heimdal.pyi
-${PYSITELIB}/krb5/_creds_opt_heimdal.so
+${PLIST.heimdal}${PYSITELIB}/krb5/_creds_opt_heimdal.so
 ${PYSITELIB}/krb5/_creds_opt_mit.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_creds_opt_mit.so
 ${PYSITELIB}/krb5/_creds_opt_set_in_ccache.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_creds_opt_set_in_ccache.so
 ${PYSITELIB}/krb5/_creds_opt_set_pac_request.pyi
 ${PYSITELIB}/krb5/_creds_opt_set_pac_request.so
 ${PYSITELIB}/krb5/_exceptions.pyi
@@ -37,14 +41,16 @@ ${PYSITELIB}/krb5/_kt.so
 ${PYSITELIB}/krb5/_kt_have_content.pyi
 ${PYSITELIB}/krb5/_kt_have_content.so
 ${PYSITELIB}/krb5/_kt_heimdal.pyi
-${PYSITELIB}/krb5/_kt_heimdal.so
+${PLIST.heimdal}${PYSITELIB}/krb5/_kt_heimdal.so
 ${PYSITELIB}/krb5/_kt_mit.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_kt_mit.so
 ${PYSITELIB}/krb5/_principal.pyi
 ${PYSITELIB}/krb5/_principal.so
 ${PYSITELIB}/krb5/_principal_heimdal.pyi
-${PYSITELIB}/krb5/_principal_heimdal.so
+${PLIST.heimdal}${PYSITELIB}/krb5/_principal_heimdal.so
 ${PYSITELIB}/krb5/_string.pyi
 ${PYSITELIB}/krb5/_string.so
 ${PYSITELIB}/krb5/_string_mit.pyi
+${PLIST.mitkrb}${PYSITELIB}/krb5/_string_mit.so
 ${PYSITELIB}/krb5/py.typed
 ${PYSITELIB}/krb5/python_krb5.h
