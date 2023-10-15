@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5904 2023/10/15 19:58:07 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5905 2023/10/15 20:35:09 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8698,3 +8698,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/blender to 3.6.4 [ryoon 2023-10-15]
 	Updated graphics/blender-lts to 3.3.11 [ryoon 2023-10-15]
 	Updated multimedia/olive-editor to 0.2.0pre20230924 [ryoon 2023-10-15]
+	Updated archivers/innoextract to 1.9nb7 [triaxx 2023-10-15]
