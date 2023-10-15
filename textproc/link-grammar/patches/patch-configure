@@ -1,17 +1,24 @@
-$NetBSD: patch-configure,v 1.4 2020/03/30 23:20:21 gutteridge Exp $
+$NetBSD: patch-configure,v 1.5 2023/10/15 06:39:25 ryoon Exp $
 
-Fix compiler flag settings.
+* POSIX shell portability.
 
---- configure.orig	2018-07-27 17:32:48.000000000 +0000
+--- configure.orig	2023-03-24 16:25:36.000000000 +0000
 +++ configure
-@@ -17808,8 +17808,8 @@ then
- 	# But not the NetBSD sh, so use sed instead.
- 	# CFLAGS="${CFLAGS//-O[[2-9]]} -g"
- 	# CXXFLAGS="${CXXFLAGS//-O[[2-9]]} -g"
--	CFLAGS=`echo -g ${CFLAGS} |sed "s/-O[2-9]//g"`
--	CXXFLAGS=`echo -g ${CXXFLAGS} |sed "s/-O[2-9]//g"`
-+	CFLAGS="${CFLAGS} -g"
-+	CXXFLAGS="${CXXFLAGS} -g"
- 	LDFLAGS="-g ${LDFLAGS}"
- 	$as_echo "#define DEBUG 1" >>confdefs.h
+@@ -17054,7 +17054,7 @@ fi
+ rm -f conftest.l $LEX_OUTPUT_ROOT.c
  
+ fi
+-(test -z "$LEX" || test "$LEX" == ':') &&
++(test -z "$LEX" || test "$LEX" = ':') &&
+ 	as_fn_error $? "No flex/lex program found. Please install the \"flex\" or
+                  \"btyacc\" package." "$LINENO" 5
+ 
+@@ -24642,7 +24642,7 @@ else
+ 	$as_echo
+ fi
+ 
+-if test "x${ASpellFound}" == "xyes"; then
++if test "x${ASpellFound}" = "xyes"; then
+ 	$as_echo_n "
+    ----------
+    Caution: Aspell version 0.60.8 and possibly others leak memory!
