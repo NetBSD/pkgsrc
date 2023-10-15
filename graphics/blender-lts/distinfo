@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.5 2023/04/25 15:59:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2023/10/15 19:55:00 ryoon Exp $
 
-BLAKE2s (blender-2.83.5.tar.xz) = e37fef5e8ebf0991f920154632c04dfeefb25005b8a4162353e71915fbecf8bb
-SHA512 (blender-2.83.5.tar.xz) = 6179b4c285d40f59b7701cafe8d2cca5d764ef15b5c390c42cfb7cf8a41704b09a4e62fcf644d76bd2b7f47bcfc96395f0afa4a1d748c4c2ba8dfdee7356df9f
-Size (blender-2.83.5.tar.xz) = 38551588 bytes
-SHA1 (patch-build__files_cmake_Modules_FindOpenEXR.cmake) = b663c44b2ba1c641542318936526a0523b607f30
+BLAKE2s (blender-3.3.11.tar.xz) = 02d65a6e2ea00f875ef8e56a0ac482511f62c5d77eadf3355a71fff062e4d95e
+SHA512 (blender-3.3.11.tar.xz) = e343f143b8702ae8b16e4f66d62de67b0da6880d60b9166b58703a720b0c0864675f2e676c59f815583eafeea73f496544fc6955e7e7722c1716404b05cdd826
+Size (blender-3.3.11.tar.xz) = 41928156 bytes
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_base_mutex.h) = 5fceceefe83400967a59080eeb930d0f3a4b8e88
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
-SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
-SHA1 (patch-extern_wcwidth_wcwidth.h) = c6ebe1ec27cd9096621b26bd6b83560ea2c1770a
+SHA1 (patch-extern_glog_src_config__netbsd.h) = 6169474d0a6b939cba8016ca73fc8755fbe258b6
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
-SHA1 (patch-intern_locale_boost__locale__wrapper.cpp) = a48c99013d55356184171c3c17744e5cc7a14b15
-SHA1 (patch-source_blender_blenlib_BLI__sys__types.h) = 05d9dee88356021af4c7da28953ade18c012a702
-SHA1 (patch-source_blender_imbuf_intern_openexr_openexr__api.cpp) = 936590a84bc5c2a25567b89fbb8f03467e41d198
+SHA1 (patch-intern_locale_boost__locale__wrapper.cpp) = e13ff93f5ae9f2086c6af91b6e74e360e564b813
+SHA1 (patch-source_blender_blenlib_BLI__sys__types.h) = da39a3ee5e6b4b0d3255bfef95601890afd80709
