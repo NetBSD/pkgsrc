@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/04/23 14:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/15 20:34:41 triaxx Exp $
 
 DISTNAME=	innoextract-1.9
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	archivers
 MASTER_SITES=	https://constexpr.org/innoextract/files/
 
@@ -13,8 +13,15 @@ LICENSE=	zlib
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+OBJDIR=		../build
+CONFIGURE_DIRS=	${OBJDIR}
+CMAKE_ARG_PATH=	../${DISTNAME}
+
 CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 CMAKE_ARGS+=	-DSET_OPTIMIZATION_FLAGS=OFF
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
