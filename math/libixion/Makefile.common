@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2022/11/21 18:20:43 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/10/15 07:08:09 ryoon Exp $
 #
 # used by math/libixion/Makefile
 # used by math/py-libixion/Makefile
 
-DISTNAME=	libixion-0.17.0
+DISTNAME=	libixion-0.18.1
 CATEGORIES=	math devel
 MASTER_SITES=	http://kohei.us/files/ixion/src/
 EXTRACT_SUFX=	.tar.xz
