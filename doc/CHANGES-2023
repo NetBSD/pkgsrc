@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5901 2023/10/15 19:52:24 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5902 2023/10/15 19:53:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8695,3 +8695,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pip to 23.3 [adam 2023-10-15]
 	Updated graphics/opencolorio to 2.2.1 [ryoon 2023-10-15]
 	Updated graphics/openimageio to 2.5.4.0 [ryoon 2023-10-15]
+	Updated graphics/blender to 3.6.4 [ryoon 2023-10-15]
