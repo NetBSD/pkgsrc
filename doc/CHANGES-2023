@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5890 2023/10/15 08:30:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5891 2023/10/15 09:26:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8683,3 +8683,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-lexicon to 3.16.0 [adam 2023-10-15]
 	Added devel/appstream version 0.16.3 [wiz 2023-10-15]
 	Updated devel/libadwaita to 1.4.0 [wiz 2023-10-15]
+	Updated lang/go121 to 1.21.3 [bsiegert 2023-10-15]
