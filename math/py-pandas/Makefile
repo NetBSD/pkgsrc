@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/10/05 04:46:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.51 2023/10/15 00:05:44 gutteridge Exp $
 
 DISTNAME=	pandas-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,9 @@ COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.33:../../devel/py-cython
-TOOL_DEPENDS+=	meson>=1.2.1:../../devel/meson  # Directly expresses meson minimum
+# Package directly expresses a meson minimum; we need higher to pick up our
+# multi-version build fixes.
+TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13.1:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
