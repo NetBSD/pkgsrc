@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4069 2023/10/14 03:57:19 markd Exp $
+# $NetBSD: Makefile,v 1.4070 2023/10/15 07:05:17 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -1098,6 +1098,7 @@ SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
 SUBDIR+=	mdds1.2
+SUBDIR+=	mdds2.0
 SUBDIR+=	meld
 SUBDIR+=	mell
 SUBDIR+=	memcached
