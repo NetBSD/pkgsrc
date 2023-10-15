@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/15 19:26:40 ryoon Exp $
+
+BLAKE2s (frozen-1.1.1.tar.gz) = d71c8bfef9fa92add6a7526d2142f8decfc8bf1b59519db0b59b095e4680da68
+SHA512 (frozen-1.1.1.tar.gz) = e22561a4e634e388e11f95b3005bc711e543013d314f6aaeda34befb2c673aea2d71a717d8822bc8fa85bdc8409945ba2ad91a1bac4f8cb5303080de01a5f60e
+Size (frozen-1.1.1.tar.gz) = 186589 bytes
