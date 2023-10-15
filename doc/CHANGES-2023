@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5897 2023/10/15 15:32:44 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.5898 2023/10/15 19:26:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8690,3 +8690,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated emulators/PC6001VX to 4.2.2 [tsutsui 2023-10-15]
 	Updated games/openttd to 13.3nb1 [triaxx 2023-10-15]
 	Updated games/openttd to 13.4 [triaxx 2023-10-15]
+	Added devel/frozen version 1.1.1 [ryoon 2023-10-15]
