@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.280 2023/05/22 21:00:40 wiz Exp $
+# $NetBSD: Makefile,v 1.281 2023/10/15 06:32:13 ryoon Exp $
 
-DISTNAME=		vlc-3.0.18
-PKGREVISION=		5
+DISTNAME=		vlc-3.0.19
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
@@ -160,7 +159,7 @@ SUBST_STAGE.oss=	pre-configure
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_FILES.oss+=	modules/access/oss.c
 SUBST_FILES.oss+=	modules/audio_output/oss.c
-SUBST_FILES.oss+=	po/*.po
+#SUBST_FILES.oss+=	po/*.po
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 SUBST_CLASSES+=		fnt
@@ -213,7 +212,6 @@ BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 .include "../../lang/lua52/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libbluray/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
