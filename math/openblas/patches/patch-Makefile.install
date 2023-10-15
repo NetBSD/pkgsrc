@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.install,v 1.6 2023/10/08 15:41:33 thor Exp $
+$NetBSD: patch-Makefile.install,v 1.7 2023/10/15 22:08:50 thor Exp $
 
 Second part of removing the special library names.
 Separate options for "install" (needed at least on Darwin).
@@ -91,7 +91,7 @@ Separate options for "install" (needed at least on Darwin).
  	@echo 'version='$(VERSION) >> "$(PKGFILE)"
  	@echo 'extralib='$(PKG_EXTRALIB) >> "$(PKGFILE)"
 -	@cat openblas.pc.in >> "$(PKGFILE)"
-+	@cat openblas.pc.in | sed -e 's,-lopenblas\b,-l$(LIBNAMEBASE),' >> "$(PKGFILE)"
++	@cat openblas.pc.in | sed -e 's,-lopenblas[^[:space:]]*,-l$(LIBNAMEBASE),' >> "$(PKGFILE)"
  
  
  #Generating OpenBLASConfig.cmake
