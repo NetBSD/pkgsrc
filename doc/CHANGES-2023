@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5868 2023/10/15 02:08:14 iquiw Exp $
+$NetBSD: CHANGES-2023,v 1.5869 2023/10/15 06:21:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8660,3 +8660,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/parley to 23.04.3 [markd 2023-10-14]
 	Removed misc/libkdeedu [markd 2023-10-15]
 	Updated sysutils/fzf to 0.43.0 [iquiw 2023-10-15]
+	Updated converters/dos2unix to 7.5.1 [ryoon 2023-10-15]
