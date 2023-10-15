@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2023/07/19 14:53:20 nia Exp $
+# $NetBSD: Makefile,v 1.55 2023/10/15 07:18:52 ryoon Exp $
 
-DISTNAME=	mdds-2.0.1
-PKGREVISION=	2
+DISTNAME=	mdds-2.1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
