@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5875 2023/10/15 07:08:30 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5876 2023/10/15 07:09:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8667,3 +8667,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/py-link-grammar version 5.12.3 [ryoon 2023-10-15]
 	Added devel/mdds2.0 version 2.0.1 [ryoon 2023-10-15]
 	Updated math/libixion to 0.18.1 [ryoon 2023-10-15]
+	Updated math/py-libixion to 0.18.1 [ryoon 2023-10-15]
