@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/10/07 20:09:16 adam Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/15 07:51:56 adam Exp $
 
-DISTNAME=	yt-dlp-2023.10.7
+DISTNAME=	yt-dlp-2023.10.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
 # TODO: create symlink, as mpv makes use of youtube-dl?
