@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/09/28 15:46:30 adam Exp $
+# $NetBSD: Makefile,v 1.71 2023/10/15 00:11:19 gutteridge Exp $
 
 DISTNAME=	scipy-1.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,9 @@ COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.35:../../devel/py-cython
-TOOL_DEPENDS+=	meson>=1.1:../../devel/meson  # Directly expresses meson minimum
+# Package directly expresses a meson minimum; we need higher to pick up our
+# multi-version build fixes.
+TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.10.4:../../devel/py-pybind11
