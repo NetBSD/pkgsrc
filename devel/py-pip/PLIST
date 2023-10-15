@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2023/07/18 06:18:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2023/10/15 19:37:43 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -402,9 +402,6 @@ ${PYSITELIB}/pip/_internal/utils/glibc.pyo
 ${PYSITELIB}/pip/_internal/utils/hashes.py
 ${PYSITELIB}/pip/_internal/utils/hashes.pyc
 ${PYSITELIB}/pip/_internal/utils/hashes.pyo
-${PYSITELIB}/pip/_internal/utils/inject_securetransport.py
-${PYSITELIB}/pip/_internal/utils/inject_securetransport.pyc
-${PYSITELIB}/pip/_internal/utils/inject_securetransport.pyo
 ${PYSITELIB}/pip/_internal/utils/logging.py
 ${PYSITELIB}/pip/_internal/utils/logging.pyc
 ${PYSITELIB}/pip/_internal/utils/logging.pyo
@@ -483,9 +480,6 @@ ${PYSITELIB}/pip/_vendor/cachecontrol/caches/file_cache.pyo
 ${PYSITELIB}/pip/_vendor/cachecontrol/caches/redis_cache.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/caches/redis_cache.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/caches/redis_cache.pyo
-${PYSITELIB}/pip/_vendor/cachecontrol/compat.py
-${PYSITELIB}/pip/_vendor/cachecontrol/compat.pyc
-${PYSITELIB}/pip/_vendor/cachecontrol/compat.pyo
 ${PYSITELIB}/pip/_vendor/cachecontrol/controller.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/controller.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/controller.pyo
@@ -1351,6 +1345,24 @@ ${PYSITELIB}/pip/_vendor/tomli/_re.pyo
 ${PYSITELIB}/pip/_vendor/tomli/_types.py
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyc
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyo
+${PYSITELIB}/pip/_vendor/truststore/__init__.py
+${PYSITELIB}/pip/_vendor/truststore/__init__.pyc
+${PYSITELIB}/pip/_vendor/truststore/__init__.pyo
+${PYSITELIB}/pip/_vendor/truststore/_api.py
+${PYSITELIB}/pip/_vendor/truststore/_api.pyc
+${PYSITELIB}/pip/_vendor/truststore/_api.pyo
+${PYSITELIB}/pip/_vendor/truststore/_macos.py
+${PYSITELIB}/pip/_vendor/truststore/_macos.pyc
+${PYSITELIB}/pip/_vendor/truststore/_macos.pyo
+${PYSITELIB}/pip/_vendor/truststore/_openssl.py
+${PYSITELIB}/pip/_vendor/truststore/_openssl.pyc
+${PYSITELIB}/pip/_vendor/truststore/_openssl.pyo
+${PYSITELIB}/pip/_vendor/truststore/_ssl_constants.py
+${PYSITELIB}/pip/_vendor/truststore/_ssl_constants.pyc
+${PYSITELIB}/pip/_vendor/truststore/_ssl_constants.pyo
+${PYSITELIB}/pip/_vendor/truststore/_windows.py
+${PYSITELIB}/pip/_vendor/truststore/_windows.pyc
+${PYSITELIB}/pip/_vendor/truststore/_windows.pyo
 ${PYSITELIB}/pip/_vendor/typing_extensions.py
 ${PYSITELIB}/pip/_vendor/typing_extensions.pyc
 ${PYSITELIB}/pip/_vendor/typing_extensions.pyo

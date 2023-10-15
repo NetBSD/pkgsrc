@@ -1,12 +1,12 @@
-$NetBSD: patch-src_pip___internal_req_req__install.py,v 1.1 2023/06/14 11:30:54 riastradh Exp $
+$NetBSD: patch-src_pip___internal_req_req__install.py,v 1.2 2023/10/15 19:37:43 adam Exp $
 
 Allow pip install --executable=/path to set path in script #! lines.
 https://github.com/pypa/pip/issues/12087
 https://github.com/pypa/pip/pull/12088
 
---- src/pip/_internal/req/req_install.py.orig	2023-04-26 09:23:01.000000000 +0000
+--- src/pip/_internal/req/req_install.py.orig	2023-10-15 16:17:57.000000000 +0000
 +++ src/pip/_internal/req/req_install.py
-@@ -766,6 +766,7 @@ class InstallRequirement:
+@@ -812,6 +812,7 @@ class InstallRequirement:
          root: Optional[str] = None,
          home: Optional[str] = None,
          prefix: Optional[str] = None,
@@ -14,8 +14,8 @@ https://github.com/pypa/pip/pull/12088
          warn_script_location: bool = True,
          use_user_site: bool = False,
          pycompile: bool = True,
-@@ -801,6 +802,7 @@ class InstallRequirement:
-             self.name,
+@@ -848,6 +849,7 @@ class InstallRequirement:
+             self.req.name,
              self.local_file_path,
              scheme=scheme,
 +            executable=executable,
