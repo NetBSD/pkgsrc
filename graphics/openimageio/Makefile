@@ -1,30 +1,24 @@
-# $NetBSD: Makefile,v 1.95 2023/08/14 05:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/10/15 19:52:09 ryoon Exp $
 
-DISTNAME=	oiio-2.2.20.0
-PKGNAME=	${DISTNAME:S/oiio/openimageio/}
-PKGREVISION=	11
+DISTNAME=	OpenImageIO-2.5.4.0
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenImageIO/}
-GITHUB_PROJECT=	oiio
+MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
+GITHUB_PROJECT=	OpenImageIO
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-GITHUB_SUBMODULES+=	fmtlib fmt 7.1.3 ext/fmt
-
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://sites.google.com/site/openimageio/
+HOMEPAGE=	https://openimageio.readthedocs.io/
 COMMENT=	C++ library for reading and writing images
 LICENSE=	modified-bsd
 
 UNLIMIT_RESOURCES=	datasize virtualsize
 
-USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 TEST_TARGET=		test
 
 CMAKE_ARGS+=		-DSTOP_ON_WARNING=OFF # Disable -Werror
-# XXX: cannot use fmtlib from pkgsrc, too new
-CMAKE_ARGS+=		-DBUILD_FMT_FORCE=ON
 CMAKE_ARGS+=		-DBUILD_MISSING_ROBINMAP=OFF
 CMAKE_ARGS+=		-DUSE_EXTERNAL_PUGIXML=ON
 CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=OFF
@@ -48,18 +42,12 @@ CMAKE_ARGS+=		-DUSE_HDF5=OFF
 CMAKE_ARGS+=		-DUSE_FFmpeg=OFF
 CMAKE_ARGS+=		-DUSE_OpenCV=OFF
 
-OBJDIR=			../build
-CONFIGURE_DIRS=		${OBJDIR}
-CMAKE_ARG_PATH=		${WRKSRC}
-
 # We're using cmake...
 CHECK_PORTABILITY_SKIP+=	Makefile
 
-pre-configure:
-	${MKDIR} ${WRKDIR}/build
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/robin-map/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
@@ -72,8 +60,8 @@ pre-configure:
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
-# XXX: requiring specific version currently
-#.include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
+.include "../../textproc/tinyxml/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
