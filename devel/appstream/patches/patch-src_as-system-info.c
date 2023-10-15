@@ -1,6 +1,7 @@
-$NetBSD: patch-src_as-system-info.c,v 1.1 2023/10/15 08:00:14 wiz Exp $
+$NetBSD: patch-src_as-system-info.c,v 1.2 2023/10/15 08:08:18 wiz Exp $
 
 Add NetBSD support.
+https://github.com/ximion/appstream/pull/536
 
 --- src/as-system-info.c.orig	2023-08-22 21:51:55.000000000 +0000
 +++ src/as-system-info.c

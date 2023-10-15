@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2023/10/15 08:00:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/10/15 08:08:17 wiz Exp $
 
 BLAKE2s (appstream-0.16.3.tar.gz) = c724e52e9194151ebf057155d3c4949f9e49321944ad1261535423dd8dc344df
 SHA512 (appstream-0.16.3.tar.gz) = c40897811e6ab47e919dca761d1a4ed9c30664b29d126358176995c80400997de61403d59ddcfac1fbdd2d946cb0cd62fed00e8249184bb713867ce7439b6c32
 Size (appstream-0.16.3.tar.gz) = 3724307 bytes
-SHA1 (patch-meson.build) = a2c1881e332add40b68373f972f2d95ecff15101
-SHA1 (patch-src_as-system-info.c) = da0849420d753589cb0044c0446bdffffaf5f4a9
+SHA1 (patch-meson.build) = 7943a0cc531bbcbb45a1d7f549ae974cf085fa02
+SHA1 (patch-src_as-system-info.c) = 13904684a91b1ea37b7ee3ac1fc7b720431bcc8a
