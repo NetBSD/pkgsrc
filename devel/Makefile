@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4071 2023/10/15 08:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4072 2023/10/15 19:27:50 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -382,6 +382,7 @@ SUBDIR+=	fq
 SUBDIR+=	frama-c
 SUBDIR+=	frink
 SUBDIR+=	fromcvs
+SUBDIR+=	frozen
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
 SUBDIR+=	galasm
