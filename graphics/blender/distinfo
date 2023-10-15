@@ -1,24 +1,24 @@
-$NetBSD: distinfo,v 1.69 2023/04/18 14:31:59 ryoon Exp $
+$NetBSD: distinfo,v 1.70 2023/10/15 19:53:20 ryoon Exp $
 
-BLAKE2s (blender-3.5.0.tar.xz) = 0f7d1a0981a0dab77cac31e1f617813e5968317108f9828b78553ea48b7a19da
-SHA512 (blender-3.5.0.tar.xz) = 140820b893c0dc27fc203d0b52be83ffd715fb7d3e9f383d9b87483bb7705b85664908d58c1fef0ae1aee00b47507154a7c2c52d7587a01d6ff74524f9595683
-Size (blender-3.5.0.tar.xz) = 51765172 bytes
+BLAKE2s (blender-3.6.4.tar.xz) = ded83757e4ca9dff559dd36b4a59ae0a3d9e95c2f3948b83300f890a91f7dfdb
+SHA512 (blender-3.6.4.tar.xz) = 9121a31147f9f269cb7f64e4297c6a6ec517d37fa449876d1a55b3975562c8a0307730f64725a8e35e96d1e75e06f6f0d95da3d1c7a657c403708e6a8f31115e
+Size (blender-3.6.4.tar.xz) = 70443936 bytes
 SHA1 (patch-CMakeLists.txt) = d6600dbd26b30df21f9dd0b49f4e14287af9f34a
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
-SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
+SHA1 (patch-extern_glog_src_config__netbsd.h) = f379cbcf86bf330d54fbd55cdcb3dbf4b1e7456e
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
 SHA1 (patch-intern_locale_boost__locale__wrapper.cpp) = e743a3f050daa175e8398da12b1de133e3814928
 SHA1 (patch-intern_mikktspace_mikk__float3.hh) = 715fa20ba39d7ad41f32e580189ac4fc2e8b0274
 SHA1 (patch-source_blender_blenkernel_intern_customdata.cc) = 0cb4f03d101f1d200d95c2469c17bb987b4c7570
-SHA1 (patch-source_blender_blenkernel_intern_gpencil__geom.cc) = c6600e6da37774a2138e56353a9be18607ab71d0
-SHA1 (patch-source_blender_blenkernel_intern_mesh__validate.cc) = d5593fb1340165db7076e7be6eac37cc3c7a3775
+SHA1 (patch-source_blender_blenkernel_intern_gpencil__geom.cc) = 1c54b6446744e52e5e9a6ebe48d221086b905f2c
+SHA1 (patch-source_blender_blenkernel_intern_mesh__validate.cc) = a21046b4d6fbf6fcec96d9410c725481d9f77a20
 SHA1 (patch-source_blender_blenkernel_intern_multires.cc) = 9edd6713c12b203e6b856d0b2f6d24ae5113d285
 SHA1 (patch-source_blender_blenkernel_intern_object.cc) = fd8cf2ea4f27e08f2e08b53f6d27228d9d770a2f
-SHA1 (patch-source_blender_blenlib_intern_storage.c) = 5f827d6e263d80e540681c5be7cad37aeae47d86
+SHA1 (patch-source_blender_blenlib_intern_storage.c) = de8c7f00ea3fafc38bc1f125ebc4bb639128ff93
 SHA1 (patch-source_blender_editors_interface_interface.cc) = 94be42726f75d8e130c78f2be822b61e2b25b2fb
 SHA1 (patch-source_blender_editors_mesh_meshtools.cc) = b44f662227023df31496f8d17ebd54a02528f304
 SHA1 (patch-source_blender_gpu_intern_gpu_matrix.cc) = 6692d68e6adacd2640efea3f5b666444003159d6
-SHA1 (patch-source_blender_imbuf_intern_anim_movie.c) = 1529f84515395a4764c826b90191f87131601881
+SHA1 (patch-source_blender_imbuf_intern_anim_movie.c) = f1048c1d2c31eb64d7a3493a03140a28961822af
 SHA1 (patch-source_blender_windowmanager_intern_wm__event__system.cc) = cc70ccce18f4d040f7544d14e98d9f569a3b6501
