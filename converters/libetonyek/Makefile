@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/04/23 14:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.45 2023/10/15 07:20:43 ryoon Exp $
 
 DISTNAME=	libetonyek-0.1.10
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +18,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++11
 
+BUILDLINK_TRANSFORM+=	rm:-Wall
+
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--with-mdds=2.0
@@ -28,7 +30,7 @@ PKGCONFIG_OVERRIDE+=	libetonyek.pc.in
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/mdds/buildlink3.mk"
+.include "../../devel/mdds2.0/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
