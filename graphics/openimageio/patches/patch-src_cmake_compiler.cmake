@@ -1,16 +1,16 @@
-$NetBSD: patch-src_cmake_compiler.cmake,v 1.1 2021/01/19 16:02:25 nia Exp $
+$NetBSD: patch-src_cmake_compiler.cmake,v 1.2 2023/10/15 19:52:09 ryoon Exp $
 
 Disable custom rpath handling that conflicts with pkgsrc.
 
---- src/cmake/compiler.cmake.orig	2021-01-08 07:41:40.000000000 +0000
+--- src/cmake/compiler.cmake.orig	2023-10-02 01:17:00.000000000 +0000
 +++ src/cmake/compiler.cmake
-@@ -542,32 +542,6 @@ endif ()
+@@ -600,30 +600,6 @@ endif ()
  
  
  ###########################################################################
 -# Rpath handling at the install step
 -#
--set (MACOSX_RPATH ON)
+-# set (MACOSX_RPATH ON)
 -if (CMAKE_SKIP_RPATH)
 -    # We need to disallow the user from truly setting CMAKE_SKIP_RPATH, since
 -    # we want to run the generated executables from the build tree in order to
@@ -26,9 +26,7 @@ Disable custom rpath handling that conflicts with pkgsrc.
 -    # add the automatically determined parts of the RPATH that
 -    # point to directories outside the build tree to the install RPATH
 -    set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
--    if (VERBOSE)
--        message (STATUS "CMAKE_INSTALL_RPATH = ${CMAKE_INSTALL_RPATH}")
--    endif ()
+-    message (VERBOSE "CMAKE_INSTALL_RPATH = ${CMAKE_INSTALL_RPATH}")
 -endif ()
 -
 -

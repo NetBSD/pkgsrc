@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.29 2022/12/26 17:59:30 nia Exp $
+$NetBSD: distinfo,v 1.30 2023/10/15 19:52:09 ryoon Exp $
 
-BLAKE2s (fmtlib-fmt-7.1.3.tar.gz) = 7b522ae0e5390aad8233c40f33aac066fc23da6514e893c48ed402c237d2e321
-SHA512 (fmtlib-fmt-7.1.3.tar.gz) = cfb2431de822202f17a6f34a302b1922b9cd696d8d4c27ad50ea08add781d2af9944db987603c2eb294ee7d73054a60cc11d3a0693f7f6db61949f3041cb9517
-Size (fmtlib-fmt-7.1.3.tar.gz) = 770029 bytes
-BLAKE2s (oiio-2.2.20.0.tar.gz) = df9abfff664dfa32500bce970085f5fbab86f7f6f77890a0e9fa19d1c202861f
-SHA512 (oiio-2.2.20.0.tar.gz) = 0c02f79973ac66633cadfe7159112fe5007b8af96d25e5aa7586fd5543472e8a63b384574bdd6af4236e18092e53e6bf318b47fa36b4c25afe5ce41c5c71b3ff
-Size (oiio-2.2.20.0.tar.gz) = 29253646 bytes
-SHA1 (patch-src_cmake_compiler.cmake) = 8c06e8e22eb927bbdec288c166a5dc44fbef5acb
+BLAKE2s (OpenImageIO-2.5.4.0.tar.gz) = 5655cacf85bc7e60c64e8eb060b6f5ea0115a55dc5abc24e3dc6b88d5e88afd7
+SHA512 (OpenImageIO-2.5.4.0.tar.gz) = db9576bbc0b77da19db957710e86d8979e9987e91ff6246b513197fa98545904a7d34873cc2ba3ee60deed0a00a757dafb8dfa604f1e52097a1848aef43427cd
+Size (OpenImageIO-2.5.4.0.tar.gz) = 48107518 bytes
+SHA1 (patch-src_cmake_compiler.cmake) = f7a670d437d7336bbf9317b41f5c951cee757b11
+SHA1 (patch-src_include_OpenImageIO_strutil.h) = 90efe95bf763881478aea851cce0ea67a9de9c1a
+SHA1 (patch-src_libutil_strutil.cpp) = fd63f4648cd9750d7b9e496c183886d348c2cff5
