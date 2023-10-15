@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5888 2023/10/15 07:53:41 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5889 2023/10/15 08:02:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8681,3 +8681,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/libxmlb version 0.3.14 [wiz 2023-10-15]
 	Updated net/yt-dlp to 2023.10.13 [adam 2023-10-15]
 	Updated net/py-lexicon to 3.16.0 [adam 2023-10-15]
+	Added devel/appstream version 0.16.3 [wiz 2023-10-15]
