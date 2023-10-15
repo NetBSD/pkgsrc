@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.23 2023/06/06 12:41:57 riastradh Exp $
+# $NetBSD: options.mk,v 1.24 2023/10/15 07:26:24 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
-PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups ldap dbus
+# As of 7.6.0.3, A build without Java is broken.
+PKG_SUPPORTED_OPTIONS=	debug gtk3 cups ldap dbus # java
 PKG_SUGGESTED_OPTIONS=	cups ldap dbus gtk3
 
 .include "../../mk/bsd.prefs.mk"
@@ -11,16 +12,16 @@ PKG_SUGGESTED_OPTIONS=	cups ldap dbus gtk3
 #
 # Only enable Java on platforms where OpenJDK>=9 is the default,
 # see mk/java-vm.mk
-.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
-    ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
-PKG_SUGGESTED_OPTIONS+=	java
-.endif
+#.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || \
+#    ${MACHINE_PLATFORM:MNetBSD-*-x86_64}
+#PKG_SUGGESTED_OPTIONS+=	java
+#.endif
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	ldap gtk3
 
-.if !empty(PKG_OPTIONS:Mjava)
+#.if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
 USE_JAVA2=		9
 .include "../../mk/java-env.mk"
@@ -38,10 +39,10 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-system-hsqldb \
 			--without-system-jfreereport
 CONFIGURE_ARGS+=	--with-export-validation
-PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
-.else
-CONFIGURE_ARGS+=	--without-java
-.endif
+#PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
+#.else
+#CONFIGURE_ARGS+=	--without-java
+#.endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
