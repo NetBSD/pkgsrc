@@ -1,38 +1,28 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2022/04/18 13:21:26 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/10/15 19:57:54 ryoon Exp $
 
 Don't try to find the git hash.
 
---- CMakeLists.txt.orig	2019-11-11 06:05:02.000000000 +0000
+--- CMakeLists.txt.orig	2023-09-24 11:40:23.000000000 +0000
 +++ CMakeLists.txt
-@@ -54,31 +54,6 @@ if(WIN32)
-   endif()
+@@ -233,21 +233,6 @@ elseif(UNIX)
+   list(APPEND OLIVE_LIBRARIES Qt${QT_VERSION_MAJOR}::DBus)
  endif()
  
+-# Generate Git hash
+-set(PROJECT_LONG_VERSION ${PROJECT_VERSION})
 -if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
 -  find_package(Git)
 -  if(GIT_FOUND)
--    execute_process(COMMAND ${GIT_EXECUTABLE} log -1 --format=%h
+-    execute_process(COMMAND ${GIT_EXECUTABLE} rev-parse --short=8 HEAD
 -      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 -      OUTPUT_VARIABLE GIT_HASH
 -      OUTPUT_STRIP_TRAILING_WHITESPACE
 -    )
+-
+-    set(PROJECT_LONG_VERSION ${PROJECT_VERSION}-${GIT_HASH})
 -  endif()
--elseif(UNIX AND NOT APPLE)
--  # Fallback for Ubuntu/Launchpad (extracts Git hash from debian/changelog rather than Git repo)
--  # (see https://answers.launchpad.net/launchpad/+question/678556)
--  execute_process(COMMAND sh -c "grep -Po '(?<=-)(([a-z0-9])\\w+)(?=\\+)' -m 1 changelog"
--    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/debian
--    OUTPUT_VARIABLE GIT_HASH
--    OUTPUT_STRIP_TRAILING_WHITESPACE
--  )
--endif()
--if(DEFINED GIT_HASH)
--  message("Olive: git hash = " "${GIT_HASH}")
--  list(APPEND OLIVE_DEFINITIONS -DGITHASH="${GIT_HASH}")
--else()
--  message("Olive: No git hash defined!")
 -endif()
 -
- find_package(Doxygen)
- 
- set(OLIVE_SOURCES
+ # Optional: Find Doxygen if requested
+ if(BUILD_DOXYGEN)
+   find_package(Doxygen)

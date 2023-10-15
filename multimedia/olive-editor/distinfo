@@ -1,12 +1,15 @@
-$NetBSD: distinfo,v 1.5 2022/04/18 13:21:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/10/15 19:57:54 ryoon Exp $
 
-BLAKE2s (olive-editor-0.1.2.tar.gz) = f699bc4fbed8b6e12f2f91ff1b1142ffe9d1571e0dd2217c0e0fc95f999c1ac5
-SHA512 (olive-editor-0.1.2.tar.gz) = 48cf44b5ba1bd95e20efb5312d61d6c37e6dedc1f02156ef436ab51705be4bdaf5bb68875b55b06337c25a34aee23eac645fe295d08ab0038872adccf12fc95e
-Size (olive-editor-0.1.2.tar.gz) = 2174284 bytes
-SHA1 (patch-CMakeLists.txt) = 4379576d9087ed5494fa374791aaadf03f2416b0
+BLAKE2s (olive-editor-0.2.0pre20230924-55eedbfce909dfd7df97611a2eea1d1958385f9c.tar.gz) = 28d9d3c9998990f318b55ab15310c6a395841fd32e073db336dc6f4f97df9f44
+SHA512 (olive-editor-0.2.0pre20230924-55eedbfce909dfd7df97611a2eea1d1958385f9c.tar.gz) = 36e3284f7b4a0f563c6e62078f5ec901e5edcdd97230097537003b0b7b3cdcaad773e8b081e7b1af2fc5d0f3b0f5fc1740eb957ef95760cc7338c9ef20f528dc
+Size (olive-editor-0.2.0pre20230924-55eedbfce909dfd7df97611a2eea1d1958385f9c.tar.gz) = 8159223 bytes
+BLAKE2s (olive-editor-KDDockWidgets-8d2d0a5764f8393cc148a2296d511276a8ffe559.tar.gz) = 3951caf39d6084c888243160269010338e64e8408972cd2a44524631c0a78cb3
+SHA512 (olive-editor-KDDockWidgets-8d2d0a5764f8393cc148a2296d511276a8ffe559.tar.gz) = f4f5af353a022814a2dc6e2d0f2e5990a9138b9d404e50c4fa7ade3ccdebc57872b1e29152dfdc08d64cf303ac4d0e86a8d83962afbe5590bc3e3fa8aa558cc6
+Size (olive-editor-KDDockWidgets-8d2d0a5764f8393cc148a2296d511276a8ffe559.tar.gz) = 3932727 bytes
+BLAKE2s (olive-editor-core-277792824801495e868580ca86f6e7a1b53e4779.tar.gz) = 1dbe8adfcb84e8b96d59794ccf48360f3aa0f10f76a5392e83eafc8cad755a60
+SHA512 (olive-editor-core-277792824801495e868580ca86f6e7a1b53e4779.tar.gz) = 13163da75959e0a3ee817307391207e0a8f534f9f48b0225e199c217ed7f4020a0f5f2b1759c63f4b33f3076285110fefad01636736bcb7e22817088c5a88c14
+Size (olive-editor-core-277792824801495e868580ca86f6e7a1b53e4779.tar.gz) = 76408 bytes
+SHA1 (patch-CMakeLists.txt) = 6995fddfb1dfb3c7e663f8a1c61db701c9601f85
+SHA1 (patch-app_CMakeLists.txt) = d01fc5269c79fef9f8b4aa65dd128c58f2e0dc61
 SHA1 (patch-cmake_FindFFMPEG.cmake) = 2f2aef426f7a3e93e66ff500840dcadec5e499e3
-SHA1 (patch-effects_internal_texteffect.cpp) = 0bc1d2b67980ca3168c6e355cdd9740f44c9bc74
-SHA1 (patch-effects_internal_timecodeeffect.cpp) = fbd5ff65f8019f7b863d3ea4dc9f3fc2c184d317
-SHA1 (patch-ui_graphview.cpp) = aeaaeda9cf43117dcb18a00e130fe007cd060771
-SHA1 (patch-ui_timelineheader.cpp) = b0e188363d0d08e2edb9973320378c1efd0a2edf
-SHA1 (patch-ui_timelinewidget.cpp) = 9c86fa424437a06f0db2e1a719f9bf074630250e
+SHA1 (patch-ext_core_src_util_timecodefunctions.cpp) = 81e20605774b8463f7d53fe1dc448dee2cb3e5e9
