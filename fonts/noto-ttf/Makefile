@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/02/19 15:24:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/15 10:32:55 ryoon Exp $
 
 DISTNAME=	Noto-hinted
-PKGNAME=	noto-ttf-20170410
+PKGNAME=	noto-ttf-20230927
 CATEGORIES=	fonts
 MASTER_SITES=	https://noto-website.storage.googleapis.com/pkgs/
 EXTRACT_SUFX=	.zip
