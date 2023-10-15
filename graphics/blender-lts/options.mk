@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2020/09/05 11:46:40 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2023/10/15 19:55:00 ryoon Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.blender
-PKG_SUPPORTED_OPTIONS=		jack
+PKG_OPTIONS_VAR=		PKG_OPTIONS.blender-lts
+PKG_SUPPORTED_OPTIONS=		jack pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,4 +11,12 @@ CMAKE_ARGS+=	-DWITH_JACK_DYNLOAD=OFF
 .include "../../audio/jack/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_JACK=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CMAKE_ARGS+=	-DWITH_PULSEAUDIO=ON
+CMAKE_ARGS+=	-DWITH_PULSEAUDIO_DYNLOAD=OFF
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DWITH_PULSEAUDIO=OFF
 .endif
