@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5884 2023/10/15 07:42:20 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5885 2023/10/15 07:48:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8676,3 +8676,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/notmuch-emacs to 0.38 [ryoon 2023-10-15]
 	Updated www/firefox to 118.0.2 [ryoon 2023-10-15]
 	Updated www/firefox-l10n to 118.0.2 [ryoon 2023-10-15]
+	Updated www/firefox115 to 115.3.1 [ryoon 2023-10-15]
