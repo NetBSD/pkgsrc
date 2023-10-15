@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/15 06:40:28 ryoon Exp $
+${PYSITELIB}/linkgrammar.pth
+${PYSITELIB}/linkgrammar/__init__.py
+${PYSITELIB}/linkgrammar/__init__.pyc
+${PYSITELIB}/linkgrammar/__init__.pyo
+${PYSITELIB}/linkgrammar/_clinkgrammar.la
+${PYSITELIB}/linkgrammar/clinkgrammar.py
+${PYSITELIB}/linkgrammar/clinkgrammar.pyc
+${PYSITELIB}/linkgrammar/clinkgrammar.pyo
+${PYSITELIB}/linkgrammar/linkgrammar.py
+${PYSITELIB}/linkgrammar/linkgrammar.pyc
+${PYSITELIB}/linkgrammar/linkgrammar.pyo
