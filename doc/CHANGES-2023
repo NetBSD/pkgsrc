@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5891 2023/10/15 09:26:53 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5892 2023/10/15 10:33:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8684,3 +8684,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/appstream version 0.16.3 [wiz 2023-10-15]
 	Updated devel/libadwaita to 1.4.0 [wiz 2023-10-15]
 	Updated lang/go121 to 1.21.3 [bsiegert 2023-10-15]
+	Updated fonts/noto-ttf to 20230927 [ryoon 2023-10-15]
