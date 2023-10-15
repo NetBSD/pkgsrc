@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23436 2023/10/15 08:30:18 wiz Exp $
+$NetBSD: TODO,v 1.23437 2023/10/15 17:40:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
-	o ImageMagick-7.1.1.19
+	o ImageMagick-7.1.1.20
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-23.2.1
@@ -504,9 +504,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o blender-lts-3.3
 	o bliz++-0.10
 	o blur6ex-0.3.462
+	o boehm-gc-8.2.4
 	o boolean-7.1
 	o bos-2.5
 	o botan-3.0.0
+	o botan3-3.2.0
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
@@ -515,7 +517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o cairo-1.18.0
 	o cairo-gobject-1.18.0
-	o cairomm-1.18.0
+	o cairomm-1.14.5
 	o cairomm1.16-1.18.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -606,7 +608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elixir-1.15.6
+	o elixir-1.15.7
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
@@ -618,7 +620,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epiphany-extensions-3.2.0
 	o epubcheck-4.0.2
 	o eric5-5.4.6
-	o erlang-26.1.1
+	o erlang-26.1.2
 	o es-0.83
 	o esh-0.8.5
 	o ess-18.10.2
@@ -889,7 +891,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
-	o libcares-1.20.0
+	o libcares-1.20.1
 	o libcec-6.0.2
 	o libcups-2.4.7
 	o libdbusmenu-glib-16.04.0
@@ -907,6 +909,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgit2-1.7.1 [Do not update before end of Q3-freeze. Breaks all Rust package depending on git2-0.17.0/libgit2-sys-0.15.1+1.6.4 crates]
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libical-3.0.17
+	o libimagequant-4.2.2
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -920,6 +924,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
+	o libpaper-2.1.2
 	o libpgm-5.2.122
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
@@ -934,6 +939,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libva-2.20
 	o libvirt-2.3
 	o libxdg-basedir-1.2.3
+	o libxkbcommon-1.6.0
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -1005,8 +1011,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mtail-1.2.0
 	o multitail-6.4.2
 	o munge-0.5.14
+	o mupdf-1.23.4
 	o muse-0.9.2
 	o musescore-4.1 [now has a fixed ALSA dependency, and some features were removed]
+	o musicpd-0.23.14
 	o mypaint-2.0.1
 	o mysql-workbench-8.0.23
 	o naev-0.8.2
@@ -1024,6 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o netramet-50
 	o newmail-1.0.2
 	o nios2-binutils-2.36.1
+	o nodejs-20.8.1
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1037,7 +1046,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-5.1
 	o ocaml-cppo-1.6.9
 	o ocaml-csexp-1.5.2 [needs ocaml-dune-3.4]
-	o ocaml-dune-3.11.0
+	o ocaml-dune-3.11.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1051,6 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
 	o olvwm-4.5
+	o oniguruma-6.9.9
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o open-vm-tools-12.3.0 [security fix: CVE-2023-20900]
@@ -1204,7 +1214,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-barman-3.0.1
 	o py-bleach-6.1.0
 	o py-blinker-1.6.3
-	o py-bumpver-2023.1127
+	o py-bumpver-2023.1129
 	o py-cairo-1.25.0
 	o py-cares-4.4.0
 	o py-cassa-1.11.0
@@ -1214,12 +1224,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cyclonedx-python-lib-4.2.2
 	o py-cython-3.0.3
 	o py-diffoscope-242
+	o py-docstring-to-markdown-0.13
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-flask-3.0.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.103.0
+	o py-googleapis-common-protos-1.61.0
 	o py-grpcio-1.59.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
@@ -1231,15 +1244,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-kivy-2.1.0
 	o py-llvmlite-0.39.0
 	o py-lsp-jsonrpc-1.1.2
-	o py-lsp-server-1.8.1
+	o py-lsp-server-1.8.2
 	o py-matplotlib-3.8.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
-	o py-numpy-1.26.0
+	o py-numpy-1.26.1
 	o py-omniORBpy-3.7
-	o py-pdf-3.16.2
+	o py-pdf-3.16.4
 	o py-pdf-parser-0.7.4
 	o py-pilkit-3.0
 	o py-postgresql-5.1.2
@@ -1247,18 +1260,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pspdfutils-3.3.2
 	o py-ptt-1.10.2
 	o py-pygls-1.1.1
-	o py-pykka-4.0.0
+	o py-pykka-4.0.1
 	o py-pymc3-3.8
 	o py-pytz-2023.3.post1
+	o py-qt-builder-1.15.3
+	o py-qt5-5.15.10
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
 	o py-readme_renderer-42.0
 	o py-sbws-1.1.0
 	o py-scgi-2.0
-	o py-serializable-0.14.0
+	o py-serializable-0.15.0
 	o py-setuptools_scm-8.0.4
 	o py-sigal-2.4
 	o py-simpletal-5.1
+	o py-sip-qt5-12.13.0
+	o py-sip6-6.7.12
 	o py-sphinx-7.2.6
 	o py-sphinx-autodoc-typehints-1.24.0
 	o py-sphinx-rtd-theme-1.3.0
@@ -1271,8 +1288,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-toolconfig-1.2.6
 	o py-twisted-23.8.0
 	o py-uliweb-0.6
+	o py-uvloop-0.18.0
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-werkzeug-3.0.0
 	o py-yubiauth-0.3.10
@@ -1438,7 +1457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
 	o tevent-0.15.0
-	o texlab-5.10.0
+	o texlab-5.10.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o tiff-4.6.0
@@ -1451,6 +1470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
+	o tomlplusplus-3.4.0
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
@@ -1459,6 +1479,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
 	o transmission-4.0.4
+	o tree-sitter-bash-0.20.2
 	o tree-sitter-java-0.20.2
 	o tree-sitter-json-0.20.1
 	o tree-sitter-typescript-0.20.3
@@ -1523,6 +1544,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
+	o wxGTK32-3.2.3
 	o wxRemind-101
 	o x2vnc-1.31
 	o xaric-0.13.9
@@ -1550,6 +1572,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xorp-1.8.5
+	o xournalpp-1.2.2
 	o xpad-5.4.0
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
