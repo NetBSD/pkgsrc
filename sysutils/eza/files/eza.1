@@ -14,7 +14,7 @@
 . ftr VB CB
 . ftr VBI CBI
 .\}
-.TH "eza" "1" "" "v0.9.0" ""
+.TH "eza" "1" "" "$version" ""
 .hy
 .SH NAME
 .PP
@@ -46,6 +46,13 @@ metadata, inode, and Git status.
 \f[V]eza --long --tree --level=3\f[R]
 Displays a tree of files, three levels deep, as well as each file\[cq]s
 metadata.
+.SH META OPTIONS
+.TP
+\f[V]--help\f[R]
+Show list of command-line options.
+.TP
+\f[V]-v\f[R], \f[V]--version\f[R]
+Show version of eza.
 .SH DISPLAY OPTIONS
 .TP
 \f[V]-1\f[R], \f[V]--oneline\f[R]
@@ -66,13 +73,30 @@ Recurse into directories.
 \f[V]-T\f[R], \f[V]--tree\f[R]
 Recurse into directories as a tree.
 .TP
+\f[V]-X\f[R], \f[V]--dereference\f[R]
+Dereference symbolic links when displaying information.
+.TP
 \f[V]-x\f[R], \f[V]--across\f[R]
 Sort the grid across, rather than downwards.
 .TP
-\f[V]--color\f[R], \f[V]--colour=WHEN\f[R]
-When to use terminal colours.
-Valid settings are `\f[V]always\f[R]', `\f[V]automatic\f[R]', and
-`\f[V]never\f[R]'.
+\f[V]--color=WHEN\f[R], \f[V]--colour=WHEN\f[R]
+When to use terminal colours (using ANSI escape code to colorize the
+output).
+.PP
+Valid settings are `\f[V]always\f[R]', `\f[V]automatic\f[R]' (or
+`\f[V]auto\f[R]' for short), and `\f[V]never\f[R]'.
+The default value is `\f[V]automatic\f[R]'.
+.PP
+The default behavior (`\f[V]automatic\f[R]' or `\f[V]auto\f[R]') is to
+colorize the output only when the standard output is connected to a real
+terminal.
+If the output of \f[V]eza\f[R] is redirected to a file or piped into
+another program, terminal colors will not be used.
+Setting this option to `\f[V]always\f[R]' causes \f[V]eza\f[R] to always
+output terminal color, while `\f[V]never\f[R]' disables the use of
+terminal color.
+.PP
+Manually setting this option overrides \f[V]NO_COLOR\f[R] environment.
 .TP
 \f[V]--color-scale\f[R], \f[V]--colour-scale\f[R]
 Colour file sizes on a scale.
@@ -83,6 +107,9 @@ Display icons next to file names.
 \f[V]--no-icons\f[R]
 Don\[cq]t display icons.
 (Always overrides \[en]icons)
+.TP
+\f[V]--no-quotes\f[R]
+Don\[cq]t quote file names with spaces.
 .TP
 \f[V]--hyperlink\f[R]
 Display entries as hyperlinks
@@ -95,6 +122,9 @@ Set screen width in columns.
 Show hidden and \[lq]dot\[rq] files.
 Use this twice to also show the `\f[V].\f[R]' and `\f[V]..\f[R]'
 directories.
+.TP
+\f[V]-A\f[R], \f[V]--almost-all\f[R]
+Equivalent to \[en]all; included for compatibility with \f[V]ls -A\f[R].
 .TP
 \f[V]-d\f[R], \f[V]--list-dirs\f[R]
 List directories as regular files, rather than recursing and listing
@@ -135,6 +165,9 @@ List directories before other files.
 .TP
 \f[V]-D\f[R], \f[V]--only-dirs\f[R]
 List only directories, not files.
+.TP
+\f[V]-f\f[R], \f[V]--only-files\f[R]
+List only files, not directories.
 .SH LONG VIEW OPTIONS
 .PP
 These options are available when running with \f[V]--long\f[R]
@@ -181,7 +214,12 @@ Valid timestamp fields are `\f[V]modified\f[R]', `\f[V]changed\f[R]',
 \f[V]--time-style=STYLE\f[R]
 How to format timestamps.
 Valid timestamp styles are `\f[V]default\f[R]', `\f[V]iso\f[R]',
-`\f[V]long-iso\f[R]', `\f[V]full-iso\f[R]', and `\f[V]relative\f[R]'.
+`\f[V]long-iso\f[R]', `\f[V]full-iso\f[R]', `\f[V]relative\f[R]', or you
+can use a \f[V]custom\f[R] style with `\f[V]+\f[R]' as prefix.
+(Ex: \[lq]\f[V]+%Y/%m/%d, %H:%M\f[R]\[rq] =>
+\[lq]\f[V]2023/9/30, 12:00\f[R]\[rq]).
+for more details about format syntax, please read:
+https://docs.rs/chrono/latest/chrono/format/strftime/index.html
 .TP
 \f[V]-u\f[R], \f[V]--accessed\f[R]
 Use the accessed timestamp field.
@@ -219,8 +257,8 @@ The status character can be `\f[V]-\f[R]' for not modified,
 `\f[V]D\f[R]' for deleted, `\f[V]R\f[R]' for renamed, `\f[V]T\f[R]' for
 type-change, `\f[V]I\f[R]' for ignored, and `\f[V]U\f[R]' for
 conflicted.
-:Directories will be shown to have the status of their contents, which
-is how `deleted' is possible if a directory contains a file that has a
+Directories will be shown to have the status of their contents, which is
+how `deleted' is possible if a directory contains a file that has a
 certain status, it will be shown to have that status.
 .TP
 \f[V]--git-repos\f[R] [if eza was built with git support]
@@ -238,6 +276,10 @@ Don\[cq]t show Git status (always overrides \f[V]--git\f[R],
 \f[V]--git-repos\f[R], \f[V]--git-repos-no-status\f[R])
 .SH ENVIRONMENT VARIABLES
 .PP
+If an environment variable prefixed with \f[V]EZA_\f[R] is not set, for
+backward compatibility, it will default to its counterpart starting with
+\f[V]EXA_\f[R].
+.PP
 eza responds to the following environment variables:
 .SS \f[V]COLUMNS\f[R]
 .PP
@@ -249,7 +291,7 @@ maximum width of 80 characters.
 .PP
 This option won\[cq]t do anything when eza\[cq]s output doesn\[cq]t
 wrap, such as when using the \f[V]--long\f[R] view.
-.SS \f[V]EXA_STRICT\f[R]
+.SS \f[V]EZA_STRICT\f[R]
 .PP
 Enables \f[I]strict mode\f[R], which will make eza error when two
 command-line options are incompatible.
@@ -266,7 +308,7 @@ In strict mode, the two options will not co-operate, and eza will error.
 This option is intended for use with automated scripts and other
 situations where you want to be certain you\[cq]re typing in the right
 command.
-.SS \f[V]EXA_GRID_ROWS\f[R]
+.SS \f[V]EZA_GRID_ROWS\f[R]
 .PP
 Limits the grid-details view (`\f[V]eza --grid --long\f[R]') so it\[cq]s
 only activated when at least the given number of rows of output would be
@@ -277,7 +319,7 @@ wide and sparse, on just one or two lines with none of the columns
 lining up.
 By specifying a minimum number of rows, you can only use the view if
 it\[cq]s going to be worth using.
-.SS \f[V]EXA_ICON_SPACING\f[R]
+.SS \f[V]EZA_ICON_SPACING\f[R]
 .PP
 Specifies the number of spaces to print between an icon (see the
 `\f[V]--icons\f[R]' option) and its file name.
@@ -296,13 +338,16 @@ Disables colours in the output (regardless of its value).
 Can be overridden by \f[V]--color\f[R] option.
 .PP
 See \f[V]https://no-color.org/\f[R] for details.
-.SS \f[V]LS_COLORS\f[R], \f[V]EXA_COLORS\f[R]
+.SS \f[V]LS_COLORS\f[R], \f[V]EZA_COLORS\f[R]
 .PP
 Specifies the colour scheme used to highlight files based on their name
 and kind, as well as highlighting metadata and parts of the UI.
 .PP
 For more information on the format of these environment variables, see
 the eza_colors.5.md manual page.
+.SS \f[V]EZA_OVERRIDE_GIT\f[R]
+.PP
+Overrides any \f[V]--git\f[R] or \f[V]--git-repos\f[R] argument
 .SH EXIT STATUSES
 .TP
 0
