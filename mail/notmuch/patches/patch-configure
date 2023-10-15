@@ -1,21 +1,21 @@
-$NetBSD: patch-configure,v 1.8 2022/05/04 06:35:50 wiz Exp $
+$NetBSD: patch-configure,v 1.9 2023/10/15 07:33:48 ryoon Exp $
 
 * Select GnuPG binary
 * Don't let CDPATH affect the build
 * Ignore errors for gpgme tests, can be affected by running gpg-agent
 
---- configure.orig	2022-04-25 11:48:07.000000000 +0000
+--- configure.orig	2023-09-12 11:37:38.000000000 +0000
 +++ configure
-@@ -525,7 +525,7 @@ EOF
+@@ -537,7 +537,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing session-key support.\n'
  	errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _check_session_keys.c ${gmime_ldflags} -o _check_session_keys \
--	   && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
-+	   && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
+-	   && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/openpgp4-secret-key.asc \
++	   && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/openpgp4-secret-key.asc \
  	   && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
- 	   && [ $SESSION_KEY = 9:0BACD64099D1468AB07C796F0C0AC4851948A658A15B34E803865E9FC635F2F5 ]
+ 	   && [ $SESSION_KEY = 9:496A0B6D15A5E7BA762FB8E5FE6DEE421D4D9BBFCEAD1CDD0CCF636D07ADE621 ]
      then
-@@ -624,7 +624,6 @@ is later than 3.2.7, which should have f
+@@ -635,7 +635,6 @@ is later than 3.2.7, which should have f
  Please follow up on https://github.com/jstedfast/gmime/pull/90 with
  more details.
  EOF
@@ -23,16 +23,16 @@ $NetBSD: patch-configure,v 1.8 2022/05/04 06:35:50 wiz Exp $
  	    fi
  	fi
  	printf "Checking whether GMime emits email addresses with angle brackets... "
-@@ -692,7 +691,7 @@ EOF
+@@ -703,7 +702,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing signature verification when decrypting with session keys.\n'
  	errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _verify_sig_with_session_key.c ${gmime_ldflags} -o _verify_sig_with_session_key \
--	    && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
-+	    && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/gnupg-secret-key.asc \
+-	    && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < "$srcdir"/test/openpgp4-secret-key.asc \
++	    && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < "$srcdir"/test/openpgp4-secret-key.asc \
  	    && rm -f ${TEMP_GPG}/private-keys-v1.d/*.key
      then
  	if GNUPGHOME=${TEMP_GPG} ./_verify_sig_with_session_key; then
-@@ -1627,7 +1626,7 @@ EOF
+@@ -1655,7 +1654,7 @@ EOF
      if [ $WITH_PYTHON_DOCS = "1" ]; then
  	echo "tags.add('WITH_PYTHON')"
      fi
