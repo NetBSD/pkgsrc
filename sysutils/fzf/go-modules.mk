@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2023/06/03 01:03:28 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.5 2023/10/15 02:07:09 iquiw Exp $
 
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.zip
@@ -33,12 +33,12 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210615035016-665e8c7367d1.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220520151302-bc2c85ada10a.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220722155257-8c9f86f7a55f.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220811171246-fbc7d0a398ab.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.13.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.13.0.zip
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.8.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.8.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.13.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.13.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.3.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.mod
