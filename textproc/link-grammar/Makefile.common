@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1 2023/10/15 06:39:25 ryoon Exp $
+#
+# used by textproc/link-grammar/Makefile
+# used by textproc/py-link-grammar/Makefile
+
+DISTNAME=	link-grammar-5.12.3
+MASTER_SITES=	https://www.abisource.com/downloads/link-grammar/${PKGVERSION_NOREV}/
+
+HOMEPAGE=	https://www.abisource.com/projects/link-grammar/
+LICENSE=	modified-bsd AND gnu-lgpl-v2.1
+
+DISTINFO_FILE=	${.CURDIR}/../link-grammar/distinfo
+FILESDIR=	${.CURDIR}/../link-grammar/files
+PATCHDIR=	${.CURDIR}/../link-grammar/patches
+
+USE_LANGUAGES=	c99 c++
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--disable-java-bindings
+
+# Not all currently supported compilers provide this option.
+# The configure script purports to check whether the compiler
+# supports it, but doesn't do so correctly.
+BUILDLINK_TRANSFORM+=	rm:-Wformat-signedness
+
+.include "../../devel/pcre2/buildlink3.mk"
