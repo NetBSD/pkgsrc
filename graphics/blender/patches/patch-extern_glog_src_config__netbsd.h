@@ -1,10 +1,10 @@
-$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.2 2019/09/18 23:40:17 nia Exp $
+$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.3 2023/10/15 19:53:20 ryoon Exp $
 
 Support NetBSD.
 
---- extern/glog/src/config_netbsd.h.orig	2016-07-28 08:46:50.262373648 +0000
+--- extern/glog/src/config_netbsd.h.orig	2023-06-13 18:04:40.000000000 +0000
 +++ extern/glog/src/config_netbsd.h
-@@ -0,0 +1,177 @@
+@@ -1,3 +1,180 @@
 +/* src/config.h.  Generated from config.h.in by configure.  */
 +/* src/config.h.in.  Generated from configure.ac by autoheader.  */
 +
@@ -182,3 +182,6 @@ Support NetBSD.
 +#ifdef __clang__
 +#  define NO_FRAME_POINTER
 +#endif
+ /* define if glog doesn't use RTTI */
+ /* #undef DISABLE_RTTI */
+ 
