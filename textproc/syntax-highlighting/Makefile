@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2023/07/29 02:33:15 markd Exp $
+# $NetBSD: Makefile,v 1.57 2023/10/15 00:58:05 gutteridge Exp $
 
 DISTNAME=	syntax-highlighting-${KF5VER}
 CATEGORIES=	textproc
@@ -17,4 +17,5 @@ CHECK_PORTABILITY_SKIP+=	autotests/folding/highlight.sh.fold
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
