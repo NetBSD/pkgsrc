@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5870 2023/10/15 06:24:32 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5871 2023/10/15 06:32:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8662,3 +8662,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/fzf to 0.43.0 [iquiw 2023-10-15]
 	Updated converters/dos2unix to 7.5.1 [ryoon 2023-10-15]
 	Updated security/putty to 0.79 [ryoon 2023-10-15]
+	Updated multimedia/vlc to 3.0.19 [ryoon 2023-10-15]
