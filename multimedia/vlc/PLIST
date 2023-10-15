@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2023/10/15 06:32:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.74 2023/10/15 19:32:03 ryoon Exp $
 bin/cvlc
 ${PLIST.qt5}bin/qvlc
 bin/rvlc
@@ -218,8 +218,6 @@ lib/vlc/plugins/audio_output/libamem_plugin.la
 ${PLIST.jack}lib/vlc/plugins/audio_output/libjack_plugin.la
 ${PLIST.oss}lib/vlc/plugins/audio_output/liboss_plugin.la
 ${PLIST.pulseaudio}lib/vlc/plugins/audio_output/libpulse_plugin.la
-lib/vlc/plugins/audio_output/liboss_plugin.la
-lib/vlc/plugins/audio_output/libpulse_plugin.la
 lib/vlc/plugins/codec/liba52_plugin.la
 lib/vlc/plugins/codec/libadpcm_plugin.la
 lib/vlc/plugins/codec/libaes3_plugin.la
