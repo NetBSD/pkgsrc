@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5879 2023/10/15 07:20:58 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5880 2023/10/15 07:26:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8671,3 +8671,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/orcus to 0.18.1 [ryoon 2023-10-15]
 	Updated devel/mdds to 2.1.1 [ryoon 2023-10-15]
 	Updated converters/libetonyek to 0.1.10nb10 [ryoon 2023-10-15]
+	Updated misc/libreoffice to 7.6.2.1 [ryoon 2023-10-15]
