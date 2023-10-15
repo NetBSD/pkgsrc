@@ -1,0 +1,77 @@
+$NetBSD: patch-configure,v 1.1 2023/10/15 07:03:06 ryoon Exp $
+
+* Do not conflict the other mdds.
+* POSIX shell portability
+
+--- configure.orig	2021-12-11 01:51:19.000000000 +0000
++++ configure
+@@ -807,7 +807,7 @@ localstatedir='${prefix}/var'
+ runstatedir='${localstatedir}/run'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+-docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
++docdir='${datarootdir}/doc/${PACKAGE_TARNAME}-2.0'
+ infodir='${datarootdir}/info'
+ htmldir='${docdir}'
+ dvidir='${docdir}'
+@@ -5607,7 +5607,7 @@ if test "${enable_debug_stdcxx+set}" = s
+ fi
+ 
+ 
+-if test x"$debug_stdcxx" == "xyes"; then :
++if test x"$debug_stdcxx" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -D_GLIBCXX_DEBUG"
+ 
+@@ -5619,7 +5619,7 @@ if test "${enable_release_tests+set}" = 
+ fi
+ 
+ 
+-if test x"$release_tests" == "xyes"; then :
++if test x"$release_tests" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -DNDEBUG -O2"
+ 
+@@ -5643,13 +5643,13 @@ else
+ fi
+ 
+ 
+-if test x"$enable_loop_unrolling" == "xno"; then :
++if test x"$enable_loop_unrolling" = "xno"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -DMDDS_LOOP_UNROLLING=0"
+ 
+ fi
+ 
+-if test x"$enable_gcov" == "xyes"; then :
++if test x"$enable_gcov" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS --coverage -O0"
+ 
+@@ -5664,7 +5664,7 @@ else
+ fi
+ 
+ 
+-if test x"$enable_openmp" == "xyes"; then :
++if test x"$enable_openmp" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -fopenmp -DMDDS_USE_OPENMP=1"
+   LDFLAGS="$LDFLAGS -fopenmp"
+@@ -5680,7 +5680,7 @@ else
+ fi
+ 
+ 
+-if test x"$enable_sanitizer_coverage" == "xyes"; then :
++if test x"$enable_sanitizer_coverage" = "xyes"; then :
+ 
+   CXXFLAGS="$CXXFLAGS -fprofile-instr-generate -fcoverage-mapping -O0"
+ 
+@@ -6374,7 +6374,7 @@ else
+ 
+ fi
+ 
+-if test x"$enable_werror" == "xyes"; then :
++if test x"$enable_werror" = "xyes"; then :
+ 
+ 	CXXFLAGS="$CXXFLAGS -Werror"
+ 
