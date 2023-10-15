@@ -1,18 +1,13 @@
-$NetBSD: patch-external_skia_netbsd.patch.0,v 1.4 2022/08/22 13:58:32 ryoon Exp $
+$NetBSD: patch-external_skia_netbsd.patch.0,v 1.5 2023/10/15 07:26:24 ryoon Exp $
 
 * Support NetBSD. It has no uselocale(3).
-* Fix build failure (isnan etc. are not defined) under NetBSD/amd64 9.99.88
-  (GCC 10.3.0) at least.
 
---- external/skia/netbsd.patch.0.orig	2022-08-19 00:29:47.661827273 +0000
+--- external/skia/netbsd.patch.0.orig	2023-08-21 19:21:45.895625567 +0000
 +++ external/skia/netbsd.patch.0
-@@ -0,0 +1,31 @@
-+* Support NetBSD. It has no uselocale(3).
-+* Fix build failure (isnan etc. are not defined) under NetBSD/amd64 9.99.88
-+  (GCC 10.3.0) at least.
-+
-+--- src/gpu/ganesh/GrAutoLocaleSetter.h.orig	2022-08-19 00:39:34.308186035 +0000
-++++ src/gpu/ganesh/GrAutoLocaleSetter.h
+@@ -0,0 +1,12 @@
++diff -ur skia.orig/src/gpu/ganesh/GrAutoLocaleSetter.h skia/src/gpu/ganesh/GrAutoLocaleSetter.h
++--- src/gpu/ganesh/GrAutoLocaleSetter.h	2023-01-27 17:09:20.000000000 +0900
+++++ src/gpu/ganesh/GrAutoLocaleSetter.h	2023-08-22 03:59:57.165336269 +0900
 +@@ -27,7 +27,7 @@
 + #define HAVE_XLOCALE 0
 + #endif
@@ -22,19 +17,3 @@ $NetBSD: patch-external_skia_netbsd.patch.0,v 1.4 2022/08/22 13:58:32 ryoon Exp 
 + #define HAVE_LOCALE_T 0
 + #else
 + #define HAVE_LOCALE_T 1
-+--- src/sksl/dsl/DSLExpression.cpp.orig	2022-08-19 00:40:37.794860287 +0000
-++++ src/sksl/dsl/DSLExpression.cpp
-+@@ -63,10 +63,10 @@ DSLExpression::DSLExpression(float value
-+     : fExpression(SkSL::Literal::MakeFloat(ThreadContext::Context(),
-+                                            pos,
-+                                            value)) {
-+-    if (!isfinite(value)) {
-+-        if (isinf(value)) {
-++    if (!std::isfinite(value)) {
-++        if (std::isinf(value)) {
-+             ThreadContext::ReportError("floating point value is infinite");
-+-        } else if (isnan(value)) {
-++        } else if (std::isnan(value)) {
-+             ThreadContext::ReportError("floating point value is NaN");
-+         }
-+     }
