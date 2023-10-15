@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.35 2023/02/14 03:28:07 ryoon Exp $
+$NetBSD: distinfo,v 1.36 2023/10/15 06:24:19 ryoon Exp $
 
-BLAKE2s (putty-0.78.tar.gz) = 0cd36ac355085e34c7e03afb93add0d00d55bfe055d5aec565d04eb3b9d3a8f6
-SHA512 (putty-0.78.tar.gz) = d7a3e2eabd5f1f65fc0f3f1ee0789c30fbe891b57f63ddeac0b92befcb6aecd4a748f04a21c76ee42d992deb77c2e1a0454a71cc620ef26fbf23af660bd84bb5
-Size (putty-0.78.tar.gz) = 2811628 bytes
+BLAKE2s (putty-0.79.tar.gz) = 583f894dceafd565f2f117eb4f692bab75870426fd7a97989fa565cdfb648a99
+SHA512 (putty-0.79.tar.gz) = 4f10f870b229c89e928921d3b350955ce1c1170a062e7943d9cc8dbd83389d82a9b844623541605f0db5a429d545c2d188bf8e384c6515466fae69b216120983
+Size (putty-0.79.tar.gz) = 2826618 bytes
 SHA1 (patch-ldisc.c) = cf31a65f920a3ea9b4a70602e4b2fd4d5df8d3e8
 SHA1 (patch-terminal.c) = 690d9021b14947ae24c68ecff6781ad255ab7a70
 SHA1 (patch-timing.c) = a6a492fc8b22c58e2973c854bffa4c8bf71eb6a7
