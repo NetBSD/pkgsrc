@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2023/10/07 20:09:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2023/10/15 07:51:56 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1326,6 +1326,9 @@ ${PYSITELIB}/yt_dlp/extractor/jove.pyo
 ${PYSITELIB}/yt_dlp/extractor/jstream.py
 ${PYSITELIB}/yt_dlp/extractor/jstream.pyc
 ${PYSITELIB}/yt_dlp/extractor/jstream.pyo
+${PYSITELIB}/yt_dlp/extractor/jtbc.py
+${PYSITELIB}/yt_dlp/extractor/jtbc.pyc
+${PYSITELIB}/yt_dlp/extractor/jtbc.pyo
 ${PYSITELIB}/yt_dlp/extractor/jwplatform.py
 ${PYSITELIB}/yt_dlp/extractor/jwplatform.pyc
 ${PYSITELIB}/yt_dlp/extractor/jwplatform.pyo
@@ -1539,6 +1542,9 @@ ${PYSITELIB}/yt_dlp/extractor/masters.pyo
 ${PYSITELIB}/yt_dlp/extractor/matchtv.py
 ${PYSITELIB}/yt_dlp/extractor/matchtv.pyc
 ${PYSITELIB}/yt_dlp/extractor/matchtv.pyo
+${PYSITELIB}/yt_dlp/extractor/mbn.py
+${PYSITELIB}/yt_dlp/extractor/mbn.pyc
+${PYSITELIB}/yt_dlp/extractor/mbn.pyo
 ${PYSITELIB}/yt_dlp/extractor/mdr.py
 ${PYSITELIB}/yt_dlp/extractor/mdr.pyc
 ${PYSITELIB}/yt_dlp/extractor/mdr.pyo
@@ -3429,6 +3435,9 @@ ${PYSITELIB}/yt_dlp/utils/_utils.pyo
 ${PYSITELIB}/yt_dlp/utils/networking.py
 ${PYSITELIB}/yt_dlp/utils/networking.pyc
 ${PYSITELIB}/yt_dlp/utils/networking.pyo
+${PYSITELIB}/yt_dlp/utils/progress.py
+${PYSITELIB}/yt_dlp/utils/progress.pyc
+${PYSITELIB}/yt_dlp/utils/progress.pyo
 ${PYSITELIB}/yt_dlp/utils/traversal.py
 ${PYSITELIB}/yt_dlp/utils/traversal.pyc
 ${PYSITELIB}/yt_dlp/utils/traversal.pyo
