@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/31 14:42:11 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/15 08:30:08 wiz Exp $
 
-DISTNAME=	libadwaita-1.2.5
+DISTNAME=	libadwaita-1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libadwaita/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +26,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/appstream/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
