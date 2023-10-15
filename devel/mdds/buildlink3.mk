@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/07/19 14:53:20 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/15 07:18:52 ryoon Exp $
 
 BUILDLINK_TREE+=	mdds
 
@@ -7,7 +7,7 @@ MDDS_BUILDLINK3_MK:=
 
 USE_CXX_FEATURES+=	c++17
 
-BUILDLINK_API_DEPENDS.mdds+=	mdds>=2.0.1
+BUILDLINK_API_DEPENDS.mdds+=	mdds>=2.1.1
 BUILDLINK_PKGSRCDIR.mdds?=	../../devel/mdds
 # only contains header files
 BUILDLINK_DEPMETHOD.mdds?=	build
