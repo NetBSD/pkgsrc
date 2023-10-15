@@ -14,7 +14,7 @@
 . ftr VB CB
 . ftr VBI CBI
 .\}
-.TH "" "" "" "" ""
+.TH "eza_colors-explanation" "5" "" "$version" ""
 .hy
 .SH Name
 .PP
@@ -29,31 +29,31 @@ set: running eza with \f[V]LS_COLORS=\[dq]*.zip=32\[dq]\f[R] will turn
 zip files green but leave the colours of other compressed files alone.
 .PP
 You can also disable this built-in set entirely by including a
-\f[V]reset\f[R] entry at the beginning of \f[V]EXA_COLORS\f[R].
-So setting \f[V]EXA_COLORS=\[dq]reset:*.txt=31\[dq]\f[R] will highlight
-only text files; setting \f[V]EXA_COLORS=\[dq]reset\[dq]\f[R] will
+\f[V]reset\f[R] entry at the beginning of \f[V]EZA_COLORS\f[R].
+So setting \f[V]EZA_COLORS=\[dq]reset:*.txt=31\[dq]\f[R] will highlight
+only text files; setting \f[V]EZA_COLORS=\[dq]reset\[dq]\f[R] will
 highlight nothing.
 .SS Examples
 .IP \[bu] 2
 Disable the \[lq]current user\[rq] highlighting:
-\f[V]EXA_COLORS=\[dq]uu=0:gu=0\[dq]\f[R]
+\f[V]EZA_COLORS=\[dq]uu=0:gu=0\[dq]\f[R]
 .IP \[bu] 2
-Turn the date column green: \f[V]EXA_COLORS=\[dq]da=32\[dq]\f[R]
+Turn the date column green: \f[V]EZA_COLORS=\[dq]da=32\[dq]\f[R]
 .IP \[bu] 2
 Highlight Vagrantfiles:
-\f[V]EXA_COLORS=\[dq]Vagrantfile=1;4;33\[dq]\f[R]
+\f[V]EZA_COLORS=\[dq]Vagrantfile=1;4;33\[dq]\f[R]
 .IP \[bu] 2
 Override the existing zip colour:
-\f[V]EXA_COLORS=\[dq]*.zip=38;5;125\[dq]\f[R]
+\f[V]EZA_COLORS=\[dq]*.zip=38;5;125\[dq]\f[R]
 .IP \[bu] 2
 Markdown files a shade of green, log files a shade of grey:
-\f[V]EXA_COLORS=\[dq]*.md=38;5;121:*.log=38;5;248\[dq]\f[R]
+\f[V]EZA_COLORS=\[dq]*.md=38;5;121:*.log=38;5;248\[dq]\f[R]
 .SS BUILT-IN EXTENSIONS
 .IP \[bu] 2
 eza now supports bright colours!
 As supported by most modern 256-colour terminals, you can now choose
 from \f[V]bright\f[R] colour codes when selecting your custom colours in
-your \f[V]#EXA_COLORS\f[R] environment variable.
+your \f[V]#EZA_COLORS\f[R] environment variable.
 .IP \[bu] 2
 Build (Makefile, Cargo.toml, package.json) are yellow and underlined.
 .IP \[bu] 2
