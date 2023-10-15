@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2022/12/03 08:47:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/15 19:33:54 adam Exp $
 bin/mysofa2json
 include/mysofa.h
+lib/cmake/mysofa/mysofaConfig.cmake
+lib/cmake/mysofa/mysofaConfigVersion.cmake
+lib/cmake/mysofa/mysofaTargets-noconfig.cmake
+lib/cmake/mysofa/mysofaTargets.cmake
 lib/libmysofa.a
 lib/libmysofa.so
+lib/libmysofa.so.${PKGVERSION}
 lib/libmysofa.so.1
-lib/libmysofa.so.1.3.0
 lib/pkgconfig/libmysofa.pc
 share/libmysofa/MIT_KEMAR_normal_pinna.sofa
 share/libmysofa/default.sofa
