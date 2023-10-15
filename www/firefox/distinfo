@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.510 2023/09/18 06:12:47 ryoon Exp $
+$NetBSD: distinfo,v 1.511 2023/10/15 07:40:10 ryoon Exp $
 
-BLAKE2s (firefox-117.0.1.source.tar.xz) = 4aa980b9fbe9d07a3675796538b199463030e7081dbed53d851296a0fecd5e53
-SHA512 (firefox-117.0.1.source.tar.xz) = 1583b0ad3b3b17c59bfbfb3e416074766327d0b926ef4f6c6b1e3b2d7cf6a18dec592b7d17fab9493ba1506f3540a02277096d28616dd29b6e7b9e93905f2071
-Size (firefox-117.0.1.source.tar.xz) = 509601584 bytes
+BLAKE2s (firefox-118.0.2.source.tar.xz) = 4615d3f03d8debf66cf9088934478099e557dbc5cb419765fb0dc91296221697
+SHA512 (firefox-118.0.2.source.tar.xz) = fe9d7951927e44aee98a15840820251b779cc427f27597951497bd01fde3c3f2857942535c64c9d1a64f877c43802771304ed97254bffd9216f554e1af9efbf4
+Size (firefox-118.0.2.source.tar.xz) = 520864692 bytes
 BLAKE2s (nodejs-output-116.0.tgz) = 3d453c6500fa7c93997c795a937b581aa4494b54293218b6657758a2102fee97
 SHA512 (nodejs-output-116.0.tgz) = 16354fc33c3ccf4a8f392a410fc94d4851391621f2e4e3e15bfbb75027e0a9ae7f9f771391988f1ac177cb5d0deab70a4abdc71bfe4bfe39ac3e428a40e909a0
 Size (nodejs-output-116.0.tgz) = 219731 bytes
@@ -31,7 +31,7 @@ SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b31
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = e2dfa63e628527014509622b86baf62cb98ceb44
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
-SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8848fb05c1e8b45234f74db71602a8a84c0404a4
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 4cb0e1c88dc83370024ed1aac7f75445b9f98df8
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 8111952a107eb2cd665525ddd0e27c79eee3c1cd
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
