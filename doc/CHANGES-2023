@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5867 2023/10/14 23:55:06 markd Exp $
+$NetBSD: CHANGES-2023,v 1.5868 2023/10/15 02:08:14 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8659,3 +8659,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/kde4-l10n-zh_TW [markd 2023-10-14]
 	Updated misc/parley to 23.04.3 [markd 2023-10-14]
 	Removed misc/libkdeedu [markd 2023-10-15]
+	Updated sysutils/fzf to 0.43.0 [iquiw 2023-10-15]
