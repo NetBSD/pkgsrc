@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5898 2023/10/15 19:26:54 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5899 2023/10/15 19:39:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8691,3 +8691,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/openttd to 13.3nb1 [triaxx 2023-10-15]
 	Updated games/openttd to 13.4 [triaxx 2023-10-15]
 	Added devel/frozen version 1.1.1 [ryoon 2023-10-15]
+	Updated audio/libmysofa to 1.3.2 [adam 2023-10-15]
+	Updated devel/py-pip to 23.3 [adam 2023-10-15]
