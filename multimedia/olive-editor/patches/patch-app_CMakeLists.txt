@@ -1,0 +1,14 @@
+$NetBSD: patch-app_CMakeLists.txt,v 1.1 2023/10/15 19:57:54 ryoon Exp $
+
+* Install translated strings.
+
+--- app/CMakeLists.txt.orig	2023-09-24 11:40:23.000000000 +0000
++++ app/CMakeLists.txt
+@@ -123,6 +123,7 @@ elseif(APPLE)
+ elseif(UNIX)
+   # Set Linux-specific properties for application
+   install(TARGETS olive-editor RUNTIME DESTINATION bin)
++  install(FILES ${OLIVE_QM_FILES} DESTINATION share/olive-editor/ts)
+ endif()
+ 
+ # Set link libraries
