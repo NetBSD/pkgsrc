@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4070 2023/10/15 07:05:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.4071 2023/10/15 08:01:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -135,6 +135,7 @@ SUBDIR+=	apache-maven
 SUBDIR+=	apel
 SUBDIR+=	apenwarr-redo
 SUBDIR+=	appdata-tools
+SUBDIR+=	appstream
 SUBDIR+=	appstream-glib
 SUBDIR+=	apr
 SUBDIR+=	apr-util
