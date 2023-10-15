@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2022/02/05 04:00:52 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2023/10/15 07:18:52 ryoon Exp $
 
-BLAKE2s (mdds-2.0.1.tar.bz2) = 893a7f4107ff5d8c98c236c80cf4c24fc116e2d3835f42ff6b79508fdcb9bb1a
-SHA512 (mdds-2.0.1.tar.bz2) = 61b932d643e7769f840557dfe8df4527477fd70ea69ec9c11b26d85ee2409bc11eaa2670e69b64e4700d4dbe6942360752b6efd4e99880b3193ec6bcdd54071a
-Size (mdds-2.0.1.tar.bz2) = 500269 bytes
-SHA1 (patch-configure) = 7eaab42f04054f1034cd466a4e7b1e21d4d3fea2
+BLAKE2s (mdds-2.1.1.tar.bz2) = ba85e2c235cb4400134aeec3ea3737166aeaaddb28fa6f053898fe97255b791a
+SHA512 (mdds-2.1.1.tar.bz2) = f99dd43cc824112027a5dd1f5077ecd2e4a40a3dc83061801da1622b8ea850581704b79bac88ea9f52469ea05573e257c76535ac9b9984da46746f98bea3a414
+Size (mdds-2.1.1.tar.bz2) = 688093 bytes
+SHA1 (patch-configure) = e020621f00d3fbfe3e3c72ff7a93519e3d26be0a

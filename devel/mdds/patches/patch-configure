@@ -1,67 +1,15 @@
-$NetBSD: patch-configure,v 1.3 2022/02/05 04:00:52 ryoon Exp $
+$NetBSD: patch-configure,v 1.4 2023/10/15 07:18:52 ryoon Exp $
 
-* POSIX shell portability
+* Do not conflict with older mdds.
 
---- configure.orig	2021-12-11 01:51:19.000000000 +0000
+--- configure.orig	2023-04-29 13:07:54.000000000 +0000
 +++ configure
-@@ -5607,7 +5607,7 @@ if test "${enable_debug_stdcxx+set}" = s
- fi
- 
- 
--if test x"$debug_stdcxx" == "xyes"; then :
-+if test x"$debug_stdcxx" = "xyes"; then :
- 
-   CXXFLAGS="$CXXFLAGS -D_GLIBCXX_DEBUG"
- 
-@@ -5619,7 +5619,7 @@ if test "${enable_release_tests+set}" = 
- fi
- 
- 
--if test x"$release_tests" == "xyes"; then :
-+if test x"$release_tests" = "xyes"; then :
- 
-   CXXFLAGS="$CXXFLAGS -DNDEBUG -O2"
- 
-@@ -5643,13 +5643,13 @@ else
- fi
- 
- 
--if test x"$enable_loop_unrolling" == "xno"; then :
-+if test x"$enable_loop_unrolling" = "xno"; then :
- 
-   CXXFLAGS="$CXXFLAGS -DMDDS_LOOP_UNROLLING=0"
- 
- fi
- 
--if test x"$enable_gcov" == "xyes"; then :
-+if test x"$enable_gcov" = "xyes"; then :
- 
-   CXXFLAGS="$CXXFLAGS --coverage -O0"
- 
-@@ -5664,7 +5664,7 @@ else
- fi
- 
- 
--if test x"$enable_openmp" == "xyes"; then :
-+if test x"$enable_openmp" = "xyes"; then :
- 
-   CXXFLAGS="$CXXFLAGS -fopenmp -DMDDS_USE_OPENMP=1"
-   LDFLAGS="$LDFLAGS -fopenmp"
-@@ -5680,7 +5680,7 @@ else
- fi
- 
- 
--if test x"$enable_sanitizer_coverage" == "xyes"; then :
-+if test x"$enable_sanitizer_coverage" = "xyes"; then :
- 
-   CXXFLAGS="$CXXFLAGS -fprofile-instr-generate -fcoverage-mapping -O0"
- 
-@@ -6374,7 +6374,7 @@ else
- 
- fi
- 
--if test x"$enable_werror" == "xyes"; then :
-+if test x"$enable_werror" = "xyes"; then :
- 
- 	CXXFLAGS="$CXXFLAGS -Werror"
- 
+@@ -845,7 +845,7 @@ localstatedir='${prefix}/var'
+ runstatedir='${localstatedir}/run'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+-docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
++docdir='${datarootdir}/doc/${PACKAGE_TARNAME}-2.1'
+ infodir='${datarootdir}/info'
+ htmldir='${docdir}'
+ dvidir='${docdir}'
