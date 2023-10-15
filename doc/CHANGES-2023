@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5894 2023/10/15 12:13:10 kleink Exp $
+$NetBSD: CHANGES-2023,v 1.5895 2023/10/15 15:03:27 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8687,3 +8687,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated fonts/noto-ttf to 20230927 [ryoon 2023-10-15]
 	Updated lang/go120 to 1.20.10 [bsiegert 2023-10-15]
 	Updated print/py-weasyprint to 60.1 [kleink 2023-10-15]
+	Updated emulators/PC6001VX to 4.2.2 [tsutsui 2023-10-15]
