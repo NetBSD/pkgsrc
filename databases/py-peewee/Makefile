@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2023/08/25 15:21:43 adam Exp $
+# $NetBSD: Makefile,v 1.97 2023/10/16 13:05:30 adam Exp $
 
-DISTNAME=	peewee-3.16.3
+DISTNAME=	peewee-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # needs features from newer sphinx than python 2.7 supports
 
