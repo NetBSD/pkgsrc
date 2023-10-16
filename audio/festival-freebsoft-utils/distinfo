@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/10/16 14:04:53 ryoon Exp $
+
+BLAKE2s (festival-freebsoft-utils-0.10.tar.gz) = fa055f18816a891b03237b1bdbcee918fbbe96aebd8f132115a7e4230a9c5344
+SHA512 (festival-freebsoft-utils-0.10.tar.gz) = 26305b9d0fc7f1333786d38cc0efbbe2cb2734e9f981e846ce7b9369cf012adf04e357af9c39fea650620cf7ff619ad15c48dbbd5d6a2781907301817718136c
+Size (festival-freebsoft-utils-0.10.tar.gz) = 73022 bytes
+SHA1 (patch-recode.scm) = a4378ae524c449099707024b1dfb53eded73c1c2

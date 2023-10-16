@@ -1,0 +1,19 @@
+festival-freebsoft-utils is a collection of Festival utilities that
+enhance Festival with some useful features.  They provide all what is
+needed for interaction with Speech Dispatcher.
+
+Key festival-freebsoft-utils features are:
+
+- Generalized concept of input events.  festival-freebsoft-utils
+  allows not only plain text synthesis, but also combining it with
+  sounds.  Additionally, mechanism of logical events mapped to other
+  events is provided.
+
+- Substitution of events for given words.
+
+- High-level voice selection mechanism and setting of basic prosodic
+  parameters.
+
+- Spelling mode.
+
+- Capital letter signalization.
