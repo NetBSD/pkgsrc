@@ -1,0 +1,14 @@
+$NetBSD: patch-plugins_ots_Makefile.am,v 1.3 2023/10/16 14:12:14 ryoon Exp $
+
+Use CXX for linking.
+
+--- plugins/ots/Makefile.am.orig	2021-07-03 15:46:07.000000000 +0000
++++ plugins/ots/Makefile.am
+@@ -14,6 +14,7 @@ ots_la_LDFLAGS = \
+ 	-no-undefined
+ 
+ ots_la_SOURCES = 
++nodist_EXTRA_ots_la_SOURCES = dummy.cpp
+ 
+ EXTRA_DIST = \
+ 	plugin.m4
