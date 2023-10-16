@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2022/06/28 11:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2023/10/16 13:18:10 ryoon Exp $
 
 DISTNAME=	festival-2.5.0-release
 PKGNAME=	${DISTNAME:S/-release//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/2.5/
 DISTFILES=	${DISTNAME}.tar.gz \
@@ -116,6 +116,6 @@ do-install:
 	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
