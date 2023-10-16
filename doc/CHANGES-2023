@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5909 2023/10/16 12:56:09 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5910 2023/10/16 13:09:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8704,3 +8704,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-xlsxwriter to 3.1.8 [adam 2023-10-16]
 	Added archivers/minizip-ng version 4.0.1 [ryoon 2023-10-16]
 	Added devel/pystring version 1.1.4 [ryoon 2023-10-16]
+	Updated sysutils/py-fsspec to 2023.9.2 [adam 2023-10-16]
+	Updated devel/py-faker to 19.10.0 [adam 2023-10-16]
+	Updated databases/py-peewee to 3.17.0 [adam 2023-10-16]
+	Updated www/py-django-cors-headers to 4.3.0 [adam 2023-10-16]
