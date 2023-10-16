@@ -1,7 +1,7 @@
-# $NetBSD: tool.mk,v 1.3 2023/08/24 20:44:14 wiz Exp $
+# $NetBSD: tool.mk,v 1.4 2023/10/16 23:40:20 gutteridge Exp $
 #
-# This mk fragment can be included in all packages that uses `cython'
-# and `cythonize' as tools without version suffix.
+# This mk fragment can be included in all packages that use `cython'
+# and `cythonize' as tools without a version suffix.
 #
 # Keywords: python
 #
