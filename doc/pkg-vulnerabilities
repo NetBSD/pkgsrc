@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.47 2023/10/14 09:40:47 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.48 2023/10/16 10:28:51 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23595,7 +23595,7 @@ php{56,74,80,81}-piwigo<2.10.0	sql-injection	https://nvd.nist.gov/vuln/detail/CV
 php{56,74,80,81}-piwigo-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-40678
 pidgin<2.14.9	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2022-26491
 poppler<22.04.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27337
-protobuf-c-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-33070
+protobuf-c<=1.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-33070
 py{27,36,37,38,39,310}-JWT<2.4.0	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2022-29217
 py{27,36,37,38,39,310}-Pillow<9.1.1	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2022-30595
 py{27,36,37,38,39,310}-aiohttp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-33124
