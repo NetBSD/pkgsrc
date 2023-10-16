@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5911 2023/10/16 13:18:26 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5912 2023/10/16 14:05:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8709,3 +8709,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/py-peewee to 3.17.0 [adam 2023-10-16]
 	Updated www/py-django-cors-headers to 4.3.0 [adam 2023-10-16]
 	Updated audio/festival to 2.5.0nb5 [ryoon 2023-10-16]
+	Added audio/festival-freebsoft-utils version 0.10 [ryoon 2023-10-16]
