@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: spec,v 1.3 2020/05/19 05:02:42 rillig Exp $
+# $NetBSD: spec,v 1.4 2023/10/16 22:21:55 rillig Exp $
 
 # This test demonstrates how the RCS Ids from the package files end up in
 # the +BUILD_VERSION file of the binary package.
@@ -22,7 +22,7 @@
 #	to the RCS Ids from the binary package, to see whether the package
 #	needs to be built again.
 #
-# pkgtools/pkglint/files/distinfo.go, function computePatchSha1Hex:
+# pkgtools/pkglint, file distinfo.go, function computePatchSha1Hex:
 #	Same as mk/checksum/checksum.
 #
 # All these places must use the same patterns for extracting the RCS Ids.
