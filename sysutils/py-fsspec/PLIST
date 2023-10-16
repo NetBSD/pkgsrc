@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/25 22:14:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/16 13:01:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -41,6 +41,10 @@ ${PYSITELIB}/fsspec/implementations/__init__.py
 ${PYSITELIB}/fsspec/implementations/__init__.pyc
 ${PYSITELIB}/fsspec/implementations/arrow.py
 ${PYSITELIB}/fsspec/implementations/arrow.pyc
+${PYSITELIB}/fsspec/implementations/cache_mapper.py
+${PYSITELIB}/fsspec/implementations/cache_mapper.pyc
+${PYSITELIB}/fsspec/implementations/cache_metadata.py
+${PYSITELIB}/fsspec/implementations/cache_metadata.pyc
 ${PYSITELIB}/fsspec/implementations/cached.py
 ${PYSITELIB}/fsspec/implementations/cached.pyc
 ${PYSITELIB}/fsspec/implementations/dask.py
@@ -87,6 +91,8 @@ ${PYSITELIB}/fsspec/spec.py
 ${PYSITELIB}/fsspec/spec.pyc
 ${PYSITELIB}/fsspec/tests/abstract/__init__.py
 ${PYSITELIB}/fsspec/tests/abstract/__init__.pyc
+${PYSITELIB}/fsspec/tests/abstract/common.py
+${PYSITELIB}/fsspec/tests/abstract/common.pyc
 ${PYSITELIB}/fsspec/tests/abstract/copy.py
 ${PYSITELIB}/fsspec/tests/abstract/copy.pyc
 ${PYSITELIB}/fsspec/tests/abstract/get.py
