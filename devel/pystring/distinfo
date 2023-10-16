@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/10/16 12:55:56 ryoon Exp $
+
+BLAKE2s (pystring-1.1.4.tar.gz) = 1fb80b5ddcfd017c9c62093d9d5f24604e47e9e86ab4d9efadccfc43b9af20c5
+SHA512 (pystring-1.1.4.tar.gz) = 9c0460fea67885492f9b0d29a9ba312d960fd5e43577cdcfd47faf04397ff4b7e456ed68f1948b923d2f63f9922d576b93e4ca1a27376bcb6d29c683828acb01
+Size (pystring-1.1.4.tar.gz) = 19184 bytes
+SHA1 (patch-Makefile) = 712b30f612f0885a8b8a47a93554828da1216302
