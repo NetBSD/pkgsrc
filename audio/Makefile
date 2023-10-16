@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.677 2023/09/05 06:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.678 2023/10/16 14:06:00 ryoon Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -85,6 +85,7 @@ SUBDIR+=	fasttracker2
 SUBDIR+=	faudio
 SUBDIR+=	fdk-aac
 SUBDIR+=	festival
+SUBDIR+=	festival-freebsoft-utils
 SUBDIR+=	festlex-cmu
 SUBDIR+=	festlex-oald
 SUBDIR+=	festlex-ogi
