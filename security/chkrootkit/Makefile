@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2018/07/04 13:40:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/16 20:55:52 triaxx Exp $
 #
 
 DISTNAME=		chkrootkit-0.50
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
@@ -19,7 +19,7 @@ PROGRAMS=	chkdirs chklastlog chkproc chkwtmp ifpromisc strings-static \
 DOCDIR=		${PREFIX}/share/doc/chkrootkit
 
 SUBST_CLASSES+=		helper
-SUBST_STAGE.helper=	pre-configure
+SUBST_STAGE.helper=	pre-build
 SUBST_FILES.helper=	chkrootkit
 SUBST_SED.helper=	-e "s|./chklastlog|${PREFIX}/bin/chklastlog|g"
 SUBST_SED.helper+=	-e "s|./chkproc|${PREFIX}/bin/chkproc|g"
@@ -30,6 +30,12 @@ SUBST_SED.helper+=	-e "s|./strings-static|${PREFIX}/bin/strings-static|g"
 SUBST_SED.helper+=	-e "s|./chkdirs|${PREFIX}/bin/chkdirs|g"
 SUBST_SED.helper+=	-e "s|/bin/sh|${SH}|g"
 
+SUBST_CLASSES+=		var
+SUBST_STAGE.var=	pre-build
+SUBST_MESSAGE.var=	Fixing hard-coded VARBASE.
+SUBST_FILES.var=	chklastlog.c
+SUBST_VARS.var=		VARBASE
+
 .include "../../mk/compiler.mk"
 
 PLIST_VARS+=	wtmpx
@@ -38,6 +44,8 @@ PROGRAMS+=	check_wtmpx
 PLIST.wtmpx=	yes
 CFLAGS+=	-DSOLARIS2
 LDFLAGS+=	-lsocket
+.elif ${OPSYS} == "Darwin"
+MAKE_ENV+=	STATIC=
 .else
 MAKE_ENV+=	STATIC="-static"
 .endif
