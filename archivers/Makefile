@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2023/08/28 09:27:04 adam Exp $
+# $NetBSD: Makefile,v 1.203 2023/10/16 12:53:50 ryoon Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -75,6 +75,7 @@ SUBDIR+=	lzop
 SUBDIR+=	macutil
 SUBDIR+=	makeself
 SUBDIR+=	minizip
+SUBDIR+=	minizip-ng
 SUBDIR+=	mousetar
 SUBDIR+=	mscompress
 SUBDIR+=	nomarch
