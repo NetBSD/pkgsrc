@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5918 2023/10/16 19:27:16 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5919 2023/10/16 20:56:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8719,3 +8719,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/nodejs18 to 18.18.2 [adam 2023-10-16]
 	Updated graphics/libimagequant to 4.2.2 [adam 2023-10-16]
 	Updated graphics/py-Pillow to 10.1.0 [adam 2023-10-16]
+	Updated security/chkrootkit to 0.50nb2 [triaxx 2023-10-16]
