@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile,v 1.1 2023/10/16 12:55:56 ryoon Exp $
+
+* Support DESTDIR install.
+
+--- Makefile.orig	2022-09-27 00:28:46.000000000 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ LIBTOOL ?= libtool
+-LIBDIR ?= /usr/lib
++LIBDIR ?= ${PREFIX}/lib
+ CXX ?= g++
+ CXXFLAGS ?= -g -O3 -Wall -Wextra -Wshadow -Wconversion -Wcast-qual -Wformat=2
+ 
+@@ -12,7 +12,7 @@ libpystring.la: pystring.lo
+ 	$(LIBTOOL) --mode=link --tag=CXX $(CXX) -o $@ $< -rpath $(LIBDIR)
+ 
+ install: libpystring.la
+-	$(LIBTOOL) --mode=install install -c $< $(LIBDIR)/$<
++	$(LIBTOOL) --mode=install install -c $< ${DESTDIR}$(LIBDIR)/$<
+ 
+ clean:
+ 	$(RM) -fr pystring.lo pystring.o libpystring.la .libs
