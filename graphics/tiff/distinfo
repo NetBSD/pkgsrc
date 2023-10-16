@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.106 2023/08/17 10:20:39 nia Exp $
+$NetBSD: distinfo,v 1.107 2023/10/16 15:38:19 gdt Exp $
 
-BLAKE2s (tiff-4.5.1.tar.gz) = dab23619781a7f2ea39727f7bb80d6e97406644b3f9478bed64ab1f37ca06cce
-SHA512 (tiff-4.5.1.tar.gz) = 64ad2ae84f3cc67b9774d10cdeed41ab66cde9b50276dd4134318c963d26bea60de8c0b0297e77f47963bae163e0d28ed482fa8e809b1e0fb7b7c8a7f5a1cb9a
-Size (tiff-4.5.1.tar.gz) = 3785721 bytes
-SHA1 (patch-Makefile.in) = 7c3a6214da2d631df064893bba8809c357d856cf
+BLAKE2s (tiff-4.6.0.tar.gz) = 6bbdc12df52352509c6e5982c0afe737715443d42f1efc8990411deb7d3afe5f
+SHA512 (tiff-4.6.0.tar.gz) = 80a117780fe5e2519b5c6661efa90a8a1e4591eb6300068b611ff9887285641c0782d9835482f589d6d109c3be6ffab8831c3561bb40e2456258deb1e896f08e
+Size (tiff-4.6.0.tar.gz) = 3584534 bytes
 SHA1 (patch-configure) = 48c3f6103e35049e0bd4a5f32a508cd9439c1f3f

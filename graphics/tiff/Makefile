@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2023/09/13 11:13:42 gdt Exp $
+# $NetBSD: Makefile,v 1.161 2023/10/16 15:38:19 gdt Exp $
 
 # Please do not update to 4.6.0 before the branch; it withdraws a lot!
-VERSION_BASE=	4.5.1
+VERSION_BASE=	4.6.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc3
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
@@ -19,8 +19,10 @@ WRKSRC=		${WRKDIR}/tiff-${VERSION_BASE}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_LANGUAGES=		c99 c++
+USE_TOOLS=		gmake # Not documented by upstream
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
@@ -33,17 +35,11 @@ PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
 TEST_TARGET=		check
 
-post-extract:
-	cd ${WRKSRC} && \
-	${MV} -f VERSION VERSION.txt
-
 post-install:
 	cd ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
 		target=`${ECHO} $$file | sed "s/3tiff/3/"`; \
 		${MV} $$file $$target; \
 	done
-	cd ${DESTDIR}/${PREFIX}/share/doc/${PKGBASE} && \
-	${MV} -f VERSION.txt VERSION
 
 .include "options.mk"
 
