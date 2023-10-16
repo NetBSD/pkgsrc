@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5913 2023/10/16 14:59:45 prlw1 Exp $
+$NetBSD: CHANGES-2023,v 1.5914 2023/10/16 15:39:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8711,3 +8711,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/festival to 2.5.0nb5 [ryoon 2023-10-16]
 	Added audio/festival-freebsoft-utils version 0.10 [ryoon 2023-10-16]
 	Updated mail/exim to 4.96.2 [prlw1 2023-10-16]
+	Updated graphics/tiff to 4.6.0nb1 [gdt 2023-10-16]
