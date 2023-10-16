@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5915 2023/10/16 15:55:04 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5916 2023/10/16 19:03:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8712,3 +8712,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added audio/festival-freebsoft-utils version 0.10 [ryoon 2023-10-16]
 	Updated mail/exim to 4.96.2 [prlw1 2023-10-16]
 	Updated graphics/tiff to 4.6.0 [gdt 2023-10-16]
+	Updated archivers/innoextract to 1.9nb8 [triaxx 2023-10-16]
