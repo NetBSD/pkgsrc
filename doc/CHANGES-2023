@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5917 2023/10/16 19:18:37 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5918 2023/10/16 19:27:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8717,3 +8717,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/ngtcp2 to 1.0.0 [adam 2023-10-16]
 	Updated lang/nodejs to 20.8.1 [adam 2023-10-16]
 	Updated lang/nodejs18 to 18.18.2 [adam 2023-10-16]
+	Updated graphics/libimagequant to 4.2.2 [adam 2023-10-16]
+	Updated graphics/py-Pillow to 10.1.0 [adam 2023-10-16]
