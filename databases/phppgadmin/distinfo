@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:09:46 nia Exp $
+$NetBSD: distinfo,v 1.18 2023/10/16 13:02:26 hauke Exp $
 
 BLAKE2s (phpPgAdmin-7.13.0.tar.gz) = 190395d8201c4dbf7a1c169ce105fddf91d8964825da0780db7fb12b2cfe6425
 SHA512 (phpPgAdmin-7.13.0.tar.gz) = 744718b49cd3cb1aa23aea0c402076e1a911892c8b871bac9650e39bcf73c45853f6b24bf699ad3b9432f3e082362577ac899baa4e89f14a4da8cf2fb017fb19
 Size (phpPgAdmin-7.13.0.tar.gz) = 804431 bytes
+SHA1 (patch-all__db.php) = 6c66ec6e6dab3713c909c3e54e10a9e56f5a6d70
+SHA1 (patch-libraries_adodb_drivers_adodb-postgres64.inc.php) = c963b943fb755c7e0a42bc4ba088ac3bae5c1991
