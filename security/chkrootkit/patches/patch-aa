@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2014/12/08 14:04:57 mef Exp $
+$NetBSD: patch-aa,v 1.5 2023/10/16 20:55:52 triaxx Exp $
+
+Disable system independent variables.
 
 --- Makefile.orig	2014-05-06 18:56:43.000000000 +0900
 +++ Makefile	2014-12-08 22:30:07.000000000 +0900
