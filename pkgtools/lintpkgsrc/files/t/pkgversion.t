@@ -1,4 +1,4 @@
-# $NetBSD: pkgversion.t,v 1.12 2022/08/13 12:22:20 rillig Exp $
+# $NetBSD: pkgversion.t,v 1.13 2023/10/16 22:21:55 rillig Exp $
 #
 # Tests for parsing and comparing package versions, such as 1.0nb4.
 
@@ -14,7 +14,7 @@ require('../lintpkgsrc.pl');
 ok(pkgversion_cmp('3.4', '<', '3.4'), '');
 ok(pkgversion_cmp('3.4', '<=', '3.4'), 1);
 
-# See pkgtools/pkglint/files/pkgver/vercmp_test.go.
+# See pkgtools/pkglint, file pkgver/vercmp_test.go.
 my @split_version_tests = (
     [ '5.0', [ [ 5, 0, 0 ], 0 ] ],
     [ '5.0nb5', [ [ 5, 0, 0 ], 5 ] ],
@@ -44,7 +44,7 @@ foreach my $test (@split_version_tests) {
 	ok($actual_str, $expected_str);
 }
 
-# See pkgtools/pkglint/files/pkgver/vercmp_test.go.
+# See pkgtools/pkglint, file pkgver/vercmp_test.go.
 my @versions = (
     [ '0pre20160620' ],
     [ '0' ],
