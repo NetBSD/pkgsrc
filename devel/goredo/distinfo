@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2023/10/10 00:21:47 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2023/10/16 22:47:44 schmonz Exp $
 
-BLAKE2s (goredo-2.1.0.tar.zst) = d50ba5b77f6ab0c98bba44ac37c8be24b9e907bcb4b1df2dc224a2325cae5f15
-SHA512 (goredo-2.1.0.tar.zst) = e87f353f218e2348343c676c071eddd2d6466fe1c765c701c929a7ba5d147ba2e3d2336ce0d19d6ef78af44ade0af42d6623ddd71ff3196b61fc32dd0eb77ecc
-Size (goredo-2.1.0.tar.zst) = 465988 bytes
+BLAKE2s (goredo-2.2.0.tar.zst) = 191dfb48916b86dd4ae91b04c8e30aacf775296c3f5573486eb992625fdc962a
+SHA512 (goredo-2.2.0.tar.zst) = 8dce2c70f6b1381fc778bd1d50d6d628463fb9a4879b4514c817bab090e67f75f0f9e452addc0b674b8c4486f6bfd6f8d2aee147ea37441b68107c642c31d550
+Size (goredo-2.2.0.tar.zst) = 466130 bytes
 SHA1 (patch-main.go) = 3243e01dd2ebbf56e5c9a95607e276f2f971bb8c
