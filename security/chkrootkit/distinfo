@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:17:01 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/10/16 20:55:52 triaxx Exp $
 
 BLAKE2s (chkrootkit-0.50.tar.gz) = 01c0819ecea8e2e8b8513048e548fe231342b622ae7165a9ce3be578cab0cab3
 SHA512 (chkrootkit-0.50.tar.gz) = 9f26fd34e85b58b13dedc5f38a889ae258bb2c0f1ff40e99c149e23f93890e956f94204b1bb2241584454e99168c53b583f52777083454237f3ba343424dba1c
 Size (chkrootkit-0.50.tar.gz) = 38616 bytes
-SHA1 (patch-aa) = e047b8f102125c8bf3452943b90a72164ce6b1e1
-SHA1 (patch-ab) = 248f8bdd9dae2a8f81574346da32971600d8f4e4
-SHA1 (patch-ac) = fb0561e916d8b61e19636e301554c221adf115da
-SHA1 (patch-ad) = a24ebbbc726856cc1f6594d0e4c68afac6b77fc1
+SHA1 (patch-aa) = 7c33ce6296d280d8c970c0846cc36033179a0832
+SHA1 (patch-ab) = 189f68673366c55112f83c44f9c8769211301ea6
+SHA1 (patch-ac) = 724fe1ed2134fd5af70eef84cbe120cbf3573f6e
+SHA1 (patch-ad) = b27a601493e150ce20078f70ba003e9aa4934f66

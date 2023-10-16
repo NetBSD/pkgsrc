@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2014/12/08 14:04:57 mef Exp $
+$NetBSD: patch-ac,v 1.5 2023/10/16 20:55:52 triaxx Exp $
 
 limits.h is ISO C, unconditionally include it. Keep conditional for
 sys/syslimits.h though.
@@ -6,7 +6,7 @@ sys/syslimits.h though.
 
 --- chkdirs.c.orig	2006-01-19 23:40:21.000000000 +0000
 +++ chkdirs.c
-@@ -25,9 +25,8 @@
+@@ -27,9 +27,8 @@
  
  */
  
