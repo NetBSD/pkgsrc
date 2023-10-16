@@ -1,5 +1,5 @@
 #!@PERL5@
-# $NetBSD: lintpkgsrc.pl,v 1.129 2022/09/14 04:03:51 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.130 2023/10/16 22:16:55 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1267,7 +1267,7 @@ Prebuilt package options:		Makefile options:
 
 Misc:
   -E file : Export the internal pkgsrc database to file
-  -I file : Import the internal pkgsrc database to file (for use with -i)
+  -I file : Import the internal pkgsrc database from file (for use with -i)
   -g file : Generate 'pkgname pkgdir pkgver' map in file
   -r	  : Remove bad files (Without -m -o -p or -V implies all, can use -R)
 
