@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.161 2023/10/16 15:38:19 gdt Exp $
+# $NetBSD: Makefile,v 1.162 2023/10/16 15:54:35 wiz Exp $
 
 # Please do not update to 4.6.0 before the branch; it withdraws a lot!
 VERSION_BASE=	4.6.0
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc3
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
