@@ -1,0 +1,14 @@
+$NetBSD: patch-plugins_gdict_Makefile.am,v 1.3 2023/10/16 14:12:14 ryoon Exp $
+
+Use CXX for linking.
+
+--- plugins/gdict/Makefile.am.orig	2021-07-03 15:46:07.000000000 +0000
++++ plugins/gdict/Makefile.am
+@@ -21,6 +21,7 @@ gdict_la_LDFLAGS = \
+ 	-no-undefined
+ 
+ gdict_la_SOURCES = 
++nodist_EXTRA_gdict_la_SOURCES = dummy.cpp
+ 
+ EXTRA_DIST = \
+ 	plugin.m4
