@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5921 2023/10/16 23:12:59 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5922 2023/10/16 23:15:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8722,3 +8722,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/chkrootkit to 0.50nb2 [triaxx 2023-10-16]
 	Updated devel/goredo to 2.2.0 [schmonz 2023-10-16]
 	Updated x11/xfce4-terminal to 1.1.1 [gutteridge 2023-10-16]
+	Updated meta-pkgs/xfce4 to 4.18.1nb1 [gutteridge 2023-10-16]
