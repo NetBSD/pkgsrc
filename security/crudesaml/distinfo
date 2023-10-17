@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:17:02 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/10/17 16:10:17 manu Exp $
 
-BLAKE2s (crudesaml-1.10.tar.gz) = 898031fcf8f3cddec1001d3b52b8401f71245f29207f85ce7c3adb53b98d37d1
-SHA512 (crudesaml-1.10.tar.gz) = d57a450e00908d91563b26ac847de617a973083d5a66756bd20ffd3aaccd997ecfd2c48dd72425ea0d60014f0681357ce00b0715cd7bb7a4aeecf1a5e869d3c7
-Size (crudesaml-1.10.tar.gz) = 187238 bytes
+BLAKE2s (crudesaml-1.11.tar.gz) = 3692e713785ddfa07857c27bedd21e0db892bf0173c62042c4871167c76ef61c
+SHA512 (crudesaml-1.11.tar.gz) = 0a87ed1fc27d65883d40fa7cfc0a0beaccc13d7b238252f9b8d985c0b50c9816018f7ac8f635d2427498d7c5d9908773acf48f05d4ee40c0d20609bd5e6ea9ce
+Size (crudesaml-1.11.tar.gz) = 349029 bytes
