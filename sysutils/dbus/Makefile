@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2023/09/03 18:31:52 pin Exp $
+# $NetBSD: Makefile,v 1.139 2023/10/17 22:10:01 wiz Exp $
 
 DISTNAME=	dbus-1.14.10
 CATEGORIES=	sysutils
@@ -30,10 +30,6 @@ SMF_METHODS=	dbus
 SMF_NAME=	dbus
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${INIT_SYSTEM} == "rc.d"
-MESSAGE_SRC+=	MESSAGE.rcd
-.endif
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
