@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.4 2023/10/16 20:55:52 triaxx Exp $
+$NetBSD: patch-ad,v 1.5 2023/10/17 19:24:04 triaxx Exp $
 
 - Add NetBSD to the list of OS's
 - Handle a false positive for NetBSD's netstat
 
 --- chkrootkit.orig	2009-07-30 14:10:54.000000000 +0000
 +++ chkrootkit
-@@ -512,7 +512,7 @@ ${ROOTDIR}/usr/include/syslogs.h ${ROOTD
+@@ -528,7 +528,7 @@ ${ROOTDIR}/usr/include/syslogs.h ${ROOTD
  
  
         ### OpenBSD rootkit v1
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.4 2023/10/16 20:55:52 triaxx Exp $
            then
            expertmode_output "${find} ${ROOTDIR}usr/lib/security"
         fi
-@@ -937,7 +937,7 @@ ${find} ${ROOTDIR}usr/sbin -name in.slog
+@@ -1010,7 +1010,7 @@ ${find} ${ROOTDIR}usr/sbin -name in.slog
     fi
  
     ### OpenBSD rootkit v1
@@ -23,7 +23,7 @@ $NetBSD: patch-ad,v 1.4 2023/10/16 20:55:52 triaxx Exp $
        files=""
        if [ "${QUIET}" != "t" ];then printn "Searching for OBSD rk v1... "; fi
        files=`${find} ${ROOTDIR}usr/lib/security 2>/dev/null`
-@@ -1599,7 +1599,13 @@
+@@ -1876,7 +1876,13 @@
  
  chk_netstat () {
      STATUS=${NOT_INFECTED}

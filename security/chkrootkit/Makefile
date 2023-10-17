@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/10/16 20:55:52 triaxx Exp $
-#
+# $NetBSD: Makefile,v 1.27 2023/10/17 19:24:04 triaxx Exp $
 
-DISTNAME=		chkrootkit-0.50
-PKGREVISION=		2
+DISTNAME=		chkrootkit-0.58b
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
+MASTER_SITES=		ftp://ftp.chkrootkit.org/pub/seg/pac/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.chkrootkit.org/
