@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5929 2023/10/17 16:10:16 manu Exp $
+$NetBSD: CHANGES-2023,v 1.5930 2023/10/17 19:24:34 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8734,3 +8734,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.4 [taca 2023-10-17]
 	Updated textproc/py-cmudict to 1.0.15 [gutteridge 2023-10-17]
 	Updated security/crudesaml to 1.11 [manu 2023-10-17]
+	Updated security/chkrootkit to 0.58b [triaxx 2023-10-17]
