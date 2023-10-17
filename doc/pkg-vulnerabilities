@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.48 2023/10/16 10:28:51 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.49 2023/10/17 11:44:02 prlw1 Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25369,9 +25369,9 @@ libvpx<1.13.0nb1	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-5217
 exim<4.96.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-42114
 exim<4.96.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42115
 exim<4.96.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42116
-exim-[0-9]*	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42117
+exim<4.96.2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42117
 libspf2<1.2.11nb2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42118
-exim-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-42119
+exim<4.96.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-42119
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40474
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40475
 gst-plugins1-bad<1.22.6	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-40476
