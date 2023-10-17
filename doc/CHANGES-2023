@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5923 2023/10/17 02:17:04 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.5924 2023/10/17 10:57:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8724,3 +8724,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xfce4-terminal to 1.1.1 [gutteridge 2023-10-16]
 	Updated meta-pkgs/xfce4 to 4.18.1nb1 [gutteridge 2023-10-16]
 	Updated devel/libatomic to 13.2.0 [gutteridge 2023-10-17]
+	Updated shells/oh-my-posh to 18.14.0 [pin 2023-10-17]
