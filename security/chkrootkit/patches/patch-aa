@@ -1,19 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2023/10/16 20:55:52 triaxx Exp $
+$NetBSD: patch-aa,v 1.6 2023/10/17 19:24:04 triaxx Exp $
 
-Disable system independent variables.
+Remove environment variables which define non-portable programs, macros or options.
 
---- Makefile.orig	2014-05-06 18:56:43.000000000 +0900
-+++ Makefile	2014-12-08 22:30:07.000000000 +0900
-@@ -3,9 +3,9 @@
+--- Makefile.orig	2023-02-23 15:58:45.000000000 +0000
++++ Makefile
+@@ -3,10 +3,6 @@
  # (C) 1997-2007 Nelson Murilo, Pangeia Informatica, AMS Foundation and others.
  #
  
--CC       = cc
--CFLAGS	 = -DHAVE_LASTLOG_H
+-CC       ?= cc
+-CFLAGS	 += -DHAVE_LASTLOG_H
 -STATIC   = -static
-+#CC       = cc
-+#CFLAGS	 = -DHAVE_LASTLOG_H
-+#STATIC   = -static
- 
+-
  ###
  ### Solaris 2.x
+ ###
