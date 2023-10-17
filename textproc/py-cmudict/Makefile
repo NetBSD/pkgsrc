@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/03/30 15:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/17 16:03:31 gutteridge Exp $
 
-DISTNAME=	cmudict-1.0.12
+DISTNAME=	cmudict-1.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
@@ -9,6 +9,8 @@ MAINTAINER=	gutteridge@NetBSD.org
 HOMEPAGE=	https://github.com/prosegrinder/python-cmudict
 COMMENT=	Versioned Python wrapper package for cmudict
 LICENSE=	gnu-gpl-v3
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
@@ -25,5 +27,5 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metada
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
