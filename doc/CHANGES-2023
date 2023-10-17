@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5925 2023/10/17 11:00:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5926 2023/10/17 12:48:37 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8726,3 +8726,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libatomic to 13.2.0 [gutteridge 2023-10-17]
 	Updated shells/oh-my-posh to 18.14.0 [pin 2023-10-17]
 	Updated devel/cargo-modules to 0.10.0 [pin 2023-10-17]
+	Removed sysutils/xenkernel413 [bouyer 2023-10-17]
+	Removed sysutils/xentools413 [bouyer 2023-10-17]
