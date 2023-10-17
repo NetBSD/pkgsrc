@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5927 2023/10/17 15:48:32 taca Exp $
+$NetBSD: CHANGES-2023,v 1.5928 2023/10/17 16:03:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8732,3 +8732,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/roundcube-plugin-enigma to 1.6.4 [taca 2023-10-17]
 	Updated mail/roundcube-plugin-password to 1.6.4 [taca 2023-10-17]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.4 [taca 2023-10-17]
+	Updated textproc/py-cmudict to 1.0.15 [gutteridge 2023-10-17]
