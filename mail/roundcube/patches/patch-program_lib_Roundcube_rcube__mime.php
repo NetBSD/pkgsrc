@@ -1,11 +1,11 @@
-$NetBSD: patch-program_lib_Roundcube_rcube__mime.php,v 1.5 2022/08/19 13:09:38 taca Exp $
+$NetBSD: patch-program_lib_Roundcube_rcube__mime.php,v 1.6 2023/10/17 15:47:09 taca Exp $
 
 Fix path to /etc/.
 
---- program/lib/Roundcube/rcube_mime.php.orig	2018-04-11 11:06:18.000000000 +0000
+--- program/lib/Roundcube/rcube_mime.php.orig	2023-10-16 09:23:06.000000000 +0000
 +++ program/lib/Roundcube/rcube_mime.php
-@@ -790,12 +790,12 @@ class rcube_mime
-             $file_paths[] = 'C:/xampp/apache/conf/mime.types.';
+@@ -835,12 +835,12 @@ class rcube_mime
+             $file_paths[] = 'C:/xampp/apache/conf/mime.types';
          }
          else {
 -            $file_paths[] = '/etc/mime.types';
