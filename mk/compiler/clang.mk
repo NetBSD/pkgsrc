@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.41 2023/07/29 17:55:47 nia Exp $
+# $NetBSD: clang.mk,v 1.42 2023/10/18 08:48:51 jperkin Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -39,13 +39,19 @@ CPPPATH=		${CLANGBASE}/bin/clang-cpp
 PKG_CPP:=		${CPPPATH}
 .endif
 
-.if exists(${CCPATH})
-CC_VERSION_STRING!=	${CCPATH} -v 2>&1
-CC_VERSION!=		${CCPATH} --version 2>&1 | ${SED} -n "s/^.* version /clang-/p"
-.else
-CC_VERSION_STRING?=	${CC_VERSION}
-CC_VERSION?=		clang
+.if !defined(CC_VERSION)
+.  if exists(${CCPATH})
+CLANG_VERSION!=		${CCPATH} -dumpversion 2>&1 || ${ECHO} 0
+.  else
+CLANG_VERSION=		0
+.  endif
+CC_VERSION=		clang-${CLANG_VERSION}
 .endif
+
+#
+# TODO: CC_VERSION_STRING is obsolete and should be removed at some point.
+#
+CC_VERSION_STRING=	${CC_VERSION}
 
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
