@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5934 2023/10/18 09:40:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5935 2023/10/18 13:34:30 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8746,3 +8746,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-anyio to 4.0.0 [adam 2023-10-18]
 	Updated lang/py-mypy to 1.6.1 [adam 2023-10-18]
 	Updated databases/redis to 7.2.2 [adam 2023-10-18]
+	Updated biology/bowtie2 to 2.5.2 [bacon 2023-10-18]
