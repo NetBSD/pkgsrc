@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5931 2023/10/18 07:23:54 pin Exp $
+$NetBSD: CHANGES-2023,v 1.5932 2023/10/18 08:05:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8736,3 +8736,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/crudesaml to 1.11 [manu 2023-10-17]
 	Updated security/chkrootkit to 0.58b [triaxx 2023-10-17]
 	Updated shells/nushell to 0.86.0 [pin 2023-10-18]
+	Updated www/py-urllib3 to 2.0.7 [adam 2023-10-18]
+	Updated textproc/py-black to 23.10.0 [adam 2023-10-18]
+	Updated net/py-unearth to 0.11.2 [adam 2023-10-18]
+	Updated graphics/py-pillow_heif to 0.13.1 [adam 2023-10-18]
