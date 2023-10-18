@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5933 2023/10/18 08:59:02 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5934 2023/10/18 09:40:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8744,3 +8744,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/py-psutil to 5.9.6 [adam 2023-10-18]
 	Updated devel/py-uvloop to 0.18.0 [adam 2023-10-18]
 	Updated devel/py-anyio to 4.0.0 [adam 2023-10-18]
+	Updated lang/py-mypy to 1.6.1 [adam 2023-10-18]
+	Updated databases/redis to 7.2.2 [adam 2023-10-18]
