@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/24 20:06:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/18 08:05:31 adam Exp $
 
-DISTNAME=	pillow_heif-0.13.0
+DISTNAME=	pillow_heif-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
@@ -18,7 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.12.0
 .include "../../graphics/libheif/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libaom+=	libaom>=3.3.0
+BUILDLINK_API_DEPENDS.libaom+=	libaom>=3.6.1
 .include "../../multimedia/libaom/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libde265+=	libde265>=1.0.8
 .include "../../multimedia/libde265/buildlink3.mk"
