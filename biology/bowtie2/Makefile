@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/18 13:34:23 bacon Exp $
 
-DISTNAME=	bowtie2-2.4.4
-PKGREVISION=	4
+DISTNAME=	bowtie2-2.5.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
