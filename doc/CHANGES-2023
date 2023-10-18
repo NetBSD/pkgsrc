@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5936 2023/10/18 15:41:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5937 2023/10/18 17:28:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8749,3 +8749,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/bowtie2 to 2.5.2 [bacon 2023-10-18]
 	Updated security/pcsc-tools to 1.7.0 [adam 2023-10-18]
 	Updated devel/py-test-datadir to 1.5.0 [adam 2023-10-18]
+	Updated graphics/libjpeg-turbo to 3.0.1 [adam 2023-10-18]
+	Updated emulators/qemu to 8.1.2 [adam 2023-10-18]
