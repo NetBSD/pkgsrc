@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/29 17:58:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/18 08:58:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -18,8 +18,6 @@ ${PYSITELIB}/anyio/_backends/_trio.py
 ${PYSITELIB}/anyio/_backends/_trio.pyc
 ${PYSITELIB}/anyio/_core/__init__.py
 ${PYSITELIB}/anyio/_core/__init__.pyc
-${PYSITELIB}/anyio/_core/_compat.py
-${PYSITELIB}/anyio/_core/_compat.pyc
 ${PYSITELIB}/anyio/_core/_eventloop.py
 ${PYSITELIB}/anyio/_core/_eventloop.pyc
 ${PYSITELIB}/anyio/_core/_exceptions.py
@@ -46,6 +44,8 @@ ${PYSITELIB}/anyio/_core/_typedattr.py
 ${PYSITELIB}/anyio/_core/_typedattr.pyc
 ${PYSITELIB}/anyio/abc/__init__.py
 ${PYSITELIB}/anyio/abc/__init__.pyc
+${PYSITELIB}/anyio/abc/_eventloop.py
+${PYSITELIB}/anyio/abc/_eventloop.pyc
 ${PYSITELIB}/anyio/abc/_resources.py
 ${PYSITELIB}/anyio/abc/_resources.pyc
 ${PYSITELIB}/anyio/abc/_sockets.py
