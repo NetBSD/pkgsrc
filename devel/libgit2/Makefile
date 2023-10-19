@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2023/08/31 12:00:09 pin Exp $
+# $NetBSD: Makefile,v 1.71 2023/10/19 07:19:44 wiz Exp $
 
-DISTNAME=	libgit2-1.6.4
-# Do not update before Q3-freeze end.
-# It breaks all Rust packages depending on git2-0.17.0/libgit2-sys-0.15.1+1.6.4 crates
-PKGREVISION=	2
+DISTNAME=	libgit2-1.7.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,6 +20,8 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+# as of 1.7.1, 2 tests fail (with 2 and 1 subtest each)
+# https://github.com/libgit2/libgit2/issues/6647
 do-test:
 	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ctest
 
