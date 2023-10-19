@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23475 2023/10/19 15:07:46 wiz Exp $
+$NetBSD: TODO,v 1.23476 2023/10/19 15:17:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o boolean-7.1
 	o bos-2.5
 	o botan-3.0.0
-	o botan3-3.2.0
 	o bottlerocket-0.05b3
 	o bugzilla3-3.6.13
 	o byobu-5.133
@@ -584,7 +583,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
-	o dovecot2-pigeonhole-0.5.21
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
