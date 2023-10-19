@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.133 2023/08/24 12:02:49 wiz Exp $
+$NetBSD: distinfo,v 1.134 2023/10/19 15:35:15 wiz Exp $
 
-BLAKE2s (harfbuzz-8.1.1.tar.xz) = 2505b725812a5a156c74555ab9d90c1ce73bbf417cc6b2bf55dae733d8e28a44
-SHA512 (harfbuzz-8.1.1.tar.xz) = 74416c6cf78751721112fe551a47600b9b85d6865f38b155c0e432e757a175ac127baeeaa16bfe6d62510e00f9def8950f0c836545d1847a924b478c51e43b0c
-Size (harfbuzz-8.1.1.tar.xz) = 18820088 bytes
+BLAKE2s (harfbuzz-8.2.1.tar.xz) = d7d2b03fed3589a6f463c6d60a3012fe551ebba1bae841f8779b6aa241707019
+SHA512 (harfbuzz-8.2.1.tar.xz) = 8f4aeb5528cb4f74facda89eb9828ccf491d577450ccdd71c331c943edf56303fa73a077d6b620687ae1ba21564aa02e202dbae98b77ac0947bc45e044c05f67
+Size (harfbuzz-8.2.1.tar.xz) = 18889168 bytes
 SHA1 (patch-meson.build) = ad46bbe61df28b71e7619847920935a398e16fd1
 SHA1 (patch-src_meson.build) = 5b46f9933d5dea1f842fccf63eb92faae1f7c90f
