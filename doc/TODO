@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23450 2023/10/19 12:55:05 wiz Exp $
+$NetBSD: TODO,v 1.23451 2023/10/19 12:57:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1315,7 +1315,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
-	o restic-rest-server-0.12.1
 	o restish-0.19.0
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
