@@ -1,11 +1,11 @@
-$NetBSD: patch-sigal_image.py,v 1.1 2023/03/08 21:05:58 wiz Exp $
+$NetBSD: patch-src_sigal_image.py,v 1.1 2023/10/19 15:39:44 wiz Exp $
 
 Add HEIF support using pillow_heif, if it's installed.
 https://github.com/saimn/sigal/issues/436
 
---- sigal/image.py.orig	2022-04-08 18:19:56.000000000 +0000
-+++ sigal/image.py
-@@ -56,6 +56,11 @@ except ImportError:
+--- src/sigal/image.py.orig	2023-09-29 07:03:55.000000000 +0000
++++ src/sigal/image.py
+@@ -49,6 +49,11 @@ from . import signals, utils
  # Force loading of truncated files
  ImageFile.LOAD_TRUNCATED_IMAGES = True
  
@@ -16,4 +16,4 @@ https://github.com/saimn/sigal/issues/436
 +
  
  def _has_exif_tags(img):
-     return hasattr(img, 'info') and 'exif' in img.info
+     return hasattr(img, "info") and "exif" in img.info
