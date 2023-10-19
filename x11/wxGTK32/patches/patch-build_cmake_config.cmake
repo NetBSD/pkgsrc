@@ -1,10 +1,10 @@
-$NetBSD: patch-build_cmake_config.cmake,v 1.2 2022/08/10 05:19:57 dbj Exp $
+$NetBSD: patch-build_cmake_config.cmake,v 1.3 2023/10/19 14:40:00 wiz Exp $
 
 Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 
---- build/cmake/config.cmake.orig	2022-07-06 14:19:50.000000000 +0000
+--- build/cmake/config.cmake.orig	2023-10-07 14:28:50.000000000 +0000
 +++ build/cmake/config.cmake
-@@ -83,11 +83,13 @@ endfunction()
+@@ -107,11 +107,13 @@ endfunction()
  
  function(wx_write_config)
  
@@ -17,5 +17,5 @@ Respect ${CMAKE_INSTALL_BINDIR} instead of assuming bin
 -    set(bindir "\${exec_prefix}/bin")
 +    set(bindir "\${exec_prefix}/${CMAKE_INSTALL_BINDIR}")
  
-     find_program(EGREP egrep)
-     mark_as_advanced(EGREP)
+     if(wxBUILD_MONOLITHIC)
+         set(MONOLITHIC 1)
