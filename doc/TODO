@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23456 2023/10/19 13:03:04 wiz Exp $
+$NetBSD: TODO,v 1.23457 2023/10/19 13:06:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1546,7 +1546,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xjadeo-0.8.10
 	o xjman-0.7
 	o xkbset-0.6
-	o xkeyboard-config-2.40
 	o xli-2006.11.10
 	o xmake-2.0.5
 	o xmcd-3.3.2
