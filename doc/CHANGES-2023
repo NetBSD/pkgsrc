@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5960 2023/10/19 14:22:15 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5961 2023/10/19 14:24:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8774,3 +8774,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/caddy to 2.7.5 [bsiegert 2023-10-19]
 	Added sysutils/runit version 2.1.2 [bsiegert 2023-10-19]
 	Updated www/apache24 to 2.4.58 [wiz 2023-10-19]
+	Updated devel/tevent to 0.15.0 [wiz 2023-10-19]
