@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5985 2023/10/19 18:35:48 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5986 2023/10/19 19:06:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8800,3 +8800,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.7.2 [tsutsui 2023-10-19]
 	Removed devel/go-logrus [bsiegert 2023-10-19]
 	Removed net/go-net [bsiegert 2023-10-19]
+	Updated net/sacc to 1.07 [leot 2023-10-19]
