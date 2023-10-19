@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5984 2023/10/19 16:00:16 tsutsui Exp $
+$NetBSD: CHANGES-2023,v 1.5985 2023/10/19 18:35:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8798,3 +8798,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-sigal to 2.4 [wiz 2023-10-19]
 	Updated editors/py-jedi to 0.19.1 [wiz 2023-10-19]
 	Updated net/sayaka to 3.7.2 [tsutsui 2023-10-19]
+	Removed devel/go-logrus [bsiegert 2023-10-19]
+	Removed net/go-net [bsiegert 2023-10-19]
