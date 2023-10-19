@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/04/23 09:19:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/10/19 15:31:42 wiz Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -33,7 +33,7 @@ include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.10
-lib/libgs.so.10.01
+lib/libgs.so.10.02
 man/man1/dvipdf.1
 man/man1/eps2eps.1
 man/man1/gs.1
@@ -59,7 +59,7 @@ man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/COPYING
 share/doc/ghostscript/${PKGVERSION}/GS9_Color_Management.pdf
 share/doc/ghostscript/${PKGVERSION}/Ghostscript.pdf
-share/doc/ghostscript/${PKGVERSION}/News.htm
+share/doc/ghostscript/${PKGVERSION}/News.html
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFont/ArtifexBullet
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
