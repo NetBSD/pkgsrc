@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/24 06:33:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/19 15:17:20 wiz Exp $
 bin/botan3
 include/botan-3/botan/aead.h
 include/botan-3/botan/argon2.h
@@ -136,6 +136,7 @@ include/botan-3/botan/tls_ciphersuite.h
 include/botan-3/botan/tls_client.h
 include/botan-3/botan/tls_exceptn.h
 include/botan-3/botan/tls_extensions.h
+include/botan-3/botan/tls_external_psk.h
 include/botan-3/botan/tls_handshake_msg.h
 include/botan-3/botan/tls_magic.h
 include/botan-3/botan/tls_messages.h
@@ -167,12 +168,13 @@ include/botan-3/botan/x509path.h
 include/botan-3/botan/x509self.h
 include/botan-3/botan/xmss.h
 include/botan-3/botan/xmss_parameters.h
+include/botan-3/botan/xof.h
 include/botan-3/botan/zfec.h
 include/botan-3/botan/zlib.h
 lib/libbotan-3.a
 lib/libbotan-3.so
-lib/libbotan-3.so.0
-lib/libbotan-3.so.0.1.1
+lib/libbotan-3.so.2
+lib/libbotan-3.so.2.2.0
 lib/pkgconfig/botan-3.pc
 share/doc/${PKGNAME}/authors.txt
 share/doc/${PKGNAME}/handbook/abi.rst
