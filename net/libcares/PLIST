@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/05/22 13:00:41 wiz Exp $
-bin/acountry
+@comment $NetBSD: PLIST,v 1.19 2023/10/19 14:49:23 wiz Exp $
 bin/adig
 bin/ahost
 include/ares.h
@@ -14,10 +13,9 @@ lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.6.1
+lib/libcares.so.2.7.1
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
-man/man1/acountry.1
 man/man1/adig.1
 man/man1/ahost.1
 man/man3/ares_cancel.3
