@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5967 2023/10/19 14:46:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5968 2023/10/19 14:47:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8781,3 +8781,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/neomutt to 20231006 [wiz 2023-10-19]
 	Updated textproc/oniguruma to 6.9.9 [wiz 2023-10-19]
 	Updated graphics/jbig2dec to 0.20 [wiz 2023-10-19]
+	Updated print/libpaper to 2.1.2 [wiz 2023-10-19]
