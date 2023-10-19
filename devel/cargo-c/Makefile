@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/12 05:35:13 adam Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/19 11:08:09 tnn Exp $
 
 DISTNAME=	cargo-c-0.9.27
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
