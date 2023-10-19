@@ -1,0 +1,14 @@
+The main goal of the esbuild bundler project is to bring about a new era
+of build tool performance, and create an easy-to-use modern bundler
+along the way.
+
+Major features:
+
+* Extreme speed without needing a cache
+* ES6 and CommonJS modules
+* Tree shaking of ES6 modules
+* An API for JavaScript and Go
+* TypeScript and JSX syntax
+* Source maps
+* Minification
+* Plugins
