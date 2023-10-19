@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/15 12:04:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/19 12:57:29 wiz Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
-PKGNAME=	restic-reset-server-0.12.0
-PKGREVISION=	1
+DISTNAME=	rest-server-0.12.1
+PKGNAME=	restic-${DISTNAME}
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
 GITHUB_PROJECT=	rest-server
@@ -18,7 +17,6 @@ EXTRACT_USING=	bsdtar
 GO_BUILD_PATTERN=	./cmd/rest-server
 
 .include "go-modules.mk"
-
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
