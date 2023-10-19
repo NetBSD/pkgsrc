@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5971 2023/10/19 14:52:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5972 2023/10/19 14:54:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8785,3 +8785,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/libcares to 1.20.1 [wiz 2023-10-19]
 	Updated time/libical to 3.0.17 [wiz 2023-10-19]
 	Updated devel/libdeflate to 1.19 [wiz 2023-10-19]
+	Updated textproc/enchant2 to 2.6.1 [wiz 2023-10-19]
