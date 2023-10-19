@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5943 2023/10/19 11:30:57 roy Exp $
+$NetBSD: CHANGES-2023,v 1.5944 2023/10/19 11:38:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8757,3 +8757,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/esbuild version 0.19.5 [bsiegert 2023-10-19]
 	Updated filesystems/kubo to 0.23.0 [bsiegert 2023-10-19]
 	Updated net/dhcpcd to 10.0.4 [roy 2023-10-19]
+	Updated net/ipget to 0.10.0 [bsiegert 2023-10-19]
