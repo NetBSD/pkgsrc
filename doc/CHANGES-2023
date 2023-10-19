@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5961 2023/10/19 14:24:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5962 2023/10/19 14:28:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8775,3 +8775,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/runit version 2.1.2 [bsiegert 2023-10-19]
 	Updated www/apache24 to 2.4.58 [wiz 2023-10-19]
 	Updated devel/tevent to 0.15.0 [wiz 2023-10-19]
+	Updated www/restish to 0.19.0 [wiz 2023-10-19]
