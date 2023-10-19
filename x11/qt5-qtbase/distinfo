@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2023/10/07 20:00:32 adam Exp $
+$NetBSD: distinfo,v 1.80 2023/10/19 23:13:18 ryoon Exp $
 
 BLAKE2s (qtbase-everywhere-opensource-src-5.15.11.tar.xz) = e53cb08cf8a1b512e4fb1989a25893d1556383b82c37cc64180e3302446c69a0
 SHA512 (qtbase-everywhere-opensource-src-5.15.11.tar.xz) = 4136092eec7bdceba661eee0187b7952ed6ba819148295979c0fd0392c17b0178165fa20136bdf460509a815c96f43892403294ba6e5322c54c51459c358fb7f
@@ -23,6 +23,7 @@ SHA1 (patch-src_network_configure.json) = a7d54e656104f05919b42f525763306b4bf033
 SHA1 (patch-src_network_kernel_qnetworkinterface__unix.cpp) = 2c5569eb2ba19999eb62e4fdb54f347c88f6e6a5
 SHA1 (patch-src_network_kernel_qnetworkproxy__libproxy.cpp) = 4cb3a47d1fdd2d165b5d884192fff74e5ec8d5c1
 SHA1 (patch-src_openglextensions_openglextensions.pro) = 575d31c3a48f36d82dc1f342078e636f4c25e33f
+SHA1 (patch-src_platformsupport_input_xkbcommon_qxkbcommon.cpp) = c77df4f77817c1c2c6670dc6e0799b9fd55bea06
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
 SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
 SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection__basic.h) = e369001cba31e865adf010ab714ad132b96c1bef
