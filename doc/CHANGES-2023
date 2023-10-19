@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5957 2023/10/19 13:13:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5958 2023/10/19 13:44:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8771,3 +8771,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xkeyboard-config to 2.40 [wiz 2023-10-19]
 	Updated devel/tomlplusplus to 3.4.0 [wiz 2023-10-19]
 	Updated editors/xournalpp to 1.2.2 [wiz 2023-10-19]
+	Updated www/caddy to 2.7.5 [bsiegert 2023-10-19]
