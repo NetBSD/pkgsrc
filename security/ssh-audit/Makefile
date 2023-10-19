@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/19 12:58:34 wiz Exp $
 
-DISTNAME=	ssh-audit-2.9.0
-PKGREVISION=	1
+DISTNAME=	ssh-audit-3.0.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jtesta/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
