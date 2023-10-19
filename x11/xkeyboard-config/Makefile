@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2023/08/14 05:25:36 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2023/10/19 13:06:07 wiz Exp $
 
-DISTNAME=		xkeyboard-config-2.39
-PKGREVISION=		1
+DISTNAME=		xkeyboard-config-2.40
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.xz
@@ -11,6 +10,8 @@ HOMEPAGE=		https://www.freedesktop.org/wiki/Software/XKeyboardConfig
 COMMENT=		X Keyboard Configuration Database
 
 TOOL_DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
+# generated man page is rather useless
+#TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 CONFLICTS+=		xkbdata-[0-9]*
 
