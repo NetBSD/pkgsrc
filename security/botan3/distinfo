@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2023/08/24 06:33:10 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/10/19 15:17:20 wiz Exp $
 
-BLAKE2s (Botan-3.1.1.tar.xz) = 303e3b1357c300f7c648b9ed5e642b6d9ea0bd8e93f2866fa88ddbc4d6cfba50
-SHA512 (Botan-3.1.1.tar.xz) = ed6bdadb910b0775245648140212953ed364aa26107f851e39ac5cb664d7f476c519a22cdad41f0e520796c4ebe453c56ca68a2178e39f815d445e9979333795
-Size (Botan-3.1.1.tar.xz) = 8800368 bytes
+BLAKE2s (Botan-3.2.0.tar.xz) = cdcb67817ff32606c6649d936af56c0e997d5eed93eb4a2460372fbfa513d88e
+SHA512 (Botan-3.2.0.tar.xz) = 526cf71144584fef6e73f14f6aa1e2a7b03a92a3e51436287764bb61e742a94e02926bcc2aab038f08ef2169cb511152c8ecd71d51e06deb4875dc676875c2d9
+Size (Botan-3.2.0.tar.xz) = 8998204 bytes
+SHA1 (patch-src_lib_utils_os__utils.cpp) = 057756a0a44778ad2fe87e054a1e1d02f9fe8849
 SHA1 (patch-src_scripts_install.py) = c8ac2a6315e0e53a0292447e8e6b967572de9d24
