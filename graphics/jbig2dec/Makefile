@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/08/14 05:24:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2023/10/19 14:46:00 wiz Exp $
 
-DISTNAME=	jbig2dec-0.19
-PKGREVISION=	2
+DISTNAME=	jbig2dec-0.20
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/}
 

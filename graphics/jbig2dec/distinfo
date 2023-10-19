@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:46:20 nia Exp $
+$NetBSD: distinfo,v 1.15 2023/10/19 14:46:00 wiz Exp $
 
-BLAKE2s (jbig2dec-0.19.tar.gz) = 4467a6c608882804fa52270f670bea746308786b114895b6e79b6dd9f8f8ccae
-SHA512 (jbig2dec-0.19.tar.gz) = d5a27951cc9c06c184f454e258e81b6e4d5aa2742a4da821522b9a42ecc78e7e1b78058dabc23821618e62d62d8832011f16b5ef2d66beac463da6b809fd02af
-Size (jbig2dec-0.19.tar.gz) = 149134 bytes
+BLAKE2s (jbig2dec-0.20.tar.gz) = 1e06a46c7e4586385f4f96a6e8edb0f1f45c2c0630b287211ec388e4d79d1b4a
+SHA512 (jbig2dec-0.20.tar.gz) = 8b8a28b93b23e4284ca229e6c8935fd161ce5c597f7470a46ec06a3241d0ac23cf921aecdd4e0c1bd3c904591409054236f2ce25b6d8ae40db742559c7f4dbe9
+Size (jbig2dec-0.20.tar.gz) = 149782 bytes
