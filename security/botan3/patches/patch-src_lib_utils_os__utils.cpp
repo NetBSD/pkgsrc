@@ -1,4 +1,7 @@
-$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.1 2023/10/19 15:17:20 wiz Exp $
+$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.2 2023/10/19 15:21:40 wiz Exp $
+
+Fix build on NetBSD.
+https://github.com/randombit/botan/pull/3767
 
 --- src/lib/utils/os_utils.cpp.orig	2023-10-09 07:33:53.000000000 +0000
 +++ src/lib/utils/os_utils.cpp
