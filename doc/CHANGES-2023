@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5944 2023/10/19 11:38:30 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.5945 2023/10/19 12:01:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8758,3 +8758,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated filesystems/kubo to 0.23.0 [bsiegert 2023-10-19]
 	Updated net/dhcpcd to 10.0.4 [roy 2023-10-19]
 	Updated net/ipget to 0.10.0 [bsiegert 2023-10-19]
+	Updated editors/tp-note to 1.22.8 [pin 2023-10-19]
