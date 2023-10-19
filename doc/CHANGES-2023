@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5948 2023/10/19 12:55:05 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5949 2023/10/19 12:57:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8762,3 +8762,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-cliff to 1.3.1nb1 [pin 2023-10-19]
 	Updated security/openssh to 9.5p1 [wiz 2023-10-19]
 	Updated audio/ymuse to 0.22 [wiz 2023-10-19]
+	Updated sysutils/restic-rest-server to 0.12.1 [wiz 2023-10-19]
