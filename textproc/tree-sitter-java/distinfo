@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/18 16:24:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/10/19 13:00:04 wiz Exp $
 
-BLAKE2s (tree-sitter-java-0.20.1.tar.gz) = fcb87a7abd6047e0231137e6c6d83ce328084506b4eb426e9eb59538ce6dc56e
-SHA512 (tree-sitter-java-0.20.1.tar.gz) = 07179852060198989c980462e2006083440895f37feb29b639d3c8ce8cb6a84a1b826e11d136821d398c34b0f989a23fce2ddf4ef0391b6f1ebb611b3004d1fc
-Size (tree-sitter-java-0.20.1.tar.gz) = 176841 bytes
+BLAKE2s (tree-sitter-java-0.20.2.tar.gz) = b4152e8fc35914d13a7f8c504a749cf2684b74355d9fe2722c51b9a2d684f3b0
+SHA512 (tree-sitter-java-0.20.2.tar.gz) = 188b4d4c5aad6367ab25e5bbc3b7f56fe1b6108ee1dbe072d71a7376e52793364fad004e2f79d1aa6e18176d5642afef982a40b8da127d4252f2ea10d4bf874c
+Size (tree-sitter-java-0.20.2.tar.gz) = 200727 bytes
