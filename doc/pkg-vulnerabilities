@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.50 2023/10/19 08:56:37 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.51 2023/10/19 13:30:11 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25744,3 +25744,4 @@ samba4>=4.18<4.18.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-
 apache-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 hs-http2<4.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 varnish-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
+apache<2.4.58	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-31122
