@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1077 2023/10/17 12:47:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.1078 2023/10/19 13:54:26 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -670,6 +670,7 @@ SUBDIR+=	ruby-serverspec
 SUBDIR+=	ruby-specinfra
 SUBDIR+=	ruby-syslog-logger
 SUBDIR+=	runas
+SUBDIR+=	runit
 SUBDIR+=	rw
 SUBDIR+=	s6
 SUBDIR+=	safetynet

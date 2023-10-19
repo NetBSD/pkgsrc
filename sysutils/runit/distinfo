@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/19 13:54:26 bsiegert Exp $
+
+BLAKE2s (runit-2.1.2.tar.gz) = 5ada95c1ed1ac5c01158ae110faf655e4dd6b44690ce09fe3404df889bcf54e6
+SHA512 (runit-2.1.2.tar.gz) = a18773ebf1aa22305dd89ed67363165b9fcf86c192b2be4e268d08005dd82d51265160c637abe072f2f2e378c4b315a75bd3d3e602c3e75bdd451a3b0190f8cf
+Size (runit-2.1.2.tar.gz) = 110916 bytes
