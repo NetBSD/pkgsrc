@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5950 2023/10/19 12:58:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5951 2023/10/19 13:00:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8764,3 +8764,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/ymuse to 0.22 [wiz 2023-10-19]
 	Updated sysutils/restic-rest-server to 0.12.1 [wiz 2023-10-19]
 	Updated security/ssh-audit to 3.0.0 [wiz 2023-10-19]
+	Updated textproc/tree-sitter-java to 0.20.2 [wiz 2023-10-19]
