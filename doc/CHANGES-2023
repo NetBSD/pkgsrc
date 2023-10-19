@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5979 2023/10/19 15:35:32 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5980 2023/10/19 15:35:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8793,3 +8793,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/botan3 to 3.2.0 [wiz 2023-10-19]
 	Updated print/ghostscript-agpl to 10.02.0 [wiz 2023-10-19]
 	Updated fonts/harfbuzz to 8.2.1 [wiz 2023-10-19]
+	Updated fonts/harfbuzz-icu to 8.2.1 [wiz 2023-10-19]
