@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23479 2023/10/19 15:36:39 wiz Exp $
+$NetBSD: TODO,v 1.23480 2023/10/19 15:39:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1247,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-scgi-2.0
 	o py-serializable-0.15.0
 	o py-setuptools_scm-8.0.4
-	o py-sigal-2.4
 	o py-simpletal-5.1
 	o py-sip-qt5-12.13.0
 	o py-sip6-6.7.12
