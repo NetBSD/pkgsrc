@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2023/10/01 09:59:16 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2023/10/19 12:04:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -65,7 +65,7 @@ CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.10
 CARGO_CRATE_DEPENDS+=	gimli-0.28.0
 CARGO_CRATE_DEPENDS+=	git-conventional-0.12.4
-CARGO_CRATE_DEPENDS+=	git2-0.17.1
+CARGO_CRATE_DEPENDS+=	git2-0.18.1
 CARGO_CRATE_DEPENDS+=	glob-0.3.1
 CARGO_CRATE_DEPENDS+=	globset-0.4.13
 CARGO_CRATE_DEPENDS+=	globwalk-0.8.1
@@ -97,7 +97,7 @@ CARGO_CRATE_DEPENDS+=	lazy-regex-3.0.2
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.0.1
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.148
-CARGO_CRATE_DEPENDS+=	libgit2-sys-0.15.1+1.6.4
+CARGO_CRATE_DEPENDS+=	libgit2-sys-0.16.1+1.7.1
 CARGO_CRATE_DEPENDS+=	libm-0.2.7
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.12
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
