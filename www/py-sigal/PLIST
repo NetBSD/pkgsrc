@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/16 19:34:44 wiz Exp $
-bin/sigal-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2023/10/19 15:39:44 wiz Exp $
+bin/sigal-3.11
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,6 +11,8 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sigal/__init__.py
 ${PYSITELIB}/sigal/__init__.pyc
+${PYSITELIB}/sigal/__main__.py
+${PYSITELIB}/sigal/__main__.pyc
 ${PYSITELIB}/sigal/gallery.py
 ${PYSITELIB}/sigal/gallery.pyc
 ${PYSITELIB}/sigal/image.py
@@ -44,6 +46,8 @@ ${PYSITELIB}/sigal/plugins/nomedia.py
 ${PYSITELIB}/sigal/plugins/nomedia.pyc
 ${PYSITELIB}/sigal/plugins/nonmedia_files.py
 ${PYSITELIB}/sigal/plugins/nonmedia_files.pyc
+${PYSITELIB}/sigal/plugins/titleregexp.py
+${PYSITELIB}/sigal/plugins/titleregexp.pyc
 ${PYSITELIB}/sigal/plugins/upload_s3.py
 ${PYSITELIB}/sigal/plugins/upload_s3.pyc
 ${PYSITELIB}/sigal/plugins/watermark.py
