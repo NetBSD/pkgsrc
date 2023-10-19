@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/09/13 09:25:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/19 14:57:08 wiz Exp $
 bin/xkbcli
 include/xkbcommon/xkbcommon-compat.h
 include/xkbcommon/xkbcommon-compose.h
@@ -28,6 +28,7 @@ man/man1/xkbcli-how-to-type.1
 man/man1/xkbcli-interactive-x11.1
 man/man1/xkbcli-list.1
 man/man1/xkbcli.1
+share/bash-completion/completions/xkbcli
 ${PLIST.doc}share/doc/libxkbcommon/html/annotated.html
 ${PLIST.doc}share/doc/libxkbcommon/html/bc_s.png
 ${PLIST.doc}share/doc/libxkbcommon/html/bdwn.png
