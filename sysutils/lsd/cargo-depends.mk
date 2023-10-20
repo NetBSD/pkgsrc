@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2023/08/28 10:17:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2023/10/20 07:03:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.4
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -42,7 +42,7 @@ CARGO_CRATE_DEPENDS+=	fastrand-2.0.0
 CARGO_CRATE_DEPENDS+=	float-cmp-0.8.0
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.10
-CARGO_CRATE_DEPENDS+=	git2-0.17.2
+CARGO_CRATE_DEPENDS+=	git2-0.18.1
 CARGO_CRATE_DEPENDS+=	glob-0.3.1
 CARGO_CRATE_DEPENDS+=	globset-0.4.13
 CARGO_CRATE_DEPENDS+=	globwalk-0.8.1
@@ -62,7 +62,7 @@ CARGO_CRATE_DEPENDS+=	jobserver-0.1.26
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.147
-CARGO_CRATE_DEPENDS+=	libgit2-sys-0.15.2+1.6.4
+CARGO_CRATE_DEPENDS+=	libgit2-sys-0.16.1+1.7.1
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.12
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.6
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.3.8
