@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5988 2023/10/19 23:13:47 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.5989 2023/10/20 06:10:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8803,3 +8803,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sacc to 1.07 [leot 2023-10-19]
 	Updated x11/xcb-util-cursor to 0.1.5 [wiz 2023-10-19]
 	Updated x11/qt5-qtbase to 5.15.11nb1 [ryoon 2023-10-19]
+	Updated x11/libdrm to 2.4.117 [wiz 2023-10-20]
