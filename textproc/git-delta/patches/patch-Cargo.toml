@@ -1,6 +1,6 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2023/06/04 20:18:34 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2023/10/20 21:21:28 pin Exp $
 
-Fix for libgit2
+Fix for libgit2.
 
 --- Cargo.toml.orig	2023-06-03 14:04:09.000000000 +0000
 +++ Cargo.toml
@@ -9,7 +9,7 @@ Fix for libgit2
  
  [dependencies.git2]
 -version = "0.16.1"
-+version = "0.17.2"
++version = "0.18.1"
  default-features = false
  features = []
  
