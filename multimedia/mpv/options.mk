@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2023/08/15 19:17:10 leot Exp $
+# $NetBSD: options.mk,v 1.35 2023/10/20 04:58:09 mrg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -13,9 +13,9 @@ PKG_SUPPORTED_OPTIONS+=		caca libdrm sixel x11
 # audio/video outputs
 PKG_SUPPORTED_OPTIONS+=		sdl2
 # misc
-PKG_SUPPORTED_OPTIONS+=		bluray lua
+PKG_SUPPORTED_OPTIONS+=		bluray lua javascript
 
-PKG_SUGGESTED_OPTIONS=		bluray lua sdl2 sixel
+PKG_SUGGESTED_OPTIONS=		bluray lua javascript sdl2 sixel
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -202,4 +202,14 @@ MESON_ARGS+=	-Dsixel=enabled
 .include "../../graphics/libsixel/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dsixel=disabled
+.endif
+
+###
+### JavaScript support
+###
+.if !empty(PKG_OPTIONS:Mjavascript)
+MESON_ARGS+=	-Djavascript=enabled
+.include "../../lang/mujs/buildlink3.mk"
+.else
+MESON_ARGS+=	-Djavascript=disabled
 .endif
