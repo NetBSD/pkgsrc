@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5989 2023/10/20 06:10:57 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.5990 2023/10/20 07:01:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8804,3 +8804,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/xcb-util-cursor to 0.1.5 [wiz 2023-10-19]
 	Updated x11/qt5-qtbase to 5.15.11nb1 [ryoon 2023-10-19]
 	Updated x11/libdrm to 2.4.117 [wiz 2023-10-20]
+	Updated editors/tp-note to 1.22.9 [pin 2023-10-20]
