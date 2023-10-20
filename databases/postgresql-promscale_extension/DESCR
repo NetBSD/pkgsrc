@@ -1,3 +1,0 @@
-This PostgreSQL extension contains support functions to improve the performance
-of Promscale. While Promscale will run without it, adding this extension will
-cause it to perform better.
