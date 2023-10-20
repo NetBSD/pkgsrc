@@ -1,13 +1,17 @@
-# $NetBSD: Makefile.common,v 1.20 2022/04/10 12:18:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.21 2023/10/20 09:53:02 adam Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
+PKGNAME=	${DISTNAME:S/-linux//}
+
 CATEGORIES=	games
-MASTER_SITES=	https://www.artsoft.org/RELEASES/unix/${PKGBASE}/
+MASTER_SITES=	https://www.artsoft.org/RELEASES/linux/${PKGBASE}/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.artsoft.org/${PKGBASE}/
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-linux//}
 
 USE_GAMESGROUP=		yes
 USE_TOOLS+=		gmake
@@ -41,6 +45,7 @@ PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 .endif
 
+MAKE_FLAGS+=	BASE_PATH=${PREFIX}/share/${PKGBASE}
 MAKE_FLAGS+=	TARGET=sdl2
 
 do-install:
