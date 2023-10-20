@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2015/01/04 05:00:45 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/20 03:35:15 ryoon Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
 MASTER_SITES=	ftp://ftp.cs.princeton.edu/pub/lcc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sites.google.com/site/lccretargetablecompiler
+HOMEPAGE=	https://drh.github.io/lcc/
 COMMENT=	Local ANSI C compiler for a variety of platforms
 
 USE_TOOLS+=	yacc
