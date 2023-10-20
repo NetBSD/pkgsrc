@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2023/05/06 19:09:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/20 09:53:38 adam Exp $
 
-DISTNAME=	mirrormagic-3.0.0
+DISTNAME=	mirrormagic-3.3.0-linux
 
 COMMENT=	Nice little puzzle game with color graphics and sound
-PKGREVISION=	8
 
 CONFLICTS=	mirrormagic-sdl-[1-9]*
 
@@ -13,7 +12,5 @@ LEVEL_NAMES=	classic_deflektor classic_mindbender
 
 # bug in src/Makefile
 MAKE_FLAGS+=	PROGBASE=${PKGBASE}
-MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/${PKGBASE}
-MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
 
 .include "../../mk/bsd.pkg.mk"
