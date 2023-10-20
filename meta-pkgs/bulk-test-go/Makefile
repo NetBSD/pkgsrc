@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/26 18:17:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/20 08:41:35 jperkin Exp $
 
 DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
@@ -17,7 +17,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 DEPENDS+=	coyim-[0-9]*:../../chat/coyim
 DEPENDS+=	matterircd-[0-9]*:../../chat/matterircd
 DEPENDS+=	gomuks-[0-9]*:../../chat/gomuks
-DEPENDS+=	go-ldap-[0-9]*:../../databases/go-ldap
 DEPENDS+=	influxdb-[0-9]*:../../databases/influxdb
 DEPENDS+=	postgres_exporter-[0-9]*:../../databases/postgres_exporter
 DEPENDS+=	prometheus-[0-9]*:../../databases/prometheus
@@ -41,7 +40,6 @@ DEPENDS+=	go-gocode-[0-9]*:../../devel/go-gocode
 DEPENDS+=	go-goreturns-[0-9]*:../../devel/go-goreturns
 DEPENDS+=	go-pty-[0-9]*:../../devel/go-pty
 DEPENDS+=	mob-[0-9]*:../../devel/mob
-DEPENDS+=	go-logrus-[0-9]*:../../devel/go-logrus
 DEPENDS+=	gopls-[0-9]*:../../devel/gopls
 DEPENDS+=	go-gox-[0-9]*:../../devel/go-gox
 DEPENDS+=	go-xerrors-[0-9]*:../../devel/go-xerrors
@@ -63,7 +61,6 @@ DEPENDS+=	gif2png-[0-9]*:../../graphics/gif2png
 DEPENDS+=	postforward-[0-9]*:../../mail/postforward
 DEPENDS+=	amfora-[0-9]*:../../net/amfora
 DEPENDS+=	hub-[0-9]*:../../net/hub
-DEPENDS+=	go-net-[0-9]*:../../net/go-net
 DEPENDS+=	gh-[0-9]*:../../net/gh
 DEPENDS+=	syncthing-[0-9]*:../../net/syncthing
 DEPENDS+=	dnscrypt-proxy2-[0-9]*:../../net/dnscrypt-proxy2
@@ -93,7 +90,6 @@ DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 DEPENDS+=	2fa-[0-9]*:../../security/2fa
 DEPENDS+=	age-[0-9]*:../../security/age
 DEPENDS+=	amass-[0-9]*:../../security/amass
-DEPENDS+=	go-crypto-[0-9]*:../../security/go-crypto
 DEPENDS+=	go-mkcert-[0-9]*:../../security/go-mkcert
 DEPENDS+=	go-asn1-ber-[0-9]*:../../security/go-asn1-ber
 DEPENDS+=	vault-[0-9]*:../../security/vault
