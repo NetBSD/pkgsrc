@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/30 08:28:23 nia Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/20 19:10:40 tnn Exp $
 
 DISTNAME=	libfido2-1.13.0
 CATEGORIES=	security devel
@@ -10,7 +10,7 @@ COMMENT=	U2F/FIDO/FIDO2 library and tools
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config mandoc
 CMAKE_ARGS+=		-DBUILD_EXAMPLES=OFF
 CMAKE_ARGS.NetBSD+=	-DBASE_LIBRARIES:STRING=usbhid
 TEST_TARGET=		test
