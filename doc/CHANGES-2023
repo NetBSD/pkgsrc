@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6009 2023/10/20 15:24:53 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6010 2023/10/20 15:58:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8836,3 +8836,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/swagger-codegen to 3.0.48 [schmonz 2023-10-20]
 	Updated x11/py-qt5 to 5.15.10 [adam 2023-10-20]
 	Updated x11/py-qt6 to 6.5.3 [adam 2023-10-20]
+	Updated textproc/libhighlight to 4.9 [schmonz 2023-10-20]
