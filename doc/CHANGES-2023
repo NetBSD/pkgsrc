@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6010 2023/10/20 15:58:55 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.6011 2023/10/20 16:44:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8837,3 +8837,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-qt5 to 5.15.10 [adam 2023-10-20]
 	Updated x11/py-qt6 to 6.5.3 [adam 2023-10-20]
 	Updated textproc/libhighlight to 4.9 [schmonz 2023-10-20]
+	Removed databases/promscale [tnn 2023-10-20]
+	Removed databases/postgresql-promscale_extension [tnn 2023-10-20]
