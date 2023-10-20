@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/09/29 21:12:15 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/10/20 07:56:57 tnn Exp $
 
 BLAKE2s (qtbase-everywhere-src-6.5.3.tar.xz) = a5017281c4536fade24f3f0d3e276b830ff602cbab18d24137546421b0158462
 SHA512 (qtbase-everywhere-src-6.5.3.tar.xz) = 31c6c01d466f1e01f18d6dcee593360c08ee83ad0a6be495a8eba023faad628cf07ce7285426fabfd247db306319e9a64da329682c99a712a282e32f7493cdb9
@@ -18,6 +18,7 @@ SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 96dda2094d2d80f1eb7b1301390ff3f123887812
 SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
 SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = afc18daab2b7e5b957339bafd5f7007e9a446c36
+SHA1 (patch-src_gui_platform_unix_qxkbcommon.cpp) = 142de65f99b76e700cff2812fe76b88e6036a948
 SHA1 (patch-src_network_configure.cmake) = 754461c21574b99232efc95af3a80765b2edbecc
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
 SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
