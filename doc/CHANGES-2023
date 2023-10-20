@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6011 2023/10/20 16:44:37 tnn Exp $
+$NetBSD: CHANGES-2023,v 1.6012 2023/10/20 21:21:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8839,3 +8839,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/libhighlight to 4.9 [schmonz 2023-10-20]
 	Removed databases/promscale [tnn 2023-10-20]
 	Removed databases/postgresql-promscale_extension [tnn 2023-10-20]
+	Updated textproc/git-delta to 0.16.5nb1 [pin 2023-10-20]
