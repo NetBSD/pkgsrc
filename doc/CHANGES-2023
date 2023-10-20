@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6006 2023/10/20 14:37:25 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6007 2023/10/20 15:07:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8832,3 +8832,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/py-sip6 to 6.7.12 [adam 2023-10-20]
 	Updated x11/py-qt-builder to 1.15.3 [adam 2023-10-20]
 	Updated x11/py-sip-qt5 to 12.13.0 [adam 2023-10-20]
+	Updated multimedia/rav1e to 0.6.3nb1 [ryoon 2023-10-20]
