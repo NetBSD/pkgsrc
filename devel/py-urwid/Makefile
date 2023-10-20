@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/09/28 15:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/20 11:33:03 adam Exp $
 
-DISTNAME=	urwid-2.2.2
+DISTNAME=	urwid-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
