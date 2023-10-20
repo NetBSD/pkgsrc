@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/05/04 11:50:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/10/20 07:25:50 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,9 +36,11 @@ ${PYSITELIB}/icalendar/tests/calendars/big_bad_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/broken_ical.ics
 ${PYSITELIB}/icalendar/tests/calendars/calendar_with_unicode.ics
 ${PYSITELIB}/icalendar/tests/calendars/created_calendar_with_unicode_fields.ics
+${PYSITELIB}/icalendar/tests/calendars/example.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_104_broken_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_156_RDATE_with_PERIOD_TZID_khal_2.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_165_missing_event.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_168_expected_output.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_168_input.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_178_component_with_invalid_name_represented.ics
@@ -48,7 +50,12 @@ ${PYSITELIB}/icalendar/tests/calendars/issue_237_fail_to_parse_timezone_with_non
 ${PYSITELIB}/icalendar/tests/calendars/issue_348_exception_parsing_value.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_466_convert_tzid_with_slash.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_466_respect_unique_timezone.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_different_events.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_event_subset.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_events.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_526_calendar_with_shuffeled_events.ics
 ${PYSITELIB}/icalendar/tests/calendars/multiple_calendar_components.ics
+${PYSITELIB}/icalendar/tests/calendars/period_with_timezone.ics
 ${PYSITELIB}/icalendar/tests/calendars/pr_480_summary_with_colon.ics
 ${PYSITELIB}/icalendar/tests/calendars/small_bad_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/x_location.ics
@@ -101,6 +108,9 @@ ${PYSITELIB}/icalendar/tests/test_fixed_issues.pyo
 ${PYSITELIB}/icalendar/tests/test_icalendar.py
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyc
 ${PYSITELIB}/icalendar/tests/test_icalendar.pyo
+${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.py
+${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyc
+${PYSITELIB}/icalendar/tests/test_issue_165_missing_event.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_168_parsing_invalid_calendars_no_warning.py
 ${PYSITELIB}/icalendar/tests/test_issue_168_parsing_invalid_calendars_no_warning.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_168_parsing_invalid_calendars_no_warning.pyo
@@ -113,6 +123,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.py
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.pyo
+${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.py
+${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.pyc
+${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
