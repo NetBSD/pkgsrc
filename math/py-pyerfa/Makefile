@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/08/01 23:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/20 12:41:48 adam Exp $
 
-DISTNAME=	pyerfa-2.0.0.1
+DISTNAME=	pyerfa-2.0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyerfa/}
