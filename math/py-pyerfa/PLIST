@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2022/08/29 15:54:08 thor Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/20 12:41:48 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/erfa/__init__.py
 ${PYSITELIB}/erfa/__init__.pyc
 ${PYSITELIB}/erfa/__init__.pyo
@@ -23,13 +29,7 @@ ${PYSITELIB}/erfa/tests/test_erfa.pyo
 ${PYSITELIB}/erfa/tests/test_ufunc.py
 ${PYSITELIB}/erfa/tests/test_ufunc.pyc
 ${PYSITELIB}/erfa/tests/test_ufunc.pyo
-${PYSITELIB}/erfa/ufunc.so
+${PYSITELIB}/erfa/ufunc.abi3.so
 ${PYSITELIB}/erfa/version.py
 ${PYSITELIB}/erfa/version.pyc
 ${PYSITELIB}/erfa/version.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
