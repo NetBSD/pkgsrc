@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/24 23:43:22 fox Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/20 13:59:38 bsiegert Exp $
 bin/coyim
-share/applications/coyim.desktop
 share/pixmaps/coyim.png
