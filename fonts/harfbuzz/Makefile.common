@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.38 2023/10/19 15:35:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2023/10/20 10:41:38 adam Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
-DISTNAME=	harfbuzz-8.2.1
+DISTNAME=	harfbuzz-8.2.2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -86,4 +86,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 # graphite2 support breaks graphics/librsvg-c
 .include "../../graphics/graphite2/buildlink3.mk"
 .endif
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
