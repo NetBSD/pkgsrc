@@ -1,6 +1,6 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2023/04/26 11:25:56 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2023/10/20 07:05:38 pin Exp $
 
-Switch to newer libgit2-sys that's compatible with libgit2-1.6.4.
+Switch to newer libgit2-sys.
 
 --- Cargo.toml.orig	2023-03-25 09:31:31.000000000 +0000
 +++ Cargo.toml
@@ -9,7 +9,7 @@ Switch to newer libgit2-sys that's compatible with libgit2-1.6.4.
  
  [dependencies.git2]
 -version = "0.16"
-+version = "0.17.1"
++version = "0.18"
  optional = true
  default-features = false
  
