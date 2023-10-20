@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.46 2023/10/19 12:00:31 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.47 2023/10/20 07:00:07 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -294,8 +294,8 @@ CARGO_CRATE_DEPENDS+=	pango-sys-0.15.10
 CARGO_CRATE_DEPENDS+=	parking-2.2.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.9
-CARGO_CRATE_DEPENDS+=	parse-hyperlinks-0.27.0
-CARGO_CRATE_DEPENDS+=	parse-hyperlinks-extras-0.27.0
+CARGO_CRATE_DEPENDS+=	parse-hyperlinks-0.27.2
+CARGO_CRATE_DEPENDS+=	parse-hyperlinks-extras-0.27.2
 CARGO_CRATE_DEPENDS+=	parse-zoneinfo-0.3.0
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.0
 CARGO_CRATE_DEPENDS+=	pest-2.7.4
@@ -400,8 +400,8 @@ CARGO_CRATE_DEPENDS+=	toml-0.8.2
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.3
 CARGO_CRATE_DEPENDS+=	toml_edit-0.19.15
 CARGO_CRATE_DEPENDS+=	toml_edit-0.20.2
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.28.3
-CARGO_CRATE_DEPENDS+=	tracing-0.1.39
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.28.4
+CARGO_CRATE_DEPENDS+=	tracing-0.1.40
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.27
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.32
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.0.3
