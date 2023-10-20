@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/09/06 18:06:23 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.24 2023/10/20 15:58:49 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -113,6 +113,7 @@ share/highlight/langDefs/cobol.lang
 share/highlight/langDefs/coffeescript.lang
 share/highlight/langDefs/coldfusion.lang
 share/highlight/langDefs/conf.lang
+share/highlight/langDefs/cpp2.lang
 share/highlight/langDefs/critic.lang
 share/highlight/langDefs/crk.lang
 share/highlight/langDefs/crystal.lang
@@ -130,6 +131,7 @@ share/highlight/langDefs/ebnf.lang
 share/highlight/langDefs/ebnf2.lang
 share/highlight/langDefs/eiffel.lang
 share/highlight/langDefs/elixir.lang
+share/highlight/langDefs/elm.lang
 share/highlight/langDefs/email.lang
 share/highlight/langDefs/erb.lang
 share/highlight/langDefs/erlang.lang
@@ -137,6 +139,7 @@ share/highlight/langDefs/euphoria.lang
 share/highlight/langDefs/exapunks.lang
 share/highlight/langDefs/excel.lang
 share/highlight/langDefs/express.lang
+share/highlight/langDefs/factor.lang
 share/highlight/langDefs/fame.lang
 share/highlight/langDefs/fasm.lang
 share/highlight/langDefs/felix.lang
