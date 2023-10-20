@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6003 2023/10/20 12:42:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6004 2023/10/20 14:01:19 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8800,6 +8800,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/sayaka to 3.7.2 [tsutsui 2023-10-19]
 	Removed devel/go-logrus [bsiegert 2023-10-19]
 	Removed net/go-net [bsiegert 2023-10-19]
+	Removed security/go-crypto [bsiegert 2023-10-19]
+	Removed databases/go-ldap [bsiegert 2023-10-19]
 	Updated net/sacc to 1.07 [leot 2023-10-19]
 	Updated x11/xcb-util-cursor to 0.1.5 [wiz 2023-10-19]
 	Updated x11/qt5-qtbase to 5.15.11nb1 [ryoon 2023-10-19]
@@ -8824,3 +8826,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-urwid to 2.2.3 [adam 2023-10-20]
 	Updated graphics/py-matplotlib to 3.8.0 [adam 2023-10-20]
 	Updated math/py-pyerfa to 2.0.1.1 [adam 2023-10-20]
+	Updated chat/coyim to 0.4.1 [bsiegert 2023-10-20]
