@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.5998 2023/10/20 09:53:58 adam Exp $
+$NetBSD: CHANGES-2023,v 1.5999 2023/10/20 10:42:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8814,3 +8814,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-aiodns to 3.1.1 [wiz 2023-10-20]
 	Updated games/rocksndiamonds to 4.3.6.0 [adam 2023-10-20]
 	Updated games/mirrormagic to 3.3.0 [adam 2023-10-20]
+	Updated fonts/harfbuzz to 8.2.2 [adam 2023-10-20]
+	Updated fonts/harfbuzz-icu to 8.2.2 [adam 2023-10-20]
