@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/09/16 04:24:31 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/10/20 14:16:35 adam Exp $
 
-BLAKE2s (astropy-5.3.3.tar.gz) = 74701e6dde465a322f008b45803a7497f3bdcf9b252b63519a8445de4aab466c
-SHA512 (astropy-5.3.3.tar.gz) = a3213b2aeeff8d9a24388ab109b60db2fd728258488af84287a68ad382507996148f9dad5bef27f76db676dbdfe525c0a457d5323b539077b4a9b051491de606
-Size (astropy-5.3.3.tar.gz) = 7806734 bytes
+BLAKE2s (astropy-5.3.4.tar.gz) = 2cac6c3496848cafb28408cad365d174463783a782bd334b447e9f303f96b307
+SHA512 (astropy-5.3.4.tar.gz) = eede24edeb04603ef92c48e040223fe05e12c510873022a2683bb08793b406d95ccbf284f3a46479658144b3f8cbfc6a32ac1bcb6ac5870449630069cfe67842
+Size (astropy-5.3.4.tar.gz) = 7811582 bytes
