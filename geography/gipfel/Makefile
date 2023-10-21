@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/09/24 09:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/21 17:10:18 gdt Exp $
 
 DISTNAME=	gipfel-0.4.1
+PKGREVISION=	1
 CATEGORIES=	geography graphics
 MASTER_SITES=	https://flpsed.org/
 

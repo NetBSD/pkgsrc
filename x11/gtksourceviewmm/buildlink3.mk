@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2023/04/19 08:08:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2023/10/21 17:11:47 gdt Exp $
 
 BUILDLINK_TREE+=	gtksourceviewmm
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtksourceviewmm
 GTKSOURCEVIEWMM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtksourceviewmm+=	gtksourceviewmm>=3.2.0
-BUILDLINK_ABI_DEPENDS.gtksourceviewmm?=	gtksourceviewmm>=3.2.0nb36
+BUILDLINK_ABI_DEPENDS.gtksourceviewmm?=	gtksourceviewmm>=3.2.0nb37
 BUILDLINK_PKGSRCDIR.gtksourceviewmm?=	../../x11/gtksourceviewmm
 
 .include "../../devel/atkmm/buildlink3.mk"

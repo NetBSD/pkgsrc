@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2023/01/03 17:37:23 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/21 17:10:31 gdt Exp $
 #
 
 DISTNAME=		gtksee-0.5.6
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtksee.berlios/}
 

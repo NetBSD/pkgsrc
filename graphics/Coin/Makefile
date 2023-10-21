@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/08/02 19:21:53 nia Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/21 17:10:21 gdt Exp $
 
 DISTNAME=		Coin-3.1.3
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		graphics
 MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
 

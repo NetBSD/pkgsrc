@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/05/22 11:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/21 17:10:26 gdt Exp $
 
 DISTNAME=	fswebcam-20200725
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.sanslogic.co.uk/fswebcam/files/
 

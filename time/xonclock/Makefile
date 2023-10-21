@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/01/29 21:17:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/21 17:11:34 gdt Exp $
 #
 
 DISTNAME=	xonclock-0.0.9.4
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xonclock/}
 

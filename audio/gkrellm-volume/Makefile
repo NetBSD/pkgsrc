@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2023/04/19 08:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.73 2023/10/21 17:09:42 gdt Exp $
 
 DISTNAME=	gkrellm-volume-2.1.13
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
 

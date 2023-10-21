@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2023/08/14 05:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2023/10/21 17:10:23 gdt Exp $
 
 DISTNAME=		comix-4.0.4
-PKGREVISION=		51
+PKGREVISION=		52
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=comix/}
 

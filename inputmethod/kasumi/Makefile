@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/01/29 21:16:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2023/10/21 17:10:51 gdt Exp $
 
 DISTNAME=	kasumi-2.5
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_OSDN:=kasumi/41436/}
 
