@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6017 2023/10/21 14:36:14 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6018 2023/10/21 14:49:27 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8848,3 +8848,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ruamel-yaml to 0.17.40 [adam 2023-10-21]
 	Updated www/py-websocket-client to 1.6.4 [adam 2023-10-21]
 	Updated devel/meson to 1.2.3 [adam 2023-10-21]
+	Updated textproc/bat to 0.24.0 [fox 2023-10-21]
