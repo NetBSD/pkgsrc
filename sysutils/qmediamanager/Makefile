@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/12 11:31:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/21 21:02:51 bacon Exp $
 
 DISTNAME=	qmediamanager-0.1.1.2
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS=	npmount>0:../../sysutils/npmount
 DEPENDS+=	devpub-mount>0:../../sysutils/devpub-mount
-DEPENDS+=	auto-admin>=0.7.17:../../sysutils/auto-admin
+DEPENDS+=	auto-admin>=0.8.0:../../sysutils/auto-admin
 DEPENDS+=	rxvt-unicode>0:../../x11/rxvt-unicode
 DEPENDS+=	qt6-qttools>0:../../devel/qt6-qttools
 
