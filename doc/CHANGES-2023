@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6018 2023/10/21 14:49:27 fox Exp $
+$NetBSD: CHANGES-2023,v 1.6019 2023/10/21 17:58:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8849,3 +8849,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-websocket-client to 1.6.4 [adam 2023-10-21]
 	Updated devel/meson to 1.2.3 [adam 2023-10-21]
 	Updated textproc/bat to 0.24.0 [fox 2023-10-21]
+	Updated devel/py-xopen to 1.8.0 [adam 2023-10-21]
+	Updated net/py-lexicon to 3.16.1 [adam 2023-10-21]
