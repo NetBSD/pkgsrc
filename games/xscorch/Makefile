@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2023/01/29 21:16:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/21 17:10:17 gdt Exp $
 
 DISTNAME=	xscorch_0.2.1.orig
 PKGNAME=	${DISTNAME:S/_/-/1:S/.orig//1}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xscorch/}
 

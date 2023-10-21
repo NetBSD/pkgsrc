@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2023/10/09 09:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/21 17:10:43 gdt Exp $
 
 DISTNAME=	vigra-1.11.2-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ukoethe/}
 GITHUB_TAG=	Version-${PKGVERSION_NOREV:S/./-/g}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/21 17:09:45 gdt Exp $
 
 DISTNAME=	lv2-1.18.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://lv2plug.in/spec/
 EXTRACT_SUFX=	.tar.xz

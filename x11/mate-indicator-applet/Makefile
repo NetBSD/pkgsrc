@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/10/04 21:36:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/21 17:11:50 gdt Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-indicator-applet-${VERSION:R}.0

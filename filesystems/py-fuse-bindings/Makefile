@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/01/22 18:52:11 pho Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/21 17:10:11 gdt Exp $
 
 VERSION=		1.0.4
 DISTNAME=		fuse-python-${VERSION}
@@ -26,4 +26,5 @@ post-install:
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/fuse.buildlink3.mk"
+#.include "../../filesystems/fuse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

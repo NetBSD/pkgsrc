@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/21 17:10:43 gdt Exp $
 
 DISTNAME=	VTK-9.2.6
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.vtk.org/files/release/${PKGVERSION_NOREV:R}/
 

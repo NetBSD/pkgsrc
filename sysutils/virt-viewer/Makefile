@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/05/06 19:09:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/21 17:11:30 gdt Exp $
 
 DISTNAME=	virt-viewer-8.0
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	sysutils
 MASTER_SITES=	https://releases.pagure.org/virt-viewer/
 

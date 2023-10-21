@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2023/06/26 08:49:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2023/10/21 17:11:10 gdt Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
-PKGREVISION=		40
+PKGREVISION=		41
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ed2k-gtk-gui/}
 

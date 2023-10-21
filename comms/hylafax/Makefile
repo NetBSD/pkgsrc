@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2023/08/09 08:27:22 nia Exp $
+# $NetBSD: Makefile,v 1.79 2023/10/21 17:09:53 gdt Exp $
 
 DISTNAME=	hylafax-6.0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/
 

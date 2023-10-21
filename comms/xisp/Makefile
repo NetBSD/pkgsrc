@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2023/10/09 07:02:10 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/21 17:09:53 gdt Exp $
 
 DISTNAME=		xisp-2.7p4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		comms x11
 MASTER_SITES=		https://xisp.hellug.gr/release/
 MASTER_SITES+=		${MASTER_SITE_SUNSITE:=system/network/serial/}

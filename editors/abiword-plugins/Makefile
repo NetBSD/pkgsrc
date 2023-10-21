@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2023/08/11 08:44:34 nia Exp $
+# $NetBSD: Makefile,v 1.141 2023/10/21 17:10:03 gdt Exp $
 
-PKGREVISION=	14
+PKGREVISION=	15
 .include	"../../editors/abiword/Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
 PKGNAME=	abiword-plugins-${ABIVERSION}

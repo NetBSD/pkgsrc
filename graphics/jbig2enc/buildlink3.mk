@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/04/06 12:15:55 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/10/21 17:10:32 gdt Exp $
 
 BUILDLINK_TREE+=	jbig2enc
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	jbig2enc
 JBIG2ENC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jbig2enc+=	jbig2enc>=0.29
+BUILDLINK_ABI_DEPENDS.jbig2enc?=	jbig2enc>=0.29nb1
 BUILDLINK_PKGSRCDIR.jbig2enc?=	../../graphics/jbig2enc
 
 .include "../../graphics/leptonica/buildlink3.mk"

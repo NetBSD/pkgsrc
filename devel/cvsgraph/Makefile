@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2023/05/22 11:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2023/10/21 17:09:56 gdt Exp $
 #
 
 DISTNAME=	cvsgraph-1.7.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.vagrearg.org/cvsgraph/release/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/01/29 21:16:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/21 17:10:13 gdt Exp $
 
 DISTNAME=	1.3.3
 PKGNAME=	ecwolf-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/ecwolf/ecwolf/get/
 DIST_SUBDIR=	ecwolf

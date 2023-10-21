@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.137 2023/04/19 08:10:45 adam Exp $
+# $NetBSD: Makefile,v 1.138 2023/10/21 17:10:59 gdt Exp $
 #
 
 DISTNAME=		gcalctool-5.32.2
-PKGREVISION=		39
+PKGREVISION=		40
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.32/}
 EXTRACT_SUFX=		.tar.bz2
