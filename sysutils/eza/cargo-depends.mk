@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2023/10/13 12:32:53 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2023/10/21 14:21:14 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -117,7 +117,6 @@ CARGO_CRATE_DEPENDS+=	snapbox-0.4.14
 CARGO_CRATE_DEPENDS+=	snapbox-macros-0.3.6
 CARGO_CRATE_DEPENDS+=	syn-2.0.29
 CARGO_CRATE_DEPENDS+=	tempfile-3.8.0
-CARGO_CRATE_DEPENDS+=	term_grid-0.1.7
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.48
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.48
@@ -134,6 +133,7 @@ CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.17
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
 CARGO_CRATE_DEPENDS+=	url-2.2.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
+CARGO_CRATE_DEPENDS+=	uutils_term_grid-0.3.0
 CARGO_CRATE_DEPENDS+=	uzers-0.11.3
 CARGO_CRATE_DEPENDS+=	vcpkg-0.2.12
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
