@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2023/09/16 07:54:08 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/21 14:34:39 adam Exp $
 
-DISTNAME=	websocket-client-1.6.3
+DISTNAME=	websocket-client-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/websocket-client/}
