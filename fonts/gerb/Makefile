@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/21 17:10:11 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/21 18:58:20 pin Exp $
 
 DISTNAME=	gerb-0.0.1alpha20230427
 PKGREVISION=	2
@@ -35,7 +35,6 @@ do-install:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/python310/buildlink3.mk"
+.include "../../lang/python311/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
