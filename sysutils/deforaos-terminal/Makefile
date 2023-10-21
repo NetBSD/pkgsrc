@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/06/23 07:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/21 17:11:25 gdt Exp $
 
 DISTNAME=	Terminal-0.2.0
 PKGNAME=	deforaos-terminal-0.2.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Terminal/
 

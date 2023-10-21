@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2023/06/06 12:42:52 riastradh Exp $
+# $NetBSD: Makefile,v 1.86 2023/10/21 17:11:42 gdt Exp $
 
 DISTNAME=		devilspie-0.22
-PKGREVISION=		43
+PKGREVISION=		44
 CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 

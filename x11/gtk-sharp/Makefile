@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2023/04/19 08:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.94 2023/10/21 17:11:44 gdt Exp $
 
 DISTNAME=	gtk-sharp-2.12.45
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	https://download.mono-project.com/sources/gtk-sharp212/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2023/04/19 08:11:56 adam Exp $
+# $NetBSD: Makefile,v 1.67 2023/10/21 17:11:53 gdt Exp $
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 EXTRACT_SUFX=	.tar.bz2

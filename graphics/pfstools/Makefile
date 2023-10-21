@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2023/08/14 05:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/10/21 17:10:38 gdt Exp $
 
 DISTNAME=	pfstools-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 EXTRACT_SUFX=	.tgz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/06/07 11:27:28 micha Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/21 17:09:39 gdt Exp $
 
 DISTNAME=	gnome-autoar-0.4.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
