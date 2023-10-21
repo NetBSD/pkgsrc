@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/20 08:41:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/21 21:07:01 jperkin Exp $
 
 DISTNAME=	bulk-test-go-20220924
 CATEGORIES=	meta-pkgs
@@ -21,7 +21,6 @@ DEPENDS+=	influxdb-[0-9]*:../../databases/influxdb
 DEPENDS+=	postgres_exporter-[0-9]*:../../databases/postgres_exporter
 DEPENDS+=	prometheus-[0-9]*:../../databases/prometheus
 DEPENDS+=	mysqld_exporter-[0-9]*:../../databases/mysqld_exporter
-DEPENDS+=	promscale-[0-9]*:../../databases/promscale
 DEPENDS+=	timescaledb-tune-[0-9]*:../../databases/timescaledb-tune
 DEPENDS+=	asmfmt-[0-9]*:../../devel/asmfmt
 DEPENDS+=	go-tools-[0-9]*:../../devel/go-tools
