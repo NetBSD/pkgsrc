@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/30 08:30:17 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/21 18:57:14 pin Exp $
 
 DISTNAME=	git-branchless-0.8.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arxanas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +18,6 @@ USE_NCURSES=	yes #NCURSES_MOUSE_VERSION
 
 INSTALLATION_DIRS=	bin
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
@@ -29,7 +29,6 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
