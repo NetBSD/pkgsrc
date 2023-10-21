@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/11 06:29:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/21 17:51:45 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,4 +11,5 @@ ${PYSITELIB}/xopen/__init__.py
 ${PYSITELIB}/xopen/__init__.pyc
 ${PYSITELIB}/xopen/_version.py
 ${PYSITELIB}/xopen/_version.pyc
+${PYSITELIB}/xopen/_version.pyi
 ${PYSITELIB}/xopen/py.typed

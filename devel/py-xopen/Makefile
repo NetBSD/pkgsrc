@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2023/06/06 12:41:15 riastradh Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/21 17:51:45 adam Exp $
 
-DISTNAME=	xopen-1.7.0
+DISTNAME=	xopen-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://github.com/marcelm/xopen
+HOMEPAGE=	https://github.com/pycompression/xopen
 COMMENT=	Open compressed files transparently
 LICENSE=	mit
 
