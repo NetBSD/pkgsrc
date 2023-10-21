@@ -101,12 +101,20 @@ Manually setting this option overrides \f[V]NO_COLOR\f[R] environment.
 \f[V]--color-scale\f[R], \f[V]--colour-scale\f[R]
 Colour file sizes on a scale.
 .TP
-\f[V]--icons\f[R]
+\f[V]--icons=WHEN\f[R]
 Display icons next to file names.
-.TP
-\f[V]--no-icons\f[R]
-Don\[cq]t display icons.
-(Always overrides \[en]icons)
+.PP
+Valid settings are `\f[V]always\f[R]', `\f[V]automatic\f[R]'
+(`\f[V]auto\f[R]' for short), and `\f[V]never\f[R]'.
+The default value is `\f[V]automatic\f[R]'.
+.PP
+\f[V]automatic\f[R] or \f[V]auto\f[R] will display icons only when the
+standard output is connected to a real terminal.
+If \f[V]eza\f[R] is ran while in a \f[V]tty\f[R], or the output of
+\f[V]eza\f[R] is either redirected to a file or piped into another
+program, icons will not be used.
+Setting this option to `\f[V]always\f[R]' causes \f[V]eza\f[R] to always
+display icons, while `\f[V]never\f[R]' disables the use of icons.
 .TP
 \f[V]--no-quotes\f[R]
 Don\[cq]t quote file names with spaces.
@@ -116,6 +124,9 @@ Display entries as hyperlinks
 .TP
 \f[V]-w\f[R], \f[V]--width=COLS\f[R]
 Set screen width in columns.
+.TP
+\f[V]--smart-group\f[R]
+Only show group if it has a different name from owner
 .SH FILTERING AND SORTING OPTIONS
 .TP
 \f[V]-a\f[R], \f[V]--all\f[R]
