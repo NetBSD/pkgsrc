@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/09/30 19:41:22 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/21 18:54:53 pin Exp $
 
-DISTNAME=	lefthk-0.1.8
+DISTNAME=	lefthk-0.1.9
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
-GITHUB_TAG=	cb8effeae8ee63fe1b505bdd2d42f61bfa25f1d0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/leftwm/lefthk/
