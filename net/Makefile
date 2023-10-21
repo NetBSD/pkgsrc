@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1540 2023/10/02 00:26:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.1541 2023/10/21 19:41:56 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -206,7 +206,6 @@ SUBDIR+=	gnugk
 SUBDIR+=	gnunet
 SUBDIR+=	gnunet-gtk
 SUBDIR+=	go-dnstap
-SUBDIR+=	go-net
 SUBDIR+=	go-websocket
 SUBDIR+=	gofish
 SUBDIR+=	gopher
