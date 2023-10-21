@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6024 2023/10/21 18:58:55 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6025 2023/10/21 19:00:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8857,3 +8857,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/jj to 0.10.0nb2 [pin 2023-10-21]
 	Updated devel/git-branchless to 0.8.0nb1 [pin 2023-10-21]
 	Updated fonts/gerb to 0.0.1alpha20230427nb2 [pin 2023-10-21]
+	Updated sysutils/fd-find to 8.7.1 [pin 2023-10-21]
