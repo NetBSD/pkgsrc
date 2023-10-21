@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2023/09/05 14:42:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/21 17:10:41 gdt Exp $
 
 GITHUB_PROJECT=	sane-airscan
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	sane-airscan-0.99.27
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexpevzner/}
 

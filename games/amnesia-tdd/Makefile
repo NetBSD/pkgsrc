@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/09/01 10:50:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/21 17:10:12 gdt Exp $
 
 DISTNAME=	amnesia-tdd-0.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
 GITHUB_PROJECT=	AmnesiaTheDarkDescent

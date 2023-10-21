@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2023/07/29 02:01:56 markd Exp $
+# $NetBSD: Makefile,v 1.63 2023/10/21 17:09:58 gdt Exp $
 
 DISTNAME=	knotifyconfig-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

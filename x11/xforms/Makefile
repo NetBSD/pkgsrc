@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.73 2023/08/29 15:05:39 vins Exp $
+# $NetBSD: Makefile,v 1.74 2023/10/21 17:11:58 gdt Exp $
 #
 
 DISTNAME=	xforms-2c1a9f151baf50887a517280645ec23379fb96f8
 PKGNAME=	xforms-1.2.5pre2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://git.savannah.nongnu.org/cgit/xforms.git/snapshot/
 
