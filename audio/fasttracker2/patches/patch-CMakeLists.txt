@@ -1,27 +1,34 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2022/01/13 04:24:00 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2023/10/21 14:27:13 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
---- CMakeLists.txt.orig	2022-01-12 13:11:14.000000000 +0000
+--- CMakeLists.txt.orig	2023-10-07 13:11:58.000000000 +0000
 +++ CMakeLists.txt
-@@ -30,10 +30,16 @@ endif()
+@@ -32,10 +32,6 @@ find_package(Threads REQUIRED)
  target_link_libraries(ft2-clone
-     PRIVATE m asound pthread ${SDL2_LIBRARIES})
+     PRIVATE m Threads::Threads ${SDL2_LIBRARIES})
  
 -target_compile_definitions(ft2-clone
 -    PRIVATE HAS_MIDI
--    PRIVATE __LINUX_ALSA__
 -    PRIVATE HAS_LIBFLAC)
-+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-+    target_compile_definitions(ft2-clone
-+        PRIVATE HAS_MIDI
-+        PRIVATE __LINUX_ALSA__
-+        PRIVATE HAS_LIBFLAC)
-+else()
-+    target_compile_definitions(ft2-clone
-+        PRIVATE HAS_MIDI
-+        PRIVATE HAS_LIBFLAC)
-+endif()
+-
+ if(UNIX)
+     if(APPLE)
+         find_library(COREAUDIO CoreAudio REQUIRED)
+@@ -44,11 +40,15 @@ if(UNIX)
+             PRIVATE ${COREAUDIO} ${COREMIDI})
+         target_compile_definitions(ft2-clone
+             PRIVATE __MACOSX_CORE__)
+-    else()
++    elseif(LINUX)	    
+         target_link_libraries(ft2-clone
+             PRIVATE asound)
+         target_compile_definitions(ft2-clone
+             PRIVATE __LINUX_ALSA__)
++    else()
++        target_compile_definitions(ft2-clone
++            PRIVATE HAS_MIDI
++            PRIVATE HAS_LIBFLAC)    
+     endif()
+ endif()
  
- if(EXTERNAL_LIBFLAC)
-     find_package(PkgConfig REQUIRED)
