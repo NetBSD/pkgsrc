@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6014 2023/10/20 21:24:47 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6015 2023/10/21 14:21:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8842,3 +8842,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/git-delta to 0.16.5nb1 [pin 2023-10-20]
 	Updated net/gping to 1.14.0nb1 [pin 2023-10-20]
 	Updated sysutils/onefetch to 2.18.1nb2 [pin 2023-10-20]
+	Updated sysutils/eza to 0.15.0 [fox 2023-10-21]
