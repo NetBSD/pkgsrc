@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/02/06 08:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/21 17:09:47 gdt Exp $
 
 DISTNAME=	spek-0.8.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexkay/}
 EXTRACT_SUFX=	.tar.xz

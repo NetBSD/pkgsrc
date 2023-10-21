@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.86 2023/08/14 05:24:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.87 2023/10/21 17:10:27 gdt Exp $
 
 BUILDLINK_TREE+=	gimp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gimp
 GIMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.4.0<2.99
-BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.10.34nb1
+BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.10.34nb2
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
 
 pkgbase := gimp

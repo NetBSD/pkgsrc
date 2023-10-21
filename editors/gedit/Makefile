@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.175 2023/08/14 05:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.176 2023/10/21 17:10:04 gdt Exp $
 
 DISTNAME=	gedit-3.36.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

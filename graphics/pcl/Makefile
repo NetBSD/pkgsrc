@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/05/22 21:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/21 17:10:38 gdt Exp $
 
 DISTNAME=	pcl-1.11.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PointCloudLibrary/}
 GITHUB_PROJECT=	pcl

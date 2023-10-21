@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/01/29 21:16:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/21 17:10:19 gdt Exp $
 #
 
 VERSION=	2.2.12
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	ocpn_plots_pi-${VERSION}
 PKGNAME=	opencpn-plugin-plots-${VERSION}
 CATEGORIES=	geography

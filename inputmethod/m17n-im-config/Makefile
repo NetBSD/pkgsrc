@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2023/05/22 11:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2023/10/21 17:10:51 gdt Exp $
 #
 
 DISTNAME=	m17n-im-config-0.9.0
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	inputmethod devel
 MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 

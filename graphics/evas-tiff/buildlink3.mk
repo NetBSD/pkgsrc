@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/01/29 21:14:39 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/10/21 17:10:25 gdt Exp $
 
 BUILDLINK_TREE+=	evas-tiff
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas-tiff
 EVAS_TIFF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-tiff+=	evas-tiff>=1.7.7
-BUILDLINK_ABI_DEPENDS.evas-tiff?=	evas-tiff>=1.7.10nb3
+BUILDLINK_ABI_DEPENDS.evas-tiff?=	evas-tiff>=1.7.10nb4
 BUILDLINK_PKGSRCDIR.evas-tiff?=		../../graphics/evas-tiff
 
 .include "../../fonts/fontconfig/buildlink3.mk"
