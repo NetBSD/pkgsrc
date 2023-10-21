@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/02 20:03:25 nros Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/21 11:20:23 nros Exp $
 
 DISTNAME=	charls-2.4.2
 CATEGORIES=	graphics
@@ -14,8 +14,6 @@ USE_CXX_FEATURES+=	c++14
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/charls.version
 
 PKGCONFIG_OVERRIDE=	src/charls-template.pc
 
