@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6028 2023/10/21 21:10:02 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6029 2023/10/21 23:26:52 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8861,3 +8861,9 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/auto-admin to 0.8.0 [bacon 2023-10-21]
 	Updated sysutils/desktop-installer to 0.8.3 [bacon 2023-10-21]
 	Updated devel/cargo-modules to 0.10.1 [pin 2023-10-21]
+	Updated devel/libunit to 1.31.1 [osa 2023-10-21]
+	Updated www/unit to 1.31.1 [osa 2023-10-21]
+	Updated www/unit-perl to 1.31.1 [osa 2023-10-21]
+	Updated www/unit-php to 1.31.1 [osa 2023-10-21]
+	Updated www/unit-python to 1.31.1 [osa 2023-10-21]
+	Updated www/unit-ruby to 1.31.1 [osa 2023-10-21]
