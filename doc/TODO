@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23493 2023/10/20 18:37:23 wiz Exp $
+$NetBSD: TODO,v 1.23494 2023/10/22 10:03:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o FlightCrew-0.9.1
 	o GMT-5.1.1
 	o HElib-2.1.0
-	o ImageMagick-7.1.1.20
+	o ImageMagick-7.1.1.21
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-23.2.1
@@ -513,6 +513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o cairo-1.18.0
 	o cairo-gobject-1.18.0
+	o cairomm-1.18.0
 	o cairomm1.16-1.18.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -676,6 +677,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcombust-0.1.55
 	o gdb-13.1
 	o gdb7-7.12
+	o geany-2.0
 	o geneweb-7.0.0
 	o genius-1.0.26
 	o gens-2.15.5
@@ -760,6 +762,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.22.6
+	o gtexinfo-7.1
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -893,6 +896,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.17.1
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -1011,6 +1015,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
+	o nodejs-21.0.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1184,17 +1189,23 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-acme-2.7.2
+	o py-anytree-2.11.1
 	o py-barman-3.0.1
 	o py-blinker-1.6.3
 	o py-bumpver-2023.1129
-	o py-cairo-1.25.0
+	o py-cairo-1.25.1
 	o py-cares-4.4.0
 	o py-cassa-1.11.0
+	o py-certbot-2.7.2
+	o py-certbot-nginx-2.7.2
+	o py-cmake-language-server-0.1.8
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-contourpy-1.1.1
+	o py-css-parser-1.0.10
 	o py-cycler-0.12.1
-	o py-cyclonedx-python-lib-4.2.2
-	o py-cython-3.0.3
+	o py-cyclonedx-python-lib-4.2.3
+	o py-cython-3.0.4
 	o py-diffoscope-242
 	o py-docstring-to-markdown-0.13
 	o py-ephem3-3.7.6.0
@@ -1203,7 +1214,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-flask-3.0.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.103.0
+	o py-google-api-python-client-2.104.0
 	o py-googleapis-common-protos-1.61.0
 	o py-grpcio-1.59.0
 	o py-gsutil-5.6
@@ -1230,6 +1241,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ptt-1.10.2
 	o py-pykka-4.0.1
 	o py-pymc3-3.8
+	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
 	o py-readme_renderer-42.0
@@ -1251,9 +1263,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
 	o py-toolconfig-1.2.6
+	o py-trove-classifiers-2023.10.18
 	o py-twisted-23.8.0
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
+	o py-websockets-12.0
 	o py-werkzeug-3.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1413,6 +1427,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o tevent-0.16.0
 	o texlab-5.10.1
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
@@ -1453,6 +1468,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o userspace-rcu-0.12.2
+	o utf8proc-2.9.0
 	o utilisp-1.14
 	o vault-1.7.4
 	o vbetool-1.1
