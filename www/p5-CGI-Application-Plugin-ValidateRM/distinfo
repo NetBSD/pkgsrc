@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:29:46 nia Exp $
+$NetBSD: distinfo,v 1.9 2023/10/22 08:13:49 wen Exp $
 
-BLAKE2s (CGI-Application-Plugin-ValidateRM-2.5.tar.gz) = 1bb2aa313a2cda1c342c6e060e0d740a9ea7b557831b43c11ca003fc9c8a2f85
-SHA512 (CGI-Application-Plugin-ValidateRM-2.5.tar.gz) = 517db20b70dbf3d31f7198b545235eef481fc31f2fba52330424901d5d8d9a397e85411c862dd7b3f75661d6a1b9fe091ec35e9fe859d00b7a90f8b2698ef09b
-Size (CGI-Application-Plugin-ValidateRM-2.5.tar.gz) = 10286 bytes
+BLAKE2s (CGI-Application-Plugin-ValidateRM-2.52.tar.gz) = 9ea7d73293006f11a37736cade8eea1eeb293605541066d57e61930302e01906
+SHA512 (CGI-Application-Plugin-ValidateRM-2.52.tar.gz) = 5b02ec16f1c6ce90f7291b472ce252c43d8fcb688b275bb8ec30688cf2cabd63384c342f43032f41a26b38833728c48c7ac887331964264893422bdc941eaad2
+Size (CGI-Application-Plugin-ValidateRM-2.52.tar.gz) = 10698 bytes
