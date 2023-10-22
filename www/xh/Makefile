@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/04/03 11:10:17 pin Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/22 19:40:04 pin Exp $
 
-DISTNAME=	xh-0.18.0
+DISTNAME=	xh-0.19.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ducaale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,6 +30,9 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/xh/auto-completion
 	${INSTALL_DATA} ${WRKSRC}/completions/_xh.ps1 \
 		${DESTDIR}${PREFIX}/share/examples/xh/auto-completion
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		online-tests rustls
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
