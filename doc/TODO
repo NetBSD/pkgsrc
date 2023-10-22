@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23494 2023/10/22 10:03:59 wiz Exp $
+$NetBSD: TODO,v 1.23495 2023/10/22 12:37:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -556,6 +556,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
 	o csvkit-1.0.5
+	o csvlens-0.3.2
 	o ctemplate-2.4
 	o cups-filters-1.28.17
 	o cutter-1.2.7
@@ -930,7 +931,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.8 [wip, https://github.com/litehtml/litehtml/issues/266]
-	o llvm-17.0.2
+	o llvm-17.0.3
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1559,6 +1560,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yahttp-0.2.1
 	o yarn-3.2.4
 	o yaz-5.30.3
+	o yazi-0.1.5
 	o yed-3.17.1
 	o yelp-tools-3.38.0
 	o yices2-2.6.2
