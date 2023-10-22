@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6047 2023/10/22 19:31:32 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6048 2023/10/22 19:32:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8884,3 +8884,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-Test-Warnings to 0.32 [wen 2023-10-22]
 	Added archivers/bkcrack version 1.5.0 [wiz 2023-10-22]
 	Updated www/crates-io-cli to 4.0.2 [pin 2023-10-22]
+	Updated textproc/csvlens to 0.3.2 [pin 2023-10-22]
