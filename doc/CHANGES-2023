@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6050 2023/10/22 19:38:33 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6051 2023/10/22 19:40:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8887,3 +8887,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/csvlens to 0.3.2 [pin 2023-10-22]
 	Updated sysutils/felix to 2.9.0 [pin 2023-10-22]
 	Updated net/tlrc to 1.6.0 [pin 2023-10-22]
+	Updated www/xh to 0.19.3 [pin 2023-10-22]
