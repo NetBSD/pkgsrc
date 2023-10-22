@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/10/10 06:23:51 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/22 19:42:04 pin Exp $
 
-DISTNAME=	yazi-0.1.4
-PKGREVISION=	1
+DISTNAME=	yazi-0.1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-# We need to fetch the sources from this specific hash as
-# it includes fixes for NetBSD not present in the release tag.
-GITHUB_TAG=	5d9b5472bab9b04a415a4453b2a385d1c736949b
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/sxyazi/yazi/
@@ -20,6 +16,9 @@ USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin share/examples/yazi
 
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
+RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yazi \
 		${DESTDIR}${PREFIX}/bin
@@ -31,4 +30,5 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/yazi
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
