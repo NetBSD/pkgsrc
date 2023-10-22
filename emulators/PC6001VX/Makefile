@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2023/10/15 15:03:07 tsutsui Exp $
+# $NetBSD: Makefile,v 1.89 2023/10/22 02:47:07 tsutsui Exp $
 
-VERSION=		4.2.2
+VERSION=		4.2.3
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
 CATEGORIES=		emulators
@@ -17,7 +17,13 @@ USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS+=	bin
 
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+.if ${OPSYS} == "NetBSD"
+# XXX assumes most major Tier-I ports have HZ=100
+QMAKE_ARGS+=		DEFINES+="DELAY_TIMER_MS_DEFAULT=10"
+.endif
 
 do-configure:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} \
