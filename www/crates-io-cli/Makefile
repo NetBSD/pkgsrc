@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2023/04/19 08:11:46 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/22 19:31:10 pin Exp $
 
-DISTNAME=	crates-io-cli-4.0.1
-PKGREVISION=	1
+DISTNAME=	crates-io-cli-4.0.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Byron/crates-io-cli/
@@ -13,11 +12,12 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
+
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
 
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
 do-install:
@@ -25,7 +25,6 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
-.include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
