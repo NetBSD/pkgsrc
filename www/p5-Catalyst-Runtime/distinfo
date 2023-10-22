@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2021/10/26 11:29:53 nia Exp $
+$NetBSD: distinfo,v 1.38 2023/10/22 08:32:27 wen Exp $
 
-BLAKE2s (Catalyst-Runtime-5.90128.tar.gz) = dffe9355c9e37f6bd24a3cd999d800cd0bc2dd064ae759f3d0814a0605c931d8
-SHA512 (Catalyst-Runtime-5.90128.tar.gz) = 73f1c16a5531e9d366bd27c10fa4be02303e516cde11117bc2e63a57f33048916b4f1cea272cee26fd97e83fdbbdc836337c02bfb4c0551e7e6b106c6d8717ee
-Size (Catalyst-Runtime-5.90128.tar.gz) = 383967 bytes
+BLAKE2s (Catalyst-Runtime-5.90131.tar.gz) = 584c380a96f2f261f8f494dbc0edc73f0dcfe219beeb126be8cd0e97b67ea52d
+SHA512 (Catalyst-Runtime-5.90131.tar.gz) = 0655e328563de48de4a7ce4043bc47a6b0422c5ab2109ceb45b32d85887affd8176f578beb7986707e778ee5e8def6c7afc92c6cc3b4a758a5d7a5dd70ca2bc9
+Size (Catalyst-Runtime-5.90131.tar.gz) = 387089 bytes
