@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6038 2023/10/22 09:59:41 wen Exp $
+$NetBSD: CHANGES-2023,v 1.6039 2023/10/22 10:03:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8876,3 +8876,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-Catalyst-Runtime to 5.90131 [wen 2023-10-22]
 	Updated www/p5-Catalyst-Plugin-Session to 0.43 [wen 2023-10-22]
 	Updated www/p5-Catalyst-View-TT to 0.46 [wen 2023-10-22]
+	Updated devel/py-configobj to 5.0.8nb1 [wiz 2023-10-22]
