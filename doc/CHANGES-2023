@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6044 2023/10/22 12:44:58 leot Exp $
+$NetBSD: CHANGES-2023,v 1.6045 2023/10/22 12:59:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8881,3 +8881,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-HTTP-Date to 6.06 [wen 2023-10-22]
 	Updated www/p5-HTTP-Message to 6.45 [wen 2023-10-22]
 	Updated devel/p5-Test2-Suite to 0.000156 [wen 2023-10-22]
+	Updated devel/p5-Test-Warnings to 0.32 [wen 2023-10-22]
