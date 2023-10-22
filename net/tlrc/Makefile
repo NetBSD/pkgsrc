@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/08/18 10:54:05 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/22 19:38:12 pin Exp $
 
-DISTNAME=	tlrc-1.5.1
+DISTNAME=	tlrc-1.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=acuteenvy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
