@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/01/24 19:34:58 adam Exp $
+$NetBSD: distinfo,v 1.6 2023/10/22 10:03:36 wiz Exp $
 
 BLAKE2s (configobj-5.0.8.tar.gz) = 48bf429420fd9e365f674118e843c5f90020cae680a7aaf008b08cd3cbdbe349
 SHA512 (configobj-5.0.8.tar.gz) = 056b1be5b2c50b03af2dbbdc37d7c0b90b1ce39e0e02aa299e7e9975f0d8445fece4224da9f73ec52ca113c7fe14c91627fbb5c12dd19c78a5aebe9aac0d9b2e
 Size (configobj-5.0.8.tar.gz) = 38012 bytes
+SHA1 (patch-src_configobj_validate.py) = 2fa9f726712cb170d30ddae845e8d7febc346e27
