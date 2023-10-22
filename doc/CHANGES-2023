@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6041 2023/10/22 10:55:05 wen Exp $
+$NetBSD: CHANGES-2023,v 1.6042 2023/10/22 12:23:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8879,3 +8879,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-configobj to 5.0.8nb1 [wiz 2023-10-22]
 	Updated www/p5-HTML-Selector-XPath to 0.28 [wen 2023-10-22]
 	Updated www/p5-HTTP-Date to 6.06 [wen 2023-10-22]
+	Updated www/p5-HTTP-Message to 6.45 [wen 2023-10-22]
