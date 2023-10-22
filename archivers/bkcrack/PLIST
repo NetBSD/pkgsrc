@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/22 18:38:59 wiz Exp $
+bin/bkcrack
+share/doc/bkcrack/license.txt
+share/doc/bkcrack/readme.md
+share/doc/bkcrack/tools/deflate.py
+share/doc/bkcrack/tools/inflate.py
+share/examples/bkcrack/secrets.zip
+share/examples/bkcrack/tutorial.md
