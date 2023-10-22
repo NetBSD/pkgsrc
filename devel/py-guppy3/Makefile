@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/15 22:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/22 11:34:58 wiz Exp $
 
 DISTNAME=	guppy3-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
