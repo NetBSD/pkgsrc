@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.4 2023/10/13 09:42:41 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.5 2023/10/22 18:46:33 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -22,4 +22,165 @@ www/curl: security fix
 
 Pullup ticket #6810 - requested by gutteridge
 www/webkit-gtk: aarch64 build fix
+
+Pullup ticket #6811 - requested by bsiegert
+textproc/libcue: security patch
+
+Pullup ticket #6812 - requested by bsiegert
+lang/go120: security update
+lang/go: version info update
+audio/gospt: RevBump
+audio/ymuse: RevBump
+chat/coyim: RevBump
+chat/gomuks: RevBump
+chat/matterircd: RevBump
+chat/senpai: RevBump
+chat/ssh-chat: RevBump
+databases/go-ldap: RevBump
+databases/influxdb: RevBump
+databases/mongo-tools: RevBump
+databases/mysqld_exporter: RevBump
+databases/postgres_exporter: RevBump
+databases/prometheus: RevBump
+databases/promscale: RevBump
+databases/sqlc: RevBump
+databases/timescaledb-tune: RevBump
+devel/asmfmt: RevBump
+devel/conftest: RevBump
+devel/errcheck: RevBump
+devel/fq: RevBump
+devel/git-lfs: RevBump
+devel/go-ed25519: RevBump
+devel/go-gocode: RevBump
+devel/go-golang-lru: RevBump
+devel/go-gopkgs: RevBump
+devel/go-goptlib: RevBump
+devel/go-goreturns: RevBump
+devel/go-gox: RevBump
+devel/go-impl: RevBump
+devel/go-logrus: RevBump
+devel/go-nbreader: RevBump
+devel/go-pty: RevBump
+devel/go-review: RevBump
+devel/go-siphash: RevBump
+devel/go-staticcheck: RevBump
+devel/go-swagger: RevBump
+devel/go-sys: RevBump
+devel/go-tools: RevBump
+devel/go-wire: RevBump
+devel/go-xerrors: RevBump
+devel/golangci-lint: RevBump
+devel/golint: RevBump
+devel/gomodifytags: RevBump
+devel/gopls: RevBump
+devel/goredo: RevBump
+devel/gotags: RevBump
+devel/gotests: RevBump
+devel/govulncheck: RevBump
+devel/lazygit: RevBump
+devel/mob: RevBump
+devel/nancy: RevBump
+devel/opa: RevBump
+devel/packr: RevBump
+devel/reftools: RevBump
+devel/regal: RevBump
+devel/revive: RevBump
+devel/shfmt: RevBump
+devel/syft: RevBump
+editors/micro: RevBump
+filesystems/kubo: RevBump
+graphics/gif2png: RevBump
+lang/joker: RevBump
+mail/opensmtpd-filter-rspamd: RevBump
+mail/opensmtpd-filter-senderscore: RevBump
+mail/postforward: RevBump
+meta-pkgs/bulk-test-essential: RevBump
+misc/exercism: RevBump
+net/amazon-ecs-cli: RevBump
+net/amfora: RevBump
+net/bombadillo: RevBump
+net/croc: RevBump
+net/czds: RevBump
+net/dnscontrol: RevBump
+net/dnscrypt-proxy2: RevBump
+net/gh: RevBump
+net/go-dnstap: RevBump
+net/go-net: RevBump
+net/go-websocket: RevBump
+net/gunison: RevBump
+net/gvproxy: RevBump
+net/hub: RevBump
+net/ipget: RevBump
+net/kubectl: RevBump
+net/libquic: RevBump
+net/mangos: RevBump
+net/nats-server: RevBump
+net/obfs4proxy: RevBump
+net/rclone: RevBump
+net/stern: RevBump
+net/syncthing: RevBump
+net/terraform-provider-archive: RevBump
+net/terraform-provider-aws: RevBump
+net/terraform-provider-kubernetes: RevBump
+net/terraform-provider-local: RevBump
+net/terraform-provider-null: RevBump
+net/terraform-provider-random: RevBump
+net/terraform-provider-template: RevBump
+net/terraform-provider-vultr: RevBump
+net/terraform: RevBump
+net/tut: RevBump
+net/vultr-cli: RevBump
+pkgtools/pkglint: RevBump
+security/2fa: RevBump
+security/age: RevBump
+security/amass: RevBump
+security/authelia: RevBump
+security/cfssl: RevBump
+security/dnsx: RevBump
+security/go-asn1-ber: RevBump
+security/go-crypto: RevBump
+security/go-getpass: RevBump
+security/go-mkcert: RevBump
+security/gopass: RevBump
+security/httpx: RevBump
+security/nuclei: RevBump
+security/oauth2c: RevBump
+security/osv-scanner: RevBump
+security/subfinder: RevBump
+security/tlsx: RevBump
+security/trufflehog: RevBump
+security/vault: RevBump
+shells/elvish: RevBump
+shells/oh-my-posh: RevBump
+sysutils/beats: RevBump
+sysutils/consul: RevBump
+sysutils/direnv: RevBump
+sysutils/fzf: RevBump
+sysutils/goreman: RevBump
+sysutils/lf: RevBump
+sysutils/node_exporter: RevBump
+sysutils/packer: RevBump
+sysutils/podman: RevBump
+sysutils/restic: RevBump
+sysutils/vultr: RevBump
+textproc/glow: RevBump
+textproc/go-kr-text: RevBump
+textproc/go-md2man: RevBump
+textproc/go-mmark: RevBump
+textproc/go-text: RevBump
+textproc/miller: RevBump
+textproc/sift: RevBump
+www/apisprout: RevBump
+www/caddy: RevBump
+www/gitea: RevBump
+www/go-ffuf: RevBump
+www/go-minify: RevBump
+www/gotosocial: RevBump
+www/grafana: RevBump
+www/hugo: RevBump
+www/jira-cli: RevBump
+www/mycorrhiza: RevBump
+www/pup: RevBump
+www/restish: RevBump
+www/shoutrrr: RevBump
 
