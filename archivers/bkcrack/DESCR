@@ -1,0 +1,11 @@
+A ZIP archive may contain many entries whose content can be compressed
+and/or encrypted. In particular, entries can be encrypted with a
+password-based symmetric encryption algorithm referred to as
+traditional PKWARE encryption, legacy encryption or ZipCrypto.
+
+bkcrack is a command-line tool which implements a known plaintext
+attack by Biham and Kocker. The main features are:
+
+    Recover internal state from ciphertext and plaintext.
+    Change a ZIP archive's password using the internal state.
+    Recover the original password from the internal state.
