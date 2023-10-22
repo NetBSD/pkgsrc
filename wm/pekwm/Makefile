@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2023/10/05 20:12:15 pin Exp $
+# $NetBSD: Makefile,v 1.64 2023/10/22 19:36:42 pin Exp $
 
 DISTNAME=	pekwm-0.3.0
 CATEGORIES=	wm
@@ -18,12 +18,6 @@ CMAKE_ARGS+=	-DAWK=${AWK}
 CMAKE_ARGS+=	-DSED=${SED}
 CMAKE_ARGS+=	-DSH=${SH}
 CMAKE_ARG_PATH=	${WRKSRC}
-
-CONFIGURE_DIRS=	build
-BUILD_DIRS=	build
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
