@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6029 2023/10/21 23:26:52 osa Exp $
+$NetBSD: CHANGES-2023,v 1.6030 2023/10/22 02:48:32 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8867,3 +8867,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/unit-php to 1.31.1 [osa 2023-10-21]
 	Updated www/unit-python to 1.31.1 [osa 2023-10-21]
 	Updated www/unit-ruby to 1.31.1 [osa 2023-10-21]
+	Updated emulators/PC6001VX to 4.2.3 [tsutsui 2023-10-22]
