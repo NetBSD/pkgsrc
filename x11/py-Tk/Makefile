@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2023/01/29 21:18:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.73 2023/10/22 11:34:58 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	7
@@ -17,6 +17,9 @@ PY_SETUP_SUBST+=	TCLRTPREFIX=${BUILDLINK_PREFIX.tcl}
 PY_SETUP_SUBST+=	TKRTPREFIX=${BUILDLINK_PREFIX.tk}
 PY_SETUP_SUBST+=	X11BASE=${X11BASE}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
+
+# srcdist.mk needs to be adapted for distutils removal in 3.12
+PYTHON_VERSIONS_ACCEPTED=	311 310 39 38 27
 
 .include "../../mk/bsd.prefs.mk"
 
