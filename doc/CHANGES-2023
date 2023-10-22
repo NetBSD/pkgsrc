@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6034 2023/10/22 08:06:16 wen Exp $
+$NetBSD: CHANGES-2023,v 1.6035 2023/10/22 08:16:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8872,3 +8872,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/p5-CGI to 4.59 [wen 2023-10-22]
 	Updated www/p5-CGI-Compile to 0.26 [wen 2023-10-22]
 	Updated www/p5-HTML-Quoted to 0.05 [wen 2023-10-22]
+	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.52 [wen 2023-10-22]
