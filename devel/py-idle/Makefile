@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/03/29 09:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/22 11:34:57 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
@@ -10,6 +10,9 @@ COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PY_PATCHPLIST=	yes
+
+# srcdist.mk needs to be adapted for distutils removal in 3.12
+PYTHON_VERSIONS_ACCEPTED=	311 310 39 38 27
 
 #
 # With Python-2.3 and up, the Idle code is part of the base library.
