@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.19 2020/08/24 20:03:12 leot Exp $
+# $NetBSD: options.mk,v 1.20 2023/10/22 13:34:31 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
-PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2
+PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2 brotli
 PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 
@@ -60,4 +60,11 @@ TEST_DEPENDS+=		nghttp2-tools-[0-9]*:../../www/nghttp2-tools
 .include "../../www/nghttp2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-nghttp2
+.endif
+
+.if !empty(PKG_OPTIONS:Mbrotli)
+.include "../../archivers/brotli/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-brotli
+.else
+CONFIGURE_ARGS+=	--without-brotli
 .endif
