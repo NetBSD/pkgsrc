@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/18 08:57:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/23 11:48:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,7 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/uvloop/__init__.py
 ${PYSITELIB}/uvloop/__init__.pyc
-${PYSITELIB}/uvloop/__init__.pyi
 ${PYSITELIB}/uvloop/__init__.pyo
 ${PYSITELIB}/uvloop/_noop.py
 ${PYSITELIB}/uvloop/_noop.pyc
@@ -53,17 +52,13 @@ ${PYSITELIB}/uvloop/handles/udp.pyx
 ${PYSITELIB}/uvloop/includes/__init__.py
 ${PYSITELIB}/uvloop/includes/__init__.pyc
 ${PYSITELIB}/uvloop/includes/__init__.pyo
-${PYSITELIB}/uvloop/includes/compat.h
 ${PYSITELIB}/uvloop/includes/consts.pxi
-${PYSITELIB}/uvloop/includes/debug.h
 ${PYSITELIB}/uvloop/includes/debug.pxd
 ${PYSITELIB}/uvloop/includes/flowcontrol.pxd
-${PYSITELIB}/uvloop/includes/fork_handler.h
 ${PYSITELIB}/uvloop/includes/python.pxd
 ${PYSITELIB}/uvloop/includes/stdlib.pxi
 ${PYSITELIB}/uvloop/includes/system.pxd
 ${PYSITELIB}/uvloop/includes/uv.pxd
-${PYSITELIB}/uvloop/loop.c
 ${PYSITELIB}/uvloop/loop.pxd
 ${PYSITELIB}/uvloop/loop.pyi
 ${PYSITELIB}/uvloop/loop.pyx
