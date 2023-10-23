@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6058 2023/10/23 08:07:10 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6059 2023/10/23 11:13:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8907,3 +8907,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-charset-normalizer to 3.3.1 [adam 2023-10-23]
 	Updated time/py-tzlocal to 5.2 [adam 2023-10-23]
 	Added lang/ghc96 version 9.6.3 [pho 2023-10-23]
+	Updated lang/py-cmake-language-server to 0.1.8 [adam 2023-10-23]
+	Updated www/py-httptools to 0.6.1 [adam 2023-10-23]
