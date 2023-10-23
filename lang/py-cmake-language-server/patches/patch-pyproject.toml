@@ -1,19 +1,15 @@
-$NetBSD: patch-pyproject.toml,v 1.2 2023/05/05 09:56:30 wiz Exp $
+$NetBSD: patch-pyproject.toml,v 1.3 2023/10/23 11:09:04 adam Exp $
 
-Switch to pdm-backend
-https://github.com/regen100/cmake-language-server/issues/76
+Allow Python 3.12
 
---- pyproject.toml.orig	2023-03-09 10:01:30.924441300 +0000
+--- pyproject.toml.orig	2023-10-17 14:00:48.524893800 +0000
 +++ pyproject.toml
-@@ -38,9 +38,9 @@ cmake-language-server = "cmake_language_
- 
- [build-system]
- requires = [
--    "pdm-pep517>=1.0.0",
-+    "pdm-backend>=1.0.0",
+@@ -8,7 +8,7 @@ authors = [
+ dependencies = [
+     "pygls>=1.1.1",
  ]
--build-backend = "pdm.pep517.api"
-+build-backend = "pdm.backend"
- 
- [tool.pdm.version]
- source = "scm"
+-requires-python = ">=3.7.9,<3.12"
++requires-python = ">=3.7.9,<3.13"
+ readme = "README.md"
+ keywords = [
+     "cmake",
