@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.2 2023/09/15 07:40:05 sborrill Exp $
+$NetBSD: distinfo,v 1.3 2023/10/23 14:27:33 taca Exp $
 
-BLAKE2s (squid-6.3.tar.xz) = d5eb9f8effce2f9901e8e16c56e4b308dd98d231ffadb94713161e60d4d211f3
-SHA512 (squid-6.3.tar.xz) = add8718895ceccc130d31e6cbf9fbdb7fd45a778a617e9f02bf310babe72106e1dc14ac8b3dc81d31e1f4cace66d9d72176dd82f1652d7248a478fa10ffb6b87
-Size (squid-6.3.tar.xz) = 2547264 bytes
+BLAKE2s (squid-6.4.tar.xz) = 8e3e1aff333577fcfe51b8df9b0b0293c88fcc1bb8c9fbcd737bc268eee1ac0e
+SHA512 (squid-6.4.tar.xz) = 7bbf759841448874090a145699ee01f67696c19da147e433b1ecc80a856095cbfae611ef910bc4f2c44218101d89f2ee13796f5b7ada2e21e95638d4dae077ab
+Size (squid-6.4.tar.xz) = 2553476 bytes
 SHA1 (patch-compat_compat.h) = 839381a5e1f46e7d9b822bbb53d82a53c996ddc0
 SHA1 (patch-configure) = 66bf56c83876452ba12727d5d957619d75f4d1bc
 SHA1 (patch-errors_Makefile.in) = e7ba371bb24e40eeb9dd10dc6fe12d208e681d72
 SHA1 (patch-src_Makefile.in) = afc5aefd97c46d1ffab43e97aeaeade3a5a8c648
 SHA1 (patch-src_acl_external_kerberos__ldap__group_support__resolv.cc) = 0ea41d55e32d689a16e012391a9eea67631daf3a
-SHA1 (patch-src_auth_ntlm_Scheme.cc) = 4f966c26bf6293cdfb0cf02970c3b03bbc348dee
-SHA1 (patch-src_base_RunnersRegistry.h) = d4cf35a85e2978155927fb2ea7111fb9429f9dfc
 SHA1 (patch-src_comm_ModKqueue.cc) = d8c5d235f07a48731275101d60fcbf2e22f77b96
 SHA1 (patch-src_esi_VarState.cc) = d9418e59cdc390b2d970195167a99bb7ed392c38
-SHA1 (patch-src_main.cc) = 0655bdd4cac956e5fe83149cf03455e5a39a03a5
 SHA1 (patch-tools_Makefile.in) = d098c0c9dc4af577f74e562d99f07ed98be5ae01
