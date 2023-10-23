@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/08/14 05:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/10/23 06:37:58 wiz Exp $
 
 DISTNAME=	driconf-0.9.1
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -10,7 +10,6 @@ HOMEPAGE=	https://dri.freedesktop.org/wiki/DriConf
 COMMENT=	Configuration applet for DRI drivers
 LICENSE=	gnu-gpl-v2 # or later
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.4:../../x11/py-gtk2
 DEPENDS+=	xdriinfo>=1.0.2:../../x11/xdriinfo
 
@@ -41,6 +40,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/driconf.desktop \
 		${DESTDIR}${PREFIX}/share/applications/
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

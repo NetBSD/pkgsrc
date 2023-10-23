@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/04/30 18:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/23 06:37:42 wiz Exp $
 
 DISTNAME=	setuptools-44.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
 EXTRACT_SUFX=	.zip
@@ -11,7 +12,6 @@ HOMEPAGE=	https://github.com/pypa/setuptools
 COMMENT=	New Python packaging system (python 2.x version)
 LICENSE=	python-software-foundation OR zpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
@@ -27,6 +27,7 @@ PYSETUPTESTTARGET=	pytest
 
 BOOTSTRAP_SETUPTOOLS=	yes
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

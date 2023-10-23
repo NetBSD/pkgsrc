@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2023/09/13 19:27:34 adam Exp $
+# $NetBSD: Makefile,v 1.76 2023/10/23 06:37:43 wiz Exp $
 
 DISTNAME=	virtualenv-20.24.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
 
@@ -15,7 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.14:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.3.6:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.11:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.2:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-enable-subprocess>=1:../../devel/py-coverage-enable-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7:../../devel/py-flaky
@@ -44,6 +44,7 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/09/16 04:23:06 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/23 06:37:40 wiz Exp $
 
 DISTNAME=	extension-helpers-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/extension-helpers/}
 
@@ -12,7 +13,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=43.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -25,5 +25,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} extension_helpers
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

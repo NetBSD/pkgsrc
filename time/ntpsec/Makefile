@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:55 wiz Exp $
 
 DISTNAME=	ntpsec-1.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 MASTER_SITES=	https://ftp.ntpsec.org/pub/releases/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ntpsec.org/
 COMMENT=	Hardened & improved NTP implementation derived from NTP Classic
 LICENSE=	cc-by-v4.0 AND 2-clause-bsd AND modified-bsd AND mit
-
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	waf-[0-9]*:../../devel/waf
@@ -34,6 +32,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/waf/waf.mk"
 .include "../../geography/gpsd/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/openssl/buildlink3.mk"

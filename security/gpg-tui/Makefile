@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2023/09/10 18:32:22 pin Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/23 06:37:51 wiz Exp $
 
 DISTNAME=	gpg-tui-0.10.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +16,6 @@ LICENSE=	mit
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/lib
@@ -29,6 +29,7 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"

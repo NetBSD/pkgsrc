@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2023/10/21 17:10:23 gdt Exp $
+# $NetBSD: Makefile,v 1.87 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=		comix-4.0.4
 PKGREVISION=		52
@@ -11,7 +11,6 @@ COMMENT=		Image viewer specifically designed to handle comic books
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
-DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 MANCOMPRESSED=		yes
 
@@ -35,6 +34,7 @@ do-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.5
 .include "../../graphics/py-imaging/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

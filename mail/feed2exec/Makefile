@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/08/14 05:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/23 06:37:47 wiz Exp $
 
 DISTNAME=		feed2exec-0.19.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		3
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITLAB:=anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/}
 
@@ -25,7 +25,6 @@ DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=		${PYPKGPREFIX}-requests-file-[0-9]*:../../devel/py-requests-file
-DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 DEPENDS+=		${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
@@ -51,9 +50,7 @@ post-extract:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-#post-install:
-#	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/feed2exec/__pycache__/
-
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

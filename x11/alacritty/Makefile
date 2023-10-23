@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/10/04 11:46:35 pin Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:58 wiz Exp $
 
 DISTNAME=	alacritty-0.12.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -11,7 +12,6 @@ COMMENT=	Cross-platform, GPU-accelerated terminal emulator
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
@@ -62,6 +62,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"

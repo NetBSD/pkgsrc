@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:49 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../net/py-nyx/Makefile.common"
 
 PKGNAME=	nyx-${VERSION}
@@ -13,10 +13,10 @@ HOMEPAGE=	https://nyx.torproject.org/
 COMMENT=	Command-line monitor for the tor daemon
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-nyx>=${VERSION}:../../net/py-nyx
 
 META_PACKAGE=	yes
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

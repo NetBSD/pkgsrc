@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:57 wiz Exp $
 
 DISTNAME=	tuir-1.29.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tuir/}
 
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-kitchen-[0-9]*:../../devel/py-kitchen
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
@@ -27,5 +26,6 @@ SUBST_SED.man+=		-e "s,share/man/man1,${PKGMANDIR}/man1,g"
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_PKG_RESOURCES=		yes
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2023/08/14 05:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2023/10/23 06:37:39 wiz Exp $
 
 DISTNAME=	gobject-introspection-1.76.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/GObjectIntrospection
 COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
-
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -61,6 +58,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.74.0
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

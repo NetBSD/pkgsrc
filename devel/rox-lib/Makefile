@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/08/14 05:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/10/23 06:37:44 wiz Exp $
 
 DISTNAME=	rox-lib-2.0.2
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,6 @@ HOMEPAGE=	http://rox.sourceforge.net/desktop/node/46
 COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=2.2.0:../../sysutils/rox
-DEPENDS+=	${PYPKGPREFIX}-expat>=0nb2:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.13:../../x11/py-gtk2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Lib2
@@ -46,5 +45,6 @@ SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/rox/ROX-Lib2
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

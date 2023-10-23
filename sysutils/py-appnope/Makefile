@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/06/06 12:42:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	appnope-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/appnope/}
 
@@ -12,11 +13,8 @@ LICENSE=	modified-bsd
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-# setup.py uses platform, which in turn uses pyexpat in parsing
-# SystemVersion.plist on Darwin.
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 USE_LANGUAGES=	# none
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

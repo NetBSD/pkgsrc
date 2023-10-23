@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/10/21 17:09:51 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2023/10/23 06:37:33 wiz Exp $
 
 DISTNAME=	gajim-1.3.3
 PKGREVISION=	6
@@ -27,7 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-nbxmpp>=2.0.1:../../chat/py-nbxmpp
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-precis-i18n-[0-9]*:../../textproc/py-precis-i18n
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,6 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa-[0-9]*:../../devel/py-pyobjc-fra
 .include "options.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"

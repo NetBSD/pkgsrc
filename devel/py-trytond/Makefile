@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/01/05 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:43 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=     devel python
 
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-python-sql>=0.5:../../databases/py-python-sql
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
@@ -35,6 +34,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

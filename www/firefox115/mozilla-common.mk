@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2023/09/11 12:33:25 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2023/10/23 06:37:56 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -31,10 +31,6 @@ USE_TOOLS+=		diff
 .else
 CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
 .endif
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 # malloc_usable_size()
 LDFLAGS.NetBSD+=	-ljemalloc
@@ -260,4 +256,5 @@ PLIST.wayland=		yes
 .else
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
 .endif
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
