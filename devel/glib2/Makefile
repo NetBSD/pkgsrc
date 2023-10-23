@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2023/09/16 03:09:01 adam Exp $
+# $NetBSD: Makefile,v 1.296 2023/10/23 06:37:38 wiz Exp $
 
 .include "Makefile.common"
 
@@ -77,7 +77,6 @@ PKGCONFIG_OVERRIDE+=	output/meson-private/gthread-2.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PYTHON_FOR_BUILD_ONLY=	yes
 
 post-extract:
@@ -89,6 +88,7 @@ post-extract:
 .include "../../devel/meson/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

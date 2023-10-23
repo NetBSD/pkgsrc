@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/05/21 17:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	Glances-3.4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/Glances/}
 
@@ -12,8 +13,6 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.3.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-ujson-[0-9]*:../../textproc/py-ujson
@@ -41,5 +40,6 @@ post-install:
 	${MV} share/doc/glances share/doc/glances-${PYVERSSUFFIX} && \
 	${MV} share/examples/glances share/examples/glances-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

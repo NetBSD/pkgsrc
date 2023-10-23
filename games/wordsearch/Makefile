@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	wordsearch-2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 GITHUB_PROJECT=	wordsearch
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jensenpat/}
@@ -11,8 +11,6 @@ MAINTAINER=	patj@passpackets.com
 HOMEPAGE=	https://github.com/jensenpat/wordsearch/
 COMMENT=	Classic word search game that you can play in your terminal
 LICENSE=	2-clause-bsd
-
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 NO_BUILD=	yes
 
@@ -32,5 +30,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/wordsearch.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
 	${INSTALL_DATA} ${WRKSRC}/puzzles/*.txt ${DESTDIR}${PREFIX}/share/wordsearch/
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

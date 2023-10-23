@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.315 2023/10/15 07:26:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.316 2023/10/23 06:37:49 wiz Exp $
 
 VERREL=		7.6.2
 VERRC=		1
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -157,7 +158,6 @@ EXTRACT_USING=		bsdtar
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 
 LDFLAGS+=		-lboost_system
@@ -375,6 +375,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/zxing-cpp/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 # workaround for dtoa.h conflict with python and dtoa:
 # Do not pass -I${PREFIX}/include/python?.? to CPPFLAGS/CFLAGS/CXXFLAGS always.

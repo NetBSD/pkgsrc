@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/08/14 05:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	lshell-0.9.16
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lshell/}
 
@@ -9,8 +9,6 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://ghantoos.org/limited-shell-lshell/
 COMMENT=	Restrict user environment to specified commands
 LICENSE=	gnu-gpl-v3
-
-DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 PKG_GROUPS=	lshellg
 PKG_SHELL=	bin/lshell
@@ -32,6 +30,7 @@ INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/logrotate.d ${PKGMANDIR}/man1
 CONF_FILES=		${PREFIX}/${EGDIR}/lshell.conf \
 			${PKG_SYSCONFDIR}/lshell.conf
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

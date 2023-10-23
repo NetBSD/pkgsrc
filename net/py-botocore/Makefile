@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2023/09/15 14:34:47 leot Exp $
+# $NetBSD: Makefile,v 1.63 2023/10/23 06:37:50 wiz Exp $
 
 DISTNAME=	botocore-1.31.47
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
 
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/boto/botocore
 COMMENT=	Low-level interface to a growing number of Amazon Web Services
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.4:../../www/py-urllib3
@@ -20,5 +19,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

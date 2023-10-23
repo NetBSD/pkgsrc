@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2023/04/19 08:09:46 adam Exp $
-#
+# $NetBSD: Makefile,v 1.55 2023/10/23 06:37:42 wiz Exp $
 
 VERS=		1.9.15
 DISTNAME=	pysvn-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysvn/}
 
@@ -12,8 +11,6 @@ MAINTAINER=		helgoman@users.sourceforge.net
 HOMEPAGE=		https://pysvn.sourceforge.io/
 COMMENT=		Python interface to Subversion
 LICENSE=		apache-1.1
-
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++
 
@@ -51,6 +48,7 @@ do-install:
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

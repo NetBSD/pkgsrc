@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/08/14 05:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/10/23 06:37:32 wiz Exp $
 
 DISTNAME=		cplay-1.49
 PKGREVISION=		9
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://mask.tf.hut.fi/~flu/hacks/cplay/
 COMMENT=		Curses front-end for various audio players
 LICENSE=		gnu-gpl-v2
-
-DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
 PYTHON_VERSIONS_ACCEPTED=	27
 REPLACE_PYTHON=			cplay
@@ -49,4 +47,5 @@ do-install:
 .endfor
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../mk/bsd.pkg.mk"

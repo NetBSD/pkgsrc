@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2023/08/14 05:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/10/23 06:37:35 wiz Exp $
 
 DISTNAME=	telepathy-idle-0.1.8
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-idle/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://telepathy.freedesktop.org/wiki/Components
 COMMENT=	Full-featured IRC connection manager for Telepathy
 LICENSE=	gnu-lgpl-v2.1
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.1.8
 
@@ -28,6 +26,7 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 # needs py-twisted
 # TEST_TARGET= check
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"

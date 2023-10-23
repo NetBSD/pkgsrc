@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2023/10/20 07:00:07 pin Exp $
+# $NetBSD: Makefile,v 1.59 2023/10/23 06:37:45 wiz Exp $
 
 DISTNAME=	tp-note-1.22.9
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -9,8 +10,6 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
 COMMENT=	Minimalistic note taking and template system
 LICENSE=	mit OR apache-2.0
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
@@ -36,6 +35,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

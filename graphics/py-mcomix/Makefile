@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/07/03 13:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	mcomix-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.36.0:../../devel/py-gobject3
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 
 USE_LANGUAGES=	# none
 
@@ -34,5 +33,6 @@ SUBST_SED.path=		-e s,share/man,${PKGMANDIR},g
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

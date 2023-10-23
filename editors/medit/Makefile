@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2023/10/21 17:10:05 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2023/10/23 06:37:44 wiz Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	26
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mooedit.sourceforge.net/index.html
 COMMENT=	Programming and around-programming text editor
 LICENSE=	gnu-lgpl-v2.1
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -26,6 +24,7 @@ CONFIGURE_ENV+=			MOO_PYTHON=${PYTHONBIN}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

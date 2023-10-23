@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2023/10/21 17:09:58 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/23 06:37:39 wiz Exp $
 
 PKGREVISION= 32
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
 COMMENT=	Tools for development with libdbusemenu
-
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--enable-dumper
@@ -29,6 +27,7 @@ BUILD_DIRS=	tools
 REPLACE_PYTHON+=	tools/dbusmenu-bench
 
 .include "../../devel/libdbusmenu-glib/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"

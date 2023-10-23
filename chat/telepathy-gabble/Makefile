@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2023/08/14 05:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/10/23 06:37:34 wiz Exp $
 
 DISTNAME=	telepathy-gabble-0.18.3
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://telepathy.freedesktop.org/wiki/Components
 COMMENT=	Jabber/XMPP connection manager for Telepathy
 LICENSE=	gnu-lgpl-v2.1 AND mit
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=		yes
 OVERRIDE_DIRDEPTH=	3
@@ -43,6 +41,7 @@ BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.37
 .include "../../chat/telepathy-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.21.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../net/libnice/buildlink3.mk"

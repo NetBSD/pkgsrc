@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2023/08/17 21:41:45 leot Exp $
+# $NetBSD: Makefile,v 1.92 2023/10/23 06:37:49 wiz Exp $
 
 DISTNAME=	gallery_dl-1.25.8
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	https://github.com/mikf/gallery-dl
 COMMENT=	Command-line program to download image galleries and collections
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.11.0:../../devel/py-requests
 
 SUBST_CLASSES+=		paths
@@ -27,5 +27,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

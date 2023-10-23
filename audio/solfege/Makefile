@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2023/10/21 17:09:47 gdt Exp $
+# $NetBSD: Makefile,v 1.92 2023/10/23 06:37:33 wiz Exp $
 
 DISTNAME=		solfege-3.23.4
 PKGREVISION=		3
@@ -10,7 +10,6 @@ HOMEPAGE=		https://www.gnu.org/software/solfege/
 COMMENT=		Practice several musical ear training exercises
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
@@ -74,6 +73,7 @@ OGGPLAYER=	${PREFIX}/bin/ogg123
 post-install:
 	find ${DESTDIR}${PREFIX} -type d -name __pycache__ | xargs rm -rf
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
