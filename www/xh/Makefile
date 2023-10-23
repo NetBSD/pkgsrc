@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2023/10/22 19:40:04 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 07:49:28 pin Exp $
 
-DISTNAME=	xh-0.19.3
+DISTNAME=	xh-0.19.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ducaale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/ducaale/xh/
 COMMENT=	Friendly and fast tool for sending HTTP requests
 LICENSE=	mit
