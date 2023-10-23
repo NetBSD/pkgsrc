@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2023/05/29 23:33:48 gutteridge Exp $
+$NetBSD: distinfo,v 1.94 2023/10/23 06:35:59 wiz Exp $
 
 BLAKE2s (Python-2.7.18.tar.xz) = 1b673ec8c9362a178e044691392bc4f67ad13457d7fddd84a88de346f23f9812
 SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
@@ -62,4 +62,4 @@ SHA1 (patch-Modules_sunaudiodev.c) = d836d77854a2b3d79fa34a06a8e2493bf0a503e6
 SHA1 (patch-Python_thread__pthread.h) = 517cfefc2f2e13631d22bad28c327513cdf17c10
 SHA1 (patch-configure) = a8bcacd360ca3a451c43a05a4be3bcea56f70617
 SHA1 (patch-pyconfig.h.in) = 66d1a685e17ef7977bf09cdc64bdf80087216bc7
-SHA1 (patch-setup.py) = 4ab14fc01a1622b7a35bfb45b93a12d16dfc8b82
+SHA1 (patch-setup.py) = 9a4007fd03be0020d7997807c7fef0c2bd21fdfd
