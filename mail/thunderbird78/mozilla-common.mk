@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2023/02/05 08:32:24 he Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2023/10/23 06:37:48 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -28,9 +28,6 @@ CONFIGURE_ARGS+=	--disable-nodejs
 .else
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
@@ -210,4 +207,5 @@ PLIST_VARS+=		wayland
 .if ${PKG_BUILD_OPTIONS.gtk3:Mwayland}
 PLIST.wayland=		yes
 .endif
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2023/10/21 17:11:40 gdt Exp $
+# $NetBSD: Makefile,v 1.251 2023/10/23 06:37:58 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -16,7 +16,6 @@ LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=	c c++17
 USE_TOOLS+=	automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
@@ -113,6 +112,7 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 CMAKE_ARGS+=	-DRUBY_EXECUTABLE=${RUBY}
 
 PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 

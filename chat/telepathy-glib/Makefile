@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2023/08/14 05:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2023/10/23 06:37:34 wiz Exp $
 
 DISTNAME=	telepathy-glib-0.24.1
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-glib/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://telepathy.freedesktop.org/components/telepathy-glib/
 COMMENT=	GObject-based C binding for the Telepathy D-Bus API
 LICENSE=	gnu-gpl-v2 AND modified-bsd
-
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-vala-bindings
@@ -29,6 +27,7 @@ BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.36
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.30.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.90

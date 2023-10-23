@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/10/15 20:29:48 he Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:51 wiz Exp $
 
 DISTNAME=	denyhosts-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 LICENSE=	gnu-gpl-v2
@@ -33,14 +33,13 @@ PYTHON_SELF_CONFLICT=		yes
 RCD_SCRIPTS+=	denyhosts
 SMF_NAME=	denyhost
 
-DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
-
 post-install:
 	mv ${DESTDIR}/${PKG_SYSCONFDIR}/denyhosts.conf \
 		${DESTDIR}/${PREFIX}/${EGDIR}/denyhosts.conf
 
 EGG_NAME=	DenyHosts-${PKGVERSION_NOREV}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

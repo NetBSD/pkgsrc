@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/10/21 17:11:54 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2023/10/23 06:37:58 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -19,8 +19,6 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 #TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 #TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 TOOL_DEPENDS+=	nodejs>=14:../../lang/nodejs
 
@@ -101,6 +99,7 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 .include "../../graphics/libwebp/buildlink3.mk"
 #PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	tool
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"

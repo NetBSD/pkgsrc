@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2023/10/16 19:16:58 adam Exp $
+# $NetBSD: Makefile,v 1.22 2023/10/23 06:37:47 wiz Exp $
 
 DISTNAME=	node-v18.18.2
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++17
 
 USE_CXX_FEATURES+=	c++17 charconv
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,6 +44,8 @@ minusx:
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/nodejs/Makefile.common"
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"

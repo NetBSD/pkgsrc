@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2023/10/11 09:02:17 adam Exp $
+# $NetBSD: Makefile,v 1.95 2023/10/23 06:37:45 wiz Exp $
 
 DISTNAME=	fonttools-4.43.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
 
@@ -11,8 +12,6 @@ COMMENT=	Library for manipulating fonts
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-# lxml
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.0:../../textproc/py-lxml
 # ufo
 DEPENDS+=	${PYPKGPREFIX}-fs>=2.2.0:../../filesystems/py-fs
@@ -44,5 +43,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
 	${MV} ttx.1 ttx-${PYVERSSUFFIX}.1 || ${TRUE}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

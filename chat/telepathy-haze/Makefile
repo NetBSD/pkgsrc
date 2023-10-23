@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/08/14 05:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:34 wiz Exp $
 
 DISTNAME=	telepathy-haze-0.8.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-haze/
 
@@ -10,12 +10,11 @@ MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	Libpurple connection manager for Telepathy
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 GNU_CONFIGURE=	yes
 USE_TOOLS=	gmake pkg-config
 PYTHON_VERSIONS_ACCEPTED= 27 # as of 0.8.0
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"

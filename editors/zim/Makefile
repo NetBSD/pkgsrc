@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/10/21 17:10:07 gdt Exp $
+# $NetBSD: Makefile,v 1.55 2023/10/23 06:37:45 wiz Exp $
 
 DISTNAME=	zim-0.74.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 USE_LANGUAGES=	# none
@@ -36,6 +34,7 @@ SUBST_STAGE.man-path=		pre-configure
 SUBST_FILES.man-path+=		setup.py
 SUBST_SED.man-path=		-e s,share/man/man1,${PKGMANDIR}/man1,
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../x11/gtk3/buildlink3.mk"

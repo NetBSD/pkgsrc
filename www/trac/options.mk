@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/06/11 05:30:23 maya Exp $
+# $NetBSD: options.mk,v 1.5 2023/10/23 06:37:57 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
+.include "../../lang/python/batteries-included.mk"
 .endif
 # trac 0.12 dropped support for py-PgSQL.  Switching to py-psycopg2 with
 # an existing database that used to be accessed by py-PgSQL worked.

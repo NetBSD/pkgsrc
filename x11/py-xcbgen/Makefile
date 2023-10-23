@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2023/08/19 07:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/23 06:37:58 wiz Exp $
 #
 # When updating this, also update x11/xcb-proto
 
 DISTNAME=	xcb-proto-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/xcb-proto/xcbgen/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
 EXTRACT_SUFX=	.tar.xz
@@ -12,9 +13,6 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	XCB protocol descriptions (in XML)
 LICENSE=	mit # with no-advertising clause
-
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CONFLICTS+=	xcb-proto<1.4nb1
 
@@ -27,5 +25,6 @@ PY_PATCHPLIST=	yes
 post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/xcbgen/__pycache__/*opt-2*pyc
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

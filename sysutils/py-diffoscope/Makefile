@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/01/28 00:50:28 khorben Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	diffoscope-233
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
 
@@ -12,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-libarchive-c-[0-9]*:../../archivers/py-libarchive-c
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-tlsh-[0-9]*:../../devel/py-tlsh
 DEPENDS+=	colordiff-[0-9]*:../../devel/colordiff
 # for xxd
@@ -30,5 +30,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} diffoscope diffoscope-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

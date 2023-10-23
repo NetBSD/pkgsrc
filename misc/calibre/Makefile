@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2023/10/21 17:11:02 gdt Exp $
+# $NetBSD: Makefile,v 1.289 2023/10/23 06:37:49 wiz Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
@@ -36,7 +36,6 @@ DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
 
 # for installation
@@ -127,6 +126,7 @@ do-test:
 
 .include "options.mk"
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../archivers//bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

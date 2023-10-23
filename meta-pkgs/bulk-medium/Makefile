@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2023/10/20 07:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2023/10/23 06:37:49 wiz Exp $
 
-DISTNAME=	bulk-medium-20231020
+DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -151,7 +151,6 @@ DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	${PYPKGPREFIX}-bsddb3-[0-9]*:../../databases/py-bsddb3
 DEPENDS+=	${PYPKGPREFIX}-postgresql-[0-9]*:../../databases/py-postgresql
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	SDL2-[0-9]*:../../devel/SDL2
 DEPENDS+=	atk-[0-9]*:../../devel/atk
 DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc

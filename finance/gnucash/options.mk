@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2023/06/06 12:41:22 riastradh Exp $
+# $NetBSD: options.mk,v 1.8 2023/10/23 06:37:45 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnucash
 PKG_SUPPORTED_OPTIONS=	libdbi libofx gnucash-finance-quote python
@@ -37,8 +37,8 @@ REPLACE_PYTHON+=		gnucash/python/pycons/*.py
 PY_PATCHPLIST=			yes
 PLIST_SRC+=			PLIST.python
 
-# /usr/pkg/share/gnucash/python/pycons/console.py imports readline
-DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
+.include "../../lang/python/batteries-included.mk"
+
 # /usr/pkg/share/gnucash/python/init.py imports gi
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 

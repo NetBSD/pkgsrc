@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:48 wiz Exp $
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=newspipe/}
 EXTRACT_SUFX=		.zip
@@ -11,7 +11,6 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://newspipe.sourceforge.net/
 COMMENT=		Read RSS/Atom feeds as email messages
 
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 
@@ -45,5 +44,6 @@ do-install:
 	${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/examples/newspipe; \
 	done
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

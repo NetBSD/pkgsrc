@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/23 06:37:55 wiz Exp $
 
 DISTNAME=	khal-0.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=4.0.3:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2018.7:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=1.0:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.0:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
@@ -54,6 +53,7 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

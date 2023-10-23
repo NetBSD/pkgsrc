@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.176 2023/08/30 12:35:58 adam Exp $
+# $NetBSD: Makefile,v 1.177 2023/10/23 06:37:38 wiz Exp $
 
 DISTNAME=	doxygen-1.9.8.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://doxygen.nl/files/
@@ -11,8 +12,6 @@ COMMENT=	Documentation system for C++, Java, IDL and C
 LICENSE=	gnu-gpl-v2
 
 EXTRACT_USING=	gtar # Cannot restore extended attributes
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
@@ -74,5 +73,6 @@ post-install:
 .include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

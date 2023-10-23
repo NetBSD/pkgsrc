@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/09/06 12:01:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:57 wiz Exp $
 
 DISTNAME=	py-sydent-2.5.6
 EGG_NAME=	SynapseIdentityServer-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
 CATEGORIES=	www
 GITHUB_PROJECT=	sydent
@@ -30,7 +30,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
 DEPENDS+=	${PYPKGPREFIX}-signedjson-[0-9]*:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64-[0-9]*:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
@@ -79,6 +78,7 @@ post-configure:
 post-install:
 	${INSTALL_DATA}	${WRKSRC}/sydent.conf ${DESTDIR}${EGDIR}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

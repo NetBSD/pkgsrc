@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2023/08/14 05:24:23 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/10/23 06:37:45 wiz Exp $
 
 VERSION_BASE=	1.18.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -17,9 +17,6 @@ USE_TOOLS=	gmake
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
-
-# The world sees this as part of base python.
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 ## Dependencies are from tahoe's setup.py, in order, and try to follow
 ## setup.py's version requirements.
@@ -87,6 +84,7 @@ PKG_GECOS.tahoes=	tahoe server
 #do-test:
 #	cd ${WRKSRC} && py.test-3.8
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

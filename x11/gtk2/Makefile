@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2023/10/21 17:11:44 gdt Exp $
+# $NetBSD: Makefile,v 1.334 2023/10/23 06:37:58 wiz Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -11,9 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gtk.org/
 COMMENT=	GIMP Toolkit v2 - libraries for building X11 user interfaces
 LICENSE=	gnu-lgpl-v2.1
-
-# gtk-builder-convert uses minidom from xml.dom, which needs expat
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CONFLICTS=		gtk2-engines<2.6.0
 CONFLICTS+=		gail-[0-9]*
@@ -110,6 +107,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 #.include "../../mk/jpeg.buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"

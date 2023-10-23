@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:51 wiz Exp $
 
 DISTNAME=	fail2ban-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fail2ban/}
 
@@ -9,8 +9,6 @@ MAINTAINER=	nils@NetBSD.org
 HOMEPAGE=	http://www.fail2ban.org/
 COMMENT=	Scans log files and bans IP that makes too many password failures
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
@@ -120,5 +118,6 @@ post-install:
 
 .include "options.mk"
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
