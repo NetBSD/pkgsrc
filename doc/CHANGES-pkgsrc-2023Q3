@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.5 2023/10/22 18:46:33 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.6 2023/10/23 18:37:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -183,4 +183,13 @@ www/mycorrhiza: RevBump
 www/pup: RevBump
 www/restish: RevBump
 www/shoutrrr: RevBump
+
+Pullup ticket #6813 - requested by prlw1
+mail/exim: security fix
+
+Pullup ticket #6814 - requested by abs
+x11/lxqt-panel: NetBSD 10 bugfix
+
+Pullup ticket #6815 - requested by gdt
+mail/p5-Mail-DKIM: add missing dependency
 
