@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6054 2023/10/23 06:43:09 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6055 2023/10/23 07:48:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8902,3 +8902,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed textproc/py-expat [wiz 2023-10-23]
 	Removed devel/py-readline [wiz 2023-10-23]
 	Updated devel/py-setuptools to 68.2.2nb1 [wiz 2023-10-23]
+	Updated www/hackernews-tui to 0.13.4 [pin 2023-10-23]
