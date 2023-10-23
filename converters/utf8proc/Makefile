@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/10/31 11:01:05 micha Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/23 14:04:18 micha Exp $
 
-DISTNAME=	utf8proc-2.8.0
+DISTNAME=	utf8proc-2.9.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JuliaLang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,14 +10,15 @@ HOMEPAGE=	https://julialang.org/utf8proc/
 COMMENT=	C library for processing Unicode data
 LICENSE=	mit
 
-USE_LANGUAGES=	c99
-USE_LIBTOOL=	yes
+FORCE_C_STD=		c99
+USE_CC_FEATURES+=	c99
+USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
-MAJOR=	2
-MINOR=	6
+MAJOR=	3
+MINOR=	0
 PATCH=	0
 
 do-configure:
