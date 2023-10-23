@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2023/08/11 16:24:45 nia Exp $
+# $NetBSD: options.mk,v 1.1.2.1 2023/10/23 18:31:08 bsiegert Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lxqt-panel
 PKG_SUPPORTED_OPTIONS=		alsa pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
+PKG_SUGGESTED_OPTIONS.NetBSD=	pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
