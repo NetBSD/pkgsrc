@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2022/10/31 09:50:40 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2023/10/23 06:36:00 wiz Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -44,7 +44,7 @@ Module _crypt might need -lcrypt (taken from Python 3.10).
  
  # This global variable is used to hold the list of modules to be disabled.
 -DISABLED_MODULE_LIST = []
-+DISABLED_MODULE_LIST = ["_curses", "_curses_panel", "_elementtree", "_gdbm", "pyexpat", "readline", "_sqlite3", "_tkinter", "xxlimited"]
++DISABLED_MODULE_LIST = ["_gdbm", "_tkinter", "xxlimited"]
  
  # --list-module-names option used by Tools/scripts/generate_module_names.py
  LIST_MODULE_NAMES = False

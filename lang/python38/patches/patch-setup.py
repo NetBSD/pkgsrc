@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.6 2021/05/04 05:16:07 adam Exp $
+$NetBSD: patch-setup.py,v 1.7 2023/10/23 06:36:01 wiz Exp $
 
 - Disable certain modules, so they can be built as separate packages.
 - Do not look for ncursesw.
@@ -22,7 +22,7 @@ $NetBSD: patch-setup.py,v 1.6 2021/05/04 05:16:07 adam Exp $
  
  # This global variable is used to hold the list of modules to be disabled.
 -DISABLED_MODULE_LIST = []
-+DISABLED_MODULE_LIST = ["_curses", "_curses_panel", "_elementtree", "_gdbm", "pyexpat", "readline", "_sqlite3", "_tkinter", "xxlimited"]
++DISABLED_MODULE_LIST = ["_gdbm", "_tkinter", "xxlimited"]
  
  
  def get_platform():
