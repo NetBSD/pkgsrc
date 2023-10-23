@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6061 2023/10/23 11:56:22 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6062 2023/10/23 14:06:10 micha Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8913,3 +8913,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-uvloop to 0.19.0 [adam 2023-10-23]
 	Updated net/py-unearth to 0.12.0 [adam 2023-10-23]
 	Updated textproc/py-xlsxwriter to 3.1.9 [adam 2023-10-23]
+	Updated converters/utf8proc to 2.9.0 [micha 2023-10-23]
