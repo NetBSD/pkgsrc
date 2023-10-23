@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/08/11 01:32:50 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/23 06:35:59 wiz Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1905,6 +1905,9 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_collections.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_csv.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes_test.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_curses.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_curses_panel.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_elementtree.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_functools.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_hashlib.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_heapq.so
@@ -1917,6 +1920,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_multibytecodec.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_multiprocessing.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_random.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_socket.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_sqlite3.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_struct.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testcapi.so
@@ -1941,6 +1945,8 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
 ${PLIST.nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/pyexpat.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/readline.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/select.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/strop.so

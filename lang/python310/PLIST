@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/04/06 11:16:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/10/23 06:36:00 wiz Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2013,9 +2013,12 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_crypt.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_csv.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ctypes_test.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_curses.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_curses_panel.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_datetime.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_dbm.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_decimal.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_elementtree.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_hashlib.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_heapq.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_json.so
@@ -2035,6 +2038,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_sha256.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_sha3.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_sha512.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_socket.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_sqlite3.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_statistics.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_struct.so
@@ -2057,6 +2061,8 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/grp.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
 ${PLIST.nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/pyexpat.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/readline.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/select.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/syslog.so
