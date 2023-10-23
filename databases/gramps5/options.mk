@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2020/02/09 21:43:07 jdolecek Exp $
+# $NetBSD: options.mk,v 1.2 2023/10/23 06:37:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gramps5
-PKG_SUPPORTED_OPTIONS=	graphviz freefont sqlite3
-PKG_SUGGESTED_OPTIONS=	sqlite3
+PKG_SUPPORTED_OPTIONS=	graphviz freefont
+PKG_SUGGESTED_OPTIONS=	#
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,8 +12,4 @@ DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
 
 .if !empty(PKG_OPTIONS:Mgraphviz)
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
-.endif
-
-.if !empty(PKG_OPTIONS:Msqlite3)
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.19 2023/06/06 12:42:51 riastradh Exp $
+# $NetBSD: mozilla-common.mk,v 1.20 2023/10/23 06:37:57 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -17,18 +17,16 @@ GCC_REQD+=		4.9
 # Python 2.7 and Python 3.8 or later are required simultaneously.
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # Include pyversion.mk after setting PYTHON_* but before testing the default.
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 # lang/python311 is not acceptable.
 .if !empty(PYTHON_VERSION_DEFAULT:M3[89]) || !empty(PYTHON_VERSION_DEFAULT:M310)
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
-TOOL_DEPENDS+=			py${PYTHON_VERSION_DEFAULT}-expat-[0-9]*:../../textproc/py-expat
 .else
 TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
-TOOL_DEPENDS+=			py38-expat-[0-9]*:../../textproc/py-expat
 .endif
 
 TOOL_DEPENDS+=			cbindgen>=0.24.3:../../devel/cbindgen

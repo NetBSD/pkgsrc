@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/10/23 06:37:48 wiz Exp $
 
 DISTNAME=	rpy2-3.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
 
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	R-dbplyr-[0-9]*:../../databases/R-dbplyr
 DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 DEPENDS+=	R-lazyeval-[0-9]*:../../devel/R-lazyeval
@@ -34,6 +33,7 @@ REPLACE_PYTHON=		rpy/tests.py
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/pcre2/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.R+=	R>=3.3.0

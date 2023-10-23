@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2023/10/21 17:10:32 gdt Exp $
+# $NetBSD: Makefile,v 1.274 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	inkscape-1.3
 PKGREVISION=	2
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 DEPENDS+=		adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # for inkex.py, needed by most python extension scripts
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
@@ -137,6 +136,7 @@ BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24
 .include "../../x11/gtk-mac-integration/buildlink3.mk"
 .endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/jpeg.buildlink3.mk"

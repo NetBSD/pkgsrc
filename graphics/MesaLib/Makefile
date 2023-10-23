@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.209 2023/08/14 05:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
@@ -141,9 +141,6 @@ CPPFLAGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
-# needed to build vulkan support
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-
 BUILDLINK_TRANSFORM+=		rm:-Werror=incompatible-pointer-types
 
 # https://gitlab.freedesktop.org/mesa/mesa/merge_requests/1854
@@ -188,6 +185,7 @@ post-install:
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"

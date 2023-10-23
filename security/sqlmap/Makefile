@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/10/09 10:34:28 adam Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/23 06:37:51 wiz Exp $
 
 DISTNAME=	sqlmap-1.7.10
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -10,8 +11,6 @@ COMMENT=	Automatic SQL injection and database takeover tool
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	bash:run perl:run
-
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 REPLACE_BASH+=	sqlmap/extra/shutils/autocompletion.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/blanks.sh
@@ -37,6 +36,7 @@ USE_PKG_RESOURCES=	yes
 USE_LANGUAGES=	# none
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

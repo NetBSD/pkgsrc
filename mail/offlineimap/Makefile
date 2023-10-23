@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/23 06:37:48 wiz Exp $
 
 DISTNAME=	offlineimap-7.3.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
 
@@ -14,9 +14,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
 
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 INSTALLATION_DIRS=	share/examples/offlineimap
@@ -28,6 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/offlineimap/${f}
 .endfor
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2023/08/14 05:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2023/10/23 06:37:53 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../sysutils/salt/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-docs-/}
@@ -11,7 +11,6 @@ USE_TOOLS+=	gmake pax
 
 TOOL_DEPENDS+=	salt-[0-9]*:../../sysutils/salt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sqlite3>=1.2.3nb1:../../databases/py-sqlite3
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
@@ -34,5 +33,6 @@ do-install:
 	cd ${WRKSRC}/doc/_build/html && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

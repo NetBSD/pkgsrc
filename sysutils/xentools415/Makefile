@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2023/08/24 10:27:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/23 06:37:53 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
-#PKGREVISION=        1
+PKGREVISION=        1
 .include        "version.mk"
 PKGNAME=		xentools415-${VERSION}
 
@@ -17,7 +17,6 @@ TOOL_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
 TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
-DEPENDS+=	${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 
 TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -225,6 +224,7 @@ BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q} TARGET_CC=${TARGET_CC}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 #.include "../../devel/SDL/buildlink3.mk"

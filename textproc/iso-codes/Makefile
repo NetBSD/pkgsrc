@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2023/08/14 05:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2023/10/23 06:37:53 wiz Exp $
 
 DISTNAME=	iso-codes-v4.11.0
 PKGNAME=	${DISTNAME:S/v//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://salsa.debian.org/iso-codes-team/iso-codes
 COMMENT=	List of country, language and currency names
 LICENSE=	gnu-lgpl-v2.1
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=		# empty
 USE_PKGLOCALEDIR=	yes
@@ -41,5 +39,6 @@ SUBST_MESSAGE.python3=	Fixing path to python binary.
 
 PYTHON_FOR_BUILD_ONLY=		yes
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

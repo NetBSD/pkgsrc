@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6052 2023/10/22 19:42:28 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6053 2023/10/23 06:37:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8889,3 +8889,15 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/tlrc to 1.6.0 [pin 2023-10-22]
 	Updated www/xh to 0.19.3 [pin 2023-10-22]
 	Updated sysutils/yazi to 0.1.5 [pin 2023-10-22]
+	Updated lang/python27 to 2.7.18nb12 [wiz 2023-10-23]
+	Updated lang/python38 to 3.8.18nb1 [wiz 2023-10-23]
+	Updated lang/python39 to 3.9.18nb1 [wiz 2023-10-23]
+	Updated lang/python310 to 3.10.13nb1 [wiz 2023-10-23]
+	Updated lang/python311 to 3.11.6nb1 [wiz 2023-10-23]
+	Updated lang/python312 to 3.12.0nb1 [wiz 2023-10-23]
+	Removed devel/py-curses [wiz 2023-10-23]
+	Removed devel/py-cursespanel [wiz 2023-10-23]
+	Removed databases/py-sqlite3 [wiz 2023-10-23]
+	Removed textproc/py-cElementTree [wiz 2023-10-23]
+	Removed textproc/py-expat [wiz 2023-10-23]
+	Removed devel/py-readline [wiz 2023-10-23]

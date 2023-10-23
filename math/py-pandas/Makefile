@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2023/10/15 00:05:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.52 2023/10/23 06:37:48 wiz Exp $
 
 DISTNAME=	pandas-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
 
@@ -18,7 +19,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13.1:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.1:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.1:../../time/py-tzdata
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.34.2:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.3.2:../../devel/py-test
@@ -45,6 +45,7 @@ post-patch:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} pandas
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.py-numpy+= ${PYPKGPREFIX}-numpy>=1.23.2
 .include "../../math/py-numpy/buildlink3.mk"

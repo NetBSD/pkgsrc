@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2023/10/16 13:05:30 adam Exp $
+# $NetBSD: Makefile,v 1.98 2023/10/23 06:37:37 wiz Exp $
 
 DISTNAME=	peewee-3.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	http://docs.peewee-orm.com/
 COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 
@@ -44,6 +44,7 @@ post-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

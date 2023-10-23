@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/06/18 05:39:37 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/10/23 06:37:39 wiz Exp $
 
 DISTNAME=	buildbot-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot/}
 
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-JWT-[0-9]*:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.16.0:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.1:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.1.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-migrate>=0.9:../../databases/py-sqlalchemy-migrate
 DEPENDS+=	${PYPKGPREFIX}-twisted>=17.9.0:../../net/py-twisted
@@ -43,6 +42,7 @@ post-install:
 	${MV} buildbot buildbot-${PYVERSSUFFIX} && \
 	${MV} buildbot_windows_service buildbot_windows_service-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

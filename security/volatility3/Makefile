@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/08/14 05:25:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	volatility3-2.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=volatilityfoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,6 @@ COMMENT=	Advanced memory forensics framework
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-pefile>=2017.8.1:../../sysutils/py-pefile
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # Optional; see requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-capstone>=3.0.5:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
@@ -24,5 +23,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

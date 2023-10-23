@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.16 2023/06/06 12:42:39 riastradh Exp $
+# $NetBSD: mozilla-common.mk,v 1.17 2023/10/23 06:37:56 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -135,7 +135,6 @@ PREFER.bzip2?=	pkgsrc
 
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "../../mk/atomic64.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
@@ -151,6 +150,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/07/30 15:41:40 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/23 06:37:57 wiz Exp $
 
 DISTNAME=	httpie-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
 
@@ -11,7 +12,6 @@ COMMENT=	Human-friendly command line HTTP client
 LICENSE=	original-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2.0.0:../../converters/py-charset-normalizer
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.6.0:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.7.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
@@ -51,5 +51,6 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

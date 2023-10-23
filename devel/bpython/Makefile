@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/08/14 05:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/23 06:37:38 wiz Exp $
 
 DISTNAME=	bpython-0.24
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	https://bpython-interpreter.org/releases/
 
@@ -12,12 +12,10 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-curtsies>=0.4.0:../../devel/py-curtsies
 DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
@@ -28,6 +26,7 @@ USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

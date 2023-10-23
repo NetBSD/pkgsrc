@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2023/10/11 18:27:03 adam Exp $
+# $NetBSD: Makefile,v 1.39 2023/10/23 06:37:51 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 
 COMMENT=	Client for the Let's Encrypt CA
@@ -17,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 # Needed for the test target
 # https://github.com/certbot/certbot/issues/2956
-TEST_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
@@ -48,6 +48,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/cli.ini \
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"

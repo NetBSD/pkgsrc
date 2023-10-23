@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2023/09/08 20:32:00 js Exp $
+# $NetBSD: Makefile,v 1.82 2023/10/23 06:37:34 wiz Exp $
 
 DISTNAME=	matrix-synapse-1.91.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse
@@ -25,7 +26,6 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-bleach>=1.4.3:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-canonicaljson>=2.0.0:../../devel/py-canonicaljson
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0:../../devel/py-immutabledict
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.0:../../devel/py-ijson
@@ -46,7 +46,6 @@ DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
 # NB: synapse needs features missing in NetBSD base system sqlite, and probably
 # missing in other builds.
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
@@ -132,6 +131,7 @@ do-test:
 #   make; make print-cargo-depends > cargo-depends.mk && make distinfo
 .include "cargo-depends.mk"
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 RUST_REQ=	1.51.0

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2023/10/02 18:58:24 adam Exp $
+# $NetBSD: Makefile,v 1.96 2023/10/23 06:37:41 wiz Exp $
 
 DISTNAME=	ipython-8.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -18,7 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.4:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.38:../../devel/py-prompt_toolkit
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.0:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-stack-data-[0-9]*:../../sysutils/py-stack-data
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5:../../devel/py-traitlets
 .include "../../mk/bsd.prefs.mk"
@@ -46,5 +46,6 @@ post-install:
 	${MV} bin/ipython3 bin/ipython3-${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython-${PYVERSSUFFIX}.1 || ${TRUE}
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
