@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6068 2023/10/23 15:17:11 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6069 2023/10/23 18:46:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8924,3 +8924,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ruby-redmine50 to 5.0.6 [taca 2023-10-23]
 	Added www/ruby-rack-session version 2.0.0 [taca 2023-10-23]
 	Updated devel/ruby-rugged to 1.7.1 [taca 2023-10-23]
+	Updated security/dnsx to 1.1.5 [leot 2023-10-23]
