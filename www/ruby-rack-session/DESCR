@@ -1,0 +1,3 @@
+Rack::Session
+
+Session management implementation for Rack.
