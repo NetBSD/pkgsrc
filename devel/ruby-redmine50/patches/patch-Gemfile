@@ -1,15 +1,15 @@
-$NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
+$NetBSD: patch-Gemfile,v 1.8 2023/10/23 14:51:49 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2023-03-05 21:35:36.000000000 +0000
+--- Gemfile.orig	2023-09-30 06:40:03.000000000 +0000
 +++ Gemfile
 @@ -3,9 +3,9 @@ source 'https://rubygems.org'
  ruby '>= 2.5.0', '< 3.2.0'
  gem 'bundler', '>= 1.12.0'
  
--gem 'rails', '6.1.7.2'
+-gem 'rails', '6.1.7.6'
 +gem 'rails', '~> 6.1.7'
  gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 -gem 'rouge', '~> 3.28.0'
@@ -17,19 +17,20 @@ $NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
-@@ -13,9 +13,9 @@ gem 'roadie-rails', (Gem.ruby_version < 
- gem 'marcel'
- gem "mail", "~> 2.7.1"
- gem 'csv', '~> 3.2.0'
--gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13.10')
-+gem 'nokogiri', (Gem.ruby_version < Gem::Version.new('2.6.0') ? '~> 1.12.5' : '~> 1.13')
+@@ -18,10 +18,10 @@ gem 'nokogiri', (if Gem.ruby_version < G
+                  elsif Gem.ruby_version < Gem::Version.new('2.7.0')
+                    '~> 1.13.10'
+                  else
+-                   '~> 1.15.2'
++                   '~> 1.15'
+                  end)
  gem "rexml", require: false if Gem.ruby_version >= Gem::Version.new('3.0')
 -gem 'i18n', '~> 1.10.0'
 +gem 'i18n', '>= 1.10.0'
- gem 'rbpdf', '~> 1.21.0'
+ gem 'rbpdf', '~> 1.21.3'
  gem 'addressable'
  gem 'rubyzip', '~> 2.3.0'
-@@ -34,12 +34,12 @@ gem 'rqrcode'
+@@ -40,12 +40,12 @@ gem 'rqrcode'
  
  # Optional gem for LDAP authentication
  group :ldap do
@@ -44,7 +45,7 @@ $NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
  end
  
  # Optional Markdown support, not for JRuby
-@@ -48,7 +48,7 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
+@@ -54,7 +54,7 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
  
  # Optional CommonMark support, not for JRuby
  group :common_mark do
@@ -53,7 +54,7 @@ $NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
    gem "commonmarker", (Gem.ruby_version < Gem::Version.new('2.6.0') ? '0.21.0' : '~> 0.23.8')
    gem "sanitize", "~> 6.0"
    gem 'deckar01-task_list', '2.3.2'
-@@ -69,7 +69,7 @@ if File.exist?(database_file)
+@@ -75,7 +75,7 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /postgresql/
@@ -62,7 +63,7 @@ $NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
        when /sqlite3/
          gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlserver/
-@@ -86,6 +86,7 @@ else
+@@ -92,6 +92,7 @@ else
    warn("Please configure your config/database.yml first")
  end
  
@@ -70,7 +71,7 @@ $NetBSD: patch-Gemfile,v 1.7 2023/04/27 13:56:06 taca Exp $
  group :development do
    gem 'listen', '~> 3.3'
    gem "yard"
-@@ -112,6 +113,7 @@ group :test do
+@@ -118,6 +119,7 @@ group :test do
    gem 'rubocop-performance', '~> 1.13.0'
    gem 'rubocop-rails', '~> 2.14.0'
  end
