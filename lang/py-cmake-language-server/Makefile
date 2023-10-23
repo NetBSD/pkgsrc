@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/05/05 09:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/23 06:21:27 wiz Exp $
 
 DISTNAME=	cmake-language-server-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-datadir>=1.4.1:../../devel/py-test-datadir
 #TEST_DEPENDS+=	${PYPKGPREFIX}-cmakelang>=0.6.13:../../devel/py-cmakelang
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# does not support 3.12 as of 0.1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 # only for tests
 USE_LANGUAGES=	c c++
