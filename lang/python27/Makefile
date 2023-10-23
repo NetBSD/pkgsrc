@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.107 2023/06/27 10:35:29 riastradh Exp $
+# $NetBSD: Makefile,v 1.108 2023/10/23 06:35:59 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,6 +14,12 @@ LICENSE=	python-software-foundation
 DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 CONFLICTS+=	python-[0-9]*
+CONFLICTS+=	py27-cElementTree-[0-9]*
+CONFLICTS+=	py27-curses-[0-9]*
+CONFLICTS+=	py27-cursespanel-[0-9]*
+CONFLICTS+=	py27-expat-[0-9]*
+CONFLICTS+=	py27-readline-[0-9]*
+CONFLICTS+=	py27-sqlite3-[0-9]*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
@@ -30,6 +36,11 @@ LDFLAGS+=		-L${WRKSRC}
 
 # $RANDOM usage there is fine
 CHECK_PORTABILITY_SKIP=	Tools/faqwiz/move-faqwiz.sh
+
+# NetBSD-8 curses has enough support for py-curses
+USE_CURSES=		getsyx
+# But we build as ncurses still to get the full feature set easily
+FAKE_NCURSES=		yes
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
@@ -101,7 +112,7 @@ SUBST_FILES.sdkpath=	Lib/distutils/unixccompiler.py
 SUBST_VARS.sdkpath=	OSX_SDK_PATH
 .  endif
 .  if exists(${OSX_SDK_PATH}/System/Library/Frameworks/QuickTime.framework)
-PLIST.qt=	yes
+PLIST.qt=		yes
 .  endif
 .endif
 
@@ -183,11 +194,11 @@ SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.findlib+=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
 SUBST_NOOP_OK.findlib=	yes
 
-SUBST_CLASSES+=		pkgversion
-SUBST_STAGE.pkgversion=	pre-configure
-SUBST_FILES.pkgversion=	Lib/lib2to3/pgen2/driver.py
-SUBST_FILES.pkgversion+=Lib/distutils/command/install_egg_info.py
-SUBST_VARS.pkgversion=	PKGVERSION_NOREV
+SUBST_CLASSES+=			pkgversion
+SUBST_STAGE.pkgversion=		pre-configure
+SUBST_FILES.pkgversion=		Lib/lib2to3/pgen2/driver.py
+SUBST_FILES.pkgversion+=	Lib/distutils/command/install_egg_info.py
+SUBST_VARS.pkgversion=		PKGVERSION_NOREV
 
 SUBST_CLASSES+=		urllib
 SUBST_MESSAGE.urllib=	Fixing path to urllib.cfg.
@@ -226,15 +237,15 @@ post-install:
 CONFIGURE_ENV+=		ac_cv_type_socklen_t=yes
 .endif
 
-# needed to make devel/py-readline pick up the correct readline implementation
-BUILDLINK_DEPMETHOD.readline=		build
-
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

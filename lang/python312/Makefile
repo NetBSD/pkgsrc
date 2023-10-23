@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/10/02 20:07:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/23 06:36:00 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python312-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +12,12 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
+CONFLICTS+=	py312-cElementTree-[0-9]*
+CONFLICTS+=	py312-curses-[0-9]*
+CONFLICTS+=	py312-cursespanel-[0-9]*
+CONFLICTS+=	py312-expat-[0-9]*
+CONFLICTS+=	py312-readline-[0-9]*
+CONFLICTS+=	py312-sqlite3-[0-9]*
 
 PLIST_AWK=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS=312
@@ -28,16 +35,22 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
-CONFIGURE_ENV+=		py_cv_module__curses="n/a"
-CONFIGURE_ENV+=		py_cv_module__curses_panel="n/a"
-CONFIGURE_ENV+=		py_cv_module__elementtree="n/a"
 CONFIGURE_ENV+=		py_cv_module__gdbm="n/a"
-CONFIGURE_ENV+=		py_cv_module__sqlite3="n/a"
 CONFIGURE_ENV+=		py_cv_module__tkinter="n/a"
-CONFIGURE_ENV+=		py_cv_module_pyexpat="n/a"
-CONFIGURE_ENV+=		py_cv_module_readline="n/a"
+# example module
 CONFIGURE_ENV+=		py_cv_module_xxlimited="n/a"
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
+
+# NetBSD-8 curses has enough support for py-curses
+USE_CURSES=		getsyx update_panels
+# But we build as ncurses still to get the full feature set easily
+FAKE_NCURSES=		yes
+# libpanelw seems to be a Linux thing?
+SUBST_CLASSES+=		panel
+SUBST_MESSAGE.panel=	Replacing panelw with panel.
+SUBST_STAGE.panel=	pre-configure
+SUBST_FILES.panel+=	configure
+SUBST_SED.panel+=	-e "s,panelw,panel,"
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
@@ -71,13 +84,6 @@ PKG_CXX=		clang++
 CFLAGS.SunOS+=		-DPKGSRC_OPSYS_VERSION=${OPSYS_VERSION}
 LIBS.SunOS+=		-lrt	# fdatasync()
 LIBS.SunOS+=		-luuid
-.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
-SUBST_CLASSES+=		setup
-SUBST_MESSAGE.setup=	Replacing crypt with crypt_i
-SUBST_STAGE.setup=	pre-configure
-SUBST_FILES.setup=	setup.py
-SUBST_SED.setup=	-e "s,'crypt','crypt_i',"
-.endif
 
 LIBS.NetBSD+=		-lcrypt
 
@@ -175,7 +181,6 @@ SUBST_MESSAGE.findlib=	Fixing find_library().
 SUBST_STAGE.findlib=	pre-configure
 SUBST_FILES.findlib=	Lib/ctypes/macholib/dyld.py
 SUBST_FILES.findlib+=	Lib/ctypes/util.py
-SUBST_FILES.findlib+=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 SUBST_SED.findlib+=	-e "s!\('-Wl,-t'\)!'${COMPILER_RPATH_FLAG}${PREFIX}/lib', '-L${PREFIX}/lib', \1!"
 SUBST_NOOP_OK.findlib=	yes
@@ -217,11 +222,9 @@ setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
-# needed to make devel/py-readline pick up the correct readline implementation
-BUILDLINK_DEPMETHOD.readline=		build
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
@@ -231,7 +234,9 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
