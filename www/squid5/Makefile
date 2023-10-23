@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/05/21 02:19:11 taca Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/23 14:34:20 taca Exp $
 
 DISTNAME=	squid-5.9
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v5/
 EXTRACT_SUFX=	.tar.xz
@@ -9,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 LICENSE=	gnu-gpl-v2
+
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		SQUID-2023_1.patch SQUID-2023_3.patch
+PATCH_DIST_ARGS+=	-p1 -d ${WRKSRC}
 
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		perl:run gmake
