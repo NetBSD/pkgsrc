@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/23 14:55:11 taca Exp $
+
+BLAKE2s (rack-session-2.0.0.gem) = 9a90148d5650d2ccc029b329347dbbde5126e391736e56bb44adf7e18b19219b
+SHA512 (rack-session-2.0.0.gem) = 827cd1acf20eb814adda7663f61755febd2e6acec6ee085dbc393b614a621f845dffa8f759e434055dbf029be370afeb921c8759c9e9e1fee17119830d9b2899
+Size (rack-session-2.0.0.gem) = 15360 bytes
