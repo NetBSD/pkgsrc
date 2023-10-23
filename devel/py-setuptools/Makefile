@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.236 2023/10/14 10:47:56 adam Exp $
+# $NetBSD: Makefile,v 1.237 2023/10/23 06:39:18 wiz Exp $
 
 DISTNAME=	setuptools-68.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
 
@@ -10,7 +11,6 @@ HOMEPAGE=	https://github.com/pypa/setuptools
 COMMENT=	New Python packaging system
 LICENSE=	python-software-foundation OR zpl-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TEST_DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.4.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-ini2toml>=0.9:../../textproc/py-ini2toml
@@ -34,7 +34,21 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # 28 failed, 1104 passed, 27 skipped, 6 xfailed, 3 xpassed, 1 warning
 PYSETUPTESTTARGET=	pytest
 
-BOOTSTRAP_SETUPTOOLS=	yes
+PYDISTUTILSPKG=		no
+PY_PATCHPLIST=		yes
+#BOOTSTRAP_SETUPTOOLS=	yes
 
-.include "../../lang/python/egg.mk"
+do-build: ensurepip
+.PHONY: ensurepip
+
+ensurepip:
+	${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} -m ensurepip --user
+
+do-install:
+	cd ${WRKSRC} && PYTHONPATH=${WRKDIR}/.home/.local/lib/python${PYVERSSUFFIX}/site-packages \
+        ${TOOL_PYTHONBIN} -m pip install --no-cache-dir --no-deps --disable-pip-version-check \
+                --root ${DESTDIR:Q} --prefix ${PREFIX:Q} --compile --force-reinstall -I .
+
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
