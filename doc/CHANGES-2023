@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6064 2023/10/23 14:34:41 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6065 2023/10/23 14:47:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8916,3 +8916,8 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/utf8proc to 2.9.0 [micha 2023-10-23]
 	Updated www/squid6 to 6.4 [taca 2023-10-23]
 	Updated www/squid5 to 5.9nb1 [taca 2023-10-23]
+	Updated lang/erlang to 26.1.2 [adam 2023-10-23]
+	Updated lang/erlang-doc to 26.1 [adam 2023-10-23]
+	Updated lang/erlang-man to 26.1 [adam 2023-10-23]
+	Updated lang/elixir to 1.15.7 [adam 2023-10-23]
+	Updated net/rabbitmq to 3.12.7 [adam 2023-10-23]
