@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/05/23 21:55:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2023/10/23 14:41:05 adam Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -70,6 +70,7 @@ lib/erlang/man/man3/disk_log.3
 lib/erlang/man/man3/disksup.3
 lib/erlang/man/man3/driver_entry.3
 lib/erlang/man/man3/dyntrace.3
+lib/erlang/man/man3/edlin.3
 lib/erlang/man/man3/edlin_expand.3
 lib/erlang/man/man3/edoc.3
 lib/erlang/man/man3/edoc_doclet.3
