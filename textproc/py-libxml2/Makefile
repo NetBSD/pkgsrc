@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2023/09/18 13:21:40 gdt Exp $
+# $NetBSD: Makefile,v 1.89 2023/10/23 06:37:54 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -53,8 +53,7 @@ fix-darwin-install-name:
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
-
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION_NOREV}

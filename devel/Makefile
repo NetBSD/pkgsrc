@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4074 2023/10/19 18:07:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4075 2023/10/23 06:37:37 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2478,8 +2478,6 @@ SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
 SUBDIR+=	py-crayons
-SUBDIR+=	py-curses
-SUBDIR+=	py-cursespanel
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cwcwidth
 SUBDIR+=	py-cyordereddict
@@ -2932,7 +2930,6 @@ SUBDIR+=	py-radon
 SUBDIR+=	py-random2
 SUBDIR+=	py-rauth
 SUBDIR+=	py-readlike
-SUBDIR+=	py-readline
 SUBDIR+=	py-rednose
 SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru

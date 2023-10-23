@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1427 2023/10/15 07:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.1428 2023/10/23 06:37:53 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1007,7 +1007,6 @@ SUBDIR+=	py-biplist
 SUBDIR+=	py-black
 SUBDIR+=	py-bracex
 SUBDIR+=	py-breathe
-SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-cmarkgfm
@@ -1036,7 +1035,6 @@ SUBDIR+=	py-empy
 SUBDIR+=	py-enchant
 SUBDIR+=	py-epr-reader
 SUBDIR+=	py-eradicate
-SUBDIR+=	py-expat
 SUBDIR+=	py-fastjsonschema
 SUBDIR+=	py-feedparser
 SUBDIR+=	py-feedparser5

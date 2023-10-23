@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	glad-0.1.34
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Dav1dde/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,7 @@ CMAKE_ARGS+=	-DGLAD_REPRODUCIBLE=ON
 CMAKE_ARGS+=	-DGLAD_INSTALL=ON
 
 PYTHON_FOR_BUILD_ONLY=	tool
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

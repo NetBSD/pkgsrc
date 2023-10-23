@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2023/07/19 14:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/23 06:37:41 wiz Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
 DISTNAME=	hg-evolve-11.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -14,7 +15,6 @@ COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 TEST_DEPENDS+=	curl-[0-9]*:../../www/curl
 
 USE_TOOLS+=	bash:test
@@ -39,5 +39,6 @@ do-test:
 	HGROOT=${HG_WRKSRC:sh}; cd ${WRKSRC}/tests && ${PYTHONBIN} $${HGROOT}/tests/run-tests.py ${_MAKE_JOBS:Q}
 .endif
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

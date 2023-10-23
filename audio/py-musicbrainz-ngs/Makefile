@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/10 20:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:33 wiz Exp $
 
 DISTNAME=	python-musicbrainzngs-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//:S/ngs/-ngs/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alastair/}
 
@@ -14,12 +14,11 @@ LICENSE=	2-clause-bsd
 GITHUB_PROJECT=	python-musicbrainzngs
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 EGG_NAME=	${DISTNAME:S/python-//}
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py test
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

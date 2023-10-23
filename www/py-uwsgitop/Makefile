@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/03/29 09:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/23 06:37:57 wiz Exp $
 
 DISTNAME=	uwsgitop-0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgitop/}
 
@@ -11,8 +11,7 @@ HOMEPAGE=	https://uwsgi-docs.readthedocs.io/
 COMMENT=	Command to interface with the uWSGI stats server
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
-
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} == 207

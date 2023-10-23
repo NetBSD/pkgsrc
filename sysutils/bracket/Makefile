@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 05:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/23 06:37:52 wiz Exp $
 
 DISTNAME=	bracket-2.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.gson.org/netbsd/bracket/download/
 
@@ -15,7 +15,6 @@ DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-sysctl-[0-9]*:../../devel/py-sysctl
 DEPENDS+=	${PYPKGPREFIX}-gitpython-[0-9]*:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
@@ -30,5 +29,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/08/14 05:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	unknown-horizons-2019.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unknown-horizons/}
 
@@ -14,7 +14,6 @@ USE_TOOLS+=	intltool msgfmt
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	fifengine-[0-9]*:../../devel/fifengine
 
@@ -35,6 +34,7 @@ SUBST_VARS.paths+=	PREFIX PKGMANDIR
 post-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PYTHONBIN} horizons/engine/generate_atlases.py 2048
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

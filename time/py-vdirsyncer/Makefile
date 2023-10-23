@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2023/08/07 18:16:15 adam Exp $
+# $NetBSD: Makefile,v 1.67 2023/10/23 06:37:55 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-click-threading>=0.5:../../devel/py-click-threading
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.0.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -47,6 +46,7 @@ post-build:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/vdirsyncer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
 # needed due to py-click

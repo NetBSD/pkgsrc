@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2023/08/14 05:23:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/23 06:37:35 wiz Exp $
 
 DISTNAME=	telepathy-mission-control-5.7.9
 PKGNAME=	telepathy-mission-control5-5.7.9
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	chat
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mission-control/}
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-control/
@@ -30,10 +30,9 @@ CONFIGURE_ARGS+= --enable-gnome-keyring
 # needs py-twisted
 # TEST_TARGET= check
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

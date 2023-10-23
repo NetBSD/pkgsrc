@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/08/14 05:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/23 06:37:45 wiz Exp $
 
 DISTNAME=	fs-uae-arcade-3.1.63
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/files/FS-UAE-Arcade/Stable/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	fs-uae>=3.1.66:../../emulators/fs-uae
 DEPENDS+=	${PYPKGPREFIX}-lhafile-[0-9]*:../../archivers/py-lhafile
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
@@ -49,6 +48,7 @@ post-install:
 		${LN} -s ../share/fs-uae-arcade/fs-uae-arcade fs-uae-arcade
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

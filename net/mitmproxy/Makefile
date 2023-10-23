@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2023/10/23 06:37:49 wiz Exp $
 
 DISTNAME=	mitmproxy-8.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -30,7 +30,6 @@ DEPENDS+=	${PYPKGPREFIX}-publicsuffix2>=2.20190812:../../www/py-publicsuffix2
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.6.0:../../x11/py-pyperclip
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.16:../../devel/py-ruamel-yaml
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.3:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.1:../../devel/py-urwid
@@ -51,6 +50,7 @@ USE_LANGUAGES=			# none
 # Only for Python >=3.9
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL

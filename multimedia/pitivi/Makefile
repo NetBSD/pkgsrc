@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/10/21 17:11:08 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2023/10/23 06:37:49 wiz Exp $
 
 DISTNAME=	pitivi-0.999
 PKGREVISION=	14
@@ -16,7 +16,6 @@ USE_TOOLS+=	pkg-config intltool msgfmt xgettext itstool
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 # For some reason creating projects fails without these.
 DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
@@ -41,6 +40,7 @@ LDFLAGS+=			-lpython${PYVERSSUFFIX}
 .include "../../graphics/gst-plugins1-gdk_pixbuf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"

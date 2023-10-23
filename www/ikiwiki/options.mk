@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2023/05/02 00:43:54 schmonz Exp $
+# $NetBSD: options.mk,v 1.25 2023/10/23 06:37:56 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
@@ -71,7 +71,7 @@ SUBST_SED.l10n+=	-e 's|\(Locale::Po4a::Common\)|\1::Iff::PKG_OPTIONS|'
 
 .if !empty(PKG_OPTIONS:Mpython)
 DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+.include "../../lang/python/batteries-included.mk"
 .else
 PYTHON_FOR_BUILD_ONLY=	yes
 .endif

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/23 06:37:47 wiz Exp $
 
 DISTNAME=	gyb-1.71
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	got-your-back
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.0:../../www/py-google-api-p
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.11.2:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2-[0-9]*:../../security/py-google-auth-httplib2
 DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib>=0.4.1:../../security/py-google-auth-oauthlib
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 NO_BUILD=	yes
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
@@ -39,5 +38,6 @@ do-install:
 		${INSTALL_SCRIPT} $${f} ${DESTDIR}${PREFIX}/${PYSITELIB}/$${f};	\
 	done
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

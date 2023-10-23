@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:43 wiz Exp $
 
 DISTNAME=	coverage-5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
@@ -12,7 +12,6 @@ COMMENT=	Python module that measures code coverage for Python
 LICENSE=	modified-bsd
 
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky
 #TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.57.1:../../devel/py-hypothesis4
 #TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
@@ -28,5 +27,6 @@ PYSETUPTESTTARGET=	pytest
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage[23]
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

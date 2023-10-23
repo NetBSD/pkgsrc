@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2023/08/14 05:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2023/10/23 06:37:45 wiz Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=supertuxkart/}
 GITHUB_PROJECT=	stk-code
@@ -17,8 +17,6 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
 CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
@@ -43,6 +41,7 @@ CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../net/enet/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"

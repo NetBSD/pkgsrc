@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2023/08/14 05:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/23 06:37:47 wiz Exp $
 
 DISTNAME=	node-v16.20.2
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
-
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../mk/bsd.prefs.mk"
 
 # XXX: figure out a way to add rpaths to torque
@@ -43,6 +41,8 @@ minusx:
 .include "../../devel/libatomic/buildlink3.mk"
 .endif
 
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/tool.mk"
 .include "../../lang/nodejs/Makefile.common"
 .include "../../net/ngtcp2/buildlink3.mk"
 .include "../../www/nghttp3/buildlink3.mk"

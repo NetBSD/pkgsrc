@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/08/14 05:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/23 06:37:32 wiz Exp $
 
 DISTNAME=	zziplib-0.13.72
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gdraheim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,6 @@ COMMENT=	Library for ZIP archive handling
 LICENSE=	gnu-lgpl-v2 OR mpl-1.1
 
 TOOL_DEPENDS+=	zip-[0-9]*:../../archivers/zip
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_TOOLS+=	bash:build
 
@@ -34,5 +33,6 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

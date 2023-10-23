@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/10/01 13:22:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.51 2023/10/23 06:37:49 wiz Exp $
 
-DISTNAME=	bulk-small-20230915
+DISTNAME=	bulk-small-20231022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -241,7 +241,6 @@ TRANSITIVE+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
 # required by devel/meson
 TRANSITIVE+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TRANSITIVE+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 # required by devel/ninja-build
 TRANSITIVE+=	re2c-[0-9]*:../../devel/re2c

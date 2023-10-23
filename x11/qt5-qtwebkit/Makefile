@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.115 2023/08/14 05:25:35 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2023/10/23 06:37:58 wiz Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
@@ -18,7 +18,6 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		bison perl:build pkg-config
@@ -120,6 +119,7 @@ PLIST.npapi=	yes
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/ruby/buildlink3.mk"
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build

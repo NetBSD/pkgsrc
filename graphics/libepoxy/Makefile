@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/08/14 05:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/23 06:37:46 wiz Exp $
 
 DISTNAME=	libepoxy-1.5.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anholt/libepoxy
 COMMENT=	Library for OpenGL function pointer management
 LICENSE=	mit
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -43,5 +41,6 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

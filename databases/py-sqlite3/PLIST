@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/04 11:38:05 obache Exp $
-${PYLIB}/lib-dynload/_sqlite3.so

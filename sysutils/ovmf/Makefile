@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/08/14 05:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/23 06:37:52 wiz Exp $
 
 PKGNAME=		OVMF-0.0.20181116
-PKGREVISION=		4
+PKGREVISION=		5
 DISTNAME=		edk2-20181116
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 CATEGORIES=		sysutils
@@ -57,8 +57,8 @@ do-install:
 
 TOOL_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
