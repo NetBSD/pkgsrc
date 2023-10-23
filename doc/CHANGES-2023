@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6056 2023/10/23 07:49:48 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6057 2023/10/23 08:01:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8904,3 +8904,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-setuptools to 68.2.2nb1 [wiz 2023-10-23]
 	Updated www/hackernews-tui to 0.13.4 [pin 2023-10-23]
 	Updated www/xh to 0.19.4 [pin 2023-10-23]
+	Updated converters/py-charset-normalizer to 3.3.1 [adam 2023-10-23]
+	Updated time/py-tzlocal to 5.2 [adam 2023-10-23]
