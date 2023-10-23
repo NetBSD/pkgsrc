@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/29 21:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/23 07:53:40 adam Exp $
 
 DISTNAME=	pyproject-metadata-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject-metadata/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
