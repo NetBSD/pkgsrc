@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/23 06:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/23 08:50:36 wiz Exp $
 
 .include "dist.mk"
 
@@ -18,6 +18,12 @@ CONFLICTS+=	py39-cursespanel-[0-9]*
 CONFLICTS+=	py39-expat-[0-9]*
 CONFLICTS+=	py39-readline-[0-9]*
 CONFLICTS+=	py39-sqlite3-[0-9]*
+SUPERSEDES+=	py39-cElementTree-[0-9]*
+SUPERSEDES+=	py39-curses-[0-9]*
+SUPERSEDES+=	py39-cursespanel-[0-9]*
+SUPERSEDES+=	py39-expat-[0-9]*
+SUPERSEDES+=	py39-readline-[0-9]*
+SUPERSEDES+=	py39-sqlite3-[0-9]*
 
 PLIST_AWK=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS=39
