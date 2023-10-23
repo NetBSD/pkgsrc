@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2023/10/23 06:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2023/10/23 08:50:35 wiz Exp $
 
 .include "dist.mk"
 
@@ -20,6 +20,12 @@ CONFLICTS+=	py27-cursespanel-[0-9]*
 CONFLICTS+=	py27-expat-[0-9]*
 CONFLICTS+=	py27-readline-[0-9]*
 CONFLICTS+=	py27-sqlite3-[0-9]*
+SUPERSEDES+=	py27-cElementTree-[0-9]*
+SUPERSEDES+=	py27-curses-[0-9]*
+SUPERSEDES+=	py27-cursespanel-[0-9]*
+SUPERSEDES+=	py27-expat-[0-9]*
+SUPERSEDES+=	py27-readline-[0-9]*
+SUPERSEDES+=	py27-sqlite3-[0-9]*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
