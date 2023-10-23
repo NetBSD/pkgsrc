@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2021/09/28 12:31:25 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.4 2023/10/23 06:36:00 wiz Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Only check the BUILDLINK_DIR for libraries etc, do not pick up random
@@ -29,7 +29,7 @@ cygwin 2.7.3-no-libm.patch
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "bsddb185", "_curses", "_curses_panel", "_elementtree", "gdbm", "pyexpat", "readline", "_sqlite3", "_tkinter", "linuxaudiodev", "ossaudiodev", "sunaudiodev"]
++disabled_module_list = ["_bsddb", "bsddb185", "gdbm", "_tkinter", "linuxaudiodev", "ossaudiodev", "sunaudiodev"]
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if

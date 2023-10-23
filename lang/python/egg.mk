@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.40 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: egg.mk,v 1.41 2023/10/23 06:35:59 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -41,9 +41,9 @@ USE_PKG_RESOURCES?=	no
 # py-setuptools.
 BOOTSTRAP_SETUPTOOLS?=	no
 .if ${BOOTSTRAP_SETUPTOOLS} == "yes"
-TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 do-build: ensurepip
 .PHONY: ensurepip
+.include "../../lang/python/batteries-included.mk"
 
 ensurepip:
 	${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} -m ensurepip --user

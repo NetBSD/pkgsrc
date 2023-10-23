@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2023/08/15 14:39:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/23 06:36:01 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python38-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +12,12 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
+CONFLICTS+=	py38-cElementTree-[0-9]*
+CONFLICTS+=	py38-curses-[0-9]*
+CONFLICTS+=	py38-cursespanel-[0-9]*
+CONFLICTS+=	py38-expat-[0-9]*
+CONFLICTS+=	py38-readline-[0-9]*
+CONFLICTS+=	py38-sqlite3-[0-9]*
 
 PLIST_AWK=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS=38
@@ -31,13 +38,18 @@ CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
+# NetBSD-8 curses has enough support for py-curses
+USE_CURSES=		getsyx
+# But we build as ncurses still to get the full feature set easily
+FAKE_NCURSES=		yes
+
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
 # http://bugs.python.org/issue13241
-.if !empty(MACHINE_PLATFORM:MDarwin-1[12].*)
+.if ${MACHINE_PLATFORM:MDarwin-1[12].*}
 PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
@@ -64,13 +76,6 @@ USE_TOOLS+=	gmake
 
 .include "platname.mk"
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
-
-# ossaudiodev is only available on x86 for the following platforms
-PLIST_VARS+=	oss
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    (${PY_PLATNAME} == "linux" || ${OPSYS} == "FreeBSD")
-PLIST.oss=	yes
-.endif
 
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise
 # certain modules will not be built.
@@ -198,11 +203,9 @@ setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
-# needed to make devel/py-readline pick up the correct readline implementation
-BUILDLINK_DEPMETHOD.readline=		build
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
@@ -212,7 +215,9 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
