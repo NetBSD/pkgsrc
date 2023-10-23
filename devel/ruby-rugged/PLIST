@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/04/29 13:39:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/10/23 15:16:40 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -67,6 +67,7 @@ ${GEM_LIBDIR}/vendor/libgit2/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/cmake/AddCFlagIfSupported.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/AddClarTest.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/CheckPrototypeDefinitionSafe.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/DefaultCFlags.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/EnableWarnings.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/ExperimentalFeatures.cmake
@@ -92,7 +93,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHTTPSBackend.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHashes.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectRegex.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectSSH.cmake
-${GEM_LIBDIR}/vendor/libgit2/cmake/SelectWinHTTP.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/SelectXdiff.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectZlib.cmake
 ${GEM_LIBDIR}/vendor/libgit2/deps/chromium-zlib/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/CMakeLists.txt
@@ -161,6 +162,23 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/urlmon.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.def
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/winhttp/winhttp64.def
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/CMakeLists.txt
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/git-xdiff.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xdiff.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xdiffi.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xdiffi.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xemit.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xemit.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xhistogram.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xinclude.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xmacros.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xmerge.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xpatience.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xprepare.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xprepare.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xtypes.h
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xutils.c
+${GEM_LIBDIR}/vendor/libgit2/deps/xdiff/xutils.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/zlib/adler32.c
@@ -379,6 +397,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/fetchhead.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/filter.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/filter.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/git2.rc
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/grafts.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/grafts.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/graph.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/hashsig.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/ident.c
@@ -406,8 +426,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/midx.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/midx.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/mwindow.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/mwindow.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/netops.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/netops.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/notes.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/notes.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/object.c
@@ -487,6 +505,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/openssl_legacy.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/openssl_legacy.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/registry.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/registry.h
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/schannel.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/schannel.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/socket.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/socket.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/streams/stransport.c
@@ -509,10 +529,11 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transaction.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transport.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_negotiate.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_gssapi.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_negotiate.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_ntlm.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_ntlm.h
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_ntlmclient.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/auth_sspi.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/credential.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/credential_helpers.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/transports/git.c
@@ -535,22 +556,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/tree.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/userdiff.h
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/worktree.c
 ${GEM_LIBDIR}/vendor/libgit2/src/libgit2/worktree.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/git-xdiff.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xdiff.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xdiffi.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xdiffi.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xemit.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xemit.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xhistogram.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xinclude.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xmacros.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xmerge.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xpatience.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xprepare.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xprepare.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xtypes.h
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xutils.c
-${GEM_LIBDIR}/vendor/libgit2/src/libgit2/xdiff/xutils.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/src/util/alloc.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/alloc.h
@@ -614,6 +619,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/util/runtime.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/runtime.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/sortedcache.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/sortedcache.h
+${GEM_LIBDIR}/vendor/libgit2/src/util/staticstr.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/str.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util/str.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util/strmap.c
