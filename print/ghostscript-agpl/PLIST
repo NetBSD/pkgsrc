@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/10/19 15:31:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/10/23 10:59:33 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -349,13 +349,7 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_typ32.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_typ42.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_type1.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_wan_e.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_base.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_draw.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_font.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_main.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_ops.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_rbld.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_sec.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/xlatmap
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/CNS1-WMode
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/SubstCID/GB1-WMode
