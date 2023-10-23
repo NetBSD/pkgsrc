@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6066 2023/10/23 14:52:18 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6067 2023/10/23 14:56:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8922,3 +8922,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/elixir to 1.15.7 [adam 2023-10-23]
 	Updated net/rabbitmq to 3.12.7 [adam 2023-10-23]
 	Updated devel/ruby-redmine50 to 5.0.6 [taca 2023-10-23]
+	Added www/ruby-rack-session version 2.0.0 [taca 2023-10-23]
