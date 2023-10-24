@@ -1,0 +1,2 @@
+A Haskell wrapper around the Isocline C library which can provide an
+alternative to GNU Readline.
