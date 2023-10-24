@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2023/10/24 14:06:24 pho Exp $
 
-BLAKE2s (reflection-2.1.6.tar.gz) = 2490cec5cd33b70b32b3965b6b1729e35a40a7c33356f57b6ef49b5037f18231
-SHA512 (reflection-2.1.6.tar.gz) = d7f615b6f361b2ca7266e8c4611c939d9f80684ca173080e9ad8227f04f2731899113dcb87ecb051d47b29fb860d7caa15c99c7d3d7493e7e73745d085518fdd
-Size (reflection-2.1.6.tar.gz) = 19976 bytes
+BLAKE2s (reflection-2.1.7.tar.gz) = b0102119dc6866c71238f3217790f7e6dc9b53b8d2fcee5e83f1fcc38e951fbc
+SHA512 (reflection-2.1.7.tar.gz) = 7fb1624eed36154be149eb5918fa442df7665b22a2c194559843e8e7f02e1d1bfb58d88443b1d1027e366fa175f039dc27cf4c57b3406d15d1b0a9e8242d4a0a
+Size (reflection-2.1.7.tar.gz) = 17823 bytes
