@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4076 2023/10/24 14:08:24 pho Exp $
+# $NetBSD: Makefile,v 1.4077 2023/10/24 14:10:01 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -638,6 +638,7 @@ SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
 SUBDIR+=	hs-hw-fingertree
 SUBDIR+=	hs-hw-prim
+SUBDIR+=	hs-ifelse
 SUBDIR+=	hs-implicit-hie
 SUBDIR+=	hs-implicit-hie-cradle
 SUBDIR+=	hs-indexed-traversable
