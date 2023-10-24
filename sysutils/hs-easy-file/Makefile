@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:45 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 08:14:10 pho Exp $
 
-DISTNAME=	easy-file-0.2.2
-PKGREVISION=	5
+DISTNAME=	easy-file-0.2.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	pho@cielonegro.org
