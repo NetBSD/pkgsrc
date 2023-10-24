@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/10/21 17:11:38 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/24 05:50:43 pin Exp $
 
-DISTNAME=	badwolf-1.2.2
-PKGREVISION=	9
+DISTNAME=	badwolf-1.3.0
 CATEGORIES=	www
 MASTER_SITES=	https://hacktivis.me/releases/
 
@@ -10,14 +9,22 @@ HOMEPAGE=	https://hacktivis.me/projects/badwolf
 COMMENT=	Minimalist and privacy-oriented webkit browser
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
-
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	lcms2-[0-9]*:../../graphics/lcms2
+TOOL_DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
+
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		ninja -j ${MAKE_JOBS:U1}
+
+do-install:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
+		ninja -j ${MAKE_JOBS:U1} install
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
