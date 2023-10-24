@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/24 17:26:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/24 17:42:11 pho Exp $
 lib/hie-compat-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hie-compat-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Compat/HieAst.dyn_hi
@@ -19,7 +19,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Compat/HieUtils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/Compat-HieAst.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/Compat-HieBin.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/Compat-HieDebug.html
@@ -46,10 +46,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/hie-compat.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hie-compat-${PKGVERSION}/html/synopsis.png
