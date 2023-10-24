@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/24 12:22:14 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/24 07:58:40 pho Exp $
 
-BLAKE2s (cmark-gfm-0.2.5.tar.gz) = 7221c3a754c1f341f467c95fd18f5eaaab88903b0d5d9b199fd68659205fe270
-SHA512 (cmark-gfm-0.2.5.tar.gz) = 693b1581cfb93d43ce12b6273a789a2f1226e70a83e9211cb3172ca644b76ba64b14a011b618fd7334afe038c43671dc4ab32eca1f67e8b6d695b28254b50be7
-Size (cmark-gfm-0.2.5.tar.gz) = 204032 bytes
+BLAKE2s (cmark-gfm-0.2.6.tar.gz) = 9449915d41b10b6cc9c9f2966768162d251bb6086310f8741133ccd541cb1168
+SHA512 (cmark-gfm-0.2.6.tar.gz) = b6ea9f3049680bbbbf72cc5dc038115ea2a85031edb61bc168ad5cf817bca7c8f2dd76e4ecc39be836238f401c4b6794947e1e651eaecfa211618932d3c92626
+Size (cmark-gfm-0.2.6.tar.gz) = 210356 bytes
