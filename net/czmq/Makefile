@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/08/14 13:21:07 nros Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:10:13 wiz Exp $
 
 DISTNAME=	czmq-4.2.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zeromq/}
 GITHUB_PROJECT=	czmq

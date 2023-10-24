@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/11/21 18:20:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/24 22:08:31 wiz Exp $
 
 DISTNAME=	pgpool-II-4.3.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/-II/2/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.pgpool.net/mediawiki/images/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/16 12:52:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:08 wiz Exp $
 
 DISTNAME=	minizip-ng-4.0.1
 PKGNAME=	${DISTNAME:S/-ng//}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zlib-ng/}
 GITHUB_PROJECT=	minizip-ng

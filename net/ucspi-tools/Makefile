@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/11/26 10:19:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/24 22:10:36 wiz Exp $
 
 DISTNAME=		ucspi-tools-1.7
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=younix/}
 GITHUB_PROJECT=		ucspi

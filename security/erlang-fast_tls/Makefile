@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2022/10/15 12:01:57 triaxx Exp $
+# $NetBSD: Makefile,v 1.22 2023/10/24 22:10:47 wiz Exp $
 
 DISTNAME=	fast_tls-1.1.16
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 

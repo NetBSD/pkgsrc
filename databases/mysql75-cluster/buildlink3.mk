@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/08/14 05:24:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/10/24 22:08:29 wiz Exp $
 
 BUILDLINK_TREE+=	mysql-cluster
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mysql-cluster
 MYSQL_CLUSTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mysql-cluster+=	mysql-cluster>=7.3.7
-BUILDLINK_ABI_DEPENDS.mysql-cluster?=	mysql-cluster>=7.5.25nb5
+BUILDLINK_ABI_DEPENDS.mysql-cluster?=	mysql-cluster>=7.5.25nb6
 BUILDLINK_PKGSRCDIR.mysql-cluster?=	../../databases/mysql75-cluster
 BUILDLINK_INCDIRS.mysql-cluster?=	include/mysql
 BUILDLINK_LIBDIRS.mysql-cluster?=	lib

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2023/08/14 05:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2023/10/24 22:10:17 wiz Exp $
 
 DISTNAME=	grilo-plugins-0.3.10
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/grilo-plugins/0.3/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2020/01/18 21:50:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/24 22:10:12 wiz Exp $
 
 DISTNAME=	btpd-0.16
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	https://cloud.github.com/downloads/btpd/btpd/
 

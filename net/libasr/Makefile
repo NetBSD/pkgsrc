@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/09/08 20:53:17 vins Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 22:10:22 wiz Exp $
 
 DISTNAME=	libasr-1.0.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 

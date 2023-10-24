@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 21:48:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2023/10/24 22:08:19 wiz Exp $
 
 DISTNAME=	bnc2.9.4
 PKGNAME=	${DISTNAME:S/bnc/&-/}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chat
 MASTER_SITES=	http://www.ircadmin.net/bnc/
 

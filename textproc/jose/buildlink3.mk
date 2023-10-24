@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/01/30 19:38:06 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:11:18 wiz Exp $
 
 BUILDLINK_TREE+=	jose
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	jose
 JOSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jose+=	jose>=11
-BUILDLINK_ABI_DEPENDS.jose+=	jose>=11
+BUILDLINK_ABI_DEPENDS.jose+=	jose>=11nb1
 BUILDLINK_PKGSRCDIR.jose?=	../../textproc/jose
 
 .include "../../textproc/jansson/buildlink3.mk"

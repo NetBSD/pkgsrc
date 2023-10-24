@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/06 10:20:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 22:08:44 wiz Exp $
 
 DISTNAME=	git-cinnabar-0.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glandium/}
 # does not contain the git submodules, please update GITHUB_SUBMODULES below

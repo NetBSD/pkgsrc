@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/04/23 14:26:30 adam Exp $
+# $NetBSD: Makefile,v 1.37 2023/10/24 22:10:38 wiz Exp $
 
 DISTNAME=	zeroconf-ioslave-${_KDE_VERSION}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	net
 COMMENT=	Monitors the network for DNS-SD services (Zeroconf)
 

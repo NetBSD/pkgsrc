@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2023/07/31 12:03:36 tron Exp $
+# $NetBSD: Makefile,v 1.37 2023/10/24 22:08:30 wiz Exp $
 
 DISTNAME=	nss_ldap-266a
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=manu0401/}
 

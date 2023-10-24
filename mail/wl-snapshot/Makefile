@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2023/09/16 11:31:06 mef Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/24 22:09:52 wiz Exp $
 
 VERSION=	2023.08.18
 DISTNAME=	wanderlust
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/wanderlust/wl-2.15.9.${VERSION}/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wanderlust/}
 GITHUB_PROJECT=	wanderlust

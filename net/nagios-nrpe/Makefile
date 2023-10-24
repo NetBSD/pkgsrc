@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2023/05/30 10:45:30 markd Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/24 22:10:25 wiz Exp $
 #
 
 DISTNAME=		nrpe-4.1.0
 PKGNAME=		nagios-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NagiosEnterprises/}
 GITHUB_RELEASE=		${DISTNAME}

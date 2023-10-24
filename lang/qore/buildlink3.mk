@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/09/30 11:02:07 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/10/24 22:09:39 wiz Exp $
 #
 
 BUILDLINK_TREE+=	qore
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	qore
 QORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qore+=	qore>=1.2 # API version 1.2
-BUILDLINK_ABI_DEPENDS.qore?=	qore>=1.19.1
+BUILDLINK_ABI_DEPENDS.qore?=	qore>=1.19.1nb1
 BUILDLINK_PKGSRCDIR.qore?=	../../lang/qore
 
 .include "../../archivers/bzip2/buildlink3.mk"

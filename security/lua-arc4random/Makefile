@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/07/14 11:43:25 nia Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:10:51 wiz Exp $
 
 DISTNAME=	lua-arc4random-1.4.1
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
+PKGREVISION=	1
 CATEGORIES=	security lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikejsavage/}
 GITHUB_PROJECT=	lua-arc4random

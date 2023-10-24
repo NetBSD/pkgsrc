@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2021/10/20 13:49:18 tm Exp $
+# $NetBSD: Makefile,v 1.50 2023/10/24 22:09:44 wiz Exp $
 
 DISTNAME=	imapfilter-2.7.5
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lefcha/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:11:18 wiz Exp $
 
 DISTNAME=	jose-11
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latchset/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

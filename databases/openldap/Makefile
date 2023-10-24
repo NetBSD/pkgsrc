@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.153 2021/08/23 09:58:58 adam Exp $
+# $NetBSD: Makefile,v 1.154 2023/10/24 22:08:30 wiz Exp $
 
+PKGREVISION= 1
 .include "../../databases/openldap/Makefile.version"
 
 CATEGORIES=	databases
