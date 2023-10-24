@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.291 2023/09/16 02:54:58 adam Exp $
+# $NetBSD: Makefile,v 1.292 2023/10/24 21:30:35 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-1.1.1w
+DISTNAME=	openssl-3.1.4
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -17,7 +17,7 @@ USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		fgrep gmake perl
 USE_TOOLS.SunOS+=	gm4
 BUILD_TARGET=		depend all
-TEST_TARGET=		tests
+TEST_TARGET=		test
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
@@ -25,12 +25,26 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared
+MAKE_FLAGS+=		MANSUFFIX=
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
 # No {get,make,set}context support before Darwin 9
 CONFIGURE_ARGS+=	no-async
+.endif
+
+PLIST_VARS+=		devcrypto afalg
+# the AF_ALG engine is supported only on Linux, where it
+# is used instead of the BSD /dev/crypto engine.
+.if ${OPSYS} == "Linux"
+PLIST.afalg=		yes
+.endif
+.if exists(/dev/crypto)
+PLIST.devcrypto=	yes
+.else
+CONFIGURE_ARGS+=	no-devcryptoeng
 .endif
 
 # Fix 64-bit build on at least Mac OS X Snow Leopard
@@ -58,7 +72,7 @@ SUBST_FILES.perlcross+=		apps/tsget.pl
 SUBST_SED.perlcross=		-e s,${PERL5:Q},${LOCALBASE:Q}/bin/perl5,g
 CHECK_INTERPRETER_SKIP+=	bin/c_rehash
 
-.endif				# USE_CROSS_COMPILE
+.endif                         # USE_CROSS_COMPILE
 
 .include "options.mk"
 
@@ -124,9 +138,8 @@ post-install:
 	for f in openssl-*; do						\
 		${RM} -f $${f};						\
 		${MV} `${ECHO} $${f} | ${SED} -e 's/openssl-//'` $${f};	\
-	done;								\
-	${RM} -f openssl-c_rehash.1;					\
-	${LN} -s openssl-rehash.1 c_rehash.1
+	done
+	${MV} ${DESTDIR}${PREFIX}/etc/openssl/* ${DESTDIR}${PREFIX}/share/examples/openssl
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
