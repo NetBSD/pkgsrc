@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6089 2023/10/24 14:08:15 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6090 2023/10/24 14:09:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8947,3 +8947,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-logict to 0.8.1.0 [pho 2023-10-24]
 	Updated devel/hs-reflection to 2.1.7 [pho 2023-10-24]
 	Added devel/hs-isocline version 1.0.9 [pho 2023-10-24]
+	Added devel/hs-ifelse version 0.85 [pho 2023-10-24]
