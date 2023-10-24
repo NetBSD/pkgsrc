@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/24 16:43:04 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/24 12:31:41 pho Exp $
 
-BLAKE2s (logict-0.8.0.0.tar.gz) = 417460e5e525351c3390c59c5caf7edb8a316af910c7b8acf0bda920e044b915
-SHA512 (logict-0.8.0.0.tar.gz) = 1a94a3df522cd301de5d4e36d66ded20982fc87c98448a12a300f3136cfb9bdea37d9c2b93d723b65803334ead3785873205d5c7a9c81559836d85ff02c3e15c
-Size (logict-0.8.0.0.tar.gz) = 17427 bytes
+BLAKE2s (logict-0.8.1.0.tar.gz) = 1b1cc29fc362653cc1ade10c01ba3c5193b7d197278a9c26b7d30e37e9a0ac94
+SHA512 (logict-0.8.1.0.tar.gz) = 9202d53252b38f9cab39ca95f74a56e3f858cc05ff6ab27f827fcad9a484416ff743195f528636d18a11dccb1e8566314287e8265c98d856fe374f8748de2739
+Size (logict-0.8.1.0.tar.gz) = 18721 bytes
