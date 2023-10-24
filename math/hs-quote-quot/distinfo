@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/24 08:35:10 pho Exp $
+
+BLAKE2s (quote-quot-0.2.1.0.tar.gz) = 2196a0df77483103d512b4d982b90c23b11cac3629affe2ca915e3e98d144cd2
+SHA512 (quote-quot-0.2.1.0.tar.gz) = 4767d162e7df9cfa5bfa713cdf851d570b73351a491e18ff5df5928ae53beabb70d95c18eb35eb5a7e7ca555e119e9358ae78e59c7b7bf9c4be8f5eae383c17c
+Size (quote-quot-0.2.1.0.tar.gz) = 6731 bytes
