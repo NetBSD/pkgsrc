@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6084 2023/10/24 11:11:45 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6085 2023/10/24 12:16:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8942,3 +8942,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-commutative-semigroups to 0.1.0.1 [pho 2023-10-24]
 	Updated time/hs-clock to 0.8.4 [pho 2023-10-24]
 	Updated devel/hs-utility-ht to 0.0.17 [pho 2023-10-24]
+	Updated devel/hs-managed to 1.0.10 [pho 2023-10-24]
