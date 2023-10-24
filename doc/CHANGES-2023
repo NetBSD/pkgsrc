@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6098 2023/10/24 21:30:48 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6099 2023/10/24 22:39:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8957,3 +8957,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hie-compat to 0.3.1.1 [pho 2023-10-24]
 	Updated devel/hs-ghc-trace-events to 0.1.2.7 [pho 2023-10-24]
 	Updated security/openssl to 3.1.4 [wiz 2023-10-24]
+	Updated mail/neomutt to 20231023 [wiz 2023-10-24]
