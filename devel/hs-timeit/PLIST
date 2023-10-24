@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 05:29:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/24 11:06:54 pho Exp $
 lib/timeit-${PKGVERSION}/${HS_VERSION}/package-description
 lib/timeit-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeIt.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeIt.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeIt.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeIt.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeIt.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/System-TimeIt.html
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/timeit.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/System-TimeIt.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/timeit-${PKGVERSION}/html/timeit.haddock
