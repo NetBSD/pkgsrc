@@ -1,19 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:04:42 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/24 17:37:56 pho Exp $
 lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-description
 lib/sorted-list-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/SortedList.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/Data-SortedList.html
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/sorted-list.haddock
-share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/Data-SortedList.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/changelog.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/readme.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/sorted-list.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/sorted-list-${PKGVERSION}/html/synopsis.png
