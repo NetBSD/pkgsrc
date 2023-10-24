@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6083 2023/10/24 10:42:32 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6084 2023/10/24 11:11:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8941,3 +8941,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added math/hs-quote-quot version 0.2.1.0 [pho 2023-10-24]
 	Updated math/hs-commutative-semigroups to 0.1.0.1 [pho 2023-10-24]
 	Updated time/hs-clock to 0.8.4 [pho 2023-10-24]
+	Updated devel/hs-utility-ht to 0.0.17 [pho 2023-10-24]
