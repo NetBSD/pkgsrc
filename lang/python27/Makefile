@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.109 2023/10/23 08:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2023/10/24 09:12:36 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,6 +31,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-dbmliborder=ndbm:bdb
+CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
