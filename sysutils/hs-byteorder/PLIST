@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 17:51:16 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/24 08:33:16 pho Exp $
 lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-description
 lib/byteorder-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/ByteOrder.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/System-ByteOrder.html
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/byteorder.haddock
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/System-ByteOrder.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/byteorder.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/byteorder-${PKGVERSION}/html/synopsis.png
