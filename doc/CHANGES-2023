@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6072 2023/10/24 04:36:46 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6073 2023/10/24 05:51:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8930,3 +8930,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-black to 23.10.1 [adam 2023-10-24]
 	Updated devel/py-virtualenv to 20.24.6 [adam 2023-10-24]
 	Updated devel/py-pylint to 3.0.2 [adam 2023-10-24]
+	Updated www/badwolf to 1.3.0 [pin 2023-10-24]
