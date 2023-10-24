@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2023/10/24 22:10:51 wiz Exp $
 
 BUILDLINK_TREE+=	libtcpa
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtcpa
 LIBTCPA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtcpa+=	libtcpa>=1.1b
-BUILDLINK_ABI_DEPENDS.libtcpa+=	libtcpa>=1.1bnb8
+BUILDLINK_ABI_DEPENDS.libtcpa+=	libtcpa>=1.1bnb9
 BUILDLINK_PKGSRCDIR.libtcpa?=	../../security/libtcpa
 BUILDLINK_DEPMETHOD.libtcpa?=	build
 

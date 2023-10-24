@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/10/21 23:24:43 osa Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/24 22:11:35 wiz Exp $
 
+PKGREVISION= 1
 .include "../../www/unit/version.mk"
 
 DISTNAME=	unit-${UNIT_VERSION}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2021/06/23 20:33:15 nia Exp $
+# $NetBSD: Makefile,v 1.44 2023/10/24 22:10:31 wiz Exp $
 
 DISTNAME=	pure-ftpd-1.0.49
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://download.pureftpd.org/pub/pure-ftpd/releases/
 EXTRACT_SUFX=	.tar.bz2

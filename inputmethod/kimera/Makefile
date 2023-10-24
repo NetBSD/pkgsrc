@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/02/14 17:35:43 he Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/24 22:09:35 wiz Exp $
 #
 
 DISTNAME=	kimera-2.11
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_OSDN:=kimera/37271/}
 

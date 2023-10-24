@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/09/01 14:29:43 nia Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/24 22:10:55 wiz Exp $
 #
 
 DISTNAME=	pam_p11-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
 GITHUB_TAG=	pam_p11

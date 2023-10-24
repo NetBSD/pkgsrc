@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/08/29 09:23:56 nia Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/24 22:08:53 wiz Exp $
 
 DISTNAME=	cqueues-20200726
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wahern/}
 GITHUB_PROJECT=	cqueues

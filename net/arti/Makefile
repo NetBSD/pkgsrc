@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/04/28 16:58:42 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:10:12 wiz Exp $
 
 PKGNAME=	arti-1.1.3
+PKGREVISION=	1
 DISTNAME=	arti-arti-v${PKGVERSION_NOREV}
 PKGVERSION=	1
 CATEGORIES=	net

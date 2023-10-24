@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2023/04/23 14:26:17 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/10/24 22:08:55 wiz Exp $
 
 MODNAME=	gearman
 PECL_VERSION=	2.1.0
 DISTNAME=	gearman-${PECL_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=php/}
 GITHUB_PROJECT=	pecl-networking-gearman

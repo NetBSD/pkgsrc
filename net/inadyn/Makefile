@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2023/10/24 22:10:19 wiz Exp $
 
 DISTNAME=	inadyn-2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
 

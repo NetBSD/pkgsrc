@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2023/01/25 19:34:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.77 2023/10/24 22:09:46 wiz Exp $
 
 DISTNAME=	maildrop-3.1.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2

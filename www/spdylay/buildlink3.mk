@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/04/19 08:08:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/10/24 22:11:34 wiz Exp $
 
 BUILDLINK_TREE+=	spdylay
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	spdylay
 SPDYLAY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spdylay+=	spdylay>=1.3.2
-BUILDLINK_ABI_DEPENDS.spdylay+=	spdylay>=1.4.0nb8
+BUILDLINK_ABI_DEPENDS.spdylay+=	spdylay>=1.4.0nb9
 BUILDLINK_PKGSRCDIR.spdylay?=	../../www/spdylay
 
 .include "../../devel/libevent/buildlink3.mk"

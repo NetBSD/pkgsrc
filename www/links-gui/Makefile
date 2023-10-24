@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2023/10/21 17:11:39 gdt Exp $
+# $NetBSD: Makefile,v 1.108 2023/10/24 22:11:29 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/links/&-gui/}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Lynx-like text and graphics WWW browser
 
 USE_TOOLS+=		pkg-config

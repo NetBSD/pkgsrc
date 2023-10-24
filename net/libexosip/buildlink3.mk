@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/03/06 13:01:47 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/24 22:10:22 wiz Exp $
 
 BUILDLINK_TREE+=	libeXosip2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libeXosip2
 LIBEXOSIP2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libeXosip2+=	libeXosip2>=3.5.0
-BUILDLINK_ABI_DEPENDS.libeXosip2+=	libeXosip2>=4.1.0nb2
+BUILDLINK_ABI_DEPENDS.libeXosip2+=	libeXosip2>=5.3.0nb1
 BUILDLINK_PKGSRCDIR.libeXosip2?=	../../net/libexosip
 
 pkgbase := libeXosip2

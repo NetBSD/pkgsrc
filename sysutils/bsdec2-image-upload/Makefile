@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2023/06/26 09:31:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 22:11:04 wiz Exp $
 
 GITHUB_PROJECT=	bsdec2-image-upload
 DISTNAME=	1.4.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cperciva/}
 DIST_SUBDIR=	${GITHUB_PROJECT}

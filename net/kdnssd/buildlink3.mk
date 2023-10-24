@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2023/05/22 21:00:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2023/10/24 22:10:20 wiz Exp $
 
 BUILDLINK_TREE+=	kdnssd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdnssd
 KDNSSD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdnssd+=	kdnssd>=5.19.0
-BUILDLINK_ABI_DEPENDS.kdnssd?=	kdnssd>=5.98.0nb6
+BUILDLINK_ABI_DEPENDS.kdnssd?=	kdnssd>=5.108.0nb1
 BUILDLINK_PKGSRCDIR.kdnssd?=	../../net/kdnssd
 
 .include "../../net/avahi/buildlink3.mk"

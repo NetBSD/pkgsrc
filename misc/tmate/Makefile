@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/01/09 12:53:45 rxg Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:10:05 wiz Exp $
 
 DISTNAME=	tmate-2.4.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmate-io/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

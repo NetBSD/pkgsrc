@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2023/10/21 17:11:17 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2023/10/24 22:10:42 wiz Exp $
 
 BUILDLINK_TREE+=	ghostscript
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ghostscript
 GHOSTSCRIPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ghostscript+=	ghostscript>=8.63nb1
-BUILDLINK_ABI_DEPENDS.ghostscript+=	ghostscript>=9.05nb32
+BUILDLINK_ABI_DEPENDS.ghostscript+=	ghostscript>=9.05nb33
 BUILDLINK_PKGSRCDIR.ghostscript?=	../../print/ghostscript
 
 pkgbase := ghostscript

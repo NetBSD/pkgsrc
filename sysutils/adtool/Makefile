@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2023/10/24 22:11:02 wiz Exp $
 #
 
 DISTNAME=	adtool-1.3.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gp2x.org/adtool/
 

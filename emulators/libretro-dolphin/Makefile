@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/08/14 05:24:21 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/10/24 22:09:03 wiz Exp $
 
 DISTNAME=	libretro-dolphin-20180827
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	dolphin

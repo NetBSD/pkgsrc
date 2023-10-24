@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/07/29 02:05:30 markd Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/24 22:08:49 wiz Exp $
 
 DISTNAME=	kross-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

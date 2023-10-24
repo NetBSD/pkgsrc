@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/02/15 12:23:30 adam Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:08:25 wiz Exp $
 
 DISTNAME=	srtp-2.5.0
+PKGREVISION=	1
 CATEGORIES=	comms security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cisco/}
 GITHUB_PROJECT=	libsrtp

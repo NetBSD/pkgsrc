@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/03/20 11:57:57 nia Exp $
+# $NetBSD: Makefile,v 1.19 2023/10/24 22:09:42 wiz Exp $
 #
 
 DISTNAME=	esmtp-1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esmtp/}
 EXTRACT_SUFX=	.tar.bz2

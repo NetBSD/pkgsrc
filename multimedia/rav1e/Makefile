@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/20 15:07:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:10:10 wiz Exp $
 
 DISTNAME=	rav1e-0.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xiph/}
 MAINTAINER=	ryoon@NetBSD.org
