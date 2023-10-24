@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:04:42 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/24 17:37:56 pho Exp $
 
-BLAKE2s (sorted-list-0.2.1.0.tar.gz) = a97a6e86e2bac643c4dc0b023f308ec108d9ea3b07ed715b26c00fb9aebe6f36
-SHA512 (sorted-list-0.2.1.0.tar.gz) = f87777a2150a1b7cfee0a79585a62aad8d1c874f173c13628ed69d62f107de4509dc03031cf86c1368b073f16c0b163ce378d3fa5fe24c8cf22ce0105977409f
-Size (sorted-list-0.2.1.0.tar.gz) = 5965 bytes
+BLAKE2s (sorted-list-0.2.2.0.tar.gz) = 4df58d4f0d76ca1b47a605b0afe249afc534e111785b8988f3a2f178f48a2a11
+SHA512 (sorted-list-0.2.2.0.tar.gz) = 7e05172b50b545faea91b742b22138311040f954d93224d8c87c02eb7ba63d56ad2ee0e18989df6c73edc6648ad73afc5d173ddad1841a480cf7108e4a3f2765
+Size (sorted-list-0.2.2.0.tar.gz) = 6645 bytes
