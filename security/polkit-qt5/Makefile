@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2023/05/22 21:00:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/24 22:10:56 wiz Exp $
 
 DISTNAME=	polkit-qt-1-0.114.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt5-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://invent.kde.org/libraries/polkit-qt-1/-/archive/v${PKGVERSION_NOREV}/
 

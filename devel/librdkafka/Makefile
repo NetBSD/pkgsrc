@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/24 22:08:52 wiz Exp $
 
 DISTNAME=	librdkafka-1.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=edenhill/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

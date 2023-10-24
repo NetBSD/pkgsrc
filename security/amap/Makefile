@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2020/01/18 21:50:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/24 22:10:45 wiz Exp $
 #
 
 DISTNAME=	amap-5.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net security
 MASTER_SITES=	http://freeworld.thc.org/releases/
 

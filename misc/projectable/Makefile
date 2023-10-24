@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/07/10 19:51:05 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:10:03 wiz Exp $
 
 DISTNAME=	projectable-1.3.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dzfrias/}
 

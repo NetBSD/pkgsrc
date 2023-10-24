@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/02/10 11:27:19 kardel Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:11:04 wiz Exp $
 
 COMMENT=		Backup Archiving REcovery Open Sourced - client
+PKGREVISION=		1
 
 CONFLICTS=		bareos-[0-9]* bacula-[0-9]* bacula-clientonly-[0-9]*
 

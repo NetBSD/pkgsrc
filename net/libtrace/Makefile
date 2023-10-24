@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/04/19 08:11:09 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/24 22:10:23 wiz Exp $
 
 DISTNAME=	libtrace-4.0.10
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	net
 MASTER_SITES=	http://research.wand.net.nz/software/libtrace/
 EXTRACT_SUFX=	.tar.bz2

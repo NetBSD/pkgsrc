@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/07/21 12:22:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/24 22:11:19 wiz Exp $
 
 DISTNAME=	odt2tex-0.0.13
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simonaw/}
 

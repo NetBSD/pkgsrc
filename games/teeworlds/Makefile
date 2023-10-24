@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/08/14 19:30:15 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/24 22:09:18 wiz Exp $
 
 DISTNAME=	teeworlds-0.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=teeworlds/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

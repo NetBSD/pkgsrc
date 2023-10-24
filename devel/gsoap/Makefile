@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/03/20 11:57:26 nia Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/24 22:08:45 wiz Exp $
 
 DISTNAME=		gsoap_2.7.17
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gsoap2/}
 EXTRACT_SUFX=		.zip

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/01/29 21:16:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/24 22:09:23 wiz Exp $
 
 PKGNAME=	evas-buffer-${EVAS_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Evas buffer engine
 
 EVAS_ENGINES=	buffer

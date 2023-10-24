@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 21:50:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:10:27 wiz Exp $
 
 VER=				1.4
 DISTNAME=			nsca-ng-${VER}
-PKGREVISION=			1
+PKGREVISION=			2
 CATEGORIES=			net
 MASTER_SITES=			http://www.nsca-ng.org/download/
 

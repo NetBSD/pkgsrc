@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/08/09 20:51:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:11:28 wiz Exp $
 
 DISTNAME=	konqueror-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	https://konqueror.org/

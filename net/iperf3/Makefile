@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/09/20 17:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/24 22:10:19 wiz Exp $
 
 DISTNAME=	iperf-3.15
 PKGNAME=	${DISTNAME:S/iperf/iperf3/}
+PKGREVISION=	1
 CATEGORIES=	net benchmarks
 MASTER_SITES=	https://downloads.es.net/pub/iperf/
 

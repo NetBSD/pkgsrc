@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/12/13 22:10:14 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:55 wiz Exp $
 
 DISTNAME=	pijul-1.0.0-beta.2
 PKGNAME=	pijul-1.0.0.beta2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/pijul/
 DISTFILES=	pijul-1.0.0-beta.2.crate

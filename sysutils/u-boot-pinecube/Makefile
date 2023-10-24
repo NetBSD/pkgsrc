@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/07/29 13:49:41 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:11:15 wiz Exp $
 
 UBOOT_TARGET=		pinecube
 UBOOT_CONFIG=		pinecube_defconfig
@@ -8,6 +8,7 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 UBOOT_VERSION=		2022.04
 
+PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"

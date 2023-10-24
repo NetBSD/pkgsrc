@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/06/06 12:41:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:09:47 wiz Exp $
 
 DISTNAME=	openarc-20180921
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 GITHUB_PROJECT=	OpenARC

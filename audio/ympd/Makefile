@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/04/18 18:43:07 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:08:17 wiz Exp $
 
 DISTNAME=	ympd-1.3.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

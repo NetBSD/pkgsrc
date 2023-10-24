@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2021/12/17 21:40:06 schwarz Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/24 22:10:33 wiz Exp $
 
 DISTNAME=	sipsak-0.9.8.1
 MASTER_SITES=	https://github.com/nils-ohlmeier/sipsak/releases/download/${PKGVERSION_NOREV}/
 
+PKGREVISION=	1
 CATEGORIES=	net comms
 
 MAINTAINER=	schwarz@NetBSD.org

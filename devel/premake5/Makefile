@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/05/09 17:31:02 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:08:55 wiz Exp $
 
 PREMAKE5_VERSION=	5.0.0-beta2
 DISTNAME=		premake-${PREMAKE5_VERSION}-src
 PKGNAME=		premake5-${PREMAKE5_VERSION:S/-beta2/.b2/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=premake/}
 GITHUB_PROJECT=		premake-core

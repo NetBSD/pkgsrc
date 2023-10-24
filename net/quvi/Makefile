@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/04/19 08:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/10/24 22:10:32 wiz Exp $
 #
 
 DISTNAME=	quvi-0.4.2
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.bz2

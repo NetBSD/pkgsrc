@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/06/06 08:05:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/10/24 22:10:51 wiz Exp $
 
 DISTNAME=	libssh2-1.11.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh2.org/download/
 

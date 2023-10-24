@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2023/04/19 08:10:47 adam Exp $
+# $NetBSD: Makefile,v 1.52 2023/10/24 22:09:55 wiz Exp $
 #
 
 DISTNAME=		esniper-2-31-0
 PKGNAME=		esniper-2.31.0
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=esniper/}
 EXTRACT_SUFX=		.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/11/26 15:51:58 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2023/10/24 22:08:12 wiz Exp $
 
 BUILDLINK_TREE+=	libshout
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libshout
 LIBSHOUT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libshout+=	libshout>=2.0
-BUILDLINK_ABI_DEPENDS.libshout+=	libshout>=2.0nb1
+BUILDLINK_ABI_DEPENDS.libshout+=	libshout>=2.4.6nb1
 BUILDLINK_PKGSRCDIR.libshout?=		../../audio/libshout
 
 .include "../../audio/libvorbis/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2021/10/21 07:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/24 22:09:48 wiz Exp $
 
 MODNAME=		imap
 CATEGORIES+=		mail
 COMMENT=		PHP extension for IMAP (Internet Mailbox Access Protocol)
-PKGREVISION=		3
+PKGREVISION=		4
 
 CONFLICTS=	php-imap-[0-9]*
 

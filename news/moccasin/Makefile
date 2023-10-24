@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/09/03 07:10:45 pin Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:10:39 wiz Exp $
 
 DISTNAME=	moccasin-0.1.2
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	https://static.crates.io/crates/moccasin/
 EXTRACT_SUFX=	.crate

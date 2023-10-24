@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/01/28 13:12:54 pin Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/24 22:11:30 wiz Exp $
 
 DISTNAME=	longboard-0.0.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jbr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

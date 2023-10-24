@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/03/04 09:14:28 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:08:21 wiz Exp $
 
 DISTNAME=	libmesode-0.10.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

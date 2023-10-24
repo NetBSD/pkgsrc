@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/24 22:10:53 wiz Exp $
 
 BUILDLINK_TREE+=	opensaml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opensaml
 OPENSAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opensaml+=	opensaml>=2.3
-BUILDLINK_ABI_DEPENDS.opensaml+=	opensaml>=2.5.5nb13
+BUILDLINK_ABI_DEPENDS.opensaml+=	opensaml>=3.1.0nb10
 BUILDLINK_PKGSRCDIR.opensaml?=		../../security/opensaml
 
 .include "../../security/openssl/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/07/03 11:29:03 vins Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/24 22:08:15 wiz Exp $
 
 DISTNAME=	rtunes-0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.nazgul.ch/dev/
 

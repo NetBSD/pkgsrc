@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:31:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/24 22:08:28 wiz Exp $
 
 # This buildlink file uses mysql-client and not mariadb-client,
 # because some packages depending on it expect BUILDLINK_*.mysql-client
@@ -10,7 +10,7 @@ BUILDLINK_TREE+=	mysql-client
 MYSQL_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mysql-client+=	mariadb-client>=10.4.0<10.5.0
-BUILDLINK_ABI_DEPENDS.mysql-client+=	mariadb-client>=10.4.20nb4
+BUILDLINK_ABI_DEPENDS.mysql-client+=	mariadb-client>=10.4.20nb7
 BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mariadb104-client
 BUILDLINK_INCDIRS.mysql-client+=	include/mysql
 BUILDLINK_LIBDIRS.mysql-client+=	lib

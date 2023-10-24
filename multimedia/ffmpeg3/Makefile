@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2023/10/21 17:11:06 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2023/10/24 22:10:06 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
-PKGREVISION=	11
+PKGREVISION=	12
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Decoding, encoding and streaming software (v3.x)

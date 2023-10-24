@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2023/05/06 19:08:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2023/10/24 22:08:12 wiz Exp $
 #
 
 DISTNAME=	mxcl-liblastfm-0.3.3-0-gf0b3239
 PKGNAME=	liblastfm-0.3.3
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	audio net
 MASTER_SITES=	http://download.github.com/
 

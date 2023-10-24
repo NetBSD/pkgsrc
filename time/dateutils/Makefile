@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/06/26 15:29:56 adam Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/24 22:11:21 wiz Exp $
 
 DISTNAME=	dateutils-0.4.10
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hroptatyr/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

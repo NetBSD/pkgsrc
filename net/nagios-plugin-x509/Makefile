@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/07/12 20:17:12 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:10:26 wiz Exp $
 #
 
 PKGNAME=	nagios-plugin-x509-${DISTNAME:C/.*-//}
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	check_x509-0.1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/

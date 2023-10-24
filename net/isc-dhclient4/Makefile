@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/03/02 21:28:27 he Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/24 22:10:19 wiz Exp $
 
 PKGNAME=	isc-dhclient-${DHVER}
+PKGREVISION=	1
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Client
 BUILD_SUBDIR=	bind includes tests common omapip client
 SUBDIR=		client

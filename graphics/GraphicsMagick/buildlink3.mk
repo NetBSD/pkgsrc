@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2023/10/21 17:10:21 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2023/10/24 22:09:21 wiz Exp $
 
 BUILDLINK_TREE+=	GraphicsMagick
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	GraphicsMagick
 GRAPHICSMAGICK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.3.12nb6
-BUILDLINK_ABI_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.3.40nb4
+BUILDLINK_ABI_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.3.40nb5
 BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
 
 pkgbase := GraphicsMagick

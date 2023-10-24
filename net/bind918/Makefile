@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/09/20 13:37:16 taca Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/24 22:10:12 wiz Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz

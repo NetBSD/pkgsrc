@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2023/04/19 08:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/24 22:10:56 wiz Exp $
 
 MODNAME=		oauth
-PKGREVISION=		23
+PKGREVISION=		24
 PECL_VERSION=		1.2.3
 CATEGORIES+=		security
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 21:50:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/24 22:11:00 wiz Exp $
 #
 
 DISTNAME=		tcltls-1.7.16
 PKGNAME=		tcl-tls-1.7.16
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://core.tcl.tk/tcltls/uv/
 

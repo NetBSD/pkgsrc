@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/15 19:50:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:09:41 wiz Exp $
 
 DISTNAME=		bincimap-1.2.13final
 PKGNAME=		${DISTNAME:S/final$//}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bincimap/}
 

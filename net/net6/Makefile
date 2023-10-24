@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/04/19 08:08:38 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/24 22:10:27 wiz Exp $
 #
 
 DISTNAME=	net6-1.3.14
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net
 MASTER_SITES=	http://releases.0x539.de/net6/
 

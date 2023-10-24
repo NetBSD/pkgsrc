@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:57:57 nia Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/24 22:09:42 wiz Exp $
 #
 
 DISTNAME=	enma-1.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/07/20 15:25:38 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:11:01 wiz Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
 PKGVER=		1.28.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 EXTRACT_SUFX=	.tar.gz

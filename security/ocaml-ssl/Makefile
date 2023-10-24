@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/05/24 18:59:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/24 22:10:53 wiz Exp $
 #
 
 DISTNAME=	ocaml-ssl-0.5.10
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=savonet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
