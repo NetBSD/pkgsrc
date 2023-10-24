@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/24 08:28:16 pho Exp $
 
-BLAKE2s (network-byte-order-0.1.6.tar.gz) = 71a21b77a0c83a3e286f6a49e2b43bcb3e85db1935daf3986d6991b4ed3f5d2a
-SHA512 (network-byte-order-0.1.6.tar.gz) = bfb15f6e1aa863af7f81dc35518273e936d04f5f9decf6a0938a972dc9780ab5c9c10ed062ea027d1e92aa1e61dfb0059dcbc38324dbd4124f89d08017a2ae97
-Size (network-byte-order-0.1.6.tar.gz) = 6648 bytes
+BLAKE2s (network-byte-order-0.1.7.tar.gz) = 602ecbf899612319326b5319fac34638464fbc653e60e3a727f172e00486cb85
+SHA512 (network-byte-order-0.1.7.tar.gz) = faa43554a0ff05bce4edca7d701aaa1a0618e824b82ec5a60fd2375dc2ae1cba6c3b9a10133e86d9f180baad95f81fa8220224491d9697f68d892dcaf22de1a6
+Size (network-byte-order-0.1.7.tar.gz) = 6402 bytes
