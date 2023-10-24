@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/24 16:27:28 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/24 12:21:34 pho Exp $
 lib/lukko-${PKGVERSION}/${HS_VERSION}/package-description
 lib/lukko-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -25,17 +25,19 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Lukko/NoOp.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lukko/NoOp.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE
-${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE.GPLv2
-${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE.GPLv3
+share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE.GPLv2
+share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/LICENSE.GPLv3
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/Lukko-FLock.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/Lukko-NoOp.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/Lukko.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/lukko.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lukko-${PKGVERSION}/html/synopsis.png
