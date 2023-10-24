@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/04/24 17:36:43 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/24 14:52:36 adam Exp $
 
-DISTNAME=	pylint-django-2.5.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	pylint_django-2.5.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint-django/}
 
@@ -10,12 +10,13 @@ HOMEPAGE=	https://github.com/landscapeio/pylint-django
 COMMENT=	Pylint plugin to aid Pylint in recognising the Django framework
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.0.0:../../devel/py-pylint
-DEPENDS+=	${PYPKGPREFIX}-pylint-plugin-utils>=0.7:../../devel/py-pylint-plugin-utils
+DEPENDS+=	${PYPKGPREFIX}-pylint-plugin-utils>=0.8:../../devel/py-pylint-plugin-utils
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
