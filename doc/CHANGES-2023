@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6071 2023/10/23 22:18:29 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6072 2023/10/24 04:36:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8927,3 +8927,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/dnsx to 1.1.5 [leot 2023-10-23]
 	Updated security/tlsx to 1.1.5 [leot 2023-10-23]
 	Updated devel/py-guppy3 to 3.1.4 [gutteridge 2023-10-23]
+	Updated textproc/py-black to 23.10.1 [adam 2023-10-24]
+	Updated devel/py-virtualenv to 20.24.6 [adam 2023-10-24]
+	Updated devel/py-pylint to 3.0.2 [adam 2023-10-24]
