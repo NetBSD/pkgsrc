@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.35 2023/10/12 13:31:10 riastradh Exp $
+# $NetBSD: metadata.mk,v 1.36 2023/10/24 10:30:53 jperkin Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -65,9 +65,7 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 		if [ -n "${PREV_PKGPATH}" ]; then			\
 			${ECHO} "PREV_PKGPATH=${PREV_PKGPATH}";		\
 		fi;							\
-		if [ -n "${SUPERSEDES}" ]; then				\
-			${ECHO} "SUPERSEDES=${SUPERSEDES}";		\
-		fi;							\
+		${SUPERSEDES:@s@ ${ECHO} SUPERSEDES=${s:Q}; @}		\
 		${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}";		\
 		${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}";		\
 	} > ${.TARGET}.tmp
