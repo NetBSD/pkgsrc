@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.111 2023/09/03 01:42:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.112 2023/10/24 14:33:12 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -98,6 +98,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.70.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.71.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.72.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.73.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.9.0.txt
 ${GEM_LIBDIR}/doc/schema_modification.rdoc
@@ -351,6 +352,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/mssql_optimistic_locking.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/nested_attributes.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking_base.rb
+${GEM_LIBDIR}/lib/sequel/plugins/paged_operations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_array_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_auto_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_row.rb
