@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6086 2023/10/24 12:24:43 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6087 2023/10/24 12:31:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8944,3 +8944,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-utility-ht to 0.0.17 [pho 2023-10-24]
 	Updated devel/hs-managed to 1.0.10 [pho 2023-10-24]
 	Updated lang/hs-lua to 2.3.1 [pho 2023-10-24]
+	Updated devel/hs-logict to 0.8.1.0 [pho 2023-10-24]
