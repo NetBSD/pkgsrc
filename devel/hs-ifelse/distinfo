@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/24 14:09:42 pho Exp $
+
+BLAKE2s (IfElse-0.85.tar.gz) = f63547b2251c5220e7b43c906ab85ee468c71acc692b619e02c38dabfeb8af9b
+SHA512 (IfElse-0.85.tar.gz) = 5378b0f98d3a14dbc5b297a01a5c48aed4825f4ab2192e35b3a6aee932cce5b740e5ea44cbbd69dc3e74ff38415d77df43136e2a8ddf9bc6fd9fe1497a6dcd1c
+Size (IfElse-0.85.tar.gz) = 2865 bytes
