@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/24 07:45:01 pho Exp $
+
+BLAKE2s (typst-symbols-0.1.4.tar.gz) = ca277cea2a0fd50f7970e800d81fa77af17caf57d62758f90abef779aff357e6
+SHA512 (typst-symbols-0.1.4.tar.gz) = 917e10b768751b50253f693726b49a27ee2cd8879f654aaac461df9a894d25ecd132a73cc6289a8684cd5dca982b65033757c1538e144413f2ddd3135f90db3e
+Size (typst-symbols-0.1.4.tar.gz) = 18688 bytes
