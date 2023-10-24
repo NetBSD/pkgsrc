@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6090 2023/10/24 14:09:49 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6091 2023/10/24 14:33:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8948,3 +8948,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-reflection to 2.1.7 [pho 2023-10-24]
 	Added devel/hs-isocline version 1.0.9 [pho 2023-10-24]
 	Added devel/hs-ifelse version 0.85 [pho 2023-10-24]
+	Updated databases/ruby-sequel to 5.73.0 [taca 2023-10-24]
