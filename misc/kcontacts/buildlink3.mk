@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/05/22 21:00:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/10/24 22:09:58 wiz Exp $
 
 BUILDLINK_TREE+=	kcontacts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcontacts
 KCONTACTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcontacts+=	kcontacts>=5.64.0
-BUILDLINK_ABI_DEPENDS.kcontacts?=		kcontacts>=5.98.0nb5
+BUILDLINK_ABI_DEPENDS.kcontacts?=		kcontacts>=5.108.0nb1
 BUILDLINK_PKGSRCDIR.kcontacts?=		../../misc/kcontacts
 
 .include "../../devel/kconfig/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/01/30 13:53:50 taca Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/24 22:08:40 wiz Exp $
 
 DISTNAME=	ruby-ldap-0.9.20
 PKGNAME=	${DISTNAME:S/^ruby-/${RUBY_PKGPREFIX}-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

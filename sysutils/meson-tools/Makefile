@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/14 11:30:26 nia Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/24 22:11:10 wiz Exp $
 
 VERSION=	0.1
 DISTNAME=	meson-tools-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afaerber/}
 GITHUB_PROJECT=	meson-tools

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/11/27 10:19:38 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:10:51 wiz Exp $
 
 BUILDLINK_TREE+=	libretls
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libretls
 LIBRETLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libretls+=	libretls>=3.3.0
+BUILDLINK_ABI_DEPENDS.libretls?=		libretls>=3.7.0nb1
 BUILDLINK_PKGSRCDIR.libretls?=		../../security/libretls
 
 .include "../../security/openssl/buildlink3.mk"

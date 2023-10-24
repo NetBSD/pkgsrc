@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/05/15 19:12:11 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:08:21 wiz Exp $
 
 BUILDLINK_TREE+=	libstrophe
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libstrophe
 LIBSTROPHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libstrophe+=	libstrophe>=0.12.0
+BUILDLINK_ABI_DEPENDS.libstrophe?=	libstrophe>=0.12.0nb1
 BUILDLINK_PKGSRCDIR.libstrophe?=	../../chat/libstrophe
 
 .include "../../textproc/expat/buildlink3.mk"

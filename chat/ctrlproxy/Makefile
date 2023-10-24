@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/04/19 08:09:14 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/24 22:08:19 wiz Exp $
 #
 
 DISTNAME=		ctrlproxy-3.0.8
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		chat
 MASTER_SITES=		http://www.ctrlproxy.org/releases/
 

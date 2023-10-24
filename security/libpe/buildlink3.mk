@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/05/29 23:23:42 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/10/24 22:10:51 wiz Exp $
 
 BUILDLINK_TREE+=	libpe
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpe
 LIBPE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpe+=	libpe>=0.81
-BUILDLINK_ABI_DEPENDS.libpe+=	libpe>=0.81
+BUILDLINK_ABI_DEPENDS.libpe+=	libpe>=0.81nb2
 BUILDLINK_PKGSRCDIR.libpe?=	../../security/libpe
 
 .include "../../devel/pcre/buildlink3.mk"

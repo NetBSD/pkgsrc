@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/11/11 20:11:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/24 22:11:15 wiz Exp $
 
 DISTNAME=	tealdeer-1.6.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dbrgn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

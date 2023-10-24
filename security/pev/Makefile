@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/07/10 02:55:02 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/24 22:10:56 wiz Exp $
 
+PKGREVISION= 1
 .include "../../security/libpe/Makefile.common"
 
 DISTNAME=	${GITHUB_PROJECT}-${PEV_VERSION}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/01/21 16:49:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:24 wiz Exp $
 
 DISTNAME=	suite3270-4.1ga11-src
 PKGNAME=	c3270-4.1ga11
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://x3270.bgp.nu/download/04.01/
 EXTRACT_SUFX=	.tgz

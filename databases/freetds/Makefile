@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2023/04/25 13:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2023/10/24 22:08:26 wiz Exp $
 
 DISTNAME=	freetds-1.00.112
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.freetds.org/pub/freetds/stable/
 EXTRACT_SUFX=	.tar.bz2

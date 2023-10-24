@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2022/10/18 12:14:34 adam Exp $
+# $NetBSD: Makefile,v 1.95 2023/10/24 22:08:38 wiz Exp $
 
 DISTNAME=	python-ldap-3.4.3
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ldap/}
 

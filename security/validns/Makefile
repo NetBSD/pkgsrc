@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/06/06 12:42:16 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2023/10/24 22:11:01 wiz Exp $
 #
 
 DISTNAME=	validns-0.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	http://www.validns.net/download/
 

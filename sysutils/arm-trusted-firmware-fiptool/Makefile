@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 11:45:24 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 22:11:03 wiz Exp $
 
 # We override WRKSRC, so we provide our own patches (and thus distinfo)
 DISTINFO_FILE=	${.CURDIR}/distinfo
 PATCHDIR=	${.CURDIR}/patches
 
+PKGREVISION= 1
 .include "../../sysutils/arm-trusted-firmware/arm-trusted-firmware-dist.mk"
 
 PKGNAME=	${DISTNAME:S/firmware/firmware-fiptool/}

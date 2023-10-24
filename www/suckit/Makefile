@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/04/29 16:59:47 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:11:35 wiz Exp $
 
 DISTNAME=	suckit-0.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Skallwar/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

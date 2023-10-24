@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/25 09:10:05 pin Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:11:25 wiz Exp $
 
 DISTNAME=	cratuity-0.1.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TheMayoras/}
 GITHUB_PROJECT=	cratuity

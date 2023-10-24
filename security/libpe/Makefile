@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2022/07/10 02:40:52 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:10:51 wiz Exp $
 
 .include "../../security/libpe/Makefile.common"
 
 DISTNAME=	${GITHUB_PROJECT}-${PEV_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_PROJECT=	libpe
 GITHUB_TAG=	ce39b127328e3863e08163962f7ecc768eb2555e
 

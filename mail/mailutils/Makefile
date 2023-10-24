@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:09:46 wiz Exp $
 
 DISTNAME=	mailutils-3.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/mailutils/
 

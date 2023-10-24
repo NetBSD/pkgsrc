@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/08/03 20:01:32 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/24 22:11:49 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtserialport
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtserialport
 QT6_QTSERIALPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtserialport+=	qt6-qtserialport>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtserialport+=	qt6-qtserialport>=6.5.2
+BUILDLINK_ABI_DEPENDS.qt6-qtserialport+=	qt6-qtserialport>=6.5.3nb1
 BUILDLINK_PKGSRCDIR.qt6-qtserialport?=		../../x11/qt6-qtserialport
 
 BUILDLINK_INCDIRS.qt6-qtserialport+=	qt6/include

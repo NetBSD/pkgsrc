@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/02/16 09:55:38 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:21 wiz Exp $
 
 GITHUB_TAG=	88a9c387a8dc006a06dbe911ef1252423004927b
 DISTNAME=	jitsi-srtp-1.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jitsi/}
 

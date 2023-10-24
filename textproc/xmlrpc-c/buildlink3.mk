@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2023/04/19 08:08:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2023/10/24 22:11:21 wiz Exp $
 
 BUILDLINK_TREE+=	xmlrpc-c
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmlrpc-c
 XMLRPC_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmlrpc-c+=	xmlrpc-c-ss>=1.16.34
-BUILDLINK_ABI_DEPENDS.xmlrpc-c+=	xmlrpc-c-ss>=1.51.04nb10
+BUILDLINK_ABI_DEPENDS.xmlrpc-c+=	xmlrpc-c-ss>=1.51.04nb11
 BUILDLINK_PKGSRCDIR.xmlrpc-c?=		../../textproc/xmlrpc-c
 
 .include "../../www/libwww/buildlink3.mk"

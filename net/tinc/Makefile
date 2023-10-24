@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/06/12 06:32:02 nia Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/24 22:10:35 wiz Exp $
 
 DISTNAME=	tinc-1.0.36
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://www.tinc-vpn.org/packages/
 

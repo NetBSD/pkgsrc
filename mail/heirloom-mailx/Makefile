@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/06/09 10:36:43 nia Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/24 22:09:43 wiz Exp $
 #
 
 DISTNAME=	heirloom-mailx_12.5.orig
 PKGNAME=	heirloom-mailx-12.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/h/heirloom-mailx/}
 EXTRACT_SUFX=	.tar.gz
