@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/05 06:01:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/24 18:29:27 markd Exp $
 bin/fsview
 bin/kcreatewebarchive
 bin/kfmclient
@@ -731,8 +731,6 @@ share/konqueror/pics/indicator_connect.png
 share/konqueror/pics/indicator_empty.png
 share/konqueror/pics/indicator_noconnect.png
 share/konqueror/pics/indicator_viewactive.png
-share/konqueror/webengine_dictionaries/en_GB.bdic
-share/konqueror/webengine_dictionaries/en_NZ.bdic
 share/konqueror/webengine_dictionaries/en_US.bdic
 share/kservices5/fsview_part.desktop
 share/kservices5/konq_sidebartng.desktop
