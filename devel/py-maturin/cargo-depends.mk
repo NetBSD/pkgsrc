@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2023/10/04 09:43:49 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2023/10/24 14:55:13 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.7.6
@@ -26,7 +26,7 @@ CARGO_CRATE_DEPENDS+=	camino-1.1.6
 CARGO_CRATE_DEPENDS+=	cargo-config2-0.1.9
 CARGO_CRATE_DEPENDS+=	cargo-options-0.6.0
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.1.3
-CARGO_CRATE_DEPENDS+=	cargo-xwin-0.14.7
+CARGO_CRATE_DEPENDS+=	cargo-xwin-0.14.8
 CARGO_CRATE_DEPENDS+=	cargo-zigbuild-0.17.3
 CARGO_CRATE_DEPENDS+=	cargo_metadata-0.18.0
 CARGO_CRATE_DEPENDS+=	cbindgen-0.25.0
@@ -118,7 +118,7 @@ CARGO_CRATE_DEPENDS+=	memchr-2.5.0
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.0
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
-CARGO_CRATE_DEPENDS+=	minijinja-1.0.6
+CARGO_CRATE_DEPENDS+=	minijinja-1.0.8
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.7.1
 CARGO_CRATE_DEPENDS+=	msi-0.6.0
@@ -173,7 +173,7 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.29
 CARGO_CRATE_DEPENDS+=	rfc2047-decoder-0.2.2
 CARGO_CRATE_DEPENDS+=	ring-0.16.20
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
-CARGO_CRATE_DEPENDS+=	rustix-0.37.23
+CARGO_CRATE_DEPENDS+=	rustix-0.37.25
 CARGO_CRATE_DEPENDS+=	rustls-0.21.2
 CARGO_CRATE_DEPENDS+=	rustls-pemfile-1.0.3
 CARGO_CRATE_DEPENDS+=	rustls-webpki-0.100.2
