@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/24 18:17:00 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/24 18:20:12 pho Exp $
 
-BLAKE2s (ghc-trace-events-0.1.2.6.tar.gz) = 5ed76ec86cd710f8b2814017396863d136499426e3128f480f81c0e3bd8a2241
-SHA512 (ghc-trace-events-0.1.2.6.tar.gz) = 492ae81684afde313e6a3796236ab1251436df67b8863fbfb1e2db0bbcac8f1f6164b463d761b9882d19473390e418a8e97b4f6d05003804f1b1f446397035af
-Size (ghc-trace-events-0.1.2.6.tar.gz) = 5996 bytes
+BLAKE2s (ghc-trace-events-0.1.2.7.tar.gz) = 1a7b51d3730e8b13d9e4e6cf9cee68a8a9f327bbf54715d731bdf3e5b93624c6
+SHA512 (ghc-trace-events-0.1.2.7.tar.gz) = 632e65f3fe7bf3a3cca6a2b16f5779a2833613e0a4c29c0631db6434cc0860ab4914ebebc5b61d1bcb898e63142eb6df224c11819dc3f148e8481576ec31a71b
+Size (ghc-trace-events-0.1.2.7.tar.gz) = 6030 bytes
