@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2023/10/23 08:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/24 09:12:36 wiz Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python311-${PY_DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -38,6 +38,7 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		OPT=${CFLAGS:M*:Q}
