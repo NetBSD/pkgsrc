@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:47 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/24 08:11:43 pho Exp $
 
-DISTNAME=	HsYAML-0.2.1.1
-PKGREVISION=	2
+DISTNAME=	HsYAML-0.2.1.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Pure Haskell YAML 1.2 processor
 LICENSE=	gnu-gpl-v2
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
