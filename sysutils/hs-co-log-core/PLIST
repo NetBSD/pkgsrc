@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/28 05:43:27 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/24 17:33:24 pho Exp $
 lib/co-log-core-${PKGVERSION}/${HS_VERSION}/package-description
 lib/co-log-core-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Colog/Core.dyn_hi
@@ -19,7 +19,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Colog/Core/Severity.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/Colog-Core-Action.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/Colog-Core-Class.html
@@ -29,9 +29,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/Colog-Core.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/co-log-core.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/co-log-core-${PKGVERSION}/html/synopsis.png
