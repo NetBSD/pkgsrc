@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/01/18 21:50:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2023/10/24 22:11:12 wiz Exp $
 #
 
 DISTNAME=	radmind-1.14.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
 

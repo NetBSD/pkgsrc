@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/05/14 14:44:27 nia Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:08:51 wiz Exp $
 
 DISTNAME=	libfreefare-0.4.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nfc-tools/libfreefare/releases/download/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.bz2

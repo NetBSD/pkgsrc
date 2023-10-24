@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/09/15 13:46:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:09:43 wiz Exp $
 
 DISTNAME=	himalaya-0.9.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soywod/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

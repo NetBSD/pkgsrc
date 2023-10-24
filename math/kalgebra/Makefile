@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2023/08/03 04:01:56 markd Exp $
+# $NetBSD: Makefile,v 1.74 2023/10/24 22:09:53 wiz Exp $
 
 DISTNAME=	kalgebra-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/education/kalgebra/

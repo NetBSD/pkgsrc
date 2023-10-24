@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/07/11 15:14:29 nia Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/24 22:08:53 wiz Exp $
 
 DISTNAME=	luaevent-0.4.6
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
+PKGREVISION=	1
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harningt/}
 GITHUB_PROJECT=	luaevent

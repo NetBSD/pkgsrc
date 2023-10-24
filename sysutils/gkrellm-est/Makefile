@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2023/10/21 17:11:26 gdt Exp $
+# $NetBSD: Makefile,v 1.62 2023/10/24 22:11:07 wiz Exp $
 
 DISTNAME=		gkrellm-est-20040710
-PKGREVISION=		48
+PKGREVISION=		49
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://cubidou.nerim.net/gkrellm-est/
 

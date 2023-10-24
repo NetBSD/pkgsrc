@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/09/07 19:42:47 vins Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/24 22:08:51 wiz Exp $
 
 DISTNAME=	libewf-experimental-20150126
 PKGNAME=	libewf-20150126
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libyal/libewf/releases/download/20150126/}
 

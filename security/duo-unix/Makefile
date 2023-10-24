@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 11:57:09 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/24 22:10:47 wiz Exp $
 #
 
 DISTNAME=	duo_unix-1.11.4
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://dl.duosecurity.com/
 

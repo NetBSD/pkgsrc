@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/09/08 21:05:37 vins Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/24 22:09:48 wiz Exp $
 
 DISTNAME=	filter-dnsbl-0.3
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	https://imperialat.at/releases/
 

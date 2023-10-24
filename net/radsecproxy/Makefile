@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/05/26 15:06:05 he Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/24 22:10:32 wiz Exp $
 
 VERSION=	1.10.0
 DISTNAME=	radsecproxy-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radsecproxy/}
 

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2023/08/24 09:33:30 adam Exp $
+# $NetBSD: Makefile,v 1.109 2023/10/24 22:08:44 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}

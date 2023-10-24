@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/09/25 12:52:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/24 22:09:49 wiz Exp $
 
 DISTNAME=		Qsmtp-0.39
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tar.xz

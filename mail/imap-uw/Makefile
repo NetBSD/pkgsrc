@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2022/01/24 22:39:29 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2023/10/24 22:09:43 wiz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -11,7 +11,7 @@
 
 DISTNAME=	imap-2007f
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	mail
 #MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z

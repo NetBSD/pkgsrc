@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 21:50:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/24 22:10:14 wiz Exp $
 #
 
 DISTNAME=	ctorrent-dnh3.3.2
 PKGNAME=	dtorrent-3.3.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtorrent/}
 

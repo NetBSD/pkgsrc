@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/07/07 11:46:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/24 22:10:30 wiz Exp $
 
+PKGREVISION= 1
 .include "../../net/proftpd/Makefile.module"
 
 PROFTPD_MOD=	ldap

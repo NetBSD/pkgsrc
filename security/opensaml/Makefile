@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2023/04/23 14:26:31 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/10/24 22:10:53 wiz Exp $
 
 DISTNAME=	opensaml-3.1.0
 PKGREVISION=	
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	security
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/${PKGVERSION_NOREV}/
 

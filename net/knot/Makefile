@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2023/08/14 05:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2023/10/24 22:10:21 wiz Exp $
 
 DISTNAME=	knot-3.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
