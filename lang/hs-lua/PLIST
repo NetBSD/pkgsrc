@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/24 16:39:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/24 12:24:34 pho Exp $
 lib/lua-${PKGVERSION}/${HS_VERSION}/package-description
 lib/lua-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -14,6 +14,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Call.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Constants.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Constants.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Constants.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Debug.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Debug.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Debug.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Ersatz.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Ersatz.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Ersatz.p_hi
@@ -35,12 +38,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Types.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Userdata.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Userdata.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Userdata.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Warn.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Warn.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lua/Warn.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Auxiliary.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Call.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Constants.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Debug.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Ersatz-Auxiliary.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Ersatz-Functions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Ersatz.html
@@ -48,6 +55,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Lib.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Primary.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Userdata.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua-Warn.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/Lua.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index-A.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index-All.html
@@ -65,10 +73,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index-S.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/lua.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lua-${PKGVERSION}/html/synopsis.png
