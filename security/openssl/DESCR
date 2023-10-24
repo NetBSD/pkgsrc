@@ -6,3 +6,5 @@ a full-strength general purpose cryptography library. The
 project is managed by a worldwide community of volunteers
 that use the Internet to communicate, plan, and develop the
 OpenSSL toolkit and its related documentation.
+
+This package contains major version 3 of OpenSSL.
