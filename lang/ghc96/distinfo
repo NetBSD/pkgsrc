@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/10/23 17:00:08 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/24 06:38:45 pho Exp $
 
 BLAKE2s (ghc-9.2.1-boot-hadrian.tar.gz) = 363fea08f46524eab654b3225650be4938bd0404e8c44145381f97a0c4489dca
 SHA512 (ghc-9.2.1-boot-hadrian.tar.gz) = a006ab38df77bc22e51ee75808065ad75781f85eb52cae54ed8995942ba16e70f4d68d4097f2597bca09e8b7890858d0a28a0f66216e6a4b21a3c68bb8082c59
@@ -55,6 +55,7 @@ SHA1 (patch-libraries_unix_System_Posix_Env_ByteString.hsc) = a579c00d7d5d7ffbb7
 SHA1 (patch-libraries_unix_System_Posix_Env_PosixString.hsc) = 40d464638eb11cb832f93d9892818655f4d70e00
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = ee59a04571881382bcfd9fc82bf196ff86a40ed5
 SHA1 (patch-libraries_unix_System_Posix_User.hsc) = b583f591838fe2d7f42241787e02c5385d336939
+SHA1 (patch-libraries_unix_System_Posix_User_ByteString.hsc) = 2a331de2292835ae6904980facd8201705fa63e8
 SHA1 (patch-m4_fptools__set__haskell__platform__vars.m4) = 8c7a7ab965f4df8a68bedb35c32ee32c59ac2c94
 SHA1 (patch-rts_linker_MMap.c) = c2abd34b8d39bb8f508a54bf3db25f53e113e45b
 SHA1 (patch-rts_linker_MMap.h) = 8228fabcdaeb1511191da9fc614ff94d3eee8fbd
