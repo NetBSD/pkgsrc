@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6079 2023/10/24 08:22:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6080 2023/10/24 08:28:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8937,3 +8937,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hs-easy-file to 0.2.5 [pho 2023-10-24]
 	Added sysutils/hs-filepath-bytestring version 1.4.2.1.13 [pho 2023-10-24]
 	Added sysutils/hs-disk-free-space version 0.1.0.1 [pho 2023-10-24]
+	Updated net/hs-network-byte-order to 0.1.7 [pho 2023-10-24]
