@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/10/04 17:14:37 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/10/25 22:25:53 wiz Exp $
 
 DISTNAME=	packaging-23.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
 
@@ -18,14 +19,10 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# Generated setup.py; don't use wheel.mk as py-build depends on py-packaging
-pre-configure:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
-
 # as of 23.0:
 # 26338 passed, 1 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/bootstrap.mk"
 .include "../../mk/bsd.pkg.mk"
