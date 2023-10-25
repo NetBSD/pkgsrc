@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_libc_src_unix_solarish_mod.rs,v 1.13 2023/10/25 05:50:43 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.140_src_unix_solarish_mod.rs,v 1.1 2023/10/25 05:50:43 pin Exp $
 
 Fix xattr build.
 
---- vendor/libc/src/unix/solarish/mod.rs.orig	2019-05-20 13:47:24.000000000 +0000
-+++ vendor/libc/src/unix/solarish/mod.rs
-@@ -1215,6 +1215,8 @@ pub const EOWNERDEAD: ::c_int = 58;
+--- vendor/libc-0.2.140/src/unix/solarish/mod.rs.orig	2023-08-23 22:08:20.000000000 +0000
++++ vendor/libc-0.2.140/src/unix/solarish/mod.rs
+@@ -1523,6 +1523,8 @@ pub const EOWNERDEAD: ::c_int = 58;
  pub const ENOTRECOVERABLE: ::c_int = 59;
  pub const ENOSTR: ::c_int = 60;
  pub const ENODATA: ::c_int = 61;
