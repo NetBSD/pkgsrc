@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2023/10/25 22:22:49 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2023/10/25 22:49:02 wiz Exp $
 #
 # Initial mk for building and installing Python packages that
 # are on the module install bootstrap path.
@@ -11,18 +11,12 @@
 #   - devel/py-pyparsing
 #   - devel/py-pyproject_hooks
 
-
-WHEELFILE?=	${WRKSRC}/dist/*.whl
 PY_PATCHPLIST?=	yes
 
+WHEELFILE?=	${WRKSRC}/dist/*.whl
 WHEEL_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 _WHEEL_INFODIR=	${WHEEL_NAME}.dist-info
-PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
-
-# for ALTERNATIVES files
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 
