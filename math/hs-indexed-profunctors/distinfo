@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 00:57:45 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/25 09:07:53 pho Exp $
 
-BLAKE2s (indexed-profunctors-0.1.1.tar.gz) = 523bd6affd47fb99fda9e870da6eb87cc61aeb56dc82990f785108fe34c6fb35
-SHA512 (indexed-profunctors-0.1.1.tar.gz) = 8919f1daab0eadbcb33bfe54ed41a97eda0346f26de4f562fcdd3703b130c04fb48ccdc0cc0789db770e9367bc799b2a5eb14d58dbcd419e90958c19ebd774ca
-Size (indexed-profunctors-0.1.1.tar.gz) = 6206 bytes
+BLAKE2s (indexed-profunctors-0.1.1.1.tar.gz) = b35057ea6a24056d7e2ae49e342e7ac0dd67162b7c8f1aedb61c52aef329f72e
+SHA512 (indexed-profunctors-0.1.1.1.tar.gz) = 26e4b2020a9e1325d358fc5441f8f4a78d077110e99aba1a7a763d5bea6302a8235619b752264643f2fcfc15ef698c53b9afe77b7e04b3a5b0e41d15840fa7b5
+Size (indexed-profunctors-0.1.1.1.tar.gz) = 6477 bytes
