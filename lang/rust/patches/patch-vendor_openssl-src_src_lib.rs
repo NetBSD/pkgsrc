@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.11 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_openssl-src_src_lib.rs,v 1.12 2023/10/25 05:50:43 pin Exp $
 
 Provide defaults for the various NetBSD targets.
 

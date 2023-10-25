@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs,v 1.7 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_rustc-ap-rustc__target_src_spec_aarch64__be__unknown__netbsd.rs,v 1.8 2023/10/25 05:50:43 pin Exp $
 
 Add aarch64_be NetBSD target.
 

@@ -1,19 +1,21 @@
-# $NetBSD: do-cross.mk,v 1.7 2023/07/10 12:01:24 he Exp $
+# $NetBSD: do-cross.mk,v 1.8 2023/10/25 05:50:43 pin Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
 VERSION!=	make show-var VARNAME=PKGVERSION
 V_NOREV!=	make show-var VARNAME=PKGVERSION_NOREV
 
-SHORT_TARGETS+=		armv7
+#SHORT_TARGETS+=		armv7
 SHORT_TARGETS+=		armv6
 SHORT_TARGETS+=		sparc64
 SHORT_TARGETS+=		powerpc
 SHORT_TARGETS+=		arm64
 SHORT_TARGETS+=		arm64_be
 SHORT_TARGETS+=		i386
-SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
 SHORT_TARGETS+=		riscv64
+
+# can't find -latomic(!) late in the build:
+#SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
 
 # Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"

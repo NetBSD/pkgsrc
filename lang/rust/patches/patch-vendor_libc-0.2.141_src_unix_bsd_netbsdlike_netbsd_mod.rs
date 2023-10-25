@@ -1,11 +1,20 @@
-$NetBSD: patch-vendor_libc-0.2.139_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.141_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2023/10/25 05:50:43 pin Exp $
 
 Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips
 and NetBSD/riscv64.
 
---- vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
-+++ vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -3049,6 +3049,23 @@ extern "C" {
+--- vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
++++ vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/mod.rs
+@@ -10,7 +10,7 @@ type __pthread_spin_t = __cpu_simple_loc
+ pub type vm_size_t = ::uintptr_t; // FIXME: deprecated since long time
+ pub type lwpid_t = ::c_uint;
+ pub type shmatt_t = ::c_uint;
+-pub type cpuid_t = u64;
++pub type cpuid_t = ::c_ulong;
+ pub type cpuset_t = _cpuset;
+ pub type pthread_spin_t = ::c_uchar;
+ pub type timer_t = ::c_int;
+@@ -3118,6 +3118,23 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
@@ -29,7 +38,7 @@ and NetBSD/riscv64.
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
-@@ -3068,7 +3085,15 @@ cfg_if! {
+@@ -3137,7 +3154,15 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;

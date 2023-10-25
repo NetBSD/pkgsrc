@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_backtrace_src_symbolize_gimli.rs,v 1.4 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_backtrace_src_symbolize_gimli.rs,v 1.5 2023/10/25 05:50:43 pin Exp $
 
 Do mmap on NetBSD as well.
 

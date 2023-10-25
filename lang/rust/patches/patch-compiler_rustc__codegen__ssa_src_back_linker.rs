@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.11 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.12 2023/10/25 05:50:43 pin Exp $
 
 Do not use @rpath on Darwin.
 

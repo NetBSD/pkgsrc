@@ -1,4 +1,4 @@
-$NetBSD: patch-src_llvm-project_llvm_lib_Support_BLAKE3_blake3__impl.h,v 1.2 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-src_llvm-project_llvm_lib_Support_BLAKE3_blake3__impl.h,v 1.3 2023/10/25 05:50:43 pin Exp $
 
 Do not try to use neon on big-endian aarch64, as we have
 an #error waiting there.
