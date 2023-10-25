@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6118 2023/10/25 22:04:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6119 2023/10/25 22:14:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8984,3 +8984,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-flit_core to 3.9.0nb1 [wiz 2023-10-25]
 	Updated misc/py-installer to 0.7.0nb1 [wiz 2023-10-25]
 	Updated textproc/py-tomli to 2.0.1nb1 [wiz 2023-10-25]
+	Updated converters/py-zfec to 1.5.7.4 [gdt 2023-10-25]
