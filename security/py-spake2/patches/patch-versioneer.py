@@ -1,6 +1,7 @@
-$NetBSD: patch-versioneer.py,v 1.1 2023/10/25 10:17:47 wiz Exp $
+$NetBSD: patch-versioneer.py,v 1.2 2023/10/25 10:34:37 wiz Exp $
 
 Fix build with Python 3.12.
+https://github.com/warner/python-spake2/pull/16
 
 --- versioneer.py.orig	2018-02-15 02:46:43.000000000 +0000
 +++ versioneer.py
