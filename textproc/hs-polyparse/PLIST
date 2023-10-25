@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/24 18:39:35 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/25 16:54:23 pho Exp $
 lib/polyparse-${PKGVERSION}/${HS_VERSION}/package-description
 lib/polyparse-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -58,9 +58,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/ParserCombinators/Poly/Text.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/ParserCombinators/Poly/Text.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/COPYRIGHT
-${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/LICENCE-LGPL
-${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/LICENCE-commercial
+share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/COPYRIGHT
+share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/LICENCE-LGPL
+share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/LICENCE-commercial
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-Parse-ByteString.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-Parse.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-ParserCombinators-HuttonMeijer.html
@@ -80,10 +80,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-ParserCom
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-ParserCombinators-Poly-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/Text-ParserCombinators-Poly.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/polyparse.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/polyparse-${PKGVERSION}/html/synopsis.png
