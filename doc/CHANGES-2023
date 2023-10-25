@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6101 2023/10/25 05:53:07 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6102 2023/10/25 08:39:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8960,3 +8960,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/neomutt to 20231023 [wiz 2023-10-24]
 	Updated lang/rust to 1.72.1 [pin 2023-10-25]
 	Updated lang/rust-bin to 1.72.1 [pin 2023-10-25]
+	Updated devel/py-test to 7.4.3 [adam 2023-10-25]
+	Updated security/py-cryptography to 41.0.5 [adam 2023-10-25]
+	Updated security/py-cryptography_vectors to 41.0.5 [adam 2023-10-25]
