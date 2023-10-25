@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2023/10/25 22:21:04 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2023/10/25 22:22:49 wiz Exp $
 #
 # Initial mk for building and installing Python packages that
 # are on the module install bootstrap path.
@@ -33,7 +33,7 @@ do-build:
 .endif
 
 .if !target(do-install)
-TOOL_DEPENDS+= ${PYPKGPREFIX}-installer>=0.7.0nb1../../misc/py-installer
+TOOL_DEPENDS+= ${PYPKGPREFIX}-installer>=0.7.0nb1:../../misc/py-installer
 do-install:
 	${RUN} cd ${WRKSRC} && \
 	${SETENV} ${INSTALL_ENV} \
