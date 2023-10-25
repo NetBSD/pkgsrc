@@ -1,11 +1,21 @@
-$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.7 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.8 2023/10/25 05:50:43 pin Exp $
 
 Copy execinfo function definitions from openbsd's mod.rs.
 Add entries for NetBSD/mipsel and NetBSD/riscv64.
+Fix cpuid_t definition.
 
 --- vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2022-05-10 20:59:35.217463943 +0000
 +++ vendor/libc/src/unix/bsd/netbsdlike/netbsd/mod.rs
-@@ -3111,6 +3111,22 @@ extern "C" {
+@@ -10,7 +10,7 @@ type __pthread_spin_t = __cpu_simple_loc
+ pub type vm_size_t = ::uintptr_t; // FIXME: deprecated since long time
+ pub type lwpid_t = ::c_uint;
+ pub type shmatt_t = ::c_uint;
+-pub type cpuid_t = u64;
++pub type cpuid_t = ::c_ulong;
+ pub type cpuset_t = _cpuset;
+ pub type pthread_spin_t = ::c_uchar;
+ pub type timer_t = ::c_int;
+@@ -3153,6 +3153,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }
  
@@ -28,7 +38,7 @@ Add entries for NetBSD/mipsel and NetBSD/riscv64.
  cfg_if! {
      if #[cfg(target_arch = "aarch64")] {
          mod aarch64;
-@@ -3130,7 +3146,15 @@ cfg_if! {
+@@ -3172,7 +3188,15 @@ cfg_if! {
      } else if #[cfg(target_arch = "x86")] {
          mod x86;
          pub use self::x86::*;

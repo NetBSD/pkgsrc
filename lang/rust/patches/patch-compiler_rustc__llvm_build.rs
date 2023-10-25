@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.12 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.13 2023/10/25 05:50:43 pin Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
@@ -9,7 +9,7 @@ https://github.com/rust-lang/rust/pull/104572
 
 --- compiler/rustc_llvm/build.rs.orig	2021-11-01 07:17:29.000000000 +0000
 +++ compiler/rustc_llvm/build.rs
-@@ -247,10 +247,19 @@ fn main() {
+@@ -248,10 +248,19 @@ fn main() {
      {
          // 32-bit targets need to link libatomic.
          println!("cargo:rustc-link-lib=atomic");
@@ -29,7 +29,7 @@ https://github.com/rust-lang/rust/pull/104572
          println!("cargo:rustc-link-lib=z");
      }
      cmd.args(&components);
-@@ -337,7 +346,13 @@ fn main() {
+@@ -339,7 +348,13 @@ fn main() {
          "c++"
      } else if target.contains("netbsd") && llvm_static_stdcpp.is_some() {
          // NetBSD uses a separate library when relocation is required

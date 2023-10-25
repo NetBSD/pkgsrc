@@ -1,15 +1,21 @@
-$NetBSD: patch-src_bootstrap_llvm.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-src_bootstrap_llvm.rs,v 1.3 2023/10/25 05:50:43 pin Exp $
 
 Add NetBSD to the list of riscv's which don't need -latomic.
+Try to force use of -latomic on mips* on NetBSD.
 
---- src/bootstrap/llvm.rs.orig	2023-05-31 19:28:10.000000000 +0000
+--- src/bootstrap/llvm.rs.orig	2023-08-03 12:13:07.000000000 +0000
 +++ src/bootstrap/llvm.rs
-@@ -379,7 +379,7 @@ impl Step for Llvm {
-             cfg.define("LLVM_LINK_LLVM_DYLIB", "ON");
+@@ -396,6 +396,13 @@ impl Step for Llvm {
+             ldflags.shared.push(" -latomic");
          }
  
--        if target.starts_with("riscv") && !target.contains("freebsd") && !target.contains("openbsd")
-+        if target.starts_with("riscv") && !target.contains("freebsd") && !target.contains("openbsd") && !target.contains("netbsd")
-         {
-             // RISC-V GCC erroneously requires linking against
-             // `libatomic` when using 1-byte and 2-byte C++
++        if target.starts_with("mips") && target.contains("netbsd")
++        {
++            // try to force this here, should possibly go elsewhere...
++            ldflags.exe.push(" -latomic");
++            ldflags.shared.push(" -latomic");
++        }
++
+         if target.contains("msvc") {
+             cfg.define("LLVM_USE_CRT_DEBUG", "MT");
+             cfg.define("LLVM_USE_CRT_RELEASE", "MT");

@@ -1,10 +1,19 @@
-$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.3 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.138_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.4 2023/10/25 05:50:43 pin Exp $
 
 Add execinfo / backtrace stuff for NetBSD, and handle NetBSD/mips
 and NetBSD/riscv64.
 
 --- vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs.orig	2023-04-16 23:32:41.000000000 +0000
 +++ vendor/libc-0.2.138/src/unix/bsd/netbsdlike/netbsd/mod.rs
+@@ -10,7 +10,7 @@ type __pthread_spin_t = __cpu_simple_loc
+ pub type vm_size_t = ::uintptr_t; // FIXME: deprecated since long time
+ pub type lwpid_t = ::c_uint;
+ pub type shmatt_t = ::c_uint;
+-pub type cpuid_t = u64;
++pub type cpuid_t = ::c_ulong;
+ pub type cpuset_t = _cpuset;
+ pub type pthread_spin_t = ::c_uchar;
+ pub type timer_t = ::c_int;
 @@ -3049,6 +3049,22 @@ extern "C" {
      pub fn kinfo_getvmmap(pid: ::pid_t, cntp: *mut ::size_t) -> *mut kinfo_vmentry;
  }

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h,v 1.6 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h,v 1.7 2023/10/25 05:50:43 pin Exp $
 
 Don't implement sys/regset.h workaround, fix source instead.
 
