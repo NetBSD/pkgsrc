@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6106 2023/10/25 09:55:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6107 2023/10/25 10:12:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8968,3 +8968,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/wabt to 1.0.34 [adam 2023-10-25]
 	Updated misc/py-asciinema to 2.4.0 [adam 2023-10-25]
 	Updated sysutils/restic to 0.16.1 [wiz 2023-10-25]
+	Updated devel/hs-focus to 1.0.3.2 [pho 2023-10-25]
