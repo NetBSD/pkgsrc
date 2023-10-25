@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6110 2023/10/25 13:50:00 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6111 2023/10/25 13:52:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8972,3 +8972,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-spake2 to 0.8nb2 [wiz 2023-10-25]
 	Updated devel/py-constantly to 15.1.0nb2 [wiz 2023-10-25]
 	Updated devel/hs-base-orphans to 0.9.1 [pho 2023-10-25]
+	Updated devel/hs-some to 1.0.6 [pho 2023-10-25]
