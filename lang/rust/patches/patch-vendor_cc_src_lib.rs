@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_cc_src_lib.rs,v 1.11 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_cc_src_lib.rs,v 1.12 2023/10/25 05:50:43 pin Exp $
 
 Add aarch64_eb, mipsel and riscv64 for NetBSD.
 
 --- vendor/cc/src/lib.rs.orig	2021-07-26 15:20:38.000000000 +0000
 +++ vendor/cc/src/lib.rs
-@@ -1933,6 +1933,9 @@ impl Build {
+@@ -1946,6 +1946,9 @@ impl Build {
                          } else if target.contains("freebsd") && arch.starts_with("64") {
                              cmd.args.push(("-march=rv64gc").into());
                              cmd.args.push("-mabi=lp64d".into());
@@ -38,3 +38,7 @@ Add aarch64_eb, mipsel and riscv64 for NetBSD.
              "riscv64gc-unknown-linux-gnu" => Some("riscv64-linux-gnu"),
              "riscv32gc-unknown-linux-gnu" => Some("riscv32-linux-gnu"),
              "riscv64gc-unknown-linux-musl" => Some("riscv64-linux-musl"),
+$NetBSD: patch-vendor_cc_src_lib.rs,v 1.12 2023/10/25 05:50:43 pin Exp $
+
+--- vendor/cc/src/lib.rs.orig	2023-09-23 21:28:33.348998050 +0000
++++ vendor/cc/src/lib.rs

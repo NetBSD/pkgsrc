@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_libc-0.2.139_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.141_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2023/10/25 05:50:43 pin Exp $
 
 Spec for riscv64.
 
---- vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-02 18:40:59.815126792 +0000
-+++ vendor/libc-0.2.139/src/unix/bsd/netbsdlike/netbsd/riscv64.rs	2023-07-02 18:38:40.729445691 +0000
+--- vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2023-07-02 18:40:59.815126792 +0000
++++ vendor/libc-0.2.141/src/unix/bsd/netbsdlike/netbsd/riscv64.rs	2023-07-02 18:38:40.729445691 +0000
 @@ -0,0 +1,24 @@
 +use PT_FIRSTMACH;
 +
