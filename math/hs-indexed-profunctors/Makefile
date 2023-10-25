@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:40 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/25 09:07:53 pho Exp $
 
-DISTNAME=	indexed-profunctors-0.1.1
-PKGREVISION=	3
+DISTNAME=	indexed-profunctors-0.1.1.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
