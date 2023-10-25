@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6117 2023/10/25 22:02:12 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6118 2023/10/25 22:04:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8983,3 +8983,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-magic-wormhole to 0.13.0nb1 [wiz 2023-10-25]
 	Updated devel/py-flit_core to 3.9.0nb1 [wiz 2023-10-25]
 	Updated misc/py-installer to 0.7.0nb1 [wiz 2023-10-25]
+	Updated textproc/py-tomli to 2.0.1nb1 [wiz 2023-10-25]
