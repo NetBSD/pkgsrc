@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6105 2023/10/25 09:09:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6106 2023/10/25 09:55:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8967,3 +8967,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-indexed-profunctors to 0.1.1.1 [pho 2023-10-25]
 	Updated devel/wabt to 1.0.34 [adam 2023-10-25]
 	Updated misc/py-asciinema to 2.4.0 [adam 2023-10-25]
+	Updated sysutils/restic to 0.16.1 [wiz 2023-10-25]
