@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/25 10:07:36 wiz Exp $
 
 DISTNAME=	constantly-15.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/constantly/}
 
