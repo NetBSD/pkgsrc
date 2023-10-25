@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 10:54:31 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/25 16:47:03 pho Exp $
 lib/data-default-class-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-default-class-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Class.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Class.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Class.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Class.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Class.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/Data-Default-Class.html
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/data-default-class.haddock
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/Data-Default-Class.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/data-default-class.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-class-${PKGVERSION}/html/synopsis.png
