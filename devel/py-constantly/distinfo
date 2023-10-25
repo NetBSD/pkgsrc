@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/25 10:07:36 wiz Exp $
 
 BLAKE2s (constantly-15.1.0.tar.gz) = cb5bdfd31dd3f7980315233c7a9d604d4eafb200cc1a02a492786db59382c3d0
 SHA512 (constantly-15.1.0.tar.gz) = ccc6f41b0bd552d2bb5346cc9d64cd7b91a59dd30e0cf66b01e82f7e0e079c01c34bc6c66b69c5fee9d2eed35ae5455258d309e66278d708d5f576ddf2e00ac3
 Size (constantly-15.1.0.tar.gz) = 21465 bytes
+SHA1 (patch-versioneer.py) = 195c8286bd664c9fb2d36195e30bb6427d3a6778
