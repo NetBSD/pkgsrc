@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/07/31 07:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/25 22:24:14 wiz Exp $
 
-# Important: re-generate files/setup.py before updating.
 DISTNAME=	pyparsing-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyparsing/}
 
@@ -15,10 +15,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# Important: do not use wheel.mk. It depends on py-build,
-# which depends py-packaging, and that depends on this package.
-pre-configure:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/bootstrap.mk"
 .include "../../mk/bsd.pkg.mk"
