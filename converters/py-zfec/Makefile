@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2023/10/23 06:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/10/25 22:14:15 gdt Exp $
 
-DISTNAME=	zfec-1.5.7.3
+DISTNAME=	zfec-1.5.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zfec/}
 
