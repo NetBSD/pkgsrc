@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6100 2023/10/25 05:51:10 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6101 2023/10/25 05:53:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8959,3 +8959,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/openssl to 3.1.4 [wiz 2023-10-24]
 	Updated mail/neomutt to 20231023 [wiz 2023-10-24]
 	Updated lang/rust to 1.72.1 [pin 2023-10-25]
+	Updated lang/rust-bin to 1.72.1 [pin 2023-10-25]
