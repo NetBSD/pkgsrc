@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/24 18:19:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/25 09:01:17 pho Exp $
 lib/ordered-containers-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ordered-containers-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,15 +19,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Set/Ordered.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Set/Ordered.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/Data-Map-Ordered-Strict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/Data-Map-Ordered.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/Data-Set-Ordered.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/ordered-containers.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ordered-containers-${PKGVERSION}/html/synopsis.png
