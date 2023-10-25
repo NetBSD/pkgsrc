@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/10/07 13:25:06 gdt Exp $
+$NetBSD: distinfo,v 1.15 2023/10/25 22:14:15 gdt Exp $
 
-BLAKE2s (zfec-1.5.7.3.tar.gz) = c6163676b774e6878771c5c33144d2cc001c2a35068b0036f8b17848ff1beab9
-SHA512 (zfec-1.5.7.3.tar.gz) = 25ecfdd5ab9fbb003f33cb50c3a9f5392380e61a7319b8e4fc5bbbec2999c3fcb29e33ed1799ef66c0557a4cf07d7924a7a5fbddb22f3a8557fe745f156fb626
-Size (zfec-1.5.7.3.tar.gz) = 81494 bytes
+BLAKE2s (zfec-1.5.7.4.tar.gz) = d95a67cfcc96cf4171798b4e64ff82ec5f8b48eb8bea79d1b5610d0022f9c13f
+SHA512 (zfec-1.5.7.4.tar.gz) = 54735138485dc3be7ee8f0b0133ace183c452c67bf48dc949175d08d27cc6f9adaadf4cbe348fbcc5ef4832430077e89dd21e899d4ad762795ef92d801962f2b
+Size (zfec-1.5.7.4.tar.gz) = 84557 bytes
