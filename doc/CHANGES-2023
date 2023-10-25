@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6119 2023/10/25 22:14:25 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.6120 2023/10/25 22:24:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8985,3 +8985,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-installer to 0.7.0nb1 [wiz 2023-10-25]
 	Updated textproc/py-tomli to 2.0.1nb1 [wiz 2023-10-25]
 	Updated converters/py-zfec to 1.5.7.4 [gdt 2023-10-25]
+	Updated devel/py-pyparsing to 3.1.1nb1 [wiz 2023-10-25]
