@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6107 2023/10/25 10:12:17 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6108 2023/10/25 10:17:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8969,3 +8969,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-asciinema to 2.4.0 [adam 2023-10-25]
 	Updated sysutils/restic to 0.16.1 [wiz 2023-10-25]
 	Updated devel/hs-focus to 1.0.3.2 [pho 2023-10-25]
+	Updated security/py-spake2 to 0.8nb2 [wiz 2023-10-25]
