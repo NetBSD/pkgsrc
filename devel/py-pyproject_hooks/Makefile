@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/03/29 09:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/25 22:27:13 wiz Exp $
 
 DISTNAME=	pyproject_hooks-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_hooks/}
 
@@ -12,8 +13,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
@@ -22,9 +21,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
-# Generated setup.py; don't use wheel.mk as py-build depends on this package.
-pre-configure:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/bootstrap.mk"
 .include "../../mk/bsd.pkg.mk"
