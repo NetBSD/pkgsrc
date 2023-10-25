@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.17 2023/05/22 14:10:42 fcambus Exp $
+$NetBSD: distinfo,v 1.18 2023/10/25 09:05:25 adam Exp $
 
-BLAKE2s (wabt-1.0.33.tar.gz) = 7bd51360eeb6ec5418bfb6ca42c7ea27490db4ba1fb51cfa0aba08156e598d25
-SHA512 (wabt-1.0.33.tar.gz) = cf9069a09618ec81c83c3774aee4534149b6e9c53a502bab8786ff421fbe44e2774d2ff1566a62c013147ddb43286eaa70c6f62a6ca91ee0862329d2ab2730c2
-Size (wabt-1.0.33.tar.gz) = 1204437 bytes
+BLAKE2s (wabt-1.0.34.tar.gz) = f2f347836c2bf6f707661fcfd29926a98af22208c11fce38d841b920726c8edd
+SHA512 (wabt-1.0.34.tar.gz) = 93be77d18b2311276af2abff8a954f3d029b1689ba8c89e1c3f0d199ddc0af505ffaa8489fbe0df4fc8beae1a37c645971d63794ff440e305042ff1b94bd83ef
+Size (wabt-1.0.34.tar.gz) = 1226317 bytes
 SHA1 (patch-CMakeLists.txt) = e65ad4657be060a20273e88014dc3279cfe1e230
+SHA1 (patch-src_c-writer.cc) = ada8263e188d127c0a109b7d94fcd772afd46c03
