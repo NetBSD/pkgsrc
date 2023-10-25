@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6112 2023/10/25 16:10:16 osa Exp $
+$NetBSD: CHANGES-2023,v 1.6113 2023/10/25 16:15:26 osa Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8978,3 +8978,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nginx to 1.24.0nb14 [osa 2023-10-25]
 	Updated www/nginx-devel to 1.25.2nb4 [osa 2023-10-25]
 	Updated www/unit to 1.31.1nb2 [osa 2023-10-25]
+	Updated www/nginx-devel to 1.25.3 [osa 2023-10-25]
