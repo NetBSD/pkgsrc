@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_cc-1.0.73_src_lib.rs,v 1.2 2023/10/10 13:12:33 pin Exp $
+$NetBSD: patch-vendor_cc-1.0.73_src_lib.rs,v 1.3 2023/10/25 05:50:43 pin Exp $
 
 Use correct ABI on NetBSD/riscv64.
 
