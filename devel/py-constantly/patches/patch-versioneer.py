@@ -1,6 +1,7 @@
-$NetBSD: patch-versioneer.py,v 1.1 2023/10/25 10:07:36 wiz Exp $
+$NetBSD: patch-versioneer.py,v 1.2 2023/10/25 10:34:17 wiz Exp $
 
 Use Python 3.12 compatible functions.
+https://github.com/twisted/constantly/pull/31
 
 --- versioneer.py.orig	2015-08-11 08:30:05.000000000 +0000
 +++ versioneer.py
