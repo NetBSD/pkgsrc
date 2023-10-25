@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/02/08 08:38:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/25 15:18:56 pho Exp $
 lib/deepseq-generics-${PKGVERSION}/${HS_VERSION}/package-description
 lib/deepseq-generics-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/DeepSeq/Generics.dyn_hi
@@ -7,13 +7,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/DeepSeq/Generics.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/Control-DeepSeq-Generics.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/deepseq-generics.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/deepseq-generics-${PKGVERSION}/html/synopsis.png
