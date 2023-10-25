@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:10 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/25 16:51:09 pho Exp $
 
 DISTNAME=	data-array-byte-0.1.0.1
 PKGREVISION=	2
@@ -8,8 +8,9 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Compatibility layer for Data.Array.Byte
 LICENSE=	modified-bsd
 
-# NOTE: This package is only needed on GHC < 9.4. The lack of PLIST is
-# intentional, as it becomes empty when it's built with GHC >= 9.4.
+HASKELL_UNRESTRICT_DEPENDENCIES=	\
+	base	\
+	template-haskell
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
