@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/10/24 22:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/25 21:33:15 wiz Exp $
 
 .include "dist.mk"
 
@@ -46,7 +46,7 @@ CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
 
 # NetBSD-8 curses has enough support for py-curses
-USE_CURSES=		getsyx
+USE_CURSES=		getsyx wide
 # But we build as ncurses still to get the full feature set easily
 FAKE_NCURSES=		yes
 
