@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2022/11/14 09:09:26 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+@comment $NetBSD: PLIST,v 1.6 2023/10/25 21:46:36 wiz Exp $
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/LICENSE
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/WHEEL
 ${PYSITELIB}/flit_core/__init__.py
 ${PYSITELIB}/flit_core/__init__.pyc
 ${PYSITELIB}/flit_core/buildapi.py
