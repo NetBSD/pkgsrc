@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.57 2023/06/27 10:28:34 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.58 2023/10/25 09:06:19 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	21.1.8
+XORG_VERSION=	21.1.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
