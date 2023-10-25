@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:29 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/25 13:52:16 pho Exp $
 
-DISTNAME=	some-1.0.4.1
-PKGREVISION=	2
+DISTNAME=	some-1.0.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Existential type: Some
 LICENSE=	modified-bsd
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
-
+.include "../../devel/hs-base-orphans/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
