@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2023/10/11 23:37:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.58 2023/10/25 05:52:49 pin Exp $
 
-DISTNAME=	rust-1.71.1
+DISTNAME=	rust-1.72.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -31,7 +30,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
-#ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
+ONLY_FOR_PLATFORM+=	NetBSD-*-mipsel
 ONLY_FOR_PLATFORM+=	NetBSD-*-riscv64
 
 NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
@@ -173,14 +172,14 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	mipsel-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	mipsel-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-riscv64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	riscv64gc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
