@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 11:05:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/25 11:55:59 pho Exp $
 lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-description
 lib/extensible-exceptions-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Exception/Extensible.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/Control-Exception-Extensible.html
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/extensible-exceptions.haddock
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/Control-Exception-Extensible.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/extensible-exceptions.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/extensible-exceptions-${PKGVERSION}/html/synopsis.png
