@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6144 2023/10/26 12:46:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6145 2023/10/26 13:07:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9028,3 +9028,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-certbot-nginx to 2.7.3 [adam 2023-10-26]
 	Updated devel/hs-unix-compat to 0.7 [pho 2023-10-26]
 	Updated devel/hs-fgl to 5.8.2.0 [pho 2023-10-26]
+	Updated devel/alex to 3.4.0.0 [pho 2023-10-26]
