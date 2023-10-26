@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/26 02:31:31 pho Exp $
+
+BLAKE2s (byteable-0.1.1.tar.gz) = 1e8a64552307edb58c945bd2be036e9e740847d94855b634567e7c5baf886eb2
+SHA512 (byteable-0.1.1.tar.gz) = f2e6225390be9f35ee6a4ce981aaa8c2683f1627a8401386b1abb7fff5fe1474ae0fa07e71a0c83694d7a18ca793943fe36b844d868c3e9c3387ce1a7b2bf54c
+Size (byteable-0.1.1.tar.gz) = 2400 bytes
