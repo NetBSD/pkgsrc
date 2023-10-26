@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/11/10 17:35:54 snj Exp $
+$NetBSD: distinfo,v 1.13 2023/10/26 16:13:58 snj Exp $
 
-BLAKE2s (quakespasm-0.95.1.tar.gz) = 187f96a45d18354b74477717a085e2b2e96d0a04eab229066d1f9a7c3790bd8f
-SHA512 (quakespasm-0.95.1.tar.gz) = 7e5da905532d88ccf794160e929727f9fdb1c9f2d214789d29e96fd807e8f66ab8f2a62101481c07874acba31ccaa6efb8defb0e25b9f031e4cf50fb5794b4d2
-Size (quakespasm-0.95.1.tar.gz) = 10826985 bytes
-SHA1 (patch-Makefile) = 3f9ab71014192bf1d956015c280ddaac9b01306e
+BLAKE2s (quakespasm-0.96.1.tar.gz) = 6910026dcab003855d41b04631c786e31999355dc2a1a5073a708595274f6c50
+SHA512 (quakespasm-0.96.1.tar.gz) = 4bf442b866e90ecb0deaebd97f21847d38b0931b297547a598f9c98c4882de33ac422dfdc376c1d5f03b18e0d480932632052747afa3741b35613637371a69d0
+Size (quakespasm-0.96.1.tar.gz) = 11515757 bytes
