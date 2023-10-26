@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 08:53:08 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/26 13:15:58 pho Exp $
 lib/direct-sqlite-${PKGVERSION}/${HS_VERSION}/package-description
 lib/direct-sqlite-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Database/SQLite3.dyn_hi
@@ -16,7 +16,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Database/SQLite3/Direct.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/Database-SQLite3-Bindings-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/Database-SQLite3-Bindings.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/Database-SQLite3-Direct.html
@@ -41,9 +41,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/doc-index-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/direct-sqlite-${PKGVERSION}/html/synopsis.png
