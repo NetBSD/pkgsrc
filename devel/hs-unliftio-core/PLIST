@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/24 18:45:20 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 05:11:20 pho Exp $
 lib/unliftio-core-${PKGVERSION}/${HS_VERSION}/package-description
 lib/unliftio-core-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,13 +10,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_unliftio_core.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_unliftio_core.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/Control-Monad-IO-Unlift.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unliftio-core-${PKGVERSION}/html/unliftio-core.haddock
