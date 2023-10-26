@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:54:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/10/26 05:08:11 pho Exp $
 
 BUILDLINK_TREE+=	hs-extra
 
 .if !defined(HS_EXTRA_BUILDLINK3_MK)
 HS_EXTRA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-extra+=	hs-extra>=1.7.12
-BUILDLINK_ABI_DEPENDS.hs-extra+=	hs-extra>=1.7.12nb2
+BUILDLINK_API_DEPENDS.hs-extra+=	hs-extra>=1.7.14
+BUILDLINK_ABI_DEPENDS.hs-extra+=	hs-extra>=1.7.14
 BUILDLINK_PKGSRCDIR.hs-extra?=		../../misc/hs-extra
 
 .include "../../time/hs-clock/buildlink3.mk"
