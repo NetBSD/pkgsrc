@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/24 12:47:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/26 09:18:34 pho Exp $
 lib/regex-base-${PKGVERSION}/${HS_VERSION}/package-description
 lib/regex-base-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,16 +19,18 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Base/RegexLike.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Regex/Base/RegexLike.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/Text-Regex-Base-Context.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/Text-Regex-Base-Impl.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/Text-Regex-Base-RegexLike.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/Text-Regex-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/regex-base.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/regex-base-${PKGVERSION}/html/synopsis.png
