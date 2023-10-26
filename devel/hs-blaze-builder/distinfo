@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/02/11 09:27:36 pho Exp $
+$NetBSD: distinfo,v 1.10 2023/10/26 13:09:34 pho Exp $
 
-BLAKE2s (blaze-builder-0.4.2.2.tar.gz) = 1ed7e197fe7c4e173dc62a0750504cad2a24377b1703b3480f72209ff04dc832
-SHA512 (blaze-builder-0.4.2.2.tar.gz) = 4a0aeaa909a487c652103c5d68180fb34bd2a8be9d625b96056b632081c3f58b8588811f3f47fcf8b58c680ae1c38e4ba8d7066617cb1b660f1994520427d654
-Size (blaze-builder-0.4.2.2.tar.gz) = 60707 bytes
+BLAKE2s (blaze-builder-0.4.2.3.tar.gz) = 07dc43b6c89cc76675c59858a6671341d7b3879f667c3596a3d000ec90a5d4c8
+SHA512 (blaze-builder-0.4.2.3.tar.gz) = 6fe6c817a764ff05564254232820a47cb62e21f1ff2126379456bd796f97c434dfee4787c13aa1567c2864b2a3fae336bb2c0451301218157bcf6af3753271dd
+Size (blaze-builder-0.4.2.3.tar.gz) = 60777 bytes
