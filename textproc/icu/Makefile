@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2023/08/14 05:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2023/10/26 07:37:12 adam Exp $
 
 DISTNAME=	icu4c-73_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -22,13 +22,14 @@ UNLIMIT_RESOURCES+=	datasize
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE}
+# Avoid Python; not really needed for build.
+# Fixes circular dependency on Python and Sqlite3 with ICU.
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=""
 
 # error: 'max_align_t' in namespace 'std' does not name a type
 GCC_REQD+=		4.9
 
 CHECK_SSP_SKIP=		lib/libicudata.so*
-
-PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -137,5 +138,4 @@ SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
 SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
 .endif
 
-.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
