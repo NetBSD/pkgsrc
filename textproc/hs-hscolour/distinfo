@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/01/25 01:08:03 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/10/26 04:43:55 pho Exp $
 
-BLAKE2s (hscolour-1.24.4.tar.gz) = db6fbed1aab2ccea04dc576c564feae66e302b472535be7c107e0c0245bcf3b0
-SHA512 (hscolour-1.24.4.tar.gz) = 39b631c0a8346beff1c2e02ca8e72c1b1e3f7dafcedad7dc9de274e6750501de2bc553fe72a7d3459d4f9797e916f27e28ff96f705c2c0f9d3e0eec0ac6182c7
-Size (hscolour-1.24.4.tar.gz) = 28729 bytes
+BLAKE2s (hscolour-1.25.tar.gz) = 3b5c9341fe4effa9226a4092d57c0b7dee75be300012dc9f3ed9534c4604f141
+SHA512 (hscolour-1.25.tar.gz) = 00a9b679ae0fa13f3ad873991a1d1af953fb84cc2127387a014eaa8697265dc672c3c286b24a75e07c47b6c96a829aede6ef0e0d5f5939117821654319dc6c6c
+Size (hscolour-1.25.tar.gz) = 28695 bytes
