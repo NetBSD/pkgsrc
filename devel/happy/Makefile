@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/09 04:54:05 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/26 05:41:00 pho Exp $
 
-DISTNAME=	happy-1.20.1.1
+DISTNAME=	happy-1.21.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	esg@sdf.lonestar.org
@@ -13,6 +12,16 @@ USE_TOOLS+=	autoconf gmake
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+
+# happy tries to use itself in the building process of the test suite but
+# the current version of Cabal (shipped with GHC 9.6) doesn't support it
+# yet. We must disable the test suite for now.
+SUBST_CLASSES+=		tests
+SUBST_STAGE.tests=	post-extract
+SUBST_FILES.tests=	happy.cabal
+SUBST_SED.tests+=	-e '/test-suite tests/a\${.newline}  buildable: False'
+SUBST_SED.tests+=	-e '/build-tools: happy/d'
+CONFIGURE_ARGS+=	-f-bootstrap
 
 CONFIGURE_ENV+=	fp_cv_dir_docbook_xsl=${PREFIX}/share/xsl/docbook
 CONFIGURE_ENV+=	ac_cv_path_DbLatexCmd= # empty
