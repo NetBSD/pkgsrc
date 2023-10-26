@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/25 02:26:37 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/26 14:09:48 pho Exp $
 lib/unicode-transforms-${PKGVERSION}/${HS_VERSION}/package-description
 lib/unicode-transforms-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -16,15 +16,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Unicode/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Unicode/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/Data-ByteString-UTF8-Normalize.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/Data-Text-Normalize.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/Data-Unicode-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unicode-transforms-${PKGVERSION}/html/unicode-transforms.haddock
