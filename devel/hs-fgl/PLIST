@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 01:58:56 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 12:46:27 pho Exp $
 lib/fgl-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fgl-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Graph/Inductive.dyn_hi
@@ -91,7 +91,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_fgl.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/Data-Graph-Inductive-Basic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/Data-Graph-Inductive-Example.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/Data-Graph-Inductive-Graph.html
@@ -146,10 +146,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/fgl.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fgl-${PKGVERSION}/html/synopsis.png
