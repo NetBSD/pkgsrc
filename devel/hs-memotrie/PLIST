@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/26 10:52:19 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/26 06:55:35 pho Exp $
 lib/MemoTrie-${PKGVERSION}/${HS_VERSION}/package-description
 lib/MemoTrie-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/MemoTrie.dyn_hi
@@ -7,13 +7,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/MemoTrie.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/COPYING
+share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/COPYING
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/Data-MemoTrie.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/MemoTrie.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/MemoTrie-${PKGVERSION}/html/synopsis.png
