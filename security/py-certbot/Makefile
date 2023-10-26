@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2023/10/23 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/26 09:32:25 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 
 COMMENT=	Client for the Let's Encrypt CA
