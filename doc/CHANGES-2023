@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6140 2023/10/26 08:04:01 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6141 2023/10/26 09:19:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9008,3 +9008,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/gifski to 1.13.0 [pin 2023-10-26]
 	Updated devel/py-hypothesis to 6.88.1 [adam 2023-10-26]
 	Updated devel/py-pyrsistent to 0.20.0 [adam 2023-10-26]
+	Updated devel/py-anytree to 2.11.1 [adam 2023-10-26]
+	Updated devel/py-ipykernel to 6.26.0 [adam 2023-10-26]
