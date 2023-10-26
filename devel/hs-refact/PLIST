@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/05 10:14:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/26 04:46:44 pho Exp $
 lib/refact-${PKGVERSION}/${HS_VERSION}/package-description
 lib/refact-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Refact/Types.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Refact/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Refact/Types.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Refact/Types.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Refact/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/Refact-Types.html
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/refact.haddock
-share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/Refact-Types.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/refact.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/refact-${PKGVERSION}/html/synopsis.png
