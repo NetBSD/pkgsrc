@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2023/10/26 22:46:47 gdt Exp $
+# $NetBSD: Makefile,v 1.84 2023/10/26 22:50:59 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.95.0
 CATEGORIES=	chat
@@ -55,7 +55,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
 
-USE_LANGUAGES=	c99
+USE_CC_FEATURES=	c99
 
 REPLACE_PYTHON+=	synapse/_scripts/*.py
 
