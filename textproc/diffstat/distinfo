@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:21:49 nia Exp $
+$NetBSD: distinfo,v 1.24 2023/10/26 16:25:56 snj Exp $
 
-BLAKE2s (diffstat-1.64.tgz) = cc2403fb41aeac845200e25e0c20e3ece7aa8f9674aabfef98915b0dc9a10c1f
-SHA512 (diffstat-1.64.tgz) = d647477beb49b0999c5de41d084da827528571c4848f40c69c2d64d060fc89848d15d03d59b1a31d79f02180f81d92cdf6e19d0172482bc569cf2a87476f12cf
-Size (diffstat-1.64.tgz) = 278873 bytes
+BLAKE2s (diffstat-1.65.tgz) = 12b01959602e7358d44511559a4eecd55b1b1a2c882c2c8824cfca36b640baf3
+SHA512 (diffstat-1.65.tgz) = 8b516201d3070ccc37522f3e57aa8b1abf4ddb52956e5a7c7a7027ac0ada1630bb54c95c57e6acdbe6e110867073d1cec2b1726edb2d60d326caded1501b1e89
+Size (diffstat-1.65.tgz) = 295596 bytes
