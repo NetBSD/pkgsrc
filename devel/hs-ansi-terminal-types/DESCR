@@ -1,0 +1,5 @@
+The 'ANSI' standards refer to the visual style of displaying characters as
+their 'graphic rendition'. The 'ANSI' codes to establish the graphic
+rendition for subsequent text are referred to as SELECT GRAPHIC RENDITION
+(SGR). This package exposes modules that export types and functions used to
+represent SGR aspects.
