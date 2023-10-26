@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.61 2023/06/27 10:31:21 riastradh Exp $
+# $NetBSD: extension.mk,v 1.62 2023/10/26 10:10:02 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -69,6 +69,7 @@ EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
 EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
+PRINT_PLIST_AWK+=	/bin/ { sub(/${PYVERSSUFFIX}/, "$${PYVERSSUFFIX}") }
 .endif
 
 # For running tests before installation of the package,
