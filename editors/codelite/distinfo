@@ -1,13 +1,28 @@
-$NetBSD: distinfo,v 1.12 2022/10/17 16:50:03 andvar Exp $
+$NetBSD: distinfo,v 1.13 2023/10/26 10:46:58 nros Exp $
 
-BLAKE2s (codelite-16.0.tar.gz) = 9f1d0335b0d7571e2aa2add64996a70141571ab8ae67fd360f3db9bfa9f6a3cf
-SHA512 (codelite-16.0.tar.gz) = 4965207a11869bb5f5ec33538bdc2a7312f8d444c615cf7e5a653a26abe2e823bd35a07d1bce73812935025e9a2dc3d6b970e02c7eb2da75f3a22c14d7670af7
-Size (codelite-16.0.tar.gz) = 89755705 bytes
+BLAKE2s (codelite-17.0.0.tar.gz) = f87eff56ee8f9af203a6212cc19e9031f70a396982a9f6fe276dc879f960f4dc
+SHA512 (codelite-17.0.0.tar.gz) = e36b6dcc37cd036a301a78714e8d5f2a61714b58fe006398fe0e959be59992dd7cc7d2a59661d364e371c750ca15cc21d4085d207738a7e3ede09ec0de125cff
+Size (codelite-17.0.0.tar.gz) = 33541958 bytes
+SHA1 (patch-CMakeLists.txt) = 00128fd4c090b6d0ce69c290e12ce6717008fd53
+SHA1 (patch-CodeLite_MSYS2.hpp) = 6e4019a99a28478a6cc10ba10835d4a73979bf3a
+SHA1 (patch-CodeLite_cpp__expr__parser.cpp) = 672e675d6b9f6049de5da282855fa40f8d025b37
+SHA1 (patch-CodeLite_cpp__func__parser.cpp) = 02cbdca2ba0e880d4865ba6453b1abc5850f7d61
+SHA1 (patch-CodeLite_pp.cpp) = 056c7dc59924476fe547fbca2672ead0f3634e18
+SHA1 (patch-CodeLite_scope__parser.cpp) = b7cc03dd965abb4bdf88ad231c5045f7dd61f8a2
 SHA1 (patch-CodeLite_tags_storage_sqlite3.h) = 5de0ea959cbdcec260f4d7e8ad55a59ec65b83aa
+SHA1 (patch-CodeLite_typedef__parser.cpp) = 3778e1978e6445849ed17321913f14272960993f
+SHA1 (patch-CodeLite_var__parser.cpp) = 110ad9f032d31376ae1e92fc78255e687f0eb969
 SHA1 (patch-LanguageServer_LanguageServerLogView.h) = e098709cd6e6cf76a5416b1b8e93f60a6b636bd6
-SHA1 (patch-Plugin_DiffSideBySidePanel.h) = bfc07ea848244a2d2295f10816da4f37edc1e2e4
+SHA1 (patch-LiteEditor_CMakeLists.txt) = 34a788336a9a90b1b2960385c28cc5ace4abbfa0
+SHA1 (patch-LiteEditor_clConfigurationSelectionCtrl.h) = 3432007081056ca29f71324f47d994e00a592d86
+SHA1 (patch-LiteEditor_tabgroupmanager.h) = b537238557f99ad83eb39937ce16f65caab45783
+SHA1 (patch-Plugin_DiffUI.h) = 66780d7ddc659df446f5f6361c8c69d966dfeb5d
+SHA1 (patch-Plugin_clEditorEditEventsHandler.cpp) = dc354802d62160a101983931526479e566680e89
+SHA1 (patch-Plugin_clFileSystemWorkspaceView.hpp) = 3d45e377e1721daf612742d6d3bc032aea1441bf
+SHA1 (patch-Plugin_clLocaleManager.cpp) = de9b9e6f5dfd9a20e5eed78a6f10f827d828ff89
+SHA1 (patch-Plugin_clPluginsFindBar.h) = c4ec0c44829d73d7ab7beb1d19b0021a1da99a0b
+SHA1 (patch-Remoty_sample__codelite__remote__json.cpp) = 2082c01aac36eb28d46879c1a125972b32fd37aa
 SHA1 (patch-ctagsd_CMakeLists.txt) = 2f86721027013407fd662b4f5b3df3f47ad5c5c7
 SHA1 (patch-sdk_asio-1.12.1_asio_detail_impl_kqueue__reactor.ipp) = 20b605046b94de06a8491a282ec8788bea7a50c7
 SHA1 (patch-svgs_svgs-dark_create-logo.sh) = d794ca7bb16a248a7aead3ca30e6c9f16073e1a3
 SHA1 (patch-svgs_svgs-light_create-logo.sh) = 4b0d06911baf89636311cc10e7042f3a2b4f22b3
-SHA1 (patch-wxcrafter_myxh__propgrid.cpp) = 2cdf5abea02aabb187098fb08d5f9ceb1d4148f1

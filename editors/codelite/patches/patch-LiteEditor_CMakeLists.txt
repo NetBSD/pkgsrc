@@ -1,0 +1,15 @@
+$NetBSD: patch-LiteEditor_CMakeLists.txt,v 1.4 2023/10/26 10:46:58 nros Exp $
+
+Install manpages in the right place
+
+--- LiteEditor/CMakeLists.txt.orig	2023-01-11 21:18:07.000000000 +0000
++++ LiteEditor/CMakeLists.txt
+@@ -151,7 +151,7 @@ if(NOT APPLE)
+     install(FILES ${CL_SRC_ROOT}/LICENSE DESTINATION ${CL_RESOURCES_DIR})
+ 
+     # Manual pages
+-    install(DIRECTORY ${CL_SRC_ROOT}/Runtime/man1 DESTINATION ${CL_RESOURCES_DIR}/man)
++    install(DIRECTORY ${CL_SRC_ROOT}/Runtime/man1 DESTINATION ${CMAKE_INSTALL_MANDIR})
+ 
+     # Copy default configuration files
+     install(FILES ${CL_SRC_ROOT}/Runtime/config/build_settings.xml.default DESTINATION ${CL_RESOURCES_DIR}/config)

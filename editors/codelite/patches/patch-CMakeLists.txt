@@ -1,0 +1,40 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2023/10/26 10:46:58 nros Exp $
+
+Set IS_NETBSD and IS_FREEBSD based on CMAKE_SYSTEM_NAME.
+Don't look for homebrew libs.
+Don't include harfbuzz outside the buildlink system.
+
+--- CMakeLists.txt.orig	2023-10-22 11:47:37.862356052 +0000
++++ CMakeLists.txt
+@@ -95,13 +95,21 @@ if(NOT SQLite3_FOUND)
+     set(SQLite3_LIBRARIES "-lsqlite3lib")
+ endif()
+ 
++if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++set(IS_FREEBSD 1)
++else()
+ set(IS_FREEBSD 0)
++endif()
++if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++set(IS_NETBSD 1)
++else()
+ set(IS_NETBSD 0)
++endif()
+ set(BUILD_WXC 0)
+ set(CL_COPY_WX_LIBS 0)
+ set(WITH_SFTP 1)
+ 
+-if(APPLE)
++if(OFF)
+     # add homebrew path to cmake search pathsbrew --prefix
+     execute_process(
+         COMMAND brew --prefix
+@@ -113,7 +121,7 @@ endif()
+ 
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations") # Avoid very multiple warnings spam due to
+                                                                        # deprecated wx methods
+-if(UNIX AND NOT APPLE)
++if(OFF)
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -isystem /usr/include/harfbuzz"
+     )# Needed for fedora 31 so far, but will spread. See https://gitlab.kitware.com/cmake/cmake/issues/19531
+ endif()
