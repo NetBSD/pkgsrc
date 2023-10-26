@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/26 13:27:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-lpeg
 
 .if !defined(HS_LPEG_BUILDLINK3_MK)
 HS_LPEG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-lpeg+=	hs-lpeg>=1.0.3
-BUILDLINK_ABI_DEPENDS.hs-lpeg+=	hs-lpeg>=1.0.3nb2
+BUILDLINK_API_DEPENDS.hs-lpeg+=	hs-lpeg>=1.1.0
+BUILDLINK_ABI_DEPENDS.hs-lpeg+=	hs-lpeg>=1.1.0
 BUILDLINK_PKGSRCDIR.hs-lpeg?=	../../devel/hs-lpeg
 
 .include "../../lang/hs-lua/buildlink3.mk"
