@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/24 14:00:51 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/26 04:25:29 pho Exp $
 lib/HUnit-${PKGVERSION}/${HS_VERSION}/package-description
 lib/HUnit-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_HUnit.dyn_hi
@@ -22,7 +22,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Test/HUnit/Text.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/HUnit.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/Test-HUnit-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/Test-HUnit-Lang.html
@@ -30,9 +30,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/Test-HUnit-Termina
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/Test-HUnit-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/Test-HUnit.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HUnit-${PKGVERSION}/html/synopsis.png
