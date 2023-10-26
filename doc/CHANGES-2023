@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6153 2023/10/26 16:08:45 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6154 2023/10/26 16:15:27 snj Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9042,3 +9042,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/cargo-audit to 0.18.3 [pin 2023-10-26]
 	Updated net/qbittorrent to 4.6.0 [adam 2023-10-26]
 	Updated sysutils/ansible-lint to 6.21.1 [adam 2023-10-26]
+	Updated games/quakespasm to 0.96.1 [snj 2023-10-26]
