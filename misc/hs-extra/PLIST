@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 01:22:35 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 05:08:11 pho Exp $
 lib/extra-${PKGVERSION}/${HS_VERSION}/package-description
 lib/extra-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Extra.dyn_hi
@@ -25,6 +25,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Extra.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/NonEmpty/Extra.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/NonEmpty/Extra.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/NonEmpty/Extra.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Extra.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Extra.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Extra.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Extra.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Extra.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Extra.p_hi
@@ -67,7 +70,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Extra.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/CHANGES.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Control-Concurrent-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Control-Exception-Extra.html
@@ -77,6 +80,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-Foldable-Extr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-IORef-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-List-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-List-NonEmpty-Extra.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-Monoid-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-Tuple-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-Typeable-Extra.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/Data-Version-Extra.html
@@ -128,10 +132,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/extra.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/extra-${PKGVERSION}/html/synopsis.png
