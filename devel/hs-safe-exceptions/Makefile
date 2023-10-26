@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:28 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/26 05:13:37 pho Exp $
 
-DISTNAME=	safe-exceptions-0.1.7.3
-PKGREVISION=	2
+DISTNAME=	safe-exceptions-0.1.7.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
