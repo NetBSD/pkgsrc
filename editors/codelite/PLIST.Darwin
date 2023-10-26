@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2023/10/26 10:46:58 nros Exp $
+bin/codelite-lsp-helper
