@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:57 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/10/26 08:29:00 pho Exp $
 
 BLAKE2s (haskell-src-exts-1.23.1.tar.gz) = bce34aa666ee6794e9e429789f155c36d795ba3d47cb439a8a837035ab92b159
 SHA512 (haskell-src-exts-1.23.1.tar.gz) = c9e6e4d93c2b4ee84d57707aed526291b5c4e297f06a3921257feb0c1df3bb095addd4b1d9bb187650490364647385ab6322e4fc54f9a7648da439a34329d734
 Size (haskell-src-exts-1.23.1.tar.gz) = 1264319 bytes
+SHA1 (patch-src_Language_Haskell_Exts_InternalParser.ly) = adfc73862a2d8d4bf67a54efeb66f5b12a566515
