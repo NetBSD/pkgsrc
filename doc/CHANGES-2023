@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6126 2023/10/26 02:53:57 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6127 2023/10/26 03:38:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8992,3 +8992,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-byteable version 0.1.1 [pho 2023-10-26]
 	Added devel/hs-bloomfilter version 2.0.1.2 [pho 2023-10-26]
 	Updated devel/hs-basement to 0.0.16 [pho 2023-10-26]
+	Updated devel/hs-splitmix to 0.1.0.5 [pho 2023-10-26]
