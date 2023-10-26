@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/11 11:29:12 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/26 16:34:49 pho Exp $
 
-BLAKE2s (jira-wiki-markup-1.4.0.tar.gz) = 0f2a3bf290fc62d3081d74347e9e37bd8f95a2d9acec7172c059b97624b90c65
-SHA512 (jira-wiki-markup-1.4.0.tar.gz) = f20bf4b5242657a34cae1aeeb88ba6de61748ccc212243ae6a6d5a4defc3e2ad25445705a87a55d5cb3b6378f5f500887bf509459a66741a75a49025e1549750
-Size (jira-wiki-markup-1.4.0.tar.gz) = 24883 bytes
+BLAKE2s (jira-wiki-markup-1.5.1.tar.gz) = 49589eb2575440dd81d3eb90123590ade64926922ff940d1db6b718c992f8931
+SHA512 (jira-wiki-markup-1.5.1.tar.gz) = d72eca3fcf82fb9569eba39cd2446396b3f16bb08c805e4f8f570397001541ca921cadb642acf17af773fc486054bb0533240516a417a21a74ec1642e7b3b517
+Size (jira-wiki-markup-1.5.1.tar.gz) = 25459 bytes
