@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/23 04:44:20 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 05:41:00 pho Exp $
 bin/happy
 man/man1/happy.1
 share/doc/happy/fptools.css
@@ -38,16 +38,6 @@ share/doc/happy/sec-tips.html
 share/doc/happy/sec-type-signatures.html
 share/doc/happy/sec-using.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
-share/${HS_PLATFORM}/${PKGNAME}/GLR_Base
-share/${HS_PLATFORM}/${PKGNAME}/GLR_Lib
-share/${HS_PLATFORM}/${PKGNAME}/GLR_Lib-ghc
-share/${HS_PLATFORM}/${PKGNAME}/GLR_Lib-ghc-debug
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays-coerce
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays-coerce-debug
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays-debug
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays-ghc
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-arrays-ghc-debug
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-coerce
-share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate-ghc
+share/${HS_PLATFORM}/${PKGNAME}/GLR_Base.hs
+share/${HS_PLATFORM}/${PKGNAME}/GLR_Lib.hs
+share/${HS_PLATFORM}/${PKGNAME}/HappyTemplate.hs
