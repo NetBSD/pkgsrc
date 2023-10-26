@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 03:32:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 16:34:49 pho Exp $
 bin/jira-wiki-markup
 lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-description
 lib/jira-wiki-markup-${PKGVERSION}/${HS_VERSION}/package-id
@@ -29,7 +29,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Jira/Printer.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/Text-Jira-Markup.html
@@ -40,11 +40,32 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/Text-Ji
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/Text-Jira-Parser-Shared.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/Text-Jira-Parser.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/Text-Jira-Printer.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-A.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-All.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-B.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-C.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-D.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-E.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-F.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-H.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-I.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-J.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-L.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-M.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-N.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-P.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-R.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-S.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-T.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-U.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/jira-wiki-markup.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/jira-wiki-markup-${PKGVERSION}/html/synopsis.png
