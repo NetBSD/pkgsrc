@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/01 20:43:04 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/26 02:58:51 pho Exp $
 lib/auto-update-${PKGVERSION}/${HS_VERSION}/package-description
 lib/auto-update-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate.dyn_hi
@@ -26,9 +26,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-Debo
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-Reaper.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/auto-update.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/synopsis.png
