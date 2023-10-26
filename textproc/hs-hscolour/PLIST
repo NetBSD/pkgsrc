@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 01:08:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/26 04:43:55 pho Exp $
 bin/HsColour
 lib/hscolour-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hscolour-${PKGVERSION}/${HS_VERSION}/package-id
@@ -53,7 +53,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/HsColour/TTY.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/LICENCE-LGPL
+share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/LICENCE-LGPL
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskell-HsColour-ACSS.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskell-HsColour-ANSI.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskell-HsColour-Anchors.html
@@ -71,12 +71,14 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskel
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskell-HsColour-TTY.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/Language-Haskell-HsColour.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/hscolour.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hscolour-${PKGVERSION}/html/synopsis.png
 share/${HS_PLATFORM}/hscolour-${PKGVERSION}/data/rgb24-example-.hscolour
 share/${HS_PLATFORM}/hscolour-${PKGVERSION}/hscolour.css
