@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2023/08/30 00:23:02 manu Exp $
+# $NetBSD: options.mk,v 1.4 2023/10/26 22:50:59 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.matrix-synapse
-PKG_SUPPORTED_OPTIONS=  saml2
+PKG_SUPPORTED_OPTIONS=	saml2
 PKG_SUGGESTED_OPTIONS=	#
 
 .include "../../mk/bsd.options.mk"
