@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/26 07:08:41 pho Exp $
+
+BLAKE2s (ansi-terminal-types-0.11.5.tar.gz) = f8da711fa8a2caf55ab9fd58d9ff1094e9ba65036e11a9114a86c8247d2caa34
+SHA512 (ansi-terminal-types-0.11.5.tar.gz) = a37ef258985f9979c0abcc5187cbccea3629b7c74ab52d57f61d0a1c6e4ea5a5bb5d1bcb5176ea5115afa55b6c6f09b75ad918a41b9c1420684845b8928ec070
+Size (ansi-terminal-types-0.11.5.tar.gz) = 4660 bytes
