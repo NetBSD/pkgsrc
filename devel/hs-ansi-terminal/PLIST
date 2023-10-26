@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 01:35:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/26 07:31:18 pho Exp $
 lib/ansi-terminal-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ansi-terminal-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI.dyn_hi
@@ -7,24 +7,22 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Codes.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Codes.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Codes.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Types.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Types.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Types.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Unix.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Unix.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Unix.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/System-Console-ANSI-Codes.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/System-Console-ANSI-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/System-Console-ANSI.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/ansi-terminal.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/synopsis.png
