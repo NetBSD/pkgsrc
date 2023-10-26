@@ -1,4 +1,4 @@
-# $NetBSD: build-type.awk,v 1.3 2022/02/07 02:43:42 pho Exp $
+# $NetBSD: build-type.awk,v 1.4 2023/10/26 07:07:47 pho Exp $
 #
 # Extract the field "Build-Type" out of a Cabal package description.
 #
@@ -10,6 +10,7 @@ BEGIN {
 tolower($1) ~ /^build-type:/ {
     if ($2) {
         found = 1;
+        gsub("\r", "", $2); # Some .cabal files have CRLF newlines.
         print tolower($2);
         exit
     }
