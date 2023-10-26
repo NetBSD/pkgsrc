@@ -1,0 +1,2 @@
+This package provides both mutable and immutable Bloom filter data types,
+along with a family of hash function and an easy-to-use interface.
