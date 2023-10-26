@@ -1,20 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/14 14:39:50 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/26 12:52:36 pho Exp $
 lib/data-ordlist-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-ordlist-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Ordered.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Ordered.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Ordered.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Ordered.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/List/Ordered.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/CHANGES.md
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/Data-List-Ordered.html
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/data-ordlist.haddock
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/CHANGES.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/Data-List-Ordered.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/data-ordlist.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-ordlist-${PKGVERSION}/html/synopsis.png
