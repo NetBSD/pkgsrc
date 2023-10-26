@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/03/17 12:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/26 09:32:26 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	OVH DNS Authenticator plugin for Certbot
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
-DEPENDS+=	${PYPKGPREFIX}-lexicon>=3.2.1:../../net/py-lexicon
+DEPENDS+=	${PYPKGPREFIX}-lexicon>=3.15.1:../../net/py-lexicon
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
