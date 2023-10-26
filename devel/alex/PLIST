@@ -1,24 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/11 09:47:44 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/26 13:07:44 pho Exp $
 bin/alex
-man/man1/alex.1
-share/doc/alex/about.html
-share/doc/alex/alex-files.html
-share/doc/alex/api.html
-share/doc/alex/basic-api.html
-share/doc/alex/bug-reports.html
-share/doc/alex/charsets.html
-share/doc/alex/fptools.css
-share/doc/alex/index.html
-share/doc/alex/introduction.html
-share/doc/alex/invoking.html
-share/doc/alex/license.html
-share/doc/alex/regexps.html
-share/doc/alex/relnotes-20.html
-share/doc/alex/relnotes-210.html
-share/doc/alex/relnotes-22.html
-share/doc/alex/syntax.html
-share/doc/alex/types.html
-share/doc/alex/wrappers.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 share/${HS_PLATFORM}/${PKGNAME}/AlexTemplate.hs
 share/${HS_PLATFORM}/${PKGNAME}/AlexWrappers.hs
