@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6145 2023/10/26 13:07:55 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6146 2023/10/26 13:09:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9029,3 +9029,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-unix-compat to 0.7 [pho 2023-10-26]
 	Updated devel/hs-fgl to 5.8.2.0 [pho 2023-10-26]
 	Updated devel/alex to 3.4.0.0 [pho 2023-10-26]
+	Updated devel/hs-blaze-builder to 0.4.2.3 [pho 2023-10-26]
