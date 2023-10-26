@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6123 2023/10/25 22:33:50 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6124 2023/10/26 02:31:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8989,3 +8989,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-packaging to 23.2nb1 [wiz 2023-10-25]
 	Updated devel/py-pyproject_hooks to 1.0.0nb1 [wiz 2023-10-25]
 	Updated devel/py-build to 1.0.3nb1 [wiz 2023-10-25]
+	Added devel/hs-byteable version 0.1.1 [pho 2023-10-26]
