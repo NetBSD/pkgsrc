@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/26 02:34:10 pho Exp $
+
+BLAKE2s (bloomfilter-2.0.1.2.tar.gz) = 5ada62052e0ac32644d77ba073622438647695099b3951ecda343af812b84cdf
+SHA512 (bloomfilter-2.0.1.2.tar.gz) = 1fd0733231c413aff693194639dc49d27dc2fce669a38a838815e180b8cb45bf98b4c18a702d2ece8ec0d78c970802deea82c328c3d6585f7f7385a403a07365
+Size (bloomfilter-2.0.1.2.tar.gz) = 22398 bytes
