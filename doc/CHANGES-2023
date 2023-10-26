@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6139 2023/10/26 08:01:46 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6140 2023/10/26 08:04:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9006,3 +9006,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-ansi-terminal-types version 0.11.5 [pho 2023-10-26]
 	Updated devel/hs-ansi-terminal to 1.0 [pho 2023-10-26]
 	Updated graphics/gifski to 1.13.0 [pin 2023-10-26]
+	Updated devel/py-hypothesis to 6.88.1 [adam 2023-10-26]
+	Updated devel/py-pyrsistent to 0.20.0 [adam 2023-10-26]
