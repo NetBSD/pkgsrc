@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 01:28:30 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/26 05:15:19 pho Exp $
 lib/githash-${PKGVERSION}/${HS_VERSION}/package-description
 lib/githash-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GitHash.dyn_hi
@@ -10,13 +10,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_githash.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/GitHash.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/githash.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/githash-${PKGVERSION}/html/synopsis.png
