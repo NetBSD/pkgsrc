@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2023/09/08 20:42:52 js Exp $
+@comment $NetBSD: PLIST,v 1.47 2023/10/26 22:46:47 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -21,6 +21,8 @@ ${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/synapse/__init__.py
 ${PYSITELIB}/synapse/__init__.pyc
+${PYSITELIB}/synapse/_pydantic_compat.py
+${PYSITELIB}/synapse/_pydantic_compat.pyc
 ${PYSITELIB}/synapse/_scripts/__init__.py
 ${PYSITELIB}/synapse/_scripts/__init__.pyc
 ${PYSITELIB}/synapse/_scripts/export_signing_key.py
@@ -1363,6 +1365,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/80/02_read_write_locks_unlogged.s
 ${PYSITELIB}/synapse/storage/schema/main/delta/80/02_scheduled_tasks.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/80/03_read_write_locks_triggers.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/80/04_read_write_locks_deadlock.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/82/02_scheduled_tasks_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/82/04_add_indices_for_purging_rooms.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
