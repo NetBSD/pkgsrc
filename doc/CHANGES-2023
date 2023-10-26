@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6149 2023/10/26 13:27:31 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6150 2023/10/26 13:38:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9036,3 +9036,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jaraco.envs to 2.6.0 [adam 2023-10-26]
 	Updated databases/hs-direct-sqlite to 2.3.28 [pho 2023-10-26]
 	Updated devel/hs-lpeg to 1.1.0 [pho 2023-10-26]
+	Updated net/py-unearth to 0.12.1 [adam 2023-10-26]
+	Updated devel/py-gitpython to 3.1.40 [adam 2023-10-26]
