@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/03/04 10:11:42 nia Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/26 16:25:56 snj Exp $
 
-DISTNAME=	diffstat-1.64
+DISTNAME=	diffstat-1.65
 CATEGORIES=	textproc
 MASTER_SITES=	https://invisible-mirror.net/archives/diffstat/
 EXTRACT_SUFX=	.tgz
