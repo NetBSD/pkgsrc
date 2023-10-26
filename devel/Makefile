@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4077 2023/10/24 14:10:01 pho Exp $
+# $NetBSD: Makefile,v 1.4078 2023/10/26 02:31:50 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -539,6 +539,7 @@ SUBDIR+=	hs-bitvec
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-blaze-textual
 SUBDIR+=	hs-boring
+SUBDIR+=	hs-byteable
 SUBDIR+=	hs-bytestring-builder
 SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cborg
