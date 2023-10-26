@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 16:13:21 pho Exp $
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/XML/Types.dyn_hi
+@comment $NetBSD: PLIST,v 1.2 2023/10/26 13:28:49 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/XML/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/XML/Types.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/XML/Types.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/XML/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/xml-types-${PKGVERSION}/${HS_VERSION}/package-description
 lib/xml-types-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/COPYING
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/Data-XML-Types.html
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/xml-types.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/Data-XML-Types.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-types-${PKGVERSION}/html/xml-types.haddock
