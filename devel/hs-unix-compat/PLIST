@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/01 20:56:53 nikita Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/26 12:06:39 pho Exp $
 lib/unix-compat-${PKGVERSION}/${HS_VERSION}/package-description
 lib/unix-compat-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -23,9 +23,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/Types.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/Unistd.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/Unistd.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/Unistd.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/User.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/User.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/PosixCompat/User.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/include/HsUnixCompat.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
@@ -36,33 +33,14 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-Posix
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-PosixCompat-Time.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-PosixCompat-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-PosixCompat-Unistd.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-PosixCompat-User.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/System-PosixCompat.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-A.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-All.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-B.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-C.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-D.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-E.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-F.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-G.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-H.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-I.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-L.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-M.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-N.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-O.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-P.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-R.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-S.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-T.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-U.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unix-compat-${PKGVERSION}/html/unix-compat.haddock
