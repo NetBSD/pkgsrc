@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6130 2023/10/26 05:11:30 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6131 2023/10/26 05:13:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8996,3 +8996,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-hscolour to 1.25 [pho 2023-10-26]
 	Updated misc/hs-extra to 1.7.14 [pho 2023-10-26]
 	Updated devel/hs-unliftio-core to 0.2.1.0 [pho 2023-10-26]
+	Updated devel/hs-safe-exceptions to 0.1.7.4 [pho 2023-10-26]
