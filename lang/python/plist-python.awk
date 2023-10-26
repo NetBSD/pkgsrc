@@ -1,4 +1,4 @@
-# $NetBSD: plist-python.awk,v 1.3 2021/10/05 19:08:13 adam Exp $
+# $NetBSD: plist-python.awk,v 1.4 2023/10/26 10:10:23 wiz Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -27,7 +27,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-### This awk script handles python bytcode file entries in PLISTs.  This script
+### This awk script handles Python bytecode file entries in PLISTs.  This script
 ### requires the following scripts to be included:
 ###
 ###	plist-functions.awk (print_entry)
@@ -40,7 +40,7 @@ BEGIN {
 	PYVERS = getenv_or_die("PYVERS")
 }
 
-### For each python bytecode file entry, convert directory and file name.
+### For each Python bytecode file entry, convert directory and file name.
 ###
 /^[^@]/ && /[^\/]+\.py[co]$/ {
 	sub(/[^\/]+\.py[co]$/, "__pycache__/&")
