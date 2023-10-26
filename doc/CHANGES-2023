@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6133 2023/10/26 05:41:09 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6134 2023/10/26 06:33:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -8999,3 +8999,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-safe-exceptions to 0.1.7.4 [pho 2023-10-26]
 	Updated devel/hs-githash to 0.1.7.0 [pho 2023-10-26]
 	Updated devel/happy to 1.21.0 [pho 2023-10-26]
+	Updated devel/py-debugpy to 1.8.0 [adam 2023-10-26]
+	Updated security/py-OpenSSL to 23.3.0 [adam 2023-10-26]
