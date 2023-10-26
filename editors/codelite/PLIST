@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2022/10/17 16:50:03 andvar Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/10/26 10:46:58 nros Exp $
 bin/codelite
 bin/codelite-cc
 bin/codelite-ctags
 bin/codelite-echo
-bin/codelite-lsp-helper
 bin/codelite-make
 bin/codelite-remote
-bin/codelite-terminal
+${PLIST.notdarwin}bin/codelite-terminal
 bin/codelite_cppcheck
 bin/codelite_exec
 bin/codelite_fix_files
@@ -17,10 +16,13 @@ bin/ctagsd
 bin/ctagsd-tests
 lib/codelite/AutoSave.so
 lib/codelite/CMakePlugin.so
+lib/codelite/CallGraph.so
 lib/codelite/CodeFormatter.so
 lib/codelite/CodeLiteDiff.so
+lib/codelite/ContinuousBuild.so
 lib/codelite/Copyright.so
 lib/codelite/DatabaseExplorer.so
+lib/codelite/DebugAdapterClient.so
 lib/codelite/Docker.so
 lib/codelite/EOSWiki.so
 lib/codelite/EditorConfigPlugin.so
@@ -52,6 +54,7 @@ lib/codelite/cppchecker.so
 lib/codelite/cscope.so
 lib/codelite/debuggers/DebuggerGDB.so
 lib/codelite/git.so
+lib/codelite/libdapcxx.so
 lib/codelite/libdatabaselayersqlite.so
 lib/codelite/liblibcodelite.so
 lib/codelite/libplugin.so
@@ -116,6 +119,7 @@ share/codelite/images/splashscreen@2x.png
 share/codelite/lexers/lexers.json
 share/codelite/php.sample
 share/codelite/phprefactor.phar
+share/codelite/rc/menu.macos.xrc
 share/codelite/rc/menu.xrc
 share/codelite/resources/abbrev.png
 share/codelite/resources/compfile.png
@@ -216,10 +220,8 @@ share/codelite/templates/projects/cpp_gtkmm3_template/mainwindow.h
 share/codelite/templates/projects/custom-makefile/custom-makefile.project
 share/codelite/templates/projects/custom-makefile/icon.png
 share/codelite/templates/projects/dynamic-library-wx-enabled/dynamic-library-wx-enabled.project
-share/codelite/templates/projects/dynamic-library-wx-enabled/dynamic-library-wx-enabled.project.windows
 share/codelite/templates/projects/dynamic-library-wx-enabled/icon.png
 share/codelite/templates/projects/dynamic-library/dynamic-library.project
-share/codelite/templates/projects/dynamic-library/dynamic-library.project.windows
 share/codelite/templates/projects/dynamic-library/icon.png
 share/codelite/templates/projects/executable-cobra/executable-cobra.project
 share/codelite/templates/projects/executable-cobra/main.cobra
