@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/12 05:38:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/10/26 09:15:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -22,6 +22,8 @@ ${PYSITELIB}/anytree/exporter/dotexporter.py
 ${PYSITELIB}/anytree/exporter/dotexporter.pyc
 ${PYSITELIB}/anytree/exporter/jsonexporter.py
 ${PYSITELIB}/anytree/exporter/jsonexporter.pyc
+${PYSITELIB}/anytree/exporter/mermaidexporter.py
+${PYSITELIB}/anytree/exporter/mermaidexporter.pyc
 ${PYSITELIB}/anytree/importer/__init__.py
 ${PYSITELIB}/anytree/importer/__init__.pyc
 ${PYSITELIB}/anytree/importer/dictimporter.py
