@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/01 20:36:00 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/26 13:10:48 pho Exp $
 lib/Only-${PKGVERSION}/${HS_VERSION}/package-description
 lib/Only-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Only.dyn_hi
@@ -11,9 +11,11 @@ share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/Data-Tuple-Only.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/Only.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/Only-${PKGVERSION}/html/synopsis.png
