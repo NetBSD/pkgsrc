@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6150 2023/10/26 13:38:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6151 2023/10/26 14:20:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9038,3 +9038,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-lpeg to 1.1.0 [pho 2023-10-26]
 	Updated net/py-unearth to 0.12.1 [adam 2023-10-26]
 	Updated devel/py-gitpython to 3.1.40 [adam 2023-10-26]
+	Updated devel/cargo-modules to 0.10.2 [pin 2023-10-26]
