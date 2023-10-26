@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/12/29 11:01:10 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/26 08:03:40 adam Exp $
 
-DISTNAME=	pyrsistent-0.19.3
+DISTNAME=	pyrsistent-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrsistent/}
