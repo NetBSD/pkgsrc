@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6148 2023/10/26 13:16:12 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6149 2023/10/26 13:27:31 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9035,3 +9035,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-asttokens to 2.4.1 [adam 2023-10-26]
 	Updated devel/py-jaraco.envs to 2.6.0 [adam 2023-10-26]
 	Updated databases/hs-direct-sqlite to 2.3.28 [pho 2023-10-26]
+	Updated devel/hs-lpeg to 1.1.0 [pho 2023-10-26]
