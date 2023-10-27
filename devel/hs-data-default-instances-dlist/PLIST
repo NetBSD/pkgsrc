@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 10:57:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/27 15:00:59 pho Exp $
 lib/data-default-instances-dlist-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-default-instances-dlist-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/DList.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/DList.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/DList.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/DList.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/DList.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/Data-Default-Instances-DList.html
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/data-default-instances-dlist.haddock
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/Data-Default-Instances-DList.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/data-default-instances-dlist.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-dlist-${PKGVERSION}/html/synopsis.png
