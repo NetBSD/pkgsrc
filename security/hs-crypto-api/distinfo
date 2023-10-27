@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/27 11:01:30 pho Exp $
+
+BLAKE2s (crypto-api-0.13.3.tar.gz) = c5de2f2fdab5919937d5378555f44bb904bdee21ea68848bf3a5f10f5177b1d2
+SHA512 (crypto-api-0.13.3.tar.gz) = 1228fe857e235a0d5692916507a42e622f9769325ae9a6a7828270dcb64fe38cc094eec3fc8cad2f28b01bd8de98b1dc637a17aab1db1568a82cb91ebc65c382
+Size (crypto-api-0.13.3.tar.gz) = 48346 bytes
