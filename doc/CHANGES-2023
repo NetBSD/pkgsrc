@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6194 2023/10/27 12:34:49 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6195 2023/10/27 12:53:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9086,3 +9086,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-th-lift to 0.8.4 [pho 2023-10-27]
 	Updated devel/hs-retry to 0.9.3.1 [pho 2023-10-27]
 	Updated sysutils/hs-fast-logger to 3.2.2 [pho 2023-10-27]
+	Updated devel/hs-microlens-th to 0.4.3.14 [pho 2023-10-27]
