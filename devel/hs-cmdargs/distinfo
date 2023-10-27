@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:53 nia Exp $
+$NetBSD: distinfo,v 1.10 2023/10/27 04:44:02 pho Exp $
 
-BLAKE2s (cmdargs-0.10.21.tar.gz) = 38c30fc6e18714da20544d9830816bb96f0a428005033a3b32d794808ec05eaf
-SHA512 (cmdargs-0.10.21.tar.gz) = f17b7f56c9382a4ea3235b2d7669866e0ea366ab7c30984dc3f017f18d25015508f5cbce535eec4a601c09a33cffabe71b8da5cc15d301daf6ed3f3e40dbd2af
-Size (cmdargs-0.10.21.tar.gz) = 64892 bytes
+BLAKE2s (cmdargs-0.10.22.tar.gz) = 835832c3365340749df117beb8c633599c5f19b2edb4dea6834ef70ecba9d3f4
+SHA512 (cmdargs-0.10.22.tar.gz) = 571d9584769fdb5bb77a57607c2f432b365604a2ca2e9b5c044c319499004f7fcb12f2f6e61091a245f1bf6a5d321d38ade1a54d5bc86831136fa85b9b898faa
+Size (cmdargs-0.10.22.tar.gz) = 65154 bytes
