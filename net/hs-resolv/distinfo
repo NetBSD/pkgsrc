@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/25 13:31:04 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/27 11:53:14 pho Exp $
 
-BLAKE2s (resolv-0.1.2.0.tar.gz) = 33bc573ba6213afe7e033d640580197d85daaff8e3a95ff2a1b29b11cccab5e5
-SHA512 (resolv-0.1.2.0.tar.gz) = fae2d0717a109b0d6cc19c51c773bc68c64c0048b9d930528cf5622ee270ebaddec180c1d444542e8eb036262611f5b88deadeea223fb2ef2b15b41369a2376e
-Size (resolv-0.1.2.0.tar.gz) = 156710 bytes
+BLAKE2s (resolv-0.2.0.2.tar.gz) = dbb6d63450e0c7ffd2867787361e27b7f8ad6df7c1d642325b3fa475a68c1713
+SHA512 (resolv-0.2.0.2.tar.gz) = df61ab0e3d1c2faa525271416fca3976378ac6fcbaf9f729c7ed3f07454625a03f6aafcd2fd56f2001bc61d365ccb2b4c4f2bd693696576450df20a20e7102df
+Size (resolv-0.2.0.2.tar.gz) = 159658 bytes
