@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/24 12:51:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/27 06:16:51 pho Exp $
 lib/integer-logarithms-${PKGVERSION}/${HS_VERSION}/package-description
 lib/integer-logarithms-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Integer/Logarithms/Compat.dyn_hi
@@ -16,16 +16,18 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Math/NumberTheory/Powers/Natural.p_h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/GHC-Integer-Logarithms-Compat.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/Math-NumberTheory-Logarithms.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/Math-NumberTheory-Powers-Integer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/Math-NumberTheory-Powers-Natural.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/integer-logarithms.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/integer-logarithms-${PKGVERSION}/html/synopsis.png
