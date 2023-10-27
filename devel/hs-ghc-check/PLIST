@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 14:27:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 13:25:09 pho Exp $
 lib/ghc-check-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ghc-check-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Check.dyn_hi
@@ -16,15 +16,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Check/Util.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/GHC-Check-Executable.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/GHC-Check-PackageDb.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/GHC-Check.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/ghc-check.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-check-${PKGVERSION}/html/synopsis.png
