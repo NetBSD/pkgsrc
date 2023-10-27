@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:35 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/27 12:19:28 pho Exp $
 
 DISTNAME=	wizards-1.0.3
 PKGREVISION=	6
@@ -9,7 +9,9 @@ COMMENT=	High level, generic library for interrogative user interfaces
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	haskeline
+	haskeline	\
+	mtl	\
+	transformers
 
 .include "../../devel/hs-control-monad-free/buildlink3.mk"
 .include "../../mk/haskell.mk"
