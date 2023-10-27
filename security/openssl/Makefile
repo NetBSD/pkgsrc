@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2023/10/24 21:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.293 2023/10/27 18:30:12 jperkin Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -41,7 +41,7 @@ PLIST_VARS+=		devcrypto afalg
 .if ${OPSYS} == "Linux"
 PLIST.afalg=		yes
 .endif
-.if exists(/dev/crypto)
+.if exists(/dev/crypto) && ${OPSYS} != "SunOS"
 PLIST.devcrypto=	yes
 .else
 CONFIGURE_ARGS+=	no-devcryptoeng
@@ -136,10 +136,10 @@ do-configure:
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;			\
 	for f in openssl-*; do						\
-		${RM} -f $${f};						\
-		${MV} `${ECHO} $${f} | ${SED} -e 's/openssl-//'` $${f};	\
+		${RM} -f `${ECHO} $${f} | ${SED} -e 's/openssl-//'`;	\
 	done
-	${MV} ${DESTDIR}${PREFIX}/etc/openssl/* ${DESTDIR}${PREFIX}/share/examples/openssl
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/*				\
+		${DESTDIR}${PREFIX}/share/examples/openssl
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
