@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:46 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/27 19:19:05 pho Exp $
 
 DISTNAME=	hslogger-1.3.1.0
 PKGREVISION=	3
@@ -11,7 +11,8 @@ LICENSE=	modified-bsd
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
 	bytestring	\
-	time
+	time	\
+	unix
 
 .include "../../devel/hs-old-locale/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
