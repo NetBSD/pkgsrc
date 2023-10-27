@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/25 16:52:53 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/27 09:22:51 pho Exp $
 bin/xmonad
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_xmonad.dyn_hi
@@ -33,7 +33,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
 man/man1/xmonad.1
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Config.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Core.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout.html
@@ -75,11 +75,13 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/xmonad.haddock
 share/examples/xmonad/xmonad.hs

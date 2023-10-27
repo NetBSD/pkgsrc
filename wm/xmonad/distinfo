@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/01/25 16:52:53 pho Exp $
+$NetBSD: distinfo,v 1.11 2023/10/27 09:22:51 pho Exp $
 
-BLAKE2s (xmonad-0.17.1.tar.gz) = 1e41ed2f449f4fbc7a916ae974eaaca0c2671c9599cb3ed5958b44313fe27324
-SHA512 (xmonad-0.17.1.tar.gz) = cf8aa854112f91298936386681b474daa33ed782459061a0542679359abd06edaa9748a66e2b9f6b9f75eb0078bc728c0d565fcf758105a28c4ba6dda6a4959a
-Size (xmonad-0.17.1.tar.gz) = 94704 bytes
+BLAKE2s (xmonad-0.17.2.tar.gz) = 1f9a411253db99af8358b55c41bf832b32177861c21e999dbff2beb4304a5153
+SHA512 (xmonad-0.17.2.tar.gz) = 8d02422f473499516acf3cfe920b15df1d24a1fbf47f8cded5eb465186427e82cd43d65a63936993016797680335e59380931e9bad82b2181ecdef6b63d9bfd9
+Size (xmonad-0.17.2.tar.gz) = 94730 bytes
