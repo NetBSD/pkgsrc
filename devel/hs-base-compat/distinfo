@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/08/18 18:21:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2023/10/27 04:57:03 pho Exp $
 
-BLAKE2s (base-compat-0.12.2.tar.gz) = 1ec4c70960cd2ee39e0670a20a99b47991f2348e806fb1dbff275f8f999c658d
-SHA512 (base-compat-0.12.2.tar.gz) = 8fc3f6835c2d9951a7e9ba8837952fb39dbaf9a8c77d11c941efd352e018ebe8813a53b011ee28140137ca63c72eedfd52bbd13fbc6660fd7c01dface035b436
-Size (base-compat-0.12.2.tar.gz) = 36393 bytes
+BLAKE2s (base-compat-0.13.1.tar.gz) = 54352707cf6016169cabf64dac3a9f48a1cee7b99e45bcd1e9ad04ccb85a016d
+SHA512 (base-compat-0.13.1.tar.gz) = 038903478c3c5c71f3d203253964dd48219b20ad96f87f87fd45686ab88f20a7177bc90650c49da009343ebf1301d2a78c2b93821438d7921a5333a71bc6df8f
+Size (base-compat-0.13.1.tar.gz) = 41518 bytes
