@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 13:03:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/27 06:04:23 pho Exp $
 lib/void-${PKGVERSION}/${HS_VERSION}/package-description
 lib/void-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Void/Unsafe.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Void/Unsafe.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Void/Unsafe.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Void/Unsafe.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Void/Unsafe.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/void-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/Data-Void-Unsafe.html
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/void.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/Data-Void-Unsafe.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/void-${PKGVERSION}/html/void.haddock
