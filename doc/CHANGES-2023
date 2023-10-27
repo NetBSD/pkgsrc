@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6189 2023/10/27 11:53:25 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6190 2023/10/27 11:58:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9081,3 +9081,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/hs-crypto-api version 0.13.3 [pho 2023-10-27]
 	Updated net/hs-recv to 0.1.0 [pho 2023-10-27]
 	Updated net/hs-resolv to 0.2.0.2 [pho 2023-10-27]
+	Added math/hs-digits version 0.3.1 [pho 2023-10-27]
