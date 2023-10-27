@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 08:56:10 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 04:39:30 pho Exp $
 lib/emojis-${PKGVERSION}/${HS_VERSION}/package-description
 lib/emojis-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/Text-Emoji.html
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/emojis.haddock
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/Text-Emoji.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/emojis.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/synopsis.png
