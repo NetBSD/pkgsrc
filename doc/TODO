@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23504 2023/10/26 09:33:04 adam Exp $
+$NetBSD: TODO,v 1.23505 2023/10/27 09:06:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1261,7 +1261,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-twisted-23.8.0
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
-	o py-websockets-12.0
 	o py-werkzeug-3.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
