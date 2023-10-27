@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/25 13:45:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/27 12:15:19 pho Exp $
 bin/pointfree
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -26,13 +26,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Pointfree.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Pointfree.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Pointfree.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/pointfree.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
