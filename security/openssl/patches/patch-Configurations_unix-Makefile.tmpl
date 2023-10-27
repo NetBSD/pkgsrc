@@ -1,0 +1,24 @@
+$NetBSD: patch-Configurations_unix-Makefile.tmpl,v 1.6 2023/10/27 18:30:12 jperkin Exp $
+
+Do not build or install HTML documentation.
+
+--- Configurations/unix-Makefile.tmpl.orig	2023-10-24 13:41:51.000000000 +0000
++++ Configurations/unix-Makefile.tmpl
+@@ -502,7 +502,7 @@ LANG=C
+ {- dependmagic('build_programs'); -}: build_programs_nodep
+ 
+ build_generated_pods: $(GENERATED_PODS)
+-build_docs: build_man_docs build_html_docs
++build_docs: build_man_docs
+ build_man_docs: $(MANDOCS1) $(MANDOCS3) $(MANDOCS5) $(MANDOCS7)
+ build_html_docs: $(HTMLDOCS1) $(HTMLDOCS3) $(HTMLDOCS5) $(HTMLDOCS7)
+ 
+@@ -611,7 +611,7 @@ install_sw: install_dev install_engines
+ 
+ uninstall_sw: uninstall_runtime uninstall_modules uninstall_engines uninstall_dev
+ 
+-install_docs: install_man_docs install_html_docs
++install_docs: install_man_docs
+ 
+ uninstall_docs: uninstall_man_docs uninstall_html_docs
+ 	$(RM) -r "$(DESTDIR)$(DOCDIR)"
