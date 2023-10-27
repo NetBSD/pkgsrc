@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 04:35:33 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 08:31:06 pho Exp $
 lib/hslua-core-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hslua-core-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core.dyn_hi
@@ -10,6 +10,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Auxiliary.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Closures.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Closures.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Closures.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Debug.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Debug.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Debug.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Error.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Error.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Error.p_hi
@@ -37,11 +40,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Userdata.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Utf8.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Utf8.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Utf8.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Warn.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Warn.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Core/Warn.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/HsLua-Core-Closures.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/HsLua-Core-Debug.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/HsLua-Core-Error.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/HsLua-Core-Package.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/HsLua-Core-Run.html
@@ -72,10 +79,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/doc-index-U.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/hslua-core.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-core-${PKGVERSION}/html/synopsis.png
