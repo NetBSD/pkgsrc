@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:23 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/27 12:59:55 pho Exp $
 
-DISTNAME=	microlens-ghc-0.4.14.1
-PKGREVISION=	1
+DISTNAME=	microlens-ghc-0.4.14.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
