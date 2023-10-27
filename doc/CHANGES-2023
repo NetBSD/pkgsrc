@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6167 2023/10/27 06:20:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6168 2023/10/27 06:23:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9056,3 +9056,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-cmdargs to 0.10.22 [pho 2023-10-27]
 	Updated devel/hs-base-compat to 0.13.1 [pho 2023-10-27]
 	Updated devel/hs-th-abstraction to 0.6.0.0 [pho 2023-10-27]
+	Updated devel/hs-tagged to 0.8.8 [pho 2023-10-27]
