@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/05/16 22:48:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/10/27 09:06:02 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -96,9 +96,6 @@ ${PYSITELIB}/websockets/sync/__init__.pyo
 ${PYSITELIB}/websockets/sync/client.py
 ${PYSITELIB}/websockets/sync/client.pyc
 ${PYSITELIB}/websockets/sync/client.pyo
-${PYSITELIB}/websockets/sync/compatibility.py
-${PYSITELIB}/websockets/sync/compatibility.pyc
-${PYSITELIB}/websockets/sync/compatibility.pyo
 ${PYSITELIB}/websockets/sync/connection.py
 ${PYSITELIB}/websockets/sync/connection.pyc
 ${PYSITELIB}/websockets/sync/connection.pyo
