@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/19 12:10:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/27 07:17:34 pho Exp $
 lib/generically-${PKGVERSION}/${HS_VERSION}/package-description
 lib/generically-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Generics/Generically.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Generics/Generically.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Generics/Generically.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Generics/Generically.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Generics/Generically.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/GHC-Generics-Generically.html
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/generically.haddock
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/GHC-Generics-Generically.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/generically.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/generically-${PKGVERSION}/html/synopsis.png
