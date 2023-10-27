@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 09:38:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 08:00:17 pho Exp $
 lib/OneTuple-${PKGVERSION}/${HS_VERSION}/package-description
 lib/OneTuple-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/OneTuple.dyn_hi
@@ -13,15 +13,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Solo/TH.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/Data-Tuple-OneTuple.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/Data-Tuple-Solo-TH.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/Data-Tuple-Solo.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/OneTuple.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/OneTuple-${PKGVERSION}/html/synopsis.png
