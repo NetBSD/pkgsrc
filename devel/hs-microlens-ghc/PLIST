@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/08 08:41:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 12:59:55 pho Exp $
 lib/microlens-ghc-${PKGVERSION}/${HS_VERSION}/package-description
 lib/microlens-ghc-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,14 +10,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Lens/Micro/GHC/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Lens/Micro/GHC/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/Lens-Micro-GHC-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/Lens-Micro-GHC.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/microlens-ghc.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/microlens-ghc-${PKGVERSION}/html/synopsis.png
