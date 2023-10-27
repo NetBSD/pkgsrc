@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6193 2023/10/27 12:30:22 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6194 2023/10/27 12:34:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9085,3 +9085,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/pointfree to 1.1.1.11 [pho 2023-10-27]
 	Updated devel/hs-th-lift to 0.8.4 [pho 2023-10-27]
 	Updated devel/hs-retry to 0.9.3.1 [pho 2023-10-27]
+	Updated sysutils/hs-fast-logger to 3.2.2 [pho 2023-10-27]
