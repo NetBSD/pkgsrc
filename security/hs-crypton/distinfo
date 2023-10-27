@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/27 10:58:52 pho Exp $
+
+BLAKE2s (crypton-0.33.tar.gz) = 733734b6ea1fbe4220dda57cc43eae016e544110335f354dfc53909f13e8d9b1
+SHA512 (crypton-0.33.tar.gz) = 4f2c99cf097286cd8bbbd1ed60e1df5bca6fbd040f51a4c8d17a434b65c50ff17b14bd677b5f90af2e73cfe175b9ab80153ac52d09a88998ccbab661cc4e7b7b
+Size (crypton-0.33.tar.gz) = 618064 bytes
