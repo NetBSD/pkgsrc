@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/25 13:59:39 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/27 12:29:19 pho Exp $
 
-BLAKE2s (retry-0.9.3.0.tar.gz) = 598633df6dbf76f5e90ecc79c834b8daf8a394ae7f497ede9810504eaec48737
-SHA512 (retry-0.9.3.0.tar.gz) = 1fa6e73af20ef74eca239a042c2573c1c549e0c2572b1ded36372a7f95971a0441a35d4ac0b0727aa2b1afb039fc74824800fd2588014057da264232d15436e8
-Size (retry-0.9.3.0.tar.gz) = 18621 bytes
+BLAKE2s (retry-0.9.3.1.tar.gz) = 691b98d28c0fd9bb105ab5f139a1e51d5e5ef05ed35ab2e20acf6143ae6b3e7d
+SHA512 (retry-0.9.3.1.tar.gz) = 6ce93f69bffcc6a13da9878ea1ec9547dbd3ba5f84148b3ee408292138297329ded6e3aa0daf0cfa76a9b5e99696f66721e0abc711d0a92383c3ec6584de0861
+Size (retry-0.9.3.1.tar.gz) = 18717 bytes
