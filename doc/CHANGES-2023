@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6158 2023/10/26 22:47:34 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.6159 2023/10/27 02:08:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9047,3 +9047,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-jira-wiki-markup to 1.5.1 [pho 2023-10-26]
 	Updated textproc/hs-commonmark to 0.2.3 [pho 2023-10-26]
 	Updated chat/matrix-synapse to 1.95.0 [gdt 2023-10-26]
+	Updated net/hs-network to 3.1.4.0 [pho 2023-10-27]
