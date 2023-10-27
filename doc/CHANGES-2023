@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6196 2023/10/27 13:05:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6197 2023/10/27 13:16:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9088,3 +9088,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hs-fast-logger to 3.2.2 [pho 2023-10-27]
 	Updated devel/hs-microlens-th to 0.4.3.14 [pho 2023-10-27]
 	Updated devel/hs-microlens-ghc to 0.4.14.2 [pho 2023-10-27]
+	Added textproc/hs-prettyprinter-compat-ansi-wl-pprint version 1.0.2 [pho 2023-10-27]
