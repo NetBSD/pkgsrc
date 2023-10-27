@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/27 13:15:59 pho Exp $
+
+BLAKE2s (prettyprinter-compat-ansi-wl-pprint-1.0.2.tar.gz) = 5e742b7ca826457943730ed82d49cc87cd303b70fcc4e4e20dd873f750f400f2
+SHA512 (prettyprinter-compat-ansi-wl-pprint-1.0.2.tar.gz) = 06f9f2380e85ed392173fa459e650153d9965346fc39fbfaa09e358150015ab99a8ad529c456b35c4c7e5350242f9c9db11bc1296e384b5f7a5e0de7e93a4300
+Size (prettyprinter-compat-ansi-wl-pprint-1.0.2.tar.gz) = 3894 bytes
