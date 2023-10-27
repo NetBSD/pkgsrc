@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6203 2023/10/27 15:03:17 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6204 2023/10/27 15:04:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9095,3 +9095,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-foldable1-classes-compat version 0.1 [pho 2023-10-27]
 	Updated biology/vsearch to 2.24.0 [bacon 2023-10-27]
 	Updated lang/php82 to 8.2.12 [taca 2023-10-27]
+	Updated lang/php81 to 8.1.25 [taca 2023-10-27]
