@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6187 2023/10/27 11:01:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6188 2023/10/27 11:04:32 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9079,3 +9079,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated time/hs-unix-time to 0.4.11 [pho 2023-10-27]
 	Added security/hs-crypton version 0.33 [pho 2023-10-27]
 	Added security/hs-crypto-api version 0.13.3 [pho 2023-10-27]
+	Updated net/hs-recv to 0.1.0 [pho 2023-10-27]
