@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 11:00:25 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/27 14:56:59 pho Exp $
 lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-default-instances-base-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Instances/Base.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/Data-Default-Instances-Base.html
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/data-default-instances-base.haddock
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/Data-Default-Instances-Base.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/data-default-instances-base.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-instances-base-${PKGVERSION}/html/synopsis.png
