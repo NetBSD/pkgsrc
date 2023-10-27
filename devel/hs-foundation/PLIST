@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 14:32:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 14:05:37 pho Exp $
 lib/foundation-${PKGVERSION}/${HS_VERSION}/package-description
 lib/foundation-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Foundation.dyn_hi
@@ -310,7 +310,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Foundation/VFS/URI.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/Foundation-Array-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/Foundation-Array.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/Foundation-Bits.html
@@ -399,10 +399,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/doc-index-X.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/foundation.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foundation-${PKGVERSION}/html/synopsis.png
