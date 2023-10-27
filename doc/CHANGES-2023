@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6178 2023/10/27 08:33:41 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6179 2023/10/27 09:06:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9068,3 +9068,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-traitlets to 5.12.0 [adam 2023-10-27]
 	Updated lang/hs-hslua-core to 2.3.1 [pho 2023-10-27]
 	Updated archivers/hs-zip-archive to 0.4.3 [pho 2023-10-27]
+	Updated devel/py-babel to 2.13.1 [adam 2023-10-27]
+	Updated www/py-websockets to 12.0 [adam 2023-10-27]
