@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/05/01 21:09:06 nikita Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/27 02:21:05 pho Exp $
 lib/split-${PKGVERSION}/${HS_VERSION}/package-description
 lib/split-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -14,10 +14,12 @@ share/doc/${HS_PLATFORM}/split-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/Data-List-Split-Internals.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/Data-List-Split.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/split.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/split-${PKGVERSION}/html/synopsis.png
