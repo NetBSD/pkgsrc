@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/01 21:03:13 nikita Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 12:34:40 pho Exp $
 lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fast-logger-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger.dyn_hi
@@ -25,15 +25,21 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Internal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LogStr.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LogStr.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LogStr.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Logger.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Logger.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Logger.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LoggerSet.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LoggerSet.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/LoggerSet.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/MultiLogger.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/MultiLogger.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/MultiLogger.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/SingleLogger.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/SingleLogger.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/SingleLogger.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Types.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Write.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Write.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Log/FastLogger/Write.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -45,10 +51,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-F
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/System-Log-FastLogger.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/fast-logger.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fast-logger-${PKGVERSION}/html/synopsis.png
