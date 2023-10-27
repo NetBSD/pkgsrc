@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.574 2023/10/24 08:35:32 pho Exp $
+# $NetBSD: Makefile,v 1.575 2023/10/27 11:58:59 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -226,6 +226,7 @@ SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-commutative-semigroups
 SUBDIR+=	hs-comonad
 SUBDIR+=	hs-contravariant
+SUBDIR+=	hs-digits
 SUBDIR+=	hs-distributive
 SUBDIR+=	hs-free
 SUBDIR+=	hs-ieee754
