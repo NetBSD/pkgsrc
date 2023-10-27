@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 04:25:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/27 03:29:32 pho Exp $
 lib/syb-${PKGVERSION}/${HS_VERSION}/package-description
 lib/syb-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -52,7 +52,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Generics/SYB/Twins.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/SYB/Twins.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/Data-Generics-Aliases.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/Data-Generics-Basics.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/Data-Generics-Builders.html
@@ -89,10 +89,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/doc-index-S.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/syb.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/syb-${PKGVERSION}/html/synopsis.png
