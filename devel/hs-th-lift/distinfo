@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/25 13:51:13 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/27 12:22:24 pho Exp $
 
-BLAKE2s (th-lift-0.8.2.tar.gz) = 9054ff13ea8b388752a423c1acd8768167ef144b0efdb16a5161341b57dd1a13
-SHA512 (th-lift-0.8.2.tar.gz) = bda1fd661274d911898eb163427a83db81bf5cc6d7cdd2936a84cb314268be2d38c5753727c1e87e83f8edb61e8bbbd0976001f680830b3bc2d4eb96178505ec
-Size (th-lift-0.8.2.tar.gz) = 14385 bytes
+BLAKE2s (th-lift-0.8.4.tar.gz) = dc06caf0aba850c3c6083271c032afff10ca429f0328e20fed8b9f9eba3c81a3
+SHA512 (th-lift-0.8.4.tar.gz) = fe5d47cc5b9c4a6128761d044ad00262e316862888a218279b62b51b87f32398c534ca65407491d210e7d32bea53c77161333b98bcc969e077221f2d9e3c56f7
+Size (th-lift-0.8.4.tar.gz) = 14711 bytes
