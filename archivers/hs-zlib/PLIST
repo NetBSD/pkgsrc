@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/25 09:48:10 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/27 08:13:04 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Compression/GZip.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Compression/GZip.hi
@@ -22,16 +22,18 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/zlib-${PKGVERSION}/${HS_VERSION}/package-description
 lib/zlib-${PKGVERSION}/${HS_VERSION}/package-id
-${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/Codec-Compression-GZip.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/Codec-Compression-Zlib-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/Codec-Compression-Zlib-Raw.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/Codec-Compression-Zlib.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-${PKGVERSION}/html/zlib.haddock
