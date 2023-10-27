@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 09:43:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/27 08:05:40 pho Exp $
 lib/digest-${PKGVERSION}/${HS_VERSION}/package-description
 lib/digest-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Digest/Adler32.dyn_hi
@@ -10,14 +10,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Digest/CRC32.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/Data-Digest-Adler32.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/Data-Digest-CRC32.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/digest.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/digest-${PKGVERSION}/html/synopsis.png
