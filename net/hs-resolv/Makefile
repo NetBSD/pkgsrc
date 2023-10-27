@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:43 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/27 11:53:14 pho Exp $
 
-DISTNAME=	resolv-0.1.2.0
-PKGREVISION=	6
+DISTNAME=	resolv-0.2.0.2
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Domain Name Service (DNS) lookup
 LICENSE=	gnu-gpl-v2
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	base16-bytestring	\
-	bytestring
 
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../mk/haskell.mk"
