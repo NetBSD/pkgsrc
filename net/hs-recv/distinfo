@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/27 02:40:54 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/27 11:03:52 pho Exp $
 
-BLAKE2s (recv-0.0.0.tar.gz) = fdfe1f3f22f0153b7374ac75ae0e56427df2f951bd4497e37507f6e4d4cb8370
-SHA512 (recv-0.0.0.tar.gz) = 1f6ae75bf684710a07dd7580c3d066f2284a9cab8c7a0bd5b9ede114516273db36083a14ea44ce9e0832c3bf4fbca5d0173b40737c530c2502ac83949b081e7d
-Size (recv-0.0.0.tar.gz) = 5499 bytes
+BLAKE2s (recv-0.1.0.tar.gz) = 2b268c39eb5bdc52423bbd67ffba594898ac3200097b8f68adb2175c09e6f5e3
+SHA512 (recv-0.1.0.tar.gz) = 24fc55bac9e96da56328fa04901041330f9b89e36ec9c4663a6a66b57d38d16e4d374126ff634086449b71e3546d66dcbcfe69d4096d7a2f94fab42b5d35d49f
+Size (recv-0.1.0.tar.gz) = 5158 bytes
