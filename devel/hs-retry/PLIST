@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 13:59:39 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 12:29:19 pho Exp $
 lib/retry-${PKGVERSION}/${HS_VERSION}/package-description
 lib/retry-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,14 +10,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Retry.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Retry.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/Control-Retry.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/UnliftIO-Retry.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/retry.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/retry-${PKGVERSION}/html/synopsis.png
