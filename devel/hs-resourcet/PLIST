@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 14:38:09 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/27 15:04:33 pho Exp $
 lib/resourcet-${PKGVERSION}/${HS_VERSION}/package-description
 lib/resourcet-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,17 +19,19 @@ lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Resource.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/UnliftIO/Resource.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/Control-Monad-Trans-Resource-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/Control-Monad-Trans-Resource.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/Data-Acquire-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/Data-Acquire.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/UnliftIO-Resource.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/resourcet.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/resourcet-${PKGVERSION}/html/synopsis.png
