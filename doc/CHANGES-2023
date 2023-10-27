@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6206 2023/10/27 15:12:41 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6207 2023/10/27 15:15:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9098,3 +9098,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/php81 to 8.1.25 [taca 2023-10-27]
 	Updated devel/hs-boring to 0.2.1 [pho 2023-10-27]
 	Updated devel/hs-base-compat-batteries to 0.13.1 [pho 2023-10-27]
+	Updated devel/hs-assoc to 1.1 [pho 2023-10-27]
