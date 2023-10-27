@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/25 13:45:03 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/27 12:15:19 pho Exp $
 
-BLAKE2s (pointfree-1.1.1.9.tar.gz) = 41ebe51fe326e6734b0e11117312b5f2d52d631a3e6cfe3ab86dd2a618736bdd
-SHA512 (pointfree-1.1.1.9.tar.gz) = b9f7f002b26176c58531e816ff06c76fc10fcbf20dc5b30860ff9e8408167e6e51f980da77945fc5a17ad0cbf76c832f77db4e222be1625cb9a2a12bc5b63a7d
-Size (pointfree-1.1.1.9.tar.gz) = 20498 bytes
+BLAKE2s (pointfree-1.1.1.11.tar.gz) = a8900fb5eee44b4052767e2a75f5eac91638c0fdc3450d5400ffb089156a6b46
+SHA512 (pointfree-1.1.1.11.tar.gz) = 31676e8448d19bd032bcb4e1c1a595a2f808121a5246f4b427e0b4f4d63cf0656d599524262b8b98ce3333c57f5a37cd2fd6f105183e3ad6f0ca5eee427b8ffe
+Size (pointfree-1.1.1.11.tar.gz) = 20685 bytes
