@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/01/25 04:25:11 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/10/27 03:29:32 pho Exp $
 
-BLAKE2s (syb-0.7.2.2.tar.gz) = a6def63e3a8b11040b5396f336364bdac3cfe7ea3eba00f3e089ea303e96d7e7
-SHA512 (syb-0.7.2.2.tar.gz) = a177cc9715a7ad278c298856dba3aa850c721732c0e92e2c744d126e58ac075fa11db5214c5512a7d525f5f44c4806ae146933a05c87db5ae0b15b20452a7686
-Size (syb-0.7.2.2.tar.gz) = 40058 bytes
+BLAKE2s (syb-0.7.2.4.tar.gz) = 0eba0dd479849e509075978a25575d62ba2194bb3751287f416b515af3eb527a
+SHA512 (syb-0.7.2.4.tar.gz) = 7a29ee78fe23e4f6eac6b85326b0ffaa62337703ed4ebbd464598bace1fac5c7ad180e1ed95561be957bba41adcd2bb8fd36a88e482b789290a171d2b7a59f85
+Size (syb-0.7.2.4.tar.gz) = 41809 bytes
