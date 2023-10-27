@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:10:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/27 12:06:19 pho Exp $
 lib/boxes-${PKGVERSION}/${HS_VERSION}/package-description
 lib/boxes-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/Boxes.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/Boxes.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/Boxes.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/Boxes.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/Boxes.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/Text-PrettyPrint-Boxes.html
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/boxes.haddock
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/Text-PrettyPrint-Boxes.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/boxes.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/boxes-${PKGVERSION}/html/synopsis.png
