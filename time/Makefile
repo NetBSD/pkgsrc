@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2023/10/09 12:24:17 adam Exp $
+# $NetBSD: Makefile,v 1.261 2023/10/27 10:20:59 pho Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -45,6 +45,7 @@ SUBDIR+=	hs-clock
 SUBDIR+=	hs-hourglass
 SUBDIR+=	hs-old-time
 SUBDIR+=	hs-time-compat
+SUBDIR+=	hs-time-locale-compat
 SUBDIR+=	hs-time-manager
 SUBDIR+=	hs-timezone-olson
 SUBDIR+=	hs-timezone-series
