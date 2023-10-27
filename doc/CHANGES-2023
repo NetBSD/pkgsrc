@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6161 2023/10/27 02:21:13 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6162 2023/10/27 03:29:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9050,3 +9050,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/hs-network to 3.1.4.0 [pho 2023-10-27]
 	Updated net/hs-mime-types to 0.1.2.0 [pho 2023-10-27]
 	Updated devel/hs-split to 0.2.4 [pho 2023-10-27]
+	Updated devel/hs-syb to 0.7.2.4 [pho 2023-10-27]
