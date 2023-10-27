@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4080 2023/10/26 07:08:59 pho Exp $
+# $NetBSD: Makefile,v 1.4081 2023/10/27 14:11:56 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -586,6 +586,7 @@ SUBDIR+=	hs-filtrable
 SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-fmlist
 SUBDIR+=	hs-focus
+SUBDIR+=	hs-foldable1-classes-compat
 SUBDIR+=	hs-foldl
 SUBDIR+=	hs-foundation
 SUBDIR+=	hs-fsnotify
