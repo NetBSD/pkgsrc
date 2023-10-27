@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/27 10:23:59 pho Exp $
+
+BLAKE2s (text-builder-linear-0.1.1.1.tar.gz) = fc9610bf593541ec20c3d13c567433775fe2a07433133ef20436c0343f808c08
+SHA512 (text-builder-linear-0.1.1.1.tar.gz) = c9b40ae6c59b2b8d2d8e435ca5c6a99e78ceb6a8a37234bcaf84c4b1f85a8b61bd59fa2fd6204ccf0c549bf26b7a1867a793d1e5f375cf39f67ba0bd34e8d273
+Size (text-builder-linear-0.1.1.1.tar.gz) = 17580 bytes
