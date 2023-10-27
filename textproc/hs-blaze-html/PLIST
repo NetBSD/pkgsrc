@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 03:48:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/27 02:01:27 pho Exp $
 lib/blaze-html-${PKGVERSION}/${HS_VERSION}/package-description
 lib/blaze-html-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze/Html.dyn_hi
@@ -67,7 +67,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Blaze/XHtml5/Attributes.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/Text-Blaze-Html-Renderer-Pretty.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/Text-Blaze-Html-Renderer-String.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/Text-Blaze-Html-Renderer-Text.html
@@ -115,9 +115,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/doc-index-V.h
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/blaze-html-${PKGVERSION}/html/synopsis.png
