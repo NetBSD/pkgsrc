@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/01/25 13:36:37 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/10/27 02:21:05 pho Exp $
 
-BLAKE2s (split-0.2.3.5.tar.gz) = 827c2e31e0e300f4d38213b7137d8051a1e5ed515299c20b418ad167829a4950
-SHA512 (split-0.2.3.5.tar.gz) = a88ff185d0e3ae4908911b70475831baa01ba6cce74fe187ed47dccb28a06b83ca9ec03fa980b77aced75c38fa1dede5166c839c3bfd7f30585ae9b45157a8b9
-Size (split-0.2.3.5.tar.gz) = 15746 bytes
+BLAKE2s (split-0.2.4.tar.gz) = c0d241e25f66ff6a7421ccb9fb16fa27fb52cbbd23edb0c07a501a209d3f3616
+SHA512 (split-0.2.4.tar.gz) = 0ff1d87904b83db763647580e3a7890c165600ab278086883b672851220c9acaa2da6eaa18b3de46089fae022ca3ad9599ff682c9e61457751a1ba35c1f4d72d
+Size (split-0.2.4.tar.gz) = 15687 bytes
