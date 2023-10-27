@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/25 09:43:43 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/27 08:05:40 pho Exp $
 
-BLAKE2s (digest-0.0.1.5.tar.gz) = 994b4eb1c2ccd68e5d4c6347fbf7a2706a068b77ac7bc9675cef8e01eaf3b275
-SHA512 (digest-0.0.1.5.tar.gz) = 167f4dce5d6781d71d7b2fe55813e79b8ded7d44946e2337bc02a22fd9d423e5c576872662cd6266765919879173fb883be312e0fff51818891e730c5d2d35cd
-Size (digest-0.0.1.5.tar.gz) = 3914 bytes
+BLAKE2s (digest-0.0.1.7.tar.gz) = e26ecc1ea52284bdcdcaabfec47e10b59647b738ddbd648e4b46310b5bfff77b
+SHA512 (digest-0.0.1.7.tar.gz) = 2739d35ce55a9524b7492aca78752fbe5f168167b37327c693fd1b51a88d23cc22767e52bc6220a053100c6c8579f060adb9f337368b606213b397e76b5868d1
+Size (digest-0.0.1.7.tar.gz) = 4067 bytes
