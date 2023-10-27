@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/04/23 07:28:02 pho Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/10/27 11:55:12 pho Exp $
 lib/nats-${PKGVERSION}/${HS_VERSION}/package-description
 lib/nats-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/nats-${PKGVERSION}/LICENSE
