@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/25 14:03:57 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/27 13:20:48 pho Exp $
 
-BLAKE2s (ansi-wl-pprint-0.6.9.tar.gz) = c716c7162deb1392c306a653805c9c5407b86c582621028510a2433c3749b59b
-SHA512 (ansi-wl-pprint-0.6.9.tar.gz) = 2a66236f740f0b45b6133555e8b1315dc85ece1c16dd51e4aa7f31d2fee03d66869af5f81e6383aa840f503c2cad46f3655f53b784ebca7b3480efb53eea2a04
-Size (ansi-wl-pprint-0.6.9.tar.gz) = 16723 bytes
+BLAKE2s (ansi-wl-pprint-1.0.2.tar.gz) = 44cfd8ac45b0dfba8b8e082822312989719b82234f578d11876c3d27b32bbaa4
+SHA512 (ansi-wl-pprint-1.0.2.tar.gz) = 2b6db1f25b180f53f2a81d2658d36f91d7b112aa242709e0693712ea6974cb0790ea56789678e714cd572ea226f2803484af572ae6fc7c4dc84536020701e3ac
+Size (ansi-wl-pprint-1.0.2.tar.gz) = 5699 bytes
