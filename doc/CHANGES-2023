@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6199 2023/10/27 14:02:23 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6200 2023/10/27 14:05:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9091,3 +9091,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added textproc/hs-prettyprinter-compat-ansi-wl-pprint version 1.0.2 [pho 2023-10-27]
 	Updated textproc/hs-ansi-wl-pprint to 1.0.2 [pho 2023-10-27]
 	Updated devel/hs-generic-deriving to 1.14.5 [pho 2023-10-27]
+	Updated devel/hs-foundation to 0.0.30 [pho 2023-10-27]
