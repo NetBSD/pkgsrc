@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/27 10:20:41 pho Exp $
+
+BLAKE2s (time-locale-compat-0.1.1.5.tar.gz) = a17fd5edd7438de7280789d4b75d9cbb37aa50d4120dcff5a1066b3885a60bc3
+SHA512 (time-locale-compat-0.1.1.5.tar.gz) = a8a87b77f017ca7e4db98101b527016a39abe4f264b3684b887464c53b792f564d0bec3304d8ed5f5889a3e3cb7e41f4d049e61e5adab688363a3342608f695c
+Size (time-locale-compat-0.1.1.5.tar.gz) = 1956 bytes
