@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2023/01/25 14:32:57 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/10/27 14:05:37 pho Exp $
 
-BLAKE2s (foundation-0.0.29.tar.gz) = 5a9addf3a2cee067d6f3755605840be4690ae563cc9c87a06a6db005da735d12
-SHA512 (foundation-0.0.29.tar.gz) = cd6b2864814780f0b07846ad4d6d6e1262ecb9edddb9e2c5137455dc39cbb2e60a9d0cd843cac6becdb801c1accbf4004be26a73e0d04071fe361b3a04034cc6
-Size (foundation-0.0.29.tar.gz) = 120793 bytes
+BLAKE2s (foundation-0.0.30.tar.gz) = db8305ad0074fb1ff4cc438d920a7f1b4024b033517b10d4f563b8cb5085c39a
+SHA512 (foundation-0.0.30.tar.gz) = 5b7a193a03f6f86f125a95363705c760f3ce8686720aa91e815daf131b42cb84a8fd39d448f4b2e803654e1e4764fdfea28918c4558c5f87451aa7c05714efda
+Size (foundation-0.0.30.tar.gz) = 120423 bytes
 SHA1 (patch-Foundation_Foreign_MemoryMap_Posix.hsc) = 4eff66816573ad8b606229635194ecbd86aa44b4
 SHA1 (patch-Foundation_System_Bindings_Posix.hsc) = 904e8e196b66ed4a368863a2ba9ecbee36a0f97d
 SHA1 (patch-Foundation_System_Bindings_Time.hsc) = a946c4e92e8f71e3543306d607fe352d5002cfb3
