@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 13:27:55 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/27 11:48:23 pho Exp $
 lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hackage-security-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hackage/Security/Client.dyn_hi
@@ -133,7 +133,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/JSON/Canonical.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/Hackage-Security-Client-Formats.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/Hackage-Security-Client-Repository-Cache.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/Hackage-Security-Client-Repository-HttpLib.html
@@ -178,10 +178,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-ind
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/hackage-security.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hackage-security-${PKGVERSION}/html/synopsis.png
