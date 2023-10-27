@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/27 08:18:38 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_mypy_testing/__init__.py
+${PYSITELIB}/pytest_mypy_testing/__init__.pyc
+${PYSITELIB}/pytest_mypy_testing/__init__.pyo
+${PYSITELIB}/pytest_mypy_testing/message.py
+${PYSITELIB}/pytest_mypy_testing/message.pyc
+${PYSITELIB}/pytest_mypy_testing/message.pyo
+${PYSITELIB}/pytest_mypy_testing/output_processing.py
+${PYSITELIB}/pytest_mypy_testing/output_processing.pyc
+${PYSITELIB}/pytest_mypy_testing/output_processing.pyo
+${PYSITELIB}/pytest_mypy_testing/parser.py
+${PYSITELIB}/pytest_mypy_testing/parser.pyc
+${PYSITELIB}/pytest_mypy_testing/parser.pyo
+${PYSITELIB}/pytest_mypy_testing/plugin.py
+${PYSITELIB}/pytest_mypy_testing/plugin.pyc
+${PYSITELIB}/pytest_mypy_testing/plugin.pyo
+${PYSITELIB}/pytest_mypy_testing/py.typed
+${PYSITELIB}/pytest_mypy_testing/strutil.py
+${PYSITELIB}/pytest_mypy_testing/strutil.pyc
+${PYSITELIB}/pytest_mypy_testing/strutil.pyo
