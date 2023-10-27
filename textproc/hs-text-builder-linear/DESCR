@@ -1,0 +1,2 @@
+Strict Text and ByteString builder, which hides mutable buffer behind
+linear types and takes amortized linear time.
