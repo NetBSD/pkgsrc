@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6204 2023/10/27 15:04:56 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6205 2023/10/27 15:09:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9096,3 +9096,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/vsearch to 2.24.0 [bacon 2023-10-27]
 	Updated lang/php82 to 8.2.12 [taca 2023-10-27]
 	Updated lang/php81 to 8.1.25 [taca 2023-10-27]
+	Updated devel/hs-boring to 0.2.1 [pho 2023-10-27]
