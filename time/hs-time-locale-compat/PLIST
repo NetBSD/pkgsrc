@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/27 10:20:41 pho Exp $
+lib/time-locale-compat-${PKGVERSION}/${HS_VERSION}/package-description
+lib/time-locale-compat-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/Locale/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/Locale/Compat.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/Locale/Compat.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/Data-Time-Locale-Compat.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-locale-compat-${PKGVERSION}/html/time-locale-compat.haddock
