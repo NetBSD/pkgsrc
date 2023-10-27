@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/25 16:48:33 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/27 09:07:56 pho Exp $
 lib/X11-${PKGVERSION}/${HS_VERSION}/package-description
 lib/X11-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11.dyn_hi
@@ -91,7 +91,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/include/XlibExtras.h
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/Graphics-X11-ExtraTypes-AP.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/Graphics-X11-ExtraTypes-DEC.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/Graphics-X11-ExtraTypes-HP.html
@@ -148,9 +148,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/X11-${PKGVERSION}/html/synopsis.png
