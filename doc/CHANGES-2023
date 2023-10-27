@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6174 2023/10/27 08:00:27 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6175 2023/10/27 08:05:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9063,3 +9063,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-generically to 0.1.1 [pho 2023-10-27]
 	Updated devel/hs-QuickCheck to 2.14.3 [pho 2023-10-27]
 	Updated devel/hs-OneTuple to 0.4.1.1 [pho 2023-10-27]
+	Updated security/hs-digest to 0.0.1.7 [pho 2023-10-27]
