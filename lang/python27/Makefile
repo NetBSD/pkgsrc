@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2023/10/24 22:09:38 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2023/10/27 08:02:29 wiz Exp $
 
 .include "dist.mk"
 
@@ -45,7 +45,7 @@ LDFLAGS+=		-L${WRKSRC}
 CHECK_PORTABILITY_SKIP=	Tools/faqwiz/move-faqwiz.sh
 
 # NetBSD-8 curses has enough support for py-curses
-USE_CURSES=		getsyx
+USE_CURSES=		getsyx wide
 # But we build as ncurses still to get the full feature set easily
 FAKE_NCURSES=		yes
 
