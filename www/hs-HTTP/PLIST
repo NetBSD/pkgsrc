@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 15:19:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/27 11:38:11 pho Exp $
 lib/HTTP-${PKGVERSION}/${HS_VERSION}/package-description
 lib/HTTP-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Browser.dyn_hi
@@ -58,7 +58,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_HTTP.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/HTTP.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/Network-Browser.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/Network-BufferType.html
@@ -96,9 +96,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/HTTP-${PKGVERSION}/html/synopsis.png
