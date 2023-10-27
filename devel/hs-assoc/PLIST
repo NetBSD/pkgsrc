@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 11:18:42 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/27 15:15:24 pho Exp $
 lib/assoc-${PKGVERSION}/${HS_VERSION}/package-description
 lib/assoc-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Bifunctor/Assoc.dyn_hi
@@ -10,14 +10,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Bifunctor/Swap.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/Data-Bifunctor-Assoc.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/Data-Bifunctor-Swap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/assoc.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/assoc-${PKGVERSION}/html/synopsis.png
