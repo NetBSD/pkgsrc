@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6236 2023/10/28 21:23:18 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.6237 2023/10/28 21:53:00 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9131,3 +9131,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/npmount to 0.1.1.3 [bacon 2023-10-28]
 	Updated print/tex-ellipsis to 1.8 [riastradh 2023-10-28]
 	Updated print/tex-ellipsis-doc to 1.8 [riastradh 2023-10-28]
+	Updated net/kea to 2.4.0 [sekiya 2023-10-29]
