@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/08/12 14:49:18 bacon Exp $
+@comment $NetBSD: PLIST,v 1.13 2023/10/28 20:31:40 bacon Exp $
 include/biolibc/align-accessors.h
 include/biolibc/align-mutators.h
 include/biolibc/align-rvs.h
@@ -241,6 +241,7 @@ man/man3/bl_align_map_seq_sub.3
 man/man3/bl_align_set_max_mismatch_percent.3
 man/man3/bl_align_set_min_match.3
 man/man3/bl_bed_check_order.3
+man/man3/bl_bed_gff3_cmp.3
 man/man3/bl_bed_gff_cmp.3
 man/man3/bl_bed_read.3
 man/man3/bl_bed_set_block_count.3
@@ -431,6 +432,8 @@ man/man3/bl_sam_copy_header.3
 man/man3/bl_sam_fclose.3
 man/man3/bl_sam_fopen.3
 man/man3/bl_sam_free.3
+man/man3/bl_sam_gff3_cmp.3
+man/man3/bl_sam_gff3_overlap.3
 man/man3/bl_sam_gff_cmp.3
 man/man3/bl_sam_gff_overlap.3
 man/man3/bl_sam_init.3
