@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.916 2023/08/24 06:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.917 2023/10/28 21:18:47 riastradh Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -671,6 +671,8 @@ SUBDIR+=	tex-edmac
 SUBDIR+=	tex-edmac-doc
 SUBDIR+=	tex-eijkhout
 SUBDIR+=	tex-einfuehrung-doc
+SUBDIR+=	tex-ellipsis
+SUBDIR+=	tex-ellipsis-doc
 SUBDIR+=	tex-elsarticle
 SUBDIR+=	tex-elsarticle-doc
 SUBDIR+=	tex-embedfile
