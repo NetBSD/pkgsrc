@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2023/10/27 11:58:59 pho Exp $
+# $NetBSD: Makefile,v 1.576 2023/10/28 14:33:45 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -231,6 +231,7 @@ SUBDIR+=	hs-distributive
 SUBDIR+=	hs-free
 SUBDIR+=	hs-ieee754
 SUBDIR+=	hs-indexed-profunctors
+SUBDIR+=	hs-integer-conversion
 SUBDIR+=	hs-integer-logarithms
 SUBDIR+=	hs-invariant
 SUBDIR+=	hs-kan-extensions
