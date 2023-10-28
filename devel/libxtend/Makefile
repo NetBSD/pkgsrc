@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/08/12 14:46:26 bacon Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/28 20:28:20 bacon Exp $
 
-DISTNAME=	libxtend-0.1.9
+DISTNAME=	libxtend-0.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
