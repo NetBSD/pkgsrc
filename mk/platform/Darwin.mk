@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.131 2023/08/10 16:45:28 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.132 2023/10/28 22:29:47 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -195,7 +195,6 @@ _OPSYS_PREFER.mit-krb5?=	native
 _OPSYS_PREFER.openssl?=		pkgsrc	# builtin deprecated from 10.7 onwards
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
-_OPSYS_SUPPORTS_MKTOOLS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # check shared libraries using otool(1)
 
@@ -241,4 +240,7 @@ CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 # strnlen(3) and getline(3) are available from Lion onwards
 .if ${OPSYS_VERSION} < 100700
 _OPSYS_MISSING_FEATURES+= 	strnlen getline
+_OPSYS_SUPPORTS_MKTOOLS=	no
+.else
+_OPSYS_SUPPORTS_MKTOOLS=	yes
 .endif
