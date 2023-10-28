@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6233 2023/10/28 20:41:10 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.6234 2023/10/28 20:50:45 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9127,3 +9127,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/peak-classifier to 0.1.4.13 [bacon 2023-10-28]
 	Updated biology/vcf-split to 0.1.5.10 [bacon 2023-10-28]
 	Updated biology/vcf2hap to 0.1.6.7 [bacon 2023-10-28]
+	Updated math/basic-stats to 0.1.2.8 [bacon 2023-10-28]
