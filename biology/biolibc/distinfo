@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/08/12 14:49:18 bacon Exp $
+$NetBSD: distinfo,v 1.15 2023/10/28 20:31:40 bacon Exp $
 
-BLAKE2s (biolibc-0.2.5.tar.gz) = ea2f46e8c6b26da34c2d10603ae1974e680e5df3a1ce8110235dc1afe1d24ec5
-SHA512 (biolibc-0.2.5.tar.gz) = 647d8b19d007775f140b4b2d23bc8048ee6896e34b2d046109c71b1be13955a79991bb7dfbda8887db852265825d18b58e16195173624efb9bd19e6d1f5d13ba
-Size (biolibc-0.2.5.tar.gz) = 141426 bytes
+BLAKE2s (biolibc-0.2.6.tar.gz) = 9895be8848084d1f145b5987a4e3af99f61b1ba55db89873f915e610a7a335a7
+SHA512 (biolibc-0.2.6.tar.gz) = 00dc3b2efa71113c6450191f11217e3b2d99bb31efb703bcd5f5f24e1d6507b9bc98d92329b1ea836397709070f45715e2adb991326ec303b97a8b484ba07712
+Size (biolibc-0.2.6.tar.gz) = 147823 bytes
