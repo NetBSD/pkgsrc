@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 16:30:56 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 14:25:41 pho Exp $
 lib/text-short-${PKGVERSION}/${HS_VERSION}/package-description
 lib/text-short-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,15 +19,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/PrimOps.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/PrimOps.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/Data-Text-Short-Partial.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/Data-Text-Short-Unsafe.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/Data-Text-Short.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-short-${PKGVERSION}/html/text-short.haddock
