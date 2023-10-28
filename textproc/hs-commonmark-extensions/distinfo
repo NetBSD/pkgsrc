@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/25 16:19:04 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/28 10:03:03 pho Exp $
 
-BLAKE2s (commonmark-extensions-0.2.3.3.tar.gz) = 1ad30fc8940460119c1bf061b5a040ef1e05d7ad14d751604b3d44011cbf8322
-SHA512 (commonmark-extensions-0.2.3.3.tar.gz) = 8c77d6ed57110deb7689c9dddb64b638048a0c4b7948b4154a928338b28a2ffbde3f72ff6652e9ad7790b2604b3facacef126b036c60d8a91b21f5e682cde7fe
-Size (commonmark-extensions-0.2.3.3.tar.gz) = 37708 bytes
+BLAKE2s (commonmark-extensions-0.2.4.tar.gz) = 6ee784c040ffc86c9c1bb3ac2c6753a41e72fbe0dd7c87d10d2d9b066b2a6ec0
+SHA512 (commonmark-extensions-0.2.4.tar.gz) = ab5b24d7007d04fec80f49be15a883aebbddf1bea4fc3b5e7a75cda7ad1d650200f0804a9c34ec2a5785d603e4d7e8c299aca9233623e22081c9b754c4a96a8f
+Size (commonmark-extensions-0.2.4.tar.gz) = 39738 bytes
