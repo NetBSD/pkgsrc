@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6217 2023/10/28 14:33:24 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6218 2023/10/28 15:35:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9109,3 +9109,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-cborg to 0.2.9.0 [pho 2023-10-28]
 	Updated net/pear-Net_SMTP to 1.11.0 [taca 2023-10-28]
 	Added math/hs-integer-conversion version 0.1.0.1 [pho 2023-10-28]
+	Updated net/ngtcp2 to 1.0.1 [adam 2023-10-28]
+	Updated www/nghttp2 to 1.58.0 [adam 2023-10-28]
+	Updated www/nghttp2-tools to 1.58.0 [adam 2023-10-28]
