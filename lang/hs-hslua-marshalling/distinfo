@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/25 16:23:22 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/28 20:10:44 pho Exp $
 
-BLAKE2s (hslua-marshalling-2.2.1.tar.gz) = 5cd0148ce7190c1f6fcee473079a577c59f5897dac34f7afb21c736ce52b02ac
-SHA512 (hslua-marshalling-2.2.1.tar.gz) = 7f1322acfd7284065691d5e51f2b6b079ebc9bd917dbc060f414f4ad2a765a4bd241f571361786d7f8790c56d117e5cf37e58d3449bca47803ba251f241bebb2
-Size (hslua-marshalling-2.2.1.tar.gz) = 16527 bytes
+BLAKE2s (hslua-marshalling-2.3.0.tar.gz) = 2284ebe271f7cfc5e626592f9564d05b0c4f3cc98c23ee14c3a2e68af51b5031
+SHA512 (hslua-marshalling-2.3.0.tar.gz) = b5ebc33f4f4e5b5dd60de60a9bf73cf97b040674a0c0c5a0815f5dada18745061559abf7bfc1cfe5034d0f27ee967eadc9dc287c064d8ff593e3cedb01b771fd
+Size (hslua-marshalling-2.3.0.tar.gz) = 17214 bytes
