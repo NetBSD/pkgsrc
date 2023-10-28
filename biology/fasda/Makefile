@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/08/12 15:02:00 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/28 20:33:41 bacon Exp $
 
-DISTNAME=	fasda-0.1.4
+DISTNAME=	fasda-0.1.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 

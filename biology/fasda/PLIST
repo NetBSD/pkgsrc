@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/12 15:02:00 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 20:33:41 bacon Exp $
 bin/fasda
 libexec/fasda/abundance
 libexec/fasda/fold-change
