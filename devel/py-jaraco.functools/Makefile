@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/08/28 07:53:16 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/28 19:57:02 wiz Exp $
 
 DISTNAME=	jaraco.functools-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.functools/}
 

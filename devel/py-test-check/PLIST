@@ -1,23 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/06 09:06:29 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:06 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/pytest_check/__init__.py
 ${PYSITELIB}/pytest_check/__init__.pyc
+${PYSITELIB}/pytest_check/__init__.pyo
 ${PYSITELIB}/pytest_check/check_functions.py
 ${PYSITELIB}/pytest_check/check_functions.pyc
+${PYSITELIB}/pytest_check/check_functions.pyo
 ${PYSITELIB}/pytest_check/check_log.py
 ${PYSITELIB}/pytest_check/check_log.pyc
+${PYSITELIB}/pytest_check/check_log.pyo
 ${PYSITELIB}/pytest_check/check_raises.py
 ${PYSITELIB}/pytest_check/check_raises.pyc
+${PYSITELIB}/pytest_check/check_raises.pyo
 ${PYSITELIB}/pytest_check/context_manager.py
 ${PYSITELIB}/pytest_check/context_manager.pyc
+${PYSITELIB}/pytest_check/context_manager.pyo
 ${PYSITELIB}/pytest_check/plugin.py
 ${PYSITELIB}/pytest_check/plugin.pyc
+${PYSITELIB}/pytest_check/plugin.pyo
 ${PYSITELIB}/pytest_check/pseudo_traceback.py
 ${PYSITELIB}/pytest_check/pseudo_traceback.pyc
+${PYSITELIB}/pytest_check/pseudo_traceback.pyo

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/08/31 17:37:48 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:23 wiz Exp $
 
 DISTNAME=	jupyter_server-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-server/}
 

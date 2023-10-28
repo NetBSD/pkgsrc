@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/08 11:59:32 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/truststore/__init__.py
 ${PYSITELIB}/truststore/__init__.pyc
+${PYSITELIB}/truststore/__init__.pyo
 ${PYSITELIB}/truststore/_api.py
 ${PYSITELIB}/truststore/_api.pyc
+${PYSITELIB}/truststore/_api.pyo
 ${PYSITELIB}/truststore/_macos.py
 ${PYSITELIB}/truststore/_macos.pyc
+${PYSITELIB}/truststore/_macos.pyo
 ${PYSITELIB}/truststore/_openssl.py
 ${PYSITELIB}/truststore/_openssl.pyc
+${PYSITELIB}/truststore/_openssl.pyo
 ${PYSITELIB}/truststore/_ssl_constants.py
 ${PYSITELIB}/truststore/_ssl_constants.pyc
+${PYSITELIB}/truststore/_ssl_constants.pyo
 ${PYSITELIB}/truststore/_windows.py
 ${PYSITELIB}/truststore/_windows.pyc
+${PYSITELIB}/truststore/_windows.pyo
 ${PYSITELIB}/truststore/py.typed

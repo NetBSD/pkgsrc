@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/05/07 07:28:59 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:08 wiz Exp $
 
 DISTNAME=	whatthepatch-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whatthepatch/}
 

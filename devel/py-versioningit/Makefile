@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/03/29 09:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/28 19:57:08 wiz Exp $
 
 DISTNAME=	versioningit-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/versioningit/}
 

@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/18 12:39:49 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:16 wiz Exp $
 bin/nkdfu-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/nkdfu/__init__.py
 ${PYSITELIB}/nkdfu/__init__.pyc
+${PYSITELIB}/nkdfu/__init__.pyo
 ${PYSITELIB}/nkdfu/dfu.py
 ${PYSITELIB}/nkdfu/dfu.pyc
+${PYSITELIB}/nkdfu/dfu.pyo
 ${PYSITELIB}/nkdfu/dfu_flash.py
 ${PYSITELIB}/nkdfu/dfu_flash.pyc
+${PYSITELIB}/nkdfu/dfu_flash.pyo

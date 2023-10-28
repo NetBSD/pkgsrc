@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:41:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:00 wiz Exp $
 
 DISTNAME=	gidgethub-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gidgethub/}
 

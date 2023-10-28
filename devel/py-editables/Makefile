@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/08/24 19:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:56:59 wiz Exp $
 
 DISTNAME=	editables-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/editables/}
 
