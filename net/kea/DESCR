@@ -2,4 +2,4 @@ Kea is the next generation of DHCP software, developed by Internet Systems
 Consortium (ISC). It supports both the DHCPv4 and DHCPv6 protocols along with
 their extensions, e.g. prefix delegation and dynamic updates to DNS.
 
-Documentation is at https://downloads.isc.org/isc/kea/2.2.0/doc/html/arm/intro.html
+Documentation at https://downloads.isc.org/isc/kea/2.4.0/doc/html/arm/intro.html
