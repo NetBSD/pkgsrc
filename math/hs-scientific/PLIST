@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/25 16:33:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 14:27:31 pho Exp $
 lib/scientific-${PKGVERSION}/${HS_VERSION}/package-description
 lib/scientific-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,15 +19,17 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Utils.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/Data-ByteString-Builder-Scientific.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/Data-Scientific.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/Data-Text-Lazy-Builder-Scientific.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/scientific.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/scientific-${PKGVERSION}/html/synopsis.png
