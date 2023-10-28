@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6219 2023/10/28 17:01:11 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6220 2023/10/28 18:40:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9113,3 +9113,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/nghttp2 to 1.58.0 [adam 2023-10-28]
 	Updated www/nghttp2-tools to 1.58.0 [adam 2023-10-28]
 	Updated devel/hs-vector to 0.13.1.0 [pho 2023-10-28]
+	Updated devel/hs-uuid-types to 1.0.5.1 [pho 2023-10-28]
