@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/28 14:33:14 pho Exp $
+
+BLAKE2s (integer-conversion-0.1.0.1.tar.gz) = 53a43537e87d3bcb8b71d2f734b69d07b91d9a652bedf4e0b2ae3c3983409335
+SHA512 (integer-conversion-0.1.0.1.tar.gz) = 86ca35230fb0c2f75e65fc3bf944c7aa04886106e5fab6c392bfa64435eb37dc7083270ba2f84a2313a2ff28cce0e1d7f3d72701ce39bbf82938a8a9cbd566e4
+Size (integer-conversion-0.1.0.1.tar.gz) = 6166 bytes
