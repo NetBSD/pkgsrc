@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/08/12 12:32:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.41 2023/10/28 09:23:28 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 include/gnuradio/analog/agc.h
@@ -279,6 +279,7 @@ include/gnuradio/msg_handler.h
 include/gnuradio/msg_queue.h
 include/gnuradio/nco.h
 include/gnuradio/pdu.h
+include/gnuradio/pmt_fmt.h
 include/gnuradio/prefs.h
 include/gnuradio/pycallback_object.h
 include/gnuradio/random.h
@@ -585,6 +586,7 @@ share/doc/gnuradio-${PKGVERSION}/README.blocks
 share/doc/gnuradio-${PKGVERSION}/README.fft
 share/doc/gnuradio-${PKGVERSION}/README.filter
 share/doc/gnuradio-${PKGVERSION}/README.md
+share/gnuradio/.cmake-format.py
 share/gnuradio/clang-format.conf
 share/gnuradio/examples/analog/USRP_FM_stereo.grc
 share/gnuradio/examples/analog/fm_demod.py
