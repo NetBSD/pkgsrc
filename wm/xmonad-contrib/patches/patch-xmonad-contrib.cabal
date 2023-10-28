@@ -1,0 +1,14 @@
+$NetBSD: patch-xmonad-contrib.cabal,v 1.1 2023/10/28 20:30:25 pho Exp $
+
+Depend on transformers for 'lift' used in XMonad.Hooks.WorkspaceByPos.
+
+--- xmonad-contrib.cabal.orig	2023-10-28 20:22:27.297431551 +0000
++++ xmonad-contrib.cabal
+@@ -60,6 +60,7 @@ library
+                    directory,
+                    filepath,
+                    time >= 1.8 && < 1.13,
++                   transformers,
+                    process,
+                    random,
+                    mtl >= 1 && < 3,
