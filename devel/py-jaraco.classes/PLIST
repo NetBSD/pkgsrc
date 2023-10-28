@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2022/08/02 09:56:13 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:02 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jaraco/classes/__init__.py
 ${PYSITELIB}/jaraco/classes/__init__.pyc
+${PYSITELIB}/jaraco/classes/__init__.pyo
 ${PYSITELIB}/jaraco/classes/ancestry.py
 ${PYSITELIB}/jaraco/classes/ancestry.pyc
+${PYSITELIB}/jaraco/classes/ancestry.pyo
 ${PYSITELIB}/jaraco/classes/meta.py
 ${PYSITELIB}/jaraco/classes/meta.pyc
+${PYSITELIB}/jaraco/classes/meta.pyo
 ${PYSITELIB}/jaraco/classes/properties.py
 ${PYSITELIB}/jaraco/classes/properties.pyc
+${PYSITELIB}/jaraco/classes/properties.pyo

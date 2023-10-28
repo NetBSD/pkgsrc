@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/08/01 23:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:20 wiz Exp $
 
 DISTNAME=	sphinx_inline_tabs-2022.1.2b11
 PKGNAME=	${PYPKGPREFIX}-sphinx-inline-tabs-2022.1.2beta11
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-inline-tabs/}
 

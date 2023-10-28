@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/31 19:06:27 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:26 wiz Exp $
 ${PYSITELIB}/PyQt5/Qsci.abi3.so
 ${PYSITELIB}/PyQt5/bindings/Qsci/Qsci.toml
 ${PYSITELIB}/PyQt5/bindings/Qsci/qsciabstractapis.sip
@@ -67,3 +61,6 @@ ${PYSITELIB}/PyQt5/bindings/Qsci/qsciscintilla.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qsciscintillabase.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscistyle.sip
 ${PYSITELIB}/PyQt5/bindings/Qsci/qscistyledtext.sip
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL

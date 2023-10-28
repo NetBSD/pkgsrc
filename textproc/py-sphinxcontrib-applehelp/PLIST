@@ -1,14 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/23 10:31:21 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:20 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyc
+${PYSITELIB}/sphinxcontrib/applehelp/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/.tx/config
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/ar/LC_MESSAGES/sphinxcontrib.applehelp.mo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/ar/LC_MESSAGES/sphinxcontrib.applehelp.po
@@ -112,3 +105,8 @@ ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_CN/LC_MESSAGES/sphinxcontrib.app
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.applehelp.mo
 ${PYSITELIB}/sphinxcontrib/applehelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.applehelp.po
 ${PYSITELIB}/sphinxcontrib/applehelp/templates/_access.html_t
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

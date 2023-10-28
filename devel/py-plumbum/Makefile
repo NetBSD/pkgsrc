@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/06/10 18:58:21 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/28 19:57:05 wiz Exp $
 
 DISTNAME=	plumbum-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/plumbum/}
 

@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/20 10:51:29 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:24 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/mdurl/__init__.py
 ${PYSITELIB}/mdurl/__init__.pyc
+${PYSITELIB}/mdurl/__init__.pyo
 ${PYSITELIB}/mdurl/_decode.py
 ${PYSITELIB}/mdurl/_decode.pyc
+${PYSITELIB}/mdurl/_decode.pyo
 ${PYSITELIB}/mdurl/_encode.py
 ${PYSITELIB}/mdurl/_encode.pyc
+${PYSITELIB}/mdurl/_encode.pyo
 ${PYSITELIB}/mdurl/_format.py
 ${PYSITELIB}/mdurl/_format.pyc
+${PYSITELIB}/mdurl/_format.pyo
 ${PYSITELIB}/mdurl/_parse.py
 ${PYSITELIB}/mdurl/_parse.pyc
+${PYSITELIB}/mdurl/_parse.pyo
 ${PYSITELIB}/mdurl/_url.py
 ${PYSITELIB}/mdurl/_url.pyc
+${PYSITELIB}/mdurl/_url.pyo
 ${PYSITELIB}/mdurl/py.typed

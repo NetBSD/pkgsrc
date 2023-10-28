@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/08/12 07:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:56:58 wiz Exp $
 
 DISTNAME=	click_default_group-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-default-group/}
 

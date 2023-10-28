@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/10/02 08:12:19 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:14 wiz Exp $
 
 DISTNAME=	pydyf-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydyf/}
 

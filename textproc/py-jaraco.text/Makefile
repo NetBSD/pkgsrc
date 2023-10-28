@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/03/29 09:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:17 wiz Exp $
 
 DISTNAME=	jaraco.text-3.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.text/}
 

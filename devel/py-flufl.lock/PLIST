@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/11 20:43:23 markd Exp $
-${PYSITELIB}/flufl/lock/__init__.py
-${PYSITELIB}/flufl/lock/__init__.pyc
-${PYSITELIB}/flufl/lock/_lockfile.py
-${PYSITELIB}/flufl/lock/_lockfile.pyc
-${PYSITELIB}/flufl/lock/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:00 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/flufl/lock/__init__.py
+${PYSITELIB}/flufl/lock/__init__.pyc
+${PYSITELIB}/flufl/lock/__init__.pyo
+${PYSITELIB}/flufl/lock/_lockfile.py
+${PYSITELIB}/flufl/lock/_lockfile.pyc
+${PYSITELIB}/flufl/lock/_lockfile.pyo
+${PYSITELIB}/flufl/lock/py.typed

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2023/08/06 20:23:35 adam Exp $
+# $NetBSD: Makefile,v 1.49 2023/10/28 19:57:19 wiz Exp $
 
 DISTNAME=	Pygments-2.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://pygments.org/
 COMMENT=	Python syntax highlighter
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test

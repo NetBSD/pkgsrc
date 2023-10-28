@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/21 10:07:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:00 wiz Exp $
 bin/update-validation-files-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/i18naddress/__init__.py
 ${PYSITELIB}/i18naddress/__init__.pyc
+${PYSITELIB}/i18naddress/__init__.pyo
 ${PYSITELIB}/i18naddress/data/ac.json
 ${PYSITELIB}/i18naddress/data/ad.json
 ${PYSITELIB}/i18naddress/data/ae.json
@@ -266,5 +264,7 @@ ${PYSITELIB}/i18naddress/data/zw.json
 ${PYSITELIB}/i18naddress/data/zz.json
 ${PYSITELIB}/i18naddress/downloader.py
 ${PYSITELIB}/i18naddress/downloader.pyc
+${PYSITELIB}/i18naddress/downloader.pyo
 ${PYSITELIB}/i18naddress/scripts.py
 ${PYSITELIB}/i18naddress/scripts.pyc
+${PYSITELIB}/i18naddress/scripts.pyo

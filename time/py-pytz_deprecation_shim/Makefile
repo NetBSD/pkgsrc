@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 12:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:21 wiz Exp $
 
 DISTNAME=	pytz_deprecation_shim-0.1.0.post0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz_deprecation_shim/}
 

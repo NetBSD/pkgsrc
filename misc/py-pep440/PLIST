@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/25 21:55:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:12 wiz Exp $
 bin/pep440-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/pep440/__init__.py
 ${PYSITELIB}/pep440/__init__.pyc
+${PYSITELIB}/pep440/__init__.pyo
 ${PYSITELIB}/pep440/__main__.py
 ${PYSITELIB}/pep440/__main__.pyc
+${PYSITELIB}/pep440/__main__.pyo
 ${PYSITELIB}/pep440/core.py
 ${PYSITELIB}/pep440/core.pyc
+${PYSITELIB}/pep440/core.pyo
 ${PYSITELIB}/pep440/py.typed

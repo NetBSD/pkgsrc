@@ -1,23 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2023/04/17 12:34:40 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:25 wiz Exp $
 ${PYSITELIB}/multipart/__init__.py
 ${PYSITELIB}/multipart/__init__.pyc
+${PYSITELIB}/multipart/__init__.pyo
 ${PYSITELIB}/multipart/decoders.py
 ${PYSITELIB}/multipart/decoders.pyc
+${PYSITELIB}/multipart/decoders.pyo
 ${PYSITELIB}/multipart/exceptions.py
 ${PYSITELIB}/multipart/exceptions.pyc
+${PYSITELIB}/multipart/exceptions.pyo
 ${PYSITELIB}/multipart/multipart.py
 ${PYSITELIB}/multipart/multipart.pyc
+${PYSITELIB}/multipart/multipart.pyo
 ${PYSITELIB}/multipart/tests/__init__.py
 ${PYSITELIB}/multipart/tests/__init__.pyc
+${PYSITELIB}/multipart/tests/__init__.pyo
 ${PYSITELIB}/multipart/tests/compat.py
 ${PYSITELIB}/multipart/tests/compat.pyc
+${PYSITELIB}/multipart/tests/compat.pyo
 ${PYSITELIB}/multipart/tests/test_data/http/CR_in_header.http
 ${PYSITELIB}/multipart/tests/test_data/http/CR_in_header.yaml
 ${PYSITELIB}/multipart/tests/test_data/http/CR_in_header_value.http
@@ -62,3 +61,8 @@ ${PYSITELIB}/multipart/tests/test_data/http/utf8_filename.http
 ${PYSITELIB}/multipart/tests/test_data/http/utf8_filename.yaml
 ${PYSITELIB}/multipart/tests/test_multipart.py
 ${PYSITELIB}/multipart/tests/test_multipart.pyc
+${PYSITELIB}/multipart/tests/test_multipart.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt

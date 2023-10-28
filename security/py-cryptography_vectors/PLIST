@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.24 2023/07/11 07:49:22 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.25 2023/10/28 19:57:14 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-3des.txt
 ${PYSITELIB}/cryptography_vectors/CMAC/nist-800-38b-aes128.txt
@@ -29,8 +26,10 @@ ${PYSITELIB}/cryptography_vectors/KDF/rfc-6070-PBKDF2-SHA1.txt
 ${PYSITELIB}/cryptography_vectors/KDF/scrypt.txt
 ${PYSITELIB}/cryptography_vectors/__about__.py
 ${PYSITELIB}/cryptography_vectors/__about__.pyc
+${PYSITELIB}/cryptography_vectors/__about__.pyo
 ${PYSITELIB}/cryptography_vectors/__init__.py
 ${PYSITELIB}/cryptography_vectors/__init__.pyc
+${PYSITELIB}/cryptography_vectors/__init__.pyo
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.1024.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.2048.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DER_Serialization/dsa.3072.der

@@ -1,14 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2023/02/01 12:20:21 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:20 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/htmlhelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/htmlhelp/__init__.pyc
+${PYSITELIB}/sphinxcontrib/htmlhelp/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/.tx/config
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ar/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ar/LC_MESSAGES/sphinxcontrib.htmlhelp.po
@@ -122,3 +115,8 @@ ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.html
 ${PYSITELIB}/sphinxcontrib/htmlhelp/templates/project.hhc
 ${PYSITELIB}/sphinxcontrib/htmlhelp/templates/project.hhp
 ${PYSITELIB}/sphinxcontrib/htmlhelp/templates/project.stp
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

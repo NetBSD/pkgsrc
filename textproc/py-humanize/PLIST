@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.15 2023/08/24 20:02:09 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.16 2023/10/28 19:57:17 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
 ${PYSITELIB}/humanize/__init__.py
 ${PYSITELIB}/humanize/__init__.pyc
+${PYSITELIB}/humanize/__init__.pyo
 ${PYSITELIB}/humanize/filesize.py
 ${PYSITELIB}/humanize/filesize.pyc
+${PYSITELIB}/humanize/filesize.pyo
 ${PYSITELIB}/humanize/i18n.py
 ${PYSITELIB}/humanize/i18n.pyc
+${PYSITELIB}/humanize/i18n.pyo
 ${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/bn_BD/LC_MESSAGES/humanize.mo
@@ -74,6 +74,8 @@ ${PYSITELIB}/humanize/locale/zh_HK/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/zh_HK/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/number.py
 ${PYSITELIB}/humanize/number.pyc
+${PYSITELIB}/humanize/number.pyo
 ${PYSITELIB}/humanize/py.typed
 ${PYSITELIB}/humanize/time.py
 ${PYSITELIB}/humanize/time.pyc
+${PYSITELIB}/humanize/time.pyo

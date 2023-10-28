@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/08/30 13:37:47 adam Exp $
+# $NetBSD: Makefile,v 1.24 2023/10/28 19:57:24 wiz Exp $
 
 DISTNAME=	nbconvert-7.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
 

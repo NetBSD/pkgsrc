@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/03 12:36:06 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:56:59 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/exceptiongroup/__init__.py
 ${PYSITELIB}/exceptiongroup/__init__.pyc
+${PYSITELIB}/exceptiongroup/__init__.pyo
 ${PYSITELIB}/exceptiongroup/_catch.py
 ${PYSITELIB}/exceptiongroup/_catch.pyc
+${PYSITELIB}/exceptiongroup/_catch.pyo
 ${PYSITELIB}/exceptiongroup/_exceptions.py
 ${PYSITELIB}/exceptiongroup/_exceptions.pyc
+${PYSITELIB}/exceptiongroup/_exceptions.pyo
 ${PYSITELIB}/exceptiongroup/_formatting.py
 ${PYSITELIB}/exceptiongroup/_formatting.pyc
+${PYSITELIB}/exceptiongroup/_formatting.pyo
 ${PYSITELIB}/exceptiongroup/_version.py
 ${PYSITELIB}/exceptiongroup/_version.pyc
+${PYSITELIB}/exceptiongroup/_version.pyo
 ${PYSITELIB}/exceptiongroup/py.typed

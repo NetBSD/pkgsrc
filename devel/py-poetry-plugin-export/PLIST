@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/17 20:53:30 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:05 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/poetry_plugin_export/__init__.py
 ${PYSITELIB}/poetry_plugin_export/__init__.pyc
+${PYSITELIB}/poetry_plugin_export/__init__.pyo
 ${PYSITELIB}/poetry_plugin_export/command.py
 ${PYSITELIB}/poetry_plugin_export/command.pyc
+${PYSITELIB}/poetry_plugin_export/command.pyo
 ${PYSITELIB}/poetry_plugin_export/exporter.py
 ${PYSITELIB}/poetry_plugin_export/exporter.pyc
+${PYSITELIB}/poetry_plugin_export/exporter.pyo
 ${PYSITELIB}/poetry_plugin_export/plugins.py
 ${PYSITELIB}/poetry_plugin_export/plugins.pyc
+${PYSITELIB}/poetry_plugin_export/plugins.pyo
 ${PYSITELIB}/poetry_plugin_export/walker.py
 ${PYSITELIB}/poetry_plugin_export/walker.pyc
+${PYSITELIB}/poetry_plugin_export/walker.pyo

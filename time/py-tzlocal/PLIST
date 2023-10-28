@@ -1,20 +1,22 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/23 07:58:49 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:22 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tzlocal/__init__.py
 ${PYSITELIB}/tzlocal/__init__.pyc
+${PYSITELIB}/tzlocal/__init__.pyo
 ${PYSITELIB}/tzlocal/py.typed
 ${PYSITELIB}/tzlocal/unix.py
 ${PYSITELIB}/tzlocal/unix.pyc
+${PYSITELIB}/tzlocal/unix.pyo
 ${PYSITELIB}/tzlocal/utils.py
 ${PYSITELIB}/tzlocal/utils.pyc
+${PYSITELIB}/tzlocal/utils.pyo
 ${PYSITELIB}/tzlocal/win32.py
 ${PYSITELIB}/tzlocal/win32.pyc
+${PYSITELIB}/tzlocal/win32.pyo
 ${PYSITELIB}/tzlocal/windows_tz.py
 ${PYSITELIB}/tzlocal/windows_tz.pyc
+${PYSITELIB}/tzlocal/windows_tz.pyo

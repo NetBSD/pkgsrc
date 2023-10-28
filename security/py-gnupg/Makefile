@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/07/25 08:08:54 adam Exp $
+# $NetBSD: Makefile,v 1.36 2023/10/28 19:57:14 wiz Exp $
 
 DISTNAME=	python-gnupg-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gnupg/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://docs.red-dove.com/python-gnupg/
 COMMENT=	Wrapper for the Gnu Privacy Guard
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 DEPENDS+=	gnupg2>=2.2.0:../../security/gnupg2
 

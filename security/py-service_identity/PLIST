@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2023/07/01 11:29:20 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/service_identity/__init__.py
 ${PYSITELIB}/service_identity/__init__.pyc
+${PYSITELIB}/service_identity/__init__.pyo
 ${PYSITELIB}/service_identity/cryptography.py
 ${PYSITELIB}/service_identity/cryptography.pyc
+${PYSITELIB}/service_identity/cryptography.pyo
 ${PYSITELIB}/service_identity/exceptions.py
 ${PYSITELIB}/service_identity/exceptions.pyc
+${PYSITELIB}/service_identity/exceptions.pyo
 ${PYSITELIB}/service_identity/hazmat.py
 ${PYSITELIB}/service_identity/hazmat.pyc
+${PYSITELIB}/service_identity/hazmat.pyo
 ${PYSITELIB}/service_identity/py.typed
 ${PYSITELIB}/service_identity/pyopenssl.py
 ${PYSITELIB}/service_identity/pyopenssl.pyc
+${PYSITELIB}/service_identity/pyopenssl.pyo

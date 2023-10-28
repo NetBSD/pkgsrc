@@ -1,26 +1,32 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/01 16:13:34 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:56:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/audioread/__init__.py
 ${PYSITELIB}/audioread/__init__.pyc
+${PYSITELIB}/audioread/__init__.pyo
 ${PYSITELIB}/audioread/base.py
 ${PYSITELIB}/audioread/base.pyc
+${PYSITELIB}/audioread/base.pyo
 ${PYSITELIB}/audioread/exceptions.py
 ${PYSITELIB}/audioread/exceptions.pyc
+${PYSITELIB}/audioread/exceptions.pyo
 ${PYSITELIB}/audioread/ffdec.py
 ${PYSITELIB}/audioread/ffdec.pyc
+${PYSITELIB}/audioread/ffdec.pyo
 ${PYSITELIB}/audioread/gstdec.py
 ${PYSITELIB}/audioread/gstdec.pyc
+${PYSITELIB}/audioread/gstdec.pyo
 ${PYSITELIB}/audioread/macca.py
 ${PYSITELIB}/audioread/macca.pyc
+${PYSITELIB}/audioread/macca.pyo
 ${PYSITELIB}/audioread/maddec.py
 ${PYSITELIB}/audioread/maddec.pyc
+${PYSITELIB}/audioread/maddec.pyo
 ${PYSITELIB}/audioread/rawread.py
 ${PYSITELIB}/audioread/rawread.pyc
+${PYSITELIB}/audioread/rawread.pyo
 ${PYSITELIB}/audioread/version.py
 ${PYSITELIB}/audioread/version.pyc
+${PYSITELIB}/audioread/version.pyo

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2023/08/01 23:20:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/28 19:56:58 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	cle-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cle/}
 

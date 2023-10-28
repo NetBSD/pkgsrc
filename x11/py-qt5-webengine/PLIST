@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/02 15:34:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:26 wiz Exp $
 ${PYSITELIB}/PyQt5/QtWebEngine.abi3.so
 ${PYSITELIB}/PyQt5/QtWebEngineCore.abi3.so
 ${PYSITELIB}/PyQt5/QtWebEngineWidgets.abi3.so
@@ -35,9 +35,6 @@ ${PYSITELIB}/PyQt5/bindings/QtWebEngineWidgets/qwebenginescript.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebEngineWidgets/qwebenginescriptcollection.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebEngineWidgets/qwebenginesettings.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebEngineWidgets/qwebengineview.sip
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json

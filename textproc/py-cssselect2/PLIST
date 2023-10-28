@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/22 15:07:50 kleink Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:17 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/cssselect2/__init__.py
 ${PYSITELIB}/cssselect2/__init__.pyc
+${PYSITELIB}/cssselect2/__init__.pyo
 ${PYSITELIB}/cssselect2/compiler.py
 ${PYSITELIB}/cssselect2/compiler.pyc
+${PYSITELIB}/cssselect2/compiler.pyo
 ${PYSITELIB}/cssselect2/parser.py
 ${PYSITELIB}/cssselect2/parser.pyc
+${PYSITELIB}/cssselect2/parser.pyo
 ${PYSITELIB}/cssselect2/tree.py
 ${PYSITELIB}/cssselect2/tree.pyc
+${PYSITELIB}/cssselect2/tree.pyo

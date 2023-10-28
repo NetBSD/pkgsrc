@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/11 21:55:32 nros Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:20 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/tomli_w/__init__.py
 ${PYSITELIB}/tomli_w/__init__.pyc
+${PYSITELIB}/tomli_w/__init__.pyo
 ${PYSITELIB}/tomli_w/_writer.py
 ${PYSITELIB}/tomli_w/_writer.pyc
+${PYSITELIB}/tomli_w/_writer.pyo
 ${PYSITELIB}/tomli_w/py.typed

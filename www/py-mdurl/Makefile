@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/02/20 10:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:24 wiz Exp $
 
 DISTNAME=	mdurl-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mdurl/}
 

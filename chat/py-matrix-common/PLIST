@@ -1,20 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/06 13:43:34 gdt Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:56:55 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/matrix_common/__init__.py
 ${PYSITELIB}/matrix_common/__init__.pyc
+${PYSITELIB}/matrix_common/__init__.pyo
 ${PYSITELIB}/matrix_common/py.typed
 ${PYSITELIB}/matrix_common/regex.py
 ${PYSITELIB}/matrix_common/regex.pyc
+${PYSITELIB}/matrix_common/regex.pyo
 ${PYSITELIB}/matrix_common/types/__init__.py
 ${PYSITELIB}/matrix_common/types/__init__.pyc
+${PYSITELIB}/matrix_common/types/__init__.pyo
 ${PYSITELIB}/matrix_common/types/mxc_uri.py
 ${PYSITELIB}/matrix_common/types/mxc_uri.pyc
+${PYSITELIB}/matrix_common/types/mxc_uri.pyo
 ${PYSITELIB}/matrix_common/versionstring.py
 ${PYSITELIB}/matrix_common/versionstring.pyc
+${PYSITELIB}/matrix_common/versionstring.pyo

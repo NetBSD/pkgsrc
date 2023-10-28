@@ -1,24 +1,28 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/30 13:46:13 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:22 wiz Exp $
 ${PYSITELIB}/corsheaders/__init__.py
 ${PYSITELIB}/corsheaders/__init__.pyc
+${PYSITELIB}/corsheaders/__init__.pyo
 ${PYSITELIB}/corsheaders/apps.py
 ${PYSITELIB}/corsheaders/apps.pyc
+${PYSITELIB}/corsheaders/apps.pyo
 ${PYSITELIB}/corsheaders/checks.py
 ${PYSITELIB}/corsheaders/checks.pyc
+${PYSITELIB}/corsheaders/checks.pyo
 ${PYSITELIB}/corsheaders/conf.py
 ${PYSITELIB}/corsheaders/conf.pyc
+${PYSITELIB}/corsheaders/conf.pyo
 ${PYSITELIB}/corsheaders/defaults.py
 ${PYSITELIB}/corsheaders/defaults.pyc
+${PYSITELIB}/corsheaders/defaults.pyo
 ${PYSITELIB}/corsheaders/middleware.py
 ${PYSITELIB}/corsheaders/middleware.pyc
+${PYSITELIB}/corsheaders/middleware.pyo
 ${PYSITELIB}/corsheaders/py.typed
 ${PYSITELIB}/corsheaders/signals.py
 ${PYSITELIB}/corsheaders/signals.pyc
+${PYSITELIB}/corsheaders/signals.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

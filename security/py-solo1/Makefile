@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/04/13 13:42:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:15 wiz Exp $
 
 DISTNAME=	solo1-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/solo1/}
 

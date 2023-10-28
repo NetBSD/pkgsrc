@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/17 16:03:31 gutteridge Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:17 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/cmudict/__init__.py
 ${PYSITELIB}/cmudict/__init__.pyc
+${PYSITELIB}/cmudict/__init__.pyo
 ${PYSITELIB}/cmudict/data/LICENSE
 ${PYSITELIB}/cmudict/data/README
 ${PYSITELIB}/cmudict/data/README.developer

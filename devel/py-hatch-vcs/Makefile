@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/01/16 21:17:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:01 wiz Exp $
 
 DISTNAME=	hatch_vcs-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-vcs/}
 

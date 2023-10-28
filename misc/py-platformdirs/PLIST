@@ -1,25 +1,30 @@
-@comment $NetBSD: PLIST,v 1.4 2022/11/22 11:00:02 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:12 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/platformdirs/__init__.py
 ${PYSITELIB}/platformdirs/__init__.pyc
+${PYSITELIB}/platformdirs/__init__.pyo
 ${PYSITELIB}/platformdirs/__main__.py
 ${PYSITELIB}/platformdirs/__main__.pyc
+${PYSITELIB}/platformdirs/__main__.pyo
 ${PYSITELIB}/platformdirs/android.py
 ${PYSITELIB}/platformdirs/android.pyc
+${PYSITELIB}/platformdirs/android.pyo
 ${PYSITELIB}/platformdirs/api.py
 ${PYSITELIB}/platformdirs/api.pyc
+${PYSITELIB}/platformdirs/api.pyo
 ${PYSITELIB}/platformdirs/macos.py
 ${PYSITELIB}/platformdirs/macos.pyc
+${PYSITELIB}/platformdirs/macos.pyo
 ${PYSITELIB}/platformdirs/py.typed
 ${PYSITELIB}/platformdirs/unix.py
 ${PYSITELIB}/platformdirs/unix.pyc
+${PYSITELIB}/platformdirs/unix.pyo
 ${PYSITELIB}/platformdirs/version.py
 ${PYSITELIB}/platformdirs/version.pyc
+${PYSITELIB}/platformdirs/version.pyo
 ${PYSITELIB}/platformdirs/windows.py
 ${PYSITELIB}/platformdirs/windows.pyc
+${PYSITELIB}/platformdirs/windows.pyo

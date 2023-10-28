@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/07/30 15:24:05 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/28 19:56:57 wiz Exp $
 
 DISTNAME=	atpublic-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atpublic/}
 

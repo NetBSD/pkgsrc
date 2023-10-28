@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/07/17 19:41:04 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:13 wiz Exp $
 
 DISTNAME=	threadpoolctl-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/threadpoolctl/}
 

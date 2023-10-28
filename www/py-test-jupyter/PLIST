@@ -1,24 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/26 11:00:25 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:25 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pytest_jupyter/__init__.py
 ${PYSITELIB}/pytest_jupyter/__init__.pyc
+${PYSITELIB}/pytest_jupyter/__init__.pyo
 ${PYSITELIB}/pytest_jupyter/_version.py
 ${PYSITELIB}/pytest_jupyter/_version.pyc
+${PYSITELIB}/pytest_jupyter/_version.pyo
 ${PYSITELIB}/pytest_jupyter/echo_kernel.py
 ${PYSITELIB}/pytest_jupyter/echo_kernel.pyc
+${PYSITELIB}/pytest_jupyter/echo_kernel.pyo
 ${PYSITELIB}/pytest_jupyter/jupyter_client.py
 ${PYSITELIB}/pytest_jupyter/jupyter_client.pyc
+${PYSITELIB}/pytest_jupyter/jupyter_client.pyo
 ${PYSITELIB}/pytest_jupyter/jupyter_core.py
 ${PYSITELIB}/pytest_jupyter/jupyter_core.pyc
+${PYSITELIB}/pytest_jupyter/jupyter_core.pyo
 ${PYSITELIB}/pytest_jupyter/jupyter_server.py
 ${PYSITELIB}/pytest_jupyter/jupyter_server.pyc
+${PYSITELIB}/pytest_jupyter/jupyter_server.pyo
 ${PYSITELIB}/pytest_jupyter/pytest_tornasync.py
 ${PYSITELIB}/pytest_jupyter/pytest_tornasync.pyc
+${PYSITELIB}/pytest_jupyter/pytest_tornasync.pyo
 ${PYSITELIB}/pytest_jupyter/utils.py
 ${PYSITELIB}/pytest_jupyter/utils.pyc
+${PYSITELIB}/pytest_jupyter/utils.pyo
