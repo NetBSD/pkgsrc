@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/17 15:21:45 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 20:53:25 bacon Exp $
 bin/npmount
 man/man1/npmount.1
 share/examples/npmount/npmount.conf.sample
