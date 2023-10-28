@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6223 2023/10/28 20:10:54 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6224 2023/10/28 20:12:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9117,3 +9117,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-these to 1.2 [pho 2023-10-28]
 	Updated devel/hs-strict to 0.5 [pho 2023-10-28]
 	Updated lang/hs-hslua-marshalling to 2.3.0 [pho 2023-10-28]
+	Updated lang/hs-hslua-list to 1.1.1 [pho 2023-10-28]
