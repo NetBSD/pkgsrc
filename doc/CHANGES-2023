@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6215 2023/10/28 12:46:32 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6216 2023/10/28 12:50:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9107,3 +9107,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-commonmark to 0.2.4 [pho 2023-10-28]
 	Updated textproc/hs-commonmark-extensions to 0.2.4 [pho 2023-10-28]
 	Updated devel/hs-cborg to 0.2.9.0 [pho 2023-10-28]
+	Updated net/pear-Net_SMTP to 1.11.0 [taca 2023-10-28]
