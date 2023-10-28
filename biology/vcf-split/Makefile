@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2022/12/28 15:27:17 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/28 20:39:31 bacon Exp $
 
-DISTNAME=	vcf-split-0.1.5.4
+DISTNAME=	vcf-split-0.1.5.10
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	0a856b934cd483f5c10d93117aab6c7f887204e5
+GITHUB_TAG=	0f2fd0a5051e058b82efd310679265bcda0b5b03
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/vcf-split
