@@ -1,0 +1,4 @@
+This is a simple package that fixes a problem in the way LaTeX
+handles ellipses: it always puts a tiny bit more space after
+\dots in text mode than before it, which results in the
+ellipsis being off-center when used between two words.
