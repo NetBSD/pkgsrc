@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.10 2023/01/26 10:01:04 pho Exp $
+$NetBSD: distinfo,v 1.11 2023/10/28 20:30:25 pho Exp $
 
 BLAKE2s (xmonad-contrib-0.17.1.tar.gz) = 292c66c3f5ff41a49e305c088f20aad4566205c43cc7cd5c88786ba01ee2d6e4
 SHA512 (xmonad-contrib-0.17.1.tar.gz) = 07f989623f4d9affae564ba36a180721910c1a0acf3d23e0e548fc48bb4dcd9864987c521c28251f6443cdd5134ded8e8bb18c6f78d06cb00c386ff6ad59c97e
 Size (xmonad-contrib-0.17.1.tar.gz) = 646843 bytes
+SHA1 (patch-XMonad_Actions_GroupNavigation.hs) = a60b40d9708c0b9f01d970f4483a1300f1bd0afd
+SHA1 (patch-XMonad_Hooks_WorkspaceByPos.hs) = 118e0e24612b0a2b9bfc4f492468676b38aaec0c
+SHA1 (patch-XMonad_Util_PureX.hs) = 4c10cf166c789cf14ba3f29d3ed30b5d28b222cc
+SHA1 (patch-xmonad-contrib.cabal) = 564514112de4bb750a0638b308e2dbe4ab22b08c
