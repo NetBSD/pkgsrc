@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/27 10:58:52 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 06:06:11 pho Exp $
 lib/crypton-${PKGVERSION}/${HS_VERSION}/package-description
 lib/crypton-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Cipher/AES.dyn_hi
@@ -382,9 +382,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Backend.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.p_hi
+${PLIST.shlibs}${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.dyn_hi
+${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.hi
+${PLIST.prof}${PLIST.x86}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/RDRand.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Random/Entropy/Source.p_hi
