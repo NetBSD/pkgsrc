@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23505 2023/10/27 09:06:20 adam Exp $
+$NetBSD: TODO,v 1.23506 2023/10/28 19:49:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-23.2.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
-	o PageEdit-2.0.0
+	o PageEdit-2.0.2
 	o QuantLib-1.22
 	o R-4.3.1
 	o R-GRASS-0.3.9
@@ -406,7 +406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOGo5-5.8.4 [wip]
 	o SOPE5-5.8.4 [wip]
 	o SQLiteCpp-2.5.0
-	o Sigil-2.0.1
+	o Sigil-2.0.2
 	o TECkit-2.5.12
 	o TeXmacs-2.1.1
 	o TiffIO-140a
@@ -1436,7 +1436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.19.13 (at https://github.com/mackyle/topgit)
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-13.0
+	o tor-browser-13.0.2
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o translate-toolkit-3.3.4
