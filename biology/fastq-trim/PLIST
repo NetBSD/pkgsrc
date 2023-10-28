@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/12/11 21:25:47 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 20:35:44 bacon Exp $
 bin/fastq-scum
 bin/fastq-trim
 include/fastq-trim-accessors.h
