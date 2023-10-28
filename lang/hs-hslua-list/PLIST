@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/27 15:59:28 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 20:12:37 pho Exp $
 lib/hslua-list-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hslua-list-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/List.dyn_hi
@@ -7,15 +7,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/List.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/HsLua-List.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/hslua-list.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hslua-list-${PKGVERSION}/html/synopsis.png
