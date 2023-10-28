@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6209 2023/10/28 04:27:00 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6210 2023/10/28 09:23:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9101,3 +9101,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-assoc to 1.1 [pho 2023-10-27]
 	Updated textproc/hs-regex-tdfa to 1.3.2.2 [pho 2023-10-27]
 	Updated devel/hs-ghc-lib-parser to 9.6.3.20231014 [pho 2023-10-28]
+	Updated ham/gnuradio-core to 3.10.8.0 [mef 2023-10-28]
