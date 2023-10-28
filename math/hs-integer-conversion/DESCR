@@ -1,0 +1,2 @@
+The naive foldl' (acc d -> acc * 10 + d) 0 is expensive (quadratic!) for
+large Integers. This package provides sub-quadratic implementation.

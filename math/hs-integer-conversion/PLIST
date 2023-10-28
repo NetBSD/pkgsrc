@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/28 14:33:14 pho Exp $
+lib/integer-conversion-${PKGVERSION}/${HS_VERSION}/package-description
+lib/integer-conversion-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Integer/Conversion.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Integer/Conversion.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Integer/Conversion.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/Data-Integer-Conversion.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/integer-conversion.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/integer-conversion-${PKGVERSION}/html/synopsis.png
