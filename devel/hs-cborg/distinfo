@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/01/25 16:27:12 pho Exp $
+$NetBSD: distinfo,v 1.4 2023/10/28 12:45:37 pho Exp $
 
-BLAKE2s (cborg-0.2.8.0.tar.gz) = 2c27306937578f993308afe155c3f998b155e5fdd0efe17ce3bb2ab02b691bbf
-SHA512 (cborg-0.2.8.0.tar.gz) = 415afe049475deac12914c06ae94225268163a5a1d59e0783b0dcce529cfb9cfd6aed2c43f67b0ae7c0eac62f222671595daca49ef2d0cb31313c16955bf592d
-Size (cborg-0.2.8.0.tar.gz) = 91143 bytes
+BLAKE2s (cborg-0.2.9.0.tar.gz) = f781768ed5bddb781a0c19ff4fa0944e10dc6124834b36319b4a95a4282d45f2
+SHA512 (cborg-0.2.9.0.tar.gz) = cc6e8d8a60d6d219c537023c1f618f91b1a886b1163e645d86bf621849530f6a6fa68937ff4dd47da813847eda00e1a05dfdafa17c121e53b9cd65ab6009ffd3
+Size (cborg-0.2.9.0.tar.gz) = 91929 bytes
