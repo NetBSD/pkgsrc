@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6235 2023/10/28 20:53:30 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.6236 2023/10/28 21:23:18 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9129,3 +9129,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/vcf2hap to 0.1.6.7 [bacon 2023-10-28]
 	Updated math/basic-stats to 0.1.2.8 [bacon 2023-10-28]
 	Updated sysutils/npmount to 0.1.1.3 [bacon 2023-10-28]
+	Updated print/tex-ellipsis to 1.8 [riastradh 2023-10-28]
+	Updated print/tex-ellipsis-doc to 1.8 [riastradh 2023-10-28]
