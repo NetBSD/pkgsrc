@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/28 20:04:34 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/28 20:14:59 pho Exp $
 
-BLAKE2s (http-media-0.8.0.0.tar.gz) = 3584ebaae836a70e3090774f15d89135eab24a682d80cb1946a6068b6488ce22
-SHA512 (http-media-0.8.0.0.tar.gz) = 549fa1892c81224e79bad4268993e0cfa324d9d0c9daa0d800ac7cc4eee307405155989672c49adb0e124ca29c2d83cc565ba3c935fd3be4ab4ef0594b012bb5
-Size (http-media-0.8.0.0.tar.gz) = 18895 bytes
+BLAKE2s (http-media-0.8.1.1.tar.gz) = b5c2f7f99d5e8bb4742aef8f422fc47c940a1c6899adfe9149bdcd4381e71ad8
+SHA512 (http-media-0.8.1.1.tar.gz) = d6f9822c8159b699ed15d2fdd2fca0f8b83169d59e3b7e28963881226d0858445431c2725a86ff52f8f8c4d0e60a0af4468f5da80878fa10f69b4c566354341d
+Size (http-media-0.8.1.1.tar.gz) = 18395 bytes
