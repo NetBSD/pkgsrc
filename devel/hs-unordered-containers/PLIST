@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/25 16:41:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:24:36 pho Exp $
 lib/unordered-containers-${PKGVERSION}/${HS_VERSION}/package-description
 lib/unordered-containers-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -28,7 +28,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/HashSet/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/HashSet/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Data-HashMap-Internal-Array.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Data-HashMap-Internal-List.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Data-HashMap-Internal-Strict.html
@@ -38,10 +38,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Dat
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Data-HashSet-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/Data-HashSet.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/unordered-containers-${PKGVERSION}/html/unordered-containers.haddock
