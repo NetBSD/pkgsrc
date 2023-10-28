@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/06/03 23:55:32 markd Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/flask_babel/__init__.py
 ${PYSITELIB}/flask_babel/__init__.pyc
+${PYSITELIB}/flask_babel/__init__.pyo
 ${PYSITELIB}/flask_babel/speaklater.py
 ${PYSITELIB}/flask_babel/speaklater.pyc
+${PYSITELIB}/flask_babel/speaklater.pyo

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2023/10/23 06:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2023/10/28 19:56:58 wiz Exp $
 
 DISTNAME=	coverage-7.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	https://coverage.readthedocs.io/
 COMMENT=	Python module that measures code coverage for Python
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.7.0:../../devel/py-flaky

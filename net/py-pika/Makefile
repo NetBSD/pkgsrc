@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/05/05 18:27:20 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/28 19:57:13 wiz Exp $
 
 DISTNAME=	pika-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pika/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://pika.readthedocs.io/
 COMMENT=	Python AMQP Client Library
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none

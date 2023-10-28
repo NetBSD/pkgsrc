@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2023/10/25 08:38:07 adam Exp $
+# $NetBSD: Makefile,v 1.47 2023/10/28 19:57:14 wiz Exp $
 
 DISTNAME=	cryptography_vectors-41.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography_vectors/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/pyca/cryptography
 COMMENT=	Cryptographic test vectors
 LICENSE=	apache-2.0 OR modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none

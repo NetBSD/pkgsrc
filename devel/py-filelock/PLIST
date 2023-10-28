@@ -1,25 +1,30 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/17 09:06:07 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:56:59 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/filelock/__init__.py
 ${PYSITELIB}/filelock/__init__.pyc
+${PYSITELIB}/filelock/__init__.pyo
 ${PYSITELIB}/filelock/_api.py
 ${PYSITELIB}/filelock/_api.pyc
+${PYSITELIB}/filelock/_api.pyo
 ${PYSITELIB}/filelock/_error.py
 ${PYSITELIB}/filelock/_error.pyc
+${PYSITELIB}/filelock/_error.pyo
 ${PYSITELIB}/filelock/_soft.py
 ${PYSITELIB}/filelock/_soft.pyc
+${PYSITELIB}/filelock/_soft.pyo
 ${PYSITELIB}/filelock/_unix.py
 ${PYSITELIB}/filelock/_unix.pyc
+${PYSITELIB}/filelock/_unix.pyo
 ${PYSITELIB}/filelock/_util.py
 ${PYSITELIB}/filelock/_util.pyc
+${PYSITELIB}/filelock/_util.pyo
 ${PYSITELIB}/filelock/_windows.py
 ${PYSITELIB}/filelock/_windows.pyc
+${PYSITELIB}/filelock/_windows.pyo
 ${PYSITELIB}/filelock/py.typed
 ${PYSITELIB}/filelock/version.py
 ${PYSITELIB}/filelock/version.pyc
+${PYSITELIB}/filelock/version.pyo

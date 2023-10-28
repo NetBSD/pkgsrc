@@ -1,23 +1,26 @@
-@comment $NetBSD: PLIST,v 1.8 2022/11/06 18:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:57:21 wiz Exp $
 bin/calc-prorate-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tempora/__init__.py
 ${PYSITELIB}/tempora/__init__.pyc
+${PYSITELIB}/tempora/__init__.pyo
 ${PYSITELIB}/tempora/schedule.py
 ${PYSITELIB}/tempora/schedule.pyc
+${PYSITELIB}/tempora/schedule.pyo
 ${PYSITELIB}/tempora/tests/test_schedule.py
 ${PYSITELIB}/tempora/tests/test_schedule.pyc
+${PYSITELIB}/tempora/tests/test_schedule.pyo
 ${PYSITELIB}/tempora/tests/test_timing.py
 ${PYSITELIB}/tempora/tests/test_timing.pyc
+${PYSITELIB}/tempora/tests/test_timing.pyo
 ${PYSITELIB}/tempora/timing.py
 ${PYSITELIB}/tempora/timing.pyc
+${PYSITELIB}/tempora/timing.pyo
 ${PYSITELIB}/tempora/utc.py
 ${PYSITELIB}/tempora/utc.pyc
+${PYSITELIB}/tempora/utc.pyo

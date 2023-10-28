@@ -1,22 +1,26 @@
-@comment $NetBSD: PLIST,v 1.2 2023/09/07 15:40:41 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:03 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/MIT.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/mesonpy/__init__.py
 ${PYSITELIB}/mesonpy/__init__.pyc
+${PYSITELIB}/mesonpy/__init__.pyo
 ${PYSITELIB}/mesonpy/_compat.py
 ${PYSITELIB}/mesonpy/_compat.pyc
+${PYSITELIB}/mesonpy/_compat.pyo
 ${PYSITELIB}/mesonpy/_editable.py
 ${PYSITELIB}/mesonpy/_editable.pyc
+${PYSITELIB}/mesonpy/_editable.pyo
 ${PYSITELIB}/mesonpy/_rpath.py
 ${PYSITELIB}/mesonpy/_rpath.pyc
+${PYSITELIB}/mesonpy/_rpath.pyo
 ${PYSITELIB}/mesonpy/_tags.py
 ${PYSITELIB}/mesonpy/_tags.pyc
+${PYSITELIB}/mesonpy/_tags.pyo
 ${PYSITELIB}/mesonpy/_util.py
 ${PYSITELIB}/mesonpy/_util.pyc
+${PYSITELIB}/mesonpy/_util.pyo
 ${PYSITELIB}/mesonpy/_wheelfile.py
 ${PYSITELIB}/mesonpy/_wheelfile.pyc
+${PYSITELIB}/mesonpy/_wheelfile.pyo

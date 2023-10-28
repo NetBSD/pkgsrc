@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/09/27 16:21:31 adam Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/28 19:57:24 wiz Exp $
 
 DISTNAME=	notebook-7.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
 
@@ -11,6 +12,7 @@ COMMENT=	Web-based notebook environment for interactive computing
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0:../../devel/py-hatch-jupyter-builder
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=4.0.2:../../www/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.22.1:../../www/py-jupyterlab-server
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.4.0:../../www/py-jupyter_server

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/10/17 16:03:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/28 19:57:17 wiz Exp $
 
 DISTNAME=	cmudict-1.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
 
@@ -16,7 +17,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# The upstream project lists higher minimums for these depenencies, but that
+# The upstream project lists higher minimums for these dependencies, but that
 # is incorrect. What's recorded below are correct minimums for the actual
 # functionality required. This has been tested with Python 3.8 and 3.9.
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/10/23 10:44:26 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/10/28 19:56:58 wiz Exp $
 
 DISTNAME=	python-daemon-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-daemon/}
 

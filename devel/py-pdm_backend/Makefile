@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/10/09 10:39:07 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:04 wiz Exp $
 
 DISTNAME=	pdm_backend-2.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
 

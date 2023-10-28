@@ -1,22 +1,23 @@
-@comment $NetBSD: PLIST,v 1.17 2023/09/27 16:21:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/10/28 19:57:24 wiz Exp $
 bin/jupyter-notebook-${PYVERSSUFFIX}
 etc/jupyter/jupyter_server_config.d/notebook.json
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/notebook/__init__.py
 ${PYSITELIB}/notebook/__init__.pyc
+${PYSITELIB}/notebook/__init__.pyo
 ${PYSITELIB}/notebook/__main__.py
 ${PYSITELIB}/notebook/__main__.pyc
+${PYSITELIB}/notebook/__main__.pyo
 ${PYSITELIB}/notebook/_version.py
 ${PYSITELIB}/notebook/_version.pyc
+${PYSITELIB}/notebook/_version.pyo
 ${PYSITELIB}/notebook/app.py
 ${PYSITELIB}/notebook/app.pyc
+${PYSITELIB}/notebook/app.pyo
 ${PYSITELIB}/notebook/custom/custom.css
 ${PYSITELIB}/notebook/static/1018.bundle.js
 ${PYSITELIB}/notebook/static/1053.bundle.js

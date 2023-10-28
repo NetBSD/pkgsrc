@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2023/08/09 20:19:09 adam Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/28 19:57:12 wiz Exp $
 
 DISTNAME=	dnspython-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnspython/}
 

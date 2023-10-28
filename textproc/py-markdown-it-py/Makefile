@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:18 wiz Exp $
 
 DISTNAME=	markdown-it-py-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown-it-py/}
 

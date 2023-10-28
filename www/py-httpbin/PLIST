@@ -1,26 +1,28 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/29 06:48:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.ISC
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/httpbin/__init__.py
 ${PYSITELIB}/httpbin/__init__.pyc
+${PYSITELIB}/httpbin/__init__.pyo
 ${PYSITELIB}/httpbin/core.py
 ${PYSITELIB}/httpbin/core.pyc
+${PYSITELIB}/httpbin/core.pyo
 ${PYSITELIB}/httpbin/filters.py
 ${PYSITELIB}/httpbin/filters.pyc
+${PYSITELIB}/httpbin/filters.pyo
 ${PYSITELIB}/httpbin/helpers.py
 ${PYSITELIB}/httpbin/helpers.pyc
+${PYSITELIB}/httpbin/helpers.pyo
 ${PYSITELIB}/httpbin/static/favicon.ico
 ${PYSITELIB}/httpbin/structures.py
 ${PYSITELIB}/httpbin/structures.pyc
+${PYSITELIB}/httpbin/structures.pyo
 ${PYSITELIB}/httpbin/templates/UTF-8-demo.txt
 ${PYSITELIB}/httpbin/templates/flasgger/index.html
 ${PYSITELIB}/httpbin/templates/footer.html
@@ -36,3 +38,4 @@ ${PYSITELIB}/httpbin/templates/sample.xml
 ${PYSITELIB}/httpbin/templates/trackingscripts.html
 ${PYSITELIB}/httpbin/utils.py
 ${PYSITELIB}/httpbin/utils.pyc
+${PYSITELIB}/httpbin/utils.pyo

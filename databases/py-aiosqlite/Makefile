@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/10/23 06:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/28 19:56:56 wiz Exp $
 
 DISTNAME=	aiosqlite-0.19.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiosqlite/}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jreese/aiosqlite
 COMMENT=	Async bridge to the standard sqlite3 module
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 

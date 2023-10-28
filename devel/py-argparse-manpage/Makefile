@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/10/06 19:40:25 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/28 19:56:56 wiz Exp $
 
 DISTNAME=	argparse-manpage-4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argparse-manpage/}
 
