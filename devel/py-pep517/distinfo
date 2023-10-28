@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/08/01 07:52:59 adam Exp $
+$NetBSD: distinfo,v 1.9 2023/10/28 19:57:04 wiz Exp $
 
-BLAKE2s (pep517-0.13.0-py3-none-any.whl) = 8c777e7dd683e0f33c81beb5b43f788f75c114fbd5a1e1163473e90f862decc5
-SHA512 (pep517-0.13.0-py3-none-any.whl) = 868f5131994044acad495a246218d3e8316ad27279f7b3e9db841ad52993e09d04301e000bfa017afa0128ad84f12a7d5ee993956589e1c2f7c1cbd003bc0f1d
-Size (pep517-0.13.0-py3-none-any.whl) = 18966 bytes
+BLAKE2s (pep517-0.13.0.tar.gz) = f6e0e37e56ebd24e28bbc49ae6eb44f5328c73a077bde3d2c12cea08c903152d
+SHA512 (pep517-0.13.0.tar.gz) = 110c62441e0084cb2f0b7310ec2d7bb3e08615d65efbeb84eab953ec21600fc4242ef8611f9cdf74a936c1f9e389f4379d165bb5c7a8bd9efe50ee53c1b8d4e1
+Size (pep517-0.13.0.tar.gz) = 25798 bytes

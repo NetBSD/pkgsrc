@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/10/23 07:53:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/28 19:57:05 wiz Exp $
 
 DISTNAME=	pyproject-metadata-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject-metadata/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/FFY00/python-pyproject-metadata
 COMMENT=	PEP 621 metadata parsing
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none

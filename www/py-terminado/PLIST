@@ -1,25 +1,29 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/05 15:04:32 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:25 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/terminado/__init__.py
 ${PYSITELIB}/terminado/__init__.pyc
+${PYSITELIB}/terminado/__init__.pyo
 ${PYSITELIB}/terminado/_static/terminado.js
 ${PYSITELIB}/terminado/_version.py
 ${PYSITELIB}/terminado/_version.pyc
+${PYSITELIB}/terminado/_version.pyo
 ${PYSITELIB}/terminado/management.py
 ${PYSITELIB}/terminado/management.pyc
+${PYSITELIB}/terminado/management.pyo
 ${PYSITELIB}/terminado/py.typed
 ${PYSITELIB}/terminado/tests/__init__.py
 ${PYSITELIB}/terminado/tests/__init__.pyc
+${PYSITELIB}/terminado/tests/__init__.pyo
 ${PYSITELIB}/terminado/tests/basic_test.py
 ${PYSITELIB}/terminado/tests/basic_test.pyc
+${PYSITELIB}/terminado/tests/basic_test.pyo
 ${PYSITELIB}/terminado/uimod_embed.js
 ${PYSITELIB}/terminado/uimodule.py
 ${PYSITELIB}/terminado/uimodule.pyc
+${PYSITELIB}/terminado/uimodule.pyo
 ${PYSITELIB}/terminado/websocket.py
 ${PYSITELIB}/terminado/websocket.pyc
+${PYSITELIB}/terminado/websocket.pyo

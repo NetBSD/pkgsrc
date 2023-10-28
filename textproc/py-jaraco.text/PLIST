@@ -1,22 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/09 09:25:22 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:17 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jaraco/text/Lorem ipsum.txt
 ${PYSITELIB}/jaraco/text/__init__.py
 ${PYSITELIB}/jaraco/text/__init__.pyc
+${PYSITELIB}/jaraco/text/__init__.pyo
 ${PYSITELIB}/jaraco/text/layouts.py
 ${PYSITELIB}/jaraco/text/layouts.pyc
+${PYSITELIB}/jaraco/text/layouts.pyo
 ${PYSITELIB}/jaraco/text/show-newlines.py
 ${PYSITELIB}/jaraco/text/show-newlines.pyc
+${PYSITELIB}/jaraco/text/show-newlines.pyo
 ${PYSITELIB}/jaraco/text/strip-prefix.py
 ${PYSITELIB}/jaraco/text/strip-prefix.pyc
+${PYSITELIB}/jaraco/text/strip-prefix.pyo
 ${PYSITELIB}/jaraco/text/to-dvorak.py
 ${PYSITELIB}/jaraco/text/to-dvorak.pyc
+${PYSITELIB}/jaraco/text/to-dvorak.pyo
 ${PYSITELIB}/jaraco/text/to-qwerty.py
 ${PYSITELIB}/jaraco/text/to-qwerty.pyc
+${PYSITELIB}/jaraco/text/to-qwerty.pyo

@@ -1,25 +1,30 @@
-@comment $NetBSD: PLIST,v 1.6 2023/05/05 10:19:42 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/idna/__init__.py
 ${PYSITELIB}/idna/__init__.pyc
+${PYSITELIB}/idna/__init__.pyo
 ${PYSITELIB}/idna/codec.py
 ${PYSITELIB}/idna/codec.pyc
+${PYSITELIB}/idna/codec.pyo
 ${PYSITELIB}/idna/compat.py
 ${PYSITELIB}/idna/compat.pyc
+${PYSITELIB}/idna/compat.pyo
 ${PYSITELIB}/idna/core.py
 ${PYSITELIB}/idna/core.pyc
+${PYSITELIB}/idna/core.pyo
 ${PYSITELIB}/idna/idnadata.py
 ${PYSITELIB}/idna/idnadata.pyc
+${PYSITELIB}/idna/idnadata.pyo
 ${PYSITELIB}/idna/intranges.py
 ${PYSITELIB}/idna/intranges.pyc
+${PYSITELIB}/idna/intranges.pyo
 ${PYSITELIB}/idna/package_data.py
 ${PYSITELIB}/idna/package_data.pyc
+${PYSITELIB}/idna/package_data.pyo
 ${PYSITELIB}/idna/py.typed
 ${PYSITELIB}/idna/uts46data.py
 ${PYSITELIB}/idna/uts46data.pyc
+${PYSITELIB}/idna/uts46data.pyo

@@ -1,25 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/05 10:20:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:56:55 wiz Exp $
 etc/jupyter/jupyter_server_config.d/jupyter_server_terminals.json
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/jupyter_server_terminals/__init__.py
 ${PYSITELIB}/jupyter_server_terminals/__init__.pyc
+${PYSITELIB}/jupyter_server_terminals/__init__.pyo
 ${PYSITELIB}/jupyter_server_terminals/_version.py
 ${PYSITELIB}/jupyter_server_terminals/_version.pyc
+${PYSITELIB}/jupyter_server_terminals/_version.pyo
 ${PYSITELIB}/jupyter_server_terminals/api_handlers.py
 ${PYSITELIB}/jupyter_server_terminals/api_handlers.pyc
+${PYSITELIB}/jupyter_server_terminals/api_handlers.pyo
 ${PYSITELIB}/jupyter_server_terminals/app.py
 ${PYSITELIB}/jupyter_server_terminals/app.pyc
+${PYSITELIB}/jupyter_server_terminals/app.pyo
 ${PYSITELIB}/jupyter_server_terminals/base.py
 ${PYSITELIB}/jupyter_server_terminals/base.pyc
+${PYSITELIB}/jupyter_server_terminals/base.pyo
 ${PYSITELIB}/jupyter_server_terminals/handlers.py
 ${PYSITELIB}/jupyter_server_terminals/handlers.pyc
+${PYSITELIB}/jupyter_server_terminals/handlers.pyo
 ${PYSITELIB}/jupyter_server_terminals/py.typed
 ${PYSITELIB}/jupyter_server_terminals/rest-api.yml
 ${PYSITELIB}/jupyter_server_terminals/terminalmanager.py
 ${PYSITELIB}/jupyter_server_terminals/terminalmanager.pyc
+${PYSITELIB}/jupyter_server_terminals/terminalmanager.pyo

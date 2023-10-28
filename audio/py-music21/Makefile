@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2023/08/01 23:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/28 19:56:55 wiz Exp $
 
-VERSION=	9.1.0
-DISTNAME=	music21-noCorpus-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
+DISTNAME=	music21-noCorpus-9.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
 GITHUB_PROJECT=	music21
-GITHUB_RELEASE=	v${VERSION}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	gutteridge@NetBSD.org
 HOMEPAGE=	https://github.com/cuthbertLab/music21

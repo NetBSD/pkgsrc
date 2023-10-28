@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/11/28 14:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:00 wiz Exp $
 
 DISTNAME=	pyhamcrest-2.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^pyh/h/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyHamcrest/}
 

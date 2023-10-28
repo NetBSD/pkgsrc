@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/05/05 10:37:12 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:01 wiz Exp $
 
 DISTNAME=	hatch_jupyter_builder-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-jupyter-builder/}
 

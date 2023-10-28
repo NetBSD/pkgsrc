@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/10 13:05:54 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.8 2023/10/28 19:57:03 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/more_itertools/__init__.py
 ${PYSITELIB}/more_itertools/__init__.pyc
 ${PYSITELIB}/more_itertools/__init__.pyi
+${PYSITELIB}/more_itertools/__init__.pyo
 ${PYSITELIB}/more_itertools/more.py
 ${PYSITELIB}/more_itertools/more.pyc
 ${PYSITELIB}/more_itertools/more.pyi
+${PYSITELIB}/more_itertools/more.pyo
 ${PYSITELIB}/more_itertools/py.typed
 ${PYSITELIB}/more_itertools/recipes.py
 ${PYSITELIB}/more_itertools/recipes.pyc
 ${PYSITELIB}/more_itertools/recipes.pyi
+${PYSITELIB}/more_itertools/recipes.pyo

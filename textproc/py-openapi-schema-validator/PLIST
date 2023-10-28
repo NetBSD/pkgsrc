@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/04 16:02:19 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:18 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/openapi_schema_validator/__init__.py
 ${PYSITELIB}/openapi_schema_validator/__init__.pyc
+${PYSITELIB}/openapi_schema_validator/__init__.pyo
 ${PYSITELIB}/openapi_schema_validator/_format.py
 ${PYSITELIB}/openapi_schema_validator/_format.pyc
+${PYSITELIB}/openapi_schema_validator/_format.pyo
 ${PYSITELIB}/openapi_schema_validator/_keywords.py
 ${PYSITELIB}/openapi_schema_validator/_keywords.pyc
+${PYSITELIB}/openapi_schema_validator/_keywords.pyo
 ${PYSITELIB}/openapi_schema_validator/_types.py
 ${PYSITELIB}/openapi_schema_validator/_types.pyc
+${PYSITELIB}/openapi_schema_validator/_types.pyo
 ${PYSITELIB}/openapi_schema_validator/py.typed
 ${PYSITELIB}/openapi_schema_validator/shortcuts.py
 ${PYSITELIB}/openapi_schema_validator/shortcuts.pyc
+${PYSITELIB}/openapi_schema_validator/shortcuts.pyo
 ${PYSITELIB}/openapi_schema_validator/validators.py
 ${PYSITELIB}/openapi_schema_validator/validators.pyc
+${PYSITELIB}/openapi_schema_validator/validators.pyo

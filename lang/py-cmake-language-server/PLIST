@@ -1,18 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2023/05/05 09:52:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:09 wiz Exp $
 bin/cmake-language-server-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cmake_language_server/__init__.py
 ${PYSITELIB}/cmake_language_server/__init__.pyc
+${PYSITELIB}/cmake_language_server/__init__.pyo
 ${PYSITELIB}/cmake_language_server/api.py
 ${PYSITELIB}/cmake_language_server/api.pyc
+${PYSITELIB}/cmake_language_server/api.pyo
 ${PYSITELIB}/cmake_language_server/server.py
 ${PYSITELIB}/cmake_language_server/server.pyc
+${PYSITELIB}/cmake_language_server/server.pyo
 ${PYSITELIB}/cmake_language_server/version.py
 ${PYSITELIB}/cmake_language_server/version.pyc
+${PYSITELIB}/cmake_language_server/version.pyo

@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2023/04/30 17:20:36 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:01 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/iniconfig/__init__.py
 ${PYSITELIB}/iniconfig/__init__.pyc
+${PYSITELIB}/iniconfig/__init__.pyo
 ${PYSITELIB}/iniconfig/_parse.py
 ${PYSITELIB}/iniconfig/_parse.pyc
+${PYSITELIB}/iniconfig/_parse.pyo
 ${PYSITELIB}/iniconfig/_version.py
 ${PYSITELIB}/iniconfig/_version.pyc
+${PYSITELIB}/iniconfig/_version.pyo
 ${PYSITELIB}/iniconfig/exceptions.py
 ${PYSITELIB}/iniconfig/exceptions.pyc
+${PYSITELIB}/iniconfig/exceptions.pyo
 ${PYSITELIB}/iniconfig/py.typed

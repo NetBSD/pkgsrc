@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2023/02/09 12:49:42 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:01 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/hatch_nodejs_version/__init__.py
 ${PYSITELIB}/hatch_nodejs_version/__init__.pyc
+${PYSITELIB}/hatch_nodejs_version/__init__.pyo
 ${PYSITELIB}/hatch_nodejs_version/_version.py
 ${PYSITELIB}/hatch_nodejs_version/_version.pyc
+${PYSITELIB}/hatch_nodejs_version/_version.pyo
 ${PYSITELIB}/hatch_nodejs_version/hooks.py
 ${PYSITELIB}/hatch_nodejs_version/hooks.pyc
+${PYSITELIB}/hatch_nodejs_version/hooks.pyo
 ${PYSITELIB}/hatch_nodejs_version/metadata_source.py
 ${PYSITELIB}/hatch_nodejs_version/metadata_source.pyc
+${PYSITELIB}/hatch_nodejs_version/metadata_source.pyo
 ${PYSITELIB}/hatch_nodejs_version/version_source.py
 ${PYSITELIB}/hatch_nodejs_version/version_source.pyc
+${PYSITELIB}/hatch_nodejs_version/version_source.pyo

@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/26 09:59:27 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:57:19 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/prettytable/__init__.py
 ${PYSITELIB}/prettytable/__init__.pyc
+${PYSITELIB}/prettytable/__init__.pyo
 ${PYSITELIB}/prettytable/colortable.py
 ${PYSITELIB}/prettytable/colortable.pyc
+${PYSITELIB}/prettytable/colortable.pyo
 ${PYSITELIB}/prettytable/prettytable.py
 ${PYSITELIB}/prettytable/prettytable.pyc
+${PYSITELIB}/prettytable/prettytable.pyo
 ${PYSITELIB}/prettytable/py.typed

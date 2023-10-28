@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/08/01 23:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/28 19:57:14 wiz Exp $
 
 DISTNAME=	keyring-24.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
 

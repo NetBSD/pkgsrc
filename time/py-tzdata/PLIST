@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/28 09:55:49 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.8 2023/10/28 19:57:21 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tzdata/__init__.py
 ${PYSITELIB}/tzdata/__init__.pyc
+${PYSITELIB}/tzdata/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Africa/Abidjan
 ${PYSITELIB}/tzdata/zoneinfo/Africa/Accra
 ${PYSITELIB}/tzdata/zoneinfo/Africa/Addis_Ababa
@@ -66,6 +64,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Africa/Tunis
 ${PYSITELIB}/tzdata/zoneinfo/Africa/Windhoek
 ${PYSITELIB}/tzdata/zoneinfo/Africa/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Africa/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Africa/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/America/Adak
 ${PYSITELIB}/tzdata/zoneinfo/America/Anchorage
 ${PYSITELIB}/tzdata/zoneinfo/America/Anguilla
@@ -86,6 +85,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/Argentina/Tucuman
 ${PYSITELIB}/tzdata/zoneinfo/America/Argentina/Ushuaia
 ${PYSITELIB}/tzdata/zoneinfo/America/Argentina/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/America/Argentina/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/America/Argentina/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/America/Aruba
 ${PYSITELIB}/tzdata/zoneinfo/America/Asuncion
 ${PYSITELIB}/tzdata/zoneinfo/America/Atikokan
@@ -151,6 +151,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/Indiana/Vincennes
 ${PYSITELIB}/tzdata/zoneinfo/America/Indiana/Winamac
 ${PYSITELIB}/tzdata/zoneinfo/America/Indiana/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/America/Indiana/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/America/Indiana/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/America/Indianapolis
 ${PYSITELIB}/tzdata/zoneinfo/America/Inuvik
 ${PYSITELIB}/tzdata/zoneinfo/America/Iqaluit
@@ -161,6 +162,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/Kentucky/Louisville
 ${PYSITELIB}/tzdata/zoneinfo/America/Kentucky/Monticello
 ${PYSITELIB}/tzdata/zoneinfo/America/Kentucky/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/America/Kentucky/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/America/Kentucky/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/America/Knox_IN
 ${PYSITELIB}/tzdata/zoneinfo/America/Kralendijk
 ${PYSITELIB}/tzdata/zoneinfo/America/La_Paz
@@ -196,6 +198,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/North_Dakota/Center
 ${PYSITELIB}/tzdata/zoneinfo/America/North_Dakota/New_Salem
 ${PYSITELIB}/tzdata/zoneinfo/America/North_Dakota/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/America/North_Dakota/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/America/North_Dakota/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/America/Nuuk
 ${PYSITELIB}/tzdata/zoneinfo/America/Ojinaga
 ${PYSITELIB}/tzdata/zoneinfo/America/Panama
@@ -244,6 +247,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/Yakutat
 ${PYSITELIB}/tzdata/zoneinfo/America/Yellowknife
 ${PYSITELIB}/tzdata/zoneinfo/America/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/America/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/America/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/Casey
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/Davis
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/DumontDUrville
@@ -258,9 +262,11 @@ ${PYSITELIB}/tzdata/zoneinfo/Antarctica/Troll
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/Vostok
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Antarctica/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Antarctica/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Arctic/Longyearbyen
 ${PYSITELIB}/tzdata/zoneinfo/Arctic/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Arctic/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Arctic/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Asia/Aden
 ${PYSITELIB}/tzdata/zoneinfo/Asia/Almaty
 ${PYSITELIB}/tzdata/zoneinfo/Asia/Amman
@@ -362,6 +368,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Asia/Yekaterinburg
 ${PYSITELIB}/tzdata/zoneinfo/Asia/Yerevan
 ${PYSITELIB}/tzdata/zoneinfo/Asia/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Asia/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Asia/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/Azores
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/Bermuda
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/Canary
@@ -376,6 +383,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Atlantic/St_Helena
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/Stanley
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Atlantic/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Atlantic/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Australia/ACT
 ${PYSITELIB}/tzdata/zoneinfo/Australia/Adelaide
 ${PYSITELIB}/tzdata/zoneinfo/Australia/Brisbane
@@ -401,12 +409,14 @@ ${PYSITELIB}/tzdata/zoneinfo/Australia/West
 ${PYSITELIB}/tzdata/zoneinfo/Australia/Yancowinna
 ${PYSITELIB}/tzdata/zoneinfo/Australia/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Australia/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Australia/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/Acre
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/DeNoronha
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/East
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/West
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Brazil/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Brazil/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/CET
 ${PYSITELIB}/tzdata/zoneinfo/CST6CDT
 ${PYSITELIB}/tzdata/zoneinfo/Canada/Atlantic
@@ -419,10 +429,12 @@ ${PYSITELIB}/tzdata/zoneinfo/Canada/Saskatchewan
 ${PYSITELIB}/tzdata/zoneinfo/Canada/Yukon
 ${PYSITELIB}/tzdata/zoneinfo/Canada/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Canada/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Canada/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Chile/Continental
 ${PYSITELIB}/tzdata/zoneinfo/Chile/EasterIsland
 ${PYSITELIB}/tzdata/zoneinfo/Chile/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Chile/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Chile/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Cuba
 ${PYSITELIB}/tzdata/zoneinfo/EET
 ${PYSITELIB}/tzdata/zoneinfo/EST
@@ -466,6 +478,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Etc/Universal
 ${PYSITELIB}/tzdata/zoneinfo/Etc/Zulu
 ${PYSITELIB}/tzdata/zoneinfo/Etc/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Etc/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Etc/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Europe/Amsterdam
 ${PYSITELIB}/tzdata/zoneinfo/Europe/Andorra
 ${PYSITELIB}/tzdata/zoneinfo/Europe/Astrakhan
@@ -532,6 +545,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Europe/Zaporozhye
 ${PYSITELIB}/tzdata/zoneinfo/Europe/Zurich
 ${PYSITELIB}/tzdata/zoneinfo/Europe/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Europe/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Europe/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Factory
 ${PYSITELIB}/tzdata/zoneinfo/GB
 ${PYSITELIB}/tzdata/zoneinfo/GB-Eire
@@ -556,6 +570,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Indian/Mayotte
 ${PYSITELIB}/tzdata/zoneinfo/Indian/Reunion
 ${PYSITELIB}/tzdata/zoneinfo/Indian/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Indian/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Indian/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Iran
 ${PYSITELIB}/tzdata/zoneinfo/Israel
 ${PYSITELIB}/tzdata/zoneinfo/Jamaica
@@ -570,6 +585,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Mexico/BajaSur
 ${PYSITELIB}/tzdata/zoneinfo/Mexico/General
 ${PYSITELIB}/tzdata/zoneinfo/Mexico/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Mexico/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Mexico/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/NZ
 ${PYSITELIB}/tzdata/zoneinfo/NZ-CHAT
 ${PYSITELIB}/tzdata/zoneinfo/Navajo
@@ -621,6 +637,7 @@ ${PYSITELIB}/tzdata/zoneinfo/Pacific/Wallis
 ${PYSITELIB}/tzdata/zoneinfo/Pacific/Yap
 ${PYSITELIB}/tzdata/zoneinfo/Pacific/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/Pacific/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/Pacific/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/Poland
 ${PYSITELIB}/tzdata/zoneinfo/Portugal
 ${PYSITELIB}/tzdata/zoneinfo/ROC
@@ -642,6 +659,7 @@ ${PYSITELIB}/tzdata/zoneinfo/US/Pacific
 ${PYSITELIB}/tzdata/zoneinfo/US/Samoa
 ${PYSITELIB}/tzdata/zoneinfo/US/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/US/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/US/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/UTC
 ${PYSITELIB}/tzdata/zoneinfo/Universal
 ${PYSITELIB}/tzdata/zoneinfo/W-SU
@@ -649,6 +667,7 @@ ${PYSITELIB}/tzdata/zoneinfo/WET
 ${PYSITELIB}/tzdata/zoneinfo/Zulu
 ${PYSITELIB}/tzdata/zoneinfo/__init__.py
 ${PYSITELIB}/tzdata/zoneinfo/__init__.pyc
+${PYSITELIB}/tzdata/zoneinfo/__init__.pyo
 ${PYSITELIB}/tzdata/zoneinfo/iso3166.tab
 ${PYSITELIB}/tzdata/zoneinfo/leapseconds
 ${PYSITELIB}/tzdata/zoneinfo/tzdata.zi

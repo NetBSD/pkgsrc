@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/08/01 23:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:09 wiz Exp $
 
 DISTNAME=	contourpy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/contourpy/}
 

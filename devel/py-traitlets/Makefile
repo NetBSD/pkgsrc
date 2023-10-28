@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/10/27 08:20:17 adam Exp $
+# $NetBSD: Makefile,v 1.30 2023/10/28 19:57:08 wiz Exp $
 
 DISTNAME=	traitlets-5.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
 

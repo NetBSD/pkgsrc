@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/10/25 09:08:56 adam Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/28 19:57:12 wiz Exp $
 
 DISTNAME=	asciinema-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc multimedia python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciinema/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://asciinema.org/
 COMMENT=	Terminal session recorder
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/06/06 12:42:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/28 19:57:16 wiz Exp $
 
 DISTNAME=	jeepney-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jeepney/}
 
