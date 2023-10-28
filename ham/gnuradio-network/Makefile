@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/10/21 17:10:46 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/28 08:43:06 mef Exp $
 
 PKGNAME=	gnuradio-network-${VERSION}
-PKGREVISION=	2
 COMMENT=	Network blocks for GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"
