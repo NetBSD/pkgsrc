@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 21:51:36 sekiya Exp $
 
 DISTNAME=	kea-${VERSION}
 #PKGREVISION=	1
 COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
-PKGREVISION=	3
 
 .include "options.mk"
 
@@ -14,7 +13,7 @@ MAINTAINER=		sekiya@NetBSD.org
 HOMEPAGE=		https://www.isc.org/kea/
 LICENSE=		mpl-2.0
 
-VERSION=		2.2.0
+VERSION=		2.4.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +22,8 @@ USE_LIBTOOL=		yes
 PKG_SYSCONFSUBDIR=	kea
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c99 c++
+USE_LANGUAGES+=		c++ c
+USE_CC_FEATURES+=	c99
 
 RCD_SCRIPTS=		kea
 
