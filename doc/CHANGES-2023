@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6226 2023/10/28 20:28:29 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.6227 2023/10/28 20:31:46 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9120,3 +9120,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/hs-hslua-list to 1.1.1 [pho 2023-10-28]
 	Updated www/hs-http-media to 0.8.1.1 [pho 2023-10-28]
 	Updated devel/libxtend to 0.2.0 [bacon 2023-10-28]
+	Updated biology/biolibc to 0.2.6 [bacon 2023-10-28]
