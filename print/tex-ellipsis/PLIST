@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/28 21:18:47 riastradh Exp $
+share/texmf-dist/tex/latex/ellipsis/ellipsis.sty
