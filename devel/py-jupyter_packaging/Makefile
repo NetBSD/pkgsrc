@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/05/04 19:16:24 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:03 wiz Exp $
 
 DISTNAME=	jupyter_packaging-0.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-packaging/}
 

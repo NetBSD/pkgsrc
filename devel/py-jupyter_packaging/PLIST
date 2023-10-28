@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/04 19:16:24 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:03 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/jupyter_packaging/__init__.py
 ${PYSITELIB}/jupyter_packaging/__init__.pyc
+${PYSITELIB}/jupyter_packaging/__init__.pyo
 ${PYSITELIB}/jupyter_packaging/__main__.py
 ${PYSITELIB}/jupyter_packaging/__main__.pyc
+${PYSITELIB}/jupyter_packaging/__main__.pyo
 ${PYSITELIB}/jupyter_packaging/build_api.py
 ${PYSITELIB}/jupyter_packaging/build_api.pyc
+${PYSITELIB}/jupyter_packaging/build_api.pyo
 ${PYSITELIB}/jupyter_packaging/setupbase.py
 ${PYSITELIB}/jupyter_packaging/setupbase.pyc
+${PYSITELIB}/jupyter_packaging/setupbase.pyo

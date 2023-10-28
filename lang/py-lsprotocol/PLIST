@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/05 09:20:06 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:10 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/lsprotocol/__init__.py
 ${PYSITELIB}/lsprotocol/__init__.pyc
+${PYSITELIB}/lsprotocol/__init__.pyo
 ${PYSITELIB}/lsprotocol/_hooks.py
 ${PYSITELIB}/lsprotocol/_hooks.pyc
+${PYSITELIB}/lsprotocol/_hooks.pyo
 ${PYSITELIB}/lsprotocol/converters.py
 ${PYSITELIB}/lsprotocol/converters.pyc
+${PYSITELIB}/lsprotocol/converters.pyo
 ${PYSITELIB}/lsprotocol/py.typed
 ${PYSITELIB}/lsprotocol/types.py
 ${PYSITELIB}/lsprotocol/types.pyc
+${PYSITELIB}/lsprotocol/types.pyo
 ${PYSITELIB}/lsprotocol/validators.py
 ${PYSITELIB}/lsprotocol/validators.pyc
+${PYSITELIB}/lsprotocol/validators.pyo

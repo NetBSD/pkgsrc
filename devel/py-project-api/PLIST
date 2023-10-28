@@ -1,24 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/01 09:15:39 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:05 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pyproject_api/__init__.py
 ${PYSITELIB}/pyproject_api/__init__.pyc
+${PYSITELIB}/pyproject_api/__init__.pyo
 ${PYSITELIB}/pyproject_api/__main__.py
 ${PYSITELIB}/pyproject_api/__main__.pyc
+${PYSITELIB}/pyproject_api/__main__.pyo
 ${PYSITELIB}/pyproject_api/_backend.py
 ${PYSITELIB}/pyproject_api/_backend.pyc
 ${PYSITELIB}/pyproject_api/_backend.pyi
+${PYSITELIB}/pyproject_api/_backend.pyo
 ${PYSITELIB}/pyproject_api/_frontend.py
 ${PYSITELIB}/pyproject_api/_frontend.pyc
+${PYSITELIB}/pyproject_api/_frontend.pyo
 ${PYSITELIB}/pyproject_api/_util.py
 ${PYSITELIB}/pyproject_api/_util.pyc
+${PYSITELIB}/pyproject_api/_util.pyo
 ${PYSITELIB}/pyproject_api/_version.py
 ${PYSITELIB}/pyproject_api/_version.pyc
+${PYSITELIB}/pyproject_api/_version.pyo
 ${PYSITELIB}/pyproject_api/_via_fresh_subprocess.py
 ${PYSITELIB}/pyproject_api/_via_fresh_subprocess.pyc
+${PYSITELIB}/pyproject_api/_via_fresh_subprocess.pyo
 ${PYSITELIB}/pyproject_api/py.typed

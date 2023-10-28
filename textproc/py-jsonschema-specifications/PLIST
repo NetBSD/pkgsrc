@@ -1,15 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/25 21:32:35 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:17 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/jsonschema_specifications/__init__.py
 ${PYSITELIB}/jsonschema_specifications/__init__.pyc
+${PYSITELIB}/jsonschema_specifications/__init__.pyo
 ${PYSITELIB}/jsonschema_specifications/_core.py
 ${PYSITELIB}/jsonschema_specifications/_core.pyc
+${PYSITELIB}/jsonschema_specifications/_core.pyo
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/applicator
 ${PYSITELIB}/jsonschema_specifications/schemas/draft201909/vocabularies/content
@@ -32,3 +31,4 @@ ${PYSITELIB}/jsonschema_specifications/schemas/draft6/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/schemas/draft7/metaschema.json
 ${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.py
 ${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.pyc
+${PYSITELIB}/jsonschema_specifications/tests/test_jsonschema_specifications.pyo

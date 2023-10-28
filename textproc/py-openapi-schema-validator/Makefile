@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/10/07 20:15:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/28 19:57:18 wiz Exp $
 
 DISTNAME=	openapi_schema_validator-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-schema-validator/}
 

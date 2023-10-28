@@ -1,26 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/04 12:40:09 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:21 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytz_deprecation_shim/__init__.py
 ${PYSITELIB}/pytz_deprecation_shim/__init__.pyc
+${PYSITELIB}/pytz_deprecation_shim/__init__.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_common.py
 ${PYSITELIB}/pytz_deprecation_shim/_common.pyc
+${PYSITELIB}/pytz_deprecation_shim/_common.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_compat.py
 ${PYSITELIB}/pytz_deprecation_shim/_compat.pyc
+${PYSITELIB}/pytz_deprecation_shim/_compat.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_compat_py2.py
 ${PYSITELIB}/pytz_deprecation_shim/_compat_py2.pyc
+${PYSITELIB}/pytz_deprecation_shim/_compat_py2.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_compat_py3.py
 ${PYSITELIB}/pytz_deprecation_shim/_compat_py3.pyc
+${PYSITELIB}/pytz_deprecation_shim/_compat_py3.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_exceptions.py
 ${PYSITELIB}/pytz_deprecation_shim/_exceptions.pyc
+${PYSITELIB}/pytz_deprecation_shim/_exceptions.pyo
 ${PYSITELIB}/pytz_deprecation_shim/_impl.py
 ${PYSITELIB}/pytz_deprecation_shim/_impl.pyc
+${PYSITELIB}/pytz_deprecation_shim/_impl.pyo
 ${PYSITELIB}/pytz_deprecation_shim/helpers.py
 ${PYSITELIB}/pytz_deprecation_shim/helpers.pyc
+${PYSITELIB}/pytz_deprecation_shim/helpers.pyo

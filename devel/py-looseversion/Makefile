@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/07/08 13:11:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:03 wiz Exp $
 
 DISTNAME=	looseversion-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/looseversion/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2023/08/22 20:38:20 adam Exp $
+# $NetBSD: Makefile,v 1.34 2023/10/28 19:57:09 wiz Exp $
 
 DISTNAME=	wheel-0.41.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
 
@@ -18,10 +19,10 @@ USE_LANGUAGES=	c # for tests only
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# needs to be installed first
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-# needs to be installed first
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} wheel wheel-${PYVERSSUFFIX} || ${TRUE}

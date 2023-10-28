@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/05/17 16:01:48 adam Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/28 19:57:15 wiz Exp $
 
 DISTNAME=	Send2Trash-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Send2Trash/}
 

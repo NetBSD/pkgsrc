@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/05/15 21:22:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:23 wiz Exp $
 
 DISTNAME=	Flask-Session-0.5.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask-session/}
 

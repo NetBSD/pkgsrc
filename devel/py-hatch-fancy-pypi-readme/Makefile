@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/05/30 07:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:00 wiz Exp $
 
 DISTNAME=	hatch_fancy_pypi_readme-23.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-fancy-pypi-readme/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2023/10/26 22:50:59 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2023/10/28 19:56:55 wiz Exp $
 
 DISTNAME=	matrix-synapse-1.95.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	synapse

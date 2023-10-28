@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/05/05 06:02:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:20 wiz Exp $
 
 DISTNAME=	sphinxcontrib-jquery-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-jquery/}
 

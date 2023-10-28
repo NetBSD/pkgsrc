@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/08/01 23:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:16 wiz Exp $
 
 DISTNAME=	nkdfu-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nkdfu/}
 

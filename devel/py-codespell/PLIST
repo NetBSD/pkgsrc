@@ -1,24 +1,26 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/04 21:40:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:56:58 wiz Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/codespell_lib/__init__.py
 ${PYSITELIB}/codespell_lib/__init__.pyc
+${PYSITELIB}/codespell_lib/__init__.pyo
 ${PYSITELIB}/codespell_lib/__main__.py
 ${PYSITELIB}/codespell_lib/__main__.pyc
+${PYSITELIB}/codespell_lib/__main__.pyo
 ${PYSITELIB}/codespell_lib/_codespell.py
 ${PYSITELIB}/codespell_lib/_codespell.pyc
+${PYSITELIB}/codespell_lib/_codespell.pyo
 ${PYSITELIB}/codespell_lib/_version.py
 ${PYSITELIB}/codespell_lib/_version.pyc
+${PYSITELIB}/codespell_lib/_version.pyo
 ${PYSITELIB}/codespell_lib/data/__init__.py
 ${PYSITELIB}/codespell_lib/data/__init__.pyc
+${PYSITELIB}/codespell_lib/data/__init__.pyo
 ${PYSITELIB}/codespell_lib/data/dictionary.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_code.txt
 ${PYSITELIB}/codespell_lib/data/dictionary_en-GB_to_en-US.txt
@@ -30,9 +32,12 @@ ${PYSITELIB}/codespell_lib/data/linux-kernel.exclude
 ${PYSITELIB}/codespell_lib/py.typed
 ${PYSITELIB}/codespell_lib/tests/__init__.py
 ${PYSITELIB}/codespell_lib/tests/__init__.pyc
+${PYSITELIB}/codespell_lib/tests/__init__.pyo
 ${PYSITELIB}/codespell_lib/tests/data/en_GB-additional.wordlist
 ${PYSITELIB}/codespell_lib/tests/data/en_US-additional.wordlist
 ${PYSITELIB}/codespell_lib/tests/test_basic.py
 ${PYSITELIB}/codespell_lib/tests/test_basic.pyc
+${PYSITELIB}/codespell_lib/tests/test_basic.pyo
 ${PYSITELIB}/codespell_lib/tests/test_dictionary.py
 ${PYSITELIB}/codespell_lib/tests/test_dictionary.pyc
+${PYSITELIB}/codespell_lib/tests/test_dictionary.pyo

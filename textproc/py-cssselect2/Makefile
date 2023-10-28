@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/28 19:57:17 wiz Exp $
 
 DISTNAME=	cssselect2-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssselect2/}
 

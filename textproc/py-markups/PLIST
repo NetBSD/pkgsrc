@@ -1,25 +1,29 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/31 21:58:36 gutteridge Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:18 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/markups/__init__.py
 ${PYSITELIB}/markups/__init__.pyc
+${PYSITELIB}/markups/__init__.pyo
 ${PYSITELIB}/markups/abstract.py
 ${PYSITELIB}/markups/abstract.pyc
+${PYSITELIB}/markups/abstract.pyo
 ${PYSITELIB}/markups/asciidoc.py
 ${PYSITELIB}/markups/asciidoc.pyc
+${PYSITELIB}/markups/asciidoc.pyo
 ${PYSITELIB}/markups/common.py
 ${PYSITELIB}/markups/common.pyc
+${PYSITELIB}/markups/common.pyo
 ${PYSITELIB}/markups/markdown.py
 ${PYSITELIB}/markups/markdown.pyc
+${PYSITELIB}/markups/markdown.pyo
 ${PYSITELIB}/markups/py.typed
 ${PYSITELIB}/markups/restructuredtext.py
 ${PYSITELIB}/markups/restructuredtext.pyc
+${PYSITELIB}/markups/restructuredtext.pyo
 ${PYSITELIB}/markups/textile.py
 ${PYSITELIB}/markups/textile.pyc
+${PYSITELIB}/markups/textile.pyo
