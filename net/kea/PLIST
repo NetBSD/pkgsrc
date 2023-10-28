@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/19 07:44:50 sekiya Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/28 21:51:37 sekiya Exp $
 include/kea/asiodns/asiodns_messages.h
 include/kea/asiodns/io_fetch.h
 include/kea/asiodns/logger.h
@@ -19,6 +19,7 @@ include/kea/asiolink/io_endpoint.h
 include/kea/asiolink/io_error.h
 include/kea/asiolink/io_service.h
 include/kea/asiolink/io_service_signal.h
+include/kea/asiolink/io_service_thread_pool.h
 include/kea/asiolink/io_socket.h
 include/kea/asiolink/openssl_tls.h
 include/kea/asiolink/process_spawn.h
@@ -138,6 +139,8 @@ include/kea/dhcp_ddns/ncr_udp.h
 include/kea/dhcpsrv/alloc_engine.h
 include/kea/dhcpsrv/alloc_engine_log.h
 include/kea/dhcpsrv/alloc_engine_messages.h
+include/kea/dhcpsrv/allocation_state.h
+include/kea/dhcpsrv/allocator.h
 include/kea/dhcpsrv/base_host_data_source.h
 include/kea/dhcpsrv/cache_host_data_source.h
 include/kea/dhcpsrv/callout_handle_store.h
@@ -149,6 +152,7 @@ include/kea/dhcpsrv/cfg_consistency.h
 include/kea/dhcpsrv/cfg_db_access.h
 include/kea/dhcpsrv/cfg_duid.h
 include/kea/dhcpsrv/cfg_expiration.h
+include/kea/dhcpsrv/cfg_globals.h
 include/kea/dhcpsrv/cfg_host_operations.h
 include/kea/dhcpsrv/cfg_hosts.h
 include/kea/dhcpsrv/cfg_hosts_util.h
@@ -178,7 +182,8 @@ include/kea/dhcpsrv/dhcp4o6_ipc.h
 include/kea/dhcpsrv/dhcpsrv_exceptions.h
 include/kea/dhcpsrv/dhcpsrv_log.h
 include/kea/dhcpsrv/dhcpsrv_messages.h
-include/kea/dhcpsrv/free_lease_queue.h
+include/kea/dhcpsrv/flq_allocation_state.h
+include/kea/dhcpsrv/flq_allocator.h
 include/kea/dhcpsrv/host.h
 include/kea/dhcpsrv/host_container.h
 include/kea/dhcpsrv/host_data_source_factory.h
@@ -187,6 +192,8 @@ include/kea/dhcpsrv/hosts_log.h
 include/kea/dhcpsrv/hosts_messages.h
 include/kea/dhcpsrv/ip_range.h
 include/kea/dhcpsrv/ip_range_permutation.h
+include/kea/dhcpsrv/iterative_allocation_state.h
+include/kea/dhcpsrv/iterative_allocator.h
 include/kea/dhcpsrv/key_from_key.h
 include/kea/dhcpsrv/lease.h
 include/kea/dhcpsrv/lease_file_loader.h
@@ -220,6 +227,8 @@ include/kea/dhcpsrv/parsers/simple_parser6.h
 ${PLIST.pgsql}include/kea/dhcpsrv/pgsql_host_data_source.h
 ${PLIST.pgsql}include/kea/dhcpsrv/pgsql_lease_mgr.h
 include/kea/dhcpsrv/pool.h
+include/kea/dhcpsrv/random_allocation_state.h
+include/kea/dhcpsrv/random_allocator.h
 include/kea/dhcpsrv/resource_handler.h
 include/kea/dhcpsrv/sanity_checker.h
 include/kea/dhcpsrv/shared_network.h
@@ -228,6 +237,7 @@ include/kea/dhcpsrv/subnet.h
 include/kea/dhcpsrv/subnet_id.h
 include/kea/dhcpsrv/subnet_selector.h
 include/kea/dhcpsrv/timer_mgr.h
+include/kea/dhcpsrv/tracking_lease_mgr.h
 include/kea/dhcpsrv/utils.h
 include/kea/dhcpsrv/writable_host_data_source.h
 include/kea/dns/dns_fwd.h
@@ -308,7 +318,6 @@ include/kea/http/http_log.h
 include/kea/http/http_message.h
 include/kea/http/http_message_parser_base.h
 include/kea/http/http_messages.h
-include/kea/http/http_thread_pool.h
 include/kea/http/http_types.h
 include/kea/http/listener.h
 include/kea/http/listener_impl.h
@@ -371,6 +380,15 @@ include/kea/process/redact_config.h
 include/kea/stats/context.h
 include/kea/stats/observation.h
 include/kea/stats/stats_mgr.h
+include/kea/tcp/mt_tcp_listener_mgr.h
+include/kea/tcp/tcp_connection.h
+include/kea/tcp/tcp_connection_acceptor.h
+include/kea/tcp/tcp_connection_pool.h
+include/kea/tcp/tcp_listener.h
+include/kea/tcp/tcp_log.h
+include/kea/tcp/tcp_messages.h
+include/kea/tcp/tcp_stream_msg.h
+include/kea/util/bigints.h
 include/kea/util/boost_time_utils.h
 include/kea/util/buffer.h
 include/kea/util/csv_file.h
@@ -442,6 +460,7 @@ ${PLIST.mysql}lib/libkea-mysql.la
 ${PLIST.pgsql}lib/libkea-pgsql.la
 lib/libkea-process.la
 lib/libkea-stats.la
+lib/libkea-tcp.la
 lib/libkea-util-io.la
 lib/libkea-util.la
 man/man8/kea-admin.8
@@ -490,8 +509,10 @@ share/doc/kea/examples/kea4/classify2.json
 share/doc/kea/examples/kea4/comments.json
 share/doc/kea/examples/kea4/config-backend.json
 share/doc/kea/examples/kea4/dhcpv4-over-dhcpv6.json
+share/doc/kea/examples/kea4/dnr.json
 share/doc/kea/examples/kea4/global-reservations.json
-share/doc/kea/examples/kea4/ha-load-balancing-primary.json
+share/doc/kea/examples/kea4/ha-load-balancing-server1-mt-with-tls.json
+share/doc/kea/examples/kea4/ha-load-balancing-server2-mt.json
 share/doc/kea/examples/kea4/hooks-radius.json
 share/doc/kea/examples/kea4/hooks.json
 share/doc/kea/examples/kea4/leases-expiration.json
@@ -515,9 +536,11 @@ share/doc/kea/examples/kea6/classify2.json
 share/doc/kea/examples/kea6/comments.json
 share/doc/kea/examples/kea6/config-backend.json
 share/doc/kea/examples/kea6/dhcpv4-over-dhcpv6.json
+share/doc/kea/examples/kea6/dnr.json
 share/doc/kea/examples/kea6/duid.json
 share/doc/kea/examples/kea6/global-reservations.json
-share/doc/kea/examples/kea6/ha-hot-standby.json
+share/doc/kea/examples/kea6/ha-hot-standby-server1-with-tls.json
+share/doc/kea/examples/kea6/ha-hot-standby-server2.json
 share/doc/kea/examples/kea6/hooks.json
 share/doc/kea/examples/kea6/iPXE.json
 share/doc/kea/examples/kea6/leases-expiration.json
@@ -541,6 +564,11 @@ share/doc/kea/examples/netconf/kea-dhcp6-operations/twopools.xml
 share/doc/kea/examples/netconf/kea-dhcp6-operations/twosubnets.xml
 share/doc/kea/examples/netconf/simple-dhcp4.json
 share/doc/kea/examples/netconf/simple-dhcp6.json
+share/doc/kea/examples/template-ha-mt-tls/info.md
+share/doc/kea/examples/template-ha-mt-tls/kea-ca-1.conf
+share/doc/kea/examples/template-ha-mt-tls/kea-ca-2.conf
+share/doc/kea/examples/template-ha-mt-tls/kea-dhcp4-1.conf
+share/doc/kea/examples/template-ha-mt-tls/kea-dhcp4-2.conf
 share/doc/kea/examples/template-power-user-home/info.md
 share/doc/kea/examples/template-power-user-home/kea-ca-1.conf
 share/doc/kea/examples/template-power-user-home/kea-ca-2.conf
@@ -552,6 +580,7 @@ share/examples/kea/kea-dhcp-ddns.conf
 share/examples/kea/kea-dhcp4.conf
 share/examples/kea/kea-dhcp6.conf
 share/examples/kea/keactrl.conf
+share/examples/rc.d/kea
 share/kea/api/build-report.json
 share/kea/api/cache-clear.json
 share/kea/api/cache-flush.json
@@ -569,12 +598,14 @@ share/kea/api/class-list.json
 share/kea/api/class-update.json
 share/kea/api/config-backend-pull.json
 share/kea/api/config-get.json
+share/kea/api/config-hash-get.json
 share/kea/api/config-reload.json
 share/kea/api/config-set.json
 share/kea/api/config-test.json
 share/kea/api/config-write.json
 share/kea/api/dhcp-disable.json
 share/kea/api/dhcp-enable.json
+share/kea/api/extended-info4-upgrade.json
 share/kea/api/gss-tsig-get-all.json
 share/kea/api/gss-tsig-get.json
 share/kea/api/gss-tsig-key-del.json
@@ -605,6 +636,7 @@ share/kea/api/lease4-get.json
 share/kea/api/lease4-resend-ddns.json
 share/kea/api/lease4-update.json
 share/kea/api/lease4-wipe.json
+share/kea/api/lease4-write.json
 share/kea/api/lease6-add.json
 share/kea/api/lease6-bulk-apply.json
 share/kea/api/lease6-del.json
@@ -616,6 +648,7 @@ share/kea/api/lease6-get.json
 share/kea/api/lease6-resend-ddns.json
 share/kea/api/lease6-update.json
 share/kea/api/lease6-wipe.json
+share/kea/api/lease6-write.json
 share/kea/api/leases-reclaim.json
 share/kea/api/libreload.json
 share/kea/api/list-commands.json
@@ -708,10 +741,12 @@ share/kea/api/remote-subnet6-set.json
 share/kea/api/reservation-add.json
 share/kea/api/reservation-del.json
 share/kea/api/reservation-get-all.json
+share/kea/api/reservation-get-by-address.json
 share/kea/api/reservation-get-by-hostname.json
 share/kea/api/reservation-get-by-id.json
 share/kea/api/reservation-get-page.json
 share/kea/api/reservation-get.json
+share/kea/api/reservation-update.json
 share/kea/api/server-tag-get.json
 share/kea/api/shutdown.json
 share/kea/api/stat-lease4-get.json
@@ -769,6 +804,11 @@ share/kea/scripts/mysql/upgrade_010_to_011.sh
 share/kea/scripts/mysql/upgrade_011_to_012.sh
 share/kea/scripts/mysql/upgrade_012_to_013.sh
 share/kea/scripts/mysql/upgrade_013_to_014.sh
+share/kea/scripts/mysql/upgrade_014_to_015.sh
+share/kea/scripts/mysql/upgrade_015_to_016.sh
+share/kea/scripts/mysql/upgrade_016_to_017.sh
+share/kea/scripts/mysql/upgrade_017_to_018.sh
+share/kea/scripts/mysql/upgrade_018_to_019.sh
 share/kea/scripts/mysql/wipe_data.sh
 share/kea/scripts/pgsql/dhcpdb_create.pgsql
 share/kea/scripts/pgsql/dhcpdb_drop.pgsql
@@ -790,4 +830,9 @@ share/kea/scripts/pgsql/upgrade_009_to_010.sh
 share/kea/scripts/pgsql/upgrade_010_to_011.sh
 share/kea/scripts/pgsql/upgrade_011_to_012.sh
 share/kea/scripts/pgsql/upgrade_012_to_013.sh
+share/kea/scripts/pgsql/upgrade_013_to_014.sh
+share/kea/scripts/pgsql/upgrade_014_to_015.sh
+share/kea/scripts/pgsql/upgrade_015_to_016.sh
+share/kea/scripts/pgsql/upgrade_016_to_017.sh
+share/kea/scripts/pgsql/upgrade_017_to_018.sh
 share/kea/scripts/pgsql/wipe_data.sh
