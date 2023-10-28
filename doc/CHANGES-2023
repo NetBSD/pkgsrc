@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6228 2023/10/28 20:32:46 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6229 2023/10/28 20:33:47 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9122,3 +9122,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/libxtend to 0.2.0 [bacon 2023-10-28]
 	Updated biology/biolibc to 0.2.6 [bacon 2023-10-28]
 	Updated textproc/hs-charset to 0.3.10 [pho 2023-10-28]
+	Updated biology/fasda to 0.1.5 [bacon 2023-10-28]
