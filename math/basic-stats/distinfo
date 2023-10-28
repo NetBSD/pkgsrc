@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/06/12 14:35:09 bacon Exp $
+$NetBSD: distinfo,v 1.2 2023/10/28 20:50:39 bacon Exp $
 
-BLAKE2s (basic-stats-0.1.2.tar.gz) = 7ef4d38316427d04a919737196c762e8c8b2058824f1009931b6c8bb84ce2c7c
-SHA512 (basic-stats-0.1.2.tar.gz) = 99a3b73ca850ac457f6f92201073bb5c8dc1301d1947becffae01b4c3181eb736c7390c10da6f26043a9160f26065145c1cea5bd1b834c09daad4f57e9e2ed2b
-Size (basic-stats-0.1.2.tar.gz) = 26840 bytes
+BLAKE2s (basic-stats-0.1.2.8-338a259d9fb411f7217f5e3348c2c1bbef834f47.tar.gz) = 7456b9a145ed1e704c86499a1095a06be174ea14ced26dd3a0a00ceed6c6c8c6
+SHA512 (basic-stats-0.1.2.8-338a259d9fb411f7217f5e3348c2c1bbef834f47.tar.gz) = 1eca5c0c45fa262abc94edc69e075ad8ea261663c97558d62a72f205d405550fd61a196661b30ad99f2d08e76b8328bfbf05c304d7dd804bf8a93381468bfb6c
+Size (basic-stats-0.1.2.8-338a259d9fb411f7217f5e3348c2c1bbef834f47.tar.gz) = 27087 bytes
