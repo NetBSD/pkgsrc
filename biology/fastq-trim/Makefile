@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/12/28 15:27:16 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/28 20:35:44 bacon Exp $
 
-DISTNAME=	fastq-trim-0.1.2
+DISTNAME=	fastq-trim-0.1.3
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
