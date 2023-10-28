@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/28 21:18:47 riastradh Exp $
+
+BLAKE2s (ellipsis.r55418.tar.xz) = 48f429fb687e565ef652543ca851f4d2465eafa0cb6f64e295dce2c34a45fb2e
+SHA512 (ellipsis.r55418.tar.xz) = 009bc55dac8eab88e27124317acbf9f3101959cefa4419b507ab74f49453f72f272db2b4826424f3d8c76efb50163c11d6eed63e1219cae2a2632bb629fba96a
+Size (ellipsis.r55418.tar.xz) = 1648 bytes
