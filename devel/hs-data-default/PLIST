@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 12:01:50 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/28 12:03:03 pho Exp $
 lib/data-default-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-default-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default.dyn_hi
