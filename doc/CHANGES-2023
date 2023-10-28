@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6212 2023/10/28 09:45:14 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6213 2023/10/28 09:52:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9104,3 +9104,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated ham/gnuradio-core to 3.10.8.0 [mef 2023-10-28]
 	Added lang/hs-hslua-repl version 0.1.1 [pho 2023-10-28]
 	Updated textproc/hs-doclayout to 0.4.0.1 [pho 2023-10-28]
+	Updated textproc/hs-commonmark to 0.2.4 [pho 2023-10-28]
