@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2023/10/11 08:41:27 adam Exp $
+# $NetBSD: Makefile,v 1.60 2023/10/29 17:11:35 adam Exp $
 
-DISTNAME=	apsw-3.43.1.1
+DISTNAME=	apsw-3.43.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
@@ -13,11 +13,12 @@ HOMEPAGE=	https://github.com/rogerbinns/apsw
 COMMENT=	Python wrapper for SQLite
 LICENSE=	zlib
 
-PYSETUPBUILDARGS+=	--enable=load_extension
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=${PKGVERSION_NOREV:R}
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
