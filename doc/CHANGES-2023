@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6281 2023/10/29 16:59:30 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6282 2023/10/29 17:00:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9178,3 +9178,11 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.84.0 [taca 2023-10-29]
 	Updated devel/py-greenlet to 3.0.1 [wiz 2023-10-29]
 	Updated textproc/py-Levenshtein to 0.23.0 [wiz 2023-10-29]
+	Updated lang/py-executing to 2.0.1 [adam 2023-10-29]
+	Updated textproc/py-rapidjson to 1.13 [adam 2023-10-29]
+	Updated devel/py-test-env to 1.1.0 [adam 2023-10-29]
+	Updated devel/py-test-rerunfailures to 12.0 [adam 2023-10-29]
+	Updated devel/py-pdm to 2.10.0 [adam 2023-10-29]
+	Updated devel/py-jupyter_core to 5.4.0 [adam 2023-10-29]
+	Updated devel/py-jupyter_client to 8.5.0 [adam 2023-10-29]
+	Updated devel/py-jupyter_events to 0.8.0 [adam 2023-10-29]
