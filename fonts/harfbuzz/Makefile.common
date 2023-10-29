@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2023/10/20 10:41:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.40 2023/10/29 21:16:21 riastradh Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-8.2.2
@@ -23,6 +23,9 @@ USE_CXX_FEATURES+=	c++11 is_trivially_copy_constructible
 
 USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	pkg-config
+
+# src/meson.build:954:29: ERROR: gnome.generate_gir got unknown keyword arguments "env"
+MESON_REQD+=	1.2.0
 
 # cairo/fontconfig are only needed for command line utilities
 MESON_ARGS+=	-Dcairo=disabled
