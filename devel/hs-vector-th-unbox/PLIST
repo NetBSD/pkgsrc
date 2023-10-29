@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/25 18:50:48 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/29 07:20:37 pho Exp $
 lib/vector-th-unbox-${PKGVERSION}/${HS_VERSION}/package-description
 lib/vector-th-unbox-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -7,13 +7,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Unboxed/Deriving.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/Data-Vector-Unboxed-Deriving.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/vector-th-unbox-${PKGVERSION}/html/vector-th-unbox.haddock
