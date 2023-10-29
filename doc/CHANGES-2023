@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6301 2023/10/29 22:04:21 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6302 2023/10/29 22:44:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9209,3 +9209,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-seaborn to 0.13.0 [adam 2023-10-29]
 	Added security/hs-crypton-x509 version 1.7.6 [pho 2023-10-29]
 	Added devel/py-ruff version 0.1.3 [wiz 2023-10-29]
+	Added devel/py-click-aliases version 1.0.2 [wiz 2023-10-29]
