@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2023/10/15 12:04:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.69 2023/10/29 14:48:08 bsiegert Exp $
 
 DISTNAME=	git-lfs-3.3.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-lfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
