@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/30 06:58:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 07:50:46 pho Exp $
 lib/hw-prim-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hw-prim-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HaskellWorks/Control/Monad/Lazy.dyn_hi
@@ -145,7 +145,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hw_prim.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Control-Monad-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Data-AtIndex.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Data-Branchless.html
@@ -193,10 +193,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Dat
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Data-Word.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/HaskellWorks-Foreign.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/hw-prim.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hw-prim-${PKGVERSION}/html/synopsis.png
