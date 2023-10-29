@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 17:51:24 bsiegert Exp $
+
+BLAKE2s (golang.org_x_mod_@v_v0.13.0.mod) = 756609d6566fdcb4fd11633882849e0163d09de134e085f0aa006dcbb10825e0
+SHA512 (golang.org_x_mod_@v_v0.13.0.mod) = d741bbf0270c5cda8ff6abb6c3aeec25f5edadae32df5f146c4c88b9c30abef2f2e9bc69f214757b4702f2df9dc08fbd2073e4fa64e683850d33a60806c8c4ba
+Size (golang.org_x_mod_@v_v0.13.0.mod) = 84 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.13.0.zip) = 5442a7a7a4c918b07b22da8e57edd42256ad97352a5fd969acc6194f907a29bc
+SHA512 (golang.org_x_mod_@v_v0.13.0.zip) = 18d7c2855de3e4c51cc8b0492461e6cda988ef3045e2fe51aabb8bc81307343c00f6e4a428977ce875021d8702543160c1d01a3910df28672690ab8ba82d754e
+Size (golang.org_x_mod_@v_v0.13.0.zip) = 165088 bytes
+BLAKE2s (golang.org_x_sys_@v_v0.13.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
+SHA512 (golang.org_x_sys_@v_v0.13.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
+Size (golang.org_x_sys_@v_v0.13.0.mod) = 33 bytes
+BLAKE2s (golang.org_x_sys_@v_v0.13.0.zip) = 1c9456a2c216dd40033994c87ac81cb2012b746fbf6497b6758506b0d41fb300
+SHA512 (golang.org_x_sys_@v_v0.13.0.zip) = a31f7992053e29a59a3af8e5931b719f445cf5704923215c6da16b4a5c419f2dd14f757f38a91d55c9058bc914e7eca9604c969a2032a1ff368e6e129d30f416
+Size (golang.org_x_sys_@v_v0.13.0.zip) = 1901653 bytes
+BLAKE2s (telemetry-config-v0.8.0.tar.gz) = ae64efa9b5edd7d791660cea8a6e19595440deec5f3a540fd0fbc68b6e876ef1
+SHA512 (telemetry-config-v0.8.0.tar.gz) = f46f34df93d99cad474d93105f30e1d688c0e10f7b5dd0856ac6c44c69a8c4f60427a2779ded7e921fafee36c907cba6b07a3790ed29476b72ce9dc76002c363
+Size (telemetry-config-v0.8.0.tar.gz) = 898267 bytes
