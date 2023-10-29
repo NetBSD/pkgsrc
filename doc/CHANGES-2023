@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6252 2023/10/29 09:39:24 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6253 2023/10/29 09:42:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9147,3 +9147,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hint to 0.9.0.8 [pho 2023-10-29]
 	Updated textproc/hs-lucid to 2.11.20230408 [pho 2023-10-29]
 	Updated sysutils/hs-typed-process to 0.2.11.1 [pho 2023-10-29]
+	Updated devel/hs-streaming-commons to 0.2.2.6 [pho 2023-10-29]
