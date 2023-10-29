@@ -1,0 +1,6 @@
+This package contains the gotelemetry tool, which allows opting in or
+out from Go telemetry reporting. It will also let you see local
+telemetry data in a web interface.
+
+Note that by default, uploading telemetry data is always disabled. Run
+"gotelemetry on" to enable collection and upload of telemetry data.
