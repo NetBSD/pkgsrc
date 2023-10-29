@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/25 17:14:39 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/29 03:57:49 pho Exp $
 bin/cabal
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -44,6 +44,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdFreeze.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddock.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddock.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddock.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddockProject.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddockProject.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdHaddockProject.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdInstall.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdInstall.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdInstall.p_hi
@@ -89,9 +92,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Orphans.p
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Prelude.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Prelude.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Prelude.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Process.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Process.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Process.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.p_hi
@@ -293,6 +293,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Setup.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SetupWrapper.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SetupWrapper.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SetupWrapper.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Signal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Signal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Signal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SolverInstallPlan.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SolverInstallPlan.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/SolverInstallPlan.p_hi
@@ -399,7 +402,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/bash-completion/completions/cabal
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-BuildReports-Anonymous.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-BuildReports-Lens.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-BuildReports-Storage.html
@@ -414,6 +417,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdErro
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdExec.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdFreeze.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdHaddock.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdHaddockProject.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdInstall-ClientInstallFlags.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdInstall-ClientInstallTargetSelector.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdInstall.html
@@ -429,7 +433,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-ExecutablePath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Orphans.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Prelude.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Process.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Semaphore.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Config.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Configure.html
@@ -497,6 +500,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Securit
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Security-HTTP.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Setup.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-SetupWrapper.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Signal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-SolverInstallPlan.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-SourceFiles.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-SrcDist.html
@@ -574,9 +578,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
