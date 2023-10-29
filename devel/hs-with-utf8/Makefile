@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:35 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/29 07:18:44 pho Exp $
 
-DISTNAME=	with-utf8-1.0.2.3
-PKGREVISION=	3
+DISTNAME=	with-utf8-1.0.2.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Get your IO right on the first try
 LICENSE=	mpl-2.0
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	text
 
 # lib:with-utf8
 .include "../../devel/hs-safe-exceptions/buildlink3.mk"
