@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/08/14 05:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2023/10/29 17:56:02 wiz Exp $
 
 DISTNAME=		monsterz-0.7.1
 PKGREVISION=		9
@@ -9,10 +9,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sam.zoy.org/monsterz/
 COMMENT=		Puzzle game similar to the famous Bejeweled or Zookeeper
 
-DEPENDS+=		${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+DEPENDS+=		${PYPKGPREFIX}-game-[0-9]*:../../devel/py27-game
 
 REPLACE_PYTHON=			monsterz.py
-PYTHON_VERSIONS_ACCEPTED=	27 # py-Numeric
+PYTHON_VERSIONS_ACCEPTED=	27
 
 MAKE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 MAKE_ENV+=		GAMEGRP=${GAMEGRP:Q}
