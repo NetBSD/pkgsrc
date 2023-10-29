@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4082 2023/10/29 09:45:00 pho Exp $
+# $NetBSD: Makefile,v 1.4083 2023/10/29 17:51:23 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -474,6 +474,7 @@ SUBDIR+=	goredo
 SUBDIR+=	got
 SUBDIR+=	got-portable
 SUBDIR+=	gotags
+SUBDIR+=	gotelemetry
 SUBDIR+=	gotests
 SUBDIR+=	govulncheck
 SUBDIR+=	gperf

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/29 17:51:24 bsiegert Exp $
+bin/gotelemetry
