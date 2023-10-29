@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/25 18:43:53 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/29 11:13:35 pho Exp $
 
-BLAKE2s (megaparsec-9.3.0.tar.gz) = 9376871025d0a93bcac812f1f15d254aa691d29b1d4a7a85c26962be675d1140
-SHA512 (megaparsec-9.3.0.tar.gz) = 7ce947e142eeb028e29f7b3f007ca5fed7d170c7831e1fc55b4522fa1927ce2f41c2cdeb72ac63058a50b4b135f45939d947eae5d1abbbf93a2adf25487ca7cb
-Size (megaparsec-9.3.0.tar.gz) = 63803 bytes
+BLAKE2s (megaparsec-9.6.0.tar.gz) = 87345975ae3e11931b9ef8770963cae745855e8b92bfa67c782456cbdc690405
+SHA512 (megaparsec-9.6.0.tar.gz) = 00ca7d06c6ed78aed030319c8909e3cb62933f497e6444644b0c4081831930ff0be9adfa79e577795c84ce2cb949b8af965844ac12ec66c08ced86c697b34a64
+Size (megaparsec-9.6.0.tar.gz) = 64864 bytes
