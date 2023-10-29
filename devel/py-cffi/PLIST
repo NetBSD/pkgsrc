@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/04 21:51:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/29 18:32:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,8 +17,8 @@ ${PYSITELIB}/cffi/_imp_emulation.py
 ${PYSITELIB}/cffi/_imp_emulation.pyc
 ${PYSITELIB}/cffi/_imp_emulation.pyo
 ${PYSITELIB}/cffi/_shimmed_dist_utils.py
-${PYSITELIB}/cffi/_shimmed_dist_utils.pyc
-${PYSITELIB}/cffi/_shimmed_dist_utils.pyo
+${PLIST.py3x}${PYSITELIB}/cffi/_shimmed_dist_utils.pyc
+${PLIST.py3x}${PYSITELIB}/cffi/_shimmed_dist_utils.pyo
 ${PYSITELIB}/cffi/api.py
 ${PYSITELIB}/cffi/api.pyc
 ${PYSITELIB}/cffi/api.pyo
