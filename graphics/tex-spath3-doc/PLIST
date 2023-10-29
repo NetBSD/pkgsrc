@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/29 13:58:55 riastradh Exp $
+share/texmf-dist/doc/latex/spath3/README
+share/texmf-dist/doc/latex/spath3/README.txt
+share/texmf-dist/doc/latex/spath3/calligraphy.pdf
+share/texmf-dist/doc/latex/spath3/calligraphy.tex
+share/texmf-dist/doc/latex/spath3/knots.pdf
+share/texmf-dist/doc/latex/spath3/knots.tex
+share/texmf-dist/doc/latex/spath3/spath3.pdf
+share/texmf-dist/doc/latex/spath3/spath3.tex
+share/texmf-dist/doc/latex/spath3/spath3_code.pdf
