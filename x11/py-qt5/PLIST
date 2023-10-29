@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/10/28 19:57:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2023/10/29 19:58:50 tnn Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -931,4 +931,4 @@ ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebenginewidgets.pyo
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebkit.py
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebkit.pyc
 ${PYSITELIB}/PyQt5/uic/widget-plugins/qtwebkit.pyo
-${PYSITELIB}/dbus/mainloop/pyqt5.abi3.so
+${PLIST.dbus}${PYSITELIB}/dbus/mainloop/pyqt5.abi3.so
