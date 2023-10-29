@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6273 2023/10/29 13:28:20 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.6274 2023/10/29 14:02:04 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9168,3 +9168,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/hs-unicode-collation to 0.1.3.5 [pho 2023-10-29]
 	Added audio/libsidplayfp version 2.5.0 [rhialto 2023-10-29]
 	Updated audio/qmmp to 1.6.5 [rhialto 2023-10-29]
+	Added graphics/tex-spath3 version 2.7 [riastradh 2023-10-29]
+	Added graphics/tex-spath3-doc version 2.7 [riastradh 2023-10-29]
+	Updated meta-pkgs/texlive-collection-pictures to 2023pre3 [riastradh 2023-10-29]
