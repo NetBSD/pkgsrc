@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/29 17:50:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/seaborn/__init__.py
 ${PYSITELIB}/seaborn/__init__.pyc
 ${PYSITELIB}/seaborn/__init__.pyo
+${PYSITELIB}/seaborn/_base.py
+${PYSITELIB}/seaborn/_base.pyc
+${PYSITELIB}/seaborn/_base.pyo
 ${PYSITELIB}/seaborn/_compat.py
 ${PYSITELIB}/seaborn/_compat.pyc
 ${PYSITELIB}/seaborn/_compat.pyo
@@ -42,9 +45,6 @@ ${PYSITELIB}/seaborn/_core/subplots.pyo
 ${PYSITELIB}/seaborn/_core/typing.py
 ${PYSITELIB}/seaborn/_core/typing.pyc
 ${PYSITELIB}/seaborn/_core/typing.pyo
-${PYSITELIB}/seaborn/_decorators.py
-${PYSITELIB}/seaborn/_decorators.pyc
-${PYSITELIB}/seaborn/_decorators.pyo
 ${PYSITELIB}/seaborn/_docstrings.py
 ${PYSITELIB}/seaborn/_docstrings.pyc
 ${PYSITELIB}/seaborn/_docstrings.pyo
@@ -69,9 +69,6 @@ ${PYSITELIB}/seaborn/_marks/line.pyo
 ${PYSITELIB}/seaborn/_marks/text.py
 ${PYSITELIB}/seaborn/_marks/text.pyc
 ${PYSITELIB}/seaborn/_marks/text.pyo
-${PYSITELIB}/seaborn/_oldcore.py
-${PYSITELIB}/seaborn/_oldcore.pyc
-${PYSITELIB}/seaborn/_oldcore.pyo
 ${PYSITELIB}/seaborn/_statistics.py
 ${PYSITELIB}/seaborn/_statistics.pyc
 ${PYSITELIB}/seaborn/_statistics.pyo
