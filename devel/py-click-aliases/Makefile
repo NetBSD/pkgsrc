@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/10/29 22:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/29 23:27:25 wiz Exp $
 
 DISTNAME=	click_aliases-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Add (mutiple) aliases to a click group or command
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
