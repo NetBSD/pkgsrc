@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23507 2023/10/29 11:05:40 wiz Exp $
+$NetBSD: TODO,v 1.23508 2023/10/29 16:56:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -604,6 +604,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.6.2
 	o endless-sky-0.10.2
 	o enlightenment-0.25
 	o eog-plugins-3.6.1
@@ -745,6 +746,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.14.0
 	o gossip-0.31
 	o got-0.88
 	o gourmet-0.13.3
@@ -804,6 +806,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ices-mp3-2.0.2
 	o icewm-3.4.0
 	o icinga-base-2.12.3
+	o icu-74.1
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.2.12
@@ -876,6 +879,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ldapsdk-6.0.7
 	o ldb-2.8.0
 	o lgeneral-1.3.1
+	o lgogdownloader-3.12
 	o libarchive-3.6.1
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
@@ -1070,6 +1074,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oto-0.5
 	o owncloudclient-2.10.1
 	o p0f-3.09b
+	o p11-kit-0.25.1
 	o p5-Authen-Simple-0.6
 	o p5-Carp-Assert-More-1.26
 	o p5-Class-DBI-Plugin-1.04
@@ -1275,6 +1280,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-werkzeug-3.0.1
 	o py-yubiauth-0.3.10
+	o py-yubikey-manager-5.2.1
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
@@ -1316,6 +1322,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.7.3
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
