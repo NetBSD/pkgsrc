@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6300 2023/10/29 18:48:21 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6301 2023/10/29 22:04:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9208,3 +9208,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/py-shellingham to 1.5.4 [adam 2023-10-29]
 	Updated graphics/py-seaborn to 0.13.0 [adam 2023-10-29]
 	Added security/hs-crypton-x509 version 1.7.6 [pho 2023-10-29]
+	Added devel/py-ruff version 0.1.3 [wiz 2023-10-29]
