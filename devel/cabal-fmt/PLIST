@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 17:14:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 11:38:52 pho Exp $
 bin/cabal-fmt
 lib/${PKGNAME}/${HS_VERSION}/package-description/1
 lib/${PKGNAME}/${HS_VERSION}/package-description/2
 lib/${PKGNAME}/${HS_VERSION}/package-id
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}.a
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt.p_hi
@@ -70,9 +65,14 @@ lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Refactoring/Type.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/CabalFmt/Refactoring/Type.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID.2}/libHS${HS_PKGID.2}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.2}/libHS${HS_PKGID.2}_p.a
-${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/VersionInterval.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.2}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Comments.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Error.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt-Fields-BuildDepends.html
@@ -96,9 +96,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CabalFmt.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/VersionInterval.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/cabal-fmt.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
