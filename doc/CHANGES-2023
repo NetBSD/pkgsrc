@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6290 2023/10/29 18:12:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6291 2023/10/29 18:18:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9196,3 +9196,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-game to 2.5.2 [wiz 2023-10-29]
 	Updated math/mpcomplex to 1.3.1 [wiz 2023-10-29]
 	Updated math/py-gmpy2 to 2.2.0alpha1 [wiz 2023-10-29]
+	Updated www/py-uwsgi to 2.0.22nb2 [wiz 2023-10-29]
