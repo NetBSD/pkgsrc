@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.37 2022/06/15 22:26:45 gdt Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.38 2023/10/29 17:22:06 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -173,15 +173,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 <para>
 If the packaged software is a Python module, include one of
-<filename>../../lang/python/egg.mk</filename> or
-<filename>../../lang/python/extension.mk</filename>.</para>
-
-<para>Most Python packages use setuptools (<quote>eggs</quote>).
-If the packaged software is using setuptools, you only need
-to include <quote><filename>../../lang/python/egg.mk</filename></quote>.
+<filename>../../lang/python/wheel.mk</filename>.
 </para>
 
-<para>Either way, the package directory should be called
+<para>The package directory should be called
 <quote>py-software</quote> and <varname>PKGNAME</varname> should be set to
 <quote>${PYPKGPREFIX}-${DISTNAME}</quote>, e.g.
 <programlisting>
