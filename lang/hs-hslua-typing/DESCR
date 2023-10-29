@@ -1,0 +1,4 @@
+Type specifiers for Lua.
+
+Structure to hold detailed type information. The primary use-case at this
+time are auto-generated docs.

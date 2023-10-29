@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 18:31:50 pho Exp $
+
+BLAKE2s (hslua-typing-0.1.0.tar.gz) = d449df02c049e444ba97a23cb39fb54614a3c4235981ddb4442266210a74045b
+SHA512 (hslua-typing-0.1.0.tar.gz) = caca4003fab2fab4920e43491dc56cd137198f4a312d654f9489ea841b5e18b1b528a46e493692d027500a2fc5201d6f39b49b8bf0af8c199dbe357b95ccfb1f
+Size (hslua-typing-0.1.0.tar.gz) = 6420 bytes
