@@ -1,10 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:27 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/29 07:35:45 pho Exp $
 
-# NOTE: Do not update this to 1.0. It does some shady things that are no
-# longer valid on GHC 9. See:
-# https://github.com/haskell-primitive/primitive-unlifted/issues/29
-DISTNAME=	primitive-unlifted-0.1.3.1
-PKGREVISION=	3
+DISTNAME=	primitive-unlifted-2.1.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
