@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/26 03:28:56 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/29 08:13:55 pho Exp $
 lib/hashtables-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hashtables-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/HashTable/Class.dyn_hi
@@ -40,17 +40,19 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/HashTable/ST/Linear.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/Data-HashTable-Class.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/Data-HashTable-IO.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/Data-HashTable-ST-Basic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/Data-HashTable-ST-Cuckoo.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/Data-HashTable-ST-Linear.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/hashtables.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hashtables-${PKGVERSION}/html/synopsis.png
