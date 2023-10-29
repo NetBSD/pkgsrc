@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/10/29 07:16:24 pho Exp $
 
-BLAKE2s (math-functions-0.3.4.2.tar.gz) = 9587e08857277d25ff25b6a56400338218c48a9f2dc29dc9a06053511732cc67
-SHA512 (math-functions-0.3.4.2.tar.gz) = cb29901294463edbba37e97445bb9ed039bdc43815c9bbd9b9bb92b87393e6e891f5840d337c6c06c7e30d26107d32a59c39ac51436be43dba00d0e2411a9053
-Size (math-functions-0.3.4.2.tar.gz) = 429223 bytes
+BLAKE2s (math-functions-0.3.4.3.tar.gz) = 3875abe9dc38b0a56ad0149974868bf953cd86fb978acdf04dba037139982857
+SHA512 (math-functions-0.3.4.3.tar.gz) = 7f23c11d69835017c0b840ac069be36e297ec6819406e97f80406895ed70940237efc5351b3606d31595740cde2212735dab40d9ab4cbd7b8ffc0f5103f71b8a
+Size (math-functions-0.3.4.3.tar.gz) = 429110 bytes
