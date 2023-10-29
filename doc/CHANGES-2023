@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6275 2023/10/29 14:43:48 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6276 2023/10/29 15:19:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9172,3 +9172,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added graphics/tex-spath3-doc version 2.7 [riastradh 2023-10-29]
 	Updated meta-pkgs/texlive-collection-pictures to 2023pre3 [riastradh 2023-10-29]
 	lang/go/version.mk: set default Go version to 1.21 [bsiegert 2023-10-29]
+	Updated net/pear-Net_SMTP to 1.11.0nb1 [taca 2023-10-29]
