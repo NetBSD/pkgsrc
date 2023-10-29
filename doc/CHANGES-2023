@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6258 2023/10/29 10:07:08 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6259 2023/10/29 10:38:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9153,3 +9153,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-unliftio to 0.2.25.0 [pho 2023-10-29]
 	Updated time/hs-time-manager to 0.0.1 [pho 2023-10-29]
 	Updated devel/hs-bitvec to 1.1.5.0 [pho 2023-10-29]
+	Updated devel/hs-async-pool to 0.9.2 [pho 2023-10-29]
