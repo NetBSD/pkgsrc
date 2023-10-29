@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 13:05:10 rhialto Exp $
+
+BLAKE2s (libsidplayfp-2.5.0.tar.gz) = cbc0b720727cb94b4f9e85dc9a97b5ec5f821abce01846e45e03768191adb7e5
+SHA512 (libsidplayfp-2.5.0.tar.gz) = 2390c7629bf721bc0d7bfa6b1750ba873a2007fa500ea611f4dcdeff34ab1d83124afdd9c88fc2de557bb7d271c0c2f962e5818e53ea5b3649431799296d6438
+Size (libsidplayfp-2.5.0.tar.gz) = 806655 bytes
