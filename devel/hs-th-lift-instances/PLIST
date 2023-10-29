@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 18:58:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 11:15:24 pho Exp $
 lib/th-lift-instances-${PKGVERSION}/${HS_VERSION}/package-description
 lib/th-lift-instances-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -7,13 +7,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Instances/TH/Lift.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Instances/TH/Lift.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/Instances-TH-Lift.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/th-lift-instances-${PKGVERSION}/html/th-lift-instances.haddock
