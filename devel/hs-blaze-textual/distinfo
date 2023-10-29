@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:35:58 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/29 11:41:29 pho Exp $
 
-BLAKE2s (blaze-textual-0.2.2.1.tar.gz) = 518bc8e9c4fd34790f01299d96822409aec12835613a34927e99e4bd5e6648cd
-SHA512 (blaze-textual-0.2.2.1.tar.gz) = 5e7e0ca97cdbf999ae5874d20b1882887e14edc0aa27a83ec2ca75fa407c97553f68ffd94720cf9238eaaf4b32078ae74353eeff7c862721585373ab5571c187
-Size (blaze-textual-0.2.2.1.tar.gz) = 7029 bytes
+BLAKE2s (blaze-textual-0.2.3.1.tar.gz) = 95082ea5d04e97b86f7a2f2bcc3c2cb5fc68daf376e61225f821c911aa3d593d
+SHA512 (blaze-textual-0.2.3.1.tar.gz) = d0f64ea6df4d55a69ac825b9897a58aacf2e9c324ca5df7a65f1cd877292602db1cddabfb231877d43678c2d66487552197cdeba839022ebc64d84d8376e7255
+Size (blaze-textual-0.2.3.1.tar.gz) = 7194 bytes
