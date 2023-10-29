@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/10/28 19:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/29 16:51:23 adam Exp $
 
-DISTNAME=	pdm-2.9.3
+DISTNAME=	pdm-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm/}
 
@@ -26,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-resolvelib>=1.0.1:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.3.2:../../misc/py-shellingham
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.3.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.1:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-unearth>=0.10.0:../../net/py-unearth
+DEPENDS+=	${PYPKGPREFIX}-unearth>=0.12.1:../../net/py-unearth
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver>=1.0.6:../../devel/py-test-httpserver
