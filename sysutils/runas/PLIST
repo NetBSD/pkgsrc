@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2023/09/11 14:01:39 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 11:46:46 bacon Exp $
+bin/asroot
 bin/runas
+man/man1/asroot.1
 man/man1/runas.1
