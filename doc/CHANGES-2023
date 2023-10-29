@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6286 2023/10/29 17:52:09 bsiegert Exp $
+$NetBSD: CHANGES-2023,v 1.6287 2023/10/29 18:00:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9192,3 +9192,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-limits to 3.6.0 [adam 2023-10-29]
 	Updated devel/gopls to 0.14.0 [bsiegert 2023-10-29]
 	Added devel/gotelemetry version 0.8.0 [bsiegert 2023-10-29]
+	Added devel/py27-game version 1.9.6nb3 [wiz 2023-10-29]
