@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/29 16:51:23 adam Exp $
 bin/pdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -256,6 +256,9 @@ ${PYSITELIB}/pdm/models/candidates.pyo
 ${PYSITELIB}/pdm/models/environment.py
 ${PYSITELIB}/pdm/models/environment.pyc
 ${PYSITELIB}/pdm/models/environment.pyo
+${PYSITELIB}/pdm/models/finder.py
+${PYSITELIB}/pdm/models/finder.pyc
+${PYSITELIB}/pdm/models/finder.pyo
 ${PYSITELIB}/pdm/models/in_process/__init__.py
 ${PYSITELIB}/pdm/models/in_process/__init__.pyc
 ${PYSITELIB}/pdm/models/in_process/__init__.pyo
@@ -281,6 +284,9 @@ ${PYSITELIB}/pdm/models/python.py
 ${PYSITELIB}/pdm/models/python.pyc
 ${PYSITELIB}/pdm/models/python.pyo
 ${PYSITELIB}/pdm/models/python_max_versions.json
+${PYSITELIB}/pdm/models/reporter.py
+${PYSITELIB}/pdm/models/reporter.pyc
+${PYSITELIB}/pdm/models/reporter.pyo
 ${PYSITELIB}/pdm/models/repositories.py
 ${PYSITELIB}/pdm/models/repositories.pyc
 ${PYSITELIB}/pdm/models/repositories.pyo
