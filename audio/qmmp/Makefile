@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2023/10/24 22:08:15 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2023/10/29 13:28:08 rhialto Exp $
 
-DISTNAME=	qmmp-1.5.1
-PKGREVISION=	18
+DISTNAME=	qmmp-1.6.5
 CATEGORIES=	audio
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/qmmp/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qmmp.ylsoftware.com/
-COMMENT=	Audio player similar to Winamp/XMMS using Qt
+COMMENT=	Audio player similar to Winamp/XMMS using Qt5
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
@@ -54,12 +53,12 @@ SUBST_VARS.oss+=	LIBOSSAUDIO
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/game-music-emu/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
-.include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libwildmidi/buildlink3.mk"
+.include "../../audio/libxmp/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
