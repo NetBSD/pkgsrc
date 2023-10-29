@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/26 10:06:26 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/29 18:42:06 pho Exp $
 
-BLAKE2s (xss-sanitize-0.3.7.1.tar.gz) = 761319f5301c7ae344f0e9e04dec6227a23ee6541b82cea0c07bd8a1191e449d
-SHA512 (xss-sanitize-0.3.7.1.tar.gz) = bf94944de646ebd2603de08867493cf7b4ebff9dfedd44a980cfab2bb995d00e0dc37a2710920e29b79fb6ce901f3ad6a19654456a0edd9c3be227d9ed0414ea
-Size (xss-sanitize-0.3.7.1.tar.gz) = 11729 bytes
+BLAKE2s (xss-sanitize-0.3.7.2.tar.gz) = 7e802d9f65aba3f1c6f737af3c63eff22fe4b8c9053e950217c0b64d7d8f5cac
+SHA512 (xss-sanitize-0.3.7.2.tar.gz) = affd74f2df2e31eb12348fd51890028cce76c3c5f905e5d10979a98dd3a325f522758b3bd7cdcdc5ab08c212468eac3326c40f62ac71e92cf4029c9c94d6dd2a
+Size (xss-sanitize-0.3.7.2.tar.gz) = 12002 bytes
