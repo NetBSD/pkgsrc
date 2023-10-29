@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/10/01 16:23:54 adam Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/29 16:42:13 adam Exp $
 
-DISTNAME=	executing-2.0.0
+DISTNAME=	executing-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/executing/}
@@ -21,7 +21,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} >= 311
 TEST_DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 .endif
