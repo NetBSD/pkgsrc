@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6267 2023/10/29 11:41:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6268 2023/10/29 11:45:15 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9162,3 +9162,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-optparse-applicative to 0.18.1.0 [pho 2023-10-29]
 	Updated devel/cabal-fmt to 0.1.9 [pho 2023-10-29]
 	Updated devel/hs-blaze-textual to 0.2.3.1 [pho 2023-10-29]
+	Updated lang/hs-hslua-cli to 1.4.1 [pho 2023-10-29]
