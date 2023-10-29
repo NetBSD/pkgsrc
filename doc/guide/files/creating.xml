@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.38 2023/10/29 17:22:06 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.39 2023/10/29 22:31:01 gutteridge Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -172,7 +172,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 </programlisting></para>
 
 <para>
-If the packaged software is a Python module, include one of
+If the packaged software is a Python module, include
 <filename>../../lang/python/wheel.mk</filename>.
 </para>
 
