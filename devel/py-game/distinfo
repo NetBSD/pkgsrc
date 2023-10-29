@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.15 2023/10/29 17:59:35 wiz Exp $
+$NetBSD: distinfo,v 1.16 2023/10/29 19:05:49 adam Exp $
 
 BLAKE2s (pygame-2.5.2.tar.gz) = 6e187cab6d2058fdd1345741ac5a8a408f5e2ab0ef321418cae8d630c45d23e6
 SHA512 (pygame-2.5.2.tar.gz) = 4cff4a36b53608b7fa0e6694f8130817077471e76143db7c3a83427c9269b1618b8cd053ff3c3c1872e10c2be42b991b98836c6fae253051c9a912597fdcc845
 Size (pygame-2.5.2.tar.gz) = 15788328 bytes
+SHA1 (patch-buildconfig_Setup.SDL2.in) = 300e7ce4d5442955edc724c3d052c7738780e038
+SHA1 (patch-buildconfig_config__darwin.py) = 6ab81ce5cc5c9ce1923f4c4702a0faff9f22e184
+SHA1 (patch-buildconfig_config__unix.py) = 738d41c9e3137192da21a81441a47b0603f55e14
