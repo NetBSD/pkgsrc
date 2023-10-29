@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/11/29 05:46:35 adam Exp $
+# $NetBSD: Makefile,v 1.2 2023/10/29 18:28:57 wiz Exp $
 
 DISTNAME=	python-snappy-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.15.0:../../devel/py-cffi
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
