@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6292 2023/10/29 18:26:46 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6293 2023/10/29 18:27:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9198,3 +9198,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-gmpy2 to 2.2.0alpha1 [wiz 2023-10-29]
 	Updated www/py-uwsgi to 2.0.22nb2 [wiz 2023-10-29]
 	Updated devel/py-logbook to 1.7.0 [wiz 2023-10-29]
+	Removed archivers/py-brotlipy successor archivers/py-brotlicffi [wiz 2023-10-29]
