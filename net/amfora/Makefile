@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/10/15 12:04:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2023/10/29 14:48:14 bsiegert Exp $
 
 DISTNAME=	amfora-1.9.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makeworld-the-better-one/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
