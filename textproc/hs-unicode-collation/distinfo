@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/26 10:04:17 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/29 11:58:03 pho Exp $
 
-BLAKE2s (unicode-collation-0.1.3.3.tar.gz) = 30fa786276738bcb854f99d9c71338348157112cf7be8cf7e28e79ebf9ac02af
-SHA512 (unicode-collation-0.1.3.3.tar.gz) = bbb8fb3d52fa4906ddb92fb605f49b4c726cfcffd1f950c8a78bc495594a2e7d85fa78e2009da850f0218fce09a57f829ce0f3d6a6000b9b6484754f8c8260e8
-Size (unicode-collation-0.1.3.3.tar.gz) = 2056081 bytes
+BLAKE2s (unicode-collation-0.1.3.5.tar.gz) = 9aa3114f46fd4533a00477c397b3582bbb4bcfcdaaeb9fced306741a15eb1c65
+SHA512 (unicode-collation-0.1.3.5.tar.gz) = 510c10174e2b378ab1114e1a03dd82a6ff19af2efca7bc3fd4a8b421dc83f873c44d39eb7f19b2b51b9f2ff77e3b8ef462dfcb6cbd8d235fc0368727b94de1ef
+Size (unicode-collation-0.1.3.5.tar.gz) = 2056089 bytes
