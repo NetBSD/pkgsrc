@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/09/01 10:44:59 nia Exp $
+# $NetBSD: Makefile,v 1.21 2023/10/29 16:56:42 wiz Exp $
 
-DISTNAME=	greenlet-2.0.2
+DISTNAME=	greenlet-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://github.com/python-greenlet/greenlet
 COMMENT=	Lightweight in-process concurrent programming
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
 
 USE_LANGUAGES=	c c++
@@ -22,8 +24,9 @@ USE_CXX_FEATURES+=	c++11
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover greenlet.tests
+# no tests included
+#do-test:
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover greenlet.tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
