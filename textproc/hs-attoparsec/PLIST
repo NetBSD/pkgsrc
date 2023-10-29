@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/26 09:40:55 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/29 16:52:07 pho Exp $
 lib/attoparsec-${PKGVERSION}/${HS_VERSION}/package-description/1
 lib/attoparsec-${PKGVERSION}/${HS_VERSION}/package-description/2
 lib/attoparsec-${PKGVERSION}/${HS_VERSION}/package-id
@@ -74,7 +74,7 @@ lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/libHS${HS_PKGID.1}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.2}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString-Buffer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString-Char8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/Data-Attoparsec-ByteString-FastSet.html
@@ -97,9 +97,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/Data-Attopars
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/Data-Attoparsec.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/attoparsec.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-${PKGVERSION}/html/synopsis.png
