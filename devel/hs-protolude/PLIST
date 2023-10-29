@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 19:00:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 07:30:13 pho Exp $
 lib/protolude-${PKGVERSION}/${HS_VERSION}/package-description
 lib/protolude-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -67,7 +67,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Protolude/Unsafe.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Protolude/Unsafe.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/Protolude-Applicative.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/Protolude-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/Protolude-Bifunctor.html
@@ -132,10 +132,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/doc-index-X.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/protolude.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/protolude-${PKGVERSION}/html/synopsis.png
