@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.10 2023/10/28 19:57:10 wiz Exp $
+# $NetBSD: wheel.mk,v 1.11 2023/10/29 22:50:35 wiz Exp $
 #
 # Build and install Python wheels
 #
@@ -6,6 +6,9 @@
 #
 # WHEELFILE:		path to the wheelfile to be installed
 #			only needs to be set if do-build is redefined
+#
+# USE_PYTEST:		If set to yes, depend on py-test and use it for testing.
+#			Default: yes
 #
 
 PY_PATCHPLIST?=	yes
@@ -31,6 +34,13 @@ do-install:
 	${SETENV} ${INSTALL_ENV} \
 	${TOOL_PYTHONBIN} -m installer --destdir ${DESTDIR:Q} \
 		--prefix ${PREFIX:Q} ${WHEELFILE}
+.endif
+
+USE_PYTEST?=	yes
+.if !target(do-test) && ${USE_PYTEST:Myes}
+TEST_DEPENDS+= ${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+do-test:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 .endif
 
 .include "../../lang/python/extension.mk"
