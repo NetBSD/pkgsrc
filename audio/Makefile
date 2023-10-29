@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2023/10/16 14:06:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.679 2023/10/29 13:05:10 rhialto Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -256,6 +256,7 @@ SUBDIR+=	libsbsms
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
 SUBDIR+=	libsidplay2
+SUBDIR+=	libsidplayfp
 SUBDIR+=	libsmf
 SUBDIR+=	libsndfile
 SUBDIR+=	libsoxr
