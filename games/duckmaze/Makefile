@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/08/14 05:24:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.28 2023/10/29 17:56:02 wiz Exp $
 
 DISTNAME=	duckmaze-pc-0.2
 PKGNAME=	duckmaze-0.2
@@ -14,6 +13,9 @@ COMMENT=	Puzzle game
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
+
+# from 2007, before Python 3
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DM=	${WRKDIR}/duckmaze
 
@@ -32,5 +34,5 @@ do-install:
 	${INSTALL_SCRIPT} ${DM} ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
-.include "../../devel/py-game/buildlink3.mk"
+.include "../../devel/py27-game/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
