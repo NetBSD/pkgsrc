@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/09 04:54:41 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/29 03:57:49 pho Exp $
 
-DISTNAME=	cabal-install-3.8.1.0
+DISTNAME=	cabal-install-3.10.1.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,8 +10,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
-	text	\
-	time
+	resolv
 
 INSTALLATION_DIRS+=	share/bash-completion/completions
 post-install:
