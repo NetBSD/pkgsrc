@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 07:33:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 07:52:38 pho Exp $
 lib/fuzzy-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fuzzy-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Fuzzy.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/Text-Fuzzy.html
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/fuzzy.haddock
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/Text-Fuzzy.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/fuzzy.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/fuzzy-${PKGVERSION}/html/synopsis.png
