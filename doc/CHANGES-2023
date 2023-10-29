@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6297 2023/10/29 18:42:16 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6298 2023/10/29 18:44:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9203,3 +9203,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/hs-hslua-typing version 0.1.0 [pho 2023-10-29]
 	Updated www/hs-http2 to 4.2.2 [pho 2023-10-29]
 	Updated www/hs-xss-sanitize to 0.3.7.2 [pho 2023-10-29]
+	Updated textproc/hs-attoparsec-iso8601 to 1.1.0.1 [pho 2023-10-29]
