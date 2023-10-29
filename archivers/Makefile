@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2023/10/22 18:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2023/10/29 18:27:47 wiz Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -109,7 +109,6 @@ SUBDIR+=	ppunpack
 SUBDIR+=	pxz
 SUBDIR+=	py-brotli
 SUBDIR+=	py-brotlicffi
-SUBDIR+=	py-brotlipy
 SUBDIR+=	py-bz2file
 SUBDIR+=	py-czipfile
 SUBDIR+=	py-lhafile
