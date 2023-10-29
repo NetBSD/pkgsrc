@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:25 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/29 11:31:29 pho Exp $
 
-DISTNAME=	optparse-applicative-0.17.0.0
-PKGREVISION=	5
+DISTNAME=	optparse-applicative-0.18.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Utilities and combinators for parsing command line options
 LICENSE=	modified-bsd
 
-.include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
+.include "../../textproc/hs-prettyprinter/buildlink3.mk"
+.include "../../textproc/hs-prettyprinter-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

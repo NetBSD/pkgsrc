@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/11 19:58:53 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/29 11:31:29 pho Exp $
 
-BLAKE2s (optparse-applicative-0.17.0.0.tar.gz) = 62d0e0924b51b8ce5864eb03acea84337d99feaf85ff734d7fbada5cdb06969e
-SHA512 (optparse-applicative-0.17.0.0.tar.gz) = 986325ec8bab922aad121d2526e847ee046d9b5d5d378c0d82ba596d96d17a0221d59bf9b25d12907d3247760c5f5c657d8368a0a5fda21fbc817d81fff66dc1
-Size (optparse-applicative-0.17.0.0.tar.gz) = 59409 bytes
+BLAKE2s (optparse-applicative-0.18.1.0.tar.gz) = 2efc76045cee74bbfb53a5b8f5d516a8cb24385c74c277ba7565b90945a3a485
+SHA512 (optparse-applicative-0.18.1.0.tar.gz) = a5a7667cadd3c2785d787cb6bddb009750308376c771f45d72e2245577f42c2946a069bf420d3404653f9f3662cb798341ee96d1ead35dbf95ab42447698e41d
+Size (optparse-applicative-0.18.1.0.tar.gz) = 60682 bytes
