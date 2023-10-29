@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6248 2023/10/29 07:40:09 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6249 2023/10/29 07:45:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9143,3 +9143,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-protolude to 0.3.3 [pho 2023-10-29]
 	Updated devel/hs-primitive-unlifted to 2.1.0.0 [pho 2023-10-29]
 	Updated math/hs-mod to 0.2.0.1 [pho 2023-10-29]
+	Updated devel/hs-indexed-traversable-instances to 0.1.1.2 [pho 2023-10-29]
