@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/01 21:05:56 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/29 10:35:23 pho Exp $
 lib/transformers-base-${PKGVERSION}/${HS_VERSION}/package-description
 lib/transformers-base-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,10 +10,12 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/Control-Monad-Base.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/transformers-base-${PKGVERSION}/html/transformers-base.haddock
