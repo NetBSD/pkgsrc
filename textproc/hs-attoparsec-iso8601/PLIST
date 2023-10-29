@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/28 19:56:37 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 18:44:44 pho Exp $
 lib/attoparsec-iso8601-${PKGVERSION}/${HS_VERSION}/package-description
 lib/attoparsec-iso8601-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Attoparsec/Time.dyn_hi
@@ -10,14 +10,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Attoparsec/Time/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/Data-Attoparsec-Time-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/Data-Attoparsec-Time.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/attoparsec-iso8601.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/attoparsec-iso8601-${PKGVERSION}/html/synopsis.png
