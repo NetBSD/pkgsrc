@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:27 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/29 07:30:13 pho Exp $
 
-DISTNAME=	protolude-0.3.2
-PKGREVISION=	3
+DISTNAME=	protolude-0.3.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +9,9 @@ LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
-	ghc-prim
+	ghc-prim	\
+	mtl	\
+	transformers
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
