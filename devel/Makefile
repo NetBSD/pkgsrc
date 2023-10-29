@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4081 2023/10/27 14:11:56 pho Exp $
+# $NetBSD: Makefile,v 1.4082 2023/10/29 09:45:00 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -551,6 +551,7 @@ SUBDIR+=	hs-classy-prelude
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-code-page
 SUBDIR+=	hs-colour
+SUBDIR+=	hs-concurrent-output
 SUBDIR+=	hs-conduit
 SUBDIR+=	hs-conduit-extra
 SUBDIR+=	hs-constraints
