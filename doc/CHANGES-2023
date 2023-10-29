@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6269 2023/10/29 11:46:53 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.6270 2023/10/29 11:48:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9164,3 +9164,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-blaze-textual to 0.2.3.1 [pho 2023-10-29]
 	Updated lang/hs-hslua-cli to 1.4.1 [pho 2023-10-29]
 	Updated sysutils/runas to 0.2.0 [bacon 2023-10-29]
+	Updated www/hs-http-client to 0.7.14 [pho 2023-10-29]
