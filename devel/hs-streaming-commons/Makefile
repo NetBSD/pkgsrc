@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:30 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/29 09:42:13 pho Exp $
 
-DISTNAME=	streaming-commons-0.2.2.5
-PKGREVISION=	2
+DISTNAME=	streaming-commons-0.2.2.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
