@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:57:13 nia Exp $
-
-BLAKE2s (brotlipy-0.7.0.tar.gz) = d5e5baf906fa27fdaf48d4076749f873602321b44add60df0638270c029958e6
-SHA512 (brotlipy-0.7.0.tar.gz) = 2a01e5b2d217043f13316afc4f54569c5dff76d31c296d4be563a5851195380ab80a33a3035ca95effdebffb45806fb9a431a181bba6f9af205b7f5576937268
-Size (brotlipy-0.7.0.tar.gz) = 413338 bytes
