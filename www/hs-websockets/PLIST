@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 10:12:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 18:33:27 pho Exp $
 lib/websockets-${PKGVERSION}/${HS_VERSION}/package-description
 lib/websockets-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -52,17 +52,19 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/WebSockets/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/LICENCE
+share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/LICENCE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Client.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Connection.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Extensions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets-Stream.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/Network-WebSockets.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/websockets-${PKGVERSION}/html/websockets.haddock
