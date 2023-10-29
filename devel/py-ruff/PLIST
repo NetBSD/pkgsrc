@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/29 22:03:03 wiz Exp $
+bin/ruff-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/ruff/__init__.py
+${PYSITELIB}/ruff/__init__.pyc
+${PYSITELIB}/ruff/__init__.pyo
+${PYSITELIB}/ruff/__main__.py
+${PYSITELIB}/ruff/__main__.pyc
+${PYSITELIB}/ruff/__main__.pyo
