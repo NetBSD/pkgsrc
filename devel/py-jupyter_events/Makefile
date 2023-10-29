@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/29 16:58:53 adam Exp $
 
-DISTNAME=	jupyter_events-0.7.0
+DISTNAME=	jupyter_events-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-events/}
 
@@ -15,10 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-json-logger>=2.0.4:../../textproc/py-json-logger
 DEPENDS+=	${PYPKGPREFIX}-referencing-[0-9]*:../../textproc/py-referencing
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-validator-[0-9]*:../../time/py-rfc3339-validator
 DEPENDS+=	${PYPKGPREFIX}-rfc3986-validator>=0.1.1:../../www/py-rfc3986-validator
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 TEST_DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
