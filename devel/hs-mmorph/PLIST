@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 19:28:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/29 07:43:02 pho Exp $
 lib/mmorph-${PKGVERSION}/${HS_VERSION}/package-description
 lib/mmorph-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,14 +10,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Compose.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Trans/Compose.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/Control-Monad-Morph.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/Control-Monad-Trans-Compose.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/mmorph.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mmorph-${PKGVERSION}/html/synopsis.png
