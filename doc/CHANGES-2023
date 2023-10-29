@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6283 2023/10/29 17:11:54 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6284 2023/10/29 17:17:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9188,3 +9188,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_events to 0.8.0 [adam 2023-10-29]
 	Updated devel/py-anytree to 2.12.0 [adam 2023-10-29]
 	Updated databases/py-apsw to 3.43.2.0 [adam 2023-10-29]
+	Updated devel/py-gitdb to 4.0.11 [adam 2023-10-29]
+	Updated devel/py-limits to 3.6.0 [adam 2023-10-29]
