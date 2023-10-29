@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/05/24 15:10:59 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/29 22:19:17 adam Exp $
 
 DISTNAME=	libnitrokey-3.8
 PKGREVISION=	3
@@ -12,7 +12,9 @@ HOMEPAGE=	https://github.com/Nitrokey/libnitrokey/
 COMMENT=	Library to communicate with Nitrokey devices
 LICENSE=	gnu-lgpl-v3
 
-USE_TOOLS+=	pkg-config
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 .include "options.mk"
 
@@ -27,11 +29,10 @@ CMAKE_ARGS+=	-DHIDAPI_LIBUSB_LIBDIR=${BUILDLINK_PREFIX.libhidapi}/lib/
 CMAKE_ARGS+=	-DCMAKE_INSTALL_UDEVRULESDIR=${PREFIX}/lib/udev/rules.d/
 
 TEST_TARGET=	test
-USE_LANGUAGES=	c c++14
 
-.include "../../devel/libusb1/buildlink3.mk"
 .include "../../comms/libhidapi/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .if ${OPSYS} == "Linux"
 .include "../../sysutils/libudev/buildlink3.mk"
 .endif
