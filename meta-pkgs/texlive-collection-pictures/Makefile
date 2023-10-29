@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2023/06/17 11:11:03 markd Exp $
+# $NetBSD: Makefile,v 1.41 2023/10/29 13:59:14 riastradh Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2023pre2
+PKGNAME=	texlive-${DISTNAME}-2023pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	67297
@@ -165,7 +165,7 @@ DEPENDS+=	tex-qrcode-[0-9]*:../../graphics/tex-qrcode
 # depend simplenodes
 # depend simpleoptics
 DEPENDS+=	tex-smartdiagram-[0-9]*:../../graphics/tex-smartdiagram
-# depend spath3
+DEPENDS+=	tex-spath3-[0-9]*:../../graphics/tex-spath3
 # depend spectralsequences
 # depend strands
 # depend swimgraf
