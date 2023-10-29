@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 03:38:37 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 07:07:04 pho Exp $
 lib/monoid-subclasses-${PKGVERSION}/${HS_VERSION}/package-description
 lib/monoid-subclasses-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -26,9 +26,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Measured.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Positioned.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Positioned.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Positioned.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/PrefixMemory.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/PrefixMemory.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/PrefixMemory.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Stateful.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Stateful.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Instances/Stateful.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/LCM.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/LCM.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/LCM.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Monus.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Monus.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Monoid/Monus.p_hi
@@ -46,7 +52,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semigroup/Factorial.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semigroup/Factorial.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/BSD3-LICENSE.txt
+share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/BSD3-LICENSE.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Cancellative.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Factorial.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-GCD.html
@@ -55,17 +61,21 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-M
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Instances-Concat.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Instances-Measured.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Instances-Positioned.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Instances-PrefixMemory.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Instances-Stateful.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-LCM.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Monus.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Null.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Monoid-Textual.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Semigroup-Cancellative.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/Data-Semigroup-Factorial.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/monoid-subclasses.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoid-subclasses-${PKGVERSION}/html/synopsis.png
