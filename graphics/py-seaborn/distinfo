@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/23 10:00:49 adam Exp $
+$NetBSD: distinfo,v 1.8 2023/10/29 17:50:30 adam Exp $
 
-BLAKE2s (seaborn-0.12.2.tar.gz) = 9b75a2e24814a0fe8196c4343390179a2473e89643a2fcfd3b8db8ca332e5037
-SHA512 (seaborn-0.12.2.tar.gz) = 988a9922ee301b655911efa38905674b7dd15e7f7b157ad67f5befaeb02db492553f8bd6133b54d2dd7970b8dbbfd92d81d1faea3fa618247ebcaeb98620a060
-Size (seaborn-0.12.2.tar.gz) = 1439798 bytes
+BLAKE2s (seaborn-0.13.0.tar.gz) = 672c1f6b11faf95d62c2b28e8de47fc8aaf8eb036ccc9410a9443960c4eeef42
+SHA512 (seaborn-0.13.0.tar.gz) = d603e880c29e05ab68f86d285c5c5ee9cf2da1d45265ed609f7bc87650fe20e80c026af487f63f9492a268f51ba5bab0cae4fd8fdeaf28125d16d317f9c937c8
+Size (seaborn-0.13.0.tar.gz) = 1455480 bytes
