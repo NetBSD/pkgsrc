@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/25 17:05:48 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 03:29:28 pho Exp $
 lib/cabal-install-solver-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cabal-install-solver-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Utils/Assertion.dyn_hi
@@ -154,7 +154,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/Variable.p
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Client-Utils-Assertion.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Compat-Prelude.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Modular-Assignment.html
@@ -247,9 +247,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/doc
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/synopsis.png
