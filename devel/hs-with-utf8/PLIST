@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 17:45:31 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 07:18:44 pho Exp $
 bin/utf8-troubleshoot
 lib/with-utf8-${PKGVERSION}/${HS_VERSION}/package-description
 lib/with-utf8-${PKGVERSION}/${HS_VERSION}/package-id
@@ -23,7 +23,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Utf8/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Utf8/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/MPL-2.0.txt
+share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/MPL-2.0.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/Data-Text-IO-Utf8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/Data-Text-Lazy-IO-Utf8.html
@@ -32,10 +32,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/System-IO-Utf8-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/System-IO-Utf8.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/with-utf8-${PKGVERSION}/html/with-utf8.haddock
