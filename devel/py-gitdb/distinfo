@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/11/25 10:50:12 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/10/29 17:14:15 adam Exp $
 
-BLAKE2s (gitdb-4.0.10.tar.gz) = 308a4fc2a6c090c08ddacd4cb815bde03a325997778544f7805675618935f2cc
-SHA512 (gitdb-4.0.10.tar.gz) = 6cfb58db322f1b18fd25d0c6537e5b24b2eb2f7a7222c1511cdee8dff39fb1249bf12691b9cb1a5d653131b8c3c57c1de2bb42139a2c8da6014332b4f1c6c03b
-Size (gitdb-4.0.10.tar.gz) = 394284 bytes
+BLAKE2s (gitdb-4.0.11.tar.gz) = 946da869f67e452b32e1a7b8024c809ab9a3c61d55162bfa08e56fb0a980ef08
+SHA512 (gitdb-4.0.11.tar.gz) = 024256481c553cd8e4b7fb0c0adc735aa6485c396e43aba73873cd4ad950ca686c3df7000a85acd1ac4f09db3f6ab613018739d24a8a69b4708150c171acf13d
+Size (gitdb-4.0.11.tar.gz) = 394469 bytes
