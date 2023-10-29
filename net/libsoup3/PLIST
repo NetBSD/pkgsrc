@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/05/07 19:41:22 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 01:43:35 gutteridge Exp $
 include/libsoup-3.0/libsoup/soup-auth-domain-basic.h
 include/libsoup-3.0/libsoup/soup-auth-domain-digest.h
 include/libsoup-3.0/libsoup/soup-auth-domain.h
@@ -44,7 +44,7 @@ include/libsoup-3.0/libsoup/soup.h
 lib/girepository-1.0/Soup-3.0.typelib
 lib/libsoup-3.0.so
 lib/libsoup-3.0.so.0
-lib/libsoup-3.0.so.0.7.0
+lib/libsoup-3.0.so.0.7.1
 lib/pkgconfig/libsoup-3.0.pc
 share/gir-1.0/Soup-3.0.gir
 share/locale/ab/LC_MESSAGES/libsoup-3.0.mo
