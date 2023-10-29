@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.64 2023/10/26 10:18:34 wiz Exp $
+# $NetBSD: extension.mk,v 1.65 2023/10/29 17:07:15 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -7,6 +7,8 @@
 # in ${PYSITELIB}.  Extensions can be implemented via setuptools as
 # eggs (see egg.mk), via wheels (see wheel.mk), or via more ad hoc
 # methods.
+#
+# Do not included this file directly, use wheel.mk.
 
 .if !empty(PYDISTUTILSPKG:M[yY][eE][sS])
 .include "../../mk/bsd.prefs.mk"

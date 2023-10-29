@@ -1,14 +1,14 @@
-# $NetBSD: egg.mk,v 1.41 2023/10/23 06:35:59 wiz Exp $
+# $NetBSD: egg.mk,v 1.42 2023/10/29 17:07:15 wiz Exp $
+#
+# The method used in this Makefile fragment is obsolete.
+# Please use wheel.mk instead.
+
 #
 # Common logic to handle Python Eggs
 #
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../lang/python/pyversion.mk"
 
-# This file should be included to package python "distributions" which
-# use setuptools to create an egg.
-#
-# For wheel (*.whl) support, look at wheel.mk.
 
 EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 EGG_INFODIR?=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
