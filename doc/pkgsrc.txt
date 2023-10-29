@@ -4186,13 +4186,10 @@ supported, e.g.
 PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 If the packaged software is a Python module, include one of ../../lang/python/
-egg.mk or ../../lang/python/extension.mk.
+wheel.mk.
 
-Most Python packages use setuptools ("eggs"). If the packaged software is using
-setuptools, you only need to include "../../lang/python/egg.mk".
-
-Either way, the package directory should be called "py-software" and PKGNAME
-should be set to "${PYPKGPREFIX}-${DISTNAME}", e.g.
+The package directory should be called "py-software" and PKGNAME should be set
+to "${PYPKGPREFIX}-${DISTNAME}", e.g.
 
 DISTNAME=   foopymodule-1.2.10
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
