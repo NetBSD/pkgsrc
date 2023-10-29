@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:55:49 nia Exp $
+$NetBSD: distinfo,v 1.12 2023/10/29 18:06:32 wiz Exp $
 
-BLAKE2s (mpc-1.1.0.tar.gz) = 5e07eb41d890736a6c1b7b7e7b8290ff76348bb283e27fb7c8fe329c9e128cec
-SHA512 (mpc-1.1.0.tar.gz) = 72d657958b07c7812dc9c7cbae093118ce0e454c68a585bfb0e2fa559f1bf7c5f49b93906f580ab3f1073e5b595d23c6494d4d76b765d16dde857a18dd239628
-Size (mpc-1.1.0.tar.gz) = 701263 bytes
-SHA1 (patch-src_get.c) = 25495981765971c031b5a92dce098a44e53413c8
+BLAKE2s (mpc-1.3.1.tar.gz) = 5d2921ff2ec9523efd7063c63ee57dcb0905b398a8a2a2e58a952846e4dc934b
+SHA512 (mpc-1.3.1.tar.gz) = 4bab4ef6076f8c5dfdc99d810b51108ced61ea2942ba0c1c932d624360a5473df20d32b300fc76f2ba4aa2a97e1f275c9fd494a1ba9f07c4cb2ad7ceaeb1ae97
+Size (mpc-1.3.1.tar.gz) = 773573 bytes
+SHA1 (patch-src_get__x.c) = 25495981765971c031b5a92dce098a44e53413c8
