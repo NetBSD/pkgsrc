@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6242 2023/10/29 07:07:13 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6243 2023/10/29 07:13:59 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9137,3 +9137,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/hs-cabal-install-solver to 3.10.1.0 [pho 2023-10-29]
 	Updated misc/cabal-install to 3.10.1.0 [pho 2023-10-29]
 	Updated math/hs-monoid-subclasses to 1.2.4.1 [pho 2023-10-29]
+	Updated lang/hs-hslua-classes to 2.3.0 [pho 2023-10-29]
