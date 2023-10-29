@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6260 2023/10/29 10:55:03 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6261 2023/10/29 11:01:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9155,3 +9155,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-bitvec to 1.1.5.0 [pho 2023-10-29]
 	Updated devel/hs-async-pool to 0.9.2 [pho 2023-10-29]
 	Updated devel/hs-ListLike to 4.7.8.2 [pho 2023-10-29]
+	Updated devel/hs-ghc-lib-parser-ex to 9.6.0.2 [pho 2023-10-29]
