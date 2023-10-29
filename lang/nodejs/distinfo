@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.247 2023/10/16 19:15:17 adam Exp $
+$NetBSD: distinfo,v 1.248 2023/10/29 13:44:04 ryoon Exp $
 
 BLAKE2s (node-v20.8.1.tar.xz) = 2fedcaa70f6e4017469e0513e035ee2159c24b6d6f7cdf450413b9c6d5d99165
 SHA512 (node-v20.8.1.tar.xz) = d76245a8ec35fdb481e898efc457d3804d425a0d8e2da9175cdcc41036c57b5a6c23a5c2e84b7b417d3f48be631bff86708b2cae9e65ca3a22908caa3190ed1b
 Size (node-v20.8.1.tar.xz) = 41863408 bytes
 SHA1 (patch-common.gypi) = f50615affd26c2c7902d2112c8e9f2704c057b9c
+SHA1 (patch-configure) = e59589e138ecaf1c36a9809b70c426ef5446543a
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 29f0c382b68f77749a71ce39fa2ca37338ca18ec
 SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 32b85ef5824b96b35aba9280bbe7aa7899d9e5cf
