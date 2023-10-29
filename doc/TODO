@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23512 2023/10/29 18:46:10 adam Exp $
+$NetBSD: TODO,v 1.23513 2023/10/29 22:04:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1198,6 +1198,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-blinker-1.6.3
 	o py-bumpver-2023.1129
 	o py-cairo-1.25.1
+	o py-cairocffi-1.6.1
 	o py-cares-4.4.0
 	o py-cassa-1.11.0
 	o py-cmake-language-server-0.1.8
