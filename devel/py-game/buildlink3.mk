@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2023/01/29 21:14:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2023/10/29 17:59:35 wiz Exp $
 
 BUILDLINK_TREE+=	py-game
 
@@ -8,13 +8,13 @@ PY_GAME_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=1.9.1
-BUILDLINK_ABI_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=1.9.6nb3
+BUILDLINK_ABI_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=2.5.2
 BUILDLINK_PKGSRCDIR.py-game?=	../../devel/py-game
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
