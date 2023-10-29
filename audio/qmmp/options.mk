@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2021/03/15 13:15:56 nia Exp $
+# $NetBSD: options.mk,v 1.3 2023/10/29 13:28:08 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmmp
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
-PKG_SUPPORTED_OPTIONS+=		ffmpeg musepack wavpack
+PKG_SUPPORTED_OPTIONS+=		ffmpeg musepack wavpack sidplay
 PKG_SUGGESTED_OPTIONS+=		ffmpeg wavpack
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
@@ -54,4 +54,12 @@ PLIST.wv=	yes
 .  include "../../audio/wavpack/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DUSE_WAVPACK=OFF
+.endif
+
+PLIST_VARS+=	sid
+.if !empty(PKG_OPTIONS:Msidplay)
+PLIST.sid=	yes
+.  include "../../audio/libsidplayfp/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DUSE_SID=OFF
 .endif
