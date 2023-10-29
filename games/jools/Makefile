@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/08/14 05:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/10/29 17:56:02 wiz Exp $
 
 DISTNAME=		jools-0.20
 PKGREVISION=		9
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://pessimization.com/software/jools/
 COMMENT=		Bejeweled clone
 
-DEPENDS+=		${PYPKGPREFIX}-game>=1.4:../../devel/py-game
+DEPENDS+=		${PYPKGPREFIX}-game>=1.4:../../devel/py27-game
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.20
 REPLACE_PYTHON=			jools/__init__.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/08/14 05:24:25 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2023/10/29 17:56:02 wiz Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -26,7 +26,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.3
 
 INSTALLATION_DIRS=	bin share/doc/blindmine share/blindmine/data
 
-.include "../../devel/py-game/buildlink3.mk"
+.include "../../devel/py27-game/buildlink3.mk"
 .include "../../lang/python/application.mk"
 
 post-extract:
