@@ -5317,13 +5317,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 </pre>
 <p>
 If the packaged software is a Python module, include one of
-<code class="filename">../../lang/python/egg.mk</code> or
-<code class="filename">../../lang/python/extension.mk</code>.</p>
-<p>Most Python packages use setuptools (<span class="quote">&#8220;<span class="quote">eggs</span>&#8221;</span>).
-If the packaged software is using setuptools, you only need
-to include <span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/egg.mk</code></span>&#8221;</span>.
+<code class="filename">../../lang/python/wheel.mk</code>.
 </p>
-<p>Either way, the package directory should be called
+<p>The package directory should be called
 <span class="quote">&#8220;<span class="quote">py-software</span>&#8221;</span> and <code class="varname">PKGNAME</code> should be set to
 <span class="quote">&#8220;<span class="quote">${PYPKGPREFIX}-${DISTNAME}</span>&#8221;</span>, e.g.
 </p>
