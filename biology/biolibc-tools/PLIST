@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/08/12 14:51:02 bacon Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/29 22:58:03 bacon Exp $
 bin/blt
 libexec/biolibc-tools/chrom-lens
 libexec/biolibc-tools/deromanize
