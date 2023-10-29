@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6299 2023/10/29 18:46:10 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6300 2023/10/29 18:48:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9207,3 +9207,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/py-pandas to 2.1.2 [adam 2023-10-29]
 	Updated misc/py-shellingham to 1.5.4 [adam 2023-10-29]
 	Updated graphics/py-seaborn to 0.13.0 [adam 2023-10-29]
+	Added security/hs-crypton-x509 version 1.7.6 [pho 2023-10-29]
