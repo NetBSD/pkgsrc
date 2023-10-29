@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/10/29 17:56:02 wiz Exp $
 
 DISTNAME=	stegavorto-src-2011.05.26
 PKGNAME=	${DISTNAME:S/-src//}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://james.hamsterrepublic.com/?p=130
 COMMENT=	Discover secret messages embedded in the works of great authors
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py27-game
 
 WRKSRC=		${WRKDIR}/stegavorto-src
 USE_LANGUAGES=	# none
