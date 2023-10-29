@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6240 2023/10/29 03:29:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6241 2023/10/29 03:57:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9135,3 +9135,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/texlive-collection-latexextra to 2023pre6 [riastradh 2023-10-28]
 	Updated net/libsoup3 to 3.4.4 [gutteridge 2023-10-29]
 	Updated misc/hs-cabal-install-solver to 3.10.1.0 [pho 2023-10-29]
+	Updated misc/cabal-install to 3.10.1.0 [pho 2023-10-29]
