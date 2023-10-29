@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/10/15 12:04:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2023/10/29 14:48:18 bsiegert Exp $
 
 DISTNAME=		age-1.1.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FiloSottile/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

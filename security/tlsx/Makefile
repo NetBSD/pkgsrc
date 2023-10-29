@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/23 18:50:13 leot Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/29 14:48:20 bsiegert Exp $
 
 DISTNAME=	tlsx-1.1.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

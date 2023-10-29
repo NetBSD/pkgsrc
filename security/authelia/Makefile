@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/10/15 12:04:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.38 2023/10/29 14:48:18 bsiegert Exp $
 
 DISTNAME=	authelia-4.26.1
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=authelia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
