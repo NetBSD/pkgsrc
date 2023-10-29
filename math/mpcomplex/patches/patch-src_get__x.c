@@ -1,4 +1,4 @@
-$NetBSD: patch-src_get.c,v 1.2 2012/08/05 18:24:56 marino Exp $
+$NetBSD: patch-src_get__x.c,v 1.1 2023/10/29 18:06:32 wiz Exp $
 
 Work around bug in SunOS complex.h to make this build with Sun's gcc
 
