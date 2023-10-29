@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 03:58:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 10:38:47 pho Exp $
 lib/async-pool-${PKGVERSION}/${HS_VERSION}/package-description
 lib/async-pool-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async/Pool.dyn_hi
@@ -13,13 +13,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Async/Pool/Intern
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/Control-Concurrent-Async-Pool.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/async-pool.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/async-pool-${PKGVERSION}/html/synopsis.png
