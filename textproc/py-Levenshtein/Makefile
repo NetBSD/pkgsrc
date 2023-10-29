@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2023/08/11 06:27:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/29 16:59:20 wiz Exp $
 
-DISTNAME=	Levenshtein-0.21.1
+DISTNAME=	Levenshtein-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=L/Levenshtein/}
@@ -20,5 +20,5 @@ USE_CXX_FEATURES+=	c++17
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
