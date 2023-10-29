@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2023/01/29 21:14:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2023/10/29 17:59:35 wiz Exp $
 
-DISTNAME=	pygame-1.9.6
+DISTNAME=	pygame-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
 CATEGORIES=	devel games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygame/}
 
@@ -11,10 +10,15 @@ HOMEPAGE=	http://www.pygame.org/
 COMMENT=	Set of Python modules designed for writing games
 LICENSE=	gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	examples/*.py
 REPLACE_PYTHON+=	setup.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		fixpath
 SUBST_STAGE.fixpath=	pre-configure
@@ -37,14 +41,14 @@ pre-configure:
 	${RM} ${WRKSRC}/buildconfig/Setup_Unix.in
 	${TOUCH} ${WRKSRC}/buildconfig/Setup_Unix.in
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
