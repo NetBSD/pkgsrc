@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 10:24:54 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/29 10:39:50 pho Exp $
 lib/asn1-parse-${PKGVERSION}/${HS_VERSION}/package-description
 lib/asn1-parse-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/ASN1/Parse.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/Data-ASN1-Parse.html
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/asn1-parse.haddock
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/Data-ASN1-Parse.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/asn1-parse.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/asn1-parse-${PKGVERSION}/html/synopsis.png
