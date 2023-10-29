@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6254 2023/10/29 09:44:51 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6255 2023/10/29 09:49:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9149,3 +9149,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/hs-typed-process to 0.2.11.1 [pho 2023-10-29]
 	Updated devel/hs-streaming-commons to 0.2.2.6 [pho 2023-10-29]
 	Added devel/hs-concurrent-output version 1.10.20 [pho 2023-10-29]
+	Updated math/hs-bifunctors to 5.6.1 [pho 2023-10-29]
