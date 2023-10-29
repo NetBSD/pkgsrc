@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/29 18:06:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/29 18:06:59 wiz Exp $
 
 DISTNAME=	mpc-1.3.1
 PKGNAME=	${DISTNAME:S/mpc/mpcomplex/}
@@ -20,6 +20,6 @@ TEST_TARGET=	check
 
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=4.3.2
 .include "../../devel/gmp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.4.2
+BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=4.1.0
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
