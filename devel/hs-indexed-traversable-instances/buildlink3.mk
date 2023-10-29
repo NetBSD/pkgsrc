@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/29 07:45:34 pho Exp $
 
 BUILDLINK_TREE+=	hs-indexed-traversable-instances
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-indexed-traversable-instances
 HS_INDEXED_TRAVERSABLE_INSTANCES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-indexed-traversable-instances+=	hs-indexed-traversable-instances>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-indexed-traversable-instances+=	hs-indexed-traversable-instances>=0.1.1.1nb3
+BUILDLINK_ABI_DEPENDS.hs-indexed-traversable-instances+=	hs-indexed-traversable-instances>=0.1.1.2
 BUILDLINK_PKGSRCDIR.hs-indexed-traversable-instances?=		../../devel/hs-indexed-traversable-instances
 
 .include "../../devel/hs-indexed-traversable/buildlink3.mk"
