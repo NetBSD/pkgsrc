@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:56:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/29 17:07:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -69,6 +69,9 @@ ${PYSITELIB}/anytree/node/anynode.pyo
 ${PYSITELIB}/anytree/node/exceptions.py
 ${PYSITELIB}/anytree/node/exceptions.pyc
 ${PYSITELIB}/anytree/node/exceptions.pyo
+${PYSITELIB}/anytree/node/lightnodemixin.py
+${PYSITELIB}/anytree/node/lightnodemixin.pyc
+${PYSITELIB}/anytree/node/lightnodemixin.pyo
 ${PYSITELIB}/anytree/node/node.py
 ${PYSITELIB}/anytree/node/node.pyc
 ${PYSITELIB}/anytree/node/node.pyo

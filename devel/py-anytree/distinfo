@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/10/26 09:15:52 adam Exp $
+$NetBSD: distinfo,v 1.12 2023/10/29 17:07:49 adam Exp $
 
-BLAKE2s (anytree-2.11.1.tar.gz) = 87ef81d9d182aa13d549674840ffca2d75f2c021b73695f96b45aa8379a9ade9
-SHA512 (anytree-2.11.1.tar.gz) = 0b8f9c7a46c3086f313b6ad64f0c440905d4134bfbe8dc54a261a84a3a7db8104ec66a2f4f456c681bb93290283dd9b3cd1c9ad85ef41d448c662ca8a8b85da5
-Size (anytree-2.11.1.tar.gz) = 30575 bytes
+BLAKE2s (anytree-2.12.0.tar.gz) = a671dcef267e7645a38c35d8daf16739fcc9aed70d9b4517251f35172cad493a
+SHA512 (anytree-2.12.0.tar.gz) = 942038cc457f68c4ce520d69949350db3e879754d3e5a36209a93867136e9b50a969d32d6766802c148301bf7adc09abd75510e77a6ccfb28cae7bce29dc91ae
+Size (anytree-2.12.0.tar.gz) = 31121 bytes
