@@ -1,0 +1,4 @@
+The spath3 library provides methods for manipulating the "soft
+paths" of TikZ/PGF. Packaged with it are two TikZ libraries
+that make use of the methods provided. These are libraries for
+drawing calligraphic paths and for drawing knot diagrams.
