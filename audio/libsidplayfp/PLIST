@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/29 13:05:10 rhialto Exp $
+include/sidplayfp/SidConfig.h
+include/sidplayfp/SidDatabase.h
+include/sidplayfp/SidInfo.h
+include/sidplayfp/SidTune.h
+include/sidplayfp/SidTuneInfo.h
+include/sidplayfp/builders/resid.h
+include/sidplayfp/builders/residfp.h
+include/sidplayfp/sidbuilder.h
+include/sidplayfp/siddefs.h
+include/sidplayfp/sidplayfp.h
+include/sidplayfp/sidversion.h
+include/stilview/stil.h
+include/stilview/stildefs.h
+lib/libsidplayfp.la
+lib/libstilview.la
+lib/pkgconfig/libsidplayfp.pc
+lib/pkgconfig/libstilview.pc
