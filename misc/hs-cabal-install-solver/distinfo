@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/25 17:05:48 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/29 03:29:28 pho Exp $
 
-BLAKE2s (cabal-install-solver-3.8.1.0.tar.gz) = f4ef2922a06d6f55ad480ba32638418d0620a1a834dad6fa4e0dc1400e8d0a69
-SHA512 (cabal-install-solver-3.8.1.0.tar.gz) = be54abffc32a3b35bed0d69df5ff9394271f2746efc45a931df5677a7c1bd1e5e303118f695a942a196c2b57ecef0be973bce97b26b3e1696e46676d376f8edf
-Size (cabal-install-solver-3.8.1.0.tar.gz) = 85413 bytes
+BLAKE2s (cabal-install-solver-3.10.1.0.tar.gz) = c8cceb3b215f646b7f3aac6b668e0e9495131afd431ac36102ac70597c0c855a
+SHA512 (cabal-install-solver-3.10.1.0.tar.gz) = 6b6d0b9c392c45aa9f0fd551e93e02be7592aa547b7435d74a76372986f9746a7672bbd786130873fe1d0f972a942915f670673e191d5b6ce034caa11ace6279
+Size (cabal-install-solver-3.10.1.0.tar.gz) = 86166 bytes
