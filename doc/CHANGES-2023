@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6238 2023/10/28 22:56:26 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.6239 2023/10/29 01:44:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9133,3 +9133,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/tex-ellipsis-doc to 1.8 [riastradh 2023-10-28]
 	Updated net/kea to 2.4.0 [sekiya 2023-10-29]
 	Updated meta-pkgs/texlive-collection-latexextra to 2023pre6 [riastradh 2023-10-28]
+	Updated net/libsoup3 to 3.4.4 [gutteridge 2023-10-29]
