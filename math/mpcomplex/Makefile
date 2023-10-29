@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2018/01/29 14:49:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/29 18:06:32 wiz Exp $
 
-DISTNAME=	mpc-1.1.0
+DISTNAME=	mpc-1.3.1
 PKGNAME=	${DISTNAME:S/mpc/mpcomplex/}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=mpc/}
