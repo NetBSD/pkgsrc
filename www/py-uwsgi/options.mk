@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/04/29 03:28:39 dholland Exp $
+# $NetBSD: options.mk,v 1.8 2023/10/29 18:18:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-uwsgi
 PKG_SUPPORTED_OPTIONS=	debug openssl pcre uuid uwsgi-sse_offload yaml
@@ -58,6 +58,7 @@ UWSGI_SSE=			sse_offload=true
 INSTALL_ENV+=			UWSGI_EMBED_PLUGINS=sse_offload
 
 post-extract: post-extract-sse
+.PHONY: post-extract-sse
 post-extract-sse:
 	mv ${WRKDIR}/uwsgi-sse-offload-${SSE_REVISION} ${WRKSRC}/plugins/sse_offload
 .else
