@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:59 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/29 18:38:03 pho Exp $
 
-DISTNAME=	http2-3.0.3
-PKGREVISION=	4
+DISTNAME=	http2-4.2.2
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -16,5 +15,6 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-psqueues/buildlink3.mk"
 .include "../../time/hs-time-manager/buildlink3.mk"
 .include "../../time/hs-unix-time/buildlink3.mk"
+.include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
