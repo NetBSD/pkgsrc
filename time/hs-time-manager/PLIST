@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/05 15:14:41 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/29 10:00:56 pho Exp $
 lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-description
 lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/System-TimeManager.html
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/synopsis.png
-share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/time-manager.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/System-TimeManager.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/time-manager.haddock
