@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6280 2023/10/29 16:56:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6281 2023/10/29 16:59:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9177,3 +9177,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/ruby-aws-sigv4 to 1.6.1 [taca 2023-10-29]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.84.0 [taca 2023-10-29]
 	Updated devel/py-greenlet to 3.0.1 [wiz 2023-10-29]
+	Updated textproc/py-Levenshtein to 0.23.0 [wiz 2023-10-29]
