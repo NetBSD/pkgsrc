@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 09:44:44 pho Exp $
+
+BLAKE2s (concurrent-output-1.10.20.tar.gz) = beba94d6cc9a9e63dd8e43ffeb2f3991e587c2e85ce9238a21a9314e59f73cf1
+SHA512 (concurrent-output-1.10.20.tar.gz) = cbc88d9fce04c864321c51ddf804e4b055647cef75ffb612bb1891da91dce7c2f4a1d3a6aa926e8ce02022da393856d6a6419c53c8e14d5f8e577e521811b01c
+Size (concurrent-output-1.10.20.tar.gz) = 23855 bytes
