@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 18:28:37 pho Exp $
+
+BLAKE2s (text-iso8601-0.1.tar.gz) = 2d30d712f3711b6741b1c648ec4688a12153f4a65d1b7124c277a726ca02c989
+SHA512 (text-iso8601-0.1.tar.gz) = a0cd7c675b3b7f8f4f689f803dc161c40c53317c216472e0ce869baec17c1ce2beb94cff03d1bd3c93bb80bb7cb66074c809760fef9c0840f421d28d241fb00e
+Size (text-iso8601-0.1.tar.gz) = 9578 bytes
