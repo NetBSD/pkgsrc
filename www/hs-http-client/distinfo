@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/26 09:03:02 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/29 11:48:17 pho Exp $
 
-BLAKE2s (http-client-0.7.13.1.tar.gz) = 30e52405c0dce41872507179a9cd2ece1178eafa7b32252b69158544a29feb98
-SHA512 (http-client-0.7.13.1.tar.gz) = d88f4ec8fb48f7de4db62ea8ed39bd43112b86fd1b6f695d92f16d22063d71f94f9dba1e114df60fb7eb03c3ced1e23b0f03a3398c0221c02812087865fd0717
-Size (http-client-0.7.13.1.tar.gz) = 95306 bytes
+BLAKE2s (http-client-0.7.14.tar.gz) = 63be0bd88a125c4cb920e6ddbfbaf85edfeee78b75ddcca3387e58e0eadf707e
+SHA512 (http-client-0.7.14.tar.gz) = 7668bb4b53c9d60aec3bb5a9342bb7c87502820d467dbf40943828136c52e99a619f0be6e8ec96fa6dcf79d8265b55fd3d681d5ce81f0e8540392534b26a3354
+Size (http-client-0.7.14.tar.gz) = 95406 bytes
