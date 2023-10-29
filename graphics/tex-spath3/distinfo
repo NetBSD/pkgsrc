@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/29 13:58:55 riastradh Exp $
+
+BLAKE2s (spath3.r64818.tar.xz) = 9f41c3a3186b1b81e080d307c08c62948fadccb9cdce858c550fe7a77b714365
+SHA512 (spath3.r64818.tar.xz) = c066ebfc25685d450caeddced161ad5b4170453307cfd21fc2c85c113bab3271b001514481827149757e536863fc2bf9814e03720d9a934c4df02321d6c5bbd5
+Size (spath3.r64818.tar.xz) = 25528 bytes
