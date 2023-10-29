@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6272 2023/10/29 13:05:36 rhialto Exp $
+$NetBSD: CHANGES-2023,v 1.6273 2023/10/29 13:28:20 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9167,3 +9167,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-http-client to 0.7.14 [pho 2023-10-29]
 	Updated textproc/hs-unicode-collation to 0.1.3.5 [pho 2023-10-29]
 	Added audio/libsidplayfp version 2.5.0 [rhialto 2023-10-29]
+	Updated audio/qmmp to 1.6.5 [rhialto 2023-10-29]
