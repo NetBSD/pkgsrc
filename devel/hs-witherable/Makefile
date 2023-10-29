@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:35 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/29 18:30:36 pho Exp $
 
 DISTNAME=	witherable-0.4.2
 PKGREVISION=	5
@@ -9,7 +9,9 @@ COMMENT=	Filterable traversable
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base-orphans	\
 	hashable	\
+	transformers	\
 	vector
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"
