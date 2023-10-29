@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/10/09 04:54:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/10/29 07:57:30 pho Exp $
 
 BUILDLINK_TREE+=	hs-hint
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hint
 HS_HINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hint+=	hs-hint>=0.9.0
-BUILDLINK_ABI_DEPENDS.hs-hint+=	hs-hint>=0.9.0.5nb4
+BUILDLINK_ABI_DEPENDS.hs-hint+=	hs-hint>=0.9.0.8
 BUILDLINK_PKGSRCDIR.hs-hint?=	../../devel/hs-hint
 
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
