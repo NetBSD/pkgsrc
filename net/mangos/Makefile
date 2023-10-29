@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2023/10/15 12:04:25 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2023/10/29 14:48:16 bsiegert Exp $
 
 DISTNAME=	mangos-3.4.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nanomsg/}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	net
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
