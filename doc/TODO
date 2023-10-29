@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23509 2023/10/29 17:11:54 adam Exp $
+$NetBSD: TODO,v 1.23510 2023/10/29 17:39:37 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -746,7 +746,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
-	o gopls-0.14.0
 	o gossip-0.31
 	o got-0.88
 	o gourmet-0.13.3
