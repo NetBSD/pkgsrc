@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:37 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/30 03:00:21 pho Exp $
 
-DISTNAME=	hslua-objectorientation-2.2.1
-PKGREVISION=	2
+DISTNAME=	hslua-objectorientation-2.3.0
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,5 +9,6 @@ LICENSE=	mit
 
 .include "../../lang/hs-hslua-core/buildlink3.mk"
 .include "../../lang/hs-hslua-marshalling/buildlink3.mk"
+.include "../../lang/hs-hslua-typing/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
