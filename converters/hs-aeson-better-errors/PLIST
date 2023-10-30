@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/27 16:09:29 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 13:31:38 pho Exp $
 lib/aeson-better-errors-${PKGVERSION}/${HS_VERSION}/package-description
 lib/aeson-better-errors-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/BetterErrors.dyn_hi
@@ -13,14 +13,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/BetterErrors/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/Data-Aeson-BetterErrors-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/Data-Aeson-BetterErrors.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/aeson-better-errors.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aeson-better-errors-${PKGVERSION}/html/synopsis.png
