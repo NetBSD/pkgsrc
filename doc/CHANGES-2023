@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6309 2023/10/30 06:17:27 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6310 2023/10/30 06:20:30 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9217,3 +9217,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-storable-record to 0.0.7 [pho 2023-10-30]
 	Updated devel/hs-singleton-bool to 0.1.7 [pho 2023-10-30]
 	Updated devel/hs-ghc-lib-parser to 9.8.1.20231009 [pho 2023-10-30]
+	Updated devel/hs-ghc-lib-parser-ex to 9.8.0.0 [pho 2023-10-30]
