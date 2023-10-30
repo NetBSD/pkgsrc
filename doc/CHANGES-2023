@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6326 2023/10/30 09:45:17 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6327 2023/10/30 09:55:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9239,3 +9239,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/mpg123-nas to 1.32.3 [adam 2023-10-30]
 	Updated audio/mpg123-pulse to 1.32.3 [adam 2023-10-30]
 	Added security/hs-crypton-x509-store version 1.6.9 [pho 2023-10-30]
+	Updated math/hs-invariant to 0.6.2 [pho 2023-10-30]
