@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/27 15:51:06 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/10/30 13:12:40 pho Exp $
 lib/pandoc-types-${PKGVERSION}/${HS_VERSION}/package-description
 lib/pandoc-types-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -25,7 +25,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Walk.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Walk.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/Text-Pandoc-Arbitrary.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/Text-Pandoc-Builder.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/Text-Pandoc-Definition.html
@@ -54,10 +54,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/doc-index-T
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/pandoc-types.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-types-${PKGVERSION}/html/synopsis.png
