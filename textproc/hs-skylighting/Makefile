@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2023/10/09 04:54:54 pho Exp $
+# $NetBSD: Makefile,v 1.14 2023/10/30 18:29:39 pho Exp $
 
-DISTNAME=	skylighting-0.13.2
-PKGREVISION=	2
+DISTNAME=	skylighting-0.14
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Syntax highlighting library
 LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=	-fexecutable
+CONFIGURE_ARGS+=	-f executable
 
 # lib:skylighting
 .include "../../textproc/hs-skylighting-core/buildlink3.mk"
