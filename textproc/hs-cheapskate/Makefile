@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:49 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/30 02:56:46 pho Exp $
 
 DISTNAME=	cheapskate-0.1.1.2
 PKGREVISION=	6
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 CONFIGURE_ARGS+=	-f-dingus
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	mtl	\
 	text
 
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
