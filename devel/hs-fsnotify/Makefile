@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:14 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/30 11:07:18 pho Exp $
 
 DISTNAME=	fsnotify-0.4.1.0
 PKGREVISION=	2
@@ -12,13 +12,14 @@ LICENSE=	modified-bsd
 # haven't been packaged yet.
 BROKEN_ON_PLATFORM+=	Darwin-*-*
 
-PLIST_SRC+=	PLIST.common
-
 .include "../../mk/bsd.fast.prefs.mk"
+
+PLIST_VARS+=		inotify
+PRINT_PLIST_AWK+=	/FSNotify\/Linux\./ { $$0 = "$${PLIST.inotify}" $$0 }
 .if ${OPSYS} == "Linux" || ${OPSYS:M*BSD}
 .  include "../../devel/hs-hinotify/buildlink3.mk"
 .  include "../../devel/hs-shelly/buildlink3.mk"
-PLIST_SRC+=	PLIST.inotify
+PLIST.inotify=	yes
 .endif
 
 .include "../../devel/hs-async/buildlink3.mk"

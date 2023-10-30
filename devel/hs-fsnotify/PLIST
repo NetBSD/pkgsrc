@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2023/01/26 15:08:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/30 11:07:18 pho Exp $
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify.dyn_hi
@@ -10,6 +10,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Devel.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.p_hi
+${PLIST.shlibs}${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.dyn_hi
+${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.hi
+${PLIST.prof}${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.p_hi
@@ -25,14 +28,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/System-FSNotify-Devel.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/System-FSNotify.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/fsnotify.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/fsnotify-${PKGVERSION}/html/synopsis.png
