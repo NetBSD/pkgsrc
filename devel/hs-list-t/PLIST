@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/27 13:47:44 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 10:49:20 pho Exp $
 lib/list-t-${PKGVERSION}/${HS_VERSION}/package-description
 lib/list-t-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,13 +10,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/ListT/Prelude.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/ListT/Prelude.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/ListT.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/list-t.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/synopsis.png
