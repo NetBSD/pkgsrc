@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6313 2023/10/30 07:45:43 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6314 2023/10/30 07:54:51 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9221,3 +9221,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/ormolu to 0.7.3.0 [pho 2023-10-30]
 	Updated pkgtools/url2pkg to 23.2.1 [wiz 2023-10-30]
 	Updated math/hs-semigroupoids to 6.0.0.1 [pho 2023-10-30]
+	Updated devel/hs-foldl to 1.4.15 [pho 2023-10-30]
