@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:10:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 03:26:51 pho Exp $
 lib/random-shuffle-${PKGVERSION}/${HS_VERSION}/package-description
 lib/random-shuffle-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Shuffle.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Shuffle.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Shuffle.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Shuffle.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Shuffle.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/System-Random-Shuffle.html
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/random-shuffle.haddock
-share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/System-Random-Shuffle.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/random-shuffle.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/random-shuffle-${PKGVERSION}/html/synopsis.png
