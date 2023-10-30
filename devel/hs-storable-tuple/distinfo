@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/30 10:27:01 pho Exp $
 
-BLAKE2s (storable-tuple-0.0.3.3.tar.gz) = 261d1ac28d8e35c4d8a6bf09e3ff8ba2d8ab8ef1a65751f39f9c60d74d823a4c
-SHA512 (storable-tuple-0.0.3.3.tar.gz) = 046a809d8b6655259f3cb4de55b81d272007cf2d32f0eec3f464924f595f904030102c3fd4f3b193a01b48d2d54582a9206314a2e87cd17ecdc16a159fe73b4d
-Size (storable-tuple-0.0.3.3.tar.gz) = 2383 bytes
+BLAKE2s (storable-tuple-0.1.tar.gz) = 50ab795112bcdefee67e8621ef5303adc9a911dd743d06881220a16d9caa509e
+SHA512 (storable-tuple-0.1.tar.gz) = 3346447a26b805132d5eedbb0ef6d8f8422c3f81d2ba23a02443fb3519ce9fe5c3433f04def616f4748dbc3e3d6ced5a9322dcdce4365ba8eab8709f06bb1b0a
+Size (storable-tuple-0.1.tar.gz) = 2414 bytes
