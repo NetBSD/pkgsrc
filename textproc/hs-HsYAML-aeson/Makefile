@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:47 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/30 09:31:12 pho Exp $
 
 DISTNAME=	HsYAML-aeson-0.2.0.1
 PKGREVISION=	4
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	aeson	\
 	base	\
+	mtl	\
 	text	\
 	vector
 
