@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/27 13:59:34 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 11:55:15 pho Exp $
 lib/ghc-exactprint-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ghc-exactprint-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint.dyn_hi
@@ -34,7 +34,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Util
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Dump.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-ExactPrint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Lookup.html
@@ -66,10 +66,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/doc-index
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/ghc-exactprint.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/synopsis.png
