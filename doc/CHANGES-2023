@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6322 2023/10/30 09:17:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6323 2023/10/30 09:19:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9231,3 +9231,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-toolconfig to 1.2.6 [adam 2023-10-30]
 	Updated lang/hs-hslua-packaging to 2.3.0 [pho 2023-10-30]
 	Updated archivers/hs-hslua-module-zip to 1.1.0 [pho 2023-10-30]
+	Updated www/py-httpcore to 1.0.0 [adam 2023-10-30]
+	Updated textproc/py-phonenumbers to 8.13.23 [adam 2023-10-30]
