@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:22:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/30 12:48:59 pho Exp $
 
-BLAKE2s (xml-conduit-1.9.1.1.tar.gz) = f7d0e11409cea247a493f1a21f0a4b01e0e0014bcf04b58f2c11794d30998f64
-SHA512 (xml-conduit-1.9.1.1.tar.gz) = 4d75960eb400a4ac8cb13bb70f59b554659fa2a6165906f73097a2bc564505a1efa78e72b121d9ed0fd8b424ff25cd1d8368e6c1f2b6ffa4b0aa36f584727687
-Size (xml-conduit-1.9.1.1.tar.gz) = 42901 bytes
+BLAKE2s (xml-conduit-1.9.1.3.tar.gz) = 002aecc6eace3b3ac609304898fbceaa36d3de934aee0c173de1f9901e533be7
+SHA512 (xml-conduit-1.9.1.3.tar.gz) = e864ce8c8785c11d81743b6cfaab91d863c728e7f3a955d9d5ce603bd36754dad2c7066fd60270ca2a39239cb314536b4bfc02f836d53a251c842741c4909324
+Size (xml-conduit-1.9.1.3.tar.gz) = 44653 bytes

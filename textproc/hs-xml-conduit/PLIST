@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 17:50:53 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 12:48:59 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML.hi
@@ -25,7 +25,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/xml-conduit-${PKGVERSION}/${HS_VERSION}/package-description
 lib/xml-conduit-${PKGVERSION}/${HS_VERSION}/package-id
-${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Cursor-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Cursor.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Stream-Parse.html
@@ -56,10 +56,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/doc-index-U.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/xml-conduit.haddock
