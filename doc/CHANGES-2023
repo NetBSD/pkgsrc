@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6329 2023/10/30 10:15:19 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6330 2023/10/30 10:21:35 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9243,3 +9243,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated graphics/py-Willow to 1.6.2 [adam 2023-10-30]
 	Updated devel/py-filelock to 3.13.0 [adam 2023-10-30]
 	Updated textproc/hs-shakespeare to 2.1.0.1 [pho 2023-10-30]
+	Updated devel/hs-turtle to 1.6.2 [pho 2023-10-30]
