@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/10/23 06:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2023/10/30 12:20:42 nia Exp $
 
 DISTNAME=	bulk-small-20231022
 CATEGORIES=	meta-pkgs
@@ -56,7 +56,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 #
 DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	irssi-[0-9]*:../../chat/irssi
-DEPENDS+=	irssi-icb-[0-9]*:../../chat/irssi-icb
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
 DEPENDS+=	emacs21>=21<22:../../editors/emacs21
