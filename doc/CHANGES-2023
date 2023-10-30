@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6381 2023/10/30 19:07:36 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6382 2023/10/30 19:11:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9296,3 +9296,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-wai-app-static to 3.1.8 [pho 2023-10-30]
 	Updated devel/go-tools to 0.14.0 [bsiegert 2023-10-30]
 	Updated www/hs-warp-tls to 3.4.3 [pho 2023-10-30]
+	Updated devel/hs-stm-hamt to 1.2.0.14 [pho 2023-10-30]
