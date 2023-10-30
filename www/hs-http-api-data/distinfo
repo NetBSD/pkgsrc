@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/28 19:59:27 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/30 09:24:44 pho Exp $
 
-BLAKE2s (http-api-data-0.5.tar.gz) = 346b0144aed1554f4b6ba2f69379206affce936c1aeac4c21d002b6ef8599c45
-SHA512 (http-api-data-0.5.tar.gz) = b32ccce874eb27a3fb4f142dbad921ff5cba01669f8164012484796236273e40da28ef160036e4b15ad3af415c2839ad369138eb2740e8bc9dd9ba71eb90edc3
-Size (http-api-data-0.5.tar.gz) = 20817 bytes
+BLAKE2s (http-api-data-0.6.tar.gz) = c46c4dc753cbff00b87d16a566d833d6acd8941e520abc98814c37290637558f
+SHA512 (http-api-data-0.6.tar.gz) = 36d871aedaaf95ffc024ed73a5927f1e10e841493027e79e3d69f5dd5d9801926f0c9c98f082d52f239fe4ea73cbcc54f98a72aa31b0051774150ef93938af0d
+Size (http-api-data-0.6.tar.gz) = 20775 bytes
