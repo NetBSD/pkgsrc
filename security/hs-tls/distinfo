@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/27 02:02:25 pho Exp $
+$NetBSD: distinfo,v 1.7 2023/10/30 14:50:27 pho Exp $
 
-BLAKE2s (tls-1.6.0.tar.gz) = c231f5085a67eccdc995b5472fadbbaf4783e990deb198100c8c137979989c31
-SHA512 (tls-1.6.0.tar.gz) = e962c6600504ea2e1f701ed4488f30aff71fa52986b35091c6105ab8e26f02532e81bd6af5e8396f0b5d51fae4c4f1c4015211deb27d8a212dfd60f84b00ede8
-Size (tls-1.6.0.tar.gz) = 158619 bytes
+BLAKE2s (tls-1.9.0.tar.gz) = b21251e2c106d30d1260eb8db3a86c724c05048427e7df390bdcde6efbc0d5ac
+SHA512 (tls-1.9.0.tar.gz) = 9f7cd2641a349af12b8bca744739aaaac2abb676d65b3c148e2a281115a33cf9ccadbf783992c4924524fe21ffd7e2c547f739fd8558bb3c0c5aad9ccef246c1
+Size (tls-1.9.0.tar.gz) = 159392 bytes
