@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 16:17:31 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 07:54:42 pho Exp $
 lib/foldl-${PKGVERSION}/${HS_VERSION}/package-description
 lib/foldl-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Foldl.dyn_hi
@@ -31,17 +31,19 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Scanl.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/Control-Foldl-ByteString.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/Control-Foldl-NonEmpty.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/Control-Foldl-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/Control-Foldl.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/Control-Scanl.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/foldl.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/foldl-${PKGVERSION}/html/synopsis.png
