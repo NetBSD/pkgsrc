@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:56 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/30 12:48:59 pho Exp $
 
-DISTNAME=	xml-conduit-1.9.1.1
-PKGREVISION=	9
+DISTNAME=	xml-conduit-1.9.1.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,12 +9,16 @@ LICENSE=	mit
 
 # Setup.hs mentions Distribution.Extra.Doctest which isn't a part of
 # Cabal but is from cabal-doctest. We don't run the doctest anyway, so
-# just overwrite it.
+# just remove it.
 post-extract:
-	${CP} -f ${FILESDIR}/Setup.hs ${WRKSRC}/Setup.hs
+	${RM} -f ${WRKSRC}/Setup.hs
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	resourcet
+# We also need to convince mk/haskell.mk that the package doesn't have any
+# special build hooks.
+SUBST_CLASSES+=		cabal
+SUBST_STAGE.cabal=	post-extract
+SUBST_FILES.cabal=	xml-conduit.cabal
+SUBST_SED.cabal=	-e '/^build-type:/s/Custom/Simple/'
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
