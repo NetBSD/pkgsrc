@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 16:03:39 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 11:16:36 pho Exp $
 lib/dependent-sum-${PKGVERSION}/${HS_VERSION}/package-description
 lib/dependent-sum-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Dependent/Sum.dyn_hi
@@ -10,9 +10,11 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/Data-Dependent-Sum.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/dependent-sum.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-sum-${PKGVERSION}/html/synopsis.png
