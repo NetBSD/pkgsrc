@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6337 2023/10/30 10:54:01 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6338 2023/10/30 10:57:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9251,3 +9251,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-git-lfs version 1.2.1 [pho 2023-10-30]
 	Updated devel/hs-list-t to 1.0.5.7 [pho 2023-10-30]
 	Updated math/hs-free to 5.2 [pho 2023-10-30]
+	Updated devel/hs-generic-lens to 2.2.2.0 [pho 2023-10-30]
