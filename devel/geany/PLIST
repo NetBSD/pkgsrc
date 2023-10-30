@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/10/12 23:42:35 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/10/30 23:19:55 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -20,7 +20,6 @@ include/geany/plugindata.h
 include/geany/pluginutils.h
 include/geany/prefs.h
 include/geany/project.h
-include/geany/scintilla/Compat.h
 include/geany/scintilla/SciLexer.h
 include/geany/scintilla/Sci_Position.h
 include/geany/scintilla/Scintilla.h
@@ -53,12 +52,14 @@ share/applications/geany.desktop
 share/doc/geany/AUTHORS
 share/doc/geany/COPYING
 share/doc/geany/ChangeLog
+share/doc/geany/LexillaLicense.txt
 share/doc/geany/NEWS
 share/doc/geany/README
 share/doc/geany/ScintillaLicense.txt
 share/doc/geany/THANKS
 share/doc/geany/TODO
 share/doc/geany/html/images/build_menu_commands_dialog.png
+share/doc/geany/html/images/edit_change_history.png
 share/doc/geany/html/images/find_dialog.png
 share/doc/geany/html/images/find_in_files_dialog.png
 share/doc/geany/html/images/main_window.png
@@ -79,6 +80,9 @@ share/doc/geany/html/images/pref_dialog_tools.png
 share/doc/geany/html/images/pref_dialog_various.png
 share/doc/geany/html/images/pref_dialog_vte.png
 share/doc/geany/html/images/replace_dialog.png
+share/doc/geany/html/images/sidebar_documents_only.png
+share/doc/geany/html/images/sidebar_show_paths.png
+share/doc/geany/html/images/sidebar_show_tree.png
 share/doc/geany/html/index.html
 share/doc/geany/manual.txt
 share/geany/GPL-2
@@ -103,6 +107,7 @@ share/geany/filedefs/filetypes.actionscript
 share/geany/filedefs/filetypes.ada
 share/geany/filedefs/filetypes.asciidoc
 share/geany/filedefs/filetypes.asm
+share/geany/filedefs/filetypes.autoit
 share/geany/filedefs/filetypes.batch
 share/geany/filedefs/filetypes.bibtex
 share/geany/filedefs/filetypes.c
@@ -120,10 +125,10 @@ share/geany/filedefs/filetypes.diff
 share/geany/filedefs/filetypes.docbook
 share/geany/filedefs/filetypes.erlang
 share/geany/filedefs/filetypes.f77
-share/geany/filedefs/filetypes.ferite
 share/geany/filedefs/filetypes.forth
 share/geany/filedefs/filetypes.fortran
 share/geany/filedefs/filetypes.freebasic
+share/geany/filedefs/filetypes.gdscript
 share/geany/filedefs/filetypes.glsl
 share/geany/filedefs/filetypes.go
 share/geany/filedefs/filetypes.haskell
@@ -162,8 +167,6 @@ share/geany/filedefs/filetypes.xml
 share/geany/filedefs/filetypes.yaml
 share/geany/filedefs/filetypes.zephir
 share/geany/filetype_extensions.conf
-share/geany/geany-3.0.css
-share/geany/geany-3.20.css
 share/geany/geany.css
 share/geany/geany.glade
 share/geany/snippets.conf
@@ -184,6 +187,7 @@ share/geany/templates/files/main.c
 share/geany/templates/files/main.cxx
 share/geany/templates/files/main.d
 share/geany/templates/files/main.java
+share/geany/templates/files/main.md
 share/geany/templates/files/main.py
 share/geany/templates/files/main.vala
 share/geany/templates/files/module.erl
@@ -211,6 +215,7 @@ share/icons/hicolor/16x16/apps/geany.png
 share/icons/hicolor/24x24/actions/geany-build.png
 share/icons/hicolor/24x24/actions/geany-close-all.png
 share/icons/hicolor/24x24/actions/geany-save-all.png
+share/icons/hicolor/24x24/apps/geany.png
 share/icons/hicolor/32x32/actions/geany-build.png
 share/icons/hicolor/32x32/actions/geany-close-all.png
 share/icons/hicolor/32x32/actions/geany-save-all.png
