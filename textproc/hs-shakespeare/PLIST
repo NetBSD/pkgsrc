@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/27 08:50:18 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/30 10:15:06 pho Exp $
 lib/shakespeare-${PKGVERSION}/${HS_VERSION}/package-description
 lib/shakespeare-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -70,7 +70,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/TypeScript.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TypeScript.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/Text-Cassius-Ordered.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/Text-Cassius.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/Text-Coffee.html
@@ -109,10 +109,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/doc-index-V.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/shakespeare.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/shakespeare-${PKGVERSION}/html/synopsis.png
