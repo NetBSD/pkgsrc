@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6378 2023/10/30 18:56:02 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6379 2023/10/30 19:03:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9293,3 +9293,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added net/hs-crypton-connection version 0.3.1 [pho 2023-10-30]
 	Updated devel/hs-lens to 5.2.3 [pho 2023-10-30]
 	Updated converters/hs-lens-aeson to 1.2.3 [pho 2023-10-30]
+	Updated www/hs-wai-app-static to 3.1.8 [pho 2023-10-30]
