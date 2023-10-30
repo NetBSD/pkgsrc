@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6305 2023/10/30 03:13:25 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6306 2023/10/30 03:17:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9213,3 +9213,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/biolibc-tools to 0.1.4.13 [bacon 2023-10-29]
 	Updated lang/hs-hslua-objectorientation to 2.3.0 [pho 2023-10-30]
 	Updated devel/hs-versions to 6.0.3 [pho 2023-10-30]
+	Updated devel/hs-tasty to 1.5 [pho 2023-10-30]
