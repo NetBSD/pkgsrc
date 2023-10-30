@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/10/30 19:03:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai-app-static
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-wai-app-static?=		../../www/hs-wai-app-static
 .include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../www/hs-http-date/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
+.include "../../net/hs-mime-types/buildlink3.mk"
 .include "../../devel/hs-old-locale/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
@@ -22,9 +23,8 @@ BUILDLINK_PKGSRCDIR.hs-wai-app-static?=		../../www/hs-wai-app-static
 .include "../../www/hs-wai-extra/buildlink3.mk"
 .include "../../www/hs-warp/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../devel/hs-memory/buildlink3.mk"
-.include "../../net/hs-mime-types/buildlink3.mk"
 .endif	# HS_WAI_APP_STATIC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-wai-app-static

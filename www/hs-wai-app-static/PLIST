@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/29 05:18:23 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 19:03:00 pho Exp $
 bin/warp
 lib/wai-app-static-${PKGVERSION}/${HS_VERSION}/package-description
 lib/wai-app-static-${PKGVERSION}/${HS_VERSION}/package-id
@@ -32,7 +32,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/WaiAppStatic/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/WaiAppStatic/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/Network-Wai-Application-Static.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/WaiAppStatic-CmdLine.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/WaiAppStatic-Listing.html
@@ -40,10 +40,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/WaiAppSta
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/WaiAppStatic-Storage-Filesystem.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/WaiAppStatic-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-app-static-${PKGVERSION}/html/wai-app-static.haddock
