@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/28 19:59:27 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 09:24:44 pho Exp $
 lib/http-api-data-${PKGVERSION}/${HS_VERSION}/package-description
 lib/http-api-data-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Web/FormUrlEncoded.dyn_hi
@@ -16,16 +16,18 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Web/Internal/HttpApiData.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/Web-FormUrlEncoded.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/Web-HttpApiData.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/Web-Internal-FormUrlEncoded.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/Web-Internal-HttpApiData.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/http-api-data.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-api-data-${PKGVERSION}/html/synopsis.png
