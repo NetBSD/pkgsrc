@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6386 2023/10/30 21:44:45 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6387 2023/10/30 23:02:12 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9302,3 +9302,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/gpgme to 1.23.1 [adam 2023-10-30]
 	Updated security/nuclei to 3.0.2 [leot 2023-10-30]
 	Updated wm/enlightenment16 to 1.0.29 [gutteridge 2023-10-30]
+	Updated x11/vte3 to 0.72.3 [gutteridge 2023-10-30]
