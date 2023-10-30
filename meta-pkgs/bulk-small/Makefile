@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2023/10/30 13:02:49 nia Exp $
+# $NetBSD: Makefile,v 1.56 2023/10/30 13:11:46 nia Exp $
 
 DISTNAME=	bulk-small-20231030
 CATEGORIES=	meta-pkgs
@@ -32,18 +32,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 #
 # If you aren't sure about why some particular package is or is not
 # included, please ask.
-#
-
-#
-# XXX: A few of these packages are commonly built in. The simple
-# DEPENDS logic here will cause more or less useless packages to be
-# built anyway and then not used, which is a waste of build cycles. It
-# would be good to figure out a way to fix this so these packages only
-# get built when they aren't builtin.
-#
-# That applies to these packages:
-#    wget  bzip2  xz
-#    libiconv  sqlite3  gettext-lib  readline  zlib  expat
 #
 
 #
@@ -109,14 +97,8 @@ DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 #
 # 3. Archivers and build tools.
 #
-DEPENDS+=	bsdtar-[0-9]*:../../archivers/bsdtar
-DEPENDS+=	bzip2-[0-9]*:../../archivers/bzip2
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
-DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	xz-[0-9]*:../../archivers/xz
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
 DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	flex-[0-9]*:../../devel/flex
 DEPENDS+=	gmake-[0-9]*:../../devel/gmake
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=	m4-[0-9]*:../../devel/m4
@@ -128,6 +110,15 @@ DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 # pulls it in.
 #DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
+
+.if ${OPSYS} != "NetBSD"
+DEPENDS+=	bsdtar-[0-9]*:../../archivers/bsdtar
+DEPENDS+=	bzip2-[0-9]*:../../archivers/bzip2
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+DEPENDS+=	xz-[0-9]*:../../archivers/xz
+DEPENDS+=	zip-[0-9]*:../../archivers/zip
+DEPENDS+=	flex-[0-9]*:../../devel/flex
+.endif
 
 .if ${X11_TYPE} == "native"
 DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
@@ -143,7 +134,6 @@ DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
 DEPENDS+=	gettext-lib-[0-9]*:../../devel/gettext-lib
 DEPENDS+=	glib2-[0-9]*:../../devel/glib2
 DEPENDS+=	readline-[0-9]*:../../devel/readline
-DEPENDS+=	zlib-[0-9]*:../../devel/zlib
 DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
 # Note that if you set JPEG_TYPE to libjpeg-turbo you'll also
 # end up building cmake.
@@ -152,10 +142,14 @@ BUILDLINK_DEPMETHOD.${JPEG_DEFAULT}=	build
 DEPENDS+=	png-[0-9]*:../../graphics/png
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	gnutls-[0-9]*:../../security/gnutls
-DEPENDS+=	expat-[0-9]*:../../textproc/expat
 DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	xmlcatmgr-[0-9]*:../../textproc/xmlcatmgr
+
+.if ${OPSYS} != "NetBSD"
+DEPENDS+=	expat-[0-9]*:../../textproc/expat
+DEPENDS+=	zlib-[0-9]*:../../devel/zlib
+.endif
 
 #
 # 5. Transitive depends.
