@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/30 10:49:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-list-t
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-list-t
 HS_LIST_T_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-list-t+=	hs-list-t>=1.0.5
-BUILDLINK_ABI_DEPENDS.hs-list-t+=	hs-list-t>=1.0.5.6nb2
+BUILDLINK_ABI_DEPENDS.hs-list-t+=	hs-list-t>=1.0.5.7
 BUILDLINK_PKGSRCDIR.hs-list-t?=		../../devel/hs-list-t
 
 .include "../../devel/hs-foldl/buildlink3.mk"
