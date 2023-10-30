@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4086 2023/10/29 22:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4087 2023/10/30 10:44:25 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -603,6 +603,7 @@ SUBDIR+=	hs-ghc-lib-parser-ex
 SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-ghc-trace-events
 SUBDIR+=	hs-ghcide
+SUBDIR+=	hs-git-lfs
 SUBDIR+=	hs-githash
 SUBDIR+=	hs-gitrev
 SUBDIR+=	hs-half
