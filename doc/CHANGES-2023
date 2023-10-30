@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6315 2023/10/30 08:00:08 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6316 2023/10/30 08:10:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9223,3 +9223,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-semigroupoids to 6.0.0.1 [pho 2023-10-30]
 	Updated devel/hs-foldl to 1.4.15 [pho 2023-10-30]
 	Updated devel/hs-deferred-folds to 0.9.18.5 [pho 2023-10-30]
+	Updated devel/hasktags to 0.73.0 [pho 2023-10-30]
