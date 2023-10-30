@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6341 2023/10/30 12:26:32 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6342 2023/10/30 12:30:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9255,3 +9255,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-shelly to 1.12.1 [pho 2023-10-30]
 	Updated devel/hs-ghc-exactprint to 1.7.0.1 [pho 2023-10-30]
 	Updated devel/hs-apply-refact to 0.13.0.0 [pho 2023-10-30]
+	Updated devel/hs-hiedb to 0.4.3.0 [pho 2023-10-30]
