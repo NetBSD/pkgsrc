@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/31 18:43:22 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/30 12:26:24 pho Exp $
 
-BLAKE2s (apply-refact-0.12.0.0.tar.gz) = 3ba355aa2aabcd2dd1b955c2ff316749eec5e9d7262bd3b6962927e49bd28b6b
-SHA512 (apply-refact-0.12.0.0.tar.gz) = 8bc71bcd3ea965930b6a393f4cf03cce00716112d8b39e7f4d0271aa1d3b8adc237337b71b828d43236632c989ffeb89de058fe983fd563860ae60d0c7882b21
-Size (apply-refact-0.12.0.0.tar.gz) = 70758 bytes
+BLAKE2s (apply-refact-0.13.0.0.tar.gz) = 8ad1e8c78467d655892c324f888ac88c10ba220cbf2cb09e7c1f800e3b9c0e7f
+SHA512 (apply-refact-0.13.0.0.tar.gz) = 6ccbbbe4cccc95cc4f9ed97218705df5acf6210b3cc86cf5bfcd8d6a2461b3751cc30bd7cd0baa954365fb8a6e808ea587c350df0ed517d0ea36e32bb57b6d2d
+Size (apply-refact-0.13.0.0.tar.gz) = 70880 bytes
