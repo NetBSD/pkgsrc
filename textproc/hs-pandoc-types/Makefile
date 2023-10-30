@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/10/09 04:54:52 pho Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/30 13:12:40 pho Exp $
 
-DISTNAME=	pandoc-types-1.23
-PKGREVISION=	2
-CATEGORIES=	textproc
+DISTNAME=	pandoc-types-1.23.1
+CATEGORIES=	textproc converters
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Types for representing a structured document
