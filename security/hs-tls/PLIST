@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/27 02:02:25 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/30 14:50:27 pho Exp $
 lib/tls-${PKGVERSION}/${HS_VERSION}/package-description
 lib/tls-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -196,7 +196,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/X509.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/TLS/X509.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/Network-TLS-Extra-Cipher.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/Network-TLS-Extra-FFDHE.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/Network-TLS-Extra.html
@@ -226,10 +226,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tls-${PKGVERSION}/html/tls.haddock
