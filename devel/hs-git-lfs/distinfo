@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/30 10:43:22 pho Exp $
+
+BLAKE2s (hs-git-lfs/git-lfs-1.2.1.tar.gz) = ba687e2a142f1a7737d8b398be630e6f963fa991b170cc50fa966f6ba85ca3b4
+SHA512 (hs-git-lfs/git-lfs-1.2.1.tar.gz) = 70e9084fedff03bc5921819c676438f7354c4924b19f6d1f9e29956c51928086a71b7316a662cb99dceb2a920cb325cfba7e589939798fcf193b27910b32d284
+Size (hs-git-lfs/git-lfs-1.2.1.tar.gz) = 17329 bytes
