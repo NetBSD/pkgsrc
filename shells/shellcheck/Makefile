@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/09 04:54:45 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/30 09:39:07 pho Exp $
 
 DISTNAME=	ShellCheck-0.9.0
 PKGNAME=	${DISTNAME:tl}
@@ -9,6 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.shellcheck.net/
 COMMENT=	Shell script analysis tool
 LICENSE=	gnu-gpl-v3
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	Diff	\
+	aeson	\
+	mtl	\
+	transformers
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-fgl/buildlink3.mk"
