@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/29 04:56:23 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 13:35:06 pho Exp $
 lib/servant-${PKGVERSION}/${HS_VERSION}/package-description
 lib/servant-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -92,6 +92,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/Verbs.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithNamedContext.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithNamedContext.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithNamedContext.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithResource.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithResource.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/WithResource.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Links.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Links.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Links.p_hi
@@ -103,7 +106,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Types/SourceT.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Types/SourceT.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Alternative.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-BasicAuth.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Capture.html
@@ -133,6 +136,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-UVer
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Vault.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Verbs.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-WithNamedContext.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-WithResource.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-Links.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-Test-ComprehensiveAPI.html
@@ -164,10 +168,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/servant.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/synopsis.png
