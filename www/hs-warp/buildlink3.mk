@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/10/30 17:26:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-warp
 
 .if !defined(HS_WARP_BUILDLINK3_MK)
 HS_WARP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=3.3.23
-BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.3.23nb1
+BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=3.3.30
+BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.3.30
 BUILDLINK_PKGSRCDIR.hs-warp?=	../../www/hs-warp
 
 .include "../../devel/hs-auto-update/buildlink3.mk"
@@ -21,12 +21,11 @@ BUILDLINK_PKGSRCDIR.hs-warp?=	../../www/hs-warp
 .include "../../net/hs-simple-sendfile/buildlink3.mk"
 .include "../../devel/hs-streaming-commons/buildlink3.mk"
 .include "../../time/hs-time-manager/buildlink3.mk"
-.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-vault/buildlink3.mk"
 .include "../../www/hs-wai/buildlink3.mk"
 .include "../../devel/hs-word8/buildlink3.mk"
-.include "../../security/hs-x509/buildlink3.mk"
+.include "../../security/hs-crypton-x509/buildlink3.mk"
 .endif	# HS_WARP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-warp
