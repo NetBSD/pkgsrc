@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6339 2023/10/30 11:00:37 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6340 2023/10/30 11:55:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9253,3 +9253,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated math/hs-free to 5.2 [pho 2023-10-30]
 	Updated devel/hs-generic-lens to 2.2.2.0 [pho 2023-10-30]
 	Updated devel/hs-shelly to 1.12.1 [pho 2023-10-30]
+	Updated devel/hs-ghc-exactprint to 1.7.0.1 [pho 2023-10-30]
