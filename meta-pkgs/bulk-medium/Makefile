@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2023/10/30 12:30:54 nia Exp $
+# $NetBSD: Makefile,v 1.105 2023/10/30 12:47:18 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -59,6 +59,7 @@ DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=	jabberd>=2:../../chat/jabberd2
+DEPENDS+=	bitlbee-[0-9]*:../../chat/bitlbee
 DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
 DEPENDS+=	ircd-hybrid-[0-9]*:../../chat/ircd-hybrid
 DEPENDS+=	weechat-[0-9]*:../../chat/weechat
@@ -101,6 +102,7 @@ DEPENDS+=	nmap-[0-9]*:../../net/nmap
 DEPENDS+=	rtorrent-[0-9]*:../../net/rtorrent
 DEPENDS+=	samba>=4.2:../../net/samba4
 DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
+DEPENDS+=	tightvncviewer-[0-9]*:../../net/tightvncviewer
 DEPENDS+=	xymon-[0-9]*:../../net/xymon
 DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
 DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
@@ -124,6 +126,7 @@ DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
 DEPENDS+=	slim-[0-9]*:../../x11/slim
+DEPENDS+=	x11vnc-[0-9]*:../../x11/x11vnc
 DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
 #
