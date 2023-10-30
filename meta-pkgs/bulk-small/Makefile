@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/10/30 12:40:13 nia Exp $
+# $NetBSD: Makefile,v 1.54 2023/10/30 13:00:05 nia Exp $
 
 DISTNAME=	bulk-small-20231022
 CATEGORIES=	meta-pkgs
@@ -58,7 +58,7 @@ DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	irssi-[0-9]*:../../chat/irssi
 DEPENDS+=	base64-[0-9]*:../../converters/base64
 DEPENDS+=	mpack-[0-9]*:../../converters/mpack
-DEPENDS+=	emacs21>=21<22:../../editors/emacs21
+DEPENDS+=	emacs21-nox11>=21<22:../../editors/emacs21-nox11
 DEPENDS+=	nano-[0-9]*:../../editors/nano
 DEPENDS+=	vim-[0-9]*:../../editors/vim
 DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
@@ -78,11 +78,25 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
 DEPENDS+=	htop-[0-9]*:../../sysutils/htop
-DEPENDS+=	fvwm-[0-9]*:../../wm/fvwm
-DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
 DEPENDS+=	curl-[0-9]*:../../www/curl
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
+
+.include "../../mk/bsd.prefs.mk"
+
+# We do not want to build software that's already included.
+
+.if ${OPSYS} != "NetBSD"
+DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
+.endif
+
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "OpenBSD"
+DEPENDS+=	tmux-[0-9]*:../../sysutils/tmux
+.endif
+
+.if ${X11_TYPE} == "native"
+DEPENDS+=	fvwm-[0-9]*:../../wm/fvwm
 DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
+.endif
 
 #
 # 2. Base packages for the very popular languages that enormous
@@ -114,8 +128,6 @@ DEPENDS+=	pkgconf-[0-9]*:../../devel/pkgconf
 # pulls it in.
 #DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "native"
 DEPENDS+=	x11-links-[0-9]*:../../pkgtools/x11-links
@@ -215,7 +227,9 @@ TRANSITIVE+=	libpsl-[0-9]*:../../www/libpsl
 TRANSITIVE+=	libfetch-[0-9]*:../../net/libfetch
 
 # required by www/bozohttpd
+.if ${OPSYS} != "NetBSD"
 TRANSITIVE+=	lua54-[0-9]*:../../lang/lua54
+.endif
 
 # required by www/curl
 TRANSITIVE+=	libidn2-[0-9]*:../../devel/libidn2
@@ -275,7 +289,9 @@ TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt
 TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error
 
 # required by wm/fvwm
+.if ${X11_TYPE} == "native"
 TRANSITIVE+=	libstroke-[0-9]*:../../devel/libstroke
+.endif
 
 # Provide a way to hide these when doing dependency analysis.
 .if !defined(SUPPRESS_TRANSITIVE)
