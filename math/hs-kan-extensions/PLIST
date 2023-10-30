@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/28 02:21:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 16:20:11 pho Exp $
 lib/kan-extensions-${PKGVERSION}/${HS_VERSION}/package-description
 lib/kan-extensions-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Comonad/Density.dyn_hi
@@ -43,7 +43,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Yoneda.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Control-Comonad-Density.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Control-Monad-Co.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Control-Monad-Codensity.html
@@ -58,10 +58,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Data-Func
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Data-Functor-Kan-Ran.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/Data-Functor-Yoneda.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/kan-extensions.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/kan-extensions-${PKGVERSION}/html/synopsis.png
