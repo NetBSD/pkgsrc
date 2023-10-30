@@ -1,0 +1,3 @@
+A library for parsing and evaluating typst syntax. Typst
+(https://typst.app) is a document layout and formatting language. This
+library targets typst 0.7 and currently offers only partial support.
