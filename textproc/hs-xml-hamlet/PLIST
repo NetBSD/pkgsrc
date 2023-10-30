@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/30 13:36:59 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XML.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XML.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XML.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XMLParse.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XMLParse.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Hamlet/XMLParse.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/xml-hamlet-${PKGVERSION}/${HS_VERSION}/package-description
+lib/xml-hamlet-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/Text-Hamlet-XML.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-hamlet-${PKGVERSION}/html/xml-hamlet.haddock
