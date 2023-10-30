@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/29 23:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/30 23:18:45 jperkin Exp $
 
 DISTNAME=	click_aliases-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	# none
 
