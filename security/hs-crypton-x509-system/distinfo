@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/10/30 14:46:29 pho Exp $
+
+BLAKE2s (crypton-x509-system-1.6.7.tar.gz) = 4cb963d862ca522a17beb9099f478554dd27c8628eff4e9c7b67d5fe4c002045
+SHA512 (crypton-x509-system-1.6.7.tar.gz) = fc6edbea995df5d56228413452157fac2349cafdb5cb85a38625cb3e43f46aa519d5a0fe47c1b25a9eb6fbba7b498538e173d276224dab331a8a19193df80f75
+Size (crypton-x509-system-1.6.7.tar.gz) = 3496 bytes
+SHA1 (patch-System_X509_Unix.hs) = f43835f930d8bf99182614755b6e504bd821b4d6
