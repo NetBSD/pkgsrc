@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2023/10/23 06:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2023/10/30 12:20:42 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -56,10 +56,8 @@ DEPENDS+=	flac-[0-9]*:../../audio/flac
 DEPENDS+=	flac123-[0-9]*:../../audio/flac123
 DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
-DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=	jabberd>=2:../../chat/jabberd2
-DEPENDS+=	sirc-[0-9]*:../../chat/sirc
 DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
 DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
@@ -74,8 +72,6 @@ DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk3-[0-9]*:../../editors/vim-gtk3
 # emacs with x11 also brings in rust, which doesn't fit in this package
 DEPENDS+=	emacs-nox11-[0-9]*:../../editors/emacs-nox11
-DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
-DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
 DEPENDS+=	wine-[0-9]*:../../emulators/wine
@@ -90,7 +86,6 @@ DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
-DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
 DEPENDS+=	mailman-[0-9]*:../../mail/mailman
@@ -99,7 +94,6 @@ DEPENDS+=	mutt-[0-9]*:../../mail/mutt
 DEPENDS+=	alpine-[0-9]*:../../mail/alpine
 DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 DEPENDS+=	bind>=9.16<9.17:../../net/bind916
-DEPENDS+=	clive-[0-9]*:../../net/clive
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
 DEPENDS+=	samba>=4.2:../../net/samba4
 DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
@@ -189,8 +183,6 @@ DEPENDS+=	openssl-[0-9]*:../../security/openssl
 DEPENDS+=	tcp_wrappers-[0-9]*:../../security/tcp_wrappers
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
-DEPENDS+=	motif-[0-9]*:../../x11/motif
-DEPENDS+=	tk-[0-9]*:../../x11/tk
 
 #
 # 4. Linux compat packages
