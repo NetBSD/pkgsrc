@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/24 00:59:04 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/30 10:56:53 pho Exp $
 
-BLAKE2s (generic-lens-2.2.1.0.tar.gz) = 27632cc9e51252877826a8fda3b9ffd0495f40be81db91cbc923251e787ba57c
-SHA512 (generic-lens-2.2.1.0.tar.gz) = 5d33b1677756e890b6a96be7e24b0f37468b5dfb0f2c786fc6010b75440b7e4f737f8dac39976b2cea857ed6dfd984e7b589261be78b9a37faab35f95e4d3115
-Size (generic-lens-2.2.1.0.tar.gz) = 21197 bytes
+BLAKE2s (generic-lens-2.2.2.0.tar.gz) = 5a1c5699746899e26166681637811da7cf2dd3a5853311c666a8517b8fac131a
+SHA512 (generic-lens-2.2.2.0.tar.gz) = 90d364ee0844342d8f2e68f5072e8d58575427b964b2394b86a3c73ea123d7698205fc87fdc6af579cc5384fa8f024f7bc87967000a86a4a8f9e2246dbd12ecc
+Size (generic-lens-2.2.2.0.tar.gz) = 21357 bytes
