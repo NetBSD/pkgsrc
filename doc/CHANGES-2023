@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6369 2023/10/30 17:01:49 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6370 2023/10/30 17:11:05 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9284,3 +9284,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-monad-logger to 0.3.40 [pho 2023-10-30]
 	Updated devel/retrie to 1.2.2 [pho 2023-10-30]
 	Updated devel/hs-hie-bios to 0.13.0 [pho 2023-10-30]
+	Updated devel/fourmolu to 0.14.1.0 [pho 2023-10-30]
