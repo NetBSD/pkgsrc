@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2023/10/30 13:00:05 nia Exp $
+# $NetBSD: Makefile,v 1.107 2023/10/30 13:01:33 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -90,7 +90,7 @@ DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
-DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw
+DEPENDS+=	dovecot>=2:../../mail/dovecot2
 DEPENDS+=	mailman-[0-9]*:../../mail/mailman
 DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	mutt-[0-9]*:../../mail/mutt
