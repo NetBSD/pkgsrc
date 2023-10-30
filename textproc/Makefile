@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1433 2023/10/30 10:30:14 pho Exp $
+# $NetBSD: Makefile,v 1.1434 2023/10/30 12:54:34 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -369,6 +369,7 @@ SUBDIR+=	hs-text-manipulate
 SUBDIR+=	hs-text-rope
 SUBDIR+=	hs-text-short
 SUBDIR+=	hs-toml-parser
+SUBDIR+=	hs-typst
 SUBDIR+=	hs-typst-symbols
 SUBDIR+=	hs-unicode-collation
 SUBDIR+=	hs-unicode-data
