@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/10/09 04:54:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/10/30 18:52:37 pho Exp $
 
 BUILDLINK_TREE+=	hs-lens
 
 .if !defined(HS_LENS_BUILDLINK3_MK)
 HS_LENS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-lens+=	hs-lens>=5.1
-BUILDLINK_ABI_DEPENDS.hs-lens+=	hs-lens>=5.2nb2
+BUILDLINK_API_DEPENDS.hs-lens+=	hs-lens>=5.2
+BUILDLINK_ABI_DEPENDS.hs-lens+=	hs-lens>=5.2.3
 BUILDLINK_PKGSRCDIR.hs-lens?=	../../devel/hs-lens
 
 .include "../../devel/hs-assoc/buildlink3.mk"
