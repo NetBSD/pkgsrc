@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/27 03:06:29 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/30 15:39:56 pho Exp $
 bin/idris
 bin/idris-codegen-c
 bin/idris-codegen-javascript
@@ -122,7 +122,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Util/System.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Version_idris.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 man/man1/idris.1
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CITATION.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CONTRIBUTING.md
@@ -265,6 +265,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/idris-tutorial.pdf
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/idris.haddock
@@ -273,6 +274,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/man/idris.1
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/samples/ST/Composite.idr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/samples/ST/Graphics/Draw.idr
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/samples/ST/Graphics/Turtle.idr

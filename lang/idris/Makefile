@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/10/09 04:54:38 pho Exp $
+# $NetBSD: Makefile,v 1.18 2023/10/30 15:39:56 pho Exp $
 
 DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
@@ -14,12 +14,17 @@ LICENSE=	modified-bsd
 # built: https://github.com/idris-lang/Idris2
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	aeson	\
+	ansi-terminal	\
+	ansi-wl-pprint	\
 	bytestring	\
 	fsnotify	\
 	libffi	\
+	mtl	\
 	network	\
 	optparse-applicative	\
 	text	\
+	transformers	\
+	unix	\
 	vector
 
 CONFIGURE_ARGS+=	-f release
