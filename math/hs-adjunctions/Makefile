@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:39 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/30 14:52:15 pho Exp $
 
 DISTNAME=	adjunctions-4.4.2
 PKGREVISION=	2
@@ -7,6 +7,9 @@ CATEGORIES=	math
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Adjunctions and representable functors
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	semigroupoids
 
 .include "../../math/hs-comonad/buildlink3.mk"
 .include "../../math/hs-contravariant/buildlink3.mk"
