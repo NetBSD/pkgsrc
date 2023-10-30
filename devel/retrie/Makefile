@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:36 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/30 16:32:57 pho Exp $
 
-DISTNAME=	retrie-1.2.1.1
+DISTNAME=	retrie-1.2.2
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +9,11 @@ COMMENT=	Powerful, easy-to-use codemodding tool for Haskell
 LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	optparse-applicative
+	base	\
+	ansi-terminal	\
+	mtl	\
+	optparse-applicative	\
+	transformers
 
 # If retrie is to be linked dynamically, it will depend on more than 80
 # shared objects and the dynamic linker will spend too much time to resolve
@@ -18,6 +21,8 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 # launched very frequently by editors and IDEs. This wastes storage, but
 # time is more expensive than disks.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
+
+CONFIGURE_ARGS+=	-f BuildExecutable
 
 # retrie is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
