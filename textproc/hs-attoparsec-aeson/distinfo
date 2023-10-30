@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/30 10:29:45 pho Exp $
+
+BLAKE2s (attoparsec-aeson-2.2.0.1.tar.gz) = e58bd1a4790736fec1edebe640dd92a4bc4f93e88892640539f81650accd3430
+SHA512 (attoparsec-aeson-2.2.0.1.tar.gz) = b23352d1ae25c2b7ad4437262f726d169130ab57aafee290cec006a8a3a397bc89be61ae8bdd556b96362fa53ba8d37c2924a2b9518f0776ce754500b1699fbe
+Size (attoparsec-aeson-2.2.0.1.tar.gz) = 8441 bytes
