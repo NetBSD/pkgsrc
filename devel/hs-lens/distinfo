@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/08/23 12:16:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2023/10/30 18:52:37 pho Exp $
 
-BLAKE2s (lens-5.2.tar.gz) = 565bdde94806a00fa251e33d40db8c9d4523792f1917c6d5cff5e048474bfd43
-SHA512 (lens-5.2.tar.gz) = 6668d3430437cc0a84ee30b034323394ca45aa3ed2846555be2af5ce6fe4f26051dea8fca4941b574129c5051b66f6e27b877dcfad095d3e7c0df883fcd9910e
-Size (lens-5.2.tar.gz) = 698333 bytes
+BLAKE2s (lens-5.2.3.tar.gz) = 25202ff9d297b4d63a5b754b56e5a093b3aa34bda1d997d9b843a160446584b8
+SHA512 (lens-5.2.3.tar.gz) = ec904ace54a4ab0f8f9ebb92541bbee6af8a064d993477d56d84aace811dccbce8a9b0deaf8c543158ae872595ef8e119dd8d5459e503b9939daec197bd9c8a2
+Size (lens-5.2.3.tar.gz) = 703220 bytes
