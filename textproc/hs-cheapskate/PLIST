@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/26 10:15:21 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/30 14:56:55 pho Exp $
 bin/cheapskate
 lib/cheapskate-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cheapskate-${PKGVERSION}/${HS_VERSION}/package-id
@@ -29,16 +29,18 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_cheapskate.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/Cheapskate-Html.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/Cheapskate-Parse.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/Cheapskate-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/Cheapskate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/cheapskate.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cheapskate-${PKGVERSION}/html/synopsis.png
