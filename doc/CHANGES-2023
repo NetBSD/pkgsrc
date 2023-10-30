@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6374 2023/10/30 18:12:44 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6375 2023/10/30 18:29:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9289,3 +9289,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/hs-warp to 3.3.30 [pho 2023-10-30]
 	Updated lang/hs-hslua to 2.3.0 [pho 2023-10-30]
 	Updated devel/hs-pandoc-lua-marshal to 0.2.2 [pho 2023-10-30]
+	Updated textproc/hs-skylighting to 0.14 [pho 2023-10-30]
