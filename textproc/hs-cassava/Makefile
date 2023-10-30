@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:49 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/30 03:06:44 pho Exp $
 
 DISTNAME=	cassava-0.5.3.0
 PKGREVISION=	2
@@ -7,6 +7,9 @@ CATEGORIES=	textproc
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CSV parsing and encoding library
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
