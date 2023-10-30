@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/30 09:19:31 pho Exp $
 
 DISTNAME=	wai-websockets-3.0.1.2
 PKGREVISION=	4
@@ -8,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Provide a bridge between WAI and the websockets package
 LICENSE=	mit
 
+# Don't build or install an example executable.
 CONFIGURE_ARGS+=	-f-example
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
