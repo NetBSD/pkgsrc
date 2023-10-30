@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2023/10/29 17:39:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.40 2023/10/30 19:15:04 bsiegert Exp $
 
 BLAKE2s (github.com__burnt_sushi_toml_@v_v1.2.1.mod) = cd3c2cea509a40639fa5501d594ba981c1385767f14e35780d21b8bd313977a4
 SHA512 (github.com__burnt_sushi_toml_@v_v1.2.1.mod) = 0e8cdda81300811f629bce3a9307de05450036f750f8c3c0cd5b70854f8f95bd962ce99bfe1325c8d1bf562a5b7b94afb9e9fd2dbe4dcc45325fac6e27471102
@@ -114,12 +114,12 @@ Size (golang.org_x_text_@v_v0.3.3.mod) = 97 bytes
 BLAKE2s (golang.org_x_tools_@v_v0.0.0-20180917221912-90fa682c2a6e.mod) = d276ed1711a2da66e71b05357b06093eb7c33e7f00c194ff6386deb7b0676fca
 SHA512 (golang.org_x_tools_@v_v0.0.0-20180917221912-90fa682c2a6e.mod) = 3c166b18c0ce47a47e95da9eeede63879a92b0205bd4589d554f7bae89699be0efa83e1f5bba8e50f47714ea23e759b07f4543fe06301995d39373da2db16fc0
 Size (golang.org_x_tools_@v_v0.0.0-20180917221912-90fa682c2a6e.mod) = 26 bytes
-BLAKE2s (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.mod) = 40405b504a4e4f2c5c472b87c734e41ae48a305c3efd2fdefcfeefd5a185c2a4
-SHA512 (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.mod) = 046f41945ac20acd9daf35e3ff6553a673a4ecb17a72f0cbebe6da8aea0e8fb6ba67f25ad34e29df9860206d29f93c443c7af7fca4c1aaff43d260a4ac3d916a
-Size (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.mod) = 194 bytes
-BLAKE2s (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.zip) = 529fa7b01d845147517e16cc7d5fe3dfadac07643ec1b9f107572d79e3663061
-SHA512 (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.zip) = 00f3e3a41c9e0133d747eac0a2d5ef1cebb66b33785db25e17f26b5b67e27b2ae89db7cf517656c0fc4a42e6b8c1cc8417ba17b130d1e57cd5d3a6fd277f69cb
-Size (golang.org_x_tools_@v_v0.14.1-0.20231024142323-35a647a9c3fc.zip) = 3236743 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.mod) = 40405b504a4e4f2c5c472b87c734e41ae48a305c3efd2fdefcfeefd5a185c2a4
+SHA512 (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.mod) = 046f41945ac20acd9daf35e3ff6553a673a4ecb17a72f0cbebe6da8aea0e8fb6ba67f25ad34e29df9860206d29f93c443c7af7fca4c1aaff43d260a4ac3d916a
+Size (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.mod) = 194 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.zip) = a2e33c549a5a88d3f3e9be894d613630d65e75124bc1aa06a343027603e0fb59
+SHA512 (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.zip) = 7b23315d8b98d9db74c7112388c4749757058a5836a32c8675eb646a15aa95b2d11927c843835754c3f43b2662606511f08f644ff4c0b6a8fdb13bed0da75781
+Size (golang.org_x_tools_@v_v0.14.1-0.20231026192422-8b5abd452b28.zip) = 3236948 bytes
 BLAKE2s (golang.org_x_vuln_@v_v1.0.1.mod) = 65d1855db8170e9310bee686f7be43a9b54f87214f614a61ff069ccb0234865a
 SHA512 (golang.org_x_vuln_@v_v1.0.1.mod) = 79c4eb62d3fa4aa7685bd374154feea407a9db683d6bea219379e7cfa9fde9476bb69e753a222660d7d6722ee68cfe010e489fa7128837f1efcd920ccb947904
 Size (golang.org_x_vuln_@v_v1.0.1.mod) = 408 bytes
@@ -150,9 +150,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (gopls-0.14.0.tar.gz) = d89e19c7438ccc1d1341fc2594366819051b5fe2a031dfd67c20932a2cca6fd3
-SHA512 (gopls-0.14.0.tar.gz) = 1ce4ce1246745d342955acc9ff943215fcabc49f4f09a1916268b78f6df9eb3e19aecde4c87ea622a062873c450eb37792dda54def36327d0d25fb23eb938eb6
-Size (gopls-0.14.0.tar.gz) = 3629598 bytes
+BLAKE2s (gopls-0.14.1.tar.gz) = 774b863747492c59aa9b37e81688fae0e81f25a29a22c698ae09bf9e8f5a2279
+SHA512 (gopls-0.14.1.tar.gz) = e60329c5b73a005da98d60d02c7cd4a2ab83542be8a22099ebcc6d81fa116921ed3e0b76b76127ea3a8408df904bd7baf6ef5367527097bc7003c6991cf29ad1
+Size (gopls-0.14.1.tar.gz) = 3629863 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.4.5.mod) = 059ad1a5af8120f6378ce894856916b97629aab86c21f57dd908aacb7de862da
 SHA512 (honnef.co_go_tools_@v_v0.4.5.mod) = 4b3dd0fb0efc0dca96b82a3a5450243cccdd1a5c1680f0997099596017427a8607465ea9fc1b73e6982e64d5a14c033b363ebb58b4ee2c83e77ac07080a39861
 Size (honnef.co_go_tools_@v_v0.4.5.mod) = 275 bytes
