@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/30 14:02:52 pho Exp $
 
-BLAKE2s (simple-sendfile-0.2.30.tar.gz) = 55cbce1c6f8afb9e8daebb4d63766ec20c4e501bcc9dded9b550d8c37169b329
-SHA512 (simple-sendfile-0.2.30.tar.gz) = ae624939d54bf5ed8aa2c0727a29696730ba6b1d520f28bdc5b42a8e4c4bc03980821639fb8e16702a360dbd0396aea8a997055d22812bef3d22ffaaac53f759
-Size (simple-sendfile-0.2.30.tar.gz) = 343470 bytes
+BLAKE2s (simple-sendfile-0.2.32.tar.gz) = 5209eeaf9cd34a093a2338cd0086264015483233ab6aac69a9a35f1a7dba1a94
+SHA512 (simple-sendfile-0.2.32.tar.gz) = a6daf74f32d33096409c1650310b79005823b2513531b01b80e8a495af736299fd430db86faf5822464dec5a52ee7d733d49410f106f96a361eceb29b9df570f
+Size (simple-sendfile-0.2.32.tar.gz) = 343565 bytes
