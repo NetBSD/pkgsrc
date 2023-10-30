@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/02/03 08:49:06 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/30 08:09:57 pho Exp $
 
-BLAKE2s (hasktags-0.72.0.tar.gz) = 8f1aa85a05f5d3b0e6b8fa94d4b4031b88d92390bc5918b9dbf328dbab7b3a7d
-SHA512 (hasktags-0.72.0.tar.gz) = dfbcf85174391db182525285474d8d8b4d78229d6f55d14868ba8d13beb9ad0dff74f4aedea23fdfaa41f59867cf96e801e2a7d9009df95874fdcb5a2fa89b38
-Size (hasktags-0.72.0.tar.gz) = 59000 bytes
+BLAKE2s (hasktags-0.73.0.tar.gz) = 9660233633d683b5f210f3c41713a6b72ed70db3ed3952f6c15a11bd2cfc6b1c
+SHA512 (hasktags-0.73.0.tar.gz) = 8ba694803c89da7d7a15bc8162b557cc7a8529f1602022010b22152ee4c66f5431f80bd988f0d114b22414ab8276384bb4c902b0a709ccb48b349e03483758ea
+Size (hasktags-0.73.0.tar.gz) = 59193 bytes
