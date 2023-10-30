@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6334 2023/10/30 10:40:07 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6335 2023/10/30 10:43:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9248,3 +9248,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-storable-tuple to 0.1 [pho 2023-10-30]
 	Added textproc/hs-attoparsec-aeson version 2.2.0.1 [pho 2023-10-30]
 	Updated devel/hs-lifted-async to 0.10.2.4 [pho 2023-10-30]
+	Added devel/hs-git-lfs version 1.2.1 [pho 2023-10-30]
