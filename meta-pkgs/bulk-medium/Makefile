@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2023/10/30 12:25:15 nia Exp $
+# $NetBSD: Makefile,v 1.104 2023/10/30 12:30:54 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -52,6 +52,7 @@ DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 # 1. Applications
 #
 DEPENDS+=	cdparanoia-[0-9]*:../../audio/cdparanoia
+DEPENDS+=	cmus-[0-9]*:../../audio/cmus
 DEPENDS+=	flac-[0-9]*:../../audio/flac
 DEPENDS+=	flac123-[0-9]*:../../audio/flac123
 DEPENDS+=	lame-[0-9]*:../../audio/lame
@@ -59,10 +60,11 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=	jabberd>=2:../../chat/jabberd2
 DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
+DEPENDS+=	ircd-hybrid-[0-9]*:../../chat/ircd-hybrid
 DEPENDS+=	weechat-[0-9]*:../../chat/weechat
 DEPENDS+=	fribidi-[0-9]*:../../converters/fribidi
-DEPENDS+=	mariadb-client>=10.5<10.6:../../databases/mariadb105-client
 DEPENDS+=	mariadb-client>=10.6<10.7:../../databases/mariadb106-client
+DEPENDS+=	mariadb-client>=10.11<10.12:../../databases/mariadb1011-client
 DEPENDS+=	openldap-client-[0-9]*:../../databases/openldap-client
 DEPENDS+=	git-[0-9]*:../../devel/git
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
@@ -76,6 +78,7 @@ DEPENDS+=	dosbox-[0-9]*:../../emulators/dosbox
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+DEPENDS+=	feh-[0-9]*:../../graphics/feh
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	php>=7.4<7.5:../../lang/php74
@@ -95,6 +98,7 @@ DEPENDS+=	alpine-[0-9]*:../../mail/alpine
 DEPENDS+=	spamassassin-[0-9]*:../../mail/spamassassin
 DEPENDS+=	bind>=9.16<9.17:../../net/bind916
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
+DEPENDS+=	rtorrent-[0-9]*:../../net/rtorrent
 DEPENDS+=	samba>=4.2:../../net/samba4
 DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
 DEPENDS+=	xymon-[0-9]*:../../net/xymon
@@ -114,10 +118,12 @@ DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
 DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
-DEPENDS+=	icewm>=1.2<1.3:../../wm/icewm
+DEPENDS+=	i3-[0-9]*:../../wm/i3
 DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
+DEPENDS+=	nginx-[0-9]*:../../www/nginx
+DEPENDS+=	slim-[0-9]*:../../x11/slim
 DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
 #
@@ -175,7 +181,8 @@ DEPENDS+=	lcms2-[0-9]*:../../graphics/lcms2
 DEPENDS+=	blas-[0-9]*:../../math/blas
 DEPENDS+=	lapack-[0-9]*:../../math/lapack
 DEPENDS+=	boost-[0-9]*:../../meta-pkgs/boost
-DEPENDS+=	ffmpeg4-[0-9]*:../../multimedia/ffmpeg4
+DEPENDS+=	ffmpeg6-[0-9]*:../../multimedia/ffmpeg6
+DEPENDS+=	ffplay6-[0-9]*:../../multimedia/ffplay6
 DEPENDS+=	libogg-[0-9]*:../../multimedia/libogg
 DEPENDS+=	libpcap-[0-9]*:../../net/libpcap
 DEPENDS+=	poppler-[0-9]*:../../print/poppler
@@ -197,15 +204,16 @@ DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
 # 5. Desktop infrastructure and support services
 #
 DEPENDS+=	eawpatches-[0-9]*:../../audio/eawpatches
+DEPENDS+=	fuse-ntfs-3g-[0-9]*:../../filesystems/fuse-ntfs-3g
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
 DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
 #
 # 6. Other very small packages
 #
-DEPENDS+=	${LUA_PKGPREFIX}-stdlib-[0-9]*:../../devel/lua-stdlib
+DEPENDS+=	${LUA_PKGPREFIX}-posix-[0-9]*:../../devel/lua-posix
 
-#
+
 # Note that (unlike in bulk-small) we make no effort to list or track
 # depends of the above. As long as the total size of this package
 # remains roughly what we want, the exact list of depends doesn't
