@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/27 13:43:22 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/30 16:18:43 pho Exp $
 
-BLAKE2s (monad-logger-0.3.39.tar.gz) = 52f7ebe407a03dacd47a1dfed0e21d6ae94b08325f43c58c108a4b3e8d1dc5e5
-SHA512 (monad-logger-0.3.39.tar.gz) = 2f353ff26f121ef9e89d033a6ab9a240422aab91e6cbc8112d81d52b217c24deb6800c2c641e417ac430ff791666bd0e676bcea4aa7cbdb22df167f2d51364d4
-Size (monad-logger-0.3.39.tar.gz) = 11777 bytes
+BLAKE2s (monad-logger-0.3.40.tar.gz) = 17808dd8c1639f1ab057266ca08a3d1844587b5a60aea9556d8f21e0844f422e
+SHA512 (monad-logger-0.3.40.tar.gz) = a4dd32624a9feb399cf30f107b591742ac558180cb3220acb91f833459c9c525947efd5e8c5961a079c8a5b06263ff7a9a8a9a73067031f4551d6dec4a1db218
+Size (monad-logger-0.3.40.tar.gz) = 11909 bytes

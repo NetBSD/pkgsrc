@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/10/09 04:54:24 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/10/30 16:18:43 pho Exp $
 
 BUILDLINK_TREE+=	hs-monad-logger
 
 .if !defined(HS_MONAD_LOGGER_BUILDLINK3_MK)
 HS_MONAD_LOGGER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-monad-logger+=	hs-monad-logger>=0.3.39
-BUILDLINK_ABI_DEPENDS.hs-monad-logger+=	hs-monad-logger>=0.3.39nb2
+BUILDLINK_API_DEPENDS.hs-monad-logger+=	hs-monad-logger>=0.3.40
+BUILDLINK_ABI_DEPENDS.hs-monad-logger+=	hs-monad-logger>=0.3.40
 BUILDLINK_PKGSRCDIR.hs-monad-logger?=	../../devel/hs-monad-logger
 
 .include "../../devel/hs-conduit/buildlink3.mk"
