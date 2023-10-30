@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6366 2023/10/30 16:16:48 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6367 2023/10/30 16:18:51 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9281,3 +9281,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/hs-crypton-x509-system version 1.6.7 [pho 2023-10-30]
 	Updated security/hs-tls to 1.9.0 [pho 2023-10-30]
 	Updated devel/hs-primitive-extras to 0.10.1.10 [pho 2023-10-30]
+	Updated devel/hs-monad-logger to 0.3.40 [pho 2023-10-30]
