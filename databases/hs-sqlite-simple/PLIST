@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 11:26:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 08:18:35 pho Exp $
 lib/sqlite-simple-${PKGVERSION}/${HS_VERSION}/package-description
 lib/sqlite-simple-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -40,7 +40,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Database/SQLite/Simple/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Database/SQLite/Simple/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple-FromField.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple-FromRow.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple-Function.html
@@ -53,11 +53,33 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-S
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple-ToRow.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/Database-SQLite-Simple.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-58.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-All.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-B.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-C.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-D.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-E.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-F.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-G.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-I.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-L.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-M.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-N.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-O.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-P.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-Q.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-R.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-S.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-T.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-U.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/sqlite-simple.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/sqlite-simple-${PKGVERSION}/html/synopsis.png
