@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/30 17:26:35 pho Exp $
 
-DISTNAME=	warp-3.3.23
-PKGREVISION=	1
+DISTNAME=	warp-3.3.30
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -20,11 +19,10 @@ LICENSE=	mit
 .include "../../net/hs-simple-sendfile/buildlink3.mk"
 .include "../../devel/hs-streaming-commons/buildlink3.mk"
 .include "../../time/hs-time-manager/buildlink3.mk"
-.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-vault/buildlink3.mk"
 .include "../../www/hs-wai/buildlink3.mk"
 .include "../../devel/hs-word8/buildlink3.mk"
-.include "../../security/hs-x509/buildlink3.mk"
+.include "../../security/hs-crypton-x509/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
