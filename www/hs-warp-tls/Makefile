@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/30 19:07:28 pho Exp $
 
-DISTNAME=	warp-tls-3.3.4
-PKGREVISION=	2
-CATEGORIES=	www
+DISTNAME=	warp-tls-3.4.3
+CATEGORIES=	www security
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	HTTP over TLS support for Warp via the TLS package
 LICENSE=	mit
 
-.include "../../security/hs-cryptonite/buildlink3.mk"
 .include "../../devel/hs-data-default-class/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
+.include "../../net/hs-recv/buildlink3.mk"
 .include "../../devel/hs-streaming-commons/buildlink3.mk"
 .include "../../security/hs-tls/buildlink3.mk"
 .include "../../security/hs-tls-session-manager/buildlink3.mk"
