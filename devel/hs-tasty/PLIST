@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/26 10:25:46 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/30 03:17:47 pho Exp $
 lib/tasty-${PKGVERSION}/${HS_VERSION}/package-description
 lib/tasty-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -79,7 +79,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Runners/Utils.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Runners/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Ingredients-Basic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Ingredients-ConsoleReporter.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Ingredients.html
@@ -114,10 +114,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/tasty.haddock
