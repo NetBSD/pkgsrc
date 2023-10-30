@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2023/10/21 17:09:57 gdt Exp $
+# $NetBSD: Makefile,v 1.81 2023/10/30 23:19:55 gutteridge Exp $
 
-DISTNAME=	geany-1.38
-PKGREVISION=	6
-CATEGORIES=	devel
+DISTNAME=	geany-2.0
+CATEGORIES=	devel editors
 MASTER_SITES=	https://download.geany.org/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -34,10 +33,12 @@ CONFIGURE_ARGS+=	CC=sunpro
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
 .endif
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
