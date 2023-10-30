@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6356 2023/10/30 13:35:16 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6357 2023/10/30 13:37:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9270,3 +9270,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/hs-hslua-aeson to 2.3.0.1 [pho 2023-10-30]
 	Updated converters/hs-aeson-pretty to 0.8.10 [pho 2023-10-30]
 	Updated www/hs-servant to 0.20.1 [pho 2023-10-30]
+	Added textproc/hs-xml-hamlet version 0.5.0.2 [pho 2023-10-30]
