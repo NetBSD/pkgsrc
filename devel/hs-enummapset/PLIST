@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/30 07:19:33 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 11:08:41 pho Exp $
 lib/enummapset-${PKGVERSION}/${HS_VERSION}/package-description
 lib/enummapset-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/EnumMap.dyn_hi
@@ -19,16 +19,18 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/EnumSet.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/Data-EnumMap-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/Data-EnumMap-Strict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/Data-EnumMap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/Data-EnumSet.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/enummapset.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/enummapset-${PKGVERSION}/html/synopsis.png
