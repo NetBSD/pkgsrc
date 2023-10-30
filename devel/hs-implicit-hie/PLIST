@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/28 02:32:44 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 16:34:20 pho Exp $
 bin/gen-hie
 lib/implicit-hie-${PKGVERSION}/${HS_VERSION}/package-description
 lib/implicit-hie-${PKGVERSION}/${HS_VERSION}/package-id
@@ -17,15 +17,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_implicit_hie.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/Hie-Cabal-Parser.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/Hie-Locate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/Hie-Yaml.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/implicit-hie.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/implicit-hie-${PKGVERSION}/html/synopsis.png
