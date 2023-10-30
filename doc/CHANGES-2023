@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6303 2023/10/29 22:58:09 bacon Exp $
+$NetBSD: CHANGES-2023,v 1.6304 2023/10/30 03:00:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9211,3 +9211,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-ruff version 0.1.3 [wiz 2023-10-29]
 	Added devel/py-click-aliases version 1.0.2 [wiz 2023-10-29]
 	Updated biology/biolibc-tools to 0.1.4.13 [bacon 2023-10-29]
+	Updated lang/hs-hslua-objectorientation to 2.3.0 [pho 2023-10-30]
