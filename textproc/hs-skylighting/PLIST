@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/01/27 15:06:06 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2023/10/30 18:29:39 pho Exp $
 bin/skylighting
 lib/skylighting-${PKGVERSION}/${HS_VERSION}/package-description
 lib/skylighting-${PKGVERSION}/${HS_VERSION}/package-id
@@ -90,6 +90,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/D.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dart.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dart.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dart.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Debiancontrol.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Debiancontrol.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Debiancontrol.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Default.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Default.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Default.p_hi
@@ -102,6 +105,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Djangotemplate.p_
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dockerfile.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dockerfile.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dockerfile.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dosbat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dosbat.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dosbat.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dot.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dot.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Dot.p_hi
@@ -141,6 +147,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/FortranFree.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Fsharp.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Fsharp.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Fsharp.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gap.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gap.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gap.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.p_hi
@@ -464,7 +473,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zsh.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zsh.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/Skylighting-Syntax.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/Skylighting.html
@@ -491,10 +500,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/doc-index-V.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/skylighting.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-${PKGVERSION}/html/synopsis.png
