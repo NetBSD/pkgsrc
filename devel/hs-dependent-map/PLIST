@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 16:14:21 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 11:19:45 pho Exp $
 lib/dependent-map-${PKGVERSION}/${HS_VERSION}/package-description
 lib/dependent-map-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Dependent/Map.dyn_hi
@@ -16,15 +16,17 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Dependent/Map/PtrEquality.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/Data-Dependent-Map-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/Data-Dependent-Map-Lens.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/Data-Dependent-Map.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/dependent-map.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/dependent-map-${PKGVERSION}/html/synopsis.png
