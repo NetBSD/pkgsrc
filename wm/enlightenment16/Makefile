@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/08/14 05:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/30 21:44:29 gutteridge Exp $
 
-DISTNAME=	e16-1.0.28
+DISTNAME=	e16-1.0.29
 PKGNAME=	${DISTNAME:S/e/enlightenment/}
-PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -38,6 +37,9 @@ SUBST_VARS.paths=	PREFIX
 SUBST_VARS.paths+=	X11BASE
 
 PLIST_VARS+=	libhack
+
+# -Wcast-align=strict was added in GCC 8.
+BUILDLINK_TRANSFORM+=	rm:-Wcast-align=strict
 
 .include "options.mk"
 
