@@ -1,19 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/08 13:19:22 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 14:16:14 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_cbor2.so
 ${PYSITELIB}/cbor2/__init__.py
 ${PYSITELIB}/cbor2/__init__.pyc
 ${PYSITELIB}/cbor2/__init__.pyo
+${PYSITELIB}/cbor2/_decoder.py
+${PYSITELIB}/cbor2/_decoder.pyc
+${PYSITELIB}/cbor2/_decoder.pyo
+${PYSITELIB}/cbor2/_encoder.py
+${PYSITELIB}/cbor2/_encoder.pyc
+${PYSITELIB}/cbor2/_encoder.pyo
+${PYSITELIB}/cbor2/_types.py
+${PYSITELIB}/cbor2/_types.pyc
+${PYSITELIB}/cbor2/_types.pyo
 ${PYSITELIB}/cbor2/decoder.py
 ${PYSITELIB}/cbor2/decoder.pyc
 ${PYSITELIB}/cbor2/decoder.pyo
 ${PYSITELIB}/cbor2/encoder.py
 ${PYSITELIB}/cbor2/encoder.pyc
 ${PYSITELIB}/cbor2/encoder.pyo
+${PYSITELIB}/cbor2/py.typed
 ${PYSITELIB}/cbor2/tool.py
 ${PYSITELIB}/cbor2/tool.pyc
 ${PYSITELIB}/cbor2/tool.pyo
