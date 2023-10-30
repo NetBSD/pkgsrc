@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:31 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/30 10:23:47 pho Exp $
 
-DISTNAME=	tasty-hunit-0.10.0.3
-PKGREVISION=	7
+DISTNAME=	tasty-hunit-0.10.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
