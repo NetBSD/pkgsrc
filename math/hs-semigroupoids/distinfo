@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/12 05:26:25 pho Exp $
+$NetBSD: distinfo,v 1.6 2023/10/30 07:45:17 pho Exp $
 
-BLAKE2s (semigroupoids-5.3.7.tar.gz) = 5661145ae996f49abf1b105fb87498cd4a681e8ea698940027ecb360206355a7
-SHA512 (semigroupoids-5.3.7.tar.gz) = 5e908f3b1618cfeb45e03335284e8811ff443f3d7cd8013813337729da62570c052e854bde64c56535809340d0ba281e246d7d0cc8f14627deeb7b1047623849
-Size (semigroupoids-5.3.7.tar.gz) = 35349 bytes
+BLAKE2s (semigroupoids-6.0.0.1.tar.gz) = 6e5ac0eeed0fa2dffac455adc91b90ecdefb8b3b0541f5b57f251b09e7007c9a
+SHA512 (semigroupoids-6.0.0.1.tar.gz) = 471a2830f5225f456c25da0217e4f0059200a1912c36a73bcb903f542546190f58bac8174a76fc1fa4b82ec0ac49890ddf9f867e96cd7d41770def6e290ef286
+Size (semigroupoids-6.0.0.1.tar.gz) = 36222 bytes
