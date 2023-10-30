@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1434 2023/10/30 12:54:34 pho Exp $
+# $NetBSD: Makefile,v 1.1435 2023/10/30 13:37:14 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -378,6 +378,7 @@ SUBDIR+=	hs-unicode-transforms
 SUBDIR+=	hs-wcwidth
 SUBDIR+=	hs-xml
 SUBDIR+=	hs-xml-conduit
+SUBDIR+=	hs-xml-hamlet
 SUBDIR+=	hs-xml-types
 SUBDIR+=	hs-yaml
 SUBDIR+=	html
