@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2023/10/30 12:47:18 nia Exp $
+# $NetBSD: Makefile,v 1.106 2023/10/30 13:00:05 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -79,7 +79,6 @@ DEPENDS+=	dosbox-[0-9]*:../../emulators/dosbox
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-DEPENDS+=	feh-[0-9]*:../../graphics/feh
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 DEPENDS+=	php>=7.4<7.5:../../lang/php74
@@ -101,8 +100,6 @@ DEPENDS+=	bind>=9.16<9.17:../../net/bind916
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
 DEPENDS+=	rtorrent-[0-9]*:../../net/rtorrent
 DEPENDS+=	samba>=4.2:../../net/samba4
-DEPENDS+=	wpa_supplicant-[0-9]*:../../net/wpa_supplicant
-DEPENDS+=	tightvncviewer-[0-9]*:../../net/tightvncviewer
 DEPENDS+=	xymon-[0-9]*:../../net/xymon
 DEPENDS+=	xymonclient-[0-9]*:../../net/xymonclient
 DEPENDS+=	yt-dlp-[0-9]*:../../net/yt-dlp
@@ -113,21 +110,15 @@ DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	mupdf-[0-9]*:../../print/mupdf
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
-DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
 DEPENDS+=	xe-guest-utilities-[0-9]*:../../sysutils/xe-guest-utilities
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
 DEPENDS+=	xenkernel415-[0-9]*:../../sysutils/xenkernel415
 DEPENDS+=	xentools415-[0-9]*:../../sysutils/xentools415
 .endif
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
-DEPENDS+=	i3-[0-9]*:../../wm/i3
-DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
 DEPENDS+=	apache>=2.4:../../www/apache24
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
-DEPENDS+=	slim-[0-9]*:../../x11/slim
-DEPENDS+=	x11vnc-[0-9]*:../../x11/x11vnc
-DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 
 #
 # 2. Archivers and build tools
@@ -191,7 +182,6 @@ DEPENDS+=	libpcap-[0-9]*:../../net/libpcap
 DEPENDS+=	poppler-[0-9]*:../../print/poppler
 DEPENDS+=	poppler-includes-[0-9]*:../../print/poppler-includes
 DEPENDS+=	cyrus-sasl-[0-9]*:../../security/cyrus-sasl
-DEPENDS+=	openssl-[0-9]*:../../security/openssl
 DEPENDS+=	tcp_wrappers-[0-9]*:../../security/tcp_wrappers
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
@@ -204,12 +194,21 @@ DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
 .endif
 
 #
-# 5. Desktop infrastructure and support services
+# 5. X11 desktop infrastructure and support services
 #
-DEPENDS+=	eawpatches-[0-9]*:../../audio/eawpatches
+.if ${OPSYS} != "Darwin"
 DEPENDS+=	fuse-ntfs-3g-[0-9]*:../../filesystems/fuse-ntfs-3g
+DEPENDS+=	feh-[0-9]*:../../graphics/feh
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
 DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
+DEPENDS+=	tightvncviewer-[0-9]*:../../net/tightvncviewer
+DEPENDS+=	desktop-file-utils-[0-9]*:../../sysutils/desktop-file-utils
+DEPENDS+=	i3-[0-9]*:../../wm/i3
+DEPENDS+=	fluxbox-[0-9]*:../../wm/fluxbox
+DEPENDS+=	slim-[0-9]*:../../x11/slim
+DEPENDS+=	x11vnc-[0-9]*:../../x11/x11vnc
+DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
+.endif
 
 #
 # 6. Other very small packages
