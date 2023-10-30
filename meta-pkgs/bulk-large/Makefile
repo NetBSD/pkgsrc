@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/10/30 12:24:41 nia Exp $
+# $NetBSD: Makefile,v 1.71 2023/10/30 12:35:39 nia Exp $
 
 DISTNAME=	bulk-large-20230915
 CATEGORIES=	meta-pkgs
@@ -61,13 +61,17 @@ DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 #
 # 2. Applications
 #
+DEPENDS+=	strawberry-[0-9]*:../../audio/strawberry
+DEPENDS+=	musicpd-[0-9]*:../../audio/musicpd
+DEPENDS+=	ncmpc-[0-9]*:../../audio/ncmpc
+DEPENDS+=	mumble-[0-9]*:../../chat/mumble
 DEPENDS+=	asterisk>=19:../../comms/asterisk19
 DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-DEPENDS+=	mariadb-server>=10.5<10.6:../../databases/mariadb105-server
 DEPENDS+=	mariadb-server>=10.6<10.7:../../databases/mariadb106-server
-DEPENDS+=	postgresql13-[0-9]*:../../databases/postgresql13
+DEPENDS+=	mariadb-server>=10.11<10.12:../../databases/mariadb1011-server
+DEPENDS+=	postgresql16-[0-9]*:../../databases/postgresql16
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
 DEPENDS+=	p5-Padre-[0-9]*:../../editors/p5-Padre
@@ -85,6 +89,8 @@ DEPENDS+=	R-[0-9]*:../../math/R
 DEPENDS+=	octave-[0-9]*:../../math/octave
 DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
 DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
+DEPENDS+=	qbittorrent-[0-9]*:../../net/qbittorrent
+DEPENDS+=	wireshark-[0-9]*:../../net/wireshark
 DEPENDS+=	cups-[0-9]*:../../print/cups
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
@@ -130,7 +136,6 @@ DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-collection
 #
 # 5. Desktops
 #
-DEPENDS+=	deforaos-desktop-[0-9]*:../../meta-pkgs/deforaos-desktop
 DEPENDS+=	mate-[0-9]*:../../meta-pkgs/mate
 DEPENDS+=	windowmaker-desktop-[0-9]*:../../meta-pkgs/windowmaker-desktop
 DEPENDS+=	xfce4-[0-9]*:../../meta-pkgs/xfce4
