@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 10:18:45 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/30 12:31:43 pho Exp $
 
-BLAKE2s (monad-dijkstra-0.1.1.3.tar.gz) = 7806753bbc0574636c556a10403b8ff573b7b03f53f4e898911fe7fa7c966bf4
-SHA512 (monad-dijkstra-0.1.1.3.tar.gz) = 09088e59efc048ce4b47eb0874e65fd976d9df9771302c60ddfd50d067fc66cf7ee9dd67e515c325cffa24dedfcf5e9ae8ac053cd5630cb36e8d2676b2e3fb2c
-Size (monad-dijkstra-0.1.1.3.tar.gz) = 6107 bytes
+BLAKE2s (monad-dijkstra-0.1.1.4.tar.gz) = d4af974bd03806e8738ece8cf0830816087a13396fcef38bfae0ec8012d4ed55
+SHA512 (monad-dijkstra-0.1.1.4.tar.gz) = 1e76eabb9341e35a45e310234e580f358e6ac5804e12c22a7f4248ed19bbd1c3ee850ba2cd995d2678805f70be6a0eb27e5e2355e6239d9f8f78a6c3e5c5e46d
+Size (monad-dijkstra-0.1.1.4.tar.gz) = 6110 bytes
