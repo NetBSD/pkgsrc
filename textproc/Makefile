@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1432 2023/10/27 13:16:18 pho Exp $
+# $NetBSD: Makefile,v 1.1433 2023/10/30 10:30:14 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -304,6 +304,7 @@ SUBDIR+=	hs-annotated-wl-pprint
 SUBDIR+=	hs-ansi-wl-pprint
 SUBDIR+=	hs-appar
 SUBDIR+=	hs-attoparsec
+SUBDIR+=	hs-attoparsec-aeson
 SUBDIR+=	hs-attoparsec-iso8601
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
