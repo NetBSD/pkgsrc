@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6320 2023/10/30 09:13:11 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6321 2023/10/30 09:15:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9229,3 +9229,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/hs-aeson to 2.2.1.0 [pho 2023-10-30]
 	Updated misc/py-trove-classifiers to 2023.10.18 [adam 2023-10-30]
 	Updated devel/py-toolconfig to 1.2.6 [adam 2023-10-30]
+	Updated lang/hs-hslua-packaging to 2.3.0 [pho 2023-10-30]
