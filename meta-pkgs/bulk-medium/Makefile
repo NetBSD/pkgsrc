@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/10/30 12:20:42 nia Exp $
+# $NetBSD: Makefile,v 1.102 2023/10/30 12:22:33 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -72,9 +72,9 @@ DEPENDS+=	nvi-[0-9]*:../../editors/nvi
 DEPENDS+=	vim-gtk3-[0-9]*:../../editors/vim-gtk3
 # emacs with x11 also brings in rust, which doesn't fit in this package
 DEPENDS+=	emacs-nox11-[0-9]*:../../editors/emacs-nox11
+DEPENDS+=	dosbox-[0-9]*:../../emulators/dosbox
 DEPENDS+=	simh-[0-9]*:../../emulators/simh
 DEPENDS+=	tme-[0-9]*:../../emulators/tme
-DEPENDS+=	wine-[0-9]*:../../emulators/wine
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
@@ -126,8 +126,10 @@ DEPENDS+=	xlockmore-[0-9]*:../../x11/xlockmore
 DEPENDS+=	pigz-[0-9]*:../../archivers/pigz
 DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	imake-[0-9]*:../../devel/imake
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 DEPENDS+=	yasm-[0-9]*:../../devel/yasm
+.endif
 DEPENDS+=	icon-naming-utils-[0-9]*:../../graphics/icon-naming-utils
 
 #
