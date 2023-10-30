@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/30 11:07:18 pho Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2023/10/30 13:58:33 pho Exp $
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify.dyn_hi
@@ -10,9 +10,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Devel.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Find.p_hi
-${PLIST.shlibs}${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.dyn_hi
-${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.hi
-${PLIST.prof}${PLIST.inotify}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Linux.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/Listener.p_hi
