@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 10:30:06 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 03:25:56 pho Exp $
 lib/rio-${PKGVERSION}/${HS_VERSION}/package-description
 lib/rio-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -190,7 +190,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/RIO/Writer.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/RIO/Writer.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/RIO-ByteString-Lazy-Partial.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/RIO-ByteString-Lazy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/RIO-ByteString-Partial.html
@@ -286,10 +286,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/rio.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/rio-${PKGVERSION}/html/synopsis.png
