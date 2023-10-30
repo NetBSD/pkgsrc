@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/12/18 10:12:42 adam Exp $
+$NetBSD: distinfo,v 1.7 2023/10/30 14:15:35 adam Exp $
 
-BLAKE2s (cftime-1.6.2.tar.gz) = 3f6ae0856daa4b44dade0dfeb5a2049fac83d828c4960ed04a2dd2708c5ee7d4
-SHA512 (cftime-1.6.2.tar.gz) = d5135a55e5c9982247835e379bd35e4d8b47f0f70d08766f73223e0c40dc1875840c5cb40515e233196af1c10e992911325ff33a3c41efc3b8009e49de2a6e31
-Size (cftime-1.6.2.tar.gz) = 52745 bytes
+BLAKE2s (cftime-1.6.3.tar.gz) = b47e854eabf199aafc4afb8b074a9b0c505ef479fa44063c7b02d671a4407638
+SHA512 (cftime-1.6.3.tar.gz) = 0bcb8dcf7a840e500d7cc0f784f960b4972803f353fcffbf36dc30b2169b6864aea1fd8cab2d60e7908a063db55f2cfa3639c51fea84692b2dfe2d83b954c0ae
+Size (cftime-1.6.3.tar.gz) = 53256 bytes
