@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.linux,v 1.1 2021/05/05 15:43:54 pho Exp $
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Linux.dyn_hi
+@comment $NetBSD: PLIST.linux,v 1.2 2023/10/30 14:02:52 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Linux.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Linux.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Linux.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Linux/Sendfile.dyn_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Sendfile/Linux.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Linux/Sendfile.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Linux/Sendfile.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/System/Linux/Sendfile.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Linux/Sendfile.p_hi
