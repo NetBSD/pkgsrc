@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/10/24 22:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2023/10/30 16:13:50 jperkin Exp $
 
 DISTNAME=	rspamd-3.7.1
 PKGREVISION=	1
@@ -21,7 +21,8 @@ USE_CXX_FEATURES+=	c++20
 
 .include "../../mk/bsd.prefs.mk"
 
-CPPFLAGS.SunOS+=			-D__EXTENSIONS__
+BUILDLINK_TRANSFORM.SunOS+=	rm:-liberty
+CPPFLAGS.SunOS+=		-D__EXTENSIONS__
 
 CMAKE_INSTALL_NAME_DIR=	${PREFIX}/lib/rspamd
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
