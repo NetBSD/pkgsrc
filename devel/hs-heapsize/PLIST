@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:12:07 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 06:33:35 pho Exp $
 lib/heapsize-${PKGVERSION}/${HS_VERSION}/package-description
 lib/heapsize-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/HeapSize.dyn_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/HeapSize.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/HeapSize.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/HeapSize.p_hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/HeapSize.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/HeapSize.html
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/doc-index.html
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/haddock-bundle.min.js
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/heapsize.haddock
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/index.html
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/linuwial.css
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/meta.json
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/quick-jump.css
-share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/HeapSize.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/heapsize.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/heapsize-${PKGVERSION}/html/synopsis.png
