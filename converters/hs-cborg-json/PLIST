@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/29 11:56:04 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 18:57:19 pho Exp $
 lib/cborg-json-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cborg-json-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.dyn_hi
@@ -7,13 +7,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/CBOR/JSON.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/LICENSE.txt
+share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/LICENSE.txt
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/Codec-CBOR-JSON.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/cborg-json.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cborg-json-${PKGVERSION}/html/synopsis.png

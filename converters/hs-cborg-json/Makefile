@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:03 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/30 18:57:19 pho Exp $
 
 DISTNAME=	cborg-json-0.2.5.0
 PKGREVISION=	2
@@ -9,6 +9,8 @@ COMMENT=	Library for encoding JSON as CBOR
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	aeson	\
+	base	\
 	vector
 
 .include "../../converters/hs-aeson/buildlink3.mk"
