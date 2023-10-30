@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6362 2023/10/30 14:16:34 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6363 2023/10/30 14:31:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9277,3 +9277,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/hs-simple-sendfile to 0.2.32 [pho 2023-10-30]
 	Updated time/py-cftime to 1.6.3 [adam 2023-10-30]
 	Updated devel/py-cbor2 to 5.5.0 [adam 2023-10-30]
+	Added security/hs-crypton-x509-validation version 1.6.12 [pho 2023-10-30]
