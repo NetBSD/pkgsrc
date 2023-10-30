@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/10/30 02:56:46 pho Exp $
 
 BLAKE2s (cheapskate-0.1.1.2.tar.gz) = 2e67974e0a0de8c409a4508b5ea12e2d5e80fcf65cea3f23a262e5c36ea97126
 SHA512 (cheapskate-0.1.1.2.tar.gz) = b671ada413b8bd90f28b008c7bada4b744dedac2c7711090f1148dfa1643f7843f44e56c9a5a99fd0f71ded8393a0095b04fbdf73f70a707698dc9fb76ed1b45
 Size (cheapskate-0.1.1.2.tar.gz) = 27114 bytes
+SHA1 (patch-Cheapskate_Parse.hs) = 84f0b1aceecb6f67eea825de7627761d466ce0cb
