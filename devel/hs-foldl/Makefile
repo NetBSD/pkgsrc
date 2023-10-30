@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2023/10/09 04:54:14 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/30 07:54:42 pho Exp $
 
-DISTNAME=	foldl-1.4.14
-PKGREVISION=	2
+DISTNAME=	foldl-1.4.15
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Composable, streaming, and efficient left folds
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	primitive
 
 .include "../../math/hs-comonad/buildlink3.mk"
 .include "../../math/hs-contravariant/buildlink3.mk"
