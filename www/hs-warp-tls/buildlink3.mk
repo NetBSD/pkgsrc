@@ -1,17 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/10/30 19:07:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-warp-tls
 
 .if !defined(HS_WARP_TLS_BUILDLINK3_MK)
 HS_WARP_TLS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.3.4
-BUILDLINK_ABI_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.3.4nb2
+BUILDLINK_API_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.4.3
+BUILDLINK_ABI_DEPENDS.hs-warp-tls+=	hs-warp-tls>=3.4.3
 BUILDLINK_PKGSRCDIR.hs-warp-tls?=	../../www/hs-warp-tls
 
-.include "../../security/hs-cryptonite/buildlink3.mk"
 .include "../../devel/hs-data-default-class/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
+.include "../../net/hs-recv/buildlink3.mk"
 .include "../../devel/hs-streaming-commons/buildlink3.mk"
 .include "../../security/hs-tls/buildlink3.mk"
 .include "../../security/hs-tls-session-manager/buildlink3.mk"
