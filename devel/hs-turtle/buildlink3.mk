@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/10/09 04:54:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/30 10:21:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-turtle
 
 .if !defined(HS_TURTLE_BUILDLINK3_MK)
 HS_TURTLE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-turtle+=	hs-turtle>=1.6.1
-BUILDLINK_ABI_DEPENDS.hs-turtle+=	hs-turtle>=1.6.1nb2
+BUILDLINK_API_DEPENDS.hs-turtle+=	hs-turtle>=1.6.2
+BUILDLINK_ABI_DEPENDS.hs-turtle+=	hs-turtle>=1.6.2
 BUILDLINK_PKGSRCDIR.hs-turtle?=		../../devel/hs-turtle
 
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
