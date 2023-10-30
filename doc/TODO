@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23515 2023/10/30 10:00:31 adam Exp $
+$NetBSD: TODO,v 1.23516 2023/10/30 12:50:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1296,7 +1296,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rat-4.2.25
 	o rawtherapee-5.8
 	o razor-qt-0.5.2
-	o rclone-1.61.1
 	o rcs-5.10.0
 	o rdp-1.6
 	o regionset-0.2
