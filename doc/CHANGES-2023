@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6311 2023/10/30 06:29:21 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6312 2023/10/30 07:13:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9219,3 +9219,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-ghc-lib-parser to 9.8.1.20231009 [pho 2023-10-30]
 	Updated devel/hs-ghc-lib-parser-ex to 9.8.0.0 [pho 2023-10-30]
 	Updated devel/ormolu to 0.7.3.0 [pho 2023-10-30]
+	Updated pkgtools/url2pkg to 23.2.1 [wiz 2023-10-30]
