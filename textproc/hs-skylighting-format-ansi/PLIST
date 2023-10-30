@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/27 14:49:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/30 13:43:17 pho Exp $
 lib/skylighting-format-ansi-${PKGVERSION}/${HS_VERSION}/package-description
 lib/skylighting-format-ansi-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -7,13 +7,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/ANSI.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/ANSI.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/Skylighting-Format-ANSI.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/skylighting-format-ansi.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-ansi-${PKGVERSION}/html/synopsis.png
