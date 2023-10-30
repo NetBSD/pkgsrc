@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/25 19:19:27 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 03:29:06 pho Exp $
 bin/pretty-simple
 lib/pretty-simple-${PKGVERSION}/${HS_VERSION}/package-description
 lib/pretty-simple-${PKGVERSION}/${HS_VERSION}/package-id
@@ -26,7 +26,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pretty/Simple/Internal/Printer.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pretty/Simple/Internal/Printer.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/Debug-Pretty-Simple.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/Text-Pretty-Simple-Internal-Color.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/Text-Pretty-Simple-Internal-Expr.html
@@ -58,10 +58,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/doc-index-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/pretty-simple.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pretty-simple-${PKGVERSION}/html/synopsis.png
