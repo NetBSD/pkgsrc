@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/30 18:35:48 pho Exp $
+lib/crypton-connection-${PKGVERSION}/${HS_VERSION}/package-description
+lib/crypton-connection-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection/Types.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection/Types.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Connection/Types.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/Network-Connection.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/crypton-connection.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/crypton-connection-${PKGVERSION}/html/synopsis.png
