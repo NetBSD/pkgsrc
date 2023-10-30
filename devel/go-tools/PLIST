@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2023/04/16 18:23:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2023/10/30 19:04:35 bsiegert Exp $
 bin/authtest
 bin/benchcmp
+bin/bisect
 bin/bundle
 bin/callgraph
 bin/compilebench
@@ -18,6 +19,7 @@ bin/godex
 bin/godoc
 bin/goimports
 bin/gomvpkg
+bin/gonew
 bin/gorename
 bin/gotype
 bin/goyacc

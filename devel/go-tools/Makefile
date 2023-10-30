@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2023/10/29 14:48:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.85 2023/10/30 19:04:35 bsiegert Exp $
 
-DISTNAME=		tools-0.8.0
+DISTNAME=		tools-0.14.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools
@@ -72,6 +71,8 @@ CHECK_RELRO_SKIP+=	bin/ssadump
 CHECK_RELRO_SKIP+=	bin/stress
 CHECK_RELRO_SKIP+=	bin/stringer
 CHECK_RELRO_SKIP+=	bin/toolstash
+CHECK_RELRO_SKIP+=	bin/bisect
+CHECK_RELRO_SKIP+=	bin/gonew
 
 pre-patch:
 	${RM} -rf ${WRKSRC}/cmd/getgo/server
