@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/01/26 11:23:15 pho Exp $
+$NetBSD: distinfo,v 1.8 2023/10/30 08:16:32 pho Exp $
 
-BLAKE2s (conduit-1.3.4.3.tar.gz) = d3b08f7e4740f04498e52397f58573e5d921ac5e2bdfb5cb5058c36153f006ec
-SHA512 (conduit-1.3.4.3.tar.gz) = 14d4557c1018514da4ae7ae41ec8a381ae57aabd86d84e2c961dce0b784ca4fb8aec5a2757c6fe6d815ce552f25bcc462c208226ca33094e0210b06651846e59
-Size (conduit-1.3.4.3.tar.gz) = 88820 bytes
+BLAKE2s (conduit-1.3.5.tar.gz) = 565d23106222ae3929d5276e3e80246b43f2538fc286454388b575f0a4367ba4
+SHA512 (conduit-1.3.5.tar.gz) = a123d093e7896a2999bb6006a8d8b1a4ef18c5b1682d5588d85fc81496a9fd9f979d2087531e55d8f2aa22221301264ba700cbbe1f0731437f162fea0ff612e5
+Size (conduit-1.3.5.tar.gz) = 88893 bytes
