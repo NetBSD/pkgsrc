@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2023/02/21 16:32:33 adam Exp $
+# $NetBSD: Makefile,v 1.42 2023/10/30 19:34:04 adam Exp $
 
-DISTNAME=	ccid-1.5.2
+DISTNAME=	ccid-1.5.4
 CATEGORIES=	security
 MASTER_SITES=	https://ccid.apdu.fr/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -59,5 +59,6 @@ BUILDLINK_DEPMETHOD.flex=	full
 .include "../../devel/flex/buildlink3.mk"
 .endif
 .include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
