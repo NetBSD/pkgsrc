@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2023/10/29 14:48:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2023/10/30 21:11:21 leot Exp $
 
-DISTNAME=	nuclei-2.9.15
-PKGREVISION=	2
+DISTNAME=	nuclei-3.0.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=projectdiscovery/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,8 +11,6 @@ COMMENT=	Fast and customizable vulnerability scanner
 LICENSE=	mit
 
 GO_BUILD_PATTERN+=	./cmd/nuclei
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/v2
 
 .include "go-modules.mk"
 
