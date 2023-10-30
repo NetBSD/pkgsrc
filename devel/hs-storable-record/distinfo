@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/11 19:55:33 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/10/30 03:21:23 pho Exp $
 
-BLAKE2s (storable-record-0.0.6.tar.gz) = eb4e70c0a62066da8fca3ffd49311edde5fa08d92dd5e12641354a4c166ce167
-SHA512 (storable-record-0.0.6.tar.gz) = 841e8d01529bbeda16bf6444cb43027e31a25bc66afb1c8f2237c4ba021fa5355bdfa373ea101abf0f4c82d6cec4f00db72f46c4b50ec74117fc7b4ff5a7ce99
-Size (storable-record-0.0.6.tar.gz) = 8327 bytes
+BLAKE2s (storable-record-0.0.7.tar.gz) = d4505006cd2454149b1294d1c19cd3f2bb2c4016263eb6b32ecf182188d6c0f2
+SHA512 (storable-record-0.0.7.tar.gz) = a76c273c1f54c3fe62bf767a0eed11ed01092d73c7c23b8fa86ee384e29f1ad498aa0c4ce440509092d15c8ea58dcf4392890922734c6e223bfc22027690d938
+Size (storable-record-0.0.7.tar.gz) = 8405 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:30 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/30 03:21:23 pho Exp $
 
-DISTNAME=	storable-record-0.0.6
-PKGREVISION=	4
+DISTNAME=	storable-record-0.0.7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
