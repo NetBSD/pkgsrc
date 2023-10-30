@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/27 16:19:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 14:52:15 pho Exp $
 lib/adjunctions-${PKGVERSION}/${HS_VERSION}/package-description
 lib/adjunctions-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Comonad/Representable/Store.dyn_hi
@@ -37,7 +37,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/Rep.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/Control-Comonad-Representable-Store.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/Control-Comonad-Trans-Adjoint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/Control-Monad-Representable-Reader.html
@@ -51,9 +51,11 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/Data-Functor
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/Data-Functor-Rep.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/adjunctions.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/adjunctions-${PKGVERSION}/html/synopsis.png
