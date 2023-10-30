@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/30 13:36:59 pho Exp $
+
+BLAKE2s (xml-hamlet-0.5.0.2.tar.gz) = 50f3beb4dc5c831ba81a8cb1f4a24caa8068513110cee4320fc2226560b97c2c
+SHA512 (xml-hamlet-0.5.0.2.tar.gz) = 3a186ec01dbf5f84b294d5dcf01f595826bbf26d6eb84f41bfa8341a4756a6aeb48f7fd7d1bd4398b74c421ed18a0f5908a49864cca7348d54b50b92cbe93007
+Size (xml-hamlet-0.5.0.2.tar.gz) = 9328 bytes
