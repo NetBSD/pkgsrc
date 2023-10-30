@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.30 2023/10/09 04:54:02 pho Exp $
+# $NetBSD: Makefile,v 1.31 2023/10/30 09:11:41 pho Exp $
 
-DISTNAME=	aeson-2.1.1.0
-PKGREVISION=	2
+DISTNAME=	aeson-2.2.1.0
 CATEGORIES=	converters
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Fast JSON parsing and encoding
 LICENSE=	modified-bsd
 
-.include "../../textproc/hs-attoparsec/buildlink3.mk"
-.include "../../devel/hs-base-compat-batteries/buildlink3.mk"
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	primitive
+
 .include "../../devel/hs-data-fix/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-generically/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-indexed-traversable/buildlink3.mk"
+.include "../../math/hs-integer-conversion/buildlink3.mk"
+.include "../../math/hs-integer-logarithms/buildlink3.mk"
+.include "../../net/hs-network-uri/buildlink3.mk"
 .include "../../devel/hs-OneTuple/buildlink3.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
@@ -22,6 +25,7 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-semialign/buildlink3.mk"
 .include "../../devel/hs-strict/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
+.include "../../time/hs-text-iso8601/buildlink3.mk"
 .include "../../textproc/hs-text-short/buildlink3.mk"
 .include "../../devel/hs-th-abstraction/buildlink3.mk"
 .include "../../devel/hs-these/buildlink3.mk"
