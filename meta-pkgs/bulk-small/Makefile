@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/10/30 12:20:42 nia Exp $
+# $NetBSD: Makefile,v 1.53 2023/10/30 12:40:13 nia Exp $
 
 DISTNAME=	bulk-small-20231022
 CATEGORIES=	meta-pkgs
@@ -77,8 +77,11 @@ DEPENDS+=	stunnel-[0-9]*:../../security/stunnel
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	tcsh-[0-9]*:../../shells/tcsh
 DEPENDS+=	zsh-[0-9]*:../../shells/zsh
+DEPENDS+=	htop-[0-9]*:../../sysutils/htop
+DEPENDS+=	fvwm-[0-9]*:../../wm/fvwm
 DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
 DEPENDS+=	curl-[0-9]*:../../www/curl
+DEPENDS+=	lynx-[0-9]*:../../www/lynx
 DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 
 #
@@ -87,6 +90,7 @@ DEPENDS+=	xlockmore-lite-[0-9]*:../../x11/xlockmore-lite
 #
 DEPENDS+=	perl>=5:../../lang/perl5
 DEPENDS+=	python311-[0-9]*:../../lang/python311
+DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 #
 # 3. Archivers and build tools.
@@ -188,7 +192,6 @@ TRANSITIVE+=	pinentry-[0-9]*:../../security/pinentry		# via gnupg2
 TRANSITIVE+=	libksba-[0-9]*:../../security/libksba		# via gnupg2
 TRANSITIVE+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 TRANSITIVE+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-TRANSITIVE+=	lynx-[0-9]*:../../www/lynx
 
 # required by misc/screen
 TRANSITIVE+=	help2man-[0-9]*:../../converters/help2man	# via autoconf
@@ -270,6 +273,9 @@ TRANSITIVE+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 TRANSITIVE+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TRANSITIVE+=	libgcrypt-[0-9]*:../../security/libgcrypt
 TRANSITIVE+=	libgpg-error-[0-9]*:../../security/libgpg-error
+
+# required by wm/fvwm
+TRANSITIVE+=	libstroke-[0-9]*:../../devel/libstroke
 
 # Provide a way to hide these when doing dependency analysis.
 .if !defined(SUPPRESS_TRANSITIVE)
