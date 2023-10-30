@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/30 10:43:22 pho Exp $
+lib/git-lfs-${PKGVERSION}/${HS_VERSION}/package-description
+lib/git-lfs-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/GitLFS.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/GitLFS.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/GitLFS.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/Network-GitLFS.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/git-lfs.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/git-lfs-${PKGVERSION}/html/synopsis.png
