@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:01 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/30 09:17:31 pho Exp $
 
-DISTNAME=	hslua-module-zip-1.0.0
-PKGREVISION=	2
+DISTNAME=	hslua-module-zip-1.1.0
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +11,7 @@ LICENSE=	mit
 .include "../../lang/hs-hslua-list/buildlink3.mk"
 .include "../../lang/hs-hslua-marshalling/buildlink3.mk"
 .include "../../lang/hs-hslua-packaging/buildlink3.mk"
+.include "../../lang/hs-hslua-typing/buildlink3.mk"
 .include "../../archivers/hs-zip-archive/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
