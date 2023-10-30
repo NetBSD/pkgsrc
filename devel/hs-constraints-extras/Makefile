@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:10 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/10/30 08:02:31 pho Exp $
 
 DISTNAME=	constraints-extras-0.4.0.0
 PKGREVISION=	2
@@ -7,6 +7,11 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility package for constraints
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base	\
+	constraints	\
+	template-haskell
 
 # Don't build or install an example program.
 CONFIGURE_ARGS+=	-f-build-readme
