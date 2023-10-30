@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2023/10/30 12:22:33 nia Exp $
+# $NetBSD: Makefile,v 1.103 2023/10/30 12:25:15 nia Exp $
 
 DISTNAME=	bulk-medium-20231022
 CATEGORIES=	meta-pkgs
@@ -197,8 +197,6 @@ DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
 # 5. Desktop infrastructure and support services
 #
 DEPENDS+=	eawpatches-[0-9]*:../../audio/eawpatches
-DEPENDS+=	mpg123-pulse-[0-9]*:../../audio/mpg123-pulse
-DEPENDS+=	pulseaudio-[0-9]*:../../audio/pulseaudio
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
 DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
