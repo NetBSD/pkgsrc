@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6384 2023/10/30 19:35:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6385 2023/10/30 21:11:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9300,3 +9300,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/gopls to 0.14.1 [bsiegert 2023-10-30]
 	Updated security/ccid to 1.5.4 [adam 2023-10-30]
 	Updated security/gpgme to 1.23.1 [adam 2023-10-30]
+	Updated security/nuclei to 3.0.2 [leot 2023-10-30]
