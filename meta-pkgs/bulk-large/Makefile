@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2023/09/17 21:43:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.69 2023/10/30 12:20:42 nia Exp $
 
 DISTNAME=	bulk-large-20230915
 CATEGORIES=	meta-pkgs
@@ -92,8 +92,6 @@ DEPENDS+=	cups-[0-9]*:../../print/cups
 DEPENDS+=	atril-[0-9]*:../../print/atril
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
-DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
-DEPENDS+=	clearsilver-[0-9]*:../../www/clearsilver
 DEPENDS+=	mediawiki-[0-9]*:../../www/mediawiki
 DEPENDS+=	${RUBY_PKGPREFIX}-rails61>=6.1.3:../../www/ruby-rails61
 DEPENDS+=	${RUBY_PKGPREFIX}-rails70>=7.0.7:../../www/ruby-rails70
@@ -137,12 +135,10 @@ DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-collection
 # 5. Desktops
 #
 DEPENDS+=	deforaos-desktop-[0-9]*:../../meta-pkgs/deforaos-desktop
-DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
 DEPENDS+=	mate-[0-9]*:../../meta-pkgs/mate
 DEPENDS+=	windowmaker-desktop-[0-9]*:../../meta-pkgs/windowmaker-desktop
 DEPENDS+=	xfce4-[0-9]*:../../meta-pkgs/xfce4
 DEPENDS+=	xfce4-extras-[0-9]*:../../meta-pkgs/xfce4-extras
-DEPENDS+=	xview-[0-9]*:../../x11/xview
 
 #
 # 6. NetBSD/pkgsrc developer tools
