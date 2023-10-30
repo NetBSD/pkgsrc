@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/26 17:53:14 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/30 09:04:09 pho Exp $
 lib/semialign-${PKGVERSION}/${HS_VERSION}/package-description
 lib/semialign-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -22,17 +22,19 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Zip.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Zip.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/Data-Align.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/Data-Crosswalk.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/Data-Semialign-Indexed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/Data-Semialign.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/Data-Zip.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/semialign.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semialign-${PKGVERSION}/html/synopsis.png
