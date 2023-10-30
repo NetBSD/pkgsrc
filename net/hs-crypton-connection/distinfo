@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/30 18:35:48 pho Exp $
+
+BLAKE2s (crypton-connection-0.3.1.tar.gz) = f4b55229210655d6506c2f5af1886c3b6f549005008f25d7d90eb307479b62b2
+SHA512 (crypton-connection-0.3.1.tar.gz) = 5ec88d45be285398493aff416be1e40f7a1fff989d472f860ffe05671c2cc2261e244a15a30f79851a4c2a38509a2ecb2959af1e8ae2cf66aee5958c817245a0
+Size (crypton-connection-0.3.1.tar.gz) = 9112 bytes
