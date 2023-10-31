@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/10/31 04:21:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-lsp
 
 .if !defined(HS_LSP_BUILDLINK3_MK)
 HS_LSP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-lsp+=	hs-lsp>=1.6.0
-BUILDLINK_ABI_DEPENDS.hs-lsp+=	hs-lsp>=1.6.0.0nb2
+BUILDLINK_API_DEPENDS.hs-lsp+=	hs-lsp>=2.2.0
+BUILDLINK_ABI_DEPENDS.hs-lsp+=	hs-lsp>=2.2.0.0
 BUILDLINK_PKGSRCDIR.hs-lsp?=	../../devel/hs-lsp
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -16,9 +16,11 @@ BUILDLINK_PKGSRCDIR.hs-lsp?=	../../devel/hs-lsp
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
+.include "../../converters/hs-lens-aeson/buildlink3.mk"
 .include "../../devel/hs-lsp-types/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
+.include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
 .include "../../textproc/hs-text-rope/buildlink3.mk"
