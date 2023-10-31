@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6431 2023/10/31 13:55:04 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6432 2023/10/31 13:57:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9349,3 +9349,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-explicit-imports-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-explicit-fixity-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-code-range-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-class-plugin to 2.4.0.0 [pho 2023-10-31]
