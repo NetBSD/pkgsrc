@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6414 2023/10/31 09:41:28 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6415 2023/10/31 11:01:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9330,3 +9330,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-plugin-api to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-ghcide to 2.4.0.0 [pho 2023-10-31]
 	Updated www/hs-http-conduit to 2.3.8.3 [pho 2023-10-31]
+	Updated converters/hs-pandoc-server to 0.1.0.3 [pho 2023-10-31]
