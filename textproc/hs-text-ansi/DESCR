@@ -1,0 +1,9 @@
+Text styling for ANSI terminals using SGR codes, as defined by the ECMA-48
+standard.
+
+Supports foreground/background color, bold/faint intensity, italic,
+single/double underline, strikethrough, frame, encircle, and overline
+escape sequences. Some styles may not work on your terminal.
+
+Also features terminal detection, so redirecting styled output to a file
+will automatically strip the ANSI escape sequences.
