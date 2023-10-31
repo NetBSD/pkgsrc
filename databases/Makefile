@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2023/10/23 06:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.693 2023/10/31 17:00:44 pho Exp $
 
 COMMENT=	Databases
 
@@ -53,6 +53,7 @@ SUBDIR+=	guile-pg
 SUBDIR+=	guile-sqlite3
 SUBDIR+=	hiredis
 SUBDIR+=	hs-direct-sqlite
+SUBDIR+=	hs-persistent-sqlite
 SUBDIR+=	hs-sqlite-simple
 SUBDIR+=	hsqldb18
 SUBDIR+=	idzebra
