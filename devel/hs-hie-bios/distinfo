@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/10/30 17:01:39 pho Exp $
+$NetBSD: distinfo,v 1.5 2023/10/31 03:16:40 pho Exp $
 
-BLAKE2s (hie-bios-0.13.0.tar.gz) = 7301a303b2720277b3d39b13b4310310fa8d07145563bf6f26a32486c903e305
-SHA512 (hie-bios-0.13.0.tar.gz) = 1f4195080733a1d0190433f61c636afb51e00f6fc1c3e01729262f33132cb019097e05bf6a1484325c819ea8f613daee3aa5690f5b9d4f1f8736b21e6d16e92e
-Size (hie-bios-0.13.0.tar.gz) = 65429 bytes
+BLAKE2s (hie-bios-0.12.0.tar.gz) = 3f9cdeb0b1bf27cd0cadcefe7d37b4a4fb40c99f4ebb3339bb7094694a2ef1f2
+SHA512 (hie-bios-0.12.0.tar.gz) = eb9effc1bab68f7d2f2f1d6c64971c48f3428e47de472ea34428c1fcfc813f65754bfa9d7708f66c54a92a8c508cafc2c700719fc609e1bb40a3baa6066798aa
+Size (hie-bios-0.12.0.tar.gz) = 62233 bytes
