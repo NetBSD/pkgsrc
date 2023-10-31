@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/08/02 16:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.7 2023/10/31 20:41:51 adam Exp $
 
-DISTNAME=	ciso8601-2.3.0
+DISTNAME=	ciso8601-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/ciso8601/}
