@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 17:55:54 pho Exp $
+lib/tasty-rerun-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tasty-rerun-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Ingredients/Rerun.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Ingredients/Rerun.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Ingredients/Rerun.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/Test-Tasty-Ingredients-Rerun.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-rerun-${PKGVERSION}/html/tasty-rerun.haddock
