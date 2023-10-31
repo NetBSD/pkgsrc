@@ -1,16 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:54:15 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/10/31 09:23:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghcide
 
 .if !defined(HS_GHCIDE_BUILDLINK3_MK)
 HS_GHCIDE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=1.9.0
-BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=1.9.0.0nb3
+BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.4.0
+BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.4.0.0
 BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 
 .include "../../converters/hs-aeson/buildlink3.mk"
-.include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
@@ -36,7 +35,6 @@ BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 .include "../../devel/hs-hiedb/buildlink3.mk"
 .include "../../devel/hs-hls-graph/buildlink3.mk"
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-implicit-hie/buildlink3.mk"
 .include "../../devel/hs-implicit-hie-cradle/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
@@ -50,6 +48,7 @@ BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 .include "../../textproc/hs-prettyprinter-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
+.include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-safe-exceptions/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
 .include "../../databases/hs-sqlite-simple/buildlink3.mk"
