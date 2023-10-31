@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 18:12:11 pho Exp $
+lib/skein-${PKGVERSION}/${HS_VERSION}/package-description
+lib/skein-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Crypto/Skein/Internal.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/Crypto-Skein-Internal.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/Crypto-Skein.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/skein.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/skein-${PKGVERSION}/html/synopsis.png
