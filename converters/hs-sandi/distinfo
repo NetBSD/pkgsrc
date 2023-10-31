@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 17:08:04 pho Exp $
+
+BLAKE2s (sandi-0.5.tar.gz) = 099dfbaeb2b5e81fb0ecd44a6ec05f30c52b45409464ce705af407f4469cbd2b
+SHA512 (sandi-0.5.tar.gz) = 8abff3496d0d3f082f12416eea3189e06d1663fe78d996159396ab944389b2a816853c0191edced3b176fc506dac60e9ce84347ecaf2c255e5ec0d6b1590c012
+Size (sandi-0.5.tar.gz) = 19115 bytes
