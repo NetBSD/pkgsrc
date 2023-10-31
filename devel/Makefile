@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4095 2023/10/31 16:29:49 pho Exp $
+# $NetBSD: Makefile,v 1.4096 2023/10/31 16:35:22 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -662,6 +662,7 @@ SUBDIR+=	hs-keys
 SUBDIR+=	hs-lens
 SUBDIR+=	hs-lens-family-core
 SUBDIR+=	hs-libffi
+SUBDIR+=	hs-lift-type
 SUBDIR+=	hs-lifted-async
 SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-list-t
