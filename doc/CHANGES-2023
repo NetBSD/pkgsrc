@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6428 2023/10/31 13:48:26 riastradh Exp $
+$NetBSD: CHANGES-2023,v 1.6429 2023/10/31 13:49:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9346,3 +9346,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added print/tex-mwe version 0.5 [riastradh 2023-10-31]
 	Added print/tex-mwe-doc version 0.5 [riastradh 2023-10-31]
 	Updated meta-pkgs/texlive-collection-latexextra to 2023pre7 [riastradh 2023-10-31]
+	Updated devel/hs-hls-explicit-imports-plugin to 2.4.0.0 [pho 2023-10-31]
