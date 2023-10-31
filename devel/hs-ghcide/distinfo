@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/30 07:28:21 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/31 09:23:32 pho Exp $
 
-BLAKE2s (ghcide-1.9.0.0.tar.gz) = 5365f52c1b484ce593637043aab4100e3d9fa41efb2b1207bd222f7cfb57c87a
-SHA512 (ghcide-1.9.0.0.tar.gz) = f64a36ef7fff2936a018a8d3437e3aec6e668410923189e7ee5908e94f7842b80530e9d4fcbfd11cd39e8fb4d619e7318eb34441d236c2123092408384771a0a
-Size (ghcide-1.9.0.0.tar.gz) = 288478 bytes
+BLAKE2s (ghcide-2.4.0.0.tar.gz) = dfc1e8b08e2d940d82462f616f486293744999fcf1c6f61524ea14ff6bc24bb6
+SHA512 (ghcide-2.4.0.0.tar.gz) = 48008a2de2e03d1eba2fb45c1788a99ec2f2ee74bcedad7ad7a06ba8a70b7827be3d1596475e9b263e691df7cef70de139e8d4e4ec973a23aebd8a41405a9d1b
+Size (ghcide-2.4.0.0.tar.gz) = 299656 bytes
