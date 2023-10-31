@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/05/17 08:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/31 12:53:52 nros Exp $
 
 DISTNAME=	litehtml-0.6
 CATEGORIES=	www
@@ -10,12 +10,13 @@ HOMEPAGE=	http://www.litehtml.com/
 COMMENT=	Fast and lightweight HTML/CSS rendering engine
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 
-CMAKE_ARGS+=	-DEXTERNAL_GUMBO=ON
+CMAKE_CONFIGURE_ARGS+=	-DEXTERNAL_GUMBO=ON
 # Turn off testing since it installs gtest
-CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
 
@@ -28,5 +29,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../devel/cmake/build.mk"
 .include "../../www/gumbo-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
