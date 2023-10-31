@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/30 04:01:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 04:40:27 pho Exp $
 lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-graph-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/STM/Stats.dyn_hi
@@ -49,7 +49,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hls_graph.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Control-Concurrent-STM-Stats.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Classes.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/Development-IDE-Graph-Database.html
@@ -90,12 +90,14 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-U.ht
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/hls-graph.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/synopsis.png
 share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/profile.html
 share/${HS_PLATFORM}/hls-graph-${PKGVERSION}/html/shake.js
