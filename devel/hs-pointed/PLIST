@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/29 15:56:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 02:50:01 pho Exp $
 lib/pointed-${PKGVERSION}/${HS_VERSION}/package-description
 lib/pointed-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -10,14 +10,16 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Pointed.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Pointed.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/Data-Copointed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/Data-Pointed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/pointed.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/synopsis.png
