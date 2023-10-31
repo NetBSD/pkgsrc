@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6440 2023/10/31 14:56:18 schmonz Exp $
+$NetBSD: CHANGES-2023,v 1.6441 2023/10/31 14:59:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9358,3 +9358,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-splice-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated mail/getmail6 to 6.18.13nb1 [schmonz 2023-10-31]
 	Updated mail/getmail to 5.16nb4 [schmonz 2023-10-31]
+	Added devel/hs-hls-eval-plugin version 2.4.0.0 [pho 2023-10-31]
