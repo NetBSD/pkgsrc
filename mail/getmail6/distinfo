@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 01:54:45 sekiya Exp $
+
+BLAKE2s (getmail6-6.18.13.tar.gz) = dd4523d32fa36b0d87a76e1175f448a77b4ff925ae8ed2e1140bcaa07540941b
+SHA512 (getmail6-6.18.13.tar.gz) = 437c057d6e3d499a2e11be82d4e69aafc24d74d42fb1fa51de06fccd33d6e9e1ef7bba20ae5fc070a80dd656f184386083d462f65b05dafcf516d7dc0b2138a0
+Size (getmail6-6.18.13.tar.gz) = 213033 bytes
+SHA1 (patch-setup.py) = 68ac253a4d0f2b3ffe0effef547f9257e39d7695
