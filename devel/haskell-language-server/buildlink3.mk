@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/10/09 04:54:05 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/10/31 15:24:28 pho Exp $
 
 BUILDLINK_TREE+=	haskell-language-server
 
 .if !defined(HASKELL_LANGUAGE_SERVER_BUILDLINK3_MK)
 HASKELL_LANGUAGE_SERVER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.haskell-language-server+=	haskell-language-server>=1.9.0
-BUILDLINK_ABI_DEPENDS.haskell-language-server+=	haskell-language-server>=1.9.0.0nb3
+BUILDLINK_API_DEPENDS.haskell-language-server+=	haskell-language-server>=2.4.0
+BUILDLINK_ABI_DEPENDS.haskell-language-server+=	haskell-language-server>=2.4.0.0
 BUILDLINK_PKGSRCDIR.haskell-language-server?=	../../devel/haskell-language-server
 
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"
@@ -33,10 +33,10 @@ BUILDLINK_PKGSRCDIR.haskell-language-server?=	../../devel/haskell-language-serve
 .include "../../devel/hs-hls-cabal-fmt-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-change-type-signature-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-class-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-eval-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-explicit-imports-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-refine-imports-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-rename-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-retrie-plugin/buildlink3.mk"
-.include "../../devel/hs-hls-hlint-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-module-name-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-pragmas-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-splice-plugin/buildlink3.mk"
@@ -47,7 +47,9 @@ BUILDLINK_PKGSRCDIR.haskell-language-server?=	../../devel/haskell-language-serve
 .include "../../devel/hs-hls-explicit-fixity-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-explicit-record-fields-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-fourmolu-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-ormolu-plugin/buildlink3.mk"
 .include "../../devel/hs-hls-refactor-plugin/buildlink3.mk"
+.include "../../devel/hs-hls-overloaded-record-dot-plugin/buildlink3.mk"
 .endif	# HASKELL_LANGUAGE_SERVER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-haskell-language-server
