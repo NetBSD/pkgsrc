@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:43 riastradh Exp $
+share/texmf-dist/doc/fonts/tinos/LICENSE.txt
+share/texmf-dist/doc/fonts/tinos/README
+share/texmf-dist/doc/fonts/tinos/tinos-samples.pdf
+share/texmf-dist/doc/fonts/tinos/tinos-samples.tex

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+
+BLAKE2s (libertinus.doc.r61719.tar.xz) = d10a0baa9247d1ac73691ddf344c9d024f84b051eafe46650d45f5ad3dbca0a8
+SHA512 (libertinus.doc.r61719.tar.xz) = 8865b61037690bd3569654879866592750561d3fdeddd7943280ef772e7798194cf0bdb95809ab4373e1f082d1a1468b3b4456971b72dc892b07e73e2dcdecc6
+Size (libertinus.doc.r61719.tar.xz) = 16240 bytes

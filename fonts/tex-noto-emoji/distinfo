@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+
+BLAKE2s (noto-emoji.r62950.tar.xz) = 05aa54554e7d917a4ea74aa2eca35adaa6a451680c1b49bbf4a0281102d40807
+SHA512 (noto-emoji.r62950.tar.xz) = 68400eedc7540f11c0d3649558ce14ac1bb0bf7f2ed56dfda355fa08c7bf37e947a4c48040075e52b4f4205250df2688a7de22fcbde8285ae4549deb5e02e263
+Size (noto-emoji.r62950.tar.xz) = 9251416 bytes

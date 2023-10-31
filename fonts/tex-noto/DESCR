@@ -1,0 +1,3 @@
+This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX
+support for the NotoSerif, NotoSans and NotoSansMono families
+of fonts, designed by Steve Matteson for Google.

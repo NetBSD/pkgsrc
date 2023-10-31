@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+share/texmf-dist/doc/fonts/newcomputermodern/README
+share/texmf-dist/doc/fonts/newcomputermodern/integral.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/integral.tex
+share/texmf-dist/doc/fonts/newcomputermodern/newcm-doc.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/newcm-doc.tex
+share/texmf-dist/doc/fonts/newcomputermodern/newcm-unimath-symbols.ltx
+share/texmf-dist/doc/fonts/newcomputermodern/newcm-unimath-symbols.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/newcomputermodern-sample.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/newcomputermodern-sample.tex
+share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm-cropped.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm.tex
+share/texmf-dist/doc/fonts/newcomputermodern/source.txz

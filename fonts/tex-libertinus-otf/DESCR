@@ -1,0 +1,5 @@
+This package offers LuaLaTeX/XeLaTeX support for the Libertinus
+OpenType fonts maintained by Khaled Hosny. Missing fonts are
+defined via several font feature settings. The Libertinus fonts
+are similiar to Libertine and Biolinum, but come with math
+symbols.

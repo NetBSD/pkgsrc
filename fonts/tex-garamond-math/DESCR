@@ -1,0 +1,6 @@
+Garamond-Math is an open type math font matching EB Garamond
+(Octavio Pardo) and EB Garamond (Georg Mayr-Duffner). Many
+mathematical symbols are derived from other fonts, others are
+made from scratch. The metric is generated with a Python
+script. Issues, bug reports and other contributions are
+welcome.

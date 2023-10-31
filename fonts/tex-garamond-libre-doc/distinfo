@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:40 riastradh Exp $
+
+BLAKE2s (garamond-libre.doc.r64412.tar.xz) = 8a90585b24b6ca9c6ea50b47a8ba362b2593cb4bec03178eca67184bc024486d
+SHA512 (garamond-libre.doc.r64412.tar.xz) = b8a575d15c7020287313aed6fc7f08d4d6d9cc02633527a657db4fd0fe39a25154f7dbbd9d6516ecd4662d08644d803822a19da43348f955f553725558c0dd6a
+Size (garamond-libre.doc.r64412.tar.xz) = 86012 bytes

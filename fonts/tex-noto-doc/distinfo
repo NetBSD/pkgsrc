@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+
+BLAKE2s (noto.doc.r64351.tar.xz) = 72be4f064cc239e46d5f15169829e44c41301275f9f55ac98e022e83316918b8
+SHA512 (noto.doc.r64351.tar.xz) = 20b8371eec90440f2a491e1f34a0fce79b700e7b2f0aea2a808baaaf4e3275dd253b65d32429a78be6ed2b31b576f4291cc1f3cc2f625a675cd7a317bab90759
+Size (noto.doc.r64351.tar.xz) = 340432 bytes
