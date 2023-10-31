@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6437 2023/10/31 14:32:40 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6438 2023/10/31 14:42:32 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9355,3 +9355,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-cabal-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-cabal-fmt-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-alternate-number-format-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-splice-plugin to 2.4.0.0 [pho 2023-10-31]
