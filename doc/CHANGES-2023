@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6411 2023/10/31 08:46:34 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6412 2023/10/31 09:07:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9327,3 +9327,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-dav version 1.3.4 [pho 2023-10-31]
 	Updated lang/purescript to 0.15.12 [pho 2023-10-31]
 	Updated lang/dhall to 1.42.0 [pho 2023-10-31]
+	Updated devel/hs-hls-plugin-api to 2.4.0.0 [pho 2023-10-31]
