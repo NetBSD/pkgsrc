@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2023/10/21 17:11:01 gdt Exp $
+# $NetBSD: Makefile,v 1.48 2023/10/31 00:38:07 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -11,14 +11,14 @@ META_PACKAGE=	yes
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DEPENDS+=	atril>=${VERSION}:../../print/atril
-DEPENDS+=	caja>=${VERSION}:../../sysutils/caja
+DEPENDS+=	caja>=${VERSION:R}.3:../../sysutils/caja
 DEPENDS+=	caja-dropbox>=${VERSION:R}.0:../../sysutils/caja-dropbox
 DEPENDS+=	caja-extensions>=${VERSION}:../../sysutils/caja-extensions
 DEPENDS+=	engrampa>=${VERSION}:../../archivers/engrampa
 DEPENDS+=	eom>=${VERSION}:../../graphics/eom
 DEPENDS+=	libmatekbd>=${VERSION}:../../x11/libmatekbd
 DEPENDS+=	libmatemixer>=${VERSION}:../../audio/libmatemixer
-DEPENDS+=	libmateweather>=${VERSION}:../../misc/libmateweather
+DEPENDS+=	libmateweather>=${VERSION:R}.2:../../misc/libmateweather
 DEPENDS+=	marco>=${VERSION:R}.2:../../wm/marco
 DEPENDS+=	mate-applets>=${VERSION}:../../x11/mate-applets
 DEPENDS+=	mate-backgrounds>=${VERSION:R}.0:../../graphics/mate-backgrounds
