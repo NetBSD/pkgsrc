@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:25 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 02:53:31 pho Exp $
 
 BUILDLINK_TREE+=	hs-monoidal-containers
 
 .if !defined(HS_MONOIDAL_CONTAINERS_BUILDLINK3_MK)
 HS_MONOIDAL_CONTAINERS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-monoidal-containers+=	hs-monoidal-containers>=0.6.3
-BUILDLINK_ABI_DEPENDS.hs-monoidal-containers+=	hs-monoidal-containers>=0.6.3.0nb2
+BUILDLINK_API_DEPENDS.hs-monoidal-containers+=	hs-monoidal-containers>=0.6.4
+BUILDLINK_ABI_DEPENDS.hs-monoidal-containers+=	hs-monoidal-containers>=0.6.4.0
 BUILDLINK_PKGSRCDIR.hs-monoidal-containers?=	../../devel/hs-monoidal-containers
 
 .include "../../converters/hs-aeson/buildlink3.mk"
