@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/31 17:16:55 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 14:18:30 pho Exp $
 
-BLAKE2s (hls-cabal-fmt-plugin-0.1.0.0.tar.gz) = eff67da23cb6ecc8bed1bbb4602d5ffe809cd294c76b94d64a73d84d34b81c7d
-SHA512 (hls-cabal-fmt-plugin-0.1.0.0.tar.gz) = e293c1f392e709fc285bda1dfa01a6581f13585b7926653c2c07d2576f85cda48a0f50ea26c4fe87118ff7a4fef558520dfb42faf26f62efc44a341b0df131ce
-Size (hls-cabal-fmt-plugin-0.1.0.0.tar.gz) = 6631 bytes
+BLAKE2s (hls-cabal-fmt-plugin-2.4.0.0.tar.gz) = ce2e82b02cd35a4940e8012e9aba7957d65005d87fc6a81d8d287627013acddf
+SHA512 (hls-cabal-fmt-plugin-2.4.0.0.tar.gz) = ad4196db04aec2a64f7abad4033b35f183537b2b8cdff099abbb3b67e42fefdafcb8c9e98ad21790ff85c4e2505abbfd7d4c401ffb87eb74b00a4310f66058df
+Size (hls-cabal-fmt-plugin-2.4.0.0.tar.gz) = 6868 bytes
