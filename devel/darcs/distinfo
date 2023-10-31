@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.16 2023/01/30 04:36:10 pho Exp $
+$NetBSD: distinfo,v 1.17 2023/10/31 10:58:52 pho Exp $
 
 BLAKE2s (darcs-2.16.5.tar.gz) = c119005fe0f558b45e30f00a15c4dd9ab9496a430143376e64f7a6e8a75fc728
 SHA512 (darcs-2.16.5.tar.gz) = 9116043943315417ff314197f6a143435b5545f614c6e6210c3645987a68c69c31f53f823ee5269cb663ccba393f8caf1834120783f15128e43b132c731a0edb
 Size (darcs-2.16.5.tar.gz) = 1271154 bytes
 SHA1 (patch-Setup.hs) = cb147ff81869ccbab7a301d54dca64d0a7801903
+SHA1 (patch-src_Darcs_Patch_Annotate.hs) = 29b88b1fc4a89314b79f2a2519af7334a56feeff
+SHA1 (patch-src_Darcs_Patch_Index_Monad.hs) = d9a17e34b55e029df5f3ecfbfc5c06d1c7eff2b3
+SHA1 (patch-src_Darcs_UI_Commands_Log.hs) = fcc982bc24ff58719d23c488ab3f9ea3d2d31914
+SHA1 (patch-src_Darcs_Util_Compat.hs) = d9a7712f33a2e1ab71be89f1a40e5e1f03f7594c
+SHA1 (patch-src_Darcs_Util_Tree_Hashed.hs) = 608253fa300b82119f812a92fbbd321ebf2d541c
+SHA1 (patch-src_Darcs_Util_Tree_Monad.hs) = d19f6e0358c21fee7548486762ec923aa774f0a7
