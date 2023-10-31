@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 19:16:13 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 14:42:09 pho Exp $
 lib/hls-splice-plugin-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-splice-plugin-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Splice.dyn_hi
@@ -10,14 +10,16 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Splice/Types.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/Ide-Plugin-Splice-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/Ide-Plugin-Splice.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/hls-splice-plugin.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-splice-plugin-${PKGVERSION}/html/synopsis.png
