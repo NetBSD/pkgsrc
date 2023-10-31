@@ -1,0 +1,3 @@
+This provides a much safer semaphore than the QSem, QSemN, SampleVar in
+base. Those base modules are not exception safe and can be broken by
+killThread.
