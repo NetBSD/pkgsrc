@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+share/texmf-dist/doc/fonts/libertinus-fonts/AUTHORS.txt
+share/texmf-dist/doc/fonts/libertinus-fonts/CONTRIBUTING.md
+share/texmf-dist/doc/fonts/libertinus-fonts/CONTRIBUTORS.txt
+share/texmf-dist/doc/fonts/libertinus-fonts/Design-Guidelines.md
+share/texmf-dist/doc/fonts/libertinus-fonts/FONTLOG.txt
+share/texmf-dist/doc/fonts/libertinus-fonts/Features.md
+share/texmf-dist/doc/fonts/libertinus-fonts/Math-Sample.pdf
+share/texmf-dist/doc/fonts/libertinus-fonts/OFL.txt
+share/texmf-dist/doc/fonts/libertinus-fonts/Opentype-Features.pdf
+share/texmf-dist/doc/fonts/libertinus-fonts/README.md
+share/texmf-dist/doc/fonts/libertinus-fonts/Sample.pdf
+share/texmf-dist/doc/fonts/libertinus-fonts/libertinus.css
+share/texmf-dist/doc/fonts/libertinus-fonts/preview.pdf
+share/texmf-dist/doc/fonts/libertinus-fonts/preview.svg

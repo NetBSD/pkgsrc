@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+share/texmf-dist/doc/fonts/noto/LICENSE_OFL.txt
+share/texmf-dist/doc/fonts/noto/README
+share/texmf-dist/doc/fonts/noto/noto-samples.pdf
+share/texmf-dist/doc/fonts/noto/noto-samples.tex

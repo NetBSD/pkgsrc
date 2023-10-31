@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusKeyboard-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusMath-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusMono-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Bold.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Italic.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSans-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-Bold.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-BoldItalic.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-Italic.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-Semibold.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerif-SemiboldItalic.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerifDisplay-Regular.otf
+share/texmf-dist/fonts/opentype/public/libertinus-fonts/LibertinusSerifInitials-Regular.otf

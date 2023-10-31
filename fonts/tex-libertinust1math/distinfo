@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+
+BLAKE2s (libertinust1math.r61751.tar.xz) = e4fd7178cdbfc53beda3d9795fd1389f1c412235b698f68c43e3813fd6d1eac2
+SHA512 (libertinust1math.r61751.tar.xz) = 444d23e7bff1a6c1b3c368730a589a033c211f9fafb1032b3852e55ade7cde260f1662ab7266291136919558d9c2995986655f0302c38a677afd4dd2f74d5376
+Size (libertinust1math.r61751.tar.xz) = 1242040 bytes
