@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4087 2023/10/30 10:44:25 pho Exp $
+# $NetBSD: Makefile,v 1.4088 2023/10/31 03:44:19 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -711,6 +711,7 @@ SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-retry
 SUBDIR+=	hs-rio
 SUBDIR+=	hs-rio-orphans
+SUBDIR+=	hs-row-types
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-safe-exceptions
 SUBDIR+=	hs-say
