@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6424 2023/10/31 13:13:14 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6425 2023/10/31 13:24:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9340,3 +9340,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-qualify-imported-names-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-pragmas-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-module-name-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-gadt-plugin to 2.4.0.0 [pho 2023-10-31]
