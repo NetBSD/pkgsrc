@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6476 2023/10/31 18:37:57 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6477 2023/10/31 18:48:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9394,3 +9394,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git-cliff to 1.4.0 [pin 2023-10-31]
 	Updated editors/tp-note to 1.22.10 [pin 2023-10-31]
 	Updated sysutils/broot to 1.27.0 [pin 2023-10-31]
+	Added sysutils/hs-mountpoints version 1.0.2 [pho 2023-10-31]
