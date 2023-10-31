@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/29 10:09:10 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 11:05:23 pho Exp $
 
-BLAKE2s (pandoc-lua-engine-0.1.tar.gz) = c42292125f3a2f80455c9cb07371fda1f1285a495703c3ce75898fbcefe3b013
-SHA512 (pandoc-lua-engine-0.1.tar.gz) = 9191f99120db8b1e6d363b0f8fb5a642f891df963989e9e1bbe9dcfba75fcd36ef900b01f229f6b8d8d5e2976af0beed574ce61d8ecbb0271a9fe01ff352d85a
-Size (pandoc-lua-engine-0.1.tar.gz) = 74120 bytes
+BLAKE2s (pandoc-lua-engine-0.2.1.2.tar.gz) = 5ef86f1b5aa422a0cf83225f374bdd9bfb433e2ab5dc6dd01c3bb28d6d1fe1a1
+SHA512 (pandoc-lua-engine-0.2.1.2.tar.gz) = 4226463f889ae08fd6449ee3cc66b47830e3c0afee70cf897500461924176a62a2e7123cda8c1c2f8b47bcfdd67ae41502cc01cc04fc73f489c01dff6c897232
+Size (pandoc-lua-engine-0.2.1.2.tar.gz) = 81179 bytes
