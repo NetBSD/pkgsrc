@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 15:33:10 pho Exp $
+lib/pager-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pager-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Pager.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Pager.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Pager.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/System-Pager.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/pager.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/pager-${PKGVERSION}/html/synopsis.png
+share/${HS_PLATFORM}/pager-${PKGVERSION}/LICENSE
