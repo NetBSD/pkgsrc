@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 17:55:54 pho Exp $
+
+BLAKE2s (tasty-rerun-1.1.19.tar.gz) = dcdd495712f9b0aab15224e5202176ecb2d1385a2e246bec2492cee89c63ca66
+SHA512 (tasty-rerun-1.1.19.tar.gz) = ba6d801fc69d30648f81d0b0cd14d82b07d93b5a3182627ce0aad21384915a30695ad8b0af168bd6ab8825d05275c01655f7266ae0cd12d76a01b989a695ff4f
+Size (tasty-rerun-1.1.19.tar.gz) = 6607 bytes
