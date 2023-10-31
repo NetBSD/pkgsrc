@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:21:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2023/10/31 16:31:14 pho Exp $
 
-BLAKE2s (cgrep-6.6.32.tar.gz) = 743dc76c06c06ec097d0b49718a0a4d5519fe28b7cfa2081330bcdb6935fa1d9
-SHA512 (cgrep-6.6.32.tar.gz) = 401ca49fbd2903b810c1873a3c52c3863a42b431d1a905a781636386c3ac0aac4e2ed9934fb24f1e9996629a2b578483a7c3a7a8a4d61ecb7ac7cfc9152f43ba
-Size (cgrep-6.6.32.tar.gz) = 35640 bytes
+BLAKE2s (cgrep-8.1.0.tar.gz) = 6f44c8d35766643445e7e11ef6844e92789fe6c5f7105d7babb6e36359b93e0a
+SHA512 (cgrep-8.1.0.tar.gz) = ccaf546dd4ab43f7d12694d14478fe237b05bf0efe6fc9c4775debf1b3d6f310bec99742df62accd70efba7357cb91d3922a00511e149ea15a0d8778a0e1e22c
+Size (cgrep-8.1.0.tar.gz) = 58629 bytes
