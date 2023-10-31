@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:04 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/31 11:01:39 pho Exp $
 
-DISTNAME=	pandoc-server-0.1
-PKGREVISION=	2
+DISTNAME=	pandoc-server-0.1.0.3
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doctemplates/buildlink3.mk"
 .include "../../converters/hs-pandoc-base/buildlink3.mk"
+.include "../../textproc/hs-pandoc-types/buildlink3.mk"
 .include "../../www/hs-servant-server/buildlink3.mk"
 .include "../../textproc/hs-skylighting/buildlink3.mk"
 .include "../../textproc/hs-unicode-collation/buildlink3.mk"
