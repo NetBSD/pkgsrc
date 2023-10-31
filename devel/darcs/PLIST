@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/01/30 04:36:10 pho Exp $
+@comment $NetBSD: PLIST,v 1.11 2023/10/31 10:58:52 pho Exp $
 bin/darcs
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -244,7 +244,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Version.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 man/man1/darcs.1
 share/bash-completion/completions/darcs
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/COPYING
+share/doc/${HS_PLATFORM}/${PKGNAME}/COPYING
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-Annotate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-Apply.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-ApplyMonad.html
@@ -529,10 +529,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
 share/zsh/site-functions/_darcs

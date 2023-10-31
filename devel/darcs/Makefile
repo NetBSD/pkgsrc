@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2023/10/09 04:54:04 pho Exp $
+# $NetBSD: Makefile,v 1.72 2023/10/31 10:58:52 pho Exp $
 
 DISTNAME=	darcs-2.16.5
 PKGNAME=	${DISTNAME}
@@ -19,11 +19,20 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	fgl	\
 	hashable	\
 	memory	\
+	mtl	\
 	regex-tdfa	\
 	text	\
 	time	\
+	transformers	\
+	unix	\
 	unix-compat	\
 	vector
+
+# Use crypton instead of outdated cryptonite.
+SUBST_CLASSES+=		crypton
+SUBST_STAGE.crypton=	post-extract
+SUBST_FILES.crypton=	darcs.cabal
+SUBST_SED.crypton=	-e 's/cryptonite/crypton/g'
 
 # If darcs is to be linked dynamically, it will depend on nearly 140 shared
 # objects and the dynamic linker will spend more than a second to resolve
@@ -49,7 +58,7 @@ post-install:
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-constraints/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../devel/hs-data-ordlist/buildlink3.mk"
 .include "../../devel/hs-fgl/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
