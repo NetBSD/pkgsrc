@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6464 2023/10/31 17:00:33 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6465 2023/10/31 17:05:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9382,3 +9382,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-silently version 1.2.5.3 [pho 2023-10-31]
 	Added devel/hs-persistent version 2.14.6.0 [pho 2023-10-31]
 	Added databases/hs-persistent-sqlite version 2.13.2.0 [pho 2023-10-31]
+	Added devel/hs-safesemaphore version 0.10.1 [pho 2023-10-31]
