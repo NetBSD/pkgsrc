@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:42 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/31 11:30:08 pho Exp $
 
 DISTNAME=	hoogle-5.0.18.3
 PKGNAME=	${DISTNAME}
@@ -16,13 +16,20 @@ LICENSE=	modified-bsd
 # time is more expensive than disks.
 HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 
+# "connection" is outdated and is no longer buildable. Use
+# crypton-connection instead.
+SUBST_CLASSES+=		conn
+SUBST_STAGE.conn=	post-extract
+SUBST_FILES.conn=	hoogle.cabal
+SUBST_SED.conn=		-e 's/connection,/crypton-connection,/'
+
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
 .include "../../textproc/hs-blaze-markup/buildlink3.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-conduit-extra/buildlink3.mk"
-.include "../../net/hs-connection/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-foundation/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
