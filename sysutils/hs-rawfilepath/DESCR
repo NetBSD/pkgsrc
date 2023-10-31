@@ -1,0 +1,17 @@
+The unix package provides RawFilePath which is a type synonym of
+ByteString. Unlike FilePath (which is String), it has no performance issues
+because it is ByteString. It has no encoding issues because it is
+ByteString which is a sequence of bytes instead of characters.
+
+That's all good. With RawFilePath, we can properly separate the "sequence
+of bytes" and the "sequence of Unicode characters." The control is
+yours. Properly encode or decode them with UTF-8 or UTF-16 or any codec of
+your choice.
+
+However,
+
+* The functions in unix are low-level.
+* The higher-level packages such as process and directory are strictly tied
+  to FilePath.
+
+This library provides the higher-level interface with RawFilePath.

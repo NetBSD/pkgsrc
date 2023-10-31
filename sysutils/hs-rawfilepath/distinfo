@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:20:00 pho Exp $
+
+BLAKE2s (rawfilepath-1.1.0.tar.gz) = 57ba9605de3c942339c8acf7bd0099c3b75cdf1d381d8eb6d36ca9156e867081
+SHA512 (rawfilepath-1.1.0.tar.gz) = b80c1cc7e1498677d10088f17cdb852cc573d90ff8cacdd1168fad6c221b3fd8003a5ec8353385b1be5e74148fb9e993457f8e7627ed14a22ab8a7ed71f0b062
+Size (rawfilepath-1.1.0.tar.gz) = 25245 bytes
