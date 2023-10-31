@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/30 17:09:49 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/31 12:42:03 pho Exp $
 
-BLAKE2s (hls-floskell-plugin-1.0.2.0.tar.gz) = 8a7e51341494097ea6cc9c6b0913cd9f019cbce907a94b9a13ba34c0df32d625
-SHA512 (hls-floskell-plugin-1.0.2.0.tar.gz) = 5fb9e2361d5406409eb14b2e40fe84f5702e8454cbc63471c997b4e42eb64534657df93e4901e33306dc20a725dc65034c4c816d3994ceacc66e8a7335c87233
-Size (hls-floskell-plugin-1.0.2.0.tar.gz) = 6314 bytes
-SHA1 (patch-hls-floskell-plugin.cabal) = 85627158dead28e9fdb9ef06735685388c88cf9b
+BLAKE2s (hls-floskell-plugin-2.4.0.0.tar.gz) = 72ef88d72d82c477137e3fed8bf7826a5c258d8a4c604df6e68fb09a34a9f31d
+SHA512 (hls-floskell-plugin-2.4.0.0.tar.gz) = e6b2aec46ce2c5f99fc5e3f2fb86b9f430a4efe8c591ab83ba35d327ade12bf5dc1603ed8a3597da1d19b1c0335ef7e7856dcca81e4395bbdd0861d08a044c1e
+Size (hls-floskell-plugin-2.4.0.0.tar.gz) = 6375 bytes
