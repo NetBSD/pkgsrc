@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:50 adam Exp $
 lib/pkgconfig/Qt6Quick3D.pc
 lib/pkgconfig/Qt6Quick3DAssetImport.pc
 lib/pkgconfig/Qt6Quick3DAssetUtils.pc
@@ -27,6 +27,7 @@ qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3ddebugsettings_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3ddefaultmaterial_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3ddirectionallight_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3deffect_p.h
+qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dextensionhelpers_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dfog_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dfrustumcamera_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dgeometry_p.h
@@ -51,6 +52,7 @@ qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dprincipledmaterial
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dquaternionanimation_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dquaternionutils_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dreflectionprobe_p.h
+qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3drenderextensions_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3drenderstats_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3drepeater_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dresourceloader_p.h
@@ -133,7 +135,9 @@ qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/heightfieldg
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/infinitegrid_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/instancerepeater_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/lookatnode_p.h
+qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/proceduralmesh_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/proceduralskytexturedata_p.h
+qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qquick3dtexturedatafrontend_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qtquick3dhelpersexports_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qtquick3dhelpersglobal_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/randominstancing_p.h
@@ -214,8 +218,10 @@ qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendereffect_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderer_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendererutil_p.h
+qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderextensions_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendergeometry_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendergraphobject_p.h
+qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderhelpers_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderimage_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderimagetexture_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderinstancetable_p.h

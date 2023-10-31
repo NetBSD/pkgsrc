@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/31 19:56:51 adam Exp $
 
 DISTNAME=	qtwayland-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwayland-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 wayland
 CATEGORIES=	devel
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

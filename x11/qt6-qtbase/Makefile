@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/10/24 22:11:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2023/10/31 19:56:48 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 CATEGORIES=	x11
 
@@ -197,9 +196,9 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${QTPREFIX}/lib
 .else
 CONFIGURE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=OFF
 CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.  if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 CONFIGURE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
-.endif
+.  endif
 .endif
 
 TOOL_DEPENDS+=	xmlstarlet-[0-9]*:../../textproc/xmlstarlet

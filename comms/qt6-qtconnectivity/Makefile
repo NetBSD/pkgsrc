@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/31 19:56:48 adam Exp $
 
 DISTNAME=	qtconnectivity-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtconnectivity-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 connectivity
 CATEGORIES=	comms
 
