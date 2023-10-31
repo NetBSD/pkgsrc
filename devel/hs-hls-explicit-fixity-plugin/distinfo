@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/02/01 02:04:51 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 13:51:28 pho Exp $
 
-BLAKE2s (hls-explicit-fixity-plugin-1.1.0.0.tar.gz) = 34b068d26451aff3ea5602ff5024c232e3c6f794d36e67a6a8b7462385b1c936
-SHA512 (hls-explicit-fixity-plugin-1.1.0.0.tar.gz) = 08e0750cd462d65209af8b1ec6ad7920f5354987fb9e52f6728507db92b3fd29dd7bd034b0a3787e4036cd408b8e1ee64e8dff581c2f2268dea7c7e0af93890b
-Size (hls-explicit-fixity-plugin-1.1.0.0.tar.gz) = 7953 bytes
+BLAKE2s (hls-explicit-fixity-plugin-2.4.0.0.tar.gz) = 13088c879f7c9daf0596cf075f5f5f6fd12f1b183a459e6d30288669f97f207e
+SHA512 (hls-explicit-fixity-plugin-2.4.0.0.tar.gz) = 26953bc6737e580e5c11e987e337300b8d981eb75e20b182576837d9027c7839778e324b9753426287155f77597345d0c825c0e02c71e78fb4e836cc17b7945c
+Size (hls-explicit-fixity-plugin-2.4.0.0.tar.gz) = 7915 bytes
