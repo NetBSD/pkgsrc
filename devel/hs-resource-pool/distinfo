@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:44:49 pho Exp $
+
+BLAKE2s (resource-pool-0.4.0.0.tar.gz) = 8ce6ae96e47755f369610e23c6877febc572a7bfa2741973e3e16c78d8460242
+SHA512 (resource-pool-0.4.0.0.tar.gz) = 714db44aa41efbe684b589d20242a8fb3ad6112287fa797954e69c19432c83a2bc0c37bbcd9674ad2980a45ce6f38acea5393753caa05de609ac958e53057b92
+Size (resource-pool-0.4.0.0.tar.gz) = 8128 bytes
