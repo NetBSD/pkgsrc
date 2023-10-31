@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6444 2023/10/31 15:16:43 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6445 2023/10/31 15:24:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9362,3 +9362,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-hls-rename-plugin version 2.4.0.0 [pho 2023-10-31]
 	Updated www/lighttpd to 1.4.73 [schmonz 2023-10-31]
 	Added devel/hs-hls-overloaded-record-dot-plugin version 2.4.0.0 [pho 2023-10-31]
+	Updated devel/haskell-language-server to 2.4.0.0 [pho 2023-10-31]
