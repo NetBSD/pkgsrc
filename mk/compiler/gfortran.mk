@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.24 2023/10/31 13:45:30 gdt Exp $
+# $NetBSD: gfortran.mk,v 1.25 2023/10/31 13:47:56 gdt Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,9 +34,8 @@ COMPILER_GFORTRAN_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 # If the pkgsrc base compiler is GCC, define POSSIBLE_GORTRAN_VERSION
-# (meaning a candidate we would like) to match, and try to use that if
-# possible, unless known to be problematic.  Otherwise, pick a
-# mainstream version and hope for the best.
+# (meaning a candidate we would like) to match.  If that version is
+# known to be problematic on a platform, pick a better one.
 # \todo If the base compiler is clang, we probably should use flang
 # rather than gfortran, but this is gfortran.mk.
 POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
