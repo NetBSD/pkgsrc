@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:59 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/31 04:44:52 pho Exp $
 
-DISTNAME=	servant-server-0.19.2
-PKGREVISION=	2
+DISTNAME=	servant-server-0.20
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,8 @@ COMMENT=	Family of combinators for defining webservices APIs and serving them
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	resourcet
+	constraints	\
+	http-api-data
 
 .include "../../devel/hs-base-compat/buildlink3.mk"
 .include "../../converters/hs-base64-bytestring/buildlink3.mk"
