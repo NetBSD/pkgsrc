@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6475 2023/10/31 18:37:05 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6476 2023/10/31 18:37:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9393,3 +9393,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-clientsession version 0.9.2.0 [pho 2023-10-31]
 	Updated devel/git-cliff to 1.4.0 [pin 2023-10-31]
 	Updated editors/tp-note to 1.22.10 [pin 2023-10-31]
+	Updated sysutils/broot to 1.27.0 [pin 2023-10-31]
