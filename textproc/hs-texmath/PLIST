@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/28 08:35:37 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/31 04:52:24 pho Exp $
 bin/texmath
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-description
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-id
@@ -63,15 +63,19 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/Pandoc.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/TeX.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/TeX.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/TeX.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/Typst.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/Typst.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Writers/Typst.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-MathML-EntityMap.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-MathML-MMLDict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-MathML.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-OMML.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-TeX-Macros.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Readers-TeX.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Shared.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-TeX.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Unicode-Fonts.html
@@ -82,12 +86,15 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Wri
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Writers-OMML.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Writers-Pandoc.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Writers-TeX.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath-Writers-Typst.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/Text-TeXMath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/synopsis.png
 ${PLIST.doc}share/doc/${HS_PLATFORM}/texmath-${PKGVERSION}/html/texmath.haddock
