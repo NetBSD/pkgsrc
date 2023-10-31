@@ -1,13 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 13:51:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-explicit-fixity-plugin
 
 .if !defined(HS_HLS_EXPLICIT_FIXITY_PLUGIN_BUILDLINK3_MK)
 HS_HLS_EXPLICIT_FIXITY_PLUGIN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hls-explicit-fixity-plugin+=	hs-hls-explicit-fixity-plugin>=1.1.0
-BUILDLINK_API_DEPENDS.hs-hls-explicit-fixity-plugin+=	hs-hls-explicit-fixity-plugin>=1.1.0.0
-BUILDLINK_ABI_DEPENDS.hs-hls-explicit-fixity-plugin?=	hs-hls-explicit-fixity-plugin>=1.1.0.0nb3
+BUILDLINK_API_DEPENDS.hs-hls-explicit-fixity-plugin+=	hs-hls-explicit-fixity-plugin>=2.4.0
+BUILDLINK_ABI_DEPENDS.hs-hls-explicit-fixity-plugin?=	hs-hls-explicit-fixity-plugin>=2.4.0.0
 BUILDLINK_PKGSRCDIR.hs-hls-explicit-fixity-plugin?=	../../devel/hs-hls-explicit-fixity-plugin
 
 .include "../../misc/hs-extra/buildlink3.mk"
