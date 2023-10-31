@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6470 2023/10/31 17:56:01 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6471 2023/10/31 18:12:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9388,3 +9388,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-tasty-quickcheck version 0.10.3 [pho 2023-10-31]
 	Updated net/tlrc to 1.7.1 [pin 2023-10-31]
 	Added devel/hs-tasty-rerun version 1.1.19 [pho 2023-10-31]
+	Added security/hs-skein version 1.0.9.4 [pho 2023-10-31]
