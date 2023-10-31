@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:52:30 pho Exp $
+
+BLAKE2s (persistent-2.14.6.0.tar.gz) = 5bc911ea905b5991822d021837bead829fc537a0e6b40a7ae213a706aa73619a
+SHA512 (persistent-2.14.6.0.tar.gz) = 962b9243cfd225ef7354276385be54b1a9689cf295d17806abe207ac1c37072e179607cab3ba0c43864728c98ddffcb06a89f83d5b0d808ab6ad41a3c8cf5d0e
+Size (persistent-2.14.6.0.tar.gz) = 176471 bytes
