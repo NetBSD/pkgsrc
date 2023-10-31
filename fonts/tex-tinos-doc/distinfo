@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:43 riastradh Exp $
+
+BLAKE2s (tinos.doc.r64504.tar.xz) = 2006095d3f2e530a89cb80c225d7d5713e33867ea8b901f22bfb338372a15a35
+SHA512 (tinos.doc.r64504.tar.xz) = 68e7832d1774fd05eff79d2fb578c2d70a8f471f74f0772e81fd351fef493c22d37edcf8c1bca9c25a81830f88261ddc33d102f056f78ca0cceec51db98bed33
+Size (tinos.doc.r64504.tar.xz) = 29268 bytes

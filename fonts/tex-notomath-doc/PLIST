@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:43 riastradh Exp $
+share/texmf-dist/doc/fonts/notomath/README
+share/texmf-dist/doc/fonts/notomath/manifest
+share/texmf-dist/doc/fonts/notomath/newtx-noto-subs.tex
+share/texmf-dist/doc/fonts/notomath/newtx-notosans-subs.tex
+share/texmf-dist/doc/fonts/notomath/notomath-doc.pdf
+share/texmf-dist/doc/fonts/notomath/notomath-doc.tex
+share/texmf-dist/doc/fonts/notomath/samplerSerif-crop.pdf

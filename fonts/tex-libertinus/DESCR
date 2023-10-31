@@ -1,0 +1,4 @@
+This package is only a wrapper for the two packages
+libertinus-type1 (pdfLaTeX) and libertinus-otf
+(LuaLaTeX/XeLaTeX). The Libertinus fonts are similiar to
+Libertine and Biolinum, but come with math symbols.
