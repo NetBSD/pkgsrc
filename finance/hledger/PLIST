@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/01/24 01:13:10 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/31 16:03:10 pho Exp $
 bin/hledger
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -50,6 +50,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Codes.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Commodities.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Commodities.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Commodities.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Demo.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Demo.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Demo.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Descriptions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Descriptions.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Descriptions.p_hi
@@ -80,15 +83,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Prices.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Print.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Print.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Print.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Printunique.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Printunique.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Printunique.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Register.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Register.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Register.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Registermatch.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Registermatch.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Registermatch.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Rewrite.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Rewrite.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Rewrite.p_hi
@@ -110,6 +107,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/DocFiles.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Main.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Main.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Main.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Script.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Script.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Script.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Utils.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Utils.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Utils.p_hi
@@ -123,7 +123,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/bash-completion/completions/hledger
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Anon.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-CliOptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Accounts.html
@@ -138,6 +138,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Check.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Close.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Codes.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Commodities.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Demo.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Descriptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Diff.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Files.html
@@ -148,9 +149,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Notes.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Payees.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Prices.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Print.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Printunique.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Register.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Registermatch.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Rewrite.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Roi.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Stats.html
@@ -159,10 +158,20 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-CompoundBalanceCommand.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-DocFiles.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Main.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Script.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Utils.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Version.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-33.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-36.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-42.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-43.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-45.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-60.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-61.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-62.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-64.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-92.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-95.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-A.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-All.html
@@ -175,6 +184,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-G.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-H.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-I.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-J.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-K.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-L.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-M.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-N.html
@@ -187,12 +197,16 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-T.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-U.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-X.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Y.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/hledger.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png

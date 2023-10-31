@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2023/10/09 04:54:36 pho Exp $
+# $NetBSD: Makefile,v 1.16 2023/10/31 16:03:10 pho Exp $
 
-DISTNAME=	hledger-1.28
+DISTNAME=	hledger-1.31
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Plain-text accounting tool
 LICENSE=	gnu-gpl-v3
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	megaparsec
 
 INSTALLATION_DIRS+=	share/bash-completion/completions
 post-install:
@@ -41,6 +43,7 @@ do-test:
 .include "../../devel/hs-tabular/buildlink3.mk"
 .include "../../devel/hs-tasty/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../textproc/hs-text-ansi/buildlink3.mk"
 .include "../../devel/hs-timeit/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
