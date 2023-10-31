@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:17 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/10/31 14:32:29 pho Exp $
 
-DISTNAME=	hls-alternate-number-format-plugin-1.3.0.0
-PKGREVISION=	3
+DISTNAME=	hls-alternate-number-format-plugin-2.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
