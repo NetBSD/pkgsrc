@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2022/11/27 04:43:12 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2023/10/31 00:35:51 gutteridge Exp $
 
-BLAKE2s (caja-1.26.1.tar.xz) = 93dee8c5088ab7e3984396ffc7fa7710760031abd9c2f7720e7b1cf8e9f3c4aa
-SHA512 (caja-1.26.1.tar.xz) = e5d14d1a5f0ae9f86d3250e5a2d10a4e0afdc7ba1b52fcac4c8efc0a4c555d0208be3caf3aac19cc4938fe4c20e82f1f81d259d30e5d8fffbc78708664d23d4e
-Size (caja-1.26.1.tar.xz) = 5263564 bytes
+BLAKE2s (caja-1.26.3.tar.xz) = b4bcd0744c2fe1f4058f0d78b17d5e724084410c9a33ac2bd0d331632e378673
+SHA512 (caja-1.26.3.tar.xz) = 6f17d46de77c552f68c77e0b6a0c388a7fe353ddd5ea5376685aec209f301b5a74a76b1af4c2324f41838ff7251acffa3bd119cf2462a8b8b45ef1b88df4c83c
+Size (caja-1.26.3.tar.xz) = 5276276 bytes
 SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da
 SHA1 (patch-src_caja-file-management-properties.h) = 4529eb0c91c39c1d1b1983da23074adfeb28c1a8
