@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 15:16:34 pho Exp $
+
+BLAKE2s (hls-overloaded-record-dot-plugin-2.4.0.0.tar.gz) = 8489509e901f38b9e4d222a44b10e2547b936b2b3e894461d3dd66124ba80a8c
+SHA512 (hls-overloaded-record-dot-plugin-2.4.0.0.tar.gz) = f60cd4a2da64292a4fe97252c641e6633d3f5dd204d331b3911578c8de6b47d88f13d7311d937ba4e15e9d3064d678a19a4f24eaa3ac2035c45cbe72d1ac0fdc
+Size (hls-overloaded-record-dot-plugin-2.4.0.0.tar.gz) = 7876 bytes
