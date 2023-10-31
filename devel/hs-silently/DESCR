@@ -1,0 +1,3 @@
+Silently is a package that allows you to run an IO action and prevent it
+from writing to stdout, or any other handle, by using silence. Or you can
+capture the output for yourself using capture.
