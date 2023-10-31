@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/30 09:29:12 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/31 13:09:49 pho Exp $
 
-BLAKE2s (hls-pragmas-plugin-1.0.4.0.tar.gz) = 1540b131ce0b1a19c8bd634a2745579a28c54dea6049a8595f90976996a25b0d
-SHA512 (hls-pragmas-plugin-1.0.4.0.tar.gz) = 387285e34f2fa0b2c0fa9af6fd0683b170d7909286935a7f588e7655bedd8a46f15ff75c71f960a0801d960c2cbc334ecbd383ee9a92aacb6d30913079e9252f
-Size (hls-pragmas-plugin-1.0.4.0.tar.gz) = 14792 bytes
+BLAKE2s (hls-pragmas-plugin-2.4.0.0.tar.gz) = 50a35796fa7b2e9635c6f073635adf80e285a488c4b2e211f9e4899e3e5e3d72
+SHA512 (hls-pragmas-plugin-2.4.0.0.tar.gz) = 469e627a0d64ef2f1990597cad62d5a711f187394f82c7957a225604eee361a8dff6ea6a7f7450e51c064d4aae36e2088972cb1cca342a8d7404905b228ec7d8
+Size (hls-pragmas-plugin-2.4.0.0.tar.gz) = 16185 bytes
