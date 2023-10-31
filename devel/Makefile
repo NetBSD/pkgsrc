@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4101 2023/10/31 17:14:47 pho Exp $
+# $NetBSD: Makefile,v 1.4102 2023/10/31 17:56:24 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -750,6 +750,7 @@ SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tasty
 SUBDIR+=	hs-tasty-hunit
 SUBDIR+=	hs-tasty-quickcheck
+SUBDIR+=	hs-tasty-rerun
 SUBDIR+=	hs-terminal-size
 SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-th-abstraction
