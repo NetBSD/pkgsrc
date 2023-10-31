@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 17:32:09 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 13:57:37 pho Exp $
 lib/hls-class-plugin-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-class-plugin-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Class.dyn_hi
@@ -22,13 +22,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ide/Plugin/Class/Utils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/Ide-Plugin-Class.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/hls-class-plugin.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-class-plugin-${PKGVERSION}/html/synopsis.png
