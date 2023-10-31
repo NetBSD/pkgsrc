@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 18:48:34 pho Exp $
+
+BLAKE2s (mountpoints-1.0.2.tar.gz) = e810d055e475adcd709177c3d283abbabd8cd5ab6b11ab0fc1619388786cc8b4
+SHA512 (mountpoints-1.0.2.tar.gz) = 763b58944ef4422641d4ce92d7a61c79fa95cdae9795e48db194ce10df622a3e079670099daa35f7bb51d4d10ee54ccc411105eb918bab2327d54571d9bd9060
+Size (mountpoints-1.0.2.tar.gz) = 13505 bytes
+SHA1 (patch-cbits_libmounts.h) = 47e9087d6d221f925a1f30018688550566462f68
