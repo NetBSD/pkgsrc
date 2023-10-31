@@ -1,0 +1,21 @@
+The Eval plugin evaluates code inserted in comments.
+
+This is mainly useful to test and document functions and to quickly
+evaluate small expressions.
+
+Every line of code to be evaluated is introduced by >>>
+
+A quick calculation:
+
+-- >>> 2**4.5/pi
+-- 7.202530529256849
+
+A little test for the double function:
+
+{- |
+A doubling function.
+
+>>> double 11
+22
+-}
+double = (2*)
