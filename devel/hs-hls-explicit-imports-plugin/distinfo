@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/31 01:37:01 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/31 13:48:45 pho Exp $
 
-BLAKE2s (hls-explicit-imports-plugin-1.2.0.0.tar.gz) = bc25cffab0f03ed29ede0a5b46401782de1dd82397fc0fbb723281cad29d8686
-SHA512 (hls-explicit-imports-plugin-1.2.0.0.tar.gz) = b4e52b974c0a79ce43bfb4a5a6252a5f5adf06bbf5fbecdc80aa14d359042471381b44fb2f810bbdaa0e687dc828f4a08b71c76fa088de18b9d1e8e23aa562cd
-Size (hls-explicit-imports-plugin-1.2.0.0.tar.gz) = 11012 bytes
+BLAKE2s (hls-explicit-imports-plugin-2.4.0.0.tar.gz) = 4b6c1f9f60316a76489d79175bbb901312746692e17821f95f435e782b8da4c2
+SHA512 (hls-explicit-imports-plugin-2.4.0.0.tar.gz) = 7c635e091642decb1c286a707df765c45965de05c6904f7fe54d47eba195144a2bbb02de7157cfe20d1e58e83fb0bcc6ed6cf82dbd9191092907c7c66cd29ca3
+Size (hls-explicit-imports-plugin-2.4.0.0.tar.gz) = 14968 bytes
