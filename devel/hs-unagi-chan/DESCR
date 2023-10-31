@@ -1,0 +1,19 @@
+This library provides implementations of concurrent FIFO queues (for both
+general boxed and primitive unboxed values) that are fast, perform well
+under contention, and offer a Chan-like interface. The library may be of
+limited usefulness outside of x86 architectures where the fetch-and-add
+instruction is not available.
+
+We export several variations of our design; some support additional
+functionality while others try for lower latency by removing features or
+making them more restrictive (e.g. in the Unboxed variants).
+
+* Unagi: a general-purpose near drop-in replacement for Chan.
+* Unagi.Unboxed: like Unagi but specialized for primitive types; this may
+  perform better if a queue grows very large.
+* Unagi.Bounded: a bounded variant with blocking and non-blocking writes,
+  and other functionality where a notion of the queue's capacity is
+  required.
+* Unagi.NoBlocking: lowest latency implementations for when blocking reads
+  aren't required.
+* Unagi.NoBlocking.Unboxed: like Unagi.NoBlocking but for primitive types.
