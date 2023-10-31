@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 17:05:49 pho Exp $
+
+BLAKE2s (SafeSemaphore-0.10.1.tar.gz) = ee0dc3b08681177367ff90f395d2f25538cc08bb29740e0d16370ef5e6c4192e
+SHA512 (SafeSemaphore-0.10.1.tar.gz) = 877731622e1942f45fcc43e2ed8ba7ddfa2c1f4a7ea4f36cdf425a98acc9c2f54c742d98a7d1bb457ff122f20a5af399ac776bff7403b892353f812e42007250
+Size (SafeSemaphore-0.10.1.tar.gz) = 24007 bytes
