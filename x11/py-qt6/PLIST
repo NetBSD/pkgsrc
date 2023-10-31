@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 20:21:58 adam Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -188,6 +188,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qthreadpool.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtimeline.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtimer.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtimezone.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qtipccommon.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtranslator.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtransposeproxymodel.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qtversion.sip
@@ -362,6 +363,7 @@ ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiosink.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiosource.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qcamera.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qcameradevice.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qcapturablewindow.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qimagecapture.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediacapturesession.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qmediadevices.sip
@@ -376,6 +378,7 @@ ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qsoundeffect.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframe.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframeformat.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideosink.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qwindowcapture.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimediaWidgets/QtMultimediaWidgets.toml
 ${PYSITELIB}/PyQt6/bindings/QtMultimediaWidgets/QtMultimediaWidgetsmod.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimediaWidgets/qgraphicsvideoitem.sip
