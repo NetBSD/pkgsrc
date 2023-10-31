@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.917 2023/10/28 21:18:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.918 2023/10/31 13:46:14 riastradh Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1223,6 +1223,8 @@ SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-musixtex-doc
 SUBDIR+=	tex-mwcls
 SUBDIR+=	tex-mwcls-doc
+SUBDIR+=	tex-mwe
+SUBDIR+=	tex-mwe-doc
 SUBDIR+=	tex-mweights
 SUBDIR+=	tex-mweights-doc
 SUBDIR+=	tex-na-box
