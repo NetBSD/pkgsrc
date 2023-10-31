@@ -1,9 +1,9 @@
-$NetBSD: patch-src_Spago_Watch.hs,v 1.1 2023/01/30 07:47:32 pho Exp $
+$NetBSD: patch-src_Spago_Watch.hs,v 1.2 2023/10/31 12:21:13 pho Exp $
 
 Fix build with fsnotify-0.4: debouncing has been removed; there's not even
 a configuration for that now.
 
---- src/Spago/Watch.hs.orig	2023-01-30 07:42:23.819176897 +0000
+--- src/Spago/Watch.hs.orig	2023-10-31 12:02:13.554006930 +0000
 +++ src/Spago/Watch.hs
 @@ -30,7 +30,7 @@ watch
    => Set.Set Glob.Pattern -> ClearScreen -> AllowIgnored -> RIO env ()
