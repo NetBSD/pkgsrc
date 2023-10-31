@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/29 16:02:54 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 02:53:31 pho Exp $
 lib/monoidal-containers-${PKGVERSION}/${HS_VERSION}/package-description
 lib/monoidal-containers-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -19,17 +19,19 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Map/Monoidal/Strict.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Map/Monoidal/Strict.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/Data-HashMap-Monoidal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/Data-IntMap-Monoidal-Strict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/Data-IntMap-Monoidal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/Data-Map-Monoidal-Strict.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/Data-Map-Monoidal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/monoidal-containers.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/monoidal-containers-${PKGVERSION}/html/synopsis.png
