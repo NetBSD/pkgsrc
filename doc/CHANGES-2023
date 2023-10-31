@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6389 2023/10/31 00:15:05 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6390 2023/10/31 00:36:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9305,3 +9305,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated x11/vte3 to 0.72.3 [gutteridge 2023-10-30]
 	Updated devel/geany to 2.0 [gutteridge 2023-10-30]
 	Updated misc/libmateweather to 1.26.2 [gutteridge 2023-10-31]
+	Updated sysutils/caja to 1.26.3 [gutteridge 2023-10-31]
