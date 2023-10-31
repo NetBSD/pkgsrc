@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2023/10/28 21:26:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.85 2023/10/31 13:47:16 riastradh Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2023pre6
+PKGNAME=	texlive-${DISTNAME}-2023pre7
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	67376
@@ -928,7 +928,7 @@ DEPENDS+=	tex-mparhack-[0-9]*:../../print/tex-mparhack
 # depend multiple-choice
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 # depend mversion
-# depend mwe
+DEPENDS+=	tex-mwe-[0-9]*:../../print/tex-mwe
 # depend mycv
 # depend mylatex
 # depend mylatexformat
