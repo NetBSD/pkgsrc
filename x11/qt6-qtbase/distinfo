@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2023/10/20 07:56:57 tnn Exp $
+$NetBSD: distinfo,v 1.7 2023/10/31 19:56:48 adam Exp $
 
-BLAKE2s (qtbase-everywhere-src-6.5.3.tar.xz) = a5017281c4536fade24f3f0d3e276b830ff602cbab18d24137546421b0158462
-SHA512 (qtbase-everywhere-src-6.5.3.tar.xz) = 31c6c01d466f1e01f18d6dcee593360c08ee83ad0a6be495a8eba023faad628cf07ce7285426fabfd247db306319e9a64da329682c99a712a282e32f7493cdb9
-Size (qtbase-everywhere-src-6.5.3.tar.xz) = 47142456 bytes
+BLAKE2s (qtbase-everywhere-src-6.6.0.tar.xz) = 21055f3bf84b407c51b40b35f8ac67ae73eecfdec7c25ae5f1901b7bca4b8a57
+SHA512 (qtbase-everywhere-src-6.6.0.tar.xz) = 4e85acefeddc0a3cd6ba615b4768f435c4e237a605172153a1777a10285dab83d9cf220c18ce6d723d051b8b432f3e92be94925b54c2eb972c2c1d9ace849e17
+Size (qtbase-everywhere-src-6.6.0.tar.xz) = 48350308 bytes
 SHA1 (patch-CMakeLists.txt) = a85cd78bacbbdadf38c8b8451b48383067b6ad0f
 SHA1 (patch-cmake_QtBaseGlobalTargets.cmake) = 9d50a3c06c1d35415736593daa4e3dab8e9491ce
 SHA1 (patch-cmake_QtBuildInternals_QtBuildInternalsConfig.cmake) = f58e8e445c73444d7f0c015dd8fda64a5a662ef7
 SHA1 (patch-cmake_QtFeature.cmake) = a8e83d33467205ce39fb6df70d6dd5fcd4172d89
-SHA1 (patch-cmake_QtProcessConfigureArgs.cmake) = 98fc5a3fd184accddbc39ef5fac04eb6f56f3a8a
-SHA1 (patch-cmake_QtSyncQtHelpers.cmake) = e154210d60fa78d875373b574013436910ef3f25
+SHA1 (patch-cmake_QtProcessConfigureArgs.cmake) = 7bcfd0aab707cab59af992ef09a595d78a85d5d6
+SHA1 (patch-cmake_QtSyncQtHelpers.cmake) = d3aa5d9986ba4e4d9dba23ffc803f8fe7d838476
 SHA1 (patch-mkspecs_features_toolchain.prf) = 0cf13cb6e859dd6276954239b91953e557add515
 SHA1 (patch-qmake_generators_makefile.cpp) = 1bca636dc88f258876df54bd0c6c64114fa7411d
 SHA1 (patch-qmake_generators_unix_unixmake2.cpp) = 6ea4efd2ce88d7cf3c73e1dc2cdf984fe3b6af04
@@ -16,10 +16,9 @@ SHA1 (patch-src_corelib_global_qsysinfo.cpp) = adb69aa6e101f1ef4e6d1e9fdffa8d774
 SHA1 (patch-src_corelib_io_qstandardpaths__unix.cpp) = e4964281da856144f0b0c7bf0326015ad86a3078
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 9919194e9f6b47f1f311b8f8223a6a7519152073
 SHA1 (patch-src_corelib_qt__cmdline.cmake) = 96dda2094d2d80f1eb7b1301390ff3f123887812
-SHA1 (patch-src_corelib_thread_qmutex__p.h) = 47047f5af4383b622c59c3969145e44c6ac4bf18
-SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = afc18daab2b7e5b957339bafd5f7007e9a446c36
+SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 865bbf20931290992d0af68b75a8ed4727dfd50f
 SHA1 (patch-src_gui_platform_unix_qxkbcommon.cpp) = 142de65f99b76e700cff2812fe76b88e6036a948
-SHA1 (patch-src_network_configure.cmake) = 754461c21574b99232efc95af3a80765b2edbecc
+SHA1 (patch-src_network_configure.cmake) = 906b48c9200fea71f475f9e3a6fa6c756203cff0
 SHA1 (patch-src_plugins_platforms_cocoa_qiosurfacegraphicsbuffer.mm) = 01afb2aef1d14370308c897c1d077b05c5e3f0a9
 SHA1 (patch-src_plugins_platforms_xcb_qxcbatom.cpp) = abbd0b04b881666e82f45adc18e49aafdb43d4be
 SHA1 (patch-src_plugins_platforms_xcb_qxcbconnection__basic.h) = e369001cba31e865adf010ab714ad132b96c1bef

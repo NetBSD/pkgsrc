@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:50 adam Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
@@ -61,11 +61,8 @@ qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQml
 qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQmlDepends
 qt6/include/QtRemoteObjectsQml/QtRemoteObjectsQmlVersion
 qt6/include/QtRemoteObjectsQml/qtremoteobjectsqmlversion.h
-qt6/include/QtRepParser/QtRepParser
 qt6/include/QtRepParser/QtRepParserDepends
-qt6/include/QtRepParser/QtRepParserVersion
 qt6/include/QtRepParser/parser.g
-qt6/include/QtRepParser/qtrepparserversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtRemoteObjectsTestsConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_remoteobjectsConfig.cmake

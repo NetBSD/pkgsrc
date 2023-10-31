@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2023/09/28 09:54:42 nros Exp $
+# $NetBSD: Makefile.common,v 1.36 2023/10/31 19:56:48 adam Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -88,9 +88,9 @@ CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=ON
 .  else
 CONFIGURE_ARGS+=	-- -DCMAKE_SKIP_RPATH:BOOL=OFF
 CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR:PATH=${QTPREFIX}/lib
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.    if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 CONFIGURE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
-.endif
+.    endif
 .  endif
 QTCONFDIR?=		.
 do-configure:
