@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 03:44:03 pho Exp $
+
+BLAKE2s (row-types-1.0.1.2.tar.gz) = d2484732b34536ff12837baf45b3a9bd9404e2688d108510114840b26a68637c
+SHA512 (row-types-1.0.1.2.tar.gz) = bb02367f5988fd0bcd34cf93d25990321e91c9ebf34ba8250fc6162452ca984fbd0933eb90bc133e761e4c4a8dee8455ffb3dd38c1877795f139e9f3d326a912
+Size (row-types-1.0.1.2.tar.gz) = 38019 bytes
