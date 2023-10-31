@@ -1,26 +1,28 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:03 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/10/31 11:05:23 pho Exp $
 
-DISTNAME=	pandoc-lua-engine-0.1
-PKGREVISION=	2
+DISTNAME=	pandoc-lua-engine-0.2.1.2
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Lua engine to power custom pandoc conversions
 LICENSE=	gnu-gpl-v2
 
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	lpeg
+
+.include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-citeproc/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../textproc/hs-doctemplates/buildlink3.mk"
 .include "../../lang/hs-hslua/buildlink3.mk"
-.include "../../converters/hs-hslua-aeson/buildlink3.mk"
-.include "../../lang/hs-hslua-core/buildlink3.mk"
 .include "../../textproc/hs-hslua-module-doclayout/buildlink3.mk"
 .include "../../sysutils/hs-hslua-module-path/buildlink3.mk"
 .include "../../devel/hs-hslua-module-system/buildlink3.mk"
 .include "../../textproc/hs-hslua-module-text/buildlink3.mk"
 .include "../../devel/hs-hslua-module-version/buildlink3.mk"
 .include "../../archivers/hs-hslua-module-zip/buildlink3.mk"
+.include "../../lang/hs-hslua-repl/buildlink3.mk"
 .include "../../devel/hs-lpeg/buildlink3.mk"
 .include "../../converters/hs-pandoc-base/buildlink3.mk"
 .include "../../devel/hs-pandoc-lua-marshal/buildlink3.mk"
