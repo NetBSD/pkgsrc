@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/01/30 03:18:36 pho Exp $
+$NetBSD: distinfo,v 1.4 2023/10/31 03:20:47 pho Exp $
 
-BLAKE2s (vector-instances-3.4.tar.gz) = f05346ec0a4bffcf2e5f2b9b0cfa0a27d5072a590865fc2ca630134000f44e9a
-SHA512 (vector-instances-3.4.tar.gz) = 67ffd6b941909bda1b6f26c8c7579fc495267425461f15f20bbaecf22b67d3dbf4ee88eb2ac76232f47917c26558eb325fedfe8ffc97368bbe1ad90fb427a7b1
-Size (vector-instances-3.4.tar.gz) = 5276 bytes
+BLAKE2s (vector-instances-3.4.2.tar.gz) = 31f5cb8ea7e99a452bace59e7c3fbb2b53979e3756ddb44ce7088f1a2a7043f4
+SHA512 (vector-instances-3.4.2.tar.gz) = 120351ae58dba4161160a20b04696fc72dbdfde9c114fb3e5a232795e297ed13beef0822f4d10012bfd61a3890f43cc28a6a4f60cba5bc57117e5cfc4cd301f9
+Size (vector-instances-3.4.2.tar.gz) = 4042 bytes
