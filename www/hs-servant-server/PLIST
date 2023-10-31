@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/29 05:24:22 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 04:44:52 pho Exp $
 lib/servant-server-${PKGVERSION}/${HS_VERSION}/package-description
 lib/servant-server-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -58,7 +58,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Utils/StaticFiles.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/Utils/StaticFiles.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/Servant-Server-Experimental-Auth.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/Servant-Server-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/Servant-Server-Internal-BasicAuth.html
@@ -103,10 +103,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/doc-index
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/doc-index-V.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/servant-server.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-server-${PKGVERSION}/html/synopsis.png
