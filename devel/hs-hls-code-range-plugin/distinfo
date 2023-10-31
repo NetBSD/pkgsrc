@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/02/01 01:56:02 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 13:54:49 pho Exp $
 
-BLAKE2s (hls-code-range-plugin-1.1.0.0.tar.gz) = 602432a8a385e51b79acdafea412833b458cdb51161f6a60824a0c745d0ff3e6
-SHA512 (hls-code-range-plugin-1.1.0.0.tar.gz) = d5b71e079b12a62816db67b456c06e45b9e2a4cb222d6afe643adabc886cdf08accb8c82ed126757a0a854bb85dfea0c07e923775529746d52c29f67eca8b0e2
-Size (hls-code-range-plugin-1.1.0.0.tar.gz) = 15951 bytes
+BLAKE2s (hls-code-range-plugin-2.4.0.0.tar.gz) = 94406c94b282a6435ae66191497730c270aaa3947e41a25e1004bbaa19f7ab1f
+SHA512 (hls-code-range-plugin-2.4.0.0.tar.gz) = 70a0774ec21bbcebf720ac3e55af50a6b270782c404c96d75607fd8fb1f97470d5e5a87d3ed3acd8ed516cf082d6c078a3b3be8f55ffc9c16a0f180986668a17
+Size (hls-code-range-plugin-2.4.0.0.tar.gz) = 15539 bytes

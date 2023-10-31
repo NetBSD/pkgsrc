@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 13:54:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-code-range-plugin
 
 .if !defined(HS_HLS_CODE_RANGE_PLUGIN_BUILDLINK3_MK)
 HS_HLS_CODE_RANGE_PLUGIN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=1.1.0
-BUILDLINK_ABI_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=1.1.0.0nb3
+BUILDLINK_API_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=2.4.0
+BUILDLINK_ABI_DEPENDS.hs-hls-code-range-plugin+=	hs-hls-code-range-plugin>=2.4.0.0
 BUILDLINK_PKGSRCDIR.hs-hls-code-range-plugin?=		../../devel/hs-hls-code-range-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"
