@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:40:08 pho Exp $
+
+BLAKE2s (path-pieces-0.2.1.tar.gz) = f675a73aff8a41bb5655f7c80781c8bbacb7a8906fcf2134766498066d2b6fd8
+SHA512 (path-pieces-0.2.1.tar.gz) = 83b8bda16db42ed347e2caa1978f195faf161f53beaaccbf450d21b29b9ae9fc04bcdf8dd17a0db2e11eb9e5bfeddcb605237325c7aaf4ec5cc3402b859674c0
+Size (path-pieces-0.2.1.tar.gz) = 3529 bytes
