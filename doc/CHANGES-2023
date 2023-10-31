@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6426 2023/10/31 13:27:56 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6427 2023/10/31 13:45:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9342,3 +9342,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-module-name-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-gadt-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-fourmolu-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-explicit-record-fields-plugin to 2.4.0.0 [pho 2023-10-31]
