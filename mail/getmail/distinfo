@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.149 2021/11/28 19:51:20 schmonz Exp $
+$NetBSD: distinfo,v 1.150 2023/10/31 14:56:12 schmonz Exp $
 
 BLAKE2s (getmail-5.16.tar.gz) = 0fa18a9909646d2eeefc09b94ad63d91897fbda955d685fc656c8c97675860eb
 SHA512 (getmail-5.16.tar.gz) = f47e86645de10f28b28c8ad5c800cebcf33f9a8de2a832b186009f8fc0d548e2a3d529da8aa5a7f1ae4885a8c713ca83a40453b35f3ffe267530c644f907a621
 Size (getmail-5.16.tar.gz) = 180577 bytes
-SHA1 (patch-setup.py) = ea623975b21dee995eeb3d6dd83c69ee339338f2
+SHA1 (patch-setup.py) = 661eb064cba3dbe8b11a4f6f2fed5e63d200874c
