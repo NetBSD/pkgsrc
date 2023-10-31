@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/24 22:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/31 19:56:49 adam Exp $
 
 DISTNAME=	qtdatavis3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtdatavis3d-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt6 module for data visualization
 CATEGORIES=	graphics
 

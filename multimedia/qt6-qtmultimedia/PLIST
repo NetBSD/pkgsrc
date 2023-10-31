@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/09/29 21:12:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2023/10/31 19:56:49 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -7,10 +7,10 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcapturablewindow_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
@@ -20,6 +20,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiodecode
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudioinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiooutput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformcamera_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformcapturablewindows_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformimagecapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediacapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediadevices_p.h
@@ -58,6 +59,7 @@ qt6/include/QtMultimedia/QAudioSource
 qt6/include/QtMultimedia/QCamera
 qt6/include/QtMultimedia/QCameraDevice
 qt6/include/QtMultimedia/QCameraFormat
+qt6/include/QtMultimedia/QCapturableWindow
 qt6/include/QtMultimedia/QImageCapture
 qt6/include/QtMultimedia/QMediaCaptureSession
 qt6/include/QtMultimedia/QMediaDevices
@@ -72,6 +74,7 @@ qt6/include/QtMultimedia/QVideoFrame
 qt6/include/QtMultimedia/QVideoFrameFormat
 qt6/include/QtMultimedia/QVideoSink
 qt6/include/QtMultimedia/QWaveDecoder
+qt6/include/QtMultimedia/QWindowCapture
 qt6/include/QtMultimedia/QtMultimedia
 qt6/include/QtMultimedia/QtMultimediaDepends
 qt6/include/QtMultimedia/QtMultimediaVersion
@@ -86,6 +89,7 @@ qt6/include/QtMultimedia/qaudiosink.h
 qt6/include/QtMultimedia/qaudiosource.h
 qt6/include/QtMultimedia/qcamera.h
 qt6/include/QtMultimedia/qcameradevice.h
+qt6/include/QtMultimedia/qcapturablewindow.h
 qt6/include/QtMultimedia/qimagecapture.h
 qt6/include/QtMultimedia/qmediacapturesession.h
 qt6/include/QtMultimedia/qmediadevices.h
@@ -106,6 +110,7 @@ qt6/include/QtMultimedia/qvideoframe.h
 qt6/include/QtMultimedia/qvideoframeformat.h
 qt6/include/QtMultimedia/qvideosink.h
 qt6/include/QtMultimedia/qwavedecoder.h
+qt6/include/QtMultimedia/qwindowcapture.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickimagecapture_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickimagepreviewprovider_p.h
 qt6/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qquickmediaplayer_p.h

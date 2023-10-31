@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/04 19:23:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 19:56:51 adam Exp $
 lib/pkgconfig/Qt6VirtualKeyboard.pc
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/abstractinputpanel_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/appinputpanel_p.h
@@ -21,6 +21,7 @@ qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualke
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardabstractinputmethod_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardfeatures_namespace_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardinputcontext_p.h
+qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardnamespace_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/settings_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/shadowinputcontext_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/shifthandler_p.h
@@ -48,7 +49,6 @@ qt6/include/QtVirtualKeyboard/qvirtualkeyboarddictionary.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboarddictionarymanager.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboardinputcontext.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboardinputengine.h
-qt6/include/QtVirtualKeyboard/qvirtualkeyboardnamespace.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboardobserver.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboardselectionlistmodel.h
 qt6/include/QtVirtualKeyboard/qvirtualkeyboardtrace.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2023/08/03 20:01:29 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.3 2023/10/31 19:56:48 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -6,13 +6,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_mac_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_cf_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_fsevents_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qmachparser_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qpermissions_p.h
-qt6/include/QtCore/QCalendarPermission
-qt6/include/QtCore/QContactsPermission
-qt6/include/QtCore/QLocationPermission
-qt6/include/QtCore/QPermission
-qt6/include/QtCore/QPermissions
-qt6/include/QtCore/qpermissions.h
 qt6/include/QtDeviceDiscoverySupport/${PKGVERSION}/QtDeviceDiscoverySupport/private/qdevicediscovery_dummy_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qapplekeymapper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qcoregraphics_p.h
@@ -22,7 +15,6 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhibackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhimetal_p.h
-qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhimetal_p_p.h
 qt6/include/QtGui/QUtiMimeConverter
 qt6/include/QtGui/qutimimeconverter.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qcocoaprintdevice_p.h
@@ -35,7 +27,7 @@ qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkvalgrind_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qtestutil_macos_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/valgrind_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qmacgesturerecognizer_p.h
-qt6/lib/cmake/Qt6/macos/MacOSXBundleInfo.plist.in
+qt6/lib/cmake/Qt6/macos/Info.plist.app.in
 qt6/lib/cmake/Qt6Core/Qt6CorePlugins.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake
