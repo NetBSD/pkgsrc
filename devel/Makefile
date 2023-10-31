@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4092 2023/10/31 16:09:02 pho Exp $
+# $NetBSD: Makefile,v 1.4093 2023/10/31 16:14:08 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -545,6 +545,7 @@ SUBDIR+=	hs-bloomfilter
 SUBDIR+=	hs-boring
 SUBDIR+=	hs-byteable
 SUBDIR+=	hs-bytestring-builder
+SUBDIR+=	hs-bytestring-strict-builder
 SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cborg
 SUBDIR+=	hs-cereal
