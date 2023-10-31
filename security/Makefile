@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.920 2023/10/30 14:46:48 pho Exp $
+# $NetBSD: Makefile,v 1.921 2023/10/31 17:11:06 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -148,6 +148,7 @@ SUBDIR+=	hs-ed25519
 SUBDIR+=	hs-entropy
 SUBDIR+=	hs-hackage-security
 SUBDIR+=	hs-pem
+SUBDIR+=	hs-securemem
 SUBDIR+=	hs-tls
 SUBDIR+=	hs-tls-session-manager
 SUBDIR+=	hs-x509
