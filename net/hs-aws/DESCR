@@ -1,0 +1,3 @@
+The aws package attempts to provide support for using Amazon Web Services
+like S3 (storage), SQS (queuing) and others to Haskell programmers. The
+ultimate goal is to support all Amazon Web Services.

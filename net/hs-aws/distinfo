@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 11:26:02 pho Exp $
+
+BLAKE2s (aws-0.24.1.tar.gz) = d328a7e7a44675be9f60fac0765151cfecf30f07420b9e8a77cdbb5629a72cf8
+SHA512 (aws-0.24.1.tar.gz) = cc156687d2695b8b4939bcb57ec0696bf10c82888c742e20d4df73c8600b422b319190a87bb4c5f537508b6b02746781aa846022e99e0e50f699863e9e2a5860
+Size (aws-0.24.1.tar.gz) = 106810 bytes
+SHA1 (patch-Aws_DynamoDb_Core.hs) = 9115e7f92bfb86efb44c47ea9ed32bd622d02268
+SHA1 (patch-aws.cabal) = 0b7324ac89fc37e8cf16ff53a05a076bb8e79107

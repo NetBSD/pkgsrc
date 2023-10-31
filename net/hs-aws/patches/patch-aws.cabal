@@ -1,0 +1,14 @@
+$NetBSD: patch-aws.cabal,v 1.1 2023/10/31 11:26:02 pho Exp $
+
+Fix build with aeson-2.2.
+
+--- aws.cabal.orig	2023-10-31 11:15:27.449399876 +0000
++++ aws.cabal
+@@ -130,6 +130,7 @@ Library
+   Build-depends:
+                        aeson                >= 2.0.0.0,
+                        attoparsec           >= 0.11    && < 0.15,
++                       attoparsec-aeson,
+                        base                 >= 4.9     && < 5,
+                        base16-bytestring    >= 0.1     && < 1.1,
+                        base64-bytestring    >= 1.0     && < 1.3,
