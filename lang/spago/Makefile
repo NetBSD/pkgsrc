@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:38 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/31 12:21:13 pho Exp $
 
-DISTNAME=	spago-0.20.9
+# NOTE: spago is getting rewritten in PureScript, and this Haskell
+# implementation is being phased out. We should remove this package and
+# have users install the new implementation via npm when it gets mature
+# and/or the old one bitrots further. It's already bitrotting.
+DISTNAME=	spago-0.21.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=purescript/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -32,6 +35,12 @@ REPLACE_INTERPRETER+=	node
 REPLACE.node.old=	.*node
 REPLACE.node.new=	${PREFIX}/bin/node
 
+# Use crypton instead of outdated cryptonite.
+SUBST_CLASSES+=		crypton
+SUBST_STAGE.crypton=	post-extract
+SUBST_FILES.crypton=	spago.cabal
+SUBST_SED.crypton=	-e 's/cryptonite/crypton/g'
+
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	text
 
@@ -56,7 +65,7 @@ HASKELL_ENABLE_LIBRARY_PROFILING=	no
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-async-pool/buildlink3.mk"
 .include "../../www/hs-bower-json/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../lang/dhall/buildlink3.mk"
 .include "../../devel/hs-either/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
@@ -82,9 +91,11 @@ HASKELL_ENABLE_LIBRARY_PROFILING=	no
 .include "../../devel/hs-turtle/buildlink3.mk"
 .include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../net/hs-uri-encode/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-versions/buildlink3.mk"
 .include "../../devel/hs-with-utf8/buildlink3.mk"
+.include "../../textproc/hs-yaml/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"

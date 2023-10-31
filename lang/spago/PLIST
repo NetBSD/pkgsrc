@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/30 07:47:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 12:21:13 pho Exp $
 bin/spago
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -21,6 +21,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Git.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/GitHub.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/GlobalCache.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Messages.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Spago/NewConfig.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/PackageSet.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Packages.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Prelude.hi
@@ -33,7 +34,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Types.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Version.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Spago/Watch.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Async.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Bower.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Build.html
@@ -52,6 +53,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Git.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-GitHub.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-GlobalCache.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Messages.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-NewConfig.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-PackageSet.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Packages.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Spago-Prelude.html
@@ -105,10 +107,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Y.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Z.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/spago.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
