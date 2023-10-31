@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:21 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/10/31 03:18:06 pho Exp $
 
-DISTNAME=	implicit-hie-cradle-0.5.0.0
-PKGREVISION=	6
+DISTNAME=	implicit-hie-cradle-0.5.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,11 +8,7 @@ COMMENT=	Auto generate hie-bios cradles
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	bytestring	\
-	text	\
-	time	\
-	unix-compat	\
-	vector
+	transformers
 
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
