@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6459 2023/10/31 16:35:04 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6460 2023/10/31 16:40:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9377,3 +9377,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-unagi-chan version 0.4.1.4 [pho 2023-10-31]
 	Updated textproc/hs-cgrep to 8.1.0 [pho 2023-10-31]
 	Added devel/hs-lift-type version 0.1.1.1 [pho 2023-10-31]
+	Added www/hs-path-pieces version 0.2.1 [pho 2023-10-31]
