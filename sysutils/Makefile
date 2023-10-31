@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1082 2023/10/31 16:20:31 pho Exp $
+# $NetBSD: Makefile,v 1.1083 2023/10/31 18:49:18 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -360,6 +360,7 @@ SUBDIR+=	hs-filepattern
 SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslua-module-path
+SUBDIR+=	hs-mountpoints
 SUBDIR+=	hs-opentelemetry
 SUBDIR+=	hs-posix-paths
 SUBDIR+=	hs-process-extras
