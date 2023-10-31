@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6391 2023/10/31 00:38:17 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6392 2023/10/31 01:56:10 sekiya Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9307,3 +9307,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/libmateweather to 1.26.2 [gutteridge 2023-10-31]
 	Updated sysutils/caja to 1.26.3 [gutteridge 2023-10-31]
 	Updated meta-pkgs/mate to 1.26.1nb2 [gutteridge 2023-10-31]
+	Added mail/getmail6 version 6.18.13 [sekiya 2023-10-31]
