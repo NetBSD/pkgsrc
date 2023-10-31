@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6478 2023/10/31 19:59:07 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6479 2023/10/31 20:23:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9427,3 +9427,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/qt6-qtwebchannel to 6.6.0 [adam 2023-10-31]
 	Updated net/qt6-qtwebsockets to 6.6.0 [adam 2023-10-31]
 	Updated devel/qt6-qtwayland to 6.6.0 [adam 2023-10-31]
+	Updated x11/py-qt6 to 6.6.0 [adam 2023-10-31]
+	Updated devel/py-setuptools-rust to 1.8.1 [adam 2023-10-31]
