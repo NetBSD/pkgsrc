@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6435 2023/10/31 14:07:35 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6436 2023/10/31 14:18:51 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9353,3 +9353,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-change-type-signature-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-call-hierarchy-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-cabal-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-cabal-fmt-plugin to 2.4.0.0 [pho 2023-10-31]
