@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6427 2023/10/31 13:45:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6428 2023/10/31 13:48:26 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9343,3 +9343,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-gadt-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-fourmolu-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-explicit-record-fields-plugin to 2.4.0.0 [pho 2023-10-31]
+	Added print/tex-mwe version 0.5 [riastradh 2023-10-31]
+	Added print/tex-mwe-doc version 0.5 [riastradh 2023-10-31]
+	Updated meta-pkgs/texlive-collection-latexextra to 2023pre7 [riastradh 2023-10-31]
