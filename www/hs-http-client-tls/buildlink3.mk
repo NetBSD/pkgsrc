@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:54:58 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/10/31 04:57:53 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-client-tls
 
@@ -6,12 +6,12 @@ BUILDLINK_TREE+=	hs-http-client-tls
 HS_HTTP_CLIENT_TLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-client-tls+=	hs-http-client-tls>=0.3.6
-BUILDLINK_ABI_DEPENDS.hs-http-client-tls+=	hs-http-client-tls>=0.3.6.1nb2
+BUILDLINK_ABI_DEPENDS.hs-http-client-tls+=	hs-http-client-tls>=0.3.6.3
 BUILDLINK_PKGSRCDIR.hs-http-client-tls?=	../../www/hs-http-client-tls
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
-.include "../../net/hs-connection/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../devel/hs-data-default-class/buildlink3.mk"
 .include "../../www/hs-http-client/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"

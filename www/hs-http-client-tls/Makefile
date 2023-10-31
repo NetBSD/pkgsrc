@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:58 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/10/31 04:57:53 pho Exp $
 
-DISTNAME=	http-client-tls-0.3.6.1
-PKGREVISION=	2
+DISTNAME=	http-client-tls-0.3.6.3
 CATEGORIES=	www security
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,8 +8,8 @@ COMMENT=	TLS backend for Haskell http-client library
 LICENSE=	mit
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
-.include "../../net/hs-connection/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../devel/hs-data-default-class/buildlink3.mk"
 .include "../../www/hs-http-client/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
