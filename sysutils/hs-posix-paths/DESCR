@@ -1,0 +1,4 @@
+This package gives access to certain POSIX-based Filepath/Directory
+services.
+
+The package is not supported under Windows (except under Cygwin).
