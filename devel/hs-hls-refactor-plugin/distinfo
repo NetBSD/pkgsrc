@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/31 19:12:45 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 12:51:01 pho Exp $
 
-BLAKE2s (hls-refactor-plugin-1.1.0.0.tar.gz) = fee2c1306b1fd65941ac5f59558cb647d524b94ab76f18288e95e42048c2de8f
-SHA512 (hls-refactor-plugin-1.1.0.0.tar.gz) = 716e5c979cb68247caad6134cd9b3530a291e2ee5c7e313a213f1019fe89324486fe093f7a2cf077e45092314f4823fa302b5f6640650554b0c8380f411acd19
-Size (hls-refactor-plugin-1.1.0.0.tar.gz) = 85313 bytes
+BLAKE2s (hls-refactor-plugin-2.4.0.0.tar.gz) = ace7e9a82a05f74920fe4fa0dc9f223457fd998476bfe1e09fc7bcc030454155
+SHA512 (hls-refactor-plugin-2.4.0.0.tar.gz) = 933738e3be35828ff4ed28bb909fe7a0d0b04291f2cd5449cd1bba639bfa0a82021c931c8100d412a7813bc3d76afb18ce409d6081ff78881bc970b31c324cb3
+Size (hls-refactor-plugin-2.4.0.0.tar.gz) = 88357 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/31 19:12:45 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 12:51:01 pho Exp $
 lib/hls-refactor-plugin-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hls-refactor-plugin-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/Compat/ExactPrint.dyn_hi
@@ -43,17 +43,19 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Plugin/Plugins/Impor
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/Development-IDE-GHC-Compat-ExactPrint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/Development-IDE-GHC-Dump.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/Development-IDE-GHC-ExactPrint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/Development-IDE-Plugin-CodeAction-Util.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/Development-IDE-Plugin-CodeAction.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/hls-refactor-plugin.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/hls-refactor-plugin-${PKGVERSION}/html/synopsis.png
