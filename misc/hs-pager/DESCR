@@ -1,0 +1,6 @@
+This is a Haskell library to open up the user's $PAGER with some text. On
+Linux, the pager is usually called less. On the various *BSD's, the pager
+is called more.
+
+The pager doesn't notify people or anything - it takes long output and
+presents it in pages.
