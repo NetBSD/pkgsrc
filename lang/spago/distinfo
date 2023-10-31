@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/01/30 07:47:32 pho Exp $
+$NetBSD: distinfo,v 1.3 2023/10/31 12:21:13 pho Exp $
 
 BLAKE2s (spago/docs-search-app-0.0.10.js) = 6688bba140b19751323a75faa6e3bc9919903ee83452af71b7cacb1de3de2cc2
 SHA512 (spago/docs-search-app-0.0.10.js) = 3489977e2f5bad60231ec866809cac156d085cdf4d6222fb1260c48ecee922d42a0ac2f81e99ddce57701ba278bc9cb05d99c924cb41aba21474553b74073e7c
@@ -12,8 +12,8 @@ Size (spago/purescript-docs-search-0.0.10) = 421322 bytes
 BLAKE2s (spago/purescript-docs-search-0.0.11) = e5f03da04530b8ba4f56ec868c1aff5ab49b3239c4aa9a4bfee7e4ed0f5f0174
 SHA512 (spago/purescript-docs-search-0.0.11) = 1b3f659f04fafe13aa1b87f3e193875c359c377d48609be39a412f0b41dd668ebe18f65a423da05ba4ff6239d1dcd0d6e3c051b538452feeb3998d9ba6161cdf
 Size (spago/purescript-docs-search-0.0.11) = 426985 bytes
-BLAKE2s (spago/spago-0.20.9.tar.gz) = 253d1d1a3366e1c240ac5857a5b84cc34d6ba70136ce84c3fc16dc6fd8a17183
-SHA512 (spago/spago-0.20.9.tar.gz) = 0aeec66999b8bc84a2cff97e863a956ba0fc507af6e0dad7ab1c7ea22fad37a6ee269e53cac89ca80418fbd8e2cc80e10f3d351f9dc2f93f2a29ab6ec46e098d
-Size (spago/spago-0.20.9.tar.gz) = 136020 bytes
-SHA1 (patch-src_Spago_Bower.hs) = 8bbedecd2206c794de516b9378c3cd0001680966
-SHA1 (patch-src_Spago_Watch.hs) = c626158190a335a35bb677d567aa18834c4f689e
+BLAKE2s (spago/spago-0.21.0.tar.gz) = b983154f5d278f5363ffef6404f2e015b8e7da06b900a9c2e532a7a723d8e4c0
+SHA512 (spago/spago-0.21.0.tar.gz) = 134b265e032e64190e6a5584a5154d639b662a4b8a8ed94a787a58f6506ac3688cdd925385dc0538a82d43e6baf1f61ab8eb2341123b888d2904f19cfc3d54bb
+Size (spago/spago-0.21.0.tar.gz) = 207729 bytes
+SHA1 (patch-src_Spago_Version.hs) = 4b78ca114e56d16aa4796b33e2c17968b0627d6d
+SHA1 (patch-src_Spago_Watch.hs) = ab5bc44b39a38bc72eed85e520dfe19158af1d59
