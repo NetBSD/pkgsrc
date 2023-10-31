@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/10/09 04:54:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/10/31 11:30:08 pho Exp $
 
 BUILDLINK_TREE+=	hoogle
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.hoogle?=	../../net/hoogle
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-conduit/buildlink3.mk"
 .include "../../devel/hs-conduit-extra/buildlink3.mk"
-.include "../../net/hs-connection/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-foundation/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
