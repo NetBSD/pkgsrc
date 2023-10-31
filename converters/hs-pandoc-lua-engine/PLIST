@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/29 10:09:10 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/10/31 11:05:23 pho Exp $
 lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-description
 lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -53,6 +53,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/CLI.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.p_hi
@@ -71,6 +74,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/System.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Template.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Template.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Template.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Text.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Text.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Text.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Types.p_hi
@@ -91,13 +97,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/COPYING.md
+share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/COPYING.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/Text-Pandoc-Lua.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/pandoc-lua-engine.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/synopsis.png
