@@ -1,0 +1,6 @@
+This package uses closed type families and type literals to implement open
+records and variants. The core is based off of the CTRex package, but it
+also includes polymorphic variants and a number of additional
+functions. That said, it is not a proper superset of CTRex as it
+specifically forbids records from having more than one element of the same
+label.
