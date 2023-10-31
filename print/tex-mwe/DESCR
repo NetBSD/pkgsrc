@@ -1,0 +1,8 @@
+The bundle provides several files useful when creating a
+minimal working example (MWE). The package itself loads a small
+set of packages often used when creating MWEs. In addition, a
+range of images are provided, which will be installed in the
+TEXMF tree, so that they may be used in any (La)TeX document.
+This allows different users to share MWEs which include image
+commands, without the need to share image files or to use
+replacement code.
