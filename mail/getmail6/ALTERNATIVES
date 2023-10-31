@@ -1,0 +1,6 @@
+bin/getmail @PREFIX@/bin/getmail6
+bin/getmail-gmail-xoauth-tokens @PREFIX@/bin/getmail6-gmail-xoauth-tokens
+bin/getmail_fetch @PREFIX@/bin/getmail6_fetch
+bin/getmail_maildir @PREFIX@/bin/getmail6_maildir
+bin/getmail_mbox @PREFIX@/bin/getmail6_mbox
+bin/getmails @PREFIX@/bin/getmail6s
