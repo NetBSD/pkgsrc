@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 15:04:15 pho Exp $
+
+BLAKE2s (hls-rename-plugin-2.4.0.0.tar.gz) = 5cb3ef99884b9a2e8cabc0fdd3040ae596269d1347ddec165d4bac20aad6b8d8
+SHA512 (hls-rename-plugin-2.4.0.0.tar.gz) = 3a1a2c2f52816516320571c4ef5876951d6ec12f4815a49f0e649b99395691c51c2e5d91a817df6dc558631df70f9f90d0f5631ba6df6dad3f055bd899b4bba5
+Size (hls-rename-plugin-2.4.0.0.tar.gz) = 11563 bytes
