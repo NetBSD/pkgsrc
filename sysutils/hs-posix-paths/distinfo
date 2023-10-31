@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:16:37 pho Exp $
+
+BLAKE2s (posix-paths-0.3.0.0.tar.gz) = 29f94e743f8b1d267055906515de3a9a946425f7ac626cd43009060c25acbeaf
+SHA512 (posix-paths-0.3.0.0.tar.gz) = 893172165daa43a9ab79a21c2026a09cbd08a701af4dfc94e596f4d61de46860288658a90ac2c10e2c2d9622f2ef88d8698770a08f6014773edd647e91e83496
+Size (posix-paths-0.3.0.0.tar.gz) = 9451 bytes
