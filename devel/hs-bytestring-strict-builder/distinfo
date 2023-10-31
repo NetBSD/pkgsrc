@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:13:53 pho Exp $
+
+BLAKE2s (bytestring-strict-builder-0.4.5.7.tar.gz) = 53d89cb1479de262b659c9494e5d153cdf03d87028d0b391f030b41069a1d01d
+SHA512 (bytestring-strict-builder-0.4.5.7.tar.gz) = 83e141b5fbd666cdc72157936ebdb80a2a1deef968725818703b34bd930ee717da2334194cfe39c76a55b7182ab0ddbdc7e193c5fb90e9e9d3d21f9e597986cc
+Size (bytestring-strict-builder-0.4.5.7.tar.gz) = 7268 bytes

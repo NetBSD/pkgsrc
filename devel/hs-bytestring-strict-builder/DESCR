@@ -1,0 +1,7 @@
+According to the competition benchmarks
+(https://github.com/nikita-volkov/bytestring-builders-benchmark), this
+library provides on average the fastest builder of strict
+bytestrings. Practical benchmarks have proven it to be highly performant as
+well. The encoders from the "postgresql-binary" library have shown a stable
+performance improvement by factors of up to 10 after the migration from the
+standard builder to "bytestring-strict-builder".
