@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6454 2023/10/31 16:18:28 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6455 2023/10/31 16:20:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9372,3 +9372,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-bytestring-strict-builder version 0.4.5.7 [pho 2023-10-31]
 	Added sysutils/hs-posix-paths version 0.3.0.0 [pho 2023-10-31]
 	Updated x11/xterm to 388 [pin 2023-10-31]
+	Added sysutils/hs-rawfilepath version 1.1.0 [pho 2023-10-31]
