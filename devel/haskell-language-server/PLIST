@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/01 02:15:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/10/31 15:24:28 pho Exp $
 bin/haskell-language-server
 bin/haskell-language-server-wrapper
 lib/${PKGNAME}/${HS_VERSION}/package-description
@@ -21,16 +21,18 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_haskell_language_server.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/HlsPlugins.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ide-Arguments.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ide-Main.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ide-Version.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/haskell-language-server.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/linuwial.css
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/meta.json
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/quick-jump.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/synopsis.png
