@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/01/30 03:12:56 pho Exp $
+$NetBSD: distinfo,v 1.4 2023/10/31 03:18:06 pho Exp $
 
-BLAKE2s (implicit-hie-cradle-0.5.0.0.tar.gz) = 75ced12cbc21465f93c58c5b5827a6bc2955523996f49d729075a93898cfe211
-SHA512 (implicit-hie-cradle-0.5.0.0.tar.gz) = 3ff5321184167cc8be150dba28844c0788624475f3276166a6b7d0354fe3e655c8e1617f305d683f6cea575f60b77adadf9f0ba6b539766ecab6b63459080ec4
-Size (implicit-hie-cradle-0.5.0.0.tar.gz) = 4208 bytes
+BLAKE2s (implicit-hie-cradle-0.5.0.1.tar.gz) = 22433f8632f229d10c8ed3e247b9942f5c77c6ac4c797eaf94fd5580af8d202c
+SHA512 (implicit-hie-cradle-0.5.0.1.tar.gz) = 0e03f72a5b3aeb2da349e8f64c0fa65616bc40174d931934d2a2bbda6c924f7a60da77ebbb433277f91c9a2bc5fd85e36857366af922b7bb18683751e9f70d67
+Size (implicit-hie-cradle-0.5.0.1.tar.gz) = 4066 bytes
