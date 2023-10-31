@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 18:21:51 pho Exp $
+
+BLAKE2s (setenv-0.1.1.3.tar.gz) = 0a29171527a20659ce4d4734bdc38f87b35a4472488813777324677999d9a6e4
+SHA512 (setenv-0.1.1.3.tar.gz) = 9cce617dcec2c870abed2ffadfc21bc2512b709791a15012f07246ce27fd749e125a16f72e6ef574ae390ecbc512c052c2630ca4c97606a20d11e25da5d2c14a
+Size (setenv-0.1.1.3.tar.gz) = 2710 bytes

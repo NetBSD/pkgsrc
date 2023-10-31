@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 18:21:51 pho Exp $
+lib/setenv-${PKGVERSION}/${HS_VERSION}/package-description
+lib/setenv-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/SetEnv.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/SetEnv.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/SetEnv.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/System-SetEnv.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/setenv.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/setenv-${PKGVERSION}/html/synopsis.png
