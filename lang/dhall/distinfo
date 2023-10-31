@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2023/01/29 12:16:06 pho Exp $
+$NetBSD: distinfo,v 1.4 2023/10/31 08:46:24 pho Exp $
 
-BLAKE2s (dhall-1.41.2.tar.gz) = 83d484695a9c44b671dae76589761f4b6541d03e5c6e4640d2bf94e164c4644d
-SHA512 (dhall-1.41.2.tar.gz) = d2d1b0f513f02f8eb9bc25d0e01a1e749c09eb4089a0982b1ea20f18ff598932b62c898e764167f74718dc71aabe5760ce2e0abe0fe550cb7f1b3ac773219f9a
-Size (dhall-1.41.2.tar.gz) = 640162 bytes
+BLAKE2s (dhall-1.42.0.tar.gz) = b55b4e30a9dfcc4f99254e53549814ee36cbf28f579356cafe6e420d4660661d
+SHA512 (dhall-1.42.0.tar.gz) = 3f576245a8bf910e711e239eae0c6403c62e29a1571895b895fdb37e4c4724b10874865b76723eebd2ea82169f1120d28828fd3d57a6e0aaffa0c8552ec2c799
+Size (dhall-1.42.0.tar.gz) = 672458 bytes
+SHA1 (patch-dhall.cabal) = 414cd99f8f5ba3012abd9e7f468f08003cf93623
+SHA1 (patch-src_Dhall_DirectoryTree.hs) = ec856ffbf1d6d37f8f4ebefe9e6ed06f3547e734
+SHA1 (patch-src_Dhall_TH.hs) = 60964cbdca32e38a8eede1fdcc59f1b69c940bf9
