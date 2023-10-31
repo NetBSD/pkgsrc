@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/01/31 10:04:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 14:07:12 pho Exp $
 
-BLAKE2s (hls-cabal-plugin-0.1.0.0.tar.gz) = d288344e266372d794d333d81cf7a0429e8da0a0452254df7826f3576ccc09ec
-SHA512 (hls-cabal-plugin-0.1.0.0.tar.gz) = b12633eccf720d6302dab9af7cbf2ace03c1ae20bbd901382ab5fdf0a0e56b8659cb6ee1d7ffdc603d6f34ec8a0b1282468790d49b4aa61b6abc9d2d184f4f26
-Size (hls-cabal-plugin-0.1.0.0.tar.gz) = 9869 bytes
+BLAKE2s (hls-cabal-plugin-2.4.0.0.tar.gz) = aebe2a61d505c2165c11536eac8f2dcfcb2cd6b1873e043219b61e85314e4097
+SHA512 (hls-cabal-plugin-2.4.0.0.tar.gz) = 6969c137172cebe1e7036151acc4b2b7c5a4216017c510a52a3c8b15ab0ffff4634fbedd37ffcb2945c937bb977089f41e731dfb2757f37b5168e57492335d96
+Size (hls-cabal-plugin-2.4.0.0.tar.gz) = 28097 bytes

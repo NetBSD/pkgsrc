@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:18 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/31 14:07:12 pho Exp $
 
-DISTNAME=	hls-cabal-plugin-0.1.0.0
-PKGREVISION=	3
+DISTNAME=	hls-cabal-plugin-2.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,9 +12,11 @@ LICENSE=	apache-2.0
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-hls-graph/buildlink3.mk"
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
+.include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
 .include "../../devel/hs-lsp-types/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
+.include "../../textproc/hs-text-rope/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
