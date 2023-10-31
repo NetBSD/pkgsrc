@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6452 2023/10/31 16:14:00 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6453 2023/10/31 16:16:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9370,3 +9370,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated finance/hledger to 1.31 [pho 2023-10-31]
 	Added devel/hs-bitwise version 1.0.0.1 [pho 2023-10-31]
 	Added devel/hs-bytestring-strict-builder version 0.4.5.7 [pho 2023-10-31]
+	Added sysutils/hs-posix-paths version 0.3.0.0 [pho 2023-10-31]
