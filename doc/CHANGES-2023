@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6421 2023/10/31 12:55:20 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6422 2023/10/31 13:05:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9337,3 +9337,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-hls-ormolu-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-refactor-plugin to 2.4.0.0 [pho 2023-10-31]
 	Updated devel/hs-hls-retrie-plugin to 2.4.0.0 [pho 2023-10-31]
+	Updated devel/hs-hls-qualify-imported-names-plugin to 2.4.0.0 [pho 2023-10-31]
