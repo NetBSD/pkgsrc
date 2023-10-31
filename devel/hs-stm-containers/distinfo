@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/16 09:55:37 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 02:55:55 pho Exp $
 
-BLAKE2s (stm-containers-1.2.tar.gz) = a12180559a12e06f9ced0f186bc8b3741f308b23b5bb0c64e24cdc952150f715
-SHA512 (stm-containers-1.2.tar.gz) = a56971883bfe884639e01d6122bffafc14824b5605ad625b3e83cca8e80745f5baf4393d85323d7192b8fea79b0b092432c3e3e734ac873bf5020a725001ad71
-Size (stm-containers-1.2.tar.gz) = 8593 bytes
+BLAKE2s (stm-containers-1.2.0.3.tar.gz) = f65ec4722bf10061c9833c9173cf127ee4d9f7458d15c0bc7bd9a41ae430be3c
+SHA512 (stm-containers-1.2.0.3.tar.gz) = 44dee59ac2381abfa357184fb5150e0aa4e13b9a3d91d1795228ff64481f95862d244c652d0907cfa31649a1be9863efd20c332cfa5cd83c63f29ee88b8323f5
+Size (stm-containers-1.2.0.3.tar.gz) = 8408 bytes
