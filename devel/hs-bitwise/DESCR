@@ -1,0 +1,10 @@
+Unboxed multidimensional bit packed Bool arrays with fast aggregate
+operations based on lifting Bool operations to bitwise operations.
+
+There are many other bit packed structures out there, but none met all of
+these requirements:
+
+1. unboxed bit packed Bool array,
+2. multi-dimensional indexing,
+3. fast (de)serialization, or interoperable with foreign code,
+4. fast aggregate operations (fold, map, zip).
