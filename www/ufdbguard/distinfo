@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2023/10/31 16:46:51 sborrill Exp $
 
-BLAKE2s (ufdbGuard-1.35.3.tar.gz) = 1340316253aa57a15f217283cc77503bc2e95dddb9a09cd3e6ad6e61c9a3b539
-SHA512 (ufdbGuard-1.35.3.tar.gz) = 0f9d6fb5d6d52fe6f9ae3b55d535f718c590bdaaa734217627ba852edf6607d9c48ad8bfe44f2d1585724f2e09eb62cc5c862941fcc10af721a6e9e365ff6be2
-Size (ufdbGuard-1.35.3.tar.gz) = 1738159 bytes
+BLAKE2s (ufdbGuard-1.35.5.tar.gz) = 909a4048a583f73be0cb93edf475d8ea40c91fbeeabedb3abb91c505077461f6
+SHA512 (ufdbGuard-1.35.5.tar.gz) = dffa513c35cb6e8b4f8d6c49a306440fe61f4ace7db41632cda4d0ca0b38a72891e8a1e9bf3f2df4b85286c3ada4d5184cf7fd3adcef948af378df98c88d1fd3
+Size (ufdbGuard-1.35.5.tar.gz) = 1693882 bytes
 SHA1 (patch-Makefile.in) = ab4ece9804cee2b53494b66380b214dd5f7b8558
 SHA1 (patch-configure) = a29e1b519741e7291c4bec551432136b8bf9afd3
