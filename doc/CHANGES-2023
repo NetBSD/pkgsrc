@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6395 2023/10/31 03:16:49 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6396 2023/10/31 03:18:15 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9311,3 +9311,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-monoidal-containers to 0.6.4.0 [pho 2023-10-31]
 	Updated devel/hs-stm-containers to 1.2.0.3 [pho 2023-10-31]
 	Updated devel/hs-hie-bios to 0.12.0 [pho 2023-10-31]
+	Updated devel/hs-implicit-hie-cradle to 0.5.0.1 [pho 2023-10-31]
