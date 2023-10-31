@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 06:20:11 pho Exp $
+bin/hdav
+lib/DAV-${PKGVERSION}/${HS_VERSION}/package-description
+lib/DAV-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV/TH.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV/TH.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Protocol/HTTP/DAV/TH.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/DAV.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/Network-Protocol-HTTP-DAV.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/DAV-${PKGVERSION}/html/synopsis.png
