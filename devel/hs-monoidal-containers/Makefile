@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:25 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/31 02:53:31 pho Exp $
 
-DISTNAME=	monoidal-containers-0.6.3.0
-PKGREVISION=	2
+DISTNAME=	monoidal-containers-0.6.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Containers with monoidal accumulation
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	aeson
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
