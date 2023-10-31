@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6400 2023/10/31 04:01:49 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6401 2023/10/31 04:21:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9316,3 +9316,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/hs-classy-prelude to 1.5.0.3 [pho 2023-10-31]
 	Added devel/hs-row-types version 1.0.1.2 [pho 2023-10-31]
 	Updated devel/hs-lsp-types to 2.0.2.0 [pho 2023-10-31]
+	Updated devel/hs-lsp to 2.2.0.0 [pho 2023-10-31]
