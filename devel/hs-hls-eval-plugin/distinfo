@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 14:59:02 pho Exp $
+
+BLAKE2s (hls-eval-plugin-2.4.0.0.tar.gz) = a945218ce00f7ab14ef23110d5b35ed866967c0d5d6f715e4a2e992cd4ea79c7
+SHA512 (hls-eval-plugin-2.4.0.0.tar.gz) = 5870262576e9dcd5c142d9803245d59d88cf9887a7360a1ed60a07f24522c1c0b06ecc5637e11fe062e965b0e2911bb67e8874114c8611da0c54bcaab732506c
+Size (hls-eval-plugin-2.4.0.0.tar.gz) = 43372 bytes
