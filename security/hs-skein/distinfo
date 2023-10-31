@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 18:12:11 pho Exp $
+
+BLAKE2s (skein-1.0.9.4.tar.gz) = 0d7b2fdb982eeafd5ac9bbc15228c6c16ec9636b4a8fa5a351c97c198acbc523
+SHA512 (skein-1.0.9.4.tar.gz) = 4f449de2db0c9f6a22e3f7375999029c1ab9139ae2e678e5582d5ad05dc8b3c12c99951ede884228579b9acc0243b00b93dca07dd6d1ea314cc0d3d223165c34
+Size (skein-1.0.9.4.tar.gz) = 134346 bytes
