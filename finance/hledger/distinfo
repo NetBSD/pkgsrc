@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/01/24 01:13:10 riastradh Exp $
+$NetBSD: distinfo,v 1.7 2023/10/31 16:03:10 pho Exp $
 
-BLAKE2s (hledger-1.28.tar.gz) = da19597db4704640d6ed7882609be60e9953b26ad247195d19681c8f463bda4d
-SHA512 (hledger-1.28.tar.gz) = cb51b6bf72379ca49c961cf815f533835e2fcad857b9e73659032ef32d2a44b43921a2d04706641138114ce4694780efad0e7e6cc1feef975a34444ec70341a5
-Size (hledger-1.28.tar.gz) = 978539 bytes
+BLAKE2s (hledger-1.31.tar.gz) = 48144cf29f2c5fefea69e648e24fa8364e5d06057a9ab8573a92050232dceef2
+SHA512 (hledger-1.31.tar.gz) = 2f55df17a99d2317a49658f6e1b7ec29fe2b6a72a530d20d74c19192d4c66579797fca5dfd63a9f4e721af88f1c5906187d728d6b497a1e6677d0e30796980be
+Size (hledger-1.31.tar.gz) = 1080465 bytes
