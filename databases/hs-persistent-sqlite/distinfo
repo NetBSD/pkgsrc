@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 17:00:26 pho Exp $
+
+BLAKE2s (persistent-sqlite-2.13.2.0.tar.gz) = ffdf8a84202c1307cfde06c3b6fcbef1932887f04a644779435cbb20a374a0d8
+SHA512 (persistent-sqlite-2.13.2.0.tar.gz) = e247bf0c6281e21ff060e6a2c87515d04612e9644440f88002ab50e4cc9306afa640ba44d8e91cd69e278d83bfbeff3be4e6111010538a86bfd62e994951ec62
+Size (persistent-sqlite-2.13.2.0.tar.gz) = 2277033 bytes

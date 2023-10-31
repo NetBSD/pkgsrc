@@ -1,0 +1,2 @@
+This package includes a thin sqlite3 wrapper based on the direct-sqlite
+package.
