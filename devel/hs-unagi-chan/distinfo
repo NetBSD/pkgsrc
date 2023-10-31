@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 16:29:34 pho Exp $
+
+BLAKE2s (unagi-chan-0.4.1.4.tar.gz) = d74e85acfd665702908fbc02f2e43b86b07caf3034970acf0898c37cc3b04fdb
+SHA512 (unagi-chan-0.4.1.4.tar.gz) = 2b4e23cbb0706dbcf4aeb820901b4b1c357a136472ff065c42dd58f6cfbb3c8e87b5503fe285b9c3a557791f959b82091138e8e137b88496fb92d2562506a3a3
+Size (unagi-chan-0.4.1.4.tar.gz) = 52549 bytes
