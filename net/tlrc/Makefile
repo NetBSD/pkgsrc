@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/10/22 19:38:12 pin Exp $
+# $NetBSD: Makefile,v 1.3 2023/10/31 17:18:26 pin Exp $
 
-DISTNAME=	tlrc-1.6.0
+DISTNAME=	tlrc-1.7.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=acuteenvy/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tldr-pages/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/acuteenvy/tlrc/
 COMMENT=	Tldr client written in Rust
 LICENSE=	mit
