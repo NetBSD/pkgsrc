@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:19 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/31 13:24:30 pho Exp $
 
-DISTNAME=	hls-gadt-plugin-1.0.1.0
-PKGREVISION=	3
+DISTNAME=	hls-gadt-plugin-2.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
