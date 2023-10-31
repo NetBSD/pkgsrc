@@ -1,0 +1,5 @@
+The package provides a Type1 version of Libertinus Math, with a
+number of additions and changes, plus LaTeX support files that
+allow it to serve as a math accompaniment to Libertine under
+LaTeX. In addition, with option sansmath, it can function as a
+standalone math font with sans serif Roman and Greek letters.

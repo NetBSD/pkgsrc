@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:42 riastradh Exp $
+
+BLAKE2s (newcomputermodern.doc.r68563.tar.xz) = 1180e82ab435e302a760320dc964822930e04bb4483087a1bbd23ac9ce0dd44a
+SHA512 (newcomputermodern.doc.r68563.tar.xz) = b85add4e9a1ab1342f50f8b1fb9f5a2e00fdfb9db6f6ec2a935e6fc364eac3323d3930b2254b760a01e2f86696073daf69b932105542257fcc40354ab202c6ac
+Size (newcomputermodern.doc.r68563.tar.xz) = 14220820 bytes

@@ -1,0 +1,3 @@
+This package provides support for use of Libertinus fonts with
+traditional processing engines (LaTeX with dvips or dvipdfmx,
+or pdfLaTeX).
