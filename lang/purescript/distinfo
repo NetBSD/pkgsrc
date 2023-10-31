@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.3 2023/01/30 06:25:44 pho Exp $
+$NetBSD: distinfo,v 1.4 2023/10/31 07:38:55 pho Exp $
 
-BLAKE2s (purescript-0.15.7.tar.gz) = bea26ff28f40c18c5fed3da023cdd007db960a81e08a3c97e6f2ded1eb558c15
-SHA512 (purescript-0.15.7.tar.gz) = 118823cc4fc43bc9d76ee73eeb2faaf6c4fee8487ed30b01a5e0b35eae6a1701218d41dd6eb985c69b0c3b3de2f59caa9c99bade45b8aa272c16febaeacaf931
-Size (purescript-0.15.7.tar.gz) = 837109 bytes
+BLAKE2s (purescript-0.15.12.tar.gz) = 322940beeea9c43fa59e1f7ea5d5224900847e76f2054285881655a12a2bf4d1
+SHA512 (purescript-0.15.12.tar.gz) = e4d53a8f72574e3e3e41527f7daf019acf951c073bb2e18921f291c412bf0e6587e2cb26bbad1ed0d397b4425ebca536e995243fe44adaa15f7c242bcbb0a393
+Size (purescript-0.15.12.tar.gz) = 854162 bytes
+SHA1 (patch-app_Command_Docs.hs) = eef45b27b8c825ac2ee5ccde01e6ddb23fe2ac42
+SHA1 (patch-app_Command_Docs_Html.hs) = 0e129659af4d5bdc3a999a770864f9168565ac86
+SHA1 (patch-src_Control_Monad_Supply.hs) = 7e71a43457ed1969c960579ef6a48d40bd69b53a
+SHA1 (patch-src_Language_PureScript_Errors.hs) = 1ec6e83da287ef1a3792dac990d7e95f0eab7e01
+SHA1 (patch-src_Language_PureScript_Renamer.hs) = 55156318114a19d6175fea1d82efec72d5f63f09
+SHA1 (patch-src_Language_PureScript_Sugar_Operators_Common.hs) = b40e0857547a694053e5a397680a57728fc7d286
+SHA1 (patch-src_Language_PureScript_TypeChecker_Entailment.hs) = 7dc707fea43760532887e71e2ea4fd714389f73f
+SHA1 (patch-src_Language_PureScript_TypeChecker_Monad.hs) = 953ef2acbb8f1a31aa6497dade3e32ceb2ae2b02

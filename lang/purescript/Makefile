@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/09 04:54:38 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/10/31 07:38:55 pho Exp $
 
-DISTNAME=	purescript-0.15.7
+DISTNAME=	purescript-0.15.12
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,16 +16,30 @@ CONFIGURE_ARGS+=	-f release
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	Cabal	\
 	aeson	\
+	ansi-terminal	\
+	ansi-wl-pprint	\
 	base	\
+	cryptonite	\
 	happy	\
 	language-javascript	\
 	lens	\
 	memory	\
+	mtl	\
+	optparse-applicative	\
 	process	\
+	semialign	\
 	template-haskell	\
 	text	\
+	these	\
 	time	\
+	transformers	\
 	vector
+
+# Use crypton instead of outdated cryptonite.
+SUBST_CLASSES+=		crypton
+SUBST_STAGE.crypton=	post-extract
+SUBST_FILES.crypton=	purescript.cabal
+SUBST_SED.crypton=	-e 's/cryptonite/crypton/g'
 
 # If purs is to be linked dynamically, it will depend on more than 180
 # shared objects and the dynamic linker will spend several seconds to
@@ -54,7 +67,7 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-cborg/buildlink3.mk"
 .include "../../textproc/hs-cheapskate/buildlink3.mk"
 .include "../../time/hs-clock/buildlink3.mk"
-.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../devel/hs-data-ordlist/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../textproc/hs-edit-distance/buildlink3.mk"
@@ -85,7 +98,7 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	purs
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../devel/hs-witherable/buildlink3.mk"
 
-# exe:purescript
+# exe:purs
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 
