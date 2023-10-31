@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6468 2023/10/31 17:14:41 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6469 2023/10/31 17:18:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9386,3 +9386,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added converters/hs-sandi version 0.5 [pho 2023-10-31]
 	Added security/hs-securemem version 0.1.10 [pho 2023-10-31]
 	Added devel/hs-tasty-quickcheck version 0.10.3 [pho 2023-10-31]
+	Updated net/tlrc to 1.7.1 [pin 2023-10-31]
