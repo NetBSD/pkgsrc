@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 13:46:14 riastradh Exp $
+share/texmf-dist/doc/latex/mwe/INSTALL
+share/texmf-dist/doc/latex/mwe/README
+share/texmf-dist/doc/latex/mwe/mwe.pdf

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 13:46:14 riastradh Exp $
+
+BLAKE2s (mwe.doc.r64967.tar.xz) = bf0f0807c84266943a26a4f5b971485d095307257b8fdee23b2d400263c592f2
+SHA512 (mwe.doc.r64967.tar.xz) = d6cb1e619dfa4e99128e4fbb95605eaeee694c59636f6759055f3ffa7ff13f12fa1a6d73a26e72baf63bcdb9737ebb41795b79367498e2c1122ca2b15c4fbee0
+Size (mwe.doc.r64967.tar.xz) = 308880 bytes
