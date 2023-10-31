@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2023/10/09 04:54:55 pho Exp $
+# $NetBSD: Makefile,v 1.32 2023/10/31 04:52:24 pho Exp $
 
-DISTNAME=	texmath-0.12.6
-PKGREVISION=	2
+DISTNAME=	texmath-0.12.8.4
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -10,10 +9,13 @@ LICENSE=	gnu-gpl-v2
 
 CONFIGURE_ARGS+=	-fexecutable
 
+.include "options.mk"
+
 # lib:texmath
 .include "../../textproc/hs-pandoc-types/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
+.include "../../textproc/hs-typst-symbols/buildlink3.mk"
 .include "../../textproc/hs-xml/buildlink3.mk"
 
 # exe:texmath
