@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 13:59:45 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-change-type-signature-plugin
 
 .if !defined(HS_HLS_CHANGE_TYPE_SIGNATURE_PLUGIN_BUILDLINK3_MK)
 HS_HLS_CHANGE_TYPE_SIGNATURE_PLUGIN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hls-change-type-signature-plugin+=	hs-hls-change-type-signature-plugin>=1.1.0
-BUILDLINK_ABI_DEPENDS.hs-hls-change-type-signature-plugin+=	hs-hls-change-type-signature-plugin>=1.1.0.0nb3
+BUILDLINK_API_DEPENDS.hs-hls-change-type-signature-plugin+=	hs-hls-change-type-signature-plugin>=2.4.0
+BUILDLINK_ABI_DEPENDS.hs-hls-change-type-signature-plugin+=	hs-hls-change-type-signature-plugin>=2.4.0.0
 BUILDLINK_PKGSRCDIR.hs-hls-change-type-signature-plugin?=	../../devel/hs-hls-change-type-signature-plugin
 
 .include "../../devel/hs-ghcide/buildlink3.mk"
