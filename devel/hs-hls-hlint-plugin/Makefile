@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:19 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/31 13:20:09 pho Exp $
 
-DISTNAME=	hls-hlint-plugin-1.1.1.0
-PKGREVISION=	3
+DISTNAME=	hls-hlint-plugin-2.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hlint integration plugin with Haskell Language Server
 LICENSE=	apache-2.0
 
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	apply-refact
+BROKEN+=	"This package is currently broken because devel/hlint is broken."
 
 .include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../devel/hs-apply-refact/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
@@ -22,13 +21,11 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hlint/buildlink3.mk"
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
-.include "../../sysutils/hs-hslogger/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
 .include "../../devel/hs-refact/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../sysutils/hs-temporary/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
-.include "../../devel/hs-apply-refact/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
