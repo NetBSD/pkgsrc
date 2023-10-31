@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2023/09/04 14:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.208 2023/10/31 17:08:21 pho Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -47,6 +47,7 @@ SUBDIR+=	hs-lens-aeson
 SUBDIR+=	hs-pandoc-base
 SUBDIR+=	hs-pandoc-lua-engine
 SUBDIR+=	hs-pandoc-server
+SUBDIR+=	hs-sandi
 SUBDIR+=	hs-string-conversions
 SUBDIR+=	hs-text-conversions
 SUBDIR+=	hztty
