@@ -1,0 +1,2 @@
+SecureMem is similar to ByteString, except that it provides a memory chunk
+that will be auto-scrubbed after it run out of scope.

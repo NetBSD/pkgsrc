@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 17:10:50 pho Exp $
+
+BLAKE2s (securemem-0.1.10.tar.gz) = 682eda4af2eabd26c516356f5f95a9edfba44344da726845ecf73a16236b62ae
+SHA512 (securemem-0.1.10.tar.gz) = 9f1428896a7b554244e42ac04a17c008cadce8102294b3249c172d84b20195325c48eadf15f7d26dabd766e4d45d171b0a26649e097d632a7fae596663a43096
+Size (securemem-0.1.10.tar.gz) = 3801 bytes
