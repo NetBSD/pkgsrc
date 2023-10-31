@@ -1,0 +1,14 @@
+$NetBSD: patch-dhall.cabal,v 1.4 2023/10/31 08:46:24 pho Exp $
+
+No idea why but System.PosixCompat.User from unix-compat has been removed.
+
+--- dhall.cabal.orig	2023-10-31 08:37:22.860855117 +0000
++++ dhall.cabal
+@@ -251,6 +251,7 @@ Common common
+         th-lift-instances           >= 0.1.13   && < 0.2 ,
+         time                        >= 1.9      && < 1.13,
+         transformers                >= 0.5.2.0  && < 0.7 ,
++        unix,
+         unix-compat,
+         unordered-containers        >= 0.1.3.0  && < 0.3 ,
+         vector                      >= 0.11.0.0 && < 0.14

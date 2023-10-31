@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:37 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/10/31 08:46:24 pho Exp $
 
-DISTNAME=	dhall-1.41.2
+DISTNAME=	dhall-1.42.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +9,12 @@ COMMENT=	Configuration language guaranteed to terminate
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	template-haskell
+	Diff	\
+	aeson	\
+	ansi-terminal	\
+	optparse-applicative	\
+	template-haskell	\
+	unix-compat
 
 # If bin/dhall is to be linked dynamically, it will depend on more than 140
 # shared objects and the dynamic linker will spend more than a second to
@@ -59,8 +63,8 @@ HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 .include "../../textproc/hs-text-manipulate/buildlink3.mk"
 .include "../../textproc/hs-text-short/buildlink3.mk"
 .include "../../devel/hs-th-lift-instances/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
-.include "../../net/hs-uri-encode/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../security/hs-cryptohash-sha256/buildlink3.mk"
 .include "../../www/hs-http-client/buildlink3.mk"

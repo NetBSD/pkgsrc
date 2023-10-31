@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/10/09 04:54:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2023/10/31 08:46:24 pho Exp $
 
 BUILDLINK_TREE+=	dhall
 
 .if !defined(DHALL_BUILDLINK3_MK)
 DHALL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.dhall+=	dhall>=1.41.2
-BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.41.2nb2
+BUILDLINK_API_DEPENDS.dhall+=	dhall>=1.42.0
+BUILDLINK_ABI_DEPENDS.dhall+=	dhall>=1.42.0
 BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -42,8 +42,8 @@ BUILDLINK_PKGSRCDIR.dhall?=	../../lang/dhall
 .include "../../textproc/hs-text-manipulate/buildlink3.mk"
 .include "../../textproc/hs-text-short/buildlink3.mk"
 .include "../../devel/hs-th-lift-instances/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
-.include "../../net/hs-uri-encode/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../security/hs-cryptohash-sha256/buildlink3.mk"
 .include "../../www/hs-http-client/buildlink3.mk"
