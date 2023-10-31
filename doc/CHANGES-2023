@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6457 2023/10/31 16:29:41 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6458 2023/10/31 16:31:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9375,3 +9375,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/hs-rawfilepath version 1.1.0 [pho 2023-10-31]
 	Added devel/hs-atomic-primops version 0.8.4 [pho 2023-10-31]
 	Added devel/hs-unagi-chan version 0.4.1.4 [pho 2023-10-31]
+	Updated textproc/hs-cgrep to 8.1.0 [pho 2023-10-31]
