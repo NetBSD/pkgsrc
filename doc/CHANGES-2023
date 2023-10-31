@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6462 2023/10/31 16:47:50 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6463 2023/10/31 16:52:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9380,3 +9380,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-path-pieces version 0.2.1 [pho 2023-10-31]
 	Added devel/hs-resource-pool version 0.4.0.0 [pho 2023-10-31]
 	Added devel/hs-silently version 1.2.5.3 [pho 2023-10-31]
+	Added devel/hs-persistent version 2.14.6.0 [pho 2023-10-31]
