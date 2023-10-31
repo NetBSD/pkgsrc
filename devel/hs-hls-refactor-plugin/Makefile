@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:20 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/10/31 12:51:01 pho Exp $
 
-DISTNAME=	hls-refactor-plugin-1.1.0.0
-PKGREVISION=	3
+DISTNAME=	hls-refactor-plugin-2.4.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +17,8 @@ LICENSE=	apache-2.0
 .include "../../devel/hs-hls-plugin-api/buildlink3.mk"
 .include "../../devel/hs-lens/buildlink3.mk"
 .include "../../devel/hs-lsp/buildlink3.mk"
+.include "../../devel/hs-parser-combinators/buildlink3.mk"
+.include "../../textproc/hs-regex-applicative/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
 .include "../../devel/retrie/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
