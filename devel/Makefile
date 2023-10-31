@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4090 2023/10/31 15:04:47 pho Exp $
+# $NetBSD: Makefile,v 1.4091 2023/10/31 15:17:09 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -635,6 +635,7 @@ SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hls-hlint-plugin
 SUBDIR+=	hs-hls-module-name-plugin
 SUBDIR+=	hs-hls-ormolu-plugin
+SUBDIR+=	hs-hls-overloaded-record-dot-plugin
 SUBDIR+=	hs-hls-plugin-api
 SUBDIR+=	hs-hls-pragmas-plugin
 SUBDIR+=	hs-hls-qualify-imported-names-plugin
