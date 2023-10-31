@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2023/09/06 10:40:29 hauke Exp $
+# $NetBSD: Makefile,v 1.623 2023/10/31 01:54:44 sekiya Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -101,6 +101,7 @@ SUBDIR+=	fml
 SUBDIR+=	fml4
 SUBDIR+=	fromto
 SUBDIR+=	getmail
+SUBDIR+=	getmail6
 SUBDIR+=	gld
 SUBDIR+=	gmime
 SUBDIR+=	gmime24
