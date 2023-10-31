@@ -1,0 +1,9 @@
+Addition to the http-client and http-client-tls libraries, that restricts
+the HTTP servers that can be used.
+
+This is useful when a security policy needs to eg, prevent connections to
+HTTP servers on localhost or a local network, or only allow connections to
+a specific HTTP server.
+
+It handles restricting redirects as well as the initial HTTP connection,
+and it also guards against DNS poisoning attacks.
