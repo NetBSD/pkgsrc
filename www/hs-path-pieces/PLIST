@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:40:08 pho Exp $
+lib/path-pieces-${PKGVERSION}/${HS_VERSION}/package-description
+lib/path-pieces-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Web/PathPieces.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/PathPieces.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Web/PathPieces.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/Web-PathPieces.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/path-pieces.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/path-pieces-${PKGVERSION}/html/synopsis.png
