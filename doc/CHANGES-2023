@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6393 2023/10/31 02:53:43 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6394 2023/10/31 02:56:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9309,3 +9309,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/mate to 1.26.1nb2 [gutteridge 2023-10-31]
 	Added mail/getmail6 version 6.18.13 [sekiya 2023-10-31]
 	Updated devel/hs-monoidal-containers to 0.6.4.0 [pho 2023-10-31]
+	Updated devel/hs-stm-containers to 1.2.0.3 [pho 2023-10-31]
