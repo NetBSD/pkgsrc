@@ -1,0 +1,19 @@
+This Ingredient for tasty testing framework allows to filter a test tree
+depending on an outcome of the previous run. This may be useful in many
+scenarios, especially when a test suite grows large.
+
+For example, tasty-rerun allows:
+
+* Rerun only tests, which failed during the last run (--rerun). Combined
+  with live reloading (e. g., using ghcid or stack test --file-watch), it
+  gives an ultimate power to focus on broken parts and put them back in
+  shape, enjoying a tight feedback loop.
+
+* Rerun only tests, which have beed added since the last saved test
+  run. This comes handy when writing a new module, which does not affect
+  other parts of the system, or adding new test cases.
+
+* Rerun only tests, which passed during the last saved test run. Sometimes
+  a part of the test suite is consistently failing (e. g., an external
+  service is temporarily down), but you want be sure that you are not
+  breaking anything else in course of your work.
