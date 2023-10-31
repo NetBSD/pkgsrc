@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/01/29 10:10:04 pho Exp $
+# $NetBSD: options.mk,v 1.2 2023/10/31 14:37:29 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pandoc
 PKG_SUPPORTED_OPTIONS=	lua server
@@ -14,6 +14,7 @@ PKG_SUGGESTED_OPTIONS=	lua
 CONFIGURE_ARGS+=	-f lua
 .include "../../lang/hs-hslua-cli/buildlink3.mk"
 .include "../../converters/hs-pandoc-lua-engine/buildlink3.mk"
+.include "../../sysutils/hs-temporary/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	-f-lua
 .endif
