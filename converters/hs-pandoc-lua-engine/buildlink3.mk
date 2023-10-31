@@ -1,27 +1,27 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/10/09 04:54:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/10/31 11:05:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-lua-engine
 
 .if !defined(HS_PANDOC_LUA_ENGINE_BUILDLINK3_MK)
 HS_PANDOC_LUA_ENGINE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.1
-BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.1nb2
+BUILDLINK_API_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1
+BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1.2
 BUILDLINK_PKGSRCDIR.hs-pandoc-lua-engine?=	../../converters/hs-pandoc-lua-engine
 
+.include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-citeproc/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../textproc/hs-doctemplates/buildlink3.mk"
 .include "../../lang/hs-hslua/buildlink3.mk"
-.include "../../converters/hs-hslua-aeson/buildlink3.mk"
-.include "../../lang/hs-hslua-core/buildlink3.mk"
 .include "../../textproc/hs-hslua-module-doclayout/buildlink3.mk"
 .include "../../sysutils/hs-hslua-module-path/buildlink3.mk"
 .include "../../devel/hs-hslua-module-system/buildlink3.mk"
 .include "../../textproc/hs-hslua-module-text/buildlink3.mk"
 .include "../../devel/hs-hslua-module-version/buildlink3.mk"
 .include "../../archivers/hs-hslua-module-zip/buildlink3.mk"
+.include "../../lang/hs-hslua-repl/buildlink3.mk"
 .include "../../devel/hs-lpeg/buildlink3.mk"
 .include "../../converters/hs-pandoc-base/buildlink3.mk"
 .include "../../devel/hs-pandoc-lua-marshal/buildlink3.mk"
