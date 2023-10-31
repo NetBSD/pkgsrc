@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/10/31 09:41:18 pho Exp $
 
-BLAKE2s (http-conduit-2.3.8.tar.gz) = 2a516be516cfbcc78ed5e33b9faca45e75c937c63de4cf365f5d3086ff984944
-SHA512 (http-conduit-2.3.8.tar.gz) = 44c337f1a0a0ec74a5d6e4e28a3aa5a32609c3a4da9424e99aedc2a8db67fc4684ef10cf82d6bda0761c7ffba4f0222e683946ab6dd8de1ab8225a40cc14cf66
-Size (http-conduit-2.3.8.tar.gz) = 28858 bytes
+BLAKE2s (http-conduit-2.3.8.3.tar.gz) = c93e61e7ce5c1adf3369bda613193fb1edb7e06fb7a823768c039c84625fa8a9
+SHA512 (http-conduit-2.3.8.3.tar.gz) = 9b665679b1baa5e487dbd786443317534641421ab90c6a0b16874b9bfdb3077c6e84b8c2afe063b7a356a79be2647ae4b4256a331f02da348664246734d708b5
+Size (http-conduit-2.3.8.3.tar.gz) = 29043 bytes
