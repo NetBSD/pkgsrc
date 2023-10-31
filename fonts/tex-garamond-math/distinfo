@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:40 riastradh Exp $
+
+BLAKE2s (garamond-math.r61481.tar.xz) = 261990458d8f8b13323ca6eb3210640a40aea3e7a6e4fbeb8fe32a64765e930b
+SHA512 (garamond-math.r61481.tar.xz) = fcab922fc4faa8468a2d8076664567c8533e95dc6767eabedee5c053bbdbb721890731f0d976a2d6047709f058a4d5e029996a5a5574912d21cb493f2975a76a
+Size (garamond-math.r61481.tar.xz) = 407520 bytes

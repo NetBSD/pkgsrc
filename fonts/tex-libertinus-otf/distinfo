@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+
+BLAKE2s (libertinus-otf.r68333.tar.xz) = 02e1255985a61c748ce5819b510ecca42ad4267d1813095de7d5dacc5f7a4792
+SHA512 (libertinus-otf.r68333.tar.xz) = 74e8f653e1bfd28b11932b0a5e524e823dbc1759566a3a6fd3d74b854f40df7a78b5dd3845e2b8e217fe9608cdb116d1216a3139e21d4498bccf62b8d8e42742
+Size (libertinus-otf.r68333.tar.xz) = 4252 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/10/31 23:20:40 riastradh Exp $
+
+BLAKE2s (arimo.doc.r68624.tar.xz) = 037750158fa691aaeadfb81031c1fbe29a67f8712077995d0181140a2a9585d1
+SHA512 (arimo.doc.r68624.tar.xz) = 633554e3e95bbb13fb62819da41613746a645696a76dcbd17ce6ea1c4f21d438e906dd747529c425269e1552e31cedbde8499339997fff920fd11d24e9956ffe
+Size (arimo.doc.r68624.tar.xz) = 29504 bytes
