@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/10/09 04:54:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2023/10/31 11:01:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-server
 
 .if !defined(HS_PANDOC_SERVER_BUILDLINK3_MK)
 HS_PANDOC_SERVER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1
-BUILDLINK_ABI_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1nb2
+BUILDLINK_API_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1.0
+BUILDLINK_ABI_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1.0.3
 BUILDLINK_PKGSRCDIR.hs-pandoc-server?=		../../converters/hs-pandoc-server
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-pandoc-server?=		../../converters/hs-pandoc-server
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doctemplates/buildlink3.mk"
 .include "../../converters/hs-pandoc-base/buildlink3.mk"
+.include "../../textproc/hs-pandoc-types/buildlink3.mk"
 .include "../../www/hs-servant-server/buildlink3.mk"
 .include "../../textproc/hs-skylighting/buildlink3.mk"
 .include "../../textproc/hs-unicode-collation/buildlink3.mk"
