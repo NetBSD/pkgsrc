@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1757 2023/10/31 06:20:27 pho Exp $
+# $NetBSD: Makefile,v 1.1758 2023/10/31 16:41:12 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -167,6 +167,7 @@ SUBDIR+=	hs-js-dgtable
 SUBDIR+=	hs-js-flot
 SUBDIR+=	hs-js-jquery
 SUBDIR+=	hs-open-browser
+SUBDIR+=	hs-path-pieces
 SUBDIR+=	hs-servant
 SUBDIR+=	hs-servant-server
 SUBDIR+=	hs-wai
