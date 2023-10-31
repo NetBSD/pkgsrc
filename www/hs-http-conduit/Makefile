@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:58 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/10/31 09:41:18 pho Exp $
 
-DISTNAME=	http-conduit-2.3.8
-PKGREVISION=	8
+DISTNAME=	http-conduit-2.3.8.3
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -17,5 +16,6 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-resourcet/buildlink3.mk"
 .include "../../devel/hs-unliftio-core/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../textproc/hs-attoparsec-aeson/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
