@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/10/31 16:47:43 pho Exp $
+lib/silently-${PKGVERSION}/${HS_VERSION}/package-description
+lib/silently-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Silently.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Silently.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Silently.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/System-IO-Silently.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/silently.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/silently-${PKGVERSION}/html/synopsis.png
