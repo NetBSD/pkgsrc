@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.104 2023/10/10 16:16:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.105 2023/11/01 20:46:04 adam Exp $
 #
 # used by databases/sqlite3/Makefile
 # used by databases/sqlite3-docs/Makefile
 # used by databases/sqlite3-tcl/Makefile
 # used by devel/lemon/Makefile
 
-SQLITE3_DISTVERSION=	3430200
-SQLITE3_VERSION=	3.43.2
+SQLITE3_DISTVERSION=	3440000
+SQLITE3_VERSION=	3.44.0
 
 MASTER_SITES=	http://www.sqlite.org/2023/
 MASTER_SITES+=	http://www.hwaci.com/sw/sqlite/2023/
