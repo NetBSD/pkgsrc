@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1759 2023/10/31 18:25:09 pho Exp $
+# $NetBSD: Makefile,v 1.1760 2023/11/01 02:34:48 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -181,6 +181,7 @@ SUBDIR+=	hs-warp
 SUBDIR+=	hs-warp-tls
 SUBDIR+=	hs-websockets
 SUBDIR+=	hs-xss-sanitize
+SUBDIR+=	hs-yesod-core
 SUBDIR+=	htdavlock
 SUBDIR+=	htdig
 SUBDIR+=	htmlcxx
