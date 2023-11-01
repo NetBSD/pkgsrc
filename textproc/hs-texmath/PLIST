@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/31 04:52:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/01 15:37:07 pho Exp $
 bin/texmath
+${PLIST.server}bin/texmath-server
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-description
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
