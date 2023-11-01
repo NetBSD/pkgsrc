@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6496 2023/11/01 20:33:49 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6497 2023/11/01 20:47:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9459,3 +9459,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-django3 to 3.2.23 [adam 2023-11-01]
 	Updated archivers/xz to 5.4.5 [adam 2023-11-01]
 	Updated multimedia/mkvtoolnix to 80.0 [adam 2023-11-01]
+	Updated databases/sqlite3 to 3.44.0 [adam 2023-11-01]
+	Updated databases/sqlite3-docs to 3.44.0 [adam 2023-11-01]
+	Updated databases/sqlite3-tcl to 3.44.0 [adam 2023-11-01]
+	Updated devel/lemon to 1.0.3.44.0 [adam 2023-11-01]
