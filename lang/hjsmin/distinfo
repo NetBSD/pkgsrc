@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 03:14:49 pho Exp $
+
+BLAKE2s (hjsmin-0.2.1.tar.gz) = 9b1aca068301051f2505421ad3c2157616206bed47ec2152eebbddcec0773985
+SHA512 (hjsmin-0.2.1.tar.gz) = ccc7ac765c99986e15e35f7e7ceef96b4551dbcccef2a62ad8625a8e4ab51edd0afe87368d6066062dd3749e827dd84af1a1ba1d272934481a77763f1d4d793e
+Size (hjsmin-0.2.1.tar.gz) = 5197 bytes
