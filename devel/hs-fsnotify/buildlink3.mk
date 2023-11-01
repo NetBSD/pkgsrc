@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/10/09 04:54:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/11/01 17:52:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-fsnotify
 
@@ -13,6 +13,8 @@ BUILDLINK_PKGSRCDIR.hs-fsnotify?=	../../devel/hs-fsnotify
 .if ${OPSYS} == "Linux" || ${OPSYS:M*BSD}
 .  include "../../devel/hs-hinotify/buildlink3.mk"
 .  include "../../devel/hs-shelly/buildlink3.mk"
+.elif ${OPSYS} == "Darwin"
+.  include "../../devel/hs-hfsevents/buildlink3.mk"
 .endif
 
 .include "../../devel/hs-async/buildlink3.mk"
