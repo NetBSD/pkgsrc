@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 03:18:15 pho Exp $
+
+BLAKE2s (yesod-static-1.6.1.0.tar.gz) = 0198f5ffc4bbef0638a415cd00575cdb6bc24eec3e890a221e4e155b56cae771
+SHA512 (yesod-static-1.6.1.0.tar.gz) = 66037ec28eac83e374161c1b306a4d20805ecb35ccfc4878e7894d961daaf30d9936c6e209641ff323d7e3dd5626f5a24a12915d4205417c496e272a2e969f6e
+Size (yesod-static-1.6.1.0.tar.gz) = 25613 bytes
