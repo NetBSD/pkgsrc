@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/01/11 11:47:18 adam Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/01 18:27:13 adam Exp $
 
-DISTNAME=	parsel-1.7.0
+DISTNAME=	parsel-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parsel/}
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9:../../textproc/py-cssselect
+DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.19.0:../../www/py-w3lib
