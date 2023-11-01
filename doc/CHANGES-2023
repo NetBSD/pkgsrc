@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6487 2023/11/01 03:08:40 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6488 2023/11/01 03:14:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9440,3 +9440,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-yesod-form version 1.7.6 [pho 2023-11-01]
 	Added www/hs-yesod version 1.6.2.1 [pho 2023-11-01]
 	Added security/hs-crypton-conduit version 0.2.3 [pho 2023-11-01]
+	Added lang/hjsmin version 0.2.1 [pho 2023-11-01]
