@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6490 2023/11/01 09:26:28 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6491 2023/11/01 17:17:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9445,3 +9445,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated converters/py-charset-normalizer to 3.3.2 [adam 2023-11-01]
 	Updated devel/py-boltons to 23.1.1 [adam 2023-11-01]
 	Updated graphics/py-matplotlib to 3.8.1 [adam 2023-11-01]
+	Added devel/hs-hfsevents version 0.1.6 [pho 2023-11-01]
