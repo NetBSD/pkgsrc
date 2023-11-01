@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6489 2023/11/01 03:18:22 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6490 2023/11/01 09:26:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9442,3 +9442,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Added security/hs-crypton-conduit version 0.2.3 [pho 2023-11-01]
 	Added lang/hjsmin version 0.2.1 [pho 2023-11-01]
 	Added www/hs-yesod-static version 1.6.1.0 [pho 2023-11-01]
+	Updated converters/py-charset-normalizer to 3.3.2 [adam 2023-11-01]
+	Updated devel/py-boltons to 23.1.1 [adam 2023-11-01]
+	Updated graphics/py-matplotlib to 3.8.1 [adam 2023-11-01]
