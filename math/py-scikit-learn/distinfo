@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/09/27 10:57:33 adam Exp $
+$NetBSD: distinfo,v 1.13 2023/11/01 18:39:36 adam Exp $
 
-BLAKE2s (scikit-learn-1.3.1.tar.gz) = 2164e217f6cccff980dd652cea48eb6a782e262238d32d96bcd4ac15881f445d
-SHA512 (scikit-learn-1.3.1.tar.gz) = e4e7de217f4da177a94f2f7b30e6f41ed61b33528f931151cfc42fa41cb89f15bc681dcbf89851940e984898e3d503d04f4eadc4a4cded752a7d3dfdbad0be5b
-Size (scikit-learn-1.3.1.tar.gz) = 7508552 bytes
+BLAKE2s (scikit-learn-1.3.2.tar.gz) = 339358d6ca41af1812ecc1c3d7f7c6e79e533783b6d7c04a8fcd824f8f61a9f2
+SHA512 (scikit-learn-1.3.2.tar.gz) = fa48267c3e1784c52a72c40bb0bc6e39fcd9b7d9a80b889d0fa02153c6473a79fe4e51266d56b504bf01179d8a5af4216b29d9008a532afbe133e7eac79cd336
+Size (scikit-learn-1.3.2.tar.gz) = 7510251 bytes
