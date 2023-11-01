@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 02:54:57 pho Exp $
+
+BLAKE2s (yesod-persistent-1.6.0.8.tar.gz) = ff1214734b5f3504fe761a93fca0013459b1c3bc0524d7d4c16edbb8eea6d4a3
+SHA512 (yesod-persistent-1.6.0.8.tar.gz) = 2e356cd3f1ffac1ad7390cdaff436c4179190e8f160fe8a8e798678498e67ea34ba087207df750453bc237e827f7c2748c86a2419240079c5a7012cef5381340
+Size (yesod-persistent-1.6.0.8.tar.gz) = 5612 bytes
