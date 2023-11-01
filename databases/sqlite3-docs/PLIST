@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.127 2023/10/10 16:16:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.128 2023/11/01 20:46:04 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -127,6 +127,7 @@ share/doc/sqlite3/c3ref/free_table.html
 share/doc/sqlite3/c3ref/funclist.html
 share/doc/sqlite3/c3ref/get_autocommit.html
 share/doc/sqlite3/c3ref/get_auxdata.html
+share/doc/sqlite3/c3ref/get_clientdata.html
 share/doc/sqlite3/c3ref/hard_heap_limit64.html
 share/doc/sqlite3/c3ref/index_info.html
 share/doc/sqlite3/c3ref/initialize.html
@@ -685,6 +686,7 @@ share/doc/sqlite3/releaselog/3_42_0.html
 share/doc/sqlite3/releaselog/3_43_0.html
 share/doc/sqlite3/releaselog/3_43_1.html
 share/doc/sqlite3/releaselog/3_43_2.html
+share/doc/sqlite3/releaselog/3_44_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -807,7 +809,7 @@ share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
 share/doc/sqlite3/session/c_changeset_abort.html
 share/doc/sqlite3/session/c_changeset_conflict.html
-share/doc/sqlite3/session/c_changesetapply_ignorenoop.html
+share/doc/sqlite3/session/c_changesetapply_fknoaction.html
 share/doc/sqlite3/session/c_changesetstart_invert.html
 share/doc/sqlite3/session/c_session_config_strmsize.html
 share/doc/sqlite3/session/c_session_objconfig_rowid.html
@@ -824,6 +826,7 @@ share/doc/sqlite3/session/sqlite3changegroup_add_strm.html
 share/doc/sqlite3/session/sqlite3changegroup_delete.html
 share/doc/sqlite3/session/sqlite3changegroup_new.html
 share/doc/sqlite3/session/sqlite3changegroup_output.html
+share/doc/sqlite3/session/sqlite3changegroup_schema.html
 share/doc/sqlite3/session/sqlite3changeset_apply.html
 share/doc/sqlite3/session/sqlite3changeset_concat.html
 share/doc/sqlite3/session/sqlite3changeset_conflict.html
@@ -836,6 +839,7 @@ share/doc/sqlite3/session/sqlite3changeset_old.html
 share/doc/sqlite3/session/sqlite3changeset_op.html
 share/doc/sqlite3/session/sqlite3changeset_pk.html
 share/doc/sqlite3/session/sqlite3changeset_start.html
+share/doc/sqlite3/session/sqlite3changeset_upgrade.html
 share/doc/sqlite3/session/sqlite3rebaser_configure.html
 share/doc/sqlite3/session/sqlite3rebaser_create.html
 share/doc/sqlite3/session/sqlite3rebaser_delete.html
@@ -864,7 +868,6 @@ share/doc/sqlite3/sqlanalyze.html
 share/doc/sqlite3/sqlar.html
 share/doc/sqlite3/sqldiff.html
 share/doc/sqlite3/sqlite.css
-share/doc/sqlite3/sqlite.css~
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/stmt.html
 share/doc/sqlite3/stricttables.html
@@ -903,6 +906,7 @@ share/doc/sqlite3/syntax/factored-select-stmt.html
 share/doc/sqlite3/syntax/filter-clause.html
 share/doc/sqlite3/syntax/foreign-key-clause.html
 share/doc/sqlite3/syntax/frame-spec.html
+share/doc/sqlite3/syntax/function-arguments.html
 share/doc/sqlite3/syntax/indexed-column.html
 share/doc/sqlite3/syntax/insert-stmt.html
 share/doc/sqlite3/syntax/join-clause.html
