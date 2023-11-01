@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 02:53:20 pho Exp $
+
+BLAKE2s (persistent-template-2.12.0.0.tar.gz) = 37c3051804a75c6005a4095566f3a9fa3c4ec694157656ca287f91c4add09b36
+SHA512 (persistent-template-2.12.0.0.tar.gz) = 5098c88f92d5e8609de62f6571d8c7f1b2f08d0286974f1ba5eabc01e3479b48a2ae1a0e85e54f1e9956902189142c5d04a4b314a1945341f4e76828959405a7
+Size (persistent-template-2.12.0.0.tar.gz) = 4506 bytes
