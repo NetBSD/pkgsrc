@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.58 2023/10/20 12:40:05 adam Exp $
+$NetBSD: distinfo,v 1.59 2023/11/01 09:26:07 adam Exp $
 
-BLAKE2s (matplotlib-3.8.0.tar.gz) = 25c8b6c99ca147b8941b07d3fa83b04766734cd3d9348c80f1cd50b535108dc6
-SHA512 (matplotlib-3.8.0.tar.gz) = 0f75495210946adf0a36af13a75bc9910d345cc05636019952f35856b4c2bfac8a79c48d5a3348e844cfdac797f3ce490fe6a4e1a4fc7033092fee61f9913e21
-Size (matplotlib-3.8.0.tar.gz) = 35864435 bytes
+BLAKE2s (matplotlib-3.8.1.tar.gz) = 5d4763c52947dd1bca70bda367b88b234f7079c82937cff96a60fbc987c65263
+SHA512 (matplotlib-3.8.1.tar.gz) = bb933361caba0f4ea590df56569edf4cb728f1daa1219f8793b5ae6ba591cb5d1600fdd1693b7c72a8bb70b0da696b05f1b6ddcabe93d723f29d8541fbf0372c
+Size (matplotlib-3.8.1.tar.gz) = 35868840 bytes
 SHA1 (patch-mplsetup.cfg) = 06bf93f112ab4ed4604179c1cc7fd2bdee62b56d
