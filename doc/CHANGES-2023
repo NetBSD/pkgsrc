@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6485 2023/11/01 02:57:18 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6486 2023/11/01 02:59:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9438,3 +9438,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/hs-persistent-template version 2.12.0.0 [pho 2023-11-01]
 	Added www/hs-yesod-persistent version 1.6.0.8 [pho 2023-11-01]
 	Added www/hs-yesod-form version 1.7.6 [pho 2023-11-01]
+	Added www/hs-yesod version 1.6.2.1 [pho 2023-11-01]
