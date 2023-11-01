@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2022/08/21 20:38:27 markd Exp $
+$NetBSD: distinfo,v 1.37 2023/11/01 19:49:10 markd Exp $
 
-BLAKE2s (DBIx-SearchBuilder-1.71.tar.gz) = a71d9094bf1e05faab487a03d143f206795dce41b94d26179e0322836892a2d9
-SHA512 (DBIx-SearchBuilder-1.71.tar.gz) = 696b427d3128d30c2655ca194614b628ec46af8daef763cd4363ae07be5b0bb16d2d1c04539f45be8e37d2d816526bfbc1627ea591e6bce127580906d4ae8ead
-Size (DBIx-SearchBuilder-1.71.tar.gz) = 120610 bytes
+BLAKE2s (DBIx-SearchBuilder-1.78.tar.gz) = 64e17d575ef3f67ce25e72be652ae9ff2f54ae5b8579093312ed4c3e2b9d9f11
+SHA512 (DBIx-SearchBuilder-1.78.tar.gz) = f1af8f257ca04cbee0133d23929aefa17edd35a96eadf40cb10846a8b89696c190357950117b917711b9df3622a64d15da7559d6b03be830cb45b3b7be72cb5b
+Size (DBIx-SearchBuilder-1.78.tar.gz) = 128620 bytes
 SHA1 (patch-Makefile.PL) = 3646c4673bd87c36f528ca3720ba2f5347123943
