@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-macho.awk,v 1.9 2020/10/09 20:18:30 jperkin Exp $
+# $NetBSD: check-shlibs-macho.awk,v 1.10 2023/11/01 11:46:00 pho Exp $
 
 #
 # Read a list of potential Mach-O binaries from stdin.
@@ -84,6 +84,7 @@ function checkshlib(DSO,	needed, found) {
 	close(cmd)
 	ndirs = split(cross_destdir ":" destdir, check_dirs, ":")
 	for (lib in needed) {
+		found = 0
 		#
 		# Ensure we don't have any WRKDIR references.
 		#
