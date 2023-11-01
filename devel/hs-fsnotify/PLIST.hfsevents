@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.hfsevents,v 1.1 2023/11/01 17:52:48 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/OSX.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/OSX.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify/OSX.p_hi
