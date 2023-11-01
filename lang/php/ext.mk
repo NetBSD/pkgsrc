@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.47 2023/10/21 23:27:42 gdt Exp $
+# $NetBSD: ext.mk,v 1.48 2023/11/01 18:05:31 jperkin Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -79,6 +79,14 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
+
+.if ${PHP_ZEND_EXTENSION:U:tl} == "yes"
+EXTENSION_DIRECTIVE=	zend_extension
+EXTENSION_FILE=		${PREFIX}/${PHP_EXTENSION_DIR}/${PKGMODNAME}.${SHLIB_SUFFIX}
+.else
+EXTENSION_DIRECTIVE=	extension
+EXTENSION_FILE=		${PKGMODNAME}.${SHLIB_SUFFIX}
+.endif
 
 # Also include extension-specific message
 .if exists(${.CURDIR}/MESSAGE)
