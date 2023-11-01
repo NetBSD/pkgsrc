@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/09/27 10:57:33 adam Exp $
+# $NetBSD: Makefile,v 1.23 2023/11/01 18:39:36 adam Exp $
 
-DISTNAME=	scikit-learn-1.3.1
+DISTNAME=	scikit-learn-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -10,10 +10,11 @@ HOMEPAGE=	https://scikit-learn.org/
 COMMENT=	Machine learning algorithms for Python
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-joblib>=1.1.1:../../devel/py-joblib
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-threadpoolctl>=2.0.0:../../parallel/py-threadpoolctl
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.1:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
@@ -21,7 +22,7 @@ USE_LANGUAGES=	c c++ fortran
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
