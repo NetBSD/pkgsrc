@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2023/10/24 22:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/01 19:42:03 markd Exp $
 
 DISTNAME=	kpimtextedit-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
@@ -17,6 +17,7 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/grantlee-qt5/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../misc/kemoticons/buildlink3.mk"
+.include "../../textproc/ktextaddons/buildlink3.mk"
 .include "../../textproc/syntax-highlighting/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtspeech/buildlink3.mk"

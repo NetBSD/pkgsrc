@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2023/10/24 22:11:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2023/11/01 19:42:03 markd Exp $
 
 BUILDLINK_TREE+=	kpimtextedit
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.kpimtextedit?=	../../textproc/kpimtextedit
 .include "../../devel/grantlee-qt5/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../misc/kemoticons/buildlink3.mk"
+.include "../../textproc/ktextaddons/buildlink3.mk"
 .include "../../textproc/syntax-highlighting/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtspeech/buildlink3.mk"
