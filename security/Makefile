@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2023/10/31 18:13:01 pho Exp $
+# $NetBSD: Makefile,v 1.923 2023/11/01 03:08:49 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -138,6 +138,7 @@ SUBDIR+=	hs-cryptohash-md5
 SUBDIR+=	hs-cryptohash-sha1
 SUBDIR+=	hs-cryptohash-sha256
 SUBDIR+=	hs-crypton
+SUBDIR+=	hs-crypton-conduit
 SUBDIR+=	hs-crypton-x509
 SUBDIR+=	hs-crypton-x509-store
 SUBDIR+=	hs-crypton-x509-system
