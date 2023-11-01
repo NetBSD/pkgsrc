@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 02:57:11 pho Exp $
+
+BLAKE2s (yesod-form-1.7.6.tar.gz) = 3a705aa0569e9cff5dae09bd9daf1a81d6a86aad46e075d974cb8978c709e262
+SHA512 (yesod-form-1.7.6.tar.gz) = 61aeecc699cccd33b4761cea3d82faa294ad3cafe027142f617fbbb6e01e911c05396e1f7224ab9a4d4bacf80706737a936d952dad82c5efa1474016ff2c650e
+Size (yesod-form-1.7.6.tar.gz) = 36504 bytes
