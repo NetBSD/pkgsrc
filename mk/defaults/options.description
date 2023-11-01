@@ -382,6 +382,7 @@ inspircd-sqllog		Enable logging of network-wide data for your network into a dat
 inspircd-sqloper	Enable storage of oper credentials in an SQL table.
 inspircd-sqlutils	Enable developer utilities which allow certain other SQL modules to be implemented easily.
 inspircd-ziplinks	Compress data before transmitting it between servers.
+introspection		Enable gobject-introspection.
 iodbc			Enable ODBC support via iODBC.
 ipa			Select IPA fonts.
 ipa-memfunc-debug	Enable ipa_memfunc debugging.
