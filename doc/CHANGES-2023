@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6484 2023/11/01 02:55:04 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6485 2023/11/01 02:57:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9437,3 +9437,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added mail/hs-email-validate version 2.3.2.19 [pho 2023-11-01]
 	Added devel/hs-persistent-template version 2.12.0.0 [pho 2023-11-01]
 	Added www/hs-yesod-persistent version 1.6.0.8 [pho 2023-11-01]
+	Added www/hs-yesod-form version 1.7.6 [pho 2023-11-01]
