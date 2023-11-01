@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.223 2023/10/24 22:10:08 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2023/11/01 20:33:31 adam Exp $
 
-DISTNAME=	mkvtoolnix-79.0
-PKGREVISION=	1
+DISTNAME=	mkvtoolnix-80.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -27,10 +26,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-optimization
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-update-check
-CONFIGURE_ARGS+=	--enable-qt5
+CONFIGURE_ARGS+=	--enable-qt6
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook
 CONFIGURE_ARGS+=	--with-qmake=${QTDIR}/bin/qmake
+CONFIGURE_ENV+=		QMAKE6=${QTDIR}/bin/qmake6
 
 REPLACE_LOCALEDIR_PATTERNS=	build-config.in
 
@@ -67,9 +67,11 @@ do-install:
 BUILDLINK_API_DEPENDS.libebml+= libebml>=1.4.4
 .include "../../devel/libebml/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmatroska+= libmatroska>=1.7.1
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../textproc/cmark/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
@@ -77,5 +79,4 @@ BUILDLINK_API_DEPENDS.libmatroska+= libmatroska>=1.7.1
 .include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
-.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
