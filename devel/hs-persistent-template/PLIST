@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/01 02:53:20 pho Exp $
+lib/persistent-template-${PKGVERSION}/${HS_VERSION}/package-description
+lib/persistent-template-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/persistent-template-${PKGVERSION}/LICENSE
