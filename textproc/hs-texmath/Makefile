@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/10/31 12:44:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2023/11/01 15:37:07 pho Exp $
 
 DISTNAME=	texmath-0.12.8.4
 CATEGORIES=	textproc
@@ -8,6 +8,8 @@ COMMENT=	Conversion between formats used to represent mathematics
 LICENSE=	gnu-gpl-v2
 
 CONFIGURE_ARGS+=	-fexecutable
+
+.include "options.mk"
 
 # lib:texmath
 .include "../../textproc/hs-pandoc-types/buildlink3.mk"
