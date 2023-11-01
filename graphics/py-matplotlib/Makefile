@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2023/10/20 12:40:05 adam Exp $
+# $NetBSD: Makefile,v 1.88 2023/11/01 09:26:07 adam Exp $
 
-DISTNAME=	matplotlib-3.8.0
+DISTNAME=	matplotlib-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -11,7 +11,9 @@ COMMENT=	Matlab-style plotting package for Python
 # LICENSE=	see ${WRKSRC}/LICENSE/LICENSE
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=2020.06.20:../../security/py-certifi
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=6.2.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-contourpy>=1.0.1:../../graphics/py-contourpy
@@ -34,7 +36,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
