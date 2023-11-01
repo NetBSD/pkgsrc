@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2023/10/04 21:37:14 adam Exp $
+# $NetBSD: Makefile,v 1.122 2023/11/01 20:14:51 adam Exp $
 
-DISTNAME=	Django-4.2.6
+DISTNAME=	Django-4.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -11,6 +11,8 @@ HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6.0:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.3.1:../../databases/py-sqlparse
 
@@ -32,5 +34,5 @@ post-install:
 	${MV} django-admin django-admin-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
