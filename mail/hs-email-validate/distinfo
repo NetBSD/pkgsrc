@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/01 02:42:28 pho Exp $
+
+BLAKE2s (email-validate-2.3.2.19.tar.gz) = 930ac62a5e02ab1e3632a4810ec87a94846078062d31def38e8bd9cc270d8d27
+SHA512 (email-validate-2.3.2.19.tar.gz) = 0a4ad0579cbcf18920703bb12eb296280b6f8dffd57ceefc7fb211ca48e792d17ea8fa37dc4a256a26f01816eb812081b571325803ceb64a7b9d7ae748526b09
+Size (email-validate-2.3.2.19.tar.gz) = 9446 bytes
