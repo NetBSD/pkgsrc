@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.57 2023/10/31 03:24:39 pho Exp $
+# $NetBSD: haskell.mk,v 1.58 2023/11/01 17:55:08 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -243,7 +243,11 @@ do-test:
 .endif
 
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
+.if ${OPSYS} != "Darwin"
+# when making flags consistent: warning:
+#     -fsplit-sections is not useful on this platform since it uses subsections-via-symbols. Ignoring.
 CONFIGURE_ARGS+=	--enable-split-sections
+.endif
 
 # Support RELRO. When PKGSRC_USE_RELRO isn't set to "no",
 # mk/compiler/{ghc,clang}.mk add "-Wl,-z,relro" and optionally
