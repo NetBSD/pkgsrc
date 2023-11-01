@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1763 2023/11/01 02:59:17 pho Exp $
+# $NetBSD: Makefile,v 1.1764 2023/11/01 03:18:56 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -185,6 +185,7 @@ SUBDIR+=	hs-yesod
 SUBDIR+=	hs-yesod-core
 SUBDIR+=	hs-yesod-form
 SUBDIR+=	hs-yesod-persistent
+SUBDIR+=	hs-yesod-static
 SUBDIR+=	htdavlock
 SUBDIR+=	htdig
 SUBDIR+=	htmlcxx
