@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6481 2023/11/01 02:34:39 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6482 2023/11/01 02:42:35 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9434,3 +9434,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-traitlets to 5.13.0 [adam 2023-10-31]
 	Updated time/py-ciso8601 to 2.3.1 [adam 2023-10-31]
 	Added www/hs-yesod-core version 1.6.25.0 [pho 2023-11-01]
+	Added mail/hs-email-validate version 2.3.2.19 [pho 2023-11-01]
