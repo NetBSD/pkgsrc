@@ -1,24 +1,37 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2022/12/31 22:00:17 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2023/11/01 20:08:03 adam Exp $
 
 Do not install includes in a sub-directory.
+Install cmake files into lib/cmake.
 
---- CMakeLists.txt.orig	2022-12-28 17:47:32.000000000 +0000
+--- CMakeLists.txt.orig	2023-10-28 15:23:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -14,7 +14,7 @@ option(UTF8_SAMPLES "Enable building sam
- add_library(utf8cpp INTERFACE)
+@@ -10,7 +10,7 @@ include(GNUInstallDirs)
+ 
  target_include_directories(utf8cpp INTERFACE
      "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/source>"
 -    $<INSTALL_INTERFACE:include/utf8cpp>
 +    $<INSTALL_INTERFACE:include>
  )
- add_library(utf8::cpp ALIAS utf8cpp)
  
-@@ -39,7 +39,7 @@ if(UTF8_INSTALL)
-         INSTALL_DESTINATION ${DEF_INSTALL_CMAKE_DIR}
-     )
+ include(CMakePackageConfigHelpers)
+@@ -32,17 +32,17 @@ install(TARGETS ${PROJECT_NAME}
+ configure_package_config_file(
+     "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in"
+     "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+-    INSTALL_DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake
++    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
+ )
  
--    install(DIRECTORY source/ DESTINATION include/utf8cpp)
-+    install(DIRECTORY source/ DESTINATION include)
-     install(TARGETS utf8cpp EXPORT utf8cppTargets)
-     install(EXPORT utf8cppTargets DESTINATION ${DEF_INSTALL_CMAKE_DIR})
-     install(
+ install(EXPORT ${PROJECT_NAME}Targets
+         FILE ${PROJECT_NAME}Targets.cmake
+         NAMESPACE ${PROJECT_NAME}::
+-        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake)
++        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
+ 
+ install(FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+               "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
+-        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake)
++        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
+ 
+ install(FILES ${PROJECT_SOURCE_DIR}/source/utf8.h DESTINATION include)
+ install(DIRECTORY ${PROJECT_SOURCE_DIR}/source/utf8 DESTINATION include)
