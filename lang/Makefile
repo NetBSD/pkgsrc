@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2023/10/29 18:32:06 pho Exp $
+# $NetBSD: Makefile,v 1.705 2023/11/01 03:15:04 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -119,6 +119,7 @@ SUBDIR+=	guile30
 SUBDIR+=	gwydion-dylan
 SUBDIR+=	hamlet
 SUBDIR+=	heirloom-awk
+SUBDIR+=	hjsmin
 SUBDIR+=	hs-hslua
 SUBDIR+=	hs-hslua-classes
 SUBDIR+=	hs-hslua-cli
