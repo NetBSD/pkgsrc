@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_asn1_c__src_Makefile,v 1.1 2023/11/02 19:20:46 adam Exp $
+
+Properly install shared objects.
+
+--- lib/asn1/c_src/Makefile.orig	2023-11-02 14:46:32.370098570 +0000
++++ lib/asn1/c_src/Makefile
+@@ -136,7 +136,7 @@ include $(ERL_TOP)/make/otp_release_targ
+ 
+ release_spec: opt
+ 	$(INSTALL_DIR) "$(RELSYSDIR)/priv/lib"
+-	$(INSTALL_PROGRAM) $(NIF_SHARED_OBJ_FILE) "$(RELSYSDIR)/priv/lib"
++	${BSD_INSTALL_LIB} $(NIF_SHARED_OBJ_FILE) "$(RELSYSDIR)/priv/lib"
+ 	$(INSTALL_DIR) "$(RELSYSDIR)/c_src"
+ 	$(INSTALL_DATA) *.c "$(RELSYSDIR)/c_src"
+ 

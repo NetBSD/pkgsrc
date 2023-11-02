@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2022/10/15 18:04:10 triaxx Exp $
+$NetBSD: patch-make_otp.mk.in,v 1.1 2023/11/02 19:20:46 adam Exp $
 
 Build all .java files.
 
