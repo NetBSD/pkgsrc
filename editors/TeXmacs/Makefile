@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.163 2023/10/24 22:08:59 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2023/11/02 21:34:26 nros Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
-DISTNAME=		TeXmacs-1.99.13-src
+DISTNAME=		TeXmacs-2.1.2-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		24
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
@@ -12,54 +11,59 @@ MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.texmacs.org/
 COMMENT=		GNU TeXmacs (free scientific text editor)
+LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		ps2pkm>=1.5:../../fonts/ps2pkm
 
-#BUILD_TARGET=		TEXMACS
-
-USE_CMAKE=		yes
-USE_TOOLS+=		gmake perl:run pkg-config bash
+USE_TOOLS+=		gmake perl:run pkg-config bash:run
 USE_LANGUAGES=		c c++
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_CXX_FEATURES=	c++11
+
+#Use Qt5 on all platforms
+CMAKE_CONFIGURE_ARGS+=	-DTEXMACS_GUI=Qt5
 
 REPLACE_PYTHON+=	plugins/mathematica/bin/realpath.py
+REPLACE_PYTHON+=	plugins/eukleides/python/tm_eukleides.py
 
 REPLACE_BASH+=		configure
 REPLACE_BASH+=		cmake/CreateBundle.sh.in
-REPLACE_BASH+=		plugins/dratex/bin/tm_dratex
-REPLACE_BASH+=		plugins/eukleides/bin/tm_eukleides
-REPLACE_BASH+=		plugins/eukleides/bin/tm_eukleides.old
+REPLACE_BASH+=		plugins/matlab/bin/tm_matlab
 REPLACE_BASH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_BASH+=		plugins/texgraph/bin/tm_texgraph
 
 REPLACE_PERL+=		plugins/feynmf/bin/bbox_add.pl
 
-SUBST_CLASSES+=		guile
-SUBST_STAGE.guile=	pre-configure
-SUBST_FILES.guile=	cmake/FindGuile.cmake
-SUBST_VARS.guile=	PREFIX
-
 SUBST_CLASSES+=		bash
 SUBST_SED.bash+=	-e "s,/bin/bash,${PREFIX}/bin/bash,"
 SUBST_FILES.bash+=	src/Texmacs/Texmacs/texmacs.cpp
-SUBST_MESSAGE.bash=	Fixing hardcoded bash path.
+SUBST_FILES.bash+=	plugins/mupad/bin/tm_mupad
+SUBST_MESSAGE.bash=	Fixing hardcoded bash path in ${SUBST_FILES.bash}
 SUBST_STAGE.bash=	pre-configure
 
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/guile/1.8/lib/
+SUBST_CLASSES+=		pyexec
+SUBST_SED.pyexec+=	-e "s,python3,python${PYVERSSUFFIX},"
+SUBST_FILES.pyexec+=	TeXmacs/progs/kernel/library/base.scm
+SUBST_MESSAGE.pyexec=	Fixing name of python executable in ${SUBST_FILES.pyexec}
+SUBST_STAGE.pyexec=	pre-configure
 
-# do not install cmake files
-post-install:
-	${FIND} ${DESTDIR} -name cmake_install.cmake -type f | ${XARGS} ${RM} -f
-	${FIND} ${DESTDIR} -name CMakeFiles -type d | ${XARGS} ${RM} -rf
+.include "../../devel/cmake/build.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-# Building with guile20 almost succeeds.
-# Building with guile22 fails (apparent use of withdrawn interfaces).
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+# Builds with guile20 but crashes with it
+# Building with guile22 of guile30 fails (apparent use of withdrawn interfaces).
 .include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.if ${OPSYS} == "Darwin"
+.include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.endif
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
