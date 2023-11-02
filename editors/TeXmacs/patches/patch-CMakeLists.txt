@@ -1,0 +1,73 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2023/11/02 21:34:26 nros Exp $
+
+Set GS_* vars to pkgsrc values
+
+Pass -L and rpath linking arguments when linking Guile
+Fixes: "-lguile not found" when linking TeXmacs
+
+Don't look for homebrew libs on mac
+Don't install files directly under PREFIX on mac
+
+Don't install pkgsrc patch files
+
+--- CMakeLists.txt.orig	2022-05-05 15:27:04.522996359 +0000
++++ CMakeLists.txt
+@@ -345,13 +345,14 @@ endif (_guile_dots_test)
+ set (DEBUG_ASSERT 1)
+ 
+ set (USE_GS 1)
+-if (WIN32)
+-  set (GS_EXE bin/gs.exe)
+-else (WIN32)
+-  set (GS_EXE /usr/bin/gs)
+-endif (WIN32)
+-set (GS_FONTS ../share/ghostscript/fonts:/usr/share/fonts:)
+-set (GS_LIB ../share/ghostscript/9.06/lib:)
++set (GS_EXE ${CMAKE_INSTALL_PREFIX}/bin/gs)
++execute_process(COMMAND "${GS_EXE}" "--version"
++                OUTPUT_VARIABLE GS_VERSION
++                ERROR_VARIABLE GS_VERSION
++                OUTPUT_STRIP_TRAILING_WHITESPACE
++                ERROR_STRIP_TRAILING_WHITESPACE)
++set (GS_FONTS ${CMAKE_INSTALL_PREFIX}/share/ghostscript/fonts:/usr/share/fonts:)
++set (GS_LIB ${CMAKE_INSTALL_PREFIX}/share/ghostscript/${GS_VERSION}/lib:)
+ 
+ set (GUILE_NUM 1)
+ set (PDF_RENDERER 1)
+@@ -549,7 +550,7 @@ set (TeXmacs_MacOS_SRCS
+ ### --------------------------------------------------------------------
+ 
+ set (TeXmacs_Libraries
+-  ${Guile_LIBRARIES}
++  ${Guile_LDFLAGS}
+   ${ZLIB_LIBRARIES}
+   ${JPEG_LIBRARIES}
+   ${PNG_LIBRARIES}
+@@ -585,10 +586,6 @@ if (TEXMACS_GUI MATCHES "Qt.*")
+     )
+     include (${QT_USE_FILE})
+   else (TEXMACS_GUI STREQUAL "Qt4")
+-    # Homebrew installs Qt5 in /usr/local/opt/qt5
+-    if (APPLE AND EXISTS /usr/local/opt/qt5)
+-      list (APPEND CMAKE_PREFIX_PATH "/usr/local/opt/qt5")
+-    endif ()
+ 
+     if (WIN32 AND EXISTS ${QT_CMAKE_DIR})
+       set (Qt5Core_DIR "${QT_CMAKE_DIR}/Qt5Core")
+@@ -769,7 +766,7 @@ add_subdirectory (TeXmacs)
+ ### Installation
+ ### --------------------------------------------------------------------
+ 
+-if (APPLE)
++if (FALSE)
+   install (FILES packages/macos/TeXmacs.icns DESTINATION ${CMAKE_INSTALL_PREFIX})
+   install (FILES packages/macos/TeXmacs-document.icns DESTINATION ${CMAKE_INSTALL_PREFIX})
+   install (DIRECTORY src/Plugins/Cocoa/English.lproj DESTINATION ${CMAKE_INSTALL_PREFIX})
+@@ -801,6 +798,7 @@ else (WIN32)
+     FILE_PERMISSIONS OWNER_READ GROUP_READ WORLD_READ
+     PATTERN "bin" EXCLUDE
+     PATTERN "CMakeLists.txt" EXCLUDE
++    PATTERN "*.orig" EXCLUDE
+     PATTERN ".gitignore" EXCLUDE)
+ endif (WIN32)
+ 
