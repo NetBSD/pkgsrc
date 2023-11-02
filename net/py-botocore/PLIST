@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2023/09/14 09:07:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2023/11/02 10:28:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -182,6 +182,13 @@ ${PYSITELIB}/botocore/data/batch/2016-08-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/batch/2016-08-10/examples-1.json
 ${PYSITELIB}/botocore/data/batch/2016-08-10/paginators-1.json
 ${PYSITELIB}/botocore/data/batch/2016-08-10/service-2.json
+${PYSITELIB}/botocore/data/bedrock-runtime/2023-09-30/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/bedrock-runtime/2023-09-30/paginators-1.json
+${PYSITELIB}/botocore/data/bedrock-runtime/2023-09-30/service-2.json
+${PYSITELIB}/botocore/data/bedrock/2023-04-20/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/bedrock/2023-04-20/paginators-1.json
+${PYSITELIB}/botocore/data/bedrock/2023-04-20/service-2.json
+${PYSITELIB}/botocore/data/bedrock/2023-04-20/waiters-2.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/examples-1.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/paginators-1.json
@@ -486,6 +493,10 @@ ${PYSITELIB}/botocore/data/datasync/2018-11-09/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/datasync/2018-11-09/examples-1.json
 ${PYSITELIB}/botocore/data/datasync/2018-11-09/paginators-1.json
 ${PYSITELIB}/botocore/data/datasync/2018-11-09/service-2.json
+${PYSITELIB}/botocore/data/datazone/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/datazone/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/datazone/2018-05-10/paginators-1.sdk-extras.json
+${PYSITELIB}/botocore/data/datazone/2018-05-10/service-2.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/examples-1.json
 ${PYSITELIB}/botocore/data/dax/2017-04-19/paginators-1.json
@@ -719,10 +730,6 @@ ${PYSITELIB}/botocore/data/gamelift/2015-10-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/gamelift/2015-10-01/examples-1.json
 ${PYSITELIB}/botocore/data/gamelift/2015-10-01/paginators-1.json
 ${PYSITELIB}/botocore/data/gamelift/2015-10-01/service-2.json
-${PYSITELIB}/botocore/data/gamesparks/2021-08-17/endpoint-rule-set-1.json
-${PYSITELIB}/botocore/data/gamesparks/2021-08-17/examples-1.json
-${PYSITELIB}/botocore/data/gamesparks/2021-08-17/paginators-1.json
-${PYSITELIB}/botocore/data/gamesparks/2021-08-17/service-2.json
 ${PYSITELIB}/botocore/data/glacier/2012-06-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/glacier/2012-06-01/examples-1.json
 ${PYSITELIB}/botocore/data/glacier/2012-06-01/paginators-1.json
@@ -1272,6 +1279,7 @@ ${PYSITELIB}/botocore/data/rds/2014-09-01/waiters-2.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/examples-1.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/paginators-1.json
+${PYSITELIB}/botocore/data/rds/2014-10-31/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/service-2.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/service-2.sdk-extras.json
 ${PYSITELIB}/botocore/data/rds/2014-10-31/waiters-2.json
