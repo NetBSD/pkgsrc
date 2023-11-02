@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 01:53:48 pho Exp $
+
+BLAKE2s (bencode-0.6.1.1.tar.gz) = f8d46e28ab4bd444085472ffd4260311e3493df4e4cf44cca086e515babe3a6c
+SHA512 (bencode-0.6.1.1.tar.gz) = e2f4c312923412a47cbea62caf6e001e30418946165405f2cd9d77f06c13ff2846b352e28ca6cbbfce3bf236fb42f0b108442b17e2b0e8bac702af6d6a114f09
+Size (bencode-0.6.1.1.tar.gz) = 7008 bytes
