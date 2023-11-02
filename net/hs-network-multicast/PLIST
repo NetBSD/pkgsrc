@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/02 01:39:28 pho Exp $
+lib/network-multicast-${PKGVERSION}/${HS_VERSION}/package-description
+lib/network-multicast-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Multicast.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Multicast.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Multicast.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/Network-Multicast.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/network-multicast.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/network-multicast-${PKGVERSION}/html/synopsis.png
