@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/15 20:01:14 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/02 13:50:47 nros Exp $
 bin/profanity
 include/profapi.h
 lib/libprofanity.la
@@ -55,9 +55,9 @@ man/man1/profanity-nick.1
 man/man1/profanity-notify.1
 man/man1/profanity-occupants.1
 man/man1/profanity-omemo.1
-man/man1/profanity-os.1
 man/man1/profanity-otr.1
 man/man1/profanity-outtype.1
+man/man1/profanity-ox-setup.1
 man/man1/profanity-ox.1
 man/man1/profanity-paste.1
 man/man1/profanity-pgp.1
@@ -66,6 +66,7 @@ man/man1/profanity-plugins.1
 man/man1/profanity-prefs.1
 man/man1/profanity-presence.1
 man/man1/profanity-priority.1
+man/man1/profanity-privacy.1
 man/man1/profanity-privileges.1
 man/man1/profanity-quit.1
 man/man1/profanity-receipts.1
@@ -85,9 +86,11 @@ man/man1/profanity-silence.1
 man/man1/profanity-slashguard.1
 man/man1/profanity-software.1
 man/man1/profanity-splash.1
+man/man1/profanity-stamp.1
 man/man1/profanity-states.1
 man/man1/profanity-status.1
 man/man1/profanity-statusbar.1
+man/man1/profanity-strophe.1
 man/man1/profanity-sub.1
 man/man1/profanity-subject.1
 man/man1/profanity-theme.1
@@ -96,6 +99,7 @@ man/man1/profanity-titlebar.1
 man/man1/profanity-tls.1
 man/man1/profanity-tray.1
 man/man1/profanity-url.1
+man/man1/profanity-vcard.1
 man/man1/profanity-vercheck.1
 man/man1/profanity-who.1
 man/man1/profanity-win.1
@@ -115,8 +119,10 @@ share/profanity/themes/boothj5_slack
 share/profanity/themes/complex
 share/profanity/themes/forest
 share/profanity/themes/gruvbox
+share/profanity/themes/gruvbox_transparent
 share/profanity/themes/hacker
 share/profanity/themes/headache
+share/profanity/themes/irssi
 share/profanity/themes/joker
 share/profanity/themes/jubalian
 share/profanity/themes/mono

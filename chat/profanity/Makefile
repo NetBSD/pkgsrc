@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/10/24 22:08:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2023/11/02 13:50:47 nros Exp $
 
-DISTNAME=	profanity-0.12.1
-PKGREVISION=	9
+DISTNAME=	profanity-0.14.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -17,9 +16,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 USE_CURSES=	wide
-
-# probably fixed in 0.14.0
-PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
