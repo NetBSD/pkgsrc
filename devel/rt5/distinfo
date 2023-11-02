@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2022/10/06 02:18:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2023/11/02 19:15:10 markd Exp $
 
-BLAKE2s (rt-5.0.3.tar.gz) = b46baa1082e4358313b1af5d536e810f15fddb6c4883fb14750142c74fcebced
-SHA512 (rt-5.0.3.tar.gz) = 9378c5df44434d3c73ca2fcce32d32693806561b6a6db5afd206f812eb26b5c9e87efdcb573ec60a4961cb45781839fcea925816b2478a726810373f23148773
-Size (rt-5.0.3.tar.gz) = 18601901 bytes
+BLAKE2s (rt-5.0.5.tar.gz) = b96354bfc3b9b2211a066b57ab6d393ab0f2c205553ce4f1e35e498ddb027c5e
+SHA512 (rt-5.0.5.tar.gz) = 0d49bae9cbeefb93c48cd6d4e5389d12922a5ef93374945d29d69afc723ff1c1b78f8a02c2971bcfae0ce7dfef8aae8874fc14603b11d05a0d90db6f6fa0aff6
+Size (rt-5.0.5.tar.gz) = 19055361 bytes
 SHA1 (patch-Makefile.in) = 9009623bc764c351dcb79d365a4b0728b18f4205
 SHA1 (patch-config.layout) = 9e94a03bc33ea2bbb353172ce9d89365dc8bc723
