@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1436 2023/10/31 15:28:36 pho Exp $
+# $NetBSD: Makefile,v 1.1437 2023/11/02 02:38:46 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -340,6 +340,7 @@ SUBDIR+=	hs-jira-wiki-markup
 SUBDIR+=	hs-libyaml
 SUBDIR+=	hs-lucid
 SUBDIR+=	hs-megaparsec
+SUBDIR+=	hs-microstache
 SUBDIR+=	hs-pandoc-types
 SUBDIR+=	hs-parsers
 SUBDIR+=	hs-polyparse
