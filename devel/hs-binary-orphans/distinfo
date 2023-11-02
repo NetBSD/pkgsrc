@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 02:28:11 pho Exp $
+
+BLAKE2s (binary-orphans-1.0.4.1.tar.gz) = 89b29f42976d349c9d9e976799b46b61780184c17403199d52cd3b7a559d0747
+SHA512 (binary-orphans-1.0.4.1.tar.gz) = 97b37ecc232ef0117f1b0ce11fcd527dad41c6680ad327b74c51fa10ef3cb672a9e1a6c1e6bd015dc1a7f4a4a657178790aa8af8e8200ca7eebd2f11db131a13
+Size (binary-orphans-1.0.4.1.tar.gz) = 5327 bytes
