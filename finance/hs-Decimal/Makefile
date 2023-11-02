@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:36 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/02 06:37:06 pho Exp $
 
 DISTNAME=	Decimal-0.5.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	finance math # XXX: This should be moved to the math category.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

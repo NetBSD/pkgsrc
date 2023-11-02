@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/30 18:52:37 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:36:43 pho Exp $
 
 DISTNAME=	lens-5.2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

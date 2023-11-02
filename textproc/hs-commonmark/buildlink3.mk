@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/28 09:52:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:37:29 pho Exp $
 
 BUILDLINK_TREE+=	hs-commonmark
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-commonmark
 HS_COMMONMARK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-commonmark+=	hs-commonmark>=0.2.4
-BUILDLINK_ABI_DEPENDS.hs-commonmark+=	hs-commonmark>=0.2.4
+BUILDLINK_ABI_DEPENDS.hs-commonmark+=	hs-commonmark>=0.2.4nb1
 BUILDLINK_PKGSRCDIR.hs-commonmark?=	../../textproc/hs-commonmark
 
 .include "../../textproc/hs-unicode-data/buildlink3.mk"

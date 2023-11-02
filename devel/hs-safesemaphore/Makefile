@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 17:05:49 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:54 pho Exp $
 
 DISTNAME=	SafeSemaphore-0.10.1
 PKGNAME=	hs-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

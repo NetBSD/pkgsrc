@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2023/10/09 04:54:49 pho Exp $
+# $NetBSD: Makefile,v 1.17 2023/11/02 06:37:28 pho Exp $
 
 DISTNAME=	case-insensitive-1.2.1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

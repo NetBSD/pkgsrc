@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/31 11:05:23 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:13 pho Exp $
 
 DISTNAME=	pandoc-lua-engine-0.2.1.2
+PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

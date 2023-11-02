@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/30 14:52:15 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/02 06:37:10 pho Exp $
 
 DISTNAME=	adjunctions-4.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

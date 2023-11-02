@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:21 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/02 06:36:42 pho Exp $
 
 DISTNAME=	ipynb-0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

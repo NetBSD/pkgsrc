@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/10/09 04:54:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/11/02 06:37:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-transformers-compat
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-transformers-compat
 HS_TRANSFORMERS_COMPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-transformers-compat+=	hs-transformers-compat>=0.7.1
-BUILDLINK_ABI_DEPENDS.hs-transformers-compat+=	hs-transformers-compat>=0.7.2nb2
+BUILDLINK_ABI_DEPENDS.hs-transformers-compat+=	hs-transformers-compat>=0.7.2nb3
 BUILDLINK_PKGSRCDIR.hs-transformers-compat?=	../../devel/hs-transformers-compat
 
 .include "../../devel/hs-fail/buildlink3.mk"

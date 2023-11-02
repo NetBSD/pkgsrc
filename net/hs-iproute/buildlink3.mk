@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/10/09 04:54:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2023/11/02 06:37:16 pho Exp $
 
 BUILDLINK_TREE+=	hs-iproute
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-iproute
 HS_IPROUTE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-iproute+=	hs-iproute>=1.7.12
-BUILDLINK_ABI_DEPENDS.hs-iproute+=	hs-iproute>=1.7.12nb4
+BUILDLINK_ABI_DEPENDS.hs-iproute+=	hs-iproute>=1.7.12nb5
 BUILDLINK_PKGSRCDIR.hs-iproute?=	../../net/hs-iproute
 
 .include "../../textproc/hs-appar/buildlink3.mk"
