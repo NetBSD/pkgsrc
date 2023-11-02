@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/02 01:55:07 pho Exp $
+lib/torrent-${PKGVERSION}/${HS_VERSION}/package-description
+lib/torrent-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent/Scrape.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent/Scrape.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Torrent/Scrape.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/Data-Torrent-Scrape.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/Data-Torrent.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/torrent-${PKGVERSION}/html/torrent.haddock

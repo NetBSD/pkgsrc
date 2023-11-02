@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 01:55:07 pho Exp $
+
+BLAKE2s (torrent-10000.1.3.tar.gz) = 560ade86e73dc5f12e9c66fa45151b7c8f3c7426113f149d68fa05cfb02b273b
+SHA512 (torrent-10000.1.3.tar.gz) = 902b58b69e10405aa011379ebe25693fb2117bb2da298b28f83a2ae33848e059c1cb311dd1fca87b99b76bee5b6f16be0770b65049d170c47fb1e3a05e5afd98
+Size (torrent-10000.1.3.tar.gz) = 4079 bytes
