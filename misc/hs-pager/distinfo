@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 15:33:10 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/11/02 01:24:16 pho Exp $
 
 BLAKE2s (pager-0.1.1.0.tar.gz) = 7591a8394d8354e4f11c7a0753f428dbded846f933e3061490d5ecb378dd8d62
 SHA512 (pager-0.1.1.0.tar.gz) = db8fd740cfe482076dd162dd0ac36e973ea84d89e3859cd2877f1809608fdb0e0cd9cc5c207482dd892245ccece6f4df918f16e431b822ca5e1b4d9efda942c4
 Size (pager-0.1.1.0.tar.gz) = 3751 bytes
+SHA1 (patch-pager.cabal) = fdc55640b8a505d4ad958d493b7083a6573d1b70
