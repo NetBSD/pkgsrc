@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2022/12/01 13:39:03 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.17 2023/11/02 21:48:51 wiz Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_DIRS+=	build
