@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2023/07/27 08:43:16 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.52 2023/11/02 13:18:15 adam Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs14/Makefile
 # used by lang/nodejs16/Makefile
@@ -43,6 +43,9 @@ CONFIGURE_ARGS+=	--dest-cpu=ppc
 .if ${OPSYS} == "Linux" && !exists(/usr/bin/gold)
 CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
 .endif
+
+# see patch-configure.py and patch-tools_gyp_pylib_gyp_input.py
+TOOL_DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 REPLACE_NODEJS+=	deps/corepack/dist/*.js
 REPLACE_NODEJS+=	deps/npm/bin/*.js
