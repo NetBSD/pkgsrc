@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2023/11/02 12:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2023/11/02 14:43:05 wiz Exp $
 
-DISTNAME=	mosh-1.3.2
-PKGREVISION=	10
+DISTNAME=	mosh-1.4.0
 CATEGORIES=	net
-MASTER_SITES=	http://mosh.org/
+MASTER_SITES=	https://mosh.org/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://mosh.org/
@@ -12,8 +11,13 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run pkg-config
-USE_LANGUAGES+=		c c++11
+USE_LANGUAGES+=		c c++
 USE_GCC_RUNTIME=	yes
+
+USE_CXX_FEATURES+=	c++14
+
+# USE_CXX_FEATURES does not affect configure phase, but is needed there
+CXXFLAGS+=	-std=c++14
 
 REPLACE_PERL+=	scripts/mosh.pl
 REPLACE_PERL+=	src/tests/genbase64.pl
