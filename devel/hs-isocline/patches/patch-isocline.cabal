@@ -1,0 +1,14 @@
+$NetBSD: patch-isocline.cabal,v 1.1 2023/11/02 01:18:11 pho Exp $
+
+Do not build or install the example executable. We don't want it in pkgsrc.
+
+--- isocline.cabal.orig	2023-11-02 01:16:41.074512957 +0000
++++ isocline.cabal
+@@ -72,6 +72,7 @@ library
+   default-language: Haskell2010
+ 
+ executable example
++  buildable: False
+   main-is: Example.hs
+   other-modules:
+       Paths_isocline
