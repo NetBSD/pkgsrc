@@ -1,18 +1,18 @@
-$NetBSD: patch-CodeLite_cpp__func__parser.cpp,v 1.1 2023/10/26 10:46:58 nros Exp $
+$NetBSD: patch-CodeLite_cpp__func__parser.cpp,v 1.2 2023/11/02 12:04:02 nros Exp $
 
 Fix Warning: ISO C++ forbids converting a string constant to char*
 
---- CodeLite/cpp_func_parser.cpp.orig	2023-10-25 12:56:08.665232425 +0000
+--- CodeLite/cpp_func_parser.cpp.orig	2023-10-26 10:47:53.399134128 +0000
 +++ CodeLite/cpp_func_parser.cpp
-@@ -55,6 +55,8 @@ void cl_func_error(char *string);
- static FunctionList *g_funcs = NULL;
- static clFunction curr_func;
- 
-+static char semsg[] = "syntax error";
-+static char ysomsg[] = "yacc stack overflow";
- /*---------------------------------------------*/
- /* externs defined in the lexer*/
- /*---------------------------------------------*/
+@@ -624,6 +624,8 @@ int
+ yyparse()
+ {
+     register int yym, yyn, yystate;
++    char semsg[] = "syntax error";
++    char ysomsg[] = "yacc stack overflow";
+ #if YYDEBUG
+     register char *yys;
+     extern char *getenv();
 @@ -689,7 +691,7 @@ yyloop:
      goto yynewerror;
  #endif

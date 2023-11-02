@@ -1,18 +1,18 @@
-$NetBSD: patch-CodeLite_pp.cpp,v 1.1 2023/10/26 10:46:58 nros Exp $
+$NetBSD: patch-CodeLite_pp.cpp,v 1.2 2023/11/02 12:04:02 nros Exp $
 
 Fix Warning: ISO C++ forbids converting a string constant to char*
 
---- CodeLite/pp.cpp.orig	2023-10-25 17:36:29.887514094 +0000
+--- CodeLite/pp.cpp.orig	2023-10-26 10:47:53.400757236 +0000
 +++ CodeLite/pp.cpp
-@@ -79,6 +79,8 @@ extern wxString g_filename;
- 
- /* Static*/
- static std::vector<wxString> g_tmpMacros;
-+static char semsg[] = "syntax error";
-+static char ysomsg[] = "yacc stack overflow";
- 
- /*************** Standard ytab.c continues here *********************/
- #define PP_DEFINE 257
+@@ -305,6 +305,8 @@ int
+ yyparse()
+ {
+     register int yym, yyn, yystate;
++    char semsg[] = "syntax error";
++    char ysomsg[] = "yacc stack overflow";
+ #if YYDEBUG
+     register char *yys;
+     extern char *getenv();
 @@ -370,7 +372,7 @@ yyloop:
      goto yynewerror;
  #endif
