@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6511 2023/11/02 02:44:45 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6512 2023/11/02 02:47:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9477,3 +9477,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added www/hs-js-chart version 2.9.4.1 [pho 2023-11-02]
 	Added textproc/hs-microstache version 1.0.2.3 [pho 2023-11-02]
 	Added math/hs-dense-linear-algebra version 0.1.0.0 [pho 2023-11-02]
+	Added math/hs-statistics version 0.16.2.1 [pho 2023-11-02]
