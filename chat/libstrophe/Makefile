@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/10/24 22:08:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/02 13:30:46 nros Exp $
 
-DISTNAME=	libstrophe-0.12.0
-PKGREVISION=	1
+DISTNAME=	libstrophe-0.12.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strophe/}
 GITHUB_PROJECT=	libstrophe
