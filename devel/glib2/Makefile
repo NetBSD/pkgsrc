@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2023/11/02 13:17:26 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2023/11/02 13:26:33 wiz Exp $
 
 .include "Makefile.common"
 
@@ -48,7 +48,7 @@ REPLACE_PYTHON+=	gobject/tests/mkenums.py
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
 SUBST_FILES.python+=	output/glib/gtester-report
-SUBST_MESSAGE.python+=	Fixing path to Python.
+SUBST_MESSAGE.python=	Fixing path to Python.
 SUBST_SED.python+=	-e "s,^\(.*\)/usr/bin/env.*,\1${PYTHONBIN},"
 
 GIO_MODULES_DIR=	${PREFIX}/lib/gio/modules
