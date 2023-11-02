@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6508 2023/11/02 02:32:12 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6509 2023/11/02 02:34:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9474,3 +9474,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added misc/hs-magic version 1.1 [pho 2023-11-02]
 	Added devel/hs-binary-orphans version 1.0.4.1 [pho 2023-11-02]
 	Added benchmarks/hs-criterion-measurement version 0.2.1.0 [pho 2023-11-02]
+	Added www/hs-js-chart version 2.9.4.1 [pho 2023-11-02]
