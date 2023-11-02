@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2023/11/01 03:15:04 pho Exp $
+# $NetBSD: Makefile,v 1.706 2023/11/02 04:58:04 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -132,7 +132,6 @@ SUBDIR+=	hs-hslua-repl
 SUBDIR+=	hs-hslua-typing
 SUBDIR+=	hs-language-javascript
 SUBDIR+=	hs-lua
-SUBDIR+=	hs-purescript-cst
 SUBDIR+=	hs-sourcemap
 SUBDIR+=	hugs
 SUBDIR+=	icon
