@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6517 2023/11/02 04:43:45 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6518 2023/11/02 04:45:04 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9483,3 +9483,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed net/hs-connection [pho 2023-11-02]
 	Removed security/hs-x509-system [pho 2023-11-02]
 	Removed security/hs-x509-validation [pho 2023-11-02]
+	Removed security/hs-x509-store [pho 2023-11-02]
