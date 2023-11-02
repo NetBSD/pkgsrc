@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/02 02:34:39 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:46 pho Exp $
 
 DISTNAME=	js-chart-2.9.4.1
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

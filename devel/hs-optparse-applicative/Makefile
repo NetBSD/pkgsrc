@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/10/29 11:31:29 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/02 06:36:49 pho Exp $
 
 DISTNAME=	optparse-applicative-0.18.1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

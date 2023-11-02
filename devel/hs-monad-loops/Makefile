@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:24 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:48 pho Exp $
 
 DISTNAME=	monad-loops-0.4.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

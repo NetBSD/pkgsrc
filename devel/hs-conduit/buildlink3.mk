@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/10/30 08:16:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/11/02 06:36:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-conduit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-conduit
 HS_CONDUIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-conduit+=	hs-conduit>=1.3.5
-BUILDLINK_ABI_DEPENDS.hs-conduit+=	hs-conduit>=1.3.5
+BUILDLINK_ABI_DEPENDS.hs-conduit+=	hs-conduit>=1.3.5nb1
 BUILDLINK_PKGSRCDIR.hs-conduit?=	../../devel/hs-conduit
 
 .include "../../devel/hs-mono-traversable/buildlink3.mk"

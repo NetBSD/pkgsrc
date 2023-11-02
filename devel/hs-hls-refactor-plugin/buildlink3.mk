@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 12:51:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/11/02 06:36:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-refactor-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-refactor-plugin
 HS_HLS_REFACTOR_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-refactor-plugin+=	hs-hls-refactor-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-refactor-plugin+=	hs-hls-refactor-plugin>=2.4.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-refactor-plugin+=	hs-hls-refactor-plugin>=2.4.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-refactor-plugin?=	../../devel/hs-hls-refactor-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

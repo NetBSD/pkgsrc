@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/09 04:54:46 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:37:25 pho Exp $
 
 DISTNAME=	process-extras-0.7.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	pho@cielonegro.org

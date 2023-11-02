@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/10/30 13:36:59 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:41 pho Exp $
 
 DISTNAME=	xml-hamlet-0.5.0.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

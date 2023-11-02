@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/30 09:19:31 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:37:48 pho Exp $
 
 DISTNAME=	wai-websockets-3.0.1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

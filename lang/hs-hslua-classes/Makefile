@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/29 07:13:50 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:37:07 pho Exp $
 
 DISTNAME=	hslua-classes-2.3.0
+PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

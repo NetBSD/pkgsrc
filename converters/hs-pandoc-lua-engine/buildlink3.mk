@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/31 11:05:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:36:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-lua-engine
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pandoc-lua-engine
 HS_PANDOC_LUA_ENGINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1.2
+BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1.2nb1
 BUILDLINK_PKGSRCDIR.hs-pandoc-lua-engine?=	../../converters/hs-pandoc-lua-engine
 
 .include "../../converters/hs-aeson/buildlink3.mk"

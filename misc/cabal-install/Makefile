@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/10/29 03:57:49 pho Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/02 06:37:15 pho Exp $
 
 DISTNAME=	cabal-install-3.10.1.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pho@cielonegro.org

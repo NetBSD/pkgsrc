@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/10/28 14:33:14 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:12 pho Exp $
 
 DISTNAME=	integer-conversion-0.1.0.1
+PKGREVISION=	1
 CATEGORIES=	math converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
