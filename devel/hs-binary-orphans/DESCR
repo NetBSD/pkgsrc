@@ -1,0 +1,4 @@
+This package provides instances defined in later versions of binary package
+
+Prior to version 1 this package provided instances for other packages. That
+functionality is moved to binary-instances package.
