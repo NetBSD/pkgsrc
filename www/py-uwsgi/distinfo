@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.45 2023/10/29 18:18:03 wiz Exp $
+$NetBSD: distinfo,v 1.46 2023/11/02 09:05:50 adam Exp $
 
-BLAKE2s (uwsgi-2.0.22.tar.gz) = b67f868770f3efb3d0ffeec4acdd6bda71ea746c06e49407a657bd22c3a077d5
-SHA512 (uwsgi-2.0.22.tar.gz) = 23c68336dd8bf41aa415b90d117be2b7e72773be2f3c1bac720a496f58bc56ae0ac2960c7bac4b8d73b16b459e10096dadd0e545fc3088d1979058bb275810e7
-Size (uwsgi-2.0.22.tar.gz) = 809747 bytes
+BLAKE2s (uwsgi-2.0.23.tar.gz) = 7832df1d5d0f343141d6b49a930644b2026cd846b348d67ca76bf780939289ca
+SHA512 (uwsgi-2.0.23.tar.gz) = 3015c8349f1ba60e662ca6dd3e559fecd03a72a1df31aaa6561b286f0c42930b5c56b2680bb0954b9ff0e435d028dabe94c13549d02fe51e1947d8f05a891946
+Size (uwsgi-2.0.23.tar.gz) = 810320 bytes
 SHA1 (patch-base.ini) = 1c5d7693e6c8011e6cc34f5f5d203584c985eb30
 SHA1 (patch-core_logging.c) = e1e5f39446baecdcfc1738aa97852ad3d5ca40c7
-SHA1 (patch-plugins_python_python__plugin.c) = a536641efc3a25c7f43c37a507219fae0fe5f214
-SHA1 (patch-plugins_python_uwsgi__python.h) = 80ee323d5928c2e9ec7020d194f51676230c399d
 SHA1 (patch-uwsgi.h) = 112a325615e517f29b2420ba08f76d6a7a1bd3ef
 SHA1 (patch-uwsgiconfig.py) = 4945de7da82f3b05508e7d30ee0c3fe3144a2829
