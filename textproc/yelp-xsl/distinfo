@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:23:42 nia Exp $
+$NetBSD: distinfo,v 1.16 2023/11/02 10:23:35 wiz Exp $
 
-BLAKE2s (yelp-xsl-3.32.1.tar.xz) = fc2075442a07703e70ce29e7ad1dfe50a7da95d7eed6e44df02c15971c8e5cc1
-SHA512 (yelp-xsl-3.32.1.tar.xz) = 05a03e045c8278faaf39604d6cbccb449130d2c85e3231c8c9737e344fc249cd2949011fb1a0e4fb6085dc21374e7804fc7fa4161f51607d93b301cbcf5453be
-Size (yelp-xsl-3.32.1.tar.xz) = 528412 bytes
+BLAKE2s (yelp-xsl-42.1.tar.xz) = 458482f9611b71d23e8625d4edc05a971b47457e2ac8fa5275ca67c23652a768
+SHA512 (yelp-xsl-42.1.tar.xz) = 90c7cc244dba038d6fcc1344adf950640a0affb8e5a1a6945a776d3308bf9b5071320856968f7a31688855a18a872f63553bd643b7776801cc68b182b455fc10
+Size (yelp-xsl-42.1.tar.xz) = 667448 bytes
