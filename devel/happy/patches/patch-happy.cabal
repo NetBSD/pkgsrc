@@ -1,0 +1,29 @@
+$NetBSD: patch-happy.cabal,v 1.1 2023/11/02 01:15:01 pho Exp $
+
+happy tries to use itself in the building process of the test suite but the
+current version of Cabal (shipped with GHC 9.6) doesn't support it yet. We
+must disable the test suite for now.
+
+--- happy.cabal.orig	2023-11-01 10:57:50.000000000 +0000
++++ happy.cabal
+@@ -146,7 +146,7 @@ extra-source-files:
+ flag bootstrap
+   description: Optimize the implementation of happy using a pre-built happy
+   manual: True
+-  default: True
++  default: False
+ 
+ source-repository head
+   type:     git
+@@ -203,10 +203,10 @@ executable happy
+ 
+ 
+ test-suite tests
++  buildable: False
+   type: exitcode-stdio-1.0
+   main-is: test.hs
+   -- This line is important as it ensures that the local `exe:happy` component declared above is built before the test-suite component is invoked, as well as making sure that `happy` is made available on $PATH and `$happy_datadir` is set accordingly before invoking `test.hs`
+-  build-tools: happy
+ 
+   build-depends: base, process
+   default-language: Haskell98
