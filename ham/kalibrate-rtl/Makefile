@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/02/07 14:03:50 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 22:13:45 gdt Exp $
 
 DISTNAME=	kalibrate-rtl-20131215
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=steve-m/}
 GITHUB_TAG=	aae11c8a8dc79692a94ccfee39ba01e8c8c05d38
