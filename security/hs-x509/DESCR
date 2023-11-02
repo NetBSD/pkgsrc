@@ -1,3 +1,0 @@
-Read/Write X509 Certificate, CRL and their signed equivalents.
-
-Follows RFC5280 / RFC6818
