@@ -1,18 +1,18 @@
-$NetBSD: patch-CodeLite_var__parser.cpp,v 1.1 2023/10/26 10:46:58 nros Exp $
+$NetBSD: patch-CodeLite_var__parser.cpp,v 1.2 2023/11/02 12:04:02 nros Exp $
 
 Fix Warning: ISO C++ forbids converting a string constant to char*
 
---- CodeLite/var_parser.cpp.orig	2023-10-25 12:56:08.670851597 +0000
+--- CodeLite/var_parser.cpp.orig	2023-10-26 10:47:53.407870798 +0000
 +++ CodeLite/var_parser.cpp
-@@ -62,6 +62,8 @@ static  std::string           s_tmpStrin
- static  Variable              curr_var;
- static  std::string           s_templateInitList;
- static  bool                  isBasicType = false;
-+static  char semsg[] = "syntax error";
-+static  char ysomsg[] = "yacc stack overflow";
- 
- /*---------------------------------------------*/
- /* externs defined in the lexer*/
+@@ -745,6 +745,8 @@ int
+ yyparse()
+ {
+     register int yym, yyn, yystate;
++    char semsg[] = "syntax error";
++    char ysomsg[] = "yacc stack overflow";
+ #if YYDEBUG
+     register char *yys;
+     extern char *getenv();
 @@ -810,7 +812,7 @@ yyloop:
      goto yynewerror;
  #endif
