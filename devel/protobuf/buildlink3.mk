@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/11/02 12:24:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2023/11/02 12:45:02 wiz Exp $
 
 BUILDLINK_TREE+=	protobuf
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.protobuf?=		../../devel/protobuf
 
 BUILDLINK_FILES.protobuf+=	bin/protoc
 BUILDLINK_FILES.protobuf+=	bin/protoc-*
+.include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .endif	# PROTOBUF_BUILDLINK3_MK
 
