@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:23:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2023/11/02 10:26:24 wiz Exp $
 
-BLAKE2s (yelp-tools-3.32.2.tar.gz) = 5bd9ff0040cdb424dacf0095e1a7e13dc999cd14172dc9a00052cdaa2bb04daf
-SHA512 (yelp-tools-3.32.2.tar.gz) = d43890ddf66e8d95d97ebd4ccc7b270cf2ffde7a2d80f889a5a8589c41f1790b4670400062add932c7fb439bfe48bee3a6d106c1e775e1e93ad66b3b77d9db42
-Size (yelp-tools-3.32.2.tar.gz) = 41136 bytes
+BLAKE2s (yelp-tools-42.1.tar.gz) = e9c7c460732437139ca85c17136e51d59ac42ce90832272135071b74be17e06f
+SHA512 (yelp-tools-42.1.tar.gz) = 6df7797e55b18b3f9a8f40b87e84ae9da31f4804ac452884e6fcb2b39f69195546bffb0b6d972890c09cb4cb52cb86b52713a2f83d1296a8a20cd5c98583ee4c
+Size (yelp-tools-42.1.tar.gz) = 45150 bytes
