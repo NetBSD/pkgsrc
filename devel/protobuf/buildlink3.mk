@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.16 2023/11/02 12:45:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2023/11/02 14:33:58 wiz Exp $
 
 BUILDLINK_TREE+=	protobuf
 
 .if !defined(PROTOBUF_BUILDLINK3_MK)
 PROTOBUF_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++14
 
 BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=24.4
 BUILDLINK_ABI_DEPENDS.protobuf+=	protobuf>=24.4
