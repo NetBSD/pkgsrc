@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6531 2023/11/02 13:17:49 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6532 2023/11/02 13:17:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9503,3 +9503,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-jupyter_core to 5.5.0 [adam 2023-11-02]
 	Updated devel/glib2 to 2.78.0 [wiz 2023-11-02]
 	Updated devel/glib2-tools to 2.78.0 [wiz 2023-11-02]
+	Updated devel/gdbus-codegen to 2.78.0 [wiz 2023-11-02]
