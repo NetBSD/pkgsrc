@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.68 2023/11/02 12:17:25 wiz Exp $
 #
 # When updating this, please also update devel/py-protobuf
 #
@@ -7,40 +7,31 @@
 # from before and after, and do a recursive PKGREVISION
 # bump if necessary
 
-DISTNAME=	protobuf-cpp-3.21.12
-PKGNAME=	${DISTNAME:S/-cpp//}
+DISTNAME=	protobuf-24.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf
-# attention, does not match version above!
-GITHUB_RELEASE=	v${PKGVERSION_NOREV:S/3.//}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/protocolbuffers/protobuf
 COMMENT=	Google protocol buffers
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-cpp//}
+USE_LANGUAGES=		c c++14
 
-USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
-PKGCONFIG_OVERRIDE+=	protobuf.pc.in
-TEST_TARGET=		check
+CMAKE_ARGS+=		-Dprotobuf_ABSL_PROVIDER=package
+CMAKE_ARGS+=		-Dprotobuf_BUILD_SHARED_LIBS=ON
+# requires googletest to be checked out in third_party/googletest
+CMAKE_ARGS+=		-Dprotobuf_BUILD_TESTS=OFF
 
-USE_CXX_FEATURES+=	c++11
-
-# false positive: the Makefile generates bash programs
-CHECK_PORTABILITY_SKIP=		benchmarks/Makefile.in
 # the [[ command will skip a test that would otherwise run
 CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh
 
-SET_LIBDIR=	yes
-
-# included in third_party
+.include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk"
+BUILDLINK_API_DEPENDS.abseil+=	abseil>=20230125.3
+.include "../../devel/abseil/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
