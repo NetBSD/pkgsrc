@@ -1,7 +1,9 @@
-$NetBSD: patch-hadrian_src_Settings_Packages.hs,v 1.1 2023/10/23 08:06:49 pho Exp $
+$NetBSD: patch-hadrian_src_Settings_Packages.hs,v 1.2 2023/11/02 15:29:31 pho Exp $
 
 Hunk #0, #1:
-  Don't assume we always build the threaded RTS. TODO: Upstream this.
+  Don't assume we always build the threaded RTS. This can only be
+  upstreamed after they update its Haddock to a version containing this
+  change: https://github.com/haskell/haddock/pull/1575
 
 Hunk #2:
   Hadrian does something unholy on i386 to gain speed but it seems to be
