@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.14 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2023/11/02 10:26:24 wiz Exp $
 
-DISTNAME=	yelp-tools-3.32.2
-PKGREVISION=	9
+DISTNAME=	yelp-tools-42.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	http://yelp.io/tools/
 COMMENT=	Set of command-line tools to build and check your documentation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config autoreconf autoconf automake gmake
-
-pre-configure:
-	${RUN} cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh NOCONFIGURE=1
-
 DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
+USE_TOOLS+=	pkg-config
+
+REPLACE_PYTHON+=	tools/*.in
+
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.yelp-xsl=	yelp-xsl>=3.38
 .include "../../textproc/yelp-xsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
