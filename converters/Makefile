@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2023/10/31 17:08:21 pho Exp $
+# $NetBSD: Makefile,v 1.209 2023/11/02 01:54:05 pho Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -38,6 +38,7 @@ SUBDIR+=	hs-aeson-pretty
 SUBDIR+=	hs-base16-bytestring
 SUBDIR+=	hs-base64
 SUBDIR+=	hs-base64-bytestring
+SUBDIR+=	hs-bencode
 SUBDIR+=	hs-cborg-json
 SUBDIR+=	hs-deriving-aeson
 SUBDIR+=	hs-emojis
