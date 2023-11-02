@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2023/10/29 13:44:04 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2023/11/02 13:22:42 adam Exp $
+
+Allow build with Python 3.12.
 
 --- configure.orig	2023-10-13 12:33:28.000000000 +0000
 +++ configure
