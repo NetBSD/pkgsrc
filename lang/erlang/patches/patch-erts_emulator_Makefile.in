@@ -1,0 +1,15 @@
+$NetBSD: patch-erts_emulator_Makefile.in,v 1.4 2023/11/02 19:20:46 adam Exp $
+
+Properly install shared objects.
+
+--- erts/emulator/Makefile.in.orig	2023-11-02 13:47:00.312356819 +0000
++++ erts/emulator/Makefile.in
+@@ -483,7 +483,7 @@ all: $(BINDIR)/$(EMULATOR_EXECUTABLE) $(
+ endif
+ 
+ $(BINDIR)/$(PRIMARY_EXECUTABLE): $(BINDIR)/$(FLAVOR_EXECUTABLE)
+-	$(INSTALL_PROGRAM) $< $@
++	${BSD_INSTALL_LIB} $< $@
+ ifeq ($(TARGET), win32)
+ 	$(INSTALL_PROGRAM) $(basename $<).pdb $(basename $@).pdb
+ endif

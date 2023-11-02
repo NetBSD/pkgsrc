@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.107 2023/10/23 14:41:05 adam Exp $
+$NetBSD: distinfo,v 1.108 2023/11/02 19:20:46 adam Exp $
 
 BLAKE2s (erlang-26.1.2.tar.gz) = f01e68ac4b232ce0fb4b303c69a3ba6a403892b02d34588e2d22a217a9da79dc
 SHA512 (erlang-26.1.2.tar.gz) = 6907bba4ee726582b6344995c73223f725ea628897b34fc807a2a0306536bb15ce55c7fd4da1cb596dc59c9695b3bb6bba59618ca2a7a9a999e183f671656710
 Size (erlang-26.1.2.tar.gz) = 63932020 bytes
-SHA1 (patch-ab) = 9d1e33ab3660b5cf0faa2b74129158b71aae408f
-SHA1 (patch-ay) = 21dc0a123ae0d6f8e86f3fb9ffaf66e26361172b
+SHA1 (patch-erts_emulator_Makefile.in) = b99ccd2669652b1542b2ee99e09f886d864fd8be
 SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = dbe72306aac6be0cec09f45869ff077f1bab1e68
 SHA1 (patch-erts_emulator_nifs_unix_unix__socket__syncio.c) = 6bad5f82ca72c46d3b8e4e0c5a4a7622ff85d3bf
 SHA1 (patch-erts_emulator_sys_unix_sys__uds.c) = ee131143c177b2bc1453d94097cbf6b3d3cfb899
 SHA1 (patch-erts_etc_unix_run__erl.c) = b888aaed44cab4eea87474f7f02adba1f904e033
 SHA1 (patch-erts_lib__src_common_erl__printf.c) = e156722b0617a4a9eb1eb7ea63365cb52ff2e2c9
-SHA1 (patch-lib_crypto_c__src_Makefile.in) = d1f3004e7551231d415fcd240abe13760cfa7277
+SHA1 (patch-lib_asn1_c__src_Makefile) = d47870e58de5e10a94dfa9f4a274c88261633e5b
+SHA1 (patch-lib_crypto_c__src_Makefile.in) = 025efecaa05f8a190a9024c475cbe5e9ab9286d9
+SHA1 (patch-lib_megaco_src_flex_Makefile.in) = 06eb5a76cc2e5adb4294c7db6919bb7c083c425c
+SHA1 (patch-lib_odbc_c__src_Makefile.in) = 21dc0a123ae0d6f8e86f3fb9ffaf66e26361172b
+SHA1 (patch-lib_runtime__tools_c__src_Makefile.in) = 98d351192902d5f6d3bd506c6e382caa06642383
+SHA1 (patch-make_otp.mk.in) = 9d1e33ab3660b5cf0faa2b74129158b71aae408f
 SHA1 (patch-make_output.mk.in) = d7b3da58bfb471d52c41242e2a03d1598ce24e62
