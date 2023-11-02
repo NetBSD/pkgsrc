@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2022/09/07 00:58:45 pho Exp $
-
-BLAKE2s (cryptonite-0.30.tar.gz) = 00b434b71d9c3c1d8808186d0cf036e5497bdd2858ecd8b3f936456b9fc3d4fe
-SHA512 (cryptonite-0.30.tar.gz) = 519120263fb7c2b9f910e48cf43feaca07f7e705ea70c578da362dafa637b654cab90e3b9484497e33a6fdd5b8f867c0ede60d0dddba02602044b9b3de502d16
-Size (cryptonite-0.30.tar.gz) = 621062 bytes
