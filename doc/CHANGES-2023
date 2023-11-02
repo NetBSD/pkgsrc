@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6527 2023/11/02 10:35:26 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6528 2023/11/02 10:41:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9498,3 +9498,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-s3transfer to 0.7.0 [adam 2023-11-02]
 	Updated net/py-boto3 to 1.28.76 [adam 2023-11-02]
 	Updated net/py-awscli to 1.29.76 [adam 2023-11-02]
+	Updated textproc/gtk-doc to 1.32nb14 [wiz 2023-11-02]
