@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1 2023/11/02 13:16:54 adam Exp $
+$NetBSD: distinfo,v 1.2 2023/11/02 13:22:01 adam Exp $
 
 BLAKE2s (node-v20.9.0.tar.xz) = 6ba49fb45e5f5796c95b2e76778f23352d04eef74bdabb25ad6fa6b438269168
 SHA512 (node-v20.9.0.tar.xz) = 2b9453723149e0a94e759131460699a6fdf8656f0c1b7243307442cabef606a4e1d40781b80eaf632874952cb2468fa1e766ababdaa103d5dab623e0ca2f85de
 Size (node-v20.9.0.tar.xz) = 41857572 bytes
 SHA1 (patch-common.gypi) = f50615affd26c2c7902d2112c8e9f2704c057b9c
-SHA1 (patch-configure) = e59589e138ecaf1c36a9809b70c426ef5446543a
+SHA1 (patch-configure) = b1ac7b6baa594bb49f04dad9705e9f38fe9ed13d
 SHA1 (patch-configure.py) = 2c9abb8231a8d7e9950998cc90a3db75a22a74b5
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 29f0c382b68f77749a71ce39fa2ca37338ca18ec
