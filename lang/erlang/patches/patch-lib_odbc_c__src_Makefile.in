@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.3 2022/10/15 18:04:10 triaxx Exp $
+$NetBSD: patch-lib_odbc_c__src_Makefile.in,v 1.1 2023/11/02 19:20:46 adam Exp $
 
 Pass in proper LDFLAGS. Fixes build with iodbc.
 

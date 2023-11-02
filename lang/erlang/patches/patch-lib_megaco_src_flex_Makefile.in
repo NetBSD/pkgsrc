@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_megaco_src_flex_Makefile.in,v 1.1 2023/11/02 19:20:46 adam Exp $
+
+Properly install shared objects.
+
+--- lib/megaco/src/flex/Makefile.in.orig	2023-11-02 14:49:55.001588017 +0000
++++ lib/megaco/src/flex/Makefile.in
+@@ -252,7 +252,7 @@ release_spec: opt
+ 	$(INSTALL_DATA) $(TARGET_FILES) "$(RELSYSDIR)/ebin"
+ ifeq ($(ENABLE_MEGACO_FLEX_SCANNER),true)
+ 	$(INSTALL_DATA) $(FLEX_FILES) $(C_TARGETS) "$(RELSYSDIR)/src/flex"
+-	$(INSTALL_PROGRAM) $(SOLIBS) "$(RELSYSDIR)/priv/lib"
++	${BSD_INSTALL_LIB} $(SOLIBS) "$(RELSYSDIR)/priv/lib"
+ endif
+ 
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_runtime__tools_c__src_Makefile.in,v 1.3 2023/11/02 19:20:46 adam Exp $
+
+Properly install shared objects.
+
+--- lib/runtime_tools/c_src/Makefile.in.orig	2023-11-02 14:43:42.856434868 +0000
++++ lib/runtime_tools/c_src/Makefile.in
+@@ -110,7 +110,7 @@ include $(ERL_TOP)/make/otp_release_targ
+ 
+ release_spec: opt
+ 	$(INSTALL_DIR) "$(RELSYSDIR)/priv/lib"
+-	$(INSTALL_PROGRAM) $(TRACE_LIBS) "$(RELSYSDIR)/priv/lib"
++	${BSD_INSTALL_LIB} $(TRACE_LIBS) "$(RELSYSDIR)/priv/lib"
+ 
+ release_docs_spec:
+ 
