@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2021/10/06 21:10:24 adam Exp $
+# $NetBSD: hacks.mk,v 1.4 2023/11/02 21:48:27 wiz Exp $
 
 .if !defined(OPENCV_HACKS_MK)
 OPENCV_HACKS_MK=	defined
@@ -7,7 +7,7 @@ OPENCV_HACKS_MK=	defined
 .include "../../mk/compiler.mk"
 
 # PR toolchain/47051: gcc-4.5.4 breaks opencv on amd64
-.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.5.4*) && !empty(MACHINE_PLATFORM:M*-*-x86_64)
+.if !empty(PKGSRC_COMPILER:Mgcc) && ${CC_VERSION:Mgcc-4.5.4*} && ${MACHINE_PLATFORM:M*-*-x86_64}
 PKG_HACKS+=		tree-pre
 SUBST_CLASSES+=		opt-hack
 SUBST_STAGE.opt-hack=	post-configure
