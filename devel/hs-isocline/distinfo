@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/10/24 14:08:06 pho Exp $
+$NetBSD: distinfo,v 1.2 2023/11/02 01:18:11 pho Exp $
 
 BLAKE2s (isocline-1.0.9.tar.gz) = abf9645667f403f34927b50d4534ddb3b5fe86404d76a490646720dc9e8fa1df
 SHA512 (isocline-1.0.9.tar.gz) = 0bc1a4b2ad217e1e3b270eeab51b18b4d0f5534fb8759daed4b699f2a56628f4a18d909862abed5c949f671ed746855a6de508ee23f3d93ffbff5a8525db1a47
 Size (isocline-1.0.9.tar.gz) = 101834 bytes
+SHA1 (patch-isocline.cabal) = 8b60331c0b540d28cfc0d5d93a35527362a22889
