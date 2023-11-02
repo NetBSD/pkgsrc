@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:22 pho Exp $
+# $NetBSD: Makefile,v 1.3 2023/11/02 23:44:20 wiz Exp $
 
 DISTNAME=	git-annex-10.20230926
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Manage files with git, without checking their contents into git
 HOMEPAGE=	https://git-annex.branchable.com/
 LICENSE=	gnu-agpl-v3
+
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # Don't build git-annex as a dynamic executable. It will depend on like 270
 # shared libraries and the dynamic linker will spend 5 seconds each time
