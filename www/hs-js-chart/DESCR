@@ -1,0 +1,6 @@
+This package bundles the minified chart.js code into a Haskell package, so
+it can be depended upon by Cabal packages. The first three components of
+the version number match the upstream chart.js version. The package is
+designed to meet the redistribution requirements of downstream users
+(e.g. Debian). This package is a fork of js-flot using chart.js instead of
+flot.

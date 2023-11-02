@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 02:34:39 pho Exp $
+
+BLAKE2s (js-chart-2.9.4.1.tar.gz) = b70341444c6fd573ada633bed929c941a9500784e94e8a15f1785b0d1f46eaf6
+SHA512 (js-chart-2.9.4.1.tar.gz) = 0e6325e12822d2607e04ac61e91963f4aed77a8700ec3bb3bc0662a9006780b6a60361ce135452a684dff048e6089f6057a85b2a83b093448f19dd4eeaf4ebae
+Size (js-chart-2.9.4.1.tar.gz) = 501058 bytes
