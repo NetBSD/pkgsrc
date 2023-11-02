@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2023/09/14 09:10:17 adam Exp $
+$NetBSD: distinfo,v 1.49 2023/11/02 10:32:50 adam Exp $
 
-BLAKE2s (boto3-1.28.47.tar.gz) = ce8bb93782a7ea201465c3ae1ab82279e78b018824ca07a9385521c0f3b8f857
-SHA512 (boto3-1.28.47.tar.gz) = 068748caae59e6ab6033e3ce9b282d980e55047a9012c6d94f3df87764a9d672bee0eb4b8d3415c5a055047643cf84a29d97c1f01a7c5cfba56f5c0c053cd6ef
-Size (boto3-1.28.47.tar.gz) = 103338 bytes
+BLAKE2s (boto3-1.28.76.tar.gz) = b8c7e20847842a4f9afa8b1645f5aed407f2861559a9274542b25b8d9779ae85
+SHA512 (boto3-1.28.76.tar.gz) = 7c6edfd4df4f2f30108b69f9b17536d0b0dfbaa22efa76072a2b982cbcae91da44fae58dc49445c4d54c2bf5f891314af96e4bc50100821bd2846ef2c7da9680
+Size (boto3-1.28.76.tar.gz) = 103359 bytes
