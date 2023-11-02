@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2023/10/24 22:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2023/11/02 12:20:01 wiz Exp $
 
 DISTNAME=	strawberry-1.0.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strawberrymusicplayer/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
