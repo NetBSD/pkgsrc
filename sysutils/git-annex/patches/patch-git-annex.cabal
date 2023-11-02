@@ -1,0 +1,15 @@
+$NetBSD: patch-git-annex.cabal,v 1.1 2023/11/02 03:15:01 pho Exp $
+
+No reason to restrict D-Bus support to Linux. It's a cross-platform thing,
+unlike SystemD.
+
+--- git-annex.cabal.orig	2023-11-02 01:33:00.571134681 +0000
++++ git-annex.cabal
+@@ -460,7 +460,6 @@ Executable git-annex
+             Other-Modules: Utility.DirWatcher.Kqueue
+   
+   if flag(Dbus)
+-    if (os(linux))
+       Build-Depends: dbus (>= 0.10.7), fdo-notify (>= 0.3)
+       CPP-Options: -DWITH_DBUS -DWITH_DESKTOP_NOTIFY -DWITH_DBUS_NOTIFICATIONS
+       Other-Modules: Utility.DBus
