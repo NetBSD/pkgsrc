@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 01:06:39 pho Exp $
+
+BLAKE2s (hs-dbus/dbus-1.3.1.tar.gz) = 6ae14fe57ced54142a7f5ada380b534ee48c094b0275d9952f22c258129a8577
+SHA512 (hs-dbus/dbus-1.3.1.tar.gz) = 6167d69a523878ad358b804742c8f447026c2f5daba836200a7d97cf722ce26734e053ac527fa7a9c540823f4e1f6f1733fc6eb7cfc920e999cf6050af57779e
+Size (hs-dbus/dbus-1.3.1.tar.gz) = 82113 bytes
