@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4105 2023/11/01 17:17:21 pho Exp $
+# $NetBSD: Makefile,v 1.4106 2023/11/02 02:28:28 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -537,6 +537,7 @@ SUBDIR+=	hs-base-orphans
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-basement
 SUBDIR+=	hs-basic-prelude
+SUBDIR+=	hs-binary-orphans
 SUBDIR+=	hs-bitarray
 SUBDIR+=	hs-bitvec
 SUBDIR+=	hs-bitwise
