@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2023/08/14 05:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/02 22:13:45 gdt Exp $
 
 DISTNAME=	gr-osmosdr-0.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	ham
 # main git repo doesn't allow snapshots to be downloaded
 #MASTER_SITES=	https://git.osmocom.org/gr-osmosdr/snapshot/
