@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/06 02:18:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/02 19:15:10 markd Exp $
 share/examples/rt5/RT_Config.pm
 share/examples/rt5/RT_SiteConfig.pm
 share/rt5/bin/rt
@@ -35,6 +35,7 @@ share/rt5/data/docs/customizing/templates.pod
 share/rt5/data/docs/customizing/timezones_in_charts.pod
 share/rt5/data/docs/dashboards.pod
 share/rt5/data/docs/dashboards_reporting.pod
+share/rt5/data/docs/email_management.pod
 share/rt5/data/docs/extending/clickable_links.pod
 share/rt5/data/docs/extending/external_custom_fields.pod
 share/rt5/data/docs/extending/mail_plugins.pod
@@ -81,6 +82,8 @@ share/rt5/data/docs/images/lifecycle-ui-mappings.png
 share/rt5/data/docs/images/lifecycle-ui-modify.png
 share/rt5/data/docs/images/lifecycle-ui-rights.png
 share/rt5/data/docs/images/order-history-example.png
+share/rt5/data/docs/images/query-builder-dynamic-filter-priority.png
+share/rt5/data/docs/images/query-builder-dynamic-sort.png
 share/rt5/data/docs/images/queue-created-started-chart.png
 share/rt5/data/docs/images/quote-selection-highlighted.png
 share/rt5/data/docs/images/quote-selection-ticket-update.png
@@ -189,6 +192,7 @@ share/rt5/data/html/Admin/Elements/SelectCustomFieldLookupType
 share/rt5/data/html/Admin/Elements/SelectCustomFieldRenderType
 share/rt5/data/html/Admin/Elements/SelectCustomFieldType
 share/rt5/data/html/Admin/Elements/SelectGroups
+share/rt5/data/html/Admin/Elements/SelectLookupType
 share/rt5/data/html/Admin/Elements/SelectNewGroupMembers
 share/rt5/data/html/Admin/Elements/SelectScripAction
 share/rt5/data/html/Admin/Elements/SelectScripCondition
@@ -253,6 +257,7 @@ share/rt5/data/html/Admin/Scrips/Create.html
 share/rt5/data/html/Admin/Scrips/Elements/EditBasics
 share/rt5/data/html/Admin/Scrips/Elements/EditCustomCode
 share/rt5/data/html/Admin/Scrips/Elements/SelectTemplate
+share/rt5/data/html/Admin/Scrips/Logging.html
 share/rt5/data/html/Admin/Scrips/Modify.html
 share/rt5/data/html/Admin/Scrips/Objects.html
 share/rt5/data/html/Admin/Scrips/index.html
@@ -266,6 +271,7 @@ share/rt5/data/html/Admin/Tools/EditConfig.html
 share/rt5/data/html/Admin/Tools/GnuPG.html
 share/rt5/data/html/Admin/Tools/Queries.html
 share/rt5/data/html/Admin/Tools/RightsInspector.html
+share/rt5/data/html/Admin/Tools/Shortener.html
 share/rt5/data/html/Admin/Tools/Shredder/Dumps/dhandler
 share/rt5/data/html/Admin/Tools/Shredder/Elements/DumpFileLink
 share/rt5/data/html/Admin/Tools/Shredder/Elements/Error/NoRights
@@ -455,6 +461,7 @@ share/rt5/data/html/Elements/GotoUser
 share/rt5/data/html/Elements/Header
 share/rt5/data/html/Elements/HeaderJavascript
 share/rt5/data/html/Elements/JavascriptConfig
+share/rt5/data/html/Elements/LabeledValue
 share/rt5/data/html/Elements/Lifecycle/Graph
 share/rt5/data/html/Elements/ListActions
 share/rt5/data/html/Elements/ListMenu
@@ -499,8 +506,10 @@ share/rt5/data/html/Elements/RT__Transaction/ColumnMap
 share/rt5/data/html/Elements/RT__User/ColumnMap
 share/rt5/data/html/Elements/Refresh
 share/rt5/data/html/Elements/RefreshHomepage
+share/rt5/data/html/Elements/SavedSearchSelectUser
 share/rt5/data/html/Elements/SavedSearches
 share/rt5/data/html/Elements/ScrubHTML
+share/rt5/data/html/Elements/SearchFilter
 share/rt5/data/html/Elements/Section
 share/rt5/data/html/Elements/SelectArticle
 share/rt5/data/html/Elements/SelectArticleAutocomplete
@@ -540,7 +549,9 @@ share/rt5/data/html/Elements/SelfServiceShowArticles
 share/rt5/data/html/Elements/SelfServiceTopArticles
 share/rt5/data/html/Elements/SetupSessionCookie
 share/rt5/data/html/Elements/ShortcutHelp
+share/rt5/data/html/Elements/ShowArticle
 share/rt5/data/html/Elements/ShowArticleCustomFields
+share/rt5/data/html/Elements/ShowCalendarInvitation
 share/rt5/data/html/Elements/ShowCustomDateRanges
 share/rt5/data/html/Elements/ShowCustomFieldBinary
 share/rt5/data/html/Elements/ShowCustomFieldCustomGroupings
@@ -606,6 +617,7 @@ share/rt5/data/html/Helpers/Autocomplete/Users
 share/rt5/data/html/Helpers/Autocomplete/autohandler
 share/rt5/data/html/Helpers/BuildFormatString
 share/rt5/data/html/Helpers/CollectionListRow
+share/rt5/data/html/Helpers/Permalink
 share/rt5/data/html/Helpers/PreviewScrips
 share/rt5/data/html/Helpers/RightsInspector/Revoke
 share/rt5/data/html/Helpers/RightsInspector/Search
@@ -750,6 +762,7 @@ share/rt5/data/html/SelfService/Closed.html
 share/rt5/data/html/SelfService/Create.html
 share/rt5/data/html/SelfService/CreateTicketInQueue.html
 share/rt5/data/html/SelfService/Display.html
+share/rt5/data/html/SelfService/Download/CustomFieldValue/dhandler
 share/rt5/data/html/SelfService/Elements/GotoTicket
 share/rt5/data/html/SelfService/Elements/Header
 share/rt5/data/html/SelfService/Elements/MyGroupRequests
@@ -757,6 +770,7 @@ share/rt5/data/html/SelfService/Elements/MyRequests
 share/rt5/data/html/SelfService/Elements/RequestUpdate
 share/rt5/data/html/SelfService/Elements/SearchArticle
 share/rt5/data/html/SelfService/Helpers/Autocomplete/CustomFieldValues
+share/rt5/data/html/SelfService/Helpers/Autocomplete/Principals
 share/rt5/data/html/SelfService/Helpers/Autocomplete/Users
 share/rt5/data/html/SelfService/Helpers/ShortcutHelp
 share/rt5/data/html/SelfService/Helpers/TextDiff
@@ -817,7 +831,6 @@ share/rt5/data/html/Ticket/Forward.html
 share/rt5/data/html/Ticket/Graphs/Elements/EditGraphProperties
 share/rt5/data/html/Ticket/Graphs/Elements/ShowGraph
 share/rt5/data/html/Ticket/Graphs/Elements/ShowLegends
-share/rt5/data/html/Ticket/Graphs/dhandler
 share/rt5/data/html/Ticket/Graphs/index.html
 share/rt5/data/html/Ticket/History.html
 share/rt5/data/html/Ticket/Modify.html
@@ -831,6 +844,7 @@ share/rt5/data/html/Ticket/Update.html
 share/rt5/data/html/Ticket/autohandler
 share/rt5/data/html/Tools/MyDay.html
 share/rt5/data/html/Tools/MyReminders.html
+share/rt5/data/html/Tools/PreviewSearches.html
 share/rt5/data/html/Tools/index.html
 share/rt5/data/html/Transaction/Display.html
 share/rt5/data/html/User/Elements/AssetList
@@ -1074,14 +1088,11 @@ share/rt5/data/static/RichText/plugins/about/dialogs/about.js
 share/rt5/data/static/RichText/plugins/about/dialogs/hidpi/logo_ckeditor.png
 share/rt5/data/static/RichText/plugins/about/dialogs/logo_ckeditor.png
 share/rt5/data/static/RichText/plugins/autocomplete/skins/default.css
-share/rt5/data/static/RichText/plugins/ccmsconfighelper/docs/install.html
 share/rt5/data/static/RichText/plugins/clipboard/dialogs/paste.js
 share/rt5/data/static/RichText/plugins/colordialog/dialogs/colordialog.css
 share/rt5/data/static/RichText/plugins/colordialog/dialogs/colordialog.js
 share/rt5/data/static/RichText/plugins/confighelper/LICENSE
 share/rt5/data/static/RichText/plugins/confighelper/README.md
-share/rt5/data/static/RichText/plugins/confighelper/docs/install.html
-share/rt5/data/static/RichText/plugins/confighelper/docs/styles.css
 share/rt5/data/static/RichText/plugins/dialog/dialogDefinition.js
 share/rt5/data/static/RichText/plugins/dialog/styles/dialog.css
 share/rt5/data/static/RichText/plugins/docprops/dialogs/docprops.js
@@ -1104,12 +1115,7 @@ share/rt5/data/static/RichText/plugins/magicline/images/icon.png
 share/rt5/data/static/RichText/plugins/pastefromgdocs/filter/default.js
 share/rt5/data/static/RichText/plugins/pastefromword/filter/default.js
 share/rt5/data/static/RichText/plugins/pastetools/filter/common.js
-share/rt5/data/static/RichText/plugins/pbckcode/CHANGELOG.md
-share/rt5/data/static/RichText/plugins/pbckcode/LICENSE
-share/rt5/data/static/RichText/plugins/pbckcode/README.md
-share/rt5/data/static/RichText/plugins/pbckcode/dialogs/PBSyntaxHighlighter.js
-share/rt5/data/static/RichText/plugins/pbckcode/dialogs/pbckcode.js
-share/rt5/data/static/RichText/plugins/pbckcode/dialogs/style.css
+share/rt5/data/static/RichText/plugins/pastetools/filter/image.js
 share/rt5/data/static/RichText/plugins/specialchar/dialogs/lang/_translationstatus.txt
 share/rt5/data/static/RichText/plugins/specialchar/dialogs/lang/af.js
 share/rt5/data/static/RichText/plugins/specialchar/dialogs/lang/ar.js
@@ -1210,10 +1216,6 @@ share/rt5/data/static/RichText/skins/bootstrapck/images/lock-open.png
 share/rt5/data/static/RichText/skins/bootstrapck/images/lock.png
 share/rt5/data/static/RichText/skins/bootstrapck/images/refresh.png
 share/rt5/data/static/RichText/skins/bootstrapck/readme.md
-share/rt5/data/static/RichText/skins/bootstrapck/sample/bootstrapck-sample.html
-share/rt5/data/static/RichText/skins/bootstrapck/sample/css/bootstrapck-sample.css
-share/rt5/data/static/RichText/skins/bootstrapck/sample/js/analytics.js
-share/rt5/data/static/RichText/skins/bootstrapck/sample/js/jquery-1.11.0.min.js
 share/rt5/data/static/RichText/skins/bootstrapck/scss/browser-specific/gecko/editor_gecko.scss
 share/rt5/data/static/RichText/skins/bootstrapck/scss/browser-specific/ie/dialog_ie.scss
 share/rt5/data/static/RichText/skins/bootstrapck/scss/browser-specific/ie/editor_ie.scss
@@ -1271,6 +1273,7 @@ share/rt5/data/static/css/elevator-light/keyboard-shortcuts.css
 share/rt5/data/static/css/elevator-light/layout.css
 share/rt5/data/static/css/elevator-light/lifecycleui.css
 share/rt5/data/static/css/elevator-light/login.css
+share/rt5/data/static/css/elevator-light/mail.css
 share/rt5/data/static/css/elevator-light/main.css
 share/rt5/data/static/css/elevator-light/misc.css
 share/rt5/data/static/css/elevator-light/nav.css
@@ -1344,6 +1347,8 @@ share/rt5/data/static/images/farbtastic/marker.png
 share/rt5/data/static/images/farbtastic/mask.png
 share/rt5/data/static/images/farbtastic/wheel.png
 share/rt5/data/static/images/favicon.png
+share/rt5/data/static/images/funnel-fill.svg
+share/rt5/data/static/images/funnel.svg
 share/rt5/data/static/images/jquery_ui/ui-bg_glass_55_fbf9ee_1x400.png
 share/rt5/data/static/images/jquery_ui/ui-bg_glass_65_ffffff_1x400.png
 share/rt5/data/static/images/jquery_ui/ui-bg_glass_75_dadada_1x400.png
@@ -1369,6 +1374,7 @@ share/rt5/data/static/js/bootstrap.bundle.min.js
 share/rt5/data/static/js/cascaded.js
 share/rt5/data/static/js/chartjs-plugin-colorschemes.min.js
 share/rt5/data/static/js/chosen.jquery.min.js
+share/rt5/data/static/js/clipboard.min.js
 share/rt5/data/static/js/d3.min.js
 share/rt5/data/static/js/dropzone.min.js
 share/rt5/data/static/js/event-registration.js
@@ -1646,6 +1652,18 @@ share/rt5/etc/upgrade/4.5.8/content
 share/rt5/etc/upgrade/5.0.2/content
 share/rt5/etc/upgrade/5.0.3/indexes
 share/rt5/etc/upgrade/5.0.3/schema.Pg
+share/rt5/etc/upgrade/5.0.4/acl.Pg
+share/rt5/etc/upgrade/5.0.4/content
+share/rt5/etc/upgrade/5.0.4/schema.Oracle
+share/rt5/etc/upgrade/5.0.4/schema.Pg
+share/rt5/etc/upgrade/5.0.4/schema.SQLite
+share/rt5/etc/upgrade/5.0.4/schema.mysql
+share/rt5/etc/upgrade/5.0.5/content
+share/rt5/etc/upgrade/5.0.5/indexes
+share/rt5/etc/upgrade/5.0.5/schema.Oracle
+share/rt5/etc/upgrade/5.0.5/schema.Pg
+share/rt5/etc/upgrade/5.0.5/schema.SQLite
+share/rt5/etc/upgrade/5.0.5/schema.mysql
 share/rt5/etc/upgrade/generate-rtaddressregexp
 share/rt5/etc/upgrade/reset-sequences
 share/rt5/etc/upgrade/sanity-check-stylesheets
@@ -1668,6 +1686,7 @@ share/rt5/lib/RT/Action/AddPriority.pm
 share/rt5/lib/RT/Action/AutoOpen.pm
 share/rt5/lib/RT/Action/AutoOpenInactive.pm
 share/rt5/lib/RT/Action/Autoreply.pm
+share/rt5/lib/RT/Action/ClearCustomFieldValues.pm
 share/rt5/lib/RT/Action/CreateTickets.pm
 share/rt5/lib/RT/Action/EscalatePriority.pm
 share/rt5/lib/RT/Action/ExtractSubjectTag.pm
@@ -1803,8 +1822,10 @@ share/rt5/lib/RT/Interface/Web/MenuBuilder.pm
 share/rt5/lib/RT/Interface/Web/Middleware/StaticHeaders.pm
 share/rt5/lib/RT/Interface/Web/QueryBuilder.pm
 share/rt5/lib/RT/Interface/Web/QueryBuilder/Tree.pm
+share/rt5/lib/RT/Interface/Web/ReportsRegistry.pm
 share/rt5/lib/RT/Interface/Web/Request.pm
 share/rt5/lib/RT/Interface/Web/Scrubber.pm
+share/rt5/lib/RT/Interface/Web/Scrubber/Permissive.pm
 share/rt5/lib/RT/Interface/Web/Session.pm
 share/rt5/lib/RT/LDAPImport.pm
 share/rt5/lib/RT/Lifecycle.pm
@@ -1902,6 +1923,7 @@ share/rt5/lib/RT/Record/AddAndSort.pm
 share/rt5/lib/RT/Record/Role.pm
 share/rt5/lib/RT/Record/Role/Lifecycle.pm
 share/rt5/lib/RT/Record/Role/Links.pm
+share/rt5/lib/RT/Record/Role/LookupType.pm
 share/rt5/lib/RT/Record/Role/Rights.pm
 share/rt5/lib/RT/Record/Role/Roles.pm
 share/rt5/lib/RT/Record/Role/Status.pm
@@ -1931,6 +1953,8 @@ share/rt5/lib/RT/SearchBuilder/Role.pm
 share/rt5/lib/RT/SearchBuilder/Role/Roles.pm
 share/rt5/lib/RT/SharedSetting.pm
 share/rt5/lib/RT/SharedSettings.pm
+share/rt5/lib/RT/Shortener.pm
+share/rt5/lib/RT/Shorteners.pm
 share/rt5/lib/RT/Shredder.pm
 share/rt5/lib/RT/Shredder/Constants.pm
 share/rt5/lib/RT/Shredder/Dependencies.pm
@@ -1950,6 +1974,7 @@ share/rt5/lib/RT/Shredder/Plugin/Users.pm
 share/rt5/lib/RT/Squish.pm
 share/rt5/lib/RT/Squish/CSS.pm
 share/rt5/lib/RT/Squish/JS.pm
+share/rt5/lib/RT/StaticUtil.pm
 share/rt5/lib/RT/StyleGuide.pod
 share/rt5/lib/RT/System.pm
 share/rt5/lib/RT/Template.pm
@@ -1985,11 +2010,14 @@ share/rt5/lib/RT/User.pm
 share/rt5/lib/RT/Users.pm
 share/rt5/lib/RT/Util.pm
 share/rt5/sbin/rt-attributes-viewer
+share/rt5/sbin/rt-clean-attributes
 share/rt5/sbin/rt-clean-sessions
+share/rt5/sbin/rt-clean-shorteners
 share/rt5/sbin/rt-dump-initialdata
 share/rt5/sbin/rt-dump-metadata
 share/rt5/sbin/rt-email-dashboards
 share/rt5/sbin/rt-email-digest
+share/rt5/sbin/rt-email-expiring-auth-tokens
 share/rt5/sbin/rt-email-group-admin
 share/rt5/sbin/rt-externalize-attachments
 share/rt5/sbin/rt-fulltext-indexer
