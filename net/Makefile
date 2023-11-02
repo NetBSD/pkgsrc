@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1544 2023/11/02 01:39:43 pho Exp $
+# $NetBSD: Makefile,v 1.1545 2023/11/02 01:55:21 pho Exp $
 #
 
 COMMENT=	Networking tools
@@ -259,6 +259,7 @@ SUBDIR+=	hs-recv
 SUBDIR+=	hs-resolv
 SUBDIR+=	hs-simple-sendfile
 SUBDIR+=	hs-socks
+SUBDIR+=	hs-torrent
 SUBDIR+=	hs-uri-encode
 SUBDIR+=	httping
 SUBDIR+=	httpstat
