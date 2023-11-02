@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6547 2023/11/02 22:28:11 gdt Exp $
+$NetBSD: CHANGES-2023,v 1.6548 2023/11/02 23:44:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9523,3 +9523,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-tomlkit to 0.12.2 [adam 2023-11-02]
 	Updated editors/TeXmacs to 2.1.2 [nros 2023-11-02]
 	Updated ham/rtl-sdr to 2.0.0 [gdt 2023-11-02]
+	Updated sysutils/git-annex to 10.20230926nb2 [wiz 2023-11-02]
