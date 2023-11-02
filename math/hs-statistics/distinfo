@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 02:47:40 pho Exp $
+
+BLAKE2s (statistics-0.16.2.1.tar.gz) = b4ee7ca3755312d06dd7eba7b681808952f78c1c2865d6e73c824ecbb2474561
+SHA512 (statistics-0.16.2.1.tar.gz) = cfc7a0ae07ffa5a41a5887db970719c5bc76391a31bf0942e6a4facb1a8092903dab2d16df8f408f1fd712a54dbc260fdde1155c84b9823ffc8034eae68d4cad
+Size (statistics-0.16.2.1.tar.gz) = 107898 bytes
