@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/05/15 19:12:11 nia Exp $
+$NetBSD: distinfo,v 1.2 2023/11/02 13:30:46 nros Exp $
 
-BLAKE2s (libstrophe-0.12.0.tar.gz) = 933826f3853df7c9320e9ec051c9884cb8845615088f1a82e3bd5631c3415aed
-SHA512 (libstrophe-0.12.0.tar.gz) = cfd47f4cd7737cb18a4c0d7a5aa7819035466f2c81de3919d406ac599f322cde69cec82bfa6832d29c4cf74e0053bf5ee358ee0559881a6d02540ca413f21aee
-Size (libstrophe-0.12.0.tar.gz) = 576407 bytes
-SHA1 (patch-configure.ac) = 5c3a8a29234c9b2b81f1add61cf48f3b37ee8c21
+BLAKE2s (libstrophe-0.12.3.tar.gz) = a42324cadea62698314283ff33ad7fb7782ad2b1799a8b2d3372695c6fd65b1e
+SHA512 (libstrophe-0.12.3.tar.gz) = 2859e01a3d2f96613695c8e324ec04da9f4ab59b17dd5f6161f14bb1906c2e6a010d055f5d4466c354cf42df922ceeee8263e4a23f5b615e531beef13ab11060
+Size (libstrophe-0.12.3.tar.gz) = 579381 bytes
