@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/04/25 07:44:52 adam Exp $
+# $NetBSD: Makefile,v 1.27 2023/11/02 08:31:40 adam Exp $
 
-DISTNAME=	PyICU-2.11
+DISTNAME=	PyICU-2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyICU/ICU/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
@@ -10,14 +10,16 @@ HOMEPAGE=	https://gitlab.pyicu.org/main/pyicu
 COMMENT=	Python extension wrapping the ICU C++ libraries
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++11
-USE_TOOLS+=	pkg-config
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+USE_CXX_FEATURES+=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
