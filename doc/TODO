@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23526 2023/11/02 13:51:16 nros Exp $
+$NetBSD: TODO,v 1.23527 2023/11/02 21:34:49 nros Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SQLiteCpp-2.5.0
 	o Sigil-2.0.2
 	o TECkit-2.5.12
-	o TeXmacs-2.1.1
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
