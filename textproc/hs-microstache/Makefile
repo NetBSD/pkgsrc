@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/02 02:38:27 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:33 pho Exp $
 
 DISTNAME=	microstache-1.0.2.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

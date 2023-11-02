@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 17:37:56 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:57 pho Exp $
 
 DISTNAME=	sorted-list-0.2.2.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

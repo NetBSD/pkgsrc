@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:36:27 pho Exp $
 
 BUILDLINK_TREE+=	hs-dependent-map
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dependent-map
 HS_DEPENDENT_MAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dependent-map+=	hs-dependent-map>=0.4.0
-BUILDLINK_ABI_DEPENDS.hs-dependent-map+=	hs-dependent-map>=0.4.0.0nb3
+BUILDLINK_ABI_DEPENDS.hs-dependent-map+=	hs-dependent-map>=0.4.0.0nb4
 BUILDLINK_PKGSRCDIR.hs-dependent-map?=		../../devel/hs-dependent-map
 
 .include "../../devel/hs-constraints-extras/buildlink3.mk"

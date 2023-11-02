@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/11/02 02:28:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-binary-orphans
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-binary-orphans
 HS_BINARY_ORPHANS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-binary-orphans+=	hs-binary-orphans>=1.0.4
-BUILDLINK_ABI_DEPENDS.hs-binary-orphans+=	hs-binary-orphans>=1.0.4.1
+BUILDLINK_ABI_DEPENDS.hs-binary-orphans+=	hs-binary-orphans>=1.0.4.1nb1
 BUILDLINK_PKGSRCDIR.hs-binary-orphans?=		../../devel/hs-binary-orphans
 .endif	# HS_BINARY_ORPHANS_BUILDLINK3_MK
 

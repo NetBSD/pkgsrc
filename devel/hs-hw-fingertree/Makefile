@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:54:20 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/02 06:36:41 pho Exp $
 
 DISTNAME=	hw-fingertree-0.1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

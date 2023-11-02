@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/10/31 17:08:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-sandi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-sandi
 HS_SANDI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-sandi+=	hs-sandi>=0.5
-BUILDLINK_ABI_DEPENDS.hs-sandi+=	hs-sandi>=0.5
+BUILDLINK_ABI_DEPENDS.hs-sandi+=	hs-sandi>=0.5nb1
 BUILDLINK_PKGSRCDIR.hs-sandi?=		../../converters/hs-sandi
 
 .include "../../devel/hs-conduit/buildlink3.mk"

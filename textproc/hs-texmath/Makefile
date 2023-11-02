@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/11/01 15:37:07 pho Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/02 06:37:38 pho Exp $
 
 DISTNAME=	texmath-0.12.8.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org

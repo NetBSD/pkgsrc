@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:07 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:36:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-atomic-write
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-atomic-write
 HS_ATOMIC_WRITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-atomic-write+=	hs-atomic-write>=0.2.0
-BUILDLINK_ABI_DEPENDS.hs-atomic-write+=	hs-atomic-write>=0.2.0.7nb3
+BUILDLINK_ABI_DEPENDS.hs-atomic-write+=	hs-atomic-write>=0.2.0.7nb4
 BUILDLINK_PKGSRCDIR.hs-atomic-write?=	../../devel/hs-atomic-write
 
 .include "../../sysutils/hs-temporary/buildlink3.mk"

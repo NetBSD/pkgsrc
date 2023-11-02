@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:43 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:18 pho Exp $
 
 DISTNAME=	uri-encode-1.5.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/10/09 04:54:06 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/11/02 06:36:16 pho Exp $
 
 BUILDLINK_TREE+=	hs-MonadRandom
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-MonadRandom
 HS_MONADRANDOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-MonadRandom+=	hs-MonadRandom>=0.6
-BUILDLINK_ABI_DEPENDS.hs-MonadRandom+=	hs-MonadRandom>=0.6nb2
+BUILDLINK_ABI_DEPENDS.hs-MonadRandom+=	hs-MonadRandom>=0.6nb3
 BUILDLINK_PKGSRCDIR.hs-MonadRandom?=	../../devel/hs-MonadRandom
 
 .include "../../devel/hs-primitive/buildlink3.mk"

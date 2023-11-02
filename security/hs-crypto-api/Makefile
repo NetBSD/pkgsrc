@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/10/27 11:01:30 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:19 pho Exp $
 
 DISTNAME=	crypto-api-0.13.3
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

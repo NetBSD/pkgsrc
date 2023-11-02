@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/31 03:20:47 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:37:04 pho Exp $
 
 DISTNAME=	vector-instances-3.4.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

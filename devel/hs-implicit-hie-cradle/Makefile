@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/31 03:18:06 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/02 06:36:42 pho Exp $
 
 DISTNAME=	implicit-hie-cradle-0.5.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

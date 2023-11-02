@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/10/30 16:58:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2023/11/02 06:36:15 pho Exp $
 
 BUILDLINK_TREE+=	hlint
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hlint
 HLINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hlint+=	hlint>=3.6.1
-BUILDLINK_ABI_DEPENDS.hlint+=	hlint>=3.6.1
+BUILDLINK_ABI_DEPENDS.hlint+=	hlint>=3.6.1nb1
 BUILDLINK_PKGSRCDIR.hlint?=	../../devel/hlint
 
 .include "../../converters/hs-aeson/buildlink3.mk"

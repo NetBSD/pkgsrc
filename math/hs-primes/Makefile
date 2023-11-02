@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:41 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/02 06:37:14 pho Exp $
 
 DISTNAME=	primes-0.2.1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/10/31 16:29:34 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-unagi-chan
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-unagi-chan
 HS_UNAGI_CHAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-unagi-chan+=	hs-unagi-chan>=0.4.1
-BUILDLINK_ABI_DEPENDS.hs-unagi-chan+=	hs-unagi-chan>=0.4.1.4
+BUILDLINK_ABI_DEPENDS.hs-unagi-chan+=	hs-unagi-chan>=0.4.1.4nb1
 BUILDLINK_PKGSRCDIR.hs-unagi-chan?=	../../devel/hs-unagi-chan
 
 .include "../../devel/hs-atomic-primops/buildlink3.mk"

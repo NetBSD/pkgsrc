@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/28 20:32:37 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:37:28 pho Exp $
 
 DISTNAME=	charset-0.3.10
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

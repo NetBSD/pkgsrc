@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:28 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:53 pho Exp $
 
 DISTNAME=	repline-0.4.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2023/10/31 15:51:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2023/11/02 06:37:06 pho Exp $
 
 BUILDLINK_TREE+=	hledger-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hledger-lib
 HLEDGER_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hledger-lib+=	hledger-lib>=1.31
-BUILDLINK_ABI_DEPENDS.hledger-lib+=	hledger-lib>=1.31
+BUILDLINK_ABI_DEPENDS.hledger-lib+=	hledger-lib>=1.31nb1
 BUILDLINK_PKGSRCDIR.hledger-lib?=	../../finance/hledger-lib
 
 .include "../../converters/hs-aeson/buildlink3.mk"

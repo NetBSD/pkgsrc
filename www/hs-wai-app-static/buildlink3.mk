@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/30 19:03:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:37:47 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai-app-static
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-wai-app-static
 HS_WAI_APP_STATIC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-wai-app-static+=	hs-wai-app-static>=3.1.7
-BUILDLINK_ABI_DEPENDS.hs-wai-app-static+=	hs-wai-app-static>=3.1.7.4nb2
+BUILDLINK_ABI_DEPENDS.hs-wai-app-static+=	hs-wai-app-static>=3.1.8nb1
 BUILDLINK_PKGSRCDIR.hs-wai-app-static?=		../../www/hs-wai-app-static
 
 .include "../../textproc/hs-blaze-html/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/31 14:18:30 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:35 pho Exp $
 
 DISTNAME=	hls-cabal-fmt-plugin-2.4.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

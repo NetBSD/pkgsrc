@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/09 04:54:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:36:59 pho Exp $
 
 BUILDLINK_TREE+=	hs-tf-random
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tf-random
 HS_TF_RANDOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tf-random+=	hs-tf-random>=0.5
-BUILDLINK_ABI_DEPENDS.hs-tf-random+=	hs-tf-random>=0.5nb10
+BUILDLINK_ABI_DEPENDS.hs-tf-random+=	hs-tf-random>=0.5nb11
 BUILDLINK_PKGSRCDIR.hs-tf-random?=	../../devel/hs-tf-random
 
 .include "../../devel/hs-primitive/buildlink3.mk"

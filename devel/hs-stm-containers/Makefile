@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/31 02:55:55 pho Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/02 06:36:57 pho Exp $
 
 DISTNAME=	stm-containers-1.2.0.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

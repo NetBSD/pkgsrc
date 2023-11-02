@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/10/31 18:12:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:21 pho Exp $
 
 BUILDLINK_TREE+=	hs-skein
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-skein
 HS_SKEIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-skein+=	hs-skein>=1.0.9
-BUILDLINK_ABI_DEPENDS.hs-skein+=	hs-skein>=1.0.9.4
+BUILDLINK_ABI_DEPENDS.hs-skein+=	hs-skein>=1.0.9.4nb1
 BUILDLINK_PKGSRCDIR.hs-skein?=		../../security/hs-skein
 
 .include "../../devel/hs-cereal/buildlink3.mk"

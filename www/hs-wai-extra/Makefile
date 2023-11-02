@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/10/09 04:55:00 pho Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/02 06:37:47 pho Exp $
 
 DISTNAME=	wai-extra-3.1.13.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

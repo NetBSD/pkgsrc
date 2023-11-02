@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/29 08:00:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:37:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-lucid
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lucid
 HS_LUCID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lucid+=	hs-lucid>=2.11.20230408
-BUILDLINK_ABI_DEPENDS.hs-lucid+=	hs-lucid>=2.11.20230408
+BUILDLINK_ABI_DEPENDS.hs-lucid+=	hs-lucid>=2.11.20230408nb1
 BUILDLINK_PKGSRCDIR.hs-lucid?=		../../textproc/hs-lucid
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
