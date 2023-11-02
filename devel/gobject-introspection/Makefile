@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.88 2023/10/23 06:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2023/11/02 13:23:48 wiz Exp $
 
-DISTNAME=	gobject-introspection-1.76.1
-PKGREVISION=	2
+DISTNAME=	gobject-introspection-1.78.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wiki.gnome.org/Projects/GObjectIntrospection
+HOMEPAGE=	https://gi.readthedocs.io/en/latest/
 COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
@@ -18,15 +17,17 @@ USE_TOOLS+=	pkg-config flex bison
 MESON_ARGS+=	-Dpython=${PYTHONBIN}
 MESON_ARGS+=	-Ddoctool=disabled
 
-PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	output/meson-private/gobject-introspection-1.0.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gobject-introspection-no-export-1.0.pc
+
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 SUBST_CLASSES+=		timet
 SUBST_STAGE.timet=	pre-configure
 SUBST_FILES.timet=	giscanner/ast.py
 SUBST_FILES.timet+=	tests/scanner/Regress-1.0-expected.gir
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.99.*) || !empty(MACHINE_PLATFORM:MNetBSD-[6-9].*) || !empty(MACHINE_PLATFORM:MMirBSD-*)
+.if ${MACHINE_PLATFORM:MNetBSD-5.99.*} || ${MACHINE_PLATFORM:MNetBSD-[6-9].*} || ${MACHINE_PLATFORM:MMirBSD-*}
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_INT64,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 .else
@@ -53,7 +54,7 @@ MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 post-install:
 	${FIND} ${DESTDIR}${PREFIX} -name \*.orig -exec rm {} \;
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.74.0
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.78.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
