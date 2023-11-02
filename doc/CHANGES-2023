@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6522 2023/11/02 05:00:15 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6523 2023/11/02 08:34:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9488,3 +9488,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed security/hs-cryptonite [pho 2023-11-02]
 	Removed lang/hs-purescript-cst [pho 2023-11-02]
 	Removed devel/hs-hls-refine-imports-plugin [pho 2023-11-02]
+	Updated textproc/py-ICU to 2.12 [adam 2023-11-02]
+	Updated lang/py-pygls to 1.1.2 [adam 2023-11-02]
