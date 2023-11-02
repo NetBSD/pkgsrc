@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_src_3rdparty.lua,v 1.5 2023/09/05 12:15:57 nia Exp $
+$NetBSD: patch-scripts_src_3rdparty.lua,v 1.6 2023/11/02 01:51:58 wiz Exp $
 
 NetBSD has arc4random too.
 
@@ -13,7 +13,7 @@ In file included from /usr/pkg/gcc8/lib/gcc/x86_64--netbsd/8.5.0/include/immintr
 /usr/pkg/gcc8/lib/gcc/x86_64--netbsd/8.5.0/include/tmmintrin.h: In function 'vint4 vtable_8bt_32bi(vint4, vint4, vint4)':
 /usr/pkg/gcc8/lib/gcc/x86_64--netbsd/8.5.0/include/tmmintrin.h:136:1: error: inlining failed in call to always_inline '__m128i _mm_shuffle_epi8(__m128i, __m128i)': target specific option mismatch
 
---- scripts/src/3rdparty.lua.orig	2023-07-27 16:00:24.000000000 +0000
+--- scripts/src/3rdparty.lua.orig	2023-10-23 15:53:41.000000000 +0000
 +++ scripts/src/3rdparty.lua
 @@ -49,7 +49,7 @@ else
  		"BYTEORDER=1234",
@@ -24,8 +24,8 @@ In file included from /usr/pkg/gcc8/lib/gcc/x86_64--netbsd/8.5.0/include/immintr
  	defines {
  		"HAVE_ARC4RANDOM",
  	}
-@@ -1280,7 +1280,7 @@ project "bimg"
- 	configuration { "x64", "mingw*" }
+@@ -1288,7 +1288,7 @@ project "bimg"
+ 	configuration { "x64", "mingw*", "not arm64" }
  		defines {
  			"ASTCENC_AVX=0",
 -			"ASTCENC_SSE=20",
