@@ -1,0 +1,14 @@
+$NetBSD: patch-lsp-types.cabal,v 1.1 2023/11/02 01:22:02 pho Exp $
+
+Do not build or install the example executable. We don't want it in pkgsrc.
+
+--- lsp-types.cabal.orig	2023-11-02 01:20:52.562926385 +0000
++++ lsp-types.cabal
+@@ -535,6 +535,7 @@ library metamodel
+     , text
+ 
+ executable generator
++  buildable:          False
+   hs-source-dirs:     generator
+   default-language:   Haskell2010
+   default-extensions: StrictData
