@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 01:30:08 pho Exp $
+
+BLAKE2s (fdo-notify-0.3.1.tar.gz) = cd982379bd9bbe2138805bfd04032be68ea2fbaab42375b63cf41ec9fb27bc0a
+SHA512 (fdo-notify-0.3.1.tar.gz) = d9193899d5eebd7c36e9464571827bd5b560fcc156e89822877b3b67a1f376c7abea9958f7e0aa6f79da06ad5f35a8738ad30a40d447b64ad557ed341054e6b6
+Size (fdo-notify-0.3.1.tar.gz) = 4882 bytes
