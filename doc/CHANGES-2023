@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6545 2023/11/02 19:36:40 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6546 2023/11/02 21:34:49 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9521,3 +9521,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/abseil to 20230802.1 [adam 2023-11-02]
 	Updated devel/SDL2 to 2.28.5 [adam 2023-11-02]
 	Updated textproc/py-tomlkit to 0.12.2 [adam 2023-11-02]
+	Updated editors/TeXmacs to 2.1.2 [nros 2023-11-02]
