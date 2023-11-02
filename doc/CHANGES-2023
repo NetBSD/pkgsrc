@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6503 2023/11/02 01:52:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6504 2023/11/02 01:53:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9469,3 +9469,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/hs-fdo-notify version 0.3.1 [pho 2023-11-02]
 	Added net/hs-network-multicast version 0.3.2 [pho 2023-11-02]
 	Updated emulators/mame to 0.260 [wiz 2023-11-02]
+	Added converters/hs-bencode version 0.6.1.1 [pho 2023-11-02]
