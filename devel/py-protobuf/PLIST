@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/11/02 12:17:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2023/11/02 21:42:59 wiz Exp $
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -141,7 +141,7 @@ ${PYSITELIB}/google/protobuf/util/__init__.pyo
 ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
-${PYSITELIB}/protobuf-${PKGVERSION}-py3.12-nspkg.pth
+${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
