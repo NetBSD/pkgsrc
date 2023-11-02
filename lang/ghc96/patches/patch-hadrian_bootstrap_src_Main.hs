@@ -1,9 +1,9 @@
-$NetBSD: patch-hadrian_bootstrap_src_Main.hs,v 1.1 2023/10/23 08:06:48 pho Exp $
+$NetBSD: patch-hadrian_bootstrap_src_Main.hs,v 1.2 2023/11/02 15:29:31 pho Exp $
 
 Fix build with cabal-install-parsers >= 0.6. This doesn't affect normal
 builds. It's only for creating Hadrian bootstrap source archives.
 
-TODO: Upstream this.
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/11546
 
 --- hadrian/bootstrap/src/Main.hs.orig	2023-09-21 11:30:31.000000000 +0000
 +++ hadrian/bootstrap/src/Main.hs
