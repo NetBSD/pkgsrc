@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2023/08/03 18:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.41 2023/11/02 12:46:45 wiz Exp $
 
-DISTNAME=	grpcio-testing-1.54.3
+DISTNAME=	grpcio-testing-1.59.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-testing/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	gRPC Python testing package
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 
@@ -17,5 +19,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
