@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/12/04 17:59:08 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.12 2023/11/02 12:46:44 wiz Exp $
 ${PYSITELIB}/grpc/__init__.py
 ${PYSITELIB}/grpc/__init__.pyc
 ${PYSITELIB}/grpc/__init__.pyo
@@ -33,6 +28,9 @@ ${PYSITELIB}/grpc/_grpcio_metadata.pyo
 ${PYSITELIB}/grpc/_interceptor.py
 ${PYSITELIB}/grpc/_interceptor.pyc
 ${PYSITELIB}/grpc/_interceptor.pyo
+${PYSITELIB}/grpc/_observability.py
+${PYSITELIB}/grpc/_observability.pyc
+${PYSITELIB}/grpc/_observability.pyo
 ${PYSITELIB}/grpc/_plugin_wrapping.py
 ${PYSITELIB}/grpc/_plugin_wrapping.pyc
 ${PYSITELIB}/grpc/_plugin_wrapping.pyo
@@ -171,3 +169,8 @@ ${PYSITELIB}/grpc/framework/interfaces/face/face.pyo
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.py
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyc
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
