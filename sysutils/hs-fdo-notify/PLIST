@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/02 01:30:08 pho Exp $
+lib/fdo-notify-${PKGVERSION}/${HS_VERSION}/package-description
+lib/fdo-notify-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/DBus/Notify.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/DBus/Notify.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/DBus/Notify.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/DBus-Notify.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/doc-index.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/fdo-notify.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/quick-jump.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/fdo-notify-${PKGVERSION}/html/synopsis.png
