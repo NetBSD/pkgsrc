@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6532 2023/11/02 13:17:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6533 2023/11/02 13:19:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9504,3 +9504,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/glib2 to 2.78.0 [wiz 2023-11-02]
 	Updated devel/glib2-tools to 2.78.0 [wiz 2023-11-02]
 	Updated devel/gdbus-codegen to 2.78.0 [wiz 2023-11-02]
+	Added lang/nodejs20 version 20.9.0 [adam 2023-11-02]
+	Updated lang/nodejs to 21.1.0 [adam 2023-11-02]
