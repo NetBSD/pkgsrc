@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6502 2023/11/02 01:39:35 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6503 2023/11/02 01:52:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9468,3 +9468,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb5 [gutteridge 2023-11-02]
 	Added sysutils/hs-fdo-notify version 0.3.1 [pho 2023-11-02]
 	Added net/hs-network-multicast version 0.3.2 [pho 2023-11-02]
+	Updated emulators/mame to 0.260 [wiz 2023-11-02]
