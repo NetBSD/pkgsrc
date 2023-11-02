@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2023/10/31 14:07:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2023/11/02 06:36:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-cabal-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-cabal-plugin
 HS_HLS_CABAL_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-cabal-plugin+=	hs-hls-cabal-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-cabal-plugin+=	hs-hls-cabal-plugin>=2.4.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-cabal-plugin+=	hs-hls-cabal-plugin>=2.4.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-cabal-plugin?=	../../devel/hs-hls-cabal-plugin
 
 .include "../../misc/hs-extra/buildlink3.mk"

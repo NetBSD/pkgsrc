@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/09 04:54:09 pho Exp $
+# $NetBSD: Makefile,v 1.10 2023/11/02 06:36:21 pho Exp $
 
 DISTNAME=	bytestring-builder-0.10.8.2.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

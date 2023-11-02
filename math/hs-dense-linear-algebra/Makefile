@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/02 02:44:38 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:11 pho Exp $
 
 DISTNAME=	dense-linear-algebra-0.1.0.0
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/09 04:54:15 pho Exp $
+# $NetBSD: Makefile,v 1.6 2023/11/02 06:36:31 pho Exp $
 
 DISTNAME=	ghc-check-0.5.0.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/10/09 04:54:02 pho Exp $
+# $NetBSD: Makefile,v 1.11 2023/11/02 06:36:11 pho Exp $
 
 DISTNAME=	base64-bytestring-1.2.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 
 MAINTAINER=	pho@cielonegro.org

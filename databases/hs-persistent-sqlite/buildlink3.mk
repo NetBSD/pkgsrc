@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/10/31 17:00:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:36:14 pho Exp $
 
 BUILDLINK_TREE+=	hs-persistent-sqlite
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-persistent-sqlite
 HS_PERSISTENT_SQLITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-persistent-sqlite+=	hs-persistent-sqlite>=2.13.2
-BUILDLINK_ABI_DEPENDS.hs-persistent-sqlite+=	hs-persistent-sqlite>=2.13.2.0
+BUILDLINK_ABI_DEPENDS.hs-persistent-sqlite+=	hs-persistent-sqlite>=2.13.2.0nb1
 BUILDLINK_PKGSRCDIR.hs-persistent-sqlite?=	../../databases/hs-persistent-sqlite
 
 .include "../../databases/sqlite3/buildlink3.mk"

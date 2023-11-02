@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/29 11:58:03 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/02 06:37:40 pho Exp $
 
 DISTNAME=	unicode-collation-0.1.3.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

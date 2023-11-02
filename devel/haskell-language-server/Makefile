@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/10/31 15:24:28 pho Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/02 06:36:15 pho Exp $
 
 DISTNAME=	haskell-language-server-2.4.0.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

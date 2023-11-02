@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/10/09 04:54:53 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/02 06:37:35 pho Exp $
 
 DISTNAME=	regex-posix-0.96.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
