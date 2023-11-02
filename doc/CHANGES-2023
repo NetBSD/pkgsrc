@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6524 2023/11/02 09:17:51 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6525 2023/11/02 10:23:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9492,3 +9492,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated lang/py-pygls to 1.1.2 [adam 2023-11-02]
 	Updated www/py-uwsgi to 2.0.23 [adam 2023-11-02]
 	Updated devel/py-ipython to 8.17.2 [adam 2023-11-02]
+	Updated textproc/yelp-xsl to 42.1 [wiz 2023-11-02]
