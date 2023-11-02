@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6497 2023/11/01 20:47:18 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6498 2023/11/02 01:06:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9463,3 +9463,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated databases/sqlite3-docs to 3.44.0 [adam 2023-11-01]
 	Updated databases/sqlite3-tcl to 3.44.0 [adam 2023-11-01]
 	Updated devel/lemon to 1.0.3.44.0 [adam 2023-11-01]
+	Added sysutils/hs-dbus version 1.3.1 [pho 2023-11-02]
