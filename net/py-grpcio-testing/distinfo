@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2023/08/03 18:58:48 adam Exp $
+$NetBSD: distinfo,v 1.41 2023/11/02 12:46:45 wiz Exp $
 
-BLAKE2s (grpcio-testing-1.54.3.tar.gz) = 89dc477bc197b9396678e84176ddcd1918882c4c11c15d7938874cfecd225bcc
-SHA512 (grpcio-testing-1.54.3.tar.gz) = a2e3d9202cd427370b9470b61275c11f65ea38f0939cb9480c3a6f8266388cdecbecf6c87eba7816930918b5581636b446b820687e1957bec6a8040dfce3da38
-Size (grpcio-testing-1.54.3.tar.gz) = 22390 bytes
+BLAKE2s (grpcio-testing-1.59.2.tar.gz) = 811bcb0ce6beef33221281377b7ecacbcdf869e57f6fd2f176bda8dac05e2665
+SHA512 (grpcio-testing-1.59.2.tar.gz) = 3f1e6a25cacc4b51be30665ee85403d9b2404404a2ee0813252dadda2b958e48286b6abd1f3630315df554f656555186a2d381bd053131ae40b198d5cba94e3f
+Size (grpcio-testing-1.59.2.tar.gz) = 22477 bytes
