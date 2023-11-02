@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/10/31 14:32:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2023/11/02 06:36:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-alternate-number-format-plugin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-alternate-number-format-plugin
 HS_HLS_ALTERNATE_NUMBER_FORMAT_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-alternate-number-format-plugin+=	hs-hls-alternate-number-format-plugin>=2.4.0
-BUILDLINK_ABI_DEPENDS.hs-hls-alternate-number-format-plugin+=	hs-hls-alternate-number-format-plugin>=2.4.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-alternate-number-format-plugin+=	hs-hls-alternate-number-format-plugin>=2.4.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-alternate-number-format-plugin?=	../../devel/hs-hls-alternate-number-format-plugin
 
 .include "../../converters/hs-aeson/buildlink3.mk"

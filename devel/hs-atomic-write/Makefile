@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/10/09 04:54:07 pho Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/02 06:36:18 pho Exp $
 
 DISTNAME=	atomic-write-0.2.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/31 09:07:04 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/02 06:36:39 pho Exp $
 
 DISTNAME=	hls-plugin-api-2.4.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/09 04:54:15 pho Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/02 06:36:32 pho Exp $
 
 DISTNAME=	ghc-paths-0.1.0.12
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

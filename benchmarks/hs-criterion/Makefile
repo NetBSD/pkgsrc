@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/02 02:50:25 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:10 pho Exp $
 
 DISTNAME=	criterion-1.6.3.0
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

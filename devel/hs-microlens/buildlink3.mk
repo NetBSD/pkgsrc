@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/10/09 04:54:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/11/02 06:36:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-microlens
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-microlens
 HS_MICROLENS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-microlens+=	hs-microlens>=0.4.13
-BUILDLINK_ABI_DEPENDS.hs-microlens+=	hs-microlens>=0.4.13.1nb2
+BUILDLINK_ABI_DEPENDS.hs-microlens+=	hs-microlens>=0.4.13.1nb3
 BUILDLINK_PKGSRCDIR.hs-microlens?=	../../devel/hs-microlens
 .endif	# HS_MICROLENS_BUILDLINK3_MK
 

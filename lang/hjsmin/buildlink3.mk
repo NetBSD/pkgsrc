@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/11/01 03:14:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2023/11/02 06:37:07 pho Exp $
 
 BUILDLINK_TREE+=	hjsmin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hjsmin
 HJSMIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hjsmin+=	hjsmin>=0.2.1
-BUILDLINK_ABI_DEPENDS.hjsmin+=	hjsmin>=0.2.1
+BUILDLINK_ABI_DEPENDS.hjsmin+=	hjsmin>=0.2.1nb1
 BUILDLINK_PKGSRCDIR.hjsmin?=	../../lang/hjsmin
 
 .include "../../lang/hs-language-javascript/buildlink3.mk"

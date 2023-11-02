@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 15:04:15 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:36:40 pho Exp $
 
 DISTNAME=	hls-rename-plugin-2.4.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

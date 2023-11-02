@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/10/31 14:37:29 pho Exp $
+# $NetBSD: Makefile,v 1.16 2023/11/02 06:36:13 pho Exp $
 
+PKGREVISION= 1
 .include "../../converters/hs-pandoc-base/version.mk"
 # This package does not use the version number of "pandoc-cli" for a
 # historical reason. When the upstream releases a new version of

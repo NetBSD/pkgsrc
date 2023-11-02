@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 06:20:11 pho Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 06:37:44 pho Exp $
 
 DISTNAME=	DAV-1.3.4
 PKGNAME=	hs-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

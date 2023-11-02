@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/09 04:54:24 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:36:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-monad-loops
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-monad-loops
 HS_MONAD_LOOPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-monad-loops+=	hs-monad-loops>=0.4.3
-BUILDLINK_ABI_DEPENDS.hs-monad-loops+=	hs-monad-loops>=0.4.3nb3
+BUILDLINK_ABI_DEPENDS.hs-monad-loops+=	hs-monad-loops>=0.4.3nb4
 BUILDLINK_PKGSRCDIR.hs-monad-loops?=	../../devel/hs-monad-loops
 .endif	# HS_MONAD_LOOPS_BUILDLINK3_MK
 

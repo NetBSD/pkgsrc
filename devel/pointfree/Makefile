@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/10/27 12:15:19 pho Exp $
+# $NetBSD: Makefile,v 1.12 2023/11/02 06:37:05 pho Exp $
 
 DISTNAME=	pointfree-1.1.1.11
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

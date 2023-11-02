@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/10/30 11:00:27 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2023/11/02 06:36:56 pho Exp $
 
 BUILDLINK_TREE+=	hs-shelly
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-shelly
 HS_SHELLY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-shelly+=	hs-shelly>=1.12.1
-BUILDLINK_ABI_DEPENDS.hs-shelly+=	hs-shelly>=1.12.1
+BUILDLINK_ABI_DEPENDS.hs-shelly+=	hs-shelly>=1.12.1nb1
 BUILDLINK_PKGSRCDIR.hs-shelly?=		../../devel/hs-shelly
 
 .include "../../devel/hs-async/buildlink3.mk"

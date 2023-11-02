@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2023/10/30 06:20:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2023/11/02 06:36:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghc-lib-parser-ex
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ghc-lib-parser-ex
 HS_GHC_LIB_PARSER_EX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ghc-lib-parser-ex+=	hs-ghc-lib-parser-ex>=9.8.0
-BUILDLINK_ABI_DEPENDS.hs-ghc-lib-parser-ex+=	hs-ghc-lib-parser-ex>=9.8.0.0
+BUILDLINK_ABI_DEPENDS.hs-ghc-lib-parser-ex+=	hs-ghc-lib-parser-ex>=9.8.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-ghc-lib-parser-ex?=	../../devel/hs-ghc-lib-parser-ex
 
 .include "../../devel/hs-ghc-lib-parser/buildlink3.mk"

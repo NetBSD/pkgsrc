@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/10/26 05:15:19 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 06:36:32 pho Exp $
 
 DISTNAME=	githash-0.1.7.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
