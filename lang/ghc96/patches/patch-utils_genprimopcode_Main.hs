@@ -1,10 +1,12 @@
-$NetBSD: patch-utils_genprimopcode_Main.hs,v 1.1 2023/10/23 08:06:49 pho Exp $
+$NetBSD: patch-utils_genprimopcode_Main.hs,v 1.2 2023/11/02 14:32:04 pho Exp $
 
 primops.txt contains Unicode characters. Don't assume the current locale is
-"*.UTF-8". TODO: Upstream this.
+"*.UTF-8".
 
 > LC_ALL=C ./genprimopcode --data-decl < ./primops.txt
 > genprimopcode: <stdin>: hGetContents: invalid argument (cannot decode byte sequence starting from 226)
+
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/11544
 
 --- utils/genprimopcode/Main.hs.orig	2023-10-23 03:34:51.628735818 +0000
 +++ utils/genprimopcode/Main.hs
