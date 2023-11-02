@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/31 04:01:39 pho Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/02 01:22:02 pho Exp $
 
 DISTNAME=	lsp-types-2.0.2.0
 CATEGORIES=	devel
@@ -9,12 +9,6 @@ LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	aeson
-
-# Don't build or install the executable "generator".
-SUBST_CLASSES+=		exe
-SUBST_STAGE.exe=	post-extract
-SUBST_FILES.exe=	lsp-types.cabal
-SUBST_SED.exe=		-e '/^executable generator/a\${.newline}  buildable: False'
 
 # lib:lsp-types
 .include "../../converters/hs-aeson/buildlink3.mk"
