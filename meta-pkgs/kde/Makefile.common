@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/06/06 12:41:54 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.7 2023/11/02 23:47:15 wiz Exp $
 #
 # used by meta-pkgs/kde/applications.mk
 # used by meta-pkgs/kde/kf5.mk
@@ -8,7 +8,7 @@ MAINTAINER?=	markd@NetBSD.org
 
 TOOL_DEPENDS+= extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES+=	c c++
 CMAKE_BUILD_DIR=	_KDE_build
 .include "../../devel/cmake/build.mk"
 
