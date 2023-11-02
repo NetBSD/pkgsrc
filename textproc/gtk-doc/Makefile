@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2023/08/14 05:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2023/11/02 10:41:07 wiz Exp $
 
 DISTNAME=	gtk-doc-1.32
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
 DEPENDS+=	docbook-xml>=4.4nb1:../../textproc/docbook-xml
 DEPENDS+=	docbook-xsl>=1.79.2nb6:../../textproc/docbook-xsl
+DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
@@ -37,7 +38,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 TEST_TARGET=	check
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
