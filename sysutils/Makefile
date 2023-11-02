@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1085 2023/11/02 01:30:30 pho Exp $
+# $NetBSD: Makefile,v 1.1086 2023/11/02 03:15:20 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -259,6 +259,7 @@ SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
 SUBDIR+=	geteltorito
 SUBDIR+=	gfm
+SUBDIR+=	git-annex
 SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
