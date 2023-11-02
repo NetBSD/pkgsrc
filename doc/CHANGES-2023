@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6544 2023/11/02 19:16:20 markd Exp $
+$NetBSD: CHANGES-2023,v 1.6545 2023/11/02 19:36:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9517,3 +9517,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated shells/oh-my-posh to 18.22.0 [pin 2023-11-02]
 	Updated editors/tp-note to 1.22.11 [pin 2023-11-02]
 	Updated devel/rt5 to 5.0.5 [markd 2023-11-02]
+	Updated net/rabbitmq to 3.12.8 [adam 2023-11-02]
+	Updated devel/abseil to 20230802.1 [adam 2023-11-02]
+	Updated devel/SDL2 to 2.28.5 [adam 2023-11-02]
+	Updated textproc/py-tomlkit to 0.12.2 [adam 2023-11-02]
