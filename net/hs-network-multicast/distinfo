@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 01:39:28 pho Exp $
+
+BLAKE2s (network-multicast-0.3.2.tar.gz) = 14a089ff1f234e20d74a265c15081ffd491b23dc3b3b7959fc45288ddd57dd7c
+SHA512 (network-multicast-0.3.2.tar.gz) = 6308b09e882a3b99ce762cc30da790d6ff83b777d322842d342f555a307c59f0110b9a46557559e9bb5bfba258644f25ebfb9007f33e62cf6855dec8fd48da99
+Size (network-multicast-0.3.2.tar.gz) = 3352 bytes
