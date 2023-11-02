@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6526 2023/11/02 10:26:36 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6527 2023/11/02 10:35:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9494,3 +9494,7 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-ipython to 8.17.2 [adam 2023-11-02]
 	Updated textproc/yelp-xsl to 42.1 [wiz 2023-11-02]
 	Updated textproc/yelp-tools to 42.1 [wiz 2023-11-02]
+	Updated net/py-botocore to 1.31.76 [adam 2023-11-02]
+	Updated net/py-s3transfer to 0.7.0 [adam 2023-11-02]
+	Updated net/py-boto3 to 1.28.76 [adam 2023-11-02]
+	Updated net/py-awscli to 1.29.76 [adam 2023-11-02]
