@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2022/02/12 06:56:38 pho Exp $
-
-BLAKE2s (x509-validation-1.6.12.tar.gz) = 422ddd9704f7ffcb6a18ce0f616b3d1b2bf91214cc5d537a9dcb9b319b1f5828
-SHA512 (x509-validation-1.6.12.tar.gz) = 0f9a18e422063bbd6d4db46380e8557efab8a2f5d64957325577ea9ca9ac9b1310e4bd7cba51e0d0902c094107ded6d33931ddd56c032b2203b5268bd848098e
-Size (x509-validation-1.6.12.tar.gz) = 19733 bytes
