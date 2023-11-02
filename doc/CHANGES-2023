@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6516 2023/11/02 04:40:58 pho Exp $
+$NetBSD: CHANGES-2023,v 1.6517 2023/11/02 04:43:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9482,3 +9482,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added sysutils/git-annex version 10.20230926 [pho 2023-11-02]
 	Removed net/hs-connection [pho 2023-11-02]
 	Removed security/hs-x509-system [pho 2023-11-02]
+	Removed security/hs-x509-validation [pho 2023-11-02]
