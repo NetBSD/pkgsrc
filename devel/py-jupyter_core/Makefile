@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/10/29 16:53:07 adam Exp $
+# $NetBSD: Makefile,v 1.29 2023/11/02 11:04:14 adam Exp $
 
-DISTNAME=	jupyter_core-5.4.0
+DISTNAME=	jupyter_core-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.5:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.3:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
@@ -36,9 +35,6 @@ post-install:
 	${MV} jupyter jupyter-${PYVERSSUFFIX} && \
 	${MV} jupyter-migrate jupyter-migrate-${PYVERSSUFFIX} && \
 	${MV} jupyter-troubleshoot jupyter-troubleshoot-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC}/jupyter_core && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
