@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6543 2023/11/02 18:13:04 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6544 2023/11/02 19:16:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9516,3 +9516,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/felix to 2.10.1 [pin 2023-11-02]
 	Updated shells/oh-my-posh to 18.22.0 [pin 2023-11-02]
 	Updated editors/tp-note to 1.22.11 [pin 2023-11-02]
+	Updated devel/rt5 to 5.0.5 [markd 2023-11-02]
