@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 02:10:03 pho Exp $
+
+BLAKE2s (magic-1.1.tar.gz) = 28f40d56ff5e2078706ff8fa50ce85a881de7ca9c3c55976442c69c6b3cfb713
+SHA512 (magic-1.1.tar.gz) = f400396b0f82f9655376ac72e721badcf60c356c8594b4b67922890f55bac8e15b7aa856fdf61942c40b2622bdc231914994968af3b98d353bf50aed09ebbef5
+Size (magic-1.1.tar.gz) = 4318 bytes
