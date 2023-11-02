@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2023/10/26 05:41:00 pho Exp $
+$NetBSD: distinfo,v 1.9 2023/11/02 01:15:01 pho Exp $
 
 BLAKE2s (happy-1.21.0.tar.gz) = 4e89a615c68b1b1227224c2cc92155fbb4f912a9a715f606d592e8a573994ff4
 SHA512 (happy-1.21.0.tar.gz) = d63e33fe958865c560eed01e54f3384d09b6b2b2282480db302366492d18a7fd67f530d92206f8ff19e0842942f608a8d226ea66cd947583c78e800f6d580fec
 Size (happy-1.21.0.tar.gz) = 173506 bytes
+SHA1 (patch-happy.cabal) = 75908ad83a457edc4b2aa11adb9ed1da7937b1de
