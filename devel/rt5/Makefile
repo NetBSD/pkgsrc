@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2022/10/06 02:18:16 markd Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/02 19:15:10 markd Exp $
 
-DISTNAME=	rt-5.0.3
+DISTNAME=	rt-5.0.5
 PKGNAME=	${DISTNAME:S/rt/rt5/}
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bestpractical.com/rt/
+HOMEPAGE=	https://bestpractical.com/request-tracker/
 COMMENT=	Industrial-grade ticketing system
 LICENSE=	gnu-gpl-v2
 
@@ -26,10 +26,9 @@ DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
 DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBIx-SearchBuilder>=1.71:../../databases/p5-DBIx-SearchBuilder
+DEPENDS+=	p5-DBIx-SearchBuilder>=1.77:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-Data-ICal-[0-9]*:../../time/p5-Data-ICal
-DEPENDS+=	p5-Data-Page-Pageset-[0-9]*:../../devel/p5-Data-Page-Pageset
 DEPENDS+=	p5-Date-Extract>=0.02:../../time/p5-Date-Extract
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-DateTime>=0.44:../../time/p5-DateTime
@@ -122,7 +121,6 @@ DEPENDS+=	p5-Text-Wrapper-[0-9]*:../../textproc/p5-Text-Wrapper
 # Time::ParseDate is a part of p5-Time-modules.
 DEPENDS+=	p5-Time-modules-[0-9]*:../../time/p5-Time-modules
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
-DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI>=1.59:../../www/p5-URI
 # URI::QueryParam is a part of p5-URI.
 DEPENDS+=	p5-Web-Machine>=0.12:../../www/p5-Web-Machine
@@ -146,7 +144,7 @@ DEPENDS+=	p5-GnuPG-Interface-[0-9]*:../../security/p5-GnuPG-Interface
 DEPENDS+=	p5-PerlIO-eol-[0-9]*:../../devel/p5-PerlIO-eol
 
 # Graphviz dependencies
-DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
+DEPENDS+=	p5-GraphViz2-[0-9]*:../../graphics/p5-GraphViz2
 
 # SMIME dependencies
 DEPENDS+=	p5-Crypt-X509-[0-9]*:../../security/p5-Crypt-X509
