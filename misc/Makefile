@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.630 2023/10/31 15:33:28 pho Exp $
+# $NetBSD: Makefile,v 1.631 2023/11/02 02:10:20 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -123,6 +123,7 @@ SUBDIR+=	heyu
 SUBDIR+=	howm
 SUBDIR+=	hs-cabal-install-solver
 SUBDIR+=	hs-extra
+SUBDIR+=	hs-magic
 SUBDIR+=	hs-pager
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	incidenceeditor
