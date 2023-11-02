@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2022/12/18 12:53:18 mef Exp $
+# $NetBSD: Makefile,v 1.63 2023/11/02 02:32:32 pho Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -28,6 +28,7 @@ SUBDIR+=	google-benchmark
 SUBDIR+=	hbench
 SUBDIR+=	heapsort
 SUBDIR+=	hint
+SUBDIR+=	hs-criterion-measurement
 SUBDIR+=	httperf
 SUBDIR+=	hyperfine
 SUBDIR+=	iozone
