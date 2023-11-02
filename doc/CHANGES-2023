@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6534 2023/11/02 13:23:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6535 2023/11/02 13:31:04 nros Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9507,3 +9507,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added lang/nodejs20 version 20.9.0 [adam 2023-11-02]
 	Updated lang/nodejs to 21.1.0 [adam 2023-11-02]
 	Updated devel/gobject-introspection to 1.78.1 [wiz 2023-11-02]
+	Updated chat/libstrophe to 0.12.3 [nros 2023-11-02]
