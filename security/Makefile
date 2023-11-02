@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.925 2023/11/02 04:44:22 pho Exp $
+# $NetBSD: Makefile,v 1.926 2023/11/02 04:45:40 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -154,7 +154,6 @@ SUBDIR+=	hs-skein
 SUBDIR+=	hs-tls
 SUBDIR+=	hs-tls-session-manager
 SUBDIR+=	hs-x509
-SUBDIR+=	hs-x509-store
 SUBDIR+=	httpx
 SUBDIR+=	hydan
 SUBDIR+=	hydra
