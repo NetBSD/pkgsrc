@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 03:15:01 pho Exp $
+
+BLAKE2s (git-annex-10.20230926.tar.gz) = 3d4ac090850887661cfed88b44472848322773c7fec8eec979dca55acd5d5741
+SHA512 (git-annex-10.20230926.tar.gz) = 68c10f550801b056ce9de12e14d0fe53305c6f1e3ca937066d8a8563f869a646548c9c42808f57572c7bd3bc8501bf5a448114a4b85c7e5dd27875d839aee14d
+Size (git-annex-10.20230926.tar.gz) = 1395056 bytes
+SHA1 (patch-Utility_DirWatcher_Kqueue.hs) = d4ef7908d32b9396cb3f5661f78f7d7176ab6e47
+SHA1 (patch-git-annex.cabal) = 986084229906436cabf1bfdad17af3990de70f81
