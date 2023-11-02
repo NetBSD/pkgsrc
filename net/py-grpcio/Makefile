@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2023/11/02 12:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2023/11/02 12:46:44 wiz Exp $
 
-DISTNAME=	grpcio-1.54.3
+DISTNAME=	grpcio-1.59.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
@@ -11,7 +10,8 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	HTTP/2-based RPC framework
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -24,5 +24,5 @@ USE_TOOLS+=	gmake pkg-config
 .include "../../net/grpc/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
