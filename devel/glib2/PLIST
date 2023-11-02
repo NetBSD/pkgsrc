@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.150 2023/09/16 03:09:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.151 2023/11/02 13:17:26 wiz Exp $
 ${PLIST.nococoa}bin/gapplication
 bin/gdbus
 bin/gio
@@ -9,6 +9,8 @@ bin/glib-gettextize
 bin/gobject-query
 bin/gresource
 bin/gsettings
+bin/gtester
+bin/gtester-report
 ${PLIST.nococoa}include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixfdmessage.h
@@ -293,19 +295,19 @@ include/glib-2.0/gobject/gvaluetypes.h
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.so
 lib/libgio-2.0.so.0
-lib/libgio-2.0.so.0.7600.5
+lib/libgio-2.0.so.0.7800.0
 lib/libglib-2.0.so
 lib/libglib-2.0.so.0
-lib/libglib-2.0.so.0.7600.5
+lib/libglib-2.0.so.0.7800.0
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.0
-lib/libgmodule-2.0.so.0.7600.5
+lib/libgmodule-2.0.so.0.7800.0
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.0
-lib/libgobject-2.0.so.0.7600.5
+lib/libgobject-2.0.so.0.7800.0
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.0
-lib/libgthread-2.0.so.0.7600.5
+lib/libgthread-2.0.so.0.7800.0
 lib/pkgconfig/gio-2.0.pc
 lib/pkgconfig/gio-unix-2.0.pc
 lib/pkgconfig/glib-2.0.pc
@@ -318,10 +320,11 @@ ${PLIST.nococoa}libexec/gio-launch-desktop
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7600.5-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7600.5-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.7800.0-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.7800.0-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
+share/glib-2.0/dtds/gresource.dtd
 share/glib-2.0/gdb/glib_gdb.py
 share/glib-2.0/gdb/gobject_gdb.py
 share/glib-2.0/gettext/po/Makefile.in.in
