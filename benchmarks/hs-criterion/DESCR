@@ -1,0 +1,7 @@
+This library provides a powerful but simple way to measure software
+performance. It provides both a framework for executing and analysing
+benchmarks and a set of driver functions that makes it easy to build and
+run benchmarks, and to analyse their results.
+
+The fastest way to get started is to read the online tutorial, followed by
+the documentation and examples in the Criterion.Main module.
