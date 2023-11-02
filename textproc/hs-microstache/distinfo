@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/02 02:38:27 pho Exp $
+
+BLAKE2s (microstache-1.0.2.3.tar.gz) = 5feeae50cec089af17decc5d51e9c0d3dfb7323e656ab835d9bddb3c9152efeb
+SHA512 (microstache-1.0.2.3.tar.gz) = c50fa66a019116ca81e63de59951df29316c39c50d3672197353987ac431f63cc97ee26adb1f8f31ffdad7409f58e2a369502da0e0484af0b0632b6ac8deac4d
+Size (microstache-1.0.2.3.tar.gz) = 22421 bytes
