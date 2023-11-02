@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1084 2023/11/02 01:06:56 pho Exp $
+# $NetBSD: Makefile,v 1.1085 2023/11/02 01:30:30 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -355,6 +355,7 @@ SUBDIR+=	hs-dbus
 SUBDIR+=	hs-disk-free-space
 SUBDIR+=	hs-easy-file
 SUBDIR+=	hs-fast-logger
+SUBDIR+=	hs-fdo-notify
 SUBDIR+=	hs-filemanip
 SUBDIR+=	hs-filepath-bytestring
 SUBDIR+=	hs-filepattern
