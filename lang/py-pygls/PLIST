@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/02 08:33:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -30,9 +30,18 @@ ${PYSITELIB}/pygls/lsp/client.pyo
 ${PYSITELIB}/pygls/progress.py
 ${PYSITELIB}/pygls/progress.pyc
 ${PYSITELIB}/pygls/progress.pyo
-${PYSITELIB}/pygls/protocol.py
-${PYSITELIB}/pygls/protocol.pyc
-${PYSITELIB}/pygls/protocol.pyo
+${PYSITELIB}/pygls/protocol/__init__.py
+${PYSITELIB}/pygls/protocol/__init__.pyc
+${PYSITELIB}/pygls/protocol/__init__.pyo
+${PYSITELIB}/pygls/protocol/json_rpc.py
+${PYSITELIB}/pygls/protocol/json_rpc.pyc
+${PYSITELIB}/pygls/protocol/json_rpc.pyo
+${PYSITELIB}/pygls/protocol/language_server.py
+${PYSITELIB}/pygls/protocol/language_server.pyc
+${PYSITELIB}/pygls/protocol/language_server.pyo
+${PYSITELIB}/pygls/protocol/lsp_meta.py
+${PYSITELIB}/pygls/protocol/lsp_meta.pyc
+${PYSITELIB}/pygls/protocol/lsp_meta.pyo
 ${PYSITELIB}/pygls/py.typed
 ${PYSITELIB}/pygls/server.py
 ${PYSITELIB}/pygls/server.pyc
