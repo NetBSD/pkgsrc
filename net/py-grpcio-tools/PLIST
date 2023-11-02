@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/28 01:24:36 minskim Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/11/02 12:46:45 wiz Exp $
 ${PYSITELIB}/grpc_tools/__init__.py
 ${PYSITELIB}/grpc_tools/__init__.pyc
 ${PYSITELIB}/grpc_tools/__init__.pyo
@@ -26,3 +21,7 @@ ${PYSITELIB}/grpc_tools/command.pyo
 ${PYSITELIB}/grpc_tools/protoc.py
 ${PYSITELIB}/grpc_tools/protoc.pyc
 ${PYSITELIB}/grpc_tools/protoc.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
