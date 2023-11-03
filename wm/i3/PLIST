@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/01/09 13:26:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2023/11/03 08:31:40 wiz Exp $
 bin/i3
 bin/i3-config-wizard
 bin/i3-dmenu-desktop
@@ -36,6 +36,7 @@ share/doc/i3/hacking-howto.html
 share/doc/i3/i3-sync-working.png
 share/doc/i3/i3-sync.png
 share/doc/i3/i3bar-protocol.html
+share/doc/i3/i3bar-workspace-protocol.html
 share/doc/i3/ipc.html
 share/doc/i3/keyboard-layer1.png
 share/doc/i3/keyboard-layer2.png
