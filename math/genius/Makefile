@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2023/10/21 17:11:00 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.94 2023/11/03 23:54:59 wiz Exp $
 
-DISTNAME=		genius-1.0.17
-PKGREVISION=		34
+DISTNAME=		genius-1.0.27
 CATEGORIES=		math
 MASTER_SITES=		http://ftp.5z.com/pub/genius/
+MASTER_SITES+=		${MASTER_SITE_GNOME:=sources/genius/1.0/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.jirka.org/genius.html
@@ -12,24 +11,23 @@ COMMENT=		Calculator and math tool
 LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		c99
-MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config gmake intltool msgfmt
-
-.include "options.mk"
+USE_TOOLS+=		pkg-config gmake intltool msgfmt perl:test
 
 do-test:
-	(cd ${WRKSRC}/src; perl geniustest.pl)
+	cd ${WRKSRC}/src; perl geniustest.pl
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.gtk2+=	gtk2+>=2.18
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
+.include "../../x11/vte3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
