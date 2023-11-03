@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/02/22 16:22:09 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2023/11/03 21:27:40 wiz Exp $
 
-UCD_VERSION=	15.0.0
+UCD_VERSION=	15.1.0
 DISTNAME=	unicode-character-database-${UCD_VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.unicode.org/Public/zipped/${UCD_VERSION}/
@@ -27,7 +27,7 @@ do-install:
 	cd ${EXTRACT_DIR} && pax -rwpp -s '/.*\.orig//' . ${DESTDIR}${UCDDIR}
 	for _f in ${DISTFILES}; do				\
 		${INSTALL_DATA} ${_DISTDIR}/$${_f} ${DESTDIR}${UCDDIR};	\
-	done 
+	done
 	${FIND} ${DESTDIR}${UCDDIR} \
 		-type f -exec ${CHMOD} ${SHAREMODE} {} \;
 
