@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:49:46 nia Exp $
-
-BLAKE2s (tomoe-gtk-0.6.0.tar.gz) = 456ce2c0512da690e95ab7def48d4f60c56b10852e6c94ebfb28fafc8ad77df9
-SHA512 (tomoe-gtk-0.6.0.tar.gz) = caa9b79edde7885e00d939cb3de30b32da0c1c8a7d803e26c756ee0695f7e15bee241036b1125f838e72e016f4bee9736a398108fff0eed20f1fdb86d221dc43
-Size (tomoe-gtk-0.6.0.tar.gz) = 448058 bytes
-SHA1 (patch-aa) = 7b185b3ec670661c5bcd85f3e1ef91729348b19c
-SHA1 (patch-ab) = 3a06e51f7ca8ab0930a2482d6f006d883b88840d
