@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6559 2023/11/03 10:51:36 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6560 2023/11/03 13:11:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9538,3 +9538,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/py-nbconvert to 7.10.0 [adam 2023-11-03]
 	Updated devel/py-joblib to 1.3.2 [adam 2023-11-03]
 	Updated devel/git to 2.42.1 [adam 2023-11-03]
+	Updated devel/protobuf-c to 1.4.1nb2 [wiz 2023-11-03]
