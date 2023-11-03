@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2023/10/23 06:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2023/11/03 20:34:15 wiz Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-logger/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,5 +32,4 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.7
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
