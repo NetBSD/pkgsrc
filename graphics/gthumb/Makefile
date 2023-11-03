@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2023/10/21 17:10:31 gdt Exp $
+# $NetBSD: Makefile,v 1.117 2023/11/03 20:43:39 wiz Exp $
 
 DISTNAME=	gthumb-3.12.2
 PKGREVISION=	2
@@ -43,7 +43,6 @@ LDFLAGS+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/gthumb/extensions
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-#.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
