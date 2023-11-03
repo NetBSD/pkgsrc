@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.50 2021/10/26 10:55:41 nia Exp $
-
-BLAKE2s (gcalctool-5.32.2.tar.bz2) = 63e878efe3887af8aad701bfbfb0a8937ae451726da8fe63e8b3ccfc9567d112
-SHA512 (gcalctool-5.32.2.tar.bz2) = 7685872b8668f5cf3aec8ca79352d9194d5a64c4d9f9cc8b462fd54715231f4a113c21cc1ea75911ebb3430f66fe13dc6a2747f3cc2caeb772b6b5887297768a
-Size (gcalctool-5.32.2.tar.bz2) = 1178049 bytes
-SHA1 (patch-ab) = 1da38334710223b87b9a59e010f77c77067f87eb
