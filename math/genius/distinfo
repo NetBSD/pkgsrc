@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:55:41 nia Exp $
+$NetBSD: distinfo,v 1.25 2023/11/03 23:54:59 wiz Exp $
 
-BLAKE2s (genius-1.0.17.tar.gz) = 034decfcb1582343da2b11b32261cddaf44d8ff78b7552090d45f52563d5c474
-SHA512 (genius-1.0.17.tar.gz) = 1467f9cc6991918315d7f38722ea5a74bafe231ca3d6a63a901e83de07212a4a738205a086366bb55464e919876951ea69a869c582c0c834de4dbcdc02e006be
-Size (genius-1.0.17.tar.gz) = 3960909 bytes
-SHA1 (patch-configure) = a1431b1e521c35eea3df1acc16415806b54f58e7
-SHA1 (patch-configure.in) = 73fcc7ba580b7f575bd16fdcf12fe81518904379
-SHA1 (patch-gtkextra_gtkplot.c) = 3ea37b0a15454b5d81d62b93dd4a70828259d97f
-SHA1 (patch-gtkextra_gtkplotsurface.c) = 5f1e98dc7268ebef3a5edf04496a92b4f620114c
-SHA1 (patch-src_genius-readline-helper.c) = 957f2241399a9092e6634b3c105ce7e487bfca07
-SHA1 (patch-src_genius.c) = 8621f915101118c6cf123fedafe5e435398f72fb
-SHA1 (patch-src_inter.c) = 619a0f553acc0c30960cebfc4fa10146baac5dc4
+BLAKE2s (genius-1.0.27.tar.gz) = db23544886c24588d9a4e632205fb65f244d46b98f433e0b7b684564b942bbdf
+SHA512 (genius-1.0.27.tar.gz) = 936ff2c207fd26cb09943148899fefb7cc701ba7cca58485bbf6c5b78b2f6816ac06dee99cd671887d4830601ef9e93a44fa629b0923715d2753a1adaa06cd94
+Size (genius-1.0.27.tar.gz) = 5555706 bytes
