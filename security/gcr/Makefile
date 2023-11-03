@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/10/21 17:11:22 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/03 20:58:58 wiz Exp $
 
 DISTNAME=	gcr-3.38.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -40,7 +40,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
