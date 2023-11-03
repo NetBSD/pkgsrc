@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.21 2023/09/18 06:12:47 ryoon Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.22 2023/11/03 10:20:03 ryoon Exp $
 
 This patch modifies default Firefox settings - see the comments above
 each one.
@@ -30,8 +30,8 @@ each one.
 +pref("midi.prompt.testing", true);
 +pref("media.navigator.permission.disabled", true);
 +
-+// Disable WebGL for NetBSD systems
-+pref("webgl.disabled", true);
++// Avoid runtime error from WebGL for NetBSD systems
++pref("webgl.out-of-process", false);
 +
 +// On NetBSD, many web applications (e.g. Telegram, Mastodon, Twitter)
 +// will freeze until the service worker is restarted in about:serviceworkers.
