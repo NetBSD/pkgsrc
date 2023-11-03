@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:27:12 nia Exp $
+$NetBSD: distinfo,v 1.34 2023/11/03 23:43:01 wiz Exp $
 
-BLAKE2s (gucharmap-2.32.1.tar.bz2) = e87c511b1b47cd649dce3ee16548745d31e6f36590ebd46a274483ffcb4c6c6f
-SHA512 (gucharmap-2.32.1.tar.bz2) = d98a1a152b371afe306eac4d5bb1293a8f80692ef5fe06f44d8430fc3f4bb3c8643363caecbe117054d860707f636262ad46d7fb7051097cdf1466a89a3cff54
-Size (gucharmap-2.32.1.tar.bz2) = 3242939 bytes
+BLAKE2s (gucharmap-15.1.2.tar.bz2) = a69e75ec7a37ed55228f890be2528986ef7a017f7cb30fd33482527349fda807
+SHA512 (gucharmap-15.1.2.tar.bz2) = 702276b0fd7804d4210b71e332a34206f27c0da5fefbf164a70881d97d0cbcd3cdb9f8b31e56ee449cb07688bdbbe6fa1d7fa8e7a5fe5c5b879a6ce828450e69
+Size (gucharmap-15.1.2.tar.bz2) = 1455600 bytes
+SHA1 (patch-gucharmap_meson.build) = 1253c905614efd7656490e3abd14437693bdf3e5
+SHA1 (patch-meson.build) = 68a6569ba4d1844e3f56beff60c44191dc314cb0

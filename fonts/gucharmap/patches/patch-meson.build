@@ -1,0 +1,23 @@
+$NetBSD: patch-meson.build,v 1.1 2023/11/03 23:43:01 wiz Exp $
+
+Do not force libdl.
+
+--- meson.build.orig	2023-10-12 15:59:47.000000000 +0000
++++ meson.build
+@@ -127,16 +127,6 @@ config_h.set10('_GNU_SOURCE', true)
+ 
+ # Check for functions
+ 
+-libdl_dep = cc.find_library('dl')
+-
+-check_dl_functions_required = [
+-  'dlsym',
+-]
+-
+-foreach func: check_dl_functions_required
+-  assert(cc.has_function(func, dependencies: libdl_dep), func + ' not found')
+-endforeach
+-
+ # Asserts must not be disabled
+ 
+ assert(get_option('b_ndebug') == 'false', 'assertions may not be disabled')
