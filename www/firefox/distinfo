@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.512 2023/10/15 07:41:16 ryoon Exp $
+$NetBSD: distinfo,v 1.513 2023/11/03 10:20:03 ryoon Exp $
 
-BLAKE2s (firefox-118.0.2.source.tar.xz) = 4615d3f03d8debf66cf9088934478099e557dbc5cb419765fb0dc91296221697
-SHA512 (firefox-118.0.2.source.tar.xz) = fe9d7951927e44aee98a15840820251b779cc427f27597951497bd01fde3c3f2857942535c64c9d1a64f877c43802771304ed97254bffd9216f554e1af9efbf4
-Size (firefox-118.0.2.source.tar.xz) = 520864692 bytes
+BLAKE2s (firefox-119.0.source.tar.xz) = b245ce806b81cb9a40d6015e5e584b8856b71d9833bd150012fd54e1e8e258be
+SHA512 (firefox-119.0.source.tar.xz) = 4b555c444add36567fd538752b122f227cf78bb70b72c79e6d8ae8d9c2e61c3cdacfae79c37970753b8b5c7716b28c686071eb7b551773c30a76852f3550676c
+Size (firefox-119.0.source.tar.xz) = 523093112 bytes
 BLAKE2s (nodejs-output-118.0.tgz) = cf37a3b8777d485547352627b59b894a28b6eb49edf19b5045bca24b843f602b
 SHA512 (nodejs-output-118.0.tgz) = 08186ec85863a3bac0a6f882d2684685b91eb1f7a24ad292bc7ceb1498b1ecf6a7c084b27a70d693ff38234386a014f8fbdbcc46f09d097b6605b62eee648ee6
 Size (nodejs-output-118.0.tgz) = 220005 bytes
-SHA1 (patch-browser_app_profile_firefox.js) = 948ed3ae6cfb8e2eb4ca4d4082491a71d637cc31
+SHA1 (patch-browser_app_profile_firefox.js) = a0a3d429f9eb5e0c95a94efed407a18e5e12328d
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
 SHA1 (patch-config_makefiles_rust.mk) = 788ab8fed45625bc5552c56a3ab05b5ed7d49a8f
@@ -41,6 +41,5 @@ SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 445902ec97
 SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 706635b76a7b525794aba95e95544f09e18bb662
 SHA1 (patch-toolkit_xre_glxtest.cpp) = adcd5b05fcbd7b41c01a2aa66f3e8f05ed230444
-SHA1 (patch-widget_gtk_v4l2test_v4l2test.cpp) = a9ed8692a703d3b31bdbc8d0582a60540922a1dd
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 81d43a046fcef6bf6717d52485686ba8e8738254
