@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
+$NetBSD: patch-meson.build,v 1.20 2023/11/03 18:32:32 otis Exp $
 
 - On Darwin, optionally use Cocoa (needed for X11 users).
 
@@ -12,9 +12,19 @@ $NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
 
 - Define a newer POSIX, as we build this package with -std=gnu99
 
+- Check also for sys/ptrace.h header file.
+
 --- meson.build.orig	2023-09-08 13:42:18.000000000 +0000
 +++ meson.build
-@@ -926,7 +926,7 @@ if host_system == 'darwin'
+@@ -383,6 +383,7 @@ headers = [
+   'sys/mount.h',
+   'sys/param.h',
+   'sys/prctl.h',
++  'sys/ptrace.h',
+   'sys/resource.h',
+   'sys/select.h',
+   'sys/statfs.h',
+@@ -926,7 +927,7 @@ if host_system == 'darwin'
                                        #error "Detected GNUstep, not Cocoa"
                                        #endif''',
                                     name : 'Mac OS X Cocoa support')
@@ -23,7 +33,7 @@ $NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
    if glib_have_cocoa
      glib_conf.set('HAVE_COCOA', true)
      osx_ldflags += ['-Wl,-framework,Foundation', '-Wl,-framework,AppKit']
-@@ -2214,18 +2214,17 @@ if host_system != 'windows' and get_opti
+@@ -2214,18 +2215,17 @@ if host_system != 'windows' and get_opti
  
    # try glibc
    if cc.has_function('getxattr') and cc.has_header('sys/xattr.h')
@@ -44,7 +54,7 @@ $NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
    if cc.compiles(glib_conf_prefix + '''
                   #include <stdio.h>
                   #ifdef HAVE_SYS_TYPES_H
-@@ -2328,7 +2327,7 @@ glib_conf.set('HAVE_PROC_SELF_CMDLINE', 
+@@ -2328,7 +2328,7 @@ glib_conf.set('HAVE_PROC_SELF_CMDLINE',
  
  python = import('python').find_installation()
  # used for '#!/usr/bin/env <name>'
@@ -53,7 +63,7 @@ $NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
  
  python_version = python.language_version()
  python_version_req = '>=3.5'
-@@ -2338,7 +2337,7 @@ endif
+@@ -2338,7 +2338,7 @@ endif
  
  # Determine which user environment-dependent files that we want to install
  bash = find_program('bash', required : false)
@@ -62,7 +72,7 @@ $NetBSD: patch-meson.build,v 1.19 2023/11/02 13:17:27 wiz Exp $
  bash_comp_dep = dependency('bash-completion', version: '>=2.0', required: false)
  have_sh = find_program('sh', required : false).found() # For glib-gettextize
  have_pkg_config = find_program('pkg-config', required: false).found()
-@@ -2348,8 +2347,7 @@ env_program = find_program('env', requir
+@@ -2348,8 +2348,7 @@ env_program = find_program('env', requir
  
  # FIXME: How to detect Solaris? https://github.com/mesonbuild/meson/issues/1578
  if host_system == 'sunos'
