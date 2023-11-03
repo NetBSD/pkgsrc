@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.265 2023/10/23 06:37:56 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.266 2023/11/03 10:20:03 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,7 +6,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312 # 120.0 will accept Python 3.12.
 PYTHON_FOR_BUILD_ONLY=		tool
 ALL_ENV+=			PYTHON3=${PYTHONBIN}
 
