@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/05/11 09:53:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2023/11/03 09:59:07 wiz Exp $
 
 DISTNAME=	manticore-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-unicorn-[0-9]*:../../emulators/py-unicorn
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27 311 312
 
 post-install:
 .for bin in manticore manticore-verifier
