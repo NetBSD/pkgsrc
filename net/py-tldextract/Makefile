@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/10/28 19:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/03 08:17:32 adam Exp $
 
-DISTNAME=	tldextract-3.6.0
+DISTNAME=	tldextract-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
 
@@ -28,9 +27,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} tldextract tldextract-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
