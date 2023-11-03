@@ -1,5 +1,23 @@
-$NetBSD: distinfo,v 1.12 2022/08/18 19:24:09 wiz Exp $
+$NetBSD: distinfo,v 1.13 2023/11/03 13:11:25 wiz Exp $
 
 BLAKE2s (protobuf-c-1.4.1.tar.gz) = 3585955198453b1e7a80392379219df5338b8e63e0f7756fa02264ab0bcc7d0b
 SHA512 (protobuf-c-1.4.1.tar.gz) = 190a4aa5c607853e6bf860b0974deb21e4f7f6209e810251eaca9612b59ea676779b0ca217fb1572914ffb8de3315a7d24f162b14d447ee671a9adc5b1271e41
 Size (protobuf-c-1.4.1.tar.gz) = 513596 bytes
+SHA1 (patch-build-cmake_CMakeLists.txt) = fedaf0ceb1c2b0736d1e614af343ecbf30000107
+SHA1 (patch-configure.ac) = 24b08254e94502c85948a7c984fa36dcd9ea6aa4
+SHA1 (patch-protoc-c_c__bytes__field.h) = 902f4dddb997240d93f3dcc529f9022f1b43d093
+SHA1 (patch-protoc-c_c__enum.h) = 0508bf6c0335731446aebf45d6b9b95c5891023e
+SHA1 (patch-protoc-c_c__enum__field.h) = 9e3d5a18d546c31f06cc889204a37cc5e1035fbc
+SHA1 (patch-protoc-c_c__extension.h) = 22135ae90c6a83572ab128f90c0c833528f33e97
+SHA1 (patch-protoc-c_c__field.h) = 8a36dd7ad664ddca6a3b1278ac8bf26c22cd6ab5
+SHA1 (patch-protoc-c_c__file.cc) = 21bae3e4ca0932bc77ec82e4b06850e2e879e3bf
+SHA1 (patch-protoc-c_c__file.h) = 4fdde8e54fa980065b2c4577fd735cbdfb31df0a
+SHA1 (patch-protoc-c_c__generator.h) = 9666ea994c2a80dc4469cfa3258120943eabd0b3
+SHA1 (patch-protoc-c_c__helpers.h) = 6eabefa37418bae0ad5dbd618381ecc2b5eb1a4d
+SHA1 (patch-protoc-c_c__message.cc) = 8fd07301ef5115568928dd82ac14f8b0c98157ed
+SHA1 (patch-protoc-c_c__message.h) = 1532a8f82cbccecfaff50d47418316dca8bfa3ad
+SHA1 (patch-protoc-c_c__message__field.h) = 99effa3dd97a7b5c18606c055bd07ecd7f1cacea
+SHA1 (patch-protoc-c_c__primitive__field.cc) = fc911511a33c1052df7e44eca395388ad5f57342
+SHA1 (patch-protoc-c_c__primitive__field.h) = 884876a9224f1eb1be9e31dbaac0ea1b4e1e6ba1
+SHA1 (patch-protoc-c_c__service.h) = 1d75f64e5dc7bf3b26425871d89088a4b8cf5362
+SHA1 (patch-protoc-c_c__string__field.h) = 224972b17f1c959a6dc991e4852c401d8419a459
