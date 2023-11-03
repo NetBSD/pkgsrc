@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6552 2023/11/03 08:18:17 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6553 2023/11/03 08:31:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9528,3 +9528,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb6 [gutteridge 2023-11-03]
 	Updated wm/spectrwm to 3.5.0 [pin 2023-11-03]
 	Added misc/tailspin version 1.6.1 [pin 2023-11-03]
+	Updated wm/i3 to 4.23 [wiz 2023-11-03]
