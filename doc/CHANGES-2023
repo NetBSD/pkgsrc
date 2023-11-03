@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6558 2023/11/03 10:36:09 adam Exp $
+$NetBSD: CHANGES-2023,v 1.6559 2023/11/03 10:51:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9537,3 +9537,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/firefox-l10n to 119.0 [ryoon 2023-11-03]
 	Updated www/py-nbconvert to 7.10.0 [adam 2023-11-03]
 	Updated devel/py-joblib to 1.3.2 [adam 2023-11-03]
+	Updated devel/git to 2.42.1 [adam 2023-11-03]
