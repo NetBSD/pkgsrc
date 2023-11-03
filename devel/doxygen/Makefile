@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2023/10/24 22:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2023/11/03 11:31:21 wiz Exp $
 
 DISTNAME=	doxygen-1.9.8.src
 PKGREVISION=	2
@@ -69,6 +69,12 @@ post-install:
 .if empty(PKG_OPTIONS:Mqt)
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/doxywizard.1
 .endif
+
+.include "../../mk/bsd.prefs.mk"
+# wiz 20231103:
+# as of doxygen 1.9.8, the ninja generator has problems in some environments:
+# ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
+CMAKE_GENERATOR=	make
 
 .include "../../devel/cmake/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
