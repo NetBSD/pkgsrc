@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6561 2023/11/03 17:25:29 triaxx Exp $
+$NetBSD: CHANGES-2023,v 1.6562 2023/11/03 21:15:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9540,3 +9540,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/git to 2.42.1 [adam 2023-11-03]
 	Updated devel/protobuf-c to 1.4.1nb2 [wiz 2023-11-03]
 	Updated games/augustus to 3.2.0nb2 [triaxx 2023-11-03]
+	Updated games/gnome-mastermind to 0.4.0 [wiz 2023-11-03]
