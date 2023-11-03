@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6568 2023/11/03 23:55:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6569 2023/11/03 23:57:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9549,3 +9549,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/arcticfox to 43.0 [abs 2023-11-03]
 	Updated fonts/gucharmap to 15.1.2 [wiz 2023-11-03]
 	Updated math/genius to 1.0.27 [wiz 2023-11-03]
+	Removed math/gcalctool successor math/gnome-calculator [wiz 2023-11-03]
