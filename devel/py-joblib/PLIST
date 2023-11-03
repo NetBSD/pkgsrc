@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2022/11/21 09:35:31 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2023/11/03 10:35:53 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
 ${PYSITELIB}/joblib/__init__.pyo
@@ -12,12 +13,6 @@ ${PYSITELIB}/joblib/_cloudpickle_wrapper.pyo
 ${PYSITELIB}/joblib/_dask.py
 ${PYSITELIB}/joblib/_dask.pyc
 ${PYSITELIB}/joblib/_dask.pyo
-${PYSITELIB}/joblib/_deprecated_format_stack.py
-${PYSITELIB}/joblib/_deprecated_format_stack.pyc
-${PYSITELIB}/joblib/_deprecated_format_stack.pyo
-${PYSITELIB}/joblib/_deprecated_my_exceptions.py
-${PYSITELIB}/joblib/_deprecated_my_exceptions.pyc
-${PYSITELIB}/joblib/_deprecated_my_exceptions.pyo
 ${PYSITELIB}/joblib/_memmapping_reducer.py
 ${PYSITELIB}/joblib/_memmapping_reducer.pyc
 ${PYSITELIB}/joblib/_memmapping_reducer.pyo
@@ -120,9 +115,6 @@ ${PYSITELIB}/joblib/externals/loky/process_executor.pyo
 ${PYSITELIB}/joblib/externals/loky/reusable_executor.py
 ${PYSITELIB}/joblib/externals/loky/reusable_executor.pyc
 ${PYSITELIB}/joblib/externals/loky/reusable_executor.pyo
-${PYSITELIB}/joblib/format_stack.py
-${PYSITELIB}/joblib/format_stack.pyc
-${PYSITELIB}/joblib/format_stack.pyo
 ${PYSITELIB}/joblib/func_inspect.py
 ${PYSITELIB}/joblib/func_inspect.pyc
 ${PYSITELIB}/joblib/func_inspect.pyo
@@ -135,9 +127,6 @@ ${PYSITELIB}/joblib/logger.pyo
 ${PYSITELIB}/joblib/memory.py
 ${PYSITELIB}/joblib/memory.pyc
 ${PYSITELIB}/joblib/memory.pyo
-${PYSITELIB}/joblib/my_exceptions.py
-${PYSITELIB}/joblib/my_exceptions.pyc
-${PYSITELIB}/joblib/my_exceptions.pyo
 ${PYSITELIB}/joblib/numpy_pickle.py
 ${PYSITELIB}/joblib/numpy_pickle.pyc
 ${PYSITELIB}/joblib/numpy_pickle.pyo
@@ -236,18 +225,15 @@ ${PYSITELIB}/joblib/test/test_backports.pyo
 ${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.py
 ${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.pyc
 ${PYSITELIB}/joblib/test/test_cloudpickle_wrapper.pyo
+${PYSITELIB}/joblib/test/test_config.py
+${PYSITELIB}/joblib/test/test_config.pyc
+${PYSITELIB}/joblib/test/test_config.pyo
 ${PYSITELIB}/joblib/test/test_dask.py
 ${PYSITELIB}/joblib/test/test_dask.pyc
 ${PYSITELIB}/joblib/test/test_dask.pyo
-${PYSITELIB}/joblib/test/test_deprecated_objects.py
-${PYSITELIB}/joblib/test/test_deprecated_objects.pyc
-${PYSITELIB}/joblib/test/test_deprecated_objects.pyo
 ${PYSITELIB}/joblib/test/test_disk.py
 ${PYSITELIB}/joblib/test/test_disk.pyc
 ${PYSITELIB}/joblib/test/test_disk.pyo
-${PYSITELIB}/joblib/test/test_format_stack.py
-${PYSITELIB}/joblib/test/test_format_stack.pyc
-${PYSITELIB}/joblib/test/test_format_stack.pyo
 ${PYSITELIB}/joblib/test/test_func_inspect.py
 ${PYSITELIB}/joblib/test/test_func_inspect.pyc
 ${PYSITELIB}/joblib/test/test_func_inspect.pyo
@@ -275,9 +261,6 @@ ${PYSITELIB}/joblib/test/test_missing_multiprocessing.pyo
 ${PYSITELIB}/joblib/test/test_module.py
 ${PYSITELIB}/joblib/test/test_module.pyc
 ${PYSITELIB}/joblib/test/test_module.pyo
-${PYSITELIB}/joblib/test/test_my_exceptions.py
-${PYSITELIB}/joblib/test/test_my_exceptions.pyc
-${PYSITELIB}/joblib/test/test_my_exceptions.pyo
 ${PYSITELIB}/joblib/test/test_numpy_pickle.py
 ${PYSITELIB}/joblib/test/test_numpy_pickle.pyc
 ${PYSITELIB}/joblib/test/test_numpy_pickle.pyo
