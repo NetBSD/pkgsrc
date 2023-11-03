@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6556 2023/11/03 10:20:20 ryoon Exp $
+$NetBSD: CHANGES-2023,v 1.6557 2023/11/03 10:20:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9534,3 +9534,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated print/ghostscript-agpl to 10.02.1 [adam 2023-11-03]
 	Updated databases/postgresql-timescaledb to 2.12.1 [adam 2023-11-03]
 	Updated www/firefox to 119.0 [ryoon 2023-11-03]
+	Updated www/firefox-l10n to 119.0 [ryoon 2023-11-03]
