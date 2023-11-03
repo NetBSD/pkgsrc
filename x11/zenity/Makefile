@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2023/10/21 17:11:59 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.112 2023/11/03 21:02:12 wiz Exp $
 
 DISTNAME=	zenity-3.41.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.41/}
 EXTRACT_SUFX=	.tar.xz
@@ -31,6 +30,5 @@ REPLACE_FILES.perl5=	src/gdialog.in
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
