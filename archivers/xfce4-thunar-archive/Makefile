@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/10/21 17:09:39 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2023/11/03 02:40:23 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	thunar-archive-plugin-0.5.1
+DISTNAME=	thunar-archive-plugin-0.5.2
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	archivers
 MASTER_SITES=	https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.5/
