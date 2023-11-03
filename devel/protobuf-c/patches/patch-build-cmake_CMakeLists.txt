@@ -1,0 +1,16 @@
+$NetBSD: patch-build-cmake_CMakeLists.txt,v 1.1 2023/11/03 13:11:26 wiz Exp $
+
+Support for new Google protobuf 22.x, 23.x releases
+https://github.com/protobuf-c/protobuf-c/pull/673
+
+--- build-cmake/CMakeLists.txt.orig	2022-07-11 01:33:12.000000000 +0000
++++ build-cmake/CMakeLists.txt
+@@ -88,7 +88,7 @@ if (MSVC AND NOT BUILD_SHARED_LIBS)
+ endif (MSVC AND NOT BUILD_SHARED_LIBS)
+ 
+ IF(BUILD_PROTOC)
+-SET(CMAKE_CXX_STANDARD 11)
++SET(CMAKE_CXX_STANDARD 17)
+ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+ SET(CMAKE_CXX_EXTENSIONS OFF)
+ ADD_CUSTOM_COMMAND(OUTPUT protobuf-c/protobuf-c.pb.cc protobuf-c/protobuf-c.pb.h
