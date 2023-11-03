@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2023/10/24 22:09:21 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.137 2023/11/03 20:42:56 wiz Exp $
 
 VERSION=		1.10
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -71,11 +70,8 @@ CONFIGURE_ARGS+=	--disable-zip
 .include "../../graphics/png/buildlink3.mk"
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 # Avoids internal MD5, and betterintegration with thumbmail cache.
 .include "../../security/nettle/buildlink3.mk"
-# gnome-doc-utils is needed even if not building documentation
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
