@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/10/24 22:11:48 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2023/11/03 10:49:48 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -25,6 +25,7 @@ TOOL_DEPENDS+=	nodejs>=14:../../lang/nodejs
 #JPEG_ACCEPTED=	libjpeg-turbo
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fgnu-inline-asm
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--fatal-warnings
 
 MAKE_ENV+=	NINJAJOBS="-j ${_MAKE_JOBS_N:U1}"
 
