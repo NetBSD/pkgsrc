@@ -1,0 +1,14 @@
+$NetBSD: patch-gucharmap_meson.build,v 1.1 2023/11/03 23:43:01 wiz Exp $
+
+Do not force libdl.
+
+--- gucharmap/meson.build.orig	2023-10-12 15:59:47.000000000 +0000
++++ gucharmap/meson.build
+@@ -268,7 +268,6 @@ gucharmap_gtk3_cppflags = disable_deprec
+ gucharmap_gtk3_deps = [
+   freetype2_dep,
+   gtk3_dep,
+-  libdl_dep,
+   libgucharmap_gtk3_dep,
+ ]
+ 

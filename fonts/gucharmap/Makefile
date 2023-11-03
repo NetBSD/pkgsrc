@@ -1,37 +1,32 @@
-# $NetBSD: Makefile,v 1.118 2023/10/21 17:10:12 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.119 2023/11/03 23:43:01 wiz Exp $
 
-DISTNAME=	gucharmap-2.32.1
-PKGREVISION=	40
+DISTNAME=	gucharmap-15.1.2
 CATEGORIES=	fonts gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.32/}
+MASTER_SITES=	https://gitlab.gnome.org/GNOME/gucharmap/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://live.gnome.org/Gucharmap
+HOMEPAGE=	https://wiki.gnome.org/action/show/Apps/Gucharmap
 COMMENT=	Unicode/ISO10646 character map and font viewer
-# unicode-license = BSD style?
-#LICENSE=	gnu-gpl-v2 AND unicode-license
+LICENSE=	gnu-gpl-v3 AND unicode
 
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
+DEPENDS+=	unicode-character-database-[0-9]*:../../textproc/unicode-character-database
 
-PKGCONFIG_OVERRIDE+=	gucharmap-2.pc.in
+MESON_ARGS+=	-Ducd_path=${PREFIX}/share/unicode/ucd
 
-GTK2_IMMODULES=		yes
+USE_TOOLS+=		itstool perl pkg-config
 
-GCONF_SCHEMAS+=	gucharmap.schemas
+PKGCONFIG_OVERRIDE+=		output/meson-private/gucharmap-2.90.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.3
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.6
-.include "../../x11/gtk2/modules.mk"
-.include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/schemas.mk"
+.include "../../x11/gtk3/modules.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
