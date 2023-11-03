@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6566 2023/11/03 23:41:55 abs Exp $
+$NetBSD: CHANGES-2023,v 1.6567 2023/11/03 23:43:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9547,3 +9547,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed inputmethod/kimera-tomoe-gtk [wiz 2023-11-03]
 	Removed inputmethod/uim-tomoe-gtk [wiz 2023-11-03]
 	Updated www/arcticfox to 43.0 [abs 2023-11-03]
+	Updated fonts/gucharmap to 15.1.2 [wiz 2023-11-03]
