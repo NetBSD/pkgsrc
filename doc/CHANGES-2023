@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6548 2023/11/02 23:44:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6549 2023/11/03 02:41:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9524,3 +9524,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated editors/TeXmacs to 2.1.2 [nros 2023-11-02]
 	Updated ham/rtl-sdr to 2.0.0 [gdt 2023-11-02]
 	Updated sysutils/git-annex to 10.20230926nb2 [wiz 2023-11-02]
+	Updated archivers/xfce4-thunar-archive to 0.5.2 [gutteridge 2023-11-03]
