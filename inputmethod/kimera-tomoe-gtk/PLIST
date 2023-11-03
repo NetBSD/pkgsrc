@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/20 07:48:09 obache Exp $
-bin/kimera-tomoe-gtk
-share/locale/ja/LC_MESSAGES/kimera-tomoe-gtk.mo
