@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6553 2023/11/03 08:31:52 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6554 2023/11/03 08:32:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9529,3 +9529,5 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated wm/spectrwm to 3.5.0 [pin 2023-11-03]
 	Added misc/tailspin version 1.6.1 [pin 2023-11-03]
 	Updated wm/i3 to 4.23 [wiz 2023-11-03]
+	Updated net/py-tldextract to 5.0.1 [adam 2023-11-03]
+	Updated www/py-test-django to 4.6.0 [adam 2023-11-03]
