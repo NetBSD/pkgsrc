@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.108 2023/11/02 01:27:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.109 2023/11/03 02:43:54 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
@@ -43,7 +43,7 @@ DEPENDS+=	xfce4-whiskermenu-plugin>=2.8.0:../../x11/xfce4-whiskermenu-plugin
 DEPENDS+=	xfce4-xkb-plugin>=0.8.3:../../sysutils/xfce4-xkb-plugin
 
 # File Manager Plugins
-DEPENDS+=	xfce4-thunar-archive-plugin>=0.5.1:../../archivers/xfce4-thunar-archive
+DEPENDS+=	xfce4-thunar-archive-plugin>=0.5.2:../../archivers/xfce4-thunar-archive
 DEPENDS+=	xfce4-thunar-media-tags-plugin>=0.2.1:../../multimedia/xfce4-thunar-media-tags
 #DEPENDS+=	xfce4-thunar-vcs-plugin>=0.1.4:../../sysutils/xfce4-thunar-vcs
 
