@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6564 2023/11/03 23:12:10 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6565 2023/11/03 23:39:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9543,3 +9543,6 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated games/gnome-mastermind to 0.4.0 [wiz 2023-11-03]
 	Updated textproc/unicode-character-database to 15.1.0 [wiz 2023-11-03]
 	Updated www/bluefish to 2.2.14 [wiz 2023-11-03]
+	Removed inputmethod/tomoe-gtk [wiz 2023-11-03]
+	Removed inputmethod/kimera-tomoe-gtk [wiz 2023-11-03]
+	Removed inputmethod/uim-tomoe-gtk [wiz 2023-11-03]
