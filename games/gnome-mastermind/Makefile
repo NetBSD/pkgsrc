@@ -1,25 +1,20 @@
-# $NetBSD: Makefile,v 1.49 2023/10/21 17:10:14 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.50 2023/11/03 21:14:53 wiz Exp $
 
-DISTNAME=	gnome-mastermind-0.3.1
-PKGREVISION=	43
+DISTNAME=	gnome-mastermind-0.4.0
 CATEGORIES=	games
-MASTER_SITES=	http://download.gna.org/gnome-mastermind/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fargiolas/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.autistici.org/gnome-mastermind/
+HOMEPAGE=	https://github.com/fargiolas/gnome-mastermind
 COMMENT=	Mastermind (the game)
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake msgfmt
+USE_TOOLS+=	gmake itstool intltool pkg-config # msgfmt
 
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../mk/omf-scrollkeeper.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
