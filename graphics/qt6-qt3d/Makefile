@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/10/31 19:56:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2023/11/03 19:24:14 nros Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickRender.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DQuickScene2D.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt63DRender.pc
 
-PLIST_VARS+=	avx simd
+PLIST_VARS+=	simd
 
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
 PLIST.simd=		yes
