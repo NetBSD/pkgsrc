@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:49:36 nia Exp $
-
-BLAKE2s (kimera-tomoe-gtk-0.5.tar.gz) = 0e0cf97ce35a9c363019785182b2050de157d88a40e3a8a1b8db82be1ac7d37a
-SHA512 (kimera-tomoe-gtk-0.5.tar.gz) = 67082b3934d46e3f2b23c135bc28de5a418281a01e9151348f4c64bbc0b8335173de76974e306174b43e5f1d9f781260024f8ae3a5c4e790acb9bf9c51e9d8c6
-Size (kimera-tomoe-gtk-0.5.tar.gz) = 334888 bytes
-SHA1 (patch-aa) = 986162267dfe5e4c84c1fa07ce98dcce34e47fd4
