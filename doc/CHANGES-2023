@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6562 2023/11/03 21:15:06 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6563 2023/11/03 21:27:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9541,3 +9541,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/protobuf-c to 1.4.1nb2 [wiz 2023-11-03]
 	Updated games/augustus to 3.2.0nb2 [triaxx 2023-11-03]
 	Updated games/gnome-mastermind to 0.4.0 [wiz 2023-11-03]
+	Updated textproc/unicode-character-database to 15.1.0 [wiz 2023-11-03]
