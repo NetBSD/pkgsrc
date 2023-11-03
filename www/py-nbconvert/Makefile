@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/10/28 19:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2023/11/03 10:17:14 adam Exp $
 
-DISTNAME=	nbconvert-7.8.0
+DISTNAME=	nbconvert-7.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
 
@@ -11,12 +10,9 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	Converting Jupyter Notebooks
 LICENSE=	modified-bsd
 
-# TODO: currently this package requires internet connection to build.
-# Examine hatch_build.py to find out which files get downloaded.
-
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-DEPENDS+=	${PYPKGPREFIX}-bleach-[0-9]*:../../www/py-bleach
+DEPENDS+=	${PYPKGPREFIX}-bleach>=5.0.1:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.7:../../devel/py-jupyter_core
