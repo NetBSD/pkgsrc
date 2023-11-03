@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2023/10/24 22:10:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.116 2023/11/03 20:55:31 wiz Exp $
 
 DISTNAME=	vinagre-3.6.2
-PKGREVISION=	71
-CATEGORIES=	x11 gnome
+PKGREVISION=	72
+CATEGORIES=	net x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/3.6/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -25,7 +24,7 @@ LDFLAGS.SunOS+=	-lnsl
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(CC_VERSION:Mgcc-[6-9].*) || !empty(CC_VERSION:Mgcc-1[0-9].*)
+.if !empty(PKGSRC_COMPILER:Mclang) || ${CC_VERSION:Mgcc-[6-9].*} || ${CC_VERSION:Mgcc-1[0-9].*}
 CFLAGS+=	-Wno-error=format-nonliteral
 .endif
 
@@ -54,13 +53,11 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.4.3
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/gtk-vnc/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.0.3
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
