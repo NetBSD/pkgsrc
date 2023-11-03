@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.163 2023/10/21 17:11:38 gdt Exp $
+# $NetBSD: Makefile,v 1.164 2023/11/03 23:11:58 wiz Exp $
 
-DISTNAME=	bluefish-2.2.10
-PKGREVISION=	22
+DISTNAME=	bluefish-2.2.14
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bluefish/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +12,10 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
 
-USE_TOOLS+=		find gmake grep msgfmt pkg-config perl intltool
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		find gmake grep msgfmt pkg-config perl
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX:Q}/share/pixmaps
 CONFIGURE_ARGS+=	--with-freedesktop_org-menu=${PREFIX:Q}/share/applications
@@ -22,31 +23,26 @@ CONFIGURE_ARGS+=	--with-freedesktop_org-mime=${PREFIX:Q}/share/mime
 CONFIGURE_ENV+=		EXTERNAL_GREP=${TOOLS_GREP:Q}
 CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 
-CHECK_WRKREF_SKIP+=		lib/bluefish/about.so
+CHECK_WRKREF_SKIP+=		lib/bluefish/about.*
 REPLACE_PYTHON+=		data/lorem-ipsum-generator data/jsbeautify
 REPLACE_PYTHON+=		data/cssmin.py data/jsmin.py
 REPLACE_PYTHON+=		data/css_decompressor
 CHECK_INTERPRETER_SKIP+=	share/bluefish/plugins/*/*.py
 CHECK_INTERPRETER_SKIP+=	share/bluefish/plugins/*/*/*.py
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.2.4
-
-# XXX this doesn't work
-#XML_CATALOGS=	${PREFIX}/share/xml/bluefish/catalog.xml
-#XML_ENTRIES=	delegateURI http://bluefish.openoffice.nl/ns/bflang/2.0/ \
-#		${PREFIX}/share/xml/bluefish/2.0/
-#.include "../../textproc/xmlcatmgr/catalogs.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
-#CONFIGURE_ARGS+=	--disable-python
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../fonts/gucharmap/buildlink3.mk"
+# too new
+#.include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
