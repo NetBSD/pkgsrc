@@ -1,21 +1,8 @@
-@comment $NetBSD: PLIST,v 1.19 2023/08/23 15:40:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2023/11/03 09:15:34 adam Exp $
 lib/postgresql/timescaledb-${PKGVERSION}.so
 ${PLIST.tsl}lib/postgresql/timescaledb-tsl-${PKGVERSION}.so
 lib/postgresql/timescaledb.so
 share/postgresql/extension/timescaledb--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.0--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.1--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.2--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.3--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.4--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--1.7.5--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.0--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.0-rc1--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.0-rc2--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.0-rc3--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.0-rc4--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.1--${PKGVERSION}.sql
-share/postgresql/extension/timescaledb--2.0.2--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.1.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.1.1--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.10.0--${PKGVERSION}.sql
@@ -24,6 +11,8 @@ share/postgresql/extension/timescaledb--2.10.2--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.10.3--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.11.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.11.1--${PKGVERSION}.sql
+share/postgresql/extension/timescaledb--2.11.2--${PKGVERSION}.sql
+share/postgresql/extension/timescaledb--2.12.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.2.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.2.1--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.3.0--${PKGVERSION}.sql
