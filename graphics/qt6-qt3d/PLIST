@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/09/22 08:49:44 vins Exp $
+@comment $NetBSD: PLIST,v 1.6 2023/11/03 19:24:14 nros Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -138,7 +138,7 @@ qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/calcboundingvolumejob_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/corelogging_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/coresettings_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/job_common_p.h
-${PLIST.avx}qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_avx2_p.h
+${PLIST.simd}qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_avx2_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_p.h
 ${PLIST.simd}qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/matrix4x4_sse_p.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/nullservices_p.h
