@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6550 2023/11/03 02:44:03 gutteridge Exp $
+$NetBSD: CHANGES-2023,v 1.6551 2023/11/03 08:14:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9526,3 +9526,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/git-annex to 10.20230926nb2 [wiz 2023-11-02]
 	Updated archivers/xfce4-thunar-archive to 0.5.2 [gutteridge 2023-11-03]
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb6 [gutteridge 2023-11-03]
+	Updated wm/spectrwm to 3.5.0 [pin 2023-11-03]
