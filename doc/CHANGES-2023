@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6610 2023/11/04 16:10:02 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6611 2023/11/04 16:13:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9601,3 +9601,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added devel/py-lib3to6 version 202107.1047 [wiz 2023-11-04]
 	Updated shells/oh-my-posh to 18.23.1 [pin 2023-11-04]
 	Updated devel/py-bumpver to 2023.1129 [wiz 2023-11-04]
+	Updated net/py-cares to 4.4.0 [wiz 2023-11-04]
