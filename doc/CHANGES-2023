@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6618 2023/11/04 21:21:50 js Exp $
+$NetBSD: CHANGES-2023,v 1.6619 2023/11/04 23:56:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9609,3 +9609,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated mail/notmuch to 0.38.1 [wiz 2023-11-04]
 	Updated mail/notmuch-emacs to 0.38.1 [wiz 2023-11-04]
 	Updated chat/element-web to 1.11.47 [js 2023-11-04]
+	Removed inputmethod/scim-tomoe [wiz 2023-11-04]
