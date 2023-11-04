@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2023/10/24 22:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2023/11/04 10:02:57 wiz Exp $
 
-DISTNAME=	terminatorX-4.0.1
+DISTNAME=	terminatorX-4.2.0
 PKGNAME=	${DISTNAME:S/X/x/1}
-PKGREVISION=	31
 CATEGORIES=	audio
 MASTER_SITES=	https://terminatorx.org/dist/
 
@@ -54,7 +53,6 @@ SUBST_SED.prefix+=	-e "s|/usr/share/ladspa|${PREFIX}/share/ladspa|g"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/sox/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/liblrdf/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

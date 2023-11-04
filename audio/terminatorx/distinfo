@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 09:59:33 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/11/04 10:02:57 wiz Exp $
 
-BLAKE2s (terminatorX-4.0.1.tar.gz) = b45a6558d6e81c849a7f7c10e2371d07c5702af3c0962503435e3e1d2902d6b2
-SHA512 (terminatorX-4.0.1.tar.gz) = dae7d401870db39692d57e1fe5df47be7b50179a8cd739b60bdfda211cbe29e8abdc116bda23a286ddf49533e76175ac2a5811e0516b1a7d50b7873f7db4715b
-Size (terminatorX-4.0.1.tar.gz) = 1928137 bytes
+BLAKE2s (terminatorX-4.2.0.tar.gz) = 0c0f721178a75ba7ba2d97a92f28550433195d9f6ff2e5d744148637d1bcd620
+SHA512 (terminatorX-4.2.0.tar.gz) = f185d96b4aedcb5ab561533877e4cb98c872cce6da62045abb344d60c67e49c149b5131d32f18e991b763529c532e21ca08f85cd6dbe9bcc639cc5f151a558e0
+Size (terminatorX-4.2.0.tar.gz) = 1898098 bytes
 SHA1 (patch-configure) = ab0e0f7b49c854bffab957a460ff4602ca6ad519
-SHA1 (patch-src_main.cc) = 327a9067e571236d47a5ba7448c71c6460f01701
-SHA1 (patch-src_tX__audiofile.cc) = 37c2ce405a8740705bf9811ddc782cedf57f5f1a
-SHA1 (patch-src_tX__dialog.cc) = 1ba42dffc0bfe5fe786f2ca8f27b0e582dba02c3
-SHA1 (patch-src_tX__flash.c) = dbcbac5742b90915d953702c45083c8cbec2589a
-SHA1 (patch-src_tX__seqpar.cc) = e2db0feaa01fbbd3b4f84b93abfdc409fcd1ca7d
-SHA1 (patch-src_tX__vtt.cc) = 9947e84f1b0067935f750989d37919b88587149f
-SHA1 (patch-src_tX__widget.c) = eed43a8a4143035074645cfe33d4d14990f35494
+SHA1 (patch-src_Makefile.in) = 34819c3318c17473f4464c1045ad6f3991ba455a
+SHA1 (patch-src_main.cc) = 6e146a7e343779f775d0f976d4818925d8e879b4
+SHA1 (patch-src_tX__audiofile.cc) = 5351dc6eac9a42341c9390472028798767df0091
+SHA1 (patch-src_tX__flash.c) = 5389411906fd3a3a2e0ca1df64bd9b20ca792f0c
+SHA1 (patch-src_tX__seqpar.cc) = fa1ae23027a4aa047a5734aec3d01dbc14443348
+SHA1 (patch-src_tX__vtt.cc) = 865f178b8cf10e3bd3951626604542fcbfd4ff0c
+SHA1 (patch-src_tX__widget.c) = 2f4b120460b62de46541207448a2993fe20a141a
