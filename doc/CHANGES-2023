@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6574 2023/11/04 09:15:13 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6575 2023/11/04 09:15:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9558,3 +9558,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/libdbusmenu-tools [wiz 2023-11-04]
 	Removed devel/libdbusmenu-gtk-doc [wiz 2023-11-04]
 	Removed devel/libdbusmenu-jsonloader [wiz 2023-11-04]
+	Updated devel/libdbusmenu-glib to 16.04.0 [wiz 2023-11-04]
