@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2023/09/16 12:43:13 rhialto Exp $
+# $NetBSD: Makefile,v 1.240 2023/11/04 08:33:00 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -53,7 +53,6 @@ SUBDIR+=	featherpad
 SUBDIR+=	fileobj
 SUBDIR+=	focuswriter
 SUBDIR+=	gate
-SUBDIR+=	gconf-editor
 SUBDIR+=	gedit
 SUBDIR+=	ghex
 SUBDIR+=	gice
