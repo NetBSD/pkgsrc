@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:42 nia Exp $
-
-BLAKE2s (Gnome2-GConf-1.044.tar.gz) = e8d04667000a4d58e75741368e5c17f66b87d657fcebfff93d71bf32cf9f7424
-SHA512 (Gnome2-GConf-1.044.tar.gz) = 040092a838d0ba7ac005d48bc51b096bbd73e50277a6ee5b5ce2c32754aba4abab463b8e528dd0bd676cefdb72602f393ceeb1eaa30a8d5b698532be42380a2b
-Size (Gnome2-GConf-1.044.tar.gz) = 35034 bytes
