@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2023/10/15 07:33:48 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.3 2023/11/04 16:27:20 wiz Exp $
+# used by mail/notmuch-emacs/Makefile
 
-DISTNAME=	notmuch-0.38
+DISTNAME=	notmuch-0.38.1
 CATEGORIES=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -14,11 +15,13 @@ PATCHDIR=	${.CURDIR}/../../mail/notmuch/patches
 DISTINFO_FILE=	${.CURDIR}/../../mail/notmuch/distinfo
 
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash gmake makeinfo pkg-config # perl:test
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 INFO_FILES=	yes
 TEST_TARGET=	check
+
+USE_CXX_FEATURES+=	c++11
 
 PYTHON_FOR_BUILD_ONLY=		tool
 PYTHON_VERSIONS_INCOMPATIBLE=	27
