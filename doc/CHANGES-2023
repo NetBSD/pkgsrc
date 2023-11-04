@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6583 2023/11/04 10:06:56 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6584 2023/11/04 10:08:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9568,3 +9568,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated audio/terminatorx to 4.2.0 [wiz 2023-11-04]
 	Removed misc/gwaei [wiz 2023-11-04]
 	Removed biology/gnome-chemistry-utils [wiz 2023-11-04]
+	Removed textproc/gnome-doc-utils [wiz 2023-11-04]
