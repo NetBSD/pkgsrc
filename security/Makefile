@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.928 2023/11/02 04:47:50 pho Exp $
+# $NetBSD: Makefile,v 1.929 2023/11/04 09:27:07 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -415,7 +415,6 @@ SUBDIR+=	pkcs11-helper
 SUBDIR+=	pks
 SUBDIR+=	pleaser
 SUBDIR+=	policykit
-SUBDIR+=	policykit-gnome
 SUBDIR+=	polkit
 SUBDIR+=	polkit-qt
 SUBDIR+=	polkit-qt5
