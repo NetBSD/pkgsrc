@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/10/24 22:11:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2023/11/04 12:32:11 wiz Exp $
 
 BUILDLINK_TREE+=	libvirt
 
@@ -21,14 +21,8 @@ BUILDLINK_PKGSRCDIR.libvirt?=	../../sysutils/libvirt
 pkgbase := libvirt
 .include "../../mk/pkg-build-options.mk"
 
-.if ${PKG_BUILD_OPTIONS.libvirt:Mxen}
-.include "../../sysutils/xentools42/buildlink3.mk"
-.endif
 .if ${PKG_BUILD_OPTIONS.libvirt:Mlibssh2}
 .include "../../security/libssh2/buildlink3.mk"
-.endif
-.if ${PKG_BUILD_OPTIONS.libvirt:Mhal}
-.include "../../sysutils/hal/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.libvirt:Mdbus}
 .include "../../sysutils/dbus/buildlink3.mk"
