@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.4 2011/01/08 13:39:08 obache Exp $
-libexec/hald-addon-storage
-libexec/hald-probe-storage
-libexec/hald-probe-volume
-libexec/scripts/netbsd/hal-system-power-reboot-netbsd
-libexec/scripts/netbsd/hal-system-power-shutdown-netbsd
-libexec/scripts/netbsd/hal-system-power-suspend-netbsd
