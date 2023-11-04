@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4109 2023/11/04 12:07:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4110 2023/11/04 12:11:44 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2410,7 +2410,6 @@ SUBDIR+=	py-astunparse
 SUBDIR+=	py-async-lru
 SUBDIR+=	py-async-timeout
 SUBDIR+=	py-async_generator
-SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
 SUBDIR+=	py-atomicwrites
 SUBDIR+=	py-atpublic
