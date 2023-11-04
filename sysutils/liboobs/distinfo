@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:19:48 nia Exp $
-
-BLAKE2s (liboobs-2.22.2.tar.bz2) = 792b37e14a213a58306e001f83d79b944effbdc2f74f40330521f88529efd812
-SHA512 (liboobs-2.22.2.tar.bz2) = c979ecf878147dc11b71d2428db2b8c9c59b7afb1dbd3a7a26ef7203d42a084b81e379a678d647fd08d434f575ed8d53e341d0dacef1b6e431a5de659ed052f4
-Size (liboobs-2.22.2.tar.bz2) = 364260 bytes
-SHA1 (patch-aa) = 5c6b81f321eb86309ab8265ebb465ac69ac36ddf
-SHA1 (patch-ab) = add5f126fc3329966255db209cddf90c2ae924e9
-SHA1 (patch-ac) = 0d5ed64cfff454dab37745bf300ecb8ec5b02793
