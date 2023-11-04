@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6572 2023/11/04 00:21:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6573 2023/11/04 08:33:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9553,3 +9553,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added x11/gtksourceview5 version 5.10.0 [wiz 2023-11-04]
 	Updated math/gnome-calculator to 45.0.2 [wiz 2023-11-04]
 	Updated mail/neomutt to 20231103 [wiz 2023-11-04]
+	Removed editors/gconf-editor [wiz 2023-11-04]
