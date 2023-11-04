@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.73 2023/10/24 22:11:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.74 2023/11/04 12:26:51 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-vfs
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.gnome-vfs?=		../../sysutils/gnome-vfs
 pkgbase := gnome-vfs
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.gnome-vfs:Mavahi)
+.if ${PKG_BUILD_OPTIONS.gnome-vfs:Mavahi}
 .  include "../../net/avahi/buildlink3.mk"
 .endif
 
