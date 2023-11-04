@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:03:39 nia Exp $
-
-BLAKE2s (gnome-chemistry-utils-0.14.16.tar.bz2) = cd047a6b1047ebbda6b85c6514caf40f788b76244cacd72c4cd2acbc09c12a43
-SHA512 (gnome-chemistry-utils-0.14.16.tar.bz2) = 7ae652edcee9707c731d77f42899dbebb16c058034d234ea95d62351f8d7c1b87a80ebbf37960721585f8d2af2b5017cb072d655a3c2d01a3a2b52fa1a17b34c
-Size (gnome-chemistry-utils-0.14.16.tar.bz2) = 6701094 bytes
-SHA1 (patch-configure) = 71e51e882eae3ea5920efdfd7f065f497ab2268d
