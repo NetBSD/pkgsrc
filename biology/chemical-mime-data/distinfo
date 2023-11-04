@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:03:38 nia Exp $
-
-BLAKE2s (chemical-mime-data-0.1.94.tar.gz) = 20f0ba940fa404cf3c353c2d7bfa1bb7a594af23adb71c5c568f664c1e342eed
-SHA512 (chemical-mime-data-0.1.94.tar.gz) = af41022c9f8836d1532b514a95cab511a5fbc3b2b687e84020f39f462c988d99c20a010fb0d0cd28c3c8c62c32498a50ace4d93f58ab9ad478bdbd08a037d616
-Size (chemical-mime-data-0.1.94.tar.gz) = 193359 bytes
