@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1001 2023/11/04 00:13:05 wiz Exp $
+# $NetBSD: Makefile,v 1.1002 2023/11/04 12:13:26 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -276,8 +276,6 @@ SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
-SUBDIR+=	py-gnome2
-SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-gtksourceview
 SUBDIR+=	py-keybinder
