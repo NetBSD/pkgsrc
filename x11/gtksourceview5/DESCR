@@ -1,0 +1,5 @@
+GtkSourceView is a text widget that extends the standard GTK+ 4.x text
+widget GtkTextView.  It improves GtkTextView by implementing syntax
+highlighting and other features typical of a source code editor.
+
+This package contains major version 5 of the widget.
