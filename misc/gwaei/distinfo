@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:59:05 nia Exp $
-
-BLAKE2s (gwaei-3.6.2.tar.xz) = 87b6aa85ee9ccfead7ab3d3d2793cb52409ef25c3c4d3b7e9a4b9e3519c37b05
-SHA512 (gwaei-3.6.2.tar.xz) = 96876f7e15ff5e166dcd116e2286294b7b375e55723684e4e3dec31aba46d1c89ccd70007fc01cab97a5fd5e671ec073c3f69525ff7e68126851e587d4f20c3b
-Size (gwaei-3.6.2.tar.xz) = 547592 bytes
