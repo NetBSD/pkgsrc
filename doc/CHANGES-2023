@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6602 2023/11/04 14:24:24 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6603 2023/11/04 14:35:14 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9593,3 +9593,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated news/pan to 0.155 [rhialto 2023-11-04]
 	Updated devel/py-ijson to 3.2.3 [js 2023-11-04]
 	Removed security/policykit successor security/polkit [wiz 2023-11-04]
+	Updated biology/kallisto to 0.50.1 [bacon 2023-11-04]
