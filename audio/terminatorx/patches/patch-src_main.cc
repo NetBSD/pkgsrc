@@ -1,13 +1,13 @@
-$NetBSD: patch-src_main.cc,v 1.1 2019/10/05 12:09:26 nia Exp $
+$NetBSD: patch-src_main.cc,v 1.2 2023/11/04 10:02:57 wiz Exp $
 
 Use standard stdlib.h instead of non-standard malloc.h.
 
---- src/main.cc.orig	2016-07-24 14:24:08.000000000 +0000
+--- src/main.cc.orig	2022-08-25 14:40:07.000000000 +0000
 +++ src/main.cc
-@@ -27,7 +27,7 @@
+@@ -26,7 +26,7 @@
+ #define BENCH_CYCLES 100000
  
- #include <stdio.h>
- #include "tX_mastergui.h"
+ #include "tX_maingui.h"
 -#include <malloc.h>
 +#include <stdlib.h>
  #include <math.h>
