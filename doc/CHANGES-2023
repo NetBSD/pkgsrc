@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6605 2023/11/04 15:22:02 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6606 2023/11/04 15:24:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9596,3 +9596,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated biology/kallisto to 0.50.1 [bacon 2023-11-04]
 	Updated devel/py-blinker to 1.6.3 [wiz 2023-11-04]
 	Updated net/pear-Net_SMTP to 1.11.1 [taca 2023-11-04]
+	Updated mail/pear-Mail to 1.6.0 [taca 2023-11-04]
