@@ -1,17 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.69 2023/10/21 17:11:43 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.70 2023/11/04 09:54:52 wiz Exp $
 
 BUILDLINK_TREE+=	gnome-desktop
 
 .if !defined(GNOME_DESKTOP_BUILDLINK3_MK)
 GNOME_DESKTOP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=2.30.0
-BUILDLINK_ABI_DEPENDS.gnome-desktop+=	gnome-desktop>=2.32.1nb56
+BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=44
 BUILDLINK_PKGSRCDIR.gnome-desktop?=	../../x11/gnome-desktop
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
+.include "../../x11/xkeyboard-config/buildlink3.mk"
 .endif # GNOME_DESKTOP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gnome-desktop
