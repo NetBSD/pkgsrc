@@ -1,4 +1,4 @@
-$NetBSD: patch-scan_sane_OrbliteScan_LinuxCommon.h,v 1.1 2022/08/26 03:08:28 khorben Exp $
+$NetBSD: patch-scan_sane_OrbliteScan_LinuxCommon.h,v 1.2 2023/11/04 14:22:16 wiz Exp $
 
 --- scan/sane/OrbliteScan/LinuxCommon.h.orig	2019-12-10 05:00:30.000000000 +0000
 +++ scan/sane/OrbliteScan/LinuxCommon.h

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2022/08/26 03:08:27 khorben Exp $
+$NetBSD: distinfo,v 1.44 2023/11/04 14:22:16 wiz Exp $
 
 BLAKE2s (hplip-3.19.12.tar.gz) = 24ea25e3ac4ab3c521ae65acb27a88a65a164f3d93b088e33f13f97ee8ad6eae
 SHA512 (hplip-3.19.12.tar.gz) = 5552cd717ae082ee55cdb77d79e8d035d8ecb7cf23c79d659fda43468d8ed414a33c4d869eab4ab83dee836f0d1cceb74c3c4a249e26f904a5ab2350e08a5677
@@ -16,5 +16,5 @@ SHA1 (patch-prnt_hpijs_hjzjscolor.cpp) = 5ca9c828ba4aff17a54a803d79c2dc169975d50
 SHA1 (patch-prnt_hpps_hppsfilter.c) = 5a3e7f3f5504fb88d58cf2b79fa138066859aa00
 SHA1 (patch-protocol_discovery_mdns.c) = 41427f6a381f6cdaa2f1d8f5c050d6b51eeb412e
 SHA1 (patch-scan.py) = 3ca05c3569ec78b5752af364e4d0728900076c3c
-SHA1 (patch-scan_sane_OrbliteScan_LinuxCommon.h) = 509ba919ce6c51f2e1247cad1ae5b66a707c21cd
+SHA1 (patch-scan_sane_OrbliteScan_LinuxCommon.h) = d15937ef6381ad046009493b024d4edb8220933d
 SHA1 (patch-scan_sane_OrbliteScan_MacCommon.h) = 4a96cddccdaf8878c33f5523d9bf0ca4951a76dd
