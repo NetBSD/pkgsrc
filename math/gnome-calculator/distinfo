@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:55:41 nia Exp $
+$NetBSD: distinfo,v 1.13 2023/11/04 00:15:11 wiz Exp $
 
-BLAKE2s (gnome-calculator-3.24.0.tar.xz) = 33ddfbd3640ab1aceb32ba3b749fc4e6fd4c0a3d960d773fcad31b60a3157e27
-SHA512 (gnome-calculator-3.24.0.tar.xz) = 55968f3a307748050089652394a3652b8e199be9abf87d43e732874526dc2f08c4521e302a69afd2c09705ffa67a890fc2217503dd31ef51959df9189364c22f
-Size (gnome-calculator-3.24.0.tar.xz) = 1358368 bytes
+BLAKE2s (gnome-calculator-45.0.2.tar.xz) = baa4d3452b938ed30774fd3b14d14147d64cb9414d41ae3eaea631c37cdc4035
+SHA512 (gnome-calculator-45.0.2.tar.xz) = 93248846f285badd4ef4303a31cfa6926deb1d37b0ba8ef7b1971795e092c115004c6bb666469a9e8e02a8e55e8f44d34cff6b88c0816888dc42c36fa1148b2e
+Size (gnome-calculator-45.0.2.tar.xz) = 1100744 bytes
