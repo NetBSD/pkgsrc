@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1091 2023/11/04 12:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.1092 2023/11/04 12:26:01 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -729,7 +729,6 @@ SUBDIR+=	syslog-ng-redis
 SUBDIR+=	syslog-ng-smtp
 SUBDIR+=	syslog-ng-snmp
 SUBDIR+=	syslog-ng-sql
-SUBDIR+=	system-tools-backends
 SUBDIR+=	systester
 SUBDIR+=	sysupgrade
 SUBDIR+=	szyszka
