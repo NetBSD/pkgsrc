@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/20 22:00:23 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2023/11/04 09:15:12 wiz Exp $
 include/libdbusmenu-glib-0.4/libdbusmenu-glib/client.h
 include/libdbusmenu-glib-0.4/libdbusmenu-glib/dbusmenu-glib.h
 include/libdbusmenu-glib-0.4/libdbusmenu-glib/enum-types.h
@@ -17,6 +17,7 @@ share/gtk-doc/html/libdbusmenu-glib/ch01.html
 share/gtk-doc/html/libdbusmenu-glib/home.png
 share/gtk-doc/html/libdbusmenu-glib/index.html
 share/gtk-doc/html/libdbusmenu-glib/index.sgml
+share/gtk-doc/html/libdbusmenu-glib/left-insensitive.png
 share/gtk-doc/html/libdbusmenu-glib/left.png
 share/gtk-doc/html/libdbusmenu-glib/libdbusmenu-glib-DbusmenuClient.html
 share/gtk-doc/html/libdbusmenu-glib/libdbusmenu-glib-DbusmenuMenuitem.html
@@ -25,7 +26,9 @@ share/gtk-doc/html/libdbusmenu-glib/libdbusmenu-glib-DbusmenuServer.html
 share/gtk-doc/html/libdbusmenu-glib/libdbusmenu-glib-Types.html
 share/gtk-doc/html/libdbusmenu-glib/libdbusmenu-glib.devhelp2
 share/gtk-doc/html/libdbusmenu-glib/object-tree.html
+share/gtk-doc/html/libdbusmenu-glib/right-insensitive.png
 share/gtk-doc/html/libdbusmenu-glib/right.png
 share/gtk-doc/html/libdbusmenu-glib/style.css
+share/gtk-doc/html/libdbusmenu-glib/up-insensitive.png
 share/gtk-doc/html/libdbusmenu-glib/up.png
 share/vala/vapi/Dbusmenu-0.4.vapi
