@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.632 2023/11/03 08:17:52 pin Exp $
+# $NetBSD: Makefile,v 1.633 2023/11/04 10:05:08 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -103,7 +103,6 @@ SUBDIR+=	gperiodic
 SUBDIR+=	grantlee-editor
 SUBDIR+=	grantleetheme
 SUBDIR+=	granulate
-SUBDIR+=	gwaei
 SUBDIR+=	hanzim
 SUBDIR+=	heirloom-banner
 SUBDIR+=	heirloom-cal
