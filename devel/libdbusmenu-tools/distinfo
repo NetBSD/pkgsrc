@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:17 nia Exp $
-
-BLAKE2s (libdbusmenu-12.10.2.tar.gz) = 70442f8876a84524699cf994a690c28fd5e16827d4898cabcbb4ffa34959e55c
-SHA512 (libdbusmenu-12.10.2.tar.gz) = cf2e50dc3adbf35d0a4ccdd62a3efd9fae2d079b8d06e6522b70f077f89ac2cf72188e380f476e38d184b69549e90b801bf1e32174fa94bbe612dd52aec94496
-Size (libdbusmenu-12.10.2.tar.gz) = 735730 bytes
-SHA1 (patch-tools_dbusmenu-dumper.c) = 8cd35d4a127e5a889c7e785834ed8bb5a6e4ac58
-SHA1 (patch-tools_testapp_main.c) = dc479b3f4d9584ab8976fb59c5b8630d7bd9d217

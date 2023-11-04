@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4107 2023/11/02 05:00:49 pho Exp $
+# $NetBSD: Makefile,v 1.4108 2023/11/04 09:15:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -898,13 +898,9 @@ SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
 SUBDIR+=	libdazzle
 SUBDIR+=	libdbusmenu-glib
-SUBDIR+=	libdbusmenu-gtk
-SUBDIR+=	libdbusmenu-gtk-doc
 SUBDIR+=	libdbusmenu-gtk3
-SUBDIR+=	libdbusmenu-jsonloader
 SUBDIR+=	libdbusmenu-qt
 SUBDIR+=	libdbusmenu-qt5
-SUBDIR+=	libdbusmenu-tools
 SUBDIR+=	libdeflate
 SUBDIR+=	libdevq
 SUBDIR+=	libdivsufsort
