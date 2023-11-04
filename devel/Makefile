@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4108 2023/11/04 09:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4109 2023/11/04 12:07:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1675,8 +1675,6 @@ SUBDIR+=	p5-Git-Wrapper
 SUBDIR+=	p5-GitLab-API-v3
 SUBDIR+=	p5-GitLab-API-v4
 SUBDIR+=	p5-Glib-Object-Introspection
-SUBDIR+=	p5-Gnome2
-SUBDIR+=	p5-Gnome2-GConf
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Graph-ReadWrite
 SUBDIR+=	p5-Gravatar-URL

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1086 2023/11/02 03:15:20 pho Exp $
+# $NetBSD: Makefile,v 1.1087 2023/11/04 12:07:38 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -521,7 +521,6 @@ SUBDIR+=	p5-Filesys-Df
 SUBDIR+=	p5-Filesys-DfPortable
 SUBDIR+=	p5-Filesys-Statvfs
 SUBDIR+=	p5-GTop
-SUBDIR+=	p5-Gnome2-VFS
 SUBDIR+=	p5-IO-BufferedSelect
 SUBDIR+=	p5-IO-KQueue
 SUBDIR+=	p5-Lchown
