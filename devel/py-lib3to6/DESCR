@@ -1,0 +1,4 @@
+Compile Python 3.6+ code to Python 2.7+ compatible code. The idea
+is quite similar to Babel. Develop using the newest interpreter
+and use (most) new language features and still maintain backward
+compatibility.
