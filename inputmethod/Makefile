@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2023/11/04 00:18:59 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2023/11/04 23:56:40 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -126,7 +126,6 @@ SUBDIR+=	scim-skk
 SUBDIR+=	scim-tables
 SUBDIR+=	scim-tables-vietnamese-ext
 SUBDIR+=	scim-thai
-SUBDIR+=	scim-tomoe
 SUBDIR+=	scim-uim
 SUBDIR+=	scim-unikey
 SUBDIR+=	sj3
