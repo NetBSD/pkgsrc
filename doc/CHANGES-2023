@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6593 2023/11/04 12:19:18 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6594 2023/11/04 12:20:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9583,3 +9583,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed sysutils/gnome-vfsmm [wiz 2023-11-04]
 	Removed biology/chemical-mime-data [wiz 2023-11-04]
 	Removed databases/gnome-mime-data [wiz 2023-11-04]
+	Updated misc/calibre to 5.44.0nb12 [wiz 2023-11-04]
