@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.6 2023/10/23 18:37:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2023Q3,v 1.1.2.7 2023/11/04 17:32:51 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2023Q3 branch:
 
@@ -192,4 +192,14 @@ x11/lxqt-panel: NetBSD 10 bugfix
 
 Pullup ticket #6815 - requested by gdt
 mail/p5-Mail-DKIM: add missing dependency
+
+Pullup ticket #6816 - requested by bsiegert
+lang/go121: security update
+lang/go: metadata update
+
+Pullup ticket #6818 - requested by gutteridge
+devel/libatomic; build fix
+
+Pullup ticket #6819 - requested by gutteridge
+audio/openal-soft: build fix
 
