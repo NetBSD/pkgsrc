@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2018/01/01 22:29:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.17 2023/11/04 12:30:38 wiz Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -24,11 +24,9 @@ lib/gio/modules/libgvfsdbus.la
 ${PLIST.avahi}lib/libgvfscommon-dnssd.la
 lib/libgvfscommon.la
 ${PLIST.fuse}libexec/gvfs-fuse-daemon
-${PLIST.hal}libexec/gvfs-hal-volume-monitor
 libexec/gvfsd
 libexec/gvfsd-archive
 libexec/gvfsd-burn
-${PLIST.hal}libexec/gvfsd-cdda
 libexec/gvfsd-computer
 libexec/gvfsd-dav
 ${PLIST.avahi}libexec/gvfsd-dnssd
@@ -43,10 +41,8 @@ ${PLIST.samba}libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
 share/dbus-1/services/gvfs-metadata.service
-${PLIST.hal}share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
 share/gvfs/mounts/archive.mount
 share/gvfs/mounts/burn.mount
-${PLIST.hal}share/gvfs/mounts/cdda.mount
 share/gvfs/mounts/computer.mount
 ${PLIST.avahi}share/gvfs/mounts/dav+sd.mount
 share/gvfs/mounts/dav.mount
@@ -59,7 +55,6 @@ share/gvfs/mounts/sftp.mount
 ${PLIST.samba}share/gvfs/mounts/smb-browse.mount
 ${PLIST.samba}share/gvfs/mounts/smb.mount
 share/gvfs/mounts/trash.mount
-${PLIST.hal}share/gvfs/remote-volume-monitors/hal.monitor
 share/locale/af/LC_MESSAGES/gvfs.mo
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo
