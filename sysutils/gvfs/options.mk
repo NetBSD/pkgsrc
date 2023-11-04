@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2022/04/29 23:56:36 gutteridge Exp $
+# $NetBSD: options.mk,v 1.6 2023/11/04 12:27:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
-PKG_SUPPORTED_OPTIONS+=	avahi hal fuse samba
+PKG_SUPPORTED_OPTIONS+=	avahi fuse samba
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -31,17 +31,6 @@ CONFIGURE_ARGS+=	--with-samba-libs=${BUILDLINK_PREFIX.samba}/lib
 PLIST.samba=		yes
 .else
 CONFIGURE_ARGS+=	--disable-samba
-.endif
-
-.if !empty(PKG_OPTIONS:Mhal)
-.include "../../misc/libcdio-paranoia/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hal
-CONFIGURE_ARGS+=	--enable-cdda
-PLIST.hal=		yes
-.else
-CONFIGURE_ARGS+=	--disable-hal
-CONFIGURE_ARGS+=	--disable-cdda
 .endif
 
 .if !empty(PKG_OPTIONS:Mfuse)
