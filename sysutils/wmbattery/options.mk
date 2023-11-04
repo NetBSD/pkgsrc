@@ -1,19 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2020/09/10 11:26:01 nia Exp $
+# $NetBSD: options.mk,v 1.2 2023/11/04 12:28:10 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wmbattery
-PKG_SUPPORTED_OPTIONS=	hal upower
+PKG_SUPPORTED_OPTIONS=	upower
 
 .include "../../mk/bsd.options.mk"
-
-#
-# hal support
-#
-.if !empty(PKG_OPTIONS:Mhal)
-CONFIGURE_ARGS+=	--enable-hal
-.include "../../sysutils/hal/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-hal
-.endif
 
 #
 # upower support
