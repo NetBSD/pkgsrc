@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1546 2023/11/02 04:12:10 pho Exp $
+# $NetBSD: Makefile,v 1.1547 2023/11/04 12:12:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -431,7 +431,6 @@ SUBDIR+=	nagios-plugin-spamd
 SUBDIR+=	nagios-plugin-syncrepl
 SUBDIR+=	nagios-plugin-x509
 SUBDIR+=	nagios-plugins
-SUBDIR+=	nagstamon
 SUBDIR+=	nam
 SUBDIR+=	nanomsg
 SUBDIR+=	nanomsgxx
