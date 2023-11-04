@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2023/11/04 10:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2023/11/04 12:19:18 wiz Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -20,7 +20,6 @@ SUBDIR+=	bowtie2
 SUBDIR+=	bwa
 SUBDIR+=	canu
 SUBDIR+=	cdhit
-SUBDIR+=	chemical-mime-data
 SUBDIR+=	chemtool
 SUBDIR+=	chip-seq
 SUBDIR+=	clustalw
