@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6607 2023/11/04 15:26:09 taca Exp $
+$NetBSD: CHANGES-2023,v 1.6608 2023/11/04 15:53:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9598,3 +9598,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/pear-Net_SMTP to 1.11.1 [taca 2023-11-04]
 	Updated mail/pear-Mail to 1.6.0 [taca 2023-11-04]
 	Updated www/pear-HTTP_Request2 to 2.6.0 [taca 2023-11-04]
+	Added devel/py-lib3to6 version 202107.1047 [wiz 2023-11-04]
