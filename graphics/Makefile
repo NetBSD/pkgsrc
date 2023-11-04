@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1024 2023/10/29 13:58:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.1025 2023/11/04 12:07:38 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -430,7 +430,6 @@ SUBDIR+=	p5-GDGraph
 SUBDIR+=	p5-GDGraph-boxplot
 SUBDIR+=	p5-GDTextUtil
 SUBDIR+=	p5-GIFgraph
-SUBDIR+=	p5-Gnome2-Canvas
 SUBDIR+=	p5-Graph-Easy
 SUBDIR+=	p5-GraphViz
 SUBDIR+=	p5-GraphViz2
