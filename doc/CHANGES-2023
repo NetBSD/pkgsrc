@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6599 2023/11/04 12:33:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6600 2023/11/04 12:36:15 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9590,3 +9590,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated sysutils/gvfs to 1.6.7nb65 [wiz 2023-11-04]
 	Removed sysutils/hal-info [wiz 2023-11-04]
 	Removed sysutils/hal [wiz 2023-11-04]
+	Updated news/pan to 0.155 [rhialto 2023-11-04]
