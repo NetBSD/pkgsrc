@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6612 2023/11/04 16:16:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6613 2023/11/04 16:21:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9603,3 +9603,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-bumpver to 2023.1129 [wiz 2023-11-04]
 	Updated net/py-cares to 4.4.0 [wiz 2023-11-04]
 	Updated devel/py-constantly to 23.10.4 [wiz 2023-11-04]
+	Updated textproc/bk to 0.6.0 [pin 2023-11-04]
