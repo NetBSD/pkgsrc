@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:06:04 nia Exp $
-
-BLAKE2s (Nagstamon-1.0.1.tar.gz) = 79e700eae0d570a5c24a1b4a223d07c41692be3f111d6d09f14c2775b0078c98
-SHA512 (Nagstamon-1.0.1.tar.gz) = 040f3ac03c4945b25345f36d4749903238e05001f40f2777afe5277588aababb24212b538890c4b0ff0e1edef9a950804deb93fb2111bc25c8a773a84b69c353
-Size (Nagstamon-1.0.1.tar.gz) = 455110 bytes
-SHA1 (patch-setup.py) = e7f495c8c76846d2888c38a653eddf49c072d4db
