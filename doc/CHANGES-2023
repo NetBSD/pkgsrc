@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6578 2023/11/04 09:25:25 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6579 2023/11/04 09:27:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9563,3 +9563,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated meta-pkgs/libdbusmenu to 16.04.0 [wiz 2023-11-04]
 	Removed pkgtools/gnome-packagekit [wiz 2023-11-04]
 	Removed pkgtools/packagekit [wiz 2023-11-04]
+	Removed security/policykit-gnome [wiz 2023-11-04]
