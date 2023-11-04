@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/04/03 19:33:11 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.18 2023/11/04 12:36:04 rhialto Exp $
 bin/pan
 man/man1/pan.1
 share/applications/org.gnome.pan.desktop
@@ -33,6 +33,7 @@ share/locale/hu/LC_MESSAGES/pan.mo
 share/locale/id/LC_MESSAGES/pan.mo
 share/locale/it/LC_MESSAGES/pan.mo
 share/locale/ja/LC_MESSAGES/pan.mo
+share/locale/ka/LC_MESSAGES/pan.mo
 share/locale/ko/LC_MESSAGES/pan.mo
 share/locale/lt/LC_MESSAGES/pan.mo
 share/locale/lv/LC_MESSAGES/pan.mo
