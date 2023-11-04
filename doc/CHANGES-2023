@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6614 2023/11/04 16:21:54 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6615 2023/11/04 16:22:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9605,3 +9605,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-constantly to 23.10.4 [wiz 2023-11-04]
 	Updated textproc/bk to 0.6.0 [pin 2023-11-04]
 	Updated textproc/enchant2 to 2.6.2 [wiz 2023-11-04]
+	Updated graphics/py-contourpy to 1.1.1 [wiz 2023-11-04]
