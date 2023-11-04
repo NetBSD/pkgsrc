@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2023/08/29 00:00:48 bacon Exp $
+# $NetBSD: Makefile,v 1.94 2023/11/04 10:06:56 wiz Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -39,7 +39,6 @@ SUBDIR+=	generand
 SUBDIR+=	genesplicer
 SUBDIR+=	gffread
 SUBDIR+=	glimmer
-SUBDIR+=	gnome-chemistry-utils
 SUBDIR+=	gp
 SUBDIR+=	gromacs
 SUBDIR+=	hisat2
