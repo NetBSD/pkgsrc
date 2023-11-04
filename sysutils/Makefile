@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1088 2023/11/04 12:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1089 2023/11/04 12:15:51 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -252,7 +252,6 @@ SUBDIR+=	ftwin
 SUBDIR+=	fzf
 SUBDIR+=	gam
 SUBDIR+=	gamin
-SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
 SUBDIR+=	gdmap
 SUBDIR+=	genpasswd
