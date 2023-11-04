@@ -1,8 +1,15 @@
-$NetBSD: distinfo,v 1.5 2022/02/27 01:57:27 bacon Exp $
+$NetBSD: distinfo,v 1.6 2023/11/04 14:35:07 bacon Exp $
 
-BLAKE2s (kallisto-0.48.0.tar.gz) = c31cdd71591d4784e5b48560dd2c8ed19f8baa77317f0c05441a75f7deb39d64
-SHA512 (kallisto-0.48.0.tar.gz) = 6325660c18c98b591bfa0f293f55f13fa45b58acf86dead3b0c9cd88942c9d3dfa548cf0b8f05fb89697845b7047627b8fcdfba4237a5876463311a6f7127feb
-Size (kallisto-0.48.0.tar.gz) = 2706838 bytes
-SHA1 (patch-CMakeLists.txt) = 9c96f53ec2e280b7f778ae04b002783559730df7
-SHA1 (patch-src_CMakeLists.txt) = dde489a9299207d189d3f94b875bb1929c958897
-SHA1 (patch-src_kseq.h) = c35bca57fb85367e8646a4b771449da7dbfbb439
+BLAKE2s (kallisto-0.50.1.tar.gz) = 2fcdb884dd3f8c381b16648862551c1632780b5f942c4c1296b7581a48092054
+SHA512 (kallisto-0.50.1.tar.gz) = 767319f1b96d29c10dba9a66410764978eb8dcf36186d247821458e977a76adab7c871675e10e56d7e85ac312cd0c75c7651008f612db998699a95e0c63cb8e9
+Size (kallisto-0.50.1.tar.gz) = 5947303 bytes
+SHA1 (patch-CMakeLists.txt) = 2672475d3fd0f3b837cafc9faa62cdc094f6fd4b
+SHA1 (patch-ext_bifrost_CMakeLists.txt) = ff5cebb2f38c4fa90bd651690ef58e588396c2ac
+SHA1 (patch-ext_bifrost_src_BitContainer.cpp) = 88a3b8b0d53bc4e96ec02f38f3f6e6bbd1e80dd7
+SHA1 (patch-ext_bifrost_src_ColorSet.cpp) = 55bb84a31ca97d21e6eefd44e2d3d6391f1e9304
+SHA1 (patch-ext_bifrost_src_libpopcnt.h) = 3f31a47f40f341b1f6f72552b06990a81946e425
+SHA1 (patch-ext_bifrost_src_strict__fstream.hpp) = a4eab7784c3502fcc79ba0c87d31ac7275e5043c
+SHA1 (patch-src_Bootstrap.h) = 29a07a6fbaedf4387b70afb3b2caeb1a9b17f8e8
+SHA1 (patch-src_CMakeLists.txt) = 33d0e3cf985d2e400315788d3ee1c74987a6ebee
+SHA1 (patch-src_kseq.h) = 034e65bdcf5d3851b4e3d65afd06843bdff0d8a9
+SHA1 (patch-src_main.cpp) = 65c9af813f558cebd6086a95b56a499aab02e566
