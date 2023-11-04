@@ -1,22 +1,50 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2022/02/27 01:57:27 bacon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2023/11/04 14:35:07 bacon Exp $
 
-# Unbundle htslib
+# Unbundle htslib and zlib, use gmake
 
---- CMakeLists.txt.orig	2022-02-26 16:36:13.527572702 +0000
+--- CMakeLists.txt.orig	2023-06-27 10:45:00.000000000 +0000
 +++ CMakeLists.txt
-@@ -43,15 +43,6 @@ ENDIF(LINK MATCHES static)
+@@ -56,42 +56,16 @@ ENDIF(LINK MATCHES static)
  
  
  include(ExternalProject)
+-if (USE_BAM)
 -ExternalProject_Add(htslib
 -    PREFIX ${PROJECT_SOURCE_DIR}/ext/htslib
 -    SOURCE_DIR ${PROJECT_SOURCE_DIR}/ext/htslib
 -    BUILD_IN_SOURCE 1
--    CONFIGURE_COMMAND autoheader && autoconf && ${PROJECT_SOURCE_DIR}/ext/htslib/configure 
+-    CONFIGURE_COMMAND autoreconf -i && autoheader &&  autoconf && ${PROJECT_SOURCE_DIR}/ext/htslib/configure
 -        --prefix=${PREFIX} --disable-bz2 --disable-lzma --disable-libcurl
 -    BUILD_COMMAND make lib-static
 -    INSTALL_COMMAND ""
 -)
+-endif(USE_BAM)
  
- include_directories(${htslib_PREFIX}/src/htslib)
+ ExternalProject_Add(bifrost
+     PREFIX ${PROJECT_SOURCE_DIR}/ext/bifrost
+     SOURCE_DIR ${PROJECT_SOURCE_DIR}/ext/bifrost
+     BUILD_IN_SOURCE 1
+     CONFIGURE_COMMAND mkdir -p build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_CXX_FLAGS=${PROJECT_BIFROST_CMAKE_CXX_FLAGS}
+-    BUILD_COMMAND cd build && make
++    BUILD_COMMAND cd build && gmake
+     INSTALL_COMMAND ""
+ )
  
+-if (ZLIBNG)
+-    message("zlib-ng enabled.")
+-    ExternalProject_Add(zlib-ng
+-    PREFIX ${PROJECT_SOURCE_DIR}/ext/zlib-ng
+-    SOURCE_DIR ${PROJECT_SOURCE_DIR}/ext/zlib-ng
+-    BUILD_IN_SOURCE 1
+-    CONFIGURE_COMMAND mkdir -p zlib-ng && cd zlib-ng && cmake .. -DZLIB_COMPAT=ON -DZLIB_ENABLE_TESTS=OFF -DCMAKE_INSTALL_PREFIX=${PREFIX}
+-    BUILD_COMMAND cd zlib-ng && make
+-    INSTALL_COMMAND ""
+-    )
+-endif(ZLIBNG)
+-
+-if (USE_BAM)
+-include_directories(${htslib_PREFIX}/src/htslib)
+-endif(USE_BAM)
+ include_directories(${EXT_PROJECTS_DIR}/bifrost/build/src)
+ 
+ ExternalProject_Get_Property(bifrost install_dir)
