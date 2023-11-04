@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/08/26 07:15:21 taca Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/04 15:24:20 taca Exp $
 
-DISTNAME=	Mail-1.5.1
+DISTNAME=	Mail-1.6.0
 CATEGORIES=	mail
 
 MAINTAINER=	wenheping@gmail.com
