@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2023/10/21 17:11:00 gdt Exp $
+# $NetBSD: Makefile,v 1.66 2023/11/04 00:15:11 wiz Exp $
 
-DISTNAME=		gnome-calculator-3.24.0
-PKGREVISION=		42
+DISTNAME=		gnome-calculator-45.0.2
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-calculator/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-calculator/${PKGVERSION_NOREV:R:R}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		prlw1@cam.ac.uk
@@ -14,22 +13,23 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		gnome-icon-theme-symbolic-[0-9]*:../../graphics/gnome-icon-theme-symbolic
 
 CONFLICTS+=		gcalctool-[0-9]*
+SUPERSEDES+=		gcalctool-[0-9]*
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake gsed intltool msgfmt pkg-config itstool
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		itstool pkg-config
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/glib2/schemas.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libgee/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup+=		libsoup>=2.42
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.19.3
-.include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.15.1
-.include "../../x11/gtksourceview3/buildlink3.mk"
+.include "../../devel/libadwaita/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
+.include "../../x11/gtksourceview5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
