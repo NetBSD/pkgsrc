@@ -1,46 +1,33 @@
-# $NetBSD: Makefile,v 1.165 2023/10/21 17:11:43 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.166 2023/11/04 09:54:52 wiz Exp $
 
-DISTNAME=		gnome-desktop-2.32.1
-PKGREVISION=		56
+DISTNAME=		gnome-desktop-44.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.32/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/
 COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
-GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_LIBTOOL=		yes
+TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
-AUTOCONF_REQD=		2.62
+#USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+USE_TOOLS+=		itstool pkg-config
 
-CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
+PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-desktop-4.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-bg-4.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-rr-4.pc
+PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-desktop-3.0.pc
 
-TOOL_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
-post-install:
-.for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
-	${INSTALL_DATA} ${FILESDIR}/${f} ${DESTDIR}${PREFIX}/share/pixmaps/${f}
-.endfor
-
-.include "../../devel/GConf/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.19.1
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.3
-.include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
-# gnome-about needs py-gnome2-desktop at runtime, which needs us, so
-# we have a circular dependency. To work around this, just depend on
-# Python and hope that py-gnome2-desktop gets the same version.
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
-.include "../../lang/python/application.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtk4/buildlink3.mk"
+.include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
