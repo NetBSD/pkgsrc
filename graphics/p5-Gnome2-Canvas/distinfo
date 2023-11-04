@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:37 nia Exp $
-
-BLAKE2s (Gnome2-Canvas-1.002.tar.gz) = e55f2e5e3f01faeffe8cef4e69c6ad0f4a385e0552852df4f9c6ced309459d82
-SHA512 (Gnome2-Canvas-1.002.tar.gz) = 9ad7e5b5a29b1b90cecca56c63165b92ad607a6f6e260810c597081a77a282910e85d372271d2f4e299e8e0728b79733f39439e3927237a92b16251d7004db89
-Size (Gnome2-Canvas-1.002.tar.gz) = 62040 bytes
