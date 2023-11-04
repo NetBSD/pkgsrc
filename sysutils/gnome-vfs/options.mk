@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2020/01/18 09:08:39 tnn Exp $
-#
+# $NetBSD: options.mk,v 1.10 2023/11/04 12:26:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
-PKG_SUPPORTED_OPTIONS=	fam gssapi hal inet6 avahi
-PKG_SUGGESTED_OPTIONS=	fam hal inet6
+PKG_SUPPORTED_OPTIONS=	fam gssapi inet6 avahi
+PKG_SUGGESTED_OPTIONS=	fam inet6
 
 # Kerberos is built in - no additional dependency
 PKG_SUGGESTED_OPTIONS.NetBSD+=	gssapi
@@ -19,18 +18,11 @@ CONFIGURE_ARGS+=	--disable-fam
 
 .if !empty(PKG_OPTIONS:Mgssapi)
 .include "../../mk/krb5.buildlink3.mk"
-.  if !empty(USE_BUILTIN.${KRB5_TYPE}:M[yY][eE][sS])
+.  if ${USE_BUILTIN.${KRB5_TYPE}:tl} == yes
 CONFIGURE_ENV+=		KRB5_CONFIG=${SH_KRB5_CONFIG}
 .  endif
 .else
 CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
-.endif
-
-.if !empty(PKG_OPTIONS:Mhal)
-.include "../../sysutils/hal/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hal
-.else
-CONFIGURE_ARGS+=	--disable-hal
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
