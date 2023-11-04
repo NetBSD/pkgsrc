@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6601 2023/11/04 14:02:33 js Exp $
+$NetBSD: CHANGES-2023,v 1.6602 2023/11/04 14:24:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9592,3 +9592,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed sysutils/hal [wiz 2023-11-04]
 	Updated news/pan to 0.155 [rhialto 2023-11-04]
 	Updated devel/py-ijson to 3.2.3 [js 2023-11-04]
+	Removed security/policykit successor security/polkit [wiz 2023-11-04]
