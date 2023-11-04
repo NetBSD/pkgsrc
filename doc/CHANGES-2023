@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6591 2023/11/04 12:16:34 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6592 2023/11/04 12:17:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9580,3 +9580,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed x11/py-gnome2 [wiz 2023-11-04]
 	Removed sysutils/gcdmaster [wiz 2023-11-04]
 	Removed devel/libgnomeuimm [wiz 2023-11-04]
+	Removed sysutils/gnome-vfsmm [wiz 2023-11-04]

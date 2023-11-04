@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:19:39 nia Exp $
-
-BLAKE2s (gnome-vfsmm-2.26.0.tar.bz2) = d979508763c054250aafc19df145ece344603820e1b1788dbb122488a6f7c92d
-SHA512 (gnome-vfsmm-2.26.0.tar.bz2) = 82e538c06615af83e9e455b0db601e37ee5396cac9b44884879383f3671876cca62bf534f4338177d1a62ab59e834d197302533dcc77f3c09b5433da9c660af8
-Size (gnome-vfsmm-2.26.0.tar.bz2) = 628670 bytes
-SHA1 (patch-aa) = 887ec2629415640ed63c7b1bd7b5a0332ee65c1b
