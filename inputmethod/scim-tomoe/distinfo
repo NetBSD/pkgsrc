@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:49:42 nia Exp $
-
-BLAKE2s (scim-tomoe-0.6.0.tar.gz) = 96eb0bba233324dd4aca6d60253a2bab21a1a91f5ccd3ffa2169c1ff3dc07c8d
-SHA512 (scim-tomoe-0.6.0.tar.gz) = d70a8838f8c82c76a8e3592ad712997189873cbc4ec7ebeba5d43d6583e24acf318299433c9342ee004c4ae4741cca7e0b88e4642cf46c43f967a47ec5ac9d4f
-Size (scim-tomoe-0.6.0.tar.gz) = 385126 bytes
-SHA1 (patch-aa) = 0554574908f37adae9d8771dcadce2e038c5857a
-SHA1 (patch-ab) = b27e4074c5f3b18eb8969c66929c78f9f6ff8fe0

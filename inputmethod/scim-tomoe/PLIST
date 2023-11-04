@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:09:35 obache Exp $
-bin/scim-tomoe
-lib/scim-1.0/1.4.0/Helper/tomoe.la
-share/locale/ja/LC_MESSAGES/scim-tomoe.mo
-share/scim/icons/scim-tomoe.png
