@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.25 2023/10/31 13:47:56 gdt Exp $
+# $NetBSD: gfortran.mk,v 1.26 2023/11/04 12:50:06 gdt Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -59,12 +59,12 @@ POSSIBLE_GFORTRAN_VERSION=	10
 .endif
 
 # If we are using gcc, and the POSSIBLE version exists in pkgsrc, use it.
-# Otherwise, pick gcc 7.  \todo Revisit this choice.
+# Otherwise, pick gcc 10 as a mainstream default.
 .if !empty(PKGSRC_COMPILER:Mgcc) && \
     exists(${PKGSRCDIR}/lang/gcc${POSSIBLE_GFORTRAN_VERSION}/buildlink3.mk)
 GFORTRAN_VERSION?=		${POSSIBLE_GFORTRAN_VERSION}
 .else
-GFORTRAN_VERSION?=		7
+GFORTRAN_VERSION?=		10
 .endif
 
 .if !empty(PKGPATH:Mlang/gcc${GFORTRAN_VERSION}) || !empty(PKGPATH:Mdevel/patch) || \
