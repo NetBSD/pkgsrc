@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.290 2023/10/24 22:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2023/11/04 12:20:00 wiz Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	https://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -151,7 +151,6 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/hal/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"
