@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1087 2023/11/04 12:07:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1088 2023/11/04 12:10:32 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -851,7 +851,6 @@ SUBDIR+=	vcdimager
 SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
-SUBDIR+=	virt-manager
 SUBDIR+=	virt-viewer
 SUBDIR+=	virt-what
 SUBDIR+=	virtinst

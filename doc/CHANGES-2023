@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6585 2023/11/04 12:07:38 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6586 2023/11/04 12:10:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9573,3 +9573,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Removed devel/p5-Gnome2-GConf [wiz 2023-11-04]
 	Removed sysutils/p5-Gnome2-VFS [wiz 2023-11-04]
 	Removed graphics/p5-Gnome2-Canvas [wiz 2023-11-04]
+	Removed sysutils/virt-manager [wiz 2023-11-04]
