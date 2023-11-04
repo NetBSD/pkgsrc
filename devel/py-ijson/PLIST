@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/06/15 10:51:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2023/11/04 14:02:24 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -34,6 +34,9 @@ ${PYSITELIB}/ijson/common.pyo
 ${PYSITELIB}/ijson/compat.py
 ${PYSITELIB}/ijson/compat.pyc
 ${PYSITELIB}/ijson/compat.pyo
+${PYSITELIB}/ijson/dump.py
+${PYSITELIB}/ijson/dump.pyc
+${PYSITELIB}/ijson/dump.pyo
 ${PYSITELIB}/ijson/utils.py
 ${PYSITELIB}/ijson/utils.pyc
 ${PYSITELIB}/ijson/utils.pyo
