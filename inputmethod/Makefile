@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2023/08/04 19:23:30 adam Exp $
+# $NetBSD: Makefile,v 1.123 2023/11/04 00:18:59 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -69,7 +69,6 @@ SUBDIR+=	ja-freewnn-lib
 SUBDIR+=	ja-freewnn-server
 SUBDIR+=	kasumi
 SUBDIR+=	kimera
-SUBDIR+=	kimera-tomoe-gtk
 SUBDIR+=	kinput2
 SUBDIR+=	libchewing
 SUBDIR+=	libchewing02
@@ -161,11 +160,9 @@ SUBDIR+=	tegaki-zinnia-simplified-chinese-light
 SUBDIR+=	tegaki-zinnia-traditional-chinese
 SUBDIR+=	tegaki-zinnia-traditional-chinese-light
 SUBDIR+=	tomoe
-SUBDIR+=	tomoe-gtk
 SUBDIR+=	uim
 SUBDIR+=	uim-chewing
 SUBDIR+=	uim-mozc
-SUBDIR+=	uim-tomoe-gtk
 SUBDIR+=	unicon-im
 SUBDIR+=	xcin
 SUBDIR+=	zinnia
