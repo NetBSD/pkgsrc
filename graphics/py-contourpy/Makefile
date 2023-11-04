@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2023/11/04 16:21:55 wiz Exp $
 
-DISTNAME=	contourpy-1.1.0
+DISTNAME=	contourpy-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/contourpy/}
 
@@ -16,7 +15,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
 TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++17
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
