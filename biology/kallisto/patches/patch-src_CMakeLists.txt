@@ -1,30 +1,26 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.3 2022/02/27 01:57:27 bacon Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.4 2023/11/04 14:35:07 bacon Exp $
 
 # Unbundle htslib
 
---- src/CMakeLists.txt.orig	2022-02-26 16:35:26.912550601 +0000
+--- src/CMakeLists.txt.orig	2023-07-06 14:07:38 UTC
 +++ src/CMakeLists.txt
-@@ -3,15 +3,13 @@ file(GLOB headers *.h *.hpp)
+@@ -3,10 +3,6 @@ file(GLOB headers *.h *.hpp)
  
  list(REMOVE_ITEM sources main.cpp)
  
+-if (USE_BAM)
 -include_directories(../ext/htslib)
+-endif(USE_BAM)
 -
+ add_compile_options(-Wno-subobject-linkage) # Suppress bifrost warning
+ 
  add_library(kallisto_core ${sources} ${headers})
- target_include_directories(kallisto_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
- 
- add_executable(kallisto main.cpp)
- 
+@@ -17,7 +13,7 @@ add_executable(kallisto main.cpp)
  find_package( Threads REQUIRED )
--target_link_libraries(kallisto kallisto_core pthread ${CMAKE_CURRENT_SOURCE_DIR}/../ext/htslib/libhts.a)
-+target_link_libraries(kallisto kallisto_core pthread hts)
- 
- if(LINK MATCHES static)
-     set(BUILD_SHARED_LIBS OFF)
-@@ -62,4 +60,4 @@ else()
- endif(LINK MATCHES static)
- 
- 
--install(TARGETS kallisto DESTINATION "${CMAKE_INSTALL_BINDIR}")
-\ No newline at end of file
-+install(TARGETS kallisto DESTINATION "${CMAKE_INSTALL_BINDIR}")
+ ExternalProject_Get_Property(bifrost install_dir)
+ if (USE_BAM)
+-target_link_libraries(kallisto kallisto_core pthread ${CMAKE_CURRENT_SOURCE_DIR}/../ext/htslib/libhts.a ${install_dir}/build/src/libbifrost.a)
++target_link_libraries(kallisto kallisto_core pthread hts ${install_dir}/build/src/libbifrost.a)
+ else()
+ target_link_libraries(kallisto kallisto_core pthread ${install_dir}/build/src/libbifrost.a)
+ endif(USE_BAM)
