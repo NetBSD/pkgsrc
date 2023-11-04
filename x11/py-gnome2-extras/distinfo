@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:34:19 nia Exp $
-
-BLAKE2s (gnome-python-extras-2.25.3.tar.bz2) = e42a0014801fbf040af145c0de28140376a46430e0ddb14bff1b71bf6fad99d8
-SHA512 (gnome-python-extras-2.25.3.tar.bz2) = 6994b8b5d6ccc009edc7ddfad373b9164d8162f1007972652f6086dca30cac6941ab68ef467d15c972ab05c4ae0e19ec72edc2643636d22a01a3f5a719251467
-Size (gnome-python-extras-2.25.3.tar.bz2) = 370489 bytes
