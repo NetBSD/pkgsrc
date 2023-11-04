@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23537 2023/11/04 15:26:51 taca Exp $
+$NetBSD: TODO,v 1.23538 2023/11/04 16:10:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1182,7 +1182,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
 	o py-barman-3.0.1
-	o py-bumpver-2023.1129
 	o py-cairo-1.25.1
 	o py-cairocffi-1.6.1
 	o py-cares-4.4.0
@@ -1205,7 +1204,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gcovr-6.0
 	o py-google-api-python-client-2.105.0
 	o py-googleapis-common-protos-1.61.0
-	o py-grpcio-1.59.0
 	o py-gsutil-5.6
 	o py-hamcrest-2.1.0
 	o py-hgview-1.9.0
