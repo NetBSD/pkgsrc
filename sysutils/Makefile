@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1090 2023/11/04 12:17:08 wiz Exp $
+# $NetBSD: Makefile,v 1.1091 2023/11/04 12:25:06 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -419,7 +419,6 @@ SUBDIR+=	liblogging
 SUBDIR+=	liblognorm
 SUBDIR+=	libnotify
 SUBDIR+=	libol
-SUBDIR+=	liboobs
 SUBDIR+=	libpciaccess
 SUBDIR+=	libtpms
 SUBDIR+=	libtree
