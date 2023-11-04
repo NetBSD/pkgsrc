@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:15:21 nia Exp $
-
-BLAKE2s (libgnomeuimm-2.28.0.tar.bz2) = d4a40784118981de95701547dd27354e0805d429c5fa042590ff50970271026d
-SHA512 (libgnomeuimm-2.28.0.tar.bz2) = f02ee119bff2d42bd7fc61719988de45e497c7a5cc151a438ad3601c2bf55d6ecfeb001b22032a47f15dc6f7eb4cf4c5412c3246969a24ff0579a9b89d5dab15
-Size (libgnomeuimm-2.28.0.tar.bz2) = 382428 bytes
-SHA1 (patch-examples_iconlist_iconlist.cc) = 0bb90a995091869d984062da019b80b790eb519f
