@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/10/30 16:13:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.96 2023/11/04 07:48:31 wiz Exp $
 
 DISTNAME=	rspamd-3.7.1
 PKGREVISION=	1
@@ -102,6 +102,11 @@ post-extract:
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR} ${DESTDIR}${PREFIX}/share/examples/rspamd
+
+# wiz 20231103:
+# as of rspamd-3.7.1, the ninja generator has problems in some environments:
+# ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
+CMAKE_GENERATOR=	make
 
 .include "../../devel/cmake/build.mk"
 .include "../../databases/hiredis/buildlink3.mk"
