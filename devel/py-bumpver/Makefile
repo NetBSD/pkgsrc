@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/04 16:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/04 23:54:22 wiz Exp $
 
 DISTNAME=	bumpver-2023.1129
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-lib3to6>=0:../../devel/py-lib3to6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-lexid>=0:../../devel/py-lexid
