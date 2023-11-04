@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6609 2023/11/04 16:06:03 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6610 2023/11/04 16:10:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9600,3 +9600,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated www/pear-HTTP_Request2 to 2.6.0 [taca 2023-11-04]
 	Added devel/py-lib3to6 version 202107.1047 [wiz 2023-11-04]
 	Updated shells/oh-my-posh to 18.23.1 [pin 2023-11-04]
+	Updated devel/py-bumpver to 2023.1129 [wiz 2023-11-04]
