@@ -1,4 +1,0 @@
-hal-info is a small hal sub-package that provides the hardware data and
-quirks. These quirks are currently things like what mice support reporting
-battery status, what music players are supported and what cameras are
-detected.

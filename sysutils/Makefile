@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1092 2023/11/04 12:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.1093 2023/11/04 12:33:26 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -283,8 +283,6 @@ SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gtk-send-pr
 SUBDIR+=	gvfs
 SUBDIR+=	gworkspace
-SUBDIR+=	hal
-SUBDIR+=	hal-info
 SUBDIR+=	hcal
 SUBDIR+=	hddtemp
 SUBDIR+=	heirloom-basename
