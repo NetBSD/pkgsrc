@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2023/11/04 10:02:57 wiz Exp $
+
+Don't hardcode libdl.
+
+--- src/Makefile.in.orig	2022-08-25 14:41:01.000000000 +0000
++++ src/Makefile.in
+@@ -386,7 +386,7 @@ terminatorX_SOURCES = tX_endian.c tX_dia
+ 			tX_ui_support.h tX_ladspa_class.h tX_ladspa_class.cc \
+ 			tX_capabilities.h tX_capabilities.cc
+ 
+-terminatorX_LDADD = $(LDADD) -ldl
++terminatorX_LDADD = $(LDADD)
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 

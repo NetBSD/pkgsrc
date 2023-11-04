@@ -1,15 +1,15 @@
-$NetBSD: patch-src_tX__seqpar.cc,v 1.1 2019/10/05 12:09:26 nia Exp $
+$NetBSD: patch-src_tX__seqpar.cc,v 1.2 2023/11/04 10:02:57 wiz Exp $
 
 Use standard stdlib.h instead of non-standard malloc.h.
 
---- src/tX_seqpar.cc.orig	2016-07-24 14:24:08.000000000 +0000
+--- src/tX_seqpar.cc.orig	2022-08-25 14:40:07.000000000 +0000
 +++ src/tX_seqpar.cc
-@@ -28,7 +28,7 @@
+@@ -27,7 +27,7 @@
+ #include "tX_maingui.h"
  #include "tX_sequencer.h"
- #include "tX_extdial.h"
- #include "tX_engine.h"
+ #include "tX_vtt.h"
 -#include <malloc.h>
 +#include <stdlib.h>
+ #include <stdio.h>
  #include <string.h>
  
- #define TX_SEQPAR_DEFAULT_SCALE 0.05
