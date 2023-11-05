@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6631 2023/11/05 01:05:11 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6632 2023/11/05 01:07:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9622,3 +9622,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-pykka to 4.0.1 [wiz 2023-11-05]
 	Updated textproc/py-css-parser to 1.0.10 [wiz 2023-11-05]
 	Added www/py-nh3 version 0.2.14 [wiz 2023-11-05]
+	Updated textproc/py-readme_renderer to 42.0 [wiz 2023-11-05]
