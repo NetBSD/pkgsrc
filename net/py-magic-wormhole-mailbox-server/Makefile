@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2023/11/05 22:45:48 wiz Exp $
 
 DISTNAME=	magic-wormhole-mailbox-server-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole-mailbox-server/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/magic-wormhole/magic-wormhole-mailbox-server
 COMMENT=	Main server for Magic Wormhole
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=16.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.14.1:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
@@ -22,5 +23,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-autobahn
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
