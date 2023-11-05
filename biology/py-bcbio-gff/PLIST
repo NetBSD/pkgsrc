@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/05 17:51:31 bacon Exp $
+${PYSITELIB}/BCBio/GFF/GFFOutput.py
+${PYSITELIB}/BCBio/GFF/GFFOutput.pyc
+${PYSITELIB}/BCBio/GFF/GFFOutput.pyo
+${PYSITELIB}/BCBio/GFF/GFFParser.py
+${PYSITELIB}/BCBio/GFF/GFFParser.pyc
+${PYSITELIB}/BCBio/GFF/GFFParser.pyo
+${PYSITELIB}/BCBio/GFF/__init__.py
+${PYSITELIB}/BCBio/GFF/__init__.pyc
+${PYSITELIB}/BCBio/GFF/__init__.pyo
+${PYSITELIB}/BCBio/GFF/_utils.py
+${PYSITELIB}/BCBio/GFF/_utils.pyc
+${PYSITELIB}/BCBio/GFF/_utils.pyo
+${PYSITELIB}/BCBio/__init__.py
+${PYSITELIB}/BCBio/__init__.pyc
+${PYSITELIB}/BCBio/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

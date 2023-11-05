@@ -1,0 +1,3 @@
+Read and write Generic Feature Format (GFF) with Biopython
+integration.  Meant to be integrated eventually into gffutils,
+making this package obsolete.
