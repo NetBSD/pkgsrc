@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/05/24 18:51:54 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2023/11/05 21:08:20 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-topkg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-topkg
 OCAML_TOPKG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-topkg+=	ocaml-topkg>=1.0.0
-BUILDLINK_ABI_DEPENDS.ocaml-topkg+=	ocaml-topkg>=1.0.5nb1
+BUILDLINK_ABI_DEPENDS.ocaml-topkg+=	ocaml-topkg>=1.0.7
 BUILDLINK_PKGSRCDIR.ocaml-topkg?=	../../misc/ocaml-topkg
 
 .endif	# OCAML_TOPKG_BUILDLINK3_MK
