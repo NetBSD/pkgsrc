@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/05/24 18:51:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/05 21:08:20 jaapb Exp $
 
-DISTNAME=	topkg-1.0.5
+DISTNAME=	topkg-1.0.7
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://erratique.ch/software/topkg/releases/
 EXTRACT_SUFX=	.tbz
