@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/05 22:59:47 wiz Exp $
 
 DISTNAME=	boto-2.49.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-filechunkio-[0-9]*:../../devel/py-filechunkio
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 post-install:
 .for f in asadmin bundle_image cfadmin cq cwutil dynamodb_dump dynamodb_load \
