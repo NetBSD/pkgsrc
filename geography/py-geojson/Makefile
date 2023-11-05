@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/09/02 13:47:00 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2023/11/05 11:49:10 wiz Exp $
 
 DISTNAME=	geojson-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jazzband/geojson
 COMMENT=	Python bindings and utlities for GeoJSON
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 USE_LANGUAGES=	# none
 
