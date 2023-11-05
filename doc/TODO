@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23545 2023/11/05 00:38:38 wiz Exp $
+$NetBSD: TODO,v 1.23546 2023/11/05 00:40:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-numpy-1.26.1
 	o py-omniORBpy-3.7
-	o py-outcome-1.3.0.post0
 	o py-pdf-3.17.0
 	o py-pdf-parser-0.7.4
 	o py-pilkit-3.0
