@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:20:04 nia Exp $
-
-BLAKE2s (pathtools-0.1.2.tar.gz) = 33fdf0996bb0fda6c3c1ea9730c10bf5135a3958e91b56aa2e744fd1386ec8c0
-SHA512 (pathtools-0.1.2.tar.gz) = e014cb17f3d61ce7979e36663f94a44d4f1116c35e3d2ec8c4ac207a81935dde246495ed06597e6edade1509f384b9e5729a97ffd3eec31b1d1c4a8372d1dfd7
-Size (pathtools-0.1.2.tar.gz) = 11006 bytes
