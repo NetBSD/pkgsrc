@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6667 2023/11/05 21:28:30 jaapb Exp $
+$NetBSD: CHANGES-2023,v 1.6668 2023/11/05 21:31:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9658,3 +9658,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated misc/ocaml-topkg to 1.0.7 [jaapb 2023-11-05]
 	Updated devel/ocaml-dune to 3.11.1 [jaapb 2023-11-05]
 	Updated devel/ocaml-dune-configurator to 3.11.1 [jaapb 2023-11-05]
+	Updated devel/ocaml-lwt to 5.7.0 [jaapb 2023-11-05]
