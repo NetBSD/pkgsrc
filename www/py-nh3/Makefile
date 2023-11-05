@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/05 01:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/05 01:08:19 wiz Exp $
 
 DISTNAME=	nh3-0.2.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
 
 USE_LANGUAGES=		c
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "cargo-depends.mk"
 
