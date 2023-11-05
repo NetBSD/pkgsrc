@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2023/11/05 01:04:31 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/nh3/__init__.py
+${PYSITELIB}/nh3/__init__.pyc
+${PYSITELIB}/nh3/__init__.pyi
+${PYSITELIB}/nh3/__init__.pyo
+${PYSITELIB}/nh3/nh3.abi3.so
+${PYSITELIB}/nh3/py.typed
