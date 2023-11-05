@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2023/11/05 20:43:15 wiz Exp $
 
 BLAKE2s (python-jsonrpc-server-0.4.0.tar.gz) = c63be918889faa907f01af7c10e2f2e9d1e7eaf859b854ebb93d620806d9c41d
 SHA512 (python-jsonrpc-server-0.4.0.tar.gz) = 062e5b75253b95e64918a9da86ad7e29d8a29019670e451b9a28d44cde064339953004c343be0e7dd40968ec9fc2420b5722265f56c2db8057d0f1eaf088dacc
 Size (python-jsonrpc-server-0.4.0.tar.gz) = 26491 bytes
+SHA1 (patch-versioneer.py) = 3c11ae4453797a434f74999a5f1d5eb9f140a4de
