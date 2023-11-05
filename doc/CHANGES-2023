@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6650 2023/11/05 13:30:53 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6651 2023/11/05 13:32:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9641,3 +9641,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated security/py-olm to 3.2.10nb1 [wiz 2023-11-05]
 	Updated graphics/py-pycha to 0.8.1nb3 [wiz 2023-11-05]
 	Updated sysutils/py-augeas to 1.1.0nb9 [wiz 2023-11-05]
+	Updated sysutils/py-xattr to 0.10.1nb1 [wiz 2023-11-05]
