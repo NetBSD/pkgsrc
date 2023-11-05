@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2023/11/05 17:59:23 bacon Exp $
+
+BLAKE2s (microsynteny-tools-0.1.0.175-c471264f8df1fd73621973737d74f4f48e8eb9d1.tar.gz) = 7d3513a1ba7bb64a35912abee8e152e1d394d4e04b4dca8108c7d82bb37a0a68
+SHA512 (microsynteny-tools-0.1.0.175-c471264f8df1fd73621973737d74f4f48e8eb9d1.tar.gz) = 19c1bdb1f79392bcf931976cb12aed3bcdbc7d4c3c0ddeaf3ce199f1f827f860c3805457ade1686707ef2e77dd318a1cbd91585351de6a96f46447a95eb6ea18
+Size (microsynteny-tools-0.1.0.175-c471264f8df1fd73621973737d74f4f48e8eb9d1.tar.gz) = 2277767 bytes
