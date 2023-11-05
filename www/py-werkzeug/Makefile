@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2023/10/28 19:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2023/11/05 10:54:16 wiz Exp $
 
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 COMMENT=	Python WSGI Utility Library
 
@@ -31,12 +30,6 @@ post-install:
 	cd ${WRKSRC}/examples && ${PAX} -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${EGDIR}/*.py
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${EGDIR}/cupoftee/shared/*.png
-
-# as of 2.3.3
-# 17 failed, 854 passed, 1 skipped, 8 errors
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../www/py-werkzeug/Makefile.common"
 .include "../../lang/python/wheel.mk"
