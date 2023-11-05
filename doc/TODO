@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23558 2023/11/05 10:54:31 wiz Exp $
+$NetBSD: TODO,v 1.23559 2023/11/05 13:20:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felt-3.07 [wip]
 	o fet-6.0.1
 	o filerunner-14.06.18.10
-	o filezilla-3.66.0
+	o filezilla-3.66.1
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
@@ -669,6 +669,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ganglia-3.7.5
 	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
+	o gawk-5.3.0
 	o gbrainy-2.43
 	o gcal-4.1
 	o gcc-mips-current-7.1.0
@@ -817,6 +818,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o iroffer-1.4b01
 	o irrtoolset5-5.1.3
 	o isl-0.26
+	o ispell-3.4.06
 	o ispell-de-20161207
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
@@ -829,6 +831,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
+	o jasper-4.1.0
 	o java-db3-3.87
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
@@ -837,6 +840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.11.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -890,7 +894,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
-	o libheif-1.17.1
+	o libheif-1.17.3
 	o libime-1.0.17
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -923,7 +927,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o litehtml-0.8 [wip, https://github.com/litehtml/litehtml/issues/266]
-	o llvm-17.0.3
+	o llvm-17.0.4 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -999,6 +1003,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
+	o ncdu-1.19
 	o ncdu2-2.3
 	o ncview-2.1.8
 	o nedit-5.7
@@ -1057,7 +1062,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oto-0.5
 	o owncloudclient-2.10.1
 	o p0f-3.09b
-	o p11-kit-0.25.1
+	o p11-kit-0.25.2
 	o p5-Authen-Simple-0.6
 	o p5-Carp-Assert-More-1.26
 	o p5-Class-DBI-Plugin-1.04
@@ -1149,7 +1154,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-23.10.0
+	o poppler-23.11.0
 	o posh-0.14.1
 	o postal-0.72
 	o postgresql-pljava-1.6.4
@@ -1165,7 +1170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
-	o protobuf-24.4
+	o protobuf-25.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1178,32 +1183,44 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-acme-2.7.4
 	o py-barman-3.0.1
+	o py-blinker-1.7.0
 	o py-cairo-1.25.1
 	o py-cairocffi-1.6.1
 	o py-cassa-1.11.0
+	o py-certbot-2.7.4
+	o py-certbot-nginx-2.7.4
+	o py-cleo-2.1.0
 	o py-cmake-language-server-0.1.8
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cyclonedx-python-lib-5.0.1
-	o py-cython-3.0.4
+	o py-contourpy-1.2.0
+	o py-cyclonedx-python-lib-5.1.1
+	o py-cython-3.0.5
 	o py-diffoscope-242
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-flask-3.0.0
+	o py-fonttools-4.44.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-python-client-2.105.0
+	o py-google-api-python-client-2.106.0
+	o py-google-auth-2.23.4
 	o py-googleapis-common-protos-1.61.0
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
+	o py-icalendar-5.0.11
 	o py-input-pad-1.4.2
+	o py-josepy-1.14.0
 	o py-keybinder-0.3.2
 	o py-kivy-2.1.0
+	o py-libusb1-3.1.0
 	o py-llvmlite-0.39.0
 	o py-lsp-jsonrpc-1.1.2
 	o py-lsp-server-1.8.2
+	o py-markdown-3.5.1
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1211,19 +1228,26 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-numpy-1.26.1
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-poetry-1.7.0
+	o py-poetry-core-1.8.1
+	o py-poetry-plugin-export-1.6.0
 	o py-postgresql-5.1.2
-	o py-protobuf-4.24.4
+	o py-prometheus_client-0.18.0
+	o py-protobuf-4.25.0
 	o py-ptt-1.10.2
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-rapidfuzz-3.5.2
+	o py-rpds-py-0.12.0
+	o py-ruamel-yaml-0.18.5
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-setuptools_scm-8.0.4
 	o py-simpletal-5.1
 	o py-sphinx-7.2.6
-	o py-sphinx-autodoc-typehints-1.24.0
+	o py-sphinx-autodoc-typehints-1.24.1
 	o py-sphinx-rtd-theme-1.3.0
 	o py-sphinxcontrib-applehelp-1.0.7
 	o py-sphinxcontrib-devhelp-1.0.5
@@ -1234,10 +1258,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
 	o py-tokyocabinet-0.6
+	o py-trio-0.23.1
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
 	o py-yubikey-manager-5.2.1
+	o py-zstandard-0.22.0
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qalculate-3.18.0
@@ -1260,11 +1286,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
+	o re2-20231101
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restic-0.16.2
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
