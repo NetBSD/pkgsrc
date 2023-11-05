@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/05 17:54:43 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2023/11/05 20:00:41 wiz Exp $
 
 DISTNAME=	dna_features_viewer-3.1.3
 PKGNAME=	${PYPKGPREFIX}-dna-features-viewer-3.1.3
@@ -10,10 +10,10 @@ HOMEPAGE=	https://pypi.python.org/project/dna-features-viewer/
 COMMENT=	Python library to visualize DNA features, e.g. GenBank or Gff files
 LICENSE=	mit
 
-DEPENDS=	${PYPKGPREFIX}-matplotlib>=3:../../graphics/py-matplotlib \
-		${PYPKGPREFIX}-biopython>0:../../biology/py-biopython \
-		${PYPKGPREFIX}-bcbio-gff>0:../../biology/py-bcbio-gff \
-		${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-biopython>0:../../biology/py-biopython
+DEPENDS+=	${PYPKGPREFIX}-bcbio-gff>0:../../biology/py-bcbio-gff
+DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
