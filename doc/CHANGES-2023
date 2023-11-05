@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6646 2023/11/05 11:26:13 js Exp $
+$NetBSD: CHANGES-2023,v 1.6647 2023/11/05 12:00:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9637,3 +9637,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-msgpack to 1.0.7nb1 [wiz 2023-11-05]
 	Updated devel/py-pygit2 to 1.13.2 [wiz 2023-11-05]
 	Updated devel/objfw to 1.0.5 [js 2023-11-05]
+	Updated www/py-http-parser to 0.9.0nb2 [wiz 2023-11-05]
