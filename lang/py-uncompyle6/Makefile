@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/01/16 09:27:16 adam Exp $
+# $NetBSD: Makefile,v 1.33 2023/11/05 11:49:51 wiz Exp $
 
 DISTNAME=	uncompyle6-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,9 +17,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xdis
-# no support for python 3.11 yet
+# no support for python 3.11 or 3.12 yet
 # https://github.com/rocky/python-uncompyle6/issues/423
-PYTHON_VERSIONS_INCOMPATIBLE+=	311
+PYTHON_VERSIONS_INCOMPATIBLE+=	311 312
 
 USE_PKG_RESOURCES=	yes
 
