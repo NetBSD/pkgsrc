@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2022/11/28 21:47:29 adam Exp $
+$NetBSD: distinfo,v 1.10 2023/11/05 23:25:31 wiz Exp $
 
 BLAKE2s (pandas-datareader-0.10.0.tar.gz) = 04b469568d3f278286a4b4a0441ab30bd2143d7c159fb294d7f3010e10cd9c57
 SHA512 (pandas-datareader-0.10.0.tar.gz) = 00c8e1f2d2b7de1eabf7cf06a2e6dedbc4158558a6a3276535b4f1284ea2df7dae4e6bbfb37c92328f27c2446a5d3d9d979b219bff28ac2f7e07f952ef837924
 Size (pandas-datareader-0.10.0.tar.gz) = 95477 bytes
+SHA1 (patch-versioneer.py) = 2d6a130d98e663549c8d452f5fced0b928c8930d
