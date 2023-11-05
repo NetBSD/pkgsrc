@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2023/10/28 19:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2023/11/05 23:55:59 wiz Exp $
 
 .include "../../security/ykman/version.mk"
 
 DISTNAME=	yubikey_manager-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubikey-manager
