@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2019/06/15 18:01:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2023/11/05 23:37:50 wiz Exp $
 bin/theano-cache-${PYVERSSUFFIX}
 bin/theano-nose-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bin/__init__.py
 ${PYSITELIB}/bin/__init__.pyc
 ${PYSITELIB}/bin/__init__.pyo
