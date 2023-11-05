@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6656 2023/11/05 16:59:48 fcambus Exp $
+$NetBSD: CHANGES-2023,v 1.6657 2023/11/05 17:51:39 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9647,3 +9647,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/py-cffi to 1.16.0nb1 [wiz 2023-11-05]
 	Updated ham/rtl-sdr to 2.0.1 [gdt 2023-11-05]
 	Updated devel/mold to 2.3.2 [fcambus 2023-11-05]
+	Added biology/py-bcbio-gff version 0.7.0 [bacon 2023-11-05]
