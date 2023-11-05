@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2023/11/05 20:31:16 wiz Exp $
 
-BLAKE2s (trading_calendars-1.11.2.tar.gz) = cb4e50e0912389da77c70b300ffbfd411ebbf81f4ddbc3241a7861a6a6028e52
-SHA512 (trading_calendars-1.11.2.tar.gz) = 56450ba29df88610085cf7c2bc6a8db8b68cd0288b17b8da3b3bcb60980391ffd58b3fe93ddf2d22a7de04e4002ab8623801765b17dd91f4d959075d725e1673
-Size (trading_calendars-1.11.2.tar.gz) = 100327 bytes
+BLAKE2s (trading_calendars-2.1.1.tar.gz) = cabfeda33c31176022729e2553ab8a50a9b9e76d338489578af411c69268a6ef
+SHA512 (trading_calendars-2.1.1.tar.gz) = 38116f0ca5920ad5f15b14f607ac8a63f12cac1c1473e8b4eb96abacf442515f66a575f4351d6a9bf6567d12f187afae61cc8921a8e1cd116cd8232b5c31c732
+Size (trading_calendars-2.1.1.tar.gz) = 108745 bytes
+SHA1 (patch-versioneer.py) = 1e109be40bb943c402d4e173131d51483fdba478
