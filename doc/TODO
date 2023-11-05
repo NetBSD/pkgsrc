@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.23543 2023/11/04 16:27:34 wiz Exp $
+$NetBSD: TODO,v 1.23544 2023/11/05 00:36:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1229,7 +1229,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
 	o py-readme_renderer-42.0
-	o py-ruamel-yaml-0.18.2
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-serializable-0.15.0
