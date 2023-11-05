@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/25 13:12:49 wiz Exp $
-${PLIST.py2x}${PYSITELIB}/_libolm.so
-${PLIST.py3x}${PYSITELIB}/_libolm.abi3.so
+@comment $NetBSD: PLIST,v 1.3 2023/11/05 13:25:14 wiz Exp $
+${PYSITELIB}/_libolm.abi3.so
 ${PYSITELIB}/olm/__init__.py
 ${PYSITELIB}/olm/__init__.pyc
 ${PYSITELIB}/olm/__init__.pyo
@@ -31,9 +30,7 @@ ${PYSITELIB}/olm/session.pyo
 ${PYSITELIB}/olm/utility.py
 ${PYSITELIB}/olm/utility.pyc
 ${PYSITELIB}/olm/utility.pyo
-${PYSITELIB}/python_${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/python_${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/python_${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/python_${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/python_${EGG_INFODIR}/requires.txt
-${PYSITELIB}/python_${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/python_${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/python_${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/python_${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/python_${WHEEL_INFODIR}/top_level.txt
