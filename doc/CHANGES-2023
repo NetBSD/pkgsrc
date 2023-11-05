@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6674 2023/11/05 22:45:59 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6675 2023/11/05 22:50:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9665,3 +9665,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-ncclient to 0.6.15 [wiz 2023-11-05]
 	Updated net/py-magic-wormhole-transit-relay to 0.2.1nb3 [wiz 2023-11-05]
 	Updated net/py-magic-wormhole-mailbox-server to 0.4.1nb2 [wiz 2023-11-05]
+	Updated net/py-foolscap to 21.7.0nb3 [wiz 2023-11-05]
