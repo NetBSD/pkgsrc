@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6622 2023/11/05 00:36:17 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6623 2023/11/05 00:38:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9613,3 +9613,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated devel/p5-PPI to 1.277 [wen 2023-11-05]
 	Updated devel/p5-IO-Interactive to 1.025 [wen 2023-11-05]
 	Updated devel/py-ruamel-yaml to 0.18.2 [wiz 2023-11-05]
+	Updated devel/py-serializable to 0.15.0 [wiz 2023-11-05]
