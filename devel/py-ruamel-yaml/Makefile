@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2023/10/21 14:33:20 adam Exp $
+# $NetBSD: Makefile,v 1.35 2023/11/05 00:36:04 wiz Exp $
 
-DISTNAME=	ruamel.yaml-0.17.40
+DISTNAME=	ruamel.yaml-0.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.yaml/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://yaml.readthedocs.io/
 COMMENT=	YAML parser/emitter
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-clib>=0.2.7:../../devel/py-ruamel-yaml-clib
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
