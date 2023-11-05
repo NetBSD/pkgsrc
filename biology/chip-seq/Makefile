@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/14 05:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2023/11/05 23:48:31 wiz Exp $
 
 DISTNAME=	chip-seq-1.1
 PKGREVISION=	1
@@ -23,7 +23,7 @@ DEPENDS+=	webbrowser>=0:../../www/webbrowser
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

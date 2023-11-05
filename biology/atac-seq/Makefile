@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:23:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2023/11/05 23:48:31 wiz Exp $
 
 DISTNAME=	atac-seq-1.2.1
 PKGREVISION=	1
@@ -27,7 +26,7 @@ DEPENDS+=	curl>0:../../www/curl
 META_PACKAGE=	yes
 
 # Inherited from py-macs2 dep
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
