@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/11/27 10:41:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2023/11/05 00:43:09 wiz Exp $
 
-BLAKE2s (pyhamcrest-2.0.4.tar.gz) = 46d1a3ec8d6829885fde38799f3f235b690380158987695123e380445347e436
-SHA512 (pyhamcrest-2.0.4.tar.gz) = 0baec352a1a31d660dda99b77d95f3ed8281c32180984fedf44f77b3acc60176eff1abc674905eccee06a9a449497c82686a3256939bbc482595384da11c4abf
-Size (pyhamcrest-2.0.4.tar.gz) = 57649 bytes
+BLAKE2s (pyhamcrest-2.1.0.tar.gz) = a0612018330a6175982a689417d38f63cc7ccb4ba434ff96fecdc59ba64a7a64
+SHA512 (pyhamcrest-2.1.0.tar.gz) = 63f25a5d8c989a33842e54b58d72ee248bdcd63d35309a7922d66fda824a0006922ebc6b7a01ee152a0b431de021ccf096e30dc4bb9ecb48cc2a70ac6ccd25aa
+Size (pyhamcrest-2.1.0.tar.gz) = 60538 bytes
