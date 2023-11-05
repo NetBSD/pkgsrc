@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2023/10/27 18:30:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.294 2023/11/05 19:37:19 nia Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -33,6 +33,12 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 .if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
 # No {get,make,set}context support before Darwin 9
 CONFIGURE_ARGS+=	no-async
+.endif
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101200
+# While it does check for this, it does so using a header that is only
+# available in OS X versions starting with Leopard.
+CFLAGS+=		-DOPENSSL_NO_APPLE_CRYPTO_RANDOM=1
 .endif
 
 PLIST_VARS+=		devcrypto afalg
