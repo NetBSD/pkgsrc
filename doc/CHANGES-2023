@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6641 2023/11/05 10:54:31 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6642 2023/11/05 10:54:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9632,3 +9632,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated net/py-twisted to 23.10.0 [wiz 2023-11-05]
 	Updated net/py-twisted-docs to 23.10.0 [wiz 2023-11-05]
 	Updated www/py-werkzeug to 3.0.1 [wiz 2023-11-05]
+	Updated www/py-werkzeug-docs to 3.0.1 [wiz 2023-11-05]
