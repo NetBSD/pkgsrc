@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2023/11/04 12:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2023/11/05 17:52:08 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -65,6 +65,7 @@ SUBDIR+=	plinkseq
 SUBDIR+=	primer3
 SUBDIR+=	profit
 SUBDIR+=	puzzle
+SUBDIR+=	py-bcbio-gff
 SUBDIR+=	py-biopython
 SUBDIR+=	py-cutadapt
 SUBDIR+=	py-dnaio
