@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.18 2023/07/31 16:28:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2023/11/05 11:03:41 wiz Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xmlschema/__init__.py
 ${PYSITELIB}/xmlschema/__init__.pyc
 ${PYSITELIB}/xmlschema/__init__.pyo
@@ -50,6 +50,9 @@ ${PYSITELIB}/xmlschema/documents.pyo
 ${PYSITELIB}/xmlschema/exceptions.py
 ${PYSITELIB}/xmlschema/exceptions.pyc
 ${PYSITELIB}/xmlschema/exceptions.pyo
+${PYSITELIB}/xmlschema/exports.py
+${PYSITELIB}/xmlschema/exports.pyc
+${PYSITELIB}/xmlschema/exports.pyo
 ${PYSITELIB}/xmlschema/extras/__init__.py
 ${PYSITELIB}/xmlschema/extras/__init__.pyc
 ${PYSITELIB}/xmlschema/extras/__init__.pyo
