@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/06 09:45:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2023/11/05 09:49:49 wiz Exp $
 
-BLAKE2s (docstring-to-markdown-0.12.tar.gz) = f2e7ddb92d81ecec9ffd372cc2b9ec6487f332e609d7ca4a77bc7e2defa5ec98
-SHA512 (docstring-to-markdown-0.12.tar.gz) = dd2bd7996cbdfa89a0648aab7596213dcac888d9c2652479e3665df0a4d96307d642b409a10089408ded710db826069294aa59cc4301dbaada3af01a4a6eb1e1
-Size (docstring-to-markdown-0.12.tar.gz) = 24795 bytes
+BLAKE2s (docstring-to-markdown-0.13.tar.gz) = 685b112839527e4211c11f12302cbae5ee1006701d7bacd8b18f56c79491d397
+SHA512 (docstring-to-markdown-0.13.tar.gz) = a81348a075b3d839bce46c0593edc083919dc648b510e8ef0ee796443e2162e43879832fd7eac54975be00a9b68ad97936ce4c210ce6d1055d96848b6886d90e
+Size (docstring-to-markdown-0.13.tar.gz) = 26634 bytes
