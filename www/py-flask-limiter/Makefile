@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/04/29 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2023/11/05 20:20:54 wiz Exp $
 
-DISTNAME=	Flask-Limiter-1.0.1
+DISTNAME=	Flask-Limiter-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Limiter/}
 
@@ -11,15 +10,18 @@ HOMEPAGE=	https://flask-limiter.readthedocs.org/
 COMMENT=	Rate limiting for flask applications
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-limits-[0-9]*:../../devel/py-limits
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-flask>=2:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4:../../devel/py-ordered-set
+DEPENDS+=	${PYPKGPREFIX}-rich>=12:../../comms/py-rich
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-limits>=2.8:../../devel/py-limits
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-restful>=0:../../www/py-flask-restful
+# also needs unpackaged 'hiro' for testing
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-EGG_NAME=	${DISTNAME:S/-/_/1}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
