@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6661 2023/11/05 20:25:37 wiz Exp $
+$NetBSD: CHANGES-2023,v 1.6662 2023/11/05 20:31:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9652,3 +9652,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Added biology/microsynteny-tools version 0.1.0.175 [bacon 2023-11-05]
 	Updated www/py-flask-limiter to 3.5.0 [wiz 2023-11-05]
 	Updated time/py-ligotimegps to 2.0.1nb2 [wiz 2023-11-05]
+	Updated time/py-trading-calendars to 2.1.1 [wiz 2023-11-05]
