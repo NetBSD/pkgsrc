@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2022/05/02 14:02:09 jaapb Exp $
+$NetBSD: distinfo,v 1.28 2023/11/05 21:31:38 jaapb Exp $
 
-BLAKE2s (lwt-5.5.0.tar.gz) = a40e1051fe796056644de8c781f5f562700033cf32741d47007f11b6c8468d57
-SHA512 (lwt-5.5.0.tar.gz) = 8951b94555e930634375816d71815b9d85daad6ffb7dab24864661504d11be26575ab0b237196c54693efa372a9b69cdc1d5068a20a250dc0bbb4a3c03c5fda1
-Size (lwt-5.5.0.tar.gz) = 313884 bytes
+BLAKE2s (lwt-5.7.0.tar.gz) = a08fe493e8f621a743b935984e2c9e37de9ffaf480e80d989997b8f28312a7a7
+SHA512 (lwt-5.7.0.tar.gz) = 42e629920783428673b99c9d7a639237c9e6b35079b5d907bc67e7ea506acf9edadc48cec580bdcfd2410ed9412bf5e6bcc8b09de2fa7d35ce1490973d05ddd1
+Size (lwt-5.7.0.tar.gz) = 313632 bytes
 SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = ca86829f5330a26b5bc8514bf4081fa71b8b32d4
