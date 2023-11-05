@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2023,v 1.6634 2023/11/05 08:38:58 pin Exp $
+$NetBSD: CHANGES-2023,v 1.6635 2023/11/05 09:26:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2023:
 
@@ -9625,3 +9625,4 @@ Changes to the packages collection and infrastructure in 2023:
 	Updated textproc/py-readme_renderer to 42.0 [wiz 2023-11-05]
 	Updated devel/p5-IPC-Run to 20231003.0 [wen 2023-11-05]
 	Updated textproc/typst to 0.9.0 [pin 2023-11-05]
+	Updated textproc/py-pdf to 3.17.0 [wiz 2023-11-05]
