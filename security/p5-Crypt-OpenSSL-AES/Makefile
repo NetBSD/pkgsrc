@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/24 22:10:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.28 2023/11/05 11:53:09 wiz Exp $
 
 DISTNAME=		Crypt-OpenSSL-AES-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -10,7 +9,10 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Crypt-OpenSSL-AES
 COMMENT=		Perl5 wrapper module for the OpenSSL AES functions
-#LICENSE=		gnu-gpl-v2 # under same terms as Perl
+LICENSE=		${PERL5_LICENSE}
+
+TOOL_DEPENDS+=		p5-Crypt-OpenSSL-Guess-[0-9]*:../../security/p5-Crypt-OpenSSL-Guess
+TEST_DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
 
 USE_LANGUAGES=		c
 
