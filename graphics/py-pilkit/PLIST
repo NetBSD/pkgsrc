@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/16 19:21:41 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2023/11/05 00:45:21 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pilkit/__init__.py
 ${PYSITELIB}/pilkit/__init__.pyc
 ${PYSITELIB}/pilkit/__init__.pyo
@@ -22,9 +24,15 @@ ${PYSITELIB}/pilkit/processors/__init__.pyo
 ${PYSITELIB}/pilkit/processors/base.py
 ${PYSITELIB}/pilkit/processors/base.pyc
 ${PYSITELIB}/pilkit/processors/base.pyo
+${PYSITELIB}/pilkit/processors/convert.py
+${PYSITELIB}/pilkit/processors/convert.pyc
+${PYSITELIB}/pilkit/processors/convert.pyo
 ${PYSITELIB}/pilkit/processors/crop.py
 ${PYSITELIB}/pilkit/processors/crop.pyc
 ${PYSITELIB}/pilkit/processors/crop.pyo
+${PYSITELIB}/pilkit/processors/filter.py
+${PYSITELIB}/pilkit/processors/filter.pyc
+${PYSITELIB}/pilkit/processors/filter.pyo
 ${PYSITELIB}/pilkit/processors/overlay.py
 ${PYSITELIB}/pilkit/processors/overlay.pyc
 ${PYSITELIB}/pilkit/processors/overlay.pyo
